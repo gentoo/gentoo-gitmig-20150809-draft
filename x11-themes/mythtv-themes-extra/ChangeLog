@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mythtv-themes-extra
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.4 2007/10/21 14:55:27 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.5 2008/04/01 04:22:31 cardoe Exp $
+
+*mythtv-themes-extra-0.21_p16760 (01 Apr 2008)
+
+  01 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-themes-extra-0.21_p16760.ebuild:
+  0.21 geared ebuild that uses the "themes" repo as it's source. Provided by
+  Jesse Adelman <jesse@boldandbusted.com> bug #214453
 
 *mythtv-themes-extra-0.20.2 (21 Oct 2007)
 
