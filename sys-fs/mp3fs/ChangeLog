@@ -1,23 +1,10 @@
 # ChangeLog for sys-fs/mp3fs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.5 2007/09/30 15:30:13 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.6 2008/04/01 05:37:34 dragonheart Exp $
 
-  30 Sep 2007; Sven Wegener <swegener@gentoo.org> mp3fs-0.11.ebuild:
-  Add ~x86 keyword.
+*mp3fs-0.12 (01 Apr 2008)
 
-*mp3fs-0.11 (14 Sep 2007)
-
-  14 Sep 2007; Daniel Black <dragonheart@gentoo.org> -mp3fs-0.07.ebuild,
-  +mp3fs-0.11.ebuild:
-  version bump - upstream bug fixes
-
-*mp3fs-0.10 (28 Aug 2007)
-
-  28 Aug 2007; Daniel Black <dragonheart@gentoo.org> +mp3fs-0.10.ebuild:
-  version bump to fix memory leaks and misc other changes
-
-*mp3fs-0.07 (13 Apr 2007)
-
-  13 Apr 2007; <dragonheart@gentoo.org> +metadata.xml, +mp3fs-0.07.ebuild:
-  for Dave - nice program
+  01 Apr 2008; Daniel Black <dragonheart@gentoo.org> -mp3fs-0.10.ebuild,
+  +mp3fs-0.12.ebuild:
+  version bump
 
