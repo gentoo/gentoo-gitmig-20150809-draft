@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.16 2008/01/11 09:54:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.17 2008/04/01 14:45:11 markusle Exp $
+
+  01 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/ginac-1.4.1-gcc4.3.patch, ginac-1.4.1.ebuild:
+  Fixed compile issues with gcc-4.3 (see bug #215570). Thanks much to
+  <spasswolf@web.de> for his patch.
 
 *ginac-1.4.1 (11 Jan 2008)
 

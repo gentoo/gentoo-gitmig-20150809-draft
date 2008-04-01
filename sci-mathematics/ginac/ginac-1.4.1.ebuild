@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.1.ebuild,v 1.1 2008/01/11 09:54:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.1.ebuild,v 1.2 2008/04/01 14:45:11 markusle Exp $
+
+inherit eutils
 
 DESCRIPTION="C++ library and tools for symbolic calculations"
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/${P}.tar.bz2"
@@ -15,6 +17,12 @@ RDEPEND="sci-libs/cln"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen media-gfx/transfig virtual/latex-base )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+}
 
 src_compile() {
 	econf \
