@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>shell-tools</herd>
+<herd>extreme-security</herd>
 <maintainer>
   <email>pappy@gentoo.org</email>
   <name>Alexander Gabert</name>
   <description>author and contact for support and feature requests</description>
 </maintainer>
 <longdescription>
-This is a bash script for making the maintenance
-and administration of chroots easier using screen sessions
-on Gentoo development machines.
+You are interested in a screen-powered chroot utility?
+You want to automatically install and fire up chroots?
+The next version will probably even contain bootscript
+support for starting specific services in your chroots
+when the host machine reboots and your chroots reload!
 </longdescription>
 </pkgmetadata>
