@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.15.ebuild,v 1.3 2008/03/31 16:32:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.15.ebuild,v 1.4 2008/04/01 15:39:50 armin76 Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~ppc ~ppc64 ~sh sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2"
