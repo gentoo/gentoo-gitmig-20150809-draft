@@ -1,6 +1,22 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.32 2008/02/24 02:45:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.33 2008/04/01 23:57:31 battousai Exp $
+
+*synaptics-0.14.6-r2 (01 Apr 2008)
+
+  01 Apr 2008; Bryan Stine <battousai@gentoo.org>
+  +files/synaptics-fix-xinerama.patch,
+  +files/synaptics-install-so-exec.patch, +synaptics-0.14.6-r2.ebuild:
+  Ebuild revision bump with a few new features. First, added a patch to
+  driver code to allow the touchpad to interact correctly with multiple
+  screens using Xinerama, fixing bug #206614. Second, added a patch to the
+  Makefile to install the Xorg module as executable to allow the Xorg loader
+  to bring it in automatically, fixing bug #215323. Finally, added
+  linux-info logic to the ebuild to check the kernel config for
+  CONFIG_INPUT_EVDEV (either as a module or built-in) as the driver requires
+  that interface for full support; fixes bug #134309. Revision-bumped the
+  ebuild to ensure the Xinerama and executable patches get pulled onto
+  users' systems.
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.
