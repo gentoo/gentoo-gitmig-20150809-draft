@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-3.7.ebuild,v 1.2 2008/04/01 12:32:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-3.7.ebuild,v 1.3 2008/04/01 13:45:30 calchan Exp $
 
 inherit autotools fdo-mime
 
@@ -28,7 +28,7 @@ src_unpack() {
 		-e 's/LDFLAGS="${LDFLAGS} -lofx"/LIBS="${LIBS} -lofx"/' \
 		configure.ac || die "sed failed"
 
-	eautoreconf
+	eautoconf
 }
 
 src_compile() {
