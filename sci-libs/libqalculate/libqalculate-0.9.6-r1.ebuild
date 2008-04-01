@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r1.ebuild,v 1.1 2008/02/04 11:51:34 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r1.ebuild,v 1.2 2008/04/01 15:19:33 markusle Exp $
 
 inherit eutils autotools
 
@@ -34,6 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-check-fix.patch
 	epatch "${FILESDIR}"/${P}-cl_abort.patch
 	epatch "${FILESDIR}"/${P}-cln-config.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	eautoconf
 }
 
