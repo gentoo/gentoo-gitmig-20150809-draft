@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.52 2008/03/04 16:21:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.53 2008/04/01 06:07:45 dragonheart Exp $
+
+  01 Apr 2008; Daniel Black <dragonheart@gentoo.org>
+  -l7-protocols-2006.06.03.ebuild, -l7-protocols-2007.05.09.ebuild,
+  -l7-protocols-2007.06.22.ebuild, -l7-protocols-2007.07.27.ebuild,
+  -l7-protocols-2007.11.22.ebuild, -l7-protocols-2008.01.09.ebuild,
+  -l7-protocols-2008.02.10.ebuild:
+  cleanout
 
 *l7-protocols-2008.02.20 (04 Mar 2008)
 
