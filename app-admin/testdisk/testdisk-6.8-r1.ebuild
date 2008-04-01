@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.8-r1.ebuild,v 1.2 2008/02/10 14:17:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.8-r1.ebuild,v 1.3 2008/04/01 23:54:25 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."
+DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 LICENSE="GPL-2"
@@ -23,7 +23,8 @@ RDEPEND="!static? ( ${DEPEND} )"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-ntfsprogs2.patch
+	epatch "${DISTDIR}"/${P}-ntfsprogs2.patch.bz2
+	epatch "${FILESDIR}"/${P}-jpeg.patch
 }
 
 src_compile() {

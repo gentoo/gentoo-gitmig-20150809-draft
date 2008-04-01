@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.5.ebuild,v 1.4 2007/07/13 06:07:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.5.ebuild,v 1.5 2008/04/01 23:54:25 dragonheart Exp $
 
-DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."
+DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 LICENSE="GPL-2"
@@ -30,13 +30,13 @@ src_compile() {
 	econf ${myconf} || die
 
 	# perform safety checks for NTFS and REISERFS
-	if useq ntfs && egrep -q 'undef HAVE_LIBNTFS\>' ${S}/config.h ; then
+	if useq ntfs && egrep -q 'undef HAVE_LIBNTFS\>' "${S}"/config.h ; then
 		die "Failed to find NTFS library."
 	fi
-	if useq reiserfs && egrep -q 'undef HAVE_LIBREISERFS\>' ${S}/config.h ; then
+	if useq reiserfs && egrep -q 'undef HAVE_LIBREISERFS\>' "${S}"/config.h ; then
 		die "Failed to find reiserfs library."
 	fi
-	if useq jpeg && egrep -q 'undef HAVE_LIBJPEG\>' ${S}/config.h ; then
+	if useq jpeg && egrep -q 'undef HAVE_LIBJPEG\>' "${S}"/config.h ; then
 		die "Failed to find jpeg library."
 	fi
 
@@ -49,5 +49,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	[ "$PF" != "$P" ] && mv ${D}/usr/share/doc/${P} ${D}/usr/share/doc/${PF}
+	[ "$PF" != "$P" ] && mv "${D}"/usr/share/doc/${P} "${D}"/usr/share/doc/${PF}
 }
