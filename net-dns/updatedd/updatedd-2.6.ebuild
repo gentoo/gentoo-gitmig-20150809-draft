@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.6.ebuild,v 1.1 2008/04/01 10:36:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.6.ebuild,v 1.2 2008/04/01 10:39:00 dragonheart Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ IUSE=""
 RDEPEND="virtual/libc"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	epatch "${FILESDIR}"/${P}-options.patch
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	mv ${D}/usr/share/doc/updatedd ${D}/usr/share/doc/${PF}
+	emake DESTDIR="${D}" install || die
+	mv "${D}"/usr/share/doc/updatedd "${D}"/usr/share/doc/${PF}
 	dodoc AUTHORS
 }
