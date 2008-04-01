@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0_rc1.ebuild,v 1.1 2008/03/19 20:28:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0.ebuild,v 1.1 2008/04/01 19:51:40 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -135,7 +135,8 @@ src_install() {
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
-	dodoc AUTHORS ChangeLog NEWS README*
+	# FAQ is not required as is installed from help/faq.txt
+	dodoc AUTHORS ChangeLog NEWS README{,bsd,linux,macos,vmware} doc/randpkt.txt
 
 	if use gtk ; then
 		insinto /usr/share/icons/hicolor/16x16/apps
@@ -159,4 +160,9 @@ pkg_postinst() {
 	ewarn "wireshark group. This security measure ensures that only trusted"
 	ewarn "users allowed to sniff your traffic."
 	echo
+	if use caps && use gtk; then
+		# http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2228
+		elog "Setting cap_kill on /usr/bin/wireshark"
+		setcap cap_kill=ep /usr/bin/wireshark
+	fi
 }
