@@ -113,6 +113,3 @@ alsa_cards_sb16_csp
 alsa_cards_sgalaxy
 alsa_cards_sscape
 alsa_cards_wavefront
-
-# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-libssh2
