@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/use.mask,v 1.74 2008/04/01 15:21:10 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/use.mask,v 1.75 2008/04/01 16:08:01 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2008)
@@ -229,5 +229,4 @@ h323
 # Dell does not ship or sell HPPA systems
 dell
 
-# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-libssh2
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
