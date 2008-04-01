@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.295 2008/04/01 19:11:07 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.296 2008/04/01 19:34:36 pva Exp $
+
+*cups-1.3.6-r3 (01 Apr 2008)
+
+  01 Apr 2008; Peter Volkov <pva@gentoo.org>
+  +files/cups-1.3.6-CVE-2008-1373.patch, +cups-1.3.6-r3.ebuild:
+  Fixing overflow in gif image filter, security bug #214068, thank Robert
+  Buchholz for report.
 
   01 Apr 2008; Robert Buchholz <rbu@gentoo.org> cups-1.2.12-r7.ebuild:
   amd64 stable, bug #214068
