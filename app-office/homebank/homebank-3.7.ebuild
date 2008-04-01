@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-3.7.ebuild,v 1.1 2008/04/01 12:24:09 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-3.7.ebuild,v 1.2 2008/04/01 12:32:26 calchan Exp $
 
 inherit autotools fdo-mime
 
@@ -16,6 +16,8 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	ofx? ( >=dev-libs/libofx-0.7 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
+	gnome-base/librsvg"
 
 src_unpack() {
 	unpack ${A}
