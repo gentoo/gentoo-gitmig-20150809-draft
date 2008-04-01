@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1275 2008/04/01 20:48:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1276 2008/04/01 23:48:04 dirtyepic Exp $
+
+  01 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Unvague pth local USE description for gpgme.
 
   01 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> profiles.desc:
   I never added the desktop and developer sub-profiles for s390, so removing
