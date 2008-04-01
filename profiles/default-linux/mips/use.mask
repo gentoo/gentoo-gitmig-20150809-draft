@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.102 2008/04/01 13:35:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.103 2008/04/01 13:41:51 dragonheart Exp $
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # We have neither.
@@ -327,4 +327,4 @@ kerberos
 ladspa
 
 # net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-ssh2
+libssh2

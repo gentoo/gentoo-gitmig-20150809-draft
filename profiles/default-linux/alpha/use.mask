@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.88 2008/04/01 13:22:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.89 2008/04/01 13:41:49 dragonheart Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -135,4 +135,4 @@ audit
 -x264
 
 # net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-ssh2
+libssh2
