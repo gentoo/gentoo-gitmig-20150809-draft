@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.297 2008/04/01 18:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.298 2008/04/01 22:53:19 opfer Exp $
+
+  01 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  openssh-4.7_p1-r6.ebuild:
+  stable x86, security bug 215702
 
 *openssh-4.7_p1-r6 (01 Apr 2008)
 
