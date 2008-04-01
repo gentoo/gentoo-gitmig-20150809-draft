@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.27 2007/12/10 14:03:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.28 2008/04/01 15:40:38 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (11 Oct 2006)
 # Requires old GDM, which will not work with SELinux.  All
@@ -29,5 +29,9 @@
 >=sci-libs/acml-3.6
 
 # Chris PeBenito <pebenito@gentoo.org> (4 Nov 2007)
-# Mask pending resolution to #191665
-=net-misc/openssh-4.7_p1*
+# bad getseuserbyname configure check
+=net-misc/openssh-4.7_p1
+=net-misc/openssh-4.7_p1-r1
+=net-misc/openssh-4.7_p1-r2
+=net-misc/openssh-4.7_p1-r3
+=net-misc/openssh-4.7_p1-r4
