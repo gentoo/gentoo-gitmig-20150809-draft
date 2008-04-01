@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.231 2008/04/01 16:37:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.232 2008/04/01 16:43:15 cardoe Exp $
+
+  01 Apr 2008; Doug Goldstein <cardoe@gentoo.org> mythtv-0.21_p16867.ebuild,
+  mythtv-0.22_alpha16870.ebuild:
+  remove ivtv depend and USE since MythTV no longer builds against ivtv
+  header but the in kernel v4l. remove dead vorbis USE
 
   01 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.22_alpha16870.ebuild:

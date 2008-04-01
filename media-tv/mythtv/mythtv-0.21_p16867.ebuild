@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p16867.ebuild,v 1.1 2008/04/01 03:56:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p16867.ebuild,v 1.2 2008/04/01 16:43:15 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
@@ -10,9 +10,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="aac alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun ieee1394 iptv \
-ivtv jack joystick lcd lirc mmx opengl opengl-video opengl-xvmc perl python \
-vorbis xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="aac alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun \
+ieee1394 iptv jack joystick lcd lirc mmx opengl opengl-video opengl-xvmc \
+perl python xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -38,7 +38,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
-	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
@@ -118,7 +117,6 @@ src_compile() {
 	use altivec || myconf="${myconf} --disable-altivec"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
-	use ivtv || myconf="${myconf} --disable-ivtv"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use opengl-video && myconf="${myconf} --enable-opengl-video"
 	use xvmc && ! use video_cards_via  ! use opengl-xvmc && myconf="${myconf} --enable-xvmc --xvmc-lib=XvMCW"
