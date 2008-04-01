@@ -1,0 +1,10 @@
+# ChangeLog for app-office/homebank
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.1 2008/04/01 12:24:09 calchan Exp $
+
+*homebank-3.7 (01 Apr 2008)
+
+  01 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +metadata.xml,
+  +homebank-3.7.ebuild:
+  Initial commit, thanks to everybody on bug #139634.
+
