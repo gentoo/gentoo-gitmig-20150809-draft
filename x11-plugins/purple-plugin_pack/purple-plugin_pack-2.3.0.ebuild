@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.2.0.ebuild,v 1.7 2008/04/01 02:48:18 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.3.0.ebuild,v 1.1 2008/04/01 02:48:18 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.guifications.org/plugins/Plugin%20Pack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="talkfilters debug gtk ncurses"
 
 DEPEND="net-im/pidgin
@@ -40,7 +40,7 @@ src_compile() {
 	# and just always builds everything
 
 	# XMMS Remote is disabled due to XMMS being masked
-	DISABLED_PLUGINS="xmmsremote"
+	DISABLED_PLUGINS="xmmsremote switchspell"
 
 	use talkfilters || DISABLED_PLUGINS="${DISABLED_PLUGINS} talkfilters"
 
