@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.10 2008/03/29 03:02:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.11 2008/04/01 15:37:26 pebenito Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -86,6 +86,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-GSSAPI-dns.patch #165444
 
 	sed -i "s:-lcrypto:$(pkg-config --libs openssl):" configure{,.ac} || die
+
+	# fix #191665
+	epatch "${FILESDIR}"/openssh-4.7p1-selinux.diff
 
 	eautoreconf
 }
