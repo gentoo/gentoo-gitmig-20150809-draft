@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/locateopen-1.3.ebuild,v 1.7 2007/01/12 18:34:33 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/locateopen-1.3.ebuild,v 1.8 2008/04/01 23:19:44 opfer Exp $
 
 inherit vim-plugin
 
@@ -10,7 +10,9 @@ LICENSE="vim"
 KEYWORDS="alpha amd64 ia64 mips ppc sparc x86"
 IUSE=""
 
-RDEPEND="${RDEPEND} || ( sys-apps/slocate sys-apps/rlocate )"
+RDEPEND="${RDEPEND} || ( sys-apps/slocate
+		sys-apps/rlocate
+		sys-apps/mlocate )"
 
 VIM_PLUGIN_HELPTEXT=\
 "This plugin provides commands that hook vim into slocate:
