@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1272 2008/04/01 16:17:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1273 2008/04/01 16:36:55 wolf31o2 Exp $
+
+  01 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> profiles.desc:
+  Move mips profiles to development, since it is now an experimental arch.
 
   01 Apr 2008; Ben de Groot <yngwin@gentoo.org> use.local.desc:
   Adding normalize and wav local USE flags for media-sound/rubyripper
