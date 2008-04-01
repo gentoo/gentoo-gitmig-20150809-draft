@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.6.ebuild,v 1.2 2008/03/28 20:59:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.6.ebuild,v 1.3 2008/04/01 19:46:36 opfer Exp $
 
 NEED_PYTHON=2.2.2
 inherit python multilib distutils
@@ -11,7 +11,7 @@ SRC_URI="http://auriga.wearlab.de/~alb/msnlib/files/${PV}/${P}.tar.bz2"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="tk"
 
 pkg_setup() {
