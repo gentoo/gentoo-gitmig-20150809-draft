@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16870.ebuild,v 1.2 2008/04/01 13:28:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16870.ebuild,v 1.3 2008/04/01 16:37:52 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="aac alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun \
+IUSE="alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun \
 ieee1394 iptv ivtv jack joystick lcd lirc mmx opengl opengl-video
 opengl-xvmc perl python vorbis xvmc ${IUSE_VIDEO_CARDS}"
 
@@ -27,7 +27,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	virtual/opengl
 	virtual/glu
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.43 )
-	aac? ( media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
@@ -114,7 +113,6 @@ src_compile() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
-	use aac && myconf="${myconf} --enable-libfaad2"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
