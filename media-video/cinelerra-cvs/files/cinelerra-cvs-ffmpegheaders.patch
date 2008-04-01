@@ -1,0 +1,121 @@
+Index: cinelerra-cvs/cinelerra/ffmpeg.h
+===================================================================
+--- cinelerra-cvs.orig/cinelerra/ffmpeg.h
++++ cinelerra-cvs/cinelerra/ffmpeg.h
+@@ -1,11 +1,20 @@
+ #ifndef FFMPEG_H
+ #define FFMPEG_H
+ 
++#include "config.h"
+ extern "C" {
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include <avcodec.h>
++#endif
+ #ifdef HAVE_SWSCALER
++#if HAVE_LIBSWSCALE_SWSCALE_H
++#include <libswscale/swscale.h>
++#else
+ #include <swscale.h>
+ #endif
++#endif
+ };
+ 
+ #include "asset.h"
+Index: cinelerra-cvs/cinelerra/fileac3.h
+===================================================================
+--- cinelerra-cvs.orig/cinelerra/fileac3.h
++++ cinelerra-cvs/cinelerra/fileac3.h
+@@ -1,8 +1,13 @@
+ #ifndef FILEAC3_H
+ #define FILEAC3_H
+ 
++#include "config.h"
+ extern "C" {
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include <avcodec.h>
++#endif
+ };
+ 
+ #include "filebase.h"
+Index: cinelerra-cvs/configure.in
+===================================================================
+--- cinelerra-cvs.orig/configure.in
++++ cinelerra-cvs/configure.in
+@@ -370,6 +370,10 @@ if test "x$with_external_ffmpeg" = "xyes
+      else
+                  PKG_CHECK_MODULES([FFMPEG], [libavcodec libpostproc])
+      fi
++     AC_CHECK_HEADERS(ffmpeg/avcodec.h libavcodec/avcodec.h)
++     AC_CHECK_HEADERS(ffmpeg/avformat.h libavformat/avformat.h)
++     AC_CHECK_HEADERS(ffmpeg/avutil.h libavutil/avutil.h)
++     AC_CHECK_HEADERS([ffmpeg/swscale.h libswscale/swscale.h])
+ 
+ else
+      FFMPEG_FOLDER=ffmpeg
+Index: cinelerra-cvs/quicktime/mpeg4.c
+===================================================================
+--- cinelerra-cvs.orig/quicktime/mpeg4.c
++++ cinelerra-cvs/quicktime/mpeg4.c
+@@ -7,7 +7,12 @@
+ 
+ 
+ 
++#include "config.h"
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include "avcodec.h"
++#endif
+ #include "colormodels.h"
+ #include "funcprotos.h"
+ #include "qtffmpeg.h"
+Index: cinelerra-cvs/quicktime/qtffmpeg.h
+===================================================================
+--- cinelerra-cvs.orig/quicktime/qtffmpeg.h
++++ cinelerra-cvs/quicktime/qtffmpeg.h
+@@ -16,8 +16,12 @@
+ // Heroine Virtual.
+ 
+ 
+-
++#include "config.h"
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include "avcodec.h"
++#endif
+ #include "qtprivate.h"
+ 
+ 
+Index: cinelerra-cvs/quicktime/qth264.c
+===================================================================
+--- cinelerra-cvs.orig/quicktime/qth264.c
++++ cinelerra-cvs/quicktime/qth264.c
+@@ -1,4 +1,9 @@
++#include "config.h"
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include "avcodec.h"
++#endif
+ #include "colormodels.h"
+ #include "funcprotos.h"
+ #include <pthread.h>
+Index: cinelerra-cvs/quicktime/wma.c
+===================================================================
+--- cinelerra-cvs.orig/quicktime/wma.c
++++ cinelerra-cvs/quicktime/wma.c
+@@ -1,4 +1,9 @@
++#include "config.h"
++#if HAVE_LIBAVCODEC_AVCODEC_H
++#include <libavcodec/avcodec.h>
++#else
+ #include "avcodec.h"
++#endif
+ #include "funcprotos.h"
+ #include "quicktime.h"
+ #include <string.h>
