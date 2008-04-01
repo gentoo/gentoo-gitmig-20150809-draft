@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r1.ebuild,v 1.1 2006/10/24 19:04:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r1.ebuild,v 1.2 2008/04/01 15:48:32 dragonheart Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -24,6 +24,7 @@ src_unpack() {
 	sed -i \
 		-e 's/blitz-uninstalled.pc//' \
 		Makefile.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gcc-4.3-missing-includes.patch
 }
 
 src_compile() {

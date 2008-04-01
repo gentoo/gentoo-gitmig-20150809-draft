@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.7 2006/11/12 11:28:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.8 2008/04/01 15:48:32 dragonheart Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -17,6 +17,12 @@ KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 
 FORTAN="g77"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc-4.3-missing-includes.patch
+}
 
 src_compile() {
 	local myconf
