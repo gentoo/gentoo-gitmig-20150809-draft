@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.14.1.ebuild,v 1.1 2008/03/30 17:09:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.14.1-r1.ebuild,v 1.1 2008/04/01 15:16:06 vapier Exp $
 
 inherit eutils
 
@@ -31,6 +31,8 @@ src_unpack() {
 
 	# Fix jp map to recognize Ctrl-[ as Escape #71870
 	epatch "${FILESDIR}"/${PN}-1.12-jp-escape.patch
+
+	epatch "${FILESDIR}"/${P}-missing-configure.patch #215610
 }
 
 src_compile() {
