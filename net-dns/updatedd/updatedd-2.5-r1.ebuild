@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.3.ebuild,v 1.2 2005/01/31 16:06:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.5-r1.ebuild,v 1.1 2008/04/01 10:36:52 dragonheart Exp $
 
 inherit eutils
 
@@ -10,16 +10,15 @@ SRC_URI="http://savannah.nongnu.org/download/updatedd/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	# Fix the Makefile.in so $(bindir) is created before installing files there
-	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile.patch || die "Patch Failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.6-options.patch
 }
 
 src_install() {
