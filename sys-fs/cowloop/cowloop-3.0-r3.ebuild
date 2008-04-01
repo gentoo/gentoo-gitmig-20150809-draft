@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.14.ebuild,v 1.5 2007/07/13 05:15:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r3.ebuild,v 1.1 2008/04/01 14:39:22 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -9,11 +9,12 @@ HOMEPAGE="http://www.atconsultancy.nl/cowloop/"
 SRC_URI="http://www.atconsultancy.nl/cowloop/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/linux-sources"
 
+S=${WORKDIR}/${P}/src
 MODULE_NAMES="cowloop(fs:)"
 BUILD_TARGETS="modules"
 
@@ -29,13 +30,25 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-config_h.patch
+	epatch "${FILESDIR}"/${P}-vfs_statfs.patch
+	epatch "${FILESDIR}"/${P}-kern-2.6.23.patch
+}
+
 src_compile() {
+	touch .gpl_license_accepted
 	linux-mod_src_compile
-	CC="$(tc-getCC) ${CFLAGS}" emake cowdev cowrepair cowsync cowlist || die "make failed"
+	CC="$(tc-getCC)" emake utils || die "make failed"
 }
 
 src_install() {
 	linux-mod_src_install
-	dosbin cowdev cowrepair cowsync cowlist
-	doman man/*
+	emake DESTDIR="${D}" install-utils install-man || die 'make failed'
+	dodoc "${S}"/../RELEASENOTES "${S}"/../HOWTO ../doc/*
+	dodir /etc/udev/rules.d
+	echo 'KERNEL=="cowctl"        NAME="cow/ctl"' > "${D}"/etc/udev/rules.d/70-cow.rules
+	echo 'KERNEL=="cow[0-9]*"  NAME="cow/%n"' >> "${D}"/etc/udev/rules.d/70-cow.rules
 }

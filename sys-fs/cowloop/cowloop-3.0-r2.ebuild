@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r2.ebuild,v 1.2 2007/05/02 10:50:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r2.ebuild,v 1.3 2008/04/01 14:39:22 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -25,16 +25,15 @@ pkg_setup() {
 	if kernel_is lt 2 6
 	then
 		eerror "This version only works with 2.6 kernels"
-		eerror "For 2.4 kernel support, use version 1.4"
 		die "No compatible kernel detected!"
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-cflags.patch
-	epatch ${FILESDIR}/${P}-config_h.patch
-	epatch ${FILESDIR}/${P}-vfs_statfs.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-config_h.patch
+	epatch "${FILESDIR}"/${P}-vfs_statfs.patch
 }
 
 src_compile() {
@@ -48,6 +47,6 @@ src_install() {
 	emake DESTDIR="${D}" install-utils install-man || die 'make failed'
 	dodoc "${S}"/../RELEASENOTES "${S}"/../HOWTO ../doc/*
 	dodir /etc/udev/rules.d
-	echo 'KERNEL=="cowctl"        NAME="cow/ctl"' > ${D}/etc/udev/rules.d/70-cow.rules
-	echo 'KERNEL=="cow[0-9]*"  NAME="cow/%n"' >> ${D}/etc/udev/rules.d/70-cow.rules
+	echo 'KERNEL=="cowctl"        NAME="cow/ctl"' > "${D}"/etc/udev/rules.d/70-cow.rules
+	echo 'KERNEL=="cow[0-9]*"  NAME="cow/%n"' >> "${D}"/etc/udev/rules.d/70-cow.rules
 }
