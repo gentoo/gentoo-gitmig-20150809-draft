@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.9 2007/07/22 02:55:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.10 2008/04/01 10:37:24 s4t4n Exp $
 
 WANT_AUTOMAKE="1.5"
 WANT_AUTOCONF="latest"
@@ -31,19 +31,19 @@ FONTDIR="/usr/share/fonts/${PN}-fonts"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# sanitize fonts installation path
-	epatch ${FILESDIR}/install-paths.patch-${PV}
+	epatch "${FILESDIR}/install-paths.patch-${PV}"
 
 	# add legacy support for older dockapps
-	epatch ${FILESDIR}/legacy.patch-${PV}
+	epatch "${FILESDIR}/legacy.patch-${PV}"
+
+	eautoreconf
 }
 
 src_compile()
 {
-	eautoreconf
-
 	econf || die "configure failed"
 	emake || die "parallel make failed"
 }
@@ -51,7 +51,7 @@ src_compile()
 src_install()
 {
 	make                                                    \
-		DESTDIR=${D}                                        \
+		DESTDIR="${D}"                                      \
 		SHAREDIR="${D}/usr/share/doc/${PF}/examples/"       \
 		install || die "make install failed"
 
