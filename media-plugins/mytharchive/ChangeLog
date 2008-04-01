@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.28 2008/03/09 18:44:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.29 2008/04/01 03:58:07 cardoe Exp $
+
+*mytharchive-0.21_p16783 (01 Apr 2008)
+
+  01 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mytharchive-0.21_p16783.ebuild:
+  fix issue with dvdauthor arguments. Fix issue with non-ascii titles
 
 *mytharchive-0.21_p16468 (09 Mar 2008)
 
