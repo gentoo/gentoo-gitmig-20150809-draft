@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.20.2.ebuild,v 1.1 2007/10/21 14:55:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.20.2.ebuild,v 1.2 2008/04/01 20:04:58 cardoe Exp $
 
 DESCRIPTION="User-contributed MythTV themes"
 HOMEPAGE="http://www.mythtv.org/wiki/index.php/Themes"
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/ProjectGrayhem-20061221.tar.bz2
 	http://home.comcast.net/~zdzisekg/download/MePo-wide-0.3.5.tar.gz"
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 DEPEND="x11-themes/mythtv-themes"
 RDEPEND="media-tv/mythtv"
