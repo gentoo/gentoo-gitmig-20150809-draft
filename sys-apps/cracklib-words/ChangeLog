@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cracklib-words
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/ChangeLog,v 1.13 2008/04/02 03:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/ChangeLog,v 1.14 2008/04/02 11:08:18 armin76 Exp $
+
+  02 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  cracklib-words-20080301.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #215811
 
 *cracklib-words-20080401 (02 Apr 2008)
 
