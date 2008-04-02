@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.21 2008/04/02 16:51:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.22 2008/04/02 19:23:45 cardoe Exp $
+
+  02 Apr 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.1.ebuild,
+  openrc-9999.ebuild:
+  fix issue with installing boot initscripts that are provided by currently
+  installing copy of OpenRC
 
 *openrc-0.2.1 (02 Apr 2008)
 
