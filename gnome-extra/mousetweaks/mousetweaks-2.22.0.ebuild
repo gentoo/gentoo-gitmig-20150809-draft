@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.0.ebuild,v 1.1 2008/03/26 22:45:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.0.ebuild,v 1.2 2008/04/02 19:58:08 leio Exp $
 
 inherit gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Mousetweaks/Home"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.10

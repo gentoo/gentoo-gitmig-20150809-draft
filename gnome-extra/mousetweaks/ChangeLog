@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/mousetweaks
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.1 2008/03/26 22:45:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.2 2008/04/02 19:58:08 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> mousetweaks-2.22.0.ebuild:
+  Mark ~x86, works good for me on x86
 
 *mousetweaks-2.22.0 (26 Mar 2008)
 
