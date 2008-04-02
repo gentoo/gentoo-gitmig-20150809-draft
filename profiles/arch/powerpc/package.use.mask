@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
+media-plugins/gst-plugins-meta dvb mythtv
+
 # Mark Loeser <halcy0n@gentoo.org> (18 Jan 2008)
 # mono doesn't work with Openoffice - bug #202361
 app-office/openoffice mono

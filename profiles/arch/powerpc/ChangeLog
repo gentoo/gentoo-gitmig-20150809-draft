@@ -1,3 +1,7 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.1 2008/04/01 17:39:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.2 2008/04/02 22:27:28 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  USE mask dvb and mythtv on gst-plugins-meta - dependencies not keyworded
+

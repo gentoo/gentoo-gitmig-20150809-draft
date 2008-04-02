@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
+media-plugins/gst-plugins-meta dvb mythtv
+
 # nixnut <nixnut@gentoo.org> (5 feb 2008)
 # Masking hb and hb2 USE flags as no suitable solution for evms exists
 sys-fs/evms hb hb2
