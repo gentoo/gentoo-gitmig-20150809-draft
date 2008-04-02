@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/package.use.mask,v 1.9 2008/04/02 22:00:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/package.use.mask,v 1.10 2008/04/02 22:18:27 leio Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -14,5 +14,5 @@ media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
-# media-tv/mythtv not keyworded
-media-plugins/gst-plugins-meta mythtv
+# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
+media-plugins/gst-plugins-meta dvb mythtv
