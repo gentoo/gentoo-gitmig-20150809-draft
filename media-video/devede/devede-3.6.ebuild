@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.6.ebuild,v 1.1 2007/12/25 09:01:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.6.ebuild,v 1.2 2008/04/02 19:39:04 maekke Exp $
 
 inherit multilib python
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rastersoft.com/descargas/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc psyco"
 
 RDEPEND=">=x11-libs/gtk+-2.6
