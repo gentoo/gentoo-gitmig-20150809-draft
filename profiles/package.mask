@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8455 2008/04/01 18:47:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8456 2008/04/02 01:45:06 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -227,14 +227,6 @@ gnome-base/gvfs
 >=gnome-extra/gnome2-user-docs-2.22
 >=gnome-base/gnome-light-2.22
 >=gnome-base/gnome-2.22
-
-# Mart Raudsepp <leio@gentoo.org> (10 Mar 2008)
-# Temporary swfdec mask due to need for matching versions
-# at once
->=net-libs/libsoup-2.4
->=media-libs/swfdec-0.6.0
->=net-www/swfdec-mozilla-0.6.0
->=gnome-extra/swfdec-gnome-2.21.91
 # End of GNOME 2.22 mask
 
 # Denis Dupeyron <calchan@gentoo.org> (15 Mar 2008)

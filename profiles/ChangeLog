@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1276 2008/04/01 23:48:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1277 2008/04/02 01:45:06 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Unmask swfdec-0.6 and co
 
   01 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
   Unvague pth local USE description for gpgme.
