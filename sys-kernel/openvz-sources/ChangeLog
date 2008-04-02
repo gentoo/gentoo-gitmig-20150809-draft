@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.88 2008/03/14 20:02:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.89 2008/04/02 09:43:41 pva Exp $
+
+*openvz-sources-2.6.24.004.1 (02 Apr 2008)
+
+  02 Apr 2008; Peter Volkov <pva@gentoo.org>
+  -files/openvz-sources-2.6.24.002.2-CPT-select-PM-as-well.patch,
+  -files/openvz-sources-2.6.24.002.2-CPT-select-tun-venet-veth-modules.patch
+  ,
+  -files/openvz-sources-2.6.24.002.2-SIT-create-sit-devices-in-correct-netns
+  .patch, -files/openvz-sources-2.6.24.002.2-proc-compilation.patch,
+  -files/openvz-sources-2.6.24.002.2-reexport-sys_open.patch,
+  -files/openvz-sources-2.6.24.002.2-warning-fs-sysfs-dir.c.patch,
+  -openvz-sources-2.6.24.002.2-r1.ebuild,
+  +openvz-sources-2.6.24.004.1.ebuild:
+  New development snapshot from upstream. Removed old.
 
   14 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   fix metadata

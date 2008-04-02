@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.24.002.2-r1.ebuild,v 1.1 2008/03/05 10:07:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.24.004.1.ebuild,v 1.1 2008/04/02 09:43:41 pva Exp $
 
 inherit versionator
 
@@ -32,10 +32,4 @@ SRC_URI="${KERNEL_URI} ${ARCH_URI}
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KERNEL}.${OVZ_REV}-combined.gz
-${FILESDIR}/openvz-sources-2.6.24.002.2-CPT-select-PM-as-well.patch
-${FILESDIR}/openvz-sources-2.6.24.002.2-CPT-select-tun-venet-veth-modules.patch
-${FILESDIR}/openvz-sources-2.6.24.002.2-proc-compilation.patch
-${FILESDIR}/openvz-sources-2.6.24.002.2-reexport-sys_open.patch
-${FILESDIR}/openvz-sources-2.6.24.002.2-SIT-create-sit-devices-in-correct-netns.patch
-${FILESDIR}/openvz-sources-2.6.24.002.2-warning-fs-sysfs-dir.c.patch
 "
