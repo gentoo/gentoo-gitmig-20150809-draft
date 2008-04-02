@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/omniORB
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.48 2007/11/03 17:05:46 caleb Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.49 2008/04/02 21:20:13 caster Exp $
+
+*omniORB-4.1.2 (02 Apr 2008)
+
+  02 Apr 2008; Vlastimil Babka <caster@gentoo.org> +files/omniNames,
+  metadata.xml, +omniORB-4.1.2.ebuild:
+  Version bump, bug #214308. Fix multilib-strict and quoting, thanks to
+  gentoofan23, bug #214306. Rename omniORB init script to omniNames for
+  clarity and rewrite it with s-s-d. Point the naming service to localhost
+  in omniORB.cfg to work out of the box. Add myself as maintainer.
 
   03 Nov 2007; Caleb Tennis <caleb@gentoo.org> -omniORB-4.0.6.ebuild,
   -omniORB-4.0.7.ebuild:
