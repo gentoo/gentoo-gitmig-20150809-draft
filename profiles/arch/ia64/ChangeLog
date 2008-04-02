@@ -1,3 +1,7 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.1 2008/04/01 17:39:56 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.2 2008/04/02 21:58:00 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  Mask USE=mythtv on gst-plugins-meta as media-tv/mythtv not keyworded
+

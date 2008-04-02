@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.1 2008/04/01 17:39:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.2 2008/04/02 21:56:08 leio Exp $
+
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-tv/mythtv not keyworded
+media-plugins/gst-plugins-meta mythtv
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment

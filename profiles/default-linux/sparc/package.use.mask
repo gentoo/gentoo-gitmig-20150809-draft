@@ -1,3 +1,7 @@
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-tv/mythtv not keyworded
+media-plugins/gst-plugins-meta mythtv
+
 #Fails to build
 net-misc/asterisk h323
 

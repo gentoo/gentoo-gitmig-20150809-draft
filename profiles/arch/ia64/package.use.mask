@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.1 2008/04/01 17:39:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.2 2008/04/02 21:58:00 leio Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -12,3 +12,7 @@ media-video/mplayer ladspa
 # Needs valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-tv/mythtv not keyworded
+media-plugins/gst-plugins-meta mythtv
