@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/cracklib-words-20080301.ebuild,v 1.2 2008/03/06 16:14:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/cracklib-words-20080301.ebuild,v 1.3 2008/04/02 02:59:39 vapier Exp $
 
 DESCRIPTION="large set of crack/cracklib dictionaries"
 HOMEPAGE="http://sourceforge.net/projects/cracklib"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/cracklib/${P}.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
