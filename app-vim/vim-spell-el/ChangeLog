@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-el
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.1 2008/04/02 12:46:13 agorf Exp $
+
+*vim-spell-el-20080402 (02 Apr 2008)
+
+  02 Apr 2008; Aggelos Orfanakos <agorf@gentoo.org> +metadata.xml,
+  +vim-spell-el-20080402.ebuild:
+  Initial ebuild by Dimitris Kavadas <dpkavadas@gmail.com>.
+
