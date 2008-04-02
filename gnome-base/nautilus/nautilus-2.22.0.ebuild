@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.22.0.ebuild,v 1.1 2008/03/24 06:52:13 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.22.0.ebuild,v 1.2 2008/04/02 14:25:52 dang Exp $
 
 inherit virtualx eutils gnome2
 
@@ -26,7 +26,10 @@ RDEPEND=">=x11-libs/startup-notification-0.8
 		 >=media-libs/libexif-0.5.12
 		 >=gnome-base/gconf-2.0
 		 >=gnome-base/gvfs-0.1.2
-		 beagle? ( >=app-misc/beagle-0.0.12 )
+		 beagle? ( || (
+		 	dev-libs/libbeagle
+			=app-misc/beagle-0.2*
+			) )
 		 tracker? ( >=app-misc/tracker-0.6.4 )
 		 >=gnome-base/libgnome-2.14
 		 >=gnome-base/libgnomeui-2.6"
