@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.0.ebuild,v 1.1 2008/02/24 14:46:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.0.ebuild,v 1.2 2008/04/02 08:00:10 opfer Exp $
 
 inherit gnome2 python
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kuliniewicz.org/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="libnotify"
 
 # This ebuild is far from perfect, it does a lot of automagic detection

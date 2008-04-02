@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/music-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/ChangeLog,v 1.11 2008/02/24 14:46:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/ChangeLog,v 1.12 2008/04/02 08:00:10 opfer Exp $
+
+  02 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  music-applet-2.3.0.ebuild:
+  stable x86, bug 215385
 
 *music-applet-2.3.0 (24 Feb 2008)
 
