@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.83 2008/03/19 19:03:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.84 2008/04/02 22:12:48 caster Exp $
+
+*swt-3.4_pre6 (02 Apr 2008)
+
+  02 Apr 2008; Vlastimil Babka <caster@gentoo.org> +files/swt-3.4-manifest,
+  +swt-3.4_pre6.ebuild:
+  Version bump, bug #214012.
 
   19 Mar 2008; Vlastimil Babka <caster@gentoo.org> -swt-3.3.ebuild,
   swt-3.3.1.1.ebuild:
