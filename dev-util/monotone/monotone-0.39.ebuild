@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.32.ebuild,v 1.7 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.39.ebuild,v 1.1 2008/04/02 02:11:15 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
 DESCRIPTION="Monotone Distributed Version Control System"
-HOMEPAGE="http://www.monotone.ca"
-SRC_URI="http://www.monotone.ca/downloads/${PV}/${P}.tar.gz"
+HOMEPAGE="http://monotone.ca"
+SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -14,11 +14,12 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
 IUSE="doc emacs ipv6 nls"
 
-RDEPEND=">=dev-libs/boost-1.33.1
+RDEPEND="
 	sys-libs/zlib
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
+	>=dev-libs/boost-1.33.1
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	doc? ( sys-apps/texinfo )"
 
@@ -28,29 +29,37 @@ pkg_setup() {
 	if [[ "$(gcc-version)" == "3.3" ]]; then
 		die 'requires >=gcc-3.4'
 	fi
+	# https://bugs.gentoo.org/show_bug.cgi?id=202371#c2
+	if ! has userpriv ${FEATURES} && has test ${FEATURES}; then
+		ewarn "No test will be performed due to lack of FEATURES=userpriv"
+	fi
 }
 
 src_compile() {
-	local myconf="$(use_enable nls) \
-		$(use_enable ipv6)"
-
 	# more aggressive optimizations cause trouble with the crypto library
 	strip-flags
 	append-flags $(test-flags -fno-stack-protector-all -fno-stack-protector)
 	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
 
-	econf ${myconf} || die "configure failed"
+	econf $(use_enable nls) $(use_enable ipv6) || die "configure failed"
 	emake || die "Compilation failed"
 
 	if use doc; then
-		make html || die 'html compilation failed'
+		emake html || die 'html compilation failed'
 	fi
 
-	use emacs && elisp-compile contrib/*.el
+	if use emacs; then
+		cd contrib
+		elisp-comp *.el || die "elisp-comp failed"
+	fi
 }
 
 src_test() {
-	make check || die "self test failed"
+	if has userpriv ${FEATURES}; then
+		emake check || die "self test failed"
+	else
+		ewarn 'not tested - requires FEATURES=userpriv'
+	fi
 }
 
 src_install() {
@@ -66,15 +75,16 @@ src_install() {
 	fi
 
 	if use emacs; then
-		elisp-install ${PN} contrib/*.{el,elc}
-		elisp-site-file-install "${FILESDIR}"/30monotone-gentoo.el
+		elisp-install ${PN} contrib/*.{el,elc} || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el \
+			|| die "elisp-site-file-install failed"
 	fi
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README* UPGRADE
+	dodoc AUTHORS ChangeLog NEWS README* UPGRADE
 	docinto contrib
 	dodoc contrib/*
 	newconfd "${FILESDIR}"/monotone.confd monotone
-	newinitd "${FILESDIR}"/monotone.initd monotone
+	newinitd "${FILESDIR}"/${PN}-0.36.initd monotone
 
 	insinto /etc/monotone ;
 	newins "${FILESDIR}"/hooks.lua hooks.lua
@@ -92,7 +102,7 @@ pkg_postinst() {
 
 	elog
 	elog "For details and instructions to upgrade from previous versions,"
-	elog "please read /usr/share/doc/${PF}/UPGRADE.gz"
+	elog "please read /usr/share/doc/${PF}/UPGRADE.bz2"
 	elog
 	elog "  1. edit /etc/conf.d/monotone"
 	elog "  2. import the first keys to enable access with"

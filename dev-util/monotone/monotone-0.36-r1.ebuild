@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.36-r1.ebuild,v 1.1 2007/10/26 20:30:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.36-r1.ebuild,v 1.2 2008/04/02 02:11:15 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -71,7 +71,7 @@ src_install() {
 			|| die "elisp-site-file-install failed"
 	fi
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README* UPGRADE
+	dodoc AUTHORS ChangeLog NEWS README* UPGRADE
 	docinto contrib
 	dodoc contrib/*
 	newconfd "${FILESDIR}"/monotone.confd monotone

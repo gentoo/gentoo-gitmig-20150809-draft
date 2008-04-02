@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/monotone
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.50 2007/10/26 20:30:28 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.51 2008/04/02 02:11:15 dragonheart Exp $
+
+*monotone-0.39 (02 Apr 2008)
+
+  02 Apr 2008; Daniel Black <dragonheart@gentoo.org> -files/monotone.initd,
+  -monotone-0.29.ebuild, -monotone-0.32.ebuild, -monotone-0.33.ebuild,
+  -monotone-0.36.ebuild, +monotone-0.39.ebuild:
+  version bump as per bug #202371 - thanks to fixes from Rainer Keller and
+  suggestions from Xake. Old version cleanout
 
 *monotone-0.36-r1 (26 Oct 2007)
 

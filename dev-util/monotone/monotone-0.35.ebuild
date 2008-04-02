@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.6 2007/10/24 00:50:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.7 2008/04/02 02:11:15 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -72,7 +72,7 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}"/30monotone-gentoo.el
 	fi
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README* UPGRADE
+	dodoc AUTHORS ChangeLog NEWS README* UPGRADE
 	docinto contrib
 	dodoc contrib/*
 	newconfd "${FILESDIR}"/monotone.confd monotone
