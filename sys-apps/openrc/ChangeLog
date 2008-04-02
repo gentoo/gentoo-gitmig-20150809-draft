@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.20 2008/03/31 16:23:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.21 2008/04/02 16:51:15 cardoe Exp $
+
+*openrc-0.2.1 (02 Apr 2008)
+
+  02 Apr 2008; Doug Goldstein <cardoe@gentoo.org> -openrc-0.2-r3.ebuild,
+  +openrc-0.2.1.ebuild:
+  version bump. fixes vlans. fixes termencoding/keymap issues.
 
   31 Mar 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2-r3.ebuild,
   openrc-9999.ebuild:

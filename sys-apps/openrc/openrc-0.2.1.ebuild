@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r3.ebuild,v 1.3 2008/03/31 19:25:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.1.ebuild,v 1.1 2008/04/02 16:51:15 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -64,13 +64,6 @@ src_unpack() {
 	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/9999/*.patch
-
-	epatch "${FILESDIR}"/${PN}-0.2-freebsd-install-rc.patch
-	epatch "${FILESDIR}"/${PN}-0.2-multiple-ntp-servers.patch
-	epatch "${FILESDIR}"/${PN}-0.2-multilib-fix.patch
-	epatch "${FILESDIR}"/${PN}-0.2-path-fix-for-multilib-fix.patch
-	epatch "${FILESDIR}"/${PN}-0.2-sysctl-vserver-fix.patch
-	epatch "${FILESDIR}"/${PN}-0.2-nicelevel-doc.patch
 }
 
 src_compile() {
@@ -169,6 +162,9 @@ pkg_preinst() {
 			ln -snf net.lo "${f}"
 		fi
 	done
+
+	# termencoding was added in 0.2.1 and needed in boot
+	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
 
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
