@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.14.ebuild,v 1.2 2008/03/27 14:31:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.14.ebuild,v 1.3 2008/04/02 19:29:44 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -17,7 +17,7 @@ RDEPEND="media-libs/fontconfig
 		>=media-libs/freetype-2.1.4
 		sys-libs/zlib
 		media-libs/libpng
-		>=x11-libs/pixman-0.9.4
+		>=x11-libs/pixman-0.9.6
 		X?	(
 				x11-libs/libXrender
 				x11-libs/libXext
