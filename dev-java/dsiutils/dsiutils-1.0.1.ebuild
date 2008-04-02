@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.1 2008/04/02 07:54:41 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.2 2008/04/02 16:48:40 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source test"
 EAPI="1"
@@ -54,4 +54,3 @@ RESTRICT="test"
 src_test() {
 	eant -Djar.base=/usr/share/emma/lib junit
 }
-
