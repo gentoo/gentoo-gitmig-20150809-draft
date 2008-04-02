@@ -1,3 +1,7 @@
+# Mart Raudsepp <leio@gentoo.org>
+# net-misc/networkmanager not keyworded
+networkmanager
+
 # Samuli Suominen <drac@gentoo.org>
 # media-libs/amrnb and media-libs/amrwb not tested.
 amr

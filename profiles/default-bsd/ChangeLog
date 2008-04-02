@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.20 2008/03/12 18:19:53 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.21 2008/04/02 21:20:17 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> use.mask:
+  Mask networkmanager USE flag - no version of it keyworded
 
   12 Mar 2008; Peter Weller <welp@gentoo.org> use.mask:
   Add m17n-lib to use.mask; requested by ulm

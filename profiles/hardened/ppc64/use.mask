@@ -2,6 +2,10 @@
 # that should not be used on PPC64
 # Tom Gall <tgall@gentoo.org> manages this list
 
+# 02 Apr 2008  Mart Raudsepp <leio@gentoo.org>
+# net-misc/networkmanager not keyworded
+networkmanager
+
 # 25 Feb 2008  Brent Baude <ranger@gentoo.org>
 # Masking xmlrpc use flag because xmlrpc-c does not compile
 # bug 209138
