@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jvmstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.6 2008/01/05 23:29:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.7 2008/04/02 19:49:44 nelchael Exp $
+
+  02 Apr 2008; Krzysiek Pawlik <nelchael@gentoo.org> jvmstat-3.0.ebuild:
+  Works on amd64.
 
   05 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> jvmstat-3.0.ebuild:
   Add app-arch/unzip to DEPEND.
