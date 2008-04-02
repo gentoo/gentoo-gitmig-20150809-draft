@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.115 2008/04/01 13:46:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.116 2008/04/02 10:54:54 dragonheart Exp $
+
+  02 Apr 2008; Daniel Black <dragonheart@gentoo.org> curl-7.18.1.ebuild:
+  hopefully fixed bug #215713 and bug #193149 thanks to Olivier, Rafal and
+  teidakankan
 
 *curl-7.18.1 (01 Apr 2008)
 
