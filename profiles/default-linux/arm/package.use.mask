@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.15 2007/12/23 10:31:16 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.16 2008/04/02 22:41:04 leio Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -24,3 +24,7 @@ media-libs/gst-plugins-base debug
 # Richard Brown <rbrown@gentoo.org> (23 Dec 2007)
 # app-xemacs/ruby-modes is not keyworded on this arch
 dev-lang/ruby xemacs
+
+# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
+# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
+media-plugins/gst-plugins-meta dvb mythtv
