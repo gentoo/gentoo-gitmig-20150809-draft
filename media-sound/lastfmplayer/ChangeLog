@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.28 2008/03/11 20:05:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.29 2008/04/02 22:30:52 genstef Exp $
+
+*lastfmplayer-1.4.2.58240-r1 (02 Apr 2008)
+
+  02 Apr 2008; Stefan Schweizer <genstef@gentoo.org>
+  +lastfmplayer-1.4.2.58240-r1.ebuild:
+  Use debian package to reduce download size dramatically and also install
+  i18n, bug 215635
 
   11 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
   lastfmplayer-1.4.2.58240.ebuild:
