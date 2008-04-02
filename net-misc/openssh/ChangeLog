@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.303 2008/04/02 16:04:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.304 2008/04/02 21:01:28 vapier Exp $
+
+  02 Apr 2008; Mike Frysinger <vapier@gentoo.org> openssh-4.9_p1-r1.ebuild:
+  Drop unnecessary USE=chroot #215820 by Cybertinus.
 
   02 Apr 2008; Jeroen Roovers <jer@gentoo.org> openssh-4.7_p1-r6.ebuild:
   Stable for HPPA (bug #215702).
