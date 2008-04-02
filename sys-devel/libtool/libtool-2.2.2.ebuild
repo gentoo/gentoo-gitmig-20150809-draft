@@ -1,23 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.2 2008/04/02 03:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.2.ebuild,v 1.1 2008/04/02 03:08:37 vapier Exp $
 
 inherit eutils
 
-if [[ ${PV} == "9999" ]] ; then
-	ECVS_SERVER="cvs.sv.gnu.org:/sources/libtool"
-	ECVS_MODULE="libtool"
-	inherit cvs
-else
-	SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
-fi
-
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="vanilla"
 
 RDEPEND="sys-devel/gnuconfig
@@ -26,17 +19,9 @@ RDEPEND="sys-devel/gnuconfig
 DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
-S=${WORKDIR}/${ECVS_MODULE}
-
 src_unpack() {
-	if [[ ${PV} == "9999" ]] ; then
-		cvs_src_unpack
-		cd "${S}"
-		./bootstrap || die
-	else
-		unpack ${A}
-		cd "${S}"
-	fi
+	unpack ${A}
+	cd "${S}"
 
 	use vanilla && return 0
 
