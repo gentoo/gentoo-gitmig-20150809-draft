@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/muse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.18 2008/01/30 11:27:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.19 2008/04/02 07:16:52 opfer Exp $
+
+  02 Apr 2008; Christian Faulhammer <opfer@gentoo.org> -muse-3.11.ebuild:
+  clean up
 
 *muse-3.12 (30 Jan 2008)
 
