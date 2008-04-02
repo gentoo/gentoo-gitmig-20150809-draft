@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.44 2008/03/18 23:49:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.45 2008/04/02 08:46:47 voyageur Exp $
+
+*nxserver-freenx-0.7.2-r1 (02 Apr 2008)
+
+  02 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.7.2-nolistentcp.patch,
+  +nxserver-freenx-0.7.2-r1.ebuild:
+  Add a patch to disable tcp listening in nxagent, thanks pappy
 
   18 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freenx-0.7.0-r1.ebuild, nxserver-freenx-0.7.1-r1.ebuild,
