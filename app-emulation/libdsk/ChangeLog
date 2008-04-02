@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libdsk
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.19 2007/11/01 20:30:04 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.20 2008/04/02 07:41:42 dragonheart Exp $
+
+*libdsk-1.2.1 (02 Apr 2008)
+
+  02 Apr 2008; Daniel Black <dragonheart@gentoo.org>
+  +files/libdsk-1.2.1-java-make-fix.patch, libdsk-1.1.10-r1.ebuild,
+  +libdsk-1.2.1.ebuild:
+  version bump as suggested in bug #177273 and fixed a compile problem too.
+  Thanks to Francisco for the bug report
 
   01 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -libdsk-1.1.9.ebuild,
   -libdsk-1.1.10.ebuild:

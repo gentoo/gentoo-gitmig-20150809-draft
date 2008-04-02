@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.10-r1.ebuild,v 1.2 2008/04/02 07:41:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.2.1.ebuild,v 1.1 2008/04/02 07:41:42 dragonheart Exp $
 
 inherit java-pkg-opt-2 flag-o-matic
 
@@ -22,7 +22,7 @@ RDEPEND="${CDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/java-make-fix.patch"
+	epatch "${FILESDIR}"/${P}-java-make-fix.patch
 }
 
 src_compile() {
