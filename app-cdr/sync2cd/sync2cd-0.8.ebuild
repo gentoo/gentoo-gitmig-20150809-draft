@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/sync2cd-0.8.ebuild,v 1.9 2007/07/13 05:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/sync2cd-0.8.ebuild,v 1.10 2008/04/02 02:20:56 dragonheart Exp $
 
 inherit distutils
 
