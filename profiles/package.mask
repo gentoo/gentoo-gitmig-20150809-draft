@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8456 2008/04/02 01:45:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8457 2008/04/02 07:46:39 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mart Raudsepp <leio@gentoo.org> (2 Apr 2008)
+# Mask because it breaks things all over. Tracker bug: #212763
+>=sys-devel/libtool-2.2
 
 # Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
@@ -290,10 +294,6 @@ x11-misc/perlpanel
 # Luis F. Araujo <araujo@gentoo.org> (9 Mar 2008)
 # Check bug #208666
 dev-lang/smalltalkx
-
-# Ben de Groot <yngwin@gentoo.org> (8 Mar 2008)
-# Mask because it breaks things all over. Tracker bug: #212763
-=sys-devel/libtool-2.2
 
 # MATSUU Takuto <matsuu@gentoo.org> (8 Mar 2008)
 # Masked for Bug 173467

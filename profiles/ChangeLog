@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1277 2008/04/02 01:45:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1278 2008/04/02 07:46:39 leio Exp $
+
+  02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Upgrade sys-devel/libtool mask to include 2.2.2, as it still breaks things
+  all over and there have been no objections for masking on the tracker bug.
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
   Unmask swfdec-0.6 and co
