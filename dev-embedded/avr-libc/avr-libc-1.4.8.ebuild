@@ -1,17 +1,19 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.5.ebuild,v 1.1 2006/10/11 22:13:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.8.ebuild,v 1.1 2008/04/02 08:26:31 dragonheart Exp $
 
 CHOST="avr"
 CTARGET="avr"
 
 inherit flag-o-matic
 
+DOCS_PV="1.4.7"
+
 DESCRIPTION="C library for Atmel AVR microcontrollers"
 HOMEPAGE="http://www.nongnu.org/avr-libc/"
 SRC_URI="http://savannah.nongnu.org/download/avr-libc/${P}.tar.bz2
-	http://savannah.nongnu.org/download/avr-libc/${PN}-manpages-${PV}.tar.bz2
-	doc? ( http://savannah.nongnu.org/download/avr-libc/${PN}-user-manual-${PV}.tar.bz2 )"
+	http://savannah.nongnu.org/download/avr-libc/${PN}-manpages-${DOCS_PV}.tar.bz2
+	doc? ( http://savannah.nongnu.org/download/avr-libc/${PN}-user-manual-${DOCS_PV}.tar.bz2 )"
 
 LICENSE="BSD"
 SLOT="0"
@@ -68,5 +70,5 @@ src_install() {
 	doins "${WORKDIR}"/man/man3/*
 	prepman /usr/share/doc/${PF}
 
-	use doc	&& dohtml "${WORKDIR}"/${PN}-user-manual-${PV}/*
+	use doc	&& dohtml "${WORKDIR}"/${PN}-user-manual-${DOCS_PV}/*
 }
