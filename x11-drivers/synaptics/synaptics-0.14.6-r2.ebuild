@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.1 2008/04/01 23:57:31 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.2 2008/04/02 03:52:01 battousai Exp $
 
 inherit toolchain-funcs eutils linux-info
 
-IUSE=""
+IUSE="hal"
 
 DESCRIPTION="Driver for Synaptics touchpads"
 HOMEPAGE="http://w1.894.telia.com/~u89404340/touchpad/"
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="x11-libs/libXext"
+RDEPEND="x11-libs/libXext
+	 hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	x11-base/xorg-server
 	>=sys-apps/sed-4"
@@ -86,4 +87,10 @@ src_install() {
 	# Stupid new daemon, didn't work for me because of shm issues
 	newinitd "${FILESDIR}"/rc.init syndaemon
 	newconfd "${FILESDIR}"/rc.conf syndaemon
+
+	if use hal ; then
+		# Have HAL assign this driver to supported touchpads.
+		insinto /usr/share/hal/fdi/policy/10osvendor
+		doins "${FILESDIR}"/10-synaptics.fdi
+	fi
 }

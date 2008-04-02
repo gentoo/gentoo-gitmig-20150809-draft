@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.33 2008/04/01 23:57:31 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.34 2008/04/02 03:52:01 battousai Exp $
+
+  02 Apr 2008; Bryan Stine <battousai@gentoo.org> +files/10-synaptics.fdi,
+  synaptics-0.14.6-r2.ebuild:
+  Add HAL policy to report input driver as synaptics for supported
+  touchpads. Suggested by dberkholz.
 
 *synaptics-0.14.6-r2 (01 Apr 2008)
 
