@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.59 2008/03/22 18:28:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.60 2008/04/02 03:04:25 vapier Exp $
+
+*dpkg-1.14.17 (02 Apr 2008)
+
+  02 Apr 2008; Mike Frysinger <vapier@gentoo.org> +dpkg-1.14.17.ebuild:
+  Version bump #215670 by Natanael Copa.
 
   22 Mar 2008; Raúl Porcel <armin76@gentoo.org> dpkg-1.14.16.6.ebuild:
   alpha/ia64/sparc/x86 stable
