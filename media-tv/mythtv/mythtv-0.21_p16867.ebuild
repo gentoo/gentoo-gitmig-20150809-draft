@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p16867.ebuild,v 1.3 2008/04/01 16:50:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p16867.ebuild,v 1.4 2008/04/03 23:10:54 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
@@ -36,7 +36,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	dvd? ( 	media-libs/libdvdnav )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=sys-libs/libavc1394-0.5.0
+			>=sys-libs/libavc1394-0.5.3
 			>=media-libs/libiec61883-1.0.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
