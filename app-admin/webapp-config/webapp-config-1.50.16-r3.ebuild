@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r3.ebuild,v 1.1 2008/02/17 18:06:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r3.ebuild,v 1.2 2008/04/03 10:24:04 hollow Exp $
 
 inherit eutils distutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-baselayout2.patch
 	epatch "${FILESDIR}"/${P}-htdocs-symlink.patch
 	epatch "${FILESDIR}"/${P}-absolute-paths.patch
+	rm -f doc/webapp.eclass.5{,.html}
 }
 
 src_install() {

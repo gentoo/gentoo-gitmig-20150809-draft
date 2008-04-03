@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r1.ebuild,v 1.10 2007/08/25 11:44:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r1.ebuild,v 1.11 2008/04/03 10:24:04 hollow Exp $
 
 inherit eutils distutils
 
@@ -31,16 +31,15 @@ src_install() {
 	distutils_src_install --install-scripts="/usr/sbin"
 
 	dodir /etc/vhosts
-	cp config/webapp-config ${D}/etc/vhosts/
+	cp config/webapp-config "${D}"/etc/vhosts/
 	keepdir /usr/share/webapps
 	keepdir /var/db/webapps
 	dodoc examples/phpmyadmin-2.5.4-r1.ebuild AUTHORS.txt TODO.txt CHANGES.txt examples/postinstall-en.txt
-	doman doc/webapp-config.5 doc/webapp-config.8 doc/webapp.eclass.5
-	dohtml doc/webapp-config.5.html doc/webapp-config.8.html doc/webapp.eclass.5.html
+	doman doc/webapp-config.5 doc/webapp-config.8
+	dohtml doc/webapp-config.5.html doc/webapp-config.8.html
 }
 
 src_test() {
-	cd ${S}
 	distutils_python_version
 	if [[ $PYVER_MAJOR -gt 1 ]] && [[ $PYVER_MINOR -gt 3 ]] ; then
 		elog "Running webapp-config doctests..."
