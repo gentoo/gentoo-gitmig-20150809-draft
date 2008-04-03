@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3462 2008/04/01 23:48:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3463 2008/04/03 18:40:03 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2102,7 +2102,6 @@ www-client/seamonkey:moznomail - Disable building mozilla's mail client
 www-client/seamonkey:moznopango - Disable pango during runtime
 www-client/seamonkey:moznoroaming - sroaming extension support
 www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
-www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/zoneminder:X10 - Enable support for X10 devices
 www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
