@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.92 2008/03/29 11:27:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.93 2008/04/03 16:18:00 humpback Exp $
+
+*skype-2.0.0.68 (03 Apr 2008)
+
+  03 Apr 2008; Gustavo Felisberto <humpback@gentoo.org>
+  +skype-2.0.0.68.ebuild:
+  Added 2.0.0.68. Closes bug #215487.
 
   29 Mar 2008; Dawid Węgliński <cla@gentoo.org> skype-2.0.0.63.ebuild:
   Stable on x86 (bug #215228)
