@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.146 2008/03/22 18:20:42 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.147 2008/04/03 22:30:13 vapier Exp $
+
+  03 Apr 2008; Mike Frysinger <vapier@gentoo.org> dnsmasq-2.41.ebuild:
+  Use gawk rather than nawk #214865 by Toralf Förster.
 
   22 Mar 2008; Raúl Porcel <armin76@gentoo.org> dnsmasq-2.41.ebuild:
   alpha/ia64/sparc/x86 stable

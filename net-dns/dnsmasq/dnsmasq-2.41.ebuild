@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.41.ebuild,v 1.4 2008/03/22 18:20:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.41.ebuild,v 1.5 2008/04/03 22:30:13 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	sed -i '/^AWK/s:nawk:gawk:' Makefile #214865
 	# dnsmasq on FreeBSD wants the config file in a silly location, this fixes
 	epatch "${FILESDIR}/${PN}-fbsd-config.patch"
 }
@@ -42,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
+	emake \
 		PREFIX=/usr \
 		MANDIR=/usr/share/man \
 		DESTDIR="${D}" \
