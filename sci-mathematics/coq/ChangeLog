@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.28 2008/04/01 18:37:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.29 2008/04/03 01:24:06 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org> coq-8.1_p3.ebuild:
+  stable ppc, bug 215746
 
   01 Apr 2008; Alexis Ballier <aballier@gentoo.org> -coq-8.1_p1.ebuild,
   -coq-8.1_p2.ebuild:
