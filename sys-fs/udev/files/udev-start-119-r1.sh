@@ -7,7 +7,8 @@
 rc_coldplug=${rc_coldplug:-${RC_COLDPLUG:-YES}}
 rc_device_tarball=${rc_device_tarball:-${RC_DEVICE_TARBALL:-NO}}
 
-cleanup() {
+cleanup()
+{
 	if [ "$1" != "0" ]; then
 		# cleanup to fail more gracely
 		start-stop-daemon --stop --exec /sbin/udevd
@@ -21,10 +22,13 @@ cleanup() {
 # Maybe something like udevd --test || exit $?
 check_kernel()
 {
-	if [ $(get_KV) -le $(KV_to_int '2.6.14') ]; then
+	if [ $(get_KV) -lt $(KV_to_int '2.6.15') ]; then
 		eerror "Your kernel is too old to work with this version of udev."
 		eerror "Current udev only supports Linux kernel 2.6.15 and newer."
 		return 1
+	fi
+	if [ $(get_KV) -lt $(KV_to_int '2.6.18') ]; then
+		ewarn "You need at least Linux kernel 2.6.18 for reliable operation of udev."
 	fi
 	return 0
 }
@@ -85,6 +89,13 @@ seed_dev()
 	return 0
 }
 
+disable_hotplug_agent()
+{
+	if [ -e /proc/sys/kernel/hotplug ]; then
+		echo "" >/proc/sys/kernel/hotplug
+	fi
+}
+
 start_udev()
 {
 	ebegin "Starting udevd"
@@ -123,7 +134,7 @@ populate_udev()
 	return 0
 }
 
-compat_device_nodes()
+compat_volume_nodes()
 {
 	# Only do this for baselayout-1*
 	if [ ! -e /lib/librc.so ]; then
@@ -192,24 +203,23 @@ fi
 
 unpack_device_tarball
 seed_dev
-
-if [ -e /proc/sys/kernel/hotplug ]; then
-	echo "" >/proc/sys/kernel/hotplug
-fi
-
+disable_hotplug_agent
 /lib/udev/write_root_link_rule
 
 start_udev || cleanup $?
 populate_udev || cleanup $?
 
-compat_device_nodes
+compat_volume_nodes
 check_persistent_net
 
 # trigger executing initscript when /etc is writable
 IN_HOTPLUG=1 /etc/init.d/udev-postmount start >/dev/null 2>&1
 
 # should exist on every system, else udev failed
-[ -e /dev/zero ] || cleanup 1
+if [ ! -e /dev/zero ]; then
+	eerror "Assuming udev failed somewhere, as /dev/zero does not exist."
+	cleanup 1
+fi
 
 # udev started successfully
 exit 0
