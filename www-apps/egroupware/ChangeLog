@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.87 2008/04/03 10:37:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.88 2008/04/03 19:55:33 maekke Exp $
+
+  03 Apr 2008; Markus Meier <maekke@gentoo.org> egroupware-1.4.003.ebuild:
+  amd64/x86 stable, security bug #214212
 
 *egroupware-1.4.003 (03 Apr 2008)
 
