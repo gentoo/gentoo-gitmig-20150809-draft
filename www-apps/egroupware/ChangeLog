@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.86 2008/02/23 21:06:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.87 2008/04/03 10:37:15 hollow Exp $
+
+*egroupware-1.4.003 (03 Apr 2008)
+
+  03 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  +egroupware-1.4.003.ebuild:
+  version bump wrt security #214212
 
   23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   egroupware-1.4.002.ebuild:
