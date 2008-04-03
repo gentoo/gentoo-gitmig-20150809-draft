@@ -10,6 +10,7 @@
 # Mask since it needs newer linux-headers
 >=sys-apps/hal-0.5.10
 >=app-misc/hal-info-20071011
+>=x11-drivers/xf86-input-evdev-1.2.0
 
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
