@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.0.ebuild,v 1.1 2008/04/03 22:27:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.0.ebuild,v 1.2 2008/04/03 22:49:47 eva Exp $
 
 inherit eutils
 
 DESCRIPTION="Set of plugins for abiword"
 HOMEPAGE="http://www.abisource.com/"
-SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/source/${P}.tar.gz"
+SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/source/${P}.tar.gz
+	http://www.abisource.com/downloads/abiword/${PV}/source/${P//-plugins/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -56,7 +57,7 @@ pkg_setup() {
 
 src_compile() {
 	local myconf="--enable-all \
-		--with-abiword="${WORKDIR}/abiword-${PV}/abi" \
+		--with-abiword="${WORKDIR}/abiword-${PV}" \
 		$(use_with cxx boost) \
 		$(use_enable debug) \
 		$(use_with bzip2 bz2abw) \

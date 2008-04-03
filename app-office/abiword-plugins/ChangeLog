@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.39 2008/04/03 22:27:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.40 2008/04/03 22:49:47 eva Exp $
+
+  03 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  abiword-plugins-2.6.0.ebuild:
+  fix stupid SRC_URI problem, abiword-plugins still needs abiword sources
 
 *abiword-plugins-2.6.0 (03 Apr 2008)
 
