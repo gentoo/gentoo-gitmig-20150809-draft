@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6.ebuild,v 1.2 2008/04/03 09:35:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.1 2008/04/03 19:40:30 caster Exp $
 
 EAPI="1"
 
@@ -25,7 +25,7 @@ SRC_URI="x86? (
 			http://${MY_DMF}/${MY_P}-gtk-linux-ppc.zip
 		)"
 
-SLOT="3"
+SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
@@ -61,6 +61,7 @@ DEPEND=">=virtual/jdk-1.4
 		x11-libs/libXrender
 		x11-libs/libXt
 		x11-proto/xextproto
+		x11-proto/inputproto
 		${COMMON}"
 
 RDEPEND=">=virtual/jre-1.4
@@ -68,6 +69,17 @@ RDEPEND=">=virtual/jre-1.4
 		${COMMON}"
 
 S="${WORKDIR}"
+
+pkg_setup() {
+	java-pkg-2_pkg_setup
+	# We cannot use slotmove, java packages are expected to be in /usr/share/PN-SLOT
+	# so this is the only way to prevent collisions
+	if has_version =dev-java/swt-3.4_pre6; then
+		elog "Please uninstall or downgrade dev-java/swt-3.4_pre6 first"
+		elog "before installing this version."
+		die "Please uninstall or downgrade dev-java/swt-3.4_pre6"
+	fi
+}
 
 src_unpack() {
 	local DISTFILE="${A}"
@@ -212,9 +224,4 @@ src_install() {
 	fi
 
 	dohtml about.html || die
-}
-
-pkg_postinst() {
-	elog "In case this swt upgrade prevents your eclipse-3.3 from starting,"
-	elog "try running it once with -clean parameter: 'eclipse-3.3 -clean'"
 }

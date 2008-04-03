@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.85 2008/04/03 09:35:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.86 2008/04/03 19:40:30 caster Exp $
+
+*swt-3.4_pre6-r1 (03 Apr 2008)
+
+  03 Apr 2008; Vlastimil Babka <caster@gentoo.org> -swt-3.4_pre6.ebuild,
+  +swt-3.4_pre6-r1.ebuild:
+  Revbump to change slot to 3.4 so that eclipse-3.3 still works, bug
+  #241012. Swt 3.4_pre6 in slot 3 has to be downgraded or uninstalled first.
+  Add x11-proto/inputproto to DEPEND, bug #215998.
 
   03 Apr 2008; Vlastimil Babka <caster@gentoo.org> swt-3.4_pre6.ebuild:
   Add a pkg_postinst elog about possibility of having to run eclipse-3.3
