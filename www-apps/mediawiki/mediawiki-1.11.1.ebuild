@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.6 2008/02/26 07:11:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.7 2008/04/03 10:06:02 hollow Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -17,9 +17,12 @@ IUSE="imagemagick math mysql postgres restrict +ocamlopt"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 RDEPEND="${DEPEND}
-	math? ( virtual/tetex
+	math? (
+		app-text/dvipng
+		virtual/tetex
 		virtual/ghostscript
-		media-gfx/imagemagick )
+		media-gfx/imagemagick
+	)
 	imagemagick? ( media-gfx/imagemagick )"
 
 RESTRICT="test"

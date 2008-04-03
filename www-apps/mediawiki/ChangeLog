@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.103 2008/03/08 19:38:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.104 2008/04/03 10:06:02 hollow Exp $
+
+  03 Apr 2008; Benedikt Böhm <hollow@gentoo.org> mediawiki-1.11.1.ebuild,
+  mediawiki-1.11.2.ebuild:
+  fix #212738
 
   08 Mar 2008; <pva@gentoo.org> mediawiki-1.11.2.ebuild:
   amd64 stable, security bug #212170.
