@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.49 2008/03/27 01:38:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.50 2008/04/03 13:26:58 jokey Exp $
+
+  03 Apr 2008; <jokey@gentoo.org> -tenshi-0.6.ebuild, -tenshi-0.7.ebuild,
+  -tenshi-0.8.ebuild, -tenshi-0.8-r1.ebuild, -tenshi-0.9.1.ebuild:
+  Drop old
 
   27 Mar 2008; Markus Ullmann <jokey@gentoo.org> tenshi-0.10.ebuild:
   Keyword ~sparc
