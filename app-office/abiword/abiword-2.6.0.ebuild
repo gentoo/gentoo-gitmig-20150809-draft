@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.0.ebuild,v 1.1 2008/04/03 21:20:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.0.ebuild,v 1.2 2008/04/03 21:29:36 eva Exp $
 
 inherit alternatives eutils gnome2 versionator
 
@@ -28,7 +28,6 @@ RDEPEND="virtual/xft
 	>=gnome-base/libgnomeprintui-2.2
 	>=x11-libs/goffice-0.4
 	>=media-libs/libpng-1.2
-	>=x11-libs/libXft-2.0
 	>=media-libs/fontconfig-2.1
 	>=media-libs/freetype-2.1
 	>=x11-libs/pango-1.2
