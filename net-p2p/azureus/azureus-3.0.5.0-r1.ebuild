@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.5.0.ebuild,v 1.1 2008/04/03 15:04:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.5.0-r1.ebuild,v 1.1 2008/04/03 19:43:57 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -13,6 +13,8 @@
 ###       the mozilla dep. Best would be some per-user setting and startup
 ###       script check for swt mozilla support and die...
 ###
+
+EAPI=1
 
 JAVA_PKG_IUSE="source"
 
@@ -28,10 +30,10 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
-	>=dev-java/bcprov-1.35
-	>=dev-java/commons-cli-1.0
-	>=dev-java/log4j-1.2.8
-	>=dev-java/swt-3.4_pre6
+	>=dev-java/bcprov-1.35:0
+	>=dev-java/commons-cli-1.0:1
+	>=dev-java/log4j-1.2.8:0
+	>=dev-java/swt-3.4_pre6-r1:3.4
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.4"
 
@@ -47,10 +49,10 @@ S="${WORKDIR}"
 pkg_setup() {
 	if ! built_with_use --missing false -o dev-java/swt firefox seamonkey xulrunner; then
 		eerror
-		eerror "dev-java/swt must be compiled with the firefox, seamonkey or xulrunner USE flag"
+		eerror "dev-java/swt:3.4 must be compiled with the firefox, seamonkey or xulrunner USE flag"
 		eerror "(support may vary per swt version) or azureus will hang at startup!"
 		eerror
-		die "recompile dev-java/swt with embedded browser"
+		die "recompile dev-java/swt:3.4 with embedded browser"
 	fi
 	java-pkg-2_pkg_setup
 }
@@ -85,7 +87,7 @@ src_compile() {
 	use ppc   && mem="192"
 	find . -name "*.java" > "${T}/az-src"
 	ejavac -J-Xmx${mem}m -encoding latin1 \
-		-classpath $(java-pkg_getjars swt-3,commons-cli-1,log4j,bcprov) \
+		-classpath $(java-pkg_getjars swt-3.4,commons-cli-1,log4j,bcprov) \
 		@"${T}/az-src"
 	find . -type f -a ! -name "*.java" > "${T}/az-jarlist"
 	jar cf azureus.jar @"${T}/az-jarlist"
