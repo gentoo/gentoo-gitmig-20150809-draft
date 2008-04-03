@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.22 2008/04/02 19:23:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.23 2008/04/03 19:39:36 armin76 Exp $
+
+  03 Apr 2008; Raúl Porcel <armin76@gentoo.org> openrc-0.2.1.ebuild:
+  Add ~sparc wrt #214957
 
   02 Apr 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.1.ebuild,
   openrc-9999.ebuild:
