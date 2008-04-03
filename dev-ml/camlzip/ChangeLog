@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.10 2008/01/02 19:56:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.11 2008/04/03 01:25:01 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org> camlzip-1.03-r1.ebuild:
+  stable ppc, bug 215748
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org> camlzip-1.03-r1.ebuild:
   Add support to not build with ocamlopt
