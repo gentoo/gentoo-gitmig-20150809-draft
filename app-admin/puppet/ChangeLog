@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.12 2008/03/20 22:48:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.13 2008/04/03 16:30:02 matsuu Exp $
+
+*puppet-0.24.4 (03 Apr 2008)
+
+  03 Apr 2008; MATSUU Takuto <matsuu@gentoo.org> +puppet-0.24.4.ebuild:
+  Version bumped, bug #215425.
 
 *puppet-0.24.3 (20 Mar 2008)
 
