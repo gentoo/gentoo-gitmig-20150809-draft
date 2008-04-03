@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.21 2008/03/12 18:05:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.22 2008/04/03 21:46:38 lordvan Exp $
+
+*nevow-0.9.31 (03 Apr 2008)
+
+  03 Apr 2008; Thomas Raschbacher <lordvan@gentoo.org> +nevow-0.9.31.ebuild:
+  added 0.9.31
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
