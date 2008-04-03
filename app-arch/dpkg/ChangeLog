@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.61 2008/04/02 16:57:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.62 2008/04/03 01:42:20 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org> dpkg-1.14.16.6.ebuild:
+  stable ppc, bug 215809
 
   02 Apr 2008; Jeroen Roovers <jer@gentoo.org> dpkg-1.14.16.6.ebuild:
   Stable for HPPA (bug #215809).
