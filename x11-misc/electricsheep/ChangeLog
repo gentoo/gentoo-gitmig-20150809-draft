@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.40 2007/07/22 04:04:00 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.41 2008/04/03 13:32:44 dragonheart Exp $
+
+*electricsheep-2.6.8-r1 (03 Apr 2008)
+
+  03 Apr 2008; Daniel Black <dragonheart@gentoo.org>
+  +files/electricsheep-2.6.8-multihead.patch,
+  +electricsheep-2.6.8-r1.ebuild:
+  added multiple monitor support as per bug #204751 thanks to Matthew Howle
+  and patch author noredshadow
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   electricsheep-2.6.7-r1.ebuild, electricsheep-2.6.8.ebuild:
