@@ -2,6 +2,7 @@
 >=gnome-extra/nautilus-open-terminal-0.8
 
 >=app-crypt/seahorse-1.0
+>=gnome-base/gnome-2.22
 
 # Masking this since it requires nptl
 ~sys-libs/glibc-2.4

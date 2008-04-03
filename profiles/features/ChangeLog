@@ -1,3 +1,8 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.1 2008/04/01 17:41:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.2 2008/04/03 01:03:38 leio Exp $
+
+  03 Apr 2008; Mart Raudsepp <leio@gentoo.org> no-nptl/package.mask:
+  Mask gnome-2.22 meta in no-nptl feature subprofile as seahorse is masked
+  there too and the new meta depends on it
+
