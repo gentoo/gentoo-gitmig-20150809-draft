@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.2.6.ebuild,v 1.1 2007/11/30 23:42:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.2.6.ebuild,v 1.2 2008/04/03 13:22:50 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,6 +20,13 @@ RDEPEND=">=net-misc/curl-7.10.8
 		>=dev-lang/lua-5.1"
 DEPEND="${RDEPEND}"
 #	doc? ( app-text/ghostscript-gpl app-text/tetex )"
+
+pkg_setup() {
+	if has_version '>dev-lang/lua-5.1.3' && ! built_with_use dev-lang/lua deprecated; then
+		eerror 'This package uses the deprecated functions of lua'
+		die 'please compile dev-lang/lua with USE=deprecated'
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
