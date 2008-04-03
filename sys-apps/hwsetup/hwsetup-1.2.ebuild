@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.8 2008/03/11 15:27:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.9 2008/04/03 00:27:01 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -45,6 +45,7 @@ src_compile() {
 
 src_install() {
 	einstall DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
+	keepdir /etc/sysconfig
 }
 
 pkg_postinst() {

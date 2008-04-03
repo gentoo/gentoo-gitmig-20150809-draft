@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.53 2008/03/11 15:27:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.54 2008/04/03 00:27:01 wolf31o2 Exp $
+
+  03 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.2.ebuild:
+  Added keepdir /etc/sysconfig for bug #215824.
 
   11 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.2.ebuild:
   After the latest fexes, we no longer require libkudzu to exist on our
