@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.1.ebuild,v 1.1 2008/03/01 17:05:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.1.ebuild,v 1.2 2008/04/03 10:16:36 hollow Exp $
 
 inherit webapp eutils depend.php
 
@@ -16,6 +16,16 @@ IUSE=""
 
 need_httpd_cgi
 need_php_httpd
+
+pkg_setup() {
+	webapp_pkg_setup
+	has_php
+	if [[ ${PHP_VERSION} == "4" ]] ; then
+		require_php_with_use expat
+	else
+		require_php_with_use xml
+	fi
+}
 
 src_install() {
 	webapp_src_preinst
