@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.126 2008/04/03 01:01:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.127 2008/04/03 02:24:07 leio Exp $
+
+  03 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Unmask GNOME-2.22 on x86
 
   03 Apr 2008; Mart Raudsepp <leio@gentoo.org> no-nptl/package.mask:
   Mask gnome-2.22 meta in no-nptl subprofile as seahorse is masked there too

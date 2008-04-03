@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.136 2008/03/20 13:35:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.137 2008/04/03 02:24:06 leio Exp $
+
+  03 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Unmask GNOME-2.22 on amd64
 
   20 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   2007.0/package.use.mask, dev/2008.0/package.use.mask, package.use.mask:
