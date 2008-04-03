@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.2 2008/03/24 17:27:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.3 2008/04/03 01:10:45 leio Exp $
 
 EAPI="1"
 
@@ -26,7 +26,6 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		 net-libs/libsoup:2.4
 		 >=dev-libs/libxml2-2.6.0
 		 || (
-				=app-crypt/gnupg-1.2*
 				=app-crypt/gnupg-1.4*
 				=app-crypt/gnupg-2.0*
 			)

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.93 2008/03/24 17:27:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.94 2008/04/03 01:10:45 leio Exp $
+
+  03 Apr 2008; Mart Raudsepp <leio@gentoo.org> seahorse-2.20.3.ebuild,
+  seahorse-2.22.0.ebuild:
+  Remove =gnupg-1.2* from dependency choices, as that version is not in the
+  tree anymore
 
   24 Mar 2008; Raúl Porcel <armin76@gentoo.org> seahorse-2.22.0.ebuild:
   Re-add ~ia64, bad leio
