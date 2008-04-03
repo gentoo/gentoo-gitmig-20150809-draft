@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.39.ebuild,v 1.1 2008/04/02 02:11:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.39.ebuild,v 1.2 2008/04/03 13:36:01 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -16,7 +16,8 @@ IUSE="doc emacs ipv6 nls"
 
 RDEPEND="
 	sys-libs/zlib
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs )
+	>=dev-libs/libpcre-7.6"
 
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.33.1
@@ -41,7 +42,9 @@ src_compile() {
 	append-flags $(test-flags -fno-stack-protector-all -fno-stack-protector)
 	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
 
-	econf $(use_enable nls) $(use_enable ipv6) || die "configure failed"
+	econf $(use_enable nls) \
+		$(use_enable ipv6) \
+		--with-system-pcre || die "configure failed"
 	emake || die "Compilation failed"
 
 	if use doc; then
