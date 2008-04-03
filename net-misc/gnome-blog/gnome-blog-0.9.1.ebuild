@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.4 2008/02/17 22:33:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.5 2008/04/03 14:16:14 ranger Exp $
 
 inherit gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/~seth/gnome-blog/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2
