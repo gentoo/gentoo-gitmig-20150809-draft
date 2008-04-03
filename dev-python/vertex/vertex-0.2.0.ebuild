@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.2.0.ebuild,v 1.1 2007/11/02 18:49:43 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.2.0.ebuild,v 1.2 2008/04/03 21:47:28 lordvan Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/Vertex-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~ia64 ~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4

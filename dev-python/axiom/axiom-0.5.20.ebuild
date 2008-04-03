@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.20.ebuild,v 1.2 2007/12/25 20:18:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.20.ebuild,v 1.3 2008/04/03 21:44:49 lordvan Exp $
 
 inherit distutils eutils
 

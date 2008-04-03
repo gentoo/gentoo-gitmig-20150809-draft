@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.27.ebuild,v 1.1 2008/01/23 01:16:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.27.ebuild,v 1.2 2008/04/03 21:44:49 lordvan Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc64 ~x86"
+KEYWORDS="~ia64 ~ppc64 ~x86 ~amd64"
 IUSE=""
 
 DEPEND="|| ( >=dev-lang/python-2.5
