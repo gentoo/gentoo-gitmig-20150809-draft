@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.80 2008/04/03 14:58:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.81 2008/04/03 16:11:24 cardoe Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -404,7 +404,7 @@ generate_modulesd() {
 		#-----------------------------------------------------------------------
 
 		# then we install it
-		if kernel_is ge 2 6
+		if kernel_is ge 2 6; then
 			insinto /etc/modprobe.d
 		else
 			insinto /etc/modules.d
