@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.9 2008/02/05 15:04:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.10 2008/04/03 09:57:12 hollow Exp $
 
 inherit webapp eutils depend.apache
 
@@ -231,12 +231,13 @@ src_install() {
 	if useq lighttpd; then
 		newinitd ${FILESDIR}/${PN}.init.d ${PN}
 		newconfd ${FILESDIR}/${PN}.conf.d ${PN}
+		dosed "s/@@PF@@/${PF}/g" /etc/conf.d/${PN}
 	else
 		local CONF="rt_apache2_fcgi.conf rt_apache2.conf"
 		cd ${FILESDIR} && cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
 	fi
-	webapp_postinst_txt en ${FILESDIR}/3.4.5/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/3.4.5/reconfig
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_hook_script ${FILESDIR}/reconfig
 
 	webapp_serverowned ${MY_HOSTROOTDIR}/${PF}/var
 	webapp_src_install

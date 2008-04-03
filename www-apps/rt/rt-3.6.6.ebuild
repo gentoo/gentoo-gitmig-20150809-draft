@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.6.ebuild,v 1.1 2008/03/07 14:37:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.6.ebuild,v 1.2 2008/04/03 09:57:12 hollow Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -206,7 +206,7 @@ src_install() {
 	rm -f "${D}"/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
 
 	# fix paths
-	find "${D}" -type f -print0 | xargs -0 dosed
+	find "${D}" -type f -print0 | xargs -0 sed -i -e "s:${D}::g"
 
 	# copy upgrade files
 	insinto "${MY_HOSTROOTDIR}/${PF}"
@@ -215,14 +215,15 @@ src_install() {
 	if use lighttpd; then
 		newinitd "${FILESDIR}"/${PN}.init.d ${PN}
 		newconfd "${FILESDIR}"/${PN}.conf.d ${PN}
+		dosed "s/@@PF@@/${PF}/g" /etc/conf.d/${PN}
 	else
 		doins "${FILESDIR}"/{rt_apache2_fcgi.conf,rt_apache2.conf}
 	fi
 
 	webapp_serverowned "${MY_HOSTROOTDIR}"/${PF}/var
 
-	webapp_postinst_txt en "${FILESDIR}"/3.4.5/postinstall-en.txt
-	webapp_hook_script "${FILESDIR}"/3.4.5/reconfig
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
+	webapp_hook_script "${FILESDIR}"/reconfig
 
 	webapp_src_install
 }
