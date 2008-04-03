@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.13 2008/03/12 18:17:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.14 2008/04/03 21:53:33 lordvan Exp $
+
+*pytz-2008a (03 Apr 2008)
+
+  03 Apr 2008; Thomas Raschbacher <lordvan@gentoo.org> +pytz-2008a.ebuild:
+  added 2008a version
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.

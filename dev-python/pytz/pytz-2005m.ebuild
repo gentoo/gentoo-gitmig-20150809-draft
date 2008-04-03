@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2005m.ebuild,v 1.7 2006/10/21 01:24:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2005m.ebuild,v 1.8 2008/04/03 21:53:33 lordvan Exp $
 
 inherit distutils
 
