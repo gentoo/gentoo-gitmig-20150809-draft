@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.57 2008/03/31 09:43:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.58 2008/04/03 00:36:05 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org> bluefish-1.0.7.ebuild:
+  stable ppc, bug 214905
 
   31 Mar 2008; Raúl Porcel <armin76@gentoo.org> bluefish-1.0.7.ebuild:
   alpha/ia64/sparc/x86 stable wrt #214905
