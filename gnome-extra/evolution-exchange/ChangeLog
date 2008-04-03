@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.60 2008/04/01 22:51:26 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.61 2008/04/03 14:27:30 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org>
+  evolution-exchange-2.12.3-r1.ebuild:
+  stable ppc, bug 215794
 
   01 Apr 2008; Mart Raudsepp <leio@gentoo.org>
   +files/evolution-exchange-2.12.3-no-libsoup24.patch,
