@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.1.0.5.ebuild,v 1.2 2008/02/23 11:15:32 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.1.0.5.ebuild,v 1.3 2008/04/03 10:27:45 hollow Exp $
 
 inherit webapp depend.php
 
@@ -17,11 +17,11 @@ need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use ldap pcre session xml nls
+	require_php_with_use hash ldap pcre session xml nls
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	mv config/config.php.example config/config.php
 }
