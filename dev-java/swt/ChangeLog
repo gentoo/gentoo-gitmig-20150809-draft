@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.84 2008/04/02 22:12:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.85 2008/04/03 09:35:34 caster Exp $
+
+  03 Apr 2008; Vlastimil Babka <caster@gentoo.org> swt-3.4_pre6.ebuild:
+  Add a pkg_postinst elog about possibility of having to run eclipse-3.3
+  -clean after swt upgrade.
 
 *swt-3.4_pre6 (02 Apr 2008)
 

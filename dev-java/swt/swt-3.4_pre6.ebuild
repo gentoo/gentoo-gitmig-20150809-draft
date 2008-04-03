@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6.ebuild,v 1.1 2008/04/02 22:12:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6.ebuild,v 1.2 2008/04/03 09:35:34 caster Exp $
 
 EAPI="1"
 
@@ -212,4 +212,9 @@ src_install() {
 	fi
 
 	dohtml about.html || die
+}
+
+pkg_postinst() {
+	elog "In case this swt upgrade prevents your eclipse-3.3 from starting,"
+	elog "try running it once with -clean parameter: 'eclipse-3.3 -clean'"
 }
