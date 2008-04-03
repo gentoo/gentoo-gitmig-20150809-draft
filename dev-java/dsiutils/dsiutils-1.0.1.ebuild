@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.2 2008/04/02 16:48:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.3 2008/04/03 10:20:21 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source test"
 EAPI="1"
@@ -22,7 +22,7 @@ COMMON_DEP="dev-java/commons-io:1
 			dev-java/log4j
 			dev-java/commons-collections
 			dev-java/colt
-			dev-java/fastutil:5.0
+			=dev-java/fastutil-5.1*
 			dev-java/commons-configuration
 			dev-java/commons-lang:2.1
 			=dev-java/junit-3*"
