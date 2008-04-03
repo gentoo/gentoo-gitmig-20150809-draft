@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.11 2008/03/02 20:16:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.12 2008/04/03 20:29:39 klausman Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~x86"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
 IUSE="acpi apm crypt debug dell disk-partition doc laptop selinux ${KERNEL_IUSE}"
