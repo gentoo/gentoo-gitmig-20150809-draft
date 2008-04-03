@@ -1,0 +1,3 @@
+# Tobias Klausmann <klausman@gentoo.org> (3 Apr 2008)
+# Needs pm-utils which will never be keyworded on alpha
+sys-apps/hal laptop
