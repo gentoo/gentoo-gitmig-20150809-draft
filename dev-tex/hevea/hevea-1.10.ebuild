@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.10.ebuild,v 1.1 2008/01/02 22:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.10.ebuild,v 1.2 2008/04/03 01:39:34 ranger Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/moscova/hevea/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 
