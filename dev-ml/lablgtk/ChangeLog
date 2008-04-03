@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.60 2008/04/02 19:53:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.61 2008/04/03 01:27:26 ranger Exp $
+
+  03 Apr 2008; Brent Baude <ranger@gentoo.org> lablgtk-2.10.1.ebuild:
+  stable ppc, bug 215750
 
   02 Apr 2008; Tobias Klausmann <klausman@gentoo.org> lablgtk-2.10.1.ebuild:
   Stable on alpha, bug #215750
