@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1281 2008/04/03 12:09:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1282 2008/04/03 22:12:38 zzam Exp $
+
+  03 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Mask also >=udev-119-r1.
 
   03 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Mask udev-119-r1 to hack on udev-start.sh
