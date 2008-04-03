@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.1 2008/04/01 17:41:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.2 2008/04/03 23:10:24 cardoe Exp $
 
 emul-linux-x86
 
@@ -19,3 +19,7 @@ pch
 
 # we love this stuff
 -hardened
+
+# Doug Goldstein <cardoe@gentoo.org> (3 Apr 2008)
+# nvidia-drivers specific feature, nvidia-drivers are masked on this profile
+opengl-xvmc
