@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2-r1.ebuild,v 1.9 2008/04/03 12:37:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2-r1.ebuild,v 1.10 2008/04/03 15:41:01 mr_bones_ Exp $
 
 inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
@@ -19,7 +19,6 @@ DEPEND="doc? ( virtual/tetex )
 		emacs? ( virtual/emacs )"
 SITEFILE=50${PN}-gentoo.el
 
-
 get_compile_dir() {
 	pushd "${S}/config" >& /dev/null
 	local fastread=yes
@@ -27,7 +26,6 @@ get_compile_dir() {
 	popd >& /dev/null
 	echo "O${osname}-${arch}"
 }
-
 
 src_unpack() {
 	unpack ${A}
