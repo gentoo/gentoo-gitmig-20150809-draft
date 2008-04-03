@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16870.ebuild,v 1.5 2008/04/01 16:50:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16929.ebuild,v 1.1 2008/04/03 23:37:20 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -35,7 +35,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	dvd? ( 	media-libs/libdvdnav )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=sys-libs/libavc1394-0.5.0
+			>=sys-libs/libavc1394-0.5.3
 			>=media-libs/libiec61883-1.0.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
@@ -119,6 +119,10 @@ src_compile() {
 	use xvmc && ! use video_cards_via  ! use opengl-xvmc && myconf="${myconf} --enable-xvmc --xvmc-lib=XvMCW"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc --enable-xvmc-pro"
 	use xvmc && use video_cards_nvidia && use opengl-xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
+	# nvidia-drivers-71 don't support GLX 1.4
+	use video_cards_nvidia && has_version =x11-drivers/nvidia-drivers-71* \
+		&& myconf="${myconf} --enable-glx-procaddrarb"
+
 	myconf="${myconf}
 		$(use_enable dvb)
 		$(use_enable ieee1394 firewire)
@@ -191,7 +195,7 @@ src_compile() {
 
 		cd channel_changers
 		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -std=gnu99 -o ../../6200ch \
-			6200ch/6200ch.c
+			6200ch/6200ch.c \
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile 6200ch"
 		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch \
