@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/centreon/centreon-1.4.2.4.ebuild,v 1.2 2008/03/28 23:21:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/centreon/centreon-1.4.2.4.ebuild,v 1.3 2008/04/03 08:30:17 hollow Exp $
 
 inherit depend.apache depend.php confutils
 
@@ -78,14 +78,14 @@ setup_vars() {
 }
 
 pkg_setup() {
-	#confutils_require_built_with_all sys-devel/libperl ithreads
-	#confutils_require_built_with_all dev-lang/perl ithreads
-	#confutils_require_built_with_all net-analyzer/net-snmp perl
-	#confutils_require_built_with_all net-analyzer/rrdtool perl
+	confutils_require_built_with_all sys-devel/libperl ithreads
+	confutils_require_built_with_all dev-lang/perl ithreads
+	confutils_require_built_with_all net-analyzer/net-snmp perl
+	confutils_require_built_with_all net-analyzer/rrdtool perl
 
-	#require_php_sapi_from apache2 cli
-	#require_php_with_any_use gd gd-external
-	#require_php_with_use mysql posix snmp truetype
+	require_php_sapi_from apache2 cli
+	require_php_with_any_use gd gd-external
+	require_php_with_use mysql posix snmp truetype
 
 	use ldap && require_php_with_use ldap
 
