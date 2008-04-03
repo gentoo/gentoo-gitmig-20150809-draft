@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1279 2008/04/03 00:30:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1280 2008/04/03 05:04:11 graaff Exp $
+
+  03 Apr 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Add cadaver 0.23.2 to the neon package mask as it only works with masked
+  versions of neon.
 
   03 Apr 2008; Mark Loeser <halcy0n@gentoo.org> package.mask:
   mask dev-libs/swl due to dead upstream and not working properly; bug
