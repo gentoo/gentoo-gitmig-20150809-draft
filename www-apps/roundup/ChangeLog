@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/roundup
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.18 2008/03/09 10:10:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.19 2008/04/03 10:42:55 hollow Exp $
+
+*roundup-1.4.4-r1 (03 Apr 2008)
+
+  03 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/roundup-1.4.4-CVE-2008-1475.patch, -roundup-0.7.6.ebuild,
+  -roundup-0.8.5.ebuild, -roundup-1.4.1.ebuild, +roundup-1.4.4-r1.ebuild:
+  fix security #214666; remove old versions
 
   09 Mar 2008; Peter Volkov <pva@gentoo.org> roundup-1.4.4.ebuild:
   amd64 stable, security bug #212488.

@@ -1,13 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.1.ebuild,v 1.1 2008/01/25 08:49:03 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.4-r1.ebuild,v 1.1 2008/04/03 10:42:55 hollow Exp $
 
-inherit eutils
+inherit eutils distutils
 
 DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."
 SRC_URI="http://cheeseshop.python.org/packages/source/r/${PN}/${P}.tar.gz"
 HOMEPAGE="http://roundup.sourceforge.net"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
@@ -19,17 +20,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-CVE-2008-1475.patch
+
 	# We need to fix the location for man pages (#204308)
 	sed -i -e 's#man/man1#share/man/man1#' setup.py
 }
 
-src_compile() {
-	python setup.py build || die
-}
-
 src_install() {
-	python setup.py install --root="${D}" --prefix=/usr || die
-	dodoc CHANGES.txt PKG-INFO README.txt doc/*.txt
+	distutils_src_install
+	dodoc CHANGES.txt doc/*.txt
 	dohtml doc/*.html
 	dobin "${FILESDIR}"/roundup
 }
