@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/systemsim-cell
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/ChangeLog,v 1.3 2008/02/21 20:30:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/ChangeLog,v 1.4 2008/04/03 16:35:34 corsair Exp $
+
+*systemsim-cell-3.0-r2 (03 Apr 2008)
+
+  03 Apr 2008; Markus Rothe <corsair@gentoo.org>
+  -systemsim-cell-3.0-r1.ebuild, +systemsim-cell-3.0-r2.ebuild:
+  Add a new revision that depends on tcl/tk-8.4* (this is binary package
+  linking against version 8.4)
 
 *systemsim-cell-3.0-r1 (21 Feb 2008)
 

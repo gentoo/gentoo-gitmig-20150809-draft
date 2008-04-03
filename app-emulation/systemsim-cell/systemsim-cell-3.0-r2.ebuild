@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0-r1.ebuild,v 1.1 2008/02/21 20:30:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0-r2.ebuild,v 1.1 2008/04/03 16:35:34 corsair Exp $
 
 inherit rpm eutils
 
@@ -18,8 +18,8 @@ IUSE=""
 SYSTEMSIM_DIR="/opt/ibm/systemsim-cell"
 IMAGE_PATH="/usr/share/${PN}/image"
 
-DEPEND=">=dev-lang/tcl-8.4.10
-		>=dev-lang/tk-8.4.10"
+DEPEND="=dev-lang/tcl-8.4*
+		=dev-lang/tk-8.4*"
 
 RESTRICT="fetch"
 S="${WORKDIR}"
