@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0.ebuild,v 1.6 2008/04/02 17:30:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0.ebuild,v 1.7 2008/04/03 04:03:00 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -83,6 +83,9 @@ src_compile() {
 	# see bug #133092; bugs.wireshark.org/bugzilla/show_bug.cgi?id=1001
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
+
+	# profile and -fomit-frame-pointer are incompatible, bug #215806
+	use profile && filter-flags -fomit-frame-pointer
 
 	local myconf
 	if use gtk; then
