@@ -25,9 +25,9 @@ if ((EUID==0)); then
 	echo "!!! This is not recommended, nor needed."
 fi
 
-if [[ -d /usr/lib/mozilla-firefox/ ]]; then
-	export MOZILLA_FIVE_HOME="/usr/lib/mozilla-firefox/"
-fi
+# get MOZILLA_FIVE_HOME from swt's package.env
+# a bit hackish way but works, bug #214785
+eval $(gjl --package swt-3 --get-args)
 
 if [[ "${ECLIPSE_XMS}" ]]; then VM_ARGS="${VM_ARGS} -Xms${ECLIPSE_XMS}"; fi
 if [[ "${ECLIPSE_XMX}" ]]; then VM_ARGS="${VM_ARGS} -Xmx${ECLIPSE_XMX}"; fi
