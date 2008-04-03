@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8462 2008/04/03 10:45:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8463 2008/04/03 12:09:38 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Schwarzott <zzam@gentoo.org> (3 Apr 2008)
+# Masked for testing udev-start.sh
+=sys-fs/udev-119-r1
 
 # Mark Loeser <halcy0n@gentoo.org> (2 Apr 2008)
 # Mask due to dead upstream and not working properly; bug #206163
