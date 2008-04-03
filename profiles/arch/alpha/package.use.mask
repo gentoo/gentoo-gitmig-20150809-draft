@@ -1,8 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.3 2008/04/02 22:10:01 leio Exp $
-
-# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
-# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
-media-plugins/gst-plugins-meta dvb mythtv
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.4 2008/04/03 09:27:08 armin76 Exp $
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment

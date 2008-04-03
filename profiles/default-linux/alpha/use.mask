@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.90 2008/04/01 16:55:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.91 2008/04/03 09:22:29 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -11,10 +11,12 @@
 3dfx
 bluetooth
 chipcard
+dvb
 gnokii
 hbci
 ipod
 ivtv
+mythtv
 nvtv
 lirc
 pcmcia

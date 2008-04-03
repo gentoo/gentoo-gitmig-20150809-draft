@@ -3,9 +3,11 @@
 # No hardware to test by the team
 3dfx
 bluetooth
+dvb
 gnokii
 ivtv
 lirc
+mythtv
 nvtv
 pcmcia
 pda

@@ -1,7 +1,3 @@
-# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
-# Needs media-tv/mythtv
-media-plugins/gst-plugins-meta mythtv
-
 # Needs libmodplug
 media-libs/sdl-sound mikmod
 

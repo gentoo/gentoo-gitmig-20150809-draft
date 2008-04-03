@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.91 2008/04/02 22:08:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.92 2008/04/03 09:22:29 armin76 Exp $
+
+  03 Apr 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Move dvb and mythtv to global use.mask
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   Mask dvb on gst-plugins-meta as well
