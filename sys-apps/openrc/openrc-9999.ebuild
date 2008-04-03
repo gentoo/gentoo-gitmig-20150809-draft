@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.21 2008/04/02 19:23:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.22 2008/04/03 03:56:36 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -101,7 +101,7 @@ src_install() {
 
 add_boot_init() {
 	local initd=$1
-	# if the initscript is not going to be installed and  is not 
+	# if the initscript is not going to be installed and  is not
 	# currently installed, return
 	[[ -e ${D}/etc/init.d/${initd} || -e ${ROOT}/etc/init.d/${initd} ]] \
 		|| return
