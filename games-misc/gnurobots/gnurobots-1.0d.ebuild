@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.11 2008/03/13 18:38:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.12 2008/04/03 04:52:03 mr_bones_ Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="X"
+RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
 
