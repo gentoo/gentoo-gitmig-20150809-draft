@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.88 2008/03/26 10:06:23 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.89 2008/04/03 20:38:44 spb Exp $
+
+*paludis-0.26.0_alpha14-r1 (03 Apr 2008)
+
+  03 Apr 2008; Stephen Bennett <spb@gentoo.org>
+  +files/paludis-0.26.0_alpha14-broken-profiles.patch,
+  +paludis-0.26.0_alpha14-r1.ebuild:
+  Add patch from svn trunk to improve handling of broken profiles
 
 *paludis-0.26.0_alpha14 (26 Mar 2008)
 
