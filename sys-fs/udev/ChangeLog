@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.372 2008/03/17 22:19:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.373 2008/04/03 13:48:22 zzam Exp $
+
+*udev-119-r1 (03 Apr 2008)
+
+  03 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-119-r1.sh, +udev-119-r1.ebuild:
+  Add masked revision to work on udev-start.sh. This should improve error
+  handling.
 
 *udev-119 (17 Mar 2008)
 
