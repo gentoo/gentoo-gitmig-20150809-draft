@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.89 2008/03/20 16:21:25 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.90 2008/04/03 20:38:41 philantrop Exp $
+
+*kalzium-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kalzium-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kalzium-4.0.1.ebuild:
   Old.

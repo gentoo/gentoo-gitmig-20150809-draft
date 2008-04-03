@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.80 2008/03/11 00:05:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.81 2008/04/03 21:02:34 philantrop Exp $
+
+*kdewebdev-meta-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdewebdev-meta-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
 *kdewebdev-meta-4.0.2 (10 Mar 2008)
 

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.520 2008/03/28 23:34:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.521 2008/04/03 20:57:13 philantrop Exp $
+
+*kdelibs-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdelibs-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
 *kdelibs-3.5.9-r1 (28 Mar 2008)
 

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.71 2008/03/22 14:22:53 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.72 2008/04/03 21:36:40 philantrop Exp $
+
+*kuiviewer-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kuiviewer-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
   21 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kuiviewer-4.0.1.ebuild:
   Old.

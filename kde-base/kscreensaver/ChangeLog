@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.85 2008/03/20 17:53:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.86 2008/04/03 21:27:16 philantrop Exp $
+
+*kscreensaver-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kscreensaver-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdebase-4.0.1-pam-optional.patch, -kscreensaver-4.0.1.ebuild:

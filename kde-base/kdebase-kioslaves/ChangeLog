@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.116 2008/03/27 22:25:51 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.117 2008/04/03 20:54:38 philantrop Exp $
+
+*kdebase-kioslaves-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdebase-kioslaves-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
   27 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   kdebase-kioslaves-4.0.2.ebuild:

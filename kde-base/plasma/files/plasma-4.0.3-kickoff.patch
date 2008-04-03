@@ -1,0 +1,12 @@
+diff -Naur plasma-4.0.3.orig/plasma/applets/kickoff/main.cpp plasma-4.0.3/plasma/applets/kickoff/main.cpp
+--- plasma-4.0.3.orig/plasma/applets/kickoff/main.cpp	2008-03-27 21:34:51.000000000 +0100
++++ plasma-4.0.3/plasma/applets/kickoff/main.cpp	2008-03-30 01:59:48.000000000 +0100
+@@ -36,7 +36,7 @@
+ 
+     KApplication app;
+ 
+-    Kickoff::Launcher *launcher = new Kickoff::Launcher(0);
++    Kickoff::Launcher *launcher = new Kickoff::Launcher((QWidget*) 0);
+     launcher->setWindowTitle("Kickoff KDE 4 Test Application");
+     // ensure launcher gets deleted when the app closes so that favorites, 
+     // recent applications etc. are saved

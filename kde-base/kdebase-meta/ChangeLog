@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.94 2008/03/20 16:41:54 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.95 2008/04/03 20:55:00 philantrop Exp $
+
+*kdebase-meta-4.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdebase-meta-4.0.3.ebuild:
+  Version bump to KDE 4.0.3. This is still not intended for mainstream so DO
+  NOT KEYWORD IT without talking to the KDE herd first.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdebase-meta-4.0.1.ebuild:
