@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.3 2008/04/04 03:21:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.4 2008/04/04 10:20:10 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
 
@@ -113,7 +113,7 @@ src_compile() {
 		--srcdir=/usr/share/${PN}/src \
 		--docdir=/usr/share/doc/${PF} \
 		--testdir=/usr/share/doc/${PF}/test \
-		--tutdir=/usr/share/doc/${PF}/tutorial \
+		--tutdir=/usr/share/doc/${PF}/tutorials \
 		--elispdir=/usr/share/emacs/site-lisp \
 		--etcdir=/etc/${PN} \
 		--disable-builtin-afterimage \
