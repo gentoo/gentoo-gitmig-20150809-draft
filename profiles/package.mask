@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8467 2008/04/04 05:26:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8468 2008/04/04 06:04:52 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -43,7 +43,7 @@ dev-libs/swl
 
 # Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
-net-misc/ltsp
+<net-misc/ltsp-5
 
 # Stefan Schweizer <genstef@gentoo.org> (1 Apr 2008)
 # New library, API compatibility with evince/xpdf/okular/epdfview needs to be checked first
