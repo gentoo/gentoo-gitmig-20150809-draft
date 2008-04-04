@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1286 2008/04/04 14:51:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1287 2008/04/04 14:55:55 wolf31o2 Exp $
+
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  hardened/linux/powerpc/ppc32/parent:
+  Added ppc32 to the parent of hardened/linux/powerpc/ppc32 so ARCH gets set.
+  This is for bug #216074.
 
   04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   targets/developer/make.defaults, +targets/developer/profile.bashrc:
