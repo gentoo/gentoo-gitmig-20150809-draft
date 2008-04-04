@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.7 2008/04/03 18:12:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.8 2008/04/04 22:15:24 zlin Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -350,7 +350,8 @@ kde4-base_pkg_setup() {
 #			Apply ${PN}-${PV}-*{diff,patch}
 # @CODE
 #
-# If ${PATCHES} is non-zero all patches in it gets applied.
+# If ${PATCHES} is non-zero all patches in it get applied. If there is more
+# than one patch please make ${PATCHES} an array for proper quoting.
 kde4-base_apply_patches() {
 	local _patchdir _packages _p
 	_patchdir="${WORKDIR}/patches/"
@@ -361,14 +362,23 @@ kde4-base_apply_patches() {
 		else
 			_packages="${PN}"
 		fi
-		for _p in ${_packages}; do
-			PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
-			if [[ -n "${KDEBASE}" ]]; then
-				PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
-			fi
-		done
+		if [[ ${#PATCHES[@]} -gt 1 ]]; then
+			for _p in ${_packages}; do
+				PATCHES=( "${PATCHES[@]}" $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null) )
+				if [[ -n "${KDEBASE}" ]]; then
+					PATCHES=( "${PATCHES[@]}" $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null) )
+				fi
+			done
+		else
+			for _p in ${_packages}; do
+				PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
+				if [[ -n "${KDEBASE}" ]]; then
+					PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
+				fi
+			done
+		fi
 	fi
-	[[ -n ${PATCHES} ]] && base_src_unpack autopatch
+	[[ -n ${PATCHES[@]} ]] && base_src_unpack autopatch
 }
 
 # @FUNCTION: kde4-base_src_unpack
@@ -380,6 +390,9 @@ kde4-base_apply_patches() {
 #
 # In addition it calls kde4-base_apply_patches when no arguments are passed to
 # this function.
+#
+# It also handles translations if KDE_LINGUAS is defined. See KDE_LINGUAS and
+# enable_selected_linguas() in kde4-functions.eclass(5) for further details.
 kde4-base_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
@@ -403,6 +416,11 @@ kde4-base_src_unpack() {
 		rm -rf "${KDE_S}/cmake" || die "Unable to remove old cmake/ directory"
 		ln -s "${WORKDIR}/cmake" "${KDE_S}/cmake" || die "Unable to symlink the new cmake/ directory"
 		eend 0
+	fi
+
+	# Only enable selected languages, used for KDE extragear apps.
+	if [[ -n ${KDE_LINGUAS} ]]; then
+		enable_selected_linguas
 	fi
 }
 
