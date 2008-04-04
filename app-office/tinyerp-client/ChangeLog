@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tinyerp-client
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/ChangeLog,v 1.9 2007/08/11 14:39:46 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/ChangeLog,v 1.10 2008/04/04 20:18:11 cedk Exp $
+
+  04 Apr 2008; Cédric Krier <cedk@gentoo.org> metadata.xml:
+  Remove maintainer
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> tinyerp-client-4.0.3.ebuild:
   amd64 stable, bug 185322
