@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.9 2007/06/26 02:23:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.10 2008/04/04 01:21:08 halcy0n Exp $
 
 inherit libtool eutils multilib autotools
 
 DESCRIPTION="An authoritative/caching Domain Name Server"
-HOMEPAGE="http://www.posadis.org/posadis"
+HOMEPAGE="http://posadis.sourceforge.net"
 SRC_URI="mirror://sourceforge/posadis/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -23,8 +23,8 @@ src_unpack() {
 	unpack ${A}
 
 	#fix makefile problem
-	cd ${S}/libltdl
-	WANT_AUTOCONF="2.5" autoconf || die "libltdl autoconf failed"
+	cd "${S}"/libltdl
+	WANT_AUTOCONF="2.5" eautoconf || die "libltdl autoconf failed"
 
 	cd ../
 	find . -name 'Makefile.am' -or -name 'configure.in' | xargs sed -i -e "s:/lib/:/$(get_libdir)/:g"
@@ -38,13 +38,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# make directory for posadis pidfile and zone data files
 	keepdir /var/posadis
 	keepdir /etc/posadis
 
-	newinitd ${FILESDIR}/${PN}-init posadis
+	newinitd "${FILESDIR}"/${PN}-init posadis
 	insinto /etc/
 	doins posadisrc
 
