@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.0.3.ebuild,v 1.1 2008/04/03 20:57:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.0.3.ebuild,v 1.2 2008/04/04 01:40:55 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug encode flac vorbis"
 
 # Tests are broken. Last checked on 4.0.3.
-RESTRICT="test" 
+RESTRICT="test"
 
 DEPEND="${DEPEND}
 	>=kde-base/libkcddb-${PV}:${SLOT}

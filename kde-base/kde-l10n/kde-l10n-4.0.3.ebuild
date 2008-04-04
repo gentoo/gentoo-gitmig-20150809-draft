@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.0.3.ebuild,v 1.1 2008/04/03 20:46:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.0.3.ebuild,v 1.2 2008/04/04 01:40:33 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -16,8 +16,8 @@ IUSE=""
 DEPEND=">=sys-devel/gettext-0.15"
 RDEPEND=""
 
-LANGS="ar be bg ca cs csb da de el en_GB eo es et eu fa fi fr fy ga gl hi hu 
-is it ja kk km ko lv mk nb nds ne nl nn pa pl pt pt_BR ru se sl sv th tr uk wa 
+LANGS="ar be bg ca cs csb da de el en_GB eo es et eu fa fi fr fy ga gl hi hu
+is it ja kk km ko lv mk nb nds ne nl nn pa pl pt pt_BR ru se sl sv th tr uk wa
 zh_CN zh_TW"
 
 URI_BASE="${SRC_URI/-${PV}.tar.bz2/}"
