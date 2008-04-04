@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.68 2008/03/09 20:46:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.69 2008/04/04 19:59:35 cardoe Exp $
+
+  04 Apr 2008; Doug Goldstein <cardoe@gentoo.org> +files/mtd.init.d,
+  mythvideo-0.21_p16468.ebuild:
+  re-add missing mtd init script. bug #216137
 
 *mythvideo-0.21_p16468 (09 Mar 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.21_p16468.ebuild,v 1.1 2008/03/09 20:46:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.21_p16468.ebuild,v 1.2 2008/04/04 19:59:35 cardoe Exp $
 
 inherit mythtv-plugins
 
@@ -16,6 +16,12 @@ RDEPEND="dev-perl/libwww-perl
 	xine? ( media-video/xine-ui )
 	sys-apps/eject"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	mythtv-plugins_src_install
+
+	newinitd "${FILESDIR}"/mtd.init.d mtd
+}
 
 pkg_postinst() {
 	elog "MythVideo can use any media player to playback files, since"
