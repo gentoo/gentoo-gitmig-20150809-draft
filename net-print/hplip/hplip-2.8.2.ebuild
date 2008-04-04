@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.2.ebuild,v 1.1 2008/04/04 14:35:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.2.ebuild,v 1.2 2008/04/04 16:14:51 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -113,7 +113,6 @@ src_compile() {
 
 # The code snippet below should go in the 'econf' block above
 #       $(use_enable cupsddk foomatic-drv-install) \
-
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
