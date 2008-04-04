@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.18.1.ebuild,v 1.2 2008/04/02 10:54:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.18.1.ebuild,v 1.3 2008/04/04 14:13:08 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -45,6 +45,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/curl-7.17.0-strip-ldflags.patch
+	# below: bug #216096
+	sed -i -e 's:gssapi/gssapi.h:gssapi/gssapi_generic.h:g' configure.ac
 	eautoreconf
 }
 
@@ -91,6 +93,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die 'configure failed'
+
 	emake || die "install failed for current version"
 }
 
