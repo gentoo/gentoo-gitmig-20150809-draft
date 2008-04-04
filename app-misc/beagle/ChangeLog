@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.72 2008/03/29 14:58:28 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.73 2008/04/04 20:35:31 cedk Exp $
+
+*beagle-0.3.5 (04 Apr 2008)
+
+  04 Apr 2008; Cédric Krier <cedk@gentoo.org>
+  -files/beagle-0.3.4-dbus.patch,
+  -files/beagle-0.3.4-epiphany-extension.patch, -beagle-0.3.4-r1.ebuild,
+  +beagle-0.3.5.ebuild:
+  Version bump
 
 *beagle-0.3.4-r1 (29 Mar 2008)
 
