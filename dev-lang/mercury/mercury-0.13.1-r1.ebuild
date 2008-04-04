@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.10 2007/10/20 03:28:17 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.11 2008/04/04 08:35:25 keri Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P=${PN}-compiler-${PV}
 
@@ -44,6 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-flags
+	append-flags -fno-tree-ter -fno-tree-lrs -fno-cse-follow-jumps -fno-expensive-optimizations -fno-rerun-cse-after-loop
+
 	local myconf
 	myconf="--libdir=/usr/$(get_libdir) \
 		--disable-gcc-back-end \

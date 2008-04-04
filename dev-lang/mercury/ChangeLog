@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.81 2007/10/20 03:28:17 keri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.82 2008/04/04 08:35:25 keri Exp $
+
+  04 Apr 2008; keri <keri@gentoo.org> mercury-0.13.1-r1.ebuild:
+  Reduce CFLAGS to those which do not interfere with mdb.
 
   20 Oct 2007; keri <keri@gentoo.org>
   +files/mercury-0.13.1-tests-declarative-throw.patch,
