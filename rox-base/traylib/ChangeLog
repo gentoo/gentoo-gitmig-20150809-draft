@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/traylib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.1 2007/11/26 13:33:56 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.2 2008/04/04 07:04:46 opfer Exp $
+
+  04 Apr 2008; Christian Faulhammer <opfer@gentoo.org> traylib-0.2.5.ebuild:
+  stable x86, bug 215624
 
 *traylib-0.2.5 (26 Nov 2007)
 
