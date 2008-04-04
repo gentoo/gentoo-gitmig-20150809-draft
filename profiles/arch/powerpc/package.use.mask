@@ -1,9 +1,5 @@
 # This file requires >=portage-2.1.1
 
-# Daniel Black <dragonheart@gentoo.org> (05 April 2008)
-# Awaiting keywording on net-libs/libssh2 as per bug #215709
-net-libs/curl libssh2
-
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
 media-plugins/gst-plugins-meta dvb mythtv
