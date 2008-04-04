@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.148 2008/04/04 13:54:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.149 2008/04/04 23:40:41 josejx Exp $
+
+  04 Apr 2008; Joseph Jezak <josejx@gentoo.org> dnsmasq-2.41.ebuild:
+  Marked ppc stable for bug #216099.
 
   04 Apr 2008; Brent Baude <ranger@gentoo.org> dnsmasq-2.41.ebuild:
   stable ppc64, bug 216099
