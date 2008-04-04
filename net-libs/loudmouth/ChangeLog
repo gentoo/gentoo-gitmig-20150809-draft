@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.60 2008/04/03 14:44:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.61 2008/04/04 13:29:17 coldwind Exp $
+
+  04 Apr 2008; Santiago M. Mola <coldwind@gentoo.org>
+  loudmouth-1.2.3.ebuild:
+  amd64 stable wrt bug #215125
 
   03 Apr 2008; Brent Baude <ranger@gentoo.org> loudmouth-1.2.3.ebuild:
   stable ppc, bug 215125
