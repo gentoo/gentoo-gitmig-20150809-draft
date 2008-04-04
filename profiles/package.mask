@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8464 2008/04/03 22:12:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8465 2008/04/04 01:28:07 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -311,10 +311,6 @@ dev-lang/smalltalkx
 # Diego Pettenò <flameeyes@gentoo.org> (6 Mar 2008)
 # Mask pending fix for new pambase, see bug #212452
 =x11-apps/xdm-1.1.6-r1
-
-# MATSUU Takuto <matsuu@gentoo.org> (5 Mar 2008)
-# Upstream is dead. Masked for removal.
-app-backup/kdar
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (3 Mar 2008)
 # Masking due to security bug #204067
