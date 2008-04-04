@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.11.200803171746.ebuild,v 1.1 2008/03/24 21:31:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.11.200803171746.ebuild,v 1.2 2008/04/04 23:00:04 solar Exp $
 
 inherit flag-o-matic toolchain-funcs eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/gradm-${myPV}.tar.gz"
 #RESTRICT=primaryuri
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="pam"
 RDEPEND=""
 DEPEND="virtual/libc
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/2.1.7.200511041858-non-lazy-bindings.patch
-	sed -i -e s/MKNOD=/'MKNOD ?='/ -e s/STRIP=/'STRIP ?='/ ${S}/Makefile
+	sed -i -e s/MKNOD=/'MKNOD ?='/ -e s/STRIP=/'STRIP ?='/ "${S}/Makefile"
 }
 
 src_compile() {
