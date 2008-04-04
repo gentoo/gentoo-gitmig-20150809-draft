@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.264 2008/04/04 09:19:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.265 2008/04/04 12:06:51 klausman Exp $
+
+  04 Apr 2008; Tobias Klausmann <klausman@gentoo.org> gvim-7.1.266.ebuild:
+  Stable on alpha, bug #216151
 
   04 Apr 2008; Dawid Węgliński <cla@gentoo.org> files/gvim.desktop,
   gvim-7.1.266.ebuild:
