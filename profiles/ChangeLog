@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1283 2008/04/04 00:57:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1284 2008/04/04 09:16:03 s4t4n Exp $
+
+  04 Apr 2008; Michele Noberasco <s4t4n@gentoo.org> package.mask:
+  Masked gai and gai-pal.
+  Removed smcinit since it has ben removed from the Tree.
 
   04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   features/64bit-native/package.mask:
