@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.2 2008/01/18 19:37:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.3 2008/04/04 03:21:36 jer Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
 IUSE="afs cern cint7 doc fftw kerberos ldap mysql odbc pch postgres
 	python ruby qt3 qt4 ssl truetype xml"
