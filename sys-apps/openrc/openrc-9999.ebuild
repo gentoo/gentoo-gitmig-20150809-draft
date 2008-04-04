@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.22 2008/04/03 03:56:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.23 2008/04/04 03:39:22 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://roy.marples.name/openrc"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="" #"~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="debug ncurses pam unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
