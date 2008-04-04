@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.301 2008/04/04 12:05:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.302 2008/04/04 13:11:24 ranger Exp $
+
+  04 Apr 2008; Brent Baude <ranger@gentoo.org> vim-7.1.266.ebuild:
+  Marking vim-7.1.266 ppc64 and ppc for bug 216151
 
   04 Apr 2008; Tobias Klausmann <klausman@gentoo.org> vim-7.1.266.ebuild:
   Stable on alpha, bug #216151
