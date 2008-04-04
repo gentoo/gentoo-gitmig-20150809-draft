@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.1 2008/01/21 14:24:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.2 2008/04/04 10:10:12 bicatali Exp $
 
 inherit fortran toolchain-funcs multilib
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
@@ -33,17 +33,17 @@ src_compile() {
 		-i RULES.gentoo \
 		|| die "failed to set up RULES.gentoo"
 	./configure -arch=gentoo || die "configure failed."
-	emake || die "make failed."
+	emake || die "emake failed."
 }
 
 src_install() {
-	mkdir -p "${D}"/usr/bin && make install \
-		|| die "make install failed"
+	dodir /usr/bin
+	emake install || die "emake install failed"
 
-	dodoc BUGS CHANGELOG FAQ FORMATS INSTALL README
+	dodoc BUGS CHANGELOG FAQ FORMATS INSTALL README || die
 	insinto /usr/share/doc/${PF}
-	doins Manuals/*
+	doins Manuals/* || die
 
 	insinto /usr/share/doc/${PF}/examples
-	doins -r Examples/*
+	doins -r Examples/* || die
 }
