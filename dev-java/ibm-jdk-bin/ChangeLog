@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.152 2008/03/10 08:57:47 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.153 2008/04/04 15:04:47 caster Exp $
+
+*ibm-jdk-bin-1.5.0.7 (04 Apr 2008)
+
+  04 Apr 2008; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.4.2.9.ebuild, +ibm-jdk-bin-1.5.0.7.ebuild:
+  Version bump, security bug #216112.
 
   10 Mar 2008; <welp@gentoo.org> ibm-jdk-bin-1.4.2.10.ebuild:
   Stable on amd64; bug 198644
