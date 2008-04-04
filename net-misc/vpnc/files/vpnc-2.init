@@ -2,7 +2,7 @@
 
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-2.init,v 1.1 2008/01/07 07:26:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-2.init,v 1.2 2008/04/04 06:32:53 opfer Exp $
 
 VPNDIR="/etc/vpnc"
 VPN="${SVCNAME#*.}"
@@ -65,6 +65,12 @@ start() {
 
 	start-stop-daemon --start --pidfile "${VPNPID}" --exec /usr/sbin/vpnc \
 		-- --pid-file "${VPNPID}" "${VPNCONF}" > ${SCREEN_OUTPUT}
+ 	local retval=$?
+ 	if [ ! ${retval} -eq 0 ]; then
+	eend ${retval}
+ 		return ${retval}
+ 	fi
+
 	if [ -x "${POSTUPSCRIPT}" ] ; then 
 		"${POSTUPSCRIPT}" > ${SCREEN_OUTPUT}
 	fi
@@ -79,6 +85,12 @@ stop() {
 	fi
 
 	start-stop-daemon --stop --exec /usr/sbin/vpnc --pidfile "${VPNPID}"
+ 	local retval=$?
+ 	if [ ! ${retval} -eq 0 ]; then
+	eend ${retval}
+ 		return ${retval}
+ 	fi
+
 
 	if [ -x "${POSTDOWNSCRIPT}" ] ; then 
 		"${POSTDOWNSCRIPT}" > ${SCREEN_OUTPUT}

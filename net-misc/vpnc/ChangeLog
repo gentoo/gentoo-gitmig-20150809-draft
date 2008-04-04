@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.66 2008/02/07 08:09:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.67 2008/04/04 06:32:53 opfer Exp $
+
+  04 Apr 2008; Christian Faulhammer <opfer@gentoo.org> files/vpnc-2.init:
+  update init script so it fails on vpnc startup error, pointed out by Tiziano
+  Müller <dev-zero AT g.o> in bug 216042
 
   07 Feb 2008; Christian Faulhammer <opfer@gentoo.org> -files/vpnc-1.init,
   -vpnc-0.5.1.ebuild:
