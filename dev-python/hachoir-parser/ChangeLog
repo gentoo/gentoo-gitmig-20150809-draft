@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hachoir-parser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-parser/ChangeLog,v 1.3 2008/04/03 16:08:35 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-parser/ChangeLog,v 1.4 2008/04/04 20:43:19 cedk Exp $
+
+  04 Apr 2008; Cédric Krier <cedk@gentoo.org> hachoir-parser-1.0.ebuild,
+  hachoir-parser-1.1.ebuild:
+  Add ~ppc keyword for bug #216165
 
 *hachoir-parser-1.1 (03 Apr 2008)
 
