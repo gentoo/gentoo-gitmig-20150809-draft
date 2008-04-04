@@ -1,29 +1,32 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.12.ebuild,v 1.16 2008/01/12 03:50:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.5_rc1.ebuild,v 1.1 2008/04/04 22:19:32 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
-# USE_EXPAND_HIDDEN hides ELIBC and USERLAND expansions from emerge output (see make.conf.5).
-IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
-IUSE="build doc epydoc selinux linguas_pl userland_GNU ${IUSE_ELIBC}"
+IUSE="build doc epydoc selinux linguas_pl"
 DEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5 )
+	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
-		>=app-shells/bash-3.1_p17 )
-	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
-	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
+		>=app-shells/bash-3.2_p17 )
+	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
+	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	>=app-misc/pax-utils-0.1.13
 	selinux? ( >=dev-python/python-selinux-2.16 )"
-PDEPEND="doc? ( app-portage/portage-manpages )
+PDEPEND="
+	doc? (
+		|| ( app-portage/eclass-manpages app-portage/portage-manpages )
+	)
 	!build? (
 		>=net-misc/rsync-2.6.4
 		userland_GNU? ( >=sys-apps/coreutils-6.4 )
@@ -35,13 +38,13 @@ SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=${PV}
+TARBALL_PV="2.1.4"
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=""
+PATCHVER="${PV}"
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -86,10 +89,11 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
 		die "Failed to build tbz2tool"
 
-	if use elibc_FreeBSD; then
-		cd "${S}"/src/bsd-flags
-		chmod +x setup.py
-		./setup.py build || die "Failed to install bsd-chflags module"
+	if use doc; then
+		cd "${S}"/doc
+		touch fragment/date
+		sed -i "s/svn-trunk/${PVR}/" fragment/version
+		make xhtml xhtml-nochunks || die "failed to make docs"
 	fi
 
 	if use epydoc; then
@@ -100,7 +104,7 @@ src_compile() {
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g')" || die "error listing modules"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
-			-qqqqq --ignore-param-mismatch --no-frames --show-imports \
+			-qqqqq --no-frames --show-imports \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
 	fi
@@ -129,11 +133,8 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if use elibc_FreeBSD; then
-		cd "${S}"/src/bsd-flags
-		./setup.py install --root "${D}" || \
-			die "Failed to install bsd-chflags module"
-	fi
+	insinto /etc/logrotate.d
+	doins "${S}"/cnf/logrotate.d/elog-save-summary
 
 	dodir ${portage_base}/bin
 	exeinto ${portage_base}/bin
@@ -146,6 +147,7 @@ src_install() {
 	doexe "${S}"/src/tbz2tool
 	dosym newins ${portage_base}/bin/donewins
 
+	local mydir
 	for mydir in pym pym/cache pym/elog_modules; do
 		dodir ${portage_base}/${mydir}
 		insinto ${portage_base}/${mydir}
@@ -161,9 +163,11 @@ src_install() {
 	dodoc "${S}"/ChangeLog
 	dodoc "${S}"/NEWS
 	dodoc "${S}"/RELEASE-NOTES
+	use doc && dohtml "${S}"/doc/*.html
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
+	local x
 	for x in ebuild emerge portageq repoman tbz2tool xpak; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
@@ -193,6 +197,17 @@ src_install() {
 }
 
 pkg_preinst() {
+	if ! use build && ! has_version dev-python/pycrypto && \
+		has_version '>=dev-lang/python-2.5' ; then
+		if ! built_with_use '>=dev-lang/python-2.5' ssl ; then
+			echo "If you are a Gentoo developer and you plan to" \
+			"commit ebuilds with this system then please install" \
+			"pycrypto or enable python's ssl USE flag in order" \
+			"to enable RMD160 hash support. See bug #198398 for" \
+			"more information." | \
+			fmt -w 70 | while read line ; do ewarn "${line}" ; done
+		fi
+	fi
 	local portage_base="/usr/$(get_libdir)/portage"
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then
 		rm -rf "${D}"/${portage_base}/pym/*
@@ -200,7 +215,6 @@ pkg_preinst() {
 		rm -rf "${D}"/${portage_base}/bin/*
 		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
 	fi
-	remove_python_bytecodes
 }
 
 pkg_postinst() {
@@ -218,26 +232,35 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
-	ewarn "In portage-2.1.2, installation actions do not necessarily pull in build time"
-	ewarn "dependencies that are not strictly required.  This behavior is adjustable"
-	ewarn "via the new --with-bdeps option that is documented in the emerge(1) man page."
-	ewarn "For more information regarding this change, please refer to bug #148870."
-	echo
-	elog "See NEWS and RELEASE-NOTES for further changes."
-	echo
+	# Compile all source files recursively. Any orphans
+	# will be identified and removed in postrm.
+	compile_all_python_bytecodes "${ROOT}usr/$(get_libdir)/portage/pym"
+
+	echo "If you have an overlay then you should remove **/files/digest-*" \
+	"files (Manifest1) because they are no longer supported. If earlier" \
+	"versions of portage will be used to generate manifests for your overlay" \
+	"then you should add a file named manifest1_obsolete to the root of the" \
+	"repository in order to disable generation of the" \
+	"Manifest1 digest files." | fmt -w 75 | while read x ; do elog "$x" ; done
+
 	portage_docs
 }
 
 pkg_postrm() {
-	remove_python_bytecodes
+	remove_orphan_python_bytecodes "${ROOT}usr/$(get_libdir)/portage/pym"
 }
 
-remove_python_bytecodes() {
-	local d="${ROOT}/usr/$(get_libdir)/portage/pym"
-	[ -d "${d}" ] || return
-	find "${d}" -type d -print0 | \
-	while read -d $'\0' d ; do
-		cd "${d}"
-		rm -f *.pyc *.pyo
+compile_all_python_bytecodes() {
+	python -c "from compileall import compile_dir; compile_dir('${1}', quiet=True)"
+	python -O -c "from compileall import compile_dir; compile_dir('${1}', quiet=True)"
+}
+
+remove_orphan_python_bytecodes() {
+	[[ -d ${1} ]] || return
+	find "${1}" -name '*.py[co]' -print0 | \
+	while read -d $'\0' f ; do
+		src_py=${f%[co]}
+		[[ -f ${src_py} ]] && continue
+		rm -f "${src_py}"[co]
 	done
 }
