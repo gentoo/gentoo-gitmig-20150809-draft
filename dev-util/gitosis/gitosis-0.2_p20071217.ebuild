@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis/gitosis-0.2_p20071217.ebuild,v 1.2 2007/12/25 12:24:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis/gitosis-0.2_p20071217.ebuild,v 1.3 2008/04/04 07:14:10 robbat2 Exp $
 
 inherit distutils
 
@@ -17,7 +17,8 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND=">=dev-util/git-1.5.3.6
 		>=dev-python/setuptools-0.6_rc5"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		!dev-util/gitosis-gentoo"
 
 S=${WORKDIR}/gitosis.git
 
