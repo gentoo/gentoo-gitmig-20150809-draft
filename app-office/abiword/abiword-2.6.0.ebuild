@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.0.ebuild,v 1.2 2008/04/03 21:29:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.0.ebuild,v 1.3 2008/04/04 23:55:19 eva Exp $
 
 inherit alternatives eutils gnome2 versionator
 
@@ -70,7 +70,7 @@ src_install() {
 
 	sed -i "s:Exec=abiword:Exec=abiword-${MY_MAJORV}:" "${D}"/usr/share/applications/abiword.desktop
 
-	mv "${D}/usr/bin/abiword" "${D}/usr/bin/Abiword-${MY_MAJORV}"
+	mv "${D}/usr/bin/abiword" "${D}/usr/bin/AbiWord-${MY_MAJORV}"
 	dosym AbiWord-${MY_MAJORV} /usr/bin/abiword-${MY_MAJORV}
 
 	dodoc *.TXT user/wp/readme.txt
