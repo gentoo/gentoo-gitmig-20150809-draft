@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/rudiments-0.29.ebuild,v 1.1 2006/10/18 06:56:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/rudiments-0.31.ebuild,v 1.1 2008/04/04 01:10:49 halcy0n Exp $
 
 DESCRIPTION="C++ class library for daemons, clients and servers"
 HOMEPAGE="http://rudiments.sourceforge.net/"
