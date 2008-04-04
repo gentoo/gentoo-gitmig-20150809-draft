@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8470 2008/04/04 09:16:03 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8471 2008/04/04 09:26:12 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -123,11 +123,6 @@ sci-libs/libgdgeda
 # Tristan Heaven <nyhm@gentoo.org> (21 Mar 2008)
 # Needs testing
 >=games-strategy/warzone2100-2.1_beta2
-
-# Torsten Veller <tove@gentoo.org> (20 Mar 2008)
-# Masked for removal - Unfetchable and service down
-# bug #213349
-mail-client/ciphire-mail
 
 # Colin Morey <peitolm@gentoo.org> (20 Mar 2008)
 # Masked for testing, closing lots of little bugs
