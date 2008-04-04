@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r4.ebuild,v 1.8 2008/01/07 04:11:56 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r4.ebuild,v 1.9 2008/04/04 17:54:56 je_fro Exp $
 
 inherit flag-o-matic eutils
 
@@ -42,8 +42,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-r1-gentoo.patch
+	epatch "${FILESDIR}"/${PF}-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-0.8.1-hyperspace-viewport.patch
+	epatch "${FILESDIR}"/${PF}-imagemagick.patch
 	cp "${FILESDIR}"/jwz-vroot.h include/vroot.h || die
 }
 
@@ -73,7 +74,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc README README.xscreensaver
 
 	# symlink to satisfy kde's kxs*
