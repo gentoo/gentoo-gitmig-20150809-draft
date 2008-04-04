@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.23 2008/04/03 19:39:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.24 2008/04/04 19:31:40 cardoe Exp $
+
+*openrc-0.2.1-r1 (04 Apr 2008)
+
+  04 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/openrc-0.2.1-empty-list-crash.patch,
+  -files/openrc-0.2-freebsd-install-rc.patch,
+  -files/openrc-0.2-multilib-fix.patch,
+  -files/openrc-0.2-multiple-ntp-servers.patch,
+  -files/openrc-0.2-nicelevel-doc.patch,
+  -files/openrc-0.2-path-fix-for-multilib-fix.patch,
+  -files/openrc-0.2-sysctl-vserver-fix.patch, -openrc-0.2.1.ebuild,
+  +openrc-0.2.1-r1.ebuild:
+  fix bug #216091. crash when stringlist was non-existant
 
   03 Apr 2008; Raúl Porcel <armin76@gentoo.org> openrc-0.2.1.ebuild:
   Add ~sparc wrt #214957
