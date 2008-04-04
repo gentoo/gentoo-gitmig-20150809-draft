@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/gitosis-gentoo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/ChangeLog,v 1.1 2008/04/04 07:22:43 robbat2 Exp $
+
+*gitosis-gentoo-0.2_p20080203 (04 Apr 2008)
+
+  04 Apr 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +gitosis-gentoo-0.2_p20080203.ebuild:
+  Specifically package the Gitosis fork that powers git.overlays.gentoo.org.
+  Upstream has not responded to multiple requests to integrate these
+  features.
+
