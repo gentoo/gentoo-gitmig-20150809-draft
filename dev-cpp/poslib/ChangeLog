@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/poslib
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.19 2006/10/22 20:25:34 kugelfang Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.20 2008/04/04 01:19:21 halcy0n Exp $
+
+  04 Apr 2008; Mark Loeser <halcy0n@gentoo.org> poslib-1.0.6.ebuild:
+  Fix homepage; bug #212615
 
   22 Oct 2006; Danny van Dyk <kugelfang@gentoo.org> poslib-1.0.6.ebuild:
   Marked stable on amd64.
