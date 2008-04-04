@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8471 2008/04/04 09:26:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8472 2008/04/04 22:19:17 zlin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -755,14 +755,18 @@ gnome-extra/hal-device-manager
 =kde-misc/yakuake-2.9*
 
 # Bo Ørsted Andresen <zlin@gentoo.org> (11 Feb 2008)
-# Mask KDE 4.0.1 extragear apps for testing.
+# Mask KDE 4.0.x extragear apps for testing.
 # KDE 4 guide: http://www.gentoo.org/proj/en/desktop/kde/kde4.xml
 =kde-base/kcoloredit-4*
 =kde-base/kfax-4*
 =kde-base/kiconedit-4*
+=kde-base/kpovmodeler-4*
 =kde-misc/extragear-plasma-4*
 =kde-misc/kgrab-0.1*
 =kde-misc/kgraphviewer-2*
+=kde-misc/kio_gopher-0.1*
+=kde-misc/libksane-0.1*
+=kde-misc/rsibreak-0.9*
 =net-p2p/kmldonkey-2*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (15 Jan 2008)
