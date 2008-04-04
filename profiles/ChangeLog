@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1282 2008/04/03 22:12:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1283 2008/04/04 00:57:09 wolf31o2 Exp $
+
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  features/64bit-native/package.mask:
+  Added masks for games-fps/etqw-bin games-fps/etqw-data games-fps/etqw-demo
+  and games-rpg/nwmovies, which all require 32-bit support.
 
   03 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Mask also >=udev-119-r1.
