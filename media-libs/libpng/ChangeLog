@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.184 2008/04/03 21:28:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.185 2008/04/04 04:44:12 jer Exp $
+
+  04 Apr 2008; Jeroen Roovers <jer@gentoo.org> libpng-1.2.25.ebuild:
+  Stable for SPARC (bug #215978).
 
   03 Apr 2008; Markus Meier <maekke@gentoo.org> libpng-1.2.25.ebuild:
   amd64/x86 stable, bug #215978
