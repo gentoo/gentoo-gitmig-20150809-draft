@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.3.ebuild,v 1.1 2007/12/30 19:00:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.3.ebuild,v 1.2 2008/04/04 15:10:15 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,4 +33,8 @@ src_install() {
 	dobin mksquashfs unsquashfs || die
 	cd ..
 	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README README-3.3
+}
+
+pkg_postinst() {
+	elog "This version of mksquashfs requires a 2.6.24 kernel or better."
 }

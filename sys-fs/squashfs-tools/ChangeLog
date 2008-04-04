@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.52 2007/12/30 19:00:03 solar Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.53 2008/04/04 15:10:15 wolf31o2 Exp $
+
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  squashfs-tools-3.3.ebuild:
+  Added a note about requiring 2.6.24 kernel for 3.3 support.
 
 *squashfs-tools-3.3 (30 Dec 2007)
 
