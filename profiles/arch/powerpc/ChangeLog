@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.2 2008/04/02 22:27:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.3 2008/04/04 14:00:52 dragonheart Exp $
+
+  04 Apr 2008; Daniel Black <dragonheart@gentoo.org> package.use.mask:
+  USE mask libssh2 on net-libs/curl as awaiting keywords on net-libs/libssh2
+  as per bug #215709
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   USE mask dvb and mythtv on gst-plugins-meta - dependencies not keyworded
