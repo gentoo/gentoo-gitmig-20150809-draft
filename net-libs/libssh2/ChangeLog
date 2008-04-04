@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.8 2008/04/04 12:56:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.9 2008/04/04 14:46:28 ranger Exp $
+
+  04 Apr 2008; Brent Baude <ranger@gentoo.org> libssh2-0.18.ebuild:
+  Marking libssh2-0.18 ~ppc
 
   04 Apr 2008; Brent Baude <ranger@gentoo.org> libssh2-0.18.ebuild:
   keyworded ~arch for ppc64, bug 215709
