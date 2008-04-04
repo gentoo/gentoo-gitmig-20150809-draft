@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1285 2008/04/04 09:26:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1286 2008/04/04 14:51:12 wolf31o2 Exp $
+
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  targets/developer/make.defaults, +targets/developer/profile.bashrc:
+  Added splitdebug to the developer profile and added a profile.bashrc to add
+  -g to CFLAGS/CXXFLAGS. This is for bug #215946.
 
   04 Apr 2008; Torsten Veller <tove@gentoo.org> package.mask:
   Removed mail-client/ciphire-mail
