@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.10 2008/03/26 13:17:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.11 2008/04/05 17:24:33 markusle Exp $
+
+  05 Apr 2008; Markus Dittrich <markusle@gentoo.org> opendx-4.3.2-r1.ebuild,
+  opendx-4.4.4.ebuild:
+  Need to call linux-info_pkg_setup to pick up the correct environment
+  variables (fixed bug #216243).
 
   26 Mar 2008; Markus Dittrich <markusle@gentoo.org> opendx-4.3.2-r1.ebuild,
   opendx-4.4.4.ebuild:
