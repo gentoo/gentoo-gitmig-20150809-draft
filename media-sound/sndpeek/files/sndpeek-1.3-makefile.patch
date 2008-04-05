@@ -111,7 +111,7 @@ diff -ru sndpeek-1.3~/src/sndpeek/makefile.jack sndpeek-1.3/src/sndpeek/makefile
 -CFLAGS=-D__LINUX_JACK__ -D__LITTLE_ENDIAN__ $(INCLUDES) -O3 -c
 -LIBS=-L/usr/X11R6/lib -lpthread -lstdc++ -lglut -lGL -lGLU -lasound -ljack -lXmu -lX11 -lXext -lXi -lm -lsndfile
 +CFLAGS+=-D__LINUX_JACK__ -D__LITTLE_ENDIAN__ $(INCLUDES) -c
-+LIBS=-L/usr/X11R6/lib -lpthread -lstdc++ -lglut -lGL -lGLU -lasound -ljack -lXmu -lX12 -lXext -lXi -lm -lsndfile
++LIBS=-L/usr/X11R6/lib -lpthread -lstdc++ -lglut -lGL -lGLU -lasound -ljack -lXmu -lX11 -lXext -lXi -lm -lsndfile
  
  OBJS=chuck_fft.o RtAudio.o Thread.o sndpeek.o Stk.o \
  	Centroid.o DownSampler.o Flux.o LPC.o MFCC.o RMS.o Rolloff.o \
