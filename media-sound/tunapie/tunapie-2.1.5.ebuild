@@ -1,26 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.0_rc8.ebuild,v 1.2 2007/10/02 03:45:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.1.5.ebuild,v 1.1 2008/04/05 17:39:01 drac Exp $
 
 inherit eutils
 
-MY_P=${P/_rc/rc}
-
 DESCRIPTION="Directory browser for Radio and TV streams"
 HOMEPAGE="http://tunapie.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="offensive"
 
 RDEPEND="=dev-python/wxpython-2.6*"
+DEPEND=""
 
-S="${WORKDIR}"/${MY_P}
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's:/usr/local:/usr:' "${S}"/${PN}
+}
 
 src_install() {
-	sed -i -e 's:/usr/local:/usr:' ${PN}
 	dobin ${PN}
 	doman ${PN}.1
 	dodoc CHANGELOG README
@@ -34,8 +35,8 @@ src_install() {
 	dodir /etc
 
 	if use offensive; then
-		echo '1' > "${D}"/etc/${PN}.config
+		echo 1 > "${D}"/etc/${PN}.config
 	else
-		echo '0' > "${D}"/etc/${PN}.config
+		echo 0 > "${D}"/etc/${PN}.config
 	fi
 }
