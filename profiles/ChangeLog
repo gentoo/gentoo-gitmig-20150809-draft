@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1290 2008/04/05 16:00:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1291 2008/04/05 16:21:19 philantrop Exp $
+
+  05 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
+  Added the local plasma USE flag for rsibreak.
 
   05 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> use.local.desc:
   Add media-video/vdr:dxr3 use-flag to enable dxr3-card related tweaks.

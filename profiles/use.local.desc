@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3466 2008/04/05 16:00:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3467 2008/04/05 16:21:19 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -822,6 +822,7 @@ kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
 kde-misc/knetworkmanager:openvpn - Adds support for the OpenVPN client
 kde-misc/knetworkmanager:pptp - Adds support for the PPTP (PPP) VPN client
 kde-misc/ksensors:ibmacpi - Enable monitoring of ACPI sensor data on IBM Thinkpad notebooks
+kde-misc/rsibreak:plasma - Build optional plasma widgets.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/balsa:rubrica - Enables support for the app-office/rubrica addressbook
 mail-client/claws-mail:bogofilter - Build bogofilter plugin
