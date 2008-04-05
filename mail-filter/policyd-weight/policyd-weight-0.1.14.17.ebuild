@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.17.ebuild,v 1.3 2008/03/29 18:18:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.17.ebuild,v 1.4 2008/04/05 10:54:55 ticho Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="perl-core/Sys-Syslog
+RDEPEND="virtual/perl-Sys-Syslog
 	dev-perl/Net-DNS
 	>=mail-mta/postfix-2.1"
 
