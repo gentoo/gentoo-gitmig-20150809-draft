@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.0.3.ebuild,v 1.1 2008/04/03 21:38:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.0.3.ebuild,v 1.2 2008/04/05 01:19:59 zlin Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE window manager"
 KEYWORDS="~amd64 ~x86"
-IUSE="captury opengl xcomposite xinerama"
+IUSE="captury debug opengl xcomposite xinerama"
 
 COMMONDEPEND="
 	x11-libs/libXdamage
