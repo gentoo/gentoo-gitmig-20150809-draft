@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.0.ebuild,v 1.1 2008/03/23 00:11:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.0.ebuild,v 1.2 2008/04/05 18:11:01 eva Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -27,6 +27,7 @@ RDEPEND=">=www-client/epiphany-${MY_MAJORV}
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	python? ( >=dev-python/pygtk-2.11 )"
 DEPEND="${RDEPEND}
+	  gnome-base/gnome-common
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.20
 	>=app-text/gnome-doc-utils-0.3.2"
