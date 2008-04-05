@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.0.ebuild,v 1.2 2008/04/03 22:49:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.0.ebuild,v 1.3 2008/04/05 17:08:11 eva Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -15,6 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bzip2 cxx debug gnome grammar jabber jpeg libgda math ots pdf readline svg thesaurus wmf wordperfect"
 
 # FIXME: add asio support
+# add abiscan when we get gnome-scan
 
 RDEPEND="=app-office/abiword-${PV}*
 	virtual/xft
@@ -23,10 +26,10 @@ RDEPEND="=app-office/abiword-${PV}*
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
-	>=gnome-extra/libgsf-1.12.1
+	>=gnome-extra/libgsf-1.14.4
 	bzip2? ( app-arch/bzip2 )
 	cxx? ( >=dev-libs/boost-1.33.1 )
-	gnome? ( >=x11-libs/goffice-0.4 )
+	gnome? ( >=x11-libs/goffice-0.4:0.4 )
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	!alpha? ( !ia64? ( jabber? (
 		>=dev-libs/libxml2-2.4
@@ -58,9 +61,10 @@ pkg_setup() {
 src_compile() {
 	local myconf="--enable-all \
 		--with-abiword="${WORKDIR}/abiword-${PV}" \
-		$(use_with cxx boost) \
-		$(use_enable debug) \
 		$(use_with bzip2 bz2abw) \
+		$(use_with cxx boost) \
+		$(use_with cxx OpenXML) \
+		$(use_enable debug) \
 		$(use_with gnome abigoffice) \
 		$(use_with grammar abigrammar) \
 		$(use_with jabber abicollab) \
@@ -73,7 +77,8 @@ src_compile() {
 		$(use_with svg librsvg) \
 		$(use_with thesaurus aiksaurus) \
 		$(use_with wmf) \
-		$(use_with wordperfect) \
+		$(use_with wordperfect libwpg) \
+		--disable-abiscan \
 		--without-psion"
 
 	econf $myconf || die "./configure failed"

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.40 2008/04/03 22:49:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.41 2008/04/05 17:08:11 eva Exp $
+
+  05 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  abiword-plugins-2.4.6.ebuild, abiword-plugins-2.6.0.ebuild:
+  use slotted goffice, bug #216329. Fix openxml plugin build issues,
+  bug #216245. Fix ots dep for 2.4.6, bug #210253.
 
   03 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
   abiword-plugins-2.6.0.ebuild:
