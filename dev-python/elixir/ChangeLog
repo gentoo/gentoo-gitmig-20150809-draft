@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/elixir
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.1 2007/07/31 13:09:05 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.2 2008/04/05 15:23:33 hawking Exp $
+
+*elixir-0.5.2 (05 Apr 2008)
+
+  05 Apr 2008; Ali Polatel <hawking@gentoo.org> +elixir-0.5.2.ebuild:
+  Version bump.
 
 *elixir-0.3.0 (31 Jul 2007)
 
