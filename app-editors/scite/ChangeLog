@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/scite
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.68 2007/11/10 10:53:23 nelchael Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.69 2008/04/05 15:29:54 nelchael Exp $
+
+*scite-1.76 (05 Apr 2008)
+
+  05 Apr 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/scite-1.76-install.patch, +files/scite-1.76-no-lua.patch,
+  +scite-1.76.ebuild:
+  Version bump.
 
   10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/scite-1.73-install.patch, -scite-1.73.ebuild, scite-1.74.ebuild:
