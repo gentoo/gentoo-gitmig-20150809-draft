@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.204 2008/03/17 14:13:14 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.205 2008/04/05 14:34:32 flameeyes Exp $
+
+*pam-1.0.0 (05 Apr 2008)
+
+  05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> +pam-1.0.0.ebuild:
+  Version bump to latest release, first 1.x version. Hopefully a stable
+  candidate.
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> pam-0.99.10.0.ebuild:
   Re-keyworded ~amd64 wrt bug #210770
