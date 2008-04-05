@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kpovmodeler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.80 2008/03/04 05:10:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.81 2008/04/05 15:29:16 philantrop Exp $
+
+*kpovmodeler-4.0.3 (05 Apr 2008)
+
+  05 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kpovmodeler-4.0.3.ebuild:
+  Version bump to kpovmodeler 4.0.3. This is still not intended for
+  mainstream so DO NOT KEYWORD IT without talking to the KDE herd first.
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kpovmodeler-3.5.8.ebuild,
   kpovmodeler-3.5.9.ebuild:
