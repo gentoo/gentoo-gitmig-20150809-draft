@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.7 2008/02/24 17:44:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.8 2008/04/05 00:34:09 josejx Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="a literate programming tool, lighter than web"
 
 SLOT="0"
 IUSE="icon"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc64 sparc ~x86"	# will test ppc later
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc ~x86"
 
 DEPEND="sys-devel/gcc
 	virtual/tetex
