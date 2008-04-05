@@ -1,6 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1288 2008/04/05 13:49:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1289 2008/04/05 14:32:52 flameeyes Exp $
+
+  05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  arch/m68k/package.use.mask, default-linux/alpha/2006.1/package.use.mask,
+  default-linux/alpha/no-nptl/package.use.mask,
+  default-linux/hppa/2006.1/package.use.mask,
+  default-linux/ia64/2006.0/package.use.mask,
+  default-linux/m68k/package.use.mask,
+  hardened/linux/powerpc/ppc64/package.use.mask,
+  hardened/ppc/package.use.mask, hardened/ppc64/package.use.mask:
+  Update masking for test flag on PAM 0.99 and 1.0 series.
 
   05 Apr 2008; Stefan Schweizer <genstef@gentoo.org> use.local.desc:
   gimp-print -> gutenprint
