@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r3.ebuild,v 1.20 2007/07/22 09:33:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.5.ebuild,v 1.1 2008/04/05 12:47:47 genstef Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnu/plotutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X"
 
 DEPEND="media-libs/libpng
@@ -27,13 +27,13 @@ DEPEND="media-libs/libpng
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/plotutils-2.4.1-gentoo.patch
-	epatch ${FILESDIR}/plotutils-2.4.1-rangecheck.patch
+	cd "${S}"
+	epatch "${FILESDIR}/plotutils-2.5-rangecheck.patch"
+
 }
 
 src_compile() {
-	replace-cpu-flags i586 k6 k6-2 k6-3
+	replace-cpu-flags k6 k6-2 k6-3 i586
 	elibtoolize
 
 	#enable build of C++ version
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall datadir=${D}/usr/share || die "Installation Failed"
+	einstall datadir="${D}/usr/share" || die "Installation Failed"
 
 	dodoc AUTHORS COMPAT ChangeLog INSTALL* \
 		KNOWN_BUGS NEWS ONEWS PROBLEMS README THANKS TODO
