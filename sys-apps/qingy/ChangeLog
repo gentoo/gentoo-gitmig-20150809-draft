@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.48 2008/04/05 13:35:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.49 2008/04/05 13:38:02 flameeyes Exp $
+
+  05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> qingy-0.9.6-r3.ebuild:
+  Forgot to inherit pam.
 
 *qingy-0.9.6-r3 (05 Apr 2008)
 

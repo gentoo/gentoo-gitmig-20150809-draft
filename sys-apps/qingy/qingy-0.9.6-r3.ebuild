@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6-r3.ebuild,v 1.1 2008/04/05 13:35:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6-r3.ebuild,v 1.2 2008/04/05 13:38:02 flameeyes Exp $
 
-inherit elisp-common eutils
+inherit elisp-common eutils pam
 
 GENTOO_THEME_VERSION="2.1"
 
