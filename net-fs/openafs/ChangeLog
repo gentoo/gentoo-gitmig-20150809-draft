@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.143 2008/03/31 21:47:54 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.144 2008/04/05 09:27:58 stefaan Exp $
+
+  04 Apr 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  -files/openafs-pinstall-execve-1.2.10.patch, -files/CellServDB,
+  -files/README, -files/ThisCell, -files/afs.rc.rc6,
+  -openafs-1.2.10-r1.ebuild, -openafs-1.2.13-r2.ebuild,
+  -openafs-1.4.5.ebuild, -openafs-1.4.5-r2.ebuild,
+  -openafs-1.4.7_pre1.ebuild, -openafs-1.5.27.ebuild,
+  -openafs-1.5.33.ebuild:
+  Remove lots of obsolete versions
 
 *openafs-1.4.7_pre2 (31 Mar 2008)
 
