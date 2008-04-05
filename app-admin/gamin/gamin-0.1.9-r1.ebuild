@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9-r1.ebuild,v 1.1 2008/04/05 16:08:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9-r1.ebuild,v 1.2 2008/04/05 19:43:44 eva Exp $
 
-inherit autotools eutils libtool
+inherit autotools eutils libtool python
 
 DESCRIPTION="Library providing the FAM File Alteration Monitor API"
 HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
@@ -51,4 +51,18 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README TODO NEWS doc/*txt
 	dohtml doc/*
+}
+
+pkg_postinst() {
+	if use python; then
+		python_version
+		python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_version
+		python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	fi
 }
