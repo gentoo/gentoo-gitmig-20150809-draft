@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-skincurses
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/ChangeLog,v 1.9 2008/03/24 10:16:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/ChangeLog,v 1.10 2008/04/05 22:27:17 hd_brummy Exp $
+
+*vdr-skincurses-0.1.7 (05 Apr 2008)
+
+  05 Apr 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-skincurses-0.0.8.ebuild, vdr-skincurses-0.1.2.ebuild,
+  +vdr-skincurses-0.1.7.ebuild:
+  version bump, fix bug 216339; thanks to D.Liana for reporting this;
+  keyworded ~amd64
 
 *vdr-skincurses-0.1.2 (24 Mar 2008)
 
