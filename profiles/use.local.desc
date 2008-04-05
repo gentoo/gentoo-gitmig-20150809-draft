@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3467 2008/04/05 16:21:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3468 2008/04/05 17:07:57 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1683,6 +1683,7 @@ net-p2p/gift:ares - pull in Ares plugin
 net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
+net-p2p/kmldonkey:plasma - Build optional plasma widgets.
 net-p2p/ktorrent:bwscheduler - Enable the bwscheduler plugin
 net-p2p/ktorrent:infowidget - Enable the infowidget plugin
 net-p2p/ktorrent:ipfilter - Enable the ipfilter plugin
