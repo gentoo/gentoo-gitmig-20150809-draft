@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.104 2008/03/24 09:46:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.105 2008/04/05 15:23:30 zzam Exp $
+
+  05 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-1.4.7-r10.ebuild,
+  vdr-1.6.0.ebuild:
+  Do not create video-directory as this will have wrong permission if we
+  create it - and not everyone wants it, init-script does mkdir if needed.
 
 *vdr-1.6.0 (24 Mar 2008)
 

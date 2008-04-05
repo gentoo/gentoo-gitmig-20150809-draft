@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.3 2008/02/10 21:18:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.4 2008/04/05 15:23:30 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -289,7 +289,9 @@ src_unpack() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
+	# trick makefile not to create a videodir by supplying it with an existing
+	# directory
+	emake install DESTDIR="${D}" VIDEODIR="/" || die "emake install failed"
 
 	keepdir "${CONF_DIR}"/plugins
 	keepdir "${CONF_DIR}"/themes
