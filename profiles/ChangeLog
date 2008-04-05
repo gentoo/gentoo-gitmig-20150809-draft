@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1293 2008/04/05 17:40:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1294 2008/04/05 22:19:26 halcy0n Exp $
+
+  05 Apr 2008; Mark Loeser <halcy0n@gentoo.org> +base/package.mask,
+  +embedded/package.mask, package.mask, selinux/package.mask:
+  Move the Gnome 2.22 mask to the parent profiles' package.mask files (base,
+  embedded, and selinux); bug #216193
 
   05 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
   arch/amd64/package.mask, arch/x86/package.mask,
