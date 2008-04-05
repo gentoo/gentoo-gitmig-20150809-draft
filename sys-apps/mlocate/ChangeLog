@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.12 2008/04/01 23:22:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.13 2008/04/05 21:20:42 josejx Exp $
+
+  05 Apr 2008; Joseph Jezak <josejx@gentoo.org> mlocate-0.19.ebuild:
+  Marked ppc stable for bug #215795.
 
   01 Apr 2008; Christian Faulhammer <opfer@gentoo.org> mlocate-0.19.ebuild:
   stable x86, bug 215795
