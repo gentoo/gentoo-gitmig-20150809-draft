@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.116 2008/03/30 22:25:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.117 2008/04/05 21:19:11 eva Exp $
+
+  05 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  libgphoto2-2.4.1.ebuild:
+  Fix bug #212721, libtool-2 failure. Fix bug #216206, libusb detection.
 
   30 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
   libgphoto2-2.4.1.ebuild:

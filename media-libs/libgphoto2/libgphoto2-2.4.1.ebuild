@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1.ebuild,v 1.3 2008/03/31 01:58:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1.ebuild,v 1.4 2008/04/05 21:19:11 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -70,7 +70,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.4.0-rpm.patch
 
 	# Fix pkgconfig file when USE="-exif"
-	use exif || sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in
+	use exif || sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
+
+	# Fix bug #212721, libtool-2 failure
+	sed -i "s:lt_dlcaller_register:lt_dlinit:g" configure libgphoto2_port/configure || die "libtool sed failed"
+
+	# Fix bug #216206, libusb detection
+	sed -i "s:usb_busses:usb_find_busses:g" libgphoto2_port/configure || die "libusb sed failed"
 }
 
 src_compile() {
