@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.11 2007/08/14 21:44:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.12 2008/04/05 19:56:56 bicatali Exp $
 
-inherit eutils
+inherit eutils fortran
 
 # Known problems with this ebuild:
 # - No support for libqhull.
@@ -15,17 +15,17 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="X debug doc fortran ifc itcl java jpeg octave png python tk tetex truetype"
+IUSE="X debug doc fortran itcl java jpeg octave png python tk tetex truetype"
 
 RDEPEND="virtual/libc
 		 dev-lang/perl
-	  	 python? ( dev-python/numeric )
-	  	 java? ( virtual/jre )
-	  	 tetex? ( app-text/jadetex )
-	  	 octave? ( sci-mathematics/octave )
-	  	 jpeg? ( media-libs/gd )
-	  	 png? ( media-libs/gd )
-	  	 truetype? ( media-libs/freetype )
+		 python? ( dev-python/numeric )
+		 java? ( virtual/jre )
+		 tetex? ( app-text/jadetex )
+		 octave? ( sci-mathematics/octave )
+		 jpeg? ( media-libs/gd )
+		 png? ( media-libs/gd )
+		 truetype? ( media-libs/freetype )
 		 X? ( x11-libs/libX11
 				x11-libs/libXau
 				x11-libs/libXdmcp
@@ -36,7 +36,6 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	ifc? ( dev-lang/ifc )
 	virtual/man
 	app-text/opensp
 	java? ( virtual/jdk )
@@ -46,14 +45,8 @@ DEPEND="${RDEPEND}
 	# qhull? ( media-libs/qhull )
 
 pkg_setup() {
-	# If the fortran interface is wanted, the gnu f77 compiler
-	# is needed unless ifc is used (which is taken care of in
-	# the dependencies).
-	use fortran && ! use ifc || if [[ -z $(type -P g77) ]]; then
-		eerror "GNU fortran 77 compiler not found on the system."
-		eerror "Please add fortran to your USE flags and reemerge gcc."
-		die
-	fi
+	FORTRAN="gfortran g77 ifc"
+	use fortran && fortran_pkg_setup
 }
 
 src_unpack() {
@@ -102,9 +95,7 @@ src_compile() {
 	EXTRA_CONF="${EXTRA_CONF} $(use_enable python)"
 	EXTRA_CONF="${EXTRA_CONF} $(use_enable java)"
 	EXTRA_CONF="${EXTRA_CONF} $(use_enable octave)"
-	if use ifc; then
-		EXTRA_CONF="${EXTRA_CONF} --enable-f77 F77=/opt/intel/compiler70/ia32/bin/ifc"
-	elif use fortran; then
+	if use fortran; then
 		EXTRA_CONF="${EXTRA_CONF} --enable-f77"
 	else
 		EXTRA_CONF="${EXTRA_CONF} --disable-f77"
