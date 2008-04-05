@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1289 2008/04/05 14:32:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1290 2008/04/05 16:00:17 zzam Exp $
+
+  05 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> use.local.desc:
+  Add media-video/vdr:dxr3 use-flag to enable dxr3-card related tweaks.
 
   05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   arch/m68k/package.use.mask, default-linux/alpha/2006.1/package.use.mask,
