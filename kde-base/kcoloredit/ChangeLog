@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcoloredit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.76 2008/03/20 16:31:21 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.77 2008/04/05 15:27:49 philantrop Exp $
+
+*kcoloredit-4.0.3 (05 Apr 2008)
+
+  05 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kcoloredit-4.0.3.ebuild:
+  Version bump to kcoloredit 4.0.3. This is still not intended for
+  mainstream so DO NOT KEYWORD IT without talking to the KDE herd first.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kcoloredit-4.0.1.ebuild:
