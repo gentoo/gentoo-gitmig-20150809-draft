@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.1 2008/04/05 13:30:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.2 2008/04/05 16:21:37 genstef Exp $
+
+  05 Apr 2008; Stefan Schweizer <genstef@gentoo.org>
+  gutenprint-5.1.4.ebuild, gutenprint-5.1.7.ebuild:
+  fix description typo thanks Toralf Foerster in bug 216353
 
 *gutenprint-5.1.7 (05 Apr 2008)
 *gutenprint-5.1.4 (05 Apr 2008)
