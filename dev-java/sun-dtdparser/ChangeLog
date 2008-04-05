@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-dtdparser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dtdparser/ChangeLog,v 1.7 2008/03/28 18:03:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dtdparser/ChangeLog,v 1.8 2008/04/05 21:49:19 caster Exp $
+
+  05 Apr 2008; Vlastimil Babka <caster@gentoo.org> sun-dtdparser-1.0.ebuild:
+  Add missing unzip dep, bug #216410.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> sun-dtdparser-1.0.ebuild:
   Stable on ppc wrt bug 214778

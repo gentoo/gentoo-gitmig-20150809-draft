@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dtdparser/sun-dtdparser-1.0.ebuild,v 1.6 2008/03/28 18:03:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dtdparser/sun-dtdparser-1.0.ebuild,v 1.7 2008/04/05 21:49:19 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -22,6 +22,7 @@ COMMON_DEP=""
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
 	${COMMON_DEP}"
 
 S="${WORKDIR}/dtd-parser-${PV}"
