@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.14.ebuild,v 1.5 2008/03/24 17:46:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.14.ebuild,v 1.6 2008/04/05 23:21:31 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,8 @@ DEPEND="media-libs/alsa-lib
 	media-libs/audiofile
 	gtk? ( >=x11-libs/gtk+-2
 		>=gnome-base/libglade-2 )
-	X? ( x11-libs/libX11 )"
+	X? ( x11-libs/libX11
+		x11-libs/libXpm )"
 RDEPEND="${DEPEND}
 	media-sound/alsa-utils
 	virtual/eject"

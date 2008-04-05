@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.23 2008/04/05 14:16:01 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.24 2008/04/05 23:21:31 cedk Exp $
+
+  05 Apr 2008; Cédric Krier <cedk@gentoo.org> pommed-1.14.ebuild,
+  pommed-1.16.ebuild:
+  Add libXpm dependency for bug #216439
 
 *pommed-1.16 (05 Apr 2008)
 
