@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.8 2007/05/17 20:25:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.9 2008/04/05 00:57:02 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
 
 MY_P="${P}-src"
-DESCRIPTION="Jakarta component to validate user input, or data input"
+DESCRIPTION="Commons component to validate user input, or data input"
 HOMEPAGE="http://jakarta.apache.org/commons/validator/"
 SRC_URI="mirror://apache/jakarta/commons/validator/source/${MY_P}.tar.gz
 		 mirror://gentoo/${P}-gentoo-missingfiles.tar.bz2"

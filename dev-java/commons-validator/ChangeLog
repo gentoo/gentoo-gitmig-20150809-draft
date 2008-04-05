@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-validator
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.41 2007/05/23 17:03:38 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.42 2008/04/05 00:57:02 betelgeuse Exp $
+
+*commons-validator-1.3.1 (05 Apr 2008)
+
+  05 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +files/validator-1.3.build.xml.patch, commons-validator-1.1.4-r1.ebuild,
+  +commons-validator-1.3.1.ebuild:
+  Version bump. Fixes bug #152269.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add ~x86-fbsd keyword. Bug #176906.
