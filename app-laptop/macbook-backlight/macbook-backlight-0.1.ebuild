@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/macbook-backlight-0.1.ebuild,v 1.5 2007/08/24 21:39:08 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/macbook-backlight-0.1.ebuild,v 1.6 2008/04/05 11:42:57 cedk Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="a tool to control the backlight intensity of macbook"
-HOMEPAGE="http://akira.ced.homedns.org/macbook-backlight/"
-SRC_URI="http://akira.ced.homedns.org/macbook-backlight/${P}.tar.gz"
+HOMEPAGE="http://dev.gentoo.org/~cedk/macbook-backlight/"
+SRC_URI="http://dev.gentoo.org/~cedk/macbook-backlight/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
