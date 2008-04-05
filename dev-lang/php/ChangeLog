@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.258 2008/03/30 14:15:55 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.259 2008/04/05 22:47:01 hoffie Exp $
+
+*php-5.2.6_rc4 (05 Apr 2008)
+
+  05 Apr 2008; Christian Hoffmann <hoffie@gentoo.org> +php-5.2.6_rc4.ebuild:
+  bump to rc4 to address even more possible security issues (stack overflow
+  in fastcgi handling, several imap-related crashes)
 
 *php-5.2.6_rc3-r1 (30 Mar 2008)
 
