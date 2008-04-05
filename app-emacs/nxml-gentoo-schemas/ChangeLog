@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.14 2008/03/01 14:13:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.15 2008/04/05 21:10:09 flameeyes Exp $
+
+*nxml-gentoo-schemas-20080405 (05 Apr 2008)
+
+  05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +nxml-gentoo-schemas-20080405.ebuild:
+  Version bump, add more filetypes to the locating rules.
 
   01 Mar 2008; Ulrich Mueller <ulm@gentoo.org>
   nxml-gentoo-schemas-20080301.ebuild:
