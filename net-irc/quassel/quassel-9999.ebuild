@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_alpha4.ebuild,v 1.2 2008/04/05 17:07:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.1 2008/04/05 17:07:53 flameeyes Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://quassel-irc.org/"
 
 LICENSE="GPL-3"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 SLOT="0"
 
@@ -64,7 +64,7 @@ src_compile() {
 	use X && BUILD="${BUILD} qtclient"
 
 	eqmake4 ${PN}.pro BUILD="${BUILD}" || die "eqmake4 failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

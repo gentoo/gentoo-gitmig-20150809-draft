@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.9 2008/04/01 11:37:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.10 2008/04/05 17:07:53 flameeyes Exp $
+
+*quassel-9999 (05 Apr 2008)
+
+  05 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  quassel-0.2.0_alpha4.ebuild, +quassel-9999.ebuild:
+  Avoid parallel make as per bug #216101 in alpha4, and add a live SVN
+  ebuild as was requested a couple of times (again, I prefer it here rather
+  than in a number of unofficial overlays breaking it.
 
 *quassel-0.2.0_alpha4 (01 Apr 2008)
 
