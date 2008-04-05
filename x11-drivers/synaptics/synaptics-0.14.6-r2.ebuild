@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.2 2008/04/02 03:52:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.3 2008/04/05 04:32:04 battousai Exp $
 
 inherit toolchain-funcs eutils linux-info
 
@@ -91,6 +91,6 @@ src_install() {
 	if use hal ; then
 		# Have HAL assign this driver to supported touchpads.
 		insinto /usr/share/hal/fdi/policy/10osvendor
-		doins "${FILESDIR}"/10-synaptics.fdi
+		doins "${FILESDIR}"/11-x11-synaptics.fdi
 	fi
 }

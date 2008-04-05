@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.34 2008/04/02 03:52:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.35 2008/04/05 04:32:04 battousai Exp $
+
+  05 Apr 2008; Bryan Stine <battousai@gentoo.org> -files/10-synaptics.fdi,
+  +files/11-x11-synaptics.fdi, synaptics-0.14.6-r2.ebuild:
+  Move HAL policy from 10-synaptics.fdi to 11-x11-synaptics.fdi to ensure it
+  gets parsed after other osvendor X11 policies. Suggested in bug #215903.
 
   02 Apr 2008; Bryan Stine <battousai@gentoo.org> +files/10-synaptics.fdi,
   synaptics-0.14.6-r2.ebuild:
