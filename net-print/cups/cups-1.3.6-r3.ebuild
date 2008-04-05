@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.6-r3.ebuild,v 1.1 2008/04/01 19:34:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.6-r3.ebuild,v 1.2 2008/04/05 13:42:26 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -54,7 +54,7 @@ PDEPEND="
 		net-print/foomatic-filters-ppds
 		net-print/foomatic-db-ppds
 		net-print/hplip
-		media-gfx/gimp-print
+		net-print/gutenprint
 		net-print/foo2zjs
 		net-print/cups-pdf
 	) )
