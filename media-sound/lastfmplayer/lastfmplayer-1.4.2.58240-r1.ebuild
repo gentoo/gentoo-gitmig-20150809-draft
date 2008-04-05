@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240-r1.ebuild,v 1.1 2008/04/02 22:30:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240-r1.ebuild,v 1.2 2008/04/05 11:28:47 genstef Exp $
 
 inherit eutils qt4
 
@@ -18,13 +18,14 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND="$(qt4_min_version 4.2)
+RDEPEND="$(qt4_min_version 4.2)
 	media-libs/libsamplerate
 	sci-libs/fftw
 	media-libs/libmad
 	>=media-libs/libgpod-0.5.2
 	media-libs/alsa-lib"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/sharutils"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -46,28 +47,25 @@ src_compile() {
 src_install() {
 	# Docs
 	dodoc ChangeLog README debian/README.Debian-source
-
-	# make directories
-	for i in $(<debian/lastfm.install); do [ ${i:0:1} == / ] && dodir $i; done
-	# debian installation
-	sed -i -e "s:^:cp :" -e 's: /:${D}/:' debian/lastfm.install
-	bash debian/lastfm.install
+	doman debian/lastfm.1
 
 	# Copied from debian/rules
 	uudecode -o - debian/icons.tar.gz.uu | tar -xzf -
 	uudecode -o - debian/trayicons22.tar.gz.uu | tar -xzf -
 	insinto /usr/share
-	doins icons
+	doins -r icons
 	insinto /usr/share/lastfm/icons
 	doins user_*.png
+
+	# make directories
+	for i in $(<debian/lastfm.install); do [ ${i:0:1} == / ] && dodir $i; done
+	# debian installation
+	sed -i -e "s:^:mv :" -e 's: /:${D}/:' debian/lastfm.install
+	bash debian/lastfm.install
+
+	# copied..
 	mv ${D}/usr/bin/last{.,}fm
 	rm -f ${D}/usr/share/lastfm/icons/{*profile24,systray_mac}.png
-	doman debian/lastfm.1
-
-	# make icon work
-	rm ${D}/usr/share/pixmaps/lastfm{16,32}.xpm
-	cd ${D}/usr/share/pixmaps
-	ln -s /usr/share/lastfm/icons/as.png lastfm.png
 }
 
 pkg_postinst() {
