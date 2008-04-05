@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.4.ebuild,v 1.3 2008/04/05 16:21:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.4.ebuild,v 1.4 2008/04/05 20:57:25 klausman Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -8,7 +8,7 @@ IUSE="cups foomaticdb gimp gtk readline ppds"
 
 DESCRIPTION="Ghostscript and cups printer drivers"
 HOMEPAGE="http://gutenprint.sourceforge.net"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 RESTRICT="test"
 
