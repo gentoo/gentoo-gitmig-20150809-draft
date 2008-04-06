@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.17 2008/04/06 08:08:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.18 2008/04/06 08:46:54 graaff Exp $
+
+*ruby-opengl-0.60.0 (06 Apr 2008)
+
+  06 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  +ruby-opengl-0.60.0.ebuild:
+  Version bump: upstream has changed ownership and location, switched to gem
+  version for easier maintenance, dropped most keywords due to newly
+  introduced dependency. Closes #201833.
 
   06 Apr 2008; Hans de Graaff <graaff@gentoo.org> ruby-opengl-0.32c.ebuild,
   ruby-opengl-0.32d.ebuild, ruby-opengl-0.32g.ebuild:
