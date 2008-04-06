@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1296 2008/04/06 12:58:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1297 2008/04/06 13:13:31 ulm Exp $
+
+  06 Apr 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Sort use.local.desc since some entries were out of order.
 
   06 Apr 2008; Ulrich Mueller <ulm@gentoo.org> use.desc, use.local.desc:
   Move leim global USE flag to app-editors/emacs:leim local flag.
