@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.6.ebuild,v 1.3 2008/02/26 19:08:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.6.ebuild,v 1.4 2008/04/06 16:31:06 xmerlin Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -102,7 +102,7 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}d.init ${PN}d || die
 	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 
-	doman doc/en/man/partimage.1 doc/en/man/partimaged.8 doc/en/man/partimagedusers.5
+	doman "${FILESDIR}"/{partimage.1,partimaged.8,partimagedusers.5} || die
 	dodoc AUTHORS BUGS ChangeLog INSTALL README* TODO partimage.lsm
 
 	# pam
