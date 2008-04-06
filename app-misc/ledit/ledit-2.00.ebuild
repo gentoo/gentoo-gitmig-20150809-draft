@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.00.ebuild,v 1.3 2008/04/06 09:50:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.00.ebuild,v 1.4 2008/04/06 19:45:28 maekke Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 pkg_setup() {
 	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
