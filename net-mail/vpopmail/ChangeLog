@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.83 2007/09/16 08:16:28 hollow Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.84 2008/04/06 17:37:38 hollow Exp $
+
+*vpopmail-5.4.25 (06 Apr 2008)
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  -files/vpopmail.clearopensmtp, -files/vpopmail.conf,
+  +vpopmail-5.4.25.ebuild:
+  version bump; use new qmail.eclass; ebuild cleanup
 
 *vpopmail-5.4.20 (16 Sep 2007)
 
