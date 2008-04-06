@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.10.ebuild,v 1.5 2008/01/14 20:40:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.10.ebuild,v 1.6 2008/04/06 00:32:40 nyhm Exp $
 
 DESCRIPTION="Server statics collector supporting many FPS games"
 HOMEPAGE="http://www.qstat.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa ppc ppc64 x86"
 IUSE="debug"
 
-DEPEND=""
+DEPEND="!sys-cluster/torque"
 
 src_compile() {
 	econf $(use_enable debug) || die
