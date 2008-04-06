@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.4 2008/03/09 10:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.5 2008/04/06 16:28:39 maekke Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
@@ -44,8 +44,8 @@ src_install() {
 	# Upstream's provided Gentoo init script is out of date compared to
 	# their Debian init script. And isn't that nice.
 	#newinitd etc/initd/initd.gentoo ietd || die
-	newinitd ${FILESDIR}/ietd-init.d ietd || die "newinitd failed"
-	newconfd ${FILESDIR}/ietd-conf.d ietd || die "newconfd failed"
+	newinitd "${FILESDIR}"/ietd-init.d ietd || die "newinitd failed"
+	newconfd "${FILESDIR}"/ietd-conf.d ietd || die "newconfd failed"
 
 	# Lock down perms, per bug 198209
 	fperms 0640 /etc/ietd.conf /etc/initiators.{allow,deny}
