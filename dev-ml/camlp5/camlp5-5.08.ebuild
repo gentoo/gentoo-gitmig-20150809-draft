@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.08.ebuild,v 1.2 2008/04/03 00:39:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.08.ebuild,v 1.3 2008/04/06 09:29:49 cla Exp $
 
 inherit multilib findlib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://pauillac.inria.fr/~ddr/camlp5/distrib/src/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="doc +ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.09"
