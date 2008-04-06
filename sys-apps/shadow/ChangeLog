@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.198 2008/04/05 04:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.199 2008/04/06 22:29:45 vapier Exp $
+
+  06 Apr 2008; Mike Frysinger <vapier@gentoo.org> shadow-4.1.1.ebuild:
+  Add support for USE=audit.
 
 *shadow-4.1.1 (05 Apr 2008)
 
