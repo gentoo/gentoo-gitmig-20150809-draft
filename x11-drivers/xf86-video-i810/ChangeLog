@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.82 2008/03/28 07:34:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.83 2008/04/06 21:21:12 remi Exp $
+
+*xf86-video-i810-2.2.99.902 (06 Apr 2008)
+
+  06 Apr 2008; Rémi Cardona <remi@gentoo.org>
+  +files/xf86-video-i810-2.2.99.902-enable_center_panel_fitting_on_i8xx.patc
+  h, +xf86-video-i810-2.2.99.902.ebuild:
+  bump to 2.2.99.902 with patch to fix LFP bug on i855
 
 *xf86-video-i810-2.2.99.901 (28 Mar 2008)
 
