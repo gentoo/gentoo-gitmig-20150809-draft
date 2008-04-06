@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.16.ebuild,v 1.1 2008/04/02 13:37:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.16.ebuild,v 1.2 2008/04/06 17:31:14 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="debug directfb doc glitz opengl svg test X xcb"
 
 RDEPEND="media-libs/fontconfig
-		>=media-libs/freetype-2.1.4
+		>=media-libs/freetype-2.1.9
 		sys-libs/zlib
 		media-libs/libpng
 		>=x11-libs/pixman-0.10.0
