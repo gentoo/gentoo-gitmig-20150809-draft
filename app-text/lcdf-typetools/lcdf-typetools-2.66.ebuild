@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.66.ebuild,v 1.14 2008/03/02 10:30:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.66.ebuild,v 1.15 2008/04/06 16:53:33 corsair Exp $
 
 DESCRIPTION="Font utilities for eg manipulating OTF"
 SRC_URI="http://www.lcdf.org/type/${P}.tar.gz"
 HOMEPAGE="http://www.lcdf.org/type/#typetools"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="kpathsea"
