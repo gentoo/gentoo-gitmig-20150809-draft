@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.4.1.ebuild,v 1.5 2007/09/14 17:35:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.4.1.ebuild,v 1.6 2008/04/06 17:25:11 graaff Exp $
 
 inherit ruby
 
@@ -15,4 +15,6 @@ USE_RUBY="ruby18"
 LICENSE="Ruby"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
-DEPEND=">=x11-libs/cairo-1.2.0"
+RDEPEND=">=x11-libs/cairo-1.2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
