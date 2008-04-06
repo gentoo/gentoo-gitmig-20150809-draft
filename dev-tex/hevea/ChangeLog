@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.18 2008/04/06 19:35:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.19 2008/04/06 19:58:46 aballier Exp $
+
+  06 Apr 2008; Alexis Ballier <aballier@gentoo.org> -hevea-1.07-r1.ebuild,
+  -hevea-1.08.ebuild:
+  remove old
 
   06 Apr 2008; Markus Meier <maekke@gentoo.org> hevea-1.10.ebuild:
   x86 stable, bug #215754
