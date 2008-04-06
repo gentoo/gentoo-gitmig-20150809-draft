@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.28 2008/03/31 11:23:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.29 2008/04/06 18:45:12 pclouds Exp $
+
+  06 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  swfdec-0.6.2.ebuild:
+  Avoid /root access violation, #216009
 
 *swfdec-0.6.2 (31 Mar 2008)
 

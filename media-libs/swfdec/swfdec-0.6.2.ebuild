@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.2.ebuild,v 1.1 2008/03/31 11:23:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.2.ebuild,v 1.2 2008/04/06 18:45:12 pclouds Exp $
 
 EAPI=1
 
@@ -58,6 +58,12 @@ src_compile() {
 	use pulseaudio && myaudio="pa"
 	use alsa && myaudio="alsa"
 	myconf=" --with-audio=$myaudio"
+
+	# bug #216009
+	# avoid writing to /root/.gstreamer-0.10/registry.xml
+	export GST_REGISTRY="${T}"/registry.xml
+	# also avoid loading gconf plugins, which may write to /root/.gconfd
+	export GST_PLUGIN_SYSTEM_PATH="${T}"
 
 	econf \
 		$(use_enable doc gtk-doc) \
