@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.37 2007/08/11 02:44:46 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.38 2008/04/06 17:08:04 graaff Exp $
+
+  06 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  -files/mdbtools-0.5-gcc34.patch, -mdbtools-0.5.ebuild:
+  Remove old version
 
   10 Aug 2007; Steve Dibb <beandog@gentoo.org> mdbtools-0.6_pre1-r1.ebuild:
   amd64 stable, bug 186143
