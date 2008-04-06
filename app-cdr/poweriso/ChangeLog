@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/poweriso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/poweriso/ChangeLog,v 1.6 2008/04/05 22:33:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/poweriso/ChangeLog,v 1.7 2008/04/06 14:25:29 maekke Exp $
+
+  06 Apr 2008; Markus Meier <maekke@gentoo.org> -poweriso-1.1.ebuild,
+  poweriso-1.2-r1.ebuild:
+  x86 stable, bug #216149, remove old
 
 *poweriso-1.2-r1 (05 Apr 2008)
 
