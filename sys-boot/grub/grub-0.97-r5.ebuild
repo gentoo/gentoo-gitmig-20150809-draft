@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.6 2008/03/30 17:29:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.7 2008/04/06 22:41:51 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -132,12 +132,11 @@ src_install() {
 		doexe nbgrub pxegrub stage2/stage2.netboot || die "netboot install"
 	fi
 
-	insinto /boot/grub
-	doins "${DISTDIR}"/splash.xpm.gz
-	newins docs/menu.lst grub.conf.sample
-
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
+
+	insinto /boot/grub
+	doins "${DISTDIR}"/splash.xpm.gz
 }
 
 setup_boot_dir() {
@@ -145,6 +144,7 @@ setup_boot_dir() {
 	local dir=${boot_dir}
 
 	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
+	[[ ! -L ${dir}/boot ]] && ln -s . "${dir}/boot"
 	dir="${dir}/grub"
 	if [[ ! -e ${dir} ]] ; then
 		mkdir "${dir}" || die "${dir} does not exist!"
@@ -156,11 +156,6 @@ setup_boot_dir() {
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
-	fi
-
-	if [[ ! -e ${dir}/menu.lst ]] ; then
-		einfo "Linking from new grub.conf name to menu.lst"
-		ln -snf grub.conf "${dir}"/menu.lst
 	fi
 
 	if [[ -e ${dir}/stage2 ]] ; then
