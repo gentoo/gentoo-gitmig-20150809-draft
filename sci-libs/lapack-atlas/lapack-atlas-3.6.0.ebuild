@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.15 2008/02/23 11:13:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.16 2008/04/06 11:27:10 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,17 +17,15 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
-IUSE="ifc doc"
+IUSE="doc"
 
 DEPEND="virtual/libc
 	>=sys-devel/libtool-1.5
 	~sci-libs/blas-atlas-3.6.0
-	sci-libs/lapack-config
-	ifc? ( dev-lang/ifc )"
+	sci-libs/lapack-config"
 
 RDEPEND="virtual/libc
-	virtual/blas
-	ifc? ( dev-lang/ifc )" # Need Intel runtime libraries
+	virtual/blas"
 
 S=${WORKDIR}/ATLAS
 S_LAPACK=${WORKDIR}/LAPACK
@@ -36,38 +34,9 @@ TOP_PATH="${DESTTREE}/lib/lapack"
 # Path where libraries will be installed:
 RPATH="${TOP_PATH}/atlas"
 
-ifc_info() {
-	if [ -z "${IFCFLAGS}" ]
-	then
-		einfo
-		einfo "You may want to set some ifc optimization flags by running this"
-		einfo "ebuild as, for example:"
-		einfo
-		einfo "IFCFLAGS=\"-O3 -tpp7 -xW\" emerge lapack-atlas"
-		einfo "(Pentium 4 exclusive optimizations)."
-		einfo
-		einfo "ifc defaults to -O2, with code tuned for Pentium 4, but that"
-		einfo "will run on any processor."
-		einfo
-		einfo "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
-		einfo "significantly worse performance."
-		einfo
-	fi
-}
-
-pkg_setup() {
-	# We need g77 to compile the LAPACK routines from ATLAS.
-	# `use ifc` only causes the non-ATLAS routines (from the
-	#  reference set) to be built with ifc.
-	if [[ -z `type -P g77` ]]; then
-		eerror "g77 not found on the system!"
-		eerror "Please add fortran to your USE flags and reemerge gcc!"
-		die
-	fi
-}
+FORTRAN="ifc g77"
 
 src_unpack() {
-	use ifc && ifc_info
 	unpack ${A}
 
 	cd "${WORKDIR}"
@@ -114,10 +83,9 @@ src_compile() {
 	make lib CC="${CC}" F77="libtool --mode=compile --tag=F77 g77" || die
 
 	cd ${S_LAPACK}
-	if use ifc
+	if [[ ${FORTRANC} = if* ]]
 	then
-		FC="ifc"
-		FFLAGS="${IFCFLAGS}"
+		FC="${FORTRANC}"
 		NOOPT="-O0" # Do NOT change this. It is applied to two files with
 					# routines to determine machine constants.
 	else
@@ -137,9 +105,9 @@ src_compile() {
 	cp -sf "${S}"/gentoo/liblapack.a/*.lo .
 	cp -sf "${S}"/gentoo/liblapack.a/.libs/*.o .libs/
 
-	if use ifc
+	if [[ ${FORTRAN} = if* ]]
 	then
-		ifc ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
+		${FORTRANC} ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
 			-o liblapack.so.0.0.0 -lblas -lcblas -latlas \
 			-L$(gcc-config -L) -lg2c
 		ar cru liblapack.a *.o
@@ -154,7 +122,7 @@ src_install () {
 	dodir ${RPATH}
 
 	cd ${S_LAPACK}/SRC
-	if use ifc
+	if [[ ${FORTRANC} = if* ]]
 	then
 		strip --strip-unneeded liblapack.so.0.0.0
 		strip --strip-debug liblapack.a

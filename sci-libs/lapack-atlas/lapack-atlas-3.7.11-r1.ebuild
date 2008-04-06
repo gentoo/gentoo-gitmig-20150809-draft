@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11-r1.ebuild,v 1.10 2008/02/23 11:13:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11-r1.ebuild,v 1.11 2008/04/06 11:27:10 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -16,13 +16,12 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/${MY_PN}3.6.0-shared-libs.3.patch.bz2"
 
 SLOT="0"
-IUSE="ifc doc"
+IUSE="doc"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/libc
 	app-admin/eselect-lapack
-	virtual/blas
-	ifc? ( dev-lang/ifc )" # Need Intel runtime libraries
+	virtual/blas"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
@@ -37,27 +36,7 @@ TOP_PATH="${DESTTREE}/$(get_libdir)/lapack"
 # Path where libraries will be installed:
 RPATH="${TOP_PATH}/atlas"
 
-ifc_info() {
-	if [ -z "${IFCFLAGS}" ]
-	then
-		elog
-		elog "You may want to set some ifc optimization flags by running this"
-		elog "ebuild as, for example:"
-		elog
-		elog "IFCFLAGS=\"-O3 -tpp7 -xW\" emerge lapack-atlas"
-		elog "(Pentium 4 exclusive optimizations)."
-		elog
-		elog "ifc defaults to -O2, with code tuned for Pentium 4, but that"
-		elog "will run on any processor."
-		elog
-		elog "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
-		elog "significantly worse performance."
-		elog
-	fi
-}
-
 src_unpack() {
-	use ifc && ifc_info
 	unpack ${A}
 
 	cd "${WORKDIR}"
@@ -131,8 +110,7 @@ src_compile() {
 		|| die "Failed to make lib in ${S}/interfaces/lapack/F77/src/${ATLAS_ARCH}"
 
 	cd "${S_LAPACK}"
-	if use ifc; then
-		FFLAGS="${IFCFLAGS}"
+	if [[ ${FORTRANC} = if* ]]; then
 		NOOPT="-O0" # Do NOT change this. It is applied to two files with
 					# routines to determine machine constants.
 	else
@@ -162,7 +140,7 @@ src_compile() {
 	fi
 	einfo "Fortran library is ${FORTRANLIB}"
 
-	if use ifc; then
+	if [[ ${FORTRANC} = if* ]]; then
 		${FORTRANC} ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
 			-o liblapack.so.0.0.0 -lblas -lcblas -latlas \
 			-L$(gcc-config -L) ${FORTRANLIB} \
@@ -180,7 +158,7 @@ src_install () {
 	dodir "${RPATH}"
 
 	cd "${S_LAPACK}"/SRC
-	if use ifc; then
+	if [[ ${FORTRANC} = if* ]]; then
 		strip --strip-unneeded liblapack.so.0.0.0 || die
 		strip --strip-debug liblapack.a || die
 

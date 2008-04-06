@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.60 2008/02/23 11:13:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.61 2008/04/06 11:27:10 bicatali Exp $
+
+  06 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  lapack-atlas-3.6.0.ebuild, lapack-atlas-3.7.11.ebuild,
+  lapack-atlas-3.7.11-r1.ebuild:
+  Removed ifc use flag (see bug #97929)
 
 *lapack-atlas-3.8.1 (23 Feb 2008)
 
