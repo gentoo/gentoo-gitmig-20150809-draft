@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/tpop3d
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.22 2007/06/12 13:08:38 genone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.23 2008/04/06 17:55:17 griffon26 Exp $
+
+*tpop3d-1.5.4 (06 Apr 2008)
+
+  06 Apr 2008; Maurice van der Pot <griffon26@gentoo.org>
+  +tpop3d-1.5.4.ebuild:
+  Added tpop3d 1.5.4 and also fixed bug #195488 reported by Nico R.
+  <n-roeser@gmx.net>. This ebuild has a bunch of new USE flags one may want to
+  set before upgrading.
 
   12 Jun 2007; Marius Mauch <genone@gentoo.org> tpop3d-1.5.3.ebuild,
   tpop3d-1.5.3-r1.ebuild:
