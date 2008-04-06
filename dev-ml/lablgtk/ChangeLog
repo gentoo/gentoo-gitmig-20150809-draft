@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.63 2008/04/06 19:48:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.64 2008/04/06 19:55:16 aballier Exp $
+
+  06 Apr 2008; Alexis Ballier <aballier@gentoo.org> -lablgtk-2.6.0.ebuild:
+  remove old
 
   06 Apr 2008; Markus Meier <maekke@gentoo.org> lablgtk-2.10.1.ebuild:
   amd64 stable, bug #215750
