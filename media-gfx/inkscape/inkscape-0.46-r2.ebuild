@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46-r2.ebuild,v 1.1 2008/03/29 18:33:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46-r2.ebuild,v 1.2 2008/04/06 13:53:05 maekke Exp $
 
 inherit gnome2 eutils
 
@@ -84,6 +84,13 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_with gnome gnome-print)"
 	G2CONF="${G2CONF} $(use_enable lcms)"
 	G2CONF="${G2CONF} $(use_with perl)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 DOCS="AUTHORS ChangeLog NEWS README"

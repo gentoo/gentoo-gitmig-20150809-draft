@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.93 2008/03/29 18:35:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.94 2008/04/06 13:53:05 maekke Exp $
+
+  06 Apr 2008; Markus Meier <maekke@gentoo.org>
+  +files/inkscape-0.46-gcc43.patch, inkscape-0.46-r2.ebuild:
+  fix building with gcc-4.3, thanks Bert Karwatzki for the patch (bug
+  #215574)
 
   29 Mar 2008; Markus Meier <maekke@gentoo.org> -inkscape-0.46.ebuild,
   -inkscape-0.46-r1.ebuild:
