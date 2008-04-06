@@ -1,6 +1,9 @@
 # ChangeLog for virtual/qmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.8 2008/04/06 17:36:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.9 2008/04/06 19:29:12 hollow Exp $
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> qmail-1.03.ebuild:
+  add mini-qmail-1.06
 
   06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> qmail-1.03.ebuild:
   add netqmail-1.06
