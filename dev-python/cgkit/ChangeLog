@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cgkit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.19 2007/11/13 06:55:42 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.20 2008/04/06 12:18:13 hawking Exp $
+
+*cgkit-2.0.0_alpha8 (06 Apr 2008)
+
+  06 Apr 2008; Ali Polatel <hawking@gentoo.org> +cgkit-2.0.0_alpha8.ebuild:
+  Version bump. Dropped ogre use flag, bug 210731. Added src_test.
 
   13 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   cgkit-2.0.0_alpha7.ebuild:
