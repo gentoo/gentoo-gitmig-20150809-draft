@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.45.ebuild,v 1.6 2008/03/27 18:00:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.45.ebuild,v 1.7 2008/04/06 18:55:37 klausman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="doc tk"
 
 DEPEND=">=media-libs/netpbm-9.12
