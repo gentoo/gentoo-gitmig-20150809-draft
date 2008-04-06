@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.4 2007/12/02 13:14:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.5 2008/04/06 17:46:56 hollow Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="A small, fast library to generate primes in order"
 HOMEPAGE="http://cr.yp.to/primegen.html"
 SRC_URI="http://cr.yp.to/primegen/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""

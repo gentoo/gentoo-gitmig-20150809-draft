@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/primegen
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.5 2007/12/02 13:14:16 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.6 2008/04/06 17:46:56 hollow Exp $
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> primegen-0.97.ebuild:
+  fix LICENSE, bug #204327
 
   02 Dec 2007; Markus Dittrich <markusle@gentoo.org> primegen-0.97.ebuild:
   Disabled installation of error man pages since they collide with 
