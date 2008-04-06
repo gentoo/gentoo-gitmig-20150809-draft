@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32d.ebuild,v 1.9 2006/01/13 19:17:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32d.ebuild,v 1.10 2008/04/06 08:08:18 graaff Exp $
 
 inherit ruby
 
@@ -28,8 +28,8 @@ src_compile() {
 }
 
 src_install () {
-	make -f Makefile.ogl DESTDIR=${D} install || die "install ogl failed"
-	make -f Makefile.glut DESTDIR=${D} install || die "install glut failed"
+	make -f Makefile.ogl DESTDIR="${D}" install || die "install ogl failed"
+	make -f Makefile.glut DESTDIR="${D}" install || die "install glut failed"
 
 	dodoc README.EUC ChangeLog
 
