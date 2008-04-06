@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.67 2008/04/04 17:56:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.68 2008/04/06 19:38:27 maekke Exp $
+
+  06 Apr 2008; Markus Meier <maekke@gentoo.org> itpp-4.0.3.ebuild:
+  amd64/x86 stable, bug #216495
 
 *itpp-4.0.4 (04 Apr 2008)
 
