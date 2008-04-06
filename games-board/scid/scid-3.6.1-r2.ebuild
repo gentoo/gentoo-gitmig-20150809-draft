@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r2.ebuild,v 1.1 2007/08/30 10:49:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r2.ebuild,v 1.2 2008/04/06 00:15:47 nyhm Exp $
 
 inherit eutils games
 
@@ -19,6 +19,7 @@ IUSE=""
 DEPEND=">=dev-lang/tk-8.3
 	>=sys-libs/zlib-1.1.3"
 RDEPEND="${DEPEND}
+	!games-board/chessdb
 	x11-libs/libX11
 	>=dev-lang/python-2.1"
 DEPEND="${DEPEND}

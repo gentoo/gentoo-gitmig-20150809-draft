@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.15 2007/08/30 10:49:10 tupone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.16 2008/04/06 00:15:47 nyhm Exp $
+
+  06 Apr 2008; Tristan Heaven <nyhm@gentoo.org> scid-3.6.1.ebuild,
+  scid-3.6.1-r2.ebuild:
+  Block games-board/chessdb
 
 *scid-3.6.1-r2 (30 Aug 2007)
 
