@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.9 2007/09/22 13:09:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.10 2008/04/06 10:40:22 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -11,11 +11,11 @@ SRC_URI="${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="cmkopt tcp smp doc icc"
+IUSE="cmkopt tcp smp doc"
 
 RESTRICT="fetch"
 
-DEPEND="icc? ( >=dev-lang/icc-8.1 )
+DEPEND="
 	doc? (
 		app-text/poppler
 		dev-tex/latex2html
@@ -67,11 +67,8 @@ src_unpack() {
 		CHARM_OPTS="${CHARM_OPTS} smp"
 	fi
 
-	# compile with icc if requested
-	if use icc; then
-		if [ $(tc-getCC) != "icc" ]; then
-			die "You cannot use $(tc-getCC) with USE='icc'"
-		fi
+	# compile with icc if requested (icc or icpc)
+	if [ $(tc-getCC) = icc ] || [ $(tc-getCXX) = ic* ]; then
 		CHARM_OPTS="${CHARM_OPTS} icc"
 	fi
 
