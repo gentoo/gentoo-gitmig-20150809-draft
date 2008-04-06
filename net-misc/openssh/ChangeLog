@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.306 2008/04/05 00:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.307 2008/04/06 22:44:30 vapier Exp $
+
+  06 Apr 2008; Mike Frysinger <vapier@gentoo.org> openssh-5.0_p1.ebuild:
+  Remove accidental pkcs11-helper inclusion from DEPEND.
 
 *openssh-5.0_p1 (05 Apr 2008)
 

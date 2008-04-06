@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.0_p1.ebuild,v 1.1 2008/04/05 00:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.0_p1.ebuild,v 1.2 2008/04/06 22:44:30 vapier Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -26,7 +26,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="static pam tcpd kerberos skey selinux X509 ldap smartcard hpn libedit X"
 
 RDEPEND="pam? ( virtual/pam )
-	dev-libs/pkcs11-helper
 	kerberos? ( virtual/krb5 )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
