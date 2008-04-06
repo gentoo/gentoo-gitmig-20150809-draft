@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.1 2008/03/17 07:31:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.2 2008/04/06 02:40:55 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs versionator games
 
@@ -60,6 +60,17 @@ src_compile() {
 		use openal && openal="YES"
 	fi
 
+	echo emake \
+		BUILD_CLIENT=${client} \
+		BUILD_SERVER=$(yesno dedicated) \
+		BUILD_TV_SERVER=$(yesno dedicated) \
+		BUILD_IRC=${irc} \
+		BUILD_SND_OPENAL=${openal} \
+		BUILD_SND_QF=${client} \
+		DEBUG_BUILD=$(yesno debug) \
+		CC="$(tc-getCC)" \
+		LD="$(tc-getCC)" \
+		|| die "emake failed"
 	emake \
 		BUILD_CLIENT=${client} \
 		BUILD_SERVER=$(yesno dedicated) \
@@ -99,11 +110,13 @@ src_install() {
 			"${GAMES_DATADIR}"/${PN}/${so} || die "dosym ${so} failed"
 	done
 
-	dodir "${GAMES_DATADIR}"/${PN}/libs
-	for so in libs/*.so ; do
-		dosym "$(games_get_libdir)"/${PN}/${so##*/} \
-			"${GAMES_DATADIR}"/${PN}/${so} || die "dosym ${so} failed"
-	done
+	if [[ -e libs ]] ; then
+		dodir "${GAMES_DATADIR}"/${PN}/libs
+		for so in libs/*.so ; do
+			dosym "$(games_get_libdir)"/${PN}/${so##*/} \
+				"${GAMES_DATADIR}"/${PN}/${so} || die "dosym ${so} failed"
+		done
+	fi
 
 	dodoc "${WORKDIR}"/docs/*
 	prepgamesdirs
