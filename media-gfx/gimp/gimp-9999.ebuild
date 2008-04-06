@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.15 2007/10/31 23:57:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.16 2008/04/06 20:10:18 hanno Exp $
 
 inherit subversion fdo-mime flag-o-matic multilib python
 
@@ -50,7 +50,7 @@ RDEPEND=">=dev-libs/glib-2.12.3
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.31
-	sys-devel/gettext
+	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
