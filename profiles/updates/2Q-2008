@@ -1,1 +1,2 @@
 move media-gfx/gimp-print net-print/gutenprint
+move app-vim/ant app-vim/ant_menu
