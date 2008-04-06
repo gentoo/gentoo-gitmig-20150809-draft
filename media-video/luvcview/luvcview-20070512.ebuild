@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/luvcview/luvcview-20070512.ebuild,v 1.1 2008/01/12 13:02:19 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/luvcview/luvcview-20070512.ebuild,v 1.2 2008/04/06 11:37:08 drac Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://mxhaard.free.fr/spca50x/Investigation/uvc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="media-libs/libsdl"
 RDEPEND="${DEPEND}"
