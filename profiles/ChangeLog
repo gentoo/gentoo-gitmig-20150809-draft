@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1297 2008/04/06 13:13:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1298 2008/04/06 15:23:17 wolf31o2 Exp $
+
+  06 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  arch/hppa/package.use.mask, arch/hppa/use.mask:
+  Sync package.use.mask and use.mask from default-linux/hppa.
 
   06 Apr 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Sort use.local.desc since some entries were out of order.

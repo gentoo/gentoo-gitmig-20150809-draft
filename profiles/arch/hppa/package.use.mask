@@ -1,13 +1,25 @@
-# DON'T TOUCH THIS FILE. INSTEAD, FILE A BUG AND ASSIGN IT TO hppa@g.o.
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.3 2008/04/06 15:23:17 wolf31o2 Exp $
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
 media-plugins/gst-plugins-meta dvb mythtv
 
+# Jeroen Roovers <jer@gentoo.org> (04 Mar 2008)
+# app-mobilephone/gsmlib fails to compile
+kde-base/kopete sms
+
+# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
+# build fails (bug #210880):
+sys-devel/gcc libffi
+
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
-# build or dev-lisp/clisp which has similar build issues
-dev-lang/swig mzscheme clisp
+# build or dev-lisp/clisp which has similar build issues.
+# dev-scheme/chicken appears to be a horrible mess while compiling and not only
+#  causes segfaults but issues illegal instructions as well.
+dev-lang/swig mzscheme clisp chicken
 
 # Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
 # Needs dev-util/valgrind
