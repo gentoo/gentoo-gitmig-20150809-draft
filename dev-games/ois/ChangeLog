@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ois
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.2 2007/09/22 15:47:20 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.3 2008/04/06 03:17:04 nyhm Exp $
+
+*ois-1.2.0 (06 Apr 2008)
+
+  06 Apr 2008; Tristan Heaven <nyhm@gentoo.org> +ois-1.2.0.ebuild:
+  Version bump
 
   22 Sep 2007; Christoph Mende <angelos@gentoo.org> ois-1.0.ebuild:
   Added ~amd64 wrt bug #193247
