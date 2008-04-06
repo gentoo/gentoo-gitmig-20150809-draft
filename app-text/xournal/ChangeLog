@@ -1,0 +1,13 @@
+# ChangeLog for app-text/xournal
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.1 2008/04/06 12:30:42 rbu Exp $
+
+*xournal-0.4.2.1 (06 Apr 2008)
+
+  06 Apr 2008; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +xournal-0.4.2.1.ebuild:
+  Initial version of Xournal, Stylus note taking application (bug #143177).
+  
+  Ebuild based on contributions by Saleem Abdulrasool, Casey Link, Joachim
+  Langenbach, Gautam Iyer and John Troxler.
+
