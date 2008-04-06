@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.8 2008/04/04 22:15:24 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.9 2008/04/06 21:36:53 zlin Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -371,9 +371,9 @@ kde4-base_apply_patches() {
 			done
 		else
 			for _p in ${_packages}; do
-				PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
+				PATCHES=(${PATCHES} $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null))
 				if [[ -n "${KDEBASE}" ]]; then
-					PATCHES="${PATCHES} $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
+					PATCHES=(${PATCHES} $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null))
 				fi
 			done
 		fi
