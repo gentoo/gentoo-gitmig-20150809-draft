@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.2 2007/07/19 23:38:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.3 2008/04/06 00:02:53 nyhm Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="tb4"
 
-RDEPEND="dev-lang/tk"
+RDEPEND="!games-board/scid
+	dev-lang/tk"
 DEPEND="${RDEPEND}
 	tb4? ( app-arch/unzip )"
 
@@ -35,9 +36,9 @@ src_unpack() {
 src_compile() {
 	./configure \
 		BINDIR="${GAMES_BINDIR}" \
-		COMPILE=$(tc-getCXX) \
-		CC=$(tc-getCC) \
-		LINK=$(tc-getCXX) \
+		COMPILE="$(tc-getCXX)" \
+		CC="$(tc-getCC)" \
+		LINK="$(tc-getCXX)" \
 		OPTIMIZE="${CXXFLAGS}" \
 		SHAREDIR="${GAMES_DATADIR}/${PN}" \
 		SOUNDSDIR="${GAMES_DATADIR}/${PN}/sounds" \
