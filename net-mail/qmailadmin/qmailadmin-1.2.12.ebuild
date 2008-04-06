@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.12.ebuild,v 1.1 2008/02/03 11:26:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.12.ebuild,v 1.2 2008/04/06 19:37:46 hollow Exp $
 
-inherit eutils webapp
+inherit qmail eutils webapp
 
 # the RESTRICT is because the vpopmail lib directory is locked down
 # and non-root can't access them.
@@ -51,8 +51,8 @@ src_compile() {
 		--enable-htmllibdir=/usr/share/${PN}/htmllib \
 		--enable-cgibindir="${MY_CGIBINDIR}" \
 		--enable-cgipath=/cgi-bin/${PN} \
-		--enable-qmaildir=/var/qmail \
-		--enable-autoresponder-path=/var/qmail/bin \
+		--enable-qmaildir="${QMAIL_HOME}" \
+		--enable-autoresponder-path="${QMAIL_HOME}"/bin \
 		--enable-true-path=/bin \
 		--enable-ezmlmdir=/usr/bin \
 		--enable-domain-autofill \

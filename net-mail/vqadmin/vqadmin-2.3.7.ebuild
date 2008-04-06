@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.7.ebuild,v 1.1 2008/02/03 10:06:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.7.ebuild,v 1.2 2008/04/06 19:42:23 hollow Exp $
 
-inherit webapp eutils autotools
+inherit webapp eutils autotools qmail
 
 DESCRIPTION="A web based control pannel to manage Virtual Qmail Domains. Works with qmailadmin"
 HOMEPAGE="http://www.inter7.com/index.php?page=vqadmin"
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	econf ${myopts} \
-		--enable-qmaildir=/var/qmail \
+		--enable-qmaildir="${QMAIL_HOME}" \
 		--enable-vpopuser=vpopmail \
 		--enable-vpopgroup=vpopmail \
 		--enable-cgibindir="${MY_CGIBINDIR}" \
