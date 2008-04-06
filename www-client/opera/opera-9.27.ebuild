@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.2 2008/04/03 19:47:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.3 2008/04/06 20:24:07 dertobi123 Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 
 IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="strip mirror"
