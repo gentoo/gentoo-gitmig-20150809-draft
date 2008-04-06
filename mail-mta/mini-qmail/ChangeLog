@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/mini-qmail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.9 2007/12/03 21:37:50 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.10 2008/04/06 18:19:23 hollow Exp $
+
+*mini-qmail-1.06 (06 Apr 2008)
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +files/1.06-exit.patch,
+  +files/config-mini, metadata.xml, +mini-qmail-1.06.ebuild:
+  version bump; conversion to qmail.eclass; fixes #207657
 
   03 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> mini-qmail-1.05.ebuild,
   mini-qmail-1.05-r1.ebuild:
