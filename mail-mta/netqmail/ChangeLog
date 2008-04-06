@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.44 2008/02/27 21:03:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.45 2008/04/06 17:16:39 hollow Exp $
+
+*netqmail-1.06 (06 Apr 2008)
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +files/1.06-exit.patch,
+  metadata.xml, +netqmail-1.06.ebuild:
+  version bump; conversion to qmail.eclass; fixes #123897, #137207
 
   27 Feb 2008; Tupone Alfredo <tupone@gentoo.org> files/tcp.qmtp.sample,
   files/tcp.smtp.sample:
