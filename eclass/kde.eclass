@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.208 2008/04/06 14:28:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.209 2008/04/06 21:39:05 zlin Exp $
 
 # @ECLASS: kde.eclass
 # @MAINTAINER:
@@ -134,14 +134,23 @@ kde_src_unpack() {
 			else
 				packages="${PN}"
 			fi
-			for _p in ${packages} ; do
-				PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
-				if [[ -n "${KDEBASE}" ]] ; then
-					PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
-				fi
-			done
+			if [[ ${#PATCHES[@]} -gt 1 ]]; then
+				for _p in ${_packages}; do
+					PATCHES=( "${PATCHES[@]}" $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null) )
+					if [[ -n "${KDEBASE}" ]]; then
+						PATCHES=( "${PATCHES[@]}" $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null) )
+					fi
+				done
+			else
+				for _p in ${_packages}; do
+					PATCHES=(${PATCHES} $(ls ${_patchdir}/${_p}-${PV}-*{diff,patch} 2>/dev/null))
+					if [[ -n "${KDEBASE}" ]]; then
+						PATCHES=(${PATCHES} $(ls ${_patchdir}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null))
+					fi
+				done
+			fi
 		fi
-		[[ -n ${PATCHES} ]] && base_src_unpack autopatch
+		[[ -n ${PATCHES[@]} ]] && base_src_unpack autopatch
 	else
 		# Call base_src_unpack, which has sections, to do unpacking and patching
 		# step by step transparently as defined in the ebuild.
