@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1298 2008/04/06 15:23:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1299 2008/04/06 15:40:55 wolf31o2 Exp $
+
+  06 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  default/linux/packages.build, targets/vserver/packages,
+  +targets/vserver/packages.build, targets/vserver/virtuals:
+  Cleaning up remaining virtual/baselayout remnants.
 
   06 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   arch/hppa/package.use.mask, arch/hppa/use.mask:
