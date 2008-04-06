@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1-r1.ebuild,v 1.16 2007/08/11 02:44:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1-r1.ebuild,v 1.17 2008/04/06 17:19:15 graaff Exp $
 
 WANT_AUTOMAKE="1.7"
 
@@ -18,18 +18,20 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-DEPEND=">=dev-libs/glib-2
+RDEPEND=">=dev-libs/glib-2
 	sys-libs/ncurses
 	sys-libs/readline
-	>=sys-devel/flex-2.5.0
-	>=sys-devel/bison-1.35
 	gnome? (
 		>=gnome-base/libglade-2
 		>=gnome-base/libgnomeui-2 )
 	odbc? ( >=dev-db/unixODBC-2.0 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	>=sys-devel/flex-2.5.0
+	>=sys-devel/bison-1.35"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gcc34.patch
