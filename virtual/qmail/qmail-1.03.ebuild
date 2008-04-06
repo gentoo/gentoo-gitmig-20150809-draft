@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/qmail-1.03.ebuild,v 1.6 2007/10/19 22:28:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/qmail-1.03.ebuild,v 1.7 2008/04/06 17:36:35 hollow Exp $
 
 DESCRIPTION="Virtual for qmail"
 HOMEPAGE="http://cr.yp.to/qmail.html"
@@ -19,6 +19,7 @@ DEPEND=""
 
 RDEPEND="|| (
 	~mail-mta/netqmail-1.05
+	~mail-mta/netqmail-1.06
 	~mail-mta/mini-qmail-1.05
 	~mail-mta/qmail-ldap-${PV}
 )"
