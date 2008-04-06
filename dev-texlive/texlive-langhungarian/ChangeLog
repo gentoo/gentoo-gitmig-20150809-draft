@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langhungarian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.10 2008/04/06 16:03:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.11 2008/04/06 18:31:02 corsair Exp $
+
+  06 Apr 2008; Markus Rothe <corsair@gentoo.org>
+  texlive-langhungarian-2007.ebuild:
+  Added ~ppc; bug #195815
 
   06 Apr 2008; Markus Rothe <corsair@gentoo.org>
   texlive-langhungarian-2007.ebuild:

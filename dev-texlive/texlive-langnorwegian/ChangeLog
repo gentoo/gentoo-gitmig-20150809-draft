@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langnorwegian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langnorwegian/ChangeLog,v 1.10 2008/04/06 16:11:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langnorwegian/ChangeLog,v 1.11 2008/04/06 18:38:25 corsair Exp $
+
+  06 Apr 2008; Markus Rothe <corsair@gentoo.org>
+  texlive-langnorwegian-2007.ebuild:
+  Added ~ppc; bug #195815
 
   06 Apr 2008; Markus Rothe <corsair@gentoo.org>
   texlive-langnorwegian-2007.ebuild:
