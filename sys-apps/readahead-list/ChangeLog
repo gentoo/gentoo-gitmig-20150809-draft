@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/readahead-list
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.11 2007/02/22 01:20:22 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.12 2008/04/07 22:25:35 robbat2 Exp $
+
+  07 Apr 2008; Robin H. Johnson <robbat2@gentoo.org>
+  readahead-list-1.20060421.1016.ebuild:
+  Stable amd64 per bug #216786.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
