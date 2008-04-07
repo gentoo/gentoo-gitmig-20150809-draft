@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.4 2008/04/07 16:46:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.5 2008/04/07 19:24:20 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -22,6 +22,10 @@ O_VER="9.27-20080331"
 O_FTP="927/final/${O_LNG}"
 
 O_URI="mirror://opera/"
+
+# qt-shared versions do not work on ppc or sparc so they always get the
+# qt-static version:
+
 SRC_URI="
 	qt-static? (
 		amd64? ( ${O_URI}linux/${O_FTP}/i386/static/${PN}-${O_VER}.1-static-qt.i386-${O_LNG}.tar.bz2 )
@@ -32,8 +36,8 @@ SRC_URI="
 	)
 	!qt-static? (
 		amd64? ( ${O_URI}linux/${O_FTP}/i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 )
-		ppc? ( ${O_URI}linux/${O_FTP}/ppc/shared/gcc-2.95/${PN}-${O_VER}.6-shared-qt.ppc-${O_LNG}.tar.bz2 )
-		sparc? ( ${O_URI}linux/${O_FTP}/sparc/shared/gcc-2.95/${PN}-${O_VER}.2-shared-qt.sparc-${O_LNG}.tar.bz2 )
+		ppc? ( ${O_URI}linux/${O_FTP}/ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
+		sparc? ( ${O_URI}linux/${O_FTP}/sparc/static/${PN}-${O_VER}.1-static-qt.sparc-${O_LNG}.tar.bz2 )
 		x86? ( ${O_URI}linux/${O_FTP}/i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 )
 		x86-fbsd? ( ${O_URI}unix/freebsd/${O_FTP}/shared/${PN}-${O_VER}.4-shared-qt.i386.freebsd-${O_LNG}.tar.bz2 )
 	)
@@ -41,16 +45,17 @@ SRC_URI="
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="x11-libs/libXrandr
-	x11-libs/libXp
-	x11-libs/libXmu
-	x11-libs/libXi
-	x11-libs/libXft
-	x11-libs/libXext
-	x11-libs/libXcursor
-	x11-libs/libX11
-	x11-libs/libSM
+RDEPEND="
 	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXcursor
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXp
+	x11-libs/libXrandr
 	>=media-libs/fontconfig-2.1.94-r1
 	amd64? ( qt-static? ( app-emulation/emul-linux-x86-xlibs )
 			 !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
@@ -59,7 +64,8 @@ RDEPEND="x11-libs/libXrandr
 			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 			  media-libs/jpeg )
 	x86-fbsd? ( =virtual/libstdc++-3*
-	            !qt-static? ( =x11-libs/qt-3* ) )"
+				!qt-static? ( =x11-libs/qt-3* )  )
+	"
 
 S=${WORKDIR}/${A/.tar.bz2/}-${O_SUFF}
 

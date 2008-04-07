@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.213 2008/04/07 16:52:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.214 2008/04/07 19:24:20 jer Exp $
+
+  07 Apr 2008; Jeroen Roovers <jer@gentoo.org> opera-9.27.ebuild:
+  SPARC and PPC always get qt-static versions. Sorted generic dependencies.
+  Formatted dependency list.
 
   07 Apr 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.26.ebuild:
   Remove vulnerable version (bug #216022).
