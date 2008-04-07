@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.7 2008/04/06 22:41:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.8 2008/04/07 08:14:09 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
-PATCHVER="1.6"
+PATCHVER="1.7"
 DESCRIPTION="GNU GRUB Legacy boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
