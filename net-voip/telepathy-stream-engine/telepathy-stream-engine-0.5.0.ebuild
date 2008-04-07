@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.5.0.ebuild,v 1.2 2008/04/05 23:50:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.5.0.ebuild,v 1.3 2008/04/07 13:27:54 tester Exp $
 
 DESCRIPTION="A Telepathy client that handles channels of type 'StreamedMedia'"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -20,14 +20,14 @@ DEPEND=">=dev-libs/glib-2.4
 	x11-libs/libX11"
 
 RDEPEND="${DEPEND}
-	media-plugins/gst-plugins-x
-	v4l? ( media-plugins/gst-plugins-v4l )
-	v4l2? ( media-plugins/gst-plugins-v4l2 )
-	xv? ( media-plugins/gst-plugins-xvideo )
-	alsa? ( media-plugins/gst-plugins-alsa )
-	esd? ( media-plugins/gst-plugins-esd )
-	oss? ( media-plugins/gst-plugins-oss )
-	gnome? ( media-plugins/gst-plugins-gconf )
+	=media-plugins/gst-plugins-x-0.10*
+	v4l? ( =media-plugins/gst-plugins-v4l-0.10* )
+	v4l2? ( =media-plugins/gst-plugins-v4l2-0.10* )
+	xv? ( =media-plugins/gst-plugins-xvideo-0.10* )
+	alsa? ( =media-plugins/gst-plugins-alsa-0.10* )
+	esd? ( =media-plugins/gst-plugins-esd-0.10* )
+	oss? ( =media-plugins/gst-plugins-oss-0.10* )
+	gnome? ( =media-plugins/gst-plugins-gconf-0.10* )
 	pulseaudio? ( media-plugins/gst-plugins-pulse )"
 
 src_compile() {
