@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xbill
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.16 2008/02/29 18:48:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.17 2008/04/07 18:34:53 drac Exp $
+
+  07 Apr 2008; Samuli Suominen <drac@gentoo.org> xbill-2.1-r2.ebuild:
+  Marked amd64 stable for bug 216757.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xbill-2.1-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
