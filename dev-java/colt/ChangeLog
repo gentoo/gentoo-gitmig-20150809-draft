@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/colt
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.17 2007/06/02 15:24:05 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.18 2008/04/07 11:54:13 corsair Exp $
+
+  07 Apr 2008; Markus Rothe <corsair@gentoo.org> colt-1.2.0-r1.ebuild:
+  Added ~ppc64; bug #215406
 
   02 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -colt-1.2.0.ebuild,
   colt-1.2.0-r1.ebuild:

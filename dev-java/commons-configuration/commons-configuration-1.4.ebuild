@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.1 2007/08/26 14:52:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.2 2008/04/07 11:51:42 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -28,7 +28,7 @@ RDEPEND=">=virtual/jre-1.4
 LICENSE="Apache-2.0"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 S="${WORKDIR}/${P}-src"
 
