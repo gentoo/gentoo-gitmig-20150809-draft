@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.15 2008/03/23 18:42:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.16 2008/04/07 11:35:08 voyageur Exp $
+
+  07 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  cynthiune-0.9.5-r1.ebuild:
+  Only compile id3tag bundle with USE=mad, bug #216564
 
   23 Mar 2008; nixnut <nixnut@gentoo.org> cynthiune-0.9.5-r1.ebuild:
   Stable on ppc wrt bug 207381
