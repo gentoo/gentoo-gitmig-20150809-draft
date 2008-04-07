@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6e-r1.ebuild,v 1.7 2008/03/27 11:36:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6e-r1.ebuild,v 1.8 2008/04/07 22:31:40 yngwin Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -114,7 +114,7 @@ RDEPEND="
 		)
 		libnotify? ( x11-libs/libnotify )
 		musepack? ( media-libs/libmpcdec )
-		x264? ( >=media-libs/x264-svn-20061014 )
+		x264? ( media-libs/x264 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		dc1394? ( sys-libs/libraw1394
 			<media-libs/libdc1394-1.9.99 )"
