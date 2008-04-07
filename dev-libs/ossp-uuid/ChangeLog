@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ossp-uuid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.4 2008/04/07 12:04:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.5 2008/04/07 20:57:17 aballier Exp $
+
+  07 Apr 2008; Alexis Ballier <aballier@gentoo.org> ossp-uuid-1.6.1.ebuild:
+  keyword ~x86-fbsd
 
   07 Apr 2008; Markus Rothe <corsair@gentoo.org> ossp-uuid-1.6.1.ebuild:
   Added ~ppc64; bug #215479
