@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.275 2008/04/07 00:00:17 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.276 2008/04/07 15:14:22 ranger Exp $
+
+  07 Apr 2008; Brent Baude <ranger@gentoo.org>
+  imagemagick-6.3.8.3-r1.ebuild:
+  stable ppc64, bug 216578
 
   06 Apr 2008; Dawid Węgliński <cla@gentoo.org>
   imagemagick-6.3.8.3-r1.ebuild:
