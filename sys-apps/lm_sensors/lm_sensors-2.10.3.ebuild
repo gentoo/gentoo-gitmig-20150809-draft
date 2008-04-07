@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.7 2008/02/26 08:29:32 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.3.ebuild,v 1.8 2008/04/07 02:18:54 vapier Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -16,6 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="sensord"
 
 COMMON="sys-fs/sysfsutils
+		!sys-apps/i2c-tools
 		sensord? ( net-analyzer/rrdtool )"
 DEPEND="${COMMON}
 		sys-apps/sed
