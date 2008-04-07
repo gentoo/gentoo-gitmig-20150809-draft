@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.7.ebuild,v 1.2 2008/04/06 16:31:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.7.ebuild,v 1.3 2008/04/07 20:57:21 maekke Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.partimage.org/"
 SRC_URI="mirror://sourceforge/partimage/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="ssl nologin nls pam static"
 
 DEPEND="virtual/libc
