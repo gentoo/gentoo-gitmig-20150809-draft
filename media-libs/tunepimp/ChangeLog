@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.59 2008/01/06 15:59:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.60 2008/04/07 05:49:25 philantrop Exp $
+
+  06 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/tunepimp-0.5.3-gcc43.patch, tunepimp-0.5.3-r1.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Mikko C. on
+  bug 215579.
 
   06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   tunepimp-0.5.3-r1.ebuild:
