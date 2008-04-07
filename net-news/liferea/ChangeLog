@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.140 2008/04/07 17:05:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.141 2008/04/07 17:19:34 dang Exp $
+
+  07 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.13.ebuild:
+  Mark 1.4.13 stable on amd64
 
 *liferea-1.4.14 (07 Apr 2008)
 
