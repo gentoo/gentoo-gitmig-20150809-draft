@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre17.ebuild,v 1.1 2008/04/06 17:20:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre17.ebuild,v 1.2 2008/04/07 13:33:57 cardoe Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -76,7 +76,7 @@ src_install() {
 	doins files/catalyst.conf files/catalystrc || die "copying configuration"
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/* || die
-	dodoc README ChangeLog ChangeLog.old AUTHORS
+	dodoc README ChangeLog AUTHORS #ChangeLog.old
 	doman files/catalyst.1
 	# Here is where we actually enable ccache
 	use ccache && \
