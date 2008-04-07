@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.5 2008/03/31 12:17:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.6 2008/04/07 15:28:04 corsair Exp $
+
+  07 Apr 2008; Markus Rothe <corsair@gentoo.org> cython-0.9.6.12.ebuild:
+  Added ~ppc64; bug #215557
 
   31 Mar 2008; Jeroen Roovers <jer@gentoo.org> cython-0.9.6.12.ebuild:
   Marked ~hppa (bug #215557).
