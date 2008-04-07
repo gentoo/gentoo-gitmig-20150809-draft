@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.9 2007/10/09 07:57:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.10 2008/04/07 15:17:56 cardoe Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,6 +17,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 RDEPEND="x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-base/xorg-server
+	x11-proto/inputproto
 	>=sys-apps/sed-4"
 
 src_unpack() {

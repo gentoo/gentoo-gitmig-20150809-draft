@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.3 2008/04/05 04:32:04 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r2.ebuild,v 1.4 2008/04/07 15:17:56 cardoe Exp $
 
 inherit toolchain-funcs eutils linux-info
 
@@ -18,6 +18,7 @@ RDEPEND="x11-libs/libXext
 	 hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	x11-base/xorg-server
+	x11-proto/inputproto
 	>=sys-apps/sed-4"
 
 evdev-input_check() {
