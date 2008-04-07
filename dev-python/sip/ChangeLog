@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.115 2008/03/15 08:39:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.116 2008/04/07 16:00:17 ingmar Exp $
+
+  07 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> sip-4.6.ebuild,
+  sip-4.7.1.ebuild, sip-4.7.3.ebuild:
+  Use "true" rather than "/bin/true" for FBSD compatibility, bug 215235.
 
   15 Mar 2008; Markus Rothe <corsair@gentoo.org> sip-4.7.3.ebuild:
   Stable on ppc64

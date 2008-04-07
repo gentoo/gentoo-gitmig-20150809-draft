@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.6.ebuild,v 1.3 2007/06/24 21:48:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.6.ebuild,v 1.4 2008/04/07 16:00:17 ingmar Exp $
 
 NEED_PYTHON=2.3
 
@@ -38,7 +38,7 @@ src_compile(){
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		CC=$(tc-getCC) CXX=$(tc-getCXX) \
 		LINK=$(tc-getCXX) LINK_SHLIB=$(tc-getCXX) \
-		STRIP="/bin/true" || die "configure failed"
+		STRIP="true" || die "configure failed"
 	emake || die "emake failed"
 }
 
