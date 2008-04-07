@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.1 2008/03/13 03:22:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.2 2008/04/07 17:22:16 drac Exp $
 
 inherit gnome2
 
@@ -32,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 		app-cdr/dvd+rw-tools )
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
-	beagle? ( >=app-misc/beagle-0.2.5 )
+	beagle? ( || ( dev-libs/libbeagle >=app-misc/beagle-0.2.18 ) )
 	libnotify? ( >=x11-libs/libnotify-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.4.0
 		>=dev-libs/libisofs-0.2.8 )"
