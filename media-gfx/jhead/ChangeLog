@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.71 2008/04/07 15:57:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.72 2008/04/07 19:55:42 klausman Exp $
+
+  07 Apr 2008; Tobias Klausmann <klausman@gentoo.org> jhead-2.8.ebuild:
+  Stable on alpha, bug #216570
 
   07 Apr 2008; Brent Baude <ranger@gentoo.org> jhead-2.8.ebuild:
   stable ppc64, bug 216570
