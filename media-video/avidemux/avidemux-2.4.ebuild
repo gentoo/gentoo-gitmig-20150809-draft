@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.3 2008/02/15 15:39:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.4 2008/04/07 22:04:13 yngwin Exp $
 
 inherit cmake-utils eutils
 
@@ -29,7 +29,7 @@ RDEPEND="dev-libs/libxml2
 	xvid? ( media-libs/xvid )
 	amrnb? ( media-libs/amrnb )
 	dts? ( media-libs/libdca )
-	x264? ( media-libs/x264-svn )
+	x264? ( media-libs/x264 )
 	aac? ( media-libs/faad2 )
 	vorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
