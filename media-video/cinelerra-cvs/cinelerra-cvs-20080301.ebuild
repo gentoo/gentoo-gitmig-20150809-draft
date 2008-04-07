@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080301.ebuild,v 1.1 2008/03/01 20:15:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080301.ebuild,v 1.2 2008/04/07 22:07:31 yngwin Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -27,7 +27,7 @@ RDEPEND="media-libs/libpng
 	media-video/ffmpeg
 	media-sound/lame
 	>=sci-libs/fftw-3.0.1
-	>=media-libs/x264-svn-20060302
+	media-libs/x264
 	ieee1394? ( media-libs/libiec61883 >=sys-libs/libraw1394-1.2.0 \
 		>=sys-libs/libavc1394-0.5.0 )
 	media-video/mjpegtools
