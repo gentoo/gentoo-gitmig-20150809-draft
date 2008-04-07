@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.1.ebuild,v 1.3 2008/04/07 02:17:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.1.ebuild,v 1.4 2008/04/07 21:32:17 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="<sys-apps/lm_sensors-3"
+DEPEND="!<sys-apps/lm_sensors-3"
 
 src_compile() {
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die
