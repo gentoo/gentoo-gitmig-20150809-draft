@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.348 2008/03/23 16:33:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.349 2008/04/07 06:31:09 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1102,6 +1102,7 @@ gcc_src_unpack() {
 			|| eerror "Please file a bug about this"
 		eend $?
 	done
+	sed -i 's|A-Za-z0-9|[:alnum:]|g' "${S}"/gcc/*.awk #215828
 
 	if [[ -x contrib/gcc_update ]] ; then
 		einfo "Touching generated files"
