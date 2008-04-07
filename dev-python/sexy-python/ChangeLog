@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.9 2008/01/13 19:43:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.10 2008/04/07 21:47:14 aballier Exp $
+
+  07 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  sexy-python-0.1.9.ebuild:
+  keyword ~x86-fbsd
 
   13 Jan 2008; Lukasz Strzygowski <lucass@gentoo.org>
   sexy-python-0.1.9.ebuild:
