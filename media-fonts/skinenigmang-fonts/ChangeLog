@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/skinenigmang-fonts
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/skinenigmang-fonts/ChangeLog,v 1.1 2008/04/07 16:24:29 zzam Exp $
+
+*skinenigmang-fonts-20080401 (07 Apr 2008)
+
+  07 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +skinenigmang-fonts-20080401.ebuild:
+  Initial import of ebuild written by me.
+
