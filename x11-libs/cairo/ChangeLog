@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.172 2008/04/07 20:38:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.173 2008/04/07 20:44:38 drac Exp $
+
+  07 Apr 2008; Samuli Suominen <drac@gentoo.org> cairo-1.4.14.ebuild:
+  stable amd64, bug 216774
 
   07 Apr 2008; Brent Baude <ranger@gentoo.org> cairo-1.4.14.ebuild:
   stable ppc, bug 216774
