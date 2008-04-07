@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3476 2008/04/07 21:49:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3477 2008/04/07 22:39:05 yngwin Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1310,7 +1310,6 @@ media-video/vlc:vcdx - Enables VCD with navigation via libvcdinfo (depends on cd
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/winki:mjpeg - Enables mjpegtools support
 media-video/x264-encoder:mp4 - Enables support for encoding to mp4 container format
-media-video/x264-svn-encoder:mp4 - Enables mp4 encoding support
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support

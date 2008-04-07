@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1301 2008/04/07 21:29:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1302 2008/04/07 22:39:04 yngwin Exp $
+
+  07 Apr 2008; Ben de Groot <yngwin@gentoo.org> updates/2Q-2008,
+  package.mask, use.local.desc:
+  pkgmove x264-svn(,-encoder) to x264(,-encoder) with versioning scheme
+  change
 
   07 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
   Added dbi and relp USE flags for app-admin/rsyslog
