@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.44 2008/01/01 15:12:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.45 2008/04/07 09:12:51 cla Exp $
+
+  07 Apr 2008; Dawid Węgliński <cla@gentoo.org> yafray-0.0.9-r1.ebuild:
+  Stable on x86 (bug #216576)
 
   01 Jan 2008; Markus Meier <maekke@gentoo.org>
   -files/yafray-0.0.7-scons.patch, -files/yafray-0.0.8-64bit.patch,
