@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.204 2008/03/20 06:14:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.205 2008/04/07 22:25:47 yngwin Exp $
+
+  07 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  transcode-1.1.0_alpha4.ebuild:
+  Pkgmove x264-svn to x264
 
   20 Mar 2008; Steve Arnold <nerdboy@gentoo.org>
   transcode-1.0.6_rc1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.3 2008/01/13 01:38:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.4 2008/04/07 22:25:47 yngwin Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -37,7 +37,7 @@ RDEPEND="a52? ( media-libs/a52dec )
 	>=media-video/ffmpeg-0.4.9_p20050226-r3
 	|| ( sys-libs/glibc dev-libs/libiconv )
 	media-libs/libmpeg2
-	x264? ( media-libs/x264-svn )
+	x264? ( media-libs/x264 )
 	xml? ( dev-libs/libxml2 )
 	X? ( x11-libs/libXpm
 		x11-libs/libXaw
