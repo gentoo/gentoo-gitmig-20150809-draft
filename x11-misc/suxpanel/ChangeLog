@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/suxpanel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.8 2008/04/03 16:32:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.9 2008/04/07 20:11:12 drac Exp $
+
+  07 Apr 2008; Samuli Suominen <drac@gentoo.org> -suxpanel-0.4b.ebuild,
+  suxpanel-0.4b-r1.ebuild:
+  x86 stable as only modification was to include stdlib for this arch, remove
+  old.
 
 *suxpanel-0.4b-r1 (03 Apr 2008)
 
