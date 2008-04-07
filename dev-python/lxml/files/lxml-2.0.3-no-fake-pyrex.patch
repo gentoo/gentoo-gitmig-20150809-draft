@@ -1,5 +1,5 @@
---- setup.py.orig	2008-03-31 13:54:39.865024409 +0300
-+++ setup.py	2008-03-31 14:02:10.318035107 +0300
+--- setup.py	2008-04-07 15:10:32.989740409 +0300
++++ setup.py	2008-04-07 15:11:13.897709903 +0300
 @@ -4,10 +4,9 @@
  
  try:
@@ -13,12 +13,3 @@
  
  try:
      import pkg_resources
-@@ -16,7 +15,7 @@
-     except pkg_resources.VersionConflict:
-         from ez_setup import use_setuptools
-         use_setuptools(version="0.6c5")
--    #pkg_resources.require("Cython==0.9.6.10")
-+    pkg_resources.require("Cython>=0.9.6.10")
-     from setuptools import setup
-     extra_options["zip_safe"] = False
- except ImportError:

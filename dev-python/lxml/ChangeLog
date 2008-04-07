@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.34 2008/03/31 11:16:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.35 2008/04/07 12:17:29 hawking Exp $
+
+  07 Apr 2008; Ali Polatel <hawking@gentoo.org>
+  files/lxml-2.0.3-no-fake-pyrex.patch:
+  Fixed patch to work fine, bug 215557.
 
 *lxml-2.0.3 (31 Mar 2008)
 
