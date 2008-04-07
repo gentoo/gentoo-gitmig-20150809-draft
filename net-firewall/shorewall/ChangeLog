@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.162 2008/04/07 15:44:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.163 2008/04/07 19:27:42 klausman Exp $
+
+  07 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
+  shorewall-3.4.8.ebuild:
+  Stable on alpha, bug #216224
 
   07 Apr 2008; Markus Rothe <corsair@gentoo.org> shorewall-3.4.8.ebuild:
   Stable on ppc64; bug #216224
