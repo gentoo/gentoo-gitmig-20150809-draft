@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.213 2008/03/30 18:17:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.214 2008/04/07 13:07:00 phreak Exp $
+
+*hardened-sources-2.6.24 (07 Apr 2008)
+
+  07 Apr 2008; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.24.ebuild:
+  Adding ebuild for hardened-sources-2.6.24 (many thanks to Kerin Millar
+  <kerframil at gmail.com> and Gordon Malm <bugs-gentoo-org-02 at bumpin.org>
+  for the many contributions and their continued effort in #216612) based on
+  2.6.24 and genpatches-2.6.24-5.
+  
+  The current ebuild/patchset contains these things:
+  * Incoporates unmodified grsec-2.1.11-2.6.24.4-200803262003 patch
+  * Introduces bespoke server and workstation oriented security levels
+  * VDSO_COMPAT cannot be enabled during runtime if PaX is enabled
 
   30 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix the metadata.xml (Kerin isn't a dev, though he and Gordon are
