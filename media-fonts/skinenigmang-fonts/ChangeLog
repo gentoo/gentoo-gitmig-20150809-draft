@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/skinenigmang-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/skinenigmang-fonts/ChangeLog,v 1.2 2008/04/07 16:29:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/skinenigmang-fonts/ChangeLog,v 1.3 2008/04/07 18:43:28 zzam Exp $
+
+  07 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  skinenigmang-fonts-20080401.ebuild:
+  Fixed usage of font.eclass and own stupidity, thanks to Ioannis from
+  vdr-portal.
 
   07 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   skinenigmang-fonts-20080401.ebuild:
