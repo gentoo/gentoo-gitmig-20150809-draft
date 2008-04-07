@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.13 2008/04/06 16:21:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.14 2008/04/07 19:38:39 klausman Exp $
+
+  07 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
+  dbskkd-cdb-1.71.ebuild:
+  Stable on alpha, bug #216277
 
   06 Apr 2008; Markus Meier <maekke@gentoo.org> dbskkd-cdb-1.71.ebuild:
   amd64/x86 stable, bug #216277
