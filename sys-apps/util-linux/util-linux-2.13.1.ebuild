@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.ebuild,v 1.9 2008/03/31 03:08:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.ebuild,v 1.10 2008/04/07 17:51:13 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -87,6 +87,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "USE=crypt has been changed to USE=loop-aes.  If you need"
-	elog "support for it, make sure to update your USE accordingly."
+	ewarn "USE=crypt has been changed to USE=loop-aes.  If you need"
+	ewarn "support for it, make sure to update your USE accordingly."
 }
