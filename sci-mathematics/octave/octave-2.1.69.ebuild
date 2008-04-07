@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.11 2007/11/20 14:46:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.12 2008/04/07 13:57:31 markusle Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic fortran
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
 HOMEPAGE="http://www.octave.org/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ~sparc x86"
-IUSE="emacs static readline zlib latex hdf5 mpi ifc blas"
+IUSE="emacs static readline zlib latex hdf5 mpi blas"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
@@ -22,7 +22,6 @@ DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )
 	hdf5? ( sci-libs/hdf5 )
 	latex? ( virtual/latex-base )
-	x86? ( ifc? ( dev-lang/ifc ) )
 	blas? ( virtual/blas )
 	mpi? ( sys-cluster/lam-mpi )
 	!=app-text/texi2html-1.70"
@@ -31,15 +30,7 @@ DEPEND="virtual/libc
 # source nor is it free (as in beer OR speech) Check out...
 # http://developer.intel.com/software/products/mkl/mkl52/index.htm for
 # more information
-
-pkg_setup() {
-	use ifc || if [[ -z $(type -P g77) ]]; then
-		#if ifc is defined then the dep was already checked
-		eerror "No fortran compiler found on the system!"
-		eerror "Please add fortran to your USE flags and reemerge gcc!"
-		die
-	fi
-}
+FORTRAN="gfortran g77 ifc"
 
 src_compile() {
 	filter-flags -ffast-math
