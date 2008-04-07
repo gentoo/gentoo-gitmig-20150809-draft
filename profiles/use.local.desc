@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3474 2008/04/06 22:30:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3475 2008/04/07 21:29:25 dev-zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -23,6 +23,8 @@ app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
+app-admin/rsyslog:dbi - Add support for logging into various databases through libdbi
+app-admin/rsyslog:relp - Add support for the Reliable Event Logging Protocol
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1300 2008/04/07 14:51:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1301 2008/04/07 21:29:25 dev-zero Exp $
+
+  07 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Added dbi and relp USE flags for app-admin/rsyslog
 
   07 Apr 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   add nemiver 0.5.2 and deps to p.mask
