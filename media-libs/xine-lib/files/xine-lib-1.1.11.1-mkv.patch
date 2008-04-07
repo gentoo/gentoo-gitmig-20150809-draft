@@ -1,0 +1,20 @@
+# HG changeset patch
+# User Darren Salt <linux@youmustbejoking.demon.co.uk>
+# Date 1207353205 -3600
+# Node ID ff20b8db74eabc74b7b95da4c1b44fc5d7f2ec8c
+# Parent  05ebc886fd30158b59a26e03cf2f6f3a52114b24
+Fix a regression in the Matroska demuxer.
+One '&'...
+
+diff -r 05ebc886fd30 -r ff20b8db74ea src/demuxers/ebml.c
+--- a/src/demuxers/ebml.c	Fri Apr 04 18:35:33 2008 +0100
++++ b/src/demuxers/ebml.c	Sat Apr 05 00:53:25 2008 +0100
+@@ -327,7 +327,7 @@
+   if (text)
+   {
+     text[elem->len] = '\0';
+-    if (ebml_read_ascii (ebml, &elem, text))
++    if (ebml_read_ascii (ebml, elem, text))
+       return text;
+     free (text);
+   }

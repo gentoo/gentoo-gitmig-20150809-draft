@@ -1,0 +1,23 @@
+
+# HG changeset patch
+# User Darren Salt <linux@youmustbejoking.demon.co.uk>
+# Date 1206976103 -3600
+# Node ID d8e1305c13820b82d896f7bc77d196b9c9645dd6
+# Parent 2cc583bdc498fd6c95b8a21c10e81a0cef4d63c6
+Revert a change which broke Quicktime atom parsing.
+
+--- a/src/demuxers/demux_qt.c	Sun Mar 30 19:48:58 2008 +0100
++++ b/src/demuxers/demux_qt.c	Mon Mar 31 16:08:23 2008 +0100
+@@ -895,11 +895,6 @@ static qt_error parse_trak_atom (qt_trak
+   for (i = ATOM_PREAMBLE_SIZE; i < trak_atom_size - 4; i++) {
+     current_atom_size = _X_BE_32(&trak_atom[i - 4]);	
+     current_atom = _X_BE_32(&trak_atom[i]);
+-
+-    if (current_atom_size > trak_atom_size - i) {
+-      last_error = QT_NOT_A_VALID_FILE;
+-      goto free_trak;
+-    }
+ 
+     if (current_atom == TKHD_ATOM) {
+       trak->flags = _X_BE_16(&trak_atom[i + 6]);
+
