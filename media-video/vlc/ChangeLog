@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.322 2008/04/06 20:47:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.323 2008/04/07 20:51:51 maekke Exp $
+
+  07 Apr 2008; Markus Meier <maekke@gentoo.org> vlc-0.8.6f.ebuild:
+  amd64/x86 stable, security bug #214627
 
   06 Apr 2008; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
   Stable on alpha, security bug #214627
