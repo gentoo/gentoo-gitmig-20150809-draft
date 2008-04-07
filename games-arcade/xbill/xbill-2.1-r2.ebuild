@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.4 2008/04/07 19:46:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.5 2008/04/07 21:34:43 klausman Exp $
 
 inherit eutils autotools games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xbill.org/download/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="alpha amd64 ~ppc x86"
 IUSE="gtk"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-2* )
