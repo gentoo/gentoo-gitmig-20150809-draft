@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.26 2008/03/02 16:48:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.27 2008/04/07 20:07:04 aballier Exp $
+
+  07 Apr 2008; Alexis Ballier <aballier@gentoo.org> PyQt4-4.3.3.ebuild:
+  keyword ~x86-fbsd
 
   02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> PyQt4-4.3.1.ebuild:
   Marked stable on amd64 as per bug 201474.
