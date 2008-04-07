@@ -1,6 +1,56 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.175 2008/03/26 01:31:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.176 2008/04/07 21:02:16 dang Exp $
+
+*evolution-data-server-2.22.1 (07 Apr 2008)
+
+  07 Apr 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +evolution-data-server-2.22.1.ebuild:
+  Bump to 2.22.1 Bug Fixes:
+
+  - Better support for non RFC 2047 subject line with encoded words
+
+  (Milan Crha)
+
+  - IMAP custom/user flags are now synced in summary between two
+
+  Evolutions (Milan Crha)
+
+  - Stop work as soon as we know application is going to exit (Milan
+
+  Crha)
+
+  - Open files with O_LARGEFILE flag (Milan Crha)
+
+  - Removed some infinite loops and corrected the conditional statement
+
+  (Sankar P)
+
+  - (Novell Bugzilla) Some mails with attachments do not have an
+
+  attachment icon. Mail size is not shown for some mails and not all
+
+  related recurring appointments are deleted as well (Sankar P)
+
+  - Use correct type for g_base64_decode to fix stack corruption on
+
+  x86_64. (Stanislav Brabec)
+
+  - Fall back to simple binds if the global catalog server does not
+
+  support NTLM binds. (Matthew Barnes)
+
+  - Fix a severe memory leak when using exchange (Matthew Barnes)
+
+  - Don't terminate connection after sucessful reconnect by ORBit.
+
+  (Ondrej Jirman)
+
+  - Initialize variable to NULL, so do not free random memory (Milan
+
+  Crha)
+
+  - Random crash looking up addresses in new email (Milan Crha)
 
   26 Mar 2008; Mart Raudsepp <leio@gentoo.org>
   +files/evolution-data-server-1.12.3-no-libsoup24.patch,
