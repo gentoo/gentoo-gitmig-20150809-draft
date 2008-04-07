@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.11 2008/01/15 01:07:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.12 2008/04/07 21:58:02 yngwin Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
 
 RDEPEND=">=dev-libs/openssl-0.9.6
 	ffmpeg? ( >=media-video/ffmpeg-${FFMPEG_SNAP/-/_}
-			>=media-libs/x264-svn-20061014 )
+			media-libs/x264 )
 	jpeg? ( media-libs/jpeg )
 	media-libs/tiff
 	nls? ( >=media-libs/freetype-2.0

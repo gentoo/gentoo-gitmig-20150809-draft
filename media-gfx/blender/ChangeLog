@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.130 2008/03/26 08:56:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.131 2008/04/07 21:58:02 yngwin Exp $
+
+  07 Apr 2008; Ben de Groot <yngwin@gentoo.org> blender-2.43.ebuild,
+  blender-2.45.ebuild:
+  Pkgmove x264-svn to x264
 
 *blender-2.45-r1 (26 Mar 2008)
 
