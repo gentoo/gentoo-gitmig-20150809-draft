@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.58 2008/02/21 17:16:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.59 2008/04/07 22:17:43 yngwin Exp $
+
+  07 Apr 2008; Ben de Groot <yngwin@gentoo.org> mpeg4ip-1.5.0.1-r1.ebuild,
+  mpeg4ip-1.5.0.1-r3.ebuild, mpeg4ip-1.5.0.1-r4.ebuild:
+  Pkgmove x264-svn to x264
 
   21 Feb 2008; <tester@gentoo.org> mpeg4ip-1.5.0.1-r4.ebuild:
   Add build-time dep on gtk/alsalib/glib to be able to rebuild aclocal.m4

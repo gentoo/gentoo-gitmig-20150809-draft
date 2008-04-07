@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r3.ebuild,v 1.3 2008/01/23 15:37:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r3.ebuild,v 1.4 2008/04/07 22:17:43 yngwin Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -28,7 +28,7 @@ RDEPEND=" media-libs/libsdl
 		lame? ( >=media-sound/lame-3.92 )
 		aac? ( >=media-libs/faac-1.24-r1 )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
-		x264? ( media-libs/x264-svn )
+		x264? ( media-libs/x264 )
 	)
 	nas? ( media-libs/nas x11-libs/libXt )
 	alsa? ( media-libs/alsa-lib )
