@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/ccp4
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.13 2007/07/22 07:18:45 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.14 2008/04/08 08:05:52 dberkholz Exp $
+
+*ccp4-6.0.2-r1 (08 Apr 2008)
+
+  08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/6.0.2-gcc-4.1.2-idate-fix.patch, +ccp4-6.0.2-r1.ebuild:
+  (#175630, #201150) Fix build. Install setup scripts into /etc/profile.d/
+  so they're sourced automatically upon login. In setup scripts, don't use
+  CLIBD before it's been set. Update to latest upstream patches. Deal with
+  non-gzip compression types.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; ccp4-6.0.1-r1.ebuild:
   Drop virtual/x11 references.
