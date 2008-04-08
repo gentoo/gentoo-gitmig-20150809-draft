@@ -83,3 +83,8 @@ dev-lang/swig chicken
 # pam_cracklib is only provided by Linux-PAM which is not usable on
 # Gentoo/FreeBSD.
 sys-auth/pambase consolekit cracklib
+
+# Alexis Ballier <aballier@gentoo.org> (7 Apr 2008)
+# bug #216855
+# octave needs fftw which does not work of fbsd
+dev-lang/swig octave
