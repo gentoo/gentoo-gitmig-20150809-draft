@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.5 2008/04/03 19:37:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.6 2008/04/08 16:07:51 caster Exp $
 
 # Tomcat is almost no longer needed in 3.3 and removed in 3.4.
 # See bug: https://bugs.eclipse.org/bugs/show_bug.cgi?id=173692
@@ -48,7 +48,7 @@ CDEPEND=">=dev-java/ant-eclipse-ecj-3.3
 	dev-java/ant-nodeps
 	=dev-java/junit-3*
 	dev-java/junit:4
-	>=dev-java/swt-${PV}:3
+	<dev-java/swt-3.4_alpha:3
 	>=dev-java/jsch-0.1.36-r1
 	>=dev-java/icu4j-3.6.1
 	>=dev-java/commons-el-1.0-r2
