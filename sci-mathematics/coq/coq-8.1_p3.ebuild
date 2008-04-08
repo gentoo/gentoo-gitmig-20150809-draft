@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.8 2008/04/06 19:26:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.9 2008/04/08 15:06:35 armin76 Exp $
 
 inherit eutils multilib
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="|| ( ( >=dev-lang/ocaml-3.10 >=dev-ml/camlp5-5.01 ) <dev-lang/ocaml-3.10 )
 >=dev-lang/ocaml-3.08
