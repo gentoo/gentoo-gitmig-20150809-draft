@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.5,v 1.1 2008/03/17 18:43:22 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.5,v 1.2 2008/04/08 22:02:34 falco Exp $
 
 # If you plan to simultaneously use several Postfix instances, don't forget
 # to specify your alternate_config_directories variable in your main main.cf file.
@@ -12,7 +12,7 @@
 
 CONF_DIR="/etc/postfix"
 CONF_OPT="${SVCNAME##*.}"
-if [[ -n ${CONF_OPT} && ${SVCNAME} != "postfix" ]]; then
+if [ -n ${CONF_OPT} -a ${SVCNAME} != "postfix" ]; then
 	CONF_DIR="${CONF_DIR}.${CONF_OPT}"
 fi
 

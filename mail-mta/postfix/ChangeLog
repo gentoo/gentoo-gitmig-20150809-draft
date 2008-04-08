@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.157 2008/03/21 15:03:51 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.158 2008/04/08 22:02:33 falco Exp $
+
+  08 Apr 2008; Raphael Marichez <falco@gentoo.org> files/postfix.rc6.2.5:
+  Fix bashism in init.d/postfix reported by Peter Alfredsen, bug #216949
 
 *postfix-2.4.7 (21 Mar 2008)
 
