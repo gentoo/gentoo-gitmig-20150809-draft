@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.2 2008/04/08 08:06:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.3 2008/04/08 14:31:50 mr_bones_ Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -12,8 +12,8 @@ PATCH_TOT="10"
 # Here's a little scriptlet to generate this list from the provided
 # index.patches file
 #
-# i=1; while read -a line; do [[ ${line//#} != ${line} ]] && continue; 
-# echo "PATCH${i}=( ${line[1]}"; echo "${line[0]} )"; (( i++ )); done < 
+# i=1; while read -a line; do [[ ${line//#} != ${line} ]] && continue;
+# echo "PATCH${i}=( ${line[1]}"; echo "${line[0]} )"; (( i++ )); done <
 # index.patches
 PATCH1=( src/topp_
 topp.f-r1.16.2.5-r1.16.2.6.diff )
