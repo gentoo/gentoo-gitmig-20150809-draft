@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libfishsound
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.4 2008/04/07 06:35:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.5 2008/04/08 07:57:22 aballier Exp $
+
+  08 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/libfishsound-0.9.0-ocert-2008-2.patch, -libfishsound-0.8.1.ebuild,
+  -libfishsound-0.9.0.ebuild:
+  remove old
 
 *libfishsound-0.9.1 (07 Apr 2008)
 
