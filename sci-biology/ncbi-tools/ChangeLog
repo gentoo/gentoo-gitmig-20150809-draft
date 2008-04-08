@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.59 2008/04/08 21:29:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.60 2008/04/08 21:35:34 dberkholz Exp $
+
+  08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; Manifest:
+  Fix manifest, connection dropped mid-commit.
 
   08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   ncbi-tools-20070826.ebuild:
