@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.10-r1.ebuild,v 1.1 2008/04/08 06:06:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.10-r1.ebuild,v 1.2 2008/04/08 09:08:48 remi Exp $
 
 MY_PN="gtk-doc"
 MY_P=${MY_PN}-${PV}
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
+
+src_compile() {
+	:
+}
 
 src_install() {
 	insinto /usr/share/aclocal
