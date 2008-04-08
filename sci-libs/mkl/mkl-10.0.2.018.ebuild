@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.1 2008/03/29 09:12:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.2 2008/04/08 21:35:03 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -57,7 +57,7 @@ pkg_setup() {
 	if use fortran95; then
 		FORTRAN="gfortran ifc"
 		# blas95 and lapack95 don't compile with gfortran < 4.2
-		gcc-version lt 4 2 && FORTRAN="ifc"
+		[[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && FORTRAN="ifc"
 	fi
 	use int64 && FORTRAN="gfortran ifc"
 	fortran_pkg_setup
