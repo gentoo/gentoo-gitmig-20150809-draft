@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/files/3.1.5/resin.init,v 1.1 2008/03/17 16:34:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/files/3.1.5/resin.init,v 1.2 2008/04/08 07:55:34 nelchael Exp $
 
 depend() {
 	need net
@@ -22,7 +22,7 @@ runResin() {
 	local msg="${1}"
 	shift
 
-	local cmdline="${JAVA_HOME}/bin/java -jar /usr/share/resin/lib/resin.jar ${extraArgs} -resin-home /usr/lib/resin ${@}"
+	local cmdline="${JAVA_HOME}/bin/java -jar /usr/share/resin/lib/resin.jar -conf /etc/resin/resin.conf -resin-home /usr/lib/resin ${extraArgs} ${@}"
 
 	ebegin "${msg}"
 	su - resin -c "${cmdline}"

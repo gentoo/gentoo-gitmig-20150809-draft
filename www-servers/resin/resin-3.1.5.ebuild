@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.5.ebuild,v 1.1 2008/02/27 22:06:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.5.ebuild,v 1.2 2008/04/08 07:55:33 nelchael Exp $
 
 EAPI="1"
 
@@ -122,7 +122,7 @@ src_install() {
 	java-pkg_dojar "${S}"/lib/*.jar
 	rm -fr "${D}/${RESIN_HOME}/lib"
 	dosym /usr/share/resin/lib ${RESIN_HOME}/lib
-	keepdir /usr/share/resin/log
+	dosym /var/log/resin /usr/share/resin/log
 
 	dodir /var/lib/resin/webapps
 	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps"

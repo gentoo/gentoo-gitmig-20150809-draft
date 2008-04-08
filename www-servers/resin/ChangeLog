@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.67 2008/03/17 16:33:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.68 2008/04/08 07:55:33 nelchael Exp $
+
+  08 Apr 2008; Krzysiek Pawlik <nelchael@gentoo.org> files/3.1.5/resin.init,
+  resin-3.1.5.ebuild:
+  Fix config location, see bug #216832.
 
   17 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/3.1.5/resin.conf, +files/3.1.5/resin.init:
