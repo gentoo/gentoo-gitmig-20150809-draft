@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/extace
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.19 2008/03/28 22:58:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.20 2008/04/08 18:51:21 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> extace-1.9.8.ebuild:
+  sparc stable wrt #214795
 
   28 Mar 2008; Markus Meier <maekke@gentoo.org> extace-1.9.8.ebuild:
   x86 stable, bug #214795
