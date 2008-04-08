@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.2.ebuild,v 1.1 2007/12/31 17:48:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.2.ebuild,v 1.2 2008/04/08 01:47:41 mr_bones_ Exp $
 
 inherit autotools eutils games
 
@@ -13,10 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	dev-games/flatzebra"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

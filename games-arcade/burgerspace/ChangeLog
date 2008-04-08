@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/burgerspace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.9 2007/12/31 17:48:34 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.10 2008/04/08 01:47:41 mr_bones_ Exp $
+
+  08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  burgerspace-1.8.2.ebuild:
+  fix deps (bug #216562)
 
 *burgerspace-1.8.2 (31 Dec 2007)
 
