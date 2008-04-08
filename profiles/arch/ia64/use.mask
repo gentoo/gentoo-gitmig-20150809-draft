@@ -30,6 +30,7 @@ hardened
 jack
 lapack
 networkmanager
+octave
 timidity
 
 # Stuff that doesn't compile on ia64
