@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p12-r1.ebuild,v 1.7 2008/02/26 23:06:13 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p12-r1.ebuild,v 1.8 2008/04/08 21:43:06 vapier Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${PN}-5.2-rlfe-build.patch #151174
 	epatch "${FILESDIR}"/${PN}-5.1-rlfe-uclibc.patch
+	epatch "${FILESDIR}"/${PN}-5.2-no-ignore-shlib-errors.patch #216952
 
 	ln -s ../.. examples/rlfe/readline
 
