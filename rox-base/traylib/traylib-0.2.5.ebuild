@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.2.5.ebuild,v 1.2 2008/04/04 07:04:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.2.5.ebuild,v 1.3 2008/04/08 14:59:05 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -14,7 +14,7 @@ RDEPEND=">=rox-base/rox-lib-1.9.6"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 src_install() {
