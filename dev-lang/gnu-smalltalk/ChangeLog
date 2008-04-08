@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.35 2008/03/04 14:11:44 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.36 2008/04/08 08:07:01 araujo Exp $
+
+*gnu-smalltalk-3.0.1-r1 (08 Apr 2008)
+
+  08 Apr 2008; Luis F. Araujo <araujo@gentoo.org>
+  +gnu-smalltalk-3.0.1-r1.ebuild:
+  Fixing bug #212436
 
 *gnu-smalltalk-3.0.1 (04 Mar 2008)
 
