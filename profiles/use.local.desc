@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3477 2008/04/07 22:39:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3478 2008/04/08 11:02:25 hkbst Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -456,6 +456,7 @@ dev-lang/swig:R - Enable R support
 dev-lang/swig:chicken - Enable chicken Scheme support
 dev-lang/swig:clisp - Enable CLisp support
 dev-lang/swig:mzscheme - Enable PLT mzscheme support
+dev-lang/swig:octave - Enable Octave support
 dev-lang/swig:pike - Enable Pike scripting support
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
