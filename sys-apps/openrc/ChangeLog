@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.24 2008/04/04 19:31:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.25 2008/04/08 01:32:21 dirtyepic Exp $
+
+  08 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> openrc-0.2.1-r1.ebuild:
+  Keyword ~mips.
 
 *openrc-0.2.1-r1 (04 Apr 2008)
 
