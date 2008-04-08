@@ -1,16 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.16 2008/03/31 05:05:56 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.17 2008/04/08 17:47:42 vapier Exp $
 
 inherit eutils
 
 MY_P=Eterm-${PV}
+
+if [[ ${PV} == "9999" ]] ; then
+	#ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+	ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
+	ECVS_MODULE="eterm/Eterm"
+	inherit cvs
+fi
+
 DESCRIPTION="A vt102 terminal emulator for X"
 HOMEPAGE="http://www.eterm.org/"
-SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
-	!minimal? ( http://www.eterm.org/download/Eterm-bg-${PV}.tar.gz )
-	mirror://sourceforge/eterm/${MY_P}.tar.gz
-	!minimal? ( mirror://sourceforge/eterm/Eterm-bg-${PV}.tar.gz )"
+if [[ ${PV} == "9999" ]] ; then
+	SRC_URI=""
+else
+	SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
+		!minimal? ( http://www.eterm.org/download/Eterm-bg-${PV}.tar.gz )
+		mirror://sourceforge/eterm/${MY_P}.tar.gz
+		!minimal? ( mirror://sourceforge/eterm/Eterm-bg-${PV}.tar.gz )"
+fi
 
 LICENSE="BSD"
 SLOT="0"
@@ -29,12 +41,29 @@ DEPEND="x11-libs/libX11
 	etwin? ( app-misc/twin )
 	escreen? ( app-misc/screen )"
 
-S=${WORKDIR}/${MY_P}
+if [[ ${PV} == "9999" ]] ; then
+	S=${WORKDIR}/${ECVS_MODULE}
+else
+	S=${WORKDIR}/${MY_P}
+fi
 
+pkg_setup() {
+	if ! built_with_use media-libs/imlib2 X ; then
+		eerror "media-libs/imlib2 was built without X support."
+		eerror "Please add emerge it with USE=X."
+		die "imlib2 needs USE=X"
+	fi
+}
 src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd "${S}"
-	use minimal || unpack Eterm-bg-${PV}.tar.gz
+	if [[ ${PV} == "9999" ]] ; then
+		cvs_src_unpack
+		cd "${S}"
+		NOCONFIGURE=yes ./autogen.sh || die "autogen failed"
+	else
+		unpack ${MY_P}.tar.gz
+		cd "${S}"
+		use minimal || unpack Eterm-bg-${PV}.tar.gz
+	fi
 }
 
 src_compile() {
