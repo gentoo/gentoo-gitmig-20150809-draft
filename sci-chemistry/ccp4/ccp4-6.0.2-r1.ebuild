@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.1 2008/04/08 08:05:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.2 2008/04/08 08:06:55 dberkholz Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -417,10 +417,6 @@ src_install() {
 pkg_postinst() {
 	einfo "The Web browser defaults to firefox. Change CCP4_BROWSER"
 	einfo "in /usr/share/ccp4/include/ccp4.setup* to modify this."
-
-	ewarn "Set your .bashrc or other shell login file to source"
-	ewarn "one of the ccp4.setup* files in ${ROOT}usr/share/ccp4/include."
-	ewarn "CCP4 will not work without this."
 }
 
 # Epatch wrapper for bulk patching
