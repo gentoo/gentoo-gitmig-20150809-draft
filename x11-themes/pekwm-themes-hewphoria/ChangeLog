@@ -1,10 +1,13 @@
 # ChangeLog for x11-themes/pekwm-themes-hewphoria
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.1 2008/04/08 13:53:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.2 2008/04/08 14:53:08 yngwin Exp $
+
+  08 Apr 2008; Ben de Groot <yngwin@gentoo.org> ChangeLog:
+  Fix typo.
 
 *pekwm-themes-hewphoria-20080404 (08 Apr 2008)
 
   08 Apr 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
   +pekwm-themes-hewphoria-20080404.ebuild:
-  Initial commit. Ebuild contributed by Nico Wohlgemut, maintainer by proxy.
+  Initial commit. Ebuild contributed by Nico Wohlgemuth, maintainer by proxy.
 
