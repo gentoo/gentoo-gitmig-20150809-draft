@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.350 2008/04/08 00:12:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.351 2008/04/08 03:07:58 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -839,8 +839,6 @@ gcc-compiler_pkg_preinst() {
 }
 
 gcc-compiler_pkg_postinst() {
-	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
-
 	if has_version 'app-admin/eselect-compiler' ; then
 		do_eselect_compiler
 	else
