@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.4.ebuild,v 1.2 2008/04/03 20:43:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.4.ebuild,v 1.3 2008/04/08 17:08:28 armin76 Exp $
 
 inherit versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://jak-linux.org/projects/${PN}/${MY_PR}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="aac cdparanoia mp3 wma"
 
 DEPEND=""

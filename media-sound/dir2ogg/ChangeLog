@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.27 2008/04/03 20:43:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.28 2008/04/08 17:08:28 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> dir2ogg-0.11.4.ebuild:
+  sparc stable wrt #215875
 
   03 Apr 2008; Markus Meier <maekke@gentoo.org> dir2ogg-0.11.4.ebuild:
   amd64/x86 stable, bug #215875
