@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.16 2008/03/22 19:32:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.17 2008/04/08 13:49:04 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  libnetfilter_conntrack-0.0.89.ebuild:
+  sparc stable wrt #214072
 
   22 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   libnetfilter_conntrack-0.0.89.ebuild:
