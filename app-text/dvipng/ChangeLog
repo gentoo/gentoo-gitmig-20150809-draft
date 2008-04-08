@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.27 2008/04/08 06:42:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.28 2008/04/08 15:04:25 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> dvipng-1.9.ebuild:
+  alpha/ia64/sparc stable wrt #215735
 
   08 Apr 2008; Jeroen Roovers <jer@gentoo.org> dvipng-1.9.ebuild:
   Stable for HPPA (bug #215735).
