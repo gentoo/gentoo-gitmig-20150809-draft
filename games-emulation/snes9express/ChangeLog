@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9express
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.9 2007/12/25 13:06:58 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.10 2008/04/08 00:17:11 mr_bones_ Exp $
+
+  08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  snes9express-1.42.ebuild:
+  dep fix (bug #216556)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing dholm from metadata.xml as per #24623.
