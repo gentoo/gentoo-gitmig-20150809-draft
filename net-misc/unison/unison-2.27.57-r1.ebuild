@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.57-r1.ebuild,v 1.1 2008/04/07 21:35:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.57-r1.ebuild,v 1.2 2008/04/08 05:29:56 mr_bones_ Exp $
 
 EAPI=1
 
@@ -75,7 +75,6 @@ src_install () {
 		dodoc "${DISTDIR}/${P}-manual.pdf" || die
 	fi
 }
-
 
 pkg_postinst() {
 	elog "Unison now uses SLOTs, so you can specify servercmd=/usr/bin/unison-${SLOT}"
