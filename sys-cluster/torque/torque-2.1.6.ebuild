@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.11 2008/01/02 16:07:25 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.12 2008/04/08 14:18:49 jsbronder Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -22,7 +22,7 @@ DEPEND_COMMON="virtual/libc
 	sys-libs/readline
 	tk? ( dev-lang/tk )
 	!virtual/pbs
-	!<x11-misc/qterm-0.4.0-r1"
+	!games-util/qstat"
 
 DEPEND="${DEPEND_COMMON}
 	sys-apps/ed"
