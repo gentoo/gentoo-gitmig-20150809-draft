@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.1-r1.ebuild,v 1.3 2008/04/08 18:55:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.1-r1.ebuild,v 1.4 2008/04/08 19:29:57 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -145,7 +145,8 @@ pkg_preinst() {
 	# /etc/conf.d/rc is no longer used for configuration
 	if [[ -e ${ROOT}/etc/conf.d/rc ]] ; then
 		elog "/etc/conf.d/rc is no longer used for configuration."
-		elog "Please migrate your settings and delete it."
+		elog "Please migrate your settings to /etc/rc.conf as applicable"
+		elog "and delete /etc/conf.d/rc"
 	fi
 
 	# upgrade timezone file
