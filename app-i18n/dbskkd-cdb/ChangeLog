@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.14 2008/04/07 19:38:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.15 2008/04/08 15:19:44 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> dbskkd-cdb-1.71.ebuild:
+  sparc stable wrt #216277
 
   07 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   dbskkd-cdb-1.71.ebuild:

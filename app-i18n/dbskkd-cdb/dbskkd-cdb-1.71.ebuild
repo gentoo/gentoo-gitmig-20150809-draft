@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.71.ebuild,v 1.3 2008/04/07 19:38:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.71.ebuild,v 1.4 2008/04/08 15:19:44 armin76 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ne.jp/asahi/bdx/info/software/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-db/cdb
