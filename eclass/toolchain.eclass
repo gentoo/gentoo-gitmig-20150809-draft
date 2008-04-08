@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.349 2008/04/07 06:31:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.350 2008/04/08 00:12:25 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1317,12 +1317,10 @@ gcc_do_configure() {
 	[[ ${CTARGET} == *-uclibc* ]] && [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]] \
 		&& confgcc="${confgcc} --enable-clocale=uclibc"
 
-	set -- \
-		${confgcc} \
+	tc_version_is_at_least 4.3 && set -- "$@" \
 		--with-bugurl=http://bugs.gentoo.org/ \
-		--with-pkgversion="${BRANDING_GCC_PKGVERSION}" \
-		"$@" \
-		${EXTRA_ECONF}
+		--with-pkgversion="${BRANDING_GCC_PKGVERSION}"
+	set -- ${confgcc} "$@" ${EXTRA_ECONF}
 
 	# Nothing wrong with a good dose of verbosity
 	echo
