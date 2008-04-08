@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.49 2008/02/07 13:22:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.50 2008/04/08 16:13:13 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> maxima-5.14.0.ebuild:
+  sparc stable wrt #215787
 
   07 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/maxima-5.13.0-xdg-utils.patch,
