@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langfrench
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.12 2008/04/08 05:47:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.13 2008/04/08 14:58:49 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  texlive-langfrench-2007.ebuild:
+  alpha/ia64/sparc stable wrt #215735
 
   08 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   texlive-langfrench-2007.ebuild:

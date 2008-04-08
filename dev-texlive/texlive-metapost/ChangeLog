@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-metapost
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.13 2008/04/08 06:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.14 2008/04/08 14:59:37 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  texlive-metapost-2007-r1.ebuild:
+  alpha/ia64/sparc stable wrt #215735
 
   08 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   texlive-metapost-2007-r1.ebuild:
