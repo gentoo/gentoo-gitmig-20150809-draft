@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.1.ebuild,v 1.1 2008/04/07 20:23:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.1.ebuild,v 1.2 2008/04/08 05:29:34 mr_bones_ Exp $
 
 inherit gnome2 autotools
 
@@ -22,4 +22,3 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libgnomeui-2
 	x11-libs/libXfixes"
 DEPEND="${RDEPEND}"
-
