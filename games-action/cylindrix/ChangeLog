@@ -1,6 +1,9 @@
 # ChangeLog for games-action/cylindrix
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.5 2007/04/16 05:01:58 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.6 2008/04/08 00:15:28 mr_bones_ Exp $
+
+  08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> cylindrix-1.0.ebuild:
+  link fix (bug #216632)
 
   16 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org> cylindrix-1.0.ebuild:
   eautoreconf to find install (bug #174715); tidy

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.5 2007/04/16 05:01:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.6 2008/04/08 00:15:28 mr_bones_ Exp $
 
 inherit autotools games
 
@@ -26,6 +26,11 @@ src_unpack() {
 		|| die "sed failed"
 	find -name CVS -exec rm -rf '{}' \; >& /dev/null
 	eautoreconf
+}
+
+src_compile() {
+	egamesconf || die
+	emake LDADD="$(allegro-config --libs)" || die "emake failed"
 }
 
 src_install() {
