@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.20 2008/04/06 19:43:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.21 2008/04/08 13:20:50 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> camlp5-5.08.ebuild:
+  sparc stable wrt #215736
 
   06 Apr 2008; Markus Meier <maekke@gentoo.org> camlp5-5.08.ebuild:
   amd64 stable, bug #215736
