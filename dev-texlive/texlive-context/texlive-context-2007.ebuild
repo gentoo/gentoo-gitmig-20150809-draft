@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2007.ebuild,v 1.13 2008/04/06 19:10:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2007.ebuild,v 1.14 2008/04/08 06:31:03 jer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 dev-texlive/texlive-langgreek
@@ -12,6 +12,6 @@ DESCRIPTION="TeXLive ConTeXt format"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 
 RDEPEND="dev-lang/ruby"

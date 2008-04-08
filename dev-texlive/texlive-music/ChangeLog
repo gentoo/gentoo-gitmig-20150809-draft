@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-music
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.11 2008/04/06 18:56:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.12 2008/04/08 06:17:24 jer Exp $
+
+  08 Apr 2008; Jeroen Roovers <jer@gentoo.org> texlive-music-2007.ebuild:
+  Stable for HPPA (bug #215735).
 
   06 Apr 2008; Markus Rothe <corsair@gentoo.org> texlive-music-2007.ebuild:
   Added ~ppc; bug #195815

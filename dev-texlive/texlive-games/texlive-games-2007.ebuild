@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2007.ebuild,v 1.11 2008/04/06 18:06:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2007.ebuild,v 1.12 2008/04/08 05:28:44 jer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
 "
@@ -11,4 +11,4 @@ DESCRIPTION="TeXLive Games typesetting (chess, etc)"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"

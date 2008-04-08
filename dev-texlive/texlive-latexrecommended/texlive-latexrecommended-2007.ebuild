@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2007.ebuild,v 1.12 2008/04/06 18:52:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2007.ebuild,v 1.13 2008/04/08 06:13:41 jer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
 !dev-tex/extsizes
@@ -14,4 +14,4 @@ DESCRIPTION="TeXLive LaTeX recommended packages"
 
 LICENSE="GPL-2 LPPL-1.3c Artistic Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
