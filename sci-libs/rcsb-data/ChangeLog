@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/rcsb-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.7 2007/03/15 22:13:09 kugelfang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.8 2008/04/08 08:00:25 dberkholz Exp $
+
+  08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  rcsb-data-1.700.ebuild:
+  Keyword ~amd64, fix quoting.
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> rcsb-data-1.700.ebuild:
   QA: Removed illegal use of ${ROOT}. Bug #168043

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cifparse-obj
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.6 2006/09/26 07:59:45 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.7 2008/04/08 08:01:44 dberkholz Exp $
+
+  08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  cifparse-obj-6.302.ebuild:
+  Keyword ~amd64, fix quoting.
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   cifparse-obj-6.302.ebuild:
