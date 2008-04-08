@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.27 2008/04/08 18:06:52 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.28 2008/04/08 19:14:40 keytoaster Exp $
+
+  08 Apr 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  kipi-plugins-0.1.5.ebuild:
+  Adding some USE flags for plugins with optional dependencies.
 
 *kipi-plugins-0.1.5 (08 Apr 2008)
 
