@@ -1,18 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.8_rc1.ebuild,v 1.2 2008/03/17 12:14:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.8.ebuild,v 1.1 2008/04/08 09:07:16 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="ca cs da de es-AR es-ES eu fr ga-IE hu it ja ka ko lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr uk zh-CN"
+LANGS="ca cs da de es-AR es-ES eu fr ga-IE hu it ja ka ko lt mk mn nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr uk zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
 MY_PN="${PN/mozilla-}"
-MY_P="${MY_PN/-bin}-${PV/_rc/rc}"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Mozilla Sunbird Calendar"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV/_rc/rc}/linux-i686/en-US/${MY_P}.en-US.linux-i686.tar.gz"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/linux-i686/en-US/sunbird-${PV}.en-US.linux-i686.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 RESTRICT="strip"
+QA_EXECSTACK="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
+QA_TEXTRELS="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
@@ -83,7 +85,7 @@ linguas() {
 }
 
 src_unpack() {
-	unpack ${MY_P}.en-US.linux-i686.tar.gz
+	unpack ${MY_PN/-bin}-${PV}.en-US.linux-i686.tar.gz
 
 	linguas
 	for X in ${linguas}; do
