@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.22 2008/04/08 06:41:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.23 2008/04/08 15:03:59 armin76 Exp $
+
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> detex-2.7.ebuild:
+  alpha/ia64/sparc stable wrt #215735
 
   08 Apr 2008; Jeroen Roovers <jer@gentoo.org> detex-2.7.ebuild:
   Stable for HPPA (bug #215735).
