@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40_pre3.ebuild,v 1.1 2008/04/08 15:37:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40_pre3.ebuild,v 1.2 2008/04/08 15:39:43 wolf31o2 Exp $
 
 inherit eutils
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-#KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="opengl X"
 
 OPENGL_DEPEND="virtual/opengl
