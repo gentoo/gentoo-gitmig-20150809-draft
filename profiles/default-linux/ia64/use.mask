@@ -11,6 +11,7 @@ mythtv
 nvtv
 pcmcia
 pda
+pkcs11
 sms
 wifi
 
