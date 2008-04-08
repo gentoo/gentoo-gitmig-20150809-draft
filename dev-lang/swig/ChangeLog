@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.108 2008/04/08 11:03:40 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.109 2008/04/08 11:10:24 hkbst Exp $
+
+  08 Apr 2008; Marijn Schouten <hkBst@gentoo.org> -swig-1.3.21.ebuild,
+  -swig-1.3.25.ebuild, -swig-1.3.27.ebuild, -swig-1.3.29.ebuild,
+  -swig-1.3.29-r1.ebuild:
+  remove old cruft
 
 *swig-1.3.35 (08 Apr 2008)
 
