@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.107 2008/03/11 05:10:55 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.108 2008/04/08 11:03:40 hkbst Exp $
+
+*swig-1.3.35 (08 Apr 2008)
+
+  08 Apr 2008; Marijn Schouten <hkBst@gentoo.org> +swig-1.3.35.ebuild:
+  bump, adds octave support
 
   11 Mar 2008; <ricmm@gentoo.org> swig-1.3.21.ebuild, swig-1.3.25.ebuild,
   swig-1.3.31.ebuild:
