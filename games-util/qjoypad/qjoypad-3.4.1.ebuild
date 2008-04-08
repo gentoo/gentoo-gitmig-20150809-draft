@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.1.ebuild,v 1.5 2008/02/11 18:16:25 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.1.ebuild,v 1.6 2008/04/08 01:37:07 mr_bones_ Exp $
 
 inherit qt3 eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 RDEPEND="x11-libs/libXtst
 	$(qt_min_version 3.3)"
 DEPEND="${RDEPEND}
+	x11-proto/inputproto
 	x11-proto/xextproto
 	x11-proto/xproto"
 
