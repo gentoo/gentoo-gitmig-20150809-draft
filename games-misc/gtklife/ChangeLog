@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gtklife
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.12 2007/06/01 18:46:40 welp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.13 2008/04/08 01:41:26 mr_bones_ Exp $
+
+  08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> gtklife-5.1.ebuild:
+  fix deps (bug #216547)
 
   01 Jun 2007; Peter Weller <welp@gentoo.org> gtklife-5.1.ebuild:
   Stable on amd64 wrt bug 177617

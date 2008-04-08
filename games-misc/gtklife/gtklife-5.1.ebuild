@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-5.1.ebuild,v 1.3 2007/06/01 18:46:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-5.1.ebuild,v 1.4 2008/04/08 01:41:26 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2"
+RDEPEND=">=x11-libs/gtk+-2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	egamesconf \
