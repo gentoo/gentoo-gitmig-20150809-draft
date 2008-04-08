@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.5 2008/01/25 14:12:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.6 2008/04/08 04:10:26 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -24,6 +24,12 @@ RDEPEND=">=media-libs/plib-1.8.4
 	x11-libs/libXt"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	egamesconf \
