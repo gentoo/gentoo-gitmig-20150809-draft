@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.1 2008/04/04 14:30:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.2 2008/04/08 08:44:50 phosphan Exp $
 
 inherit eutils
 
@@ -103,6 +103,7 @@ src_unpack() {
 			die "could not add 'brother' to backend list"
 	fi
 	epatch "${FILESDIR}"/udev-rule-5.patch
+	epatch "${FILESDIR}"/fujitsu_DBG_LEVEL.patch
 	cat >> backend/dll.conf.in <<-EOF
 	# Add support for the HP-specific backend.  Needs net-print/hplip installed.
 	hpaio
