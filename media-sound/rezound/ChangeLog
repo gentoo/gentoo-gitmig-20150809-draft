@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.50 2008/01/13 13:52:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.51 2008/04/08 20:46:30 aballier Exp $
+
+  08 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  rezound-0.12.3_beta.ebuild, rezound-0.12.3_beta-r1.ebuild:
+  add missing reswrap dep, bug #216935
 
   13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   rezound-0.12.3_beta.ebuild, rezound-0.12.3_beta-r1.ebuild:

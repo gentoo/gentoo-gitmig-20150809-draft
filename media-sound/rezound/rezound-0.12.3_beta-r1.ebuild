@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.2 2008/01/13 13:52:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.3 2008/04/08 20:46:30 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -41,7 +41,8 @@ RDEPEND="=sci-libs/fftw-2*
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	dev-util/pkgconfig
-	sys-devel/flex"
+	sys-devel/flex
+	dev-util/reswrap"
 
 pkg_setup() {
 	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
