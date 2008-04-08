@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.26 2008/02/25 19:08:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.27 2008/04/08 18:06:52 keytoaster Exp $
+
+*kipi-plugins-0.1.5 (08 Apr 2008)
+
+  08 Apr 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kipi-plugins-0.1.5.ebuild:
+  Version bump, see bug #216878. New (upstream) build system behaviour: Some
+  plugins are disabled if dependencies are not met, see
+  http://bugs.kde.org/show_bug.cgi?id=149666. Thus no more --without-opengl
+  and no more automagic dependency on libgpod.
 
   25 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   kipi-plugins-0.1.4-r1.ebuild:
