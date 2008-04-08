@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.13 2007/03/12 16:48:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.14 2008/04/08 01:38:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -23,6 +23,7 @@ RDEPEND="virtual/opengl
 	=x11-libs/gtk+-2*
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/csmash-${PV}
