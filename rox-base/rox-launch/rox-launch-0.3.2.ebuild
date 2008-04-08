@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/rox-launch-0.3.2.ebuild,v 1.1 2008/04/08 16:07:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/rox-launch-0.3.2.ebuild,v 1.2 2008/04/08 17:02:56 mr_bones_ Exp $
 
 ROX_LIB_VER=2.0.2
 inherit rox-0install
@@ -18,4 +18,3 @@ IUSE=""
 
 APPNAME=${MY_PN}
 S=${WORKDIR}
-
