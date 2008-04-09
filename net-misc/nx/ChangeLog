@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.18 2008/04/03 08:10:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.19 2008/04/09 14:01:45 voyageur Exp $
+
+*nx-3.2.0 (09 Apr 2008)
+
+  09 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org> +nx-3.2.0.ebuild:
+  Bump to 3.2.0 tarballs
 
   03 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.0.0.ebuild,
   -nx-3.0.0-r1.ebuild, -nx-3.1.0.ebuild:
