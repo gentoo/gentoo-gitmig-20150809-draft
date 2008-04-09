@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.35.ebuild,v 1.3 2008/04/08 20:27:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.35.ebuild,v 1.4 2008/04/09 01:54:48 jer Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd" # ~hppa
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd" # ~hppa
 IUSE="chicken clisp doc guile java lua mono mzscheme ocaml octave perl php pike python R ruby tcl tk" #gcj
 RESTRICT="test"
 
