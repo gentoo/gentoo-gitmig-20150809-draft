@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.144 2008/04/09 08:29:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.145 2008/04/09 13:18:59 dang Exp $
+
+  09 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.14.ebuild:
+  Make liferea only choose a single backend. bug #217003
 
   09 Apr 2008; Markus Rothe <corsair@gentoo.org> liferea-1.4.13.ebuild:
   Stable on ppc64; bug #216743

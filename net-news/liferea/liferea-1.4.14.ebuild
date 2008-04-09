@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.14.ebuild,v 1.1 2008/04/07 17:05:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.14.ebuild,v 1.2 2008/04/09 13:18:59 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -22,8 +22,7 @@ RDEPEND="
 	xulrunner? ( =net-libs/xulrunner-1.8* )
 	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
 	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
-	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( gnome-extra/gtkhtml:2 ) ) ) )
-	!amd64? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) )
+	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) ) ) ) )
 	>=x11-libs/gtk+-2.8
 	x11-libs/pango
 	>=gnome-base/gconf-2
@@ -43,32 +42,37 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	# On amd64, gtkhtml isn't supported.  You need one of the gecko use flags
-	if use amd64 && ! use firefox && ! use seamonkey && ! use xulrunner; then
-		elog "gtkhtml is no longer supported on amd64; you will need to select"
-		elog "one of the gecko backends to use liferea"
-		die "You must enable on of the gecko backends on amd64"
-	fi
-
-	# if you don't choose a gecko to use, we will automatically
-	# use gtkhtml2 as the backend except on amd64 (where we failed above)
-	if ! use seamonkey && ! use firefox && ! use xulrunner && ! use amd64 ; then
-		G2CONF="${G2CONF} --enable-gtkhtml2"
-	elif ! use amd64 && use gtkhtml ; then
-		G2CONF="${G2CONF} --enable-gtkhtml2"
-	else
-		G2CONF="${G2CONF} --disable-gtkhtml2"
-	fi
-
-	# we prefer xulrunner over firefox over seamonkey
+	# Backends are now mutually exclusive.
+	# we prefer xulrunner over firefox over seamonkey over gtkhtml
 	if use xulrunner ; then
 		G2CONF="${G2CONF} --enable-xulrunner"
+		G2CONF="${G2CONF} --disable-gecko"
+		G2CONF="${G2CONF} --disable-gtkhtml2"
 	elif use firefox ; then
 		G2CONF="${G2CONF} --enable-gecko=firefox"
+		G2CONF="${G2CONF} --disable-xulrunner"
+		G2CONF="${G2CONF} --disable-gtkhtml2"
 	elif use seamonkey ; then
 		G2CONF="${G2CONF} --enable-gecko=seamonkey"
+		G2CONF="${G2CONF} --disable-xulrunner"
+		G2CONF="${G2CONF} --disable-gtkhtml2"
+	elif use gtkhtml ; then
+		if ! use amd64 ; then
+			G2CONF="${G2CONF} --enable-gtkhtml2"
+			G2CONF="${G2CONF} --disable-gecko"
+			G2CONF="${G2CONF} --disable-xulrunner"
+		else
+			elog ""
+			elog "gtkhtml is no longer supported on amd64; you will need to "
+			elog "select one of the gecko backends to use liferea.  "
+			elog "Preference is: xulrunner, firefox, then seamonkey."
+			die "You must enable on of the gecko backends on amd64"
+		fi
 	else
-		G2CONF="${G2CONF} --disable-gecko"
+		elog ""
+		elog "You must choose one backend for liferea to work.  Preference is:"
+		elog "xulrunner, firefox, seamonkey, then gtkhtml."
+		die "You must enable on of the backends"
 	fi
 
 	G2CONF="${G2CONF} \
