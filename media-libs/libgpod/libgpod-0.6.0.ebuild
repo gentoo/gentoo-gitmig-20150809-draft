@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.5 2008/01/28 01:11:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.6 2008/04/09 12:39:11 tester Exp $
 
 inherit eutils
 
@@ -18,13 +18,13 @@ RDEPEND=">=dev-libs/glib-2.4
 	sys-apps/sg3_utils
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.3
-		>=dev-lang/swig-1.3.24
 		>=x11-libs/gtk+-2
 		media-libs/mutagen
 		gtk? ( >=dev-python/pygobject-2 ) )
 	test? ( media-libs/taglib )"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
+	python? ( >=dev-lang/swig-1.3.24 )
 	dev-util/pkgconfig"
 
 src_compile() {

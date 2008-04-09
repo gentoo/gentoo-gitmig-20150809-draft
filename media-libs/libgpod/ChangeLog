@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.47 2008/01/28 01:11:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.48 2008/04/09 12:39:11 tester Exp $
+
+  09 Apr 2008; Olivier Crête <tester@gentoo.org>
+  -files/libgpod-0.4.0-test-nogdk.patch, -libgpod-0.4.0.ebuild,
+  -libgpod-0.4.2.ebuild, libgpod-0.6.0.ebuild:
+  swig is a compile-time dep only, cleanup old versions
 
   28 Jan 2008; <tester@gentoo.org> libgpod-0.4.0.ebuild,
   libgpod-0.4.2.ebuild, libgpod-0.6.0.ebuild:
