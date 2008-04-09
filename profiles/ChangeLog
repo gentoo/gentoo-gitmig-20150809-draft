@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1305 2008/04/09 14:19:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1306 2008/04/09 14:46:46 wolf31o2 Exp $
+
+  09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  default/linux/amd64/2008.0/no-multilib/parent:
+  Fixing parent for no-multilib for bug #217026.
 
   09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   arch/powerpc/ppc64/make.defaults:
