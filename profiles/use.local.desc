@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3479 2008/04/09 01:35:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3480 2008/04/09 15:37:36 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1832,7 +1832,6 @@ sci-libs/gsl:cblas - Builds gsl with external cblas by default
 sci-libs/hdf5:f90 - Flag to override fortran for externel compilers
 sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/hdf5:tools - install support and test tools
-sci-libs/itpp:cblas - Adds support for the cblas numerical library
 sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
 sci-libs/libsvm:tools - install support tools
