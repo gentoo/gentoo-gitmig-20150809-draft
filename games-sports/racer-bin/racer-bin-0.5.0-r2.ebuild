@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.9 2008/02/08 08:07:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r2.ebuild,v 1.1 2008/04/09 17:09:43 nyhm Exp $
 
 inherit eutils games
 
@@ -40,7 +40,7 @@ src_install() {
 
 	for f in bin/* ; do
 		games_make_wrapper ${f#*/} ${f} "${dir}" "${dir}"/bin
-		fperms 770 "${dir}"/${f} || die "fperms ${f} failed"
+		fperms 750 "${dir}"/${f} || die "fperms ${f} failed"
 	done
 
 	local libfmod=$(find /usr/lib -maxdepth 1 -name 'libfmod-*so' -type f)
