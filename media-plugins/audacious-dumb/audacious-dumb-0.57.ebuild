@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.57.ebuild,v 1.2 2008/04/07 08:25:03 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.57.ebuild,v 1.3 2008/04/09 20:58:57 maekke Exp $
 
 DESCRIPTION="Audacious Plug-in for accurate, high-quality IT/XM/S3M/MOD playback"
 HOMEPAGE="http://www.netswarm.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.netswarm.net/misc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # Plugin will only work with 1.4 or later due to API changes
