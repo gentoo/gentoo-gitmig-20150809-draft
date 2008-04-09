@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.117 2008/02/22 03:44:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.118 2008/04/09 17:08:25 armin76 Exp $
+
+  09 Apr 2008; Raúl Porcel <armin76@gentoo.org> strace-4.5.16-r1.ebuild:
+  alpha/ia64/x86 stable
 
   22 Feb 2008; Mike Frysinger <vapier@gentoo.org>
   +files/strace-4.5.16-sparc-times.patch, strace-4.5.16-r1.ebuild:
