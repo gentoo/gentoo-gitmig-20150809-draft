@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8481 2008/04/08 18:57:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8482 2008/04/09 07:29:16 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1034,10 +1034,6 @@ dev-php4/pecl-http
 <net-nds/phpldapadmin-1.0
 # incompatible with php-5 as well, bug 194894
 <=www-apps/knowledgetree-3.4.3
-
-# Eldad Zack <eldadz@gentoo.org> (16 Oct 2007)
-# ardour-2.1 using syslibs, see bug #194437
-=media-sound/ardour-2.1
 
 # Stefan Schweizer <genstef@gentoo.org> (14 Oct 2007)
 # Development release
