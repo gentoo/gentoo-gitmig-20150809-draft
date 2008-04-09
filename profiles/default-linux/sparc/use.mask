@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.127 2008/04/08 09:56:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.128 2008/04/09 17:21:28 armin76 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -51,6 +51,7 @@ zoran
 
 # No hardware to test
 ivtv
+laptop
 njb
 pkcs11
 
