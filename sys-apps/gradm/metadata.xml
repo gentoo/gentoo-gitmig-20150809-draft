@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>hardened</herd>
-<maintainer>
- <email>solar@gentoo.org</email>
-</maintainer>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>bugs-gentoo-org-02@bumpin.org</email>
+		<name>Gordon Malm</name>
+	</maintainer>
+	<maintainer>
+		<email>kerframil@gmail.com</email>
+		<name>Kerin Millar</name>
+	</maintainer>
 </pkgmetadata>
