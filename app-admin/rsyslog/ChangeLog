@@ -1,6 +1,22 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.1 2008/04/07 21:30:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.2 2008/04/09 17:32:54 dev-zero Exp $
+
+*rsyslog-3.17.0 (09 Apr 2008)
+*rsyslog-3.14.1 (09 Apr 2008)
+
+  09 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3.15/rsyslog.conf, -files/3.15/rsyslog.init,
+  -files/3.15/rsyslog.logrotate, -files/3.15/rsyslog-gentoo.conf,
+  +files/3-devel/rsyslog.conf, +files/3-devel/rsyslog.init,
+  +files/3-stable/rsyslog.conf, +files/3.14.1-implicit_declaration.patch,
+  +files/3-devel/rsyslog.logrotate, +files/3-devel/rsyslog-gentoo.conf,
+  +files/3-stable/rsyslog.init, +files/3-stable/rsyslog.logrotate,
+  +files/3-stable/rsyslog-gentoo.conf, +rsyslog-3.14.1.ebuild,
+  -rsyslog-3.15.0.ebuild, +rsyslog-3.17.0.ebuild:
+  Version bump. Added ebuild for stable branch (3.14.x). Reorganized
+  init.d/conf.d/logrotate files to have one set for the stable and one for
+  the devel branch. Is supposed to fix bug #216968.
 
 *rsyslog-3.15.0 (07 Apr 2008)
 

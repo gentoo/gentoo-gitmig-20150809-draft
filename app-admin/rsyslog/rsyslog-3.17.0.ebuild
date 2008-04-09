@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.15.0.ebuild,v 1.1 2008/04/07 21:30:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.17.0.ebuild,v 1.1 2008/04/09 17:32:54 dev-zero Exp $
 
-inherit versionator
+inherit eutils versionator
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
@@ -16,17 +16,24 @@ DEPEND="kerberos? ( virtual/krb5 )
 	dbi? ( dev-db/libdbi )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/libpq )
-	relp? ( dev-libs/librelp )
+	relp? ( >=dev-libs/librelp-0.1.1 )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
-MAJOR_PV="$(get_version_component_range 1-2)"
+BRANCH="3-devel"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/3.14.1-implicit_declaration.patch"
+}
 
 src_compile() {
 	# Maintainer notes:
 	# * rsyslog-3 doesn't support single threading anymore
-	# * rc3195 needs a library
+	# * rfc3195 needs a library
 	econf \
 		--enable-largefile \
 		--enable-regexp \
@@ -44,6 +51,7 @@ src_compile() {
 		$(use_enable dbi libdbi) \
 		$(use_enable snmp) \
 		--enable-rsyslogd \
+		--enable-mail \
 		$(use_enable relp) \
 		--disable-rfc3195 \
 		--enable-imfile \
@@ -67,11 +75,11 @@ src_install() {
 	dohtml doc/*
 
 	insinto /etc
-	newins "${FILESDIR}/${MAJOR_PV}/rsyslog-gentoo.conf" rsyslog.conf
+	newins "${FILESDIR}/${BRANCH}/rsyslog-gentoo.conf" rsyslog.conf
 
 	insinto /etc/logrotate.d/
-	newins "${FILESDIR}/${MAJOR_PV}/rsyslog.logrotate" rsyslog
+	newins "${FILESDIR}/${BRANCH}/rsyslog.logrotate" rsyslog
 
-	newconfd "${FILESDIR}/${MAJOR_PV}/rsyslog.conf" rsyslog
-	newinitd "${FILESDIR}/${MAJOR_PV}/rsyslog.init" rsyslog
+	newconfd "${FILESDIR}/${BRANCH}/rsyslog.conf" rsyslog
+	newinitd "${FILESDIR}/${BRANCH}/rsyslog.init" rsyslog
 }

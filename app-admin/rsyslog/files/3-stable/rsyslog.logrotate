@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/3.15/rsyslog.logrotate,v 1.1 2008/04/07 21:30:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/3-stable/rsyslog.logrotate,v 1.1 2008/04/09 17:32:56 dev-zero Exp $
 #
 # Syslog-ng logrotate snippet for Gentoo Linux
 #

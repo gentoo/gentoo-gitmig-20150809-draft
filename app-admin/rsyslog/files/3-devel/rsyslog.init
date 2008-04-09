@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/3.15/rsyslog.init,v 1.1 2008/04/07 21:30:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/3-devel/rsyslog.init,v 1.1 2008/04/09 17:32:55 dev-zero Exp $
 
 opts="reload"
 
