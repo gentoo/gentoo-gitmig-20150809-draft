@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5.ebuild,v 1.1 2007/10/18 13:52:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5.ebuild,v 1.2 2008/04/09 18:44:54 ingmar Exp $
 
+EAPI="1"
 inherit eutils qt4
 
 DESCRIPTION="The Qt eXTension library provides cross-platform utility classes to add functionality ontop of the Qt toolkit"
@@ -14,7 +15,11 @@ KEYWORDS="~x86 ~amd64"
 
 IUSE="ssl fastcgi debug"
 
-DEPEND=">=x11-libs/qt-4.2
+DEPEND="
+	|| ( ( x11-libs/qt-gui:4
+		x11-libs/qt-script:4
+		x11-libs/qt-sql:4 )
+	>=x11-libs/qt-4.2:4 )
 	ssl? ( >=dev-libs/openssl-0.9.8 )
 	fastcgi? ( >=dev-libs/fcgi-2.4 )"
 RDEPEND="${DEPEND}"
