@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.4.ebuild,v 1.2 2007/10/30 13:52:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.4.ebuild,v 1.3 2008/04/09 18:06:48 ingmar Exp $
 
+EAPI="1"
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Free 3D desk globe and world atlas"
@@ -13,7 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-4.2.3"
+RDEPEND="
+	|| ( ( x11-libs/qt-gui:4
+		x11-libs/qt-svg:4 )
+			>=x11-libs/qt-4.2.3:4 )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.5"
 
@@ -36,5 +40,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }
