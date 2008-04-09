@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32g.ebuild,v 1.4 2008/04/06 16:17:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32g.ebuild,v 1.5 2008/04/09 13:49:44 armin76 Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://www2.giganet.net/~yoshi/rbogl-${PV}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc sparc x86"
 
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
