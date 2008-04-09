@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.123 2008/03/30 15:55:47 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.124 2008/04/09 18:34:27 peitolm Exp $
+
+  09 Apr 2008; Colin Morey <peitolm@gentoo.org> exim-4.69-r1.ebuild:
+  Clearing out redundant IUSE, moving system_filter.exim to distfiles rather
+  than /files (bug #120459)
 
   30 Mar 2008; Colin Morey <peitolm@gentoo.org> -exim-4.68.ebuild:
   Retrying removal of insecure version

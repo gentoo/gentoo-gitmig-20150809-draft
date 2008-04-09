@@ -1,13 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.1 2008/03/20 19:13:06 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.2 2008/04/09 18:34:27 peitolm Exp $
 
 inherit eutils
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx mbox X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir"
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
-SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2 mirror://gentoo/exiscan.conf"
+SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
+mirror://gentoo/exiscan.conf
+mirror://gentoo/system_filter.exim.gz"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -280,11 +282,11 @@ src_install () {
 	if use exiscan-acl; then
 		newins "${S}"/src/configure.default exim.conf.exiscan-acl
 	fi
-	doins "${FILESDIR}"/system_filter.exim
-	doins "${FILESDIR}"/auth_conf.sub
+	doins "$WORKDIR"/system_filter.exim
+	doins "$DISTDIR"/auth_conf.sub
 	if use exiscan; then
 		newins "${S}"/src/configure.default exim.conf.exiscan
-		doins "${FILESDIR}"/exiscan.conf
+		doins "${DISTDIR}"/exiscan.conf
 	fi
 
 	if use pam
