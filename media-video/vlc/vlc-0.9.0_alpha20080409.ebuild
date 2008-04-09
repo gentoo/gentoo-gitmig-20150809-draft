@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080409.ebuild,v 1.1 2008/04/09 15:57:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080409.ebuild,v 1.2 2008/04/09 18:09:54 aballier Exp $
 
 EAPI="1"
 
@@ -46,7 +46,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="3dfx a52 aac aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc1394
+IUSE="3dfx a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio daap dbus dc1394
 	debug directfb dts dvb dvd esd fbcon fluidsynth ffmpeg flac ggi gnome gnutls hal httpd
 	id3tag jack libcaca libnotify lirc live lua matroska mmx modplug mp3 mpeg
 	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png pulseaudio pvr qt4
@@ -218,6 +218,7 @@ src_compile () {
 		$(use_enable altivec) \
 		$(use_enable arts) \
 		--disable-asademux \
+		$(use_enable atmo) \
 		$(use_enable avahi bonjour) \
 		$(use_enable bidi fribidi) \
 		$(use_enable cdda) $(use_enable cdda cddax)\

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.326 2008/04/09 15:57:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.327 2008/04/09 18:09:54 aballier Exp $
+
+  09 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20080409.ebuild:
+  make atmo optional
 
 *vlc-0.9.0_alpha20080409 (09 Apr 2008)
 
