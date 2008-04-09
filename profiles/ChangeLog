@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1304 2008/04/08 15:54:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1305 2008/04/09 14:19:51 wolf31o2 Exp $
+
+  09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  arch/powerpc/ppc64/make.defaults:
+  Uncomment DEFAULT_ABI since it is required by baselayout to properly setup
+  the lib->lib674 link when using a non-multilib profile.
 
   08 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   targets/developer/profile.bashrc:
