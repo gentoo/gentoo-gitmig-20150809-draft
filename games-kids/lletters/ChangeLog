@@ -1,6 +1,13 @@
 # ChangeLog for games-kids/lletters
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.16 2006/10/04 18:35:18 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.17 2008/04/09 18:03:49 drac Exp $
+
+*lletters-0.1.95-r2 (09 Apr 2008)
+
+  09 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/lletters-0.1.95-build-2.patch, metadata.xml,
+  +lletters-0.1.95-r2.ebuild:
+  New revision for GTK+-2, desktop entry, and icon.
 
   04 Oct 2006; Tristan Heaven <nyhm@gentoo.org> lletters-0.1.95-r1.ebuild:
   Fix nls support
