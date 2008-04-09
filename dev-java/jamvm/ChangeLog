@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.30 2008/03/20 13:41:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.31 2008/04/09 21:29:25 maekke Exp $
+
+  09 Apr 2008; Markus Meier <maekke@gentoo.org> jamvm-1.5.0-r2.ebuild:
+  amd64/x86 stable, bug #216689
 
   20 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> jamvm-1.5.0-r2.ebuild:
   Always needs libffi support on amd64. Fixes bug #213882.
