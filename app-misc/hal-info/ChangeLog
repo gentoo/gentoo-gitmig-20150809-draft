@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.28 2008/04/03 20:32:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.29 2008/04/09 17:17:57 armin76 Exp $
+
+  09 Apr 2008; Raúl Porcel <armin76@gentoo.org> hal-info-20071011.ebuild,
+  hal-info-20071030.ebuild:
+  Add ~ia64/~sparc wrt #200050
 
   03 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   hal-info-20071011.ebuild:
