@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.3 2008/04/09 01:08:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.4 2008/04/09 09:44:27 ingmar Exp $
 
+EAPI=1
 inherit kde eutils
 
 MY_P=${P/_/-}
@@ -16,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="calendar opengl gphoto2 ipod tiff"
 
-DEPEND="calendar? ( kde-base/libkcal )
+DEPEND="calendar? ( || ( kde-base/libkcal:3.5 kde-base/kdepim:3.5 ) )
 		>=media-libs/libkipi-0.1.5
 		>=media-libs/libkexiv2-0.1.5
 		>=media-libs/libkdcraw-0.1.2
