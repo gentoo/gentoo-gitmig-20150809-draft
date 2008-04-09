@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.10 2008/04/09 00:44:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.1 2008/04/09 00:44:56 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
-MY_PV=${PV}-3
+MY_PV=${PV}-7
 DESCRIPTION="Hardware setup program from Knoppix - used only on LiveCD"
 HOMEPAGE="http://www.knopper.net/"
 SRC_URI="http://debian-knoppix.alioth.debian.org/sources/${PN}_${MY_PV}.tar.gz"
@@ -12,7 +12,7 @@ SRC_URI="http://debian-knoppix.alioth.debian.org/sources/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="zlib"
 
 COMMON_DEPEND="zlib? ( sys-libs/zlib )
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	epatch \
 		"${FILESDIR}"/${MY_PV}-dyn_blacklist.patch \
-		"${FILESDIR}"/${MY_PV}-fastprobe.patch \
+		"${FILESDIR}"/${PV}-3-fastprobe.patch \
 		"${FILESDIR}"/${MY_PV}-gentoo.patch
 }
 
