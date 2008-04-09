@@ -1,6 +1,11 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.1 2008/04/07 21:50:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.2 2008/04/09 16:06:47 aballier Exp $
+
+  09 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  x264-encoder-0.0.20080406.ebuild:
+  depend on yasm only on x86-fbsd as nasm segfaults and yasm is prefered by
+  upstream
 
 *x264-encoder-0.0.20080406 (07 Apr 2008)
 *x264-encoder-0.0.20080301 (07 Apr 2008)

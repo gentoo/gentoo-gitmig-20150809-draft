@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20080406.ebuild,v 1.1 2008/04/07 21:50:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20080406.ebuild,v 1.2 2008/04/09 16:06:48 aballier Exp $
 
 EAPI="1"
 inherit multilib eutils toolchain-funcs versionator
@@ -22,7 +22,7 @@ RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
 DEPEND="${RDEPEND}
 	amd64? ( >=dev-lang/yasm-0.6.0 )
 	x86? ( || ( >=dev-lang/yasm-0.6.2 dev-lang/nasm ) )
-	x86-fbsd? ( dev-lang/nasm )
+	x86-fbsd? ( >=dev-lang/yasm-0.6.2 )
 	dev-util/pkgconfig"
 
 # Block older than 0.6.2 versions of yasm
