@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.4.ebuild,v 1.1 2007/12/19 09:51:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.4.ebuild,v 1.2 2008/04/09 18:15:14 ingmar Exp $
 
 ARTS_REQUIRED="never"
+EAPI="1"
 inherit kde
 
 DESCRIPTION="Allows *some* Gtk, Qt3, and Qt4 applications to use KDE's file dialogs when run under KDE"
@@ -17,7 +18,7 @@ IUSE="qt4"
 
 DEPEND=">=x11-libs/gtk+-2.6
 	dev-util/cmake
-	qt4? ( =x11-libs/qt-4* )"
+	qt4? ( || ( x11-libs/qt-gui:4 x11-libs/qt:4 ) )"
 need-kde 3.4
 
 src_compile() {
