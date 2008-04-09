@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.138 2008/04/04 09:40:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.139 2008/04/09 14:34:35 wolf31o2 Exp $
+
+  09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  Sync package.mask files for 2006.* profiles.
 
   04 Apr 2008; Torsten Veller <tove@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,

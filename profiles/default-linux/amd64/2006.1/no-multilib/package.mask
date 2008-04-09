@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.58 2008/04/04 09:40:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.59 2008/04/09 14:34:36 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
