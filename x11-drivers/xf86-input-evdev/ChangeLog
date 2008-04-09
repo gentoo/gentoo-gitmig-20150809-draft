@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.75 2008/04/03 20:41:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.76 2008/04/09 17:19:05 armin76 Exp $
+
+  09 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-evdev-1.2.0.ebuild:
+  Add ~ia64/~sparc wrt #200050
 
   03 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   xf86-input-evdev-1.2.0.ebuild:
