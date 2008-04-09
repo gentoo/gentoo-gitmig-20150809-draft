@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mpi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.4 2007/05/18 14:08:04 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.5 2008/04/09 00:46:27 jer Exp $
+
+  09 Apr 2008; Jeroen Roovers <jer@gentoo.org> mpi-1.0.ebuild:
+  Stable for HPPA (bug #216855).
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> mpi-1.0.ebuild:
   ia64 stable
