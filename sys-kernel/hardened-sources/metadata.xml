@@ -16,7 +16,7 @@
 		<name>Gordon Malm</name>
 	</maintainer>
 	<longdescription>
-		hardened-sources is based upon genpatches-base, and adds the grsecurity
+		hardened-sources is based upon genpatches, and adds the grsecurity
 		patch from http://www.grsecurity.net, which also includes PaX.
 	</longdescription>
 </pkgmetadata>
