@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.2 2008/04/02 23:31:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.3 2008/04/09 01:28:58 jer Exp $
+
+  09 Apr 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask sys-cluster/mpich2 for sci-libs/hdf5.
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   USE mask dvb and mythtv on gst-plugins-meta - dependencies not keyworded
