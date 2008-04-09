@@ -1,19 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_rc3.ebuild,v 1.1 2008/03/24 17:55:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13.ebuild,v 1.1 2008/04/09 16:23:10 armin76 Exp $
 
 inherit eutils autotools
 
-MY_P=${PN/rb_/}-${PV/_rc/rc}
-S="${WORKDIR}/${MY_P/rc*}"
+MY_P=${P/rb_/}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://www.rasterbar.com/products/libtorrent/"
-SRC_URI="http://libtorrent.org/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/libtorrent/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+
 IUSE="debug"
 
 DEPEND="dev-libs/boost
