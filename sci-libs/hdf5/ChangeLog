@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.22 2008/02/04 07:58:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.23 2008/04/09 01:34:59 jer Exp $
+
+  09 Apr 2008; Jeroen Roovers <jer@gentoo.org> hdf5-1.6.6.ebuild:
+  Marked ~hppa (bug #216855).
 
   04 Feb 2008; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.6.ebuild:
   fixed QA issues and added additional tools via use flag
