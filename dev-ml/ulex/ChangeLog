@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ulex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.13 2008/01/03 18:38:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.14 2008/04/09 07:34:42 aballier Exp $
+
+  09 Apr 2008; Alexis Ballier <aballier@gentoo.org> -ulex-0.4.ebuild,
+  -ulex-0.5.ebuild:
+  remove old
 
   03 Jan 2008; Alexis Ballier <aballier@gentoo.org> ulex-1.0.ebuild:
   Allow to disable ocamlopt via an useflag
