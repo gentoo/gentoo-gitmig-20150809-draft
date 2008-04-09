@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8485 2008/04/09 14:13:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8486 2008/04/09 18:35:52 humpback Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -184,10 +184,6 @@ dev-scheme/mit-scheme
 app-backup/mondo-rescue
 sys-apps/mindi
 sys-apps/mindi-busybox
-
-# Markus Ullmann <jokey@gentoo.org> (12 Mar 2008)
-# mask test version
-=net-im/openfire-3.5.0_rc*
 
 # Christian Hartmann <ian@gentoo.org> (12 Mar 2008)
 # Pending removal
