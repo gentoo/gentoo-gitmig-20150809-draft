@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3480 2008/04/09 15:37:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3481 2008/04/09 16:47:43 wltjr Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -742,6 +742,7 @@ gnome-base/gvfs:fuse - Enable fuse mount points in ~/.gvfs for legacy applicatio
 gnome-base/gvfs:keyring - Enable gnome-keyring support for storing passwords
 gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-base/nautilus:tracker - Enable support for tracker searching
+gnome-extra/avant-window-navigator:xfce - Enable support for libs XFCE provides
 gnome-extra/evolution-data-server:keyring - Enable gnome-keyring support for storing passwords
 gnome-extra/gnome-do-plugins:amarok - Build the plugin for Amarok
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
