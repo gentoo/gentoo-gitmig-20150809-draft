@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.5.ebuild,v 1.5 2007/10/12 09:30:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.5.ebuild,v 1.6 2008/04/09 13:29:27 markusle Exp $
 
 inherit eutils
 
@@ -22,7 +22,8 @@ DEPEND=">=dev-libs/libxml2-2.6.20
 	>=gnome-base/libgnomeprint-2.10
 	>=gnome-base/libgnomeprintui-2.10
 	>=x11-libs/cairo-1.0.0
-	=x11-libs/gtksourceview-1*"
+	=x11-libs/gtksourceview-1*
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf || die "econf failed"
@@ -31,7 +32,7 @@ src_compile() {
 
 src_install() {
 	einstall
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
 
 pkg_postinst() {
