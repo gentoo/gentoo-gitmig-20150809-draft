@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.14 2008/02/07 10:58:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.15 2008/04/09 00:54:10 jer Exp $
 
 inherit autotools eutils
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 hppa ppc ppc64 x86"
 IUSE="doc crypt"
 
 RDEPEND="${DEPEND}
@@ -39,18 +39,18 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	grep -FrlZ '$(P) ' . | xargs -0 sed -i -e 's/\$(P)//'
 
 	# Fix broken romio
-	epatch ${FILESDIR}/${PV}-fix-romio-sandbox-breakage.patch
-	pushd ${S}/romio
+	epatch "${FILESDIR}"/${PV}-fix-romio-sandbox-breakage.patch
+	pushd "${S}"/romio
 	rm configure
 	eautoreconf
 	popd
 
-	epatch ${FILESDIR}/${PV}-allow-fhs-afs.patch
-	pushd ${S}/mpid/server
+	epatch "${FILESDIR}"/${PV}-allow-fhs-afs.patch
+	pushd "${S}"/mpid/server
 	rm configure
 	eautoreconf
 	popd
@@ -85,34 +85,34 @@ src_install() {
 	# to skip installation of man pages, uncomment following line
 	# export MPIINSTALL_OPTS=-noman
 
-	./bin/mpiinstall -echo -prefix=${D}/usr || die
+	./bin/mpiinstall -echo -prefix="${D}"/usr || die
 
 	if use doc; then
 		dodir /usr/share/doc/${PF}
-		mv ${D}/usr/doc/* ${D}/usr/share/doc/${PF}
+		mv "${D}"/usr/doc/* "${D}"/usr/share/doc/${PF}
 	fi
-	rm -rf ${D}/usr/doc/
+	rm -rf "${D}"/usr/doc/
 
 	dodir /etc/mpich
-	mv ${D}/usr/etc/* ${D}/etc/mpich/
-	rmdir ${D}/usr/etc/
+	mv "${D}"/usr/etc/* "${D}"/etc/mpich/
+	rmdir "${D}"/usr/etc/
 
 	dodir /usr/share/${PN}
-	mv ${D}/usr/examples ${D}/usr/share/${PN}/examples1
-	mv ${D}/usr/share/examples ${D}/usr/share/${PN}/examples2
+	mv "${D}"/usr/examples "${D}"/usr/share/${PN}/examples1
+	mv "${D}"/usr/share/examples "${D}"/usr/share/${PN}/examples2
 
 	# rm -rf ${D}/usr/local
-	rm -f ${D}/usr/man/mandesc
+	rm -f "${D}"/usr/man/mandesc
 
-	mv ${D}/usr/share/{machines*,Makefile.sample} ${D}/usr/share/${PN}
+	mv "${D}"/usr/share/{machines*,Makefile.sample} "${D}"/usr/share/${PN}
 
 	dodoc COPYRIGHT README
 	use doc && \
-		mv ${D}/usr/www ${D}/usr/share/doc/${PF}/html || \
-			rm -rf ${D}/usr/www
+		mv "${D}"/usr/www "${D}"/usr/share/doc/${PF}/html || \
+			rm -rf "${D}"/usr/www
 
 	# Dont let users deinstall without portage
-	rm ${D}/usr/sbin/mpiuninstall
+	rm "${D}"/usr/sbin/mpiuninstall
 
 	# We dont have a real DESTDIR, so we have to fix all the files
 	dosed /usr/bin/mpirun /usr/bin/mpiman /usr/sbin/tstmachines
@@ -135,13 +135,13 @@ src_install() {
 	dosed /usr/share/mpich/upshot/bin/upshot
 
 	# Fix datadir; mpich's build system screws it up even though we pass it
-	grep -rl 'datadir=.*' ${D} \
+	grep -rl 'datadir=.*' "${D}" \
 		| xargs sed -i -e "s:datadir=.*:datadir=/usr/share/mpich:g"
 
 	# those are dangling symlinks
-	rm -f ${D}/usr/share/mpich/examples2/mpirun
+	rm -f "${D}"/usr/share/mpich/examples2/mpirun
 
-	mv ${D}/usr/man ${D}/usr/share/man
+	mv "${D}"/usr/man "${D}"/usr/share/man
 
 	#FIXME: Here, we should either clean the empty directories
 	# or use keepdir to make sure they stick around.
