@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qdevelop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.4 2008/01/31 14:54:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.5 2008/04/09 18:26:58 ingmar Exp $
+
+  09 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> qdevelop-0.25-r1.ebuild:
+  Make dependencies compatible with split Qt:4.
 
   31 Jan 2008; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Keyword testing for amd64

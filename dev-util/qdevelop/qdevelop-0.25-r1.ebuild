@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.3 2008/01/31 14:54:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.4 2008/04/09 18:26:58 ingmar Exp $
 
 EAPI="1"
 inherit eutils qt4 toolchain-funcs
@@ -14,7 +14,10 @@ KEYWORDS="~amd64 x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-4.2:4"
+RDEPEND="
+	|| ( ( x11-libs/qt-gui:4
+		x11-libs/qt-sql:4 )
+	>=x11-libs/qt-4.2:4 )"
 DEPEND="app-arch/unzip
 		${RDEPEND}"
 
