@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r1.ebuild,v 1.1 2008/04/08 20:45:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r2.ebuild,v 1.1 2008/04/09 02:08:44 dirtyepic Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -59,5 +59,5 @@ src_install() {
 	newinitd "${FILESDIR}"/xdm.initd-1 xdm
 	newconfd "${FILESDIR}"/xdm.confd-1 xdm
 	newpamd "${FILESDIR}"/xserver.pamd xserver
-	newenvd "${FILESIDR}"/xsession.env.d 90xsession
+	newenvd "${FILESDIR}"/xsession.env.d 90xsession
 }
