@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.7_p2.ebuild,v 1.4 2008/03/22 10:10:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.7_p2.ebuild,v 1.5 2008/04/09 17:27:25 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -40,5 +40,5 @@ src_install() {
 pkg_postinst() {
 	ewarn "The BestCrypt drivers are not free - Please purchace a license from "
 	ewarn "http://www.jetico.com/"
-	ewarn "full details /usr/share/doc/${PF}/wu_licen.htm"
+	ewarn "full details /usr/share/doc/${PF}/html/bcwipe-help/wu_licen.htm"
 }
