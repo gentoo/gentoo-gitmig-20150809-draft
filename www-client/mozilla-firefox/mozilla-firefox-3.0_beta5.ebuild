@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5.ebuild,v 1.1 2008/04/08 20:16:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5.ebuild,v 1.2 2008/04/09 01:08:54 mr_bones_ Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -52,7 +52,6 @@ RDEPEND="java? ( virtual/jre )
 	>=app-text/hunspell-1.1.9
 	>=dev-db/sqlite-3.5
 	xulrunner? ( >=net-libs/xulrunner-1.9${MY_PV} )"
-
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -297,4 +296,3 @@ pkg_postrm() {
 
 	update_mozilla_launcher_symlinks
 }
-
