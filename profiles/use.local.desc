@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3481 2008/04/09 16:47:43 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3482 2008/04/09 18:01:16 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1290,6 +1290,7 @@ media-video/vdr:validinput - Signal if it is possible to go left/right in lists 
 media-video/vdr:volctrl - allows volume control using left/right keys
 media-video/vdr:wareagleicon - Replace original icon set in menu
 media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg
+media-video/vlc:atmo - Enables support for AtmoLight (homebrew Ambient Lighting Technology)
 media-video/vlc:cdda - Enables libcdda cd audio playback support.
 media-video/vlc:cdio - Enables CD input and control library support.
 media-video/vlc:corba - Enables corba interface support.
