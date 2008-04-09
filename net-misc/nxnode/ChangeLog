@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.25 2008/04/03 08:16:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.26 2008/04/09 09:51:48 voyageur Exp $
+
+*nxnode-3.2.0 (09 Apr 2008)
+
+  09 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org> +nxnode-3.2.0.ebuild:
+  Version bump, new 3.2.0 series
 
   03 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
   -nxnode-3.0.0-r3.ebuild:

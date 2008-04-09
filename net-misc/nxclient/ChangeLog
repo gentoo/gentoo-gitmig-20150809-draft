@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.64 2008/03/19 11:09:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.65 2008/04/09 09:50:19 voyageur Exp $
+
+*nxclient-3.2.0 (09 Apr 2008)
+
+  09 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxclient-3.2.0.ebuild:
+  Version bump, new 3.2.0 series
 
   19 Mar 2008; Peter Volkov <pva@gentoo.org> nxclient-3.1.0-r1.ebuild:
   amd64 stable, security bug #210317.
