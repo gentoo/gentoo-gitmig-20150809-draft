@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pxp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.12 2007/02/09 02:51:38 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.13 2008/04/09 07:59:20 aballier Exp $
+
+*pxp-1.2.0_beta2 (09 Apr 2008)
+
+  09 Apr 2008; Alexis Ballier <aballier@gentoo.org> +pxp-1.2.0_beta2.ebuild:
+  version bump, allow building without ocamlopt, readd ~amd64
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
