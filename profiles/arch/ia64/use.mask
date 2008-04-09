@@ -19,6 +19,7 @@ wifi
 apm
 battery
 cpufreq
+laptop
 lm_sensors
 
 # Stuff that doesn't work on ia64, or not tested

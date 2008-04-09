@@ -29,6 +29,7 @@ emboss
 hardened
 jack
 lapack
+laptop
 networkmanager
 octave
 timidity

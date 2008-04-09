@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.45 2008/04/08 17:16:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.46 2008/04/09 17:20:54 armin76 Exp $
+
+  09 Apr 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask laptop, not available on ia64
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask octave as it doesn't work, bug #216855
