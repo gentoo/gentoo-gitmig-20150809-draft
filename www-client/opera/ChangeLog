@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.214 2008/04/07 19:24:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.215 2008/04/09 16:53:03 jer Exp $
+
+*opera-9.50_beta2_p1904 (09 Apr 2008)
+
+  09 Apr 2008; Jeroen Roovers <jer@gentoo.org>
+  +opera-9.50_beta2_p1904.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2008/04/08/ev-and-certificate-updates>
+  . Thanks to Christian Faulhammer.
 
   07 Apr 2008; Jeroen Roovers <jer@gentoo.org> opera-9.27.ebuild:
   SPARC and PPC always get qt-static versions. Sorted generic dependencies.
