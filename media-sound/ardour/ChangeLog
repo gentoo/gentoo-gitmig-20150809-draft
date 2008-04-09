@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.71 2008/04/06 21:28:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.72 2008/04/09 07:27:23 aballier Exp $
+
+  09 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/ardour-2.0.3-multilibstrict.patch, -ardour-2.0.3.ebuild,
+  -ardour-2.1.ebuild, -ardour-2.2.ebuild:
+  remove some old versions
 
 *ardour-2.4 (06 Apr 2008)
 
