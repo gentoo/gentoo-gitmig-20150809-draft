@@ -1,6 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1306 2008/04/09 14:46:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1307 2008/04/09 18:40:44 wolf31o2 Exp $
+
+  09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +default/linux/amd64/2008.0/server/profile.bashrc,
+  +default/linux/powerpc/ppc32/2008.0/server/profile.bashrc,
+  +default/linux/powerpc/ppc64/2008.0/32bit-userland/server/profile.bashrc,
+  +default/linux/powerpc/ppc64/2008.0/64bit-userland/server/profile.bashrc,
+  +default/linux/x86/2008.0/server/profile.bashrc,
+  -targets/server/profile.bashrc:
+  Move the profile.bashrc from the main server profile to the individual
+  architecture profiles under default/linux where it is appropriate.
 
   09 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   default/linux/amd64/2008.0/no-multilib/parent:
