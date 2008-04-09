@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20080406.ebuild,v 1.1 2008/04/07 21:43:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20080406.ebuild,v 1.2 2008/04/09 16:04:11 aballier Exp $
 
 EAPI="1"
 inherit multilib eutils toolchain-funcs versionator
@@ -18,7 +18,7 @@ IUSE="debug +threads"
 RDEPEND=""
 DEPEND="amd64? ( >=dev-lang/yasm-0.6.0 )
 	x86? ( || ( >=dev-lang/yasm-0.6.2 dev-lang/nasm ) )
-	x86-fbsd? ( dev-lang/nasm )"
+	x86-fbsd? ( >=dev-lang/yasm-0.6.2 )"
 
 # Block older than 0.6.2 versions of yasm
 # It generates incorect pic code and will cause segfaults
