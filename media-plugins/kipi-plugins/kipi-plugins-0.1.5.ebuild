@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.2 2008/04/08 19:14:40 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.3 2008/04/09 01:08:02 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -57,4 +57,3 @@ src_compile() {
 			$(use_enable opengl imageviewer)"
 	kde_src_compile all
 }
-
