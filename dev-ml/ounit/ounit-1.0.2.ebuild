@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.2.ebuild,v 1.2 2008/01/04 01:38:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.2.ebuild,v 1.3 2008/04/09 17:25:58 nixnut Exp $
 
 inherit findlib eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xs4all.nl/~mmzeeman/ocaml/"
 SRC_URI="http://www.xs4all.nl/~mmzeeman/ocaml/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 DEPEND="dev-lang/ocaml"
 IUSE="+ocamlopt"
 
