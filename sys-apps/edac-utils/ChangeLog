@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/edac-utils
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/edac-utils/ChangeLog,v 1.1 2008/04/09 20:53:08 dev-zero Exp $
+
+*edac-utils-0.12 (09 Apr 2008)
+
+  09 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +edac-utils-0.12.ebuild:
+  Initial commit.
+
