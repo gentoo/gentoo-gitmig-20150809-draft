@@ -1,0 +1,13 @@
+--- src/musicapplet/Makefile.am.orig	2008-04-09 00:02:43.000000000 -0400
++++ src/musicapplet/Makefile.am	2008-04-09 00:03:17.000000000 -0400
+@@ -11,7 +11,9 @@
+ nodist_musicapplet_PYTHON = \
+ 	defs.py
+ 
+-musicapplet_LTLIBRARIES = widgets.la
++musicappletexecdir = $(pyexecdir)/musicapplet
++
++musicappletexec_LTLIBRARIES = widgets.la
+ widgets_la_LDFLAGS = -module -avoid-version -export-symbols-regex initwidgets
+ widgets_la_SOURCES = 		\
+ 	ma-deserialize.c	\
