@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.7.ebuild,v 1.2 2008/04/08 16:47:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.7.ebuild,v 1.3 2008/04/09 21:34:50 mr_bones_ Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -35,8 +35,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/ogrenew
 
 pkg_setup() {
-	if use threads && has_version "<dev-libs/boost-1.34" && \
-		! built_with_use dev-libs/boost threads
+	if use threads && ! built_with_use --missing true dev-libs/boost threads
 	then
 		die "Please emerge dev-libs/boost with USE=threads"
 	fi
@@ -53,14 +52,12 @@ src_unpack() {
 			    -name bin -o -name '*.cbp' -o -name '*.vcproj*' ')' \
 			-print0 | xargs -0 rm -rf
 	fi
-	sed -i '/CPPUNIT/d' configure.in || die "sed failed"
-	epatch "${FILESDIR}"/${P}-cegui.patch
+	sed -i -e '/CPPUNIT/d' configure.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-*.patch
 	eautoreconf
 }
 
 src_compile() {
-	use cg && filter-ldflags -Wl,--as-needed
-
 	econf \
 		--disable-dependency-tracking \
 		--disable-freeimage \
