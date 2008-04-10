@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r3.ebuild,v 1.2 2008/03/10 17:39:30 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r3.ebuild,v 1.3 2008/04/10 06:37:00 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -261,7 +261,7 @@ PDEPEND="
 		video_cards_vermilion? ( >=x11-drivers/xf86-video-vermilion-1.0.0 )
 		video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-1.1.0 )
 		video_cards_vga? ( >=x11-drivers/xf86-video-vga-4.1.0 )
-		video_cards_via? ( >=x11-drivers/xf86-video-via-0.2.1 )
+		video_cards_via? ( >=x11-drivers/xf86-video-openchrome-0.2.901 )
 		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.13.0 )
 		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.1.0 )
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
