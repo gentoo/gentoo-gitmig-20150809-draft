@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.4 2007/11/27 12:11:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.5 2008/04/10 17:01:06 drac Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -29,7 +29,8 @@ DEPEND="media-libs/xine-lib
 		media-libs/netpbm
 		media-video/mjpegtools )
 	X? ( x11-libs/libXext x11-libs/libX11 )
-	virtual/eject"
+	virtual/eject
+	dev-util/pkgconfig"
 
 pkg_setup() {
 
