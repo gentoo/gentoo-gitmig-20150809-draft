@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/vkeybd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.30 2008/01/26 22:17:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.31 2008/04/10 08:19:25 drac Exp $
+
+  10 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  -files/vkeybd-0.1.15-makefile.patch, -files/vkeybd-0.1.17a-makefile.patch,
+  -vkeybd-0.1.15-r2.ebuild, -vkeybd-0.1.17a.ebuild, vkeybd-0.1.17b.ebuild:
+  amd64/x86 stable, because current linux-headers doesn't provide awe_voice.h
+  wrt #205949, #216928
 
 *vkeybd-0.1.17b (26 Jan 2008)
 
