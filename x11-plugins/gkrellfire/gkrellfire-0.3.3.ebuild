@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/gkrellfire-0.3.3.ebuild,v 1.4 2007/07/11 20:39:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/gkrellfire-0.3.3.ebuild,v 1.5 2008/04/10 09:55:46 drac Exp $
 
 inherit gkrellm-plugin
 
@@ -10,6 +10,5 @@ SRC_URI="http://people.freenet.de/thomas-steinke/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-
+KEYWORDS="~amd64 x86"
 IUSE=""
