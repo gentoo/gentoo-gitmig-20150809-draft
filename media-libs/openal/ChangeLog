@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.83 2007/09/20 22:50:53 wolf31o2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.84 2008/04/10 00:51:41 wolf31o2 Exp $
+
+  10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-0.0.8-r2.ebuild:
+  Moved eautoconf to src_unpack and closing bug #207454.
 
   20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/0.0.8/004_all_gcc42.patch, -files/0.0.8/004_all_ggc42.patch,

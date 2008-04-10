@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.2 2007/09/05 17:04:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.3 2008/04/10 00:51:41 wolf31o2 Exp $
 
 inherit autotools eutils
 
@@ -31,12 +31,12 @@ src_unpack() {
 	sed -i \
 		-e "/^Requires:/d" \
 		admin/pkgconfig/openal.pc.in || die "sed openal.pc.in failed"
-}
-
-src_compile() {
 	eautoconf \
 		|| die "autoconf failed"
 
+}
+
+src_compile() {
 	econf \
 		--libdir=/usr/$(get_libdir) \
 		$(use_enable esd) \
