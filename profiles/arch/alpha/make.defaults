@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/make.defaults,v 1.1 2008/04/01 17:39:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/make.defaults,v 1.2 2008/04/10 19:53:13 dberkholz Exp $
 
 ARCH="alpha"
 ACCEPT_KEYWORDS="alpha"
@@ -11,7 +11,7 @@ CXXFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="cirrus dummy fbdev glint mach64 mga nv r128 radeon rendition s3 s3virge savage siliconmotion sisusb tdfx tga v4l vga voodoo"
+VIDEO_CARDS="fbdev glint mach64 mga nv r128 radeon savage tdfx vga voodoo"
 
 # 2007/02/05 - Chris Gianelloni <wolf31o2@gentoo.org>
 # Defaults for audio drivers. These are copied from x86 (minus modems), since

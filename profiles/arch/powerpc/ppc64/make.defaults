@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/make.defaults,v 1.2 2008/04/09 14:19:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/make.defaults,v 1.3 2008/04/10 19:53:18 dberkholz Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -32,4 +32,4 @@ PROFILE_ARCH="ppc64"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="dummy fbdev mach64 mga nv r128 radeon s3 vega vga"
+VIDEO_CARDS="fbdev mach64 mga nv r128 radeon vesa vga"

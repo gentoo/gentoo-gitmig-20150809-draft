@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/make.defaults,v 1.1 2008/04/01 17:40:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/make.defaults,v 1.2 2008/04/10 19:53:18 dberkholz Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -38,5 +38,5 @@ MULTILIB_STRICT_DIRS="/lib32 /usr/lib32 /usr/kde/*/lib32 /usr/qt/*/lib32 /usr/X1
 
 # 2006/10/05 - Gustavo Zacarias <gustavoz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="dummy fbdev glint mach64 mga r128 radeon sunbw2 suncg14 suncg3 \
-	suncg6 sunffb sunleo tdfx v4l voodoo"
+VIDEO_CARDS="fbdev glint mach64 mga r128 radeon sunbw2 suncg14 suncg3 \
+	suncg6 sunffb sunleo tdfx voodoo"
