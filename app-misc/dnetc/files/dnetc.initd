@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.initd,v 1.1 2008/02/02 14:01:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.initd,v 1.2 2008/04/10 00:47:43 wolf31o2 Exp $
 
 opts="${opts} reload fetch flush"
 
@@ -20,9 +20,9 @@ processOpts() {
 
 	DNETOPTS="-quiet"
 
-	if [ -e /etc/conf.d/dnetc ] ; then
+	if [ -e /etc/dnetc.ini ] ; then
 		retVal=0
-		DNETOPTS="${DNETOPTS} -ini /etc/conf.d/dnetc"
+		DNETOPTS="${DNETOPTS} -ini /etc/dnetc.ini"
 	elif [ -e ${DNETPATH}/dnetc.ini ]; then
 		retVal=0
 		DNETOPTS="${DNETOPTS} -ini ${DNETPATH}/dnetc.ini"
@@ -40,6 +40,10 @@ processOpts() {
 		DNETOPTS="${DNETOPTS} -outbase ${buff_out}"
 	fi
 	DNETOPTS="${DNETOPTS} ${KEYSERVER_ADDRESS:+-a ${KEYSERVER_ADDRESS}}"
+
+	# fair group cpu scheduler
+	[ -d /sys/kernel/uids/ ] && echo 2 > \
+		/sys/kernel/uids/$(grep -w dnetc /etc/passwd | cut -d: -f3)/cpu_share
 
 	if [ ${retVal} -ne 0 ] ; then
 		eerror "Need some sort of configuration.  Check /etc/conf.d/dnetc."

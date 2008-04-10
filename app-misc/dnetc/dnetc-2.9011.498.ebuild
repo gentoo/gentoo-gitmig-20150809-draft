@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.498.ebuild,v 1.4 2007/08/23 17:59:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.498.ebuild,v 1.5 2008/04/10 00:47:43 wolf31o2 Exp $
 
 inherit eutils versionator
 
@@ -9,7 +9,7 @@ MIN_PV="$(get_version_component_range 3)"
 
 DESCRIPTION="distributed.net client"
 HOMEPAGE="http://www.distributed.net"
-SRC_URI="x86? ( http://http.distributed.net/pub/dcti/v2.9013/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz )"
+SRC_URI="http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz"
 
 LICENSE="distributed.net"
 SLOT="0"
@@ -28,8 +28,8 @@ pkg_setup() {
 }
 
 src_install() {
-	newinitd ${FILESDIR}/dnetc.init-r2 dnetc
-	newconfd ${FILESDIR}/dnetc.conf dnetc
+	newinitd "${FILESDIR}"/dnetc.initd dnetc
+	newconfd "${FILESDIR}"/dnetc.confd dnetc
 
 	local ownopts="--mode=0555 --group=dnetc --owner=dnetc"
 

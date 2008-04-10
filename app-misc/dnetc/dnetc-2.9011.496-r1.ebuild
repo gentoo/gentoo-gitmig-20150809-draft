@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.7 2007/08/23 17:59:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.8 2008/04/10 00:47:43 wolf31o2 Exp $
 
 inherit eutils
 
@@ -34,8 +34,8 @@ src_install() {
 	doman dnetc.1
 	dodoc docs/CHANGES.txt docs/dnetc.txt docs/readme.*
 
-	newinitd ${FILESDIR}/dnetc.init-r1 dnetc
-	newconfd ${FILESDIR}/dnetc.conf dnetc
+	newinitd "${FILESDIR}"/dnetc.initd dnetc
+	newconfd "${FILESDIR}"/dnetc.confd dnetc
 }
 
 pkg_preinst() {

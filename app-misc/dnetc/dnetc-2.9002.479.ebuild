@@ -1,26 +1,24 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9002.479.ebuild,v 1.10 2007/08/23 17:59:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9002.479.ebuild,v 1.11 2008/04/10 00:47:43 wolf31o2 Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
 
 DESCRIPTION="distributed.net client"
 HOMEPAGE="http://www.distributed.net"
-SRC_URI="hppa? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-hppa32.tar.gz )"
+SRC_URI="http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-hppa32.tar.gz"
 
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="~hppa -mips"
+KEYWORDS="~hppa"
 IUSE=""
 RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
 
-if use hppa; then
-	S="${WORKDIR}/dnetc${MIN_PV}-linux-hppa"
-fi
+S="${WORKDIR}/dnetc${MIN_PV}-linux-hppa"
 
 src_install() {
 	exeinto /opt/distributed.net
@@ -29,8 +27,8 @@ src_install() {
 	doman dnetc.1
 	dodoc CHANGES.txt dnetc.txt readme.*
 
-	newinitd ${FILESDIR}/dnetc.init dnetc
-	newconfd ${FILESDIR}/dnetc.conf dnetc
+	newinitd "${FILESDIR}"/dnetc.initd dnetc
+	newconfd "${FILESDIR}"/dnetc.confd dnetc
 }
 
 pkg_preinst() {

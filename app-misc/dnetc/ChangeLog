@@ -1,6 +1,20 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.47 2008/02/02 14:01:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.48 2008/04/10 00:47:43 wolf31o2 Exp $
+
+*dnetc-2.9015.504 (10 Apr 2008)
+
+  10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> -files/dnetc.conf,
+  -files/dnetc.init, -files/dnetc.init-r1, -files/dnetc.init-r2,
+  files/dnetc.initd, dnetc-2.9001.478.ebuild, dnetc-2.9002.479.ebuild,
+  dnetc-2.9003.481-r1.ebuild, dnetc-2.9011.496-r1.ebuild,
+  dnetc-2.9011.498.ebuild, dnetc-2.9013.498.ebuild,
+  +dnetc-2.9015.504.ebuild:
+  Fixed init script searching for /etc/conf.d/dnetc incorrectly. Thanks to
+  Arthur Hagen <art-gt@broomstick.com> for the fix. Added workaround for Fair
+  Group CPU Scheduler. Thanks to Toralf Förster <toralf.foerster@gmx.de> for
+  the fix. Version bump to 2.9015.504 for x86. QA cleanup: Fix quoting.
+  Closing bug #209037, bug #209322, and bug #215052.
 
 *dnetc-2.9013.498 (02 Feb 2008)
 
