@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.1 2008/04/10 17:44:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.2 2008/04/10 17:59:14 aballier Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -55,6 +55,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-avdevice.patch
 	epatch "${FILESDIR}"/${P}-bashism.patch
 	epatch "${FILESDIR}"/${P}-double-fps.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 }
 
 src_compile() {
