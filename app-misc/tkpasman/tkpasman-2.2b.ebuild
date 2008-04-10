@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2b.ebuild,v 1.4 2008/04/10 15:51:54 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2b.ebuild,v 1.5 2008/04/10 16:07:45 ken69267 Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-2.2a-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-2.2a-gentoo.patch
 
 	use ssl || sed -i "s:^USE_OPENSSL=true:USE_OPENSSL=false:g" config
 }
