@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackconnect
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.20 2007/07/02 15:16:42 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.21 2008/04/10 18:44:31 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  qjackconnect-0.0.3b-r1.ebuild:
+  add missing alsa-lib dep, thanks to Patrick, bug #216936
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
