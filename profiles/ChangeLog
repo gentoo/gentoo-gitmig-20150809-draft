@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1308 2008/04/10 10:32:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1309 2008/04/10 10:59:55 coldwind Exp $
+
+  10 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> base/package.mask,
+  selinux/package.mask:
+  Add telepathy-mission-control-4.65 to Gnome 2.22 mask.
 
   10 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add libextractor USE flag description.

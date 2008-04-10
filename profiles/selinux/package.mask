@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.29 2008/04/05 22:19:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.30 2008/04/10 10:59:57 coldwind Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (16 Mar 2008)
 # The Great GNOME 2.22 Mask (tm)
@@ -82,6 +82,7 @@ gnome-base/gvfs
 >=x11-themes/gnome-themes-extras-2.22
 >=gnome-base/gnome-light-2.22
 >=gnome-base/gnome-2.22
+>=net-im/telepathy-mission-control-4.65
 # End of GNOME 2.22 mask
 
 # Chris PeBenito <pebenito@gentoo.org> (11 Oct 2006)
