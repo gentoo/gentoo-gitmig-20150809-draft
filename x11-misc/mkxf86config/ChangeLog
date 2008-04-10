@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.36 2008/03/04 02:32:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.37 2008/04/10 03:50:19 wolf31o2 Exp $
+
+*mkxf86config-0.9.10 (10 Apr 2008)
+
+  10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/mkxf86config.initd, -files/mkxf86config-init,
+  mkxf86config-0.9.1.ebuild, mkxf86config-0.9.9.ebuild,
+  +mkxf86config-0.9.10.ebuild:
+  Version bump to set a default driver (bug #214118) and set MonitorLayout
+  on Radeon cards (bug #144238).
 
   04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   mkxf86config-0.9.9.ebuild:

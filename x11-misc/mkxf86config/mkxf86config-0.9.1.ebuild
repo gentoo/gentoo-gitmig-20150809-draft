@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.1.ebuild,v 1.3 2006/06/09 01:14:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.1.ebuild,v 1.4 2008/04/10 03:50:19 wolf31o2 Exp $
 
 inherit eutils
 
@@ -24,5 +24,5 @@ src_install() {
 	doins xorg.conf.in
 	exeinto /usr/sbin
 	doexe mkxf86config.sh
-	newinitd ${FILESDIR}/mkxf86config-init mkxf86config
+	newinitd "${FILESDIR}"/mkxf86config.initd mkxf86config
 }
