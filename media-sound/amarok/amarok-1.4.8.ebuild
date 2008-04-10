@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.8.ebuild,v 1.8 2008/02/19 01:52:19 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.8.ebuild,v 1.9 2008/04/10 22:46:03 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -36,7 +36,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="mp4 kde mysql amazon opengl postgres
+IUSE="mp4 kde mysql opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
@@ -72,7 +72,7 @@ src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
 				  $(use_with opengl) --without-xmms
 				  $(use_with visualization libvisual)
-				  $(use_enable amazon)
+				  --disable-amazon
 				  $(use_with ipod libgpod)
 				  $(use_with mp4 mp4v2)
 				  $(use_with ifp)
@@ -103,4 +103,10 @@ src_install() {
 		rm -r "${D}"/usr/share/apps/amarok/scripts/webcontrol \
 			|| die "Unable to remove webcontrol."
 	fi
+}
+
+pkg_postinst() {
+	elog "Amazon cover fetching has been disabled in this Amarok version."
+	elog "This is due to a change in Amazon's protocol. If you want Amazon"
+	elog "cover fetching, please use at least Amarok version 1.4.9.1."
 }

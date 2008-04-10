@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.8 2008/02/19 01:52:19 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.1 2008/04/10 22:46:03 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
-fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa pl
-pt pt_BR ro ru rw se sk sl sq sr sr@Latn ss sv ta tg th tr uk uz zh_CN
-zh_TW"
+fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
+pl pt pt_BR ro ru rw se sk sl sq sr sr@Latn ss sv ta tg th tr uk uz
+zh_CN zh_TW"
+
 LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
@@ -34,7 +35,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="mp4 kde mysql amazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
@@ -47,8 +48,8 @@ RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 	postgres? ( dev-db/libpq )
 	opengl? ( virtual/opengl )
 	visualization? ( media-libs/libsdl
-					 =media-plugins/libvisual-plugins-0.4* )
-	ipod? ( >=media-libs/libgpod-0.4.2 )
+		=media-plugins/libvisual-plugins-0.4* )
+	ipod? ( >=media-libs/libgpod-0.5.2 )
 	mp4? ( media-libs/libmp4v2 )
 	ifp? ( media-libs/libifp )
 	real? ( media-video/realplayer )
@@ -63,9 +64,6 @@ RDEPEND="${RDEPEND}
 	app-arch/unzip
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
-
-PATCHES="${FILESDIR}/${P}+xine-lib-1.1.8-lastfm.patch
-	${FILESDIR}/${P}-svn148317.patch"
 
 need-kde 3.3
 

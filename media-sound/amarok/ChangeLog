@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.259 2008/02/19 01:52:19 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.260 2008/04/10 22:46:03 flameeyes Exp $
+
+*amarok-1.4.9.1 (10 Apr 2008)
+
+  10 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -amarok-1.4.7-r2.ebuild, amarok-1.4.8.ebuild, +amarok-1.4.9.1.ebuild:
+  Remove old version, disable Amazon support in 1.4.8 version as the
+  protocol is not working anymore, and add a new pre-release ebuild for
+  1.4.9.1 that is yet to be officially released.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> amarok-1.4.7-r2.ebuild,
   amarok-1.4.8.ebuild, amarok-1.4.9999-r2.ebuild:
