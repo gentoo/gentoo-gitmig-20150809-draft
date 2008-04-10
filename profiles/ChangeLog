@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1310 2008/04/10 11:03:14 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1311 2008/04/10 17:15:58 remi Exp $
+
+  10 Apr 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  Mask the Gnome 2.22.1 meta until all deps are in portage
 
   10 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> use.local.desc:
   Add use local desc for net-im/telepathy-mission-control:keyring.
