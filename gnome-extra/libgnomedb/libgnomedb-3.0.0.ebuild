@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.2 2007/10/10 15:42:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.3 2008/04/10 21:59:00 eva Exp $
 
 inherit gnome2
 
@@ -32,3 +32,15 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix tests
+	echo "[encoding: UTF-8]" >> po/POTFILES.in
+	echo "libgnomedb/data-entries/gnome-db-entry-string-number.xml.in" >> po/POTFILES.in
+	echo "libgnomedb/data-entries/gnome-db-entry-string-string.xml.in" >> po/POTFILES.in
+	echo "libgnomedb/data-entries/gnome-db-format-entry.c" >> po/POTFILES.in
+	echo "libgnomedb/plugins/gnome-db-data-cell-renderer-password.c" >> po/POTFILES.in
+	echo "libgnomedb/plugins/gnome-db-entry-password.xml.in" >> po/POTFILES.in
+}
