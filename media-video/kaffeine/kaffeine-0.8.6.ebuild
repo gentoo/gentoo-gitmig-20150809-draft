@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.2 2008/01/23 19:38:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.3 2008/04/10 19:32:13 tgurr Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -24,7 +24,8 @@ RDEPEND=">=media-libs/xine-lib-1.1.9
 	x11-libs/libXtst"
 
 DEPEND="${RDEPEND}
-	dvb? ( media-tv/linuxtv-dvb-headers )"
+	dvb? ( media-tv/linuxtv-dvb-headers )
+	x11-proto/inputproto"
 
 need-kde 3.5.4
 
