@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.14 2008/04/10 03:52:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.15 2008/04/10 06:33:32 wolf31o2 Exp $
+
+  10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.4-openchrome.patch, hwdata-gentoo-0.4.ebuild:
+  Added openchrome patch.
 
 *hwdata-gentoo-0.4 (10 Apr 2008)
 
