@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.0.ebuild,v 1.1 2008/04/05 14:34:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.0-r1.ebuild,v 1.1 2008/04/10 22:27:02 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit libtool multilib eutils autotools pam toolchain-funcs
+inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
@@ -106,6 +106,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
 	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
+	epatch "${FILESDIR}/${MY_PN}-1.0.0-set-item.patch"
 
 	AT_M4DIR="m4" eautoreconf
 
@@ -114,6 +115,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	# Workarounds autoconf 2.62 bug, libintl.h is included before
+	# _GNU_SOURCE is defined in config.h. See bug #217154
+	append-flags -D_GNU_SOURCE
 
 	if use hppa || use elibc_FreeBSD; then
 		myconf="${myconf} --disable-pie"
