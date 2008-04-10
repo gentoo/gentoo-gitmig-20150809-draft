@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-svg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.10 2008/01/17 16:12:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.11 2008/04/10 21:59:54 coldwind Exp $
+
+  10 Apr 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ruby-svg-1.0.3-r1.ebuild:
+  Added ~amd64 wrt bug #216592
 
 *ruby-svg-1.0.3-r1 (06 Mar 2007)
 
