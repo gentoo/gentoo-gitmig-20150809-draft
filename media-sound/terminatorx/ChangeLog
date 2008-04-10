@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.26 2008/02/29 20:02:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.27 2008/04/10 18:37:44 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org> terminatorx-3.81.ebuild,
+  terminatorx-3.82.ebuild:
+  add missing pkgconfig dep, thanks to Patrick, bug #216931
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Remove icon extension from desktop entry to match Icon Theme Specification.

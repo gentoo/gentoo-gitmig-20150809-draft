@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.19 2008/01/13 13:38:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.20 2008/04/10 18:37:44 aballier Exp $
 
 inherit gnome2
 
@@ -30,6 +30,7 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	app-text/scrollkeeper
 	media-libs/liblrdf"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xproto
 	x11-proto/inputproto
 	x11-proto/xf86dgaproto"
