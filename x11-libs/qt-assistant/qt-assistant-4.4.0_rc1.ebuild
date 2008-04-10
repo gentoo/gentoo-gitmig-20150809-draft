@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:13:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.8 2008/04/10 13:39:18 ingmar Exp $
 
 inherit qt4-build
 
@@ -19,6 +19,9 @@ RDEPEND="${DEPEND}"
 # Pixeltool isn't really assistant related, but it relies on
 # the assistant libraries.
 QT4_TARGET_DIRECTORIES="tools/assistant tools/pixeltool"
+QT4_EXTRACT_DIRECTORIES="
+src/3rdparty/clucene/
+tools/shared/fontpanel"
 
 pkg_setup() {
 	qt4-build_pkg_setup
@@ -33,10 +36,10 @@ src_compile() {
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr
 		-no-xfixes -no-xcursor -no-xinerama -no-xshape -no-sm -no-opengl
-		-no-nas-sound -no-qdbus -iconv -no-cups -no-nis -no-gif -no-libpng
+		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -no-openssl -system-zlib -no-webkit -no-phonon
 		-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig
-		-no-glib -no-opengl -no-qt3support"
+		-no-glib -no-opengl -no-qt3support -no-svg"
 
 	qt4-build_src_compile
 }
