@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.90 2008/04/10 19:33:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.91 2008/04/10 19:45:36 cardoe Exp $
+
+  10 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-169.09-r1.ebuild:
+  revert previous commit due to it breaking the stable tree. it also flies
+  in the face of nvidia-drivers maintenance policies.
 
   10 Apr 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   nvidia-drivers-169.09-r1.ebuild:
