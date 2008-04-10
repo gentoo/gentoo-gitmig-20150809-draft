@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.1 2008/03/20 19:38:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.2 2008/04/10 06:17:34 cla Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.kdau.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3 MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-cpp/gtkmm-2.6
