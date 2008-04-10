@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.4 2006/08/23 09:30:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.5 2008/04/10 13:02:20 markusle Exp $
 
 inherit qt3
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="$(qt_min_version 3.1)
 	>=sys-devel/gcc-3.2
 	dev-util/pkgconfig
-	>=sci-chemistry/openbabel-2"
+	<sci-chemistry/openbabel-2.2"
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc
@@ -26,8 +26,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed."
-	cd ${D}/usr/share
+	make DESTDIR="${D}" install || die "make install failed."
+	cd "${D}"/usr/share
 	dodir /usr/share/doc
 	mv xdrawchem/doc doc/${PF}
 	dosym /usr/share/doc/${PF} /usr/share/xdrawchem/doc
