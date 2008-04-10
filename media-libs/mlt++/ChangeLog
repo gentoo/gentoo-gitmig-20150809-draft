@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt++
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.10 2008/04/10 18:19:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.11 2008/04/10 18:27:51 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org> -mlt++-20060601.ebuild:
+  Remove last version with insane versionning, this will force a downgrade
+  but that's life, bug #201492
 
 *mlt++-0.2.2 (10 Apr 2008)
 
