@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.42 2007/12/29 16:58:01 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.43 2008/04/10 20:51:06 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/spidermonkey-1.5-header.diff,
+  -files/spidermonkey-1.5-threadsafe.diff, -spidermonkey-1.5_rc5.ebuild,
+  -spidermonkey-1.5-r1.ebuild, -spidermonkey-1.5-r2.ebuild,
+  -spidermonkey-1.6.ebuild:
+  remove old
 
   29 Dec 2007; Brent Baude <ranger@gentoo.org> spidermonkey-1.7.0.ebuild:
   Marking spidermonkey-1.7.0 ppc64 for bug 202885
