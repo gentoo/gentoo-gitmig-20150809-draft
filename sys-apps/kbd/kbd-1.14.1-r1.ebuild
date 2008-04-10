@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.14.1-r1.ebuild,v 1.1 2008/04/01 15:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.14.1-r1.ebuild,v 1.2 2008/04/10 03:33:53 vapier Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.12-jp-escape.patch
 
 	epatch "${FILESDIR}"/${P}-missing-configure.patch #215610
+	epatch "${FILESDIR}"/${P}-no-asm-kbio.patch #217068
 }
 
 src_compile() {
