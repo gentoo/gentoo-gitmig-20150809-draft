@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.3 2008/04/07 22:04:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.4 2008/04/10 12:14:50 yngwin Exp $
 
 inherit cmake-utils eutils flag-o-matic
 
@@ -56,11 +56,14 @@ src_unpack() {
 	# TODO. Needs to be reported upstream.
 	epatch "${FILESDIR}"/${PN}-2.4-libdca.patch
 	epatch "${FILESDIR}"/${PN}-2.4-i18n.patch
+	# gcc-4.3 fixes from bug 213099
+	epatch "${FILESDIR}"/${P}-gcc43-includes.patch
+	epatch "${FILESDIR}"/${P}-gcc43-missing-asm-naming.patch
 }
 
 src_compile() {
-	# -O3 corrups names in the Qt4 filters dialog -yngwin
-	replace-flags -O3 -O2
+	# -O3 seems to corrupt names in the Qt4 filters dialog -yngwin
+	use qt4 && replace-flags -O3 -O2
 
 	# Commented out options cause compilation errors, some
 	# might need -Wl,--as-needed in LDFLAGS and all USE

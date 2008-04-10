@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.125 2008/04/07 22:04:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.126 2008/04/10 12:14:50 yngwin Exp $
+
+  10 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/avidemux-2.4.1-gcc43-includes.patch,
+  +files/avidemux-2.4.1-gcc43-missing-asm-naming.patch,
+  avidemux-2.4.1.ebuild:
+  Adding gcc-4.3 patches from bug 213099.
 
   07 Apr 2008; Ben de Groot <yngwin@gentoo.org> avidemux-2.4.ebuild,
   avidemux-2.4.1.ebuild:
