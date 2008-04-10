@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:10:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.14 2008/04/10 13:42:15 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -23,6 +23,9 @@ src/tools/uic3
 tools/designer/src/plugins/widgets
 tools/qtconfig
 tools/porting"
+QT4_EXTRACT_DIRECTORIES="
+src/tools/uic/
+"
 
 pkg_setup() {
 	QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
@@ -37,7 +40,7 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
-	myconf="${myconf} -qt3support
+	myconf="${myconf} -qt3support -no-gstreamer -no-phonon
 		$(qt_use accessibility)"
 
 	qt4-build_src_compile
