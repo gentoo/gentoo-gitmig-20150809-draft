@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/atomicparsley-0.9.0.ebuild,v 1.10 2008/04/10 07:48:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/atomicparsley-0.9.0.ebuild,v 1.11 2008/04/10 07:49:58 drac Exp $
 
 inherit toolchain-funcs
 
@@ -26,10 +26,10 @@ src_unpack() {
 }
 
 src_compile() {
-	./build
+	./build || die "build failed."
 }
 
 src_install() {
-	dobin AtomicParsley
+	dobin AtomicParsley || die "dobin failed."
 	dodoc *.{txt,rtf}
 }
