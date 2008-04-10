@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:07:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.13 2008/04/10 13:39:48 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -21,13 +21,29 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 QT4_TARGET_DIRECTORIES="
-src/tools/moc
-src/tools/rcc
-src/tools/uic
-src/corelib
-src/xml
-src/network
-src/plugins/codecs"
+src/tools/moc/
+src/tools/rcc/
+src/tools/uic/
+src/corelib/
+src/xml/
+src/network/
+src/plugins/codecs/"
+QT4_EXTRACT_DIRECTORIES="
+include/Qt/
+include/QtCore/
+include/QtNetwork/
+include/QtScript/
+include/QtXml/
+src/plugins/plugins.pro
+src/plugins/qpluginbase.pri
+src/src.pro
+src/3rdparty/des/
+src/3rdparty/harfbuzz/
+src/3rdparty/md4/
+src/3rdparty/md5/
+src/3rdparty/sha1/
+src/script/
+translations/"
 
 pkg_setup() {
 	qt4-build_pkg_setup
@@ -74,6 +90,14 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	use doc && QT4_EXTRACT_DIRECTORIES="${QT4_EXTRACT_DIRECTORIES}
+		doc/
+		tools/qdoc3/"
+
+	qt4-build_src_unpack
+}
+
 src_compile() {
 	unset QMAKESPEC
 	local myconf
@@ -85,9 +109,14 @@ src_compile() {
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr
 		-no-xfixes -no-xcursor -no-xinerama -no-xshape -no-sm -no-opengl
-		-no-nas-sound -no-qdbus -iconv -no-cups -no-nis -no-gif -no-libpng
+		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -system-zlib -no-webkit -no-phonon -no-xmlpatterns
-		-no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-opengl"
+		-no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-opengl
+		-no-svg"
+
+	if ! use doc; then
+		myconf="${myconf} -nomake docs"
+	fi
 
 	qt4-build_src_compile
 }
