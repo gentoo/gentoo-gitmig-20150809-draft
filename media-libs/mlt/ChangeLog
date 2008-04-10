@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/mlt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.17 2007/11/23 10:36:17 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.18 2008/04/10 17:44:22 aballier Exp $
+
+*mlt-0.2.4-r2 (10 Apr 2008)
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/mlt-0.2.4-avdevice.patch, +files/mlt-0.2.4-bashism.patch,
+  +files/mlt-0.2.4-double-fps.patch, +files/mlt-0.2.4-ffmpegheaders.patch,
+  +mlt-0.2.4-r2.ebuild:
+  Rev bump: bashism in /bin/sh script fix by Martin Väth
+  <vaeth@mathematik.uni-wuerzburg.de>, bug #216216. Backport a 'fix' from
+  upstream to build with recent ffmpegs, bug #214520. Dont mess up fps type
+  which fixes an issue of a/v sync fix by Ollie Wild
+  <aloysius.wild@gmail.com>, bug #211242. Allow building with new ffmpeg
+  headers layout fix by me.
 
 *mlt-0.2.4-r1 (23 Nov 2007)
 
