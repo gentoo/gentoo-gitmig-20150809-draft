@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.901.ebuild,v 1.2 2008/03/15 03:50:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.901.ebuild,v 1.3 2008/04/10 06:32:51 dberkholz Exp $
 
 XDPVER="-1"
 IUSE="debug dri"
@@ -11,7 +11,7 @@ DESCRIPTION="X.Org driver for VIA/S3G cards"
 HOMEPAGE="http://www.openchrome.org"
 SRC_URI="${HOMEPAGE}/releases/${P}.tar.bz2"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RDEPEND=">=x11-base/xorg-server-1.2
 	dri? ( x11-libs/libdrm )"
 DEPEND="${RDEPEND}
