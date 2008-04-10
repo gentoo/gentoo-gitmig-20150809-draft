@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.2 2008/04/10 12:14:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.3 2008/04/10 12:17:10 drac Exp $
 
 inherit eutils qt3
 
@@ -45,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Upstream HOMEPAGE also suggests following packaged to be installed:"
+	elog "Upstream HOMEPAGE also suggests following packages to be installed:"
 	elog "- media-plugins/amb-plugins"
 	elog "- media-plugins/rev-plugins"
 	elog "- media-plugins/vco-plugins"
