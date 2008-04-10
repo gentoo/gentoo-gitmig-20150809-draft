@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:13:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.10 2008/04/10 13:44:40 ingmar Exp $
 
 inherit qt4-build
 
@@ -16,6 +16,7 @@ DEPEND="~x11-libs/qt-gui-${PV}"
 RDEPEND="${DEPEND}"
 
 QT4_TARGET_DIRECTORIES="src/3rdparty/webkit/WebCore tools/designer/src/plugins/qwebview"
+QT4_EXTRACT_DIRECTORIES="src/3rdparty/webkit src/3rdparty/sqlite"
 QCONFIG_ADD="webkit"
 QCONFIG_DEFINE="QT_WEBKIT"
 
