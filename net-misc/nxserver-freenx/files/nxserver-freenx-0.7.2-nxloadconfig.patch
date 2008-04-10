@@ -41,12 +41,14 @@ diff -Naur freenx-server-0.7.2.orig/nxloadconfig freenx-server-0.7.2/nxloadconfi
  		ERROR="yes" && echo "Error: Could not find nxagent in $PATH_BIN. Please install some OSS components."
  	
  	if [ "ENABLE_EXTERNAL_NXDESKTOP" = "1" ]
-@@ -598,7 +599,7 @@
+@@ -598,8 +599,8 @@
  	[ -z $(echo "$ENABLE_ROOTLESS_MODE" | egrep "^[0|1]$") ] && \
  		ERROR="yes" && echo "Error: Invalid value \"ENABLE_ROOTLESS_MODE=$ENABLE_ROOTLESS_MODE\""
  
 -	[ -z "$(strings $PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0|NXAGENT - Version 3.[01].0')" ] && \
-+	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0|NXAGENT - Version 3.[01].0')" ] && \
- 		ERROR="yes" && echo "Error: Could not find 1.5.0 or 2.[01].0 or 3.[01].0 version string in nxagent. NX 1.5.0 or 2.[01].0 or 3.[01].0 backend is needed for this version of FreeNX."
+-		ERROR="yes" && echo "Error: Could not find 1.5.0 or 2.[01].0 or 3.[01].0 version string in nxagent. NX 1.5.0 or 2.[01].0 or 3.[01].0 backend is needed for this version of FreeNX."
++	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0|NXAGENT - Version 3.[012].0')" ] && \
++		ERROR="yes" && echo "Error: Could not find 1.5.0 or 2.[01].0 or 3.[012].0 version string in nxagent. NX 1.5.0 or 2.[01].0 or 3.[012].0 backend is needed for this version of FreeNX."
  		
  	[ -z $(echo "$ENABLE_USESSION" | egrep "^[0|1]$") ] && \
+ 		ERROR="yes" && echo "Error: Invalid value \"ENABLE_USESSION=$ENABLE_USESSION\""

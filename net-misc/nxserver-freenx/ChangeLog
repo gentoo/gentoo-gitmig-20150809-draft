@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.47 2008/04/09 21:14:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.48 2008/04/10 09:58:01 voyageur Exp $
+
+  10 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  files/nxserver-freenx-0.7.2-nxloadconfig.patch,
+  -nxserver-freenx-0.7.2.ebuild, -nxserver-freenx-0.7.2-r1.ebuild:
+  Add NX 3.2 libs support, remove previous 0.7.2 ebuilds
 
 *nxserver-freenx-0.7.2-r2 (09 Apr 2008)
 
