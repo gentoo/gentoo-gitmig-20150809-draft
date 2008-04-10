@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0.ebuild,v 1.8 2008/04/03 18:26:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.0.ebuild,v 1.9 2008/04/10 05:54:31 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -163,9 +163,4 @@ pkg_postinst() {
 	ewarn "wireshark group. This security measure ensures that only trusted"
 	ewarn "users allowed to sniff your traffic."
 	echo
-	if use caps && use gtk; then
-		# http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2228
-		elog "Setting cap_kill on /usr/bin/wireshark"
-		setcap cap_kill=ep /usr/bin/wireshark
-	fi
 }
