@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-2.02.00-r1.ebuild,v 1.2 2008/03/23 17:13:59 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-2.02.00-r1.ebuild,v 1.3 2008/04/10 08:15:45 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -25,7 +25,9 @@ IUSE=""
 DEPEND=">=sys-kernel/linux-headers-2.6.24
 	!sys-cluster/dlm-headers
 	!sys-cluster/dlm-kernel
+	=sys-cluster/dlm-lib-${CLUSTER_RELEASE}*
 	"
+
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
