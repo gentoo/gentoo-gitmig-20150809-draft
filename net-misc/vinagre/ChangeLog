@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.3 2008/03/25 16:16:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.4 2008/04/10 22:18:48 eva Exp $
+
+*vinagre-0.5.1 (10 Apr 2008)
+
+  10 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> +vinagre-0.5.1.ebuild:
+  bump to 0.5.1. Translation updates.
 
   25 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> vinagre-0.5.0.ebuild:
   add gnome-doc-utils to DEPEND, fix bug #214722
