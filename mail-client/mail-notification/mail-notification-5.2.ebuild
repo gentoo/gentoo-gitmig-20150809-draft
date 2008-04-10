@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.2.ebuild,v 1.1 2008/03/26 20:37:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.2.ebuild,v 1.2 2008/04/10 05:24:43 graaff Exp $
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -44,6 +44,7 @@ RDEPEND=">=x11-libs/gtk+-2.12
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0"
 
 # this now uses JB (the Jean-Yves Lefort's Build System) as a build system

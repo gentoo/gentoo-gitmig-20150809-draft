@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.65 2008/03/26 20:37:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.66 2008/04/10 05:24:43 graaff Exp $
+
+  10 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  -mail-notification-4.1-r1.ebuild, mail-notification-5.0.ebuild,
+  mail-notification-5.0-r1.ebuild, mail-notification-5.2.ebuild:
+  Add missing pkgconfig dependency, fixing #216902; remove old version.
 
 *mail-notification-5.2 (26 Mar 2008)
 

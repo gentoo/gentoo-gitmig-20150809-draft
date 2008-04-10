@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.8 2008/03/19 04:04:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.9 2008/04/10 05:24:43 graaff Exp $
 
 inherit autotools eutils gnome2 multilib flag-o-matic versionator
 
@@ -46,6 +46,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0"
 
 DOCS="README NEWS AUTHORS TODO"
