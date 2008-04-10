@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.29 2008/02/03 14:33:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.30 2008/04/10 22:03:28 coldwind Exp $
+
+  10 Apr 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ocamlnet-2.2.9-r1.ebuild:
+  amd64 stable wrt bug #216779
 
   03 Feb 2008; Alexis Ballier <aballier@gentoo.org> ocamlnet-2.2.8.1.ebuild,
   ocamlnet-2.2.9-r1.ebuild:
