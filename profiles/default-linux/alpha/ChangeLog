@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.92 2008/04/03 09:22:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.93 2008/04/10 06:34:04 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
+  changing around video_cards_via masking by unmasking only for available
+  arches instead of masking on unavailable.
 
   03 Apr 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
   Move dvb and mythtv to global use.mask

@@ -65,7 +65,6 @@ video_cards_trident
 video_cards_tseng
 video_cards_vesa
 video_cards_vga
-video_cards_via
 video_cards_voodoo
 
 #until netbeans is keyworded

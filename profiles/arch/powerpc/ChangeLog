@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.4 2008/04/04 14:03:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.5 2008/04/10 06:34:02 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
+  changing around video_cards_via masking by unmasking only for available
+  arches instead of masking on unavailable.
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   USE mask dvb and mythtv on gst-plugins-meta - dependencies not keyworded

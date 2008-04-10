@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.1 2008/04/01 17:39:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.2 2008/04/10 06:34:01 dberkholz Exp $
 
 # Stuart Longland <redhatter@gentoo.org>
 # Seems unmasking "avahi" without versions stable breaks stuff like gnome-vfs.
@@ -125,7 +125,6 @@ video_cards_tga
 video_cards_tseng
 video_cards_vesa
 video_cards_vga
-video_cards_via
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Until xine-lib's keywording cannot be maintained, please leave it masked.

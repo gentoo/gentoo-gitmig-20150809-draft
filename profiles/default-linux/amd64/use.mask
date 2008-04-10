@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.69 2008/01/10 01:43:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.70 2008/04/10 06:34:05 dberkholz Exp $
 
 # SECTION: Unmask
 
@@ -39,6 +39,7 @@
 -input_devices_wacom
 -video_cards_nvidia
 -video_cards_fglrx
+-video_cards_via
 -video_cards_vmware
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Jan 2007)

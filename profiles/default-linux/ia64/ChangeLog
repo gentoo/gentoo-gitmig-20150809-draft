@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.46 2008/04/09 17:20:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.47 2008/04/10 06:34:07 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
+  Via hardware isn't available on ia64 as far as I know.
 
   09 Apr 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask laptop, not available on ia64

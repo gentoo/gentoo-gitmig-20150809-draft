@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.5 2008/04/09 17:22:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.6 2008/04/10 06:34:02 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
+  changing around video_cards_via masking by unmasking only for available
+  arches instead of masking on unavailable.
 
   09 Apr 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask laptop, no hardware to test

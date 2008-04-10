@@ -1,6 +1,20 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.32 2008/04/02 22:24:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.33 2008/04/10 06:34:08 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; dev/ppc32/use.mask,
+  dev/ppc64/2007.0/32bit-userland/use.mask,
+  dev/ppc64/2007.0/64bit-userland/use.mask,
+  dev/ppc64/2007.0/multilib/use.mask,
+  dev/ppc64/2007.1/32bit-userland/use.mask,
+  dev/ppc64/2007.1/64bit-userland/use.mask, ppc32/use.mask,
+  ppc64/2006.0/multilib/use.mask, ppc64/2006.1/32bit-userland/use.mask,
+  ppc64/2006.1/64bit-userland-gcc4/use.mask,
+  ppc64/2006.1/64bit-userland/use.mask, ppc64/2006.1/multilib/use.mask,
+  ppc64/2007.0/32bit-userland/use.mask,
+  ppc64/2007.0/64bit-userland/use.mask:
+  changing around video_cards_via masking by unmasking only for available
+  arches instead of masking on unavailable.
 
   02 Apr 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   USE mask dvb and mythtv on gst-plugins-meta - dependencies not keyworded

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.4 2008/04/09 17:22:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.5 2008/04/10 06:34:02 dberkholz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -123,7 +123,6 @@ video_cards_nsc
 video_cards_s3
 video_cards_sis
 video_cards_tseng
-video_cards_via
 video_cards_imstt
 video_cards_s3virge
 video_cards_i128

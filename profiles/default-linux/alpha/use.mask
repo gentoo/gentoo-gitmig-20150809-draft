@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.91 2008/04/03 09:22:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.92 2008/04/10 06:34:04 dberkholz Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -105,7 +105,6 @@ video_cards_sis
 video_cards_trident
 video_cards_tseng
 video_cards_vesa
-video_cards_via
 
 
 # dspam and dspam-web use this one
