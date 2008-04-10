@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.1 2008/03/31 21:11:46 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.2 2008/04/10 18:23:35 aballier Exp $
 
 inherit eutils kde
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="media-video/ffmpeg
 	>=media-libs/mlt-0.2.4-r1
-	>=media-libs/mlt++-20060601"
+	>=media-libs/mlt++-0.2.2"
 
 DEPEND="${RDEPEND}
 	x11-base/xorg-server

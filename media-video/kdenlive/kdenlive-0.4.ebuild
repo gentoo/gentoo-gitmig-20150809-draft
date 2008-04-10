@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.3 2007/07/22 08:51:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.4 2008/04/10 18:23:35 aballier Exp $
 
 inherit eutils kde
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/libsdl-1.2.8-r1
 	quicktime? ( >=media-libs/libquicktime-0.9.7-r1 )
 	>=media-video/ffmpeg-0.4.9_p20060302
 	>=media-libs/mlt-0.2.2
-	>=media-libs/mlt++-20060601"
+	>=media-libs/mlt++-0.2.2"
 
 DEPEND="${RDEPEND}
 	x11-base/xorg-server

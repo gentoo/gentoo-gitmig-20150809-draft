@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.20 2008/03/31 21:11:46 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.21 2008/04/10 18:23:35 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org> kdenlive-0.4.ebuild,
+  kdenlive-0.5.ebuild:
+  Go back to a sane versionning scheme for mlt++, bug #201492.
 
 *kdenlive-0.5 (31 Mar 2008)
 
