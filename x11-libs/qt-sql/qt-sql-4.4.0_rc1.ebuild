@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_beta1.ebuild,v 1.2 2008/03/09 15:31:29 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_rc1.ebuild,v 1.7 2008/04/10 13:43:13 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -51,10 +51,10 @@ src_compile() {
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr
 		-no-xfixes -no-xcursor -no-xinerama -no-xshape -no-sm -no-opengl
-		-no-nas-sound -no-qdbus -iconv -no-cups -no-nis -no-gif -no-libpng
+		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -no-openssl -system-zlib -no-webkit -no-phonon
 		-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig
-		-no-glib -no-opengl"
+		-no-glib -no-opengl -no-svg"
 
 	qt4-build_src_compile
 }
