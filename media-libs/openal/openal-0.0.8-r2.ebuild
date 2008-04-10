@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.3 2008/04/10 00:51:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.4 2008/04/10 03:05:24 wolf31o2 Exp $
 
 inherit autotools eutils
 
-DESCRIPTION="the Open Audio Library is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
+DESCRIPTION="an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
 HOMEPAGE="http://www.openal.org"
 SRC_URI="http://www.openal.org/openal_webstf/downloads/${P}.tar.gz"
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	EPATCH_SUFFIX="patch"
-	epatch ${FILESDIR}/${PV} || die
+	epatch "${FILESDIR}"/${PV} || die
 
 	sed -i \
 		-e "/^Requires:/d" \

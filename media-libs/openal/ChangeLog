@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.84 2008/04/10 00:51:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.85 2008/04/10 03:05:24 wolf31o2 Exp $
+
+  10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-0.0.8-r2.ebuild:
+  QA cleanup: Fix quoting.
 
   10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   openal-0.0.8-r2.ebuild:
