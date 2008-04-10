@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8487 2008/04/10 17:15:58 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8488 2008/04/10 22:20:06 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alin Nastac <mrness@gentoo.org> (11 Apr 2008)
+# Masked for removal on April the 25th (#174109).
+# Use net-proxy/privoxy instead.
+net-proxy/junkbuster
 
 # Rémi Cardona <remi@gentoo.org> (10 Apr 2008)
 # Masked until all deps are in portage
