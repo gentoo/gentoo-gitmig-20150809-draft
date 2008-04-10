@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-clipman
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.36 2008/03/22 08:31:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.37 2008/04/10 14:42:44 drac Exp $
+
+  10 Apr 2008; Samuli Suominen <drac@gentoo.org> xfce4-clipman-0.8.1.ebuild:
+  amd64 stable
 
 *xfce4-clipman-0.8.1 (22 Mar 2008)
 
