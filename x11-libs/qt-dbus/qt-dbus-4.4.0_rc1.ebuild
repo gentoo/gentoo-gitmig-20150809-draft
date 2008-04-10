@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:08:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_rc1.ebuild,v 1.8 2008/04/10 13:40:18 ingmar Exp $
 
 inherit qt4-build
 
@@ -24,12 +24,24 @@ src/dbus
 tools/qdbus/qdbus
 tools/qdbus/qdbusxml2cpp
 tools/qdbus/qdbuscpp2xml"
-QCONFIG_ADD="qdbus"
+QCONFIG_ADD="dbus dbus-linked"
 QCONFIG_DEFINE="QT_DBUS"
+
+#FIXME: Check if these are still needed with the header package
+QT4_EXTRACT_DIRECTORIES="
+include/Qt/
+include/QtCore/
+include/QtDBus/
+src/corelib/global/
+src/corelib/io/
+src/corelib/kernel/
+src/corelib/thread/
+src/corelib/tools/
+"
 
 src_compile() {
 	local myconf
-	myconf="${myconf} -qdbus"
+	myconf="${myconf} -dbus-linked"
 
 	qt4-build_src_compile
 }
