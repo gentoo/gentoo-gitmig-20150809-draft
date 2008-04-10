@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.60 2008/02/24 02:27:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.61 2008/04/10 07:36:24 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/6.8.0/0002-RADEON-update-man-page-with-supported-chips.patch,
+  +files/6.8.0/0004-RADEON-restore-clock-gating-and-CP-clock-errata-on.patch
+  , +files/6.8.0/0006-radeon-Fix-typo-flagged-by-gcc-Wall.patch,
+  +files/6.8.0/0003-RADEON-fix-DDC-types-5-and-6.patch,
+  +files/6.8.0/0005-R100-fix-render-accel-for-transforms.patch,
+  +files/6.8.0/0007-ATOM-properly-set-up-DDIA-output-on-RS6xx-boards.patch,
+  +files/6.8.0/0001-Bump-CRTC-size-limits-on-AVIVO-chips-so-30-displays.patc
+  h, +files/6.8.0/0008-RS6xx-fix-DDC-on-DDIA-output-usually-HDMI-port.patch,
+  +files/6.8.0/0134-Disable-the-setting-of-HARDWARE_CURSOR_BIT_ORDER_MSB.pat
+  ch, xf86-video-ati-6.8.0.ebuild:
+  Add some patches from upstream to fix a number of bugs, including #216637.
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.

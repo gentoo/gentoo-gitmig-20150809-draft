@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0.ebuild,v 1.1 2008/02/19 08:22:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0.ebuild,v 1.2 2008/04/10 07:36:24 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -27,6 +27,18 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2 )"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
+
+PATCHES="
+	${FILESDIR}/${PV}/0001-Bump-CRTC-size-limits-on-AVIVO-chips-so-30-displays.patch
+	${FILESDIR}/${PV}/0002-RADEON-update-man-page-with-supported-chips.patch
+	${FILESDIR}/${PV}/0003-RADEON-fix-DDC-types-5-and-6.patch
+	${FILESDIR}/${PV}/0004-RADEON-restore-clock-gating-and-CP-clock-errata-on.patch
+	${FILESDIR}/${PV}/0005-R100-fix-render-accel-for-transforms.patch
+	${FILESDIR}/${PV}/0006-radeon-Fix-typo-flagged-by-gcc-Wall.patch
+	${FILESDIR}/${PV}/0007-ATOM-properly-set-up-DDIA-output-on-RS6xx-boards.patch
+	${FILESDIR}/${PV}/0008-RS6xx-fix-DDC-on-DDIA-output-usually-HDMI-port.patch
+	${FILESDIR}/${PV}/0134-Disable-the-setting-of-HARDWARE_CURSOR_BIT_ORDER_MSB.patch
+	"
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
