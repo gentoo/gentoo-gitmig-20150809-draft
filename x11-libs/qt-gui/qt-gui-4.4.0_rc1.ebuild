@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:09:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.11 2008/04/10 13:40:47 ingmar Exp $
 
 EAPI="1"
 inherit eutils qt4-build
@@ -43,11 +43,12 @@ QT4_TARGET_DIRECTORIES="
 src/gui
 tools/designer
 tools/linguist
-src/tools/lrelease
-src/tools/lupdate
 src/plugins/imageformats/gif
 src/plugins/imageformats/ico
 src/plugins/imageformats/jpeg"
+QT4_EXTRACT_DIRECTORIES="
+src/tools/rcc/
+tools/shared/"
 
 pkg_setup() {
 	use glib && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
@@ -59,6 +60,10 @@ pkg_setup() {
 }
 
 src_unpack() {
+	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
+	use mng && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/mng"
+	use tiff && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/tiff"
+
 	qt4-build_src_unpack
 
 	# Don't build plugins this go around, because they depend on qt3support lib
@@ -85,15 +90,11 @@ src_compile() {
 
 	myconf="${myconf} -qt-gif -system-libpng -system-libjpeg
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2 -no-sql-odbc
-		-xrender -xrandr -xkb -xshape -sm"
+		-xrender -xrandr -xkb -xshape -sm  -no-svg"
 
 	# Explictly don't compile these packages.
 	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
-	myconf="${myconf} -no-webkit -no-phonon -no-qdbus -no-opengl"
-
-	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
-	use mng && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/mng"
-	use tiff && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/tiff"
+	myconf="${myconf} -no-webkit -no-phonon -no-dbus -no-opengl"
 
 	qt4-build_src_compile
 }
