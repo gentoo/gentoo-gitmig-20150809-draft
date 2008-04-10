@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r3.ebuild,v 1.1 2008/04/06 19:12:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r3.ebuild,v 1.2 2008/04/10 19:40:25 maekke Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ IUSE="branding cairo gnome opengl seamonkey "
 SLOT="3.2"
 LICENSE="EPL-1.0"
 # TODO might be able to have ia64 and ppc64 support
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 S="${WORKDIR}"
 
 COMMON_DEP="
