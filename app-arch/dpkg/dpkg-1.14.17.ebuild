@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.14.17.ebuild,v 1.1 2008/04/02 03:04:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.14.17.ebuild,v 1.2 2008/04/10 04:16:46 vapier Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="bzip2 nls selinux test zlib"
+IUSE="bzip2 nls selinux test unicode zlib"
 
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
@@ -25,6 +25,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.14.12-nls.patch #192819
+	if ! use unicode ; then
+		sed -i "s:ncursesw/curses.h:curses.h:" dselect/dselect.h #217046
+		export ac_cv_lib_ncursesw_initscr=no
+	fi
 }
 
 src_compile() {
