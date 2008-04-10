@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ams
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.21 2007/07/02 15:10:16 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.22 2008/04/10 11:45:59 drac Exp $
+
+*ams-1.8.8_rc2 (10 Apr 2008)
+
+  10 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/ams-1.8.8_rc2-spectrumscreen.patch, +ams-1.8.8_rc2.ebuild:
+  Version bump and mark it stable for amd64 wrt #216891.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ams-1.8.4.ebuild,
   ams-1.8.7.ebuild:
