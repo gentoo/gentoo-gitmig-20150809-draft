@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r1.ebuild,v 1.8 2008/04/08 21:06:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r1.ebuild,v 1.9 2008/04/10 08:58:48 drac Exp $
 
 inherit autotools eutils
 
@@ -35,7 +35,8 @@ RDEPEND="media-libs/libao
 	speex? ( >=media-libs/speex-1 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1 )
 	curl? ( >=net-misc/curl-7.12.2 )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
