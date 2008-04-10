@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-unison
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.1 2008/04/07 21:29:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.2 2008/04/10 19:28:03 maekke Exp $
+
+  10 Apr 2008; Markus Meier <maekke@gentoo.org> eselect-unison-0.1.ebuild:
+  add ~x86, bug #207746
 
 *eselect-unison-0.1 (07 Apr 2008)
 
