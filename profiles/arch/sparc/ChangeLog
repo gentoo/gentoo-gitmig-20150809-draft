@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.7 2008/04/10 19:53:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.8 2008/04/10 19:54:13 dberkholz Exp $
+
+  10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
+  Make VIDEO_CARDS defaults a reasonable set instead of every imaginable
+  card.
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Make VIDEO_CARDS defaults a reasonable set instead of every imaginable
