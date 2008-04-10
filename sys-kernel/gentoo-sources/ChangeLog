@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.500 2008/04/09 18:52:30 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.501 2008/04/10 06:33:33 phreak Exp $
+
+  10 Apr 2008; Christian Heim <phreak@gentoo.org> Manifest:
+  Fixing the Manifest for gentoo-sources-2.6.24-r4 (#217085).
 
 *gentoo-sources-2.6.24-r5 (09 Apr 2008)
 
