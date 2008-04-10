@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.25 2008/04/10 14:47:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.26 2008/04/10 14:55:05 drac Exp $
+
+  10 Apr 2008; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Reassign to freedesktop herd.
 
   10 Apr 2008; Samuli Suominen <drac@gentoo.org> libopenraw-0.0.5.ebuild:
   amd64 stable
