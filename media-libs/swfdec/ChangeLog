@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.29 2008/04/06 18:45:12 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.30 2008/04/10 08:51:06 armin76 Exp $
+
+  10 Apr 2008; Raúl Porcel <armin76@gentoo.org> swfdec-0.6.2.ebuild:
+  Add ~alpha/~ia64/sparc
 
   06 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   swfdec-0.6.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.2.ebuild,v 1.2 2008/04/06 18:45:12 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.2.ebuild,v 1.3 2008/04/10 08:51:06 armin76 Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://swfdec.freedesktop.org/download/${PN}/${MY_PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 IUSE="alsa doc ffmpeg gstreamer gtk mad oss pulseaudio"
 
