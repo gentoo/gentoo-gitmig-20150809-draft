@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt++
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.8 2007/04/26 21:05:40 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.9 2008/04/10 18:06:12 aballier Exp $
+
+  10 Apr 2008; Alexis Ballier <aballier@gentoo.org> -mlt++-20051209.ebuild:
+  remove old
 
   26 Apr 2007; Alexis Ballier <aballier@gentoo.org>
   +files/mlt++-20060601-relink.patch, mlt++-20060601.ebuild:
