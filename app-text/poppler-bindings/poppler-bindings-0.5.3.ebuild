@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.3.ebuild,v 1.19 2008/03/01 04:54:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.3.ebuild,v 1.20 2008/04/10 19:05:45 tgurr Exp $
 
 inherit autotools eutils multilib
 
@@ -32,9 +32,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/poppler-0.5.2-bindings.patch
+	epatch "${FILESDIR}"/poppler-0.5.2-bindings.patch
 
 	AT_M4DIR="m4" eautoreconf
 	sed -i s:/usr/lib/qt:/usr/lib/qt4: configure
@@ -63,7 +63,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
