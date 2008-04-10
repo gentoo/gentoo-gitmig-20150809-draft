@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.526 2008/03/19 04:20:15 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.527 2008/04/10 13:38:40 ingmar Exp $
+
+  10 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> -qt-4.4.0_beta1.ebuild,
+  +qt-4.4.0_rc1.ebuild:
+  Version bump qt to 4.4.0_rc1. Thanks to Bo Andresen and Bernd Steinhauser.
 
   19 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> ChangeLog:
   Anti-aliasing rules are broken in qt-4.3*, causing random runtime failures
