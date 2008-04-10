@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.9 2008/04/09 17:25:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.10 2008/04/10 18:57:10 coldwind Exp $
+
+  10 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> ounit-1.0.2.ebuild:
+  amd64 stable wrt bug #216987
 
   09 Apr 2008; nixnut <nixnut@gentoo.org> ounit-1.0.2.ebuild:
   Stable on ppc wrt bug #216987
