@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.1.ebuild,v 1.4 2008/04/07 21:32:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.1.ebuild,v 1.5 2008/04/10 04:38:13 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -21,6 +21,7 @@ src_compile() {
 
 src_install() {
 	emake install prefix="${D}"/usr || die
+	rm -rf "${D}"/usr/include # part of linux-headers
 	dodoc CHANGES README
 	local d
 	for d in eeprom eepromer py-smbus ; do
