@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.6.ebuild,v 1.1 2008/03/02 19:54:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.6.ebuild,v 1.2 2008/04/10 15:39:52 drac Exp $
 
 MY_PV="${PV%.*}${PV##*.}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.transmissionbt.com/transmission/files/${PN}-${MY_PV}.ta
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="gtk"
 
 RDEPEND=">=dev-libs/glib-2.6
