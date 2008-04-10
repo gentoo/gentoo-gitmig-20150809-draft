@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/viaideinfo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.8 2007/05/15 14:13:31 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.9 2008/04/10 19:21:24 maekke Exp $
+
+  10 Apr 2008; Markus Meier <maekke@gentoo.org> viaideinfo-0.5.ebuild:
+  quotes and x86 stable, bug #192791
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
