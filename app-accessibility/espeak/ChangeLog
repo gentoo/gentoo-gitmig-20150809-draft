@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.38 2008/04/09 17:36:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.39 2008/04/10 18:25:33 corsair Exp $
+
+  10 Apr 2008; Markus Rothe <corsair@gentoo.org> espeak-1.36.ebuild:
+  Stable on ppc64; bug #216707
 
   09 Apr 2008; nixnut <nixnut@gentoo.org> espeak-1.36.02.ebuild:
   Stable on ppc wrt bug #216707
