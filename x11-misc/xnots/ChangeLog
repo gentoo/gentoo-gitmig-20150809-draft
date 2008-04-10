@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/xnots
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.1 2008/04/10 08:55:51 nelchael Exp $
+
+*xnots-0.2 (10 Apr 2008)
+
+  10 Apr 2008; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +xnots-0.2.ebuild:
+  New package: xNots: A desktop sticky note program for the unix geek.
+  Thanks to Gautam Iyer in bug #214824.
+
