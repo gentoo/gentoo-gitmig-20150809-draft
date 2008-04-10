@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.90 2008/03/25 19:54:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.91 2008/04/10 22:59:59 wltjr Exp $
+
+*firebird-2.1.0.17755_rc2-r1 (10 Apr 2008)
+*firebird-2.0.3.12981.0-r6 (10 Apr 2008)
+
+  10 Apr 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-2.0.3.12981.0-paths.patch, files/firebird.conf.d.2,
+  +files/firebird.init.d, -firebird-2.0.3.12981.0-r2.ebuild,
+  +firebird-2.0.3.12981.0-r6.ebuild, -firebird-2.1.0.17755_rc2.ebuild,
+  +firebird-2.1.0.17755_rc2-r1.ebuild:
+  Updated conf.d and init.d files. Removed legacy ISC cruft,
+  username/password in text file, exported to env during start. Resolves bug
+  #216158. Init script using s-s-d now for start and stop via pid. Added
+  restart.
 
 *firebird-2.1.0.17755_rc2 (25 Mar 2008)
 
