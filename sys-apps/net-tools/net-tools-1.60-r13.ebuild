@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r13.ebuild,v 1.11 2007/11/01 15:43:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r13.ebuild,v 1.12 2008/04/10 21:13:43 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -54,7 +54,7 @@ src_unpack() {
 }
 
 src_compile() {
-	tc-export CC
+	tc-export AR CC
 	emake libdir || die "emake libdir failed"
 	emake || die "emake failed"
 	emake -C ethercard-diag || die "emake ethercard-diag failed"
@@ -65,8 +65,8 @@ src_compile() {
 }
 
 src_install() {
-	make BASEDIR="${D}" install || die "make install failed"
-	make -C ethercard-diag DESTDIR="${D}" install || die "make install ethercard-diag failed"
+	emake BASEDIR="${D}" install || die "make install failed"
+	emake -C ethercard-diag DESTDIR="${D}" install || die "make install ethercard-diag failed"
 	mv "${D}"/usr/share/man/man8/ether{,-}wake.8
 	mv "${D}"/usr/sbin/mii-diag "${D}"/sbin/ || die "mv mii-diag failed"
 	mv "${D}"/bin/* "${D}"/sbin/ || die "mv bin to sbin failed"
