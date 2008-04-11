@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmss
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.25 2007/06/12 21:07:35 lack Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.26 2008/04/11 15:12:26 lack Exp $
+
+*gkrellmss-2.6-r1 (11 Apr 2008)
+
+  11 Apr 2008; Jim Ramsay <lack@gentoo.org> +gkrellmss-2.6-r1.ebuild:
+  Fixes build problems with fftw-2 by using fftw-3 instead (Bug 204569)
 
   12 Jun 2007; Jim Ramsay <lack@gentoo.org> -gkrellmss-2.3.ebuild,
   -gkrellmss-2.4.ebuild:
