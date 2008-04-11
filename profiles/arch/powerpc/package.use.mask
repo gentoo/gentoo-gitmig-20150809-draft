@@ -4,6 +4,10 @@
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
 media-plugins/gst-plugins-meta dvb mythtv
 
+# nixnut <nixnut@gentoo.org> (11 mar 2008)
+# USE=musepack wants musepack-tools which can't be build on ppc
+media-sound/squeezecenter musepack
+
 # Mark Loeser <halcy0n@gentoo.org> (18 Jan 2008)
 # mono doesn't work with Openoffice - bug #202361
 app-office/openoffice mono
@@ -14,12 +18,14 @@ app-office/openoffice mono
 =dev-java/ibm-jre-bin-1.6* -nsplugin
 ~dev-util/checkstyle-4.3 test
 
-# Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
-# Mask mono flag for gnome as tomboy is segfaulting.
+# Joseph Jezak <josejx@gentoo.org> (28 Jun 2007)
+# Masked Parallel LCD devices for bug #180683
+
+# app-misc/lcd4linux
+app-misc/lcd4linux lcd_devices_hd44780
+
+# app-misc/tomboy is missing ppc support
 gnome-base/gnome mono
 
-# Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask python flag until the ppc keyword is added to dev-python/pygments
-# for bug #198989.
-sys-apps/paludis python
-
+# ppc does not have nvidia-drivers
+media-tv/mythtv opengl-xvmc
