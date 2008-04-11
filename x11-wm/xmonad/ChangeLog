@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.5 2008/02/02 19:06:13 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.6 2008/04/11 15:20:51 kolmodin Exp $
+
+*xmonad-0.7 (11 Apr 2008)
+
+  11 Apr 2008; Lennart Kolmodin <kolmodin@gentoo.org> files/xmonad.desktop,
+  +xmonad-0.7.ebuild:
+  Version bump to 0.7, and set proper Type in the xmonad.desktop file.
 
 *xmonad-0.6 (02 Feb 2008)
 
