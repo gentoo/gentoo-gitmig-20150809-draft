@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/service-discovery-applet-0.4.3.ebuild,v 1.4 2007/07/08 05:56:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/service-discovery-applet-0.4.3.ebuild,v 1.5 2008/04/11 19:12:28 swegener Exp $
 
 inherit eutils gnome2
 
@@ -27,6 +27,11 @@ pkg_setup() {
 	if ! built_with_use net-dns/avahi python || ! ( has_version dev-python/dbus-python || built_with_use sys-apps/dbus python )
 	then
 		die "Sorry, but you need net-dns/avahi and sys-apps/dbus compiled with python support."
+	fi
+
+	if ! built_with_use net-dns/avahi gdbm
+	then
+		die "Sorry, but you need net-dns/avahi compiled with gdbm support."
 	fi
 }
 

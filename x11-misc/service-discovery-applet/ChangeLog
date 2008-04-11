@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/service-discovery-applet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.7 2007/07/08 05:56:45 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.8 2008/04/11 19:12:28 swegener Exp $
+
+  11 Apr 2008; Sven Wegener <swegener@gentoo.org>
+  service-discovery-applet-0.4.3.ebuild:
+  Require net-dns/avahi with gdbm support, bug #154965.
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   service-discovery-applet-0.4.3.ebuild:
