@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.179 2008/04/11 21:50:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.180 2008/04/11 23:50:59 cardoe Exp $
+
+  11 Apr 2008; Doug Goldstein <cardoe@gentoo.org> cairo-1.6.4.ebuild:
+  I fail. Forgot to remove epatch calls
 
 *cairo-1.6.4 (11 Apr 2008)
 
