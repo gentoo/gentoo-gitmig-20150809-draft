@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.109 2008/04/11 14:13:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.110 2008/04/11 14:17:36 graaff Exp $
+
+  11 Apr 2008; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.21-r1.ebuild:
+  Bump to stable since the bug fix in -r1 only affects a shell script that
+  needs to be used with SCCS.
 
 *xemacs-21.4.21-r1 (11 Apr 2008)
 
