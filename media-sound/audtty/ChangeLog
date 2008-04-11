@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.13 2008/01/14 14:10:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.14 2008/04/11 11:13:19 drac Exp $
+
+  11 Apr 2008; Samuli Suominen <drac@gentoo.org> audtty-0.1.7.ebuild:
+  Fixed invalid depend, pkgconfig is only required when building. Marked amd64
+  stable for bug 216888. Use emake instead of make.
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> audtty-0.1.7.ebuild:
   Add pkgconfig dependency for the Evil Compile Person
