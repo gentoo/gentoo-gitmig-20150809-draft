@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.1.0.ebuild,v 1.3 2008/04/11 06:55:49 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.1.0.ebuild,v 1.4 2008/04/11 07:00:30 rbrown Exp $
 
 inherit ruby
 
@@ -23,9 +23,9 @@ PDEPEND="server? ( dev-ruby/builder )" # index_gem_repository.rb
 
 USE_RUBY="ruby18"
 
-PATCHES=(${FILESDIR}/${P}-setup.patch
+PATCHES="${FILESDIR}/${P}-setup.patch
 	${FILESDIR}/${P}-dependency-installer-install-dir-fix.patch
-	)
+	"
 
 src_unpack() {
 	ruby_src_unpack
