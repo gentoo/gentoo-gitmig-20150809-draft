@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.1 2008/01/03 17:53:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.2 2008/04/11 19:16:55 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
@@ -81,6 +81,11 @@ pkg_setup() {
 	if use bookmarks && ! ( use python && use dbus && use gtk )
 	then
 		die "For bookmarks support you also need to enable the python, dbus and gtk USE flags!"
+	fi
+
+	if use python && ! use dbus && ! use gtk
+	then
+		die "For proper python support you also need the dbus and gtk USE flags!"
 	fi
 }
 

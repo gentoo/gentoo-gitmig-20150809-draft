@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.135 2008/02/21 14:13:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.136 2008/04/11 19:16:55 swegener Exp $
+
+  11 Apr 2008; Sven Wegener <swegener@gentoo.org> avahi-0.6.22-r1.ebuild:
+  We need dbus and gtk support for proper python support, bug #216835.
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> avahi-0.6.20-r2.ebuild:
   alpha/ia64/sparc/x86 stable
