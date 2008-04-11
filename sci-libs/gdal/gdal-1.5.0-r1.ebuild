@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0-r1.ebuild,v 1.1 2008/03/22 06:14:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0-r1.ebuild,v 1.2 2008/04/11 18:16:41 grobian Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module toolchain-funcs
@@ -95,7 +95,7 @@ src_compile() {
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-	    $(use_with sqlite) $(use_with jpeg2k jasper) $(use_with odbc) \
+	    $(use_with sqlite sqlite3) $(use_with jpeg2k jasper) $(use_with odbc) \
 	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
 	    $(use_enable debug)"
 
