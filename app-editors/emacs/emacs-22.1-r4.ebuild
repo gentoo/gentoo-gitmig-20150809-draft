@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.20 2008/03/28 06:29:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r4.ebuild,v 1.1 2008/04/11 14:00:08 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -63,6 +63,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-hack-local-variables.patch"
 	epatch "${FILESDIR}/${P}-format-int.patch"
 	epatch "${FILESDIR}/${P}-s390x-non-multilib.patch"
+	epatch "${FILESDIR}/${P}-vcdiff-tmp-race.patch"
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \

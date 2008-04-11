@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.2.ebuild,v 1.4 2008/04/06 22:05:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.2-r1.ebuild,v 1.1 2008/04/11 14:00:08 ulm Exp $
 
 inherit autotools elisp-common eutils flag-o-matic
 
@@ -56,6 +56,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/emacs-22.1-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/emacs-22.1-freebsd-sparc.patch"
+	epatch "${FILESDIR}/emacs-22.1-vcdiff-tmp-race.patch"
 	epatch "${FILESDIR}/${P}-heimdal-gentoo.patch"
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
