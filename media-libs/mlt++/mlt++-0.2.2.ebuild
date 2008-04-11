@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-0.2.2.ebuild,v 1.2 2008/04/10 18:32:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-0.2.2.ebuild,v 1.3 2008/04/11 01:31:43 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,6 @@ src_compile() {
 	econf
 	emake CC="$(tc-getCXX)" || die "emake failed"
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
