@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.2.ebuild,v 1.2 2008/04/11 20:18:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.4.ebuild,v 1.1 2008/04/11 21:50:21 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
