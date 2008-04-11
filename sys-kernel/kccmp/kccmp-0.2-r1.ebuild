@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2-r1.ebuild,v 1.2 2008/04/11 12:45:09 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2-r1.ebuild,v 1.3 2008/04/11 12:56:35 mpagano Exp $
 
 EAPI="1"
 inherit qt3 qt4
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="qt4"
 RDEPEND="!qt4? ( >=x11-libs/qt-3.3.8-r4:3 )
-	qt4? ( || ( x11-libs/qt-core:4
+	qt4? ( || ( ( x11-libs/qt-core:4
 			x11-libs/qt-gui:4 )
-			>=x11-libs/qt-4.3:4 )"
+			>=x11-libs/qt-4.3:4 ) )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

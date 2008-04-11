@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kccmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.8 2008/04/11 12:08:53 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.9 2008/04/11 12:56:35 mpagano Exp $
+
+  11 Apr 2008; Mike Pagano <mpagano@gentoo.org> kccmp-0.2-r1.ebuild:
+  RDEPEND fixes
 
 *kccmp-0.2-r1 (11 Apr 2008)
 
