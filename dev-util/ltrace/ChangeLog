@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.45 2008/03/27 16:39:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.46 2008/04/11 17:47:27 corsair Exp $
+
+  11 Apr 2008; Markus Rothe <corsair@gentoo.org>
+  files/ltrace-0.5.3-ppc.patch, ltrace-0.5.3.ebuild:
+  Update ppc patch to replace HOST_CPU powerpc64 with ppc. Add ~ppc64. Bug
+  #217219
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org> ltrace-0.4-r1.ebuild:
   Fix debian HOMEPAGE
