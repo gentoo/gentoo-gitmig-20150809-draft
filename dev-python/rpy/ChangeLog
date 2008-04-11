@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.20 2008/02/26 20:06:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.21 2008/04/11 16:38:39 bicatali Exp $
+
+*rpy-1.0.2 (11 Apr 2008)
+
+  11 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> +rpy-1.0.2.ebuild:
+  Version bump. Make lapack detection automatic
 
   26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/rpy-0.99.2-version-detect.patch,
