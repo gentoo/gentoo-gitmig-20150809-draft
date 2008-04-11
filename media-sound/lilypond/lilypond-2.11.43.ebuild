@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.43.ebuild,v 1.1 2008/03/29 12:15:48 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.43.ebuild,v 1.2 2008/04/11 20:36:14 hkbst Exp $
 
 inherit eutils versionator toolchain-funcs elisp-common
 
@@ -38,7 +38,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=media-gfx/fontforge-20070501
 	>=app-text/mftrace-1.2.9
-	>=sys-apps/texinfo-4.8
+	>=sys-apps/texinfo-4.11
 	sys-devel/make
 	sys-devel/gettext
 	sys-devel/flex
