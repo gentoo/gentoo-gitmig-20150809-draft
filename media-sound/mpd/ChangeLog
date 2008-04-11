@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.119 2008/02/07 12:27:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.120 2008/04/11 21:31:05 yngwin Exp $
+
+  11 Apr 2008; Ben de Groot <yngwin@gentoo.org> files/mpd.rc:
+  Adding "use net.lo" to init.d script. Fixes bug 215801.
 
   07 Feb 2008; Raúl Porcel <armin76@gentoo.org> mpd-0.13.1.ebuild:
   sparc stable wrt security #208787
