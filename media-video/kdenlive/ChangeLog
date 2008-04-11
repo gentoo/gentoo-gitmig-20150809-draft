@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.22 2008/04/11 11:44:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.23 2008/04/11 13:40:15 aballier Exp $
+
+  11 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/kdenlive-0.5-gcc-4.3.patch, kdenlive-0.5.ebuild:
+  gcc 4.3 build fix by Martin Väth <vaeth@mathematik.uni-wuerzburg.de>, bug
+  #215720
 
   11 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   +files/kdenlive-0.5-ffmpegheaders.patch, kdenlive-0.5.ebuild:
