@@ -1,0 +1,22 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start () {
+	ebegin "Starting Last.fm Proxy"
+	start-stop-daemon --start -p /var/run/lastfmproxy.pid -b -m \
+		--exec /usr/share/lastfmproxy/main.py
+	einfo "Stream: http://localhost:1881/lastfm.m3u"
+	einfo "Web frontend: http://localhost:1881/"
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping Last.fm Proxy"
+	start-stop-daemon --stop --quiet -p /var/run/lastfmproxy.pid -m \
+		--exec /usr/share/lastfmproxy/main.py
+	rm -f /var/run/lastfmproxy.pid
+	eend $?
+}
