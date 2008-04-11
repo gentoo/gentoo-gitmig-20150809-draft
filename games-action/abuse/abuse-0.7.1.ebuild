@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.5 2008/03/12 21:39:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.6 2008/04/11 15:46:03 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -23,6 +23,15 @@ RDEPEND=">=media-libs/libsdl-1.1.6"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	virtual/opengl"
+src_unpack() {
+	unpack ${A}
+	#fix placing additional patches
+	cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}"
+	cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}"
+	cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}"
+	rm -rf "${WORKDIR}"/abuse-frabs-2.11/ "${WORKDIR}"/abuse-lib-2.00.orig/ "${WORKDIR}"/abuse-sfx-2.00.orig/
+	cd ${S}
+}
 
 src_compile() {
 	# Abuse auto-appends games, so point to the base
@@ -38,7 +47,7 @@ src_install() {
 	# Data install
 	insinto "${GAMES_DATADIR}"/abuse
 	doins -r "${WORKDIR}"/{addon,art,levels,lisp,music,netlevel,register,sfx} \
-		"${WORKDIR}"/README.datafiles "${WORKDIR}"/abuse.lsp \
+		"${WORKDIR}"/abuse.lsp \
 		|| die "doins failed"
 
 	# Icons/desktop entry
