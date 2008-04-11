@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.14 2008/04/11 11:13:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.15 2008/04/11 11:29:53 drac Exp $
+
+*audtty-0.1.8 (11 Apr 2008)
+
+  11 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/audtty-0.1.8-cc-and-destdir.patch, +audtty-0.1.8.ebuild:
+  Version bump, reverting some Debian changes breaking standard DESTDIR.
 
   11 Apr 2008; Samuli Suominen <drac@gentoo.org> audtty-0.1.7.ebuild:
   Fixed invalid depend, pkgconfig is only required when building. Marked amd64
