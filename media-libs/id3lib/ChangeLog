@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.68 2007/10/23 18:37:04 aballier Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.69 2008/04/11 20:45:24 yngwin Exp $
+
+  11 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/id3lib-3.8.3-gcc-4.3.patch, id3lib-3.8.3-r6.ebuild:
+  Add gcc-4.3 patch from bug 212455
 
   23 Oct 2007; Alexis Ballier <aballier@gentoo.org> -id3lib-3.8.3-r5.ebuild:
   remove version affected by GLSA-200709-08
