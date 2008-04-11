@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0.ebuild,v 1.3 2008/03/24 11:27:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0.ebuild,v 1.4 2008/04/11 12:46:09 coldwind Exp $
 
 inherit eutils distutils
 
@@ -16,7 +16,6 @@ IUSE="cdaudio ffmpeg nls"
 RDEPEND=">=dev-lang/python-2.4
 	|| ( >=dev-lang/python-2.5 >=dev-python/ctypes-0.9 )
 	>=dev-python/PyQt4-4.2
-	>=x11-libs/qt-4.2
 	>=media-libs/mutagen-1.9
 	cdaudio? ( >=media-libs/libdiscid-0.1.1 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9
