@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.87 2008/04/10 19:32:13 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.88 2008/04/11 15:22:03 corsair Exp $
+
+  11 Apr 2008; Markus Rothe <corsair@gentoo.org> kaffeine-0.8.6.ebuild:
+  Stable on ppc64; bug #217216
 
   10 Apr 2008; Timo Gurr <tgurr@gentoo.org> kaffeine-0.8.5.ebuild,
   kaffeine-0.8.5-r1.ebuild, kaffeine-0.8.5-r2.ebuild, kaffeine-0.8.6.ebuild:
