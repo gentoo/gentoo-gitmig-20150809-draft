@@ -1,6 +1,10 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.25 2008/02/29 23:41:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.26 2008/04/11 15:41:11 wolf31o2 Exp $
+
+  11 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> crafty-20.13.ebuild,
+  -crafty-21.6-r1.ebuild, crafty-22.0.ebuild:
+  Removed icc USE flag use for bug #216511.
 
 *crafty-22.0 (29 Feb 2008)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.13.ebuild,v 1.3 2007/03/12 13:44:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-20.13.ebuild,v 1.4 2008/04/11 15:41:11 wolf31o2 Exp $
 
-inherit flag-o-matic games
+inherit flag-o-matic toolchain-funcs games
 
 DESCRIPTION="Bob Hyatt's strong chess engine"
 HOMEPAGE="ftp://ftp.cis.uab.edu/pub/hyatt/"
@@ -11,12 +11,11 @@ SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/source/${P}.zip"
 LICENSE="crafty"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
-IUSE="icc no-opts"
+IUSE="no-opts"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	icc? ( >=dev-lang/icc-5.0 )"
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +32,7 @@ src_compile() {
 	local makeopts="target=LINUX"
 
 	if ! use no-opts ; then
-		if use icc ; then
+		if [[ $(tc-getCC) = icc ]] ; then
 			makeopts="${makeopts} CC=icc CXX=gcc asm=X86.o"
 			append-flags -D_REENTRANT -tpp6 \
 				-DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
