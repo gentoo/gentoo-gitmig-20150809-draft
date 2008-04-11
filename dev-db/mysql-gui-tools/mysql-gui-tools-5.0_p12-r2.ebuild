@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.2 2008/02/24 16:16:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.3 2008/04/11 18:38:28 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -63,6 +63,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-5.0_p8-lua-modules.patch
 	epatch "${FILESDIR}"/${P}-workbench-lua.patch
 	epatch "${FILESDIR}"/${P}-query-browser-sps.patch
+	epatch "${FILESDIR}"/${P}-libsigc++-2.2.patch
 
 	sed -i \
 		-e "s/\\(^\\|[[:space:]]\\)-ltermcap\\($\\|[[:space:]]\\)/ /g" \
