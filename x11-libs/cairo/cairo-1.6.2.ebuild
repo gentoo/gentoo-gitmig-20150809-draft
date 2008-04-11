@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.2.ebuild,v 1.1 2008/04/11 20:16:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.2.ebuild,v 1.2 2008/04/11 20:18:40 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -53,6 +53,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.6.2-fix-g++-linking.patch
+	epatch "${FILESDIR}"/${PN}-1.6.2-mutex-crash-fix.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
