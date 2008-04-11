@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.2 2008/04/10 18:23:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.3 2008/04/11 11:44:22 aballier Exp $
 
 inherit eutils kde
 
@@ -36,8 +36,13 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	kde_src_unpack
+	epatch "${FILESDIR}/${P}-ffmpegheaders.patch"
+	rm -f configure
+}
+
 src_compile() {
-	rm configure
 	myconf="--enable-pch"
 
 	kde_src_compile
