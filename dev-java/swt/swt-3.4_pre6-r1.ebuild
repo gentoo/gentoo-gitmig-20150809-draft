@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.1 2008/04/03 19:40:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.2 2008/04/11 23:50:15 betelgeuse Exp $
 
 EAPI="1"
 
@@ -55,7 +55,13 @@ COMMON=">=dev-libs/glib-2.6
 			virtual/opengl
 			virtual/glu
 		)"
+
+# Use a blocker to avoid file collisions when upgrading to the slotted version
+# We cannot use slotmove, java packages are expected to be in /usr/share/PN-SLOT
+# so this is the only way to prevent collisions
+
 DEPEND=">=virtual/jdk-1.4
+		!=dev-java/swt-3.4*:3
 		app-arch/unzip
 		x11-libs/libX11
 		x11-libs/libXrender
@@ -69,17 +75,6 @@ RDEPEND=">=virtual/jre-1.4
 		${COMMON}"
 
 S="${WORKDIR}"
-
-pkg_setup() {
-	java-pkg-2_pkg_setup
-	# We cannot use slotmove, java packages are expected to be in /usr/share/PN-SLOT
-	# so this is the only way to prevent collisions
-	if has_version =dev-java/swt-3.4_pre6; then
-		elog "Please uninstall or downgrade dev-java/swt-3.4_pre6 first"
-		elog "before installing this version."
-		die "Please uninstall or downgrade dev-java/swt-3.4_pre6"
-	fi
-}
 
 src_unpack() {
 	local DISTFILE="${A}"
