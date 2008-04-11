@@ -30,7 +30,6 @@ kde
 diet
 lirc
 afs
-lesstif
 mono
 lm_sensors
 qdbm
@@ -51,7 +50,6 @@ dri
 # Only works on x86/amd64/ia64
 video_cards_vesa
 video_cards_sis
-video_cards_nv
 
 # nspr isnt ported to SuperH which means no seamonkey/firefox/etc...
 nsplugin
@@ -62,3 +60,6 @@ nss
 # Bug #184563, 18 Sep 2007 
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
+
+# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
+libssh2
