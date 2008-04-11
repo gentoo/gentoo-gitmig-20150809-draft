@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/exifr-0.10.6.ebuild,v 1.1 2008/01/15 23:22:44 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/exifr-0.10.6.ebuild,v 1.2 2008/04/11 18:41:38 coldwind Exp $
 
 inherit ruby gems
 
@@ -9,5 +9,5 @@ HOMEPAGE="http://exifr.rubyforge.org/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""

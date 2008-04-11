@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/exifr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.1 2008/01/15 23:22:44 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.2 2008/04/11 18:41:38 coldwind Exp $
+
+  11 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> exifr-0.10.6.ebuild:
+  Added ~amd64.
 
 *exifr-0.10.6 (15 Jan 2008)
 
