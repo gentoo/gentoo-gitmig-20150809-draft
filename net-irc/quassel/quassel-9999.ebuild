@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.1 2008/04/05 17:07:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.2 2008/04/11 11:31:37 flameeyes Exp $
 
 EAPI=1
 
@@ -73,6 +73,5 @@ src_install() {
 	use X && targets="${targets} build/targets/quasselclient"
 	dobin $targets  || die "quasselcore install failed"
 
-	dodoc ChangeLog README README.Qtopia dev-notes/paulk-notes.txt \
-		dev-notes/ROADMAP || die "dodoc failed"
+	dodoc ChangeLog README README.Qtopia || "dodoc failed"
 }
