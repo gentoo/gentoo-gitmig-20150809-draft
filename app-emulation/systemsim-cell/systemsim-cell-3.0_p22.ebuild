@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0-r2.ebuild,v 1.1 2008/04/03 16:35:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0_p22.ebuild,v 1.1 2008/04/11 17:16:13 corsair Exp $
 
 inherit rpm eutils
 
 DESCRIPTION="Full-System Simulator for the Cell Broadband Engine Processor"
 HOMEPAGE="http://www.alphaworks.ibm.com/tech/cellsystemsim"
-SRC_URI="x86? ( ${P}-15.i386.rpm )
-	ppc64? ( ${P}-15.ppc64.rpm )
-	amd64? ( ${P}-15.x86_64.rpm )"
+SRC_URI="x86? ( ${P/_p/-}.i386.rpm )
+	ppc64? ( ${P/_p/-}.ppc64.rpm )
+	amd64? ( ${P/_p/-}.x86_64.rpm )"
 
 LICENSE="IBM-ILAR"
 SLOT="0"
@@ -21,7 +21,7 @@ IMAGE_PATH="/usr/share/${PN}/image"
 DEPEND="=dev-lang/tcl-8.4*
 		=dev-lang/tk-8.4*"
 
-RESTRICT="fetch"
+RESTRICT="fetch strip"
 S="${WORKDIR}"
 
 pkg_nofetch() {
