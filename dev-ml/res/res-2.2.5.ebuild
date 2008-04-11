@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-2.2.5.ebuild,v 1.2 2008/01/04 07:18:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-2.2.5.ebuild,v 1.3 2008/04/11 22:00:24 maekke Exp $
 
 inherit findlib eutils
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc examples +ocamlopt"
 
 pkg_setup() {

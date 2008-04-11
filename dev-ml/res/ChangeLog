@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/res
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.5 2008/01/04 02:19:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.6 2008/04/11 22:00:24 maekke Exp $
+
+  11 Apr 2008; Markus Meier <maekke@gentoo.org> res-2.2.5.ebuild:
+  amd64/x86 stable, bug #216966
 
 *res-2.2.5 (04 Jan 2008)
 
