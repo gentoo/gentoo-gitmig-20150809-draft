@@ -1,0 +1,8 @@
+--- src/ksubtitleripper.desktop	2005-05-20 12:11:03.000000000 +0000
++++ src/ksubtitleripper.desktop	2006-02-06 19:05:57.000000000 +0000
+@@ -8,3 +8,4 @@
+ Comment=An application to extract DVD subtitles
+ Comment[es]=Una aplicación para extraer subtítulos de DVD
+ Terminal=0
++Categories=Application;AudioVideo;Multimedia;
+\ No newline at end of file

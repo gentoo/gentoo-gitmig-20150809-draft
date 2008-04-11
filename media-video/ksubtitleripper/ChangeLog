@@ -1,0 +1,11 @@
+# ChangeLog for media-video/ksubtitleripper
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ksubtitleripper/ChangeLog,v 1.1 2008/04/11 20:16:51 yngwin Exp $
+
+*ksubtitleripper-0.3.1 (11 Apr 2008)
+
+  11 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/0.3.1-menu1-gentoo.diff, +files/0.3.1-menu2-gentoo.diff,
+  +ksubtitleripper-0.3.1.ebuild:
+  Initial commit. Ebuild adapted from bug 121666.
+
