@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.2 2008/03/25 09:00:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.3 2008/04/11 16:01:15 spock Exp $
 
 EAPI="1"
 
@@ -86,6 +86,7 @@ src_unpack() {
 	cd "${SG}"
 	if has_version sys-apps/openrc ; then
 		epatch "${FILESDIR}"/openrc-strlist-abi.patch
+		epatch "${FILESDIR}"/openrc-splash-crash.patch
 	fi
 }
 
