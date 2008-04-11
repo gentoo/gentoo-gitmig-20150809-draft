@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.64 2008/04/09 14:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.65 2008/04/11 13:54:16 armin76 Exp $
+
+  11 Apr 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.8.ebuild:
+  remove 0.5.8.8 as its broken
 
 *deluge-0.5.8.8 (09 Apr 2008)
 
