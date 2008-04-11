@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.5 2008/03/18 07:45:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.6 2008/04/11 22:24:43 maekke Exp $
 
 inherit eutils multilib rpm
 
@@ -10,7 +10,7 @@ SRC_URI="http://download2.citrix.com/FILES/en/products/Linux10/ICAClient-${PV}-1
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="mirror strip userpriv"
 

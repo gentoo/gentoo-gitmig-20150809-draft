@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.51 2008/03/18 07:45:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.52 2008/04/11 22:24:43 maekke Exp $
+
+  11 Apr 2008; Markus Meier <maekke@gentoo.org> icaclient-10.6-r3.ebuild:
+  amd64 stable, bug #209912
 
   18 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   icaclient-10.6-r3.ebuild:
