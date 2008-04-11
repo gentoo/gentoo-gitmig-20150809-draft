@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.3 2008/04/10 12:17:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.4 2008/04/11 21:03:12 maekke Exp $
 
 inherit eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/alsamodular/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib
