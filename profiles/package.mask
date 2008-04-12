@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8494 2008/04/12 14:43:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8495 2008/04/12 14:51:23 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -30,8 +30,8 @@
 #--- END OF EXAMPLES ---
 
 # Gilles Dartiguelongue <eva@gentoo.org> (12 Apr 2008)
-# Mask gnome-system-tools 2.14 because it is starting to cause more headache
-# to keep it than to mask it.
+# Masking gnome-system-tools because it is broken,
+# to help fix it, see bug #214265
 =app-admin/gnome-system-tools-2.14*
 =app-admin/system-tools-backends-1.4*
 

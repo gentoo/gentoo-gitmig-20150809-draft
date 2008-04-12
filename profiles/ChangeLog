@@ -1,10 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1315 2008/04/12 14:43:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1316 2008/04/12 14:51:23 eva Exp $
 
   12 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
-  Mask gnome-system-tools 2.14 because it is starting to cause more headache
-  to keep it than to mask it.
+  Masking gnome-system-tools because it is broken,
+  to help fix it, see bug #214265
 
   12 Apr 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   last-riting dev-libs/libsigcx, see bug #191855
