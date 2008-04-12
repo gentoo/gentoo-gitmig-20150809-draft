@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.5 2008/03/24 18:53:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.6 2008/04/12 13:52:32 leio Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -43,8 +43,8 @@ RDEPEND="dev-libs/dbus-glib
 		 afs? ( net-fs/openafs sys-libs/lwp )
 		 dmx? ( x11-libs/libdmx )
 		 pam? (
-		 	virtual/pam
-		 	>=sys-auth/pambase-20080318
+			virtual/pam
+			>=sys-auth/pambase-20080318
 		 )
 		 !pam? ( elibc_glibc? ( sys-apps/shadow ) )
 		 remote? ( gnome-extra/zenity )
