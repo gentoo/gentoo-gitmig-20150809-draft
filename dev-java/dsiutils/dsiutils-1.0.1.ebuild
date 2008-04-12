@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.5 2008/04/07 11:59:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.6 2008/04/12 22:13:56 dertobi123 Exp $
 
 JAVA_PKG_IUSE="doc source test"
 EAPI="1"
@@ -13,7 +13,7 @@ SRC_URI="http://dsiutils.dsi.unimi.it/${P}-src.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 

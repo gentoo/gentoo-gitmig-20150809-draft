@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dsiutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.4 2008/04/07 11:59:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.5 2008/04/12 22:13:57 dertobi123 Exp $
+
+  12 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  dsiutils-1.0.1.ebuild:
+  Added ~ppc, bug #215406
 
   07 Apr 2008; Markus Rothe <corsair@gentoo.org> dsiutils-1.0.1.ebuild:
   Added ~ppc64; bug #215406
