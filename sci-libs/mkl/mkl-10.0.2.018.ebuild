@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.2 2008/04/08 21:35:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.3 2008/04/12 18:38:38 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -54,12 +54,12 @@ pkg_setup() {
 
 	# Check and setup fortran
 	FORTRAN="gfortran ifc g77"
+	use int64 && FORTRAN="gfortran ifc"
 	if use fortran95; then
 		FORTRAN="gfortran ifc"
 		# blas95 and lapack95 don't compile with gfortran < 4.2
 		[[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && FORTRAN="ifc"
 	fi
-	use int64 && FORTRAN="gfortran ifc"
 	fortran_pkg_setup
 	MKL_FC="gnu"
 	[[ ${FORTRANC} == if* ]] && MKL_FC="intel"
@@ -286,7 +286,7 @@ src_install() {
 	local doinsdirs="tools"
 	cp -pPR ${cpdirs} "${D}"${MKL_DIR} \
 		|| die "installing mkl failed"
-	doins ${doinsdirs} || die "doins ${doinsdirs} failed"
+	doins -r ${doinsdirs} || die "doins ${doinsdirs} failed"
 
 	# install blas/lapack profiles
 	mkl_make_generic_profile
