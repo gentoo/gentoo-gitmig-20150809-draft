@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.209 2008/03/31 04:38:30 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.210 2008/04/12 08:29:41 mrness Exp $
+
+*ppp-2.4.4-r15 (12 Apr 2008)
+
+  12 Apr 2008; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r15.ebuild:
+  Re-write kill-pg.patch (#181145 and #216183). Fix LCP timeout error
+  (#210852). Fix QA warning (#211160). Install modprobe.d file (#213879).
 
   31 Mar 2008; <ricmm@gentoo.org> ppp-2.4.4-r14.ebuild:
   Drop to ~mips due to unstable deps
