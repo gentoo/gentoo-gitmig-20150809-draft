@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.13.ebuild,v 1.6 2008/04/11 22:10:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.13.ebuild,v 1.7 2008/04/12 11:10:09 nixnut Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 EAPI="1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager seamonkey xulrunner"
 
 RDEPEND="
