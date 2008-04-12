@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.198 2008/04/12 14:33:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.199 2008/04/12 16:42:05 cla Exp $
+
+  12 Apr 2008; Dawid Węgliński <cla@gentoo.org> vte-0.16.13.ebuild:
+  Stable on x86 (bug #217395)
 
   12 Apr 2008; Samuli Suominen <drac@gentoo.org> vte-0.16.13.ebuild:
   amd64 stable wrt #217395
