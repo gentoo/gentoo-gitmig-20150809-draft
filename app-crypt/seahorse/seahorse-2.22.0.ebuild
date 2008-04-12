@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.3 2008/04/03 01:10:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.4 2008/04/12 13:42:14 leio Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		   x11-misc/shared-mime-info
 		 avahi? ( >=net-dns/avahi-0.6 )
 		 dbus?	(
-		 	>=dev-libs/dbus-glib-0.72
+			>=dev-libs/dbus-glib-0.72
 			applet? ( >=gnome-base/gnome-panel-2.10 )
 			epiphany? ( >=www-client/epiphany-2.14 )
 			gedit? ( >=app-editors/gedit-2.16 )
