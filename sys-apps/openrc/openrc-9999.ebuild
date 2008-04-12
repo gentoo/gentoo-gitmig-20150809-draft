@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.24 2008/04/08 19:29:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.25 2008/04/12 00:39:26 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -257,4 +257,7 @@ pkg_postinst() {
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."
+	elog
+	elog "Please read the migration guide available at:"
+	elog "http://www.gentoo.org/doc/en/openrc-migration.xml"
 }
