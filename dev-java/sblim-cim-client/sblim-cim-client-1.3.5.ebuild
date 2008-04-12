@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/sblim-cim-client-1.3.5.ebuild,v 1.1 2008/04/12 01:54:04 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/sblim-cim-client-1.3.5.ebuild,v 1.2 2008/04/12 02:02:03 ali_bush Exp $
 
-JAVA_PKG_IUSE="doc source test"
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
