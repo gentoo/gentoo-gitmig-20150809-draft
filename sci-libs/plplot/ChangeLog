@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.13 2008/04/05 19:56:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.14 2008/04/12 17:58:27 bicatali Exp $
+
+  12 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.5.2.ebuild:
+  Switch tetex to local jadetex, bug #196745
 
   05 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.5.2.ebuild:
   Removed ifc use flag (see bug #97929)

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.12 2008/04/05 19:56:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.13 2008/04/12 17:58:27 bicatali Exp $
 
 inherit eutils fortran
 
@@ -15,13 +15,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="X debug doc fortran itcl java jpeg octave png python tk tetex truetype"
+IUSE="X debug doc fortran itcl java jpeg octave png python tk jadetex truetype"
 
 RDEPEND="virtual/libc
 		 dev-lang/perl
 		 python? ( dev-python/numeric )
 		 java? ( virtual/jre )
-		 tetex? ( app-text/jadetex )
+		 jadetex? ( app-text/jadetex )
 		 octave? ( sci-mathematics/octave )
 		 jpeg? ( media-libs/gd )
 		 png? ( media-libs/gd )
@@ -51,11 +51,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Fix compilation problems on GCC 3.4 and the octave
 	# bindings, thanks to the patch from Debian's BTS bug 274359.
-	epatch ${FILESDIR}/${PN}-5.5.1-gcc-3.4-fix.patch
-	epatch ${FILESDIR}/${P}-macro-fix.patch
+	epatch "${FILESDIR}"/${PN}-5.5.1-gcc-3.4-fix.patch
+	epatch "${FILESDIR}"/${P}-macro-fix.patch
 
 	# properly detect octave 2.9.x
 	sed -e "s:filepath:filedir:" \
@@ -104,7 +104,7 @@ src_compile() {
 	# Device drivers.
 	EXTRA_CONF="${EXTRA_CONF} $(use_enable jpeg)"
 	EXTRA_CONF="${EXTRA_CONF} $(use_enable png)"
-	EXTRA_CONF="${EXTRA_CONF} $(use_enable tetex pstex)"
+	EXTRA_CONF="${EXTRA_CONF} $(use_enable jadetex pstex)"
 	# Dynamic driver loading causes segfaults.
 	EXTRA_CONF="${EXTRA_CONF} --disable-dyndrivers"
 	# The linuxvga driver doesn't compile.
@@ -146,17 +146,17 @@ src_install() {
 	sed -i -e "s|\$(datadir)/doc/plplot|/usr/share/doc/${PF}|" Makefile || \
 		die "sed replacement of docs dir failed."
 
-	make install DESTDIR=${D} || die "make install step failed."
+	make install DESTDIR="${D}" || die "make install step failed."
 
 	# To match the Gentoo FSH.
 	if use java; then
-		mv ${D}/usr/lib/java/plplot ${D}/usr/share/${PN}/lib
-		rm -r ${D}/usr/lib/java
+		mv "${D}"/usr/lib/java/plplot "${D}"/usr/share/${PN}/lib
+		rm -r "${D}"/usr/lib/java
 	fi
 
 	# Fix permissions and gzip the basic documentation.
-	chmod 644 ${D}/usr/share/doc/${PF}/*
-	gzip ${D}/usr/share/doc/${PF}/*
+	chmod 644 "${D}"/usr/share/doc/${PF}/*
+	gzip "${D}"/usr/share/doc/${PF}/*
 	# Install prebuilt documentation.
 	if use doc; then
 		cd doc/docbook/src/
