@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.10 2008/02/01 15:38:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.11 2008/04/12 16:11:41 yngwin Exp $
+
+  12 Apr 2008; Ben de Groot <yngwin@gentoo.org> -ttcut-0.19.4.ebuild,
+  -ttcut-0.19.5.ebuild, -ttcut-0.19.5-r1.ebuild, -ttcut-0.19.6.ebuild,
+  ttcut-0.19.6-r1.ebuild:
+  Removing older versions. Fixing src_url and qt4 deps. Fixes bug 217193.
 
 *ttcut-0.19.6-r1 (01 Feb 2008)
 
