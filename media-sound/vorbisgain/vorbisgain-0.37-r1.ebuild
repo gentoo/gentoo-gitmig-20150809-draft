@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.37-r1.ebuild,v 1.5 2008/04/11 14:35:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.37-r1.ebuild,v 1.6 2008/04/12 07:49:44 nixnut Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://sjeng.org/ftp/vorbis/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libvorbis-1

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vorbisgain
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.27 2008/04/11 14:35:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.28 2008/04/12 07:49:44 nixnut Exp $
+
+  12 Apr 2008; nixnut <nixnut@gentoo.org> vorbisgain-0.37-r1.ebuild:
+  Stable on ppc wrt bug 217147
 
   11 Apr 2008; Raúl Porcel <armin76@gentoo.org> vorbisgain-0.37-r1.ebuild:
   sparc stable wrt #217147
