@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/wirble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.5 2008/04/12 08:04:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.6 2008/04/12 13:45:41 cla Exp $
+
+  12 Apr 2008; Dawid Węgliński <cla@gentoo.org> wirble-0.1.2.ebuild:
+  Stable on x86 (bug #217327)
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> wirble-0.1.2.ebuild:
   Stable on ppc wrt bug 217327
