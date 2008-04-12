@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.3-r1.ebuild,v 1.7 2008/01/10 08:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.3-r1.ebuild,v 1.8 2008/04/12 18:31:52 vapier Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://kernel.org/pub/linux/kernel/people/josh/sparse/dist/${P}.tar.gz"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ppc s390 ~sh x86"
+KEYWORDS="amd64 arm hppa ia64 ppc s390 sh x86"
 IUSE=""
 
 DEPEND=""
