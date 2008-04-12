@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.14.17.ebuild,v 1.2 2008/04/10 04:16:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.14.17.ebuild,v 1.3 2008/04/12 20:32:44 vapier Exp $
 
 inherit eutils multilib
 
@@ -26,7 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.14.12-nls.patch #192819
 	if ! use unicode ; then
-		sed -i "s:ncursesw/curses.h:curses.h:" dselect/dselect.h #217046
+		sed -i "s:ncursesw/::" dselect/{Makefile.in,dselect.h,main.cc} #217046
 		export ac_cv_lib_ncursesw_initscr=no
 	fi
 }
