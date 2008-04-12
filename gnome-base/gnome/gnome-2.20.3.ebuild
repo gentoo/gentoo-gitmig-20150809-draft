@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.10 2008/02/04 05:00:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.11 2008/04/12 14:06:32 eva Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -126,8 +126,6 @@ RDEPEND="
 
 	>=net-misc/vino-2.20.1
 
-	>=app-admin/gnome-system-tools-2.14.0
-	>=app-admin/system-tools-backends-1.4.2
 	>=gnome-extra/fast-user-switch-applet-2.18.0
 
 	>=app-admin/pessulus-2.16.3
@@ -153,6 +151,13 @@ RDEPEND="
 	cups? ( >=net-print/gnome-cups-manager-0.31-r2 )
 
 	mono? ( >=app-misc/tomboy-0.8.2 )"
+
+# Gilles Dartiguelongue <eva@gentoo.org> (12 Apr 2008)
+# Mask gnome-system-tools 2.14 because it is starting to cause more headache
+# to keep it than to mask it.
+#
+#	>=app-admin/gnome-system-tools-2.14.0
+#	>=app-admin/system-tools-backends-1.4.2
 
 # Development tools
 #   scrollkeeper

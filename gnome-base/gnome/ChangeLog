@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.332 2008/04/10 17:23:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.333 2008/04/12 14:06:32 eva Exp $
+
+  12 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> gnome-2.20.3.ebuild:
+  Remove gnome-system-tools 2.14 from RDEPEND to all because it is starting
+  to cause more headache to keep it than to mask it.
 
 *gnome-2.22.1 (10 Apr 2008)
 
