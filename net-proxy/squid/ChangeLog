@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.178 2008/04/12 17:11:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.179 2008/04/12 17:18:43 jer Exp $
+
+  12 Apr 2008; Jeroen Roovers <jer@gentoo.org> squid-2.6.18.ebuild:
+  Stable for HPPA (bug #216319).
 
   12 Apr 2008; Raúl Porcel <armin76@gentoo.org> squid-2.6.18.ebuild:
   alpha/ia64/sparc stable wrt security #216319
