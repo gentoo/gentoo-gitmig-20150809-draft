@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.3.6-r1.ebuild,v 1.3 2008/04/02 16:09:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.3.6-r1.ebuild,v 1.4 2008/04/12 09:02:40 nixnut Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://stat.ethz.ch/ESS/downloads/ess/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="app-text/texi2html
