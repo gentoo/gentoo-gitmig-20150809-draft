@@ -1,13 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.7.ebuild,v 1.1 2008/04/12 21:34:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.7.ebuild,v 1.2 2008/04/12 21:43:26 tester Exp $
 
 inherit gst-plugins10
 
 DESCRIPTION="GStreamer plugin for Farsight"
-#HOMEPAGE="http://projects.collabora.co.uk/darcs/farsight/gst-plugins-farsight"
 HOMEPAGE="http://farsight.freedesktop.org/"
 SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
+#EDARCS_REPO_URI="http://projects.collabora.co.uk/darcs/farsight/gst-plugins-farsight"
+
 
 GST_MAJOR=0.10
 SLOT=${GST_MAJOR}
@@ -25,9 +26,6 @@ DEPEND=">=media-libs/gstreamer-0.10.13
 	msn? ( media-libs/libmimic )
 	yahoo? ( media-libs/libj2k )"
 
-RDEPEND="${DEPEND}
-	!<media-libs/farsight-0.1.27"
-
 src_compile() {
 	econf \
 		--enable-g729 \
@@ -44,5 +42,5 @@ src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
 
-	rm -f ${D}/usr/lib*/*gstreamer*/*jpeg2k*
+	rm -f "${D}/usr/lib*/*gstreamer*/*jpeg2k*"
 }
