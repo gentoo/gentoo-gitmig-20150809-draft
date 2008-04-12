@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.54 2008/03/13 00:37:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.55 2008/04/12 14:32:45 remi Exp $
+
+  12 Apr 2008; Rémi Cardona <remi@gentoo.org> gnome-vfsmm-2.22.0.ebuild:
+  removing the forced dep on doxygen (fixes bug #213269)
 
   13 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-vfsmm-2.22.0.ebuild:

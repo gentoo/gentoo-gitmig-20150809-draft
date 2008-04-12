@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.22.0.ebuild,v 1.2 2008/03/13 00:37:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.22.0.ebuild,v 1.3 2008/04/12 14:32:45 remi Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ IUSE="doc examples"
 RDEPEND=">=gnome-base/gnome-vfs-2.8.1
 	>=dev-cpp/glibmm-2.12"
 DEPEND=">=dev-util/pkgconfig-0.12.0
-	app-doc/doxygen
+	doc? ( app-doc/doxygen )
 	${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README INSTALL"
@@ -24,19 +24,16 @@ DOCS="AUTHORS ChangeLog NEWS README INSTALL"
 src_unpack() {
 	gnome2_src_unpack
 
+	if ! use doc; then
+		# documentation requires Doxygen and takes time
+		sed -i 's/^\(SUBDIRS =.*\)docs\(.*\)$/\1\2/' Makefile.in || \
+			die "sed Makefile.in failed"
+	fi
+
 	if ! use examples; then
 		# don't waste time building the examples
 		sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
 			die "sed Makefile.in failed"
-	fi
-}
-
-src_compile() {
-	gnome2_src_compile
-
-	if use doc; then
-		cd "${S}"/docs/reference
-		make all
 	fi
 }
 
