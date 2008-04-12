@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.15 2008/04/08 15:19:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.16 2008/04/12 11:27:25 nixnut Exp $
+
+  12 Apr 2008; nixnut <nixnut@gentoo.org> dbskkd-cdb-1.71.ebuild:
+  Stable on ppc wrt bug 216277
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org> dbskkd-cdb-1.71.ebuild:
   sparc stable wrt #216277
