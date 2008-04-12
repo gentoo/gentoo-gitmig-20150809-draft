@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.45.ebuild,v 1.5 2008/04/07 21:58:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.45.ebuild,v 1.6 2008/04/12 10:22:13 dev-zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -59,6 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/blender-2.37-dirs.patch
 	epatch "${FILESDIR}"/blender-2.44-scriptsdir.patch
 	epatch "${FILESDIR}"/blender-2.44-swscale.patch
+	epatch "${FILESDIR}"/${P}-missing_includes.patch
 
 	if use ffmpeg ; then
 		cd "${S}"/extern
