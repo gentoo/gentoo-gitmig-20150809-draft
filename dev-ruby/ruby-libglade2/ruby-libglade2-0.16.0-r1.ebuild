@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ruby-libglade2-0.16.0-r1.ebuild,v 1.7 2008/04/11 17:05:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ruby-libglade2-0.16.0-r1.ebuild,v 1.8 2008/04/12 12:10:53 nixnut Exp $
 
 inherit eutils ruby ruby-gnome2
 
 DESCRIPTION="Ruby Libglade2 bindings"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="gnome"
 USE_RUBY="ruby18 ruby19"
 DEPEND=">=gnome-base/libglade-2
