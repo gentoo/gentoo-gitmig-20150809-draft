@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.25.ebuild,v 1.2 2008/03/10 22:55:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.27.ebuild,v 1.1 2008/04/12 21:43:21 tester Exp $
 
 DESCRIPTION="FarSight is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
@@ -13,16 +13,23 @@ IUSE="jingle doc test"
 # msn yahoo
 SLOT="0"
 
-RDEPEND="=media-libs/gstreamer-0.10*
-	>=media-plugins/gst-plugins-farsight-0.12.5
+COMMON_DEPEND="=media-libs/gstreamer-0.10*
+	>=media-libs/gstreamer-0.10.13
+	=media-libs/gst-plugins-base-0.10*
 	>=dev-libs/glib-2.6
 	dev-libs/libxml2
-	doc? ( >=dev-util/gtk-doc-1.5 )
-	jingle? ( >=net-libs/libjingle-0.3.11 )
-	test? ( >=dev-libs/check-0.9.4 )"
+	jingle? ( >=net-libs/libjingle-0.3.11 )"
 
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
+	>=media-plugins/gst-plugins-farsight-0.12.7
+	!<net-voip/telepathy-stream-engine-0.5.0
+	=media-libs/gst-plugins-good-0.10*
+	=media-plugins/gst-plugins-ffmpeg-0.10*"
+
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig
+	doc? ( >=dev-util/gtk-doc-1.5 )
+	test? ( >=dev-libs/check-0.9.4 )"
 
 src_compile() {
 	# I'm disabling clinkc because it sucks, isnt in portage
