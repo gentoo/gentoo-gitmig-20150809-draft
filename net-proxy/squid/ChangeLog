@@ -1,6 +1,18 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.175 2008/04/11 21:09:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.176 2008/04/12 06:12:24 mrness Exp $
+
+*squid-3.0.4 (12 Apr 2008)
+*squid-2.6.19 (12 Apr 2008)
+
+  12 Apr 2008; Alin Năstac <mrness@gentoo.org>
+  +files/squid-2.6.19-ToS_Hit_ToS_Preserve.patch,
+  +files/squid-2.6.19-gentoo.patch, +files/squid-2.6.19-qos.patch,
+  +files/squid-2.6.19-tcp_outg-x_fwd_for.patch,
+  +files/squid-3.0.4-gentoo.patch, +squid-2.6.19.ebuild,
+  +squid-3.0.4.ebuild:
+  Version bumps (#213874 and #213505). Fix QA notice (#212007). Add upstream
+  fix regarding tcp_outgoing_address acl to 2.6 version (#213913).
 
   11 Apr 2008; Markus Meier <maekke@gentoo.org> squid-2.6.18.ebuild:
   amd64/x86 stable, bug #216319

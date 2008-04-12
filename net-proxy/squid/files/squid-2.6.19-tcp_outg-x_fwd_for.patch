@@ -1,0 +1,31 @@
+diff -Nru squid-2.6.STABLE19.orig/src/forward.c squid-2.6.STABLE19/src/forward.c
+--- squid-2.6.STABLE19.orig/src/forward.c	2007-09-06 00:28:34.000000000 +0300
++++ squid-2.6.STABLE19/src/forward.c	2008-04-11 23:15:32.000000000 +0300
+@@ -424,7 +424,12 @@
+     aclCheck_t ch;
+     memset(&ch, '\0', sizeof(aclCheck_t));
+     if (request) {
+-	ch.src_addr = request->client_addr;
++#if FOLLOW_X_FORWARDED_FOR
++	if (Config.onoff.acl_uses_indirect_client) {
++	    ch.src_addr = request->indirect_client_addr;
++	} else
++#endif /* FOLLOW_X_FORWARDED_FOR */
++	    ch.src_addr = request->client_addr;
+ 	ch.my_addr = request->my_addr;
+ 	ch.my_port = request->my_port;
+ 	ch.request = request;
+@@ -438,7 +443,12 @@
+     aclCheck_t ch;
+     memset(&ch, '\0', sizeof(aclCheck_t));
+     if (request) {
+-	ch.src_addr = request->client_addr;
++#if FOLLOW_X_FORWARDED_FOR
++	if (Config.onoff.acl_uses_indirect_client) {
++	    ch.src_addr = request->indirect_client_addr;
++	} else
++#endif /* FOLLOW_X_FORWARDED_FOR */
++	    ch.src_addr = request->client_addr;
+ 	ch.my_addr = request->my_addr;
+ 	ch.my_port = request->my_port;
+ 	ch.request = request;
