@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgdamm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.8 2007/12/02 11:19:09 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.9 2008/04/12 12:10:32 remi Exp $
+
+  12 Apr 2008; Rémi Cardona <remi@gentoo.org> libgdamm-1.3.7.ebuild:
+  Add missing pkgconfig dep (fixes bug #206034)
 
   02 Dec 2007; Samuli Suominen <drac@gentoo.org> libgdamm-1.3.7.ebuild:
   Keyword ~amd64 wrt #200723.
