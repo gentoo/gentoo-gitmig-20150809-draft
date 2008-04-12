@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/pnp4nagios
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.1 2008/04/12 18:42:37 caleb Exp $
+
+*pnp4nagios-0.4.7 (12 Apr 2008)
+
+  12 Apr 2008; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +pnp4nagios-0.4.7.ebuild:
+  Initial import
+
