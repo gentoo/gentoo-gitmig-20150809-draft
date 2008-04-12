@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.147 2008/04/12 11:10:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.148 2008/04/12 13:39:49 dang Exp $
+
+  12 Apr 2008; Daniel Gryniewicz <dang@gentoo.org>
+  -files/liferea-1.0.22-add-feed.patch, -liferea-1.0.24.ebuild:
+  Nuke 1.0 now that 1.4 is stable
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> liferea-1.4.13.ebuild:
   Stable on ppc wrt bug 216743
