@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.13 2008/03/01 12:40:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.14 2008/04/12 10:33:45 nixnut Exp $
+
+  12 Apr 2008; nixnut <nixnut@gentoo.org> wxmaxima-0.7.4.ebuild:
+  Stable on ppc wrt bug 215787
 
   01 Mar 2008; nixnut <nixnut@gentoo.org> wxmaxima-0.7.4.ebuild:
   Added ~ppc wrt bug 211796
