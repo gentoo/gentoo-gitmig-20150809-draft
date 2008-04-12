@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.1.ebuild,v 1.1 2008/04/09 22:24:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.1.ebuild,v 1.2 2008/04/12 14:35:49 eva Exp $
 
 inherit eutils gnome2 autotools python
 
@@ -25,7 +25,6 @@ RDEPEND=">=x11-libs/gtk+-2.11
 		>=gnome-base/gail-1.1
 		>=x11-libs/libxklavier-2.91
 		>=x11-libs/libwnck-2.9.3
-		>=app-admin/system-tools-backends-1.1.3
 		>=gnome-base/gnome-desktop-2.11.1
 		>=x11-libs/libnotify-0.3.2
 		hal? ( >=sys-apps/hal-0.5.3 )
@@ -50,6 +49,12 @@ RDEPEND=">=x11-libs/gtk+-2.11
 						>=media-libs/gstreamer-0.10.2
 						>=media-libs/gst-plugins-base-0.10.14
 					)"
+
+# Remove gnome-system-tools 2.14 from RDEPEND to all because it is starting
+# to cause more headache to keep it than to mask it. Supports only s-t-b-1
+# anyway.
+#   >=app-admin/system-tools-backends-1.1.3
+
 DEPEND="${RDEPEND}
 		>=app-text/scrollkeeper-0.1.4
 		>=app-text/gnome-doc-utils-0.3.2
@@ -97,6 +102,8 @@ src_install() {
 	APPLETS="accessx-status battstat charpick cpufreq drivemount geyes \
 			 gkb-new gswitchit gweather invest-applet mini-commander \
 			 mixer modemlights multiload null_applet stickynotes trashapplet"
+
+	# modemlights is out because it needs system-tools-backends-1
 
 	for applet in ${APPLETS} ; do
 		docinto ${applet}
