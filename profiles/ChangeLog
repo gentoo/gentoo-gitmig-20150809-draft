@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1312 2008/04/10 22:44:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1313 2008/04/12 11:40:48 yngwin Exp $
+
+  12 Apr 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Masking media-sound/lastfmproxy as the ebuild needs more work.
 
   10 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Add a mask for amarok 1.4.9.1.
