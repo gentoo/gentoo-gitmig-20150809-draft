@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libbeagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.4 2008/03/12 12:10:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.5 2008/04/12 10:36:47 cedk Exp $
+
+*libbeagle-0.3.5 (12 Apr 2008)
+
+  12 Apr 2008; Cédric Krier <cedk@gentoo.org> +libbeagle-0.3.5.ebuild:
+  Version bump
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fixing bogus metadata.xml.
