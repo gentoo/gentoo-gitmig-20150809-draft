@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.6 2008/04/07 19:18:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.7 2008/04/12 16:08:29 armin76 Exp $
+
+  12 Apr 2008; Raúl Porcel <armin76@gentoo.org> umfpack-5.2.0.ebuild:
+  Add ~sparc wrt #215834
 
   07 Apr 2008; Tobias Klausmann <klausman@gentoo.org> umfpack-5.2.0.ebuild:
   Keyworded on alpha, bug #215834
