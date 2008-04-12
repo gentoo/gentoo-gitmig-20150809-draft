@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.1 2008/03/27 00:17:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.2 2008/04/12 19:13:50 remi Exp $
 
 EAPI="1"
 
-inherit gnome2 eutils python
+inherit gnome2 eutils python autotools
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -103,6 +103,10 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# backport from svn HEAD, 0.11.6 shouldn't need it
+	epatch "${FILESDIR}/${PN}-0.11.5-fix_gtk_doc.patch"
+	eautomake
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
