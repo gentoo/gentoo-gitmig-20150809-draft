@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.42 2008/04/11 22:40:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.43 2008/04/12 11:08:05 nixnut Exp $
+
+  12 Apr 2008; nixnut <nixnut@gentoo.org> exaile-0.2.13.ebuild:
+  Stable on ppc wrt bug 216769
 
   11 Apr 2008; Markus Meier <maekke@gentoo.org> exaile-0.2.13.ebuild:
   x86 stable, bug #216769

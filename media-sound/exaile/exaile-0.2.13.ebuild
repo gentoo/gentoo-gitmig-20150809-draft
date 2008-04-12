@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.3 2008/04/11 22:40:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.4 2008/04/12 11:08:05 nixnut Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.exaile.org/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="aac alsa cdparanoia equalizer flac gnome ipod +jpeg libnotify +libsexy
 	mad musepack nls ogg oss +png vorbis"
 
