@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-2.9.8.ebuild,v 1.2 2008/04/11 21:58:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-2.9.8.ebuild,v 1.3 2008/04/12 20:11:38 dertobi123 Exp $
 
 inherit findlib eutils
 
@@ -13,7 +13,7 @@ DEPEND=">=dev-lang/ocaml-3.06"
 SRC_URI="http://www.ocaml.info/ocaml_sources/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="examples +ocamlopt"
 
 pkg_setup() {

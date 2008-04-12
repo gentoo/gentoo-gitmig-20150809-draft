@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.14 2008/04/11 21:58:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.15 2008/04/12 20:11:38 dertobi123 Exp $
+
+  12 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org> pomap-2.9.8.ebuild:
+  ppc stable, bug #216964
 
   11 Apr 2008; Markus Meier <maekke@gentoo.org> pomap-2.9.8.ebuild:
   amd64/x86 stable, bug #216964
