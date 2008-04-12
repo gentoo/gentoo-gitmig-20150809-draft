@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsap/ChangeLog,v 1.4 2008/03/30 17:20:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsap/ChangeLog,v 1.5 2008/04/12 21:34:38 dertobi123 Exp $
+
+  12 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org> jsap-2.1.ebuild:
+  Added ~ppc, bug #215401
 
   30 Mar 2008; Markus Rothe <corsair@gentoo.org> jsap-2.1.ebuild:
   Added ~ppc64
