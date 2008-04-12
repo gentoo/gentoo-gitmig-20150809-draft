@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.24 2008/03/29 14:12:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.25 2008/04/12 18:34:59 zzam Exp $
+
+  12 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-image-0.2.7-r1.ebuild:
+  Changed PATCHES to be an array. Only RDEPEND on pkgconfig, Bug #217278.
 
   29 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   -files/vdr-image-0.2.6-gentoo.diff,

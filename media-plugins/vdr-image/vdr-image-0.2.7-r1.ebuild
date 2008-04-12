@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.5 2008/03/29 14:12:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.6 2008/04/12 18:34:59 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -13,16 +13,18 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="exif"
 
-DEPEND=">=media-video/vdr-1.3.38
+COMMON_DEPEND=">=media-video/vdr-1.3.38
 	>=media-video/ffmpeg-0.4.8
 	>=media-libs/netpbm-10.0
-	exif? ( media-libs/libexif )
+	exif? ( media-libs/libexif )"
+
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	>=media-tv/gentoo-vdr-scripts-0.2.2"
 
-PATCHES="${FILESDIR}/${P}-new-ffmpeg.diff"
+PATCHES=("${FILESDIR}/${P}-new-ffmpeg.diff")
 
 VDRPLUGIN_MAKE_TARGET="all -j1"
 
