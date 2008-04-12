@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.65 2008/04/11 16:27:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.66 2008/04/12 08:35:02 remi Exp $
+
+  12 Apr 2008; Rémi Cardona <remi@gentoo.org> Manifest:
+  fix manifest, bug #215451
 
 *libxmlpp-2.22.0 (11 Apr 2008)
 
