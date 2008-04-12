@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3484 2008/04/10 11:03:14 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3485 2008/04/12 17:53:51 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1844,7 +1844,8 @@ sci-libs/metis:openmp - Build support for the OpenMP, needs openmp capable compi
 sci-libs/mkl:fortran95 - Build static FORTRAN 95 BLAS/LAPACK interface
 sci-libs/mkl:int64 - Install the 64 bits integer library (double package size)
 sci-libs/mkl:serial - Install the serial (as non-threaded) libraries as well, double package size
-sci-libs/plplot:itcl - Support for itcl bindings.
+sci-libs/plplot:itcl - Support for itcl bindings
+sci-libs/plplot:jadetex - Adds jadetex support (for processing tex files produced by the TeX backend of Jade)
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/scipy:sandbox - Installs experimental scipy sandbox modules (pull some dependencies)
 sci-libs/scipy:umfpack - Add support for sparse solving via UMFPACK

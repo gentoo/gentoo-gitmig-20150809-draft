@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1316 2008/04/12 14:51:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1317 2008/04/12 17:53:51 bicatali Exp $
+
+  12 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  default-linux/x86/use.mask, use.local.desc:
+  Switch tetex to local jadetex for sci-libs/plplot
 
   12 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Masking gnome-system-tools because it is broken,
