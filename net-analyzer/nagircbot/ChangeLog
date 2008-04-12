@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/nagircbot
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagircbot/ChangeLog,v 1.1 2008/04/12 19:22:14 caleb Exp $
+
+*nagircbot-0.0.26 (12 Apr 2008)
+
+  12 Apr 2008; Caleb Tennis <caleb@gentoo.org> +files/conf, +files/init,
+  +metadata.xml, +nagircbot-0.0.26.ebuild:
+  Initial import
+
