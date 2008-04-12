@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1317 2008/04/12 17:53:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1318 2008/04/12 18:34:14 dirtyepic Exp $
+
+  12 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Add local use desc for app-laptop/kthinkbat:smapi
 
   12 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   default-linux/x86/use.mask, use.local.desc:
