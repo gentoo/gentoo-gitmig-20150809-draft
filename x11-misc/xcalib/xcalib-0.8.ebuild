@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.8.ebuild,v 1.2 2008/04/07 21:00:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.8.ebuild,v 1.3 2008/04/12 12:03:08 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/xcalib-source-$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="
