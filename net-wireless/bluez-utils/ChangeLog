@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.120 2008/04/12 00:14:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.121 2008/04/12 15:19:47 betelgeuse Exp $
+
+  12 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-utils-3.30.ebuild:
+  3.30 doesn't install the the .service files to /etc/bluetooth any more so
+  old-daemons failed with the sed. Fixes bug #217362.
 
 *bluez-utils-3.30 (12 Apr 2008)
 

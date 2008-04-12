@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.30.ebuild,v 1.1 2008/04/12 00:14:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.30.ebuild,v 1.2 2008/04/12 15:19:47 betelgeuse Exp $
 
 inherit autotools multilib eutils
 
@@ -96,8 +96,6 @@ src_install() {
 	newconfd "${FILESDIR}/3.11/bluetooth-conf.d" bluetooth || die
 
 	if use old-daemons; then
-		sed -re 's/^(Autostart=)true/\1false/' \
-			-i "${D}/etc/bluetooth/input.service" || die
 		newconfd "${FILESDIR}/3.11/conf.d-hidd" hidd || die
 		newinitd "${FILESDIR}/3.11/init.d-hidd" hidd || die
 	fi
@@ -130,7 +128,6 @@ pkg_postinst() {
 	elog "3.15 adds support for the audio service. See"
 	elog "http://wiki.bluez.org/wiki/HOWTO/AudioDevices for configuration help."
 	elog ""
-	elog "Edit /etc/bluetooth/*.service to enable the services."
 	elog "Use the old-daemons use flag to get the old daemons like hidd"
 	elog "installed. Please note that the init script doesn't stop the old"
 	elog "daemons after you update it so it's recommended to run:"
