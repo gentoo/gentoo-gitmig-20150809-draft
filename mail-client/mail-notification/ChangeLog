@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.66 2008/04/10 05:24:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.67 2008/04/12 06:03:27 graaff Exp $
+
+*mail-notification-5.2-r1 (12 Apr 2008)
+
+  12 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/mail-notification-5.2-evo-crash-fix.patch,
+  +mail-notification-5.2-r1.ebuild:
+  Add fix for evolution crash, thanks for Pacho Ramos in bug 215154 for locating
+  the patch. Also remove the restriction on tests, as the new build system has
+  no tests at all.
 
   10 Apr 2008; Hans de Graaff <graaff@gentoo.org>
   -mail-notification-4.1-r1.ebuild, mail-notification-5.0.ebuild,
