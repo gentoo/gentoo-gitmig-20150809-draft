@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1313 2008/04/12 11:40:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1314 2008/04/12 12:00:55 remi Exp $
+
+  12 Apr 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  last-riting dev-libs/libsigcx, see bug #191855
 
   12 Apr 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking media-sound/lastfmproxy as the ebuild needs more work.
