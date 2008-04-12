@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20080202.ebuild,v 1.4 2008/04/11 13:45:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20080202.ebuild,v 1.5 2008/04/12 07:41:26 nixnut Exp $
 
 inherit eutils fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pcb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="dbus gif gtk jpeg motif png tk xrender"
 
 RDEPEND="dbus? ( sys-apps/dbus )

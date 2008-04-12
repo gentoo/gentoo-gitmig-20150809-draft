@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.39 2008/04/11 13:45:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.40 2008/04/12 07:41:26 nixnut Exp $
+
+  12 Apr 2008; nixnut <nixnut@gentoo.org> pcb-20080202.ebuild:
+  Stable on ppc wrt bug #217058
 
   11 Apr 2008; Raúl Porcel <armin76@gentoo.org> pcb-20080202.ebuild:
   sparc stable wrt #217058
