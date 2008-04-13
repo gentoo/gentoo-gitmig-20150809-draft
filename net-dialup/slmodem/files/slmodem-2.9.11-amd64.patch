@@ -1,0 +1,53 @@
+diff -aur slmodem-2.9.11-20080126.orig/drivers/Makefile slmodem-2.9.11-20080126/drivers/Makefile
+--- slmodem-2.9.11-20080126.orig/drivers/Makefile	2005-04-05 17:17:50.000000000 +0200
++++ slmodem-2.9.11-20080126/drivers/Makefile	2008-02-23 13:35:50.861045252 +0100
+@@ -20,7 +20,7 @@
+ 
+ EXTRA_CFLAGS = -I$(obj) -I$(obj)/../modem
+ 
+-obj-m := slamr.o slusb.o
++obj-m := slusb.o
+ 
+ slamr-objs:= amrmo_init.o sysdep_amr.o amrlibs.o
+ slusb-objs:= st7554.o
+@@ -71,7 +71,6 @@
+ 	$(LD) -r -o $@ $^
+ 
+ install: uninstall-old
+-	install -D -m 644 slamr.o $(module-dir)/slamr.o
+ 	install -D -m 644 slusb.o $(module-dir)/slusb.o
+ 	cp /etc/modules.conf /etc/modules.conf.slamr && \
+ 	    echo 'alias char-major-242 slamr' >> /etc/modules.conf && \
+@@ -101,7 +100,6 @@
+ all:
+ 	$(MAKE) modules -C $(KERNEL_DIR) SUBDIRS=$(shell pwd)
+ install:
+-	install -D -m 644 slamr.ko $(module-dir)/slamr.ko
+ 	install -D -m 644 slusb.ko $(module-dir)/slusb.ko
+ 	/sbin/depmod -a
+ uninstall:
+diff -aur slmodem-2.9.11-20080126.orig/drivers/st7554.c slmodem-2.9.11-20080126/drivers/st7554.c
+--- slmodem-2.9.11-20080126.orig/drivers/st7554.c	2007-02-04 15:22:22.000000000 +0100
++++ slmodem-2.9.11-20080126/drivers/st7554.c	2008-02-23 13:08:55.768355723 +0100
+@@ -968,6 +968,11 @@
+ 	return -ENOIOCTLCMD;
+ }
+ 
++static long st7554_ioctl32(struct file *file, unsigned int cmd, unsigned long arg)
++{
++	return st7554_ioctl(NULL, file, cmd, arg);
++}
++
+ static int st7554_open(struct inode *inode, struct file *file)
+ {
+ 	struct st7554_state *s;
+@@ -1011,7 +1016,8 @@
+         .read =    st7554_read,
+         .write =   st7554_write,
+         .poll =    st7554_poll,
+-        .ioctl =   st7554_ioctl,
++        .unlocked_ioctl = st7554_ioctl32,
++        .compat_ioctl = st7554_ioctl32,
+         .open =    st7554_open,
+         .release = st7554_close,
+ };
