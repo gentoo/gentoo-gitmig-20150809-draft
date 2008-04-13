@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.49 2008/01/29 22:16:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.50 2008/04/13 13:41:04 maekke Exp $
+
+  13 Apr 2008; Markus Meier <maekke@gentoo.org> mingetty-1.08.ebuild:
+  amd64/x86 stable, bug #214651
 
 *mingetty-1.08 (29 Jan 2008)
 
