@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/gnut-0.4.28-r1.ebuild,v 1.8 2006/01/28 13:16:10 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/gnut-0.4.28-r1.ebuild,v 1.9 2008/04/13 21:44:17 betelgeuse Exp $
 
 inherit eutils
 
@@ -14,21 +14,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
 	epatch configure.patch
 	epatch src.patch
 }
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die
-}
-
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dohtml doc/*.html
 	dodoc 	doc/TUTORIAL AUTHORS COPYING ChangeLog GDJ HACKING \
 		INSTALL NEWS README TODO

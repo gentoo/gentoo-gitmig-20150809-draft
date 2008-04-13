@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnut
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.14 2007/03/19 15:03:32 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.15 2008/04/13 21:44:17 betelgeuse Exp $
+
+  13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> gnut-0.4.28-r1.ebuild:
+  Remove duplicate of standard src_compile and DEPEND on virtual/libc.
 
   19 Mar 2007; Raúl Porcel <armin76@gentoo.org> -gnut-0.4.28.ebuild:
   drop old
