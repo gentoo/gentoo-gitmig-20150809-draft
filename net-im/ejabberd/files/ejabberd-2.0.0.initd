@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.0.0.initd,v 1.1 2008/02/05 13:27:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.0.0.initd,v 1.2 2008/04/13 12:27:10 caleb Exp $
 
 opts="${opts} reload"
 
@@ -13,7 +13,7 @@ depend() {
 
 checkconfig() {
 	if [ ! -e /etc/jabber/ejabberd.cfg ] ; then
-		eerror "You need an /etc/jabber/ejabberd.cfg file to run ejabberd"
+		eerror "You need a /etc/jabber/ejabberd.cfg file to run ejabberd"
 		return 1
 	fi
 }
@@ -21,8 +21,21 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting eJabberd"
+	# the process name of beam is different depending whether smp is used.
+	# set it explicitly so start-stop-daemon works
+	case "$HAVE_SMP" in
+		"1"|"true"|"yes")
+			BEAMNAME="beam.smp"
+			SMPOPT="enable"
+		;;
+		*)
+			BEAMNAME="beam"
+			SMPOPT="disable"
+		;;
+	esac
 	start-stop-daemon --start --quiet --chuid jabber:jabber \
-		--exec /usr/bin/env HOME=/var/run/jabber /usr/bin/ejabberd -- -noshell -detached
+		--name $BEAMNAME \
+		--exec /usr/sbin/ejabberd -- -detached -noinput -smp $SMPOPT
 	eend $?
 	# For bug #190266
 	chown jabber:jabber /var/run/jabber/.erlang.cookie
@@ -30,33 +43,13 @@ start() {
 
 stop() {
 	ebegin "Stopping eJabberd"
-	if [ -z "$EJABBERD_NODE" ];
-	then
-		EJABBERD_NODE="ejabberd@`hostname -s`"
-	fi
-	/usr/bin/ejabberdctl $EJABBERD_NODE stop
-	eend $?
-}
-
-# Work around a bug in /sbin/runscript.sh - it won't run our custom
-# restart() unless it finds these two strings in the file.
-# svc_start svc_stop
-restart() {
-	ebegin "Restarting eJabberd"
-	if [ -z "$EJABBERD_NODE" ];
-	then
-		EJABBERD_NODE="ejabberd@`hostname -s`"
-	fi
-	/usr/bin/ejabberdctl $EJABBERD_NODE restart
+	/usr/sbin/ejabberdctl stop
 	eend $?
 }
 
 reload() {
 	ebegin "Reloading eJabberd"
-	if [ -z "$EJABBERD_NODE" ];
-	then
-		EJABBERD_NODE="ejabberd@`hostname -s`"
-	fi
-	/usr/bin/ejabberdctl $EJABBERD_NODE reopen-log
+	/usr/sbin/ejabberdctl reopen-log
 	eend $?
 }
+
