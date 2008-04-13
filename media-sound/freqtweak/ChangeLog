@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.26 2008/01/14 17:14:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.27 2008/04/13 21:21:30 aballier Exp $
+
+  13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  freqtweak-0.7.0_pre20070214.ebuild:
+  pkgconfig is only a build dep, bug #217278
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org>
   freqtweak-0.7.0_pre20070214.ebuild:
