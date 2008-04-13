@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.10.1.ebuild,v 1.6 2008/04/06 19:48:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.10.1.ebuild,v 1.7 2008/04/13 21:18:32 aballier Exp $
 
 inherit eutils multilib
 
@@ -13,9 +13,8 @@ HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 LICENSE="LGPL-2.1 as-is"
 
-DEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-lang/ocaml-3.07
-	dev-util/pkgconfig
 	svg? ( >=gnome-base/librsvg-2.2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
@@ -26,6 +25,8 @@ DEPEND=">=x11-libs/gtk+-2.10
 	spell? ( app-text/gtkspell )
 	sourceview? ( =x11-libs/gtksourceview-1* )
 	"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 SLOT="2"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
