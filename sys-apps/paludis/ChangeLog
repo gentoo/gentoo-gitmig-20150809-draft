@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.89 2008/04/03 20:38:44 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.90 2008/04/13 14:14:14 zlin Exp $
+
+*paludis-0.26.0_pre1 (13 Apr 2008)
+
+  13 Apr 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  -files/paludis-0.26.0_alpha9-echo-functions.patch,
+  -paludis-0.26.0_alpha9-r1.ebuild, -paludis-0.26.0_alpha11.ebuild,
+  -paludis-0.26.0_alpha12.ebuild, -paludis-0.26.0_alpha14.ebuild,
+  +paludis-0.26.0_pre1.ebuild:
+  Version bump.
 
 *paludis-0.26.0_alpha14-r1 (03 Apr 2008)
 
