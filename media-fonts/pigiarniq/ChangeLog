@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/pigiarniq
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pigiarniq/ChangeLog,v 1.1 2008/04/13 00:20:27 yngwin Exp $
+
+*pigiarniq-1 (13 Apr 2008)
+
+  13 Apr 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +pigiarniq-1.ebuild:
+  Initial commit. Ebuild adapted from Jean-François Richard in bug 156467.
+
