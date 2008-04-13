@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.15.ebuild,v 1.1 2008/04/13 11:06:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.15.ebuild,v 1.2 2008/04/13 11:09:26 mrness Exp $
 
 inherit eutils linux-info
 
@@ -46,12 +46,6 @@ pkg_setup() {
 		einfo "Successfuly removed module from memory.  Resuming emerge."
 		einfo
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-
-	#epatch "${FILESDIR}/${P}-implicit-declarations.patch"
 }
 
 src_compile() {
