@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftcurs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.38 2007/03/25 19:15:35 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.39 2008/04/13 14:52:46 betelgeuse Exp $
+
+  13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> giftcurs-0.6.2.ebuild:
+  Remove RDEPEND on pkgconfig and virtual/libc dependencies.
 
   25 Mar 2007; Raúl Porcel <armin76@gentoo.org> giftcurs-0.6.2.ebuild:
   Add ~ia64 wrt bug 132197
@@ -81,7 +84,7 @@
   Removed dependency on giFT, since giFTcurs can be used remotely
   and doesn't necessarily need giFT.
 
-*giftcurs-0.5.6 (03 March 2003)
+*giftcurs-0.5.6 (03 Mar 2003)
 
   03 March 2003; Jon Portnoy <avenj@gentoo.org> giftcurs-0.5.6.ebuild :
   Version bump, latest giFTcurs.
