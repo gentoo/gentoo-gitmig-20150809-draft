@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.5 2008/03/21 20:43:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.6 2008/04/13 18:31:51 markusle Exp $
+
+  13 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/gdl-0.9_pre6-plplot-5.9.patch, gdl-0.9_pre6.ebuild:
+  Added patch for plplot-5.9 support (fixes bug #217361).
 
   21 Mar 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gdl-0.9_pre6-magick.patch, gdl-0.9_pre5.ebuild,
