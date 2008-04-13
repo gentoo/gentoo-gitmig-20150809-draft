@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.7.ebuild,v 1.2 2008/04/12 21:43:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.7.ebuild,v 1.3 2008/04/13 03:54:41 mr_bones_ Exp $
 
 inherit gst-plugins10
 
@@ -8,7 +8,6 @@ DESCRIPTION="GStreamer plugin for Farsight"
 HOMEPAGE="http://farsight.freedesktop.org/"
 SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 #EDARCS_REPO_URI="http://projects.collabora.co.uk/darcs/farsight/gst-plugins-farsight"
-
 
 GST_MAJOR=0.10
 SLOT=${GST_MAJOR}
