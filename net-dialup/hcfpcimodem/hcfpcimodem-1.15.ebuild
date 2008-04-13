@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.13-r1.ebuild,v 1.1 2007/08/28 18:53:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.15.ebuild,v 1.1 2008/04/13 11:06:53 mrness Exp $
 
 inherit eutils linux-info
 
@@ -51,8 +51,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-implicit-declarations.patch"
-	epatch "${FILESDIR}/${P}-unset-locale.patch"
+	#epatch "${FILESDIR}/${P}-implicit-declarations.patch"
 }
 
 src_compile() {
@@ -78,6 +77,14 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "To complete the installation and configuration of your HCF modem,"
-	elog "please run hcfpciconfig."
+	if [ "${ROOT}" = / ]; then
+		elog "To complete the installation and configuration of your HCF modem,"
+		elog "please run hcfpciconfig."
+	fi
+}
+
+pkg_prerm() {
+	if [ "${ROOT}" = / -a -f /etc/init.d/hcfpci ] ; then
+		hcfpciconfig --remove || die "hcfpciconfig --remove failed"
+	fi
 }

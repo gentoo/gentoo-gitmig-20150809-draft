@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.35 2008/01/09 19:09:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.36 2008/04/13 11:06:53 mrness Exp $
+
+*hcfpcimodem-1.15 (13 Apr 2008)
+
+  13 Apr 2008; Alin Năstac <mrness@gentoo.org>
+  -files/hcfpcimodem-1.12-implicit-declarations.patch,
+  -files/hcfpcimodem-1.13-implicit-declarations.patch,
+  -files/hcfpcimodem-1.13-unset-locale.patch, -hcfpcimodem-1.12-r1.ebuild,
+  -hcfpcimodem-1.13-r1.ebuild, +hcfpcimodem-1.15.ebuild:
+  Version bump.
 
 *hcfpcimodem-1.14-r1 (09 Jan 2008)
 
