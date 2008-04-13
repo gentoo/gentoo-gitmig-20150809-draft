@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtex2html
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.12 2008/04/08 21:28:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.13 2008/04/13 18:22:57 aballier Exp $
+
+  13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  -bibtex2html-1.70.ebuild, -bibtex2html-1.88.ebuild:
+  remove old
 
 *bibtex2html-1.91 (08 Apr 2008)
 
