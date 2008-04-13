@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.16_alpha.ebuild,v 1.3 2008/04/13 19:01:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.1 2008/04/13 19:01:39 hd_brummy Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -45,6 +45,7 @@ src_unpack() {
 	vdr-plugin_src_unpack
 
 	sed -i "${WORKDIR}"/DeepBlue/DeepBlue.theme -e "s:Enigma:Vera:"
+	sed -i "${S}"/themes/DeepBlue.theme -e "s:Enigma:Vera:"
 	sed -i Makefile -e "s:WITH_X_COMM = 1:#WITH_X_COMM = 1:"
 	sed -i common.h -e "s:void tell:int tell:"
 	sed -i common.c -e "s:void tell:int tell:"
@@ -80,6 +81,7 @@ src_install() {
 
 	insinto /usr/share/vdr/graphTFT/themes/DeepBlue/
 	doins -r "${WORKDIR}"/DeepBlue/*
+	doins "${S}"/themes/DeepBlue.theme
 
 	dosym /usr/share/fonts/ttf-bitstream-vera /usr/share/vdr/graphTFT/fonts
 
