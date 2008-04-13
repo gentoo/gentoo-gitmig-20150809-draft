@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dchub
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.22 2007/04/22 11:31:32 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.23 2008/04/13 21:48:15 betelgeuse Exp $
+
+  13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> dchub-0.5.2.ebuild:
+  Remove RDEPEND on virtual/libc and fix quoting.
 
   22 Apr 2007; Raúl Porcel <armin76@gentoo.org> dchub-0.5.2.ebuild:
   Use doconfd and doinitd, bug 174266

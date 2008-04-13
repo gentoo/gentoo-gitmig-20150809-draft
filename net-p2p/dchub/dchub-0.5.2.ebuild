@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.10 2007/04/22 11:31:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.11 2008/04/13 21:48:15 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc ppc64 x86 ~amd64"
 
-RDEPEND="virtual/libc
+RDEPEND="
 	=dev-libs/glib-2*
 	sys-devel/libperl
 	dev-libs/libxml2
@@ -29,16 +29,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}/${P}-amd64.patch"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 
 	dodoc Documentation/*
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO || die
 
 	dodir /etc/dchub
 	newinitd {FILESDIR}/dchub.init.d dchub
