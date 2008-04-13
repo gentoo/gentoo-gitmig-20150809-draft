@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126-r1.ebuild,v 1.1 2008/02/18 13:04:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126-r1.ebuild,v 1.2 2008/04/13 13:30:48 maekke Exp $
 
 inherit eutils linux-mod multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://linmodems.technion.ac.il/packages/smartlink/${P/_pre/-}.tar.gz
 
 LICENSE="Smart-Link"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE="alsa usb"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
