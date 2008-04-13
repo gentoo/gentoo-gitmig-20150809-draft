@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.55 2008/01/25 21:38:21 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.56 2008/04/13 10:43:31 eva Exp $
+
+*pan-0.132-r2 (13 Apr 2008)
+
+  13 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pan-0.132-glib-compat.patch, -pan-0.14.2-r1.ebuild,
+  +pan-0.132-r2.ebuild:
+  fix compilation with >=glib-2.16, bug #214446
 
   25 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> pan-0.132-r1.ebuild:
   Marked stable on amd64 as per bug 195543.
