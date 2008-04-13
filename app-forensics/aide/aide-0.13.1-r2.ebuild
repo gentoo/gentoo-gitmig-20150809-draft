@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r2.ebuild,v 1.1 2008/04/13 16:17:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r2.ebuild,v 1.2 2008/04/13 21:48:09 mr_bones_ Exp $
 
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
@@ -106,7 +106,6 @@ src_install() {
 
 	insinto /etc/aide
 	doins "${FILESDIR}"/aide.conf
-
 
 	dosbin "${FILESDIR}"/aideinit
 
