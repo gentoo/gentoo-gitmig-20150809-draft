@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.16 2008/04/12 11:27:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.17 2008/04/13 15:55:49 matsuu Exp $
+
+  13 Apr 2008; MATSUU Takuto <matsuu@gentoo.org> -files/dbskkd-cdb.xinetd,
+  -dbskkd-cdb-1.01-r1.ebuild:
+  Removed old version.
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> dbskkd-cdb-1.71.ebuild:
   Stable on ppc wrt bug 216277
