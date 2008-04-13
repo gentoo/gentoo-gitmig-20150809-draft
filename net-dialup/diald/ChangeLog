@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/diald
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.14 2007/07/18 07:17:50 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.15 2008/04/13 18:16:56 mrness Exp $
+
+  13 Apr 2008; Alin Năstac <mrness@gentoo.org>
+  files/diald-1.0-gentoo.patch, files/diald-1.0-nopam.patch,
+  diald-1.0-r2.ebuild:
+  Cosmetic pam changes (#210863).
 
   18 Jul 2007; Alin Năstac <mrness@gentoo.org> -diald-1.0-r1.ebuild:
   Remove old revision.

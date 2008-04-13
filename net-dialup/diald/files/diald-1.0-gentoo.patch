@@ -1,17 +1,6 @@
-diff -Nru diald-1.0.orig/config/diald.pam diald-1.0/config/diald.pam
---- diald-1.0.orig/config/diald.pam	1999-10-12 00:29:43.000000000 +0300
-+++ diald-1.0/config/diald.pam	2007-07-12 09:52:13.000000000 +0300
-@@ -1,4 +1,4 @@
- #%PAM-1.0
--auth       required	pam_nologin.so
--auth       required	pam_pwdb.so shadow
--account    required	pam_pwdb.so
-+auth       required    pam_nologin.so
-+auth       include     system-auth
-+account    include     system-auth
 diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
---- diald-1.0.orig/Makefile.in	2007-07-12 09:50:22.000000000 +0300
-+++ diald-1.0/Makefile.in	2007-07-12 09:44:14.000000000 +0300
+--- diald-1.0.orig/Makefile.in	2008-04-13 21:09:37.000000000 +0300
++++ diald-1.0/Makefile.in	2008-04-13 21:11:17.000000000 +0300
 @@ -21,9 +21,13 @@
  mandir          = @mandir@
  
@@ -27,7 +16,7 @@ diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
  			-DDIALD_DEFS_FILE=\"@libdir@/diald/diald.defs\" \
  			-DRUN_PREFIX=\"@localstatedir@/run\"
  INSTALL         = @INSTALL@
-@@ -51,21 +55,21 @@
+@@ -51,21 +55,19 @@
  	$(INSTALL) -d $(DESTDIR)$(bindir)
  	$(INSTALL) -m 0755 bin/dctrl $(DESTDIR)$(bindir)/dctrl
  	$(INSTALL) -d $(DESTDIR)$(sbindir)
@@ -49,13 +38,12 @@ diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
 -	$(INSTALL) -o root -g bin lib/*.gif $(DESTDIR)$(libdir)
 -	$(INSTALL) -o root -g bin -m 0644 config/diald.defs $(DESTDIR)$(libdir)/diald.defs
 -	$(INSTALL) -o root -g bin -m 0644 config/standard.filter $(DESTDIR)$(libdir)/standard.filter
+-	$(INSTALL) -d -m 0755 $(DESTDIR)/etc/pam.d
+-	$(INSTALL) -o root -g root -m 0644 config/diald.pam $(DESTDIR)/$(sysconfdir)/pam.d/diald
+-	$(INSTALL) -o root -g bin bin/connect $(DESTDIR)$(libdir)/connect
 +	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) lib/*.gif $(DESTDIR)$(libdir)
 +	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) -m 0644 config/diald.defs $(DESTDIR)$(libdir)/diald.defs
 +	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) -m 0644 config/standard.filter $(DESTDIR)$(libdir)/standard.filter
- 	$(INSTALL) -d -m 0755 $(DESTDIR)/etc/pam.d
--	$(INSTALL) -o root -g root -m 0644 config/diald.pam $(DESTDIR)/$(sysconfdir)/pam.d/diald
--	$(INSTALL) -o root -g bin bin/connect $(DESTDIR)$(libdir)/connect
-+	$(INSTALL) -o $(ROOTUID) -g $(ROOTGRP) -m 0644 config/diald.pam $(DESTDIR)/$(sysconfdir)/pam.d/diald
 +	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) bin/connect $(DESTDIR)$(libdir)/connect
  
  clean:

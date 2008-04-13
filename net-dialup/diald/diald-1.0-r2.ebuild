@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.2 2007/07/17 19:38:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.3 2008/04/13 18:16:56 mrness Exp $
 
-inherit eutils autotools
+inherit eutils autotools pam
 
 DESCRIPTION="Daemon that provides on demand IP links via SLIP or PPP"
 HOMEPAGE="http://diald.sourceforge.net"
@@ -25,13 +25,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	if ! use pam; then
 		epatch "${FILESDIR}/${P}-nopam.patch"
+		rm "${S}"/README.pam
 		cd "${S}"
 		eautoconf
 	fi
 }
 
 src_install() {
-	dodir /etc/pam.d
 	make \
 		DESTDIR="${D}" \
 		sysconfdir=/etc \
@@ -43,6 +43,7 @@ src_install() {
 		ROOTUID=root \
 		ROOTGRP=root \
 		install || die "make failed"
+	use pam && pamd_mimic_system diald auth account
 
 	dodir /var/cache/diald
 	mknod -m 0660 "${D}/var/cache/diald/diald.ctl" p
