@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.2 2008/02/11 15:21:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.3 2008/04/13 16:15:26 drac Exp $
 
 WANT_AUTOMAKE=1.8
 
@@ -17,33 +17,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="=sci-libs/fftw-3*
-	    >=dev-util/pkgconfig-0.9.0
-		media-libs/libsndfile
-		media-libs/libsamplerate
-		>=dev-lang/swig-1.3.0
-		dev-lang/python
-		alsa? ( media-libs/alsa-lib )
-		jack? ( media-sound/jack-audio-connection-kit )
-		lash? ( media-sound/lash )"
-
+	media-libs/libsndfile
+	media-libs/libsamplerate
+	>=dev-lang/swig-1.3.0
+	dev-lang/python
+	alsa? ( media-libs/alsa-lib )
+	jack? ( media-sound/jack-audio-connection-kit )
+	lash? ( media-sound/lash )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen virtual/latex-base )"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-	epatch "${FILESDIR}/aubio-0.3.2-multilib.patch"
-
+	epatch "${FILESDIR}"/aubio-0.3.2-multilib.patch
 	eautomake
 }
 
 src_compile() {
-	econf $(use_enable jack) \
-		$(use_enable alsa) \
-		$(use_enable lash) \
-		|| die "econf failed"
-	emake || die "emake failed"
+	econf $(use_enable jack) $(use_enable alsa) $(use_enable lash)
+	emake || die "emake failed."
 	if use doc; then
 		export VARTEXFONTS="${T}/fonts"
 		cd "${S}/doc"
@@ -65,5 +59,4 @@ src_install() {
 		mv doc/examples/html doc/examples/examples
 		dohtml -r doc/examples/examples
 	fi
-
 }
