@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/libdjconsole-0.1.2.ebuild,v 1.2 2008/01/13 18:22:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/libdjconsole-0.1.2.ebuild,v 1.3 2008/04/13 21:30:24 aballier Exp $
 
 DESCRIPTION="A driver for the DJ Console, built on top of libusb"
 HOMEPAGE="http://djplay.sourceforge.net/"
@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libusb"
-RDEPEND="${DEPEND}
+RDEPEND="dev-libs/libusb"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
