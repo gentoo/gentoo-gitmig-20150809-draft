@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1.ebuild,v 1.2 2008/04/10 17:01:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1.ebuild,v 1.3 2008/04/13 21:27:30 aballier Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="X curl debug dvb exif hal joystick jpeg lirc nls png v4l"
 
-DEPEND="media-libs/xine-lib
+COMMON_DEPEND="media-libs/xine-lib
 	curl? ( net-misc/curl )
 	hal? ( sys-apps/hal )
 	joystick? ( media-libs/libjsw )
@@ -27,10 +27,11 @@ DEPEND="media-libs/xine-lib
 		media-libs/netpbm
 		media-video/mjpegtools )
 	X? ( x11-libs/libXext
-		x11-libs/libX11 )
-	dev-util/pkgconfig"
-RDEPEND="${DEPEND}
+		x11-libs/libX11 )"
+RDEPEND="${COMMON_DEPEND}
 	virtual/eject"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 
