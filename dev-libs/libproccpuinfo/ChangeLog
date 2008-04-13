@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libproccpuinfo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.11 2007/03/19 11:57:56 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.12 2008/04/13 14:43:28 hollow Exp $
+
+*libproccpuinfo-0.0.7 (13 Apr 2008)
+
+  13 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  libproccpuinfo-0.0.6.1.ebuild, +libproccpuinfo-0.0.7.ebuild:
+  version bump; fix #204385, #216218
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove tcort from metadata.xml due to retirement.
