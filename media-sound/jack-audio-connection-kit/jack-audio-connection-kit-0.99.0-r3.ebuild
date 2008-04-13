@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r3.ebuild,v 1.5 2008/01/06 19:25:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r3.ebuild,v 1.6 2008/04/13 18:56:36 drac Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="~mips"
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
 RDEPEND="dev-libs/glib
-	dev-util/pkgconfig
 	>=media-libs/libsndfile-1.0.0
 	sys-libs/ncurses
 	caps? ( sys-libs/libcap )
@@ -22,19 +21,20 @@ RDEPEND="dev-libs/glib
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	!media-sound/jack-cvs"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Add doc option and fix --march=pentium2 in caps test
-	epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && \
+	epatch "${FILESDIR}"/${PN}-0.98.1-configure.patch && \
 	WANT_AUTOCONF=2.5 autoconf
 
 	# compile and install jackstart, see #92895, #94887
 	if use caps ; then
-		epatch ${FILESDIR}/${P}-jackstart.patch
+		epatch "${FILESDIR}"/${P}-jackstart.patch
 	fi
 }
 
@@ -67,20 +67,20 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} datadir=${D}/usr/share install || die
+	make DESTDIR="${D}" datadir="${D}/usr/share" install || die
 
 	if ! use jack-tmpfs; then
 		keepdir /var/run/jack
-		chmod 4777 ${D}/var/run/jack
+		chmod 4777 "${D}"/var/run/jack
 	fi
 
 	if use doc; then
-		mv ${D}/usr/share/doc/${PF}/reference/html \
-		   ${D}/usr/share/doc/${PF}/
+		mv "${D}"/usr/share/doc/${PF}/reference/html \
+		   "${D}"/usr/share/doc/${PF}/
 
-		mv ${S}/example-clients \
-		   ${D}/usr/share/doc/${PF}/
+		mv "${S}"/example-clients \
+		   "${D}"/usr/share/doc/${PF}/
 	fi
 
-	rm -rf ${D}/usr/share/doc/${PF}/reference
+	rm -rf "${D}"/usr/share/doc/${PF}/reference
 }
