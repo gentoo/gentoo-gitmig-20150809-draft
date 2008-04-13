@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.12.ebuild,v 1.1 2008/04/05 16:14:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.12.ebuild,v 1.2 2008/04/13 10:18:33 genstef Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator games
 
@@ -21,6 +21,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx
 	media-libs/libpng
+	dev-libs/boost
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"

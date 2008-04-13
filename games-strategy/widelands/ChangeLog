@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.14 2008/04/05 16:14:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.15 2008/04/13 10:18:33 genstef Exp $
+
+  13 Apr 2008; Stefan Schweizer <genstef@gentoo.org>
+  widelands-0.0.12.ebuild:
+  add missing boost dependancy, bug 216586
 
 *widelands-0.0.12 (05 Apr 2008)
 
