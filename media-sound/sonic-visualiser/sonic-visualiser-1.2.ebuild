@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.2.ebuild,v 1.1 2008/02/28 09:42:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.2.ebuild,v 1.2 2008/04/13 23:04:58 aballier Exp $
+
+EAPI=1
 
 inherit eutils qt4
 
@@ -13,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fftw id3tag jack mad ogg"
 
-RDEPEND="$(qt4_min_version 4.3)
+RDEPEND="|| ( ( x11-libs/qt-core:4  x11-libs/qt-gui:4 )
+				>=x11-libs/qt-4.3:4 )
 	media-libs/libsndfile
 	media-libs/libsamplerate
 	fftw? ( =sci-libs/fftw-3* )
@@ -23,7 +26,6 @@ RDEPEND="$(qt4_min_version 4.3)
 	media-libs/liblrdf
 	media-libs/ladspa-sdk
 	media-libs/liblo
-	media-libs/libfishsound
 	media-libs/speex
 	media-libs/vamp-plugin-sdk
 	media-libs/rubberband

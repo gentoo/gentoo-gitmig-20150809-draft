@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.4 2008/03/21 22:58:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.5 2008/04/13 23:04:58 aballier Exp $
+
+  13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  sonic-visualiser-1.2.ebuild:
+  libfishsound isnt mandatory and already controlled by the ogg useflag,
+  allow split qt4 deps
 
   21 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   -files/sonic-visualiser-1.0-loarg.patch, -sonic-visualiser-1.0.ebuild:
