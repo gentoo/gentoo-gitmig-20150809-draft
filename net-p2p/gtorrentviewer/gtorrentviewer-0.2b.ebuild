@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2b.ebuild,v 1.4 2007/04/04 17:33:31 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2b.ebuild,v 1.5 2008/04/13 15:01:33 betelgeuse Exp $
 
 inherit eutils gnome2
 
@@ -16,9 +16,10 @@ SLOT="0"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
-DEPEND="net-misc/curl
+RDEPEND="net-misc/curl
 	>=x11-libs/gtk+-2.4
-	>=dev-libs/glib-2.4
+	>=dev-libs/glib-2.4"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
