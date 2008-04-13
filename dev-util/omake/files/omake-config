@@ -1,8 +1,0 @@
-PREFIX = $'/usr'
-BINDIR = $(PREFIX)/bin
-LIBDIR = $(PREFIX)/lib
-MANDIR = $(PREFIX)/man
-CC = gcc
-NATIVE_ENABLED = true
-BYTE_ENABLED = false
-NATIVE_PROFILE = false
