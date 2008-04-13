@@ -1,9 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r1.ebuild,v 1.2 2008/04/13 16:17:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r2.ebuild,v 1.1 2008/04/13 16:17:59 matsuu Exp $
+
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
-inherit eutils autotools
+
+inherit eutils autotools multilib
 
 DESCRIPTION="AIDE (Advanced Intrusion Detection Environment) is a replacement for Tripwire"
 HOMEPAGE="http://aide.sourceforge.net/"
@@ -26,8 +28,7 @@ DEPEND="acl? ( sys-apps/acl )
 	zlib? ( sys-libs/zlib )"
 #	audit? ( sys-process/audit )
 
-RDEPEND="!static? ( ${DEPEND} )
-	virtual/mailx"
+RDEPEND="!static? ( ${DEPEND} )"
 
 DEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
@@ -45,7 +46,11 @@ pkg_config() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	# fix configure switch
+	epatch "${FILESDIR}/${P}-configure.patch"
 
 	if ! use mhash ; then
 		# dev-libs/libgcrypt doesn't support whirlpool algorithm
@@ -63,43 +68,45 @@ src_unpack() {
 	if ! use acl ; then
 		sed -i -e 's/\+acl//' doc/aide.conf.in || die
 	fi
+
 	eautoreconf
 }
 
 src_compile() {
-	local myconf="--sysconfdir=/etc/aide $(use_enable static)"
-
-	# --without-* borked
-	use zlib && myconf="${myconf} --with-zlib"
-	use nls  && myconf="${myconf} --with-locale"
-	use postgres && myconf="${myconf} --with-psql"
-	use selinux && myconf="${myconf} --with-selinux"
-	use acl && myconf="${myconf} --with-posix-acl"
-	use xattr && myconf="${myconf} --with-xattr"
-#	use audit && myconf="${myconf} --with-audit"
+	local myconf="
+		$(use_with acl posix-acl)
+		$(use_with !mhash gcrypt)
+		$(use_with mhash mhash)
+		$(use_with nls locale)
+		$(use_with postgres psql)
+		$(use_with selinux)
+		$(use_enable static)
+		$(use_with xattr)
+		$(use_with zlib)
+		--sysconfdir=/etc/aide
+		--with-extra-lib=/usr/$(get_libdir)"
+#		$(use_with audit)
 
 	# curl doesn't work with static
 	use curl && ! use static && myconf="${myconf} --with-curl"
 
-	# If you use dev-libs/libgcrypt, --without-mhash is needed.
-	use mhash \
-		&& myconf="${myconf} --with-mhash" \
-		|| myconf="${myconf} --with-gcrypt --without-mhash"
-
-	econf ${myconf} || die
+	econf ${myconf} || die "econf failed"
 	# parallel make borked
-	emake -j1 || die
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	keepdir /var/lib/aide
+	fowners root:0 /var/lib/aide
+	fperms 0755 /var/lib/aide
+
 	keepdir /var/log/aide
 
 	insinto /etc/aide
 	doins "${FILESDIR}"/aide.conf
-	# doins doc/aide.conf
+
 
 	dosbin "${FILESDIR}"/aideinit
 
@@ -108,9 +115,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown root:0 /var/lib/aide
-	chmod 0755 /var/lib/aide
-
 	elog
 	elog "A sample configuration file has been installed as"
 	elog "/etc/aide/aide.conf.  Please edit to meet your needs."

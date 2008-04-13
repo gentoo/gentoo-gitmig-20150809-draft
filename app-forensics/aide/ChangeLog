@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/aide
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.34 2007/12/23 06:37:49 matsuu Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.35 2008/04/13 16:17:59 matsuu Exp $
+
+*aide-0.13.1-r2 (13 Apr 2008)
+
+  13 Apr 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/aide-0.13.1-configure.patch, files/aide.cron,
+  +aide-0.13.1-r2.ebuild:
+  Removed mailx dependency, bug #215637.
+  Clean up.
 
   23 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> +aide-0.13.1-r1.ebuild:
   Removed /etc/cron.daily/aide.cron, bug #195690.
