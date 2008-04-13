@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.4 2008/01/29 14:03:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.5 2008/04/13 01:02:35 chainsaw Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,13 +14,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
 
-DEPEND="|| (
+RDEPEND="|| (
 		>=net-irc/xchat-2.4.0
 		>=net-irc/xchat-gnome-0.4
 	)
-	dev-util/pkgconfig
 	sys-apps/pciutils
 	>=media-sound/audacious-1.4.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	emake -j1 CC="$(tc-getCC)" || die "Compile failed"
