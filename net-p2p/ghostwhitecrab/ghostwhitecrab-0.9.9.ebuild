@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.5 2007/06/17 18:21:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.6 2008/04/13 21:50:51 betelgeuse Exp $
 
 inherit eutils versionator
 
@@ -17,11 +17,6 @@ LICENSE="as-is FDL-1.1"
 SLOT="0"
 KEYWORDS="amd64 hppa x86"
 
-DEPEND=">=sys-apps/sed-4
-	sys-libs/zlib
-	virtual/libc"
-RDEPEND=""
-
 pkg_setup() {
 	enewgroup gwc
 	enewuser gwc -1 /bin/bash /dev/null gwc
@@ -29,7 +24,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's:#User:User:g' examples/example.conf
 	sed -i -e 's:#Group:Group:g' examples/example.conf
 	sed -i -e 's:~gwc/db:/usr/share/gwc:g' examples/example.conf
@@ -58,20 +53,20 @@ src_install() {
 	insinto /etc/${PN}
 	newins examples/example.conf gwc.conf
 	dodir /usr/share/gwc
-	touch ${D}/usr/share/gwc/peer_cache
-	touch ${D}/usr/share/gwc/urls.good
-	touch ${D}/usr/share/gwc/urls.bad
+	touch "${D}/usr/share/gwc/peer_cache"
+	touch "${D}/usr/share/gwc/urls.good"
+	touch "${D}/usr/share/gwc/urls.bad"
 	insinto /usr/share/gwc
 	newins examples/data_html.template data_template
 	newins examples/base_html.template base_template
-	chown -R gwc:gwc ${D}/usr/share/gwc
+	chown -R gwc:gwc "${D}/usr/share/gwc"
 	dodir /var/log/gwc
-	touch ${D}/var/log/gwc/main.log
-	touch ${D}/var/log/gwc/access.log
-	touch ${D}/var/log/gwc/dns.log
-	touch ${D}/var/log/gwc/checks.log
-	chown -R gwc:gwc ${D}/var/log/gwc
-	newinitd ${FILESDIR}/gwc.init gwc
+	touch "${D}/var/log/gwc/main.log"
+	touch "${D}/var/log/gwc/access.log"
+	touch "${D}/var/log/gwc/dns.log"
+	touch "${D}/var/log/gwc/checks.log"
+	chown -R gwc:gwc "${D}/var/log/gwc"
+	newinitd "${FILESDIR}/gwc.init" gwc
 	dohtml doc/*.html doc/*.css doc/specs/*.html
 	dodoc doc/specs/*.txt examples/*
 }
