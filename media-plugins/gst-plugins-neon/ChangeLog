@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.10 2008/04/13 14:52:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.11 2008/04/13 15:42:37 hollow Exp $
+
+  13 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  gst-plugins-neon-0.10.6-r1.ebuild:
+  fix neon DEPEND
 
 *gst-plugins-neon-0.10.6-r1 (13 Apr 2008)
 
