@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-1.3.0.ebuild,v 1.2 2007/01/23 15:15:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-1.3.0.ebuild,v 1.3 2008/04/13 21:50:40 betelgeuse Exp $
 
 DESCRIPTION="Overnet is the successor of eDonkey2000 that allows you to share files with millions of other people across the globe."
 HOMEPAGE="http://www.overnet.com"
@@ -10,8 +10,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 S="${WORKDIR}"
 
