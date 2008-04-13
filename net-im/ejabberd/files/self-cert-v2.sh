@@ -23,8 +23,8 @@ then
 fi
 
 cp /dev/null $pemfile
-chmod 600 $pemfile
-chown root $pemfile
+chmod 640 $pemfile
+chown root:jabber $pemfile
 
 cleanup() {
 	rm -f $pemfile
@@ -38,3 +38,4 @@ dd if=/dev/urandom of=$randfile count=1 2>/dev/null
 /usr/bin/openssl gendh -rand $randfile 512 >> $pemfile || cleanup
 /usr/bin/openssl x509 -subject -dates -fingerprint -noout -in $pemfile || cleanup
 rm -f $randfile
+

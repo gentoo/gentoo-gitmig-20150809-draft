@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.0-r1.ebuild,v 1.2 2008/04/13 21:48:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.0-r1.ebuild,v 1.3 2008/04/13 22:02:40 caleb Exp $
 
 inherit eutils multilib
 
@@ -13,7 +13,7 @@ MY_PV=${PV}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="The Erlang Jabber Daemon"
-HOMEPAGE="http://ejabberd.jabber.ru/"
+HOMEPAGE="http://www.ejabberd.im/"
 SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV/_/-}/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
