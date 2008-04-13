@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r2.ebuild,v 1.1 2008/04/12 19:17:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r2.ebuild,v 1.2 2008/04/13 21:58:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -22,6 +22,7 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl )
 	xattr? ( sys-apps/attr )
 	nls? ( >=sys-devel/gettext-0.15 )
+	!<sys-apps/util-linux-2.13
 	!net-mail/base64
 	!sys-apps/mktemp
 	>=sys-libs/ncurses-5.3-r5"
