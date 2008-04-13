@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.56 2008/04/13 10:43:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.57 2008/04/13 10:55:27 eva Exp $
+
+  13 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pan-0.132-gcc43-fixes.patch, pan-0.132-r2.ebuild:
+  Fix compilation with gcc-4.3, bug #211670
 
 *pan-0.132-r2 (13 Apr 2008)
 

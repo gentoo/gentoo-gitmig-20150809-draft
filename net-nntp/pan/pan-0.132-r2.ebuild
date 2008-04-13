@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.132-r2.ebuild,v 1.1 2008/04/13 10:43:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.132-r2.ebuild,v 1.2 2008/04/13 10:55:27 eva Exp $
 
 inherit eutils
 
@@ -31,7 +31,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/load-pixbuf-in-1024-byte-chunks.diff
 
 	# Fix compilation with >=glib-2.16, bug #214446
-	epatch "${FILESDIR}/pan-0.132-glib-compat.patch"
+	epatch "${FILESDIR}/${P}-glib-compat.patch"
+
+	# Fix compilation with gcc-4.3, bug #211670
+	epatch "${FILESDIR}/${P}-gcc43-fixes.patch"
 }
 
 src_compile() {

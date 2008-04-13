@@ -1,0 +1,90 @@
+--- pan-0.132/pan/general/file-util.cc
++++ pan-0.132/pan/general/file-util.cc
+@@ -19,6 +19,7 @@
+ 
+ #include <config.h>
+ 
++#include <algorithm>
+ #include <cassert>
+ #include <cerrno>
+ #include <cctype>
+--- pan-0.132/pan/general/line-reader.cc
++++ pan-0.132/pan/general/line-reader.cc
+@@ -1,5 +1,6 @@
+ #include <config.h>
+ #include <cstdio>
++#include <cstdlib>
+ extern "C"{ 
+   #include <glib/gi18n.h>
+ }
+--- pan-0.132/pan/general/string-view.h
++++ pan-0.132/pan/general/string-view.h
+@@ -22,6 +22,7 @@
+ 
+ #include <iosfwd>
+ #include <string>
++#include <cstring>
+ 
+ namespace pan
+ {
+--- pan-0.132/pan/gui/prefs.cc
++++ pan-0.132/pan/gui/prefs.cc
+@@ -22,6 +22,7 @@
+ #include <fstream>
+ #include <sstream>
+ #include <string>
++#include <cstdlib>
+ extern "C" {
+   #include <glib.h>
+   #include <glib/gi18n.h>
+--- pan-0.132/pan/tasks/nntp.cc
++++ pan-0.132/pan/tasks/nntp.cc
+@@ -20,6 +20,7 @@
+ #include <config.h>
+ #include <cassert>
+ #include <cstdarg>
++#include <cstdlib>
+ extern "C" {
+   #include <glib.h>
+   #include <glib/gi18n.h>
+--- pan-0.132/pan/tasks/socket-impl-scripted.cc
++++ pan-0.132/pan/tasks/socket-impl-scripted.cc
+@@ -19,6 +19,7 @@
+ 
+ #include <config.h>
+ #include <cassert>
++#include <cstdlib>
+ #include <pan/general/debug.h>
+ #include <pan/general/messages.h>
+ #include <pan/general/string-view.h>
+--- pan-0.132/pan/usenet-utils/gnksa-test.cc
++++ pan-0.132/pan/usenet-utils/gnksa-test.cc
+@@ -1,6 +1,7 @@
+ #include <config.h>
+ #include <iostream>
+ #include <string>
++#include <climits>
+ #include <pan/general/string-view.h>
+ #include <pan/general/test.h>
+ #include "gnksa.h"
+--- pan-0.132/pan/usenet-utils/numbers.cc
++++ pan-0.132/pan/usenet-utils/numbers.cc
+@@ -19,6 +19,7 @@
+ 
+ #include <config.h>
+ #include <cctype>
++#include <algorithm>
+ #include <pan/general/string-view.h>
+ #include "numbers.h"
+ 
+--- pan-0.132/pan/usenet-utils/scorefile.cc
++++ pan-0.132/pan/usenet-utils/scorefile.cc
+@@ -21,6 +21,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <string>
++#include <algorithm>
++#include <cstdlib>
+ extern "C" {
+   #include <glib/gi18n.h>
+ }
