@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.7 2007/03/10 09:39:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.8 2008/04/13 13:33:13 mrness Exp $
 
 opts="${opts} reload rotate"
 
@@ -24,22 +24,29 @@ maxfds() {
 
 checkconfig() {
 	maxfds
-	local CACHE_SWAP=$(awk '/^[ \t]*cache_dir[ \t]+/ { printf "%s ", $3 ; }' < /etc/squid/squid.conf)
-	[ -z "$CACHE_SWAP" ] && CACHE_SWAP=/var/cache/squid
-	umask 027
+	
+	local CACHE_SWAP=$(awk '/^[ \t]*cache_dir[ \t]+/ { if ($2 == "coss" ) printf "%s/stripe ", $3 ; else printf "%s/00 "; }' < /etc/squid/squid.conf)
+	[ -z "$CACHE_SWAP" ] && CACHE_SWAP="/var/cache/squid/00"
+	
+	local x
 	for x in $CACHE_SWAP ; do
-		if [ ! -d $x/00 ] ; then
+		if [ ! -e $x ] ; then
 			ebegin "Initializing cache directories"
+			local ORIG_UMASK=$(umask)
+			umask 027
 			local INIT_CACHE_RESPONSE="$(/usr/sbin/squid -z -N -D 2>&1)"
 			if [ $? != 0 ] || echo "$INIT_CACHE_RESPONSE" | grep -q "erminated abnormally" ; then
+				umask $ORIG_UMASK
 				eend 1
 				echo "$INIT_CACHE_RESPONSE"
 				return 1
 			fi
+			umask $ORIG_UMASK
 			eend 0
 			break
 		fi
 	done
+	
 	return 0
 }
 
