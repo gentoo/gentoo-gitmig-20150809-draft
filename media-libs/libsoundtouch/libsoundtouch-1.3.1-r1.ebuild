@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1-r1.ebuild,v 1.11 2008/02/27 18:34:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1-r1.ebuild,v 1.12 2008/04/13 21:14:29 aballier Exp $
 
 inherit autotools flag-o-matic
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 	eautoreconf
 
 	# Bug #148695
@@ -46,5 +47,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" pkgdocdir="/usr/share/doc/${PF}" install || die
-	rm -f ${D}/usr/share/doc/${PF}/COPYING.TXT	# remove obsolete LICENCE file
+	rm -f "${D}"/usr/share/doc/${PF}/COPYING.TXT	# remove obsolete LICENCE file
 }
