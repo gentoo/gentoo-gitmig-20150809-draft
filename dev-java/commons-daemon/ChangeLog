@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.33 2007/11/25 12:06:34 nelchael Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.34 2008/04/13 22:08:51 betelgeuse Exp $
+
+  13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-daemon-1.0.1-r1.ebuild:
+  Remove old revision.
 
   25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   commons-daemon-1.0.1-r2.ebuild:
