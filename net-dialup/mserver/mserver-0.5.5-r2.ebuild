@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.3 2006/05/14 12:02:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.4 2008/04/13 17:56:24 mrness Exp $
 
-inherit eutils
+inherit eutils pam
 
 DESCRIPTION="Daemon that provides control of dial-up links to other PCs on the LAN"
 HOMEPAGE="None available"
@@ -34,8 +34,7 @@ src_install() {
 	insinto /etc
 	newins mserver/mserver.conf mserver.conf.dist
 
-	insinto /etc/pam.d
-	doins pam/mserver
+	pamd_mimic_system mserver auth account password session
 
 	newinitd "${FILESDIR}/mserver-init" mserver
 }
