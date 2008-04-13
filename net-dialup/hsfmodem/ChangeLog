@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.44 2008/03/24 13:46:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.45 2008/04/13 10:20:56 mrness Exp $
+
+*hsfmodem-7.68.00.09 (13 Apr 2008)
+
+  13 Apr 2008; Alin Năstac <mrness@gentoo.org>
+  -files/hsfmodem-7.60.00.02-udev-group.patch,
+  -files/hsfmodem-7.60.00.09-udev-group.patch,
+  -files/hsfmodem-7.60.00.09-unset-locale.patch,
+  +files/hsfmodem-7.68.00.09-gentoo.patch, -hsfmodem-7.60.00.02.ebuild,
+  -hsfmodem-7.60.00.09-r1.ebuild, +hsfmodem-7.68.00.09.ebuild:
+  Version bump that improves compatibility with newer kernels (#208569).
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org>
   hsfmodem-7.68.00.04-r1.ebuild:
