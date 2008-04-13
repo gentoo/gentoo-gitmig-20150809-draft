@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.527 2008/04/10 13:38:40 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.528 2008/04/13 17:37:06 ingmar Exp $
+
+  13 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> qt-4.3.3.ebuild,
+  -qt-4.3.4.ebuild, qt-4.3.4-r1.ebuild:
+  Make USE="accessibility qt3support" default through IUSE defaults, bug
+  217400. Remove old.
 
   10 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> -qt-4.4.0_beta1.ebuild,
   +qt-4.4.0_rc1.ebuild:

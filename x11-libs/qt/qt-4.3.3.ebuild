@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.4 2008/03/05 16:40:05 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.5 2008/04/13 17:37:06 ingmar Exp $
 
+EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs multilib
 
 SRCTYPE="opensource-src"
@@ -17,7 +18,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
-IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3support sqlite sqlite3 ssl tiff xinerama zlib ${IUSE_INPUT_DEVICES}"
+IUSE="+accessibility cups dbus debug doc examples firebird gif glib jpeg mng
+mysql nas nis odbc opengl pch png postgres +qt3support sqlite sqlite3 ssl tiff
+xinerama zlib ${IUSE_INPUT_DEVICES}"
 
 RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
