@@ -1,0 +1,12 @@
+diff -Nru freeradius-server-2.0.3.orig/scripts/check-radiusd-config.in freeradius-server-2.0.3/scripts/check-radiusd-config.in
+--- freeradius-server-2.0.3.orig/scripts/check-radiusd-config.in	2007-05-15 01:27:24.000000000 +0300
++++ freeradius-server-2.0.3/scripts/check-radiusd-config.in	2008-04-13 20:38:50.000000000 +0300
+@@ -35,7 +35,7 @@
+ #  Note that you might have to add a '-d raddb' to the command line
+ #  options, if your database is somewhere other than /etc/raddb
+ #
+-$sbindir/radiusd -X -p 32768 > startup.log 2>&1 &
++$sbindir/radiusd -X > startup.log 2>&1 &
+ 
+ #
+ #  Remember what it's process ID was.
