@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1323 2008/04/13 23:24:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1324 2008/04/13 23:35:21 ulm Exp $
+
+  13 Apr 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask x11-libs/motif-config for removal.
 
   13 Apr 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Adding x11-misc/xvidcap-1.1.7_rc1 to ffmpeg new include layout mask

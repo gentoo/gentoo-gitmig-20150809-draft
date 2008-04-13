@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8499 2008/04/13 23:24:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8500 2008/04/13 23:35:21 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (13 Apr 2008)
+# Broken as designed. Not needed by openmotif anymore; no longer
+# installable because of blockers against openmotif and lesstif.
+# Masked for removal in 30 days, bug 117057.
+x11-libs/motif-config
 
 # Gilles Dartiguelongue <eva@gentoo.org> (12 Apr 2008)
 # Masking gnome-system-tools because it is broken,
