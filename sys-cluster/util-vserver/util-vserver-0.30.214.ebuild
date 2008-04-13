@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.3 2007/11/17 21:50:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.4 2008/04/13 10:24:11 hollow Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -16,16 +16,16 @@ KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 
 IUSE=""
 
-DEPEND=">=dev-libs/dietlibc-0.30-r2
-	dev-libs/beecrypt
+CDEPEND="dev-libs/beecrypt
 	net-firewall/iptables
 	net-misc/vconfig
-	sys-apps/iproute2"
+	sys-apps/iproute2
+	|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )"
 
-RDEPEND="sys-apps/iproute2
-	net-misc/vconfig
-	net-firewall/iptables
-	dev-libs/beecrypt"
+DEPEND=">=dev-libs/dietlibc-0.30-r2
+	${CDEPEND}"
+
+RDEPEND="${CDEPEND}"
 
 pkg_setup() {
 	if [[ -z "${VDIRBASE}" ]]; then
