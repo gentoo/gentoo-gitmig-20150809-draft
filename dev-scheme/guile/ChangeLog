@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.51 2008/04/13 10:43:49 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.52 2008/04/13 14:46:39 maekke Exp $
+
+  13 Apr 2008; Markus Meier <maekke@gentoo.org> guile-1.8.4.ebuild:
+  amd64/x86 stable, bug #217410
 
   13 Apr 2008; Marijn Schouten <hkBst@gentoo.org> -guile-1.8.3-r25.ebuild,
   guile-1.8.4.ebuild:
