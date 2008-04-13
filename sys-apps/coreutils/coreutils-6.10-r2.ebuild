@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r2.ebuild,v 1.3 2008/04/13 22:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r2.ebuild,v 1.4 2008/04/13 22:14:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.lzma
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl nls selinux static xattr"
+IUSE="acl nls selinux static xattr vanilla"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl )
@@ -49,10 +49,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	EPATCH_SUFFIX="patch" \
-	PATCHDIR="${WORKDIR}/patch" \
-	EPATCH_EXCLUDE="001_all_coreutils-gen-progress-bar.patch" \
-	epatch
+	if ! use vanilla ; then
+		EPATCH_SUFFIX="patch" \
+		PATCHDIR="${WORKDIR}/patch" \
+		EPATCH_EXCLUDE="001_all_coreutils-gen-progress-bar.patch" \
+		epatch
+	fi
 
 	# Since we've patched many .c files, the make process will try to
 	# re-build the manpages by running `./bin --help`.  When doing a
@@ -63,7 +65,7 @@ src_unpack() {
 	# There's no reason for this crap to use the private version
 	sed -i 's:__mempcpy:mempcpy:g' lib/*.c
 
-	AT_M4DIR="m4" eautoreconf
+	use vanilla || AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
