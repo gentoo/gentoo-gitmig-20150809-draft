@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.28.1.ebuild,v 1.4 2008/04/13 14:22:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.28.1.ebuild,v 1.5 2008/04/13 15:12:57 hollow Exp $
 
 inherit autotools eutils libtool versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.webdav.org/neon/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="doc expat gnutls kerberos nls pkcs11 socks5 ssl zlib"
 IUSE_LINGUAS="cs de fr ja nn pl ru tr zh_CN"
 for lingua in ${IUSE_LINGUAS}; do
@@ -91,7 +91,8 @@ src_install() {
 		emake DESTDIR="${D}" install-docs || die "emake install-docs failed"
 	fi
 
-	dodoc AUTHORS BUGS NEWS README THANKS TODO doc/*
+	dodoc AUTHORS BUGS NEWS README THANKS TODO
+	doman doc/man/*.[1-8]
 }
 
 pkg_postinst() {
