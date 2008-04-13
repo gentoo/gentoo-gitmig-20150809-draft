@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r1.ebuild,v 1.5 2008/04/13 21:58:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.10-r1.ebuild,v 1.6 2008/04/13 22:12:12 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -93,7 +93,6 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable acl) \
 		$(use_enable xattr) \
-		$(use_enable selinux) \
 		${myconf} \
 		|| die "econf"
 	emake || die "emake"
