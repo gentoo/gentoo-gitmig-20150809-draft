@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.528 2008/04/13 17:37:06 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.529 2008/04/13 18:49:47 jer Exp $
+
+  13 Apr 2008; Jeroen Roovers <jer@gentoo.org> qt-4.3.3.ebuild:
+  Stable for HPPA (bug #217529).
 
   13 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> qt-4.3.3.ebuild,
   -qt-4.3.4.ebuild, qt-4.3.4-r1.ebuild:
