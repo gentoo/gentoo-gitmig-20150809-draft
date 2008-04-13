@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.40 2008/01/07 03:55:47 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.41 2008/04/13 23:27:54 yngwin Exp $
+
+*xvidcap-1.1.7_rc1 (13 Apr 2008)
+
+  13 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/xvidcap-1.1.7_rc1-ffmpeg.patch,
+  +files/xvidcap-1.1.7_rc1-new-ffmpeg-headers.patch,
+  +xvidcap-1.1.7_rc1.ebuild:
+  New rc version, patched to work with new ffmpeg. Masked until new ffmpeg
+  is unmasked.
 
   07 Jan 2008; David Shakaryan <omp@gentoo.org> xvidcap-1.1.4_rc1.ebuild:
   Add dev-util/pkgconfig to DEPEND. (bug #204579)
