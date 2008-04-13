@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.90 2008/04/12 13:09:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.91 2008/04/13 15:54:55 armin76 Exp $
+
+  13 Apr 2008; Raúl Porcel <armin76@gentoo.org> kaffeine-0.8.6.ebuild:
+  sparc stable wrt #217216
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> kaffeine-0.8.6.ebuild:
   Stable on ppc wrt bug 217216
