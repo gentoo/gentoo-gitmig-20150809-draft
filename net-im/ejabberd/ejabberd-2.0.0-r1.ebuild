@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.0-r1.ebuild,v 1.1 2008/04/13 12:27:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.0-r1.ebuild,v 1.2 2008/04/13 21:48:30 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -148,4 +148,3 @@ pkg_postinst() {
 	elog '   # /usr/sbin/ejabberdctl register theadmin thehost thepassword'
 	elog '5) Log in with your favourite jabber client or using the web admin'
 }
-
