@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8496 2008/04/12 20:02:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8497 2008/04/13 12:13:23 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -48,11 +48,6 @@ media-sound/lastfmproxy
 # Mike Pagano <mpagano@gentoo.org> (11 Apr 2008)
 # Needs masked qt-4.4 (bug #217175)
 =sys-kernel/kccmp-0.2-r1
-
-# Diego Pettenò <flameeyes@gentoo.org> (11 Apr 2008)
-# Amarok pre-release, the tarball won't be available officially until Saturday
-# but is present for those who wants to test it.
-=media-sound/amarok-1.4.9.1
 
 # Alin Nastac <mrness@gentoo.org> (11 Apr 2008)
 # Masked for removal on April the 25th (#174109).
