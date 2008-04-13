@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.158 2008/04/08 22:02:33 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.159 2008/04/13 23:06:39 ulm Exp $
+
+  13 Apr 2008; Ulrich Mueller <ulm@gentoo.org> -postfix-2.4.5.ebuild:
+  Remove last vulnerable ebuild wrt bug 201671.
 
   08 Apr 2008; Raphael Marichez <falco@gentoo.org> files/postfix.rc6.2.5:
   Fix bashism in init.d/postfix reported by Peter Alfredsen, bug #216949
