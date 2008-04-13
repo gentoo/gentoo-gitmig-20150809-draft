@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1321 2008/04/13 12:53:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1322 2008/04/13 16:03:32 zzam Exp $
+
+  13 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> updates/2Q-2008:
+  Move media-fonts/skinenigmang-fonts to media-fonts/vdrsymbols-ttf.
 
   13 Apr 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local metric USE flag for media-gfx/jpeg2ps.

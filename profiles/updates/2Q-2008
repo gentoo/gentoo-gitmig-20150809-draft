@@ -2,3 +2,4 @@ move media-gfx/gimp-print net-print/gutenprint
 move app-vim/ant app-vim/ant_menu
 move media-libs/x264-svn media-libs/x264
 move media-video/x264-svn-encoder media-video/x264-encoder
+move media-fonts/skinenigmang-fonts media-fonts/vdrsymbols-ttf
