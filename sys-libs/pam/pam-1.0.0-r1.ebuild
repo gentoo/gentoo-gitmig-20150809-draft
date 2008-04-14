@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.0-r1.ebuild,v 1.2 2008/04/12 17:27:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.0-r1.ebuild,v 1.3 2008/04/14 11:55:51 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -138,11 +138,12 @@ src_compile() {
 		--enable-docdir=/usr/share/doc/${PF} \
 		--disable-regenerate-man \
 		${myconf} || die "econf failed"
-	emake || die "emake failed"
+	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install \
+		 sepermitlockdir="/var/run/sepermit" || die "make install failed"
 
 	# Need to be suid
 	fperms u+s /sbin/unix_chkpwd
