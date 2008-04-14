@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.181 2008/04/13 13:33:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.182 2008/04/14 05:45:05 mrness Exp $
+
+*squid-3.0.4-r1 (14 Apr 2008)
+*squid-2.6.19-r1 (14 Apr 2008)
+
+  14 Apr 2008; Alin Năstac <mrness@gentoo.org> files/squid.initd,
+  files/squid.initd-logrotate, -squid-2.6.19.ebuild,
+  +squid-2.6.19-r1.ebuild, -squid-3.0.4.ebuild, +squid-3.0.4-r1.ebuild:
+  Fix init script (#217455).
 
   13 Apr 2008; Alin Năstac <mrness@gentoo.org> files/squid.initd,
   files/squid.initd-logrotate:
