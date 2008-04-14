@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.1.1.ebuild,v 1.1 2008/03/11 14:44:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.1.1.ebuild,v 1.2 2008/04/14 11:40:58 ingmar Exp $
 
 NEED_PYTHON=2.4
 
@@ -9,7 +9,7 @@ inherit python eutils
 MY_PN=${PN}4
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="eric4 is a full featured Python IDE that is written in PyQt4 using the QScintilla editor widget"
-HOMEPAGE="http://www.die-offenbachs.de/detlev/eric4.html"
+HOMEPAGE="http://www.die-offenbachs.de/eric/index.html"
 SRC_URI="mirror://sourceforge/eric-ide/${MY_P}.tar.gz
 	linguas_cs? ( mirror://sourceforge/eric-ide/${MY_PN}-i18n-cs-${PV}.tar.gz )
 	linguas_de? ( mirror://sourceforge/eric-ide/${MY_PN}-i18n-de-${PV}.tar.gz )
