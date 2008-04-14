@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.1 2008/03/22 21:36:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.2 2008/04/14 13:07:02 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -21,7 +21,7 @@ COMMON_DEPS="
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-fileupload-1.0
 	>=dev-java/commons-logging-1.0.4
-	~dev-java/commons-validator-1.1.4
+	>=dev-java/commons-validator-1.1.4:0
 	dev-java/jakarta-oro:2.0
 	java-virtuals/servlet-api:2.3"
 RDEPEND=">=virtual/jre-1.4
@@ -75,9 +75,6 @@ src_install() {
 
 	dodoc README STATUS.txt || die
 	use doc && java-pkg_dohtml -r target/documentation/
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -r src/example*/* "${D}/usr/share/doc/${PF}/examples"
-	fi
+	use examples && java-pkg_doexamples src/example*
 	use source && java-pkg_dosrc src/share/*
 }
