@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1326 2008/04/14 21:21:10 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1327 2008/04/14 21:22:28 hkbst Exp $
+
+  14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> package.mask:
+  remove mask for prefix=/ guile that was removed
 
   14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> package.mask:
   mit-scheme is removed so mask removed too

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8502 2008/04/14 21:21:10 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8503 2008/04/14 21:22:28 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -896,10 +896,6 @@ sys-kernel/hppa-sources
 # P.mask snapshots
 >=dev-libs/nss-3.12_alpha1
 >=dev-libs/nspr-4.7.1_beta1
-
-# Marijn Schouten <hkBst@gentoo.org> (07 Dec 2007)
-# Guile that installs to prefix=/ for einit.
-=dev-scheme/guile-1.8.3-r25
 
 # Raúl Porcel <armin76@gentoo.org> (04 Dec 2007)
 # Mozilla stopped supporting 1.5 series in October 2007
