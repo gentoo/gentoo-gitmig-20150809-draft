@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1329 2008/04/14 21:36:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1330 2008/04/14 21:50:07 ingmar Exp $
+
+  14 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> use.local.desc:
+  Add description for pch USE flag to Qt:4 split ebuilds.
 
   14 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Unmasked >=udev-119-r1
