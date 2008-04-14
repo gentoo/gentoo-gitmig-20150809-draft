@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmodplug
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.36 2007/11/01 21:49:39 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.37 2008/04/14 14:06:31 flameeyes Exp $
+
+*libmodplug-0.8.4-r3 (14 Apr 2008)
+
+  14 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +libmodplug-0.8.4-r3.ebuild:
+  Don't install .la files for the library.
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org> libmodplug-0.8.4-r2.ebuild:
   Revert last change, doesn't work on sparc
