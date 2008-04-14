@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.5 2007/11/30 05:24:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.6 2008/04/14 19:55:37 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -128,8 +128,10 @@ src_install() {
 	    /etc/raddb/radiusd.conf
 	chown -R root:radiusd "${D}"/etc/raddb/*
 
+	pamd_mimic_system radiusd auth account password session
+
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}"
-	gzip -f -9 "${D}/usr/share/doc/${PF}"/{rfc/*.txt,*}
+	prepalldocs
 	dodoc CREDITS
 
 	rm "${D}/usr/sbin/rc.radiusd"

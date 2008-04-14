@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.3.ebuild,v 1.1 2008/04/13 17:41:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.3.ebuild,v 1.2 2008/04/14 19:55:37 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
-inherit eutils multilib autotools
+inherit eutils multilib autotools pam
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
@@ -127,8 +127,10 @@ src_install() {
 	    /etc/raddb/radiusd.conf
 	chown -R root:radiusd "${D}"/etc/raddb/*
 
+	pamd_mimic_system radiusd auth account password session
+
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}"
-	gzip -f -9 "${D}/usr/share/doc/${PF}"/{rfc/*.txt,*}
+	prepalldocs
 	dodoc CREDITS
 
 	rm "${D}/usr/sbin/rc.radiusd"
