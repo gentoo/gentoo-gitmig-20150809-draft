@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.13 2008/04/09 17:23:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.14 2008/04/14 18:36:31 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -40,12 +40,7 @@ RDEPEND=">=dev-libs/glib-2.6
 							>=sys-fs/udev-111
 							>=sys-apps/util-linux-2.13
 							>=sys-kernel/linux-headers-2.6.19
-							crypt?	(
-										||	(
-												>=sys-fs/cryptsetup-1.0.5
-												>=sys-fs/cryptsetup-luks-1.0.1
-											)
-									)
+							crypt?	( >=sys-fs/cryptsetup-1.0.5 )
 						)
 		 kernel_FreeBSD? ( dev-libs/libvolume_id )
 		 x86? ( >=sys-apps/dmidecode-2.7 )

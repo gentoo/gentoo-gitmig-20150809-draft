@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.17.ebuild,v 1.2 2008/02/21 13:12:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.17.ebuild,v 1.3 2008/04/14 18:38:25 cardoe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="crypt hal"
 
 RDEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
 	>=sys-fs/sysfsutils-1.3.0
-	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )"
+	crypt? ( >=sys-fs/cryptsetup-1.0.5 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21"
 

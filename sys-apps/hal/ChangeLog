@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.229 2008/04/09 17:23:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.230 2008/04/14 18:36:31 cardoe Exp $
+
+  14 Apr 2008; Doug Goldstein <cardoe@gentoo.org> hal-0.5.7.1-r5.ebuild,
+  hal-0.5.9-r1.ebuild, hal-0.5.9.1-r1.ebuild, hal-0.5.9.1-r2.ebuild,
+  hal-0.5.9.1-r3.ebuild, hal-0.5.10.ebuild:
+  cryptsetup-luks -> cryptsetup
 
   09 Apr 2008; Raúl Porcel <armin76@gentoo.org> hal-0.5.10.ebuild:
   Add ~ia64/~sparc wrt #200050

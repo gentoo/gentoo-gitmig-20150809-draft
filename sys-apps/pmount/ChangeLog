@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.57 2008/02/21 13:12:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.58 2008/04/14 18:38:25 cardoe Exp $
+
+  14 Apr 2008; Doug Goldstein <cardoe@gentoo.org> pmount-0.9.16.ebuild,
+  pmount-0.9.17.ebuild:
+  cryptsetup-luks -> cryptsetup
 
   21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> pmount-0.9.17.ebuild:
   Fix SRC_URI.
