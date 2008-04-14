@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.7.0.ebuild,v 1.5 2008/04/12 19:27:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.7.0.ebuild,v 1.6 2008/04/14 23:24:16 jer Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://smarden.org/runit/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="static"
 
 DEPEND=""
