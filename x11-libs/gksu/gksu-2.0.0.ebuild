@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.22 2008/03/31 19:34:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.23 2008/04/14 12:28:25 dang Exp $
 
 inherit gnome2 fixheadtails eutils autotools
 
@@ -47,7 +47,7 @@ pkg_postinst() {
 	"${ROOT}"/usr/share/gksu/gksu-migrate-conf.sh
 	einfo ""
 	einfo "A note on gksudo:  It actually runs sudo to get it's work done"
-	einfo "However, by default, Gentoo's sudo wipes your envinronment."
+	einfo "However, by default, Gentoo's sudo wipes your environment."
 	einfo "This means that gksudo will fail to run any X-based programs."
 	einfo "You need to either add yourself to wheel and uncomment this line"
 	einfo "in your /etc/sudoers:"
