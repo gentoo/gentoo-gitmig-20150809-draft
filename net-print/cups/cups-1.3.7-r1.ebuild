@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7.ebuild,v 1.1 2008/04/05 14:15:20 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r1.ebuild,v 1.1 2008/04/14 20:47:45 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -94,8 +94,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# disable configure automagic for acl/attr, upstream bug STR #2723.
+	# disable configure automagic for acl/attr, upstream bug STR #2723
 	epatch "${FILESDIR}/${PN}-1.3.0-configure.patch"
+
+	# create a missing symlink to allow https printing via IPP, bug #217293
+	epatch "${FILESDIR}/${PN}-1.3.7-backend-https.patch"
+
+	# CVE-2008-1722 security patch, bug #217232
+	epatch "${FILESDIR}/${PN}-1.3.7-CVE-2008-1722.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal

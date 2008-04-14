@@ -1,6 +1,17 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.299 2008/04/05 14:15:20 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.300 2008/04/14 20:47:45 tgurr Exp $
+
+*cups-1.3.7-r1 (14 Apr 2008)
+*cups-1.2.12-r8 (14 Apr 2008)
+
+  14 Apr 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/cups-1.2.12-CVE-2008-1722.patch,
+  -files/cups-1.3.6-CVE-2008-1373.patch,
+  +files/cups-1.3.7-CVE-2008-1722.patch,
+  +files/cups-1.3.7-backend-https.patch, +cups-1.2.12-r8.ebuild,
+  -cups-1.3.6-r3.ebuild, -cups-1.3.7.ebuild, +cups-1.3.7-r1.ebuild:
+  Security bump, see bug #217232. Also fixes bug #217293.
 
 *cups-1.3.7 (05 Apr 2008)
 
