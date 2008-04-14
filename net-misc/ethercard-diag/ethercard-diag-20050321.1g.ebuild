@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ethercard-diag/ethercard-diag-20050321.1g.ebuild,v 1.1 2008/04/14 05:59:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ethercard-diag/ethercard-diag-20050321.1g.ebuild,v 1.2 2008/04/14 06:00:40 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="!sys-apps/nictools"
 
 src_compile() {
 	tc-export CC AR
