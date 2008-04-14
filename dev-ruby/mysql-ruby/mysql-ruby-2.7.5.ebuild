@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.1 2008/04/13 21:42:39 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.2 2008/04/14 12:30:17 fmccor Exp $
 
 inherit ruby
 
@@ -25,7 +25,7 @@ src_unpack() {
 		sed -e 's/LONG_LONG/long long/' -i "${S}"/mysql.c.in
 	fi
 
-	epatch "${FILESDIR}/${PN}-2.7.4-test.patch"
+	epatch "${FILESDIR}/${PN}-2.7.5-test.patch"
 }
 
 src_compile() {
