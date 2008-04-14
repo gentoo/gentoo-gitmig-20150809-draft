@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.24 2008/03/05 19:40:41 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.25 2008/04/14 14:50:48 george Exp $
+
+*eselect-gnat-1.4 (14 Apr 2008)
+
+  14 Apr 2008; <portage-cvs@gentoo.org> +files/gnat.eselect-1.4,
+  +eselect-gnat-1.4.ebuild:
+  split profile validity check off the get_active_gnat and made the update
+  action clean unmerged profile
 
   04 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   eselect-gnat-1.3-r1.ebuild:
