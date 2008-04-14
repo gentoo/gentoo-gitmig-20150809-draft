@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.148 2008/04/12 13:39:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.149 2008/04/14 13:43:19 dang Exp $
+
+  14 Apr 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/liferea-1.4.14-turkish-translation-fix.patch,
+  liferea-1.4.14.ebuild:
+  Fix turkish translation; bug #217469
 
   12 Apr 2008; Daniel Gryniewicz <dang@gentoo.org>
   -files/liferea-1.0.22-add-feed.patch, -liferea-1.0.24.ebuild:

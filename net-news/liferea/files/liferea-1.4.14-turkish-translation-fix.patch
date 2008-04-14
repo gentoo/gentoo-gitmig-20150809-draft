@@ -1,0 +1,14 @@
+diff -Nur liferea-1.4.14/po/tr.po liferea-1.4.14_patched/po/tr.po
+--- liferea-1.4.14/po/tr.po	2007-09-01 12:37:28.000000000 +0300
++++ liferea-1.4.14_patched/po/tr.po	2008-04-13 01:32:24.000000000 +0300
+@@ -2221,8 +2221,8 @@
+ #, c-format
+ msgid "%d Search Result for \"%s\""
+ msgid_plural "%d Search Results for \"%s\""
+-msgstr[0] "\"%s\" için %d Arama Sonucu"
+-msgstr[1] "\"%s\" için %d Arama Sonucu"
++msgstr[0] "%d arama sonucu. Aranan: \"%s\""
++msgstr[1] "%d arama sonucu. Aranan: \"%s\""
+ 
+ #: ../src/ui/ui_search.c:123
+ #, c-format

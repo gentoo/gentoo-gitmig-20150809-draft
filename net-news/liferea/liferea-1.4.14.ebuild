@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.14.ebuild,v 1.2 2008/04/09 13:18:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.14.ebuild,v 1.3 2008/04/14 13:43:19 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
@@ -82,6 +82,12 @@ pkg_setup() {
 		$(use_enable libnotify) \
 		$(use_enable lua) \
 		$(use_enable networkmanager nm)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-turkish-translation-fix.patch
 }
 
 src_install() {
