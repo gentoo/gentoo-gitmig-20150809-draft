@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1328 2008/04/14 21:29:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1329 2008/04/14 21:36:58 zzam Exp $
+
+  14 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Unmasked >=udev-119-r1
 
   14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> ChangeLog:
   gcl-cvs is removed so mask removed too
