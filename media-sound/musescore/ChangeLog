@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musescore
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.16 2008/02/15 12:36:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.17 2008/04/14 21:48:03 drac Exp $
+
+  14 Apr 2008; Samuli Suominen <drac@gentoo.org> musescore-0.9.1d.ebuild:
+  Change qt4 depends for bug 217161.
 
   15 Feb 2008; Samuli Suominen <drac@gentoo.org> musescore-0.9.1d.ebuild:
   Jack is not optional wrt #209298 by Sven Müller.
