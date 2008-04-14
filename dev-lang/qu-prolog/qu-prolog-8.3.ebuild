@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.3.ebuild,v 1.4 2008/02/20 19:38:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.3.ebuild,v 1.5 2008/04/14 07:48:15 keri Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -16,7 +18,7 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE="debug doc examples qt4 threads"
 
-DEPEND="qt4? ( >=x11-libs/qt-4.1.0 )"
+DEPEND="qt4? ( || ( x11-libs/qt-gui:4 >=x11-libs/qt-4.1.0:4 ) )"
 
 S="${WORKDIR}"/${MY_P}
 
