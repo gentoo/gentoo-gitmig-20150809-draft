@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.28 2008/01/03 02:10:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.29 2008/04/14 03:24:53 beandog Exp $
+
+*ogmrip-0.11.2-r1 (14 Apr 2008)
+
+  14 Apr 2008; Steve Dibb <beandog@gentoo.org> +ogmrip-0.11.2-r1.ebuild:
+  Add check for mplayer jpeg support, bug 216771
 
 *ogmrip-0.11.2 (03 Jan 2008)
 
