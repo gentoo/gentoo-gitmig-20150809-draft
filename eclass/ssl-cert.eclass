@@ -1,17 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.15 2008/04/14 06:27:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.16 2008/04/14 06:37:44 ulm Exp $
 #
+# @ECLASS: ssl-cert.eclass
+# @MAINTAINER:
 # Author: Max Kalika <max@gentoo.org>
-#
-# This eclass implements standard installation procedure for installing
+# @BLURB: Eclass for SSL certificates
+# @DESCRIPTION:
+# This eclass implements a standard installation procedure for installing
 # self-signed SSL certificates.
+# @EXAMPLE:
+# "install_cert /foo/bar" installs ${ROOT}/foo/bar.{key,csr,crt,pem}
 
 # Conditionally depend on OpenSSL: allows inheretence
 # without pulling extra packages if not needed
 DEPEND="ssl? ( dev-libs/openssl )"
 IUSE="ssl"
 
+# @FUNCTION: gen_cnf
+# @USAGE:
+# @DESCRIPTION:
 # Initializes variables and generates the needed
 # OpenSSL configuration file and a CA serial file
 #
@@ -60,6 +68,10 @@ gen_cnf() {
 	return $?
 }
 
+# @FUNCTION: get_base
+# @USAGE: [if_ca]
+# @RETURN: <base path>
+# @DESCRIPTION:
 # Simple function to determine whether we're creating
 # a CA (which should only be done once) or final part
 #
@@ -72,6 +84,9 @@ get_base() {
 	fi
 }
 
+# @FUNCTION: gen_key
+# @USAGE: <base path>
+# @DESCRIPTION:
 # Generates an RSA key
 #
 # Access: private
@@ -85,6 +100,9 @@ gen_key() {
 	return $?
 }
 
+# @FUNCTION: gen_csr
+# @USAGE: <base path>
+# @DESCRIPTION:
 # Generates a certificate signing request using
 # the key made by gen_key()
 #
@@ -99,6 +117,9 @@ gen_csr() {
 	return $?
 }
 
+# @FUNCTION: gen_crt
+# @USAGE: <base path>
+# @DESCRIPTION:
 # Generates either a self-signed CA certificate using
 # the csr and key made by gen_csr() and gen_key() or
 # a signed server certificate using the CA cert previously
@@ -125,6 +146,9 @@ gen_crt() {
 	return $?
 }
 
+# @FUNCTION: gen_pem
+# @USAGE: <base path>
+# @DESCRIPTION:
 # Generates a PEM file by concatinating the key
 # and cert file created by gen_key() and gen_cert()
 #
@@ -145,11 +169,12 @@ docert() {
 	die
 }
 
-# Uses all the private functions above to generate
-# and install the requested certificates
-#
-# Usage: install_cert <certificates>
-# where <certificates> are full pathnames relative to ROOT, without extension.
+# @FUNCTION: install_cert
+# @USAGE: <certificates>
+# @DESCRIPTION:
+# Uses all the private functions above to generate and install the
+# requested certificates.
+# <certificates> are full pathnames relative to ROOT, without extension.
 #
 # Example: "install_cert /foo/bar" installs ${ROOT}/foo/bar.{key,csr,crt,pem}
 #
