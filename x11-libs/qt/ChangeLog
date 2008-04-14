@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.530 2008/04/13 23:51:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.531 2008/04/14 16:37:37 armin76 Exp $
+
+  14 Apr 2008; Raúl Porcel <armin76@gentoo.org> qt-4.3.3.ebuild:
+  alpha/ia64 stable wrt #217529
 
   13 Apr 2008; Ferris McCormick <fmccor@gentoo.org> qt-4.3.3.ebuild:
   Sparc stable --- Bug #217529 --- Good since 2007-12-06.
