@@ -1,23 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.8 2008/02/09 06:24:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.9 2008/04/14 12:56:47 drac Exp $
 
 DESCRIPTION="Amateur Radio VHF Contest Logbook"
 HOMEPAGE="http://tucnak.nagano.cz/tucnak1en.html"
 SRC_URI="http://tucnak.nagano.cz/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="sdl"
 
-RDEPEND="dev-util/pkgconfig
-	dev-libs/glib
+RDEPEND="dev-libs/glib
 	sdl? ( media-libs/libpng
 		media-libs/libsdl
 		media-radio/tucnak1-data
-		>=sys-libs/slang-1
+		sys-libs/slang
 		sys-libs/zlib )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	# use_enable will not work with their configure
@@ -29,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tucnak1
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.8 2008/02/09 06:24:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.9 2008/04/14 12:56:47 drac Exp $
+
+  14 Apr 2008; Samuli Suominen <drac@gentoo.org> tucnak1-1.22.ebuild:
+  Move pkgconfig to DEPEND from RDEPEND wrt bug #217278.
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org> tucnak1-1.22.ebuild:
   Fix tucnak1 to work with slang 2.1.3.
