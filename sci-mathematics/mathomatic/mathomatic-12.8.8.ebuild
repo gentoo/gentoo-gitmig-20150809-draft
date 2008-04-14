@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.8.8.ebuild,v 1.3 2008/04/06 19:40:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.8.8.ebuild,v 1.4 2008/04/14 13:28:58 bicatali Exp $
 
 inherit eutils
 
@@ -42,6 +42,6 @@ src_install() {
 	if use doc; then
 		dohtml doc/* || die
 		insinto /usr/share/doc/${PF}
-		doins tests factorial m4 || die
+		doins -r tests factorial m4 || die
 	fi
 }
