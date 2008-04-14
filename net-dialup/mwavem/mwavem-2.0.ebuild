@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.7 2007/04/16 11:54:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.8 2008/04/14 20:00:25 mrness Exp $
 
 DESCRIPTION="User level application for IBM Mwave modem"
 HOMEPAGE="http://oss.software.ibm.com/acpmodem/"
@@ -29,7 +29,7 @@ src_install() {
 	insinto /etc/devfs.d
 	newins "${FILESDIR}/mwave.devfs" mwave
 
-	insinto /etc/modules.d
+	insinto /etc/modprobe.d
 	newins "${FILESDIR}/mwave.modules" mwave
 
 	dodoc AUTHORS ChangeLog FAQ NEWS README README.devfs THANKS
