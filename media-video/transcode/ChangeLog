@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.205 2008/04/07 22:25:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.206 2008/04/14 01:12:18 yngwin Exp $
+
+*transcode-1.1.0_alpha7 (14 Apr 2008)
+
+  14 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/transcode-1.1.0_alpha7-new-ffmpeg-headers.patch,
+  +transcode-1.1.0_alpha7.ebuild:
+  Adding latest 1.1.0 alpha, which needs more testing/fixing. Patched for
+  new ffmpeg headers layout (bug #214740).
 
   07 Apr 2008; Ben de Groot <yngwin@gentoo.org>
   transcode-1.1.0_alpha4.ebuild:

@@ -1,0 +1,131 @@
+diff -burN transcode-1.1.0alpha7.orig/configure.in transcode-1.1.0alpha7/configure.in
+--- transcode-1.1.0alpha7.orig/configure.in	2008-01-27 16:22:30.000000000 +0100
++++ transcode-1.1.0alpha7/configure.in	2008-04-14 02:09:54.000000000 +0200
+@@ -598,14 +598,14 @@
+   esac],
+   [enable_libavcodec_static=no])
+ LIBAVCODEC_EXTRA_LIBS="$LIBAVCODEC_EXTRA_LIBS $($PKG_CONFIG --libs libavcodec)"
+-TC_PKG_CHECK(libavcodec, required, LIBAVCODEC, no, [ffmpeg/avcodec.h],
++TC_PKG_CHECK(libavcodec, required, LIBAVCODEC, no, [libavcodec/avcodec.h],
+  avcodec, avcodec_thread_init, libavcodec, [http://www.ffmpeg.org/])
+ if test x"$have_libavcodec" = x"yes" ; then
+   save_CPPFLAGS="$CPPFLAGS"
+   CPPFLAGS="$CPPFLAGS $LIBAVCODEC_CFLAGS"
+   AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ #include <stdio.h>
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ int
+ main()
+ {
+@@ -625,8 +625,8 @@
+     [LIBAVCODEC_VERSION="`./conftest$ac_exeext | sed -ne 's,VER=\(.*\),\1,p'`"
+       LIBAVCODEC_BUILD="`./conftest$ac_exeext | sed -ne 's,BUILD=\(.*\),\1,p'`"],
+     [AC_MSG_RESULT([failed])
+-     TC_PKG_ERROR(libavcodec, ffmpeg/avcodec.h, required, FFmpeg, [http://www.ffmpeg.org],
+-      [cannot compile ffmpeg/avcodec.h])],
++     TC_PKG_ERROR(libavcodec, libavcodec/avcodec.h, required, FFmpeg, [http://www.ffmpeg.org],
++      [cannot compile libavcodec/avcodec.h])],
+     [AC_MSG_RESULT([cross compiling; assumed OK...])
+       LIBAVCODEC_VERSION=""
+       LIBAVCODEC_BUILD=""])
+@@ -637,7 +637,7 @@
+     save_LIBS="$LIBS"
+     dnl $_w_libavcodec_l comes from TC_PKG_CHECK()
+     LIBS="$LIBS $w_libavcodec_l${deflib}/libavcodec.a $LIBAVCODEC_EXTRA_LIBS"
+-    AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <ffmpeg/avcodec.h>],[[
++    AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <libavcodec/avcodec.h>],[[
+ AVCodecContext *ctx = (void *)0;
+ avcodec_thread_init(ctx, 0);
+ ]])],
+@@ -665,15 +665,15 @@
+   esac],
+   [enable_libavformat_static=no])
+ LIBAVFORMAT_EXTRA_LIBS="$LIBAVFORMAT_EXTRA_LIBS $($PKG_CONFIG --libs libavformat)"
+-TC_PKG_CHECK(libavformat, required, LIBAVFORMAT, no, [ffmpeg/avformat.h],
++TC_PKG_CHECK(libavformat, required, LIBAVFORMAT, no, [libavformat/avformat.h],
+  avformat, av_register_all, libavformat, [http://www.ffmpeg.org/])
+ if test x"$have_libavformat" = x"yes" ; then
+   save_CPPFLAGS="$CPPFLAGS"
+   CPPFLAGS="$CPPFLAGS $LIBAVFORMAT_CFLAGS"
+   AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ #include <stdio.h>
+-#include <ffmpeg/avformat.h>
+-#include <ffmpeg/avcodec.h>
++#include <libavformat/avformat.h>
++#include <libavcodec/avcodec.h>
+ int
+ main()
+ {
+@@ -693,8 +693,8 @@
+     [LIBAVFORMAT_VERSION="`./conftest$ac_exeext | sed -ne 's,VER=\(.*\),\1,p'`"
+       LIBAVFORMAT_BUILD="`./conftest$ac_exeext | sed -ne 's,BUILD=\(.*\),\1,p'`"],
+     [AC_MSG_RESULT([failed])
+-     TC_PKG_ERROR(libavformat, ffmpeg/avformat.h, required, FFmpeg, [http://www.ffmpeg.org],
+-      [cannot compile ffmpeg/avformat.h])],
++     TC_PKG_ERROR(libavformat, libavformat/avformat.h, required, FFmpeg, [http://www.ffmpeg.org],
++      [cannot compile libavformat/avformat.h])],
+     [AC_MSG_RESULT([cross compiling; assumed OK...])
+       LIBAVCODEC_VERSION=""
+       LIBAVCODEC_BUILD=""])
+@@ -705,7 +705,7 @@
+     save_LIBS="$LIBS"
+     dnl $_w_libavcodec_l comes from TC_PKG_CHECK()
+     LIBS="$LIBS $w_libavcodec_l${deflib}/libavcodec.a $w_libavformat_l${deflib}/libavformat.a $LIBAVFORMAT_EXTRA_LIBS"
+-    AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <ffmpeg/avcodec.h>],[[
++    AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <libavcodec/avcodec.h>],[[
+ av_register_all();
+ ]])],
+       [LIBAVFORMAT_LIBS="$LIBS $w_libavcodec_l${deflib}/libavcodec.a $w_libavformat_l${deflib}/libavformat.a $LIBAVFORMAT_EXTRA_LIBS"],
+diff -burN transcode-1.1.0alpha7.orig/export/ffmpeg_cfg.h transcode-1.1.0alpha7/export/ffmpeg_cfg.h
+--- transcode-1.1.0alpha7.orig/export/ffmpeg_cfg.h	2006-04-17 17:48:43.000000000 +0200
++++ transcode-1.1.0alpha7/export/ffmpeg_cfg.h	2008-04-14 02:10:29.000000000 +0200
+@@ -2,7 +2,7 @@
+ #define __FFMPEG_CFG_H
+
+ #include "libtc/cfgfile.h"
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+
+ //char *lavc_param_vcodec = "mpeg4";
+ //extern int lavc_param_vbitrate;
+diff -burN transcode-1.1.0alpha7.orig/filter/filter_resample.c transcode-1.1.0alpha7/filter/filter_resample.c
+--- transcode-1.1.0alpha7.orig/filter/filter_resample.c	2007-06-06 22:37:16.000000000 +0200
++++ transcode-1.1.0alpha7/filter/filter_resample.c	2008-04-14 02:12:20.000000000 +0200
+@@ -37,7 +37,7 @@
+ #include "libtc/optstr.h"
+ #include "libtc/tcmodule-plugin.h"
+
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+
+ typedef struct
+ {
+diff -burN transcode-1.1.0alpha7.orig/libtc/tcavcodec.h transcode-1.1.0alpha7/libtc/tcavcodec.h
+--- transcode-1.1.0alpha7.orig/libtc/tcavcodec.h	2007-08-08 19:53:33.000000000 +0200
++++ transcode-1.1.0alpha7/libtc/tcavcodec.h	2008-04-14 02:13:42.000000000 +0200
+@@ -27,9 +27,9 @@
+ #include "config.h"
+ #endif
+
+-#include <ffmpeg/avformat.h>
+-#include <ffmpeg/avcodec.h>
+-#include <ffmpeg/avutil.h>
++#include <libavformat/avformat.h>
++#include <libavcodec/avcodec.h>
++#include <libavutil/avutil.h>
+
+ /*************************************************************************/
+
+diff -burN transcode-1.1.0alpha7.orig/configure.in transcode-1.1.0alpha7/configure.in
+--- transcode-1.1.0alpha7.orig/configure.in     2008-04-14 02:27:10.000000000 +0200
++++ transcode-1.1.0alpha7/configure.in  2008-04-14 02:32:52.000000000 +0200
+@@ -822,7 +822,7 @@
+ dnl libpostproc
+ dnl
+ LIBPOSTPROC_EXTRA_LIBS="$LIBPOSTPROC_EXTRA_LIBS $($PKG_CONFIG --libs libpostproc)"
+-TC_PKG_CHECK(libpostproc, no, LIBPOSTPROC, no, [postproc/postprocess.h],
++TC_PKG_CHECK(libpostproc, no, LIBPOSTPROC, no, [libpostproc/postprocess.h],
+   postproc, pp_postprocess, libpostproc, [http://www.ffmpeg.org/])
+ TC_PKG_HAVE(libpostproc, LIBPOSTPROC)
+
