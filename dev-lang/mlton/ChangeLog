@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mlton
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.4 2007/02/09 07:27:14 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.5 2008/04/14 21:06:20 hkbst Exp $
+
+*mlton-20070826 (14 Apr 2008)
+
+  14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> +mlton-20070826.ebuild:
+  bump, bug 110233
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
