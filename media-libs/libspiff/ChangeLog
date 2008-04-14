@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libspiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/ChangeLog,v 1.18 2008/04/14 15:59:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/ChangeLog,v 1.19 2008/04/14 18:19:59 drac Exp $
+
+  14 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libspiff-0.8.3-cstring-test-suite.patch, libspiff-0.8.3.ebuild:
+  Fix test suite to build with GCC 4.3.
 
 *libspiff-0.8.3 (14 Apr 2008)
 
