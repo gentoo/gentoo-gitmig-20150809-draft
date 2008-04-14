@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.3 2008/04/14 21:15:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.4 2008/04/14 21:56:22 eva Exp $
 
 EAPI=1
 
@@ -52,6 +52,9 @@ PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
 ELTCONF="--patch-only"
 DOC="AUTHORS ChangeLog* DOCUMENTERS HACKING NEWS TODO README* doc/README*"
 
+# FIXME: no the best thing to do but it'd be even better to fix autofoo
+MAKEOPTS="${MAKEOPTS} -j1"
+
 pkg_setup() {
 	local will_die=false
 	local flags="deprecated regex"
@@ -81,16 +84,8 @@ pkg_setup() {
 		--disable-error-on-warning"
 }
 
-src_compile() {
-	gnome2_src_compile -j1
-}
-
-src_install() {
-	gnome2_src_install -j1
-}
-
 src_test() {
 	GUILE_WARN_DEPRECATED=no \
-	emake -j1 check \
+	emake check \
 	|| die "Make check failed. See above for details."
 }
