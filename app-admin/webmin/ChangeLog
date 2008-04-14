@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.172 2008/04/14 18:39:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.173 2008/04/14 20:03:38 jer Exp $
+
+  14 Apr 2008; Jeroen Roovers <jer@gentoo.org> webmin-1.350.ebuild,
+  webmin-1.400.ebuild:
+  Revert to ~hppa (bug #217582).
 
   14 Apr 2008; Markus Rothe <corsair@gentoo.org> webmin-1.350.ebuild,
   webmin-1.400.ebuild:
