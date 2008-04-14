@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sweep
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.39 2008/04/13 22:34:25 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.40 2008/04/14 20:16:52 maekke Exp $
+
+  14 Apr 2008; Markus Meier <maekke@gentoo.org> sweep-0.9.3.ebuild:
+  amd64 stable, security bug #217373
 
   13 Apr 2008; Robert Buchholz <rbu@gentoo.org> Manifest:
   Regenerate DIST entry from rv.1.53, which got corrupted.
