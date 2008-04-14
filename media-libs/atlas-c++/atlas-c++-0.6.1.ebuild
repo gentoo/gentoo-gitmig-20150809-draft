@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1.ebuild,v 1.3 2008/02/29 07:23:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1.ebuild,v 1.4 2008/04/14 22:11:49 tupone Exp $
 
 inherit eutils autotools
 
@@ -24,7 +24,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-strict-aliasing.patch
+	epatch "${FILESDIR}"/${P}-strict-aliasing.patch \
+		"${FILESDIR}"/${P}-gcc-4.3.patch
 	eautoreconf
 }
 
