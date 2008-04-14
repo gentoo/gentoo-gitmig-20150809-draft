@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8503 2008/04/14 21:22:28 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8504 2008/04/14 21:28:56 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1061,11 +1061,6 @@ x11-plugins/gai
 # This is masked for removal in 30 days due to security bug #194609 and no
 # newer version of the package being available.  Sorry, folks.
 games-fps/americas-army
-
-# Marijn Schouten <hkBst@gentoo.org> (05 Oct 2007)
-# masked for removal, broken live ebuild with several open bugs
-# gcl to follow soon as it is unmaintained with lots of open bugs
-dev-lisp/gcl-cvs
 
 # Peter Volkov <pva@gentoo.org> (28 Sep 2007)
 # masked for testing
