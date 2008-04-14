@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.2 2008/03/25 03:42:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.3 2008/04/14 21:15:05 eva Exp $
 
 EAPI=1
 
@@ -18,6 +18,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="+doc ofx hbci chipcard debug quotes"
 
+# FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
+
 RDEPEND=">=dev-libs/glib-2.6.3
 	>=dev-scheme/guile-1.8.3
 	>=dev-scheme/slib-3.1.4
@@ -25,13 +27,10 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=dev-libs/popt-1.5
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libgnomeui-2.4
-	>=gnome-base/libgnomeprint-2.10
-	>=gnome-base/libgnomeprintui-2.10
 	>=gnome-base/libglade-2.4
 	>=gnome-extra/gtkhtml-3.14
 	>=dev-libs/libxml2-2.5.10
 	>=gnome-base/gconf-2
-	>=app-text/scrollkeeper-0.3
 	>=x11-libs/goffice-0.6
 	ofx? ( >=dev-libs/libofx-0.7.0 )
 	hbci? ( net-libs/aqbanking
@@ -40,13 +39,14 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	quotes? ( dev-perl/DateManip
 		>=dev-perl/Finance-Quote-1.11
 		dev-perl/HTML-TableExtract )
-	dev-util/intltool
 	media-libs/libart_lgpl
 	x11-libs/pango"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	sys-devel/libtool"
+	  dev-util/pkgconfig
+	  dev-util/intltool
+	  sys-devel/libtool
+	>=app-text/scrollkeeper-0.3"
 
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
 ELTCONF="--patch-only"
@@ -71,18 +71,18 @@ pkg_setup() {
 	if ${will_die} ; then
 		die "Please rebuild the packages with the use flags above."
 	fi
+
+	G2CONF="${G2CONF}
+		$(use_enable debug)
+		$(use_enable ofx)
+		$(use_enable hbci)
+		--disable-doxygen
+		--enable-locale-specific-tax
+		--disable-error-on-warning"
 }
 
 src_compile() {
-	econf \
-		$(use_enable debug) \
-		$(use_enable ofx) \
-		$(use_enable hbci) \
-		--disable-doxygen \
-		--enable-locale-specific-tax \
-		--disable-error-on-warning \
-		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	gnome2_src_compile -j1
 }
 
 src_install() {
