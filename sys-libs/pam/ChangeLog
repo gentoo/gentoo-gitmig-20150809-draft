@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.209 2008/04/14 13:58:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.210 2008/04/14 14:01:11 flameeyes Exp $
+
+  14 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.0-r2.ebuild:
+  Re-add ~ppc, that was added after I copied the ebuild to -r2.
 
 *pam-1.0.0-r2 (14 Apr 2008)
 
