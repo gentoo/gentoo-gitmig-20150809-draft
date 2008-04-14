@@ -9,12 +9,9 @@ rc_device_tarball=${rc_device_tarball:-${RC_DEVICE_TARBALL:-NO}}
 
 cleanup()
 {
-	if [ "$1" != "0" ]; then
-		# cleanup to fail more gracely
-		start-stop-daemon --stop --exec /sbin/udevd
-	fi
-
-	exit $1
+	# fail more gracely and not leave udevd running
+	start-stop-daemon --stop --exec /sbin/udevd
+	exit 1
 }
 
 # FIXME
@@ -37,7 +34,7 @@ check_kernel()
 mount_dev_directory()
 {
 	# No options are processed here as they should all be in /etc/fstab
-	ebegin "Mounting /dev for udev"
+	ebegin "Mounting /dev"
 	if fstabinfo --quiet /dev; then
 		mount -n /dev
 	else
@@ -96,7 +93,12 @@ disable_hotplug_agent()
 	fi
 }
 
-start_udev()
+root_link()
+{
+	/lib/udev/write_root_link_rule
+}
+
+start_udevd()
 {
 	ebegin "Starting udevd"
 	start-stop-daemon --start --exec /sbin/udevd -- --daemon
@@ -104,7 +106,7 @@ start_udev()
 }
 
 # populate /dev with devices already found by the kernel
-populate_udev()
+populate_dev()
 {
 	if get_bootparam "nocoldplug" ; then
 		rc_coldplug="NO"
@@ -188,8 +190,20 @@ check_persistent_net()
 	return 1
 }
 
-check_kernel || cleanup $?
-mount_dev_directory || cleanup $?
+check_udev_works()
+{
+	# should exist on every system, else udev failed
+	if [ ! -e /dev/zero ]; then
+		eerror "Assuming udev failed somewhere, as /dev/zero does not exist."
+		return 1
+	fi
+	return 0
+}
+
+
+
+check_kernel || cleanup
+mount_dev_directory || cleanup
 
 # Create a file so that our rc system knows it's still in sysinit.
 # Existance means init scripts will not directly run.
@@ -203,11 +217,11 @@ fi
 
 unpack_device_tarball
 seed_dev
+root_link
 disable_hotplug_agent
-/lib/udev/write_root_link_rule
 
-start_udev || cleanup $?
-populate_udev || cleanup $?
+start_udevd || cleanup
+populate_dev || cleanup
 
 compat_volume_nodes
 check_persistent_net
@@ -215,11 +229,7 @@ check_persistent_net
 # trigger executing initscript when /etc is writable
 IN_HOTPLUG=1 /etc/init.d/udev-postmount start >/dev/null 2>&1
 
-# should exist on every system, else udev failed
-if [ ! -e /dev/zero ]; then
-	eerror "Assuming udev failed somewhere, as /dev/zero does not exist."
-	cleanup 1
-fi
+check_udev_works || cleanup
 
 # udev started successfully
 exit 0
