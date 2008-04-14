@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ccp4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.16 2008/04/13 07:36:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.17 2008/04/14 19:09:20 dberkholz Exp $
+
+  14 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; ccp4-6.0.2-r1.ebuild:
+  Install examples (Justin Lecher).
 
   13 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; ccp4-6.0.2-r1.ebuild:
   Try harder to remove rasmol man pages (Justin Lecher).
