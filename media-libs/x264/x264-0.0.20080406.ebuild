@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20080406.ebuild,v 1.3 2008/04/14 22:20:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20080406.ebuild,v 1.4 2008/04/14 22:24:52 yngwin Exp $
 
 EAPI="1"
 inherit multilib eutils toolchain-funcs versionator
@@ -53,5 +53,5 @@ src_install() {
 pkg_postinst() {
 	elog "Please note that this package now only installs"
 	elog "${PN} libraries. In order to have the encoder,"
-	elog "please emerge media-video/x264-svn-encoder"
+	elog "please emerge media-video/x264-encoder."
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.3 2008/04/14 22:20:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.4 2008/04/14 22:24:52 yngwin Exp $
+
+  14 Apr 2008; Ben de Groot <yngwin@gentoo.org> x264-0.0.20080406.ebuild:
+  Fix typo
 
   14 Apr 2008; Ben de Groot <yngwin@gentoo.org> x264-0.0.20080406.ebuild:
   Drop nasm from DEPEND to fix bug 217630.
