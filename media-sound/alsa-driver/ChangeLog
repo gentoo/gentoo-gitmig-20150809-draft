@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.288 2008/04/14 02:47:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.289 2008/04/14 02:54:39 beandog Exp $
+
+*alsa-driver-1.0.15-r1 (14 Apr 2008)
+
+  14 Apr 2008; Steve Dibb <beandog@gentoo.org>
+  +alsa-driver-1.0.15-r1.ebuild:
+  Remove cs4231-lib, bump headers depend to 1.0.15
 
 *alsa-driver-1.0.16 (14 Apr 2008)
 
