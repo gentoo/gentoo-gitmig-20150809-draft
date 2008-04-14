@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0-r1.ebuild,v 1.2 2008/03/16 14:23:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0-r1.ebuild,v 1.3 2008/04/14 11:18:38 drac Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -24,11 +24,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-include-cdda_interface_h.patch
-	epatch "${FILESDIR}"/${P}-use-destdir.patch
-	epatch "${FILESDIR}"/${P}-Makefile.in.patch
-	epatch "${FILESDIR}"/${P}-log-summary.patch
-	epatch "${WORKDIR}/${P}-fbsd.patch"
+	epatch "${FILESDIR}"/${P}-include-cdda_interface_h.patch \
+		"${FILESDIR}"/${P}-use-destdir.patch \
+		"${FILESDIR}"/${P}-Makefile.in.patch \
+		"${FILESDIR}"/${P}-log-summary.patch \
+		"${WORKDIR}/${P}-fbsd.patch"
 
 	mv configure.guess config.guess
 	mv configure.sub config.sub
