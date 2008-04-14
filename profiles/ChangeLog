@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1325 2008/04/14 21:12:43 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1326 2008/04/14 21:21:10 hkbst Exp $
+
+  14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> package.mask:
+  mit-scheme is removed so mask removed too
 
   14 Apr 2008; Marijn Schouten <hkBst@gentoo.org> package.mask,
   use.local.desc:
