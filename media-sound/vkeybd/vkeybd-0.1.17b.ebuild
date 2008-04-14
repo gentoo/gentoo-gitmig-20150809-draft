@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17b.ebuild,v 1.2 2008/04/10 08:19:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17b.ebuild,v 1.3 2008/04/14 18:50:37 drac Exp $
 
 inherit toolchain-funcs eutils
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xcmiscproto"
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	TCL_VERSION=`echo 'puts [info tclversion]' | tclsh`
@@ -49,7 +49,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-desktop-entry.patch
 }
 
 src_compile() {

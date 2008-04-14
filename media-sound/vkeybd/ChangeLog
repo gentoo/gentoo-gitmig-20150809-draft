@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vkeybd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.31 2008/04/10 08:19:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.32 2008/04/14 18:50:37 drac Exp $
+
+  14 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/vkeybd-0.1.17b-desktop-entry.patch, vkeybd-0.1.17b.ebuild:
+  Missing Categories entry in .desktop file.
 
   10 Apr 2008; Samuli Suominen <drac@gentoo.org>
   -files/vkeybd-0.1.15-makefile.patch, -files/vkeybd-0.1.17a-makefile.patch,

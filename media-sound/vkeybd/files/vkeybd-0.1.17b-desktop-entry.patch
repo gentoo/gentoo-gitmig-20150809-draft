@@ -1,0 +1,8 @@
+diff -ur vkeybd.orig/vkeybd.desktop vkeybd/vkeybd.desktop
+--- vkeybd.orig/vkeybd.desktop	2004-03-03 16:06:30.000000000 +0200
++++ vkeybd/vkeybd.desktop	2008-04-14 21:47:10.000000000 +0300
+@@ -4,3 +4,4 @@
+ Comment=A virtual MIDI keyboard
+ Exec=vkeybd
+ Icon=vkeybd
++Categories=AudioVideo;Audio;
