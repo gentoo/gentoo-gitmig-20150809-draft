@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.5 2006/11/03 08:36:16 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.6 2008/04/14 12:09:03 flameeyes Exp $
+
+inherit toolchain-funcs eutils
 
 DESCRIPTION="C-based rewrite of CVSup (software for distributing and updating collections of files accross a network)"
 HOMEPAGE="http://www.mu.org/~mux/csup.html"
@@ -22,9 +24,18 @@ DEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-respectflags.patch"
+}
+
 src_compile() {
 	# unable to work with yacc, but bison is ok.
-	emake PREFIX=/usr YACC=bison || die "emake failed"
+	emake \
+		CC="$(tc-getCC)" \
+		PREFIX=/usr YACC=bison || die "emake failed"
 }
 
 src_install() {
