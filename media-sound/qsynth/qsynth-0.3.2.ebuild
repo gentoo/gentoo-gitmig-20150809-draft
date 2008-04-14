@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.2.ebuild,v 1.1 2007/12/20 12:14:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.2.ebuild,v 1.2 2008/04/14 21:05:35 flameeyes Exp $
+
+EAPI=1
 
 inherit qt4 eutils flag-o-matic
 
@@ -13,7 +15,11 @@ SLOT="0"
 IUSE="debug jack alsa"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="$(qt4_min_version 4.2)
+DEPEND="
+	|| ( (
+			x11-libs/qt-core:4
+			x11-libs/qt-gui:4
+		) >=x11-libs/qt-4.2:4 )
 	>=media-sound/fluidsynth-1.0.7a"
 
 pkg_setup() {

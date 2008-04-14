@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.1 2008/01/21 13:59:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.2 2008/04/14 21:04:45 flameeyes Exp $
+
+EAPI=1
 
 inherit eutils qt4
 
@@ -15,7 +17,10 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="alsa debug"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
-	$(qt4_min_version 4.1)
+	|| ( (
+			x11-libs/qt-core:4
+			x11-libs/qt-gui:4
+		) >=x11-libs/qt-4.1:4 )
 	media-sound/jack-audio-connection-kit"
 
 pkg_setup() {
