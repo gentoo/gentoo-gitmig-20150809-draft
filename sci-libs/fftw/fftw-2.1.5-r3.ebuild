@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.5 2008/04/01 22:10:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.6 2008/04/14 13:56:14 bicatali Exp $
 
 inherit eutils flag-o-matic multilib autotools fortran
 
@@ -113,9 +113,15 @@ src_install () {
 		for f in "${D}"/usr/{include,$(get_libdir)}/*sfft*; do
 			ln -s $(basename ${f}) ${f/sfft/fft}
 		done
+		for f in "${D}"/usr/{include,$(get_libdir)}/*srfft*; do
+			ln -s $(basename ${f}) ${f/srfft/rfft}
+		done
 	else
 		for f in "${D}"/usr/{include,$(get_libdir)}/*dfft*; do
 			ln -s $(basename ${f}) ${f/dfft/fft}
+		done
+		for f in "${D}"/usr/{include,$(get_libdir)}/*drfft*; do
+			ln -s $(basename ${f}) ${f/drfft/rfft}
 		done
 	fi
 }
