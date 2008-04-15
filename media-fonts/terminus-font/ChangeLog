@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/terminus-font
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.51 2007/09/16 04:01:46 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.52 2008/04/15 17:45:35 jer Exp $
+
+*terminus-font-4.26 (15 Apr 2008)
+
+  15 Apr 2008; Jeroen Roovers <jer@gentoo.org> +terminus-font-4.26.ebuild:
+  Version bump (bug #216208).
 
   16 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> terminus-font-4.20.ebuild:
   Stop pulling in bdftopcf unless USE="X".  Bug #192490 by pva.
