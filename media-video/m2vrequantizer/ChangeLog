@@ -1,6 +1,10 @@
 # ChangeLog for media-video/m2vrequantizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/ChangeLog,v 1.6 2008/04/15 09:36:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/ChangeLog,v 1.7 2008/04/15 11:58:56 zzam Exp $
+
+  15 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +m2vrequantizer-20060306.ebuild:
+  Re-Add the removed ebuild as it is newer and removal broke deps.
 
   15 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   -m2vrequantizer-20060306.ebuild:
