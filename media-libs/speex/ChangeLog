@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.76 2008/04/15 09:33:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.77 2008/04/15 13:45:32 fmccor Exp $
+
+  15 Apr 2008; Ferris McCormick <fmccor@gentoo.org>
+  speex-1.2_beta3_p2.ebuild:
+  Sparc stable, security Bug #217715.
 
 *speex-1.2_beta3_p2 (15 Apr 2008)
 
