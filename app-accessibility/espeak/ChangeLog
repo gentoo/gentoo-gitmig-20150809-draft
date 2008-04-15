@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.41 2008/04/12 21:51:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.42 2008/04/15 16:32:07 jer Exp $
+
+  15 Apr 2008; Jeroen Roovers <jer@gentoo.org> espeak-1.36.02.ebuild:
+  Stable for HPPA (bug #217235).
 
   12 Apr 2008; Raúl Porcel <armin76@gentoo.org> espeak-1.36.ebuild:
   sparc stable
