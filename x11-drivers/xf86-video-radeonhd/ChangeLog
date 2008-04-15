@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-radeonhd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.6 2008/04/14 16:34:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.7 2008/04/15 15:04:58 drac Exp $
+
+  15 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  xf86-video-radeonhd-1.2.1.ebuild:
+  Install rhd_conntest and rhd_dump since they can be used to solve
+  problems. Thanks to ciaranm for noticing.
 
 *xf86-video-radeonhd-1.2.1 (14 Apr 2008)
 
