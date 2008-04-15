@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.4 2007/09/02 23:29:48 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.5 2008/04/15 04:17:33 dberkholz Exp $
+
+WEBAPP_OPTIONAL="yes"
 
 inherit eutils webapp java-pkg-2 java-ant-2
 
@@ -23,7 +25,7 @@ COMMON_DEP="dev-java/commons-cli
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	vhosts? ( app-admin/webapp-config )
+	!client-only? ( ${WEBAPP_DEPEND} )
 	${COMMON_DEP}"
 
 pkg_setup() {

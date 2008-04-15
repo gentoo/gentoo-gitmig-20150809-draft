@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/jmol
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.6 2007/12/31 15:45:37 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.7 2008/04/15 04:17:33 dberkholz Exp $
+
+  15 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  jmol-11.0.3-r1.ebuild:
+  Fix conditional webapp to not pull in webapp-config when it's unneeded.
 
   31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Fixing my email address.
