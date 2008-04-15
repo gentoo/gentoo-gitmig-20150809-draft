@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.173 2008/04/14 20:03:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.174 2008/04/15 01:18:08 beandog Exp $
+
+  15 Apr 2008; Steve Dibb <beandog@gentoo.org>
+  -files/webmin-1.170-postfix.patch,
+  -files/webmin-1.230-ldap-useradmin.patch,
+  -files/webmin-1.300-postfix.patch, -files/virtual-server-2.31-pgsql.patch,
+  -files/virtual-server-2.610-checkip.patch,
+  -files/1.390-iptables-gentoo.patch,
+  -files/virtual-server-2.31-namevirtual.patch,
+  -files/virtual-server-2.60-nocgibin.patch, -webmin-1.350.ebuild,
+  -webmin-1.400.ebuild:
+  Drop stable keywords, bug 217582, remove old
 
   14 Apr 2008; Jeroen Roovers <jer@gentoo.org> webmin-1.350.ebuild,
   webmin-1.400.ebuild:
