@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.7 2008/03/28 21:56:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.8 2008/04/15 11:04:57 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -70,15 +70,16 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-db/hsqldb-1.8.0.9
 		=dev-java/rhino-1.5* )
 	mono? ( >=dev-lang/mono-1.2.3.1 )
-	firefox? ( >=dev-libs/nspr-4.6.6
-		>=dev-libs/nss-3.11-r1 )
-	!firefox? ( seamonkey? ( =www-client/seamonkey-1*
+	xulrunner? ( >=net-libs/xulrunner-1.8
 		>=dev-libs/nspr-4.6.6
+		>=dev-libs/nss-3.11-r1 )
+	!xulrunner? ( firefox? ( >=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) )
-	!firefox? ( !seamonkey? ( xulrunner? ( =net-libs/xulrunner-1.8*
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1*
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) ) )
-	webdav? ( >=net-misc/neon-0.24.7 )
+	webdav? ( >=net-misc/neon-0.24.7
+		>=dev-libs/openssl-0.9.8g )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.3.0
@@ -102,8 +103,8 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
-	firefox? ( || ( =www-client/mozilla-firefox-2*
-		=www-client/mozilla-firefox-bin-2* ) )
+	!xulrunner? ( firefox? ( || ( =www-client/mozilla-firefox-2*
+		=www-client/mozilla-firefox-bin-2* ) ) )
 	${COMMON_DEPEND}"
 
 DEPEND="${COMMON_DEPEND}
@@ -122,7 +123,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.33.1
 	dev-libs/libxslt
 	>=dev-libs/libxml2-2.0
-	firefox? ( =www-client/mozilla-firefox-2* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
 	>=dev-util/gperf-3
 	>=net-misc/curl-7.12
 	sys-libs/zlib
@@ -192,6 +193,16 @@ pkg_setup() {
 		fi
 	fi
 
+	if use xulrunner; then
+		if pkg-config --exists xulrunner-xpcom; then
+			XULR="xulrunner"
+		elif pkg-config --exists libxul; then
+			XULR="libxul"
+		else
+			die "USE flag [xulrunner] set but not found!"
+		fi
+	fi
+
 	java-pkg-opt-2_pkg_setup
 
 	# sys-libs/db version used
@@ -239,9 +250,9 @@ src_unpack() {
 	if use firefox || use seamonkey || use xulrunner ; then
 		echo "--enable-mozilla" >> ${CONFFILE}
 		local browser
-		use xulrunner && browser="xulrunner"
 		use seamonkey && browser="seamonkey"
 		use firefox && browser="firefox"
+		use xulrunner && browser="${XULR}"
 
 		echo "--with-system-mozilla=${browser}" >> ${CONFFILE}
 	else
@@ -260,6 +271,7 @@ src_unpack() {
 	echo "`use_enable dbus`" >> ${CONFFILE}
 	echo "`use_enable webdav neon`" >> ${CONFFILE}
 	echo "`use_with webdav system-neon`" >> ${CONFFILE}
+	echo "`use_with webdav system-openssl`" >> ${CONFFILE}
 
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
 
