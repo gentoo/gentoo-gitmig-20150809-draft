@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sux4j/sux4j-1.0.1.ebuild,v 1.1 2008/04/15 09:02:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sux4j/sux4j-1.0.1.ebuild,v 1.2 2008/04/15 15:37:33 mr_bones_ Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source"
@@ -48,4 +48,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc src
 }
-
