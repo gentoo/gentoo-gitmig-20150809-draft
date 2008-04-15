@@ -1,6 +1,16 @@
 # ChangeLog for sci-visualization/grace
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.27 2007/08/21 02:35:00 je_fro Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.28 2008/04/15 16:34:25 bicatali Exp $
+
+*grace-5.1.21-r1 (15 Apr 2008)
+
+  15 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/grace-5.1.21-fortran.patch, +files/grace-5.1.21-m4-netcdf.patch,
+  metadata.xml, +grace-5.1.21-r1.ebuild:
+  Added xdg-utils instead of hard-coded www browser and editor. Various
+  dependency fixes when some use flags are not set. Ebuild cleaning, QA
+  issues. Added longdescription to metadata.xml. Dropped ppc waiting
+  for bug #212198.
 
   21 Aug 2007; Jeff Gardner <je_fro@gentoo.org> -grace-5.1.19.ebuild:
   Remove old version.

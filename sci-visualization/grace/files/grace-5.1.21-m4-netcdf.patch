@@ -1,0 +1,11 @@
+--- ac-tools/aclocal.m4.orig	2008-03-03 11:17:50.000000000 +0000
++++ ac-tools/aclocal.m4	2008-03-03 11:20:45.000000000 +0000
+@@ -662,7 +662,7 @@
+       int main(void) {
+         char *vlib;
+         vlib = nc_inq_libvers();
+-        if (strcmp(vlib, "[$1]") < 0) {
++        if ((vlib[0] == '"') && (strcmp(vlib, "[$1]") < 0) || ((vlib[0] != '"') && (strcmp(vlib,"[$1]") < 0))){
+           exit(1);
+         }
+         exit(0);
