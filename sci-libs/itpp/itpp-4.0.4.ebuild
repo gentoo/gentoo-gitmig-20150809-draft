@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.2 2008/04/09 02:52:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.3 2008/04/15 11:04:11 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -24,6 +24,12 @@ pkg_setup() {
 	if use lapack && ! use blas; then
 		die "USE=lapack requires USE=blas to be set"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-vec.patch
 }
 
 src_compile() {

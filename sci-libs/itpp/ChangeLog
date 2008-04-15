@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.72 2008/04/09 02:52:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.73 2008/04/15 11:04:11 markusle Exp $
+
+  15 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/itpp-4.0.4-vec.patch, itpp-4.0.4.ebuild:
+  Fixed regression in vec.h (see bug #217621).
 
   09 Apr 2008; Markus Dittrich <markusle@gentoo.org> -itpp-3.10.12.ebuild,
   -itpp-4.0.1.ebuild, itpp-4.0.3.ebuild, itpp-4.0.4.ebuild:
