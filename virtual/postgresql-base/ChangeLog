@@ -1,0 +1,17 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-base/ChangeLog,v 1.1 2008/04/15 09:41:07 dev-zero Exp $
+
+*postgresql-base-8.3 (15 Apr 2008)
+*postgresql-base-8.2 (15 Apr 2008)
+*postgresql-base-8.1 (15 Apr 2008)
+*postgresql-base-8.0 (15 Apr 2008)
+*postgresql-base-7.4 (15 Apr 2008)
+*postgresql-base-7.3 (15 Apr 2008)
+
+  15 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +postgresql-base-7.3.ebuild, +postgresql-base-7.4.ebuild,
+  +postgresql-base-8.0.ebuild, +postgresql-base-8.1.ebuild,
+  +postgresql-base-8.2.ebuild, +postgresql-base-8.3.ebuild:
+  Moved into the tree. Thanks to Michael Krelin (polyonymous).
+
