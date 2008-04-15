@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-0.3.ebuild,v 1.1 2008/04/15 08:37:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-0.3.ebuild,v 1.2 2008/04/15 20:45:31 dev-zero Exp $
 
 inherit multilib
 
@@ -22,7 +22,7 @@ src_install() {
 	insinto /usr/share/eselect/modules
 	doins postgresql.eselect
 	sed -i \
-		-e "s|/usr/lib/|/usr/$(get_libdir)|g" \
+		-e "s|/usr/lib/|/usr/$(get_libdir)/|g" \
 		"${D}/usr/share/eselect/modules/postgresql.eselect"
 
 	exeinto /usr/$(get_libdir)/${PN}

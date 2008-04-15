@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.1 2008/04/15 08:37:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.2 2008/04/15 20:45:31 dev-zero Exp $
+
+  15 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  eselect-postgresql-0.3.ebuild:
+  Fixed typo (thanks to polyonymous)
 
 *eselect-postgresql-0.3 (15 Apr 2008)
 
