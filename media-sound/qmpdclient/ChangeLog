@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.25 2008/03/07 22:18:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.26 2008/04/15 21:34:52 yngwin Exp $
+
+*qmpdclient-1.0.8-r1 (15 Apr 2008)
+
+  15 Apr 2008; Ben de Groot <yngwin@gentoo.org> -qmpdclient-1.0.6.2.ebuild,
+  -qmpdclient-1.0.7.ebuild, +qmpdclient-1.0.8-r1.ebuild:
+  Improved ebuild, proposed in bug 217850. Depend changed to include split
+  Qt. Dropping older versions.
 
   07 Mar 2008; Christoph Mende <angelos@gentoo.org> qmpdclient-1.0.8.ebuild:
   Stable on amd64, bug #210526
