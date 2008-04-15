@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.7 2008/04/12 16:02:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.8 2008/04/15 15:42:56 jer Exp $
+
+  15 Apr 2008; Jeroen Roovers <jer@gentoo.org> ufconfig-3.1.0.ebuild:
+  Marked ~hppa (bug #215842).
 
   12 Apr 2008; Raúl Porcel <armin76@gentoo.org> ufconfig-3.1.0.ebuild:
   Add ~sparc wrt #215842
