@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8510 2008/04/15 16:15:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8511 2008/04/15 18:38:02 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Schwarzott <zzam@gentoo.org> (15 Apr 2008)
+# Superseded by vdr-dvdswitch and no longer maintained
+media-plugins/vdr-dvdselect
 
 # Andrej Kacian <ticho@gentoo.org> (15 Apr 2008)
 # Mask until I figure out what's wrong with this release (bug #213762)
