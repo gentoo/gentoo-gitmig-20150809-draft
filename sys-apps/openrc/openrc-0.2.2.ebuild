@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.2.ebuild,v 1.1 2008/04/15 16:44:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.2.ebuild,v 1.2 2008/04/15 20:32:11 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -120,10 +120,6 @@ add_boot_init_mit_config() {
 
 pkg_preinst() {
 	local f
-
-	# default net script is just comments, so no point in biting people
-	# in the ass by accident
-	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
 
 	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
 	local clock
