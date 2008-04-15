@@ -1,0 +1,26 @@
+# ChangeLog for dev-db/postgresql-docs
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.1 2008/04/15 09:12:20 dev-zero Exp $
+
+*postgresql-docs-8.3.1 (15 Apr 2008)
+*postgresql-docs-8.2.7 (15 Apr 2008)
+*postgresql-docs-8.1.11 (15 Apr 2008)
+*postgresql-docs-8.0.15 (15 Apr 2008)
+*postgresql-docs-7.4.19 (15 Apr 2008)
+*postgresql-docs-7.3.21 (15 Apr 2008)
+
+  15 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +postgresql-docs-7.3.21.ebuild, +postgresql-docs-7.4.19.ebuild,
+  +postgresql-docs-8.0.15.ebuild, +postgresql-docs-8.1.11.ebuild,
+  +postgresql-docs-8.2.7.ebuild, +postgresql-docs-8.3.1.ebuild:
+  Moved into the tree. Thanks to Michael Krelin (polyonymous).
+
+  19 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -postgresql-docs-8.2.6.ebuild, +postgresql-docs-8.2.7.ebuild,
+  -postgresql-docs-8.3.0.ebuild, +postgresql-docs-8.3.1.ebuild:
+  Version bump.
+
+  07 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -postgresql-docs-8.3_rc1.ebuild, +postgresql-docs-8.3.0.ebuild:
+  Version bump.
+
