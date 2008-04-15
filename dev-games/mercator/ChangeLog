@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/mercator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.2 2007/05/07 22:02:28 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.3 2008/04/15 21:39:32 tupone Exp $
+
+  15 Apr 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/mercator-0.2.5-gcc43.patch, mercator-0.2.5.ebuild:
+  Fix compilation for gcc-4.3 Bug #217626 by Peter Alfredsen
 
   07 May 2007; Tupone Alfredo <tupone@gentoo.org> mercator-0.2.5.ebuild:
   Added ~amd64 keyword

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.5.ebuild,v 1.2 2007/05/07 22:02:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.5.ebuild,v 1.3 2008/04/15 21:39:32 tupone Exp $
 
 inherit eutils
 
@@ -16,6 +16,12 @@ SLOT="0"
 RDEPEND=">=dev-games/wfmath-0.3.2"
 DEPEND="${REDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	econf || die "econf failed"
