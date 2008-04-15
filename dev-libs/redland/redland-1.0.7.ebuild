@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.7.ebuild,v 1.1 2008/01/22 19:02:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.7.ebuild,v 1.2 2008/04/15 08:27:15 dev-zero Exp $
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org"
@@ -19,7 +19,7 @@ RDEPEND="mysql? ( virtual/mysql )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/raptor-1.4.16
 	>=dev-libs/rasqal-0.9.15
-	postgres? ( virtual/postgresql-libs )"
+	postgres? ( dev-db/libpq )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
