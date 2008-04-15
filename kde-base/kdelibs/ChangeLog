@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.521 2008/04/03 20:57:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.522 2008/04/15 05:40:44 philantrop Exp $
+
+*kdelibs-3.5.9-r2 (14 Apr 2008)
+
+  14 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdelibs-3.5.9-bug_203433_khtml.patch, +kdelibs-3.5.9-r2.ebuild:
+  Added an upstream patch to fix bug 203433 to fix some konqueror crashes.
+  Re-added Lubos Lunak's Xinerama patch as kindly provided by Vladimir Brik
+  on bug 211469.
 
 *kdelibs-4.0.3 (03 Apr 2008)
 
