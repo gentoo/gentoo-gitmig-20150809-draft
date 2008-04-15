@@ -1,6 +1,22 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.438 2008/03/20 17:47:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.439 2008/04/15 10:05:10 philantrop Exp $
+
+*kdebase-3.5.9-r2 (15 Apr 2008)
+
+  15 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/kdesktop-3.5.3-screensaver.patch,
+  -files/kdebase-startkde-3.5.3-xinitrcd.patch,
+  -files/kdebase-kioslaves-3.5.5-fstab.patch,
+  -files/kwin-3.5.5-input-shape.patch,
+  -files/nsplugins-3.5.5-npapi-64bit.patch,
+  -files/kate-3.5.5-visibility.patch,
+  -files/nsplugins-3.5.6-keyboard-handler.diff,
+  -files/konqueror-3.5.7-185603-spoofing.diff,
+  -files/konqueror-3.5.7-location.patch, -files/kdm-3.5.7-login.diff,
+  -files/kate-3.5.7-session-save.patch, +kdebase-3.5.9-r2.ebuild:
+  Re-added Lubos Lunak's Xinerama patch as kindly provided by Vladimir Brik
+  on bug 211469. Removed obsolete patches.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdebase-4.0.1-opengl.patch,
