@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.37 2008/02/05 15:36:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.38 2008/04/15 18:48:46 tsunam Exp $
+
+*boinc-5.10.45 (15 Apr 2008)
+
+  15 Apr 2008; Joshua Jackson <tsunam@gentoo.org> +boinc-5.10.45.ebuild:
+  adding 5.10.45 to the tree
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   boinc-4.72.20050813-r3.ebuild, boinc-5.2.14.ebuild, boinc-5.4.11.ebuild,
