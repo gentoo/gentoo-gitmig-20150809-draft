@@ -14,7 +14,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.31 2008/04/15 05:23:24 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.32 2008/04/15 09:33:36 ali_bush Exp $
 
 inherit java-utils-2
 
@@ -240,33 +240,29 @@ java-ant_bsfix_files() {
 
 		# for javadoc target and all in one pass, we need the new rewriter.
 		local rewriter3="/usr/share/javatoolkit/xml-rewrite-3.py"
-		# xml-rewrite will be moving.
-		if [[ ! -f ${rewriter3} ]]; then
-			rewriter3="/usr/$(get_libdir)/javatoolkit/bin/xml-rewrite-3.py"
-		fi
-
 		if [[ ! -f ${rewriter3} ]]; then
 			debug-print "Using second generation rewriter"
 			eval echo "Rewriting source attributes" ${output}
-			java-ant_xml-rewrite ${files} \
+			eval xml-rewrite-2.py ${files} \
 				-c -e ${JAVA_PKG_BSFIX_SOURCE_TAGS// / -e } \
-				-a source -v ${want_source} ${output}
+				-a source -v ${want_source} ${output} || _bsfix_die "xml-rewrite2 failed: ${file}"
 
 			eval echo "Rewriting target attributes" ${output}
-			java-ant_xml-rewrite ${files} \
+			eval xml-rewrite-2.py ${files} \
 				-c -e ${JAVA_PKG_BSFIX_TARGET_TAGS// / -e } \
-				-a target -v ${want_target} ${output}
+				-a target -v ${want_target} ${output} || _bsfix_die "xml-rewrite2 failed: ${file}"
 
 			eval echo "Rewriting nowarn attributes" ${output}
-			java-ant_xml-rewrite ${files} \
+			eval xml-rewrite-2.py ${files} \
 				-c -e ${JAVA_PKG_BSFIX_TARGET_TAGS// / -e } \
-				-a nowarn -v yes ${output}
+				-a nowarn -v yes ${output} || _bsfix_die "xml-rewrite2 failed: ${file}"
 
 			if [[ ${JAVA_ANT_REWRITE_CLASSPATH} ]]; then
 				eval echo "Adding gentoo.classpath to javac tasks" ${output}
-				java-ant_xml-rewrite ${files} \
+				eval xml-rewrite-2.py ${files} \
 					 -c -e javac -e xjavac -a classpath -v \
-					 '\${gentoo.classpath}'
+					 '\${gentoo.classpath}' \
+					 || _bsfix_die "xml-rewrite2 failed"
 			fi
 		else
 			debug-print "Using third generation rewriter"
@@ -403,14 +399,10 @@ java-ant_ignore-system-classes() {
 # Run the right xml-rewrite binary with the given arguments
 # ------------------------------------------------------------------------------
 java-ant_xml-rewrite() {
-	# gen1 is deprecated
 	local gen2="/usr/bin/xml-rewrite-2.py"
-	#gen2 xml-rewrite will be moving.
-	if [[ ! -x "${gen2}" ]]; then
-		gen2="/usr/$(get_libdir)/javatoolkit/bin/xml-rewrite-2.py"
-	fi
+	# gen1 is deprecated
 	if [[ -x "${gen2}" ]]; then
-		${gen2} "${@}" || _bsfix_die "xml-rewrite2 failed : ${@}"
+		${gen2} "${@}" || die "${gen2} failed"
 	else
 		eerror "No binary for rewriting found."
 		eerror "Do you have dev-java/javatoolkit installed?"
