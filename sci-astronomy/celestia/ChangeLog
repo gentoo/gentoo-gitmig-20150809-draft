@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.39 2008/02/27 18:54:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.40 2008/04/15 15:52:53 bicatali Exp $
+
+  15 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/celestia-1.5.0-gcc43.patch, celestia-1.5.0.ebuild:
+  Fixed for gcc-4.3, thanks to Peter Alfredsen (bug #217758)
 
 *celestia-1.5.0 (27 Feb 2008)
 
