@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/aqualung
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.1 2008/04/15 03:05:05 yngwin Exp $
+
+*aqualung-0.9_beta9_p1 (15 Apr 2008)
+
+  15 Apr 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/new-ffmpeg-headers.patch, +metadata.xml,
+  +aqualung-0.9_beta9_p1.ebuild:
+  Initial import. Ebuild adapted from Maarten Maathuis in bug 88532.
+
