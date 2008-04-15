@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.3.ebuild,v 1.1 2008/04/14 20:30:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.3.ebuild,v 1.2 2008/04/15 01:54:39 mr_bones_ Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-gentoo-runscript.patch
 	epatch "${FILESDIR}"/${P}-one-off.patch
-	
+
 	# remove these lines when upstream release a new version
 	mv ${PN}-2.2 ${P} || die "apparently version number has been corrected"
 	cd "${S}"
