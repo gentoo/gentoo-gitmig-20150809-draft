@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.6 2008/03/07 19:09:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.7 2008/04/15 18:10:15 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ DEPEND="media-libs/libsdl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-64bit.patch
+	epatch "${FILESDIR}"/${P}-*.patch
 	sed -i \
 		-e "/PREFIX/s:/usr/local:${GAMES_PREFIX}:" \
 		-e "s:\$(PREFIX)/share/einstein:${GAMES_DATADIR}/${PN}:" \
