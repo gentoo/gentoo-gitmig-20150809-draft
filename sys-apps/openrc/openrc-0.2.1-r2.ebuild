@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.1-r2.ebuild,v 1.5 2008/04/15 22:28:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.1-r2.ebuild,v 1.6 2008/04/15 22:41:10 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -127,6 +127,11 @@ add_boot_init_mit_config() {
 pkg_preinst() {
 	local f
 
+	# default net script is just comments, so no point in biting people
+	# in the ass by accident
+	mv "${D}"/etc/conf.d/net "${T}"/
+	[[ -e ${ROOT}/etc/conf.d/net ]] && cp "${ROOT}"/etc/conf.d/net "${T}"/
+
 	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
 	local clock
 	use kernel_FreeBSD && clock="adjkerntz" || clock="hwclock"
@@ -249,6 +254,8 @@ pkg_preinst() {
 pkg_postinst() {
 	# Remove old baselayout links
 	rm -f "${ROOT}"/etc/runlevels/boot/{check{fs,root},rmnologin}
+
+	[[ -e ${T}/net && ! -e ${ROOT}/etc/conf.d/net ]] && mv "${T}"/net "${ROOT}"/etc/conf.d/net
 
 	# Make our runlevels if they don't exist
 	if [[ ! -e ${ROOT}/etc/runlevels ]] ; then
