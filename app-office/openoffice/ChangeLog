@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.386 2008/04/15 11:04:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.387 2008/04/15 18:58:30 suka Exp $
+
+  15 Apr 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.4.0.ebuild:
+  Missed the bump to ooo-build-2.4.0.6 in the recent round of bug fixes,
+  thanks to Ingmar Vanhassel <ingmar@gentoo.org> for pointing this out.
 
   15 Apr 2008; Andreas Proschofsky <suka@gentoo.org>
   files/2.4.0/gentoo-2.4.0.diff, openoffice-2.4.0.ebuild:
