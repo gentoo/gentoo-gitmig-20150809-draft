@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.28 2008/04/14 20:51:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.29 2008/04/15 05:59:46 cardoe Exp $
+
+*openrc-0.2.1-r2 (15 Apr 2008)
+
+  15 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/openrc-0.2.1-bad--help-output.patch,
+  +files/openrc-0.2.1-no-deref-null.patch,
+  +files/openrc-0.2.1-openvz-support.patch,
+  +files/openrc-0.2.1-respect-fastboot.patch, +openrc-0.2.1-r2.ebuild:
+  fix bug #216944 and other assorted issues
 
   14 Apr 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.1-r1.ebuild,
   openrc-9999.ebuild:
