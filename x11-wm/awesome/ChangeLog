@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.15 2008/03/24 17:15:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.16 2008/04/15 23:26:54 matsuu Exp $
+
+*awesome-2.3_rc1 (15 Apr 2008)
+
+  15 Apr 2008; MATSUU Takuto <matsuu@gentoo.org> +awesome-2.3_rc1.ebuild:
+  Version bumped, bug #217681.
 
 *awesome-2.2 (24 Mar 2008)
 
