@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1330 2008/04/14 21:50:07 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1331 2008/04/15 02:51:37 yngwin Exp $
+
+  15 Apr 2008; Ben de Groot <yngwin@gentoo.org> use.local.desc:
+  Adding description for loop-playback local useflag for
+  media-sound/aqualung
 
   14 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> use.local.desc:
   Add description for pch USE flag to Qt:4 split ebuilds.
