@@ -1,0 +1,75 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/files/postgresql.init-8.1,v 1.1 2008/04/15 09:29:55 dev-zero Exp $
+
+opts="${opts} reload"
+
+depend() {
+	use net
+	if [ -L /etc/eselect/postgresql/service ] ; then 
+		local p_service="$(for f in /etc/eselect/postgresql/service/* ; do source $f ; done ; echo $postgres_service )"
+		test "${p_service}" = "${SVCNAME}" && provide postgresql
+	fi
+}
+
+checkconfig() {
+	if [ ! -d "$PGDATA" ] ; then
+		eerror "Directory not found: $PGDATA"
+		eerror "Please make sure that PGDATA points to the right path."
+		eerror "You can run 'emerge postgresql-server --config' to setup a new database cluster."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting PostgreSQL"
+
+	if [ -f "$PGDATA/postmaster.pid" ] ; then
+		rm -f "$PGDATA/postmaster.pid"
+	fi
+
+	su -l ${PGUSER} \
+		-c "env PGDATA=\"${PGDATA}\" /usr/lib/postgresql-8.1/bin/pg_ctl start -w -o '--silent-mode=true ${PGOPTS}'"
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping PostgreSQL (this can take up to $(( ${WAIT_FOR_DISCONNECT} + ${WAIT_FOR_CLEANUP} )) seconds)"
+
+	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
+		--retry -TERM/${WAIT_FOR_DISCONNECT}
+	[ $? -eq 0 ] && eend $? && exit
+
+	ewarn "Some clients did not disconnect within ${WAIT_FOR_DISCONNECT} seconds."
+	ewarn "Going to shutdown the server anyway."
+
+	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
+		--retry -INT/${WAIT_FOR_CLEANUP}
+	[ $? -eq 0 ] && eend $? && exit
+
+	if [ ${WAIT_FOR_QUIT} -eq 0 ] ; then
+		eerror "Server did not shut down and sending the SIGQUIT has been disabled."
+		eend $?
+	fi
+
+	ewarn "Shutting down the server gracefully failed."
+	ewarn "Forcing it to shutdown which leads to a recover-run on next startup."
+
+	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
+		--retry -QUIT/${WAIT_FOR_QUIT}
+		
+	[ $? -eq 0 ] && eend $? && exit
+
+	eerror "Forced shutdown failed!!! Something is wrong with your system, please take care of it manually."
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading PostgreSQL configuration"
+	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" --signal HUP --oknodo
+	eend $?
+}
