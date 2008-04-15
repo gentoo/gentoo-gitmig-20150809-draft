@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.13 2008/04/12 21:50:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.14 2008/04/15 16:31:13 jer Exp $
+
+  15 Apr 2008; Jeroen Roovers <jer@gentoo.org> dotconf-1.1.0.ebuild:
+  Stable for HPPA (bug #217235).
 
   12 Apr 2008; Raúl Porcel <armin76@gentoo.org> dotconf-1.1.0.ebuild:
   sparc stable
