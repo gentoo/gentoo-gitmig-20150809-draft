@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.92 2008/03/04 06:22:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.93 2008/04/15 18:51:28 philantrop Exp $
+
+*akregator-3.5.9-r1 (15 Apr 2008)
+
+  15 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/akregator-3.5.9-customcolors.patch, +akregator-3.5.9-r1.ebuild:
+  Re-added the custom colours patch for the article list. Fixes bug 213220.
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> akregator-3.5.8.ebuild,
   akregator-3.5.9.ebuild:
