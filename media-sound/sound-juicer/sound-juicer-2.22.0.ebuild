@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.22.0.ebuild,v 1.2 2008/03/27 00:22:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.22.0.ebuild,v 1.3 2008/04/15 01:36:28 dang Exp $
 
 EAPI="1"
 
@@ -30,7 +30,11 @@ RDEPEND=">=dev-libs/glib-2.14
 	>=media-libs/gst-plugins-base-0.10
 	>=media-plugins/gst-plugins-gconf-0.10
 	>=media-plugins/gst-plugins-gnomevfs-0.10
-	>=media-plugins/gst-plugins-cdparanoia-0.10
+	|| (
+		>=media-plugins/gst-plugins-cdparanoia-0.10
+		>=media-plugins/gst-plugins-cdio-0.10
+	)
+
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.2 2008/04/12 19:13:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.3 2008/04/15 01:33:08 dang Exp $
 
 EAPI="1"
 
@@ -41,7 +41,10 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	>=media-libs/gst-plugins-base-0.10.12
 	>=media-plugins/gst-plugins-gnomevfs-0.10
-	>=media-plugins/gst-plugins-cdparanoia-0.10
+	|| (
+		>=media-plugins/gst-plugins-cdparanoia-0.10
+		>=media-plugins/gst-plugins-cdio-0.10
+		)
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	python? (
