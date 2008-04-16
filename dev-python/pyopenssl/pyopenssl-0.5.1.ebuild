@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.5.1.ebuild,v 1.4 2007/11/23 01:06:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.5.1.ebuild,v 1.5 2008/04/16 11:07:38 hawking Exp $
 
 inherit distutils
 
@@ -25,7 +25,7 @@ src_compile() {
 	distutils_src_compile
 	if use doc ; then
 		addwrite /var/cache/fonts
-		cd ${S}/doc
+		cd "${S}"/doc
 		make html ps dvi
 	fi
 }
@@ -34,13 +34,13 @@ src_install() {
 	distutils_src_install
 
 	if use doc ; then
-		dohtml ${S}/doc/html/*
-		dodoc ${S}/doc/pyOpenSSL.*
+		dohtml "${S}"/doc/html/*
+		dodoc "${S}"/doc/pyOpenSSL.*
 	fi
 
 	# install examples
 	docinto examples
-	dodoc ${S}/examples/*
+	dodoc "${S}"/examples/*
 	docinto examples/simple
-	dodoc ${S}/examples/simple/*
+	dodoc "${S}"/examples/simple/*
 }
