@@ -12,15 +12,10 @@ diff --git a/sh/functions.sh.in b/sh/functions.sh.in
 index 1a1fbba..140f6dc 100644
 --- a/sh/functions.sh.in
 +++ b/sh/functions.sh.in
-@@ -38,6 +38,33 @@ yesno()
+@@ -38,6 +38,28 @@ yesno()
  	esac
  }
  
-+softlevel()
-+{
-+	echo $(rc-status --runlevel)
-+}
-+
 +get_bootparam()
 +{
 +	local match="$1"
