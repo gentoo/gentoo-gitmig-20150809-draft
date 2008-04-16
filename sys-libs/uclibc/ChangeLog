@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.28 2008/03/27 15:10:32 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.29 2008/04/16 06:03:28 phreak Exp $
+
+*uclibc-0.9.28.3-r4 (16 Apr 2008)
+
+  16 Apr 2008; Christian Heim <phreak@gentoo.org>
+  +uclibc-0.9.28.3-r4.ebuild:
+  Revision bump, pulling in svn r16022 to fix readdir_r return value (uClibc
+  #1022; #217612 by Natanael Copa).
 
   27 Mar 2008; Christian Heim <phreak@gentoo.org> uclibc-0.9.28.3-r2.ebuild:
   Marking uclibc-0.9.28.3-r2 stable on ppc too.
