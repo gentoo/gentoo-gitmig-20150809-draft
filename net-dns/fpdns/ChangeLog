@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/fpdns
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/fpdns/ChangeLog,v 1.1 2008/04/16 21:20:20 wschlich Exp $
+
+*fpdns-0.9.1 (16 Apr 2008)
+
+  16 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +fpdns-0.9.1.ebuild:
+  initial import
+
