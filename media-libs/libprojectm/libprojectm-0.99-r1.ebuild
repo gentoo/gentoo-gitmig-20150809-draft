@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-0.99-r1.ebuild,v 1.8 2007/10/23 23:58:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-0.99-r1.ebuild,v 1.9 2008/04/16 18:04:32 drac Exp $
 
-inherit eutils autotools
+inherit autotools eutils
 
-MY_PN="${PN/libprojectm/libprojectM}"
-MY_P="${MY_PN}-${PV}"
+MY_PN=${PN/libprojectm/libprojectM}
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="A graphical music visualization plugin similar to milkdrop"
 HOMEPAGE="http://xmms-projectm.sourceforge.net/"
@@ -13,7 +13,8 @@ SRC_URI="mirror://sourceforge/xmms-projectm/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE=""
 
 RDEPEND="media-libs/ftgl
 	media-libs/freetype
@@ -22,15 +23,15 @@ RDEPEND="media-libs/ftgl
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_PN}"
+S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-fbsd.patch"
-	AT_M4DIR="m4" eautoreconf || die "eautoreconf failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 }
