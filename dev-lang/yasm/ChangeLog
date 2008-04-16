@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.24 2008/04/09 16:01:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.25 2008/04/16 12:36:43 yngwin Exp $
+
+*yasm-0.7.0 (16 Apr 2008)
+
+  16 Apr 2008; Ben de Groot <yngwin@gentoo.org> +yasm-0.7.0.ebuild:
+  Version bump.
 
   09 Apr 2008; Alexis Ballier <aballier@gentoo.org> yasm-0.6.2.ebuild:
   keyword ~x86-fbsd
