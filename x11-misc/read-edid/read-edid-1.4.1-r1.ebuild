@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-1.4.1-r1.ebuild,v 1.7 2008/01/17 20:37:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-1.4.1-r1.ebuild,v 1.8 2008/04/16 14:58:26 drac Exp $
 
 inherit autotools eutils
 
@@ -12,11 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ~sparc x86"
 IUSE=""
-
-# Temporary solution for bug 187535 as upstream changed tarball without
-# raising version number. Can be removed when our mirrors don't include
-# outdated tarball anymore.
-RESTRICT="mirror"
 
 src_unpack() {
 	unpack ${A}
