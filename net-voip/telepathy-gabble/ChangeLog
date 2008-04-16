@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.31 2008/02/28 21:38:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.32 2008/04/16 13:16:08 coldwind Exp $
+
+*telepathy-gabble-0.7.3 (16 Apr 2008)
+
+  16 Apr 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +telepathy-gabble-0.7.3.ebuild:
+  Bump to 0.7.3. Added a check for TLS in net-libs/loudmouth,
+  --enable-backtrace removed.
 
 *telepathy-gabble-0.7.2 (28 Feb 2008)
 
