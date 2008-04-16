@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.61 2008/04/16 16:29:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.62 2008/04/16 19:33:29 klausman Exp $
+
+  16 Apr 2008; Tobias Klausmann <klausman@gentoo.org> lshw-02.12.01b.ebuild:
+  Stable on alpha, bug #217783
 
   16 Apr 2008; Markus Rothe <corsair@gentoo.org> lshw-02.12.01b.ebuild:
   Stable on ppc64; bug #217783
