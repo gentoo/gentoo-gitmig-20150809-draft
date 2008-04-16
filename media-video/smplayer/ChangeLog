@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.9 2008/04/15 03:35:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.10 2008/04/16 16:26:16 corsair Exp $
+
+  16 Apr 2008; Markus Rothe <corsair@gentoo.org> smplayer-0.6.0_rc3.ebuild:
+  Stable on ppc64; bug #217963
 
 *smplayer-0.6.0_rc4 (15 Apr 2008)
 
