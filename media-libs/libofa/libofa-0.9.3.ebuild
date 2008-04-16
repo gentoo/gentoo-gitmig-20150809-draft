@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.15 2008/04/16 12:57:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.16 2008/04/16 12:59:00 drac Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/libofa-0.9.3-gcc-4.patch \
-		"${FILESDIR}"/libofa-0.9.3-gcc-4.3.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.patch \
+		"${FILESDIR}"/${P}-gcc-4.3.patch
 }
 
 src_install() {
