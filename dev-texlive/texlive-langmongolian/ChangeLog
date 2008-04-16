@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langmongolian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.13 2008/04/08 14:59:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.14 2008/04/16 14:48:22 pva Exp $
+
+  16 Apr 2008; Peter Volkov <pva@gentoo.org>
+  texlive-langmongolian-2007.ebuild:
+  amd64 stable, bug #215735.
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   texlive-langmongolian-2007.ebuild:
