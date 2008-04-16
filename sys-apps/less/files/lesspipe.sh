@@ -44,6 +44,11 @@ lesspipe() {
 
 	local DECOMPRESSOR=$(guesscompress "$match")
 
+	# User filters
+	if [[ -x ~/.lessfilter ]] ; then
+		~/.lessfilter "$1" && exit 0
+	fi
+
 	case "$match" in
 
 	### Doc files ###
@@ -97,7 +102,6 @@ lesspipe() {
 	*.bz2)        bzip2 -dc -- "$1" ;;
 	*.gz|*.z)     gzip -dc -- "$1"  ;;
 	*.lzma)       lzma -dc -- "$1" ;;
-	*.zip)        unzip -l "$1" ;;
 	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
 	*.ace)        unace l "$1" ;;
@@ -105,8 +109,8 @@ lesspipe() {
 	*.arj)        unarj l -- "$1" ;;
 	*.cab)        cabextract -l -- "$1" ;;
 	*.lha|*.lzh)  lha v "$1" ;;
-	*.zoo)        zoo -list "$1" ;;
-	*.7z)         7z l -- "$1" ;;
+	*.zoo)        zoo -list "$1" || unzoo -l "$1" ;;
+	*.7z)         7z l -- "$1" || 7za l -- "$1" ;;
 	*.a)          ar tv "$1" ;;
 	*.elf)        readelf -a -- "$1" ;;
 	*.so)         readelf -h -d -s -- "$1" ;;
@@ -114,8 +118,12 @@ lesspipe() {
 
 	*.rar|.r[0-9][0-9])  unrar l -- "$1" ;;
 
+	*.jar|*.war|*.ear|*.xpi|*.zip)
+		unzip -v "$1" || miniunzip -l "$1" || miniunz -l "$1" || zipinfo -v "$1"
+		;;
+
 	*.deb|*.udeb)
-		if type -p dpkg > /dev/null ; then
+		if type -P dpkg > /dev/null ; then
 			dpkg --info "$1"
 			dpkg --contents "$1"
 		else
@@ -134,9 +142,22 @@ lesspipe() {
 	*.mp3)        mp3info "$1" || id3info "$1" ;;
 	*.ogg)        ogginfo "$1" ;;
 	*.flac)       metaflac --list "$1" ;;
-	*.iso)        isoinfo -d -i "$1" ; isoinfo -l -i "$1" ;;
-	*.bin|*.cue)  cd-info --no-header --no-device-info "$1" ;;
 	*.torrent)    torrentinfo-console "$1" ;;
+	*.bin|*.cue|*.raw)
+		# not all .bin/.raw files are cd images, so fall back to hexdump
+		cd-info --no-header --no-device-info "$1" || lesspipe_file "$1"
+		;;
+	*.iso)
+		iso_info=$(isoinfo -d -i "$1")
+		echo "${iso_info}"
+		# Joliet output overrides Rock Ridge, so prefer the better Rock
+		case ${iso_info} in
+			*$'\n'"Rock Ridge"*) iso_opts="-R";;
+			*$'\n'"Joliet"*)     iso_opts="-J";;
+			*)                   iso_opts="";;
+		esac
+		isoinfo -l ${iso_opts} -i "$1"
+		;;
 
 	### Source code ###
 	*.awk|*.groff|*.java|*.js|*.m4|*.php|*.pl|*.pm|*.pod|*.sh|\
@@ -201,28 +222,35 @@ lesspipe() {
 
 if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
-elif [[ $1 == "-V" ]] ; then
+elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.27 2008/03/16 13:01:51 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.28 2008/04/16 17:33:38 vapier Exp $"
 	cat <<-EOF
 		$cvsid
-		Copyright 2001-2006 Gentoo Foundation
+		Copyright 2001-2008 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
-		
-		
+
+
 	EOF
 	less -V
 elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 	cat <<-EOF
 		lesspipe.sh: preproccess files before sending them to less
-		
+
 		Usage: lesspipe.sh <file>
-		
+
 		lesspipe.sh specific settings:
 		  LESSCOLOR env     - toggle colorizing of output
 		  LESSCOLORIZER env - program used to colorize output (default: code2color)
-		
+
+		You can create per-user filters as well by creating the executable file:
+		  ~/.lessfilter
+		One argument is passed to it: the file to display.
+
+		To use lesspipe.sh, simply add to your environment:
+		  export LESSOPEN="|lesspipe.sh %s"
+
 		Run 'less --help' or 'man less' for more info
 	EOF
 elif [[ -d $1 ]] ; then
