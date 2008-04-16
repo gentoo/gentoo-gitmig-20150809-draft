@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.15 2008/04/07 18:33:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.16 2008/04/16 15:59:10 fmccor Exp $
+
+  16 Apr 2008; Ferris McCormick <fmccor@gentoo.org> openmpi-1.2.5.ebuild:
+  Add ~sparc keyword at developer's request --- Bug #216120, which please see.
 
   07 Apr 2008; Tobias Klausmann <klausman@gentoo.org> openmpi-1.2.5.ebuild:
   Keyworded on alpha, bug #216120
