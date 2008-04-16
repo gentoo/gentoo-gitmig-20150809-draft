@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/enhancedcommentify
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.30 2007/03/19 01:11:15 kloeri Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.31 2008/04/16 09:03:46 hawking Exp $
+
+*enhancedcommentify-2.3 (16 Apr 2008)
+
+  16 Apr 2008; Ali Polatel <hawking@gentoo.org>
+  enhancedcommentify-2.1-r4.ebuild, enhancedcommentify-2.2.ebuild,
+  +enhancedcommentify-2.3.ebuild:
+  Version bump. Quoting.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
