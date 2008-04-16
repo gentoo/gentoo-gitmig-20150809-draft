@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.36 2008/04/13 14:30:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.37 2008/04/16 18:23:25 klausman Exp $
+
+  16 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
+  shorewall-lite-3.4.8.ebuild:
+  Keyworded on alpha, bug #216224
 
   13 Apr 2008; Markus Meier <maekke@gentoo.org> shorewall-lite-3.4.8.ebuild:
   amd64/x86 stable, bug #216224
