@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.13 2007/03/02 20:46:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.14 2008/04/16 08:54:14 phosphan Exp $
 
 inherit eutils
 
@@ -40,13 +40,13 @@ src_install() {
 
 	insinto /usr/share/xxkb
 	doins *.xpm
-	doins ${FILESDIR}/*.xpm
+	doins "${FILESDIR}"/*.xpm
 
 	insinto /etc/X11/app-defaults
 	mv XXkb.ad XXkb
 	doins XXkb
 
-	dodoc README-Linux.koi8 README.koi8 CHANGES.koi8  ${FILESDIR}/README
+	dodoc README-Linux.koi8 README.koi8 CHANGES.koi8  "${FILESDIR}"/README
 	mv xxkb.man xxkb.man.1
 	doman xxkb.man.1
 }
