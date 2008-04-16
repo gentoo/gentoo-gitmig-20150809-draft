@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.01-r1.ebuild,v 1.2 2007/11/12 04:31:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.01-r1.ebuild,v 1.3 2008/04/16 18:00:57 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,14 +25,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/cmake"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-malloc.patch
-	epatch "${FILESDIR}"/${P}-soil_64bit_fixes.patch
-	epatch "${FILESDIR}"/${P}-cmake_soname.patch
+	epatch "${FILESDIR}"/${P}-malloc.patch \
+		"${FILESDIR}"/${P}-soil_64bit_fixes.patch \
+		"${FILESDIR}"/${P}-cmake_soname.patch \
+		"${FILESDIR}"/${P}-white_window.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 
 	sed -e "s#/lib/pkgconfig#/$(get_libdir)/pkgconfig#" \
 		-e "s#DESTINATION lib#DESTINATION $(get_libdir)#" \
