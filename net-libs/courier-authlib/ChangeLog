@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.69 2008/04/15 09:05:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.70 2008/04/16 18:20:32 chtekk Exp $
+
+  16 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
+  Update metadata, assign this solely to the herd, I'm no longer interested
+  in maintaining it myself.
 
 *courier-authlib-0.60.2 (15 Apr 2008)
 
