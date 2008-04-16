@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.5.2_pre01104.ebuild,v 1.1 2008/04/14 21:04:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.5.2_pre01107.ebuild,v 1.1 2008/04/16 03:06:27 omp Exp $
 
 inherit eutils
 # used for epause
