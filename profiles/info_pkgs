@@ -19,3 +19,4 @@ dev-java/java-config
 # NOTE: portage-2.2 will no longer list /etc/gentoo-release,
 # so this is not redundant
 sys-apps/baselayout
+sys-apps/openrc
