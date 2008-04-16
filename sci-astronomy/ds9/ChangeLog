@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.8 2008/02/14 23:32:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.9 2008/04/16 16:13:55 bicatali Exp $
+
+*ds9-5.2 (16 Apr 2008)
+
+  16 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/ds9-5.1-gcc4.2-x86.patch, +files/ds9-5.2-Makefile.patch,
+  +files/ds9-5.2-gcc43.patch, ds9-5.1.ebuild, +ds9-5.2.ebuild:
+  Version bump, with gcc-4.3 patch and adapted bug #189118 patch to avoid
+  emacs dependency
 
   14 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/ds9-5.0-Makefile.patch, +files/ds9-5.1-tk-gif.patch,

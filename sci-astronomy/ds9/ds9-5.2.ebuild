@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.4 2008/04/16 16:13:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.2.ebuild,v 1.1 2008/04/16 16:13:55 bicatali Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils
 
 DESCRIPTION="Data visualization application for astronomical FITS images"
 HOMEPAGE="http://hea-www.harvard.edu/RD/ds9"
@@ -17,25 +17,25 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	app-arch/zip"
 
-RESTRICT="strip test mirror"
-
 S="${WORKDIR}/sao${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# patch to speed up compilation (no man pages generation)
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+
+	# patch to fix and speed up compilation (no man pages generation)
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 
 	# fix stack smashing on x86 with gcc-4.2
-	if [[ "${ARCH}" == "x86" ]]; then
-		epatch "${FILESDIR}"/${P}-gcc4.2-x86.patch
-	fi
-	# security fix in embedded tk (bug #208464)
-	epatch "${FILESDIR}"/${P}-tk-gif.patch
+	use x86 && epatch "${FILESDIR}"/${P}-gcc4.2-x86.patch
 
 	# remove build-time dependency on etags (i.e. emacs or xemacs)
 	sed -i -e '/^all/s/TAGS//' saotk/*/Makefile || die "sed failed"
+
+	# remove forced compilers and let defined ones propagate
+	sed -i -e '/^CC[[:space:]]/d' '/^CXX[[:space:]]/d' make.*
 }
 
 src_compile() {
@@ -52,10 +52,7 @@ src_compile() {
 	# This is a long and fragile compilation
 	# which recompiles tcl/tk, tkimg, blt, funtools,
 	# and a lot of other packages
-	emake -j1 \
-		CC="$(tc-getCC)" \
-		CXX="$(tc-getCXX)" \
-		OPTS="${CXXFLAGS}" \
+	emake -j1 OPTS="${CXXFLAGS}" \
 		|| die "emake failed"
 }
 
