@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/adplug
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.22 2008/04/10 17:20:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.23 2008/04/16 16:30:45 drac Exp $
+
+  16 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/adplug-2.1-gcc43.patch, adplug-2.1.ebuild:
+  Fix building with GCC 4.3 wrt #217975, thanks to Peter Alfredsen.
 
 *adplug-2.1 (10 Apr 2008)
 
