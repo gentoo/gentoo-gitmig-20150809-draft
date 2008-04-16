@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/guilt
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guilt/ChangeLog,v 1.1 2008/04/16 19:35:46 ingmar Exp $
+
+*guilt-0.30 (16 Apr 2008)
+
+  16 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
+  +guilt-0.30.ebuild:
+  Import from sunrise, thanks to Denis 'raeLLL' Cheng <crquan@gmail.com> for
+  the ebuild. Fixes bug 205931.
+
