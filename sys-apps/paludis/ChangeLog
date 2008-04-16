@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.90 2008/04/13 14:14:14 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.91 2008/04/16 22:31:13 zlin Exp $
+
+*paludis-0.26.0_pre2 (16 Apr 2008)
+
+  16 Apr 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  -files/paludis-0.26.0_alpha14-broken-profiles.patch,
+  -paludis-0.26.0_alpha13.ebuild, -paludis-0.26.0_alpha14-r1.ebuild,
+  +paludis-0.26.0_pre2.ebuild:
+  Version bump.
 
 *paludis-0.26.0_pre1 (13 Apr 2008)
 
