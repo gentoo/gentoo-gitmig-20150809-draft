@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p26454.ebuild,v 1.1 2008/04/16 15:27:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p26454-r1.ebuild,v 1.1 2008/04/16 20:02:24 beandog Exp $
 
 EAPI="1"
 
@@ -177,6 +177,9 @@ src_unpack() {
 	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
 
 	cd "${S}"
+
+	#bug 217769
+	epatch "${FILESDIR}/mplayer-1.0_rc2_p26454-makefile.patch"
 
 	# Fix hppa compilation
 	use hppa && sed -i -e "s/-O4/-O1/" "${S}/configure"
