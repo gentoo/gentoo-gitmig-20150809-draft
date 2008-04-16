@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21-r1.ebuild,v 1.1 2008/04/15 16:34:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21-r1.ebuild,v 1.2 2008/04/16 18:32:53 bicatali Exp $
 
 EAPI="1"
 
@@ -50,6 +50,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-m4-netcdf.patch
 	# fix for missing defines when fortran is disabled
 	epatch "${FILESDIR}"/${P}-fortran.patch
+	# fix for glibc-2.7 (bug #)
+	epatch "${FILESDIR}"/${P}-stdc99.patch
+
 	# don't strip if not asked for
 	sed -i \
 		-e 's:$(INSTALL_PROGRAM) -s:$(INSTALL_PROGRAM):g' \
@@ -82,6 +85,7 @@ src_compile() {
 	else
 		myconf="--without-f77"
 	fi
+
 	econf \
 		--disable-xmhtml \
 		--without-bundled-xbae \
