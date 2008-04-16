@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.3 2008/04/15 15:15:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.4 2008/04/16 19:18:04 klausman Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/ocaml-3.05
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
 	if use tk && ! built_with_use dev-lang/ocaml tk ; then
