@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.60 2008/04/16 02:33:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.61 2008/04/16 10:47:10 jurek Exp $
+
+  16 Apr 2008; Jurek Bartuszek <jurek@gentoo.org> ntfs3g-1.2310.ebuild:
+  x86 stable (bug #217890)
 
 *ntfs3g-1.2412 (16 Apr 2008)
 
