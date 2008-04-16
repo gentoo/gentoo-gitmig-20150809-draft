@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/confuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.27 2008/04/16 16:31:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.28 2008/04/16 19:38:21 klausman Exp $
+
+  16 Apr 2008; Tobias Klausmann <klausman@gentoo.org> confuse-2.6.ebuild:
+  Stable on alpha, bug #217815
 
   16 Apr 2008; Markus Rothe <corsair@gentoo.org> confuse-2.6.ebuild:
   Stable on ppc64; bug #217815
