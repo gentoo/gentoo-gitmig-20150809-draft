@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r4.ebuild,v 1.2 2008/04/16 08:08:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r4.ebuild,v 1.3 2008/04/16 14:21:47 phreak Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -32,8 +32,7 @@ SRC_URI="mirror://kernel/linux/libs/uclibc/${MY_P}.tar.bz2
 [[ -z ${SVN_VER} ]] || \
 	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-svn-update-${SVN_VER}.patch.bz2"
 [[ -z ${PATCH_VER} ]] || \
-	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2
-		http://dev.gentoo.org/~phreak/distfiles/uclibc/${MY_P}-patches-${PATCH_VER}.tar.bz2"
+	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
