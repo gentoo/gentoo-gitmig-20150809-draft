@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.55 2008/01/30 18:16:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.56 2008/04/17 18:11:19 vapier Exp $
+
+*traceroute-2.0.10 (17 Apr 2008)
+
+  17 Apr 2008; Mike Frysinger <vapier@gentoo.org> +traceroute-2.0.10.ebuild:
+  Version bump.
 
 *traceroute-1.4_p12-r6 (30 Jan 2008)
 
