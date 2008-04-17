@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.25 2008/03/19 23:56:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.26 2008/04/17 19:10:15 ulm Exp $
+
+*tuareg-mode-1.45.6 (17 Apr 2008)
+
+  17 Apr 2008; Ulrich Mueller <ulm@gentoo.org> +tuareg-mode-1.45.6.ebuild:
+  Version bump.
 
   19 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   tuareg-mode-1.45.5.ebuild:
