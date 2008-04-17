@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.3 2008/04/11 16:01:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.4 2008/04/17 13:11:34 spock Exp $
 
 EAPI="1"
 
@@ -81,6 +81,10 @@ src_unpack() {
 
 	if ! use truetype ; then
 		sed -i -e 's/fbtruetype kbd/kbd/' "${SM}/Makefile"
+	fi
+
+	if [ "$(gcc-version)" == "4.3" ]; then
+		epatch "${FILESDIR}"/splashutils-gcc43-fix.patch
 	fi
 
 	cd "${SG}"

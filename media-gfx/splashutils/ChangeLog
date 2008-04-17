@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.134 2008/04/11 16:01:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.135 2008/04/17 13:11:34 spock Exp $
+
+  17 Apr 2008; Michał Januszewski <spock@gentoo.org>
+  +files/splashutils-gcc43-fix.patch, splashutils-1.5.4-r1.ebuild:
+  Add a fix for gcc 4.3.0.
 
   11 Apr 2008; Michał Januszewski <spock@gentoo.org>
   +files/openrc-splash-crash.patch, splashutils-1.5.4-r1.ebuild:
