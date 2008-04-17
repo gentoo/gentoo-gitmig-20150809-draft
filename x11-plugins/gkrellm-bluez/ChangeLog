@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-bluez
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/ChangeLog,v 1.2 2007/03/09 15:40:49 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/ChangeLog,v 1.3 2008/04/17 18:05:56 lack Exp $
+
+  17 Apr 2008; Jim Ramsay <lack@gentoo.org> gkrellm-bluez-0.2-r1.ebuild:
+  Marking ~amd64 (Bug #218020)
 
 *gkrellm-bluez-0.2-r1 (09 Mar 2007)
 
