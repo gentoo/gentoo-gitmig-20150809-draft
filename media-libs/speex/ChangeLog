@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.84 2008/04/17 01:03:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.85 2008/04/17 10:16:54 armin76 Exp $
+
+  17 Apr 2008; Raúl Porcel <armin76@gentoo.org> speex-1.2_beta3_p2.ebuild:
+  ia64 stable
 
   17 Apr 2008; Markus Meier <maekke@gentoo.org> speex-1.2_beta3_p2.ebuild:
   x86 stable, bug #217715
