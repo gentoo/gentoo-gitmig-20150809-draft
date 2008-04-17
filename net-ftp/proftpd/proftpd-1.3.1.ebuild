@@ -1,39 +1,49 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc3.ebuild,v 1.3 2007/11/11 15:21:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1.ebuild,v 1.1 2008/04/17 07:57:56 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
+IUSE="acl authfile ban case clamav deflate gzipfs hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
+CASE_VER="0.3"
+CLAMAV_VER="0.7"
+DEFLATE_VER="0.3"
+GZIPFS_VER="0.9rc4"
 SHAPER_VER="0.6.3"
 VROOT_VER="0.7.2"
 
 DESCRIPTION="An advanced and very configurable FTP server."
+
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
-		clamav? ( http://www.uglyboxindustries.com/mod_clamav_new.c http://www.uglyboxindustries.com/mod_clamav_new.html )
+		case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${CASE_VER}.tar.gz )
+		clamav? ( http://www.thrallingpenguin.com/resources/mod_clamav-${CLAMAV_VER}.tar.gz )
+		deflate? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-deflate-${DEFLATE_VER}.tar.gz )
+		gzipfs? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-gzipfs-${GZIPFS_VER}.tar.gz )
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
 		vroot? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
+
 HOMEPAGE="http://www.proftpd.org/
 		http://www.castaglia.org/proftpd/
-		http://www.uglyboxindustries.com/open-source.php"
+		http://www.thrallingpenguin.com/resources/mod_clamav.htm"
 
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 		clamav? ( app-antivirus/clamav )
+		gzipfs? ( sys-libs/zlib )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
 		opensslcrypt? ( >=dev-libs/openssl-0.9.6f )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-7.3 )
+		postgres? ( virtual/postgresql-base )
 		ssl? ( >=dev-libs/openssl-0.9.6f )
 		tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )
-		xinetd? ( sys-apps/xinetd )"
+		xinetd? ( virtual/inetd )"
 
 RDEPEND="${DEPEND}
 		net-ftp/ftpbase
@@ -56,14 +66,34 @@ src_unpack() {
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
 
-	if use shaper ; then
-		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
-		cp -f mod_shaper/mod_shaper.c contrib/
+	if use case ; then
+		unpack ${PN}-mod-case-${CASE_VER}.tar.gz
+		cp -f mod_case/mod_case.c contrib/
+		cp -f mod_case/mod_case.html doc/
 	fi
 
 	if use clamav ; then
-		cp -f "${DISTDIR}/mod_clamav_new.c" contrib/mod_clamav.c
-		cp -f "${DISTDIR}/mod_clamav_new.html" doc/mod_clamav.html
+		unpack mod_clamav-${CLAMAV_VER}.tar.gz
+		cp -f mod_clamav-${CLAMAV_VER}/mod_clamav.* contrib/
+		epatch mod_clamav-${CLAMAV_VER}/${PN}.patch
+	fi
+
+	if use deflate ; then
+		unpack ${PN}-mod-deflate-${DEFLATE_VER}.tar.gz
+		cp -f mod_deflate/mod_deflate.c contrib/
+		cp -f mod_deflate/mod_deflate.html doc/
+	fi
+
+	if use gzipfs ; then
+		unpack ${PN}-mod-gzipfs-${GZIPFS_VER}.tar.gz
+		cp -f mod_gzipfs/mod_gzipfs.c contrib/
+		cp -f mod_gzipfs/mod_gzipfs.html doc/
+	fi
+
+	if use shaper ; then
+		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
+		cp -f mod_shaper/mod_shaper.c contrib/
+		cp -f mod_shaper/mod_shaper.html doc/
 	fi
 
 	if use vroot ; then
@@ -71,8 +101,6 @@ src_unpack() {
 		cp -f mod_vroot/mod_vroot.c contrib/
 		cp -f mod_vroot/mod_vroot.html doc/
 	fi
-
-	epatch ${FILESDIR}/${P}-mod_mysql.patch
 }
 
 src_compile() {
@@ -81,7 +109,11 @@ src_compile() {
 
 	modules="mod_ratio:mod_readme"
 	use acl && modules="${modules}:mod_facl"
+	use ban && modules="${modules}:mod_ban"
+	use case && modules="${modules}:mod_case"
 	use clamav && modules="${modules}:mod_clamav"
+	use deflate && modules="${modules}:mod_deflate"
+	use gzipfs && modules="${modules}:mod_gzipfs"
 	use pam && modules="${modules}:mod_auth_pam"
 	use radius && modules="${modules}:mod_radius"
 	use rewrite && modules="${modules}:mod_rewrite"
@@ -97,11 +129,14 @@ src_compile() {
 	if use ldap ; then
 		modules="${modules}:mod_ldap"
 		append-ldflags "-lresolv"
+		if use ssl ; then
+			CFLAGS="${CFLAGS} -DUSE_LDAP_TLS"
+		fi
 	fi
 
 	if use opensslcrypt ; then
-		append-ldflags "-lcrypto"
 		myconf="${myconf} --enable-openssl --with-includes=/usr/include/openssl"
+		append-ldflags "-lcrypto"
 		CFLAGS="${CFLAGS} -DHAVE_OPENSSL"
 	fi
 
@@ -129,6 +164,9 @@ src_compile() {
 		modules="${modules}:mod_quotatab"
 		if use mysql || use postgres ; then
 			modules="${modules}:mod_quotatab_sql"
+		fi
+		if use radius ; then
+			modules="${modules}:mod_quotatab_radius"
 		fi
 		if use ldap ; then
 			modules="${modules}:mod_quotatab_file:mod_quotatab_ldap"
@@ -169,8 +207,6 @@ src_compile() {
 }
 
 src_install() {
-	# Note rundir needs to be specified to avoid sandbox violation
-	# on initial install. See Make.rules
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	keepdir /var/run/proftpd
@@ -180,8 +216,6 @@ src_install() {
 		doc/license.txt
 	dohtml doc/*.html
 	dohtml doc/howto/*.html
-
-	use shaper && dohtml mod_shaper/mod_shaper.html
 
 	docinto rfc
 	dodoc doc/rfc/*.txt
