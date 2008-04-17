@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.33 2008/02/23 17:10:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.34 2008/04/17 20:52:20 pythonhead Exp $
+
+*4suite-1.0.2-r1 (17 Apr 2008)
+
+  17 Apr 2008; Rob Cakebread <pythonhead@gentoo.org>
+  +files/4suite-1.0.2-config.patch, 4suite-1.0_beta3.ebuild,
+  -4suite-1.0.2.ebuild, +4suite-1.0.2-r1.ebuild:
+  Fixes bug #217780 and added patch to fix catalog warnings and errors.
+  Quote variables.
 
   23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> 4suite-1.0.2.ebuild:
   Fixed strict-multilib problem (bug #209337, thanks to Tomas A.)

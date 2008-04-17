@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta3.ebuild,v 1.10 2006/10/20 20:33:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta3.ebuild,v 1.11 2008/04/17 20:52:20 pythonhead Exp $
 
 inherit distutils eutils python multilib
 
@@ -23,9 +23,9 @@ DOCS="docs/*.txt"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/1.0_b3-add_root_opt.diff
+	epatch "${FILESDIR}/1.0_b3-add_root_opt.diff"
 	python_version
 	python setup.py config --prefix=/usr --docdir=/usr/share/doc/${P} --pythonlibbdir=/usr/$(get_libdir)/python${PYVER}/site-packages --libdir=/usr/$(get_libdir)/4Suite
 }
