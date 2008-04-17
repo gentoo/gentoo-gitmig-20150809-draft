@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dsh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.18 2008/04/15 03:29:44 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.19 2008/04/17 17:33:05 nixnut Exp $
+
+  17 Apr 2008; nixnut <nixnut@gentoo.org> dsh-0.25.10.ebuild:
+  Stable on ppc wrt bug 217599
 
   15 Apr 2008; Dawid Węgliński <cla@gentoo.org> dsh-0.25.10.ebuild:
   Stable on x86 (bug #217599)
