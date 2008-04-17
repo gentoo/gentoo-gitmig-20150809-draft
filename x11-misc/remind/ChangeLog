@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.28 2008/03/30 11:13:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.29 2008/04/17 10:39:58 tove Exp $
+
+*remind-03.01.05 (17 Apr 2008)
+
+  17 Apr 2008; Torsten Veller <tove@gentoo.org> -remind-03.00.24.ebuild,
+  -remind-03.01.03.ebuild, +remind-03.01.05.ebuild:
+  Version bump. Cleaning
 
   30 Mar 2008; Raúl Porcel <armin76@gentoo.org> remind-03.01.04.ebuild:
   sparc stable wrt #214361
