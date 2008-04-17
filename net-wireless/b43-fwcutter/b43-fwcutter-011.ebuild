@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-011.ebuild,v 1.1 2008/04/17 16:38:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-011.ebuild,v 1.2 2008/04/17 16:40:20 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -32,9 +32,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "Firmware may be downloaded from http://linuxwireless.org."
-	einfo
-	ewarn "This version supports 2.6.25 and newer kernels.  If this"
-	ewarn "is not what you want, please emerge b43-fwcutter-009."
+	einfo "This version of fwcutter works with all b43 driver versions."
 	einfo
 
 	einfo "Please read this forum thread for help and troubleshooting:"
