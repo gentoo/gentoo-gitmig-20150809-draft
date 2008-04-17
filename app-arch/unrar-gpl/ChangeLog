@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unrar-gpl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/ChangeLog,v 1.8 2008/04/17 08:19:57 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/ChangeLog,v 1.9 2008/04/17 21:42:29 maekke Exp $
+
+  17 Apr 2008; Markus Meier <maekke@gentoo.org>
+  unrar-gpl-0.0.1_p20080417.ebuild:
+  amd64/x86 stable, security bug #218064
 
 *unrar-gpl-0.0.1_p20080417 (17 Apr 2008)
 
