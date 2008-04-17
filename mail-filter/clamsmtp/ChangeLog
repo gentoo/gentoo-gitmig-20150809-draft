@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamsmtp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.14 2007/08/25 17:46:04 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.15 2008/04/17 15:20:21 armin76 Exp $
+
+  17 Apr 2008; Raúl Porcel <armin76@gentoo.org> clamsmtp-1.8.ebuild:
+  Add ~sparc wrt #217903
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> clamsmtp-1.8.ebuild:
   amd64 stable
