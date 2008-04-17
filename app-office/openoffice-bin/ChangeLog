@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.186 2008/03/27 08:14:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.187 2008/04/17 21:50:29 maekke Exp $
+
+  17 Apr 2008; Markus Meier <maekke@gentoo.org> openoffice-bin-2.4.0.ebuild:
+  amd64/x86 stable, security bug #218080
 
 *openoffice-bin-2.4.0 (27 Mar 2008)
 
