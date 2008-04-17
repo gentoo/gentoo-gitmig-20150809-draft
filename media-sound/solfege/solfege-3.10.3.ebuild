@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.10.2.ebuild,v 1.1 2008/02/15 12:34:33 drac Exp $
-
-inherit python eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.10.3.ebuild,v 1.1 2008/04/17 16:59:18 drac Exp $
 
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://www.solfege.org"
@@ -13,9 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="oss"
 
-RDEPEND=">=dev-lang/python-2.4
-	>=x11-libs/gtk+-2.6
-	>=dev-python/pygtk-2.6
+RDEPEND=">=dev-python/pygtk-2.6
 	>=gnome-extra/gtkhtml-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -23,8 +19,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	sys-apps/texinfo
 	dev-libs/libxslt
-	sys-apps/sed
 	>=app-text/docbook-xsl-stylesheets-1.60"
+
+src_unpack() {
+	unpack ${A}
+	# Make sure it doesn't compile python at install time for bug 210305.
+	sed -i -e 's:compileall::' "${S}"/Makefile.in || die "sed failed."
+}
 
 src_compile() {
 	# Try to figure out where is this damn stylesheet.

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.25 2008/02/15 12:34:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.26 2008/04/17 16:59:18 drac Exp $
+
+*solfege-3.10.3 (17 Apr 2008)
+
+  17 Apr 2008; Samuli Suominen <drac@gentoo.org> -solfege-3.10.2.ebuild,
+  +solfege-3.10.3.ebuild:
+  Version bump wrt #215666, thanks to Tim Harder for reporting. Make sure
+  python doesn't get byte-compiled at install time wrt #210305.
 
 *solfege-3.10.2 (15 Feb 2008)
 
