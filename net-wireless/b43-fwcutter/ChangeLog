@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/b43-fwcutter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.8 2008/03/22 16:01:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.9 2008/04/17 16:38:06 josejx Exp $
+
+*b43-fwcutter-011 (17 Apr 2008)
+
+  17 Apr 2008; Joseph Jezak <josejx@gentoo.org> +b43-fwcutter-011.ebuild:
+  Added latest version.
 
   22 Mar 2008; Joseph Jezak <josejx@gentoo.org> b43-fwcutter-009.ebuild:
   Marked ppc/ppc64 stable since 2.6.24 is stable now.
