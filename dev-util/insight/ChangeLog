@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.44 2008/04/14 15:02:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.45 2008/04/17 17:39:32 nixnut Exp $
+
+  17 Apr 2008; nixnut <nixnut@gentoo.org> insight-6.7.1-r1.ebuild:
+  Stable on ppc wrt bug 217467
 
   14 Apr 2008; Raúl Porcel <armin76@gentoo.org> insight-6.7.1-r1.ebuild:
   alpha/sparc stable wrt #217467
