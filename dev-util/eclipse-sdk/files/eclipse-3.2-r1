@@ -35,7 +35,7 @@ fi
 
 # workaround for bug #215150
 if [[ $(java-config -f) == sun-jdk-1.6 || $(java-config -f) == sun-jre-bin-1.6 ]]; then
-    if [[ $(java-config -g VERSION) == *1.6.0.04 || $(java-config -g VERSION) == *1.6.0.05 ]]; then
+    if [[ $(java-config -g VERSION) == *1.6.0.06 || $(java-config -g VERSION) == *1.6.0.05 || $(java-config -g VERSION) == *1.6.0.04 ]]; then
     echo "Performing workaround for bug #215150"
     VM_ARGS="${VM_ARGS} -XX:CompileCommand=exclude,org/eclipse/core/internal/dtree/DataTreeNode,forwardDeltaWith"
     fi
