@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.2 2008/03/26 16:06:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.3 2008/04/17 00:43:14 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -37,6 +37,7 @@ RESTRICT="test"
 DOCS="THANKS.txt DEVELOPERS.txt LATEST.txt TOCHANGE.txt FORMAT_GUIDELINES.txt"
 
 scipy_fortran_setup() {
+	append-ldflags -shared
 	FORTRAN="gfortran g77 ifc"
 	fortran_pkg_setup
 	local fc=
@@ -60,10 +61,6 @@ scipy_fortran_setup() {
 	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	export SCIPY_FCONFIG="config_fc --fcompiler=${fc}"
 }
-
-# whatever LDFLAGS set will break linking
-# see progress in http://projects.scipy.org/scipy/numpy/ticket/573
-[ -n "${LDFLAGS}" ] && append-ldflags -shared
 
 pkg_setup() {
 	if use umfpack && ! built_with_use dev-lang/swig python; then
