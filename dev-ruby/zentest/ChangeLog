@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.34 2008/04/13 13:16:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.35 2008/04/17 10:57:24 armin76 Exp $
+
+  17 Apr 2008; Raúl Porcel <armin76@gentoo.org> zentest-3.9.1.ebuild:
+  ia64 stable wrt #217389
 
   13 Apr 2008; Markus Rothe <corsair@gentoo.org> zentest-3.9.1.ebuild:
   Stable on ppc64; bug #217389
