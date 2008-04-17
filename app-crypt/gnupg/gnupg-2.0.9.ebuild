@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.9.ebuild,v 1.2 2008/04/16 20:02:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.9.ebuild,v 1.3 2008/04/17 05:19:03 alonbl Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,6 +37,12 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/mta
 	selinux? ( sec-policy/selinux-gnupg )
 	nls? ( virtual/libintl )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+}
 
 src_compile() {
 	econf \
