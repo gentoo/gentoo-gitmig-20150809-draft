@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.10.28.ebuild,v 1.2 2008/02/05 15:36:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.10.28.ebuild,v 1.3 2008/04/17 19:04:16 markusle Exp $
 
 inherit flag-o-matic wxwidgets depend.apache
 
@@ -39,8 +39,8 @@ DEPEND=">=sys-devel/gcc-3.0.4
 want_apache server
 
 src_unpack() {
-	unpack "${A}"
-	cd ""${S}""
+	unpack ${A}
+	cd "${S}"
 }
 
 src_compile() {

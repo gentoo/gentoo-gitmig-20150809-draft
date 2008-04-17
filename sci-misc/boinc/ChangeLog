@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.38 2008/04/15 18:48:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.39 2008/04/17 19:04:16 markusle Exp $
+
+  17 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/boinc-5.10.45-gcc4.3.patch, boinc-4.72.20050813-r3.ebuild,
+  boinc-5.2.14.ebuild, boinc-5.4.11.ebuild, boinc-5.5.6.ebuild,
+  boinc-5.10.28.ebuild, boinc-5.10.45.ebuild:
+  Added patch to fix compile problems with gcc-4.3 (see bug #217919).
+  Fixed lots of QA issues.
 
 *boinc-5.10.45 (15 Apr 2008)
 

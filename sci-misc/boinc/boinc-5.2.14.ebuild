@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.14 2008/02/05 15:36:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.15 2008/04/17 19:04:16 markusle Exp $
 
 inherit eutils wxwidgets depend.apache
 
@@ -39,12 +39,12 @@ want_apache server
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Apply patches, most of which from Debian
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
-	epatch ${FILESDIR}/08_all_Makefile.patch
-	epatch ${FILESDIR}/${P}-gcc-4.1.patch
+	epatch "${FILESDIR}"/08_all_Makefile.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.1.patch
 
 	# point to a proper mouse device
 	sed -e "s:/dev/mouse:/dev/input/mice:g" -i client/hostinfo_unix.C || die
@@ -72,10 +72,10 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
-	newinitd ${FILESDIR}/boinc.init boinc
-	newconfd ${FILESDIR}/boinc.conf boinc
+	newinitd "${FILESDIR}"/boinc.init boinc
+	newconfd "${FILESDIR}"/boinc.conf boinc
 
 	make_desktop_entry boinc_gui BOINC boinc Science /var/lib/boinc
 }
