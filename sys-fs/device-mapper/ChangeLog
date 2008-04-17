@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.109 2008/04/16 19:26:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.110 2008/04/17 18:11:21 nixnut Exp $
+
+  17 Apr 2008; nixnut <nixnut@gentoo.org> device-mapper-1.02.24-r1.ebuild:
+  Stable on ppc wrt bug 217740
 
   16 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   device-mapper-1.02.24-r1.ebuild:
