@@ -1,17 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1.ebuild,v 1.1 2008/04/17 07:57:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1.ebuild,v 1.2 2008/04/17 09:32:05 chtekk Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs autotools
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="acl authfile ban case clamav deflate gzipfs hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
+IUSE="acl authfile ban case clamav deflate hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
 CASE_VER="0.3"
 CLAMAV_VER="0.7"
 DEFLATE_VER="0.3"
-GZIPFS_VER="0.9rc4"
 SHAPER_VER="0.6.3"
 VROOT_VER="0.7.2"
 
@@ -21,7 +20,6 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 		case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${CASE_VER}.tar.gz )
 		clamav? ( http://www.thrallingpenguin.com/resources/mod_clamav-${CLAMAV_VER}.tar.gz )
 		deflate? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-deflate-${DEFLATE_VER}.tar.gz )
-		gzipfs? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-gzipfs-${GZIPFS_VER}.tar.gz )
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
 		vroot? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
 
@@ -34,7 +32,6 @@ LICENSE="GPL-2"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 		clamav? ( app-antivirus/clamav )
-		gzipfs? ( sys-libs/zlib )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
@@ -84,12 +81,6 @@ src_unpack() {
 		cp -f mod_deflate/mod_deflate.html doc/
 	fi
 
-	if use gzipfs ; then
-		unpack ${PN}-mod-gzipfs-${GZIPFS_VER}.tar.gz
-		cp -f mod_gzipfs/mod_gzipfs.c contrib/
-		cp -f mod_gzipfs/mod_gzipfs.html doc/
-	fi
-
 	if use shaper ; then
 		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
 		cp -f mod_shaper/mod_shaper.c contrib/
@@ -101,6 +92,10 @@ src_unpack() {
 		cp -f mod_vroot/mod_vroot.c contrib/
 		cp -f mod_vroot/mod_vroot.html doc/
 	fi
+
+	# Fix bug #208840
+	epatch "${FILESDIR}/${P}-bug208840.patch"
+	eautoreconf
 }
 
 src_compile() {
@@ -113,7 +108,6 @@ src_compile() {
 	use case && modules="${modules}:mod_case"
 	use clamav && modules="${modules}:mod_clamav"
 	use deflate && modules="${modules}:mod_deflate"
-	use gzipfs && modules="${modules}:mod_gzipfs"
 	use pam && modules="${modules}:mod_auth_pam"
 	use radius && modules="${modules}:mod_radius"
 	use rewrite && modules="${modules}:mod_rewrite"
