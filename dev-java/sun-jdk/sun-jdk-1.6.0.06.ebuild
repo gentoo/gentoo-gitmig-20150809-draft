@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.06.ebuild,v 1.1 2008/04/16 21:31:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.06.ebuild,v 1.2 2008/04/17 08:48:05 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -134,16 +134,6 @@ pkg_postinst() {
 	# Set as default VM if none exists
 	java-vm-2_pkg_postinst
 
-	elog "Beginning with 1.5.0.10 the hotspot vm can use epoll"
-	elog "The epoll-based implementation of SelectorProvider is not selected by"
-	elog "default."
-	elog "Use java -Djava.nio.channels.spi.SelectorProvider=sun.nio.ch.EPollSelectorProvider"
-	elog ""
-	elog "Starting with 1.6.0-r2 the src.zip is installed to the standard"
-	elog "location. See https://bugs.gentoo.org/show_bug.cgi?id=2241 and"
-	elog "http://java.sun.com/javase/6/docs/technotes/tools/linux/jdkfiles.html"
-	elog "for more details."
-	elog ""
-	elog "Starting with 1.6.0.01 demo and sample directories have been moved"
-	elog "to top level from the share sub directory."
+	elog "Please reinstall eclipse-sdk if you have it installed and want"
+	elog "workaround for bug #215150."
 }
