@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.51 2008/03/10 01:57:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.52 2008/04/17 04:23:44 vapier Exp $
+
+  17 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/xfs.start:
+  Dont loop forever trying to create /tmp/.font-unix. If it fails sanity, then
+  just abort the process.
 
   10 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Bump.
