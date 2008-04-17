@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.72 2008/04/16 22:54:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.73 2008/04/17 18:05:57 nixnut Exp $
+
+  17 Apr 2008; nixnut <nixnut@gentoo.org> devhelp-0.19.ebuild:
+  Stable on ppc wrt bug 218026
 
   16 Apr 2008; Ferris McCormick <fmccor@gentoo.org> devhelp-0.19.ebuild:
   Sparc stable, Bug #218026.
