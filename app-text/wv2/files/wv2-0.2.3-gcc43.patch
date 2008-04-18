@@ -1,0 +1,10 @@
+--- src/styles.cpp.orig	2008-02-22 15:40:41.000000000 +0100
++++ src/styles.cpp	2008-02-22 15:41:05.000000000 +0100
+@@ -24,6 +24,7 @@
+ 
+ #include "wvlog.h"
+ #include <algorithm>
++#include <string.h>
+ 
+ namespace wvWare
+ {
