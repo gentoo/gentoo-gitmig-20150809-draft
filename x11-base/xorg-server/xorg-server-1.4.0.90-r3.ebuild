@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r3.ebuild,v 1.3 2008/04/10 06:37:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r3.ebuild,v 1.4 2008/04/18 21:29:13 compnerd Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -293,6 +293,7 @@ PATCHES="
 	${FILESDIR}/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch
 	${FILESDIR}/1.4-0008-CVE-2007-6429-Always-test-for-size-offset-wrapping.patch
 	${FILESDIR}/1.4-0009-Don-t-break-grab-and-focus-state-for-a-window-when-r.patch
+	${FILESDIR}/xorg-server-1.4.0.90-automake-1.10.1-fixup.patch
 	"
 
 pkg_setup() {
