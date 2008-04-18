@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0.ebuild,v 1.1 2006/01/02 03:19:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0.ebuild,v 1.2 2008/04/18 19:34:48 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,8 +19,14 @@ DEPEND="media-libs/sdl-mixer
 
 S=${WORKDIR}/CriticalMass-${PV}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
+
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dohtml Readme.html
 	dodoc TODO
 	newicon critter.png ${PN}.png
