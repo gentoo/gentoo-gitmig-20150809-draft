@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_beta3.ebuild,v 1.1 2008/04/17 11:27:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_beta3.ebuild,v 1.2 2008/04/18 13:55:21 drac Exp $
 
 inherit autotools eutils toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/theora/${P/_}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc encode examples"
+IUSE="doc encode examples pic"
 
 RDEPEND="media-libs/libogg
 	encode? ( media-libs/libvorbis )"
@@ -29,12 +29,11 @@ src_unpack() {
 }
 
 src_compile() {
-	use x86 && filter-flags -fforce-addr -frename-registers #200549
-
+	use pic && local myconf="--disable-asm" #200549, comment #28
 	use doc || export ac_cv_prog_HAVE_DOXYGEN="false"
 
 	econf --disable-dependency-tracking --disable-examples \
-		--disable-sdltest $(use_enable encode)
+		--disable-sdltest $(use_enable encode) ${myconf}
 
 	emake || die "emake failed."
 }
