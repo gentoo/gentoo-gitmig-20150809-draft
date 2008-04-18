@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.84 2008/04/14 05:55:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.85 2008/04/18 17:28:17 remi Exp $
+
+*xf86-video-i810-2.2.99.903-r1 (18 Apr 2008)
+
+  18 Apr 2008; Rémi Cardona <remi@gentoo.org>
+  +files/xf86-video-i810-2.2.99.903-fix-panel-resize-on-i8xx.patch,
+  +xf86-video-i810-2.2.99.903-r1.ebuild:
+  Add patches to fix non-native resolution on i8xx-attached LFP displays
 
 *xf86-video-i810-2.2.99.903 (14 Apr 2008)
 
