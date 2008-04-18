@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.57 2008/04/09 01:44:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.58 2008/04/18 13:13:10 markusle Exp $
+
+  18 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/octave-2.1.73-gcc-4.3.patch, octave-2.1.73-r2.ebuild:
+  Fix compile problems with gcc-4.3 (see bug #218176). Thanks much to Martin
+  Väth <vaeth@mathematik.uni-wuerzburg.de> for his patch.
 
   09 Apr 2008; Jeroen Roovers <jer@gentoo.org> octave-2.1.73-r2.ebuild:
   Marked ~hppa (bug #216855).
