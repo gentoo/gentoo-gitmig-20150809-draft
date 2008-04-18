@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.4 2008/02/26 16:05:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.5 2008/04/18 10:48:49 jer Exp $
+
+  18 Apr 2008; Jeroen Roovers <jer@gentoo.org> obex-data-server-0.3.ebuild:
+  Marked ~hppa too.
 
 *obex-data-server-0.3 (26 Feb 2008)
 
