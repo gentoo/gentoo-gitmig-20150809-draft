@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.9 2008/03/25 03:42:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.10 2008/04/18 14:38:48 tove Exp $
 
 inherit autotools eutils gnome2
 
@@ -95,6 +95,7 @@ src_install() {
 
 src_test() {
 	GUILE_WARN_DEPRECATED=no \
+	GNC_DOT_DIR="${T}"/.gnucash \
 	emake -j1 check \
 	|| die "Make check failed. See above for details."
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.159 2008/04/14 21:56:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.160 2008/04/18 14:38:49 tove Exp $
+
+  18 Apr 2008; Torsten Veller <tove@gentoo.org> gnucash-2.2.3.ebuild,
+  gnucash-2.2.4.ebuild:
+  Set GNC_DOT_DIR in src_test (#218235)
 
   14 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> gnucash-2.2.4.ebuild:
   unbreak configure

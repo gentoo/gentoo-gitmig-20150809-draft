@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.4 2008/04/14 21:56:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.4.ebuild,v 1.5 2008/04/18 14:38:49 tove Exp $
 
 EAPI=1
 
@@ -86,6 +86,7 @@ pkg_setup() {
 
 src_test() {
 	GUILE_WARN_DEPRECATED=no \
+	GNC_DOT_DIR="${T}"/.gnucash \
 	emake check \
 	|| die "Make check failed. See above for details."
 }
