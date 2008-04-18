@@ -8,28 +8,6 @@
  $OOINSTBASE/program/soffice $2 "\$@"
  EOT
      chmod 755 $1
-@@ -431,7 +431,7 @@
-     chmod go-w $OOINSTDIR/sdk/settings/component.uno.map
- fi
- 
--if test "$DISTRO" = "SUSE" || ! echo "$DISTRO" | grep -q "SUSE-10" ; then
-+if test "$DISTRO" = "SUSE" || echo "$DISTRO" | grep -q "SUSE-11" ; then
-     # branding stuff for openSUSE >= 11.0 and SLED >= 11
-     mkdir -p $DATADIR/$OOOINSTALLDIRNAME/program
-     echo "%dir $DATADIRBASE/$OOOINSTALLDIRNAME" >$BUILDDIR/upstream_branding_list.txt
---- patches/src680/apply 
-+++ patches/src680/apply 
-@@ -88,8 +88,8 @@
- # openmamba
- openmamba: LinuxCommon, GlobalDesktopFiles
- #Gentoo
--GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, CairoFonts, BerkeleyDB43
--GentooUnstable: GentooBase, GentooExperimental, Gcc43, TransparentPrinting
-+GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, CairoFonts, BerkeleyDB43, Gcc43
-+GentooUnstable: GentooBase, GentooExperimental, TransparentPrinting
- Gentoo : GentooBase
- Gentoo64: GentooBase
- # rPath Linux
 --- patches/src680/svg-import-filter.diff   2008-04-12 23:55:36.000000000 +0400
 +++ patches/src680/svg-import-filter.diff   2008-03-06 21:09:06.000000000 +0300
 @@ -692,7 +692,7 @@

@@ -1,15 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.9 2008/04/15 18:58:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.10 2008/04/18 12:45:06 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
 
-IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk pam seamonkey webdav xulrunner"
+IUSE="binfilter branding cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.4.0.6"
+MY_PV="2.4.0.7"
 PATCHLEVEL="OOH680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -243,7 +243,7 @@ src_unpack() {
 	fi
 
 	# Upstream bitmaps are broken, so force ours for now
-	echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
+	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 
@@ -301,7 +301,6 @@ src_compile() {
 	filter-flags "-ftracer"
 	filter-flags "-fforce-addr"
 	replace-flags "-O?" "-O2"
-	append-flags "-DGL_GLEXT_PROTOTYPES"
 
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
@@ -325,7 +324,6 @@ src_compile() {
 		${GTKFLAG} \
 		`use_enable mono` \
 		`use_enable kde` \
-		`use_enable gnome quickstart` \
 		`use_enable pam` \
 		`use_enable !debug strip` \
 		`use_enable odk` \
