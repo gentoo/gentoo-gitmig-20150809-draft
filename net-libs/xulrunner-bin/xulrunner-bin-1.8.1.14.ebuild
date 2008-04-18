@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/xulrunner-bin-1.8.1.13.ebuild,v 1.1 2008/03/26 22:19:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/xulrunner-bin-1.8.1.14.ebuild,v 1.1 2008/04/18 15:12:04 armin76 Exp $
 
 inherit eutils multilib mozilla-launcher
 
