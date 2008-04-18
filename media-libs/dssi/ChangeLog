@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.15 2008/02/22 13:47:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.16 2008/04/18 05:29:28 flameeyes Exp $
+
+*dssi-0.9.1-r2 (18 Apr 2008)
+
+  18 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/dssi-0.9.1-gcc43.patch, +dssi-0.9.1-r2.ebuild:
+  Fix building with GCC 4.3, and as I'm around here, remove libtool .la
+  files, the libraries are only ever dlopened anyway.
 
 *dssi-0.9.1-r1 (22 Feb 2008)
 
