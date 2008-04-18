@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.14 2008/03/06 17:22:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.15 2008/04/18 09:54:15 armin76 Exp $
+
+  18 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-bad-0.10.6.ebuild:
+  Add ~sparc
 
 *gst-plugins-bad-0.10.6 (21 Feb 2008)
 
