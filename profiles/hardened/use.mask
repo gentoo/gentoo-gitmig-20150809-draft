@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.20 2008/01/02 02:53:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.21 2008/04/18 16:57:29 drac Exp $
+
+# supported only by gcc-4, unmask when it's stable wrt #217927
+raw
 
 emul-linux-x86
 

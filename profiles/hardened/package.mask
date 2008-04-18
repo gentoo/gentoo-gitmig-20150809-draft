@@ -1,6 +1,11 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.39 2008/03/18 15:49:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.40 2008/04/18 16:57:29 drac Exp $
+
+# supported only by gcc-4, unmask when it's stable wrt #217927
+media-libs/libopenraw
+media-gfx/raw-thumbnailer
+media-gfx/gnome-raw-thumbnailer
 
 # >=acml-3.6 depends on gcc-4*
 >=sci-libs/acml-3.6
