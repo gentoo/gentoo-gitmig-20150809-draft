@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.7 2008/01/20 22:55:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.8 2008/04/18 20:40:16 zzam Exp $
 
 inherit vdr-plugin eutils multilib
 
@@ -40,8 +40,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/xineliboutput-${MY_PV}
 
 VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
-PATCHES="${FILESDIR}/${P}-vdr-1.5.3.diff
-	${FILESDIR}/${P}-vdr-1.5.9.diff"
+PATCHES=("${FILESDIR}/${P}-vdr-1.5.3.diff"
+	"${FILESDIR}/${P}-vdr-1.5.9.diff")
 
 NO_GETTEXT_HACK=1
 
