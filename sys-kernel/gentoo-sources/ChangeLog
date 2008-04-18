@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.502 2008/04/17 17:11:12 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.503 2008/04/18 12:02:26 fmccor Exp $
+
+  18 Apr 2008; Ferris McCormick <fmccor@gentoo.org>
+  gentoo-sources-2.6.25.ebuild:
+  Add ~sparc keyword.
 
 *gentoo-sources-2.6.25 (17 Apr 2008)
 
