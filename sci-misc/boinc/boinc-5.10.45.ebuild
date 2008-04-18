@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.10.45.ebuild,v 1.2 2008/04/17 19:04:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.10.45.ebuild,v 1.3 2008/04/18 17:57:38 markusle Exp $
 
 inherit flag-o-matic wxwidgets depend.apache
 
@@ -48,6 +48,7 @@ src_compile() {
 	#upstream recommendation for flags
 	append-flags -O3 -funroll-loops -fforce-addr -ffast-math
 
+	local wxconf=""
 	if use X; then
 		WX_GTK_VER=2.8
 		if use unicode; then
@@ -55,7 +56,9 @@ src_compile() {
 		else
 			need-wxwidgets gtk2
 		fi
-		wxconf="--with-wx-config=${WX_CONFIG}"
+		wxconf="${wxconf} --with-wx-config=${WX_CONFIG}"
+	else
+		wxconf="${wxconf} --without-wxdir"
 	fi
 
 	# Just run the necessary tools directly
