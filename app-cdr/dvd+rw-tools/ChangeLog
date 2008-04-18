@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.56 2008/02/17 07:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.57 2008/04/18 14:49:31 beandog Exp $
+
+*dvd+rw-tools-7.1 (18 Apr 2008)
+
+  18 Apr 2008; Steve Dibb <beandog@gentoo.org> +dvd+rw-tools-7.1.ebuild:
+  Version bump, bug 214736
 
 *dvd+rw-tools-7.0-r1 (17 Feb 2008)
 
