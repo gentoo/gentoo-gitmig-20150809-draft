@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.10 2008/04/07 21:47:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.11 2008/04/18 09:49:47 armin76 Exp $
+
+  18 Apr 2008; Raúl Porcel <armin76@gentoo.org> sexy-python-0.1.9.ebuild:
+  Add ~sparc
 
   07 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   sexy-python-0.1.9.ebuild:
