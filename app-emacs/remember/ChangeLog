@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.12 2008/03/12 10:15:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.13 2008/04/18 14:49:27 ulm Exp $
+
+*remember-2.0 (18 Apr 2008)
+
+  18 Apr 2008; Ulrich Mueller <ulm@gentoo.org> +remember-2.0.ebuild:
+  Version bump.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.
