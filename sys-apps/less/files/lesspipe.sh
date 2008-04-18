@@ -49,6 +49,11 @@ lesspipe() {
 		~/.lessfilter "$1" && exit 0
 	fi
 
+	local ignore
+	for ignore in ${LESSIGNORE} ; do
+		[[ ${match} == *.${ignore} ]] && exit 0
+	done
+
 	case "$match" in
 
 	### Doc files ###
@@ -224,7 +229,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.28 2008/04/16 17:33:38 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.29 2008/04/18 19:58:13 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2008 Gentoo Foundation
@@ -243,6 +248,7 @@ elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 		lesspipe.sh specific settings:
 		  LESSCOLOR env     - toggle colorizing of output
 		  LESSCOLORIZER env - program used to colorize output (default: code2color)
+		  LESSIGNORE        - list of extensions to ignore (don't do anything fancy)
 
 		You can create per-user filters as well by creating the executable file:
 		  ~/.lessfilter
