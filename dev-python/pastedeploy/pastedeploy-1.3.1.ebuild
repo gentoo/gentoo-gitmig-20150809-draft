@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.1.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.1.ebuild,v 1.1 2008/04/18 13:09:14 hawking Exp $
 
 NEED_PYTHON=2.4
 
-inherit distutils
+inherit eutils distutils multilib
 
 KEYWORDS="~amd64 ~x86"
 
@@ -22,7 +22,7 @@ RDEPEND="dev-python/paste"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/pudge dev-python/buildutils )
-	test? ( dev-python/nose )"
+	test? ( dev-python/nose dev-python/py )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -42,5 +42,12 @@ src_install() {
 }
 
 src_test() {
+	# Tests can't import paste from site-packages
+	# so we copy them over.
+	# The files that will be installed are already copied to build/lib
+	# so this shouldn't generate any collisions.
+	distutils_python_version
+	cp -pPR /usr/$(get_libdir)/python${PYVER}/site-packages/paste/* paste/
+
 	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
 }
