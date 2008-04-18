@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.6.ebuild,v 1.1 2007/12/14 19:29:12 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.6.ebuild,v 1.2 2008/04/18 22:13:25 compnerd Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -34,7 +34,8 @@ src_unpack() {
 	cd "${S}"
 
 	#epatch ${FILESDIR}/${PN}-1.1.13-libungif-configure-fix.diff
-	epatch "${FILESDIR}"/${PN}-1.2.5-imglibs.patch
+	epatch "${FILESDIR}/${PN}-1.2.5-imglibs.patch"
+	epatch "${FILESDIR}/${PN}-1.2.6-autotool-variables.patch"
 	eautoreconf
 }
 
