@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.10 2008/04/18 12:45:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.11 2008/04/18 20:08:33 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -300,6 +300,7 @@ src_compile() {
 	filter-flags "-fstack-protector-all"
 	filter-flags "-ftracer"
 	filter-flags "-fforce-addr"
+	append-flags "-DGL_GLEXT_PROTOTYPES"
 	replace-flags "-O?" "-O2"
 
 	# Now for our optimization flags ...
