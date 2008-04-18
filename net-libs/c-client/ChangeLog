@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.47 2008/04/18 11:39:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.48 2008/04/18 21:56:39 maekke Exp $
+
+  18 Apr 2008; Markus Meier <maekke@gentoo.org> c-client-2006k.ebuild:
+  amd64/x86 stable, bug #213473
 
   18 Apr 2008; Tobias Klausmann <klausman@gentoo.org> c-client-2006k.ebuild:
   Stable on alpha, bug #213473
