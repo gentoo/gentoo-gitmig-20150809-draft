@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/aldo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.14 2007/09/09 14:34:51 coldwind Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.15 2008/04/18 18:34:16 drac Exp $
+
+*aldo-0.7.5 (18 Apr 2008)
+
+  18 Apr 2008; Samuli Suominen <drac@gentoo.org> -aldo-0.7.3.ebuild,
+  -aldo-0.7.4.ebuild, +aldo-0.7.5.ebuild:
+  Version bump wrt #217646, fixes building with GCC 4.3. Thanks to Peter
+  Alfredsen for reporting.
 
 *aldo-0.7.4 (09 Sep 2007)
 
