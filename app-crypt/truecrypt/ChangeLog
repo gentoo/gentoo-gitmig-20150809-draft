@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.36 2008/03/21 17:24:53 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.37 2008/04/18 05:26:42 alonbl Exp $
+
+  18 Apr 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-5.1a-gcc-4.3.patch, truecrypt-5.1a.ebuild:
+  Fix gcc-4.3 issue, bug#218137, thanks to Holger Ackermann
 
 *truecrypt-5.1a (21 Mar 2008)
 

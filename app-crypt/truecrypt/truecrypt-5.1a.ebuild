@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.1a.ebuild,v 1.1 2008/03/21 17:24:53 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.1a.ebuild,v 1.2 2008/04/18 05:26:42 alonbl Exp $
 
 inherit eutils toolchain-funcs multilib wxwidgets
 
@@ -38,6 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 	epatch "${FILESDIR}/${P}-external-wx.patch"
 	epatch "${FILESDIR}/${PN}-5.1-64bit.patch"
 	epatch "${FILESDIR}/${PN}-5.0-bool.patch"
