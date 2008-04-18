@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.9 2008/01/31 19:34:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.10 2008/04/18 07:39:42 hollow Exp $
 
 inherit python apache-module multilib
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-apxs=${APXS} || die "econf failed"
-	sed -i -e 's/ -Wl,--hash-style//' src/Makefile
+	sed -i -e 's/ -Wl,--hash-style  $//' src/Makefile
 	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "econf failed"
 }
 
