@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.43 2008/03/09 00:25:11 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.44 2008/04/18 10:12:48 pva Exp $
+
+*gimp-help-2.4.1 (18 Apr 2008)
+
+  18 Apr 2008; Peter Volkov <pva@gentoo.org> gimp-help-0.12.ebuild,
+  +gimp-help-2.4.1.ebuild:
+  Version bump, thank Tim Harder for report in bug #218194. Dropped mips
+  stable keyword in 0.12.
 
   08 Mar 2008; Ricardo Mendoza <ricmm@gentoo.org> gimp-help-2.4.0.ebuild:
   Marked -mips due to broken dependency
