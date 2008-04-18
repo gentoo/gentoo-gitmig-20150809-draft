@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.7.1.ebuild,v 1.1 2008/04/18 14:39:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.7.1.ebuild,v 1.2 2008/04/18 14:42:10 beandog Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dosym /usr/bin/wodim /usr/bin/cdrecord
 	dosym /usr/bin/genisoimage /usr/bin/mkisofs
@@ -53,33 +53,33 @@ src_install() {
 	dosym /usr/share/man/man1/icedax.1.bz2 /usr/share/man/man1/cdda2wav.1.bz2
 	dosym /usr/share/man/man1/readom.1.bz2 /usr/share/man/man1/readcd.1.bz2
 
-	cd ${S}
+	cd "${S}"
 	dodoc ABOUT Changelog FAQ FORK START TODO VERSION
 
-	cd ${S}/doc/READMEs
+	cd "${S}"/doc/READMEs
 	dodoc README*
 
-	cd ${S}/doc/wodim
+	cd "${S}"/doc/wodim
 	dodoc README*
 
-	cd ${S}/doc/genisoimage
+	cd "${S}"/doc/genisoimage
 	docinto genisoimage
 	dodoc *
 
-	cd ${S}/doc/icedax
+	cd "${S}"/doc/icedax
 	docinto icedax
 	dodoc FAQ Frontends HOWTOUSE NEEDED README TODO
 
-	cd ${S}/doc/plattforms
+	cd "${S}"/doc/plattforms
 	docinto platforms
 	dodoc README.{linux,parallel}
 
-	cd ${S}
+	cd "${S}"
 	insinto /etc
 	newins wodim/wodim.dfl wodim.conf
 	newins netscsid/netscsid.dfl netscsid.conf
 
-	cd ${S}
+	cd "${S}"
 	insinto /usr/include/scsilib
 	doins include/*.h
 	insinto /usr/include/scsilib/usal
