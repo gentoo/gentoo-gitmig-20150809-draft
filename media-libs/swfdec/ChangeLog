@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.32 2008/04/18 12:15:16 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.33 2008/04/18 12:30:17 pclouds Exp $
+
+  18 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  swfdec-0.6.4.ebuild:
+  swfdec only builds with <media-video/ffmpeg-0.4.9_p20080326, #216978
 
   18 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   -swfdec-0.5.4-r1.ebuild, -swfdec-0.5.5.ebuild, -swfdec-0.6.2.ebuild:

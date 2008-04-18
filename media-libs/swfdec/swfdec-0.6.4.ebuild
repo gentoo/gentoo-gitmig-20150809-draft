@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.4.ebuild,v 1.1 2008/04/11 06:26:38 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.4.ebuild,v 1.2 2008/04/18 12:30:17 pclouds Exp $
 
 EAPI=1
 
@@ -17,6 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 IUSE="alsa doc ffmpeg gstreamer gtk mad oss pulseaudio"
 
+# For <media-video/ffmpeg-0.4.9_p2008032, see #216978
 RDEPEND=">=dev-libs/glib-2.12
 	>=dev-libs/liboil-0.3.1
 	>=x11-libs/pango-1.16.4
@@ -25,7 +26,10 @@ RDEPEND=">=dev-libs/glib-2.12
 		net-libs/libsoup:2.4
 		)
 	>=x11-libs/cairo-1.2
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
+	ffmpeg? (
+		>=media-video/ffmpeg-0.4.9_p20070330
+		<media-video/ffmpeg-0.4.9_p20080326
+		)
 	mad? ( >=media-libs/libmad-0.15.1b )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.11
