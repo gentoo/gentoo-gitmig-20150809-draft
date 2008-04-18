@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r5.ebuild,v 1.17 2007/11/03 16:57:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r5.ebuild,v 1.18 2008/04/18 22:23:25 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -55,12 +55,12 @@ PROVIDE="virtual/python"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if tc-is-cross-compiler ; then
 		[[ $(python -V 2>&1) != "Python ${PV}" ]] && \
 			die "Crosscompiling requires the same host and build versions."
-		epatch ${FILESDIR}/python-2.4.4-test-cross.patch
+		epatch "${FILESDIR}"/python-2.4.4-test-cross.patch
 	else
 		rm "${WORKDIR}/${PV}"/*_all_crosscompile.patch
 	fi
@@ -78,7 +78,7 @@ src_unpack() {
 	# fix os.utime() on hppa. utimes it not supported but unfortunately
 	# reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
-	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i "${S}"/configure
 
 	eautoreconf
 }
@@ -175,25 +175,25 @@ src_install() {
 
 	# install our own custom python-config
 	exeinto /usr/bin
-	newexe ${FILESDIR}/python-config-${PYVER}-r1 python-config-${PYVER}
+	newexe "${FILESDIR}"/python-config-${PYVER}-r1 python-config-${PYVER}
 
 	# Use correct libdir in python-config
 	dosed "s:/usr/lib/:/usr/$(get_libdir)/:" /usr/bin/python-config-${PYVER}
 
 	if use build ; then
-		rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use elibc_uclibc && rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
-		use berkdb || rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/bsddb
-		use tk || rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/lib-tk
+		use elibc_uclibc && rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
+		use berkdb || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/bsddb
+		use tk || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/lib-tk
 	fi
 
 	# Fix slotted collisions
-	mv ${D}/usr/bin/pydoc ${D}/usr/bin/pydoc${PYVER}
-	mv ${D}/usr/bin/idle ${D}/usr/bin/idle${PYVER}
-	mv ${D}/usr/share/man/man1/python.1 \
-		${D}/usr/share/man/man1/python${PYVER}.1
-	rm -f ${D}/usr/bin/smtpd.py
+	mv "${D}"/usr/bin/pydoc "${D}"/usr/bin/pydoc${PYVER}
+	mv "${D}"/usr/bin/idle "${D}"/usr/bin/idle${PYVER}
+	mv "${D}"/usr/share/man/man1/python.1 \
+		"${D}"/usr/share/man/man1/python${PYVER}.1
+	rm -f "${D}"/usr/bin/smtpd.py
 
 	prep_ml_includes usr/include/python${PYVER}
 
@@ -203,7 +203,7 @@ src_install() {
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/$(get_libdir)/python${PYVER}/config
-	doins ${S}/Makefile.pre.in
+	doins "${S}"/Makefile.pre.in
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
@@ -212,8 +212,8 @@ src_install() {
 			/usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	if use examples ; then
-		mkdir -p ${D}/usr/share/doc/${P}/examples
-		cp -r ${S}/Tools ${D}/usr/share/doc/${P}/examples
+		mkdir -p "${D}"/usr/share/doc/${P}/examples
+		cp -r "${S}"/Tools "${D}"/usr/share/doc/${P}/examples
 	fi
 }
 
@@ -293,14 +293,14 @@ src_test() {
 	local skip_tests="cookielib distutils global hotshot mimetools minidom mmap posix sax strptime subprocess syntax tcl time urllib urllib2"
 
 	for test in ${skip_tests} ; do
-		mv ${S}/Lib/test/test_${test}.py ${T}
+		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
 	# rerun failed tests in verbose mode (regrtest -w)
 	EXTRATESTOPTS="-w" make test || die "make test failed"
 
 	for test in ${skip_tests} ; do
-		mv ${T}/test_${test}.py ${S}/Lib/test/test_${test}.py
+		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
 	elog "Portage skipped the following tests which aren't able to run from emerge:"

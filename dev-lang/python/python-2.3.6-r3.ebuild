@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r3.ebuild,v 1.9 2007/11/03 16:57:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r3.ebuild,v 1.10 2008/04/18 22:23:25 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -52,13 +52,13 @@ PROVIDE="virtual/python"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
 
 	# fix os.utime() on hppa. utimes it not supported but unfortunately
 	# reported as working - gmsoft (22 May 04)
-	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i "${S}"/configure
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}"
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
@@ -147,7 +147,7 @@ src_install() {
 
 	# install our own custom python-config
 	exeinto /usr/bin
-	newexe ${FILESDIR}/python-config-${PYVER} python-config
+	newexe "${FILESDIR}"/python-config-${PYVER} python-config
 
 	# The stuff below this line extends from 2.1, and should be deprecated
 	# in 2.3, or possibly can wait till 2.4
@@ -155,7 +155,7 @@ src_install() {
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/$(get_libdir)/python${PYVER}/config
-	doins ${S}/Makefile.pre.in
+	doins "${S}"/Makefile.pre.in
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
@@ -163,16 +163,16 @@ src_install() {
 	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	if use build ; then
-		rm -rf ${D}/usr/$(get_libdir)/python2.3/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf "${D}"/usr/$(get_libdir)/python2.3/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use elibc_uclibc && rm -rf ${D}/usr/$(get_libdir)/python2.3/{test,bsddb/test}
-		use berkdb || rm -rf ${D}/usr/$(get_libdir)/python2.3/bsddb
-		use tk || rm -rf ${D}/usr/$(get_libdir)/python2.3/lib-tk
+		use elibc_uclibc && rm -rf "${D}"/usr/$(get_libdir)/python2.3/{test,bsddb/test}
+		use berkdb || rm -rf "${D}"/usr/$(get_libdir)/python2.3/bsddb
+		use tk || rm -rf "${D}"/usr/$(get_libdir)/python2.3/lib-tk
 	fi
 
 	if use examples ; then
-		mkdir -p ${D}/usr/share/doc/${P}/examples
-		cp -r ${S}/Tools ${D}/usr/share/doc/${P}/examples
+		mkdir -p "${D}"/usr/share/doc/${P}/examples
+		cp -r "${S}"/Tools "${D}"/usr/share/doc/${P}/examples
 	fi
 }
 
@@ -224,13 +224,13 @@ src_test() {
 	local skip_tests="global mimetools mmap strptime subprocess tcl time urllib urllib2 zipimport"
 
 	for test in ${skip_tests} ; do
-		mv ${S}/Lib/test/test_${test}.py ${T}
+		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
 	make test || die "make test failed"
 
 	for test in ${skip_tests} ; do
-		mv ${T}/test_${test}.py ${S}/Lib/test/test_${test}.py
+		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
 	elog "Portage skipped the following tests which aren't able to run from emerge:"

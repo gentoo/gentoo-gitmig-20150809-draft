@@ -1,11 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.1-r3.ebuild,v 1.3 2007/11/03 16:57:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.2-r1.ebuild,v 1.1 2008/04/18 22:23:25 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
+
+EAPI=1
 
 inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs alternatives libtool
 
@@ -25,7 +27,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.5"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 sqlite doc nothreads examples elibc_uclibc"
+IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 sqlite doc +threads examples elibc_uclibc wininst"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
 #       do not conflict with the ones in python proper. - liquidx
@@ -39,7 +41,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		berkdb? ( >=sys-libs/db-3.1 )
 		gdbm? ( sys-libs/gdbm )
 		ssl? ( dev-libs/openssl )
-		doc? ( =dev-python/python-docs-${PV}* )
+		doc? ( dev-python/python-docs:2.5 )
 		dev-libs/expat
 	)"
 
@@ -64,7 +66,7 @@ src_unpack() {
 	if tc-is-cross-compiler ; then
 		[[ $(python -V 2>&1) != "Python ${PV}" ]] && \
 			die "Crosscompiling requires the same host and build versions."
-		epatch ${FILESDIR}/python-2.4.4-test-cross.patch
+		epatch "${FILESDIR}"/python-2.4.4-test-cross.patch
 	else
 		rm "${WORKDIR}/${PV}"/*_all_crosscompile.patch
 	fi
@@ -81,7 +83,12 @@ src_unpack() {
 
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
-	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i "${S}"/configure
+
+	if ! use wininst; then
+		# remove microsoft windows executables
+		rm Lib/distutils/command/wininst-*.exe
+	fi
 
 	eautoreconf
 }
@@ -92,10 +99,14 @@ src_configure() {
 		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses _curses_panel _tkinter _sqlite3"
 		export PYTHON_DISABLE_SSL=1
 	else
+		# dbm module can link to berkdb or gdbm -- defaults to gdbm when
+		# both are enabled, see #204343
+		use berkdb || use gdbm \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm"
 		use gdbm \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} gdbm"
 		use berkdb \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
 		use tk \
@@ -135,9 +146,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-unicode=ucs2" \
 		|| myconf="${myconf} --enable-unicode=ucs4"
 
-	use nothreads \
-		&& myconf="${myconf} --without-threads" \
-		|| myconf="${myconf} --with-threads"
+	use threads \
+		&& myconf="${myconf} --with-threads" \
+		|| myconf="${myconf} --without-threads"
 
 	src_configure
 
@@ -178,14 +189,14 @@ src_install() {
 	src_configure
 	make DESTDIR="${D}" altinstall maninstall || die
 
-	mv ${D}/usr/bin/python${PYVER}-config ${D}/usr/bin/python-config-${PYVER}
+	mv "${D}"/usr/bin/python${PYVER}-config "${D}"/usr/bin/python-config-${PYVER}
 
 	# Fix slotted collisions
-	mv ${D}/usr/bin/pydoc ${D}/usr/bin/pydoc${PYVER}
-	mv ${D}/usr/bin/idle ${D}/usr/bin/idle${PYVER}
-	mv ${D}/usr/share/man/man1/python.1 \
-		${D}/usr/share/man/man1/python${PYVER}.1
-	rm -f ${D}/usr/bin/smtpd.py
+	mv "${D}"/usr/bin/pydoc "${D}"/usr/bin/pydoc${PYVER}
+	mv "${D}"/usr/bin/idle "${D}"/usr/bin/idle${PYVER}
+	mv "${D}"/usr/share/man/man1/python.1 \
+		"${D}"/usr/share/man/man1/python${PYVER}.1
+	rm -f "${D}"/usr/bin/smtpd.py
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
@@ -194,11 +205,11 @@ src_install() {
 			/usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	if use build ; then
-		rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use elibc_uclibc && rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
-		use berkdb || rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/bsddb
-		use tk || rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/lib-tk
+		use elibc_uclibc && rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
+		use berkdb || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/bsddb
+		use tk || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/lib-tk
 	fi
 
 	prep_ml_includes usr/include/python${PYVER}
@@ -209,12 +220,15 @@ src_install() {
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/$(get_libdir)/python${PYVER}/config
-	doins ${S}/Makefile.pre.in
+	doins "${S}"/Makefile.pre.in
 
 	if use examples ; then
-		mkdir -p ${D}/usr/share/doc/${P}/examples
-		cp -r ${S}/Tools ${D}/usr/share/doc/${P}/examples
+		mkdir -p "${D}"/usr/share/doc/${P}/examples
+		cp -r "${S}"/Tools "${D}"/usr/share/doc/${P}/examples
 	fi
+
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
 }
 
 pkg_postrm() {
@@ -295,14 +309,14 @@ src_test() {
 	local skip_tests="distutils global mimetools minidom mmap posix pyexpat sax strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
 
 	for test in ${skip_tests} ; do
-		mv ${S}/Lib/test/test_${test}.py ${T}
+		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
 	# rerun failed tests in verbose mode (regrtest -w)
 	EXTRATESTOPTS="-w" make test || die "make test failed"
 
 	for test in ${skip_tests} ; do
-		mv ${T}/test_${test}.py ${S}/Lib/test/test_${test}.py
+		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
 	elog "Portage skipped the following tests which aren't able to run from emerge:"
