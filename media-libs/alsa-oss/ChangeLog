@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-oss
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.102 2007/10/22 20:36:40 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.103 2008/04/18 18:42:37 fmccor Exp $
+
+  18 Apr 2008; Ferris McCormick <fmccor@gentoo.org> alsa-oss-1.0.15.ebuild:
+  Sparc stable, Bug #217075.
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> alsa-oss-1.0.14.ebuild:
   alpha/ia64 stable wrt #189155
