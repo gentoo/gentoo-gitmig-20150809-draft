@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.26 2008/02/29 19:05:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.27 2008/04/18 18:39:08 mr_bones_ Exp $
+
+*stella-2.5.1 (18 Apr 2008)
+
+  18 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> +stella-2.5.1.ebuild:
+  version bump
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> stella-2.2.ebuild,
   stella-2.4.2.ebuild:
