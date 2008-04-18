@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.307 2008/03/11 16:01:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.308 2008/04/18 14:26:25 hawking Exp $
+
+*python-2.5.2 (18 Apr 2008)
+*python-2.4.4-r10 (18 Apr 2008)
+*python-2.3.6-r5 (18 Apr 2008)
+
+  18 Apr 2008; Ali Polatel <hawking@gentoo.org> +python-2.3.6-r5.ebuild,
+  +python-2.4.4-r10.ebuild, +python-2.5.2.ebuild:
+  Version bumps. Updated patchsets to fix buffer overflow in zlib extension
+  (CVE-2008-1721) bug 217221 and unsafe PyString_FromStringAndSize(). Added
+  patch by Mark Peloquin for distutils to respect CXXFLAGS, bug 145206. Add
+  wininst USE flag to conditionally install MS Windows executables, bug
+  198021. Use EAPI=1, rename nothreads and nocxx USE flags to threads and
+  cxx.
 
   11 Mar 2008; Markus Rothe <corsair@gentoo.org> python-2.4.4-r9.ebuild:
   Stable on ppc64; bug #211281
