@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.16 2008/04/18 12:16:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.17 2008/04/18 17:11:56 nixnut Exp $
+
+  18 Apr 2008; nixnut <nixnut@gentoo.org> pcalc-1.2.ebuild:
+  Stable on ppc wrt bug 218192
 
   18 Apr 2008; Ferris McCormick <fmccor@gentoo.org> pcalc-1.2.ebuild:
   Sparc stable, Bug #218192.
