@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.13 2007/08/02 15:55:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.14 2008/04/18 11:00:43 chtekk Exp $
 
-inherit eutils confutils
+inherit eutils confutils flag-o-matic
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
@@ -13,16 +13,16 @@ SRC_URI="ftp://ftp.pureftpd.org/pub/${PN}/releases/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 
-IUSE="caps charconv ldap mysql noiplog pam paranoidmsg postgres selinux ssl vchroot xinetd"
+IUSE="anondel anonperm anonren anonres caps charconv ldap mysql noiplog pam paranoidmsg postgres selinux ssl vchroot xinetd"
 
 DEPEND="caps? ( sys-libs/libcap )
 		charconv? ( virtual/libiconv )
 		ldap? ( >=net-nds/openldap-2.0.25 )
 		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-7.2.2 )
+		postgres? ( dev-db/postgresql )
 		ssl? ( >=dev-libs/openssl-0.9.6g )
-		xinetd? ( sys-apps/xinetd )"
+		xinetd? ( virtual/inetd )"
 
 RDEPEND="${DEPEND}
 		net-ftp/ftpbase
@@ -58,6 +58,12 @@ src_compile() {
 	# noiplog is a negative flag, we don't want that enabled by default,
 	# so we handle it manually, as confutils can't do that
 	use noiplog && my_conf="${my_conf} --without-iplogging"
+
+	# Those features are only configurable like this, see bug #179375.
+	use anondel && append-cppflags -DANON_CAN_DELETE
+	use anonperm && append-cppflags -DANON_CAN_CHANGE_PERMS
+	use anonren && append-cppflags -DANON_CAN_RENAME
+	use anonres && append-cppflags -DANON_CAN_RESUME
 
 	econf \
 		--with-altlog \
