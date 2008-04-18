@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.91 2008/04/10 19:45:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.92 2008/04/18 02:10:25 vapier Exp $
+
+  18 Apr 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/NVIDIA_kernel-169.12-2286310.diff, nvidia-drivers-169.12.ebuild:
+  Add fix from upstream for building with linux-2.6.25 #218178.
 
   10 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-169.09-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.12.ebuild,v 1.1 2008/02/28 15:35:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.12.ebuild,v 1.2 2008/04/18 02:10:25 vapier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -206,6 +206,8 @@ src_unpack() {
 	# allow on board sensors to work with lm_sensors
 	if use kernel_linux; then
 		epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
+
+		kernel_is ge 2 6 25 && epatch "${FILESDIR}"/NVIDIA_kernel-169.12-2286310.diff
 	fi
 
 	if use kernel_linux; then
