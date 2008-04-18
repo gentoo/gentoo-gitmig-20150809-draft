@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.13 2008/04/18 00:33:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.14 2008/04/18 03:03:51 jer Exp $
+
+  18 Apr 2008; Jeroen Roovers <jer@gentoo.org> pcalc-1.2.ebuild:
+  Stable for HPPA (bug #218192).
 
 *pcalc-1.3 (18 Apr 2008)
 
