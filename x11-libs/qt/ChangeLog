@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.534 2008/04/18 11:00:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.535 2008/04/18 22:52:42 maekke Exp $
+
+  18 Apr 2008; Markus Meier <maekke@gentoo.org> qt-4.3.3.ebuild:
+  amd64 stable, bug #217529
 
   18 Apr 2008; Raúl Porcel <armin76@gentoo.org> qt-4.3.3.ebuild:
   x86 stable wrt #217529
