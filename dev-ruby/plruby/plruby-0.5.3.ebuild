@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/plruby-0.5.3.ebuild,v 1.1 2008/03/14 13:35:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/plruby-0.5.3.ebuild,v 1.2 2008/04/18 13:06:36 caleb Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://moulon.inra.fr/pub/ruby/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8
