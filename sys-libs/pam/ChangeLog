@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.210 2008/04/14 14:01:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.211 2008/04/18 04:18:59 flameeyes Exp $
+
+*pam-1.0.1 (18 Apr 2008)
+
+  18 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -files/Linux-PAM-1.0.0-set-item.patch, -pam-0.99.9.0-r1.ebuild,
+  -pam-0.99.10.0.ebuild, -pam-1.0.0-r1.ebuild, -pam-1.0.0-r2.ebuild,
+  +pam-1.0.1.ebuild:
+  Version bump, no functional changes but I can do some spring cleaning, and
+  it has sr locale support.
 
   14 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.0-r2.ebuild:
   Re-add ~ppc, that was added after I copied the ebuild to -r2.

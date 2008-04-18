@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0-r1.ebuild,v 1.3 2008/03/05 17:55:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.1.ebuild,v 1.1 2008/04/18 04:18:59 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit libtool multilib eutils autotools pam toolchain-funcs
+inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
@@ -13,11 +13,11 @@ MY_P="${MY_PN}-${PV}"
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Linux-PAM (Pluggable Authentication Modules)"
 
-SRC_URI="mirror://kernel/linux/libs/pam/pre/library/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/libs/pam/library/${MY_P}.tar.bz2"
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~hppa ~sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="cracklib nls elibc_FreeBSD selinux vim-syntax audit test elibc_glibc"
 
 RDEPEND="nls? ( virtual/libintl )
@@ -115,6 +115,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	# Workarounds autoconf 2.62 bug, libintl.h is included before
+	# _GNU_SOURCE is defined in config.h. See bug #217154
+	append-flags -D_GNU_SOURCE
+
 	if use hppa || use elibc_FreeBSD; then
 		myconf="${myconf} --disable-pie"
 	fi
@@ -133,11 +137,12 @@ src_compile() {
 		--enable-docdir=/usr/share/doc/${PF} \
 		--disable-regenerate-man \
 		${myconf} || die "econf failed"
-	emake || die "emake failed"
+	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install \
+		 sepermitlockdir="/var/run/sepermit" || die "make install failed"
 
 	# Need to be suid
 	fperms u+s /sbin/unix_chkpwd
@@ -148,15 +153,17 @@ src_install() {
 	mv "${D}/usr/$(get_libdir)/libpam_misc.so"* "${D}/$(get_libdir)/"
 	gen_usr_ldscript libpam.so libpamc.so libpam_misc.so
 
-	# No, we don't really need .la files for PAM modules.
-	rm -f "${D}/$(get_libdir)/security/"*.la
-
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright
 	docinto modules ; dodoc doc/txts/README.*
 
 	# Remove the wrongly installed manpages
 	rm "${D}"/usr/share/man/man8/pam_userdb.8*
 	use cracklib || rm "${D}"/usr/share/man/man8/pam_cracklib.8*
+
+	# Get rid of the .la files. We certainly don't need them for PAM
+	# modules, and libpam is installed as a shared object only, so we
+	# don't ned them for static linking either.
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_preinst() {
