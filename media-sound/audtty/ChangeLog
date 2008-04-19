@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.16 2008/04/12 10:47:00 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.17 2008/04/19 14:18:36 drac Exp $
+
+  19 Apr 2008; Samuli Suominen <drac@gentoo.org> audtty-0.1.7.ebuild,
+  audtty-0.1.8.ebuild:
+  Check for USE dbus in audacious wrt #216888, comment #3.
 
   12 Apr 2008; Dawid Węgliński <cla@gentoo.org> audtty-0.1.7.ebuild:
   Stable on x86 (bug #216888)

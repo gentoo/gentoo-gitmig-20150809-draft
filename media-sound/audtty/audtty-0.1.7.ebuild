@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.7.ebuild,v 1.4 2008/04/12 10:47:00 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.7.ebuild,v 1.5 2008/04/19 14:18:36 drac Exp $
 
 DESCRIPTION="Control Audacious from the command line with a friendly ncurses interface"
 HOMEPAGE="http://audtty.alioth.debian.org"
@@ -15,6 +15,14 @@ RDEPEND="sys-libs/ncurses
 	>=media-sound/audacious-1.4.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	if has_version "=media-sound/audacious-1.4*"; then
+		if ! built_with_use media-sound/audacious dbus; then
+			die "Re-emerge media-sound/audacious with USE dbus."
+		fi
+	fi
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."

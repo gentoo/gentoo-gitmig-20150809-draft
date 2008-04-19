@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.8.ebuild,v 1.1 2008/04/11 11:29:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.8.ebuild,v 1.2 2008/04/19 14:18:36 drac Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -17,6 +17,14 @@ RDEPEND="sys-libs/ncurses
 	>=media-sound/audacious-1.4.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	if has_version "=media-sound/audacious-1.4*"; then
+		if ! built_with_use media-sound/audacious dbus; then
+			die "Re-emerge media-sound/audacious with USE dbus."
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
