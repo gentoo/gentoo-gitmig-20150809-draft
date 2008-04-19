@@ -1,0 +1,42 @@
+diff -ur icns2png.orig/Makefile icns2png/Makefile
+--- icns2png.orig/Makefile	2008-02-13 11:44:39.000000000 +0200
++++ icns2png/Makefile	2008-04-19 14:17:02.000000000 +0300
+@@ -24,10 +24,10 @@
+ # where make install puts icns2png
+ prefix=/usr/local
+ 
+-CFLAGS+=-Wall -g
+-LDFLAGS+=-lpng12 -lz -lm
++CFLAGS+=-Wall
++LIBS=-lpng12 -lz -lm
+ 
+-CC=gcc
++CC?=gcc
+ 
+ OBJS = icns2png.o iconvert.o pngwriter.o byteswap.o
+ 
+@@ -42,8 +42,9 @@
+ 	fi; cd ..;
+ 
+ install: icns2png
+-	install -m 755 icns2png $(prefix)/bin
+-	install -m 755 icontainer2icns $(prefix)/bin
++	mkdir -p $(DESTDIR)$(prefix)/bin
++	install -m 755 icns2png $(DESTDIR)$(prefix)/bin
++	install -m 755 icontainer2icns $(DESTDIR)$(prefix)/bin
+ 	
+ release: icns2png test
+ 	@mkdir -p icns2png-$(version); \
+@@ -56,10 +57,10 @@
+ 	rm -f #.o;
+ 
+ icns2png: $(OBJS)
+-	$(CC) -o icns2png $(CFLAGS) $(OBJS) $(LDFLAGS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o icns2png
+ 
+ icontainer2icns:
+-	$(CC) -o icontainer2icns icontainer2icns.c 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o icontainer2icns icontainer2icns.c 
+ 
+ clean:
+ 	rm -f *.o icns2png icontainer2icns
