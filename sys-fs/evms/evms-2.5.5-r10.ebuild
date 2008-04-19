@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.8 2008/03/01 18:33:27 angelos Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.9 2008/04/19 23:10:39 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs autotools linux-info
 
@@ -24,15 +21,13 @@ RDEPEND="virtual/libc
 	sys-fs/e2fsprogs
 	sys-fs/device-mapper
 	>=sys-apps/baselayout-1.9.4-r6
-	gtk? ( =x11-libs/gtk+-1*
-		=dev-libs/glib-1*
-		dev-util/pkgconfig )
+	gtk? ( =x11-libs/gtk+-1* =dev-libs/glib-1* )
 	hb? ( !hb2? ( =sys-cluster/heartbeat-1* ) )
 	hb2? ( >=sys-cluster/heartbeat-2 )
-	ncurses? ( sys-libs/ncurses
-		>=dev-libs/glib-2.12.4-r1
-		dev-util/pkgconfig )"
-DEPEND="${RDEPEND}"
+	ncurses? ( sys-libs/ncurses >=dev-libs/glib-2.12.4-r1 )"
+DEPEND="${RDEPEND}
+	gtk? ( dev-util/pkgconfig )
+	ncurses? ( dev-util/pkgconfig )"
 
 # While the test-concept holds, many of them fail due to unknown reasons.
 # Since upstream is almost dead, we have to ignore that for now.
