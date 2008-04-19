@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/ctorrent
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.35 2007/12/17 20:04:43 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.36 2008/04/19 17:20:49 armin76 Exp $
+
+*ctorrent-3.3 (19 Apr 2008)
+
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org> -files/as-needed.patch,
+  +ctorrent-3.3.ebuild:
+  Version bump
 
 *ctorrent-3.2-r1 (17 Dec 2007)
 
