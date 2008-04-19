@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.10 2008/03/12 20:10:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.11 2008/04/19 17:07:55 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -26,8 +26,7 @@ RDEPEND="${DEPEND}
 	libnotify? ( dev-python/notify-python )"
 
 pkg_setup() {
-	if has_version "<dev-libs/boost-1.34" && \
-		! built_with_use "dev-libs/boost" threads; then
+	if ! built_with_use --missing true "dev-libs/boost" threads; then
 		eerror "dev-libs/boost has to be built with threads USE-flag."
 		die "Missing threads USE-flag for dev-libs/boost"
 	fi
