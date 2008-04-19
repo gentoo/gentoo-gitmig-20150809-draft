@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.11 2008/03/06 20:04:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.12 2008/04/19 23:09:01 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ia64 -mips ~ppc ~ppc64 -s390 sparc ~x86"
 IUSE="ldirectord doc snmp management"
 
-DEPEND="
+RDEPEND="
 	=dev-libs/glib-2*
 	net-libs/libnet
-	dev-util/pkgconfig
 	>=dev-lang/perl-5.8.8
 	net-misc/iputils
 	virtual/ssh
@@ -42,6 +41,8 @@ DEPEND="
 		>=sys-libs/pam-0.78-r3
 	)
 	"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

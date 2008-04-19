@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.74 2008/03/06 20:04:24 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.75 2008/04/19 23:09:01 vapier Exp $
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> heartbeat-2.0.7-r2.ebuild,
+  heartbeat-2.0.8.ebuild:
+  pkgconfig only goes in DEPEND #217278.
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   heartbeat-1.2.5.ebuild, heartbeat-1.2.5-r1.ebuild,
