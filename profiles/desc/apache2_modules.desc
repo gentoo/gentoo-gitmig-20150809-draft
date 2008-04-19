@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/apache2_modules.desc,v 1.1 2007/11/28 07:50:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/apache2_modules.desc,v 1.2 2008/04/19 09:03:12 hollow Exp $
 
 # This file contains descriptions of APACHE2_MODULES USE_EXPAND flags.
 
@@ -61,6 +61,7 @@ rewrite - Provides a rule-based rewriting engine to rewrite requested URLs on th
 setenvif - Allows the setting of environment variables based on characteristics of the request
 speling - Attempts to correct mistaken URLs that users might have entered by ignoring capitalization and by allowing up to one misspelling
 status - Provides information on server activity and performance
+substitute - Perform search and replace operations on response bodies
 unique_id - Provides an environment variable with a unique identifier for each request
 userdir - User-specific directories
 usertrack - Clickstream logging of user activity on a site
