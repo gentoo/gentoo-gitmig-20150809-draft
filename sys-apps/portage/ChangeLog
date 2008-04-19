@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.508 2008/04/16 01:46:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.509 2008/04/19 14:24:40 zmedico Exp $
+
+*portage-2.1.5_rc5 (19 Apr 2008)
+
+  19 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc5.ebuild:
+  2.1.5_rc5 bump. This fixes bug #217905 (broken evaluation of conditionals
+  in SRC_URI), bug #218202 (unwanted spinner output with --nodeps), and
+  also fixes spurious permission adjustments from bug #162542. Bug #216231
+  tracks all bugs fixed since 2.1.4.x.
 
 *portage-2.1.5_rc4 (15 Apr 2008)
 
