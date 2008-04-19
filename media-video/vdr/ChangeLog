@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.110 2008/04/15 19:18:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.111 2008/04/19 14:08:06 zzam Exp $
+
+  19 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-1.6.0_p1-ext-changes.diff, vdr-1.6.0_p1.ebuild:
+  Updated to extensions-patch version 59. Added back keywords as this should
+  make it work completely again.
 
 *vdr-1.6.0_p1 (15 Apr 2008)
 

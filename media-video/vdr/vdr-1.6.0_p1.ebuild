@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p1.ebuild,v 1.2 2008/04/15 19:18:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p1.ebuild,v 1.3 2008/04/19 14:08:06 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -19,10 +19,10 @@ MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
-EXT_V="58"
+EXT_V="59"
 EXT_P=VDR-Extensions-Patch-${EXT_V}
 EXT_DIR=${WORKDIR}/${EXT_P}/
-EXT_VDR_PV="${MY_PV}"
+EXT_VDR_PV="${PV/_p/-}"
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
@@ -30,7 +30,7 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/${MY_P}.tar.bz2
 	ftp://ftp.cadsoft.de/vdr/Developer/${MY_P}-1.diff
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -202,8 +202,6 @@ src_unpack() {
 		-e 's/ install-plugins//'
 
 	if ! use vanilla; then
-		cd "${EXT_DIR}"
-		epatch "${FILESDIR}/${P}-ext-changes.diff"
 
 		cd "${S}"
 		# Now apply extensions patch
@@ -326,10 +324,11 @@ src_install() {
 	doins "${CAP_FILE}"
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
+		local SOURCES_DEST="${VDRSOURCE_DIR}/${P/_p/-}"
 		einfo "Installing sources"
-		insinto "${VDRSOURCE_DIR}/${P}"
+		insinto "${SOURCES_DEST}"
 		doins -r "${T}"/source-tree/*
-		keepdir "${VDRSOURCE_DIR}/${P}"/PLUGINS/lib
+		keepdir "${SOURCES_DEST}"/PLUGINS/lib
 	fi
 
 	if use setup; then
