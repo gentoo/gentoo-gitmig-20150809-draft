@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmblob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.13 2008/04/19 11:20:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.14 2008/04/19 14:23:59 nixnut Exp $
+
+  19 Apr 2008; nixnut <nixnut@gentoo.org> wmblob-1.0.3.ebuild:
+  Stable on ppc wrt bug 217802
 
   19 Apr 2008; Samuli Suominen <drac@gentoo.org> wmblob-1.0.3.ebuild:
   amd64 stable wrt #217802
