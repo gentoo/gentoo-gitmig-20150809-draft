@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.12.ebuild,v 1.8 2008/04/19 16:04:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.12.ebuild,v 1.9 2008/04/19 17:03:46 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -88,7 +88,7 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if ! built_with_use x11-libs/pango X; then
+	if ! built_with_use --missing true x11-libs/pango X; then
 		eerror "Pango is not built with X useflag."
 		eerror "Please add 'X' to your USE flags, and re-emerge pango."
 		die "Pango needs X"
