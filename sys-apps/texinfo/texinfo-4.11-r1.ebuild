@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.11-r1.ebuild,v 1.11 2008/04/19 06:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.11-r1.ebuild,v 1.12 2008/04/19 06:57:14 vapier Exp $
 
 inherit flag-o-matic
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-dir-entry.patch #198545
 	epatch "${FILESDIR}"/${P}-test-tex.patch #195313
 	epatch "${FILESDIR}"/${P}-test.patch #215359
+	epatch "${FILESDIR}"/${P}-parallel-build.patch #214127
 
 	# FreeBSD requires install-sh, but usptream don't have it marked
 	# exec, #195076
