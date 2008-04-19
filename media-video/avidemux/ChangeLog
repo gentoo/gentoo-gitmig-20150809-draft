@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.127 2008/04/10 23:28:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.128 2008/04/19 19:27:49 yngwin Exp $
+
+  19 Apr 2008; Ben de Groot <yngwin@gentoo.org> avidemux-2.4.ebuild,
+  avidemux-2.4.1.ebuild:
+  Adjusting qt:4 dep
 
   10 Apr 2008; Ben de Groot <yngwin@gentoo.org> avidemux-2.4.ebuild,
   avidemux-2.4.1.ebuild:
