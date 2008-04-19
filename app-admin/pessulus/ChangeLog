@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.50 2008/04/17 18:31:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.51 2008/04/19 15:20:05 corsair Exp $
+
+  19 Apr 2008; Markus Rothe <corsair@gentoo.org> pessulus-2.16.4.ebuild:
+  Stable on ppc64; bug #218021
 
   17 Apr 2008; nixnut <nixnut@gentoo.org> pessulus-2.16.4.ebuild:
   Stable on ppc wrt bug 218021

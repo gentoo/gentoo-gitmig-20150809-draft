@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.4.ebuild,v 1.4 2008/04/17 18:31:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.4.ebuild,v 1.5 2008/04/19 15:20:05 corsair Exp $
 
 inherit gnome2 multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Pessulus"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-python/pygtk-2.6.0
