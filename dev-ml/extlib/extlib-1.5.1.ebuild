@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.1.ebuild,v 1.2 2008/01/27 12:19:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.1.ebuild,v 1.3 2008/04/19 14:50:36 nixnut Exp $
 
 inherit findlib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ocaml-extlib.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 DEPEND=">=dev-lang/ocaml-3.07"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc +ocamlopt"
 
 pkg_setup() {
