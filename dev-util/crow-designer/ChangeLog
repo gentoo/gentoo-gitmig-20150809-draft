@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.8 2008/01/18 14:34:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.9 2008/04/19 20:05:08 pva Exp $
+
+*crow-designer-2.11.3 (19 Apr 2008)
+
+  19 Apr 2008; Peter Volkov <pva@gentoo.org> +crow-designer-2.11.3.ebuild:
+  Version bump.
 
   18 Jan 2008; <pva@gentoo.org> -crow-designer-2.11.1.ebuild,
   crow-designer-2.11.2.ebuild:
