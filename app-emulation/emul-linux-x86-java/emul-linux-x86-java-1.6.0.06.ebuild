@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.06.ebuild,v 1.1 2008/04/19 11:38:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.06.ebuild,v 1.2 2008/04/19 15:03:51 caster Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -84,6 +84,7 @@ src_install() {
 #	domenu ${T}/sun_java-${SLOT}.desktop
 
 	set_java_env
+	java-vm_revdep-mask
 }
 
 pkg_postinst() {
