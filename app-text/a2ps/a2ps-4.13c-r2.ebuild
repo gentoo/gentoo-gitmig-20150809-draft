@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.8 2007/01/05 07:22:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.9 2008/04/19 02:47:49 ricmm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="nls tetex cjk vanilla"
 
 DEPEND=">=sys-devel/automake-1.6
