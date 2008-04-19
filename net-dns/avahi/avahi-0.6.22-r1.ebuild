@@ -1,11 +1,12 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.2 2008/04/11 19:16:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.3 2008/04/19 19:52:35 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
+EAPI="1"
 
-inherit eutils mono python qt3 qt4 multilib autotools
+inherit eutils mono python multilib autotools
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -20,8 +21,13 @@ RDEPEND=">=dev-libs/libdaemon-0.11-r1
 	dev-libs/expat
 	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
-	qt3? ( $(qt_min_version 3.3.6-r2) )
-	qt4? ( $(qt4_min_version 4) )
+	qt3? ( x11-libs/qt:3 )
+	qt4? (
+		|| (
+			x11-libs/qt-core:4
+			x11-libs/qt:4
+		)
+	)
 	gtk? (
 		>=x11-libs/gtk+-2.4.0
 		>=gnome-base/libglade-2.4.0
@@ -170,6 +176,9 @@ src_install() {
 	then
 		insinto /$(get_libdir)/rcscripts/net
 		doins "${FILESDIR}"/autoipd.sh
+
+		insinto /$(get_libdir)/rc/net
+		newins "${FILESDIR}"/autoipd-openrc.sh autoipd.sh
 	fi
 
 	dodoc docs/{AUTHORS,README,TODO}
