@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/openvas-client
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.1 2008/02/08 13:16:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.2 2008/04/19 22:54:51 hanno Exp $
+
+*openvas-client-1.0.3 (19 Apr 2008)
+
+  19 Apr 2008; Hanno Boeck <hanno@gentoo.org> +openvas-client-1.0.3.ebuild:
+  Version bump.
 
 *openvas-client-1.0.2 (08 Feb 2008)
 
