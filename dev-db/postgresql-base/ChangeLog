@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.1 2008/04/15 09:23:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.2 2008/04/19 20:40:42 dev-zero Exp $
+
+  19 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postgresql-base-8.2.7.ebuild, postgresql-base-8.3.1.ebuild:
+  Removed libedit USE-flag since I experienced memory leaks when having psql
+  linked against libedit.
 
 *postgresql-base-8.3.1 (15 Apr 2008)
 *postgresql-base-8.2.7 (15 Apr 2008)

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.1.ebuild,v 1.1 2008/04/15 09:23:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.1.ebuild,v 1.2 2008/04/19 20:40:42 dev-zero Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ IUSE_LINGUAS="
 	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
 	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="doc kerberos libedit nls pam pg-intdatetime readline ssl threads zlib ldap ${IUSE_LINGUAS}"
+IUSE="doc kerberos nls pam pg-intdatetime readline ssl threads zlib ldap ${IUSE_LINGUAS}"
 RESTRICT="test"
 
 wanted_languages() {
@@ -32,8 +32,7 @@ wanted_languages() {
 
 RDEPEND="kerberos? ( virtual/krb5 )
 	pam? ( virtual/pam )
-	readline? ( !libedit? ( >=sys-libs/readline-4.1 ) )
-	libedit? ( dev-libs/libedit )
+	readline? ( >=sys-libs/readline-4.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	>=app-admin/eselect-postgresql-0.3
@@ -48,14 +47,6 @@ DEPEND="${RDEPEND}
 PDEPEND="doc? ( dev-db/postgresql-docs:${SLOT} )"
 
 S="${WORKDIR}/postgresql-${PV}"
-
-pkg_setup() {
-	if use readline && use libedit ; then
-		ewarn "PostgreSQL can use libedit OR readline but not both, libedit"
-		ewarn "will be used. If that is not what you want, please stop the"
-		ewarn "merge and unset the 'libedit' USE-flag for ${PN}."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -75,13 +66,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	if use readline || use libedit ; then
-		myconf="${myconf} --with-readline $(use_with libedit libedit-preferred)"
-	else
-		myconf="${myconf} --without-readline"
-	fi
-
 	econf --prefix=/usr/$(get_libdir)/postgresql-${SLOT} \
 		--datadir=/usr/share/postgresql-${SLOT} \
 		--sysconfdir=/etc/postgresql-${SLOT} \
@@ -93,6 +77,8 @@ src_compile() {
 		--without-tcl \
 		--without-perl \
 		--without-python \
+		--without-libedit \
+		$(use_with readline) \
 		$(use_with kerberos krb5) \
 		$(use_with kerberos gssapi) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
