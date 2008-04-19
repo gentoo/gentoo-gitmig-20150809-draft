@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.2.ebuild,v 1.4 2008/04/18 16:40:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.2.ebuild,v 1.5 2008/04/19 15:26:16 corsair Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86"
 
 IUSE="gnome perl python"
 # bonobo guile libgda mono (experimental)
