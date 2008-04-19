@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gpm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.64 2007/12/25 04:07:06 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.65 2008/04/19 08:23:23 vapier Exp $
+
+*gpm-1.20.3 (19 Apr 2008)
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> +gpm-1.20.3.ebuild:
+  Version bump #215455 by Hanno Meyer-Thurow.
 
   25 Dec 2007; Brent Baude <ranger@gentoo.org> gpm-1.20.1-r6.ebuild:
   Marking gpm-1.20.1-r6 ppc64 for bug 202853
