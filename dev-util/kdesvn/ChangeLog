@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.35 2008/01/19 19:34:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.36 2008/04/19 11:59:24 ingmar Exp $
+
+  19 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdesvn-0.14.1.ebuild:
+  Inherit qt3.eclass to keep sandbox happy, bug 218393.
 
   19 Jan 2008; George Shapovalov <george@gentoo.org>
   +files/kdesvn-0.14.1-as-needed.patch, kdesvn-0.14.1.ebuild:

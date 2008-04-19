@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.2 2008/01/19 19:34:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.3 2008/04/19 11:59:24 ingmar Exp $
 
-inherit base eutils versionator toolchain-funcs kde-functions
+inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
 My_PV=$(get_version_component_range 1-2)
 
