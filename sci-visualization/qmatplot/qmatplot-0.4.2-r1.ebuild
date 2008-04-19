@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.1 2006/01/29 20:13:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.2 2008/04/19 13:58:31 markusle Exp $
 
 inherit eutils
 
@@ -19,9 +19,10 @@ DEPEND="=x11-libs/qt-3*
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.patch
 }
 
 src_compile() {
@@ -31,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	make QSETTINGSDIR="${D}/${QTDIR}/etc/settings/" DESTDIR="${D}" install || die "install failed"
+	make QSETTINGSDIR="${QTDIR}/etc/settings/" DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog AUTHORS
 }

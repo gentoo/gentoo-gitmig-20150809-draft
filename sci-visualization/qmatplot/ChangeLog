@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/qmatplot
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/ChangeLog,v 1.3 2007/02/22 01:10:59 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/ChangeLog,v 1.4 2008/04/19 13:58:31 markusle Exp $
+
+  19 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/qmatplot-0.4.2-gcc-4.patch, qmatplot-0.4.2-r1.ebuild:
+  Added patch to make package compile again including gcc-4.3 (fixes 
+  bug #205223). Thanks much to Martin Väth 
+  <vaeth@mathematik.uni-wuerzburg.de> for his patches.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

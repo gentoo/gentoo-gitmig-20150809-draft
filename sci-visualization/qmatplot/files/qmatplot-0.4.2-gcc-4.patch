@@ -1,0 +1,210 @@
+diff -Naur qmatplot-0.4.2/src/dialogs/ksexportpicturedlg.cpp qmatplot-0.4.2.new/src/dialogs/ksexportpicturedlg.cpp
+--- qmatplot-0.4.2/src/dialogs/ksexportpicturedlg.cpp	2003-03-19 14:07:44.000000000 -0500
++++ qmatplot-0.4.2.new/src/dialogs/ksexportpicturedlg.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -36,6 +36,7 @@
+ #include <qfile.h>
+ #include <qpainter.h>
+ #include <cstdio> // tmpfile
++#include <cstdlib>
+ 
+ QString KSExportPictureDlg::m_file_name;
+ int KSExportPictureDlg::m_file_format = 0;
+diff -Naur qmatplot-0.4.2/src/dialogs/kswizarddlgs.h qmatplot-0.4.2.new/src/dialogs/kswizarddlgs.h
+--- qmatplot-0.4.2/src/dialogs/kswizarddlgs.h	2003-03-11 07:07:47.000000000 -0500
++++ qmatplot-0.4.2.new/src/dialogs/kswizarddlgs.h	2008-04-19 09:35:36.000000000 -0400
+@@ -31,7 +31,7 @@
+  {
+   Q_OBJECT
+   public:
+-     KSWizardDlgSurface( QWidget *parent, KSWorkbook *workbook, KSSheet *sheet, QSAxes *parent, bool surface = true );
++     KSWizardDlgSurface( QWidget *parent, KSWorkbook *workbook, KSSheet *sheet, QSAxes *parentx, bool surface = true );
+     ~KSWizardDlgSurface();
+ 
+   public slots:
+diff -Naur qmatplot-0.4.2/src/formula/mpformula.h qmatplot-0.4.2.new/src/formula/mpformula.h
+--- qmatplot-0.4.2/src/formula/mpformula.h	2003-03-11 07:07:48.000000000 -0500
++++ qmatplot-0.4.2.new/src/formula/mpformula.h	2008-04-19 09:35:36.000000000 -0400
+@@ -42,6 +42,7 @@
+   * MPSymbol *QSFormula::parse( const QString& formula, MPError& error, FactoryList *locals )
+   * @author Kamil
+   */
++int yyparse( void *formula_ptr );
+ class MPFormula {
+ 	friend int yylex( MPParserSymbol *symbol_value, void *location_info_ptr, void *formula_ptr );
+ 	friend void yyerr(  const char *message, void *location_info_ptr, void *formula_ptr );
+diff -Naur qmatplot-0.4.2/src/formula/mpparser.cpp qmatplot-0.4.2.new/src/formula/mpparser.cpp
+--- qmatplot-0.4.2/src/formula/mpparser.cpp	2003-03-11 07:07:48.000000000 -0500
++++ qmatplot-0.4.2.new/src/formula/mpparser.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -26,6 +26,7 @@
+ #include"mpsymbols.h"
+ #include <cmath>
+ #include <cstdio>
++#include <cstdlib>
+ 
+ void yyerr(  const char *message, void *location_info_ptr, void *formula_ptr );
+ int yylex( YYSTYPE *symbol_value, void *location_info_ptr, void *formula_ptr );
+diff -Naur qmatplot-0.4.2/src/formula/mpsymbol.cpp qmatplot-0.4.2.new/src/formula/mpsymbol.cpp
+--- qmatplot-0.4.2/src/formula/mpsymbol.cpp	2003-03-11 07:07:48.000000000 -0500
++++ qmatplot-0.4.2.new/src/formula/mpsymbol.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -17,6 +17,8 @@
+ 
+ #include"mpsymbol.h"
+ #include <string>
++#include <cstring>
++#include <cstdlib>
+ 
+ //--------------------------------------------------------------------------//
+ 
+diff -Naur qmatplot-0.4.2/src/ksmatrixeditor.cpp qmatplot-0.4.2.new/src/ksmatrixeditor.cpp
+--- qmatplot-0.4.2/src/ksmatrixeditor.cpp	2003-03-11 07:07:48.000000000 -0500
++++ qmatplot-0.4.2.new/src/ksmatrixeditor.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -35,7 +35,8 @@
+ #include <qmessagebox.h>
+ #include <qpainter.h>
+ #include <qcursor.h>
+-
++#include <cstdlib>
++#include <climits>
+ 
+ //--------------------------------------------------------------------//
+ //--------------------------------------------------------------------//
+diff -Naur qmatplot-0.4.2/src/kssocketio.cpp qmatplot-0.4.2.new/src/kssocketio.cpp
+--- qmatplot-0.4.2/src/kssocketio.cpp	2003-03-11 07:07:45.000000000 -0500
++++ qmatplot-0.4.2.new/src/kssocketio.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -16,6 +16,7 @@
+  ***************************************************************************/
+ 
+ #include <cassert>
++#include <cstdlib>
+ #include <cstdio> // P_tmpdir
+ #include <unistd.h> // unlink
+ #include <fcntl.h>
+diff -Naur qmatplot-0.4.2/src/kssocketio.h qmatplot-0.4.2.new/src/kssocketio.h
+--- qmatplot-0.4.2/src/kssocketio.h	2003-03-11 07:07:47.000000000 -0500
++++ qmatplot-0.4.2.new/src/kssocketio.h	2008-04-19 09:39:07.000000000 -0400
+@@ -115,6 +115,7 @@
+    void new_message();
+    void reply( int code );
+    int _write_data( int fd, const char *data, int len );
++   int _read_data( int fd, char* data, int len );
+    QCString name_prefix();
+ 
+    int available_axes_id;
+diff -Naur qmatplot-0.4.2/src/widgets/qsaxis.cpp qmatplot-0.4.2.new/src/widgets/qsaxis.cpp
+--- qmatplot-0.4.2/src/widgets/qsaxis.cpp	2003-03-11 07:07:49.000000000 -0500
++++ qmatplot-0.4.2.new/src/widgets/qsaxis.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -19,7 +19,9 @@
+ #include"qsaxis.h"
+ #include <qregexp.h>
+ #include <cassert>
+-#include <algo.h> // this is needed for is_sorted
++#include <ext/algorithm> // this is needed for __gnu_cxx::is_sorted
++using namespace __gnu_cxx;
++
+ 
+ //-------------------------------------------------------------//
+ //-------------------------------------------------------------//
+diff -Naur qmatplot-0.4.2/src/widgets/qsctool.cpp qmatplot-0.4.2.new/src/widgets/qsctool.cpp
+--- qmatplot-0.4.2/src/widgets/qsctool.cpp	2003-03-11 07:07:49.000000000 -0500
++++ qmatplot-0.4.2.new/src/widgets/qsctool.cpp	2008-04-19 09:35:36.000000000 -0400
+@@ -19,6 +19,7 @@
+ #include"qsdrvqt.h"
+ #include"qsplotview.h"
+ #include <qpainter.h>
++#include <cstdlib>
+ 
+ QSTool::QSTool( QObject *parent )
+ : QObject( parent )
+diff -Naur qmatplot-0.4.2/src/widgets/qsgattr.h qmatplot-0.4.2.new/src/widgets/qsgattr.h
+--- qmatplot-0.4.2/src/widgets/qsgattr.h	2003-03-11 07:07:50.000000000 -0500
++++ qmatplot-0.4.2.new/src/widgets/qsgattr.h	2008-04-19 09:35:36.000000000 -0400
+@@ -62,6 +62,10 @@
+              friend QString  toQString( const QSGColor& a );
+              friend QSGColor toQSGColor( const QString&  s );
+             };
++bool operator==( const QSGColor&, const QSGColor& );
++bool operator!=( const QSGColor&, const QSGColor& );
++QString  toQString( const QSGColor& a );
++QSGColor toQSGColor( const QString&  s );
+ 
+  //-------------------------------------------------------------//
+ 
+@@ -87,6 +91,10 @@
+               friend QString toQString( const QSGFont& font );
+               friend QSGFont toQSGFont( const QString& string );
+              };
++bool operator==( const QSGFont&, const QSGFont& );
++bool operator!=( const QSGFont&, const QSGFont& );
++QString toQString( const QSGFont& font );
++QSGFont toQSGFont( const QString& string );
+ 
+ //-------------------------------------------------------------//
+ 
+@@ -120,7 +128,10 @@
+             friend QString toQString( const QSGLine& line );
+             friend QSGLine toQSGLine( const QString& string );
+            };
+-
++bool operator==( const QSGLine&, const QSGLine& );
++bool operator!=( const QSGLine&, const QSGLine& );
++QString toQString( const QSGLine& line );
++QSGLine toQSGLine( const QString& string );
+ 
+ 
+ //-------------------------------------------------------------//
+@@ -159,6 +170,10 @@
+             friend QString toQString( const QSGFill& fill );
+             friend QSGFill toQSGFill( const QString& string );
+        };
++bool operator==( const QSGFill&, const QSGFill& );
++bool operator!=( const QSGFill&, const QSGFill& );
++QString toQString( const QSGFill& fill );
++QSGFill toQSGFill( const QString& string );
+ 
+ 
+ 
+@@ -202,6 +217,10 @@
+ 	friend QString toQString( const QSGPoint& point );
+ 	friend QSGPoint toQSGPoint( const QString& string );
+        };
++bool operator==( const QSGPoint&, const QSGPoint& );
++bool operator!=( const QSGPoint&, const QSGPoint& );
++QString toQString( const QSGPoint& point );
++QSGPoint toQSGPoint( const QString& string );
+ 
+ //-------------------------------------------------------------//
+ 
+@@ -243,6 +262,10 @@
+ 	friend QString toQString( const QSGArrow& arrow );
+ 	friend QSGArrow toQSGArrow( const QString& string );
+ 	};
++bool operator==( const QSGArrow&, const QSGArrow& );
++bool operator!=( const QSGArrow&, const QSGArrow& );
++QString toQString( const QSGArrow& arrow );
++QSGArrow toQSGArrow( const QString& string );
+ 
+ //-------------------------------------------------------------//
+ 
+@@ -287,6 +310,10 @@
+ 	bool m_all_colors;
+ 	void set_default_colors();
+     };
++bool operator==( const QSGGradient&, const QSGGradient& );
++bool operator!=( const QSGGradient&, const QSGGradient& );
++QString toQString( const QSGGradient& arrow );
++QSGGradient toQSGGradient( const QString& string );
+ 
+ 
+ //-------------------------------------------------------------//
+diff -Naur qmatplot-0.4.2/src/widgets/qssegment.h qmatplot-0.4.2.new/src/widgets/qssegment.h
+--- qmatplot-0.4.2/src/widgets/qssegment.h	2003-03-11 07:07:49.000000000 -0500
++++ qmatplot-0.4.2.new/src/widgets/qssegment.h	2008-04-19 09:35:36.000000000 -0400
+@@ -205,7 +205,7 @@
+     QSPt2f m_prev;
+     QSPt2f m_prev_prev;
+     QSGLine curr_line;
+-    void get_stair( const QSPt2f& pos, QSPt2f pos[3] );
++    void get_stair( const QSPt2f& pos, QSPt2f pts[3] );
+ };
+ 
+ #endif
