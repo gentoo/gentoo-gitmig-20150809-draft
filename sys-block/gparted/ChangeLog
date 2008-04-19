@@ -1,6 +1,15 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.46 2008/04/03 14:51:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.47 2008/04/19 22:49:28 eva Exp $
+
+  19 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gparted-0.2.5-llabs.patch, -files/gparted-0.3.1-llabs.patch,
+  -files/gparted-0.3.3-device-reload-crash.patch, -gparted-0.3.1.ebuild,
+  -gparted-0.3.3.ebuild, -gparted-0.3.3-r1.ebuild:
+  cleaning old revisions.
+
+  19 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> gparted-0.3.5.ebuild:
+  stable amd64, bug #215392
 
   03 Apr 2008; Brent Baude <ranger@gentoo.org> gparted-0.3.5.ebuild:
   stable ppc, bug 215392
