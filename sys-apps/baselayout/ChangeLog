@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.466 2008/04/17 17:42:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.467 2008/04/19 06:22:52 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> baselayout-2.0.0.ebuild:
+  Detect and display users with non-existent shells #215698.
 
   17 Apr 2008; Zac Medico <zmedico@gentoo.org> baselayout-2.0.0.ebuild:
   Bug #217848 - Since the remap_dns_vars() called by pkg_preinst() of the

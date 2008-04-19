@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.3 2008/04/17 17:42:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.4 2008/04/19 06:22:52 vapier Exp $
 
 inherit multilib
 
@@ -114,6 +114,16 @@ pkg_postinst() {
 			echo
 			ewarn "The following users lack passwords!"
 			ewarn ${bad_users}
+		fi
+	fi
+
+	# whine about users with invalid shells #215698
+	if [[ -e ${ROOT}/etc/passwd ]] ; then
+		local bad_shells=$(awk -F: 'system("test -e " $7) { print $1 " - " $7}' /etc/passwd | sort)
+		if [[ -n ${bad_shells} ]] ; then
+			echo
+			ewarn "The following users have non-existent shells!"
+			ewarn "${bad_shells}"
 		fi
 	fi
 }
