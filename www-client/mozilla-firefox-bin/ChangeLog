@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.131 2008/04/18 10:54:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.132 2008/04/19 11:16:19 armin76 Exp $
+
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-bin-2.0.0.13.ebuild, mozilla-firefox-bin-2.0.0.14.ebuild,
+  -mozilla-firefox-bin-3.0_beta3.ebuild,
+  -mozilla-firefox-bin-3.0_beta4.ebuild,
+  mozilla-firefox-bin-3.0_beta5.ebuild:
+  Fix linguas, bug #218147, don't use mozilla-launcher for 3.0
 
   18 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-bin-2.0.0.14.ebuild:

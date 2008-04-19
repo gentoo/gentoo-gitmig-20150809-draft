@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5.ebuild,v 1.1 2008/04/02 16:52:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5.ebuild,v 1.2 2008/04/19 11:16:19 armin76 Exp $
 
-inherit eutils mozilla-launcher multilib mozextension
+inherit eutils multilib mozextension
 
-LANGS="af ar be ca cs de el en-GB es-AR es-ES eu fi fr fy-NL gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sq sv-SE tr uk zh-CN zh-TW"
+LANGS="af ar be ca cs de el en en-GB es-AR es-ES eu fi fr fy-NL gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sq sv-SE tr uk zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
 
 MY_PV=${PV/_beta/b}
@@ -14,8 +14,8 @@ DESCRIPTION="Firefox Web Browser"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/linux-i686/en-US/firefox-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
-QA_EXECSTACK="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
-QA_TEXTRELS="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
+#QA_EXECSTACK="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
+#QA_TEXTRELS="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
@@ -23,8 +23,10 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="restrict-javascript"
 
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+	if [ "${X}" != "en" ]; then
+		SRC_URI="${SRC_URI}
+			linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
@@ -46,9 +48,7 @@ RDEPEND="x11-libs/libXrender
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 		app-emulation/emul-linux-x86-compat
-	)
-	>=www-client/mozilla-launcher-1.41
-	!media-libs/alsa-oss"
+	)"
 
 PDEPEND="restrict-javascript? ( x11-plugins/noscript )"
 
@@ -100,7 +100,6 @@ src_install() {
 
 	# Install firefox in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
-	touch "${S}"/extensions/talkback@mozilla.org/chrome.manifest
 	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
 
 	linguas
@@ -109,7 +108,7 @@ src_install() {
 	done
 
 	local LANG=${linguas%% *}
-	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
+	if [[ -n ${LANG} ]]; then
 		elog "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
@@ -118,7 +117,8 @@ src_install() {
 	fi
 
 	# Create /usr/bin/firefox-bin
-	install_mozilla_launcher_stub firefox-bin ${MOZILLA_FIVE_HOME}
+	make_wrapper firefox-bin "${MOZILLA_FIVE_HOME}/firefox-bin"
+	dosym /usr/bin/firefox-bin /usr/bin/firefox
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
@@ -142,9 +142,4 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use amd64 && einfo "NB: You just installed a 32-bit firefox"
-	update_mozilla_launcher_symlinks
-}
-
-pkg_postrm() {
-	update_mozilla_launcher_symlinks
 }
