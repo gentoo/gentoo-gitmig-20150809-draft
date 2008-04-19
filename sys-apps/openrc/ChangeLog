@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.32 2008/04/15 20:32:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.33 2008/04/19 20:40:51 vapier Exp $
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> openrc-0.2.2.ebuild,
+  openrc-9999.ebuild:
+  Make sure to force glibc-2.5+ #218441 by onox.
 
   15 Apr 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.1-r2.ebuild,
   openrc-0.2.2.ebuild, openrc-9999.ebuild:
