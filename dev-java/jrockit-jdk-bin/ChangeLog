@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.43 2008/01/22 21:32:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.44 2008/04/19 14:34:42 caster Exp $
+
+*jrockit-jdk-bin-1.5.0.14 (19 Apr 2008)
+*jrockit-jdk-bin-1.4.2.16 (19 Apr 2008)
+
+  19 Apr 2008; Vlastimil Babka <caster@gentoo.org>
+  +jrockit-jdk-bin-1.4.2.16.ebuild, +jrockit-jdk-bin-1.5.0.14.ebuild:
+  Version bump, security bug #218226. Add missing dependencies, install
+  revdep-rebuild mask file - bug #177925.
 
   22 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
   jrockit-jdk-bin-1.4.2.14_p1.ebuild, jrockit-jdk-bin-1.5.0.11_p1.ebuild:
