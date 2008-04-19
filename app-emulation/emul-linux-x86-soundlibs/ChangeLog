@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.37 2008/03/17 07:21:44 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.38 2008/04/19 00:58:23 kingtaco Exp $
+
+*emul-linux-x86-soundlibs-20080418 (19 Apr 2008)
+
+  19 Apr 2008; Mike Doty <kingtaco@gentoo.org>
+  +emul-linux-x86-soundlibs-20080418.ebuild:
+  version bump for alsa-*-1.0.16
 
 *emul-linux-x86-soundlibs-20080316 (17 Mar 2008)
 
