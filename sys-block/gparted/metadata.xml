@@ -3,11 +3,15 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>eva@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		GParted is the Gnome Partition Editor. It can create, grow, shrink, move and
 		copy various filesystems.
+	</longdescription>
+	<longdescription lang="en">
+		GParted et l'éditeur de partition de Gnome. Il peut créer, redimensionner,
+		déplacer et copier différent système de fichiers.
 	</longdescription>
 </pkgmetadata>
 
