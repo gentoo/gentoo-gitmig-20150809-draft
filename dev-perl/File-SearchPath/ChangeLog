@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-SearchPath
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-SearchPath/ChangeLog,v 1.1 2008/04/19 18:46:06 robbat2 Exp $
+
+*File-SearchPath-0.03 (19 Apr 2008)
+
+  19 Apr 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +File-SearchPath-0.03.ebuild:
+  Initial commit. Dep for Sphinx::*.
+
