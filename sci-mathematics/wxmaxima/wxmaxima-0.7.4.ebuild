@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.4.ebuild,v 1.5 2008/04/18 22:01:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.4.ebuild,v 1.6 2008/04/19 09:46:48 bicatali Exp $
 
 WX_GTK_VER="2.8"
 inherit eutils autotools wxwidgets fdo-mime
@@ -46,7 +46,7 @@ src_compile () {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	newicon maxima-new.png wxmaxima.png
+	doicon wxmaxima.png
 	make_desktop_entry wxmaxima wxMaxima wxmaxima
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
