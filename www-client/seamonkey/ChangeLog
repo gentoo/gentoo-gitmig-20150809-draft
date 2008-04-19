@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.129 2008/03/28 05:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.130 2008/04/19 16:06:24 armin76 Exp $
+
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.9.ebuild:
+  We need pango built with X use-flag bug #216377
 
   28 Mar 2008; Jeroen Roovers <jer@gentoo.org> seamonkey-1.1.9.ebuild:
   Stable for HPPA (bug #214816).

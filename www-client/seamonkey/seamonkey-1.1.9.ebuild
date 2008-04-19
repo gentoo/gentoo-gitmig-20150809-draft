@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.9.ebuild,v 1.5 2008/03/28 05:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.9.ebuild,v 1.6 2008/04/19 16:06:24 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -41,6 +41,18 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
 pkg_setup() {
+	if ! built_with_use x11-libs/cairo X; then
+		eerror "Cairo is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge cairo."
+		die "Cairo needs X"
+	fi
+
+	if ! built_with_use x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
+
 	use moznopango && warn_mozilla_launcher_stub
 }
 
