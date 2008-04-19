@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.392 2008/04/19 13:47:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.393 2008/04/19 14:55:36 armin76 Exp $
+
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-2.0.0.14.ebuild, -mozilla-firefox-3.0_beta5.ebuild,
+  mozilla-firefox-3.0_beta5-r1.ebuild:
+  We need pango built with X use-flag bug #216377, fix linguas, bug #218147
 
   19 Apr 2008; Markus Meier <maekke@gentoo.org>
   mozilla-firefox-2.0.0.14.ebuild:
