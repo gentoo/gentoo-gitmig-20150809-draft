@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sphinx-Config
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Config/ChangeLog,v 1.1 2008/04/19 18:47:33 robbat2 Exp $
+
+*Sphinx-Config-0.01 (19 Apr 2008)
+
+  19 Apr 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +Sphinx-Config-0.01.ebuild:
+  Initial commit.
+
