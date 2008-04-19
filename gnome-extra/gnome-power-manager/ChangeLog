@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.88 2008/04/19 21:35:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.89 2008/04/19 21:59:22 eva Exp $
+
+  19 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-power-manager-2.20.0-r1.ebuild, gnome-power-manager-2.20.2.ebuild,
+  -gnome-power-manager-2.22.0.ebuild, gnome-power-manager-2.22.1.ebuild:
+  add scrollkeeper to DEPEND to go with gnome-doc-utils, bug #216568.
 
   19 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-power-manager-2.20.1.ebuild, gnome-power-manager-2.22.1.ebuild:

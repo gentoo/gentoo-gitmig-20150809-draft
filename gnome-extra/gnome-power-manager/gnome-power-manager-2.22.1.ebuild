@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.22.1.ebuild,v 1.2 2008/04/19 21:35:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.22.1.ebuild,v 1.3 2008/04/19 21:59:22 eva Exp $
 
 inherit gnome2 eutils virtualx
 
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 		 ~app-text/docbook-xml-dtd-4.3
 		>=dev-util/pkgconfig-0.9
 		>=dev-util/intltool-0.35
+		  app-text/scrollkeeper
 		>=app-text/gnome-doc-utils-0.3.2
 		doc?	(
 					 app-text/xmlto
