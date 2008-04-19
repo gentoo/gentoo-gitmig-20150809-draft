@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.4 2008/03/21 21:44:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.5 2008/04/19 23:12:03 vapier Exp $
 
 DESCRIPTION="Library interface to IPMI"
 HOMEPAGE="http://sourceforge.net/projects/openipmi/"
@@ -14,16 +14,16 @@ KEYWORDS="amd64 ~ia64 ~ppc ~x86"
 IUSE="crypt snmp perl tcl python"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND="virtual/libc
-		dev-libs/glib
-		>=dev-lang/swig-1.3.21
-		sys-libs/gdbm
-		dev-util/pkgconfig
-		crypt? ( dev-libs/openssl )
-		snmp? ( net-analyzer/net-snmp )
-		perl? ( dev-lang/perl )
-		python? ( dev-lang/python )
-		tcl? ( dev-lang/tcl )"
+RDEPEND="dev-libs/glib
+	sys-libs/gdbm
+	crypt? ( dev-libs/openssl )
+	snmp? ( net-analyzer/net-snmp )
+	perl? ( dev-lang/perl )
+	python? ( dev-lang/python )
+	tcl? ( dev-lang/tcl )"
+DEPEND="${RDEPEND}
+	>=dev-lang/swig-1.3.21
+	dev-util/pkgconfig"
 # Gui is broken!
 #		python? ( tcl? ( tk? ( dev-lang/tk dev-tcltk/tix ) ) )"
 

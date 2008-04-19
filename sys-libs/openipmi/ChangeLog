@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/openipmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.10 2008/03/21 21:44:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.11 2008/04/19 23:12:03 vapier Exp $
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> openipmi-2.0.11.ebuild:
+  pkgconfig/swig only goes in DEPEND #217278.
 
   21 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> openipmi-2.0.11.ebuild:
   Stable on amd64 per bug #214174, tested with HP iLO by kingtaco.
