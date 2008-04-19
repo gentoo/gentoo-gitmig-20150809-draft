@@ -1,0 +1,10 @@
+# ChangeLog for app-forensics/zzuf
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.1 2008/04/19 00:37:48 flameeyes Exp $
+
+*zzuf-0.10 (19 Apr 2008)
+
+  19 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +zzuf-0.10.ebuild:
+  Initial import of zzuf. Thanks also to Jakub Moc in bug #188646.
+
