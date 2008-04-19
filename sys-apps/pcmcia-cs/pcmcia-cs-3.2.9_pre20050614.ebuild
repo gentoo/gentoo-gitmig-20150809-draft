@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.3 2007/07/22 06:24:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.4 2008/04/19 23:04:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -15,20 +15,22 @@ SRC_URI="http://pcmcia-cs.sourceforge.net/ftp/NEW/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
-
 IUSE="gtk vanilla trusted X xforms"
+
 RDEPEND="!sys-apps/pcmcia-cs-cis
-		!sys-apps/pcmcia-cs-pnptools
-			X? ( x11-libs/libX11
-				 x11-libs/libXpm
-				 x11-libs/libXaw
-				 gtk? ( =x11-libs/gtk+-2*
-				   		 dev-util/pkgconfig )
-				 xforms? ( x11-libs/xforms ) )"
+	!sys-apps/pcmcia-cs-pnptools
+	X? (
+		x11-libs/libX11
+		x11-libs/libXpm
+		x11-libs/libXaw
+		gtk? ( =x11-libs/gtk+-2* )
+		xforms? ( x11-libs/xforms )
+	)"
 DEPEND="${RDEPEND}
-		virtual/linux-sources
-		dev-util/yacc
-		>=sys-apps/sed-4"
+	dev-util/pkgconfig
+	virtual/linux-sources
+	dev-util/yacc
+	>=sys-apps/sed-4"
 
 pkg_setup() {
 	linux-info_pkg_setup

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.55-r2.ebuild,v 1.1 2008/04/15 06:08:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.55-r2.ebuild,v 1.2 2008/04/19 23:01:44 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="=dev-libs/glib-2*
+RDEPEND="=dev-libs/glib-2*"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {

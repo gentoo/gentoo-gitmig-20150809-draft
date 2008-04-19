@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/blktool/blktool-4.ebuild,v 1.2 2008/01/10 13:45:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/blktool/blktool-4.ebuild,v 1.3 2008/04/19 23:00:21 vapier Exp $
 
 DESCRIPTION="query and/or change settings of a block device"
 HOMEPAGE="http://sourceforge.net/projects/gkernel/"
@@ -11,10 +11,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=dev-libs/glib-2*
+RDEPEND="=dev-libs/glib-2*"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
