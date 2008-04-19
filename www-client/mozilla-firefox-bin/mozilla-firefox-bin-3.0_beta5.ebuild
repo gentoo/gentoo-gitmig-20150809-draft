@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5.ebuild,v 1.4 2008/04/19 15:58:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5.ebuild,v 1.5 2008/04/19 19:29:32 armin76 Exp $
 
-inherit eutils multilib mozextension
+inherit eutils mozilla-launcher multilib mozextension
 
 LANGS="af ar be ca cs de el en-GB en-US es-AR es-ES eu fi fr fy-NL gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sq sv-SE tr uk zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
@@ -118,7 +118,6 @@ src_install() {
 
 	# Create /usr/bin/firefox-bin
 	make_wrapper firefox-bin "${MOZILLA_FIVE_HOME}/firefox-bin"
-	dosym /usr/bin/firefox-bin /usr/bin/firefox
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
@@ -142,4 +141,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use amd64 && einfo "NB: You just installed a 32-bit firefox"
+	update_mozilla_launcher_symlinks
 }
+
+pkg_postrm() {
+	update_mozilla_launcher_symlinks
+}
+
