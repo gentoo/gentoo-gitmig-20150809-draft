@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.60.ebuild,v 1.1 2008/04/18 17:59:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.60.ebuild,v 1.2 2008/04/19 22:25:16 vapier Exp $
 
 EAPI="1"
 
@@ -56,7 +56,6 @@ RDEPEND=">=media-libs/freetype-2.0.0
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
-	>=media-gfx/fontforge-20060703
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto
