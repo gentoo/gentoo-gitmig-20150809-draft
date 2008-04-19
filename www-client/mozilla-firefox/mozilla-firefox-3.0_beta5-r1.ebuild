@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5-r1.ebuild,v 1.2 2008/04/19 14:55:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5-r1.ebuild,v 1.3 2008/04/19 16:02:15 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -122,7 +122,7 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${MY_P}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 
@@ -132,7 +132,7 @@ src_unpack() {
 	# Apply our patches
 	cd "${S}" || die "cd failed"
 	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
+EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
 
 	eautoreconf || die "failed  running eautoreconf"

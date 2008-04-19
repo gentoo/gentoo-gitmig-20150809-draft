@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.14.ebuild,v 1.6 2008/04/19 15:38:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.14.ebuild,v 1.7 2008/04/19 16:02:15 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -123,7 +123,7 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 
