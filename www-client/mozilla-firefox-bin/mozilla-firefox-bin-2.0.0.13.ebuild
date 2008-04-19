@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.13.ebuild,v 1.3 2008/04/19 11:16:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.13.ebuild,v 1.4 2008/04/19 11:42:55 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -20,7 +20,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="restrict-javascript"
 
 for X in ${LANGS} ; do
-	if [ "${X}" != "en"]; then
+	if [ "${X}" != "en" ]; then
 		SRC_URI="${SRC_URI}
 			linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 	fi
