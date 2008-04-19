@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/guiloader-c++
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.8 2008/01/18 14:09:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.9 2008/04/19 19:57:30 pva Exp $
+
+*guiloader-c++-2.12.0 (19 Apr 2008)
+
+  19 Apr 2008; Peter Volkov <pva@gentoo.org> +guiloader-c++-2.12.0.ebuild:
+  Version bump.
 
   18 Jan 2008; <pva@gentoo.org> -guiloader-c++-2.10.0.ebuild,
   guiloader-c++-2.10.1.ebuild:
