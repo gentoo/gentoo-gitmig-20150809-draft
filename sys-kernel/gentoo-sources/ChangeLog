@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.504 2008/04/19 08:17:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.505 2008/04/19 21:17:50 dsd Exp $
+
+*gentoo-sources-2.6.24-r6 (19 Apr 2008)
+
+  19 Apr 2008; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.24-r6.ebuild:
+  Update to Linux 2.6.24.5. Fix ipw2200 radiotap interface. Fix headphone
+  port and PC speaker for Fujitsu ALC262 sound. Fix alpha UAC sysctl
+  warnings. Fix ppc modular build of ppc apm_emu.
 
 *gentoo-sources-2.6.25-r1 (19 Apr 2008)
 
