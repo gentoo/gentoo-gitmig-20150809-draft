@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libclthreads
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.10 2007/04/19 20:46:24 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.11 2008/04/19 12:52:24 aballier Exp $
+
+*libclthreads-2.4.0 (19 Apr 2008)
+
+  19 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +libclthreads-2.4.0.ebuild:
+  version bump, bug #218246
 
 *libclthreads-2.2.1 (19 Apr 2007)
 
