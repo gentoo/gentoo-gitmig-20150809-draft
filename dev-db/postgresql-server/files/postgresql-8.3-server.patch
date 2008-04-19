@@ -26,7 +26,7 @@
 ==================================================================
 --- contrib/Makefile	(revision 12)
 +++ contrib/Makefile	(local)
-@@ -20,22 +20,18 @@
+@@ -20,22 +20,19 @@
  		isn		\
  		lo		\
  		ltree		\
@@ -44,7 +44,7 @@
  		spi		\
  		tablefunc	\
 -		test_parser	\
--		tsearch2	\
+ 		tsearch2	\
 -		vacuumlo
 +		test_parser
  

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/files/postgresql.init-7.4,v 1.1 2008/04/15 09:29:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/files/postgresql.init-7.4,v 1.2 2008/04/19 20:37:13 dev-zero Exp $
 
 opts="${opts} reload"
 
@@ -25,6 +25,8 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 
+	local retval
+
 	ebegin "Starting PostgreSQL"
 
 	if [ -f "$PGDATA/postmaster.pid" ] ; then
@@ -33,27 +35,33 @@ start() {
 
 	su -l ${PGUSER} \
 		-c "env PGDATA=\"${PGDATA}\" /usr/lib/postgresql-7.4/bin/pg_ctl start -w -o '--silent-mode=true ${PGOPTS}'"
-
-	eend $?
+	retval=$?
+	echo $retval
+	eend $retval
 }
 
 stop() {
 	ebegin "Stopping PostgreSQL (this can take up to $(( ${WAIT_FOR_DISCONNECT} + ${WAIT_FOR_CLEANUP} )) seconds)"
 
+	local retval
+
 	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
 		--retry -TERM/${WAIT_FOR_DISCONNECT}
-	[ $? -eq 0 ] && eend $? && exit
+	retval=$?
+	[ $retval -eq 0 ] && eend $retval && return $retval
 
 	ewarn "Some clients did not disconnect within ${WAIT_FOR_DISCONNECT} seconds."
 	ewarn "Going to shutdown the server anyway."
 
 	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
 		--retry -INT/${WAIT_FOR_CLEANUP}
-	[ $? -eq 0 ] && eend $? && exit
+	retval=$?
+	[ $retval -eq 0 ] && eend $retval && return $retval
 
 	if [ ${WAIT_FOR_QUIT} -eq 0 ] ; then
 		eerror "Server did not shut down and sending the SIGQUIT has been disabled."
-		eend $?
+		eend $retval
+		return $retval
 	fi
 
 	ewarn "Shutting down the server gracefully failed."
@@ -61,8 +69,8 @@ stop() {
 
 	start-stop-daemon --stop --pidfile "${PGDATA}/postmaster.pid" \
 		--retry -QUIT/${WAIT_FOR_QUIT}
-		
-	[ $? -eq 0 ] && eend $? && exit
+	retval=$?
+	[ $retval -eq 0 ] && eend $retval && return $retval
 
 	eerror "Forced shutdown failed!!! Something is wrong with your system, please take care of it manually."
 	eend $?

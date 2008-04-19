@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.1 2008/04/15 09:29:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.2 2008/04/19 20:37:12 dev-zero Exp $
+
+  19 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  files/postgresql.init-7.3, files/postgresql.init-7.4,
+  files/postgresql.init-8.0, files/postgresql.init-8.1,
+  files/postgresql.init-8.2, files/postgresql.init-8.3,
+  files/postgresql-8.3-server.patch:
+  Updated patch for 8.3 (accidentally disabled tsearch2, thanks to Elvis
+  Pranskevichus). Corrected a bug in init.d scripts.
 
 *postgresql-server-8.3.1 (15 Apr 2008)
 *postgresql-server-8.2.7 (15 Apr 2008)
