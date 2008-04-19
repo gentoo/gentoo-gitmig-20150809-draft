@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.14.ebuild,v 1.6 2008/04/19 14:38:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.14.ebuild,v 1.7 2008/04/19 15:58:14 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -90,7 +90,7 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 }
@@ -109,7 +109,7 @@ src_install() {
 	done
 
 	local LANG=${linguas%% *}
-	if [[ -n ${LANG} ]]; then
+	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
 		elog "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
 			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
