@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r6.ebuild,v 1.2 2008/04/14 20:42:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r6.ebuild,v 1.3 2008/04/19 01:35:53 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator multilib
 
@@ -200,11 +200,7 @@ src_install() {
 
 	# Install docs
 	use doc && dodoc "${WORKDIR}"/manuals/*
-
-	if use examples; then
-		docinto examples
-		dodoc examples/*
-	fi
+	use examples && docinto examples
 }
 
 pkg_postinst() {

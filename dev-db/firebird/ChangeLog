@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.92 2008/04/14 20:42:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.93 2008/04/19 01:35:53 wltjr Exp $
+
+*firebird-2.1.0.17798.0 (19 Apr 2008)
+
+  19 Apr 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-2.1.0.17755_rc2-deps-flags-libs.patch,
+  +files/firebird-2.1.0.17798.0-deps-flags-libs.patch,
+  -files/firebird.conf.d, -files/firebird.init.d.2,
+  -firebird-2.0.3.12981.0-r5.ebuild, firebird-2.0.3.12981.0-r6.ebuild,
+  -firebird-2.1.0.17755_rc2-r1.ebuild, +firebird-2.1.0.17798.0.ebuild:
+  Bumped to latest release, removed past rc, and insecure version/files,
+  removed dodoc on examples.
 
   14 Apr 2008; Markus Meier <maekke@gentoo.org>
   firebird-2.0.3.12981.0-r6.ebuild:
