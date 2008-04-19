@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.35 2008/03/24 14:40:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.36 2008/04/19 23:31:11 ulm Exp $
 
   24 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   hotkeys-0.5.7.4.0.1.ebuild:
@@ -23,8 +23,8 @@
   +files/hotkeys-0.5.7.4.0.1-audacious.patch,
   +files/hotkeys-0.5.7.4.0.1-gcc4.patch, metadata.xml,
   +hotkeys-0.5.7.4.0.1.ebuild:
-  Adding falco and myself as maintainers. Version bump. Change default key
-  actions to audtool, bug #157559.
+  Adding falco and myself as maintainers. Version bump, bug #189590.
+  Change default key actions to audtool, bug #157559.
 
   03 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
   hotkeys-0.5.7.1-r1.ebuild:
