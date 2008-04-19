@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.28 2008/04/08 10:04:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.29 2008/04/19 16:18:58 armin76 Exp $
+
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild,
+  mozilla-sunbird-0.8.ebuild:
+  We need pango built with X use-flag bug #216377, fix linguas, bug #218147
 
 *mozilla-sunbird-0.8 (08 Apr 2008)
 

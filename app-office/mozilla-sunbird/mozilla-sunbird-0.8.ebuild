@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.8.ebuild,v 1.1 2008/04/08 10:04:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.8.ebuild,v 1.2 2008/04/19 16:18:58 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
 PATCH="${P}-patches-0.1"
-LANGS="ca cs da de es-AR es-ES eu fr ga-IE hu it ja ka ko lt mk mn nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr uk zh-CN"
+LANGS="ca cs da de en-US es-AR es-ES eu fr ga-IE hu it ja ka ko lt mk mn nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr uk zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
 MY_PN="${PN/mozilla-}"
@@ -24,13 +24,17 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/
 #
 # for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
+	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+		SRC_URI="${SRC_URI}
+		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
+	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-		SRC_URI="${SRC_URI}
-			linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
+		if [ "${X}" != "en-US" ]; then
+			SRC_URI="${SRC_URI}
+				linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
+		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
@@ -80,6 +84,12 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
+	if ! built_with_use x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
+
 	if ! use bindist; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
@@ -96,8 +106,8 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
-		elog "Selected language packs (first will be default): ${linguas}"
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 
 	# Apply our patches
