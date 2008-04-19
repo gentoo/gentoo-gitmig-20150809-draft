@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.3.ebuild,v 1.1 2008/01/19 14:47:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.3.ebuild,v 1.2 2008/04/19 09:34:59 drac Exp $
+
+inherit autotools multilib
 
 DESCRIPTION="a fancy but useless dockapp with moving blobs."
 HOMEPAGE="http://freshmeat.net/projects/wmblob"
@@ -22,7 +24,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:-O2:${CFLAGS}:g" "${S}"/configure
+	cd "${S}"
+	sed -e "s:-O2:${CFLAGS}:g" \
+		-e "s:\$x_libraries:/usr/$(get_libdir):" \
+		-i configure.ac || die "sed failed."
+	eautoreconf
 }
 
 src_install() {

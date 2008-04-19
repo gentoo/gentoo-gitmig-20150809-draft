@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmblob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.11 2008/01/19 14:47:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.12 2008/04/19 09:34:59 drac Exp $
+
+  19 Apr 2008; Samuli Suominen <drac@gentoo.org> wmblob-1.0.3.ebuild:
+  Point configure.ac to correct location of libX11, thanks to nixnut in bug
+  217802.
 
 *wmblob-1.0.3 (19 Jan 2008)
 
