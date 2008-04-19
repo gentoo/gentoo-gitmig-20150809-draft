@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/ChangeLog,v 1.4 2008/04/18 17:10:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/ChangeLog,v 1.5 2008/04/19 13:53:29 maekke Exp $
+
+  19 Apr 2008; Markus Meier <maekke@gentoo.org>
+  xulrunner-bin-1.8.1.14.ebuild:
+  amd64 stable, bug #218291
 
   18 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   xulrunner-bin-1.8.1.14.ebuild:
