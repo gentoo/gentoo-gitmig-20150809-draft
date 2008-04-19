@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.12 2008/04/19 16:18:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.13 2008/04/19 17:04:30 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -84,7 +84,7 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if ! built_with_use x11-libs/pango X; then
+	if ! built_with_use --missing true x11-libs/pango X; then
 		eerror "Pango is not built with X useflag."
 		eerror "Please add 'X' to your USE flags, and re-emerge pango."
 		die "Pango needs X"
