@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.1 2007/11/07 23:26:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.2 2008/04/19 09:49:37 bicatali Exp $
+
+inherit eutils java
 
 DESCRIPTION="Powerful general purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
@@ -13,6 +15,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc java server"
 
 DEPEND="java? ( virtual/jdk )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	econf \
