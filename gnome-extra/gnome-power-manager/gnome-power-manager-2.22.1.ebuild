@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.22.1.ebuild,v 1.1 2008/03/30 00:04:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.22.1.ebuild,v 1.2 2008/04/19 21:35:32 eva Exp $
 
 inherit gnome2 eutils virtualx
 
@@ -80,4 +80,14 @@ src_unpack() {
 
 src_test() {
 	Xemake check || die "Test phase failed"
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	elog
+	elog "To enable frequency scaling interface, use the following command:"
+	elog "	gconftool-2 /apps/gnome-power-manager/ui/cpufreq_show"
+	elog "Note that this will conflict with other power managment utility"
+	elog "like app-laptop/laptop-mode-tools."
+	elog
 }

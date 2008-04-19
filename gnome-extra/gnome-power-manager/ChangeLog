@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.87 2008/03/30 00:04:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.88 2008/04/19 21:35:32 eva Exp $
+
+  19 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-power-manager-2.20.1.ebuild, gnome-power-manager-2.22.1.ebuild:
+  add a note about cpufreq interface, bug #203398.
 
   30 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +gnome-power-manager-2.22.1.ebuild:
