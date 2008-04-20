@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.12 2008/04/20 14:11:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.13 2008/04/20 14:18:26 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  -camomile-0.5.3-r1.ebuild, -camomile-0.6.0.ebuild:
+  remove old
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> camomile-0.7.1.ebuild:
   x86 stable, bug #217547

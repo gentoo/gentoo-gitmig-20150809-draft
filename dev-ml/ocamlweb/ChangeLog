@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.12 2008/04/20 14:06:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.13 2008/04/20 14:22:07 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org> -ocamlweb-1.36.ebuild:
+  remove old
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> ocamlweb-1.37.ebuild:
   x86 stable, bug #217535
