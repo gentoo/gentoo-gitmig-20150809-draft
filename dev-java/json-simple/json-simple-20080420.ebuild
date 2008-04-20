@@ -1,0 +1,43 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/json-simple-20080420.ebuild,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
+
+inherit java-pkg-2 java-ant-2
+
+DESCRIPTION="Simple Java toolkit for JSON"
+HOMEPAGE="http://www.json.org"
+
+MY_PN="${PN/-/_}"
+# Bad usptream not having versioned releases
+# orig SRC_URI="http://www.json.org/java/${MY_PN}.zip"
+SRC_URI="mirror://gentoo/${MY_PN}-20080420.zip"
+
+LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
+DEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jre-1.4"
+
+S="${WORKDIR}/${MY_PN}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/extra-constructors-from-azureus.patch"
+	rm -rv build lib || die
+	cp -v "${FILESDIR}/build.xml" . || die
+}
+
+JAVA_ANT_ENCODING="ISO-8859-1"
+EANT_BUILD_TARGET="dist"
+
+src_install() {
+	java-pkg_dojar dist/lib/*.jar
+	dodoc README.txt || die
+
+	use doc && java-pkg_dojavadoc javadoc
+	use source && java-pkg_dosrc src/org
+}
