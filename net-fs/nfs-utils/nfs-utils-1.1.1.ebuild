@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.1.ebuild,v 1.1 2007/12/29 09:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.1.ebuild,v 1.2 2008/04/20 00:39:26 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -24,11 +24,11 @@ RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	!nonfsv4? (
 		>=dev-libs/libevent-1.0b
 		>=net-libs/libnfsidmap-0.16
-	)
-	kerberos? (
-		net-libs/librpcsecgss
-		net-libs/libgssglue
-		app-crypt/mit-krb5
+		kerberos? (
+			net-libs/librpcsecgss
+			net-libs/libgssglue
+			app-crypt/mit-krb5
+		)
 	)"
 # util-linux dep is to prevent man-page collision
 DEPEND="${RDEPEND}
@@ -53,9 +53,8 @@ src_compile() {
 		--enable-secure-statd \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_enable !nonfsv4 nfsv4) \
-		$(use_enable kerberos gss) \
+		$(use !nonfsv4 && use_enable kerberos gss) \
 		|| die "Configure failed"
-
 	emake || die "Failed to compile"
 }
 
@@ -80,8 +79,10 @@ src_install() {
 	doins "${FILESDIR}"/exports
 
 	local f list=""
-	use !nonfsv4 && list="${list} rpc.idmapd"
-	use kerberos && list="${list} rpc.gssd"
+	if use !nonfsv4 ; then
+		list="${list} rpc.idmapd"
+		use kerberos && list="${list} rpc.gssd"
+	fi
 	for f in nfs nfsmount rpc.statd ${list} ; do
 		newinitd "${FILESDIR}"/${f}.initd ${f} || die "doinitd ${f}"
 	done
