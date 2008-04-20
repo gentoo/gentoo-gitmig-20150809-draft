@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.54 2008/02/05 16:36:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.55 2008/04/20 20:21:36 hanno Exp $
+
+*ktoblzcheck-1.17 (20 Apr 2008)
+
+  20 Apr 2008; Hanno Boeck <hanno@gentoo.org> +ktoblzcheck-1.17.ebuild:
+  Version bump, fixes compile with gcc 4.3.
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> ktoblzcheck-1.16.ebuild:
   Added ~ppc64; fix dependencies for app-office/kmymoney2
