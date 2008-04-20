@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.33 2008/04/17 21:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.34 2008/04/20 21:09:54 vapier Exp $
+
+*sdl-sound-1.0.3 (20 Apr 2008)
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> +sdl-sound-1.0.3.ebuild:
+  Version bump.
 
 *sdl-sound-1.0.2 (17 Apr 2008)
 
