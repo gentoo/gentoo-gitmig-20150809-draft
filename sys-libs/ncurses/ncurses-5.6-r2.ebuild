@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.9 2008/01/02 07:09:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.10 2008/04/20 10:34:56 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/ncurses/${MY_P}.tar.gz
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="bootstrap build debug doc gpm minimal nocxx profile trace unicode"
+IUSE="debug doc gpm minimal nocxx profile trace unicode"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 
@@ -36,13 +36,8 @@ src_compile() {
 	# Protect the user from themselves #115036
 	unset TERMINFO
 
-	# From version 5.3, ncurses also build c++ bindings, and as
-	# we do not have a c++ compiler during bootstrap, disable
-	# building it.  We will rebuild ncurses after gcc's second
-	# build in bootstrap.sh.
 	local myconf=""
-	( use build || use bootstrap || use nocxx ) \
-		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
+	use nocxx && myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
 	# First we build the regular ncurses ...
 	mkdir "${WORKDIR}"/narrowc
