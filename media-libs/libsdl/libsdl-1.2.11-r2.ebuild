@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r2.ebuild,v 1.12 2007/12/30 00:25:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r2.ebuild,v 1.13 2008/04/20 08:51:31 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -80,6 +80,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fbcon-page-header.patch #159923 #169388
 	epatch "${FILESDIR}"/${P}-yasm-checks.patch #163053
 	epatch "${FILESDIR}"/${P}-cdrom-correct-free-func.patch #169477
+	epatch "${FILESDIR}"/${PN}-1.2.13-cld.patch #217097
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)
