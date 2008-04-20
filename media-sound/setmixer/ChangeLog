@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/setmixer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.14 2008/04/20 18:36:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.15 2008/04/20 18:39:23 drac Exp $
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  -setmixer-19941227_rc7.ebuild, setmixer-19941227_p1.ebuild:
+  amd64 stable
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   setmixer-19941227_p1.ebuild:
