@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.65 2008/04/03 19:43:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.66 2008/04/20 14:39:07 betelgeuse Exp $
+
+*azureus-3.0.5.2 (20 Apr 2008)
+
+  20 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +files/azureus-3.0.5.2-pre,
+  +files/patches-3.0.5.2/remove-osx-platform.patch,
+  +files/patches-3.0.5.2/use-jdk-cipher-only.patch, +azureus-3.0.5.2.ebuild:
+  Version bump.
 
 *azureus-3.0.5.0-r1 (03 Apr 2008)
 
