@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/gst-plugins-pulse-0.9.7.ebuild,v 1.3 2008/04/15 17:44:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/gst-plugins-pulse-0.9.7.ebuild,v 1.4 2008/04/20 16:16:09 maekke Exp $
 
 MY_PN=gst-pulse
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0.10"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=media-sound/pulseaudio-${PV}
