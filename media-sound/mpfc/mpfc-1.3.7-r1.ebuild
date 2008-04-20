@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.7-r1.ebuild,v 1.2 2008/01/13 15:30:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.7-r1.ebuild,v 1.3 2008/04/20 18:16:35 flameeyes Exp $
 
-inherit eutils multilib
+inherit eutils autotools
 
 DESCRIPTION="Music Player For Console"
 HOMEPAGE="http://mpfc.sourceforge.net/"
@@ -18,15 +18,14 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0 )
 
 src_unpack() {
 	unpack ${A}
-
-	# $(get_libdir) fixes
 	cd "${S}"
-	find . -name 'Makefile.in' |
-		xargs grep ^libdir |
-		cut -f1 -d: |
-		xargs sed -i "s:^\(libdir.*\)/lib/\(.*\)$:\1/$(get_libdir)/\2:" || die
+
+	epatch "${FILESDIR}/${P}-libdir.patch"
 	epatch "${FILESDIR}/${PN}-gcc4.patch"
-	epatch "${FILESDIR}/${PN}-mathlib.patch"
+	epatch "${FILESDIR}/${P}-mathlib.patch"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
