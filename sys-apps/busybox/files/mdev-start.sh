@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-find_mdev() {
+find_mdev()
+{
 	if [ -x /sbin/mdev ] ; then
 		echo "/sbin/mdev"
 	else
@@ -9,7 +10,8 @@ find_mdev() {
 	fi
 }
 
-populate_mdev() {
+populate_mdev()
+{
 	# populate /dev with devices already found by the kernel
 
 	if get_bootparam "nocoldplug" ; then
@@ -24,18 +26,22 @@ populate_mdev() {
 	return 0
 }
 
-seed_dev() {
+seed_dev()
+{
 	# Seed /dev with some things that we know we need
-	ebegin "Seeding /dev with needed nodes"
 
 	# creating /dev/console and /dev/tty1 to be able to write
 	# to $CONSOLE with/without bootsplash before mdev creates it
-	[ ! -c /dev/console ] && mknod /dev/console c 5 1
-	[ ! -c /dev/tty1 ] && mknod /dev/tty1 c 4 1
+	[ -c /dev/console ] || mknod /dev/console c 5 1
+	[ -c /dev/tty1 ] || mknod /dev/tty1 c 4 1
+
+	# udevd will dup its stdin/stdout/stderr to /dev/null
+	# and we do not want a file which gets buffered in ram
+	[ -c /dev/null ] || mknod /dev/null c 1 3
 
 	# copy over any persistant things
 	if [ -d /lib/mdev/devices ] ; then
-		cp --preserve=all --recursive --update /lib/mdev/devices/* /dev 2>/dev/null
+		cp -RPp /lib/mdev/devices/* /dev 2>/dev/null
 	fi
 
 	# Not provided by sysfs but needed
@@ -47,12 +53,10 @@ seed_dev() {
 
 	# Create problematic directories
 	mkdir -p /dev/pts /dev/shm
-	eend 0
 }
 
-main() {
-	# Setup temporary storage for /dev
-	ebegin "Mounting /dev for mdev"
+mount_it_b1()
+{
 	if [ "${RC_USE_FSTAB}" = "yes" ] ; then
 		mntcmd=$(get_mount_fstab /dev)
 	else
@@ -69,6 +73,26 @@ main() {
 		# many video drivers require exec access in /dev #92921
 		try mount -n -t "${mntcmd}" -o exec,nosuid,mode=0755 mdev /dev
 	fi
+}
+mount_it_b2()
+{
+	if fstabinfo --quiet /dev ; then
+		mount -n /dev
+	else
+		# Some devices require exec, Bug #92921
+		mount -n -t tmpfs -o "exec,nosuid,mode=0755,size=10M" mdev /dev
+	fi
+}
+mount_it()
+{
+	type fstabinfo && mount_b2 || mount_b1
+}
+
+main()
+{
+	# Setup temporary storage for /dev
+	ebegin "Mounting /dev for mdev"
+	mount_it
 	eend $?
 
 	# Create a file so that our rc system knows it's still in sysinit.
