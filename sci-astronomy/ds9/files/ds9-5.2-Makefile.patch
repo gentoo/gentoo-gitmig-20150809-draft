@@ -37,3 +37,13 @@
  
  iis	: FORCE
  	@echo "Installing IIS..."
+--- ds9/Makefile.orig	2008-04-17 15:47:39.189030792 +0000
++++ ds9/Makefile	2008-04-17 15:47:51.873753654 +0000
+@@ -152,7 +152,6 @@
+ ds9	: null.zip ds9Base $(FILES)
+ 	$(RM) $@
+ 	cp ds9Base ds9.zip
+-	$(STRIP) ds9.zip
+ 	cat null.zip >> ds9.zip
+ 	cd zipdir; zip -rA9 ../ds9.zip *
+ 	mv ds9.zip ds9
