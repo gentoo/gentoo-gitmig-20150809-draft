@@ -1,12 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.18 2006/10/04 21:12:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.19 2008/04/20 09:22:39 vapier Exp $
 
-inherit eutils games
+inherit eutils games autotools
 
+DEB_VER="9"
 DESCRIPTION="Put the balls in the pockets of the same color by manipulating a maze of tubes"
 HOMEPAGE="http://home-2.consunet.nl/~cb007736/groundhog.html"
-SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz"
+SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz
+	mirror://debian/pool/main/g/groundhog/groundhog_${PV}-${DEB_VER}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,9 +22,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch "${WORKDIR}"/groundhog_${PV}-${DEB_VER}.diff
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gcc3.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+	epatch $(sed -e 's:^:debian/patches/:' debian/patches/series)
+	AT_M4DIR="m4" eautoreconf
 	sed -i 's:$(localedir):/usr/share/locale:' \
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
