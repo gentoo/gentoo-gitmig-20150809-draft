@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.2_p20080414.ebuild,v 1.1 2008/04/19 21:20:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.2_p20080414.ebuild,v 1.2 2008/04/20 15:36:45 dmwaters Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux-speakup.org"
 SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}-3.0.2"
