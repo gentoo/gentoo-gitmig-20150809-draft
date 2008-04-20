@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.184 2008/04/20 01:17:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.185 2008/04/20 17:31:40 nixnut Exp $
+
+  20 Apr 2008; nixnut <nixnut@gentoo.org> busybox-1.8.2.ebuild:
+  Stable on ppc wrt bug 218497
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/mdev-start.sh:
   Add support for baselayout-2 and create /dev/null before we use it #211827.
