@@ -1,30 +1,6 @@
-Only in work/org/json/simple: AUTHORS.txt
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/ItemList.java work/org/json/simple/ItemList.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/ItemList.java	2006-04-16 04:04:26.000000000 +0300
-+++ work/org/json/simple/ItemList.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-3-24
-  */
- package org.json.simple;
 diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONArray.java work/org/json/simple/JSONArray.java
 --- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONArray.java	2006-04-16 04:04:24.000000000 +0300
 +++ work/org/json/simple/JSONArray.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,10 +1,11 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-10
-  */
- package org.json.simple;
- 
- import java.util.ArrayList;
-+import java.util.Collection;
- import java.util.Iterator;
- 
- 
 @@ -12,6 +13,18 @@
   * @author FangYidong<fangyidong@yahoo.com.cn>
   */
@@ -33,7 +9,7 @@ diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org
 +		super();
 +	}
 +
-+	public JSONArray(Collection arg0) {
++	public JSONArray(java.util.Collection arg0) {
 +		super(arg0);
 +	}
 +
@@ -47,13 +23,6 @@ diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org
 diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONObject.java work/org/json/simple/JSONObject.java
 --- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONObject.java	2006-04-16 11:26:38.000000000 +0300
 +++ work/org/json/simple/JSONObject.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-10
-  */
- package org.json.simple;
 @@ -13,6 +13,22 @@
   */
  public class JSONObject extends HashMap{
@@ -77,45 +46,3 @@ diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org
  	public String toString(){
  		ItemList list=new ItemList();
  		Iterator iter=entrySet().iterator();
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONValue.java work/org/json/simple/JSONValue.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONValue.java	2006-04-16 04:04:42.000000000 +0300
-+++ work/org/json/simple/JSONValue.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-15
-  */
- package org.json.simple;
-Only in work/org/json/simple: LICENSE.txt
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/parser/JSONParser.java work/org/json/simple/parser/JSONParser.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/parser/JSONParser.java	2006-04-16 04:04:44.000000000 +0300
-+++ work/org/json/simple/parser/JSONParser.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-15
-  */
- package org.json.simple.parser;
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/parser/Yytoken.java work/org/json/simple/parser/Yytoken.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/parser/Yytoken.java	2006-04-16 04:04:44.000000000 +0300
-+++ work/org/json/simple/parser/Yytoken.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-15
-  */
- package org.json.simple.parser;
-Only in work/org/json/simple: README.txt
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/Test.java work/org/json/simple/Test.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/Test.java	2006-04-16 13:56:20.000000000 +0300
-+++ work/org/json/simple/Test.java	2007-06-04 17:43:56.000000000 +0300
-@@ -1,5 +1,5 @@
- /*
-- * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-+ * $Id: extra-constructors-from-azureus.patch,v 1.1 2008/04/20 14:33:15 betelgeuse Exp $
-  * Created on 2006-4-15
-  */
- package org.json.simple;
