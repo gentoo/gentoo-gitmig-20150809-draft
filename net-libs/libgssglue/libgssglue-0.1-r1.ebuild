@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/libgssglue-0.1.ebuild,v 1.11 2007/09/15 01:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/libgssglue-0.1-r1.ebuild,v 1.1 2008/04/20 00:14:12 vapier Exp $
 
 DESCRIPTION="exports a gssapi interface which calls other random gssapi libraries"
 HOMEPAGE="http://www.citi.umich.edu/projects/nfsv4/linux/"
@@ -16,4 +16,7 @@ RDEPEND="!app-crypt/libgssapi"
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README
+
+	insinto /etc
+	doins doc/gssapi_mech.conf || die
 }

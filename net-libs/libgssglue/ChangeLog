@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgssglue
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/ChangeLog,v 1.9 2007/09/13 08:16:03 yoswink Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/ChangeLog,v 1.10 2008/04/20 00:14:12 vapier Exp $
+
+*libgssglue-0.1-r1 (20 Apr 2008)
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> +libgssglue-0.1-r1.ebuild:
+  Install sample gssapi_mech.conf file #213749 by Paul B. Henson.
 
   13 Sep 2007; Jose Luis Rivero <yoswink@gentoo.org> libgssglue-0.1.ebuild:
   Stable on sparc wrt security bug #191479
