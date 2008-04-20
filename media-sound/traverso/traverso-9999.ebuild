@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-9999.ebuild,v 1.2 2008/01/13 13:10:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-9999.ebuild,v 1.3 2008/04/20 17:42:12 aballier Exp $
 
 inherit eutils qt4 cmake-utils cvs
 
@@ -36,11 +36,6 @@ pkg_setup() {
 	fi
 }
 
-mycmakeargs="$(cmake-utils_use_want jack JACK) $(cmake-utils_use_want alsa ALSA) \
-	$(cmake-utils_use_want lv2 LV2) -DUSE_SYSTEM_SLV2_LIBRARY=ON \
-	$(cmake-utils_use_want mad MP3_DECODE) $(cmake-utils_use_want lame MP3_ENCODE) \
-	$(cmake-utils_use_want opengl OPENGL) $(cmake-utils_use_want debug TRAVERSO_DEBUG)"
-
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/traverso"
 ECVS_USER="anonymous"
 ECVS_PASS=""
@@ -48,6 +43,15 @@ ECVS_AUTH="pserver"
 ECVS_MODULE="traverso"
 
 S="${WORKDIR}/${PN}"
+
+src_compile() {
+	local mycmakeargs="$(cmake-utils_use_want jack JACK) $(cmake-utils_use_want alsa ALSA) \
+		$(cmake-utils_use_want lv2 LV2) -DUSE_SYSTEM_SLV2_LIBRARY=ON \
+		$(cmake-utils_use_want mad MP3_DECODE) $(cmake-utils_use_want lame MP3_ENCODE) \
+		$(cmake-utils_use_want opengl OPENGL) $(cmake-utils_use_want debug TRAVERSO_DEBUG)"
+	cmake-utils_src_compile
+}
+
 
 src_install() {
 	cmake-utils_src_install
