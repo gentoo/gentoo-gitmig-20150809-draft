@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.5 2008/04/20 18:44:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.6 2008/04/20 18:50:22 flameeyes Exp $
 
 IUSE="debug alsa jack sndfile oss"
 
@@ -29,7 +29,7 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
 		eerror ""
-		eerror "To be able to build Fluidsynth with ALSA support you need"
+		eerror "To be able to build amSynth with ALSA support you need"
 		eerror "to have built media-libs/alsa-lib with midi USE flag."
 		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
