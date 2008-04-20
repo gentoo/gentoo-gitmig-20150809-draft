@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.113 2008/01/06 17:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.114 2008/04/20 08:20:04 vapier Exp $
+
+*elfutils-0.131-r2 (20 Apr 2008)
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/elfutils-0.131-gnu-inline.patch, +elfutils-0.131-r2.ebuild:
+  Use Debian patched tarball to fix #158438 and add fix by Ryan Hill for
+  building with gcc-4.3 #204610.
 
 *elfutils-0.131-r1 (06 Jan 2008)
 
