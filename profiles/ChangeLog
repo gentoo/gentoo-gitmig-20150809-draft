@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1341 2008/04/20 20:33:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1342 2008/04/20 22:45:59 calchan Exp $
+
+  20 Apr 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Adjusted mask on sci-electronics/gwave.
 
   20 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
   add keyring use flag to gnome-base/gdm for 2.20.5 bugfix to #216664.
