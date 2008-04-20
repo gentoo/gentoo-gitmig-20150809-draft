@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.3.ebuild,v 1.2 2008/04/15 01:54:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.3-r1.ebuild,v 1.1 2008/04/20 02:39:26 mrness Exp $
 
 inherit eutils
 
-STUPID_NUM="1806"
+STUPID_NUM="2332"
 
 DESCRIPTION="Serial Communication Program"
 HOMEPAGE="http://alioth.debian.org/projects/minicom"
@@ -23,18 +23,12 @@ RDEPEND="${COMMON_DEPEND}
 
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" cs da de es fi fr hu ja no pl pt_BR ro ru rw sv vi zh_TW"
+MY_AVAILABLE_LINGUAS=" cs da de es fi fr hu ja nb pl pt_BR ro ru rw sv vi zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-gentoo-runscript.patch
-	epatch "${FILESDIR}"/${P}-one-off.patch
-
-	# remove these lines when upstream release a new version
-	mv ${PN}-2.2 ${P} || die "apparently version number has been corrected"
-	cd "${S}"
-	sed -i -e "s/2[.]2/2.3/" configure
 }
 
 src_compile() {
