@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.1-r1.ebuild,v 1.2 2008/03/09 15:11:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.1-r1.ebuild,v 1.3 2008/04/20 19:01:08 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,17 +31,15 @@ RDEPEND="sys-libs/zlib
 
 S="${WORKDIR}/${P/-softmmu/}"
 
-pkg_setup() {
-	if [ "$(gcc-major-version)" == "4" ]; then
-	eerror "qemu requires gcc-3 in order to build and work correctly"
-	eerror "please compile it switching to gcc-3."
-	eerror "We are aware that qemu can guess a gcc-3 but this feature"
-	eerror "could be harmful."
-	die "gcc 4 cannot build qemu"
-	fi
-}
-
 src_unpack() {
+	if [ "$(gcc-major-version)" == "4" ]; then
+		eerror "qemu requires gcc-3 in order to build and work correctly"
+		eerror "please compile it switching to gcc-3."
+		eerror "We are aware that qemu can guess a gcc-3 but this feature"
+		eerror "could be harmful."
+		die "gcc 4 cannot build qemu"
+	fi
+
 	unpack ${A}
 
 	cd "${S}"
