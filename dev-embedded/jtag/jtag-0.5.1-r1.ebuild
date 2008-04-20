@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/jtag-0.5.1-r1.ebuild,v 1.3 2005/01/01 17:54:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/jtag-0.5.1-r1.ebuild,v 1.4 2008/04/20 19:09:05 vapier Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ DEPEND="dev-embedded/include
 	sys-apps/sed
 	sys-devel/gcc
 	sys-devel/gettext"
-RDEPEND="dev-embedded/include
+RDEPEND="!dev-embedded/urjtag
+	dev-embedded/include
 	virtual/libc"
 
 src_unpack() {

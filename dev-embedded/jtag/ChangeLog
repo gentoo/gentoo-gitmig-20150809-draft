@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/jtag
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.8 2007/02/09 01:47:41 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.9 2008/04/20 19:09:05 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> jtag-0.5.1-r1.ebuild:
+  Block urjtag #217847.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
