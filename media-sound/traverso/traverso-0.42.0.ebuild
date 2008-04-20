@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.4 2008/04/20 17:42:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.5 2008/04/20 17:58:41 aballier Exp $
+
+EAPI=1
 
 inherit eutils qt4 cmake-utils
 
@@ -13,7 +15,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="$(qt4_min_version 4.3.1)
+RDEPEND="|| ( ( x11-libs/qt-core x11-libs/qt-gui opengl? ( x11-libs/qt-opengl ) )
+			>=x11-libs/qt-4.3.1:4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
 	>=dev-libs/glib-2.8
@@ -30,7 +33,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if use opengl && ! built_with_use =x11-libs/qt-4* opengl; then
+	if use opengl && ! has_version x11-libs/qt-opengl && ! built_with_use =x11-libs/qt-4* opengl; then
 		eerror "You need to build qt4 with opengl support to have it in ${PN}"
 		die "Enabling opengl for traverso requires qt4 to be built with opengl support"
 	fi
