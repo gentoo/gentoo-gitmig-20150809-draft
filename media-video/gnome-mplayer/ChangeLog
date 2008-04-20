@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.8 2008/04/20 16:24:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.9 2008/04/20 17:38:41 nixnut Exp $
+
+  20 Apr 2008; nixnut <nixnut@gentoo.org> gnome-mplayer-0.6.0.ebuild:
+  Stable on ppc wrt bug 218762
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> gnome-mplayer-0.6.0.ebuild:
   amd64/x86 stable, bug #217962
