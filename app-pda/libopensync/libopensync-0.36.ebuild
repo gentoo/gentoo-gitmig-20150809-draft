@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.36.ebuild,v 1.1 2008/01/27 17:39:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.36.ebuild,v 1.2 2008/04/20 17:07:42 flameeyes Exp $
 
 inherit cmake-utils eutils
 
@@ -21,9 +21,10 @@ RESTRICT="test"
 RDEPEND=">=dev-db/sqlite-3
 	>=dev-libs/glib-2
 	dev-libs/libxml2
-	python? ( >=dev-lang/python-2.2 >=dev-lang/swig-1.3.17 )"
+	python? ( >=dev-lang/python-2.2 )"
 
 DEPEND="${RDEPEND}
+	python? ( >=dev-lang/swig-1.3.17 )
 	>=dev-util/cmake-2.4.7
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
