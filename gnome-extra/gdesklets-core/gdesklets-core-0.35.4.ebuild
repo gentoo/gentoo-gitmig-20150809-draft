@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.12 2007/10/09 23:56:02 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.13 2008/04/20 17:42:17 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 eutils autotools multilib
@@ -35,7 +35,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-USE_DESTDIR="1"
+# Parallel makes sometimes break during install phase
+MAKEOPTS="${MAKEOPTS} -j1"
+# Force using MAKEOPTS with emake
+USE_EINSTALL="0"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
