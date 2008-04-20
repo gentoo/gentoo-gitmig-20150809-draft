@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.42 2008/04/15 16:32:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.43 2008/04/20 19:30:49 williamh Exp $
+
+*espeak-1.37 (20 Apr 2008)
+
+  20 Apr 2008; William Hubbs <williamh@gentoo.org> +espeak-1.37.ebuild:
+  Version bump. Also, for #218597, do not allow both portaudio and
+  pulseaudio in the use flags.
 
   15 Apr 2008; Jeroen Roovers <jer@gentoo.org> espeak-1.36.02.ebuild:
   Stable for HPPA (bug #217235).
