@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.4.ebuild,v 1.1 2008/04/20 16:49:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.4.ebuild,v 1.2 2008/04/20 16:52:43 drac Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -15,10 +15,10 @@ IUSE="acl unicode fam"
 
 RESTRICT="test"
 
-DEPEND=">=x11-libs/gtk+-2.12
+RDEPEND=">=x11-libs/gtk+-2.12
 	fam? ( virtual/fam )
 	acl? ( sys-apps/acl )"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
@@ -26,8 +26,8 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e "s:${PN}/${PN}_48.png:${PN}:" \
 		docs/desktop_environment/${PN}.desktop || die "sed failed."
-	sed -i -e "s:(PREFIX)/lib:(PREFIX)/$(get_libdir):" \
-		Makefile || die "sed failed."
+	sed -e "s:(PREFIX)/lib:(PREFIX)/$(get_libdir):" -e "s:strip:true:g" \
+		-i Makefile || die "sed failed."
 }
 
 src_compile() {
