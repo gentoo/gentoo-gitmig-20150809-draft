@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.61.ebuild,v 1.1 2008/04/20 14:36:03 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.61.ebuild,v 1.2 2008/04/20 14:37:40 welp Exp $
 
 EAPI=1
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/twitux/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="aspell dbus gnome-keyring"
+IUSE="spell dbus gnome-keyring"
 
 DEPEND="net-libs/libsoup:2.4
 	dev-libs/libxml2
@@ -25,7 +25,7 @@ DEPEND="net-libs/libsoup:2.4
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	econf $(use_enable aspell) \
+	econf $(use_enable spell) \
 		$(use_enable gnome-keyring) || die "econf failed"
 
 	emake || die "emake failed"
