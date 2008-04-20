@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.11 2008/04/10 18:37:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.12 2008/04/20 18:28:40 armin76 Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.terminatorx.org/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="amd64 sparc x86"
 IUSE="alsa mad vorbis sox"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
