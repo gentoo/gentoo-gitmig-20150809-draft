@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.38 2008/03/19 02:33:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.39 2008/04/20 15:40:26 drac Exp $
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  -gnome2-vfs-perl-1.041.ebuild, -gnome2-vfs-perl-1.060.ebuild,
+  gnome2-vfs-perl-1.061.ebuild:
+  Move pkgconfig from RDEPEND to DEPEND.
 
   19 Mar 2008; Jeroen Roovers <jer@gentoo.org> gnome2-vfs-perl-1.061.ebuild:
   Stable for HPPA too.

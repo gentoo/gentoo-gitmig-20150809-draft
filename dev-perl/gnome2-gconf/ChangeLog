@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-gconf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.25 2007/03/30 15:12:42 mcummings Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.26 2008/04/20 15:38:01 drac Exp $
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org> -gnome2-gconf-1.000.ebuild,
+  -gnome2-gconf-1.031.ebuild, -gnome2-gconf-1.032.ebuild,
+  -gnome2-gconf-1.040.ebuild, gnome2-gconf-1.043.ebuild:
+  Move pkgconfig from RDEPEND to DEPEND.
 
   30 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   gnome2-gconf-1.000.ebuild, gnome2-gconf-1.031.ebuild,
