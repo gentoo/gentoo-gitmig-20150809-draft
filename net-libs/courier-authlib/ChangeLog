@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.70 2008/04/16 18:20:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.71 2008/04/20 12:09:01 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
+  courier-authlib-0.60.2.ebuild:
+  Run autotools in all directories, not just the toplevel #218295.
 
   16 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
   Update metadata, assign this solely to the herd, I'm no longer interested

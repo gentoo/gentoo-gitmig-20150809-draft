@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2.ebuild,v 1.1 2008/04/15 09:05:12 hanno Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2.ebuild,v 1.2 2008/04/20 12:09:01 vapier Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -43,10 +40,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	if use elibc_uclibc ; then
-		sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub || die "sed failed"
-	fi
-
 	if ! use gdbm ; then
 		epatch "${FILESDIR}/0.59.2-configure-db4.patch"
 	else
@@ -59,7 +52,12 @@ src_unpack() {
 	sed -i -e"s|@@INDENT@@|		|g" authmigrate.in || die "sed failed"
 	sed -i -e"s|\$sbindir/makeuserdb||g" authmigrate.in || die "sed failed"
 
-	eautoreconf || die "eautoreconf failed"
+	local d
+	for d in $(find -name configure.in) ; do
+		[[ ${d} == */libltdl/* ]] && continue
+		cd "${S}"/${d%configure.in}
+		eautoreconf
+	done
 }
 
 src_compile() {
