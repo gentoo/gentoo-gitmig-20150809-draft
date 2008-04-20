@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/emelfm2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.18 2007/09/07 19:12:16 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.19 2008/04/20 16:49:51 drac Exp $
+
+*emelfm2-0.4 (20 Apr 2008)
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org> +emelfm2-0.4.ebuild:
+  Version bump and ~amd64 keyword wrt #217039, thanks to Tobias Jakobi.
 
   07 Sep 2007; Joseph Jezak <josejx@gentoo.org> emelfm2-0.3.5.ebuild:
   Marked ~ppc for bug #186562.
