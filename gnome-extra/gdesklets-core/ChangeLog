@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.84 2008/03/26 02:39:59 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.85 2008/04/20 05:08:54 nixphoeni Exp $
+
+*gdesklets-core-0.36-r1 (20 Apr 2008)
+
+  20 Apr 2008; Joe Sapp <nixphoeni@gentoo.org>
+  +gdesklets-core-0.36-r1.ebuild:
+  Added blockers for desklet-calendar and desklet-clock as those desklets
+  are now included in the core package. The LINGUAS patch from 0.36_beta is
+  still needed (thanks bug 215538). The global Displays directory no longer
+  needs to be created. Thanks to Iain for reporting bug 215662 and eva for
+  the note about the desklets now included in the code package.
 
   26 Mar 2008; Joe Sapp <nixphoeni@gentoo.org> -files/dst-fix-0.34.3.patch:
   Cleanup - removed an old patch
