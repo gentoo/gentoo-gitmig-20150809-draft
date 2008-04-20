@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pconsole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.8 2008/01/31 06:59:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.9 2008/04/20 21:54:58 flameeyes Exp $
+
+  20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> pconsole-1.0-r2.ebuild:
+  Move patching and eautoreconf to src_unpack, get rid of src_compile.
+  Closes bug #207502.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -pconsole-1.0.ebuild,
   -pconsole-1.0-r1.ebuild:

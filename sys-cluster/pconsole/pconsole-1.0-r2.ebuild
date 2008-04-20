@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/pconsole-1.0-r2.ebuild,v 1.1 2006/09/25 08:03:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/pconsole-1.0-r2.ebuild,v 1.2 2008/04/20 21:54:58 flameeyes Exp $
 
 inherit autotools eutils
 
@@ -13,14 +13,15 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/ssh"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
 	epatch ${FILESDIR}/${P}-exit-warn.patch || einfo "Never mind.."
 	sed -i \
 		-e "s:\(CCOPTS=\).*:\1'${CFLAGS}':g" \
 		"${S}"/configure.in
 	eautoreconf
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
