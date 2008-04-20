@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.120 2008/04/15 01:33:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.121 2008/04/20 15:50:10 armin76 Exp $
+
+  20 Apr 2008; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.10.1-r1.ebuild,
+  rhythmbox-0.11.2-r1.ebuild:
+  Drop ~ia64
 
   15 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> rhythmbox-0.11.5.ebuild:
   Can use either cdio or paranoia for CD audio; bug #216325
