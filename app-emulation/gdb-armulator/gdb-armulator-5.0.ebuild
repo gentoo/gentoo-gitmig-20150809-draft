@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/gdb-armulator-5.0.ebuild,v 1.2 2007/01/25 22:09:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/gdb-armulator-5.0.ebuild,v 1.3 2008/04/20 01:59:17 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -34,10 +34,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/gdb-${PV}-uclinux-armulator-${STAMP}.patch
+	epatch "${FILESDIR}"/${P}-objstack.patch #211463
 	strip-linguas -u bfd/po opcodes/po
+
+	# add a wrapper to fake gtk-1 with gtk-2
+	mkdir "${T}"/path
+	cp "${FILESDIR}"/gtk-config "${T}"/path/
 }
 
 src_compile() {
+	export PATH=${T}/path:${PATH}
 	replace-flags -O? -O2
 	econf \
 		--disable-werror \
