@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.2 2008/01/13 13:10:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.3 2008/04/20 17:38:09 aballier Exp $
 
 inherit eutils qt4 cmake-utils
 
@@ -47,6 +47,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-nojack.patch"
 	epatch "${FILESDIR}/${P}-strictaliasing.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.17 2008/03/14 20:56:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.18 2008/04/20 17:38:09 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/traverso-0.42.0-gcc43.patch, traverso-0.42.0.ebuild:
+  fix build with gcc 4.3, by Peter Alfredsen <peter.alfredsen@gmail.com>,
+  bug #217831
 
   14 Mar 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   proaudio is in herd not in maintainer
