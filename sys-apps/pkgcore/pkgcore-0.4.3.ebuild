@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.4.3.ebuild,v 1.2 2008/04/01 21:34:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.4.3.ebuild,v 1.3 2008/04/20 15:08:49 jokey Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,8 @@ IUSE="doc"
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/snakeoil-0.2
 	>=app-shells/bash-3.0
-	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
+	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )
+	!>app-arch/lzma-4.50"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/docutils-0.4 )"
 
