@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.7.5800.ebuild,v 1.5 2008/03/28 22:46:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.7.5800.ebuild,v 1.6 2008/04/20 09:19:43 vapier Exp $
 
 inherit eutils games
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-scons-blows.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch #217944
 }
 
 src_compile() {
