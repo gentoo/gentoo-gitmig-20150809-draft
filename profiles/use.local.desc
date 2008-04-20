@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3501 2008/04/20 17:52:24 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3502 2008/04/20 20:33:48 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -746,6 +746,7 @@ games-strategy/x2:dynamic - Use dynamic binaries instead of static
 games-strategy/x2:langpacks - Install additional language packs
 games-strategy/x2:modkit - Install the modkit
 gnome-base/gdm:dmx - Enable Distributed Multihead X (DMX) support
+gnome-base/gdm:keyring - Enable gdm to unlock gnome-keyring
 gnome-base/gdm:remote - Enable secure remote support
 gnome-base/gnome-mount:nautilus - Enable the nautilus plugin
 gnome-base/gvfs:cdda - Enable Compact Disc Digital Audio support (audio CD standard)
