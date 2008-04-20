@@ -1,21 +1,21 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.7 2005/09/03 20:25:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.8 2008/04/20 23:00:46 sbriesen Exp $
 
 opts="info showconfig"
 
 depend() {
-	after isapnp pcmcia bluetooth hotplug
+	after isapnp pcmcia bluetooth
 }
 
 # possible firmware locations (list and order taken from 'capiinit')
-FWDIRS=(/lib/firmware/isdn /lib/firmware /usr/share/isdn /usr/lib/isdn /lib/isdn)
+FWDIRS="/lib/firmware/isdn /lib/firmware /usr/share/isdn /usr/lib/isdn /lib/isdn"
 
 # Firmware search
 findfw() {  # <fw_name>
 	local DIR
-	for DIR in ${FWDIRS[*]}; do
+	for DIR in ${FWDIRS}; do
 		if [ -f "${DIR}/${1}" ]; then
 			echo "${DIR}/${1}"; return 0
 		fi
@@ -26,26 +26,27 @@ findfw() {  # <fw_name>
 # looking for 'detected' cards (currently only 'sedlfax')
 detected() {  # <driver>
 	# /proc/capi/controller: <controller> <drivername> <state> <cardname> <controllerinfo>
-	/bin/sed -n "s:^\([1-9][0-9]*\) \+${1} \+detected \+.*:\1:p" \
+	sed -n "s:^\([1-9][0-9]*\) \+${1} \+detected \+.*:\1:p" \
 		/proc/capi/controller 2>/dev/null
 }
 
 # detecting loaded mISDN modules
 misdn_modules() {
-	/bin/sed -n "s:^mISDN_core \+[0-9]\+ \+[0-9]\+ \+\([^ ]\+\).*\$:\1:p" \
-		/proc/modules 2>/dev/null | /bin/tr "," " "
+	sed -n "s:^mISDN_core \+[0-9]\+ \+[0-9]\+ \+\([^ ]\+\).*\$:\1:p" \
+		/proc/modules 2>/dev/null | tr "," " "
 }
 
 # detecting loaded CAPI drivers
 capi_drivers() {
 	local DRV MISDN=0
-	while read DRV; do
+	for DRV in $(sed -n "s:^[0-9]\+ \+\([^ ]\+\).*\$:\1:p" /proc/capi/controller 2>/dev/null); do
 		case "${DRV}" in
 			mISDN)	MISDN=1;;
 			?*)	echo "${DRV}";;
 		esac
-	done < <(/bin/sed 2>/dev/null -n "s:^[0-9]\+ \+\([^ ]\+\).*\$:\1:p" /proc/capi/controller)
-	if [ ${MISDN} -gt 0 ]; then  # dirty hack to find loaded mISDN modules
+	done
+	# dirty hack to find loaded mISDN modules
+	if [ ${MISDN} -gt 0 ]; then
 		for DRV in $(misdn_modules); do
 			case "${DRV}" in
 				mISDN_*|l3udss1|faxl3) continue;;
@@ -58,7 +59,7 @@ capi_drivers() {
 # detecting bluetooth CIP connections
 bluez_cip() {
 	[ -x /usr/bin/ciptool ] && \
-	/bin/sed -n "s:[0-9]\+ \+cmtp \+[^ ]\+ \+\([0-9A-F:]\+\) \+.*\$:\1:p" \
+	sed -n "s:[0-9]\+ \+cmtp \+[^ ]\+ \+\([0-9A-F:]\+\) \+.*\$:\1:p" \
 		/proc/capi/controller 2>/dev/null
 }
 
@@ -81,7 +82,7 @@ start() {
 	done
 
 	ebegin "Starting CAPI"
-	/usr/sbin/capiinit 2>/dev/null activate
+	/usr/sbin/capiinit activate 2>/dev/null
 	if eend $?; then
 		local CIP MSG INFO FW CARD MISDN
 
@@ -93,11 +94,11 @@ start() {
 			if [ -n "${FW}" ]; then
 				for CARD in ${MISDN}; do
 					ebegin "Loading firmware '${FW##*/}' onto controller ${CARD}"
-					/usr/sbin/avmcapictrl &>/dev/null load "${FW}" "${CARD}"
+					/usr/sbin/avmcapictrl load "${FW}" "${CARD}" 2>&1 >/dev/null
 					eend $?
 				done
 			else
-				eerror "Firmware 'ISAR.BIN' not found in ${FWDIRS[0]}"
+				eerror "Firmware 'ISAR.BIN' not found in ${FWDIRS%% *}"
 			fi
 		fi
 
@@ -105,10 +106,10 @@ start() {
 		if [ -n "${CAPI_CIP_DEVICES}" -a -x /usr/bin/ciptool ]; then
 			for CIP in ${CAPI_CIP_DEVICES}; do
 				ebegin "CIP connect to ${CIP}"
-				INFO=$(/usr/bin/ciptool 2>&1 connect "${CIP}")
+				INFO=$(/usr/bin/ciptool connect "${CIP}" 2>&1)
 				if ! eend $?; then
 					[ -n "${INFO}" ] && \
-					while read line MSG; do	eerror "  ${MSG}"; done < <(echo "${INFO}")
+					echo "${INFO}" | while read line MSG; do eerror "  ${MSG}"; done
 				fi
 			done
 			sleep 0.3  # give subsystems time to initialize
@@ -118,26 +119,26 @@ start() {
 		[ -f /proc/capi/capidrv -o "${CAPI_LOAD_CAPIDRV}" != "yes" ] || /sbin/modprobe -s capidrv
 
 		# show controllers
-		INFO=$(</proc/capi/controller)
+		INFO=$(cat /proc/capi/controller)
 		if [ -n "${INFO}" ]; then
 			einfo "Available CAPI controllers:"
-			while read MSG; do einfo "  ${MSG}"; done < <(echo "${INFO}")
+			echo "${INFO}" | while read MSG; do einfo "  ${MSG}"; done
 		fi
 	fi
 	return 0  # never fail
 }
 
 stop() {
-	local DRV CIP RET FCNT=0 DRIVERS=$(/bin/sort -u <(capi_drivers))
+	local DRV CIP RET FCNT=0 DRIVERS=$(capi_drivers | sort -u)
 
 	# if some CAPI applications are still running, kill 'em
-	if /bin/fuser 2>/dev/null -s /dev/capi20; then
+	if fuser -s /dev/capi20 2>/dev/null; then
 		ebegin "Stopping CAPI applications"
-		/bin/fuser -ks /dev/capi20; RET=$?
+		fuser -ks /dev/capi20; RET=$?
 		while [ ${RET} -eq 0 -a ${FCNT} -lt 10 ]; do
-			: $((FCNT++)); sleep 0.5; /bin/fuser -s /dev/capi20; RET=$?
+			: $((FCNT++)); sleep 0.5; fuser -s /dev/capi20; RET=$?
 		done
-		[ $RET -ne 0 ]
+		[ ${RET} -ne 0 ]
 		eend $?
 	fi
 
@@ -150,8 +151,10 @@ stop() {
 
 	ebegin "Stopping CAPI"
 	[ "${CAPI_LOAD_CAPIDRV}" = "yes" ] && /sbin/modprobe -sqr capidrv
-	[ "${CAPI_UNLOAD_CARDS}" = "yes" ] && /usr/sbin/capiinit &>/dev/null stop
-	for DRV in ${DRIVERS}; do /sbin/modprobe -sqr "${DRV}"; done
+	[ "${CAPI_UNLOAD_CARDS}" = "yes" ] && /usr/sbin/capiinit stop &>/dev/null
+	for DRV in ${DRIVERS}; do
+		/sbin/modprobe -sqr "${DRV}"
+	done
 	/sbin/modprobe -sqr capi
 	eend 0  # ignore errors
 }
@@ -168,10 +171,10 @@ info() {
 
 showconfig() {
 	local MSG INFO
-	if INFO=$(/usr/sbin/capiinit 2>&1 show); then
-		while read MSG; do einfo "${MSG}"; done < <(echo "${INFO}")
+	if INFO=$(/usr/sbin/capiinit show 2>&1); then
+		echo "${INFO}" | while read MSG; do einfo "${MSG}"; done
 		return 0
 	fi
-	while read MSG; do eerror "${MSG}"; done < <(echo "${INFO}")
+	echo "${INFO}" | while read MSG; do eerror "${MSG}"; done
 	return 1
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.60 2008/01/20 11:48:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.61 2008/04/20 23:00:45 sbriesen Exp $
+
+  20 Apr 2008; Stefan Briesenick <sbriesen@gentoo.org> files/capi.initd:
+  made init-script posix-shell compatible
 
   20 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org>
   +files/capi20-types.diff, capi4k-utils-20050718-r3.ebuild:
