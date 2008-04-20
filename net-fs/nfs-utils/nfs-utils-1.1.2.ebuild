@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.2.ebuild,v 1.2 2008/04/20 10:49:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.2.ebuild,v 1.3 2008/04/20 16:57:59 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -39,6 +39,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	if use nonfsv4; then
+		myconf="--disable-gss"
+	else
+		myconf="$(use_enable kerberos gss)"
+	fi
+
 	econf \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
@@ -47,7 +54,7 @@ src_compile() {
 		--enable-secure-statd \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_enable !nonfsv4 nfsv4) \
-		$(use !nonfsv4 && use_enable kerberos gss) \
+		${myconf} \
 		|| die "Configure failed"
 	emake || die "Failed to compile"
 }
