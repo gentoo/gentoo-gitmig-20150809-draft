@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.19 2008/02/04 17:12:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.20 2008/04/20 15:47:59 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 x86"
+KEYWORDS="amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 src_unpack() {
