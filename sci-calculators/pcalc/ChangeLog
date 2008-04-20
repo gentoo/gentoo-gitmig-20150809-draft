@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.19 2008/04/20 10:20:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.20 2008/04/20 12:26:57 rich0 Exp $
+
+  20 Apr 2008; Richard Freeman <rich0@gentoo.org> pcalc-1.2.ebuild:
+  amd64 stable - 218192
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> pcalc-1.2.ebuild:
   ia64/x86 stable wrt #218192
