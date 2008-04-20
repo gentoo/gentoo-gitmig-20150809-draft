@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.20.0-r1.ebuild,v 1.10 2008/04/20 01:35:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.20.0-r1.ebuild,v 1.11 2008/04/20 02:18:33 vapier Exp $
 
 inherit virtualx eutils gnome2 autotools
 
@@ -67,6 +67,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-async-thumbnail-framing.patch"
 	epatch "${FILESDIR}/${P}-thumbnail-flashing.patch"
 	epatch "${FILESDIR}/${P}-small-font-crasher.patch"
+
+	# Fix for autoconf 2.62, see Gnome Bug #527315
+	epatch "${FILESDIR}/${PN}-2.20.0-fix_broken_configure.patch"
 
 	eautoreconf
 }
