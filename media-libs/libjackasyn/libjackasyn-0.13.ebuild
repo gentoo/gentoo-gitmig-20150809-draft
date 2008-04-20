@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.13.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.13.ebuild,v 1.4 2008/04/20 18:27:02 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,18 +19,20 @@ DEPEND="media-sound/jack-audio-connection-kit
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-qa.patch"
 	epatch "${FILESDIR}/${P}-pic.patch"
 	epatch "${FILESDIR}/${P}-libdir.patch"
 	epatch "${FILESDIR}/${P}-execprefix.patch"
+	epatch "${FILESDIR}/${P}-tests.patch"
 }
 
 src_compile() {
+	tc-export CC
 	local myconf
 	use debug && myconf="--enable-debug"
 	econf ${myconf} || die
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die
+	emake || die "emake failed"
 }
 
 src_install() {
