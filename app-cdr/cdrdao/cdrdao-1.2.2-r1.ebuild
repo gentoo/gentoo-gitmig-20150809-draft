@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r1.ebuild,v 1.1 2008/03/15 09:45:48 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r1.ebuild,v 1.2 2008/04/20 23:54:20 dirtyepic Exp $
 
-inherit flag-o-matic eutils
+inherit eutils flag-o-matic eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
@@ -37,6 +37,9 @@ src_unpack() {
 	# the status quo for the time being.
 	# Upstream bug #1596097
 	epatch "${FILESDIR}/${P}"-nonlinux.patch
+
+	# GCC 4.3 patch.  Should be fixed in next version.
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	# Display better SCSI messages (advise from Bug 43003)
 	cd scsilib/include

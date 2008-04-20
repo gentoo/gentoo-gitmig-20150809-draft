@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.106 2008/03/15 09:45:48 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.107 2008/04/20 23:54:20 dirtyepic Exp $
+
+  20 Apr 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/cdrdao-1.2.2-gcc43.patch, cdrdao-1.2.2-r1.ebuild:
+  Add patch for GCC 4.3, bug #213191.
 
 *cdrdao-1.2.2-r1 (15 Mar 2008)
 
