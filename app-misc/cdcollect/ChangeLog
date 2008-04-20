@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdcollect
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.4 2007/02/28 14:57:08 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.5 2008/04/20 16:00:14 drac Exp $
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org> -cdcollect-0.5.1.ebuild,
+  cdcollect-0.6.0.ebuild:
+  Move pkgconfig from RDEPEND to DEPEND.
 
 *cdcollect-0.6.0 (28 Feb 2007)
 

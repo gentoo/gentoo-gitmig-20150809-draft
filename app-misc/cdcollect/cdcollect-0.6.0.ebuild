@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.1 2007/02/28 14:57:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.2 2008/04/20 16:00:14 drac Exp $
 
 inherit gnome2 mono
 
@@ -13,20 +13,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/mono-1.1.17
+RDEPEND=">=dev-lang/mono-1.1.17
 	>=dev-dotnet/gtk-sharp-2.8.0
 	>=x11-libs/gtk+-2.8.0
 	>=dev-db/sqlite-3.3.5
 	>=gnome-base/gconf-2.8.0
-	>=dev-util/pkgconfig-0.9
 	dev-perl/XML-Parser
 	>=dev-util/intltool-0.25
 	>=dev-dotnet/gconf-sharp-2.8.0
 	>=dev-dotnet/glade-sharp-2.8.0
 	>=dev-dotnet/gnome-sharp-2.8.0
 	>=dev-dotnet/gnomevfs-sharp-2.8.0"
-
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 USE_DESTDIR="1"
 
