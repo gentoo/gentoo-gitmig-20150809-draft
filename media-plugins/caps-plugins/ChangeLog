@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.19 2008/04/20 21:54:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.20 2008/04/20 21:55:37 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  handle to proaudio herd
 
   20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   -caps-plugins-0.2.1-r1.ebuild, -caps-plugins-0.2.3.ebuild,
