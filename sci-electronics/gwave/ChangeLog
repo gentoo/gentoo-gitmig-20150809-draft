@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.17 2007/11/25 17:03:02 calchan Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.18 2008/04/20 22:40:13 calchan Exp $
+
+*gwave-20080127 (20 Apr 2008)
+
+  20 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +gwave-20080127.ebuild:
+  Version bump, thanks to Fabio Rossi (bug #216527).
 
   25 Nov 2007; Denis Dupeyron <calchan@gentoo.org> gwave-20070514.ebuild:
   Removed ~amd64 again as the fix for guile-gnome-platform doesn't appear to
