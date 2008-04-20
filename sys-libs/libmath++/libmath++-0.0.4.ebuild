@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.9 2006/11/21 20:49:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.10 2008/04/20 21:51:02 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -19,9 +19,14 @@ IUSE="doc"
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
-src_compile() {
-	eautoreconf
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
+	eautoreconf
+}
+
+src_compile() {
 	econf || die "configure failed"
 	emake || die "make filed"
 
