@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.37 2008/04/14 21:05:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.38 2008/04/20 16:12:09 maekke Exp $
+
+  20 Apr 2008; Markus Meier <maekke@gentoo.org> qsynth-0.3.2.ebuild:
+  amd64/x86 stable, bug #217727
 
   14 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> qsynth-0.3.2.ebuild:
   Update deps for split Qt 4.4, see bug #217187.
