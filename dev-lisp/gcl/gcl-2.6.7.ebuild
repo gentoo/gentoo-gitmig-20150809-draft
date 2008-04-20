@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.10 2007/07/22 08:06:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.11 2008/04/20 22:00:53 flameeyes Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -30,11 +30,11 @@ src_unpack() {
 	mv ${T}/makefile ${S}/info/makefile
 	epatch ${FILESDIR}/${PV}-fix-configure.in-gentoo.patch || die
 	epatch ${FILESDIR}/${P}-fix-configure.in-bfd.patch || die
+
+	eautoconf || die
 }
 
 src_compile() {
-	eautoconf || die
-
 	export SANDBOX_ON=0
 	local myconfig=""
 

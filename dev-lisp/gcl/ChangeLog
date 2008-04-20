@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.50 2007/12/22 13:12:38 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.51 2008/04/20 22:00:53 flameeyes Exp $
+
+  20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> gcl-2.6.7.ebuild,
+  gcl-2.6.7-r1.ebuild:
+  Run eautoreconf in src_unpack phase, bug #207448.
 
   22 Dec 2007; nixnut <nixnut@gentoo.org> gcl-2.6.7-r3.ebuild:
   Stable on ppc wrt bug 201216
