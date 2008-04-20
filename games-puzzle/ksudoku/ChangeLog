@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ksudoku
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.12 2007/10/22 22:04:03 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.13 2008/04/20 09:01:33 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/ksudoku-0.4-gcc43.patch, ksudoku-0.4.ebuild:
+  Fix by Holger Ackermann for building with gcc-4.3 #218297.
 
   22 Oct 2007; Markus Ullmann <jokey@gentoo.org> ksudoku-0.4.ebuild:
   Add opengl use flag dep check for bug #195817
