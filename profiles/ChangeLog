@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1338 2008/04/15 18:38:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1339 2008/04/20 14:42:18 welp Exp $
+
+  20 Apr 2008; <welp@gentoo.org> use.local.desc:
+  New local USE flag for twitux
 
   15 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Masked media-plugins/vdr-dvdselect for removal.
