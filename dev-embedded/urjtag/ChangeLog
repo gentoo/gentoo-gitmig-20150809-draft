@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.1 2008/02/26 04:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.2 2008/04/20 19:10:10 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> urjtag-0.8.ebuild:
+  Control libftdi dep via USE=ftdi and block dev-embedded/jtag #217847.
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> urjtag-0.8.ebuild:
+  Control libftdi via USE=ftdi.
 
 *urjtag-0.8 (26 Feb 2008)
 
