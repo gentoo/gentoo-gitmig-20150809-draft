@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.471.3.ebuild,v 1.3 2008/04/18 12:54:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.471.3.ebuild,v 1.4 2008/04/20 16:53:19 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -67,6 +67,11 @@ pkg_setup() {
 	BUILD_TARGETS="kmod_build"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
+
+# Add this next section until ATI fixes the issue. (gentoo bug #218422)
+	if ( kernel_is 2 6 25 ); then
+		die "This is currently broken on 2.6.25 kernels, see gentoo bug #218422."
+	fi
 
 	if ! kernel_is 2 6; then
 		eerror "Need a 2.6 kernel to compile against!"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.116 2008/04/18 12:54:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.117 2008/04/20 16:53:19 je_fro Exp $
+
+  20 Apr 2008; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.471.3.ebuild:
+  Die on 2.6.25 kernels until fixed - see bug #218422.
 
   13 Apr 2008; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.471.3.ebuild:
   Remove old dep
