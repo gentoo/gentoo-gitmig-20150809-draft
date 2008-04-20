@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.62 2008/01/14 19:07:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.63 2008/04/20 18:14:52 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/hydrogen-0.9.3-gcc43.patch, hydrogen-0.9.3-r2.ebuild:
+  gcc 4.3 build fix by Peter Alfredsen <peter.alfredsen@gmail.com> in bug
+  #218425
 
   14 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   hydrogen-0.9.3-r2.ebuild:
