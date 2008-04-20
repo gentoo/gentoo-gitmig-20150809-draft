@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.84.ebuild,v 1.4 2007/12/22 19:16:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.84.ebuild,v 1.5 2008/04/20 14:22:03 maekke Exp $
 
 inherit java-pkg-opt-2 python toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="java python tools"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )"

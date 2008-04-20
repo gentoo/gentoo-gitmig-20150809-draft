@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.9 2008/01/08 14:58:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.10 2008/04/20 14:22:03 maekke Exp $
+
+  20 Apr 2008; Markus Meier <maekke@gentoo.org> libsvm-2.84.ebuild:
+  x86 stable, bug #217700
 
 *libsvm-2.85 (08 Jan 2008)
 
