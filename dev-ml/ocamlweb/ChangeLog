@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.11 2008/04/19 14:49:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.12 2008/04/20 14:06:34 maekke Exp $
+
+  20 Apr 2008; Markus Meier <maekke@gentoo.org> ocamlweb-1.37.ebuild:
+  x86 stable, bug #217535
 
   19 Apr 2008; nixnut <nixnut@gentoo.org> ocamlweb-1.37.ebuild:
   Stable on ppc wrt bug 217535
