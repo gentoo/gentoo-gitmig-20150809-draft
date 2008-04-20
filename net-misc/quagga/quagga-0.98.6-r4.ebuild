@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.1 2008/02/20 05:19:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.2 2008/04/20 03:49:21 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -18,7 +18,8 @@ KEYWORDS="alpha amd64 arm hppa ppc s390 sparc x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms fix-connected-rt multipath tcp-zebra"
 RESTRICT="userpriv"
 
-DEPEND=">=sys-libs/libcap-1.10-r5
+DEPEND="sys-libs/readline
+	>=sys-libs/libcap-1.10-r5
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND}
