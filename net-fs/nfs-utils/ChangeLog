@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.120 2008/04/20 00:39:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.121 2008/04/20 00:52:23 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/nfs.initd,
+  files/rpc.gssd.initd, +files/rpc.svcgssd.initd,
+  nfs-utils-1.0.12-r5.ebuild, nfs-utils-1.1.0-r1.ebuild,
+  nfs-utils-1.1.1.ebuild:
+  Split the gssd and svcgssd init.d scripts #186037 by Paul B. Henson.
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.1.1.ebuild:
   Only leverage kerberos when USE="-nonfsv4" #212160.
