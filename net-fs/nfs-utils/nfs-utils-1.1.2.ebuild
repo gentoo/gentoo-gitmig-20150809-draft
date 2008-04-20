@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.2.ebuild,v 1.1 2008/04/20 10:41:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.2.ebuild,v 1.2 2008/04/20 10:49:29 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -31,6 +31,12 @@ RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 # util-linux dep is to prevent man-page collision
 DEPEND="${RDEPEND}
 	>=sys-apps/util-linux-2.12r-r7"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-rpcgen-ioctl.patch
+}
 
 src_compile() {
 	econf \

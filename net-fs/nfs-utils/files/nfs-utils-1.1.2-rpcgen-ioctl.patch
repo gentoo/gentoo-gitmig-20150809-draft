@@ -1,0 +1,14 @@
+http://bugs.gentoo.org/174393
+
+--- tools/rpcgen/rpc_main.c
++++ tools/rpcgen/rpc_main.c
+@@ -548,6 +548,9 @@
+ #ifndef linux
+ 	if( !tirpcflag && inetdflag )
+ 	  f_print(fout, "#include <sys/ttycom.h>/* TIOCNOTTY */\n");
++#else
++	if( !tirpcflag )
++	  f_print(fout, "#include <sys/ioctl.h>/* TIOCNOTTY */\n");
+ #endif
+ 	if( Cflag && (inetdflag || pmflag ) ) {
+ 	  f_print(fout, "#ifdef __cplusplus\n");
