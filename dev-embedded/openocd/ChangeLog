@@ -1,0 +1,8 @@
+# ChangeLog for dev-embedded/openocd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.1 2008/04/20 01:33:54 vapier Exp $
+
+*openocd-9999 (19 Apr 2008)
+
+  19 Apr 2008; Mike Frysinger <vapier@gentoo.org> +openocd-9999.ebuild:
+  Initial ebuild by Claes Mogren and Kliakhandler Kosta and me #200689.
