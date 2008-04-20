@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.5 2008/03/10 14:21:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.6 2008/04/20 11:25:50 vapier Exp $
 
 inherit fixheadtails eutils autotools multilib
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ~s390 sparc x86"
 IUSE=""
 
-DEPEND="dev-libs/libpcre
+RDEPEND="dev-libs/libpcre
+	sys-devel/libtool
 	dev-lang/perl"
 
 src_unpack() {
@@ -24,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}/wml-2.0.9-gcc41.patch"
 	epatch "${FILESDIR}/wml-2.0.9-autotools-update.patch"
 	epatch "${FILESDIR}/wml-2.0.11-tmpfile.patch"
+	epatch "${FILESDIR}"/${P}-autotools.patch
 
 	einfo "Patching Makefile.in files to fix various problems"
 	# Patch Makefile to avoid stripping binaries
@@ -45,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --libdir=/usr/$(get_libdir) || die "./configure failed"
+	econf --without-included-ltdl || die "./configure failed"
 	emake || die "emake failed"
 }
 
