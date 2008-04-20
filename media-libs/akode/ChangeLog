@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.35 2008/01/10 17:04:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.36 2008/04/20 19:46:51 philantrop Exp $
+
+  20 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/akode-2.0.2-gcc43.patch, akode-2.0.2.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Steve Warren
+  on bug 218300.
 
   10 Jan 2008; Samuli Suominen <drac@gentoo.org> -akode-2.0_beta3.ebuild,
   akode-2.0_rc1.ebuild, -akode-2.0.1.ebuild:
