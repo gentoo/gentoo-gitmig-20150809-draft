@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.51 2008/04/08 20:46:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.52 2008/04/20 20:21:26 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  rezound-0.12.3_beta-r1.ebuild:
+  Fix build with autoconf 2.62, bug #218164
 
   08 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   rezound-0.12.3_beta.ebuild, rezound-0.12.3_beta-r1.ebuild:
