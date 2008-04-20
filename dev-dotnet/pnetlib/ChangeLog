@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnetlib
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.41 2007/08/28 23:41:37 jurek Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.42 2008/04/20 21:55:59 flameeyes Exp $
+
+  20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> pnetlib-0.6.12.ebuild:
+  Run eautoreconf in src_unpack phase, bug #207489.
 
   28 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> pnetlib-0.8.0.ebuild:
   Added secondary SRC_URI
