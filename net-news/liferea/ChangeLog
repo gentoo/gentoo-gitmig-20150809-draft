@@ -1,6 +1,49 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.149 2008/04/14 13:43:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.150 2008/04/20 17:58:25 dang Exp $
+
+*liferea-1.4.15 (20 Apr 2008)
+
+  20 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.4.15.ebuild:
+  Bump to 1.4.15
+
+  * Fixes assertion when creating subscriptions using
+
+  the advanced subscription dialog.
+
+  * Fixes Debian #433393: subscription not update
+
+  anymore when number of flagged items = cache limit.
+
+  (reported by Eddy Petrisor)
+
+  * Fixes OpenSuSE #371307: possible undefined behaviour
+
+  when decoding authentication data.
+
+  (reported by Christoph Thiel)
+
+  * Fixes SF #1912774: news.yv valid feed "is not available"
+
+  (patch by Luis Rodrigo Gallardo Cruz)
+
+  * Fixes SF #1874030: build breakage with recent WebKit
+
+  versions (reported by Thomas Zajic)
+
+  * Fixes SF #1919640: segfault when 'Ctrl-R' pressed
+
+  without selection (patch by Patrick Bogen)
+
+  * Merged patch from OpenBSD (SF #1924623) to correctly
+
+  handle feeds served with non-ASCII HTTP headers.
+
+  (reported by viq)
+
+  * Merged patch from Arnold Noronha that fixes 
+
+  deallocation of GdkColor instances.
 
   14 Apr 2008; Daniel Gryniewicz <dang@gentoo.org>
   +files/liferea-1.4.14-turkish-translation-fix.patch,
