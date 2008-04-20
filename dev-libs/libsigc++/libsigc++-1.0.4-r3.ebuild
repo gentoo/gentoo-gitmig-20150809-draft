@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.10 2007/10/26 13:29:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.11 2008/04/20 22:51:16 dirtyepic Exp $
 
 inherit eutils
 
@@ -15,6 +15,13 @@ IUSE="debug"
 
 DEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
+
 src_compile() {
 	use debug \
 		&& myconf="--enable-debug=yes" \
@@ -27,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README* INSTALL NEWS
 }
 
