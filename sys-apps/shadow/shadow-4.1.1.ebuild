@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.1.ebuild,v 1.2 2008/04/06 22:29:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.1.ebuild,v 1.3 2008/04/20 06:59:59 vapier Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -31,10 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
-	# running of commands as user with /bin/false as shell, closing bug #15015.
-	# *** This one could be a security hole; disable for now ***
-	#epatch "${FILESDIR}"/${P}-nologin-run-sh.patch
+	epatch "${FILESDIR}"/${P}-audit.patch #216291
 
 	# tweak the default login.defs
 	epatch "${FILESDIR}"/${PN}-4.0.17-login.defs.patch
