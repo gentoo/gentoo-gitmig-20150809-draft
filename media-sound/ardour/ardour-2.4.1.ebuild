@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.4.1.ebuild,v 1.1 2008/04/10 08:02:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.4.1.ebuild,v 1.2 2008/04/20 16:54:45 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic versionator
 
@@ -69,6 +69,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-2.0.3-sndfile-external.patch"
 	epatch "${FILESDIR}/${PN}-2.4-cflags.patch"
 	epatch "${FILESDIR}/${PN}-2.3.1-soundtouch.patch"
+	epatch "${FILESDIR}/${PN}-2.4-gcc43.patch"
 }
 
 ardour_use_enable() {

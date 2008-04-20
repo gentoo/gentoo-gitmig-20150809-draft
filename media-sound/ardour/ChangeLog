@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.74 2008/04/20 16:20:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.75 2008/04/20 16:54:45 aballier Exp $
+
+  20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/ardour-2.4-gcc43.patch, ardour-2.4.1.ebuild:
+  Fix build with gcc 4.3, by jwrdegoede, reported by David Carlos Manuelda
+  <StormByte@gmail.com>, bug #217307
 
   20 Apr 2008; Alexis Ballier <aballier@gentoo.org> -ardour-2.3.1.ebuild,
   -ardour-2.4.ebuild:
