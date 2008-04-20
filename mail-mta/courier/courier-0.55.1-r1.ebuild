@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1-r1.ebuild,v 1.4 2008/02/03 10:51:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1-r1.ebuild,v 1.5 2008/04/20 12:11:16 hanno Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -59,15 +59,15 @@ src_unpack() {
 		ebeep 4
 		epause 4 )
 	unpack ${A}
-	cd ${S}
-	use norewrite && epatch ${FILESDIR}/norewrite.patch
+	cd "${S}"
+	use norewrite && epatch "${FILESDIR}/norewrite.patch"
 	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 
 	epatch "${FILESDIR}/pam-include.patch"
 
 	# disable link to fam.
-	epatch ${FILESDIR}/fam-disable-check.patch
-	cd ${S}/maildir
+	epatch "${FILESDIR}/fam-disable-check.patch"
+	cd "${S}/maildir"
 	eautoreconf
 }
 
@@ -101,7 +101,7 @@ src_compile() {
 		--with-paranoid-smtpext \
 		--with-db=gdbm \
 		--disable-autorenamesent \
-		--cache-file=${S}/configuring.cache \
+		--cache-file="${S}/configuring.cache" \
 		--host=${CHOST} ${myconf} debug=true || die "./configure"
 	sed -e'/^install-perms-local:/a\	sed -e\"s|^|'${D}'|g\" -i permissions.dat' -i Makefile
 	emake || die "Compile problem"
@@ -140,26 +140,26 @@ src_install() {
 	einfo "Setting up maildirs in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	dodir /etc/skel
-	${S}/maildir/maildirmake ${D}/etc/skel/.maildir
+	"${S}/maildir/maildirmake" "${D}/etc/skel/.maildir"
 	keepdir /etc/skel/.maildir
 
 	diropts -o mail -g mail
 	keepdir /var/run/courier
 	keepdir /var/lib/courier/tmp
 	keepdir /var/lib/courier/msgs
-	make install DESTDIR=${D} || die "install"
+	make install DESTDIR="${D}" || die "install"
 	make install-configure || die "install-configure"
 
-	for dir2keep in `(cd ${D} && find ./var/lib/courier -type d)` ; do
+	for dir2keep in `(cd "${D}" && find ./var/lib/courier -type d)` ; do
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
 	done
 
-	newinitd ${FILESDIR}/courier-init-r1 courier
-	use fam || sed -i -e's|^.*use famd$||g' ${D}/etc/init.d/courier
+	newinitd "${FILESDIR}/courier-init-r1" courier
+	use fam || sed -i -e's|^.*use famd$||g' "${D}/etc/init.d/courier"
 
-	cd ${D}/etc/courier
+	cd "${D}/etc/courier"
 	insinto /etc/courier
-	newins ${FILESDIR}/apache-sqwebmail.inc apache-sqwebmail.inc
+	newins "${FILESDIR}/apache-sqwebmail.inc" apache-sqwebmail.inc
 
 	if use pam ; then
 		dodir /etc/pam.d
@@ -172,7 +172,7 @@ src_install() {
 	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
 
 	( [ -e /etc/courier/sizelimit ] && cat /etc/courier/sizelimit || echo 0 ) \
-		> ${D}/etc/courier/sizelimit
+		> "${D}/etc/courier/sizelimit"
 	etc_courier maildroprc ""
 	etc_courier esmtproutes ""
 	etc_courier backuprelay ""
@@ -207,53 +207,53 @@ src_install() {
 
 	# Fix for a sandbox violation on subsequential merges
 	# - ticho@gentoo.org, 2005-07-10
-	rm ${D}/usr/sbin/{pop3d,imapd}{,-ssl}
+	rm "${D}"/usr/sbin/{pop3d,imapd}{,-ssl}
 	dosym /usr/share/courier/pop3d /usr/sbin/courier-pop3d
 	dosym /usr/share/courier/pop3d-ssl /usr/sbin/courier-pop3d-ssl
 	dosym /usr/share/courier/imapd /usr/sbin/courier-imapd
 	dosym /usr/share/courier/imapd-ssl /usr/sbin/courier-imapd-ssl
 
-	cd ${S}
+	cd "${S}"
 	cp imap/README README.imap
 	use nls && cp unicode/README README.unicode
 	dodoc AUTHORS BENCHMARKS COPYING* ChangeLog* INSTALL NEWS README* TODO courier/doc/*.txt
 	dodoc tcpd/README.couriertls
 	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
-		>> ${D}/usr/share/doc/${P}/README.htmldocs
+		>> "${D}/usr/share/doc/${P}/README.htmldocs"
 
 	insinto /usr/$(get_libdir)/courier/courier
 	insopts -m 755 -o mail -g mail
-	doins ${S}/courier/webmaild
+	doins "${S}/courier/webmaild"
 	insinto /etc/courier/webadmin
 	insopts -m 400 -o mail -g mail
-	doins ${FILESDIR}/password.dist
+	doins "${FILESDIR}/password.dist"
 
 	# avoid name collisions in /usr/sbin, make webadmin match
-	cd ${D}/usr/sbin
+	cd "${D}/usr/sbin"
 	for f in imapd imapd-ssl pop3d pop3d-ssl ; do mv ${f} courier-${f} ; done
 	sed -i -e 's:\$sbindir\/imapd:\$sbindir\/courier-imapd:g' \
 		-e 's:\$sbindir\/imapd-ssl:\$sbindir\/courier-imapd-ssl:g' \
-		${D}/usr/share/courier/courierwebadmin/admin-40imap.pl \
+		"${D}/usr/share/courier/courierwebadmin/admin-40imap.pl" \
 		|| ewarn "failed to fix webadmin"
 	sed -i -e 's:\$sbindir\/pop3d:\$sbindir\/courier-pop3d:g' \
 		-e 's:\$sbindir\/pop3d-ssl:\$sbindir\/courier-pop3d-ssl:g' \
-		${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl \
+		"${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl" \
 		|| ewarn "failed to fix webadmin"
 
 	if use mailwrapper ; then
-		mv ${D}/usr/bin/sendmail ${D}/usr/bin/sendmail.courier
-		mv ${D}/usr/bin/rmail ${D}/usr/bin/rmail.courier
-		mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.courier
+		mv "${D}/usr/bin/sendmail" "${D}/usr/bin/sendmail.courier"
+		mv "${D}/usr/bin/rmail" "${D}/usr/bin/rmail.courier"
+		mv "${D}/usr/bin/mailq" "${D}/usr/bin/mailq.courier"
 
-		mv ${D}/usr/share/man/man1/sendmail.1 \
-			${D}/usr/share/man/man1/sendmail-courier.1
-		mv ${D}/usr/share/man/man1/mailq.1 \
-			${D}/usr/share/man/man1/mailq-courier.1
-		mv ${D}/usr/share/man/man1/rmail.1 \
-			${D}/usr/share/man/man1/rmail-courier.1
+		mv "${D}/usr/share/man/man1/sendmail.1" \
+			"${D}/usr/share/man/man1/sendmail-courier.1"
+		mv "${D}/usr/share/man/man1/mailq.1" \
+			"${D}/usr/share/man/man1/mailq-courier.1"
+		mv "${D}/usr/share/man/man1/rmail.1" \
+			"${D}/usr/share/man/man1/rmail-courier.1"
 
 		insinto /etc/mail
-		doins ${FILESDIR}/mailer.conf
+		doins "${FILESDIR}/mailer.conf"
 	else
 		dosym /usr/bin/sendmail /usr/sbin/sendmail
 	fi
@@ -293,7 +293,7 @@ pkg_config() {
 	fi
 	export domainname
 
-	if [ ${ROOT} = "/" ] ; then
+	if [ "${ROOT}" = "/" ] ; then
 		file=${ROOT}/etc/courier/locals
 		if [ ! -f ${file} ] ; then
 			echo "localhost" > ${file};

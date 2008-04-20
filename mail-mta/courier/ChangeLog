@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.98 2008/02/03 10:51:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.99 2008/04/20 12:11:16 hanno Exp $
+
+  20 Apr 2008; Hanno Boeck <hanno@gentoo.org> courier-0.55.1-r1.ebuild:
+  Fix quoting.
 
   03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> courier-0.53.2.ebuild,
   courier-0.53.2-r1.ebuild, courier-0.55.1.ebuild, courier-0.55.1-r1.ebuild:
