@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xxdiff
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.45 2008/03/18 19:57:26 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.46 2008/04/20 09:37:11 vapier Exp $
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/xxdiff-3.2-gcc43.patch, xxdiff-3.2-r1.ebuild:
+  Add fix from Debian for building with gcc-4.3 #214181 by Peter Alfredsen.
 
   18 Mar 2008; Raúl Porcel <armin76@gentoo.org> -xxdiff-3.0.2-r1.ebuild,
   -xxdiff-3.2.ebuild, xxdiff-3.2-r1.ebuild:
