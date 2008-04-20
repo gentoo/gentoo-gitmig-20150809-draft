@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.155 2008/04/20 10:34:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.156 2008/04/20 16:53:33 flameeyes Exp $
+
+  20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> ncurses-5.6-r2.ebuild:
+  Disable ada unless the (non-advertised) ada USE flag is enabled, otherwise
+  ncurses will fail to build when gnat is installed.
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org> ncurses-5.6-r2.ebuild:
   Drop USE="bootstrap build".

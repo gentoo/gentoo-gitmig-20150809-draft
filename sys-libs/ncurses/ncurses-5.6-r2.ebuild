@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.10 2008/04/20 10:34:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.11 2008/04/20 16:53:33 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,7 +37,8 @@ src_compile() {
 	unset TERMINFO
 
 	local myconf=""
-	use nocxx && myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
+	use nocxx && myconf="${myconf} --without-cxx --without-cxx-binding"
+	use ada || myconf="${myconf} --without-ada"
 
 	# First we build the regular ncurses ...
 	mkdir "${WORKDIR}"/narrowc
@@ -121,7 +122,7 @@ src_install() {
 	# We need the basic terminfo files in /etc, bug #37026
 	einfo "Installing basic terminfo files in /etc..."
 	for x in ansi console dumb linux rxvt screen sun vt{52,100,102,200,220} \
-	         xterm xterm-color xterm-xfree86
+			 xterm xterm-color xterm-xfree86
 	do
 		local termfile=$(find "${D}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
 		local basedir=$(basename $(dirname "${termfile}"))
