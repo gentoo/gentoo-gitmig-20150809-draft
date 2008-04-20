@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/sdcc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.38 2007/09/01 22:32:33 calchan Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.39 2008/04/20 17:58:58 calchan Exp $
+
+*sdcc-2.8.0 (20 Apr 2008)
+
+  20 Apr 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/sdcc-2.8.0-flags.patch, +sdcc-2.8.0.ebuild:
+  Version bump, thanks to Karl Hiramoto (bug #218007).
 
 *sdcc-2.7.0 (01 Sep 2007)
 
