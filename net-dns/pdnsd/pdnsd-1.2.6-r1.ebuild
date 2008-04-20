@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5-r1.ebuild,v 1.2 2007/11/05 05:49:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.6-r1.ebuild,v 1.1 2008/04/20 05:07:38 mrness Exp $
 
 inherit eutils
 
@@ -8,10 +8,10 @@ DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.phys.uu.nl/~rombouts/pdnsd.html"
 SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
 
-LICENSE="|| ( BSD GPL-2 )"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ppc s390 sparc x86"
-IUSE="ipv6 debug isdn nptl underscores"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sparc ~x86"
+IUSE="debug ipv6 isdn nptl underscores urandom"
 
 pkg_setup() {
 	enewgroup pdnsd
@@ -20,16 +20,13 @@ pkg_setup() {
 
 src_compile() {
 	local myconf=""
-
 	use debug && myconf="${myconf} --with-debug=3"
 	use nptl && myconf="${myconf} --with-thread-lib=NPTL"
-
-	[ -c /dev/urandom ] && myconf="${myconf} --with-random-device=/dev/urandom"
+	use urandom && myconf="${myconf} --with-random-device=/dev/urandom"
 
 	econf \
 		--sysconfdir=/etc/pdnsd \
 		--with-cachedir=/var/cache/pdnsd \
-		--infodir=/usr/share/info --mandir=/usr/share/man \
 		--with-default-id=pdnsd \
 		$(use_enable ipv6) \
 		$(use_enable isdn) \
@@ -52,7 +49,7 @@ src_install() {
 	newinitd "${FILESDIR}/pdnsd.rc6" pdnsd
 	newinitd "${FILESDIR}/pdnsd.online" pdnsd-online
 
-	keepdir /etc/conf.d
+	dodir /etc/conf.d
 	local config="${D}/etc/conf.d/pdnsd-online"
 
 	echo -e "# Enter the interface that connects you to the dns servers" >> "${config}"
@@ -66,9 +63,9 @@ src_install() {
 	use ipv6 && echo PDNSDCONFIG="-a" >> "${config}" \
 		|| echo PDNSDCONFIG="" >> "${config}"
 
-	#resolvconf-gentoo support
+	# gentoo resolvconf support
 	exeinto /etc/resolvconf/update.d
-	newexe "${FILESDIR}/pdnsd.resolvconf" pdnsd
+	newexe "${FILESDIR}/pdnsd.resolvconf-r1" pdnsd
 }
 
 src_test() {
@@ -91,16 +88,6 @@ src_test() {
 		dig @127.0.0.1 -p 33455 www.gentoo.org  | fgrep "status: NOERROR" || die "www.gentoo.org lookup failed"
 		kill $(<"${T}/pid") || die "failed to terminate daemon"
 	fi
-}
-
-pkg_preinst() {
-	# Copy cache from older versions
-	[ -f "${ROOT}/var/lib/pdnsd/pdnsd.cache" ] && \
-		cp "${ROOT}/var/lib/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
-
-	# Preserve the cache from previous version
-	[ -f "${ROOT}/var/cache/pdnsd/pdnsd.cache" ] && \
-		cp "${ROOT}/var/cache/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
 }
 
 pkg_postinst() {
