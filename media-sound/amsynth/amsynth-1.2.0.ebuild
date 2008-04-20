@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.4 2008/04/20 17:52:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.5 2008/04/20 18:44:02 flameeyes Exp $
 
 IUSE="debug alsa jack sndfile oss"
 
@@ -9,7 +9,7 @@ inherit eutils autotools
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
 
-DESCRIPTION="amSynth stands for Analogue Modeling SYNTHesizer. It provides virtual analogue synthesis in the style of the classic Moog Minimoog/Roland Junos."
+DESCRIPTION="Virtual analogue synthesizer."
 HOMEPAGE="http://amsynthe.sourceforge.net/"
 SRC_URI="mirror://sourceforge/amsynthe/${MY_P}.tar.gz"
 
