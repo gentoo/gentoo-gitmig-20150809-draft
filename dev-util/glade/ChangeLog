@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.95 2008/03/29 20:51:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.96 2008/04/20 20:05:23 eva Exp $
+
+*glade-3.4.4 (20 Apr 2008)
+
+  20 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> +glade-3.4.4.ebuild:
+  bump to 3.4.4. Mostly translation updates, a few bug fixes.
 
   29 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org> -glade-2.6.8.ebuild,
   -glade-2.6.8-r1.ebuild:
