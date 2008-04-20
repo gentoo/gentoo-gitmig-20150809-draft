@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.39 2008/04/14 13:07:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.40 2008/04/20 14:16:56 maekke Exp $
+
+  20 Apr 2008; Markus Meier <maekke@gentoo.org> struts-1.2.9-r2.ebuild:
+  amd64/x86 stable, bug #217624
 
   14 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> struts-1.2.9-r2.ebuild:
   Fix commons-validator dependencies to not only match a subset of slot 0. Use
