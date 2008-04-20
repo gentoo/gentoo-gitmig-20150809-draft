@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.42 2008/04/20 17:22:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.43 2008/04/20 21:05:21 fmccor Exp $
+
+  20 Apr 2008; Ferris McCormick <fmccor@gentoo.org> reportlab-2.1.ebuild:
+  Sparc stable, Bug #217761.  All tests pass.
 
   20 Apr 2008; nixnut <nixnut@gentoo.org> reportlab-2.1.ebuild:
   Stable on ppc wrt bug 217761
