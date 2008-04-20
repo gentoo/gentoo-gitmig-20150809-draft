@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1339 2008/04/20 14:42:18 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1340 2008/04/20 17:52:24 calchan Exp $
+
+  20 Apr 2008; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added local use flag 'boehmgc' for dev-embedded/sdcc.
 
   20 Apr 2008; <welp@gentoo.org> use.local.desc:
   New local USE flag for twitux
