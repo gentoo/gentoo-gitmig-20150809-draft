@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/twitux
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/ChangeLog,v 1.1 2008/04/20 14:36:03 welp Exp $
+
+*twitux-0.61 (20 Apr 2008)
+
+  20 Apr 2008; <welp@gentoo.org> +metadata.xml, +twitux-0.61.ebuild:
+  Initial import
+
