@@ -1,6 +1,15 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.38 2008/01/10 16:36:10 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.39 2008/04/20 13:20:21 eva Exp $
+
+*planner-0.14.3 (20 Apr 2008)
+
+  20 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/planner-0.14.3-eds-plugin.patch,
+  +files/planner-0.14.3-parallel-build.patch, +planner-0.14.3.ebuild:
+  bump to 0.14.3. Bug fixes, support for libgda-3, a few new features and
+  updated translations. Patch to fix parallel build issue and compilation
+  fix for eds plugin.
 
   10 Jan 2008; Mart Raudsepp <leio@gentoo.org> -planner-0.12.1.ebuild,
   -planner-0.13.ebuild, -planner-0.14.ebuild:
