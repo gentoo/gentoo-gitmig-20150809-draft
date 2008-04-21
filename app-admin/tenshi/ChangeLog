@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.51 2008/04/12 22:17:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.52 2008/04/21 19:08:55 jokey Exp $
+
+*tenshi-0.10-r1 (21 Apr 2008)
+
+  21 Apr 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/tenshi-openrc-init.patch, +tenshi-0.10-r1.ebuild:
+  (Proxy commit) add tenshi-0.10-r1 with fix for bug #218042
 
   12 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org> tenshi-0.10.ebuild:
   Added ~ppc, bug #213713

@@ -1,0 +1,11 @@
+--- tenshi.gentoo-init.orig	2008-04-17 12:25:05.000000000 +0100
++++ tenshi.gentoo-init	2008-04-17 12:32:06.000000000 +0100
+@@ -13,7 +13,7 @@
+ 
+ start() {
+ 	ebegin "Starting tenshi"
+-	start-stop-daemon --start --quiet --exec /usr/sbin/tenshi -- -c /etc/tenshi/tenshi.conf -P /var/lib/tenshi/tenshi.pid
++	start-stop-daemon --start --quiet --pidfile /var/lib/tenshi/tenshi.pid --exec /usr/sbin/tenshi -- -c /etc/tenshi/tenshi.conf -P /var/lib/tenshi/tenshi.pid
+ 	eend $?
+ }
+ 
