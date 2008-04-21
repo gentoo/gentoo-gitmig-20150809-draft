@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.5 2008/02/27 19:19:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.6 2008/04/21 22:07:48 dev-zero Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -55,7 +55,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}-libcap_detection.patch" \
 		"${FILESDIR}/${PV}-inotify_include.patch" \
-		"${FILESDIR}/${PV}-fix_broken_readdir_detection.patch"
+		"${FILESDIR}/${PV}-fix_broken_readdir_detection.patch" \
+		"${FILESDIR}/${PV}-autoconf-2.62-fix.patch"
 
 	eautoconf -I. -Ilib/replace
 
