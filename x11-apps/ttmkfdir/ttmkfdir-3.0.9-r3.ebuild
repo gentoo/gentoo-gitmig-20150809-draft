@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.6 2008/03/26 03:58:11 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.7 2008/04/21 01:59:35 dirtyepic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-encoding.patch
 	# fix pack to work with new freetype include scheme (#44119)
 	epatch "${FILESDIR}"/${P}-freetype_new_includes.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch  # 214138
 
 	# Install into regular filesystem, not /usr/X11R6 hierarchy
 	sed -i "s:/usr/X11R6:/usr:" README ttmkfdir.cpp
