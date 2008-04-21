@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.16 2008/04/21 14:52:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.17 2008/04/21 15:44:56 bicatali Exp $
 
 inherit eutils autotools fortran multilib flag-o-matic
 
@@ -17,8 +17,8 @@ IUSE="doc"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 DEPEND="app-admin/eselect-blas"
-
-RDEPEND="doc? ( app-doc/blas-docs )"
+RDEPEND="${DEPEND}
+	doc? ( app-doc/blas-docs )"
 
 S="${WORKDIR}/${LAPACKPN}-${LAPACKPV}"
 
