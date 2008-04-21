@@ -1,6 +1,10 @@
 # ChangeLog for app-office/karbon
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.83 2007/11/11 20:22:26 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.84 2008/04/21 18:59:17 flameeyes Exp $
+
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/karbon-1.6.2+gcc-4.3.patch, karbon-1.6.2.ebuild:
+  Fix building with GCC 4.3. Closes bug #214368.
 
   11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> karbon-1.6.2.ebuild:
   Added a minor fix for the desktop file as per bug 190006. Thanks to

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.10 2007/11/11 20:22:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.11 2008/04/21 18:59:17 flameeyes Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -39,6 +39,8 @@ KMEXTRACTONLY="lib/"
 KMCOMPILEONLY="filters/liboofilter"
 
 KMEXTRA="filters/karbon"
+
+PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
 
 need-kde 3.4
 
