@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.210 2008/04/14 21:29:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.211 2008/04/21 03:52:20 compnerd Exp $
+
+  21 Apr 2008; Saleem Abdulrasool <compnerd@gentoo.org> totem-2.22.1.ebuild:
+  Add built_with_use check for threading in python in the use=python case
 
   14 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   integrate USE flag documentation from bheekling's and Ford_Prefect's
