@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.1.ebuild,v 1.5 2007/08/21 20:53:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.1.ebuild,v 1.6 2008/04/21 19:54:50 ranger Exp $
 
 inherit eutils
 
-DESCRIPTION=" Librtas provides a set of libraries for user-space access to the Run-Time Abstraction Services (RTAS) on the ppc64 architecture."
+DESCRIPTION=" Librtas provides a set of libraries for user-space access to RTAS on the ppc64 architecture."
 SRC_URI="http://librtas.ozlabs.org/releases/librtas-${PV}.tar.gz"
 HOMEPAGE="http://librtas.ozlabs.org/"
 
