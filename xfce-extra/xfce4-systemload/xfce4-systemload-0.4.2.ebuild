@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.4.2.ebuild,v 1.14 2007/10/24 01:38:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.4.2.ebuild,v 1.15 2008/04/21 13:57:57 flameeyes Exp $
 
 inherit autotools xfce44
 
@@ -14,7 +14,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "/^AC_INIT/s/systemload_version()/systemload_version/" configure.in
-	eautoconf
+	eautoreconf
 }
 
 DOCS="AUTHORS ChangeLog NEWS README"

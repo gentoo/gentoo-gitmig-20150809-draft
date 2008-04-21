@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-systemload
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.45 2007/10/24 01:38:49 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.46 2008/04/21 13:57:57 flameeyes Exp $
+
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  xfce4-systemload-0.4.2.ebuild:
+  Run full eautoreconf, _not_ eautoconf, if the package does not only use
+  autoconf but also aclocal. Closes bug #217800.
 
   24 Oct 2007; Christoph Mende <angelos@gentoo.org>
   xfce4-systemload-0.4.2.ebuild:
