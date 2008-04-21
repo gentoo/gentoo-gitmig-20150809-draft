@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.24 2008/04/10 10:27:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.25 2008/04/21 14:42:06 armin76 Exp $
+
+  20 Apr 2008; Raúl Porcel <armin76@gentoo.org> sonata-1.4.2.ebuild:
+  Add ~sparc
 
   10 Apr 2008; Samuli Suominen <drac@gentoo.org> sonata-1.4.2.ebuild:
   Missing pkgconfig wrt #216933
