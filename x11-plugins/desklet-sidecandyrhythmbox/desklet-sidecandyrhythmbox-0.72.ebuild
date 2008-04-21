@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandyrhythmbox/desklet-sidecandyrhythmbox-0.72.ebuild,v 1.2 2005/05/09 18:46:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandyrhythmbox/desklet-sidecandyrhythmbox-0.72.ebuild,v 1.3 2008/04/21 20:48:59 armin76 Exp $
 
 inherit gdesklets
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 
 RDEPEND=">=gnome-extra/gdesklets-core-0.34.3
 	media-sound/rhythmbox"

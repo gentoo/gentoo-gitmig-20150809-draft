@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-sidecandyrhythmbox
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandyrhythmbox/ChangeLog,v 1.8 2006/10/16 03:42:37 agriffis Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandyrhythmbox/ChangeLog,v 1.9 2008/04/21 20:48:59 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  desklet-sidecandyrhythmbox-0.72.ebuild,
+  desklet-sidecandyrhythmbox-0.72-r1.ebuild:
+  Drop ~ia64
 
   16 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-sidecandyrhythmbox-0.72-r1.ebuild:
