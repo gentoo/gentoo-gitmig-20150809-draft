@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.1 2008/03/29 01:18:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.2 2008/04/21 15:15:37 flameeyes Exp $
 
 inherit kde multilib
 
@@ -26,7 +26,8 @@ RDEPEND="${DEPEND}
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${P}-ext_tsocks.patch"
+PATCHES=( "${FILESDIR}/${P}-ext_tsocks.patch"
+	"${FILESDIR}/${P}+gcc-4.3.patch" )
 
 src_compile() {
 	# Fix desktop file

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.28 2008/03/29 01:18:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.29 2008/04/21 15:15:37 flameeyes Exp $
+
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tork-0.27+gcc-4.3.patch, tork-0.27.ebuild:
+  Add patch to build with GCC 4.3.
 
 *tork-0.27 (29 Mar 2008)
 

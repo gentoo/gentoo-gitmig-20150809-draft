@@ -1,0 +1,64 @@
+Index: tork-0.27/src/functions.cpp
+===================================================================
+--- tork-0.27.orig/src/functions.cpp
++++ tork-0.27/src/functions.cpp
+@@ -29,6 +29,7 @@
+ 
+ #include "functions.h"
+ 
++#include <cstdlib>
+ 
+ namespace tk
+ {
+Index: tork-0.27/src/hiddensrvs.ui.h
+===================================================================
+--- tork-0.27.orig/src/hiddensrvs.ui.h
++++ tork-0.27/src/hiddensrvs.ui.h
+@@ -29,6 +29,8 @@
+ #include <kprocio.h>
+ #include <kmessagebox.h>
+ 
++#include <cstdlib>
++
+ void MyHidden::init()
+ {
+ 
+Index: tork-0.27/src/hidsrvwizard.ui.h
+===================================================================
+--- tork-0.27.orig/src/hidsrvwizard.ui.h
++++ tork-0.27/src/hidsrvwizard.ui.h
+@@ -23,6 +23,8 @@
+ #include <qtimer.h>
+ #include <kmessagebox.h>
+ 
++#include <cstdlib>
++
+ bool local;
+ QString thttpd;
+ 
+Index: tork-0.27/src/mixminion.ui.h
+===================================================================
+--- tork-0.27.orig/src/mixminion.ui.h
++++ tork-0.27/src/mixminion.ui.h
+@@ -26,6 +26,8 @@
+ #include <qtimer.h>
+ #include "torkconfig.h"
+ 
++#include <cstdlib>
++
+ KProgressDialog* progressDialog;
+ QString output;
+ 
+Index: tork-0.27/src/newfirstrunwizard.ui.h
+===================================================================
+--- tork-0.27.orig/src/newfirstrunwizard.ui.h
++++ tork-0.27/src/newfirstrunwizard.ui.h
+@@ -40,6 +40,8 @@
+ #include <krun.h>
+ #include <qvaluevector.h>
+ 
++#include <cstdlib>
++
+ #include "functions.h"
+ 
+ TorClient* client;
