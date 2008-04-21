@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8516 2008/04/20 22:45:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8517 2008/04/21 05:37:16 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -211,12 +211,6 @@ sci-libs/libgdgeda
 # Colin Morey <peitolm@gentoo.org> (20 Mar 2008)
 # Masked for testing, closing lots of little bugs
 =mail-mta/exim-4.69-r1
-
-# Jeroen Roovers <jer@gentoo.org> (19 Mar 2008)
-# Deprecated in favour of net-firewall/conntrack-tools, which
-# merges both conntrack and conntrackd (bug #213084).
-# Going for removal on or about 19 Apr 2008:
-net-firewall/conntrack
 
 # Donnie Berkholz <dberkholz@gentoo.org> (17 Mar 2008)
 # Most apps that use lm_sensors aren't compatible with the new version
