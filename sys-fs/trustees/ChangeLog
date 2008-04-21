@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/trustees
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.10 2008/02/01 12:43:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.11 2008/04/21 18:18:06 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> files/trustees.rc6:
   Update init script to work with current development version of OpenRC
