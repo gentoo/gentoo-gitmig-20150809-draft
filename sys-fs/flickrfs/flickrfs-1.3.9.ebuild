@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/flickrfs/flickrfs-1.3.9.ebuild,v 1.2 2008/02/13 08:06:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/flickrfs/flickrfs-1.3.9.ebuild,v 1.3 2008/04/21 19:56:47 jokey Exp $
 
 inherit distutils eutils
 
@@ -14,9 +14,8 @@ IUSE=""
 
 KEYWORDS="~x86"
 
-RDEPEND="
-	=dev-lang/python-2.4*
-	sys-fs/fuse-python
+RDEPEND="=dev-lang/python-2.4*
+	dev-python/fuse-python
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}"
 
