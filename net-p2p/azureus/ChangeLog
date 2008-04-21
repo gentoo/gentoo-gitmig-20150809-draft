@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.66 2008/04/20 14:39:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.67 2008/04/21 18:40:10 betelgeuse Exp $
+
+  21 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> azureus-3.0.5.2.ebuild:
+  Add back memory limit increasing. Should fix bug #218681.
 
 *azureus-3.0.5.2 (20 Apr 2008)
 
