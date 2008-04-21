@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kdissert
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.38 2007/07/27 19:10:46 carlo Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.39 2008/04/21 21:15:02 philantrop Exp $
+
+  21 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdissert-1.0.7-gcc43.patch, kdissert-1.0.7.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Marek
+  Vavrusa on bug 217553. Minor QA fixes.
 
   27 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
   -files/kdissert-1.0.5-bksys.diff, -files/kde.py-bksys-1.5.1.diff,
