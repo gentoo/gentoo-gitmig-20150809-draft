@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.0.ebuild,v 1.2 2008/03/15 14:17:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.0.ebuild,v 1.3 2008/04/21 17:06:13 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -94,6 +94,7 @@ src_compile() {
 		--disable-local-ffmpeg \
 		$(use_enable quicktime) \
 		$(use_with sparc dv1394) \
+		CPPFLAGS="-I${ROOT}usr/include/libavcodec -I${ROOT}usr/include/libavformat -I${ROOT}usr/include/libswscale" \
 		|| die "Configuration failed"
 	emake || die "Compilation failed"
 }
