@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceu/gfceu-0.6.0.ebuild,v 1.3 2008/02/29 19:03:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceu/gfceu-0.6.0-r1.ebuild,v 1.1 2008/04/21 10:23:50 nyhm Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://dietschnitzel.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="games-emulation/fceultra
@@ -29,8 +29,7 @@ src_unpack() {
 src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins ${PN}.glade || die "doins failed"
-
+	doins ${PN}.glade *.png || die "doins failed"
 	dodoc ChangeLog TODO
 	doman ${PN}.1
 	doicon ${PN}.png
