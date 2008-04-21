@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.81_rc1.ebuild,v 1.2 2008/02/19 01:31:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.81_rc1.ebuild,v 1.3 2008/04/21 19:20:42 philantrop Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.kuroo.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=app-portage/gentoolkit-0.2.3-r1
@@ -19,3 +19,5 @@ RDEPEND=">=app-portage/gentoolkit-0.2.3-r1
 	|| ( =kde-base/kdesu-3.5* =kde-base/kdebase-3.5* )"
 
 need-kde 3.5
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )

@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.24 2008/02/19 01:31:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.25 2008/04/21 19:20:42 philantrop Exp $
+
+  21 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kuroo-0.81_rc1-gcc43.patch, kuroo-0.81_rc1.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Nikos
+  Chantziaras on bug 217877. Marked stable on amd64.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kuroo-0.80.2-r1.ebuild,
   kuroo-0.81_rc1.ebuild:

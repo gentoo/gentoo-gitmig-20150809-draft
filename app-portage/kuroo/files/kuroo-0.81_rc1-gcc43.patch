@@ -1,0 +1,37 @@
+Kuroo 0.81_rc1 forgets to #include <stdlib.h> in some places and failes to
+build with GCC 4.3.
+
+diff -Naur kuroo-0.81_rc1/src/core/portagedb.cpp kuroo-0.81_rc1-r1/src/core/portagedb.cpp
+--- kuroo-0.81_rc1/src/core/portagedb.cpp	2007-08-31 03:57:39.000000000 +0300
++++ kuroo-0.81_rc1-r1/src/core/portagedb.cpp	2008-04-16 00:02:49.000000000 +0300
+@@ -23,6 +23,7 @@
+ #include <math.h>                 //DbConnection::sqlite_power()
+ #include <time.h>                 //query()
+ #include <unistd.h>               //usleep()
++#include <stdlib.h>               //RAND_MAX
+ #include <grp.h>
+ #include <pwd.h>
+ 
+diff -Naur kuroo-0.81_rc1/src/kurooinit.cpp kuroo-0.81_rc1-r1/src/kurooinit.cpp
+--- kuroo-0.81_rc1/src/kurooinit.cpp	2007-08-31 03:57:39.000000000 +0300
++++ kuroo-0.81_rc1-r1/src/kurooinit.cpp	2008-04-16 00:05:59.000000000 +0300
+@@ -22,6 +22,7 @@
+ #include "kurooinit.h"
+ #include "introdlg.h"
+ 
++#include <stdlib.h>
+ #include <sys/stat.h>
+ #include <grp.h>
+ #include <pwd.h>
+diff -Naur kuroo-0.81_rc1/src/main.cpp kuroo-0.81_rc1-r1/src/main.cpp
+--- kuroo-0.81_rc1/src/main.cpp	2007-08-31 05:02:19.000000000 +0300
++++ kuroo-0.81_rc1-r1/src/main.cpp	2008-04-16 00:05:48.000000000 +0300
+@@ -21,6 +21,8 @@
+ #include "settings.h"
+ #include "kuroo.h"
+ 
++#include <stdlib.h>
++
+ #include <kapplication.h>
+ #include <dcopclient.h>
+ #include <kaboutdata.h>
