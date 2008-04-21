@@ -12,3 +12,6 @@ dev-util/anjuta	valgrind
 dev-lang/swig	chicken
 # Needs pike
 dev-lang/swig	pike
+
+#wavgain fails to build
+media-sound/rubyripper wav

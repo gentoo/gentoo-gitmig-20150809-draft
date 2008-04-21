@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.100 2008/04/10 06:34:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.101 2008/04/21 15:21:15 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  wavegain fails to build
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
   changing around video_cards_via masking by unmasking only for available
