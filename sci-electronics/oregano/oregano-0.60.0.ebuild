@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.60.0.ebuild,v 1.5 2008/04/09 13:29:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.60.0.ebuild,v 1.6 2008/04/21 14:38:09 calchan Exp $
 
 inherit eutils fdo-mime
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc sparc ~x86"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=">=dev-libs/libxml2-2.6.20
+RDEPEND=">=dev-libs/libxml2-2.6.20
 	>=app-text/scrollkeeper-0.3.14
 	>=x11-libs/gtk+-2.8
 	>=gnome-base/libglade-2.5
@@ -23,7 +23,8 @@ DEPEND=">=dev-libs/libxml2-2.6.20
 	>=gnome-base/libgnomeprintui-2.12
 	>=x11-libs/cairo-1.0.0
 	=x11-libs/gtksourceview-1*
-	>=dev-util/scons-0.96.1
+	>=dev-util/scons-0.96.1"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.27 2008/04/09 13:29:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.28 2008/04/21 14:38:09 calchan Exp $
+
+  21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> oregano-0.40.5.ebuild,
+  oregano-0.60.0.ebuild:
+  Fixed pkgconfig dependencies, bug #217278.
 
   09 Apr 2008; Markus Dittrich <markusle@gentoo.org> oregano-0.40.5.ebuild,
   oregano-0.60.0.ebuild:
