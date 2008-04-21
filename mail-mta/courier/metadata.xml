@@ -2,9 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>no-herd</herd>
-  <longdescription>
-      Complete email package consisting of pop, imap, smtp, and fax
-      server and secure version of the above also
-  </longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		Complete email package consisting of pop, imap, smtp, and fax
+		server and secure version of the above also.
+	</longdescription>
 </pkgmetadata>
