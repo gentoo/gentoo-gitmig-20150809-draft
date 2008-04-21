@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/wulfstat
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.5 2007/05/11 21:55:33 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.6 2008/04/21 18:15:50 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml

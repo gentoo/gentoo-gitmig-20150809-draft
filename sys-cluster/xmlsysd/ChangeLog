@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/xmlsysd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/ChangeLog,v 1.7 2007/05/11 21:57:33 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/ChangeLog,v 1.8 2008/04/21 18:16:31 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
