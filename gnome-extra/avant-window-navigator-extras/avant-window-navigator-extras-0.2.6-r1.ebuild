@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.2 2008/03/27 21:48:08 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.3 2008/04/21 13:58:51 flameeyes Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	# Apply a fix from awn bzr to make gconf truly conditional.
 	epatch "${FILESDIR}"/${PV}-r346-gconf-conditional.patch
-	eautoconf
+	eautoreconf
 
 	# Disable pyc compiling.
 	mv py-compile py-compile.orig
