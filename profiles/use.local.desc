@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3509 2008/04/21 21:44:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3510 2008/04/21 22:09:15 caleb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -212,6 +212,7 @@ app-misc/roadnav:openstreetmap - Enable openstreetmap support
 app-misc/roadnav:scripting - Enable scripting support
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
+app-misc/sphinx:stemmer - Enable language stemming support for sphinx
 app-misc/strigi:clucene - Enable clucene backend support (recommended)
 app-misc/strigi:exiv2 - Enable support for exif/iptc metadata (recommended)
 app-misc/strigi:hyperestraier - Enable hyperestraier backend support (experimental)
