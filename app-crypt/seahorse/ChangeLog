@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.96 2008/04/07 20:45:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.97 2008/04/21 16:57:13 welp Exp $
+
+  21 Apr 2008; <welp@gentoo.org> seahorse-2.20.3.ebuild,
+  seahorse-2.22.0.ebuild, seahorse-2.22.1.ebuild:
+  keyring to gnome-keyring
 
 *seahorse-2.22.1 (07 Apr 2008)
 

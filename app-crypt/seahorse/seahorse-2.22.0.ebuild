@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.4 2008/04/12 13:42:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.0.ebuild,v 1.5 2008/04/21 16:57:13 welp Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="applet avahi dbus debug epiphany gedit keyring ldap libnotify nautilus"
+IUSE="applet avahi dbus debug epiphany gedit gnome-keyring ldap libnotify nautilus"
 
 RDEPEND=">=gnome-base/libgnome-2.14
 		 >=gnome-base/libgnomeui-2.10
@@ -39,7 +39,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 			epiphany? ( >=www-client/epiphany-2.14 )
 			gedit? ( >=app-editors/gedit-2.16 )
 		 )
-		 keyring? ( >=gnome-base/gnome-keyring-2.21.3.2 )
+		 gnome-keyring? ( >=gnome-base/gnome-keyring-2.21.3.2 )
 		 ldap? ( net-nds/openldap )
 		 libnotify? ( >=x11-libs/libnotify-0.3.2 )
 		 nautilus? ( >=gnome-base/nautilus-2.12 )"
@@ -87,7 +87,7 @@ pkg_setup() {
 		$(use_enable debug)
 		$(use_enable epiphany)
 		$(use_enable gedit)
-		$(use_enable keyring gnome-keyring)
+		$(use_enable gnome-keyring)
 		$(use_enable ldap)
 		$(use_enable libnotify)
 		$(use_enable nautilus)"
