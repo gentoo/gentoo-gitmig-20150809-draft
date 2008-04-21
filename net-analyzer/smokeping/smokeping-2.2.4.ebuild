@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.4.ebuild,v 1.3 2008/02/05 10:43:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.4.ebuild,v 1.4 2008/04/21 09:40:47 chtekk Exp $
 
 inherit perl-module eutils
 
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="amd64 sparc x86"
 
 DESCRIPTION="A powerful latency measurement tool."
 SRC_URI="http://oss.oetiker.ch/smokeping/pub/${P}.tar.gz"
@@ -43,7 +43,6 @@ src_install() {
 	perlinfo
 	insinto ${VENDOR_LIB}
 	doins lib/*.pm
-	### This one kind of concerns me, possible conflict with other software
 	insinto ${VENDOR_LIB}/Config
 	doins lib/Config/*.pm
 	insinto ${VENDOR_LIB}/Smokeping
@@ -55,7 +54,7 @@ src_install() {
 	insinto ${VENDOR_LIB}/Smokeping/sorters
 	doins lib/Smokeping/sorters/*.pm
 
-	# Create the files in var for rrd file storage and the cgi webserver script
+	# Create the files in /var for rrd file storage
 	keepdir /var/lib/${PN}/.simg
 	fowners smokeping:smokeping /var/lib/${PN}
 	if use apache2 ; then
@@ -64,10 +63,12 @@ src_install() {
 		fowners smokeping:smokeping /var/lib/${PN}/.simg
 	fi
 	fperms 775 /var/lib/${PN} /var/lib/${PN}/.simg
+
+	# Install the CGI webserver script
 	exeinto /var/www/localhost/perl
 	newexe htdocs/${PN}.cgi.dist ${PN}.pl
 	dosed 's:^use lib:#use lib:g' /var/www/localhost/perl/${PN}.pl
-	dosed 's:sepp/bin/speedy:bin/perl:' /var/www/localhost/perl/${PN}.pl
+	dosed 's:/usr/sepp/bin/speedy:/usr/bin/perl:' /var/www/localhost/perl/${PN}.pl
 	dosed 's:/home/oetiker/data/projects/AADJ-smokeping/dist/etc/config:/etc/smokeping:' \
 		/var/www/localhost/perl/${PN}.pl
 
@@ -77,9 +78,8 @@ src_install() {
 
 	# Create the binary
 	newbin bin/${PN}.dist ${PN}
-	dosed 's:/usr/sepp/bin/perl-5.8.4:/usr/bin/perl:g' /usr/bin/${PN}
 	dosed 's:^use lib:#use lib:g' /usr/bin/${PN}
-	# dosed 's:/sepp::' /usr/bin/${PN}
+	dosed 's:/usr/sepp/bin/perl-5.8.4:/usr/bin/perl:' /usr/bin/${PN}
 	dosed 's:etc/config.dist:/etc/smokeping:' /usr/bin/${PN}
 
 	# Create the config files
@@ -98,7 +98,7 @@ pkg_postinst() {
 	chown smokeping:smokeping "${ROOT}/var/lib/${PN}"
 	chmod 755 "${ROOT}/var/lib/${PN}"
 	elog
-	elog "Four more steps are needed to get ${PN} un&running:"
+	elog "Four more steps are needed to get ${PN} up&running:"
 	elog "1) You need to edit /etc/${PN}"
 	elog "2) You need to edit the template at /etc/${PN}.template"
 	elog "3) You need to make the fping binary setuid root:"
