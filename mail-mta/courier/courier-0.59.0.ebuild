@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.1 2008/04/21 12:05:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.2 2008/04/21 17:16:53 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -122,7 +122,6 @@ etc_courier_chg() {
 	grep -q "${key}" "${file}" && elog "Changing ${file}: ${key} to ${value}"
 	sed -i -e"/\#\#NAME: ${section}/,+30 s|${key}=.*|${key}=\"${value}\"|g" ${file}
 }
-
 
 src_install() {
 	local f
