@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.39 2008/04/19 15:29:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.40 2008/04/21 19:16:50 maekke Exp $
+
+  21 Apr 2008; Markus Meier <maekke@gentoo.org> goffice-0.6.2.ebuild:
+  amd64/x86 stable, bug #218029
 
   19 Apr 2008; Markus Rothe <corsair@gentoo.org> goffice-0.6.2.ebuild:
   Stable on ppc64; bug #218029
