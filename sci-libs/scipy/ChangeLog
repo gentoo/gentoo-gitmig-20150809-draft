@@ -1,11 +1,15 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.29 2008/04/17 00:43:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.30 2008/04/21 16:06:39 bicatali Exp $
+
+  21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/scipy-0.6.0-clapack-symbol-fix.patch, -scipy-0.5.2.ebuild,
+  -scipy-0.6.0-r2.ebuild, -scipy-0.6.0-r3.ebuild:
+  Removed buggy versions
 
   17 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   scipy-0.6.0-r4.ebuild:
-  Put append-ldflags in pkg_setup and make it available always (bug #
-  217914)
+  Put append-ldflags in pkg_setup and make it available always (bug #217914)
 
   26 Mar 2008; Markus Rothe <corsair@gentoo.org> scipy-0.6.0-r4.ebuild:
   Added ~ppc64; bug #211791
