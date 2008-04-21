@@ -1,6 +1,5 @@
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONArray.java work/org/json/simple/JSONArray.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONArray.java	2006-04-16 04:04:24.000000000 +0300
-+++ work/org/json/simple/JSONArray.java	2007-06-04 17:43:56.000000000 +0300
+--- work/json_simple/src/org/json/simple/JSONArray.java	2006-04-16 04:04:24.000000000 +0300
++++ work/json_simple/src/org/json/simple/JSONArray.java	2007-06-04 17:43:56.000000000 +0300
 @@ -12,6 +13,18 @@
   * @author FangYidong<fangyidong@yahoo.com.cn>
   */
@@ -20,9 +19,8 @@ diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org
  	public String toString(){
  		ItemList list=new ItemList();
  		
-diff -ur /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONObject.java work/org/json/simple/JSONObject.java
---- /var/tmp/portage/dev-java/json-simple-20080420/work/json_simple/src/org/json/simple/JSONObject.java	2006-04-16 11:26:38.000000000 +0300
-+++ work/org/json/simple/JSONObject.java	2007-06-04 17:43:56.000000000 +0300
+--- work/json_simple/src/org/json/simple/JSONObject.java	2006-04-16 11:26:38.000000000 +0300
++++ work/json_simple/src/org/json/simple/JSONObject.java	2007-06-04 17:43:56.000000000 +0300
 @@ -13,6 +13,22 @@
   */
  public class JSONObject extends HashMap{
