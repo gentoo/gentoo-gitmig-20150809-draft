@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.24.ebuild,v 1.2 2008/04/21 14:59:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.24.ebuild,v 1.3 2008/04/21 15:49:01 bicatali Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -17,7 +17,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE="int64 threads doc"
 RESTRICT="mirror"
 
-RDEPEND="doc? ( app-doc/blas-docs )"
+RDEPEND="app-admin/eselect-blas
+	doc? ( app-doc/blas-docs )"
 DEPEND="app-admin/eselect-blas
 	>=sys-devel/binutils-2.17"
 

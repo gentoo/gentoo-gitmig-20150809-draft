@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.13 2008/04/21 14:54:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.14 2008/04/21 15:53:39 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -15,11 +15,10 @@ SLOT="0"
 IUSE=""
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 
-DEPEND="virtual/blas
-	dev-util/pkgconfig
+RDEPEND="virtual/blas
 	app-admin/eselect-cblas"
-
-RDEPEND="virtual/blas"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 FORTRAN="gfortran g77 ifc"
 ESELECT_PROF=reference
