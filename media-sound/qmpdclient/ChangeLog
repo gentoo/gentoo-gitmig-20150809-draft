@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.27 2008/04/20 18:23:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.28 2008/04/21 11:24:21 yngwin Exp $
+
+*qmpdclient-1.0.9 (21 Apr 2008)
+
+  21 Apr 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  +qmpdclient-1.0.9.ebuild:
+  Version bump, fixes bug 218594.
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> qmpdclient-1.0.8-r1.ebuild:
   Add ~sparc

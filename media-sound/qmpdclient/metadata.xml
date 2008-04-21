@@ -5,5 +5,5 @@
 <maintainer>
 	<email>ticho@gentoo.org</email>
 </maintainer>
-<longdescription>QMPDClient is an easy to use MPD client written in Qt 4.1.</longdescription>
+<longdescription>QMPDClient is an easy to use MPD client written in Qt 4</longdescription>
 </pkgmetadata>
