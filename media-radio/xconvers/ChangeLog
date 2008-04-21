@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xconvers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.9 2008/02/29 19:55:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.10 2008/04/21 17:43:47 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xconvers-0.8.2.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

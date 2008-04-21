@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xdx
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.10 2007/11/09 14:30:51 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.11 2008/04/21 17:44:30 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
 *xdx-2.3 (09 Nov 2007)
 
