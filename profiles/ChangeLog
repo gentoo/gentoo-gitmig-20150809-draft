@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1346 2008/04/21 17:23:25 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1347 2008/04/21 17:31:18 welp Exp $
+
+  21 Apr 2008; <welp@gentoo.org> use.local.desc:
+  keyring to gnome-keyring
 
   21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Deleted mask on sci-libs/libgdgeda which was removed from the tree.
