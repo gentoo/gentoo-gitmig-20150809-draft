@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.7 2008/03/31 21:23:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.8 2008/04/21 00:41:39 vapier Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 	econf \
 		$(use_enable crypt crypto) \
 		$(use_enable debug) \
-		$(use_enable fuse fuse-module) \
+		$(use_enable fuse ntfsmount) \
 		$(use_enable gnome gnome-vfs) \
 		|| die "Configure failed"
 	emake || die "Make failed"

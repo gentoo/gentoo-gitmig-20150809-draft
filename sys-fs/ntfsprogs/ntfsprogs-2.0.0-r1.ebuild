@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.1 2008/04/20 19:34:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.2 2008/04/21 00:41:39 vapier Exp $
 
 inherit eutils autotools
 
@@ -40,7 +40,7 @@ src_compile() {
 		$(use_enable !minimal extras) \
 		$(use_enable crypt crypto) \
 		$(use_enable debug) \
-		$(use_enable fuse fuse-module) \
+		$(use_enable fuse ntfsmount) \
 		$(use_enable gnome gnome-vfs) \
 		|| die "Configure failed"
 	emake || die "Make failed"
@@ -49,9 +49,11 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	mv "${D}"/sbin/mkfs.ntfs "${D}"/usr/sbin/ || die
-	mv "${D}"/sbin/mount.{fuse.ntfs,ntfs-fuse} "${D}"/usr/bin/ || die
 	mv "${D}"/usr/bin/ntfsck "${D}"/sbin/ || die
 	dosym ntfsck /sbin/fsck.ntfs
+	if use fuse ; then
+		mv "${D}"/sbin/mount.{fuse.ntfs,ntfs-fuse} "${D}"/usr/bin/ || die
+	fi
 
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO.* \
 		doc/attribute_definitions doc/*.txt doc/tunable_settings
