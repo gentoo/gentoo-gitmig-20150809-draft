@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rusers
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.3 2007/05/11 16:13:04 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.4 2008/04/21 18:00:23 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   fix herd

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/telnet-bsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.37 2007/01/07 18:33:56 antarus Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.38 2008/04/21 18:05:39 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   07 Jan 2007; Alec Warner <antarus@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   fix autotools for bug # 160549
