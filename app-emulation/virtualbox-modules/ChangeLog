@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.17 2008/03/06 16:17:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.18 2008/04/21 20:26:19 jokey Exp $
+
+*virtualbox-modules-1.5.7 (21 Apr 2008)
+
+  21 Apr 2008; Markus Ullmann <jokey@gentoo.org>
+  +virtualbox-modules-1.5.7.ebuild:
+  (Proxy commit) version bump to fix API change in kernel 2.6.25
+  (chage_page_attr function) bug #218198
 
   06 Mar 2008; Christoph Mende <angelos@gentoo.org>
   virtualbox-modules-1.5.4.ebuild:
