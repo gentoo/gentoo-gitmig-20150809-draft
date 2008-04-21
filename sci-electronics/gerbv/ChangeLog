@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.23 2008/01/10 10:45:08 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.24 2008/04/21 22:30:49 calchan Exp $
+
+*gerbv-2.0.1 (21 Apr 2008)
+
+  21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +gerbv-2.0.1.ebuild:
+  Major version bump.
 
   10 Jan 2008; Denis Dupeyron <calchan@gentoo.org> gerbv-1.0.1-r1.ebuild,
   gerbv-1.0.2.ebuild, gerbv-1.0.3.ebuild:
