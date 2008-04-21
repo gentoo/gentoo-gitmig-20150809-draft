@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.71 2007/10/07 15:54:46 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.72 2008/04/21 18:29:29 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   07 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> xosd-2.2.14-r1.ebuild:
   Remove gtk+ dependency for bug #194964 by Dan Andresan.
