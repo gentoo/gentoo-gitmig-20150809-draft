@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.125 2008/04/20 16:57:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.126 2008/04/21 07:56:14 vapier Exp $
+
+  21 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/rpc.gssd.initd,
+  files/rpc.svcgssd.initd:
+  Fix typo in start() func in new gssd init.d scripts as pointed out by Ryan
+  Tandy #218665.
 
   20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> nfs-utils-1.1.2.ebuild:
   Fix building without kerberos and with nonfsv4 USE flag enabled. See bug
