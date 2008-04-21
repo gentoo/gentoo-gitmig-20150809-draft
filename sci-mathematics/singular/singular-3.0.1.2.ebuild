@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.9 2007/08/05 17:20:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.10 2008/04/21 14:39:28 markusle Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,7 +30,7 @@ src_unpack () {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-${PV_MAJOR}-gentoo.diff
 	epatch "${FILESDIR}"/${P}-gcc4.1-gentoo.patch
-	sed -e "s/PFSUBST/${PF}/" -i ${S}/kernel/feResource.cc || \
+	sed -e "s/PFSUBST/${PF}/" -i "${S}"/kernel/feResource.cc || \
 		die "sed failed on feResource.cc"
 }
 
