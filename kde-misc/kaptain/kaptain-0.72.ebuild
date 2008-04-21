@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/kaptain-0.72.ebuild,v 1.5 2006/10/22 01:38:20 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/kaptain-0.72.ebuild,v 1.6 2008/04/21 17:44:09 philantrop Exp $
 
 inherit kde-functions eutils
 
@@ -20,9 +20,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-ggc4.patch
+
+	# Fixes bug 218690.
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README TODO || die "installing docs failed."
 }
