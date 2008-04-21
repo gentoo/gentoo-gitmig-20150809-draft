@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.46 2008/03/31 21:15:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.47 2008/04/21 19:07:33 drac Exp $
+
+*yaz-3.0.26 (21 Apr 2008)
+
+  21 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/yaz-3.0.26-icu-automagic.patch, +yaz-3.0.26.ebuild:
+  Version bump for bug 193863.
 
   31 Mar 2008; Markus Meier <maekke@gentoo.org> yaz-3.0.16.ebuild:
   amd64 stable, bug #208545
