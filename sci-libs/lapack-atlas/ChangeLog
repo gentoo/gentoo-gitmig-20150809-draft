@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.61 2008/04/06 11:27:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.62 2008/04/21 15:42:24 bicatali Exp $
+
+  21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  lapack-atlas-3.8.0.ebuild, lapack-atlas-3.8.1.ebuild:
+  Re-organized dependencies for pkg-config (bug #217278)
 
   06 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-atlas-3.6.0.ebuild, lapack-atlas-3.7.11.ebuild,
