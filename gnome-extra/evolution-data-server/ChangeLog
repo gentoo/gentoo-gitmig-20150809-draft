@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.176 2008/04/07 21:02:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.177 2008/04/21 17:13:30 welp Exp $
+
+  21 Apr 2008; <welp@gentoo.org> evolution-data-server-1.12.1.ebuild,
+  evolution-data-server-1.12.3.ebuild, evolution-data-server-2.22.0.ebuild,
+  evolution-data-server-2.22.1.ebuild:
+  keyring to gnome-keyring
 
 *evolution-data-server-2.22.1 (07 Apr 2008)
 

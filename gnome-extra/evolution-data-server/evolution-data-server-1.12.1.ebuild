@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.1.ebuild,v 1.10 2008/01/29 16:54:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.1.ebuild,v 1.11 2008/04/21 17:13:30 welp Exp $
 EAPI="1"
 
 inherit db-use eutils flag-o-matic gnome2 autotools
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc ipv6 kerberos keyring krb4 ldap ssl"
+IUSE="doc ipv6 kerberos gnome-keyring krb4 ldap ssl"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/orbit-2.9.8
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=dev-libs/libxml2-2
-	keyring? ( gnome-base/gnome-keyring )
+	gnome-keyring? ( gnome-base/gnome-keyring )
 	ssl? (
 		>=dev-libs/nspr-4.4
 		>=dev-libs/nss-3.9 )
@@ -47,7 +47,7 @@ pkg_setup() {
 		$(use_enable ssl nss)               \
 		$(use_enable ssl smime)             \
 		$(use_enable ipv6)                  \
-		$(use_enable keyring gnome-keyring) \
+		$(use_enable gnome-keyring) \
 		--with-libdb=/usr/$(get_libdir)"
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
