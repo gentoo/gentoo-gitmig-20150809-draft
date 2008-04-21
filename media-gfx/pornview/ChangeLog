@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pornview
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.31 2007/05/13 19:49:08 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.32 2008/04/21 14:51:42 drac Exp $
+
+  21 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  -pornview-0.2.0_pre1.ebuild, pornview-0.2.0_pre1-r1.ebuild:
+  Remove invalid USE static. Move pkgconfig to DEPEND from RDEPEND. Install
+  .desktop file to correct directory.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   fix herd

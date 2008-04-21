@@ -1,53 +1,49 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.3 2007/01/19 15:30:46 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.4 2008/04/21 14:51:42 drac Exp $
 
-inherit eutils
-
-IUSE="jpeg mplayer nls static"
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Image viewer/manager with optional support for MPEG movies."
 HOMEPAGE="http://pornview.sourceforge.net"
-LICENSE="GPL-2"
+SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
 
-DEPEND="media-libs/libpng
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="amd64 ppc x86"
+IUSE="jpeg nls mplayer"
+
+RDEPEND="media-libs/libpng
 	mplayer? ( media-video/mplayer )
 	jpeg? ( media-libs/jpeg )
-	>=x11-libs/gtk+-2.0
+	>=x11-libs/gtk+-2"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-SLOT="0"
-KEYWORDS="x86 ppc amd64"
-SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
+S=${WORKDIR}/${P/_/}
 
-S="${WORKDIR}/${P/_/}"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-4.diff \
+		"${FILESDIR}"/traypatch.diff
+}
 
 src_compile() {
-	local myflags
+	local myconf="--with-gtk2"
 
-	myflags="${myflags} --with-gtk2"
+	use mplayer && myconf="${myconf} --enable-mplayer"
+	use jpeg || myconf="${myconf} --disable-exif"
+	use nls || myconf="${myconf} --disable-nls"
 
-	if use mplayer; then
-	  myflags="${myflags} --enable-mplayer"
-	fi
-
-	use jpeg || myflags="${myflags} --disable-exif"
-
-	use nls || myflags="${myflags} --disable-nls"
-
-	use static && myflags="${myflags} --enable-static"
-
-	epatch ${FILESDIR}/${P}-4.diff || die
-	epatch ${FILESDIR}/traypatch.diff || die
-
-	econf ${myflags} || die "./configure failed"
-
-	emake || die "make failed"
+	tc-export CC
+	econf ${myconf}
+	emake || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
+	emake DESTDIR="${D}" desktopdir="/usr/share/applications" \
+		install || die "emake install failed."
 	dodoc AUTHORS NEWS README
 }
