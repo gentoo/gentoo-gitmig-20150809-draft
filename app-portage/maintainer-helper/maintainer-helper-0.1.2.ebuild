@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/maintainer-helper-0.1.2.ebuild,v 1.1 2008/01/08 03:15:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/maintainer-helper-0.1.2.ebuild,v 1.2 2008/04/21 19:16:36 jokey Exp $
+
+EAPI="1"
 
 inherit qt4 distutils
 
@@ -15,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-lang/python-2.4
-	$(qt4_min_version 4.3)
+	|| ( >=x11-libs/qt-4.3:4 x11-libs/qt-gui:4 )
 	>=dev-python/PyQt4-4.2
 	>=sys-apps/pkgcore-0.3.1
 	>=dev-python/snakeoil-0.1_rc2"
