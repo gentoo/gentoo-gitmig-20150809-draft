@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/adns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.30 2008/03/24 00:46:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.31 2008/04/21 17:51:54 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   24 Mar 2008; Brent Baude <ranger@gentoo.org> adns-1.4.ebuild:
   Marking adns-1.4 ppc64 for bug 213740

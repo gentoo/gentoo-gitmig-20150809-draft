@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.48 2007/02/22 01:36:19 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.49 2008/04/21 17:54:30 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
