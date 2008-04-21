@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8517 2008/04/21 05:37:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8518 2008/04/21 17:16:29 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -221,11 +221,6 @@ sci-libs/libgdgeda
 # upstream unresponsive, replaced by dev-util/ftjam
 # Bug #173703
 dev-util/jam
-
-# Denis Dupeyron <calchan@gentoo.org> (15 Mar 2008)
-# Masked for removal in 30 days. Requires Tcl 8.3 which
-# isn't in the tree anymore. See bugs 172356 and 173467.
-sci-electronics/lard
 
 # Wolfram Schlich <wschlich@gentoo.org> (13 Mar 2008)
 # mondo-rescue previously was a candidate for complete
