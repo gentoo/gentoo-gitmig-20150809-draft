@@ -1,0 +1,11 @@
+--- gpm-1.20.3-orig/Makefile.in	2008-04-15 16:34:13.000000000 +0200
++++ gpm-1.20.3/Makefile.in	2008-04-20 23:30:30.000000000 +0200
+@@ -51,7 +51,7 @@
+ 
+ installdirs:
+ 	$(MKDIR) $(libdir) $(bindir) $(sbindir) $(includedir) $(sysconfdir); \
+-	if test "x@ELISP@" != "x" ; then \
++	if test "x$(ELISP)" != "x" ; then \
+ 		$(MKDIR) $(lispdir) ; \
+ 	fi
+ 
