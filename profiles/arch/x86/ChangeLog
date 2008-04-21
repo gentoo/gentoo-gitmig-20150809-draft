@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.6 2008/04/10 19:57:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.7 2008/04/21 11:29:07 coldwind Exp $
+
+  21 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
+  Add ->=net-im/telepathy-mission-control-4.65 to Gnome 2.22 mask.
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Make VIDEO_CARDS defaults a reasonable set instead of every imaginable

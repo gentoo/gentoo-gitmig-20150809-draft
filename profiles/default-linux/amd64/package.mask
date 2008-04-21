@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.11 2008/04/05 17:40:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.12 2008/04/21 11:28:02 coldwind Exp $
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
@@ -88,4 +88,5 @@
 ->=x11-themes/gnome-themes-extras-2.22
 ->=gnome-base/gnome-light-2.22
 ->=gnome-base/gnome-2.22
+->=net-im/telepathy-mission-control-4.65
 # End of GNOME 2.22 unmask
