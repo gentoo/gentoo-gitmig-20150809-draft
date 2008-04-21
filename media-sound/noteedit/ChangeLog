@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.28 2008/04/21 14:19:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.29 2008/04/21 17:59:29 fmccor Exp $
+
+  21 Apr 2008; Ferris McCormick <fmccor@gentoo.org>
+  noteedit-2.8.1-r1.ebuild:
+  Sparc stable --- Bug #218732 --- neat.
 
   21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/noteedit-2.8.1+gcc-4.3.patch,
