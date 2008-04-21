@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.9 2007/11/12 01:49:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.10 2008/04/21 22:53:13 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -44,6 +44,8 @@ KMCOPYLIB="libkformula lib/kformula
 KMEXTRACTONLY="lib/"
 
 KMEXTRA="filters/krita"
+
+PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
 
 need-kde 3.5
 
