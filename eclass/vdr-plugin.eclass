@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.56 2008/04/21 02:45:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.57 2008/04/21 02:56:34 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -264,6 +264,7 @@ vdr_i18n_convert_to_gettext() {
 }
 
 vdr_i18n_disable_gettext() {
+	ebegin "Disabling gettext support in plugin"
 	# Remove i18n Target if using older vdr
 	sed -i Makefile \
 		-e '/^all:/s/ i18n//'
