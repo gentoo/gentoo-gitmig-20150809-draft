@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.28.ebuild,v 1.4 2008/01/12 17:50:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.28.ebuild,v 1.5 2008/04/21 17:22:38 welp Exp $
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="dbus debug galago keyring libnotify spell"
+IUSE="dbus debug galago gnome-keyring libnotify spell"
 
 RDEPEND="x11-libs/libXScrnSaver
 	>=dev-libs/glib-2.12.1
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/libXScrnSaver
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	galago? ( dev-libs/libgalago )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	keyring? ( gnome-base/gnome-keyring )"
+	gnome-keyring? ( gnome-base/gnome-keyring )"
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	app-text/scrollkeeper
@@ -53,7 +53,7 @@ pkg_setup() {
 		${mydebug}
 		$(use_enable dbus)
 		$(use_enable galago)
-		$(use_enable keyring gnome-keyring)
+		$(use_enable gnome-keyring)
 		$(use_enable libnotify)
 		$(use_enable spell aspell)"
 }
