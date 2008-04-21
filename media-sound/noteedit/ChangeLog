@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/noteedit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.27 2007/06/23 17:28:21 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.28 2008/04/21 14:19:37 flameeyes Exp $
+
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/noteedit-2.8.1+gcc-4.3.patch,
+  files/noteedit-2.8.1-desktop-file.patch, noteedit-2.8.1-r1.ebuild:
+  Add a patch to build with GCC 4.3. Also fixes bug #211037 by patching the
+  .desktop file further.
 
 *noteedit-2.8.1-r1 (23 Jun 2007)
 

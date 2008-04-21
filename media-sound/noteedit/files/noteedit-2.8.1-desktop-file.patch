@@ -1,3 +1,28 @@
+See bug #211037.
+Index: noteedit-2.8.1/noteedit/noteedit.desktop
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/noteedit.desktop
++++ noteedit-2.8.1/noteedit/noteedit.desktop
+@@ -5,16 +5,15 @@ Name[sv]=Notredigerare
+ Name[pl]=Edytor nut
+ Name[sl]=NoteEdit
+ Exec=noteedit %i %m -caption "%c"
+-MimeType=audio/x-notes
++MimeType=audio/x-notes;
+ Type=Application
+ Comment=Note editor
+ Comment[de]=Noteneditor
+ Comment[sv]=Notredigerare
+ Comment[pl]=Edytor nut
+ Comment[sl]=Urejevalnik glasbenih dokumentov
+-Terminal=0
++Terminal=false
+ Icon=noteedit
+ ServiceTypes=Browser/View
+ X-KDE-Library=libnoteedit
+-Categories=Qt;KDE;Audio;
+-Encoding=UTF-8
++Categories=Qt;KDE;AudioVideo;Audio;Midi;
 Index: noteedit-2.8.1/noteedit/icons/Makefile.am
 ===================================================================
 --- noteedit-2.8.1.orig/noteedit/icons/Makefile.am
@@ -13,19 +38,3 @@ Index: noteedit-2.8.1/noteedit/icons/Makefile.am
 +appicon_ICON = noteedit
 +
 +appicondir = ${prefix}/share/icons
-Index: noteedit-2.8.1/noteedit/noteedit.desktop
-===================================================================
---- noteedit-2.8.1.orig/noteedit/noteedit.desktop
-+++ noteedit-2.8.1/noteedit/noteedit.desktop
-@@ -12,9 +12,9 @@ Comment[de]=Noteneditor
- Comment[sv]=Notredigerare
- Comment[pl]=Edytor nut
- Comment[sl]=Urejevalnik glasbenih dokumentov
--Terminal=0
-+Terminal=false
- Icon=noteedit
- ServiceTypes=Browser/View
- X-KDE-Library=libnoteedit
--Categories=Qt;KDE;Audio;
-+Categories=Qt;KDE;AudioVideo;Audio;Midi;
- Encoding=UTF-8

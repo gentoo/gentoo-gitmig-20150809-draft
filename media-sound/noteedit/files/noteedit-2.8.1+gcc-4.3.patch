@@ -1,0 +1,159 @@
+Index: noteedit-2.8.1/noteedit/keyoffs.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/keyoffs.cpp
++++ noteedit-2.8.1/noteedit/keyoffs.cpp
+@@ -22,7 +22,7 @@
+ 
+ #include <qbuttongroup.h>
+ #include <qradiobutton.h>
+-#include <iostream.h>
++#include <iostream>
+ #include "keyoffs.h"
+ #include "resource.h"
+ #include "keysig.h"
+Index: noteedit-2.8.1/noteedit/musicxmlimport.h
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/musicxmlimport.h
++++ noteedit-2.8.1/noteedit/musicxmlimport.h
+@@ -126,7 +126,7 @@ private:
+ 	void handlePedal(NChord * chord);
+ 	void handleTuplet(NMusElement * elem);
+ 	void handleVoice(int staff, int voice);
+-	void handleVoiceDoStaff(int staff, int voice, NStaff * & staff, bool & mapped);
++	void handleVoiceDoStaff(int staff_nr, int voice, NStaff * & staff, bool & mapped);
+ 	int current_max_voice_nr; /* the maximum voice number reached until now */
+ 	void handleWords();
+ 	void initStAttributes();
+Index: noteedit-2.8.1/noteedit/midimapper.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/midimapper.cpp
++++ noteedit-2.8.1/noteedit/midimapper.cpp
+@@ -29,9 +29,9 @@
+ #endif
+ #else
+ #ifndef WITH_TSE3
+-#include <iostream.h>
++#include <iostream>
+ #else
+-#include <istream.h>
++#include <istream>
+ #endif
+ #endif
+ #include <unistd.h>
+Index: noteedit-2.8.1/noteedit/musicxmlcommon.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/musicxmlcommon.cpp
++++ noteedit-2.8.1/noteedit/musicxmlcommon.cpp
+@@ -26,7 +26,7 @@
+ #if GCC_MAJ_VERS > 2
+ #include <iostream>
+ #else
+-#include <iostream.h>
++#include <iostream>
+ #endif
+ using namespace std;
+ 
+Index: noteedit-2.8.1/noteedit/musicxmlexport.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/musicxmlexport.cpp
++++ noteedit-2.8.1/noteedit/musicxmlexport.cpp
+@@ -94,7 +94,7 @@ Note shapes: body as cross, alternative 
+ #if GCC_MAJ_VERS > 2
+ #include <iostream>
+ #else
+-#include <iostream.h>
++#include <iostream>
+ #endif
+ #include <qstring.h>
+ #include <qregexp.h>
+Index: noteedit-2.8.1/noteedit/musicxmlimport.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/musicxmlimport.cpp
++++ noteedit-2.8.1/noteedit/musicxmlimport.cpp
+@@ -129,7 +129,7 @@ Note shapes: body as cross, alternative 
+ #if GCC_MAJ_VERS > 2
+ #include <iostream>
+ #else
+-#include <iostream.h>
++#include <iostream>
+ #endif
+ using namespace std;
+ 
+Index: noteedit-2.8.1/noteedit/musixtex.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/musixtex.cpp
++++ noteedit-2.8.1/noteedit/musixtex.cpp
+@@ -27,7 +27,7 @@
+ #include <iostream>
+ #include <sstream>
+ #else
+-#include <iostream.h>
++#include <iostream>
+ #include <strstream.h>
+ #endif
+ #include <stdlib.h> //  esigra: needed for mkstemp when --without-libs
+Index: noteedit-2.8.1/noteedit/lilyexport.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/lilyexport.cpp
++++ noteedit-2.8.1/noteedit/lilyexport.cpp
+@@ -30,7 +30,7 @@
+ #if GCC_MAJ_VERS > 2
+ #include <istream>
+ #else
+-#include <istream.h>
++#include <istream>
+ #endif
+ #include <stdlib.h> //  esigra: needed for mkstemp when --without-libs
+ #include <stdio.h>  //  for test only
+Index: noteedit-2.8.1/noteedit/main.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/main.cpp
++++ noteedit-2.8.1/noteedit/main.cpp
+@@ -26,7 +26,7 @@
+ #if GCC_MAJ_VERS > 2
+ #include <iostream>
+ #else
+-#include <istream.h>
++#include <istream>
+ #endif
+ #include <qapplication.h>
+ #include <qthread.h>
+Index: noteedit-2.8.1/noteedit/multistaffinfo.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/multistaffinfo.cpp
++++ noteedit-2.8.1/noteedit/multistaffinfo.cpp
+@@ -20,7 +20,7 @@
+ /*											*/
+ /****************************************************************************************/
+ 
+-#include <istream.h>
++#include <istream>
+ #include <cstdlib>
+ #include "multistaffinfo.h"
+ #include "mainframewidget.h"
+Index: noteedit-2.8.1/noteedit/resource.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/resource.cpp
++++ noteedit-2.8.1/noteedit/resource.cpp
+@@ -26,7 +26,7 @@
+ #if GCC_MAJ_VERS > 2
+ #include <iostream>
+ #else
+-#include <istream.h>
++#include <istream>
+ #endif
+ #include <stdio.h>
+ #include <string.h>
+Index: noteedit-2.8.1/noteedit/ScoreEditor.cpp
+===================================================================
+--- noteedit-2.8.1.orig/noteedit/ScoreEditor.cpp
++++ noteedit-2.8.1/noteedit/ScoreEditor.cpp
+@@ -23,7 +23,7 @@
+ #include "ScoreEditor.h"
+ #ifdef ANTHEM_PLUGIN
+ #if GCC_MAJ_VERS > 2
+-#include <istream.h>
++#include <istream>
+ #else
+ #include <istream>
+ #endif
