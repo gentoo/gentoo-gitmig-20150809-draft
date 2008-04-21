@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.8 2008/04/21 19:05:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.9 2008/04/21 19:40:04 jokey Exp $
+
+*gloox-1.0_beta2 (21 Apr 2008)
+
+  21 Apr 2008; Markus Ullmann <jokey@gentoo.org> +gloox-1.0_beta2.ebuild:
+  Add masked beta version gloox-1.0_beta2.ebuild
 
 *gloox-0.9.9.5 (21 Apr 2008)
 
