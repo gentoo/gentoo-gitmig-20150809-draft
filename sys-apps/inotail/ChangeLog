@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/inotail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.5 2007/10/06 10:26:59 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.6 2008/04/21 18:28:23 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org> inotail-0.5.ebuild:
+  x86 stable
 
   06 Oct 2007; Christoph Mende <angelos@gentoo.org> -inotail-0.4.ebuild,
   inotail-0.5.ebuild:
