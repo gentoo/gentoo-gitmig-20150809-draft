@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.31 2007/12/19 14:47:38 jsbronder Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.32 2008/04/21 14:54:44 bicatali Exp $
+
+  21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  cblas-reference-20030223-r4.ebuild:
+  Removed pkg-config in RDEPEND (see bug #217278)
 
   19 Dec 2007; Justin Bronder <jsbronder@gentoo.org>
   cblas-reference-20030223-r4.ebuild:
