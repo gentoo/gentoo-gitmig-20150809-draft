@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.10.0.ebuild,v 1.1 2007/11/17 20:47:33 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.10.0.ebuild,v 1.2 2008/04/21 16:48:02 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -195,8 +195,10 @@ src_unpack() {
 		sed -i -e 's:iscan.1::g' doc/Makefile*
 	fi
 
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+
 	# autotool stuff
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {

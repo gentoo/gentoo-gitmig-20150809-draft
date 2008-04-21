@@ -1,0 +1,33 @@
+Index: iscan-2.10.0/lib/imgstream.cc
+===================================================================
+--- iscan-2.10.0.orig/lib/imgstream.cc
++++ iscan-2.10.0/lib/imgstream.cc
+@@ -28,11 +28,15 @@
+ 
+ #include <argz.h>
+ 
++#include <cstdlib>
++
+ #include "imgstream.hh"
+ 
+ namespace iscan
+ {
+ 
++
++
+ imgstream::imgstream ()
+   : imgstream_base_t (NULL), _fbuf (new filebuf (NULL)), _mine (true)
+ {
+Index: iscan-2.10.0/lib/jpegstream.cc
+===================================================================
+--- iscan-2.10.0.orig/lib/jpegstream.cc
++++ iscan-2.10.0/lib/jpegstream.cc
+@@ -26,6 +26,8 @@
+ //  the GNU General Public License in all respects for all of the
+ //  code used other then esmod.
+ 
++#include <cstdlib>
++
+ #include "jpegstream.hh"
+ 
+ #include "gettext.h"
