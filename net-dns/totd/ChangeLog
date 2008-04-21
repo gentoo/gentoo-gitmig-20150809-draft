@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/totd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.7 2007/10/06 15:23:21 coldwind Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.8 2008/04/21 17:49:39 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   06 Oct 2007; Santiago M. Mola <coldwind@gentoo.org>
   +files/totd-1.5.1-no_werror.patch, totd-1.5.1.ebuild:

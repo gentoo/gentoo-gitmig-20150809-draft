@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ldapdns
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.19 2007/05/06 08:56:52 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.20 2008/04/21 17:48:28 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ldapdns-2.04.ebuild,
   ldapdns-2.05.ebuild, ldapdns-2.06.ebuild:

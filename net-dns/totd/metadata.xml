@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<longdescription>
-Totd ( Trick Or Treat Daemon ) is a small DNS proxy nameserver that supports IPv6 only hosts/networks that 
-communicate with the IPv4 world using some translation mechanism.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
+	</maintainer>
+	<longdescription lang="en">
+		Totd ( Trick Or Treat Daemon ) is a small DNS proxy nameserver that
+		supports IPv6 only hosts/networks that communicate with the IPv4 world
+		using some translation mechanism.
+	</longdescription>
 </pkgmetadata>
