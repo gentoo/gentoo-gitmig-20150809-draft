@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.45 2008/03/22 18:58:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.46 2008/04/21 00:06:37 matsuu Exp $
+
+*mecab-0.97 (21 Apr 2008)
+
+  21 Apr 2008; MATSUU Takuto <matsuu@gentoo.org> +mecab-0.97.ebuild:
+  Version bumped, bug #217642.
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> mecab-0.95.ebuild:
   amd64 stable
