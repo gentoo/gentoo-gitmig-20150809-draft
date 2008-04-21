@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/devtodo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.78 2007/12/05 21:34:08 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.79 2008/04/21 19:23:10 jokey Exp $
+
+  21 Apr 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/devtodo-0.1.20-gcc43.patch, devtodo-0.1.20.ebuild:
+  Add gcc-4.3 compile patch, thanks to Peter Alfredsen for providing it
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> devtodo-0.1.20.ebuild:
   Stable on arm
