@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/newsyslog
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.19 2007/01/11 20:46:50 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.20 2008/04/21 16:11:08 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   11 Jan 2007; Mike Frysinger <vapier@gentoo.org> newsyslog-1.1.ebuild:
   Remove pointless call to prepalldocs and dont install catman files.

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.22 2007/01/24 14:32:04 genone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.23 2008/04/21 16:03:08 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> logsentry-1.1.1.ebuild:
   Replacing einfo with elog

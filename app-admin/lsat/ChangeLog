@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/lsat
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.21 2007/05/25 10:59:23 matsuu Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.22 2008/04/21 16:05:06 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
 *lsat-0.9.6 (25 May 2007)
 
