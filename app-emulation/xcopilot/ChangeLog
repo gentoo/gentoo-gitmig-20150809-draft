@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xcopilot
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.9 2007/07/22 09:41:41 omp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.10 2008/04/21 16:45:01 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> xcopilot-0.6.6.ebuild:
   Remove virtual/x11 from dependencies.

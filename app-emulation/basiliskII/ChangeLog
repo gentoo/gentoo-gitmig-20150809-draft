@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/basiliskII
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.22 2007/01/25 21:58:20 genone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.23 2008/04/21 16:41:32 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org>
   basiliskII-1.0.0_pre20050412.ebuild:
