@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.4 2008/03/29 23:47:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.5 2008/04/21 01:51:55 je_fro Exp $
+
+  21 Apr 2008; Jeff Gardner <je_fro@gentoo.org> -gchemutils-0.8.4.ebuild,
+  gchemutils-0.8.7.ebuild:
+  Fix RDEPEND for bug #217278
 
 *gchemutils-0.8.7 (29 Mar 2008)
 
