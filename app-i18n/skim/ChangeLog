@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.56 2007/04/24 13:59:14 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.57 2008/04/21 15:36:13 flameeyes Exp $
+
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/skim-1.4.5-asneeded.patch, skim-1.4.5.ebuild:
+  Add patch to fix building when --as-needed is forced on.
 
   24 Apr 2007; Jeroen Roovers <jer@gentoo.org> skim-1.4.5.ebuild:
   Stable for HPPA (bug #175813).

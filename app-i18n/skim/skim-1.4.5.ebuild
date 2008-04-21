@@ -1,8 +1,8 @@
-# Copyright 2000-2007 Gentoo Foundation
+# Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.15 2007/04/24 13:59:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.16 2008/04/21 15:36:13 flameeyes Exp $
 
-inherit kde-functions multilib toolchain-funcs
+inherit kde-functions multilib toolchain-funcs eutils
 
 DESCRIPTION="Smart Common Input Method (SCIM) optimized for KDE"
 HOMEPAGE="http://www.scim-im.org/"
@@ -19,6 +19,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 need-kde 3.2
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+}
 
 src_compile() {
 	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")

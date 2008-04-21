@@ -1,0 +1,29 @@
+Index: skim-1.4.5/src/SConscript
+===================================================================
+--- skim-1.4.5.orig/src/SConscript
++++ skim-1.4.5/src/SConscript
+@@ -7,8 +7,6 @@ srcenv.Add_define('VERSION')
+ srcenv.Add_define('PACKAGE')
+ srcenv.Add_define('SCIM_VERSION')
+ srcenv.AppendUnique(CCFLAGS = env['SCIM_CFLAGS'] )
+-srcenv.AppendUnique(LINKFLAGS = env['SCIM_LIBS'])
+-srcenv.AppendUnique(LINKFLAGS = env['SCIM_X11_LIBS'])
+ srcenv.KDEaddlibs( "qt-mt kdecore kdeui kutils" )
+ 
+ libskim=srcenv.Copy()
+@@ -23,13 +21,13 @@ libskim.KDEaddpaths_includes( "#/ #/src"
+ #libskim.KDEaddlibs( "qt-mt kdecore kdeui kutils" )
+ libskim.Add_define('SCIM_BINARY_VERSION')
+ libskim.Add_define('SCIM_LIBDIR')
+-libskim.KDEshlib( 'libskim', libskim_sources, kdelib=1, vnum=libskim.libskim_version())
++libskim.KDEshlib( 'libskim', libskim_sources, kdelib=1, vnum=libskim.libskim_version(), localshlibs='#/utils/libscim-kdeutils.la', globallibs=(env['SCIM_LIBS'] + env['SCIM_X11_LIBS']))
+ 
+ ## IMPORTANT: this shows how to link against shared libraries
+ skim=srcenv.Copy()
+ skim_localshlibs='#src/libskim.so #utils/libscim-kdeutils.so'
+ skim_sources = 'main.cpp'
+-skim_globallibs = ''
++skim_globallibs = env['SCIM_LIBS'] + env['SCIM_X11_LIBS']
+ skim_includes = '#/ #/src'
+ skim.KDEprogram(
+ 		target      = 'skim',
