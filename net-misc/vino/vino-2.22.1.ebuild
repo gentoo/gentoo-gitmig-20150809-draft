@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.22.1.ebuild,v 1.1 2008/04/10 22:16:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.22.1.ebuild,v 1.2 2008/04/21 17:28:02 welp Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt gnutls ipv6 jpeg keyring libnotify zlib"
+IUSE="avahi crypt gnutls ipv6 jpeg gnome-keyring libnotify zlib"
 
 RDEPEND=">=dev-libs/glib-2.12
 	>=x11-libs/gtk+-2.10
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	>=gnome-base/libbonobo-2
 	x11-libs/libXtst
 	libnotify? ( >=x11-libs/libnotify-0.4.4 )
-	keyring? ( gnome-base/gnome-keyring )
+	gnome-keyring? ( gnome-base/gnome-keyring )
 	avahi? ( >=net-dns/avahi-0.6 )
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
 	gnutls? ( >=net-libs/gnutls-1 )
@@ -46,7 +46,7 @@ pkg_setup() {
 		$(use_enable gnutls)
 		$(use_enable ipv6)
 		$(use_with jpeg)
-		$(use_enable keyring gnome-keyring)
+		$(use_enable gnome-keyring)
 		$(use_enable libnotify)
 		$(use_with zlib)
 		$(use_with zlib libz)
