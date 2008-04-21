@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.50 2008/04/20 16:03:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.51 2008/04/21 00:08:27 jer Exp $
+
+  21 Apr 2008; Jeroen Roovers <jer@gentoo.org> c-client-2006k.ebuild:
+  Stable for HPPA (bug #213473).
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> c-client-2006k.ebuild:
   ia64/sparc stable wrt #213473
