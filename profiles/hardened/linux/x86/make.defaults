@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.1 2008/04/01 17:41:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.2 2008/04/21 20:11:14 phreak Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -9,7 +9,7 @@ CHOST="i486-pc-linux-gnu"
 CFLAGS="-O2 -mcpu=i486 -pipe -fforce-addr"
 CXXFLAGS="${CFLAGS}"
 
-USE="berkdb crypt hardened nls nptl nptlonly pam pic readline ssl tcpd zlib"
+USE="berkdb crypt hardened nptl nptlonly pam pic readline ssl tcpd zlib"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

@@ -1,7 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1348 2008/04/21 19:38:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1349 2008/04/21 20:11:12 phreak Exp $
 
+  21 Apr 2008; Christian Heim <phreak@gentoo.org>
+  hardened/linux/make.defaults, hardened/linux/x86/make.defaults,
+  hardened/linux/x86/2008.0/make.defaults:
+  Fixing the "new style" hardened profile, to *not* enable either USE=ipv6,
+  USE=nls or USE=unicode by default.
+ 
   21 Apr 2008; Markus Ullmann <jokey@gentoo.org> package.mask:
   Mask gloox beta version
 

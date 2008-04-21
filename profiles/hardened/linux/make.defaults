@@ -1,7 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/make.defaults,v 1.1 2008/04/01 17:41:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/make.defaults,v 1.2 2008/04/21 20:11:13 phreak Exp $
 
 STAGE1_USE="hardened nptl nptlonly pic"
 
-USE="hardened pic urandom -fortran -iconv"
+USE="-fortran -ipv6 -nls hardened pic urandom"
