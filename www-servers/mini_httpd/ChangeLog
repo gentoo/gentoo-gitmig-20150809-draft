@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/mini_httpd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/ChangeLog,v 1.9 2007/08/26 21:20:21 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/ChangeLog,v 1.10 2008/04/21 17:27:43 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org> mini_httpd-1.19.ebuild:
+  Don't strip, respect CFLAGS, LDFLAGS, use right compiler, add ~ia64, sparc
+  stable
 
   26 Aug 2007; Thilo Bangert <bangert@gentoo.org>
   files/mini_httpd.confd-1.19, -files/mini_httpd.conf.sample,

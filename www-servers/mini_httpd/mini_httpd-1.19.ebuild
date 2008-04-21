@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.8 2007/05/10 15:03:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.9 2008/04/21 17:27:43 armin76 Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Small forking webserver with optional ssl and ipv6 support"
 HOMEPAGE="http://www.acme.com/software/mini_httpd/"
@@ -8,7 +10,7 @@ SRC_URI="http://www.acme.com/software/mini_httpd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc s390 ~sparc x86"
+KEYWORDS="~ia64 ppc s390 sparc x86"
 IUSE="ssl ipv6"
 
 DEPEND="ssl? ( dev-libs/openssl )"
@@ -38,7 +40,7 @@ src_compile() {
 	if ! use ipv6; then
 		sed -i 's@#define USE_IPV6@#undef USE_IPV6@' mini_httpd.c
 	fi
-	emake || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
