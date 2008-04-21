@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
+	</maintainer>
 	<longdescription>
 		The Revision Control System (RCS) is a system for managing multiple
 		versions of files.  RCS automates the storage, retrieval, logging,
