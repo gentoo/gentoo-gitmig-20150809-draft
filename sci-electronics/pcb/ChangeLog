@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.40 2008/04/12 07:41:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.41 2008/04/21 20:57:46 calchan Exp $
+
+  21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> -pcb-20060822.ebuild,
+  -pcb-20070208.ebuild, -pcb-20070912.ebuild:
+  Post-stabilization cleanup.
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> pcb-20080202.ebuild:
   Stable on ppc wrt bug #217058
