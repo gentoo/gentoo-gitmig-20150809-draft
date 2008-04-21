@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/nsvs-20070407.ebuild,v 1.1 2007/12/30 02:51:09 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/nsvs-20070407.ebuild,v 1.2 2008/04/21 11:16:09 chtekk Exp $
 
 inherit eutils
 
@@ -18,9 +18,13 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
+pkg_setup() {
+	enewgroup nsvsd
+	enewuser nsvsd -1 -1 -1 nsvsd
+}
+
 src_compile() {
 	econf --localstatedir=/var || die "econf failed"
-
 	emake || die "emake failed"
 }
 
@@ -37,9 +41,4 @@ src_install() {
 	docinto sample
 	dodoc sample/nsvsd/README
 	dodoc sample/nsvsd/linux/*
-}
-
-pkg_preinst() {
-	enewgroup nsvsd
-	enewuser nsvsd -1 -1 -1 nsvsd
 }
