@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.390 2008/04/20 14:03:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.391 2008/04/21 12:52:20 suka Exp $
+
+  21 Apr 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.4.0.ebuild:
+  filter CFLAGS to prevent high mem-usage during the build, see bug #215291
+  for more information
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> openoffice-2.4.0.ebuild:
   amd64/x86 stable, security bug #218080
