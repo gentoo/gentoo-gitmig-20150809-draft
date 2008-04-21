@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/wsmake
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/ChangeLog,v 1.4 2007/01/19 21:02:01 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/ChangeLog,v 1.5 2008/04/21 18:21:48 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   19 Jan 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
   wsmake-0.6.4.ebuild:
