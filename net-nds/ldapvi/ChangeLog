@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ldapvi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.18 2008/01/07 22:43:44 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.19 2008/04/21 18:11:33 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   07 Jan 2008; David Shakaryan <omp@gentoo.org> ldapvi-1.7.ebuild:
   Minor cleanup, add missing dev-util/pkgconfig dependency. (bug #204806)
