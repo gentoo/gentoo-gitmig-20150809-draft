@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-audiorecorder
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.8 2007/06/24 12:45:41 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.9 2008/04/21 10:56:40 zzam Exp $
+
+  21 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-audiorecorder-0.1.0_pre6-ffmpeg-0.4.9_p20080326-new_header.diff
+  , vdr-audiorecorder-0.1.0_pre6.ebuild:
+  Added patch for new header location in ffmpeg-0.4.9_p20080326, Bug
+  #218094. Fixed quoting.
 
   24 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-audiorecorder-0.1.0_pre6-vdr-1.5.0.diff,
