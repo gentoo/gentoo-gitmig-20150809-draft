@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.10.ebuild,v 1.1 2008/04/18 06:26:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.10.ebuild,v 1.2 2008/04/21 17:36:43 ulm Exp $
 
 inherit elisp
 
 DESCRIPTION="The Gnus newsreader and mail-reader"
 HOMEPAGE="http://gnus.org/"
-SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz
-	http://theotp1.physik.uni-ulm.de/~ste/comp/emacs/gnus/release/${P}.tar.gz"
+SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"

@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-0.8.ebuild,v 1.1 2008/04/18 06:26:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-0.8.ebuild,v 1.2 2008/04/21 17:37:43 ulm Exp $
 
 inherit elisp
 
 DESCRIPTION="Current alpha branch of the Gnus news- and mail-reader"
 HOMEPAGE="http://gnus.org/"
-SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz
-	http://theotp1.physik.uni-ulm.de/~ste/comp/emacs/gnus/release/${P}.tar.gz"
+SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"
