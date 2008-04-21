@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.3.ebuild,v 1.3 2008/04/21 07:08:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.3.ebuild,v 1.4 2008/04/21 07:11:08 ulm Exp $
 
 # emacs support disabled due to Bug 99533
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="http://linux.schottelius.org/gpm/"
