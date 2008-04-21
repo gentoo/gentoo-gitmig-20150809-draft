@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8521 2008/04/21 19:38:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8522 2008/04/21 20:05:37 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <drac@gentoo.org> (21 Apr 2008)
+# Masked for removal in 30 days. Doesn't build
+# wrt bug 178036 and has open CVE-2007-4773 wrt
+# security bug 203195.
+sys-apps/systrace
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # mask beta version
