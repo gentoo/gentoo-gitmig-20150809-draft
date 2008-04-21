@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.5.ebuild,v 1.1 2008/04/20 20:36:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.5.ebuild,v 1.2 2008/04/21 17:05:58 welp Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_LIBC="elibc_glibc"
-IUSE="accessibility afs branding dmx ipv6 keyring pam remote selinux tcpd xinerama $IUSE_LIBC"
+IUSE="accessibility afs branding dmx ipv6 gnome-keyring pam remote selinux tcpd xinerama $IUSE_LIBC"
 
 # Name of the tarball with gentoo specific files
 GDM_EXTRA="${PN}-2.20.5-gentoo-files"
@@ -42,7 +42,7 @@ RDEPEND="dev-libs/dbus-glib
 		 accessibility? ( x11-libs/libXevie )
 		 afs? ( net-fs/openafs sys-libs/lwp )
 		 dmx? ( x11-libs/libdmx )
-		 keyring? ( >=gnome-base/gnome-keyring-2.22 )
+		 gnome-keyring? ( >=gnome-base/gnome-keyring-2.22 )
 		 pam? (
 			virtual/pam
 			>=sys-auth/pambase-20080318
@@ -83,15 +83,15 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-dmx=no"
 	fi
 
-	if use keyring && ! built_with_use gnome-base/gnome-keyring pam; then
+	if use gnome-keyring && ! built_with_use gnome-base/gnome-keyring pam; then
 		eerror "You need to build gnome-base/gnome-keyring with USE=\"pam\""
-		eerror "for USE=\"keyring\" to have any effect on this package."
+		eerror "for USE=\"gnome-keyring\" to have any effect on this package."
 	fi
 
 	if use pam; then
 		G2CONF="${G2CONF} --enable-authentication-scheme=pam"
 
-		if use keyring && ! built_with_use sys-auth/pambase gnome; then
+		if use gnome-keyring && ! built_with_use sys-auth/pambase gnome; then
 			eerror "You need USE=\"gnome\" in sys-auth/pambase for proper keyring"
 			eerror "unlocking at login time. It will not work properly otherwise."
 		fi
@@ -153,7 +153,7 @@ src_install() {
 	rm -rf "${D}/etc/pam.d"
 
 	if use pam ; then
-		use keyring && sed -i "s:#Keyring=::g" "${gentoodir}"/pam.d/*
+		use gnome-keyring && sed -i "s:#Keyring=::g" "${gentoodir}"/pam.d/*
 
 		dopamd "${gentoodir}"/pam.d/*
 		dopamsecurity console.apps "${gentoodir}/security/console.apps/gdmsetup"
@@ -188,7 +188,7 @@ pkg_postinst() {
 
 	elog "See README.install for more information about the change."
 
-	if use keyring; then
+	if use gnome-keyring; then
 		elog "For autologin to unlock your keyring, you need to set an empty"
 		elog "password on your keyring. Use app-crypt/seahorse for that."
 	fi
