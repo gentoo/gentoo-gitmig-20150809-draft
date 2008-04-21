@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-softplay
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/ChangeLog,v 1.4 2007/07/30 16:47:41 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/ChangeLog,v 1.5 2008/04/21 10:45:33 zzam Exp $
+
+*vdr-softplay-0.0.2.20080421 (21 Apr 2008)
+
+  21 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/ffmpeg-0.4.9_p20080326-new_header.diff, +files/ffmpeg-linking.diff,
+  vdr-softplay-0.0.2.20060815.ebuild, vdr-softplay-0.0.2.20070730.ebuild,
+  +vdr-softplay-0.0.2.20080421.ebuild:
+  Added new snapshot that also can work with ffmpeg-0.4.9_p20080326, Bug
+  #218094. Fixed quoting.
 
   30 Jul 2007; Matthias Schwarzott <zzam@gentoo.org> +files/new-ffmpeg.diff,
   vdr-softplay-0.0.2.20070730.ebuild:

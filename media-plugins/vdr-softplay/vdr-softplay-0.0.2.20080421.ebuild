@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/vdr-softplay-0.0.2.20070730.ebuild,v 1.3 2008/04/21 10:45:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/vdr-softplay-0.0.2.20080421.ebuild,v 1.1 2008/04/21 10:45:33 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -33,5 +33,8 @@ src_unpack() {
 	# ffmpeg-header-directory
 	sed -i Makefile -e 's#^LIBFFMPEG=.*$#LIBFFMPEG=/usr/include/ffmpeg#'
 
-	epatch "${FILESDIR}/new-ffmpeg.diff"
+	epatch "${FILESDIR}/ffmpeg-linking.diff"
+	if has_version ">=media-video/ffmpeg-0.4.9_p20080326"; then
+		epatch "${FILESDIR}/ffmpeg-0.4.9_p20080326-new_header.diff"
+	fi
 }
