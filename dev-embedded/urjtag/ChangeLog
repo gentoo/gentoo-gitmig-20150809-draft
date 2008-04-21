@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.2 2008/04/20 19:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.3 2008/04/21 19:13:48 maekke Exp $
+
+  21 Apr 2008; Markus Meier <maekke@gentoo.org> urjtag-0.8.ebuild:
+  amd64/x86 stable, bug #217847
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org> urjtag-0.8.ebuild:
   Control libftdi dep via USE=ftdi and block dev-embedded/jtag #217847.

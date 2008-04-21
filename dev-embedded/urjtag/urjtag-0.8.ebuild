@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-0.8.ebuild,v 1.3 2008/04/20 19:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-0.8.ebuild,v 1.4 2008/04/21 19:13:48 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/urjtag/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="ftdi readline"
 
 DEPEND="!dev-embedded/jtag
