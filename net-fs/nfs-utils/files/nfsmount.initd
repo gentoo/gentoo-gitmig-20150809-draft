@@ -1,17 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount.initd,v 1.9 2008/04/20 00:06:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount.initd,v 1.10 2008/04/21 18:17:26 vapier Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
 depend() {
 	local myneed=""
 	if [ -e /etc/fstab ] ; then
-		awk '!/^[[:space:]]*#/ && $3 == "nfs4" { exit ($4 ~ /sec=krb/ ? 1 : 2) }' /etc/fstab
+		awk '!/^[[:space:]]*#/ && $3 == "nfs4" { exit ($4 ~ /sec=krb/ ? 10 : 20) }' /etc/fstab
 		local ret=$?
-		[ ${ret} -eq 1 ] && myneed="${myneed} rpc.gssd"
-		[ ${ret} -ne 2 ] && myneed="${myneed} rpc.idmapd"
+		[ ${ret} -eq 10 ] && myneed="${myneed} rpc.gssd"
+		[ ${ret} -ne 20 ] && myneed="${myneed} rpc.idmapd"
 	fi
 	type -t config 2>/dev/null 1>&2 && config /etc/fstab
 	need net portmap rpc.statd ${myneed}

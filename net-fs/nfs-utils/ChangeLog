@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.126 2008/04/21 07:56:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.127 2008/04/21 18:17:25 vapier Exp $
+
+  21 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/nfsmount.initd:
+  Use non-common awk exit values so that the default exit values dont trigger
+  false positives #218713 by Paolo Pedroni.
 
   21 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/rpc.gssd.initd,
   files/rpc.svcgssd.initd:
