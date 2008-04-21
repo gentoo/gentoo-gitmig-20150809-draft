@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/genmenu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.24 2007/08/02 12:47:33 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.25 2008/04/21 18:31:00 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> genmenu-1.0.7.ebuild,
   genmenu-1.0.7-r1.ebuild:

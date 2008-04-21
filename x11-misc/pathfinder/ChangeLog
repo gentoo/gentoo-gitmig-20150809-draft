@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pathfinder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.16 2008/02/25 15:31:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.17 2008/04/21 18:34:15 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
 *pathfinder-1.6.31 (25 Feb 2008)
 
