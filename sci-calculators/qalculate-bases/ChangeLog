@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/qalculate-bases
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.13 2008/02/04 14:06:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.14 2008/04/21 13:31:26 markusle Exp $
+
+  21 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  qalculate-bases-0.9.4.ebuild, qalculate-bases-0.9.4-r1.ebuild,
+  qalculate-bases-0.9.4-r2.ebuild:
+  Fix RDEPEND for pkgconfig (see bug #217278).
 
 *qalculate-bases-0.9.4-r2 (04 Feb 2008)
 

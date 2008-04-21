@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r2.ebuild,v 1.1 2008/02/04 14:05:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r2.ebuild,v 1.2 2008/04/21 13:39:43 markusle Exp $
 
 inherit autotools
 
@@ -13,10 +13,12 @@ SLOT="0"
 IUSE="nls"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=sci-libs/libqalculate-0.9.6-r1
+RDEPEND=">=sci-libs/libqalculate-0.9.6-r1
 	>=x11-libs/gtk+-2.4
-	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
