@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.5 2008/04/10 13:02:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.6 2008/04/21 02:02:41 je_fro Exp $
 
 inherit qt3
 
@@ -13,10 +13,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.1)
-	>=sys-devel/gcc-3.2
-	dev-util/pkgconfig
+RDEPEND="$(qt_min_version 3.1)
 	<sci-chemistry/openbabel-2.2"
+
+DEPEND="${RDEPEND}
+		>=sys-devel/gcc-3.2
+		dev-util/pkgconfig"
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc

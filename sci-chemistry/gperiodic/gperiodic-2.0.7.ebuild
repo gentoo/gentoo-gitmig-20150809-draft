@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.4 2007/01/05 17:10:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.5 2008/04/21 01:58:30 je_fro Exp $
 
 inherit toolchain-funcs
 
@@ -13,10 +13,12 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
 
-DEPEND=">=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2
 	=x11-libs/gtk+-2*
-	>=dev-util/pkgconfig-0.12
 	nls? ( sys-devel/gettext )"
+
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 	# The author has removed "unnecessary automake/autoconf setup"
@@ -43,11 +45,11 @@ src_install() {
 	make install || die "make install failed."
 
 	# Fix permissions
-	chmod 644 ${D}/usr/share/pixmaps/*
-	chmod 644 ${D}/usr/share/applications/*
+	chmod 644 "${D}/usr/share/pixmaps/*"
+	chmod 644 "${D}/usr/share/applications/*"
 
 	# Fix the chemistry category in the .desktop file, bug 97202.
-	sed -i -e "s|Chemestry|Chemistry|" ${D}/usr/share/applications/gperiodic.desktop
+	sed -i -e "s|Chemestry|Chemistry|" "${D}/usr/share/applications/gperiodic.desktop"
 
 	# The man page seems to have been removed too.
 #	doman man/gperiodic.1

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.28 2008/04/10 13:02:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.29 2008/04/21 02:02:41 je_fro Exp $
+
+  21 Apr 2008; Jeff Gardner <je_fro@gentoo.org> xdrawchem-1.9.9.ebuild:
+  Fix RDEPEND for bug #217278
 
   10 Apr 2008; Markus Dittrich <markusle@gentoo.org> xdrawchem-1.9.9.ebuild:
   Changed dependencies on openbabel since compilation against
