@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.32 2008/03/10 12:09:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.33 2008/04/21 19:25:49 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   10 Mar 2008; Caleb Tennis <caleb@gentoo.org> monit-4.10.1.ebuild:
   This version is now GPL-3
