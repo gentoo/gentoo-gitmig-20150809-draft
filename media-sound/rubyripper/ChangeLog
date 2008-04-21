@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.17 2008/04/01 16:38:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.18 2008/04/21 15:23:28 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org> rubyripper-0.5.0.ebuild:
+  Add ~sparc
 
   01 Apr 2008; Ben de Groot <yngwin@gentoo.org> +rubyripper-0.5.0.ebuild,
   +files/rubyripper-0.5.0-editor-environment.patch,
