@@ -1,5 +1,5 @@
---- powerpc-utils-papr-1.0.2.orig/Makefile	2006-03-28 16:07:24.000000000 -0600
-+++ powerpc-utils-papr-1.0.2/Makefile	2006-04-19 14:53:25.000000000 -0500
+--- powerpc-utils-papr-1.1.0.orig/Makefile	2006-03-28 16:07:24.000000000 -0600
++++ powerpc-utils-papr-1.1.0/Makefile	2006-04-19 14:53:25.000000000 -0500
 @@ -20,11 +20,9 @@
  	@$(MAKE) -C doc
  

@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.0.1.ebuild,v 1.5 2008/02/21 18:34:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.1.0.ebuild,v 1.1 2008/04/21 20:17:41 ranger Exp $
 
 inherit eutils
 
 MY_P="powerpc-utils-papr-${PV}"
 
-DESCRIPTION="The package provides the utilities which are intended for the maintenance of IBM powerpc platforms"
+DESCRIPTION="This package provides the utilities which are intended for the maintenance of IBM powerpc platforms."
 SRC_URI="http://powerpc-utils.ozlabs.org/releases/powerpc-utils-papr-${PV}.tar.gz"
 HOMEPAGE="http://powerpc-utils.ozlabs.org/"
 
@@ -14,16 +14,16 @@ S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="ppc ppc64"
+KEYWORDS="~ppc ~ppc64"
 IUSE=""
-RDEPEND="sys-apps/ibm-powerpc-utils
+RDEPEND=">=sys-apps/ibm-powerpc-utils-1.1.0
 	sys-libs/librtas
 	virtual/logger"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.0.1-remove-doc.patch
-	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.0.1-removeinitandvscsis.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.1.0-remove-doc.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.1.0-removeinitandvscsis.patch
 }
 
 src_install() {

@@ -1,5 +1,5 @@
---- powerpc-utils-papr-1.0.1.orig/scripts/Makefile	2006-02-15 14:23:19.000000000 -0600
-+++ powerpc-utils-papr-1.0.1/scripts/Makefile	2006-02-25 10:30:08.000000000 -0600
+--- powerpc-utils-papr-1.1.0.orig/scripts/Makefile	2006-03-28 16:07:24.000000000 -0600
++++ powerpc-utils-papr-1.1.0/scripts/Makefile	2006-04-19 14:53:44.000000000 -0500
 @@ -4,7 +4,7 @@
  
  include ../rules.mk
