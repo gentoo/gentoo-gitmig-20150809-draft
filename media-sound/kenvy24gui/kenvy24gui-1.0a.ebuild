@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/kenvy24gui-1.0a.ebuild,v 1.2 2008/04/21 14:23:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/kenvy24gui-1.0a.ebuild,v 1.3 2008/04/21 17:17:57 mr_bones_ Exp $
 
 inherit kde
 
