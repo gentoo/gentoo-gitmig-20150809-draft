@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.16.ebuild,v 1.2 2008/04/20 13:52:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.16.ebuild,v 1.3 2008/04/21 18:00:01 armin76 Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -28,7 +28,7 @@ DESCRIPTION="BEA WebLogic's J2SE Development Kit"
 HOMEPAGE="http://commerce.bea.com/products/weblogicjrockit/jrockit_prod_fam.jsp"
 LICENSE="jrockit"
 SLOT="1.4"
-KEYWORDS="-* ~ia64 x86"
+KEYWORDS="-* ia64 x86"
 IUSE="X alsa doc examples odbc"
 
 DEPEND="app-arch/unzip"

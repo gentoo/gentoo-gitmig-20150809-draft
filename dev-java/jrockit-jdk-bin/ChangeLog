@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.45 2008/04/20 13:52:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.46 2008/04/21 18:00:01 armin76 Exp $
+
+  21 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  jrockit-jdk-bin-1.4.2.16.ebuild, jrockit-jdk-bin-1.5.0.14.ebuild:
+  ia64 stable wrt securit #218226
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org>
   jrockit-jdk-bin-1.4.2.16.ebuild, jrockit-jdk-bin-1.5.0.14.ebuild:
