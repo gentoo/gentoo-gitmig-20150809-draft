@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9_beta5.ebuild,v 1.2 2008/04/09 01:08:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9_beta5-r1.ebuild,v 1.1 2008/04/21 14:22:59 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -135,7 +135,7 @@ src_install() {
 	rm "${D}"/usr/bin/xulrunner
 
 	dodir /usr/bin
-	dosym ${D}${MOZILLA_FIVE_HOME}/xulrunner-bin /usr/bin/xulrunner-1.9
+	dosym ${D}${MOZILLA_FIVE_HOME}/xulrunner /usr/bin/xulrunner-1.9
 
 	X_DATE=`date +%Y%m%d`
 
