@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8522 2008/04/21 20:05:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8523 2008/04/21 20:18:10 jokey Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
+# Masked for removal in 30 days.
+# unmaintained, broken and not used anywhere
+# use dev-python/fuse-python instead
+sys-fs/python-fuse
 
 # Samuli Suominen <drac@gentoo.org> (21 Apr 2008)
 # Masked for removal in 30 days. Doesn't build
