@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.380 2008/04/21 00:46:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.381 2008/04/21 06:01:25 gregkh Exp $
+
+  21 Apr 2008; Greg Kroah-Hartman <gregkh@gentoo.org> -udev-104-r12.ebuild,
+  -udev-104-r13.ebuild, -udev-111.ebuild, -udev-111-r1.ebuild,
+  -udev-111-r3.ebuild, -udev-112.ebuild, -udev-112-r1.ebuild,
+  -udev-113.ebuild, -udev-113-r1.ebuild, -udev-113-r2.ebuild:
+  remove unneeded ebuilds
 
   21 Apr 2008; Jeroen Roovers <jer@gentoo.org> udev-119.ebuild:
   Stable for HPPA (bug #218407).
