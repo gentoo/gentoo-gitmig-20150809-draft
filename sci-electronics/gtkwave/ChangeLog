@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.45 2008/03/29 17:59:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.46 2008/04/21 14:31:41 calchan Exp $
+
+  21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> gtkwave-3.1.1.ebuild:
+  Fixed pkgconfig dep in old version.
 
 *gtkwave-3.1.7 (29 Mar 2008)
 
