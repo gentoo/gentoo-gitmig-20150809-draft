@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.1 2008/04/17 02:51:23 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.2 2008/04/21 14:52:57 jsbronder Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -57,6 +57,9 @@ src_unpack() {
 	# to split the installation of the module (which we use
 	# the eclass for) and the installation of the kernapps.
 	epatch "${FILESDIR}"/${PN}-split-kernapps.patch
+
+	# Support for >=linux-2.6.25, should be unnecessary next release.
+	sed -i 's/  Q=@echo >.*/  Q=@/' src/kernel/linux-2.6/Makefile.in
 }
 
 src_compile() {
