@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.121 2008/04/20 15:50:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.122 2008/04/21 17:17:50 welp Exp $
+
+  21 Apr 2008; <welp@gentoo.org> rhythmbox-0.10.1-r1.ebuild,
+  rhythmbox-0.11.2-r1.ebuild, rhythmbox-0.11.5.ebuild:
+  keyring to gnome-keyring
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.10.1-r1.ebuild,
   rhythmbox-0.11.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2-r1.ebuild,v 1.6 2008/04/20 15:50:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2-r1.ebuild,v 1.7 2008/04/21 17:17:50 welp Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="doc vorbis flac mad ipod hal daap dbus libnotify lirc musicbrainz tagwriting python keyring"
+IUSE="doc vorbis flac mad ipod hal daap dbus libnotify lirc musicbrainz tagwriting python gnome-keyring"
 #I want tagwriting to be on by default in the future. It is just a local flag
 #now because it is still considered experimental by upstream and doesn't work
 #well with all formats due to gstreamer limitation.
@@ -29,7 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=x11-libs/libsexy-0.1.5
 	>=gnome-extra/gnome-media-2.14.0
 	>=media-plugins/gst-plugins-cdparanoia-0.10
-	keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	musicbrainz? ( >=media-libs/musicbrainz-2.1:1 )
 	>=net-libs/libsoup-2.2.99:2.2
 	lirc? ( app-misc/lirc )
@@ -75,7 +75,7 @@ pkg_setup() {
 		$(use_enable python)
 		$(use_enable libnotify)
 		$(use_enable lirc)
-		$(use_with keyring gnome-keyring)
+		$(use_with gnome-keyring)
 		--with-playback=gstreamer-0-10
 		--with-cd-burning
 		--enable-mmkeys
