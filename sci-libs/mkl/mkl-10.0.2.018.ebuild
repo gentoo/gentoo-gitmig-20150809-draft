@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.3 2008/04/12 18:38:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.4 2008/04/21 15:32:41 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -27,9 +27,7 @@ DEPEND="app-admin/eselect-blas
 	app-admin/eselect-cblas
 	app-admin/eselect-lapack"
 
-RDEPEND="${DEPEND}
-	dev-util/pkgconfig
-	doc? ( app-doc/blas-docs app-doc/lapack-docs )
+RDEPEND="doc? ( app-doc/blas-docs app-doc/lapack-docs )
 	mpi? ( virtual/mpi )"
 
 MKL_DIR=/opt/intel/${PN}/${PV}

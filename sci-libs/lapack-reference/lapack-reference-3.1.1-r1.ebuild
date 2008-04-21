@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.16 2007/12/19 14:45:48 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.17 2008/04/21 15:28:32 bicatali Exp $
 
 inherit eutils autotools flag-o-matic fortran multilib
 
@@ -19,7 +19,7 @@ DEPEND="virtual/blas
 	dev-util/pkgconfig
 	app-admin/eselect-lapack"
 
-RDEPEND="${DEPEND}
+RDEPEND="virtual/blas
 	doc? ( app-doc/lapack-docs )"
 
 S="${WORKDIR}/${MyPN}-lite-${PV}"
