@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3510 2008/04/21 22:09:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3511 2008/04/21 22:17:31 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1008,7 +1008,6 @@ media-plugins/audacious-plugins-ugly:cube - Build with CUBE input plugin (suppor
 media-plugins/audacious-plugins-ugly:iris - Build with Iris 3D visual plugin
 media-plugins/gimp-greycstoration:smp - Enable multicore/multiprocessor support
 media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library
-media-plugins/gst-plugins-farsight:jrtplib - Support for the Real-time Transport Protocol (RTP) library
 media-plugins/gst-plugins-meta:mythtv - Support for retrieval from Mythtv backend
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythmusic:libvisual - Enables libvisual support for effects
