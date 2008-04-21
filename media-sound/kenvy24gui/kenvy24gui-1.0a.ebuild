@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/kenvy24gui-1.0a.ebuild,v 1.1 2008/03/19 18:55:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/kenvy24gui-1.0a.ebuild,v 1.2 2008/04/21 14:23:26 flameeyes Exp $
 
 inherit kde
 
@@ -18,3 +18,10 @@ S="${WORKDIR}/${PN}"
 RDEPEND=">=media-libs/alsa-lib-1.0.13"
 
 need-kde 3.2
+
+PATCHES=( "${FILESDIR}/${P}+autoconf-2.62.patch" )
+
+src_unpack() {
+	kde_src_unpack
+	rm -f "${S}/configure"
+}

@@ -1,0 +1,15 @@
+Index: kenvy24gui/configure.in.in
+===================================================================
+--- kenvy24gui.orig/configure.in.in
++++ kenvy24gui/configure.in.in
+@@ -11,8 +11,8 @@ if test "$PKG_CONFIG" = "no" ; then
+ fi
+ 
+ PKG_CHECK_MODULES( ALSA, alsa >= 1.0.13 )
+-AC_SUBST( ALSA_CFLAGS )
+-AC_SUBST( ALSA_LIBS )
++AC_SUBST(ALSA_CFLAGS)
++AC_SUBST(ALSA_LIBS)
+ 
+ # PKG_CHECK_MODULES( GDK, gdk-2.0 >= 2.10.11 )
+ # AC_SUBST( GDK_CFLAGS )
