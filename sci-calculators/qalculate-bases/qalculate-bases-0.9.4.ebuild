@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4.ebuild,v 1.4 2008/04/21 13:31:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4.ebuild,v 1.5 2008/04/21 17:17:15 mr_bones_ Exp $
 
 DESCRIPTION="A GTK+ base conversion tool"
 LICENSE="GPL-2"
@@ -17,7 +17,6 @@ RDEPEND="~sci-libs/libqalculate-0.9.4
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
 
 src_compile() {
 	econf --disable-clntest || die "Configuration failed."
