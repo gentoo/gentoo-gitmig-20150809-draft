@@ -1,0 +1,110 @@
+--- include/openbabel/obconversion.h	2008-02-29 14:06:19.000000000 -0500
++++ include/openbabel/obconversion.h	2008-04-20 20:17:14.000000000 -0400
+@@ -49,6 +49,9 @@
+ 
+   OBERROR extern  OBMessageHandler obErrorLog;
+ 
++  typedef std::map<const char*,OBFormat*,CharPtrLess > FMapType;
++  typedef FMapType::iterator Formatpos;
++
+   //*************************************************
+   /// @brief Class to convert from one format to another.
+   // Class introduction in obconversion.cpp
+@@ -75,7 +78,7 @@
+       static OBFormat*        FormatFromMIME(const char* MIME);
+ 
+       ///Repeatedly called to recover available Formats
+-//      static bool	        GetNextFormat(Formatpos& itr, const char*& str,OBFormat*& pFormat);
++      static bool GetNextFormat(Formatpos& itr, const char*& str,OBFormat*& pFormat);
+       //@}
+ 		
+       /// @name Information
+@@ -142,7 +145,7 @@
+         { return &OptionsArray[opttyp];};
+ 
+       ///@brief Set an option of specified type, with optional text
+-      void AddOption(const char* opt, Option_type opttyp, const char* txt=NULL);
++      void AddOption(const char* opt, Option_type opttyp=OUTOPTIONS, const char* txt=NULL);
+ 	
+       bool RemoveOption(const char* opt, Option_type optype);
+ 
+@@ -279,7 +282,7 @@
+ 
+     protected:
+       bool             SetStartAndEnd();
+-//      static FMapType& FormatsMap();///<contains ID and pointer to all OBFormat classes
++      static FMapType& FormatsMap();///<contains ID and pointer to all OBFormat classes
+ //      static FMapType& FormatsMIMEMap();///<contains MIME and pointer to all OBFormat classes
+       typedef std::map<std::string,int> OPAMapType;
+       static OPAMapType& OptionParamArray(Option_type typ);
+
+--- src/obconversion.cpp	2008-02-29 14:06:05.000000000 -0500
++++ src/obconversion.cpp	2008-04-20 20:18:28.000000000 -0400
+@@ -324,6 +324,42 @@
+     return count;
+   }
+ 
++  FMapType& OBConversion::FormatsMap()
++  {
++    static FMapType* fm = new FMapType;
++    return *fm;
++  }
++
++  bool OBConversion::GetNextFormat(Formatpos& itr, const char*& str,OBFormat*& pFormat)
++  {
++    pFormat = NULL;
++    if(str==NULL)
++      itr = FormatsMap().begin();
++    else
++      itr++;
++    if(itr == FormatsMap().end())
++    {
++      str=NULL;
++      pFormat=NULL;
++      return false;
++    }
++    static string s;
++    s =itr->first;
++    pFormat = itr->second;
++    if(pFormat)
++    {
++      string description(pFormat->Description());
++      s += " -- ";
++      s += description.substr(0,description.find('\n'));
++    }
++
++    if(pFormat->Flags() & NOTWRITABLE) s+=" [Read-only]";
++    if(pFormat->Flags() & NOTREADABLE) s+=" [Write-only]";
++
++    str = s.c_str();
++    return true;
++  }
++
+   //////////////////////////////////////////////////////
+   /// Sets the formats from their ids, e g CML.
+   /// If inID is NULL, the input format is left unchanged. Similarly for outID
+@@ -486,7 +522,7 @@
+         if(!ret)
+           {
+             //error or termination request: terminate unless
+-            // -e option requested and sucessfully can skip past current object
++            // -e option requested and successfully can skip past current object
+             if(!IsOption("e", GENOPTIONS) || pInFormat->SkipObjects(0,this)!=1) 
+               break;
+           }
+@@ -1093,7 +1129,14 @@
+ 
+         //INPUT
+         if(FileList.empty())
+-          pIs = NULL;
++          {
++            pIs = NULL;
++            if(HasMultipleOutputFiles)
++              {
++                obErrorLog.ThrowError(__FUNCTION__,"Cannot use multiple output files without an input file", obError);
++                return 0;
++              }
++          }
+         else
+           {
+             if(FileList.size()>1 || OutputFileName.substr(0,2)=="*.")

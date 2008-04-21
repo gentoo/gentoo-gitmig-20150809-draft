@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.14 2008/03/01 17:50:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.15 2008/04/21 05:52:31 cryos Exp $
+
+*openbabel-2.2.0_beta4-r1 (21 Apr 2008)
+
+  21 Apr 2008; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/openbabel-2.2.0_beta4-obconversion_api_fix.diff,
+  +openbabel-2.2.0_beta4-r1.ebuild:
+  Bug 216057 - added back in missing API element.
 
 *openbabel-2.2.0_beta4 (01 Mar 2008)
 
