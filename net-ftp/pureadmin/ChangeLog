@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pureadmin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.13 2007/05/15 14:03:32 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.14 2008/04/21 09:56:53 chtekk Exp $
+
+*pureadmin-0.4 (21 Apr 2008)
+
+  21 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  pureadmin-0.2.2.ebuild, pureadmin-0.3.ebuild, +pureadmin-0.4.ebuild:
+  Version bump to 0.4, metadata update.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

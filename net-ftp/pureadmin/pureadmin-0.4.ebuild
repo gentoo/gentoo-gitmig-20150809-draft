@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.2.2.ebuild,v 1.5 2008/04/21 09:56:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4.ebuild,v 1.1 2008/04/21 09:56:53 chtekk Exp $
 
 inherit eutils
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="PureAdmin is a GUI tool used to make the management of Pure-FTPd a little easier."
 HOMEPAGE="http://purify.sourceforge.net/"
