@@ -1,9 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1345 2008/04/21 17:16:29 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1346 2008/04/21 17:23:25 calchan Exp $
 
   21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
-  Deleted mask on sci-electronics/lard which was removed.
+  Deleted mask on sci-libs/libgdgeda which was removed from the tree.
+
+  21 Apr 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Deleted mask on sci-electronics/lard which was removed from the tree.
 
   21 Apr 2008; <welp@gentoo.org> use.desc:
   Add gnome-keyring to use.desc

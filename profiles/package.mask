@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8518 2008/04/21 17:16:29 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8519 2008/04/21 17:23:25 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -197,12 +197,6 @@ net-p2p/limewire
 # http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
 =net-www/xxv-1.2.1308
 =net-www/xxv-1.2.1315
-
-# Denis Dupeyron <calchan@gentoo.org> (22 Mar 2008)
-# Not needed anymore. Was only used by old versions of
-# sci-libs/libgeda which were just punted. Will be removed
-# in 30 days.
-sci-libs/libgdgeda
 
 # Tristan Heaven <nyhm@gentoo.org> (21 Mar 2008)
 # Needs testing
