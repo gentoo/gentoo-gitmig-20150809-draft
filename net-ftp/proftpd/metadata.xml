@@ -4,6 +4,7 @@
 <herd>net-ftp</herd>
 <maintainer>
 	<email>chtekk@gentoo.org</email>
+	<name>Luca Longinotti</name>
 </maintainer>
 <longdescription>ProFTPD grew out of the desire to have a secure and 
 configurable FTP server, and out of a significant admiration of the Apache web 

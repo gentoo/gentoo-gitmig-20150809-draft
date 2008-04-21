@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.73 2008/04/18 11:00:43 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.74 2008/04/21 09:49:50 chtekk Exp $
+
+  21 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
+  Metadata update.
 
   18 Apr 2008; Luca Longinotti <chtekk@gentoo.org> -files/ftpusers,
   files/pure-ftpd.rc6, -pure-ftpd-1.0.20-r1.ebuild,
