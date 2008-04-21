@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/files/dovecot.init-r1,v 1.1 2008/04/17 16:16:21 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/files/dovecot.init-r1,v 1.2 2008/04/21 17:07:52 wschlich Exp $
 
 opts="reload"
 
 depend() {
-    need net
-    after ldap mysql ntp-client ntpd postgresql saslauthd slapd 
-    use logger
+	need localmount net
+	after bootmisc ldap mysql ntp-client ntpd postgresql saslauthd slapd 
+	use logger
 }
 
 checkconfig() {
@@ -34,23 +34,23 @@ checkconfig() {
 
 start() {
 	checkconfig || return 1
-    ebegin "Starting ${SVCNAME}"
-    start-stop-daemon --start --exec /usr/sbin/dovecot \
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon --start --exec /usr/sbin/dovecot \
 		--pidfile "${DOVECOT_PIDFILE}" -- -c "${DOVECOT_CONF}"
-    eend $?
+	eend $?
 }
 
 stop() {
 	checkconfig || return 1
-    ebegin "Stopping ${SVCNAME}"
-    start-stop-daemon --stop --exec /usr/sbin/dovecot \
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon --stop --exec /usr/sbin/dovecot \
 		--pidfile "${DOVECOT_PIDFILE}"
-    eend $?
+	eend $?
 }
 
 reload() {
-    ebegin "Reloading ${SVCNAME} configs and restarting auth/login processes"
-    start-stop-daemon --stop --oknodo --exec /usr/sbin/dovecot \
+	ebegin "Reloading ${SVCNAME} configs and restarting auth/login processes"
+	start-stop-daemon --stop --oknodo --exec /usr/sbin/dovecot \
 		--pidfile "${DOVECOT_PIDFILE}" --signal HUP
-    eend $?
+	eend $?
 }

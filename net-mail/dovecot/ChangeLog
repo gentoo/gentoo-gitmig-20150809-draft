@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.159 2008/04/17 16:16:21 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.160 2008/04/21 17:07:52 wschlich Exp $
+
+  21 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> files/dovecot.init,
+  files/dovecot.init-r1:
+  fix init script dependencies and indention (bug #217941, comment #3)
 
 *dovecot-1.1_rc4-r1 (17 Apr 2008)
 
