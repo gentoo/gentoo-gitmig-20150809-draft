@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rootstrap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.15 2007/11/04 12:16:43 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.16 2008/04/21 17:24:27 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
 *rootstrap-0.3.24 (04 Nov 2007)
 

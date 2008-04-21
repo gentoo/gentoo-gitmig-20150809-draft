@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bazaar
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.19 2008/01/01 20:31:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.20 2008/04/21 17:16:31 phreak Exp $
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
 
   01 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> bazaar-1.4.2-r1.ebuild:
   Fix dodoc calls and don't call doman on a file that does not exist.
