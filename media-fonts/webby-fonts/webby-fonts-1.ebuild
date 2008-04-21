@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/webby-fonts/webby-fonts-1.ebuild,v 1.2 2008/03/25 16:33:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/webby-fonts/webby-fonts-1.ebuild,v 1.3 2008/04/21 18:30:17 armin76 Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.proggyfonts.com/"
 SRC_URI="http://dl.liveforge.org/fonts/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 S="${WORKDIR}/${PN}"
 FONT_S=${S}
 FONT_SUFFIX="pcf.gz"
