@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.1 2008/03/27 17:32:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.2 2008/04/21 16:21:50 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -47,6 +47,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-newffmpeg.patch"
+	epatch "${FILESDIR}/${P}+curl-7.18.patch"
 	eautoreconf
 }
 
