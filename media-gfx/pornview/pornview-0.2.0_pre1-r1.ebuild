@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.4 2008/04/21 14:51:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.5 2008/04/21 14:57:18 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-4.diff \
-		"${FILESDIR}"/traypatch.diff
+		"${FILESDIR}"/traypatch.diff \
+		"${FILESDIR}"/${P}-desktop-entry.patch
 }
 
 src_compile() {
