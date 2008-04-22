@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.2-r1.ebuild,v 1.1 2008/04/22 22:43:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.2-r1.ebuild,v 1.2 2008/04/22 22:53:02 vapier Exp $
 
 inherit eutils autotools
 
@@ -25,7 +25,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-flag-order.patch
 	epatch "${FILESDIR}"/${P}-AC_LIBLTDL_CONVENIENCE.patch
-	epatch "${FILESDIR}"/${P}-AC_ENABLE_SHARED.patch
 	if ! use vanilla ; then
 		epunt_cxx
 		cd libltdl/m4
