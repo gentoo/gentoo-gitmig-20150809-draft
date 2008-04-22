@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nload
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.24 2007/09/23 18:37:44 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.25 2008/04/22 17:29:05 drac Exp $
+
+*nload-0.7.1 (22 Apr 2008)
+
+  22 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/nload-0.7.1-gcc43.patch, -nload-0.6.0.ebuild, +nload-0.7.1.ebuild:
+  Version bump. Fixes also building failure with GCC 4.3. Thanks to Peter
+  Alfredsen wrt #218909.
 
   23 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   nload-0.6.0-r2.ebuild:
