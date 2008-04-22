@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineak-defaultplugin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.23 2007/07/28 16:19:29 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.24 2008/04/22 17:04:52 drac Exp $
+
+  22 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/lineak-defaultplugin-0.9.0-gcc43.patch,
+  lineak-defaultplugin-0.9.0.ebuild:
+  Fix building with GCC 4.3, thanks to Peter Alfredsen wrt #218790.
 
   28 Jul 2007; Christoph Mende <angelos@gentoo.org>
   lineak-defaultplugin-0.9.0.ebuild:
