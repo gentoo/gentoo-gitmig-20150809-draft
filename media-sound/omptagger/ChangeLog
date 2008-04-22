@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/omptagger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.5 2008/04/21 07:00:18 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.6 2008/04/22 18:40:29 armin76 Exp $
+
+  22 Apr 2008; Raúl Porcel <armin76@gentoo.org> omptagger-1.0.1.ebuild:
+  Add ~sparc
 
 *omptagger-1.0.1 (21 Apr 2008)
 
