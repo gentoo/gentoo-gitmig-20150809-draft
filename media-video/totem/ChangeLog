@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.211 2008/04/21 03:52:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.212 2008/04/22 20:00:01 armin76 Exp $
+
+  22 Apr 2008; Raúl Porcel <armin76@gentoo.org> totem-2.22.1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #218794
 
   21 Apr 2008; Saleem Abdulrasool <compnerd@gentoo.org> totem-2.22.1.ebuild:
   Add built_with_use check for threading in python in the use=python case
