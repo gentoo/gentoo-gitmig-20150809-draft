@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.382 2008/04/21 19:06:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.383 2008/04/22 16:27:23 klausman Exp $
+
+  22 Apr 2008; Tobias Klausmann <klausman@gentoo.org> udev-119.ebuild:
+  Stable on alpha, bug #218407
 
   21 Apr 2008; Markus Meier <maekke@gentoo.org> udev-119.ebuild:
   amd64 stable, bug #218407
