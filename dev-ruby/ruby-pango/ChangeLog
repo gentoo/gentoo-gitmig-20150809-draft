@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-pango
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.40 2007/05/21 11:21:52 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.41 2008/04/22 18:30:13 graaff Exp $
+
+  22 Apr 2008; Hans de Graaff <graaff@gentoo.org> -ruby-pango-0.14.1.ebuild,
+  -ruby-pango-0.15.0.ebuild:
+  Remove old versions
 
   21 May 2007; Raúl Porcel <armin76@gentoo.org> ruby-pango-0.16.0.ebuild:
   alpha stable wrt #169094
