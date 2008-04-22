@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.2.ebuild,v 1.5 2008/02/01 10:38:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.2.ebuild,v 1.6 2008/04/22 19:09:42 drac Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

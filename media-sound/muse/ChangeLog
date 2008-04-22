@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.23 2008/02/01 15:09:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.24 2008/04/22 19:09:42 drac Exp $
+
+  22 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/muse-0.9.2-gcc43.patch, muse-0.9.2.ebuild:
+  Fix for GCC 4.3 by Peter Alfredsen wrt #218923.
 
   01 Feb 2008; Samuli Suominen <drac@gentoo.org>
   -files/muse-0.9.1-include.patch, -files/muse-0.9.1-miscfixes.patch,
