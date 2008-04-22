@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.4.ebuild,v 1.2 2008/04/18 12:30:17 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.4.ebuild,v 1.3 2008/04/22 14:34:57 pclouds Exp $
 
 EAPI=1
 
@@ -76,6 +76,13 @@ src_compile() {
 		$(use_enable mad) \
 		$(use_enable gtk) \
 		${myconf} || die "configure failed"
+
+	# bug #216284 image tests are not ready yet
+	cat  >test/image/Makefile <<EOF
+all:
+check:
+install:
+EOF
 
 	emake || die "emake failed"
 }
