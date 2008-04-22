@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.13 2007/11/29 17:58:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.14 2008/04/22 12:09:59 chainsaw Exp $
+
+inherit eutils
 
 DESCRIPTION="Text console based program for playing audio files"
 HOMEPAGE="http://mp3blaster.sourceforge.net/"
@@ -26,6 +28,7 @@ src_unpack() {
 	# File collision with media-sound/splay.
 	sed -i -e "s:splay.1:splay_mp3blaster.1:" Makefile.in
 	mv splay.1 splay_mp3blaster.1
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {

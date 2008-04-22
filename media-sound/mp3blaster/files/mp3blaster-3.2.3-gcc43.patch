@@ -1,0 +1,9 @@
+--- mp3blaster-3.2.3.orig/src/history.cc
++++ mp3blaster-3.2.3/src/history.cc
+@@ -1,5 +1,6 @@
+ #include <config.h>
+ #include "history.h"
++#include <cstdlib>
+ #include <string.h>
+ 
+ History::History()
