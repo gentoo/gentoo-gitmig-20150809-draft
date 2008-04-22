@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/vobject
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.1 2008/04/22 16:03:02 dev-zero Exp $
+
+*vobject-0.6.0 (22 Apr 2008)
+
+  22 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +vobject-0.6.0.ebuild:
+  Initial commit (bug #148532, thanks to Charles Clément)
+
