@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.0.ebuild,v 1.1 2008/03/23 15:13:17 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.0.1.ebuild,v 1.1 2008/04/22 11:18:35 chtekk Exp $
 
 NEED_PYTHON=2.3
 
