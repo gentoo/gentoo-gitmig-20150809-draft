@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.6.ebuild,v 1.1 2008/04/20 11:37:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.6.ebuild,v 1.2 2008/04/22 07:52:23 cedk Exp $
 
 EAPI=1
 
@@ -72,11 +72,11 @@ pkg_setup() {
 	fi
 
 	if use epiphany; then
-		if !built_with_use dev-libs/libbeagle python; then
+		if ! built_with_use dev-libs/libbeagle python; then
 			eerror "${fail_libbeagle}"
 			die "${fail_libbeagle}"
 		fi
-		if !built_with_use www-client/epiphany-extensions python; then
+		if ! built_with_use www-client/epiphany-extensions python; then
 			eerror "${fail_epiphany}"
 			die "${fail_epiphany}"
 		fi
