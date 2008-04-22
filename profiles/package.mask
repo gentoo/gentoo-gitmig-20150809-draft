@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8523 2008/04/21 20:18:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8524 2008/04/22 07:02:28 omp Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# David Shakaryan <omp@gentoo.org> (22 Apr 2008)
+# Masked for removal in 30 days. (bug #208878)
+# Dropping conky-syntax in favour of upstream syntax script.
+# Please enable the vim-syntax flag for conky instead.
+app-vim/conky-syntax
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # Masked for removal in 30 days.

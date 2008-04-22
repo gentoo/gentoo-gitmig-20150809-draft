@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1350 2008/04/21 20:18:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1351 2008/04/22 07:02:28 omp Exp $
+
+  22 Apr 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Mask app-vim/conky-syntax for removal in 30 days. (bug #208878)
 
   21 Apr 2008; Markus Ullmann <jokey@gentoo.org> package.mask:
   Mark sys-fs/python-fuse for removal
