@@ -1,0 +1,12 @@
+# ChangeLog for app-emacs/scheme-complete
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.1 2008/04/22 11:45:47 ulm Exp $
+
+*scheme-complete-0.8.1 (22 Apr 2008)
+
+  22 Apr 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/60scheme-complete-gentoo.el, +metadata.xml,
+  +scheme-complete-0.8.1.ebuild:
+  Initial import from Emacs overlay. Ebuild originally contributed by
+  Leonardo Valeri Manera <l.valerimanera@gmail.com>.
+
