@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.7 2008/02/20 14:23:12 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.8 2008/04/22 08:21:31 bicatali Exp $
+
+  22 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> gts-0.7.4.ebuild,
+  gts-0.7.6.ebuild:
+  Re-organized dependencies for pkg-config (bug #217278)
 
   20 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gts-0.7.6-include-fix.patch, gts-0.7.6.ebuild:

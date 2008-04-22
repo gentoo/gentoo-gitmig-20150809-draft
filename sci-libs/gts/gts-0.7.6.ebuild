@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.6.ebuild,v 1.4 2008/02/20 14:23:12 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.6.ebuild,v 1.5 2008/04/22 08:21:31 bicatali Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-libs/glib-2.4.0
-		sys-apps/gawk
+RDEPEND=">=dev-libs/glib-2.4.0
+		sys-apps/gawk"
+DEPEND="${RDEPEND}
 		sys-devel/libtool
 		dev-util/pkgconfig"
 
