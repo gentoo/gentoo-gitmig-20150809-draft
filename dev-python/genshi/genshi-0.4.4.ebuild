@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.4.4.ebuild,v 1.2 2008/04/22 11:29:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.4.4.ebuild,v 1.3 2008/04/22 11:50:15 chtekk Exp $
 
 NEED_PYTHON=2.3
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 DEPEND="dev-python/setuptools"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
