@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r12.ebuild,v 1.2 2008/02/18 00:32:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r12.ebuild,v 1.3 2008/04/22 10:57:37 flameeyes Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -73,7 +73,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--without-included-popt "
+	local myconf="--without-included-popt --docdir=/usr/share/doc/${PF}"
 
 	#More legacy stuff?
 	[ `gcc-major-version` -eq 2 ] && filter-lfs-flags
@@ -98,8 +98,7 @@ handle_avahi() {
 src_install() {
 	make DESTDIR="${D%/}" install
 
-	insinto /usr/share/doc/${PN}
-	doins "${S}/survey.txt"
+	dodoc "${S}/survey.txt"
 
 	exeinto /usr/bin
 	doexe "${FILESDIR}/distcc-config"
