@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.109 2008/04/21 12:46:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.110 2008/04/22 05:35:12 philantrop Exp $
+
+  22 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kmplayer-0.10.0c.ebuild:
+  Marked stable on amd64 as per bug 217424.
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> kmplayer-0.10.0c.ebuild:
   Add ~sparc
