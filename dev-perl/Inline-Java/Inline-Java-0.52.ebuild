@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.7 2008/03/21 23:03:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.8 2008/04/22 18:45:53 tove Exp $
 
 inherit java-pkg-2 perl-module
 
-DESCRIPTION="Easy implimentaiton of Java extensions"
+DESCRIPTION="Easy implementation of Java extensions"
 HOMEPAGE="http://search.cpan.org/~patl/"
 SRC_URI="mirror://cpan/authors/id/P/PA/PATL/${P}.tar.gz"
 
