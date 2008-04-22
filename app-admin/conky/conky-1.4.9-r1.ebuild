@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.9-r1.ebuild,v 1.9 2008/03/19 07:14:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.9-r1.ebuild,v 1.10 2008/04/22 06:05:45 omp Exp $
 
 inherit eutils
 # used for epause
@@ -43,6 +43,7 @@ RDEPEND="${DEPEND_COMMON}
 
 DEPEND="
 	${DEPEND_COMMON}
+	dev-util/pkgconfig
 	X? (
 		x11-libs/libXt
 		x11-proto/xextproto

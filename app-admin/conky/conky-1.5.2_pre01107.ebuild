@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.5.2_pre01107.ebuild,v 1.1 2008/04/16 03:06:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.5.2_pre01107.ebuild,v 1.2 2008/04/22 06:05:45 omp Exp $
 
 inherit eutils
 # used for epause
@@ -42,6 +42,7 @@ RDEPEND="${DEPEND_COMMON}
 	nano-syntax? ( app-editors/nano )"
 DEPEND="
 	${DEPEND_COMMON}
+	dev-util/pkgconfig
 	X? (
 		x11-libs/libXt
 		x11-proto/xextproto

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.75 2008/04/16 03:06:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.76 2008/04/22 06:05:45 omp Exp $
+
+  22 Apr 2008; David Shakaryan <omp@gentoo.org> conky-1.4.9-r1.ebuild,
+  conky-1.5.1.ebuild, conky-1.5.2_pre01107.ebuild:
+  Add dev-util/pkgconfig to DEPEND. (bug #216448)
 
 *conky-1.5.2_pre01107 (16 Apr 2008)
 
