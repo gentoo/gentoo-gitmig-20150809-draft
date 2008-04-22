@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.7 2008/01/07 10:51:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.8 2008/04/22 17:00:28 drac Exp $
 
-inherit multilib
+inherit eutils multilib
 
 MY_P=${P/.0/}
 
@@ -27,14 +27,20 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-libs/libXtst"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	econf $(use_enable debug) --with-x
 	emake || die "emake failed."
 }
 
-src_install () {
+src_install() {
 	sed -i -e 's:$(DESTDIR)${DESTDIR}:$(DESTDIR):' lineakd/Makefile
 
 	dodir /usr/share/man/man8
