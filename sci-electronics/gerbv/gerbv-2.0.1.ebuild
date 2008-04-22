@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.0.1.ebuild,v 1.1 2008/04/21 22:30:49 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.0.1.ebuild,v 1.2 2008/04/22 03:00:31 mr_bones_ Exp $
 
 inherit fdo-mime
 
@@ -64,4 +64,3 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
-
