@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineak-xosdplugin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.25 2007/07/28 16:20:43 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.26 2008/04/22 17:09:31 drac Exp $
+
+  22 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/lineak-xosdplugin-0.9.0-gcc43.patch,
+  lineak-xosdplugin-0.9.0.ebuild:
+  Fix building with GCC 4.3, thanks to Peter Alfredsen wrt #218792.
 
   28 Jul 2007; Christoph Mende <angelos@gentoo.org>
   lineak-xosdplugin-0.9.0.ebuild:
