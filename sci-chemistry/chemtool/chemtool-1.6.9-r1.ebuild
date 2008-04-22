@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.9-r1.ebuild,v 1.6 2008/04/21 01:40:11 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.9-r1.ebuild,v 1.7 2008/04/22 13:54:33 je_fro Exp $
 
 inherit eutils kde-functions
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gnome kde nls"
 
-DEPEND=">=media-gfx/transfig-3.2.3d
+RDEPEND=">=media-gfx/transfig-3.2.3d
 		=x11-libs/gtk+-2*
 		kde? ( kde-base/kdelibs )
 		x86? ( >=media-libs/libemf-1.0 )"
