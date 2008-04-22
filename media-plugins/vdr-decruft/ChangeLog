@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-decruft
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.4 2006/08/15 13:56:05 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.5 2008/04/22 10:32:03 zzam Exp $
+
+*vdr-decruft-0.0.4-r1 (22 Apr 2008)
+
+  22 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-decruft-0.0.4-avoid-vdr-patch.diff,
+  +vdr-decruft-0.0.4-r1.ebuild:
+  No longer require a patched vdr. Patch is from e-tobi.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-decruft-0.0.4.ebuild:
