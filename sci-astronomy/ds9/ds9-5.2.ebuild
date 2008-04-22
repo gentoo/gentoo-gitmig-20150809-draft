@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.2.ebuild,v 1.1 2008/04/16 16:13:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.2.ebuild,v 1.2 2008/04/22 11:04:17 bicatali Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,13 +29,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 
 	# fix stack smashing on x86 with gcc-4.2
-	use x86 && epatch "${FILESDIR}"/${P}-gcc4.2-x86.patch
+	use x86 && epatch "${FILESDIR}"/${PN}-5.1-gcc4.2-x86.patch
 
 	# remove build-time dependency on etags (i.e. emacs or xemacs)
 	sed -i -e '/^all/s/TAGS//' saotk/*/Makefile || die "sed failed"
 
 	# remove forced compilers and let defined ones propagate
-	sed -i -e '/^CC[[:space:]]/d' '/^CXX[[:space:]]/d' make.*
+	sed -i -e '/^CC[[:space:]]/d' -e '/^CXX[[:space:]]/d' make.*
 }
 
 src_compile() {

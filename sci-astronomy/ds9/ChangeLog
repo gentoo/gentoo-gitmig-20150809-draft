@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.10 2008/04/20 08:40:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.11 2008/04/22 11:04:17 bicatali Exp $
+
+  22 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> ds9-5.2.ebuild:
+  Fixed patch location for x86 and a sed function
 
   20 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/ds9-5.2-Makefile.patch:
