@@ -17,7 +17,7 @@
       allows for console logins to make use of ConsoleKit
       authorization.
     </flag>
-    <flag name="gnome">
+    <flag name="gnome-keyring">
       Enable pam_gnome_keyring module on system login stack. This
       enables proper Gnome Keyring access to logins, whether they are
       done with the login shell, a Desktop Manager or a remote login

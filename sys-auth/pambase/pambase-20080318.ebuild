@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080318.ebuild,v 1.4 2008/04/12 17:27:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080318.ebuild,v 1.5 2008/04/22 11:31:52 flameeyes Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.flameeyes.eu/gentoo-distfiles/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="debug cracklib passwdqc consolekit gnome selinux mktemp"
+IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp"
 RESTRICT="binchecks"
 
 RDEPEND="
@@ -23,7 +23,7 @@ RDEPEND="
 	)
 	cracklib? ( >=sys-libs/pam-0.99 )
 	consolekit? ( sys-auth/consolekit )
-	gnome? ( >=gnome-base/gnome-keyring-2.20 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.20 )
 	selinux? ( >=sys-libs/pam-0.99 )
 	passwdqc? ( >=sys-auth/pam_passwdqc-1.0.4 )
 	mktemp? ( sys-auth/pam_mktemp )
@@ -53,7 +53,7 @@ pkg_setup() {
 		die "Missing pam_ck_connector"
 	fi
 
-	if use gnome && ! built_with_use gnome-base/gnome-keyring pam; then
+	if use gnome-keyring && ! built_with_use gnome-base/gnome-keyring pam; then
 		eerror "To enable GNOME Keyring support in the main PAM configuration"
 		eerror "you need to enable pam USE flag on gnome-base/gnome-keyring"
 		eerror "first."
@@ -71,7 +71,7 @@ src_compile() {
 		CRACKLIB=$(use cracklib && echo yes || echo no) \
 		PASSWDQC=$(use passwdqc && echo yes || echo no) \
 		CONSOLEKIT=$(use consolekit && echo yes || echo no) \
-		GNOME_KEYRING=$(use gnome && echo yes || echo no) \
+		GNOME_KEYRING=$(use gnome-keyring && echo yes || echo no) \
 		SELINUX=$(use selinux && echo yes || echo no) \
 		MKTEMP=$(use mktemp && echo yes || echo no) \
 		IMPLEMENTATION=${implementation} \
