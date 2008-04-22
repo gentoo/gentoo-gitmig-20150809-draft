@@ -1,7 +1,14 @@
 # ChangeLog for dev-scheme/chicken
-=======
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.26 2008/04/18 17:19:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.27 2008/04/22 11:48:22 ulm Exp $
+
+  22 Apr 2008; Ulrich Mueller <ulm@gentoo.org> -chicken-1.89.ebuild,
+  -chicken-2.2.ebuild, -chicken-2.3.ebuild, -chicken-2.5.ebuild,
+  -chicken-2.6.ebuild, -chicken-2.731.ebuild, -chicken-3.0.0.ebuild,
+  chicken-3.1.0.ebuild:
+  Fix Emacs support. Don't install scheme-complete.el with USE=emacs; a	newer
+  version is now provided by app-emacs/scheme-complete, bug 218630. Remove old
+  ebuilds as requested by hkbst.
 
   18 Apr 2008; nixnut <nixnut@gentoo.org> chicken-3.1.0.ebuild:
   Stable on ppc wrt bug 217408
