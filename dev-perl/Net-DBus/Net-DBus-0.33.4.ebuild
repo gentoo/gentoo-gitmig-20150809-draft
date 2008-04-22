@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/Net-DBus-0.33.4.ebuild,v 1.3 2007/01/07 23:57:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/Net-DBus-0.33.4.ebuild,v 1.4 2008/04/22 16:11:57 drac Exp $
 
 inherit perl-module
 
@@ -15,7 +15,8 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	sys-apps/dbus
-	dev-perl/XML-Twig
+	dev-perl/XML-Twig"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
