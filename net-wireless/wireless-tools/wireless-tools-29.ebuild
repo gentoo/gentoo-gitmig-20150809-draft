@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29.ebuild,v 1.7 2008/01/13 08:56:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29.ebuild,v 1.8 2008/04/22 11:18:31 flameeyes Exp $
 
 inherit toolchain-funcs multilib
 
@@ -22,6 +22,8 @@ RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 
 	sed -i \
 		-e "s:^\(CC\) = gcc:\1 = $(tc-getCC):" \

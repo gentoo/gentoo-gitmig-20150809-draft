@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.130 2008/03/12 16:11:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.131 2008/04/22 11:18:31 flameeyes Exp $
+
+  22 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/wireless-tools-29-asneeded.patch, wireless-tools-29.ebuild:
+  Add a patch to respect LDFLAGS on the shared library and fix buidling with
+  --as-needed turned on.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
