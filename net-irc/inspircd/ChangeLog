@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.19 2007/11/12 21:47:32 hansmi Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.20 2008/04/22 16:37:23 jer Exp $
+
+  22 Apr 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Update maintainer info.
 
 *inspircd-1.1.14 (12 Nov 2007)
 

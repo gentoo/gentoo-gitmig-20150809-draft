@@ -3,8 +3,12 @@
 <pkgmetadata>
     <herd>no-herd</herd>
     <maintainer>
-        <email>brain@winbot.co.uk</email>
+        <email>maintainer-needed@gentoo.org</email>
+    </maintainer>
+    <maintainer>
 		<name>Craig Edwards</name>
-		<description>Indirectly maintaining through hansmi@gentoo.org</description>
+        <email>brain@brainbox.cc</email>
+		<description>Formerly indirectly maintaining through hansmi@gentoo.org -
+looking for a new proxy maintainer</description>
     </maintainer>
 </pkgmetadata>
