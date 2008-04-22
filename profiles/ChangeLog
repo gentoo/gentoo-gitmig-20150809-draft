@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1352 2008/04/22 11:31:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1353 2008/04/22 11:37:04 flameeyes Exp $
+
+  22 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> arch/m68k/use.mask,
+  arch/s390/use.mask:
+  Mask gnome-keyring on new m68k and s390 profiles, for the same reason.
 
   22 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   default-linux/s390/use.mask:

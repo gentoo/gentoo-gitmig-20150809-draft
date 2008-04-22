@@ -56,6 +56,7 @@ sqlite
 
 # Masking these globally, since we don't have X
 gnome
+gnome-keyring
 pango
 
 # Masking since net-dns/avahi and net-misc/mDNSResponder are masked
