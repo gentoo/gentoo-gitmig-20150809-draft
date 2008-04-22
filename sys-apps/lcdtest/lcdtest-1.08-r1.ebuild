@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.5 2007/10/28 13:56:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.6 2008/04/22 13:05:46 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="$RDEPEND
 	>=sys-apps/sed-4.1.4"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-help-option.patch"
 }
