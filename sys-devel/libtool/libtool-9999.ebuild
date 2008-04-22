@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.2 2008/04/02 03:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.3 2008/04/22 22:54:38 vapier Exp $
 
 inherit eutils
 
 if [[ ${PV} == "9999" ]] ; then
-	ECVS_SERVER="cvs.sv.gnu.org:/sources/libtool"
-	ECVS_MODULE="libtool"
-	inherit cvs
+	EGIT_REPO_URI="git://git.savannah.gnu.org/libtool.git"
+	inherit git
 else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 fi
@@ -30,7 +29,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		cvs_src_unpack
+		git_src_unpack
 		cd "${S}"
 		./bootstrap || die
 	else
