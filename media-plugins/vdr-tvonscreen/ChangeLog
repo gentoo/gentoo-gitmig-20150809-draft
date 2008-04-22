@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-tvonscreen
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/ChangeLog,v 1.6 2007/03/13 12:21:51 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/ChangeLog,v 1.7 2008/04/22 10:41:49 zzam Exp $
+
+*vdr-tvonscreen-1.0.141-r1 (22 Apr 2008)
+
+  22 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-tvonscreen-1.0.141-fixes.diff,
+  +files/vdr-tvonscreen-1.0.141-vdr-1.5.3.diff, vdr-tvonscreen-0.7.1.ebuild,
+  +vdr-tvonscreen-1.0.141-r1.ebuild:
+  Added two patches from e-tobi. This should fix some segfaults, and add
+  vdr-1.6 compatibility.
 
   13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-tvonscreen-1.0.141.ebuild:
