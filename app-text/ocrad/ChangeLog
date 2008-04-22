@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ocrad
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.24 2007/06/03 16:17:27 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.25 2008/04/22 19:33:52 drac Exp $
+
+*ocrad-0.17 (22 Apr 2008)
+
+  22 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/ocrad-0.17-gcc43.patch, -ocrad-0.10.ebuild, +ocrad-0.17.ebuild:
+  Version bump for bug 218929, thanks to Peter Alfredsen for reporting and
+  GCC 4.3 patch.
 
   03 Jun 2007; Raúl Porcel <armin76@gentoo.org> ocrad-0.15.ebuild:
   Add ~alpha wrt #173114
