@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomevfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.24 2008/04/07 18:47:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.25 2008/04/22 18:06:11 graaff Exp $
+
+  22 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  -ruby-gnomevfs-0.12.0.ebuild:
+  Remove old version
 
 *ruby-gnomevfs-0.16.0 (07 Apr 2008)
 
