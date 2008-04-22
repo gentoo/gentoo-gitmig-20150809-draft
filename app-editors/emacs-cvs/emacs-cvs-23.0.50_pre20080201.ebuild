@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.6 2008/03/28 06:40:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.7 2008/04/22 17:49:58 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -114,16 +114,14 @@ src_compile() {
 		# possibilities. Emacs upstream thinks this should be standard
 		# policy on all distributions
 		if use gtk; then
-			echo
-			einfo "Configuring to build with GTK support, disabling all other toolkits"
-			echo
+			einfo "Configuring to build with GIMP Toolkit (GTK+)"
 			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d; then
-			einfo "Configuring to build with Xaw3d (athena) support"
+			einfo "Configuring to build with Xaw3d (Athena) toolkit"
 			myconf="${myconf} --with-x-toolkit=athena"
 			myconf="${myconf} --without-gtk"
 		elif use motif; then
-			einfo "Configuring to build with motif toolkit support"
+			einfo "Configuring to build with Motif toolkit"
 			myconf="${myconf} --with-x-toolkit=motif"
 			myconf="${myconf} --without-gtk"
 		else
