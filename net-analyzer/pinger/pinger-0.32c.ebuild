@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32c.ebuild,v 1.3 2008/02/25 18:59:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32c.ebuild,v 1.4 2008/04/22 13:33:05 drac Exp $
 
 inherit eutils autotools
 
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk nls"
 
-DEPEND=">=dev-util/pkgconfig-0.12
-	gtk? ( >=x11-libs/gtk+-2.4.0 )
+RDEPEND="gtk? ( >=x11-libs/gtk+-2.4 )
 	sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

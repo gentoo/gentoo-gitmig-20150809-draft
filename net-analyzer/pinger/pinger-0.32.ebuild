@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32.ebuild,v 1.3 2008/01/20 18:52:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32.ebuild,v 1.4 2008/04/22 13:33:05 drac Exp $
 
 DESCRIPTION="Cyclic multi ping utility for selected adresses using GTK/ncurses."
 HOMEPAGE="http://aa.vslib.cz/silk/projekty/pinger/index.php"
@@ -11,9 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=dev-util/pkgconfig-0.12
-	>=x11-libs/gtk+-2.4.0
+RDEPEND=">=x11-libs/gtk+-2.4
 	sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	make install DESTDIR="${D}"
