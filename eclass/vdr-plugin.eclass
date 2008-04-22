@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.57 2008/04/21 02:56:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.58 2008/04/22 11:04:05 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -279,9 +279,9 @@ vdr_i18n() {
 		else
 			vdr_i18n_convert_to_gettext
 			if [[ $? != 0 ]]; then
-				ewarn ""
-				ewarn "Plugin will have only english OSD texts"
-				ewarn "it needs manual fixing."
+				eerror ""
+				eerror "Plugin will have only english OSD texts"
+				eerror "it needs manual fixing."
 			fi
 		fi
 	else
