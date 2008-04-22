@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.39.ebuild,v 1.2 2007/10/11 17:03:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.39.ebuild,v 1.3 2008/04/22 08:17:39 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -17,7 +17,6 @@ IUSE="doc"
 
 RDEPEND="app-admin/eselect-blas
 	app-admin/eselect-cblas
-	dev-util/pkgconfig
 	doc? ( app-doc/blas-docs )"
 
 DEPEND="app-admin/eselect-blas
