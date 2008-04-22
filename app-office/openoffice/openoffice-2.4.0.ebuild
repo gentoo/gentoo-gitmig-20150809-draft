@@ -1,17 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.13 2008/04/21 12:52:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.14 2008/04/22 12:57:06 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
 
-IUSE="binfilter branding cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk pam seamonkey webdav xulrunner"
+IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk opengl pam seamonkey webdav xulrunner"
 
 MY_PV="2.4.0.7"
 PATCHLEVEL="OOH680"
 SRC="OOo_${PV}_src"
+MST="OOH680_m12"
 S="${WORKDIR}/ooo"
 S_OLD="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
@@ -70,6 +71,8 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-db/hsqldb-1.8.0.9
 		=dev-java/rhino-1.5* )
 	mono? ( >=dev-lang/mono-1.2.3.1 )
+	opengl? ( virtual/opengl
+		virtual/glu )
 	xulrunner? ( >=net-libs/xulrunner-1.8
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
@@ -242,11 +245,6 @@ src_unpack() {
 		echo "--with-rhino-jar=$(java-pkg_getjar rhino-1.5 js.jar)" >> ${CONFFILE}
 	fi
 
-	# Upstream bitmaps are broken, so force ours for now
-	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
-
-	echo "`use_enable binfilter`" >> ${CONFFILE}
-
 	if use firefox || use seamonkey || use xulrunner ; then
 		echo "--enable-mozilla" >> ${CONFFILE}
 		local browser
@@ -260,31 +258,31 @@ src_unpack() {
 		echo "--without-system-mozilla" >> ${CONFFILE}
 	fi
 
+	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_enable cups`" >> ${CONFFILE}
-	echo "`use_enable ldap`" >> ${CONFFILE}
-	echo "`use_with ldap openldap`" >> ${CONFFILE}
+	echo "`use_enable dbus`" >> ${CONFFILE}
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
 	echo "`use_enable gnome atkbridge`" >> ${CONFFILE}
 	echo "`use_enable gstreamer`" >> ${CONFFILE}
-	echo "`use_enable dbus`" >> ${CONFFILE}
+	echo "`use_enable ldap`" >> ${CONFFILE}
+	echo "`use_enable opengl`" >> ${CONFFILE}
+	echo "`use_with ldap openldap`" >> ${CONFFILE}
 	echo "`use_enable webdav neon`" >> ${CONFFILE}
 	echo "`use_with webdav system-neon`" >> ${CONFFILE}
 	echo "`use_with webdav system-openssl`" >> ${CONFFILE}
 
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
 
+	# Original branding results in black splash screens for some, so forcing ours
+	echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
+
 	eautoreconf
 
 }
 
 src_compile() {
-
-	unset LIBC
-	addpredict "/bin"
-	addpredict "/root/.gconfd"
-	addpredict "/root/.gnome"
 
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	export JOBS="1"
@@ -300,8 +298,10 @@ src_compile() {
 	filter-flags "-fstack-protector-all"
 	filter-flags "-ftracer"
 	filter-flags "-fforce-addr"
-	append-flags "-DGL_GLEXT_PROTOTYPES"
 	filter-flags "-O[s2-9]"
+
+	# Build with NVidia cards breaks otherwise
+	use opengl && append-flags "-DGL_GLEXT_PROTOTYPES"
 
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
@@ -321,7 +321,7 @@ src_compile() {
 		--with-num-cpus="${JOBS}" \
 		--without-binsuffix \
 		--with-installed-ooo-dirname="openoffice" \
-		--with-tag=OOH680_m12 \
+		--with-tag="${MST}" \
 		${GTKFLAG} \
 		`use_enable mono` \
 		`use_enable kde` \
@@ -358,6 +358,9 @@ src_install() {
 
 	# record java libraries
 	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/program/classes/*.jar
+
+	# trying to work around javaldx problems on start
+	cp ${S}/build/${MST}/solver/*/*/lib/sunjavapluginrc ${D}/usr/$(get_libdir)/openoffice/program/ || die "Java config not found!"
 
 }
 
