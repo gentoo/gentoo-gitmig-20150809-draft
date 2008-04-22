@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.2 2008/04/21 17:16:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.3 2008/04/22 11:59:37 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -66,8 +66,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/remove-sysconftool.patch"
 
-	# some libtool version mismatch
-	_elibtoolize --copy --force || die
+	eautoreconf
 }
 
 src_compile() {
