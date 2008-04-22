@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-4.ebuild,v 1.9 2007/07/11 05:14:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-4.ebuild,v 1.10 2008/04/22 06:53:03 omp Exp $
 
 inherit vim-plugin
 
@@ -15,7 +15,6 @@ RDEPEND="${RDEPEND}
 	app-vim/bnf-syntax
 	app-vim/brainfuck-syntax
 	app-vim/cfengine-syntax
-	app-vim/conky-syntax
 	app-vim/dhcpd-syntax
 	app-vim/ebnf-syntax
 	app-vim/eruby-syntax
