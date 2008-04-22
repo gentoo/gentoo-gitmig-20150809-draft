@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-suspendoutput/vdr-suspendoutput-0.2.5.ebuild,v 1.1 2008/04/22 10:04:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-suspendoutput/vdr-suspendoutput-0.2.5.ebuild,v 1.2 2008/04/22 16:00:32 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -15,4 +15,3 @@ IUSE=""
 
 DEPEND="media-video/vdr"
 RDEPEND="${DEPEND}"
-
