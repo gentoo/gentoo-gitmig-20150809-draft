@@ -11,6 +11,12 @@
 # Masking this since it requires nptlonly be set
 ~sys-libs/glibc-2.3.6
 
+# Doug Goldstein <cardoe@gentoo.org> (22 Apr 2008)
+# >=sys-libs/glibc-2.5 is required for glibc-based installs
+sys-apps/openrc
+sys-apps/makedev
+>=sys-apps/baselayout-2.0.0
+
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
 # 20061008 pebenito

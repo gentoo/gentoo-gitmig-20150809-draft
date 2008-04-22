@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.7 2008/03/18 04:33:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.8 2008/04/22 16:32:05 cardoe Exp $
 
 # Wulf C. Krueger <philantrop@gentoo.org> (22 Sep 2007)
 # Needs OOo.
@@ -10,6 +10,12 @@ app-text/bibus
 =sys-libs/glibc-2.5*
 =sys-libs/glibc-2.6*
 =sys-libs/glibc-2.7*
+
+# Doug Goldstein <cardoe@gentoo.org> (22 Apr 2008)
+# >=sys-libs/glibc-2.5 is required for glibc-based installs
+sys-apps/openrc
+sys-apps/makedev
+>=sys-apps/baselayout-2.0.0
 
 # Requires glibc 2.4 or better
 games-strategy/ufo-ai
