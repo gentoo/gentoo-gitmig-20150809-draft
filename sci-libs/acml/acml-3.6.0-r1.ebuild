@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.8 2008/03/31 14:53:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.9 2008/04/22 08:13:19 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -59,10 +59,6 @@ src_unpack() {
 	(DISTDIR="${S}" unpack contents-acml-*.tgz)
 	use openmp || rm -rf ${FORT}*_mp*
 	FORTDIRS="$(ls -d ${FORT}*)"
-}
-
-src_compile() {
-	einfo "Nothing to compile"
 }
 
 src_test() {

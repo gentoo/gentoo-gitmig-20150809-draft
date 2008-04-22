@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.8 2008/03/31 14:53:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.9 2008/04/22 08:13:19 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -19,12 +19,10 @@ LICENSE="ACML"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
-DEPEND="app-admin/eselect-blas
-	app-admin/eselect-lapack
-	dev-util/pkgconfig
-	openmp? ( >=sys-devel/gcc-4.2 )
-	!openmp? ( =sys-devel/gcc-4.1* )"
-
+DEPEND="openmp? ( >=sys-devel/gcc-4.2 )
+	!openmp? ( =sys-devel/gcc-4.1* )
+	app-admin/eselect-blas
+	app-admin/eselect-lapack"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )"
 
@@ -68,10 +66,6 @@ src_unpack() {
 	esac
 	use openmp || rm -rf ${FORT}*_mp*
 	FORTDIRS="$(ls -d ${FORT}*)"
-}
-
-src_compile() {
-	einfo "Nothing to compile"
 }
 
 src_test() {
