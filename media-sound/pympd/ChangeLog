@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pympd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.18 2008/02/29 20:00:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.19 2008/04/22 19:17:38 armin76 Exp $
+
+  22 Apr 2008; Raúl Porcel <armin76@gentoo.org> pympd-0.08.1.ebuild:
+  Add ~sparc
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> pympd-0.06.ebuild,
   pympd-0.06.1.ebuild:
