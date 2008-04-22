@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.26 2008/01/04 08:51:40 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.27 2008/04/22 06:30:09 omp Exp $
+
+  22 Apr 2008; David Shakaryan <omp@gentoo.org>
+  +files/epdfview-0.1.6-gcc-4.3.patch, epdfview-0.1.6-r1.ebuild:
+  Fix compilation issue with GCC 4.3; patch by ape. (bug #214070)
 
   04 Jan 2008; David Shakaryan <omp@gentoo.org> -epdfview-0.1.6.ebuild:
   Remove older version.

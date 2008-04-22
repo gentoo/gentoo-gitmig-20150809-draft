@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.6-r1.ebuild,v 1.6 2008/01/03 18:36:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.6-r1.ebuild,v 1.7 2008/04/22 06:30:09 omp Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 	epatch "${FILESDIR}/${P}-print-segfault.patch"
 }
 
