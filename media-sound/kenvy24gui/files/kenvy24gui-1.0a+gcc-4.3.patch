@@ -1,0 +1,13 @@
+Index: kenvy24gui/src/mainviewimpl.cpp
+===================================================================
+--- kenvy24gui.orig/src/mainviewimpl.cpp
++++ kenvy24gui/src/mainviewimpl.cpp
+@@ -35,6 +35,8 @@
+ #include <qdial.h>
+ #include <krun.h>
+ 
++#include <algorithm>
++
+ #define CONFIG_PROFILE_PREFIX "profile-"
+ #define CONFIG_LAST_PROFILE "lastProfile"
+ 

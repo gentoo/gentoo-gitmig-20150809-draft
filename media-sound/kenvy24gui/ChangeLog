@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kenvy24gui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/ChangeLog,v 1.2 2008/04/21 14:23:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24gui/ChangeLog,v 1.3 2008/04/23 19:11:28 flameeyes Exp $
+
+  23 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kenvy24gui-1.0a+gcc-4.3.patch, kenvy24gui-1.0a.ebuild:
+  Add patch to compile with GCC 4.3.
 
   21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/kenvy24gui-1.0a+autoconf-2.62.patch, kenvy24gui-1.0a.ebuild:
