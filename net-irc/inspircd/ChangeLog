@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.20 2008/04/22 16:37:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.21 2008/04/23 19:04:01 rbu Exp $
+
+*inspircd-1.1.19 (23 Apr 2008)
+
+  23 Apr 2008; Robert Buchholz <rbu@gentoo.org> -inspircd-1.1.12.ebuild,
+  -inspircd-1.1.13.ebuild, -inspircd-1.1.13-r1.ebuild,
+  +inspircd-1.1.19.ebuild:
+  Non-maintainer-commit: Security bump (bug #215704). Ebuild created by
+  satmd (bug #218880). Moved user creation to preinst step (bug #217042) and
+  introduced some new features, such as LDAP authentication.
 
   22 Apr 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Update maintainer info.
