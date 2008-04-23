@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.29 2008/02/18 21:26:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.30 2008/04/23 21:21:06 maekke Exp $
+
+  23 Apr 2008; Markus Meier <maekke@gentoo.org> libosip-3.1.0.ebuild:
+  amd64/x86 stable, bug #210738
 
 *libosip-3.1.0 (18 Feb 2008)
 
