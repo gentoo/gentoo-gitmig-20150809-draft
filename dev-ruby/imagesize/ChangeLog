@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/imagesize
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.1 2008/04/23 18:10:43 graaff Exp $
+
+*imagesize-0.1.1 (23 Apr 2008)
+
+  23 Apr 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +imagesize-0.1.1.ebuild:
+  Initial import, dependency for app-misc/alexandria. Thanks to John Keeping in
+  #215458 for providing the initial ebuild.
+
