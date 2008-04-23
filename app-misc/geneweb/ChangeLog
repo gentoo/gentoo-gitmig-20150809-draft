@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.3 2008/01/03 22:34:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.4 2008/04/23 15:58:06 tupone Exp $
+
+*geneweb-5.01-r1 (23 Apr 2008)
+
+  23 Apr 2008; <atupone@gentoo.org> files/geneweb-5.01-gentoo.patch,
+  +geneweb-5.01-r1.ebuild:
+  Respect nostrip
+  Add additional gwc2, contrib/gwdiff.
+  Put html doc in the appropriate place
 
 *geneweb-5.01 (03 Jan 2008)
 
