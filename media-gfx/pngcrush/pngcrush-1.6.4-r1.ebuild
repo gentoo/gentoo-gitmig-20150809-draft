@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.6.4-r1.ebuild,v 1.1 2008/04/23 15:44:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.6.4-r1.ebuild,v 1.2 2008/04/23 18:31:08 drac Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Portable Network Graphics (PNG) optimizing utility"
 HOMEPAGE="http://pmt.sourceforge.net/pngcrush"
-SRC_URI="mirror://debian/pool/p/${PN}/${PN}_${PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
