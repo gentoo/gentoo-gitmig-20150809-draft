@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.35 2008/03/21 11:14:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.36 2008/04/23 17:40:04 armin76 Exp $
+
+  23 Apr 2008; Raúl Porcel <armin76@gentoo.org> tea-17.6.0.ebuild:
+  x86 stable
 
   21 Mar 2008; Peter Weller <welp@gentoo.org> tea-17.6.0.ebuild:
   Fix patch; bug 213903
