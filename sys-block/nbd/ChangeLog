@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.33 2008/04/19 21:59:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.34 2008/04/23 21:28:31 maekke Exp $
+
+  23 Apr 2008; Markus Meier <maekke@gentoo.org> nbd-2.9.8.ebuild:
+  amd64/x86 stable, bug #218491
 
 *nbd-2.9.10 (19 Apr 2008)
 
