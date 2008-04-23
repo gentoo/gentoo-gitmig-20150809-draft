@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.20 2008/03/26 23:38:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.21 2008/04/23 15:18:26 jer Exp $
+
+  23 Apr 2008; Jeroen Roovers <jer@gentoo.org> qtcurve-0.58.0.ebuild:
+  Marked ~hppa (bug #218436).
 
 *qtcurve-0.58.0 (26 Mar 2008)
 
