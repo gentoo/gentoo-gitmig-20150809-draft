@@ -1,0 +1,89 @@
+Index: rosegarden-1.6.1/src/base/AudioPluginInstance.cpp
+===================================================================
+--- rosegarden-1.6.1.orig/src/base/AudioPluginInstance.cpp
++++ rosegarden-1.6.1/src/base/AudioPluginInstance.cpp
+@@ -22,6 +22,7 @@
+ #include "Instrument.h"
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ #if (__GNUC__ < 3)
+ #include <strstream>
+Index: rosegarden-1.6.1/src/base/ScriptAPI.h
+===================================================================
+--- rosegarden-1.6.1.orig/src/base/ScriptAPI.h
++++ rosegarden-1.6.1/src/base/ScriptAPI.h
+@@ -107,9 +107,9 @@ public:
+     EventId addEvent(ScriptId id,
+                      std::string type, int bar, ScriptTime time, ScriptTime duration);
+ 
+-    void deleteEvent(ScriptId id, EventId id);
++    void deleteEvent(ScriptId s_id, EventId e_id);
+ 
+-    std::string getEventType(ScriptId id, EventId id);
++    std::string getEventType(ScriptId s_id, EventId e_id);
+     std::string getProperty(ScriptId id, EventId event, std::string property);
+     void setProperty(ScriptId id, EventId event, std::string property, std::string value);
+ 
+Index: rosegarden-1.6.1/src/base/XmlExportable.cpp
+===================================================================
+--- rosegarden-1.6.1.orig/src/base/XmlExportable.cpp
++++ rosegarden-1.6.1/src/base/XmlExportable.cpp
+@@ -21,6 +21,7 @@
+ #include "XmlExportable.h"
+ #include <iostream>
+ #include <cstdlib>
++#include <cstring>
+ 
+ namespace Rosegarden
+ {
+Index: rosegarden-1.6.1/src/gui/configuration/NotationConfigurationPage.cpp
+===================================================================
+--- rosegarden-1.6.1.orig/src/gui/configuration/NotationConfigurationPage.cpp
++++ rosegarden-1.6.1/src/gui/configuration/NotationConfigurationPage.cpp
+@@ -60,6 +60,7 @@
+ #include <qtabwidget.h>
+ #include <qwidget.h>
+ 
++#include <algorithm>
+ 
+ namespace Rosegarden
+ {
+Index: rosegarden-1.6.1/src/gui/dialogs/KeySignatureDialog.cpp
+===================================================================
+--- rosegarden-1.6.1.orig/src/gui/dialogs/KeySignatureDialog.cpp
++++ rosegarden-1.6.1/src/gui/dialogs/KeySignatureDialog.cpp
+@@ -45,6 +45,7 @@
+ #include <qwidget.h>
+ #include <qcheckbox.h>
+ 
++#include <algorithm>
+ 
+ namespace Rosegarden
+ {
+Index: rosegarden-1.6.1/src/gui/studio/OSCMessage.cpp
+===================================================================
+--- rosegarden-1.6.1.orig/src/gui/studio/OSCMessage.cpp
++++ rosegarden-1.6.1/src/gui/studio/OSCMessage.cpp
+@@ -28,6 +28,7 @@
+ #include "OSCMessage.h"
+ 
+ #include <cstdlib>
++#include <cstring>
+ 
+ namespace Rosegarden
+ {
+Index: rosegarden-1.6.1/src/sound/RingBuffer.h
+===================================================================
+--- rosegarden-1.6.1.orig/src/sound/RingBuffer.h
++++ rosegarden-1.6.1/src/sound/RingBuffer.h
+@@ -25,6 +25,8 @@
+ #include <sys/types.h>
+ #include <sys/mman.h>
+ 
++#include <cstring>
++
+ #include "Scavenger.h"
+ 
+ //#define DEBUG_RINGBUFFER 1

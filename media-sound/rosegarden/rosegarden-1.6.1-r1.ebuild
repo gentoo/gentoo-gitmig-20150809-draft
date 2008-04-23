@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.6.1-r1.ebuild,v 1.1 2008/01/06 19:06:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.6.1-r1.ebuild,v 1.2 2008/04/23 17:21:31 flameeyes Exp $
 
 inherit eutils kde-functions cmake-utils
 
@@ -57,7 +57,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/rosegarden-1.6.1-asneeded.patch" \
 		"${FILESDIR}/rosegarden-1.6.1.desktop.diff" \
-		"${FILESDIR}/${P}-nojack.patch"
+		"${FILESDIR}/${P}-nojack.patch" \
+		"${FILESDIR}/${P}+gcc-4.3.patch"
 }
 
 src_compile() {
