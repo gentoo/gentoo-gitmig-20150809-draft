@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_pre3.ebuild,v 1.1 2008/04/22 08:35:22 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_pre3.ebuild,v 1.2 2008/04/23 17:44:42 zlin Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -68,7 +68,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local repositories=`echo default unpackaged $(usev cran ) | tr -s \  ,`
+	local repositories=`echo default unpackaged | tr -s \  ,`
 	local clients=`echo default accerso adjutrix contrarius importare \
 		$(usev inquisitio ) instruo paludis reconcilio | tr -s \  ,`
 	local environments=`echo default $(usev portage ) | tr -s \  ,`

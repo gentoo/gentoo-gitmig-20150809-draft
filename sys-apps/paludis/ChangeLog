@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.93 2008/04/22 17:48:19 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.94 2008/04/23 17:44:42 zlin Exp $
+
+  23 Apr 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  paludis-0.26.0_pre3.ebuild, paludis-0.26.0_pre4.ebuild:
+  USE=cran is currently dead. Bug #219046.
 
 *paludis-0.26.0_pre4 (22 Apr 2008)
 
