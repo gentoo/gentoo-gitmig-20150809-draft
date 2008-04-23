@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.9.ebuild,v 1.1 2008/01/27 17:47:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.9.ebuild,v 1.2 2008/04/23 14:25:16 zzam Exp $
 
 inherit eutils vdr-plugin
 
@@ -15,3 +15,14 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.7"
+
+src_unpack() {
+	vdr-plugin_src_unpack unpack
+	cd "${S}"
+
+	# Patch Makefile, as VDRDIR is no well known variable name
+	# to stop spare -I in gcc cmdline
+	sed -e 's:$(VDRINC):$(VDRDIR)/include:' -i Makefile
+	vdr-plugin_src_unpack all_but_unpack
+}
+
