@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r1.ebuild,v 1.1 2008/04/05 16:02:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r1.ebuild,v 1.2 2008/04/23 16:33:42 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -380,4 +380,6 @@ pkg_postinst() {
 		einfo "and need at least this patch and a plugin installed"
 		einfo "emerge media-plugins/vdr-atscepg"
 	fi
+	elog "To get an idea how to proceed now, have a look at our vdr-guide:"
+	elog "\thttp://www.gentoo.org/doc/en/vdr-guide.xml"
 }

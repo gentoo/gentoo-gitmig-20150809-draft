@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.8 2007/10/08 15:00:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.9 2008/04/23 16:33:42 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -221,4 +221,7 @@ pkg_postinst() {
 			ewarn "#  ${warn_keys}"
 		fi
 	fi
+
+	elog "To get an idea how to proceed now, have a look at our vdr-guide:"
+	elog "\thttp://www.gentoo.org/doc/en/vdr-guide.xml"
 }

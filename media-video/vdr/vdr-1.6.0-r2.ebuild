@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r2.ebuild,v 1.3 2008/04/13 16:04:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r2.ebuild,v 1.4 2008/04/23 16:33:42 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -384,4 +384,7 @@ pkg_postinst() {
 	elog "To get nice symbols in OSD we recommend to install"
 	elog "\t1. emerge media-fonts/vdrsymbols-ttf"
 	elog "\t2. select font VDRSymbolsSans in Setup"
+	elog
+	elog "To get an idea how to proceed now, have a look at our vdr-guide:"
+	elog "\thttp://www.gentoo.org/doc/en/vdr-guide.xml"
 }
