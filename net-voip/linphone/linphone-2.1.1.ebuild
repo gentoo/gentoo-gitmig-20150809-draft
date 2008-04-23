@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.1 2008/02/19 00:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.2 2008/04/23 21:25:24 maekke Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -15,7 +15,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa arts console gsm gtk ilbc ipv6 video xv"
 # XXX: Should "video" be split into ffmpeg/libsdl ?  They are two distinct
 #      things: libsdl is just for video display while ffmpeg is just for
