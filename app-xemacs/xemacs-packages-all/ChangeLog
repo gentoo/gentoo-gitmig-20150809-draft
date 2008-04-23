@@ -1,0 +1,9 @@
+# ChangeLog for app-xemacs/xemacs-packages-all
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.1 2008/04/23 19:12:19 graaff Exp $
+
+  23 Apr 2008; Hans de Graaff <graaff@gentoo.org> ChangeLog:
+  Initial import. This is a meta package that will pull in all xemacs packages.
+  As such it has the same effect as installing xemacs-packages-sumo, but without
+  the nasty file collisions as mentioned in #23949.
+
