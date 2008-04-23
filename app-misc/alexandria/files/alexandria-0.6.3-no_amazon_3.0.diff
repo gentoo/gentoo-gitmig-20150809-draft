@@ -1,0 +1,19 @@
+--- ./lib/alexandria/book_providers.rb	2008-02-21 01:11:37.000000000 +0000
++++ ./lib/alexandria/book_providers.rb	2008-04-09 19:25:58.000000000 +0100
+@@ -244,11 +244,11 @@
+     require 'alexandria/book_providers/webster_it'
+     require 'alexandria/book_providers/worldcat'
+ 
+-    begin
+-      require 'alexandria/book_providers/amazon'
+-    rescue LoadError
+-      log.info { "Can't load Ruby/Amazon, hence provider Amazon not available" }
+-    end
++#    begin
++#      require 'alexandria/book_providers/amazon'
++#    rescue LoadError
++#      log.info { "Can't load Ruby/Amazon, hence provider Amazon not available" }
++#    end
+ 
+     # mechanize is optional
+     begin

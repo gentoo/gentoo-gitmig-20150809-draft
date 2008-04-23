@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.22 2008/03/09 10:25:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.23 2008/04/23 18:20:26 graaff Exp $
+
+*alexandria-0.6.3 (23 Apr 2008)
+
+  23 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/alexandria-0.6.3-no_amazon_3.0.diff, +alexandria-0.6.3.ebuild:
+  Version bump with some additional dependencies and information on further
+  dependencies for specific book providers. Thanks to John Keeping for doing all
+  the actual work in #215337.
 
   09 Mar 2008; Hans de Graaff <graaff@gentoo.org> -alexandria-0.6.0.ebuild:
   Remove old version
