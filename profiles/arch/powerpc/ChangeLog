@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.10 2008/04/11 15:29:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.11 2008/04/23 03:25:48 wolf31o2 Exp $
+
+  23 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> ppc64/make.defaults:
+  Adding MULTILIB_ABIS and ABI to arch/powerpc/ppc64 and uncommenting multilib
+  variables.
 
   11 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> package.use.mask:
   Added hb/hb2 to package.use.mask for sys-fs/evms.
