@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/pngcheck
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/ChangeLog,v 1.1 2008/04/23 19:22:41 drac Exp $
+
+*pngcheck-2.3.0 (23 Apr 2008)
+
+  23 Apr 2008; Samuli Suominen <drac@gentoo.org> +pngcheck-2.3.0.ebuild:
+  Initial commit, ebuild by me.
+
