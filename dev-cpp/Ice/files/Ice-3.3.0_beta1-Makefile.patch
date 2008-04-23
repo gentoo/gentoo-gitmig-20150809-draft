@@ -1,0 +1,91 @@
+--- config/Make.rules.orig	2008-04-02 07:40:44.000000000 -0400
++++ config/Make.rules	2008-04-02 07:45:56.000000000 -0400
+@@ -11,13 +11,13 @@
+ # Select an installation base directory. The directory will be created
+ # if it does not exist.
+ #
+-prefix			 ?= /opt/Ice-$(VERSION)
++prefix			 ?= /$(DESTDIR)/usr
+ 
+ #
+ # The "root directory" for runpath embedded in executables. Can be unset
+ # to avoid adding a runpath to Ice executables.
+ #
+-embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
++#embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with
+@@ -125,7 +125,7 @@
+ endif
+ 
+ install_includedir	= $(prefix)/include
+-install_docdir		= $(prefix)/doc
++install_docdir		= $(prefix)/share/doc/Ice-$(VERSION)
+ 
+ bindir			= $(top_srcdir)/bin
+ libdir			= $(top_srcdir)/lib
+@@ -161,18 +161,8 @@
+ BZIP2_LIBS              = $(if $(BZIP2_HOME),-L$(BZIP2_HOME)/$(libsubdir)) -lbz2
+ BZIP2_RPATH_LINK        = $(if $(BZIP2_HOME),$(call rpathlink,$(BZIP2_HOME)/$(libsubdir)))
+ 
+-ifneq ($(DB_HOME),)
+-   DB_FLAGS             = -I$(DB_HOME)/include
+-   DB_LIBS              = -L$(DB_HOME)/$(libsubdir) -ldb_cxx
+-   DB_RPATH_LINK        = $(call rpathlink,$(DB_HOME)/$(libsubdir))
+-else
+-   ifeq ($(shell if [ -d /usr/include/db46 -a -d /usr/$(libsubdir)/db46 ] ; then echo yes; fi), yes)
+-      DB_FLAGS          = -I/usr/include/db46
+-      DB_LIBS           = -L/usr/$(libsubdir)/db46 -ldb_cxx
+-   else
+-      DB_LIBS           = -ldb_cxx
+-   endif
+-endif
++DB_FLAGS	= -I/usr/include/db4.6
++DB_LIBS		= -L/usr/$(libsubdir) -ldb_cxx-4.6
+ 
+ EXPAT_FLAGS             = $(if $(EXPAT_HOME),-I$(EXPAT_HOME)/include)
+ EXPAT_LIBS              = $(if $(EXPAT_HOME),-L$(EXPAT_HOME)/$(libsubdir)) -lexpat
+--- Makefile.orig	2008-04-02 09:51:02.000000000 -0400
++++ Makefile	2008-04-02 09:51:18.000000000 -0400
+@@ -11,11 +11,11 @@
+ 
+ include $(top_srcdir)/config/Make.rules
+ 
+-SUBDIRS		= config src include test demo
++SUBDIRS		= config src include
+ 
+ INSTALL_SUBDIRS	= $(install_bindir) $(install_libdir) $(install_includedir)
+ 
+-install:: install-common
++install::
+ 	@for subdir in $(INSTALL_SUBDIRS); \
+ 	do \
+ 	    if test ! -d $$subdir ; \
+--- config/Makefile.orig	2008-04-02 10:33:40.000000000 -0400
++++ config/Makefile	2008-04-02 10:34:26.000000000 -0400
+@@ -15,15 +15,15 @@
+ 	echo ""
+ 
+ install::
+-	@if test ! -d $(prefix)/config ; \
++	@if test ! -d $(prefix)/share/Ice/config ; \
+ 	then \
+-	    echo "Creating $(prefix)/config..." ; \
+-	    $(call mkdir,$(prefix)/config) ; \
++	    echo "Creating $(prefix)/share/Ice/config..." ; \
++	    mkdir -p $(prefix)/share/Ice/config ; \
+ 	fi
+-	$(call installdata,templates.xml,$(prefix)/config)
+-	$(call installdata,convertssl.py,$(prefix)/config)
+-	$(call installdata,upgradeicegrid.py,$(prefix)/config)
+-	$(call installdata,icegrid-slice.3.1.ice.gz,$(prefix)/config)
+-	$(call installdata,icegrid-slice.3.2.ice.gz,$(prefix)/config)
+-	$(call installdata,icegrid-slice.3.3.ice.gz,$(prefix)/config)
++	$(call installdata,templates.xml,$(prefix)/share/Ice/config)
++	$(call installdata,convertssl.py,$(prefix)/share/Ice/config)
++	$(call installdata,upgradeicegrid.py,$(prefix)/share/Ice/config)
++	$(call installdata,icegrid-slice.3.1.ice.gz,$(prefix)/share/Ice/config)
++	$(call installdata,icegrid-slice.3.2.ice.gz,$(prefix)/share/Ice/config)
++	$(call installdata,icegrid-slice.3.3.ice.gz,$(prefix)/share/Ice/config)
+ 

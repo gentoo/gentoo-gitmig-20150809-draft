@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/Ice
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.13 2007/09/25 19:41:02 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.14 2008/04/23 13:25:21 caleb Exp $
+
+*Ice-3.3.0_beta1 (23 Apr 2008)
+
+  23 Apr 2008; Caleb Tennis <caleb@gentoo.org>
+  +files/Ice-3.3.0_beta1-Makefile.patch, +Ice-3.3.0_beta1.ebuild:
+  Version bump, currently masked
 
   25 Sep 2007; Christoph Mende <angelos@gentoo.org> Ice-3.2.1.ebuild:
   Stable on amd64 wrt bug #192139
