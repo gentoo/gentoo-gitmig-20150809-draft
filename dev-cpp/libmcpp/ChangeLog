@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/libmcpp
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.1 2008/04/23 14:01:51 caleb Exp $
+
+*libmcpp-2.6.4 (23 Apr 2008)
+
+  23 Apr 2008; Caleb Tennis <caleb@gentoo.org> +files/mcpp-2.6.4.patch,
+  +metadata.xml, +libmcpp-2.6.4.ebuild:
+  initial import
+
