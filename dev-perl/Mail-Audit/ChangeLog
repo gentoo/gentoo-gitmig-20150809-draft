@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Audit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.53 2008/01/13 21:39:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.54 2008/04/23 15:11:23 tove Exp $
+
+  23 Apr 2008; Torsten Veller <tove@gentoo.org> Mail-Audit-2.218.ebuild,
+  Mail-Audit-2.219.ebuild, Mail-Audit-2.221.ebuild:
+  Rename perl-core/libnet -> virtual/perl-libnet (#211617)
 
   13 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   Mail-Audit-2.221.ebuild:

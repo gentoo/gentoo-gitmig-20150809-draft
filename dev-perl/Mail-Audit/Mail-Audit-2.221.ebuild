@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.221.ebuild,v 1.4 2008/01/13 21:39:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.221.ebuild,v 1.5 2008/04/23 15:11:23 tove Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE=""
 SLOT="0"
 DEPEND="dev-perl/MIME-tools
 	>=dev-perl/MailTools-1.15
-	perl-core/libnet
+	virtual/perl-libnet
 	dev-perl/File-Tempdir
 	>=dev-perl/File-HomeDir-0.61
 	dev-lang/perl"
