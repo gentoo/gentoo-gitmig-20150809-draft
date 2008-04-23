@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.12 2008/04/20 17:06:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.13 2008/04/23 21:30:21 maekke Exp $
+
+  23 Apr 2008; Markus Meier <maekke@gentoo.org> -geany-0.12.ebuild,
+  geany-0.13.ebuild:
+  x86 stable and remove old, bug #218563
 
   20 Apr 2008; Samuli Suominen <drac@gentoo.org> geany-0.13.ebuild:
   amd64 stable wrt #218563, thanks to Víctor Enríquez for testing.
