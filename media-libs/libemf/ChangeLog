@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libemf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.23 2007/02/18 12:31:11 nixnut Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.24 2008/04/23 10:54:10 phosphan Exp $
+
+  23 Apr 2008; Patrick Kursawe <phosphan@gentoo.org>
+  +files/libemf-1.0.3-gcc4.3.patch, -files/libEMF-1.0-amd64.patch,
+  -files/libEMF-1.0-gcc3.patch, -libemf-1.0.ebuild, libemf-1.0.3.ebuild:
+  Fixing compilation for gcc 4.3, see bug #218531
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> libemf-1.0.3.ebuild:
   Stable on ppc wrt bug 160141

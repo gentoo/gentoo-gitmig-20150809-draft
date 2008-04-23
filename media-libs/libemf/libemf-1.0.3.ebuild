@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.10 2007/02/18 12:31:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.11 2008/04/23 10:54:10 phosphan Exp $
 
 inherit eutils
 
@@ -17,6 +17,12 @@ IUSE=""
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/libemf-1.0.3-gcc4.3.patch
+}
 
 src_compile() {
 	econf --enable-editing || die

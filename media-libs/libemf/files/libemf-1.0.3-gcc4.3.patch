@@ -1,0 +1,10 @@
+--- libemf/libemf.cpp
++++ libemf/libemf.cpp
+@@ -19,6 +19,7 @@
+  *
+  */
+ #include <iostream>
++#include <climits>
+ 
+ #include "libemf.h"
+ 
