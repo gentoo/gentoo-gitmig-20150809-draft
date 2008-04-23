@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/picprog
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.16 2007/03/27 20:41:31 calchan Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.17 2008/04/23 07:24:50 calchan Exp $
+
+  23 Apr 2008; Denis Dupeyron <calchan@gentoo.org> picprog-1.8.3.ebuild:
+  Fixed compiling with gcc-4.3, thanks to Peter Alfredsen (bug #218946).
 
 *picprog-1.8.3 (27 Mar 2007)
 
