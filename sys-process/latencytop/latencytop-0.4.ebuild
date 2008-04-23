@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.4.ebuild,v 1.1 2008/04/23 16:04:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.4.ebuild,v 1.2 2008/04/23 19:22:05 cardoe Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:latencytop.trans:/usr/share/misc/latencytop.trans:' latencytop.c || die
+	sed  -e 's:latencytop.trans:/usr/share/misc/latencytop.trans:' \
+		-e 's:/usr/share/latencytop:/usr/share/misc:' \
+		-e 's:latencytop.block:/usr/share/misc/latencytop.block:' \
+		-i latencytop.c || die
 }
 
 src_compile() {
@@ -41,5 +44,6 @@ src_compile() {
 src_install() {
 	dosbin latencytop || die
 	insinto /usr/share/misc
-	doins latencytop.trans || die
+	doins latencytop.{trans,block} || die
+	doman latencytop.8
 }
