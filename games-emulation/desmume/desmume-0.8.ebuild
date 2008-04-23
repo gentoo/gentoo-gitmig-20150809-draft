@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.7.2.ebuild,v 1.1 2007/07/16 02:02:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.8.ebuild,v 1.1 2008/04/23 17:51:54 mr_bones_ Exp $
 
-inherit autotools eutils games
+inherit games
 
 DESCRIPTION="Emulator for Nintendo DS."
 HOMEPAGE="http://desmume.sourceforge.net/"
@@ -21,17 +21,9 @@ DEPEND=">=x11-libs/gtk+-2.8.0
 	dev-libs/zziplib
 	media-libs/libsdl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e 's:$(datadir)/applications:/usr/share/applications:' \
-		-e 's:$(datadir)/pixmaps:/usr/share/pixmaps:' \
-		src/gtk-glade/Makefile.am \
-		src/gtk/Makefile.am \
-		|| die "sed failed"
-	edos2unix $(find . -type f)
-	eautoreconf
+src_compile() {
+	egamesconf --datadir=/usr/share || die "egamesconf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
