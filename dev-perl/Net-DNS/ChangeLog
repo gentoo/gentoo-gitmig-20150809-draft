@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.123 2008/04/23 10:01:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.124 2008/04/23 12:48:32 fmccor Exp $
+
+  23 Apr 2008; Ferris McCormick <fmccor@gentoo.org> Net-DNS-0.63.ebuild:
+  Sparc stable, Security Bug #203074. All tests successful (except for the
+  ones skipped).
 
 *Net-DNS-0.63 (23 Apr 2008)
 
