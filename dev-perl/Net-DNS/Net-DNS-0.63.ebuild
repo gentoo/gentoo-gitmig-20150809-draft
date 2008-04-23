@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.63.ebuild,v 1.3 2008/04/23 15:04:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.63.ebuild,v 1.4 2008/04/23 21:16:18 maekke Exp $
 
 MODULE_AUTHOR=OLAF
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Perl Net::DNS - Perl DNS Resolver Module"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE="ipv6"
 
 RDEPEND="virtual/perl-Digest-MD5
