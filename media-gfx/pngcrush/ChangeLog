@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.27 2008/04/23 16:01:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.28 2008/04/23 18:54:44 drac Exp $
+
+  23 Apr 2008; Samuli Suominen <drac@gentoo.org> pngcrush-1.6.4-r1.ebuild:
+  amd64 stable wrt #219033, thanks to gentoofan23 for testing.
 
   23 Apr 2008; Samuli Suominen <drac@gentoo.org> metadata.xml:
   s/no-herd/graphics/
