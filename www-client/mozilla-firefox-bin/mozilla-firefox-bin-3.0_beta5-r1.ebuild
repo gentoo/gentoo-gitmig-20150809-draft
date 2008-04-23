@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5.ebuild,v 1.6 2008/04/20 01:15:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_beta5-r1.ebuild,v 1.1 2008/04/23 19:32:26 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -117,7 +117,7 @@ src_install() {
 	fi
 
 	# Create /usr/bin/firefox-bin
-	make_wrapper firefox-bin "${MOZILLA_FIVE_HOME}/firefox-bin"
+	make_wrapper firefox-bin "${MOZILLA_FIVE_HOME}/firefox"
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
@@ -129,6 +129,9 @@ src_install() {
 
 	# install ldpath env.d
 	doenvd "${FILESDIR}"/71firefox-bin
+
+	rm -rf ${D}${MOZILLA_FIVE_HOME}/plugins
+	dosym /opt/netscape/plugins ${MOZILLA_FIVE_HOME}/plugins
 }
 
 pkg_preinst() {

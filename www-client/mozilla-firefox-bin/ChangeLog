@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.135 2008/04/19 19:29:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.136 2008/04/23 19:32:26 armin76 Exp $
+
+*mozilla-firefox-bin-3.0_beta5-r1 (23 Apr 2008)
+
+  23 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-firefox-bin-3.0_beta5.ebuild,
+  +mozilla-firefox-bin-3.0_beta5-r1.ebuild:
+  Some changes
 
   19 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-bin-3.0_beta5.ebuild:
