@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/IceRuby
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.12 2007/09/26 06:26:23 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.13 2008/04/23 13:28:33 caleb Exp $
+
+*IceRuby-3.3.0_beta1 (23 Apr 2008)
+
+  23 Apr 2008; Caleb Tennis <caleb@gentoo.org>
+  +files/IceRuby-3.3.0_beta1-Makefile.patch, +IceRuby-3.3.0_beta1.ebuild:
+  version bump for new ice, currently package.masked
 
   26 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   IceRuby-3.2.1-r1.ebuild:
