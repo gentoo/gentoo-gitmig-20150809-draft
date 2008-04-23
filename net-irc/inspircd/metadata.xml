@@ -6,8 +6,8 @@
         <email>maintainer-needed@gentoo.org</email>
     </maintainer>
     <maintainer>
-		<name>Craig Edwards</name>
         <email>brain@brainbox.cc</email>
+		<name>Craig Edwards</name>
 		<description>Formerly indirectly maintaining through hansmi@gentoo.org -
 looking for a new proxy maintainer</description>
     </maintainer>
