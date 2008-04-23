@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.1 2008/04/23 19:22:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.2 2008/04/23 19:42:04 drac Exp $
 
 inherit toolchain-funcs
 
@@ -17,8 +17,8 @@ DEPEND="sys-libs/zlib"
 
 src_compile() {
 	emake -f Makefile.unx CC="$(tc-getCC)" \
-		CFLAGS="${LDFLAGS} ${CFLAGS}" ZLIB="-lz" \
-		|| die "emake failed."
+		CFLAGS="${LDFLAGS} ${CFLAGS} -DUSE_ZLIB" \
+		ZLIB="-lz" || die "emake failed."
 }
 
 src_install() {
