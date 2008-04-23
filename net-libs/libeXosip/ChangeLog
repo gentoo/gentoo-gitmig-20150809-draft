@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libeXosip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.8 2008/02/21 07:40:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.9 2008/04/23 21:23:29 maekke Exp $
+
+  23 Apr 2008; Markus Meier <maekke@gentoo.org> libeXosip-3.1.0.ebuild:
+  amd64/x86 stable, bug #210740
 
   21 Feb 2008; Mike Frysinger <vapier@gentoo.org> libeXosip-3.1.0.ebuild:
   Depend on libosip-3.1.0+ #210684 by Mikael Magnusson.
