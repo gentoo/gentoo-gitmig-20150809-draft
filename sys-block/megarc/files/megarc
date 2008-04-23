@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Get the major number of the megadev ioctl device node
+megadev_major=$(egrep '[[:space:]]megadev$' /proc/devices 2>/dev/null | awk '{print $1}' 2>/dev/null)
+megadev_node=/dev/megadev0
+
+# MegaRAID device node major number found
+if [ -z "${megadev_major}" ]; then
+	echo "ERROR: failed to determine device node major number"
+	exit 1
+fi
+if [ -e "${megadev_node}" ]; then
+	if ! rm -f "${megadev_node}"; then
+		echo "ERROR: failed to remove existing device node ${megadev_node}"
+		exit 1
+	fi
+fi
+if ! mknod "${megadev_node}" c "${megadev_major}" 0; then
+	echo "ERROR: failed to create device node ${megadev_node}"
+	exit 1
+fi
+
+# Create temporary working directory for megarc
+# (as it creates megarc.log in CWD for example)
+# and change to it afterwards
+megarc_tmpdir=$(mktemp -q -d -t -p /var/tmp megarc.XXXXXX)
+if [ -z "${megarc_tmpdir}" ] || [ ! -d "${megarc_tmpdir}" ]; then
+	echo "ERROR: failed to create temporary megarc working directory"
+	exit 1
+elif ! cd "${megarc_tmpdir}"; then
+	echo "ERROR: failed to change to temporary megarc working directory '${megarc_tmpdir}'"
+	exit 1
+fi
+
+# Start the real megarc binary
+"${0##*/}/megarc.bin" "${@}"
+
+# Cleanup
+echo "Removing temporary megarc working directory"
+rm -rf "${megarc_tmpdir}"
+
+# That's all
+echo "Finished. Have a nice day."
