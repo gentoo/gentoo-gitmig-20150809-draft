@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.3.ebuild,v 1.1 2008/01/24 05:54:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.4.ebuild,v 1.1 2008/04/23 16:04:23 cardoe Exp $
 
 inherit toolchain-funcs
 
