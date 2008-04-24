@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.44 2008/03/25 21:50:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.45 2008/04/24 13:08:28 alonbl Exp $
+
+  24 Apr 2008; Alon Bar-Lev <alonbl@gentoo.org> crypto++-5.5.2.ebuild:
+  Add sse2 USE flag, bug#217907
 
   25 Mar 2008; Jeroen Roovers <jer@gentoo.org> crypto++-5.5.2.ebuild:
   Stable for HPPA (bug #213487).
