@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.124.ebuild,v 1.3 2008/04/24 21:20:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.124.ebuild,v 1.4 2008/04/24 21:35:24 drac Exp $
 
 inherit eutils flag-o-matic games
 
@@ -64,6 +64,7 @@ src_unpack() {
 		-e '/CFLAGS += -O$(OPTIMIZE)/s:^:# :' \
 		-e '/CFLAGS += -pipe/s:^:# :' \
 		-e '/LDFLAGS += -s/s:^:# :' \
+		-e 's:-Werror::' \
 		"${S}"/makefile \
 		|| die "sed failed"
 
