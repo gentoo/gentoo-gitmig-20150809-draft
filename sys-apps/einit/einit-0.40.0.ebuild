@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.1 2008/03/03 21:37:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.2 2008/04/24 11:45:32 opfer Exp $
 
 EAPI="1"
 
 inherit eutils python
 
 DESCRIPTION="An alternate /sbin/init implementation"
-SRC_URI="http://einit.org/files/${P}.tar.bz2"
-HOMEPAGE="http://einit.org/"
+SRC_URI="http://einit.jyujin.de/files/${P}.tar.bz2"
+HOMEPAGE="http://einit.jyujin.de"
 
 LICENSE="BSD"
 SLOT="0"

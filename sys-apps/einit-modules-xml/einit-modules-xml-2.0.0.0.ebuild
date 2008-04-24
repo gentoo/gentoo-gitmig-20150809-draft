@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/einit-modules-xml-2.0.0.0.ebuild,v 1.1 2008/03/03 21:26:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/einit-modules-xml-2.0.0.0.ebuild,v 1.2 2008/04/24 11:51:56 opfer Exp $
 
 inherit python
 
 DESCRIPTION=".xml modules for eINIT"
-SRC_URI="http://einit.org/files/${P}.tar.bz2"
-HOMEPAGE="http://einit.org/"
+SRC_URI="http://einit.jyujin.de/files/${P}.tar.bz2"
+HOMEPAGE="http://einit.jyujin.de/"
 
 LICENSE="BSD"
 SLOT="0"

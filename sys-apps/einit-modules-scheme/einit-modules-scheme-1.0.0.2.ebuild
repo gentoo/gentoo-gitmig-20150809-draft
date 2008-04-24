@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-scheme/einit-modules-scheme-1.0.0.2.ebuild,v 1.1 2008/03/03 21:32:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-scheme/einit-modules-scheme-1.0.0.2.ebuild,v 1.2 2008/04/24 11:49:49 opfer Exp $
 
 inherit eutils python
 
 DESCRIPTION="Scheme modules for eINIT"
-SRC_URI="http://einit.org/files/${P}.tar.bz2"
-HOMEPAGE="http://einit.org/"
+SRC_URI="http://einit.jyujin.de/files/${P}.tar.bz2"
+HOMEPAGE="http://einit.jyujin.de/"
 
 LICENSE="BSD"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/einit-modules-xml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/ChangeLog,v 1.2 2008/03/04 07:15:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/ChangeLog,v 1.3 2008/04/24 11:51:56 opfer Exp $
+
+  24 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  einit-modules-xml-2.0.0.0.ebuild:
+  change SRC_URI and HOMEPAGE to new values
 
   04 Mar 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   add the real maintainers
