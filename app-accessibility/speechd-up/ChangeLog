@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speechd-up
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.16 2007/05/30 04:05:27 williamh Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.17 2008/04/24 13:31:49 williamh Exp $
+
+*speechd-up-0.4-r3 (24 Apr 2008)
+
+  24 Apr 2008; William Hubbs <williamh@gentoo.org> files/speechd-up.rc,
+  -speechd-up-0.3.ebuild, -speechd-up-0.3-r1.ebuild, -speechd-up-0.4.ebuild,
+  -speechd-up-0.4-r1.ebuild, -speechd-up-0.4-r2.ebuild,
+  +speechd-up-0.4-r3.ebuild:
+  Updated to support speakup-3.0.2.
 
 *speechd-up-0.4-r2 (30 May 2007)
 
