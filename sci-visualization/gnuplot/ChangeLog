@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.67 2008/04/24 12:11:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.68 2008/04/24 12:19:54 opfer Exp $
+
+*gnuplot-4.2.3 (24 Apr 2008)
+
+  24 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  +gnuplot-4.2.3.ebuild:
+  version bump
 
   24 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
   gnuplot-4.2.2-r1.ebuild:
