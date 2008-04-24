@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/mousetweaks
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.4 2008/04/07 20:23:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.5 2008/04/24 18:03:39 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> mousetweaks-2.22.1.ebuild:
+  Added ~ppc64; bug #218794
 
 *mousetweaks-2.22.1 (07 Apr 2008)
 
