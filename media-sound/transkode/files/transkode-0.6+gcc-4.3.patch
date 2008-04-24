@@ -1,0 +1,39 @@
+Index: transkode-0.6/src/common/commondefs.cpp
+===================================================================
+--- transkode-0.6.orig/src/common/commondefs.cpp
++++ transkode-0.6/src/common/commondefs.cpp
+@@ -33,6 +33,8 @@
+ 	#include <unistd.h>
+ #endif
+ 
++#include <cstdlib>
++
+ /**
+  * GeneralOpt
+ */
+Index: transkode-0.6/src/configdialog/streamsettings.ui.h
+===================================================================
+--- transkode-0.6.orig/src/configdialog/streamsettings.ui.h
++++ transkode-0.6/src/configdialog/streamsettings.ui.h
+@@ -42,6 +42,8 @@
+ #include <kmessagebox.h>
+ #include <klocale.h>
+ 
++#include <cstdlib>
++
+ void StreamSettings::cleanUpRippedStreams()
+ {
+ 	if ( KMessageBox::warningContinueCancel(
+Index: transkode-0.6/src/plugins/qprocesswrapper.cpp
+===================================================================
+--- transkode-0.6.orig/src/plugins/qprocesswrapper.cpp
++++ transkode-0.6/src/plugins/qprocesswrapper.cpp
+@@ -28,6 +28,8 @@
+ #include <qtimer.h>
+ #include <qregexp.h>
+ 
++#include <cstdlib>
++
+ QProcessWrapper::QProcessWrapper( int priority, int comm, QObject* parent, const char* name ):
+ 	QProcess( parent, name ),
+ 	m_priority( priority ),

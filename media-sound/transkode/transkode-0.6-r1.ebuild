@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.6-r1.ebuild,v 1.1 2007/07/21 19:07:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.6-r1.ebuild,v 1.2 2008/04/24 11:22:48 flameeyes Exp $
 
 ARTS_REQUIRED="never"
 
@@ -27,11 +27,14 @@ RDEPEND="${RDEPEND}
 
 need-kde 3.5
 
+PATCHES=(
+	"${FILESDIR}/${P}-wavpack-options-fix.patch"
+	"${FILESDIR}/${P}-wvunpack-options-fix.patch"
+	"${FILESDIR}/${P}+gcc-4.3.patch"
+	)
+
 src_compile() {
 	local myconf="$(use_enable amarok amarokscript)"
-
-	epatch "${FILESDIR}/${P}-wavpack-options-fix.patch"
-	epatch "${FILESDIR}/${P}-wvunpack-options-fix.patch"
 
 	kde_src_compile
 }

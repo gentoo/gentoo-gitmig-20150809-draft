@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/transkode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.8 2007/07/21 19:07:49 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.9 2008/04/24 11:22:48 flameeyes Exp $
+
+  24 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/transkode-0.6+gcc-4.3.patch, transkode-0.6-r1.ebuild:
+  Add patch to build with GCC 4.3.
 
 *transkode-0.6-r1 (21 Jul 2007)
 
