@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1.ebuild,v 1.2 2008/04/17 09:32:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1.ebuild,v 1.3 2008/04/24 18:04:56 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -93,8 +93,12 @@ src_unpack() {
 		cp -f mod_vroot/mod_vroot.html doc/
 	fi
 
+	# Fix bug #218850
+	epatch "${FILESDIR}/${P}-bug218850.patch"
+
 	# Fix bug #208840
 	epatch "${FILESDIR}/${P}-bug208840.patch"
+
 	eautoreconf
 }
 
