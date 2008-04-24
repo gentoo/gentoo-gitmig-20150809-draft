@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.7 2007/06/14 19:51:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.8 2008/04/24 08:57:32 omp Exp $
+
+inherit eutils
 
 DESCRIPTION="A small, fast, full-featured window manager for X"
 HOMEPAGE="http://blackboxwm.sourceforge.net/"
@@ -21,6 +23,13 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 PROVIDE="virtual/blackbox"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+}
 
 src_compile() {
 	econf \

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.59 2007/07/22 04:11:16 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.60 2008/04/24 08:57:32 omp Exp $
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org>
+  +files/blackbox-0.70.1-gcc-4.3.patch, blackbox-0.70.1.ebuild:
+  Compile with GCC 4.3; patch from Fedora. (bug #217978)
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> blackbox-0.70.0.ebuild:
   Remove virtual/x11 from dependencies.
