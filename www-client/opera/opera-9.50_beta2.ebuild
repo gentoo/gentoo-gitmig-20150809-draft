@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.8 2008/04/24 13:54:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.9 2008/04/24 14:06:39 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -14,7 +14,7 @@ LICENSE="OPERA-9.0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE="qt-static spell gnome elibc_FreeBSD"
-RESTRICT="mirror strip test"
+RESTRICT="strip test"
 
 O_LNG="en"
 O_SUFF="1933"
@@ -96,7 +96,7 @@ src_install() {
 	dodir /etc
 
 	# Opera's native installer.
-	./install.sh --prefix="${D}"/opt/opera || die
+	./install.sh --prefix="${D}"/opt/opera || die "install.sh failed"
 
 	einfo "It is safe to ignore warnings about failed checksums"
 	einfo "and about files that would be ignored ..."
@@ -154,10 +154,6 @@ src_install() {
 		done
 		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
 	fi
-
-	# symlink to libflash-player.so:
-	dosym /opt/netscape/plugins/libflashplayer.so \
-		/opt/opera/lib/opera/plugins/libflashplayer.so
 
 	# Add the Opera man dir to MANPATH:
 	insinto /etc/env.d
