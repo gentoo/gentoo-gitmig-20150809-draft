@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1354 2008/04/24 04:13:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1355 2008/04/24 09:19:32 omp Exp $
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Mask x11-themes/openbox-themes for removal in 30 days. (bug #197277)
 
   24 Apr 2008; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   Fix type in gdl USE flag description (bug #219075).
