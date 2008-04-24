@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.13.ebuild,v 1.4 2008/04/23 21:30:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.13.ebuild,v 1.5 2008/04/24 16:58:38 drac Exp $
 
 EAPI=1
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" \
 		install || die "emake install failed."
-	rm -f "${D}"/usr/share/*/{COPYING,GPL-2,ScintillaLicense.txt}
+	rm -f "${D}"/usr/share/doc/${P}/{COPYING,GPL-2,ScintillaLicense.txt}
 	prepalldocs
 }
 
