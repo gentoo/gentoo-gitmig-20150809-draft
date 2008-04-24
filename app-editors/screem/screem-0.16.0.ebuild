@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.0.ebuild,v 1.6 2007/10/11 20:44:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.0.ebuild,v 1.7 2008/04/24 06:35:08 leio Exp $
 
 inherit gnome2 autotools
 
-DESCRIPTION="SCREEM is an integrated environment of the creation and maintenance of websites and pages"
+DESCRIPTION="SCREEM is an integrated environment for the creation and maintenance of websites and pages"
 HOMEPAGE="http://www.screem.org/"
 SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 
@@ -59,7 +59,7 @@ pkg_setup()
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	gnome2_omf_fix docs/*/Makefile.in docs/omf.make
 

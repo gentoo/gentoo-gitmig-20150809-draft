@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/screem
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.9 2007/10/11 20:44:57 remi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.10 2008/04/24 06:35:08 leio Exp $
+
+  24 Apr 2008; Mart Raudsepp <leio@gentoo.org> screem-0.16.0.ebuild,
+  screem-0.16.1.ebuild:
+  Fix DESCRIPTION wording per nightmorph's suggestion
 
   11 Oct 2007; Rémi Cardona <remi@gentoo.org> screem-0.16.0.ebuild,
   screem-0.16.1.ebuild:
