@@ -33,11 +33,7 @@ elif ! cd "${megarc_tmpdir}"; then
 fi
 
 # Start the real megarc binary
-"${0##*/}/megarc.bin" "${@}"
+"${0%/*}/megarc.bin" "${@}"
 
 # Cleanup
-echo "Removing temporary megarc working directory"
 rm -rf "${megarc_tmpdir}"
-
-# That's all
-echo "Finished. Have a nice day."

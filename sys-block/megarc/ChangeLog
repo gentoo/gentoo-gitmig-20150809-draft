@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megarc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/ChangeLog,v 1.1 2008/04/23 21:32:43 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/ChangeLog,v 1.2 2008/04/24 13:04:25 wschlich Exp $
+
+  24 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> files/megarc:
+  fix wrapper script
 
 *megarc-1.11 (23 Apr 2008)
 

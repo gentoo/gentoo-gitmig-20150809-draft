@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/dellmgr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/ChangeLog,v 1.2 2008/04/24 08:58:02 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/ChangeLog,v 1.3 2008/04/24 13:06:14 wschlich Exp $
+
+  24 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> files/dellmgr-r1:
+  fix wrapper script
 
 *dellmgr-5.31-r1 (24 Apr 2008)
 

@@ -21,4 +21,4 @@ if ! mknod "${megadev_node}" c "${megadev_major}" 0; then
 fi
 
 # Start the real megamgr binary
-"${0##*/}/megamgr.bin" "${@}"
+"${0%/*}/megamgr.bin" "${@}"
