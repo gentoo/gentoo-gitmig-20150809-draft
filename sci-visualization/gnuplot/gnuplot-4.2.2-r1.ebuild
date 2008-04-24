@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2-r1.ebuild,v 1.13 2008/01/03 21:14:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2-r1.ebuild,v 1.14 2008/04/24 12:11:00 opfer Exp $
 
 inherit eutils elisp-common multilib wxwidgets
 
@@ -22,7 +22,8 @@ RDEPEND="
 	pdf? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
 	gd? ( >=media-libs/gd-2 )
-	doc? ( virtual/latex-base )
+	doc? ( virtual/latex-base
+		virtual/ghostscript )
 	latex? ( virtual/latex-base )
 	X? ( x11-libs/libXaw )
 	svga? ( media-libs/svgalib )
@@ -71,10 +72,10 @@ src_compile() {
 	# See bug #156427.
 	if use latex ; then
 		sed -i \
-			-e 's/TEXMFLOCAL/TEXMFSITE/g' share/LaTeX/Makefile.in || die "sed failed"
+			-e 's/TEXMFLOCAL/TEXMFSITE/g' share/LaTeX/Makefile.in || die
 	else
 		sed -i \
-			-e '/^SUBDIRS/ s/LaTeX//' share/LaTeX/Makefile.in || die "sed failed"
+			-e '/^SUBDIRS/ s/LaTeX//' share/LaTeX/Makefile.in || die
 	fi
 
 	if use wxwindows ; then
@@ -110,25 +111,25 @@ src_compile() {
 	TEMACS=no
 	use xemacs && TEMACS=xemacs
 	use emacs && TEMACS=emacs
-	EMACS=${TEMACS} econf ${myconf} || die "econf failed"
-	emake || die "emake failed"
+	EMACS=${TEMACS} econf ${myconf} || die
+	emake || die
 
 	if use doc ; then
 		cd docs
-		emake pdf || die "pdf doc creation failed"
+		emake pdf || die
 		cd ../tutorial
-		emake pdf || die "pdf tutorial failed"
+		emake pdf || die
 	fi
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 
 	if use emacs; then
 		cd lisp
 		einfo "Configuring gnuplot-mode for GNU Emacs..."
-		EMACS="emacs" econf --with-lispdir="${SITELISP}/${PN}" || die "econf Emacs files faild"
-		emake DESTDIR="${D}" install || die "make install Emacs files failed"
+		EMACS="emacs" econf --with-lispdir="${SITELISP}/${PN}" || die
+		emake DESTDIR="${D}" install || die
 		emake clean
 		cd ..
 
