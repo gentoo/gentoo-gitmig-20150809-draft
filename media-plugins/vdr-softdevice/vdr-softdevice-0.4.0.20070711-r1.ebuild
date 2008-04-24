@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.5 2008/01/20 21:54:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.6 2008/04/24 19:21:52 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -49,10 +49,9 @@ DEPEND="${RDEPEND}
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
-PATCHES="
-		${FILESDIR}/patches-0.4.0/shm-fullscreen-parameter.diff
-		${FILESDIR}/patches-0.4.0/shm-init-setupStore.diff
-		${FILESDIR}/patches-0.4.0/stream-repacker.diff"
+PATCHES=("${FILESDIR}/patches-0.4.0/shm-fullscreen-parameter.diff"
+	"${FILESDIR}/patches-0.4.0/shm-init-setupStore.diff"
+	"${FILESDIR}/patches-0.4.0/stream-repacker.diff")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
