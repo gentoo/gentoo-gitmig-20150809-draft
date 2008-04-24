@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.136 2008/04/22 20:01:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.137 2008/04/24 18:19:58 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> sound-juicer-2.22.0.ebuild:
+  Added ~ppc64; bug #218794
 
   22 Apr 2008; Raúl Porcel <armin76@gentoo.org> sound-juicer-2.22.0.ebuild:
   Add ~alpha/~ia64/~sparc wrt #218794
