@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.28 2008/03/06 17:08:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.29 2008/04/24 02:01:31 mr_bones_ Exp $
+
+  24 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/fish-fillets-0.8.0-gcc43.patch, fish-fillets-0.8.0.ebuild:
+  add patch for building with gcc-4.3 submitted by Martin Väth via bug
+  #218954
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> fish-fillets-0.7.4.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

@@ -1,0 +1,32 @@
+--- src/gengine/OptionAgent.cpp
++++ src/gengine/OptionAgent.cpp
+@@ -23,7 +23,8 @@
+ #include "UnknownMsgException.h"
+ #include "minmax.h"
+ 
+-#include <string.h> //strlen
++#include <cstring> //strlen
++#include <cstdlib>
+ #include <locale.h> //setlocale
+ 
+ #ifndef LC_MESSAGES
+--- src/gengine/StringTool.cpp
++++ src/gengine/StringTool.cpp
+@@ -9,6 +9,7 @@
+ #include "StringTool.h"
+ 
+ #include <sstream>
++#include <cstdlib>
+ 
+ //-----------------------------------------------------------------
+ /**
+--- src/level/Landslip.cpp
++++ src/level/Landslip.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include "Rules.h"
+ #include "minmax.h"
++#include <cstring>
+ 
+ //-----------------------------------------------------------------
+     Landslip::Landslip(const ModelList &models)
