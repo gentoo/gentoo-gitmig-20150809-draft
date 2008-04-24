@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.6 2008/01/29 20:44:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.7 2008/04/24 15:17:49 drac Exp $
+
+*gssdp-0.4.2 (24 Apr 2008)
+
+  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +gssdp-0.4.2.ebuild:
+  Version bump.
 
   29 Jan 2008; Samuli Suominen <drac@gentoo.org> gssdp-0.4.1.ebuild:
   dont rebuild gtk-doc
