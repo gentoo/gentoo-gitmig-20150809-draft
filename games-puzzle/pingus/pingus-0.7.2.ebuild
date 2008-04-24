@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.1 2007/11/01 04:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.2 2008/04/24 15:01:34 flameeyes Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-paths.patch
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
 	sed -i \
 		-e "s:GENTOO_BINDIR:${GAMES_BINDIR}:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \

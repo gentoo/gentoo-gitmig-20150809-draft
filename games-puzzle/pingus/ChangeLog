@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pingus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.16 2007/11/01 04:26:48 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.17 2008/04/24 15:01:34 flameeyes Exp $
+
+  24 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pingus-0.7.2+gcc-4.3.patch, pingus-0.7.2.ebuild:
+  Add patch to build with GCC 4.3.
 
 *pingus-0.7.2 (01 Nov 2007)
 
