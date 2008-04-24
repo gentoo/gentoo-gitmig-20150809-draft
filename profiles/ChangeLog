@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1357 2008/04/24 14:53:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1358 2008/04/24 18:10:42 jer Exp $
+
+  24 Apr 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Fix the www-client/opera versioning scheme once again.
 
   24 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Added masks for boost{,-build}-1.35.0
