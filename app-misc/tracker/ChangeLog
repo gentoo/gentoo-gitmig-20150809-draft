@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.43 2008/04/22 19:11:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.44 2008/04/24 18:02:14 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> tracker-0.6.6-r1.ebuild:
+  Added ~ppc64; bug #218794
 
   22 Apr 2008; Raúl Porcel <armin76@gentoo.org> tracker-0.6.6-r1.ebuild:
   Add ~alpha/~ia64 wrt #218794
