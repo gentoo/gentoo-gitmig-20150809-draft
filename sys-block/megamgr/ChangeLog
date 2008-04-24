@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/megamgr
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.1 2008/04/24 08:39:39 wschlich Exp $
+
+*megamgr-5.20 (24 Apr 2008)
+
+  24 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> +files/megamgr,
+  +metadata.xml, +megamgr-5.20.ebuild:
+  initial import
+
