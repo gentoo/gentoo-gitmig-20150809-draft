@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.212 2008/04/22 20:00:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.213 2008/04/24 18:22:33 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> totem-2.22.1.ebuild:
+  Added ~ppc64; bug #218794
 
   22 Apr 2008; Raúl Porcel <armin76@gentoo.org> totem-2.22.1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #218794
