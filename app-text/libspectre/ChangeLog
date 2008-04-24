@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.4 2008/04/24 13:35:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.5 2008/04/24 17:39:11 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> libspectre-0.2.0.ebuild:
+  Added ~ppc64; bug #218417
 
   24 Apr 2008; Raúl Porcel <armin76@gentoo.org> libspectre-0.2.0.ebuild:
   Add ~alpha/~ia64 wrt #218417
