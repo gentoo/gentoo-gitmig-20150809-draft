@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.22 2008/02/18 23:08:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.23 2008/04/24 18:26:57 armin76 Exp $
+
+  24 Apr 2008; Raúl Porcel <armin76@gentoo.org> yakuake-2.8.1.ebuild:
+  Add ~sparc wrt #219166
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -yakuake-2.7.5.ebuild,
   -yakuake-2.8_beta1.ebuild, yakuake-2.8.ebuild:
