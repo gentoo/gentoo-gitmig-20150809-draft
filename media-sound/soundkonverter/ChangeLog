@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundkonverter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.4 2007/10/21 11:45:10 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.5 2008/04/24 17:34:12 drac Exp $
+
+  24 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/soundkonverter-0.3.6-gcc43.patch, soundkonverter-0.3.6.ebuild:
+  Fix building with GCC 4.3 wrt #219051, thanks to Holger Ackermann.
 
 *soundkonverter-0.3.6 (21 Oct 2007)
 

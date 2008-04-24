@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.2 2007/11/10 08:58:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.3 2008/04/24 17:34:12 drac Exp $
 
 inherit kde eutils qt3
 
@@ -27,6 +27,7 @@ need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
