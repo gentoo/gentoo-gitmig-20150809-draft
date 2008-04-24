@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.14.ebuild,v 1.2 2008/04/24 16:58:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.14.ebuild,v 1.3 2008/04/24 17:15:36 drac Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	vte? ( x11-libs/vte )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" \
 		install || die "emake install failed."
-	rm -f "${D}"/usr/share/doc/${P}/{COPYING,GPL-2,ScintillaLicense.txt}
+	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
 	prepalldocs
 }
 
