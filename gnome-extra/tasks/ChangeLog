@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/tasks
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/ChangeLog,v 1.1 2008/04/24 22:21:01 eva Exp $
+
+*tasks-0.13 (24 Apr 2008)
+
+  24 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> +tasks-0.13.ebuild:
+  initial ebuild from bug #168843. Thanks to Christoph Brill <egore@gmx.de>
+  and Kristian Poul Herkild <kristian@herkild.dk>
+
