@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/gupnp-av
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.1 2008/04/24 15:29:11 drac Exp $
+
+*gupnp-av-0.1 (24 Apr 2008)
+
+  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +gupnp-av-0.1.ebuild:
+  Initial commit.
+
