@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.1.ebuild,v 1.5 2008/04/07 20:57:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.1.ebuild,v 1.6 2008/04/24 09:36:11 dev-zero Exp $
 
 EAPI="1"
 
 PHP_EXT_NAME="uuid"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
+PHP_VERSION="5"
 
 inherit eutils multilib php-ext-source-r1 depend.php
 
@@ -24,8 +25,6 @@ DEPEND="php? ( dev-lang/php:5 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-need_php5_cli
 
 src_unpack() {
 	unpack ${A}

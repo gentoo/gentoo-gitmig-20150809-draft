@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ossp-uuid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.5 2008/04/07 20:57:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.6 2008/04/24 09:36:11 dev-zero Exp $
+
+  24 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> ossp-uuid-1.6.1.ebuild:
+  Removed need_php5_cli and added PHP_VERSION=5 to depend on php only when
+  php USE-flag is set (bug #219108).
 
   07 Apr 2008; Alexis Ballier <aballier@gentoo.org> ossp-uuid-1.6.1.ebuild:
   keyword ~x86-fbsd
