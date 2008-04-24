@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.3 2008/04/24 08:50:34 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.4 2008/04/24 13:39:13 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fluxbox.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~ia64 ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
 IUSE="debug png imlib2"
 
 RDEPEND="png? ( media-libs/libpng )
