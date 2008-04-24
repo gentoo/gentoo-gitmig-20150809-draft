@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1823.ebuild,v 1.1 2008/02/23 05:18:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.7 2008/04/24 13:43:31 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -16,28 +16,26 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="mirror strip test"
 
-O_LNG=""
-O_SUFF="1823"
-O_VER="9.50-20080221"
+O_LNG="en"
+O_SUFF="1933"
+O_VER="9.50b2-20080422"
+O_FTP="/950b2/final/${O_LNG}/"
 
-O_URI="http://snapshot.opera.com/unix/snapshot-${O_SUFF}/"
+O_URI="mirror://opera/"
 
-SRC_URI="
-	ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
-	amd64? ( ${O_URI}x86_64-linux/${PN}-${O_VER}.2-shared-qt.x86_64${O_LNG}-${O_SUFF}.tar.bz2 )
+SRC_URI="amd64? ( ${O_URI}linux${O_FTP}x86_64/${PN}-${O_VER}.2-shared-qt.x86_64.tar.gz )
+	ppc? ( ${O_URI}linux${O_FTP}ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.gz )
 	qt-static? (
-		x86? ( ${O_URI}intel-linux/${PN}-${O_VER}.9-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
-		x86-fbsd? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.5-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
-		)
+		x86? ( ${O_URI}linux${O_FTP}i386/static/${PN}-${O_VER}.9-static-qt.i386-${O_LNG}.tar.gz )
+	 )
 	!qt-static? (
-		x86? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
-		x86-fbsd? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.3-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
-		)
-	"
+		x86? ( ${O_URI}linux${O_FTP}i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.gz )
+	)"
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="media-libs/libexif
+RDEPEND="
+	media-libs/libexif
 	media-libs/jpeg
 	>=media-libs/fontconfig-2.1.94-r1
 	x11-libs/libXrandr
@@ -50,13 +48,14 @@ RDEPEND="media-libs/libexif
 	x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
-	!qt-static? ( =x11-libs/qt-3* )
+	x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 	amd64? ( =x11-libs/qt-3* )
-	ppc? ( =x11-libs/qt-3* )
 	spell? ( app-text/aspell )
-	x86-fbsd? ( =x11-libs/qt-3* =virtual/libstdc++-3* )"
+	"
 
-S="${WORKDIR}/${A/.tar.bz2/}"
+O_S="${A/opera-9.50b2/opera-9.50}"
+O_S="${O_S/-${O_LNG}/}"
+S="${WORKDIR}/${O_S/.tar.gz/}-${O_SUFF}"
 
 src_unpack() {
 	unpack ${A}
@@ -81,7 +80,6 @@ src_unpack() {
 		-e "s:/opt/kde:${D}/usr/kde:" \
 		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
 		install.sh || die "sed failed"
-
 }
 
 src_compile() {
@@ -95,7 +93,7 @@ src_install() {
 	dodir /etc
 
 	# Opera's native installer.
-	./install.sh --prefix="${D}"/opt/opera || die "install.sh failed"
+	./install.sh --prefix="${D}"/opt/opera || die
 
 	einfo "It is safe to ignore warnings about failed checksums"
 	einfo "and about files that would be ignored ..."
@@ -153,6 +151,10 @@ src_install() {
 		done
 		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
 	fi
+
+	# symlink to libflash-player.so:
+	dosym /opt/netscape/plugins/libflashplayer.so \
+		/opt/opera/lib/opera/plugins/libflashplayer.so
 
 	# Add the Opera man dir to MANPATH:
 	insinto /etc/env.d
