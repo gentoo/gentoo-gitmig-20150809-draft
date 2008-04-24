@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mlton
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.5 2008/04/14 21:06:20 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.6 2008/04/24 11:49:21 armin76 Exp $
+
+  24 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/digest-mlton-20070826:
+  Remove digests
 
 *mlton-20070826 (14 Apr 2008)
 
