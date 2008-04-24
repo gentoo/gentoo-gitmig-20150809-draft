@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.7 2008/04/24 13:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.8 2008/04/24 13:54:30 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -27,9 +27,11 @@ SRC_URI="amd64? ( ${O_URI}linux${O_FTP}x86_64/${PN}-${O_VER}.2-shared-qt.x86_64.
 	ppc? ( ${O_URI}linux${O_FTP}ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.gz )
 	qt-static? (
 		x86? ( ${O_URI}linux${O_FTP}i386/static/${PN}-${O_VER}.9-static-qt.i386-${O_LNG}.tar.gz )
+		x86-fbsd? ( ${O_URI}unix/freebsd${O_FTP}static/${PN}-${O_VER}.5-static-qt.i386.freebsd.tar.bz2 )
 	 )
 	!qt-static? (
 		x86? ( ${O_URI}linux${O_FTP}i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.gz )
+		x86-fbsd? ( ${O_URI}unix/freebsd${O_FTP}shared/${PN}-${O_VER}.3-shared-qt.i386.freebsd.tar.bz2 )
 	)"
 
 DEPEND=">=sys-apps/sed-4"
@@ -49,6 +51,7 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libICE
 	x86? ( !qt-static? ( =x11-libs/qt-3* ) )
+	x86-fbsd? ( !qt-static? ( =x11-libs/qt-3* ) )
 	amd64? ( =x11-libs/qt-3* )
 	spell? ( app-text/aspell )
 	"

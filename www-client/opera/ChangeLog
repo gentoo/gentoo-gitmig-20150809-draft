@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.217 2008/04/24 13:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.218 2008/04/24 13:54:30 jer Exp $
+
+  24 Apr 2008; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta2.ebuild:
+  Fix CVS header. Add back x86-fbsd SRC_URI magic.
 
   24 Apr 2008; Jeroen Roovers <jer@gentoo.org> +opera-9.50_beta2.ebuild,
   -opera-9.50_beta2_p1766.ebuild, -opera-9.50_beta2_p1772.ebuild,
