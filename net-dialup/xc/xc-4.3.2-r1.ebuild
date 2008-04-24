@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.16 2007/04/15 11:36:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.17 2008/04/24 16:21:38 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="unix dialout program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"
@@ -17,7 +17,7 @@ DEPEND="sys-libs/ncurses"
 
 src_unpack() {
 	unpack ${A}
-
+	tc-export CC
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-implicit-decl.patch"
@@ -28,7 +28,8 @@ src_unpack() {
 	# Fixes the Makefile to use gentoo CFLAGS
 	sed -i \
 		-e "s:GCCOPT\t= -pipe -O2 -fno-strength-reduce -fomit-frame-pointer:GCCOPT\t= ${CFLAGS} -fno-strength-reduce:g" \
-		-e 's:-ltermcap:-lncurses:' \
+		-e "s:-ltermcap:-lncurses ${LDFLAGS}:" \
+		-e 's:CC\t= gcc:CC='${CC}':' \
 		Makefile || die
 }
 
