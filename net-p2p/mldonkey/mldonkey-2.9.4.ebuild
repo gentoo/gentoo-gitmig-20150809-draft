@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.4.ebuild,v 1.2 2008/03/19 19:30:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.4.ebuild,v 1.3 2008/04/24 14:17:54 armin76 Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
 
 RDEPEND="dev-lang/perl
 	guionly? ( >=gnome-base/librsvg-2.4.0
