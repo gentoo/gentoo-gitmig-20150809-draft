@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.6.ebuild,v 1.3 2007/09/09 17:58:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.6.ebuild,v 1.4 2008/04/24 07:29:44 omp Exp $
+
+inherit eutils
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://www.pekwm.org/"
@@ -22,6 +24,13 @@ DEPEND="media-libs/jpeg
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}
 	x11-apps/xprop"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+}
 
 src_compile() {
 	econf \

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/pekwm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.38 2007/09/09 17:58:31 coldwind Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.39 2008/04/24 07:29:44 omp Exp $
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org>
+  +files/pekwm-0.1.6-gcc-4.3.patch, pekwm-0.1.6.ebuild:
+  Compile with GCC 4.3; patch from Debian modified by Peter Alfredsen. (bug
+  #218956)
 
   09 Sep 2007; Santiago M. Mola <coldwind@gentoo.org> pekwm-0.1.5.ebuild,
   pekwm-0.1.6.ebuild:
