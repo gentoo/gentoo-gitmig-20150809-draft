@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.12 2007/04/22 09:57:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.13 2008/04/24 09:04:05 omp Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Openbox app which acts as a system tray for KDE and GNOME2"
 HOMEPAGE="http://icculus.org/openbox/2/docker/"
@@ -13,10 +15,20 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
+
 src_install() {
-	dobin docker
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README
 }

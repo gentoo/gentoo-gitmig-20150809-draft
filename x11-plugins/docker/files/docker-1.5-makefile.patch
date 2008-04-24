@@ -1,0 +1,37 @@
+--- Makefile.orig       2002-11-20 11:20:49.000000000 +0100
++++ Makefile	2008-01-27 20:14:14.000000000 +0100
+@@ -5,12 +5,12 @@
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ 
+ # Change this PREFIX to where you want docker to be installed
+-PREFIX=/usr/local
++PREFIX=/usr
+ # Change this XLIBPATH to point to your X11 development package's installation
+-XLIBPATH=/usr/X11R6/lib
++XLIBPATH=/usr/lib
+ 
+ # Sets some flags for stricter compiling
+-CFLAGS=-pedantic -Wall -W -O
++CFLAGS+=-pedantic -Wall -W
+ 
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #                                                                 #
+@@ -24,7 +24,7 @@
+ target=docker
+ sources=docker.c kde.c icons.c xproperty.c net.c
+ headers=docker.h kde.h icons.h xproperty.h net.h version.h
+-extra=README COPYING version.h.in
++extra=README version.h.in
+ 
+ all: $(target) $(sources) $(headers)
+ 	@echo Build Successful
+@@ -40,7 +40,8 @@
+ 	sed -e "s/@VERSION@/$(VERSION)/" version.h.in > $@
+ 
+ install: all
+-	install $(target) $(PREFIX)/bin/$(target)
++	install -d $(DESTDIR)$(PREFIX)/bin
++	install $(target) $(DESTDIR)$(PREFIX)/bin/$(target)
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/$(target)

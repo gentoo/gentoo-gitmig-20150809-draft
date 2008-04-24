@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/docker
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.14 2007/04/22 09:57:50 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.15 2008/04/24 09:04:05 omp Exp $
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org>
+  +files/docker-1.5-makefile.patch, docker-1.5.ebuild:
+  Various QA fixes by Jakub Moc. (bug #207733)
 
   22 Apr 2007; Markus Rothe <corsair@gentoo.org> docker-1.5.ebuild:
   Added ~ppc64
