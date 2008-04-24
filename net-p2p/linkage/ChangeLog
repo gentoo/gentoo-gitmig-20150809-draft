@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linkage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.7 2008/02/02 12:14:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.8 2008/04/24 14:56:56 drac Exp $
+
+  24 Apr 2008; Samuli Suominen <drac@gentoo.org> linkage-0.1.4.ebuild:
+  Change rb_libtorrent dep. to ~0.12.
 
   02 Feb 2008; Samuli Suominen <drac@gentoo.org> linkage-0.1.4.ebuild:
   Download and copy sizeof.m4 from upstream subversion to m4 subdirectory

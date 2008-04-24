@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.5 2008/02/02 16:43:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.6 2008/04/24 14:56:56 drac Exp $
 
 SCROLLKEEPER_UPDATE=no
 GCONF_DEBUG=no
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="curl gnome upnp xfce"
 
-RDEPEND=">=net-libs/rb_libtorrent-0.12
+RDEPEND="~net-libs/rb_libtorrent-0.12
 	>=dev-cpp/gtkmm-2.10
 	>=dev-cpp/gconfmm-2.6
 	>=dev-cpp/libglademm-2.6
