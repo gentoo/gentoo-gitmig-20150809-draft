@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.42 2008/03/29 08:11:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.43 2008/04/24 06:58:39 tove Exp $
+
+  24 Apr 2008; Torsten Veller <tove@gentoo.org>
+  +files/chrony-1.23-sources.diff, chrony-1.23.ebuild:
+  Make the sources command output properly signed numbers.
 
   29 Mar 2008; Torsten Veller <tove@gentoo.org> -chrony-1.21-r1.ebuild:
   Cleaning
