@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.31 2008/04/02 06:23:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.32 2008/04/24 11:45:52 armin76 Exp $
+
+  24 Apr 2008; Raúl Porcel <armin76@gentoo.org> -files/digest-testdisk-6.9:
+  Remove digests
 
   02 Apr 2008; Daniel Black <dragonheart@gentoo.org> testdisk-6.8-r1.ebuild:
   added missing URI for patch - thanks to meej on irc

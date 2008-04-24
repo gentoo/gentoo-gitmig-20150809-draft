@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conary
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.19 2008/04/18 17:48:12 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.20 2008/04/24 11:46:40 armin76 Exp $
+
+  24 Apr 2008; Raúl Porcel <armin76@gentoo.org> -files/digest-conary-2.0.9,
+  -files/digest-conary-2.0.12:
+  Remove digests
 
 *conary-2.0.12 (18 Apr 2008)
 

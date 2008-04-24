@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rmake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.15 2008/03/20 21:35:33 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.16 2008/04/24 11:44:54 armin76 Exp $
+
+  24 Apr 2008; Raúl Porcel <armin76@gentoo.org> -files/digest-rmake-1.0.8,
+  -files/digest-rmake-1.0.9, -files/digest-rmake-1.0.13,
+  -files/digest-rmake-1.0.17:
+  Remove digests
 
 *rmake-1.0.17 (20 Mar 2008)
 
