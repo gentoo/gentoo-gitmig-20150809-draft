@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.1.0.ebuild,v 1.3 2008/04/23 21:23:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.1.0.ebuild,v 1.4 2008/04/24 03:22:23 vapier Exp $
 
 MY_PV=${PV%.?}-${PV##*.}
 MY_PV=${PV}
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README ChangeLog AUTHORS NEWS eXosip_addidentity.sh
+	dodoc AUTHORS ChangeLog NEWS README
 }
