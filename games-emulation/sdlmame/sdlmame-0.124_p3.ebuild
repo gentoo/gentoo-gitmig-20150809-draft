@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.124_p3.ebuild,v 1.1 2008/04/24 20:26:29 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.124_p3.ebuild,v 1.2 2008/04/24 20:34:33 joker Exp $
 
 inherit eutils flag-o-matic games
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	x11-proto/xineramaproto"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 # Function to disable a makefile option
 disable_feature() {
