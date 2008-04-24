@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/wmii
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.26 2007/11/19 05:40:17 omp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.27 2008/04/24 08:07:50 omp Exp $
+
+*wmii-3.6-r2 (24 Apr 2008)
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org> +wmii-3.6-r2.ebuild:
+  Fix launching of dmenu; thanks to Casey Carter. (bug #214224)
 
 *wmii-3.6-r1 (19 Nov 2007)
 
