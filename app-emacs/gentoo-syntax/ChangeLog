@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.17 2008/03/25 04:51:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.18 2008/04/24 17:28:19 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> gentoo-syntax-1.8.ebuild:
+  Stable on ppc64; bug #214285
 
   25 Mar 2008; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.8.ebuild,
   gentoo-syntax-9999.ebuild:
