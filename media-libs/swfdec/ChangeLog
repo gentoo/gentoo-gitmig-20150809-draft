@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.35 2008/04/24 13:40:39 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.36 2008/04/24 18:14:52 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> swfdec-0.6.6.ebuild:
+  Added ~ppc64; bug #218794
 
 *swfdec-0.6.6 (24 Apr 2008)
 
