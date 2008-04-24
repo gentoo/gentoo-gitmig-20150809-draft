@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.8 2008/03/25 16:03:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.9 2008/04/24 18:10:01 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> gtk-vnc-0.3.4.ebuild:
+  Added ~ppc64; bug #218794
 
   25 Mar 2008; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.3.4.ebuild:
   Add ~alpha/~ia64/~sparc
