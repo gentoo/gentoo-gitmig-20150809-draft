@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.57 2007/10/31 06:49:37 jer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.58 2008/04/24 07:42:39 omp Exp $
+
+*ratpoison-1.4.3 (24 Apr 2008)
+
+  24 Apr 2008; David Shakaryan <omp@gentoo.org> +ratpoison-1.4.3.ebuild:
+  Version bump; clean up ebuild. (bug #214313)
 
 *ratpoison-1.4.2 (31 Oct 2007)
 
