@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.270 2008/04/22 16:33:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.271 2008/04/24 17:59:24 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> gdm-2.20.5.ebuild:
+  Added ~ppc64; bug #218794
 
   22 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> gdm-2.20.5.ebuild:
   Fix built_with_use check for pambase to use new gnome-keyring flag
