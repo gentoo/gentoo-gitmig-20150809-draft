@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/superadduser
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.39 2007/03/08 20:41:09 wolf31o2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.40 2008/04/24 04:44:10 ricmm Exp $
+
+  24 Apr 2008; <ricmm@gentoo.org> superadduser-1.0.9.ebuild:
+  Drop to ~mips due to unstable deps
 
   08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   files/1.0.9/superadduser:
