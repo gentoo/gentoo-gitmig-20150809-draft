@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.9.0-r1.ebuild,v 1.3 2006/12/07 02:24:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.9.0-r1.ebuild,v 1.4 2008/04/24 08:55:04 omp Exp $
+
+inherit eutils
 
 DESCRIPTION="Use keyboard shortcuts in the blackbox wm"
 HOMEPAGE="http://bbkeys.sourceforge.net"
@@ -15,7 +17,14 @@ RDEPEND=">=x11-wm/blackbox-0.70.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_install () {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+}
+
+src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	rm -rf "${D}/usr/share/doc"
 	dodoc AUTHORS BUGS ChangeLog NEWS README
