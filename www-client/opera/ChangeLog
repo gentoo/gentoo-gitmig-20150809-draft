@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.219 2008/04/24 14:06:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.220 2008/04/24 18:11:55 jer Exp $
+
+*opera-9.50_beta2_pre1929 (24 Apr 2008)
+*opera-9.50_beta2_pre1904 (24 Apr 2008)
+
+  24 Apr 2008; Jeroen Roovers <jer@gentoo.org>
+  +opera-9.50_beta2_pre1904.ebuild, +opera-9.50_beta2_pre1929.ebuild:
+  Fix the versioning scheme once again.
 
   24 Apr 2008; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta2.ebuild:
   Add more updates from the latest 9.50_beta2_p*.
