@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.3 2008/03/22 12:29:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.4 2008/04/24 05:33:59 graaff Exp $
+
+*gnome-do-0.4.2.0 (24 Apr 2008)
+
+  24 Apr 2008; Hans de Graaff <graaff@gentoo.org> +gnome-do-0.4.2.0.ebuild:
+  Version bump.
 
 *gnome-do-0.4.0.1 (22 Mar 2008)
 
