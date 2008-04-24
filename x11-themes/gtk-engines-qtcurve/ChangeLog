@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.17 2008/04/23 15:19:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.18 2008/04/24 17:41:22 corsair Exp $
+
+  24 Apr 2008; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Added ~ppc64; bug #218436
 
   23 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   gtk-engines-qtcurve-0.58.0.ebuild:
