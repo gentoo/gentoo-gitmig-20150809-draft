@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.6 2008/04/09 12:39:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.7 2008/04/24 12:04:50 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Shared library to access the contents of an iPod"
 HOMEPAGE="http://www.gtkpod.org/libgpod.html"
@@ -26,6 +26,15 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	python? ( >=dev-lang/swig-1.3.24 )
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+
+	elibtoolize
+}
 
 src_compile() {
 

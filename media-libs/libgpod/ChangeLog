@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.48 2008/04/09 12:39:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.49 2008/04/24 12:04:50 flameeyes Exp $
+
+  24 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libgpod-0.6.0+gcc-4.3.patch, libgpod-0.6.0.ebuild:
+  Add patch to build with GCC 4.3. thanks to ape in bug #217017.
 
   09 Apr 2008; Olivier Crête <tester@gentoo.org>
   -files/libgpod-0.4.0-test-nogdk.patch, -libgpod-0.4.0.ebuild,
