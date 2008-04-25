@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/libpar2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.1 2008/04/25 22:58:21 yngwin Exp $
+
+*libpar2-0.2 (25 Apr 2008)
+
+  25 Apr 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +libpar2-0.2.ebuild:
+  Initial import from bug 124625, ebuild provided by Benoît Giraudou.
+
