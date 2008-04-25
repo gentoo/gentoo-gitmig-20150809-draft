@@ -2,6 +2,13 @@ diff -urN hwsetup-1.2.orig/hwsetup.c hwsetup-1.2/hwsetup.c
 --- hwsetup-1.2.orig/hwsetup.c	2005-05-28 18:11:51.000000000 -0400
 +++ hwsetup-1.2/hwsetup.c	2005-11-17 14:08:03.000000000 -0500
 @@ -43,12 +43,39 @@
+ /* Do not, under any circumstances, load these modules automatically, */
+ /* even if in pcitable. (libkudzu may ignore this, and the KNOPPIX    */
+ /* autoconfig scripts may probe them, too)  */
+-char *blacklist[] =
++char blacklist[200][200] =
+ { "apm","agpgart","yenta_socket","i82092","i82365","tcic",
+   "pcmcia_core","ds","ohci1394","hisax",
    /* Winmodems, unusable, can block sound slot */
    "snd-atiixp-modem", "snd-intel8x0m","snd-via82xx-modem"
  };
