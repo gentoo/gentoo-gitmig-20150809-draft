@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.2 2007/10/13 12:01:49 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.3 2008/04/25 10:00:26 ali_bush Exp $
 
+EAPI="1"
 inherit java-pkg-2 java-ant-2
 
 MY_P="jCharts-${PV}"
@@ -15,9 +16,8 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="doc examples source"
 
-COMMON_DEP="
-	=dev-java/batik-1.6*
-	=dev-java/servletapi-2.4*"
+COMMON_DEP="dev-java/batik
+			=dev-java/servletapi-2.4*"
 
 RDEPEND=">=virtual/jre-1.4
 		${COMMON_DEP}"

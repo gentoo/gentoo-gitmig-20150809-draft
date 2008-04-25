@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcharts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.2 2007/10/13 12:01:49 ali_bush Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.3 2008/04/25 10:00:26 ali_bush Exp $
+
+  25 Apr 2008; Alistair Bush <ali_bush@gentoo.org> jcharts-0.7.5.ebuild:
+  Fix depend on batik, was too specific.
 
   13 Oct 2007; <alistair@gentoo.org> jcharts-0.7.5.ebuild:
   Keywording ~amd64
