@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.22 2008/04/24 17:45:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.23 2008/04/25 13:35:19 yngwin Exp $
+
+*qtcurve-0.59.0 (25 Apr 2008)
+
+  25 Apr 2008; Ben de Groot <yngwin@gentoo.org> +qtcurve-0.59.0.ebuild:
+  Version bump
 
   24 Apr 2008; Markus Rothe <corsair@gentoo.org> qtcurve-0.58.0.ebuild:
   Added ~ppc64; bug #218436
