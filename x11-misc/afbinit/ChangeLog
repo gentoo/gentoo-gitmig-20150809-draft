@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.26 2008/04/25 12:14:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.27 2008/04/25 13:31:00 fmccor Exp $
+
+  25 Apr 2008; Ferris McCormick <fmccor@gentoo.org>
+  -files/rc.afb-1.0.1-r4.patch, -afbinit-1.0.1-r4.ebuild,
+  afbinit-1.0.1-r7.ebuild:
+  Sparc stable for best version; remove older version.
 
   25 Apr 2008; Ferris McCormick <fmccor@gentoo.org> metadata.xml:
   Change herd to sparc, only sparc has a clue what to do with this.

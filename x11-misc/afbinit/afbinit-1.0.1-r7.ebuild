@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r7.ebuild,v 1.1 2008/03/18 18:16:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r7.ebuild,v 1.2 2008/04/25 13:31:00 fmccor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ IUSE=""
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="-* ~sparc"
+KEYWORDS="-* sparc"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
