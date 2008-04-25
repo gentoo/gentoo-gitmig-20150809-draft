@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.1 2008/04/23 15:58:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.2 2008/04/25 06:05:08 tupone Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i -e "s:@GENTOO_DATADIR@:/usr/share/${PN}:" \
 		setup/setup.ml || die "Failed sed for gentoo path"
-	rm -f contrib/gwdiff/.*
+	rm -f contrib/gwdiff/.{cvsignore,depend}
 }
 
 src_compile() {
