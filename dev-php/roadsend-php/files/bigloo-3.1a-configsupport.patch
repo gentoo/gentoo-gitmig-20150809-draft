@@ -1,0 +1,36 @@
+Index: /trunk/pcc/configure
+===================================================================
+--- /trunk/pcc/configure (revision 495)
++++ /trunk/pcc/configure (revision 504)
+@@ -3122,5 +3122,5 @@
+ # can't figure out how to get this into AC_CHECK_PROG_VER below?
+ # have to change it there too
+-want_bigloo="3.0c, 3.0d"
++want_bigloo="3.0c, 3.0d, 3.1a"
+ want_curl=7.15.1
+ 
+@@ -3192,5 +3192,5 @@
+   case $ac_prog_version in
+     '') ac_prog_version_m="v. ?.??, bad"; ac_verc_fail=yes;;
+-    3.0c | 3.0d)
++    3.0c | 3.0d | 3.1a)
+        ac_prog_version_m="$ac_prog_version, ok"; ac_verc_fail=no;;
+     *) ac_prog_version_m="$ac_prog_version, bad"; ac_verc_fail=yes;;
+Index: /trunk/pcc/configure.in
+===================================================================
+--- /trunk/pcc/configure.in (revision 495)
++++ /trunk/pcc/configure.in (revision 504)
+@@ -27,5 +27,5 @@
+ # can't figure out how to get this into AC_CHECK_PROG_VER below?
+ # have to change it there too
+-want_bigloo="3.0c, 3.0d"
++want_bigloo="3.0c, 3.0d, 3.1a"
+ want_curl=7.15.1
+ 
+@@ -50,5 +50,5 @@
+ 		  -revision,
+ 		  [\([2-9].[0-9][a-z]\)],
+-		  [3.0c | 3.0d],
++		  [3.0c | 3.0d | 3.1a],
+ 		  AC_MSG_FAILURE([Bigloo version $want_bigloo required in the system path]))
+ 
