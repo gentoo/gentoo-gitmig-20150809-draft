@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ipmiutil
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.3 2008/04/22 14:51:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.4 2008/04/25 22:35:10 dev-zero Exp $
+
+*ipmiutil-2.1.1 (25 Apr 2008)
+
+  25 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/2.1.0-various_compile_issues.patch, -ipmiutil-2.1.0.ebuild,
+  +ipmiutil-2.1.1.ebuild:
+  Version bump (upstream included my patch).
 
 *ipmiutil-2.1.0 (22 Apr 2008)
 

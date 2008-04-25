@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.1.0.ebuild,v 1.1 2008/04/22 14:51:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.1.1.ebuild,v 1.1 2008/04/25 22:35:10 dev-zero Exp $
 
 inherit autotools eutils
 
@@ -29,8 +29,6 @@ src_unpack() {
 		-e '/README/d' \
 		-e '/UserGuide/d' \
 		"${S}/doc/Makefile" || die "sed failed"
-
-	epatch "${FILESDIR}/${PV}-various_compile_issues.patch"
 
 	# Upstream requests this
 	eautoreconf
