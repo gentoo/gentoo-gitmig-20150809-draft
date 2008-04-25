@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.12 2008/03/22 16:54:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.13 2008/04/25 11:20:28 hollow Exp $
+
+  25 Apr 2008; Benedikt Böhm <hollow@gentoo.org> mod_security-2.5.1.ebuild:
+  install rules-updater wrt #219059
 
 *mod_security-2.5.1 (22 Mar 2008)
 *mod_security-2.1.6 (22 Mar 2008)
