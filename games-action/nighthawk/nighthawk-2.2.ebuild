@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.12 2008/03/06 03:49:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.13 2008/04/25 08:01:23 vapier Exp $
 
 inherit eutils games
 
@@ -21,6 +21,7 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/nighthawk.patch \
 		"${FILESDIR}"/${P}-gcc42.patch
+	sed -i 's:AC_FD_MSG:6:g' configure || die #218936
 }
 
 src_install () {
