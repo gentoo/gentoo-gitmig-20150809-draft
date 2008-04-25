@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.24 2008/02/22 15:47:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.25 2008/04/25 11:26:52 hollow Exp $
+
+*coppermine-1.4.18 (25 Apr 2008)
+
+  25 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +coppermine-1.4.18.ebuild:
+  version bump wrt security #217575
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> coppermine-1.4.16.ebuild:
   add need_httpd_cgi wrt #208584
