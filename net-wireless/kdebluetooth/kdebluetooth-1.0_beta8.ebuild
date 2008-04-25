@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.2 2008/03/31 21:42:57 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.3 2008/04/25 13:33:57 ingmar Exp $
 
 inherit kde
 
@@ -22,7 +22,8 @@ DEPEND=">=dev-libs/openobex-1.1
 	>=dev-libs/dbus-qt3-old-0.70"
 
 RDEPEND="${DEPEND}
-	|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )
+	|| ( ( =kde-base/kdialog-3.5* =kde-base/konqueror-3.5* )
+		=kde-base/kdebase-3.5* )
 	>=net-wireless/bluez-libs-3.11
 	>=net-wireless/bluez-utils-3.11"
 
