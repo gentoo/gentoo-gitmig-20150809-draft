@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/passenger
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.1 2008/04/25 10:56:33 hollow Exp $
+
+*passenger-1.0.1 (25 Apr 2008)
+
+  25 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +files/1.0.1-gentoo.patch,
+  +files/30_mod_passenger.conf, +metadata.xml, +passenger-1.0.1.ebuild:
+  initial version wrt #218170
+

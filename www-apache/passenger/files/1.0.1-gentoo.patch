@@ -1,0 +1,89 @@
+Index: passenger-1.0.1/Rakefile
+===================================================================
+--- passenger-1.0.1.orig/Rakefile
++++ passenger-1.0.1/Rakefile
+@@ -37,7 +37,7 @@ APR1_FLAGS.nil? and raise "Could not fin
+ 
+ CXX = "g++"
+ THREADING_FLAGS = "-D_REENTRANT"
+-CXXFLAGS = "#{THREADING_FLAGS} -Wall -g -I/usr/local/include " << MULTI_ARCH_FLAGS
++CXXFLAGS = "#{ENV['CXXFLAGS']} #{THREADING_FLAGS} -Wall" << MULTI_ARCH_FLAGS
+ LDFLAGS = ""
+ 
+ 
+@@ -87,8 +87,7 @@ subdir 'ext/boost/src' do
+ 		# processes, sometimes pthread errors will occur. These errors are harmless
+ 		# and should be ignored. Defining NDEBUG guarantees that boost::thread() will
+ 		# not abort if such an error occured.
+-		flags = "-O2 -fPIC -I../.. #{THREADING_FLAGS} -DNDEBUG #{MULTI_ARCH_FLAGS}"
+-		compile_cxx "*.cpp", flags
++		compile_cxx "*.cpp", "#{CXXFLAGS} -fPIC -I../.. -DNDEBUG"
+ 		create_static_library "libboost_thread.a", "*.o"
+ 	end
+ 	
+@@ -101,7 +100,7 @@ end
+ ##### Apache module
+ 
+ class APACHE2
+-	CXXFLAGS = CXXFLAGS + " -fPIC -g -DPASSENGER_DEBUG #{APR1_FLAGS} #{APXS2_FLAGS} -I.."
++	CXXFLAGS = CXXFLAGS + " -fPIC #{APR1_FLAGS} #{APXS2_FLAGS} -I.."
+ 	OBJECTS = {
+ 		'Configuration.o' => %w(Configuration.cpp Configuration.h),
+ 		'Hooks.o' => %w(Hooks.cpp Hooks.h
+Index: passenger-1.0.1/lib/passenger/platform_info.rb
+===================================================================
+--- passenger-1.0.1.orig/lib/passenger/platform_info.rb
++++ passenger-1.0.1/lib/passenger/platform_info.rb
+@@ -115,7 +115,6 @@ private
+ 		else
+ 			flags = `#{APXS2} -q CFLAGS`.strip << " -I" << `#{APXS2} -q INCLUDEDIR`
+ 			flags.strip!
+-			flags.gsub!(/-O\d? /, '')
+ 			return flags
+ 		end
+ 	end
+@@ -139,7 +138,6 @@ private
+ 				libs = `#{apr_config} --link-ld`.strip
+ 			end
+ 		end
+-		flags.gsub!(/-O\d? /, '')
+ 		return [flags, libs]
+ 	end
+ 	
+Index: passenger-1.0.1/bin/passenger-spawn-server
+===================================================================
+--- passenger-1.0.1.orig/bin/passenger-spawn-server
++++ passenger-1.0.1/bin/passenger-spawn-server
+@@ -16,7 +16,6 @@
+ #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+ require 'pathname'
+-$LOAD_PATH.unshift(File.expand_path("#{File.dirname(__FILE__)}/../lib"))
+ require 'passenger/spawn_manager'
+ require 'passenger/utils'
+ 
+Index: passenger-1.0.1/lib/passenger/request_handler.rb
+===================================================================
+--- passenger-1.0.1.orig/lib/passenger/request_handler.rb
++++ passenger-1.0.1/lib/passenger/request_handler.rb
+@@ -101,7 +101,6 @@ class RequestHandler
+ 	NINJA_PATCHING_LOCK = Mutex.new
+ 	@@ninja_patched_action_controller = false
+ 	
+-	File.read("#{File.dirname(__FILE__)}/../../Rakefile") =~ /^PACKAGE_VERSION = "(.*)"$/
+ 	PASSENGER_VERSION = $1
+ 	
+ 	# The name of the socket on which the request handler accepts
+Index: passenger-1.0.1/lib/passenger/utils.rb
+===================================================================
+--- passenger-1.0.1.orig/lib/passenger/utils.rb
++++ passenger-1.0.1/lib/passenger/utils.rb
+@@ -20,7 +20,7 @@ require 'etc'
+ require 'thread'
+ require 'fastthread'
+ require 'timeout'
+-require File.expand_path("#{File.dirname(__FILE__)}/../../ext/passenger/native_support.so")
++require 'native_support'
+ 
+ module Passenger
+ 
