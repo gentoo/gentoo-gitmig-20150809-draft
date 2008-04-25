@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.17.0.ebuild,v 1.1 2008/04/09 17:32:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.17.1.ebuild,v 1.1 2008/04/25 14:56:08 dev-zero Exp $
 
 inherit eutils versionator
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://download.rsyslog.com/${PN}/${P}.tar.gz"
-LICENSE="GPL-3"
+LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug kerberos dbi mysql postgres relp snmp zlib"
@@ -23,17 +23,12 @@ RDEPEND="${DEPEND}"
 
 BRANCH="3-devel"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/3.14.1-implicit_declaration.patch"
-}
-
 src_compile() {
 	# Maintainer notes:
 	# * rsyslog-3 doesn't support single threading anymore
 	# * rfc3195 needs a library
+	# * OpenSSL detection is present in ./configure but nothing
+	#   in the code actually needs it
 	econf \
 		--enable-largefile \
 		--enable-regexp \
@@ -55,7 +50,8 @@ src_compile() {
 		$(use_enable relp) \
 		--disable-rfc3195 \
 		--enable-imfile \
-		--disable-imtemplate
+		--disable-imtemplate \
+		--disable-openssl
 	emake || die "emake failed"
 }
 
