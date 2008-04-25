@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_ldap_userdir
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.8 2008/02/02 10:44:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.9 2008/04/25 12:20:46 hollow Exp $
+
+  25 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  mod_ldap_userdir-1.1.12.ebuild:
+  cleanup, fixes #218991
 
 *mod_ldap_userdir-1.1.12 (02 Feb 2008)
 
