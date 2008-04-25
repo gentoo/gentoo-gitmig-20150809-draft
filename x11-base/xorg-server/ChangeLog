@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.322 2008/04/25 18:22:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.323 2008/04/25 18:24:28 dberkholz Exp $
+
+  25 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -xorg-server-1.3.0.0-r2.ebuild, -xorg-server-1.4.0.90-r2.ebuild:
+  Clean up a little. Still waiting on arm/sh stabilization in 1.3.0.0-r5 for
+  -r4 to get removed.
 
   25 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.3.0.0-r5.ebuild:
