@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1360 2008/04/25 09:58:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1361 2008/04/25 14:59:55 dev-zero Exp $
 
   25 Apr 2008; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   add USE=logrotate for net-misc/tor
@@ -10,6 +10,9 @@
 
   24 Apr 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Fix the www-client/opera versioning scheme once again.
+
+  24 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Add some comments for the mask :-)
 
   24 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Added masks for boost{,-build}-1.35.0

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8531 2008/04/24 18:10:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8532 2008/04/25 14:59:55 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -36,6 +36,7 @@
 net-p2p/linkage
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Apr 2008)
+# Mask for testing. NOT finished yet and largely untested!
 =dev-util/boost-build-1.35.0
 =dev-libs/boost-1.35.0
 
