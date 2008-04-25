@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zim/zim-0.23.ebuild,v 1.1 2008/04/25 17:44:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zim/zim-0.23.ebuild,v 1.2 2008/04/25 18:19:55 drac Exp $
 
 EAPI=1
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES="${FILESDIR}/${PN}-0.20-disable-update-desktop-database.patch"
+PATCHES=( "${FILESDIR}/${PN}-0.20-disable-update-desktop-database.patch" )
 
 pkg_postinst() {
 	perl-module_pkg_postinst
