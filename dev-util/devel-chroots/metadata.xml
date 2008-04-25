@@ -8,10 +8,8 @@
   <description>author and contact for support and feature requests</description>
 </maintainer>
 <longdescription>
-You are interested in a screen-powered chroot utility?
-You want to automatically install and fire up chroots?
-The next version will probably even contain bootscript
-support for starting specific services in your chroots
-when the host machine reboots and your chroots reload!
+devel-chroots is a simple script using
+an xml config file to set up and
+start chroots using screen sessions.
 </longdescription>
 </pkgmetadata>
