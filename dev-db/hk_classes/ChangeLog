@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/hk_classes
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.55 2007/07/02 19:47:00 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.56 2008/04/25 23:38:01 philantrop Exp $
+
+  25 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/hk_classes-0.8.3-gcc43.patch, hk_classes-0.8.3.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Eduard
+  Warkentin on bug 218913. Minor QA fixes. Added the missing fontconfig
+  dependency as reported in bug 204374.
 
   02 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   hk_classes-0.8.1_alpha3.ebuild, hk_classes-0.8.1.ebuild,
