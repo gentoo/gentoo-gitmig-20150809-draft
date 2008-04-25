@@ -1,10 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.3 2008/04/24 21:49:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.4 2008/04/25 13:50:18 drac Exp $
 
   24 Apr 2008; Samuli Suominen <drac@gentoo.org> sdlmame-0.124.ebuild,
   sdlmame-0.124_p3.ebuild:
-  Sed -Werror out of makefile because we gets more warnings with GCC 4.3.
+  Sed -Werror out of makefile because we get more warnings with GCC 4.3.
 
 *sdlmame-0.124_p3 (24 Apr 2008)
 *sdlmame-0.124 (24 Apr 2008)
