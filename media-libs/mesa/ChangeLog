@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.167 2008/01/31 03:41:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.168 2008/04/25 20:44:49 dberkholz Exp $
+
+*mesa-7.0.3 (25 Apr 2008)
+
+  25 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; +mesa-7.0.3.ebuild:
+  (#209900, #212511) Bump.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -mesa-7.0.1.ebuild:
   Clean up.
