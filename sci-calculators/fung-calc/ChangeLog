@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/fung-calc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/ChangeLog,v 1.11 2008/04/25 13:36:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/ChangeLog,v 1.12 2008/04/25 13:39:49 ingmar Exp $
+
+  25 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> fung-calc-1.3.2b.ebuild:
+  Quote FILESDIR.
 
   25 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> fung-calc-1.3.2b.ebuild:
   Remove unversioned kde-base/kdelibs dependency, since the ebuild gets a
