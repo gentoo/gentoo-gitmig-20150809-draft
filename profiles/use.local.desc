@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3513 2008/04/24 19:57:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3514 2008/04/25 09:58:40 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1671,6 +1671,7 @@ net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/strongswan:cisco - Enable support of Cisco VPN client
 net-misc/strongswan:nat - Enable NAT traversal with IPsec transport mode
 net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
+net-misc/tor:logrotate - Enable logrotate file installation
 net-misc/vnc:server - Build VNC server
 net-misc/vpnc:hybrid-auth - Enable hybrid authentication (certificates), only if not redistributed as compiled binary
 net-misc/vpnc:resolvconf - Enable support for DNS managing framework net-dns/resolvconf

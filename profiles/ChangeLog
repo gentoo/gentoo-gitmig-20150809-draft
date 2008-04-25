@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1359 2008/04/24 19:57:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1360 2008/04/25 09:58:40 opfer Exp $
+
+  25 Apr 2008; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  add USE=logrotate for net-misc/tor
 
   24 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> use.local.desc:
   Added local use-flag media-plugins/vdr-xineliboutput:libextractor.
