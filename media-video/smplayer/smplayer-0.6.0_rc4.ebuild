@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0_rc4.ebuild,v 1.3 2008/04/22 17:23:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0_rc4.ebuild,v 1.4 2008/04/25 14:57:54 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND="|| ( ( x11-libs/qt-gui:4
 				x11-libs/qt-qt3support:4 )
-			=x11-libs/qt-4.3* )"
+			>=x11-libs/qt-4.3:4 )"
 RDEPEND="${DEPEND}
 	>media-video/mplayer-1.0_rc1"
 
@@ -31,7 +31,7 @@ done
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if has_version "=x11-libs/qt-4.3*"; then
+	if has_version ">=x11-libs/qt-4.3:4"; then
 		QT4_BUILT_WITH_USE_CHECK="qt3support"
 	else
 		if ! built_with_use "x11-libs/qt-gui:4" qt3support; then
