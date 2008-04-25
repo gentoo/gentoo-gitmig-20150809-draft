@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.321 2008/04/18 21:29:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.322 2008/04/25 18:22:31 dberkholz Exp $
+
+  25 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.3.0.0-r5.ebuild:
+  (#219159) Add autotools patch here as well.
 
   18 Apr 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/xorg-server-1.4.0.90-automake-1.10.1-fixup.patch,
