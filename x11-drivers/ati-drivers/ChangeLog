@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.117 2008/04/20 16:53:19 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.118 2008/04/26 10:50:46 lu_zero Exp $
+
+*ati-drivers-8.476 (26 Apr 2008)
+
+  26 Apr 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/8.476/ati-powermode-opt-path-2.patch, +ati-drivers-8.476.ebuild:
+  New version
 
   20 Apr 2008; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.471.3.ebuild:
   Die on 2.6.25 kernels until fixed - see bug #218422.
