@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1-r1.ebuild,v 1.13 2008/04/26 08:19:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1-r1.ebuild,v 1.14 2008/04/26 08:27:32 drac Exp $
 
 inherit libtool flag-o-matic
 
@@ -20,8 +20,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
+	epatch "${FILESDIR}"/${P}-Makefile.patch \
+		"${FILESDIR}"/${P}-gcc-4.3.patch
 	elibtoolize
 
 	# Bug #148695
