@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.97 2008/04/26 16:06:39 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.98 2008/04/26 22:09:35 maekke Exp $
+
+  26 Apr 2008; Markus Meier <maekke@gentoo.org> xfsprogs-2.9.7.ebuild:
+  x86 stable, bug #218942
 
   26 Apr 2008; Richard Freeman <rich0@gentoo.org> xfsprogs-2.9.7.ebuild:
   amd64 stable - 218942
