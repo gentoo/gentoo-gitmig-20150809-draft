@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrelltop
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.25 2007/06/12 21:23:19 lack Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.26 2008/04/26 22:46:43 lack Exp $
+
+*gkrelltop-2.2.11 (26 Apr 2008)
+
+  26 Apr 2008; Jim Ramsay <lack@gentoo.org> +gkrelltop-2.2.11.ebuild:
+  Version bump - 2.2.11 is released (bug #219006)
 
   12 Jun 2007; Jim Ramsay <lack@gentoo.org> -gkrelltop-2.2.4.ebuild,
   -gkrelltop-2.2.6.ebuild:
