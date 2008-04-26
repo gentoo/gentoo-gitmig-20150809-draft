@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/colorsel-20040416.ebuild,v 1.12 2005/04/24 11:54:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/colorsel-20040416.ebuild,v 1.13 2008/04/26 21:18:00 ricmm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: RGB / HSV color selector"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=927"
 LICENSE="public-domain"
-KEYWORDS="sparc x86 mips ppc amd64 alpha ia64"
+KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 IUSE=""
 RDEPEND=">=app-editors/gvim-6.2"
 
