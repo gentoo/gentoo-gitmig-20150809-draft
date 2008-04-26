@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r1.ebuild,v 1.3 2008/04/26 10:27:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r2.ebuild,v 1.1 2008/04/26 10:27:37 bicatali Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -13,43 +13,47 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="|| ( GPL-2 Blitz-Artistic )"
 
 DEPEND="doc? ( app-doc/doxygen )"
-RDEPEND=""
-
-FORTAN="g77"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# remove examples compiling
 	sed -i \
 		-e 's/blitz-uninstalled.pc//' \
+		-e 's/examples//g' \
 		Makefile.in || die "sed failed"
 	epatch "${FILESDIR}"/${P}-gcc-4.3-missing-includes.patch
 }
 
 src_compile() {
-	local myconf
-	# ICC: if we've got it, use it
-	[[ $(tc-getCXX) = ic*c ]] && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
-
-	export CC=$(tc-getCC) CXX=$(tc-getCXX)
+	# blas and fortran are only useful for benchmarks
 	econf \
 		--enable-shared \
+		--disable-cxx-flags-preset \
+		--disable-fortran \
+		--without-blas \
 		$(use_enable doc doxygen) \
-		$(use_enable doc enable-html-docs) \
+		$(use_enable doc html-docs) \
 		$(use_enable debug) \
-		${myconf} || die "econf failed"
+		|| die "econf failed"
+	emake lib || die "emake lib failed"
 }
 
 src_test() {
-	make check-testsuite || die "selftest failed"
+	# exprctor fails if BZ_DEBUG flag is not set
+	# CXXFLAGS gets overwritten
+	emake AM_CXXFLAGS="-DBZ_DEBUG" check-testsuite || die "selftest failed"
 }
 
 src_install () {
 	dodir /usr/share/doc/${PF}/html
-	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF}/html install || die "emake install failed"
+	emake \
+		DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF}/html \
+		install || die "emake install failed"
 	dodoc ChangeLog ChangeLog.1 README README.binutils TODO AUTHORS NEWS
 
-	if use examples ; then
+	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*.cpp
 	fi

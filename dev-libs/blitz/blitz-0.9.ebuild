@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.8 2008/04/01 15:48:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.9 2008/04/26 10:27:37 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -8,9 +8,9 @@ DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
 #DEPEND="doc? ( virtual/tetex )"
-DEPEND="icc? ( dev-lang/icc )"
+DEPEND=""
 RDEPEND=""
-IUSE="icc"
+IUSE=""
 
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	# ICC: if we've got it, use it
-	use icc && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
+	[[ $(tc-getCXX) = ic*c ]] && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
 	#use doc && myconf="$myconf --enable-latex-docs"
 	myconf="${myconf} --enable-maintainer-mode --disable-doxygen --disable-dot"
 	myconf="${myconf} --enable-shared"
@@ -44,5 +44,5 @@ src_install () {
 	dodir /usr/share/doc/${PF}
 	emake DESTDIR=${D} docdir=/usr/share/doc/${PF} install || die
 	dodoc ChangeLog ChangeLog.1 LICENSE README README.binutils \
-	      TODO COPYING LEGAL AUTHORS NEWS
+		  TODO COPYING LEGAL AUTHORS NEWS
 }

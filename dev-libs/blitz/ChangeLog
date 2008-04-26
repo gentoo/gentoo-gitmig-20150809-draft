@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.29 2008/04/01 15:48:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.30 2008/04/26 10:27:37 bicatali Exp $
+
+*blitz-0.9-r2 (26 Apr 2008)
+
+  26 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> blitz-0.9.ebuild,
+  blitz-0.9-r1.ebuild, +blitz-0.9-r2.ebuild:
+  Removed icc flag, added a revision bump removing fortran stuff (not needed
+  without the benchmarks), and examples building. Propagate user flags and
+  cleanup. See bug #217317.
 
   01 Apr 2008; Daniel Black <dragonheart@gentoo.org>
   +files/blitz-0.9-gcc-4.3-missing-includes.patch, blitz-0.9.ebuild,
