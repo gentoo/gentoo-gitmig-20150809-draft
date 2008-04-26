@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libelysiumui
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.7 2007/01/14 21:34:34 leio Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.8 2008/04/26 07:44:20 drac Exp $
+
+  26 Apr 2008; Samuli Suominen <drac@gentoo.org> libelysiumui-0.2.0.ebuild:
+  Use DESTDIR for installing. Move pkgconfig from RDEPEND to DEPEND wrt
+  #217278.
 
   14 Jan 2007; Mart Raudsepp <leio@gentoo.org> libelysiumui-0.2.0.ebuild:
   Add missing depend on pkgconfig, bug 151171
