@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.1 2008/04/23 19:04:01 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.2 2008/04/26 11:05:18 maekke Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
@@ -11,7 +11,7 @@ mirror://sourceforge/${PN}/InspIRCd-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="openssl gnutls ipv6 kernel_linux mysql postgres sqlite zlib ldap"
 
 RDEPEND="
@@ -38,7 +38,7 @@ src_unpack() {
 	fi
 	if use openssl || use gnutls ; then
 		cp extra/m_sslinfo.cpp .
-		cp extra/m_ssl_oper_cert.cpp
+		cp extra/m_ssl_oper_cert.cpp .
 	fi
 
 	if use ldap ; then
@@ -68,7 +68,7 @@ src_compile() {
 	# so should be used only --enable-like.
 	local myconf=""
 	use gnutls  && myconf="--enable-gnutls"
-	use myconf  && myconf="${myconf} --enable-ipv6 --enable-remote-ipv6"
+	use ipv6  && myconf="${myconf} --enable-ipv6 --enable-remote-ipv6"
 	use openssl && myconf="${myconf} --enable-openssl"
 
 	./configure ${myconf} \
