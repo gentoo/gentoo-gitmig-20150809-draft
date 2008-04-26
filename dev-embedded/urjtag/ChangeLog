@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.3 2008/04/21 19:13:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.4 2008/04/26 16:54:55 nixnut Exp $
+
+  26 Apr 2008; nixnut <nixnut@gentoo.org> urjtag-0.8.ebuild:
+  Stable on ppc wrt bug 217847
 
   21 Apr 2008; Markus Meier <maekke@gentoo.org> urjtag-0.8.ebuild:
   amd64/x86 stable, bug #217847
