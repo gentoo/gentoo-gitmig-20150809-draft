@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.6.3.ebuild,v 1.1 2008/04/25 12:00:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.6.3.ebuild,v 1.2 2008/04/26 11:50:43 maekke Exp $
 
 MY_PN="moin"
 PYTHON_MODNAME="MoinMoin"
@@ -15,7 +15,7 @@ HOMEPAGE="http://moinmo.in/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="rss"
 
 DEPEND=">=dev-lang/python-2.3"

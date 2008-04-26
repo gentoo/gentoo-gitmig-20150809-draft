@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.44 2008/04/25 12:00:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.45 2008/04/26 11:50:43 maekke Exp $
+
+  26 Apr 2008; Markus Meier <maekke@gentoo.org> moinmoin-1.6.3.ebuild:
+  amd64/x86 stable, security bug #218752
 
 *moinmoin-1.6.3 (25 Apr 2008)
 
