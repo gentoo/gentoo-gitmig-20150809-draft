@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.3.ebuild,v 1.1 2008/04/25 20:44:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.3.ebuild,v 1.2 2008/04/26 03:45:59 mr_bones_ Exp $
 
 MY_PN="${PN/m/M}"
 MY_P="${MY_PN}-${PV/_/-}"
@@ -94,7 +94,7 @@ pkg_setup() {
 
 	append-flags -fno-strict-aliasing
 
-	# Recommended by upstream. Since people shouldn't be setting this on 
+	# Recommended by upstream. Since people shouldn't be setting this on
 	# a system level, we set this in this package to be sure it gets it.
 	append-flags -ffast-math
 
