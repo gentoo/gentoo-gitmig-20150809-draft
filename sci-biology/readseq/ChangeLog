@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/readseq
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.5 2006/08/17 22:20:51 weeve Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.6 2008/04/26 06:31:30 dberkholz Exp $
+
+*readseq-20080420 (26 Apr 2008)
+
+  26 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +readseq-20080420.ebuild:
+  Add the Java version, which is actually maintained. This could possibly
+  use some more enhancement to add wrappers for the GUI and such, but the
+  ebuild is already a fully functional replacement for the old version.
 
   17 Aug 2006; Jason Wever <weeve@gentoo.org> readseq-19930201.ebuild:
   Added ~sparc keyword wrt bug #144246.
