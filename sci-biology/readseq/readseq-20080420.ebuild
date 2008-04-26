@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420.ebuild,v 1.1 2008/04/26 06:31:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420.ebuild,v 1.2 2008/04/26 07:08:31 mr_bones_ Exp $
 
 EAPI=1
 
@@ -9,7 +9,7 @@ inherit java-pkg-2 java-ant-2
 MY_P="${PN}-source-${PV}"
 DESCRIPTION="Reads and writes nucleic/protein sequences in various formats."
 HOMEPAGE="http://iubio.bio.indiana.edu/soft/molbio/readseq/"
-# Originally unversioned at 
+# Originally unversioned at
 # http://iubio.bio.indiana.edu/soft/molbio/readseq/java/readseq-source.zip.
 # Renamed to the date of the modification and mirrored
 SRC_URI="http://dev.gentoo.org/~dberkholz/distfiles/${MY_P}.zip"
