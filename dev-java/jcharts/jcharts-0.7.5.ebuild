@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.3 2008/04/25 10:00:26 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.4 2008/04/26 12:09:06 betelgeuse Exp $
 
 EAPI="1"
+JAVA_PKG_IUSE="doc examples source"
+
 inherit java-pkg-2 java-ant-2
 
 MY_P="jCharts-${PV}"
@@ -14,19 +16,17 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="doc examples source"
+IUSE=""
 
-COMMON_DEP="dev-java/batik
-			=dev-java/servletapi-2.4*"
+COMMON_DEP="dev-java/batik:1.6
+			dev-java/servletapi:2.4"
 
 RDEPEND=">=virtual/jre-1.4
 		${COMMON_DEP}"
 
 DEPEND=">=virtual/jdk-1.4
 		${COMMON_DEP}
-		dev-java/ant-core
-		app-arch/unzip
-		source? ( app-arch/zip )"
+		app-arch/unzip"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -60,9 +60,5 @@ src_install() {
 	dohtml docs/*.html
 	use doc && java-pkg_dojavadoc javadocs
 	use source && java-pkg_dosrc src/org
-	if use examples; then
-		dodir  /usr/share/doc/${PF}/examples
-		insinto  /usr/share/doc/${PF}/examples
-		doins -r demo/*
-	fi
+	use examples && java-pkg_doexamples demo
 }
