@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.28 2008/01/31 14:49:38 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.29 2008/04/26 14:38:53 ikelos Exp $
+
+  26 Apr 2008; Mike Auty <ikelos@gentoo.org>
+  +files/patches/vmblock/010_all_kernel-2.6.25.patch,
+  +files/patches/vmmon/035_all_kernel-2.6.25.patch,
+  +files/patches/vmnet/025_all_kernel-2.6.25.patch:
+  Add patches for -r1 ebuilds to ensure they work on 2.6.25 and older
+  kernels.
 
   31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Re-sign digestless manifest.
