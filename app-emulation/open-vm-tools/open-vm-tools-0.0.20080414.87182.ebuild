@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20071121.64693.ebuild,v 1.4 2008/04/26 14:04:22 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080414.87182.ebuild,v 1.1 2008/04/26 14:04:22 ikelos Exp $
 
-inherit eutils linux-mod versionator
+inherit pam eutils linux-mod autotools versionator
 
 MY_DATE="$(get_version_component_range 3)"
 MY_BUILD="$(get_version_component_range 4)"
@@ -15,10 +15,10 @@ DESCRIPTION="Opensourced tools for VMware guests"
 HOMEPAGE="http://open-vm-tools.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="pam X xinerama"
+IUSE="X xinerama"
 DEPEND="
 		virtual/linux-sources
 		sys-apps/ethtool
@@ -32,14 +32,17 @@ DEPEND="
 		!app-emulation/vmware-workstation-tools
 		!app-emulation/vmware-server-tools
 		!app-emulation/vmware-esx-tools
+		sys-process/procps
+		dev-libs/libdnet
 		"
 
 RDEPEND="${DEPEND/virtual\/linux\-sources/}
-		X? (
+		 virtual/pam
+		 X? (
 			x11-base/xorg-server
 			x11-drivers/xf86-video-vmware
 			x11-drivers/xf86-input-vmmouse
-		)
+		 )
 "
 
 VMWARE_MOD_DIR="modules/linux"
@@ -49,7 +52,7 @@ pkg_setup() {
 
 	linux-mod_pkg_setup
 	MODULE_NAMES=""
-	BUILD_TARGETS="auto-build KERNEL_DIR=${KERNEL_DIR} KBUILD_OUTPUT=${KV_OUT_DIR}"
+	BUILD_TARGETS="auto-build HEADER_DIR=${KERNEL_DIR}/include BUILD_DIR=${KV_OUT_DIR}"
 
 	for mod in ${VMWARE_MODULE_LIST};
 	do
@@ -62,20 +65,22 @@ pkg_setup() {
 		MODULE_NAMES="${MODULE_NAMES} ${mod}(${MODTARGET}:${S}/${VMWARE_MOD_DIR}/${mod})"
 	done
 
+	ewarn "If you're compiling for a hardened target, please use the hardened"
+	ewarn "toolchain (see bug #200376, comment 18)."
+
 	enewgroup vmware
 
 }
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	# epatch "${FILESDIR}/${PN}-as-needed.patch"
+
+	eautoreconf
 }
 
 src_compile() {
-	#if ! use X; then
-	#	epatch ${FILESDIR}/disable-toolbox.patch
-	#	rm -rf ${S}/toolbox
-	#fi
-
 	econf \
 	$(use_with X x) \
 	$(use_enable xinerama multimon) \
@@ -90,23 +95,7 @@ src_install() {
 
 	linux-mod_src_install
 
-	if use pam; then
-		LIB="$(get_libdir)"
-		PAMFILE="${D}/etc/pam.d/vmware-guestd"
-		dodir "${ROOT}${LIB}"
-		dodir "${ROOT}etc/pam.d"
-		echo '#%PAM-1.0' > "${PAMFILE}"
-		if [[ -e "${ROOT}${LIB}/security/pam_unix2.so" ]];
-		then
-			PAM_VER=2
-		fi
-
-		echo -e "auth\tsufficient\t${ROOT}${LIB}/security/pam_unix${PAM_VER}.so\tshadow\tnullok" >> "${PAMFILE}"
-		echo -e "auth\trequired\t${ROOT}${LIB}/security/pam_unix_auth.so\tshadow\tnullok" >> "${PAMFILE}"
-		echo -e "account\tsufficient\t${ROOT}${LIB}/security/pam_unix${PAM_VER}.so" >> "${PAMFILE}"
-		echo -e "account\trequired\t${ROOT}${LIB}/security/pam_unix_acct.so" >> "${PAMFILE}"
-
-	fi
+	pamd_mimic_system vmware-guestd auth account
 
 	# Install the various tools
 	cd "${S}"
@@ -128,15 +117,15 @@ src_install() {
 	dolib libguestlib/.libs/libguestlib.{so.0.0.0,a}
 
 	# Deal with the hgfsmounter
-	into "${ROOT}"
+	into /
 	newsbin hgfsmounter/hgfsmounter mount.vmhgfs
-	fperms u+s "${ROOT}sbin/mount.vmhgfs"
-	### FROM THIS POINT ON, into IS SET TO ${ROOT} not /usr !!!
+	fperms u+s /sbin/mount.vmhgfs
+	### FROM THIS POINT ON, into IS SET TO ${ROOT}/ not ${ROOT}/usr !!!
 
 	# Install the /etc/ files
-	exeinto "${ROOT}etc/vmware-tools"
+	exeinto /etc/vmware-tools
 	doexe scripts/linux/*
-	insinto "${ROOT}etc/vmware-tools"
+	insinto /etc/vmware-tools
 	doins "${FILESDIR}/tools.conf"
 	# Only install this, when X is being used. Else it's useless waste of
 	# ressources when checking continuously for processes that will never appear
