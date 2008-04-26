@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.28 2008/04/26 09:55:24 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.29 2008/04/26 18:29:09 nixnut Exp $
+
+  26 Apr 2008; nixnut <nixnut@gentoo.org> kuroo-0.81_rc1.ebuild:
+  Stable on ppc wrt bug 218768
 
   26 Apr 2008; Dawid Węgliński <cla@gentoo.org> kuroo-0.81_rc1.ebuild:
   Stable on x86 (bug #218768)
