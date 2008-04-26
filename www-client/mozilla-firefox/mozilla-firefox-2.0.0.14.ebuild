@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.14.ebuild,v 1.10 2008/04/24 19:09:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.14.ebuild,v 1.11 2008/04/26 18:26:19 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -141,6 +141,9 @@ src_unpack() {
 		sed -i -e "s|Bon Echo|Iceweasel|" browser/locales/en-US/chrome/branding/brand.*
 		sed -i -e "s|BonEcho|Iceweasel|" configure.in
 	fi
+
+	#Don't strip extension
+	sed -i -e 's/STRIP_/#STRIP_/g' extensions/xforms/Makefile.in
 
 	eautoreconf
 }

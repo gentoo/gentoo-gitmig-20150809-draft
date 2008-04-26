@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.397 2008/04/24 19:09:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.398 2008/04/26 18:26:19 armin76 Exp $
+
+  26 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-2.0.0.14.ebuild:
+  Don't strip extension, bug #216062
 
   24 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-2.0.0.14.ebuild:
