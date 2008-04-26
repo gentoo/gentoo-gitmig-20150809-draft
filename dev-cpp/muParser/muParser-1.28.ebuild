@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.28.ebuild,v 1.2 2008/03/15 10:05:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.28.ebuild,v 1.3 2008/04/26 21:30:19 bicatali Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 	# fix destdir to install pkgconfig file
 	epatch "${FILESDIR}"/${P}-destdir.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

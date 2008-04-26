@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>sci</herd>
 <longdescription lang="en">
-muParser is a C++ based mathematical expression parser
+  muParser is a C++ library for mathematical expression parsing.
+  It is based on transforming an expression into a bytecode and
+  precalculating constant parts of it.
 </longdescription>
 </pkgmetadata>
-
