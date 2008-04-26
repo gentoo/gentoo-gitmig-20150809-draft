@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.47 2008/03/22 10:45:35 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.48 2008/04/26 15:19:44 ikelos Exp $
+
+  26 Apr 2008; Mike Auty <ikelos@gentoo.org>
+  vmware-player-2.0.3.80004.ebuild:
+  Merge dependencies for vmware-player-2.0.3 x86 and amd64 arches.
 
 *vmware-player-2.0.3.80004 (22 Mar 2008)
 *vmware-player-1.0.6.80404 (22 Mar 2008)
