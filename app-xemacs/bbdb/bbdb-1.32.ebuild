@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/bbdb-1.32.ebuild,v 1.1 2007/05/05 07:15:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/bbdb-1.32.ebuild,v 1.2 2008/04/26 11:10:12 graaff Exp $
 
 SLOT="0"
 IUSE=""
@@ -25,6 +25,6 @@ app-xemacs/net-utils
 app-xemacs/os-utils
 app-xemacs/ecrypto
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
