@@ -1,6 +1,9 @@
 # ChangeLog for net-www/libflashsupport
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/libflashsupport/ChangeLog,v 1.1 2007/05/14 14:17:21 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/libflashsupport/ChangeLog,v 1.2 2008/04/26 23:30:28 lack Exp $
+
+  26 Apr 2008; Jim Ramsay <lack@gentoo.org> libflashsupport-1.2.ebuild:
+  Changed socket path (Bug #203141)
 
 *libflashsupport-1.2 (14 May 2007)
 
