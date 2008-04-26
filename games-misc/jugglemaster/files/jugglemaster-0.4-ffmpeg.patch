@@ -11,3 +11,15 @@
  	c->gop_size = 30;
  	c->max_b_frames=1;
  
+--- src/jmdlx/print.h.old	2008-04-26 10:01:11.000000000 +0200
++++ src/jmdlx/print.h	2008-04-26 10:01:37.000000000 +0200
+@@ -25,7 +25,9 @@
+ #include "jmdlx.h"
+ 
+ #ifdef HAVE_AVCODEC_H
++extern "C" {
+ #include "avcodec.h"
++}
+ #endif
+ 
+ class Print : public wxDialog {
