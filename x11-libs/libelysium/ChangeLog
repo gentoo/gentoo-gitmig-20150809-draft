@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libelysium
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.7 2007/01/14 21:32:04 leio Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.8 2008/04/26 07:39:29 drac Exp $
+
+  26 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libelysium-0.99.9-printf.patch, libelysium-0.99.9.ebuild:
+  Use DESTDIR for installing. Include stdio.h for implicit declaration of
+  printf. Move pkgconfig from RDEPEND to DEPEND wrt #217278.
 
   14 Jan 2007; Mart Raudsepp <leio@gentoo.org> libelysium-0.99.5.ebuild,
   libelysium-0.99.9.ebuild:
