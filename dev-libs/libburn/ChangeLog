@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.21 2008/04/19 15:06:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.22 2008/04/26 16:21:28 nixnut Exp $
+
+  26 Apr 2008; nixnut <nixnut@gentoo.org> libburn-0.4.2.ebuild:
+  Stable on ppc wrt bug 209059
 
   19 Apr 2008; Markus Rothe <corsair@gentoo.org> libburn-0.4.2.ebuild:
   Stable on ppc64; bug #209059
