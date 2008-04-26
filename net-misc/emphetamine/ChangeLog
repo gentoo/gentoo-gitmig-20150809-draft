@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/emphetamine
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emphetamine/ChangeLog,v 1.4 2007/02/09 04:46:52 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emphetamine/ChangeLog,v 1.5 2008/04/26 13:18:11 drac Exp $
+
+  26 Apr 2008; Samuli Suominen <drac@gentoo.org> emphetamine-0.99.6.ebuild:
+  Keyword ~amd64.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
