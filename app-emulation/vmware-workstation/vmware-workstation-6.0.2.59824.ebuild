@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.2.59824.ebuild,v 1.1 2007/11/25 12:50:31 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.2.59824.ebuild,v 1.2 2008/04/26 16:29:15 ikelos Exp $
 
 inherit vmware eutils versionator
 
@@ -15,13 +15,7 @@ SRC_URI="
 	amd64? (
 		mirror://vmware/software/wkst/${MY_PN}.x86_64.tar.gz
 		http://download.softpedia.ro/linux/${MY_PN}.x86_64.tar.gz )
-	mirror://gentoo/${ANY_ANY}.tar.gz
-	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz"
+	"
 
 LICENSE="vmware"
 SLOT="0"
@@ -60,6 +54,7 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}/vmware-distrib
 
+ANY_ANY=""
 RUN_UPDATE="no"
 
 dir=/opt/vmware/workstation

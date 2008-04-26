@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r7.ebuild,v 1.7 2007/07/13 00:36:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r7.ebuild,v 1.8 2008/04/26 16:29:15 ikelos Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
@@ -89,7 +89,7 @@ src_install() {
 	vmware_src_install
 	# We remove the rpath libgdk_pixbuf stuff, to resolve bug #81344.
 	perl -pi -e 's#/tmp/rrdharan/out#/opt/vmware/null/#sg' \
-		${Ddir}/lib/lib/libgdk_pixbuf.so.2/lib{gdk_pixbuf.so.2,pixbufloader-{xpm,png}.so.1.0.0} \
+		"${Ddir}"/lib/lib/libgdk_pixbuf.so.2/lib{gdk_pixbuf.so.2,pixbufloader-{xpm,png}.so.1.0.0} \
 		|| die "Removing rpath"
 
 	make_desktop_entry vmware "VMware Workstation" ${PN}.png
