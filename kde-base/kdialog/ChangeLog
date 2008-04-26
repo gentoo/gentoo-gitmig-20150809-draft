@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.75 2008/04/03 21:03:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.76 2008/04/26 17:22:08 philantrop Exp $
+
+*kdialog-3.5.9-r1 (26 Apr 2008)
+
+  26 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdialog-3.5.9-kdeeject-186028.patch, +kdialog-3.5.9-r1.ebuild:
+  Added a patch to fix ejecting by using HAL (if the necessary tools are
+  installed). Fixes bug 186028.
 
 *kdialog-4.0.3 (03 Apr 2008)
 
