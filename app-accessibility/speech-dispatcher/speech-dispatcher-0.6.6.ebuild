@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.6.ebuild,v 1.6 2008/04/15 16:33:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.6.ebuild,v 1.7 2008/04/26 03:41:40 williamh Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freebsoft.org/pub/projects/speechd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc sparc x86"
 IUSE="alsa flite nas pulseaudio python"
 
 DEPEND="dev-libs/dotconf
