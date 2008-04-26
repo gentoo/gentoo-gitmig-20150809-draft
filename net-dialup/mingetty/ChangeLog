@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.54 2008/04/18 03:07:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.55 2008/04/26 16:29:18 nixnut Exp $
+
+  26 Apr 2008; nixnut <nixnut@gentoo.org> mingetty-1.08.ebuild:
+  Stable on ppc wrt bug 214651
 
   18 Apr 2008; Jeroen Roovers <jer@gentoo.org> mingetty-1.08.ebuild:
   Stable for HPPA (bug #214651).
