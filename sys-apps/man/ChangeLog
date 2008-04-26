@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.133 2008/04/26 14:14:39 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.134 2008/04/26 17:24:26 nixnut Exp $
+
+  26 Apr 2008; nixnut <nixnut@gentoo.org> man-1.6f-r1.ebuild:
+  Stable on ppc wrt bug 218669
 
   26 Apr 2008; Kenneth Prugh <ken69267@gentoo.org> man-1.6f-r1.ebuild:
   amd64 stable, bug #218669
