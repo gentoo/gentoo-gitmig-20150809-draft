@@ -1,0 +1,16 @@
+--- speech-dispatcher-0.6.6/src/modules/festival.c	2008-02-08 11:01:09.000000000 +0100
++++ speech-dispatcher-0.6.6.modified/src/modules/festival.c	2008-04-21 11:18:31.000000000 +0200
+@@ -691,5 +691,5 @@
+ 
+ 	    if (fwave->num_samples != 0){
+-		DBG("Sending message to audio: %ld bytes\n",
++		DBG("Sending message to audio: %u bytes\n",
+ 		    (fwave->num_samples) * sizeof(short));	
+     
+@@ -899,5 +899,5 @@
+     TCounterEntry *centry;
+ 
+-    DBG("Cache: cleaning, cache size %ld kbytes (>max %d).", FestivalCache.size/1024,
++    DBG("Cache: cleaning, cache size %zu kbytes (>max %d).", FestivalCache.size/1024,
+         FestivalCacheMaxKBytes);
+ 

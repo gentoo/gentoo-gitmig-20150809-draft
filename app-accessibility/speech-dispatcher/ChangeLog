@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.35 2008/04/15 16:33:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.36 2008/04/26 03:36:49 williamh Exp $
+
+*speech-dispatcher-0.6.6-r1 (26 Apr 2008)
+
+  26 Apr 2008; William Hubbs <williamh@gentoo.org>
+  +files/speech-dispatcher-0.6.6-festival-fix-formats.patch,
+  -speech-dispatcher-0.4.1.ebuild, +speech-dispatcher-0.6.6-r1.ebuild:
+  Rev bump for #218705, thanks to esigra@gmail.com for the patch. Also, I
+  removed an old version.
 
   15 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   speech-dispatcher-0.6.6.ebuild:
