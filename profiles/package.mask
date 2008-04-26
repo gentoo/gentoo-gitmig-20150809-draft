@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8534 2008/04/26 10:09:19 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8535 2008/04/26 15:52:48 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Auty <ikelos@gentoo.org> (26 Apr 2008)
+# Masking all app-emulation/vmware-workstation-tools packages
+# in favour of app-emulation/open-vm-tools
+=app-emulation/vmware-workstation-tools-4.5.3-r1
+=app-emulation/vmware-workstation-tools-5.5.1-r2
+=app-emulation/vmware-workstation-tools-5.5.2
+=app-emulation/vmware-workstation-tools-5.5.3
 
 # Andrej Kacian <ticho@gentoo.org> (26 Apr 2008)
 # Temp. mask until all plugins are in the tree
@@ -1125,16 +1133,6 @@ games-fps/americas-army
 # Paul Varner <fuzzyray@gentoo.org> (27 Sep 2007)
 # revdep-rebuild is broken in this release
 =app-portage/gentoolkit-0.2.4_rc1
-
-# Mike Auty <ikelos@gentoo.org> (20 Sep 2007)
-# Vmware security masking (bug 193196)
-# Packages will be masked once alternatives are available in the tree
-=app-emulation/vmware-server-1.0.3.44356
-=app-emulation/vmware-server-console-1.0.3.44356
-#=app-emulation/vmware-workstation-4.5.3.19414-r7
-#=app-emulation/vmware-workstation-5.5.4.44386
-#=app-emulation/vmware-player-1.0.2.29634
-#=app-emulation/vmware-player-1.0.3.34682-r1
 
 # Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
 # breaks apr and openldap
