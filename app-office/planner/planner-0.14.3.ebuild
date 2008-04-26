@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.3.ebuild,v 1.1 2008/04/20 13:20:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.3.ebuild,v 1.2 2008/04/26 16:50:46 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	  app-text/scrollkeeper
 	>=dev-util/intltool-0.35.5
+	  dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.0 )"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL README"
@@ -44,7 +45,6 @@ pkg_setup() {
 		$(use_enable libgda database)
 		$(use_enable python)
 		$(use_enable python python-plugin)
-		$(use_enable doc gtk-doc)
 		$(use_enable eds)
 		--disable-update-mimedb"
 #		$(use_enable eds eds-backend)
