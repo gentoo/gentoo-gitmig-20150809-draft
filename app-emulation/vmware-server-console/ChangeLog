@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-server-console
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.28 2008/04/04 06:45:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.29 2008/04/26 15:40:42 ikelos Exp $
+
+  26 Apr 2008; Mike Auty <ikelos@gentoo.org>
+  -vmware-server-console-1.0.3.44356.ebuild,
+  vmware-server-console-1.0.4.56528.ebuild,
+  vmware-server-console-1.0.5.80187.ebuild:
+  Fix creation of desktop item, and GCC version issue.
 
   04 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
   vmware-server-console-1.0.5.80187.ebuild:
