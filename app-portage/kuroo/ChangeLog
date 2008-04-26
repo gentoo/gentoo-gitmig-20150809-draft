@@ -1,9 +1,9 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.27 2008/04/26 09:53:14 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.28 2008/04/26 09:55:24 cla Exp $
 
   26 Apr 2008; Dawid Węgliński <cla@gentoo.org> kuroo-0.81_rc1.ebuild:
-  Stable on x86 (bug #219313)
+  Stable on x86 (bug #218768)
 
   21 Apr 2008; Ferris McCormick <fmccor@gentoo.org> kuroo-0.81_rc1.ebuild:
   Sparc stable --- Bug #218768 --- appears to work fine.
