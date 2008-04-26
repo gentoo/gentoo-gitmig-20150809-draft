@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.27 2008/04/26 16:18:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.28 2008/04/26 20:24:57 maekke Exp $
+
+  26 Apr 2008; Markus Meier <maekke@gentoo.org> fbdesk-1.4.1.ebuild:
+  amd64/x86 stable, bug #150662
 
   26 Apr 2008; nixnut <nixnut@gentoo.org> fbdesk-1.4.1.ebuild:
   Stable on ppc wrt bug 150662
