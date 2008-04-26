@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.2 2008/03/02 08:04:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.3 2008/04/26 09:40:23 cedk Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.taglib-sharp.com/Download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gnome"
 
 RDEPEND="dev-lang/mono

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.5 2008/03/02 08:04:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.6 2008/04/26 09:40:23 cedk Exp $
+
+  26 Apr 2008; Cédric Krier <cedk@gentoo.org> taglib-sharp-2.0.2.0.ebuild:
+  Add ppc keyword for bug #211826
 
   02 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   taglib-sharp-1.1.73998-r1.ebuild, taglib-sharp-1.9.75474.ebuild,
