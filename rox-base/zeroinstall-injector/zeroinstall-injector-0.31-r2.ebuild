@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.4 2007/12/14 21:34:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r2.ebuild,v 1.1 2008/04/26 23:47:28 lack Exp $
 
 inherit distutils
 
@@ -16,6 +16,14 @@ IUSE=""
 DEPEND="!<=rox-base/rox-session-0.30"
 RDEPEND=">=dev-python/pygtk-2.0
 	app-crypt/gnupg"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Change manpage install path (Bug 207495)
+	sed -i 's:man/man1:share/man/man1:' setup.py
+}
 
 src_install() {
 	distutils_src_install
