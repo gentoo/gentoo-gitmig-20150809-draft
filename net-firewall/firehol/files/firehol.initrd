@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/files/firehol.initrd,v 1.6 2008/02/13 13:52:59 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/files/firehol.initrd,v 1.7 2008/04/26 10:00:56 alonbl Exp $
 
 
 opts="start stop restart try status panic save"
 
 depend() {
 	need localmount
+	after bootmisc
 	before net
 	provide firewall
 }
