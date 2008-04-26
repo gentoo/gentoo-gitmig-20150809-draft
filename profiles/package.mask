@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8532 2008/04/25 14:59:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8533 2008/04/26 08:48:38 ticho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andrej Kacian <ticho@gentoo.org> (26 Apr 2008)
+# Temp. mask until all plugins are in the tree
+=mail-client/claws-mail-3.4.0
 
 # Samuli Suominen <drac@gentoo.org> (24 Apr 2008)
 # Linkage 0.1.4 only works with ~net-libs/rb_libtorrent-0.12.
