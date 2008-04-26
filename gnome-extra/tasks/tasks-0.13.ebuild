@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.13.ebuild,v 1.1 2008/04/24 22:21:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.13.ebuild,v 1.2 2008/04/26 03:45:30 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
-
