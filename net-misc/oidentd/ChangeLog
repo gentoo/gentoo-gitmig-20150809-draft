@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.38 2007/10/24 11:38:13 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.39 2008/04/27 14:54:52 angelos Exp $
+
+*oidentd-2.0.8-r2 (27 Apr 2008)
+
+  27 Apr 2008; Christoph Mende <angelos@gentoo.org>
+  +files/oidentd-2.0.8-masquerading.patch, +oidentd-2.0.8-r2.ebuild:
+  Added a patch for masquerading on Linux 2.6.21
 
   24 Oct 2007; Roy Marples <uberlord@gentoo.org> files/oidentd-2.0.7-init:
   Check sysctl security.bsd.see_other_uids is not zero and error accordingly
