@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.8 2008/04/20 20:18:46 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.9 2008/04/27 14:14:04 maekke Exp $
+
+  27 Apr 2008; Markus Meier <maekke@gentoo.org> kaa-base-0.3.0.ebuild:
+  x86 stable, bug #218647
 
   20 Apr 2008; Robert Buchholz <rbu@gentoo.org> kaa-base-0.3.0.ebuild:
   amd64 stable, bug 218647

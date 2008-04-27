@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0.ebuild,v 1.2 2008/04/20 20:23:57 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0.ebuild,v 1.3 2008/04/27 14:20:11 maekke Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bitkipper.net/bytes/debian/dists/unstable/source/${PN}_${PV}
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="qt4 gtk"
 
 DEPEND=""
