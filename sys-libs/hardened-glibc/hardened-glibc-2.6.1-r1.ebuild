@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.1 2008/04/27 23:17:42 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.2 2008/04/27 23:31:14 pappy Exp $
 
 inherit eutils
 
@@ -46,7 +46,10 @@ RDEPEND="sys-devel/gettext"
 pkg_setup() {
 	# hardcoding the CHOST in this ebuild (for x86 stages)
 	export CHOST="i486-pc-linux-gnu"
-	export CFLAGS="-O2 -pipe"
+
+	# CFLAGS+="-march=i686" for undefined reference to
+	# `__sync_bool_compare_and_swap_4'
+	export CFLAGS="-O2 -pipe -march=i686"
 	export CXXFLAGS="${CFLAGS}"
 
 	export CPPFLAGS=""
