@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-audio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.22 2008/04/26 15:59:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.23 2008/04/27 08:37:26 corsair Exp $
+
+  27 Apr 2008; Markus Rothe <corsair@gentoo.org> gnome-audio-2.22.1.ebuild:
+  Stable on ppc64; bug #219335
 
   26 Apr 2008; Jeroen Roovers <jer@gentoo.org> gnome-audio-2.22.1.ebuild:
   Stable for HPPA (bug #219335).
