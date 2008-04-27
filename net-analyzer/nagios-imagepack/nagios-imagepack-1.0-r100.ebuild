@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.12 2007/07/11 23:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0-r100.ebuild,v 1.1 2008/04/27 18:12:03 dertobi123 Exp $
 
 DESCRIPTION="Nagios imagepacks - Icons and pictures for Nagios"
 HOMEPAGE="http://www.nagios.org"
@@ -13,13 +13,12 @@ SRC_URI="
 	${IMAGE_URI}/imagepak-remus.tar.gz
 	${IMAGE_URI}/imagepak-satrapa.tar.gz
 	${IMAGE_URI}/imagepak-werschler.tar.gz
+	http://dev.gentoo.org/~eldad/distfiles/imagepak-gentoo.tar.bz2
 "
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
-
-RDEPEND="net-analyzer/nagios-core"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE=""
 
@@ -32,6 +31,6 @@ src_install () {
 	# nagios-core installs nagios.gd2
 	rm base/nagios.gd2
 
-	insinto /usr/nagios/share/images/logos
-	doins base/* didier/* imagepak-andrade/* imagepak-bernhard/* remus/* satrapa/* werschler/*
+	insinto /usr/share/nagios/htdocs/images/logos
+	doins base/* didier/* imagepak-andrade/* imagepak-bernhard/* remus/* satrapa/* werschler/* gentoo/*
 }
