@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.10 2007/12/24 07:13:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.11 2008/04/27 13:17:32 flameeyes Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -28,6 +28,8 @@ src_unpack() {
 	cd "${S}"
 	# https://issues.apache.org/jira/browse/XALANC-643
 	epatch "${FILESDIR}/1.10.0-as-needed.patch"
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+
 	chmod a+r $(find . -type f)
 	chmod a+rx $(find . -type d)
 

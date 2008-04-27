@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xalan-c
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.15 2007/12/24 07:13:42 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.16 2008/04/27 13:17:32 flameeyes Exp $
+
+  27 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xalan-c-1.10.0+gcc-4.3.patch, xalan-c-1.10.0.ebuild:
+  Add patch allowing building with GCC 4.3. Patch by ape in bug #213136.
 
   22 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> xalan-c-1.10.0.ebuild:
   Changed xerces-c version to match only 2.7.0 (bug #202922) since upstream
