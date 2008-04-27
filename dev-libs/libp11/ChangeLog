@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libp11
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.20 2007/11/13 18:22:34 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.21 2008/04/27 03:45:15 drac Exp $
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org> libp11-0.2.2.ebuild,
+  libp11-0.2.3.ebuild:
+  Set empty RDEPEND since pkgconfig is only DEPEND.
 
   13 Nov 2007; Markus Rothe <corsair@gentoo.org> libp11-0.2.3.ebuild:
   Stable on ppc64; bug #198688
