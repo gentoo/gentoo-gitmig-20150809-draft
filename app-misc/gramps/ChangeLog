@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.55 2008/03/30 15:58:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.56 2008/04/27 19:57:27 maekke Exp $
+
+  27 Apr 2008; Markus Meier <maekke@gentoo.org> gramps-2.2.10.ebuild:
+  amd64 stable, bug #211073
 
 *gramps-3.0.0 (30 Mar 2008)
 
