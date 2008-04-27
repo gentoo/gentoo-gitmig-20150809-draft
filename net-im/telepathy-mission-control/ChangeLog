@@ -1,6 +1,15 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.19 2008/04/21 17:24:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.20 2008/04/27 04:17:13 drac Exp $
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  -telepathy-mission-control-4.55.ebuild,
+  -telepathy-mission-control-4.57.ebuild,
+  -telepathy-mission-control-4.60.ebuild,
+  -telepathy-mission-control-4.61.ebuild,
+  -telepathy-mission-control-4.64.ebuild,
+  telepathy-mission-control-4.65.ebuild:
+  Move pkgconfig to DEPEND.
 
   21 Apr 2008; <welp@gentoo.org> telepathy-mission-control-4.65.ebuild:
   keyring to gnome-keyring
