@@ -1,24 +1,28 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.2.1.ebuild,v 1.10 2005/04/21 18:03:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.2.1.ebuild,v 1.11 2008/04/27 03:57:39 drac Exp $
 
 DESCRIPTION="Needed by Gringotts"
-HOMEPAGE="http://devel.pluto.linux.it/projects/libGringotts/index.php"
-SRC_URI="http://devel.pluto.linux.it/projects/libGringotts/current/${P}.tar.bz2"
+HOMEPAGE="http://packages.debian.org/sid/libgringotts2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=dev-libs/libmcrypt-2.4.21
+RDEPEND=">=dev-libs/libmcrypt-2.4.21
 	>=app-crypt/mhash-0.8.13
 	app-arch/bzip2
 	sys-apps/coreutils
-	sys-libs/zlib
-	>=dev-util/pkgconfig-0.12.0"
+	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog README TODO
+	emake DESTDIR="${D}" libgringottsdocdir="/usr/share/doc/${PF}" \
+		install || die "emake install failed."
+	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,*.htm}
+	dohtml -r docs/*.htm
+	prepalldocs
 }
