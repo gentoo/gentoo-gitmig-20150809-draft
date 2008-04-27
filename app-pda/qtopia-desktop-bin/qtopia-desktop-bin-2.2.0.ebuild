@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.5 2007/07/22 10:12:43 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.6 2008/04/27 19:31:46 nerdboy Exp $
 
-inherit eutils rpm multilib
+inherit eutils fdo-mime rpm multilib
 
 REV="1"
 QD="/opt/QtopiaDesktop"
@@ -40,31 +40,41 @@ src_install() {
 	dodir ${QD}
 	# Too many subdirs and files for individual ebuild commands
 	# Isn't there a better way?
-	cp -a ${S}/${QD}/qtopiadesktop ${D}${QD}
+	cp -a "${S}/${QD}"/qtopiadesktop "${D}${QD}"
 	local libdir="lib32"
 	if has_multilib_profile ; then
 	    libdir=$(get_abi_LIBDIR x86)
 	fi
+
 	into ${QD}
-	    dolib.so ${S}/${QD}/lib/lib*
-	    rm -f ${S}/${QD}/lib/*.prl
+	    dolib.so "${S}/${QD}"/lib/lib*
+	    rm -f "${S}/${QD}"/lib/*.prl
 	exeinto ${QD}/bin
-	    doexe ${S}/${QD}/bin/*
+	    doexe "${S}/${QD}"/bin/*
 	docinto /usr/share/doc/${P}
-	    dodoc ${S}/${QD}/LICENSE.US
-	    dodoc ${S}/${QD}/README.html
-	    dodoc ${FILESDIR}/usb0.conf
-	    rm -f ${S}/${QD}/LICENSE*
+	    dodoc "${S}/${QD}"/LICENSE.US
+	    dodoc "${S}/${QD}"/README.html
+	    dodoc "${FILESDIR}"/usb0.conf
+	    rm -f "${S}/${QD}"/LICENSE*
+
 	echo "PATH=${QD}/bin" > 37qtopia-desktop-bin
 	echo "LDPATH=${QD}/${libdir}" >> 37qtopia-desktop-bin
 	doenvd 37qtopia-desktop-bin
+
+	make_desktop_entry \
+	    /opt/QtopiaDesktop/bin/qtopiadesktop \
+	    "Qtopia Desktop ${PV}" \
+	    "/opt/QtopiaDesktop/qtopiadesktop/pics/qtopia.png" \
+	    "Application;Office;ContactManagement;"
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
+
 	elog " Finished installing Qtopia Desktop ${PV}-${REV} into ${QD}"
 	elog
-	elog " To start Qtopia Desktop, run:"
-	elog "   $ qtopiadesktop"
+	elog " To start Qtopia Desktop, use the new desktop menu, or run"
+	elog " qtopiadesktop from a terminal prompt."
 	elog
 	elog "See the usb0.conf file for a static network configuration for the"
 	elog "Zaurus cradle interface (it works with an SL-5x00).  Note the old"
@@ -74,3 +84,8 @@ pkg_postinst() {
 	elog "(such as above) running OZ with kernel 2.4.x."
 	elog
 }
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+}
+
