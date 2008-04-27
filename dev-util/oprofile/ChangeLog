@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.45 2008/02/06 17:38:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.46 2008/04/27 19:17:44 spock Exp $
+
+  27 Apr 2008; Michał Januszewski <spock@gentoo.org>
+  +files/oprofile-0.9.3-gcc43.patch, oprofile-0.9.3.ebuild:
+  Add a fix for GCC 4.3 (bug #218727).
 
   06 Feb 2008; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.3.ebuild:
   Stable for HPPA too.
