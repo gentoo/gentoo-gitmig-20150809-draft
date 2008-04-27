@@ -1,7 +1,15 @@
 # ChangeLog for sys-libs/hardened-glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/ChangeLog,v 1.1 2008/04/27 22:29:48 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/ChangeLog,v 1.2 2008/04/27 23:19:48 pappy Exp $
 
-  28 Apr 2008; <pappy@gentoo.org> ChangeLog:
+  27 Apr 2008; <pappy@gentoo.org> ChangeLog:
+  hardened-glibc-2.6.1-r1.ebuild
+
+  27 Apr 2008; <pappy@gentoo.org> ChangeLog:
+  these are test versions for hardened developers
+  use at your own risk, there is no profile (yet)
+  where these ebuilds are currently actively used
+
+  27 Apr 2008; <pappy@gentoo.org> ChangeLog:
   initial version
 
