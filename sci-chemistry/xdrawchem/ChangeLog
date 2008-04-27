@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.29 2008/04/21 02:02:41 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.30 2008/04/27 20:17:41 cryos Exp $
+
+  27 Apr 2008; Marcus D. Hanwell <cryos@gentoo.org> xdrawchem-1.9.9.ebuild:
+  Removed the dep on <sci-chemistry/openbabel-2.2 as the linking issue
+  should now be resolved. See bug 216057.
 
   21 Apr 2008; Jeff Gardner <je_fro@gentoo.org> xdrawchem-1.9.9.ebuild:
   Fix RDEPEND for bug #217278

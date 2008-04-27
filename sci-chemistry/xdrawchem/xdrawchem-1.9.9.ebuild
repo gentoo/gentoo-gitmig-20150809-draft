@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.6 2008/04/21 02:02:41 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.7 2008/04/27 20:17:41 cryos Exp $
 
 inherit qt3
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="$(qt_min_version 3.1)
-	<sci-chemistry/openbabel-2.2"
+	sci-chemistry/openbabel"
 
 DEPEND="${RDEPEND}
 		>=sys-devel/gcc-3.2
