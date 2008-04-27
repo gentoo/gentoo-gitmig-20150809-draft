@@ -1,0 +1,12 @@
+diff -ur gnomad2-2.9.1.orig/gnomad2.desktop.in gnomad2-2.9.1/gnomad2.desktop.in
+--- gnomad2-2.9.1.orig/gnomad2.desktop.in	2005-06-29 15:33:22.000000000 +0300
++++ gnomad2-2.9.1/gnomad2.desktop.in	2008-04-27 04:25:52.000000000 +0300
+@@ -5,6 +5,5 @@
+ Exec=gnomad2
+ Terminal=false
+ Type=Application
+-Icon=gnomad2-logo.png
+-Categories=Application;AudioVideo;
+-Encoding=UTF-8
++Icon=gnomad2-logo
++Categories=AudioVideo;GTK;
