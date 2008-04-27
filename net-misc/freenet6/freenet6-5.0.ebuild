@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.0.ebuild,v 1.4 2008/02/29 06:01:15 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.0.ebuild,v 1.5 2008/04/27 20:07:14 maekke Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/gw6c-${MY_PV}-RELEASE-src.tar.gz"
 
 LICENSE="VPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~sparc x86"
+KEYWORDS="amd64 hppa ~sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
