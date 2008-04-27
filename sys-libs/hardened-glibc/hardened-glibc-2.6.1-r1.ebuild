@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1.ebuild,v 1.2 2008/04/27 23:17:42 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.1 2008/04/27 23:17:42 pappy Exp $
 
 inherit eutils
 
@@ -16,11 +16,11 @@ KERNELVER="2.6.18"
 GNU_MIRROR="ftp://ftp.gnu.org/gnu"
 
 PATCHDIST="http://dev.gentoo.org/~pappy/dist/hardened"
-PATCHPATH="sys-libs/hardened-glibc/files/${PV}"
-GENTOOPATCHES="glibc-${PV}-GENTOOPATCHES.patch.gz"
+PATCHPATH="sys-libs/hardened-glibc/files/2.6.1"
+GENTOOPATCHES="glibc-2.6.1-GENTOOPATCHES.patch.gz"
 
 SRC_URI="${SRC_URI} \
-	${GNU_MIRROR}/glibc/glibc-${PV}.tar.bz2"
+	${GNU_MIRROR}/glibc/glibc-2.6.1.tar.bz2"
 SRC_URI="${SRC_URI} \
 	${PATCHDIST}/${PATCHPATH}/${GENTOOPATCHES}"
 
@@ -28,13 +28,20 @@ LICENSE="LGPL-2"
 SLOT="1"
 
 # only works for x86 so far
-# test version, do not use
-# will disappear from portage soon again
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 IUSE=""
 
 PROVIDE="virtual/libc"
 RESTRICT="strip" #46186
+
+DEPEND=">=sys-devel/binutils-2.15.94
+		>=sys-devel/gcc-config-1.3.12
+		>=app-misc/pax-utils-0.1.10
+		virtual/os-headers
+		sys-devel/gettext
+		>=sys-apps/portage-2.1.2"
+
+RDEPEND="sys-devel/gettext"
 
 pkg_setup() {
 	# hardcoding the CHOST in this ebuild (for x86 stages)
@@ -59,7 +66,7 @@ pkg_setup() {
 src_compile() {
 	cd "${WORKDIR}/glibc-${PV}"
 
-	epatch "${WORKDIR}/glibc-${PV}-GENTOOPATCHES.patch"
+	epatch "${WORKDIR}/glibc-2.6.1-GENTOOPATCHES.patch"
 
 	mkdir -p "${WORKDIR}/glibc-build"
 	cd "${WORKDIR}/glibc-build"
