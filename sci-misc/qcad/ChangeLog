@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/qcad
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.25 2008/02/29 20:42:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.26 2008/04/27 12:54:27 markusle Exp $
+
+  27 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/qcad-2.0.4.0-gcc43.patch, qcad-2.0.4.0-r5.ebuild:
+  Added gcc4.3 compatibility patch (fixes bug #219424). Thanks much to Peter
+  Alfredsen <peter.alfredsen@gmail.com>.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Remove icon extension from desktop entry to match Icon Theme Specification.

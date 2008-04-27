@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r5.ebuild,v 1.3 2008/02/29 20:42:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r5.ebuild,v 1.4 2008/04/27 12:54:27 markusle Exp $
 
 inherit kde-functions eutils
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${MY_P}-gentoo.patch
 	epatch "${FILESDIR}"/manual.patch-r1
 	epatch "${FILESDIR}"/${MY_P}-intptr.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	cd "${S}"/scripts
 	sed -i -e 's/^make/make ${MAKEOPTS}/' build_qcad.sh || \
 		die "unable to add MAKEOPTS"
