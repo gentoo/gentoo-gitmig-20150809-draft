@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/navi2ch
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.35 2007/12/25 16:43:02 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.36 2008/04/27 17:56:54 ulm Exp $
+
+*navi2ch-1.7.5_p20080325 (27 Apr 2008)
+
+  27 Apr 2008; Ulrich Mueller <ulm@gentoo.org> files/50navi2ch-gentoo.el,
+  +navi2ch-1.7.5_p20080325.ebuild:
+  Add CVS snapshot, bug 219449.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
