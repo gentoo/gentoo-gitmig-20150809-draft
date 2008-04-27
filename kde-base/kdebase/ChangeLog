@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.439 2008/04/15 10:05:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.440 2008/04/27 01:15:58 philantrop Exp $
+
+*kdebase-3.5.9-r3 (27 Apr 2008)
+
+  27 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdialog-3.5.9-kdeeject-186028.patch, files/agent-startup.sh,
+  +kdebase-3.5.9-r3.ebuild:
+  Added a patch to fix ejecting by using HAL (if the necessary tools are
+  installed). Fixes bug 186028. Added a template in agent-startup.sh for
+  starting rxvt-unicode. Fixes bug 189201.
 
 *kdebase-3.5.9-r2 (15 Apr 2008)
 
