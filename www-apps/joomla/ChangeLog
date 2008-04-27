@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.19 2008/02/23 20:51:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.20 2008/04/27 06:22:31 wrobel Exp $
+
+*joomla-1.5.3 (27 Apr 2008)
+
+  27 Apr 2008; wrobel@gentoo.org -joomla-1.5.1.ebuild, +joomla-1.5.3.ebuild:
+  Added joomla-1.5.3.
 
 *joomla-1.0.15 (23 Feb 2008)
 
