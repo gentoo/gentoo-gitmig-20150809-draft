@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8541 2008/04/27 12:14:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8542 2008/04/27 12:29:20 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -261,7 +261,6 @@ dev-libs/swl
 # huge ffmpeg migration mask, append to this further packages working
 # with the new include layout
 >=media-video/ffmpeg-0.4.9_p20080326
-=media-gfx/blender-2.45-r1
 =media-gfx/blender-2.45-r3
 =x11-misc/xvidcap-1.1.7_rc1
 

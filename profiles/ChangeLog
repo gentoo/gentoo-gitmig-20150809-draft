@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1363 2008/04/27 12:14:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1364 2008/04/27 12:29:20 maekke Exp $
+
+  27 Apr 2008; Markus Meier <maekke@gentoo.org> package.mask:
+  remove removed blender revision
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org> package.mask:
   add new blender revision to the mask
