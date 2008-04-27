@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.1.ebuild,v 1.1 2008/04/27 02:35:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.1.ebuild,v 1.2 2008/04/27 02:40:32 drac Exp $
+
+GCONF_DEBUG=no
 
 inherit eutils flag-o-matic gnome2
 
@@ -31,18 +33,15 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-	strip-flags
-	replace-flags -O3 -O2
-	gnome2_src_compile
-}
+DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog NEWS README TODO
+src_compile() {
+	strip-flags
+	replace-flags -O3 -O2
+	gnome2_src_compile
 }
