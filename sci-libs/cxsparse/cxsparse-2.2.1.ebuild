@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/cxsparse-2.2.1.ebuild,v 1.1 2008/02/05 18:15:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/cxsparse-2.2.1.ebuild,v 1.2 2008/04/27 14:35:25 fmccor Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${MY_PN}/versions/${MY_PN}-${PV
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 DEPEND="sci-libs/ufconfig"
 
