@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.2_pre1.ebuild,v 1.1 2008/04/27 08:57:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.2_pre1.ebuild,v 1.2 2008/04/27 10:58:47 drac Exp $
 
 inherit eutils
 
@@ -38,10 +38,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/patches/*.patch
-
-	# Prevent lazy bindings in cons.saver binary wrt bug #135009
-	sed -i -e "s:^\(cons_saver_LDADD = .*\):\1 -Wl,-z,now:" \
-		src/Makefile.in || die "sed failed."
 }
 
 src_compile() {

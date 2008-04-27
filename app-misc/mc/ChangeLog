@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.138 2008/04/27 08:57:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.139 2008/04/27 10:58:47 drac Exp $
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org> files/ebuild.syntax:
+  Syntax update. Remove check_KV and PROVIDE. Add elog and EAPI.
 
 *mc-4.6.2_pre1 (27 Apr 2008)
 
