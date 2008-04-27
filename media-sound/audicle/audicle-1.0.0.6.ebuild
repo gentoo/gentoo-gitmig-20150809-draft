@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6.ebuild,v 1.1 2008/03/30 00:20:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6.ebuild,v 1.2 2008/04/27 11:12:59 cedk Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -24,7 +24,8 @@ RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 		media-fonts/corefonts )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
-	sys-devel/flex"
+	sys-devel/flex
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -71,7 +72,8 @@ src_compile() {
 	replace-cpu-flags athlon athlon-xp i686
 
 	cd "${S}/src"
-	emake -f "makefile.${backend}" CC=$(tc-getCC) CXX=$(tc-getCXX) $config || die "emake failed"
+	emake -f "makefile.${backend}" CC=$(tc-getCC) CXX=$(tc-getCXX) LEX=flex \
+	YACC=bison $config || die "emake failed"
 }
 
 src_install() {

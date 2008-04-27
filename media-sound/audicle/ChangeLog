@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audicle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.1 2008/03/30 00:20:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.2 2008/04/27 11:12:59 cedk Exp $
+
+  27 Apr 2008; Cédric Krier <cedk@gentoo.org> audicle-1.0.0.6.ebuild:
+  Add LEX, YACC variable and missing pkg-config DEPEND for bug #218614
 
 *audicle-1.0.0.6 (30 Mar 2008)
 
