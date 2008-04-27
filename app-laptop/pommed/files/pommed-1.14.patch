@@ -1,6 +1,6 @@
-diff -ru pommed-1.11~/pommed/Makefile pommed-1.11/pommed/Makefile
---- pommed-1.11~/pommed/Makefile	2007-11-18 22:41:53.000000000 +0100
-+++ pommed-1.11/pommed/Makefile	2007-11-18 22:44:05.000000000 +0100
+diff -ru pommed-1.14~/pommed/Makefile pommed-1.14/pommed/Makefile
+--- pommed-1.14~/pommed/Makefile	2008-04-27 12:37:24.000000000 +0200
++++ pommed-1.14/pommed/Makefile	2008-04-27 12:38:54.000000000 +0200
 @@ -16,7 +16,7 @@
  
  INOTIFY_CFLAGS = $(shell test -e /usr/include/sys/inotify.h || echo -DNO_SYS_INOTIFY_H)
@@ -10,12 +10,21 @@ diff -ru pommed-1.11~/pommed/Makefile pommed-1.11/pommed/Makefile
  
  ifeq ($(ARCH), ppc)
  OFLIB ?=
-@@ -41,7 +41,7 @@
+@@ -42,7 +42,7 @@
  
  else
  
 -LDFLAGS = -lz -lsmbios $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
 +LDFLAGS = -lz -lsmbios -lstdc++ $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
  
- SOURCES = pommed.c cd_eject.c evdev.c conffile.c audio.c dbus.c power.c beep.c \
- 		mactel/x1600_backlight.c mactel/gma950_backlight.c \
+ SOURCES = pommed.c cd_eject.c evdev.c conffile.c audio.c \
+ 		dbus.c power.c beep.c video.c \
+@@ -50,7 +50,7 @@
+ 		mactel/nv8600mgt_backlight.c \
+ 		mactel/kbd_backlight.c mactel/ambient.c mactel/acpi.c
+ 
+-LIBS = /usr/lib/libpci.a
++LIBS = $(shell pkg-config libpci --libs)
+ endif
+ 
+ OBJS = $(SOURCES:%.c=%.o)
