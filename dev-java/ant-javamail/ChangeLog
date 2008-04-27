@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-javamail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.9 2008/04/22 00:02:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.10 2008/04/27 11:07:47 caster Exp $
+
+  27 Apr 2008; Vlastimil Babka <caster@gentoo.org>
+  ant-javamail-1.7.0-r1.ebuild:
+  Add back sun-jaf dependency, bug #219126.
 
 *ant-javamail-1.7.0-r1 (22 Apr 2008)
 
