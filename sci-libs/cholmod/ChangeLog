@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.3 2008/03/28 12:20:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.4 2008/04/27 14:20:03 fmccor Exp $
+
+  27 Apr 2008; Ferris McCormick <fmccor@gentoo.org> cholmod-1.6.0-r1.ebuild:
+  Add ~sparc keyword, Bug #219460.  All tests pass.
 
 *cholmod-1.6.0-r1 (28 Mar 2008)
 
