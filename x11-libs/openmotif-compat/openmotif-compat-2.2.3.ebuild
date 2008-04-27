@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.1 2008/03/25 15:23:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.2 2008/04/27 13:54:17 maekke Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/2.2/${PV}/src/${MY_P}.tar.gz
 
 LICENSE="MOTIF"
 SLOT="2.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!x11-libs/motif-config
