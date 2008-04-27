@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/kccmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.9 2008/04/11 12:56:35 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.10 2008/04/27 01:46:25 mpagano Exp $
+
+  27 Apr 2008; Michael Pagano <mpagano@gentoo.org>
+  +files/kccmp-0.2-r1-no-qt4-missing-include.patch, kccmp-0.2-r1.ebuild:
+  Fix for bug #218490
 
   11 Apr 2008; Mike Pagano <mpagano@gentoo.org> kccmp-0.2-r1.ebuild:
   RDEPEND fixes
