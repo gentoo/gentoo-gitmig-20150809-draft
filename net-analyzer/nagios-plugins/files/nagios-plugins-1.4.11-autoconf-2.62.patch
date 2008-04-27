@@ -1,0 +1,18 @@
+--- gl/m4/extensions.m4.orig	2008-04-27 19:39:09.828332808 +0200
++++ gl/m4/extensions.m4	2008-04-27 19:39:54.771082477 +0200
+@@ -16,6 +16,7 @@
+ # ------------------------
+ # Enable extensions on systems that normally disable them,
+ # typically due to standards-conformance issues.
++m4_ifndef([AC_USE_SYSTEM_EXTENSIONS],[
+ AC_DEFUN([AC_USE_SYSTEM_EXTENSIONS],
+ [
+   AC_BEFORE([$0], [AC_COMPILE_IFELSE])
+@@ -49,6 +50,7 @@
+   AC_DEFINE([_POSIX_PTHREAD_SEMANTICS])
+   AC_DEFINE([_TANDEM_SOURCE])
+ ])
++])
+ 
+ # gl_USE_SYSTEM_EXTENSIONS
+ # ------------------------
