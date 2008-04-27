@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libelysium
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.8 2008/04/26 07:39:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.9 2008/04/27 14:01:23 maekke Exp $
+
+  27 Apr 2008; Markus Meier <maekke@gentoo.org> -libelysium-0.99.5.ebuild,
+  libelysium-0.99.9.ebuild:
+  x86 stable and remove old, bug #219320
 
   26 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/libelysium-0.99.9-printf.patch, libelysium-0.99.9.ebuild:
