@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.1 2007/12/20 14:36:17 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.2 2008/04/27 13:51:44 maekke Exp $
 
 inherit elisp-common multilib
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp-sop.inria.fr/mimosa/fp/Bigloo/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="emacs? ( virtual/emacs )
 		java? ( virtual/jdk )"
