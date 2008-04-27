@@ -1,5 +1,5 @@
 Installation instructions are at
-http://docs.dotproject.net/tiki-index.php?page=Installation+Instructions
+http://docs.dotproject.net/index.php/Installing_dotProject
 
 Installing/Upgrading, the quick way: point your browser to the install directory
 	http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install
