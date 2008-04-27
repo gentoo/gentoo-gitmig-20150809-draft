@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.10.1-r1.ebuild,v 1.1 2008/04/26 19:24:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.10.1-r1.ebuild,v 1.2 2008/04/27 03:32:08 mr_bones_ Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -92,7 +92,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/busybox-devmem.patch
 	# bug fixes. http://busybox.net/downloads/fixes-1.10.1/
 	epatch "${WORKDIR}"/patches/*.patch
-
 
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc
