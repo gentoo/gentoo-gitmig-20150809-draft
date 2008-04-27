@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8535 2008/04/26 15:52:48 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8536 2008/04/27 04:33:55 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <drac@gentoo.org> (27 Apr 2008)
+# Spring clean unported GTK+-1.2 media applications.
+# Tracked in bug 214788.
+# iv - replacements: gqview, mirage, pornview
+# gqcam - replacements: camorama, cheese
+# gtkguitune - replacement: k3guitune
+media-gfx/iv
+media-video/gqcam
+media-sound/gtkguitune
+media-sound/playspc_gtk
+media-sound/yconsole
 
 # Mike Auty <ikelos@gentoo.org> (26 Apr 2008)
 # Masking all app-emulation/vmware-workstation-tools packages
