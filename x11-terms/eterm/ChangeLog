@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.56 2008/04/27 08:30:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.57 2008/04/27 16:05:47 armin76 Exp $
+
+  27 Apr 2008; Raúl Porcel <armin76@gentoo.org> eterm-0.9.4-r1.ebuild:
+  alpha/ia64/sparc stable wrt #216833
 
   27 Apr 2008; Markus Rothe <corsair@gentoo.org> eterm-0.9.4-r1.ebuild:
   Stable on ppc64; bug #216833
