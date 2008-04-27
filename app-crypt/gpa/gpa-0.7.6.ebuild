@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.5 2008/01/02 15:12:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.6 2008/04/27 03:43:04 drac Exp $
 
 inherit eutils multilib
 
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.2
+RDEPEND=">=x11-libs/gtk+-2.2
 	>=app-crypt/gnupg-1.2
-	>=app-crypt/gpgme-1.1.1
+	>=app-crypt/gpgme-1.1.1"
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7
 	nls? ( sys-devel/gettext )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.52 2008/01/02 15:22:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.53 2008/04/27 03:43:04 drac Exp $
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org> gpa-0.7.6.ebuild:
+  Split pkgconfig and gettext into DEPEND.
 
   02 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> -files/gpa-0.7.3-qa.patch,
   -gpa-0.7.3.ebuild, -gpa-0.7.4.ebuild:
