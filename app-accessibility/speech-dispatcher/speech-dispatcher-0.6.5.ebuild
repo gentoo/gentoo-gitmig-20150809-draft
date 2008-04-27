@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.5.ebuild,v 1.4 2008/04/06 19:48:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.5.ebuild,v 1.5 2008/04/27 04:08:46 drac Exp $
 
 inherit eutils
 
@@ -13,15 +13,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="alsa flite nas pulseaudio python"
 
-DEPEND="dev-libs/dotconf
+RDEPEND="dev-libs/dotconf
 	>=dev-libs/glib-2
-	dev-util/pkgconfig
 	alsa? ( media-libs/alsa-lib )
 	flite? ( app-accessibility/flite )
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( dev-lang/python )
 	app-accessibility/espeak"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
