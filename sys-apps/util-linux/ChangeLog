@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.235 2008/04/25 17:26:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.236 2008/04/27 08:35:56 corsair Exp $
+
+  27 Apr 2008; Markus Rothe <corsair@gentoo.org> util-linux-2.13.1.1.ebuild:
+  Stable on ppc64; bug #219202
 
   25 Apr 2008; Raúl Porcel <armin76@gentoo.org> util-linux-2.13.1.1.ebuild:
   alpha/ia64/x86 stable wrt security #219202
