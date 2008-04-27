@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_rpaf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_rpaf/ChangeLog,v 1.4 2008/04/25 14:07:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_rpaf/ChangeLog,v 1.5 2008/04/27 13:58:37 maekke Exp $
+
+  27 Apr 2008; Markus Meier <maekke@gentoo.org> mod_rpaf-0.6.ebuild:
+  x86 stable, bug #219245
 
   25 Apr 2008; Benedikt Böhm <hollow@gentoo.org> -mod_rpaf-0.5.ebuild,
   mod_rpaf-0.6.ebuild:
