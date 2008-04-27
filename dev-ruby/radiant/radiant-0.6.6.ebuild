@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/radiant-0.6.6.ebuild,v 1.1 2008/04/27 06:52:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/radiant-0.6.6.ebuild,v 1.2 2008/04/27 22:56:56 mr_bones_ Exp $
 
 inherit ruby gems
 
@@ -14,4 +14,3 @@ IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.4
 	>=dev-ruby/rake-0.7.1"
-
