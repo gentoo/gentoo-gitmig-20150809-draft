@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.33 2008/04/09 17:21:08 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.34 2008/04/27 12:02:03 philantrop Exp $
+
+  27 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kchmviewer-3.1_p2-gcc43.patch, kchmviewer-3.1_p2.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Joel7987 on
+  bug 218812. Minor QA fixes.
 
   09 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kchmviewer-4.0_beta1.ebuild, kchmviewer-4.0_beta2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.5 2008/03/14 18:24:33 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.6 2008/04/27 12:02:03 philantrop Exp $
 
 inherit autotools kde-functions eutils versionator
 
@@ -36,6 +36,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# gcc 4.3 compatibility. Fixes bug 218812.
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+
 	# broken configure script, assure it doesn't fall back to internal libs
 	echo "# We use the external chmlib!" > lib/chmlib/chm_lib.h
 }
@@ -48,6 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc ChangeLog FAQ DCOP-bingings README
+	emake DESTDIR="${D}" install || die "installation failed"
+	dodoc ChangeLog FAQ DCOP-bingings README || die "installing docs failed"
 }
