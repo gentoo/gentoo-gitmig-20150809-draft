@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.94 2008/04/26 15:13:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.95 2008/04/27 18:38:38 armin76 Exp $
+
+  27 Apr 2008; Raúl Porcel <armin76@gentoo.org> egroupware-1.4.004.ebuild:
+  alpha stable wrt #218625
 
   26 Apr 2008; Jeroen Roovers <jer@gentoo.org> egroupware-1.4.004.ebuild:
   Stable for HPPA (bug #218625).
