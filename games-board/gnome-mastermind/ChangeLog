@@ -1,6 +1,13 @@
 # ChangeLog for games-board/gnome-mastermind
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/ChangeLog,v 1.4 2008/03/20 00:00:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/ChangeLog,v 1.5 2008/04/27 02:25:32 mr_bones_ Exp $
+
+*gnome-mastermind-0.3.1 (27 Apr 2008)
+
+  27 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gnome-mastermind-0.3.1-gentoo.patch,
+  +gnome-mastermind-0.3.1.ebuild:
+  version bump
 
   19 Mar 2008; Tristan Heaven <nyhm@gentoo.org> gnome-mastermind-0.3.ebuild:
   Drop games eclass usage
