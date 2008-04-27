@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.28.ebuild,v 1.2 2008/04/27 13:35:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.28.ebuild,v 1.3 2008/04/27 23:58:56 jer Exp $
 
 DESCRIPTION="GNU Linear Programming Kit"
 LICENSE="GPL-3"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 SLOT="0"
 IUSE="doc gmp iodbc mysql"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 DEPEND="iodbc? ( dev-db/libiodbc )
 	gmp? ( dev-libs/gmp )
