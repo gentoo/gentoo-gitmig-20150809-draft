@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/playspc
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc/ChangeLog,v 1.1 2008/04/27 04:49:09 drac Exp $
+
+*playspc-20010722 (27 Apr 2008)
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org> +playspc-20010722.ebuild:
+  Initial commit for bug 214788.
+
