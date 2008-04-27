@@ -1,8 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.145 2008/04/07 21:40:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.146 2008/04/27 16:47:47 leio Exp $
 
-  07 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+*libsoup-2.4.1 (07 Apr 2008)
+
+  07 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> +libsoup-2.4.1.ebuild:
   bump to 2.4.1, bugs and regression test fixes.
 
 *libsoup-2.4.0 (12 Mar 2008)
