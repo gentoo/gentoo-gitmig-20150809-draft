@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-dict
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.10 2007/03/15 13:47:21 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.11 2008/04/27 02:14:48 drac Exp $
+
+*xfce4-dict-0.3.0 (27 Apr 2008)
+
+  27 Apr 2008; Samuli Suominen <drac@gentoo.org> +xfce4-dict-0.3.0.ebuild:
+  Version bump.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org> xfce4-dict-0.2.1.ebuild:
   Stable on ppc64; bug #169987
