@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.2.ebuild,v 1.2 2008/04/28 16:51:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.3.ebuild,v 1.1 2008/04/28 17:54:53 drac Exp $
 
 EAPI=1
 
-inherit eutils wxwidgets
+inherit wxwidgets
 
 DESCRIPTION="Live looping sampler with immediate loop recording"
 HOMEPAGE="http://essej.net/sooperlooper/index.html"
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-sound/jack-audio-connection-kit-0.80
+RDEPEND="media-sound/jack-audio-connection-kit
 	x11-libs/wxGTK:2.6
-	>=media-libs/liblo-0.18
+	media-libs/liblo
 	dev-libs/libsigc++:1.2
 	media-libs/libsndfile
 	media-libs/libsamplerate
@@ -26,13 +26,6 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.80
 	sci-libs/fftw:3.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
-}
 
 src_compile() {
 	WX_GTK_VER="2.6"
