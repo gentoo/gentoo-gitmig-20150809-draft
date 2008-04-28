@@ -2,10 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>cpp</herd>
-	<maintainer><email>spb@gentoo.org</email></maintainer>
 	<longdescription lang="en">
-libwrapiter provides a set of generic iterator wrapper classes that can be used
-in class interfaces to avoid exposing unnecessary implementation details.
+		libwrapiter provides a set of generic iterator wrapper classes that can
+		be used in class interfaces to avoid exposing unnecessary
+		implementation details.
 	</longdescription>
 </pkgmetadata>
-

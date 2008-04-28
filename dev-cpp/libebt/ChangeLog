@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.30 2008/03/31 05:13:11 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.31 2008/04/28 15:43:01 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
 
   31 Mar 2008; <ricmm@gentoo.org> libebt-1.3.0.ebuild:
   Drop to ~mips due to unstable deps
