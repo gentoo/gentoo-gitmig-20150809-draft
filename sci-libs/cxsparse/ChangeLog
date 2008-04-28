@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cxsparse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.2 2008/04/27 14:35:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.3 2008/04/28 00:35:30 jer Exp $
+
+  28 Apr 2008; Jeroen Roovers <jer@gentoo.org> cxsparse-2.2.1.ebuild:
+  Marked ~hppa (bug #219460).
 
   27 Apr 2008; Ferris McCormick <fmccor@gentoo.org> cxsparse-2.2.1.ebuild:
   Added ~sparc for testing, Bug #219460 (all demos run successfully).
