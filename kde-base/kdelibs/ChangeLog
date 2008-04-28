@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.523 2008/04/28 12:32:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.524 2008/04/28 13:56:22 ingmar Exp $
+
+*kdelibs-3.5.9-r3 (28 Apr 2008)
+
+  28 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdelibs-3.5.9-r3.ebuild:
+  Same for ~arch.
 
 *kdelibs-3.5.8-r4 (28 Apr 2008)
 
