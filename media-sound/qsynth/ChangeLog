@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.39 2008/04/26 16:51:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.40 2008/04/28 18:07:44 armin76 Exp $
+
+  28 Apr 2008; Raúl Porcel <armin76@gentoo.org> qsynth-0.3.2.ebuild:
+  sparc stable wrt #217727
 
   26 Apr 2008; nixnut <nixnut@gentoo.org> qsynth-0.3.2.ebuild:
   Stable on ppc wrt bug 217727
