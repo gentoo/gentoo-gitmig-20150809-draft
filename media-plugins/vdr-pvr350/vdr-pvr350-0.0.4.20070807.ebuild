@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4.20070807.ebuild,v 1.4 2008/04/02 16:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4.20070807.ebuild,v 1.5 2008/04/28 09:11:33 zzam Exp $
 inherit vdr-plugin eutils versionator
 
 IUSE="yaepg"
@@ -27,7 +27,7 @@ DEPEND="${DEPEND}
 
 NO_GETTEXT_HACK=1
 
-PATCHES="${FILESDIR}/pvr-linux-headers.diff"
+PATCHES=("${FILESDIR}/pvr-linux-headers.diff")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

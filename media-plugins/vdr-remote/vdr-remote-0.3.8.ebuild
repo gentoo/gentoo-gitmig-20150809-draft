@@ -1,6 +1,6 @@
-# Copyright 2003-2006 Gentoo Foundation
+# Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.8.ebuild,v 1.5 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.8.ebuild,v 1.6 2008/04/28 09:10:24 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -15,4 +15,4 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6"
 
-PATCHES="${FILESDIR}/${P}-uint64.diff"
+PATCHES=("${FILESDIR}/${P}-uint64.diff")

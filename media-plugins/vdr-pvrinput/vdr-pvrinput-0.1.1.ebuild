@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-0.1.1.ebuild,v 1.6 2007/06/12 11:35:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-0.1.1.ebuild,v 1.7 2008/04/28 09:13:14 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	cd ${S}
+	cd "${S}"
 	if has_version "<sys-kernel/linux-headers-2.6.17-r1"; then
 		epatch "${FILESDIR}/${P}-include-order.patch"
 	else

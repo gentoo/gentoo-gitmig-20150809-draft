@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-undelete
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/ChangeLog,v 1.9 2007/08/19 11:57:27 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/ChangeLog,v 1.10 2008/04/28 09:07:10 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-undelete-0.0.6-r1.ebuild:
+  Fixed quoting.
 
   19 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/undelete-0.0.6-vdr-1.5.7.diff, vdr-undelete-0.0.6-r1.ebuild:

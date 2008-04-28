@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-submenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/ChangeLog,v 1.6 2008/01/14 21:47:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/ChangeLog,v 1.7 2008/04/28 09:05:41 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-submenu-0.0.2.ebuild:
+  Fixed quoting.
 
   14 Jan 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-submenu-0.0.2.ebuild:

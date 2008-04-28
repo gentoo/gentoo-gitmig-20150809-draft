@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/vdr-osdteletext-0.5.1-r1.ebuild,v 1.2 2007/05/15 21:05:13 zzam Exp ${VDRPLUGIN}/vdr-${VDRPLUGIN}-0.3.1.ebuild,v 1.1 2003/05/13 09:39:19 fow0ryl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/vdr-osdteletext-0.5.1-r1.ebuild,v 1.3 2008/04/28 09:00:41 zzam Exp ${VDRPLUGIN}/vdr-${VDRPLUGIN}-0.3.1.ebuild,v 1.1 2003/05/13 09:39:19 fow0ryl Exp $
 
 inherit vdr-plugin
 
@@ -16,8 +16,8 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.5"
 
-PATCHES="${FILESDIR}/i18n_german_lang.diff
-	${FILESDIR}/${P}-vdr-1.5.patch"
+PATCHES=("${FILESDIR}/i18n_german_lang.diff"
+	"${FILESDIR}/${P}-vdr-1.5.patch")
 
 src_install() {
 	vdr-plugin_src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.5 2008/01/14 21:47:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.6 2008/04/28 09:05:41 zzam Exp $
 
 inherit vdr-plugin
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 x86"
 
 DEPEND=">=media-video/vdr-1.3.20"
 
-PATCHES="${FILESDIR}/${P}-asprintf.patch"
+PATCHES=("${FILESDIR}/${P}-asprintf.patch")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

@@ -1,6 +1,6 @@
 # Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.3 2008/03/29 14:38:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.4 2008/04/28 08:58:39 zzam Exp $
 
 inherit vdr-plugin
 
@@ -18,9 +18,9 @@ DEPEND=">=media-video/vdr-1.3.7
 	>=media-video/ffmpeg-0.4.8
 	"
 
-PATCHES="${FILESDIR}/${P}-includes.diff
-	${FILESDIR}/${P}-gcc4.diff
-	${FILESDIR}/${P}-vdr-1.5.0.diff"
+PATCHES=("${FILESDIR}/${P}-includes.diff"
+	"${FILESDIR}/${P}-gcc4.diff"
+	"${FILESDIR}/${P}-vdr-1.5.0.diff")
 
 src_unpack() {
 	vdr-plugin_src_unpack

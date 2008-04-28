@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.8 2007/09/19 16:02:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.9 2008/04/28 09:05:30 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/weatherng-${MY_PV}"
 VDR_CONFD_FILE="${FILESDIR}/confd-0.0.8"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.8.sh"
 
-PATCHES="${FILESDIR}/${P}-i18n-fix.diff"
+PATCHES=("${FILESDIR}/${P}-i18n-fix.diff")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
@@ -40,24 +40,24 @@ pkg_setup() {
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-timeout.diff
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-timeout.diff"
 
-	use dxr3 && epatch ${FILESDIR}/${P}-dxr3.diff
+	use dxr3 && epatch "${FILESDIR}/${P}-dxr3.diff"
 }
 
 src_install() {
 	vdr-plugin_src_install
 
 	insinto /usr/share/vdr/weatherng/images
-	doins ${S}/images/*.png
+	doins "${S}"/images/*.png
 
 	diropts -m0755 -ovdr -gvdr
 	dodir /var/vdr/${VDRPLUGIN}
 
 	insinto  /var/vdr/${VDRPLUGIN}
 	insopts -m755 -ovdr -gvdr
-	doins ${S}/examples/weatherng.sh
+	doins "${S}"/examples/weatherng.sh
 }
 
 pkg_postinst() {

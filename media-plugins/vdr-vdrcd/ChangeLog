@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-vdrcd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/ChangeLog,v 1.7 2007/08/21 12:57:38 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/ChangeLog,v 1.8 2008/04/28 09:04:21 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-vdrcd-0.0.10.1-r1.ebuild:
+  Fixed quoting.
 
   21 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-vdrcd-0.0.10.1-r1.ebuild:
