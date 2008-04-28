@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.44 2008/01/14 02:44:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.45 2008/04/28 18:07:56 cardoe Exp $
+
+  28 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  -bridge-utils-1.0.6-r3.ebuild, bridge-utils-1.2.ebuild:
+  remove USE=sysfs from bridge-utils-1.2 since it's unused (bug #219600) and
+  remove old version
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata.
