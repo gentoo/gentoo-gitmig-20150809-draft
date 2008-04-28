@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guilt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guilt/ChangeLog,v 1.1 2008/04/16 19:35:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guilt/ChangeLog,v 1.2 2008/04/28 16:24:12 armin76 Exp $
+
+  28 Apr 2008; Raúl Porcel <armin76@gentoo.org> guilt-0.30.ebuild:
+  Add ~ia64/~sparc wrt #218049
 
 *guilt-0.30 (16 Apr 2008)
 
