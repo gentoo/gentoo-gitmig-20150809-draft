@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rsstail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.4 2007/08/26 20:24:18 ticho Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.5 2008/04/28 15:55:14 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Wulf C. Krueger (philantrop) from metadata.xml (as per #168573).
 
   26 Aug 2007; Andrej Kacian <ticho@gentoo.org> rsstail-1.0.ebuild:
   Stable on x86, bug #190252.
