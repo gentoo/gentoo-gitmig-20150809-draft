@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-remote
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.18 2008/04/28 09:10:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.19 2008/04/28 11:03:23 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-remote-0.4.0.ebuild:
+  Marked stable on x86.
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-remote-0.3.8.ebuild:
