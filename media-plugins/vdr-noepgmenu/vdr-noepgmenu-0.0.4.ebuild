@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/vdr-noepgmenu-0.0.4.ebuild,v 1.2 2007/12/11 23:54:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/vdr-noepgmenu-0.0.4.ebuild,v 1.3 2008/04/28 08:38:06 zzam Exp $
 
 inherit vdr-plugin
 
@@ -17,7 +17,7 @@ DEPEND=">=media-video/vdr-1.4.7-r8"
 RDEPEND="${DEPEND}"
 
 KEYWORDS="~amd64 ~x86"
-PATCHES="${WORKDIR}/${P}-unlimit-wareagle2.diff"
+PATCHES=("${WORKDIR}/${P}-unlimit-wareagle2.diff")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

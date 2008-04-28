@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilot/vdr-pilot-0.0.9.ebuild,v 1.2 2007/05/15 20:44:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilot/vdr-pilot-0.0.9.ebuild,v 1.3 2008/04/28 08:36:02 zzam Exp $
 
 IUSE=""
 inherit vdr-plugin eutils
@@ -15,4 +15,4 @@ LICENSE="GPL-2"
 
 DEPEND=">=media-video/vdr-1.4.1"
 
-PATCHES="${FILESDIR}/${P}-german.diff"
+PATCHES=("${FILESDIR}/${P}-german.diff")

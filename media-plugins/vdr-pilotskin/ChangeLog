@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pilotskin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/ChangeLog,v 1.5 2007/07/08 21:01:07 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/ChangeLog,v 1.6 2008/04/28 08:36:30 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-pilotskin-0.0.2-r1.ebuild:
+  Fixed quoting.
 
 *vdr-pilotskin-0.0.2-r1 (08 Jul 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.6-r1.ebuild,v 1.3 2007/12/30 16:47:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.6-r1.ebuild,v 1.4 2008/04/28 08:34:02 zzam Exp $
 
 inherit vdr-plugin
 
@@ -15,8 +15,8 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6"
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff
-	${FILESDIR}/${P}-vdr-1.5.0.diff"
+PATCHES=("${FILESDIR}/${P}-gentoo.diff"
+	"${FILESDIR}/${P}-vdr-1.5.0.diff")
 
 src_install() {
 	vdr-plugin_src_install

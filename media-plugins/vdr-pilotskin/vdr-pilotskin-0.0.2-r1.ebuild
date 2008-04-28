@@ -1,6 +1,6 @@
-# Copyright 2003-2007 Gentoo Foundation
+# Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/vdr-pilotskin-0.0.2-r1.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/vdr-pilotskin-0.0.2-r1.ebuild,v 1.3 2008/04/28 08:36:30 zzam Exp $
 
 IUSE=""
 
@@ -15,4 +15,4 @@ LICENSE="GPL-2"
 
 DEPEND=">=media-video/vdr-1.3.36"
 
-PATCHES="${FILESDIR}/${P}-vdr-1.5.diff"
+PATCHES=("${FILESDIR}/${P}-vdr-1.5.diff")
