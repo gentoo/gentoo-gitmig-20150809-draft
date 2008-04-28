@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.81 2008/04/28 19:27:29 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.82 2008/04/28 19:38:56 ramereth Exp $
+
+  28 Apr 2008; Lance Albertson <ramereth@gentoo.org>
+  -cfengine-2.1.17.ebuild, -cfengine-2.1.18.ebuild, cfengine-2.1.20.ebuild,
+  cfengine-2.1.21.ebuild, -cfengine-2.1.22.ebuild,
+  cfengine-2.1.22-r1.ebuild:
+  * Stable bumps for x86/amd64
+  * Clean old ebuilds out
+  * Fix DESCRIPTION,HOMEPAGE,SRC_URI fields
 
 *cfengine-2.2.6 (28 Apr 2008)
 

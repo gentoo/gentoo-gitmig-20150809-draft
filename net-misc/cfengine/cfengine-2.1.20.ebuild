@@ -1,16 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.20.ebuild,v 1.6 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.20.ebuild,v 1.7 2008/04/28 19:38:56 ramereth Exp $
 
 inherit eutils
 
-DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
-HOMEPAGE="http://www.iu.hio.no/cfengine/"
-SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
+DESCRIPTION="An automated suite of programs for configuring and maintaining
+Unix-like computers"
+HOMEPAGE="http://www.cfengine.org/"
+SRC_URI="http://www.cfengine.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ppc sparc x86"
+KEYWORDS="amd64 arm ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/db-3.2
