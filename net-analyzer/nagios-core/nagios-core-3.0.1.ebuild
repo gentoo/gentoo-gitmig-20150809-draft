@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.1.ebuild,v 1.1 2008/04/27 18:41:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.1.ebuild,v 1.2 2008/04/28 15:58:19 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -89,7 +89,6 @@ src_compile() {
 		--sysconfdir=/etc/nagios \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		|| die "./configure failed"
-
 
 	emake CC=$(tc-getCC) nagios || die "make failed"
 
