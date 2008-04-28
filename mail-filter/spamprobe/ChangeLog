@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/spamprobe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.21 2007/02/22 01:03:37 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.22 2008/04/28 16:44:38 ticho Exp $
+
+  28 Apr 2008; Andrej Kacian <ticho@gentoo.org>
+  +files/spamprobe-1.4b-gcc43.patch, -spamprobe-1.4a.ebuild,
+  spamprobe-1.4d.ebuild:
+  Add patch to fix building on gcc4.3, bug #219552 by Peter Alfredsen.
+  Remove old ebuild.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
