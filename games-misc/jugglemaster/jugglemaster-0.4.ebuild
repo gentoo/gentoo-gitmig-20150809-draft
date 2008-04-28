@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.5 2007/09/28 23:44:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.6 2008/04/28 06:19:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs wxwidgets games
 
@@ -27,6 +27,7 @@ src_unpack() {
 	if use ffmpeg ; then
 		epatch "${FILESDIR}/${P}"-ffmpeg.patch
 		sed -i \
+			-e '/HAVE_AVCODEC_H/s:$: -I/usr/include/libavcodec:' \
 			-e "s/libavcodec/ffmpeg/" \
 			src/jmdlx/Makefile \
 			|| die "sed Makefile (ffmpeg) failed"

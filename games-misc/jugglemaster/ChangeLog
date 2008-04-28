@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/jugglemaster
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/ChangeLog,v 1.9 2008/04/26 08:10:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/ChangeLog,v 1.10 2008/04/28 06:19:10 mr_bones_ Exp $
+
+  28 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  jugglemaster-0.4.ebuild:
+  make it build with ffmpeg-0.4.9 (bug #218089)
 
   26 Apr 2008; Tupone Alfredo <tupone@gentoo.org>
   files/jugglemaster-0.4-ffmpeg.patch:
