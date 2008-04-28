@@ -1,0 +1,22 @@
+# ChangeLog for x11-plugins/wmfrog
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.6 2008/04/28 15:41:44 drac Exp $
+
+*wmfrog-0.2.0 (28 Apr 2008)
+
+  28 Apr 2008; Samuli Suominen <drac@gentoo.org> +wmfrog-0.2.0.ebuild:
+  Restore wmfrog ebuild from Attic with version bump wrt #219593, thanks to
+  Petr Pisar.
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmfrog-0.1.6.ebuild:
+  Added ~sparc keyword.
+
+  01 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> , wmfrog-0.1.6.ebuild:
+  Fix ebuild to make use of Gentoo CFLAGS, fix dodoc. Stable on x86.
+
+*wmfrog-0.1.6 (25 Dec 2003)
+
+  25 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  wmfrog-0.1.6.ebuild:
+  Initial import. Thanks to Thibaut Colar for parts of the ebuild.
+
