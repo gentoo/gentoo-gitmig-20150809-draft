@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.6 2008/01/22 21:37:16 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.7 2008/04/28 15:19:32 ricmm Exp $
+
+  28 Apr 2008; <ricmm@gentoo.org> allison-2.0.3.ebuild:
+  Add ~mips, bug #206031
 
 *allison-2.0.3 (22 Jan 2008)
 
