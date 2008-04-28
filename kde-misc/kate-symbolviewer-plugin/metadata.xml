@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde</herd>
-<maintainer>
-<email>philantrop@gentoo.org</email>
-</maintainer>
-<longdescription>Kate Symbol Viewer is a sidebar plugin for Kate that has been integrated in KDE since version 3.2.0.
-It allows developers to view symbols (functions, macros and data types) from source code.
-By clicking the parsed information you can easily browse the code.</longdescription>
+	<herd>kde</herd>
+	<longdescription lang="en">
+		Kate Symbol Viewer is a sidebar plugin for Kate that has been
+		integrated in KDE since version 3.2.0.
+		
+		It allows developers to view symbols (functions, macros and data types)
+		from source code. By clicking the parsed information you can easily
+		browse the code.
+	</longdescription>
 </pkgmetadata>

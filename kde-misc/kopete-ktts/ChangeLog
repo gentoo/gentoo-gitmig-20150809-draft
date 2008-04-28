@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kopete-ktts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-ktts/ChangeLog,v 1.2 2008/02/18 22:47:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-ktts/ChangeLog,v 1.3 2008/04/28 15:56:35 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Wulf C. Krueger (philantrop) from metadata.xml (as per #168573).
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   kopete-ktts-1.3.0.ebuild:

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde</herd>
-<maintainer>
-<email>philantrop@gentoo.org</email>
-<name>Wulf C. Krueger</name>
-</maintainer>
-<longdescription>Kopete Ktts is a Text-to-Speech plugin for the Kopete KDE Instant Messenger (kopete.kde.org). It uses KTTS as backend, which is part of KDE 3.4 (www.kde.org) and later.</longdescription>
+	<herd>kde</herd>
+	<longdescription lang="en">
+		Kopete Ktts is a Text-to-Speech plugin for the Kopete KDE Instant
+		Messenger (kopete.kde.org). It uses KTTS as backend, which is part of
+		KDE 3.4 (www.kde.org) and later.
+	</longdescription>
 </pkgmetadata>

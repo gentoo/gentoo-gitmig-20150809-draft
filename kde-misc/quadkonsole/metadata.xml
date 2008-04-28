@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde</herd>
-<maintainer>
-<email>philantrop@gentoo.org</email>
-</maintainer>
-<longdescription>QuadKonsole is a program which embeds 4 Konsoles (other numbers can be specified on the command-line). This way you save screen real estate, you don't have to worry about careful placement and the startup time is faster than starting up 4 separate Konsoles.</longdescription>
+	<herd>kde</herd>
+	<longdescription lang="en">
+		QuadKonsole is a program which embeds 4 Konsoles (other numbers can be
+		specified on the command-line). This way you save screen real estate,
+		you don't have to worry about careful placement and the startup time is
+		faster than starting up 4 separate Konsoles.
+	</longdescription>
 </pkgmetadata>
