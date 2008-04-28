@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.524 2008/04/28 13:56:22 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.525 2008/04/28 14:10:31 ingmar Exp $
+
+*kdelibs-4.0.3-r1 (28 Apr 2008)
+
+  28 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/kdelibs-4.0.3-CVS-2008-1670.patch, -kdelibs-4.0.3.ebuild,
+  +kdelibs-4.0.3-r1.ebuild:
+  Fix security bug 218848, CVS-2008-1670.
 
 *kdelibs-3.5.9-r3 (28 Apr 2008)
 

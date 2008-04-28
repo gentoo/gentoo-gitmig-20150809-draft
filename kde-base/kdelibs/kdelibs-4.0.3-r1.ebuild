@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.3.ebuild,v 1.1 2008/04/03 20:57:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.3-r1.ebuild,v 1.1 2008/04/28 14:10:31 ingmar Exp $
 
 EAPI="1"
 
@@ -74,7 +74,8 @@ RDEPEND="${COMMONDEPEND}
 # or executes an external program that tries to write files.
 PATCHES="${FILESDIR}/e-tempdir.patch
 ${FILESDIR}/${PN}-4.0.2-X11-optional.patch
-${FILESDIR}/${PN}-4.0.2-alsa-optional.patch"
+${FILESDIR}/${PN}-4.0.2-alsa-optional.patch
+${FILESDIR}/${P}-CVS-2008-1670.patch"
 # Create CMake switches to make Xcomposite, Xinerama & Xscreensaver optional.
 
 pkg_setup() {
