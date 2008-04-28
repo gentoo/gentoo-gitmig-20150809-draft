@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qbankmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.30 2008/02/22 21:02:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.31 2008/04/28 11:32:43 hanno Exp $
+
+  28 Apr 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/qbankmanager-gcc-4.3.patch, qbankmanager-0.9.39.ebuild:
+  Add ~amd64 and fix compilation with gcc 4.3.
 
   22 Feb 2008; Hanno Boeck <hanno@gentoo.org> -qbankmanager-0.9.38.ebuild,
   qbankmanager-0.9.39.ebuild:

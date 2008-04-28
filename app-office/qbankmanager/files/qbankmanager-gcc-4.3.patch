@@ -1,0 +1,127 @@
+--- src/kbanking/libs/kbanking.cpp
++++ src/kbanking/libs/kbanking.cpp
+@@ -35,7 +35,7 @@
+ #include "graphreport.h"
+ /* Note: add new reports to fn _sampleReportModules() */
+ 
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ #include <qmessagebox.h>
+ #include <qinputdialog.h>
+--- src/kbanking/libs/prg/account.cpp
++++ src/kbanking/libs/prg/account.cpp
+@@ -20,7 +20,7 @@
+ 
+ #include <gwenhywfar/debug.h>
+ #include <stdlib.h>
+-#include <assert.h>
++#include <cassert>
+ 
+ 
+ 
+--- src/kbanking/libs/prg/category.cpp
++++ src/kbanking/libs/prg/category.cpp
+@@ -20,7 +20,7 @@
+ 
+ #include <gwenhywfar/debug.h>
+ #include <stdlib.h>
+-#include <assert.h>
++#include <cassert>
+ 
+ 
+ 
+--- src/kbanking/libs/prg/refpointer.h
++++ src/kbanking/libs/prg/refpointer.h
+@@ -32,12 +32,13 @@
+  *
+  * @short Smart pointer RefPointer with helper classes. No C wrappers.*/
+ 
+-#include <assert.h>
+ #include <gwenhywfar/debug.h>
+ 
+ #ifdef __cplusplus
+-#include <stdio.h> /* DEBUG */
++#include <cassert>
++#include <cstdio> /* DEBUG */
+ #include <string>
++#include <cstdlib>
+ 
+ 
+ class RefPointerBase;
+@@ -766,7 +767,8 @@
+ };
+ 
+ #endif /* DOXYGEN_HIDE */
+-
++#else
++#include <assert.h>
+ #endif /* __cplusplus */
+ #endif /* REFPOINTER_H */
+ 
+--- src/kbanking/libs/widgets/accountlist.cpp
++++ src/kbanking/libs/widgets/accountlist.cpp
+@@ -16,7 +16,7 @@
+ 
+ 
+ #include "accountlist.h"
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ 
+ #include <gwenhywfar/debug.h>
+--- src/kbanking/libs/widgets/categorylist.cpp
++++ src/kbanking/libs/widgets/categorylist.cpp
+@@ -18,7 +18,7 @@
+ 
+ 
+ #include "categorylist.h"
+-#include <assert.h>
++#include <cassert>
+ 
+ #include <qstring.h>
+ #include <qlistview.h>
+--- src/kbanking/libs/widgets/payeelist.cpp
++++ src/kbanking/libs/widgets/payeelist.cpp
+@@ -16,7 +16,7 @@
+ 
+ 
+ #include "payeelist.h"
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ 
+ #include <gwenhywfar/debug.h>
+--- src/kbanking/libs/widgets/stolist.cpp
++++ src/kbanking/libs/widgets/stolist.cpp
+@@ -16,7 +16,7 @@
+ 
+ 
+ #include "stolist.h"
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ #include <qpainter.h>
+ #include <qdatetime.h>
+--- src/kbanking/libs/widgets/transactionlist.cpp
++++ src/kbanking/libs/widgets/transactionlist.cpp
+@@ -20,7 +20,7 @@
+ #include "category.h"
+ #include "kbanking.h"
+ 
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ #include <qpainter.h>
+ #include <qdatetime.h>
+--- src/kbanking/libs/widgets/transferlist.cpp
++++ src/kbanking/libs/widgets/transferlist.cpp
+@@ -16,7 +16,7 @@
+ 
+ 
+ #include "transferlist.h"
+-#include <assert.h>
++#include <cassert>
+ #include <qstring.h>
+ #include <qpainter.h>
+ #include <qdatetime.h>
