@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/acx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.13 2008/02/07 20:58:41 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.14 2008/04/28 15:41:22 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
 
 *acx-0.3.37_p20080112 (07 Feb 2008)
 
