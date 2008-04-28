@@ -1,0 +1,193 @@
+diff -up sooperlooper-1.6.2/libs/midi++/fd_midiport.cc~ sooperlooper-1.6.2/libs/midi++/fd_midiport.cc
+--- sooperlooper-1.6.2/libs/midi++/fd_midiport.cc~	2008-04-15 19:28:24.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/fd_midiport.cc	2008-04-15 19:28:24.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ #include <fcntl.h>
+ #include <cerrno>
++#include <cstring>
+ #include <sys/time.h>
+ 
+ #include <pbd/error.h>
+diff -up sooperlooper-1.6.2/libs/midi++/midi.cc~ sooperlooper-1.6.2/libs/midi++/midi.cc
+--- sooperlooper-1.6.2/libs/midi++/midi.cc~	2008-04-15 19:28:46.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/midi.cc	2008-04-15 19:28:46.000000000 +0200
+@@ -19,6 +19,7 @@
+ */
+ 
+ #include <string>
++#include <cstring>
+ #include <cstdlib>
+ #include <midi++/types.h>
+ 
+diff -up sooperlooper-1.6.2/libs/midi++/midichannel.cc~ sooperlooper-1.6.2/libs/midi++/midichannel.cc
+--- sooperlooper-1.6.2/libs/midi++/midichannel.cc~	2008-04-15 19:29:01.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/midichannel.cc	2008-04-15 19:29:01.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <midi++/types.h>
+ #include <midi++/port.h>
+ #include <midi++/channel.h>
++#include <cstring>
+ 
+ using namespace SigC;
+ using namespace MIDI;
+diff -up sooperlooper-1.6.2/libs/midi++/midicontrollable.cc~ sooperlooper-1.6.2/libs/midi++/midicontrollable.cc
+--- sooperlooper-1.6.2/libs/midi++/midicontrollable.cc~	2008-04-15 19:30:10.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/midicontrollable.cc	2008-04-15 19:30:10.000000000 +0200
+@@ -18,6 +18,7 @@
+     $Id: sooperlooper-1.6.2-gcc43.patch,v 1.1 2008/04/28 16:51:43 drac Exp $
+ */
+ 
++#include <limits.h>
+ #include <cstdio> /* for sprintf, sigh */
+ #include <pbd/error.h>
+ #include <midi++/port.h>
+diff -up sooperlooper-1.6.2/libs/midi++/midimanager.cc~ sooperlooper-1.6.2/libs/midi++/midimanager.cc
+--- sooperlooper-1.6.2/libs/midi++/midimanager.cc~	2008-04-15 19:30:30.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/midimanager.cc	2008-04-15 19:30:30.000000000 +0200
+@@ -17,6 +17,7 @@
+     $Id: sooperlooper-1.6.2-gcc43.patch,v 1.1 2008/04/28 16:51:43 drac Exp $
+ */
+ 
++#include <cstring>
+ #include <fcntl.h>
+ #include <pbd/error.h>
+ #include <pbd/basename.h>
+diff -up sooperlooper-1.6.2/libs/midi++/midiparser.cc~ sooperlooper-1.6.2/libs/midi++/midiparser.cc
+--- sooperlooper-1.6.2/libs/midi++/midiparser.cc~	2008-04-15 19:30:44.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/midiparser.cc	2008-04-15 19:30:44.000000000 +0200
+@@ -22,6 +22,7 @@
+ */
+ 
+ #include <cstdlib>
++#include <cstring>
+ #include <unistd.h>
+ #include <string>
+ #include <iostream>
+diff -up sooperlooper-1.6.2/libs/midi++/mtc.cc~ sooperlooper-1.6.2/libs/midi++/mtc.cc
+--- sooperlooper-1.6.2/libs/midi++/mtc.cc~	2008-04-15 19:31:07.000000000 +0200
++++ sooperlooper-1.6.2/libs/midi++/mtc.cc	2008-04-15 19:31:07.000000000 +0200
+@@ -19,6 +19,7 @@
+ */
+ 
+ #include <cstdlib>
++#include <cstring>
+ #include <unistd.h>
+ #include <string>
+ #include <iostream>
+diff -up sooperlooper-1.6.2/libs/pbd/dirname.cc~ sooperlooper-1.6.2/libs/pbd/dirname.cc
+--- sooperlooper-1.6.2/libs/pbd/dirname.cc~	2008-04-15 19:25:00.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/dirname.cc	2008-04-15 19:25:00.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include <cstdio>
+ #include <cstdlib>
++#include <cstring>
+ #include <string>
+ #include <pbd/dirname.h>
+ 
+diff -up sooperlooper-1.6.2/libs/pbd/ftw.cc~ sooperlooper-1.6.2/libs/pbd/ftw.cc
+--- sooperlooper-1.6.2/libs/pbd/ftw.cc~	2008-04-15 19:25:46.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/ftw.cc	2008-04-15 19:25:46.000000000 +0200
+@@ -29,6 +29,7 @@
+ */
+ 
+ #include <string>
++#include <cstring>
+ #include <sys/types.h> /* Because fts(3) says so */
+ #include <sys/stat.h>
+ #include <fts.h>
+diff -up sooperlooper-1.6.2/libs/pbd/mountpoint.cc~ sooperlooper-1.6.2/libs/pbd/mountpoint.cc
+--- sooperlooper-1.6.2/libs/pbd/mountpoint.cc~	2008-04-15 19:26:12.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/mountpoint.cc	2008-04-15 19:26:12.000000000 +0200
+@@ -19,6 +19,7 @@
+ */
+ 
+ #include <cstdio>
++#include <cstring>
+ #include <string>
+ #include <limits.h>
+ 
+diff -up sooperlooper-1.6.2/libs/pbd/pathscanner.cc~ sooperlooper-1.6.2/libs/pbd/pathscanner.cc
+--- sooperlooper-1.6.2/libs/pbd/pathscanner.cc~	2008-04-15 19:26:37.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/pathscanner.cc	2008-04-15 19:26:37.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ #include <cstdlib>
+ #include <cstdio>
++#include <cstring>
+ #include <vector>
+ #include <dirent.h>
+ 
+diff -up sooperlooper-1.6.2/libs/pbd/pbd/ringbuffer.h~ sooperlooper-1.6.2/libs/pbd/pbd/ringbuffer.h
+--- sooperlooper-1.6.2/libs/pbd/pbd/ringbuffer.h~	2008-04-15 19:27:24.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/pbd/ringbuffer.h	2008-04-15 19:27:24.000000000 +0200
+@@ -23,6 +23,7 @@
+ 
+ #include <sys/mman.h>
+ #include <pbd/atomic.h>
++#include <cstring>
+ 
+ template<class T>
+ class RingBuffer 
+diff -up sooperlooper-1.6.2/libs/pbd/pool.cc~ sooperlooper-1.6.2/libs/pbd/pool.cc
+--- sooperlooper-1.6.2/libs/pbd/pool.cc~	2008-04-15 19:27:53.000000000 +0200
++++ sooperlooper-1.6.2/libs/pbd/pool.cc	2008-04-15 19:27:53.000000000 +0200
+@@ -18,6 +18,7 @@
+     $Id: sooperlooper-1.6.2-gcc43.patch,v 1.1 2008/04/28 16:51:43 drac Exp $
+ */
+ 
++#include <cstdlib>
+ #include <iostream>
+ #include <sys/mman.h>
+ #include <vector>
+diff -up sooperlooper-1.6.2/src/engine.cpp~ sooperlooper-1.6.2/src/engine.cpp
+--- sooperlooper-1.6.2/src/engine.cpp~	2008-04-15 19:32:04.000000000 +0200
++++ sooperlooper-1.6.2/src/engine.cpp	2008-04-15 19:32:31.000000000 +0200
+@@ -19,12 +19,14 @@
+ #include <iostream>
+ 
+ #include <cmath>
++#include <cstring>
+ #include <unistd.h>
+ #include <sys/time.h>
+ #include <pthread.h>
+ #include <cerrno>
+ 
+ #include <vector>
++#include <algorithm>
+ 
+ #include <pbd/xml++.h>
+ 
+diff -up sooperlooper-1.6.2/src/midi_bind.cpp~ sooperlooper-1.6.2/src/midi_bind.cpp
+--- sooperlooper-1.6.2/src/midi_bind.cpp~	2008-04-15 19:33:54.000000000 +0200
++++ sooperlooper-1.6.2/src/midi_bind.cpp	2008-04-15 19:33:54.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <cstdio>
++#include <cstring>
+ #include <cmath>
+ 
+ #include <midi++/parser.h>
+diff -up sooperlooper-1.6.2/src/midi_bridge.cpp~ sooperlooper-1.6.2/src/midi_bridge.cpp
+--- sooperlooper-1.6.2/src/midi_bridge.cpp~	2008-04-15 19:33:30.000000000 +0200
++++ sooperlooper-1.6.2/src/midi_bridge.cpp	2008-04-15 19:33:30.000000000 +0200
+@@ -28,6 +28,7 @@
+ #include <cstdio>
+ #include <cmath>
+ #include <cerrno>
++#include <cstring>
+ 
+ #include <midi++/parser.h>
+ #include <midi++/factory.h>
+diff -up sooperlooper-1.6.2/src/ringbuffer.hpp~ sooperlooper-1.6.2/src/ringbuffer.hpp
+--- sooperlooper-1.6.2/src/ringbuffer.hpp~	2008-04-15 19:32:03.000000000 +0200
++++ sooperlooper-1.6.2/src/ringbuffer.hpp	2008-04-15 19:32:03.000000000 +0200
+@@ -22,6 +22,7 @@
+ #define ringbuffer_h
+ 
+ #include <sys/mman.h>
++#include <cstring>
+ #include "atomic.h"
+ 
+ template<class T>

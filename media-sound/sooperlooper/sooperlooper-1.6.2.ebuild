@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.2.ebuild,v 1.1 2008/03/27 11:43:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.2.ebuild,v 1.2 2008/04/28 16:51:43 drac Exp $
 
 EAPI=1
 
@@ -30,7 +30,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

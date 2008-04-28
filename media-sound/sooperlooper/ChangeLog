@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.10 2008/03/27 11:43:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.11 2008/04/28 16:51:43 drac Exp $
+
+  28 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/sooperlooper-1.6.2-gcc43.patch, sooperlooper-1.6.2.ebuild:
+  GCC 4.3 fix wrt #219542, thanks to Peter Alfredsen.
 
 *sooperlooper-1.6.2 (27 Mar 2008)
 
