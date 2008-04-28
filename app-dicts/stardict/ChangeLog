@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.43 2008/04/28 10:52:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.44 2008/04/28 11:17:59 pva Exp $
+
+  28 Apr 2008; Peter Volkov <pva@gentoo.org> metadata.xml:
+  moved to app-dicts herd, added longdescription.
 
 *stardict-3.0.1-r1 (28 Apr 2008)
 
