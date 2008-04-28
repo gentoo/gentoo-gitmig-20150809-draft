@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11_beta1.ebuild,v 1.1 2008/01/06 00:34:53 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11_beta2.ebuild,v 1.1 2008/04/28 17:40:34 rbu Exp $
 
 inherit distutils webapp
 
@@ -129,7 +129,6 @@ src_install() {
 
 	# documentation
 	dodoc AUTHORS RELEASE THANKS UPGRADE
-	rm "${D}"/usr/share/doc/${P}/PKG-INFO
 	cp -r contrib "${D}"/usr/share/doc/${P}/
 
 	# tracd init script

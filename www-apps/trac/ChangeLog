@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.65 2008/04/27 11:21:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.66 2008/04/28 17:40:34 rbu Exp $
+
+*trac-0.11_beta2 (28 Apr 2008)
+
+  28 Apr 2008; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  -trac-0.11_beta1.ebuild, +trac-0.11_beta2.ebuild:
+  Version bump (bug #214048). Thanks to Christian van der Leeden.
+  Also, removing dju as maintainer because he is retiring (bug #87168).
 
   27 Apr 2008; Markus Ullmann <jokey@gentoo.org> trac-0.10.4.ebuild:
   Stable on x86 wrt bug #196505
