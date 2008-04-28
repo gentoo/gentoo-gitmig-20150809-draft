@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.5 2008/04/28 01:11:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.6 2008/04/28 19:25:42 klausman Exp $
+
+  28 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
+  cholmod-1.6.0-r1.ebuild:
+  Keyworded on alpha, bug #219458
 
   28 Apr 2008; Jeroen Roovers <jer@gentoo.org> cholmod-1.6.0-r1.ebuild:
   Marked ~hppa (bug #219458).
