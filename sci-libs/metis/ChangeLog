@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.4 2008/04/27 13:56:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.5 2008/04/28 00:57:52 jer Exp $
+
+  28 Apr 2008; Jeroen Roovers <jer@gentoo.org> metis-4.0.1-r1.ebuild:
+  Marked ~hppa (bug #219468).
 
   27 Apr 2008; Ferris McCormick <fmccor@gentoo.org> metis-4.0.1-r1.ebuild:
   Add ~sparc keyword, required for Bug #219458, tests pass.
