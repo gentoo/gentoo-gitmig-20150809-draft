@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/dirvish-1.2.1.ebuild,v 1.6 2008/03/28 16:19:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/dirvish-1.2.1.ebuild,v 1.7 2008/04/28 20:07:58 ramereth Exp $
 
 DESCRIPTION="Dirvish is a fast, disk based, rotating network backup system."
 HOMEPAGE="http://www.dirvish.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://dirvish.org/${P}.tgz"
 
 LICENSE="OSL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="app-arch/tar"
@@ -33,7 +33,7 @@ src_install() {
 	dosbin dirvish dirvish-runall dirvish-expire dirvish-locate
 	doman dirvish.8 dirvish-runall.8 dirvish-expire.8 dirvish-locate.8 dirvish.conf.5
 	dohtml FAQ.html INSTALL RELEASE.html TODO.html
-	dodoc CHANGELOG COPYING
+	dodoc CHANGELOG
 
-	insinto /etc/dirvish; doins ${FILESDIR}/master.conf.example
+	insinto /etc/dirvish; doins "${FILESDIR}"/master.conf.example
 }

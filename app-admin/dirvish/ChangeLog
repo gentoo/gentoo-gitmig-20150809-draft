@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/dirvish
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.7 2008/03/28 16:19:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.8 2008/04/28 20:07:58 ramereth Exp $
+
+  28 Apr 2008; Lance Albertson <ramereth@gentoo.org> -dirvish-1.2.ebuild,
+  dirvish-1.2.1.ebuild:
+  * Move from app-admin -> app-backup per bug #145721
+  * Stable on amd64 for 1.2.1 per bug #214933
+  * Remove 1.2 per bug #214933
+  * QA fixes
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> dirvish-1.2.1.ebuild:
   Stable on ppc wrt bug 214933
