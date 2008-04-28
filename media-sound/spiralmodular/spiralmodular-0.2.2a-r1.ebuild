@@ -1,10 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a-r1.ebuild,v 1.5 2007/05/01 00:23:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a-r1.ebuild,v 1.6 2008/04/28 17:01:35 drac Exp $
 
 inherit eutils multilib
-
-IUSE="alsa jack"
 
 DESCRIPTION="SSM is a object oriented modular softsynth/ sequencer/ sampler."
 HOMEPAGE="http://www.pawfal.org/Software/SSM/"
@@ -13,6 +11,7 @@ SRC_URI="mirror://sourceforge/spiralmodular/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
+IUSE="alsa jack"
 
 DEPEND=">=x11-libs/fltk-1.1
 	media-libs/libsndfile
@@ -25,9 +24,9 @@ S=${WORKDIR}/${PN}-0.2.2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	epatch "${FILESDIR}/${P}-gcc41.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
@@ -46,18 +45,14 @@ src_compile() {
 		myconf="${myconf} --disable-alsa-midi"
 	fi
 
-	econf ${myconf} || die "configure failed"
-	emake || die
+	econf ${myconf}
+	emake || die "emake failed."
 }
 
 src_install() {
 	dodir /usr/bin /usr/$(get_libdir) /usr/share/man /usr/share/info
 	dodoc Examples/*
-	make bindir=${D}/usr/bin libdir=${D}/usr/$(get_libdir) mandir=${D}/usr/share/man infodir=${D}/usr/share/info datadir=${D}/usr/share install || die
-}
-
-pkg_postinst() {
-	elog
-	elog "Remember to remove any old ~/.sprialmodular files"
-	elog
+	emake bindir="${D}/usr/bin" libdir="${D}/usr/$(get_libdir)" \
+		mandir="${D}/usr/share/man" infodir="${D}/usr/share/info" \
+		datadir="${D}/usr/share" install || die "emake install failed."
 }
