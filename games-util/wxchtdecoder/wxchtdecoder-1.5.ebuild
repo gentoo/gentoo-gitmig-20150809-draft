@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.4 2007/09/28 23:56:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.5 2008/04/28 21:51:30 drac Exp $
 
 inherit wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="http://games.technoplaza.net/chtdecoder/wx/history/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="=x11-libs/wxGTK-2.6*"
