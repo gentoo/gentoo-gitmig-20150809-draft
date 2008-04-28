@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.11.2-r1.ebuild,v 1.1 2008/04/14 03:24:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.11.2-r1.ebuild,v 1.2 2008/04/28 20:12:45 drac Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Graphical frontend and libraries for ripping DVDs and encoding to AVI/OGM/MKV/MP4"
 HOMEPAGE="http://ogmrip.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ogmrip/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="aac debug doc dts gtk hal jpeg libnotify matroska spell srt theora x264"
@@ -39,6 +40,8 @@ DEPEND="${RDEPEND}
 		>=dev-libs/libxslt-1.1.20-r1 )"
 
 DOCS="AUTHORS ChangeLog README NEWS TODO"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
