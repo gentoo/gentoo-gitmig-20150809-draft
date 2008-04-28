@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-screenshot
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/ChangeLog,v 1.9 2006/11/16 10:49:31 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/ChangeLog,v 1.10 2008/04/28 08:41:22 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-screenshot-0.0.11.ebuild:
+  Fixed homepage.
 
   16 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-screenshot-0.0.7.ebuild, -vdr-screenshot-0.0.8.ebuild,
