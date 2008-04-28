@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd></herd>
+	<herd>no-herd</herd>
 	<maintainer>
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
 	<longdescription lang="en">
-		a set of new tools and techniques for sound design
+		A set of new tools and techniques for sound design
 	</longdescription>
 </pkgmetadata>
-

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapestrea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.1 2008/03/30 00:52:47 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.2 2008/04/28 15:36:43 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix metadata.xml.
 
 *tapestrea-0.1.0.4 (30 Mar 2008)
 
