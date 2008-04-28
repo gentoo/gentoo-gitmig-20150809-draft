@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.36 2008/03/19 16:45:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.37 2008/04/28 04:30:56 jer Exp $
+
+  28 Apr 2008; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r3.ebuild:
+  Marked ~sparc too.
 
   19 Mar 2008; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r3.ebuild:
   Stable for HPPA too.
