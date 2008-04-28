@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lisaac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.1 2008/03/01 16:44:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.2 2008/04/28 15:53:20 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Wulf C. Krueger (philantrop) from metadata.xml (as per #168573).
 
 *lisaac-0.13.1 (01 Mar 2008)
 

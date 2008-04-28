@@ -9,9 +9,4 @@
 			Bug-wranglers: please be sure to cc him on every bug report about it.
 		</description>
 	</maintainer>
-	<maintainer>
-		<email>philantrop@gentoo.org</email>
-		<name>Wulf C. Krueger</name>
-		<description>Just proxy-maintaining for Boris.</description>
-	</maintainer>
 </pkgmetadata>
