@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-mdadm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.4 2008/03/16 04:06:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.5 2008/04/28 15:40:23 phreak Exp $
+
+  28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
 
   16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
   -selinux-mdadm-20051029.ebuild:
