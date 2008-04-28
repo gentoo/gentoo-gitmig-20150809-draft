@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/xe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.7 2007/03/07 16:50:52 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.8 2008/04/28 23:51:56 mr_bones_ Exp $
+
+*xe-2.14.0 (28 Apr 2008)
+
+  28 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> +files/xe-2.14.0,
+  +xe-2.14.0.ebuild:
+  version bump
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> files/xe-20060101:
   Change all instances of [ to [[.
