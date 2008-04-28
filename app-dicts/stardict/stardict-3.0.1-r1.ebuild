@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r1.ebuild,v 1.1 2008/04/28 10:52:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r1.ebuild,v 1.2 2008/04/28 15:57:25 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools
 
@@ -85,7 +85,7 @@ src_install() {
 		dodir /usr/share/
 		mv ../WyabdcRealPeopleTTS "${D}"/usr/share/
 	fi
-	dodoc doc/{FAQ,HowToCreateDictionary,StarDictFileFormat,Translation,HACKING} 
+	dodoc doc/{FAQ,HowToCreateDictionary,StarDictFileFormat,Translation,HACKING}
 }
 
 pkg_postinst() {
