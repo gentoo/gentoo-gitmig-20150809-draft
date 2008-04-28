@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r1.ebuild,v 1.8 2008/04/27 01:40:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r1.ebuild,v 1.9 2008/04/28 11:15:52 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://primates.ximian.com/~flucifredi/man/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
