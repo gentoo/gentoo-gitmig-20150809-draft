@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.49 2008/03/11 03:15:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.50 2008/04/28 21:06:08 dirtyepic Exp $
+
+*poedit-1.4.1 (28 Apr 2008)
+
+  28 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> +poedit-1.4.1.ebuild:
+  Version bump.
+
+  - fixed HTML export to properly escape the text (#1739062)
+
+  - remember last used search phrase in Find window (#1909847)
 
 *poedit-1.4 (11 Mar 2008)
 
