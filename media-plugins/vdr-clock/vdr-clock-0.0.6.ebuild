@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/vdr-clock-0.0.6.ebuild,v 1.3 2007/07/29 15:49:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/vdr-clock-0.0.6.ebuild,v 1.4 2008/04/28 08:05:18 zzam Exp $
 
 inherit vdr-plugin
 
@@ -16,4 +16,4 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.0"
 
-PATCHES="${FILESDIR}/${PV}/pingpong-fixes.diff"
+PATCHES=("${FILESDIR}/${PV}/pingpong-fixes.diff")
