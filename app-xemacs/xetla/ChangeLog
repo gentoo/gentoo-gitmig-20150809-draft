@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xetla
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xetla/ChangeLog,v 1.4 2008/04/28 18:05:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xetla/ChangeLog,v 1.5 2008/04/28 18:06:03 armin76 Exp $
+
+  28 Apr 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha stable wrt #219332
 
   28 Apr 2008; Raúl Porcel <armin76@gentoo.org> xetla-1.01.ebuild:
   alpha stable wrt #219332
