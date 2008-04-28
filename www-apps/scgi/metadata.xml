@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>apache</herd>
 <maintainer>
-  <email>apache-bugs@gentoo.org</email>
+	<email>chtekk@gentoo.org</email>
+	<name>Luca Longinotti</name>
 </maintainer>
 </pkgmetadata>

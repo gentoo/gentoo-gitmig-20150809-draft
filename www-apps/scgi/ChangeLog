@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/scgi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.8 2008/01/10 10:42:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.9 2008/04/28 12:03:57 chtekk Exp $
+
+*scgi-1.12 (28 Apr 2008)
+
+  28 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  scgi-1.2.ebuild, scgi-1.10.ebuild, +scgi-1.12.ebuild:
+  Version bump, cleanup.
 
   10 Jan 2008; Guy Martin <gmsoft@gentoo.org> scgi-1.10.ebuild:
   Added hppa to KEYWORDS.
