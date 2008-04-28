@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3517 2008/04/27 18:38:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3518 2008/04/28 10:49:28 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -77,6 +77,8 @@ app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/stardict:espeak - Enable espeak text to speach plugin
 app-dicts/stardict:festival - Enable festival text to speach plugin
 app-dicts/stardict:gucharmap - Enable gucharmap dictionary plugin
+app-dicts/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
+app-dicts/stardict:qqwry - Enable QQWry plugin, which provides information about geographical position, owner, etc. for IP address
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/gimp-help:webinstall - optimize images for web installation (fewer colors, depends on imagemagick)
 app-editors/cssed:plugins - Install plugin development files
@@ -93,7 +95,7 @@ app-editors/emacs-cvs:toolkit-scroll-bars - Use the selected toolkit's scrollbar
 app-editors/emacs-cvs:xft - Build Emacs with support for the XFT font renderer
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/gvim:aqua - Include support for the Aqua / Carbon GUI
-app-editors/gvim:netbeans - Include netbeans externaleditor integration support.
+app-editors/gvim:netbeans - Include netbeans externaleditor integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
