@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.004.ebuild,v 1.4 2008/04/27 18:38:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.004.ebuild,v 1.5 2008/04/28 17:04:59 dertobi123 Exp $
 
 inherit eutils webapp depend.php
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-2.tar.bz2
 	mirror://sourceforge/${PN}/${MY_PN}-egw-pear-${PV}-2.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 IUSE="jpgraph ldap mssql mysql postgres"
 
 RDEPEND="jpgraph? ( || ( dev-php5/jpgraph dev-php4/jpgraph ) )
