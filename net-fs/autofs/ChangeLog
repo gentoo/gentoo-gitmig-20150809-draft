@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.69 2008/02/18 13:42:23 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.70 2008/04/28 13:32:32 stefaan Exp $
+
+*autofs-5.0.3-r3 (28 Apr 2008)
+
+  28 Apr 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +autofs-5.0.3-r3.ebuild:
+  Revision bump to include the most recent patches + to fix bugs #157968 and
+  #154797
 
 *autofs-5.0.3-r2 (18 Feb 2008)
 
