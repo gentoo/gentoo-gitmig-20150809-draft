@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.6 2008/04/27 19:31:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.7 2008/04/28 15:57:52 mr_bones_ Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -88,4 +88,3 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
-
