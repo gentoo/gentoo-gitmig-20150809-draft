@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.4 2008/04/28 12:15:29 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.5 2008/04/28 15:58:49 mr_bones_ Exp $
 
 # the main installation routine and patches
 # from http://www.linuxfromscratch.org/hlfs
@@ -173,4 +173,3 @@ pkg_postinst() {
 			"${ROOT}/etc/localtime"
 	fi
 }
-
