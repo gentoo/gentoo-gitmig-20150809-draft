@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r3.ebuild,v 1.1 2008/04/28 13:32:32 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r4.ebuild,v 1.1 2008/04/28 19:53:27 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -34,6 +34,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
+	patch ${DISTDIR}/${P}-map-type-in-map-name.patch \
+		< ${FILESDIR}/${P}-map-patch-fix.patch || die "failed to patch"
 	PATCH_LIST="
 		${P}-ldap-page-control-configure-fix.patch
 		${P}-xfn-not-supported.patch
@@ -80,7 +82,7 @@ src_compile() {
 		--enable-ignore-busy \
 		|| die "configure failed"
 
-	emake || die "make failed"
+	emake DONTSTRIP=1 || die "make failed"
 }
 
 src_install() {
