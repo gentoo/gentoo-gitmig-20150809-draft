@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/re-builder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/re-builder/ChangeLog,v 1.3 2008/03/19 19:56:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/re-builder/ChangeLog,v 1.4 2008/04/28 18:04:23 armin76 Exp $
+
+  28 Apr 2008; Raúl Porcel <armin76@gentoo.org> re-builder-1.05.ebuild:
+  alpha stable wrt #219332
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
