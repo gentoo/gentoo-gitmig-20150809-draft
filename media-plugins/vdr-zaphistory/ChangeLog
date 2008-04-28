@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-zaphistory
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-zaphistory/ChangeLog,v 1.14 2006/11/15 15:40:16 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-zaphistory/ChangeLog,v 1.15 2008/04/28 08:50:52 zzam Exp $
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-zaphistory-0.9.5.ebuild:
+  Fixed quoting.
 
   15 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-zaphistory-0.9.4-r1.ebuild:
