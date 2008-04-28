@@ -1,6 +1,23 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.42 2008/04/14 16:02:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.43 2008/04/28 10:52:15 pva Exp $
+
+*stardict-3.0.1-r1 (28 Apr 2008)
+
+  28 Apr 2008; Peter Volkov <pva@gentoo.org>
+  +files/stardict-3.0.1-changelog-minor-typo-fixes.patch,
+  +files/stardict-3.0.1-gcc43.patch,
+  +files/stardict-3.0.1-transparent_trayicon.patch,
+  -files/stardict-gentoo.patch, -files/stardict-gtk24.patch,
+  -stardict-2.4.2.ebuild, -stardict-2.4.6-r1.ebuild,
+  +stardict-3.0.1-r1.ebuild:
+  Added qqwry USE flag to install QQWry.Dat to make QQWry plugin workable;
+  added pronounce USE flag to install WyabdcRealPeopleTTS wav files; small
+  cleanups, bug #217895, thank Denilson for the ideas/work. Fixed
+  compilation with gcc-4.3, bug #216238, thank Martin Väth for report/fix.
+  Added patch to fix transparency of tray icon (from upstream). Added patch
+  to fix minor typos in ChangeLog (from debian). Removed unused
+  patches/ebuilds.
 
   14 Apr 2008; Raúl Porcel <armin76@gentoo.org> stardict-3.0.1.ebuild:
   sparc stable wrt #216707
