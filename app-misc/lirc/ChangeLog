@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.173 2008/04/16 16:54:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.174 2008/04/28 20:32:42 zzam Exp $
+
+*lirc-0.8.3_pre3 (28 Apr 2008)
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.3_pre3-imon-pad2keys.patch, +lirc-0.8.3_pre3.ebuild:
+  Version bumped. Create /etc/modprobe.d instead of /etc/modules.d, Bug
+  #214019.
 
   16 Apr 2008; Markus Rothe <corsair@gentoo.org> lirc-0.8.3_pre1.ebuild:
   Stable on ppc64; bug #208433
