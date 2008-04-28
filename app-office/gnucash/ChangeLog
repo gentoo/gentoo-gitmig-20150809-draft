@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.160 2008/04/18 14:38:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.161 2008/04/28 11:04:31 tove Exp $
+
+*gnucash-2.2.5 (28 Apr 2008)
+
+  28 Apr 2008; Torsten Veller <tove@gentoo.org> +gnucash-2.2.5.ebuild:
+  Version bump. Set GNC_DOC_INSTALL_DIR as docdir doesn't work.
 
   18 Apr 2008; Torsten Veller <tove@gentoo.org> gnucash-2.2.3.ebuild,
   gnucash-2.2.4.ebuild:
