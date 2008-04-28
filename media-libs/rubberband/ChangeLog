@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/rubberband
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.3 2008/03/27 11:19:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.4 2008/04/28 17:07:00 drac Exp $
+
+  28 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +files/rubberband-1.0.1-gcc43.patch, rubberband-1.0.1.ebuild:
+  GCC 4.3 fix wrt #219539, thanks to Peter Alfredsen.
 
   27 Mar 2008; Samuli Suominen <drac@gentoo.org> rubberband-1.0.1.ebuild:
   amd64 stable

@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.4 2008/03/27 11:19:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.5 2008/04/28 17:07:00 drac Exp $
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="An audio time-stretching and pitch-shifting library and utility program"
 HOMEPAGE="http://www.breakfastquay.com/rubberband/"
@@ -20,6 +20,12 @@ RDEPEND="media-libs/vamp-plugin-sdk
 	=sci-libs/fftw-3*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	emake INSTALL_BINDIR="${D}/usr/bin" \

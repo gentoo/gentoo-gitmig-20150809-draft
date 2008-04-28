@@ -1,0 +1,91 @@
+diff -NrU5 rubberband-1.0.1.orig/src/FFT.cpp rubberband-1.0.1/src/FFT.cpp
+--- rubberband-1.0.1.orig/src/FFT.cpp	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/FFT.cpp	2008-04-27 23:40:14.000000000 +0200
+@@ -21,10 +21,11 @@
+ #include <cmath>
+ #include <iostream>
+ #include <map>
+ #include <cstdio>
+ #include <vector>
++#include <cstdlib>
+ 
+ namespace RubberBand {
+ 
+ class FFTImpl
+ {
+diff -NrU5 rubberband-1.0.1.orig/src/main.cpp rubberband-1.0.1/src/main.cpp
+--- rubberband-1.0.1.orig/src/main.cpp	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/main.cpp	2008-04-27 23:42:16.000000000 +0200
+@@ -13,10 +13,12 @@
+ */
+ 
+ #include "RubberBandStretcher.h"
+ 
+ #include <iostream>
++#include <cstring>
++#include <cstdlib>
+ #include <sndfile.h>
+ #include <cmath>
+ #include <sys/time.h>
+ #include <time.h>
+ #include "sysutils.h"
+diff -NrU5 rubberband-1.0.1.orig/src/RingBuffer.h rubberband-1.0.1/src/RingBuffer.h
+--- rubberband-1.0.1.orig/src/RingBuffer.h	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/RingBuffer.h	2008-04-27 23:15:08.000000000 +0200
+@@ -14,10 +14,11 @@
+ 
+ #ifndef _RUBBERBAND_RINGBUFFER_H_
+ #define _RUBBERBAND_RINGBUFFER_H_
+ 
+ #include <sys/types.h>
++#include <cstring>
+ 
+ #ifndef _WIN32
+ #include <sys/mman.h>
+ #endif
+ 
+diff -NrU5 rubberband-1.0.1.orig/src/StretchCalculator.cpp rubberband-1.0.1/src/StretchCalculator.cpp
+--- rubberband-1.0.1.orig/src/StretchCalculator.cpp	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/StretchCalculator.cpp	2008-04-27 23:38:56.000000000 +0200
+@@ -17,10 +17,11 @@
+ #include <math.h>
+ #include <iostream>
+ #include <deque>
+ #include <set>
+ #include <cassert>
++#include <algorithm>
+ 
+ namespace RubberBand
+ {
+ 	
+ StretchCalculator::StretchCalculator(size_t sampleRate,
+diff -NrU5 rubberband-1.0.1.orig/src/Thread.cpp rubberband-1.0.1/src/Thread.cpp
+--- rubberband-1.0.1.orig/src/Thread.cpp	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/Thread.cpp	2008-04-27 23:41:09.000000000 +0200
+@@ -13,10 +13,11 @@
+ */
+ 
+ #include "Thread.h"
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include <sys/time.h>
+ #include <time.h>
+ 
+ //#define DEBUG_THREAD 1
+diff -NrU5 rubberband-1.0.1.orig/src/Window.h rubberband-1.0.1/src/Window.h
+--- rubberband-1.0.1.orig/src/Window.h	2007-12-13 23:15:03.000000000 +0100
++++ rubberband-1.0.1/src/Window.h	2008-04-27 23:35:43.000000000 +0200
+@@ -16,10 +16,11 @@
+ #define _RUBBERBAND_WINDOW_H_
+ 
+ #include <cmath>
+ #include <iostream>
+ #include <map>
++#include <cstdlib>
+ 
+ namespace RubberBand {
+ 
+ enum WindowType {
+     RectangularWindow,
