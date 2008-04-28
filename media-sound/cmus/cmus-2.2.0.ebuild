@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.6 2007/10/14 11:34:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.7 2008/04/28 22:54:17 opfer Exp $
 
 inherit eutils multilib
 
@@ -51,6 +51,15 @@ pkg_setup() {
 		ewarn "wide characters."
 		ewarn
 		epause
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${WORKDIR}"
+	if $(has_version ">=media-video/ffmpeg-0.4.9_p20080326")
+	then
+		epatch "${FILESDIR}"/${P}-new-ffmpeg.patch
 	fi
 }
 
