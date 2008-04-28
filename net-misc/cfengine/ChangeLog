@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/cfengine
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.80 2007/03/21 21:05:41 marineam Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.81 2008/04/28 19:27:29 ramereth Exp $
+
+*cfengine-2.2.6 (28 Apr 2008)
+
+  28 Apr 2008; Lance Albertson <ramereth@gentoo.org>
+  +files/cfengine-2.2.6-typo-fix.patch, +files/cfenvd.rc6,
+  +files/cfexecd.rc6, +cfengine-2.2.6.ebuild:
+  * Bump package to 2.2.6
+    - Update DESCRIPTION,HOMEPAGE,SRC_URI fields
+    - Add portage-utils depend
+    - Add typo patch for this specific version
+    - Fix man pages that use /usr/local
+    - Add init scripts for cfenvd & cfexecd
+    - Fix documentation
+    - Remove references to cfportage since upstream now has it builtin
+    - Update postinst section
 
 *cfengine-2.1.22-r1 (21 Mar 2007)
 

@@ -1,0 +1,12 @@
+diff -ur cfengine-2.2.6-orig/src/cfenvd.c cfengine-2.2.6/src/cfenvd.c
+--- cfengine-2.2.6-orig/src/cfenvd.c	2008-04-21 23:26:19.000000000 -0700
++++ cfengine-2.2.6/src/cfenvd.c	2008-04-28 12:08:46.000000000 -0700
+@@ -36,7 +36,7 @@
+ #include "cf.defs.h"
+ #include "cf.extern.h"
+ #ifdef HAVE_SYS_LOADAVG_H
+-v# include <sys/loadavg.h>
++# include <sys/loadavg.h>
+ #else
+ # define LOADAVG_5MIN    1
+ #endif
