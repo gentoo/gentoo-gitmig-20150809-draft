@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.13 2007/11/18 13:15:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.14 2008/04/28 00:09:28 jer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.geom.umn.edu/software/qhull/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
