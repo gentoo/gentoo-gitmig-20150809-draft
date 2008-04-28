@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.24 2008/04/27 13:51:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.25 2008/04/28 18:05:41 nixnut Exp $
+
+  28 Apr 2008; nixnut <nixnut@gentoo.org> bigloo-3.0c_p4.ebuild:
+  Stable on ppc wrt bug 219012
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org> bigloo-3.0c_p4.ebuild:
   amd64/x86 stable, bug #219012
