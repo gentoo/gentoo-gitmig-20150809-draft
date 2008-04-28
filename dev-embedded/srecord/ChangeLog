@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/srecord
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.4 2007/03/30 05:54:55 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.5 2008/04/28 12:50:30 calchan Exp $
+
+*srecord-1.40 (28 Apr 2008)
+
+  28 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +srecord-1.40.ebuild:
+  Version bump with gcc-4.3 support, thanks to Peter Alfredsen (bug
+  #219547).
 
   30 Mar 2007; Denis Dupeyron <calchan@gentoo.org> srecord-1.29.ebuild:
   Successfully tested on sparc.
