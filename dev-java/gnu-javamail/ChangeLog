@@ -1,6 +1,8 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.22 2007/10/17 06:07:00 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.23 2008/04/28 21:16:14 betelgeuse Exp $
+
+*gnu-javamail-1.0-r2 (17 Oct 2007)
 
   17 Oct 2007; <alistair@gentoo.org>
   +gnu-javamail-1.0-r2.ebuild:
