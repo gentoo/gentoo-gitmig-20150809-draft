@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3519 2008/04/28 15:53:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3520 2008/04/28 18:10:07 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1627,7 +1627,6 @@ net-misc/asterisk:ukcid - Enable UK callerid support
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
-net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) via libsysfs
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:libssh2 - Enabled SSH urls in curl using libssh2
 net-misc/curl:nss - Use NSS as the crypto engine
