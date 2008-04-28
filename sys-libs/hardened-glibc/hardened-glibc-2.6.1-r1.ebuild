@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.3 2008/04/28 00:22:07 pappy Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.4 2008/04/28 12:15:29 pappy Exp $
 
 # the main installation routine and patches
 # from http://www.linuxfromscratch.org/hlfs
@@ -17,12 +15,22 @@ GNU_MIRROR="ftp://ftp.gnu.org/gnu"
 
 PATCHDIST="http://dev.gentoo.org/~pappy/dist/hardened"
 PATCHPATH="sys-libs/hardened-glibc/files/2.6.1"
-GENTOOPATCHES="glibc-2.6.1-GENTOOPATCHES.patch.gz"
+MYPATCHES="glibc-2.6.1-GENTOOPATCHES.patch.gz"
+LOCALEGEN="glibc-2.6.1-LOCALEGEN_NSCD.patch.gz"
 
+## the default upstream glibc
 SRC_URI="${SRC_URI} \
 	${GNU_MIRROR}/glibc/glibc-2.6.1.tar.bz2"
+
+## contains a jumbo file with all patches from
+## sys-libs/glibc for this particular glibc setup
 SRC_URI="${SRC_URI} \
-	${PATCHDIST}/${PATCHPATH}/${GENTOOPATCHES}"
+	${PATCHDIST}/${PATCHPATH}/${MYPATCHES}"
+
+## contains the locale-gen utility from Debian
+## taken from sys-libs/glibc
+SRC_URI="${SRC_URI} \
+	${PATCHDIST}/${PATCHPATH}/${LOCALEGEN}"
 
 LICENSE="LGPL-2"
 SLOT="1"
@@ -31,7 +39,7 @@ SLOT="1"
 ## /var/tmp/portage/sys-libs/hardened-glibc-2.6.1-r1/
 ## work/glibc-2.6.1/gentoo/locale/locale-gen does not exist
 
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 IUSE=""
 
 PROVIDE="virtual/libc"
@@ -50,9 +58,12 @@ pkg_setup() {
 	# hardcoding the CHOST in this ebuild (for x86 stages)
 	export CHOST="i486-pc-linux-gnu"
 
-	# CFLAGS+="-march=i686" for undefined reference to
-	# `__sync_bool_compare_and_swap_4'
-	export CFLAGS="-O2 -pipe -march=i686"
+	# need CFLAGS+="-march=i486" for
+	# undefined reference
+	# to `__sync_bool_compare_and_swap_4'
+	# error message,
+	# lets hope mtuning for i686 cpu gives some speed
+	export CFLAGS="-O2 -pipe -march=i486 -mtune=i686 -fforce-addr"
 	export CXXFLAGS="${CFLAGS}"
 
 	export CPPFLAGS=""
@@ -72,7 +83,14 @@ pkg_setup() {
 src_compile() {
 	cd "${WORKDIR}/glibc-${PV}"
 
-	epatch "${WORKDIR}/glibc-2.6.1-GENTOOPATCHES.patch"
+	einfo "adding gentoo glibc patches"
+	patch --quiet -p1 < "${WORKDIR}/glibc-2.6.1-GENTOOPATCHES.patch" || \
+		die "gentoo patches"
+
+	# somehow epatch would not apply this :(
+	einfo "adding localegen utility and nscd files"
+	patch --quiet -p1 < "${WORKDIR}/glibc-2.6.1-LOCALEGEN_NSCD.patch" || \
+		die "localegen patch"
 
 	mkdir -p "${WORKDIR}/glibc-build"
 	cd "${WORKDIR}/glibc-build"
