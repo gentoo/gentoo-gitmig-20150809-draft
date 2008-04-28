@@ -1,8 +1,8 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.3 2008/04/28 00:40:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.4 2008/04/28 01:02:20 jer Exp $
 
-  28 Apr 2008; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  28 Apr 2008; Jeroen Roovers <jer@gentoo.org> camd-2.2.0.ebuild:
   Marked ~hppa (bug #219466).
 
   27 Apr 2008; Ferris McCormick <fmccor@gentoo.org> camd-2.2.0.ebuild:
