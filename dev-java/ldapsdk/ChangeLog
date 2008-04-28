@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ldapsdk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.14 2008/02/14 02:30:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.15 2008/04/28 21:25:20 betelgeuse Exp $
+
+  28 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
+  ldapsdk-4.1.7-r3.ebuild:
+  The changes in this revision would not have warranted a revision bump so
+  just stable myself.
 
 *ldapsdk-4.1.7-r3 (14 Feb 2008)
 
