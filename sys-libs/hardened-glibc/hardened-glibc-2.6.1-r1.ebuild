@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.2 2008/04/27 23:31:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.3 2008/04/28 00:22:07 pappy Exp $
 
 inherit eutils
 
@@ -27,8 +27,11 @@ SRC_URI="${SRC_URI} \
 LICENSE="LGPL-2"
 SLOT="1"
 
-# only works for x86 so far
-KEYWORDS="~x86"
+## !!! dosbin:
+## /var/tmp/portage/sys-libs/hardened-glibc-2.6.1-r1/
+## work/glibc-2.6.1/gentoo/locale/locale-gen does not exist
+
+KEYWORDS="-x86"
 IUSE=""
 
 PROVIDE="virtual/libc"
@@ -101,6 +104,8 @@ src_install() {
 	insinto /etc
 
 	local configfiles="${WORKDIR}/glibc-${PV}/gentoo"
+
+	# TODO: add locale-gen to the patch
 
 	# install the locale-gen helper utility and config file
 	dosbin "${configfiles}/locale/locale-gen" || \
