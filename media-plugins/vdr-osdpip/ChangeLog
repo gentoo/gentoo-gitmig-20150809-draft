@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-osdpip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.5 2008/04/28 08:58:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.6 2008/04/28 19:17:57 zzam Exp $
+
+*vdr-osdpip-0.0.9 (28 Apr 2008)
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-osdpip-0.0.9-ffmpeg-0.4.9_p20080326-new_header.diff,
+  +vdr-osdpip-0.0.9.ebuild:
+  Version bumped.
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-osdpip-0.0.8-r1.ebuild, vdr-osdpip-0.0.8-r2.ebuild:

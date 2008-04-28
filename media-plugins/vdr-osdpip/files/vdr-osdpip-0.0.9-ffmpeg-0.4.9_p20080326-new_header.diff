@@ -1,0 +1,24 @@
+diff -ru osdpip-0.0.9-orig/decoder.h osdpip-0.0.9/decoder.h
+--- osdpip-0.0.9-orig/decoder.h	2008-04-28 21:08:38.871652831 +0200
++++ osdpip-0.0.9/decoder.h	2008-04-28 21:08:49.391651668 +0200
+@@ -12,7 +12,7 @@
+ #ifdef HAVE_FFMPEG_STATIC
+ #   include <avcodec.h>
+ #else
+-#   include <ffmpeg/avcodec.h>
++#   include <libavcodec/avcodec.h>
+ #endif
+ }
+ 
+diff -ru osdpip-0.0.9-orig/osdpip.c osdpip-0.0.9/osdpip.c
+--- osdpip-0.0.9-orig/osdpip.c	2008-04-28 21:08:38.871652831 +0200
++++ osdpip-0.0.9/osdpip.c	2008-04-28 21:08:59.111649204 +0200
+@@ -9,7 +9,7 @@
+ #ifdef HAVE_FFMPEG_STATIC
+ # include <avcodec.h>
+ #else
+-# include <ffmpeg/avcodec.h>
++# include <libavcodec/avcodec.h>
+ #endif
+ }
+ 
