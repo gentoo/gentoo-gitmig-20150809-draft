@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.6.0.ebuild,v 1.1 2008/03/31 11:29:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.6.0.ebuild,v 1.2 2008/04/29 19:23:15 pclouds Exp $
 
 inherit multilib versionator eutils
 
@@ -16,9 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="xulrunner"
 
 RDEPEND=">=dev-libs/glib-2
-	>=media-libs/swfdec-0.6
-	xulrunner? ( =net-libs/xulrunner-1.8* )
-	!xulrunner? ( || ( =www-client/mozilla-firefox-2* =www-client/seamonkey-1* ) )"
+	>=media-libs/swfdec-0.6"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35
 		>=dev-util/pkgconfig-0.20"

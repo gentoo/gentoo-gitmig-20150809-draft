@@ -1,6 +1,10 @@
 # ChangeLog for net-www/swfdec-mozilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.7 2008/04/19 04:53:58 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.8 2008/04/29 19:23:15 pclouds Exp $
+
+  29 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  swfdec-mozilla-0.6.0.ebuild:
+  Removed mozilla dep, #216001
 
   19 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   -swfdec-mozilla-0.5.4.ebuild, -swfdec-mozilla-0.5.5.ebuild:
