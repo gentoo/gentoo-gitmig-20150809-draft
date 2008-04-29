@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.3.ebuild,v 1.2 2008/04/26 03:45:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.3.ebuild,v 1.3 2008/04/29 07:39:23 hanno Exp $
 
 MY_PN="${PN/m/M}"
 MY_P="${MY_PN}-${PV/_/-}"
@@ -57,7 +57,7 @@ RDEPEND="app-admin/eselect-opengl
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXdamage
-	=x11-libs/libdrm-2.3*
+	>=x11-libs/libdrm-2.3.0
 	x11-libs/libICE
 	motif? ( virtual/motif )
 	doc? ( app-doc/opengl-manpages )
