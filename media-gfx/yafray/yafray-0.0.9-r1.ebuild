@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9-r1.ebuild,v 1.5 2008/04/12 12:25:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9-r1.ebuild,v 1.6 2008/04/29 15:00:19 drac Exp $
 
-inherit eutils python multilib
+inherit eutils multilib python
 
 DESCRIPTION="Yet Another Free Raytracer"
-HOMEPAGE="http://www.yafray.org/"
+HOMEPAGE="http://www.yafray.org"
 SRC_URI="http://www.yafray.org/sec/2/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -17,21 +17,19 @@ RDEPEND="media-libs/jpeg
 	sys-libs/zlib
 	openexr? ( media-libs/openexr )"
 DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.3
-	>=sys-apps/sed-4
 	dev-util/scons"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-scons.patch
-	epatch "${FILESDIR}"/${P}-libdir.patch
-	epatch "${FILESDIR}"/${P}-etc.patch
+	epatch "${FILESDIR}"/${P}-scons.patch \
+		"${FILESDIR}"/${P}-libdir.patch \
+		"${FILESDIR}"/${P}-etc.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 
-	# Dirty hack for a dirty buildsystem.
-	sed -i -e "s:-O3:${CXXFLAGS} -fsigned-char:g" *-settings.py || die
+	sed -i -e "s:-O3:${CXXFLAGS} -fsigned-char:g" *-settings.py || die "sed	failed."
 }
 
 src_compile() {
@@ -44,9 +42,10 @@ src_compile() {
 }
 
 src_install() {
-	scons prefix="/usr" destdir="${D}" libdir="/$(get_libdir)" install || die
+	scons prefix="/usr" destdir="${D}" libdir="/$(get_libdir)" install \
+		|| die "scons install failed."
 
 	find "${D}" -name .sconsign -exec rm \{\} \;
-	dodoc AUTHORS		|| die
-	dohtml doc/doc.html || die
+	dodoc AUTHORS
+	dohtml doc/doc.html
 }
