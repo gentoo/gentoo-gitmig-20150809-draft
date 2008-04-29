@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.8.ebuild,v 1.2 2007/12/26 10:57:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.8.ebuild,v 1.3 2008/04/29 11:38:16 zzam Exp $
 
 inherit vdr-plugin eutils
 
-DESCRIPTION="VDR Plugin: The plugin parses the extended EPG data which is send by Premiere on their portal channels"
+DESCRIPTION="VDR Plugin: Support the extended EPG which is sent by german paytv Premiere on their portal channels"
 HOMEPAGE="http://www.muempf.de/index.html"
 SRC_URI="http://www.muempf.de/down/${P}.tar.gz"
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.4.1"
 RDEPEND="${DEPEND}"
 
-PATCHES="${FILESDIR}/${P}-fix-epg.patch"
+PATCHES=("${FILESDIR}/${P}-fix-epg.patch")
 
 src_unpack() {
 	vdr-plugin_src_unpack

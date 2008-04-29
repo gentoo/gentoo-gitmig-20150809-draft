@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-premiereepg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.9 2007/12/26 10:57:07 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.10 2008/04/29 11:38:16 zzam Exp $
+
+  29 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-premiereepg-0.0.8.ebuild:
+  Fixed quoting and too long description.
 
   26 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   -files/vdr-premiereepg-0.0.6-fix-epg.patch,
