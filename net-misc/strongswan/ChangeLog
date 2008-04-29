@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.60 2008/03/30 14:43:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.61 2008/04/29 14:26:37 armin76 Exp $
+
+  29 Apr 2008; Raúl Porcel <armin76@gentoo.org> strongswan-4.1.11.ebuild:
+  Add ~sparc wrt #215669
 
   30 Mar 2008; Lars Weiler <pylon@gentoo.org> strongswan-4.1.11.ebuild:
   Some fixups for non-root-mode installation; bug #208196.
