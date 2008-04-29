@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.4.ebuild,v 1.1 2008/03/28 18:30:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.4.ebuild,v 1.2 2008/04/29 14:55:52 bicatali Exp $
 
 inherit eutils multilib qt4
 
@@ -26,7 +26,7 @@ CDEPEND=">=x11-libs/qwt-5.0.2
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-python/sip-4.5.2 )"
 
@@ -36,8 +36,6 @@ RDEPEND="${CDEPEND}
 		dev-python/pygsl
 		sci-libs/scipy )"
 
-QT4_BUILT_WITH_USE_CHECK="qt3support"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -45,7 +43,7 @@ src_unpack() {
 
 	# docs: remove default doc building
 	sed -i -e '/manual/d' qtiplot.pro qtiplot/qtiplot.pro \
-		|| die "die sed for docs failed"
+		|| die "sed for docs failed"
 	sed -i -e "s:doc/${PN}:doc/${PF}:" qtiplot/qtiplot.pro
 
 	if ! use python; then

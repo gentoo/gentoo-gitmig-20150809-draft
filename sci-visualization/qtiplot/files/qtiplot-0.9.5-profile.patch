@@ -1,17 +1,6 @@
---- qtiplot/qtiplot.pro.orig	2008-03-06 15:02:08.000000000 +0000
-+++ qtiplot/qtiplot.pro	2008-03-06 21:57:33.000000000 +0000
-@@ -16,8 +16,8 @@
- # comment the following lines if you haven't subscribed for a QtiPlot binaries maintenance contract
- #RESTRICTED_MODULES += EMF
- 
--#CONFIG          += release
--CONFIG          += debug
-+CONFIG          += release
-+#CONFIG          += debug
- #win32: CONFIG   += console
- 
- # what to install and where
-@@ -45,12 +45,12 @@
+--- qtiplot/qtiplot.pro.orig	2008-04-24 18:54:47.622675411 +0000
++++ qtiplot/qtiplot.pro	2008-04-24 19:01:18.639824832 +0000
+@@ -30,12 +30,11 @@
  #!!! Warning: You must modify these paths according to your computer settings
  #############################################################################
  
@@ -26,11 +15,10 @@
 +INCLUDEPATH       += /usr/include/qwt5
 +INCLUDEPATH       += /usr/include/liborigin
 +INCLUDEPATH       += /usr/include/gsl
-+
  
  ##################### 3rd PARTY LIBRARIES SECTION ###########################
  #!!! Warning: You must modify these paths according to your computer settings
-@@ -59,17 +59,19 @@
+@@ -44,17 +43,19 @@
  ##################### Linux (Mac OS X) ######################################
  
  # statically link against libraries in 3rdparty
@@ -59,28 +47,17 @@
  
  ##################### Windows ###############################################
  
-@@ -124,8 +126,8 @@
-                   translations/qtiplot_ja.ts \
-                   translations/qtiplot_sv.ts
- 
--#system(lupdate -verbose qtiplot.pro)
--#system(lrelease -verbose qtiplot.pro)
-+system(lupdate -verbose qtiplot.pro)
-+system(lrelease -verbose qtiplot.pro)
- 
- translations.files += translations/qtiplot_de.qm \
-                   translations/qtiplot_es.qm \
-@@ -139,8 +141,7 @@
+@@ -147,8 +148,7 @@
  manual.files += ../manual/html \
  				../manual/qtiplot-manual-en.pdf
  
 -documentation.files += ../README.html \
 -                       ../gpl_licence.txt
-+documentation.files += ../README.html
++documentation.files += ../README.html 
  
  unix: man.files += ../qtiplot.1
  
-@@ -395,8 +396,8 @@
+@@ -403,8 +403,8 @@
  ################# Origin Import (liborigin) ###################
  ###############################################################
  
@@ -91,37 +68,3 @@
  
  ###############################################################
  ################# Module: Plot 2D #############################
---- fitPlugins/fitRational0/fitRational0.pro.orig	2008-03-06 15:11:53.000000000 +0000
-+++ fitPlugins/fitRational0/fitRational0.pro	2008-03-06 15:16:28.000000000 +0000
-@@ -12,12 +12,10 @@
- DESTDIR           = ../
-  
- # statically link against GSL in 3rdparty
--INCLUDEPATH += ../../3rdparty/gsl/include/
--LIBS        += ../../3rdparty/gsl/lib/libgsl.a
--LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
-+INCLUDEPATH += /usr/include/gsl
- 
- #dynamically link against GSL installed system-wide
--#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
-+unix:LIBS += $$system(pkg-config --libs gsl)
- 
- target.path=/usr/lib$${libsuff}/qtiplot/plugins
- INSTALLS += target
---- fitPlugins/fitRational1/fitRational1.pro.orig	2008-03-06 15:13:35.000000000 +0000
-+++ fitPlugins/fitRational1/fitRational1.pro	2008-03-06 15:16:52.000000000 +0000
-@@ -12,12 +12,10 @@
- DESTDIR           = ../
-  
- # statically link against GSL in 3rdparty
--INCLUDEPATH += ../../3rdparty/gsl/include/
--LIBS        += ../../3rdparty/gsl/lib/libgsl.a
--LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
-+INCLUDEPATH += /usr/include/gsl
- 
- #dynamically link against GSL installed system-wide
--#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
-+unix:LIBS += $$system(pkg-config --libs gsl)
- 
- target.path=/usr/lib$${libsuff}/qtiplot/plugins
- INSTALLS += target

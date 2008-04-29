@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.7.7.ebuild,v 1.4 2008/02/13 14:33:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.7.7.ebuild,v 1.5 2008/04/29 14:55:52 bicatali Exp $
 
 inherit eutils multilib qt3
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~x86"
 IUSE="bindist"
 
 RDEPEND="$(qt_min_version 3.3)
-	>=x11-libs/qwt-4.2.0
+	<x11-libs/qwt-5
 	<x11-libs/qwtplot3d-0.2.7
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"

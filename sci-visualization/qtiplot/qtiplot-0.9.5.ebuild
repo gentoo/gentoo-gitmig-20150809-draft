@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.3.ebuild,v 1.2 2008/03/15 11:16:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.5.ebuild,v 1.1 2008/04/29 14:55:52 bicatali Exp $
 
+EAPI="1"
 inherit eutils multilib qt4
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
@@ -26,7 +27,7 @@ CDEPEND=">=x11-libs/qwt-5.0.2
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-python/sip-4.5.2 )"
 
@@ -36,24 +37,22 @@ RDEPEND="${CDEPEND}
 		dev-python/pygsl
 		sci-libs/scipy )"
 
-QT4_BUILT_WITH_USE_CHECK="qt3support"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-systemlibs.patch
-	epatch "${FILESDIR}"/${P}-homepage.patch
+	epatch "${FILESDIR}"/${P}-profile.patch
+	epatch "${FILESDIR}"/${P}-fitplugins.patch
 
-	# docs: remove default doc building
-	sed -i -e '/manual/d' qtiplot.pro qtiplot/qtiplot.pro \
-		|| die "die sed for docs failed"
-	sed -i -e "s:doc/${PN}:doc/${PF}:" qtiplot/qtiplot.pro
+	sed -i \
+		-e '/manual/d'\
+		-e '/3rd/d' \
+		qtiplot.pro || die "sed qtiplot.pro failed"
 
 	if ! use python; then
 		sed -i \
 			-e '/^SCRIPTING_LANGS += Python/d' \
 			-e '/sipcmd/d' \
-			${PN}/${PN}.pro || die "sed for python option failed"
+			qtiplot/qtiplot.pro || die "sed for python option failed"
 	fi
 
 	# the lib$$suff did not work in the fitRational*.pro files
@@ -66,7 +65,7 @@ src_unpack() {
 		if ! use linguas_${l}; then
 			sed -i \
 				-e "s:translations/qtiplot_${l}.ts::" \
-				${PN}/${PN}.pro || die
+				qtiplot/qtiplot.pro || die
 		fi
 	done
 }
@@ -84,14 +83,14 @@ src_install() {
 	doman qtiplot.1 || die "doman failed"
 
 	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins -r "${WORKDIR}"/qtiplot-manual-en \
+		insinto /usr/share/doc/${PF}/html
+		doins -r "${WORKDIR}"/qtiplot-manual-en/* \
 			|| die "install manual failed"
 	fi
 
 	if use python; then
-		cd "${S}"/${PN}
 		insinto /etc
-		doins qtiplotrc.py qtiUtil.py || die
+		doins qtiplot/{qtiplotrc,qtiUtil}.py \
+			|| die "install python config failed"
 	fi
 }

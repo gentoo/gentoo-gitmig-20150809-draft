@@ -1,0 +1,34 @@
+--- fitPlugins/fitRational0/fitRational0.pro.orig	2008-03-06 15:11:53.000000000 +0000
++++ fitPlugins/fitRational0/fitRational0.pro	2008-03-06 15:16:28.000000000 +0000
+@@ -12,12 +12,10 @@
+ DESTDIR           = ../
+  
+ # statically link against GSL in 3rdparty
+-INCLUDEPATH += ../../3rdparty/gsl/include/
+-LIBS        += ../../3rdparty/gsl/lib/libgsl.a
+-LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
++INCLUDEPATH += /usr/include/gsl
+ 
+ #dynamically link against GSL installed system-wide
+-#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
++unix:LIBS += $$system(pkg-config --libs gsl)
+ 
+ target.path=/usr/lib$${libsuff}/qtiplot/plugins
+ INSTALLS += target
+--- fitPlugins/fitRational1/fitRational1.pro.orig	2008-03-06 15:13:35.000000000 +0000
++++ fitPlugins/fitRational1/fitRational1.pro	2008-03-06 15:16:52.000000000 +0000
+@@ -12,12 +12,10 @@
+ DESTDIR           = ../
+  
+ # statically link against GSL in 3rdparty
+-INCLUDEPATH += ../../3rdparty/gsl/include/
+-LIBS        += ../../3rdparty/gsl/lib/libgsl.a
+-LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
++INCLUDEPATH += /usr/include/gsl
+ 
+ #dynamically link against GSL installed system-wide
+-#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
++unix:LIBS += $$system(pkg-config --libs gsl)
+ 
+ target.path=/usr/lib$${libsuff}/qtiplot/plugins
+ INSTALLS += target
