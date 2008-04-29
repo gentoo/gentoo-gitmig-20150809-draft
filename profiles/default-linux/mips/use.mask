@@ -1,13 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.104 2008/04/10 06:34:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.105 2008/04/29 19:54:31 dirtyepic Exp $
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # We have neither.
 dell
 laptop
-
-# Samuli Suominen <drac@gentoo.org>
-# No batteries on mips.
-battery
 
 # Alexander Færøy <eroyf@gentoo.org>
 # Masking for now.
