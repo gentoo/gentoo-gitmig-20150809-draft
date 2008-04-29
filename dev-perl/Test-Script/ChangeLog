@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.1 2008/04/29 14:32:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.2 2008/04/29 15:38:17 fmccor Exp $
+
+  29 Apr 2008; Ferris McCormick <fmccor@gentoo.org> Test-Script-1.03.ebuild:
+  Add ~sparc for testing, part of Bug #219723.
 
 *Test-Script-1.03 (29 Apr 2008)
 
