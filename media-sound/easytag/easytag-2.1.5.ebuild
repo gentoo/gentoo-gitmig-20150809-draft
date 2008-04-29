@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.5.ebuild,v 1.1 2008/01/27 14:55:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.5.ebuild,v 1.2 2008/04/29 13:45:24 drac Exp $
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -14,24 +14,32 @@ IUSE="aac flac mp3 speex vorbis wavpack"
 RDEPEND=">=x11-libs/gtk+-2.4.1
 	mp3? ( >=media-libs/id3lib-3.8.3-r6
 		media-libs/libid3tag )
-	flac? ( >=media-libs/flac-1.1 >=media-libs/libvorbis-1 )
-	vorbis? ( >=media-libs/libvorbis-1.0.1
-		>=media-libs/libogg-1 )
+	flac? ( media-libs/flac
+		media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	aac? ( media-libs/libmp4v2 )
 	wavpack? ( media-sound/wavpack )
-	speex? ( media-libs/speex )"
+	speex? ( media-libs/speex
+		media-libs/libvorbis )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 src_compile() {
+	local myconf
+
+	# Speex support fails to build without vorbis wrt #211086
+	use speex && myconf="--enable-ogg"
+
 	econf $(use_enable mp3) \
 		$(use_enable mp3 id3v23) \
 		$(use_enable vorbis ogg) \
 		$(use_enable flac) \
 		$(use_enable aac mp4) \
 		$(use_enable wavpack) \
-		$(use_enable speex)
+		$(use_enable speex) \
+		${myconf}
+
 	emake || die "emake failed."
 }
 

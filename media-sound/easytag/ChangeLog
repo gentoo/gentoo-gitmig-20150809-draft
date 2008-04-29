@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.113 2008/01/27 14:55:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.114 2008/04/29 13:45:24 drac Exp $
+
+  29 Apr 2008; Samuli Suominen <drac@gentoo.org> easytag-2.1.5.ebuild:
+  Force --enable-ogg when USE speex is selected wrt #211086, thanks to
+  Vasileios P. Lourdas for reporting.
 
 *easytag-2.1.5 (27 Jan 2008)
 
