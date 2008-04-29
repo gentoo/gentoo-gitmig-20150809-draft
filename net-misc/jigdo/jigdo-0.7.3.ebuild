@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.6 2008/01/25 21:15:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.7 2008/04/29 19:12:02 drac Exp $
 
 inherit eutils
 
@@ -11,38 +11,32 @@ SRC_URI="http://atterer.net/jigdo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-
 IUSE="gtk nls berkdb libwww"
 
-DEPEND="gtk? ( >=x11-libs/gtk+-2.0.6 )
-	nls? ( sys-devel/gettext )
-	berkdb? ( =sys-libs/db-3* )
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+	berkdb? ( >=sys-libs/db-3.2 )
 	libwww? ( >=net-libs/libwww-5.3.2 )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	local myconf
 
-	use nls || myconf="${myconf} --disable-nls"
 	use gtk && use libwww || myconf="${myconf} --without-gui"
 	use berkdb || myconf="${myconf} --without-libdb"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man ${myconf} \
-		--datadir=/usr/share || die "./configure failed"
-
-	# Patch the Makefile so that when jidgo is installed, jigdo-lite has
-	# the correct path to the debian mirrors file.
-	epatch "${FILESDIR}"/makefile.patch
-
-	emake || die
+	econf $(use_enable nls) ${myconf}
+	emake || die "emake failed."
 }
 
 src_install() {
-	einstall || die
-	dodoc COPYING README THANKS VERSION changelog
-	dodoc doc/*.txt
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc changelog README THANKS doc/{Hacking,README-bindist,TechDetails}.txt
 	dohtml doc/*.html
 }
