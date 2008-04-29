@@ -1,8 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.31 2008/04/17 02:55:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.32 2008/04/29 19:25:24 cardoe Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (17 Apr 2008)
 # pending testing against policy
 >=sys-apps/baselayout-2.0.0
+sys-apps/openrc
+sys-apps/makedev
 
 # Mart Raudsepp <leio@gentoo.org> (16 Mar 2008)
 # The Great GNOME 2.22 Mask (tm)
