@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.7 2008/04/29 19:12:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.8 2008/04/29 19:15:09 drac Exp $
 
 inherit eutils
 
-DESCRIPTION="Jigsaw Download, or short jigdo, is a tool designed to ease the distribution of very large files over the internet, for example CD or DVD images."
+DESCRIPTION="Jigsaw Download is a tool designed to ease the distribution of large files, for example DVD images."
 HOMEPAGE="http://atterer.net/jigdo/"
 SRC_URI="http://atterer.net/jigdo/${P}.tar.bz2"
 
