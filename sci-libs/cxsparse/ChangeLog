@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cxsparse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.4 2008/04/28 19:48:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.5 2008/04/29 16:28:36 ranger Exp $
+
+  29 Apr 2008; Brent Baude <ranger@gentoo.org> cxsparse-2.2.1.ebuild:
+  keyworded ~arch for ppc64, bug 219460
 
   28 Apr 2008; Tobias Klausmann <klausman@gentoo.org> cxsparse-2.2.1.ebuild:
   Keyworded on alpha, bug #219460
