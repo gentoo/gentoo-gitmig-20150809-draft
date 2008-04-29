@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.12 2008/03/23 21:46:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.7.3.ebuild,v 1.1 2008/04/29 07:07:12 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -9,14 +9,14 @@ DESCRIPTION="An interface for filesystems implemented in userspace."
 HOMEPAGE="http://fuse.sourceforge.net"
 SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="kernel_linux kernel_FreeBSD"
 S=${WORKDIR}/${MY_P}
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
 
 pkg_setup() {
 	if use kernel_linux ; then
-		if kernel_is ge 2 6 23; then
+		if kernel_is ge 2 6 25; then
 			CONFIG_CHECK="FUSE_FS"
 			FUSE_FS_ERROR="You need to build the FUSE module from the kernel source, because your kernel is too new"
 		else
@@ -41,8 +41,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/fuse-fix-lazy-binding.patch
-	epatch "${FILESDIR}"/fuse-2.6.22.patch
-	sed -i -e "s:die {:die() {:" util/mount.fuse
 	elibtoolize
 }
 
@@ -80,6 +78,19 @@ src_install() {
 	fi
 
 	rm -rf "${D}/dev"
+
+	dodir /etc
+	cat > ${D}/etc/fuse.conf <<EOF
+# Set the maximum number of FUSE mounts allowed to non-root users.
+# The default is 1000.
+#
+#mount_max = 1000
+
+# Allow non-root users to specify the 'allow_other' or 'allow_root'
+# mount options.
+#
+#user_allow_other
+EOF
 }
 
 pkg_postinst() {
