@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1369 2008/04/29 19:54:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1370 2008/04/29 19:57:58 dirtyepic Exp $
+
+  29 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> arch/mips/package.use.mask:
+  Sync package.use.mask in both old and new mips arch profiles.
 
   29 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> arch/mips/use.mask,
   default-linux/mips/use.mask:
