@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.53 2008/04/29 14:38:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.54 2008/04/29 15:42:21 armin76 Exp $
+
+  29 Apr 2008; Raúl Porcel <armin76@gentoo.org> Test-Inline-2.208.ebuild:
+  Add ~alpha/~ia64 wrt #219723
 
 *Test-Inline-2.208 (29 Apr 2008)
 
