@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.3 2008/01/16 21:15:47 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.4 2008/04/29 14:11:26 cla Exp $
 
 EAPI="1"
 
@@ -31,7 +31,7 @@ SRC_URI="pixmaps? (
 	)"
 HOMEPAGE="http://www.gentoo.org/index-graphics.html"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="kde offensive +icons +pixmaps +grub lilo"
@@ -76,6 +76,8 @@ src_unpack() {
 
 		# fix errors in filenames
 		mv l33t/l33t_nero.png l33t/l33t_UTI_nero.png
+		# fix permissions (bug #213385)
+		fperms 644 l33t/l33t_MAI_mutt.png
 
 		# remove misspelled files
 		rm "${S}"/icons/gentoo/{32x32,48x48,64x64}/slypheed.png
