@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.20 2008/03/07 15:53:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.21 2008/04/29 17:18:58 opfer Exp $
+
+  29 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  u-vm-color-2.10.ebuild:
+  stable x86/amd64, bug 217041
 
 *u-vm-color-2.10 (07 Mar 2008)
 
