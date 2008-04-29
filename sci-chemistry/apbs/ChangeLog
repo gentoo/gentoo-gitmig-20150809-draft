@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.17 2008/03/23 11:39:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.18 2008/04/29 22:21:19 markusle Exp $
+
+*apbs-1.0.0 (29 Apr 2008)
+
+  29 Apr 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/apbs-1.0.0-install-fix.patch,
+  +files/apbs-1.0.0-libmaloc-noinstall.patch,
+  +files/apbs-1.0.0-openmpi.patch, +apbs-1.0.0.ebuild:
+  Version bump (fixes bug #219599). Changed license to BSD since
+  it most closely matches the apbs license.
 
   23 Mar 2008; Markus Dittrich <markusle@gentoo.org> apbs-0.5.1.ebuild:
   Changed to unversioned install location in /usr/share (see bug #213616).
