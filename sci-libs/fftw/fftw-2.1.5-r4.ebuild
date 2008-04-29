@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.6 2008/04/14 13:56:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r4.ebuild,v 1.1 2008/04/29 22:11:57 bicatali Exp $
 
 inherit eutils flag-o-matic multilib autotools fortran
 
