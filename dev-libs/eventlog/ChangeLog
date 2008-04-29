@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.23 2008/04/29 09:33:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.24 2008/04/29 15:09:12 ranger Exp $
+
+  29 Apr 2008; Brent Baude <ranger@gentoo.org> eventlog-0.2.7.ebuild:
+  stable ppc64, bug 219688
 
   29 Apr 2008; Raúl Porcel <armin76@gentoo.org> eventlog-0.2.7.ebuild:
   alpha/ia64/sparc/x86 stable wrt #219688
