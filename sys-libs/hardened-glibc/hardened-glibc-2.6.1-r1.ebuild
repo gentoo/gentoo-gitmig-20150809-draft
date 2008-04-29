@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.5 2008/04/28 15:58:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/hardened-glibc/hardened-glibc-2.6.1-r1.ebuild,v 1.6 2008/04/29 00:22:01 pappy Exp $
 
 # the main installation routine and patches
 # from http://www.linuxfromscratch.org/hlfs
 # and one file of patches of sys-libs/glibc
 
 DESCRIPTION="Gentoo Hardened GNU libc6"
-HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
+HOMEPAGE="http://www.gentoo.org/proj/en/extreme-security/"
 
 KERNELVER="2.6.18"
 
@@ -34,10 +34,6 @@ SRC_URI="${SRC_URI} \
 
 LICENSE="LGPL-2"
 SLOT="1"
-
-## !!! dosbin:
-## /var/tmp/portage/sys-libs/hardened-glibc-2.6.1-r1/
-## work/glibc-2.6.1/gentoo/locale/locale-gen does not exist
 
 KEYWORDS="~x86"
 IUSE=""
