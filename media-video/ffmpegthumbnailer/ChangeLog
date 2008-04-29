@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.45 2008/04/24 17:49:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.46 2008/04/29 13:28:24 drac Exp $
+
+*ffmpegthumbnailer-1.2.5 (29 Apr 2008)
+
+  29 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +ffmpegthumbnailer-1.2.5.ebuild:
+  Version bump, fixes crash with raw avi files.
 
   24 Apr 2008; Markus Rothe <corsair@gentoo.org>
   ffmpegthumbnailer-1.2.4.ebuild:
@@ -18,21 +24,20 @@
   20 Apr 2008; Samuli Suominen <drac@gentoo.org>
   -files/ffmpegthumbnailer-1.2.3-gcc43.patch,
   -ffmpegthumbnailer-1.2.3.ebuild, +ffmpegthumbnailer-1.2.4.ebuild:
-  Version bump to 1.2.4 which is same as 1.2.3 with gcc 4.3 fix. I would
-  like to thank also Sergey Dryabzhinsky wrt #213725. amd64 stable, only
-  _trivial_ changes to previous versions.
+  Version bump to 1.2.4 which is same as 1.2.3 with gcc 4.3 fix.
+  amd64 stable, only trivial change from previous version.
 
   15 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/ffmpegthumbnailer-1.2.3-gcc43.patch,
   ffmpegthumbnailer-1.2.3.ebuild:
-  GCC 4.3 fix by me.
+  GCC 4.3 fix by me and Sergey Dryabzhinsky wrt #213725.
 
 *ffmpegthumbnailer-1.2.3 (09 Apr 2008)
 
   09 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +ffmpegthumbnailer-1.2.3.ebuild:
-  Version bump. This version includes a patch from Gentoo to build against
-  recent ffmpeg snapshot with headers relocated, thanks to Alexis Ballier.
+  Version bump. This version includes a patch from Alexis Ballier to build
+  against recent ffmpeg snapshots.
 
   26 Mar 2008; Jeroen Roovers <jer@gentoo.org>
   ffmpegthumbnailer-1.2.2.ebuild:
