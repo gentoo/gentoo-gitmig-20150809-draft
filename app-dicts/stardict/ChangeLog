@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.44 2008/04/28 11:17:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.45 2008/04/29 08:24:24 pva Exp $
+
+  29 Apr 2008; Peter Volkov <pva@gentoo.org> stardict-3.0.1-r1.ebuild:
+  Changed ordering of use ... and built_with_use ... to avoid built_with_use
+  checks on nonexistent packages, bug #219631, thank Martin Väth for
+  report.
 
   28 Apr 2008; Peter Volkov <pva@gentoo.org> metadata.xml:
   moved to app-dicts herd, added longdescription.

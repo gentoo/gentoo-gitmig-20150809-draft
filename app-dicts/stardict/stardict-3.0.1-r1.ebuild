@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r1.ebuild,v 1.2 2008/04/28 15:57:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r1.ebuild,v 1.3 2008/04/29 08:24:24 pva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -40,12 +40,11 @@ DEPEND="${DEP}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	built_with_use gnome-base/libgnome esd || \
-		if use gnome && use pronounce; then
-			ewarn 'Note, being built with USE="gnome" stardict uses gnome_sound_play()'
-			ewarn 'to play RealPeopleTTS sounds, which plays sounds only in case'
-			ewarn 'gnome-base/libgnome was built with USE="esd".'
-		fi
+	if (use gnome && use pronounce && ! built_with_use gnome-base/libgnome esd); then
+		ewarn 'Note, being built with USE="gnome" stardict uses gnome_sound_play()'
+		ewarn 'to play RealPeopleTTS sounds, which plays sounds only in case'
+		ewarn 'gnome-base/libgnome was built with USE="esd".'
+	fi
 }
 
 src_unpack() {
