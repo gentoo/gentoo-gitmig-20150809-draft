@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r3.ebuild,v 1.6 2008/03/12 20:22:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r3.ebuild,v 1.7 2008/04/29 00:39:29 ken69267 Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc javamail jms source"
@@ -28,7 +28,7 @@ DEPEND="|| (
 
 LICENSE="Apache-1.1"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/LogKit-${PV}"
