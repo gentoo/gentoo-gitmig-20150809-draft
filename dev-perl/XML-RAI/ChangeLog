@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-RAI
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.11 2007/07/09 11:56:35 mcummings Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.12 2008/04/29 00:31:22 yuval Exp $
+
+*XML-RAI-1.3022 (29 Apr 2008)
+
+  29 Apr 2008; Yuval Yaari <yuval@gentoo.org> +XML-RAI-1.3022.ebuild:
+  Version bump
 
   09 Jul 2007; Michael Cummings <mcummings@gentoo.org> ChangeLog:
   Fixing Changelog

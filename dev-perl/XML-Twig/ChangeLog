@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Twig
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.56 2007/07/14 16:14:59 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.57 2008/04/29 00:38:31 yuval Exp $
+
+*XML-Twig-3.32 (29 Apr 2008)
+
+  29 Apr 2008; Yuval Yaari <yuval@gentoo.org> +XML-Twig-3.32.ebuild:
+  Version bump
 
   14 Jul 2007; Raúl Porcel <armin76@gentoo.org> XML-Twig-3.29.ebuild:
   alpha/ia64/x86 stable
