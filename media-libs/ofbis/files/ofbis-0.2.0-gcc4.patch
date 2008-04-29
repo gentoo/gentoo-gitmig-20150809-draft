@@ -1,0 +1,299 @@
+diff -ur ofbis-0.2.0.orig/fbtst.c ofbis-0.2.0/fbtst.c
+--- ofbis-0.2.0.orig/fbtst.c	2000-02-17 16:39:34.000000000 +0200
++++ ofbis-0.2.0/fbtst.c	2008-04-29 17:07:20.000000000 +0300
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <signal.h>
+ #include <unistd.h>
++#include <string.h>
+ #include "src/ofbis.h"
+ 
+ #define BLITTEST
+@@ -29,10 +30,10 @@
+           
+   sigemptyset(&mask);
+             
++  memset(&sigs, 0, sizeof(sigs));
+   sigs.sa_handler = signal_handler;
+   sigs.sa_mask = mask;
+   sigs.sa_flags = SA_ONESHOT;
+-  sigs.sa_restorer = NULL;
+              
+   sigaction(SIGHUP, &sigs, NULL);
+   sigaction(SIGINT, &sigs, NULL);
+diff -ur ofbis-0.2.0.orig/ofbis.m4.in ofbis-0.2.0/ofbis.m4.in
+--- ofbis-0.2.0.orig/ofbis.m4.in	1999-12-12 23:34:46.000000000 +0200
++++ ofbis-0.2.0/ofbis.m4.in	2008-04-29 17:12:34.000000000 +0300
+@@ -5,16 +5,21 @@
+ dnl AM_PATH_OFBIS([MINIMUM-VERSION, [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND [, MODULES]]]])
+ dnl Test for oFBis, and define OFBIS_CFLAGS and OFBIS_LIBS
+ 
+-AC_DEFUN(AM_PATH_OFBIS,
++AC_DEFUN([AM_PATH_OFBIS],
+ [dnl 
+ dnl Get the cflags and libraries from the ofbis-config script
+ dnl
+-AC_ARG_WITH(ofbis-prefix,[  --with-ofbis-prefix=PFX   Prefix where oFBis is installed (optional)],
+-            ofbis_config_prefix="$withval", ofbis_config_prefix="")
+-AC_ARG_WITH(ofbis-exec-prefix,[  --with-ofbis-exec-prefix=PFX Exec prefix where oFBis is installed (optional)],
+-            ofbis_config_exec_prefix="$withval", ofbis_config_exec_prefix="")
+-AC_ARG_ENABLE(ofbistest, [  --disable-ofbistest       Do not try to compile and run a test oFBis program],
+-		    , enable_ofbistest=yes)
++AC_ARG_WITH([ofbis-prefix],
++	    [  --with-ofbis-prefix=PFX   Prefix where oFBis is installed (optional)],
++	    [ofbis_config_prefix="$withval"],
++	    [ofbis_config_prefix=""])
++AC_ARG_WITH([ofbis-exec-prefix,
++	    [  --with-ofbis-exec-prefix=PFX Exec prefix where oFBis is installed (optional)],
++	    [ofbis_config_exec_prefix="$withval"],
++	    [ofbis_config_exec_prefix=""])
++AC_ARG_ENABLE([ofbistest],
++	      [  --disable-ofbistest       Do not try to compile and run a test oFBis program],
++	      , [enable_ofbistest=yes])
+ 
+   if test x$ofbis_config_exec_prefix != x ; then
+      ofbis_config_args="$ofbis_config_args --exec-prefix=$ofbis_config_exec_prefix"
+@@ -29,9 +34,9 @@
+      fi
+   fi
+ 
+-  AC_PATH_PROG(OFBIS_CONFIG, ofbis-config, no)
+-  min_ofbis_version=ifelse([$1], ,@OFBIS_VERSION@,$1)
+-  AC_MSG_CHECKING(for oFBis - version >= $min_ofbis_version)
++  AC_PATH_PROG([OFBIS_CONFIG], [ofbis-config], [no])
++  min_ofbis_version=ifelse([$1], , @OFBIS_VERSION@, [$1])
++  AC_MSG_CHECKING([for oFBis - version >= $min_ofbis_version])
+   no_ofbis=""
+   if test "$OFBIS_CONFIG" = "no" ; then
+     no_ofbis=yes
+@@ -52,10 +57,10 @@
+      fi
+   fi
+   if test "x$no_ofbis" = x ; then
+-     AC_MSG_RESULT(yes)
+-     ifelse([$2], , :, [$2])     
++     AC_MSG_RESULT([yes])
++     ifelse([$2], , [:], [$2])
+   else
+-     AC_MSG_RESULT(no)
++     AC_MSG_RESULT([no])
+      if test "$OFBIS_CONFIG" = "no" ; then
+        echo "*** The ofbis-config script installed by oFBis could not be found"
+        echo "*** If oFBis was installed in PREFIX, make sure PREFIX/bin is in"
+@@ -66,17 +71,17 @@
+      fi
+      OFBIS_CFLAGS=""
+      OFBIS_LIBS=""
+-     ifelse([$3], , :, [$3])
++     ifelse([$3], , [:], [$3])
+   fi
+-  AC_SUBST(OFBIS_CFLAGS)
+-  AC_SUBST(OFBIS_LIBS)
++  AC_SUBST([OFBIS_CFLAGS])
++  AC_SUBST([OFBIS_LIBS])
+ ])
+ 
+ 
+ dnl AM_CHECK_LIBOFBIS(MINIMUM-VERSION, [ACTION-IF-FOUND, [ACTION-IF-NOT-FOUND]])
+ dnl Simplifies for other packages to check for libofbis.
+ 
+-AC_DEFUN(AM_CHECK_LIBOFBIS,
++AC_DEFUN([AM_CHECK_LIBOFBIS],
+ [
+ dnl AC_MSG_CHECKING([for libofbis version >= $1... ])
+ if test x$with_ofbis = xyes ; then
+@@ -87,13 +92,13 @@
+ if test x$with_ofbis = x ; then 
+ dnl Look for separately installed ofbis
+ 
+-  AM_PATH_OFBIS($1, ifelse([$2], , :, [$2]),
++  AM_PATH_OFBIS([$1], [ifelse([$2], , :, [$2])],
+     [ifelse([$3], ,
+-     AC_MSG_ERROR([
++     [AC_MSG_ERROR([
+ *** oFBis $1 or better is required. The latest version of oFBis
+-*** is always available from ftp://ftp.nocrew.org/pub/osis/.])
++*** is always available from ftp://ftp.nocrew.org/pub/osis/.])]
+      , [$3])],
+-    ofbis)
++    [ofbis])
+ 
+   ofbis_cflags=$OFBIS_CFLAGS
+   ofbis_libs=$OFBIS_LIBS
+@@ -117,19 +122,19 @@
+     OFBIS_CFLAGS="-I$ofbis_dir"
+     OFBIS_LIBS=$ofbis_dir/libofbis.la
+ 
+-    ifelse([$2], , :, [$2])
++    ifelse([$2], , [:], [$2])
+   else
+     OFBIS_CFLAGS=""
+     OFBIS_LIBS=""
+     ifelse([$3], ,
+-      AC_MSG_ERROR([oFBis directory ($with_ofbis) not present or not configured])
++      [AC_MSG_ERROR([oFBis directory ($with_ofbis) not present or not configured])]
+       , [$3])
+   fi
+ 
+-  AC_SUBST(OFBIS_CFLAGS)
+-  AC_SUBST(OFBIS_LIBS)
++  AC_SUBST([OFBIS_CFLAGS])
++  AC_SUBST([OFBIS_LIBS])
+ fi
+ 
+-dnl AC_MSG_RESULT(found)
++dnl AC_MSG_RESULT([found])
+ 
+ ])
+diff -ur ofbis-0.2.0.orig/src/display_interleaved/i2_generic.c ofbis-0.2.0/src/display_interleaved/i2_generic.c
+--- ofbis-0.2.0.orig/src/display_interleaved/i2_generic.c	2000-02-17 16:39:39.000000000 +0200
++++ ofbis-0.2.0/src/display_interleaved/i2_generic.c	2008-04-29 17:07:28.000000000 +0300
+@@ -95,8 +95,8 @@
+ 
+ 		/* Adjust sbase and dbase to bottom of block */
+ 
+-		(__u8 *) dbase += ( fbb->d_nxln * ( fbb->b_ht - 1 ) );
+-		(__u8 *) sbase += ( fbb->s_nxln * ( fbb->b_ht - 1 ) );
++		dbase = (__u16 *)((__u8 *) dbase + ( fbb->d_nxln * ( fbb->b_ht - 1 ) ));
++		sbase = (__u16 *)((__u8 *) sbase + ( fbb->s_nxln * ( fbb->b_ht - 1 ) ));
+ 
+ 		/* Set next line offsets */
+ 
+@@ -148,8 +148,8 @@
+ 
+ 		/* Adjust sbase and dbase to top right of block */
+ 
+-		(__u8 *) dbase += ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->d_xmin % 16 ) != 0 )) * fbb->d_nxwd );
+-		(__u8 *) sbase += ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->s_xmin % 16 ) != 0 )) * fbb->s_nxwd );
++		dbase = (__u16 *)((__u8 *) dbase + ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->d_xmin % 16 ) != 0 )) * fbb->d_nxwd ));
++		sbase = (__u16 *)((__u8 *) sbase + ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->s_xmin % 16 ) != 0 )) * fbb->s_nxwd ));
+ 
+ 		/* Set next line offsets */
+ 
+diff -ur ofbis-0.2.0.orig/src/display_packed/pp_16.c ofbis-0.2.0/src/display_packed/pp_16.c
+--- ofbis-0.2.0.orig/src/display_packed/pp_16.c	2000-02-17 16:39:42.000000000 +0200
++++ ofbis-0.2.0/src/display_packed/pp_16.c	2008-04-29 17:07:28.000000000 +0300
+@@ -40,7 +40,8 @@
+   switch (f->writemode) {
+   case FB_XOR:
+     while (x++ <= j) {
+-      *pixel++ = ~(u_int16_t)*pixel;
++      *pixel = ~(u_int16_t)*pixel;
++      *pixel++;
+     }
+     break;
+     
+@@ -85,11 +86,11 @@
+   
+   if (dir == BITBLT_FORWARD) {
+     for(i=0; i<num; i++) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   } else {
+     for(i=num-1; i>=0; i--) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   }
+ }
+diff -ur ofbis-0.2.0.orig/src/display_packed/pp_32.c ofbis-0.2.0/src/display_packed/pp_32.c
+--- ofbis-0.2.0.orig/src/display_packed/pp_32.c	2000-02-17 16:39:42.000000000 +0200
++++ ofbis-0.2.0/src/display_packed/pp_32.c	2008-04-29 17:07:28.000000000 +0300
+@@ -40,7 +40,8 @@
+   switch (f->writemode) {
+   case FB_XOR:
+     while (x++ <= j) {
+-      *pixel++ = ~(u_int32_t)*pixel;
++      *pixel = ~(u_int32_t)*pixel;
++      *pixel++;
+     }
+     break;
+     
+@@ -85,11 +86,11 @@
+   
+   if (dir == BITBLT_FORWARD) {
+     for(i=0; i<num; i++) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   } else {
+     for(i=num-1; i>=0; i--) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   }
+ }
+diff -ur ofbis-0.2.0.orig/src/display_packed/pp_8.c ofbis-0.2.0/src/display_packed/pp_8.c
+--- ofbis-0.2.0.orig/src/display_packed/pp_8.c	2000-02-17 16:39:42.000000000 +0200
++++ ofbis-0.2.0/src/display_packed/pp_8.c	2008-04-29 17:07:28.000000000 +0300
+@@ -90,11 +90,11 @@
+   
+   if (dir == BITBLT_FORWARD) {
+     for(i=0; i<num; i++) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   } else {
+     for(i=num-1; i>=0; i--) {
+-      LOGICOP((u_int32_t)dst[i], (u_int32_t)src[i], logicop);
++      LOGICOP(dst[i], (u_int32_t)src[i], logicop);
+     }
+   }
+ }
+diff -ur ofbis-0.2.0.orig/src/display_planes/pl_generic.c ofbis-0.2.0/src/display_planes/pl_generic.c
+--- ofbis-0.2.0.orig/src/display_planes/pl_generic.c	2000-02-17 16:39:44.000000000 +0200
++++ ofbis-0.2.0/src/display_planes/pl_generic.c	2008-04-29 17:07:28.000000000 +0300
+@@ -95,8 +95,8 @@
+ 
+ 		/* Adjust sbase and dbase to bottom of block */
+ 
+-		(__u8 *) dbase += ( fbb->d_nxln * ( fbb->b_ht - 1 ) );
+-		(__u8 *) sbase += ( fbb->s_nxln * ( fbb->b_ht - 1 ) );
++		dbase = (__u16 *)((__u8 *) dbase + ( fbb->d_nxln * ( fbb->b_ht - 1 ) ));
++		sbase = (__u16 *)((__u8 *) sbase + ( fbb->s_nxln * ( fbb->b_ht - 1 ) ));
+ 
+ 		/* Set next line offsets */
+ 
+@@ -148,8 +148,8 @@
+ 
+ 		/* Adjust sbase and dbase to top right of block */
+ 
+-		(__u8 *) dbase += ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->d_xmin % 16 ) != 0 )) * fbb->d_nxwd );
+-		(__u8 *) sbase += ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->s_xmin % 16 ) != 0 )) * fbb->s_nxwd );
++		dbase = (__u16 *)((__u8 *) dbase + ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->d_xmin % 16 ) != 0 )) * fbb->d_nxwd ));
++		sbase = (__u16 *)((__u8 *) sbase + ( ( ( ( fbb->b_wd - 1 ) / 16 ) + ( ( fbb->s_xmin % 16 ) != 0 )) * fbb->s_nxwd ));
+ 
+ 		/* Set next line offsets */
+ 
+diff -ur ofbis-0.2.0.orig/src/error.c ofbis-0.2.0/src/error.c
+--- ofbis-0.2.0.orig/src/error.c	2000-02-17 16:39:35.000000000 +0200
++++ ofbis-0.2.0/src/error.c	2008-04-29 17:07:10.000000000 +0300
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <stdarg.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
+ #include "error.h"
+diff -ur ofbis-0.2.0.orig/src/generic/line.c ofbis-0.2.0/src/generic/line.c
+--- ofbis-0.2.0.orig/src/generic/line.c	2000-02-17 16:39:47.000000000 +0200
++++ ofbis-0.2.0/src/generic/line.c	2008-04-29 17:07:11.000000000 +0300
+@@ -1,5 +1,6 @@
+ #include "ofbis.h"
+ #include "common.h"
++#include <stdlib.h>
+ 
+ /* Use Bresenham's line algorithm instead */
+ /* I think it's faster, and it's definitely shorter code
+diff -ur ofbis-0.2.0.orig/src/kbd.c ofbis-0.2.0/src/kbd.c
+--- ofbis-0.2.0.orig/src/kbd.c	2000-02-17 16:39:36.000000000 +0200
++++ ofbis-0.2.0/src/kbd.c	2008-04-29 17:07:11.000000000 +0300
+@@ -209,7 +209,6 @@
+       SETORCLEAR(Mode_Home);
+       */
+     break;
+-  default:
+   }
+   ev->keycode = key;
+   ev->state = state;
