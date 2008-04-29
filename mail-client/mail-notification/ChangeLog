@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.67 2008/04/12 06:03:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.68 2008/04/29 16:32:47 graaff Exp $
+
+*mail-notification-5.3 (29 Apr 2008)
+
+  29 Apr 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/mail-notification-5.3-dont-update-cache.patch,
+  +mail-notification-5.3.ebuild:
+  Version bump. Fixes crashes affecting IMAP, maildir and POP3 mailboxes, and a
+  crash with Evolution on 64-bit systems.
 
 *mail-notification-5.2-r1 (12 Apr 2008)
 
