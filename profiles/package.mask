@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8545 2008/04/28 13:24:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8546 2008/04/29 08:05:06 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -39,8 +39,8 @@
 >=net-analyzer/nagios-imagepack-1.0-r100
 
 # Ulrich Mueller <ulm@gentoo.org> (27 Apr 2008)
-# CVS snapshot masked for testing, bug 219449.
-=app-emacs/navi2ch-1.7.5_p*
+# CVS snapshot, bug 219449.
+~app-emacs/navi2ch-1.7.5_p20080325
 
 # Michael Sterrett <mr_bones_@gentoo.org> (27 Apr 2008)
 # masked until tmw works with the newer version.
