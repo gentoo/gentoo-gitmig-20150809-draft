@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-freedict-eng-rus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-rus/ChangeLog,v 1.10 2007/08/30 12:17:52 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-rus/ChangeLog,v 1.11 2008/04/29 05:39:11 pva Exp $
+
+  29 Apr 2008; Peter Volkov <pva@gentoo.org> metadata.xml,
+  stardict-freedict-eng-rus-2.4.2.ebuild:
+  Took maintainace. amd64 stable.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
