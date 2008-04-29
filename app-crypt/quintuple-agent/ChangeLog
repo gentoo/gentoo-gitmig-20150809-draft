@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/quintuple-agent
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.10 2007/11/10 13:19:20 alonbl Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.11 2008/04/29 18:07:07 alonbl Exp $
+
+  29 Apr 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/quintuple-agent-1.0.3-build.patch, quintuple-agent-1.0.3.ebuild:
+  Fix sandbox violation, bug#219602, thanks to Patrizio Bassi for reporting
 
   10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
   quintuple-agent-1.0.3.ebuild:

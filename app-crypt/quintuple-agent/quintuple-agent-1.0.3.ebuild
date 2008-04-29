@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.16 2007/11/10 13:19:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.17 2008/04/29 18:07:07 alonbl Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-socklen_t.patch"
+	epatch "${FILESDIR}/${P}-build.patch"
 }
 
 src_compile() {
