@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.114 2008/04/25 10:00:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.115 2008/04/29 20:10:51 opfer Exp $
+
+*tor-0.1.2.19-r2 (29 Apr 2008)
+
+  29 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  -tor-0.1.2.19-r1.ebuild, +tor-0.1.2.19-r2.ebuild:
+  logrotate should now really work again
 
 *tor-0.1.2.19-r1 (25 Apr 2008)
 

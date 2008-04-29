@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.19-r1.ebuild,v 1.1 2008/04/25 10:00:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.19-r2.ebuild,v 1.1 2008/04/29 20:10:51 opfer Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ src_install() {
 		sed -e "s:/lib::" \
 			-e "s:/rc.d::" \
 			-e "s:\\*:\\*.:" \
-			-e "s:endscript:create 0640 tor tor\n\tendscript:" -i contrib/tor.logrotate || die
+			-e "s:sharedscripts:create 0640 tor tor\n\tsharedscripts:" -i contrib/tor.logrotate || die
 		insinto /etc/logrotate.d
 		newins contrib/tor.logrotate tor
 	fi
