@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-dvdswitch
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/ChangeLog,v 1.16 2007/10/04 12:09:32 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/ChangeLog,v 1.17 2008/04/29 11:40:34 zzam Exp $
+
+  29 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-dvdswitch-0.1.3-r1.ebuild, vdr-dvdswitch-0.1.3-r2.ebuild:
+  Marked 0.1.3-r2 stable on x86. Fixed quoting.
 
   04 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-dvdswitch-0.1.3.ebuild, vdr-dvdswitch-0.1.3-r1.ebuild,
