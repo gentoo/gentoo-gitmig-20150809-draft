@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.9 2008/04/04 14:46:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.10 2008/04/29 17:22:26 ricmm Exp $
+
+  29 Apr 2008; <ricmm@gentoo.org> libssh2-0.18.ebuild:
+  Add ~mips, bug #215709
 
   04 Apr 2008; Brent Baude <ranger@gentoo.org> libssh2-0.18.ebuild:
   Marking libssh2-0.18 ~ppc
