@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ofbis
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ChangeLog,v 1.9 2008/04/29 14:17:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ChangeLog,v 1.10 2008/04/29 14:26:29 cla Exp $
+
+  29 Apr 2008; Dawid Węgliński <cla@gentoo.org> ofbis-0.2.0.ebuild:
+  Stable on x86
 
 *ofbis-0.2.0 (29 Apr 2008)
 
