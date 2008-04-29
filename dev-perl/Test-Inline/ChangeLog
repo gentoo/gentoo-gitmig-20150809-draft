@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.54 2008/04/29 15:42:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.55 2008/04/29 15:52:23 fmccor Exp $
+
+  29 Apr 2008; Ferris McCormick <fmccor@gentoo.org>
+  Test-Inline-2.208.ebuild:
+  Add ~sparc, all tests good.  Bug #219723.
 
   29 Apr 2008; Raúl Porcel <armin76@gentoo.org> Test-Inline-2.208.ebuild:
   Add ~alpha/~ia64 wrt #219723

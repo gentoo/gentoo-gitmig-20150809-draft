@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.208.ebuild,v 1.2 2008/04/29 15:42:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.208.ebuild,v 1.3 2008/04/29 15:52:23 fmccor Exp $
 
 MODULE_AUTHOR=ADAMK
 
@@ -10,7 +10,7 @@ DESCRIPTION="Inline test suite support for Perl"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~x86"
+KEYWORDS="~alpha ~ia64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
