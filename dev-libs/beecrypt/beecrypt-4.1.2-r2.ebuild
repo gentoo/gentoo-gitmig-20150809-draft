@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r2.ebuild,v 1.4 2008/01/13 01:02:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r2.ebuild,v 1.5 2008/04/29 19:20:20 aballier Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -19,7 +19,8 @@ COMMONDEPEND="python? ( >=dev-lang/python-2.2 )
 DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.4 )
 	doc? ( app-doc/doxygen
-		virtual/tetex )"
+		virtual/latex-base
+		|| ( dev-texlive/texlive-fontsextra app-text/tetex app-text/ptex ) )"
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )"
 
