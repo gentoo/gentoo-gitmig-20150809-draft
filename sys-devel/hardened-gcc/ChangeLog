@@ -1,9 +1,0 @@
-# ChangeLog for sys-devel/hardened-gcc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/hardened-gcc/ChangeLog,v 1.1 2008/04/29 00:42:14 pappy Exp $
-
-*hardened-gcc-4.2.3 (29 Apr 2008)
-
-  29 Apr 2008; <pappy@gentoo.org> +metadata.xml, +hardened-gcc-4.2.3.ebuild:
-  adding test version for hardened-gcc
-
