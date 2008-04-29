@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amsynth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.30 2008/04/27 12:45:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.31 2008/04/29 14:28:18 armin76 Exp $
+
+  29 Apr 2008; Raúl Porcel <armin76@gentoo.org> amsynth-1.2.0.ebuild:
+  sparc stable wrt #218622
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org> amsynth-1.2.0.ebuild:
   amd64/x86 stable, bug #218622
