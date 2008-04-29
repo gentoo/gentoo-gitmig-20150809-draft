@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.66 2008/04/06 15:04:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.67 2008/04/29 17:52:56 fmccor Exp $
+
+  29 Apr 2008; Ferris McCormick <fmccor@gentoo.org> tramp-2.1.13.ebuild:
+  Sparc stable, Bug #219738.  Normal 30 day cycle.
 
   06 Apr 2008; Ulrich Mueller <ulm@gentoo.org> tramp-2.1.12.ebuild,
   tramp-2.1.13.ebuild:
