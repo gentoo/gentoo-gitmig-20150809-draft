@@ -1,0 +1,142 @@
+Fix compilation with gcc-4.3.
+
+(modified to not patch Makefile.am)
+
+http://bugs.gentoo.org/show_bug.cgi?id=219693
+
+Index: pdns/sstuff.hh
+===================================================================
+--- pdns/sstuff.hh	(revision 1093)
++++ pdns/sstuff.hh	(revision 1094)
+@@ -189,12 +189,14 @@
+     struct sockaddr_in remote;
+     socklen_t remlen=sizeof(remote);
+     int bytes;
+-    if((bytes=recvfrom(d_socket, d_buffer, d_buflen, 0, (sockaddr *)&remote, &remlen))<0)
+-      if(errno!=EAGAIN)
++    if((bytes=recvfrom(d_socket, d_buffer, d_buflen, 0, (sockaddr *)&remote, &remlen))<0) {
++      if(errno!=EAGAIN) {
+ 	throw NetworkError(strerror(errno));
+-      else
++      }
++      else {
+ 	return false;
+-    
++      }
++    }
+     dgram.assign(d_buffer,bytes);
+     ep.address.byte=remote.sin_addr.s_addr;
+     ep.port=ntohs(remote.sin_port);
+Index: pdns/misc.hh
+===================================================================
+--- pdns/misc.hh	(revision 1093)
++++ pdns/misc.hh	(revision 1094)
+@@ -19,6 +19,7 @@
+ #ifndef MISC_HH
+ #define MISC_HH
+ #include <stdint.h>
++#include <cstring>
+ 
+ #if 0
+ #define RDTSC(qp) \
+@@ -234,7 +235,7 @@
+   return c==' ' || c=='\t' || c=='\r' || c=='\n';
+ }
+ 
+-inline const char dns_tolower(char c)
++inline char dns_tolower(char c)
+ {
+   if(c>='A' && c<='Z')
+     c+='a'-'A';
+Index: pdns/pdns_recursor.cc
+===================================================================
+--- pdns/pdns_recursor.cc	(revision 1093)
++++ pdns/pdns_recursor.cc	(revision 1094)
+@@ -416,7 +416,7 @@
+   set<DNSResourceRecord>nsset;
+ 
+   if(::arg()["hint-file"].empty()) {
+-    static char*ips[]={"198.41.0.4", "192.228.79.201", "192.33.4.12", "128.8.10.90", "192.203.230.10", "192.5.5.241", "192.112.36.4", "128.63.2.53", 
++    static const char*ips[]={"198.41.0.4", "192.228.79.201", "192.33.4.12", "128.8.10.90", "192.203.230.10", "192.5.5.241", "192.112.36.4", "128.63.2.53",
+ 		       "192.36.148.17","192.58.128.30", "193.0.14.129", "198.32.64.12", "202.12.27.33"};
+     DNSResourceRecord arr, nsrr;
+     arr.qtype=QType::A;
+Index: pdns/dns.hh
+===================================================================
+--- pdns/dns.hh	(revision 1093)
++++ pdns/dns.hh	(revision 1094)
+@@ -115,7 +115,7 @@
+ #pragma pack (pop)
+ #endif 
+ 
+-typedef enum  {
++enum  {
+         ns_t_invalid = 0,       /* Cookie. */
+         ns_t_a = 1,             /* Host address. */
+         ns_t_ns = 2,            /* Authoritative server. */
+@@ -137,7 +137,7 @@
+         ns_t_afsdb = 18,        /* AFS cell database. */
+         ns_t_x25 = 19,          /* X_25 calling address. */
+         ns_t_isdn = 20,         /* ISDN calling address. */
+-	ns_t_rt = 21,           /* Router. */
++        ns_t_rt = 21,           /* Router. */
+         ns_t_nsap = 22,         /* NSAP address. */
+         ns_t_nsap_ptr = 23,     /* Reverse NSAP lookup (deprecated). */
+         ns_t_sig = 24,          /* Security signature. */
+Index: pdns/resolver.cc
+===================================================================
+--- pdns/resolver.cc	(revision 1093)
++++ pdns/resolver.cc	(revision 1094)
+@@ -397,12 +397,12 @@
+   if(mdp->d_header.id != d_randomid) {
+     throw ResolverException("Remote nameserver replied with wrong id");
+   }
+-  if(mdp->d_header.rcode)
++  if(mdp->d_header.rcode) {
+     if(d_inaxfr)
+       throw ResolverException("Remote nameserver unable/unwilling to AXFR with us: RCODE="+itoa(mdp->d_header.rcode));
+     else
+       throw ResolverException("Remote nameserver reported error: RCODE="+itoa(mdp->d_header.rcode));
+-  
++  }
+     if(!d_inaxfr) {
+       if(mdp->d_header.qdcount!=1)
+ 	throw ResolverException("resolver: received answer with wrong number of questions ("+itoa(mdp->d_header.qdcount)+")");
+Index: pdns/dynmessenger.cc
+===================================================================
+--- pdns/dynmessenger.cc	(revision 1093)
++++ pdns/dynmessenger.cc	(revision 1094)
+@@ -18,6 +18,7 @@
+ */
+ #include "dynmessenger.hh"
+ #include <cstdio>
++#include <cstdlib>
+ #include <cstring>
+ #include <cerrno>
+ #include <iostream>
+Index: pdns/distributor.hh
+===================================================================
+--- pdns/distributor.hh	(revision 1093)
++++ pdns/distributor.hh	(revision 1094)
+@@ -82,7 +82,6 @@
+   struct QuestionData
+   {
+     Question *Q;
+-    time_t created;
+     void (*callback)(const AnswerData &);
+     int id;
+   };
+Index: modules/ldapbackend/powerldap.cc
+===================================================================
+--- modules/ldapbackend/powerldap.cc	(revision 1093)
++++ modules/ldapbackend/powerldap.cc	(revision 1094)
+@@ -1,7 +1,8 @@
+ #include "powerldap.hh"
++// for timeval
++#include <sys/time.h>
+ 
+ 
+-
+ PowerLDAP::PowerLDAP( const string& hosts, uint16_t port, bool tls )
+ {
+ 	int protocol = LDAP_VERSION3;

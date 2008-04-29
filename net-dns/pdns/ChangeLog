@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.46 2008/01/01 14:18:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.47 2008/04/29 19:24:43 swegener Exp $
+
+  29 Apr 2008; Sven Wegener <swegener@gentoo.org>
+  +files/2.9.21-gcc-4.3.patch, pdns-2.9.21.ebuild:
+  Add patch to fix compilation with gcc-4.3, bug #219693.
 
   01 Jan 2008; Sven Wegener <swegener@gentoo.org> pdns-2.9.21.ebuild:
   Install development headers, bug #203393.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.4 2008/01/01 14:18:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.5 2008/04/29 19:24:43 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -32,6 +32,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/2.9.18-default-mysql-options.patch
 	epatch "${FILESDIR}"/2.9.20-ldap-deprecated.patch
+	epatch "${FILESDIR}"/2.9.21-gcc-4.3.patch
 
 	eautoreconf
 }
