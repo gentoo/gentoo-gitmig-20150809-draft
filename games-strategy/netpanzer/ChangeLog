@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/netpanzer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.27 2007/11/21 04:26:02 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.28 2008/04/30 17:06:37 nyhm Exp $
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/netpanzer-0.8.2-gcc43.patch, netpanzer-0.8.2.ebuild:
+  Patch to fix building with gcc-4.3 from Peter Alfredsen, bug #218837
 
   21 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> netpanzer-0.8.1.ebuild:
   Also allow building 0.8.2 with ftjam for bug #188194
