@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.31 2007/12/24 14:59:00 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.32 2008/04/30 11:23:12 tove Exp $
+
+*po4a-0.33.3 (30 Apr 2008)
+
+  30 Apr 2008; Torsten Veller <tove@gentoo.org> +po4a-0.33.3.ebuild:
+  Version bump.
 
   24 Dec 2007; Brent Baude <ranger@gentoo.org> po4a-0.32-r1.ebuild:
   Marking po4a-0.32-r1 ppc for deb to bug 203220
