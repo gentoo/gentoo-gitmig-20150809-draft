@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.15 2007/06/13 15:16:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.16 2008/04/30 21:29:02 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -34,8 +34,10 @@ src_unpack() {
 		-e '/clear/d' \
 		Makefile || die "sed failed" # bug #120907
 
-	epatch "${FILESDIR}/${P}-freeglut.patch"
-	rm -rf $(find -name CVS)
+	epatch \
+		"${FILESDIR}"/${P}-freeglut.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
+	ecvs_clean
 }
 
 src_compile() {
