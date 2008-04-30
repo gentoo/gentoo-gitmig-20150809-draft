@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1371 2008/04/29 20:32:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1372 2008/04/30 11:54:57 bicatali Exp $
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> use.desc,
+  use.local.desc:
+  Removed global icc and ifc use flags. Added local icc and ifc for
+  dev-lang/idb and sci-libs/acml, added gfortran local flag for
+  sci-libs/acml
 
   29 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask media-fonts/sharefonts for removal (bug #218288).
