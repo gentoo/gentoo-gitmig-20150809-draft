@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.22 2008/01/14 10:46:39 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.23 2008/04/30 22:24:13 ranger Exp $
+
+  30 Apr 2008; Brent Baude <ranger@gentoo.org> commons-el-1.0-r2.ebuild:
+  stable ppc64, bug 219644
 
 *commons-el-1.0-r2 (14 Jan 2008)
 
