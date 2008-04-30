@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.64 2007/09/25 20:22:27 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.65 2008/04/30 18:54:27 dev-zero Exp $
+
+*STLport-5.1.5 (30 Apr 2008)
+
+  30 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/STLport-5.1.5-alpha.patch, +files/STLport-5.1.5-bashism.patch,
+  +files/STLport-5.1.5-cxx_use_c99.patch,
+  +files/STLport-5.1.5-fix-warnings.patch,
+  +files/STLport-5.1.5-gcc-4.3.patch, +files/STLport-5.1.5-hppa.patch,
+  +files/STLport-5.1.5-portability-hack.patch, +STLport-5.1.5.ebuild:
+  Version bump (including a lot fixes, thanks to Peter Alfredsen and Debian,
+  bug #219457).
 
 *STLport-5.1.3 (25 Sep 2007)
 
