@@ -1,0 +1,74 @@
+--- src/Constante.cpp
++++ src/Constante.cpp
+@@ -27,6 +27,7 @@
+ #define DATADIR_BRIQUOLO "./"
+ #define PACKAGE "briquolo"
+ #endif
++#include <cstdlib>
+ 
+ #ifdef WIN32
+ #define WIN32_LEAN_AND_MEAN
+--- src/MOGL/MOGL_EnsembleObjet.cpp
++++ src/MOGL/MOGL_EnsembleObjet.cpp
+@@ -23,7 +23,8 @@
+ #include "MOGL_Armature.h"
+ #include "MOGL_Peau.h"
+ //#include 
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ 
+ //#include <mmsystem.h>
+ 
+--- src/MOGL/MOGL_GestionnaireObjet.cpp
++++ src/MOGL/MOGL_GestionnaireObjet.cpp
+@@ -20,6 +20,7 @@
+  *
+  *****************************************************************************/
+ #include "MOGL_GestionnaireObjet.h"
++#include <cstring>
+ 
+ bool MOGL_GestionnaireObjet::ChargerObjetASCTriangle(const char * p_NomFichier, const MOGL_GestionnaireTexture & p_GM,
+                                                      MOGL_Objet & p_Objet)
+--- src/MOGL/MOGL_GestionnaireObjet.h
++++ src/MOGL/MOGL_GestionnaireObjet.h
+@@ -24,7 +24,8 @@
+ 
+ #include <vector>
+ #include <iostream>
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ 
+ #include "MOGL_Triangle.h"
+ #include "MOGL_Objet.h"
+--- src/MOGL/MOGL_Image.h
++++ src/MOGL/MOGL_Image.h
+@@ -24,6 +24,7 @@
+ 
+ #include "MOGL_Structure.h"
+ #include <string>
++#include <cstring>
+ 
+ using namespace std;
+ 
+--- src/MOGL/MOGL_Objet.cpp
++++ src/MOGL/MOGL_Objet.cpp
+@@ -20,6 +20,7 @@
+  *
+  *****************************************************************************/
+ #include "MOGL_Objet.h"
++#include <cstdlib>
+ 
+ //MOGL_Objet::MOGL_Objet(): MOGL_ObjetAbstrait(), MOGL_ElementArbre()
+ MOGL_Objet::MOGL_Objet(): MOGL_Noeud(), _ModifieTriangle(true), _ModifieStrip(true),
+--- src/MOGL/MOGL_Peau.cpp
++++ src/MOGL/MOGL_Peau.cpp
+@@ -20,6 +20,7 @@
+  *
+  *****************************************************************************/
+ #include "MOGL_Peau.h"
++#include <cstdlib>
+ 
+ MOGL_Peau::MOGL_Peau(): MOGL_Noeud(), _ModifieTriangle(true)
+ {
