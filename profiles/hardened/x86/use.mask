@@ -1,12 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.28 2007/09/21 03:15:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.29 2008/04/30 11:51:22 bicatali Exp $
 
 -3dnow
 -3dnowext
--icc
--icc-pgo
--ifc
 -mmx
 -mmxext
 -sse

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.129 2008/04/21 11:26:57 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.130 2008/04/30 11:45:45 bicatali Exp $
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  Removed masking of icc and ifc flags (now only local flags). Removed
+  inexistent icc-pgo flags
 
   21 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
   Add ->=net-im/telepathy-mission-control-4.65 to Gnome 2.22 mask.

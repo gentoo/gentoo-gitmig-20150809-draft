@@ -1,12 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/use.mask,v 1.1 2007/04/29 07:08:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/use.mask,v 1.2 2008/04/30 11:49:47 bicatali Exp $
 
 -3dnow
 -3dnowext
--icc
--icc-pgo
--ifc
 -mmx
 -mmxext
 -sse
