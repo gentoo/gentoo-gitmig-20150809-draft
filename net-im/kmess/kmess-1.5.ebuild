@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5.ebuild,v 1.2 2008/04/29 12:13:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5.ebuild,v 1.3 2008/04/30 14:08:24 nixnut Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kmess/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 LANGS="de"
