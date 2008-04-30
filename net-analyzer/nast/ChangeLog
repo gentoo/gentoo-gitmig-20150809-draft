@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nast
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.8 2007/02/19 12:48:34 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.9 2008/04/30 02:12:24 lu_zero Exp $
+
+  30 Apr 2008; Luca Barbato <lu_zero@gentoo.org> nast-0.2.0.ebuild:
+  Marked ~ppc64
 
   19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
