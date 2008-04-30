@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.3 2008/04/29 19:54:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.4 2008/04/30 19:36:45 dirtyepic Exp $
+
+# Ryan Hill <dirtyepic@gentoo.org>
+# virtual/blas virtual/cblas and virtual/lapack not keyworded
+lapack
+blas
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # We have neither.

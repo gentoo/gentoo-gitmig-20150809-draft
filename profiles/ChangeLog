@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1373 2008/04/30 14:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1374 2008/04/30 19:36:45 dirtyepic Exp $
+
+  30 Apr 2008; Ryan Hill <dirtyepic@gentoo.org> arch/mips/use.mask,
+  default-linux/mips/use.mask:
+  Mask blas/lapack USE flags on MIPS.
 
   30 Apr 2008; Raúl Porcel <armin76@gentoo.org> thirdpartymirrors:
   Update mirrors
