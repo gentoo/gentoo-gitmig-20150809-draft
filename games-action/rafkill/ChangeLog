@@ -1,6 +1,10 @@
 # ChangeLog for games-action/rafkill
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/ChangeLog,v 1.3 2007/01/31 10:32:25 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/ChangeLog,v 1.4 2008/04/30 16:42:34 nyhm Exp $
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  files/rafkill-1.2.3-build.patch:
+  Fix scons failure when some directories in /usr/local don't exist
 
 *rafkill-1.2.3 (31 Jan 2007)
 

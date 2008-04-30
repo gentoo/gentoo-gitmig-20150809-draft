@@ -1,5 +1,16 @@
 --- SConstruct
 +++ SConstruct
+@@ -8,8 +8,8 @@
+ 
+ print "Use 'scons -h' for help"
+ 
+-prefix = '/usr/local/games'
+-bin = '/usr/local/bin'
++prefix = 'data'
++bin = 'src'
+ if sys.platform == 'win32':
+ 	try:
+ 		Execute(Mkdir('gen'))
 @@ -46,7 +46,12 @@
  # print "Install directory = $prefix"
  # print "Directory where symlinked binary will go = $bin"
