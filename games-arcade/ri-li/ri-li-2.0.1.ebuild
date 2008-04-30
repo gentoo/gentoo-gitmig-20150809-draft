@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.1.ebuild,v 1.1 2008/03/26 21:39:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.1.ebuild,v 1.2 2008/04/30 23:36:37 nyhm Exp $
 
 inherit eutils games
 
@@ -17,6 +17,12 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
 S=${WORKDIR}/Ri-li-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
