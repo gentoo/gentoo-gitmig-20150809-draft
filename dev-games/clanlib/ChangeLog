@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.40 2007/10/29 22:07:43 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.41 2008/04/30 20:03:30 nyhm Exp $
+
+*clanlib-0.8.1 (30 Apr 2008)
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/clanlib-0.8.1-gcc43.patch, +files/clanlib-0.8.1-ndebug.patch,
+  +clanlib-0.8.1.ebuild:
+  Version bump, bug #214860
 
   29 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/clanlib-0.7.8-ndebug.patch, +files/clanlib-0.8.0-ndebug.patch,
