@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.41 2008/04/29 16:26:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.42 2008/04/30 22:22:04 ranger Exp $
+
+  30 Apr 2008; Brent Baude <ranger@gentoo.org> hsqldb-1.8.0.9-r1.ebuild:
+  stable ppc64, bug 219636
 
   29 Apr 2008; Brent Baude <ranger@gentoo.org> hsqldb-1.8.0.9-r1.ebuild:
   stable ppc, bug 219636
