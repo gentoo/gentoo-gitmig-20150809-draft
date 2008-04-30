@@ -1,0 +1,11 @@
+--- configure.in
++++ configure.in
+@@ -160,7 +160,7 @@
+ AC_CHECK_HEADER([openssl/opensslv.h], [],
+                 [AC_MSG_ERROR([We require OpenSSL; try --with-openssl])])
+ 
+-libs="`$apu_config --link-libtool --libs` `$apr_config --link-libtool --libs`"
++libs="`$apu_config --link-libtool` `$apr_config --link-libtool`"
+ APR_ADDTO(SERF_LIBS, [$libs])
+ AC_SUBST(SERF_LIBS)
+ 
