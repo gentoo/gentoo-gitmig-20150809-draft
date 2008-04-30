@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.3 2008/04/19 11:59:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.4 2008/04/30 20:55:03 hollow Exp $
 
 inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
@@ -21,7 +21,13 @@ DEPEND=">=dev-util/subversion-1.3
 
 need-kde 3.3
 
-PATCHES="${FILESDIR}/${P}-as-needed.patch"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-subversion-1.5.patch
+}
 
 src_compile() {
 	local myconf
