@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.2 2007/04/24 14:40:37 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.3 2008/04/30 22:01:06 nyhm Exp $
 
 inherit eutils games
 
@@ -35,6 +35,7 @@ src_unpack() {
 		cp ${d}/Makefile.Linux ${d}/Makefile || die "cp ${d}/Makefile failed"
 	done
 
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "s:/usr/bin:${GAMES_BINDIR}:" \
 		-e "/strip/d" \
@@ -65,8 +66,9 @@ src_compile() {
 
 src_install() {
 	dodir "${GAMES_BINDIR}"
-	make ROOT="${D}" install || die "make install failed"
-	cp -r sounds/ "${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
+	emake ROOT="${D}" install || die "emake install failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r sounds || die "doins failed"
 	dodoc CHANGELOG README
 	prepgamesdirs
 }
