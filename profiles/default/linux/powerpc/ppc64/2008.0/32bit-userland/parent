@@ -1,3 +1,2 @@
 ..
-../../../../../../arch/powerpc/ppc32
-../../../../../../features/32bit-userland
+../../../../../../arch/powerpc/ppc64/32ul
