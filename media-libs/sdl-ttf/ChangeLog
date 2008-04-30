@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.39 2008/04/30 13:22:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.40 2008/04/30 14:22:34 fmccor Exp $
+
+  30 Apr 2008; Ferris McCormick <fmccor@gentoo.org> sdl-ttf-2.0.9.ebuild:
+  Sparc stable, Bug #219728.
 
   30 Apr 2008; nixnut <nixnut@gentoo.org> sdl-ttf-2.0.9.ebuild:
   Stable on ppc wrt bug 219728
