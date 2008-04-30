@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.3 2006/06/29 15:22:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.4 2008/04/30 22:14:04 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Rework of Sasteroids using SDL"
 HOMEPAGE="http://sdlsas.sourceforge.net/"
@@ -13,9 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/opengl
-	>=media-libs/sdl-mixer-1.2.0
+DEPEND="virtual/opengl
+	media-libs/sdl-mixer
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-ttf"
@@ -25,6 +24,7 @@ S=${WORKDIR}/SDLSasteroids-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 		#-e '34 d' \
 	sed -i \
 		-e 's/make /$(MAKE) /' \
@@ -41,11 +41,11 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/man/man6/
-	make \
+	emake \
 		GAMEDIR="${D}/${GAMES_DATADIR}/${PN}" \
 		BINDIR="${D}/${GAMES_BINDIR}" \
 		MANDIR="${D}/usr/share/man/" \
-		install || die "make install failed"
+		install || die "emake install failed"
 	dodoc ChangeLog README README.xast TODO description
 	prepgamesdirs
 }
