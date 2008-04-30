@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/xcin
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.16 2007/02/21 22:15:36 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.17 2008/04/30 13:20:32 drac Exp $
+
+*xcin-2.5.3_pre3-r2 (30 Apr 2008)
+
+  30 Apr 2008; Samuli Suominen <drac@gentoo.org> -xcin-2.5.2.3.ebuild,
+  -xcin-2.5.3_pre2.ebuild, +xcin-2.5.3_pre3-r2.ebuild:
+  Version bump wrt #219349, closing also #159660. Commit for treecleaners to
+  avoid removing; thanks to Peter Alfredsen.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
