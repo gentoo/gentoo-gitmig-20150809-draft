@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0.ebuild,v 1.1 2008/04/29 22:21:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0.ebuild,v 1.2 2008/04/30 01:18:01 mr_bones_ Exp $
 
 inherit eutils fortran autotools
 
@@ -69,7 +69,6 @@ src_test() {
 	cd examples && make test \
 		|| die "Tests failed"
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
