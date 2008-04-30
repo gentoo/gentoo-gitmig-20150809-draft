@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.3 2008/04/20 14:16:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.4 2008/04/30 15:17:08 nixnut Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -29,7 +29,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPS}"
 IUSE=""
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
 

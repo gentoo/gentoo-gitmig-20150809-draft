@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.9 2008/04/05 00:57:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.4-r1.ebuild,v 1.10 2008/04/30 15:15:41 nixnut Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/commons/validator/source/${MY_P}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
 IUSE=""
 
