@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.51 2008/03/18 01:05:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.52 2008/04/30 15:13:33 nyhm Exp $
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/scorched3d-41.3-gcc43.patch, scorched3d-41.3-r1.ebuild:
+  Patch to fix building with gcc-4.3 from Peter Alfredsen, bug #219502
 
 *scorched3d-41.3-r1 (18 Mar 2008)
 
