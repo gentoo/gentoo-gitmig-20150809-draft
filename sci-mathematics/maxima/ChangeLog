@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.53 2008/04/29 08:54:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.54 2008/04/30 11:00:50 bicatali Exp $
+
+*maxima-5.15.0-r1 (30 Apr 2008)
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/50maxima-gentoo.el, +maxima-5.15.0-r1.ebuild:
+  Include imaxima, and blocks old imaxima, thanks Andrey Grozin.
 
 *maxima-5.15.0 (29 Apr 2008)
 
