@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.16 2008/02/22 14:06:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.17 2008/04/30 11:02:37 bicatali Exp $
+
+  29 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  imaxima-0.98-r1.ebuild, imaxima-0.99.ebuild:
+  Added dependency blocking to maxima version >= 5.15, since imaxima is
+  included in these later versions
 
 *imaxima-0.99 (22 Feb 2008)
 
