@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/haskell-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.16 2008/04/26 11:15:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.17 2008/04/30 15:58:59 nixnut Exp $
+
+  30 Apr 2008; nixnut <nixnut@gentoo.org> haskell-mode-1.11.ebuild:
+  Stable on ppc wrt bug 219332
 
   26 Apr 2008; Hans de Graaff <graaff@gentoo.org> haskell-mode-1.11.ebuild:
   Mark stable on amd64 , bug #219332

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/latin-unity
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-unity/ChangeLog,v 1.15 2008/04/26 11:16:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-unity/ChangeLog,v 1.16 2008/04/30 16:00:14 nixnut Exp $
+
+  30 Apr 2008; nixnut <nixnut@gentoo.org> latin-unity-1.20.ebuild:
+  Stable on ppc wrt bug 219332
 
   26 Apr 2008; Hans de Graaff <graaff@gentoo.org> latin-unity-1.20.ebuild:
   Mark stable on amd64 , bug #219332

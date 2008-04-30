@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/auctex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.17 2008/04/26 11:07:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.18 2008/04/30 15:53:08 nixnut Exp $
+
+  30 Apr 2008; nixnut <nixnut@gentoo.org> auctex-1.47.ebuild:
+  Stable on ppc wrt bug 219332
 
   26 Apr 2008; Hans de Graaff <graaff@gentoo.org> ChangeLog:
   Mark stable on amd64 , bug #219332

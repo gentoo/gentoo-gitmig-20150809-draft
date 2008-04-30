@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/docbookide-0.08.ebuild,v 1.4 2008/04/26 11:11:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/docbookide-0.08.ebuild,v 1.5 2008/04/30 15:55:35 nixnut Exp $
 
 SLOT="0"
 IUSE=""
@@ -11,6 +11,6 @@ RDEPEND="app-xemacs/xemacs-base
 app-xemacs/xemacs-ispell
 app-xemacs/mail-lib
 "
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
