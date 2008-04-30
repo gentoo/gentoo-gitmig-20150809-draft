@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.6 2007/02/24 08:05:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.7 2008/04/30 22:07:30 nyhm Exp $
 
 inherit eutils games
 
@@ -27,7 +27,9 @@ src_unpack() {
 		-e "s:sprites/:${GAMES_DATADIR}/${PN}/sprites/:" \
 		-e "s:levels/:${GAMES_DATADIR}/${PN}/levels/:" \
 		src/sdb.h src/game.cpp || die "setting game paths"
-	epatch "${FILESDIR}"/${P}-endian.patch
+	epatch \
+		"${FILESDIR}"/${P}-endian.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
