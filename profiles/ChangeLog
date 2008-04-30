@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1372 2008/04/30 11:54:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1373 2008/04/30 14:34:43 armin76 Exp $
+
+  30 Apr 2008; Raúl Porcel <armin76@gentoo.org> thirdpartymirrors:
+  Update mirrors
 
   30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> use.desc,
   use.local.desc:
