@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9-r1.ebuild,v 1.1 2008/03/22 20:25:18 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9-r1.ebuild,v 1.2 2008/04/30 15:51:09 nixnut Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="admin"
 
 RDEPEND=">=virtual/jre-1.4
