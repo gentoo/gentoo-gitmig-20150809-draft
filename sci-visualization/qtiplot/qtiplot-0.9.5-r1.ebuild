@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.5.ebuild,v 1.1 2008/04/29 14:55:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.5-r1.ebuild,v 1.1 2008/04/30 15:37:36 bicatali Exp $
 
 EAPI="1"
 inherit eutils multilib qt4
@@ -47,6 +47,10 @@ src_unpack() {
 		-e '/manual/d'\
 		-e '/3rd/d' \
 		qtiplot.pro || die "sed qtiplot.pro failed"
+	sed -i \
+		-e '/manual/d' \
+		-e "s:doc/${PN}:doc/${PF}:" \
+		qtiplot/qtiplot.pro || die " sed for qtiplot/qtiplot.pro failed"
 
 	if ! use python; then
 		sed -i \
@@ -80,7 +84,6 @@ src_install() {
 
 	newicon qtiplot_logo.png qtiplot.png
 	make_desktop_entry qtiplot QtiPlot qtiplot
-	doman qtiplot.1 || die "doman failed"
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}/html

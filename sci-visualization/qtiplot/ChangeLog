@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.21 2008/04/29 14:55:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.22 2008/04/30 15:37:36 bicatali Exp $
+
+*qtiplot-0.9.5-r1 (30 Apr 2008)
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/qtiplot-0.9.5-profile.patch, +qtiplot-0.9.5-r1.ebuild:
+  Fixed installation for binary and translations, closing bug #219845
 
 *qtiplot-0.9.5 (29 Apr 2008)
 

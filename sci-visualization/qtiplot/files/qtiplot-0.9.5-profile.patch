@@ -1,5 +1,14 @@
 --- qtiplot/qtiplot.pro.orig	2008-04-24 18:54:47.622675411 +0000
-+++ qtiplot/qtiplot.pro	2008-04-24 19:01:18.639824832 +0000
++++ qtiplot/qtiplot.pro	2008-04-30 15:23:34.648191881 +0000
+@@ -20,7 +20,7 @@
+ # Uncomment the following line if you want to perform a custom installation using 
+ # the *.path variables defined bellow. 
+ ######################################################################################
+-#CONFIG          += CustomInstall
++CONFIG          += CustomInstall
+ 
+ CONFIG          += release
+ #CONFIG          += debug
 @@ -30,12 +30,11 @@
  #!!! Warning: You must modify these paths according to your computer settings
  #############################################################################
