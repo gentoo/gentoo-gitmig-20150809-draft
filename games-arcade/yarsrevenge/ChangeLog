@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/yarsrevenge
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.8 2008/03/25 13:18:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.9 2008/04/30 22:56:34 nyhm Exp $
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/yarsrevenge-0.99-gcc43.patch, yarsrevenge-0.99.ebuild:
+  Fix building with gcc-4.3
 
   25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   yarsrevenge-0.99.ebuild:
