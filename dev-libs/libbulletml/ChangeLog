@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libbulletml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.6 2007/02/09 07:29:49 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.7 2008/04/30 23:16:43 nyhm Exp $
+
+  30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/libbulletml-0.0.6-gcc43.patch, libbulletml-0.0.6.ebuild:
+  Fix building with gcc-4.3
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
