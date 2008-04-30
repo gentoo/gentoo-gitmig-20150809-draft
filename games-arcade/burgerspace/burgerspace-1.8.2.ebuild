@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.2.ebuild,v 1.2 2008/04/08 01:47:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.8.2.ebuild,v 1.3 2008/04/30 16:57:57 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -23,12 +23,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	AT_M4DIR=macros eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS HACKING NEWS README THANKS TODO
+	dodoc AUTHORS NEWS README THANKS
 	prepgamesdirs
 }

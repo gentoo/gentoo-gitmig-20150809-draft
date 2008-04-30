@@ -1,0 +1,22 @@
+--- src/BurgerSpaceEngine.cpp
++++ src/BurgerSpaceEngine.cpp
+@@ -26,16 +26,17 @@
+ 
+ #include <flatzebra/PixmapLoadError.h>
+ 
+-#include <assert.h>
++#include <cassert>
+ #include <fstream>
+ #include <iomanip>
++#include <algorithm>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <dirent.h>
+ #include <time.h>
+-#include <errno.h>
++#include <cerrno>
+ 
+ 
+ /*  Tiles:
