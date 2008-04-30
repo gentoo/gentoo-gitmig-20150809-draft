@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.1-r1.ebuild,v 1.7 2008/02/01 03:50:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.1-r1.ebuild,v 1.8 2008/04/30 23:48:43 dev-zero Exp $
 
 inherit eutils
 
@@ -27,13 +27,16 @@ RDEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fix-locale-longdesc.diff
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-fix-locale-longdesc.diff" \
+		"${FILESDIR}/${P}-project_xml.patch" \
+		"${FILESDIR}/${P}-gcc-4.3.patch"
 }
 
 src_compile() {
 	econf \
-		--with-test-data=${WORKDIR}/${TEST_DATA_P} \
+		--with-test-data="${WORKDIR}/${TEST_DATA_P}" \
 		--enable-static \
 		$(use_enable test tests) \
 		$(use_enable debug) \
@@ -48,7 +51,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO NEWS
 
 	if use doc ; then

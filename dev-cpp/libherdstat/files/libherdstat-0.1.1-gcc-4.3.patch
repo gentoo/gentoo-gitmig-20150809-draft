@@ -1,0 +1,58 @@
+--- herdstat/util/misc.hh.orig	2005-11-02 15:00:46.000000000 +0100
++++ herdstat/util/misc.hh	2008-04-05 04:15:32.745734668 +0200
+@@ -34,6 +34,8 @@
+ 
+ #include <string>
+ #include <map>
++#include <algorithm>
++#include <ctime>
+ 
+ enum color_name_T
+ {
+--- herdstat/util/string.hh.orig	2005-11-02 15:00:46.000000000 +0100
++++ herdstat/util/string.hh	2008-04-05 04:17:57.303614508 +0200
+@@ -35,9 +35,12 @@
+ #include <string>
+ #include <vector>
+ #include <sstream>
++#include <algorithm>
+ #include <cstdarg>
+ #include <cerrno>
+ #include <cctype>
++#include <cstdlib>
++#include <climits>
+ #include <herdstat/exceptions.hh>
+ 
+ namespace herdstat {
+
+--- herdstat/exceptions.cc.orig	2005-11-02 15:00:46.000000000 +0100
++++ herdstat/exceptions.cc	2008-04-05 04:20:52.322830799 +0200
+@@ -27,6 +27,8 @@
+ #include <string>
+ #include <cerrno>
+ #include <cstdarg>
++#include <cstdlib>
++#include <cstring>
+ #include <herdstat/exceptions.hh>
+ 
+ namespace herdstat {
+--- herdstat/util/misc.cc.orig	2005-11-02 15:00:46.000000000 +0100
++++ herdstat/util/misc.cc	2008-04-05 04:25:26.032397691 +0200
+@@ -29,6 +29,7 @@
+ #include <cstdlib>
+ #include <cstdarg>
+ #include <ctime>
++#include <cstring>
+ #include <unistd.h>
+ 
+ #include <herdstat/exceptions.hh>
+--- herdstat/portage/config.cc.orig	2005-11-02 15:00:46.000000000 +0100
++++ herdstat/portage/config.cc	2008-04-05 04:26:49.103038711 +0200
+@@ -24,6 +24,7 @@
+ # include "config.h"
+ #endif
+ 
++#include <cstring>
+ #include <herdstat/util/string.hh>
+ #include <herdstat/portage/config.hh>
+ 

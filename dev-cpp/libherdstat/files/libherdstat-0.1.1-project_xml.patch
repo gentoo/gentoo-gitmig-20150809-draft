@@ -1,0 +1,12 @@
+diff -urNa libherdstat-0.1.1_bck/herdstat/portage/project_xml.cc libherdstat-0.1.1/herdstat/portage/project_xml.cc
+--- libherdstat-0.1.1_bck/herdstat/portage/project_xml.cc	2005-11-02 15:00:46.000000000 +0100
++++ libherdstat-0.1.1/herdstat/portage/project_xml.cc	2008-02-28 12:58:19.000000000 +0100
+@@ -34,7 +34,7 @@
+ namespace herdstat {
+ namespace portage {
+ /*** static members *********************************************************/
+-const char * const project_xml::_baseURL = "http://www.gentoo.org/cgi-bin/viewcvs.cgi/*checkout*/xml/htdocs%s?rev=HEAD&root=gentoo&content-type=text/plain";
++const char * const project_xml::_baseURL = "http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo/xml/htdocs%s?content-type=text/plain";
+ const char * const project_xml::_baseLocal = "%s/gentoo/xml/htdocs/%s";
+ std::set<std::string> project_xml::_parsed;
+ /****************************************************************************/
