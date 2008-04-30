@@ -1,0 +1,124 @@
+gcc-4.3 compatibility, by Belegdol.
+http://www.museek-plus.org/changeset/743
+--- /museek+/trunk/sources/Museek/Museek.cc
++++ /museek+/trunk/sources/Museek/Museek.cc
+@@ -37,4 +37,5 @@
+ #include <queue>
+ #include <vector>
++#include <cstdlib>
+ 
+ using std::string;
+
+--- /museek+/trunk/sources/Museek/DistribManager.cc
++++ /museek+/trunk/sources/Museek/DistribManager.cc
+@@ -27,4 +27,6 @@
+ #define MULOG_DOMAIN "Museek.DM"
+ #include <Muhelp/Mulog.hh>
++
++#include <algorithm>
+ 
+ using std::vector;
+
+
+--- /museek+/trunk/sources/Museek/PeerManager.hh
++++ /museek+/trunk/sources/Museek/PeerManager.hh
+@@ -96,5 +96,5 @@
+ 	inline void set_uploading(Transfer* uploading) { mUploading = uploading; }
+ 	
+-	void push_download(uint path, const std::wstring& path);
++	void push_download(uint path1, const std::wstring& path);
+ 	void flush_downloads();
+ 	
+
+
+--- /museek+/trunk/sources/Museek/TransferManager.cc
++++ /museek+/trunk/sources/Museek/TransferManager.cc
+@@ -37,4 +37,5 @@
+ #include <vector>
+ #include <iostream>
++#include <algorithm>
+ 
+ using std::string;
+
+
+--- /museek+/trunk/sources/Museek/PeerManager.cc
++++ /museek+/trunk/sources/Museek/PeerManager.cc
+@@ -33,4 +33,5 @@
+ #include <queue>
+ #include <vector>
++#include <algorithm>
+ 
+ using std::string;
+
+
+--- /museek+/trunk/sources/Muhelp/string_ext.hh
++++ /museek+/trunk/sources/Muhelp/string_ext.hh
+@@ -51,4 +51,5 @@
+ #include <vector>
+ #include <list>
++#include <cstdlib>
+ 
+ // Split a string into a list of strings
+
+
+--- /museek+/trunk/sources/Muhelp/Mulog.cc
++++ /museek+/trunk/sources/Muhelp/Mulog.cc
+@@ -20,4 +20,6 @@
+ #include <system.h>
+ #include <syslog.h>
++
++#include <cstdlib>
+ 
+ #include <Muhelp/Mulog.hh>
+
+
+--- /museek+/trunk/sources/museekd/main.cc
++++ /museek+/trunk/sources/museekd/main.cc
+@@ -26,4 +26,5 @@
+ #include <Muhelp/Mulog.hh>
+ #include <fstream>
++#include <cstdlib>
+ 
+ using std::string;
+
+
+--- /museek+/trunk/sources/museekd/IfaceConnection.cc
++++ /museek+/trunk/sources/museekd/IfaceConnection.cc
+@@ -29,4 +29,5 @@
+ #include <map>
+ #include <vector>
++#include <cstdlib>
+ 
+ #define MULOG_DOMAIN "museekd.IL"
+
+
+--- /museek+/trunk/sources/Tools/muscan.cc
++++ /museek+/trunk/sources/Tools/muscan.cc
+@@ -27,4 +27,5 @@
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ using std::vector;
+
+
+--- /museek+/trunk/sources/Tools/scanner.cc
++++ /museek+/trunk/sources/Tools/scanner.cc
+@@ -19,4 +19,6 @@
+ 
+ #include <system.h>
++
++#include <cstdlib>
+ 
+ extern "C" {
+
+
+--- /museek+/trunk/sources/Tools/muscand.cc
++++ /museek+/trunk/sources/Tools/muscand.cc
+@@ -9,4 +9,6 @@
+ 
+ #include <iostream>
++#include <cstdlib>
++#include <algorithm>
+ 
+ using std::string;

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r2.ebuild,v 1.1 2008/02/16 14:33:07 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r3.ebuild,v 1.1 2008/04/30 21:09:32 coldwind Exp $
 
 inherit qt3 eutils distutils multilib
 
@@ -37,6 +37,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-optional-deps.patch"
 	epatch "${FILESDIR}/${P}-post_release_fixes.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	sed -i -e "s:join('lib':join('$(get_libdir)':g" \
 		*/CMakeLists.txt || die "sed failed"
 }
@@ -78,6 +79,7 @@ src_install() {
 	distutils_src_install
 
 	# fix wrong path to make musetup-gtk working, #193444, #210364
+	dodir /usr/share/museek/museekd
 	mv "${D}"/usr/share/{,museek/museekd/}config.xml.tmpl
 }
 
