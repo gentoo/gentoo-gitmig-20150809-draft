@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2-r1.ebuild,v 1.3 2008/04/29 16:30:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2-r1.ebuild,v 1.4 2008/04/30 22:26:26 ranger Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
 src_unpack() {
