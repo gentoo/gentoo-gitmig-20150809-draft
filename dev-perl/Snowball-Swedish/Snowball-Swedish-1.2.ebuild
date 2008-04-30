@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.2.ebuild,v 1.6 2007/11/10 14:33:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.2.ebuild,v 1.7 2008/04/30 15:22:03 tove Exp $
 
 inherit perl-module multilib
 
@@ -15,7 +15,9 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl"
+DEPEND="${RDEPEND}
+	dev-perl/module-build"
 
 src_install() {
 	perl-module_src_install
@@ -26,10 +28,10 @@ src_install() {
 	eval `perl '-V:archname'`
 	myarch=${archname}
 
-	if [ -f ${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl ]; then
+	if [ -f "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl ]; then
 		mv \
-		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl \
-		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/se-stemmer.pl
+		"${D}"/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl \
+		"${D}"/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/se-stemmer.pl
 	fi
 }
 
