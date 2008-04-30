@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kradio
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.15 2008/02/13 10:41:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.16 2008/04/30 07:37:24 phosphan Exp $
+
+  30 Apr 2008; Patrick Kursawe <phosphan@gentoo.org>
+  -files/1.0b_beta3-includehints.patch, -kradio-1.0b_beta3.ebuild:
+  Removing obsolete versions. Leaving 0.3 here because of keywords missing in
+  later versions.
 
 *kradio-20061112 (11 Feb 2008)
 
