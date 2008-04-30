@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.67 2008/04/20 10:37:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.68 2008/04/30 14:41:45 mabi Exp $
+
+  30 Apr 2008; Matti Bickel <mabi@gentoo.org> lshw-02.12.01b.ebuild:
+  ppc stable (bug #217783)
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> lshw-02.12.01b.ebuild:
   sparc stable wrt #217783
