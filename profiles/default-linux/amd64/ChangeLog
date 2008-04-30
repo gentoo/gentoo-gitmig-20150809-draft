@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.141 2008/04/21 11:28:02 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.142 2008/04/30 11:44:51 bicatali Exp $
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  2006.0/no-multilib/package.use.mask, 2006.1/no-multilib/package.use.mask,
+  2007.0/no-multilib/package.use.mask:
+  Added masked ifc flag for no-multilib on sci-libs/acml
 
   21 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
   Add ->=net-im/telepathy-mission-control-4.65 to Gnome 2.22 mask.

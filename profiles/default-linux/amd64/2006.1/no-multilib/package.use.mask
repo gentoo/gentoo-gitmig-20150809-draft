@@ -8,3 +8,7 @@ rox-extra/archive rar
 
 # ati-drivers is masked
 x11-base/xorg-server video_cards_fglrx
+
+# Apr 28, 2008 Sébastien Fabbro <bicatali@gentoo.org>
+# ifc masked
+sci-libs/acml ifc
