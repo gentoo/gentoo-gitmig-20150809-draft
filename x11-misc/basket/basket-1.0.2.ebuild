@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-1.0.2.ebuild,v 1.5 2008/02/19 12:21:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-1.0.2.ebuild,v 1.6 2008/04/30 15:43:06 mattepiu Exp $
 
 inherit kde
 
@@ -18,6 +18,8 @@ DEPEND="crypt? ( >=app-crypt/gpgme-1.0 )"
 RDEPEND="${DEPEND}"
 
 need-kde 3.3
+
+PATCHES[0]="${FILESDIR}/${P}-gcc43.patch"
 
 src_unpack() {
 	kde_src_unpack

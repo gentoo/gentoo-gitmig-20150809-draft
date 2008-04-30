@@ -1,0 +1,22 @@
+diff -Nrua basket-1.0.2.orig/src/backup.cpp basket-1.0.2/src/backup.cpp
+--- basket-1.0.2.orig/src/backup.cpp	2007-04-12 13:39:18.000000000 +0200
++++ basket-1.0.2/src/backup.cpp	2007-05-29 15:20:47.000000000 +0200
+@@ -43,6 +43,7 @@
+ #include <kfiledialog.h>
+ #include <kprogress.h>
+ #include <kmessagebox.h>
++#include <cstdlib>
+ #include <unistd.h> // usleep()
+ 
+ /**
+diff -Nrua basket-1.0.2.orig/src/bnpview.cpp basket-1.0.2/src/bnpview.cpp
+--- basket-1.0.2.orig/src/bnpview.cpp	2007-04-01 12:41:23.000000000 +0200
++++ basket-1.0.2/src/bnpview.cpp	2007-05-29 15:20:32.000000000 +0200
+@@ -49,6 +49,7 @@
+ #include <kkeydialog.h>
+ #include <dcopclient.h>
+ #include <kdebug.h>
++#include <cstdlib>
+ #include <iostream>
+ #include "bnpview.h"
+ #include "basket.h"

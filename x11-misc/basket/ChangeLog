@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.38 2008/02/19 12:21:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.39 2008/04/30 15:43:06 mattepiu Exp $
+
+  30 Apr 2008; Matteo Azzali <mattepiu@gentoo.org>
+  +files/basket-1.0.2-gcc43.patch, metadata.xml, basket-1.0.2.ebuild:
+  Fixed metadata and added patch for gcc-4.3 as per bug 219807 , thanks to
+  Peter Alfredsen.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> basket-1.0.2.ebuild:
   Fix .desktop entry, thanks to Thomas Anderson in bug 204854.
