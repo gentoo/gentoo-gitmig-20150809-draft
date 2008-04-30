@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.19 2008/04/26 15:54:15 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.20 2008/04/30 17:50:42 klausman Exp $
+
+  30 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
+  qtcurve-qt4-0.58.0.ebuild:
+  Keyworded on alpha, bug #218436
 
   26 Apr 2008; Dawid Węgliński <cla@gentoo.org> qtcurve-qt4-0.57.1.ebuild:
   Stable on x86 (bug #218435)
