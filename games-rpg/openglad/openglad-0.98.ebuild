@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.9 2008/02/29 19:35:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.10 2008/04/30 23:45:33 nyhm Exp $
 
 inherit eutils games
 
@@ -11,17 +11,19 @@ SRC_URI="mirror://sourceforge/snowstorm/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/sdl-mixer-1.2.5
-	>=media-libs/sdl-image-1.2.2
-	>=media-libs/libsdl-1.2.0"
+DEPEND="media-libs/sdl-mixer
+	media-libs/sdl-image
+	media-libs/libsdl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gladpack.c.patch
+	cd "${S}"
+	epatch \
+		"${FILESDIR}"/${PV}-gladpack.c.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
@@ -34,13 +36,12 @@ src_compile() {
 }
 
 src_install() {
-	make install \
-		DESTDIR=${D} \
-		docdir=${D}/usr/share/doc/${PF} \
-		|| die "make install failed"
+	emake install \
+		DESTDIR="${D}" \
+		docdir="${D}"/usr/share/doc/${PF} \
+		|| die "emake install failed"
 	prepalldocs
+	doicon "${DISTDIR}"/${PN}.png
+	make_desktop_entry openglad OpenGladiator
 	prepgamesdirs
-
-	doicon ${DISTDIR}/${PN}.png
-	make_desktop_entry openglad "OpenGladiator" ${PN}
 }
