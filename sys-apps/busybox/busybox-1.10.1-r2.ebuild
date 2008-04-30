@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.10.1-r1.ebuild,v 1.2 2008/04/27 03:32:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.10.1-r2.ebuild,v 1.1 2008/04/30 17:17:34 solar Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -54,7 +54,7 @@ else
 	MY_P=${PN}-${PV/_/-}
 	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
 fi
-SRC_URI="${SRC_URI} mirror://gentoo/busybox-patches-1.10.1.tar.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/busybox-1.10.1-20080430_09_28.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -83,7 +83,7 @@ src_unpack() {
 	unset KBUILD_OUTPUT #88088
 
 	unpack ${MY_P}.tar.bz2
-	unpack busybox-patches-1.10.1.tar.bz2
+	unpack busybox-1.10.1-20080430_09_28.tar.bz2
 	cd "${S}"
 
 	# patches go here!
@@ -91,6 +91,7 @@ src_unpack() {
 	# include this upstream later..
 	epatch "${FILESDIR}"/busybox-devmem.patch
 	# bug fixes. http://busybox.net/downloads/fixes-1.10.1/
+	rm -f "${WORKDIR}"/patches/busybox-1.10.1-proc.patch
 	epatch "${WORKDIR}"/patches/*.patch
 
 	# work around broken ass powerpc compilers
