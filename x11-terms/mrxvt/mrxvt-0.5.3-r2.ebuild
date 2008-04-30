@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.1.ebuild,v 1.9 2008/04/30 07:02:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.3-r2.ebuild,v 1.1 2008/04/30 07:02:27 nelchael Exp $
 
 inherit eutils
-
-IUSE="debug png jpeg session truetype menubar"
 
 DESCRIPTION="Multi-tabbed rxvt clone with XFT, transparent background and CJK support"
 HOMEPAGE="http://materm.sourceforge.net/"
@@ -12,20 +10,33 @@ SRC_URI="mirror://sourceforge/materm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~mips ppc x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~x86"
+
+LINGUAS_IUSE="linguas_el linguas_ja linguas_ko linguas_th linguas_zh_CN linguas_zh_TW"
+IUSE="debug png jpeg session truetype menubar utempter xpm ${LINGUAS_IUSE}"
 
 RDEPEND="png? ( media-libs/libpng )
+	utempter? ( sys-libs/libutempter )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( virtual/xft
 		media-libs/fontconfig
 		media-libs/freetype )
 	x11-libs/libX11
 	x11-libs/libXt
-	x11-libs/libXpm
+	xpm? ( x11-libs/libXpm )
 	x11-libs/libXrender"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
+
+src_unpack() {
+
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-no-scroll-with-buffer.patch"
+	epatch "${FILESDIR}/${P}-display-security.patch"
+
+}
 
 src_compile() {
 
@@ -66,11 +77,14 @@ src_compile() {
 
 	econf \
 		--enable-everything \
+		--with-atab-extra=25 \
 		$(use_enable debug) \
-		$(use_enable png) \
 		$(use_enable jpeg) \
+		$(use_enable png) \
+		$(use_enable xpm) \
 		$(use_enable session sessionmgr) \
 		$(use_enable truetype xft) \
+		$(use_enable utempter) \
 		$(use_enable menubar) \
 		${myconf} || die
 
@@ -80,7 +94,10 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} docdir=/usr/share/doc/${PF} install || die
+	make DESTDIR="${D}" docdir=/usr/share/doc/${PF} install || die
+	# Give mrxvt perms to update utmp
+	fowners root:utmp /usr/bin/mrxvt
+	fperms g+s /usr/bin/mrxvt
 	dodoc AUTHORS CREDITS ChangeLog FAQ NEWS README* TODO
 
 }
@@ -91,8 +108,9 @@ pkg_postinst() {
 		einfo
 		einfo "If you experience problems with curses programs, then this is"
 		einfo "most likely because of incorrectly set termcap / terminfo"
-		einfo "entries. If you are unsure how to fix them, then you can try"
-		einfo "setting TERM=xterm."
+		einfo "entries. To fix this you can dry and run (as user)"
+		einfo "	tic /usr/share/doc/${P}/etc/mrxvt.terminfo"
+		einfo "Alternately, run the offending programs with TERM=xterm."
 		einfo
 		einfo "To emerge mrxvt with TERM=xterm by default, set the RXVT_TERM"
 		einfo "environment variable to 'xterm', or your desired default"
