@@ -1,6 +1,15 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.11 2008/04/23 03:25:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.12 2008/04/30 23:34:58 wolf31o2 Exp $
+
+  30 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ppc64/32ul/make.defaults, +ppc64/32ul/parent, +ppc64/32ul/use.mask,
+  +ppc64/64ul/make.defaults, +ppc64/64ul/package.mask, +ppc64/64ul/parent,
+  +ppc64/64ul/use.mask, +ppc64/64ul/virtuals, ppc64/make.defaults:
+  Updated arch/powerpc/ppc64 profile from the snapshot tree. This adds a 32ul
+  and 64ul sub-profile to ppc64, which allows us to clean up everything except
+  for parent and profile.bashrc from default/linux/powerpc/ppc64 profiles.
+  This closes bug #217305.
 
   23 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> ppc64/make.defaults:
   Adding MULTILIB_ABIS and ABI to arch/powerpc/ppc64 and uncommenting multilib
