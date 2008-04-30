@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6.ebuild,v 1.1 2008/04/02 02:33:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6.ebuild,v 1.2 2008/04/30 20:42:07 hollow Exp $
 
 WANT_AUTOCONF="2.5"
 inherit versionator eutils libtool autotools wxwidgets flag-o-matic fdo-mime
@@ -34,13 +34,15 @@ src_unpack() {
 }
 
 src_compile() {
-	einfo "Checking for subversion compiled with neon support..."
-	if built_with_use dev-util/subversion nowebdav; then
-		ewarn "SVN (dev-util/subversion) must be compiled with neon support."
-		ewarn "Please re-emerge subversion without the nowebdav USE flag."
-		die "SVN merged with nowebdav USE flag"
+	einfo "Checking for subversion compiled with WebDAV support..."
+	if ! built_with_use --missing true -o dev-util/subversion webdav-neon webdav-serf || \
+	built_with_use --missing false dev-util/subversion nowebdav; then
+		ewarn "SVN (dev-util/subversion) must be compiled with WebDAV support."
+		ewarn "Please re-emerge subversion with webdav-neon or webdav-serf USE flag"
+		ewarn "and without the nowebdav USE flag."
+		die "SVN merged without WebDAV support"
 	else
-		einfo "Found neon support; continuing..."
+		einfo "Found WebDAV support; continuing..."
 	fi
 
 	# if you compiled subversion without (the) apache2 (flag) and with the
