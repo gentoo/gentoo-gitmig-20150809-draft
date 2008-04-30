@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.3 2008/04/04 09:48:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.4 2008/04/30 11:52:23 bicatali Exp $
+
+  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  64bit-native/package.use.mask:
+  Added masked ifc flag for no-multilib on sci-libs/acml
 
   04 Apr 2008; Torsten Veller <tove@gentoo.org> 64bit-native/package.mask:
   Removed mask for mail-client/ciphire-mail (#213349)
