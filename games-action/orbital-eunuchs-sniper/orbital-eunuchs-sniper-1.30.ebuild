@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.30.ebuild,v 1.3 2008/03/19 01:11:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.30.ebuild,v 1.4 2008/04/30 20:40:58 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -23,7 +23,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-datadir.patch
+	epatch \
+		"${FILESDIR}"/${P}-datadir.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
