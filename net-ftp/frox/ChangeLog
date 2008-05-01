@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/frox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.13 2008/04/02 07:56:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.14 2008/05/01 13:42:27 dragonheart Exp $
+
+  01 May 2008; Daniel Black <dragonheart@gentoo.org> files/frox.rc:
+  proper naming in rc script as per bug #219151
 
 *frox-0.7.18-r3 (02 Apr 2008)
 
