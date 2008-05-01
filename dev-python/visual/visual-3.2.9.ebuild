@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.10 2007/03/05 03:10:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.11 2008/05/01 14:18:31 maekke Exp $
 
 inherit distutils multilib
 
@@ -54,13 +54,18 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 
 	python_version
 
-	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/cvisualmodule* \
-		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/visual
+	mkdir -p "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/visual/
+	mv "${D}"/usr/lib/python${PYVER}/site-packages/ \
+		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/visual/
 
-	#the vpython script does not work, and is unnecessary
-	rm ${D}/usr/bin/vpython
+	#the vpython script does not work, and is unnecessary.
+	#Also nuke directories that are empty so we don't have
+	#empty directories hanging around.
+	rm -rf "${D}"/usr/bin/
+	rm -rf "${D}"/usr/lib/
+
 }

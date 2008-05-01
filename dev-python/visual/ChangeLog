@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/visual
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.17 2007/12/25 16:12:53 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.18 2008/05/01 14:18:31 maekke Exp $
+
+  01 May 2008; Markus Meier <maekke@gentoo.org> visual-3.2.9.ebuild,
+  visual-4_beta0.ebuild:
+  fix quoting and make 3.2.9 multilib-strict, bug #213747
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing tercel from metadata.xml as per #88960.
