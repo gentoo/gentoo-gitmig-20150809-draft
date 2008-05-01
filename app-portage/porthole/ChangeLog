@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/porthole
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.29 2007/05/19 16:39:58 welp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.30 2008/05/01 20:19:41 fuzzyray Exp $
+
+*porthole-0.6.0_rc2 (01 May 2008)
+
+  01 May 2008; Paul Varner <fuzzyray@gentoo.org> porthole-0.5.0.ebuild,
+  +porthole-0.6.0_rc2.ebuild:
+  Version bump. Dropping ~amd64, ~ppc ,~sparc, and ~x86-fbsd keywords. This
+  version works fine on my x86 box, but segfaults on my AMD64 box. I don't
+  have the hardware to test the other architectures. Removed dodoc COPYING
+  from ebuilds.
 
   19 May 2007; Peter Weller <welp@gentoo.org> porthole-0.5.0.ebuild:
   Keyworded ~x86-fbsd

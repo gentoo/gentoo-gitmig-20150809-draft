@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.5.0.ebuild,v 1.5 2008/05/01 20:19:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.0_rc2.ebuild,v 1.1 2008/05/01 20:19:41 fuzzyray Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/porthole/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~x86"
 IUSE="debug nls"
 
 RDEPEND=">=dev-lang/python-2.3
@@ -29,6 +29,8 @@ src_install() {
 	dodoc TODO README NEWS AUTHORS MANIFEST
 	keepdir /var/log/porthole
 	fperms g+w /var/log/porthole
+	keepdir /var/db/porthole
+	fperms g+w /var/db/porthole
 	# Compile localizations if necessary
 	if use nls ; then
 		cd "${D}"/usr/share/porthole
@@ -38,4 +40,5 @@ src_install() {
 
 pkg_preinst() {
 	chgrp portage "${D}"/var/log/porthole
+	chgrp portage "${D}"/var/db/porthole
 }
