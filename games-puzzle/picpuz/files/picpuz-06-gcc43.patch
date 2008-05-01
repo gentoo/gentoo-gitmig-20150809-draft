@@ -1,0 +1,13 @@
+--- zlib.h
++++ zlib.h
+@@ -374,8 +374,8 @@
+ 
+ typedef int zdialog_event(zdialog *zd, int widget);                        //  widget event callback function
+ typedef int zdialog_compl(zdialog *zd, int stat);                          //  dialog completion callback function
+-int zdialog_run(zdialog *zd, zdialog_event func = null,                    //  run dialog with optional callbacks
+-                             zdialog_compl func = null);                   //  (completion func >> non-modal dialog)
++int zdialog_run(zdialog *zd, zdialog_event evfunc = null,                    //  run dialog with optional callbacks
++                             zdialog_compl compfunc = null);                   //  (completion func >> non-modal dialog)
+ 
+ int zdialog_destroy(zdialog *zd);                                          //  destroy dialog (zdialog caller resp.)
+ 
