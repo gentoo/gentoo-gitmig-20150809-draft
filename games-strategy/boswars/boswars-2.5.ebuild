@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.5.ebuild,v 1.1 2008/03/02 07:58:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.5.ebuild,v 1.2 2008/05/01 00:21:34 nyhm Exp $
 
 inherit eutils games
 
@@ -31,11 +31,17 @@ src_unpack() {
 	unpack ${A/bos.png}
 	cd "${S}"
 	rm -f doc/{README-SDL.txt,guichan-copyright.txt}
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		engine/include/stratagus.h \
-		|| die "sed failed"
+		|| die "sed stratagus.h failed"
+	sed -i \
+		-e "/-O2/s:-O2.*math:${CXXFLAGS} -Wall:" \
+		SConstruct \
+		|| die "sed SConstruct failed"
 }
 
 src_compile() {
