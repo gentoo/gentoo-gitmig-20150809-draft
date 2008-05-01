@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.1 2008/05/01 05:19:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.2 2008/05/01 16:37:40 mr_bones_ Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -201,7 +201,7 @@ src_install() {
 		PREFIX="${D}"usr INST_DIR="${D}"usr/${MY_PM} \
 		|| die "make install failed!"
 
-	# 
+	#
 	sed -i -e "s@${D}@/@" "${D}"usr/bin/${MY_PM}
 
 	# Grass Extension Manager conflicts with ruby gems
