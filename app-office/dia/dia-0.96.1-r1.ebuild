@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96.1-r1.ebuild,v 1.2 2008/05/01 14:11:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96.1-r1.ebuild,v 1.3 2008/05/01 14:30:35 armin76 Exp $
 
 inherit eutils gnome2 libtool autotools versionator python
 
@@ -13,7 +13,7 @@ MY_PV_MM=$(get_version_component_range 1-2 )
 SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 # the doc USE flag doesn't seem to do anything without docbook2html
 IUSE="cairo doc gnome gnome-print png python zlib"
 

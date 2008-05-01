@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.101 2008/05/01 14:11:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.102 2008/05/01 14:30:35 armin76 Exp $
+
+  01 May 2008; Raúl Porcel <armin76@gentoo.org> dia-0.96.1-r1.ebuild:
+  alpha/ia64/sparc stable wrt #191673
 
   01 May 2008; nixnut <nixnut@gentoo.org> dia-0.96.1-r1.ebuild:
   Stable on ppc wrt bug 191673
