@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.20 2008/01/03 20:02:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.21 2008/05/01 14:28:34 maekke Exp $
+
+  01 May 2008; Markus Meier <maekke@gentoo.org> pyx-0.10.ebuild:
+  amd64/x86 stable
 
   03 Jan 2008; Ali Polatel <hawking@gentoo.org> -files/pyx-0.7.1.patch,
   -files/pyx-0.8.1.patch, -files/pyx-0.9.patch, -pyx-0.6.3.ebuild,
