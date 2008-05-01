@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.13 2007/10/07 07:17:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.14 2008/05/01 15:23:02 ulm Exp $
 
 inherit elisp eutils
 
 TAMAGO_CANNA="canna-20011204.diff"
 
 DESCRIPTION="Emacs Backend for Sj3 Ver.2, FreeWnn, Wnn6 and Canna"
-HOMEPAGE="http://www.m17n.org/tamago/"
+HOMEPAGE="http://www.m17n.org/tamago/index.en.html"
 SRC_URI="ftp://ftp.m17n.org/pub/tamago/${P}.tar.gz
 	http://cgi18.plala.or.jp/nyy/canna/${TAMAGO_CANNA}.gz
 	mirror://gentoo/${P}-canna-gentoo.patch.gz"
@@ -24,10 +24,9 @@ RDEPEND="canna? ( app-i18n/canna )"
 SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	unpack ${TAMAGO_CANNA}.gz
+	unpack ${A}
 
-	epatch ${DISTDIR}/${P}-canna-gentoo.patch.gz
+	epatch ${P}-canna-gentoo.patch
 	epatch ${TAMAGO_CANNA}
 }
 
