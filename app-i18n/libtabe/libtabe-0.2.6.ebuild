@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.6.ebuild,v 1.2 2008/04/30 13:29:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.6.ebuild,v 1.3 2008/05/01 14:33:20 maekke Exp $
 
 inherit eutils libtool autotools multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/libt/libtabe/${P/-/_}.orig.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/db-4.5

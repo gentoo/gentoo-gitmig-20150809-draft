@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r2.ebuild,v 1.1 2008/04/30 13:20:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r2.ebuild,v 1.2 2008/05/01 14:36:48 maekke Exp $
 
 inherit multilib eutils autotools libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/x/${PN}/${MY_P}.orig.tar.gz
 
 LICENSE="XCIN GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="debug nls unicode"
 
 RDEPEND=">=sys-libs/db-4.5
