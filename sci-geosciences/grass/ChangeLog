@@ -1,6 +1,16 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.50 2008/03/22 03:52:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.51 2008/05/01 05:19:47 nerdboy Exp $
+
+*grass-6.2.3 (01 May 2008)
+
+  01 May 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.2.3-html-nonviz.patch,
+  +files/grass-6.2.3-html-nviz-fix.patch, -grass-6.2.1-r1.ebuild,
+  +grass-6.2.3.ebuild:
+  Refined and updated for testing and stablizing; fixes bugs 217873 and 
+  219764.  Thanks to Martin von Gagern <Martin.vGagern@gmx.net> for the
+  updated patches and other suggestions.
 
   22 Mar 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.1-r1.ebuild:
   Minor cleanup of desktop stuff and adding ~ppc64 keyword back (gdal

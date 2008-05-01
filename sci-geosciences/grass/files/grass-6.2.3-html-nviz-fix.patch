@@ -1,0 +1,10 @@
+--- tools/build_html_index.sh.orig	2007-11-02 10:50:14.000000000 +0100
++++ tools/build_html_index.sh	2008-04-16 00:12:28.000000000 +0200
+@@ -127,6 +127,7 @@
+ 
+ ################
+ 
++mkdir -p $HTMLDIR/nviz
+ #copy over CSS:
+ cp -f grassdocs.css $HTMLDIR/
+ cp -f grassdocs.css $HTMLDIR/nviz/

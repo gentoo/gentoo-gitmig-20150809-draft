@@ -1,0 +1,10 @@
+--- tools/build_html_index.sh.orig	2007-11-02 10:50:14.000000000 +0100
++++ tools/build_html_index.sh	2008-04-16 00:16:08.000000000 +0200
+@@ -132 +131,0 @@
+-cp -f grassdocs.css $HTMLDIR/nviz/
+@@ -135 +133,0 @@
+-cp -f grass.smlogo.gif grass_logo.png $HTMLDIR/nviz/
+@@ -166 +163,0 @@
+-echo "<tr><td>&nbsp;&nbsp;<a href=\"nviz.html\">nviz</a> </td><td>visualization suite</td></tr>" >> $FULLINDEX
+@@ -248 +244,0 @@
+-echo "<li><a href=\"nviz.html\">nviz</a> visualization and animation tool</li>" >> $FILENAME

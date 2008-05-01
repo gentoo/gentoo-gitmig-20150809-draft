@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1-r1.ebuild,v 1.3 2008/03/22 04:48:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.1 2008/05/01 05:19:47 nerdboy Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 	)"
 
-src_unpack() {
+pkg_setup() {
 	local myblas
 	if use gmath; then
 		for d in $(eselect lapack show); do myblas=${d}; done
@@ -105,25 +105,23 @@ src_unpack() {
 		ewarn "GRASS OpenGL support needs X (will also pull in Tcl/Tk)."
 		die "Please set the X useflag."
 	fi
+}
 
-	if use X && built_with_use dev-lang/tcl threads; then
-		ewarn "GRASS nviz will not work with Tcl compiled with threads!"
-		ewarn "Please disable either opengl or tcl threads."
-		die "Emerge TCL without threads."
-	fi
-
-	if use X && built_with_use dev-lang/tk threads; then
-		ewarn "GRASS nviz will not work with Tk compiled with threads!"
-		ewarn "Please disable either opengl or tk threads."
-		die "Emerge tk without threads."
-	fi
-
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	use ffmpeg && epatch "${FILESDIR}"/${P}-ffmpeg-fix.patch
+
 	epatch rpm/fedora/grass-readline.patch
-	elibtoolize
-	elog "Grass Home is ${MY_PM}"
+
+	if use opengl; then
+	    epatch "${FILESDIR}"/${P}-html-nviz-fix.patch
+	else
+	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
+	fi
+
+	# patch missing math functions (yes, this is still needed)
+	sed -i -e "s:\$(EXTRA_LIBS):\$(EXTRA_LIBS) \$(MATHLIB):g" include/Make/Shlib.make
+	echo "MATHLIB=-lm" >> include/Make/Rules.make
 }
 
 src_compile() {
@@ -144,13 +142,11 @@ src_compile() {
 	fi
 
 	if use opengl; then
-	    epatch "${FILESDIR}"/${P}-html-nviz-fix.patch
 	    myconf="${myconf} --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
 	    if use glw; then
 		myconf="${myconf} --with-glw"
 	    fi
 	else
-	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
 	    myconf="${myconf} --without-opengl --without-glw"
 	fi
 
@@ -183,6 +179,8 @@ src_compile() {
 	econf ${myconf} --with-libs=/usr/$(get_libdir) \
 		$(use_enable amd64 64bit) \
 		$(use_with fftw) \
+		$(use_with gmath blas) \
+		$(use_with gmath lapack) \
 		$(use_with jpeg) \
 		$(use_enable largefile) \
 		$(use_with opengl motif) \
@@ -193,20 +191,18 @@ src_compile() {
 		$(use_with python) \
 		$(use_with readline) \
 		$(use_with tiff) || die "configure failed!"
-	# patch missing math functions
-	sed -i -e "s:EXTRA_LIBS=:EXTRA_LIBS=-lm :g" "${S}"/lib/gmath/Makefile
-	sed -i -e "s:EXTRA_LIBS = :EXTRA_LIBS = -lm :g" "${S}"/lib/gis/Makefile
 
 	emake -j1 || die "emake failed!"
 }
 
 src_install() {
+	elog "Grass Home is ${MY_PM}"
 	make install UNIX_BIN="${D}"usr/bin BINDIR="${D}"usr/bin \
 		PREFIX="${D}"usr INST_DIR="${D}"usr/${MY_PM} \
 		|| die "make install failed!"
 
-	# This is now generated in the function below
-	rm "${D}"usr/bin/grass62
+	# 
+	sed -i -e "s@${D}@/@" "${D}"usr/bin/${MY_PM}
 
 	# Grass Extension Manager conflicts with ruby gems
 	mv "${D}"usr/bin/gem "${D}"usr/${MY_PM}/bin/
@@ -214,7 +210,6 @@ src_install() {
 	ebegin "Adding env.d and desktop entry for Grass6..."
 	    generate_files
 	    doenvd 99grass-6
-	    dobin ${MY_PM}.sh
 	    if use X; then
 		doicon "${FILESDIR}"/grass_icon.png
 		domenu ${MY_PM}-grass.desktop
@@ -224,6 +219,9 @@ src_install() {
 
 pkg_postinst() {
 	use X && fdo-mime_desktop_database_update
+
+	elog "Note this version re-enables support for threads in Tcl and Tk."
+	elog "Enable the threads USE flag and rebuild to try it."
 }
 
 pkg_postrm() {
@@ -238,22 +236,6 @@ generate_files() {
 	GRASS_HOME="/usr/${MY_PM}"
 	EOF
 
-	cat <<-EOF > grass62.sh
-	######################################################################
-	# MODULE:       GRASS Initialization
-	# AUTHOR(S):    Justin Hickey - Thailand - jhickey@hpcc.nectec.or.th
-	# COPYRIGHT:    (C) 2000-2005 by the GRASS Development Team
-	# This program is free software under the GNU General Public License
-	# (>=v2)
-	#
-	trap "echo 'User break!' ; exit" 2 3 9 15
-	#
-	# Set the GISBASE variable; all arguments are passed to Init.sh
-	GISBASE=/usr/${MY_PM}
-	export GISBASE
-	exec "\$GISBASE/etc/Init.sh" "\$@"
-	EOF
-
 	cat <<-EOF > ${MY_PM}-grass.desktop
 	[Desktop Entry]
 	Encoding=UTF-8
@@ -261,7 +243,7 @@ generate_files() {
 	Name=Grass ${PV}
 	Type=Application
 	Comment=GRASS Open Source GIS, derived from the original US Army Corps of Engineers project.
-	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM}.sh -gui
+	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM} -gui
 	Path=
 	Icon=grass_icon.png
 	Categories=Science;Education;
