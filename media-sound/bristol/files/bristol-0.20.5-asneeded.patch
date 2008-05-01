@@ -1,0 +1,36 @@
+Index: bristol-0.20.5/libbrighton/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbrighton/Makefile.am
++++ bristol-0.20.5/libbrighton/Makefile.am
+@@ -4,5 +4,7 @@ AM_CFLAGS = -Wall -g -I$(srcdir)/../incl
+ libbrighton_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
+ 
+ lib_LTLIBRARIES = libbrighton.la
++libbrighton_la_LIBADD=$(top_builddir)/libbrightonX11/libB11.la -lm
++
+ libbrighton_la_SOURCES = brightonBitmaps.c brightonButton.c brightonC.c brightonColorMgt.c brightonDevice.c brightonDispatch.c brightonDisplay.c brightonDisplayMgt.c brightonEventHandlers.c brightonHammond.c brightonInterface.c brightonKbd.c brightonLayer.c brightonPanelMgt.c brightonPic.c brightonRender.c brightonRotary.c brightonScale.c brightonShadowMgt.c brightonTouchpanel.c brightonVu.c brightonWindowMgt.c brightonXpmRead.c brightonkeymappings.h brightonMenu.c brightonLedBlock.c brightonHButton.c
+ 
+Index: bristol-0.20.5/libbrightonX11/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbrightonX11/Makefile.am
++++ bristol-0.20.5/libbrightonX11/Makefile.am
+@@ -3,6 +3,7 @@ AUTOMAKE_OPTIONS = foreign
+ AM_CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I/usr/X11R6/include/ @BRIGHTON_HAS_XIMAGE@
+ 
+ libB11_la_LDFLAGS= -export-dynamic -version-info @BRISTOL_SO_VERSION@
++libB11_la_LIBADD= -lX11
+ 
+ lib_LTLIBRARIES = libB11.la
+ libB11_la_SOURCES = bColor.c bDisplay.c bEvent.c bRender.c bRoutines.c bWindow.c
+Index: bristol-0.20.5/libbristol/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbristol/Makefile.am
++++ bristol-0.20.5/libbristol/Makefile.am
+@@ -2,6 +2,7 @@ AUTOMAKE_OPTIONS = foreign
+ 
+ AM_CFLAGS = -Wall -g -I$(srcdir)/../include/bristol -I$(srcdir)/../include/slab -DBRISOL_HAS_ALSA=@BRISTOL_HAS_ALSA@
+ libbristol_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
++libbristol_la_LIBADD=$(top_builddir)/libbristolaudio/libbristolaudio.la
+ 
+ lib_LTLIBRARIES = libbristol.la
+ libbristol_la_SOURCES = audioRoutines.c bristolcdefs.c debugging.c mixroutines.c opmgt.c

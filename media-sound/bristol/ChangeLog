@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/bristol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.1 2008/01/27 09:50:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.2 2008/05/01 20:36:53 aballier Exp $
+
+*bristol-0.20.5 (01 May 2008)
+
+  01 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/bristol-0.20.5-asneeded.patch, +files/bristol-0.20.5-cflags.patch,
+  -bristol-0.20.1.ebuild, +bristol-0.20.5.ebuild:
+  Version bump, add some patches to respect user set cflags/ldflags and not
+  fail with asneeded, plus some useflags that can now do something
 
 *bristol-0.20.1 (27 Jan 2008)
 

@@ -1,0 +1,162 @@
+Index: bristol-0.20.5/brighton/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/brighton/Makefile.am
++++ bristol-0.20.5/brighton/Makefile.am
+@@ -1,9 +1,11 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I$(srcdir)/../include/bristol -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I$(srcdir)/../include/bristol -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@
+ 
+-LDFLAGS = -Bdynamic -L../libbrighton/.libs -L../libbristolmidi/.libs -L../libbrightonX11/.libs -L/usr/X11R6/lib -lB11 -lbrighton -lbristolmidi @ALSA_LIBS@ -lX11 -lm -lpthread
+ 
+ bin_PROGRAMS = brighton
++brighton_LDFLAGS = -Bdynamic -L../libbrighton/.libs -L../libbristolmidi/.libs -L../libbrightonX11/.libs -L/usr/X11R6/lib
++brighton_LDADD = -lB11 -lbrighton -lbristolmidi @ALSA_LIBS@ -lX11 -lm -lpthread
++
+ brighton_SOURCES = brightonArp2600.c brightonAxxe.c brighton.c brightonControllers.c brightonDX.c brightonExplorer.c brightonHammondB3.c brightonHammond.c brightonJuno.c brightonMemoryMoog.c brightonMini.c brightonMixer.c brightonMixerMemory.c brightonMixerMenu.c brightonMS20.c brightonOBXa.c brightonOBX.c brightonOdyssey.c brightonPoly6.c brightonPoly.c brightonProphet10.c brightonProphet52.c brightonProphet.c brightonRhodesBass.c brightonRhodes.c brightonRoutines.c brightonSAks.c brightonVox.c brightonKeyboards.h brightonKeys.h brightonMini.h brightonMixer.h brightonMixerMemory.h brightonhelp.h brightonSolina.c brightonRoadRunner.c brightonGranular.c brightonRealistic.c brightonVoxM2.c brightonJupiter.c brightonBitOne.c brightonMaster.c
+ 
+Index: bristol-0.20.5/bristol/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/bristol/Makefile.am
++++ bristol-0.20.5/bristol/Makefile.am
+@@ -1,10 +1,10 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/bristol -I. @BRISTOL_HAS_JACK@ -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ `pkg-config --silence-errors --cflags jack` `pkg-config --silence-errors --cflags alsa`
+-
+-LDFLAGS = -Bdynamic `pkg-config --silence-errors --libs alsa` `pkg-config --silence-errors --libs jack` @ALSA_LIBS@ -L../libbristolmidi/.libs -L../libbristolaudio/.libs -L../libbristol/.libs -lbristolmidi -lbristolaudio -lbristol -lm -lpthread
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/bristol -I. @BRISTOL_HAS_JACK@ -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ @JACK_CFLAGS@ @ALSA_CFLAGS@
+ 
+ bin_PROGRAMS = bristol
++bristol_LDFLAGS = -Bdynamic -L../libbristolmidi/.libs -L../libbristolaudio/.libs -L../libbristol/.libs
++bristol_LDADD = @JACK_LIBS@ @ALSA_LIBS@ -lbristolmidi -lbristolaudio -lbristol -lm -lpthread
+ 
+ bristol_SOURCES = aksdco.c aksenv.c aksfilter.c aksreverb.c arpdco.c audioEngine.c audiothread.c bristolaks.c bristolarp2600.c bristolaxxe.c bristoldx.c bristolexplorer.c bristolhammond.c bristoljuno.c bristol.c bristolmemorymoog.c bristolmixer.c bristolmm.c bristolobx.c bristolodyssey.c bristolpoly6.c bristolpoly.c bristolprophet52.c bristolprophet.c bristolsampler.c bristolsystem.c bristolvox.c dca.c dco.c dimensionD.c dxop.c electroswitch.c envelope.c expdco.c filter2.c filter.c follower.c hammond.c hammondchorus.c hpf.c junodco.c lfo.c midihandlers.c midinote.c midithread.c noise.c prophetdco.c resonator.c reverb.c ringmod.c rotary.c sdco.c sdcoutils.c soundManager.c thesermon.c vibrachorus.c vox.c aksdco.h aksenv.h aksfilter.h aksreverb.h arpdco.h bristolaks.h bristolarp2600.h bristolaxxe.h bristolexplorer.h bristoljuno.h bristolmemorymoog.h bristolmixer.h bristolmm.h bristolobx.h bristolodyssey.h bristolpoly6.h bristolpoly.h bristolprophet.h bristolsampler.h click.h dca.h dco.h dimensionD.h dxop.h electroswitch.h envelope.h expdco.h filter.h follower.h hammondchorus.h hammond.h hpf.h hum.h junodco.h lfo.h noise.h palette.h prophetdco.h resonator.h reverb.h ringmod.h rotary.h sdco.h thesermon.h vibrachorus.h vox.h bristolsolina.c solina.h bristolroadrunner.c roadrunner.h bristolgranular.c granular.h granulardco.c granulardco.h bristolrealistic.c bristolmg1.h bristoljupiter.c bristolbitone.c bit1osc.c bit1osc.h arpeggiator.c
+ 
+Index: bristol-0.20.5/libbrighton/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbrighton/Makefile.am
++++ bristol-0.20.5/libbrighton/Makefile.am
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I/usr/X11R6/include/ -I.
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I/usr/X11R6/include/ -I.
+ libbrighton_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
+ 
+ lib_LTLIBRARIES = libbrighton.la
+Index: bristol-0.20.5/libbristol/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbristol/Makefile.am
++++ bristol-0.20.5/libbristol/Makefile.am
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/bristol -I$(srcdir)/../include/slab -DBRISOL_HAS_ALSA=@BRISTOL_HAS_ALSA@
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/bristol -I$(srcdir)/../include/slab -DBRISOL_HAS_ALSA=@BRISTOL_HAS_ALSA@
+ libbristol_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
+ 
+ lib_LTLIBRARIES = libbristol.la
+Index: bristol-0.20.5/libbristolaudio/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbristolaudio/Makefile.am
++++ bristol-0.20.5/libbristolaudio/Makefile.am
+@@ -1,8 +1,9 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/slab -I$(srcdir)/../include/bristol -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ @BRISTOL_HAS_JACK@ `pkg-config --silence-errors --cflags alsa` `pkg-config --silence-errors --cflags jack`
+-LDFLAGS = `pkg-config --silence-errors --libs alsa` `pkg-config --silence-errors --libs jack`
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/slab -I$(srcdir)/../include/bristol -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ @BRISTOL_HAS_JACK@ @ALSA_CFLAGS@ @JACK_CFLAGS@
++
+ libbristolaudio_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
++libbristolaudio_la_LIBADD=@ALSA_LIBS@ @JACK_LIBS@
+ 
+ lib_LTLIBRARIES = libbristolaudio.la
+ libbristolaudio_la_SOURCES = audioEngineALSA.c audioGUIALSA.c audioMastering.c audioEngine.c audioGUI.c audioNetClient.c audioEngineOSS.c audioGUIOSS.c audioEngineJack.c
+Index: bristol-0.20.5/libbristolmidi/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbristolmidi/Makefile.am
++++ bristol-0.20.5/libbristolmidi/Makefile.am
+@@ -1,8 +1,8 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/slab -I$(srcdir)/../include/bristol `pkg-config --silence-errors --cflags alsa` `pkg-config --silence-errors --cflags jack` -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ @BRISTOL_HAS_JACK@
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/slab -I$(srcdir)/../include/bristol @ALSA_CFLAGS@ @JACK_CFLAGS@ -DBRISTOL_HAS_ALSA=@BRISTOL_HAS_ALSA@ @BRISTOL_HAS_JACK@
+ libbristolmidi_la_LDFLAGS=-export-dynamic -version-info @BRISTOL_SO_VERSION@
+-LDFLAGS = `pkg-config --silence-errors --libs alsa` `pkg-config --silence-errors --libs jack`
++libbristolmidi_la_LIBADD=@ALSA_LIBS@ @JACK_LIBS@
+ 
+ lib_LTLIBRARIES = libbristolmidi.la
+ libbristolmidi_la_SOURCES = inetClient.c inetServer.c interface.c midiALSADevMan.c midiDevMan.c midiMsgMan.c midiOSSDevMan.c midiParse.c midiRoutines.c midiSeqDevMan.c midiTCPDevMan.c slabmessages.h socketToolKit.c slabmessages.h midiFileMgt.c midiJACKDevMan.c
+Index: bristol-0.20.5/libbrightonX11/Makefile.am
+===================================================================
+--- bristol-0.20.5.orig/libbrightonX11/Makefile.am
++++ bristol-0.20.5/libbrightonX11/Makefile.am
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS = foreign
+ 
+-CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I/usr/X11R6/include/ @BRIGHTON_HAS_XIMAGE@
++AM_CFLAGS = -Wall -g -I$(srcdir)/../include/brighton -I/usr/X11R6/include/ @BRIGHTON_HAS_XIMAGE@
+ 
+ libB11_la_LDFLAGS= -export-dynamic -version-info @BRISTOL_SO_VERSION@
+ 
+Index: bristol-0.20.5/configure.ac
+===================================================================
+--- bristol-0.20.5.orig/configure.ac
++++ bristol-0.20.5/configure.ac
+@@ -58,38 +58,49 @@ then
+     AC_SUBST(BRIGHTON_HAS_XIMAGE)
+ fi
+ 
++PKG_PROG_PKG_CONFIG
++
+ # Checks for library functions.
+ AC_ARG_ENABLE(alsa, [  --disable-alsa          ignore ALSA driver ],
+             TRY_ALSA=$enableval , TRY_ALSA=yes )
+ 
+ HAVE_ALSA=false
+ BRISTOL_HAS_ALSA=0
+-if test "x$TRY_ALSA" = "xyes"
++if test "x$TRY_ALSA" = "xyes" ;
+ then
+     # check for ALSA >= 1.0.0
+     PKG_CHECK_MODULES(ALSA, alsa >= 1.0.0,
+          [HAVE_ALSA=true
+               BRISTOL_HAS_ALSA=1
+-             ], [true], [-lm]
++             ], [true]
+     )
++else
++    ALSA_CFLAGS=
++    ALSA_LIBS=
++    AC_SUBST(ALSA_CFLAGS)
++    AC_SUBST(ALSA_LIBS)
+ fi
+ AC_SUBST(BRISTOL_HAS_ALSA)
+ 
+ AC_ARG_ENABLE(jack, [  --disable-jack          ignore JACK driver ],
+             TRY_JACK=$enableval , TRY_JACK=yes )
+ HAVE_JACK="false"
+-if test "x$TRY_JACK" = "xyes"
++if test "x$TRY_JACK" = "xyes" ;
+ then
+     # check for JACK >= 0.99.0
+     PKG_CHECK_MODULES(JACK, jack >= 0.99.0,
+          [HAVE_JACK="true"
+-              JACK_LIBS=-lasound
+               JACK_DEFAULT_DRIVER=\"jack\"
+               BRISTOL_HAS_JACK=-D_BRISTOL_JACK
+-             ], [true], [-lm]
++             ], [true]
+     )
+     AC_SUBST(JACK_LIBS)
+     AC_SUBST(BRISTOL_HAS_JACK)
++else
++    JACK_CFLAGS=
++    JACK_LIBS=
++    AC_SUBST(JACK_CFLAGS)
++    AC_SUBST(JACK_LIBS)
+ fi
+ AM_CONDITIONAL(HAVE_JACK, $HAVE_JACK)
+ 
