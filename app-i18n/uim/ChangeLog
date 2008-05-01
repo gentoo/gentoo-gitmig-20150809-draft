@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.172 2008/02/24 16:28:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.173 2008/05/01 16:34:56 matsuu Exp $
+
+*uim-1.5.0_beta2 (01 May 2008)
+
+  01 May 2008; MATSUU Takuto <matsuu@gentoo.org> uim-1.4.1.ebuild,
+  -uim-1.4.1-r1.ebuild, uim-1.4.2.ebuild, +uim-1.5.0_beta2.ebuild:
+  Version bumped.
+  Fixed kde-base/kdelibs dependency, bug #213423.
 
 *uim-1.4.2 (24 Feb 2008)
 

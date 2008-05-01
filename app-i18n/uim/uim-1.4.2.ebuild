@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.1 2008/02/24 16:28:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.2 2008/05/01 16:34:56 matsuu Exp $
 
+EAPI=1
 inherit eutils qt3 multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
@@ -26,7 +27,7 @@ RDEPEND="X? ( x11-libs/libX11
 	emacs? ( virtual/emacs )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
-	kde? ( kde-base/kdelibs )
+	kde? ( kde-base/kdelibs:3.5 )
 	libedit? ( dev-libs/libedit )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
 	ncurses? ( sys-libs/ncurses )
