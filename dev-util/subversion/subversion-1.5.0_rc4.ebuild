@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.0_rc4.ebuild,v 1.1 2008/04/30 21:16:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.0_rc4.ebuild,v 1.2 2008/05/01 12:59:50 hollow Exp $
 
 EAPI="1"
 
-inherit autotools bash-completion confutils depend.apache elisp-common eutils flag-o-matic java-pkg-opt-2 libtool multilib perl-module python subversion
+inherit autotools bash-completion confutils depend.apache elisp-common eutils flag-o-matic java-pkg-opt-2 libtool multilib perl-module python
 
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="http://subversion.tigris.org/"
