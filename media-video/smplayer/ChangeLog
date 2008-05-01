@@ -1,6 +1,10 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.16 2008/04/25 14:57:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.17 2008/05/01 23:14:36 aballier Exp $
+
+  01 May 2008; Alexis Ballier <aballier@gentoo.org>
+  smplayer-0.6.0_rc4.ebuild:
+  keyword ~x86-fbsd
 
   25 Apr 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.0_rc3.ebuild,
   smplayer-0.6.0_rc4.ebuild:
