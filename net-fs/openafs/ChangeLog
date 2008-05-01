@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.145 2008/04/10 10:22:14 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.146 2008/05/01 14:41:50 stefaan Exp $
+
+*openafs-1.4.7_pre3-r1 (01 May 2008)
+
+  01 May 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +openafs-1.4.7_pre3-r1.ebuild:
+  Hack/fix incompatibility with autoconf-2.62 (bug #218234)
 
 *openafs-1.4.7_pre3 (10 Apr 2008)
 
