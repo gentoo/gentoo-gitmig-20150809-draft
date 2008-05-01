@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.65 2008/05/01 15:12:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.66 2008/05/01 18:12:38 alonbl Exp $
+
+  01 May 2008; Alon Bar-Lev <alonbl@gentoo.org> -bestcrypt-1.6_p15.ebuild:
+  Cleanup
 
   01 May 2008; Markus Meier <maekke@gentoo.org> bestcrypt-1.6_p16.ebuild:
   x86 stable, bug #215908
