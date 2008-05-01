@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.31 2008/03/05 19:37:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.32 2008/05/01 21:19:04 dragonheart Exp $
+
+*noip-updater-2.1.7-r1 (02 May 2008)
+
+  02 May 2008; Daniel Black <dragonheart@gentoo.org>  noip-updater-2.1.7-r1.ebuild:
+  as per bug #218001 there was a extra space in the init script. Thanks to Roy for finding it.
 
   05 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   noip-updater-2.1.7.ebuild:
