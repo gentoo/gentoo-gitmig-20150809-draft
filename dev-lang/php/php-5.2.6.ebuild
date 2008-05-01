@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6.ebuild,v 1.1 2008/05/01 14:58:11 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6.ebuild,v 1.2 2008/05/01 16:19:40 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -181,9 +181,8 @@ src_unpack() {
 	sed -e 's:/blah:./bla:' -i \
 		ext/session/tests/session_save_path_variation{2,3}.phpt
 
-	# these only fail because of one "sub-test" which might be
-	# Gentoo-specific (sandbox? it's about path normalization, ../ -> ..)
-	sed -e 's:File(\.\./):File(..):g' -i \
+	# these tests behave differently with suhosin enabled, adapting them...
+	use suhosin && sed -e 's:File(\.\./):File(..):g' -i \
 		ext/standard/tests/file/open_basedir*{.inc,.phpt}
 }
 
