@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/metacafe-dl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.11 2008/05/01 14:05:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.12 2008/05/01 15:29:24 maekke Exp $
+
+  01 May 2008; Markus Meier <maekke@gentoo.org>
+  metacafe-dl-2007.10.09.ebuild:
+  x86 stable, bug #219541
 
   01 May 2008; Santiago M. Mola <coldwind@gentoo.org>
   metacafe-dl-2007.10.09.ebuild:
