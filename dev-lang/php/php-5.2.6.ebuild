@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6_rc3.ebuild,v 1.6 2008/03/29 20:00:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6.ebuild,v 1.1 2008/05/01 14:58:11 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
 IUSE="cli cgi ${CGI_SAPI_USE} ${APACHE2_SAPI_USE} fastbuild"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -26,12 +26,11 @@ MULTILIB_PATCH="${MY_PHP_PV}/opt/multilib-search-path.patch"
 # php patch settings, ebuild specific
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/fastbuild.patch"
 CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/concurrent_apache_modules.patch"
+# kolab patch - http://kolab.org/cgi-bin/viewcvs-kolab.cgi/server/patches/php/
+# bugs about this go to wrobel@gentoo.org
+KOLAB_PATCH="${MY_PHP_PV}/opt/kolab-imap-annotations.patch"
 
 inherit versionator php5_2-sapi apache-module
-
-SRC_URI="http://downloads.php.net/ilia/${MY_PHP_P/_rc/RC}.tar.bz2
-	http://gentoo.longitekk.com/php-patchset-${PV}-r${PHP_PATCHSET_REV}.tar.bz2"
-S="${WORKDIR}/${MY_PHP_P/_rc/RC}"
 
 # Suhosin patch support
 [[ -n "${SUHOSIN_PATCH}" ]] && SRC_URI="${SRC_URI} suhosin? ( http://gentoo.longitekk.com/${SUHOSIN_PATCH} )"
@@ -40,6 +39,11 @@ DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
 DEPEND="app-admin/php-toolkit"
 RDEPEND="${DEPEND}"
+if [[ -n "${KOLAB_PATCH}" ]] ; then
+	IUSE="${IUSE} kolab"
+	DEPEND="${DEPEND}
+		kolab? ( >=net-libs/c-client-2004g-r1 )"
+fi
 
 want_apache
 
@@ -139,7 +143,11 @@ src_unpack() {
 		fi
 	fi
 
-	PHP_EXTRA_BRANDING="RC${PV#*_rc}"
+	# kolab support
+	if [[ -n "${KOLAB_PATCH}" ]] ; then
+		use kolab && epatch "${WORKDIR}/${KOLAB_PATCH}"
+	fi
+
 	# Now let the eclass do the rest and regenerate the configure
 	php5_2-sapi_src_unpack
 
@@ -154,6 +162,9 @@ src_unpack() {
 		ext/standard/tests/file/006_error.phpt \
 		ext/standard/tests/file/touch.phpt
 
+	# Workaround for autoconf-2.62 behaviour change, bug 217392
+	sed -re 's:(#ifdef HAVE_CONFIG_H.*):#define _GNU_SOURCE\n\1:' -i ext/posix/posix.c
+
 	# REMOVING BROKEN TESTS:
 	# removing this test as it has been broken for ages and is not easily
 	# fixable (depends on a lot of factors)
@@ -161,6 +172,19 @@ src_unpack() {
 
 	# never worked properly, no easy fix
 	rm ext/iconv/tests/bug16069.phpt ext/iconv/tests/iconv_stream_filter.phpt
+
+	# needs write access to /tmp and others
+	rm ext/session/tests/session_save_path_variation5.phpt
+
+	# sandbox-related (sandbox checks for permissions before even looking
+	# at the fs, but the tests expect "No such file or directory"
+	sed -e 's:/blah:./bla:' -i \
+		ext/session/tests/session_save_path_variation{2,3}.phpt
+
+	# these only fail because of one "sub-test" which might be
+	# Gentoo-specific (sandbox? it's about path normalization, ../ -> ..)
+	sed -e 's:File(\.\./):File(..):g' -i \
+		ext/standard/tests/file/open_basedir*{.inc,.phpt}
 }
 
 src_compile() {
