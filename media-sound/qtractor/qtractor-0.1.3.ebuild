@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.1.ebuild,v 1.1 2008/02/16 16:24:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.3.ebuild,v 1.1 2008/05/01 23:35:57 aballier Exp $
+
+EAPI=1
 
 inherit eutils qt4
 
@@ -12,9 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="debug dssi ladspa libsamplerate mad osc vorbis sse"
+IUSE="debug dssi ladspa libsamplerate mad osc rubberband vorbis sse"
 
-DEPEND="$(qt4_min_version 4.1)
+DEPEND="|| ( ( x11-libs/qt-core x11-libs/qt-gui )
+			>=x11-libs/qt-4.1:4 )
 	media-libs/alsa-lib
 	media-libs/libsndfile
 	media-sound/jack-audio-connection-kit
@@ -23,6 +26,7 @@ DEPEND="$(qt4_min_version 4.1)
 	mad? ( media-libs/libmad )
 	libsamplerate? ( media-libs/libsamplerate )
 	osc? ( media-libs/liblo )
+	rubberband? ( media-libs/rubberband )
 	vorbis? ( media-libs/libvorbis )"
 
 pkg_setup() {
@@ -42,6 +46,7 @@ src_compile() {
 		$(use_enable osc liblo) \
 		$(use_enable ladspa) \
 		$(use_enable dssi) \
+		$(use_enable rubberband librubberband) \
 		$(use_enable sse) \
 		$(use_enable debug) \
 		|| die "econf failed"
