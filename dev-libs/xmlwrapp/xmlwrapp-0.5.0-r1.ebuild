@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.20 2008/01/20 17:11:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.21 2008/05/01 00:45:43 dev-zero Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,10 +21,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-gentoo.diff"
-	epatch "${FILESDIR}/${P}-tests.patch"
-	epatch "${FILESDIR}/${P}-fbsd.patch"
-	epatch "${FILESDIR}/${P}-gcc42_namespace.patch"
+	epatch "${FILESDIR}/${PN}-gentoo.diff" \
+		"${FILESDIR}/${P}-tests.patch" \
+		"${FILESDIR}/${P}-fbsd.patch" \
+		"${FILESDIR}/${P}-gcc42_namespace.patch" \
+		"${FILESDIR}/${P}-gcc-4.3.patch"
 
 	sed -i 's/-O2//' tools/cxxflags || die "sed tools/cxxflags failed"
 }
