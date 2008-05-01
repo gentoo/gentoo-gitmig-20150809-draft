@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.8 2007/02/22 01:16:31 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.9 2008/05/01 10:40:51 nyhm Exp $
+
+  01 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/shaaft-0.5.0-gcc43.patch, shaaft-0.5.0.ebuild:
+  Fix building with gcc-4.3
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

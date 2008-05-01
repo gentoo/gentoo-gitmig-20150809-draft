@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.10 2007/02/03 14:03:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.11 2008/05/01 10:40:51 nyhm Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng
-	>=media-libs/libsdl-1.2
+	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
 
@@ -31,12 +31,14 @@ src_unpack() {
 		game/main.cpp \
 		|| die "sed main.cpp failed"
 
-	epatch "${FILESDIR}"/${P}-gcc34.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc34.patch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc TODO.txt
 	prepgamesdirs
 }
