@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.22.1.ebuild,v 1.1 2008/04/07 09:48:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.22.1.ebuild,v 1.2 2008/05/01 14:07:52 eva Exp $
 
 inherit gnome2 eutils versionator
 
@@ -50,6 +50,13 @@ pkg_setup() {
 		--enable-megaphone
 		--disable-nothere
 		--disable-gtk-doc"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Remove hard enabled -Werror (see AM_MAINTAINER_MODE), bug 218687
+	sed -i "s:-Werror::" configure || die "sed failed"
 }
 
 src_install() {
