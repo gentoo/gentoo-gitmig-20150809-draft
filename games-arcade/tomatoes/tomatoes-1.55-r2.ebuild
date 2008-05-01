@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.4 2007/08/08 21:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.5 2008/05/01 15:53:35 nyhm Exp $
 
 inherit eutils games
 
@@ -17,8 +17,8 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	>=media-libs/libsdl-1.2.7
-	>=media-libs/sdl-image-1.2.2
+	media-libs/libsdl
+	media-libs/sdl-image
 	media-libs/sdl-mixer"
 
 pkg_setup() {
@@ -49,26 +49,27 @@ src_unpack() {
 		makefile \
 		|| die "sed failed"
 
-	epatch "${FILESDIR}"/${P}-c_str.patch
+	epatch \
+		"${FILESDIR}"/${P}-c_str.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
 	dogamesbin tomatoes || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}" "${GAMES_STATEDIR}/${PN}"
 	dodoc README README-src
 
-	cp -r tomatoes.mpk music/ "${D}${GAMES_DATADIR}/${PN}" \
-		|| die "failed to copy game data"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r tomatoes.mpk music || die "doins data failed"
 
 	doicon ${PN}.png
 	make_desktop_entry tomatoes "I Have No Tomatoes"
 
-	touch "${D}${GAMES_STATEDIR}/${PN}/hiscore.lst" || die "touch failed"
-	fperms 660 "${GAMES_STATEDIR}/${PN}/hiscore.lst"
+	dodir "${GAMES_STATEDIR}"/${PN}
+	touch "${D}${GAMES_STATEDIR}"/${PN}/hiscore.lst || die "touch failed"
+	fperms 660 "${GAMES_STATEDIR}"/${PN}/hiscore.lst
 
-	insinto "${GAMES_SYSCONFDIR}/${PN}/"
-	insopts -m0640
-	doins config.cfg || die "failed to copy game config"
+	insinto "${GAMES_SYSCONFDIR}"/${PN}
+	doins config.cfg || die "doins config.cfg failed"
 
 	prepgamesdirs
 }
