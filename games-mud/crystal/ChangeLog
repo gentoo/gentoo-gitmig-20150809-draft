@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/crystal
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.5 2005/07/10 04:51:41 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.6 2008/05/01 10:30:07 nyhm Exp $
+
+  01 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/crystal-0.2.2-64bit.patch, +files/crystal-0.2.2-gcc43.patch,
+  crystal-0.2.2.ebuild:
+  Fix building with gcc-4.3
 
 *crystal-0.2.2 (10 Jul 2005)
 
