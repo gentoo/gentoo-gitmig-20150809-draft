@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.3 2008/04/27 14:23:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.4 2008/05/01 09:27:24 dertobi123 Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ IUSE="directfb doc dvd fbcon gphoto2 ivtv lirc matrox minimal mixer nls sqlite t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=dev-python/pygame-1.5.6
 	>=dev-python/pyxml-0.8.2
