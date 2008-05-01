@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.267 2008/05/01 16:19:40 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.268 2008/05/01 17:08:15 hoffie Exp $
+
+  01 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  -php-4.4.8_pre20070816.ebuild:
+  removing php-4.4.8_pre, 4.4.8 still left; yes, it was latest stable for
+  all arches, but php-4* and everything depending on it are hardmasked
+  anyway and one shouldn't continue using it either...
 
   01 May 2008; Christian Hoffmann <hoffie@gentoo.org> php-5.2.6.ebuild:
   only try to fix the open_basedir test cases when suhosin is enabled,
