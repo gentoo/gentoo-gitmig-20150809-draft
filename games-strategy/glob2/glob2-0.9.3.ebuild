@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.2 2008/05/01 16:00:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.3 2008/05/01 18:49:08 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	dogamesbin src/${PN} || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r campaigns data maps scripts || die "doins failed"
+	doins -r AUTHORS campaigns data maps scripts || die "doins failed"
 	find "${D}/${GAMES_DATADIR}"/${PN} -name SConscript -exec rm -f {} \;
 	newicon data/icons/glob2-icon-48x48.png ${PN}.png
 	make_desktop_entry glob2 "Globulation 2"
