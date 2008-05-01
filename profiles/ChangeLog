@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1376 2008/04/30 23:40:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1377 2008/05/01 21:30:18 hkbst Exp $
+
+  01 May 2008; Marijn Schouten <hkBst@gentoo.org> package.mask:
+  mask stumpwm-cvs
 
   30 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   default/linux/alpha/2008.0/parent, default/linux/amd64/2008.0/parent,
