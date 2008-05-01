@@ -1,18 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0-r1.ebuild,v 1.2 2008/05/01 13:05:29 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0.1_beta20080501.ebuild,v 1.1 2008/05/01 13:05:29 lavajoe Exp $
 
 inherit eutils
 
-SVN_VER="17793"
+SVN_VER="19294"
 MAJOR_VER="${PV:0:3}"
-SRC_DIR="SqueezeCenter_v${MAJOR_VER}.0"
-SRC_FILE="squeezecenter-${MAJOR_VER}-noCPAN.tgz"
-MY_P="squeezecenter-${MAJOR_VER}-${SVN_VER}-noCPAN"
+MINOR_VER="${PV:4:1}"
+SRC_DIR="SqueezeCenter_trunk_v${PV:10:4}-${PV:14:2}-${PV:16:2}"
+MY_P="squeezecenter-${MAJOR_VER}.${MINOR_VER}-${SVN_VER}-noCPAN"
 
 DESCRIPTION="Logitech SqueezeCenter music server"
 HOMEPAGE="http://www.slimdevices.com/pi_features.html"
-SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${SRC_FILE}"
+SRC_URI="http://www.slimdevices.com/downloads/nightly/${SRC_DIR}/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
