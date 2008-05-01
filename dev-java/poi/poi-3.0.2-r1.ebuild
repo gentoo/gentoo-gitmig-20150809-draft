@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.2-r1.ebuild,v 1.3 2008/04/29 16:13:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.2-r1.ebuild,v 1.4 2008/05/01 15:49:06 ranger Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/poi/release/src/${PN}-src-${PV}-FINAL-${RELEASE_DATE}.t
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 IUSE="test"
 
 COMMON_DEPEND="
