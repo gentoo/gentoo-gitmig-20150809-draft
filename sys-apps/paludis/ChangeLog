@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.96 2008/04/28 15:46:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.97 2008/05/01 06:35:04 zlin Exp $
+
+*paludis-0.26.1 (30 Apr 2008)
+
+  30 Apr 2008; Bo Ørsted Andresen <zlin@gentoo.org> -paludis-0.24.6.ebuild,
+  -paludis-0.26.0_pre3.ebuild, -paludis-0.26.0_pre4.ebuild,
+  +paludis-0.26.1.ebuild:
+  Version bump.
 
   28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
