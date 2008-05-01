@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.13 2008/04/03 16:30:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.14 2008/05/01 19:10:13 dertobi123 Exp $
+
+  01 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  puppet-0.24.4.ebuild:
+  Added ~ppc
 
 *puppet-0.24.4 (03 Apr 2008)
 
