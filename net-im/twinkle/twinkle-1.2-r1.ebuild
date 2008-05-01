@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.1.ebuild,v 1.4 2008/01/30 23:00:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.2-r1.ebuild,v 1.1 2008/05/01 13:17:29 dragonheart Exp $
 
 ARTS_REQUIRED="never"
-inherit eutils qt3 kde
+inherit eutils qt3 kde autotools
 
 DESCRIPTION="a soft phone for your VOIP communcations using SIP"
 HOMEPAGE="http://www.twinklephone.com/"
@@ -38,9 +38,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-zrtp.patch
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.4.1-badcflags.patch
-	epatch "${FILESDIR}"/twinkle.desktop.patch
+	eautoreconf
 }
 
 src_compile() {

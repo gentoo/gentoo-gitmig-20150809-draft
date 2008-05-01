@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.9 2007/12/24 09:59:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.10 2008/05/01 13:17:29 dragonheart Exp $
 
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
@@ -22,7 +22,7 @@ RDEPEND=">=net-libs/ccrtp-1.5.0
 	dev-libs/boost
 	speex? ( media-libs/speex )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	zrtp? ( net-libs/libzrtpcpp )
+	zrtp? ( ~net-libs/libzrtpcpp-0.9.0 )
 	media-libs/alsa-lib"
 
 DEPEND="${RDEPEND}
