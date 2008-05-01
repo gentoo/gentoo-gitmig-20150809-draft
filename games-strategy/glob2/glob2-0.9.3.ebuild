@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.1 2008/04/28 21:44:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.2 2008/05/01 16:00:22 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,6 +30,7 @@ src_compile() {
 		CXXFLAGS="${CXXFLAGS}" \
 		LINKFLAGS="${LDFLAGS}" \
 		INSTALLDIR="${GAMES_DATADIR}"/${PN} \
+		DATADIR="${GAMES_DATADIR}"/${PN} \
 		|| die "scons failed again"
 }
 
