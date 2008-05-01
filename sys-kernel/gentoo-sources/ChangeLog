@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.510 2008/04/28 18:46:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.511 2008/05/01 10:04:34 armin76 Exp $
+
+  01 May 2008; Raúl Porcel <armin76@gentoo.org>
+  gentoo-sources-2.6.24-r6.ebuild:
+  ia64/sparc stable
 
   28 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   gentoo-sources-2.6.24-r6.ebuild:
