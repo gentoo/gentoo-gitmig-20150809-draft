@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.27 2008/04/22 11:48:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.28 2008/05/01 21:32:26 hkbst Exp $
+
+*chicken-3.2.0 (01 May 2008)
+
+  01 May 2008; Marijn Schouten <hkBst@gentoo.org> +chicken-3.2.0.ebuild:
+  bump
 
   22 Apr 2008; Ulrich Mueller <ulm@gentoo.org> -chicken-1.89.ebuild,
   -chicken-2.2.ebuild, -chicken-2.3.ebuild, -chicken-2.5.ebuild,
