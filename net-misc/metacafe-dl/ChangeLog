@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/metacafe-dl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.10 2008/04/28 17:29:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.11 2008/05/01 14:05:27 coldwind Exp $
+
+  01 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  metacafe-dl-2007.10.09.ebuild:
+  amd64 stable wrt bug #219541
 
   28 Apr 2008; nixnut <nixnut@gentoo.org> metacafe-dl-2007.10.09.ebuild:
   Stable on ppc wrt bug 219541
