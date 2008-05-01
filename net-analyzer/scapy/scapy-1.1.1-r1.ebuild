@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.2 2008/02/22 21:36:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.3 2008/05/01 14:31:00 maekke Exp $
 
 inherit eutils python multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.secdev.org/projects/scapy/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="gnuplot pyx crypt graphviz imagemagick visual"
 
 DEPEND="virtual/python"
