@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 2005-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.13 2008/01/16 12:13:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.14 2008/05/01 09:33:48 aballier Exp $
+
+*svninfo-0.7.2 (01 May 2008)
+
+  01 May 2008; Alexis Ballier <aballier@gentoo.org> +svninfo-0.7.2.ebuild:
+  version bump
 
   16 Jan 2008; Alexis Ballier <aballier@gentoo.org> svninfo-0.6.ebuild:
   variable quoting
