@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.0_rc4.ebuild,v 1.2 2008/05/01 12:59:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.0_rc4.ebuild,v 1.3 2008/05/01 13:19:14 hollow Exp $
 
 EAPI="1"
 
@@ -63,13 +63,6 @@ pkg_setup() {
 		ewarn
 		ebeep
 	fi
-
-	if use webdav-neon && use webdav-serf; then
-		einfo
-		einfo "Both neon and serf are enabled for WebDAV support."
-		einfo "Defaulting to neon."
-		einfo
-	fi
 }
 
 src_unpack() {
@@ -82,7 +75,9 @@ src_unpack() {
 		-e 's:@bindir@/svn-tools:@libdir@/subversion/bin:' \
 		-i Makefile.in
 
-	eautoreconf
+	# eautoreconf does not work with libtool 2.2
+	./autogen.sh || die "autogen.sh failed"
+	elibtoolize
 }
 
 src_compile() {
