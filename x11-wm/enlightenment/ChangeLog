@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.88 2008/05/02 04:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.89 2008/05/02 16:50:34 jer Exp $
+
+  02 May 2008; Jeroen Roovers <jer@gentoo.org>
+  enlightenment-0.16.8.12.ebuild:
+  Stable for HPPA (bug #220008).
 
 *enlightenment-0.16.8.13 (02 May 2008)
 
