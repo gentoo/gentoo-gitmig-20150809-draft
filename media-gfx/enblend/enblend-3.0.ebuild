@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.0.ebuild,v 1.7 2007/12/22 15:47:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.0.ebuild,v 1.8 2008/05/02 11:43:35 maekke Exp $
 
 inherit eutils
 
@@ -46,6 +46,7 @@ src_unpack() {
 	# Fixes compilation on AMD64
 	epatch "${FILESDIR}"/${P}-amd64_compilation.patch
 
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i '/CXXFLAGS/s: -g -O3 : :' src/Makefile.in
 }
 
