@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/foosball
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foosball/ChangeLog,v 1.5 2007/05/28 22:39:06 tupone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foosball/ChangeLog,v 1.6 2008/05/02 23:01:31 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/foosball-0.92-gcc43.patch, foosball-0.92-r1.ebuild:
+  Fix building with gcc-4.3
 
 *foosball-0.92-r1 (28 May 2007)
 
