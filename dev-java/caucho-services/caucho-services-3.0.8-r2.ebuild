@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/caucho-services-3.0.8-r2.ebuild,v 1.1 2008/02/14 02:54:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/caucho-services-3.0.8-r2.ebuild,v 1.2 2008/05/02 15:16:15 opfer Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 CDEPEND="java-virtuals/servlet-api:2.3"
