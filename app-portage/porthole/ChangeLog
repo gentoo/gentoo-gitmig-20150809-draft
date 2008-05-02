@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.30 2008/05/01 20:19:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.31 2008/05/02 04:34:55 fuzzyray Exp $
+
+  02 May 2008; Paul Varner <fuzzyray@gentoo.org>
+  +files/porthole-0.6.0_rc2-pocompile.patch, porthole-0.6.0_rc2.ebuild:
+  Add die statement to pocompile.sh, in case it fails. Added patch to change
+  the shebang line from /bin/sh to /bin/bash for pocompile.sh, since it was
+  not a POSIX compliant shell script.
 
 *porthole-0.6.0_rc2 (01 May 2008)
 

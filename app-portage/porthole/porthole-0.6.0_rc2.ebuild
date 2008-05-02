@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.0_rc2.ebuild,v 1.1 2008/05/01 20:19:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.0_rc2.ebuild,v 1.2 2008/05/02 04:34:55 fuzzyray Exp $
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
@@ -23,6 +23,13 @@ RDEPEND=">=dev-lang/python-2.3
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.14 )"
 
+src_unpack() {
+	# Change shebang line to /bin/bash since pocompile.sh is not a posix script
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PF}-pocompile.patch
+}
+
 src_install() {
 	distutils_src_install
 	chmod -R a+rX "${D}"/usr/share/porthole
@@ -34,7 +41,7 @@ src_install() {
 	# Compile localizations if necessary
 	if use nls ; then
 		cd "${D}"/usr/share/porthole
-		./pocompile.sh
+		./pocompile.sh || die "pocompile.sh failed"
 	fi
 }
 
