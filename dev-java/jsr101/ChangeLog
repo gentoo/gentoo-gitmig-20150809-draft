@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsr101
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.6 2007/12/05 19:59:50 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.7 2008/05/02 20:50:34 betelgeuse Exp $
+
+*jsr101-1.4 (02 May 2008)
+
+  02 May 2008; Petteri Räty <betelgeuse@gentoo.org> +jsr101-1.4.ebuild:
+  Version bump building the classes from axis sources to remove fetch
+  restriction. Fixes bug #219932.
 
   05 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> jsr101-1.1.ebuild:
   Fix download URL, see bug #201339.
