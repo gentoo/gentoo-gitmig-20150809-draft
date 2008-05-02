@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1379 2008/05/02 11:59:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1380 2008/05/02 15:50:17 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> thirdpartymirrors:
+  Flip mirrors around and try download #2 first since download #1
+  always timeouts for large amount of people.
 
   02 May 2008; Markus Meier <maekke@gentoo.org> package.mask:
   remove media-gfx/hugin-0.7 from mask, requested in bug #187002
