@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.16 2007/11/21 17:13:10 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.17 2008/05/02 16:02:30 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> phat-0.4.1.ebuild:
+  Use berlios mirrors://
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> phat-0.4.1.ebuild:
   Stable on ppc wrt bug 199447
