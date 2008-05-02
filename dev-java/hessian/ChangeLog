@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hessian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.12 2008/02/14 01:46:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.13 2008/05/02 15:10:55 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  hessian-3.0.8-r5.ebuild:
+  filter jikes
 
   14 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> files/build-3.0.8.xml,
   hessian-3.0.8-r5.ebuild:
