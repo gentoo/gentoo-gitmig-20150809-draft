@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.8.0.ebuild,v 1.2 2008/03/19 22:13:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.8.0.ebuild,v 1.3 2008/05/02 14:29:58 nyhm Exp $
 
 inherit eutils games
 
@@ -29,6 +29,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i '/^xye_LDFLAGS/d' Makefile.in || die "sed failed"
 }
 

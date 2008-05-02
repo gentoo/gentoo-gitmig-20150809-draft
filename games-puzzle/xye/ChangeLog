@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xye
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.6 2008/03/19 22:13:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.7 2008/05/02 14:29:58 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/xye-0.8.0-gcc43.patch, xye-0.8.0.ebuild:
+  Fix building with gcc-4.3
 
   19 Mar 2008; Tristan Heaven <nyhm@gentoo.org> xye-0.8.0.ebuild:
   Add ~amd64 keyword
