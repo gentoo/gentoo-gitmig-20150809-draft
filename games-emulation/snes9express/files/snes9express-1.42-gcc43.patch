@@ -1,0 +1,45 @@
+--- frend.cc
++++ frend.cc
+@@ -21,6 +21,8 @@
+ #include <cstdlib>
+ #include <climits>
+ #include <sstream>
++#include <cerrno>
++#include <cstring>
+ 
+ const char*fr_AppName;
+ GtkTooltips *fr_Tooltips;
+--- misc.cc
++++ misc.cc
+@@ -14,6 +14,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <cstdio>
++#include <cstring>
+ #include <string>
+ #include <algorithm>
+ #include <unistd.h>
+--- s9xskin.cc
++++ s9xskin.cc
+@@ -24,6 +24,7 @@
+ #include <unistd.h>
+ #include <string>
+ #include <list>
++#include <cstring>
+ #include "frend.h"
+ 
+ const char *headstart = "snes9express skin\x09";
+--- skins.cc
++++ skins.cc
+@@ -12,8 +12,9 @@
+  * or go to http://www.gnu.org/copyleft/gpl.html
+  */
+ 
+-#include <stdio.h>
+-#include <stdlib.h>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
+ #include <dirent.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>

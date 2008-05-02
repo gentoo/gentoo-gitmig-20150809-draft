@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/snes9express
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.10 2008/04/08 00:17:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.11 2008/05/02 19:15:45 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  -files/snes9express-1.42-fix.patch, +files/snes9express-1.42-gcc43.patch,
+  snes9express-1.42.ebuild:
+  Fix building with gcc-4.3
 
   08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   snes9express-1.42.ebuild:
