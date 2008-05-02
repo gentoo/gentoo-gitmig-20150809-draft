@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-2.5.1.ebuild,v 1.1 2008/04/18 18:39:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-2.5.1.ebuild,v 1.2 2008/05/02 18:42:50 nyhm Exp $
 
 inherit eutils games
 
@@ -20,6 +20,7 @@ DEPEND="media-libs/libsdl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e '/INSTALL/s/-s //' \
 		-e '/strip/d' \
@@ -43,6 +44,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	doicon src/common/stella.xpm
-	make_desktop_entry stella Stella stella
+	make_desktop_entry stella Stella
 	prepgamesdirs
 }
