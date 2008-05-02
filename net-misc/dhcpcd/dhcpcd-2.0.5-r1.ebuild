@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.5-r1.ebuild,v 1.3 2006/09/06 07:37:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.5-r1.ebuild,v 1.4 2008/05/02 15:57:03 cardoe Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="A DHCP client only"
 HOMEPAGE="http://developer.berlios.de/projects/dhcpcd/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
