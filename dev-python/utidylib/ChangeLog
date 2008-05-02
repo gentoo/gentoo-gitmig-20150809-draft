@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/utidylib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.6 2007/07/26 18:21:23 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.7 2008/05/02 18:41:01 pythonhead Exp $
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org> utidylib-0.2.ebuild:
+  Use berlios mirror. bug #218657
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> utidylib-0.2.ebuild:
   Added ~ppc64; bug #186188
