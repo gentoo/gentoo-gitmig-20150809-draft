@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.7.0.ebuild,v 1.1 2008/03/04 20:50:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.7.0.ebuild,v 1.2 2008/05/02 15:18:26 cardoe Exp $
 
 inherit gnome2
 
@@ -26,8 +26,10 @@ DEPEND=">=gnome-base/libglade-2.4.0
 	dev-libs/dbus-glib
 	>=media-libs/libdvdread-0.9.4"
 
-G2CONF="--disable-element-checks"
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+pkg_setup() {
+	G2CONF="--disable-element-checks"
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+}
 
 src_install() {
 	gnome2_src_install || die
