@@ -1,0 +1,19 @@
+#
+# old_revision [98e326ec23e729a704878ea5174472e0b4d8f2a1]
+#
+# patch "configure.pl"
+#  from [a32942b1c853313df9bd9014344f61952bc45279]
+#    to [ac4bc30d588510c3702b07b97f07ab2fd29d93d8]
+#
+============================================================
+--- configure.pl        a32942b1c853313df9bd9014344f61952bc45279
++++ configure.pl        ac4bc30d588510c3702b07b97f07ab2fd29d93d8
+@@ -334,7 +334,7 @@ sub choose_target {
+             # buggy GCC. There is no reduction in code quality so even
+             # if we're wrong it's OK.
+ 
+-            if(($gcc_version =~ /4\.[01]/) || ($gcc_version =~ /3\.[34]/) ||
++            if(($gcc_version =~ /4\.[0123]/) || ($gcc_version =~ /3\.[34]/) ||
+                ($gcc_version =~ /2\.95\.[0-4]/) ||
+                ($gcc_version eq '' && $^O eq 'cygwin'))
+             {

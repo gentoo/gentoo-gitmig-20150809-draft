@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.6.1-r1.ebuild,v 1.4 2007/11/11 04:12:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.6.1-r1.ebuild,v 1.5 2008/05/02 07:34:41 alonbl Exp $
 
 inherit eutils multilib
 
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-asm.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.2.patch"
 }
 
 src_compile() {
@@ -73,11 +74,13 @@ src_compile() {
 
 	# FIXME: We might actually be on *BSD or OS X...
 	./configure.pl \
-		--noauto gcc-linux-${CHOSTARCH} \
+		--noauto \
 		--libdir=/$(get_libdir) \
-		--modules=$modules ||
-			die "configure.pl failed"
-	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
+		--modules=$modules \
+		gcc-linux-${CHOSTARCH} ||
+		die "configure.pl failed"
+	emake CXX="$(tc-getCXX)" AR="$(tc-getAR) crs" \
+		"LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
 
 src_test() {
