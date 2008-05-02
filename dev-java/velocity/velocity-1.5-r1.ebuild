@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5-r1.ebuild,v 1.2 2008/04/29 16:20:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.5-r1.ebuild,v 1.3 2008/05/02 20:01:03 opfer Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="examples doc source test"
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
 IUSE=""
 
+JAVA_PKG_FILTER_COMPILER="jikes"
 CDEPEND="
 	dev-java/commons-lang:2.1
 	dev-java/commons-collections
