@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.5.ebuild,v 1.3 2008/03/27 22:35:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.5.ebuild,v 1.4 2008/05/02 08:52:24 remi Exp $
 
 inherit gnome2 eutils
 
@@ -23,6 +23,13 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS ChangeLog NEWS README*"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# gcc 4.3 build fix, see bug #218779
+	epatch "${FILESDIR}/${PN}-1.0.5-gcc43.patch"
+}
 
 src_install() {
 	gnome2_src_install
