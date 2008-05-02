@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.12 2008/05/02 09:17:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.13 2008/05/02 09:23:28 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  pdfbox-0.7.3-r2.ebuild:
+  stable x86, bug 219663
 
   02 May 2008; Christian Faulhammer <opfer@gentoo.org>
   pdfbox-0.7.3-r2.ebuild:
