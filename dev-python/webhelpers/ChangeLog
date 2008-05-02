@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/webhelpers
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.3 2007/07/04 20:23:39 pythonhead Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.4 2008/05/02 04:08:56 pythonhead Exp $
+
+*webhelpers-0.3.4 (02 May 2008)
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org>
+  +webhelpers-0.3.4.ebuild:
+  Version bump. Added dep for dev-python/coverage, removed broken pudge
+  build in 0.3.4
 
   04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
   webhelpers-0.2.2.ebuild, webhelpers-0.3.ebuild:
