@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/cobex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/cobex/ChangeLog,v 1.3 2008/03/15 22:20:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/cobex/ChangeLog,v 1.4 2008/05/02 13:27:26 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org> cobex-0.2.13.ebuild:
+  amd64 stable, bug #212036
 
   15 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org> cobex-0.2.13.ebuild:
   ppc stable, bug #212036
