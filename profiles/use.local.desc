@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3523 2008/05/01 23:24:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3524 2008/05/02 19:20:33 zlin Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1921,8 +1921,6 @@ sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drive
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:serial - Compile with serial console support
-sys-apps/paludis:contrarius - Build the contrarius client, for building cross toolchains.
-sys-apps/paludis:cran - Enable CRAN repository support.
 sys-apps/paludis:glsa - Enable parsing of GLSA files
 sys-apps/paludis:inquisitio - Enable inquisitio, the search client
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
