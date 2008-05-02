@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.511 2008/05/01 10:04:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.512 2008/05/02 21:01:34 dsd Exp $
+
+*gentoo-sources-2.6.24-r7 (02 May 2008)
+
+  02 May 2008; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.24-r7.ebuild:
+  Update to Linux 2.6.24.6. Fix import of default .config on x86/amd64. Fix
+  QLA2xxx SCSI regression.
 
   01 May 2008; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r6.ebuild:
