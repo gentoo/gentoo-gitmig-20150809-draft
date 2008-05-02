@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.48 2008/04/10 09:58:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.49 2008/05/02 16:54:37 voyageur Exp $
+
+  02 May 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxserver-freenx-0.7.1-cups.patch,
+  -files/nxserver-freenx-0.7.1-nscd.patch,
+  -files/nxserver-freenx-0.7.1-nxdialog.patch,
+  -files/nxserver-freenx-0.7.1-nxloadconfig.patch,
+  -files/nxserver-freenx-0.7.1-nxserver_fixes.patch,
+  -files/nxserver-freenx-0.7.1-samba.patch,
+  -files/nxserver-freenx-0.7.1-usession_fixes.patch,
+  nxserver-freenx-0.7.0-r1.ebuild, -nxserver-freenx-0.7.1-r1.ebuild,
+  -nxserver-freenx-0.7.1-r2.ebuild, nxserver-freenx-0.7.2-r2.ebuild:
+  Use mirror:// for SRC_URI, bug #218657. Also remove 0.7.1 versions
 
   10 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org>
   files/nxserver-freenx-0.7.2-nxloadconfig.patch,

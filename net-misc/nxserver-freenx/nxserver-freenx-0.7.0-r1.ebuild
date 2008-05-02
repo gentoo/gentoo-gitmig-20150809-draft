@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.0-r1.ebuild,v 1.4 2008/03/18 23:49:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.0-r1.ebuild,v 1.5 2008/05/02 16:54:37 voyageur Exp $
 
 inherit multilib eutils
 
 MY_PN="freenx"
 DESCRIPTION="Free Software Implementation of the NX Server"
 HOMEPAGE="http://freenx.berlios.de/"
-SRC_URI="http://download.berlios.de/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="mirror://berlios/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
