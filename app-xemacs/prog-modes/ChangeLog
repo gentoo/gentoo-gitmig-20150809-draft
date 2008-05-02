@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/prog-modes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.18 2008/04/30 16:03:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.19 2008/05/02 16:11:37 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  prog-modes-2.10.ebuild:
+  stable x86, bug 219332
 
   30 Apr 2008; nixnut <nixnut@gentoo.org> prog-modes-2.10.ebuild:
   Stable on ppc wrt bug 219332

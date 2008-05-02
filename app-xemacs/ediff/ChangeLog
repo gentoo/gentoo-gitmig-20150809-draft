@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ediff
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.18 2008/04/30 15:56:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.19 2008/05/02 16:09:24 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org> ediff-1.68.ebuild:
+  stable x86, bug 219332
 
   30 Apr 2008; nixnut <nixnut@gentoo.org> ediff-1.68.ebuild:
   Stable on ppc wrt bug 219332

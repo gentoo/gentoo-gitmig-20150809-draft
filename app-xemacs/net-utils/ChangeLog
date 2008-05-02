@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/net-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.20 2008/04/30 16:02:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.21 2008/05/02 16:13:25 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  net-utils-1.52.ebuild:
+  stable x86, bug 219332
 
   30 Apr 2008; nixnut <nixnut@gentoo.org> net-utils-1.52.ebuild:
   Stable on ppc wrt bug 219332
