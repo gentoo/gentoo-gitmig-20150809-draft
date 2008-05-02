@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r2.ebuild,v 1.5 2008/03/16 00:39:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r2.ebuild,v 1.6 2008/05/02 11:46:28 maekke Exp $
 
 inherit wxwidgets eutils autotools libtool
 
@@ -49,6 +49,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-1_0.6.1-1.1.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	AT_M4DIR="${S}/m4" eautoreconf
 }

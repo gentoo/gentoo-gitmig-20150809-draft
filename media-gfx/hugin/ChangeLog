@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.37 2008/03/16 00:39:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.38 2008/05/02 11:46:28 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org>
+  +files/hugin-0.6.1-gcc43.patch, hugin-0.6.1-r2.ebuild:
+  fix building with gcc-4.3 by Peter Alfredsen, bug #219783
 
   16 Mar 2008; Markus Meier <maekke@gentoo.org> hugin-0.6.1-r2.ebuild:
   zip dep is also needed in hugin-0.6
