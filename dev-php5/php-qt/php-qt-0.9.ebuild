@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.2 2008/02/11 21:28:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.3 2008/05/02 16:22:07 chtekk Exp $
 
 PHP_EXT_NAME="php_qt"
 PHP_EXT_INI="yes"
@@ -10,7 +10,7 @@ inherit php-ext-base-r1 qt4 eutils depend.php cmake-utils
 
 DESCRIPTION="PHP5 bindings for the Qt4 framework."
 HOMEPAGE="http://php-qt.org/"
-SRC_URI="http://download.berlios.de/php-qt/${P}.tar.gz"
+SRC_URI="mirror://berlios/php-qt/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"

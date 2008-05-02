@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/php-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/ChangeLog,v 1.10 2008/02/11 21:28:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/ChangeLog,v 1.11 2008/05/02 16:22:07 chtekk Exp $
+
+  02 May 2008; Luca Longinotti <chtekk@gentoo.org> php-qt-0.9.ebuild:
+  Fix QA bug #218657.
 
   11 Feb 2008; Raúl Porcel <armin76@gentoo.org> php-qt-0.9.ebuild:
   Version bump, from the php overlay
