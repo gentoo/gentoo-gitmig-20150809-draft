@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.8.ebuild,v 1.1 2008/05/02 03:20:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.8.ebuild,v 1.2 2008/05/02 16:54:55 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -35,4 +35,3 @@ src_install() {
 	distutils_src_install
 	use doc && dohtml -r docs/html/*
 }
-
