@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/xephem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.21 2008/01/29 12:41:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.22 2008/05/02 11:52:53 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org> xephem-3.7.2.ebuild:
+  block media-gfx/feh, bug #204975
 
   29 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> -xephem-3.6.4.ebuild:
   Removed obsolete version

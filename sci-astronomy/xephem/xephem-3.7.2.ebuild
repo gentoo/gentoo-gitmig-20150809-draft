@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.8 2008/01/15 16:52:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.9 2008/05/02 11:52:53 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,8 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-DEPEND="virtual/motif"
+DEPEND="!media-gfx/feh
+	virtual/motif"
 
 src_unpack() {
 	unpack ${A}
