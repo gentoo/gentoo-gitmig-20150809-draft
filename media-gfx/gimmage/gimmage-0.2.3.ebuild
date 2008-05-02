@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.3 2008/04/20 15:38:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.4 2008/05/02 16:10:42 drac Exp $
 
 DESCRIPTION="A slim GTK-based image browser"
 HOMEPAGE="http://gimmage.berlios.de/"
-SRC_URI="http://download.berlios.de/gimmage/${P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,9 +14,9 @@ IUSE="debug"
 RDEPEND="dev-cpp/cairomm
 	>=dev-cpp/gtkmm-2.6.2
 	net-misc/curl
-	sys-apps/file
-	sys-devel/gettext"
+	sys-apps/file"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-util/pkgconfig"
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimmage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.9 2008/04/20 15:38:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.10 2008/05/02 16:10:42 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> gimmage-0.2.3.ebuild:
+  Use berlios mirrors://
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> gimmage-0.2.3.ebuild:
   move pkgconfig to DEPEND, bug #217278
