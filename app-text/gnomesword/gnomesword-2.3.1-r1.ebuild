@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.3 2008/03/14 17:33:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.4 2008/05/02 14:58:39 cardoe Exp $
 
 inherit libtool gnome2 eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="firefox seamonkey spell xulrunner"
-DEPEND=">=gnome-extra/gtkhtml-3.14
+RDEPEND=">=gnome-extra/gtkhtml-3.14
 	=app-text/sword-1.5.10*
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
@@ -23,7 +23,8 @@ DEPEND=">=gnome-extra/gtkhtml-3.14
 	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	spell? (
 		app-text/gnome-spell
-		>=gnome-base/libbonoboui-2 )
+		>=gnome-base/libbonoboui-2 )"
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.14"
