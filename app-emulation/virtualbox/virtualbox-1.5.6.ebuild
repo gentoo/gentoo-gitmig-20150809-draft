@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.6.ebuild,v 1.2 2008/02/26 00:38:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.6.ebuild,v 1.3 2008/05/02 12:55:04 nyhm Exp $
 
 inherit eutils fdo-mime flag-o-matic qt3 toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="additions alsa pulseaudio sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
-	~app-emulation/virtualbox-modules-${PV}
+	>=app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
