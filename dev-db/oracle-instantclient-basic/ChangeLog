@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.29 2008/03/08 20:54:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.30 2008/05/02 19:41:53 dertobi123 Exp $
+
+  02 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -oracle-instantclient-basic-10.1.0.5.ebuild,
+  oracle-instantclient-basic-10.2.0.3.ebuild:
+  Cleanup, set TNS_ADMIN and add information on where to put tnsnames.ora,
+  #215100
 
   08 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   oracle-instantclient-basic-10.1.0.5.ebuild,

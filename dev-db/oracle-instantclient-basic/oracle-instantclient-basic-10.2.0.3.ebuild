@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.8 2008/03/08 20:54:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.9 2008/05/02 19:41:53 dertobi123 Exp $
 
 inherit eutils
 
@@ -92,6 +92,10 @@ src_install() {
 	echo "ORACLE_HOME=/usr/$(get_libdir)/oracle/${PV}/client" >> "${D}"/etc/env.d/50oracle-instantclient-basic
 	echo "LDPATH=/usr/$(get_libdir)/oracle/${PV}/client/lib" >> "${D}"/etc/env.d/50oracle-instantclient-basic
 	echo "C_INCLUDE_PATH=/usr/$(get_libdir)/oracle/${PV}/client/include" >> "${D}"/etc/env.d/50oracle-instantclient-basic
+	echo "TNS_ADMIN=/etc/oracle/" >> "${D}"/etc/env.d/50oracle-instantclient-basic
+
+	# create path for tnsnames.ora
+	dodir /etc/oracle
 }
 
 pkg_postinst() {
@@ -105,4 +109,8 @@ pkg_postinst() {
 	elog
 	elog "oracle-instantclient-* packages aren't installed in different"
 	elog "SLOTs any longer. You may want to uninstall older versions."
+	elog
+	elog "TNS_ADMIN has been set to ${ROOT}etc/oracle by default, put your"
+	elog "tnsnames.ora there or configure TNS_ADMIN to point to"
+	elog "your user specific configuration."
 }
