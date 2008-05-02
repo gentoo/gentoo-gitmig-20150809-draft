@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.45 2008/04/14 12:28:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.46 2008/05/02 15:36:49 cardoe Exp $
+
+  02 May 2008; Doug Goldstein <cardoe@gentoo.org> gksu-2.0.0.ebuild:
+  remove global scoped variables
 
   14 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> gksu-2.0.0.ebuild:
   Fix typo. Bug #217574
