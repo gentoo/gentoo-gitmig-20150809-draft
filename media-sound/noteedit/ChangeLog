@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.32 2008/04/27 12:58:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.33 2008/05/02 16:08:16 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> noteedit-2.8.1-r1.ebuild:
+  Use berlios mirrors://
 
   27 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> -noteedit-2.8.1.ebuild:
   Cleanup.

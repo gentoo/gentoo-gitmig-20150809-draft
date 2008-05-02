@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gimmix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.12 2008/04/20 19:11:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.13 2008/05/02 16:04:37 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> gimmix-0.4.3.ebuild:
+  Use berlios mirrors://
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> gimmix-0.4.3.ebuild:
   Add ~sparc
