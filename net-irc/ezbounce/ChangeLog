@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ezbounce
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.13 2008/02/25 15:26:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.14 2008/05/02 15:42:18 armin76 Exp $
+
+*ezbounce-1.99.13 (02 May 2008)
+
+  02 May 2008; Raúl Porcel <armin76@gentoo.org> -ezbounce-1.99.9.ebuild,
+  -ezbounce-1.99.10.ebuild, -ezbounce-1.99.11.ebuild,
+  +ezbounce-1.99.13.ebuild:
+  Version bump wrt #216068
 
 *ezbounce-1.99.11 (25 Feb 2008)
 
