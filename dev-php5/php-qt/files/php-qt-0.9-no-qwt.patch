@@ -1,0 +1,32 @@
+--- smoke/qt/CMakeLists.txt.old	2008-02-07 11:31:55.000000000 +0100
++++ smoke/qt/CMakeLists.txt	2008-02-07 11:32:08.000000000 +0100
+@@ -1,6 +1,6 @@
+ 
+ include(FindQScintilla)
+-include(FindQwt5)
++#include(FindQwt5)
+ 
+ include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
+ 
+@@ -13,13 +13,13 @@
+     message(STATUS "QScintilla not found, support disabled")
+ endif(QSCINTILLA_FOUND)
+ 
+-if(Qwt5_Qt4_FOUND)
+-    message(STATUS "Including Qwt5 support into smokeqt")
+-    include_directories( ${Qwt5_INCLUDE_DIR} )
+-    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${Qwt5_Qt4_LIBRARY})
+-else(Qwt5_Qt4_FOUND)
+-    message(STATUS "Qwt5 not found, support disabled")
+-endif(Qwt5_Qt4_FOUND)
++#if(Qwt5_Qt4_FOUND)
++#    message(STATUS "Including Qwt5 support into smokeqt")
++#    include_directories( ${Qwt5_INCLUDE_DIR} )
++#    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${Qwt5_Qt4_LIBRARY})
++#else(Qwt5_Qt4_FOUND)
++#    message(STATUS "Qwt5 not found, support disabled")
++#endif(Qwt5_Qt4_FOUND)
+ 
+ IF(NOT PERL_FOUND)
+     FIND_PACKAGE(PERL REQUIRED)
+
