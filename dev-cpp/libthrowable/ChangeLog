@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.10 2008/02/11 06:49:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.11 2008/05/02 15:05:05 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> libthrowable-1.1.0.ebuild:
+  Move pkgconfig to DEPEND wrt #217278
 
   11 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   -libthrowable-1.0.0.ebuild, libthrowable-1.1.0.ebuild:
