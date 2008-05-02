@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/lfhex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.20 2008/04/01 15:38:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.21 2008/05/02 07:49:33 dragonheart Exp $
+
+  01 May 2008; Daniel Black <dragonheart@gentoo.org> -lfhex-0.4.ebuild,
+  lfhex-0.4-r1.ebuild:
+  dependency fix as per bug #217197
 
 *lfhex-0.4-r1 (01 Apr 2008)
 

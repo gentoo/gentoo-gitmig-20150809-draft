@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4-r1.ebuild,v 1.1 2008/04/01 15:38:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4-r1.ebuild,v 1.2 2008/05/02 07:49:33 dragonheart Exp $
+
+EAPI="1"
 
 inherit qt4 toolchain-funcs
 
@@ -13,8 +15,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-RDEPEND="$(qt4_min_version 4)
-	>=x11-libs/libXt-1.0.0"
+RDEPEND="|| ( x11-libs/qt-gui:4
+		>=x11-libs/qt-4.2:4 )
+		>=x11-libs/libXt-1.0.0"
 
 DEPEND="sys-devel/flex
 	sys-devel/bison
