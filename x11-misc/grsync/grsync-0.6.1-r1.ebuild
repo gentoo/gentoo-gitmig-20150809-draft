@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/grsync-0.6.1.ebuild,v 1.1 2008/01/22 15:55:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/grsync-0.6.1-r1.ebuild,v 1.1 2008/05/02 19:24:00 dertobi123 Exp $
 
 inherit eutils gnome2 autotools
 
@@ -18,5 +18,11 @@ RDEPEND=">=x11-libs/gtk+-2.6
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/session-crash.patch
+}
 
 DOCS="AUTHORS NEWS README"

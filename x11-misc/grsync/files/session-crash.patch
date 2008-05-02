@@ -1,0 +1,11 @@
+diff -Naurp grsync-0.6.1.orig/src/callbacks.c grsync-0.6.1/src/callbacks.c
+--- grsync-0.6.1.orig/src/callbacks.c	2007-11-09 17:10:42.000000000 +0000
++++ grsync-0.6.1/src/callbacks.c	2008-02-23 07:40:33.000000000 +0000
+@@ -892,6 +892,7 @@ void on_session_add_clicked(GtkButton *b
+ 
+ 		save_settings((GtkWidget*) button, newses, NULL);
+ 		session_number++;
++		session_last = -1;
+ 		load_groups((GtkWidget*) button, newses);
+ 	}
+ 	gtk_widget_destroy(add);
