@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/gnucash-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.6 2008/02/19 19:57:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.7 2008/05/02 14:59:02 eva Exp $
+
+  02 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnucash-docs-2.2.0.ebuild:
+  invert RDEPEND assignation to avoid RDEPENDing on scrollkeeper because it
+  makes no sense.
 
   19 Feb 2008; Christoph Mende <angelos@gentoo.org>
   gnucash-docs-2.2.0.ebuild:
