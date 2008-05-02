@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.12 2007/02/06 02:30:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.13 2008/05/02 23:17:43 nyhm Exp $
 
 inherit eutils games
 
@@ -23,13 +23,15 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
 	dogamesbin xfreecell || die "dogamesbin failed"
-	insinto "${GAMES_DATADIR}/${PN}"
-	doins "${WORKDIR}/MSNumbers" || die "doins failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins "${WORKDIR}"/MSNumbers || die "doins failed"
 	dodoc CHANGES README mshuffle.txt
 	doman xfreecell.6
 	prepgamesdirs

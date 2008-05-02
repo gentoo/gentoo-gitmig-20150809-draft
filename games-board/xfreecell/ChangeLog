@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xfreecell
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/ChangeLog,v 1.9 2007/02/06 02:30:11 dang Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/ChangeLog,v 1.10 2008/05/02 23:17:43 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/xfreecell-1.0.5b-gcc43.patch, xfreecell-1.0.5b.ebuild:
+  Fix building with gcc-4.3
 
   06 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> xfreecell-1.0.5b.ebuild:
   Marked stable on amd64 for bug #162573
