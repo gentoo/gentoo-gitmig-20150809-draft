@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.63 2007/07/01 23:14:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.64 2008/05/02 04:07:38 vapier Exp $
 #
 # Maintainer: amd64@gentoo.org / toolchain@gentoo.org
 #
@@ -535,11 +535,12 @@ get_libname() {
 	local libname
 	local ver=$1
 	case ${CHOST} in
-		*-darwin*) libname="dylib";;
-		*)         libname="so";;
+		mingw*|*-mingw*) libname="dll";;
+		*-darwin*)       libname="dylib";;
+		*)               libname="so";;
 	esac
 
-	if [[ -z $@ ]] ; then
+	if [[ -z $* ]] ; then
 		echo ".${libname}"
 	else
 		for ver in "$@" ; do
