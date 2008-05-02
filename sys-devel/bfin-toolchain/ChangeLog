@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/bfin-toolchain
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.4 2007/08/21 22:00:48 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.5 2008/05/02 21:33:15 vapier Exp $
+
+*bfin-toolchain-2008.1_rc8 (02 May 2008)
+
+  02 May 2008; Mike Frysinger <vapier@gentoo.org>
+  +bfin-toolchain-2008.1_rc8.ebuild:
+  Version bump.
 
 *bfin-toolchain-2007.1.1_rc3 (21 Aug 2007)
 
