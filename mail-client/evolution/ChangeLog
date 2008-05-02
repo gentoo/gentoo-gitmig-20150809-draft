@@ -1,6 +1,72 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.232 2008/04/08 13:51:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.233 2008/05/02 19:32:15 dang Exp $
+
+*evolution-2.22.1.1 (02 May 2008)
+
+  02 May 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +evolution-2.22.1.1.ebuild:
+  Bump to 2.22.1.1
+
+  Add the attachments and draw the bar (Srinivasa Ragavan)
+
+  (Novell Bugzilla) Internet Based Calendar Events Are Declined By
+
+  Evolution/GroupWise (Chenthill Palanisamy)
+
+  (Novell Bugzilla) Retracted groupwise appointments should disappear as
+
+  soon as they are retracted. (Chenthill Palanisamy)
+
+  Fix a crash at exit (Srinivasa Ragavan)
+
+  Allow copy & paste of email addresses from an appointment to a mail
+
+  message (Ashish Shrivastava)
+
+  Return sanely if the path value is corrupted (Bharath Acharya)
+
+  (Novell Bugzilla) Fixed a deadlock when downloading data on a rather
+
+  loaded system (Srinivasa Ragavan)
+
+  Try to find text/html part in multipart/alternative when in normal
+
+  mode (Milan Crha)
+
+  Do not inherit search filters when opening messages in new window
+
+  (Milan Crha)
+
+  Make Always carbon-copy (cc) option work again (Bharath Acharya)
+
+  Fixed a crash when simultaneously pressing the "show" preview/arrow
+
+  button on several very large image attachments in an e-mail. (Milan
+
+  Crha)
+
+  Check online status from NetworkManager at startup instead of using
+
+  the last-used-state. (James Westby)
+
+  Fixed a crash on paste event in calendar (Milan Crha)
+
+  Fixed a typo (Milan Crha)
+
+  Fix a typo in the logic that caused Exchange Operations disabled on
+
+  startup (Matthew Barnes)
+
+  Look up in local address book for addresses to exclude mail sent by
+
+  known contacts from junk filtering if said so (Milan Crha)
+
+  Properly set type hint on tooltip window. (Danny Baumann)
+
+  Let searches work with labels again. (Milan Crha)
+
+  Fix Evolution crash when viewing pgp-signed message (Shuai Liu)
 
   08 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> +evolution-2.22.1.ebuild:
   Bump evo to 2.22.1
