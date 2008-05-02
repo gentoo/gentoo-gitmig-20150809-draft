@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.16 2008/05/01 07:41:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.17 2008/05/02 11:38:17 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org> xboard-4.2.7-r1.ebuild:
+  amd64/x86 stable, bug #219895
 
   01 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   xboard-4.2.7-r1.ebuild:
