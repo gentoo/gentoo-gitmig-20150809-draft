@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.2.0.ebuild,v 1.7 2008/05/02 14:59:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.2.0.ebuild,v 1.8 2008/05/02 16:54:13 mr_bones_ Exp $
 
 GCONF_DEBUG=no
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.4
 	  app-text/docbook-xsl-stylesheets
 	 =app-text/docbook-xml-dtd-4.1.2*"
-
