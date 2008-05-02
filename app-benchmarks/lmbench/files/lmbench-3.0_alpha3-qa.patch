@@ -1,0 +1,9 @@
+--- lmbench-3.0-a3/src/lib_debug.c.orig	2008-05-03 09:10:35.000000000 +1000
++++ lmbench-3.0-a3/src/lib_debug.c	2008-05-03 09:11:01.000000000 +1000
+@@ -1,5 +1,6 @@
+ #include "bench.h"
+ #include "lib_debug.h"
++#include <math.h>
+ 
+ /*
+  * return micro-seconds / iteration at the the fraction point.
