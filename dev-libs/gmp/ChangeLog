@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.93 2008/05/02 04:23:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.94 2008/05/02 04:46:05 vapier Exp $
+
+  02 May 2008; Mike Frysinger <vapier@gentoo.org>
+  files/gmp-4.1.4-noexecstack.patch:
+  Redo how we add noexecstack since #if checks do not work in .s files.
 
 *gmp-4.2.2-r1 (02 May 2008)
 
