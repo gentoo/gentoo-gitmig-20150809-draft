@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/scheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/scheme/ChangeLog,v 1.17 2008/04/30 16:04:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/scheme/ChangeLog,v 1.18 2008/05/02 15:41:25 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org> scheme-1.15.ebuild:
+  stable x86, bug 219332
 
   30 Apr 2008; nixnut <nixnut@gentoo.org> scheme-1.15.ebuild:
   Stable on ppc wrt bug 219332
