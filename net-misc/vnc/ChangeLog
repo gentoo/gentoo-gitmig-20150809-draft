@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.104 2008/04/13 13:26:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.105 2008/05/02 15:30:39 armin76 Exp $
+
+  02 May 2008; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r4.ebuild:
+  Bump patchset to fix build failure with gcc-4.3, bug #212948
 
   13 Apr 2008; Markus Meier <maekke@gentoo.org> vnc-4.1.2-r4.ebuild:
   amd64 stable, bug #214729
