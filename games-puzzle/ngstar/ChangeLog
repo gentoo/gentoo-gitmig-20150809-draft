@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ngstar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.6 2007/06/10 16:07:25 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.7 2008/05/02 19:44:34 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/ngstar-2.1.8-gcc43.patch, ngstar-2.1.8-r2.ebuild:
+  Fix building with gcc-4.3
 
   10 Jun 2007; Tristan Heaven <nyhm@gentoo.org> ngstar-2.1.8-r2.ebuild:
   Add missing sys-libs/gpm dep
