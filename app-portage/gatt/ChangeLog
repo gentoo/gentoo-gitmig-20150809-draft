@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.6 2008/04/12 22:25:57 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.7 2008/05/02 21:38:53 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org> gatt-0.6.0.ebuild:
+  amd64 stable, bug #217020
 
   11 Apr 2008; Dawid Węgliński <cla@gentoo.org> gatt-0.6.0.ebuild:
   Stable on x86 (bug #217020)
