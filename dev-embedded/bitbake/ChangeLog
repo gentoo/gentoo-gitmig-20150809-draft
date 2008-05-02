@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/bitbake
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.16 2007/08/25 15:07:24 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.17 2008/05/02 18:15:12 calchan Exp $
+
+  02 May 2008; Denis Dupeyron <calchan@gentoo.org> bitbake-1.8.4.ebuild,
+  bitbake-1.8.6.ebuild, bitbake-1.8.8.ebuild:
+  Fixed SRC_URI, see bug #218657.
 
   25 Aug 2007; Mike Frysinger <vapier@gentoo.org> bitbake-1.8.8.ebuild,
   bitbake-9999.ebuild:
