@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.31 2008/05/02 04:34:55 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.32 2008/05/02 18:04:12 fuzzyray Exp $
+
+  02 May 2008; Paul Varner <fuzzyray@gentoo.org> porthole-0.6.0_rc2.ebuild:
+  Re-keywording ~amd64, since the segmentation fault errors were caused by
+  dev-python/pygtk-2.12.1, which has now been keyworded -amd64. Testing was
+  successful on my AMD boxes after downgrading pygtk.
 
   02 May 2008; Paul Varner <fuzzyray@gentoo.org>
   +files/porthole-0.6.0_rc2-pocompile.patch, porthole-0.6.0_rc2.ebuild:
