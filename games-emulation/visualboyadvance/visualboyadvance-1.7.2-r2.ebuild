@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.1 2007/06/16 18:08:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.2 2008/05/02 21:34:30 tupone Exp $
 
 inherit eutils flag-o-matic games
 
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vba.ngemu.com/"
-SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz
+	mirror://gentoo/${P}-deprecatedsigc++.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,6 +49,7 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-homedir.patch \
 		"${FILESDIR}"/${PV}-gcc34.patch \
 		"${FILESDIR}"/${PV}-gcc41.patch \
+		"${WORKDIR}"/${P}-deprecatedsigc++.patch \
 		"${FILESDIR}"/${P}-uninit.patch
 }
 

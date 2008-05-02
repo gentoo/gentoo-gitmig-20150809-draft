@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.32 2007/06/16 18:08:58 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.33 2008/05/02 21:34:30 tupone Exp $
+
+  02 May 2008; Tupone Alfredo <tupone@gentoo.org>
+  visualboyadvance-1.7.2-r2.ebuild:
+  Inject deprecated libsigc++ code. Fix bug #215985 by Kjang Gwreuung-Kuq
 
 *visualboyadvance-1.7.2-r2 (16 Jun 2007)
 
