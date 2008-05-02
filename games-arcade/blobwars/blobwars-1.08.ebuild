@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.08.ebuild,v 1.2 2008/03/22 10:22:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.08.ebuild,v 1.3 2008/05/02 15:56:57 mr_bones_ Exp $
 
 inherit eutils gnome2-utils games
 
@@ -31,6 +31,7 @@ src_unpack() {
 		-e "/GAMEPLAYMANUAL/s:index:html/index:" \
 		makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-es.patch"
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.32 2008/03/22 10:22:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.33 2008/05/02 15:56:57 mr_bones_ Exp $
+
+  02 May 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/blobwars-1.08-es.patch, blobwars-1.08.ebuild:
+  add es-lang patch from Pacho Ramos via bug #220033
 
   22 Mar 2008; Rémi Cardona <remi@gentoo.org> blobwars-1.07.ebuild,
   blobwars-1.08.ebuild:

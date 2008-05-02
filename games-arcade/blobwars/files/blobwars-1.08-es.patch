@@ -1,0 +1,351 @@
+--- data/es/titleWidgets.old	2007-06-03 17:39:49.000000000 +0200
++++ data/es/titleWidgets	2007-06-03 17:40:02.000000000 +0200
+@@ -5,8 +5,8 @@
+ BUTTON help mainMenu "Ayuda" "*" -1 360 0 0
+ BUTTON quit mainMenu "Salir" "*" -1 390 0 0
+ 
+-LABEL label help "Para las instrucciones del juego, mira el manual de" "*" -1 260 0 0
+-LABEL label help "instalado en la siguiente localización," "*" -1 290 0 0
++LABEL label help "Para las instrucciones del juego, mira el manual del" "*" -1 260 0 0
++LABEL label help "juego instalado en la siguiente localización," "*" -1 290 0 0
+ LABEL labelManual help "/usr/share/doc/blobwars/manual.html" "*" -1 320 0 0
+ LABEL labelManual help "(actualmente sólo en inglés)" "*" -1 350 0 0
+ 
+--- data/es/optionWidgets.old	2007-06-03 17:03:59.000000000 +0200
++++ data/es/optionWidgets	2007-06-03 17:09:07.000000000 +0200
+@@ -1,11 +1,11 @@
+ RADIO fullscreen options "Pantalla Completa" "No|Sí" 100 65 0 1
+ SMOOTH_SLIDER soundvol options "Volumen de Sonido" "*" 100 100 0 128
+ SMOOTH_SLIDER musicvol options "Volumen de Música" "*" 100 135 0 128
+-RADIO output options "Tipus de Sortida" "Mudo|Mono|Estéreo" 100 170 0 2
++RADIO output options "Tipo de Sonido" "Mudo|Mono|Estéreo" 100 170 0 2
+ SLIDER gamma options "Brillo" "*" 100 205 1 20
+ RADIO gore options "Derramamiento de Sangre" "No|Sí" 100 240 0 1
+-BUTTON keys options "Configura Teclas..." "*" 100 275 0 100
+-BUTTON joysticks options "Configura JoyStick..." "*" 100 310 0 100
++BUTTON keys options "Configura las Teclas..." "*" 100 275 0 100
++BUTTON joysticks options "Configura el JoyStick..." "*" 100 310 0 100
+ 
+ BUTTON cheats options "Trucos..." "*" 100 345 0 100
+ 
+--- data/es/introText~	2008-02-12 21:08:14.000000000 +0100
++++ data/es/introText	2008-02-12 21:08:14.000000000 +0100
+@@ -9,7 +9,7 @@
+ 0 0 10
+ @none@
+ Los Blobs eran una raza feliz y amigable. No necesitaban nada más. 
+-Pasaban sus días criando los hijos, recogiendo Cerezas y 
++Pasaban sus días criando a sus hijos, recogiendo Cerezas y 
+ estudiando astrofísica y física cuántica.
+ 
+ 600 0 1
+@@ -20,9 +20,9 @@
+ 
+ 0 0 10
+ @none@
+-Las guerras y conflictos eran leyendas para los Blobs. 
+-Muchos de ellos nunca habían visto un arma y algunos incluso dudaban de su existencia. 
+-Eran vidas felices, más aún por su mundo limpio, climas excelentes y lugares de vacaciones.
++Las guerras y conflictos eran leyendas para los Blobs. Muchos de ellos nunca 
++habían visto un arma y algunos incluso dudaban de su existencia. Eran vidas 
++felices, aún más por su mundo limpio, climas excelentes y lugares de vacaciones.
+ 
+ -600 0 1
+ @none@
+--- locale/es.po.orig	2008-02-12 21:15:30.000000000 +0100
++++ locale/es.po	2008-02-12 21:16:42.000000000 +0100
+@@ -1,9 +1,9 @@
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: blobwars 1.06\n"
+-"PO-Revision-Date: 2007-04-13 12:47+0100\n"
++"Project-Id-Version: blobwars 1.08\n"
++"PO-Revision-Date: 2008-02-12 21:16+0100\n"
+ "Last-Translator: Pacho Ramos <pacho@condmat1.ciencias.uniovi.es>\n"
+-"Language-Team: Catalan Localization <debian-l10n-catalan@lists.debian.org>\n"
++"Language-Team: \n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+@@ -166,7 +166,7 @@
+ msgstr "Activar 4 Puntos de Seguridad"
+ 
+ msgid "Battle Galdov"
+-msgstr "Combate contra Galdov"
++msgstr "Lucha contra Galdov"
+ 
+ msgid "Collect 10 Cherry Plants"
+ msgstr "Recolectar 10 Plantas de Cerezas"
+@@ -187,28 +187,28 @@
+ msgstr "Desactivar Sistemas de Seguridad"
+ 
+ msgid "Defeat 10 Hard Hide Blobs"
+-msgstr "Derrotar 10 Blobs de Piel Dura"
++msgstr "Derrotar a 10 Blobs de Piel Dura"
+ 
+ msgid "Defeat 15 Machine Gun Droids"
+-msgstr "Derrotar 15 Androides con Ametralladora"
++msgstr "Derrotar a 15 Androides con Ametralladora"
+ 
+ msgid "Defeat 25 Machine Gun Droids"
+-msgstr "Derrotar 25 Androides con Ametralladora"
++msgstr "Derrotar a 25 Androides con Ametralladora"
+ 
+ msgid "Defeat 30 enemies"
+-msgstr "Derrotar 30 enemigos"
++msgstr "Derrotar a 30 enemigos"
+ 
+ msgid "Defeat 50 Enemies"
+-msgstr "Derrotar 50 Enemigos"
++msgstr "Derrotar a 50 Enemigos"
+ 
+ msgid "Defeat 100 Enemies"
+-msgstr "Derrotar 100 Enemigos"
++msgstr "Derrotar a 100 Enemigos"
+ 
+ msgid "Defeat 200 Enemies"
+-msgstr "Derrotar 200 Enemigos"
++msgstr "Derrotar a 200 Enemigos"
+ 
+ msgid "Defeat BioMech Jetpack Blob"
+-msgstr "Derrotar Blob BioMec con la Mochila a Propulsión"
++msgstr "Derrotar a Blob BioMec con la Mochila a Propulsión"
+ 
+ msgid "Defeat Galdov"
+ msgstr "Derrotar a Galdov"
+@@ -247,7 +247,7 @@
+ msgstr "Inhabilitar el Cañón Automático"
+ 
+ msgid "Enter Ancient Tomb"
+-msgstr "Entrar a la Tumba Antigua"
++msgstr "Entrar en la Tumba Antigua"
+ 
+ msgid "Exit the Ice Caves"
+ msgstr "Salir de las Cuevas de Hielo"
+@@ -268,7 +268,7 @@
+ msgstr "Encontrar 2 cartuchos de dinamita"
+ 
+ msgid "Find 2nd Cypher Piece"
+-msgstr "encontrar la segunda Pieza Clave"
++msgstr "Encontrar la segunda Pieza Clave"
+ 
+ msgid "Find 3 Ancient Cogs"
+ msgstr "Encontrar 3 Antiguas Ruedas Dentadas"
+@@ -314,25 +314,25 @@
+ msgstr "Encontrar Fragmentos de la Esfera del Agua"
+ 
+ msgid "Get the Ancient Fire Crystal"
+-msgstr "Toma el Antiguo Cristal de Fuego"
++msgstr "Consigue el Antiguo Cristal de Fuego"
+ 
+ msgid "Get the Ancient Reality Crystal"
+-msgstr "Toma el Antiguo Cristal de la Realidad"
++msgstr "Consigue el Antiguo Cristal de la Realidad"
+ 
+ msgid "Get the Ancient Space Crystal"
+-msgstr "Toma el Antiguo Cristal del Espacio"
++msgstr "Consigue el Antiguo Cristal del Espacio"
+ 
+ msgid "Get the Ancient Time Crystal"
+-msgstr "Toma el Antiguo Cristal del Tiempo"
++msgstr "Consigue el Antiguo Cristal del Tiempo"
+ 
+ msgid "Get the Aqua Lung"
+-msgstr "Toma el Pulmón Acuático"
++msgstr "Consigue el Pulmón Acuático"
+ 
+ msgid "Get the Jetpack"
+-msgstr "Toma la Mochila a Propulsión"
++msgstr "Consigue la Mochila a Propulsión"
+ 
+ msgid "Get the Reality Crystal"
+-msgstr "Toma el Cristal de la Realidad"
++msgstr "Consigue el Cristal de la Realidad"
+ 
+ msgid "Get to the Exit"
+ msgstr "Llega a la Salida"
+@@ -375,16 +375,16 @@
+ 
+ # Picked up...
+ msgid "Picked up an Ancient Cog"
+-msgstr "Has tomado una Rueda Dentada"
++msgstr "Has adquirido una Rueda Dentada"
+ 
+ msgid "Picked up an Ancient Key"
+-msgstr "Has tomado una Llave Antigua"
++msgstr "Has adquirido una Llave Antigua"
+ 
+ msgid "Picked up a Blue Keycard"
+-msgstr "Has tomado una Tarjeta Azul"
++msgstr "Has adquirido una Tarjeta Azul"
+ 
+ msgid "Picked up a Bronze Key"
+-msgstr "Has tomado una Llave de Bronce"
++msgstr "Has adquirido una Llave de Bronce"
+ 
+ msgid "Picked up a bunch of Cherries"
+ msgstr "Has tomado un racimo de Cerezas"
+@@ -393,28 +393,28 @@
+ msgstr "Has tomado una Cereza"
+ 
+ msgid "Picked up a Crystal Shard"
+-msgstr "Has tomado un Fragmento de Cristal"
++msgstr "Has adquirido un Fragmento de Cristal"
+ 
+ msgid "Picked up a Cyan Keycard"
+-msgstr "Has tomado una Tarjeta Cian"
++msgstr "Has adquirido una Tarjeta Cian"
+ 
+ msgid "Picked up a Gold Key"
+-msgstr "Has tomado una Llave de Oro"
++msgstr "Has adquirido una Llave de Oro"
+ 
+ msgid "Picked up a Green Keycard"
+-msgstr "Has tomado una Tarjeta Verde"
++msgstr "Has adquirido una Tarjeta Verde"
+ 
+ msgid "Picked up a Grenades"
+ msgstr "Has conseguido Granadas"
+ 
+ msgid "Picked up a Keycard"
+-msgstr "Has tomado una Tarjeta"
++msgstr "Has adquirido una Tarjeta"
+ 
+ msgid "Picked up a Laser Gun"
+ msgstr "Has conseguido un Cañón Láser"
+ 
+ msgid "Picked up a Machine Gun"
+-msgstr "Has aconseguido una Ametralladora"
++msgstr "Has conseguido una Ametralladora"
+ 
+ msgid "Picked up a pair of Cherries"
+ msgstr "Has tomado un par de Cerezas"
+@@ -423,16 +423,16 @@
+ msgstr "Has conseguido una Pistola"
+ 
+ msgid "Picked up a Purple Keycard"
+-msgstr "Has tomado una Tarjeta Morada"
++msgstr "Has adquirido una Tarjeta Morada"
+ 
+ msgid "Picked up a Red Keycard"
+-msgstr "Has tomado una Tarjeta Roja"
++msgstr "Has adquirido una Tarjeta Roja"
+ 
+ msgid "Picked up a set of Grenades"
+ msgstr "Has conseguido un juego de Granadas"
+ 
+ msgid "Picked up a Silver Key"
+-msgstr "Has tomado una Llave de Plata"
++msgstr "Has adquirido una Llave de Plata"
+ 
+ msgid "Picked up a Three Way Spread"
+ msgstr "Has conseguido un Rifle a Tres Bandas"
+@@ -506,7 +506,7 @@
+ msgstr "¡¿qué era eso?!"
+ 
+ msgid "Galdov: And this is the best the Blob Army can offer?"
+-msgstr "Galdov: Y esto es lo mejor que la Armada Blob puede ofrecer?"
++msgstr "Galdov: ¿Y esto es lo mejor que la Armada Blob puede ofrecer?"
+ 
+ msgid "Galdov: Stupid creature!! Give up and join us!"
+ msgstr "Galdov: ¡¡Criatura estúpida!! ¡¡Abandona y únete a nosotros!!"
+@@ -531,7 +531,7 @@
+ msgstr "Precisión"
+ 
+ msgid "All Required Objectives Met - Mission Complete"
+-msgstr "Todos los Objeticos requeridos alcanzados - Misión Completada"
++msgstr "Todos los Objetivos requeridos alcanzados - Misión Completada"
+ 
+ msgid "Ammo Used"
+ msgstr "Munición Usada"
+@@ -564,7 +564,7 @@
+ msgstr "Tanque BioMec V2.6"
+ 
+ msgid "Blob Wars : Episode I"
+-msgstr "Blob Wars : Episodio II"
++msgstr "Blob Wars : Episodio I"
+ 
+ msgid "Bonuses Picked Up:"
+ msgstr "Bonificaciones Obtenidas:"
+@@ -670,7 +670,7 @@
+ msgstr "El Cuarto Piso ya es accesible"
+ 
+ msgid "Galdov has dropped the crystal! Quick! Get it!!"
+-msgstr "¡¡Galdov ha perdido el cristal!! ¡Rápido! ¡A cogerlo!"
++msgstr "¡¡Galdov ha perdido el cristal!! ¡Rápido! ¡Hay que conseguirlo!"
+ 
+ msgid "Got the Aqua Lung! You can now swim forever!"
+ msgstr "¡Ya tienes el Pulmón Acuático! ¡Podrás nadar para siempre¡"
+@@ -703,13 +703,13 @@
+ msgstr "++ Inventario ++"
+ 
+ msgid "Items"
+-msgstr "Objectos"
++msgstr "Objetos"
+ 
+ msgid "Items Collected"
+-msgstr "Objectos Recolectados"
++msgstr "Objetos Recolectados"
+ 
+ msgid "Items Collected:"
+-msgstr "Objectos Recolectados:"
++msgstr "Objetos Recolectados:"
+ 
+ msgid "Jetpack"
+ msgstr "Mochila a Propulsión"
+@@ -763,7 +763,7 @@
+ msgstr "Metal Blob Solid : Estadísticas"
+ 
+ msgid "MIA Statistics"
+-msgstr "Estadísicadas de Perdidos En Acción"
++msgstr "Estadísticas de Perdidos En Acción"
+ 
+ msgid "MIAs"
+ msgstr "PEAs"
+@@ -820,7 +820,7 @@
+ msgstr "%s - Objectivo Completado - ¡Punto de Control Alcanzado!"
+ 
+ msgid "Objectives Completed:"
+-msgstr "Objectivos Completados:"
++msgstr "Objetivos Completados:"
+ 
+ msgid "Obstacles Reset"
+ msgstr "Obstáculos Reiniciados"
+@@ -850,7 +850,7 @@
+ msgstr "Presenta"
+ 
+ msgid "Press Button to Continue..."
+-msgstr "Presiona Botón para Continuar..."
++msgstr "Presiona Tabulador para Continuar..."
+ 
+ msgid "Press Fire to Continue"
+ msgstr "Presiona Fuego para Continuar"
+@@ -862,16 +862,16 @@
+ msgstr "Rescatar %d PEAs - Objectivo Completado - ¡Punto de Control Alcanzado!"
+ 
+ msgid "Rescued %s!"
+-msgstr "¡Has rescatado %s!"
++msgstr "¡Has rescatado a %s!"
+ 
+ msgid "Rescued %s - Checkpoint Reached!"
+-msgstr "¡Has rescatado %s - Punto de Control Alcanzado!"
++msgstr "¡Has rescatado a %s - Punto de Control Alcanzado!"
+ 
+ msgid "Save Complete"
+ msgstr "Salvado Completado"
+ 
+ msgid "Saving Game to Save Slot #%d. Please Wait..."
+-msgstr "Salvando el Juego a la Ranura #%d. Un Momento..."
++msgstr "Salvando el Juego en la Ranura #%d. Un Momento..."
+ 
+ msgid "Score:"
+ msgstr "Puntuación:"
+@@ -991,7 +991,7 @@
+ msgstr "¡Ya tienes la Mochila a Propulsión!"
+ 
+ msgid "You'll need to 'Kill Two Birds with One Stone' here..."
+-msgstr "Aquí necesitarás \"Matar Dos Pájaros de Una Pedrada\"..."
++msgstr "Aquí necesitarás \"Matar Dos Pájaros de Una Tiro\"..."
+ 
+ # Keys
+ msgid "backspace"
