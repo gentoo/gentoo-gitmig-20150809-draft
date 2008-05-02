@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/decorator
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.1 2008/05/02 04:47:32 pythonhead Exp $
+
+*decorator-2.2.0 (02 May 2008)
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +decorator-2.2.0.ebuild:
+  Initial commit. Thanks Qiangning Hong <hongqn@gmail.com> bug #176640
+
