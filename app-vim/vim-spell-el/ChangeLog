@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-el
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.1 2008/04/02 12:46:13 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.2 2008/05/02 10:34:21 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org>
+  vim-spell-el-20080402.ebuild:
+  x86 stable, bug #219916
 
 *vim-spell-el-20080402 (02 Apr 2008)
 
