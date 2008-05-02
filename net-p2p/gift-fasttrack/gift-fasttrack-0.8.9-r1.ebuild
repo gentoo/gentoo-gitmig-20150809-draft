@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9-r1.ebuild,v 1.9 2007/07/12 14:29:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9-r1.ebuild,v 1.10 2008/05/02 16:18:58 armin76 Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ MY_P=${P/gift-fasttrack/giFT-FastTrack}
 
 DESCRIPTION="FastTrack Plugin for giFT"
 HOMEPAGE="https://developer.berlios.de/projects/gift-fasttrack/"
-SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"

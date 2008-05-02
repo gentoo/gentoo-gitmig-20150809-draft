@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-ares
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.18 2007/07/12 14:30:12 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.19 2008/05/02 16:17:57 armin76 Exp $
+
+  02 May 2008; Raúl Porcel <armin76@gentoo.org> gift-ares-0.3.0-r1.ebuild:
+  Fix SRC_URI, bug #218657
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   gift-ares-0.3.0-r1.ebuild:
