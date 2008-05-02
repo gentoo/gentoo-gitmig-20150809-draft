@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r1.ebuild,v 1.1 2008/04/21 21:53:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r1.ebuild,v 1.2 2008/05/02 07:58:18 remi Exp $
 
 inherit eutils autotools gnome2
 
@@ -45,7 +45,10 @@ src_unpack() {
 	# patch to work with >=libbeagle-0.3, bug #215026
 	epatch "${FILESDIR}"/yelp-2.22-with-beagle-0.3.patch
 
-	AT_M4DIR="${AT_M4DIR} m4" eautoreconf
+	# patch to fix parallel make, see bug #217250
+	sed -e "s/install-exec-local:/install-exec-hook:/" -i src/Makefile.am
+
+	eautoreconf
 
 	# strip stupid options in configure, see bug #196621
 	sed -i 's|$AM_CFLAGS -pedantic -ansi|$AM_CFLAGS|' configure
