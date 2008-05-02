@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/burlap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.17 2008/02/14 01:27:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.18 2008/05/02 14:10:24 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  burlap-3.0.8-r3.ebuild:
+  filter jikes
 
 *burlap-3.0.8-r3 (14 Feb 2008)
 
