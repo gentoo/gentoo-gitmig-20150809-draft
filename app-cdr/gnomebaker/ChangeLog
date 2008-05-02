@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.43 2008/05/02 14:55:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.44 2008/05/02 15:00:29 cardoe Exp $
+
+  02 May 2008; Doug Goldstein <cardoe@gentoo.org>
+  gnomebaker-0.6.1-r2.ebuild, gnomebaker-0.6.2.ebuild:
+  pkgconfig depend. remove global use_enable usage
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org>
   gnomebaker-0.6.1-r2.ebuild, gnomebaker-0.6.2.ebuild:

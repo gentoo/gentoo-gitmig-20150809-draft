@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.1-r2.ebuild,v 1.9 2008/05/02 14:55:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.1-r2.ebuild,v 1.10 2008/05/02 15:00:29 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -31,10 +31,12 @@ RDEPEND="app-cdr/cdrdao
 		>=media-libs/libogg-1.1.2
 		media-libs/gst-plugins-good )"
 DEPEND="${RDEPEND}
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+	dev-util/pkgconfig"
 
-G2CONF="${G2CONF} \
-	$(use_enable libnotify)"
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable libnotify)"
+}
 
 src_unpack() {
 	unpack ${A}
