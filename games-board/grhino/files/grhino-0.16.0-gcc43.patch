@@ -1,0 +1,30 @@
+--- book.cc
++++ book.cc
+@@ -28,6 +28,7 @@
+ #include <vector>
+ #include <iostream>
+ #include <stdexcept>
++#include <cstdlib>
+ 
+ #ifdef _
+ #undef _
+--- game.cc
++++ game.cc
+@@ -37,6 +37,7 @@
+ #include <sys/stat.h> 
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <cstdlib>
+ 
+ #ifdef _
+ #  undef _
+--- log_proc.h
++++ log_proc.h
+@@ -25,6 +25,7 @@
+ #include <string>
+ #include <fstream>
+ #include <iomanip>
++#include <cstdlib>
+ 
+ #include "board.h"
+ #include "order.h"

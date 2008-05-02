@@ -1,6 +1,10 @@
 # ChangeLog for games-board/grhino
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.6 2008/03/20 11:49:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.7 2008/05/02 18:50:06 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/grhino-0.16.0-gcc43.patch, grhino-0.16.0.ebuild:
+  Fix building with gcc-4.3
 
   20 Mar 2008; Tristan Heaven <nyhm@gentoo.org> grhino-0.16.0.ebuild:
   Add ~amd64 keyword
