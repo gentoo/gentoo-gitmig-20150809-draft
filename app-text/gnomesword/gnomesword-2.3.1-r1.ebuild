@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.4 2008/05/02 14:58:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.5 2008/05/02 15:02:37 cardoe Exp $
 
 inherit libtool gnome2 eutils
 
@@ -28,8 +28,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.14"
-G2CONF="${G2CONF} $(use_enable spell pspell)"
-DOCS="NEWS ChangeLog README TODO"
+
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable spell pspell)"
+	DOCS="NEWS ChangeLog README TODO"
+}
 
 pkg_postinst() {
 	gnome2_pkg_postinst

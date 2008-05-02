@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.27 2008/05/02 14:58:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.28 2008/05/02 15:02:37 cardoe Exp $
+
+  02 May 2008; Doug Goldstein <cardoe@gentoo.org> gnomesword-2.1.7.ebuild,
+  gnomesword-2.3.1-r1.ebuild:
+  remove variable global scope
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org>
   gnomesword-2.3.1-r1.ebuild:
