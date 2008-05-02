@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.33 2008/04/29 21:23:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.34 2008/05/02 14:03:00 zzam Exp $
+
+  02 May 2008; Matthias Schwarzott <zzam@gentoo.org> Manifest:
+  Fix tarball checksum another time.
 
   29 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> Manifest:
   Fix checksum of changed upstream file.
