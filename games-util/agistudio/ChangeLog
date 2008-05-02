@@ -1,6 +1,10 @@
 # ChangeLog for games-util/agistudio
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.8 2007/02/19 17:35:21 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.9 2008/05/02 22:14:08 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/agistudio-1.2.2-gcc43.patch, agistudio-1.2.2.ebuild:
+  Fix building with gcc-4.3
 
   19 Feb 2007; nixnut <nixnut@gentoo.org> agistudio-1.2.2.ebuild:
   Stable on ppc wrt bug 167559

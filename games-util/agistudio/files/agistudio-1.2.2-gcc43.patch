@@ -1,0 +1,50 @@
+--- src/logdecode.cpp
++++ src/logdecode.cpp
+@@ -27,7 +27,8 @@
+ #include "menu.h"
+ #include "agicommands.h"
+ 
+-#include <stdio.h>
++#include <cstdlib>
++#include <cstdio>
+ 
+ static int EncryptionStart;
+ static int MessageSectionStart,MessageSectionEnd;
+--- src/main.cpp
++++ src/main.cpp
+@@ -18,7 +18,8 @@
+  *
+  */
+ 
+-#include <stdio.h>
++#include <cstdlib>
++#include <cstdio>
+ 
+ #include <qapplication.h>
+ #include <qmainwindow.h>
+--- src/picedit.cpp
++++ src/picedit.cpp
+@@ -24,6 +24,7 @@
+ #include "picture.h"
+ #include "preview.h"
+ 
++#include <cstdlib>
+ #include <qspinbox.h>
+ #include <qapplication.h>
+ #include <qpainter.h>
+--- src/util.cpp
++++ src/util.cpp
+@@ -19,9 +19,10 @@
+  */
+ 
+ #include "util.h"
+-#include <stdio.h>
+-#include <stdlib.h>
+-#include <ctype.h>
++#include <cstdio>
++#include <cstdlib>
++#include <cctype>
++#include <cstring>
+ 
+ TStringList::TStringList ()
+ {
