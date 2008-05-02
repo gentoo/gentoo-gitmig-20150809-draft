@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bonnie++
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.21 2007/09/17 21:03:36 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.22 2008/05/02 14:21:50 dev-zero Exp $
+
+  02 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/bonnie++-1.93c-missing_include.patch, bonnie++-1.93c.ebuild:
+  Added patch to fix compilation problems with gcc-4.3
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing johnm from metadata.xml (see #186467 for reference).

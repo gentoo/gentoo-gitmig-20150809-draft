@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.10 2006/05/21 09:16:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.11 2008/05/02 14:21:50 dev-zero Exp $
 
 inherit eutils
 
@@ -17,8 +17,9 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-64bit.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-64bit.patch" \
+		"${FILESDIR}/${P}-missing_include.patch"
 }
 
 src_compile() {
