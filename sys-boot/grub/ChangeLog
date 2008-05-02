@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.88 2008/04/07 08:14:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.89 2008/05/02 19:51:39 robbat2 Exp $
+
+  02 May 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r5.ebuild:
+  amd64+static together blow up.
 
   07 Apr 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r5.ebuild:
   Bump of patchset only to fix bug #216307. Revbump will happen when I have

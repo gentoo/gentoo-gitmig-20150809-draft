@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.8 2008/04/07 08:14:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.9 2008/05/02 19:51:39 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -81,6 +81,12 @@ src_compile() {
 
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
+
+	# Per bug 216625, the emul packages do not provide .a libs for performing
+	# suitable static linking
+	if use amd64 && use static ; then
+		die "You must use the grub-static package if you want a static Grub on amd64!"
+	fi
 
 	# build the net-bootable grub first, but only if "netboot" is set
 	if use netboot ; then
