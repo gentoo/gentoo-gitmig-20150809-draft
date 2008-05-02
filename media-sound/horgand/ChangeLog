@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/horgand
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.18 2008/04/19 15:24:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.19 2008/05/02 15:59:30 drac Exp $
+
+  02 May 2008; Samuli Suominen <drac@gentoo.org> horgand-1.07.ebuild,
+  -horgand-1.11.ebuild:
+  Remove old and use berlios mirrors:// in stable version.
 
 *horgand-1.14 (19 Apr 2008)
 

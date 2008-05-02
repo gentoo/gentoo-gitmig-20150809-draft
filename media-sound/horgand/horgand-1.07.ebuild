@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.07.ebuild,v 1.6 2007/09/14 22:40:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.07.ebuild,v 1.7 2008/05/02 15:59:30 drac Exp $
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Horgand is an opensource software organ."
 HOMEPAGE="http://horgand.berlios.de"
-SRC_URI="http://download.berlios.de/horgand/${P}.tar.gz
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz
 	mirror://debian/pool/main/h/${PN}/${PN}_${PV}-1.diff.gz"
 
 LICENSE="GPL-2"
