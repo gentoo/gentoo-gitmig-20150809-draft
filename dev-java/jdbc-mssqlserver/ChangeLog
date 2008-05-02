@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mssqlserver
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.20 2008/03/09 15:05:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.21 2008/05/02 13:31:55 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org>
+  jdbc-mssqlserver-2005.1.2.2828.100.ebuild:
+  amd64 stable, bug #212647
 
   09 Mar 2008; nixnut <nixnut@gentoo.org>
   jdbc-mssqlserver-2005.1.2.2828.100.ebuild:
