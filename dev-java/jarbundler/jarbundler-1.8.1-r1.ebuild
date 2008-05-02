@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.8.1-r1.ebuild,v 1.3 2008/03/08 12:55:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.8.1-r1.ebuild,v 1.4 2008/05/02 13:29:25 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEP=">=dev-java/xerces-2.8.1"

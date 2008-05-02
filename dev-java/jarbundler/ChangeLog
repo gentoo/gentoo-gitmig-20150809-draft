@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarbundler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.13 2008/03/08 12:55:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.14 2008/05/02 13:29:25 maekke Exp $
+
+  02 May 2008; Markus Meier <maekke@gentoo.org> jarbundler-1.8.1-r1.ebuild:
+  amd64 stable, bug #212644
 
   08 Mar 2008; Markus Meier <maekke@gentoo.org> jarbundler-1.8.1-r1.ebuild:
   x86 stable, bug #212644
