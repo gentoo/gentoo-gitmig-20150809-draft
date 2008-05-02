@@ -1,6 +1,10 @@
 # ChangeLog for games-board/r-katro
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.6 2006/10/04 16:24:33 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.7 2008/05/02 23:29:53 nyhm Exp $
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/r-katro-0.7.0-gcc43.patch, r-katro-0.7.0.ebuild:
+  Fix building with gcc-4.3
 
   04 Oct 2006; Tristan Heaven <nyhm@gentoo.org> r-katro-0.7.0.ebuild:
   Fix nls support

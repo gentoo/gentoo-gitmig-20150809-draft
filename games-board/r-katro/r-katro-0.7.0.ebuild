@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.9 2006/10/04 17:10:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.10 2008/05/02 23:29:53 nyhm Exp $
 
-inherit qt3 games
+inherit eutils qt3 games
 
 DESCRIPTION="3D puzzle game"
 HOMEPAGE="http://f.rodrigo.free.fr/games/r-katro/r-katro.php"
@@ -10,7 +10,7 @@ SRC_URI="http://f.rodrigo.free.fr/r-tech/cmp/addon-module/link/link.php?games/r-
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
 RDEPEND="$(qt_min_version 3.3)
@@ -22,7 +22,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:$(localedir):/usr/share/locale:' \
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -i \
+		's:$(localedir):/usr/share/locale:' \
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
 }

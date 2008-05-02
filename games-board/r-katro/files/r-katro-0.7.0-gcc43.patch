@@ -1,0 +1,12 @@
+--- src/obj3d.h
++++ src/obj3d.h
+@@ -3,7 +3,8 @@
+ 
+ #include "glm.h"
+ #include <qimage.h>
+-#include <stdio.h>
++#include <cstdlib>
++#include <cstdio>
+ 
+ class obj3d
+   {
