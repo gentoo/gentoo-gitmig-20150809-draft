@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/capseo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.5 2008/02/13 07:36:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.6 2008/05/02 14:01:05 trapni Exp $
+
+  02 May 2008; Christian Parpart <trapni@gentoo.org>
+  capseo-0.3.0_pre200712251-r1.ebuild:
+  restrict yasm dependency to x86/amd64 archs only - closes bug 206641
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   add no-herd

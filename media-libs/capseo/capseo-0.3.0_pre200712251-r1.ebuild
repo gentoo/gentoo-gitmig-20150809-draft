@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r1.ebuild,v 1.1 2008/01/16 07:38:53 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r1.ebuild,v 1.2 2008/05/02 14:01:05 trapni Exp $
 
 inherit flag-o-matic multilib
 
@@ -15,7 +15,8 @@ IUSE="debug theora"
 RDEPEND=">=media-libs/libtheora-1.0_alpha6-r1"
 
 DEPEND="${RDEPEND}
-		>=dev-lang/yasm-0.4.0
+		x86? ( >=dev-lang/yasm-0.4.0 )
+		amd64? ( >=dev-lang/yasm-0.4.0 )
 		dev-util/pkgconfig"
 
 EMULTILIB_PKG="true"
@@ -23,7 +24,7 @@ EMULTILIB_PKG="true"
 S="${WORKDIR}/captury-${PV}/${PN}"
 
 src_unpack() {
-	unpack "${A}" || die
+	unpack ${A} || die
 
 	cd "${S}"
 	einfo "pwd: $(pwd)"
