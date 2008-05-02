@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.6 2008/03/28 06:47:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.7 2008/05/02 15:24:24 fmccor Exp $
+
+  02 May 2008; Ferris McCormick <fmccor@gentoo.org> gdata-1.0.8.ebuild:
+  Add ~sparc keyword, part of Bug #218794 (tests run fine).
 
   28 Mar 2008; Ali Polatel <hawking@gentoo.org>
   +files/gdata-1.0.8-test-fix.patch, gdata-1.0.8.ebuild:
