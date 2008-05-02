@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.1 2008/04/30 19:12:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.2 2008/05/02 18:55:27 fmccor Exp $
+
+  02 May 2008; Ferris McCormick <fmccor@gentoo.org> serf-0.1.2.ebuild:
+  Add ~sparc, part of Bug #219882.  Test suite runs as expected.
 
 *serf-0.1.2 (30 Apr 2008)
 

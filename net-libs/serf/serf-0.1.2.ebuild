@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-0.1.2.ebuild,v 1.1 2008/04/30 19:12:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-0.1.2.ebuild,v 1.2 2008/05/02 18:55:27 fmccor Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://serf.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/apr
