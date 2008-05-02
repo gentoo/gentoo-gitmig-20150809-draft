@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.0.ebuild,v 1.1 2007/10/24 12:42:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.2.ebuild,v 1.1 2008/05/02 11:42:24 george Exp $
 
-inherit eutils versionator toolchain-funcs kde-functions
+inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
 My_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="KDESvn is a frontend to the subversion vcs."
 HOMEPAGE="http://www.alwins-world.de/wiki/programs/kdesvn"
-SRC_URI="http://www.alwins-world.de/programs/download/${PN}/${My_PV}.x/${P}.tar.bz2"
+SRC_URI="http://kdesvn.alwins-world.de/trac.fcgi/downloads/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,6 +20,14 @@ DEPEND=">=dev-util/subversion-1.3
 		>=dev-util/cmake-2.4"
 
 need-kde 3.3
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+#	epatch "${FILESDIR}"/${PN}-0.14.1-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-0.14.1-subversion-1.5.patch
+}
 
 src_compile() {
 	local myconf
