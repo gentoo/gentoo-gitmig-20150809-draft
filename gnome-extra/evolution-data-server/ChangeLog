@@ -1,6 +1,58 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.177 2008/04/21 17:13:30 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.178 2008/05/02 18:45:42 dang Exp $
+
+*evolution-data-server-2.22.1.1 (02 May 2008)
+
+  02 May 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +evolution-data-server-2.22.1.1.ebuild:
+  Bump to 2.22.1.1
+
+  Also copy user tags when copying messages between folders (Milan Crha)
+
+  (Novell Bugzilla) Internet Based Calendar Events Are Declined By
+
+  Evolution/GroupWise (Chenthill Palanisamy)
+
+  (Novell Bugzilla) Fix a severe memory leak in evolution-data-server
+
+  (Chenthill Palanisamy)
+
+  (Novell Bugzilla) Display of web calendars ignores timezones
+
+  (Chenthill Palanisamy)
+
+  (Novell Bugzilla) Retracted groupwise appointments should disappear as
+
+  soon as they are retracted. (Chenthill Palanisamy)
+
+  (Novell Bugzilla) International clock applet is crashing (Chenthill
+
+  Palanisamy)
+
+  Run a single delta-thread to fetch changes from the server, instead of
+
+  spawning multiple threads (Ashish Shrivastava)
+
+  Fixed a few compiler warnings (Suman Manjunath)
+
+  Use recursive mutex (Milan Crha)
+
+  Fix a crash (Milan Crha)
+
+  Make sure we do the Inbox -> INBOX translation at the right place
+
+  (Christian Kellner)
+
+  Support migration from password file to keyring (Matthew Barnes)
+
+  Fixed a crash when searching with an expression (Milan Crha)
+
+  Do not ship .svn files (Matthew Barnes)
+
+  Don't free the same variable twice (Sebastien Bacher)
+
+  Load addressbook conditionally (Srinivasa Ragavan)
 
   21 Apr 2008; <welp@gentoo.org> evolution-data-server-1.12.1.ebuild,
   evolution-data-server-1.12.3.ebuild, evolution-data-server-2.22.0.ebuild,
