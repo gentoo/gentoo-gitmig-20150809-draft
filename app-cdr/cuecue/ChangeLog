@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cuecue
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.5 2008/01/10 17:05:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.6 2008/05/02 21:22:51 sbriesen Exp $
+
+  02 May 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  cuecue-0.2.2-r1.ebuild:
+  mirror://berlios
 
   10 Jan 2008; Samuli Suominen <drac@gentoo.org> -cuecue-0.2.2.ebuild:
   Remove old version.

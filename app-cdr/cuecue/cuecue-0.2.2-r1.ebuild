@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.1 2007/02/27 22:47:46 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.2 2008/05/02 21:22:51 sbriesen Exp $
 
 inherit eutils
 
 DESCRIPTION="Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin."
 HOMEPAGE="http://cuecue.berlios.de/"
-SRC_URI="http://download.berlios.de/cuecue/${P}.tar.gz"
+SRC_URI="mirror://berlios/cuecue/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
