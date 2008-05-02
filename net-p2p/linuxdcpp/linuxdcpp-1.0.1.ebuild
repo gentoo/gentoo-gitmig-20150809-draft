@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.1.ebuild,v 1.4 2008/02/29 20:29:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.1.ebuild,v 1.5 2008/05/02 16:07:19 armin76 Exp $
 
 inherit eutils
 
 DESCRIPTION="Direct connect client, looks and works like famous DC++"
 HOMEPAGE="http://linuxdcpp.berlios.de"
-SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2
-		mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"

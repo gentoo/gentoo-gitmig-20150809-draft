@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.24 2008/02/29 20:29:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.25 2008/05/02 16:07:19 armin76 Exp $
+
+  02 May 2008; Raúl Porcel <armin76@gentoo.org> linuxdcpp-1.0.1.ebuild:
+  Fix SRC_URI, bug #218657
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> linuxdcpp-1.0.1.ebuild,
   linuxdcpp-9999.ebuild:
