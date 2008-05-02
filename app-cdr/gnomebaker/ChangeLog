@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gnomebaker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.42 2007/12/16 22:20:22 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.43 2008/05/02 14:55:51 cardoe Exp $
+
+  02 May 2008; Doug Goldstein <cardoe@gentoo.org>
+  gnomebaker-0.6.1-r2.ebuild, gnomebaker-0.6.2.ebuild:
+  clean up depends based on configure.in. Move scrollkeeper out of RDEPEND
 
 *gnomebaker-0.6.2 (16 Dec 2007)
 
