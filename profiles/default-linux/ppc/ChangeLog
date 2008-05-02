@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.33 2008/04/10 06:34:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.34 2008/05/02 02:40:36 wolf31o2 Exp $
+
+  02 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc64/2006.1/64bit-userland/use.mask,
+  ppc64/2007.0/64bit-userland/use.mask, ppc64/use.mask:
+  Move the USE mask on audit to the 64bit-userland profiles, since it has
+  KEYWORDS for ppc.
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; dev/ppc32/use.mask,
   dev/ppc64/2007.0/32bit-userland/use.mask,

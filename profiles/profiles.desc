@@ -186,7 +186,6 @@ ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/developer	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/server	dev
-ppc64		default/linux/powerpc/ppc64/2008.0		dev
 ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland	stable
 ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland/desktop	stable
 ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland/developer	stable

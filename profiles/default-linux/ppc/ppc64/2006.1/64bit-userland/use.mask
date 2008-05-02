@@ -1,8 +1,6 @@
 # this is a list of USE flags
 # that should not be used on PPC64
 # Tom Gall <tgall@gentoo.org> manages this list
-#
-
 
 # 25 Feb 2008  Brent Baude <ranger@gentoo.org>
 # Masking xmlrpc use flag because xmlrpc-c does not compile
@@ -32,11 +30,6 @@ pyste
 
 # we don't have hardware to test. also see bug #113398
 dvb
-
-# mask mozilla/firefox (bug #108020)
-mozilla
-firefox
-seamonkey
 
 # 2006/03/20 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
@@ -87,3 +80,10 @@ mpd
 # app-admin/hddtemp
 hddtemp
 
+# mask pbbuttonsd - reported by Mr Bones, ok'd by dostrow
+pbbuttonsd
+
+# USE=audit masked prior to testing on alpha, arm, hppa, ppc64, s390, sh.
+# Bug #184563, 18 Sep 2007 
+# Robin H. Johnson <robbat2@gentoo.org>
+audit

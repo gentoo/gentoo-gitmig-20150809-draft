@@ -1,4 +1,0 @@
-# Needs gcc-4
-<=app-office/scribus-1.3.3.11
-<=media-gfx/yafray-0.9
-
