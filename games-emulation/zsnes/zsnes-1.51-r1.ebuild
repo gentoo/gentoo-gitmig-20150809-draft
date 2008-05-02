@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.6 2008/02/29 19:08:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.7 2008/05/02 13:52:31 nyhm Exp $
 
-inherit eutils autotools flag-o-matic toolchain-funcs games
+inherit eutils autotools flag-o-matic toolchain-funcs multilib games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
@@ -33,41 +33,33 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libpng.patch
 	# Fix bug #186111
 	epatch "${FILESDIR}"/${P}-archopt-july-23-update.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	# Remove hardcoded CFLAGS and LDFLAGS
-	if use custom-cflags; then
-		sed -i -e '/^\s*CFLAGS=.* -fomit-frame-pointer /d' \
-			configure.in || die
-		append-flags -fomit-frame-pointer -D__RELEASE__
-	else
-		strip-flags
-	fi
 	sed -i \
-		-e 's:^\s*STRIP="-s":STRIP="":'	\
-		-e 's:^\s*CFLAGS=.* -I\/usr\/local\/include .*$:CFLAGS="${CFLAGS} -I.":'	\
-		-e '/^\s*LDFLAGS=.* -L\/usr\/local\/lib /d'		\
-		configure.in || die
-
+		-e '/^CFLAGS=.*local/s:-pipe.*:-Wall -I.":' \
+		-e '/^LDFLAGS=.*local/d' \
+		-e '/\w*CFLAGS=.*fomit/s:-O3.*$STRIP::' \
+		configure.in \
+		|| die "sed failed"
 	eautoreconf
 }
 
 src_compile() {
 	tc-export CC
-
 	use amd64 && multilib_toolchain_setup x86
-
-	local myconf=""
-	use custom-cflags && myconf="--disable-cpucheck force_arch=no"
+	use custom-cflags || strip-flags
 
 	egamesconf \
 		$(use_enable ao libao) \
 		$(use_enable png libpng) \
 		$(use_enable opengl) \
 		--disable-debug \
+		--disable-cpucheck \
 		--enable-release \
-		${myconf} \
+		force_arch=no \
 		|| die
-	emake makefile.dep || die "emake failed"
+	emake makefile.dep || die "emake makefile.dep failed"
 	emake || die "emake failed"
 }
 
@@ -77,7 +69,7 @@ src_install() {
 	dodoc ../docs/{readme.1st,*.txt,README.LINUX}
 	dodoc ../docs/readme.txt/*
 	dohtml -r ../docs/readme.htm/*
-	make_desktop_entry zsnes ZSNES zsnes
+	make_desktop_entry zsnes ZSNES
 	newicon icons/48x48x32.png ${PN}.png
 	prepgamesdirs
 }
