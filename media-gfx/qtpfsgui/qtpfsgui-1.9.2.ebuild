@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.0.ebuild,v 1.2 2008/02/09 00:08:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2.ebuild,v 1.1 2008/05/02 22:27:40 maekke Exp $
+
+EAPI="1"
 
 inherit eutils qt4
 
@@ -10,16 +12,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-4.2.3-r1
+DEPEND="
+	media-gfx/dcraw
 	>=media-gfx/exiv2-0.14
-	>=sci-libs/fftw-3.0.1-r2
 	>=media-libs/jpeg-6b-r7
-	>=media-libs/tiff-3.8.2-r2
 	>=media-libs/openexr-1.2.2-r2
-	media-gfx/dcraw"
+	>=media-libs/tiff-3.8.2-r2
+	>=sci-libs/fftw-3.0.1-r2
+	|| ( ( x11-libs/qt-core:4 x11-libs/qt-gui:4 )
+		>=x11-libs/qt-4.2.3-r1 )"
 
 src_unpack() {
 	unpack ${A}
