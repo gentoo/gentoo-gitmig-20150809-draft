@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mx4j
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.24 2008/03/22 21:02:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.25 2008/05/02 09:06:21 opfer Exp $
+
+  02 May 2008; Christian Faulhammer <opfer@gentoo.org> mx4j-3.0.1-r4.ebuild:
+  stable x86, bug 217725
 
 *mx4j-3.0.1-r4 (22 Mar 2008)
 
