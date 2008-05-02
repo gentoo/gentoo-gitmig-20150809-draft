@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.94 2008/05/01 23:09:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.95 2008/05/02 10:40:27 caster Exp $
+
+  02 May 2008; Vlastimil Babka <caster@gentoo.org>
+  ibm-jre-bin-1.6.0.1.ebuild:
+  Fix fetch instructions, bug #220012 by Tanktalus@gmail.com.
 
 *ibm-jre-bin-1.6.0.1 (01 May 2008)
 

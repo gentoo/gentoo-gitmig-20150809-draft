@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.1.ebuild,v 1.1 2008/05/01 22:46:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.1.ebuild,v 1.2 2008/05/02 10:40:09 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -50,7 +50,7 @@ elif use ppc64; then
 	LINK_ARCH="ipseries64"
 fi
 
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}_6sr${SERVICE_RELEASE}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.6"
 DESCRIPTION="IBM Java Development Kit ${SLOT}"
@@ -155,7 +155,7 @@ pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under Java SE 6, download GA for your arch:" #SR${SERVICE_RELEASE}
+	einfo "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
 		einfo "${JAVACOMM_DIST}"
@@ -166,7 +166,7 @@ pkg_nofetch() {
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if GA is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."
