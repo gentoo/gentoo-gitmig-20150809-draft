@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.9 2008/05/02 19:41:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.10 2008/05/02 19:44:20 dertobi123 Exp $
 
 inherit eutils
 
@@ -110,7 +110,7 @@ pkg_postinst() {
 	elog "oracle-instantclient-* packages aren't installed in different"
 	elog "SLOTs any longer. You may want to uninstall older versions."
 	elog
-	elog "TNS_ADMIN has been set to ${ROOT}etc/oracle by default, put your"
+	elog "TNS_ADMIN has been set to "${ROOT}"etc/oracle by default, put your"
 	elog "tnsnames.ora there or configure TNS_ADMIN to point to"
 	elog "your user specific configuration."
 }
