@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.37 2008/01/10 00:22:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.38 2008/05/02 18:46:17 pythonhead Exp $
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org> spe-0.8.2.ebuild,
+  spe-0.8.3c-r1.ebuild:
+  Use berlios mirror. bug #218657
 
   10 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
   files/spe-0.8.3-wxversion.patch:
