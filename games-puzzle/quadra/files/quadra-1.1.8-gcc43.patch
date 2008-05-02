@@ -1,0 +1,114 @@
+--- include/net_list.h
++++ include/net_list.h
+@@ -29,6 +29,7 @@
+ #include "net_stuff.h"
+ #include "stats.h"
+ #include "game.h"
++#include <cstring>
+ 
+ class Canvas;
+ 
+--- include/packets.h
++++ include/packets.h
+@@ -27,6 +27,7 @@
+ #include "game.h"
+ #include "config.h"
+ #include "track.h"
++#include <cstring>
+ 
+ enum Packet_type {
+ 	P_CHAT,
+--- skelton/common/http_request.cpp
++++ skelton/common/http_request.cpp
+@@ -18,7 +18,8 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ #include "error.h"
+ #include "net.h"
+ #include "http_request.h"
+--- skelton/common/res_compress.cpp
++++ skelton/common/res_compress.cpp
+@@ -21,6 +21,7 @@
+ #include "zlib.h"
+ #undef FAR
+ #include "res_compress.h"
++#include <cstring>
+ 
+ RCSID("$Id: quadra-1.1.8-gcc43.patch,v 1.1 2008/05/02 22:35:13 nyhm Exp $")
+ 
+--- skelton/common/reswriter.cpp
++++ skelton/common/reswriter.cpp
+@@ -18,7 +18,8 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ #include "res.h"
+ #include "resfile.h"
+ 
+--- skelton/include/net_buf.h
++++ skelton/include/net_buf.h
+@@ -23,6 +23,7 @@
+ 
+ #include "types.h"
+ #include "net.h"
++#include <cstring>
+ 
+ class Net_buf {
+ public:
+--- skelton/svgalib/main.cpp
++++ skelton/svgalib/main.cpp
+@@ -27,8 +27,9 @@
+ #ifndef NDEBUG
+ #include <mcheck.h>
+ #endif
+-#include <stdlib.h>
+-#include <signal.h>
++#include <cstdlib>
++#include <csignal>
++#include <cstring>
+ 
+ #include "debug.h"
+ #include "types.h"
+--- skelton/svgalib/sound.cpp
++++ skelton/svgalib/sound.cpp
+@@ -18,7 +18,8 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ 
+ #include <mcheck.h>
+ #include <linux/soundcard.h>
+--- skelton/svgalib/video_x11.cpp
++++ skelton/svgalib/video_x11.cpp
+@@ -20,7 +20,8 @@
+ 
+ #ifdef UGS_LINUX_X11
+ 
+-#include <signal.h>
++#include <csignal>
++#include <cstring>
+ #include <unistd.h>
+ #include <sys/shm.h>
+ #define Font XFont
+--- skelton/tools/wadder/wadder.cpp
++++ skelton/tools/wadder/wadder.cpp
+@@ -100,7 +100,8 @@
+ 
+ */
+ 
+-#include <stdio.h>
++#include <cstdio>
++#include <cstring>
+ #include "stringtable.h"
+ #include "res.h"
+ 

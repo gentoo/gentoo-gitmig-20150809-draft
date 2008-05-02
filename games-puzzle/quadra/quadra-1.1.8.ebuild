@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.18 2008/02/29 19:35:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.19 2008/05/02 22:35:13 nyhm Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 x86"
 IUSE="svga"
 
 RDEPEND="x11-libs/libXpm
-	>=media-libs/libpng-1.2.1
+	media-libs/libpng
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
@@ -27,7 +27,8 @@ src_unpack() {
 		"${FILESDIR}"/libpng-1.2.5.patch \
 		"${FILESDIR}"/${P}-amd64.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-gcc42.patch
+		"${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \
 			|| die "sed config/vars.mk failed"
@@ -51,14 +52,14 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ${PN}
+	dogamesbin ${PN} || die "dogamesbin failed"
 	if use svga; then
 		dogameslib.so ${PN}-svga.so || die "dogameslib.so failed"
 	fi
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins ${PN}.res
+	doins ${PN}.res || die "doins failed"
 	doicon images/${PN}.xpm
-	make_desktop_entry ${PN} "Quadra" ${PN}
+	make_desktop_entry ${PN} Quadra
 
 	dodoc ChangeLog NEWS README
 	dohtml help/*
