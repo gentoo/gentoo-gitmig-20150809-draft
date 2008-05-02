@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/iconvcodec-1.1.2.ebuild,v 1.5 2006/07/12 15:40:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/iconvcodec-1.1.2.ebuild,v 1.6 2008/05/02 18:35:54 pythonhead Exp $
 
 inherit distutils
 
 DESCRIPTION="Python Codecs for Iconv Encodings"
-SRC_URI="http://download.berlios.de/cjkpython/${P}.tar.gz"
+SRC_URI="mirror://berlios/cjkpython/${P}.tar.gz"
 HOMEPAGE="http://cjkpython.i18n.org/"
 
 IUSE=""

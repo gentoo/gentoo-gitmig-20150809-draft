@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/iconvcodec
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.6 2007/02/22 00:28:37 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.7 2008/05/02 18:35:54 pythonhead Exp $
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org>
+  iconvcodec-1.1.2.ebuild:
+  Use berlios mirror. bug #218657
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
