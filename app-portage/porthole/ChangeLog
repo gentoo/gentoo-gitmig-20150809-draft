@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.32 2008/05/02 18:04:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.33 2008/05/02 18:14:04 fmccor Exp $
+
+  02 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  porthole-0.6.0_rc2.ebuild:
+  Adding ~sparc, Bug #219968 --- appears to work.
 
   02 May 2008; Paul Varner <fuzzyray@gentoo.org> porthole-0.6.0_rc2.ebuild:
   Re-keywording ~amd64, since the segmentation fault errors were caused by
