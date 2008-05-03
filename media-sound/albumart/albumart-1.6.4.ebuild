@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.4.ebuild,v 1.1 2008/05/03 13:58:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.4.ebuild,v 1.2 2008/05/03 14:08:23 drac Exp $
 
-inherit distutils qt3
+inherit distutils eutils qt3
 
 DESCRIPTION="Album Cover Art Downloader"
 HOMEPAGE="http://unrealvoodoo.org/hiteck/projects/albumart"
@@ -13,6 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/PyQt-3.14.1-r1
-	>=dev-python/imaging-1"
-DEPEND="${RDEPEND}"
+DEPEND="dev-python/PyQt
+	dev-python/imaging"
+
+src_install() {
+	distutils_src_install
+	rm -rf "${D}"/usr/share/{doc/albumart,applnk}
+	make_desktop_entry ${PN}-qt "Album Cover Art Downloader" ${PN}
+}
