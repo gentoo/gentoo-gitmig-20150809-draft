@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.3 2008/02/04 15:08:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.4 2008/05/03 08:48:45 drac Exp $
+
+*rawstudio-1.0 (03 May 2008)
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org>
+  -files/rawstudio-0.6-desktop-entry.patch,
+  +files/rawstudio-1.0-desktop-entry-and-pixmaps-directory.patch,
+  -rawstudio-0.6.ebuild, -rawstudio-0.7.ebuild, +rawstudio-1.0.ebuild:
+  Version bump wrt #220016. Patching .desktop file to respect latest
+  specification. Fixing icondir from /usr/share/icons to /usr/share/pixmaps.
 
 *rawstudio-0.7 (04 Feb 2008)
 

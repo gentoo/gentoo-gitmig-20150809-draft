@@ -1,0 +1,56 @@
+diff -ur rawstudio-1.0.orig/pixmaps/Makefile.in rawstudio-1.0/pixmaps/Makefile.in
+--- rawstudio-1.0.orig/pixmaps/Makefile.in	2008-04-19 02:30:28.000000000 +0300
++++ rawstudio-1.0/pixmaps/Makefile.in	2008-05-03 11:40:35.000000000 +0300
+@@ -162,7 +162,7 @@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-icondir = $(datadir)/icons
++icondir = $(datadir)/pixmaps
+ icon_DATA = rawstudio.png
+ rawstudiodir = $(datadir)/pixmaps/rawstudio
+ rawstudio_DATA = overlay_deleted.png \
+diff -ur rawstudio-1.0.orig/rawstudio.desktop rawstudio-1.0/rawstudio.desktop
+--- rawstudio-1.0.orig/rawstudio.desktop	2008-04-19 02:14:50.000000000 +0300
++++ rawstudio-1.0/rawstudio.desktop	2008-05-03 11:37:43.000000000 +0300
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Categories=Application;Graphics;Photography;GTK;
++Categories=Graphics;Photography;GTK;
+ Name=Rawstudio
+ Name[it]=Rawstudio
+ Name[pl]=Rawstudio
+@@ -16,6 +16,6 @@
+ Comment[ru]=Свободная программа для проявки цифровых негативов
+ Exec=rawstudio %F
+ StartupNotify=true
+-Icon=rawstudio.png
++Icon=rawstudio
+ MimeType=image/x-dcraw;
+ 
+diff -ur rawstudio-1.0.orig/src/gtk-interface.c rawstudio-1.0/src/gtk-interface.c
+--- rawstudio-1.0.orig/src/gtk-interface.c	2008-04-19 02:51:40.000000000 +0300
++++ rawstudio-1.0/src/gtk-interface.c	2008-05-03 11:41:11.000000000 +0300
+@@ -985,7 +985,7 @@
+ 	GdkColor bgcolor = {0, 0, 0, 0 };
+ 	GString *window_title = g_string_new(_("Rawstudio"));
+ 	
+-	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/icons/" PACKAGE ".png", NULL);
++	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE ".png", NULL);
+ 	rs->window = gui_window_make(rs);
+ 	gtk_widget_show(rs->window);
+ 
+diff -ur rawstudio-1.0.orig/src/rawstudio.c rawstudio-1.0/src/rawstudio.c
+--- rawstudio-1.0.orig/src/rawstudio.c	2008-04-19 02:14:49.000000000 +0300
++++ rawstudio-1.0/src/rawstudio.c	2008-05-03 11:40:55.000000000 +0300
+@@ -929,7 +929,7 @@
+ check_install()
+ {
+ #define TEST_FILE_ACCESS(path) do { if (g_access(path, R_OK)!=0) g_debug("Cannot access %s\n", path);} while (0)
+-	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/icons/" PACKAGE ".png");
++	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE ".png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority1.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority2.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority3.png");
