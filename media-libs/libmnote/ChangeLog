@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmnote
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.9 2007/05/15 10:25:37 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.10 2008/05/03 06:44:09 drac Exp $
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org> libmnote-0.5.6.ebuild:
+  Move pkgconfig to DEPEND wrt #217278.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
