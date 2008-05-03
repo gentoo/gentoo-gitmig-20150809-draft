@@ -1,0 +1,45 @@
+diff -ru chuck-1.2.1.1~/src/chuck_vm.h chuck-1.2.1.1/src/chuck_vm.h
+--- chuck-1.2.1.1~/src/chuck_vm.h	2008-05-03 13:14:46.000000000 +0200
++++ chuck-1.2.1.1/src/chuck_vm.h	2008-05-03 13:15:22.000000000 +0200
+@@ -41,6 +41,7 @@
+ #include "chuck_stats.h"
+ #endif
+ 
++#include <algorithm>
+ #include <string>
+ #include <map>
+ #include <vector>
+diff -ru chuck-1.2.1.1~/src/rtaudio.cpp chuck-1.2.1.1/src/rtaudio.cpp
+--- chuck-1.2.1.1~/src/rtaudio.cpp	2008-05-03 13:14:46.000000000 +0200
++++ chuck-1.2.1.1/src/rtaudio.cpp	2008-05-03 13:15:22.000000000 +0200
+@@ -50,6 +50,7 @@
+ #include "chuck_errmsg.h"
+ #include "digiio_rtaudio.h"
+ #include <stdio.h>
++#include <climits>
+ // old
+ // #include "RtAudio.h"
+ // #include <iostream>
+diff -ru chuck-1.2.1.1~/src/ugen_stk.cpp chuck-1.2.1.1/src/ugen_stk.cpp
+--- chuck-1.2.1.1~/src/ugen_stk.cpp	2008-05-03 13:14:46.000000000 +0200
++++ chuck-1.2.1.1/src/ugen_stk.cpp	2008-05-03 13:15:22.000000000 +0200
+@@ -41,7 +41,7 @@
+ #include <string.h>
+ #include <time.h>
+ #include <float.h>
+-
++#include <climits>
+ 
+ 
+ 
+diff -ru chuck-1.2.1.1~/src/util_hid.cpp chuck-1.2.1.1/src/util_hid.cpp
+--- chuck-1.2.1.1~/src/util_hid.cpp	2008-05-03 13:14:46.000000000 +0200
++++ chuck-1.2.1.1/src/util_hid.cpp	2008-05-03 13:15:22.000000000 +0200
+@@ -37,6 +37,7 @@
+ 
+ #include <vector>
+ #include <map>
++#include <climits>
+ 
+ using namespace std;
+ 
