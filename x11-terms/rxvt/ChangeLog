@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.58 2008/05/03 12:55:03 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.59 2008/05/03 15:32:21 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  rxvt-2.7.10-r4.ebuild:
+  stable x86, security bug 217819
 
 *rxvt-2.7.10-r4 (03 May 2008)
 
