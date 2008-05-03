@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.29 2008/04/16 18:32:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.30 2008/05/03 02:28:12 mabi Exp $
+
+  03 May 2008; Matti Bickel <mabi@gentoo.org> grace-5.1.21-r1.ebuild:
+  ~ppc added (bug #212198)
 
   16 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/grace-5.1.21-stdc99.patch, grace-5.1.21-r1.ebuild:
