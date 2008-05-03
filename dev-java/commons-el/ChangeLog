@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.24 2008/05/03 19:12:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.25 2008/05/03 19:28:10 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  commons-el-1.0-r2.ebuild:
+  stable x86, bug 219644
 
   03 May 2008; Christian Faulhammer <opfer@gentoo.org>
   commons-el-1.0-r2.ebuild:
