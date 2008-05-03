@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/multi-aterm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.23 2007/04/14 15:49:16 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.24 2008/05/03 11:58:56 keytoaster Exp $
+
+*multi-aterm-0.2.1-r1 (03 May 2008)
+
+  03 May 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/multi-aterm-0.2.1-display-security-issue.patch,
+  +multi-aterm-0.2.1-r1.ebuild:
+  Adding patch to fix security bug #219754
 
   14 Apr 2007; Raúl Porcel <armin76@gentoo.org> multi-aterm-0.2.1.ebuild:
   Add libXpm location, remove virtual/x11, thanks to Martin Salzer <stoky at
