@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.10 2007/04/14 15:49:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.11 2008/05/03 12:34:19 keytoaster Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PV}-initialize-vars.patch
+	epatch "${FILESDIR}/${PV}-initialize-vars.patch"
 }
 
 src_compile() {

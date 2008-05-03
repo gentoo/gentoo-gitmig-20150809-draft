@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.1 2008/05/03 11:58:56 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.2 2008/05/03 12:34:19 keytoaster Exp $
 
 inherit eutils
 
@@ -20,11 +20,11 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PV}-initialize-vars.patch"
-	
+
 	# Security bug #219754
 	epatch "${FILESDIR}/${P}-display-security-issue.patch"
 }
