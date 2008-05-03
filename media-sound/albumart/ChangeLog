@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/albumart
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.21 2007/08/19 11:18:05 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.22 2008/05/03 13:58:16 drac Exp $
+
+*albumart-1.6.4 (03 May 2008)
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org>
+  -files/albumart-1.6.0-unicode.patch, -albumart-1.6.0.ebuild,
+  +albumart-1.6.4.ebuild:
+  Version bump for bug 219814, thanks to Tim Dodge (and Christian Heim) for
+  reporting.
 
   19 Aug 2007; Samuli Suominen <drac@gentoo.org>
   +files/albumart-1.6.0-unicode.patch, albumart-1.6.0.ebuild:
