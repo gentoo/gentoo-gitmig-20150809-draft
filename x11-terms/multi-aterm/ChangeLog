@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/multi-aterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.25 2008/05/03 15:43:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.26 2008/05/03 15:48:22 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  multi-aterm-0.2.1-r1.ebuild:
+  shorten DESCRIPTION so it has exactly 100 characters
 
   03 May 2008; Christian Faulhammer <opfer@gentoo.org>
   multi-aterm-0.2.1-r1.ebuild:

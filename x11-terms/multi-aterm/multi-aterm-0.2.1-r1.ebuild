@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.3 2008/05/03 15:43:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.4 2008/05/03 15:48:22 opfer Exp $
 
 inherit eutils
 
-DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility like aterm, with tab support"
+DESCRIPTION="Terminal emulator with transparency support as well as rxvt backwards compatibility with tab support"
 HOMEPAGE="http://www.nongnu.org/materm/materm.html"
 SRC_URI="http://www.nongnu.org/materm/${P}.tar.gz"
 
