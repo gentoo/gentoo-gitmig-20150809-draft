@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.19 2008/05/03 22:03:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.20 2008/05/03 22:20:48 dirtyepic Exp $
+
+  03 May 2008; Ryan Hill <dirtyepic@gentoo.org> use.mask:
+  Mask various gnome-related USE flags.
 
   03 May 2008; Ryan Hill <dirtyepic@gentoo.org> use.mask:
   Mask xulrunner USE flag.

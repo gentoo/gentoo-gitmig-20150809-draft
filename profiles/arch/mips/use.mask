@@ -1,4 +1,12 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.6 2008/05/03 22:03:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.7 2008/05/03 22:20:47 dirtyepic Exp $
+
+# Ryan Hill <dirtyepic@gentoo.org>
+# Various Gnome flags
+beagle
+esd
+gstreamer
+gtkhtml
+gnome
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # No version of xulrunner keyworded at the moment
@@ -37,11 +45,6 @@ nextaw
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
 # Not yet tested, and gets in the way for some KDE-related packages
 qt4
-
-# Don't need these either
-gstreamer
-gtkhtml
-gnome
 
 # Until someone actually needs fuse, we'll mask it as
 # it holds up stablizing ntfsprogs
