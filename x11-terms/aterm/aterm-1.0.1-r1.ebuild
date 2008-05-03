@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r1.ebuild,v 1.2 2008/05/03 12:29:35 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r1.ebuild,v 1.3 2008/05/03 14:25:14 opfer Exp $
 
 inherit flag-o-matic
 
@@ -66,7 +66,7 @@ src_install() {
 	fperms g+s /usr/bin/aterm
 
 	doman doc/aterm.1
-	dodoc ChangeLog doc/BUGS doc/FAQ doc/README.*
+	dodoc ChangeLog doc/FAQ doc/README.*
 	docinto menu
 	dodoc doc/menu/*
 	dohtml -r .

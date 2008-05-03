@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.101 2008/05/03 12:26:58 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.102 2008/05/03 14:25:14 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  aterm-1.0.1-r1.ebuild:
+  remove doc/BUGS from doc installation
 
 *aterm-1.0.1-r1 (03 May 2008)
 
