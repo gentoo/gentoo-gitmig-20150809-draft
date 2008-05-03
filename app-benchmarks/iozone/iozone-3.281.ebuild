@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.281.ebuild,v 1.1 2007/02/15 11:26:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.281.ebuild,v 1.2 2008/05/03 00:16:51 dragonheart Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -30,7 +30,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/gcc
+DEPEND="
 	>=sys-apps/sed-4
 	virtual/libc"
 RDEPEND="virtual/libc"
@@ -72,6 +72,6 @@ src_install() {
 }
 
 src_test() {
-	cd ${T}
-	${S}/src/current/iozone testfile || die "self test failed"
+	cd "${T}"
+	"${S}"/src/current/iozone testfile || die "self test failed"
 }
