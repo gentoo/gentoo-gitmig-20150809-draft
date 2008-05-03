@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r2.ebuild,v 1.2 2008/04/30 22:24:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r2.ebuild,v 1.3 2008/05/03 19:12:31 opfer Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -17,11 +17,12 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 S=${WORKDIR}/${P}-src
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	mv "build.properties" "build.properties.old"
 

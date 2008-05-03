@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.23 2008/04/30 22:24:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.24 2008/05/03 19:12:31 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  commons-el-1.0-r2.ebuild:
+  filtered jikes and unquote a variable
 
   30 Apr 2008; Brent Baude <ranger@gentoo.org> commons-el-1.0-r2.ebuild:
   stable ppc64, bug 219644
