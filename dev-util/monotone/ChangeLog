@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.53 2008/05/03 00:34:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.54 2008/05/03 01:01:11 dragonheart Exp $
+
+  03 May 2008; Daniel Black <dragonheart@gentoo.org> monotone-0.35.ebuild,
+  -monotone-0.36-r1.ebuild:
+  cleaned out 0.36 version. Fixed boost depend in 0.35 (stable) so it is not a
+  runtime depend. Thanks to gentoofan23 on irc for the prompting
 
 *monotone-0.40 (03 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.7 2008/04/02 02:11:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.8 2008/05/03 01:01:11 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -14,11 +14,11 @@ KEYWORDS="amd64 ~ia64 ppc x86"
 
 IUSE="doc emacs ipv6 nls"
 
-RDEPEND=">=dev-libs/boost-1.33.1
-	sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
+	>=dev-libs/boost-1.33.1
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	doc? ( sys-apps/texinfo )"
 
