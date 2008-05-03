@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cxxtools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.3 2007/11/24 14:42:03 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.4 2008/05/03 11:30:35 drac Exp $
+
+*cxxtools-1.4.7 (03 May 2008)
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/cxxtools-1.4.7-gcc43.patch, +cxxtools-1.4.7.ebuild:
+  Version bump for bug 219556, thanks to Peter Alfredsen.
 
   24 Nov 2007; Tiziano Müller <dev-zero@gentoo.org> cxxtools-1.4.5.ebuild:
   Added ~amd64 keyword since it works here.
