@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.11.ebuild,v 1.1 2008/04/20 04:32:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.11.ebuild,v 1.2 2008/05/03 18:03:59 drac Exp $
 
 inherit autotools eutils
 
@@ -25,7 +25,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	echo filter.cc >> po/POTFILES.skip
+	echo speed-stats.cc >> po/POTFILES.skip
+	echo torrent-list.cc >> po/POTFILES.skip
+	echo torrent-stats.cc >> po/POTFILES.skip
+	echo xmission.cc >> po/POTFILES.skip
 	epatch "${FILESDIR}/transmission-1.11-libnotify-option.patch"
 	AT_M4DIR="${S}/m4" eautoreconf
 }
