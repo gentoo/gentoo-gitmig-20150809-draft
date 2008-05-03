@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.52 2008/04/03 13:36:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.53 2008/05/03 00:34:14 dragonheart Exp $
+
+*monotone-0.40 (03 May 2008)
+
+  03 May 2008; Daniel Black <dragonheart@gentoo.org> +monotone-0.40.ebuild:
+  version bump
 
   03 Apr 2008; Daniel Black <dragonheart@gentoo.org> monotone-0.39.ebuild:
   use system pcre as suggested by Dennis Schridde in bug #215837
