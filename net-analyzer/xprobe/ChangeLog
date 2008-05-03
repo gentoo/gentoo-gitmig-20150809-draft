@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/xprobe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.23 2007/04/01 17:48:50 vanquirius Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.24 2008/05/03 12:04:37 drac Exp $
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/xprobe-0.3-gcc43.patch, xprobe-0.3.ebuild:
+  Fix building with GCC 4.3 wrt #219629. Thanks to Peter Alfredsen. Also
+  prevent pre-stripping with simple sed.
 
   01 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -xprobe-0.2.2.ebuild:
   Remove old ebuild.
