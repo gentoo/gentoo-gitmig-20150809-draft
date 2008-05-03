@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1380 2008/05/02 15:50:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1381 2008/05/03 18:33:23 dertobi123 Exp $
+
+  03 May 2008; Tobias Scherbaum <dertobi123@gentoo.org> package.mask:
+  Remove mask on bind(-tools) 9.2.7 and 9.3.3
 
   02 May 2008; Samuli Suominen <drac@gentoo.org> thirdpartymirrors:
   Flip mirrors around and try download #2 first since download #1

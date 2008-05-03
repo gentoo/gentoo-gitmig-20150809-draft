@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8550 2008/05/02 11:59:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8551 2008/05/03 18:33:23 dertobi123 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1468,13 +1468,6 @@ games-action/armagetronad
 # Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
 # Build failure on big-endian #154294 and breaks non-default journals #154974
 ~sys-fs/reiserfsprogs-3.6.20
-
-# Konstantin V. Arkhipov <voxus@gentoo.org> (22 Dec 2006)
-# Stability issues on hardened systems: bugs #158217, #158664
-~net-dns/bind-9.2.7
-~net-dns/bind-tools-9.2.7
-~net-dns/bind-9.3.3
-~net-dns/bind-tools-9.3.3
 
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
