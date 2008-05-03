@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.107 2008/05/03 01:21:30 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.108 2008/05/03 22:03:34 dirtyepic Exp $
+
+# Ryan Hill <dirtyepic@gentoo.org>
+# No version of xulrunner keyworded right now
+xulrunner
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # virtual/blas virtual/cblas and virtual/lapack not keyworded
