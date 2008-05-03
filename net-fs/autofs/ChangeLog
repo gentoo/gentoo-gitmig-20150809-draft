@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.71 2008/04/28 19:53:27 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.72 2008/05/03 09:16:59 stefaan Exp $
+
+*autofs-5.0.3-r5 (03 May 2008)
+
+  03 May 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/autofs-5.0.3-heimdal.patch, autofs-5.0.3-r4.ebuild,
+  +autofs-5.0.3-r5.ebuild:
+  Support also heimdal's krb5 implementation (fixes bug #210762) + some QA
 
 *autofs-5.0.3-r4 (28 Apr 2008)
 

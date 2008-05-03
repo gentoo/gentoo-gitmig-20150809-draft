@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r4.ebuild,v 1.2 2008/05/03 09:16:59 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r5.ebuild,v 1.1 2008/05/03 09:16:59 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -55,6 +55,9 @@ src_unpack() {
 	for i in ${PATCH_LIST}; do
 		EPATCH_OPTS="-p1 -d ${S}" epatch ${DISTDIR}/${i}
 	done
+
+	# fixes bug #210762
+	epatch "${FILESDIR}"/${P}-heimdal.patch
 
 	cd "${S}"
 
