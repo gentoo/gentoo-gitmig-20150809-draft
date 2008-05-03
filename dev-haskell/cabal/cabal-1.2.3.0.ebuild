@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.2.3.0.ebuild,v 1.2 2007/12/14 17:50:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.2.3.0.ebuild,v 1.3 2008/05/03 08:28:12 kolmodin Exp $
 
 CABAL_FEATURES="bootstrap profile lib"
 inherit base haskell-cabal
@@ -20,6 +20,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
+
+RESTRICT="test"
 
 DEPEND=">=dev-lang/ghc-6.2"
 
