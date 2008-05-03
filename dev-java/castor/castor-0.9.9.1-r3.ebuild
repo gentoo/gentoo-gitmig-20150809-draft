@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r3.ebuild,v 1.1 2008/02/14 02:36:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r3.ebuild,v 1.2 2008/05/03 14:17:48 ken69267 Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ DESCRIPTION="Data binding framework for Java"
 SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 HOMEPAGE="http://www.castor.org"
 LICENSE="Exolab"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0.9"
 IUSE="doc examples"
 
