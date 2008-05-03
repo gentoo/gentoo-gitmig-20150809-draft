@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/wterm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.17 2007/07/22 05:55:58 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.18 2008/05/03 12:58:43 keytoaster Exp $
+
+*wterm-6.2.9-r3 (03 May 2008)
+
+  03 May 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/wterm-6.2.9-display-security-issue.patch, +wterm-6.2.9-r3.ebuild:
+  Adding patch to fix security bug #219762
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wterm-6.2.9-r2.ebuild:
