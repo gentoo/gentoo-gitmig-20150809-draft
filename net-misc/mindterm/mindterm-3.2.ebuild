@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.2.ebuild,v 1.2 2008/04/29 16:25:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.2.ebuild,v 1.3 2008/05/03 15:27:52 opfer Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -20,6 +20,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	${COMMON_DEP}"
+JAVA_PKG_FILTER_COMPILER="jikes"
 S=${WORKDIR}/${P/-/_}
 
 src_unpack() {

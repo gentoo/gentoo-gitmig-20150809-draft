@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mindterm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.20 2008/04/29 16:25:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.21 2008/05/03 15:27:52 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org> mindterm-3.2.ebuild:
+  filter jikes
 
   29 Apr 2008; Brent Baude <ranger@gentoo.org> mindterm-3.2.ebuild:
   stable ppc, bug 219672
