@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jsr101
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.7 2008/05/02 20:50:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.8 2008/05/03 16:52:31 betelgeuse Exp $
+
+*jsr101-1.4-r1 (03 May 2008)
+
+  03 May 2008; Petteri Räty <betelgeuse@gentoo.org> +jsr101-1.4-r1.ebuild:
+  Fix building on 1.5 by using java-virtuals/saaj-api.
 
 *jsr101-1.4 (02 May 2008)
 
