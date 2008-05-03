@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.9 2008/04/10 05:24:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.10 2008/05/03 06:19:13 graaff Exp $
 
 inherit autotools eutils gnome2 multilib flag-o-matic versionator
 
@@ -26,7 +26,6 @@ RESTRICT="test"
 # instead of adding a keyring USE flag.
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.10
-	>=dev-util/gob-2.0.13
 	>=gnome-base/gnome-panel-2.6
 	>=gnome-base/eel-2.6
 	>=gnome-base/gconf-2.6
