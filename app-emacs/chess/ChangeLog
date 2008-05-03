@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.24 2008/04/17 16:58:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.25 2008/05/03 15:29:31 opfer Exp $
+
+  03 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  chess-2.0_beta6-r1.ebuild:
+  stable x86, bug 217514
 
   17 Apr 2008; nixnut <nixnut@gentoo.org> chess-2.0_beta6-r1.ebuild:
   Stable on ppc wrt bug 217514
