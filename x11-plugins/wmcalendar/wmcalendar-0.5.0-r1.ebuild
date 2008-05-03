@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/wmcalendar-0.5.0-r1.ebuild,v 1.5 2006/10/10 07:16:21 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/wmcalendar-0.5.0-r1.ebuild,v 1.6 2008/05/03 07:17:17 drac Exp $
 
 inherit eutils
 
@@ -15,11 +15,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc ~sparc x86"
 
-DEPEND=">=dev-libs/libical-0.24_rc4
-	>=dev-util/pkgconfig-0.15.0
+RDEPEND=">=dev-libs/libical-0.24_rc4
 	>=x11-libs/gtk+-2.2.1-r1
-	>=sys-apps/sed-4.0.9
 	>=x11-libs/libXpm-3.5.5"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P}/Src
 
