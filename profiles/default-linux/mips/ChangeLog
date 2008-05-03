@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.17 2008/04/10 06:34:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.18 2008/05/03 01:21:30 ricmm Exp $
+
+  02 May 2008; <ricmm@gentoo.org> use.mask:
+  Unmask libssh2 USE flag
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
   changing around video_cards_via masking by unmasking only for available

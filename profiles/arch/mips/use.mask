@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.4 2008/04/30 19:36:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.5 2008/05/03 01:21:30 ricmm Exp $
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # virtual/blas virtual/cblas and virtual/lapack not keyworded
@@ -320,9 +320,6 @@ kerberos
 # mask ladspa USE
 # [22:30] <beandog> mips: plz to mask ladspa use flag
 ladspa
-
-# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-libssh2
 
 # Mips USE flags
 -n32
