@@ -1,0 +1,12 @@
+--- libthrowable-1.1.0/libthrowable/internal/internal.cc.orig	2008-05-03 20:41:16.000000000 +0200
++++ libthrowable-1.1.0/libthrowable/internal/internal.cc	2008-05-03 20:41:51.000000000 +0200
+@@ -23,7 +23,8 @@
+ #include "libthrowable/macros/here.h"
+ #include "libthrowable/util/util.h"
+ #include "libthrowable/internal/threads.h"
+-#include <string>
++#include <stdlib.h>
++#include <string.h>
+ #include <sstream>
+ #include <iostream>
+ #include <limits>

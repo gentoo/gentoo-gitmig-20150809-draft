@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.1.0.ebuild,v 1.3 2008/05/02 15:05:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.1.0.ebuild,v 1.4 2008/05/03 18:57:04 hanno Exp $
 
 inherit eutils
 
@@ -26,6 +26,12 @@ pkg_setup() {
 	   has_version dev-cpp/libthrowable && built_with_use dev-cpp/libthrowable threads \
 		   && ewarn "You recompile without USE=threads, so remember to rebuilt all depending packages!" && epause
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/libthrowable-1.1.0-gcc43.diff"
 }
 
 src_compile() {
