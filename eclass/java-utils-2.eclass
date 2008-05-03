@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.106 2008/05/03 21:28:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.107 2008/05/03 21:28:45 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1772,7 +1772,7 @@ java-pkg_ant-tasks-depend() {
 # @param $2 - classpath; junit and recorded dependencies get appended
 # @param $@ - the rest of the parameters are passed to java
 # ------------------------------------------------------------------------------
-ejunit{
+ejunit() {
 	debug-print-function ${FUNCNAME} $*
 
 	local pkgs
