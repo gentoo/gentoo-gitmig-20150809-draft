@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/rxvt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.57 2007/12/25 17:17:15 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.58 2008/05/03 12:55:03 hoffie Exp $
+
+*rxvt-2.7.10-r4 (03 May 2008)
+
+  03 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +files/rxvt-2.7.10-CVE-2008-1142-DISPLAY.patch, +rxvt-2.7.10-r4.ebuild:
+  revbump to include a patch to fix CVE-2008-1142 (do not default to :0 if
+  DISPLAY is unset), bug 217819; ebuild cleanups (quoting, bindnow); stable
+  on amd64
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
