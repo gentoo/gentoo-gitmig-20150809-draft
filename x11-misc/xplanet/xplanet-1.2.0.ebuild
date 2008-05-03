@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.0.ebuild,v 1.12 2007/07/01 04:38:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.0.ebuild,v 1.13 2008/05/03 19:02:05 drac Exp $
+
+inherit eutils
 
 DESCRIPTION="a program to render images of the earth into the X root window"
 HOMEPAGE="http://xplanet.sourceforge.net"
@@ -25,6 +27,12 @@ RDEPEND="X? ( x11-libs/libX11
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto
 	x11-proto/scrnsaverproto )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	local myconf
