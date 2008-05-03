@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.14 2008/05/02 23:22:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.15 2008/05/03 01:13:55 dragonheart Exp $
 
 inherit toolchain-funcs eutils
 
@@ -51,10 +51,10 @@ src_install() {
 	cp -R scripts "${D}"/usr/share/lmbench
 
 	dodir /usr/share/lmbench/results
-	chmod 777 ${D}/usr/share/lmbench/results
+	chmod 777 "${D}"/usr/share/lmbench/results
 	dodir /usr/share/lmbench/bin
-	chmod 777 ${D}/usr/share/lmbench/bin
+	chmod 777 "${D}"/usr/share/lmbench/bin
 
 	# avoid file collision with sys-apps/util-linux
-	mv ${D}/usr/bin/line ${D}/usr/bin/line.lmbench
+	mv "${D}"/usr/bin/line "${D}"/usr/bin/line.lmbench
 }
