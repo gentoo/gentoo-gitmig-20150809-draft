@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.7 2008/02/11 03:59:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.8 2008/05/03 13:24:55 drac Exp $
 
 inherit eutils
 
@@ -28,6 +28,12 @@ pkg_setup() {
 		eerror "You need to build media-sound/pulseaudio with 'glib' use flag enabled."
 		die "Missing glib use flag on media-sound/pulseaudio."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

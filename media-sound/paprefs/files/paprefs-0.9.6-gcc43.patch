@@ -1,0 +1,11 @@
+diff -aur paprefs-0.9.6/src/paprefs.cc paprefs-0.9.6.mod/src/paprefs.cc
+--- paprefs-0.9.6/src/paprefs.cc	2007-10-29 22:18:29.000000000 +0100
++++ paprefs-0.9.6.mod/src/paprefs.cc	2008-04-19 18:02:44.000000000 +0200
+@@ -28,6 +28,7 @@
+ #include <gtkmm.h>
+ #include <libglademm.h>
+ #include <gconfmm.h>
++#include <libintl.h>
+ 
+ #define PA_GCONF_ROOT "/system/pulseaudio"
+ #define PA_GCONF_PATH_MODULES PA_GCONF_ROOT"/modules"
