@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/caucho-services
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.11 2008/05/02 15:16:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.12 2008/05/03 03:01:37 ken69267 Exp $
+
+  03 May 2008; Kenneth Prugh <ken69267@gentoo.org>
+  caucho-services-3.0.8-r2.ebuild:
+  amd64 stable, bug #219641
 
   02 May 2008; Christian Faulhammer <opfer@gentoo.org>
   caucho-services-3.0.8-r2.ebuild:
