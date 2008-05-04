@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-dict
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.11 2008/04/27 02:14:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.12 2008/05/04 11:11:05 drac Exp $
+
+  04 May 2008; Samuli Suominen <drac@gentoo.org> xfce4-dict-0.3.0.ebuild:
+  Fix 'make check' wrt #219860, thanks to Michal Kiedrowicz.
 
 *xfce4-dict-0.3.0 (27 Apr 2008)
 
