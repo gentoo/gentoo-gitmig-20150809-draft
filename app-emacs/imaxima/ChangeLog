@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.17 2008/04/30 11:02:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.18 2008/05/04 14:51:19 ulm Exp $
+
+  04 May 2008; Ulrich Mueller <ulm@gentoo.org> -imaxima-0.98-r1.ebuild:
+  Remove old.
 
   29 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   imaxima-0.98-r1.ebuild, imaxima-0.99.ebuild:
