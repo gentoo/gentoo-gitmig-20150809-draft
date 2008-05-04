@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xcin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.18 2008/05/01 14:36:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.19 2008/05/04 17:49:08 nixnut Exp $
+
+  04 May 2008; nixnut <nixnut@gentoo.org> xcin-2.5.3_pre3-r2.ebuild:
+  Stable on ppc wrt bug 148096
 
   01 May 2008; Markus Meier <maekke@gentoo.org> xcin-2.5.3_pre3-r2.ebuild:
   x86 stable, bug #148096
