@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.18 2008/03/28 07:43:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.19 2008/05/04 22:56:38 betelgeuse Exp $
+
+*jss-4.2.5 (04 May 2008)
+
+  04 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +files/jss-4.2.5-use_pkg-config.patch, +jss-4.2.5.ebuild:
+  Version bump. Fixes bug #189443. Thanks to Mario Fetka <mario-fetka@gmx.at>.
 
   28 Mar 2008; Christian Faulhammer <opfer@gentoo.org> jss-4.2.ebuild:
   stable x86, bug 214780
