@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.5.ebuild,v 1.1 2008/04/30 18:54:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.5.ebuild,v 1.2 2008/05/04 09:06:55 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -40,8 +40,11 @@ src_unpack() {
 		build/Makefiles/gmake/*cc.mak \
 		|| die "sed opts failed"
 
-	# CXX_VERSION on gentoo has ( )s in them, they need to be quoted.
+	sed -i \
+		-e 's/_STLP_VENDOR_CSTD::wcsftime/::wcsftime/' \
+		stlport/stl/_cwchar.h || die "sed failed"
 
+	# CXX_VERSION on gentoo has ( )s in them, they need to be quoted.
 	sed -i \
 		-e 's/echo ${CXX_VERSION}/echo "${CXX_VERSION}"/' \
 		build/Makefiles/gmake/*.mak \
