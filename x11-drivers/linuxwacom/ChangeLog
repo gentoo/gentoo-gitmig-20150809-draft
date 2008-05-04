@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.22 2008/02/24 18:45:41 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.23 2008/05/04 16:20:08 ikelos Exp $
+
+*linuxwacom-0.8.0 (04 May 2008)
+
+  04 May 2008; Mike Auty <ikelos@gentoo.org> +linuxwacom-0.8.0.ebuild:
+  Version bump, thanks to Andrea Franceschini (closes bug 220106).
 
   24 Feb 2008; Mike Auty <ikelos@gentoo.org> linuxwacom-0.7.9_p7.ebuild:
   Add warning about compiling with gcc-4.1 or lower.
