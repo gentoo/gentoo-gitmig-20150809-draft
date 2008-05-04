@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.58 2008/03/06 17:09:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.59 2008/05/04 19:00:17 rbu Exp $
+
+  04 May 2008; Robert Buchholz <rbu@gentoo.org>
+  xen-sources-2.6.18-r10.ebuild, xen-sources-2.6.20-r7.ebuild,
+  xen-sources-2.6.21.ebuild:
+  Update HOMEPAGE (xen.xensource.com -> xen.org)
 
   24 Feb 2008; Michael Marineau <marineam@gentoo.org>
   -xen-sources-2.6.22.ebuild:
