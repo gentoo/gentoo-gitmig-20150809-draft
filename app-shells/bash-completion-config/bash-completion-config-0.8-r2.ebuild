@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.7 2008/05/04 12:18:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.8 2008/05/04 21:43:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Utility to easily add/remove bash-completions to your environment"
 HOMEPAGE="http://developer.berlios.de/projects/bashcomp-config/"
-SRC_URI="mirrot://berlios/${MY_PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://berlios/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
