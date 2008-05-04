@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.8 2008/01/16 10:56:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.9 2008/05/04 08:01:29 drac Exp $
 
 inherit eutils fdo-mime
 
@@ -8,7 +8,7 @@ MY_PV=${PV/%[[:alpha:]]/}
 
 DESCRIPTION="LaTeX editor based on Bluefish"
 HOMEPAGE="http://winefish.berlios.de/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tgz"
+SRC_URI="mirror://berlios/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
