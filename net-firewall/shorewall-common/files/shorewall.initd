@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/files/shorewall.initd,v 1.1 2007/09/06 11:16:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/files/shorewall.initd,v 1.2 2008/05/04 13:16:40 pva Exp $
 
 opts="start stop restart clear reset refresh check"
 
@@ -29,10 +29,15 @@ restart() {
 	# here.  Note that this comment is required to fix bug 55576;
 	# runscript.sh greps this script...  (09 Jul 2004 agriffis)
 	ebegin "Restarting firewall"
-	if [ -f /var/lib/shorewall/restore ] ; then
-		/sbin/shorewall restore
+	/sbin/shorewall status >/dev/null
+	if [ $? != 0 ] ; then
+	    svc_start
 	else
+	    if [ -f /var/lib/shorewall/restore ] ; then
+		/sbin/shorewall restore
+	    else
 		/sbin/shorewall restart 1>/dev/null
+	    fi
 	fi
 	eend $?
 }
