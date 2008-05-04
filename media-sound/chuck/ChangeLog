@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/chuck
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/ChangeLog,v 1.8 2008/05/03 11:23:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/ChangeLog,v 1.9 2008/05/04 15:23:37 maekke Exp $
+
+  04 May 2008; Markus Meier <maekke@gentoo.org> chuck-1.2.1.1.ebuild:
+  x86 stable, bug #220099
 
   03 May 2008; Cédric Krier <cedk@gentoo.org> -chuck-1.2.0.7.ebuild,
   -chuck-1.2.1.0.ebuild:
