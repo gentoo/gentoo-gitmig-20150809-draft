@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre3.ebuild,v 1.1 2008/04/28 20:32:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre3.ebuild,v 1.2 2008/05/04 04:49:30 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -44,7 +44,7 @@ IUSE_LIRC_DEVICES_DIRECT="
 	devinput digimatrix dsp dvico ea65
 	exaudio flyvideo gvbctv5pci hauppauge
 	hauppauge_dvb hercules_smarttv_stereo
-	igorplugusb imon imon_pad imon_rsc
+	igorplugusb imon imon_knob imon_pad imon_rsc
 	irdeo irdeo_remote irman irreal it87
 	knc_one kworld leadtek_0007 leadtek_0010
 	leadtek_pvr2000 livedrive_midi
