@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.13 2008/03/25 14:38:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.14 2008/05/04 22:45:31 nyhm Exp $
 
 inherit eutils games
 
@@ -18,9 +18,11 @@ DEPEND="media-libs/libsdl
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "/chown/d" \
-		"${S}"/Makefile.in \
+		Makefile.in \
 		|| die "sed failed"
 }
 
