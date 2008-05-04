@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3-r1.ebuild,v 1.1 2008/03/22 20:25:18 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3-r1.ebuild,v 1.2 2008/05/04 08:16:50 opfer Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -29,6 +29,7 @@ RDEPEND=">=virtual/jre-1.4
 	admin? ( dev-java/velocity )"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 LIBRARY_PKGS="servlet-api-2.3,commons-lang,commons-logging,commons-pool,commons-dbcp,xmlrpc,concurrent-util,jisp-2.5,hsqldb"
 
