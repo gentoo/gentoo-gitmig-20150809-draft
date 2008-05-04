@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.5 2008/01/18 02:53:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.6 2008/05/04 20:32:35 nyhm Exp $
 
 inherit eutils games
 
@@ -22,9 +22,20 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -i \
+		-e "s:\$(CXX):\$(CXX) ${CXXFLAGS} ${LDFLAGS}:" \
+		Makefile \
+		|| die "sed failed"
+}
+
 src_install() {
 	dogamesbin GNUDoku || die "dogamesbin failed"
 	newicon GNUDoku.png ${PN}.png
 	make_desktop_entry ${MY_PN} ${MY_PN}
+	dodoc ALGORITHM Changelog README TODO
 	prepgamesdirs
 }
