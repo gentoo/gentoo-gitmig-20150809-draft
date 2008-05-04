@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/binary
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.1 2007/12/15 18:37:00 dcoutts Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.2 2008/05/04 08:30:52 kolmodin Exp $
+
+*binary-0.4.2 (04 May 2008)
+
+  04 May 2008; Lennart Kolmodin <kolmodin@gentoo.org> +binary-0.4.2.ebuild:
+  Version bump.
 
 *binary-0.4.1 (15 Dec 2007)
 
