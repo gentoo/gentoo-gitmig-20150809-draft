@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.7 2008/01/22 13:38:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.8 2008/05/04 11:51:10 pva Exp $
 
 inherit kde-functions eutils flag-o-matic
 
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
-SRC_URI="http://download.berlios.de/sim-im/${P}.tar.bz2
+SRC_URI="mirror://berlios/sim-im/${P}.tar.bz2
 	http://dev.gentoo.org/~pva/${P}-r1919_1924.patch.bz2"
 LICENSE="GPL-2"
 
