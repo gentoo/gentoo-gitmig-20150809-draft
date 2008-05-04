@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0-r2.ebuild,v 1.5 2007/04/05 10:49:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0-r2.ebuild,v 1.6 2008/05/04 16:26:51 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -18,7 +18,7 @@ RESTRICT="fetch"
 
 S=${WORKDIR}/Jimi
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7259-jimi_sdk-1.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DOWNLOAD_URL="http://java.sun.com/products/jimi/"
 
 pkg_nofetch() {
 	einfo "Please download ${A} from the following url and place it in ${DISTDIR}"
@@ -27,12 +27,12 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	rm -rf src/classes/*
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 	ejavac -classpath . -d classes $(cat main_classes.txt) || die "failes to	compile"
 	jar -cf ${PN}.jar -C classes . || die "failed to create jar"
 }

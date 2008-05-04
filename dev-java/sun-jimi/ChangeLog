@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jimi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.10 2007/10/24 06:14:42 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.11 2008/05/04 16:26:51 betelgeuse Exp $
+
+  04 May 2008; Petteri Räty <betelgeuse@gentoo.org> sun-jimi-1.0-r2.ebuild:
+  Update download URL.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -sun-jimi-1.0-r1.ebuild:
