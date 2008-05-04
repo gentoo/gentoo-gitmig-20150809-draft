@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.2.ebuild,v 1.2 2007/12/14 17:26:58 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.2.1.ebuild,v 1.1 2008/05/04 18:59:10 rbu Exp $
 
 inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
-HOMEPAGE="http://www.xensource.com/xen/xen/"
-SRC_URI="mirror://gentoo/xen-${PV}.tar.gz"
+HOMEPAGE="http://xen.org/"
+SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 S="${WORKDIR}/xen-${PV}"
 
 LICENSE="GPL-2"
@@ -114,10 +114,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.0.4_p1--as-needed.patch"
 
 	# Fix network broadcast on bridged networks
-	epatch "${FILESDIR}/${PN}-3.0.4_p1-network-bridge-broadcast.patch"
+	epatch "${FILESDIR}/${PN}-3.1.3-network-bridge-broadcast.patch"
 
 	# Fix building small dumb utility called 'xen-detect' on hardened
 	epatch "${FILESDIR}/${PN}-3.1.0-xen-detect-nopie-fix.patch"
+
+	# Introduce a configure option to disable qemu documentation building, #192427
+	epatch "${FILESDIR}/${PN}-3.2.1-qemu-nodocs.patch"
 }
 
 src_compile() {
