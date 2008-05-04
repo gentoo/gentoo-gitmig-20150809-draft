@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.6 2008/03/17 15:25:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.7 2008/05/04 14:10:01 kolmodin Exp $
 
 inherit base eutils ghc-package multilib toolchain-funcs versionator
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		doc? ( >=dev-haskell/haddock-0.8 )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Fix for recent glib that changes the type of the gtype typedef:
 	sed -i -e 's/(CULong)/(CULong, CUInt)/' \
