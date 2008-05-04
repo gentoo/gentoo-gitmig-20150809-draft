@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.2.ebuild,v 1.2 2008/05/04 08:14:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.2.ebuild,v 1.3 2008/05/04 09:12:09 dertobi123 Exp $
 
 inherit flag-o-matic
 
@@ -44,6 +44,8 @@ src_compile() {
 
 	has_version sys-libs/glibc || myconf="${myconf} --with-iconv"
 
+	econf ${myconf} || die "Configure failed"
+
 	cd "${S}"/lib
 	emake -j1 || die "make failed in /lib"
 
@@ -58,14 +60,6 @@ src_compile() {
 
 	cd "${S}"/bin/dnssec/
 	emake -j1 || die "make failed in /bin/dnssec"
-
-	use idn && {
-		cd "${S}"/contrib/idn/idnkit-1.0-src
-		local myconf=
-		has_version sys-libs/glibc || myconf="${myconf} --with-iconv"
-		econf ${myconf} || die "idn econf failed"
-		emake -j1 || die "idn emake failed"
-	}
 }
 
 src_install() {
