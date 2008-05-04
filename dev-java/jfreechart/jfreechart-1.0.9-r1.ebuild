@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.9-r1.ebuild,v 1.3 2008/05/03 23:59:06 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.9-r1.ebuild,v 1.4 2008/05/04 11:31:23 opfer Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -23,6 +23,8 @@ DEPEND=">=virtual/jdk-1.4
 	test? ( dev-java/ant-junit )"
 RDEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}"
+
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 src_unpack() {
 	unpack ${A}
