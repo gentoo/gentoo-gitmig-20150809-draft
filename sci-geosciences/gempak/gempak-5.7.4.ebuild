@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.5 2007/06/26 02:41:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.6 2008/05/04 18:19:07 ulm Exp $
 
 inherit eutils
 
@@ -12,13 +12,15 @@ MY_P="${PN}_upc${MY_PV}"
 DESCRIPTION="GEMPAK Meteorological Plotting and Analysis Package"
 HOMEPAGE="http://www.unidata.ucar.edu/packages/gempak"
 SRC_URI="${MY_P}.tar.gz"
+
 LICENSE="as-is"
-DEPEND="virtual/motif
-	!x11-libs/lesstif"
 SLOT="0"
-IUSE=""
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 RESTRICT="fetch"
+
+DEPEND="x11-libs/openmotif"
+
 # More inconsistencies, this sometimes changes on bumps.
 S="${WORKDIR}/GEMPAK${MY_PV}"
 
