@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.187 2008/04/30 17:17:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.188 2008/05/04 09:14:51 vapier Exp $
+
+  04 May 2008; Mike Frysinger <vapier@gentoo.org> files/mdev-start.sh:
+  Fix typos in mount #220028 by Dave Bender.
 
 *busybox-1.10.1-r2 (30 Apr 2008)
 

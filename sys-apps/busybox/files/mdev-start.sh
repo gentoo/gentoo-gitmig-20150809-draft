@@ -85,7 +85,7 @@ mount_it_b2()
 }
 mount_it()
 {
-	type fstabinfo && mount_b2 || mount_b1
+	type fstabinfo && mount_it_b2 || mount_it_b1
 }
 
 main()
