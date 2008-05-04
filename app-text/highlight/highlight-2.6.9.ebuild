@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.9.ebuild,v 1.1 2008/05/04 20:34:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.9.ebuild,v 1.2 2008/05/04 20:41:59 drac Exp $
 
 WX_GTK_VER=2.6
 
 inherit wxwidgets eutils toolchain-funcs
 
-DESCRIPTION="converts source code to formatted text ((X)HTML, RTF, (La)TeX, XSL-FO, XML) with syntax highlighting."
+DESCRIPTION="converts source code to formatted text ((X)HTML, RTF, (La)TeX, XSL-FO, XML) with syntax highlight"
 HOMEPAGE="http://www.andre-simon.de"
 SRC_URI="http://www.andre-simon.de/zip/${P}.tar.bz2"
 
