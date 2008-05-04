@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.1.2.ebuild,v 1.2 2008/02/03 00:35:30 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.1.ebuild,v 1.1 2008/05/04 18:59:13 rbu Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor"
-HOMEPAGE="http://www.xensource.com/xen/xen/"
-SRC_URI="mirror://gentoo/xen-${PV}.tar.gz"
+HOMEPAGE="http://xen.org/"
+SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -81,9 +81,6 @@ pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
 	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
-
-	echo
-	elog "Note: xen tools have been moved to app-emulation/xen-tools"
 
 	if use pae; then
 		echo

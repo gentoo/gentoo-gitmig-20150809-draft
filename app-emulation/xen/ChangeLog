@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.53 2008/02/08 22:19:23 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.54 2008/05/04 18:59:13 rbu Exp $
+
+*xen-3.2.1 (04 May 2008)
+
+  04 May 2008; Robert Buchholz <rbu@gentoo.org> -xen-3.1.2.ebuild,
+  +xen-3.2.1.ebuild:
+  Version bump to the Xen 3.2.1 release (bug #219339), thanks to Troy Bowman
+  for testig.
 
 *xen-3.2.0 (08 Feb 2008)
 
