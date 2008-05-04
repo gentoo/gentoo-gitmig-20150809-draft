@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3525 2008/05/04 01:48:41 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3526 2008/05/04 01:53:59 jmglov Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -110,7 +110,12 @@ app-editors/vim:vim-with-x - Link console vim against X11 libraries to enable ti
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:eolconv - Support detection and translation of newline conventions.
-app-editors/xemacs:pop - Support POP for mail retrieval.
+app-editors/xemacs:hesiod - Support Hesiod to get the POP server host
+app-editors/xemacs:pop - Support POP for mail retrieval
+app-editors/xemacs:purify - Support memory debugging using Purify
+app-editors/xemacs:quantify - Support performance debugging using Quantify
+app-editors/xemacs:tooltalk - Support the ToolTalk IPC protocol
+app-editors/xemacs:xft - Compile with support for Xft client-side font rendering and anti-aliasing
 app-editors/xemacs:xim - Enable X11 XiM input method
 app-editors/xmlcopyeditor:guidexml - Install GuideXML templates to work with Gentoo official docs
 app-emacs/auctex:preview-latex - Use bundled preview-latex
