@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xlogical
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.3 2008/02/05 16:53:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.4 2008/05/04 21:08:55 nyhm Exp $
+
+  04 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/xlogical-1.0.7-gcc43.patch, xlogical-1.0.7.ebuild:
+  Fix building with gcc-4.3
 
   05 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> xlogical-1.0.7.ebuild:
   Keyworded ~amd64 wrt #208952

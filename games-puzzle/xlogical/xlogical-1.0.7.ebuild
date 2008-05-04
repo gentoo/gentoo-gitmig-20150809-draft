@@ -1,12 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.5 2008/02/05 16:53:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.6 2008/05/04 21:08:55 nyhm Exp $
 
 inherit autotools versionator eutils games
 
 MY_PV=$(replace_version_separator 2 '-' )
 MY_P=${PN}-${MY_PV}
-
 DESCRIPTION="SDL logical clone"
 HOMEPAGE="http://changeling.ixionstudios.com/xlogical/"
 SRC_URI="http://changeling.ixionstudios.com/xlogical/downloads/${MY_P}.tar.bz2"
@@ -27,7 +26,9 @@ src_unpack() {
 	cd "${S}"
 	sed -i '/^CXXFLAGS/d' Makefile.am || die "sed failed"
 	edos2unix properties.h anim.h exception.h
-	epatch "${FILESDIR}/${P}"-gcc41.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
