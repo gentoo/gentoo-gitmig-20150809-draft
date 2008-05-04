@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/sun-jdk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/sun-jdk/ChangeLog,v 1.1 2008/05/04 12:25:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/sun-jdk/ChangeLog,v 1.2 2008/05/04 12:27:06 betelgeuse Exp $
+
+  04 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  sun-jdk-20080504.ebuild:
+  Add ~x86-fbsd.
 
 *sun-jdk-20080504 (04 May 2008)
 
