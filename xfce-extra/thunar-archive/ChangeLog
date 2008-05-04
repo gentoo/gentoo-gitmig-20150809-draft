@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.29 2007/12/10 15:08:10 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.30 2008/05/04 08:05:19 drac Exp $
+
+  04 May 2008; Samuli Suominen <drac@gentoo.org>
+  thunar-archive-0.2.4-r1.ebuild:
+  Use berlios mirrors://
 
   10 Dec 2007; Samuli Suominen <drac@gentoo.org>
   thunar-archive-0.2.4-r1.ebuild:
