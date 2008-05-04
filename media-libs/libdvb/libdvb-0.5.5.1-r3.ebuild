@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.8 2007/06/29 07:18:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.9 2008/05/04 04:33:41 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -24,6 +24,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-autotools.patch"
 	epatch "${FILESDIR}/${P}-rename-analyze.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	eautoreconf
 }
@@ -33,10 +34,10 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	make DESTDIR="${D}" PREFIX=/usr LIBDIR=$(get_libdir) install || die "Problem at make install"
 
-	cd ${D}/usr/bin
+	cd "${D}"/usr/bin
 	mv dia dia_dvb
 
-	cd ${S}
+	cd "${S}"
 	if use doc; then
 		insinto "/usr/share/doc/${PF}/sample_progs"
 		doins sample_progs/*

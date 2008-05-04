@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.39 2007/07/01 03:06:32 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.40 2008/05/04 04:33:41 zzam Exp $
+
+  04 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/libdvb-0.5.5.1-gcc43.patch, libdvb-0.5.5.1-r3.ebuild:
+  Fixed compilation with gcc-3.4, Thanks to Peter Alfredsen
+  <peter.alfredsen@gmail.com> for the patch, Bug #220165. Fixed quoting.
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-libdvb-0.5.5.1-r2, +files/digest-libdvb-0.5.5.1-r3,
