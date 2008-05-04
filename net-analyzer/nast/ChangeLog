@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nast
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.9 2008/04/30 02:12:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.10 2008/05/04 10:22:24 pva Exp $
+
+  04 May 2008; Peter Volkov <pva@gentoo.org> nast-0.2.0.ebuild:
+  Use berlios mirror://, bug #218657, thank Gilles Dartiguelongue for
+  report.
 
   30 Apr 2008; Luca Barbato <lu_zero@gentoo.org> nast-0.2.0.ebuild:
   Marked ~ppc64
