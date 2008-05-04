@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.2.ebuild,v 1.1 2008/05/03 18:09:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.2.ebuild,v 1.2 2008/05/04 08:14:38 dertobi123 Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="idn ipv6"
 
-DEPEND="idn? ( || ( sys-libs/glibc dev-libs/libiconv ) )"
+DEPEND="idn? ( || ( sys-libs/glibc dev-libs/libiconv )
+			net-dns/idnkit )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -39,8 +40,9 @@ src_unpack() {
 src_compile() {
 	local myconf=
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
+	use idn  && myconf="${myconf} --with-idn"
 
-	econf ${myconf} || die "Configure failed"
+	has_version sys-libs/glibc || myconf="${myconf} --with-iconv"
 
 	cd "${S}"/lib
 	emake -j1 || die "make failed in /lib"
