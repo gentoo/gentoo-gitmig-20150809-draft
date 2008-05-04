@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.idmapd.initd,v 1.5 2008/02/04 22:23:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.idmapd.initd,v 1.6 2008/05/04 09:53:34 vapier Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
@@ -19,14 +19,19 @@ depend() {
 }
 
 mount_pipefs() {
-	if grep -qs rpc_pipefs /proc/filesystems ; then
-		if ! grep -qs "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
-			mkdir -p /var/lib/nfs/rpc_pipefs
-			ebegin "Mounting RPC pipefs"
-			mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
-			eend $?
-		fi
-	fi
+	# if things are already mounted, let's just return
+	grep -qs "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts && return 0
+
+	# if rpc_pipefs is not available, try to load sunrpc for it #219566
+	grep -qs rpc_pipefs /proc/filesystems || modprobe -q sunrpc
+	# if still not available, let's bail
+	grep -qs rpc_pipefs /proc/filesystems || return 1
+
+	# now just do it for kicks
+	mkdir -p /var/lib/nfs/rpc_pipefs
+	ebegin "Mounting RPC pipefs"
+	mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
+	eend $?
 }
 
 start() {

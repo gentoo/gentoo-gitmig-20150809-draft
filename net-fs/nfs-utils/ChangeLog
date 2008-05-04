@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.127 2008/04/21 18:17:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.128 2008/05/04 09:53:33 vapier Exp $
+
+*nfs-utils-1.1.2-r1 (04 May 2008)
+
+  04 May 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.1.2-mount-eacces.patch, files/nfs.initd,
+  files/nfsmount.initd, files/rpc.gssd.initd, files/rpc.idmapd.initd,
+  files/rpc.svcgssd.initd, +nfs-utils-1.1.2-r1.ebuild:
+  Dont bother checking for config anymore #219495 by Davide Pesavento. Load
+  sunrpc module if rpc_pipefs is not available #219566 by Martin von Gagern.
+  Add change from Fedora to exit immediately upon perm denied errors when
+  mounting #219729 by Stefaan De Roeck.
 
   21 Apr 2008; Mike Frysinger <vapier@gentoo.org> files/nfsmount.initd:
   Use non-common awk exit values so that the default exit values dont trigger

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount.initd,v 1.11 2008/04/22 07:43:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount.initd,v 1.12 2008/05/04 09:53:34 vapier Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
@@ -13,7 +13,7 @@ depend() {
 		[ ${ret} -eq 10 ] && myneed="${myneed} rpc.gssd"
 		[ ${ret} -eq 20 ] && myneed="${myneed} rpc.idmapd"
 	fi
-	type -t config 2>/dev/null 1>&2 && config /etc/fstab
+	config /etc/fstab
 	need net portmap rpc.statd ${myneed}
 	use ypbind dns rpc.idmapd rpc.gssd
 }
