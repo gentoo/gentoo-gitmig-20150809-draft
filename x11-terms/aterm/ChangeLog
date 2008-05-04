@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.104 2008/05/04 09:45:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.105 2008/05/04 13:32:07 maekke Exp $
+
+  04 May 2008; Markus Meier <maekke@gentoo.org> aterm-1.0.1-r1.ebuild:
+  amd64 stable, security bug #219746
 
   04 May 2008; Raúl Porcel <armin76@gentoo.org> aterm-1.0.1-r1.ebuild:
   alpha/ia64/sparc stable wrt security #219476
