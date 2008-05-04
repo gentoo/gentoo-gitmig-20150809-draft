@@ -1,0 +1,3 @@
+USE="kdrive minimal multicall zlib"
+CFLAGS="-Os -pipe"
+CXXFLAGS="${CFLAGS}"
