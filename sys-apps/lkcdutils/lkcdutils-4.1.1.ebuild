@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcdutils/lkcdutils-4.1.1.ebuild,v 1.5 2006/07/16 21:55:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcdutils/lkcdutils-4.1.1.ebuild,v 1.6 2008/05/04 11:10:26 vapier Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="app-arch/rpm2targz
 	dev-util/byacc"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
