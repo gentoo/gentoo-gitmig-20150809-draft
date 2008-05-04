@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/radiusclient-ng-0.5.6.ebuild,v 1.4 2007/11/23 17:26:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/radiusclient-ng-0.5.6.ebuild,v 1.5 2008/05/04 10:29:02 pva Exp $
 
-DESCRIPTION="RadiusClient NextGeneration - a library for writing RADIUS clients accompanied with several client utilities."
+DESCRIPTION="RadiusClient NextGeneration - library for RADIUS clients accompanied with several client utilities"
 HOMEPAGE="http://developer.berlios.de/projects/radiusclient-ng/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
