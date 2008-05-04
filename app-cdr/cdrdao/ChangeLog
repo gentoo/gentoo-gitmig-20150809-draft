@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.107 2008/04/20 23:54:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.108 2008/05/04 23:16:17 dirtyepic Exp $
+
+  04 May 2008; Ryan Hill <dirtyepic@gentoo.org>
+  files/cdrdao-1.2.2-gcc43.patch:
+  Update GCC 4.3 patch to fix FormatMp3.cc. Bug #213191.
 
   20 Apr 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/cdrdao-1.2.2-gcc43.patch, cdrdao-1.2.2-r1.ebuild:

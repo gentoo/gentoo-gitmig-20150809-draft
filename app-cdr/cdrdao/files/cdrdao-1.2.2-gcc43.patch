@@ -27,6 +27,17 @@ diff -Naurp cdrdao-1.2.2.orig/trackdb/FormatOgg.cc cdrdao-1.2.2/trackdb/FormatOg
  
  #include "util.h"
  #include "FormatOgg.h"
+diff -Naurp cdrdao-1.2.2.orig/trackdb/FormatMp3.cc cdrdao-1.2.2/trackdb/FormatMp3.cc
+--- cdrdao-1.2.2.orig/trackdb/FormatMp3.cc	2005-09-24 20:28:43.000000000 +0000
++++ cdrdao-1.2.2/trackdb/FormatMp3.cc		2008-03-07 11.14.07.000000000 +0000
+@@ -25,6 +25,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <cstring> 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/mman.h>
 diff -Naurp cdrdao-1.2.2.orig/trackdb/TempFileManager.cc cdrdao-1.2.2/trackdb/TempFileManager.cc
 --- cdrdao-1.2.2.orig/trackdb/TempFileManager.cc	2005-04-22 02:01:46.000000000 +0000
 +++ cdrdao-1.2.2/trackdb/TempFileManager.cc	2008-03-07 11:14:07.000000000 +0000
