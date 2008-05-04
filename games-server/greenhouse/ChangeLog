@@ -1,6 +1,10 @@
 # ChangeLog for games-server/greenhouse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/ChangeLog,v 1.1 2008/04/13 07:26:38 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/ChangeLog,v 1.2 2008/05/04 03:37:06 jmglov Exp $
+
+  04 May 2008; Josh Glover <jmglov@gentoo.org> greenhouse-1.0.1.ebuild:
+  bug # 217901 (submitted by Alex Rostovtsev <tetromino@gmail.com>): fixed
+  deps, added ~amd64 to keywords, using newbin to install
 
 *greenhouse-1.0.1 (13 Apr 2008)
 

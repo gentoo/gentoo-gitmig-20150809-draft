@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/greenhouse-1.0.1.ebuild,v 1.1 2008/04/13 07:26:38 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/greenhouse-1.0.1.ebuild,v 1.2 2008/05/04 03:37:06 jmglov Exp $
 
 inherit eutils
 
@@ -10,15 +10,27 @@ SRC_URI="http://download.playgreenhouse.com/downloaderlinux-${PV}.tar.gz"
 
 LICENSE="Greenhouse"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
 
-# Greenhouse is statically linked, so it has no external dependencies
-# and should not be stripped
+# Greenhouse should not be stripped
 RESTRICT="strip"
 DEPEND=""
-RDEPEND=""
+RDEPEND="x86? (
+		>=dev-libs/glib-2
+		media-libs/libpng
+		sys-libs/zlib
+		>=x11-libs/gtk+-2
+		x11-libs/libX11
+		x11-libs/libXinerama
+		x11-libs/pango
+	)
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-xlibs
+	)"
 
 #S="${WORKDIR}/${P}"
 
@@ -27,6 +39,5 @@ src_compile() {
 }
 
 src_install() {
-	mv DownloaderLin ${PN}
-	dobin ${PN}
+	newbin DownloaderLin ${PN}
 }
