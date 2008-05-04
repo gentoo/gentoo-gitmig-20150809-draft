@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion-config
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.38 2007/03/19 01:43:15 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.39 2008/05/04 12:18:13 pva Exp $
+
+  04 May 2008; Peter Volkov <pva@gentoo.org>
+  bash-completion-config-0.8-r2.ebuild:
+  Use berlios mirror://, bug #218657, thank Gilles Dartiguelongue for
+  report.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.

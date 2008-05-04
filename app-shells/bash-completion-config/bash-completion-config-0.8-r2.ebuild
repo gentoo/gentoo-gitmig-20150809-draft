@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.6 2007/03/01 10:00:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.7 2008/05/04 12:18:13 pva Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Utility to easily add/remove bash-completions to your environment"
 HOMEPAGE="http://developer.berlios.de/projects/bashcomp-config/"
-SRC_URI="http://download.berlios.de/${MY_PN}/${MY_P}.tar.bz2"
+SRC_URI="mirrot://berlios/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,8 +21,8 @@ DEPEND=">=app-shells/bash-2.05"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-fix-all.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-fix-all.diff
 }
 
 src_install() {
@@ -30,7 +30,7 @@ src_install() {
 	dodoc AUTHORS TODO ChangeLog README
 
 	insinto /usr/share/bash-completion
-	newins ${FILESDIR}/bashcomp ${PN} || die "failed to install bashcomp"
+	newins "${FILESDIR}"/bashcomp ${PN} || die "failed to install bashcomp"
 }
 
 # remove files that bashcomp-config provides for non-Gentoo platforms
