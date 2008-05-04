@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.32 2008/04/23 02:29:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.33 2008/05/04 18:54:21 solar Exp $
+
+*uclibc-0.9.28.3-r5 (04 May 2008)
+
+  04 May 2008; <solar@gentoo.org> +uclibc-0.9.28.3-r5.ebuild:
+  [Bug 219598] [PATCH] sys-libs/uclibc-0.9.28.3 - backport of splice(2),
+  tee(2) and vmsplice(2) syscalls
 
   23 Apr 2008; <solar@gentoo.org> uclibc-0.9.28.3-r3.ebuild:
   - stable on arm/ppc/x86
