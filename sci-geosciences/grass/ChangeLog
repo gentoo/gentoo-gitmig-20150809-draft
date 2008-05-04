@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.52 2008/05/04 01:07:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.53 2008/05/04 01:14:07 nerdboy Exp $
+
+  04 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.1.ebuild:
+  forced stable version to use the older ffmpeg
 
   04 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
   Updated for changed include path in latest ffmpeg.  Still needs testing,
