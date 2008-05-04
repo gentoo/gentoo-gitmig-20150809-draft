@@ -1,14 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.12 2007/07/21 12:09:04 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.13 2008/05/04 08:52:24 omp Exp $
 
 inherit eutils
 
 DESCRIPTION="Goodies for aewm++"
-HOMEPAGE="http://sapphire.sourceforge.net/"
-SRC_URI="mirror://sourceforge/sapphire/${P/-/_}.tar.bz2"
+HOMEPAGE="http://frankhale.org/"
+SRC_URI="http://frankhale.org/${P/-/_}.tar.bz2"
 
-LICENSE="GPL-2"
+# ae_fspanel is as-is. Appbar and setrootimage is "gpl", referring to gnu.org.
+LICENSE="as-is || ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
@@ -34,6 +35,9 @@ src_unpack() {
 src_compile() {
 	for i in ${GOODIES}
 	do
+		# remove -s from "install -s " and "-Xlinker -s "
+		sed -i -e 's/ -s / /' $i/Makefile
+
 		make CFLAGS="${CFLAGS}" -C $i || die "make failed"
 	done
 }
