@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.78 2008/03/22 22:34:31 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.79 2008/05/04 12:31:43 betelgeuse Exp $
+
+  04 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  netbeans-5.5.1-r1.ebuild:
+  Doesn't build with ibm-jdk-bin so require a sun-jdk. Reported in bug #220197.
 
 *netbeans-5.5.1-r1 (22 Mar 2008)
 
