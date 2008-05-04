@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.2 2007/08/19 17:13:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.3 2008/05/04 20:53:49 nyhm Exp $
 
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="a cute and addictive action-puzzle game, similar to tetris"
 HOMEPAGE="http://www.emma-soft.com/games/amoebax/"
@@ -20,6 +20,7 @@ DEPEND="media-libs/libsdl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "/^SUBDIRS/s:doc ::" \
 		Makefile.am \
