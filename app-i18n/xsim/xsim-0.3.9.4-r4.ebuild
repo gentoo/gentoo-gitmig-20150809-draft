@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r4.ebuild,v 1.1 2007/08/20 16:13:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r4.ebuild,v 1.2 2008/05/04 15:06:48 matsuu Exp $
 
 inherit db-use eutils flag-o-matic kde-functions multilib
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server"
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"
-SRC_URI="http://download.berlios.de/xsim/${P}.tar.gz"
+SRC_URI="mirror://berlios/xsim/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

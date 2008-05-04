@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/xsim
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.15 2007/08/20 16:13:18 matsuu Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.16 2008/05/04 15:06:48 matsuu Exp $
+
+  04 May 2008; MATSUU Takuto <matsuu@gentoo.org> xsim-0.3.9.4-r2.ebuild,
+  -xsim-0.3.9.4-r3.ebuild, xsim-0.3.9.4-r4.ebuild:
+  Use mirror://berlios, bug #218657.
+  Removed old version.
 
 *xsim-0.3.9.4-r4 (20 Aug 2007)
 
