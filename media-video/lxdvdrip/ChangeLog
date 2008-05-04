@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lxdvdrip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.24 2007/11/19 19:12:57 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.25 2008/05/04 14:16:06 drac Exp $
+
+  04 May 2008; Samuli Suominen <drac@gentoo.org> lxdvdrip-1.70.ebuild:
+  Use berlios mirrors:// wrt #218657
 
   19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   -files/lxdvdrip-1.62-makefile, -lxdvdrip-1.62.ebuild:

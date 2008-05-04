@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.6 2008/01/25 07:46:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.7 2008/05/04 14:11:19 drac Exp $
 
 inherit python
 
@@ -8,8 +8,8 @@ ARTWORK_PV="0.9.4"
 
 DESCRIPTION="Movie collection manager"
 HOMEPAGE="http://griffith.berlios.de/"
-SRC_URI="http://download.berlios.de/griffith/${P/_/-}.tar.gz
-	http://download.berlios.de/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
+SRC_URI="mirror://berlios/griffith/${P/_/-}.tar.gz
+	mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
