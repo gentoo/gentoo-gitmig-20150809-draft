@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/albumart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.22 2008/05/03 13:58:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.23 2008/05/04 15:18:07 maekke Exp $
+
+  04 May 2008; Markus Meier <maekke@gentoo.org> albumart-1.6.4.ebuild:
+  amd64/x86 stable, bug #219814
 
 *albumart-1.6.4 (03 May 2008)
 

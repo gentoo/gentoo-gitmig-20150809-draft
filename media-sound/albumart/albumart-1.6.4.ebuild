@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.4.ebuild,v 1.2 2008/05/03 14:08:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.4.ebuild,v 1.3 2008/05/04 15:18:07 maekke Exp $
 
 inherit distutils eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://muksuluuri.ath.cx/~skyostil/projects/${PN}/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-python/PyQt
