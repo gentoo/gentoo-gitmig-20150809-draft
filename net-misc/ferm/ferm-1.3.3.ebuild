@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.3.3.ebuild,v 1.3 2008/03/26 01:59:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.3.3.ebuild,v 1.4 2008/05/05 15:28:55 drac Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ferm.foo-projects.org/"
 SRC_URI="http://ferm.foo-projects.org/download/${MY_PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 SLOT="0"
 
