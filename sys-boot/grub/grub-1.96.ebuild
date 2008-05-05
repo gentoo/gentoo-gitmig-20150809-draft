@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.2 2008/03/21 22:02:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.3 2008/05/05 03:37:21 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="2"
+SLOT="0"
 KEYWORDS=""
 IUSE="static netboot custom-cflags"
 
