@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.89 2008/05/02 19:51:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.90 2008/05/05 20:37:17 maekke Exp $
+
+  05 May 2008; Markus Meier <maekke@gentoo.org> grub-0.97-r5.ebuild:
+  amd64 stable, bug #220069
 
   02 May 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r5.ebuild:
   amd64+static together blow up.
