@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/libtranslate-0.99.ebuild,v 1.3 2008/02/03 22:55:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/libtranslate-0.99.ebuild,v 1.4 2008/05/05 15:07:37 drac Exp $
 
-EAPI="1"
+EAPI=1
 
 inherit eutils
 
@@ -10,33 +10,32 @@ DESCRIPTION="Library for translating text and web pages between natural language
 HOMEPAGE="http://www.nongnu.org/libtranslate"
 SRC_URI="http://savannah.nongnu.org/download/libtranslate/${P}.tar.gz"
 
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LICENSE="BSD"
 IUSE=""
 
 # The tests require the package to be installed already.
 RESTRICT="test"
 
-DEPEND=">=dev-libs/glib-2.4.0
-		net-libs/libsoup:2.2
-		>=dev-libs/libxml2-2.0
-		>=app-text/talkfilters-2.3.4-r1
-		>=dev-util/pkgconfig-0.22"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-libs/glib-2.4
+	net-libs/libsoup:2.2
+	>=dev-libs/libxml2-2
+	>=app-text/talkfilters-2.3.4-r1"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
 	# Upstream patches for several minor issues.
-	epatch "${FILESDIR}/${P}-charsetparse.diff"
-	epatch "${FILESDIR}/${P}-condfix.diff"
-	epatch "${FILESDIR}/${P}-int64.diff"
-	epatch "${FILESDIR}/${P}-man-page.diff"
+	epatch "${FILESDIR}"/${P}-charsetparse.diff \
+		"${FILESDIR}"/${P}-condfix.diff \
+		"${FILESDIR}"/${P}-int64.diff \
+		"${FILESDIR}"/${P}-man-page.diff
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
-
-	dodoc AUTHORS NEWS README TODO || die "installing docs failed"
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS NEWS README
 }
