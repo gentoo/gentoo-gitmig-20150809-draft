@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.188 2008/04/09 22:32:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.189 2008/05/05 21:08:32 eva Exp $
+
+  05 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -nautilus-cd-burner-2.18.2.ebuild, nautilus-cd-burner-2.20.0.ebuild:
+  adding cdrdao to RDEPEND, fix bug #208504.
 
 *nautilus-cd-burner-2.22.1 (09 Apr 2008)
 
