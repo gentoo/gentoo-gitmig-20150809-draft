@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.61 2008/04/21 00:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.62 2008/05/05 04:20:22 vapier Exp $
+
+  05 May 2008; Mike Frysinger <vapier@gentoo.org> ntfsprogs-2.0.0-r1.ebuild:
+  Make sure we handle USE=minimal while installing #219025.
 
   21 Apr 2008; Mike Frysinger <vapier@gentoo.org> ntfsprogs-2.0.0.ebuild,
   ntfsprogs-2.0.0-r1.ebuild:

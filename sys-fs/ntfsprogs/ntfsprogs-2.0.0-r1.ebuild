@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.2 2008/04/21 00:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.3 2008/05/05 04:20:22 vapier Exp $
 
 inherit eutils autotools
 
@@ -49,8 +49,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	mv "${D}"/sbin/mkfs.ntfs "${D}"/usr/sbin/ || die
-	mv "${D}"/usr/bin/ntfsck "${D}"/sbin/ || die
-	dosym ntfsck /sbin/fsck.ntfs
+	if ! use minimal ; then
+		mv "${D}"/usr/bin/ntfsck "${D}"/sbin/ || die
+		dosym ntfsck /sbin/fsck.ntfs
+	fi
 	if use fuse ; then
 		mv "${D}"/sbin/mount.{fuse.ntfs,ntfs-fuse} "${D}"/usr/bin/ || die
 	fi
