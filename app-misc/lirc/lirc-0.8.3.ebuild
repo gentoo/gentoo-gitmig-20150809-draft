@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3.ebuild,v 1.1 2008/05/05 09:53:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3.ebuild,v 1.2 2008/05/05 10:02:31 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -283,6 +283,15 @@ src_install() {
 
 	insinto /usr/share/lirc/remotes
 	doins -r remotes/*
+}
+
+pkg_preinst() {
+	linux-mod_pkg_preinst
+
+	# stop portage from deleting this file
+	if [[ -f ${ROOT}/etc/lircd.conf && ! -f ${D}/etc/lircd.conf ]]; then
+		cp "${ROOT}"/etc/lircd.conf "${D}"/etc/lircd.conf
+	fi
 }
 
 pkg_postinst() {
