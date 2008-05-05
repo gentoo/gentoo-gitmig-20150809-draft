@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.18 2008/04/08 13:48:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.19 2008/05/05 13:34:16 jer Exp $
+
+  05 May 2008; Jeroen Roovers <jer@gentoo.org> libnfnetlink-0.0.33.ebuild:
+  Stable for HPPA (bug #214072).
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org> libnfnetlink-0.0.33.ebuild:
   sparc stable wrt #214072
