@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r5.ebuild,v 1.1 2008/05/03 09:16:59 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r5.ebuild,v 1.2 2008/05/05 13:30:20 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -34,8 +34,6 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	patch "${DISTDIR}"/${P}-map-type-in-map-name.patch \
-		< "${FILESDIR}"/${P}-map-patch-fix.patch || die "failed to patch"
 	PATCH_LIST="
 		${P}-ldap-page-control-configure-fix.patch
 		${P}-xfn-not-supported.patch
@@ -53,7 +51,13 @@ src_unpack() {
 		${P}-map-type-in-map-name.patch
 		${P}-mount-thread-create-cond-handling.patch"
 	for i in ${PATCH_LIST}; do
-		EPATCH_OPTS="-p1 -d ${S}" epatch ${DISTDIR}/${i}
+		cp ${DISTDIR}/${i} ${T}
+	done
+	patch "${T}"/${P}-map-type-in-map-name.patch \
+		< "${FILESDIR}"/${P}-map-patch-fix.patch || die "failed to patch"
+	for i in ${PATCH_LIST}; do
+		EPATCH_OPTS="-p1 -d ${S}" epatch ${T}/${i}
+		rm -f ${T}/${i}
 	done
 
 	# fixes bug #210762
