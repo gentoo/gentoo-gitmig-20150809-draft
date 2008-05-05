@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.108 2008/05/05 11:07:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.109 2008/05/05 12:07:16 corsair Exp $
+
+  05 May 2008; Markus Rothe <corsair@gentoo.org>
+  rxvt-unicode-9.02-r1.ebuild:
+  Stable on ppc64; bug #219760
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org>
   rxvt-unicode-9.02-r1.ebuild:
