@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.12 2007/07/12 04:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.13 2008/05/05 21:39:56 eva Exp $
 
 inherit gnome2 flag-o-matic toolchain-funcs
 
@@ -17,16 +17,18 @@ RDEPEND=">=x11-libs/gtk+-2.0.4
 	>=dev-libs/glib-2.0.3
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libgnomeui-2
-	>=gnome-base/libglade-2"
+	>=gnome-base/libglade-2
+	x11-libs/libXScrnSaver"
 
 DEPEND="${RDEPEND}
+	x11-proto/scrnsaverproto
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
 src_unpack() {
-	cd ${S}
-	unpack ${A}
+	gnome2_src_unpack
+
 	# get rid of strict-aliasing warnings
-	sed -i -e 's/-Wall//' ${S}/src/Makefile.in ${S}/src/Makefile.am
+	sed -i -e 's/-Wall//' src/Makefile.{in,am}
 }
