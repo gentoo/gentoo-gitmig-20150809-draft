@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/ssl-py26
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-py26/ChangeLog,v 1.1 2008/05/05 17:19:35 chtekk Exp $
+
+*ssl-py26-1.13 (05 May 2008)
+
+  05 May 2008; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +ssl-py26-1.13.ebuild:
+  Initial revision.
+
