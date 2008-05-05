@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.3 2006/12/21 17:00:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.4 2008/05/05 03:15:04 tester Exp $
 
 inherit distutils
 
@@ -13,19 +13,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/pygtk-2.8.4
+RDEPEND=">=dev-python/pygtk-2.8.4
 		>=x11-libs/gtk+-2.0.0"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	distutils_python_version
 	unpack ${A}
+	cd ${S}
 
 	# Fixing gpixpod.py for searching gpixpod.glade in the same directory
-	sed -i "s:gpixpod\.glade:/usr/share/gpixpod/gpixpod\.glade:g" ${S}/gpixpod.py
+	sed -i -e "s:gpixpod\.glade:/usr/share/gpixpod/gpixpod\.glade:g" /gpixpod.py
 
-	# Fixing launching script
-	sed -i "s:/usr/lib/gpixpod/:/usr/$(get_libdir)/python${PYVER}/site-packages/:" ${S}/gpixpod
+	# Fixing launching script and Makefile
+	sed -i -e s:python2.4:python${PYVER}:g Makefile gpixpod
 }
 
 src_install() {
