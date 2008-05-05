@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8554 2008/05/04 12:45:23 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8555 2008/05/05 06:36:31 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -243,10 +243,6 @@ app-laptop/omnibook-svn
 # Mark Loeser <halcy0n@gentoo.org> (2 Apr 2008)
 # Mask due to dead upstream and not working properly; bug #206163
 dev-libs/swl
-
-# Mart Raudsepp <leio@gentoo.org> (2 Apr 2008)
-# Mask because it breaks things all over. Tracker bug: #212763
->=sys-devel/libtool-2.2
 
 # Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
