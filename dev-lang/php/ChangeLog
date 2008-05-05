@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.268 2008/05/01 17:08:15 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.269 2008/05/05 21:01:17 hoffie Exp $
+
+*php-5.2.6-r1 (05 May 2008)
+
+  05 May 2008; Christian Hoffmann <hoffie@gentoo.org> +php-5.2.6-r1.ebuild:
+  using official suhosin for version 5.2.6 now, adding patch to fix bug
+  212679 (ext/ldap build failure with --as-needed, thanks to Peter Volkov)
 
   01 May 2008; Christian Hoffmann <hoffie@gentoo.org>
   -php-4.4.8_pre20070816.ebuild:
