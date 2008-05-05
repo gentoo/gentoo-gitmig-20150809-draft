@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/multi-aterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.28 2008/05/04 13:35:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.29 2008/05/05 02:06:40 jer Exp $
+
+  05 May 2008; Jeroen Roovers <jer@gentoo.org> multi-aterm-0.2.1-r1.ebuild:
+  Stable for HPPA (bug #219754).
 
   04 May 2008; Markus Meier <maekke@gentoo.org> multi-aterm-0.2.1-r1.ebuild:
   amd64 stable, security bug #219754
