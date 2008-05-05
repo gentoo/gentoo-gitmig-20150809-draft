@@ -1,0 +1,20 @@
+--- src/osqt3.cc
++++ src/osqt3.cc
+@@ -43,6 +43,7 @@
+ #include <qfileinfo.h>
+ #include <qdir.h>
+ #include <qtextcodec.h>
++#include <cstring>
+ 
+ #include "os.h"
+ #include "qtadswarning.h"
+--- src/osqt.cc
++++ src/osqt.cc
+@@ -103,6 +103,7 @@
+ #include <cstring>
+ #include <cstdio>
+ #include <cctype>
++#include <ctime>
+ 
+ #include "os.h"
+ 

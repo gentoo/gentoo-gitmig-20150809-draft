@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/qtads
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.4 2008/01/02 07:21:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.5 2008/05/05 19:14:09 nyhm Exp $
+
+  05 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/qtads-1.6c-gcc43.patch, qtads-1.6c.ebuild:
+  Fix building with gcc-4.3
 
   02 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> qtads-1.6c.ebuild:
   use eqmake3 to avoid trying to build against qt4
