@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b-r1.ebuild,v 1.1 2008/05/05 02:53:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b-r1.ebuild,v 1.2 2008/05/05 09:43:16 rbu Exp $
 
 inherit eutils multilib
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epunt_cxx #74489
 
-	epatch "${FILESDIR}/${PV}/*.patch"
+	epatch "${FILESDIR}/${PV}"/*.patch
 }
 
 src_compile() {
