@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.105 2008/05/04 13:32:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.106 2008/05/05 02:07:36 jer Exp $
+
+  05 May 2008; Jeroen Roovers <jer@gentoo.org> aterm-1.0.1-r1.ebuild:
+  Stable for HPPA (bug #219746).
 
   04 May 2008; Markus Meier <maekke@gentoo.org> aterm-1.0.1-r1.ebuild:
   amd64 stable, security bug #219746
