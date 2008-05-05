@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b-r1.ebuild,v 1.2 2008/05/05 09:43:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b-r2.ebuild,v 1.1 2008/05/05 14:40:25 tester Exp $
 
 inherit eutils multilib
 
@@ -40,6 +40,6 @@ src_install() {
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins "${FILESDIR}/id3tag.pc"
 	sed -i -e "s:libdir=\${exec_prefix}/lib:libdir=/usr/$(get_libdir):" \
+		-e "s:0.15.0b:${PV}:" \
 		"${D}/usr/$(get_libdir)/pkgconfig/id3tag.pc"
-	sed -i -e s:15.0b:15.1b: "${D}/usr/$(get_libdir)/pkgconfig/id3tag.pc"
 }
