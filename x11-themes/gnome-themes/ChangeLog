@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.185 2008/03/22 13:00:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.186 2008/05/05 02:35:34 dirtyepic Exp $
+
+  05 May 2008; Ryan Hill <dirtyepic@gentoo.org> gnome-themes-2.22.0.ebuild:
+  Keyword for mips.
 
 *gnome-themes-2.22.0 (22 Mar 2008)
 
