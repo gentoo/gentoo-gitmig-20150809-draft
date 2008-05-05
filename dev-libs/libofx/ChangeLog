@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.44 2008/03/27 22:36:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.45 2008/05/05 22:29:47 eva Exp $
+
+  06 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/libofx-0.9.0-gcc43.patch, libofx-0.9.0.ebuild:
+  Fix compilation with gcc 4.3, see bug #218782.
 
   27 Mar 2008; Jeroen Roovers <jer@gentoo.org> libofx-0.9.0.ebuild:
   Marked ~hppa (bug #214356).

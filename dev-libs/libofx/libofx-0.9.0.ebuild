@@ -1,12 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.5 2008/03/27 22:36:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.6 2008/05/05 22:29:47 eva Exp $
 
 EAPI="1"
 
+inherit eutils
+
 DESCRIPTION="Library to support the Open Financial eXchange XML Format"
 HOMEPAGE="http://libofx.sourceforge.net/"
-SRC_URI="mirror://sourceforge/libofx/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -37,6 +39,9 @@ src_unpack() {
 			-e 's|^\(SUBDIRS = .*\) doc|\1|' \
 			"${S}/Makefile.in" || die "sed failed"
 	fi
+
+	# Fix compilation with gcc 4.3, see bug #218782
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_install() {
