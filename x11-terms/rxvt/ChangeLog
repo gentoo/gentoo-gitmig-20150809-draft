@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.61 2008/05/04 09:53:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.62 2008/05/05 02:10:41 jer Exp $
+
+  05 May 2008; Jeroen Roovers <jer@gentoo.org> rxvt-2.7.10-r4.ebuild:
+  Stable for HPPA (bug #217819).
 
   04 May 2008; Raúl Porcel <armin76@gentoo.org> rxvt-2.7.10-r4.ebuild:
   alpha/sparc stable wrt #217819
