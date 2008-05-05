@@ -1,0 +1,11 @@
+diff -ur glob2-0.9.3.orig/src/FertilityCalculatorThreadMessage.cpp glob2-0.9.3/src/FertilityCalculatorThreadMessage.cpp
+--- glob2-0.9.3.orig/src/FertilityCalculatorThreadMessage.cpp	2008-03-08 07:27:17.000000000 +0200
++++ glob2-0.9.3/src/FertilityCalculatorThreadMessage.cpp	2008-05-05 16:42:58.000000000 +0300
+@@ -19,6 +19,7 @@
+ #include "FertilityCalculatorThreadMessage.h"
+ 
+ #include <sstream>
++#include <typeinfo>
+ 
+ FCTUpdateCompletionPercent::FCTUpdateCompletionPercent(float percent)
+ 	: percent(percent)
