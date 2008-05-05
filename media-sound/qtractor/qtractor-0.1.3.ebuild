@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.3.ebuild,v 1.1 2008/05/01 23:35:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.3.ebuild,v 1.2 2008/05/05 19:02:24 drac Exp $
 
 EAPI=1
 
@@ -36,6 +36,12 @@ pkg_setup() {
 		eerror "need to have built media-libs/alsa-lib with midi USE flag."
 		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

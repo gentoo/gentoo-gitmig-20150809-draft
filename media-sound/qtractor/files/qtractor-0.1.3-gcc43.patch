@@ -1,0 +1,32 @@
+diff -NrU5 qtractor-0.1.3.old/src/qtractorAudioFile.cpp qtractor-0.1.3/src/qtractorAudioFile.cpp
+--- qtractor-0.1.3.old/src/qtractorAudioFile.cpp	2008-04-01 00:11:01.000000000 +0200
++++ qtractor-0.1.3/src/qtractorAudioFile.cpp	2008-05-05 08:19:48.000000000 +0200
+@@ -25,10 +25,12 @@
+ #include "qtractorAudioMadFile.h"
+ 
+ #include <QFileInfo>
+ #include <QRegExp>
+ 
++#include <cstdlib>
++
+ 
+ //----------------------------------------------------------------------
+ // class qtractorAudioFileFactory -- Audio file factory (singleton).
+ //
+ 
+diff -NrU5 qtractor-0.1.3.old/src/qtractorAudioVorbisFile.cpp qtractor-0.1.3/src/qtractorAudioVorbisFile.cpp
+--- qtractor-0.1.3.old/src/qtractorAudioVorbisFile.cpp	2008-03-15 21:52:31.000000000 +0100
++++ qtractor-0.1.3/src/qtractorAudioVorbisFile.cpp	2008-05-05 08:19:48.000000000 +0200
+@@ -24,10 +24,12 @@
+ #ifdef CONFIG_LIBVORBIS
+ // libvorbis encoder API.
+ #include <vorbis/vorbisenc.h>
+ #endif
+ 
++#include <cstdlib>
++
+ 
+ //----------------------------------------------------------------------
+ // class qtractorAudioVorbisFile -- Buffered audio file implementation.
+ //
+ 
