@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20080401.ebuild,v 1.1 2008/05/05 04:04:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20080401.ebuild,v 1.2 2008/05/05 05:58:31 mr_bones_ Exp $
 
 DESCRIPTION="Intel IA32 microcode update data"
 HOMEPAGE="http://urbanmyth.org/microcode/"
@@ -17,7 +17,6 @@ src_install() {
 	insinto /etc
 	newins "${DISTDIR}"/microcode-${PV}.dat microcode.dat || die
 }
-
 
 pkg_postinst() {
 	einfo "The microcode available for Intel CPUs has been updated.  You'll need"
