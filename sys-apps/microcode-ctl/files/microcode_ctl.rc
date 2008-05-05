@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/files/microcode_ctl.rc,v 1.4 2005/12/26 21:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/files/microcode_ctl.rc,v 1.5 2008/05/05 04:05:58 vapier Exp $
 
 depend() {
 	need localmount
@@ -12,15 +12,14 @@ start() {
 
 	# Make sure the kernel supports the microcode device ...
 	# if it doesnt, try to modprobe the kernel module
-	grep -qo ' microcode$' /proc/misc || modprobe microcode >& /dev/null
+	grep -qs ' microcode$' /proc/misc || modprobe -q microcode
 
 	ebegin "Updating microcode"
-	/usr/sbin/microcode_ctl -qu -d ${MICROCODE_DEV}
+	microcode_ctl -qu -d ${MICROCODE_DEV}
 	ret=$?
 	eend ${ret} "Failed to update microcode via '${MICROCODE_DEV}'"
 
-	[[ ${MICROCODE_UNLOAD} == "1" || ${MICROCODE_UNLOAD} == "yes" ]] \
-		&& rmmod microcode >& /dev/null
+	[ "${MICROCODE_UNLOAD}" = "yes" ] && rmmod microcode >/dev/null 2>&1
 
 	return ${ret}
 }

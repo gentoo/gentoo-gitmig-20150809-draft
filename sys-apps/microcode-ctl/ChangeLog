@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/microcode-ctl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.28 2007/06/17 10:51:08 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.29 2008/05/05 04:05:57 vapier Exp $
+
+*microcode-ctl-1.17-r1 (05 May 2008)
+
+  05 May 2008; Mike Frysinger <vapier@gentoo.org> files/microcode_ctl.rc,
+  +microcode-ctl-1.17-r1.ebuild:
+  Convert init.d script to POSIX #219751 by yuen and split off microcode-data
+  #194271 by Mike Nerone.
 
   17 Jun 2007; Raúl Porcel <armin76@gentoo.org> microcode-ctl-1.17.ebuild:
   x86 stable wrt #182263
