@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.8 2008/02/03 01:58:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.9 2008/05/05 22:35:44 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -18,7 +18,6 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/libbonobo-2.0.0
 	>=gnome-base/gnome-panel-2.0
 	>=gnome-base/gconf-2.0
-	>=dev-util/gob-2.0.5
 	dev-libs/libxml2
 	>=app-pda/pilot-link-0.11.7
 	hal? (
@@ -28,6 +27,7 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
+	>=dev-util/gob-2.0.5
 	>=dev-lang/perl-5.6.0
 	dev-util/intltool"
 
