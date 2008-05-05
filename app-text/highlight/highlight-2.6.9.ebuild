@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.9.ebuild,v 1.2 2008/05/04 20:41:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.9.ebuild,v 1.3 2008/05/05 12:32:38 drac Exp $
 
 WX_GTK_VER=2.6
 
@@ -24,6 +24,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-asneeded.patch
 	sed -i \
 		-e "s:-O2::" \
+		-e "s:CFLAGS:CXXFLAGS:" \
 		src/makefile || die "sed failed."
 }
 
