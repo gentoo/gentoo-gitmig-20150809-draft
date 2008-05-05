@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.7.26.ebuild,v 1.1 2008/05/05 04:55:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.7.26.ebuild,v 1.2 2008/05/05 13:41:58 remi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-4.7.26-gentoo-security.patch
 	epatch "${FILESDIR}"/${PN}-4.7.2-config-file.patch
+	epatch "${FILESDIR}/${PN}-4.7.26-fix-as-needed.patch"
 
 	if use nls ; then
 		cd po

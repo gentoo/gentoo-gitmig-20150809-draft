@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.107 2008/05/05 04:55:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.108 2008/05/05 13:41:58 remi Exp $
+
+  05 May 2008; Rémi Cardona <remi@gentoo.org>
+  +files/whois-4.7.26-fix-as-needed.patch, whois-4.7.26.ebuild:
+  Add patch to fix --as-needed (see bug #220351)
 
 *whois-4.7.26 (05 May 2008)
 
