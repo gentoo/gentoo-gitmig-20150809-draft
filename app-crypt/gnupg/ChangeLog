@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.328 2008/05/05 12:07:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.329 2008/05/05 14:14:30 ranger Exp $
+
+  05 May 2008; Brent Baude <ranger@gentoo.org> gnupg-1.4.9.ebuild:
+  stable ppc64, bug 217839
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> gnupg-1.4.9.ebuild:
   alpha/ia64/sparc stable wrt #217839
