@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r2.ebuild,v 1.1 2008/02/24 18:59:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r3.ebuild,v 1.1 2008/05/05 20:51:26 ulm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib autotools
 
@@ -53,7 +53,7 @@ src_compile() {
 	replace-flags -Os -O
 
 	econf \
-		--with-appresdir=/etc/X11/app-defaults \
+		--with-appresdir=/usr/share/X11/app-defaults \
 		$(use_with X x) \
 		$(use_enable cjk japanese) \
 		|| die
@@ -66,7 +66,7 @@ src_install() {
 		prefix="${D}"/usr \
 		bindir="${D}"/usr/bin \
 		libdir="${D}"/usr/$(get_libdir) \
-		appresdir="${D}"/etc/X11/app-defaults \
+		appresdir="${D}"/usr/share/X11/app-defaults \
 		datadir="${D}"/usr/share \
 		mandir="${D}"/usr/share/man \
 		infodir="${D}"/usr/share/info \
