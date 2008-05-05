@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.15 2008/01/26 17:44:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.16 2008/05/05 20:23:38 maekke Exp $
+
+  05 May 2008; Markus Meier <maekke@gentoo.org> debugedit-4.4.6-r1.ebuild:
+  amd64/x86 stable, bug #220295
 
   26 Jan 2008; Raúl Porcel <armin76@gentoo.org> debugedit-4.4.6-r1.ebuild:
   Add ~sparc wrt #207573
