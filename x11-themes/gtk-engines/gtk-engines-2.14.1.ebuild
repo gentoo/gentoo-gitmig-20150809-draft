@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.14.1.ebuild,v 1.2 2008/05/05 01:41:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.14.1.ebuild,v 1.3 2008/05/05 13:31:52 eva Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="GTK+2 standard engines and themes"
 HOMEPAGE="http://www.gtk.org/"
@@ -23,4 +23,10 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	G2CONF="$(use_enable static) --enable-animation"
 	use accessibility || G2CONF="${G2CONF} --disable-hc"
+}
+
+src_test() {
+	# It seems Xvfb is necessary to avoid random failure in tests
+	# see upstream bug #530743
+	Xemake check || die "tests failed"
 }
