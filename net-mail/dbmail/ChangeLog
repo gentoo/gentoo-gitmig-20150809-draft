@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.26 2008/04/17 21:45:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.27 2008/05/05 17:57:11 lordvan Exp $
+
+*dbmail-2.2.10 (05 May 2008)
+
+  05 May 2008; Thomas Raschbacher <lordvan@gentoo.org>
+  +dbmail-2.2.10.ebuild:
+  added 2.2.10 fixes bug #218136.
+  Thanks to svrmarty <svrmarty@gmx.net> for pointing this out	
 
   17 Apr 2008; Markus Meier <maekke@gentoo.org> dbmail-2.2.9.ebuild:
   amd64/x86 stable, security bug #218154
