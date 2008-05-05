@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.510 2008/04/21 21:11:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.511 2008/05/05 11:27:41 genone Exp $
+
+*portage-2.2_pre6 (05 May 2008)
+
+  05 May 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre6.ebuild:
+  New testrelease including rewritten support for FEATURES=preserve-libs and
+  several updates regarding package set handling
 
 *portage-2.1.5_rc6 (21 Apr 2008)
 
