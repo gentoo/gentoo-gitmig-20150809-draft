@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.7 2006/11/04 17:13:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.8 2008/05/05 19:45:29 drac Exp $
 
 inherit eutils
 
@@ -26,17 +26,17 @@ KEYWORDS="~amd64 ppc x86"
 
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0.0
-	>=dev-libs/glib-2.0.0
-	nls? ( >=sys-devel/gettext-0.10 )
-	dev-util/pkgconfig
+RDEPEND=">=x11-libs/gtk+-2
 	media-libs/libpng"
+DEPEND="${RDEPEND}
+	nls? ( >=sys-devel/gettext-0.10 )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-nls.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff \
+		"${FILESDIR}"/${P}-nls.diff
 }
 
 src_compile() {
@@ -52,7 +52,7 @@ src_install() {
 
 	# install mascots
 	for d in ${MY_MASCOTS} ; do
-		cd ${WORKDIR}/${PN}-mascot-${d}
+		cd "${WORKDIR}"/${PN}-mascot-${d}
 		insinto /usr/share/${PN}
 		# please ignore doins errors ...
 		doins *.mcpx *.menu
