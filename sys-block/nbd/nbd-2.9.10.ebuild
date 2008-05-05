@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.10.ebuild,v 1.1 2008/04/19 21:59:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.10.ebuild,v 1.2 2008/05/05 03:23:29 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,6 +32,7 @@ src_compile() {
 	econf \
 		--enable-lfs \
 		--enable-syslog \
+		--without-klcc \
 		|| die
 	emake || die
 	emake -C gznbd || die
