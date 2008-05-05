@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.11.ebuild,v 1.1 2008/05/05 03:24:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.11.ebuild,v 1.2 2008/05/05 13:27:52 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.9.1-headers.patch
+	sed -i 's:/usr/bin/klcc:/suck/it/k/l/c/c:g' configure || die
 
 	mkdir -p "${S}"/inc-after/linux
 	mv "${WORKDIR}"/nbd-linux-include.h "${S}"/inc-after/linux/nbd.h
@@ -32,7 +33,6 @@ src_compile() {
 	econf \
 		--enable-lfs \
 		--enable-syslog \
-		--without-klcc \
 		|| die
 	emake || die
 	emake -C gznbd || die
