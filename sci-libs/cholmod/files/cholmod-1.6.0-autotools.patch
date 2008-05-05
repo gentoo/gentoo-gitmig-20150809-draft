@@ -614,7 +614,7 @@
 +SUPERNODAL =  cholmod_supernodal.h
 +endif
 +
-+include_HEADERS = $(CHECK) $(CHOLESKY) $(PARTITIOn) $(MATRIXOPS) $(MODIFY) $(SUPERNODAL) \
++include_HEADERS = $(CHECK) $(CHOLESKY) $(PARTITION) $(MATRIXOPS) $(MODIFY) $(SUPERNODAL) \
 +	cholmod.h \
 +	cholmod_config.h \
 +	cholmod_core.h \
