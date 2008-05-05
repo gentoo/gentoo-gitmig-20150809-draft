@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.2.ebuild,v 1.1 2008/05/02 11:42:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.2.ebuild,v 1.2 2008/05/05 14:53:33 george Exp $
 
 inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
@@ -16,18 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-util/subversion-1.3
-		net-misc/neon
-		>=dev-util/cmake-2.4"
+	<dev-util/subversion-1.5
+	net-misc/neon
+	>=dev-util/cmake-2.4"
 
 need-kde 3.3
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-#	epatch "${FILESDIR}"/${PN}-0.14.1-as-needed.patch
-	epatch "${FILESDIR}"/${PN}-0.14.1-subversion-1.5.patch
-}
 
 src_compile() {
 	local myconf
