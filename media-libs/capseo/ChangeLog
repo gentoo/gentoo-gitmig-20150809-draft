@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/capseo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.6 2008/05/02 14:01:05 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.7 2008/05/05 09:38:58 trapni Exp $
+
+*capseo-0.3.0_pre200712251-r2 (05 May 2008)
+
+  05 May 2008; Christian Parpart <trapni@gentoo.org>
+  +capseo-0.3.0_pre200712251-r2.ebuild:
+  fixes bug 200039. thanks to David Leverton
 
   02 May 2008; Christian Parpart <trapni@gentoo.org>
   capseo-0.3.0_pre200712251-r1.ebuild:
