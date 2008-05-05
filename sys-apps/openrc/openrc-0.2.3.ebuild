@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.3.ebuild,v 1.1 2008/04/29 19:18:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.3.ebuild,v 1.2 2008/05/05 03:54:32 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -158,7 +158,8 @@ pkg_preinst() {
 	fi
 
 	# force net init.d scripts into symlinks
-	for f in $(find "${ROOT}"/etc/init.d/ -name 'net.*') ; do
+	for f in "${ROOT}"/etc/init.d/net.* ; do
+		[[ -e ${f} ]] || continue # catch net.* not matching anything
 		[[ ${f} == *.openrc.bak ]] && continue
 		if [[ ! -L ${f} ]] ; then
 			elog "Moved net service '${f##*/}' to '${f##*/}.openrc.bak' to force a symlink."
