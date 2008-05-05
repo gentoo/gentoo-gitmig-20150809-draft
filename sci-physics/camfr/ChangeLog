@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.6 2007/08/21 20:39:12 pbienst Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.7 2008/05/05 21:55:20 bicatali Exp $
+
+  05 May 2008; Sébastien Fabbro <bicatali@gentoo.org> -files/SConstruct,
+  -files/machine_cfg.py, -files/throw_patch.diff, -camfr-1.2.ebuild:
+  Removed old version
 
 *camfr-20070717 (21 Aug 2007)
 
