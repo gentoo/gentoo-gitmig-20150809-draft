@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.6 2008/04/28 06:19:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.7 2008/05/05 21:03:00 nyhm Exp $
 
 inherit eutils toolchain-funcs wxwidgets games
 
@@ -10,7 +10,7 @@ SRC_URI="http://icculus.org/${PN}/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="ffmpeg"
 
 DEPEND="=x11-libs/wxGTK-2.6*
@@ -47,7 +47,7 @@ src_unpack() {
 src_compile() {
 	emake \
 		-C src/jmdlx \
-		CXX=$(tc-getCXX) \
+		CXX="$(tc-getCXX)" \
 		|| die "emake failed"
 }
 
