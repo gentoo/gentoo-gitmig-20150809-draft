@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-2.10.ebuild,v 1.5 2008/05/02 16:11:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-2.10.ebuild,v 1.6 2008/05/05 13:28:13 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -22,6 +22,6 @@ app-xemacs/dired
 app-xemacs/ilisp
 app-xemacs/sh-script
 "
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
 
 inherit xemacs-packages

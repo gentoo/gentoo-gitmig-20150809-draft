@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/net-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.21 2008/05/02 16:13:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.22 2008/05/05 13:27:48 armin76 Exp $
+
+  05 May 2008; Raúl Porcel <armin76@gentoo.org> net-utils-1.52.ebuild:
+  alpha/sparc stable wrt #219332
 
   02 May 2008; Christian Faulhammer <opfer@gentoo.org>
   net-utils-1.52.ebuild:

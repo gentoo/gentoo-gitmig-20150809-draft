@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-unity/latin-unity-1.20.ebuild,v 1.6 2008/05/02 15:25:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-unity/latin-unity-1.20.ebuild,v 1.7 2008/05/05 13:26:58 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -14,6 +14,6 @@ app-xemacs/leim
 app-xemacs/fsf-compat
 app-xemacs/dired
 "
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
 
 inherit xemacs-packages

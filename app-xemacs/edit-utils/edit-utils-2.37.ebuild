@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/edit-utils-2.37.ebuild,v 1.4 2008/05/02 15:37:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/edit-utils-2.37.ebuild,v 1.5 2008/05/05 13:26:08 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -13,6 +13,6 @@ app-xemacs/fsf-compat
 app-xemacs/dired
 app-xemacs/mail-lib
 "
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
 
 inherit xemacs-packages
