@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.31 2008/04/29 15:31:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.32 2008/05/05 14:19:23 opfer Exp $
+
+  05 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  jgraph-5.12.0.4.ebuild:
+  filter jikes
 
   29 Apr 2008; Brent Baude <ranger@gentoo.org> jgraph-5.12.0.4.ebuild:
   stable ppc, bug 219659
