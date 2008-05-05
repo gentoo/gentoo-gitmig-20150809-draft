@@ -1,0 +1,11 @@
+--- kradio3/plugins/lirc/lircsupport.cpp
++++ kradio3/plugins/lirc/lircsupport.cpp
+@@ -29,6 +29,8 @@
+ #include <kaboutdata.h>
+ #include <kstandarddirs.h>
+ 
++#include <cstdlib>
++
+ #include "../../src/include/errorlog-interfaces.h"
+ #include "../../src/include/radiodevice_interfaces.h"
+ #include "../../src/include/stationlist.h"

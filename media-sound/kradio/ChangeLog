@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kradio
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.17 2008/04/30 13:01:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.18 2008/05/05 19:08:57 drac Exp $
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/kradio-20061112-gcc43.patch, kradio-20061112-r1.ebuild:
+  Fix building with GCC 4.3 wrt #219875 by Martin Väth.
 
 *kradio-20061112-r1 (30 Apr 2008)
 

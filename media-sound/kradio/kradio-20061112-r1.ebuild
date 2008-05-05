@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-20061112-r1.ebuild,v 1.1 2008/04/30 13:01:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-20061112-r1.ebuild,v 1.2 2008/05/05 19:08:57 drac Exp $
 
 inherit eutils kde
 
@@ -26,6 +26,7 @@ need-kde 3.5
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i kradio3/src/kradio.desktop -e 's:kradio\.png:kradio:'
 	rm configure
 }
