@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/upx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.19 2008/04/28 16:47:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.20 2008/05/05 03:05:44 tester Exp $
+
+  05 May 2008; Olivier Crête <tester@gentoo.org> upx-3.00.ebuild:
+  Stable on amd64
 
 *upx-3.03 (28 Apr 2008)
 
