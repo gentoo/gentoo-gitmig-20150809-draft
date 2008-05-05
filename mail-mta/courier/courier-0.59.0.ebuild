@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.3 2008/04/22 11:59:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.4 2008/05/05 22:33:07 hanno Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -65,7 +65,11 @@ src_unpack() {
 	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 
 	epatch "${FILESDIR}/remove-sysconftool.patch"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 
+	eautoreconf
+
+	cd "${S}/gdbmobj/"
 	eautoreconf
 }
 

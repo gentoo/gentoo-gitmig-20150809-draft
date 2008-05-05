@@ -4,7 +4,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hanno@@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Complete email package consisting of pop, imap, smtp, and fax

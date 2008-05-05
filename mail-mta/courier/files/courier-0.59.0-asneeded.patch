@@ -1,0 +1,18 @@
+Index: courier-0.59.0/gdbmobj/Makefile.am
+===================================================================
+--- courier-0.59.0.orig/gdbmobj/Makefile.am
++++ courier-0.59.0/gdbmobj/Makefile.am
+@@ -14,11 +14,12 @@ noinst_LTLIBRARIES=libgdbmobj.la
+ noinst_PROGRAMS=testgdbm
+ 
+ libgdbmobj_la_SOURCES=$(LIBGDBMSOURCES)
++libgdbmobj_la_LIBADD=@LIBGDBM@
+ 
+ testgdbm_SOURCES=$(TESTGDBMSOURCES)
+ 
+ testgdbm_DEPENDENCIES=libgdbmobj.la
+-testgdbm_LDADD=libgdbmobj.la @LIBGDBM@
++testgdbm_LDADD=libgdbmobj.la
+ testgdbm_LDFLAGS=-static
+ 
+ check-am:

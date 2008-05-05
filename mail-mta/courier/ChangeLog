@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.102 2008/04/22 11:59:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.103 2008/05/05 22:33:07 hanno Exp $
+
+  05 May 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/courier-0.59.0-asneeded.patch, metadata.xml, courier-0.59.0.ebuild:
+  Fix for --as-needed, thanks to flameeyes.
 
   22 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> courier-0.59.0.ebuild:
   Don't call _elibtoolize manually! Use eautoreconf instead.
