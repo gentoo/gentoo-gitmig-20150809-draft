@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r1.ebuild,v 1.2 2008/04/20 23:54:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r1.ebuild,v 1.3 2008/05/05 21:47:52 drac Exp $
 
 inherit eutils flag-o-matic eutils
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="gnome debug encode pccts"
+IUSE="gcdmaster debug encode pccts"
 RESTRICT="strip"
 
 RDEPEND="encode? ( >=media-sound/lame-3.90 )
-	gnome? ( >=dev-cpp/gtkmm-2.4
+	gcdmaster? ( >=dev-cpp/gtkmm-2.4
 		>=dev-cpp/libgnomemm-2.6
 		>=dev-cpp/libgnomecanvasmm-2.6
 		>=dev-cpp/gconfmm-2.6
@@ -54,7 +54,7 @@ src_compile() {
 
 	econf \
 		$(use_enable debug) \
-		$(use_with gnome xdao) \
+		$(use_with gcdmaster xdao) \
 		$(use_with encode lame) \
 		$(use_with pccts pcctsbin /usr/bin) \
 		$(use_with pccts pcctsinc /usr/include/pccts) \

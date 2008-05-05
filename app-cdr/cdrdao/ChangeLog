@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.108 2008/05/04 23:16:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.109 2008/05/05 21:47:52 drac Exp $
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org> cdrdao-1.2.2-r1.ebuild:
+  Rename USE gnome to USE gcdmaster since it's pulling a lot of -mm
+  bindings.
 
   04 May 2008; Ryan Hill <dirtyepic@gentoo.org>
   files/cdrdao-1.2.2-gcc43.patch:
