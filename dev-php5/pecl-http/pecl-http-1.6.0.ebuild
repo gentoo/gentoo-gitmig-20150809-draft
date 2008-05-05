@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.0.ebuild,v 1.2 2007/12/06 01:09:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.0.ebuild,v 1.3 2008/05/05 20:54:11 maekke Exp $
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -10,7 +10,7 @@ DOCS="docs/examples/tutorial.txt ThanksTo.txt KnownIssues.txt"
 
 inherit php-ext-pecl-r1 php-ext-base-r1
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="Extended HTTP Support for PHP."
 LICENSE="BSD-2 MIT"
