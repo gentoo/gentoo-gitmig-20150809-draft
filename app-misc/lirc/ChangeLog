@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.175 2008/05/04 04:49:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.176 2008/05/05 09:53:18 zzam Exp $
+
+*lirc-0.8.3 (05 May 2008)
+
+  05 May 2008; Matthias Schwarzott <zzam@gentoo.org> +files/lircd-0.8.3,
+  +files/lirc-0.8.3-imon-pad2keys.patch, +lirc-0.8.3.ebuild:
+  Version bumped. Init-script changes: Now provide lirc, Bug #190669. Use
+  pidfile to allow starting more than one lircd, Bug #212551. This may also
+  fix the Kernel Oops of Bug #218612. Fixed keys in imon-pad2keys config,
+  Bug #219101. Do install all avail remote config files to
+  /usr/share/lirc/remotes and skip the auto-preserving of the old conf-file,
+  Bug #219097.
 
   04 May 2008; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.3_pre3.ebuild:
   Added imon_knob to possible LIRC_DEVICES, Bug #208719.
