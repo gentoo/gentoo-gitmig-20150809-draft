@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20071105.ebuild,v 1.3 2008/02/06 17:50:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20071105.ebuild,v 1.4 2008/05/05 03:41:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="nls? ( mirror://gentoo/ast-ksh-locale.${LOCALE_RELEASE}.tgz )
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ia64 ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="alpha ~amd64 arm ia64 ppc ~ppc64 s390 sparc x86"
 IUSE="nls"
 
 DEPEND="!app-shells/pdksh"
