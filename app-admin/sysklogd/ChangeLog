@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.67 2008/05/05 03:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.68 2008/05/05 03:29:01 vapier Exp $
+
+  05 May 2008; Mike Frysinger <vapier@gentoo.org>
+  sysklogd-1.4.2_pre20061230-r2.ebuild:
+  Respect CPPFLAGS #220241.
 
   05 May 2008; Mike Frysinger <vapier@gentoo.org>
   sysklogd-1.4.2_pre20061230-r2.ebuild:

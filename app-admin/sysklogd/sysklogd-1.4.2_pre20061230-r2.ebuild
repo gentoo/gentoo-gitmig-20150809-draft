@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230-r2.ebuild,v 1.2 2008/05/05 03:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230-r2.ebuild,v 1.3 2008/05/05 03:29:01 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	append-lfs-flags
 	sed -i \
-		-e "s:-O3:${CFLAGS}:" \
+		-e "s:-O3:${CFLAGS} ${CPPFLAGS}:" \
 		Makefile || die "sed CFLAGS"
 }
 
