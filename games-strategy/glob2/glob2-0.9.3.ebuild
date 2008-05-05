@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.3 2008/05/01 18:49:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.4 2008/05/05 20:16:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,6 +24,12 @@ RDEPEND="virtual/opengl
 	media-libs/speex"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.97"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	scons \
