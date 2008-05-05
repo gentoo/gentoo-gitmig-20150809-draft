@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.91 2008/05/04 15:53:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.92 2008/05/05 11:32:49 armin76 Exp $
+
+  05 May 2008; Raúl Porcel <armin76@gentoo.org>
+  enlightenment-0.16.8.12.ebuild:
+  alpha/ia64/sparc stable wrt #220008
 
   04 May 2008; nixnut <nixnut@gentoo.org> enlightenment-0.16.8.12.ebuild:
   Stable on ppc wrt bug 220008
