@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.20 2008/03/26 14:04:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.21 2008/05/05 15:46:28 armin76 Exp $
+
+  05 May 2008; Raúl Porcel <armin76@gentoo.org> libggz-0.0.14.1.ebuild:
+  Add ~alpha/~ia64 wrt #218794
 
   26 Mar 2008; Samuli Suominen <drac@gentoo.org> libggz-0.0.14.1.ebuild:
   amd64 stable wrt #214349, despite of #214878
