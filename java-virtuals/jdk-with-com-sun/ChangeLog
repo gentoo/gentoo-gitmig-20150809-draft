@@ -1,0 +1,11 @@
+# ChangeLog for java-virtuals/jdk-with-com-sun
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.1 2008/05/05 00:34:30 betelgeuse Exp $
+
+*jdk-with-com-sun-20080505 (05 May 2008)
+
+  05 May 2008; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +jdk-with-com-sun-20080505.ebuild:
+  Rename sun-jdk virtual to jdk-with-com-sun to avoid having to specify
+  category with sun-jdk.
+
