@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r2.ebuild,v 1.10 2008/03/24 19:30:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r6.ebuild,v 1.1 2008/05/05 18:50:22 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -24,7 +24,8 @@ SVN_VER=""
 PATCH_VER="1.7"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
+SRC_URI="mirror://kernel/linux/libs/uclibc/${MY_P}.tar.bz2
+	http://uclibc.org/downloads/${MY_P}.tar.bz2
 	nls? ( !userlocales? ( pregen? (
 		x86? ( http://www.uclibc.org/downloads/uClibc-locale-030818.tgz )
 	) ) )"
@@ -37,7 +38,7 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="-* ~arm ~m68k -mips ~ppc ~sh ~sparc x86"
+KEYWORDS="-* ~arm ~m68k -mips ~ppc ~sh ~sparc ~x86"
 IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen savedconfig userlocales wordexp"
 RESTRICT="strip"
 
@@ -82,6 +83,7 @@ pkg_setup() {
 	has_version ${CATEGORY}/uclibc || return 0
 	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
 	[[ ${ROOT} != "/" ]] && return 0
+	[[ ${CATEGORY} == cross-* ]] && return 0
 
 	if ! built_with_use --missing false ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
 		eerror "You previously built uclibc with USE=-nls."
@@ -390,9 +392,9 @@ src_compile() {
 	fi
 
 	emake || die "make failed"
-	[[ ${CTARGET} != ${CHOST} ]] && return 0
-
-	if [[ ${CHOST} == *-uclibc ]] ; then
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		emake -C utils hostutils || die "make hostutils failed"
+	elif [[ ${CHOST} == *-uclibc ]] ; then
 		emake utils || die "make utils failed"
 	fi
 }
@@ -412,7 +414,7 @@ src_install() {
 
 	local target="install"
 	just_headers && target="install_dev"
-	make DESTDIR="${sysroot}" ${target} || die "install failed"
+	emake DESTDIR="${sysroot}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
 	rm -rf "${sysroot}"/usr/include/{linux,asm*}
@@ -422,6 +424,8 @@ src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
+		newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
+		newbin utils/ldd.host ${CTARGET}-ldd || die
 		return 0
 	fi
 
