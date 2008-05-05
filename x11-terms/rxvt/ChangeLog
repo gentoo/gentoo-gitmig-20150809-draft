@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.63 2008/05/05 12:04:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.64 2008/05/05 13:49:38 ranger Exp $
+
+  05 May 2008; Brent Baude <ranger@gentoo.org> rxvt-2.7.10-r4.ebuild:
+  Marking rxvt-2.7.10-r4 ppc for bug 217819
 
   05 May 2008; Markus Rothe <corsair@gentoo.org> rxvt-2.7.10-r4.ebuild:
   Stable on ppc64; bug #217819
