@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.1 2008/02/19 16:15:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.2 2008/05/05 19:40:37 drac Exp $
 
 DESCRIPTION="Watch word program for the GNOME2 desktop (watch word (german): losung)"
 HOMEPAGE="http://www.godehardt.org/losung.html"
@@ -9,16 +9,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-util/scons-0.93
-	dev-util/pkgconfig
-	>=dev-util/intltool-0.22
-	>=sys-devel/gettext-0.10"
 RDEPEND=">=gnome-base/gconf-2.0
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
-	net-misc/curl
-	${DEPEND}"
+	net-misc/curl"
+DEPEND="${RDEPEND}
+	>=dev-util/scons-0.93
+	dev-util/pkgconfig
+	>=dev-util/intltool-0.22
+	>=sys-devel/gettext-0.10"
 
 src_compile() {
 	scons ${MAKEOPTS} || die "scons make died"

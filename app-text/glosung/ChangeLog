@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glosung
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.6 2008/02/19 16:15:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.7 2008/05/05 19:40:37 drac Exp $
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org> glosung-3.2.2.ebuild:
+  Remove scons, pkgconfig and intltool from runtime deps.
 
 *glosung-3.2.2 (19 Feb 2008)
 
