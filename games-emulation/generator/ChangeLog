@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.21 2008/03/17 18:03:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.22 2008/05/05 20:28:26 maekke Exp $
+
+  05 May 2008; Markus Meier <maekke@gentoo.org> generator-0.35_p3.ebuild:
+  amd64/x86 stable, bug #220427
 
   17 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org>
   files/generator-0.35_p3-configure.patch, generator-0.35_p3.ebuild:
