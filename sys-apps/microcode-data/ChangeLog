@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/microcode-data
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.1 2008/05/05 04:04:15 vapier Exp $
+
+*microcode-data-20080401 (05 May 2008)
+
+  05 May 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +microcode-data-20080401.ebuild:
+  Split microcode stuff off from microcode-ctl package as done by Mike Nerone
+  #194271.
