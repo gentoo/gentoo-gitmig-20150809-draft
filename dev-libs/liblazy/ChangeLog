@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblazy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblazy/ChangeLog,v 1.3 2008/01/19 14:08:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblazy/ChangeLog,v 1.4 2008/05/05 14:54:48 drac Exp $
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org> liblazy-0.1.ebuild:
+  Move pkgconfig to DEPEND wrt #217278.
 
   19 Jan 2008; Stefan Schweizer <genstef@gentoo.org> liblazy-0.1.ebuild:
   Add pkgconfig dep, bug 206154
