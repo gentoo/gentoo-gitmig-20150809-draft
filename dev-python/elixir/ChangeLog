@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elixir
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.2 2008/04/05 15:23:33 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.3 2008/05/05 20:58:11 pythonhead Exp $
+
+  05 May 2008; Rob Cakebread <pythonhead@gentoo.org> elixir-0.5.2.ebuild:
+  Added distutils cmd for pudge. bug #220387
 
 *elixir-0.5.2 (05 Apr 2008)
 

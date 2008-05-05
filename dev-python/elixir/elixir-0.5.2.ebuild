@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.5.2.ebuild,v 1.1 2008/04/05 15:23:33 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.5.2.ebuild,v 1.2 2008/05/05 20:58:11 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -35,13 +35,14 @@ src_compile() {
 	distutils_src_compile
 	if use doc ; then
 		einfo "Generating docs as requested..."
+		${python} setup.py addcommand -p buildutils.pudge_command
 		PYTHONPATH=. "${python}" setup.py pudge || die "generating docs failed"
 	fi
 }
 
 src_install() {
 	distutils_src_install
-	use doc && dohtml -r docs/html/*
+	use doc && dohtml -r build/doc/*
 	if use examples ; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
