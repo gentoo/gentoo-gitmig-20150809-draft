@@ -1,23 +1,23 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.41 2008/05/05 14:53:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.42 2008/05/05 14:57:27 george Exp $
 
-  05 May 2008; <george@gentoo.org> kdesvn-0.14.2.ebuild:
+  05 May 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.2.ebuild:
   subversion-1.5 is really raw, forcing <1.5 in 0.14.2 too
 
-  02 May 2008; <george@gentoo.org> kdesvn-0.14.1.ebuild:
+  02 May 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.1.ebuild:
   forced DEPEND=<svn-1.5 as it complains endlessly during work. See #219505
 
   02 May 2008; Markus Meier <maekke@gentoo.org> kdesvn-0.14.1.ebuild:
   amd64/x86 stable, bug #217417
 
-  02 May 2008; <portage-cvs@gentoo.org> -kdesvn-0.9.3.ebuild,
+  02 May 2008; George Shapovalov <portage-cvs@gentoo.org> -kdesvn-0.9.3.ebuild,
   -kdesvn-0.12.1.ebuild, -kdesvn-0.14.0.ebuild, +kdesvn-0.14.2.ebuild:
   remove stale versions
 
 *kdesvn-0.14.2 (02 May 2008)
 
-  02 May 2008; <portage-cvs@gentoo.org> +kdesvn-0.14.2.ebuild:
+  02 May 2008; George Shapovalov <george@gentoo.org> +kdesvn-0.14.2.ebuild:
   new version. as-needed patch seems not needed any more
 
   30 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
