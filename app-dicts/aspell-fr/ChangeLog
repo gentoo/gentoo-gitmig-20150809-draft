@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.14 2008/01/08 18:26:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.15 2008/05/05 03:20:33 tester Exp $
+
+  05 May 2008; Olivier Crête <tester@gentoo.org> aspell-fr-0.60.ebuild:
+  amd64 Stable
 
   08 Jan 2008; Jeroen Roovers <jer@gentoo.org> aspell-fr-0.60.ebuild:
   Marked ~hppa (bug #204038).
