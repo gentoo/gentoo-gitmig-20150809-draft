@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.47 2008/04/17 19:32:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.48 2008/05/05 22:42:03 eva Exp $
+
+  06 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-bluetooth-0.7.0-aclocal_openobex.patch,
+  -files/gnome-bluetooth-0.7.0-as-needed.patch,
+  -files/gnome-bluetooth-0.8.0-G_DEPRECATED.patch,
+  -gnome-bluetooth-0.7.0-r1.ebuild, -gnome-bluetooth-0.8.0.ebuild,
+  gnome-bluetooth-0.9.1.ebuild, gnome-bluetooth-0.11.0.ebuild:
+  Move gob to DEPEND, bug #220049. Cleaning up old releases.
 
   17 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   gnome-bluetooth-0.11.0.ebuild:
