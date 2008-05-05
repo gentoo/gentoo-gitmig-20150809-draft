@@ -1,32 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r2.ebuild,v 1.6 2007/07/02 14:59:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r2.ebuild,v 1.7 2008/05/05 13:06:50 drac Exp $
 
-inherit eutils rpm
+inherit rpm toolchain-funcs
 
-At="libots-2.2.7-2.alpha.rpm"
-HOMEPAGE="http://www.support.compaq.com/alpha-tools/"
-DESCRIPTION="Compaq Linux optimized runtime for Alpha/Linux/GNU"
-SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/${At}"
+DESCRIPTION="Compaq's Optimized Runtime Library for the Alpha Platform"
+HOMEPAGE="ftp://ftp.compaq.com/pub/products/C-CXX/linux/"
+SRC_URI="ftp://ftp.compaq.com/pub/products/C-CXX/linux/libots-2.2.7-2.alpha.rpm"
 
-DEPEND="virtual/libc"
 LICENSE="compaq-sdla"
-SLOT="2.2.7"
+SLOT="0"
 KEYWORDS="-* alpha"
-IUSE=""
+RESTRICT="strip"
+
+DEPEND="app-arch/rpm2targz"
+RDEPEND=""
 
 S=${WORKDIR}/usr/lib/compaq/libots-2.2.7
 
-RESTRICT="strip"
-
-src_unpack() {
-	rpm_src_unpack
-}
-
-src_install () {
-	into /
-	dolib.so libots.so
-	dolib.a libots.a
-
+src_install() {
+	dolib.a ${PN}.a
 	dodoc README
+	into /
+	dolib.so ${PN}.so
+	gen_usr_ldscript ${PN}.so
 }

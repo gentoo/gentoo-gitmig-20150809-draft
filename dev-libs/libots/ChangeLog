@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libots
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.15 2007/12/25 15:57:33 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.16 2008/05/05 13:06:50 drac Exp $
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org> -libots-2.2.7.ebuild,
+  -libots-2.2.7-r1.ebuild, libots-2.2.7-r2.ebuild:
+  New ebuild partly from bug 216606, thanks to Matt Turner.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
