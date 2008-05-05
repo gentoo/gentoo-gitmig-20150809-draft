@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.4 2008/01/27 16:44:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.5 2008/05/05 21:30:13 drac Exp $
 
-inherit toolchain-funcs pam
+inherit eutils toolchain-funcs pam
 
 DESCRIPTION="Simple Login Manager"
 HOMEPAGE="http://slim.berlios.de"
@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	# respect C[XX]FLAGS, fix crosscompile,
 	# fix linking order for --as-needed"
