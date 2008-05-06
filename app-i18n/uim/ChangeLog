@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.176 2008/05/05 12:50:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.177 2008/05/06 19:39:19 ranger Exp $
+
+  06 May 2008; Brent Baude <ranger@gentoo.org> uim-1.4.2.ebuild:
+  stable ppc64, bug 216759
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> uim-1.4.2.ebuild:
   alpha stable wrt #216759
