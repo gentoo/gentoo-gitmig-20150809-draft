@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.5 2007/08/02 13:40:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.6 2008/05/06 13:41:08 drac Exp $
 
 inherit base rpm
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-2*
+RDEPEND="=x11-libs/gtk+-2*"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
