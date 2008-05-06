@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.ebuild,v 1.1 2007/12/03 18:41:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1.ebuild,v 1.1 2008/05/06 12:56:08 bicatali Exp $
 
-inherit eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib versionator
 
-MY_P="${P/-}"
-MY_P="${MY_P/.}"
+MY_P="${PN}$(get_version_component_range 1)$(get_version_component_range 2)"
+MY_HP="${MY_P}$(get_version_component_range 3)"
 
 DESCRIPTION="Common Data Format I/O library for multi-dimensional data sets"
 HOMEPAGE="http://cdf.gsfc.nasa.gov/"
-SRC_BASE="ftp://cdaweb.gsfc.nasa.gov/pub/${PN}/dist/${MY_P}/unix"
+SRC_BASE="ftp://cdaweb.gsfc.nasa.gov/pub/${PN}/dist/${MY_HP}/unix"
+
 SRC_URI="${SRC_BASE}/${MY_P}-dist-${PN}.tar.gz
 	java? ( ${SRC_BASE}/${MY_P}-dist-java.tar.gz )
 	doc? ( ${SRC_BASE}/${MY_P}_documentation/${MY_P}crm.pdf
@@ -28,14 +29,16 @@ RDEPEND="ncurses? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
 		java? ( virtual/jdk	dev-java/java-config )"
 
-S="${WORKDIR}/${MY_P}-dist-readonly"
+RESTRICT="mirror"
+
+S="${WORKDIR}/${MY_P}-dist"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# respect cflags, remove useless scripts
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-soname.patch
+	epatch "${FILESDIR}"/${PN}-3.2-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-3.2-soname.patch
 	# use proper lib dir
 	sed -i \
 		-e "s:\$(INSTALLDIR)/lib:\$(INSTALLDIR)/$(get_libdir):g" \
@@ -110,7 +113,8 @@ src_install() {
 	if use java; then
 		cd cdfjava
 		dolib.so jni/libcdfNativeLibrary.so.${PV_SO}
-		dosym libcdfNativeLibrary.so.${PV_SO} /usr/$(get_libdir)/libcdfNativeLibrary.so
+		dosym libcdfNativeLibrary.so.${PV_SO} \
+			/usr/$(get_libdir)/libcdfNativeLibrary.so
 		insinto /usr/share/cdf
 		doins */*.jar
 		if use examples; then

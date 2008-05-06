@@ -15,8 +15,8 @@
  	else \
 -	  echo $(LD) $(LDFLAGS) -o $@ $(OBJs) $(SYSLIBS); \
 -	       $(LD) $(LDFLAGS) -o $@ $(OBJs) $(SYSLIBS); \
-+	  echo $(LD) $(LDFLAGS) -Wl,-soname,libdf.$(SHAREDEXT) -o $@ $(OBJs) $(SYSLIBS); \
-+	       $(LD) $(LDFLAGS) -Wl,-soname,libdf.$(SHAREDEXT) -o $@ $(OBJs) $(SYSLIBS); \
++	  echo $(LD) $(LDFLAGS) -Wl,-soname,libcdf.$(SHAREDEXT) -o $@ $(OBJs) $(SYSLIBS); \
++	       $(LD) $(LDFLAGS) -Wl,-soname,libcdf.$(SHAREDEXT) -o $@ $(OBJs) $(SYSLIBS); \
  	fi
  
  libcdf.o: $(OBJs)

@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/cdf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.10 2007/12/03 18:41:01 bicatali Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.11 2008/05/06 12:56:08 bicatali Exp $
+
+*cdf-3.2.1 (06 May 2008)
+
+  06 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cdf-3.2-soname.patch, -cdf-3.2.ebuild, +cdf-3.2.1.ebuild:
+  Version bump with important security fix (bug #220391). Also fixed patch
+  for testing. Since upstream did not change names, restricting mirroring
+  for now.
 
 *cdf-3.2 (03 Dec 2007)
 
