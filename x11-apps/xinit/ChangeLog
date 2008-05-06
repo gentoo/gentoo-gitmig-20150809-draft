@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.115 2008/04/09 02:08:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.116 2008/05/06 08:16:56 zzam Exp $
+
+*xinit-1.0.8-r3 (06 May 2008)
+
+  06 May 2008; Matthias Schwarzott <zzam@gentoo.org> +files/xdm.initd-2,
+  +xinit-1.0.8-r3.ebuild:
+  Fix xdm init-script to be run after lircmd instead of just lircd to be
+  able to use virtual lirc mouse device, Bug #180163.
 
 *xinit-1.0.8-r2 (09 Apr 2008)
 
