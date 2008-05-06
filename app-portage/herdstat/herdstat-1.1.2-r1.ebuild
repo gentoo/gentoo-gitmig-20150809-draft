@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2-r1.ebuild,v 1.4 2008/02/17 18:25:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2-r1.ebuild,v 1.5 2008/05/06 03:34:58 drac Exp $
 
 inherit bash-completion eutils
 
@@ -26,8 +26,8 @@ DEPEND="${RDEPEND}
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/1.1.2-herds-xml-location.patch
+	epatch "${FILESDIR}"/${PV}-gcc43.patch \
+		"${FILESDIR}"/${PV}-herds-xml-location.patch
 }
 
 src_compile() {

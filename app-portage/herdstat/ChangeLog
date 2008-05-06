@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.83 2008/02/17 18:25:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.84 2008/05/06 03:34:58 drac Exp $
+
+  06 May 2008; Samuli Suominen <drac@gentoo.org> +files/1.1.2-gcc43.patch,
+  herdstat-1.1.2-r1.ebuild:
+  GCC 4.3 fix by Jan Kundrát wrt #216275.
 
   17 Feb 2008; nixnut <nixnut@gentoo.org> herdstat-1.1.2-r1.ebuild:
   Stable on ppc wrt bug 191688
