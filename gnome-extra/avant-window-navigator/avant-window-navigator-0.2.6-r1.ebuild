@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.4 2008/03/26 20:16:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.5 2008/05/06 22:03:41 wltjr Exp $
 
 inherit autotools gnome2 python
 
@@ -18,7 +18,7 @@ IUSE="doc gnome xfce"
 # Replace gnome-vfs with gvfs when unmasked
 #		gnome-base/gvfs
 
-DEPEND="dev-python/elementtree
+RDEPEND="dev-python/elementtree
 	dev-python/pygtk
 	dev-python/pycairo
 	dev-python/pyxdg
@@ -39,7 +39,7 @@ DEPEND="dev-python/elementtree
 # vala is not in tree yet
 #	vala? ( dev-lang/vala )"
 
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS Changelog NEWS README TODO"

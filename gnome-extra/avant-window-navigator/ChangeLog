@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.8 2008/03/26 20:16:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.9 2008/05/06 22:03:41 wltjr Exp $
+
+  06 May 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  avant-window-navigator-0.2.6-r1.ebuild:
+  Inverted R/DEPEND per bug #217923
 
   26 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   avant-window-navigator-0.2.6-r1.ebuild:
