@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/calcoo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.14 2008/02/29 20:34:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.15 2008/05/06 15:19:32 fmccor Exp $
+
+  06 May 2008; Ferris McCormick <fmccor@gentoo.org> calcoo-1.3.18.ebuild:
+  Sparc stable --- Bug #220601 --- looks good to me.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> calcoo-1.3.18.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
