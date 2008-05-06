@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.511 2008/05/05 11:27:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.512 2008/05/06 08:19:09 zmedico Exp $
+
+*portage-2.1.5_rc7 (06 May 2008)
+
+  06 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc7.ebuild:
+  2.1.5_rc7 bump. The most notable bug fixed in this release is #172812.
+  Blockers are now resolved automatically in cases when it makes
+  sense to uninstall a conflicting package. Automatically uninstalled
+  packages are displayed in the merge list, marked "uninstall" and
+  highlighted in red. Other bugs fixed in this release include #172812,
+  #211833, #218854, #219286, #219294, #219369, #219837, #219918, #219957,
+  and #220171. Bug #216231 tracks all bugs fixed since 2.1.4.x.
 
 *portage-2.2_pre6 (05 May 2008)
 
