@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/zprod-manager-0.3.ebuild,v 1.6 2005/09/06 02:36:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/zprod-manager-0.3.ebuild,v 1.7 2008/05/06 21:46:20 tupone Exp $
 
 DESCRIPTION="Gentoo Zope Product selection tool"
 SRC_URI=""
@@ -18,5 +18,5 @@ RDEPEND=">=dev-util/dialog-0.7
 	>=net-zope/zope-2.6.0-r2"
 
 src_install() {
-	dosbin ${FILESDIR}/${PV}/zprod-manager
+	dosbin "${FILESDIR}"/${PV}/zprod-manager
 }
