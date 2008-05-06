@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.34 2008/04/30 12:03:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.35 2008/05/06 17:57:49 bicatali Exp $
+
+*acml-4.1.0-r1 (06 May 2008)
+
+  06 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +acml-4.1.0-r1.ebuild:
+  Various fixes for x86 (bug #220321), re-added a default environment file
+  according to use flags, pkgconfig recreated with proper libraries instead
+  of always acml_mv
 
 *acml-4.1.0 (30 Apr 2008)
 
