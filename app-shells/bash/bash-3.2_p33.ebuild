@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p33.ebuild,v 1.8 2008/05/05 20:42:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p33.ebuild,v 1.9 2008/05/06 12:42:43 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -31,7 +31,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="afs bashlogger nls plugins vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
