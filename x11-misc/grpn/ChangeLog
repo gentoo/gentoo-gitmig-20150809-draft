@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.11 2008/05/05 22:28:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.12 2008/05/06 19:10:08 armin76 Exp $
+
+  06 May 2008; Raúl Porcel <armin76@gentoo.org> grpn-1.1.2-r1.ebuild:
+  alpha/x86 stable wrt #220483
 
   05 May 2008; Samuli Suominen <drac@gentoo.org> grpn-1.1.2-r1.ebuild:
   Keyword ~amd64 wrt #219985.
