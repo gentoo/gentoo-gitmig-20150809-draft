@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.32 2008/03/31 15:45:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.33 2008/05/06 19:17:34 ramereth Exp $
+
+*dokuwiki-20080504 (06 May 2008)
+
+  06 May 2008; Lance Albertson <ramereth@gentoo.org>
+  +dokuwiki-20080504.ebuild:
+  Bump to new upstream stable release 20080504, resolves #220605
 
   31 Mar 2008; Raúl Porcel <armin76@gentoo.org> dokuwiki-20070626b.ebuild:
   sparc stable wrt #215198, thanks to Aaron Mavrinac for testing
