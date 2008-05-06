@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-text2skin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.2 2007/08/19 12:13:11 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.3 2008/05/06 20:35:14 zzam Exp $
+
+  06 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/20070506/07_pkgconfig_magick.diff, files/20070506/series,
+  vdr-text2skin-1.0.20070506.ebuild:
+  Fix compile by removing old include path from Makefile to stop eclass
+  destroying it. Find imagemagick via pkgconfig. Fixed quoting.
 
   19 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/20070506/05_vdr-1.5.4.diff, +files/20070506/06_vdr-1.5.7.diff,

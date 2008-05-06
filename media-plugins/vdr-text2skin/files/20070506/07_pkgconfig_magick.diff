@@ -1,0 +1,12 @@
+--- text2skin-1.1-cvs_ext-0.10/Makefile.orig	2008-05-06 22:27:03.133654132 +0200
++++ text2skin-1.1-cvs_ext-0.10/Makefile	2008-05-06 22:28:19.793658721 +0200
+@@ -80,7 +80,8 @@
+ 
+ ifdef HAVE_IMAGEMAGICK
+ 	DEFINES += -DHAVE_IMAGEMAGICK
+-	LIBS += -lMagick -lMagick++
++	INCLUDES += $(shell pkg-config --cflags ImageMagick++)
++	LIBS += $(shell pkg-config --libs ImageMagick++)
+ #	LIBS += $(shell Magick++-config --ldflags --libs)
+ endif
+ 
