@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-crossfade/audacious-crossfade-0.3.13.ebuild,v 1.2 2008/01/14 14:22:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-crossfade/audacious-crossfade-0.3.13.ebuild,v 1.3 2008/05/06 12:13:54 joker Exp $
 
 IUSE="libsamplerate"
 U_PN="xmms-crossfade"
@@ -13,9 +13,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=media-sound/audacious-1.4.2
-	libsamplerate? ( media-libs/libsamplerate )
-	dev-util/pkgconfig"
+RDEPEND=">=media-sound/audacious-1.4.2
+	libsamplerate? ( media-libs/libsamplerate )"
+
+DEPEND="dev-util/pkgconfig
+	${RDEPEND}"
 
 S="${WORKDIR}/${U_PN}-${PV}"
 
