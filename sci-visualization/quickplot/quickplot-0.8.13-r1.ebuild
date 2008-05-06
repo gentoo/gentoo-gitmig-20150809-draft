@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.5.ebuild,v 1.3 2008/05/06 14:17:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13-r1.ebuild,v 1.1 2008/05/06 14:17:17 markusle Exp $
 
 inherit eutils
 
@@ -11,10 +11,11 @@ HOMEPAGE="http://quickplot.sourceforge.net/"
 IUSE="sndfile"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4.5
-	sndfile? ( >=media-libs/libsndfile-1.0.5 )"
+	sndfile? ( >=media-libs/libsndfile-1.0.5 )
+	>=dev-libs/libsigc++-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15"
@@ -22,6 +23,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-libsigc++-2.2.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+
 	# Some files have been moved around to more appropriate locations
 	sed -i -e 's|quickplot_icon.png|/usr/share/pixmaps/quickplot.png|' \
 		index.html.in

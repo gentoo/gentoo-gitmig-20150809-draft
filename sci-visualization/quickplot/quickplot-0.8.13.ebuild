@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13.ebuild,v 1.3 2008/02/29 20:41:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13.ebuild,v 1.4 2008/05/06 14:17:17 markusle Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Some files have been moved around to more appropriate locations
 	sed -i -e 's|quickplot_icon.png|/usr/share/pixmaps/quickplot.png|' \
 		index.html.in
@@ -36,15 +36,15 @@ src_compile() {
 }
 
 src_install () {
-	make install DESTDIR=${D} htmldir=/usr/share/doc/${PF}/html \
+	make install DESTDIR="${D}" htmldir=/usr/share/doc/${PF}/html \
 		|| die "make install step failed."
 	dodoc AUTHORS ChangeLog README README.devel TODO
 	# Remove COPYING as it is specified in LICENCE. Move other stuff.
-	cd ${D}/usr/share/doc/${PF}/html
+	cd "${D}"/usr/share/doc/${PF}/html
 	rm COPYING quickplot_icon.png ChangeLog
-	mv ${D}/usr/share/pixmaps/quickplot_icon.png \
-		${D}/usr/share/pixmaps/quickplot.png
+	mv "${D}"/usr/share/pixmaps/quickplot_icon.png \
+		"${D}"/usr/share/pixmaps/quickplot.png
 	make_desktop_entry 'quickplot --no-pipe' Quickplot quickplot Graphics
-	mv ${D}/usr/share/applications/quickplot\ --no-pipe.desktop \
-		${D}/usr/share/applications/quickplot.desktop
+	mv "${D}"/usr/share/applications/quickplot\ --no-pipe.desktop \
+		"${D}"/usr/share/applications/quickplot.desktop
 }
