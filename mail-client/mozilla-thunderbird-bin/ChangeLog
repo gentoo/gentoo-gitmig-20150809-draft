@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.107 2008/05/04 13:22:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.108 2008/05/06 11:38:42 armin76 Exp $
+
+  06 May 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-bin-2.0.0.14.ebuild:
+  Add uk to linguas
 
   04 May 2008; Markus Meier <maekke@gentoo.org>
   mozilla-thunderbird-bin-2.0.0.14.ebuild:
