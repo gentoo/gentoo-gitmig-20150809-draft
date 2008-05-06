@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.173 2008/05/06 12:42:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.174 2008/05/06 14:28:00 opfer Exp $
+
+  06 May 2008; Christian Faulhammer <opfer@gentoo.org> bash-3.2_p33.ebuild:
+  stable x86, bug 220091
 
   06 May 2008; Raúl Porcel <armin76@gentoo.org> bash-3.2_p33.ebuild:
   alpha/ia64/sparc stable wrt #220091
