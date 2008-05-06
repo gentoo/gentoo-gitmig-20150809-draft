@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/kmyfirewall
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.34 2007/07/26 19:06:53 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.35 2008/05/06 07:19:06 pva Exp $
+
+*kmyfirewall-1.1.1 (06 May 2008)
+
+  06 May 2008; Peter Volkov <pva@gentoo.org>
+  +files/kmyfirewall-1.1.1-interfaces-crash.patch,
+  +kmyfirewall-1.1.1.ebuild:
+  Version bump, thank Vincent-Xavier JUMEL for bug #211288; thank Matteo
+  Azzali for fixing crash, and Tiziano Müller for homepage change notice.
 
   26 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   kmyfirewall-1.0.1-r1.ebuild:
