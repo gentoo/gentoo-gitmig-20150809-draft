@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.36.ebuild,v 1.2 2008/03/01 21:35:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.36.ebuild,v 1.3 2008/05/06 19:08:58 djay Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF=2.5
@@ -9,7 +9,7 @@ inherit eutils autotools distutils flag-o-matic
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
-SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
+SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
