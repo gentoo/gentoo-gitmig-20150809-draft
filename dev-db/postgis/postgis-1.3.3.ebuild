@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.3.ebuild,v 1.1 2008/05/06 17:28:54 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.3.ebuild,v 1.2 2008/05/06 17:41:19 djay Exp $
 
 inherit autotools eutils versionator
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.refractions.net"
