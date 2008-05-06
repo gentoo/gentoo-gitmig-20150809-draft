@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.8 2008/02/14 14:18:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.9 2008/05/06 11:49:35 george Exp $
 
 inherit gnat versionator
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/ada
-	virtual/tetex
+	virtual/latex-base
 	sys-apps/texinfo
 	>=sys-apps/sed-4"
 RDEPEND=""
