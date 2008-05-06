@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pida
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.16 2008/01/19 12:53:28 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.17 2008/05/06 16:52:05 drac Exp $
+
+  06 May 2008; Samuli Suominen <drac@gentoo.org> pida-0.5.1.ebuild:
+  Move pkgconfig to DEPEND wrt #217278.
 
   19 Jan 2008; <welp@gentoo.org> pida-0.5.1.ebuild:
   Add pkgconfig dep; bug 206248
