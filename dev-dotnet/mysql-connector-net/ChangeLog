@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mysql-connector-net
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.10 2008/03/02 09:12:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.11 2008/05/06 20:46:27 ramereth Exp $
+
+  06 May 2008; Lance Albertson <ramereth@gentoo.org> metadata.xml:
+  Moving maintainer-ship over to jurek@gentoo.org
 
   02 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   mysql-connector-net-1.0.4.ebuild, mysql-connector-net-1.0.9.ebuild:
