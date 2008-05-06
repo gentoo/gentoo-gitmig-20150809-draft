@@ -4,10 +4,6 @@
 	<herd>apache</herd>
 	<herd>dotnet</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
-	<maintainer>
 		<email>jurek@gentoo.org</email>
 		<name>Jurek Bartuszek</name>
 	</maintainer>
