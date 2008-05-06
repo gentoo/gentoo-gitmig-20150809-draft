@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/eq-audacious-0.21.ebuild,v 1.1 2007/02/27 15:10:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/eq-audacious-0.21.ebuild,v 1.2 2008/05/06 12:33:30 joker Exp $
 
 DESCRIPTION="31-band equalizer for Audacious"
 HOMEPAGE="http://audacious-media-player.org/"
@@ -9,8 +9,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug mmx sse sse2"
+
+RDEPEND="media-sound/audacious"
 DEPEND="dev-util/pkgconfig
-	>=media-sound/audacious-1.3.0_rc1"
+	${RDEPEND}"
 
 pkg_config() {
 	econf $(use_enable debug)
