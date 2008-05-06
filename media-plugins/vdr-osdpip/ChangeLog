@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-osdpip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.7 2008/05/04 04:21:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.8 2008/05/06 20:47:13 zzam Exp $
+
+  06 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdpip-0.0.8-r1.ebuild, vdr-osdpip-0.0.8-r2.ebuild,
+  vdr-osdpip-0.0.9.ebuild:
+  Remove hardcoded sed path.
 
 *vdr-osdpip-0.0.10 (04 May 2008)
 

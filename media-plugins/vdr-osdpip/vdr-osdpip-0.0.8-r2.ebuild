@@ -1,6 +1,6 @@
 # Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.4 2008/04/28 08:58:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.5 2008/05/06 20:47:13 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,7 +25,7 @@ PATCHES=("${FILESDIR}/${P}-includes.diff"
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	/bin/sed -i Makefile \
+	sed -i Makefile \
 	  -e 's+^FFMDIR.*$+FFMDIR = /usr/include/ffmpeg+' \
 	  -e 's+-I\$(FFMDIR)/libavcodec+-I$(FFMDIR)+' \
 	  -e 's+-L\$(FFMDIR)/libavcodec++'
