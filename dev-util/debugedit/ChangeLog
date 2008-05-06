@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.17 2008/05/06 16:13:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.18 2008/05/06 16:15:02 ranger Exp $
+
+  06 May 2008; Brent Baude <ranger@gentoo.org> debugedit-4.4.6-r1.ebuild:
+  stable ppc, bug 220295
 
   06 May 2008; Brent Baude <ranger@gentoo.org> debugedit-4.4.6-r1.ebuild:
   stable ppc64, bug 220295
