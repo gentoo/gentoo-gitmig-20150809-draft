@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1.ebuild,v 1.1 2008/05/06 12:56:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1.ebuild,v 1.2 2008/05/06 19:58:54 opfer Exp $
 
 inherit eutils toolchain-funcs multilib versionator
 
@@ -22,7 +22,7 @@ SRC_URI="${SRC_BASE}/${MY_P}-dist-${PN}.tar.gz
 
 LICENSE="CDF"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc examples java ncurses"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )"
