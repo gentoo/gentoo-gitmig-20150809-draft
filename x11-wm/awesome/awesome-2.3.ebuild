@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3_rc1.ebuild,v 1.1 2008/04/15 23:26:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.ebuild,v 1.1 2008/05/06 13:47:36 matsuu Exp $
 
 inherit toolchain-funcs eutils
 
-MY_P="${P/_/-}"
 DESCRIPTION="awesome is a window manager initialy based on a dwm code rewriting"
 HOMEPAGE="http://awesome.naquadah.org/"
-SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.gz"
+SRC_URI="http://awesome.naquadah.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,8 +30,6 @@ DEPEND="${RDEPEND}
 		app-doc/doxygen
 		media-gfx/graphviz
 	)"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf \
