@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvsgraph
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.21 2007/09/06 18:52:08 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.22 2008/05/06 20:12:55 ramereth Exp $
+
+  06 May 2008; Lance Albertson <ramereth@gentoo.org> -cvsgraph-1.5.1.ebuild,
+  -cvsgraph-1.5.2.ebuild, -cvsgraph-1.6.0.ebuild:
+  ebuild cleanup
 
   06 Sep 2007; Steve Dibb <beandog@gentoo.org> cvsgraph-1.6.0.ebuild,
   cvsgraph-1.6.1.ebuild:
