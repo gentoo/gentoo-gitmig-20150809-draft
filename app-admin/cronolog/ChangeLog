@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.20 2007/01/04 12:44:12 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.21 2008/05/06 20:02:20 ramereth Exp $
+
+*cronolog-1.6.2-r3 (06 May 2008)
+
+  06 May 2008; Lance Albertson <ramereth@gentoo.org>
+  +files/1.6.2-patches/cronolog-define-strptime.patch.txt,
+  +files/1.6.2-patches/cronolog-doc.patch.txt,
+  +files/1.6.2-patches/cronolog-getopt-long.patch.txt,
+  +cronolog-1.6.2-r3.ebuild:
+  Add a few patch fixes
+    * Implicit definition of strptime because of missing define #204501
+    * Segfaults if an unknown long option is used #204519
+    * Incorrect documentation for previous link long option #204521
+  
+  Thanks to Carlo Marcelo Arenas Belon <carenas@sajinet.com.pe> for reporting
+  these bugs.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   cronolog-1.6.2-r2.ebuild:
