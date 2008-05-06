@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.3 2008/04/24 11:55:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.4 2008/05/06 14:24:12 opfer Exp $
 
 EAPI="1"
 
@@ -18,6 +18,9 @@ IUSE="debug doc +relaxng"
 
 DEPEND="doc? ( app-text/docbook-sgml app-doc/doxygen )
 		dev-util/scons"
+
+RDEPEND=""
+
 PDEPEND=">=sys-apps/einit-modules-xml-2.0.0.0
 		 >=sys-apps/einit-modules-scheme-1.0.0.0
 		 relaxng? ( app-text/rnv )"
