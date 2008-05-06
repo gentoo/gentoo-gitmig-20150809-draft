@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.20 2008/05/06 21:46:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.21 2008/05/06 21:53:35 tupone Exp $
+
+*zprod-manager-0.3.2 (06 May 2008)
+
+  06 May 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/0.3.2/zprod-manager, +zprod-manager-0.3.2.ebuild:
+  New version, bug #220311
 
   06 May 2008; Tupone Alfredo <tupone@gentoo.org> zprod-manager-0.3.ebuild:
   Some Q&A to make repoman happy.
