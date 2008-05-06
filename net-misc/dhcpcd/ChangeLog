@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.186 2008/05/02 15:57:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.187 2008/05/06 14:28:55 drac Exp $
+
+*dhcpcd-4.0.0_beta1 (06 May 2008)
+
+  06 May 2008; Samuli Suominen <drac@gentoo.org> +dhcpcd-4.0.0_beta1.ebuild:
+  Version bump wrt #219321 by Roy Marples.
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org> dhcpcd-2.0.5-r1.ebuild:
   bug #218657 berlios mirror
