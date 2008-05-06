@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.9 2008/05/06 14:40:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.10 2008/05/06 14:50:13 opfer Exp $
+
+  06 May 2008; Christian Faulhammer <opfer@gentoo.org> -mg-20070918.ebuild,
+  -mg-20080305.ebuild:
+  clean up
 
   06 May 2008; Christian Faulhammer <opfer@gentoo.org> mg-20080322.ebuild:
   stable x86/amd64, bug 220525
