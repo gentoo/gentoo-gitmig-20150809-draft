@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/log4cxx
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.23 2007/06/23 19:21:09 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.24 2008/05/06 08:06:58 dev-zero Exp $
+
+*log4cxx-0.10.0 (06 May 2008)
+
+  06 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.10.0-missing_includes.patch, -log4cxx-0.9.7-r3.ebuild,
+  +log4cxx-0.10.0.ebuild:
+  Version bumpg (bug #220203). Dropped old version.
 
   23 Jun 2007; Raúl Porcel <armin76@gentoo.org> log4cxx-0.9.7-r4.ebuild:
   x86 stable
