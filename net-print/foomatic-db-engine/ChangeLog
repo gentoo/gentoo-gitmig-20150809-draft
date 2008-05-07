@@ -1,6 +1,14 @@
 # ChangeLog for net-print/foomatic-db-engine
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.41 2007/11/20 03:20:26 kumba Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.42 2008/05/07 23:14:38 tgurr Exp $
+
+*foomatic-db-engine-3.0.20080507 (07 May 2008)
+
+  07 May 2008; Timo Gurr <tgurr@gentoo.org>
+  -files/flex-configure-LANG.patch, -files/perl-module.diff,
+  -foomatic-db-engine-3.0.2.ebuild, foomatic-db-engine-3.0.20060720.ebuild,
+  +foomatic-db-engine-3.0.20080507.ebuild:
+  Add new snapshot, move mips to unstable, remove old snapshot.
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org>
   foomatic-db-engine-3.0.20060720.ebuild:
