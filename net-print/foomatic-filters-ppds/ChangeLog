@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foomatic-filters-ppds
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.25 2007/11/20 03:37:00 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.26 2008/05/07 23:57:14 tgurr Exp $
+
+*foomatic-filters-ppds-20080507 (07 May 2008)
+
+  07 May 2008; Timo Gurr <tgurr@gentoo.org>
+  foomatic-filters-ppds-20070501.ebuild,
+  +foomatic-filters-ppds-20080507.ebuild:
+  Add new snapshot, move mips to unstable.
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org>
   foomatic-filters-ppds-20070501.ebuild:
