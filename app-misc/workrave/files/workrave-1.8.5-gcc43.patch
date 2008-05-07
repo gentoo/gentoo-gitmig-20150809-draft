@@ -1,0 +1,91 @@
+diff -NrU5 workrave-1.8.5.orig/backend/src/DBus.cc workrave-1.8.5/backend/src/DBus.cc
+--- workrave-1.8.5.orig/backend/src/DBus.cc	2008-05-06 19:59:30.000000000 +0200
++++ workrave-1.8.5/backend/src/DBus.cc	2008-05-06 19:57:48.000000000 +0200
+@@ -17,10 +17,11 @@
+ static const char rcsid[] = "$Id: workrave-1.8.5-gcc43.patch,v 1.1 2008/05/07 23:43:30 eva Exp $";
+ 
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif
++#include <string.h>
+ 
+ #include "nls.h"
+ 
+ #define DBUS_API_SUBJECT_TO_CHANGE
+ #include <dbus/dbus.h>
+diff -NrU5 workrave-1.8.5.orig/backend/src/GlibIniConfigurator.cc workrave-1.8.5/backend/src/GlibIniConfigurator.cc
+--- workrave-1.8.5.orig/backend/src/GlibIniConfigurator.cc	2008-05-06 19:59:30.000000000 +0200
++++ workrave-1.8.5/backend/src/GlibIniConfigurator.cc	2008-05-06 19:57:48.000000000 +0200
+@@ -20,10 +20,11 @@
+ #include "config.h"
+ #endif
+ 
+ #include "debug.hh"
+ 
++#include <string.h>
+ #include <sstream>
+ #include <assert.h>
+ #include <iostream>
+ #include <fstream>
+ 
+diff -NrU5 workrave-1.8.5.orig/backend/src/Statistics.hh workrave-1.8.5/backend/src/Statistics.hh
+--- workrave-1.8.5.orig/backend/src/Statistics.hh	2007-09-14 20:50:38.000000000 +0200
++++ workrave-1.8.5/backend/src/Statistics.hh	2008-05-06 19:57:48.000000000 +0200
+@@ -21,10 +21,11 @@
+ 
+ #include <iostream>
+ #include <fstream>
+ #include <vector>
+ #include <time.h>
++#include <string.h>
+ 
+ class TimePred;
+ class IBreak;
+ class ITimer;
+ class PacketBuffer;
+diff -NrU5 workrave-1.8.5.orig/backend/src/XMLConfigurator.cc workrave-1.8.5/backend/src/XMLConfigurator.cc
+--- workrave-1.8.5.orig/backend/src/XMLConfigurator.cc	2008-05-06 19:59:30.000000000 +0200
++++ workrave-1.8.5/backend/src/XMLConfigurator.cc	2008-05-06 19:57:48.000000000 +0200
+@@ -21,10 +21,11 @@
+ #endif
+ 
+ #include "debug.hh"
+ #include <sstream>
+ #include <iostream>
++#include <stdlib.h>
+ 
+ #include "XMLConfigurator.hh"
+ 
+ using namespace std;
+ 
+diff -NrU5 workrave-1.8.5.orig/frontend/plugin/exercises/common/src/Exercise.cc workrave-1.8.5/frontend/plugin/exercises/common/src/Exercise.cc
+--- workrave-1.8.5.orig/frontend/plugin/exercises/common/src/Exercise.cc	2007-09-14 20:50:35.000000000 +0200
++++ workrave-1.8.5/frontend/plugin/exercises/common/src/Exercise.cc	2008-05-06 19:57:48.000000000 +0200
+@@ -27,10 +27,12 @@
+ #include "debug.hh"
+ 
+ #include <unistd.h>
+ #include <assert.h>
+ #include <stdio.h>
++#include <string.h>
++#include <stdlib.h>
+ 
+ #include <glib.h>
+ 
+ struct ExerciseParser
+ {
+diff -NrU5 workrave-1.8.5.orig/frontend/plugin/exercises/gtkmm/src/ExercisesPanel.cc workrave-1.8.5/frontend/plugin/exercises/gtkmm/src/ExercisesPanel.cc
+--- workrave-1.8.5.orig/frontend/plugin/exercises/gtkmm/src/ExercisesPanel.cc	2007-09-14 20:50:32.000000000 +0200
++++ workrave-1.8.5/frontend/plugin/exercises/gtkmm/src/ExercisesPanel.cc	2008-05-06 19:57:48.000000000 +0200
+@@ -20,10 +20,11 @@
+ 
+ #ifdef HAVE_EXERCISES
+ 
+ #include "preinclude.h"
+ 
++#include <string.h>
+ #include <gtkmm/stock.h>
+ 
+ #include "ExercisesPanel.hh"
+ #include "GtkUtil.hh"
+ #include "GUI.hh"

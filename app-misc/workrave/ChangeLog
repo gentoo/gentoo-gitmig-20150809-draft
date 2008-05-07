@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.46 2007/07/22 09:50:08 omp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.47 2008/05/07 23:43:29 eva Exp $
+
+*workrave-1.8.5 (08 May 2008)
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/workrave-1.8.5-gcc43.patch,
+  +files/workrave-1.8.5-libsigc++-2.2.2.patch, +workrave-1.8.5.ebuild:
+  bump to 1.8.5. Close bug #220657, #215435 and #213430.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> workrave-1.8.3.ebuild:
   Remove virtual/x11 from dependencies.
