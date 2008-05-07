@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/avant-window-navigator-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.8 2008/05/07 02:22:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.9 2008/05/07 02:29:13 wltjr Exp $
+
+  07 May 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  avant-window-navigator-extras-0.2.6-r1.ebuild:
+  Updated DEPEND, added missing dev-python/gnome-python-desktop per bug
+  #219567
 
   06 May 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   avant-window-navigator-extras-0.2.6-r1.ebuild:
