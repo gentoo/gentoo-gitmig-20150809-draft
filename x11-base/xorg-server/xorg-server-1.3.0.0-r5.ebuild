@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r5.ebuild,v 1.10 2008/04/25 18:22:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r5.ebuild,v 1.11 2008/05/07 03:30:44 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -172,7 +172,7 @@ DEPEND="${RDEPEND}
 	dmx? ( x11-proto/dmxproto )
 	dri? ( x11-proto/xf86driproto
 		>=x11-libs/libdrm-2.3 )
-	xprint? ( x11-proto/printproto
+	xprint? ( =x11-proto/printproto-1.0.3
 		x11-apps/mkfontdir
 		x11-apps/mkfontscale
 		x11-apps/xplsprinters )"
