@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.04.ebuild,v 1.1 2008/02/04 17:52:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.04.ebuild,v 1.2 2008/05/07 16:33:40 chainsaw Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -168,7 +168,7 @@ src_unpack() {
 
 	if ! use x86-fbsd; then
 		cd "${WORKDIR}"
-		bash ${DISTDIR}/${NV_PACKAGE}${PKG_V}.run --extract-only
+		bash "${DISTDIR}/${NV_PACKAGE}${PKG_V}.run" --extract-only
 	else
 		unpack ${A}
 	fi
@@ -396,9 +396,9 @@ pkg_preinst() {
 
 	if ! has_version x11-base/xorg-server ; then
 		for dir in lib lib32 lib64 ; do
-			if [[ -d ${NV_D}/usr/${dir}/xorg ]] ; then
-				mv ${NV_D}/usr/${dir}/xorg/* ${NV_D}/usr/${dir}
-				rmdir ${NV_D}/usr/${dir}/xorg
+			if [[ -d "${NV_D}/usr/${dir}/xorg" ]] ; then
+				mv "${NV_D}/usr/${dir}"/xorg/* "${NV_D}/usr/${dir}"
+				rmdir "${NV_D}/usr/${dir}/xorg"
 			fi
 		done
 	fi

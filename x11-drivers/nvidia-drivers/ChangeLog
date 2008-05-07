@@ -1,6 +1,26 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.93 2008/04/18 19:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.94 2008/05/07 16:33:40 chainsaw Exp $
+
+  07 May 2008; <chainsaw@gentoo.org>
+  +files/NVIDIA_kernel-173.08-2404825.diff, nvidia-drivers-71.86.01.ebuild,
+  nvidia-drivers-71.86.04.ebuild, nvidia-drivers-96.43.01.ebuild,
+  nvidia-drivers-96.43.05.ebuild, nvidia-drivers-100.14.09.ebuild,
+  nvidia-drivers-100.14.11.ebuild, nvidia-drivers-100.14.19.ebuild,
+  nvidia-drivers-100.14.23.ebuild, +nvidia-drivers-173.08.ebuild:
+  Quote variables where appropriate.
+
+*nvidia-drivers-173.08 (07 May 2008)
+
+  07 May 2008; <chainsaw@gentoo.org>
+  +files/NVIDIA_kernel-173.08-2404825.diff, +nvidia-drivers-173.08.ebuild:
+  Masked beta driver 173.08 with upstream patch from Zander (
+  http://www.nvnews.net/vbulletin/showpost.php?p=1648357&postcount=35 ) for
+  >=2.6.26-rc1 compatibility. Dropped keywords as this has only been tested
+  on 2.6.26-rc1-00166-gc0a1811 SMP x86_64 so far. Now installs module
+  control file in modprobe.d where it belongs. Upstream advises to use PAT
+  over MTRR. Some reports of low performance and 2D corruption, tread
+  carefully.
 
   18 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   +files/NVIDIA_kernel-96.43.05-2290218.diff,
