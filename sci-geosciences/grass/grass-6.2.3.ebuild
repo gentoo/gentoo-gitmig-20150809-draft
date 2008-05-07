@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.3 2008/05/04 01:07:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.4 2008/05/07 06:56:13 nerdboy Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -33,7 +33,7 @@ RDEPEND=">=sys-devel/make-3.80
 	    sys-apps/man-db )
 	sci-libs/gdal
 	>=sci-libs/proj-4.4.7
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
+	ffmpeg? ( media-video/ffmpeg )
 	fftw? ( sci-libs/fftw )
 	gmath? ( virtual/blas
 	    virtual/lapack )
@@ -105,15 +105,6 @@ pkg_setup() {
 		ewarn "GRASS OpenGL support needs X (will also pull in Tcl/Tk)."
 		die "Please set the X useflag."
 	fi
-
-	if use ffmpeg; then
-		ewarn "This version requires the newest ffmpeg, which is a major"
-		ewarn "ABI change (and may break things).  You should definitely"
-		ewarn "rebuild everything that uses ffmpeg if you haven't already"
-		ewarn "done so, and be prepared for possible breakage..."
-		ewarn "Hit Ctrl-C now if you're not ready to do this."
-		epause 10
-	fi
 }
 
 src_unpack() {
@@ -159,10 +150,17 @@ src_compile() {
 	    myconf="${myconf} --without-opengl --without-glw"
 	fi
 
+	# Should handle either older or latest without intervention;
+	# this won't work forever, but it should be okay for a while...
 	if use ffmpeg; then
-		myconf="${myconf} --with-ffmpeg \
-		    --with-ffmpeg-includes=/usr/include/libavcodec \
-		    --with-ffmpeg-libs=/usr/$(get_libdir)"
+	    myconf="${myconf} --with-ffmpeg \
+	        --with-ffmpeg-libs=/usr/$(get_libdir)"
+	    if has_version media-video/ffmpeg-0.4.9_p20080326 ; then
+	        myconf="${myconf} \
+	    	    --with-ffmpeg-includes=/usr/include/libavcodec"
+	    else
+		myconf="${myconf} --with-ffmpeg-includes=/usr/include/ffmpeg"
+	    fi
 	else
 		myconf="${myconf} --without-ffmpeg"
 	fi
