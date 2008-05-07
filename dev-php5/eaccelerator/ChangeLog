@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/eaccelerator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.17 2007/08/20 21:02:53 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.18 2008/05/07 16:16:47 hoffie Exp $
+
+  07 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  eaccelerator-0.9.5.1.ebuild:
+  call php-ext-source-r1_src_unpack, bug 220519
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
   +files/eaccelerator-0.9.5.1-optimize-catch-exceptions.patch,
