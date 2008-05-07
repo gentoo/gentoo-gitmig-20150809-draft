@@ -1,0 +1,14 @@
+--- rpy-1.0.2.orig/src/rpymodule.c	2008-04-10 18:49:04.000000000 +0200
++++ rpy-1.0.2/src/rpymodule.c	2008-05-02 14:28:42.000000000 +0200
+@@ -1778,7 +1778,11 @@
+     R_dot_Last();           
+     R_RunExitFinalizers();  
+     CleanEd();              
++#if (R_VERSION >= R_Version(2,7,0)) 
++    Rf_KillAllDevices();
++#else
+     KillAllDevices();
++#endif
+ 
+ #if (R_VERSION >= R_Version(2,7,0)) 
+     R_CleanTempDir();
