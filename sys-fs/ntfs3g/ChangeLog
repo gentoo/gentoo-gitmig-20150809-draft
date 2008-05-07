@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.64 2008/04/17 18:17:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.65 2008/05/07 02:02:14 chutzpah Exp $
+
+*ntfs3g-1.2506 (07 May 2008)
+
+  07 May 2008; Patrick McLean <chutzpah@gentoo.org> +ntfs3g-1.2506.ebuild:
+  Version bump. Bug #220561. Dropped NEWS file from installation as it's
+  just a pointer to the web site. Drop version 1.1120.
 
   17 Apr 2008; nixnut <nixnut@gentoo.org> ntfs3g-1.2310.ebuild:
   Stable on ppc wrt bug 217890
