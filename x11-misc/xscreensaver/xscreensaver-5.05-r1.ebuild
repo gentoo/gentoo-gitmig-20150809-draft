@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05.ebuild,v 1.11 2008/05/07 19:03:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05-r1.ebuild,v 1.1 2008/05/07 19:03:33 drac Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -10,10 +10,16 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="jpeg new-login opengl pam suid xinerama"
 
-RDEPEND="x11-libs/libXxf86misc
+RDEPEND="x11-libs/libXmu
+	x11-libs/libXxf86vm
+	x11-libs/libXrandr
+	x11-libs/libXxf86misc
+	x11-libs/libXt
+	x11-libs/libX11
+	x11-libs/libXext
 	x11-apps/xwininfo
 	x11-apps/appres
 	media-libs/netpbm
@@ -40,13 +46,13 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	EPATCH_SUFFIX="patch" EPATCH_EXCLUDE="07_all_xinerama.patch" epatch	"${FILESDIR}"/${PV}
+	EPATCH_SUFFIX="patch" epatch "${FILESDIR}"/${PV}
 	eautoreconf # bug 113681
 }
 
 src_compile() {
 	if use ppc || use ppc64; then
-		# Simple workaround for the ppc* arches flurry screensaver, needed for <=5.04
+		# Still fails to build "flurry" screensaver.
 		filter-flags -mabi=altivec
 		filter-flags -maltivec
 		append-flags -U__VEC__
@@ -63,6 +69,7 @@ src_compile() {
 		--with-dpms-ext \
 		--with-xf86vmode-ext \
 		--with-xf86gamma-ext \
+		--with-randr-ext \
 		--with-proc-interrupts \
 		--with-xpm \
 		--with-xshm-ext \
@@ -78,19 +85,18 @@ src_compile() {
 		$(use_with opengl gl) \
 		$(use_with jpeg)
 
-	# Bug 155049.
-	emake -j1 || die "emake failed."
+	emake -j1 || die "emake failed." # bug 155049
 }
 
 src_install() {
 	emake install_prefix="${D}" install || die "emake install failed."
 
-	dodoc README*
+	dodoc README{,.hacking}
 
 	use pam && fperms 755 /usr/bin/${PN}
 	pamd_mimic_system ${PN} auth
 
-	# Bug 135549.
+	# bug 135549
 	rm -f "${D}"/usr/share/${PN}/config/{electricsheep,fireflies}.xml
 	dodir /usr/share/man/man6x
 	mv "${D}"/usr/share/man/man6/worm.6 \
