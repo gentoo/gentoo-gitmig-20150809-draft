@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.48 2008/05/02 10:24:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.49 2008/05/07 18:46:10 swegener Exp $
+
+  07 May 2008; Sven Wegener <swegener@gentoo.org> -pdns-2.9.20-r1.ebuild,
+  -pdns-2.9.20-r2.ebuild:
+  Cleanup.
 
   02 May 2008; Markus Meier <maekke@gentoo.org> pdns-2.9.21.ebuild:
   amd64/x86 stable, bug #219748
