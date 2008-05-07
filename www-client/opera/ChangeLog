@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.222 2008/04/26 14:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.223 2008/05/07 17:06:51 jer Exp $
+
+*opera-9.50_pre1951 (07 May 2008)
+
+  07 May 2008; Jeroen Roovers <jer@gentoo.org> +opera-9.50_pre1951.ebuild,
+  -opera-9.50_beta2_pre1904.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2008/05/06/getting-ready-for-dragonfly>.
 
   26 Apr 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.50_beta1.ebuild:
   Should have gone a long time ago (bug #219292, thanks to Jesús Pérez).
