@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.25.ebuild,v 1.1 2008/05/04 08:44:20 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.25.ebuild,v 1.2 2008/05/07 05:45:09 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -64,7 +64,7 @@ src_unpack() {
 		epatch "${FILESDIR}/fvwm-2.5.23-translucent-menus.diff"
 
 		# A Gentoo-specific compatibility patch.
-		epatch "${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.patch"
+		epatch "${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff"
 	fi
 }
 

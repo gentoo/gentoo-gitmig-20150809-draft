@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.145 2008/05/04 08:44:20 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.146 2008/05/07 05:45:09 omp Exp $
+
+  07 May 2008; David Shakaryan <omp@gentoo.org> fvwm-2.5.25.ebuild:
+  Fix patch name. (bug #220217)
 
 *fvwm-2.5.25 (04 May 2008)
 
