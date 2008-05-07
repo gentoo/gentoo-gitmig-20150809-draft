@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.6 2008/05/02 10:24:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.7 2008/05/07 19:27:47 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -105,7 +105,7 @@ pkg_postinst() {
 	elog "PowerDNS provides multiple instances support. You can create more instances"
 	elog "by symlinking the pdns init script to another name."
 	elog
-	elog "The name must be in the format pdns-<suffix> and PowerDNS will use the"
+	elog "The name must be in the format pdns.<suffix> and PowerDNS will use the"
 	elog "/etc/powerdns/pdns-<suffix>.conf configuration file instead of the default."
 	elog
 }
