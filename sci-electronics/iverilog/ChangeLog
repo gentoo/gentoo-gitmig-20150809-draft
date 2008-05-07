@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/iverilog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.20 2007/11/30 09:11:22 calchan Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.21 2008/05/07 01:49:12 halcy0n Exp $
+
+  07 May 2008; Mark Loeser <halcy0n@gentoo.org> +files/iverilog-gcc43.patch,
+  iverilog-0.8.6.ebuild:
+  Fix compilation with gcc-4.3 by Devils-Hawk <dev AT stuffit DOT at>; bug
+  #206076
 
 *iverilog-0.8.6 (30 Nov 2007)
 

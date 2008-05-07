@@ -1,0 +1,177 @@
+diff -rup verilog-0.8.6/elab_net.cc verilog-0.8.6-devel/elab_net.cc
+--- verilog-0.8.6/elab_net.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/elab_net.cc	2008-01-16 12:02:42.000000000 +0100
+@@ -28,6 +28,7 @@
+ # include  "compiler.h"
+ 
+ # include  <iostream>
++# include  <cstring>
+ 
+ /*
+  * This is a state flag that determines whether an elaborate_net must
+diff -rup verilog-0.8.6/elab_scope.cc verilog-0.8.6-devel/elab_scope.cc
+--- verilog-0.8.6/elab_scope.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/elab_scope.cc	2008-01-16 12:03:34.000000000 +0100
+@@ -24,6 +24,7 @@
+ # include  "compiler.h"
+ # include  <iostream>
+ # include  <stdio.h>
++# include  <cstring>
+ 
+ /*
+  * Elaboration happens in two passes, generally. The first scans the
+diff -rup verilog-0.8.6/elab_sig.cc verilog-0.8.6-devel/elab_sig.cc
+--- verilog-0.8.6/elab_sig.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/elab_sig.cc	2008-01-16 12:04:05.000000000 +0100
+@@ -23,6 +23,7 @@
+ # include "config.h"
+ 
+ # include  <iostream>
++# include  <cstdlib>
+ 
+ # include  "Module.h"
+ # include  "PExpr.h"
+diff -rup verilog-0.8.6/emit.cc verilog-0.8.6-devel/emit.cc
+--- verilog-0.8.6/emit.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/emit.cc	2008-01-16 12:04:40.000000000 +0100
+@@ -32,6 +32,7 @@
+ # include  "netlist.h"
+ # include  <typeinfo>
+ # include  <cassert>
++# include  <cstring>
+ 
+ bool NetNode::emit_node(struct target_t*tgt) const
+ {
+diff -rup verilog-0.8.6/load_module.cc verilog-0.8.6-devel/load_module.cc
+--- verilog-0.8.6/load_module.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/load_module.cc	2008-01-16 12:05:21.000000000 +0100
+@@ -31,6 +31,8 @@
+ # include  <dirent.h>
+ # include  <ctype.h>
+ # include  <assert.h>
++# include  <cstdlib>
++# include  <cstring>
+ 
+ /*
+  * The module library items are maps of key names to file name within
+diff -rup verilog-0.8.6/net_design.cc verilog-0.8.6-devel/net_design.cc
+--- verilog-0.8.6/net_design.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/net_design.cc	2008-01-16 12:05:46.000000000 +0100
+@@ -33,6 +33,7 @@
+ # include  "util.h"
+ # include  "compiler.h"
+ # include  <sstream>
++# include  <cstring>
+ 
+ Design:: Design()
+ : errors(0), nodes_(0), procs_(0), lcounter_(0)
+diff -rup verilog-0.8.6/net_link.cc verilog-0.8.6-devel/net_link.cc
+--- verilog-0.8.6/net_link.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/net_link.cc	2008-01-16 12:06:28.000000000 +0100
+@@ -27,6 +27,7 @@
+ # include  "netlist.h"
+ # include  <sstream>
+ # include  <string>
++# include  <cstring>
+ # include  <typeinfo>
+ #ifdef HAVE_MALLOC_H
+ # include  <malloc.h>
+diff -rup verilog-0.8.6/net_scope.cc verilog-0.8.6-devel/net_scope.cc
+--- verilog-0.8.6/net_scope.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/net_scope.cc	2008-01-16 12:06:56.000000000 +0100
+@@ -25,6 +25,7 @@
+ 
+ # include  "netlist.h"
+ # include  <sstream>
++# include  <cstring>
+ 
+ /*
+  * The NetScope class keeps a scope tree organized. Each node of the
+diff -rup verilog-0.8.6/pform.h verilog-0.8.6-devel/pform.h
+--- verilog-0.8.6/pform.h	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/pform.h	2008-01-16 11:58:59.000000000 +0100
+@@ -37,6 +37,8 @@
+ # include  <string>
+ # include  <list>
+ # include  <stdio.h>
++# include  <cstring>
++# include  <cstdlib>
+ 
+ /*
+  * These classes implement the parsed form (P-form for short) of the
+diff -rup verilog-0.8.6/synth2.cc verilog-0.8.6-devel/synth2.cc
+--- verilog-0.8.6/synth2.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/synth2.cc	2008-01-16 12:11:00.000000000 +0100
+@@ -28,6 +28,7 @@
+ #include <cassert>
+ #include "NetLatch.h"
+ #include <climits>
++#include <cstdlib>
+ 
+ #include <new> // standard operator new
+ using std::bad_alloc;
+diff -rup verilog-0.8.6/sys_funcs.cc verilog-0.8.6-devel/sys_funcs.cc
+--- verilog-0.8.6/sys_funcs.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/sys_funcs.cc	2008-01-16 12:07:31.000000000 +0100
+@@ -23,6 +23,8 @@
+ # include  "config.h"
+ # include  "compiler.h"
+ # include  <stdio.h>
++# include  <cstdlib>
++# include  <cstring>
+ 
+ /*
+  * Manage the information about system functions. This information is
+diff -rup verilog-0.8.6/t-dll.cc verilog-0.8.6-devel/t-dll.cc
+--- verilog-0.8.6/t-dll.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/t-dll.cc	2008-01-16 12:11:25.000000000 +0100
+@@ -31,7 +31,8 @@
+ #ifdef HAVE_MALLOC_H
+ # include  <malloc.h>
+ #endif
+-# include  <stdlib.h>
++# include  <cstdlib>
++# include  <cstring>
+ 
+ #include <new> // standard operator new
+ using std::bad_alloc;
+diff -rup verilog-0.8.6/t-dll-expr.cc verilog-0.8.6-devel/t-dll-expr.cc
+--- verilog-0.8.6/t-dll-expr.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/t-dll-expr.cc	2008-01-16 12:11:54.000000000 +0100
+@@ -30,7 +30,8 @@
+ #ifdef HAVE_MALLOC_H
+ # include  <malloc.h>
+ #endif
+-# include  <stdlib.h>
++# include  <cstdlib>
++# include  <cstring>
+ 
+ /*
+  * This is a little convenience function for converting a NetExpr
+diff -rup verilog-0.8.6/t-dll-proc.cc verilog-0.8.6-devel/t-dll-proc.cc
+--- verilog-0.8.6/t-dll-proc.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/t-dll-proc.cc	2008-01-16 12:12:29.000000000 +0100
+@@ -32,7 +32,8 @@
+ #ifdef HAVE_MALLOC_H
+ # include  <malloc.h>
+ #endif
+-# include  <stdlib.h>
++# include  <cstdlib>
++# include  <cstring>
+ 
+ 
+ bool dll_target::process(const NetProcTop*net)
+diff -rup verilog-0.8.6/verireal.cc verilog-0.8.6-devel/verireal.cc
+--- verilog-0.8.6/verireal.cc	2007-11-26 19:55:13.000000000 +0100
++++ verilog-0.8.6-devel/verireal.cc	2008-01-16 12:07:58.000000000 +0100
+@@ -24,7 +24,8 @@
+ 
+ # include  "verireal.h"
+ # include  "verinum.h"
+-# include  <stdlib.h>
++# include  <cstdlib>
++# include  <cstring>
+ # include  <ctype.h>
+ # include  <iostream>
+ # include  <math.h>
+
