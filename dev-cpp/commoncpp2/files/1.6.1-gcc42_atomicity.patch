@@ -1,31 +1,6 @@
-diff -Naur commoncpp2-1.6.1.orig/config.h.in commoncpp2-1.6.1/config.h.in
---- commoncpp2-1.6.1.orig/config.h.in	2007-12-24 09:45:11.000000000 +0100
-+++ commoncpp2-1.6.1/config.h.in	2007-12-24 10:25:43.000000000 +0100
-@@ -239,6 +239,9 @@
- /* Define to 1 if you have the <bits/atomicity.h> header file. */
- #undef HAVE_BITS_ATOMICITY_H
- 
-+/* Define to 1 if you have the <ext/atomicity.h> header file. */
-+#undef HAVE_EXT_ATOMICITY_H
-+
- /* Define to 1 if you have the <bits/wordsize.h> header file. */
- #undef HAVE_BITS_WORDSIZE_H
- 
-@@ -1088,7 +1091,11 @@
- 
- #if defined(__cplusplus)
- #if defined(HAVE_GCC_BITS_ATOMIC) || defined(HAVE_GCC_CXX_BITS_ATOMIC)
-+#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 2))
-+#include <ext/atomicity.h>
-+#else
- #include <bits/atomicity.h>
-+#endif
- #define HAVE_ATOMIC
- #endif
- #endif
 diff -Naur commoncpp2-1.6.1.orig/m4/ost_pthread.m4 commoncpp2-1.6.1/m4/ost_pthread.m4
---- commoncpp2-1.6.1.orig/m4/ost_pthread.m4	2007-12-24 09:45:11.000000000 +0100
-+++ commoncpp2-1.6.1/m4/ost_pthread.m4	2007-12-24 10:12:24.000000000 +0100
+--- commoncpp2-1.6.1.orig/m4/ost_pthread.m4	2008-05-06 10:47:42.000000000 +0200
++++ commoncpp2-1.6.1/m4/ost_pthread.m4	2008-05-06 16:11:05.000000000 +0200
 @@ -92,7 +92,9 @@
    dnl check for gcc's bits/atomicity and the atomic functions therein
    AC_CHECK_HEADERS([bits/atomicity.h],
@@ -73,3 +48,16 @@ diff -Naur commoncpp2-1.6.1.orig/m4/ost_pthread.m4 commoncpp2-1.6.1/m4/ost_pthre
        AC_MSG_RESULT($ost_cv_gcc_cxx_atomic)
    fi
  
+@@ -438,7 +458,11 @@
+ 
+ #if defined(__cplusplus)
+ #if defined(HAVE_GCC_BITS_ATOMIC) || defined(HAVE_GCC_CXX_BITS_ATOMIC)
+-#include <bits/atomicity.h>
++#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 2))
++ #include <ext/atomicity.h>
++#else
++ #include <bits/atomicity.h>
++#endif
+ #define HAVE_ATOMIC
+ #endif
+ #endif

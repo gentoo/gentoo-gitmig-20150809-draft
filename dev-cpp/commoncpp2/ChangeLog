@@ -1,6 +1,15 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.41 2008/03/04 07:31:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.42 2008/05/07 05:32:39 dev-zero Exp $
+
+*commoncpp2-1.6.2 (07 May 2008)
+
+  07 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.6.1-autoconf.patch, +files/1.6.2-autoconf.patch,
+  files/1.6.1-gcc42_atomicity.patch, commoncpp2-1.6.1.ebuild,
+  +commoncpp2-1.6.2.ebuild:
+  Fixed problem with autoconf-2.62 (bug #219192), had to update the
+  gcc42_atomicity.patch for that as well. Version bump.
 
   04 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
   -files/1.5.7-as-needed.patch, -files/1.5.7-ssl_config.patch,

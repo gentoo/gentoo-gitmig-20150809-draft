@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.1.ebuild,v 1.7 2008/05/07 05:32:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.2.ebuild,v 1.1 2008/05/07 05:32:39 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gnu/commoncpp/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/commoncpp/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples ipv6 gnutls"
 
 RDEPEND="gnutls? ( dev-libs/libgcrypt
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PV}-gcc42_atomicity.patch" \
+	epatch "${FILESDIR}/1.6.1-gcc42_atomicity.patch" \
 		"${FILESDIR}/${PV}-autoconf.patch"
 	AT_M4DIR="m4" eautoreconf
 }
