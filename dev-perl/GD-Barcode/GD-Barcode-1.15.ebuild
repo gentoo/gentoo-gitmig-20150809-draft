@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/GD-Barcode-1.15.ebuild,v 1.3 2008/01/17 14:31:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/GD-Barcode-1.15.ebuild,v 1.4 2008/05/07 09:15:40 tove Exp $
 
 inherit perl-module
 
@@ -15,4 +15,5 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-perl/GD"
