@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1387 2008/05/07 07:16:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1388 2008/05/07 16:11:43 chainsaw Exp $
+
+  07 May 2008; <chainsaw@gentoo.org> package.mask:
+  Mask new ebuild x11-drivers/nvidia-drivers-173.08, it is an unsupported
+  beta.
 
   07 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +arch/m68k/package.mask, hardened/linux/powerpc/package.mask:
