@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cpp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.15 2008/05/07 08:29:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.16 2008/05/07 20:43:03 maekke Exp $
+
+  07 May 2008; Markus Meier <maekke@gentoo.org> log4cpp-1.0.ebuild:
+  amd64/x86 stable, bug #220711
 
   07 May 2008; Tiziano Müller <dev-zero@gentoo.org> +files/1.0-gcc43.patch,
   log4cpp-1.0.ebuild:
