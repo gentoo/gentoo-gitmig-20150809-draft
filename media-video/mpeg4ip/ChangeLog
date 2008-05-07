@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.59 2008/04/07 22:17:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.60 2008/05/07 21:12:13 flameeyes Exp $
+
+  07 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mpeg4ip-1.5.0.1+gcc-4.3.patch, mpeg4ip-1.5.0.1-r4.ebuild:
+  Remove -Werror during build and add patch to build with GCC 4.3, thanks to
+  Martin Väth in bug #216008.
 
   07 Apr 2008; Ben de Groot <yngwin@gentoo.org> mpeg4ip-1.5.0.1-r1.ebuild,
   mpeg4ip-1.5.0.1-r3.ebuild, mpeg4ip-1.5.0.1-r4.ebuild:

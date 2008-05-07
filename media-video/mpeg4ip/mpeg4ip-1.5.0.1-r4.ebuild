@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r4.ebuild,v 1.4 2008/04/07 22:17:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r4.ebuild,v 1.5 2008/05/07 21:12:13 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -65,6 +65,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc42.patch"
 	epatch "${FILESDIR}/${P}-nasm-r.patch"
 	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-avcodec_extern_c.patch"
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+
+	find "${S}" -name Makefile.am -print0 | xargs -0 \
+		sed -i -e 's:-Werror::'
+
+	find "${S}" -name configure.in -print0 | xargs -0 \
+		sed -i -e 's:-Werror::'
 
 	eautoreconf
 }
