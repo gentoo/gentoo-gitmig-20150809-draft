@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r2.ebuild,v 1.7 2008/05/06 20:49:18 ulm Exp $
-
-WANT_AUTOMAKE=1.9
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r2.ebuild,v 1.8 2008/05/07 06:24:18 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -70,11 +68,13 @@ src_unpack() {
 	# disable compilation of demo binaries
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/[ \t\n\\]*demos//;}' Makefile.am
 
+	# fix libtool-2.2 breakage, bug 220599
+	sed -i -e 's/LT_HAVE/FINDXFT_HAVE/g' ac_find_xft.m4
+
 	# add X.Org vendor string to aliases for virtual bindings
 	echo -e '"The X.Org Foundation"\t\t\t\t\tpc' >>bindings/xmbind.alias
 
-	eautoconf
-	eautomake
+	AT_M4DIR=. eautoreconf
 }
 
 src_compile() {
