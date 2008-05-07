@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8558 2008/05/07 16:11:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8559 2008/05/07 17:00:29 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1071,6 +1071,7 @@ sys-kernel/hppa-sources
 # These are weeklies, unlike www-client/opera-9.50_beta1, and they appear to be
 # much less stable, so I am masking them for now.
 =www-client/opera-9.50_beta2_pre*
+=www-client/opera-9.50_pre*
 
 # Robin H. Johnson <robbat2@gentoo.org> (02 Nov 2007)
 # Brokeness in these

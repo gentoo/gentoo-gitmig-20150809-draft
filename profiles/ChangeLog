@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1388 2008/05/07 16:11:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1389 2008/05/07 17:00:29 jer Exp $
+
+  07 May 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask non-beta www-client/opera-9.50 snapshots too.
 
   07 May 2008; <chainsaw@gentoo.org> package.mask:
   Mask new ebuild x11-drivers/nvidia-drivers-173.08, it is an unsupported
