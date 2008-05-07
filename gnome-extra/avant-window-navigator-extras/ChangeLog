@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.7 2008/04/21 13:58:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.8 2008/05/07 02:22:03 wltjr Exp $
+
+  06 May 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  avant-window-navigator-extras-0.2.6-r1.ebuild:
+  Hack/fix for bug #214984
 
   21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   avant-window-navigator-extras-0.2.6-r1.ebuild:

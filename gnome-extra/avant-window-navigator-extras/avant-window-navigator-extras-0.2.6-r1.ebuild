@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.3 2008/04/21 13:58:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.4 2008/05/07 02:22:03 wltjr Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -56,6 +56,12 @@ src_compile() {
 			$(use_with gnome) \
 			$(use_with gnome gconf) \
 			|| die "econf failed"
+
+	# temp hack to remove problem per bug #214984
+	if ! use gnome && ! use xfce; then
+		sed -i -e 's:--makefile-install-rule $(schemas_DATA)::' \
+			"${S}/src/places/Makefile"
+	fi
 
 	emake || die "emake failed"
 }
