@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/codecgraph
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.2 2008/04/22 16:09:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.3 2008/05/07 23:44:20 chainsaw Exp $
+
+*codecgraph-20080507 (07 May 2008)
+
+  07 May 2008; <chainsaw@gentoo.org> +files/20080507-makefile-prefix.diff,
+  -codecgraph-20080311.ebuild, +codecgraph-20080507.ebuild:
+  New upstream snapshot. If you had a Python traceback before, this one's
+  for you.
 
 *codecgraph-20080422 (22 Apr 2008)
 

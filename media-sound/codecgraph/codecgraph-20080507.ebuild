@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20080311.ebuild,v 1.1 2008/03/14 12:08:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20080507.ebuild,v 1.1 2008/05/07 23:44:20 chainsaw Exp $
 
 inherit eutils
 
@@ -30,4 +30,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
+	dodoc codecs.txt README BUGS IDEAS
 }
