@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.1 2007/10/13 08:04:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.2 2008/05/07 08:29:30 dev-zero Exp $
 
 NEED_AUTOCONF="latest"
 NEED_AUTOMAKE="latest"
@@ -23,7 +23,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PV}-doc_install_path.patch"
+	epatch "${FILESDIR}/${PV}-doc_install_path.patch" \
+		"${FILESDIR}/${PV}-gcc43.patch"
 
 	AT_M4DIR=m4
 	eautoreconf
