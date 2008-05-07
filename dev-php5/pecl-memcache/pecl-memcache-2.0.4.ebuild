@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-2.0.4.ebuild,v 1.3 2007/12/06 01:19:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-2.0.4.ebuild,v 1.4 2008/05/07 16:42:57 hoffie Exp $
 
 PHP_EXT_NAME="memcache"
 PHP_EXT_INI="yes"
@@ -27,6 +27,8 @@ src_unpack() {
 	# Fix bug #117990 better, without using a patch
 	# upstream has the file with CRLF instead of LF
 	edos2unix "${S}/config.m4"
+
+	php-ext-source-r1_src_unpack
 }
 
 src_compile() {
