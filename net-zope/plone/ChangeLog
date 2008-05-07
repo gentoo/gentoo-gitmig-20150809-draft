@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/plone
-# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.47 2007/12/25 23:55:06 radek Exp $
+# Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.48 2008/05/07 22:25:55 tupone Exp $
+
+*plone-3.1.1 (07 May 2008)
+
+  07 May 2008; Tupone Alfredo <tupone@gentoo.org> +plone-3.1.1.ebuild:
+  Version bump to 3.1.1 Fix bug #190435 by Chris Slycord <cslycord@gmail.com>
 
   25 Dec 2007; Radoslaw Stachowiak <radek@gentoo.org> -plone-2.5.ebuild,
   -plone-2.5.3.ebuild:
