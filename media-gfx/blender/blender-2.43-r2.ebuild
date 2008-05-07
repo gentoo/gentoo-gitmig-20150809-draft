@@ -1,25 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.45-r2.ebuild,v 1.1 2008/04/27 12:19:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43-r2.ebuild,v 1.1 2008/05/07 21:07:25 maekke Exp $
 
 inherit multilib flag-o-matic eutils python
 
 #IUSE="jpeg mozilla png sdl static truetype"
-IUSE="blender-game ffmpeg jpeg nls openal openexr png verse"
+IUSE="blender-game ffmpeg jpeg nls openal openexr png"
+FFMPEG_SNAP="0.4.9-p20070330"
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
-SRC_URI="http://download.blender.org/source/${P}.tar.gz"
+SRC_URI="http://download.blender.org/source/${P}.tar.gz
+		 ffmpeg? ( mirror://gentoo/ffmpeg-${FFMPEG_SNAP}.tar.bz2 )"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND=">=dev-libs/openssl-0.9.6
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r1
+	ffmpeg? ( >=media-video/ffmpeg-${FFMPEG_SNAP/-/_}
 			media-libs/x264 )
 	jpeg? ( media-libs/jpeg )
 	media-libs/tiff
-	>=dev-lang/python-2.4
 	nls? ( >=media-libs/freetype-2.0
 			virtual/libintl
 			>=media-libs/ftgl-2.1 )
@@ -47,49 +48,45 @@ blend_with() {
 		echo "WITH_BF_${UWORD}=0" | tr '[:lower:]' '[:upper:]' \
 			>> "${S}"/user-config.py
 	fi
+	return 0
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"/release/plugins
 	chmod 755 bmake
+	rmdir include
 	cp -pPR "${S}"/source/blender/blenpluginapi include
 
 	cd "${S}"
 	epatch "${FILESDIR}"/blender-2.37-dirs.patch
-	epatch "${FILESDIR}"/blender-2.44-scriptsdir.patch
-	epatch "${FILESDIR}"/blender-2.44-swscale.patch
-	epatch "${FILESDIR}"/${P}-missing_includes.patch
-	epatch "${FILESDIR}"/${P}-cve-2008-1102.patch
+	epatch "${FILESDIR}"/blender-2.45-cve-2008-1102.patch
+	epatch "${FILESDIR}"/blender-2.45-cve-2008-1103-1.patch
+	epatch "${FILESDIR}"/blender-2.45-cve-2008-1103-2.patch
 
 	if use ffmpeg ; then
 		cd "${S}"/extern
-		rm -rf ffmpeg
+		mv ffmpeg/Makefile ffmpeg/common.mak "${T}"
+		unpack ffmpeg-${FFMPEG_SNAP}.tar.bz2
+		mv "${T}"/Makefile "${T}"/common.mak ffmpeg
 	fi
 	# pass compiler flags to the scons build system
-	# and set python version to current version in use
-	python_version
-	cat <<- EOF >> "${S}"/user-config.py
-		CFLAGS += '${CFLAGS}'
-		BF_PYTHON_VERSION="${PYVER}"
-		BF_PYTHON_INC="/usr/include/python${PYVER}"
-		BF_PYTHON_BINARY="/usr/bin/python${PYVER}"
-		BF_PYTHON_LIB="python${PYVER}"
-	EOF
-
+	echo "CFLAGS += '${CFLAGS}'" >> "${S}"/user-config.py
+	echo "CCFLAGS += ['${CXXFLAGS//' '/','}','-DYESIAMSTUPID']" \
+								 >> "${S}"/user-config.py
+	# disable blender-player and iconv
+	# echo "WITH_BF_PLAYER=0" >> ${S}/user-config.py
+	# echo "WITH_BF_ICONV=0" >> ${S}/user-config.py
 }
 
 src_compile() {
-	for arg in 'openal' \
-			'openexr' \
-			'jpeg' \
-			'ffmpeg' \
-			'png' \
-			'verse' \
-			'nls international' \
-			'blender-game gameengine'; do
-		blend_with ${arg}
-	done
+	myconf="${myconf} $(blend_with openal)"
+	myconf="${myconf} $(blend_with openexr)"
+	myconf="${myconf} $(blend_with jpeg)"
+	myconf="${myconf} $(blend_with ffmpeg)"
+	myconf="${myconf} $(blend_with png)"
+	myconf="${myconf} $(blend_with nls international)"
+	myconf="${myconf} $(blend_with blender-game gameengine)"
 
 	# scons uses -l differently -> remove it
 	scons ${MAKEOPTS/-l[0-9]} -h > scons.config
