@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.175 2008/04/26 16:29:15 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.176 2008/05/07 14:36:47 opfer Exp $
+
+  07 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  vmware-workstation-5.5.6.80404.ebuild:
+  stable x86, bug 213548
 
   26 Apr 2008; Mike Auty <ikelos@gentoo.org>
   -files/6.0.1.55017/000_all_initd-location.patch,

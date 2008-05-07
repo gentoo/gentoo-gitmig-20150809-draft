@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.49 2008/04/26 17:36:10 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.50 2008/05/07 14:38:48 opfer Exp $
+
+  07 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  vmware-player-1.0.6.80404.ebuild:
+  stable x86, bug 213548
 
   26 Apr 2008; Mike Auty <ikelos@gentoo.org> files/vmware-player.rc:
   Add hald to the init use requirements (bug 206468).
