@@ -1,0 +1,107 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10_cstring_include.dpatch by  <eriks@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Add include that is needed with g++-4.3
+
+@DPATCH@
+diff -urNad dvgrab-3.1~/avi.cc dvgrab-3.1/avi.cc
+--- dvgrab-3.1~/avi.cc	2007-07-06 21:00:36.000000000 +0200
++++ dvgrab-3.1/avi.cc	2008-01-30 22:20:55.130770072 +0100
+@@ -24,6 +24,7 @@
+ // C++ includes
+ 
+ #include <string>
++#include <cstring>
+ #include <iostream>
+ #include <iomanip>
+ 
+diff -urNad dvgrab-3.1~/dvframe.cc dvgrab-3.1/dvframe.cc
+--- dvgrab-3.1~/dvframe.cc	2007-07-06 21:00:36.000000000 +0200
++++ dvgrab-3.1/dvframe.cc	2008-01-30 22:20:55.130770072 +0100
+@@ -26,6 +26,7 @@
+ */
+ 
+ #include "dvframe.h"
++#include <cstring>
+ 
+ VideoInfo::VideoInfo() : width( 0 ), height( 0 ), isPAL( false )
+ {}
+diff -urNad dvgrab-3.1~/dvgrab.cc dvgrab-3.1/dvgrab.cc
+--- dvgrab-3.1~/dvgrab.cc	2007-12-10 07:57:15.000000000 +0100
++++ dvgrab-3.1/dvgrab.cc	2008-01-30 22:20:55.130770072 +0100
+@@ -26,6 +26,7 @@
+ #include <iostream>
+ #include <sstream>
+ #include <iomanip>
++#include <cstring>
+ using std::cerr;
+ using std::endl;
+ 
+diff -urNad dvgrab-3.1~/filehandler.cc dvgrab-3.1/filehandler.cc
+--- dvgrab-3.1~/filehandler.cc	2007-12-10 07:57:15.000000000 +0100
++++ dvgrab-3.1/filehandler.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -24,6 +24,7 @@
+ #endif
+ 
+ #include <string>
++#include <cstring>
+ #include <iostream>
+ #include <sstream>
+ #include <iomanip>
+diff -urNad dvgrab-3.1~/hdvframe.cc dvgrab-3.1/hdvframe.cc
+--- dvgrab-3.1~/hdvframe.cc	2007-12-10 07:16:10.000000000 +0100
++++ dvgrab-3.1/hdvframe.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -19,6 +19,7 @@
+ */
+ 
+ #include "hdvframe.h"
++#include <cstring>
+ 
+ HDVFrame::HDVFrame( HDVStreamParams *p )
+ {
+diff -urNad dvgrab-3.1~/iec13818-1.cc dvgrab-3.1/iec13818-1.cc
+--- dvgrab-3.1~/iec13818-1.cc	2007-12-10 07:16:10.000000000 +0100
++++ dvgrab-3.1/iec13818-1.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -18,6 +18,7 @@
+ */
+ 
+ #include <string>
++#include <cstring>
+ using std::string;
+ 
+ #include "hdvframe.h"
+diff -urNad dvgrab-3.1~/ieee1394io.cc dvgrab-3.1/ieee1394io.cc
+--- dvgrab-3.1~/ieee1394io.cc	2007-12-10 07:16:10.000000000 +0100
++++ dvgrab-3.1/ieee1394io.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -49,6 +49,8 @@
+ 
+ #include <deque>
+ #include <iostream>
++#include <cstring>
++#include <typeinfo>
+ 
+ using std::endl;
+ 
+diff -urNad dvgrab-3.1~/main.cc dvgrab-3.1/main.cc
+--- dvgrab-3.1~/main.cc	2007-07-06 21:08:17.000000000 +0200
++++ dvgrab-3.1/main.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -30,6 +30,7 @@
+ // C++ includes
+ 
+ #include <string>
++#include <cstring>
+ #include <iostream>
+ using std::cout;
+ using std::endl;
+diff -urNad dvgrab-3.1~/v4l2reader.cc dvgrab-3.1/v4l2reader.cc
+--- dvgrab-3.1~/v4l2reader.cc	2007-11-22 05:22:08.000000000 +0100
++++ dvgrab-3.1/v4l2reader.cc	2008-01-30 22:20:55.134770037 +0100
+@@ -23,6 +23,7 @@
+ #ifdef HAVE_LINUX_VIDEODEV2_H
+ 
+ #include <string>
++#include <cstring>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>

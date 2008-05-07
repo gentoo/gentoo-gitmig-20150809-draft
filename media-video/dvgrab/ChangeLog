@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.29 2008/03/10 13:51:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.30 2008/05/07 20:32:23 drac Exp $
+
+  07 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/dvgrab-3.1-gcc43.patch, dvgrab-3.1.ebuild:
+  Fix building with GCC 4.3 wrt #220749, thanks to Peter Alfredsen.
 
   10 Mar 2008; Steve Dibb <beandog@gentoo.org> dvgrab-3.0.ebuild:
   amd64 stable, bug 203045
