@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.44 2008/04/08 10:23:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.45 2008/05/07 16:29:32 hoffie Exp $
+
+  07 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  pecl-apc-3.0.16.ebuild, pecl-apc-3.0.16-r1.ebuild:
+  calling php-ext-source-r1_src_unpack explicitly, bug 220519
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org> pecl-apc-3.0.16-r1.ebuild,
   pecl-apc-3.0.17.ebuild:

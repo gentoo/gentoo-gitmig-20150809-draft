@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-crack
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.18 2007/12/06 01:06:34 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.19 2008/05/07 16:32:02 hoffie Exp $
+
+  07 May 2008; Christian Hoffmann <hoffie@gentoo.org> pecl-crack-0.4.ebuild:
+  calling php-ext-source-r1_src_unpack explicitly, bug 220519
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-crack-0.4.ebuild:
   LICENSE fix from project overlay

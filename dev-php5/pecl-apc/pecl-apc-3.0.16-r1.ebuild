@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.16-r1.ebuild,v 1.4 2008/04/08 10:23:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.16-r1.ebuild,v 1.5 2008/05/07 16:29:32 hoffie Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -35,6 +35,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-CVE-2008-1488.patch
 	# http://pecl.php.net/bugs/bug.php?id=12777, Bug 204224
 	epatch "${FILESDIR}"/${P}-apc_set_signals.patch
+
+	php-ext-source-r1_src_unpack
 }
 
 src_compile() {
