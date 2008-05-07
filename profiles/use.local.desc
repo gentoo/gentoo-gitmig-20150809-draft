@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3532 2008/05/07 17:03:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3533 2008/05/07 17:48:45 wltjr Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -411,6 +411,8 @@ dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/gnu-classpath:gconf - Enable the GConf based util.peers backend
 dev-java/groovy:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
+dev-java/itext:rtf - Build and provide libraries for rich text format
+dev-java/itext:rups - Build and provide GUI for Reading/Updating PDF Syntax
 dev-java/jamvm:libffi - use dev-libs/libffi to call native methods
 dev-java/jcs:admin - Enable JCS Admin servlets
 dev-java/jdbc-jaybird:jni - Build/Install JDBC Type 2 native components
