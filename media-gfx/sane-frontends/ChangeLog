@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.37 2008/04/07 17:08:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.38 2008/05/07 14:37:33 klausman Exp $
+
+  07 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  sane-frontends-1.0.14.ebuild:
+  In ~alpha for 30 days, no issues. Stable on alpha, bug #215861
 
   07 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   sane-frontends-1.0.14.ebuild:
