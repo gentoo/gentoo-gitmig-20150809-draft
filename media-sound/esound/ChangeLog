@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.112 2008/05/07 08:50:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.113 2008/05/07 08:57:46 remi Exp $
+
+  07 May 2008; Rémi Cardona <remi@gentoo.org> -esound-0.2.36-r2.ebuild,
+  -esound-0.2.37.ebuild, -esound-0.2.37-r1.ebuild:
+  starting the spring cleaning, removing old ebuilds
 
   07 May 2008; Rémi Cardona <remi@gentoo.org>
   +files/esound-0.2.38-libtool-2.2.patch, esound-0.2.38-r1.ebuild:
