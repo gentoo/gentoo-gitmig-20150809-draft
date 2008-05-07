@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20070626b.ebuild,v 1.7 2008/03/31 15:45:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20070626b.ebuild,v 1.8 2008/05/07 01:04:41 dirtyepic Exp $
 
 inherit webapp depend.php
 
 # upstream uses dashes in the datestamp
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}${PV:8:1}"
 
-DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small companies documentation needs."
+DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small company's documentation needs."
 HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 

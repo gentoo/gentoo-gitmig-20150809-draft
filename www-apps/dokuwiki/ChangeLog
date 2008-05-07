@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.33 2008/05/06 19:17:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.34 2008/05/07 01:04:41 dirtyepic Exp $
+
+  07 May 2008; Ryan Hill <dirtyepic@gentoo.org> dokuwiki-20070626b.ebuild,
+  dokuwiki-20080504.ebuild:
+  Fix grammar for seemant.
 
 *dokuwiki-20080504 (06 May 2008)
 
