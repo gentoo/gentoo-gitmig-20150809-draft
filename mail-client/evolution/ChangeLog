@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.233 2008/05/02 19:32:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.234 2008/05/07 22:39:54 eva Exp $
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  import USE flag documentation from bheekling and Ford_Prefect.
 
 *evolution-2.22.1.1 (02 May 2008)
 
