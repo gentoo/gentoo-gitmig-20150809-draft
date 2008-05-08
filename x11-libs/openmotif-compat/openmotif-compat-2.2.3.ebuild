@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.4 2008/05/08 09:59:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.5 2008/05/08 10:32:19 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
@@ -22,10 +22,10 @@ RDEPEND="!x11-libs/motif-config
 	!x11-libs/lesstif
 	!=x11-libs/openmotif-2.2*
 	x11-libs/libXmu
-	x11-libs/libXaw
 	x11-libs/libXp"
 
 DEPEND="${RDEPEND}
+	x11-libs/libXaw
 	x11-misc/xbitmaps"
 
 S=${WORKDIR}/${MY_P}
