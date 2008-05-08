@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1389 2008/05/07 17:00:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1390 2008/05/08 12:25:52 eva Exp $
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  pmask gnome-extra/shermans-aquarium, remove gnome-2.22.1 meta mask.
 
   07 May 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask non-beta www-client/opera-9.50 snapshots too.
