@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.3.ebuild,v 1.1 2008/02/28 10:33:23 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.3.ebuild,v 1.2 2008/05/08 15:00:01 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://swing-layout.dev.java.net/files/documents/2752/70793/${P}-src.z
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
