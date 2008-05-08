@@ -1,0 +1,15 @@
+--- platforms/gentoo/apcupsd.in
++++ platforms/gentoo/apcupsd.in
+@@ -6,6 +6,12 @@
+ APCPID=@PIDDIR@/apcupsd.pid
+ APCUPSD=@sbindir@/apcupsd
+ 
++depend() {
++	after hotplug
++	after usb
++	after net
++}
++
+ start() {
+ 	rm -f /etc/apcupsd/powerfail
+ 	ebegin "Starting APC UPS daemon"
