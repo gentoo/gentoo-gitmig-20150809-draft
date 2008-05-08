@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1.ebuild,v 1.2 2008/05/06 19:58:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1.ebuild,v 1.3 2008/05/08 10:22:37 bicatali Exp $
 
 inherit eutils toolchain-funcs multilib versionator
 
@@ -28,8 +28,6 @@ IUSE="doc examples java ncurses"
 RDEPEND="ncurses? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
 		java? ( virtual/jdk	dev-java/java-config )"
-
-RESTRICT="mirror"
 
 S="${WORKDIR}/${MY_P}-dist"
 
