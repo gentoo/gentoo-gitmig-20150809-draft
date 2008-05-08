@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.15 2008/03/27 19:34:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.16 2008/05/08 13:58:20 armin76 Exp $
+
+  08 May 2008; Raúl Porcel <armin76@gentoo.org> cw-1.0.15.ebuild:
+  x86 stable
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> cw-1.0.14.ebuild:
   Stable on ppc wrt bug 214934

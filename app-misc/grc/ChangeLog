@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.15 2008/03/26 20:21:19 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.16 2008/05/08 13:59:30 armin76 Exp $
+
+  08 May 2008; Raúl Porcel <armin76@gentoo.org> grc-1.1.ebuild:
+  x86 stable
 
   26 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> grc-1.0.9.ebuild,
   grc-1.1.ebuild:

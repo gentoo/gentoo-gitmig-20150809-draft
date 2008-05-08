@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.2 2008/03/27 14:33:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.3 2008/05/08 13:58:20 armin76 Exp $
 
 DESCRIPTION="A non-intrusive real-time ANSI color wrapper for common unix-based commands"
 HOMEPAGE="http://cwrapper.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/cwrapper/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
