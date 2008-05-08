@@ -390,7 +390,7 @@ diff -ru usr/src/nv/nv.c usr/src/nv.2404825/nv.c
 +#if defined(NV_ENABLE_PAT_SUPPORT) && defined(CONFIG_HOTPLUG_CPU)
 +        if (nv_pat_mode == NV_PAT_MODE_BUILTIN)
 +        {
-+            if (register_hotcpu_notifier(&nv_hotcpu_nfb) != 0))
++            if (register_hotcpu_notifier(&nv_hotcpu_nfb) != 0)
 +            {
 +                __nv_disable_pat_support();
 +                rc = -EIO;
