@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1390 2008/05/08 12:25:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1391 2008/05/08 13:57:00 eva Exp $
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add gnomecd USE flag for gnome-media, bug #200502.
 
   08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   pmask gnome-extra/shermans-aquarium, remove gnome-2.22.1 meta mask.
