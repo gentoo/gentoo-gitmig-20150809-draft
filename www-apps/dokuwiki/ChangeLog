@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.34 2008/05/07 01:04:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.35 2008/05/08 15:36:40 ramereth Exp $
+
+*dokuwiki-20080505 (08 May 2008)
+
+  08 May 2008; Lance Albertson <ramereth@gentoo.org>
+  -dokuwiki-20080504.ebuild, +dokuwiki-20080505.ebuild:
+  Bump to 20080505 per bug #220867. Also removing 20080504 since upstream
+  doesn't even show it being an old release.
 
   07 May 2008; Ryan Hill <dirtyepic@gentoo.org> dokuwiki-20070626b.ebuild,
   dokuwiki-20080504.ebuild:
