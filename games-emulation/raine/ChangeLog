@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/raine
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.20 2008/05/08 21:03:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.21 2008/05/08 21:58:55 mr_bones_ Exp $
+
+  08 May 2008; Michael Sterrett <mr_bones_@gentoo.org> raine-0.50.7.ebuild:
+  never try to run nasmw
 
   08 May 2008; Michael Sterrett <mr_bones_@gentoo.org> raine-0.50.7.ebuild:
   stable for x86
