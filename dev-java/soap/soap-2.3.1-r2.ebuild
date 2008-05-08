@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r2.ebuild,v 1.1 2007/11/19 09:21:21 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r2.ebuild,v 1.2 2008/05/08 14:46:39 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -25,6 +25,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
 	${CDEPEND}"
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 S=${WORKDIR}/${MY_P}
 
