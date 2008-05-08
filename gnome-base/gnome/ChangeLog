@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.333 2008/04/12 14:06:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.334 2008/05/08 12:24:24 eva Exp $
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> gnome-2.22.1.ebuild:
+  lower tomboy dep since nobody is taking care of it and I want to remove
+  the mask on the meta.
 
   12 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> gnome-2.20.3.ebuild:
   Remove gnome-system-tools 2.14 from RDEPEND to all because it is starting

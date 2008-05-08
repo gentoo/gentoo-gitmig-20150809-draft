@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.1.ebuild,v 1.1 2008/04/10 17:23:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.1.ebuild,v 1.2 2008/05/08 12:24:24 eva Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -161,9 +161,9 @@ RDEPEND="
 		>=gnome-extra/mousetweaks-2.22.1 )
 	cups? ( >=net-print/gnome-cups-manager-0.31-r2 )
 
-	mono? ( >=app-misc/tomboy-0.10.1 )"
+	mono? ( >=app-misc/tomboy-0.10.0 )"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
-# which isn't the case with nautilus-2.22
+# which isn't the case with nautilus-2.22, bug #216019
 #	>=app-admin/gnome-system-tools-2.14.0
 #	>=app-admin/system-tools-backends-1.4.2
 
