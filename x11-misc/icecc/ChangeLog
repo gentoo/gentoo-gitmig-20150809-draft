@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.27 2007/02/21 23:41:21 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.28 2008/05/08 12:24:40 phosphan Exp $
+
+  08 May 2008; Patrick Kursawe <phosphan@gentoo.org> icecc-2.9.ebuild:
+  QA fixes for bug #220094
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

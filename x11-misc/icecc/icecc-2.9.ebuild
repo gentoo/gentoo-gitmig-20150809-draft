@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.7 2006/02/27 06:56:19 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.8 2008/05/08 12:24:40 phosphan Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="=x11-libs/qt-3*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e "s:/usr/local:/usr:" -i ${PN}.pro || die "sed failed"
 	echo >> ${PN}.pro -e "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}\nQMAKE_CFLAGS_RELEASE += ${CFLAGS}"
 }
@@ -28,14 +28,10 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_ROOT="${D}" install || die
-
-	rm -rf ${D}/usr/doc
-	dohtml ${PN}/docs/en/*.{html,sgml}
-	dodoc AUTHORS ChangeLog README TODO
-	dodir /usr/share/${PN}/themes
-	cp -pPR theme/* ${D}/usr/share/${PN}/themes/
-	chmod go-w ${D}/usr/share/${PN}/themes/
+	make INSTALL_ROOT="${D}" install_themes install_help || die
+	# avoid pre-stripping, see bug #220094
+	dobin icecc icecchelp
+	dodoc AUTHORS ChangeLog
 }
 
 pkg_postinst() {
