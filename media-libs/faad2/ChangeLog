@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.95 2008/03/09 10:34:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.96 2008/05/08 12:08:06 lavajoe Exp $
+
+*faad2-2.6.1-r1 (08 May 2008)
+
+  08 May 2008; Joe Peterson <lavajoe@gentoo.org>
+  +files/faad2-2.6.1-broken-pipe.patch, +faad2-2.6.1-r1.ebuild:
+  Patched to detect writes to a broken pipe (bug #204227)
 
   09 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   +files/faad2-2.6.1-libtool22.patch, faad2-2.6.1.ebuild:
