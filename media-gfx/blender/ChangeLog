@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.136 2008/05/07 21:07:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.137 2008/05/08 14:47:24 opfer Exp $
+
+  08 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  blender-2.43-r2.ebuild:
+  stable x86, security bug 219008
 
 *blender-2.45-r4 (07 May 2008)
 *blender-2.43-r2 (07 May 2008)
