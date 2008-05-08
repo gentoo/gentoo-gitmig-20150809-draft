@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.34 2008/01/31 20:32:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.35 2008/05/08 19:37:30 tantive Exp $
+
+*apcupsd-3.14.3 (08 May 2008)
+
+  08 May 2008; Michael Imhof <tantive@gentoo.org>
+  +files/3.14.3/apcupsd.in.patch, +files/3.14.3/etc.patch,
+  +files/3.14.3/apcupsd.initd, +files/3.14.3/hal-ups-policy.patch,
+  +files/3.14.3/no-parallel.patch, apcupsd-3.14.0.ebuild,
+  apcupsd-3.14.1.ebuild, apcupsd-3.14.2.ebuild, +apcupsd-3.14.3.ebuild:
+  Version bumped. Closes #208188. Added -j1 to emake, should fix #176339.
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> apcupsd-3.10.17-r1.ebuild,
   apcupsd-3.10.18-r1.ebuild, apcupsd-3.10.18-r2.ebuild,

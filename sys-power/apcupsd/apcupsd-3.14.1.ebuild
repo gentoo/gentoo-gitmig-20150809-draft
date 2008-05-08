@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.1.ebuild,v 1.1 2007/07/01 20:58:00 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.1.ebuild,v 1.2 2008/05/08 19:37:30 tantive Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
@@ -34,7 +34,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}/apcupsd.in.patch
 	epatch "${FILESDIR}"/${PV}/etc.patch
 	epatch "${FILESDIR}"/${PV}/no-parallel.patch
-
 	epatch "${FILESDIR}"/${PV}/${P}-apccontrol-gentoo.patch
 }
 
@@ -64,11 +63,11 @@ src_compile() {
 		$(use_enable gnome gapcmon) \
 		${myconf} \
 		|| die
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use doc; then
 		einfo "Building full documentation..."
-		cd ${S}/doc/latex
+		cd "${S}"/doc/latex
 		make texcheck tex web pdf
 	fi
 }
@@ -92,7 +91,7 @@ src_install() {
 	fi
 
 	if use cgi; then
-		mv ${D}/etc/apcupsd/apcupsd.css ${D}${MY_CGIBINDIR}
+		mv "${D}"/etc/apcupsd/apcupsd.css "${D}""${MY_CGIBINDIR}"
 		webapp_src_install
 	fi
 

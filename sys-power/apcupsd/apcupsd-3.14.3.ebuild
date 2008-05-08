@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.0.ebuild,v 1.4 2008/05/08 19:37:30 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.3.ebuild,v 1.1 2008/05/08 19:37:30 tantive Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="doc snmp usb cgi threads ncurses nls gnome"
+IUSE="doc snmp usb cgi ncurses nls gnome"
 
 DEPEND="doc? ( virtual/tetex dev-tex/latex2html )
 	cgi? ( >=media-libs/gd-1.8.4 )
@@ -20,6 +20,7 @@ DEPEND="doc? ( virtual/tetex dev-tex/latex2html )
 	nls? ( sys-devel/gettext )
 	snmp? ( net-analyzer/net-snmp )
 	gnome? ( >=x11-libs/gtk+-2.4.0
+		>=dev-libs/glib-2.0
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
 	virtual/mta"
@@ -33,15 +34,14 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}/apcupsd.in.patch
 	epatch "${FILESDIR}"/${PV}/etc.patch
-	epatch "${FILESDIR}"/${PV}/no-parallel.patch
-	epatch "${FILESDIR}"/${PV}/${P}-apccontrol-gentoo.patch
+	epatch "${FILESDIR}"/${PV}/hal-ups-policy.patch
 }
 
 src_compile() {
 	local myconf
 	use cgi && myconf="${myconf} --enable-cgi --with-cgi-bin=${MY_CGIBINDIR}"
-	use usb && myconf="${myconf} --with-upstype=usb --with-upscable=usb --enable-usb"
-	use !usb && myconf="${myconf} --with-upstype=apcsmart --with-upscable=apcsmart --disable-usb"
+	use usb && myconf="${myconf} --with-upstype=usb --with-upscable=usb --enable-usb --without-dev"
+	use !usb && myconf="${myconf} --with-upstype=apcsmart --with-upscable=smart --disable-usb"
 
 	# We force the DISTNAME to gentoo so it will use gentoo's layout also
 	# when installed on non-linux systems.
@@ -57,7 +57,6 @@ src_compile() {
 		--with-nis-port=3551 \
 		--enable-net \
 		$(use_enable ncurses powerflute) \
-		$(use_enable threads pthreads) \
 		$(use_enable snmp net-snmp) \
 		$(use_enable nls) \
 		$(use_enable gnome gapcmon) \
