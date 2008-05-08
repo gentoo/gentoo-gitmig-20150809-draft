@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.56 2008/04/10 08:58:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.57 2008/05/08 18:27:17 drac Exp $
+
+*moc-2.5.0_alpha3-r2 (08 May 2008)
+
+  08 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/moc-2.5.0_alpha3-libtool22.patch, +moc-2.5.0_alpha3-r2.ebuild:
+  Add missing AC_PROG_CXX and use system ltdl for libtool-2.2.
 
   10 Apr 2008; Samuli Suominen <drac@gentoo.org> moc-2.5.0_alpha3-r1.ebuild:
   DEPEND dev-util/pkgconfig because eautoreconf fails without pkg.m4 wrt

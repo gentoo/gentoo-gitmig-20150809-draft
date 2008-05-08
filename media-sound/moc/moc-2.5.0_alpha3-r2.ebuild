@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r1.ebuild,v 1.10 2008/05/08 18:27:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r2.ebuild,v 1.1 2008/05/08 18:27:17 drac Exp $
 
 inherit autotools eutils
 
 MY_P=${P/_/-}
 
-MOC_M4_VER="1"
+MOC_M4_VER=1
 
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="http://moc.daper.net"
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa aac jack mad musepack vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
 
 RDEPEND="media-libs/libao
@@ -44,7 +44,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-faad2.patch \
-		"${FILESDIR}"/${P}-ffmpegheaders.patch
+		"${FILESDIR}"/${P}-ffmpegheaders.patch \
+		"${FILESDIR}"/${P}-libtool22.patch
 	cp -f "${WORKDIR}"/m4/* m4/
 	AT_M4DIR="m4" eautoreconf
 }
