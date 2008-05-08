@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.4.32.ebuild,v 1.6 2006/08/02 21:38:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.4.32.ebuild,v 1.7 2008/05/08 12:24:12 mpagano Exp $
 
 inherit toolchain-funcs
 
@@ -28,7 +28,7 @@ src_unpack() {
 	sed -i \
 		-e "s:db2:docbook2:g" \
 		-e "s:docbook2html \$<:docbook2html -o \$@ \$<:" \
-		${S}/Documentation/DocBook/Makefile
+		"${S}"/Documentation/DocBook/Makefile
 }
 
 src_compile() {
