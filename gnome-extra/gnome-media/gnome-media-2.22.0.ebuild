@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.22.0.ebuild,v 1.5 2008/05/08 14:02:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.22.0.ebuild,v 1.6 2008/05/08 19:27:28 eva Exp $
 
 EAPI="1"
 
@@ -55,6 +55,12 @@ src_unpack() {
 
 	# Allow building without esound
 	epatch "${FILESDIR}"/${PN}-2.18.0-noesd.patch
+}
+
+src_compile() {
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	gnome2_src_compile
 }
 
 pkg_postinst() {
