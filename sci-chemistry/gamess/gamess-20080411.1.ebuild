@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.6 2008/03/18 21:35:53 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20080411.1.ebuild,v 1.1 2008/05/08 17:42:47 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -10,14 +10,14 @@ HOMEPAGE="http://www.msg.ameslab.gov/GAMESS/GAMESS.html"
 SRC_URI="${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~ppc x86"
-IUSE="hardened blas"
+KEYWORDS="~ppc ~x86 ~amd64"
+IUSE="hardened"
 
 RESTRICT="fetch"
 
 DEPEND="app-shells/tcsh
 	hardened? ( sys-apps/paxctl )
-	blas? ( virtual/blas )"
+	virtual/blas"
 
 RDEPEND="${DEPEND}
 	net-misc/openssh"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="24 MAR 2007 (R1)"
+GAMESS_VERSION="11 APR 2008 (R1)"
 FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
@@ -41,12 +41,9 @@ pkg_nofetch() {
 pkg_setup() {
 	fortran_pkg_setup
 
-	# blas and ifc don't go together
-	if use blas && [[ "${FORTRANC}" = "ifc" ]]; then
-		echo
-		ewarn "${PN} can not be compiled with USE=blas and ifc."
-		ewarn "Linking against GAMESS' internal blas instead."
-		echo
+	# currently amd64 is only supported with gfortran
+	if [[ "${ARCH}" == "amd64" ]] && [[ "${FORTRANC}" != "gfortran" ]];
+		then die "You will need gfortran to compile gamess on amd64"
 	fi
 }
 
@@ -56,9 +53,21 @@ src_unpack() {
 	# apply LINUX-arch patches to gamess makesfiles
 	epatch "${FILESDIR}"/${P}.gentoo.patch
 
+	# select arch
+	# NOTE: please leave lked alone; it should be good as is!!
+	cd "${S}"
+	local active_arch;
+	if [[ "${ARCH}" == "amd64" ]]; then
+		active_arch="linux64";
+	else
+		active_arch="linux32";
+	fi
+	sed -e "s:gentoo-target:${active_arch}:" \
+		-i comp compall ddi/compddi \
+		|| die "Failed to select proper architecure"
+
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	cd "${S}"
 	if use hardened && [[ "${FORTRANC}" = "g77" ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
@@ -93,12 +102,6 @@ src_unpack() {
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
 			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
-	fi
-
-	# use proper blas
-	if ! use blas || [[ "${FORTRANC}" = "ifc" ]]; then
-		sed -e "s|/usr/lib/libblas.a|/usr/lib/dontuselibblas.a|" \
-			-i lked || die "Failed to adjust blas in lked"
 	fi
 
 	# fix up GAMESS' linker script;

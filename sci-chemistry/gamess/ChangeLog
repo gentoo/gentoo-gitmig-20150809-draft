@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.24 2008/03/18 21:35:53 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.25 2008/05/08 17:42:47 markusle Exp $
+
+*gamess-20080411.1 (08 May 2008)
+
+  08 May 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/gamess-20060907.4.gentoo.patch,
+  -files/gamess-20070324.1.gentoo.patch,
+  +files/gamess-20080411.1.gentoo.patch, -gamess-20060907.4.ebuild,
+  -gamess-20070324.1.ebuild, +gamess-20080411.1.ebuild:
+  Version bump (fixes bug #220855).
 
 *gamess-20070324.6 (18 Mar 2008)
 
