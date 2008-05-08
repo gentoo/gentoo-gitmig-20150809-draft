@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.22.1.1.ebuild,v 1.1 2008/04/10 22:53:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.22.1.1.ebuild,v 1.2 2008/05/08 19:16:19 dang Exp $
 
 inherit eutils gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.13
 		 >=x11-libs/libnotify-0.2.1
 		 x11-libs/libXau
 		 x11-apps/xdpyinfo
-		 >=gnome-base/control-center-2.15.4
+		 gnome-base/gnome-settings-daemon
 		 >=gnome-base/gconf-2
 		 tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.212 2008/04/10 22:53:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.213 2008/05/08 19:16:19 dang Exp $
+
+  08 May 2008; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-session-2.22.1.1.ebuild:
+  No longer needs control-center, just gnome-settings-daemon; bug #220865
 
 *gnome-session-2.22.1.1 (10 Apr 2008)
 

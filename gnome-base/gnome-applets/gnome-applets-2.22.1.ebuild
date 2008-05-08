@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.1.ebuild,v 1.2 2008/04/12 14:35:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.1.ebuild,v 1.3 2008/05/08 19:13:40 dang Exp $
 
 inherit eutils gnome2 autotools python
 
@@ -36,7 +36,7 @@ RDEPEND=">=x11-libs/gtk+-2.11
 		x11-apps/xrdb x11-libs/libX11
 		gnome?	(
 					>=gnome-base/libgnomekbd-2.21.4.1
-					gnome-base/control-center
+					gnome-base/gnome-settings-daemon
 
 					>=gnome-extra/gucharmap-1.4
 					>=gnome-base/libgtop-2.11.92
