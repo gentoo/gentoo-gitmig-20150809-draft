@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r2.ebuild,v 1.4 2008/05/03 19:28:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r2.ebuild,v 1.5 2008/05/08 22:10:50 ken69267 Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/el/"
 SRC_URI="mirror://apache/jakarta/commons/el/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
 COMMON_DEP="~dev-java/servletapi-2.4"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
