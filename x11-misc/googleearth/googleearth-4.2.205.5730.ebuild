@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.2.205.5730.ebuild,v 1.2 2007/12/22 16:17:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.2.205.5730.ebuild,v 1.3 2008/05/08 04:46:52 je_fro Exp $
 
 inherit eutils fdo-mime
 
@@ -58,16 +58,16 @@ src_install() {
 	dodoc README.linux
 
 	cd bin
-	tar xf ${WORKDIR}/${PN}-linux-x86.tar
+	tar xf "${WORKDIR}"/${PN}-linux-x86.tar
 	exeinto /opt/${PN}
 	doexe *
 
-	cd ${D}/opt/${PN}
-	tar xf ${WORKDIR}/${PN}-data.tar
+	cd "${D}"/opt/${PN}
+	tar xf "${WORKDIR}"/${PN}-data.tar
 
-	cd ${D}
+	cd "${D}"
 	# mime magic for gnome by Ed Catmur in bug 141371
-	epatch ${FILESDIR}/mime-magic.patch
+	epatch "${FILESDIR}"/mime-magic.patch
 
 	# make sure we install with correct permissions
 	fowners -R root:root /opt/${PN}
