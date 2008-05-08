@@ -1,0 +1,53 @@
+From dd6b0de38d649617600a8357e576955c9b831328 Mon Sep 17 00:00:00 2001
+From: Hasso Tepper <hasso@estpak.ee>
+Date: Mon, 7 Apr 2008 14:09:04 +0300
+Subject: [PATCH] configure.ac: DragonFly BSD support
+
+Add support for DragonFly BSD, which is just the same as FreeBSD for all
+of these cases.
+(cherry picked from commit 0f87b41a432a6472a15ec0c9dee997e3bddbd0f2)
+---
+ configure.ac |    6 ++++--
+ 1 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 72d9819..dfb2950 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -291,6 +291,7 @@ case $host_cpu in
+ 	        darwin*)	use_x86_asm="no" ;;
+ 		*linux*)	DEFAULT_INT10=vm86 ;;
+ 		*freebsd*)	AC_DEFINE(USE_DEV_IO) ;;
++		*dragonfly*)	AC_DEFINE(USE_DEV_IO) ;;
+ 		*netbsd*)	AC_DEFINE(USE_I386_IOPL)
+ 				SYS_LIBS=-li386
+ 				;;
+@@ -316,6 +317,7 @@ case $host_cpu in
+ 	case $host_os in
+ 	        darwin*)	use_x86_asm="no" ;;
+ 		*freebsd*)	AC_DEFINE(USE_DEV_IO, 1, [BSD /dev/io]) ;;
++		*dragonfly*)	AC_DEFINE(USE_DEV_IO, 1, [BSD /dev/io]) ;;
+ 		*netbsd*)	AC_DEFINE(USE_I386_IOPL, 1, [BSD i386 iopl])
+ 				SYS_LIBS=-lx86_64
+ 				;;
+@@ -337,7 +339,7 @@ DRI=no
+ KDRIVE_HW=no
+ dnl it would be nice to autodetect these *CONS_SUPPORTs
+ case $host_os in
+-  *freebsd*)
++  *freebsd* | *dragonfly*)
+ 	case $host_os in
+ 		kfreebsd*-gnu) ;;
+ 		*) AC_DEFINE(CSRG_BASED, 1, [System is BSD-like]) ;;
+@@ -1363,7 +1365,7 @@ return 0;}
+ 			;;
+ 		esac
+ 		;;
+-	  freebsd* | kfreebsd*-gnu)
++	  freebsd* | kfreebsd*-gnu | dragonfly*)
+ 	  	XORG_OS="freebsd"
+ 		XORG_OS_SUBDIR="bsd"
+ 		case $host_cpu in
+-- 
+1.5.5.1
+

@@ -1,0 +1,83 @@
+From fdfb57d342da0ace14eed635804ebc31441240c5 Mon Sep 17 00:00:00 2001
+From: Thomas Jaeger <thjaeger@gmail.com>
+Date: Tue, 1 Apr 2008 15:27:06 +0300
+Subject: [PATCH] XKB: Fix processInputProc wrapping
+
+If input processing is frozen, only wrap realInputProc: don't smash
+processInputProc as well.  When input processing is thawed, pIP will be
+rewrapped correctly.
+
+This supersedes the previous workaround in 50e80c9.
+
+Signed-off-by: Daniel Stone <daniel@fooishbar.org>
+(cherry picked from commit 37b1258f0a288a79ce6a3eef3559e17a67c4dd96)
+---
+ include/xkbsrv.h |   16 ++++++++++++----
+ xkb/xkbActions.c |    9 ++++-----
+ 2 files changed, 16 insertions(+), 9 deletions(-)
+
+diff --git a/include/xkbsrv.h b/include/xkbsrv.h
+index 9174eb6..acf3bb0 100644
+--- a/include/xkbsrv.h
++++ b/include/xkbsrv.h
+@@ -241,6 +241,14 @@ typedef struct	_XkbSrvLedInfo {
+ typedef struct
+ {
+     ProcessInputProc processInputProc;
++    /* If processInputProc is set to something different than realInputProc,
++     * UNWRAP and COND_WRAP will not touch processInputProc and update only
++     * realInputProc.  This ensures that
++     *   processInputProc == (frozen ? EnqueueEvent : realInputProc)
++     *
++     * WRAP_PROCESS_INPUT_PROC should only be called during initialization,
++     * since it may destroy this invariant.
++     */
+     ProcessInputProc realInputProc;
+     DeviceUnwrapProc unwrapProc;
+ } xkbDeviceInfoRec, *xkbDeviceInfoPtr;
+@@ -258,14 +266,14 @@ typedef struct
+ 	    device->public.processInputProc = proc; \
+ 	oldprocs->processInputProc = \
+ 	oldprocs->realInputProc = device->public.realInputProc; \
+-	if (proc != device->public.enqueueInputProc) \
+-		device->public.realInputProc = proc; \
++	device->public.realInputProc = proc; \
+ 	oldprocs->unwrapProc = device->unwrapProc; \
+ 	device->unwrapProc = unwrapproc;
+ 
+ #define UNWRAP_PROCESS_INPUT_PROC(device, oldprocs, backupproc) \
+-        backupproc = device->public.processInputProc; \
+-	device->public.processInputProc = oldprocs->processInputProc; \
++        backupproc = device->public.realInputProc; \
++	if (device->public.processInputProc == device->public.realInputProc)\
++	    device->public.processInputProc = oldprocs->realInputProc; \
+ 	device->public.realInputProc = oldprocs->realInputProc; \
+ 	device->unwrapProc = oldprocs->unwrapProc;
+ 
+diff --git a/xkb/xkbActions.c b/xkb/xkbActions.c
+index 6edac29..59d34c5 100644
+--- a/xkb/xkbActions.c
++++ b/xkb/xkbActions.c
+@@ -50,15 +50,14 @@ xkbUnwrapProc(DeviceIntPtr device, DeviceHandleProc proc,
+                    pointer data)
+ {
+     xkbDeviceInfoPtr xkbPrivPtr = XKBDEVICEINFO(device);
+-    ProcessInputProc tmp = device->public.processInputProc;
+-    ProcessInputProc dummy; /* unused, but neede for macro */
++    ProcessInputProc backupproc;
+     if(xkbPrivPtr->unwrapProc)
+ 	xkbPrivPtr->unwrapProc = NULL;
+ 
+-    UNWRAP_PROCESS_INPUT_PROC(device,xkbPrivPtr, dummy);
++    UNWRAP_PROCESS_INPUT_PROC(device,xkbPrivPtr, backupproc);
+     proc(device,data);
+-    WRAP_PROCESS_INPUT_PROC(device,xkbPrivPtr,
+-			    tmp,xkbUnwrapProc);
++    COND_WRAP_PROCESS_INPUT_PROC(device,xkbPrivPtr,
++				 backupproc,xkbUnwrapProc);
+ }
+ 
+ 
+-- 
+1.5.5.1
+

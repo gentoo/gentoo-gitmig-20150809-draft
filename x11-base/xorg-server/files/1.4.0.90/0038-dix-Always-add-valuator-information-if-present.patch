@@ -1,0 +1,47 @@
+From 7fa7031cfa9145f55881b87bc39f6e2c8a49ff76 Mon Sep 17 00:00:00 2001
+From: =?utf-8?q?Magnus=20Vigerl=C3=B6f?= <Magnus.Vigerlof@ipbo.se>
+Date: Sat, 2 Feb 2008 22:44:31 +0100
+Subject: [PATCH] dix: Always add valuator information if present
+
+Send valuator information for all event types, not only for
+MotionEvents and absolute button events.
+(cherry picked from commit 12e532403210c15a25200ef448bfe9701735ab20)
+---
+ dix/getevents.c |    7 ++-----
+ 1 files changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/dix/getevents.c b/dix/getevents.c
+index b7ba69b..36c1bcf 100644
+--- a/dix/getevents.c
++++ b/dix/getevents.c
+@@ -523,9 +523,6 @@ GetPointerEvents(xEvent *events, DeviceIntPtr pDev, int type, int buttons,
+     int num_events = 0, final_valuator = 0;
+     CARD32 ms = 0;
+     deviceKeyButtonPointer *kbp = NULL;
+-    /* Thanks to a broken lib, we _always_ have to chase DeviceMotionNotifies
+-     * with DeviceValuators. */
+-    Bool sendValuators = (type == MotionNotify || flags & POINTER_ABSOLUTE);
+     DeviceIntPtr cp = inputInfo.pointer;
+     int x = 0, y = 0;
+     Bool coreOnly = (pDev == inputInfo.pointer);
+@@ -551,7 +548,7 @@ GetPointerEvents(xEvent *events, DeviceIntPtr pDev, int type, int buttons,
+         return 0;
+ 
+     /* Do we need to send a DeviceValuator event? */
+-    if (!coreOnly && sendValuators) {
++    if (!coreOnly && num_valuators) {
+         if ((((num_valuators - 1) / 6) + 1) > MAX_VALUATOR_EVENTS)
+             num_valuators = MAX_VALUATOR_EVENTS * 6;
+         num_events += ((num_valuators - 1) / 6) + 1;
+@@ -682,7 +679,7 @@ GetPointerEvents(xEvent *events, DeviceIntPtr pDev, int type, int buttons,
+         kbp->root_y = y;
+ 
+         events++;
+-        if (sendValuators) {
++        if (num_valuators) {
+             kbp->deviceid |= MORE_EVENTS;
+             clipValuators(pDev, first_valuator, num_valuators, valuators);
+             events = getValuatorEvents(events, pDev, first_valuator,
+-- 
+1.5.5.1
+

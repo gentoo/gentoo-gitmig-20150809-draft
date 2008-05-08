@@ -1,0 +1,83 @@
+From 76b950cd6e03f0060afe463871de4570fca90213 Mon Sep 17 00:00:00 2001
+From: Jeremy C. Reed <reed@glacier.reedmedia.net>
+Date: Thu, 16 Aug 2007 11:20:12 -0500
+Subject: [PATCH] Add some more support for DragonFly. From Joerg Sonnenberger
+ and pkgsrc.
+ (cherry picked from commit 1d4bea6106d7a1c83e1dfe37fad8268589feaa0b)
+
+---
+ Xext/shm.c                             |    2 +-
+ Xext/xf86bigfont.c                     |    2 +-
+ hw/xfree86/loader/os.c                 |    2 ++
+ hw/xfree86/os-support/bus/Pci.h        |    2 +-
+ hw/xfree86/os-support/bus/freebsdPci.c |    2 +-
+ 5 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/Xext/shm.c b/Xext/shm.c
+index 376f123..3c0d1ee 100644
+--- a/Xext/shm.c
++++ b/Xext/shm.c
+@@ -154,7 +154,7 @@ static ShmFuncs fbFuncs = {fbShmCreatePixmap, fbShmPutImage};
+ }
+ 
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__DragonFly__)
+ #include <sys/signal.h>
+ 
+ static Bool badSysCall = FALSE;
+diff --git a/Xext/xf86bigfont.c b/Xext/xf86bigfont.c
+index f50481f..c2f891a 100644
+--- a/Xext/xf86bigfont.c
++++ b/Xext/xf86bigfont.c
+@@ -104,7 +104,7 @@ static unsigned int pagesize;
+ 
+ static Bool badSysCall = FALSE;
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__DragonFly__)
+ 
+ #include <sys/signal.h>
+ 
+diff --git a/hw/xfree86/loader/os.c b/hw/xfree86/loader/os.c
+index fdddce8..12cf3d8 100644
+--- a/hw/xfree86/loader/os.c
++++ b/hw/xfree86/loader/os.c
+@@ -42,6 +42,8 @@
+ #define OSNAME "linux"
+ #elif defined(__FreeBSD__)
+ #define OSNAME "freebsd"
++#elif defined(__DragonFly__)
++#define OSNAME "dragonfly"
+ #elif defined(__NetBSD__)
+ #define OSNAME "netbsd"
+ #elif defined(__OpenBSD__)
+diff --git a/hw/xfree86/os-support/bus/Pci.h b/hw/xfree86/os-support/bus/Pci.h
+index f0cb916..5ebbdd5 100644
+--- a/hw/xfree86/os-support/bus/Pci.h
++++ b/hw/xfree86/os-support/bus/Pci.h
+@@ -235,7 +235,7 @@
+ # if defined(linux)
+ #  define ARCH_PCI_INIT axpPciInit
+ #  define INCLUDE_XF86_MAP_PCI_MEM
+-# elif defined(__FreeBSD__) || defined(__OpenBSD__)
++# elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #  define ARCH_PCI_INIT freebsdPciInit
+ #  define INCLUDE_XF86_MAP_PCI_MEM
+ #  define INCLUDE_XF86_NO_DOMAIN
+diff --git a/hw/xfree86/os-support/bus/freebsdPci.c b/hw/xfree86/os-support/bus/freebsdPci.c
+index 61cb405..63c00b2 100644
+--- a/hw/xfree86/os-support/bus/freebsdPci.c
++++ b/hw/xfree86/os-support/bus/freebsdPci.c
+@@ -83,7 +83,7 @@ static pciBusInfo_t freebsdPci0 = {
+ /* bridge      */	NULL
+ };
+ 
+-#if !defined(__OpenBSD__) && !defined(__FreeBSD__)
++#if !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #if X_BYTE_ORDER == X_BIG_ENDIAN
+ #ifdef __sparc__
+ #ifndef ASI_PL
+-- 
+1.5.5.1
+

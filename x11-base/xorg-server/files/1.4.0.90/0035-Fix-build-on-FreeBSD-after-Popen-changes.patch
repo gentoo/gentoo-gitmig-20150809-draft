@@ -1,0 +1,25 @@
+From a02b989c68864a7388553fb96e4fbaf91f941c4a Mon Sep 17 00:00:00 2001
+From: Eric Anholt <eric@anholt.net>
+Date: Wed, 12 Sep 2007 13:23:13 +0000
+Subject: [PATCH] Fix build on FreeBSD after Popen changes.
+
+---
+ os/utils.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/os/utils.c b/os/utils.c
+index afcaae4..144098b 100644
+--- a/os/utils.c
++++ b/os/utils.c
+@@ -1720,7 +1720,7 @@ static struct pid {
+     int pid;
+ } *pidlist;
+ 
+-static sighandler_t old_alarm = NULL; /* XXX horrible awful hack */
++void (*old_alarm)(int) = NULL; /* XXX horrible awful hack */
+ 
+ pointer
+ Popen(char *command, char *type)
+-- 
+1.5.5.1
+

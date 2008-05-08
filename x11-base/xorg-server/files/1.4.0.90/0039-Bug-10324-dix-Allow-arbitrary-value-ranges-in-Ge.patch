@@ -1,0 +1,40 @@
+From 1d79ba8193e9584370ffaaa8dffb4db604125dea Mon Sep 17 00:00:00 2001
+From: =?utf-8?q?Magnus=20Vigerl=C3=B6f?= <Magnus.Vigerlof@ipbo.se>
+Date: Sat, 2 Feb 2008 22:45:31 +0100
+Subject: [PATCH] Bug # 10324: dix: Allow arbitrary value ranges in GetPointerEvents
+
+Don't use a possitive value as a marker for if a max-value
+is defined on the valuators. Use the existence of a valid
+value range instead. This will also make it possible to
+define arbitrary start and end-values for min and max as
+long as min < max.
+(cherry picked from commit f04c0838699f1a733735838e74cfbb1677b15dc4)
+---
+ dix/getevents.c |   11 +++++++----
+ 1 files changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/dix/getevents.c b/dix/getevents.c
+index 36c1bcf..8595eaf 100644
+--- a/dix/getevents.c
++++ b/dix/getevents.c
+@@ -306,10 +306,13 @@ clipAxis(DeviceIntPtr pDev, int axisNum, int *val)
+ {
+     AxisInfoPtr axes = pDev->valuator->axes + axisNum;
+ 
+-    if (*val < axes->min_value)
+-        *val = axes->min_value;
+-    if (axes->max_value >= 0 && *val > axes->max_value)
+-        *val = axes->max_value;
++    /* No clipping if the value-range <= 0 */
++    if(axes->min_value < axes->min_value) {
++        if (*val < axes->min_value)
++            *val = axes->min_value;
++        if (*val > axes->max_value)
++            *val = axes->max_value;
++    }
+ }
+ 
+ /**
+-- 
+1.5.5.1
+

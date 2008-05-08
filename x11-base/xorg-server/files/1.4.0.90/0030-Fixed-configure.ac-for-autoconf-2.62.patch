@@ -1,0 +1,28 @@
+From 9e9eeca2b094fa9edb9c20002d42aeafb14ad1e4 Mon Sep 17 00:00:00 2001
+From: Tilman Sauerbeck <tilman@code-monkey.de>
+Date: Thu, 10 Apr 2008 21:36:19 +0200
+Subject: [PATCH] Fixed configure.ac for autoconf 2.62.
+ (cherry picked from commit 3c337e18b933881e22b0d03312511f1d23a8640b)
+
+---
+ configure.ac |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index dfb2950..4841d26 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1964,7 +1964,9 @@ DIX_CFLAGS="-DHAVE_DIX_CONFIG_H $XSERVER_CFLAGS"
+ 
+ AC_SUBST([DIX_CFLAGS])
+ 
+-AC_SUBST([libdir exec_prefix prefix])
++AC_SUBST([libdir])
++AC_SUBST([exec_prefix])
++AC_SUBST([prefix])
+ 
+ # Man page sections - used in config utils & generating man pages
+ XORG_MANPAGE_SECTIONS
+-- 
+1.5.5.1
+

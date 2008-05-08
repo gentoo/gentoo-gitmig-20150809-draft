@@ -1,0 +1,24 @@
+From d988da6eee8422774dff364050bf431b843a714a Mon Sep 17 00:00:00 2001
+From: Arkadiusz Miskiewicz <arekm@maven.pl>
+Date: Thu, 13 Dec 2007 00:09:08 +0200
+Subject: [PATCH] Xprint: Clean up generated files
+
+Remember to clean generated wrapper files.
+(cherry picked from commit 977fcdea8198906936a64b8117e6a6d027c617e3)
+---
+ hw/xprint/Makefile.am |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/hw/xprint/Makefile.am b/hw/xprint/Makefile.am
+index dc8764a..f834966 100644
+--- a/hw/xprint/Makefile.am
++++ b/hw/xprint/Makefile.am
+@@ -41,3 +41,5 @@ Xprt_SOURCES =			\
+         $(top_srcdir)/fb/fbcmap_mi.c
+ 
+ EXTRA_DIST = ValTree.c
++
++CLEANFILES = miinitext-wrapper.c dpmsstubs-wrapper.c
+-- 
+1.5.5.1
+
