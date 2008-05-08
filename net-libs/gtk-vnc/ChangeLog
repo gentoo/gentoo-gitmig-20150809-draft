@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.9 2008/04/24 18:10:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.10 2008/05/08 12:40:36 eva Exp $
+
+  08 May 2008; Gilles Dartiguelongue <eva@gentoo.org> -gtk-vnc-0.3.2.ebuild,
+  -gtk-vnc-0.3.3.ebuild, gtk-vnc-0.3.4.ebuild:
+  clean up old revisions, add examples use flag.
 
   24 Apr 2008; Markus Rothe <corsair@gentoo.org> gtk-vnc-0.3.4.ebuild:
   Added ~ppc64; bug #218794

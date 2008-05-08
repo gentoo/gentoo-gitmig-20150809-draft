@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.4.ebuild,v 1.3 2008/04/24 18:10:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.4.ebuild,v 1.4 2008/05/08 12:40:36 eva Exp $
 
 inherit gnome2
 
@@ -10,9 +10,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="debug python opengl"
+IUSE="debug examples python opengl"
 
 # what shall we do about libview
+# TODO: review nsplugin when it will be considered less experimental
+
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=net-libs/gnutls-1.4
 	python? ( >=dev-python/pygtk-2 )
@@ -23,6 +25,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable debug)
+		$(use_with examples)
 		$(use_with python)
 		$(use_with opengl gtkglext)
 		--with-coroutine=gthread
