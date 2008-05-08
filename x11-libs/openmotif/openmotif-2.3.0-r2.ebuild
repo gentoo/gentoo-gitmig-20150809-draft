@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r2.ebuild,v 1.8 2008/05/07 06:24:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r2.ebuild,v 1.9 2008/05/08 10:41:30 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -20,15 +20,14 @@ RDEPEND="!x11-libs/motif-config
 	!x11-libs/lesstif
 	!<=x11-libs/openmotif-2.3.0
 	x11-libs/libXmu
-	x11-libs/libXaw
 	x11-libs/libXp
 	virtual/libiconv
 	xft? ( x11-libs/libXft )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
+
 DEPEND="${RDEPEND}
-	x11-misc/xbitmaps
-	x11-proto/printproto"
+	x11-misc/xbitmaps"
 
 PROVIDE="virtual/motif"
 
