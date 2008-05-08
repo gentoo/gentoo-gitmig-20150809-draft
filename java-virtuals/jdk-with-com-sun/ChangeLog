@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.1 2008/05/05 00:34:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.2 2008/05/08 14:34:03 opfer Exp $
+
+  08 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  jdk-with-com-sun-20080505.ebuild:
+  stable x86, bug 220223
 
 *jdk-with-com-sun-20080505 (05 May 2008)
 
