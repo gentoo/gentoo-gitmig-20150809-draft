@@ -1,6 +1,77 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.324 2008/05/07 03:30:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.325 2008/05/08 08:20:32 dberkholz Exp $
+
+*xorg-server-1.4.0.90-r4 (08 May 2008)
+
+  08 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4.0.90/0004-Config-D-Bus-Don-t-leak-timers.patch,
+  +files/1.4.0.90/0006-OS-Don-t-leak-connection-translation-table-on-regen.p
+  atch, +files/1.4.0.90/0012-Xephyr-One-time-keyboard-leak-fix.patch,
+  +files/1.4.0.90/0002-bgPixel-unsigned-long-is-64-bit-on-x86_64-so-1.patch,
+  +files/1.4.0.90/0013-Fix-for-CVE-2007-5760-XFree86-Misc-extension-out-o.pa
+  tch,
+  +files/1.4.0.90/0005-Config-HAL-Don-t-leak-options-on-failure-to-add-de.pa
+  tch,
+  +files/1.4.0.90/0018-Fix-for-CVE-2007-5958-File-existence-disclosure.patch
+  ,
+  +files/1.4.0.90/0007-KDrive-Xephyr-Don-t-leak-screen-damage-structure.patc
+  h,
+  +files/1.4.0.90/0015-Fix-for-CVE-2007-6427-Xinput-extension-memory-corr.pa
+  tch,
+  +files/1.4.0.90/0001-Bug-13308-Verify-and-reject-obviously-broken-modes.pa
+  tch, +files/1.4.0.90/0003-Xprint-Clean-up-generated-files.patch,
+  +files/1.4.0.90/0008-Input-Don-t-reinit-devices.patch,
+  +files/1.4.0.90/0009-include-never-overwrite-realInputProc-with-enqueueI.p
+  atch, +files/1.4.0.90/0010-OS-IO-Zero-out-client-buffers.patch,
+  +files/1.4.0.90/0011-XKB-XkbCopyKeymap-Don-t-leak-all-the-sections.patch,
+  +files/1.4.0.90/0042-dix-Move-motion-history-update-until-after-screen-c.p
+  atch,
+  +files/1.4.0.90/0014-Fix-for-CVE-2007-6428-TOG-cup-extension-memory-cor.pa
+  tch,
+  +files/1.4.0.90/0019-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.pa
+  tch,
+  +files/1.4.0.90/0016-Fix-for-CVE-2007-6429-MIT-SHM-and-EVI-extensions-i.pa
+  tch, +files/1.4.0.90/0043-XKB-Actually-explain-keymap-failures.patch,
+  +files/1.4.0.90/0017-Fix-for-CVE-2008-0006-PCF-Font-parser-buffer-overf.pa
+  tch,
+  +files/1.4.0.90/0040-Bug-10324-dix-Add-scaling-of-X-and-Y-on-the-repo.patc
+  h,
+  +files/1.4.0.90/0020-dix-set-the-correct-number-of-valuators-in-valuator.p
+  atch,
+  +files/1.4.0.90/0041-dix-Skip-call-to-clipAxis-for-relative-core-events.pa
+  tch,
+  +files/1.4.0.90/0021-xkb-don-t-update-LEDs-if-they-don-t-exist.-Bug-13.pat
+  ch,
+  +files/1.4.0.90/0022-security-Fix-for-Bug-14480-untrusted-access-broke.pat
+  ch,
+  +files/1.4.0.90/0023-Resize-composite-overlay-window-when-the-root-window.
+  patch,
+  +files/1.4.0.90/0024-Fix-rotation-for-multi-monitor-situation.patch,
+  +files/1.4.0.90/0025-Don-t-break-grab-and-focus-state-for-a-window-when-r.
+  patch,
+  +files/1.4.0.90/0026-CVE-2007-6429-Always-test-for-size-offset-wrapping.pa
+  tch,
+  +files/1.4.0.90/0027-Fix-context-sharing-between-direct-indirect-contexts.
+  patch,
+  +files/1.4.0.90/0028-Add-some-more-support-for-DragonFly.-From-Joerg-Sonn.
+  patch, +files/1.4.0.90/0029-configure.ac-DragonFly-BSD-support.patch,
+  +files/1.4.0.90/0030-Fixed-configure.ac-for-autoconf-2.62.patch,
+  +files/1.4.0.90/0031-EXA-Fix-off-by-one-in-polyline-drawing.patch,
+  +files/1.4.0.90/0032-XKB-Fix-processInputProc-wrapping.patch,
+  +files/1.4.0.90/0033-xfree86-fix-AlwaysCore-handling.-Bug-14256.patch,
+  +files/1.4.0.90/0034-Ignore-not-just-block-SIGALRM-around-Popen-Pcl.patch,
+  +files/1.4.0.90/0035-Fix-build-on-FreeBSD-after-Popen-changes.patch,
+  +files/1.4.0.90/0036-So-like-checking-return-codes-of-system-calls-sig.pat
+  ch,
+  +files/1.4.0.90/0037-Check-for-sys-sdt.h-as-well-when-determining-to-en.pa
+  tch,
+  +files/1.4.0.90/0038-dix-Always-add-valuator-information-if-present.patch,
+  +files/1.4.0.90/0039-Bug-10324-dix-Allow-arbitrary-value-ranges-in-Ge.patc
+  h, +xorg-server-1.4.0.90-r4.ebuild:
+  Add an unkeyworded new revision with tons of fixes from upstream's 1.4
+  branch. More patches may be coming soon, and rekeywording is pending on
+  that. I expect this to be a candidate for stable.
 
   07 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.3.0.0-r5.ebuild, xorg-server-1.4.0.90-r3.ebuild:
