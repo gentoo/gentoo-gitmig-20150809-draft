@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/coolkey-1.1.0-r1.ebuild,v 1.1 2007/09/08 08:20:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/coolkey-1.1.0-r1.ebuild,v 1.2 2008/05/08 07:42:38 alonbl Exp $
 
 inherit eutils
 
@@ -21,11 +21,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-cache-move.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 }
 
 src_compile() {
 	econf $(use_enable debug) || die "configure failed"
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
