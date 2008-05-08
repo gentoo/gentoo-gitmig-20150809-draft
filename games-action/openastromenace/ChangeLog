@@ -1,0 +1,10 @@
+# ChangeLog for games-action/openastromenace
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/ChangeLog,v 1.1 2008/05/08 14:15:03 nyhm Exp $
+
+*openastromenace-1.2.0 (08 May 2008)
+
+  08 May 2008; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +openastromenace-1.2.0.ebuild:
+  Initial commit, bug #204530
+
