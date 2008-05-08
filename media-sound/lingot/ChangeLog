@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/lingot
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/ChangeLog,v 1.1 2008/05/08 11:10:51 drac Exp $
+
+*lingot-0.7.6 (08 May 2008)
+
+  08 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/lingot-0.7.6-clean-install.patch, +lingot-0.7.6.ebuild:
+  Initial commit for bug 188845, thanks to gutter.
+
