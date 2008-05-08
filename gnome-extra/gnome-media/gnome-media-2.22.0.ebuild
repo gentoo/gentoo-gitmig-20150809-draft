@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.22.0.ebuild,v 1.4 2008/04/24 18:18:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.22.0.ebuild,v 1.5 2008/05/08 14:02:38 eva Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="esd ipv6 "
+IUSE="esd gnomecd ipv6"
 
 RDEPEND=">=dev-libs/glib-1.3.7
 	>=gnome-base/libgnome-2.13.7
@@ -25,8 +25,9 @@ RDEPEND=">=dev-libs/glib-1.3.7
 	>=media-libs/gst-plugins-good-0.10
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/orbit-2
-	>=gnome-extra/nautilus-cd-burner-2.12
-	>=gnome-base/gail-0.0.3
+	gnomecd? (
+		>=gnome-extra/nautilus-cd-burner-2.12
+		>=gnome-base/gail-0.0.3 )
 	>=gnome-base/libglade-2
 	dev-libs/libxml2
 	>=gnome-base/gconf-2
@@ -41,9 +42,12 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		$(use_enable ipv6)
 		$(use_enable esd vumeter)
-		--disable-esdtest"
+		$(use_enable gnomecd)
+		$(use_enable ipv6)
+		--disable-esdtest
+		--disable-scrollkeeper
+		--disable-schemas-install"
 }
 
 src_unpack() {
@@ -51,13 +55,6 @@ src_unpack() {
 
 	# Allow building without esound
 	epatch "${FILESDIR}"/${PN}-2.18.0-noesd.patch
-}
-
-src_compile() {
-	addpredict "/root/.gconfd"
-	addpredict "/root/.gconf"
-
-	gnome2_src_compile
 }
 
 pkg_postinst() {
