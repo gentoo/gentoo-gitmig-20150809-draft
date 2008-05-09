@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.1.ebuild,v 1.6 2008/04/24 09:36:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.1.ebuild,v 1.7 2008/05/09 12:42:45 hoffie Exp $
 
 EAPI="1"
 
@@ -31,6 +31,11 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	if use php; then
+		cd php
+		php-ext-source-r1_phpize
+	fi
 }
 
 src_compile() {
