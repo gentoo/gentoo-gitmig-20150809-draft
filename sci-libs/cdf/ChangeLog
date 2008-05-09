@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cdf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.13 2008/05/08 10:22:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.14 2008/05/09 10:18:52 bicatali Exp $
+
+*cdf-3.2.1-r1 (09 May 2008)
+
+  09 May 2008; Sébastien Fabbro <bicatali@gentoo.org> +cdf-3.2.1-r1.ebuild:
+  Bump for new upstream tar balls, now with proper versions. Also fix bad
+  patching.
 
   08 May 2008; Sébastien Fabbro <bicatali@gentoo.org> cdf-3.2.1.ebuild:
   Upstream changed tar balls again, removing mirror restriction
