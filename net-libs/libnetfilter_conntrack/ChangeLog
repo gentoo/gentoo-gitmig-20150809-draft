@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.18 2008/05/05 13:33:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.19 2008/05/09 22:15:44 maekke Exp $
+
+  09 May 2008; Markus Meier <maekke@gentoo.org>
+  libnetfilter_conntrack-0.0.89.ebuild:
+  amd64 stable, bug #214072
 
   05 May 2008; Jeroen Roovers <jer@gentoo.org>
   libnetfilter_conntrack-0.0.89.ebuild:
