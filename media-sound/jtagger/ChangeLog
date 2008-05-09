@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jtagger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.3 2008/03/19 22:12:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.4 2008/05/09 21:00:59 opfer Exp $
+
+  09 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  jtagger-2008.01.ebuild:
+  stable x86, bug 220191
 
 *jtagger-2008.01 (19 Mar 2008)
 
