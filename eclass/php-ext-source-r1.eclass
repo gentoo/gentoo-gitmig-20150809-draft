@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.18 2008/05/09 12:35:05 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.19 2008/05/09 13:02:04 hoffie Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -56,13 +56,13 @@ php-ext-source-r1_src_unpack() {
 # @DESCRIPTION:
 # Runs phpize and autotools in addition to the standard src_unpack
 php-ext-source-r1_phpize() {
-#	# Create configure out of config.m4
-#	${PHPIZE}
-#	# force run of libtoolize and regeneration of related autotools
-#	# files (bug 220519)
-#	rm aclocal.m4
-#	eautoreconf
-	:
+	has_php
+	# Create configure out of config.m4
+	${PHPIZE}
+	# force run of libtoolize and regeneration of related autotools
+	# files (bug 220519)
+	rm aclocal.m4
+	eautoreconf
 }
 
 # @FUNCTION: php-ext-source-r1_src_compile
@@ -80,11 +80,6 @@ php-ext-source-r1_src_compile() {
 
 	# Set the correct config options
 	my_conf="--prefix=${PHPPREFIX} --with-php-config=${PHPCONFIG} ${my_conf}"
-
-	# Create configure out of config.m4
-	if [[ "${PHP_EXT_SKIP_PHPIZE}" != 'yes' ]] ; then
-		${PHPIZE}
-	fi
 
 	# Concurrent PHP Apache2 modules support
 	if has_concurrentmodphp ; then
