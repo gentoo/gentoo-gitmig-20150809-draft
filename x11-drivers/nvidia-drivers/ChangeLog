@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.96 2008/05/09 01:18:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.97 2008/05/09 09:55:14 chainsaw Exp $
 
   09 May 2008; Mark Loeser <halcy0n@gentoo.org>
   nvidia-drivers-173.08.ebuild:
@@ -12,11 +12,10 @@
   as the package is masked.
 
   07 May 2008; <chainsaw@gentoo.org>
-  +files/NVIDIA_kernel-173.08-2404825.diff, nvidia-drivers-71.86.01.ebuild,
-  nvidia-drivers-71.86.04.ebuild, nvidia-drivers-96.43.01.ebuild,
-  nvidia-drivers-96.43.05.ebuild, nvidia-drivers-100.14.09.ebuild,
-  nvidia-drivers-100.14.11.ebuild, nvidia-drivers-100.14.19.ebuild,
-  nvidia-drivers-100.14.23.ebuild, +nvidia-drivers-173.08.ebuild:
+  nvidia-drivers-71.86.01.ebuild, nvidia-drivers-71.86.04.ebuild,
+  nvidia-drivers-96.43.01.ebuild, nvidia-drivers-96.43.05.ebuild,
+  nvidia-drivers-100.14.09.ebuild, nvidia-drivers-100.14.11.ebuild,
+  nvidia-drivers-100.14.19.ebuild, nvidia-drivers-100.14.23.ebuild:
   Quote variables where appropriate.
 
 *nvidia-drivers-173.08 (07 May 2008)
