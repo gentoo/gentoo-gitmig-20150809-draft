@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.8.9.ebuild,v 1.3 2008/05/08 17:09:03 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.8.9.ebuild,v 1.4 2008/05/09 13:29:48 armin76 Exp $
 
 inherit eutils distutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.deluge-torrent.org/source/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="libnotify"
 
 S="${WORKDIR}"/${PN}-torrent-${PV}
