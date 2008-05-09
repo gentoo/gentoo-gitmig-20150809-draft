@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.7 2008/04/10 23:42:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.8 2008/05/09 10:03:35 yngwin Exp $
 
 EAPI="1"
 inherit eutils wxwidgets flag-o-matic qt4 autotools
@@ -25,7 +25,7 @@ DEPEND=">=dev-libs/libebml-0.7.7
 	flac? ( media-libs/flac )
 	bzip2? ( app-arch/bzip2 )
 	lzo? ( dev-libs/lzo )
-	qt4? ( || ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 ) )"
+	qt4? ( || ( >=x11-libs/qt-4.3.0 x11-libs/qt-gui:4 ) )"
 
 pkg_setup() {
 	WX_GTK_VER="2.6"
