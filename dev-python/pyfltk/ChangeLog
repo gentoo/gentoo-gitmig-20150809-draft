@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.3 2008/03/01 18:26:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.4 2008/05/09 20:02:51 maekke Exp $
+
+  09 May 2008; Markus Meier <maekke@gentoo.org> pyfltk-1.1.2.ebuild:
+  amd64/x86 stable, bug #221081
 
   01 Mar 2008; nixnut <nixnut@gentoo.org> pyfltk-1.1.2.ebuild:
   Added ~ppc wrt bug 211751
