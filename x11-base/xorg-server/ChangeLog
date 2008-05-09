@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.326 2008/05/09 20:03:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.327 2008/05/09 22:22:54 dberkholz Exp $
+
+  09 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4.0.90-r4.ebuild:
+  (#214233) Require wacom 0.7.9 or newer to fix crashes on startup.
 
   09 May 2008; Mart Raudsepp <leio@gentoo.org>
   xorg-server-1.4.0.90-r3.ebuild, xorg-server-1.4.0.90-r4.ebuild:
