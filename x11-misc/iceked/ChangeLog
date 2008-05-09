@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/iceked
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/ChangeLog,v 1.16 2007/02/21 23:42:50 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/ChangeLog,v 1.17 2008/05/09 12:54:52 phosphan Exp $
+
+  09 May 2008; Patrick Kursawe <phosphan@gentoo.org> iceked-1.5.ebuild:
+  QA fixes for bug #220094
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
