@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sharefonts
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.18 2008/02/03 19:54:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.19 2008/05/09 00:19:55 dirtyepic Exp $
+
+  09 May 2008; Ryan Hill <dirtyepic@gentoo.org> -sharefonts-0.10-r1.ebuild:
+  Remove old.
 
   03 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> sharefonts-0.10-r1.ebuild,
   sharefonts-0.10-r3.ebuild:
