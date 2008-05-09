@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.29 2008/01/10 23:51:34 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.30 2008/05/09 15:40:16 armin76 Exp $
+
+  09 May 2008; Raúl Porcel <armin76@gentoo.org> ftp-0.17-r7.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *ftp-0.17-r7 (10 Jan 2008)
 
