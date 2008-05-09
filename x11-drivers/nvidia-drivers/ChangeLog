@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.95 2008/05/08 15:59:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.96 2008/05/09 01:18:20 halcy0n Exp $
+
+  09 May 2008; Mark Loeser <halcy0n@gentoo.org>
+  nvidia-drivers-173.08.ebuild:
+  Works on x86 for me, marking ~x86
 
   08 May 2008; <chainsaw@gentoo.org>
   files/NVIDIA_kernel-173.08-2404825.diff:
