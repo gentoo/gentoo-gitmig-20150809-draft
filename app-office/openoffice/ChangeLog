@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.394 2008/04/28 16:10:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.395 2008/05/09 14:01:04 suka Exp $
+
+  09 May 2008; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.3.1/regcompapply.diff, -files/2.3.1/gentoo-2.3.1-r1.diff,
+  -files/2.3.1/disable-regcomp-java.diff, -files/2.3.1/ooo-env_log.diff,
+  -files/2.3.1/stlport-ppc-buildfix.diff,
+  -files/2.3.1/disable-regcomp-python.diff,
+  -files/2.3.1/stlport-ppc-buildfix-apply.diff, -openoffice-2.3.1-r1.ebuild,
+  openoffice-2.4.0.ebuild:
+  Silent bump to ooo-build-2.4.0.10, only some minor bugfixes
 
   28 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   openoffice-2.4.0.ebuild:
