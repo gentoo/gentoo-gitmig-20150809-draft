@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.512 2008/05/06 08:19:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.513 2008/05/09 09:30:09 zmedico Exp $
+
+*portage-2.1.5_rc8 (09 May 2008)
+
+  09 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc8.ebuild:
+  2.1.5_rc8 bump. This includes support for having packages that block
+  eachother temporarily installed at the same time, which requires
+  special handling of file collisions. Also fixed are bugs #220341
+  (unnecessary reinstall of multislot packages), #220689 (unnecessary
+  downgrades), #220775 (dodoc calls vecho unsuccessfully), and #220987
+  (UnboundLocalError during dep calculations for alternate ROOT).
+  Bug #216231 tracks all bugs fixed since 2.1.4.x.
 
 *portage-2.1.5_rc7 (06 May 2008)
 
