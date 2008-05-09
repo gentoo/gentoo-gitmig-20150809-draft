@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2.ebuild,v 1.2 2008/05/03 19:27:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2.ebuild,v 1.3 2008/05/09 21:02:59 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -64,7 +64,9 @@ src_unpack() {
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
 
-	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
+	# bug #220361
+	rm "${S}"/aclocal.m4 "${S}"/libtool.m4
+	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
 
 	# bug #151839
 	sed -e \
