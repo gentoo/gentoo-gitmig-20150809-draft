@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/kpowersave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.20 2007/11/19 10:08:27 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.21 2008/05/09 22:24:53 maekke Exp $
+
+  09 May 2008; Markus Meier <maekke@gentoo.org> kpowersave-0.7.3.ebuild:
+  amd64 stable, bug #214389
 
   19 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
   kpowersave-0.7.3.ebuild:
