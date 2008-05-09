@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.82 2008/04/04 08:35:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.83 2008/05/09 07:28:40 keri Exp $
+
+  09 May 2008; keri <keri@gentoo.org> mercury-0.12.2-r3.ebuild,
+  mercury-0.12.2-r4.ebuild, mercury-0.13.1.ebuild, mercury-0.13.1-r1.ebuild:
+  Remove redundant calls to cd ${S}
 
   04 Apr 2008; keri <keri@gentoo.org> mercury-0.13.1-r1.ebuild:
   Reduce CFLAGS to those which do not interfere with mdb.
