@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.2 2008/05/09 12:14:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.3 2008/05/09 12:22:06 drac Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -21,7 +21,9 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff
+	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff \
+		"${FILESDIR}"/${P}-implicit-declarations.patch
+
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 		epatch debian/patches
 
@@ -31,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	cd gnu
-	CFLAGS="${CFLAGS}" econf
+	CFLAGS="${CFLAGS} -Wall" econf
 
 	cd "${S}"
 	sed -i -e '/stripgcc/d' GNUmakefile || die "sed failed."
