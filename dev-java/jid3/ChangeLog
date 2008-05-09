@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jid3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.3 2008/03/19 22:06:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.4 2008/05/09 20:58:52 opfer Exp $
+
+  09 May 2008; Christian Faulhammer <opfer@gentoo.org> jid3-0.46.ebuild:
+  stable x86, bug 220191
 
   19 Mar 2008; Vlastimil Babka <caster@gentoo.org> jid3-0.46.ebuild:
   Add ~amd64.
