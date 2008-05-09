@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.1 2008/05/09 12:03:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.2 2008/05/09 12:14:41 drac Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	cd gnu
-	CFLAGS="${CFLAGS} -Wall" econf
+	CFLAGS="${CFLAGS}" econf
 
 	cd "${S}"
 	sed -i -e '/stripgcc/d' GNUmakefile || die "sed failed."
