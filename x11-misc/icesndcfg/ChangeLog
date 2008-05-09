@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icesndcfg
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.21 2007/02/21 23:44:17 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.22 2008/05/09 13:13:39 phosphan Exp $
+
+  09 May 2008; Patrick Kursawe <phosphan@gentoo.org> icesndcfg-1.3.ebuild:
+  QA fixes for bug #220094
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
