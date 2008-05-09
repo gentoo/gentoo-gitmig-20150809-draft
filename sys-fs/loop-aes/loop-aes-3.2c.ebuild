@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2c.ebuild,v 1.3 2008/03/23 22:25:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2c.ebuild,v 1.4 2008/05/09 22:22:35 maekke Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/loop-aes/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="keyscrub padlock"
-KEYWORDS="~amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 
 RDEPEND=">=sys-apps/util-linux-2.12r"
 DEPEND=""
