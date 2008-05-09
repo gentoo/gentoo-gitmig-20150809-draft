@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.7 2008/04/21 01:59:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.8 2008/05/09 07:33:02 dberkholz Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -38,7 +38,7 @@ src_compile() {
 	filter-flags -O -O? -foptimize-sibling-calls -fstack-protector
 	emake \
 		CXX="$(tc-getCXX)" \
-		OPTFLAGS="${CFLAGS}" \
+		OPTFLAGS="${CXXFLAGS}" \
 		DEBUG="" \
 		|| die "emake failed"
 }
