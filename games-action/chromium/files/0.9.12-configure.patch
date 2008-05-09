@@ -1,6 +1,13 @@
---- configure.orig	2003-11-19 19:33:19.947616192 -0500
-+++ configure	2003-11-19 19:35:31.510615576 -0500
-@@ -7,10 +7,6 @@
+--- configure.orig	2008-04-14 20:15:16.000000000 +0200
++++ configure	2008-04-14 20:15:44.000000000 +0200
+@@ -1,18 +1,14 @@
+-#!/bin/sh
++#!/bin/bash
+ 
+ ## Minimum versions of libs
+ ###################################
+ SDL_MIN_VERSION="1.1.6"
+ SMPEG_MIN_VERSION="0.4.2"
  
  ## Defaults
  ###################################
@@ -11,3 +18,5 @@
  
  ## Where do we look for stuff?
  ###################################
+ std_bin_dirs="/usr/bin /usr/X11R6/bin /usr/local/bin $HOME/bin"
+ std_lib_dirs="/usr/lib /usr/X11R6/lib /usr/local/lib $HOME/lib"
