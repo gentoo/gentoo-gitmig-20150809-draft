@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.5 2007/09/09 09:23:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.6 2008/05/09 19:54:22 leio Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -16,6 +16,7 @@ dummy - VIDEO_CARDS setting to build driver for dummy video cards
 epson - VIDEO_CARDS setting to build driver for epson video cards
 fbdev - VIDEO_CARDS setting to build driver for fbdev video cards
 fglrx - VIDEO_CARDS setting to build driver for fglrx video cards
+geode - VIDEO_CARDS setting to build driver for AMD Geode GX and LX video cards
 glint - VIDEO_CARDS setting to build driver for glint video cards
 i128 - VIDEO_CARDS setting to build driver for i128 video cards
 i740 - VIDEO_CARDS setting to build driver for i740 video cards
