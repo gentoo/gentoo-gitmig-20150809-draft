@@ -6,3 +6,4 @@ move media-fonts/skinenigmang-fonts media-fonts/vdrsymbols-ttf
 move sys-fs/cryptsetup-luks sys-fs/cryptsetup
 move sys-fs/fuse-python dev-python/fuse-python
 move app-admin/dirvish app-backup/dirvish
+move x11-drivers/xf86-video-amd x11-drivers/xf86-video-geode
