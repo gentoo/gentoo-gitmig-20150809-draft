@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.17 2007/04/28 16:47:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.18 2008/05/09 01:41:10 halcy0n Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -37,6 +37,8 @@ src_unpack() {
 
 	# Fix gcc 4.1 problems
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	eautoreconf
 }
