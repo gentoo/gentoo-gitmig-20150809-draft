@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xbomb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.14 2008/05/04 15:55:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.15 2008/05/09 14:04:40 armin76 Exp $
+
+  09 May 2008; Raúl Porcel <armin76@gentoo.org> xbomb-2.2.ebuild:
+  ia64 stable wrt #220046
 
   04 May 2008; nixnut <nixnut@gentoo.org> xbomb-2.2.ebuild:
   Stable on ppc wrt bug 220046
