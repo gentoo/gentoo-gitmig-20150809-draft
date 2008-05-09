@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.28 2008/04/27 21:36:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.29 2008/05/09 22:50:51 tupone Exp $
+
+  09 May 2008; Tupone Alfredo <tupone@gentoo.org> cal3d-0.11.0-r1.ebuild:
+  Installing doc on request. Bug #220969 by Richard F. Ostrow Jr.
 
   27 Apr 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/cal3d-0.11.0-gcc43.patch, metadata.xml, cal3d-0.11.0-r1.ebuild:
