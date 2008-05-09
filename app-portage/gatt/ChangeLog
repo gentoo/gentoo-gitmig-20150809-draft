@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.7 2008/05/02 21:38:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.8 2008/05/09 20:17:33 opfer Exp $
+
+  09 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/gatt-0.6.0_gcc-4.3.patch, gatt-0.6.0.ebuild:
+  extended DESCRIPTION, fixed a typo in a message and add patch for GCC 4.3,
+  provided by Hanno Boeck by email
 
   02 May 2008; Markus Meier <maekke@gentoo.org> gatt-0.6.0.ebuild:
   amd64 stable, bug #217020

@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.0.ebuild,v 1.6 2008/05/02 21:38:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.0.ebuild,v 1.7 2008/05/09 20:17:33 opfer Exp $
 
 inherit eutils
 
-DESCRIPTION="Gentoo Arch Testing Tool"
+DESCRIPTION="Gentoo Arch Testing Tool for architecture tester and developer"
 HOMEPAGE="http://gatt.sourceforge.net/
 	http://www.gentoo.org/proj/en/base/x86/at.xml
 	http://www.gentoo.org/proj/en/base/ppc/AT/index.xml
@@ -28,11 +28,17 @@ pkg_setup() {
 	ewarn "Gatt is targeted at Gentoo developers, arch-testers and power users. Do"
 	ewarn "by no means use it if you are new to Gentoo. You have been warned!"
 	ewarn
-	elog "There is a Info manual shipped with some extensive examples".
+	elog "There is an Info manual shipped with some extensive examples".
 	if use libpaludis && ! built_with_use sys-apps/paludis portage; then
 		ewarn "You either have to emerge Paludis with USE=portage enabled or configure"
 		ewarn "it properly before using Gatt with it."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}_gcc-4.3.patch"
 }
 
 src_compile() {

@@ -1,0 +1,32 @@
+--- src/script_generator.cc.1	2008-05-03 20:48:54.000000000 +0200
++++ src/script_generator.cc	2008-05-03 20:49:11.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include "src/script_alike_file.h"
+ #include "src/util/util.h"
+ #include "src/logger.h"
++#include <string.h>
+ #include <sstream>
+ #include <unistd.h>
+ #include <libgen.h>
+--- src/backup_system.cc.1	2008-05-03 20:48:18.000000000 +0200
++++ src/backup_system.cc	2008-05-03 20:48:28.000000000 +0200
+@@ -17,6 +17,8 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++#include <string.h>
++
+ #include "backup_system.h"
+ #include "src/exceptions.h"
+ #include "src/logger.h"
+--- src/exit_status.cc.1	2008-05-03 20:47:49.000000000 +0200
++++ src/exit_status.cc	2008-05-03 20:48:02.000000000 +0200
+@@ -17,6 +17,8 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++#include <sys/wait.h>
++
+ #include "exit_status.h"
+ #include "src/exceptions.h"
+ using namespace std;
