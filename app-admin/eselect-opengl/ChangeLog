@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.34 2007/12/27 23:41:51 eradicator Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.35 2008/05/09 17:06:34 fmccor Exp $
+
+  09 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  eselect-opengl-1.0.6-r1.ebuild:
+  Sparc stable --- Bug #208899 --- It's been fine for 4 months now.
 
   27 Dec 2007; Jeremy Huddleston <eradicator@gentoo.org>
   eselect-opengl-1.0.5.ebuild, eselect-opengl-1.0.6.ebuild,
