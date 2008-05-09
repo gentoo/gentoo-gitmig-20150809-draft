@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libsynaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.9 2008/01/20 18:50:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.10 2008/05/09 12:32:25 trapni Exp $
+
+*libsynaptics-0.14.6c-r1 (09 May 2008)
+
+  09 May 2008; Christian Parpart <trapni@gentoo.org>
+  +files/libsynaptics-0.14.6c-r1-gcc-4-3-0.patch,
+  +libsynaptics-0.14.6c-r1.ebuild:
+  fixes compilation error with GCC 4.3.0 - closes bug 219548
 
   20 Jan 2008; Christoph Mende <angelos@gentoo.org>
   libsynaptics-0.14.6c.ebuild:
