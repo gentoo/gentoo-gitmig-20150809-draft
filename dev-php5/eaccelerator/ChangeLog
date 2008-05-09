@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.18 2008/05/07 16:16:47 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.19 2008/05/09 12:45:41 hoffie Exp $
+
+  09 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  eaccelerator-0.9.5.1.ebuild:
+  explicitly call phpize, not src_unpack (bug 220519)
 
   07 May 2008; Christian Hoffmann <hoffie@gentoo.org>
   eaccelerator-0.9.5.1.ebuild:

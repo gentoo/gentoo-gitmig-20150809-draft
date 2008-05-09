@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.8.1.ebuild,v 1.6 2008/05/07 17:03:50 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.8.1.ebuild,v 1.7 2008/05/09 12:58:12 hoffie Exp $
 
 PHP_EXT_NAME="htscanner"
 PHP_EXT_INI="yes"
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-bug11959.patch
-	php-ext-source-r1_src_unpack
+	php-ext-source-r1_phpize
 }
 
 pkg_setup() {

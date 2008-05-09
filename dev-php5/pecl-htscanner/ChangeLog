@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-htscanner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.6 2008/05/07 17:03:50 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.7 2008/05/09 12:58:12 hoffie Exp $
+
+  09 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  pecl-htscanner-0.8.1.ebuild:
+  explicitly call phpize, not src_unpack (bug 220519)
 
   07 May 2008; Christian Hoffmann <hoffie@gentoo.org>
   pecl-htscanner-0.8.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.1.ebuild,v 1.4 2008/05/07 16:16:47 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.1.ebuild,v 1.5 2008/05/09 12:45:41 hoffie Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -60,7 +60,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-optimize-catch-exceptions.patch
-	php-ext-source-r1_src_unpack
+	php-ext-source-r1_phpize
 }
 
 src_compile() {

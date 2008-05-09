@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/pecl-crack-0.4.ebuild,v 1.9 2008/05/07 16:32:02 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/pecl-crack-0.4.ebuild,v 1.10 2008/05/09 12:50:15 hoffie Exp $
 
 PHP_EXT_NAME="crack"
 PHP_EXT_INI="yes"
@@ -27,5 +27,5 @@ src_unpack() {
 	# Patch for http://pecl.php.net/bugs/bug.php?id=5765
 	epatch "${FILESDIR}/fix-pecl-bug-5765.patch"
 
-	php-ext-source-r1_src_unpack
+	php-ext-source-r1_phpize
 }
