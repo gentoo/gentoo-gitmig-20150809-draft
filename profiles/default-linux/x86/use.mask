@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.40 2008/04/30 11:45:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.41 2008/05/09 20:01:11 leio Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -42,6 +42,7 @@
 -video_cards_fglrx
 -video_cards_vmware
 -video_cards_amd
+-video_cards_geode
 -video_cards_vermilion
 -video_cards_via
 -video_cards_xgi
