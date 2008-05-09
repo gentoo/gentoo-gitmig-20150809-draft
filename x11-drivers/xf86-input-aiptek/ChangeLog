@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-aiptek
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-aiptek/ChangeLog,v 1.29 2008/02/24 02:12:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-aiptek/ChangeLog,v 1.30 2008/05/09 07:16:17 dberkholz Exp $
+
+*xf86-input-aiptek-1.1.1 (09 May 2008)
+
+  09 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-aiptek-1.1.1.ebuild:
+  Bump.
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.
