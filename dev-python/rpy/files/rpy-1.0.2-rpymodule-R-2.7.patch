@@ -10,5 +10,5 @@
      KillAllDevices();
 +#endif
  
- #if (R_VERSION >= R_Version(2,7,0)) 
+ #if (R_VERSION >= R_Version(2,4,0)) 
      R_CleanTempDir();
