@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r4.ebuild,v 1.1 2008/05/08 08:20:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r4.ebuild,v 1.2 2008/05/09 20:03:45 leio Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -51,7 +51,6 @@ IUSE_INPUT_DEVICES="
 	input_devices_synaptics
 	input_devices_wacom"
 IUSE_VIDEO_CARDS="
-	video_cards_amd
 	video_cards_apm
 	video_cards_ark
 	video_cards_chips
@@ -60,6 +59,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_dummy
 	video_cards_epson
 	video_cards_fbdev
+	video_cards_geode
 	video_cards_glint
 	video_cards_i128
 	video_cards_i740
@@ -217,7 +217,6 @@ PDEPEND="
 		input_devices_synaptics? ( x11-drivers/synaptics )
 		input_devices_wacom? ( x11-drivers/linuxwacom )
 
-		video_cards_amd? ( >=x11-drivers/xf86-video-amd-2.7.7.0 )
 		video_cards_apm? ( >=x11-drivers/xf86-video-apm-1.1.1 )
 		video_cards_ark? ( >=x11-drivers/xf86-video-ark-0.6.0 )
 		video_cards_chips? ( >=x11-drivers/xf86-video-chips-1.1.1 )
@@ -225,6 +224,7 @@ PDEPEND="
 		video_cards_cyrix? ( >=x11-drivers/xf86-video-cyrix-1.1.0 )
 		video_cards_dummy? ( >=x11-drivers/xf86-video-dummy-0.2.0 )
 		video_cards_fbdev? ( >=x11-drivers/xf86-video-fbdev-0.2.0 )
+		video_cards_geode? ( >=x11-drivers/xf86-video-geode-2.7.7.0 )
 		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.1.1 )
 		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.2.0 )
 		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.1.0 )

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.325 2008/05/08 08:20:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.326 2008/05/09 20:03:45 leio Exp $
+
+  09 May 2008; Mart Raudsepp <leio@gentoo.org>
+  xorg-server-1.4.0.90-r3.ebuild, xorg-server-1.4.0.90-r4.ebuild:
+  Adapt with xf86-video-amd to xf86-video-geode move.
 
 *xorg-server-1.4.0.90-r4 (08 May 2008)
 
