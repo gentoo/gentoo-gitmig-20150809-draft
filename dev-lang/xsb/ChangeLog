@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.11 2008/02/16 17:39:50 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.12 2008/05/09 07:15:03 keri Exp $
+
+  09 May 2008; keri <keri@gentoo.org> xsb-3.0.1.ebuild:
+  inherit java-pkg-opt-2
 
   16 Feb 2008; keri <keri@gentoo.org> xsb-3.0.1.ebuild, xsb-3.1.ebuild:
   Move eautoconf to src_unpack. Closes #207441.

@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.4 2008/02/16 17:39:50 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.5 2008/05/09 07:15:03 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-${PV}"
 
-inherit eutils autotools
+inherit eutils autotools java-pkg-opt-2
 
 DESCRIPTION="XSB is a logic programming and deductive database system"
 HOMEPAGE="http://xsb.sourceforge.net"
