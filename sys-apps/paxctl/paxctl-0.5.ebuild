@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.5.ebuild,v 1.6 2007/12/11 10:17:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.5.ebuild,v 1.7 2008/05/09 20:54:09 solar Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Manages various PaX related program header flags for Elf32, Elf64, binaries."
 SRC_URI="http://pax.grsecurity.net/paxctl-${PV}.tar.gz"
@@ -16,7 +16,8 @@ DEPEND=">=sys-devel/binutils-2.14.90.0.8-r1"
 RDEPEND=""
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+	tc-export CC
+	emake CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

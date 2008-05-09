@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.27 2007/10/31 03:42:29 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.28 2008/05/09 20:54:09 solar Exp $
+
+  09 May 2008; <solar@gentoo.org> paxctl-0.5.ebuild:
+  - make sure we can cross compile
 
   31 Oct 2007; Jeroen Roovers <jer@gentoo.org> paxctl-0.5.ebuild:
   Stable for HPPA (bug #195234).
