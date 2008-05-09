@@ -1,0 +1,11 @@
+# ChangeLog for x11-drivers/xf86-video-geode
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.1 2008/05/09 19:28:25 leio Exp $
+
+*xf86-video-geode-2.9.0 (09 May 2008)
+
+  09 May 2008; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +xf86-video-geode-2.9.0.ebuild:
+  Add renamed AMD Geode GX and LX video driver. This is a pkgmove with a
+  version bump over xf86-video-amd-2.7.7.7, as noted in bug 217301
+
