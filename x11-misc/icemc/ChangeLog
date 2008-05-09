@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icemc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.24 2007/02/09 06:20:30 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.25 2008/05/09 13:05:32 phosphan Exp $
+
+  09 May 2008; Patrick Kursawe <phosphan@gentoo.org> icemc-2.1-r1.ebuild:
+  QA fixes for bug #220094
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
