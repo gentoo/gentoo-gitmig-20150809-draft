@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlogo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.15 2007/02/22 00:18:48 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.16 2008/05/09 07:30:23 dberkholz Exp $
+
+  09 May 2008; Donnie Berkholz <dberkholz@gentoo.org>; xlogo-1.0.1.ebuild:
+  (#204660) Fix build by passing in --with-render.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

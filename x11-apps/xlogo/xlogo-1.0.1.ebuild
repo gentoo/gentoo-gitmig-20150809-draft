@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.1.ebuild,v 1.6 2006/10/10 23:55:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.1.ebuild,v 1.7 2008/05/09 07:30:23 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -19,4 +19,4 @@ RDEPEND="x11-libs/libXrender
 #	xprint? ( x11-libs/libXprintUtil )"
 DEPEND="${RDEPEND}"
 
-#CONFIGURE_OPTIONS="$(use_enable xprint)"
+CONFIGURE_OPTIONS="--with-render"
