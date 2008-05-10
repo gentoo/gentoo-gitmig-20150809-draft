@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.3 2008/05/07 20:43:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.4 2008/05/10 11:47:06 nixnut Exp $
 
 NEED_AUTOCONF="latest"
 NEED_AUTOMAKE="latest"
 
 inherit autotools eutils
 
-KEYWORDS="amd64 ~ppc ~s390 x86"
+KEYWORDS="amd64 ppc ~s390 x86"
 
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations."
 HOMEPAGE="http://log4cpp.sourceforge.net/"
