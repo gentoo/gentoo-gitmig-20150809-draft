@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.1 2008/05/10 20:17:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.2 2008/05/10 21:45:18 nelchael Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib autotools
 DESCRIPTION="A fast Servlet 2.5 and JSP 2.0 engine."
 HOMEPAGE="http://www.caucho.com"
 SRC_URI="http://www.caucho.com/download/${P}-src.zip
-	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"
+	mirror://gentoo/resin-gentoo-patches-${PV}-1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="admin"
@@ -103,7 +103,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	dodir /etc/
-	mv "${D}/${RESIN_HOME}/conf" "${D}/etc/resin"
+	mv "${D}/${RESIN_HOME}/conf" "${D}/etc/resin" || die "mv of conf failed"
 	dosym /etc/resin ${RESIN_HOME}/conf
 
 	keepdir /var/log/resin
@@ -125,7 +125,8 @@ src_install() {
 	dosym /var/log/resin /usr/share/resin/log
 
 	dodir /var/lib/resin/webapps
-	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps"
+	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps" || \
+		die "mv of webapps failed"
 	rm -rf "${D}/${RESIN_HOME}/webapps"
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
 

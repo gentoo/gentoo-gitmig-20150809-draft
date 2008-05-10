@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.70 2008/05/10 20:17:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.71 2008/05/10 21:45:18 nelchael Exp $
+
+  10 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.1.6.ebuild:
+  Use revision 1 of patches.
 
 *resin-3.1.6 (10 May 2008)
 
