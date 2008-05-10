@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.5.ebuild,v 1.1 2008/05/03 18:08:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.5.ebuild,v 1.2 2008/05/10 21:41:50 grozin Exp $
 
 WX_GTK_VER="2.8"
 inherit eutils fdo-mime wxwidgets
@@ -14,6 +14,12 @@ IUSE="doc examples"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DEPEND=">=x11-libs/wxGTK-2.8.7
 	dev-util/desktop-file-utils"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}.patch
+}
 
 src_compile() {
 	# extrema cannot be compiled with versions of minuit
@@ -36,13 +42,13 @@ src_install() {
 	dodoc AUTHORS ChangeLog || die "dodoc failed"
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins doc/*
+		doins doc/*.pdf
 	fi
 
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
 		insinto /usr/share/doc/${PF}/examples
-		doins Scripts/*
+		doins Scripts/*.pcm Scripts/*.dat
 	fi
 }
 
