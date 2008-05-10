@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.7 2008/03/03 23:31:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.8 2008/05/10 15:29:22 armin76 Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 sparc x86"
 IUSE="debug devhelp doc glade inherit-graph sourceview subversion valgrind"
 
 RDEPEND=">=dev-libs/glib-2.8.0
