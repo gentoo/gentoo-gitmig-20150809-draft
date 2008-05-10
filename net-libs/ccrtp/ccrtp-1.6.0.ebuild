@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.1.ebuild,v 1.3 2008/05/10 10:03:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.6.0.ebuild,v 1.1 2008/05/10 10:03:57 dragonheart Exp $
 
 inherit multilib eutils
 
@@ -33,8 +33,9 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -e "${ROOT}"/usr/$(get_libdir)/libccrtp1-1.4.so.0 ]] ; then
-		elog
 		elog "Please run: revdep-rebuild --library libccrtp1-1.4.so.0"
-		elog
+	fi
+	if [[ -e "${ROOT}"/usr/$(get_libdir)/libccrtp1-1.5.so.0 ]] ; then
+		elog "Please run: revdep-rebuild --library libccrtp1-1.5.so.0"
 	fi
 }

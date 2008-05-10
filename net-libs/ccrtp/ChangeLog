@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/ccrtp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.13 2007/08/15 23:52:24 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.14 2008/05/10 10:03:57 dragonheart Exp $
+
+*ccrtp-1.6.0 (01 May 2008)
+
+  01 May 2008; Daniel Black <dragonheart@gentoo.org>
+  +files/ccrtp-stdlib.patch, -ccrtp-1.4.1.ebuild, ccrtp-1.5.0.ebuild,
+  ccrtp-1.5.1.ebuild, +ccrtp-1.6.0.ebuild:
+  version bump. Patch for stdlib to defile rand as per bug #219102 fixes
+  gcc-4.3 compilation error thanks to Redeeman
 
   15 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> ccrtp-1.5.0.ebuild:
   ppc stable, bug #182353

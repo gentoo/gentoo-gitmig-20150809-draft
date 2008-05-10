@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.0.ebuild,v 1.6 2007/08/15 23:52:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.0.ebuild,v 1.7 2008/05/10 10:03:57 dragonheart Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="GNU ccRTP is an implementation of RTP, the real-time transport protocol from the IETF"
 HOMEPAGE="http://www.gnu.org/software/ccrtp/"
@@ -18,6 +18,12 @@ RDEPEND=">=dev-cpp/commoncpp2-1.3.0
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-stdlib.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
