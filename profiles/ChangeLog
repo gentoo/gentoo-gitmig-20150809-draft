@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1396 2008/05/10 11:13:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1397 2008/05/10 17:11:30 jer Exp $
+
+  10 May 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Tweak www-client/opera beta2 mask.
 
   10 May 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask xemacs-packages-sumo as per bug 23949
