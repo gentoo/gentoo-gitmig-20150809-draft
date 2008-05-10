@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.5_rc9.ebuild,v 1.1 2008/05/09 20:30:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.5_rc10.ebuild,v 1.1 2008/05/10 09:15:38 zmedico Exp $
 
-inherit toolchain-funcs eutils flag-o-matic multilib
+inherit eutils multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -83,11 +83,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-lfs-flags
-
 	cd "${S}"/src
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
-		die "Failed to build tbz2tool"
 
 	if use doc; then
 		cd "${S}"/doc
@@ -144,7 +140,6 @@ src_install() {
 	fi
 	cd "${S}"/bin
 	doexe *
-	doexe "${S}"/src/tbz2tool
 	dosym newins ${portage_base}/bin/donewins
 
 	local mydir
@@ -168,7 +163,7 @@ src_install() {
 
 	dodir /usr/bin
 	local x
-	for x in ebuild emerge portageq repoman tbz2tool xpak; do
+	for x in ebuild emerge portageq repoman xpak; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 
@@ -211,9 +206,7 @@ pkg_preinst() {
 	local portage_base="/usr/$(get_libdir)/portage"
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then
 		rm -rf "${D}"/${portage_base}/pym/*
-		mv "${D}"/${portage_base}/bin/tbz2tool "${T}"
 		rm -rf "${D}"/${portage_base}/bin/*
-		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
 	fi
 }
 
