@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1397 2008/05/10 17:11:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1398 2008/05/10 19:41:30 leio Exp $
+
+  10 May 2008; Mart Raudsepp <leio@gentoo.org> arch/sparc/package.mask,
+  arch/x86/use.mask, base/use.mask, default-linux/x86/use.mask,
+  selinux/package.mask:
+  Remove video_cards_amd USE flag handling as it is called video_cards_geode now
 
   10 May 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera beta2 mask.
