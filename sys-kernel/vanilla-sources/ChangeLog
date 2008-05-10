@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.463 2008/05/10 09:46:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.464 2008/05/10 11:05:04 klausman Exp $
+
+  10 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  vanilla-sources-2.6.26_rc1.ebuild:
+  Doesn't compile on alpha due to regression (missing typedef). Fixed in
+  .26-rc1-git7.
 
 *vanilla-sources-2.6.25.3 (10 May 2008)
 
