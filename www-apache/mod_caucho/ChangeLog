@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.36 2008/05/10 20:18:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.37 2008/05/10 21:47:48 nelchael Exp $
+
+  10 May 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  mod_caucho-3.1.6.ebuild:
+  Use revision 1 of patches.
 
 *mod_caucho-3.1.6 (10 May 2008)
 
