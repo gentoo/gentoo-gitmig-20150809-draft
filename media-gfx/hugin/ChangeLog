@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.38 2008/05/02 11:46:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.39 2008/05/10 11:41:32 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org> hugin-0.7_beta4-r1.ebuild:
+  Also apply gcc-4.3 patch to hugin-0.7_beta4-r1.
 
   02 May 2008; Markus Meier <maekke@gentoo.org>
   +files/hugin-0.6.1-gcc43.patch, hugin-0.6.1-r2.ebuild:

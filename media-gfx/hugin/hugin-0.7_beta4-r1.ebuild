@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7_beta4-r1.ebuild,v 1.3 2008/03/09 13:51:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7_beta4-r1.ebuild,v 1.4 2008/05/10 11:41:32 vapier Exp $
 
 inherit wxwidgets eutils autotools libtool
 
@@ -50,6 +50,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-insec-file.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-0.6.1-gcc43.patch"
 
 	AT_M4DIR="${S}/m4" eautoreconf
 }
