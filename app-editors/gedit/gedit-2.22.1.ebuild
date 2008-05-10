@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.1.ebuild,v 1.1 2008/04/10 21:29:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.1.ebuild,v 1.2 2008/05/10 18:27:46 remi Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -69,11 +69,14 @@ src_unpack() {
 	# Make libattr optional; bug #191989
 	epatch "${FILESDIR}"/${PN}-2.20.3-libattr.patch
 
+	# fixes failing python test due to libtool 2.2, bug #216110
+	epatch "${FILESDIR}/${PN}-2.22.1-fix-libtool-2.2.patch"
+
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
 
-	AT_M4DIR="m4" eautoreconf
+	eautoreconf
 }
 
 pkg_postinst() {

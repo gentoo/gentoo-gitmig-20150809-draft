@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.239 2008/04/10 21:29:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.240 2008/05/10 18:27:46 remi Exp $
+
+  10 May 2008; Rémi Cardona <remi@gentoo.org>
+  +files/gedit-2.22.1-fix-libtool-2.2.patch, gedit-2.22.1.ebuild:
+  Add a patch for python detection with libtool 2.2 (see bug #216110)
 
 *gedit-2.22.1 (10 Apr 2008)
 
