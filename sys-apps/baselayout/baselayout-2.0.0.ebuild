@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.4 2008/04/19 06:22:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.5 2008/05/10 10:03:38 vapier Exp $
 
 inherit multilib
 
@@ -49,8 +49,9 @@ pkg_preinst() {
 			ln -s "${lib}" "${ROOT}usr/local/lib"
 		fi
 
-		emake -C "${T}" $(make_opts) DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
+		emake -C "${D}/usr/share/${PN}" DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
 	fi
+	rm -f "${D}"/usr/share/${PN}/Makefile
 }
 
 src_install() {
@@ -63,6 +64,10 @@ src_install() {
 		DESTDIR="${D}" \
 		install || die
 	dodoc ChangeLog
+
+	# need the makefile in pkg_preinst
+	insinto /usr/share/${PN}
+	doins Makefile || die
 
 	# Should this belong in another ebuild? Like say binutils?
 	# List all the multilib libdirs in /etc/env/04multilib (only if they're
