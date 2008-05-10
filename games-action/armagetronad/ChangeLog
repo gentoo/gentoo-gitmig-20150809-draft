@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.11 2006/10/30 03:38:24 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.12 2008/05/10 10:59:10 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/armagetronad-0.2.7.1-gcc43.patch, armagetronad-0.2.7.1-r1.ebuild:
+  Add fix by Martin Väth for building with gcc-4.3 #218542.
 
   30 Oct 2006; Mike Frysinger <vapier@gentoo.org> files/armagetronad,
   files/armagetronad-ded, armagetronad-0.2.7.1-r1.ebuild:

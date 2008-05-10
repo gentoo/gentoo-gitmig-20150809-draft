@@ -1,0 +1,415 @@
+http://bugs.gentoo.org/218542
+
+--- src/engine/eAdvWall.h
++++ src/engine/eAdvWall.h
+@@ -5,7 +5,7 @@
+ ArmageTron -- Just another Tron Lightcycle Game in 3D.
+ Copyright (C) 2000  Manuel Moos (manuel@moosnet.de)
+ #include <stdio>
+-#include <stdlib.h> 
++#include <cstdlib> 
+ **************************************************************************
+ 
+ This program is free software; you can redistribute it and/or
+--- src/engine/eFloor.cpp
++++ src/engine/eFloor.cpp
+@@ -28,7 +28,7 @@
+ #include "eFloor.h"
+ #include "rScreen.h"
+ #include "rTexture.h"
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ eFloor::eFloor(){Floor = this;}
+ 
+--- src/engine/eSound.cpp
++++ src/engine/eSound.cpp
+@@ -36,7 +36,7 @@
+ #include "eCamera.h"
+ //#include "tList.h"
+ #include <iostream>
+-#include <stdlib.h>
++#include <cstdlib>
+ #include "eGrid.h"
+ 
+ //eGrid* eSoundPlayer::S_Grid = NULL;
+--- src/network/md5.cpp
++++ src/network/md5.cpp
+@@ -77,6 +77,7 @@
+ #include "md5.h"
+ 
+ #include <string>
++#include <cstring>
+ #include <memory>
+ 
+ #ifdef TEST
+--- src/network/nAuthentification.cpp
++++ src/network/nAuthentification.cpp
+@@ -35,6 +35,7 @@
+ 
+ #include <memory>
+ #include <string>
++#include <cstring>
+ 
+ static nAuthentification::UserPasswordCallback* S_UserPasswordCallback = NULL;
+ static nAuthentification::LoginResultCallback*  S_LoginResultCallback  = NULL;
+--- src/network/nConfig.cpp
++++ src/network/nConfig.cpp
+@@ -27,6 +27,7 @@
+ 
+ #include "nConfig.h"
+ #include "tConsole.h"
++#include <cstring>
+ 
+ nConfItemBase::nConfItemBase()
+         :tConfItemBase(""){};
+--- src/network/nKrawall.cpp
++++ src/network/nKrawall.cpp
+@@ -41,7 +41,8 @@
+ #include "tSysTime.h"
+ #include "tMemManager.h"
+ 
+-#include <stdlib.h>
++#include <cstdlib>
++#include <cstring>
+ #include <string>
+ 
+ bool nKrawall::MayRequirePassword(tString& adress, unsigned int port)
+--- src/network/nNet.h
++++ src/network/nNet.h
+@@ -25,7 +25,7 @@
+ #ifndef NET_ANET_H
+ #define NET_ANET_H
+ 
+-#include <stdlib.h>
++#include <cstdlib>
+ #include <sys/types.h>
+ 
+ #ifndef WIN32
+--- src/network/nNetwork.cpp
++++ src/network/nNetwork.cpp
+@@ -34,7 +34,7 @@
+ #include "tDirectories.h"
+ #include "nNet.h"
+ #include "tSysTime.h"
+-#include <stdlib.h>
++#include <cstdlib>
+ #include <fstream>
+ #include <tMath.h>
+ 
+--- src/network/nServerInfo.cpp
++++ src/network/nServerInfo.cpp
+@@ -42,6 +42,7 @@
+ #include "nNet.h"
+ 
+ #include <fstream>
++#include <cstring>
+ 
+ static nServerInfo*          sn_FirstServer = NULL;
+ static sn_ServerInfoCreator* sn_Creator     = NULL;
+--- src/network/net_udp.cpp
++++ src/network/net_udp.cpp
+@@ -24,7 +24,8 @@
+ #include "nNet.h"
+ 
+ #include <string>
+-#include <stdio.h>
++#include <cstring>
++#include <cstdio>
+ 
+ #include <sys/types.h>
+ 
+@@ -60,7 +61,7 @@
+ 
+ 
+ #include <errno.h>
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ 
+ #ifdef __sun__
+--- src/network/net_wins.cpp
++++ src/network/net_wins.cpp
+@@ -30,8 +30,8 @@
+ #include <winsock.h>
+ #include <sys/timeb.h> 
+ #endif
+-#include <stdlib.h> 
+-#include <stdio.h> 
++#include <cstdlib> 
++#include <cstdio> 
+ 
+ #include "tString.h"
+ #include "nNet.h"
+--- src/render/rConsoleCout.cpp
++++ src/render/rConsoleCout.cpp
+@@ -29,7 +29,7 @@
+ #include "rFont.h"
+ #include "tConfiguration.h"
+ 
+-#include <stdio.h>
++#include <cstdio>
+ #include <fcntl.h>
+ #include <sstream>
+ 
+--- src/render/rFont.cpp
++++ src/render/rFont.cpp
+@@ -28,7 +28,8 @@
+ #include "rFont.h"
+ #include "rScreen.h"
+ #include "tConfiguration.h"
+-#include <ctype.h>
++#include <cctype>
++#include <cstring>
+ 
+ #ifndef DEDICATED
+ #include "rRender.h"
+--- src/render/rModel.cpp
++++ src/render/rModel.cpp
+@@ -26,8 +26,9 @@
+ */
+ 
+ #include <string>
++#include <cstring>
+ #include <fstream>
+-#include <stdlib.h>
++#include <cstdlib>
+ #include "rScreen.h"
+ #include "rModel.h"
+ #include "tString.h"
+--- src/render/testgl.cpp
++++ src/render/testgl.cpp
+@@ -1,5 +1,5 @@
+-#include <stdlib.h>
+-#include <stdio.h>
++#include <cstdlib>
++#include <cstdio>
+ #include <string>
+ 
+ #include "rSDL.h"
+--- src/tools/tArray.cpp
++++ src/tools/tArray.cpp
+@@ -29,8 +29,9 @@
+ 
+ #include "tMemManager.h"
+ #include <iostream>
+-#include <stdlib.h>
++#include <cstdlib>
+ #include <string>
++#include <cstring>
+ #include "tArray.h"
+ 
+ void GrowingArrayBase::ComplainIfFull(){
+--- src/tools/tConfiguration.cpp
++++ src/tools/tConfiguration.cpp
+@@ -29,8 +29,9 @@
+ #include <iomanip>
+ #include <iostream>
+ #include "tConfiguration.h"
+-#include <stdlib.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cctype>
++#include <cstring>
+ #include <string>
+ #include "tString.h"
+ #include "tToDo.h"
+--- src/tools/tConfiguration.h
++++ src/tools/tConfiguration.h
+@@ -35,7 +35,7 @@
+ #include "tConsole.h"
+ #include "tLocale.h"
+ #include <iostream>
+-#include <ctype.h>
++#include <cctype>
+ 
+ 
+ class tConfItemBase:public tListItem<tConfItemBase>{
+--- src/tools/tCrypt.cpp
++++ src/tools/tCrypt.cpp
+@@ -29,6 +29,7 @@
+ #include "tMemManager.h"
+ 
+ #include <string>
++#include <cstring>
+ 
+ class tCryptDummy: public tCrypt
+ {
+--- src/tools/tDirectories.cpp
++++ src/tools/tDirectories.cpp
+@@ -36,6 +36,7 @@
+ #include <windows.h>
+ #endif
+ 
++#include <cstring>
+ #include <dirent.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+--- src/tools/tError.cpp
++++ src/tools/tError.cpp
+@@ -25,6 +25,7 @@
+ 
+ */
+ 
++#include <cstdlib>
+ #include <iostream>
+ #ifndef WIN32
+ #include <unistd.h>
+--- src/tools/tLinkedList.h
++++ src/tools/tLinkedList.h
+@@ -28,7 +28,7 @@
+ #ifndef ArmageTron_tLinkedList_H
+ #define ArmageTron_tLinkedList_H
+ 
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ class tListItemBase{
+ protected:
+--- src/tools/tList.h
++++ src/tools/tList.h
+@@ -31,7 +31,7 @@
+ #include "tArray.h"
+ #include "tSafePTR.h"
+ #include <new>
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ namespace referencing
+ {
+--- src/tools/tLocale.cpp
++++ src/tools/tLocale.cpp
+@@ -32,6 +32,7 @@
+ 
+ #include <fstream>
+ #include <string>
++#include <cstring>
+ 
+ class tLocaleSubItem; // identifies a single string in a single language
+ 
+--- src/tools/tMemManager.cpp
++++ src/tools/tMemManager.cpp
+@@ -29,7 +29,7 @@
+ 
+ #include <iostream>
+ #include <sstream>
+-#include <stdio.h>  // need basic C IO since STL IO does memory management
++#include <cstdio>  // need basic C IO since STL IO does memory management
+ #include "tMemManager.h"
+ #include "tError.h"
+ 
+--- src/tools/tMemManager.h
++++ src/tools/tMemManager.h
+@@ -37,7 +37,7 @@
+ //#endif
+ #endif
+ 
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ class tMemMan{
+ public:
+--- src/tools/tMemStack.cpp
++++ src/tools/tMemStack.cpp
+@@ -27,7 +27,7 @@
+ 
+ #include "tMemStack.h"
+ #include "tArray.h"
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ static int& ST_Size()
+ 
+--- src/tools/tString.cpp
++++ src/tools/tString.cpp
+@@ -28,7 +28,8 @@
+ #include "tMemManager.h"
+ #include "tString.h"
+ #include "tLocale.h"
+-#include <ctype.h>
++#include <cctype>
++#include <cstring>
+ #include <string>
+ #include <iostream>
+ 
+--- src/tools/transfab.cpp
++++ src/tools/transfab.cpp
+@@ -26,7 +26,7 @@
+ */
+ 
+ #include <iostream>
+-#include <ctype.h>
++#include <cctype>
+ #include <string>
+ 
+ int main(){
+--- src/tron/gAIBase.cpp
++++ src/tron/gAIBase.cpp
+@@ -40,7 +40,7 @@
+ #include "eDebugLine.h"
+ #include "gAICharacter.h"
+ #include "tReferenceHolder.h"
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ #define AI_REACTION          0 
+ #define AI_EMERGENCY         1 
+--- src/tron/gArmagetron.cpp
++++ src/tron/gArmagetron.cpp
+@@ -48,8 +48,8 @@
+ #include "gAICharacter.h"
+ #include "gCycle.h"
+ //#include <unistd>
+-#include <stdio.h>
+-#include <stdlib.h> 
++#include <cstdio>
++#include <cstdlib> 
+ #include <fstream>
+ 
+ #include "nServerInfo.h"
+--- src/tron/gCycle.cpp
++++ src/tron/gCycle.cpp
+@@ -46,7 +46,7 @@
+ #include "gAIBase.h"
+ 
+ #include "tMath.h"
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ #ifndef DEDICATED
+ #include "rRender.h"
+--- src/tron/gGame.cpp
++++ src/tron/gGame.cpp
+@@ -66,10 +66,10 @@
+ #include "eVoter.h"
+ 
+ #include <math.h>
+-#include <stdlib.h>
++#include <cstdlib>
+ #include <string>
+ #include <fstream>
+-#include <ctype.h>
++#include <cctype>
+ #include <time.h>
+ 
+ #ifdef DEDICATED
+@@ -3586,7 +3586,7 @@
+ }
+ 
+ #include <fcntl.h> 
+-#include <stdio.h> 
++#include <cstdio> 
+ #include <errno.h> 
+ 
+ bool GameLoop(bool input=true){
+--- src/tron/gWall.h
++++ src/tron/gWall.h
+@@ -5,7 +5,7 @@
+ ArmageTron -- Just another Tron Lightcycle Game in 3D.
+ Copyright (C) 2000  Manuel Moos (manuel@moosnet.de)
+ #include <stdio>
+-#include <stdlib.h> 
++#include <cstdlib> 
+ **************************************************************************
+ 
+ This program is free software; you can redistribute it and/or

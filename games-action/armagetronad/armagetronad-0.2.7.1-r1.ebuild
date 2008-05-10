@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.6 2007/04/05 23:58:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.7 2008/05/10 10:59:10 vapier Exp $
 
 inherit eutils games
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch #218542
 	epatch "${FILESDIR}"/${P}-security-1.patch
 	cp "${FILESDIR}"/${PN}-ded "${FILESDIR}"/${PN} . || die
 	sed -i \
