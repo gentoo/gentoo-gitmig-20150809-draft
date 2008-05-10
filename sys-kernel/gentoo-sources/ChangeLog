@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.517 2008/05/10 19:24:05 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.518 2008/05/10 21:10:08 dsd Exp $
+
+*gentoo-sources-2.6.25-r3 (10 May 2008)
+
+  10 May 2008; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.25-r3.ebuild:
+  Update to Linux 2.6.25.3. Fix numlock emulation on Apple Aluminium
+  keyboards.
 
 *gentoo-sources-2.6.24-r8 (10 May 2008)
 
