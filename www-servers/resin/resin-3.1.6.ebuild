@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.5.ebuild,v 1.2 2008/04/08 07:55:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.1 2008/05/10 20:17:00 nelchael Exp $
 
 EAPI="1"
 
