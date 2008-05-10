@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.17 2008/05/09 13:59:10 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.18 2008/05/10 09:14:27 nixnut Exp $
+
+  10 May 2008; nixnut <nixnut@gentoo.org> grc-1.1.ebuild:
+  Stable on ppc wrt bug 214937
 
   09 May 2008; Santiago M. Mola <coldwind@gentoo.org> grc-1.1.ebuild:
   amd64 stable wrt bug #214937
