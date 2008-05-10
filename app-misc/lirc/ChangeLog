@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.177 2008/05/05 10:02:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.178 2008/05/10 00:37:12 beandog Exp $
+
+*lirc-0.8.3-r1 (10 May 2008)
+
+  10 May 2008; Steve Dibb <beandog@gentoo.org> +lirc-0.8.3-r1.ebuild:
+  Check for MODULE_UNLOAD in kernel
 
   05 May 2008; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.3.ebuild:
   Adding hack to stop portage from deleting lircd.conf.
