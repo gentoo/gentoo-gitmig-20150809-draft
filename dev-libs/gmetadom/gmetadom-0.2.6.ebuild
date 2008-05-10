@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.6.ebuild,v 1.1 2008/01/17 15:08:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.6.ebuild,v 1.2 2008/05/10 03:36:34 halcy0n Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -31,6 +31,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
