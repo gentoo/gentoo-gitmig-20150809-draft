@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37.ebuild,v 1.4 2007/09/13 13:31:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37.ebuild,v 1.5 2008/05/10 03:27:27 halcy0n Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -29,6 +29,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.5.35-sysportaudio.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	sed -i -e "s/CCC/#CCC/" configure.ac
 
 	eautoreconf
