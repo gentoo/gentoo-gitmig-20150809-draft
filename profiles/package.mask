@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8565 2008/05/10 09:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8566 2008/05/10 11:01:25 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (10 May 2008)
+# LessTif is unsupported since it has open issues with several packages.
+# See bug 193505 and bug 204249. You are at your own here.
+x11-libs/lesstif
 
 # Mike Frysinger <vapier@gentoo.org> (10 May 2008)
 # Wait for the # of broken packages to go back down #212763
@@ -467,10 +472,6 @@ www-apps/xoops
 # These are not yet stable.
 >=sys-fs/dazuko-2.3.5_pre
 sys-fs/redirfs
-
-# Ulrich Mueller <ulm@gentoo.org> (22 Feb 2008)
-# lesstif is not installable, can mask it as well.
-x11-libs/lesstif
 
 # Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
 # Mask KDE4 versions of ktorrent as long as KDE4 is masked.
