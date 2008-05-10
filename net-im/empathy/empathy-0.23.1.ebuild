@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.23.1.ebuild,v 1.1 2008/05/01 14:56:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.23.1.ebuild,v 1.2 2008/05/10 22:04:29 tester Exp $
 
 inherit gnome2 eutils versionator
 
@@ -54,13 +54,6 @@ src_unpack() {
 
 	# Remove hard enabled -Werror (see AM_MAINTAINER_MODE), bug 218687
 	sed -i "s:-Werror::g" configure || die "sed failed"
-}
-
-src_install() {
-	gnome2_src_install
-	make_desktop_entry "${PN}" "Empathy" \
-		"/usr/share/icons/hicolor/scalable/apps/${PN}.svg" \
-		"Network;InstantMessaging"
 }
 
 pkg_postinst() {
