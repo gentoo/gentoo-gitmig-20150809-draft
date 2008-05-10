@@ -1,6 +1,10 @@
 # ChangeLog for games-server/monopd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.19 2008/02/09 04:30:00 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.20 2008/05/10 11:12:08 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/monopd-0.9.3-gcc43.patch, monopd-0.9.3-r1.ebuild:
+  Add fix from Debian for building with gcc-4.3 #218833 by Peter Alfredsen.
 
   09 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   files/monopd-0.9.3-dosfix.patch:
