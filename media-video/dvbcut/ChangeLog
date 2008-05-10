@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvbcut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.9 2007/11/23 22:57:07 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.10 2008/05/10 15:11:07 zzam Exp $
+
+  10 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbcut-0.5.4-ffmpeg-0.4.9_p20080326.diff, dvbcut-0.5.4-r1.ebuild:
+  Fix compile with new ffmpeg header locations, Bug #218101.
 
   23 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   +files/dvbcut-0.5.4-avformat-api-changes.patch, dvbcut-0.5.4-r1.ebuild:

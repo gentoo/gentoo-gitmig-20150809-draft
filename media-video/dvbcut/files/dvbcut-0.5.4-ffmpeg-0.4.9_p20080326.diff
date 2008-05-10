@@ -1,0 +1,112 @@
+diff -ru dvbcut-0.5.4-orig/src/avframe.h dvbcut-0.5.4/src/avframe.h
+--- dvbcut-0.5.4-orig/src/avframe.h	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/avframe.h	2008-05-10 16:54:14.084008546 +0200
+@@ -20,9 +20,9 @@
+ #define _DVBCUT_AVFRAME_H
+ 
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ #ifdef HAVE_LIB_SWSCALE
+-#include <ffmpeg/swscale.h>
++#include <libswscale/swscale.h>
+ #endif
+ }
+ 
+diff -ru dvbcut-0.5.4-orig/src/lavfmuxer.cpp dvbcut-0.5.4/src/lavfmuxer.cpp
+--- dvbcut-0.5.4-orig/src/lavfmuxer.cpp	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/lavfmuxer.cpp	2008-05-10 16:55:13.324030353 +0200
+@@ -17,7 +17,7 @@
+ */
+ 
+ extern "C" {
+-#include <ffmpeg/avformat.h>
++#include <libavformat/avformat.h>
+ }
+ #include <string.h>
+ #include <utility>
+diff -ru dvbcut-0.5.4-orig/src/lavfmuxer.h dvbcut-0.5.4/src/lavfmuxer.h
+--- dvbcut-0.5.4-orig/src/lavfmuxer.h	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/lavfmuxer.h	2008-05-10 16:55:43.134010915 +0200
+@@ -20,7 +20,7 @@
+ #define _DVBCUT_LAVFMUXER_H
+ 
+ extern "C" {
+-#include <ffmpeg/avformat.h>
++#include <libavformat/avformat.h>
+ }
+ #include "mpgfile.h"
+ #include "muxer.h"
+diff -ru dvbcut-0.5.4-orig/src/main.cpp dvbcut-0.5.4/src/main.cpp
+--- dvbcut-0.5.4-orig/src/main.cpp	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/main.cpp	2008-05-10 16:58:17.424008441 +0200
+@@ -28,7 +28,7 @@
+ 
+ #include <qapplication.h>
+ extern "C" {
+-#include <ffmpeg/avformat.h>
++#include <libavformat/avformat.h>
+ }
+ #include <qimage.h>
+ #include <qsettings.h>
+diff -ru dvbcut-0.5.4-orig/src/mpgfile.h dvbcut-0.5.4/src/mpgfile.h
+--- dvbcut-0.5.4-orig/src/mpgfile.h	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/mpgfile.h	2008-05-10 16:55:03.334007370 +0200
+@@ -20,7 +20,7 @@
+ #define _DVBCUT_MPGFILE_H
+ 
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ }
+ 
+ #include <string>
+diff -ru dvbcut-0.5.4-orig/src/playaudio.cpp dvbcut-0.5.4/src/playaudio.cpp
+--- dvbcut-0.5.4-orig/src/playaudio.cpp	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/playaudio.cpp	2008-05-10 16:58:26.614013343 +0200
+@@ -20,7 +20,7 @@
+ #include <stdio.h>
+ #include <ao/ao.h>
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ }
+ 
+ #include "playaudio.h"
+diff -ru dvbcut-0.5.4-orig/src/psfile.cpp dvbcut-0.5.4/src/psfile.cpp
+--- dvbcut-0.5.4-orig/src/psfile.cpp	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/psfile.cpp	2008-05-10 16:58:44.414009258 +0200
+@@ -21,7 +21,7 @@
+ #include "stream.h"
+ 
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ }
+ 
+ psfile::psfile(const std::string &filename, inbuffer &b, int initial_offset)
+diff -ru dvbcut-0.5.4-orig/src/streamdata.h dvbcut-0.5.4/src/streamdata.h
+--- dvbcut-0.5.4-orig/src/streamdata.h	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/streamdata.h	2008-05-10 16:54:54.624010142 +0200
+@@ -22,7 +22,7 @@
+ #include <string>
+ #include <list>
+ extern "C" {
+-#include <ffmpeg/avformat.h>
++#include <libavformat/avformat.h>
+ }
+ 
+ #include "port.h"
+diff -ru dvbcut-0.5.4-orig/src/tsfile.cpp dvbcut-0.5.4/src/tsfile.cpp
+--- dvbcut-0.5.4-orig/src/tsfile.cpp	2008-05-10 16:53:51.834017093 +0200
++++ dvbcut-0.5.4/src/tsfile.cpp	2008-05-10 16:58:35.974008055 +0200
+@@ -23,7 +23,7 @@
+ #include <utility>
+ 
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ }
+ 
+ tsfile::tsfile(const std::string &filename, inbuffer &b, int initial_offset)
+
