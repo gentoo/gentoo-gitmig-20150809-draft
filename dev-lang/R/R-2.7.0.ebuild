@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.0.ebuild,v 1.1 2008/04/23 17:36:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.0.ebuild,v 1.2 2008/05/10 15:01:59 markusle Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -61,6 +61,10 @@ src_compile() {
 		-e "s:../../library:../../../../$(get_libdir)/R/library:g" \
 		src/library/tools/R/packageshtml.R \
 		|| die "sed failed"
+
+	# fix Rscript patch
+	sed -e "s:-DR_HOME='\"\$(rhome)\"':-DR_HOME='\"/usr/lib/${PN}/\"':" \
+		-i src/unix/Makefile.in || die "sed failed"
 
 	use lapack && \
 		export LAPACK_LIBS="$(pkg-config --libs lapack)"
