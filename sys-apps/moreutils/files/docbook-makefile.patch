@@ -1,0 +1,36 @@
+diff -Naur moreutils/Makefile moreutils.gentoo/Makefile
+--- moreutils/Makefile	2008-03-20 09:55:40.000000000 -0700
++++ moreutils.gentoo/Makefile	2008-05-09 22:01:47.000000000 -0700
+@@ -21,25 +21,25 @@
+ 	./check-isutf8
+ 
+ isutf8.1: isutf8.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ ifdata.1: ifdata.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ ifne.1: ifne.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ pee.1: pee.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ sponge.1: sponge.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ mispipe.1: mispipe.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ lckdo.1: lckdo.docbook
+-	docbook2x-man $<
++	docbook2man.pl $<
+ 
+ %.1: %
+ 	pod2man --center=" " --release="moreutils" $< > $@;

@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/moreutils
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.1 2008/05/10 05:39:50 gregkh Exp $
+
+*moreutils-0.29 (10 May 2008)
+
+  10 May 2008; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/docbook-makefile.patch, +moreutils-0.29.ebuild:
+  initial addition of the moreutils package
+
