@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.114 2008/04/20 08:20:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.115 2008/05/10 12:05:34 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org> elfutils-0.131-r2.ebuild:
+  Make sure we carry forward the PaX fix #219848.
 
 *elfutils-0.131-r2 (20 Apr 2008)
 
