@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/greenhouse-1.0.1.ebuild,v 1.2 2008/05/04 03:37:06 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/greenhouse/greenhouse-1.0.1.ebuild,v 1.3 2008/05/10 07:46:01 jmglov Exp $
 
 inherit eutils
 
@@ -31,8 +31,6 @@ RDEPEND="x86? (
 		app-emulation/emul-linux-x86-gtklibs
 		app-emulation/emul-linux-x86-xlibs
 	)"
-
-#S="${WORKDIR}/${P}"
 
 src_compile() {
 	einfo "Binary package; nothing to compile"

@@ -6,4 +6,5 @@
 <name>Josh Glover</name>
 </maintainer>
 <longdescription>The Greenhouse is a game store brought together by Penny Arcade and Hothead Games.</longdescription>
+<herd>games</herd>
 </pkgmetadata>
