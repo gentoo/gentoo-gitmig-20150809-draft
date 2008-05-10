@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.25.ebuild,v 1.2 2008/01/29 16:25:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.25.ebuild,v 1.3 2008/05/10 19:49:09 nelchael Exp $
 
 inherit eutils apache-module autotools
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~x86"
 
 DESCRIPTION="mod_caucho connects Resin and Apache2."
 HOMEPAGE="http://www.caucho.com/"
