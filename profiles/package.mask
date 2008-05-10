@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8568 2008/05/10 14:16:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8569 2008/05/10 14:30:03 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -43,11 +43,6 @@ x11-libs/lesstif
 # Mike Frysinger <vapier@gentoo.org> (10 May 2008)
 # Wait for the # of broken packages to go back down #212763
 >=sys-devel/libtool-2.2
-
-# Torsten Veller <tove@gentoo.org> (09 May 2008)
-# Masked for testing
-=dev-lang/perl-5.8.8-r5
-=sys-devel/libperl-5.8.8-r2
 
 # Marcus D. Hanwell <cryos@gentoo.org> (08 May 2008)
 # Masking new version until it has received a little more testing
