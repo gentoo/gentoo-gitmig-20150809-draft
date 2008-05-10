@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.1-r1.ebuild,v 1.1 2008/05/10 10:23:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.1-r1.ebuild,v 1.2 2008/05/10 10:28:58 vapier Exp $
 
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
@@ -46,7 +46,7 @@ src_compile() {
 		$(use_enable !minimal multibuffer) \
 		$(use_enable !minimal nanorc) \
 		--disable-wrapping-as-root \
-		$(use_enable spell) \
+		$(use_enable spell speller) \
 		$(use_enable justify) \
 		$(use_enable debug) \
 		$(use_enable nls) \

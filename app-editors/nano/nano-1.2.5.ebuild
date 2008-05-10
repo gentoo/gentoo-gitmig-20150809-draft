@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.5.ebuild,v 1.5 2007/10/10 06:07:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.5.ebuild,v 1.6 2008/05/10 10:28:58 vapier Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 		--enable-multibuffer \
 		--enable-nanorc \
 		$(use_enable justify) \
-		$(use_enable spell) \
+		$(use_enable spell speller) \
 		$(use_enable debug) \
 		$(use_enable nls) \
 		${myconf} \
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	if use build ; then
 		rm -r "${D}"/usr/share
