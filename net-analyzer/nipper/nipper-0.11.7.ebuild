@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.11.3.ebuild,v 1.1 2008/01/27 17:14:04 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.11.7.ebuild,v 1.1 2008/05/10 13:54:27 ikelos Exp $
 
 inherit toolchain-funcs eutils
 
