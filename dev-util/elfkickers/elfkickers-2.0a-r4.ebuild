@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.2 2008/01/01 14:18:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.3 2008/05/10 19:03:45 solar Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 MY_PN=${PN/elf/ELF}
 S=${WORKDIR}/${MY_PN}
@@ -14,7 +14,7 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 DEPEND="app-misc/pax-utils"
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	for bits in 32 64; do
-		emake CFLAGS="-DELF_CLASS=ELFCLASS${bits} ${CFLAGS}" clean all
+		emake CC=$(tc-getCC) CFLAGS="-DELF_CLASS=ELFCLASS${bits} ${CFLAGS}" clean all
 		for x in elfls elftoc rebind sstrip; do
 			mv ${x}/$x{,${bits}} || die "moving failed of ${x}{,${bits}"
 		done
