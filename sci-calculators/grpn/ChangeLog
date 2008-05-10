@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/ChangeLog,v 1.1 2008/05/10 00:11:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/ChangeLog,v 1.2 2008/05/10 09:03:51 nixnut Exp $
+
+  10 May 2008; nixnut <nixnut@gentoo.org> grpn-1.1.2-r1.ebuild:
+  Stable on ppc wrt bug 220483
 
   06 May 2008; Raúl Porcel <armin76@gentoo.org> grpn-1.1.2-r1.ebuild:
   alpha/x86 stable wrt #220483
