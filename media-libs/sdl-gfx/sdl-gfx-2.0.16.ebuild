@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.5 2008/03/06 03:59:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.6 2008/05/10 11:08:18 vapier Exp $
 
 inherit autotools eutils flag-o-matic libtool
 
@@ -21,15 +21,13 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	rm -f acinclude.m4 # bug #210137
+	epatch "${FILESDIR}"/${P}-gcc43.patch #219621
+	rm -f acinclude.m4 #210137
 	eautoreconf
 	elibtoolize
 }
 
 src_compile() {
-	filter-flags -finline-functions -funroll-loops #26892 #89749
-	replace-flags -O? -O2
-
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable mmx) || die
