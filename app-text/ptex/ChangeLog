@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.79 2008/02/21 16:27:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.80 2008/05/10 01:50:44 matsuu Exp $
+
+*ptex-3.1.10_p20080414 (10 May 2008)
+
+  10 May 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/ptex-3.1.10_p20080414-gentoo.patch, ptex-3.1.10_p20071203.ebuild,
+  ptex-3.1.10_p20080128.ebuild, +ptex-3.1.10_p20080414.ebuild:
+  Version bumped. Removed motif-config, bug #219300.
 
   21 Feb 2008; MATSUU Takuto <matsuu@gentoo.org>
   -files/xpdf-2.02pl1-CAN-2005-3191-3.patch,

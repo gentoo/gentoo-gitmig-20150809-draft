@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.9 2008/02/14 16:05:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.10 2008/05/10 01:50:44 matsuu Exp $
 
 TETEX_PV=3.0_p1
 
@@ -118,8 +118,6 @@ EOF
 	# copied from tetex-3.eclass and modified
 	if use X ; then
 		if use motif ; then
-			append-ldflags $(motif-config --libs)
-			export CPPFLAGS="${CPPFLAGS} $(motif-config --cflags)"
 			toolkit="motif"
 		elif use neXt ; then
 			toolkit="neXtaw"
