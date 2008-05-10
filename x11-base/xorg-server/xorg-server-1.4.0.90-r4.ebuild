@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r4.ebuild,v 1.3 2008/05/09 22:22:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r4.ebuild,v 1.4 2008/05/10 06:50:16 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -284,11 +284,6 @@ GENTOO_PATCHES=(
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 	"${FILESDIR}/${PV}/"
-	"${FILESDIR}/1.4-fix-dmx-build.patch"
-	"${FILESDIR}/1.4-fix-dmx-link.patch"
-	"${FILESDIR}/1.4-fix-xephyr-link.patch"
-	"${FILESDIR}/1.4-fix-xprint-build.patch"
-	"${FILESDIR}/1.4-fix-xprint-link.patch"
 	)
 
 PATCHES=(

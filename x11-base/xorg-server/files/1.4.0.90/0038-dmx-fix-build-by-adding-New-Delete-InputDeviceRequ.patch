@@ -1,0 +1,31 @@
+From 57af7704ec129ae0dbd941dece62bba3401e008f Mon Sep 17 00:00:00 2001
+From: Donnie Berkholz <dberkholz@gentoo.org>
+Date: Thu, 8 May 2008 00:04:36 -0700
+Subject: [PATCH] dmx: fix build by adding {New,Delete}InputDeviceRequest.
+
+---
+ hw/dmx/dmxinput.c |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+
+diff --git a/hw/dmx/dmxinput.c b/hw/dmx/dmxinput.c
+index d644b5d..83f8a4a 100644
+--- a/hw/dmx/dmxinput.c
++++ b/hw/dmx/dmxinput.c
+@@ -105,3 +105,14 @@ void dmxUpdateWindowInfo(DMXUpdateType type, WindowPtr pWindow)
+         if (!dmxInput->detached && dmxInput->updateWindowInfo)
+             dmxInput->updateWindowInfo(dmxInput, type, pWindow);
+ }
++
++int
++NewInputDeviceRequest (InputOption *options, DeviceIntPtr *pdev)
++{
++    return BadRequest;
++}
++
++void
++DeleteInputDeviceRequest(DeviceIntPtr pDev)
++{
++}
+-- 
+1.5.5.1
+

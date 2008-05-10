@@ -1,0 +1,24 @@
+From 2ab2b7ced1241afa48c4af953c761c905ec04aee Mon Sep 17 00:00:00 2001
+From: Donnie Berkholz <dberkholz@gentoo.org>
+Date: Thu, 8 May 2008 00:05:00 -0700
+Subject: [PATCH] dmx: link in XSERVER_LIBS.
+
+---
+ hw/dmx/Makefile.am |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/hw/dmx/Makefile.am b/hw/dmx/Makefile.am
+index 002ea11..15dc281 100644
+--- a/hw/dmx/Makefile.am
++++ b/hw/dmx/Makefile.am
+@@ -87,6 +87,7 @@ Xdmx_LDADD = $(XORG_CORE_LIBS) \
+              $(GLX_LIBS) \
+              input/libdmxinput.a \
+              config/libdmxconfig.a \
++             @XSERVER_LIBS@ \
+              @DMXMODULES_LIBS@
+ 
+ # Man page
+-- 
+1.5.5.1
+

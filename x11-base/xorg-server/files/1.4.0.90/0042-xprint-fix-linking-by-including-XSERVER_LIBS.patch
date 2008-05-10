@@ -1,0 +1,25 @@
+From 1b2d80aa7862397309c59819d42d27dab879b08d Mon Sep 17 00:00:00 2001
+From: Donnie Berkholz <dberkholz@gentoo.org>
+Date: Thu, 8 May 2008 00:08:12 -0700
+Subject: [PATCH] xprint: fix linking by including XSERVER_LIBS.
+
+---
+ hw/xprint/Makefile.am |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/hw/xprint/Makefile.am b/hw/xprint/Makefile.am
+index f834966..2269544 100644
+--- a/hw/xprint/Makefile.am
++++ b/hw/xprint/Makefile.am
+@@ -12,7 +12,7 @@ Xprt_LDFLAGS = -L$(top_srcdir)
+ Xprt_LDADD = @XPRINT_LIBS@ ps/libps.la raster/libraster.la  \
+ 	pcl/libpcl.la pcl-mono/libpcl.la $(top_builddir)/fb/libfb.la \
+ 	$(top_builddir)/render/librender.la $(top_builddir)/mi/libmi.la \
+-	$(top_builddir)/Xext/libXext.la  @FREETYPE_LIBS@
++	$(top_builddir)/Xext/libXext.la  @FREETYPE_LIBS@ @XSERVER_LIBS@
+ 
+ miinitext-wrapper.c:
+ 	echo "#include \"$(top_srcdir)/mi/miinitext.c\"" >> $@
+-- 
+1.5.5.1
+

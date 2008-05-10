@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.327 2008/05/09 22:22:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.328 2008/05/10 06:50:16 dberkholz Exp $
+
+  10 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4.0.90/0038-dmx-fix-build-by-adding-New-Delete-InputDeviceRequ.pa
+  tch, +files/1.4.0.90/0039-dmx-link-in-XSERVER_LIBS.patch,
+  +files/1.4.0.90/0040-xephyr-fix-linking-by-adding-pixman-and-using-XSERV.p
+  atch,
+  +files/1.4.0.90/0041-xprint-fix-build-by-adding-New-Delete-InputDeviceR.pa
+  tch,
+  +files/1.4.0.90/0043-Fix-RandR-1.2-driver-interface-conversion-of-two-col.
+  patch,
+  +files/1.4.0.90/0042-xprint-fix-linking-by-including-XSERVER_LIBS.patch,
+  +files/1.4.0.90/0044-Fix-overly-restrictive-integer-overflow-check-in-EXA.
+  patch, xorg-server-1.4.0.90-r4.ebuild:
+  Add patches in my 'server-1.4-branch-gentoo' branch that I've submitted
+  upstream and am waiting for them to take.
 
   09 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4.0.90-r4.ebuild:

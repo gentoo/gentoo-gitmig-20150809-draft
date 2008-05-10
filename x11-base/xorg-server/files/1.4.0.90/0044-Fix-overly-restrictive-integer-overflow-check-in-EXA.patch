@@ -1,0 +1,28 @@
+From 2dcdad6747b6af7ffdda2e6374d404d4df4bff22 Mon Sep 17 00:00:00 2001
+From: Eric Anholt <eric@anholt.net>
+Date: Fri, 17 Aug 2007 12:14:16 -0700
+Subject: [PATCH] Fix overly-restrictive integer overflow check in EXA pixmap creation.
+
+The result was that at 32bpp, pixmaps of width 8192 or greater couldn't be
+created, due to treating a pitch value as a width.
+(cherry picked from commit bc2d516f16d94c805b4dfa8e5b9eef40ff0cbe98)
+---
+ exa/exa.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/exa/exa.c b/exa/exa.c
+index aa42b92..b2faf2f 100644
+--- a/exa/exa.c
++++ b/exa/exa.c
+@@ -253,7 +253,7 @@ exaCreatePixmap(ScreenPtr pScreen, int w, int h, int depth)
+ 				     pExaScr->info->pixmapPitchAlign);
+     pExaPixmap->fb_size = pExaPixmap->fb_pitch * h;
+ 
+-    if (pExaPixmap->fb_pitch > 32767) {
++    if (pExaPixmap->fb_pitch > 131071) {
+ 	fbDestroyPixmap(pPixmap);
+ 	return NULL;
+     }
+-- 
+1.5.5.1
+
