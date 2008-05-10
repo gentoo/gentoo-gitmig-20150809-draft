@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.24 2008/05/10 11:02:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.25 2008/05/10 11:43:07 nixnut Exp $
+
+  10 May 2008; nixnut <nixnut@gentoo.org> irrlicht-1.4.ebuild:
+  Stable on ppc wrt bug 221167
 
   10 May 2008; Christian Faulhammer <opfer@gentoo.org> irrlicht-1.4.ebuild:
   stable x86, bug 221167
