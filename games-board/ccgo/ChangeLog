@@ -1,6 +1,11 @@
 # ChangeLog for games-board/ccgo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.5 2008/01/19 08:52:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.6 2008/05/10 19:13:08 mr_bones_ Exp $
+
+*ccgo-0.3.6.3 (10 May 2008)
+
+  10 May 2008; Michael Sterrett <mr_bones_@gentoo.org> +ccgo-0.3.6.3.ebuild:
+  version bump
 
   19 Jan 2008; Tristan Heaven <nyhm@gentoo.org> ccgo-0.3.6.2.ebuild:
   Add pkgconfig dep, bug #206300
