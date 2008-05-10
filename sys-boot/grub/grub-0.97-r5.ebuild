@@ -1,6 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.11 2008/05/06 14:23:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.12 2008/05/10 09:00:56 vapier Exp $
+
+# XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
+#      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
+#      we never updated any of the source code (it still all wants menu.lst),
+#      and there is no indication that upstream is making the transition.
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -162,6 +167,11 @@ setup_boot_dir() {
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
+	fi
+
+	if [[ ! -e ${dir}/menu.lst ]]; then
+		einfo "Linking from new grub.conf name to menu.lst"
+		ln -snf grub.conf "${dir}"/menu.lst
 	fi
 
 	if [[ -e ${dir}/stage2 ]] ; then

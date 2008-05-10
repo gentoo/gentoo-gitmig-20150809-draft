@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.91 2008/05/06 14:23:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.92 2008/05/10 09:00:56 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r5.ebuild:
+  Restore menu.lst symlink #220737 / #221055.
 
   06 May 2008; Christian Faulhammer <opfer@gentoo.org> grub-0.97-r5.ebuild:
   stable x86, bug 220069
