@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/moagg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.16 2007/07/02 19:23:28 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.17 2008/05/10 10:57:08 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/moagg-0.18-gcc43.patch, moagg-0.18.ebuild:
+  Add fix from Debian for building with gcc-4.3 #218833 by Peter Alfredsen.
 
   02 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/moagg-0.18-gcc42.patch, moagg-0.18.ebuild:

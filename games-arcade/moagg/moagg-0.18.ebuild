@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.3 2007/07/02 19:23:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.4 2008/05/10 10:57:08 vapier Exp $
 
 inherit eutils games
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc42.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	# We don't want the docs inside ${GAMES_DATADIR}/doc, so we don't
 	# let "make install" do the doc install.
 	sed -i \

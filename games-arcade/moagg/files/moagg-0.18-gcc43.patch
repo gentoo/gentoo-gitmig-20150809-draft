@@ -1,0 +1,70 @@
+http://bugs.gentoo.org/220193
+
+--- libMoaggCore/src/LevelReader.cpp
++++ libMoaggCore/src/LevelReader.cpp
+@@ -1,4 +1,5 @@
+ #include <sstream>
++#include <cstring>
+ 
+ #include "Exception.h"
+ #include "Configuration.h"
+--- libMoaggCore/src/System.cpp
++++ libMoaggCore/src/System.cpp
+@@ -4,6 +4,7 @@
+ #include <cerrno>
+ #include <sstream>
+ #include <list>
++#include <cstring>
+ 
+ #include "Tools.h"
+ #include "SyscallException.h"
+--- libMoaggCore/src/Tools.cpp
++++ libMoaggCore/src/Tools.cpp
+@@ -2,6 +2,7 @@
+ #include <iostream>
+ #include <sstream>
+ #include <set>
++#include <cstdlib>
+ 
+ #include "Exception.h"
+ #include "Tools.h"
+--- libMoaggGame/src/Tiles.cpp
++++ libMoaggGame/src/Tiles.cpp
+@@ -2,6 +2,7 @@
+ #include <cassert>
+ #include <sstream>
+ #include <iomanip>
++#include <memory>
+ 
+ 
+ #include "Configuration.h"
+--- testsuite/MyAssertionTraits.h
++++ testsuite/MyAssertionTraits.h
+@@ -2,6 +2,7 @@
+ #define MYASSERTIONTRAITS_H
+ 
+ #include <cppunit/TestAssert.h>
++#include <cstring>
+ 
+ CPPUNIT_NS_BEGIN
+ 
+--- tools/convertmap.cpp
++++ tools/convertmap.cpp
+@@ -3,6 +3,7 @@
+ #include <memory>
+ #include <list>
+ #include <cassert>
++#include <cstdlib>
+ 
+ #include "Matrix.h"
+ #include "File.h"
+--- tools/modifymap.cpp
++++ tools/modifymap.cpp
+@@ -2,6 +2,7 @@
+ #include <iostream>
+ #include <memory>
+ #include <list>
++#include <cstdlib>
+ 
+ #include "Matrix.h"
+ #include "File.h"
