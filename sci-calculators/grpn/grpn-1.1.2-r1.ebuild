@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.1.2-r1.ebuild,v 1.2 2008/05/10 09:03:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.1.2-r1.ebuild,v 1.3 2008/05/10 21:50:38 drac Exp $
 
 EAPI=1
 
@@ -34,5 +34,5 @@ src_install() {
 	dobin grpn || die "dobin failed."
 	doman grpn.1
 	dodoc CHANGES README
-	make_desktop_entry grpn "RPN calculatorc" calc
+	make_desktop_entry grpn "RPN calculator" calc
 }
