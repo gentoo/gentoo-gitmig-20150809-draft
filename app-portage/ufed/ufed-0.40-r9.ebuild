@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r7.ebuild,v 1.1 2008/01/07 20:53:27 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r9.ebuild,v 1.1 2008/05/10 16:27:40 truedfx Exp $
 
 inherit eutils
 
@@ -27,6 +27,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-masked.patch
 	epatch "${FILESDIR}"/${P}-packageusemask.patch
 	epatch "${FILESDIR}"/${P}-noremove.patch
+	epatch "${FILESDIR}"/${P}-termsize.patch
+	epatch "${FILESDIR}"/${P}-multiple-inheritance.patch
 }
 
 src_compile() {
