@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8564 2008/05/10 08:46:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8565 2008/05/10 09:14:17 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Frysinger <vapier@gentoo.org> (10 May 2008)
+# Wait for the # of broken packages to go back down #212763
+>=sys-devel/libtool-2.2
 
 # Torsten Veller <tove@gentoo.org> (09 May 2008)
 # Masked for testing

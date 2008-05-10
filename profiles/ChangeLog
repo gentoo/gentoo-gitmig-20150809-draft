@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1394 2008/05/10 08:46:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1395 2008/05/10 09:14:17 vapier Exp $
+
+  10 May 2008; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Add libtool-2.2 back to package.mask so people have time to fixup their
+  broken packages #212763.
 
   10 May 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
   Adjust the xemacs mask so that it only affects the version in CVS, not the
