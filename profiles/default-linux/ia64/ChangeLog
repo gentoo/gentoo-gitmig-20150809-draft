@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.47 2008/04/10 06:34:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.48 2008/05/10 21:12:34 armin76 Exp $
+
+  10 May 2008; Raúl Porcel <armin76@gentoo.org> +2006.0/deprecated:
+  Mark 2006.0 deprecated
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Via hardware isn't available on ia64 as far as I know.
