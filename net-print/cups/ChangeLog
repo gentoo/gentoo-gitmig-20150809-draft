@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.307 2008/04/17 11:15:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.308 2008/05/11 21:00:41 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> cups-1.3.7-r1.ebuild:
+  Stable on ppc64; bug #221065
 
   17 Apr 2008; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r8.ebuild:
   ia64 stable
