@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.52 2008/05/11 14:04:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.53 2008/05/11 14:06:44 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> -run-mailcap-3.34_p1.ebuild:
+  old
 
   11 May 2008; Markus Meier <maekke@gentoo.org> run-mailcap-3.39_p1.ebuild:
   quotes and amd64 stable, bug #214942
