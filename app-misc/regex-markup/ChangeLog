@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/regex-markup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.12 2008/04/21 16:57:56 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.13 2008/05/11 14:00:00 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> regex-markup-0.10.0.ebuild:
+  quotes, fix USE=examples, amd64 stable (bug #214940)
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
