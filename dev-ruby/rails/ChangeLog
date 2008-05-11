@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.101 2008/05/11 17:00:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.102 2008/05/11 17:07:34 fmccor Exp $
+
+  11 May 2008; Ferris McCormick <fmccor@gentoo.org> rails-2.0.2.ebuild:
+  Back to ~sparc because of Friedrich Oslage's comments in Bug #221309.
 
   11 May 2008; Ferris McCormick <fmccor@gentoo.org> rails-2.0.2.ebuild:
   Sparc stable --- part of Bug #221309 --- Good for about 5 months.
