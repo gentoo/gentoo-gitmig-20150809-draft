@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r7.ebuild,v 1.9 2008/01/14 19:40:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r7.ebuild,v 1.10 2008/05/11 19:10:29 solar Exp $
 
-inherit eutils ssl-cert
+inherit eutils ssl-cert toolchain-funcs
 
 MY_P="linux-ftpd-${PV}"
 DESCRIPTION="The netkit FTP server with optional SSL support"
@@ -30,10 +30,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-shadowfix.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${P}-setguid.patch
+	epatch "${FILESDIR}"/${P}-cross.patch
 	use ssl && epatch "${FILESDIR}"/${P}-fclose-CVE-2007-6263.patch #199206
 }
 
 src_compile() {
+	tc-export CC
 	./configure --prefix=/usr || die "configure failed"
 	emake || die "parallel make failed"
 }

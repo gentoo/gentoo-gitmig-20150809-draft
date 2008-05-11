@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.17 2008/01/14 21:13:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.18 2008/05/11 19:10:29 solar Exp $
+
+  11 May 2008; <solar@gentoo.org> +files/netkit-ftpd-0.17-cross.patch,
+  netkit-ftpd-0.17-r7.ebuild:
+  - make netkit-ftpd cross compile aware
 
   14 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -netkit-ftpd-0.17-r4.ebuild,
   -netkit-ftpd-0.17-r5.ebuild:
