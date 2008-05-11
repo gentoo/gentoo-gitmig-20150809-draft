@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.28 2008/04/20 15:41:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.29 2008/05/11 19:59:58 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> gliv-1.9.6.ebuild:
+  move bison to DEPEND, bug #221601
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> gliv-1.9.6.ebuild:
   move pkgconfig to DEPEND, bug #217278
