@@ -8,3 +8,4 @@ move sys-fs/fuse-python dev-python/fuse-python
 move app-admin/dirvish app-backup/dirvish
 move x11-drivers/xf86-video-amd x11-drivers/xf86-video-geode
 move x11-misc/grpn sci-calculators/grpn
+move xfce-extra/squeeze app-arch/squeeze
