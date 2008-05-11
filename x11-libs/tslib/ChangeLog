@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/tslib
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.1 2008/05/11 05:58:26 solar Exp $
+
+*tslib-1.0 (11 May 2008)
+
+  11 May 2008; <solar@gentoo.org> +metadata.xml, +tslib-1.0.ebuild:
+  - initial add. We take patches from openembedded,buildroot,suse
+
