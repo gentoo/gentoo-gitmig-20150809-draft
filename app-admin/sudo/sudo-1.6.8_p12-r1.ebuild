@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.18 2008/03/07 13:59:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.19 2008/05/11 13:13:11 ulm Exp $
 
 inherit eutils pam
 
@@ -16,7 +16,7 @@ IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
-	skey? ( >=app-admin/skey-1.1.5-r1 )
+	skey? ( >=sys-auth/skey-1.1.5-r1 )
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )

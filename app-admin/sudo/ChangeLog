@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.122 2008/04/05 14:39:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.123 2008/05/11 13:13:11 ulm Exp $
+
+  11 May 2008; Ulrich Mueller <ulm@gentoo.org> sudo-1.6.8_p12-r1.ebuild,
+  sudo-1.6.9_p12.ebuild, sudo-1.6.9_p13.ebuild, sudo-1.6.9_p14.ebuild,
+  sudo-1.6.9_p15.ebuild, sudo-1.7_beta2.ebuild, sudo-1.7_beta3.ebuild,
+  sudo-1.7_beta4.ebuild:
+  Fix dependency: app-admin/skey moved to sys-auth/skey.
 
 *sudo-1.7_beta4 (05 Apr 2008)
 *sudo-1.6.9_p15 (05 Apr 2008)
