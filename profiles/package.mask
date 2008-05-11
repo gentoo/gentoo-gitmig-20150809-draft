@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8573 2008/05/11 16:59:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8574 2008/05/11 17:18:56 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Pettenò <flameeyes@gentoo.org> (11 May 2008)
+# Release candidate version, masked for testing.
+=app-admin/sudo-1.7.0_rc*
 
 # Hans de Graaff <graaff@gentoo.org> (10 May 2008)
 # xemacs-packages-sumo cannot be installed together with any of the separate
@@ -442,10 +446,6 @@ mail-filter/dovecot-dspam
 # Diego Pettenò <flameeyes@gentoo.org> (26 Feb 2008)
 # Alpha version, mask until final.
 =net-irc/quassel-0.2.0_alpha*
-
-# Diego Pettenò <flameeyes@gentoo.org> (25 Feb 2008)
-# Beta version, masked for testing.
-=app-admin/sudo-1.7_beta*
 
 # Benedikt Böhm <hollow@gentoo.org> (23 Feb 2008)
 # Masked due to security issues.
