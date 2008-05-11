@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.133 2008/05/05 20:42:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.134 2008/05/11 19:13:06 radek Exp $
+
+*zope-2.10.6 (11 May 2008)
+
+  11 May 2008; Radoslaw Stachowiak <radek@gentoo.org> +zope-2.10.6.ebuild:
+  version bump
 
 *zope-2.10.5 (05 May 2008)
 
