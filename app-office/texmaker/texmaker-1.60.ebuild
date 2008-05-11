@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.60.ebuild,v 1.6 2008/01/21 14:03:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.60.ebuild,v 1.7 2008/05/11 19:38:14 aballier Exp $
+
+EAPI=1
 
 inherit eutils versionator qt4
 
@@ -32,10 +34,10 @@ IUSE=""
 DEPEND="x11-libs/libX11
 	x11-libs/libXext
 	app-text/aspell
-	$(qt4_min_version 4.3)"
+	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.3.0:4 )"
 
 RDEPEND="${DEPEND}
-	virtual/tetex
+	virtual/latex-base
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm"

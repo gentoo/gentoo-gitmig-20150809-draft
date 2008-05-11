@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.42 2008/05/11 19:35:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.43 2008/05/11 19:38:14 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org> texmaker-1.60.ebuild:
+  switch to latex-base, allow split qt4 deps
 
 *texmaker-1.71 (11 May 2008)
 
