@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-ivtv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.5 2008/04/27 12:32:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.6 2008/05/11 23:36:01 je_fro Exp $
+
+  11 May 2008; Jeff Gardner <je_fro@gentoo.org>
+  -xf86-video-ivtv-0.10.6.ebuild, xf86-video-ivtv-1.0.0.ebuild,
+  xf86-video-ivtv-1.0.1.ebuild:
+  Move imake to DEPEND, fix bug #221431
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org>
   xf86-video-ivtv-1.0.0.ebuild:
