@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/quik
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.11 2006/12/05 04:51:38 josejx Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.12 2008/05/11 16:42:47 drac Exp $
+
+  11 May 2008; Samuli Suominen <drac@gentoo.org> quik-2.1.6.ebuild:
+  Move rpm2targz to DEPEND wrt #220213.
 
   05 Dec 2006; Joseph Jezak <josejx@gentoo.org> +files/headers.patch,
   quik-2.1.6.ebuild:
