@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.78 2008/03/02 15:11:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.79 2008/05/11 13:30:25 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> libidn-1.5-r1.ebuild:
+  amd64/x86 stable, bug #221173
 
   02 Mar 2008; nixnut <nixnut@gentoo.org> libidn-1.0-r1.ebuild:
   Stable on ppc wrt bug 211857

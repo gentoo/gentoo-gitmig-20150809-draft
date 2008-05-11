@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.5-r1.ebuild,v 1.1 2008/02/29 14:21:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.5-r1.ebuild,v 1.2 2008/05/11 13:30:25 maekke Exp $
 
 inherit java-pkg-opt-2 mono autotools elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://alpha.gnu.org/pub/gnu/libidn/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="java doc emacs mono nls"
 
 DEPEND="mono? ( >=dev-lang/mono-0.95 )
