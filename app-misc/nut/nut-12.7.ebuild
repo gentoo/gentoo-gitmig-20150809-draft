@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-12.7.ebuild,v 1.1 2007/09/09 12:41:20 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-12.7.ebuild,v 1.2 2008/05/11 20:53:32 solar Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Record what you eat and analyze your nutrient levels"
 HOMEPAGE="http://nut.sourceforge.net/"
@@ -10,15 +10,21 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~arm ~alpha ~amd64 ~ppc ~x86 ~amd64"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e s/'gcc '/'$(CC) '/ Makefile || ewarn "It might of been fixed"
+}
+
 src_compile() {
 	append-flags '-DNUTDIR=\".nutdb\" -DFOODDIR=\"/usr/share/nut\"'
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {

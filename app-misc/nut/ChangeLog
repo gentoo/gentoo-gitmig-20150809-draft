@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.9 2007/09/09 12:41:20 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.10 2008/05/11 20:53:32 solar Exp $
+
+  11 May 2008; <solar@gentoo.org> nut-12.7.ebuild:
+  - Keyworded ~arm/~amd64 and cross-compile love
 
 *nut-12.7 (09 Sep 2007)
 
