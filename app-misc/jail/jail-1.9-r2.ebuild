@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.7 2008/03/26 02:08:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.8 2008/05/11 13:49:08 maekke Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -21,11 +21,11 @@ RDEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${PN}_${PV}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-gentoo.diff || die "failed to apply patch"
-	epatch ${FILESDIR}/wrongshell.patch || die "failed to apply patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-gentoo.diff || die "failed to apply patch"
+	epatch "${FILESDIR}"/wrongshell.patch || die "failed to apply patch"
 	cd src
-	epatch ${FILESDIR}/multiuser-rsa.patch || die "failed to apply patch"
+	epatch "${FILESDIR}"/multiuser-rsa.patch || die "failed to apply patch"
 }
 
 src_compile() {
@@ -33,7 +33,7 @@ src_compile() {
 	sed -i "s:\$4/etc:\${D}/etc:g" install.sh
 
 	# the destination directory should be /usr not /usr/local
-	cd ${S}/src
+	cd "${S}"/src
 	sed -i -e "s:usr/local:${D}/usr:g" \
 		-e "s:^COPT =.*:COPT = -Wl,-z,no:g" Makefile
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/src
+	cd "${S}"/src
 	einstall
 
 	# remove //var/tmp/portage/jail-1.9/image//usr from files
@@ -70,9 +70,9 @@ src_install() {
 		sed -i "s:/${D}/usr:/usr:g" ${f}
 	done
 
-	cd ${D}/usr/lib
+	cd "${D}"/usr/lib
 	sed -i "s:/usr/etc:/etc:" libjail.pm
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc CHANGELOG INSTALL README SECURITY VERSION
 }

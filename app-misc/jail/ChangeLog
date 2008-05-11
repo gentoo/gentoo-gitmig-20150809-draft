@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.22 2008/03/26 02:08:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.23 2008/05/11 13:49:08 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> -jail-1.9-r1.ebuild,
+  jail-1.9-r2.ebuild:
+  quotes, amd64 stable (bug #214798), remove old
 
   26 Mar 2008; Brent Baude <ranger@gentoo.org> jail-1.9-r2.ebuild:
   stable ppc, bug 214798
