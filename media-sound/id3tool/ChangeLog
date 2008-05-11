@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3tool
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/ChangeLog,v 1.17 2007/11/23 21:28:16 corsair Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/ChangeLog,v 1.18 2008/05/11 09:17:26 solar Exp $
+
+  11 May 2008; <solar@gentoo.org> id3tool-1.2a.ebuild:
+  - keyworded for ~arm
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org> id3tool-1.2a.ebuild:
   Stable on ppc64; bug #199978
