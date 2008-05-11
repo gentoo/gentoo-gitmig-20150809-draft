@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.222 2008/05/10 07:26:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.223 2008/05/11 07:56:17 solar Exp $
+
+*hardened-sources-2.6.24-r2 (11 May 2008)
+*hardened-sources-2.6.23-r12 (11 May 2008)
+
+  11 May 2008; <solar@gentoo.org> -hardened-sources-2.6.23-r7.ebuild,
+  -hardened-sources-2.6.23-r9.ebuild, -hardened-sources-2.6.23-r10.ebuild,
+  +hardened-sources-2.6.23-r12.ebuild, -hardened-sources-2.6.24.ebuild,
+  -hardened-sources-2.6.24-r1.ebuild, +hardened-sources-2.6.24-r2.ebuild:
+  proxy commit for gengor. 2.6.23-r11 shortlog: Fixes security bugs 220691,
+  220975, 220979, 221123. 2.6.24-r2 not-so-shortlog: Fixes bug 215442,
+  security bugs 219901, 220691, 220975, 220979, 221123. New
+  genpatches/grsecurity with numerous updates & fixes. 2.6.23-r7->2.6.23-r10
+  should be removed as far as I'm concerned, everything else remove due to
+  vulnerable to numerous security bugs or brokeness.
 
   10 May 2008; nixnut <nixnut@gentoo.org>
   hardened-sources-2.6.23-r11.ebuild:
