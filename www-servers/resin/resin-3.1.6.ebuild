@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.2 2008/05/10 21:45:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.3 2008/05/11 14:44:15 nelchael Exp $
 
 EAPI="1"
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 	elog " User and group 'resin' have been added."
 	elog
 	elog " By default, Resin runs on port 8080.  You can change this"
-	elog " value by editing /etc/conf/resin.conf."
+	elog " value by editing /etc/resin/resin.conf."
 	elog
 	elog " webapps directory was moved to /var/lib/resin/webapps"
 	elog

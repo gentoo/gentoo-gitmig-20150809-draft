@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.25.ebuild,v 1.3 2008/05/11 13:36:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.25.ebuild,v 1.4 2008/05/11 14:44:15 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -150,7 +150,7 @@ pkg_postinst() {
 	elog " User and group 'resin' have been added."
 	elog
 	elog " By default, Resin runs on port 8080.  You can change this"
-	elog " value by editing /etc/conf/resin.conf."
+	elog " value by editing /etc/resin/resin.conf."
 	elog
 	elog " To test Resin while it's running, point your web browser to:"
 	elog " http://localhost:8080/"
