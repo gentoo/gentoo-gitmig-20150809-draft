@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.2.ebuild,v 1.4 2008/05/09 14:04:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.2.ebuild,v 1.5 2008/05/11 16:33:00 corsair Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gedanken.demon.co.uk/download-xbomb/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ia64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libXaw"
