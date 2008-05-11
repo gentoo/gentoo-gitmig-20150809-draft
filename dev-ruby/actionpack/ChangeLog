@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.73 2008/05/11 12:01:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.74 2008/05/11 16:09:12 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> actionpack-2.0.2.ebuild:
+  x86 stable, bug #221309
 
   11 May 2008; Hans de Graaff <graaff@gentoo.org> actionpack-2.0.2.ebuild:
   Stable on amd64, bug #221309
