@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ebtables
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.22 2007/11/02 21:44:46 pylon Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.23 2008/05/11 11:04:49 pva Exp $
+
+  11 May 2008; Peter Volkov <pva@gentoo.org>
+  -files/ebtables-2.0.8.1-fix-textrel.patch,
+  -files/ebtables-2.0.8.1-scripts-build.patch, -ebtables-2.0.8.1.ebuild,
+  ebtables-2.0.8.2.ebuild:
+  Removed useless postinst message, bug #221031 reported by Denilson.
+  Removed old ebuild.
 
   02 Nov 2007; Lars Weiler <pylon@gentoo.org> ebtables-2.0.8.2.ebuild:
   stable ppc, bug #197750

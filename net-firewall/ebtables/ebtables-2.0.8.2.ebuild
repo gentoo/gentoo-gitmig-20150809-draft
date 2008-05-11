@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2.ebuild,v 1.4 2007/11/02 21:44:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2.ebuild,v 1.5 2008/05/11 11:04:49 pva Exp $
 
 inherit versionator eutils toolchain-funcs multilib
 
@@ -42,12 +42,4 @@ src_install() {
 
 	newinitd "${FILESDIR}"/ebtables.initd ebtables
 	newconfd "${FILESDIR}"/ebtables.confd ebtables
-}
-
-pkg_postinst() {
-	echo
-	einfo "If you are interested in gentoo init script for ebtables, please,"
-	einfo "read the following file:"
-	einfo "/usr/share/doc/${PF}/init-scripts/README.gentoo.init"
-	echo
 }
