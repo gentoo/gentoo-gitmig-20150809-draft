@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.17 2008/05/02 11:38:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.18 2008/05/11 11:06:28 yoswink Exp $
+
+  11 May 2008; Jose Luis Rivero <yoswink@gentoo.org> xboard-4.2.7-r1.ebuild:
+  Stable on alpha wrt bug #219895
 
   02 May 2008; Markus Meier <maekke@gentoo.org> xboard-4.2.7-r1.ebuild:
   amd64/x86 stable, bug #219895
