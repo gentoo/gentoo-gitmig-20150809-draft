@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.19 2008/03/24 20:13:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.20 2008/05/11 18:30:06 opfer Exp $
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org> qof-0.7.5.ebuild:
+  move doxygen dependency into build-time dependency field as reported on bug
+  221663 by flameeyes
 
   24 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/qof-0.7.2-remove_spurious_CFLAGS.patch, -qof-0.7.2.ebuild:

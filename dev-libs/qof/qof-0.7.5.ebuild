@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.5 2008/03/24 16:21:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.6 2008/05/11 18:30:06 opfer Exp $
 
 inherit eutils
 
@@ -16,11 +16,11 @@ KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE="doc nls sqlite"
 
 # Raise dependency to gnome-extra/libgda-3* once it is unmasked
-DEPEND="gnome-extra/libgda
+RDEPEND="gnome-extra/libgda
 	dev-libs/libxml2
-	sqlite? ( =dev-db/sqlite-2* )
+	sqlite? ( =dev-db/sqlite-2* )"
+DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
