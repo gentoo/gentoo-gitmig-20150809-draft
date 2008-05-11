@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.2 2008/05/11 15:47:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.3 2008/05/11 15:49:37 drac Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -10,6 +10,7 @@ SRC_URI="http://spuriousinterrupt.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+# do not mark stable, see postinst message.
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus debug startup-notification taglib"
 
@@ -52,8 +53,8 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
-	elog "xfmedia is known to crash when playing video files, please reports"
-	elog "directly to http://bugs.xfce.org, under Xfmedia product."
+	elog "${PN} is known to crash when playing video files, please report"
+	elog "bugs directly to http://bugs.xfce.org, under ${PN} product."
 }
 
 pkg_postrm() {
