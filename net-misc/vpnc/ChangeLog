@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.69 2008/05/10 07:46:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.70 2008/05/11 18:53:30 opfer Exp $
+
+*vpnc-0.5.2_pre20080509-r1 (11 May 2008)
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  -vpnc-0.5.2_pre20080509.ebuild, +vpnc-0.5.2_pre20080509-r1.ebuild:
+  eliminate /usr/local from vpnc-script...again. reported by Priit Laes <amd
+  AT store20 DOT com> in bug 221229
 
   10 May 2008; Christian Faulhammer <opfer@gentoo.org> Manifest:
   regenerate Manifest

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.2_pre20080509.ebuild,v 1.1 2008/05/09 17:49:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.2_pre20080509-r1.ebuild,v 1.1 2008/05/11 18:53:30 opfer Exp $
 
 inherit linux-info
 
@@ -45,6 +45,7 @@ src_install() {
 	keepdir /etc/vpnc/scripts.d
 	newinitd "${FILESDIR}/vpnc-2.init" vpnc
 	newconfd "${FILESDIR}/vpnc.confd" vpnc
+	sed -e "s:/usr/local:/usr:" -i "${D}"/etc/vpnc/vpnc-script || die
 }
 
 pkg_postinst() {
