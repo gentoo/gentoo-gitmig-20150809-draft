@@ -1,6 +1,10 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.87 2008/05/04 11:51:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.88 2008/05/11 13:24:42 pva Exp $
+
+  11 May 2008; Peter Volkov <pva@gentoo.org> sim-9999.ebuild:
+  Fixed dependencies, e.g. flex should not be in RDEPEND, bug #221339 thank
+  Diego Pettenò for report.
 
   04 May 2008; Peter Volkov <pva@gentoo.org> sim-0.9.4.3-r1.ebuild:
   Use berlios mirror://, bug #218657, thank Gilles Dartiguelongue for

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.2 2008/01/22 13:38:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.3 2008/05/11 13:24:42 pva Exp $
 
 EAPI="1"
 
@@ -22,19 +22,19 @@ IUSE="debug gpg +jabber kde msn +oscar sms spell ssl weather yahoo livejournal"
 # inside /etc/portage/env/net-im/sim to disable transparent plugin.
 
 # kdebase-data provides the icon "licq.png"
-DEPEND="kde? ( kde-base/kdelibs:3.5 )
+RDEPEND="kde? ( kde-base/kdelibs:3.5
+				|| ( kde-base/kdebase-data:3.5 kde-base/kdebase:3.5 ) )
 		!kde? ( spell? ( app-text/aspell ) )
 		x11-libs/qt:3
 		ssl? ( dev-libs/openssl )
+		gpg? ( app-crypt/gnupg )
 		dev-libs/libxml2
 		dev-libs/libxslt
 		sys-libs/zlib
 		media-libs/fontconfig
 		x11-libs/libXScrnSaver"
 
-RDEPEND="${DEPEND}
-		kde? ( || ( kde-base/kdebase-data:3.5 kde-base/kdebase:3.5 ) )
-		gpg? ( app-crypt/gnupg )
+DEPEND="${RDEPEND}
 		sys-devel/flex
 		app-arch/zip
 		x11-proto/scrnsaverproto"
