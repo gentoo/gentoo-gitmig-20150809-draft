@@ -1,0 +1,35 @@
+Index: audacity-src-1.3.5-beta/configure.in
+===================================================================
+--- audacity-src-1.3.5-beta.orig/configure.in
++++ audacity-src-1.3.5-beta/configure.in
+@@ -161,30 +161,6 @@ if test x"$debug_preference" = "xyes" ; 
+    CXXFLAGS="${CXXFLAGS} -g "
+ fi
+ 
+-dnl --------------------------------------------------------------------------
+-dnl We would like warnings enabled on the builds, but different compilers need
+-dnl different options for these. This bit tries to work out what flags we 
+-dnl should add to the compiler we are using.
+-dnl --------------------------------------------------------------------------
+-
+-dnl Strict prototypes flags for C (only C because doesn't work for C++)
+-AX_CFLAGS_STRICT_PROTOTYPES(CFLAGS)
+-
+-dnl Sensible warnings for C
+-AX_CFLAGS_WARN_ALL(wall_flags)
+-CFLAGS="${CFLAGS} $wall_flags"
+-dnl try and use it on C++ as well
+-AX_CXX_CHECK_FLAG([$wall_flags], [[int foo;]], [[foo = 1;]], cxx_does_wall="yes", cxx_does_wall="no")
+-if test "x$cxx_does_wall" = "xyes" ; then
+-   dnl can use all warnings flag on the C++ compiler
+-   CXXFLAGS="${CXXFLAGS} $wall_flags"
+-fi
+-AX_CXXCPP_CHECK_FLAG([$wall_flags], [[int foo;]], [[foo = 1;]], cpp_does_wall="yes", cpp_does_wall="no")
+-if test "x$cpp_does_wall" = "xyes" ; then
+-   dnl can use all warnings flag on the C++ pre-processor
+-   CPPFLAGS="${CPPFLAGS} $wall_flags"
+-fi
+-
+ AC_CONFIG_SUBDIRS([lib-src/FileDialog])
+ 
+ LIBRARIES="LIBVORBIS LIBMAD LIBSNDFILE LIBFLAC LIBID3TAG LIBSAMPLERATE LIBRESAMPLE LIBSOUNDTOUCH LIBNYQUIST LIBVAMP LIBEXPAT LIBTWOLAME"
