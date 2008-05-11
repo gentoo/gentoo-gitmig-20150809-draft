@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.7 2008/05/10 17:24:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.8 2008/05/11 13:32:50 maekke Exp $
 
 inherit autotools eutils flag-o-matic libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ferzkopp.net/Software/SDL_gfx-2.0/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="mmx"
 
 DEPEND="media-libs/libsdl"
