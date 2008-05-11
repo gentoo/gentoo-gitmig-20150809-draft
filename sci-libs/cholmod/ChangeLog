@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.7 2008/05/05 02:48:00 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.8 2008/05/11 16:08:30 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> cholmod-1.6.0-r1.ebuild:
+  Added ppc64; bug #219458
 
   05 May 2008; Justin Bronder <jsbronder@gentoo.org>
   files/cholmod-1.6.0-autotools.patch:
