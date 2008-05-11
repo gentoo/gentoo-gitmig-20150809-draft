@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.5 2008/05/09 22:30:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.6 2008/05/11 13:11:27 ulm Exp $
 
 inherit eutils pam autotools multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/pam-0.78-r3
-	>=app-admin/skey-1.1.5-r4"
+	>=sys-auth/skey-1.1.5-r4"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
