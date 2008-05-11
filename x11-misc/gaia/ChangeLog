@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gaia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.17 2008/01/24 10:57:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.18 2008/05/11 18:57:35 opfer Exp $
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org> gaia-0.1.2.ebuild:
+  put doxygen in build-time dependency as reported on bug 221701 by flameeyes
 
   24 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gaia-0.1.2.ebuild:
   remove invalid HOMEPAGE and add some quotes

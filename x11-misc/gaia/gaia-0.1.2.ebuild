@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.7 2008/01/24 10:57:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.8 2008/05/11 18:57:35 opfer Exp $
 
 inherit eutils
 
@@ -19,11 +19,11 @@ RDEPEND="media-libs/jpeg
 	>=media-libs/libsdl-1.2
 	net-misc/curl
 	virtual/opengl
-	gps? ( sci-geosciences/gpsd )
-	doc? ( app-doc/doxygen )"
+	gps? ( sci-geosciences/gpsd )"
 
 DEPEND="${RDEPEND}
-	dev-util/scons"
+	dev-util/scons
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
