@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8570 2008/05/10 17:11:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8571 2008/05/11 09:43:54 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -365,11 +365,6 @@ dev-util/jam
 app-backup/mondo-rescue
 sys-apps/mindi
 sys-apps/mindi-busybox
-
-# Christian Hartmann <ian@gentoo.org> (12 Mar 2008)
-# Pending removal
-# See bug #138755
-x11-misc/perlpanel
 
 # Christian Faulhammer <opfer@gentoo.org> (11 Mar 2008)
 # masked for testing
