@@ -11,3 +11,4 @@ move x11-misc/grpn sci-calculators/grpn
 move xfce-extra/squeeze app-arch/squeeze
 move app-admin/skey sys-auth/skey
 move app-admin/otpcalc sys-auth/otpcalc
+move xfce-extra/xarchiver app-arch/xarchiver
