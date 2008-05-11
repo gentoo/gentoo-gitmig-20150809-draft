@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.7 2008/05/11 21:36:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.8 2008/05/11 21:39:34 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org> djview4-4.3.ebuild:
+  allow split qt4 deps
 
   11 May 2008; Alexis Ballier <aballier@gentoo.org> -djview4-4.2.3.ebuild:
   remove old

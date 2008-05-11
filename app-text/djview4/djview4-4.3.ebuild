@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.3.ebuild,v 1.1 2008/01/28 20:35:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.3.ebuild,v 1.2 2008/05/11 21:39:34 aballier Exp $
+
+EAPI=1
 
 inherit eutils versionator qt4 toolchain-funcs
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 RDEPEND=">=app-text/djvu-3.5.19
-	$(qt4_min_version 4.1)"
+	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.1.1:4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
