@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aubio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.10 2008/04/18 22:14:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.11 2008/05/11 16:16:44 flameeyes Exp $
+
+  11 May 2008; Diego Pettenò <flameeyes@gentoo.org> aubio-0.3.2-r1.ebuild:
+  Move swig to build-time dependency. Closes bug #221485.
 
   18 Apr 2008; Markus Meier <maekke@gentoo.org> -aubio-0.3.2.ebuild,
   aubio-0.3.2-r1.ebuild:

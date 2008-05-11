@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.5 2008/04/18 22:14:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.6 2008/05/11 16:16:44 flameeyes Exp $
 
 WANT_AUTOMAKE=1.8
 
@@ -19,12 +19,12 @@ KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 RDEPEND="=sci-libs/fftw-3*
 	media-libs/libsndfile
 	media-libs/libsamplerate
-	>=dev-lang/swig-1.3.0
 	dev-lang/python
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lash? ( media-sound/lash )"
 DEPEND="${RDEPEND}
+	>=dev-lang/swig-1.3.0
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen virtual/latex-base )"
 
