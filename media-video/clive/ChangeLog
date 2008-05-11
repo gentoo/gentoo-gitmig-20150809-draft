@@ -1,6 +1,9 @@
 # ChangeLog for media-video/clive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.19 2008/05/11 16:47:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.20 2008/05/11 23:14:18 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org> -clive-0.4.6.ebuild:
+  remove old
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> clive-0.4.11.ebuild:
   Stable on ppc64; bug #221147
