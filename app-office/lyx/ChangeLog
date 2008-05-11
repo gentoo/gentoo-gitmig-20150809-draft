@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.129 2008/03/27 18:43:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.130 2008/05/11 19:44:21 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/lyx-1.4.2-gentoo.patch, -lyx-1.4.2.ebuild, -lyx-1.5.3.ebuild:
+  remove old
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> lyx-1.5.4.ebuild:
   Stable on ppc wrt bug 214456
