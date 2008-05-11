@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.121 2008/05/09 20:00:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.122 2008/05/11 16:42:27 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> wesnoth-1.4.2.ebuild:
+  Stable on ppc64; bug #220957
 
   09 May 2008; Markus Meier <maekke@gentoo.org> wesnoth-1.4.2.ebuild:
   amd64/x86 stable, bug #220957
