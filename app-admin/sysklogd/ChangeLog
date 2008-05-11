@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.69 2008/05/06 11:44:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.70 2008/05/11 03:41:44 solar Exp $
+
+  11 May 2008; <solar@gentoo.org> sysklogd-1.4.2_pre20061230-r2.ebuild:
+  - cross compile fix
 
   06 May 2008; Raúl Porcel <armin76@gentoo.org>
   sysklogd-1.4.2_pre20061230-r2.ebuild:
