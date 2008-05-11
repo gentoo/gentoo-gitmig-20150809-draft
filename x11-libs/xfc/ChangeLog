@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xfc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/ChangeLog,v 1.6 2007/10/10 15:52:16 remi Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/ChangeLog,v 1.7 2008/05/11 16:09:07 drac Exp $
+
+  11 May 2008; Samuli Suominen <drac@gentoo.org> xfc-4.3.2.ebuild:
+  Move doxygen to DEPEND wrt #221699, thanks to Diego Pettenò.
 
   10 Oct 2007; Rémi Cardona <remi@gentoo.org> xfc-4.3.2.ebuild:
   update gtksourceview deps (see bug #195366)

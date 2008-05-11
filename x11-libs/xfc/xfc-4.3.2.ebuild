@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/xfc-4.3.2.ebuild,v 1.2 2007/10/10 15:52:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/xfc-4.3.2.ebuild,v 1.3 2008/05/11 16:09:07 drac Exp $
 
 DESCRIPTION="C++ bindings to Xfce desktop environment"
 HOMEPAGE="http://xfc.xfce.org"
@@ -18,9 +18,9 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.4
 	=x11-libs/gtksourceview-1*
-	dev-lang/perl
-	doc? ( >=app-doc/doxygen-1.3.2 )"
+	dev-lang/perl"
 DEPEND="${RDEPEND}
+	doc? ( >=app-doc/doxygen-1.3.2 )
 	dev-util/pkgconfig"
 
 src_compile() {
