@@ -1,0 +1,11 @@
+--- src/cppcomp.h
++++ src/cppcomp.h
+@@ -122,6 +122,8 @@
+ #define I_iomanip		<iomanip>
+ #define I_ios			<ios>
+ #define I_iostream		<iostream>
++#include <cstdlib>
++#include <cstring>
+ 
+ #if (defined (_MSC_VER) && _MSC_VER >= 1100)
+ // 1100 is version 5.0

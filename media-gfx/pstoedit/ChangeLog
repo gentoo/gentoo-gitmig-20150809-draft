@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.51 2008/03/17 12:45:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.52 2008/05/11 21:56:08 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/pstoedit-3.45-gcc-4.3.patch, pstoedit-3.45.ebuild:
+  gcc 4.3 build fix by Martin Väth <vaeth@mathematik.uni-wuerzburg.de>, bug
+  #218013
 
   17 Mar 2008; Alexis Ballier <aballier@gentoo.org> pstoedit-3.45.ebuild:
   dont use -pedantic for building as 'long long' used by latest imagemagick
