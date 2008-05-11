@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/currvita
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.8 2007/12/11 10:39:00 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.9 2008/05/11 21:32:50 aballier Exp $
+
+  11 May 2008; Alexis Ballier <aballier@gentoo.org> currvita-0.9i.ebuild:
+  fix homepage, thanks to René 'Necoro' Neumann <gentoo@necoro.eu>, bug
+  #218461
 
   11 Dec 2007; Alexis Ballier <aballier@gentoo.org> currvita-0.9i.ebuild:
   remove cstetex references, its being removed, part of bug #196673
