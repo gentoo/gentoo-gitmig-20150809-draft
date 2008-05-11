@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.223 2008/05/11 07:56:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.224 2008/05/11 10:58:14 swegener Exp $
+
+  11 May 2008; Sven Wegener <swegener@gentoo.org> Manifest:
+  Fix broken digest for linux-2.6.24.tar.bz2.
 
 *hardened-sources-2.6.24-r2 (11 May 2008)
 *hardened-sources-2.6.23-r12 (11 May 2008)
