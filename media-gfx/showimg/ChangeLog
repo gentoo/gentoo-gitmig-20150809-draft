@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.40 2008/02/19 01:41:17 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.41 2008/05/11 18:17:12 flameeyes Exp $
+
+  11 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/showimg-0.9.5+gcc-4.3.patch, showimg-0.9.5.ebuild:
+  Add patch to build with GCC 4.3, thanks to Peter Alfredsen in bug #214364.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> showimg-0.9.4.1.ebuild,
   showimg-0.9.5.ebuild:
