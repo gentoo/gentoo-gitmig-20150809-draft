@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlsec
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.14 2007/11/10 15:29:03 alonbl Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.15 2008/05/11 15:37:17 alonbl Exp $
+
+  11 May 2008; Alon Bar-Lev <alonbl@gentoo.org> xmlsec-1.2.11.ebuild:
+  Remove autoconf dependency, bug#221551, fixup RDEPEND
 
 *xmlsec-1.2.11 (10 Nov 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.11.ebuild,v 1.2 2007/11/11 06:28:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.11.ebuild,v 1.3 2008/05/11 15:37:17 alonbl Exp $
 
 DESCRIPTION="command line tool for signing, verifying, encrypting and decrypting XML"
 HOMEPAGE="http://www.aleksey.com/xmlsec"
@@ -11,14 +11,14 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE="ssl mozilla gnutls"
 
-DEPEND=">=sys-devel/autoconf-2.2
-	>=dev-libs/libxml2-2.4.2
-	>=dev-libs/libxslt-1.0.20
-	dev-util/pkgconfig
+RDEPEND=">=dev-libs/libxslt-1.0.20
 	ssl? ( >=dev-libs/openssl-0.9.7 )
-	gnutls? ( >=net-libs/gnutls-0.8.1 dev-libs/libgcrypt )
+	gnutls? ( >=net-libs/gnutls-0.8.1 )
 	mozilla? ( >=dev-libs/nspr-4.0
 		>=dev-libs/nss-3.2 )"
+DEPEND="${RDEPEND}
+	>=dev-libs/libxml2-2.4.2
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}1-${PV}"
 
