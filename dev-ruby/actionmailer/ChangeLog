@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.73 2008/05/11 16:10:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.74 2008/05/11 16:59:07 fmccor Exp $
+
+  11 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  actionmailer-2.0.2.ebuild:
+  Sparc stable --- part of Bug #221309 --- Good for about 5 months.
 
   11 May 2008; Markus Meier <maekke@gentoo.org> actionmailer-2.0.2.ebuild:
   x86 stable, bug #221309
