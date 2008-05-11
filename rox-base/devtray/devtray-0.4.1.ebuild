@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/devtray-0.3.2-r1.ebuild,v 1.1 2007/11/28 20:04:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/devtray-0.4.1.ebuild,v 1.1 2008/05/11 15:59:24 lack Exp $
 
 ROX_LIB_VER=1.9.6
 inherit rox
@@ -17,7 +17,7 @@ IUSE="gnome cddb alsa"
 
 # TODO: When pycups is available, depend on it too (probably conditionally)
 
-RDEPEND="rox-base/traylib
+RDEPEND=">=rox-base/traylib-0.3.2.1
 	dev-python/dbus-python
 	sys-apps/hal
 	cddb? ( dev-python/cddb-py )
@@ -26,8 +26,3 @@ RDEPEND="rox-base/traylib
 
 APPNAME="${MY_PN}"
 S="${WORKDIR}"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/${MY_PN}-${PV}-no_pycups.patch"
-}
