@@ -13,3 +13,4 @@ move app-admin/skey sys-auth/skey
 move app-admin/otpcalc sys-auth/otpcalc
 move xfce-extra/xarchiver app-arch/xarchiver
 move gnome-extra/zim x11-misc/zim
+move xfce-extra/xfmedia media-video/xfmedia
