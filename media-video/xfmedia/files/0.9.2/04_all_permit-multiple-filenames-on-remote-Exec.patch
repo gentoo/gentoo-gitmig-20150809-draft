@@ -1,0 +1,14 @@
+--- xfmedia.desktop.in.old	2006-11-27 08:21:25.000000000 +0100
++++ xfmedia.desktop.in	2007-03-23 16:52:20.000000000 +0100
+@@ -14,9 +14,9 @@
+ Actions=Enqueue;Enqueue and Play;
+ 
+ [Desktop Action Enqueue]
+-Exec=xfmedia-remote -a %f
++Exec=xfmedia-remote -a %F
+ _Name=Enqueue in Xfmedia
+ 
+ [Desktop Action Enqueue and Play]
+-Exec=xfmedia-remote -p -a %f
++Exec=xfmedia-remote -p -a %F
+ _Name=Enqueue and play with Xfmedia

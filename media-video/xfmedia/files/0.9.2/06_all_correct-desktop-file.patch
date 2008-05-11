@@ -1,0 +1,14 @@
+--- xfmedia-0.9.2/xfmedia.desktop.in.orig	2006-11-27 08:21:25.000000000 +0100
++++ xfmedia-0.9.2/xfmedia.desktop.in	2007-12-08 22:05:59.000000000 +0100
+@@ -8,9 +8,9 @@
+ TryExec=xfmedia
+ Icon=xfmedia
+ Terminal=false
+-Categories=X-XFCE;Application;AudioVideo;AudioPlayer;VideoPlayer;
++Categories=X-XFCE;AudioVideo;Player;
+ StartupNotify=true
+-MimeType=application/x-annodex;audio/x-ogg;audio/x-speex;application/x-ogg;video/x-ms-asf;video/x-ms-wmv;video/x-ms-wma;application/vnd.ms-asf;application/x-mplayer2;video/x-ms-asf-plugin;video/x-ms-wvx;video/x-ms-wax;audio/x-aiff;audio/aiff;audio/x-pn-aiff;audio/x-realaudio;audio/basic;audio/x-basic;audio/x-pn-au;audio/x-wav;audio/wav;audio/x-pn-wav;audio/x-pn-windows-acm;video/msvideo;video/x-msvideo;video/quicktime;video/x-quicktime;audio/x-m4a;application/x-quicktimeplayer;video/x-flic;audio/x-pn-realaudio;audio/x-pn-realaudio-plugin;audio/x-real-audio;application/vnd.rn-realmedia;video/mkv;audio/x-8svx;audio/8svx;audio/x-16sv;audio/168sv;image/x-ilbm;image/ilbm;video/x-anim;video/anim;video/mpeg;video/x-mpeg;audio/mpeg2;audio/x-mpeg2;audio/mpeg3;audio/x-mpeg3;audio/mpeg;audio/x-mpeg;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;application/x-flac;audio/x-flac;
++MimeType=audio/ogg;audio/x-speex;application/ogg;video/x-ms-asf;video/x-ms-wmv;audio/x-aiff;audio/vnd.rn-realaudio;audio/basic;audio/x-wav;video/x-msvideo;video/quicktime;application/x-quicktime-media-link;video/x-flic;application/vnd.rn-realmedia;image/x-ilbm;video/x-anim;video/mpeg;audio/mpeg;audio/x-mpegurl;audio/x-mp3-playlist;audio/x-flac+off;audio/x-flac;
+ Actions=Enqueue;Enqueue and Play;
+ 
+ [Desktop Action Enqueue]

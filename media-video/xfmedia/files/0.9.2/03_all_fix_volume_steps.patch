@@ -1,0 +1,40 @@
+--- src/trayicon.c.old	2006-11-27 08:21:23.000000000 +0100
++++ src/trayicon.c	2006-11-27 22:06:07.000000000 +0100
+@@ -121,7 +121,7 @@
+     if(evt->direction == GDK_SCROLL_UP) {
+         gint volume = xfmedia_xine_get_param(mwin->xfx,
+                                              XINE_PARAM_AUDIO_VOLUME);
+-        volume += 2;
++        volume += 3;
+         if(volume > 100)
+ 	      volume = 100;
+         xfmedia_xine_set_param(mwin->xfx, XINE_PARAM_AUDIO_VOLUME, volume);
+@@ -130,7 +130,7 @@
+     } else if(evt->direction == GDK_SCROLL_DOWN) {
+         gint volume = xfmedia_xine_get_param(mwin->xfx,
+                                              XINE_PARAM_AUDIO_VOLUME);
+-        volume -= 2;
++        volume -= 3;
+         if(volume < 0)
+ 	        volume = 0;
+         xfmedia_xine_set_param(mwin->xfx, XINE_PARAM_AUDIO_VOLUME, volume);
+--- src/xfmedia-keybindings.c.old	2006-11-27 08:21:23.000000000 +0100
++++ src/xfmedia-keybindings.c	2006-11-27 22:06:21.000000000 +0100
+@@ -430,7 +430,7 @@
+ {
+     gint volume = xfmedia_xine_get_param(mwin->xfx, XINE_PARAM_AUDIO_VOLUME);
+     
+-    volume += 2;
++    volume += 3;
+     if(volume > 100)
+         volume = 100;
+     
+@@ -441,7 +441,7 @@
+ {
+     gint volume = xfmedia_xine_get_param(mwin->xfx, XINE_PARAM_AUDIO_VOLUME);
+     
+-    volume -= 2;
++    volume -= 3;
+     if(volume < 0)
+         volume = 0;
+     

@@ -1,0 +1,52 @@
+--- src/xfmedia-xine.c.orig	2007-10-25 22:36:47.000000000 +0000
++++ src/xfmedia-xine.c	2007-10-25 22:38:34.000000000 +0000
+@@ -1371,9 +1371,7 @@
+                 XINE_STREAM_INFO_HAS_VIDEO);
+         if((has_video || xfx->priv->vis_plugin_id) && !xfx->priv->video_port) {
+             DBG("creating real vid out driver");
+-            XLockDisplay(xfx->priv->display);
+             xfx->priv->video_port = load_video_out_driver(xfx, NULL);
+-            XUnlockDisplay(xfx->priv->display);
+             if(xfx->priv->video_port) {
+                 xine_post_out_t *vid_src = xine_get_video_source(xfx->priv->stream);
+                 xine_post_wire_video_port(vid_src, xfx->priv->video_port);
+@@ -1926,9 +1924,7 @@
+                     xine_stop(xfx->priv->stream);
+                 }
+                 
+-                XLockDisplay(xfx->priv->display);
+                 xfx->priv->video_port = load_video_out_driver(xfx, NULL);
+-                XUnlockDisplay(xfx->priv->display);
+                 if(xfx->priv->video_port) {
+                     xine_post_out_t *vid_src = xine_get_video_source(xfx->priv->stream);
+                     xine_post_wire_video_port(vid_src, xfx->priv->video_port);
+@@ -2076,13 +2072,11 @@
+         return TRUE;
+     
+     if(xfx->priv->video_port) {
+-        XLockDisplay(xfx->priv->display);
+         new_port = load_video_out_driver(xfx, plugin_id);
+         if(!new_port) {
+             XUnlockDisplay(xfx->priv->display);
+             return FALSE;
+         }
+-        XUnlockDisplay(xfx->priv->display);
+     }
+     
+     g_free(xfx->priv->video_driver_id);
+@@ -2099,7 +2093,6 @@
+         xine_post_out_t *vid_src;
+         xine_video_port_t *old_port;
+         
+-        XLockDisplay(xfx->priv->display);
+         
+         old_port = xfx->priv->video_port;
+         xfx->priv->video_port = new_port;
+@@ -2110,7 +2103,6 @@
+         
+         xine_close_video_driver(xfx->priv->xine, old_port);
+         
+-        XUnlockDisplay(xfx->priv->display);
+     }
+     
+     if(status == XINE_STATUS_PLAY) {
