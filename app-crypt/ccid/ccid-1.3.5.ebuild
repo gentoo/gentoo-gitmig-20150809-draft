@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.5.ebuild,v 1.1 2008/02/22 16:45:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.5.ebuild,v 1.2 2008/05/11 13:40:40 alonbl Exp $
 
 STUPID_NUM="2330"
 DESCRIPTION="CCID free software driver"
@@ -19,6 +19,7 @@ src_compile() {
 	use nousb && myconf="${myconf} --disable-pcsclite"
 
 	econf \
+		LEX=: \
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-udev \
 		${myconf} \

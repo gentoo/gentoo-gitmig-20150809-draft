@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.0.ebuild,v 1.4 2007/07/25 18:20:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.0.ebuild,v 1.5 2008/05/11 13:40:40 alonbl Exp $
 
 inherit eutils autotools
 
@@ -21,6 +21,7 @@ src_compile() {
 	use nousb && myconf="${myconf} --disable-pcsclite"
 
 	econf \
+		LEX=: \
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-udev \
 		${myconf} \
