@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-5.2.ebuild,v 1.3 2007/07/13 07:25:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-5.2.ebuild,v 1.4 2008/05/11 18:30:11 ulm Exp $
 
 inherit elisp
 
@@ -11,27 +11,33 @@ SRC_URI="http://www.mew.org/Release/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="ssl"
+IUSE="ssl linguas_ja"
 RESTRICT="test"
 
 RDEPEND="ssl? ( net-misc/stunnel )"
 
 SITEFILE=50${PN}-gentoo.el
 
-# this is needed; elisp.eclass redefines src_compile() from portage default
 src_compile() {
-	econf || die "econf failed"
+	econf \
+		--with-elispdir=${SITELISP}/${PN} \
+		--with-etcdir=/usr/share/${PN} || die "econf failed"
 	emake || die "emake failed"
+
+	if use linguas_ja; then
+		emake jinfo || die "emake jinfo failed"
+	fi
 }
 
 src_install() {
-	einstall prefix="${D}/usr" \
-		infodir="${D}/usr/share/info" \
-		elispdir="${D}/${SITELISP}/${PN}" \
-		etcdir="${D}/usr/share/${PN}" \
-		mandir="${D}/usr/share/man/man1" || die "einstall failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	if use linguas_ja; then
+		emake DESTDIR="${D}" install-jinfo || die "emake install-jinfo failed"
+	fi
+
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		|| die "elisp-site-file-install failed"
 
 	dodoc 00api 00changes* 00diff 00readme* 00roadmap mew.dot.* \
 		|| die "dodoc failed"
