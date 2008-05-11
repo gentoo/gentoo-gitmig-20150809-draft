@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2-r1.ebuild,v 1.3 2008/02/24 01:37:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2-r1.ebuild,v 1.4 2008/05/11 19:45:01 keri Exp $
 
 inherit elisp-common eutils
 
@@ -16,17 +16,17 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc emacs gdbm static tcl threads tk"
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	dev-libs/gmp
-	sys-devel/bison
-	sys-devel/flex
 	sys-libs/zlib
 	emacs? ( virtual/emacs )
 	gdbm? ( sys-libs/gdbm  )
 	tcl? ( tk? (
 			dev-lang/tk
 			dev-lang/tcl ) )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/bison
+	sys-devel/flex"
 
 SITEFILE=50${PN}-gentoo.el
 

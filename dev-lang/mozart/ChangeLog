@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.16 2008/02/24 01:37:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.17 2008/05/11 19:45:01 keri Exp $
+
+  11 May 2008; keri <keri@gentoo.org> mozart-1.3.2.ebuild,
+  mozart-1.3.2-r1.ebuild:
+  Move flex and bison to RDEPEND. Closes #221321 and #221589.
 
   24 Feb 2008; keri <keri@gentoo.org> files/mozart-1.3.2-portage.patch,
   mozart-1.3.2-r1.ebuild:
