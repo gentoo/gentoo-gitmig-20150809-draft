@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r4.ebuild,v 1.1 2008/01/15 08:42:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r4.ebuild,v 1.2 2008/05/11 01:50:09 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Configure your serial ports with it"
 HOMEPAGE="http://setserial.sourceforge.net/"
@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	econf || die
 	emake setserial || die
 }
