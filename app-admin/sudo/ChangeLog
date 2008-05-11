@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.124 2008/05/11 17:19:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.125 2008/05/11 17:22:36 flameeyes Exp $
+
+  11 May 2008; Diego Pettenò <flameeyes@gentoo.org> sudo-1.6.9_p16.ebuild,
+  sudo-1.7.0_rc1.ebuild:
+  Drop mips, I misunderstood the repoman output, the dep on pambase is still
+  there (and it makes sense to stay there), the behaviour is the same as
+  before though, and all the arches but mips keyworded that already.
 
 *sudo-1.7.0_rc1 (11 May 2008)
 *sudo-1.6.9_p16 (11 May 2008)

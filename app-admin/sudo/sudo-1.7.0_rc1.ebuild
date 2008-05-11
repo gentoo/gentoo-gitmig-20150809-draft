@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc1.ebuild,v 1.1 2008/05/11 17:19:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc1.ebuild,v 1.2 2008/05/11 17:22:36 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.sudo.ws/"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
