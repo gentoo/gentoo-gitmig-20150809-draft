@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.13 2008/03/31 05:09:27 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.14 2008/05/11 13:11:56 ulm Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -17,7 +17,7 @@ RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
 	pam? ( virtual/pam )
 	!sys-apps/pam-login
 	!app-admin/nologin
-	skey? ( app-admin/skey )
+	skey? ( sys-auth/skey )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -106,12 +106,12 @@ src_install() {
 	# Output arch-specific cruft
 	case $(tc-arch) in
 		ppc*)  echo "hvc0" >> "${D}"/etc/securetty
-		       echo "hvsi0" >> "${D}"/etc/securetty
-		       echo "ttyPSC0" >> "${D}"/etc/securetty;;
+			   echo "hvsi0" >> "${D}"/etc/securetty
+			   echo "ttyPSC0" >> "${D}"/etc/securetty;;
 		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
 		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
 		sh)    echo "ttySC0" >> "${D}"/etc/securetty
-		       echo "ttySC1" >> "${D}"/etc/securetty;;
+			   echo "ttySC1" >> "${D}"/etc/securetty;;
 	esac
 
 	# needed for 'adduser -D'

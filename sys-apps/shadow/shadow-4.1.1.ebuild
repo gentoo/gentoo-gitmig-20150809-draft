@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.1.ebuild,v 1.4 2008/04/20 07:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.1.ebuild,v 1.5 2008/05/11 13:11:56 ulm Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -19,7 +19,7 @@ RDEPEND="audit? ( sys-process/audit )
 	pam? ( >=sys-libs/pam-0.99 )
 	!sys-apps/pam-login
 	!app-admin/nologin
-	skey? ( app-admin/skey )
+	skey? ( sys-auth/skey )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
