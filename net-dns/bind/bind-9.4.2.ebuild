@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2.ebuild,v 1.3 2008/05/09 21:02:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2.ebuild,v 1.4 2008/05/11 03:58:44 solar Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -124,7 +124,7 @@ src_compile() {
 
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O
-
+	export BUILD_CC="${CBUILD}-gcc"
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
