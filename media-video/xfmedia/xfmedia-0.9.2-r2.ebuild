@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.1 2008/05/11 15:43:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.2 2008/05/11 15:47:53 drac Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -52,6 +52,8 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
+	elog "xfmedia is known to crash when playing video files, please reports"
+	elog "directly to http://bugs.xfce.org, under Xfmedia product."
 }
 
 pkg_postrm() {
