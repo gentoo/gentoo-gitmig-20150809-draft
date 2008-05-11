@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.535 2008/04/18 22:52:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.536 2008/05/11 18:43:21 flameeyes Exp $
+
+  11 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/qt-3.3.8-immqt+gcc-4.3.patch, qt-3.3.8-r4.ebuild:
+  Add patch to build with gcc-4.3 and immqt-bc USE flag enabled. Thanks to
+  Matsuu for linking the Debian patch in bug #218447.
 
   18 Apr 2008; Markus Meier <maekke@gentoo.org> qt-4.3.3.ebuild:
   amd64 stable, bug #217529
