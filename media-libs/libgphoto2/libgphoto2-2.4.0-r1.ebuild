@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.6 2008/03/22 03:08:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.7 2008/05/11 20:10:10 maekke Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -47,6 +47,7 @@ RDEPEND=">=dev-libs/libusb-0.1.8
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	sys-devel/flex
 	doc? ( app-doc/doxygen )"
 
 RDEPEND="${RDEPEND}

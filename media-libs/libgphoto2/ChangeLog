@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.117 2008/04/05 21:19:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.118 2008/05/11 20:10:10 maekke Exp $
+
+  11 May 2008; Markus Meier <maekke@gentoo.org> libgphoto2-2.2.1-r1.ebuild,
+  libgphoto2-2.3.1-r5.ebuild, libgphoto2-2.4.0-r1.ebuild,
+  libgphoto2-2.4.1.ebuild:
+  add missing flex dependency, bug #221393
 
   05 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org>
   libgphoto2-2.4.1.ebuild:
