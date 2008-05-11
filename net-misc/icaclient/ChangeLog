@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.53 2008/04/12 06:38:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.54 2008/05/11 19:06:43 opfer Exp $
+
+*icaclient-10.6-r4 (11 May 2008)
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  +icaclient-10.6-r4.ebuild:
+  fix runtime errors with XCB, patches provided by Ed Catmur <ed AT catmur DOT
+  co DOT uk> on bug 220225
 
   12 Apr 2008; Ulrich Mueller <ulm@gentoo.org> -icaclient-10.6.ebuild:
   Remove old.
