@@ -1,6 +1,16 @@
 # ChangeLog for media-video/xfmedia
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/ChangeLog,v 1.1 2008/05/11 15:00:17 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/ChangeLog,v 1.2 2008/05/11 15:43:32 drac Exp $
+
+*xfmedia-0.9.2-r2 (11 May 2008)
+
+  11 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/0.9.2/03_all_fix_volume_steps.patch,
+  +files/0.9.2/04_all_permit-multiple-filenames-on-remote-Exec.patch,
+  +files/0.9.2/05_all_dont-lock-display.patch,
+  +files/0.9.2/06_all_correct-desktop-file.patch, +xfmedia-0.9.2-r2.ebuild:
+  Allow opening of more than one file from file managers. Fix volume control
+  key bindings. Don't lock screen when playing video files.
 
   02 Mar 2007; Peter Weller <welp@gentoo.org> xfmedia-0.9.2-r1.ebuild:
   Keyworded on x86-fbsd
