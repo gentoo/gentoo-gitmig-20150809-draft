@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.8 2008/05/10 10:53:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.9 2008/05/11 18:39:38 opfer Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.msg.ameslab.gov/GAMESS/GAMESS.html"
 SRC_URI="${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE="hardened blas"
 
 RESTRICT="fetch"

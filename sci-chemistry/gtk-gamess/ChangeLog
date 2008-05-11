@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gtk-gamess
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/ChangeLog,v 1.2 2007/07/03 17:47:36 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/ChangeLog,v 1.3 2008/05/11 18:42:04 opfer Exp $
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  gtk-gamess-2.00.ebuild:
+  revert stable KEYWORDS because the tarball is restricted and old ones won't
+  be available from upstream. Requested by markusle by mail
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   gtk-gamess-2.00.ebuild:

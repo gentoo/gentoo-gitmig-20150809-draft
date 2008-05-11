@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.26 2008/05/10 10:53:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.27 2008/05/11 18:39:38 opfer Exp $
+
+  11 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  gamess-20070324.1.ebuild:
+  revert stable KEYWORDS because the tarball is restricted and old ones won't
+  be available from upstream. Requested by markusle by mail
 
   10 May 2008; Markus Dittrich <markusle@gentoo.org>
   +gamess-20070324.1.ebuild:
