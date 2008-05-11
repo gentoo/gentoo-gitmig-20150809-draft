@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.338 2008/03/07 01:03:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.339 2008/05/11 17:44:31 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdegraphics-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdegraphics-3.5.9.ebuild:
   Keyword ~mips.

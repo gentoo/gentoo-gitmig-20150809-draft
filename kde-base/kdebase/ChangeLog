@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.440 2008/04/27 01:15:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.441 2008/05/11 17:24:57 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdebase-3.5.9-r3.ebuild:
+  Stable on ppc64; bug #221063
 
 *kdebase-3.5.9-r3 (27 Apr 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.211 2008/03/07 00:44:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.212 2008/05/11 17:53:56 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdeadmin-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeadmin-3.5.9.ebuild:
   Keyword ~mips.

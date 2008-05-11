@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.229 2008/04/27 01:30:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.230 2008/05/11 17:33:31 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdeutils-3.5.9-r1.ebuild:
+  Stable on ppc64; bug #221063
 
 *kdeutils-3.5.9-r1 (27 Apr 2008)
 

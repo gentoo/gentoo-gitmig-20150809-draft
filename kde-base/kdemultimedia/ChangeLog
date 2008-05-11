@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.271 2008/03/07 01:07:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.272 2008/05/11 18:04:05 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdemultimedia-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdemultimedia-3.5.9.ebuild:
   Keyword ~mips.

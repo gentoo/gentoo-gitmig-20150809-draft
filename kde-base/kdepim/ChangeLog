@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.305 2008/04/16 12:09:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.306 2008/05/11 18:08:49 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdepim-3.5.9-r1.ebuild:
+  Stable on ppc64; bug #221063
 
 *kdepim-3.5.9-r1 (16 Apr 2008)
 

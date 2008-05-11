@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.199 2008/03/08 15:30:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.200 2008/05/11 18:14:19 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kde-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   08 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kde-3.5.9.ebuild:
   Keyword ~mips.

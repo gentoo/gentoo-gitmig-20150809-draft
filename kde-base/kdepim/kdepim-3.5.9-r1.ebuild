@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9-r1.ebuild,v 1.1 2008/04/16 12:09:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9-r1.ebuild,v 1.2 2008/05/11 18:08:49 corsair Exp $
 
 EAPI="1"
 inherit kde-dist
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="KDE PIM (Personal Information Management) applications: KOrganizer, KMail, KNode,..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE="pda gnokii"
 
 # Even more tests are broken now than before...

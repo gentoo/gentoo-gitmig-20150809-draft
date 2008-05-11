@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.208 2008/03/07 00:46:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.209 2008/05/11 17:51:10 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdeartwork-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeartwork-3.5.9.ebuild:
   Keyword ~mips.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.155 2008/03/20 16:56:15 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.156 2008/05/11 17:29:27 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> kdewebdev-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdewebdev-4.0.1.ebuild:
   Old.
