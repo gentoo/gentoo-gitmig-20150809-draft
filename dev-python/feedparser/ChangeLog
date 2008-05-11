@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/feedparser
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.14 2007/04/03 18:51:42 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.15 2008/05/11 16:45:55 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> feedparser-4.1.ebuild:
+  Stable on ppc64; bug #221147
 
   03 Apr 2007; Peter Weller <welp@gentoo.org> feedparser-4.1.ebuild:
   Keyworded ~x86-fbsd
