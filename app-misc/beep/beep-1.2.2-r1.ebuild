@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.8 2008/05/10 23:18:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.9 2008/05/11 02:35:30 solar Exp $
 
 inherit eutils base toolchain-funcs
 
 DESCRIPTION="The advanced PC speaker beeper"
 HOMEPAGE="http://www.johnath.com/beep/"
-SRC_URI="mirrors://gentoo.org/${P}.tar.gz http://www.johnath.com/beep/${P}.tar.gz"
+SRC_URI="mirrors://gentoo/${P}.tar.gz http://www.johnath.com/beep/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,7 @@ PATCHES="${FILESDIR}/${P}-nosuid.patch"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's/CC=gcc/CC?=gcc/' Makefile || ewarn "Have I been fixed?"
 }
 src_compile() {
