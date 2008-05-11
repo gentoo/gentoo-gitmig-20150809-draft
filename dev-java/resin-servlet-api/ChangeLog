@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/resin-servlet-api
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.17 2008/05/11 13:34:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.18 2008/05/11 16:52:44 corsair Exp $
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org>
+  resin-servlet-api-3.0.25.ebuild:
+  Stable on ppc64; bug #221263
 
   11 May 2008; Markus Meier <maekke@gentoo.org>
   resin-servlet-api-3.0.25.ebuild:
