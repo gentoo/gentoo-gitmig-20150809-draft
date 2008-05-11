@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.9 2007/11/06 07:05:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.10 2008/05/11 00:58:18 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,10 +12,10 @@ HOMEPAGE="http://www.candelatech.com/~greear/vlan.html"
 SRC_URI="http://www.candelatech.com/~greear/vlan/${MY_PN}.${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~arm ~alpha amd64 ~ppc ~ppc64 sparc x86"
 IUSE="static"
-DEPEND="virtual/libc virtual/os-headers"
-RDEPEND="!static? ( virtual/libc )"
+#DEPEND="virtual/libc virtual/os-headers"
+#RDEPEND="!static? ( virtual/libc )"
 
 src_compile() {
 	use static && appened-ldflags -static
