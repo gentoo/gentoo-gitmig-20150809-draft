@@ -9,3 +9,5 @@ move app-admin/dirvish app-backup/dirvish
 move x11-drivers/xf86-video-amd x11-drivers/xf86-video-geode
 move x11-misc/grpn sci-calculators/grpn
 move xfce-extra/squeeze app-arch/squeeze
+move app-admin/skey sys-auth/skey
+move app-admin/otpcalc sys-auth/otpcalc
