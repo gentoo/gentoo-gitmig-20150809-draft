@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.22 2008/02/13 20:13:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.23 2008/05/12 07:57:42 hawking Exp $
+
+  12 May 2008; Ali Polatel <hawking@gentoo.org> -pyme-0.5.1.ebuild,
+  pyme-0.6.0-r1.ebuild, pyme-0.7.0-r1.ebuild:
+  Drop old. Swig isn't a runtime dep, but gpgme is, bug 221477. Use
+  distutils_src_unpack.
 
   13 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> pyme-0.5.1.ebuild:
   Fix gpgme dep.

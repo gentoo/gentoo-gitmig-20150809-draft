@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.2 2007/06/28 13:40:08 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.3 2008/05/12 07:57:42 hawking Exp $
 
 inherit distutils eutils
 
@@ -13,13 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ppc"
 IUSE="doc examples"
 
-DEPEND=">=app-crypt/gpgme-0.9.0
+RDEPEND=">=app-crypt/gpgme-0.9.0"
+DEPEND="${RDEPEND}
 	dev-lang/swig"
-RDEPEND=""
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	distutils_src_unpack
 
 	sed -i \
 		-e 's:include/:include/gpgme/:' \
