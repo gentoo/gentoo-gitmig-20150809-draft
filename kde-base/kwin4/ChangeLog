@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.80 2008/03/04 04:58:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.81 2008/05/12 15:51:49 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kwin4-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kwin4-3.5.8.ebuild,
   kwin4-3.5.9.ebuild:
