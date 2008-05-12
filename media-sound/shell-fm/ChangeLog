@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shell-fm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.7 2007/11/19 22:22:25 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.8 2008/05/12 15:26:34 drac Exp $
+
+*shell-fm-0.5 (12 May 2008)
+
+  12 May 2008; Samuli Suominen <drac@gentoo.org> +shell-fm-0.5.ebuild:
+  Version bump.
 
 *shell-fm-0.4 (19 Nov 2007)
 
