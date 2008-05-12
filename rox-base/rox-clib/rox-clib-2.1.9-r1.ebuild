@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r1.ebuild,v 1.5 2007/11/07 18:49:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r1.ebuild,v 1.6 2008/05/12 01:11:38 lack Exp $
 
 inherit multilib
 
@@ -50,6 +50,6 @@ src_install() {
 	cp -r . "${D}${baselibdir}/${APPNAME}"
 	(
 		cd Help
-		dodoc Authors Changes ToDo COPYING README Versions
+		dodoc Authors Changes ToDo README Versions
 	)
 }
