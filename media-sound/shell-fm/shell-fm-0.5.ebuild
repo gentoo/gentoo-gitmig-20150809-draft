@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.5.ebuild,v 1.1 2008/05/12 15:26:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.5.ebuild,v 1.2 2008/05/12 15:29:40 drac Exp $
 
 inherit toolchain-funcs
 
@@ -33,6 +33,6 @@ src_compile() {
 src_install() {
 	dobin source/${PN} || die "dobin failed."
 	doman manual/${PN}.1
-	insinto /usr/share/doc/${PF}/scripts
-	doins scripts/{*.sh,zcontrol} || die "doins failed."
+	exeinto /usr/share/${PN}/scripts
+	doexe scripts/{*.sh,zcontrol} || die "doexe failed."
 }
