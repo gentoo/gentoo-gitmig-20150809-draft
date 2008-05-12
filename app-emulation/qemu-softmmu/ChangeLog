@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.49 2008/04/20 19:01:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.50 2008/05/12 23:59:20 pva Exp $
+
+*qemu-softmmu-0.9.1-r2 (12 May 2008)
+
+  12 May 2008; Peter Volkov <pva@gentoo.org>
+  +files/qemu-softmmu-0.9.1-CVE-2008-0928.patch,
+  +qemu-softmmu-0.9.1-r2.ebuild:
+  Updated patch for security bug #212351 to avoid qcow2 image regression.
+  Filtering CFLAGS to allow building with gcc-3.4.
 
   20 Apr 2008; Luca Barbato <lu_zero@gentoo.org>
   qemu-softmmu-0.9.1-r1.ebuild:
