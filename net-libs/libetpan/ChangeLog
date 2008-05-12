@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.63 2008/05/12 11:37:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.64 2008/05/12 13:35:57 opfer Exp $
+
+  12 May 2008; Christian Faulhammer <opfer@gentoo.org> libetpan-0.54.ebuild:
+  stable x86, bug 221801
 
   12 May 2008; nixnut <nixnut@gentoo.org> libetpan-0.54.ebuild:
   Stable on ppc wrt bug 221801
