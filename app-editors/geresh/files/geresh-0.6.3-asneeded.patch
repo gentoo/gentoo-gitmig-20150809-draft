@@ -1,0 +1,127 @@
+diff -NrU5 geresh-0.6.3.orig/configure.in geresh-0.6.3/configure.in
+--- geresh-0.6.3.orig/configure.in	2004-10-02 22:19:10.000000000 +0200
++++ geresh-0.6.3/configure.in	2008-05-11 22:11:11.000000000 +0200
+@@ -1,6 +1,7 @@
+ AC_INIT(main.cc)
++#AC_ARG_PROGRAM
+ AM_INIT_AUTOMAKE(geresh, 0.6.3)
+ AM_CONFIG_HEADER(config.h)
+ 
+ AC_PROG_CC
+ AC_PROG_CPP
+@@ -8,18 +9,16 @@
+ AC_PROG_CXXCPP
+ AC_PROG_INSTALL
+ 
+ AC_LANG_CPLUSPLUS
+ 
+-AC_ARG_PROGRAM
+-
+ debugging_support=no
+ AC_ARG_ENABLE(debug,
+ [  --enable-debug          Enable debugging support],
+ [   if test "$enableval" = yes; then
+ 	debugging_support=yes
+-	AC_DEFINE(DEBUG)
++	AC_DEFINE(DEBUG, [], [Turn on debugging])
+     fi
+ ])
+ 
+ dnl ---- fribidi ----
+ 
+@@ -35,11 +34,11 @@
+ if test "x$FRIBIDI_CXXFLAGS" = x-I/usr/include; then
+     AC_CHECK_HEADER(fribidi/fribidi.h, , [CXXFLAGS="$CXXFLAGS $FRIBIDI_CXXFLAGS"])
+ else
+     CXXFLAGS="$CXXFLAGS $FRIBIDI_CXXFLAGS"
+ fi
+-LDFLAGS="$LDFLAGS `$FRIBIDI_CONFIG --libs`"
++LIBS="`$FRIBIDI_CONFIG --libs`"
+ 
+ AC_CHECK_FUNCS(fribidi_log2vis fribidi_log2vis_get_embedding_levels, ,
+ 	       [AC_MSG_ERROR(A required FriBiDi function doesn't exist)])
+ 
+ AC_MSG_CHECKING(your FriBiDi library using a short test program)
+@@ -153,11 +152,11 @@
+ 		[
+ 		wchar_t ch;
+ 		waddnwstr((WINDOW*)0, &ch, 1);
+ 		], ,
+ 		[AC_MSG_ERROR(I can't find ncursesw's header file! please check config.log)])
+-    AC_DEFINE(HAVE_WIDE_CURSES)
++    AC_DEFINE(HAVE_WIDE_CURSES, [], [Can link to ncursesw and use its functions])
+ else
+     curses_lib=ncurses
+     AC_CHECK_HEADERS(curses.h ncurses.h)
+     AC_CHECK_LIB(ncurses, initscr, , [curses_lib=])
+     if test "x$curses_lib" = x; then
+@@ -171,18 +170,18 @@
+ 
+ # test for the existance of particular curses functions
+ 
+ AC_CHECK_FUNCS(use_default_colors start_color curs_set)
+ if test "$ac_cv_func_start_color" = yes; then
+-    AC_DEFINE(HAVE_COLOR, 1)
++    AC_DEFINE(HAVE_COLOR, 1, [Enable use of use_default_colors start_color curs_set ncurses functions])
+ fi
+ 
+ dnl ---- gettext ----
+ 
+ # rudimentary gettext check, till I utilize automake's gettext support
+ 
+-AC_CHECK_HEADERS(libintl.h, [AC_CHECK_FUNCS(gettext, [AC_DEFINE(USE_GETTEXT)])])
++AC_CHECK_HEADERS(libintl.h, [AC_CHECK_FUNCS(gettext, [AC_DEFINE(USE_GETTEXT, [], [Use Gettext])])])
+ 
+ # locale support
+ 
+ AC_CHECK_HEADERS(locale.h)
+ 
+@@ -191,11 +190,11 @@
+ AC_MSG_CHECKING(for nl_langinfo and CODESET)
+ AC_TRY_LINK([#include <langinfo.h>], 
+ 	    [char* s = nl_langinfo(CODESET);],
+ 	    [
+ 		AC_MSG_RESULT(yes)
+-		AC_DEFINE(HAVE_LANGINFO_CODESET)
++		AC_DEFINE(HAVE_LANGINFO_CODESET, [], [Has nl_langinfoCODESET])
+ 	    ],
+ 	    [AC_MSG_RESULT(no)])
+ 
+ dnl ---- iconv ----
+ 
+@@ -267,18 +266,18 @@
+ 				iconv_const=const
+ 		    )
+ 	)
+ 	AC_MSG_RESULT($iconv_const)
+ 
+-	AC_DEFINE(USE_ICONV)
+-	AC_DEFINE_UNQUOTED(ICONV_CONST, $iconv_const)
+-	AC_DEFINE_UNQUOTED(INTERNAL_ENCODING, "$internal_encoding")
++	AC_DEFINE(USE_ICONV, [], [Will we use iconv])
++	AC_DEFINE_UNQUOTED(ICONV_CONST, $iconv_const, [Does your iconv need const])
++	AC_DEFINE_UNQUOTED(INTERNAL_ENCODING, "$internal_encoding", [internal encoding])
+     fi
+ ])
+ fi
+ 
+-AC_DEFINE_UNQUOTED(DEFAULT_FILE_ENCODING, "$default_encoding")
++AC_DEFINE_UNQUOTED(DEFAULT_FILE_ENCODING, "$default_encoding", [Default file encoding])
+ 
+ AC_CHECK_FUNCS(wctob btowc)
+ 
+ dnl ---- misc ----
+ 
+@@ -289,11 +288,11 @@
+ 	       AC_MSG_ERROR([A required function does not exist]))
+ AC_CHECK_FUNCS(vsnprintf vasprintf)
+ AC_TYPE_MODE_T
+ 
+ dnl AC_TYPE_SIGNAL - fails on some systems, so:
+-AC_DEFINE(RETSIGTYPE, void)
++AC_DEFINE(RETSIGTYPE, void, [Return signal type])
+ 
+ dnl ---- print out the results ----
+ 
+ cat <<MSG
+ 

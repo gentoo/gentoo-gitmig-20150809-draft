@@ -1,0 +1,81 @@
+--- geresh-0.6.3.orig/basemenu.h
++++ geresh-0.6.3/basemenu.h
+@@ -1,6 +1,7 @@
+ #ifndef BDE_BASEMENU_H
+ #define BDE_BASEMENU_H
+ 
++#include <cstring>
+ #include "widget.h"
+ 
+ struct MenuItem {
+--- geresh-0.6.3.orig/dialogline.cc
++++ geresh-0.6.3/dialogline.cc
+@@ -16,6 +16,7 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
+ #include <stdarg.h>
+ 
+ #include "dialogline.h"
+--- geresh-0.6.3.orig/editbox2.cc
++++ geresh-0.6.3/editbox2.cc
+@@ -14,6 +14,7 @@
+ // along with this program; if not, write to the Free Software
+ // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
+ 
++#include <cstdlib>
+ #include <config.h>
+ 
+ #include "editbox.h"
+--- geresh-0.6.3.orig/editbox.h
++++ geresh-0.6.3/editbox.h
+@@ -768,7 +768,7 @@
+ 			    int para_num
+ 			);
+ 
+-    void EditBox::redraw_unwrapped_paragraph(
++    void redraw_unwrapped_paragraph(
+ 			    Paragraph &p,
+ 			    int window_start_line,
+ 			    bool only_cursor,
+@@ -780,7 +780,7 @@
+ 			    bool eop_is_selected
+ 			);
+ 
+-    void EditBox::redraw_wrapped_paragraph(
++    void redraw_wrapped_paragraph(
+ 			    Paragraph &p,
+ 			    int window_start_line,
+ 			    bool only_cursor,
+--- geresh-0.6.3.orig/io.cc
++++ geresh-0.6.3/io.cc
+@@ -16,6 +16,7 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
+ #include <stdarg.h>
+ #include <fcntl.h>  // file primitives
+ #include <unistd.h>
+--- geresh-0.6.3.orig/transtbl.cc
++++ geresh-0.6.3/transtbl.cc
+@@ -16,6 +16,8 @@
+ 
+ #include <config.h>
+ 
++#include <cstdlib>
++#include <cstring>
+ #include <stdio.h>
+ #include <errno.h>
+ 
+--- geresh-0.6.3.orig/dispatcher.h
++++ geresh-0.6.3/dispatcher.h
+@@ -17,6 +17,7 @@
+ #ifndef BDE_DISPATCHER_H
+ #define BDE_DISPATCHER_H
+ 
++#include <cstring>
+ #include "event.h"
+ 
+ // class Dispatcher represents a class that receives GUI events.
