@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/jaxodraw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.5 2007/08/03 22:57:55 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.6 2008/05/12 08:51:23 nelchael Exp $
+
+  12 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> jaxodraw-1.3.2.ebuild:
+  Rename tex USE flag, see bug #196745.
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> jaxodraw-1.3.2.ebuild:
   Migrate to splitted ant and QA fixes.
