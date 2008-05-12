@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.24 2008/02/24 15:57:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.25 2008/05/12 16:12:46 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> sparse-0.4.1.ebuild:
+  Stable on ppc64
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> sparse-0.4.1.ebuild:
   ia64/sparc/x86 stable
