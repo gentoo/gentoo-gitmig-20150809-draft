@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.309 2008/05/12 16:38:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.310 2008/05/12 17:31:11 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.7-r1.ebuild:
+  alpha/ia64/sparc stable wrt #221065
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> cups-1.3.7-r1.ebuild:
   Stable for HPPA (bug #221065).

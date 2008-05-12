@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r1.ebuild,v 1.3 2008/05/12 16:38:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r1.ebuild,v 1.4 2008/05/12 17:31:11 armin76 Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="acl avahi dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
