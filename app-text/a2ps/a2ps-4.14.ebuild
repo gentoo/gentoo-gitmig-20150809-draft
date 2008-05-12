@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14.ebuild,v 1.5 2008/05/12 08:35:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14.ebuild,v 1.6 2008/05/12 09:21:22 corsair Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="cjk emacs nls latex vanilla userland_BSD userland_GNU"
 
 DEPEND=">=dev-util/gperf-2.7.2
