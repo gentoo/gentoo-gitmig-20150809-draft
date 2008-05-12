@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.1 2008/05/12 06:03:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.2 2008/05/12 15:55:09 mr_bones_ Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -102,4 +102,3 @@ setup-jvm-opts() {
 
 	export AWT_LIB_PATH=${JAVA_LIB_DIR}
 }
-
