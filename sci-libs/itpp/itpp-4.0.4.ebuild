@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.3 2008/04/15 11:04:11 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.4 2008/05/12 13:28:05 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -13,11 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="blas debug doc fftw lapack minimal"
 
-DEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
+RDEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
 		blas? ( virtual/blas
-				lapack? ( virtual/lapack ) )
+				lapack? ( virtual/lapack ) )"
+DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen
 				virtual/tetex )"
+
+
 
 pkg_setup() {
 	# lapack can only be used in conjunction with blas

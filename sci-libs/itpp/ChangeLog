@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.73 2008/04/15 11:04:11 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.74 2008/05/12 13:28:05 markusle Exp $
+
+  12 May 2008; Markus Dittrich <markusle@gentoo.org> itpp-4.0.3.ebuild,
+  itpp-4.0.4.ebuild:
+  Removed runtime dependency on app-doc/doxygen (fixed bug #221689).
 
   15 Apr 2008; Markus Dittrich <markusle@gentoo.org>
   +files/itpp-4.0.4-vec.patch, itpp-4.0.4.ebuild:
