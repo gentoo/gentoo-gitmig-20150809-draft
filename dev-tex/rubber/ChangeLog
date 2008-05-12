@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/rubber
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.9 2007/07/15 09:21:01 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.10 2008/05/12 12:47:15 aballier Exp $
+
+  12 May 2008; Alexis Ballier <aballier@gentoo.org> -rubber-1.0.ebuild:
+  unused version
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to tex, as nattfodd is being retired (#108329).
