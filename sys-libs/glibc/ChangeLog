@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.576 2008/03/27 17:17:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.577 2008/05/12 16:17:45 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> glibc-2.7-r2.ebuild:
+  Stable on ppc64
 
   27 Mar 2008; Jeroen Roovers <jer@gentoo.org> glibc-2.7-r2.ebuild:
   Stable for HPPA.
