@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8575 2008/05/12 10:32:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8576 2008/05/12 11:59:10 fmccor Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -138,7 +138,7 @@ media-sound/yconsole
 # Temp. mask until all plugins are in the tree
 =mail-client/claws-mail-3.4.0
 =mail-client/claws-mail-pdf-viewer-0.9.1
-=mail-client/claws-mail-vcalendar-0.102
+=mail-client/claws-mail-vcalendar-1.102
 =mail-client/claws-mail-gtkhtml-0.18
 
 # Samuli Suominen <drac@gentoo.org> (24 Apr 2008)
