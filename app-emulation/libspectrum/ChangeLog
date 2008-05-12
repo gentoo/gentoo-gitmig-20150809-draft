@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libspectrum
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.19 2008/05/12 03:46:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.20 2008/05/12 04:00:18 vanquirius Exp $
+
+  12 May 2008; Marcelo Goes <vanquirius@gentoo.org>
+  -libspectrum-0.2.2.ebuild, libspectrum-0.2.2-r1.ebuild:
+  Add pkgconfig dependency for bug 205049. Thanks again to Jose Manuel Ferrer
+  Ortiz <jmfo1982 at yahoo dot es>. Removing old ebuild.
 
 *libspectrum-0.4.0 (12 May 2008)
 
