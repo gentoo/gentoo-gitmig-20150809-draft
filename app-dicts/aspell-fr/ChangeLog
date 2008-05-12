@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.15 2008/05/05 03:20:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.16 2008/05/12 13:46:38 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> aspell-fr-0.60.ebuild:
+  Stable on ppc64
 
   05 May 2008; Olivier Crête <tester@gentoo.org> aspell-fr-0.60.ebuild:
   amd64 Stable
