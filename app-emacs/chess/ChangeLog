@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.26 2008/05/12 16:05:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.27 2008/05/12 16:41:23 ulm Exp $
+
+  12 May 2008; Ulrich Mueller <ulm@gentoo.org> -files/51chess-gentoo.el,
+  -chess-2.0_beta6.ebuild:
+  Remove old.
 
   12 May 2008; Markus Meier <maekke@gentoo.org> chess-2.0_beta6-r1.ebuild:
   amd64 stable, bug #217514
