@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.24 2008/04/11 13:42:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.25 2008/05/12 07:34:16 aballier Exp $
+
+  12 May 2008; Alexis Ballier <aballier@gentoo.org> -kdenlive-0.4.ebuild:
+  remove old
 
   11 Apr 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   adopt it in video herd, better than maintainer-needed
