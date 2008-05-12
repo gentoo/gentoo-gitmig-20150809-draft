@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/bbdb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/ChangeLog,v 1.19 2008/05/05 13:24:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/bbdb/ChangeLog,v 1.20 2008/05/12 13:52:11 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> bbdb-1.32.ebuild:
+  Stable on ppc64
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> bbdb-1.32.ebuild:
   alpha/sparc stable wrt #219332

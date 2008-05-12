@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/docbookide
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/ChangeLog,v 1.18 2008/05/05 13:25:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/docbookide/ChangeLog,v 1.19 2008/05/12 13:53:29 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> docbookide-0.08.ebuild:
+  Stable on ppc64
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> docbookide-0.08.ebuild:
   alpha/sparc stable wrt #219332

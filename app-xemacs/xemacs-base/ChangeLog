@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-base
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.22 2008/05/05 13:30:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.23 2008/05/12 14:08:00 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> xemacs-base-2.10.ebuild:
+  Stable on ppc64
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> xemacs-base-2.10.ebuild:
   alpha/sparc stable wrt #219332
