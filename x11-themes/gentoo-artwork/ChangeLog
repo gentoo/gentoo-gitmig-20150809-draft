@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.26 2008/04/29 14:11:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.27 2008/05/12 18:35:17 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org>
+  gentoo-artwork-0.4.2-r1.ebuild:
+  Stable on ppc64
 
   29 Apr 2008; Dawid Węgliński <cla@gentoo.org>
   gentoo-artwork-0.4.2-r1.ebuild:
