@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r2.ebuild,v 1.13 2008/05/12 09:13:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r2.ebuild,v 1.14 2008/05/12 14:47:19 jer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="build"
 
 DEPEND="sys-apps/diffutils
