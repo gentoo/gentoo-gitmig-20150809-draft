@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.11 2008/04/03 20:28:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.12 2008/05/12 04:59:40 nerdboy Exp $
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
@@ -11,3 +11,8 @@ media-libs/gst-plugins-base debug
 # Tobias Klausmann <klausman@gentoo.org> (3 Apr 2008)
 # Needs pm-utils which will never be keyworded on alpha
 sys-apps/hal laptop
+
+# Steve Arnold <nerdboy@gentoo.org> (11 May 2008)
+# Has massive QA issues with the java depends
+dev-util/astyle java
+
