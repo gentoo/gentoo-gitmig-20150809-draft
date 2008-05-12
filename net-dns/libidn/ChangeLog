@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.81 2008/05/11 22:41:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.82 2008/05/12 14:44:56 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> libidn-1.5-r1.ebuild:
+  alpha/ia64/sparc stable wrt #221173
 
   11 May 2008; Jeroen Roovers <jer@gentoo.org> libidn-1.5-r1.ebuild:
   Stable for HPPPA (bug #221173).
