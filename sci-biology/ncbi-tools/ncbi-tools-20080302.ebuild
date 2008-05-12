@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20080302.ebuild,v 1.3 2008/05/12 00:04:15 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20080302.ebuild,v 1.4 2008/05/12 16:00:44 corsair Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 #	mpi? ( mirror://gentoo/mpiblast-20070826.tar.gz )
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 ~sparc x86"
 
 # IUSE="doc mpi X"
 # mpiblast 1.5.0beta1 doesn't compile as advertised with this ncbi release.
