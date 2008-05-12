@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.6.ebuild,v 1.3 2008/03/07 14:20:06 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.6.ebuild,v 1.4 2008/05/12 18:02:20 corsair Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="ipv6 nls selinux X"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
