@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.17 2007/07/22 09:43:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.18 2008/05/12 23:24:02 nyhm Exp $
 
-IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex doc"
+IUSE="static mmx sse oss alsa esd arts X fbcon svga doc"
 
 inherit flag-o-matic
 
@@ -28,8 +28,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 		x11-proto/xf86dgaproto
 		x11-proto/xf86vidmodeproto
-	)
-	tetex? ( virtual/tetex )"
+	)"
 
 src_compile() {
 	filter-flags -fPIC -fprefetch-loop-arrays
@@ -59,22 +58,14 @@ src_compile() {
 		-e "/CFLAGS =.*/s:$: ${CFLAGS}:" \
 		makefile || die "sed makefile failed"
 	emake -j1 || die	# parallel fails
-
-	if use tetex ; then
-		addwrite /var/lib/texmf
-		addwrite /usr/share/texmf
-		addwrite /var/cache/fonts
-		make docs-dvi docs-ps || die
-	fi
 }
 
 src_install() {
 	addpredict /usr/share/info
-	make DESTDIR=${D} install install-gzipped-man install-gzipped-info || die
+	make DESTDIR="${D}" install install-gzipped-man install-gzipped-info || die
 
 	# Different format versions of the Allegro documentation
 	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
-	use tetex && dodoc docs/allegro.{dvi,ps}
 	use doc && dodoc examples/*
 	dohtml docs/html/*
 	docinto txt ; dodoc docs/txt/*.txt

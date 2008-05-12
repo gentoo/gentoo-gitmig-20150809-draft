@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.75 2008/02/29 19:55:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.76 2008/05/12 23:24:02 nyhm Exp $
+
+  12 May 2008; Tristan Heaven <nyhm@gentoo.org> allegro-4.1.14.ebuild:
+  Remove tetex USE flag, bug #196745
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> allegro-4.2.2.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
