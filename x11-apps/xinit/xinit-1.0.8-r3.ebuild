@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r3.ebuild,v 1.1 2008/05/06 08:16:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r3.ebuild,v 1.2 2008/05/12 08:34:27 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -60,4 +60,9 @@ src_install() {
 	newconfd "${FILESDIR}"/xdm.confd-1 xdm
 	newpamd "${FILESDIR}"/xserver.pamd xserver
 	newenvd "${FILESDIR}"/xsession.env.d 90xsession
+}
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+	ewarn "Your XSESSION variable (used by startx) is now set in /etc/env.d/90xsession"
 }
