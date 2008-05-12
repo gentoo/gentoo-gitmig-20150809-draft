@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14.ebuild,v 1.4 2008/04/19 14:13:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14.ebuild,v 1.5 2008/05/12 08:35:25 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,22 +15,23 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cjk emacs nls tetex vanilla userland_BSD userland_GNU"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+IUSE="cjk emacs nls latex vanilla userland_BSD userland_GNU"
 
 DEPEND=">=dev-util/gperf-2.7.2
 	|| ( >=dev-util/yacc-1.9.1 sys-devel/bison )
 	virtual/ghostscript
 	>=app-text/psutils-1.17
 	emacs? ( virtual/emacs )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/ghostscript
+	app-text/wdiff
 	userland_GNU? ( || ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp ) )
 	userland_BSD? ( sys-freebsd/freebsd-ubin )
 	>=app-text/psutils-1.17
 	emacs? ( virtual/emacs )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	nls? ( virtual/libintl )"
 
 SITEFILE=50${PN}-gentoo.el
@@ -39,20 +40,11 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 
-	# applied by upstream
-	#epatch "${FILESDIR}/${PN}-4.13-select-freebsd.patch"
 	epatch "${FILESDIR}/${PN}-4.13c-locale-gentoo.diff"
 	# this will break
 	#epatch "${FILESDIR}/${PN}-4.13c-stdarg.patch"
 	use vanilla || epatch "${FILESDIR}/${PN}-4.13-stdout.diff"
-	# applied by upstream
-	#epatch "${FILESDIR}/${PV}-gcc34.patch"
 	use cjk && epatch "${DISTDIR}/${P}-ja_nls.patch.gz"
-
-	# improve tempfile handling
-	# applied by upstream
-	#epatch "${FILESDIR}/${P}-fixps.patch"
-	#epatch "${FILESDIR}/${P}-psmandup.diff"
 
 	# fix fnmatch replacement, bug #134546
 	epatch "${FILESDIR}/${PN}-4.13c-fnmatch-replacement.patch"
@@ -62,14 +54,6 @@ src_unpack() {
 
 	# fix emacs printing, bug #114627
 	epatch "${FILESDIR}/a2ps-4.13c-emacs.patch"
-
-	# fix psset with sed-4.1, bug #126403
-	# applied by upstream
-	#epatch "${FILESDIR}/a2ps-4.13c-psset.patch"
-
-	# fix >=autoconf-2.60, bug 138161
-	# this will break
-	#epatch "${FILESDIR}/a2ps-4.13-fixcachecheck.patch"
 
 	# fix chmod error, #167670
 	epatch "${FILESDIR}/a2ps-4.13-manpage-chmod.patch"
@@ -86,6 +70,7 @@ src_unpack() {
 src_compile() {
 	#export YACC=yacc
 	export COM_netscape=no
+	use latex || COM_latex=no
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \
 		$(useq emacs || echo EMACS=no) \
@@ -99,8 +84,8 @@ src_compile() {
 
 src_install() {
 	einstall \
-		sysconfdir=${D}/etc/a2ps \
-		includedir=${D}/usr/include \
+		sysconfdir="${D}"/etc/a2ps \
+		includedir="${D}"/usr/include \
 		lispdir="${D}${SITELISP}/${PN}" \
 		|| die "einstall failed"
 
