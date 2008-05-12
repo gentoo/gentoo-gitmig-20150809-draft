@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.16 2006/11/01 13:24:01 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.17 2008/05/12 15:53:15 drac Exp $
+
+*tapiir-0.7.2 (12 May 2008)
+
+  12 May 2008; Samuli Suominen <drac@gentoo.org> +tapiir-0.7.2.ebuild:
+  Version bump.
 
   01 Nov 2006; Alexis Ballier <aballier@gentoo.org>
   +files/tapiir-0.7.1-gcc4.patch, tapiir-0.7.1.ebuild:
