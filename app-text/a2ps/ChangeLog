@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.81 2008/05/12 09:21:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.82 2008/05/12 15:05:17 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> a2ps-4.14.ebuild:
+  Marked ~hppa (bug #221791).
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> a2ps-4.14.ebuild:
   Added ~ppc64; bug #221791
