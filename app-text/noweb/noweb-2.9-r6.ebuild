@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.8 2008/04/05 00:34:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.9 2008/05/12 11:22:11 aballier Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="icon"
 KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc ~x86"
 
 DEPEND="sys-devel/gcc
-	virtual/tetex
+	virtual/tex-base
 	icon? ( dev-lang/icon )
 	!icon? ( sys-apps/gawk )
 	sys-apps/debianutils"
