@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15.ebuild,v 1.5 2007/10/02 18:21:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15.ebuild,v 1.6 2008/05/12 18:23:10 rbu Exp $
 
 inherit eutils
 
 DESCRIPTION="AICCU Client to configure an IPv6 tunnel to SixXS"
-HOMEPAGE="http://www.sixxs.net/"
+HOMEPAGE="http://www.sixxs.net/tools/aiccu"
 SRC_URI="http://www.sixxs.net/archive/sixxs/aiccu/unix/${PN}_${PV//\./}.tar.gz"
 
 LICENSE="SixXS"
@@ -15,6 +15,13 @@ IUSE=""
 DEPEND="net-libs/gnutls
 		sys-apps/iproute2"
 S=${WORKDIR}/aiccu
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+}
 
 src_compile() {
 	cd ${S}
