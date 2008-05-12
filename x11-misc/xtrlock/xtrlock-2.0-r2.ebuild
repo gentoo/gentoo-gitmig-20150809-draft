@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r2.ebuild,v 1.4 2008/05/12 11:41:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r2.ebuild,v 1.5 2008/05/12 13:40:44 opfer Exp $
 
 MY_P=${P/-/_}-12
 DESCRIPTION="A simplistic screen locking program for X"
@@ -9,7 +9,7 @@ HOMEPAGE="http://ftp.debian.org/debian/pool/main/x/xtrlock/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
