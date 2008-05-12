@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r1.ebuild,v 1.3 2008/03/26 17:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r1.ebuild,v 1.4 2008/05/12 13:49:24 corsair Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.daidouji.com/oneko/distfiles/${P}.sakura.5.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/oneko
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.15 2008/03/26 17:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.16 2008/05/12 13:49:24 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> oneko-1.2-r1.ebuild:
+  Stable on ppc64
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> oneko-1.2-r1.ebuild:
   x86 stable
