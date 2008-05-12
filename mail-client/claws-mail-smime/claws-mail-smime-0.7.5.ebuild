@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.7.5.ebuild,v 1.1 2008/05/12 12:52:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.7.5.ebuild,v 1.2 2008/05/12 12:55:18 opfer Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc ChangeLog NEWS README
 
 	# kill useless files
 	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}

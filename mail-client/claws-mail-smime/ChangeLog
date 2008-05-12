@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-smime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.17 2008/05/12 12:52:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.18 2008/05/12 12:55:18 opfer Exp $
+
+  12 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-smime-0.7.5.ebuild:
+  don't install AUTHORS file, not available anymore
 
 *claws-mail-smime-0.7.5 (12 May 2008)
 
