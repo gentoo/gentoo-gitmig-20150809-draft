@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.73 2008/05/05 13:30:20 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.74 2008/05/12 21:45:33 solar Exp $
+
+  12 May 2008; <solar@gentoo.org> autofs-5.0.3-r5.ebuild:
+  - Keyworded ~arm per request. Builds native but fails at cross-compiles.
 
   05 May 2008; Stefaan De Roeck <stefaan@gentoo.org> autofs-5.0.3-r5.ebuild:
   Patch patches in temporary directory (fixes bug #220315)
