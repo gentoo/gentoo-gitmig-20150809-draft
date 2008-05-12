@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.5 2008/04/24 18:11:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.6 2008/05/12 02:57:33 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> vinagre-0.5.1.ebuild:
+  Marked ~hppa (bug #218794).
 
   24 Apr 2008; Markus Rothe <corsair@gentoo.org> vinagre-0.5.1.ebuild:
   Added ~ppc64; bug #218794
