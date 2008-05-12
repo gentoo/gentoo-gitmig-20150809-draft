@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/spu-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/spu-tools/ChangeLog,v 1.1 2007/12/12 01:33:18 lu_zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/spu-tools/ChangeLog,v 1.2 2008/05/12 11:22:12 lu_zero Exp $
+
+  12 May 2008; Luca Barbato <lu_zero@gentoo.org>
+  spu-tools-2.2.80_p95.ebuild:
+  fix bug #221811
 
 *spu-tools-2.2.80_p95 (12 Dec 2007)
 

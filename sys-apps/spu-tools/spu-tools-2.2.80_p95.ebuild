@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/spu-tools/spu-tools-2.2.80_p95.ebuild,v 1.1 2007/12/12 01:33:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/spu-tools/spu-tools-2.2.80_p95.ebuild,v 1.2 2008/05/12 11:22:12 lu_zero Exp $
 
 MY_P=${P/_p/-}
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses
 		sys-apps/help2man"
-RDEPEND="${DEPEND}"
+RDEPEND="sys-libs/ncurses"
 
 S="${WORKDIR}/${PN}/src"
 
