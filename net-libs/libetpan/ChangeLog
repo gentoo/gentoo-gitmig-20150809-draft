@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.61 2008/02/24 18:14:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.62 2008/05/12 10:08:32 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> libetpan-0.54.ebuild:
+  Stable on ppc64; bug #221801
 
   24 Feb 2008; Andrej Kacian <ticho@gentoo.org> libetpan-0.54.ebuild:
   Updated version in soname change warning.
