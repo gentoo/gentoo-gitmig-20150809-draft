@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.159 2008/05/11 15:06:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.160 2008/05/12 10:53:41 nixnut Exp $
+
+  12 May 2008; nixnut <nixnut@gentoo.org> ibm-jdk-bin-1.6.0.1.ebuild:
+  Stable on ppc wrt bug 217442
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> ibm-jdk-bin-1.6.0.1.ebuild:
   Stable on ppc64; bug #217442

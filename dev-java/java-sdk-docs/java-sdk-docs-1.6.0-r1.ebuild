@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0-r1.ebuild,v 1.9 2008/02/05 10:05:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0-r1.ebuild,v 1.10 2008/05/12 10:52:35 nixnut Exp $
 
 ORIG_NAME="jdk-6-doc.zip"
 SRC_URI="jdk-6-doc-${PR}.zip"
@@ -8,7 +8,7 @@ DESCRIPTION="Documentation (including API Javadocs) for Java SDK version ${PV}"
 HOMEPAGE="http://java.sun.com/javase/6/docs/"
 LICENSE="sun-j2sl-6"
 SLOT="1.6.0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
