@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.111 2008/04/25 13:20:10 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.112 2008/05/12 16:55:07 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> konqueror-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   25 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> konqueror-4.0.2.ebuild,
   konqueror-4.0.3.ebuild:

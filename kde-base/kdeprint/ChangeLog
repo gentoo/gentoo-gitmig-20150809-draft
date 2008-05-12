@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeprint
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/ChangeLog,v 1.88 2008/03/07 20:36:16 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/ChangeLog,v 1.89 2008/05/12 16:36:42 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdeprint-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdeprint-3.5.9.ebuild:
   Allow mixing of split & monolithic ebuilds, where possible, thanks to

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.116 2008/04/26 20:32:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.117 2008/05/12 16:58:02 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org>
+  kdebase-startkde-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   26 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
   files/agent-startup.sh:

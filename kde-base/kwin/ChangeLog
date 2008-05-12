@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.120 2008/04/15 11:51:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.121 2008/05/12 16:42:37 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kwin-3.5.9-r1.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kwin-3.5.9-r1 (15 Apr 2008)
 

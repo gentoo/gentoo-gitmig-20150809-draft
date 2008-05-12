@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.9-r1.ebuild,v 1.1 2008/04/15 11:51:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.9-r1.ebuild,v 1.2 2008/05/12 16:42:37 armin76 Exp $
 
 KMNAME=kdebase
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE window manager"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility xcomposite"
 
 RDEPEND="xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )"

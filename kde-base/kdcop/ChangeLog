@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.58 2008/03/04 02:32:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.59 2008/05/12 16:37:40 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdcop-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdcop-3.5.8.ebuild,
   kdcop-3.5.9.ebuild:

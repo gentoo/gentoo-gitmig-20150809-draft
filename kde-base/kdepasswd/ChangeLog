@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.91 2008/04/03 20:58:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.92 2008/05/12 16:34:05 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdepasswd-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kdepasswd-4.0.3 (03 Apr 2008)
 

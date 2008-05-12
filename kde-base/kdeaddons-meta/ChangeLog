@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.97 2008/03/04 07:01:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.98 2008/05/12 17:09:42 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org>
+  kdeaddons-meta-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdeaddons-meta-3.5.8.ebuild,
   kdeaddons-meta-3.5.9.ebuild:

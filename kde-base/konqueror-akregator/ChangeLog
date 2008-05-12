@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror-akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.79 2008/03/07 20:40:29 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.80 2008/05/12 17:06:43 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org>
+  konqueror-akregator-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   konqueror-akregator-3.5.9.ebuild:
