@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.25 2007/12/09 23:04:41 sbriesen Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.26 2008/05/12 16:41:33 maekke Exp $
+
+  12 May 2008; Markus Meier <maekke@gentoo.org>
+  ez-ipupdate-3.0.11_beta8-r4.ebuild:
+  amd64 stable, bug #220457
 
   09 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org>
   ez-ipupdate-3.0.11_beta8-r4.ebuild:
