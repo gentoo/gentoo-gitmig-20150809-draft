@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.2-r1.ebuild,v 1.7 2008/05/05 19:23:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.2-r1.ebuild,v 1.8 2008/05/12 08:44:55 nelchael Exp $
 
 DESCRIPTION="Gadu-Gadu transport for Jabber"
 HOMEPAGE="http://jggtrans.jajcus.net/"
@@ -11,10 +11,11 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND=">=net-im/jabber-base-0.01
+RDEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/glib-2.6.4
-	dev-util/pkgconfig
 	net-dns/libidn"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/jggtrans-${PV}"
 
