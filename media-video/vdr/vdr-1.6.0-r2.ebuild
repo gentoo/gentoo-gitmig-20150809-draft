@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r2.ebuild,v 1.4 2008/04/23 16:33:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0-r2.ebuild,v 1.5 2008/05/12 17:15:34 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -30,16 +30,17 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="media-libs/jpeg
-	sys-apps/gawk
-	media-tv/linuxtv-dvb-headers
+COMMON_DEPEND="media-libs/jpeg
 	sys-libs/libcap
 	>=media-libs/fontconfig-2.4.2
 	>=media-libs/freetype-2
-	dev-util/unifdef
 	sys-devel/gettext"
 
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	media-tv/linuxtv-dvb-headers
+	dev-util/unifdef"
+
+RDEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	>=media-tv/gentoo-vdr-scripts-0.4.2
 	media-fonts/corefonts"
