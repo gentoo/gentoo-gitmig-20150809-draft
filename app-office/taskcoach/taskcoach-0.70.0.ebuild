@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.69.1.ebuild,v 1.2 2008/02/29 17:47:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.70.0.ebuild,v 1.1 2008/05/12 19:32:15 caster Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Simple personal tasks and todo lists manager"
 HOMEPAGE="http://www.taskcoach.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-icon.tar.bz2"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
