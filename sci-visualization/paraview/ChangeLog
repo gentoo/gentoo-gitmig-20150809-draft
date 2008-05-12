@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.17 2008/02/20 23:35:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.18 2008/05/12 13:53:51 markusle Exp $
+
+  12 May 2008; Markus Dittrich <markusle@gentoo.org> paraview-2.6.2.ebuild,
+  paraview-3.2.1.ebuild:
+  Removed runtime dependency on app-doc/doxygen (fixes bug #221689).
 
   20 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/paraview-3.2.1-openmpi.patch, paraview-3.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.3 2008/02/15 11:14:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.4 2008/05/12 13:53:51 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -17,7 +17,6 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE="mpi python hdf5 doc examples threads"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
-	doc? ( app-doc/doxygen )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
 	media-libs/libpng
@@ -33,7 +32,8 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	x11-libs/libXmu"
 
 DEPEND="${RDEPEND}
-		>=dev-util/cmake-2.4.3"
+	doc? ( app-doc/doxygen )
+	>=dev-util/cmake-2.4.3"
 
 PVLIBDIR="$(get_libdir)/${MY_PN}-$(get_version_component_range 1-2)"
 BUILDDIR="${WORKDIR}/build"

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.7 2008/02/20 23:35:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.8 2008/05/12 13:53:51 markusle Exp $
 
 EAPI="1"
 
@@ -19,7 +19,6 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE="mpi python hdf5 doc examples threads qt4"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
-	doc? ( app-doc/doxygen )
 	mpi? ( || (
 				sys-cluster/openmpi
 				sys-cluster/mpich2 ) )
@@ -37,7 +36,8 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	x11-libs/libXmu"
 
 DEPEND="${RDEPEND}
-		>=dev-util/cmake-2.4.5"
+	doc? ( app-doc/doxygen )
+	>=dev-util/cmake-2.4.5"
 
 PVLIBDIR="$(get_libdir)/${PN}-${MY_MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
