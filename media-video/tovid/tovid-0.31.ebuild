@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31.ebuild,v 1.1 2008/05/12 08:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31.ebuild,v 1.2 2008/05/12 15:56:15 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -58,9 +58,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install died"
 	dodoc AUTHORS ChangeLog NEWS README
 
-
 	python_version
-	# remove wxgtk components 
+	# remove wxgtk components
 	if ! use wxwindows; then
 		rm -f "${D}/usr/bin/tovidgui"
 		rm -rf "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/libtovid/gui"
