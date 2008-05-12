@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.58 2008/04/14 11:40:58 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.59 2008/05/12 15:15:13 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> eric-4.0.4.ebuild:
+  Stable on ppc64
 
   14 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> eric-4.1.1.ebuild:
   Update HOMEPAGE for bug 217570.
