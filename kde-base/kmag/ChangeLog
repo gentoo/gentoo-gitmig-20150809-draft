@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.83 2008/05/12 14:14:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.84 2008/05/12 20:03:30 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kmag-3.5.9.ebuild:
+  Marking kmag-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kmag-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

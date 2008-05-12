@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.71 2008/05/12 15:55:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.72 2008/05/12 20:01:16 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kpilot-3.5.9.ebuild:
+  Marking kpilot-3.5.9 ppc for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kpilot-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

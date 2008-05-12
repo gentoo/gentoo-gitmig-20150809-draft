@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.104 2008/05/12 16:59:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.105 2008/05/12 20:01:17 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kate-3.5.9.ebuild:
+  Marking kate-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kate-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

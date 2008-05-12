@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.9.ebuild,v 1.4 2008/05/12 16:49:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.9.ebuild,v 1.5 2008/05/12 20:02:42 ranger Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-11.tar.bz2"
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="hal kdehiddenvisibility ldap openexr samba"
 
 DEPEND="ldap? ( net-nds/openldap )

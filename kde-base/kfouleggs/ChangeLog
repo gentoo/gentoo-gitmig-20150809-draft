@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfouleggs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.82 2008/05/12 16:02:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.83 2008/05/12 20:03:22 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kfouleggs-3.5.9.ebuild:
+  Marking kfouleggs-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kfouleggs-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

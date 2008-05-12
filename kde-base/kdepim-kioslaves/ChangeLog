@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.99 2008/05/12 15:00:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.100 2008/05/12 20:01:54 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org>
+  kdepim-kioslaves-3.5.9.ebuild:
+  Marking kdepim-kioslaves-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org>
   kdepim-kioslaves-3.5.9.ebuild:

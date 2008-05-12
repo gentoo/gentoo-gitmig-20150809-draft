@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.84 2008/05/12 14:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.85 2008/05/12 20:02:56 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org>
+  kdeartwork-iconthemes-3.5.9.ebuild:
+  Marking kdeartwork-iconthemes-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org>
   kdeartwork-iconthemes-3.5.9.ebuild:

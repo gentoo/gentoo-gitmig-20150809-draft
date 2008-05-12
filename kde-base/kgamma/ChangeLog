@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.83 2008/05/12 15:40:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.84 2008/05/12 20:01:30 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kgamma-3.5.9.ebuild:
+  Marking kgamma-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kgamma-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.68 2008/02/20 22:50:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.69 2008/05/12 20:03:24 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kdelirc-3.5.9.ebuild:
+  Marking kdelirc-3.5.9 ppc for bug 221063
 
 *kdelirc-3.5.9 (20 Feb 2008)
 

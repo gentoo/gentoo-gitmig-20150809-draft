@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpersonalizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/ChangeLog,v 1.83 2008/05/12 16:42:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/ChangeLog,v 1.84 2008/05/12 20:02:46 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kpersonalizer-3.5.9.ebuild:
+  Marking kpersonalizer-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kpersonalizer-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

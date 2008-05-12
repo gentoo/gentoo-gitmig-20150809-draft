@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.92 2008/05/12 16:11:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.93 2008/05/12 20:02:11 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kstars-3.5.9.ebuild:
+  Marking kstars-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kstars-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

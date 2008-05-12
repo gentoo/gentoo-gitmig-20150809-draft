@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/kpersonalizer-3.5.9.ebuild,v 1.3 2008/05/12 16:42:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/kpersonalizer-3.5.9.ebuild,v 1.4 2008/05/12 20:02:46 ranger Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-03.tar.bz2"
 
 DESCRIPTION="KDE user settings wizard."
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
 KMEXTRACTONLY="libkonq"

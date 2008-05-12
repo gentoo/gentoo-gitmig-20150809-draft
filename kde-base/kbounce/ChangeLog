@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.85 2008/05/12 16:03:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.86 2008/05/12 20:02:24 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kbounce-3.5.9.ebuild:
+  Marking kbounce-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kbounce-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.74 2008/05/12 14:39:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.75 2008/05/12 20:01:56 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kcharselect-3.5.9.ebuild:
+  Marking kcharselect-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kcharselect-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063

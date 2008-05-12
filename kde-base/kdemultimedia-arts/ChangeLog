@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-arts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.77 2008/05/12 17:59:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.78 2008/05/12 20:03:22 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org>
+  kdemultimedia-arts-3.5.9.ebuild:
+  Marking kdemultimedia-arts-3.5.9 ppc stable for bug 221063
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org>
   kdemultimedia-arts-3.5.9.ebuild:
