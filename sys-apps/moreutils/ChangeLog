@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.1 2008/05/10 05:39:50 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.2 2008/05/12 04:36:52 gregkh Exp $
+
+  12 May 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml:
+  add forgotten metadata.xml file
 
 *moreutils-0.29 (10 May 2008)
 
