@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.146 2008/05/12 20:01:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.147 2008/05/12 23:27:00 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> kopete-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kopete-3.5.9.ebuild:
   Marking kopete-3.5.9 ppc stable for bug 221063
