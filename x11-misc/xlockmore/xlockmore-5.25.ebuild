@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.4 2008/02/14 11:27:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.5 2008/05/12 18:31:14 corsair Exp $
 
 inherit flag-o-matic pam
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ppc ppc64 ~sparc ~x86"
 IUSE="crypt debug nas esd motif opengl truetype gtk pam xlockrc unicode"
 
 RDEPEND="opengl? ( media-libs/mesa )
