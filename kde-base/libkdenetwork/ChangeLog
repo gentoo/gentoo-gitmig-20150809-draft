@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.71 2008/05/12 14:51:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.72 2008/05/12 17:02:01 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> libkdenetwork-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> libkdenetwork-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063
