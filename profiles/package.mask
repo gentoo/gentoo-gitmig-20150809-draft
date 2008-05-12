@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8578 2008/05/12 12:10:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8579 2008/05/12 12:12:47 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -140,7 +140,7 @@ media-sound/yconsole
 =mail-client/claws-mail-pdf-viewer-0.9.1
 =mail-client/claws-mail-vcalendar-1.102
 =mail-client/claws-mail-gtkhtml-0.18
-=mail-client/claws-mail-acpi-notifier 1.0.16
+=mail-client/claws-mail-acpi-notifier-1.0.16
 =mail-client/claws-mail-att-remover-1.0.8
 =mail-client/claws-mail-attachwarner-0.2.12
 =mail-client/claws-mail-cachesaver-0.10.7
