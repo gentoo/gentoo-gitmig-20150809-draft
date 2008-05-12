@@ -1,0 +1,12 @@
+--- src/todisc	2007-08-19 21:27:36.000000000 -0400
++++ src/todisc.new	2007-10-19 22:43:33.000000000 -0400
+@@ -3736,8 +3736,7 @@
+ # if static menu and no background audio, ignore MENU_AUDIOLENGTH
+ $STATIC && [[ -z "$BG_AUDIO" ]] && ! $SWITCHED && unset MENU_AUDIOLENGTH
+ # Check input files for compliance; offer to tovid-encode non-compliant files
+-$SWITCHED && MN=2 || MN=1
+-if [[ $MENU_NUM -eq $MN ]]; then
++if [[ $MENU_NUM = [1-2] ]]; then
+     check_compliance
+     $GROUPING && check_compliance group
+ fi
