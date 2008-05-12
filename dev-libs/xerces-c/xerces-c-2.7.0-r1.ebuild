@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.12 2007/12/19 20:31:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.13 2008/05/12 01:35:18 halcy0n Exp $
 
 inherit eutils multilib versionator
 
@@ -17,6 +17,7 @@ KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc elibc_FreeBSD"
 
 DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
