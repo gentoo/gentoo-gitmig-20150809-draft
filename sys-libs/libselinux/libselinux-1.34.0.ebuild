@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.34.0.ebuild,v 1.4 2007/06/04 00:39:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.34.0.ebuild,v 1.5 2008/05/12 00:44:44 pebenito Exp $
 
 IUSE=""
 
@@ -20,16 +20,18 @@ KEYWORDS="alpha amd64 mips ppc sparc x86"
 DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
 	dev-lang/swig"
 
+RDEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"
 
 	# fix up paths for multilib
-	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile \
+	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
 		|| die "Fix for multilib LIBDIR failed."
-	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile \
+	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
 		|| die "Fix for multilib SHLIBDIR failed."
 }
 
@@ -39,7 +41,7 @@ src_compile() {
 	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" pywrap || die
 
 	# add compatability aliases to swig wrapper
-	cat ${FILESDIR}/compat.py >> ${S}/src/selinux.py || die
+	cat "${FILESDIR}/compat.py" >> "${S}/src/selinux.py" || die
 }
 
 src_install() {
@@ -49,10 +51,10 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize ${ROOT}usr/lib/python${PYVER}/site-packages
+	python_mod_optimize "${ROOT}usr/lib/python${PYVER}/site-packages"
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup ${ROOT}usr/lib/python${PYVER}/site-packages
+	python_mod_cleanup "${ROOT}usr/lib/python${PYVER}/site-packages"
 }

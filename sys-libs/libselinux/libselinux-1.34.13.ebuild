@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.34.13.ebuild,v 1.2 2007/10/18 19:21:10 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.34.13.ebuild,v 1.3 2008/05/12 00:44:44 pebenito Exp $
 
 IUSE=""
 
@@ -20,8 +20,10 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
 	dev-lang/swig"
 
+RDEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
+
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"

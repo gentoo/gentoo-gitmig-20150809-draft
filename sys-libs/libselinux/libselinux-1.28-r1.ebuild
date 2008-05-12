@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28-r1.ebuild,v 1.2 2006/03/22 22:44:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28-r1.ebuild,v 1.3 2008/05/12 00:44:44 pebenito Exp $
 
 IUSE=""
 
@@ -19,12 +19,12 @@ DEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# fix up paths for multilib
-	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile \
+	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
 		|| die "Fix for multilib LIBDIR failed."
-	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile \
+	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
 		|| die "Fix for multilib SHLIBDIR failed."
 }
 
@@ -33,7 +33,7 @@ src_compile() {
 	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" || die
 
 	# add compatability aliases to swig wrapper
-	cat ${FILESDIR}/compat.py >> ${S}/src/selinux.py || die
+	cat "${FILESDIR}/compat.py" >> "${S}/src/selinux.py" || die
 }
 
 src_install() {
