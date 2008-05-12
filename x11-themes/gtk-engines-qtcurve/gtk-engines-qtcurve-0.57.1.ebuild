@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.57.1.ebuild,v 1.3 2008/04/26 15:53:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.57.1.ebuild,v 1.4 2008/05/12 16:29:09 maekke Exp $
 
 inherit eutils cmake-utils
 
@@ -12,7 +12,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="mozilla"
 
 RDEPEND=">=x11-libs/gtk+-2
