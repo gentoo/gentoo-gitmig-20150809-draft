@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.2 2007/12/12 19:55:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.3 2008/05/12 01:09:41 lack Exp $
 
 inherit multilib
 
@@ -53,7 +53,7 @@ src_install() {
 	cp -r . "${D}${baselibdir}/${APPNAME}"
 	(
 		cd Help
-		dodoc Authors Changes ToDo README Versions
+		dodoc Authors Changes ToDo COPYING README Versions
 	)
 
 	0distutils ROX-CLib.xml > tmp.native_feed || die "0distutilss feed edit failed"
