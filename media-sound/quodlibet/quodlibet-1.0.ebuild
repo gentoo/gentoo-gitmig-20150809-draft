@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-1.0.ebuild,v 1.3 2007/09/21 04:46:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-1.0.ebuild,v 1.4 2008/05/12 09:04:29 aballier Exp $
 
 inherit eutils python
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac alsa dbus esd ffmpeg flac gnome hal ipod mad mmkeys musepack oss trayicon vorbis"
 
-DEPEND=">=virtual/python-2.4.3-r1
+COMMON_DEPEND=">=virtual/python-2.4.3-r1
 	trayicon? ( >=dev-python/pygtk-2.8 )
-	mmkeys? ( >=dev-python/pygtk-2.8 )
-	dev-util/intltool"
+	mmkeys? ( >=dev-python/pygtk-2.8 )"
 
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	>=dev-python/pygtk-2.8
 	>=media-libs/mutagen-1.9
 	>=media-libs/gst-plugins-good-0.10.2
@@ -40,6 +39,9 @@ RDEPEND="${DEPEND}
 		dev-python/feedparser )
 	dbus? ( >=dev-python/dbus-python-0.71 )
 	ipod? ( >=media-libs/libgpod-0.3.2-r1 )"
+
+DEPEND="${COMMON_DEPEND}
+	dev-util/intltool"
 
 PDEPEND="trayicon? ( media-plugins/quodlibet-trayicon )"
 

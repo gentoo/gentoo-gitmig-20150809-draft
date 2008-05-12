@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quodlibet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.55 2007/09/21 04:50:49 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.56 2008/05/12 09:04:29 aballier Exp $
+
+  12 May 2008; Alexis Ballier <aballier@gentoo.org> quodlibet-1.0.ebuild:
+  intltool is only a build dep, thanks Diego, bug #221513
 
   21 Sep 2007; Alexis Ballier <aballier@gentoo.org>
   -files/quodlibet-0.24-hal.patch, -files/quodlibet-0.24-makefile.patch,
