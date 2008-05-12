@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/dsh-0.25.10.ebuild,v 1.4 2008/04/17 17:33:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/dsh-0.25.10.ebuild,v 1.5 2008/05/12 16:18:13 maekke Exp $
 
 DESCRIPTION="Distributed Shell"
 HOMEPAGE="http://www.netfort.gr.jp/~dancer/software/dsh.html.en"
@@ -8,7 +8,7 @@ SRC_URI="http://www.netfort.gr.jp/~dancer/software/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
 DEPEND="dev-libs/libdshconfig"
