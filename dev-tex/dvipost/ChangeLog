@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvipost
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.17 2008/02/24 17:35:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.18 2008/05/12 13:15:20 opfer Exp $
+
+  12 May 2008; Christian Faulhammer <opfer@gentoo.org> dvipost-1.1.ebuild:
+  stable x86, bug 221757
 
   24 Feb 2008; Brent Baude <ranger@gentoo.org> dvipost-1.0.ebuild:
   Marking dvipost-1.0 ppc64 for bug 209465
