@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/rubber
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.12 2008/05/12 13:16:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.13 2008/05/12 13:20:09 aballier Exp $
+
+  12 May 2008; Alexis Ballier <aballier@gentoo.org> rubber-1.1.ebuild:
+  convert to latex-base the remaining ebuild
 
 *rubber-1.1_p20080323 (12 May 2008)
 
