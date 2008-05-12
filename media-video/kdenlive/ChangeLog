@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.25 2008/05/12 07:34:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.26 2008/05/12 08:28:56 aballier Exp $
+
+  12 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/kdenlive-0.5-iec61883_automagic.patch, kdenlive-0.5.ebuild:
+  Fix automagic on libiec61883 by Olivier Huber <oli.huber@gmail.com>, bug
+  #220095
 
   12 May 2008; Alexis Ballier <aballier@gentoo.org> -kdenlive-0.4.ebuild:
   remove old

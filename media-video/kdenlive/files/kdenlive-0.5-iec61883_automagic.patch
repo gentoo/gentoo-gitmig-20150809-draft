@@ -1,0 +1,20 @@
+Index: kdenlive-0.5/configure.in.in
+===================================================================
+--- kdenlive-0.5.orig/configure.in.in
++++ kdenlive-0.5/configure.in.in
+@@ -59,9 +59,15 @@ AC_CHECK_HEADERS([ffmpeg/avformat.h liba
+ 
+ # LIBIEC61883
+ 
++AC_ARG_WITH([libiec61883], AS_HELP_STRING([--without-libiec61883], [Build without libiec61883 library (default: test)]))
++
++use_iec61883=no
++
++if test "x$with_libiec61883" != "xno"; then
+ PKG_CHECK_MODULES(LIBIEC61883, libiec61883 >= 1.0.0, 
+ [use_iec61883=yes],
+ [use_iec61883=no])
++fi
+ AC_SUBST(LIBIEC61883_CFLAGS)
+ AC_SUBST(LIBIEC61883_LIBS)
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.4 2008/04/11 13:40:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.5 2008/05/12 08:28:56 aballier Exp $
 
 inherit eutils kde
 
@@ -11,9 +11,10 @@ SRC_URI="mirror://sourceforge/kdenlive/${P}-1.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE=""
+IUSE="ieee1394"
 
 RDEPEND="media-video/ffmpeg
+	ieee1394? ( >=media-libs/libiec61883-1.0.0 sys-libs/libraw1394 )
 	>=media-libs/mlt-0.2.4-r1
 	>=media-libs/mlt++-0.2.2"
 
@@ -40,11 +41,12 @@ src_unpack() {
 	kde_src_unpack
 	epatch "${FILESDIR}/${P}-ffmpegheaders.patch"
 	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+	epatch "${FILESDIR}/${P}-iec61883_automagic.patch"
 	rm -f configure
 }
 
 src_compile() {
-	myconf="--enable-pch"
+	myconf="--enable-pch $(use_with ieee1394 libiec61883)"
 
 	kde_src_compile
 }
