@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.3 2008/05/11 14:44:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.4 2008/05/12 09:37:31 nelchael Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="admin"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
 	>=dev-java/iso-relax-20050331
