@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.130 2008/05/12 18:43:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.131 2008/05/12 18:51:26 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> sudo-1.6.9_p13.ebuild:
+  alpha/ia64 stable wrt #221731
 
   12 May 2008; Markus Meier <maekke@gentoo.org> sudo-1.6.9_p13.ebuild:
   amd64 stable, bug #221731
