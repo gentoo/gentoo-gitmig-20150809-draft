@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.21 2008/01/18 01:40:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.22 2008/05/12 11:03:22 nixnut Exp $
+
+  12 May 2008; nixnut <nixnut@gentoo.org> jre-1.6.0.ebuild:
+  Stable on ppc wrt bug 219657
 
   18 Jan 2008; Brent Baude <ranger@gentoo.org> jre-1.6.0.ebuild:
   Marking jre-1.6.0 ~ppc64 for bug 166789

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.19 2008/01/18 01:41:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.20 2008/05/12 11:00:45 nixnut Exp $
+
+  12 May 2008; nixnut <nixnut@gentoo.org> jdk-1.6.0.ebuild:
+  Stable on ppc wrt bug 219657
 
   18 Jan 2008; Brent Baude <ranger@gentoo.org> jdk-1.6.0.ebuild:
   Marking jdk-1.6.0 ~ppc64 for bug 166789
