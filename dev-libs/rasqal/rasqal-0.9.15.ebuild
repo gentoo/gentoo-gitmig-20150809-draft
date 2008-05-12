@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.15.ebuild,v 1.4 2008/01/21 08:37:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.15.ebuild,v 1.5 2008/05/12 09:29:01 aballier Exp $
 
 inherit libtool
 
@@ -21,6 +21,7 @@ RDEPEND=">=media-libs/raptor-1.4.16
 	debug? ( >=dev-libs/dmalloc-5.5.2-r2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	sys-devel/flex
 	test? ( dev-perl/XML-DOM )"
 
 src_unpack() {
