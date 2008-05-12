@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/libspectrum
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.18 2007/02/12 09:30:01 blubb Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.19 2008/05/12 03:46:18 vanquirius Exp $
+
+*libspectrum-0.4.0 (12 May 2008)
+
+  12 May 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +libspectrum-0.4.0.ebuild:
+  0.4.0 Version bump for bug 211145. Ebuild provided by Jose Manuel Ferrer
+  Ortiz <jmfo1982 at yahoo dot es>. Updates homepage, removes libgcrypt
+  dependency, adds optional dependencies for audiofile, bzip2 and zlib with
+  USE variables, does not force make job -j1, adds man page, adds pkgconfig
+  dependency and makes perl a buildtime-only dependency.
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org>
   libspectrum-0.2.2-r1.ebuild:
