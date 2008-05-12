@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.263 2008/05/12 14:03:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.264 2008/05/12 16:10:51 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> arts-3.5.9.ebuild:
+  Marking arts-3.5.9 ppc and ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> arts-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063
