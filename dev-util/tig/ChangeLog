@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/tig
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.10 2008/04/08 19:47:49 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.11 2008/05/12 04:42:41 gregkh Exp $
+
+  12 May 2008; Greg Kroah-Hartman <gregkh@gentoo.org> -tig-0.6.ebuild,
+  -tig-0.7.ebuild, -tig-0.8.ebuild, -tig-0.9.ebuild, -tig-0.9.1.ebuild:
+  remove older ebuilds
 
 *tig-0.11 (08 Apr 2008)
 
