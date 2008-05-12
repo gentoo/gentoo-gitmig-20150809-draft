@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/qe-0.2.0.ebuild,v 1.1 2008/05/12 06:38:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/qe-0.2.0.ebuild,v 1.2 2008/05/12 06:48:19 drac Exp $
 
 inherit autotools eutils
 
@@ -21,7 +21,7 @@ DEPEND="sys-libs/ncurses"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${P/-/_}-4.diff
+	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff
 	sed -i -e '/AC_REQUIRE/d' -e 's/-O2//g' \
 		configure.in || die "sed failed."
 	eautoreconf
