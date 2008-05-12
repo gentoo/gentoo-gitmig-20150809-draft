@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.442 2008/05/12 14:08:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.443 2008/05/12 16:20:39 ranger Exp $
+
+  12 May 2008; Brent Baude <ranger@gentoo.org> kdebase-3.5.9-r3.ebuild:
+  Marking kdebase-3.5.9-r3 ppc and ppc stable for bug 221063
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.9-r3.ebuild:
   alpha/ia64/sparc stable wrt #221063
