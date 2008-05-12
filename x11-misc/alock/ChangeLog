@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.12 2008/03/23 00:39:25 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.13 2008/05/12 08:42:34 nelchael Exp $
+
+  12 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> alock-60-r3.ebuild:
+  Add imlib and pam useflags, see bug #220425.
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> alock-60-r3.ebuild:
   amd64 stable, clean up and add desktop-misc to herd.
