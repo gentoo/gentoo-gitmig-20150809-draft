@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.35 2008/05/08 15:36:40 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.36 2008/05/12 15:40:20 maekke Exp $
+
+  12 May 2008; Markus Meier <maekke@gentoo.org> dokuwiki-20070626b.ebuild:
+  amd64 stable, bug #215198
 
 *dokuwiki-20080505 (08 May 2008)
 
