@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.9 2007/11/13 18:30:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.10 2008/05/12 09:39:42 aballier Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ RDEPEND="unicode? ( >=dev-libs/glib-2 )
 	curl? ( net-misc/curl )
 	dev-libs/libxslt"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	dev-util/pkgconfig"
 
 src_unpack() {
