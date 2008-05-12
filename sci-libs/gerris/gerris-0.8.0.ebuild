@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.8.0.ebuild,v 1.3 2007/07/13 06:57:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.8.0.ebuild,v 1.4 2008/05/12 13:20:56 markusle Exp $
 
 DESCRIPTION="The Gerris Flow Solver"
 LICENSE="GPL-2"
@@ -11,11 +11,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-libs/glib-2.4.0
+RDEPEND=">=dev-libs/glib-2.4.0
 		>=sci-libs/gts-0.7.4
 		sys-apps/gawk
-		sys-devel/libtool
 		dev-lang/python"
+DEPEND="${RDEPEND}
+		sys-devel/libtool"
 
 src_compile() {
 	# disable explicit building of tutorial

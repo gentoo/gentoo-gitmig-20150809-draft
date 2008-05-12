@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gerris
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.5 2007/02/02 14:42:03 markusle Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.6 2008/05/12 13:20:56 markusle Exp $
+
+  12 May 2008; Markus Dittrich <markusle@gentoo.org> gerris-0.8.0.ebuild,
+  gerris-0.9.2.ebuild:
+  Removed runtime dependencies on libtool (fixes bug #221633).
 
   02 Feb 2007; Markus Dittrich <markusle@gentoo.org> gerris-0.9.2.ebuild:
   Forced -j1 during emake since make breaks otherwise 
