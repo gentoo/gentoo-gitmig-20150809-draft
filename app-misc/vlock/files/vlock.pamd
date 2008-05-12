@@ -1,1 +1,0 @@
-auth       required     /lib/security/pam_stack.so service=system-auth
