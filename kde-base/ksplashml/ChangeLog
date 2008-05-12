@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksplashml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.89 2008/05/12 20:01:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.90 2008/05/12 21:24:56 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> ksplashml-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> ksplashml-3.5.9.ebuild:
   Marking ksplashml-3.5.9 ppc stable for bug 221063
