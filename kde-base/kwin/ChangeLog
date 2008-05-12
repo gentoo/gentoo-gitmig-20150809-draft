@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.122 2008/05/12 20:03:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.123 2008/05/12 21:11:11 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> kwin-3.5.9-r1.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kwin-3.5.9-r1.ebuild:
   Marking kwin-3.5.9-r1 ppc stable for bug 221063

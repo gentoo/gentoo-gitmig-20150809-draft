@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.78 2008/05/12 20:02:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.79 2008/05/12 21:07:40 jer Exp $
+
+  12 May 2008; Jeroen Roovers <jer@gentoo.org> kdialog-3.5.9-r1.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdialog-3.5.9-r1.ebuild:
   Marking kdialog-3.5.9-r1 ppc stable for bug 221063
