@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klickety
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.81 2008/03/04 04:39:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.82 2008/05/12 16:01:15 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> klickety-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> klickety-3.5.8.ebuild,
   klickety-3.5.9.ebuild:

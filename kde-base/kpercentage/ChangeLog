@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpercentage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.82 2008/04/03 21:23:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.83 2008/05/12 16:16:11 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kpercentage-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kpercentage-4.0.3 (03 Apr 2008)
 

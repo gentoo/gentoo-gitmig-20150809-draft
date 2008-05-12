@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.92 2008/04/18 21:29:22 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.93 2008/05/12 16:10:45 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> ktouch-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   18 Apr 2008; Dawid Węgliński <cla@gentoo.org> ktouch-3.5.8.ebuild,
   ktouch-3.5.9.ebuild, ktouch-4.0.2.ebuild, ktouch-4.0.3.ebuild:

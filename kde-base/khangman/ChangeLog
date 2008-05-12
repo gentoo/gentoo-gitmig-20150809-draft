@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khangman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.87 2008/04/03 21:08:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.88 2008/05/12 16:17:11 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> khangman-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *khangman-4.0.3 (03 Apr 2008)
 

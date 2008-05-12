@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.103 2008/04/03 21:31:50 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.104 2008/05/12 16:22:35 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> ksysguard-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *ksysguard-4.0.3 (03 Apr 2008)
 

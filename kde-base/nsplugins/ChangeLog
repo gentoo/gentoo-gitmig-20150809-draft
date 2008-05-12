@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.110 2008/04/03 21:45:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.111 2008/05/12 16:20:38 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> nsplugins-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *nsplugins-4.0.3 (03 Apr 2008)
 
