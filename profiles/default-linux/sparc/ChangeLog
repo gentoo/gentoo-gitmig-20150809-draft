@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.101 2008/04/21 15:21:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.102 2008/05/12 11:29:41 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> +sparc64/2006.1/deprecated:
+  Deprecate 2006.1
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   wavegain fails to build
