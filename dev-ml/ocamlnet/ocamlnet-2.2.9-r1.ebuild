@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.7 2008/04/12 19:48:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.8 2008/05/12 07:04:40 aballier Exp $
 
 inherit eutils findlib
 
 EAPI="1"
 
 DESCRIPTION="Modules for OCaml application-level Internet protocols"
-HOMEPAGE="http://ocamlnet.sourceforge.net"
+HOMEPAGE="http://projects.camlcity.org/projects/ocamlnet.html"
 SRC_URI="mirror://sourceforge/ocamlnet/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
