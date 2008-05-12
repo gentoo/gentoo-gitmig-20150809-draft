@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.1-r1.ebuild,v 1.8 2008/04/30 23:48:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.1-r1.ebuild,v 1.9 2008/05/12 01:19:46 halcy0n Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ TEST_DATA_P="${PN/lib/}-test-data-${TEST_DATA_PV}"
 
 DESCRIPTION="C++ library offering interfaces for portage-related things such as Gentoo-specific XML files, package searching, and version sorting"
 HOMEPAGE="http://developer.berlios.de/projects/libherdstat/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
-	test? ( http://download.berlios.de/${PN}/${TEST_DATA_P}.tar.bz2 )"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2
+	test? ( mirror://berlios/${PN}/${TEST_DATA_P}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
