@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-0.99.3.ebuild,v 1.1 2008/04/16 22:17:29 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-0.99.4.ebuild,v 1.1 2008/05/12 12:48:07 coldwind Exp $
 
 MY_P="Lince-${PV}"
 
