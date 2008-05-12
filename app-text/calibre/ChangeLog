@@ -1,0 +1,12 @@
+# ChangeLog for app-text/calibre
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.1 2008/05/12 11:17:11 flameeyes Exp $
+
+*calibre-0.4.53 (12 May 2008)
+
+  12 May 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +calibre-0.4.53.ebuild:
+  Initial import of calibre (formerly libprs500), software to handle PRS-500
+  and PRS-505 e-Book readers by Sony. Thanks to drac who committed the
+  xdg-utils patch it can finally enter the tree.
+
