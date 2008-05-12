@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/roundup
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.20 2008/05/12 13:30:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.21 2008/05/12 15:37:14 maekke Exp $
+
+  12 May 2008; Markus Meier <maekke@gentoo.org> roundup-1.4.4-r1.ebuild:
+  amd64 stable, bug #214666
 
   12 May 2008; Christian Faulhammer <opfer@gentoo.org>
   roundup-1.4.4-r1.ebuild:

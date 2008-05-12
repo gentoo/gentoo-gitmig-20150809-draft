@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.4-r1.ebuild,v 1.2 2008/05/12 13:30:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.4-r1.ebuild,v 1.3 2008/05/12 15:37:14 maekke Exp $
 
 inherit eutils distutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line,
 SRC_URI="http://cheeseshop.python.org/packages/source/r/${PN}/${P}.tar.gz"
 HOMEPAGE="http://roundup.sourceforge.net"
 
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
