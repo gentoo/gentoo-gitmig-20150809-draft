@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.73 2008/05/11 14:44:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.74 2008/05/12 08:41:36 corsair Exp $
+
+  12 May 2008; Markus Rothe <corsair@gentoo.org> resin-3.0.25.ebuild:
+  Stable on ppc64; bug #221263
 
   11 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.0.24.ebuild,
   resin-3.0.25.ebuild, resin-3.1.6.ebuild:
