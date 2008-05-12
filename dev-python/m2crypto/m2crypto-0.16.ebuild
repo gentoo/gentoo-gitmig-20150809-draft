@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.16.ebuild,v 1.2 2007/01/12 12:15:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.16.ebuild,v 1.3 2008/05/12 07:44:11 hawking Exp $
 
 inherit distutils portability eutils
 
@@ -18,11 +18,12 @@ IUSE="doc"
 
 #S="${WORKDIR}/${MY_P}"
 
-DEPEND=">=dev-libs/openssl-0.9.7
-	>=dev-lang/swig-1.3.25
+RDEPEND=">=dev-libs/openssl-0.9.7
 	app-arch/unzip
 	virtual/python
 	doc? ( dev-python/epydoc )"
+DEPEND="${RDEPEND}
+	>=dev-lang/swig-1.3.25"
 
 PYTHON_MODNAME="M2Crypto"
 
@@ -47,9 +48,9 @@ src_install() {
 	dohtml -r doc/*
 
 	if use doc; then
-		cd ${S}/doc/
+		cd "${S}"/doc/
 		epydoc --html --parse-only --output=api --name=M2Crypto M2Crypto
 		dohtml -r "${S}-doc"/*
-		cd ${S}/demo && treecopy . "${D}/usr/share/doc/${PF}/example"
+		cd "${S}"/demo && treecopy . "${D}/usr/share/doc/${PF}/example"
 	fi
 }
