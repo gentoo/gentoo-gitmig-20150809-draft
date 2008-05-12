@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.80 2008/04/03 21:13:17 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.81 2008/05/12 14:27:36 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> klinkstatus-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *klinkstatus-4.0.3 (03 Apr 2008)
 

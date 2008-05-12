@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.81 2008/04/03 21:35:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.82 2008/05/12 14:42:32 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> ktux-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *ktux-4.0.3 (03 Apr 2008)
 

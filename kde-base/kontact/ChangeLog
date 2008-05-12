@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.88 2008/03/04 06:20:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.89 2008/05/12 14:55:45 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kontact-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kontact-3.5.8.ebuild,
   kontact-3.5.9.ebuild:

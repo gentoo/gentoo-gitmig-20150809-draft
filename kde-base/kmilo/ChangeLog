@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.90 2008/04/26 23:47:14 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.91 2008/05/12 14:36:18 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kmilo-3.5.9-r1.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kmilo-3.5.9-r1 (26 Apr 2008)
 
