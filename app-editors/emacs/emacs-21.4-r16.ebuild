@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r16.ebuild,v 1.1 2008/05/11 21:24:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r16.ebuild,v 1.2 2008/05/12 18:35:26 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -104,7 +104,7 @@ src_compile() {
 	einfo "Recompiling patched lisp files..."
 	(cd lisp; emake recompile) || die "emake recompile failed"
 	(cd src; emake versionclean)
-	emake CC="$(tc-getCC)" || die "die emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
