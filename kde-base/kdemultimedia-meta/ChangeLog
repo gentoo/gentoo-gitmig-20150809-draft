@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.88 2008/04/03 20:57:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.89 2008/05/12 15:36:27 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org>
+  kdemultimedia-meta-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kdemultimedia-meta-4.0.3 (03 Apr 2008)
 

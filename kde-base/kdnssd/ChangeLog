@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.85 2008/04/08 12:59:36 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.86 2008/05/12 15:17:30 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdnssd-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   08 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdnssd-4.0.3.ebuild:
   Fix erroneous split of KDE4_BUILT_WITH_USE_CHECK, bug 216863.

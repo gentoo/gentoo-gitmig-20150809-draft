@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/librss
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.60 2008/03/04 05:37:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.61 2008/05/12 15:23:18 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> librss-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> librss-3.5.8.ebuild,
   librss-3.5.9.ebuild:

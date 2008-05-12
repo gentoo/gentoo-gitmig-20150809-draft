@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.144 2008/04/03 21:22:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.145 2008/05/12 15:20:45 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kopete-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
 *kopete-4.0.3 (03 Apr 2008)
 
