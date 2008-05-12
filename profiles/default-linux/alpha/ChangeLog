@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.93 2008/04/10 06:34:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.94 2008/05/12 11:41:52 yoswink Exp $
+
+  12 May 2008; Jose Luis Rivero <yoswink@gentoo.org> +2006.1/deprecated,
+  +no-nptl/deprecated:
+  Mark old profiles as deprecated following cardoe's suggestion since openrc
+  won't work in them. It's save to use profiles: 2007.0 or 2008.0
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
   changing around video_cards_via masking by unmasking only for available

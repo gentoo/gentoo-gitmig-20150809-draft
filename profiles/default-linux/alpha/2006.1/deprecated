@@ -1,0 +1,4 @@
+default-linux/alpha/2007.0 or default/linux/alpha/2008.0
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/default-linux/alpha/2007.0 make.profile
