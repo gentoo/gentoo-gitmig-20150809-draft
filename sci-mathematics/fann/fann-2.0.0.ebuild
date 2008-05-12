@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.5 2008/03/14 10:54:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.6 2008/05/12 13:10:17 markusle Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc python"
 
-DEPEND="python? ( dev-lang/python dev-lang/swig )"
+RDEPEND="python? ( dev-lang/python )"
+DEPEND="${RDEPEND}
+		python? ( dev-lang/swig )"
 
 src_unpack() {
 	unpack ${A}

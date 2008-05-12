@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/fann
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.10 2008/03/14 10:54:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.11 2008/05/12 13:10:17 markusle Exp $
+
+  12 May 2008; Markus Dittrich <markusle@gentoo.org> fann-1.2.0.ebuild,
+  fann-1.2.0-r1.ebuild, fann-2.0.0.ebuild:
+  Removed runtime dependencies on dev-lang/swig (see bug #221495).
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> fann-1.2.0.ebuild,
   fann-1.2.0-r1.ebuild, fann-2.0.0.ebuild:

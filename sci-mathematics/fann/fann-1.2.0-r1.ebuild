@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0-r1.ebuild,v 1.4 2008/03/14 10:54:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0-r1.ebuild,v 1.5 2008/05/12 13:10:17 markusle Exp $
 
 inherit eutils
 
@@ -14,10 +14,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc python"
 
-DEPEND="sys-devel/autoconf
+RDEPEND="python? ( dev-lang/python )"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
 	sys-apps/sed
 	doc? ( app-text/docbook-sgml-utils )
-	python? ( dev-lang/python dev-lang/swig )"
+	python? ( dev-lang/swig )"
 
 S=${WORKDIR}/${MY_PKG_NAME}
 
