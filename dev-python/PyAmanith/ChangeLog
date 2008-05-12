@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyAmanith
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyAmanith/ChangeLog,v 1.2 2006/10/13 17:03:03 pythonhead Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyAmanith/ChangeLog,v 1.3 2008/05/12 07:25:10 hawking Exp $
+
+  12 May 2008; Ali Polatel <hawking@gentoo.org> PyAmanith-0.3.34.ebuild:
+  Use NEED_PYTHON to depend on python. Use distutils_src_unpack. swig is not
+  a runtime dependency, bug 221467.
 
   13 Oct 2006; Rob Cakebread <pythonhead@gentoo.org>
   PyAmanith-0.3.34.ebuild:
