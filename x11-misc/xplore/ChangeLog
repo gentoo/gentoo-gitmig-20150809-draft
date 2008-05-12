@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplore
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.11 2007/02/22 00:08:09 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.12 2008/05/12 08:32:07 nelchael Exp $
+
+  12 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> xplore-1.2a.ebuild:
+  Fix RDEPEND, see bug #221435.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
