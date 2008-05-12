@@ -1,0 +1,88 @@
+--- configure.ac.old	2008-05-12 23:07:42.000000000 +0200
++++ configure.ac	2008-05-12 23:15:47.000000000 +0200
+@@ -45,7 +45,7 @@
+         AC_CHECK_LIB([ssl],
+                      [SSL_library_init],
+                      [ LIBS="$LIBS -lssl"
+-                       AC_DEFINE([HAVE_LIBSSL], [1])
++                       AC_DEFINE([HAVE_LIBSSL], [1], [Defined if Openssl library exists])
+                        AC_MSG_CHECKING([for OpenSSL libraries (for TLS support)]) 
+                        AC_MSG_RESULT([yes])
+                      ],
+@@ -66,11 +66,12 @@
+ 
+ # Checks for the flag to compile anonymous inner functions.
+ AC_MSG_CHECKING([whether anonymous inner functions are supported by default])
++OLD_CFLAGS=$CFLAGS
++CFLAGS="$OLD_CFLAGS -w"
+ AC_TRY_COMPILE([],
+                [ int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0); ],
+                [ AC_MSG_RESULT([yes]) ],
+                [ AC_MSG_RESULT([no])
+-                 OLD_CFLAGS=$CFLAGS
+                  CFLAGS="$OLD_CFLAGS -fnested-functions"
+                  AC_MSG_CHECKING([whether anonymous inner functions are supported with -fnested-functions])
+                  AC_TRY_COMPILE([],
+@@ -102,7 +103,7 @@
+                                 [ int i;
+                                   i = PACKETSZ; ],
+                                 [ AC_MSG_RESULT([yes])
+-                                  AC_DEFINE([HAVE_NAMESER_COMPAT], [1]) ],
++                                  AC_DEFINE([HAVE_NAMESER_COMPAT], [1], [Defined if nameserver constant are defined in arpa/nameser_compat.h]) ],
+                                 [ AC_MSG_RESULT([no])
+                                   AC_MSG_FAILURE([Unable to compile without nameserver constants.])
+                                 ])
+@@ -114,7 +115,7 @@
+                [ struct dirent tmp_dirent;
+                  tmp_dirent.d_type = 0; ],
+                [ AC_MSG_RESULT([yes]) 
+-                 AC_DEFINE([HAVE_DIRENT_TYPES], [1]) 
++                 AC_DEFINE([HAVE_DIRENT_TYPES], [1], [Defined if dirent type exists]) 
+                  AC_MSG_CHECKING([whether readdir() and stat() understand whiteout files])
+                  AC_TRY_COMPILE([ #include <sys/types.h>
+                                   #include <sys/stat.h>
+@@ -122,7 +123,7 @@
+                                 [ short dir_wht = DT_WHT;
+                                   mode_t stat_wht = S_IFWHT; ],
+                                 [ AC_MSG_RESULT([yes])
+-                                  AC_DEFINE([HAVE_WHITEOUT], [1]) ],
++                                  AC_DEFINE([HAVE_WHITEOUT], [1], [Defined if have whiteout]) ],
+                                 [ AC_MSG_RESULT([no]) ])
+                ],
+                [ AC_MSG_RESULT([no]) ])
+@@ -132,9 +133,9 @@
+                  #include <unistd.h> ],
+                [ printf("%u", getpid()); ],
+                [ AC_MSG_RESULT([unsigned int])
+-                 AC_DEFINE([FORMAT_PID_T], ["%u"]) ],
++                 AC_DEFINE([FORMAT_PID_T], ["%u"], [Defined if unsigned int]) ],
+                [ AC_MSG_RESULT([unsigned long])
+-                 AC_DEFINE([FORMAT_PID_T], ["%lu"]) ])
++                 AC_DEFINE([FORMAT_PID_T], ["%lu"], [Defined if unsigned long]) ])
+ 
+ AC_MSG_CHECKING([whether uid_t is an unsigned int or an unsigned long])
+ AC_TRY_COMPILE([ #include <stdio.h>
+@@ -142,9 +143,9 @@
+                  #include <unistd.h> ],
+                [ printf("%u", getuid()); ],
+                [ AC_MSG_RESULT([unsigned int])
+-                 AC_DEFINE([FORMAT_UID_T], ["%u"]) ],
++                 AC_DEFINE([FORMAT_UID_T], ["%u"], [Defined if unsigned int]) ],
+                [ AC_MSG_RESULT([unsigned long])
+-                 AC_DEFINE([FORMAT_UID_T], ["%lu"]) ])
++                 AC_DEFINE([FORMAT_UID_T], ["%lu"], [Defined if unsigned long]) ])
+ 
+ AC_MSG_CHECKING([whether gid_t is an unsigned int or an unsigned long])
+ AC_TRY_COMPILE([ #include <stdio.h>
+@@ -152,9 +153,9 @@
+                  #include <unistd.h> ],
+                [ printf("%u", getgid()); ],
+                [ AC_MSG_RESULT([unsigned int])
+-                 AC_DEFINE([FORMAT_GID_T], ["%u"]) ],
++                 AC_DEFINE([FORMAT_GID_T], ["%u"], [Defined if unsigned int]) ],
+                [ AC_MSG_RESULT([unsigned long])
+-                 AC_DEFINE([FORMAT_GID_T], ["%lu"]) ])
++                 AC_DEFINE([FORMAT_GID_T], ["%lu"]), [Defined if unsigned long] ])
+ 
+ AC_CONFIG_FILES([Makefile])
+ AC_OUTPUT
