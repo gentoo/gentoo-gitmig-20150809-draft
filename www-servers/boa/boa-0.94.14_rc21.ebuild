@@ -1,22 +1,24 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.4 2007/07/01 17:09:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.5 2008/05/12 07:31:03 opfer Exp $
 
 inherit eutils
 
 MY_PV=${PV/_/}
-DESCRIPTION="Boa - A very small and very fast http daemon."
+DESCRIPTION="A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
 KEYWORDS="~x86 ~sparc ~mips ~ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="tetex"
+IUSE="doc"
 S=${WORKDIR}/${PN}-${MY_PV}
-DEPEND="sys-devel/flex
-	sys-devel/bison
-	tetex? ( virtual/tetex )"
+
+RDEPEND="sys-devel/bison"
+DEPEND="${RDEPEND}
+	sys-devel/flex
+	doc? ( virtual/latex-base )"
 
 src_unpack() {
 	unpack ${A}
@@ -27,18 +29,21 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-	use tetex || sed -i -e '/^all:/s/boa.dvi //' docs/Makefile
-	emake docs || die "emake docs failed"
+	econf || die
+	emake || die
+	use doc || sed -i -e '/^all:/s/boa.dvi //' docs/Makefile
+	emake docs || die
 }
 
 src_install() {
 	dosbin src/boa
 	doman docs/boa.8
-	dodoc docs/boa.html
-	dodoc docs/boa_banner.png
 	doinfo docs/boa.info
+	if use doc; then
+		dodoc docs/boa.html
+		dodoc docs/boa_banner.png
+		dodoc docs/boa.dvi
+	fi
 
 	keepdir /var/log/boa
 	dodir /var/www/localhost/htdocs

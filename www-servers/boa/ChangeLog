@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/boa
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.14 2007/07/01 17:12:10 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.15 2008/05/12 07:31:03 opfer Exp $
+
+  12 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  boa-0.94.14_rc21.ebuild:
+  Adjust DESCRIPTION; migrate from tetex USE flag to doc USE flag and change
+  the dependency from virtual/tetex to latex-base, bug 196745; remove die
+  comments; make doc USE flag install documentation including the now new
+  boa.dvi; move sys-apps/flex from RDEPEND to DEPEND see bug 221349 by
+  flameeyes
 
   01 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
   -files/boa-0.94.13-gcc3.patch, -files/boa-0.94.13-server_uid.patch,
