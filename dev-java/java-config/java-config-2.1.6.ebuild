@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.6.ebuild,v 1.4 2008/05/12 14:12:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.6.ebuild,v 1.5 2008/05/12 22:21:10 betelgeuse Exp $
 
 inherit fdo-mime gnome2-utils distutils eutils
 
@@ -37,15 +37,4 @@ pkg_postinst() {
 	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
-
-	elog "The way Java is handled on Gentoo has been recently updated."
-	elog "If you have not done so already, you should follow the"
-	elog "instructions available at:"
-	elog "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
-	elog
-	elog "While we are moving towards the new Java system, we only allow"
-	elog "1.3 or 1.4 JDKs to be used with java-config-1 to ensure"
-	elog "backwards compatibility with the old system."
-	elog "For more details about this, please see:"
-	elog "\thttp://www.gentoo.org/proj/en/java/why-we-need-java-14.xml"
 }
