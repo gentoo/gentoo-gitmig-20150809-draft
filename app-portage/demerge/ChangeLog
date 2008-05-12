@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.38 2008/03/12 16:20:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.39 2008/05/12 17:19:21 opfer Exp $
+
+  12 May 2008; Christian Faulhammer <opfer@gentoo.org> demerge-0.046.ebuild:
+  stable x86, bug 214792
 
 *demerge-0.046 (21 Feb 2008)
 
