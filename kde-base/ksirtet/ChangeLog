@@ -1,9 +1,6 @@
 # ChangeLog for kde-base/ksirtet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.83 2008/05/12 15:55:49 armin76 Exp $
-
-  12 May 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
-  alpha/ia64/sparc stable wrt #221063
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.84 2008/05/12 15:56:35 armin76 Exp $
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> ksirtet-3.5.9.ebuild:
   alpha/ia64/sparc stable wrt #221063
