@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.441 2008/05/11 17:24:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.442 2008/05/12 14:08:00 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.9-r3.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> kdebase-3.5.9-r3.ebuild:
   Stable on ppc64; bug #221063

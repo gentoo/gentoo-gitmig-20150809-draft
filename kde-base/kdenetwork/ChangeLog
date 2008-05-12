@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.293 2008/05/11 17:40:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.294 2008/05/12 14:00:55 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdenetwork-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> kdenetwork-3.5.9.ebuild:
   Stable on ppc64; bug #221063

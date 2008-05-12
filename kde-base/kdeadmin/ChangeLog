@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.212 2008/05/11 17:53:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.213 2008/05/12 14:03:29 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdeadmin-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> kdeadmin-3.5.9.ebuild:
   Stable on ppc64; bug #221063

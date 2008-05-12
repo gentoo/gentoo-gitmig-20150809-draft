@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.306 2008/05/11 18:08:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.307 2008/05/12 14:06:19 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> kdepim-3.5.9-r1.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> kdepim-3.5.9-r1.ebuild:
   Stable on ppc64; bug #221063

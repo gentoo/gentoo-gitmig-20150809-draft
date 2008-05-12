@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.5.9.ebuild,v 1.3 2008/05/11 18:00:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.5.9.ebuild,v 1.4 2008/05/12 14:04:43 armin76 Exp $
 
 EAPI="1"
 inherit kde-dist
 
 DESCRIPTION="KDE games (not just solitaire ;-)"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 sparc ~x86"
 IUSE="kdehiddenvisibility"
 
 # For backgrounds in kpat.

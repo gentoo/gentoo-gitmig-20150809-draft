@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.262 2008/05/11 17:55:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.263 2008/05/12 14:03:56 armin76 Exp $
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> arts-3.5.9.ebuild:
+  alpha/ia64/sparc stable wrt #221063
 
   11 May 2008; Markus Rothe <corsair@gentoo.org> arts-3.5.9.ebuild:
   Stable on ppc64; bug #221063
