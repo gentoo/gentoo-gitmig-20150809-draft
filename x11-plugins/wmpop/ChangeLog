@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.9 2007/02/06 02:04:23 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.10 2008/05/13 07:24:52 s4t4n Exp $
+
+  13 May 2008; Michele Noberasco <s4t4n@gentoo.org> wmpop-0.53.ebuild:
+  Remove bison from runtime dependancies. Closes bug #221605.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
