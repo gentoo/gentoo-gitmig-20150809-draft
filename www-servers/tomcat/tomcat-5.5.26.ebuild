@@ -1,7 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.26.ebuild,v 1.3 2008/03/17 22:35:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.26.ebuild,v 1.4 2008/05/13 02:06:49 wltjr Exp $
 
+EAPI=1
+JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -15,16 +17,17 @@ HOMEPAGE="http://tomcat.apache.org/"
 KEYWORDS="amd64 -ppc -ppc64 x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
-IUSE="admin java5 doc examples source test"
+IUSE="admin java5 examples test"
 
-RDEPEND="=dev-java/eclipse-ecj-3.3*
-	=dev-java/commons-beanutils-1.7*
+RDEPEND="dev-java/eclipse-ecj:3.3
+	dev-java/ant-eclipse-ecj:3.3
+	dev-java/commons-beanutils:1.7
 	>=dev-java/commons-collections-3.1
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-digester-1.7
 	>=dev-java/commons-fileupload-1.1
-	=dev-java/commons-httpclient-2.0*
+	dev-java/commons-httpclient:0
 	>=dev-java/commons-io-1.1
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-launcher-0.9
@@ -36,15 +39,15 @@ RDEPEND="=dev-java/eclipse-ecj-3.3*
 	>=dev-java/saxpath-1.0
 	~dev-java/tomcat-servlet-api-${PV}
 	dev-java/ant-core
-	admin? ( =dev-java/struts-1.2* )
+	admin? ( dev-java/struts:1.2 )
 	dev-java/sun-javamail
 	java5? ( >=virtual/jre-1.5 )
 	!java5? (
 		=virtual/jre-1.4*
 		dev-java/sun-jaf
-		=dev-java/mx4j-core-3*
-		>=dev-java/xerces-2.7.1
-	   	=dev-java/xml-commons-external-1.3*
+		dev-java/mx4j-core:3.0
+		dev-java/xerces:2
+	   	dev-java/xml-commons-external:1.3
 	   )"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )

@@ -1,7 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.16.ebuild,v 1.5 2008/03/17 22:35:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.16.ebuild,v 1.6 2008/05/13 02:06:49 wltjr Exp $
 
+EAPI=1
+JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -15,9 +17,10 @@ HOMEPAGE="http://tomcat.apache.org/"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
-IUSE="doc examples source test"
+IUSE="examples test"
 
-COMMON_DEPEND="=dev-java/eclipse-ecj-3.3*
+COMMON_DEPEND="dev-java/eclipse-ecj:3.3
+	dev-java/ant-eclipse-ecj:3.3
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
