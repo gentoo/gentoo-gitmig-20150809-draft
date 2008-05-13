@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.4.0-r1.ebuild,v 1.3 2008/05/13 10:11:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.5.2.ebuild,v 1.1 2008/05/13 10:11:17 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -21,14 +21,8 @@ RDEPEND=""
 
 src_unpack() {
 	distutils_src_unpack
-	sed -i -e 's/distutils.core/setuptools/' setup.py || die 'sed failed'
-}
-
-src_test() {
 	sed -i \
-		-e 's/ \(doctest\.testmod(.*\)/ sys.exit(\1[0] != 0)/' \
-		configobj_test.py
-	${python} configobj_test.py -v || die "configobj_test.py failed"
+		-e 's/distutils.core/setuptools/' setup.py || die 'sed failed'
 }
 
 src_install() {
@@ -39,3 +33,12 @@ src_install() {
 		dohtml -r docs/*
 	fi
 }
+
+src_test() {
+	distutils_python_version
+	sed -i \
+		-e 's/ \(doctest\.testmod(.*\)/ sys.exit(\1[0] != 0)/' \
+		configobj_test.py
+	"${python}" configobj_test.py -v || die "configobj_test.py failed"
+}
+
