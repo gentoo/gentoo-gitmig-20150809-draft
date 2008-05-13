@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.97.ebuild,v 1.8 2007/09/26 18:38:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.97.ebuild,v 1.9 2008/05/13 18:36:19 hawking Exp $
 
 NEED_PYTHON="1.5.2"
 
@@ -21,11 +21,11 @@ src_install () {
 	distutils_src_install
 	# move man pages from /usr/man to /usr/share/man
 	dodir /usr/share
-	mv ${D}/usr/man ${D}/usr/share
+	mv "${D}"/usr/man "${D}"/usr/share
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}/usr/$(get_libdir)/${P}
+	python_mod_optimize /usr/$(get_libdir)/${P}
 	# clean up stale junk left there by old faulty ebuilds
 	# see Bug 118022 and Bug 132448
 	if has_version "<dev-util/scons-0.96.92-r1" ; then
@@ -37,5 +37,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${ROOT}/usr/$(get_libdir)/${P}
+	python_mod_cleanup /usr/$(get_libdir)/${P}
 }
