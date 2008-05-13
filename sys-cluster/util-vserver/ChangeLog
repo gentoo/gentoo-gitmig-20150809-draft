@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.90 2008/04/13 10:24:11 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.91 2008/05/13 14:45:01 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> util-vserver-0.30.215.ebuild:
+  Marked ~hppa (LuckyLuke).
 
   13 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
   -files/util-vserver-0.30.214-openrc.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.215.ebuild,v 1.2 2008/04/13 10:24:11 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.215.ebuild,v 1.3 2008/05/13 14:45:01 jer Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.linux-vserver.org/pub/utils/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc x86"
 
 IUSE=""
 
