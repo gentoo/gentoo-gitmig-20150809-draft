@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.2 2008/04/08 08:44:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.3 2008/05/13 11:27:37 phosphan Exp $
 
 inherit eutils
 
@@ -89,10 +89,6 @@ src_unpack() {
 
 	cd "${S}"
 
-	#only generate the .ps and not the fonts
-	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
-		doc/Makefile.in
-
 	if ! use doc; then
 		sed -i -e 's:@USE_LATEX@:no:' doc/Makefile.in
 	fi
@@ -119,7 +115,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		${myconf} || die "econf failed"
 
-	emake || die
+	emake VARTEXFONTS="${T}/fonts" || die
 
 	if use usb; then
 		cd tools/hotplug

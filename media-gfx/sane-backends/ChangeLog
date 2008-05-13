@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.137 2008/04/14 23:20:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.138 2008/05/13 11:27:37 phosphan Exp $
+
+  13 May 2008; Patrick Kursawe <phosphan@gentoo.org>
+  -files/udev-rule-2.patch, -files/udev-rule-3.patch,
+  -files/udev-rule.patch, sane-backends-1.0.17.ebuild,
+  -sane-backends-1.0.18-r2.ebuild, -sane-backends-1.0.18-r3.ebuild,
+  -sane-backends-1.0.18-r4.ebuild, -sane-backends-1.0.18-r5.ebuild,
+  sane-backends-1.0.18-r6.ebuild, -sane-backends-1.0.19.ebuild,
+  sane-backends-1.0.19-r1.ebuild:
+  Removing obsolete versions + cleaner solution for TeX-font-problems.
 
   14 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   sane-backends-1.0.18-r6.ebuild:

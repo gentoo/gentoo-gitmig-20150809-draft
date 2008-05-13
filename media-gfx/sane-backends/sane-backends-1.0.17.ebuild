@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.14 2008/02/11 10:33:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.15 2008/05/13 11:27:37 phosphan Exp $
 
 inherit eutils
 
@@ -78,9 +78,6 @@ src_unpack() {
 
 	cd "${S}"
 
-	#only generate the .ps and not the fonts
-	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
-		doc/Makefile.in
 	#compile errors when using NDEBUG otherwise
 	sed -i -e 's:function_name:__FUNCTION__:g' backend/artec_eplus48u.c \
 		|| die "function_name fix failed"
@@ -102,7 +99,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		${myconf} || die "econf failed"
 
-	emake || die
+	emake VARTEXFONTS="${T}/fonts" || die
 
 	if use usb; then
 		cd tools/hotplug
