@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.4.ebuild,v 1.6 2008/03/15 08:40:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.4.ebuild,v 1.7 2008/05/13 08:52:27 hawking Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ MY_P="PyQt-x11-gpl-${PV/*_pre/snapshot-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
-HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
+HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
 #SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/${MY_P}.tar.gz"
 #SRC_URI="http://www.riverbankcomputing.com/Downloads/Snapshots/PyQt3/${MY_P}.tar.gz"

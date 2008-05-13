@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.13 2007/11/20 05:35:19 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.14 2008/05/13 08:52:27 hawking Exp $
 
 inherit distutils eutils
 
@@ -8,7 +8,7 @@ MY_P="PyQt-x11-gpl-${PV/*_pre/snapshot-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="set of Python bindings for the QT 3.x Toolkit"
-HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
+HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="0"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:  check_license():# check_license():" ${S}/configure.py
+	sed -i -e "s:  check_license():# check_license():" "${S}"/configure.py
 	epatch "${FILESDIR}/PyQt-3.14.1-examples.diff"
 }
 
@@ -44,11 +44,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog LICENSE NEWS README README.Linux THANKS
 	use doc && dohtml doc/PyQt.html
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r examples3/* ${D}/usr/share/doc/${PF}/examples
+		cp -r examples3/* "${D}"/usr/share/doc/${PF}/examples
 	fi
 }
