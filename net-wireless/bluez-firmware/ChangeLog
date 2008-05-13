@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-firmware
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.10 2008/04/17 15:05:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.11 2008/05/13 13:04:27 betelgeuse Exp $
+
+  13 May 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove proxy maintainer as he doesn't use Gentoo any more.
 
   17 Apr 2008; Jeroen Roovers <jer@gentoo.org> bluez-firmware-1.2.ebuild:
   Marked ~hppa too.

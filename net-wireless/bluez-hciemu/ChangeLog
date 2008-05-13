@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-hciemu
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.11 2007/05/12 15:10:43 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.12 2008/05/13 13:04:19 betelgeuse Exp $
+
+  13 May 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove proxy maintainer as he doesn't use Gentoo any more.
 
   12 May 2007; Petteri Räty <betelgeuse@gentoo.org> ChangeLog:
   Sign Manifest.

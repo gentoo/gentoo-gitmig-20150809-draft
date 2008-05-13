@@ -8,9 +8,4 @@
 	<maintainer>
 		<email>eva@gentoo.org</email>
 	</maintainer>
-	<maintainer>
-		<email>dm@chello.nl</email>
-		<description>Proxy maintainer</description>
-		<name>Dick Marinus</name>
-	</maintainer>
 </pkgmetadata>
