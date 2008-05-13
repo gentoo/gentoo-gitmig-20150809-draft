@@ -1,0 +1,292 @@
+diff -NrU5 k3d-0.6.7.0.orig/hapy/src/Assert.cc k3d-0.6.7.0/hapy/src/Assert.cc
+--- k3d-0.6.7.0.orig/hapy/src/Assert.cc	2004-01-12 15:21:41.000000000 +0100
++++ k3d-0.6.7.0/hapy/src/Assert.cc	2008-04-21 18:49:36.000000000 +0200
+@@ -3,10 +3,11 @@
+ 
+ #include <Hapy/Assert.h>
+ #include <Hapy/IoStream.h>
+ 
+ #include <cstring>
++#include <cstdlib>
+ #include <errno.h>
+ 
+ 
+ void Hapy::Complain(const char *fname, int lineno) {
+ 	cerr << fname << ':' << lineno << ": " << strerror(errno) << endl;
+diff -NrU5 k3d-0.6.7.0.orig/hapy/src/RuleId.cc k3d-0.6.7.0/hapy/src/RuleId.cc
+--- k3d-0.6.7.0.orig/hapy/src/RuleId.cc	2004-02-12 11:04:59.000000000 +0100
++++ k3d-0.6.7.0/hapy/src/RuleId.cc	2008-04-21 18:49:36.000000000 +0200
+@@ -1,7 +1,9 @@
+ /* Hapy is a public domain software. See Hapy README file for the details. */
+ 
++#include <limits>
++
+ #include <Hapy/Assert.h>
+ #include <Hapy/RuleId.h>
+ #include <Hapy/NumericLimits.h>
+ #include <Hapy/IoStream.h>
+ 
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/algebra.h k3d-0.6.7.0/k3dsdk/algebra.h
+--- k3d-0.6.7.0.orig/k3dsdk/algebra.h	2006-03-16 16:23:14.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/algebra.h	2008-04-21 18:49:36.000000000 +0200
+@@ -28,10 +28,11 @@
+ #include "basic_math.h"
+ #include "log.h"
+ #include "vectors.h"
+ 
+ #include <cfloat>
++#include <cstring>
+ 
+ /****************************************************************
+ *
+ * C++ Vector and Matrix Algebra routines
+ * Author: Jean-Francois DOUE
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/bitmap.h k3d-0.6.7.0/k3dsdk/bitmap.h
+--- k3d-0.6.7.0.orig/k3dsdk/bitmap.h	2006-08-05 06:22:03.000000000 +0200
++++ k3d-0.6.7.0/k3dsdk/bitmap.h	2008-04-21 18:49:36.000000000 +0200
+@@ -29,11 +29,11 @@
+ 
+ #include <algorithm>
+ #include <cmath>
+ #include <functional>
+ #include <iostream>
+-#include <string>
++#include <cstring>
+ 
+ namespace k3d
+ {
+ 
+ /// Defines data measured in pixels
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/explicit_snap_source.cpp k3d-0.6.7.0/k3dsdk/explicit_snap_source.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/explicit_snap_source.cpp	2006-02-15 03:31:06.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/explicit_snap_source.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -23,10 +23,12 @@
+ 
+ #include "explicit_snap_source.h"
+ #include "result.h"
+ #include "vectors.h"
+ 
++#include <algorithm>
++
+ namespace k3d
+ {
+ 
+ ////////////////////////////////////////////////////////////////////////////////////
+ // explicit_snap_source
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/explicit_snap_target.cpp k3d-0.6.7.0/k3dsdk/explicit_snap_target.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/explicit_snap_target.cpp	2006-02-15 03:31:06.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/explicit_snap_target.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -23,10 +23,12 @@
+ 
+ #include "explicit_snap_target.h"
+ #include "result.h"
+ #include "vectors.h"
+ 
++#include <algorithm>
++
+ namespace k3d
+ {
+ 
+ ////////////////////////////////////////////////////////////////////////////////////
+ // explicit_snap_target
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/gl_info.cpp k3d-0.6.7.0/k3dsdk/gl_info.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/gl_info.cpp	2004-12-19 01:39:24.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/gl_info.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -38,10 +38,11 @@
+ 
+ #include <cassert>
+ #include <iostream>
+ #include <sstream>
+ #include <string>
++#include <cstring>
+ 
+ namespace k3d
+ {
+ 
+ namespace gl
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/log_control.h k3d-0.6.7.0/k3dsdk/log_control.h
+--- k3d-0.6.7.0.orig/k3dsdk/log_control.h	2007-01-06 20:58:14.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/log_control.h	2008-04-21 18:49:36.000000000 +0200
+@@ -20,10 +20,12 @@
+ // License along with this program; if not, write to the Free Software
+ // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+ #include "signal_system.h"
+ 
++#include <cstdlib>
++
+ namespace k3d
+ {
+ 
+ /// Enumerates available log levels
+ typedef enum
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/log.cpp k3d-0.6.7.0/k3dsdk/log.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/log.cpp	2007-01-12 07:10:05.000000000 +0100
++++ k3d-0.6.7.0/k3dsdk/log.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -21,10 +21,11 @@
+ #include "result.h"
+ 
+ #include <iostream>
+ #include <sstream>
+ #include <vector>
++#include <cstdlib>
+ 
+ #ifdef K3D_PLATFORM_WIN32
+ 
+ 	#include <time.h>
+ 	#include <windows.h>
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/socket.cpp k3d-0.6.7.0/k3dsdk/socket.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/socket.cpp	2006-10-06 06:24:56.000000000 +0200
++++ k3d-0.6.7.0/k3dsdk/socket.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -22,10 +22,11 @@
+ */
+ 
+ #include "result.h"
+ #include "socket.h"
+ #include "string_cast.h"
++#include <cstring>
+ 
+ #ifdef K3D_PLATFORM_WIN32
+ 
+ 	#include "winsock2.h"
+ 
+diff -NrU5 k3d-0.6.7.0.orig/k3dsdk/xml.cpp k3d-0.6.7.0/k3dsdk/xml.cpp
+--- k3d-0.6.7.0.orig/k3dsdk/xml.cpp	2006-04-26 06:44:19.000000000 +0200
++++ k3d-0.6.7.0/k3dsdk/xml.cpp	2008-04-21 18:50:24.000000000 +0200
+@@ -28,10 +28,11 @@
+ 
+ #include <iostream>
+ #include <iterator>
+ #include <stack>
+ #include <stdexcept>
++#include <cstring>
+ 
+ #if defined K3D_HAVE_EXPAT
+ 
+ 	#include <expat.h>
+ 	#define BACKEND_PARSER expat_parser
+diff -NrU5 k3d-0.6.7.0.orig/modules/bitmap/bitmap_element.h k3d-0.6.7.0/modules/bitmap/bitmap_element.h
+--- k3d-0.6.7.0.orig/modules/bitmap/bitmap_element.h	2006-08-05 06:25:11.000000000 +0200
++++ k3d-0.6.7.0/modules/bitmap/bitmap_element.h	2008-04-21 18:49:36.000000000 +0200
+@@ -25,10 +25,12 @@
+ */
+ 
+ #include <k3dsdk/algebra.h>
+ #include <k3dsdk/bitmap.h>
+ 
++#include <memory>
++
+ namespace libk3dbitmap
+ {
+ 
+ /*
+    The relationship between 'pixel space' and (2d) 'world space'
+diff -NrU5 k3d-0.6.7.0.orig/ngui/angle_axis_control.h k3d-0.6.7.0/ngui/angle_axis_control.h
+--- k3d-0.6.7.0.orig/ngui/angle_axis_control.h	2006-06-17 21:05:47.000000000 +0200
++++ k3d-0.6.7.0/ngui/angle_axis_control.h	2008-04-21 18:49:36.000000000 +0200
+@@ -27,10 +27,11 @@
+ #include "ui_component.h"
+ 
+ #include <k3dsdk/algebra.h>
+ #include <k3dsdk/signal_system.h>
+ 
++#include <memory>
+ #include <gtkmm/table.h>
+ 
+ namespace Gtk { class Button; }
+ namespace k3d { class iproperty; }
+ namespace k3d { class istate_recorder; }
+diff -NrU5 k3d-0.6.7.0.orig/ngui/bitmap_preview.h k3d-0.6.7.0/ngui/bitmap_preview.h
+--- k3d-0.6.7.0.orig/ngui/bitmap_preview.h	2006-07-05 06:49:43.000000000 +0200
++++ k3d-0.6.7.0/ngui/bitmap_preview.h	2008-04-21 18:49:36.000000000 +0200
+@@ -29,10 +29,12 @@
+ 
+ #include <k3dsdk/bitmap.h>
+ 
+ #include <gtkmm/buttonbox.h>
+ 
++#include <memory>
++
+ namespace Gtk { class Image; }
+ namespace k3d { class idag; }
+ namespace k3d { class iproperty; }
+ 
+ namespace libk3dngui
+diff -NrU5 k3d-0.6.7.0.orig/ngui/bounding_box.h k3d-0.6.7.0/ngui/bounding_box.h
+--- k3d-0.6.7.0.orig/ngui/bounding_box.h	2006-06-17 21:05:47.000000000 +0200
++++ k3d-0.6.7.0/ngui/bounding_box.h	2008-04-21 18:49:36.000000000 +0200
+@@ -29,10 +29,12 @@
+ #include <k3dsdk/signal_system.h>
+ #include <k3dsdk/bounding_box.h>
+ 
+ #include <gtkmm/table.h>
+ 
++#include <memory>
++
+ // Forward declarations
+ namespace Gtk { class Button; }
+ namespace k3d { class iproperty; }
+ namespace k3d { class istate_recorder; }
+ 
+diff -NrU5 k3d-0.6.7.0.orig/ngui/entry.h k3d-0.6.7.0/ngui/entry.h
+--- k3d-0.6.7.0.orig/ngui/entry.h	2006-06-17 21:05:48.000000000 +0200
++++ k3d-0.6.7.0/ngui/entry.h	2008-04-21 18:49:36.000000000 +0200
+@@ -29,10 +29,12 @@
+ #include "ui_component.h"
+ 
+ #include <k3dsdk/iproperty.h>
+ #include <k3dsdk/iwritable_property.h>
+ 
++#include <memory>
++
+ namespace k3d { class istate_recorder; }
+ 
+ namespace libk3dngui
+ {
+ 
+diff -NrU5 k3d-0.6.7.0.orig/ngui/ui_component.h k3d-0.6.7.0/ngui/ui_component.h
+--- k3d-0.6.7.0.orig/ngui/ui_component.h	2006-06-17 21:05:51.000000000 +0200
++++ k3d-0.6.7.0/ngui/ui_component.h	2008-04-21 18:49:36.000000000 +0200
+@@ -20,10 +20,12 @@
+ // License along with this program; if not, write to the Free Software
+ // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+ #include <k3dsdk/command_node.h>
+ 
++#include <memory>
++
+ namespace Glib { class ustring; }
+ namespace Gtk { class Tooltips; }
+ 
+ namespace libk3dngui
+ {
+diff -NrU5 k3d-0.6.7.0.orig/renderjob/main.cpp k3d-0.6.7.0/renderjob/main.cpp
+--- k3d-0.6.7.0.orig/renderjob/main.cpp	2007-01-23 05:06:33.000000000 +0100
++++ k3d-0.6.7.0/renderjob/main.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -29,10 +29,11 @@
+ #include <k3dsdk/utility.h>
+ #include <k3dsdk/version.h>
+ 
+ #include <iostream>
+ #include <vector>
++#include <algorithm>
+ 
+ namespace
+ {
+ 
+ typedef std::vector<std::string> string_array;
+diff -NrU5 k3d-0.6.7.0.orig/surface_polygonizer/jules_bloomenthal.cpp k3d-0.6.7.0/surface_polygonizer/jules_bloomenthal.cpp
+--- k3d-0.6.7.0.orig/surface_polygonizer/jules_bloomenthal.cpp	2005-11-24 21:19:23.000000000 +0100
++++ k3d-0.6.7.0/surface_polygonizer/jules_bloomenthal.cpp	2008-04-21 18:49:36.000000000 +0200
+@@ -23,10 +23,11 @@
+ #include <k3dsdk/result.h>
+ 
+ #include "jules_bloomenthal.h"
+ 
+ #include <iostream>
++#include <algorithm>
+ 
+ // Number of iterations (convergence)
+ const int RES = 10;
+ 
+ // Directions

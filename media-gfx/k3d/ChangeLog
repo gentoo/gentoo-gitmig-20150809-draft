@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.35 2008/01/15 00:28:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.36 2008/05/13 07:24:50 drac Exp $
+
+*k3d-0.6.7.0-r1 (13 May 2008)
+
+  13 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/k3d-0.6.7.0-gcc43.patch, +files/k3d-0.6.7.0-sigc2.patch,
+  +k3d-0.6.7.0-r1.ebuild:
+  Fix compability with libsigc++-2.2 wrt #218763 and building with GCC 4.3
+  wrt #218760, thanks to Peter Alfredsen.
 
   15 Jan 2008; Markus Meier <maekke@gentoo.org>
   -files/k3d-0.5.0.34-nls.patch, -files/k3d-0.5.0.37-nls.patch,
