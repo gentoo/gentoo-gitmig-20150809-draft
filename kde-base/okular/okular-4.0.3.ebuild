@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.3.ebuild,v 1.1 2008/04/03 21:45:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.3.ebuild,v 1.2 2008/05/13 07:52:54 pva Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ RDEPEND="
 	>=app-text/libspectre-0.2
 	media-libs/freetype
 	kde-base/qimageblitz
-	chm? ( app-doc/chmlib )
+	chm? ( dev-libs/chmlib )
 	djvu? ( >=app-text/djvu-3.5.17 )
 	jpeg? ( media-libs/jpeg )
 	pdf? ( >=app-text/poppler-0.7
