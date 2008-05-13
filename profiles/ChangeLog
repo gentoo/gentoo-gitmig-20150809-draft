@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1403 2008/05/12 21:58:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1404 2008/05/13 10:12:08 pva Exp $
+
+  14 May 2008; Peter Volkov <pva@gentoo.org> updates/2Q-2008::
+  Finaly all deps in the tree are updated so we move app-doc/chmlib to a better
+  place (dev-libs/chmlib)
 
   13 May 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
   Added md5sum-external USE flag for app-misc/fdupes
