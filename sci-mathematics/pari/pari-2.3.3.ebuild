@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.3.ebuild,v 1.2 2008/05/13 01:44:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.3.ebuild,v 1.3 2008/05/13 05:10:33 mr_bones_ Exp $
 
 inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
@@ -132,7 +132,6 @@ src_install() {
 		emake DESTDIR="${D}" LIBDIR="${D}"/usr/$(get_libdir) install-lib-sta || \
 			die "Install of static library failed"
 	fi
-
 
 	#remove superfluous doc directory
 	rm -fr "${D}/usr/share/${P}/doc" || \
