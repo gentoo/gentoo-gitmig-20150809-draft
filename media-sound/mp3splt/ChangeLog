@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3splt
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.25 2007/02/22 01:16:03 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.26 2008/05/13 19:48:23 drac Exp $
+
+*mp3splt-2.2_rc1 (13 May 2008)
+
+  13 May 2008; Samuli Suominen <drac@gentoo.org> +mp3splt-2.2_rc1.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
