@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.2 2008/04/20 03:49:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.3 2008/05/13 22:34:17 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -56,6 +56,7 @@ src_unpack() {
 	epatch "${WORKDIR}/patch/${P}-backports.patch"
 
 	# regenerate configure and co if we touch .ac or .am files
+	sed -i -e '/ACLOCAL_AMFLAGS/d' Makefile.am
 	eautoreconf
 }
 
