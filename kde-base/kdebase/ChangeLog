@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.443 2008/05/12 16:20:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.444 2008/05/13 15:24:02 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.9-r3.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdebase-3.5.9-r3.ebuild:
   Marking kdebase-3.5.9-r3 ppc and ppc stable for bug 221063
