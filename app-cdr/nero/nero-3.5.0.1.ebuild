@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.0.1.ebuild,v 1.2 2008/05/13 13:54:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.0.1.ebuild,v 1.3 2008/05/13 16:12:08 mr_bones_ Exp $
 
 inherit eutils fdo-mime rpm multilib gnome2-utils
 
@@ -56,7 +56,6 @@ src_install() {
 
 	make_wrapper nerocmd ./nerocmd /opt/nero /opt/nero/$(get_libdir) \
 		|| die "make_wrapper for nerocmd failed."
-
 
 	# This is a ugly hack to fix burning in x86_64 which can be removed in future releases.
 	# Update: Is this still needed for 3.5.0.1?
