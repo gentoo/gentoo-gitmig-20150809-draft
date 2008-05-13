@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.16 2008/05/12 11:17:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.17 2008/05/13 11:28:45 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {
