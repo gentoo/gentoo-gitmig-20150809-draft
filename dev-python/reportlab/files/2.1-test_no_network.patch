@@ -1,0 +1,14 @@
+--- test/test_lib_utils.py	2008-05-13 14:57:23.350829336 +0300
++++ test/test_lib_utils.py	2008-05-13 14:57:33.962839567 +0300
+@@ -95,11 +95,6 @@
+         from reportlab.lib.utils import open_and_read
+         b = open_and_read('file:../docs/images/Edit_Prefs.gif')
+ 
+-    def test9(self):
+-        "test open and read of an http: URL"
+-        from reportlab.lib.utils import open_and_read
+-        b = open_and_read('http://www.reportlab.com/rsrc/encryption.gif')
+-
+     def test10(self):
+         "test open and read of a simple relative file"
+         from reportlab.lib.utils import open_and_read, getStringIO

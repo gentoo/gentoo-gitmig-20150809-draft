@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.1.ebuild,v 1.7 2008/04/24 17:33:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.1.ebuild,v 1.8 2008/05/13 12:07:42 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}-tests_report_failure.patch"
 	epatch "${FILESDIR}/${PV}-test_fix.patch"
+	epatch "${FILESDIR}/${PV}-test_no_network.patch"
 
 	sed -i \
 		-e "/'docs/d" -e "/'test/d" \

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.0.ebuild,v 1.7 2007/10/09 07:01:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.0.ebuild,v 1.8 2008/05/13 12:07:42 hawking Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -26,9 +26,9 @@ KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${A} || die
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	mv ${PN}_${vmaj}_${vmin}/${PN} . || die
-	cd ${S}
+	cd "${S}"
 }
 
 src_install() {
@@ -36,7 +36,7 @@ src_install() {
 	distutils_src_install
 
 	# docs
-	cd ${S}
+	cd "${S}"
 	dodoc README license.txt
 	insinto /usr/share/doc/${PF}
 	doins docs/*
