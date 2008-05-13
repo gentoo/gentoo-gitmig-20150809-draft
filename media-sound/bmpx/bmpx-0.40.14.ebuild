@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.14.ebuild,v 1.1 2008/04/16 13:42:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.14.ebuild,v 1.2 2008/05/13 06:16:42 drac Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc hal modplug networkmanager sid startup-notification"
 
-RDEPEND="net-libs/libsoup:2.2
+RDEPEND=">=net-libs/libsoup-2.2.100:2.2
 	>=dev-db/sqlite-3.4
 	>=dev-libs/glib-2.10
 	>=dev-cpp/glibmm-2.12
