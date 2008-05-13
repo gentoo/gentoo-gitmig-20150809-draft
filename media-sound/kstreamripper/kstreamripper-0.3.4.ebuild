@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.3 2006/02/24 17:18:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.4 2008/05/13 06:41:44 drac Exp $
 
 inherit kde
 
@@ -23,9 +23,9 @@ need-kde 3.2
 src_compile() {
 	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr"
 	use amd64 && myconf="${myconf} libsuffix=64"
-
+	unset CFLAGS # freaking scons is passing CFLAGS into g++
 	scons configure ${myconf} || die "configure failed"
-	scons ${MAKEOPTS} || die "scons failed"
+	scons || die "scons failed"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kstreamripper
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.12 2007/02/22 01:09:46 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.13 2008/05/13 06:41:44 drac Exp $
+
+  13 May 2008; Samuli Suominen <drac@gentoo.org> kstreamripper-0.3.4.ebuild:
+  Stop passing CFLAGS for g++ and MAKEOPTS because scons is stupid wrt
+  #220393.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
