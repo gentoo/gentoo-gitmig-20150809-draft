@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.8.1-r1.ebuild,v 1.6 2008/01/14 17:02:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.8.1-r1.ebuild,v 1.7 2008/05/13 05:35:43 drac Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -18,17 +18,18 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="doc lash debug"
 
-DEPEND="$(qt_min_version 3.2)
+RDEPEND="$(qt_min_version 3.2)
 	>=media-libs/alsa-lib-0.9.0
 	media-sound/fluidsynth
-	doc? ( app-text/openjade
-		app-doc/doxygen
-		media-gfx/graphviz )
 	dev-lang/perl
 	>=media-libs/libsndfile-1.0.1
 	>=media-libs/libsamplerate-0.1.0
 	>=media-sound/jack-audio-connection-kit-0.98.0
 	lash? ( media-sound/lash )"
+DEPEND="${RDEPEND}
+	doc? ( app-text/openjade
+		app-doc/doxygen
+		media-gfx/graphviz )"
 
 src_compile() {
 	cd "${WORKDIR}/${MY_P}"

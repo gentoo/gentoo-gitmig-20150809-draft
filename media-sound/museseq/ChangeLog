@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.49 2008/01/14 17:02:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.50 2008/05/13 05:35:43 drac Exp $
+
+  13 May 2008; Samuli Suominen <drac@gentoo.org> museseq-0.8.1-r1.ebuild:
+  Move documentation generation tools into DEPEND wrt #221679.
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> museseq-0.6.2-r1.ebuild,
   museseq-0.7.1.ebuild, museseq-0.7.2_pre5.ebuild, museseq-0.8.1-r1.ebuild,
