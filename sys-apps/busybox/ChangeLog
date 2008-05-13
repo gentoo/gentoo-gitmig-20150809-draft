@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.188 2008/05/04 09:14:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.189 2008/05/13 07:27:40 solar Exp $
+
+*busybox-1.10.1-r3 (13 May 2008)
+
+  13 May 2008; <solar@gentoo.org> +files/busybox-1.10.1-mdev-exec.patch,
+  +busybox-1.10.1-r3.ebuild:
+  - Bug fix. CONFIG_FEATURE_MDEV_EXEC
 
   04 May 2008; Mike Frysinger <vapier@gentoo.org> files/mdev-start.sh:
   Fix typos in mount #220028 by Dave Bender.

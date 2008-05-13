@@ -1,0 +1,11 @@
+--- util-linux/mdev.c	2008-05-12 21:27:08.000000000 -0700
++++ util-linux/mdev.c	2008-05-12 21:29:18.000000000 -0700
+@@ -202,7 +202,7 @@
+ 			val = next;
+ 			if (ENABLE_FEATURE_MDEV_EXEC) {
+ 				const char *s = "@$*";
+-				const char *s2 = strchr(s, *val);
++				char *s2 = strchr(s, *val); /* s2 must not be a const */
+ 
+ 				if (!s2)
+ 					bb_error_msg_and_die("bad line %u", lineno);
