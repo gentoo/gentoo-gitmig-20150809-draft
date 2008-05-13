@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmiletris
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmiletris/ChangeLog,v 1.83 2008/05/12 20:01:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmiletris/ChangeLog,v 1.84 2008/05/13 03:24:18 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> ksmiletris-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> ksmiletris-3.5.9.ebuild:
   Marking ksmiletris-3.5.9 ppc stable for bug 221063

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirtet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.85 2008/05/12 20:03:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.86 2008/05/13 03:14:56 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> ksirtet-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> ksirtet-3.5.9.ebuild:
   Marking ksirtet-3.5.9 ppc stable for bug 221063

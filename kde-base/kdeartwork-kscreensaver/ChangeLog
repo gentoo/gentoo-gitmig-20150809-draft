@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.94 2008/05/12 20:03:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.95 2008/05/13 03:36:59 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org>
+  kdeartwork-kscreensaver-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org>
   kdeartwork-kscreensaver-3.5.9.ebuild:

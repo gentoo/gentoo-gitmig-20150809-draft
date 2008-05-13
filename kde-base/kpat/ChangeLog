@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.89 2008/05/12 20:03:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.90 2008/05/13 03:22:09 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kpat-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kpat-3.5.9.ebuild:
   Marking kpat-3.5.9 ppc stable for bug 221063
