@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.36 2008/05/13 13:23:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.37 2008/05/13 13:53:55 drac Exp $
 
 *nero-3.5.0.1 (13 May 2008)
 
@@ -15,11 +15,10 @@
 *nero-3.0.2.1 (16 Dec 2007)
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> +nero-3.0.2.1.ebuild:
-  Version bump wrt #198429, requested and used daily by armin76.
+  Version bump wrt #198429, requested by armin76.
 
   12 Aug 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.1.3.ebuild:
-  Re-add AMD64 hack to make burning work again, upstream failed to keep their
-  promise.
+  Re-add AMD64 hack to make burning work again.
 
 *nero-3.0.1.3 (11 Aug 2007)
 
@@ -34,7 +33,7 @@
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> -files/nero.desktop,
   -nero-2.1.0.3.ebuild, nero-3.0.0.0.ebuild:
-  Keyword for ~amd64 after heavy testing from AMD64 Arch Testers Jonas
+  Keyword for ~amd64 after testing from AMD64 Arch Testers Jonas
   Pedersen and Kenneth Prugh. Authorized by KingTaco.
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.0.0.ebuild:
