@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.28 2008/05/11 01:01:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.29 2008/05/13 14:43:53 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> vconfig-1.9.ebuild:
+  Marked ~hppa (LuckyLuke).
 
   11 May 2008; <solar@gentoo.org> vconfig-1.9.ebuild:
   keyworded ~arm
