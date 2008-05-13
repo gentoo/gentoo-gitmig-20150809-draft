@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.9.ebuild,v 1.4 2008/05/12 20:03:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.9.ebuild,v 1.5 2008/05/13 00:37:21 jer Exp $
 
 KMNAME=kdemultimedia
 EAPI="1"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdemultimedia-3.5-patchset-02.tar.bz2"
 
 DESCRIPTION="Jukebox and music manager for KDE."
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="akode flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib

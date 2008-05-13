@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.78 2008/05/12 20:02:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.79 2008/05/13 01:34:29 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdeedu-applnk-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdeedu-applnk-3.5.9.ebuild:
   Marking kdeedu-applnk-3.5.9 ppc stable for bug 221063

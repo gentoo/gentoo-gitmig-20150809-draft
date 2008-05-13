@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.67 2008/05/12 20:02:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.68 2008/05/13 01:01:11 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kstart-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kstart-3.5.9.ebuild:
   Marking kstart-3.5.9 ppc stable for bug 221063

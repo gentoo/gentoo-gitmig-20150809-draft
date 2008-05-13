@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.60 2008/05/12 20:02:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.61 2008/05/13 01:06:07 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdcop-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdcop-3.5.9.ebuild:
   Marking kdcop-3.5.9 ppc stable for bug 221063
