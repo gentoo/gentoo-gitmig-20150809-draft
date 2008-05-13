@@ -1,7 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/sparc64/2006.1/make.defaults,v 1.1 2006/10/08 18:37:25 pebenito Exp $
-
-# USE settings
-USE="berkdb crypt gcc64 ipv6 ncurses nls pam python readline ssl tcpd zlib"
-STAGE1_USE="gcc64 nptl nptlonly"

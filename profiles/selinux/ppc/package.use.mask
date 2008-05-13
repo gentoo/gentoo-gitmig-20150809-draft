@@ -1,4 +1,0 @@
-# This file requires >=portage-2.1.1
-
-#requires virtual/jdk-1.6
-~dev-util/checkstyle-4.3 test

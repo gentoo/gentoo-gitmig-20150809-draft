@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/make.defaults,v 1.3 2006/10/10 13:14:34 pebenito Exp $
-
-ARCH="sparc"
-ACCEPT_KEYWORDS="${ARCH}"
-FEATURES="sandbox sfperms loadpolicy"
-
-PORTAGE_T="portage_t.merge"

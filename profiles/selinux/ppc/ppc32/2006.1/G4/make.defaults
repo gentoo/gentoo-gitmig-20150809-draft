@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ppc/ppc32/2006.1/G4/make.defaults,v 1.1 2006/10/08 18:37:25 pebenito Exp $
-
-CFLAGS="-O2 -mtune=G4 -mcpu=G4 -maltivec -mabi=altivec -pipe"
-CXXFLAGS="${CFLAGS}"
-
-STAGE1_USE="altivec unicode"
-USE="${STAGE1_USE} ${USE}"

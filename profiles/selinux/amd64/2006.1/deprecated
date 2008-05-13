@@ -1,5 +1,0 @@
-selinux/2007.0/amd64
-# emerge -n '>=sys-apps/portage-2.1.2.0'
-# cd /etc
-# rm make.profile
-# ln -s /usr/portage/profiles/selinux/2007.0/amd64 make.profile

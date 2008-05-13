@@ -1,6 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/mips64/2006.1/package.mask,v 1.1 2006/11/21 07:22:03 mr_bones_ Exp $
-
-# needs stable >=sys-libs/glibc-2.4
-=sys-libs/libselinux-1.30.29

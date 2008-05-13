@@ -1,9 +1,0 @@
-# 2007/03/17 - Petteri Räty <betelgeuse@gentoo.org>
-# (Proxying for Diego Pettenò <flameeyes@gmail.com>)
-# ASIHPI driver is supported on 64-bit systems for newer versions
-<media-sound/alsa-driver-1.0.14_rc3 alsa_cards_asihpi
-
-# 20 Mar 2008: Petteri Räty <betelgeuse@gentoo.org>
-# jamvm needs ffi on amd64
-# https://bugs.gentoo.org/show_bug.cgi?id=213882
-dev-java/jamvm libffi
