@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snortalog
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.22 2006/11/27 23:09:10 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.23 2008/05/13 14:50:32 fmccor Exp $
+
+  13 May 2008; Ferris McCormick <fmccor@gentoo.org> snortalog-2.4.0.ebuild:
+  Add ~sparc --- Bug #221917 (request by Dustin Surawicz) --- it can generate
+  reports.
 
   27 Nov 2006; Markus Ullmann <jokey@gentoo.org>
   -files/snortalog-2.3.0-limit-args.diff,
