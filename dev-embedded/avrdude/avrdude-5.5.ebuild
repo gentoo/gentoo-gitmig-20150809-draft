@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.5.ebuild,v 1.2 2007/12/21 08:27:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.5.ebuild,v 1.3 2008/05/13 08:35:05 calchan Exp $
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
@@ -16,7 +16,7 @@ IUSE="doc"
 RDEPEND="dev-libs/libusb"
 DEPEND="${RDEPEND}
 	doc? ( app-text/texi2html
-		virtual/tetex
+		virtual/latex-base
 		sys-apps/texinfo )"
 
 src_unpack() {
@@ -36,7 +36,7 @@ src_compile() {
 	# We build docs separately since the makefile doesn't do it in a really nice way
 	if use doc ; then
 		cd doc
-		emake -j1 || die "emake doc failed"
+		VARTEXFONTS="${T}/fonts" emake -j1 || die "emake doc failed"
 	fi
 }
 

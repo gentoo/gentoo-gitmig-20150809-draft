@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.38 2007/12/21 08:27:06 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.39 2008/05/13 08:35:05 calchan Exp $
+
+  13 May 2008; Denis Dupeyron <calchan@gentoo.org> avrdude-5.4.ebuild,
+  avrdude-5.5.ebuild:
+  Fixed latex handling, reported by Andrey Grozin.
 
   21 Dec 2007; Denis Dupeyron <calchan@gentoo.org> avrdude-5.5.ebuild:
   Re-added -j1 for compilation (see bug #202576).

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.4.ebuild,v 1.5 2007/08/13 20:14:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.4.ebuild,v 1.6 2008/05/13 08:35:05 calchan Exp $
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
@@ -15,7 +15,7 @@ RDEPEND="sys-libs/readline
 		sys-libs/ncurses
 		dev-libs/libusb"
 DEPEND="doc? ( app-text/texi2html
-			   virtual/tetex
+			   virtual/latex-base
 			   sys-apps/texinfo )
 		sys-devel/bison
 		sys-devel/flex
@@ -24,7 +24,7 @@ DEPEND="doc? ( app-text/texi2html
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# let the build system re-generate these, bug #120194
@@ -33,11 +33,11 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_enable doc) || die "econf failed"
-	emake || die "emake failed"
+	VARTEXFONTS="${T}/fonts" emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "emake install failed"
+	VARTEXFONTS="${T}/fonts" make DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS NEWS README ChangeLog*
 }
