@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.66 2008/05/12 19:32:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.67 2008/05/13 11:45:44 armin76 Exp $
+
+  13 May 2008; Raúl Porcel <armin76@gentoo.org> libetpan-0.54.ebuild:
+  alpha/sparc stable wrt #221801
 
   12 May 2008; Markus Meier <maekke@gentoo.org> libetpan-0.54.ebuild:
   amd64 stable, bug #221801
