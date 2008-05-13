@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.121 2008/04/12 15:19:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.122 2008/05/13 12:59:57 betelgeuse Exp $
+
+  13 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-utils-3.30.ebuild:
+  Add DEPEND on sys-devel/flex for bug #221403.
 
   12 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
   bluez-utils-3.30.ebuild:
