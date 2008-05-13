@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.42 2008/01/07 17:16:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.43 2008/05/13 13:57:46 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> Net-SNMP-5.2.0.ebuild:
+  Stable for HPPA (LuckyLuke).
 
   07 Jan 2008; Jeroen Roovers <jer@gentoo.org> Net-SNMP-5.2.0.ebuild:
   Marked ~hppa (LuckyLuke in #gentoo-hppa).
