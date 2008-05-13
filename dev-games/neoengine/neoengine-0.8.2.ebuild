@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2.ebuild,v 1.4 2008/02/14 05:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2.ebuild,v 1.5 2008/05/13 05:54:54 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="doc"
 
-DEPEND="virtual/opengl
-	media-libs/alsa-lib
+RDEPEND="virtual/opengl
+	media-libs/alsa-lib"
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/neoengine"
+S=${WORKDIR}/neoengine
 
 src_unpack() {
 
@@ -45,9 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Installation failed"
-
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog* NEWS README
-
 	use doc && dohtml -r *-api
 }
