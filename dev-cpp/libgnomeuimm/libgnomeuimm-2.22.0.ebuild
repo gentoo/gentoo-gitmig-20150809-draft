@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.22.0.ebuild,v 1.2 2008/05/02 07:34:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.22.0.ebuild,v 1.3 2008/05/13 10:58:55 remi Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2.7.1
 	>=dev-cpp/libgnomemm-2.16.0
-	>=dev-cpp/libgnomecanvasmm-2.22
+	>=dev-cpp/libgnomecanvasmm-2.6
 	>=dev-cpp/gconfmm-2.6
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/gnome-vfsmm-2.16"
