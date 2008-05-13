@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.9 2008/02/29 21:55:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.10 2008/05/13 13:44:27 jer Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~mips ppc ppc64 sparc x86"
 
 RDEPEND="
 	>=sys-process/daemontools-0.70
