@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-3.1.7.ebuild,v 1.1 2008/05/12 21:49:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-3.1.7.ebuild,v 1.2 2008/05/13 20:52:35 tupone Exp $
 
 EAPI="1"
 
@@ -66,7 +66,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "In /var/qmail/control/conf-smtpd insert the line:"
-	elog "QMAIL_SMTP_PRE=\"${QMAIL_SMTP_PRE} spamdyke -f /etc/${PN}/${PN}.conf\""
+	elog "QMAIL_SMTP_PRE=\"\${QMAIL_SMTP_PRE} spamdyke -f /etc/${PN}/${PN}.conf\""
 	elog "Run spamdyke with the '-h' flag to see the available options and"
 	elog "update /etc/spamdyke.conf accordingly"
 }
