@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.1 2006/11/13 12:16:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.2 2008/05/13 16:07:10 mr_bones_ Exp $
 
 inherit eutils python toolchain-funcs games
 
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
+RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.5
 	>=dev-lang/python-2.2
-	dev-lang/swig
 	virtual/glut"
+DEPEND="${RDEPEND}
+	dev-lang/swig"
 
 S=${WORKDIR}/${PN}
 
