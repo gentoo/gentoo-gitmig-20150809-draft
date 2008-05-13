@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.1.ebuild,v 1.1 2008/04/18 13:09:14 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.1.ebuild,v 1.2 2008/05/13 11:45:44 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -21,12 +21,13 @@ IUSE="doc test"
 RDEPEND="dev-python/paste"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	doc? ( dev-python/pudge dev-python/buildutils )
+	doc? ( dev-python/buildutils dev-python/pygments dev-python/pudge )
 	test? ( dev-python/nose dev-python/py )"
 
 S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="paste/deploy"
+RESTRICT="test"
 
 src_compile() {
 	distutils_src_compile
@@ -42,12 +43,14 @@ src_install() {
 }
 
 src_test() {
-	# Tests can't import paste from site-packages
-	# so we copy them over.
-	# The files that will be installed are already copied to build/lib
-	# so this shouldn't generate any collisions.
 	distutils_python_version
-	cp -pPR /usr/$(get_libdir)/python${PYVER}/site-packages/paste/* paste/
 
-	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
+	# Tests can't import paste from site-packages
+	# So we copy pastedeploy and paste under T.
+	# FIXME This doesn't work. Couldn't figure out why -hawking.
+	cp -pPR build/lib/paste "${T}" || die "couldn't copy pastedeploy."
+	cp -pPR /usr/$(get_libdir)/python${PYVER}/site-packages/paste/* \
+		"${T}"/paste/ || die "couldn't copy paste."
+
+	PYTHONPATH="${T}" "${python}" setup.py nosetests || die "tests failed"
 }
