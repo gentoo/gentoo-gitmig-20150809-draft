@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14.ebuild,v 1.1 2008/01/04 01:10:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14.ebuild,v 1.2 2008/05/13 03:23:12 josejx Exp $
 
 inherit eutils
 
@@ -14,8 +14,9 @@ KEYWORDS="-* ~ppc64"
 IUSE="ibm"
 DEPEND="!sys-boot/yaboot
 		sys-apps/powerpc-utils"
-RDEPEND="!ibm? ( sys-fs/hfsutils )
-		!ibm? ( sys-fs/hfsplusutils )"
+RDEPEND="!ibm? ( sys-fs/hfsutils
+				 sys-fs/hfsplusutils
+				 sys-fs/mac-fdisk )"
 PROVIDE="virtual/bootloader"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14.ebuild,v 1.2 2007/12/31 22:47:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14.ebuild,v 1.3 2008/05/13 03:21:09 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,9 @@ KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
 DEPEND="sys-apps/powerpc-utils"
-RDEPEND="!ibm? ( sys-fs/hfsutils )
-		!ibm? ( sys-fs/hfsplusutils )"
+RDEPEND="!ibm? ( sys-fs/hfsutils 
+				 sys-fs/hfsplusutils
+				 sys-fs/mac-fdisk )"
 
 PROVIDE="virtual/bootloader"
 
