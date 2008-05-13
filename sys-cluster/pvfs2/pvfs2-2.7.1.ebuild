@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.2 2008/04/21 14:52:57 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.3 2008/05/13 00:15:02 jsbronder Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -14,10 +14,10 @@ SRC_URI="ftp://ftp.parl.clemson.edu/pub/pvfs2/${MY_P}.tar.gz"
 IUSE="gtk server static doc ssl examples apidocs threads"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 		ssl? ( dev-libs/openssl )
-		doc? ( dev-tex/latex2html )
-		apidocs? ( app-doc/doxygen )
 		sys-libs/db"
 DEPEND="${RDEPEND}
+		doc? ( dev-tex/latex2html )
+		apidocs? ( app-doc/doxygen )
 		virtual/linux-sources"
 SLOT="0"
 LICENSE="GPL-2"
