@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.25 2008/04/21 14:42:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.26 2008/05/13 23:25:58 angelos Exp $
+
+*sonata-1.5.1 (13 May 2008)
+
+  13 May 2008; Christoph Mende <angelos@gentoo.org> +sonata-1.5.1.ebuild:
+  Version bump
 
   20 Apr 2008; Raúl Porcel <armin76@gentoo.org> sonata-1.4.2.ebuild:
   Add ~sparc
