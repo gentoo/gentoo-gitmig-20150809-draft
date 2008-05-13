@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.43 2008/05/11 19:38:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.44 2008/05/13 20:34:18 aballier Exp $
+
+*texmaker-1.71-r1 (13 May 2008)
+
+  13 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/texmaker-1.71-hunspell.patch, +texmaker-1.71-r1.ebuild:
+  Use system hunspell, by Dustin Surawicz, bug #220617
 
   11 May 2008; Alexis Ballier <aballier@gentoo.org> texmaker-1.60.ebuild:
   switch to latex-base, allow split qt4 deps

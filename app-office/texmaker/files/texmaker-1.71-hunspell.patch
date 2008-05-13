@@ -1,0 +1,64 @@
+--- spellerdialog.h.old	2008-05-13 09:55:46.000000000 +0200
++++ spellerdialog.h	2008-05-13 09:56:06.000000000 +0200
+@@ -13,7 +13,7 @@
+ 
+ #include "ui_spellerdialog.h"
+ #include "latexeditor.h"
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ 
+ #include <QTextCursor>
+ 
+--- texmaker.pro.old	2008-05-13 10:09:23.000000000 +0200
++++ texmaker.pro	2008-05-13 10:11:15.000000000 +0200
+@@ -2,6 +2,8 @@
+ LANGUAGE	= C++
+ TARGET	 = texmaker
+ CONFIG	+= qt warn_off release
++INCLUDEPATH += "/usr/include/hunspell"
++LIBS += "-lhunspell"
+ ###############################
+ HEADERS	+= texmaker.h \
+ 	symbollistwidget.h \
+@@ -32,22 +34,7 @@
+ 	webpublishdialog.h \
+ 	spellerdialog.h \
+ 	pstrickslistwidget.h \
+-	blockdata.h \
+-	hunspell/affentry.hxx \
+-	hunspell/affixmgr.hxx \
+-	hunspell/atypes.hxx \
+-	hunspell/baseaffix.hxx \
+-	hunspell/csutil.hxx \
+-	hunspell/dictmgr.hxx \
+-	hunspell/hashmgr.hxx \
+-	hunspell/htypes.hxx \
+-	hunspell/hunspell.hxx \
+-	hunspell/hunspell.h \
+-	hunspell/langnum.hxx \
+-	hunspell/license.hunspell \
+-	hunspell/phonet.hxx \
+-	hunspell/suggestmgr.hxx \
+-	hunspell/license.myspell 
++	blockdata.h 
+ SOURCES	+= main.cpp \
+ 	texmaker.cpp \
+ 	symbollistwidget.cpp \
+@@ -77,16 +64,7 @@
+ 	aboutdialog.cpp \
+ 	webpublishdialog.cpp \
+ 	spellerdialog.cpp \
+-	pstrickslistwidget.cpp \
+-	hunspell/affentry.cxx \
+-	hunspell/affixmgr.cxx \
+-	hunspell/csutil.cxx \
+-	hunspell/dictmgr.cxx \
+-	hunspell/hashmgr.cxx \
+-	hunspell/hunspell.cxx \
+-	hunspell/phonet.cxx \
+-	hunspell/suggestmgr.cxx \
+-	hunspell/utf_info.cxx
++	pstrickslistwidget.cpp 
+ RESOURCES += texmaker.qrc
+ FORMS   += findwidget.ui\
+ 	gotolinedialog.ui \
