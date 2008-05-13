@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.29 2008/01/25 18:50:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.30 2008/05/13 18:33:43 armin76 Exp $
+
+  13 May 2008; Raúl Porcel <armin76@gentoo.org>
+  sensors-applet-2.2.1.ebuild:
+  Add ~alpha wrt #221893
 
 *sensors-applet-2.2.1 (25 Jan 2008)
 
