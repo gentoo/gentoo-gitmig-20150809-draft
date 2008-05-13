@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.14.ebuild,v 1.1 2008/01/05 14:44:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.14.ebuild,v 1.2 2008/05/13 07:56:48 pva Exp $
 
 WX_GTK_VER="2.8"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="nls"
-DEPEND=">=app-doc/chmlib-0.36
+DEPEND=">=dev-libs/chmlib-0.36
 	=x11-libs/wxGTK-2.8*"
 
 src_compile() {
