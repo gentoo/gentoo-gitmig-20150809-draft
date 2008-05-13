@@ -1,9 +1,13 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.81 2008/05/13 14:50:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.82 2008/05/13 14:56:18 chainsaw Exp $
 
   13 May 2008; Steve Dibb <beandog@gentoo.org> alsa-firmware-1.0.16.ebuild:
   amd64 stable, bug 217075
+
+  13 May 2008; <chainsaw@gentoo.org> alsa-firmware-1.0.16.ebuild:
+  Use correct variable in if-statement, thanks to Marc Hulsman
+  <marc.hulsman@wanadoo.nl> in bug #220118.
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> alsa-firmware-1.0.16.ebuild:
   Stable on ppc wrt bug 217075

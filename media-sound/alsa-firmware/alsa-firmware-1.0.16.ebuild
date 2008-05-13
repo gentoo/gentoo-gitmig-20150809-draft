@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.16.ebuild,v 1.5 2008/05/13 14:50:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.16.ebuild,v 1.6 2008/05/13 14:56:18 chainsaw Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -68,7 +68,7 @@ src_install () {
 
 	local emu="no"
 	for card in ${EMU_CARDS}; do
-		use ${card} && ea="yes" && break
+		use ${card} && emu="yes" && break
 	done
 
 	[[ ${ea} == "no" ]] && rm -rf "${D}/lib/firmware/ea"
