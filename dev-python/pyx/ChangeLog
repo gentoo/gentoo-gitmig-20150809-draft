@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.21 2008/05/01 14:28:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.22 2008/05/13 17:18:29 hawking Exp $
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> pyx-0.10.ebuild:
+  Set VARTEXFONTS to avoid possible sandbox issues wrt TeX fonts. Use
+  distutils_src_unpack.
 
   01 May 2008; Markus Meier <maekke@gentoo.org> pyx-0.10.ebuild:
   amd64/x86 stable

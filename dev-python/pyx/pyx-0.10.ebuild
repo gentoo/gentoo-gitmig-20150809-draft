@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10.ebuild,v 1.3 2008/05/01 14:28:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10.ebuild,v 1.4 2008/05/13 17:18:29 hawking Exp $
 
 inherit distutils eutils
 
@@ -23,8 +23,8 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS CHANGES INSTALL"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	distutils_src_unpack
+
 	epatch "${FILESDIR}"/${P}.patch
 }
 
@@ -33,7 +33,7 @@ src_compile() {
 
 	if use doc; then
 		cd "${S}/faq"
-		make pdf
+		VARTEXFONTS="${T}"/fonts make pdf
 	fi
 }
 
