@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkam
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.47 2007/05/08 14:17:47 dang Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.48 2008/05/13 10:55:09 eva Exp $
+
+  13 May 2008; Gilles Dartiguelongue <eva@gentoo.org> gtkam-0.1.14.ebuild:
+  Scrollkeeper is not optional for correct installation.
+  Fixing libgphoto dependency.
 
   08 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/gtkam-0.1.12-as-needed.patch, gtkam-0.1.12-r2.ebuild:
