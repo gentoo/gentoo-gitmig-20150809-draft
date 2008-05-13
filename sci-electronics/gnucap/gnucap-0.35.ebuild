@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.ebuild,v 1.6 2007/02/27 15:09:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.ebuild,v 1.7 2008/05/13 07:17:17 calchan Exp $
 
 DESCRIPTION="GNUCap is the GNU Circuit Analysis Package"
 SRC_URI="http://www.gnucap.org/dist/${P}.tar.gz"
@@ -11,11 +11,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
-DEPEND="doc? ( virtual/tetex )"
+DEPEND="doc? ( virtual/latex-base )"
 
 src_unpack() {
 	unpack ${A} || die "Failed to unpack!"
-	cd ${S}
+	cd "${S}"
 
 	# No need to install COPYING and INSTALL
 	sed -i \
@@ -37,5 +37,5 @@ src_unpack() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20070221.ebuild,v 1.2 2007/02/27 13:27:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20070221.ebuild,v 1.3 2008/05/13 07:17:17 calchan Exp $
 
 inherit multilib
 
@@ -19,13 +19,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="doc? ( virtual/tetex )"
+DEPEND="doc? ( virtual/latex-base )"
 
 S="${WORKDIR}/${PN}-${SNAPSHOT_DATE}"
 
 src_unpack() {
 	unpack ${A} || die "Failed to unpack!"
-	cd ${S}
+	cd "${S}"
 
 	# No need to install COPYING and INSTALL
 	sed -i \
@@ -54,20 +54,20 @@ src_unpack() {
 src_compile () {
 	econf --disable-dependency-tracking || die "Configuration failed"
 	emake || die "Compilation failed"
-	cd ${S}/plugins
+	cd "${S}"/plugins
 	for PLUGIN_DIR in * ; do
-		cd ${S}/plugins/${PLUGIN_DIR}
+		cd "${S}"/plugins/${PLUGIN_DIR}
 		emake || "Compilation failed"
 	done
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	insopts -m0755
-	cd ${S}/plugins
+	cd "${S}"/plugins
 	for PLUGIN_DIR in * ; do
 		insinto /usr/$(get_libdir)/gnucap/${PLUGIN_DIR}
-		cd ${S}/plugins/${PLUGIN_DIR}
+		cd "${S}"/plugins/${PLUGIN_DIR}
 		for PLUGIN in */*.so ; do
 			newins ${PLUGIN} ${PLUGIN##*/}
 		done

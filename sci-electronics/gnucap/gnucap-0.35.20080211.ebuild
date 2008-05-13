@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20080211.ebuild,v 1.1 2008/03/15 16:45:57 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20080211.ebuild,v 1.2 2008/05/13 07:17:17 calchan Exp $
 
 inherit multilib
 
@@ -19,7 +19,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="doc? ( virtual/tetex )"
+DEPEND="doc? ( virtual/latex-base )"
 
 S="${WORKDIR}/${MY_PV}"
 
