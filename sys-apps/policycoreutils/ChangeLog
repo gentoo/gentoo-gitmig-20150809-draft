@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.67 2008/01/29 15:19:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.68 2008/05/13 02:22:47 pebenito Exp $
+
+  13 May 2008; Chris PeBenito <pebenito@gentoo.org>
+  -files/policycoreutils-1.28-quietlp.diff,
+  -files/policycoreutils-1.32-quietlp.diff,
+  -files/policycoreutils-unsigned-char-ppc.diff,
+  -policycoreutils-1.28.ebuild, -policycoreutils-1.30-r1.ebuild,
+  -policycoreutils-1.34.1.ebuild, -policycoreutils-1.34.11.ebuild,
+  policycoreutils-1.34.15.ebuild:
+  Mark 1.34.15 stable, clear old ebuilds.
 
 *policycoreutils-1.34.15 (29 Jan 2008)
 
