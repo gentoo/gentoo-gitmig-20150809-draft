@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.21 2008/03/12 18:22:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.22 2008/05/13 21:04:54 hawking Exp $
+
+*twisted-lore-8.0.0 (13 May 2008)
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> +twisted-lore-8.0.0.ebuild:
+  Version bump.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
