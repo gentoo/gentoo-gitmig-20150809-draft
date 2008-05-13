@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.6.ebuild,v 1.2 2008/04/22 07:52:23 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.6.ebuild,v 1.3 2008/05/13 07:48:55 pva Exp $
 
 EAPI=1
 
@@ -42,7 +42,7 @@ RDEPEND="
 	ole? ( >=app-text/wv-1.2.3
 		>=dev-dotnet/gsf-sharp-0.8
 		>=app-office/gnumeric-1.4.3-r3 )
-	chm? ( app-doc/chmlib )
+	chm? ( dev-libs/chmlib )
 	pdf? ( >=app-text/poppler-0.5.1 )
 	galago? ( >=dev-dotnet/galago-sharp-0.5.0 )
 	thunderbird? ( || ( >=mail-client/mozilla-thunderbird-1.5
