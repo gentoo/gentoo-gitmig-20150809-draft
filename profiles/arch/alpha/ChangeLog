@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.6 2008/04/10 19:53:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.7 2008/05/13 18:30:37 armin76 Exp $
+
+  13 May 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Unmask lm_sensors, bug #221891
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Make VIDEO_CARDS defaults a reasonable set instead of every imaginable

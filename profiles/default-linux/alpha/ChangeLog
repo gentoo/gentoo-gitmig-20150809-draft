@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.94 2008/05/12 11:41:52 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.95 2008/05/13 18:28:50 armin76 Exp $
+
+  13 May 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Unmask lm_sensors, bug #221891
 
   12 May 2008; Jose Luis Rivero <yoswink@gentoo.org> +2006.1/deprecated,
   +no-nptl/deprecated:
