@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.63 2008/03/23 12:04:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.64 2008/05/13 14:25:50 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> mod_perl-2.0.3-r2.ebuild:
+  Marked ~hppa (LuckyLuke).
 
   23 Mar 2008; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.3-r2.ebuild:
   fix depend.apache usage wrt #208033
