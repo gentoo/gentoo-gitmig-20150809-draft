@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9.ebuild,v 1.1 2008/03/14 14:33:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9.ebuild,v 1.2 2008/05/13 15:24:11 voyageur Exp $
 
 inherit autotools
 
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus doc"
 
-DEPEND="net-misc/nx
-	dbus? ( sys-apps/dbus )
+RDEPEND="net-misc/nx
+	dbus? ( sys-apps/dbus )"
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
-RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
