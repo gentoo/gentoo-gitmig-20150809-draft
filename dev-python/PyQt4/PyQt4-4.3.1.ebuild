@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.1.ebuild,v 1.6 2008/02/15 19:28:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.1.ebuild,v 1.7 2008/05/13 08:54:42 hawking Exp $
 
 inherit distutils qt4
 
 MY_P=PyQt-x11-gpl-${PV}
 
 DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
-HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
+HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
 SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt4/GPL/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.28 2008/05/12 14:50:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.29 2008/05/13 08:54:42 hawking Exp $
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> PyQt4-4.3.1.ebuild,
+  PyQt4-4.3.3.ebuild:
+  Changed HOMEPAGE. Thanks to Elias Probst, #220653
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> PyQt4-4.3.3.ebuild:
   Stable on ppc64
