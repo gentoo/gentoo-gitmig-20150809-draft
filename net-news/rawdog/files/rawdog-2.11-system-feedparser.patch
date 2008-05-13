@@ -1,0 +1,5 @@
+--- rawdoglib/__init__.py	2006-03-11 01:40:16.000000000 +0200
++++ rawdoglib/__init__.py	2008-05-13 21:41:10.661906091 +0300
+@@ -1 +1 @@
+-__all__ = ['feedparser', 'feedfinder', 'timeoutsocket', 'rawdog', 'persister', 'upgrade_1_2']
++__all__ = ['feedfinder', 'timeoutsocket', 'rawdog', 'persister', 'upgrade_1_2']

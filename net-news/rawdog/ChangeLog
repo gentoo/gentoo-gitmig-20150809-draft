@@ -1,6 +1,13 @@
 # ChangeLog for net-news/rawdog
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.20 2008/04/17 21:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.21 2008/05/13 18:52:04 hawking Exp $
+
+*rawdog-2.11 (13 May 2008)
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org>
+  +files/rawdog-2.11-system-feedparser.patch, +rawdog-2.11.ebuild:
+  Version bump. Added patch to use system feedparser. Dropped hppa and s390
+  keywords due to feedparser lacking those keywords.
 
   17 Apr 2008; Jeroen Roovers <jer@gentoo.org> rawdog-2.10.ebuild:
   Stable for HPPA (bug #206091).
