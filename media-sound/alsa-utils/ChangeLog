@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.231 2008/05/13 14:54:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.232 2008/05/13 14:56:10 beandog Exp $
+
+  13 May 2008; Steve Dibb <beandog@gentoo.org>
+  alsa-utils-1.0.14_rc2-r3.ebuild:
+  Rekeyword ~mips
 
   13 May 2008; Steve Dibb <beandog@gentoo.org> alsa-utils-1.0.16.ebuild:
   amd64 stable, bug 217075
