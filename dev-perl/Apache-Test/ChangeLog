@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.59 2008/02/02 15:17:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.60 2008/05/13 14:25:03 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> Apache-Test-1.29.ebuild:
+  Marked ~hppa (LuckyLuke).
 
   02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> Apache-Test-1.29.ebuild:
   use depend.apache eclass wrt #208033
