@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ipodslave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.12 2007/03/19 00:38:46 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.13 2008/05/13 13:38:55 josejx Exp $
+
+  13 May 2008; Joseph Jezak <josejx@gentoo.org> ipodslave-0.7.3.ebuild:
+  Marked ~ppc for bug #211737.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove jhuebel from metadata.xml due to retirement.
