@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.10 2007/09/22 11:59:05 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.11 2008/05/13 07:51:06 pva Exp $
+
+  13 May 2008; Peter Volkov <pva@gentoo.org> pychm-0.8.4.ebuild:
+  Moving app-doc/chmlib -> dev-libs/chmlib, bug #220741.
 
   22 Sep 2007; nixnut <nixnut@gentoo.org> pychm-0.8.4.ebuild:
   Stable on ppc wrt bug 193269

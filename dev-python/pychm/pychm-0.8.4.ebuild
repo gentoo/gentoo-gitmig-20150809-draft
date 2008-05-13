@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/pychm-0.8.4.ebuild,v 1.5 2007/09/22 11:59:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/pychm-0.8.4.ebuild,v 1.6 2008/05/13 07:51:06 pva Exp $
 
 inherit distutils
 
@@ -13,6 +13,6 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="app-doc/chmlib"
+DEPEND="dev-libs/chmlib"
 
 PYTHON_MODNAME="chm"
