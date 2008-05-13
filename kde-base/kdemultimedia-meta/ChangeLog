@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.90 2008/05/12 20:02:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.91 2008/05/13 13:52:00 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org>
+  kdemultimedia-meta-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org>
   kdemultimedia-meta-3.5.9.ebuild:

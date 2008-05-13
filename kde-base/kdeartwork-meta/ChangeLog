@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.91 2008/05/12 20:01:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.92 2008/05/13 13:48:33 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdeartwork-meta-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdeartwork-meta-3.5.9.ebuild:
   Marking kdeartwork-meta-3.5.9 ppc stable for bug 221063

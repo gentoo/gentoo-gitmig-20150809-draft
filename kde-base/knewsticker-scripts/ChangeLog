@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.81 2008/05/12 20:01:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.82 2008/05/13 13:34:48 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org>
+  knewsticker-scripts-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org>
   knewsticker-scripts-3.5.9.ebuild:

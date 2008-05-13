@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.95 2008/05/12 20:01:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.96 2008/05/13 14:17:44 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> akregator-3.5.9-r1.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> akregator-3.5.9-r1.ebuild:
   Marking akregator-3.5.9-r1 ppc stable for bug 221063

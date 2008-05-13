@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.85 2008/05/12 20:01:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.86 2008/05/13 13:25:08 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> libkscan-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> libkscan-3.5.9.ebuild:
   Marking libkscan-3.5.9 ppc for bug 221063

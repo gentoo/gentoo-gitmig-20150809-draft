@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/knotes-3.5.9.ebuild,v 1.4 2008/05/12 20:02:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/knotes-3.5.9.ebuild,v 1.5 2008/05/13 14:23:41 jer Exp $
 
 KMNAME=kdepim
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Notes"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=kde-base/libkcal-${PV}:${SLOT}
