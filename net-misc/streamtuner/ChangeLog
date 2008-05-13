@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.32 2008/01/25 16:11:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.33 2008/05/13 06:10:24 drac Exp $
+
+*streamtuner-0.99.99-r3 (13 May 2008)
+
+  13 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/streamtuner-0.99.99-shoutcast.patch,
+  +streamtuner-0.99.99-r3.ebuild:
+  Fix view of shoutcast genres with a patch from Gentoo bug 220811 or Debian
+  bug 471132. Thanks to Per-Erik Westerberg for reporting.
 
   25 Jan 2008; Samuli Suominen <drac@gentoo.org>
   streamtuner-0.99.99-r2.ebuild:
