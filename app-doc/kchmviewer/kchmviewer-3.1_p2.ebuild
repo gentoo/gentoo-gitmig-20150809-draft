@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.6 2008/04/27 12:02:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.7 2008/05/13 07:44:52 pva Exp $
 
 inherit autotools kde-functions eutils versionator
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="arts kde"
 
 DEPEND="=x11-libs/qt-3*
-	app-doc/chmlib
+	dev-libs/chmlib
 	kde? ( =kde-base/kdelibs-3.5* )"
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
