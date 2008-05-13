@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.228 2008/05/12 16:19:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.229 2008/05/13 15:50:34 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdeaddons-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdeaddons-3.5.9.ebuild:
   Marking kdeaddons-3.5.9 ppc and ppc stable for bug 221063

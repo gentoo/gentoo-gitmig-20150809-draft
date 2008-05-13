@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.308 2008/05/12 16:19:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.309 2008/05/13 15:30:22 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> kdepim-3.5.9-r1.ebuild:
+  Stable for HPPA (bug #221063).
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdepim-3.5.9-r1.ebuild:
   Marking kdepim-3.5.9-r1 ppc and ppc stable for bug 221063

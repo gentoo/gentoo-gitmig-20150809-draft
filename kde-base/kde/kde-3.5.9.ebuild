@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.9.ebuild,v 1.6 2008/05/12 16:22:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.9.ebuild,v 1.7 2008/05/13 15:53:38 jer Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="3.5"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc ~x86"
 IUSE="accessibility"
 
 # excluded: kdebindings, kdesdk, since these are developer-only packages
