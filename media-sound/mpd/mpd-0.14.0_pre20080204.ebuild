@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.0_pre20080204.ebuild,v 1.1 2008/02/04 12:46:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.0_pre20080204.ebuild,v 1.2 2008/05/13 23:43:50 angelos Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac alsa ao audiofile avahi flac icecast iconv ipv6 jack libsamplerate mp3 mikmod musepack ogg oss pulseaudio unicode vorbis"
+IUSE="aac alsa ao audiofile avahi flac icecast iconv ipv6 jack libsamplerate mp3 mikmod musepack ogg oss pulseaudio unicode vorbis wavpack"
 
 DEPEND="!sys-cluster/mpich2
 	aac? ( >=media-libs/faad2-2.0_rc2 )
@@ -30,7 +30,8 @@ DEPEND="!sys-cluster/mpich2
 	musepack? ( media-libs/libmpcdec )
 	ogg? ( media-libs/libogg )
 	pulseaudio? ( media-sound/pulseaudio )
-	vorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )
+	wavpack? ( media-sound/wavpack )"
 
 pkg_setup() {
 	if use ogg && use flac && ! built_with_use media-libs/flac ogg; then
@@ -90,6 +91,7 @@ src_compile() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable vorbis vorbistest) \
+		$(use_enable wavpack) \
 		${myconf} || die "could not configure"
 
 	emake || die "emake failed"

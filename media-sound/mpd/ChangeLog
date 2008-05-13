@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.120 2008/04/11 21:31:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.121 2008/05/13 23:43:50 angelos Exp $
+
+  13 May 2008; Christoph Mende <angelos@gentoo.org>
+  mpd-0.14.0_pre20080204.ebuild:
+  Added a USE flag for wavpack, bug 221857
 
   11 Apr 2008; Ben de Groot <yngwin@gentoo.org> files/mpd.rc:
   Adding "use net.lo" to init.d script. Fixes bug 215801.
