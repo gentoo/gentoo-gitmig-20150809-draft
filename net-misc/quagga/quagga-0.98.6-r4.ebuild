@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.3 2008/05/13 22:34:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r4.ebuild,v 1.4 2008/05/13 22:38:28 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
 inherit eutils multilib autotools
 
-DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
+DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
 	mirror://gentoo/${P}-patches-20070912.tar.gz"
