@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.16 2008/04/21 16:19:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.17 2008/05/13 14:01:09 jer Exp $
+
+  13 May 2008; Jeroen Roovers <jer@gentoo.org> freeze-2.5.0.ebuild:
+  Stable for HPPA (LuckyLuke). Fixed quoting issue.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
