@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.0.1.ebuild,v 1.1 2008/05/13 13:23:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.0.1.ebuild,v 1.2 2008/05/13 13:54:37 drac Exp $
 
 inherit eutils fdo-mime rpm multilib gnome2-utils
 
@@ -53,7 +53,7 @@ src_install() {
 
 	make_wrapper nero ./nero /opt/nero /opt/${PN}/$(get_libdir) \
 		|| die "make_wrapper for nero failed."
-	
+
 	make_wrapper nerocmd ./nerocmd /opt/nero /opt/nero/$(get_libdir) \
 		|| die "make_wrapper for nerocmd failed."
 
