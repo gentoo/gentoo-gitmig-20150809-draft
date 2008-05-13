@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.1.3.ebuild,v 1.5 2005/07/25 17:44:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.1.3.ebuild,v 1.6 2008/05/13 18:30:08 hawking Exp $
 
 inherit eutils qt3
 
@@ -35,6 +35,6 @@ src_install() {
 	done
 
 	dodir /usr
-	python install.py --prefix=${D}/usr
+	python install.py --prefix="${D}"/usr
 	make_desktop_entry "luma" Luma "/usr/share/luma/icons/luma-128.png" "System;Qt"
 }
