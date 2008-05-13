@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.30 2008/05/09 15:55:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.31 2008/05/13 20:04:06 hawking Exp $
+
+*eyeD3-0.6.15 (13 May 2008)
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> +eyeD3-0.6.15.ebuild:
+  Version bump.
 
   09 May 2008; Raúl Porcel <armin76@gentoo.org> eyeD3-0.6.14.ebuild:
   sparc stable
