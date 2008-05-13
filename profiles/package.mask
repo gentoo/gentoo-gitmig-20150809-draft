@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8582 2008/05/12 13:07:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8583 2008/05/13 03:55:54 wltjr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -320,7 +320,8 @@ dev-libs/swl
 # William L. Thomson Jr. <wltjr@gentoo.org> (25 Mar 2008)
 # Masked due to bugs and availability of forked alternative Frostwire.
 # Which is more equivalent to Limewire Pro and has been added to portage.
-# This ebuild will be moved in 30 days to the java junkyard overlay.
+# This ebuild will be moved to the java junkyard overlay when Frostwire
+# is unmasked or stabilized.
 net-p2p/limewire
 
 # Mike Doty <kingtaco@gentoo.org> (24 Mar 2008)
