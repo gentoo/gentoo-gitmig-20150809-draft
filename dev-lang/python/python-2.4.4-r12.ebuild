@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r12.ebuild,v 1.1 2008/05/13 15:42:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r12.ebuild,v 1.2 2008/05/13 17:01:24 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -41,18 +41,11 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python
-#       provides the functionality expected from previous pythons.
-
-# NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
-#       it to compile python. We just need to ensure that when we install
-#       python, we definitely have fchksum support. - liquidx
-
 # NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
 # NOTE: added blocker to enforce correct merge order for bug 88777. - zmedico
 
-RDEPEND="${DEPEND} build? ( !dev-python/python-fchksum !dev-python/pycrypto )"
-PDEPEND="${DEPEND} !build? ( dev-python/python-fchksum ) app-admin/python-updater"
+RDEPEND="${DEPEND} build? ( !dev-python/pycrypto )"
+PDEPEND="${DEPEND} app-admin/python-updater"
 
 PROVIDE="virtual/python"
 

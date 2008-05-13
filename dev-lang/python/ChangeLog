@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.311 2008/05/13 15:42:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.312 2008/05/13 17:01:24 hawking Exp $
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> python-2.4.4-r12.ebuild,
+  python-2.5.2-r3.ebuild:
+  Drop dev-python/python-fchksum from PDEPEND. It's not needed anymore.
 
 *python-2.5.2-r3 (13 May 2008)
 *python-2.4.4-r12 (13 May 2008)
