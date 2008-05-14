@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/argtable
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.17 2008/03/09 19:35:55 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.18 2008/05/14 00:03:22 angelos Exp $
+
+*argtable-2.9 (14 May 2008)
+
+  14 May 2008; Christoph Mende <angelos@gentoo.org> +argtable-2.9.ebuild:
+  Version bump
 
   09 Mar 2008; Ferris McCormick <fmccor@gentoo.org> argtable-2.8.ebuild:
   Add ~sparc for testing --- Bug #212857 --- thanks to Aaron Mavrinac.
