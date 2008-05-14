@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.90 2008/05/13 13:29:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.91 2008/05/14 13:28:12 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> korn-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> korn-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
