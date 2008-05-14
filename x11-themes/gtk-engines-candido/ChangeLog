@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gtk-engines-candido
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-candido/ChangeLog,v 1.1 2008/05/14 07:47:02 drac Exp $
+
+*gtk-engines-candido-0.9.1 (14 May 2008)
+
+  14 May 2008; Samuli Suominen <drac@gentoo.org>
+  +gtk-engines-candido-0.9.1.ebuild:
+  Initial commit wrt #146737, thanks to Marco Polichetti.
+
