@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8586 2008/05/14 10:20:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8587 2008/05/14 11:55:21 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -218,12 +218,6 @@ dev-lang/mlton-bin
 # to help fix it, see bug #214265
 =app-admin/gnome-system-tools-2.14*
 =app-admin/system-tools-backends-1.4*
-
-# Rémi Cardona <remi@gentoo.org> (12 Apr 2008)
-# Masked for removal in 30 days. Still builds but
-# nothing in the tree deps on it, upstream dead
-# See bug #191855
-dev-libs/libsigcx
 
 # Ben de Groot <yngwin@gentoo.org> (12 Apr 2008)
 # Ebuild needs more work

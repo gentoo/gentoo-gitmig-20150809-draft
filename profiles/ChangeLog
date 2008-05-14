@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1406 2008/05/14 10:20:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1407 2008/05/14 11:55:21 remi Exp $
+
+  14 May 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  remove dev-libs/libsigcx, p.masked for a month
 
   14 May 2008; <chainsaw@gentoo.org> package.mask:
   Add mask for 173.08 nvidia-settings.
