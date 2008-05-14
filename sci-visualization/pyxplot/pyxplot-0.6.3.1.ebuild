@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.3 2008/01/11 20:15:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.4 2008/05/14 17:21:42 grozin Exp $
 
 inherit eutils python
 
@@ -58,11 +58,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# latex...
-	addwrite /var/cache/fonts
-
 	econf || die "econf failed"
-	emake -j1 || die "emake failed"
+	# To prevent sandbox violations by metafont
+	VARTEXFONTS="${T}"/fonts emake -j1 || die "emake failed"
 }
 
 src_install() {
