@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.13.ebuild,v 1.1 2007/11/17 23:19:53 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.13.ebuild,v 1.2 2008/05/14 23:05:01 sbriesen Exp $
 
 inherit eutils distutils flag-o-matic multilib
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="virtual/python
-	dev-libs/libcdio
+RDEPEND="virtual/python
+	dev-libs/libcdio"
+
+DEPEND="${RDEPEND}
 	dev-lang/swig"
 
 PYTHON_MODNAME=""
