@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gtk-engines-aurora
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/ChangeLog,v 1.1 2008/05/14 07:26:41 drac Exp $
+
+*gtk-engines-aurora-1.4 (14 May 2008)
+
+  14 May 2008; Samuli Suominen <drac@gentoo.org>
+  +gtk-engines-aurora-1.4.ebuild:
+  Initial commit wrt #213577, thanks to Angelo Arrifano and Josh Saddler.
+
