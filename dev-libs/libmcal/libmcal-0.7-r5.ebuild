@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r5.ebuild,v 1.13 2007/11/19 01:55:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r5.ebuild,v 1.14 2008/05/14 21:27:41 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="pam"
 
-DEPEND="pam? ( sys-libs/pam )"
+DEPEND="pam? ( virtual/pam )"
 
 S=${WORKDIR}/${PN}
 
