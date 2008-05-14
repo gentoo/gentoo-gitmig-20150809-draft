@@ -1,0 +1,11 @@
+diff -Nru freeradius-server-2.0.4.orig/src/modules/rlm_eap/libeap/Makefile freeradius-server-2.0.4/src/modules/rlm_eap/libeap/Makefile
+--- freeradius-server-2.0.4.orig/src/modules/rlm_eap/libeap/Makefile	2008-05-14 01:58:48.000000000 +0300
++++ freeradius-server-2.0.4/src/modules/rlm_eap/libeap/Makefile	2008-05-14 01:59:07.000000000 +0300
+@@ -9,6 +9,7 @@
+ SRCS		= eapcommon.c eapcrypto.c eapsimlib.c fips186prf.c
+ ifneq ($(OPENSSL_LIBS),)
+ SRCS		+= cb.c eap_tls.c mppe_keys.c tls.c
++LIBS		+= $(OPENSSL_LIBS)
+ endif
+ LT_OBJS		= $(SRCS:.c=.lo)
+ INCLUDES	= eap_types.h eap_tls.h
