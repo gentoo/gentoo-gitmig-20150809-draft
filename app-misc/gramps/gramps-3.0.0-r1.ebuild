@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0-r1.ebuild,v 1.1 2008/05/14 17:24:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0-r1.ebuild,v 1.2 2008/05/14 17:36:38 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -43,7 +43,8 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-
+	# This is for bug 215944, so .pyo/.pyc files don't get into the
+	# tree
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
 }
