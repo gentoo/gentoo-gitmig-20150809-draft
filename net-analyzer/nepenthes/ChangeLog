@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nepenthes
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.15 2007/08/29 19:05:08 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.16 2008/05/14 02:41:32 vanquirius Exp $
+
+*nepenthes-0.2.2 (13 May 2008)
+
+  13 May 2008; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  +nepenthes-0.2.2.ebuild:
+  0.2.2 version bump for bug 213857. Thanks to Toei Rei <gbugs at stargazer
+  dot at>. Added netmon as a herd.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kaiowas from metadata due to his retirement (see #61930 for

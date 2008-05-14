@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
+	<herd>netmon</herd>
 	<longdescription lang="en">
 		Nepenthes is a low interaction honeypot that captures worms by emulating
 		known vulnerabilities.
