@@ -1,7 +1,0 @@
-# /etc/conf.d/lshd: config file for /etc/init.d/lshd
-
-# see `lshd --help` for more information
-# -p [num]         changes the port number to listen on
-# --no-root-login  don't allow root to login
-
-LSHD_OPTS=""
