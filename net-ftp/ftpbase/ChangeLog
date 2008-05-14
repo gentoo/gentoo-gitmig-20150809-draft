@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/ftpbase
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.16 2007/12/25 16:20:28 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.17 2008/05/14 22:10:30 flameeyes Exp $
+
+*ftpbase-0.01-r1 (14 May 2008)
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +ftpbase-0.01-r1.ebuild:
+  add a new version that drops support for pam_stack configuration files and
+  just depends on virtual/pam.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318. Assigning to
