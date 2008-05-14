@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.1 2008/05/14 04:27:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.2 2008/05/14 04:29:09 wltjr Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -29,8 +29,7 @@ COMMON_DEP="
 	dev-java/xml-commons-external"
 
 DEPEND=">=virtual/jdk-1.5
-	${COMMON_DEP}
-	sys-apps/which"
+	${COMMON_DEP}"
 
 RDEPEND=">=virtual/jre-1.5
 	dev-java/asm
