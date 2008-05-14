@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1408 2008/05/14 20:42:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1409 2008/05/14 21:23:43 omp Exp $
+
+  14 May 2008; David Shakaryan <omp@gentoo.org> use.local.desc:
+  Add netpbm and gtk2-perl local USE flags to x11-wm/fvwm.
 
   14 May 2008; Markus Meier <maekke@gentoo.org> use.desc, use.local.desc:
   add pch to global USE-flags
