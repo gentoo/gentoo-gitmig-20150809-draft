@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.249 2008/05/14 07:08:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.250 2008/05/14 15:18:03 opfer Exp $
+
+  14 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  emacs-21.4-r17.ebuild:
+  stable x86, security bug 221197
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> emacs-21.4-r17.ebuild,
   emacs-22.2-r2.ebuild:
