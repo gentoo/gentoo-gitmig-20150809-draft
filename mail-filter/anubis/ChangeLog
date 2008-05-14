@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.11 2007/01/10 18:47:25 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.12 2008/05/14 22:08:05 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> anubis-3.9.95.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   Fix Manifest.
