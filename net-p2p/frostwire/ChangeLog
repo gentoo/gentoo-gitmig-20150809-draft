@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/frostwire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.3 2008/03/26 00:03:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.4 2008/05/14 04:27:28 wltjr Exp $
+
+*frostwire-4.13.5-r1 (14 May 2008)
+
+  14 May 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -frostwire-4.13.5.ebuild, +frostwire-4.13.5-r1.ebuild:
+  Attempt to fix bug #215423. Installed wrong bundled i18n.jar, also added
+  temp hack/fix for missing native2ascii command till bug #180755 is
+  resolved
 
   26 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   frostwire-4.13.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5.ebuild,v 1.3 2008/03/26 00:03:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.1 2008/05/14 04:27:28 wltjr Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -29,7 +29,8 @@ COMMON_DEP="
 	dev-java/xml-commons-external"
 
 DEPEND=">=virtual/jdk-1.5
-	${COMMON_DEP}"
+	${COMMON_DEP}
+	sys-apps/which"
 
 RDEPEND=">=virtual/jre-1.5
 	dev-java/asm
@@ -85,11 +86,15 @@ src_compile() {
 	cd "${S}/lib/themes"
 	sh makeThemesJar.sh
 
+	# temp fix/hack for bug #215423 till bug #180755 is resolved
+	# bit noisy when not found, but better than command not found :)
+	[ ! -p native2ascii > /dev/null ] && export PATH="${PATH}:$(java-config -O)/bin"
+
 	# Make message bundles
 	cd "${S}/lib/native_encoded_messagebundles"
 	python create_iso88591_bundles.py
 	cd "${S}/lib/messagebundles"
-	jar -cfv MessagesBundles.jar resources totd xml *.properties
+	jar -cf MessagesBundles.jar resources totd xml *.properties
 }
 
 src_install() {
@@ -113,7 +118,7 @@ src_install() {
 # but registering them you say, only doing so for launcher
 	bjs="clink.jar daap.jar commons-httpclient.jar commons-pool.jar \
 		jcraft.jar jdic.jar jl011.jar mp3sp14.jar ProgressTabs.jar \
-		tritonus.jar vorbis.jar linux/jdic_stub.jar ../i18nData/data/built/i18n.jar"
+		tritonus.jar vorbis.jar linux/jdic_stub.jar i18n.jar"
 	for bj in ${bjs} ; do
 		java-pkg_dojar "${S}/lib/jars/${bj}"
 	done
