@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.17.ebuild,v 1.7 2007/12/06 02:32:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.20.ebuild,v 1.1 2008/05/14 22:02:09 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
+inherit eutils pam toolchain-funcs autotools linux-info
 
 #lame archive versioning scheme..
 S_PMV="${PV%%.*}"
@@ -20,15 +20,15 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
 DEPEND="pam? ( virtual/pam )
-	ldap? ( >=net-nds/openldap-2.3.35 )
-	ssl? ( >=dev-libs/openssl-0.9.8d )
-	sasl? ( >=dev-libs/cyrus-sasl-2.1.22 )
+	ldap? ( net-nds/openldap )
+	ssl? ( dev-libs/openssl )
+	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
@@ -52,10 +52,6 @@ src_unpack() {
 	use qos && epatch "${FILESDIR}"/${P}-qos.patch
 
 	sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
-
-	# disable lazy bindings on (some at least) suided basic auth programs
-	sed -i -e '$aAM_LDFLAGS = '$(bindnow-flags) \
-		helpers/basic_auth/*/Makefile.am
 
 	eautoreconf
 }

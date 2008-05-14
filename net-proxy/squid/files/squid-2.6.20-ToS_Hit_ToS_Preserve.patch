@@ -1,6 +1,6 @@
-diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data.pre
---- squid-2.6.STABLE17.orig/src/cf.data.pre	2007-12-04 14:33:41.000000000 +0200
-+++ squid-2.6.STABLE17/src/cf.data.pre	2007-12-04 14:37:55.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/cf.data.pre squid-2.6.STABLE20/src/cf.data.pre
+--- squid-2.6.STABLE20.orig/src/cf.data.pre	2008-05-15 00:48:45.000000000 +0300
++++ squid-2.6.STABLE20/src/cf.data.pre	2008-05-15 00:49:24.000000000 +0300
 @@ -1181,6 +1181,64 @@
  	to off when using this directive in such configurations.
  DOC_END
@@ -66,9 +66,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  NAME: tcp_outgoing_address
  TYPE: acl_address
  DEFAULT: none
-diff -Nru squid-2.6.STABLE17.orig/src/client_side.c squid-2.6.STABLE17/src/client_side.c
---- squid-2.6.STABLE17.orig/src/client_side.c	2007-12-04 14:33:41.000000000 +0200
-+++ squid-2.6.STABLE17/src/client_side.c	2007-12-04 14:37:55.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/client_side.c squid-2.6.STABLE20/src/client_side.c
+--- squid-2.6.STABLE20.orig/src/client_side.c	2008-05-15 00:48:45.000000000 +0300
++++ squid-2.6.STABLE20/src/client_side.c	2008-05-15 00:49:24.000000000 +0300
 @@ -2632,6 +2632,55 @@
  	return;
      }
@@ -125,9 +125,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/client_side.c squid-2.6.STABLE17/src/clien
      rep = http->reply = clientBuildReply(http, buf, size);
      if (!rep) {
  	/* Forward as HTTP/0.9 body with no reply */
-diff -Nru squid-2.6.STABLE17.orig/src/http.c squid-2.6.STABLE17/src/http.c
---- squid-2.6.STABLE17.orig/src/http.c	2007-11-26 13:04:30.000000000 +0200
-+++ squid-2.6.STABLE17/src/http.c	2007-12-04 14:37:55.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/http.c squid-2.6.STABLE20/src/http.c
+--- squid-2.6.STABLE20.orig/src/http.c	2008-04-02 04:03:47.000000000 +0300
++++ squid-2.6.STABLE20/src/http.c	2008-05-15 00:49:24.000000000 +0300
 @@ -1393,6 +1393,53 @@
      peer *p = httpState->peer;
      CWCB *sendHeaderDone;
@@ -182,10 +182,10 @@ diff -Nru squid-2.6.STABLE17.orig/src/http.c squid-2.6.STABLE17/src/http.c
  
      debug(11, 5) ("httpSendRequest: FD %d: httpState %p.\n", fd, httpState);
  
-diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
---- squid-2.6.STABLE17.orig/src/structs.h	2007-09-06 00:28:34.000000000 +0300
-+++ squid-2.6.STABLE17/src/structs.h	2007-12-04 14:37:55.000000000 +0200
-@@ -669,6 +669,8 @@
+diff -Nru squid-2.6.STABLE20.orig/src/structs.h squid-2.6.STABLE20/src/structs.h
+--- squid-2.6.STABLE20.orig/src/structs.h	2008-04-21 05:56:24.000000000 +0300
++++ squid-2.6.STABLE20/src/structs.h	2008-05-15 00:49:24.000000000 +0300
+@@ -670,6 +670,8 @@
  	int relaxed_header_parser;
  	int accel_no_pmtu_disc;
  	int global_internal_static;
@@ -194,7 +194,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
  	int httpd_suppress_version_string;
  	int via;
  	int check_hostnames;
-@@ -793,6 +795,9 @@
+@@ -794,6 +796,9 @@
      int sleep_after_fork;	/* microseconds */
      time_t minimum_expiry_time;	/* seconds */
      external_acl *externalAclHelperList;
@@ -204,7 +204,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
      errormap *errorMapList;
  #if USE_SSL
      struct {
-@@ -1724,6 +1729,9 @@
+@@ -1727,6 +1732,9 @@
      const char *vary_encoding;
      StoreEntry *ims_entry;
      time_t refresh_timestamp;

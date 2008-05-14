@@ -1,6 +1,6 @@
-diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/confload.c squid-2.6.STABLE17/helpers/basic_auth/MSNT/confload.c
---- squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/confload.c	2002-06-26 22:09:48.000000000 +0300
-+++ squid-2.6.STABLE17/helpers/basic_auth/MSNT/confload.c	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/basic_auth/MSNT/confload.c squid-2.6.STABLE20/helpers/basic_auth/MSNT/confload.c
+--- squid-2.6.STABLE20.orig/helpers/basic_auth/MSNT/confload.c	2002-06-26 22:09:48.000000000 +0300
++++ squid-2.6.STABLE20/helpers/basic_auth/MSNT/confload.c	2008-05-15 00:48:08.000000000 +0300
 @@ -24,7 +24,7 @@
  
  /* Path to configuration file */
@@ -10,9 +10,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/confload.c squid-2.6.S
  #endif
  #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
  
-diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-2.6.STABLE17/helpers/basic_auth/MSNT/msntauth.conf.default
---- squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2002-06-26 21:44:28.000000000 +0300
-+++ squid-2.6.STABLE17/helpers/basic_auth/MSNT/msntauth.conf.default	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-2.6.STABLE20/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-2.6.STABLE20.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2002-06-26 21:44:28.000000000 +0300
++++ squid-2.6.STABLE20/helpers/basic_auth/MSNT/msntauth.conf.default	2008-05-15 00:48:08.000000000 +0300
 @@ -8,6 +8,6 @@
  server other_PDC	other_BDC	otherdomain
  
@@ -22,9 +22,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/MSNT/msntauth.conf.default 
 +#denyusers	/etc/squid/msntauth.denyusers
 +#allowusers	/etc/squid/msntauth.allowusers
  
-diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.STABLE17/helpers/basic_auth/SMB/Makefile.am
---- squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/Makefile.am	2005-05-17 19:56:26.000000000 +0300
-+++ squid-2.6.STABLE17/helpers/basic_auth/SMB/Makefile.am	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.STABLE20/helpers/basic_auth/SMB/Makefile.am
+--- squid-2.6.STABLE20.orig/helpers/basic_auth/SMB/Makefile.am	2005-05-17 19:56:26.000000000 +0300
++++ squid-2.6.STABLE20/helpers/basic_auth/SMB/Makefile.am	2008-05-15 00:48:08.000000000 +0300
 @@ -14,7 +14,7 @@
  ## FIXME: autoconf should test for the samba path.
  
@@ -34,9 +34,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.S
  SMB_AUTH_HELPER_PATH = $(libexecdir)/$(SMB_AUTH_HELPER)
  
  libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
-diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.STABLE17/helpers/basic_auth/SMB/smb_auth.sh
---- squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/smb_auth.sh	2001-01-08 01:36:46.000000000 +0200
-+++ squid-2.6.STABLE17/helpers/basic_auth/SMB/smb_auth.sh	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.STABLE20/helpers/basic_auth/SMB/smb_auth.sh
+--- squid-2.6.STABLE20.orig/helpers/basic_auth/SMB/smb_auth.sh	2001-01-08 01:36:46.000000000 +0200
++++ squid-2.6.STABLE20/helpers/basic_auth/SMB/smb_auth.sh	2008-05-15 00:48:08.000000000 +0300
 @@ -24,7 +24,7 @@
  read AUTHSHARE
  read AUTHFILE
@@ -55,9 +55,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.S
  echo "Domain controller IP address: $dcip"
  [ -n "$dcip" ] || exit 1
  
-diff -Nru squid-2.6.STABLE17.orig/helpers/external_acl/session/squid_session.8 squid-2.6.STABLE17/helpers/external_acl/session/squid_session.8
---- squid-2.6.STABLE17.orig/helpers/external_acl/session/squid_session.8	2007-01-06 19:28:35.000000000 +0200
-+++ squid-2.6.STABLE17/helpers/external_acl/session/squid_session.8	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/external_acl/session/squid_session.8 squid-2.6.STABLE20/helpers/external_acl/session/squid_session.8
+--- squid-2.6.STABLE20.orig/helpers/external_acl/session/squid_session.8	2007-01-06 19:28:35.000000000 +0200
++++ squid-2.6.STABLE20/helpers/external_acl/session/squid_session.8	2008-05-15 00:48:08.000000000 +0300
 @@ -35,7 +35,7 @@
  .P
  Configuration example using the default automatic mode
@@ -67,9 +67,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/external_acl/session/squid_session.8 s
  .IP
  acl session external session
  .IP
-diff -Nru squid-2.6.STABLE17.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-2.6.STABLE17/helpers/external_acl/unix_group/squid_unix_group.8
---- squid-2.6.STABLE17.orig/helpers/external_acl/unix_group/squid_unix_group.8	2006-05-14 18:07:24.000000000 +0300
-+++ squid-2.6.STABLE17/helpers/external_acl/unix_group/squid_unix_group.8	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-2.6.STABLE20/helpers/external_acl/unix_group/squid_unix_group.8
+--- squid-2.6.STABLE20.orig/helpers/external_acl/unix_group/squid_unix_group.8	2006-05-14 18:07:24.000000000 +0300
++++ squid-2.6.STABLE20/helpers/external_acl/unix_group/squid_unix_group.8	2008-05-15 00:48:08.000000000 +0300
 @@ -27,7 +27,7 @@
  This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
  matches users in group2 or group3
@@ -79,9 +79,9 @@ diff -Nru squid-2.6.STABLE17.orig/helpers/external_acl/unix_group/squid_unix_gro
  .IP
  acl usergroup1 external unix_group group1
  .IP
-diff -Nru squid-2.6.STABLE17.orig/src/access_log.c squid-2.6.STABLE17/src/access_log.c
---- squid-2.6.STABLE17.orig/src/access_log.c	2007-06-03 03:40:32.000000000 +0300
-+++ squid-2.6.STABLE17/src/access_log.c	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/access_log.c squid-2.6.STABLE20/src/access_log.c
+--- squid-2.6.STABLE20.orig/src/access_log.c	2008-03-18 04:58:47.000000000 +0200
++++ squid-2.6.STABLE20/src/access_log.c	2008-05-15 00:48:08.000000000 +0300
 @@ -1225,7 +1225,7 @@
  	LogfileStatus = LOG_ENABLE;
      }
@@ -91,9 +91,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/access_log.c squid-2.6.STABLE17/src/access
      assert(NULL != headerslog);
  #endif
  #if FORW_VIA_DB
-diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data.pre
---- squid-2.6.STABLE17.orig/src/cf.data.pre	2007-11-26 13:03:45.000000000 +0200
-+++ squid-2.6.STABLE17/src/cf.data.pre	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/cf.data.pre squid-2.6.STABLE20/src/cf.data.pre
+--- squid-2.6.STABLE20.orig/src/cf.data.pre	2008-04-21 05:56:24.000000000 +0300
++++ squid-2.6.STABLE20/src/cf.data.pre	2008-05-15 00:48:08.000000000 +0300
 @@ -640,6 +640,8 @@
  acl Safe_ports port 488		# gss-http
  acl Safe_ports port 591		# filemaker
@@ -123,7 +123,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  # And finally deny all other access to this proxy
  http_access deny all
  NOCOMMENT_END
-@@ -3356,11 +3364,11 @@
+@@ -3357,11 +3365,11 @@
  
  NAME: cache_mgr
  TYPE: string
@@ -137,7 +137,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  DOC_END
  
  NAME: mail_from
-@@ -3389,12 +3397,12 @@
+@@ -3390,12 +3398,12 @@
  
  NAME: cache_effective_user
  TYPE: string
@@ -152,7 +152,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  	cache_effective_group, Squid sets the GID to the effective
  	user's default group ID (taken from the password file) and
  	supplementary group list from the from groups membership of
-@@ -4031,12 +4039,12 @@
+@@ -4032,12 +4040,12 @@
  NAME: snmp_port
  TYPE: ushort
  LOC: Config.Port.snmp
@@ -168,7 +168,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  DOC_END
  
  NAME: snmp_access
-@@ -4107,12 +4115,12 @@
+@@ -4108,12 +4116,12 @@
  NAME: htcp_port
  IFDEF: USE_HTCP
  TYPE: ushort
@@ -184,7 +184,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  DOC_END
  
  NAME: log_icp_queries
-@@ -4964,6 +4972,9 @@
+@@ -4981,6 +4989,9 @@
  	If you disable this, it will appear as
  
  		X-Forwarded-For: unknown
@@ -194,9 +194,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  DOC_END
  
  NAME: cachemgr_passwd
-diff -Nru squid-2.6.STABLE17.orig/src/client_side.c squid-2.6.STABLE17/src/client_side.c
---- squid-2.6.STABLE17.orig/src/client_side.c	2007-09-03 16:13:36.000000000 +0300
-+++ squid-2.6.STABLE17/src/client_side.c	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/client_side.c squid-2.6.STABLE20/src/client_side.c
+--- squid-2.6.STABLE20.orig/src/client_side.c	2007-09-03 16:13:36.000000000 +0300
++++ squid-2.6.STABLE20/src/client_side.c	2008-05-15 00:48:08.000000000 +0300
 @@ -4597,14 +4597,7 @@
  	debug(83, 2) ("clientNegotiateSSL: Session %p reused on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
      } else {
@@ -212,9 +212,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/client_side.c squid-2.6.STABLE17/src/clien
  	    /* Note: This does not automatically fflush the log file.. */
  	}
  	debug(83, 2) ("clientNegotiateSSL: New session %p on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
-diff -Nru squid-2.6.STABLE17.orig/src/defines.h squid-2.6.STABLE17/src/defines.h
---- squid-2.6.STABLE17.orig/src/defines.h	2007-02-04 00:58:20.000000000 +0200
-+++ squid-2.6.STABLE17/src/defines.h	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/defines.h squid-2.6.STABLE20/src/defines.h
+--- squid-2.6.STABLE20.orig/src/defines.h	2007-02-04 00:58:20.000000000 +0200
++++ squid-2.6.STABLE20/src/defines.h	2008-05-15 00:48:08.000000000 +0300
 @@ -259,7 +259,7 @@
  
  /* were to look for errors if config path fails */
@@ -224,9 +224,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/defines.h squid-2.6.STABLE17/src/defines.h
  #endif
  
  /* gb_type operations */
-diff -Nru squid-2.6.STABLE17.orig/src/main.c squid-2.6.STABLE17/src/main.c
---- squid-2.6.STABLE17.orig/src/main.c	2007-11-26 12:47:23.000000000 +0200
-+++ squid-2.6.STABLE17/src/main.c	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/main.c squid-2.6.STABLE20/src/main.c
+--- squid-2.6.STABLE20.orig/src/main.c	2007-11-26 12:47:23.000000000 +0200
++++ squid-2.6.STABLE20/src/main.c	2008-05-15 00:48:08.000000000 +0300
 @@ -372,6 +372,22 @@
      asnFreeMemory();
  }
@@ -277,9 +277,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/main.c squid-2.6.STABLE17/src/main.c
  #endif
  	urlInitialize();
  	cachemgrInit();
-diff -Nru squid-2.6.STABLE17.orig/src/Makefile.am squid-2.6.STABLE17/src/Makefile.am
---- squid-2.6.STABLE17.orig/src/Makefile.am	2007-09-06 00:50:15.000000000 +0300
-+++ squid-2.6.STABLE17/src/Makefile.am	2007-12-04 14:29:27.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/Makefile.am squid-2.6.STABLE20/src/Makefile.am
+--- squid-2.6.STABLE20.orig/src/Makefile.am	2007-09-06 00:50:15.000000000 +0300
++++ squid-2.6.STABLE20/src/Makefile.am	2008-05-15 00:48:08.000000000 +0300
 @@ -325,12 +325,12 @@
  DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
  DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf

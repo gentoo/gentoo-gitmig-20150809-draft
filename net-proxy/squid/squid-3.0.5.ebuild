@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.1.ebuild,v 1.1 2007/12/20 10:07:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.5.ebuild,v 1.1 2008/05/14 22:02:09 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
+inherit eutils pam toolchain-funcs autotools linux-info
 
 # lame archive versioning scheme..
 S_PMV="${PV%%.*}"
@@ -27,9 +27,9 @@ IUSE="pam ldap samba sasl nis radius ssl snmp selinux icap-client logrotate \
 	elibc_uclibc kernel_linux"
 
 DEPEND="pam? ( virtual/pam )
-	ldap? ( >=net-nds/openldap-2.3.35 )
-	ssl? ( >=dev-libs/openssl-0.9.8d )
-	sasl? ( >=dev-libs/cyrus-sasl-2.1.22 )
+	ldap? ( net-nds/openldap )
+	ssl? ( dev-libs/openssl )
+	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4

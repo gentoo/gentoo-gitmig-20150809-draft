@@ -1,6 +1,6 @@
-diff -Nru squid-2.6.STABLE17.orig/src/cache_cf.c squid-2.6.STABLE17/src/cache_cf.c
---- squid-2.6.STABLE17.orig/src/cache_cf.c	2007-08-31 16:49:54.000000000 +0300
-+++ squid-2.6.STABLE17/src/cache_cf.c	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/cache_cf.c squid-2.6.STABLE20/src/cache_cf.c
+--- squid-2.6.STABLE20.orig/src/cache_cf.c	2007-08-31 16:49:54.000000000 +0300
++++ squid-2.6.STABLE20/src/cache_cf.c	2008-05-15 00:50:05.000000000 +0300
 @@ -891,6 +891,65 @@
      }
  }
@@ -67,9 +67,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/cache_cf.c squid-2.6.STABLE17/src/cache_cf
  #if DELAY_POOLS
  
  /* do nothing - free_delay_pool_count is the magic free function.
-diff -Nru squid-2.6.STABLE17.orig/src/cf.data.depend squid-2.6.STABLE17/src/cf.data.depend
---- squid-2.6.STABLE17.orig/src/cf.data.depend	2007-09-06 00:50:15.000000000 +0300
-+++ squid-2.6.STABLE17/src/cf.data.depend	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/cf.data.depend squid-2.6.STABLE20/src/cf.data.depend
+--- squid-2.6.STABLE20.orig/src/cf.data.depend	2007-09-06 00:50:15.000000000 +0300
++++ squid-2.6.STABLE20/src/cf.data.depend	2008-05-15 00:50:05.000000000 +0300
 @@ -5,6 +5,7 @@
  acl_address		acl
  acl_b_size_t		acl
@@ -78,9 +78,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.depend squid-2.6.STABLE17/src/cf.d
  address
  authparam
  b_int64_t
-diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data.pre
---- squid-2.6.STABLE17.orig/src/cf.data.pre	2007-12-04 14:38:45.000000000 +0200
-+++ squid-2.6.STABLE17/src/cf.data.pre	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/cf.data.pre squid-2.6.STABLE20/src/cf.data.pre
+--- squid-2.6.STABLE20.orig/src/cf.data.pre	2008-05-15 00:49:53.000000000 +0300
++++ squid-2.6.STABLE20/src/cf.data.pre	2008-05-15 00:50:05.000000000 +0300
 @@ -1239,6 +1239,27 @@
  	Default: 255 (TOS from server is not changed).
  DOC_END
@@ -109,9 +109,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/cf.data.pre squid-2.6.STABLE17/src/cf.data
  NAME: tcp_outgoing_address
  TYPE: acl_address
  DEFAULT: none
-diff -Nru squid-2.6.STABLE17.orig/src/comm.c squid-2.6.STABLE17/src/comm.c
---- squid-2.6.STABLE17.orig/src/comm.c	2007-04-17 12:39:56.000000000 +0300
-+++ squid-2.6.STABLE17/src/comm.c	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/comm.c squid-2.6.STABLE20/src/comm.c
+--- squid-2.6.STABLE20.orig/src/comm.c	2007-04-17 12:39:56.000000000 +0300
++++ squid-2.6.STABLE20/src/comm.c	2008-05-15 00:50:05.000000000 +0300
 @@ -162,7 +162,7 @@
      int flags,
      const char *note)
@@ -176,9 +176,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/comm.c squid-2.6.STABLE17/src/comm.c
      if (F->flags.close_on_exec)
  	commSetCloseOnExec(cs->fd);
      if (F->flags.nonblocking)
-diff -Nru squid-2.6.STABLE17.orig/src/forward.c squid-2.6.STABLE17/src/forward.c
---- squid-2.6.STABLE17.orig/src/forward.c	2007-09-06 00:28:34.000000000 +0300
-+++ squid-2.6.STABLE17/src/forward.c	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/forward.c squid-2.6.STABLE20/src/forward.c
+--- squid-2.6.STABLE20.orig/src/forward.c	2008-04-02 04:16:29.000000000 +0300
++++ squid-2.6.STABLE20/src/forward.c	2008-05-15 00:50:05.000000000 +0300
 @@ -418,6 +418,17 @@
      return 0;
  }
@@ -197,7 +197,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/forward.c squid-2.6.STABLE17/src/forward.c
  struct in_addr
  getOutgoingAddr(request_t * request)
  {
-@@ -446,6 +457,20 @@
+@@ -456,6 +467,20 @@
      return aclMapTOS(Config.accessList.outgoing_tos, &ch);
  }
  
@@ -218,7 +218,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/forward.c squid-2.6.STABLE17/src/forward.c
  static void
  fwdConnectStart(void *data)
  {
-@@ -462,6 +487,7 @@
+@@ -472,6 +497,7 @@
      int ftimeout = Config.Timeout.forward - (squid_curtime - fwdState->start);
      struct in_addr outgoing;
      unsigned short tos;
@@ -226,7 +226,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/forward.c squid-2.6.STABLE17/src/forward.c
  #if LINUX_TPROXY
      struct in_tproxy itp;
  #endif
-@@ -547,15 +573,17 @@
+@@ -557,15 +583,17 @@
  #endif
      outgoing = getOutgoingAddr(fwdState->request);
      tos = getOutgoingTOS(fwdState->request);
@@ -246,9 +246,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/forward.c squid-2.6.STABLE17/src/forward.c
  	url);
      if (fd < 0) {
  	debug(50, 4) ("fwdConnectStart: %s\n", xstrerror());
-diff -Nru squid-2.6.STABLE17.orig/src/protos.h squid-2.6.STABLE17/src/protos.h
---- squid-2.6.STABLE17.orig/src/protos.h	2007-07-15 12:52:17.000000000 +0300
-+++ squid-2.6.STABLE17/src/protos.h	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/protos.h squid-2.6.STABLE20/src/protos.h
+--- squid-2.6.STABLE20.orig/src/protos.h	2007-07-15 12:52:17.000000000 +0300
++++ squid-2.6.STABLE20/src/protos.h	2008-05-15 00:50:05.000000000 +0300
 @@ -160,7 +160,7 @@
  extern void comm_init(void);
  extern int comm_listen(int sock);
@@ -266,9 +266,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/protos.h squid-2.6.STABLE17/src/protos.h
  
  extern void urnStart(request_t *, StoreEntry *);
  
-diff -Nru squid-2.6.STABLE17.orig/src/ssl.c squid-2.6.STABLE17/src/ssl.c
---- squid-2.6.STABLE17.orig/src/ssl.c	2007-02-03 23:53:38.000000000 +0200
-+++ squid-2.6.STABLE17/src/ssl.c	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/ssl.c squid-2.6.STABLE20/src/ssl.c
+--- squid-2.6.STABLE20.orig/src/ssl.c	2007-02-03 23:53:38.000000000 +0200
++++ squid-2.6.STABLE20/src/ssl.c	2008-05-15 00:50:05.000000000 +0300
 @@ -524,6 +524,7 @@
  	0,
  	COMM_NONBLOCKING,
@@ -277,9 +277,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/ssl.c squid-2.6.STABLE17/src/ssl.c
  	url);
      if (sock == COMM_ERROR) {
  	debug(26, 4) ("sslStart: Failed because we're out of sockets.\n");
-diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
---- squid-2.6.STABLE17.orig/src/structs.h	2007-12-04 14:38:45.000000000 +0200
-+++ squid-2.6.STABLE17/src/structs.h	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/structs.h squid-2.6.STABLE20/src/structs.h
+--- squid-2.6.STABLE20.orig/src/structs.h	2008-05-15 00:49:53.000000000 +0300
++++ squid-2.6.STABLE20/src/structs.h	2008-05-15 00:50:05.000000000 +0300
 @@ -296,6 +296,12 @@
      int tos;
  };
@@ -293,7 +293,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
  struct _aclCheck_t {
      const acl_access *access_list;
      struct in_addr src_addr;
-@@ -705,6 +711,7 @@
+@@ -706,6 +712,7 @@
  	acl_access *reply;
  	acl_address *outgoing_address;
  	acl_tos *outgoing_tos;
@@ -301,7 +301,7 @@ diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
  #if USE_HTCP
  	acl_access *htcp;
  	acl_access *htcp_clr;
-@@ -876,6 +883,7 @@
+@@ -877,6 +884,7 @@
      u_short remote_port;
      struct in_addr local_addr;
      unsigned char tos;
@@ -309,9 +309,9 @@ diff -Nru squid-2.6.STABLE17.orig/src/structs.h squid-2.6.STABLE17/src/structs.h
      char ipaddr[16];		/* dotted decimal address of peer */
      char desc[FD_DESC_SZ];
      struct {
-diff -Nru squid-2.6.STABLE17.orig/src/typedefs.h squid-2.6.STABLE17/src/typedefs.h
---- squid-2.6.STABLE17.orig/src/typedefs.h	2006-09-02 17:08:42.000000000 +0300
-+++ squid-2.6.STABLE17/src/typedefs.h	2007-12-04 14:38:58.000000000 +0200
+diff -Nru squid-2.6.STABLE20.orig/src/typedefs.h squid-2.6.STABLE20/src/typedefs.h
+--- squid-2.6.STABLE20.orig/src/typedefs.h	2006-09-02 17:08:42.000000000 +0300
++++ squid-2.6.STABLE20/src/typedefs.h	2008-05-15 00:50:05.000000000 +0300
 @@ -102,6 +102,7 @@
  typedef struct _acl_access acl_access;
  typedef struct _acl_address acl_address;
