@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.2 2008/04/09 18:34:27 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.3 2008/05/14 23:01:40 flameeyes Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
 	perl? ( sys-devel/libperl )
 	>=sys-libs/db-3.2
-	pam? ( >=sys-libs/pam-0.75 )
+	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	gnutls? ( net-libs/gnutls
