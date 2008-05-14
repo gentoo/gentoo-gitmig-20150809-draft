@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.0.ebuild,v 1.1 2008/04/29 07:27:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.0.ebuild,v 1.2 2008/05/14 08:56:23 remi Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	x11-proto/xproto
 	dri? ( x11-proto/xf86driproto
+			x11-proto/glproto
 			>=x11-libs/libdrm-2.2
 			x11-libs/libX11 )"
 

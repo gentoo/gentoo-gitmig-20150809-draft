@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.87 2008/05/14 08:49:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.88 2008/05/14 08:56:23 remi Exp $
+
+  14 May 2008; Rémi Cardona <remi@gentoo.org> xf86-video-i810-2.1.1.ebuild,
+  xf86-video-i810-2.2.0.90.ebuild, xf86-video-i810-2.2.1.ebuild,
+  xf86-video-i810-2.3.0.ebuild:
+  add glproto dep, see bug #205689
 
   14 May 2008; Rémi Cardona <remi@gentoo.org>
   -files/xf86-video-i810-2.2.99.902-enable_center_panel_fitting_on_i8xx.patc
