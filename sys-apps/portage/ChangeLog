@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.516 2008/05/10 09:31:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.517 2008/05/14 21:33:12 zmedico Exp $
+
+*portage-2.1.5 (14 May 2008)
+
+  14 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.ebuild:
+  2.1.5 release. This fixes bugs #220533, #221537, and #221755.
+  Bug #216231 tracks all bugs fixed since 2.1.4.x.
 
 *portage-2.1.5_rc10 (10 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.5_rc10.ebuild,v 1.1 2008/05/10 09:15:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.5.ebuild,v 1.1 2008/05/14 21:33:12 zmedico Exp $
 
 inherit eutils multilib
 
@@ -38,13 +38,13 @@ SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV="2.1.4"
+TARBALL_PV="2.1.5"
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER="${PV}"
+PATCHVER=""
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -235,7 +235,12 @@ pkg_postinst() {
 		"\`emerge --sync\` operation. If you use something" \
 		"like the sqlite module and want to keep all metadata" \
 		"in that format alone (useful for querying), enable" \
-		"FEATURES=\"metadata-transfer\" in make.conf." \
+		"FEATURES=\"metadata-transfer\" in make.conf. You should" \
+		"also enable FEATURES=\"metadata-transfer\" if you have" \
+		"any eclasses from PORTDIR_OVERLAY that override eclasses" \
+		"from PORTDIR (in this case, you may have disabled" \
+		"a relevant warning message by setting" \
+		"PORTAGE_ECLASS_WARNING_ENABLE=\"0\" in make.conf)." \
 		| fmt -w 75 | while read x ; do elog "$x" ; done
 
 	portage_docs
