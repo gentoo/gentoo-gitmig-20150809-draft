@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.22 2008/04/03 21:46:38 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.23 2008/05/14 17:07:44 hawking Exp $
+
+  14 May 2008; Ali Polatel <hawking@gentoo.org> -nevow-0.9.29.ebuild,
+  nevow-0.9.31.ebuild:
+  nevow needs twisted-2.5 or newer, thanks to hanno, #222057. Drop old.
 
 *nevow-0.9.31 (03 Apr 2008)
 
