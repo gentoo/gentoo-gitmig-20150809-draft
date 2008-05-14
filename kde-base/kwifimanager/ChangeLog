@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.65 2008/05/12 20:02:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.66 2008/05/14 16:49:11 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kwifimanager-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kwifimanager-3.5.9.ebuild:
   Marking kwifimanager-3.5.9 ppc for bug 221063
