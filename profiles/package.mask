@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8585 2008/05/13 05:46:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8586 2008/05/14 10:20:42 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -55,6 +55,7 @@ x11-libs/lesstif
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
 ~x11-drivers/nvidia-drivers-173.08
+~media-video/nvidia-settings-173.08
 
 # Gilles Dartiguelongue <eva@gentoo.org> (08 May 2008)
 # Masked for removal on 8 June 2008.
