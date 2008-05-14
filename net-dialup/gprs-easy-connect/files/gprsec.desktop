@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=GPRS Easy Connect
-Type=Application
-Comment=GPRS/EDGE/UMTS connection manager
-Exec=gprsec
-Icon=gprsec.png
-Terminal=false
-Categories=Network;

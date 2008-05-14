@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>net-dialup</herd>
-  <longdescription>GPRS Easy Connect is a Perl-Gtk2 based GUI program for Linux which can configure and 
-manage Internet connection for mobile phones. GPRSEC supports COM, USB, IrDA, Bluetooth 
-connections on GPRS, EDGE and UMTS technologies.</longdescription>
-</pkgmetadata>
