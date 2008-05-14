@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.1 2008/05/12 11:17:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.2 2008/05/14 21:33:36 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> calibre-0.4.53.ebuild:
+  Depend on Python 2.5, see bug #221935.
 
 *calibre-0.4.53 (12 May 2008)
 

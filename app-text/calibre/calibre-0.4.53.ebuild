@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.4.53.ebuild,v 1.1 2008/05/12 11:17:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.4.53.ebuild,v 1.2 2008/05/14 21:33:36 flameeyes Exp $
+
+NEED_PYTHON=2.5
 
 inherit distutils eutils fdo-mime
 
