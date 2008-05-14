@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.2.ebuild,v 1.5 2008/04/19 21:59:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.2.ebuild,v 1.6 2008/05/14 21:50:16 eva Exp $
 
 inherit gnome2 eutils virtualx
 
@@ -78,15 +78,4 @@ src_unpack() {
 
 src_test() {
 	Xmake check || die "Test phase failed"
-}
-
-pkg_postinst() {
-	gnome2_pkg_postinst
-
-	if has_version 'sys-libs/pam'; then
-		einfo "You will need the masked pam_console to be able to"
-		einfo "suspend/hibernate, or you will need to:"
-		einfo "touch /var/run/console/<USERNAME>"
-		einfo "after each boot"
-	fi
 }
