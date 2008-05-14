@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0.ebuild,v 1.1 2008/03/30 15:58:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0-r1.ebuild,v 1.1 2008/05/14 17:24:40 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit autotools eutils gnome2
+inherit autotools eutils gnome2 python
 
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
 HOMEPAGE="http://www.gramps-project.org/"
@@ -40,3 +40,21 @@ pkg_setup() {
 
 	G2CONF="${G2CONF} --disable-mime-install"
 }
+
+src_unpack() {
+	gnome2_src_unpack
+
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s $(type -P true) "${S}"/py-compile
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_mod_optimize /usr/share/${PN}
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_mod_cleanup /usr/share/${PN}
+}
+
