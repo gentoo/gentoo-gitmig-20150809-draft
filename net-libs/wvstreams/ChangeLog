@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.119 2007/10/22 22:46:04 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.120 2008/05/14 22:59:35 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> wvstreams-4.4.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   22 Oct 2007; Alin Năstac <mrness@gentoo.org>
   -files/wvstreams-4.3-64bit.patch, -files/wvstreams-4.3-MOC-fix.patch,

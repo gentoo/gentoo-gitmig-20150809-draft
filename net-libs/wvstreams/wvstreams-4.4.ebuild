@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.8 2007/10/03 13:48:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.9 2008/05/14 22:59:35 flameeyes Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
@@ -24,7 +24,7 @@ RDEPEND=">=sys-libs/db-4
 	>=dev-libs/xplc-0.3.13
 	qt3? ( $(qt_min_version 3.1) )
 	qdbm? ( dev-db/qdbm )
-	pam? ( >=sys-libs/pam-0.78 )
+	pam? ( virtual/pam )
 	slp? ( >=net-libs/openslp-1.2.1 )"
 
 DEPEND="${RDEPEND}
