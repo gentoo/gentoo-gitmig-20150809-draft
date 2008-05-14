@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.29 2008/05/13 08:54:42 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.30 2008/05/14 20:16:36 hawking Exp $
+
+*PyQt4-4.4 (14 May 2008)
+
+  14 May 2008; Ali Polatel <hawking@gentoo.org> PyQt4-4.3.1.ebuild,
+  PyQt4-4.3.3.ebuild, +PyQt4-4.4.ebuild:
+  Version bump. Change SRC_URI of old ebuilds to mirror://gentoo because
+  upstream doesn't have it anymore.
 
   13 May 2008; Ali Polatel <hawking@gentoo.org> PyQt4-4.3.1.ebuild,
   PyQt4-4.3.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.1.ebuild,v 1.8 2008/05/14 20:16:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.ebuild,v 1.1 2008/05/14 20:16:36 hawking Exp $
 
 inherit distutils qt4
 
@@ -8,15 +8,14 @@ MY_P=PyQt-x11-gpl-${PV}
 
 DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
-#SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt4/GPL/${MY_P}.tar.gz"
+SRC_URI="http://www.riverbankcomputing.com/static/Downloads/PyQt4/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples"
 
-RDEPEND="=x11-libs/qt-4.3*
-	>=dev-python/sip-4.7.1"
+RDEPEND="=x11-libs/qt-4*
+	>=dev-python/sip-4.7.5"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
