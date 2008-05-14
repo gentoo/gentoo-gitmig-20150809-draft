@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.18 2008/04/21 14:04:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.19 2008/05/14 08:08:46 hawking Exp $
+
+*tagpy-0.94.5 (14 May 2008)
+
+  14 May 2008; Ali Polatel <hawking@gentoo.org> +tagpy-0.94.5.ebuild:
+  Version bump.
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> tagpy-0.93.ebuild:
   Add ~sparc
