@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.395 2008/04/30 11:54:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.396 2008/05/14 15:47:09 ulm Exp $
 
 # Keep them sorted
 
@@ -218,7 +218,7 @@ mng - Adds support for libmng (MNG images)
 mnogosearch - Adds support for the mnoGoSearch search engine
 modplug - Adds libmodplug support
 mono - Build Mono bindings to support dotnet type stuff
-motif - Adds motif support (x11-libs/openmotif x11-libs/lesstif)
+motif - Adds support for the Motif toolkit
 mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
 mpeg - Adds libmpeg3 support to various packages
