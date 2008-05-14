@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.27 2008/05/14 13:02:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.28 2008/05/14 16:20:48 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> sonata-1.5.1.ebuild:
+  Added ~ppc64; bug #222011
 
   14 May 2008; Ferris McCormick <fmccor@gentoo.org> sonata-1.5.1.ebuild:
   Add back ~sparc keyword, Bug #222011.
