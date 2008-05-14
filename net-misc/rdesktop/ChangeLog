@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.102 2008/05/14 16:42:57 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.103 2008/05/14 17:03:19 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> rdesktop-1.6.0.ebuild:
+  Stable on ppc64; bug #220911
 
 *rdesktop-1.6.0 (14 May 2008)
 
