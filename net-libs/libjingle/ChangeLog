@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libjingle
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.9 2007/04/30 22:05:15 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.10 2008/05/14 12:24:09 drac Exp $
+
+  14 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libjingle-0.3.11-gcc43.patch, libjingle-0.3.11.ebuild:
+  Fix building with GCC 4.3 wrt #220743, thanks to Peter Alfredsen.
 
 *libjingle-0.3.11 (30 Apr 2007)
 
