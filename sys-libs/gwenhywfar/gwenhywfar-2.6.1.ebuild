@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-2.6.1.ebuild,v 1.6 2007/11/16 00:25:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-2.6.1.ebuild,v 1.7 2008/05/14 09:31:15 hanno Exp $
 
 DESCRIPTION="A multi-platform helper library for other libraries"
 HOMEPAGE="http://gwenhywfar.sourceforge.net"
@@ -11,10 +11,11 @@ KEYWORDS="amd64 ~hppa ppc sparc x86"
 
 IUSE="debug ssl doc ncurses"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
 	sys-libs/ncurses
-	doc? ( app-doc/doxygen )
 	ncurses? ( sys-libs/ncurses )"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_compile() {
 	econf \
@@ -22,7 +23,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable doc full-doc) \
 		$(use_enable ncurses gwenui) \
-		--with-docpath=/usr/share/doc/${PF}/apidoc || die "configure failed"
+		--with-docpath="/usr/share/doc/${PF}/apidoc" || die "configure failed"
 	emake || die "emake failed"
 	if use doc ; then
 		emake srcdoc || die "emake failed"
@@ -31,8 +32,8 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc README* AUTHORS ChangeLog TODO || die
+	dodoc README* AUTHORS ChangeLog TODO || die "dodoc failed"
 	if use doc ; then
-		make DESTDIR="${D}" install-srcdoc || die "make isntall-srcdoc failed"
+		make DESTDIR="${D}" install-srcdoc || die "install doc failed"
 	fi
 }
