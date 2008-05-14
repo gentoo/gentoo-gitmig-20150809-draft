@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.3 2007/06/12 13:06:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.4 2008/05/14 23:05:18 flameeyes Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/mta
 	gdbm? ( sys-libs/gdbm )
 	!gdbm? ( ~sys-libs/db-1.85 )
 	pam? (
-		>=sys-libs/pam-0.72
+		virtual/pam
 		>=net-mail/mailbase-0.00-r8
 	)
 	ssl? ( dev-libs/openssl )"
@@ -53,7 +53,7 @@ src_compile() {
 
 	if use ssl; then
 		umask 077
-	 	PEM1=`/bin/mktemp ${T}/openssl.XXXXXX`
+		PEM1=`/bin/mktemp ${T}/openssl.XXXXXX`
 		PEM2=`/bin/mktemp ${T}/openssl.XXXXXX`
 		/usr/bin/openssl req -newkey rsa:1024 -keyout $$PEM1 \
 				 -nodes -x509 -days 365 -out  $$PEM2 << EOF

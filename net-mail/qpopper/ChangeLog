@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qpopper
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.23 2007/06/12 13:06:20 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.24 2008/05/14 23:05:18 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  qpopper-4.0.5-r3.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   12 Jun 2007; Marius Mauch <genone@gentoo.org> qpopper-4.0.5-r3.ebuild:
   Replacing einfo with elog
