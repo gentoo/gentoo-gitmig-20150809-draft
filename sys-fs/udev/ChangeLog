@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.383 2008/04/22 16:27:23 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.384 2008/05/14 15:36:46 zzam Exp $
+
+*udev-121 (14 May 2008)
+
+  14 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-121-cdrom_id-segfault.diff, +udev-121.ebuild:
+  Version bumped. Fix a segfault introduced with this version.
 
   22 Apr 2008; Tobias Klausmann <klausman@gentoo.org> udev-119.ebuild:
   Stable on alpha, bug #218407
