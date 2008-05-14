@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/notify-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.8 2008/04/18 09:53:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.9 2008/05/14 06:35:17 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> notify-python-0.1.1.ebuild:
+  Added ~ppc64
 
   18 Apr 2008; Raúl Porcel <armin76@gentoo.org> notify-python-0.1.1.ebuild:
   Add ~sparc

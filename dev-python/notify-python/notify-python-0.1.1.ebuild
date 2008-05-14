@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1.ebuild,v 1.8 2008/04/18 09:53:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1.ebuild,v 1.9 2008/05/14 06:35:17 corsair Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.galago-project.org/files/releases/source/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.4.0
