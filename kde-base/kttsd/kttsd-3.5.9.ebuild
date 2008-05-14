@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.9.ebuild,v 1.6 2008/05/13 14:07:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.9.ebuild,v 1.7 2008/05/14 11:10:25 corsair Exp $
 KMNAME=kdeaccessibility
 EAPI="1"
 inherit kde-meta
 
 DESCRIPTION="KDE text-to-speech subsystem"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86"
 IUSE="akode alsa"
 
 DEPEND="akode? ( media-libs/akode )

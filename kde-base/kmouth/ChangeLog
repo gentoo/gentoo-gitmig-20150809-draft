@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmouth
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.86 2008/05/13 02:05:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.87 2008/05/14 10:59:34 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kmouth-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kmouth-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
