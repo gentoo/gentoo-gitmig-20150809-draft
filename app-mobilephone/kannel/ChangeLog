@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.14 2007/11/04 08:31:02 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.15 2008/05/14 21:59:26 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> kannel-1.4.1.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   04 Nov 2007; Alin Năstac <mrness@gentoo.org> kannel-1.4.1.ebuild:
   Remove useless pkg_preinst function.

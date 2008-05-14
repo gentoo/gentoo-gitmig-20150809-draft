@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.5 2007/11/04 08:31:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.6 2008/05/14 21:59:26 flameeyes Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.26
 	doc? ( media-gfx/transfig
 		app-text/jadetex
 		app-text/docbook-dsssl-stylesheets )
-	pam? ( >=sys-libs/pam-0.78 )"
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-2.2"
 
