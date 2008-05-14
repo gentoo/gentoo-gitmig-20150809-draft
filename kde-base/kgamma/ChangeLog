@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.85 2008/05/13 02:30:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.86 2008/05/14 18:01:25 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kgamma-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kgamma-3.5.9.ebuild:
   Stable for HPPA (bug #221063).

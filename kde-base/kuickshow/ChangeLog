@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuickshow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.73 2008/05/13 02:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.74 2008/05/14 17:44:32 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kuickshow-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kuickshow-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
