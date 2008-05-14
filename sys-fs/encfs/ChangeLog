@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.30 2008/05/04 00:48:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.31 2008/05/14 02:19:53 vanquirius Exp $
+
+*encfs-1.4.2 (13 May 2008)
+
+  13 May 2008; Marcelo Goes <vanquirius@gentoo.org> +encfs-1.4.2.ebuild:
+  1.4.2 version bump for bug 216306. Thanks to Bram Schoenmakers <me at
+  bramschoenmakers dot nl>.
 
 *encfs-1.3.2.1-r1 (04 May 2008)
 
