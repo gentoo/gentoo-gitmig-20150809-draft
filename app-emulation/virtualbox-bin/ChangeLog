@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.24 2008/05/02 12:54:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.25 2008/05/14 08:14:46 pva Exp $
+
+  14 May 2008; Peter Volkov <pva@gentoo.org> virtualbox-bin-1.5.4.ebuild,
+  virtualbox-bin-1.5.6.ebuild:
+  Updated deps: app-doc/kchmviewer moved to app-text/kchmviewer, bug
+  #220741.
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org> virtualbox-bin-1.5.6.ebuild:
   Fix virtualbox-modules dependency so 1.5.7 can be installed, bug #218198

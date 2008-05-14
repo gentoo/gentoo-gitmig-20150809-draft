@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.2 2008/05/02 12:54:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.3 2008/05/14 08:14:46 pva Exp $
 
 inherit eutils fdo-mime qt3 pax-utils
 
@@ -46,7 +46,7 @@ RDEPEND="!app-emulation/virtualbox
 	net-misc/bridge-utils
 	x86? ( =virtual/libstdc++-3.3 )
 	sdk? ( dev-libs/libIDL )
-	chm? ( app-doc/kchmviewer )"
+	chm? ( app-text/kchmviewer )"
 
 S=${WORKDIR}
 
