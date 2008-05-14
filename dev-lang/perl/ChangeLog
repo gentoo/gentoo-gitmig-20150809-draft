@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.266 2008/05/14 15:51:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.267 2008/05/14 17:10:08 opfer Exp $
+
+  14 May 2008; Christian Faulhammer <opfer@gentoo.org> perl-5.8.8-r5.ebuild:
+  stable x86, security bug 219203
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> perl-5.8.8-r5.ebuild:
   Stable on ppc64; bug #219203
