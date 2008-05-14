@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.3.ebuild,v 1.3 2008/05/13 05:10:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.3.ebuild,v 1.4 2008/05/14 17:13:39 grozin Exp $
 
 inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
@@ -92,7 +92,9 @@ src_compile() {
 
 	if use doc; then
 		cd "${S}"
-		emake docpdf || die "Failed to generate docs"
+		# To prevent sandbox violations by metafont
+		VARTEXFONTS="${T}"/fonts emake docpdf \
+			|| die "Failed to generate docs"
 	fi
 
 	if use emacs; then
