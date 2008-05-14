@@ -28,7 +28,7 @@ diff -urpN libdvb-0.5.5.1/config.mk libdvb-0.5.5.1.az/config.mk
 diff -urpN libdvb-0.5.5.1/configure.ac libdvb-0.5.5.1.az/configure.ac
 --- libdvb-0.5.5.1/configure.ac	1970-01-01 02:00:00.000000000 +0200
 +++ libdvb-0.5.5.1.az/configure.ac	2006-07-24 21:08:47.000000000 +0200
-@@ -0,0 +1,25 @@
+@@ -0,0 +1,26 @@
 +AC_PREREQ([2.59])
 +AC_INIT([libdvb], [0.5.5.1], [mocm@metzlerbros.de])
 +AM_INIT_AUTOMAKE
@@ -36,6 +36,7 @@ diff -urpN libdvb-0.5.5.1/configure.ac libdvb-0.5.5.1.az/configure.ac
 +
 +dnl Checks for programs.
 +AC_PROG_CC
++AC_PROG_CXX
 +AC_ISC_POSIX
 +AC_PROG_INSTALL
 +AC_PROG_MAKE_SET
