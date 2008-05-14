@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.26 2008/05/13 23:25:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.27 2008/05/14 13:02:19 fmccor Exp $
+
+  14 May 2008; Ferris McCormick <fmccor@gentoo.org> sonata-1.5.1.ebuild:
+  Add back ~sparc keyword, Bug #222011.
 
 *sonata-1.5.1 (13 May 2008)
 
