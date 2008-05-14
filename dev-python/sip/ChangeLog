@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.116 2008/04/07 16:00:17 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.117 2008/05/14 17:24:12 hawking Exp $
+
+*sip-4.7.5 (14 May 2008)
+
+  14 May 2008; Ali Polatel <hawking@gentoo.org> sip-4.6.ebuild,
+  sip-4.7.1.ebuild, sip-4.7.3.ebuild, +sip-4.7.5.ebuild:
+  Version bump. Change SRC_URI of old ebuilds to mirror://gentoo because
+  upstream doesn't have them anymore.
 
   07 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> sip-4.6.ebuild,
   sip-4.7.1.ebuild, sip-4.7.3.ebuild:
