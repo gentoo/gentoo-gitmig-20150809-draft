@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.33 2008/04/27 18:52:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.34 2008/05/14 21:38:13 sbriesen Exp $
+
+  14 May 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  files/mailgraph.initd-new:
+  fixed init-script for openrc.
 
   27 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   files/mailgraph.initd-new:
