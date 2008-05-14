@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/gentoo-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.4 2008/03/30 10:19:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.5 2008/05/14 05:07:53 graaff Exp $
+
+*gentoo-syntax-1.9 (14 May 2008)
+
+  14 May 2008; Hans de Graaff <graaff@gentoo.org> +gentoo-syntax-1.9.ebuild:
+  Version bump
 
   30 Mar 2008; Hans de Graaff <graaff@gentoo.org> gentoo-syntax-1.8.ebuild:
   Add missing dependency on app-xemacs/sh-script, thanks to ulm for the report
