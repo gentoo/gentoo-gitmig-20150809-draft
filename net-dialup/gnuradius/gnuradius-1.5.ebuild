@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.3 2007/09/11 05:39:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.4 2008/05/14 22:01:43 flameeyes Exp $
 
 inherit libtool eutils pam
 
@@ -24,7 +24,7 @@ DEPEND="!net-dialup/freeradius
 	readline? ( sys-libs/readline )
 	dbm? ( sys-libs/gdbm )
 	snmp? ( net-analyzer/net-snmp )
-	pam? ( sys-libs/pam )"
+	pam? ( virtual/pam )"
 
 S="${WORKDIR}/${MY_P}"
 

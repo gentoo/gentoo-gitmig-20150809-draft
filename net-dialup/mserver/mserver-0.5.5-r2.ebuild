@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.4 2008/04/13 17:56:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.5 2008/05/14 22:02:31 flameeyes Exp $
 
 inherit eutils pam
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="sys-libs/pam"
+DEPEND="virtual/pam"
 RDEPEND="${DEPEND}
 	net-dialup/ppp"
 

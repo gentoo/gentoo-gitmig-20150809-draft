@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.3 2008/04/13 18:16:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.4 2008/05/14 22:07:27 flameeyes Exp $
 
 inherit eutils autotools pam
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 KEYWORDS="~amd64 x86"
 IUSE="pam"
 
-DEPEND="pam? ( sys-libs/pam )
+DEPEND="pam? ( virtual/pam )
 	sys-apps/tcp-wrappers"
 RDEPEND="${DEPEND}
 	net-dialup/ppp"

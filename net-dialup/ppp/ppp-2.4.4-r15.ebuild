@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r15.ebuild,v 1.1 2008/04/12 08:29:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r15.ebuild,v 1.2 2008/05/14 22:05:03 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info pam
 
@@ -17,7 +17,7 @@ IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
 
 DEPEND="activefilter? ( >=virtual/libpcap-0.9.4 )
 	atm? ( net-dialup/linux-atm )
-	pam? ( sys-libs/pam )
+	pam? ( virtual/pam )
 	gtk? ( >=x11-libs/gtk+-2.8 )
 	eap-tls? ( net-misc/curl >=dev-libs/openssl-0.9.7 )"
 

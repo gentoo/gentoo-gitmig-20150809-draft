@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.210 2008/04/12 08:29:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.211 2008/05/14 22:05:03 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> ppp-2.4.4-r15.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
 *ppp-2.4.4-r15 (12 Apr 2008)
 
