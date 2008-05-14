@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.4.0.ebuild,v 1.1 2008/05/12 03:46:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.4.0.ebuild,v 1.2 2008/05/14 01:28:56 vanquirius Exp $
 
 DESCRIPTION="Spectrum emulation library"
 HOMEPAGE="http://fuse-emulator.sourceforge.net/libspectrum.php"
@@ -15,7 +15,7 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	bzip2? ( >=app-arch/bzip2-1.0 )
 	>=dev-libs/glib-2
 	audiofile? ( >=media-libs/audiofile-0.2.3 )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig"
 
