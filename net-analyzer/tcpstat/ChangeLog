@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/tcpstat
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.18 2007/02/20 00:42:24 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.19 2008/05/14 02:02:08 vanquirius Exp $
+
+*tcpstat-1.5-r1 (13 May 2008)
+
+  13 May 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +files/tcpstat-1.5-db.patch, +tcpstat-1.5-r1.ebuild:
+  Do not build tcpprof so that we do not depend on db-1.85-r3. Make ipv6
+  support optional, install catpcap and packetdump. Fixes bug 221815, thanks
+  to Peter Alfredsen <peter.alfredsen at gmail dot com>.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
