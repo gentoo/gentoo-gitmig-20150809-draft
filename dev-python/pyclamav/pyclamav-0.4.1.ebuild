@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1.ebuild,v 1.1 2008/05/13 13:02:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1.ebuild,v 1.2 2008/05/14 20:48:00 maekke Exp $
 
 NEED_PYTHON=2.2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Python binding for libclamav"
 HOMEPAGE="http://xael.org/norman/python/pyclamav/"
 SRC_URI="http://xael.org/norman/python/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 DEPEND=">=app-antivirus/clamav-0.90"
 SLOT="0"
 IUSE=""
