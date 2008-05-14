@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmahjongg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.88 2008/05/13 03:04:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.89 2008/05/14 19:31:12 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kmahjongg-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kmahjongg-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
