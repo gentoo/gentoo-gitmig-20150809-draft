@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.168 2008/05/08 19:27:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.169 2008/05/14 21:35:26 eva Exp $
+
+  14 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-media-2.22.0.ebuild:
+  add optional gst-plugins-cdio/cdparanoia dependency, bug #188535.
 
   08 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-media-2.22.0.ebuild:
