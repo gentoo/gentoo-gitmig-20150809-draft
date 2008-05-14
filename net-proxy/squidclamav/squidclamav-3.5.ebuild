@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.1.ebuild,v 1.1 2007/11/02 15:49:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.5.ebuild,v 1.1 2008/05/14 22:10:05 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=net-misc/curl-7.12.1
+DEPEND="net-misc/curl
 	dev-libs/openssl
 	sys-libs/zlib
 	app-arch/bzip2"

@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squidclamav
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.5 2007/12/30 12:16:37 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.6 2008/05/14 22:10:05 mrness Exp $
+
+*squidclamav-3.5 (14 May 2008)
+
+  14 May 2008; Alin Năstac <mrness@gentoo.org>
+  -files/squidclamav-3.1-gentoo.patch, +files/squidclamav-3.5-gentoo.patch,
+  -squidclamav-3.1.ebuild, +squidclamav-3.5.ebuild:
+  Version bump (#221171).
 
 *squidclamav-3.2 (30 Dec 2007)
 

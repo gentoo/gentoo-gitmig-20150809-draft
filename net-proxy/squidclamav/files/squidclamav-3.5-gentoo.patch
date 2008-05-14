@@ -1,6 +1,6 @@
-diff -Nru squidclamav-3.1.orig/squidclamav.conf.dist squidclamav-3.1/squidclamav.conf.dist
---- squidclamav-3.1.orig/squidclamav.conf.dist	2007-08-22 15:50:41.000000000 +0300
-+++ squidclamav-3.1/squidclamav.conf.dist	2007-11-02 17:44:11.000000000 +0200
+diff -Nru squidclamav-3.5.orig/squidclamav.conf.dist squidclamav-3.5/squidclamav.conf.dist
+--- squidclamav-3.5.orig/squidclamav.conf.dist	2008-03-28 10:51:18.000000000 +0200
++++ squidclamav-3.5/squidclamav.conf.dist	2008-05-15 01:05:55.000000000 +0300
 @@ -29,7 +29,7 @@
  #
  #	stat 0|1
