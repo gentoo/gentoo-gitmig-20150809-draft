@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.98-r1.ebuild,v 1.2 2008/02/29 20:12:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.98-r1.ebuild,v 1.3 2008/05/14 21:53:57 sbriesen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -13,12 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-lang/swig
+COMMON_DEPEND="
 	dev-lang/perl
 	dev-perl/PerlQt
 	>=media-libs/libdvdread-0.9.6"
 
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	dev-lang/swig"
+
+RDEPEND="${COMMON_DEPEND}
 	>=media-video/dvdauthor-0.6.11
 	>=media-video/mjpegtools-1.8.0
 	>=media-video/vamps-0.99.2"
