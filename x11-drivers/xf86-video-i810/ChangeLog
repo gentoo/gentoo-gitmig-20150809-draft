@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.86 2008/04/29 07:27:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.87 2008/05/14 08:49:35 remi Exp $
+
+  14 May 2008; Rémi Cardona <remi@gentoo.org>
+  -files/xf86-video-i810-2.2.99.902-enable_center_panel_fitting_on_i8xx.patc
+  h, -files/xf86-video-i810-2.2.99.903-fix-panel-resize-on-i8xx.patch,
+  -xf86-video-i810-2.2.99.901.ebuild, -xf86-video-i810-2.2.99.902.ebuild,
+  -xf86-video-i810-2.2.99.903.ebuild, -xf86-video-i810-2.2.99.903-r1.ebuild:
+  remove 2.3 release candidates and patches
 
 *xf86-video-i810-2.3.0 (29 Apr 2008)
 
