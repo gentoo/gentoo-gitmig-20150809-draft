@@ -1,27 +1,30 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.13.ebuild,v 1.5 2008/03/28 02:37:58 jer Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5-r3.ebuild,v 1.1 2008/05/14 09:25:03 armin76 Exp $
+EAPI="1"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
-
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension
 PATCH="${P}-patches-0.1"
-LANGS="af ar be bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sl sv-SE tr uk zh-CN zh-TW"
-NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
+
+LANGS="af ar be ca cs de el en-GB en-US es-AR es-ES eu fi fr fy-NL gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sq sv-SE tr uk zh-CN zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
+
+MY_PV=${PV/_beta/b}
+MY_P="${PN}-${MY_PV}"
+MY_PV=${PV/3.0/}
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="java mozdevelop bindist xforms restrict-javascript filepicker iceweasel"
+IUSE="java mozdevelop bindist restrict-javascript +xulrunner"
 
-MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}"
-SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
+SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
-	iceweasel? ( mirror://gentoo/iceweasel-icons-2.0.0.11.tar.bz2 )"
+	!xulrunner? ( mirror://gentoo/xulrunner-1.9${MY_PV}.tar.bz2 )"
 
 # These are in
 #
@@ -29,22 +32,29 @@ SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
 #
 # for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
+	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+		SRC_URI="${SRC_URI}
+			linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P}-xpi/${MY_P}-${X}.xpi )"
+	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-		SRC_URI="${SRC_URI}
-			linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
+		if [ "${X}" != "en-US" ]; then
+			SRC_URI="${SRC_URI}
+				linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P}-xpi/${MY_P}-${X}.xpi )"
+		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
 
 RDEPEND="java? ( virtual/jre )
-	>=www-client/mozilla-launcher-1.55
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.11.8
-	>=dev-libs/nspr-4.6.8"
+	>=dev-libs/nss-3.12_beta3
+	>=dev-libs/nspr-4.7.1_beta2
+	>=media-libs/lcms-1.17
+	>=app-text/hunspell-1.1.9
+	>=dev-db/sqlite-3.5
+	xulrunner? ( >=net-libs/xulrunner-1.9${MY_PV} )"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -89,87 +99,88 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if ! use bindist && ! use iceweasel; then
+	if ! built_with_use --missing true x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
+
+	if ! use bindist; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
 		elog "a legal problem with Mozilla Foundation"
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 
 	fi
-
-	use moznopango && warn_mozilla_launcher_stub
 }
 
 src_unpack() {
-	unpack firefox-${PV}-source.tar.bz2  ${PATCH}.tar.bz2
-
-	if use iceweasel; then
-		unpack iceweasel-icons-2.0.0.11.tar.bz2
-
-		cp -r iceweaselicons/browser mozilla/
-	fi
+	! use xulrunner && unpack xulrunner-1.9${MY_PV}.tar.bz2
+	unpack ${P}.tar.bz2 ${PATCH}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${MY_P}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
+
+	# Remove the patches we don't need
+	use xulrunner && rm "${WORKDIR}"/patch/*noxul* || rm "${WORKDIR}"/patch/*xulonly*
 
 	# Apply our patches
 	cd "${S}" || die "cd failed"
 	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
+EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
 
-	if use filepicker; then
-		epatch "${FILESDIR}"/mozilla-filepicker.patch
-	fi
-
-	if use iceweasel; then
-		sed -i -e "s|Bon Echo|Iceweasel|" browser/locales/en-US/chrome/branding/brand.*
-		sed -i -e "s|BonEcho|Iceweasel|" configure.in
-	fi
-
-	eautoreconf
+	eautoreconf || die "failed  running eautoreconf"
 }
 
 src_compile() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	MEXTENSIONS="default,typeaheadfind"
+
+	#if use xforms; then
+	#	MEXTENSIONS="${MEXTENSIONS},xforms"
+	#fi
+	####################################
+	#
+	# mozconfig, CFLAGS and CXXFLAGS setup
+	#
+	####################################
 
 	mozconfig_init
 	mozconfig_config
 
-	mozconfig_annotate '' --enable-application=browser
+	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
+	mozconfig_annotate '' --disable-mailnews
+	mozconfig_annotate 'broken' --disable-mochitest
+	mozconfig_annotate 'broken' --disable-crashreporter
+	mozconfig_annotate '' --enable-system-hunspell
+	mozconfig_annotate '' --enable-system-sqlite
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-
-	if use xforms; then
-		mozconfig_annotate '' --enable-extensions=default,xforms,schema-validation,typeaheadfind
-	else
-		mozconfig_annotate '' --enable-extensions=default,typeaheadfind
-	fi
-
-	if use ia64; then
-		echo "ac_cv_visibility_pragma=no" >>  "${S}/.mozconfig"
-	fi
-
-	if ! use bindist && ! use iceweasel; then
-		mozconfig_annotate '' --enable-official-branding
-	fi
-
-	# Bug 60668: Galeon doesn't build without oji enabled, so enable it
-	# regardless of java setting.
+	mozconfig_annotate '' --enable-system-lcms
 	mozconfig_annotate '' --enable-oji --enable-mathml
+	mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
 
 	# Other ff-specific settings
-	mozconfig_use_enable mozdevelop jsd
-	mozconfig_use_enable mozdevelop xpctools
+	#mozconfig_use_enable mozdevelop jsd
+	#mozconfig_use_enable mozdevelop xpctools
 	mozconfig_use_extension mozdevelop venkman
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+	if use xulrunner; then
+		# Add xulrunner variable
+		mozconfig_annotate '' --with-libxul-sdk=/usr/$(get_libdir)/xulrunner-1.9
+	fi
+
+	if ! use bindist; then
+		mozconfig_annotate '' --enable-official-branding
+	fi
 
 	# Finalize and report settings
 	mozconfig_final
@@ -180,7 +191,7 @@ src_compile() {
 	else
 		gcc-specs-ssp && append-flags -fno-stack-protector-all
 	fi
-		filter-flags -fstack-protector -fstack-protector-all
+	filter-flags -fstack-protector -fstack-protector-all
 
 	####################################
 	#
@@ -215,92 +226,66 @@ pkg_preinst() {
 	einfo "eliminates any problems during the install, however suggestions to"
 	einfo "replace this are highly welcome.  Send comments and suggestions to"
 	einfo "mozilla@gentoo.org."
-	rm -rf "${ROOT}"/"${MOZILLA_FIVE_HOME}"
+	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	# Most of the installation happens here
-	dodir "${MOZILLA_FIVE_HOME}"
-	cp -RL "${S}"/dist/bin/* "${D}"/"${MOZILLA_FIVE_HOME}"/ || die "cp failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	rm "${D}"/usr/bin/firefox
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${MY_P}-${X}"
 	done
+
+	use xulrunner && prefs=preferences || prefs=pref
+	cp "${FILESDIR}"/gentoo-default-prefs.js "${D}"${MOZILLA_FIVE_HOME}/defaults/${prefs}/all-gentoo.js
 
 	local LANG=${linguas%% *}
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
 		elog "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox-l10n.js || \
+			${MOZILLA_FIVE_HOME}/defaults/${prefs}/firefox.js \
+			${MOZILLA_FIVE_HOME}/defaults/${prefs}/firefox-l10n.js || \
 			die "sed failed to change locale"
 	fi
 
-	# Create /usr/bin/firefox
-	install_mozilla_launcher_stub firefox "${MOZILLA_FIVE_HOME}"
-
 	# Install icon and .desktop for menu entry
-	if use iceweasel; then
-		newicon "${S}"/browser/base/branding/icon48.png iceweasel-icon.png
-		newmenu "${FILESDIR}"/icon/iceweasel.desktop \
-			mozilla-firefox-2.0.desktop
-	elif ! use bindist; then
-		newicon "${S}"/other-licenses/branding/firefox/content/icon48.png firefox-icon.png
+	if ! use bindist; then
+		 newicon "${S}"/other-licenses/branding/firefox/content/icon48.png firefox-icon.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
-			mozilla-firefox-2.0.desktop
+			mozilla-firefox-3.0.desktop
 	else
-		newicon "${S}"/browser/base/branding/icon48.png firefox-icon-unbranded.png
+		newicon "${S}"/browser/base/branding/firefox/content/icon48.png firefox-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
-			mozilla-firefox-2.0.desktop
+			mozilla-firefox-3.0.desktop
 	fi
 
-	# Fix icons to look the same everywhere
-	insinto "${MOZILLA_FIVE_HOME}"/icons
-	doins "${S}"/dist/branding/mozicon16.xpm
-	doins "${S}"/dist/branding/mozicon50.xpm
+	if use xulrunner; then
+		PKG_CONFIG=`which pkg-config`
+		X_DATE=`date +%Y%m%d`
+		XULRUNNER_VERSION=`${PKG_CONFIG} --modversion libxul`
 
-	# Install files necessary for applications to build against firefox
-	einfo "Installing includes and idl files..."
-	cp -LfR "${S}"/dist/include "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
-	cp -LfR "${S}"/dist/idl "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
+		#set the application.ini
+		sed -i -e "s|BuildID=.*$|BuildID=${X_DATE}GentooMozillaFirefox|"	"${D}"${MOZILLA_FIVE_HOME}/application.ini
+		sed -i -e "s|MinVersion=.*$|MinVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
+		sed -i -e "s|MaxVersion=.*$|MaxVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
+	fi
 
-	# Dirty hack to get some applications using this header running
-	dosym "${MOZILLA_FIVE_HOME}"/include/necko/nsIURI.h \
-		"${MOZILLA_FIVE_HOME}"/include/nsIURI.h
-
-	# Install pkgconfig files
-	insinto /usr/"$(get_libdir)"/pkgconfig
-	doins "${S}"/build/unix/*.pc
-
-	insinto "${MOZILLA_FIVE_HOME}"/greprefs
-	newins "${FILESDIR}"/gentoo-default-prefs.js all-gentoo.js
-	insinto "${MOZILLA_FIVE_HOME}"/defaults/pref
-	newins "${FILESDIR}"/gentoo-default-prefs.js all-gentoo.js
+	# Create /usr/bin/firefox
+	make_wrapper firefox "${MOZILLA_FIVE_HOME}/firefox"
 }
 
 pkg_postinst() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	# This should be called in the postinst and postrm of all the
-	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
-	# thunderbird-bin ebuilds.
-	update_mozilla_launcher_symlinks
+	ewarn "All the packages built against ${PN} won't compile,"
+	ewarn "since they should be built against net-libs/xulrunner,"
+	ewarn "therefore you should check if your package builds against"
+	ewarn "xulrunner and if it doesn't, file a bug, thanks."
 
 	# Update mimedb for the new .desktop file
 	fdo-mime_desktop_database_update
-
-	elog "Please remember to rebuild any packages that you have built"
-	elog "against Firefox. Some packages might be broken by the upgrade; if this"
-	elog "is the case, please search at http://bugs.gentoo.org and open a new bug"
-	elog "if one does not exist. Before filing any bugs, please move or remove"
-	elog " ~/.mozilla and test with a clean profile directory."
-}
-
-pkg_postrm() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
-
-	update_mozilla_launcher_symlinks
 }
