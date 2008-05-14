@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.87 2008/05/13 13:58:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.88 2008/05/14 18:17:07 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> kdvi-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kdvi-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
