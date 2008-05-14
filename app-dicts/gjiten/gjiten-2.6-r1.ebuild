@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.4.ebuild,v 1.2 2007/01/05 16:06:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r1.ebuild,v 1.1 2008/05/14 16:37:30 matsuu Exp $
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A Japanese dictionary program for Gnome"
 HOMEPAGE="http://gjiten.sourceforge.net/"
@@ -19,13 +19,17 @@ RDEPEND=">=gnome-base/libgnome-2.2
 	>=gnome-base/libglade-2.0"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=dev-util/intltool-0.22"
+	>=dev-util/intltool-0.22
+	app-text/xmlto
+	dev-util/pkgconfig"
 
-DOCS="AUTHORS BUGS ChangeLog INSTALL NEWS README TODO"
+DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}; gnome2_omf_fix help/omf.make
+	gnome2_src_unpack
+	cd "${S}"
+	# bug #124631
+	AM_OPTS="--foreign" eautoreconf
 }
 
 pkg_postinst() {

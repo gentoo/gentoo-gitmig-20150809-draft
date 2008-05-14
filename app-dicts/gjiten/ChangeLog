@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.17 2008/03/12 09:51:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.18 2008/05/14 16:37:30 matsuu Exp $
+
+*gjiten-2.6-r1 (14 May 2008)
+
+  14 May 2008; MATSUU Takuto <matsuu@gentoo.org> gjiten-2.3.ebuild,
+  -gjiten-2.4.ebuild, +gjiten-2.6-r1.ebuild:
+  Fixed bug #124631 and bug #216446. Removed old version.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.
