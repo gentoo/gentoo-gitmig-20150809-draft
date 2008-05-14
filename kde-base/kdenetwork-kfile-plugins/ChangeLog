@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.81 2008/05/12 21:35:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.82 2008/05/14 15:57:05 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org>
+  kdenetwork-kfile-plugins-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org>
   kdenetwork-kfile-plugins-3.5.9.ebuild:

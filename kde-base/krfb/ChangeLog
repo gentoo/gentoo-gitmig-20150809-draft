@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.88 2008/05/12 22:36:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.89 2008/05/14 16:07:16 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> krfb-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> krfb-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
