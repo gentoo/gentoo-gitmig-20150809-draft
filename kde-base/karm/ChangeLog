@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.86 2008/05/13 14:49:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.87 2008/05/14 15:20:32 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> karm-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> karm-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
