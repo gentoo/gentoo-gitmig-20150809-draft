@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.4 2007/05/11 19:49:06 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.5 2008/05/14 22:16:53 flameeyes Exp $
 
 inherit eutils confutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc ppc64"
 
 DEPEND="nls? ( sys-devel/gettext )
-		pam? ( sys-libs/pam )
+		pam? ( virtual/pam )
 		php? ( || ( virtual/php virtual/httpd-php ) )"
 
 src_unpack() {

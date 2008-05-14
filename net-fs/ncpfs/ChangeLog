@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/ncpfs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.23 2007/05/11 19:49:06 griffon26 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.24 2008/05/14 22:16:53 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org> ncpfs-2.2.6.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   11 May 2007; Maurice van der Pot <griffon26@gentoo.org>
   +files/ncpfs-2.2.6-missing-includes.patch, ncpfs-2.2.6.ebuild:
