@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_pam/mod_authn_pam-0.0.1.ebuild,v 1.1 2008/02/07 21:34:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_pam/mod_authn_pam-0.0.1.ebuild,v 1.2 2008/05/14 23:17:29 flameeyes Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sys-libs/pam"
+DEPEND="virtual/pam"
 RDEPEND="${DEPEND}"
 
 APXS2_ARGS="-c ${PN}.c -lpam"

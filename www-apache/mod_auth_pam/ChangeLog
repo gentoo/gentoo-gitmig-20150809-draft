@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_pam
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/ChangeLog,v 1.4 2008/01/31 17:08:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/ChangeLog,v 1.5 2008/05/14 23:16:30 flameeyes Exp $
+
+  14 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  mod_auth_pam-1.1.1-r2.ebuild:
+  Depend on virtual/pam as the code builds fine with OpenPAM.
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
   files/10_mod_auth_pam.conf, mod_auth_pam-1.1.1-r1.ebuild,
