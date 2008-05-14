@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.50 2008/05/12 23:59:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.51 2008/05/14 14:39:31 lu_zero Exp $
+
+*qemu-softmmu-0.9.1-r3 (14 May 2008)
+
+  14 May 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-softmmu-0.9.1-CVE-2008-2004.patch,
+  +qemu-softmmu-0.9.1-r3.ebuild:
+  Address CVE-2008-2004, fix bug #221943, thanks to Celso Fernandes
+  (icezimm) <celso.fernandes@gmail.com>
 
 *qemu-softmmu-0.9.1-r2 (12 May 2008)
 
