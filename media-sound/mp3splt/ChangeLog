@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.27 2008/05/14 14:52:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.28 2008/05/14 16:12:29 corsair Exp $
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> mp3splt-2.2_rc1.ebuild:
+  Added ~ppc64; bug #221989
 
   14 May 2008; Raúl Porcel <armin76@gentoo.org> mp3splt-2.2_rc1.ebuild:
   Add ~alpha/~sparc/~x86 wrt #221989
