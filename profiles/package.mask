@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8600 2008/05/15 14:31:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8601 2008/05/15 14:33:21 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jim Ramsay <lack@gentoo.org> (15 May 2008)
+# New beta version of netscape-flash released, masked for testing.
+=net-www/netscape-flash-10_beta*
 
 # Samuli Suominen <drac@gentoo.org> (15 May 2008)
 # Doesn't compile wrt bug #206250. Masked for treecleaners.
