@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kvoctrain
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.89 2008/05/13 01:59:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.90 2008/05/15 06:29:30 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kvoctrain-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kvoctrain-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
