@@ -1,6 +1,6 @@
 # Copyright 2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/package.mask,v 1.1 2008/04/05 22:19:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/package.mask,v 1.2 2008/05/15 09:49:04 leio Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (16 Mar 2008)
 # The Great GNOME 2.22 Mask (tm)
@@ -67,7 +67,6 @@ dev-libs/libgweather
 >=gnome-extra/gnome-screensaver-2.22
 >=gnome-extra/gnome-power-manager-2.22
 dev-libs/totem-pl-parser
->=media-plugins/gst-plugins-meta-0.10-r2
 >=media-sound/rhythmbox-0.11.4
 >=media-video/totem-2.22
 gnome-base/gnome-settings-daemon

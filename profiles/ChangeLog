@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1410 2008/05/14 21:41:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1411 2008/05/15 09:49:01 leio Exp $
+
+  15 May 2008; Mart Raudsepp <leio@gentoo.org> arch/amd64/package.mask,
+  arch/x86/package.mask, base/package.mask,
+  default-linux/amd64/package.mask, default-linux/x86/package.mask,
+  embedded/package.mask:
+  Unmask gst-plugins-meta-0.10-r2 for everyone
 
   14 May 2008; Alin Năstac <mrness@gentoo.org> package.mask:
   Remove net-proxy/junkbuster (#174109) and net-dialup/gprs-easy-connect masks

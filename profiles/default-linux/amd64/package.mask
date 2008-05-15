@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.12 2008/04/21 11:28:02 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.13 2008/05/15 09:49:03 leio Exp $
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
@@ -71,7 +71,6 @@
 ->=gnome-extra/gnome-screensaver-2.22
 ->=gnome-extra/gnome-power-manager-2.22
 -dev-libs/totem-pl-parser
-->=media-plugins/gst-plugins-meta-0.10-r2
 ->=media-sound/rhythmbox-0.11.4
 ->=media-video/totem-2.22
 -gnome-base/gnome-settings-daemon
