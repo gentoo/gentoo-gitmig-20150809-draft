@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/crosstex/crosstex-0.5.6.ebuild,v 1.2 2008/02/27 11:46:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/crosstex/crosstex-0.5.6.ebuild,v 1.3 2008/05/15 15:23:22 aballier Exp $
 
 inherit python
 
-DESCRIPTION="CrossTeX - object orientated BibTeX replacement"
+DESCRIPTION="CrossTeX - object oriented BibTeX replacement"
 HOMEPAGE="http://www.cs.cornell.edu/people/egs/crosstex/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
