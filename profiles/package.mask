@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8590 2008/05/15 10:14:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8591 2008/05/15 10:23:51 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1632,11 +1632,6 @@ sys-apps/gli
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
 dev-lisp/cl-blog
-
-# Karl Trygve Kallebreg <karltk@gentoo.org> (30 Jul 2005)
-# all version contains a static copy of zlib-1.2.1.1 which has security
-# issues
-net-misc/zsync
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
