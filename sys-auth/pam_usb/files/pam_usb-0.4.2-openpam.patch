@@ -1,0 +1,13 @@
+Index: pam_usb-0.4.2/src/pam.c
+===================================================================
+--- pam_usb-0.4.2.orig/src/pam.c
++++ pam_usb-0.4.2/src/pam.c
+@@ -17,7 +17,7 @@
+ 
+ #define PAM_SM_AUTH
+ #include <security/pam_modules.h>
+-#include <security/_pam_macros.h>
++#include <security/pam_appl.h>
+ 
+ #include "version.h"
+ #include "conf.h"

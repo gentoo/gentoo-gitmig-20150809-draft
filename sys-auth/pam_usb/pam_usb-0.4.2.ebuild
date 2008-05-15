@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.2.ebuild,v 1.2 2008/03/24 15:43:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.2.ebuild,v 1.3 2008/05/15 01:39:48 flameeyes Exp $
 
 inherit eutils pam
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="
 	dev-libs/libxml2
-	>=sys-libs/pam-0.78-r3
+	virtual/pam
 	>=sys-apps/dbus-0.62-r2
 	>=sys-apps/hal-0.5.7.1-r3
 	>=sys-apps/pmount-0.9.13
@@ -25,6 +25,12 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-openpam.patch"
+}
 
 src_install() {
 	dodir $(getpam_mod_dir) /usr/bin
