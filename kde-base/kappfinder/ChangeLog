@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.90 2008/05/15 12:49:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.91 2008/05/15 22:44:33 ingmar Exp $
+
+*kappfinder-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kappfinder-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kappfinder. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kappfinder-3.5.9.ebuild:
   Stable on ppc64; bug #221063
