@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/mrtg
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.84 2007/09/06 17:29:52 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.85 2008/05/15 02:15:56 vanquirius Exp $
+
+*mrtg-2.16.1 (14 May 2008)
+
+  14 May 2008; Marcelo Goes <vanquirius@gentoo.org> +mrtg-2.16.1.ebuild:
+  2.16.1 version bump for bug 218086. Thanks to Rodrigo Severo <rodrigo at
+  fabricadeideias dot com>.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -mrtg-2.14.5.ebuild,
   -mrtg-2.15.0.ebuild, -mrtg-2.15.1.ebuild:
