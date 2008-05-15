@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9d.ebuild,v 1.1 2008/05/15 22:04:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9d.ebuild,v 1.2 2008/05/15 22:09:17 mrness Exp $
 
 inherit eutils
 
-DESCRIPTION="wwwoffle = WWW Offline Explorer, an adv. caching proxy especially suitable for nonpermanent (e.g. dialup) Internet connections"
+DESCRIPTION="Web caching proxy suitable for non-permanent Internet connections"
 SRC_URI="http://www.gedanken.demon.co.uk/download-wwwoffle/${P}.tgz"
 HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
 
