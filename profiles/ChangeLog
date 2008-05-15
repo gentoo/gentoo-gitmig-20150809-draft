@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1414 2008/05/15 19:15:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1415 2008/05/15 21:48:44 mrness Exp $
+
+  15 May 2008; Alin Năstac <mrness@gentoo.org> package.mask:
+  Last rites for net-dialup/{mclient,mserver,linesrv,xlc}.
 
   15 May 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Update mask for app-doc/kchmviewer to app-text/kchmviewer as it was moved,
