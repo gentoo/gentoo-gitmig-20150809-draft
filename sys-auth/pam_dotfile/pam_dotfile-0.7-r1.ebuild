@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r1.ebuild,v 1.5 2007/07/11 13:08:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r1.ebuild,v 1.6 2008/05/15 01:26:13 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -45,8 +45,8 @@ src_compile() {
 }
 
 src_install() {
-	make -C src DESTDIR="${D}" install
-	make -C man DESTDIR="${D}" install
+	make -C src DESTDIR="${D}" install || die "make -C src install failed"
+	make -C man DESTDIR="${D}" install || die "make -C src install failed"
 
 	rm -f "${D}"/$(getpam_mod_dir)/pam_dotfile.la
 	fperms 4111 /usr/sbin/pam-dotfile-helper

@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_dotfile
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.7 2007/07/11 13:08:43 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.8 2008/05/15 01:26:13 flameeyes Exp $
+
+  15 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pam_dotfile-0.7-r1.ebuild:
+  Die on failed install.
 
   11 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> pam_dotfile-0.7.ebuild,
   pam_dotfile-0.7-r1.ebuild:
