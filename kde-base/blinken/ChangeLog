@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.63 2008/05/13 01:52:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.64 2008/05/15 07:02:24 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> blinken-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> blinken-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
