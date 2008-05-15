@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.530 2008/05/12 16:47:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.531 2008/05/15 23:19:07 ingmar Exp $
+
+*kdelibs-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kdelibs-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdelibs. Thanks to Jorge Manuel B. S. Vicetto.
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> kdelibs-3.5.9-r4.ebuild:
   Stable for HPPA (bug #221063).
