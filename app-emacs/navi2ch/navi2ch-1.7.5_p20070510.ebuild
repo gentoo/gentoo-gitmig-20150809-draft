@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5_p20070510.ebuild,v 1.3 2008/05/14 17:28:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5_p20070510.ebuild,v 1.4 2008/05/15 13:41:13 armin76 Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ SRC_URI="http://navi2ch.sourceforge.net/snapshot/${PN}-cvs_0.0.${MY_PV}-1.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 SITEFILE=50${PN}-gentoo.el
