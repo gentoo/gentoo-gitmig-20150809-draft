@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.18 2008/05/01 14:55:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.19 2008/05/15 15:25:11 cardoe Exp $
+
+  15 May 2008; Doug Goldstein <cardoe@gentoo.org>
+  -files/pam_krb5-1.0-errno_h.patch, -files/pam_krb5-1.0-gentoo.diff,
+  -files/pam_krb5-20030601-defaultrealm.patch, -pam_krb5-1.0-r1.ebuild,
+  -pam_krb5-2.2.6.ebuild, -pam_krb5-20030601-r1.ebuild:
+  dump old versions. only leave Eyrie.org versions
 
   01 May 2008; Markus Meier <maekke@gentoo.org> pam_krb5-3.10.ebuild:
   amd64/x86 stable, bug #213854
