@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r3.ebuild,v 1.4 2008/03/29 10:04:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.1 2008/05/15 16:48:38 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -18,13 +18,13 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="projectx"
 
-PATCHES="${FILESDIR}/${PV}/i18n.diff
-		${FILESDIR}/${PV}/menuburn.diff
-		${FILESDIR}/${PV}/menuitems.diff
-		${FILESDIR}/${PV}/${P}_setdefaults.diff
-		${FILESDIR}/${PV}/${P}-gentoo.diff
-		${FILESDIR}/${PV}/requantfactor.diff
-		${FILESDIR}/${PV}/charset-vdr-1.5.diff"
+PATCHES=("${FILESDIR}/${PV}/i18n.diff"
+	"${FILESDIR}/${PV}/menuburn.diff"
+	"${FILESDIR}/${PV}/menuitems.diff"
+	"${FILESDIR}/${PV}/${P}_setdefaults.diff"
+	"${FILESDIR}/${PV}/${P}-gentoo.diff"
+	"${FILESDIR}/${PV}/requantfactor.diff"
+	"${FILESDIR}/${PV}/charset-vdr-1.5.diff")
 
 DEPEND=">=media-video/vdr-1.4
 		>=dev-libs/libcdio-0.71
@@ -41,7 +41,7 @@ RDEPEND=">=media-video/dvdauthor-0.6.10
 		virtual/eject
 		virtual/cdrtools
 		>=app-cdr/dvd+rw-tools-5.21
-		projectx? ( >=media-video/projectx-0.90.4.00-r2 )"
+		projectx? ( >=media-video/projectx-0.90.4.00-r4 )"
 
 VDR_CONFD_FILE="${FILESDIR}/${PV}/confd"
 VDR_RCADDON_FILE="${FILESDIR}/${PV}/rc-addon.sh"

@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.27 2008/03/29 10:04:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.28 2008/05/15 16:48:38 zzam Exp $
+
+*vdr-burn-0.1.0_pre21-r4 (15 May 2008)
+
+  15 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.0.9-r2.ebuild, vdr-burn-0.0.9-r3.ebuild,
+  -vdr-burn-0.1.0_pre21-r3.ebuild, +vdr-burn-0.1.0_pre21-r4.ebuild:
+  Let vdr-burn-0.1.0_pre21 now depend on projectx-0.90.4.00-r4 as that fixes
+  very ugly hangups due to log parsing problems. Quoting cleanup.
 
   29 Mar 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-burn-0.1.0_pre21-r3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.16 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.17 2008/05/15 16:48:38 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -29,7 +29,7 @@ RDEPEND=">=media-video/vdrsync-0.1.3_pre1-r5
 
 S="${WORKDIR}/burn-${MY_PV}"
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff"
+PATCHES=("${FILESDIR}/${P}-gentoo.diff")
 
 VDR_CONFD_FILE="${FILESDIR}/confd-${PV}"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-${PV}.sh"
@@ -49,33 +49,33 @@ src_unpack(){
 	vdr-plugin_src_unpack
 
 	if grep -q "virtual cString Active" /usr/include/vdr/plugin.h; then
-		epatch ${FILESDIR}/${P}_vdr-1.3.47-compile.diff
+		epatch "${FILESDIR}/${P}_vdr-1.3.47-compile.diff"
 	fi
 }
 
 src_install() {
 	vdr-plugin_src_install
 
-	dobin ${S}/scripts/*.sh
+	dobin "${S}"/scripts/*.sh
 
 	insinto /usr/share/vdr/burn
-	doins ${S}/burn/{*.ttf,*.mp2}
-	newins ${S}/burn/menu-button.png menu-button-default.png
-	newins ${S}/burn/menu-bg.png menu-bg-default.png
+	doins "${S}"/burn/{*.ttf,*.mp2}
+	newins "${S}"/burn/menu-button.png menu-button-default.png
+	newins "${S}"/burn/menu-bg.png menu-bg-default.png
 	dosym menu-bg-default.png /usr/share/vdr/burn/menu-bg.png
 	dosym menu-button-default.png /usr/share/vdr/burn/menu-button.png
-	chown -R vdr:vdr ${D}/usr/share/vdr/burn
+	chown -R vdr:vdr "${D}"/usr/share/vdr/burn
 
 	insinto /etc/vdr/reccmds
-	doins ${FILESDIR}/reccmds.burn.conf
+	doins "${FILESDIR}/reccmds.burn.conf"
 }
 
 pkg_preinst() {
 
-	if [[ -L ${ROOT}/etc/vdr/plugins/burn ]]; then
+	if [[ -L "${ROOT}"/etc/vdr/plugins/burn ]]; then
 		elog "remove unneeded link /etc/vdr/plugins/burn"
 		elog "from prior install"
-		unlink ${ROOT}/etc/vdr/plugins/burn
+		unlink "${ROOT}"/etc/vdr/plugins/burn
 	fi
 }
 
