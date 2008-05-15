@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8593 2008/05/15 11:07:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8594 2008/05/15 11:14:59 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1429,10 +1429,6 @@ games-strategy/ufo2000
 # Raúl Porcel <armin76@gentoo.org> (24 Jan 2007)
 # Mask cvs version of net-p2p/linuxdcpp
 =net-p2p/linuxdcpp-9999
-
-# Sandro Bonazzola <sanchan@gentoo.org> (16 Jan 2007)
-# Masked for testing
-=app-arch/rpm-4.4.7-r3
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (15 Jan 2007)
 # The Armagetron Advanced packages in Gentoo's repository are obsolete and will
