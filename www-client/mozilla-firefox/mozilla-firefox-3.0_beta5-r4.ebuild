@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5-r4.ebuild,v 1.1 2008/05/15 10:59:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_beta5-r4.ebuild,v 1.2 2008/05/15 13:37:35 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -269,9 +269,9 @@ src_install() {
 		XULRUNNER_VERSION=`${PKG_CONFIG} --modversion libxul`
 
 		#set the application.ini
-		sed -i -e "s|BuildID=.*$|BuildID=${X_DATE}GentooMozillaFirefox|"	${MOZILLA_FIVE_HOME}/application.ini
-		sed -i -e "s|MinVersion=.*$|MinVersion=${XULRUNNER_VERSION}|" ${MOZILLA_FIVE_HOME}/application.ini
-		sed -i -e "s|MaxVersion=.*$|MaxVersion=${XULRUNNER_VERSION}|" ${MOZILLA_FIVE_HOME}/application.ini
+		sed -i -e "s|BuildID=.*$|BuildID=${X_DATE}GentooMozillaFirefox|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
+		sed -i -e "s|MinVersion=.*$|MinVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
+		sed -i -e "s|MaxVersion=.*$|MaxVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
 		# Create /usr/bin/firefox
 		make_wrapper firefox "/usr/bin/xulrunner-1.9 ${MOZILLA_FIVE_HOME}/application.ini"
 	else
