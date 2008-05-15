@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8617 2008/05/15 16:24:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8618 2008/05/15 16:52:02 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -257,11 +257,6 @@ media-sound/lastfmproxy
 =sys-apps/ucspi-ssl-0.70-r1
 =sys-apps/ucspi-tcp-0.88-r17
 =sys-process/daemontools-0.76-r6
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (6 Apr 2008)
-# Masked for removal on 5 May 2008, please use app-laptop/omnibook.
-# Live SVN ebuild, not needed as app-laptop/omnibook has been updated.
-app-laptop/omnibook-svn
 
 # Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
