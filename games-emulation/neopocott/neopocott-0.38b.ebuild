@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.7 2006/09/19 19:11:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.8 2008/05/15 12:36:48 nyhm Exp $
 
 inherit games
 
@@ -16,8 +16,7 @@ RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
-	sys-libs/zlib
-	virtual/libc"
+	sys-libs/zlib"
 
 S=${WORKDIR}
 
