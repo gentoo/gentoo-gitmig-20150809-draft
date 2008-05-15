@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.98 2008/05/13 14:49:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.99 2008/05/15 13:24:17 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kdebase-meta-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kdebase-meta-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
