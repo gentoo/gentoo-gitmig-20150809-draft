@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.467 2008/05/15 17:35:24 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.468 2008/05/15 20:15:39 klausman Exp $
+
+  15 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  vanilla-sources-2.6.26_rc2.ebuild:
+  Keyworded on alpha, the cciss bug is fixed.
 
 *vanilla-sources-2.6.25.4 (15 May 2008)
 
