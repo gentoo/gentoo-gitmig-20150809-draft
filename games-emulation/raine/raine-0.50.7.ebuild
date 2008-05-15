@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.7.ebuild,v 1.3 2008/05/08 21:58:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.7.ebuild,v 1.4 2008/05/15 13:30:04 nyhm Exp $
 
-inherit versionator games
+inherit eutils versionator games
 
 MY_PV=$(replace_version_separator 3 '-')
 
