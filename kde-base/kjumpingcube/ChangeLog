@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kjumpingcube
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.89 2008/05/14 19:38:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.90 2008/05/15 23:49:50 ingmar Exp $
+
+*kjumpingcube-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kjumpingcube-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kjumpingcube. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kjumpingcube-3.5.9.ebuild:
   Stable on ppc64; bug #221063
