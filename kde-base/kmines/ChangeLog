@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmines
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.90 2008/05/14 19:28:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.91 2008/05/15 23:56:53 ingmar Exp $
+
+*kmines-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kmines-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kmines. Thanks to Jorge Manuel B. S. Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kmines-3.5.9.ebuild:
   Stable on ppc64; bug #221063
