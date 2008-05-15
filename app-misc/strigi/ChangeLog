@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.4 2008/03/19 04:24:48 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.5 2008/05/15 10:39:31 ingmar Exp $
+
+*strigi-0.5.9 (14 May 2008)
+
+  14 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +strigi-0.5.9.ebuild:
+  Version bump.
 
   19 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/strigi-0.5.7-automagic-deps.patch,
