@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.19 2008/04/20 09:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.20 2008/05/15 13:32:31 nyhm Exp $
 
-inherit eutils games autotools
+inherit eutils autotools games
 
 DEB_VER="9"
 DESCRIPTION="Put the balls in the pockets of the same color by manipulating a maze of tubes"
