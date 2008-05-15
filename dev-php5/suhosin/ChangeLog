@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.27 2008/05/13 13:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.28 2008/05/15 12:04:21 hoffie Exp $
+
+*suhosin-0.9.24 (15 May 2008)
+
+  15 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  -suhosin-0.9.17.ebuild, -suhosin-0.9.18.ebuild, -suhosin-0.9.20.ebuild,
+  +suhosin-0.9.24.ebuild:
+  version bump to 0.9.24 (bug 222087), removing old
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> suhosin-0.9.23.ebuild:
   Stable for HPPA (LuckyLuke).
