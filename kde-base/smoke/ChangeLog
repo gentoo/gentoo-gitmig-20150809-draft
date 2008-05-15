@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.57 2008/02/20 23:36:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.58 2008/05/15 14:43:17 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> smoke-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
 *smoke-3.5.9 (20 Feb 2008)
 
