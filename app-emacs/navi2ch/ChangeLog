@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.40 2008/05/15 13:41:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.41 2008/05/15 20:42:11 maekke Exp $
+
+  15 May 2008; Markus Meier <maekke@gentoo.org>
+  navi2ch-1.7.5_p20070510.ebuild:
+  amd64 stable, bug #222039
 
   15 May 2008; Raúl Porcel <armin76@gentoo.org>
   navi2ch-1.7.5_p20070510.ebuild:
