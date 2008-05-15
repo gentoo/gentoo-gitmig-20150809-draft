@@ -1,8 +1,0 @@
---- hetio.h.orig	2005-05-17 03:51:59.000000000 -0400
-+++ hetio.h	2005-05-17 03:52:02.000000000 -0400
-@@ -19,4 +19,4 @@
- int hetio_read_input(int fd);
- void hetio_reset_term(void);
- 
--extern int hetio_inter;
-+//extern int hetio_inter;
