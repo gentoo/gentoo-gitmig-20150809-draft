@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.7 2008/04/03 20:46:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.8 2008/05/15 22:58:52 ingmar Exp $
+
+*kde-l10n-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kde-l10n-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kde-l10n. Thanks to Jorge Manuel B. S. Vicetto.
 
 *kde-l10n-4.0.3 (03 Apr 2008)
 
