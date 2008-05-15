@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8592 2008/05/15 10:53:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8593 2008/05/15 11:07:33 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1272,11 +1272,6 @@ dev-util/larch
 # Raúl Porcel <armin76@gentoo.org> (15 Jun 2007)
 # Mask livesvn ebuild
 =net-p2p/deluge-9999
-
-# Roy Marples <uberlord@gentoo.org> (31 May 2007)
-# Masked, pending removal. Remove in 30 days
-# Use dash instead
-app-shells/ash
 
 # Seemant Kulleen <seemant@gentoo.org> (23 May 2007)
 # Masked because 1.2.1 because it is broken
