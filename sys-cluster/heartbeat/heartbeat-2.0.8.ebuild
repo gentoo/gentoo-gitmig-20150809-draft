@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.12 2008/04/19 23:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.13 2008/05/15 00:59:16 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,7 @@ RDEPEND="
 	management? (
 		>=dev-lang/python-2.4
 		>=dev-python/pygtk-2.4
-		>=sys-libs/pam-0.78-r3
+		virtual/pam
 	)
 	"
 DEPEND="${RDEPEND}
