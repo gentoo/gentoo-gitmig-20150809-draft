@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.9.ebuild,v 1.1 2008/05/15 10:39:31 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.9.ebuild,v 1.2 2008/05/15 10:55:41 ingmar Exp $
 
 EAPI="1"
 inherit eutils cmake-utils
@@ -73,6 +73,7 @@ src_compile() {
 	mycmakeargs="${mycmakeargs}
 		-DENABLE_EXPAT=OFF -DENABLE_POLLING=ON
 		-DFORCE_DEPS=ON -DENABLE_CPPUNIT=OFF
+		-DENABLE_REGENERATEXSD=OFF
 		$(cmake-utils_use_enable clucene CLUCENE)
 		$(cmake-utils_use_enable dbus DBUS)
 		$(cmake-utils_use_enable exiv2 EXIV2)
