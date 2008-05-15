@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.6 2008/05/15 10:55:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.7 2008/05/15 12:46:15 ingmar Exp $
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> strigi-0.5.9.ebuild:
+  Re-add gcc 4.3.0 patch.
 
   15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> strigi-0.5.9.ebuild:
   The java USE flag was removed, so we need to force
