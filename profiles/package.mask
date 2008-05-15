@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8612 2008/05/15 15:26:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8613 2008/05/15 15:31:45 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1530,11 +1530,6 @@ sys-apps/gli
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
 dev-lisp/cl-blog
-
-# David Holm <dholm@gentoo.org> (11 Jun 2005)
-# Masked since it is known to create broken partition
-# tables on some configurations. Use parted instead.
-sys-fs/amiga-fdisk
 
 # Diego Pettenò <flameeyes@gentoo.org> (10 Jun 2005)
 # Still no way to test this, waiting ofr upstream or someone to come up
