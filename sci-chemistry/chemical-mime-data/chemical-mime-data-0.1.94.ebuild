@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.2 2008/01/03 15:29:48 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.3 2008/05/15 19:45:11 maekke Exp $
 
 inherit eutils fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN/-data/}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-util/pkgconfig
