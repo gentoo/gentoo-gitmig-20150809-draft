@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.89 2008/05/14 12:51:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.90 2008/05/15 23:27:59 ingmar Exp $
+
+*kdeutils-meta-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdeutils-meta-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdeutils-meta. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kdeutils-meta-3.5.9.ebuild:
   Stable on ppc64; bug #221063
