@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8608 2008/05/15 15:02:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8609 2008/05/15 15:05:36 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -302,7 +302,7 @@ app-laptop/omnibook-svn
 # Luca Barbato <lu_zero@gentoo.org> (26 Mar 2008)
 # huge ffmpeg migration mask, append to this further packages working
 # with the new include layout
->=media-video/ffmpeg-0.4.9_p20080326
+>=media-video/ffmpeg-0.4.9_p20080206
 =media-gfx/blender-2.45-r3
 =x11-misc/xvidcap-1.1.7_rc1
 
@@ -472,10 +472,6 @@ x11-misc/mkxf86config
 # Marius Mauch <genone@gentoo.org> (09 Feb 2008)
 # First public test releases of portage-2.2
 >=sys-apps/portage-2.2_alpha
-
-# Luca Barbato <lu_zero@gentoo.org> (06 Feb 2008)
-# temp mask pending test
-=media-video/ffmpeg-0.4.9_p20080206
 
 # Sebastien Fabbro <bicatali@gentoo.org> (05 Feb 2008)
 # sci-libs/metis-5.* still experimental
