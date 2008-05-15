@@ -1,16 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.13-r1.ebuild,v 1.2 2008/05/15 15:00:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.13a_pre20070930_p2.ebuild,v 1.1 2008/05/15 15:00:51 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
+DEB_PL="${P##*_p}"
+MY_PV="${PV##*_pre}"
+MY_GIT="git${MY_PV%%_*}"
+MY_PV="${PV%%_*}"
+MY_P="${PN}_${MY_PV}+${MY_GIT}"
+
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
-SRC_URI="http://dev.gentoo.org/~gustavoz/dist/${PF}.tar.bz2"
+SRC_URI="mirror://debian/pool/main/s/${PN}/${MY_P}.orig.tar.gz
+	mirror://debian/pool/main/s/${PN}/${MY_P}-${DEB_PL}.diff.gz"
 HOMEPAGE="http://www.sparc-boot.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* sparc"
+KEYWORDS="-* ~sparc"
 IUSE="hardened"
 
 PROVIDE="virtual/bootloader"
@@ -20,10 +27,19 @@ DEPEND="sys-fs/e2fsprogs
 
 ABI_ALLOW="sparc32"
 
+S="${WORKDIR}/${PN}"
+
 src_unpack() {
 	unpack ${A}
+
+	epatch ${MY_P}-${DEB_PL}.diff
+
 	cd "${S}"
-	epatch "${FILESDIR}"/silo-1.4.x-noglibc_time.patch
+	epatch "${WORKDIR}"/${MY_P/_/-}/debian/patches/*.patch
+	epatch "${FILESDIR}"/sanitized-linuxheaders.patch
+
+	#Set the correct version
+	sed -i -e "s/1.4.13/1.4.13_git20070830_p2/g" Rules.make
 }
 
 src_compile() {

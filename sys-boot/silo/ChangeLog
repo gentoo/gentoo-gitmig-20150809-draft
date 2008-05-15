@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/silo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.36 2007/07/24 15:18:29 gustavoz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.37 2008/05/15 15:00:51 armin76 Exp $
+
+*silo-1.4.13a_pre20070930_p2 (15 May 2008)
+
+  15 May 2008; Raúl Porcel <armin76@gentoo.org>
+  +files/sanitized-linuxheaders.patch, silo-1.4.13-r1.ebuild,
+  +silo-1.4.13a_pre20070930_p2.ebuild:
+  Version bump, using debian patchset and snapshot from git
 
 *silo-1.4.13-r1 (24 Jul 2007)
 
