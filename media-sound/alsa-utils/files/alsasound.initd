@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.7 2008/05/15 18:16:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.8 2008/05/15 19:52:42 beandog Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -221,9 +221,11 @@ stop() {
 	fi
 	
 	if [ -f /proc/modules ] && [ "${UNLOAD_ON_STOP}" = "yes" ]; then
-		local ver="24"
-		rmmod --version | grep -q module-init-tools && ver="26"
-
+		local ver="26"
+		case "$(uname -r)" in
+			2.[01234].*) ver="24";;
+			*) ver="26";;
+		esac
 		ebegin "Unloading ALSA modules"
 		eindent
 		unload_modules_${ver}

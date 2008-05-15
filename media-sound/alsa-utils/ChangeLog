@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.236 2008/05/15 18:16:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.237 2008/05/15 19:52:42 beandog Exp $
+
+  15 May 2008; Steve Dibb <beandog@gentoo.org> files/alsasound.initd:
+  Check for kernel version, bug 207371
 
   15 May 2008; Steve Dibb <beandog@gentoo.org> files/alsasound.confd,
   files/alsasound.initd:
