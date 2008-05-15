@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc2-r1.ebuild,v 1.1 2008/05/15 20:28:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc2-r1.ebuild,v 1.2 2008/05/15 20:41:17 beandog Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -49,6 +49,13 @@ DEPEND="${RDEPEND}
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
+
+pkg_setup() {
+	if use X && ! built_with_use media-libs/libsdl X; then
+		eerror "media-libs/libsdl must be built with the X use flag."
+		die "fix use flags"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
