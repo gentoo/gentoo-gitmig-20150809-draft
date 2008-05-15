@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.1.ebuild,v 1.2 2008/02/20 11:41:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.1.ebuild,v 1.3 2008/05/15 13:34:01 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Play Neverwinter Nights movies inside the Linux client."
 HOMEPAGE="http://home.woh.rr.com/nwmovies/nwmovies/"
@@ -27,7 +27,6 @@ pkg_setup() {
 }
 
 src_install() {
-	cd "${S}"
 	exeinto "${DESTDIR}"
 	doexe nwmovies.so nwmovies.pl || die "Installation failed"
 	exeinto "${DESTDIR}/nwmovies"
