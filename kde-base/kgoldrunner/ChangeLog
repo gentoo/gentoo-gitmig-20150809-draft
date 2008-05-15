@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kgoldrunner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/ChangeLog,v 1.89 2008/05/14 19:40:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/ChangeLog,v 1.90 2008/05/15 23:38:38 ingmar Exp $
+
+*kgoldrunner-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kgoldrunner-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kgoldrunner. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kgoldrunner-3.5.9.ebuild:
   Stable on ppc64; bug #221063
