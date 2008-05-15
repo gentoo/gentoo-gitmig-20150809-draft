@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.7 2006/08/15 14:52:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.8 2008/05/15 13:04:44 nyhm Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 
 src_unpack() {
 	unpack ${A}

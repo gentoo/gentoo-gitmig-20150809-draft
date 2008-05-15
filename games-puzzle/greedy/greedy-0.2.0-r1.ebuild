@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.7 2006/06/29 15:39:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.8 2008/05/15 13:03:38 nyhm Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 
 src_compile() {
 	emake FLAGS="${CFLAGS}" STRIP=ls || die "emake failed"
