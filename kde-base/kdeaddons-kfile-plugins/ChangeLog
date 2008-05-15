@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.62 2008/05/13 01:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.63 2008/05/15 14:09:51 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org>
+  kdeaddons-kfile-plugins-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org>
   kdeaddons-kfile-plugins-3.5.9.ebuild:

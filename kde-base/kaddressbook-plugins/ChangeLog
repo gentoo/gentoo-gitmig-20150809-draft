@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.82 2008/05/13 14:42:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.83 2008/05/15 14:16:04 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org>
+  kaddressbook-plugins-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org>
   kaddressbook-plugins-3.5.9.ebuild:
