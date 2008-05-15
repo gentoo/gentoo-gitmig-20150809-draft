@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.84 2008/05/15 06:19:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.85 2008/05/15 22:49:57 ingmar Exp $
+
+*kbruch-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kbruch-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kbruch. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kbruch-3.5.9.ebuild:
   Stable on ppc64; bug #221063
