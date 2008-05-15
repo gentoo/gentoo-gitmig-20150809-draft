@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.5 2007/12/05 03:46:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.6 2008/05/15 13:16:53 nyhm Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	sys-libs/zlib"
+RDEPEND="sys-libs/zlib"
 
 S=${WORKDIR}/${P/a/}
 
@@ -30,7 +29,6 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe biounzip || die
+	dobin biounzip || die
 	dodoc biozip.txt
 }
