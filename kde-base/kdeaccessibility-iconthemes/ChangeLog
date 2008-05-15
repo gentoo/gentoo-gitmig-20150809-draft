@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeaccessibility-iconthemes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.85 2008/05/14 11:05:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.86 2008/05/15 23:02:50 ingmar Exp $
+
+*kdeaccessibility-iconthemes-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdeaccessibility-iconthemes-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdeaccessibility-iconthemes. Thanks to Jorge
+  Manuel B. S. Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org>
   kdeaccessibility-iconthemes-3.5.9.ebuild:
