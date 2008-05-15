@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.80 2008/05/14 12:23:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.81 2008/05/15 23:34:51 ingmar Exp $
+
+*kfloppy-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kfloppy-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kfloppy. Thanks to Jorge Manuel B. S. Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kfloppy-3.5.9.ebuild:
   Stable on ppc64; bug #221063
