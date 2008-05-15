@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8596 2008/05/15 11:34:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8597 2008/05/15 11:43:33 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1032,10 +1032,6 @@ sys-kernel/hppa-sources
 # Raúl Porcel <armin76@gentoo.org> (22 Nov 2007)
 # Needs a lot of testing
 =www-client/mozilla-firefox-bin-3.0_beta*
-
-# Marijn Schouten <hkBst@gentoo.org> (21 Nov 2007)
-# masked for security bug 198979
-<=dev-scheme/chicken-2.6
 
 # Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
 # There is a serious regression (bug #199450) due to
