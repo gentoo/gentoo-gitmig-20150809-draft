@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.98 2008/05/15 12:21:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.99 2008/05/15 16:24:06 armin76 Exp $
+
+  15 May 2008; Raúl Porcel <armin76@gentoo.org> glade-2.12.2-r1.ebuild:
+  alpha stable wrt #201962
 
   15 May 2008; Ferris McCormick <fmccor@gentoo.org> glade-2.12.2-r1.ebuild:
   Sparc stable, Bug #201962.
