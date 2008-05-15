@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_ssh_agent
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.6 2007/02/22 01:03:30 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.7 2008/05/15 01:32:03 flameeyes Exp $
+
+  15 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pam_ssh_agent-0.2-r1.ebuild:
+  Remove keychain from build-time dependencies.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
