@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.88 2008/05/15 06:33:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.89 2008/05/15 23:48:23 ingmar Exp $
+
+*kiten-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kiten-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kiten. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kiten-3.5.9.ebuild:
   Stable on ppc64; bug #221063
