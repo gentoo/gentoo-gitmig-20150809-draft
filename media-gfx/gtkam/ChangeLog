@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.48 2008/05/13 10:55:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.49 2008/05/15 19:36:36 maekke Exp $
+
+  15 May 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  graphics herd will help to maintain this package
 
   13 May 2008; Gilles Dartiguelongue <eva@gentoo.org> gtkam-0.1.14.ebuild:
   Scrollkeeper is not optional for correct installation.
