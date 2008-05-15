@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.89 2008/05/14 12:33:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.90 2008/05/15 22:36:07 ingmar Exp $
+
+*ark-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +ark-4.0.4.ebuild:
+  Added KDE 4.0.4 version of ark. Thanks to Jorge Manuel B. S. Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> ark-3.5.9.ebuild:
   Stable on ppc64; bug #221063
