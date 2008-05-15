@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.17 2008/03/17 12:16:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.18 2008/05/15 18:40:29 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -11,7 +11,7 @@ LANGS="af ar be bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN h
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
 DESCRIPTION="Firefox Web Browser"
-HOMEPAGE="http://www.mozilla.org/projects/firefox/"
+HOMEPAGE="http://www.mozilla.com/firefox"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
