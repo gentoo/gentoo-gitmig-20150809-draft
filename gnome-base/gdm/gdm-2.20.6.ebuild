@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.6 2008/04/12 13:52:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.6.ebuild,v 1.1 2008/05/15 22:11:39 eva Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -9,13 +9,13 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_LIBC="elibc_glibc"
-IUSE="accessibility afs branding dmx ipv6 pam remote selinux tcpd xinerama $IUSE_LIBC"
+IUSE="accessibility afs branding dmx ipv6 gnome-keyring pam remote selinux tcpd xinerama $IUSE_LIBC"
 
 # Name of the tarball with gentoo specific files
-GDM_EXTRA="${PN}-2.8-gentoo-files-r2"
+GDM_EXTRA="${PN}-2.20.5-gentoo-files"
 
 SRC_URI="${SRC_URI}
 		 mirror://gentoo/${GDM_EXTRA}.tar.bz2
@@ -42,6 +42,7 @@ RDEPEND="dev-libs/dbus-glib
 		 accessibility? ( x11-libs/libXevie )
 		 afs? ( net-fs/openafs sys-libs/lwp )
 		 dmx? ( x11-libs/libdmx )
+		 gnome-keyring? ( >=gnome-base/gnome-keyring-2.22 )
 		 pam? (
 			virtual/pam
 			>=sys-auth/pambase-20080318
@@ -82,8 +83,18 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-dmx=no"
 	fi
 
+	if use gnome-keyring && ! built_with_use gnome-base/gnome-keyring pam; then
+		eerror "You need to build gnome-base/gnome-keyring with USE=\"pam\""
+		eerror "for USE=\"gnome-keyring\" to have any effect on this package."
+	fi
+
 	if use pam; then
 		G2CONF="${G2CONF} --enable-authentication-scheme=pam"
+
+		if use gnome-keyring && ! built_with_use sys-auth/pambase gnome-keyring; then
+			eerror "You need USE=\"gnome\" in sys-auth/pambase for proper keyring"
+			eerror "unlocking at login time. It will not work properly otherwise."
+		fi
 	else
 		G2CONF="${G2CONF} --enable-console-helper=no"
 		if use elibc_glibc ; then
@@ -123,8 +134,8 @@ src_install() {
 	keepdir /var/log/gdm
 	keepdir /var/gdm
 
-	chown root:gdm "${D}/var/gdm"
-	chmod 1770 "${D}/var/gdm"
+	fowners root:gdm /var/gdm
+	fperms 1770 /var/gdm
 
 	# use our own session script
 	rm -f "${D}/etc/X11/gdm/Xsession"
@@ -142,7 +153,8 @@ src_install() {
 	rm -rf "${D}/etc/pam.d"
 
 	if use pam ; then
-		sed -i "s:system-auth:system-local-login:g" "${gentoodir}"/pam.d/*
+		use gnome-keyring && sed -i "s:#Keyring=::g" "${gentoodir}"/pam.d/*
+
 		dopamd "${gentoodir}"/pam.d/*
 		dopamsecurity console.apps "${gentoodir}/security/console.apps/gdmsetup"
 	fi
@@ -175,6 +187,11 @@ pkg_postinst() {
 	elog "at /usr/share/gdm/{defaults.conf,factory-defaults.conf}"
 
 	elog "See README.install for more information about the change."
+
+	if use gnome-keyring; then
+		elog "For autologin to unlock your keyring, you need to set an empty"
+		elog "password on your keyring. Use app-crypt/seahorse for that."
+	fi
 
 	if [ -f "/etc/X11/gdm/gdm.conf" ]; then
 		elog "You had /etc/X11/gdm/gdm.conf which is the old configuration"
