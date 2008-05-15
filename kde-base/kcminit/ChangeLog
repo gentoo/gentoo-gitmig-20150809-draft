@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.76 2008/05/12 21:10:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.77 2008/05/15 11:03:05 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kcminit-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> kcminit-3.5.9.ebuild:
   Stable for HPPA (bug #221063).

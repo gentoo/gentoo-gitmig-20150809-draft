@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.90 2008/05/12 20:02:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.91 2008/05/15 10:51:45 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> libkonq-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Brent Baude <ranger@gentoo.org> libkonq-3.5.9.ebuild:
   Marking libkonq-3.5.9 ppc stable for bug 221063

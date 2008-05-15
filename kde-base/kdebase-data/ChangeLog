@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.90 2008/05/12 20:02:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.91 2008/05/15 10:47:51 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kdebase-data-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Brent Baude <ranger@gentoo.org> kdebase-data-3.5.9.ebuild:
   Marking kdebase-data-3.5.9 ppc stable for bug 221063
