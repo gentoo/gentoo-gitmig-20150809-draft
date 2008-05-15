@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.2 2008/04/11 11:31:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.3 2008/05/15 15:54:49 flameeyes Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit subversion
 	ESVN_REPO_URI="http://svn.quassel-irc.org/trunk"
 else
-	MY_P="${P/_alpha/-alpha}"
+	MY_P="${P/_/-}"
 	SRC_URI="http://quassel-irc.org/system/files/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
 fi
@@ -72,6 +72,8 @@ src_install() {
 	use server && targets="${targets} build/targets/quasselcore"
 	use X && targets="${targets} build/targets/quasselclient"
 	dobin $targets  || die "quasselcore install failed"
+
+	domenu ${PN}.desktop || die "desktop file install failed"
 
 	dodoc ChangeLog README README.Qtopia || "dodoc failed"
 }
