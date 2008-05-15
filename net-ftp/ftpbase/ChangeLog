@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.18 2008/05/15 09:42:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.19 2008/05/15 18:57:33 jer Exp $
+
+  15 May 2008; Jeroen Roovers <jer@gentoo.org> ftpbase-0.01-r1.ebuild:
+  Stable for HPPA (bug #222151).
 
   15 May 2008; Raúl Porcel <armin76@gentoo.org> ftpbase-0.01-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #222151
