@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.6 2007/12/29 06:37:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.7 2008/05/15 18:16:18 beandog Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -214,9 +214,11 @@ stop() {
 
 	[ "${SAVE_ON_STOP}" = "yes" ] && save
 
-	ebegin "Killing processes using ALSA"
-	terminate
-	eend 0
+	if [ "${KILLPROC_ON_STOP}" = "yes" ] ; then
+		ebegin "Killing processes using ALSA"
+		terminate
+		eend 0
+	fi
 	
 	if [ -f /proc/modules ] && [ "${UNLOAD_ON_STOP}" = "yes" ]; then
 		local ver="24"
