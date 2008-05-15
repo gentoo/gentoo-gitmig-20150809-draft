@@ -1,0 +1,14 @@
+diff -rup virt-manager-0.5.4.orig/src/virtManager/connection.py virt-manager-0.5.4/src/virtManager/connection.py
+--- virt-manager-0.5.4.orig/src/virtManager/connection.py	2008-03-10 20:17:51.000000000 -0400
++++ virt-manager-0.5.4/src/virtManager/connection.py	2008-03-13 13:51:14.000000000 -0400
+@@ -336,6 +336,9 @@ class vmmConnection(gobject.GObject):
+         self.connectThread.start()
+ 
+     def _do_creds_polkit(self, action):
++        if os.getuid() == 0:
++            logging.debug("Skipping policykit check as root")
++            return 0
+         logging.debug("Doing policykit for %s" % action)
+         bus = dbus.SessionBus()
+         obj = bus.get_object("org.gnome.PolicyKit", "/org/gnome/PolicyKit/Manager")
+Only in virt-manager-0.5.4/src/virtManager: connection.py~
