@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8614 2008/05/15 15:37:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8615 2008/05/15 15:59:21 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1130,10 +1130,6 @@ dev-lang/ezm3
 # duplicated by media-fonts/artwiz-aleczapka-en.  use that instead.
 # Bug #186400
 media-fonts/artwiz-fonts
-
-# Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
-# Broken by upstream. cf. bug 173972.
-=media-video/konverter-0.93
 
 # Jim Ramsay <lack@gentoo.org> (19 Jul 2007)
 # netscape-flash-9.0.48.0-r1 addresses Gentoo bug #185141 by using the versioned
