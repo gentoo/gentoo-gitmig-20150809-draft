@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.10 2008/05/15 01:41:57 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.11 2008/05/15 11:18:37 ingmar Exp $
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> nessus-bin-3.2.0.ebuild:
+  Fix SRC_URI syntax, whitespace.
 
 *nessus-bin-3.2.0 (14 May 2008)
 

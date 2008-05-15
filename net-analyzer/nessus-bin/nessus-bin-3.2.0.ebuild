@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.1 2008/05/15 01:41:57 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.2 2008/05/15 11:18:37 ingmar Exp $
 
 inherit rpm
 
@@ -9,8 +9,8 @@ MY_P="Nessus-${PV}-es5"
 
 DESCRIPTION="A remote security scanner for Linux"
 HOMEPAGE="http://www.nessus.org"
-SRC_URI="x86? (${MY_P}.i386.rpm)
-	amd64? (${MY_P}.x86_64.rpm)"
+SRC_URI="x86? ( ${MY_P}.i386.rpm )
+	amd64? ( ${MY_P}.x86_64.rpm )"
 RESTRICT="mirror fetch strip"
 
 LICENSE="Nessus-EULA"
@@ -29,10 +29,10 @@ pkg_nofetch() {
 		einfo "Please download ${MY_P}.i386.rpm from ${HOMEPAGE}/download"
 		einfo "The archive should then be placed into ${DISTDIR}."
 	fi
-	
+
 	if use amd64; then
 		einfo "Please download ${MY_P}.x86_64.rpm from ${HOMEPAGE}/download"
-        	einfo "The archive should then be placed into ${DISTDIR}."
+		einfo "The archive should then be placed into ${DISTDIR}."
 	fi
 }
 
@@ -68,9 +68,9 @@ src_install() {
 	# init script
 	newinitd "${FILESDIR}"/nessusd-initd nessusd-bin
 
-   	dosym /usr/lib/libssl.so.0.9.8 /usr/lib/libssl.so.6
+	dosym /usr/lib/libssl.so.0.9.8 /usr/lib/libssl.so.6
 	dosym /usr/lib/libcrypto.so.0.9.8 /usr/lib/libcrypto.so.6
-}	
+}
 
 pkg_postinst() {
 	elog "You can get started running the following commands:"
