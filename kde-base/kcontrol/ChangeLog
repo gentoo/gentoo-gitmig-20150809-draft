@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.115 2008/05/13 13:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.116 2008/05/15 11:08:23 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kcontrol-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kcontrol-3.5.9.ebuild:
   Stable for HPPA (bug #221063).

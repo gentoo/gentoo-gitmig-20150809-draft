@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.6 2008/05/13 13:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.7 2008/05/15 11:08:23 corsair Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-10.tar.bz2"
 
 DESCRIPTION="The KDE Control Center"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="arts ieee1394 joystick logitech-mouse opengl kdehiddenvisibility"
 
 DEPEND=">=media-libs/freetype-2.3
