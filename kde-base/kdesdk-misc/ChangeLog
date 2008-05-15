@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.59 2008/05/15 15:52:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.60 2008/05/15 23:24:52 ingmar Exp $
+
+*kdesdk-misc-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdesdk-misc-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdesdk-misc. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kdesdk-misc-3.5.9.ebuild:
   Stable on ppc64; bug #221063
