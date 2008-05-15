@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/wiggle
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.17 2007/06/14 01:52:50 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.18 2008/05/15 23:51:12 drac Exp $
+
+  15 May 2008; Samuli Suominen <drac@gentoo.org> wiggle-0.6-r3.ebuild:
+  Because we get more warnings with GCC 4.3, disable -Werror from Makefile
+  wrt #218495.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> wiggle-0.6-r3.ebuild:
   Stable on amd64 wrt bug 181582

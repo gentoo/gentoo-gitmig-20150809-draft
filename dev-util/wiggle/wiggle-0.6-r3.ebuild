@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6-r3.ebuild,v 1.4 2007/06/14 01:52:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6-r3.ebuild,v 1.5 2008/05/15 23:51:12 drac Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -39,10 +39,9 @@ PATCHLIST="001NoQuietTime 002SpecFile 003Recommit 004ExtractFix 005Pchanges
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
+	cd "${S}"
 	for i in ${PATCHLIST}; do
-		epatch ${WORKDIR}/${PATCHBALL}/${i}
+		epatch "${WORKDIR}"/${PATCHBALL}/${i}
 	done;
 
 	# Fix the reference to the help file so `p help' works
@@ -55,11 +54,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" OptDbg="${CFLAGS}" wiggle || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Wall" \
+		wiggle || die "emake wiggle failed."
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 
 	dobin p
 	dodoc ANNOUNCE INSTALL TODO DOC/diff.ps notes
