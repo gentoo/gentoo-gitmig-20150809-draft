@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-audio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-audio/ChangeLog,v 1.74 2008/05/13 01:33:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-audio/ChangeLog,v 1.75 2008/05/15 13:52:15 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org>
+  renamedlg-audio-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> renamedlg-audio-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
