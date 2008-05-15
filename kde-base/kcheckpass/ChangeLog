@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.90 2008/05/12 21:28:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.91 2008/05/15 12:09:34 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kcheckpass-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> kcheckpass-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
