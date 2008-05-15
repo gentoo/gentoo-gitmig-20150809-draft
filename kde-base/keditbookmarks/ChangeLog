@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.6 2008/04/03 21:04:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.7 2008/05/15 23:31:44 ingmar Exp $
+
+*keditbookmarks-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +keditbookmarks-4.0.4.ebuild:
+  Added KDE 4.0.4 version of keditbookmarks. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
 *keditbookmarks-4.0.3 (03 Apr 2008)
 
