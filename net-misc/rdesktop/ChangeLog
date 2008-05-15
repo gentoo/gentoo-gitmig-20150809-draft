@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.104 2008/05/14 20:17:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.105 2008/05/15 04:04:37 jer Exp $
+
+  15 May 2008; Jeroen Roovers <jer@gentoo.org> rdesktop-1.6.0.ebuild:
+  Stable for HPPA (bug #220911).
 
   14 May 2008; Markus Meier <maekke@gentoo.org> rdesktop-1.6.0.ebuild:
   amd64/x86 stable, bug #220911
