@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwbar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwbar/ChangeLog,v 1.6 2008/01/17 20:14:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwbar/ChangeLog,v 1.7 2008/05/15 01:40:34 rich0 Exp $
+
+  15 May 2008; Richard Freeman <rich0@gentoo.org> bwbar-1.2.3.ebuild:
+  keyword ~amd64 - 205978
 
   17 Jan 2008; Raúl Porcel <armin76@gentoo.org> -bwbar-1.2.2.ebuild,
   bwbar-1.2.3.ebuild:
