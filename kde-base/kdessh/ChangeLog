@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdessh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.7 2008/04/03 21:01:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.8 2008/05/15 23:26:00 ingmar Exp $
+
+*kdessh-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kdessh-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdessh. Thanks to Jorge Manuel B. S. Vicetto.
 
 *kdessh-4.0.3 (03 Apr 2008)
 
