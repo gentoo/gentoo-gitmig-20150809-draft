@@ -1,6 +1,15 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.29 2008/04/03 14:50:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.30 2008/05/15 08:49:16 zzam Exp $
+
+*projectx-0.90.4.00-r4 (15 May 2008)
+
+  15 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/projectx-0.90.4.00-stdout-corrupt.diff,
+  +projectx-0.90.4.00-r4.ebuild:
+  Add a patch to clean up the stdout of the non-gui version. This makes the
+  output parsable by other software, especially by vdr-burn, solving some
+  strange bugs there.
 
   03 Apr 2008; Brent Baude <ranger@gentoo.org> projectx-0.90.4.00-r3.ebuild:
   stable ppc, bug 208138

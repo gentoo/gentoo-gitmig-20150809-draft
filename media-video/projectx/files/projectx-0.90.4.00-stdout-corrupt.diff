@@ -1,0 +1,12 @@
+diff -ru ProjectX_Source_0.90.4-orig/src/net/sourceforge/dvb/projectx/common/GuiInterface.java ProjectX_Source_0.90.4/src/net/sourceforge/dvb/projectx/common/GuiInterface.java
+--- ProjectX_Source_0.90.4-orig/src/net/sourceforge/dvb/projectx/common/GuiInterface.java	2008-05-14 18:48:05.833127359 +0200
++++ ProjectX_Source_0.90.4/src/net/sourceforge/dvb/projectx/common/GuiInterface.java	2008-05-14 18:48:39.773120746 +0200
+@@ -188,7 +188,7 @@
+ 			impl.updateProgressBar(percent);
+ 
+ 		else
+-			System.out.print("\r" + percent + " %");
++			System.out.print(percent + " %\r");
+ 	}
+ 
+ 	/**
