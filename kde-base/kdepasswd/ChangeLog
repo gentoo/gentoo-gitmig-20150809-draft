@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.95 2008/05/15 12:34:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.96 2008/05/15 23:22:26 ingmar Exp $
+
+*kdepasswd-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kdepasswd-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdepasswd. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kdepasswd-3.5.9.ebuild:
   Stable on ppc64; bug #221063
