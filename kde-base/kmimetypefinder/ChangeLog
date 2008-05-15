@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kmimetypefinder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.6 2008/04/03 21:15:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.7 2008/05/15 23:56:09 ingmar Exp $
+
+*kmimetypefinder-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kmimetypefinder-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kmimetypefinder. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
 *kmimetypefinder-4.0.3 (03 Apr 2008)
 
