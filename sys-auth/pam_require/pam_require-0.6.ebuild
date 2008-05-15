@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/pam_require-0.6.ebuild,v 1.2 2005/07/03 12:05:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/pam_require-0.6.ebuild,v 1.3 2008/05/15 01:21:10 flameeyes Exp $
 
 inherit eutils pam
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-libs/pam-0.72"
+DEPEND="virtual/pam"
 
 src_compile() {
 	./configure --prefix=/ || die "econf failed"
