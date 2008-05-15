@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.8 2008/05/15 19:52:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.9 2008/05/15 20:17:46 beandog Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -199,9 +199,9 @@ start() {
 		eerror "ALSA failed to load."
 		eend 1
 		return 1
+	elif [ "${RESTORE_ON_START}" = "yes" ]; then
+		restore
 	fi
-
-	[ "${RESTORE_ON_START}" = "yes" ] && restore
 
 	return 0
 }
