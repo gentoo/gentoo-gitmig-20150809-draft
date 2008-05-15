@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.94 2008/05/15 06:54:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.95 2008/05/15 22:42:23 ingmar Exp $
+
+*kalzium-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kalzium-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kalzium. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kalzium-3.5.9.ebuild:
   Stable on ppc64; bug #221063
