@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1413 2008/05/15 16:52:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1414 2008/05/15 19:15:52 pva Exp $
+
+  15 May 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Update mask for app-doc/kchmviewer to app-text/kchmviewer as it was moved,
+  thank Samuli Suominen for report.
 
   15 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Remove mask app-laptop/omnibook-svn.

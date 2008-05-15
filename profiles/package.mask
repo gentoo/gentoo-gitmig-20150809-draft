@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8618 2008/05/15 16:52:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8619 2008/05/15 19:15:52 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1064,7 +1064,7 @@ games-fps/americas-army
 
 # Peter Volkov <pva@gentoo.org> (28 Sep 2007)
 # masked for testing
->=app-doc/kchmviewer-4.0_beta1
+>=app-text/kchmviewer-4.0_beta1
 
 # Paul Varner <fuzzyray@gentoo.org> (27 Sep 2007)
 # revdep-rebuild is broken in this release
