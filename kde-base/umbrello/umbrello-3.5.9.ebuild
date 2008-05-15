@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/umbrello-3.5.9.ebuild,v 1.2 2008/03/04 01:34:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/umbrello-3.5.9.ebuild,v 1.3 2008/05/15 16:08:43 corsair Exp $
 
 KMNAME=kdesdk
 EAPI="1"
@@ -9,5 +9,5 @@ inherit kde-meta eutils
 SRC_URI="${SRC_URI} mirror://gentoo/kdesdk-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE: Umbrello UML Modeller"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"

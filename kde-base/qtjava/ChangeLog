@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.62 2008/02/23 19:55:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.63 2008/05/15 15:26:42 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> qtjava-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   23 Feb 2008; Vlastimil Babka <caster@gentoo.org> qtjava-3.5.9.ebuild:
   Apply the patch for bug #208631 also in 3.5.9.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.71 2008/03/07 20:35:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.72 2008/05/15 15:29:20 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kdejava-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdejava-3.5.9.ebuild:
   Allow mixing of split & monolithic ebuilds, where possible, thanks to

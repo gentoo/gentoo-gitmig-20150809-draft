@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.72 2008/03/04 01:31:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.73 2008/05/15 15:44:18 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kbabel-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kbabel-3.5.8.ebuild,
   kbabel-3.5.9.ebuild:

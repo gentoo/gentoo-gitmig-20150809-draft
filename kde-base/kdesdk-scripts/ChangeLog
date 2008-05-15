@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.71 2008/04/03 21:00:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.72 2008/05/15 15:55:02 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org>
+  kdesdk-scripts-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
 *kdesdk-scripts-4.0.3 (03 Apr 2008)
 

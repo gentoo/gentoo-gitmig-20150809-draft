@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbugbuster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.77 2008/04/03 20:42:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.78 2008/05/15 15:46:42 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kbugbuster-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
 *kbugbuster-4.0.3 (03 Apr 2008)
 

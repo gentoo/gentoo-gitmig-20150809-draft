@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.83 2008/03/07 20:37:20 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.84 2008/05/15 15:31:21 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> kjsembed-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kjsembed-3.5.9.ebuild:
   Allow mixing of split & monolithic ebuilds, where possible, thanks to
