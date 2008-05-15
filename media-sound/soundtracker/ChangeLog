@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundtracker
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.27 2008/02/29 20:07:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.28 2008/05/15 21:02:22 drac Exp $
+
+  15 May 2008; Samuli Suominen <drac@gentoo.org> soundtracker-0.6.8.ebuild:
+  pass --disable-alsa since there is no support for recent alsa wrt #196636.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> soundtracker-0.6.8.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
