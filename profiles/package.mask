@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8615 2008/05/15 15:59:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8616 2008/05/15 16:09:11 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1170,11 +1170,6 @@ kde-misc/kdbus
 # Masked due to several connectivity issues.
 >=net-wireless/wpa_supplicant-0.6.0
 
-# Wulf C. Krueger <philantrop@gentoo.org> (26 Jun 2007)
-# Broken in several ways, see bug 171493 for details.
-# The author has abandoned it.
-app-cdr/konqburn
-
 # Jurek Bartuszek <jurek@gentoo.org> (23 Jun 2007)
 # Beta versions, testing required
 =app-emulation/ies4linux-2.5*
@@ -1547,11 +1542,6 @@ net-mail/mailer-config
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
-
-# <danarmak@gentoo.org> (11 Dec 2004)
-# Considered broken by upstream; future to be decided
-kde-base/qtsharp
-kde-base/xparts
 
 # <dragonheart@gentoo.org> (04 Dec 2004)
 # Bug #70529 indicates problems with configuration file reading
