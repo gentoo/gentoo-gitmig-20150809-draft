@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.3.ebuild,v 1.1 2008/04/28 17:54:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.3.ebuild,v 1.2 2008/05/15 12:35:14 corsair Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://essej.net/sooperlooper/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="media-sound/jack-audio-connection-kit
