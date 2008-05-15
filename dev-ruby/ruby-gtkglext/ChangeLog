@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtkglext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.27 2008/04/22 18:08:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.28 2008/05/15 20:46:47 maekke Exp $
+
+  15 May 2008; Markus Meier <maekke@gentoo.org> ruby-gtkglext-0.16.0.ebuild:
+  amd64 stable, bug #215149
 
   22 Apr 2008; Hans de Graaff <graaff@gentoo.org>
   -ruby-gtkglext-0.14.1.ebuild, -ruby-gtkglext-0.15.0.ebuild:
