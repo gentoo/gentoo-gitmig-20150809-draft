@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1411 2008/05/15 09:49:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1412 2008/05/15 15:25:37 hoffie Exp $
+
+  15 May 2008; Christian Hoffmann <hoffie@gentoo.org> package.mask:
+  removing old masking of php-5.2.5_p* (no longer in the tree), updating
+  comment of php-4 mask
 
   15 May 2008; Mart Raudsepp <leio@gentoo.org> arch/amd64/package.mask,
   arch/x86/package.mask, base/package.mask,
