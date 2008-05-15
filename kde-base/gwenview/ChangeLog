@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.6 2008/04/03 20:37:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.7 2008/05/15 22:40:15 ingmar Exp $
+
+*gwenview-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +gwenview-4.0.4.ebuild:
+  Added KDE 4.0.4 version of gwenview. Thanks to Jorge Manuel B. S. Vicetto.
 
 *gwenview-4.0.3 (03 Apr 2008)
 
