@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeartwork-kworldclock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.89 2008/05/15 16:24:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.90 2008/05/15 23:09:05 ingmar Exp $
+
+*kdeartwork-kworldclock-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdeartwork-kworldclock-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdeartwork-kworldclock. Thanks to Jorge Manuel
+  B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org>
   kdeartwork-kworldclock-3.5.9.ebuild:
