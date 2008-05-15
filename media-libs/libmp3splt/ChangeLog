@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.3 2008/05/14 16:03:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.4 2008/05/15 18:08:37 jer Exp $
+
+  15 May 2008; Jeroen Roovers <jer@gentoo.org> libmp3splt-0.4_rc1.ebuild:
+  Marked ~hppa (bug #221989).
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> libmp3splt-0.4_rc1.ebuild:
   Added ~ppc64; bug #221989
