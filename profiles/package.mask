@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8599 2008/05/15 14:28:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8600 2008/05/15 14:31:56 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -458,10 +458,6 @@ sys-fs/redirfs
 # Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
 # Mask KDE4 versions of ktorrent as long as KDE4 is masked.
 >=net-p2p/ktorrent-3.0.0
-
-# Mike Frysinger <vapier@gentoo.org> (20 Feb 2008)
-# Use a generic package like dev-util/devel-chroots. #193566
-app-emulation/x86-chroot
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (20 Feb 2008)
 # Masking these so people will quit installing them on their systems.  These
