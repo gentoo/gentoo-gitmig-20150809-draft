@@ -1,4 +1,0 @@
-#!/bin/bash
-source /etc/conf.d/x86-chroot
-which xhost &>/dev/null && xhost local:localhost &>/dev/null
-linux32 chroot ${CHROOT_LOCATION} /bin/bash
