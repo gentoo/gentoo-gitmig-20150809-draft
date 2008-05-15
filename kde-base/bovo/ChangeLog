@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.6 2008/04/03 20:36:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.7 2008/05/15 22:37:25 ingmar Exp $
+
+*bovo-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +bovo-4.0.4.ebuild:
+  Added KDE 4.0.4 version of bovo. Thanks to Jorge Manuel B. S. Vicetto.
 
 *bovo-4.0.3 (03 Apr 2008)
 
