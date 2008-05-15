@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8591 2008/05/15 10:23:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8592 2008/05/15 10:53:19 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -867,7 +867,6 @@ app-admin/modlogan
 
 # Carsten Lohrke <carlo@gentoo.org> (07 Jan 2008)
 # Masked for removal
-app-emulation/basiliskII
 app-admin/hpasm
 
 # Ali Polatel <hawking@gentoo.org> (07 Jan 2008)
