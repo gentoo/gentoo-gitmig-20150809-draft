@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.3 2008/05/14 16:18:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.4 2008/05/15 19:46:41 maekke Exp $
+
+  15 May 2008; Markus Meier <maekke@gentoo.org> python-mpd-0.2.0.ebuild:
+  add ~x86, bug #222011
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> python-mpd-0.2.0.ebuild:
   Added ~ppc64; bug #222011
