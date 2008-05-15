@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.207 2008/04/14 07:41:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.208 2008/05/15 20:28:37 beandog Exp $
+
+*transcode-1.0.6_rc2-r1 (15 May 2008)
+
+  15 May 2008; Steve Dibb <beandog@gentoo.org> -transcode-1.0.6_rc2.ebuild,
+  +transcode-1.0.6_rc2-r1.ebuild:
+  Fix imagemagick dep, bug 218415
 
 *transcode-1.0.6_rc2 (14 Apr 2008)
 
