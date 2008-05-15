@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.93 2008/05/14 11:59:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.94 2008/05/15 23:09:45 ingmar Exp $
+
+*kdeartwork-meta-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdeartwork-meta-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdeartwork-meta. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org>
   kdeartwork-meta-3.5.9.ebuild:
