@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.87 2008/05/15 10:09:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.88 2008/05/15 23:26:41 ingmar Exp $
+
+*kdesu-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kdesu-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdesu. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kdesu-3.5.9.ebuild:
   Stable on ppc64; bug #221063
