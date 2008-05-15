@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.4 2008/02/25 22:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.5 2008/05/15 13:14:38 nyhm Exp $
 
 inherit eutils games
 
@@ -12,11 +12,9 @@ SRC_URI=" http://demos.linuxgamepublishing.com/mindrover/${MY_P}"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="strip"
 
-IUSE=""
-
-DEPEND="virtual/libc"
 RDEPEND="virtual/opengl"
 
 S=${WORKDIR}
@@ -45,5 +43,5 @@ src_install() {
 	games_make_wrapper ${PN} ./mindrover_demo "${dir}" "${dir}"
 
 	prepgamesdirs
-	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)" ${PN}
+	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)"
 }
