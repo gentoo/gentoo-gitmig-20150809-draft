@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8611 2008/05/15 15:25:38 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8612 2008/05/15 15:26:42 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -906,10 +906,6 @@ dev-lang/entity
 # Please switch to sys-kernel/gentoo-sources
 sys-kernel/hppa-sources
 
-# Doug Klima <cardoe@gentoo.org> (13 Dec 2007)
-# older then current releases and should be removed
-=sys-auth/pam_krb5-20030601-r1
-
 # Peter Volkov <pva@gentoo.org> (13 Dec 2007)
 # Live svn ebuild... 0.9.4 branch is not supported atm.
 =net-im/sim-9999
@@ -970,7 +966,7 @@ sys-kernel/hppa-sources
 # CVE-2007-4572
 =net-fs/samba-3.0.27
 
-# Doug Klima <cardoe@gentoo.org> (16 Nov 2007)
+# Doug Goldstein <cardoe@gentoo.org> (16 Nov 2007)
 # new heimdal version that's not too tested
 # anyone looking to take over maintaining heimdal
 # from seemant would make both of us happy
