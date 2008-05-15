@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-bitstreamout
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/ChangeLog,v 1.13 2007/04/17 12:49:31 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/ChangeLog,v 1.14 2008/05/15 16:52:22 zzam Exp $
+
+*vdr-bitstreamout-0.89c (15 May 2008)
+
+  15 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-bitstreamout-0.85-r2.ebuild, +vdr-bitstreamout-0.89c.ebuild:
+  Version bumped. Fixed quoting.
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
   Removed bash specific stuff.
