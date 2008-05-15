@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/nessus-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.9 2007/07/02 14:39:26 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.10 2008/05/15 01:41:57 vanquirius Exp $
+
+*nessus-bin-3.2.0 (14 May 2008)
+
+  14 May 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +nessus-bin-3.2.0.ebuild:
+  3.2.0 version bump for bug 187219. We are now using the Red Hat binary and
+  depending on >=dev-libs/openssl-0.9.8. Thanks to Erwin Paternotte
+  <paternotte at fox-it dot com>, Nick Loeve <trickie at gmail dot com>,
+  Thomas Guyot <thomas at zango dot com>, Cyberjun <cyberjun at gmail dot
+  com>, Vladimir Rusinov <vladimir at greenmice dot info>, Anton Bolshakov
+  <anton.bugs at gmail dot com>, Peter Volkov <pva at gentoo dot org> and
+  anyone I missed.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   nessus-bin-3.0.5.ebuild:
