@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.16-r2.ebuild,v 1.1 2008/05/15 18:03:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.16-r2.ebuild,v 1.2 2008/05/15 18:14:41 beandog Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -67,7 +67,7 @@ pkg_preinst() {
 	if [[ -a /etc/modules.d/alsa ]] && [[ ! -a /etc/modprobe.d/alsa ]]; then
 		elog "Moving old alsa configuration in modules.d to new"
 		elog "location in modprobe.d in /etc/"
-		mv /etc/modules.d/alsa /etc/modprobe.d/alsa
+		mv "${ROOT}/etc/modules.d/alsa" "${ROOT}/etc/modprobe.d/alsa"
 	fi
 }
 
