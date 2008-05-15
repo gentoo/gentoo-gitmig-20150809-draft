@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8601 2008/05/15 14:33:21 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8602 2008/05/15 14:35:44 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -494,11 +494,6 @@ net-ftp/nvemftp
 # Marius Mauch <genone@gentoo.org> (09 Feb 2008)
 # First public test releases of portage-2.2
 >=sys-apps/portage-2.2_alpha
-
-# Bernard Cafarelli <voyageur@gentoo.org> (07 Feb 2008)
-# Masked for removal in 30 days. Does not work, needs patching,
-# dead upstream, last release in 2002 (bug #150670)
-x11-misc/ASFiles
 
 # Luca Barbato <lu_zero@gentoo.org> (06 Feb 2008)
 # temp mask pending test
