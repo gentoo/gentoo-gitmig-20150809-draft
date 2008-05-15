@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.121 2008/05/15 10:35:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.122 2008/05/15 23:13:41 ingmar Exp $
+
+*kdebase-kioslaves-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kdebase-kioslaves-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kdebase-kioslaves. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org>
   kdebase-kioslaves-3.5.9.ebuild:
