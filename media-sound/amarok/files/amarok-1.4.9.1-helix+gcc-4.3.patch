@@ -1,0 +1,12 @@
+Index: amarok-1.4.9.1/amarok/src/engine/helix/hxplayercontrol.cpp
+===================================================================
+--- amarok-1.4.9.1.orig/amarok/src/engine/helix/hxplayercontrol.cpp
++++ amarok-1.4.9.1/amarok/src/engine/helix/hxplayercontrol.cpp
+@@ -20,6 +20,7 @@
+ #include <sys/wait.h>
+ #include <unistd.h>
+ #include <iostream>
++#include <cstring>
+ #include <sys/mman.h>
+ 
+ using namespace std;
