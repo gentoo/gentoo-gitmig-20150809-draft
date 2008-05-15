@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8606 2008/05/15 14:53:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8607 2008/05/15 14:56:54 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -171,12 +171,6 @@ x11-themes/openbox-themes
 # Dropping conky-syntax in favour of upstream syntax script.
 # Please enable the vim-syntax flag for conky instead.
 app-vim/conky-syntax
-
-# Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
-# Masked for removal in 30 days.
-# unmaintained, broken and not used anywhere
-# use dev-python/fuse-python instead
-sys-fs/python-fuse
 
 # Samuli Suominen <drac@gentoo.org> (21 Apr 2008)
 # Masked for removal in 30 days. Doesn't build
