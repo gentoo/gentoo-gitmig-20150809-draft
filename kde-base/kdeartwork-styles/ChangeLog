@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.86 2008/05/13 01:27:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.87 2008/05/15 16:30:07 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org>
+  kdeartwork-styles-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org>
   kdeartwork-styles-3.5.9.ebuild:
