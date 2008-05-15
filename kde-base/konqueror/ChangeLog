@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.114 2008/05/13 14:04:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.115 2008/05/15 12:00:14 corsair Exp $
+
+  15 May 2008; Markus Rothe <corsair@gentoo.org> konqueror-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> konqueror-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
