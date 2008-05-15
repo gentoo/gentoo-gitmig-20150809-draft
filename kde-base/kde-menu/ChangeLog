@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-menu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu/ChangeLog,v 1.6 2008/04/03 20:47:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu/ChangeLog,v 1.7 2008/05/15 22:59:41 ingmar Exp $
+
+*kde-menu-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kde-menu-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kde-menu. Thanks to Jorge Manuel B. S. Vicetto.
 
 *kde-menu-4.0.3 (03 Apr 2008)
 
