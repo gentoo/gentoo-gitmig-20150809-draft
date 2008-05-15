@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.5.ebuild,v 1.2 2008/05/10 21:41:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.5.ebuild,v 1.3 2008/05/15 12:21:37 rich0 Exp $
 
 WX_GTK_VER="2.8"
 inherit eutils fdo-mime wxwidgets
@@ -9,7 +9,7 @@ DESCRIPTION="Interactive data analysis and visualization tool"
 HOMEPAGE="http://exsitewebware.com/extrema/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DEPEND=">=x11-libs/wxGTK-2.8.7
