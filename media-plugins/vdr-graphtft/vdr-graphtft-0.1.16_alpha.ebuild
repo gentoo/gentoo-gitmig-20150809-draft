@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.16_alpha.ebuild,v 1.3 2008/04/13 19:01:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.16_alpha.ebuild,v 1.4 2008/05/15 12:22:21 zzam Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -26,7 +26,7 @@ DEPEND=">=media-video/vdr-1.4.7-r9
 		directfb? ( dev-libs/DirectFB )
 		graphtft-fe? ( $(qt4_min_version 4.0.0) )"
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff"
+PATCHES=("${FILESDIR}/${P}-gentoo.diff")
 
 S="${WORKDIR}/graphtft-${MY_PV}"
 
