@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.18.ebuild,v 1.2 2008/05/12 12:25:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.18.ebuild,v 1.3 2008/05/15 20:01:14 opfer Exp $
 
 inherit eutils
 
@@ -20,6 +20,11 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_compile() {
+	econf --disable-accessibility
+	emake || die
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
