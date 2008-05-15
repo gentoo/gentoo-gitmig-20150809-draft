@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/vdrsymbols-ttf-20080411.ebuild,v 1.1 2008/04/13 15:59:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/vdrsymbols-ttf-20080411.ebuild,v 1.2 2008/05/15 11:30:20 zzam Exp $
 
 S=${WORKDIR}/vdrsymbols
 
@@ -14,7 +14,7 @@ SRC_URI="http://andreas.vdr-developer.org/fonts/download/${P}.tgz"
 LICENSE="BitstreamVera"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=""
 RDEPEND=""
