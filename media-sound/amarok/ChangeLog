@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.260 2008/04/10 22:46:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.261 2008/05/15 02:23:05 flameeyes Exp $
+
+  15 May 2008; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.9.1.ebuild,
+  amarok-1.4.9999-r2.ebuild:
+  Depend on alsa-lib when using the Helix engine, as ALSA is checked for and
+  build fails without it. As we don't support HelixPlayer itself but just
+  RealPlayer, this is no concern for non-Linux systems.
 
 *amarok-1.4.9.1 (10 Apr 2008)
 

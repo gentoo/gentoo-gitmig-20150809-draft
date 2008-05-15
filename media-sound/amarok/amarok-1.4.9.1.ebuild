@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.1 2008/04/10 22:46:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.2 2008/05/15 02:23:05 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -52,7 +52,9 @@ RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 	ipod? ( >=media-libs/libgpod-0.5.2 )
 	mp4? ( media-libs/libmp4v2 )
 	ifp? ( media-libs/libifp )
-	real? ( media-video/realplayer )
+	real? (
+		media-video/realplayer
+		media-libs/alsa-lib )
 	njb? ( >=media-libs/libnjb-2.2.4 )
 	mtp? ( >=media-libs/libmtp-0.1.1 )
 	musicbrainz? ( media-libs/tunepimp )
