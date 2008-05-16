@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-0.964.ebuild,v 1.2 2008/05/16 10:59:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-0.964.ebuild,v 1.3 2008/05/16 11:23:58 drac Exp $
 
 inherit fdo-mime
 
@@ -34,8 +34,6 @@ RDEPEND=">=dev-lang/perl-5.8
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -e 's/^\(Categories=\)Audio;$/\1AudioVideo;/' -i ${PN}.desktop \
-		|| die "sed failed."
 	sed -e 's:mpg321:mpg123:g' -i gmusicbrowser* || die "sed failed."
 }
 
