@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.89 2008/05/14 18:56:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.90 2008/05/16 00:15:48 ingmar Exp $
+
+*kreversi-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kreversi-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kreversi. Thanks to Jorge Manuel B. S. Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kreversi-3.5.9.ebuild:
   Stable on ppc64; bug #221063
