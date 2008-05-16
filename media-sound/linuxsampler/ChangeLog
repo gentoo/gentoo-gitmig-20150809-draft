@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/linuxsampler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/ChangeLog,v 1.10 2008/01/27 10:35:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/ChangeLog,v 1.11 2008/05/16 21:05:07 aballier Exp $
+
+  16 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/linuxsampler-0.5.1-libtool22.patch, linuxsampler-0.5.1.ebuild:
+  fix build with libtool 2.2
 
   27 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   -files/linuxsampler-0.3.3-gcc4.patch, -linuxsampler-0.3.3.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.5.1.ebuild,v 1.1 2008/01/12 10:36:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.5.1.ebuild,v 1.2 2008/05/16 21:05:07 aballier Exp $
 
 inherit autotools eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-pkgconfiginit.patch"
+	epatch "${FILESDIR}/${P}-libtool22.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 
