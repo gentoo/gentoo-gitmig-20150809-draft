@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.35 2008/05/11 11:24:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.36 2008/05/16 18:15:37 cardoe Exp $
+
+*openrc-0.2.4-r1 (14 May 2008)
+
+  14 May 2008; Doug Goldstein <cardoe@gentoo.org> +openrc-0.2.4-r1.ebuild:
+  fix bug #221751 and bug #220579
 
 *openrc-0.2.4 (11 May 2008)
 
