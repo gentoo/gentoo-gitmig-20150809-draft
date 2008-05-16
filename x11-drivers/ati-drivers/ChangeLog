@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.119 2008/05/04 11:54:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.120 2008/05/16 14:34:33 je_fro Exp $
+
+  16 May 2008; Jeff Gardner <je_fro@gentoo.org>
+  -files/8.42.3/linux-2.6.23.patch, -files/8.42.3/warnings.patch,
+  -ati-drivers-8.42.3.ebuild:
+  Spring cleaning, removed p.masked ebuild.
 
   04 May 2008; Christian Faulhammer <opfer@gentoo.org>
   ati-drivers-8.471.3.ebuild:
