@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8622 2008/05/16 02:42:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8623 2008/05/16 14:02:42 caleb Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1081,10 +1081,6 @@ games-fps/americas-army
 # Paul Varner <fuzzyray@gentoo.org> (27 Sep 2007)
 # revdep-rebuild is broken in this release
 =app-portage/gentoolkit-0.2.4_rc1
-
-# Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
-# breaks apr and openldap
-=sys-libs/db-4.6*
 
 # Markus Ullmann <jokey@gentoo.org> (05 Sept 2007)
 # masked for testing
