@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.9 2008/04/03 21:31:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.10 2008/05/16 00:27:58 ingmar Exp $
+
+*ksudoku-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +ksudoku-4.0.4.ebuild:
+  Added KDE 4.0.4 version of ksudoku. Thanks to Jorge Manuel B. S. Vicetto.
 
 *ksudoku-4.0.3 (03 Apr 2008)
 
