@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.42 2008/05/13 17:01:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.43 2008/05/16 14:56:22 fmccor Exp $
+
+  16 May 2008; Ferris McCormick <fmccor@gentoo.org> sdl-gfx-2.0.16.ebuild:
+  Sparc stable --- Bug #221203 --- lincity-ng still works using it.
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> sdl-gfx-2.0.16.ebuild:
   Stable for HPPA (bug #221203).
