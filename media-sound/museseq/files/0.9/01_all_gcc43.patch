@@ -1,0 +1,111 @@
+diff -ur muse-0.9.orig/muse/ctrl.cpp muse-0.9/muse/ctrl.cpp
+--- muse-0.9.orig/muse/ctrl.cpp	2006-11-23 22:59:05.000000000 +0200
++++ muse-0.9/muse/ctrl.cpp	2008-05-16 14:40:07.000000000 +0300
+@@ -9,6 +9,7 @@
+ //=========================================================
+ 
+ 
++#include <cstdlib>
+ #include "globals.h"
+ #include "ctrl.h"
+ #include "xml.h"
+diff -ur muse-0.9.orig/muse/evdata.h muse-0.9/muse/evdata.h
+--- muse-0.9.orig/muse/evdata.h	2006-11-23 00:22:32.000000000 +0200
++++ muse-0.9/muse/evdata.h	2008-05-16 14:43:25.000000000 +0300
+@@ -9,6 +9,7 @@
+ #ifndef __EVDATA_H__
+ #define __EVDATA_H__
+ 
++#include <cstring>
+ #include <memory.h>
+ 
+ //---------------------------------------------------------
+diff -ur muse-0.9.orig/muse/help.cpp muse-0.9/muse/help.cpp
+--- muse-0.9.orig/muse/help.cpp	2006-11-23 00:22:32.000000000 +0200
++++ muse-0.9/muse/help.cpp	2008-05-16 14:40:07.000000000 +0300
+@@ -6,6 +6,7 @@
+ //  (C) Copyright 1999/2000 Werner Schweer (ws@seh.de)
+ //=========================================================
+ 
++#include <cstdlib>
+ #include <unistd.h>
+ #include <qmessagebox.h>
+ #include <qprocess.h>
+diff -ur muse-0.9.orig/muse/memory.h muse-0.9/muse/memory.h
+--- muse-0.9.orig/muse/memory.h	2004-06-08 00:46:08.000000000 +0300
++++ muse-0.9/muse/memory.h	2008-05-16 14:43:39.000000000 +0300
+@@ -9,6 +9,7 @@
+ #ifndef __MEMORY_H__
+ #define __MEMORY_H__
+ 
++#include <cstdlib>
+ #include <stdio.h>
+ #include <map>
+ 
+diff -ur muse-0.9.orig/muse/mixer/panknob.cpp muse-0.9/muse/mixer/panknob.cpp
+--- muse-0.9.orig/muse/mixer/panknob.cpp	2004-01-23 10:41:38.000000000 +0200
++++ muse-0.9/muse/mixer/panknob.cpp	2008-05-16 14:40:07.000000000 +0300
+@@ -6,6 +6,7 @@
+ //  (C) Copyright 2000 Werner Schweer (ws@seh.de)
+ //=========================================================
+ 
++#include <cstring>
+ #include "../audio.h"
+ #include "panknob.h"
+ 
+diff -ur muse-0.9.orig/muse/thread.cpp muse-0.9/muse/thread.cpp
+--- muse-0.9.orig/muse/thread.cpp	2006-11-23 00:22:41.000000000 +0200
++++ muse-0.9/muse/thread.cpp	2008-05-16 14:33:01.000000000 +0300
+@@ -8,6 +8,7 @@
+ 
+ #include "thread.h"
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <sys/mman.h>
+ #include <sys/poll.h>
+diff -ur muse-0.9.orig/muse/widgets/poslabel.cpp muse-0.9/muse/widgets/poslabel.cpp
+--- muse-0.9.orig/muse/widgets/poslabel.cpp	2004-01-11 20:55:37.000000000 +0200
++++ muse-0.9/muse/widgets/poslabel.cpp	2008-05-16 14:42:43.000000000 +0300
+@@ -6,6 +6,7 @@
+ //=========================================================
+ 
+ #include <cmath>
++#include <cstdlib>
+ #include <qapplication.h>
+ #include <qstyle.h>
+ 
+diff -ur muse-0.9.orig/synti/deicsonze/deicsonze.cpp muse-0.9/synti/deicsonze/deicsonze.cpp
+--- muse-0.9.orig/synti/deicsonze/deicsonze.cpp	2007-08-22 21:33:05.000000000 +0300
++++ muse-0.9/synti/deicsonze/deicsonze.cpp	2008-05-16 14:42:16.000000000 +0300
+@@ -27,6 +27,8 @@
+ // 02111-1307, USA or point your web browser to http://www.gnu.org.
+ //===========================================================================
+ 
++#include <cstdlib>
++#include <climits>
+ #include <cmath>
+ #include <list>
+ 
+diff -ur muse-0.9.orig/synti/libsynti/evdata.h muse-0.9/synti/libsynti/evdata.h
+--- muse-0.9.orig/synti/libsynti/evdata.h	2004-02-13 15:55:03.000000000 +0200
++++ muse-0.9/synti/libsynti/evdata.h	2008-05-16 14:29:13.000000000 +0300
+@@ -10,6 +10,7 @@
+ #define __EVDATA_H__
+ 
+ #include <memory.h>
++#include <string.h>
+ 
+ //---------------------------------------------------------
+ //   EvData
+diff -ur muse-0.9.orig/synti/simpledrums/ssplugin.cpp muse-0.9/synti/simpledrums/ssplugin.cpp
+--- muse-0.9.orig/synti/simpledrums/ssplugin.cpp	2005-05-08 00:24:37.000000000 +0300
++++ muse-0.9/synti/simpledrums/ssplugin.cpp	2008-05-16 14:44:04.000000000 +0300
+@@ -10,6 +10,7 @@
+ //
+ //
+ 
++#include <cstdlib>
+ #include <dlfcn.h>
+ #include "ssplugin.h"
+ #include "common.h"

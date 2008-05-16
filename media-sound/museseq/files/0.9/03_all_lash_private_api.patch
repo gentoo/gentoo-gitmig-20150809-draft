@@ -1,0 +1,34 @@
+diff -ur muse-0.9.orig/muse/app.cpp muse-0.9/muse/app.cpp
+--- muse-0.9.orig/muse/app.cpp	2007-08-22 21:33:00.000000000 +0300
++++ muse-0.9/muse/app.cpp	2008-05-16 14:44:58.000000000 +0300
+@@ -2720,13 +2720,14 @@
+         case LASH_Save_File:
+     {
+           /* save file */
+-          const char *name = lash_get_fqn (lash_event_get_string (event), "lash-project-muse.med");
+-          int ok = save (name, false);
++	  QFileInfo name(QDir(lash_event_get_string (event)),
++	                 QString("lash-project-muse.med"));
++          int ok = save (name.filePath(), false);
+           if (ok) {
+-                project.setFile(name);
++                project.setFile(name.filePath());
+                 setCaption(tr("MusE: Song: ") + project.baseName(true));
+-                addProject(name);
+-                museProject = QFileInfo(name).dirPath(true);
++                addProject(name.filePath());
++                museProject = name.dirPath(true);
+                 }
+           lash_send_event (lash_client, event);
+     }
+@@ -2735,7 +2736,9 @@
+         case LASH_Restore_File: 
+     {
+           /* load file */
+-          loadProjectFile (lash_get_fqn (lash_event_get_string (event), "lash-project-muse.med" ), false, true);
++	  QFileInfo name(QDir(lash_event_get_string (event)),
++	                 QString("lash-project-muse.med"));
++          loadProjectFile (name.filePath(), false, true);
+           lash_send_event (lash_client, event);
+     }
+           break;

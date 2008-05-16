@@ -1,0 +1,39 @@
+diff -ur muse-0.9.orig/synti/simpledrums/ssplugin.h muse-0.9/synti/simpledrums/ssplugin.h
+--- muse-0.9.orig/synti/simpledrums/ssplugin.h	2007-08-22 21:33:06.000000000 +0300
++++ muse-0.9/synti/simpledrums/ssplugin.h	2008-05-16 14:47:24.000000000 +0300
+@@ -15,6 +15,7 @@
+ 
+ //#include <ladspa.h>
+ #include "muse/ladspa.h"
++#include "muse/fastlog.h"
+ #include <math.h>
+ 
+ //---------------------------------------------------------
+@@ -133,27 +134,6 @@
+ 
+    };
+ 
+-
+-static inline float fast_log2 (float val)
+-      {
+-      /* don't use reinterpret_cast<> because that prevents this
+-         from being used by pure C code (for example, GnomeCanvasItems)
+-      */
+-      int* const exp_ptr = (int *)(&val);
+-      int x              = *exp_ptr;
+-      const int log_2    = ((x >> 23) & 255) - 128;
+-      x &= ~(255 << 23);
+-      x += 127 << 23;
+-      *exp_ptr = x;
+-      val = ((-1.0f/3) * val + 2) * val - 2.0f/3;   // (1)
+-      return (val + log_2);
+-      }
+-
+-static inline float fast_log10 (const float val)
+-      {
+-      return fast_log2(val) / 3.312500f;
+-      }
+-
+ //---------------------------------------------------------
+ //   PluginList
+ //---------------------------------------------------------
