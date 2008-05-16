@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.4 2008/05/07 06:56:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.5 2008/05/16 23:15:27 nerdboy Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -21,13 +21,9 @@ postgres python readline sqlite tiff truetype X"
 
 RESTRICT="strip"
 
-RDEPEND=">=sys-devel/make-3.80
-	>=sys-libs/zlib-1.1.4
-	>=sys-devel/flex-2.5.4a
-	>=sys-devel/bison-1.35
+RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.3
 	>=sys-libs/gdbm-1.8.0
-	>=sys-devel/gcc-3.2.2
 	|| (
 	    sys-apps/man
 	    sys-apps/man-db )
@@ -65,6 +61,10 @@ RDEPEND=">=sys-devel/make-3.80
 	)"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/make-3.80
+	>=sys-devel/flex-2.5.4a
+	>=sys-devel/bison-1.35
+	>=sys-devel/gcc-3.2.2
 	X? (
 		x11-proto/xproto
 		x11-proto/xextproto

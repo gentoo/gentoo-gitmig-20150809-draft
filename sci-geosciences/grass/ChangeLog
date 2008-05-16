@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.54 2008/05/07 06:56:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.55 2008/05/16 23:15:27 nerdboy Exp $
+
+  16 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
+  updated depends for bug #221345
 
   07 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
   Updated to handle either ffmpeg API, but not a permanent fix; this should
