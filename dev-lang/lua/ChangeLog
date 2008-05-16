@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.99 2008/05/15 11:35:16 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.100 2008/05/16 16:28:31 mabi Exp $
+
+  16 May 2008; Matti Bickel <mabi@gentoo.org>
+  -files/5.1.3/05_validator.upstream.patch,
+  -files/5.1.3/06_c_stack.upstream.patch,
+  +files/5.1.3/06_all_c_stack.upstream.patch,
+  +files/5.1.3/07_all_validator2.upstream.patch,
+  +files/lua-5.1.3-test.patch, +files/5.1.3/05_all_validator.upstream.patch,
+  -files/5.1.3/07_validator2.upstream.patch,
+  +files/5.1.3/08_all_code_injection.upstream.patch,
+  -files/5.1.3/08_code_injection.upstream.patch, lua-5.1.3-r1.ebuild,
+  lua-5.1.3-r2.ebuild:
+  patch fixing test by oliver huber (bug #210904), fix patch naming, so the
+  new patches finally apply
 
 *lua-5.1.3-r2 (15 May 2008)
 

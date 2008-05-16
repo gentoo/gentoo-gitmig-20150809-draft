@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.3-r1.ebuild,v 1.3 2008/02/18 20:10:31 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.3-r1.ebuild,v 1.4 2008/05/16 16:28:31 mabi Exp $
 
 inherit eutils portability versionator
 
@@ -32,6 +32,7 @@ src_unpack() {
 
 	if ! use deprecated ; then
 		epatch "${FILESDIR}"/${P}-deprecated.patch
+		epatch "${FILESDIR}"/${P}-test.patch
 	fi
 
 	if ! use readline ; then
@@ -100,10 +101,10 @@ src_test() {
 
 	cd "${S}"
 	for test in ${positive}; do
-		test/lua.static test/${test}.lua &> /dev/null || die "test $test failed"
+		test/lua.static test/${test}.lua || die "test $test failed"
 	done
 
 	for test in ${negative}; do
-		test/lua.static test/${test}.lua &> /dev/null && die "test $test failed"
+		test/lua.static test/${test}.lua && die "test $test failed"
 	done
 }
