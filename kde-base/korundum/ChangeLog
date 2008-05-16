@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.73 2008/02/22 21:10:43 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.74 2008/05/16 07:04:21 corsair Exp $
+
+  16 May 2008; Markus Rothe <corsair@gentoo.org> korundum-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
   22 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> korundum-3.5.9.ebuild:
   /kde-base/qtruby/s/>=/~/
