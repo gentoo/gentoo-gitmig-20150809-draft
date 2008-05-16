@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.0-r1.ebuild,v 1.2 2008/01/10 13:13:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.0-r1.ebuild,v 1.3 2008/05/16 22:59:08 alonbl Exp $
 
 inherit multilib
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 		econf \
 			$(use_with curl) \
-			$(use_with pcsc-lite) \
+			$(use_with pcsc-lite pcsclite) \
 			$(use_with ldap) \
 			|| die "econf failed"
 		emake || die "emake failed"
