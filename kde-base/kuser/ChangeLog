@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.88 2008/05/15 13:31:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.89 2008/05/16 00:38:44 ingmar Exp $
+
+*kuser-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kuser-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kuser. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kuser-3.5.9.ebuild:
   Stable on ppc64; bug #221063
