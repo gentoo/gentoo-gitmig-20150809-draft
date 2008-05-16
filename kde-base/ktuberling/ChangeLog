@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.89 2008/05/14 19:14:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.90 2008/05/16 00:34:46 ingmar Exp $
+
+*ktuberling-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +ktuberling-4.0.4.ebuild:
+  Added KDE 4.0.4 version of ktuberling. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> ktuberling-3.5.9.ebuild:
   Stable on ppc64; bug #221063
