@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.02.ebuild,v 1.1 2008/05/07 19:48:09 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.02.ebuild,v 1.2 2008/05/16 09:43:44 armin76 Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 LZMA_VER=4.57
 MY_P="${P/-ucl/}-src"
@@ -31,6 +31,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use sparc && append-flags "-D__BIG_ENDIAN__"
+
 	tc-export CXX
 	emake UPX_LZMADIR="${WORKDIR}"/lzma-${LZMA_VER} all || die
 }
