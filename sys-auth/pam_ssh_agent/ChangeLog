@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_ssh_agent
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.9 2008/05/15 19:57:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.10 2008/05/16 09:27:44 flameeyes Exp $
+
+  16 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -pam_ssh_agent-0.1.ebuild, -pam_ssh_agent-0.2.ebuild:
+  Cleanup old.
 
   15 May 2008; Markus Meier <maekke@gentoo.org> pam_ssh_agent-0.2-r1.ebuild:
   x86 stable, bug #222177
