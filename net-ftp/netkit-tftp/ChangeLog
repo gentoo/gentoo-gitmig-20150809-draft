@@ -1,6 +1,15 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.14 2008/03/29 02:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.15 2008/05/16 11:30:29 pva Exp $
+
+*netkit-tftp-0.17-r7 (16 May 2008)
+
+  16 May 2008; Peter Volkov <pva@gentoo.org>
+  +files/netkit-tftp-0.17-socket-reopen-on-errors.patch,
+  +files/netkit-tftp-0.17-tftpd-put-fixes.patch,
+  -netkit-tftp-0.17-r5.ebuild, +netkit-tftp-0.17-r7.ebuild:
+  Fixed WRQ handling in tftpd, backported changes from debian and now we
+  reopen socket on all errors. Removed old.
 
 *netkit-tftp-0.17-r6 (29 Mar 2008)
 
