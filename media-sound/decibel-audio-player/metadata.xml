@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>sound</herd>
+	<maintainer>
+		<email>aballier@gentoo.org</email>
+		<name>Alexis Ballier</name>
+	</maintainer>
+	<maintainer>
+		<email>nightmorph@gentoo.org</email>
+		<name>Josh Saddler</name>
+	</maintainer>
+	<longdescription lang="en">
+		Decibel is a GTK+ audio player which aims at being very straightforward	to use
+		by means of a very clean and user friendly interface.
+	</longdescription>
+</pkgmetadata>
