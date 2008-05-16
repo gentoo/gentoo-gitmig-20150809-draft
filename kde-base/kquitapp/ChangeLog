@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kquitapp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.6 2008/04/03 21:23:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.7 2008/05/16 00:13:13 ingmar Exp $
+
+*kquitapp-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kquitapp-4.0.4.ebuild:
+  Added KDE 4.0.4 version of kquitapp. Thanks to Jorge Manuel B. S. Vicetto.
 
 *kquitapp-4.0.3 (03 Apr 2008)
 
