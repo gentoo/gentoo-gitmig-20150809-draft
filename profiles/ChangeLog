@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1416 2008/05/16 02:42:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1417 2008/05/16 14:36:59 je_fro Exp $
+
+  16 May 2008; Jeff Gardner <je_fro@gentoo.org> package.mask:
+  Spring cleaning, removed p.masked ati-drivers ebuild.
 
   16 May 2008; Ryan Hill <dirtyepic@gentoo.org> arch/mips/package.mask,
   default-linux/mips/package.mask, package.mask:
