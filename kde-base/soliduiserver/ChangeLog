@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/soliduiserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/soliduiserver/ChangeLog,v 1.6 2008/04/03 21:47:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/soliduiserver/ChangeLog,v 1.7 2008/05/16 00:57:05 ingmar Exp $
+
+*soliduiserver-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +soliduiserver-4.0.4.ebuild:
+  Added KDE 4.0.4 version of soliduiserver. Thanks to Jorge Manuel B. S.
+  Vicetto.
 
 *soliduiserver-4.0.3 (03 Apr 2008)
 
