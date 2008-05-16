@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1415 2008/05/15 21:48:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1416 2008/05/16 02:42:12 dirtyepic Exp $
+
+  16 May 2008; Ryan Hill <dirtyepic@gentoo.org> arch/mips/package.mask,
+  default-linux/mips/package.mask, package.mask:
+  Remove artwiz-fonts mask.
 
   15 May 2008; Alin Năstac <mrness@gentoo.org> package.mask:
   Last rites for net-dialup/{mclient,mserver,linesrv,xlc}.
