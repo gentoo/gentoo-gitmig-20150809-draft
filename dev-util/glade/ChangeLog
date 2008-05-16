@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.99 2008/05/15 16:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.100 2008/05/16 10:41:10 corsair Exp $
+
+  16 May 2008; Markus Rothe <corsair@gentoo.org> glade-2.12.2-r1.ebuild:
+  Stable on ppc64; bug #201962
 
   15 May 2008; Raúl Porcel <armin76@gentoo.org> glade-2.12.2-r1.ebuild:
   alpha stable wrt #201962
