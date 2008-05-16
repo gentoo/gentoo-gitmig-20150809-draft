@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/dvipost
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.21 2008/05/16 18:48:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.22 2008/05/16 19:04:35 aballier Exp $
+
+  16 May 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/dvipost-1.0-src_test.diff, -dvipost-1.0.ebuild:
+  remove old
 
   16 May 2008; nixnut <nixnut@gentoo.org> dvipost-1.1.ebuild:
   Stable on ppc wrt bug 221757
