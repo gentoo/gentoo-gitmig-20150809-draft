@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1-r1.ebuild,v 1.15 2008/05/16 20:49:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.3.1.ebuild,v 1.1 2008/05/16 20:49:40 zzam Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -31,15 +31,7 @@ pkg_setup() {
 
 	MODULE_NAMES="usbirboy(misc:${S})"
 	BUILD_PARAMS="INCLUDE=${KV_DIR}"
-	BUILD_TARGETS="default"
-}
-
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-kernel-2.6.16.diff"
-	epatch "${FILESDIR}/${P}-module_param.diff"
-	epatch "${FILESDIR}/${P}-nice-kernel-msgs.diff"
+	BUILD_TARGETS="clean all"
 }
 
 src_install() {
