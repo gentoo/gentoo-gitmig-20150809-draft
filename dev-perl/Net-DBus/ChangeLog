@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.9 2008/04/23 08:29:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.10 2008/05/16 16:05:11 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org> Net-DBus-0.33.6.ebuild:
+  Add ~sparc
 
 *Net-DBus-0.33.6 (23 Apr 2008)
 
