@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.5 2008/05/15 12:46:09 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.6 2008/05/16 09:27:09 ingmar Exp $
+
+  16 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -qt-opengl-4.4.0_rc1.ebuild:
+  Old.
 
 *qt-opengl-4.4.0 (15 May 2008)
 
