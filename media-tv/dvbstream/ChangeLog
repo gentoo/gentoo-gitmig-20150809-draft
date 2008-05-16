@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/dvbstream
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/ChangeLog,v 1.7 2008/03/02 14:23:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/ChangeLog,v 1.8 2008/05/16 18:01:16 zzam Exp $
+
+*dvbstream-0.7_pre20080302-r1 (16 May 2008)
+
+  16 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbstream-0.7_pre20080302-telnet-port-switch.diff,
+  +dvbstream-0.7_pre20080302-r1.ebuild:
+  Added switch to set telnet port number to be able to use more than one
+  instance at a time, Bug #200816.
 
 *dvbstream-0.7_pre20080302 (02 Mar 2008)
 
