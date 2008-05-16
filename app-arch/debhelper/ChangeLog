@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/debhelper
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/debhelper/ChangeLog,v 1.1 2008/05/16 20:25:17 yvasilev Exp $
+
+*debhelper-7.0.8 (16 May 2008)
+
+  16 May 2008; Yuri Vasilevski <yvasilev@gentoo.org>
+  +files/debhelper-7.0.8-conditional-nls.patch, +metadata.xml,
+  +debhelper-7.0.8.ebuild:
+  Initial import.
+
