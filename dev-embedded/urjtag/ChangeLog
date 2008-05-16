@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.4 2008/04/26 16:54:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.5 2008/05/16 14:21:04 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org> urjtag-0.8.ebuild:
+  sparc stable wrt #217847
 
   26 Apr 2008; nixnut <nixnut@gentoo.org> urjtag-0.8.ebuild:
   Stable on ppc wrt bug 217847

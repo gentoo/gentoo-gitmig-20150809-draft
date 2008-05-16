@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.25 2008/04/19 22:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.26 2008/05/16 14:20:35 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org> libftdi-0.12.ebuild:
+  sparc stable wrt #217847
 
   19 Apr 2008; Mike Frysinger <vapier@gentoo.org> libftdi-0.12.ebuild:
   Add some ~sparc love.
