@@ -1,6 +1,15 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.18 2008/05/12 13:53:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.19 2008/05/16 01:45:09 markusle Exp $
+
+*paraview-3.3_pre20080514 (15 May 2008)
+
+  15 May 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/paraview-3.3_pre20080514-gcc4.3.patch,
+  +files/paraview-3.3_pre20080514-qt.patch,
+  +paraview-3.3_pre20080514.ebuild:
+  Added development version which fixes the non-functioning
+  screenshot feature (see bug #220477).
 
   12 May 2008; Markus Dittrich <markusle@gentoo.org> paraview-2.6.2.ebuild,
   paraview-3.2.1.ebuild:
