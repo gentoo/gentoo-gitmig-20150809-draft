@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.9 2008/05/13 07:52:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.10 2008/05/16 00:53:27 ingmar Exp $
+
+*okular-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +okular-4.0.4.ebuild:
+  Added KDE 4.0.4 version of okular. Thanks to Jorge Manuel B. S. Vicetto.
 
   13 May 2008; Peter Volkov <pva@gentoo.org> okular-4.0.2.ebuild,
   okular-4.0.3.ebuild:
