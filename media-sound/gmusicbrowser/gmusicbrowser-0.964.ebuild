@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-0.964.ebuild,v 1.3 2008/05/16 11:23:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-0.964.ebuild,v 1.4 2008/05/16 16:16:28 armin76 Exp $
 
 inherit fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://squentin.free.fr/gmusicbrowser/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="dbus gstreamer mplayer mozilla"
 
 RDEPEND=">=dev-lang/perl-5.8
