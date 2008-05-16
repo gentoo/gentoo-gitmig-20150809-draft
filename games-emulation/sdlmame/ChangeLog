@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.4 2008/04/25 13:50:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.5 2008/05/16 21:34:23 joker Exp $
+
+*sdlmame-0.125 (16 May 2008)
+
+  16 May 2008; Christian Birchinger <joker@gentoo.org>
+  +sdlmame-0.125.ebuild:
+  Version bump
 
   24 Apr 2008; Samuli Suominen <drac@gentoo.org> sdlmame-0.124.ebuild,
   sdlmame-0.124_p3.ebuild:
