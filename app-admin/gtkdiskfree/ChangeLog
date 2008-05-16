@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.26 2008/04/15 17:36:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.27 2008/05/16 13:46:05 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org>
+  gtkdiskfree-1.9.3-r1.ebuild:
+  Add ~sparc
 
   15 Apr 2008; Samuli Suominen <drac@gentoo.org>
   gtkdiskfree-1.9.3-r1.ebuild:
