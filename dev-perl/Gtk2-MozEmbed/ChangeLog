@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Gtk2-MozEmbed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-MozEmbed/ChangeLog,v 1.3 2008/01/17 16:34:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-MozEmbed/ChangeLog,v 1.4 2008/05/16 16:15:24 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org> Gtk2-MozEmbed-0.06.ebuild:
+  Add ~sparc
 
   17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
   Gtk2-MozEmbed-0.06.ebuild:
