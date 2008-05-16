@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-mpeglib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.76 2008/02/20 22:30:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.77 2008/05/16 06:50:44 corsair Exp $
+
+  16 May 2008; Markus Rothe <corsair@gentoo.org>
+  artsplugin-mpeglib-3.5.9.ebuild:
+  Stable on ppc64; bug #221063
 
 *artsplugin-mpeglib-3.5.9 (20 Feb 2008)
 
