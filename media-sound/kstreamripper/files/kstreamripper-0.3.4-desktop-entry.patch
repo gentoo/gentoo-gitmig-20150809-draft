@@ -1,0 +1,14 @@
+diff -ur kstreamripper-0.3.4.orig/src/kstreamripper.desktop kstreamripper-0.3.4/src/kstreamripper.desktop
+--- kstreamripper-0.3.4.orig/src/kstreamripper.desktop	2005-01-23 21:29:37.000000000 +0200
++++ kstreamripper-0.3.4/src/kstreamripper.desktop	2008-05-16 15:18:38.000000000 +0300
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KStreamRipper
+ Name[xx]=xxKStreamRipperxx
+ Exec=kstreamripper
+@@ -14,3 +13,4 @@
+ Comment[sl]=Preprost program za KDE
+ Comment[sv]=Ett enkelt KDE-program
+ Comment[xx]=xxA simple KDE Applicationxx
++Categories=AudioVideo;Audio;

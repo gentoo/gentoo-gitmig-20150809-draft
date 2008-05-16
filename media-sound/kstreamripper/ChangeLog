@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.13 2008/05/13 06:41:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.14 2008/05/16 13:29:56 drac Exp $
+
+  16 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/kstreamripper-0.3.4-desktop-entry.patch,
+  kstreamripper-0.3.4.ebuild:
+  Install icon and move desktop entry to correct Category.
 
   13 May 2008; Samuli Suominen <drac@gentoo.org> kstreamripper-0.3.4.ebuild:
   Stop passing CFLAGS for g++ and MAKEOPTS because scons is stupid wrt
