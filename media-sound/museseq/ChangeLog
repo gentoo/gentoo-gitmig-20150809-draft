@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.51 2008/05/16 13:04:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.52 2008/05/16 13:16:27 drac Exp $
 
 *museseq-0.9 (16 May 2008)
 
@@ -11,7 +11,7 @@
   +files/0.9/04_all_asneeded.patch, -museseq-0.9_pre2.ebuild,
   +museseq-0.9.ebuild:
   Version bump. Patch to stop using lash private api. Patch to build with
-  GCC 4.3. Patch to fix some of the anti-aliasing rules.
+  GCC 4.3. Patch to fix some of the strict-aliasing rules.
 
   13 May 2008; Samuli Suominen <drac@gentoo.org> museseq-0.8.1-r1.ebuild:
   Move documentation generation tools into DEPEND wrt #221679.

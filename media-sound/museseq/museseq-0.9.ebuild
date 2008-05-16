@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.1 2008/05/16 13:04:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.2 2008/05/16 13:16:27 drac Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -52,9 +52,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You must have the realtime module loaded to use MusE 0.8.x"
+	elog "You must have the realtime module loaded to use MuSe.."
 	elog "Additionally, configure your Linux Kernel for non-generic"
 	elog "Real Time Clock support enabled or loaded as a module."
 	elog "User must have read/write access to /dev/misc/rtc device."
-	elog "Realtime LSM: http://sourceforge.net/projects/realtime-lsm/"
+	elog "Realtime LSM: http://www.gentoo.org/proj/en/desktop/sound/realtime.xml"
 }
