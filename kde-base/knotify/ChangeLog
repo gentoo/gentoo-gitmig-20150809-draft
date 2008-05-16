@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.6 2008/04/03 21:19:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.7 2008/05/16 00:03:56 ingmar Exp $
+
+*knotify-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +knotify-4.0.4.ebuild:
+  Added KDE 4.0.4 version of knotify. Thanks to Jorge Manuel B. S. Vicetto.
 
 *knotify-4.0.3 (03 Apr 2008)
 
