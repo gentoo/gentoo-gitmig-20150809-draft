@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/phonon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon/ChangeLog,v 1.6 2008/04/03 21:46:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon/ChangeLog,v 1.7 2008/05/16 00:54:39 ingmar Exp $
+
+*phonon-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +phonon-4.0.4.ebuild:
+  Added KDE 4.0.4 version of phonon. Thanks to Jorge Manuel B. S. Vicetto.
 
 *phonon-4.0.3 (03 Apr 2008)
 
