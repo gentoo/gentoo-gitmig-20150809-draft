@@ -1,0 +1,20 @@
+--- kdebase/workspace/kwin/layers.cpp	2008/05/05 07:22:45	804132
++++ kdebase/workspace/kwin/layers.cpp	2008/05/05 07:23:32	804133
+@@ -721,7 +721,7 @@
+ ToplevelList Workspace::rootStackingOrder() const
+     {
+     Window dummy;
+-    Window* windows;
++    Window* windows = NULL;
+     unsigned int count = 0;
+     XQueryTree( display(), rootWindow(), &dummy, &dummy, &windows, &count );
+     ToplevelList ret;
+@@ -736,6 +736,8 @@
+         }
+     foreach( Deleted* c, deleted )
+         ret.append( c );
++    if( windows != NULL )
++        XFree( windows );
+     return ret;
+     }
+ 
