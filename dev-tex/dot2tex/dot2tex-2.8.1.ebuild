@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.7.0.ebuild,v 1.1 2008/01/14 07:30:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.1.ebuild,v 1.1 2008/05/16 05:26:38 aballier Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64"
 IUSE="doc examples"
 
 DEPEND=""
-RDEPEND=">=dev-python/pyparsing-1.4
+RDEPEND=">=dev-python/pyparsing-1.4.8
 	media-gfx/pydot
 	media-gfx/graphviz"
 
