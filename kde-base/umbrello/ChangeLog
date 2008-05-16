@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.87 2008/05/15 16:08:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.88 2008/05/16 01:00:26 ingmar Exp $
+
+*umbrello-4.0.4 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> +umbrello-4.0.4.ebuild:
+  Added KDE 4.0.4 version of umbrello. Thanks to Jorge Manuel B. S. Vicetto.
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> umbrello-3.5.9.ebuild:
   Stable on ppc64; bug #221063
