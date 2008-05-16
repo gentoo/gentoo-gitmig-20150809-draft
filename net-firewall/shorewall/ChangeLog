@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.166 2008/04/13 14:27:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.167 2008/05/16 13:43:27 armin76 Exp $
+
+  16 May 2008; Raúl Porcel <armin76@gentoo.org> shorewall-3.4.8.ebuild:
+  sparc stable wrt #216224
 
   13 Apr 2008; Markus Meier <maekke@gentoo.org> shorewall-3.4.8.ebuild:
   amd64/x86 stable, bug #216224
