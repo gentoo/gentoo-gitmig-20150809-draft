@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.7 2008/05/16 11:20:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.8 2008/05/16 18:37:29 nixnut Exp $
+
+  16 May 2008; nixnut <nixnut@gentoo.org> libkarma-0.1.0.ebuild:
+  Stable on ppc wrt bug 213033
 
   16 May 2008; Markus Rothe <corsair@gentoo.org> libkarma-0.1.0.ebuild:
   Stable on ppc64; bug #213033
