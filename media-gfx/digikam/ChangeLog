@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.115 2008/05/17 15:51:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.116 2008/05/17 19:24:38 armin76 Exp $
+
+  17 May 2008; Raúl Porcel <armin76@gentoo.org> digikam-0.9.2.ebuild,
+  digikam-0.9.4_beta3.ebuild, digikam-0.9.4_beta4.ebuild:
+  Drop ia64, no hardware to test
 
   17 May 2008; Carsten Lohrke <carlo@gentoo.org> -digikam-0.9.3.ebuild,
   -digikam-0.9.4_beta2.ebuild:
