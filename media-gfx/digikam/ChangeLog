@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.113 2008/04/30 20:19:11 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.114 2008/05/17 15:50:12 carlo Exp $
+
+  17 May 2008; Carsten Lohrke <carlo@gentoo.org>
+  -files/digikam-0.9.1-exiv2.patch, -digikam-0.9.1.ebuild,
+  digikam-0.9.2.ebuild, digikam-0.9.3.ebuild, digikam-0.9.4_beta4.ebuild:
+  Clean up. Remove deprecated slot_rebuild() check.
 
 *digikam-0.9.4_beta4 (30 Apr 2008)
 

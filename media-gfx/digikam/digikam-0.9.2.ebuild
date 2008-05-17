@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.9 2008/02/19 01:49:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.10 2008/05/17 15:50:12 carlo Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -47,11 +47,6 @@ LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
-
-pkg_setup(){
-	slot_rebuild "media-libs/libkipi" && die
-	kde_pkg_setup
-}
 
 src_unpack(){
 	kde_src_unpack
