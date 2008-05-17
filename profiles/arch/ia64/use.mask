@@ -5,6 +5,7 @@
 bluetooth
 dvb
 gnokii
+gphoto2
 ivtv
 lirc
 mythtv

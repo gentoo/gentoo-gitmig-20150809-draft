@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.10 2008/04/10 19:57:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.11 2008/05/17 19:21:58 armin76 Exp $
+
+  17 May 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask gphoto2, no hardware to test
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Make VIDEO_CARDS defaults a reasonable set instead of every imaginable
