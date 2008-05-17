@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.17 2007/08/03 00:31:23 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.18 2008/05/17 18:22:04 aballier Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -22,11 +22,6 @@ dev-util/strace
 <=app-admin/sudo-1.6.7_p5-r2
 <net-mail/mailbase-1
 <=net-misc/openssh-4.0_p1
-
-# Diego Pettenò <flameeyes@gentoo.org> (26 Aug 2005)
-# mpg123 has too many patches and handling it is difficult, let's default
-# to mpg321 that works out of the box.
-media-sound/mpg123
 
 # Don't use them, use the one in base system
 dev-util/yacc
