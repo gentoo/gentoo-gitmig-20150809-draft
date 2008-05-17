@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8629 2008/05/17 08:04:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8630 2008/05/17 10:31:58 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1052,7 +1052,8 @@ dev-php4/pecl-http
 # open bugs and is not worth fixing.
 # See bug #207741, bug #207744 and bug #207749.
 x11-plugins/gai-pal
-x11-plugins/gai
+x11-plugins/gai-pager
+x11-libs/gai
 
 # Sébastien Fabbro <bicatali@gentoo.org> (05 Oct 2007)
 # Masked. Still buggy with gsl-1.10 and fail many tests.
