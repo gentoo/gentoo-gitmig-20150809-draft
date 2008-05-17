@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.101 2007/11/10 21:27:51 nelchael Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.102 2008/05/17 11:03:26 nelchael Exp $
+
+  17 May 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  jabberd-1.4.4-r3.ebuild:
+  Fix RDEPEND and DEPEND, see bug #217278.
 
   10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/jabberd-2.0.11-configure.in.patch, -files/jabberd-2.0.11.init,

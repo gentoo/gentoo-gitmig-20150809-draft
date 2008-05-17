@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.15 2007/11/10 21:27:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.16 2008/05/17 11:03:26 nelchael Exp $
 
 inherit eutils
 
@@ -13,14 +13,15 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 hppa ~ppc sparc x86"
 IUSE="debug ipv6 mysql postgres ssl"
 
-DEPEND=">=net-im/jabber-base-0.01
+RDEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/pth-1.4.0
 	dev-libs/expat
 	net-dns/libidn
-	dev-util/pkgconfig
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
-	ssl? ( >=dev-libs/openssl-0.9.6i )
+	ssl? ( >=dev-libs/openssl-0.9.6i )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	!net-im/jabberd2"
 
 pkg_setup() {
