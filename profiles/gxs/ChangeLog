@@ -1,0 +1,9 @@
+# ChangeLog for gentoo-x86/profiles
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/gxs/ChangeLog,v 1.1 2008/05/17 11:42:53 pappy Exp $
+
+  17 May 2008; <pappy@gentoo.org> gxs/linux:
+  publishing the profiles/gxs directory tree
+  currently the only profile in active tests
+  & supported is gxs/linux/x86/2008.0/server
+

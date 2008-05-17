@@ -1,0 +1,12 @@
+# Copyright 2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/gxs/linux/package.mask,v 1.1 2008/05/17 11:42:53 pappy Exp $
+
+# users must now the opensource xorg nv driver with nvidia cards.
+# By placing Driver "nv" in xorg.conf
+# 2006-06-29 solar
+x11-drivers/nvidia-drivers
+media-video/nvidia-settings
+
+# suppress updates for glibc
+sys-libs/glibc

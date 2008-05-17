@@ -1,0 +1,6 @@
+# Copyright 1999-2008 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/gxs/linux/x86/2008.0/make.defaults,v 1.1 2008/05/17 11:42:54 pappy Exp $
+
+# STAGE1_USE=""
+# USE="-unicode"
