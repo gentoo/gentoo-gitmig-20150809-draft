@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.28 2008/05/05 08:00:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.29 2008/05/17 21:12:44 cedk Exp $
+
+  17 May 2008; Cédric Krier <cedk@gentoo.org> pommed-1.14.ebuild,
+  pommed-1.16.ebuild, pommed-1.17.ebuild:
+  Fix dev-util/pkgconfig in RDEPEND for bug #217278
 
 *pommed-1.17 (05 May 2008)
 

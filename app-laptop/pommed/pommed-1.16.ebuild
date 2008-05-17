@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.16.ebuild,v 1.3 2008/04/27 11:19:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.16.ebuild,v 1.4 2008/05/17 21:12:44 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk X"
 
-DEPEND="media-libs/alsa-lib
+COMMON_DEPEND="media-libs/alsa-lib
 	x86? ( sys-apps/pciutils
 		>=sys-libs/libsmbios-0.13.6 )
 	amd64? (  sys-apps/pciutils
@@ -26,9 +26,10 @@ DEPEND="media-libs/alsa-lib
 	gtk? ( >=x11-libs/gtk+-2
 		>=gnome-base/libglade-2 )
 	X? ( x11-libs/libX11
-		x11-libs/libXpm )
+		x11-libs/libXpm )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	media-sound/alsa-utils
 	virtual/eject"
 
