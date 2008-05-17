@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-0.0.15.ebuild,v 1.4 2008/02/07 14:40:46 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-0.0.15.ebuild,v 1.5 2008/05/17 11:12:04 cedk Exp $
 
 inherit linux-info
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
-DEPEND=">=net-libs/libnfnetlink-0.0.30
+COMMON_DEPEND=">=net-libs/libnfnetlink-0.0.30"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
-RDEPEND=${DEPEND}
+RDEPEND=${COMMON_DEPEND}
 
 CONFIG_CHECK="NETFILTER_NETLINK_QUEUE"
 
