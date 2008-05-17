@@ -1,0 +1,9 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpg123/ChangeLog,v 1.1 2008/05/17 08:47:34 drac Exp $
+
+*mpg123-0 (17 May 2008)
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> +mpg123-0.ebuild:
+  Initial commit.
+
