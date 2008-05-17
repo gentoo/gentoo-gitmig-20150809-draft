@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9_rc1.ebuild,v 1.1 2008/05/17 11:41:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9_rc1.ebuild,v 1.2 2008/05/17 17:08:46 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -19,8 +19,8 @@ IUSE=""
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12_beta3
-	>=dev-libs/nspr-4.7.1_beta2
+	>=dev-libs/nss-3.12_rc3
+	>=dev-libs/nspr-4.7.1
 	>=app-text/hunspell-1.1.9
 	>=media-libs/lcms-1.17
 	>=dev-db/sqlite-3.5"
@@ -117,8 +117,8 @@ src_compile() {
 	# to econf, but the quotes cause configure to fail.
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
-		${S}/config/autoconf.mk \
-		${S}/toolkit/content/buildconfig.html
+		"${S}"/config/autoconf.mk \
+		"${S}"/toolkit/content/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
@@ -150,7 +150,7 @@ src_install() {
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 
 	if use java ; then
-	    java-pkg_dojar ${D}${MOZILLA_FIVE_HOME}/javaxpcom.jar
-	    rm -f ${D}${MOZILLA_FIVE_HOME}/javaxpcom.jar
+	    java-pkg_dojar "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
+	    rm -f "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
 	fi
 }
