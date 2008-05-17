@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-extprefs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.7 2007/10/26 02:14:04 seemant Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.8 2008/05/17 15:46:11 tester Exp $
+
+  17 May 2008; Olivier Crête <tester@gentoo.org>
+  pidgin-extprefs-0.7.ebuild:
+  Remove rdep on pkgconfig
 
   26 Oct 2007; Seemant Kulleen <seemant@gentoo.org>
   pidgin-extprefs-0.7.ebuild:
