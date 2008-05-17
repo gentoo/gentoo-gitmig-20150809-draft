@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.131 2008/04/19 17:03:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.132 2008/05/17 11:43:56 armin76 Exp $
+
+*seamonkey-1.1.9-r1 (17 May 2008)
+
+  17 May 2008; Raúl Porcel <armin76@gentoo.org> +seamonkey-1.1.9-r1.ebuild:
+  Revision bump with a patch from Fedora to fix security issues
 
   19 Apr 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.9.ebuild:
   Fix pango check, bug #218438
