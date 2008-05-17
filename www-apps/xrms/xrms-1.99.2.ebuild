@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.4 2008/02/22 15:58:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.5 2008/05/17 08:31:17 wrobel Exp $
 
 inherit webapp depend.php eutils
 
@@ -39,7 +39,7 @@ src_install () {
 	dodoc CHANGELOG README install/INSTALL
 	rm -f CHANGELOG README install/INSTALL LICENSE
 
-	insinto "${MY_HOSTROOTDIR}"/${PF}/include
+	insinto "${MY_HOSTROOTDIR}"/${PF}
 	doins -r include/
 	rm -rf include/
 

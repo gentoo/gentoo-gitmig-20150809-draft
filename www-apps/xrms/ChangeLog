@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/xrms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/ChangeLog,v 1.5 2008/02/22 15:58:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/ChangeLog,v 1.6 2008/05/17 08:31:17 wrobel Exp $
+
+  17 May 2008; wrobel@gentoo.org xrms-1.99.2.ebuild:
+  Fixed #222185.
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> xrms-1.99.2.ebuild:
   add need_httpd_cgi wrt #208584
