@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.4.ebuild,v 1.3 2008/04/08 17:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.4.ebuild,v 1.4 2008/05/17 09:16:40 drac Exp $
 
 inherit versionator
 
@@ -16,18 +16,19 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="aac cdparanoia mp3 wma"
 
 DEPEND=""
-RDEPEND="virtual/python
+RDEPEND="dev-lang/python
 	dev-python/pyid3lib
 	media-sound/vorbis-tools
 	>=media-libs/mutagen-1.11
 	aac? ( media-libs/faad2 media-video/mplayer )
 	cdparanoia? ( media-sound/cdparanoia )
-	mp3? ( || ( media-sound/lame media-sound/mpg123
-			media-sound/mpg321 media-video/mplayer ) )
+	mp3? ( || ( media-sound/lame
+		virtual/mpg123
+		media-video/mplayer ) )
 	wma? ( media-video/mplayer )"
 
 src_install() {
-	dobin ${PN}
+	dobin ${PN} || die "dobin failed."
 	doman ${PN}.1
 	dodoc NEWS README
 }
