@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kspread
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.83 2007/07/26 17:36:03 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.84 2008/05/17 14:52:28 hanno Exp $
+
+*kspread-1.6.3 (17 May 2008)
+
+  17 May 2008; Hanno Boeck <hanno@gentoo.org> +files/kspread-gcc43.patch,
+  +files/kspread-1.6.3-validate-desktop.diff, +kspread-1.6.3.ebuild:
+  Fix gcc 4.3, fix desktop validity.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> kspread-1.6.2.ebuild:
   Stable on ppc64; bug #178697
