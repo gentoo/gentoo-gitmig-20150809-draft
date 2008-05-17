@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.8 2008/04/07 11:35:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.9 2008/05/17 20:07:13 grobian Exp $
 
 inherit gnustep-2
 
@@ -16,13 +16,12 @@ KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="media-libs/audiofile
+RDEPEND="media-libs/audiofile
 	media-libs/taglib
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
-	mad? ( dev-util/pkgconfig
-		media-libs/libid3tag
+	mad? ( media-libs/libid3tag
 		media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	modplug? ( media-libs/libmodplug )
@@ -30,7 +29,8 @@ DEPEND="media-libs/audiofile
 	vorbis? ( >=media-libs/libogg-1.1.2
 		>=media-libs/libvorbis-1.0.1-r2 )
 	=media-libs/musicbrainz-2*"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	mad? ( dev-util/pkgconfig )"
 
 src_unpack() {
 	unpack ${A}
