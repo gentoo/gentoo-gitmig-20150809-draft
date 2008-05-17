@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.332 2008/04/21 22:07:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.333 2008/05/17 12:33:00 dev-zero Exp $
+
+  17 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.28a-wrong_python_ldflags.patch, samba-3.0.28a.ebuild:
+  Fixed compilation problems with python and gcc-4.3 (bug #219604, thanks to
+  vorfeed.canal_AT_gmail_com for the hint)
 
   21 Apr 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/3.0.28-autoconf-2.62-fix.patch, samba-3.0.28.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28a.ebuild,v 1.2 2008/04/21 22:07:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28a.ebuild,v 1.3 2008/05/17 12:33:00 dev-zero Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -49,16 +49,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}/source"
 
-	# This patch adds "-Wl,-z,now" to smb{mnt,umount}
-	# Please read ... for further informations
-	epatch "${FILESDIR}/3.0.26a-lazyldflags.patch"
+	# lazyldflags.patch: adds "-Wl,-z,now" to smb{mnt,umount}
+	# invalid-free-fix.patch: Bug #196015 (upstream: #5021)
 
-	# Bug #196015 (upstream: #5021)
-	epatch "${FILESDIR}/3.0.26a-invalid-free-fix.patch"
-
-	epatch "${FILESDIR}/3.0.28-libcap_detection.patch" \
+	epatch \
+		"${FILESDIR}/3.0.26a-lazyldflags.patch" \
+		"${FILESDIR}/3.0.26a-invalid-free-fix.patch" \
+		"${FILESDIR}/3.0.28-libcap_detection.patch" \
 		"${FILESDIR}/3.0.28-fix_broken_readdir_detection.patch" \
-		"${FILESDIR}/3.0.28-autoconf-2.62-fix.patch"
+		"${FILESDIR}/3.0.28-autoconf-2.62-fix.patch" \
+		"${FILESDIR}/${PV}-wrong_python_ldflags.patch"
 
 	eautoconf -I. -Ilib/replace
 
