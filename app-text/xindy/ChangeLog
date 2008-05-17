@@ -1,0 +1,12 @@
+# ChangeLog for app-text/xindy
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.1 2008/05/17 16:32:49 aballier Exp $
+
+*xindy-2.3 (17 May 2008)
+
+  17 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +xindy-2.3.ebuild:
+  Initial import, thanks to Gour and other people involved in bug #71531 and
+  also thanks to people in #gentoo-lisp for help with having it to work with
+  external clisp
+
