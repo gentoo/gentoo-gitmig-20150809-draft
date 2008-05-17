@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.41 2007/10/22 14:27:03 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.42 2008/05/17 19:54:27 aballier Exp $
+
+*freebsd-sources-6.2-r4 (17 May 2008)
+
+  17 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-sources-6.2-random.patch,
+  +files/freebsd-sources-6.2-sendfile.patch, +freebsd-sources-6.2-r4.ebuild:
+  Add security fixes for bug #212145 and bug #200959
 
   22 Oct 2007; Roy Marples <uberlord@gentoo.org>
   +files/freebsd-sources-6.2-posix-monotonic-clock.patch,
