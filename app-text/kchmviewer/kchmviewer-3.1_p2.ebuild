@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.1 2008/05/13 10:17:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.2 2008/05/17 12:31:48 pva Exp $
 
 inherit autotools kde-functions eutils versionator
 
@@ -23,13 +23,22 @@ DEPEND="=x11-libs/qt-3*
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
 
 pkg_setup() {
-	if use kde && use arts && ! built_with_use kde-base/kdelibs arts ; then
-		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"arts\" USE flag enabled."
-		eerror "However, $(best_version kde-base/kdelibs) was compiled with this flag disabled."
-		eerror
-		eerror "You must either disable this use flag, or recompile"
-		eerror "$(best_version kde-base/kdelibs) with this use flag enabled."
-		die
+	if use kde; then
+		if use arts && ! built_with_use =kde-base/kdelibs-3.5* arts ; then
+			eerror "You are trying to compile ${CATEGORY}/${PF} with the \"arts\" USE flag enabled."
+			eerror "However, $(best_version =kde-base/kdelibs-3.5*) was compiled with this flag disabled."
+			eerror
+			eerror "You must either disable this use flag, or recompile"
+			eerror "$(best_version kde-base/kdelibs) with this use flag enabled."
+			die "Impossible to build kde package with different from kdelibs arts setting"
+		elif ! use arts && built_with_use =kde-base/kdelibs-3.5* arts ; then
+			eerror "You are trying to compile ${CATEGORY}/${PF} with the \"arts\" USE flag disabled."
+			eerror "However, $(best_version =kde-base/kdelibs-3.5*) was compiled with this flag enabled."
+			eerror
+			eerror "You must either enable this use flag, or recompile"
+			eerror "$(best_version =kde-base/kdelibs-3.5*) with this use flag disabled."
+			die "Impossible to build kde package with different from kdelibs arts setting"
+		fi
 	fi
 }
 
