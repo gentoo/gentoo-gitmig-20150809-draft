@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.1 2008/05/06 10:00:23 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.2 2008/05/17 07:40:13 wrobel Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -51,7 +51,7 @@ need_php_httpd
 S="${WORKDIR}"/${MY_PN}-${MY_PV}
 
 pkg_setup() {
-	require_php_with_use mysql
+	require_php_with_use mysql sockets apache2
 }
 
 src_unpack() {
