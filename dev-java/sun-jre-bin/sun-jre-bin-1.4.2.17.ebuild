@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.17.ebuild,v 1.2 2008/03/06 07:56:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.17.ebuild,v 1.3 2008/05/17 18:13:10 betelgeuse Exp $
 
 inherit eutils pax-utils java-vm-2
 
 MY_PV=${PV%.*}_${PV##*.}
 MY_PV2=${PV//./_}
-At="j2re-${MY_PV2}-linux-i586.bin"
+MY_PN=j2re
+At="${MY_PN}-${MY_PV2}-linux-i586.bin"
 S="${WORKDIR}/j2re${MY_PV}"
 DESCRIPTION="Sun's J2SE Platform"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
@@ -32,7 +33,8 @@ RDEPEND="
 	)
 	odbc? ( dev-db/unixODBC )"
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=8&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DL_PREFIX="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef="
+DOWNLOAD_URL="${DL_PREFIX}${MY_PN}-${MY_PV}-oth-JPR@CDS-CDS_Developer"
 
 QA_TEXTRELS_x86="opt/${P}/lib/i386/libawt.so
 	opt/${P}/plugin/i386/ns4/libjavaplugin.so

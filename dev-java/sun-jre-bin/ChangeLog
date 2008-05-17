@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.127 2008/04/16 21:37:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.128 2008/05/17 18:13:10 betelgeuse Exp $
+
+  17 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  sun-jre-bin-1.4.2.17.ebuild:
+  Update download url because of changes in Sun download center. Fixes bug
+  #220375.
 
 *sun-jre-bin-1.6.0.06 (16 Apr 2008)
 
