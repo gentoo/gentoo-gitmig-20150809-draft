@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.5 2008/01/24 21:30:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.6 2008/05/17 19:19:06 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gpl-${PV}*"
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex
+	doc? ( virtual/latex-base
 	app-text/texi2html )"
 
 S="${WORKDIR}/asis-${ACT_Ver}"
