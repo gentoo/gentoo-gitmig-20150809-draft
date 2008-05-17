@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.2 2008/04/24 19:29:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.3 2008/05/17 16:14:19 nixnut Exp $
+
+  17 May 2008; nixnut <nixnut@gentoo.org> Readonly-1.03.ebuild:
+  Added ~ppc wrt bug 219164
 
   24 Apr 2008; Ferris McCormick <fmccor@gentoo.org> Readonly-1.03.ebuild:
   Add ~sparc, part of Bug #219164, all tests pass.
