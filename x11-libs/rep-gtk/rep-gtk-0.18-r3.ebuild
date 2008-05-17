@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.9 2007/03/29 08:37:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.10 2008/05/17 14:11:56 truedfx Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -13,8 +13,7 @@ SLOT="gtk-2.0"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="gnome"
 
-DEPEND=">=dev-libs/librep-0.13
-	>=dev-util/pkgconfig-0.12.0
+RDEPEND=">=dev-libs/librep-0.13
 	>=gnome-base/libglade-2.0.0
 	>=x11-libs/gtk+-2.0.3
 	gnome? ( >=gnome-base/libbonobo-2.0.0
@@ -22,6 +21,8 @@ DEPEND=">=dev-libs/librep-0.13
 		>=gnome-base/libgnome-2.0.0
 		>=gnome-base/libgnomeui-2.0.0
 		>=gnome-base/libgnomecanvas-2.0.0 )"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0"
 
 src_unpack() {
 	unpack ${A}
@@ -52,5 +53,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS BUGS COPYING ChangeLog HACKING README* TODO
+	dodoc AUTHORS BUGS ChangeLog HACKING README* TODO
 }

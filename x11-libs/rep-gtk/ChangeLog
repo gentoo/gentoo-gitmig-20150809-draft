@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.56 2007/03/29 08:37:19 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.57 2008/05/17 14:11:56 truedfx Exp $
+
+  17 May 2008; Harald van Dĳk <truedfx@gentoo.org> rep-gtk-0.18-r3.ebuild:
+  Remove pkg-config from RDEPEND (#217278), don't install COPYING
 
   29 Mar 2007; Markus Rothe <corsair@gentoo.org> rep-gtk-0.18-r3.ebuild:
   Added ~ppc64; bug #172608
