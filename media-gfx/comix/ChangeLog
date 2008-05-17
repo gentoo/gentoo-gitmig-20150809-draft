@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.40 2008/04/06 20:21:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.41 2008/05/17 15:10:28 vanquirius Exp $
+
+  17 May 2008; Marcelo Goes <vanquirius@gentoo.org> -comix-3.6.3.ebuild,
+  -comix-3.6.4.ebuild:
+  Remove old ebuilds.
 
   06 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   comix-3.6.4-r1.ebuild:
