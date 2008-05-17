@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.132 2008/05/17 11:43:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.133 2008/05/17 19:11:29 armin76 Exp $
+
+  17 May 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.9-r1.ebuild:
+  alpha/ia64/sparc stable wrt security #218065
 
 *seamonkey-1.1.9-r1 (17 May 2008)
 
