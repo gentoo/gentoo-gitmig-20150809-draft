@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.1.0.ebuild,v 1.1 2007/12/22 20:53:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.1.0.ebuild,v 1.2 2008/05/17 17:21:11 carlo Exp $
+
+ARTS_REQUIRED="never"
 
 inherit kde
 
@@ -15,4 +17,6 @@ IUSE=""
 
 RDEPEND=">=sys-devel/gdb-5.0"
 
-need-kde 3
+need-kde 3.5
+
+PATCHES="${FILESDIR}/kdbg-2.1.0-desktop-entry.diff"

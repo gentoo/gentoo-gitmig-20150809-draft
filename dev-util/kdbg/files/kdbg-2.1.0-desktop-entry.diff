@@ -1,0 +1,13 @@
+--- kdbg/kdbg.desktop.orig	2008-05-17 19:12:05.000000000 +0200
++++ kdbg/kdbg.desktop	2008-05-17 19:12:28.000000000 +0200
+@@ -1,9 +1,8 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Exec=kdbg -caption "%c" %i
+ Icon=kdbg
+ Type=Application
+-DocPath=kdbg/index.html
++X-DocPath=kdbg/index.html
+ Name=KDbg
+ GenericName=Debugger
+ GenericName[br]=Dizraener

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.55 2007/12/22 20:53:58 carlo Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.56 2008/05/17 17:21:11 carlo Exp $
+
+  17 May 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdbg-2.1.0-desktop-entry.diff, kdbg-2.1.0.ebuild:
+  Minor fixes.
 
 *kdbg-2.1.0 (22 Dec 2007)
 
