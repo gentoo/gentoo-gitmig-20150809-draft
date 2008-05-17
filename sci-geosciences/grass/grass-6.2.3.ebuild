@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.5 2008/05/16 23:15:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.6 2008/05/17 00:50:42 nerdboy Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -155,7 +155,7 @@ src_compile() {
 	if use ffmpeg; then
 	    myconf="${myconf} --with-ffmpeg \
 	        --with-ffmpeg-libs=/usr/$(get_libdir)"
-	    if has_version media-video/ffmpeg-0.4.9_p20080326 ; then
+	    if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
 	        myconf="${myconf} \
 	    	    --with-ffmpeg-includes=/usr/include/libavcodec"
 	    else

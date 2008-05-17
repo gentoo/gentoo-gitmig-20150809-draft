@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.55 2008/05/16 23:15:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.56 2008/05/17 00:50:42 nerdboy Exp $
+
+  17 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
+  Corrected versioning glitch with latest ebuild (sorry about that, chief...)
 
   16 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
   updated depends for bug #221345
@@ -23,8 +26,8 @@
   +files/grass-6.2.3-html-nonviz.patch,
   +files/grass-6.2.3-html-nviz-fix.patch, -grass-6.2.1-r1.ebuild,
   +grass-6.2.3.ebuild:
-  Refined and updated for testing and stablizing; fixes bugs 217873 and 
-  219764.  Thanks to Martin von Gagern <Martin.vGagern@gmx.net> for the
+  Refined and updated for testing and stablizing; fixes bugs #217873 and 
+  #219764.  Thanks to Martin von Gagern <Martin.vGagern@gmx.net> for the
   updated patches and other suggestions.
 
   22 Mar 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.1-r1.ebuild:
