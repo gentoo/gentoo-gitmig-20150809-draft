@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8628 2008/05/17 07:46:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8629 2008/05/17 08:04:53 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1246,12 +1246,6 @@ media-video/gspca
 # Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
 # needs testing
 >=media-video/transcode-1.1.0_alpha4
-
-# Joe Sapp <nixphoeni@gentoo.org> (09 Mar 2007)
-# Masking until I can verify this works with a more recent
-# version of gnome-extra/gdesklets-core.  I blindly removed
-# the version it depended on...
-x11-plugins/desklet-hypertail
 
 # Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
 # Masking net-misc/xsupplicant due to security bug 154995
