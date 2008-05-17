@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mplinuxman
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.13 2008/01/05 21:15:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.14 2008/05/17 09:22:04 drac Exp $
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> mplinuxman-1.5.ebuild:
+  Use virtual/mpg123.
 
   05 Jan 2008; Markus Meier <maekke@gentoo.org> -mplinuxman-1.4.ebuild,
   mplinuxman-1.5.ebuild:
