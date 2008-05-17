@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.6 2008/02/06 21:12:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.7 2008/05/17 10:25:04 bicatali Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="agg xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl threads unicode java doc"
 
 # compilation fails with jdk > 1.4 on some native part probably
-DEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng
 	media-libs/jpeg
 	media-libs/freetype
 	sys-libs/zlib
@@ -35,13 +35,20 @@ DEPEND="media-libs/libpng
 	xpm? ( x11-libs/libXpm )
 	flash? ( media-libs/ming )
 	pdf? ( media-libs/pdflib )
-	php? ( dev-lang/php dev-lang/swig )
-	ruby? ( dev-lang/ruby dev-lang/swig )
-	perl? ( dev-perl/DBI dev-lang/swig )
-	python? ( dev-lang/python dev-lang/swig )
-	java? ( >=virtual/jdk-1.4 dev-lang/swig )
-	tcl? ( dev-lang/tcl dev-lang/swig )"
-RDEPEND="${DEPEND}"
+	php? ( dev-lang/php )
+	ruby? ( dev-lang/ruby )
+	perl? ( dev-perl/DBI )
+	python? ( dev-lang/python )
+	java? ( >=virtual/jdk-1.4 )
+	tcl? ( dev-lang/tcl )"
+DEPEND="${RDEPEND}
+	php? ( dev-lang/swig )
+	ruby? ( dev-lang/swig )
+	perl? ( dev-lang/swig )
+	python? ( dev-lang/swig )
+	java? ( dev-lang/swig )
+	tcl? ( dev-lang/swig )"
+
 
 WEBAPP_MANUAL_SLOT=yes
 
@@ -96,7 +103,7 @@ pkg_setup(){
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	if (use tcl); then
@@ -187,7 +194,7 @@ src_compile() {
 	make || die "make failed"
 
 	if (use php && use proj); then
-	    cd "${S}"/mapscript/php3/
+		cd "${S}"/mapscript/php3/
 		if [ ${np} -eq 2 ]; then
 			cp *.so ../php4/ || die "Unable to copy php4 mapscript object files"
 		fi
@@ -289,7 +296,7 @@ src_install() {
 
 	if use perl; then
 			cd_script perl ${step}
-		    make DESTDIR="${D}" install || \
+			make DESTDIR="${D}" install || \
 				die "Unable to setup perl mapscript support"
 			mapscript_install_examples perl
 	fi

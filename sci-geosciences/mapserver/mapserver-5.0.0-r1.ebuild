@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0-r1.ebuild,v 1.1 2008/02/05 08:29:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0-r1.ebuild,v 1.2 2008/05/17 10:25:04 bicatali Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="agg doc flash gdal geos java pdf perl php postgis proj python ruby tcl threads tiff unicode xml xpm" # mono
 
 # compilation fails with jdk > 1.4 on some native part probably
-DEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng
 	media-libs/jpeg
 	media-libs/freetype
 	>=media-libs/gd-2.0.12
@@ -29,21 +29,27 @@ DEPEND="media-libs/libpng
 	flash? ( media-libs/ming )
 	gdal? ( >sci-libs/gdal-1.2.6 )
 	geos? ( sci-libs/geos )
-	java? ( >=virtual/jdk-1.4 dev-lang/swig )
+	java? ( >=virtual/jdk-1.4 )
 	pdf? ( media-libs/pdflib )
-	perl? ( dev-perl/DBI dev-lang/swig )
-	php? ( dev-lang/php dev-lang/swig )
+	perl? ( dev-perl/DBI )
+	php? ( dev-lang/php )
 	postgis? ( dev-db/postgis )
 	proj? ( sci-libs/proj net-misc/curl )
-	python? ( dev-lang/python dev-lang/swig )
-	ruby? ( dev-lang/ruby dev-lang/swig )
-	tcl? ( dev-lang/tcl dev-lang/swig )
+	python? ( dev-lang/python )
+	ruby? ( dev-lang/ruby )
+	tcl? ( dev-lang/tcl )
 	tiff? ( media-libs/tiff sci-libs/libgeotiff )
 	unicode? ( virtual/libiconv )
 	xml? ( dev-libs/libxml2 )
 	xpm? ( x11-libs/libXpm )"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	java? ( dev-lang/swig )
+	perl? ( dev-lang/swig )
+	ruby? ( dev-lang/swig )
+	python? ( dev-lang/swig )
+	php? ( dev-lang/swig )
+	tcl? ( dev-lang/swig )"
 want_apache2
 
 cd_script() {
@@ -131,8 +137,8 @@ src_compile() {
 	fi
 
 	if use php && use proj; then
-		    cd_script php3 ${step}
-		    emake php_proj.so || die "unable to built php_proj.so"
+			cd_script php3 ${step}
+			emake php_proj.so || die "unable to built php_proj.so"
 	fi
 
 	if use python; then
@@ -251,7 +257,7 @@ src_install() {
 	fi
 
 	dobin shp2img legend shptree shptreevis shp2img legend shptreetst scalebar \
-		    sortshp tile4ms msencrypt mapserver-config \
+			sortshp tile4ms msencrypt mapserver-config \
 			|| die "Unable to setup mapserver tools"
 
 	dodoc INSTALL README HISTORY.TXT || die "Unable to setup documentation"
