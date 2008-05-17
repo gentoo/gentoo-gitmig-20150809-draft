@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-lib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.58 2007/11/03 02:24:26 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.59 2008/05/17 21:55:58 aballier Exp $
+
+*freebsd-lib-6.2-r4 (17 May 2008)
+
+  17 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-lib-6.2-libc.patch, +files/freebsd-lib-6.2-pty6.patch,
+  +freebsd-lib-6.2-r4.ebuild:
+  Bump for security fixes, bug #206847 and part of bug #209889, aka
+  http://security.freebsd.org/advisories/FreeBSD-SA-08:01.pty.asc and
+  http://security.freebsd.org/advisories/FreeBSD-SA-08:02.libc.asc
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org> freebsd-lib-6.2-r3.ebuild:
   Remove the internal hesiod support and use the ebuild instead.
