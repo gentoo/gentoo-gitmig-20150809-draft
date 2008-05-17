@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.44 2008/05/17 19:57:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.45 2008/05/17 20:00:41 carlo Exp $
+
+  17 May 2008; Carsten Lohrke <carlo@gentoo.org> -klamav-0.38.ebuild:
+  Clean up.
 
 *klamav-0.43 (17 May 2008)
 
