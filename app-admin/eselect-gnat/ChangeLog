@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.27 2008/05/16 22:11:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.28 2008/05/17 06:26:51 george Exp $
 
   16 May 2008; George Shapovalov <george@gentoo.org>
   -files/gnat.eselect-1.2, -files/gnat-common-1.2.bash,
@@ -15,7 +15,7 @@
 
 *eselect-gnat-1.4 (14 Apr 2008)
 
-  14 Apr 2008; <portage-cvs@gentoo.org> +files/gnat.eselect-1.4,
+  14 Apr 2008; George Shapovalov <george@gentoo.org> +files/gnat.eselect-1.4,
   +eselect-gnat-1.4.ebuild:
   split profile validity check off the get_active_gnat and made the update
   action clean unmerged profile
