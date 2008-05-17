@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/lmbench
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.15 2008/05/03 01:04:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.16 2008/05/17 11:00:33 dragonheart Exp $
+
+*lmbench-3_alpha3 (17 May 2008)
+
+  17 May 2008; Daniel Black <dragonheart@gentoo.org>
+  +lmbench-3_alpha3.ebuild, -lmbench-3.0_alpha3.ebuild:
+  fix still version numbering thanks to Auke Booij bug #214229
 
 *lmbench-3 (03 May 2008)
 

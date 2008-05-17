@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.16 2008/05/03 06:29:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3_alpha3.ebuild,v 1.1 2008/05/17 11:00:33 dragonheart Exp $
 
 inherit toolchain-funcs eutils
 
-MY_P=${P/_alpha/-a}
+MY_P=${P/0\._alpha/-a}
 DESCRIPTION="Suite of simple, portable benchmarks"
 HOMEPAGE="http://www.bitmover.com/lmbench/whatis_lmbench.html"
-SRC_URI="mirror://gentoo/${MY_P}.tgz"
+SRC_URI="mirror://gentoo/lmbench-3.0-a3.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,11 +16,11 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/lmbench-3.0-a3
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P}-qa.patch
+	epatch "${FILESDIR}"/lmbench-3.0_alpha3-qa.patch
 }
 
 src_compile() {
