@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.2.ebuild,v 1.1 2008/04/21 14:39:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.2.ebuild,v 1.2 2008/05/17 09:42:07 markusle Exp $
 
 inherit eutils elisp-common flag-o-matic autotools multilib
 
@@ -97,6 +97,9 @@ src_install () {
 	# install extended docs
 	if use doc; then
 		dohtml -r html/* || die "failed to install html docs"
+
+		insinto /usr/share/${PN}
+		doins doc/singular.idx || die "failed to install idx file"
 
 		cp info/${PN}.hlp info/${PN}.info &&
 		doinfo info/${PN}.info || \

@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.20 2008/04/21 14:39:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.21 2008/05/17 09:42:07 markusle Exp $
+
+  17 May 2008; Markus Dittrich <markusle@gentoo.org>
+  singular-3.0.4.2.ebuild:
+  Added missing IdxFile needed for html docs (fixes bug #222417).
 
 *singular-3.0.4.2 (21 Apr 2008)
 
