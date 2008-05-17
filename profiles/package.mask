@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8631 2008/05/17 11:15:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8632 2008/05/17 19:24:29 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -216,15 +216,6 @@ net-fs/coda-kernel
 # Matthias Schwarzott <zzam@gentoo.org> (15 Apr 2008)
 # Superseded by vdr-dvdswitch and no longer maintained
 media-plugins/vdr-dvdselect
-
-# Tiziano Müller <dev-zero@gentoo.org> (15 Apr 2008)
-# mask for testing
-app-admin/eselect-postgresql
-dev-db/postgresql-base
-dev-db/postgresql-server
-dev-db/postgresql-docs
-=virtual/postgresql-base-8.3*
-=virtual/postgresql-server-8.3*
 
 # Marijn Schouten <hkBst@gentoo.org> (14 Apr 2008)
 # binary package, now subsumed by binary use flag on mlton itself
