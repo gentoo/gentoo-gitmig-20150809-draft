@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.21 2007/09/18 19:02:05 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.22 2008/05/17 09:13:08 drac Exp $
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> cplay-1.49.ebuild:
+  Use virtual/mpg123.
 
   18 Sep 2007; Samuli Suominen <drac@gentoo.org> cplay-1.49.ebuild:
   Add media-sound/mpg123 as alternative in USE mp3.

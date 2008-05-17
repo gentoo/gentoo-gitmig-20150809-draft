@@ -1,33 +1,31 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.14 2007/09/18 19:02:05 drac Exp $
-
-IUSE="mp3 vorbis"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.15 2008/05/17 09:13:08 drac Exp $
 
 DESCRIPTION="A Curses front-end for various audio players."
 SRC_URI="http://mask.tf.hut.fi/~flu/cplay/${P}.tar.gz"
 HOMEPAGE="http://mask.tf.hut.fi/~flu/hacks/cplay/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="amd64 hppa ~ppc ppc64 sparc x86"
+IUSE="mp3 vorbis"
 
 DEPEND="sys-devel/gettext"
-RDEPEND="virtual/python
+RDEPEND="dev-lang/python
 	vorbis? ( media-sound/vorbis-tools )
 	mp3? ( ||
 		(
-			media-sound/mpg321
-			media-sound/mpg123
+			virtual/mpg123
 			media-sound/madplay
 			media-sound/splay
 		) )"
 
 src_install () {
-	make PREFIX=${D}/usr recursive-install || die "make failed"
+	emake PREFIX="${D}/usr" recursive-install || die "emake failed."
 
-	dosed "s:/usr/local:/usr:g" cplay
-	dobin cplay
+	dosed "s:/usr/local:/usr:g" cplay || die "dosed failed."
+	dobin cplay || die "dobin failed."
 	doman cplay.1
 	dodoc ChangeLog README TODO
 }
