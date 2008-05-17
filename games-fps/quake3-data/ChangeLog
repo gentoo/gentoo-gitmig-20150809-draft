@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/ChangeLog,v 1.9 2007/03/12 14:57:51 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/ChangeLog,v 1.10 2008/05/17 15:56:30 klausman Exp $
+
+  17 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  quake3-data-1.32b.ebuild:
+  Keyworded on alpha, bug #222003
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> quake3-data-1.32b.ebuild:
   Replacing einfo with elog
