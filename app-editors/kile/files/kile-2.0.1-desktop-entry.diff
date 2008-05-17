@@ -1,0 +1,16 @@
+--- ./src/kile/kile.desktop.orig	2008-05-17 21:31:51.000000000 +0200
++++ ./src/kile/kile.desktop	2008-05-17 21:33:50.000000000 +0200
+@@ -3,7 +3,7 @@
+ Type=Application
+ Exec=kile
+ Icon=kile
+-DocPath=kile/index.html
++X-DocPath=kile/index.html
+ Comment=(La)TeX development environment
+ Comment[be]=Асяроддзе распрацоўкі (La)TeX
+ Comment[bg]=Графичен интерфейс на (La)TeX
+@@ -79,4 +79,3 @@
+ GenericName[zh_CN]=LaTeX 前端
+ MimeType=text/x-tex;text/x-kilepr;
+ Categories=Qt;KDE;Office;
+-Encoding=UTF-8
