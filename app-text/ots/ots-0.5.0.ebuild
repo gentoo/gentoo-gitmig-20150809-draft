@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0.ebuild,v 1.1 2007/10/07 22:43:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0.ebuild,v 1.2 2008/05/17 15:24:43 vanquirius Exp $
 
-inherit
+inherit eutils
 
 DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword."
 HOMEPAGE="http://libots.sourceforge.net/"
@@ -20,6 +20,12 @@ RDEPEND="=dev-libs/glib-2*
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-math.patch
+}
+
 src_compile() {
 	# bug 97448
 	econf --disable-gtk-doc || die
@@ -32,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	rm -rf "${D}"/usr/share/doc/libots
 	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README TODO
 	cd "${S}"/doc/html

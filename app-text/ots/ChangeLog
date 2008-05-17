@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ots
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.19 2007/10/07 22:43:39 eva Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.20 2008/05/17 15:24:43 vanquirius Exp $
+
+  17 May 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +files/ots-0.5.0-math.patch, ots-0.5.0.ebuild:
+  Include math.h in grader-tf.c to avoid log function warnings, use emake
+  install instead of make install.
 
 *ots-0.5.0 (07 Oct 2007)
 
