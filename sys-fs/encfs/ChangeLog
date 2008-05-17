@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.31 2008/05/14 02:19:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.32 2008/05/17 14:56:57 vanquirius Exp $
+
+  17 May 2008; Marcelo Goes <vanquirius@gentoo.org> encfs-1.4.2.ebuild:
+  Add >=dev-libs/boost-1.34 dependency for bug 222223. Thanks to Remy Blank
+  <remy.blank at pobox dot com>.
 
 *encfs-1.4.2 (13 May 2008)
 
