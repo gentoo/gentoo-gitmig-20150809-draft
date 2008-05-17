@@ -1,7 +1,16 @@
 # ChangeLog for sys-libs/gxslibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gxslibc/ChangeLog,v 1.1 2008/05/17 11:48:55 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gxslibc/ChangeLog,v 1.2 2008/05/17 18:22:13 pappy Exp $
 
-  17 May 2008; <pappy@gentoo.org> gxslibc:
+  17 May 2008; <pappy@gentoo.org> gxslibc-2.6.1-r3.ebuild:
+  adding -r3 version with better CHOST handling and edited
+  for some eminent QA issues, thanks to Halcy0n and Betelgeuse
+  and special thanks to drac for helping with epatch
+  added check for crosscompile handling not supported
+
+  17 May 2008; <pappy@gentoo.org> gxslibc-2.6.1-r2.ebuild:
+  removed for QA issues regarding ebuild sanity and CHOST
+
+  17 May 2008; <pappy@gentoo.org> gxslibc-2.6.1-r2.ebuild:
   integrate the gxslibc with the gxs/linux
   portage profile for Gentoo Linux and GXS
