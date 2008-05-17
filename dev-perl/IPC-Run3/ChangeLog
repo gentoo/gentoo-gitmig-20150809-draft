@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.27 2008/04/29 17:36:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.28 2008/05/17 15:03:11 nixnut Exp $
+
+  17 May 2008; nixnut <nixnut@gentoo.org> IPC-Run3-0.038.ebuild:
+  Added ~ppc wrt bug 219723
 
   29 Apr 2008; Jeroen Roovers <jer@gentoo.org> IPC-Run3-0.038.ebuild:
   Marked ~hppa (bug #219723).
