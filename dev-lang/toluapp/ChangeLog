@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/toluapp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.16 2007/03/26 09:17:13 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.17 2008/05/17 18:40:27 drac Exp $
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org>
+  -files/toluapp-1.0.2-gentoo.patch, -toluapp-1.0.2.ebuild,
+  -toluapp-1.0.7_p1.ebuild, toluapp-1.0.92.ebuild:
+  Move scons to DEPEND wrt #220441. Remove old versions and keyword ~amd64
+  for testing.
 
   26 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   toluapp-1.0.92.ebuild:
