@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.213 2008/04/15 15:57:35 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.214 2008/05/17 15:29:59 carlo Exp $
 
 # @ECLASS: kde.eclass
 # @MAINTAINER:
@@ -119,14 +119,14 @@ kde_pkg_setup() {
 kde_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
-	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+	[[ -z "${KDE_S}" ]] && KDE_S="${S}"
 
 	local PATCHDIR="${WORKDIR}/patches/"
 	if [[ -z "$@" ]] ; then
 		# Unpack first and deal with KDE patches after examing possible patch sets.
 		# To be picked up, patches need to be named $PN-$PV-*{diff,patch} and be
 		# placed in $PATCHDIR. Monolithic ebuilds will use the split ebuild patches.
-		[[ -d ${KDE_S} ]] || base_src_unpack unpack
+		[[ -d "${KDE_S}" ]] || base_src_unpack unpack
 		if [[ -d "${PATCHDIR}" ]] ; then
 			local packages p f
 			if is-parent-package ${CATEGORY}/${PN} ; then
@@ -221,7 +221,7 @@ kde_src_compile() {
 
 	[[ -z "$1" ]] && kde_src_compile all
 
-	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+	[[ -z "${KDE_S}" ]] && KDE_S="${S}"
 	cd "${KDE_S}"
 
 	export kde_widgetdir="$KDEDIR/$(get_libdir)/kde3/plugins/designer"
@@ -369,15 +369,13 @@ EOF
 				use elibc_FreeBSD && myconf="${myconf} --disable-pie"
 
 				elibtoolize
-				econf \
-					${myconf} \
-					|| die "died running ./configure, $FUNCNAME:configure"
+				econf ${myconf} || die "died running ./configure, $FUNCNAME:configure"
 
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
 				if [[ "${ARCH}" = "hppa" ]]
 				then
 					einfo "Fixing Makefiles"
-					find ${KDE_S} -name Makefile -print0 | xargs -0 sed -i -e \
+					find "${KDE_S}" -name Makefile -print0 | xargs -0 sed -i -e \
 						's:-O2:-ffunction-sections:g'
 				fi
 				;;
@@ -536,4 +534,3 @@ kde_pkg_postrm() {
 }
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm pkg_preinst
-
