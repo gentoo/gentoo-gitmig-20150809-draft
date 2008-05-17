@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.4.ebuild,v 1.4 2008/03/27 18:18:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.4.ebuild,v 1.5 2008/05/17 15:48:59 tester Exp $
 
 inherit eutils multilib
 
@@ -13,13 +13,15 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="ipv6 perl debug"
 
-DEPEND="perl? (	dev-lang/perl )
+COMMONDEPEND="perl? (	dev-lang/perl )
 	sys-libs/ncurses
-	dev-util/pkgconfig
 	>=dev-libs/glib-2.8
 	!<=net-im/silc-toolkit-0.9.12-r1"
 
-RDEPEND="${DEPEND}
+DEPEND="${COMMONDEPEND}
+	dev-util/pkgconfig"
+
+RDEPEND="${COMMONDEPEND}
 	perl? (
 		!net-irc/irssi
 		!net-irc/irssi-svn

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.6.ebuild,v 1.6 2008/03/28 21:01:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.6.ebuild,v 1.7 2008/05/17 15:53:16 tester Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -18,13 +18,15 @@ for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
 done;
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )
 	otr? ( >=net-libs/libotr-3.1.0 )
 	spell? ( app-text/aspell )
-	dev-util/pkgconfig
 	>=dev-libs/glib-2.0.0
 	sys-libs/ncurses"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf \
