@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_rc1.ebuild,v 1.1 2008/05/17 13:13:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0_rc1.ebuild,v 1.2 2008/05/17 17:12:05 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -49,8 +49,8 @@ done
 
 RDEPEND="java? ( virtual/jre )
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12_beta3
-	>=dev-libs/nspr-4.7.1_beta2
+	>=dev-libs/nss-3.12_rc3
+	>=dev-libs/nspr-4.7.1
 	>=media-libs/lcms-1.17
 	>=app-text/hunspell-1.1.9
 	>=dev-db/sqlite-3.5
