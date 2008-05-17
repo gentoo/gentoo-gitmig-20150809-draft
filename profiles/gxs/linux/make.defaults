@@ -1,7 +1,0 @@
-# Copyright 1999-2008 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/gxs/linux/make.defaults,v 1.1 2008/05/17 11:42:53 pappy Exp $
-
-# STAGE1_USE=""
-
-USE="-fortran -ipv6 -nls pic urandom"

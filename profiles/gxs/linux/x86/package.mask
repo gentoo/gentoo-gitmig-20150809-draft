@@ -1,7 +1,0 @@
-# Copyright 2006-2008 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/gxs/linux/x86/package.mask,v 1.1 2008/05/17 11:42:54 pappy Exp $
-
-# Christian Faulhammer <opfer@gentoo.org> (05 Dec 2006)
-# this version is badly broken on x86, see bug #153280
-~app-arch/rpm-4.4.7
