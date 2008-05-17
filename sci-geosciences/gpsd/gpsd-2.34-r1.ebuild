@@ -1,12 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.34-r1.ebuild,v 1.4 2008/05/06 16:51:51 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.34-r1.ebuild,v 1.5 2008/05/17 18:27:15 nerdboy Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF=2.5
 
 inherit eutils autotools distutils
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
-SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
+SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -27,7 +30,6 @@ RDEPEND="X? (
 		virtual/motif
 	)
 	python? ( dev-lang/python )
-	app-text/xmlto
 	dbus? ( >=sys-apps/dbus-0.94
 		>=dev-libs/glib-2.6
 		dev-libs/dbus-glib )
@@ -38,12 +40,10 @@ DEPEND="${RDEPEND}
 	X? (
 		x11-proto/xproto
 		x11-proto/xextproto
-	)"
+	)
+	!minimal? ( dev-libs/libxslt )"
 
 RESTRICT="test"
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF=2.5
 
 src_unpack() {
 	unpack ${A}
@@ -70,12 +70,20 @@ src_compile() {
 	    local max_clients="5"
 	    local max_devices="1"
 	    my_conf="${my_conf} --enable-squelch --disable-pps"
-	    my_conf="${my_conf} --enable-max-clients=${max_clients} --enable-max-devices=${max_devices}"
-	fi
+	    my_conf="${my_conf}  --enable-max-clients=${max_clients} \
+		--enable-max-devices=${max_devices}"
 
-	econf ${my_conf} $(use_enable dbus) $(use_enable tntc tnt) \
-	    $(use_with X x) $(use_enable italk) $(use_enable itrax) \
-	    $(use_enable python) || die "econf failed"
+	    WITH_XSLTPROC=no WITH_XMLTO=no econf ${my_conf} \
+		$(use_enable dbus) $(use_with X x) \
+		$(use_enable tntc tnt) $(use_enable italk) \
+		$(use_enable itrax) $(use_enable python) \
+		|| die "econf failed"
+	else
+	    econf ${my_conf} $(use_enable dbus) $(use_with X x) \
+		$(use_enable tntc tnt) $(use_enable italk) \
+		$(use_enable itrax) $(use_enable python) \
+		|| die "econf failed"
+	fi
 
 	emake LDFLAGS="${LDFLAGS} -lm" || die "emake failed"
 }
@@ -99,6 +107,9 @@ src_install() {
 	    insinto /etc/X11/app-defaults
 	    newins xgps.ad Xgps
 	    newins xgpsspeed.ad Xgpsspeed
+	else
+	    rm "${D}usr/share/man/man1/xgpsspeed.1.bz2" \
+		"${D}usr/share/man/man1/xgps.1.bz2"
 	fi
 
 	dobin logextract
@@ -107,6 +118,11 @@ src_install() {
 	if use python ; then
 	    exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	    doexe gps.py gpsfake.py gpspacket.so
+	fi
+
+	if use minimal; then
+	    doman gpsctl.1 gpsflash.1 gpspipe.1 gps.1 gpsd.8
+	    use python && doman gpsprof.1 gpsfake.1 gpscat.1
 	fi
 
 	dodoc AUTHORS INSTALL README TODO

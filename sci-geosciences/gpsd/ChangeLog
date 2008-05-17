@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.30 2008/03/01 21:35:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.31 2008/05/17 18:27:15 nerdboy Exp $
+
+  17 May 2008; Steve Arnold <nerdboy@gentoo.org> gpsd-2.34-r1.ebuild:
+  Applying updates from bug #211456 due to device breakage in 2.36 (no
+  response on bug).
 
   01 Mar 2008; Steve Arnold <nerdboy@gentoo.org> gpsd-2.36.ebuild:
   Cleaned up minimal use logic and updated for bug #211456; updated version
