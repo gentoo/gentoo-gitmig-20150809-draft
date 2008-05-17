@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.1.ebuild,v 1.2 2008/05/13 18:33:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.1.ebuild,v 1.3 2008/05/17 03:10:58 dang Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="GNOME panel applet to display readings from hardware sensors"
 HOMEPAGE="http://sensors-applet.sourceforge.net/"
@@ -39,4 +39,6 @@ pkg_setup() {
 	G2CONF="$(use_with nvidia) \
 			$(use_with lm_sensors libsensors) \
 			$(use_enable libnotify)"
+
+	use nvidia && filter-ldflags -Wl,--as-needed
 }
