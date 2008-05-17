@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.8.ebuild,v 1.8 2008/01/17 04:27:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.8.ebuild,v 1.9 2008/05/17 04:27:48 matsuu Exp $
 
 inherit eutils
 
@@ -46,6 +46,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
+
+	rm -rf "${D}"/usr/share/gc || die
 
 	# dist_noinst_HEADERS
 	insinto /usr/include/gc
