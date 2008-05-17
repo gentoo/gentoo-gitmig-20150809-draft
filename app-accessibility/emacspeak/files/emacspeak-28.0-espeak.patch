@@ -1,0 +1,26 @@
+--- emacspeak-28.0/servers/linux-espeak/tclespeak.cpp.orig	2008-05-17 12:34:21.000000000 -0500
++++ emacspeak-28.0/servers/linux-espeak/tclespeak.cpp	2008-05-17 12:38:41.000000000 -0500
+@@ -593,20 +593,18 @@
+ 	  continue;
+ 	}
+ 
+-      char* aLangCode = 1 + voices[i]->languages;
+-
+       snprintf(buffer_i, 3, "%d", aLang); 
+       snprintf(buffer_j, 3, "%d", j++); 
+       Tcl_SetVar2(interp, "langsynth", buffer_j, buffer_i, 0);
+       
+-      if (strncmp(aDefaultLang, aLangCode, 2) == 0)
++      if (strncmp(aDefaultLang, (1 + voices[i]->languages), 2) == 0)
+ 	{
+ 	  Tcl_SetVar2(interp, "langsynth", "current", buffer_i, 0);
+-	  Tcl_SetVar2(interp, "langcode", "current", aLangCode, 0);
++	  Tcl_SetVar2(interp, "langcode", "current", (1 + voices[i]->languages), 0);
+ 	}
+ 
+       Tcl_SetVar2(interp, "langlabel", buffer_j, voices[i]->name, 0);
+-      Tcl_SetVar2(interp, "langcode", buffer_j, aLangCode, 0);
++      Tcl_SetVar2(interp, "langcode", buffer_j, (1 + voices[i]->languages), 0);
+       Tcl_SetVar2(interp, "langsynth", "top", buffer_j, 0);
+     }
+ }

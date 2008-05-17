@@ -1,0 +1,126 @@
+--- emacspeak-28.0.orig/servers/dtk-exp	2008-03-14 21:06:51.000000000 -0500
++++ emacspeak-28.0/servers/dtk-exp	2008-05-15 22:05:50.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ # $Id: emacspeak-28.0-tcl84.patch,v 1.1 2008/05/17 19:52:26 williamh Exp $
+ # Description:  Interfacing to a Dectalk via TCL.
+ # Keywords: Emacspeak, Dectalk, TCL
+@@ -364,13 +364,13 @@
+ fconfigure $tts(write) -encoding ascii
+ 
+ # Emacspeak sends utf-8
+-fconfigure file0 -encoding utf-8
++fconfigure stdin -encoding utf-8
+ 
+ tts_initialize
+ set tts(speech_rate)  225
+ set tts(say_rate) [round \
+                        [expr $tts(speech_rate) * $tts(char_factor)]]
+-set tts(input) file0
++set tts(input) stdin
+ if {[info exists server_p]} {
+     set tts(input) sock0
+ }
+--- emacspeak-28.0.orig/servers/dtk-soft	2007-06-23 23:12:04.000000000 -0500
++++ emacspeak-28.0/servers/dtk-soft	2008-05-15 21:51:09.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ # Keywords: Emacspeak, Software Dectalk , TCL
+ # {{{ LCD Entry: 
+ 
+--- emacspeak-28.0.orig/servers/espeak	2008-03-14 21:04:31.000000000 -0500
++++ emacspeak-28.0/servers/espeak	2008-05-15 22:06:14.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ # Keywords: Emacspeak, eSpeak , TCL
+ # {{{ LCD Entry: 
+ 
+@@ -504,7 +504,7 @@
+ signal ignore {sigint}
+ 
+ # Set input encoding to utf-8
+-fconfigure file0 -encoding utf-8
++fconfigure stdin -encoding utf-8
+ 
+ #initialize eSpeak
+ tts_initialize
+--- emacspeak-28.0.orig/servers/outloud	2008-04-08 22:31:52.000000000 -0500
++++ emacspeak-28.0/servers/outloud	2008-05-15 22:06:39.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ # Keywords: Emacspeak, ViaVoice Outloud , TCL
+ # {{{ LCD Entry: 
+ 
+@@ -471,13 +471,13 @@
+ signal ignore {sigint}
+ 
+ # Set input encoding to utf-8
+-fconfigure file0 -encoding utf-8
++fconfigure stdin -encoding utf-8
+ 
+ #initialize outloud 
+ tts_initialize
+ set tts(speech_rate)  75
+ beep_initialize
+-set tts(input) file0
++set tts(input) stdin
+ if {[info exists server_p]} {
+     set tts(input) sock0
+ }
+--- emacspeak-28.0.orig/servers/speech-server	2007-07-01 21:12:27.000000000 -0500
++++ emacspeak-28.0/servers/speech-server	2008-05-15 22:08:03.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ # $Id: emacspeak-28.0-tcl84.patch,v 1.1 2008/05/17 19:52:26 williamh Exp $
+ # Description:  Speech server
+ #Usage: tcl speech-server port device-specific-script
+--- emacspeak-28.0.orig/servers/ssh-dtk-exp	2008-01-05 14:24:47.000000000 -0600
++++ emacspeak-28.0/servers/ssh-dtk-exp	2008-05-15 22:11:31.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ #$Id: emacspeak-28.0-tcl84.patch,v 1.1 2008/05/17 19:52:26 williamh Exp $
+ #Description: Launch a TTS server on a remote host.
+ #Copyright (C) 1995 -- 2007, T. V. Raman 
+@@ -37,7 +37,7 @@
+ set user [lindex $user_host 0]
+ set host [lindex $user_host 1]
+ if {$user == ""} {set  user env($USER)}
+-set tcl /usr/bin/tcl 
++set tcl /usr/bin/tclsh 
+ regsub {/ssh-}  $argv0 {/} tts
+ puts stderr "Running <ssh $host -l $user -p $port   $tcl $tts>"
+ exec     ssh -o StrictHostKeyChecking=no $host \
+--- emacspeak-28.0.orig/servers/ssh-outloud	2007-06-23 22:00:42.000000000 -0500
++++ emacspeak-28.0/servers/ssh-outloud	2008-05-15 22:11:52.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/tcl
++#!/usr/bin/tclsh
+ #$Id: emacspeak-28.0-tcl84.patch,v 1.1 2008/05/17 19:52:26 williamh Exp $
+ #Description: Launch a TTS server on a remote host.
+ #Copyright (C) 1995 -- 2007, T. V. Raman 
+@@ -35,7 +35,7 @@
+ set user [lindex $user_host 0]
+ set host [lindex $user_host 1]
+ if {$user == ""} {set  user env($USER)}
+-set tcl /usr/bin/tcl 
++set tcl /usr/bin/tclsh 
+ regsub {/ssh-}  $argv0 {/} tts
+ puts stderr "Running <ssh $host -l $user -p $port   $tcl $tts>"
+ exec     ssh -o StrictHostKeyChecking=no $host \
+--- emacspeak-28.0.orig/servers/tts-lib.tcl	2007-06-23 23:12:04.000000000 -0500
++++ emacspeak-28.0/servers/tts-lib.tcl	2008-05-15 22:57:16.000000000 -0500
+@@ -35,6 +35,8 @@
+ # the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+ #
+ 
++package require Tclx
++
+ # }}}
+ # {{{ sync state 
+ proc tts_sync_state {punct capitalize allcaps splitcaps rate} {
