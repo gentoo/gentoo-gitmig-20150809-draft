@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.2 2008/02/21 18:57:16 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.3 2008/05/17 14:12:38 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -25,14 +25,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome esd nls audiofile pango"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
-	>=x11-libs/rep-gtk-0.17
+RDEPEND=">=x11-libs/rep-gtk-0.17
 	>=dev-libs/librep-0.16
 	>=x11-libs/gtk+-2.0.8
 	audiofile? ( >=media-libs/audiofile-0.2.3 )
 	esd? ( >=media-sound/esound-0.2.23 )
 	nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0"
 
 if (( snapshot )); then
 	S="${WORKDIR}/${PN}"
