@@ -1,0 +1,24 @@
+--- klamav-0.43/src/klamav.desktop.orig	2008-05-17 21:20:30.000000000 +0200
++++ klamav-0.43/src/klamav.desktop	2008-05-17 21:21:00.000000000 +0200
+@@ -1,10 +1,9 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KlamAV
+-Exec=klamav %i %m -caption "%c"
++Exec=klamav %i -caption "%c"
+ Icon=klamav
+ Type=Application
+-DocPath=klamav/klamav.html
++X-DocPath=klamav/klamav.html
+ Comment=An Anti-Virus Manager
+ Comment[cs]=An Anti-Virus Manager
+ Comment[da]=An Anti-Virus Manager
+@@ -35,7 +34,6 @@
+ Comment[tr]=An Anti-Virus Manager
+ Comment[uk]=An Anti-Virus Manager
+ Comment[zh_CN.GB2312]=An Anti-Virus Manager
+-Terminal=0
+ GenericName=Anti-Virus Manager
+ GenericName[fr]=Anti-Virus Manager
+-Categories=Qt;KDE;Application;System;
++Categories=Qt;KDE;System;
