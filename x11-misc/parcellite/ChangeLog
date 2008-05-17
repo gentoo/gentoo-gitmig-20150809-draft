@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/parcellite
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.1 2008/05/17 20:52:06 drac Exp $
+
+*parcellite-0.7 (17 May 2008)
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> +parcellite-0.7.ebuild:
+  Initial commit wrt #211141, using ebuild by Peter Sterk.
+
