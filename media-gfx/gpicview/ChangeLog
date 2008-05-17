@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gpicview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.4 2008/05/17 14:37:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.5 2008/05/17 14:50:57 drac Exp $
+
+*gpicview-0.1.9 (17 May 2008)
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> +gpicview-0.1.9.ebuild:
+  Version bump.
 
   17 May 2008; nixnut <nixnut@gentoo.org> gpicview-0.1.8.ebuild:
   Added ~ppc wrt bug 212370
