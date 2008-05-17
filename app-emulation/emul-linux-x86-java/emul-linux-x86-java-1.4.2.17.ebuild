@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.17.ebuild,v 1.2 2008/03/20 21:02:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.17.ebuild,v 1.3 2008/05/17 18:14:05 betelgeuse Exp $
 
 inherit multilib eutils pax-utils java-vm-2
 
 MY_PV=${PV%.*}_${PV##*.}
 MY_PV2=${PV//./_}
-At="j2re-${MY_PV2}-linux-i586.bin"
-
+MY_PN=j2re
+At="${MY_PN}-${MY_PV2}-linux-i586.bin"
 S="${WORKDIR}/j2re${MY_PV}"
 DESCRIPTION="Sun's JRE (32bit)"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
@@ -24,7 +24,8 @@ DEPEND=""
 RDEPEND="alsa? ( app-emulation/emul-linux-x86-soundlibs )
 	X? ( app-emulation/emul-linux-x86-xlibs )"
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=8&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DL_PREFIX="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef="
+DOWNLOAD_URL="${DL_PREFIX}${MY_PN}-${MY_PV}-oth-JPR@CDS-CDS_Developer"
 
 QA_TEXTRELS_amd64="opt/${P}/lib/i386/libawt.so
 	opt/${P}/plugin/i386/ns4/libjavaplugin.so

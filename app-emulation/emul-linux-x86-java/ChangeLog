@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.53 2008/04/19 15:03:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.54 2008/05/17 18:14:05 betelgeuse Exp $
+
+  17 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  emul-linux-x86-java-1.4.2.17.ebuild:
+  Update download url because of changes in Sun download center. Fixes bug
+  #220375.
 
   19 Apr 2008; Vlastimil Babka <caster@gentoo.org>
   emul-linux-x86-java-1.5.0.15.ebuild, emul-linux-x86-java-1.6.0.06.ebuild:
