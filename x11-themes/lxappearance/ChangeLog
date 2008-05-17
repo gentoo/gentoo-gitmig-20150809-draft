@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/lxappearance
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lxappearance/ChangeLog,v 1.1 2008/05/17 15:14:30 drac Exp $
+
+*lxappearance-0.2 (17 May 2008)
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> +lxappearance-0.2.ebuild:
+  Initial commit wrt #157989, thanks to Ryoichiro Suzuki and Jonathan Dehan.
+
