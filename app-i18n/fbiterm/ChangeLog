@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fbiterm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.8 2007/02/21 22:01:06 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.9 2008/05/17 00:57:49 matsuu Exp $
+
+*fbiterm-0.5-r1 (17 May 2008)
+
+  17 May 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/fbiterm-0.5-r1-gentoo.diff, +fbiterm-0.5-r1.ebuild:
+  Fixed fonts problems, bug #221813.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
