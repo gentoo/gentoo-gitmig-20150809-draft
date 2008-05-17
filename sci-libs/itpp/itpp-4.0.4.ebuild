@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.6 2008/05/17 10:12:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.7 2008/05/17 12:46:53 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -41,12 +41,10 @@ src_compile() {
 	# turn off performance critical debug code
 	append-flags -DNDEBUG
 
-	# make sure that -g is removed with USE="debug"
-	# since we've turned stripping off and a separate
-	# debug lib is being built
-	if use debug; then
-		filter-flags -g
-	fi
+	# make sure that -g is stripped always since we use
+	# RESTRICT=strip. If debug info is needed please enable
+	# the debug use flag and link against the debug *.so
+	filter-flags -g
 
 	local blas_conf="--without-blas"
 	local lapack_conf="--without-lapack"
