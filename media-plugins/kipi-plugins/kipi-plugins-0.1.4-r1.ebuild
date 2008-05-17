@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.3 2008/05/16 19:38:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.4 2008/05/17 16:15:25 carlo Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="opengl gphoto2 ipod"
 
 DEPEND=">=media-libs/libkipi-0.1.5
@@ -31,7 +31,6 @@ DEPEND=">=media-libs/libkipi-0.1.5
 need-kde 3.5
 
 pkg_setup(){
-	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
 	if ! built_with_use media-libs/imlib2 X ; then
 		eerror "X support is required in media-libs/imlib2 in order to be able"
 		eerror "to compile media-plugins/kipi-plugins. Please, re-emerge"
