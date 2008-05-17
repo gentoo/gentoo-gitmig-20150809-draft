@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.36 2007/01/05 17:37:11 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.37 2008/05/17 08:48:35 drac Exp $
+
+  17 May 2008; Samuli Suominen <drac@gentoo.org> mpg321-0.2.10-r2.ebuild,
+  mpg321-0.2.10-r3.ebuild:
+  Move mpg123 to new-style virtual.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   mpg321-0.2.10-r2.ebuild, mpg321-0.2.10-r3.ebuild:
