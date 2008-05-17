@@ -1,6 +1,6 @@
-# ChangeLog for app-doc/chmlib
+# ChangeLog for dev-libs/chmlib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.1 2008/05/13 07:41:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.2 2008/05/17 10:48:40 swegener Exp $
 
   13 May 2008; Peter Volkov <pva@gentoo.org> +metadata.xml,
   +chmlib-0.39.ebuild:
