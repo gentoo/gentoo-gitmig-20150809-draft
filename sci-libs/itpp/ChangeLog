@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.74 2008/05/12 13:28:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.75 2008/05/17 10:12:29 markusle Exp $
+
+  17 May 2008; Markus Dittrich <markusle@gentoo.org> itpp-4.0.4.ebuild:
+  Added RESTRICT="strip" to prevent debug lib from being stripped.
 
   12 May 2008; Markus Dittrich <markusle@gentoo.org> itpp-4.0.3.ebuild,
   itpp-4.0.4.ebuild:
