@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r1.ebuild,v 1.1 2008/03/26 20:01:48 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r1.ebuild,v 1.2 2008/05/17 15:59:12 carlo Exp $
 
 USE_KEG_PACKAGING=1
 LANGS="ar be br ca cs cy da de el en_GB es et fi fr ga gl hi is it ja ka lt ms
@@ -29,19 +29,12 @@ need-kde 3.5
 PATCHES="${FILESDIR}/${P}-gcc-4.3.patch"
 
 pkg_setup() {
-	setupok=0
 	if use exif && ! built_with_use =x11-libs/qt-3* sqlite ; then
 		eerror "To enable KPhotoAlbum to search your images"
 		eerror "using EXIF information you also need to have"
 		eerror "Qt installed with SQLite support."
 		eerror
 		eerror "Make sure your Qt is installed with the sqlite USE flag."
-		((setupok++))
-	fi
-
-	slot_rebuild "media-libs/libkipi" && ((setupok++))
-
-	if (($setupok > 0)); then
 		die
 	fi
 }

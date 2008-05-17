@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.59 2008/02/12 18:13:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.60 2008/05/17 16:00:58 carlo Exp $
+
+  17 May 2008; Carsten Lohrke <carlo@gentoo.org> -gwenview-1.4.1.ebuild,
+  gwenview-1.4.2.ebuild:
+  Clean up. Remove deprecated slot_rebuild() check.
 
   12 Feb 2008; Raúl Porcel <armin76@gentoo.org> gwenview-1.4.2.ebuild:
   sparc stable wrt #208048

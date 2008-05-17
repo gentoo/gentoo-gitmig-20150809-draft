@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.28 2008/03/26 20:01:48 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.29 2008/05/17 15:59:12 carlo Exp $
+
+  17 May 2008; Carsten Lohrke <carlo@gentoo.org> kphotoalbum-3.1.0.ebuild,
+  -kphotoalbum-3.1.1.ebuild, kphotoalbum-3.1.1-r1.ebuild:
+  Clean up. Remove deprecated slot_rebuild() check.
 
 *kphotoalbum-3.1.1-r1 (26 Mar 2008)
 

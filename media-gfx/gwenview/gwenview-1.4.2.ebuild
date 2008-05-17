@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2.ebuild,v 1.5 2008/02/12 18:13:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2.ebuild,v 1.6 2008/05/17 16:00:58 carlo Exp $
 
 inherit kde
 
@@ -31,12 +31,6 @@ for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/${PN}/${I18N}.tar.bz2 )"
 	IUSE="${IUSE} linguas_${X}"
 done
-
-pkg_setup(){
-	if use kipi ; then
-		slot_rebuild "media-plugins/kipi-plugins" && die
-	fi
-}
 
 src_unpack() {
 	kde_src_unpack
