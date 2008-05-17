@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.1.ebuild,v 1.2 2007/09/06 02:48:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.1.ebuild,v 1.3 2008/05/17 10:09:03 bicatali Exp $
 
 IUSE="doc"
 
@@ -11,9 +11,11 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86"
 
-DEPEND="sys-libs/zlib
-	doc? ( app-doc/doxygen )
+RDEPEND="sys-libs/zlib
 	!app-misc/beagle"
+
+DEPEND="${DEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
@@ -33,11 +35,11 @@ src_compile() {
 }
 
 src_install () {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use doc; then
-		cp -pPR examples ${D}/usr/share/doc/${PF} || \
+		cp -pPR examples "${D}"/usr/share/doc/${PF} || \
 			die "Failed to install examples."
 		dohtml -r refman/* || die "Failed to install manual."
 	fi

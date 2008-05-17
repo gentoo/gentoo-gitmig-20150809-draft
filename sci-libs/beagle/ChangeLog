@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/beagle
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.7 2007/09/06 02:48:40 markusle Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.8 2008/05/17 10:09:03 bicatali Exp $
+
+  17 May 2008; Sébastien Fabbro <bicatali@gentoo.org> beagle-2.2.0.ebuild,
+  beagle-3.0.1.ebuild:
+  Fixed runtime depend on doxygen (bug #221685), and some trivial QA
 
   06 Sep 2007; Markus Dittrich <markusle@gentoo.org> beagle-2.2.0.ebuild,
   beagle-3.0.1.ebuild:

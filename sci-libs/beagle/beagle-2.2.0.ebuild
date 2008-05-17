@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-2.2.0.ebuild,v 1.4 2007/09/06 02:48:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-2.2.0.ebuild,v 1.5 2008/05/17 10:09:03 bicatali Exp $
 
 inherit libtool
 
@@ -13,10 +13,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=sys-devel/gcc-2.96
-	sys-libs/zlib
-	doc? ( app-doc/doxygen )
+RDEPEND="sys-libs/zlib
 	!app-misc/beagle"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/gcc-2.96
+	doc? ( app-doc/doxygen )"
 
 src_compile() {
 	elibtoolize
@@ -27,11 +29,11 @@ src_compile() {
 }
 
 src_install () {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use doc; then
-		cp -pPR examples ${D}/usr/share/doc/${PF}
+		cp -pPR examples "${D}"/usr/share/doc/${PF}
 		dohtml refman/html/*
 	fi
 }
