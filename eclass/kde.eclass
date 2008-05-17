@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.214 2008/05/17 15:29:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.215 2008/05/17 15:41:01 carlo Exp $
 
 # @ECLASS: kde.eclass
 # @MAINTAINER:
@@ -445,6 +445,8 @@ kde_src_install() {
 # @USAGE: [ list_of_packages_to_check ]
 # @RETURN: False, if no rebuild is required
 # @DESCRIPTION:
+# Unneeded and therefore deprecated for a long, long time now. Ebuilds are still
+# referencing it, so replacing with a stub.
 # Looks for packages in the supplied list of packages which have not been linked
 # against this kde SLOT. It does this by looking for lib*.la files that doesn't
 # contain the current ${KDEDIR}. If it finds any thus broken packages it prints
@@ -452,64 +454,7 @@ kde_src_install() {
 #
 # Thanks to Carsten Lohrke in bug 98425.
 slot_rebuild() {
-	local VDB_PATH="$(portageq vdb_path)"
-	local REBUILD_LIST=""
-	local BROKEN_PKGS=""
-
-	echo
-	einfo "Scan for possible needed slot related rebuilds.\n"
-	echo
-	for i in ${*} ; do
-		local temp="$(ls -1d ${VDB_PATH}/${i}*)"
-		for j in ${temp} ; do
-			if ! [[ -f ${j}/CONTENTS ]] ; then
-				eerror "The package db entry for ${j/${VDB_PATH}\//} is broken."
-				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
-				continue
-			fi
-
-			k="$(grep -o "/.*/lib.*\.la" ${j}/CONTENTS)"
-			m=""
-			for l in ${k} ; do [[ -e ${l} ]] && m="${m} ${l}"; done
-			l="$(echo ${k} ${m} | tr ' ' '\n' | sort | uniq -u)"
-
-			if [[ ${l} != "" ]] || [[ ${m} == "" ]] ; then
-				eerror "Installation of ${j/${VDB_PATH}\//} is broken."
-				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
-			else
-				if [[ $(cat ${m} | grep -co "${KDEDIR}") = 0 ]] ; then
-					REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
-				fi
-			fi
-		done
-	done
-	echo
-	if [[ -n "${BROKEN_PKGS}" ]] ; then
-		eerror "Anomalies were found. Please do \"emerge ${BROKEN_PKGS}\"."
-		return 0
-	fi
-
-
-	if [[ -n "${REBUILD_LIST}" ]] ; then
-		local temp=""
-		cd "${VDB_PATH}"
-		for i in ${REBUILD_LIST} ; do
-			i="$(echo ${i%-*} | cut -d= -f2)"
-			temp="${temp} $(find . -iname "DEPEND" -exec grep -H ${i} '{}' \; | cut -f2-3 -d/ | grep -v ${CATEGORY}/${PN})"
-		done
-		temp="$(echo ${temp} | tr ' ' '\n' | sort -u)"
-		for i in ${temp} ; do
-			REBUILD_LIST="${REBUILD_LIST} =${i}"
-		done
-	fi
-
-	if [[ -n "${REBUILD_LIST}" ]] ; then
-		einfo "Please run \"emerge --oneshot ${REBUILD_LIST}\" before continuing."
-	else
-		einfo "Done :), continuing..."
-		return 1
-	fi
-	echo
+ :
 }
 
 # @FUNCTION: kde_pkg_preinst
