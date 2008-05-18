@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.13 2008/05/15 15:54:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.14 2008/05/18 16:18:08 flameeyes Exp $
+
+  18 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  quassel-0.2.0_beta1.ebuild, quassel-9999.ebuild:
+  Install the desktop file only when the GUI client is built, and fix the
+  name of the client.
 
 *quassel-0.2.0_beta1 (15 May 2008)
 

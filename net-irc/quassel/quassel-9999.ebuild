@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.3 2008/05/15 15:54:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.4 2008/05/18 16:18:08 flameeyes Exp $
 
 EAPI=1
 
@@ -73,7 +73,12 @@ src_install() {
 	use X && targets="${targets} build/targets/quasselclient"
 	dobin $targets  || die "quasselcore install failed"
 
-	domenu ${PN}.desktop || die "desktop file install failed"
+	# Only install the desktop file if the X client was installed
+	if use X; then
+		sed -i -e 's:Exec=quassel:Exec=quasselclient:' ${PN}.desktop \
+			|| die "failed to fix desktop file"
+		domenu ${PN}.desktop || die "desktop file install failed"
+	fi
 
 	dodoc ChangeLog README README.Qtopia || "dodoc failed"
 }
