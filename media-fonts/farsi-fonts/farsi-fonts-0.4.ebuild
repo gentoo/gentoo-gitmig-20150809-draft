@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/farsi-fonts-0.4.ebuild,v 1.10 2008/03/29 16:03:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/farsi-fonts-0.4.ebuild,v 1.11 2008/05/18 23:48:34 dirtyepic Exp $
 
 inherit font
 
 S=${WORKDIR}/${P/-/}
 
-DESCRIPTION="Farsi (Persian) TrueType fonts"
-HOMEPAGE="http://www.arabeyes.org/project.php?proj=Khotot"
-SRC_URI="mirror://sourceforge/arabeyes/${P//-/_}.tar.bz2"
+DESCRIPTION="Farsi (Persian) Unicode fonts"
+HOMEPAGE="http://www.farsiweb.ir/wiki/Products/PersianFonts"
+SRC_URI="http://www.farsiweb.ir/font/farsifonts-${PV}.zip"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -18,4 +18,4 @@ IUSE=""
 FONT_SUFFIX="ttf"
 FONT_S="${S}"
 
-DOCS="NEWS.txt"
+DEPEND="app-arch/unzip"
