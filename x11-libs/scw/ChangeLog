@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/scw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.6 2007/12/27 12:45:24 ticho Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.7 2008/05/18 13:38:28 drac Exp $
+
+  18 May 2008; Samuli Suominen <drac@gentoo.org> scw-0.4.7.ebuild:
+  Move pkgconfig to DEPEND.
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org> -scw-0.4.3.ebuild,
   scw-0.4.7.ebuild:
