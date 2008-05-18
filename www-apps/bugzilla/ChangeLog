@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.110 2008/05/18 14:40:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.111 2008/05/18 16:17:36 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> bugzilla-2.20.6.ebuild:
+  amd64/x86 stable, bug #220799
 
   18 May 2008; Markus Rothe <corsair@gentoo.org> bugzilla-2.20.6.ebuild,
   bugzilla-2.22.4.ebuild, bugzilla-3.0.4.ebuild:
