@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.19.ebuild,v 1.6 2008/03/09 23:30:20 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.19.ebuild,v 1.7 2008/05/18 02:08:03 hanno Exp $
 
 inherit fdo-mime flag-o-matic multilib python
 
@@ -29,7 +29,6 @@ RDEPEND=">=dev-libs/glib-2.12.3
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib
 		sys-apps/hal )
-	doc? ( app-doc/gimp-help )
 	gnome? ( >=gnome-base/gnome-vfs-2.10.0
 		>=gnome-base/libgnomeui-2.10.0
 		>=gnome-base/gnome-keyring-0.4.5 )
