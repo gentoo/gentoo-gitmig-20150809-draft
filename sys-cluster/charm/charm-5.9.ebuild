@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.10 2008/04/06 10:40:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.11 2008/05/18 15:20:48 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -19,7 +19,11 @@ DEPEND="
 	doc? (
 		app-text/poppler
 		dev-tex/latex2html
-		virtual/tetex
+		virtual/latex-base
+		|| ( ( dev-texlive/texlive-latex
+				dev-texlive/texlive-latexextra )
+			app-text/tetex
+			app-text/ptex )
 	)"
 
 CHARM_ARCH="net-linux"
