@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.29 2008/03/29 02:48:16 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.30 2008/05/18 13:40:54 drac Exp $
+
+  18 May 2008; Samuli Suominen <drac@gentoo.org>
+  irda-utils-0.9.18-r3.ebuild:
+  Move pkgconfig to DEPEND.
 
 *irda-utils-0.9.18-r3 (29 Mar 2008)
 
