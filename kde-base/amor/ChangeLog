@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.89 2008/05/15 22:35:31 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.90 2008/05/18 16:19:54 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> amor-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *amor-4.0.4 (15 May 2008)
 

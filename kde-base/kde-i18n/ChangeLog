@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.157 2008/05/14 10:57:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.158 2008/05/18 15:23:21 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kde-i18n-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kde-i18n-3.5.9.ebuild:
   Stable on ppc64; bug #221063

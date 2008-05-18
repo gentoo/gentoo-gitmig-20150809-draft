@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kappfinder-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kappfinder-data/ChangeLog,v 1.83 2008/05/14 17:08:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kappfinder-data/ChangeLog,v 1.84 2008/05/18 16:47:54 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org>
+  kdemultimedia-kappfinder-data-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   14 May 2008; Markus Rothe <corsair@gentoo.org>
   kdemultimedia-kappfinder-data-3.5.9.ebuild:

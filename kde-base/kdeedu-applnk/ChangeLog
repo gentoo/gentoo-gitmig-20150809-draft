@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.80 2008/05/15 06:21:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.81 2008/05/18 17:09:34 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kdeedu-applnk-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> kdeedu-applnk-3.5.9.ebuild:
   Stable on ppc64; bug #221063

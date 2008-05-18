@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.89 2008/05/16 00:29:42 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.90 2008/05/18 16:11:42 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kteatime-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kteatime-4.0.4 (15 May 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.95 2008/05/15 23:55:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.96 2008/05/18 15:53:37 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kmilo-3.5.9-r1.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kmilo-4.0.4 (15 May 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.88 2008/05/16 00:44:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.89 2008/05/18 14:45:00 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> libkdeedu-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *libkdeedu-4.0.4 (15 May 2008)
 

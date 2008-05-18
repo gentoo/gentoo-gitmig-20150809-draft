@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.87 2008/05/15 23:36:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.88 2008/05/18 16:57:17 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kgamma-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kgamma-4.0.4 (15 May 2008)
 
