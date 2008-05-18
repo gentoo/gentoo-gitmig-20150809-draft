@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.71 2008/04/20 12:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.72 2008/05/18 23:27:37 fmccor Exp $
+
+  18 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  courier-authlib-0.60.2.ebuild:
+  Sparc stable --- Bug #222737 --- builds, installs, works for me.
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   courier-authlib-0.60.2.ebuild:
