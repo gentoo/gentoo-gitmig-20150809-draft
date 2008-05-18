@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.ebuild,v 1.1 2008/05/18 16:26:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.ebuild,v 1.2 2008/05/18 16:48:00 grozin Exp $
 
 EAPI="1"
 inherit eutils multilib qt4
@@ -23,6 +23,7 @@ done
 CDEPEND=">=x11-libs/qwt-5.1
 	>=x11-libs/qwtplot3d-0.2.7
 	>=dev-cpp/muParser-1.28
+	>=sci-libs/liborigin-20080225
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
