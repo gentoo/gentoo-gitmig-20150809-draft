@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.25 2007/08/23 06:23:47 nerdboy Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.26 2008/05/18 16:24:38 drac Exp $
+
+  18 May 2008; Samuli Suominen <drac@gentoo.org> gpsdrive-2.09-r1.ebuild:
+  Move pkgconfig to DEPEND wrt #217278. Set autotools.eclass WANT_ variables
+  properly. Drop invalid use of USE static wrt #165629.
 
   23 Aug 2007; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.09-r1.ebuild:
   updated homepage and src_uri per bug #189580

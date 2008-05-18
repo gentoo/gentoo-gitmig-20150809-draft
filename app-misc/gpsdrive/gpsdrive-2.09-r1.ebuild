@@ -1,6 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.2 2007/08/23 06:23:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.3 2008/05/18 16:24:38 drac Exp $
+
+WANT_AUTOMAKE=1.7
+WANT_AUTOCONF=2.5
 
 inherit autotools
 
@@ -10,22 +13,15 @@ SRC_URI="${HOMEPAGE}/gpsdrive.tar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="~amd64 ~ppc ~x86"
-# submit bug for ppc64
+IUSE="garmin mysql"
 
-IUSE="garmin mysql static"
-
-DEPEND="sys-devel/gettext
+RDEPEND=">=x11-libs/gtk+-2.8.12
+	>=dev-libs/libpcre-4.2
+	mysql? ( dev-db/mysql )"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=x11-libs/gtk+-2.8.12
-	>=dev-libs/libpcre-4.2"
-
-RDEPEND="${DEPEND}
-	mysql?	( dev-db/mysql )"
-
-WANT_AUTOMAKE=1.7
-WANT_AUTOCONF=2.5
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
@@ -40,10 +36,10 @@ src_unpack() {
 
 src_compile() {
 	econf \
-	    --enable-shared $(use_enable garmin) $(use_enable static) \
+	    --enable-shared --enable-static $(use_enable garmin) \
 		|| die "econf failed"
 
-	emake || die "compile failed"
+	emake || die "emake failed"
 }
 
 src_install() {
