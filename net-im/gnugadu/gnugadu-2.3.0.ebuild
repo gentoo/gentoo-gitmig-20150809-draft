@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.7 2008/01/12 21:13:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.8 2008/05/18 13:52:21 drac Exp $
 
 IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -18,8 +18,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="net-libs/libgadu
 	>=x11-libs/gtk+-2.4.0
-	sys-devel/gettext
-	dev-util/pkgconfig
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
@@ -31,6 +29,8 @@ RDEPEND="net-libs/libgadu
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
+	dev-util/pkgconfig
 	x11-proto/scrnsaverproto"
 
 src_unpack() {

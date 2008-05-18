@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.5 2007/07/12 05:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.6 2008/05/18 13:52:21 drac Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -16,11 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 
-DEPEND="net-libs/libgadu
+RDEPEND="net-libs/libgadu
 	>=x11-libs/gtk+-2.4.0
-	sys-devel/gettext
-	>=sys-devel/automake-1.7
-	>=sys-devel/libtool-1.4
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
@@ -29,10 +26,14 @@ DEPEND="net-libs/libgadu
 	tlen? ( net-libs/libtlen )
 	spell? ( app-text/gtkspell )
 	gnutls? ( net-libs/gnutls )"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+	>=sys-devel/automake-1.7
+	>=sys-devel/libtool-1.4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -re 's#GTKSPELL_LIBS=`(.*)`#GTKSPELL_LIBS="`\1` -laspell"#g' -i configure
 }
 
