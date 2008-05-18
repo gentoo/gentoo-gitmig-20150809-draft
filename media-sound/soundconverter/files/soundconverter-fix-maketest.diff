@@ -1,4 +1,0 @@
---- soundconverter-0.9.6/po/POTFILES.skip	2007-07-23 13:35:59.232380758 +0200
-+++ soundconverter-0.9.6/po/POTFILES.skip	2007-07-24 02:09:47.000000000 +0200
-@@ -0,0 +1 @@
-+data/soundconverter.desktop.in
