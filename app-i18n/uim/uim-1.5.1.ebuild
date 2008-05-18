@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.0_beta2.ebuild,v 1.1 2008/05/01 16:34:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.1.ebuild,v 1.1 2008/05/18 01:00:05 matsuu Exp $
 
 EAPI=1
 inherit eutils qt3 multilib elisp-common flag-o-matic
@@ -42,7 +42,8 @@ RDEPEND="X? ( x11-libs/libX11
 
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto
-		x11-proto/xproto )"
+		x11-proto/xproto )
+	nls? ( sys-devel/gettext )"
 
 RDEPEND="${RDEPEND}
 	X? (
