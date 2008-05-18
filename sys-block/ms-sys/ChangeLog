@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/ms-sys
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.1 2008/05/18 09:09:34 drac Exp $
+
+*ms-sys-2.1.3 (18 May 2008)
+
+  18 May 2008; Samuli Suominen <drac@gentoo.org> +ms-sys-2.1.3.ebuild:
+  Initial commit for bug 69028, thanks to Christian Gmeiner, Adrian
+  Frühwirth and Mike Gualtieri.
+
