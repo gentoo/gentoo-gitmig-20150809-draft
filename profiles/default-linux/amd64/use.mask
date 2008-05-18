@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.70 2008/04/10 06:34:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.71 2008/05/18 14:22:52 hkbst Exp $
 
 # SECTION: Unmask
 
@@ -101,10 +101,6 @@ video_cards_nsc
 # cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
 # happy.
 cmucl
-
-# 2004/11/13 - Tom Martin <slarti@gentoo.org>
-# dev-libs/mzscheme won't build, #65216
-mzscheme
 
 # 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
 # sys-cluster/pvm won't build

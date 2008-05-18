@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.142 2008/04/30 11:44:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.143 2008/05/18 14:22:52 hkbst Exp $
+
+  18 May 2008; Marijn Schouten <hkBst@gentoo.org> use.mask:
+  don't use mask mzscheme anymore, dev-libs/mzscheme has been integrated
+  into dev-scheme/drscheme and builds fine on amd64
 
   30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   2006.0/no-multilib/package.use.mask, 2006.1/no-multilib/package.use.mask,
