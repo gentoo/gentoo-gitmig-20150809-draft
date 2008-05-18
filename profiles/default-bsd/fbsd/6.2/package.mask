@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.8 2008/03/28 16:23:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.9 2008/05/18 15:39:14 aballier Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
@@ -33,10 +33,6 @@
 <sys-freebsd/freebsd-sources-6.2_alpha
 >sys-freebsd/freebsd-sources-6.2.99
 
-# Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
-# We want this unmasked as is the only baselayout usable here
-->=sys-apps/baselayout-1.13.0_alpha1
-
 # And this masked as we cannot use this anymore
 sys-freebsd/freebsd-baselayout
 <sys-apps/baselayout-1.13.0_alpha1
@@ -46,7 +42,3 @@ sys-freebsd/freebsd-baselayout
 # for us
 ->=sys-apps/sandbox-1.2.20_alpha1
 <sys-apps/sandbox-1.2.20_alpha2
-
-# Alexis Ballier <aballier@gentoo.org> (28 Mar 2008)
-# Unmask openrc as baselayout 2 now needs it
--sys-apps/openrc
