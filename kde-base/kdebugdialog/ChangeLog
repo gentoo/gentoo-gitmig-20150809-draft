@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.71 2008/05/15 23:15:59 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.72 2008/05/18 18:09:34 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kdebugdialog-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kdebugdialog-4.0.4 (15 May 2008)
 

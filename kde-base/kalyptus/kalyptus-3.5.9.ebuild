@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.5.9.ebuild,v 1.2 2008/05/15 14:41:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.5.9.ebuild,v 1.3 2008/05/18 18:30:33 maekke Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -8,7 +8,7 @@ EAPI="1"
 inherit kde-meta
 
 DESCRIPTION="KDE bindings generator for multiple languages."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 DEPEND="dev-lang/perl"
 

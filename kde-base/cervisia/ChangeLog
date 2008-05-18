@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.85 2008/05/15 22:38:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.86 2008/05/18 18:53:13 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> cervisia-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *cervisia-4.0.4 (15 May 2008)
 

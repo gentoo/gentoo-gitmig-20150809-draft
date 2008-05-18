@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.102 2008/05/14 14:06:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.103 2008/05/18 19:05:25 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> certmanager-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> certmanager-3.5.9.ebuild:
   Stable on ppc64; bug #221063

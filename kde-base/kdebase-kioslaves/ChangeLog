@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.122 2008/05/15 23:13:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.123 2008/05/18 19:03:45 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org>
+  kdebase-kioslaves-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kdebase-kioslaves-4.0.4 (15 May 2008)
 

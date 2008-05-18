@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.9.ebuild,v 1.2 2008/05/15 14:43:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.9.ebuild,v 1.3 2008/05/18 18:29:19 maekke Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/"
@@ -10,7 +10,7 @@ inherit kde-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine: a language-agnostic bindings generator for qt and kde"
 HOMEPAGE="http://developer.kde.org/language-bindings/smoke/"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
