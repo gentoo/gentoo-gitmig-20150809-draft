@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.76 2008/05/17 12:46:53 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.77 2008/05/18 11:19:40 markusle Exp $
+
+  18 May 2008; Markus Dittrich <markusle@gentoo.org> 
+  itpp-4.0.3.ebuild, itpp-4.0.4.ebuild:
+  Switched virtual/tetex -> virtual/latex-base (see bug #222501).
 
   17 May 2008; Markus Dittrich <markusle@gentoo.org> itpp-4.0.4.ebuild:
   Made stripping of -g CXXFLAG unconditional.
