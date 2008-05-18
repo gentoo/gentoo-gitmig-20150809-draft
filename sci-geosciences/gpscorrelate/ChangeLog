@@ -1,0 +1,12 @@
+# ChangeLog for sci-geosciences/gpscorrelate
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.1 2008/05/18 22:17:26 hanno Exp $
+
+*gpscorrelate-1.5.6 (18 May 2008)
+
+  18 May 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/gpscorrelate-1.5.6-cflags.patch, +files/gpscorrelate.1,
+  +gpscorrelate-1.5.6.ebuild:
+  Initial commit, tool for correlating gps data with jpeg images,
+  ebuild submitted by jkt in bugzilla.
+
