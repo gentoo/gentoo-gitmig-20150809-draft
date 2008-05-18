@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.13 2008/04/16 14:58:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.14 2008/05/18 18:53:16 armin76 Exp $
+
+  18 May 2008; Raúl Porcel <armin76@gentoo.org> read-edid-1.4.1-r1.ebuild:
+  alpha stable
 
   16 Apr 2008; Samuli Suominen <drac@gentoo.org> read-edid-1.4.1-r1.ebuild:
   Removed RESTRICT mirror as it can be mirrored again.
