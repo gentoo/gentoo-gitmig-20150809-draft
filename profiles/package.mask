@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8634 2008/05/18 15:14:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8635 2008/05/18 18:47:43 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Zac Medico <zmedico@gentoo.org> (18 May 2008)
+# Masked to ensure that pseudo-downgrade happens correctly, following
+# version scheme change from YYYYMMDD to 3.0.YYYYMMDD.
+>net-print/foomatic-db-ppds-20000000
+>net-print/foomatic-db-20000000
 
 # Steve Dibb <beandog@gentoo.org> (16 May 2008)
 # Masked for removal, will be replaced with a virtual
