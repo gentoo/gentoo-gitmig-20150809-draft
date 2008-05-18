@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.2.ebuild,v 1.1 2008/04/10 23:27:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.2.ebuild,v 1.2 2008/05/18 14:02:34 eva Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cxx debug gnome grammar jabber jpeg libgda math ots pdf readline svg thesaurus wmf wordperfect"
 
-# FIXME: add asio support
+# FIXME: add asio support (better wait on boost 1.35)
 # add abiscan when we get gnome-scan
 
 RDEPEND="=app-office/abiword-${PV}*
@@ -54,6 +54,11 @@ pkg_setup() {
 		eerror "abiword-plugin requires x11-libs/goffice to be compiled"
 		eerror "with USE=\"gnome\""
 		die "gnome support missing in x11-libs/goffice"
+	fi
+
+	if use jabber && ! use cxx; then
+		eerror "AbiCollab needs dev-libs/boost to be build"
+		die "Add USE=\"cxx\" to build AbiCollab plugin"
 	fi
 }
 

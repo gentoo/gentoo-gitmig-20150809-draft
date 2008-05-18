@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.43 2008/05/04 19:21:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.44 2008/05/18 14:02:34 eva Exp $
+
+  18 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -abiword-plugins-2.6.0.ebuild, abiword-plugins-2.6.2.ebuild,
+  abiword-plugins-2.6.3.ebuild:
+  move jabber use_enable back to general myconf, bug #221823.
 
 *abiword-plugins-2.6.3 (04 May 2008)
 

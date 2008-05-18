@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.3.ebuild,v 1.1 2008/05/04 19:21:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.3.ebuild,v 1.2 2008/05/18 14:02:34 eva Exp $
 
 EAPI="1"
 
@@ -70,6 +70,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_with gnome abigoffice) \
 		$(use_with grammar abigrammar) \
+		$(use_with jabber abicollab) \
 		$(use_with jpeg) \
 		$(use_with libgda gda) \
 		$(use_with math abimathview) \
@@ -82,10 +83,6 @@ src_compile() {
 		$(use_with wordperfect libwpg) \
 		--disable-abiscan \
 		--without-psion"
-
-	if use cxx; then
-		myconf="${myconf} $(use_with jabber abicollab)"
-	fi
 
 	econf $myconf || die "./configure failed"
 
