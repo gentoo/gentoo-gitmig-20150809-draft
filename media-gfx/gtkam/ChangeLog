@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.54 2008/05/18 16:01:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.55 2008/05/18 20:56:41 eva Exp $
+
+  18 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  files/gtkam-0.1.14-as-needed.patch:
+  update --as-needed patch, bug #169661.
 
   18 May 2008; Raúl Porcel <armin76@gentoo.org> gtkam-0.1.14.ebuild:
   sparc stable wrt #178584
