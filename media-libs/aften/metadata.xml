@@ -3,12 +3,7 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<maintainer>
-		<email>aballier@gentoo.org</email>
-		<name>Alexis Ballier</name>
-	</maintainer>
-	<maintainer>
-		<email>ben@berkano.net</email>
-		<name>Ben de Groot</name>
+		<email>sound@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		Aften is an audio encoder which generates compressed audio streams based

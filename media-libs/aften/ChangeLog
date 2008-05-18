@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aften
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.2 2008/01/06 01:32:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.3 2008/05/18 09:39:26 yngwin Exp $
+
+  18 May 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Change maintainer to generic sound herd
 
   06 Jan 2008; Joseph Jezak <josejx@gentoo.org>
   +files/aften-0.0.8-ppc.patch, aften-0.0.8.ebuild:
