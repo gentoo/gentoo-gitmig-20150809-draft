@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.23.ebuild,v 1.3 2008/02/24 18:25:48 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.25.ebuild,v 1.1 2008/05/18 14:50:53 rajiv Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic
 
@@ -25,7 +25,7 @@ S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/libc
 	dev-libs/libusb
@@ -170,8 +170,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-1.2.23-gentoo.diff
 	epatch "${FILESDIR}"/zaptel-1.2.9.1-ar.patch
+	epatch "${FILESDIR}"/zaptel-1.2.25-xpputils.diff
 
 	# try to apply bristuff patch
 	if use bri; then

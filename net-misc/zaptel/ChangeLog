@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.106 2008/03/07 16:50:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.107 2008/05/18 14:50:53 rajiv Exp $
+
+*zaptel-1.2.25 (18 May 2008)
+
+  18 May 2008; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -zaptel-1.2.23.ebuild, +zaptel-1.2.25.ebuild:
+  version bump, bug #216974.
 
   07 Mar 2008; Christian Faulhammer <opfer@gentoo.org> zaptel-1.2.24.ebuild:
   stable x86, bug 208190
