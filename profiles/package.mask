@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8632 2008/05/17 19:24:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8633 2008/05/18 15:03:00 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -425,10 +425,6 @@ games-fps/quake4-demo
 # it.  It really does help out tremendously to not have to dig through tons of
 # code only to find that the issue was already resolved 5 revisions ago.
 >=dev-util/catalyst-2.0.6_pre1
-
-# Diego Pettenò <flameeyes@gentoo.org> (26 Feb 2008)
-# Alpha version, mask until final.
-=net-irc/quassel-0.2.0_alpha*
 
 # Benedikt Böhm <hollow@gentoo.org> (23 Feb 2008)
 # Masked due to security issues.
@@ -1359,11 +1355,6 @@ net-dns/bind-dns-keygen
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
-# Initial import. Masked for testing
-#mail-filter/libmilter
-#mail-filter/dk-milter
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
