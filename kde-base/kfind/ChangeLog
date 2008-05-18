@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.93 2008/05/15 23:34:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.94 2008/05/18 19:22:23 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kfind-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
 *kfind-4.0.4 (15 May 2008)
 
