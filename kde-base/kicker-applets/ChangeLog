@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker-applets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.90 2008/05/15 14:11:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.91 2008/05/18 21:19:36 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kicker-applets-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   15 May 2008; Markus Rothe <corsair@gentoo.org>
   kicker-applets-3.5.9.ebuild:

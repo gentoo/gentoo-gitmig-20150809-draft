@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.91 2008/05/14 17:38:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.92 2008/05/18 20:36:55 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> noatun-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> noatun-3.5.9.ebuild:
   Stable on ppc64; bug #221063

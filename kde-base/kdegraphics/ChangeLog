@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.342 2008/05/13 15:50:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.343 2008/05/18 21:33:05 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kdegraphics-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> kdegraphics-3.5.9.ebuild:
   Stable for HPPA (bug #221063).

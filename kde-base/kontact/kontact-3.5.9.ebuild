@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.9.ebuild,v 1.6 2008/05/14 14:43:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.9.ebuild,v 1.7 2008/05/18 21:37:42 maekke Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="KDE personal information manager"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=kde-base/libkdepim-${PV}:${SLOT}

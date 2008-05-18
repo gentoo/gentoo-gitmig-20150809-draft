@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.9.ebuild,v 1.7 2008/05/13 15:45:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.9.ebuild,v 1.8 2008/05/18 21:31:07 maekke Exp $
 
 EAPI="1"
 inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="jingle kdehiddenvisibility rdesktop sametime slp ssl wifi"
 
 SRC_URI="${SRC_URI}

@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/kwin4-3.5.9.ebuild,v 1.6 2008/05/14 18:53:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/kwin4-3.5.9.ebuild,v 1.7 2008/05/18 19:46:21 maekke Exp $
 KMNAME=kdegames
 EAPI="1"
 inherit kde-meta
 
 DESCRIPTION="kde four-in-a-row game"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
 DEPEND=">=kde-base/libkdegames-${PV}:${SLOT}"

@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.9.ebuild,v 1.5 2008/05/14 18:38:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.9.ebuild,v 1.6 2008/05/18 21:50:35 maekke Exp $
 
 KMNAME=kdegraphics
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="Kooka is a KDE application which provides access to scanner hardware"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=kde-base/libkscan-${PV}:${SLOT}
