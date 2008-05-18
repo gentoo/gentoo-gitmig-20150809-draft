@@ -1,0 +1,22 @@
+--- branches/koffice/1.6/koffice/filters/kword/wordperfect/import/TableStyle.cxx	2007/10/26 14:06:42	729649
++++ branches/koffice/1.6/koffice/filters/kword/wordperfect/import/TableStyle.cxx	2007/10/26 14:20:47	729650
+@@ -36,6 +36,8 @@
+ #include <minmax.h>
+ #endif
+ 
++#include <cstring>
++
+ TableCellStyle::TableCellStyle(const WPXPropertyList &xPropList, const char *psName) :
+ 	Style(psName),
+         mPropList(xPropList)
+--- branches/koffice/1.6/koffice/filters/kword/wordperfect/import/TextRunStyle.cxx	2007/10/26 17:51:34	729711
++++ branches/koffice/1.6/koffice/filters/kword/wordperfect/import/TextRunStyle.cxx	2007/10/26 17:51:55	729712
+@@ -37,6 +37,8 @@
+ #include <minmax.h>
+ #endif
+ 
++#include <cstring>
++
+ ParagraphStyle::ParagraphStyle(WPXPropertyList *pPropList, const WPXPropertyListVector &xTabStops, const WPXString &sName) :
+ 	mpPropList(pPropList),
+ 	mxTabStops(xTabStops),

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kword
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.116 2007/11/18 08:58:26 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.117 2008/05/18 01:06:05 hanno Exp $
+
+  18 May 2008; Hanno Boeck <hanno@gentoo.org> +files/kword-gcc43.patch,
+  kword-1.6.3-r2.ebuild:
+  Fix for gcc 4.3.
 
   18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   kword-1.6.3-r2.ebuild:
