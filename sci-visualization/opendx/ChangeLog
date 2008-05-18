@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.11 2008/04/05 17:24:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.12 2008/05/18 15:57:19 spock Exp $
+
+  18 May 2008; Michał Januszewski <spock@gentoo.org>
+  +files/opendx-4.4.4-gcc43.patch, opendx-4.4.4.ebuild:
+  Add a patch to allow compilation with GCC 4.3.
 
   05 Apr 2008; Markus Dittrich <markusle@gentoo.org> opendx-4.3.2-r1.ebuild,
   opendx-4.4.4.ebuild:

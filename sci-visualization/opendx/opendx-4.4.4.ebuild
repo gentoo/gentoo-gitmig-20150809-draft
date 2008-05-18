@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.4 2008/04/05 17:24:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.5 2008/05/18 15:57:19 spock Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -74,6 +74,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-compressed-man.patch
+	epatch "${FILESDIR}"/${PN}-4.4.4-gcc43.patch
 	eautoreconf || die "Failed running eautoreconf."
 }
 
