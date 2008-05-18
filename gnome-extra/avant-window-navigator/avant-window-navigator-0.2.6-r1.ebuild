@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.5 2008/05/06 22:03:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.6 2008/05/18 21:14:47 eva Exp $
 
 inherit autotools gnome2 python
 
@@ -22,7 +22,6 @@ RDEPEND="dev-python/elementtree
 	dev-python/pygtk
 	dev-python/pycairo
 	dev-python/pyxdg
-	doc? ( dev-util/gtk-doc )
 	gnome? (
 		gnome-base/gconf
 		gnome-base/gnome-desktop
@@ -40,7 +39,8 @@ RDEPEND="dev-python/elementtree
 #	vala? ( dev-lang/vala )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS Changelog NEWS README TODO"
 
