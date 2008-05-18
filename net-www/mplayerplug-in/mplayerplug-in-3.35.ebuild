@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.35.ebuild,v 1.12 2008/03/14 17:40:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.35.ebuild,v 1.13 2008/05/18 13:31:14 drac Exp $
 
 inherit eutils multilib nsplugins
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 -hppa ppc sparc x86"
 IUSE="gtk divx gmedia realmedia quicktime wmp"
 
-DEPEND=">=media-video/mplayer-1.0_pre5
+RDEPEND=">=media-video/mplayer-1.0_pre5
 		|| ( =www-client/mozilla-firefox-2*
 				=www-client/seamonkey-1*
 		)
@@ -24,10 +24,11 @@ DEPEND=">=media-video/mplayer-1.0_pre5
 			dev-libs/atk
 			>=dev-libs/glib-2.2.0
 			>=x11-libs/pango-1.2.1
-		)
+		)"
+DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack "${A}"

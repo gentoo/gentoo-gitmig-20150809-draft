@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.8 2008/03/14 17:40:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.9 2008/05/18 13:31:14 drac Exp $
 
 inherit eutils multilib
 
@@ -16,7 +16,7 @@ IUSE="gtk divx gmedia mplayer-bin nls realmedia quicktime wmp"
 LANGS="da de en_US es fr hu it ja ko nb pl pt_BR nl ru se zh_CN"
 for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
 
-DEPEND="
+RDEPEND="
 		|| ( =www-client/mozilla-firefox-2*
 				=www-client/seamonkey-1*
 				=net-libs/xulrunner-1.8*
@@ -31,10 +31,11 @@ DEPEND="
 			>=x11-libs/pango-1.2.1
 		)
 		mplayer-bin? ( media-video/mplayer-bin )
-		!mplayer-bin? ( >=media-video/mplayer-1.0_pre5 )
-		dev-util/pkgconfig"
+		!mplayer-bin? ( >=media-video/mplayer-1.0_pre5 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack "${A}"
