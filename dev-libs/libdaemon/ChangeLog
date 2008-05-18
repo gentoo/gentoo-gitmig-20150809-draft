@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.53 2008/03/09 23:21:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.54 2008/05/18 21:16:18 eva Exp $
+
+  18 May 2008; Gilles Dartiguelongue <eva@gentoo.org> libdaemon-0.10.ebuild,
+  libdaemon-0.11-r1.ebuild, libdaemon-0.12.ebuild:
+  set RDEPEND, fix bug #221657.
 
   09 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
   -libdaemon-0.3.ebuild, -libdaemon-0.5.ebuild, -libdaemon-0.7.ebuild,

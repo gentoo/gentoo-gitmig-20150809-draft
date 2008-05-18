@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.11-r1.ebuild,v 1.5 2007/08/13 20:24:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.11-r1.ebuild,v 1.6 2008/05/18 21:16:18 eva Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
+RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_unpack() {
