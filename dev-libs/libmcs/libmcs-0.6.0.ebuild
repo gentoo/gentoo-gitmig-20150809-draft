@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.6.0.ebuild,v 1.12 2008/04/11 11:25:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.6.0.ebuild,v 1.13 2008/05/18 16:08:22 drac Exp $
 
 inherit flag-o-matic kde-functions multilib
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gnome kde"
 
-RDEPEND=">=dev-util/pkgconfig-0.9.0
-	>=dev-libs/libmowgli-0.4.0
+RDEPEND=">=dev-libs/libmowgli-0.4.0
 	gnome? ( >=gnome-base/gconf-2.6.0 )
 	kde? ( kde-base/kdelibs )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	if use kde; then
