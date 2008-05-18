@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.9.ebuild,v 1.5 2007/05/26 17:36:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.9.ebuild,v 1.6 2008/05/18 14:06:11 eva Exp $
 
 inherit eutils
 
@@ -14,14 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc ~x86"
 
-DEPEND="dev-libs/libxml2
-	>=dev-util/pkgconfig-0.20
+RDEPEND="dev-libs/libxml2
 	>=x11-libs/gtk+-2.2.0
 	ofx? ( >=dev-libs/libofx-0.7.0 )
 	print? ( virtual/tetex
 	>=dev-tex/latex-unicode-20041017 )"
-
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.20"
 
 pkg_setup() {
 	if ! use print; then
@@ -35,15 +34,16 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	# Apply location patchs
 	ebegin "Applying Gentoo documentation location patch"
 	for i in \
-		`find ./ -name 'Makefile.*'` \
-		`find ./ -name 'grisbi-manuel/html'`
+		$(find ./ -name 'Makefile.*') \
+		$(find ./ -name 'grisbi-manuel/html')
 			do
-				sed -i "s;doc/grisbi/help;doc/${PF}/help;g" ${i}
+				sed -i "s;doc/grisbi/help;doc/${PF}/help;g" "${i}"
 			done
 	eend 0
 }
