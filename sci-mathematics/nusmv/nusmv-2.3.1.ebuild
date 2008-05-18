@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.1 2006/04/02 11:40:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.2 2008/05/18 17:10:18 markusle Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,12 +33,15 @@ SRC_URI="mirror://gentoo/${NUSMV_A}
 		minisat? ( mirror://gentoo/${MINISAT_A} )"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="minisat examples"
 RDEPEND="virtual/libc
 		dev-libs/expat"
 DEPEND="${RDEPEND}
-		virtual/tetex
+		virtual/latex-base
+		|| ( ( dev-texlive/texlive-latexextra )
+			app-text/tetex
+			app-text/ptex )
 		virtual/ghostscript
 		www-client/lynx
 		dev-lang/perl"
@@ -50,10 +53,10 @@ S="${NUSMV_S}"
 src_unpack() {
 	unpack ${NUSMV_A}
 	if use minisat; then
-		cd ${WORKDIR}/${NUSMV_P}/MiniSat
+		cd "${WORKDIR}"/${NUSMV_P}/MiniSat
 		unpack ${MINISAT_A}
 		epatch ${MINISAT_P}_nusmv.patch
-		epatch ${FILESDIR}/${MINISAT_P}-optimizedlib.patch
+		epatch "${FILESDIR}"/${MINISAT_P}-optimizedlib.patch
 	fi
 	for i in ${NUSMV_S}/doc/{user-man,tutorial}/Makefile.in ; do
 		sed -i.orig \
@@ -69,7 +72,7 @@ src_compile() {
 		# do NOT merge these targets
 		emake COPTIMIZE="${CFLAGS}" r || die "Failed to build minisat bin"
 		emake COPTIMIZE="${CFLAGS}" lr || die "Failed to build minisat lib"
-		ln -sf ${MINISAT_S} ${WORKDIR}/${NUSMV_P}/${MINISAT_P}
+		ln -sf ${MINISAT_S} "${WORKDIR}"/${NUSMV_P}/${MINISAT_P}
 	fi
 
 	cd ${CUDD_S}
@@ -99,19 +102,19 @@ src_install() {
 	cd ${NUSMV_S}
 	emake DESTDIR="${D}" install || die "emake install failed"
 	# duplicate items
-	rm -f ${D}/usr/share/nusmv/{LGPL-2.1,README*,NEWS}
+	rm -f "${D}"/usr/share/nusmv/{LGPL-2.1,README*,NEWS}
 	# real docs
 	dodoc README* NEWS AUTHORS
 	dodoc doc/tutorial/tutorial.pdf
 	dodoc doc/user-man/nusmv.pdf
 
 	# move package-installed docs
-	mv ${D}/usr/share/nusmv/doc/* ${D}/usr/share/doc/${PF}/
-	rmdir ${D}/usr/share/nusmv/doc
+	mv "${D}"/usr/share/nusmv/doc/* "${D}"/usr/share/doc/${PF}/
+	rmdir "${D}"/usr/share/nusmv/doc
 
 	# clean out examples if not needed
 	if use !examples ; then
-		rm -rf ${D}/usr/share/nusmv/examples || die "Failed to remove examples"
+		rm -rf "${D}"/usr/share/nusmv/examples || die "Failed to remove examples"
 	fi
 }
 
