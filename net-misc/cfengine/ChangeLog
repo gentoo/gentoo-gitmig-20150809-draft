@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.82 2008/04/28 19:38:56 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.83 2008/05/18 15:12:34 armin76 Exp $
+
+  18 May 2008; Raúl Porcel <armin76@gentoo.org> cfengine-2.1.22-r1.ebuild:
+  sparc stable wrt #220927
 
   28 Apr 2008; Lance Albertson <ramereth@gentoo.org>
   -cfengine-2.1.17.ebuild, -cfengine-2.1.18.ebuild, cfengine-2.1.20.ebuild,
