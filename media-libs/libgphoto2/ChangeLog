@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.123 2008/05/17 19:18:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.124 2008/05/18 15:59:49 armin76 Exp $
+
+  18 May 2008; Raúl Porcel <armin76@gentoo.org> libgphoto2-2.4.1.ebuild:
+  sparc stable wrt #221853
 
   17 May 2008; Raúl Porcel <armin76@gentoo.org> libgphoto2-2.2.1-r1.ebuild,
   libgphoto2-2.3.1-r5.ebuild, libgphoto2-2.4.0-r1.ebuild,
