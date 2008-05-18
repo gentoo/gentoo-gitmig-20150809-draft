@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.51 2007/10/28 15:35:50 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.52 2008/05/18 20:58:57 ulm Exp $
+
+  18 May 2008; Ulrich Mueller <ulm@gentoo.org> slime-2.0_p20061118.ebuild,
+  slime-2.0_p20070816-r1.ebuild:
+  Replace virtual/tetex by appropriate dependency for texi2dvi, bug 222501.
 
   28 Oct 2007; Ulrich Mueller <ulm@gentoo.org>
   slime-2.0_p20070816-r1.ebuild:
