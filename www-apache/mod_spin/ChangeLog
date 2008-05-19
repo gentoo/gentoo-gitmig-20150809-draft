@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_spin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/ChangeLog,v 1.5 2008/01/31 19:27:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/ChangeLog,v 1.6 2008/05/19 20:38:06 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> mod_spin-1.0.12.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-server
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> mod_spin-1.0.12.ebuild,
   mod_spin-1.1.7.ebuild:

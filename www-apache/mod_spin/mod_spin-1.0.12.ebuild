@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.4 2008/01/31 19:27:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.5 2008/05/19 20:38:06 dev-zero Exp $
 
 inherit apache-module autotools
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/db-4.2
 	dev-libs/libxml2
 	www-apache/libapreq2
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 need_apache2
 
