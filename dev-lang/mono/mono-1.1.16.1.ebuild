@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.8 2008/03/02 19:34:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.9 2008/05/19 09:48:24 drac Exp $
 
 inherit eutils mono flag-o-matic multilib autotools
 
@@ -10,10 +10,12 @@ SRC_URI="http://www.go-mono.com/sources/mono-${PV:0:3}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nptl X"
 
-DEPEND=">=dev-libs/glib-2.0
+RDEPEND=">=dev-libs/glib-2
+	dev-libs/libxml2
+	X? ( >=dev-dotnet/libgdiplus-1.1.16 )
 	sys-devel/bc
 	!<dev-dotnet/pnet-0.6.12
 	nptl? ( >=sys-devel/gcc-3.3.5-r1 )
@@ -21,11 +23,8 @@ DEPEND=">=dev-libs/glib-2.0
 		>=sys-devel/gcc-3.2.3-r4
 		>=sys-libs/glibc-2.3.3_pre20040420
 	)"
-
-RDEPEND="${DEPEND}
-	X? ( >=dev-dotnet/libgdiplus-1.1.16 )
-	dev-util/pkgconfig
-	dev-libs/libxml2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 RESTRICT="test"
 
