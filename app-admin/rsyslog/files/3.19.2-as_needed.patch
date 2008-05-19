@@ -1,0 +1,12 @@
+diff -Naur rsyslog-3.19.2.orig/runtime/Makefile.am rsyslog-3.19.2/runtime/Makefile.am
+--- rsyslog-3.19.2.orig/runtime/Makefile.am	2008-05-19 17:51:23.000000000 +0200
++++ rsyslog-3.19.2/runtime/Makefile.am	2008-05-19 17:54:26.000000000 +0200
+@@ -67,7 +67,7 @@
+ 
+ librsyslog_la_CPPFLAGS = -D_PATH_MODDIR=\"$(pkglibdir)/\" -I$(top_srcdir) $(pthreads_cflags)
+ #librsyslog_la_LDFLAGS = -module -avoid-version
+-librsyslog_la_LIBADD = 
++librsyslog_la_LIBADD = -ldl -lrt
+ 
+ #
+ # regular expression support

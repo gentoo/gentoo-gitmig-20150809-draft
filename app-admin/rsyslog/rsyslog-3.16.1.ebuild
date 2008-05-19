@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.16.0.ebuild,v 1.2 2008/05/14 20:35:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.16.1.ebuild,v 1.1 2008/05/19 16:13:44 dev-zero Exp $
 
 inherit eutils versionator
 
@@ -15,7 +15,7 @@ IUSE="debug kerberos dbi mysql postgres relp snmp zlib"
 DEPEND="kerberos? ( virtual/krb5 )
 	dbi? ( dev-db/libdbi )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	relp? ( dev-libs/librelp )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"

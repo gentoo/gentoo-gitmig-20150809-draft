@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.4 2008/05/14 20:35:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.5 2008/05/19 16:13:44 dev-zero Exp $
+
+*rsyslog-3.19.2 (19 May 2008)
+*rsyslog-3.16.1 (19 May 2008)
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3.14.1-implicit_declaration.patch, +files/3.19.2-as_needed.patch,
+  -rsyslog-3.14.1.ebuild, -rsyslog-3.16.0.ebuild, +rsyslog-3.16.1.ebuild,
+  -rsyslog-3.17.1.ebuild, +rsyslog-3.19.2.ebuild:
+  Version bump, cleaned up the old versions due to a couple of serious bugs.
+  Added GnuTLS USE flag for the devel-branch. Changed dependency for
+  postgresql to virtual/postgresql-base.
 
   14 May 2008; Markus Meier <maekke@gentoo.org> rsyslog-3.16.0.ebuild,
   rsyslog-3.17.1.ebuild:
