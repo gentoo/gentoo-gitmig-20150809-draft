@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.41 2008/05/11 18:17:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.42 2008/05/19 20:05:17 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> showimg-0.9.5.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   11 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/showimg-0.9.5+gcc-4.3.patch, showimg-0.9.5.ebuild:
