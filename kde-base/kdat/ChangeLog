@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdat/ChangeLog,v 1.70 2008/05/16 06:54:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdat/ChangeLog,v 1.71 2008/05/19 23:26:53 carlo Exp $
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org> kdat-3.5.9.ebuild:
+  Stable on amd64 and x86.
 
   16 May 2008; Markus Rothe <corsair@gentoo.org> kdat-3.5.9.ebuild:
   Stable on ppc64; bug #221063

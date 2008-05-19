@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.31 2008/02/20 22:32:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.32 2008/05/19 23:32:03 carlo Exp $
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org> dcopjava-3.5.9.ebuild:
+  Stable on amd64 and x86.
 
 *dcopjava-3.5.9 (20 Feb 2008)
 

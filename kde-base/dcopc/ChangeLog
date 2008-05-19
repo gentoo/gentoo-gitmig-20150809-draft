@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.26 2008/02/20 22:31:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.27 2008/05/19 23:31:17 carlo Exp $
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org> dcopc-3.5.9.ebuild:
+  Stable on amd64 and x86.
 
 *dcopc-3.5.9 (20 Feb 2008)
 
