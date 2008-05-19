@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.160 2008/03/19 11:31:21 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.161 2008/05/19 00:18:23 carlo Exp $
+
+*kdevelop-3.5.2 (19 May 2008)
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org> +kdevelop-3.5.2.ebuild:
+  Version bump.
 
   19 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org> kdevelop-3.5.1.ebuild:
   Fix SRC_URI.
