@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.11.ebuild,v 1.1 2008/03/11 19:52:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.15.ebuild,v 1.1 2008/05/19 08:03:50 phosphan Exp $
 
 inherit eutils versionator rpm
 
 MY_P="picasa-$(replace_version_separator 3 '-')"
 DESCRIPTION="Google's photo organizer"
 HOMEPAGE="http://picasa.google.com"
-SRC_URI="http://dl.google.com/linux/rpm/testing/i386/${MY_P}.i386.rpm"
+SRC_URI="http://dl.google.com/linux/rpm/stable/i386/${MY_P}.i386.rpm"
 LICENSE="google-picasa"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -42,7 +42,7 @@ RDEPEND="x86? (
 S="${WORKDIR}"
 
 src_unpack() {
-	rpm_src_unpack "${A}"
+	rpm_src_unpack ${A}
 }
 
 src_install() {
