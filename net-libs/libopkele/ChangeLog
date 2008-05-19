@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libopkele
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.2 2008/05/18 12:55:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.3 2008/05/19 11:06:20 drac Exp $
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libopkele-0.3.2-asneeded.patch, libopkele-0.3.2.ebuild:
+  Fix configure with asneeded wrt #222639, thanks to Michael Krelin.
 
   18 May 2008; Samuli Suominen <drac@gentoo.org> libopkele-0.3.2.ebuild:
   Move pkgconfig to DEPEND.
