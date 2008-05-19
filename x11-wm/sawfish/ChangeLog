@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.85 2008/05/19 16:44:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.86 2008/05/19 20:47:49 maekke Exp $
+
+  19 May 2008; Markus Meier <maekke@gentoo.org> sawfish-1.3.3.ebuild:
+  amd64/x86 stable, bug #222525
 
   19 May 2008; nixnut <nixnut@gentoo.org> sawfish-1.3.3.ebuild:
   Stable on ppc wrt bug 222525
