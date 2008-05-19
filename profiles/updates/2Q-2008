@@ -28,3 +28,4 @@ move x11-misc/xchm app-text/xchm
 move media-fonts/ttf-sil-abyssinica media-fonts/sil-abyssinica
 move media-fonts/ttf-sil-doulos media-fonts/sil-doulos
 move media-fonts/ttf-sil-padauk media-fonts/sil-padauk
+move media-fonts/ttf-sil-galatia media-fonts/sil-galatia
