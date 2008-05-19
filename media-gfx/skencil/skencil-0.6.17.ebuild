@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.11 2007/02/05 20:22:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.12 2008/05/19 00:21:18 hanno Exp $
 
 inherit python multilib
 
@@ -28,9 +28,9 @@ src_unpack() {
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e "s:lib/:$(get_libdir)/:" \
 			-e "s:lib':$(get_libdir)':" \
-			${S}/{Pax,Filter,Sketch/Modules}/Makefile.pre.in \
-			${S}/Plugins/Objects/Lib/multilinetext/{TextEditor,styletext}.py \
-			${S}/setup.py || die "sed failed"
+			"${S}"/{Pax,Filter,Sketch/Modules}/Makefile.pre.in \
+			"${S}"/Plugins/Objects/Lib/multilinetext/{TextEditor,styletext}.py \
+			"${S}"/setup.py || die "sed failed"
 	fi
 }
 
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install () {
-	./setup.py install --prefix=/usr --dest-dir=${D}
+	./setup.py install --prefix=/usr --dest-dir="${D}"
 	assert "setup.py install failed"
 
 	newdoc Pax/README README.pax

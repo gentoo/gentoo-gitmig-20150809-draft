@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20070421.ebuild,v 1.4 2008/05/19 00:21:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.1 2008/05/19 00:21:18 hanno Exp $
 
 inherit python multilib eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/skencil-configure-without-nls.diff"
+	epatch "${FILESDIR}/skencil-0.6.17-setup.py.patch"
 
 	# Fix hardcoded libdir
 	sed -i -e "s:lib/:$(get_libdir)/:" \
@@ -38,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	./setup.py configure `use_with nls` || die
-	./setup.py build || die
+	BLDSHARED='gcc -shared' ./setup.py build || die
 }
 
 src_install () {
