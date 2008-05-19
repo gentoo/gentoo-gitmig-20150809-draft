@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.83 2008/03/24 16:29:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.84 2008/05/19 20:37:44 mrness Exp $
+
+  19 May 2008; Alin Năstac <mrness@gentoo.org> mgetty-1.1.35-r2.ebuild,
+  mgetty-1.1.36-r1.ebuild:
+  Replace virtual/tetex dependency atom with virtual/latex-base (#222501).
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org> mgetty-1.1.36-r1.ebuild:
   amd64 stable, bug #204189
