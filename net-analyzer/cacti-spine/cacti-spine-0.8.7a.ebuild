@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a.ebuild,v 1.7 2008/04/27 19:59:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a.ebuild,v 1.8 2008/05/19 16:52:49 pva Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -50,7 +50,7 @@ pkg_postinst() {
 	elog "http://cacti.net/spine_install.php"
 	echo
 	ewarn "/etc/spine.conf should be readable by webserver, thus after you"
-	ewarn "decide on webserver/webserver group do not forgive to change it's"
+	ewarn "decide on webserver/webserver group do not forget to change it's"
 	ewarn "group with the following command:"
 	ewarn
 	ewarn " # chown root:wwwgroup /etc/spine.conf"
