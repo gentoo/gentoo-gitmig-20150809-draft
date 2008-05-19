@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.8 2008/04/14 20:00:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.9 2008/05/19 19:52:43 mrness Exp $
 
 DESCRIPTION="User level application for IBM Mwave modem"
 HOMEPAGE="http://oss.software.ibm.com/acpmodem/"
@@ -52,7 +52,7 @@ pkg_postinst() {
 	elif [ -e "${ROOT}/dev/.udev" ]; then
 		#the device should be created by udev
 		ebegin "Restarting udev to reread udev rules"
-			udevstart
+			udevcontrol reload_rules
 		eend $?
 	else
 		[ ! -d "${ROOT}/dev/modem" ] && mkdir --mode=0755 "${ROOT}/dev/modems"
