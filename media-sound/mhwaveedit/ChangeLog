@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.34 2008/05/11 19:13:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.35 2008/05/19 19:54:40 drac Exp $
+
+*mhwaveedit-1.4.15-r1 (19 May 2008)
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> mhwaveedit-1.4.14.ebuild,
+  mhwaveedit-1.4.15.ebuild, +mhwaveedit-1.4.15-r1.ebuild:
+  Revision bump to remove USE portaudio wrt #222841.
 
 *mhwaveedit-1.4.15 (11 May 2008)
 

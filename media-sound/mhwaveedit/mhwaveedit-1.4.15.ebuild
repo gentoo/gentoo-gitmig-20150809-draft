@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.15.ebuild,v 1.1 2008/05/11 19:13:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.15.ebuild,v 1.2 2008/05/19 19:54:40 drac Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	sndfile? ( >=media-libs/libsndfile-1.0.10 )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
 	alsa? ( media-libs/alsa-lib )
-	portaudio? ( >=media-libs/portaudio-18 )
+	portaudio? ( =media-libs/portaudio-18* )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98.0 )
 	esd? ( >=media-sound/esound-0.2.0 )
 	libsamplerate? ( media-libs/libsamplerate )
