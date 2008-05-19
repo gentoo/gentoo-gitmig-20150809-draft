@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/obby
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.22 2007/11/05 17:03:31 humpback Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.23 2008/05/19 19:36:01 jer Exp $
+
+  19 May 2008; Jeroen Roovers <jer@gentoo.org> obby-0.4.4.ebuild:
+  Marked ~hppa.
 
   05 Nov 2007; Gustavo Felisberto <humpback@gentoo.org>
   -files/dual_subscribe.patch, -obby-0.3.0-r1.ebuild:
