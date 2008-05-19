@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.1 2008/04/15 09:12:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.2 2008/05/19 07:08:30 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postgresql-docs-8.3.1.ebuild:
+  Keyworded for all archs having postgresql keyworded and have ossp-uuid
+  keyworded
 
 *postgresql-docs-8.3.1 (15 Apr 2008)
 *postgresql-docs-8.2.7 (15 Apr 2008)
