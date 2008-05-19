@@ -1,0 +1,16 @@
+diff -ur gtk-qt-engine.org/src/qt_qt_wrapper.cpp gtk-qt-engine/src/qt_qt_wrapper.cpp
+--- gtk-qt-engine.org/src/qt_qt_wrapper.cpp	2007-08-28 21:30:38.000000000 +0100
++++ gtk-qt-engine/src/qt_qt_wrapper.cpp	2008-05-04 19:59:46.000000000 +0100
+@@ -334,8 +334,10 @@
+ 		printf("createQApp()\n");
+ 	
+ 	char* sessionEnv = getenv("SESSION_MANAGER");
+-	if (QString(sessionEnv).endsWith(QString::number(getpid())) || cmdLine.contains("gnome-wm") || cmdLine.contains("metacity") || cmdLine.contains("xfwm4") || (getenv("GTK_QT_ENGINE_DISABLE") != NULL) ||
+-	((qApp) && (qApp->type() == QApplication::Tty)))
++	if (QString(sessionEnv).endsWith(QString::number(getpid())) || cmdLine.contains("gnome-wm")
++		|| cmdLine.contains("metacity") || cmdLine.contains("xfwm4")
++		|| cmdLine.contains("nspluginviewer")  || (getenv("GTK_QT_ENGINE_DISABLE")
++		|| ((qApp) && (qApp->type() == QApplication::Tty))))
+ 	{
+ 		printf("Not initializing the Gtk-Qt theme engine\n");
+ 	}

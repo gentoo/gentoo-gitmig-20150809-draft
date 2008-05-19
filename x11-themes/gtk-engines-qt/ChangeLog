@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.29 2008/01/19 14:57:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.30 2008/05/19 00:03:48 carlo Exp $
+
+*gtk-engines-qt-0.8-r1 (19 May 2008)
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/gtk-engines-qt-0.8-konq-flash.patch, +gtk-engines-qt-0.8-r1.ebuild:
+  Address bug #220273 and some minor issues.
 
   19 Jan 2008; Stefan Schweizer <genstef@gentoo.org>
   gtk-engines-qt-0.8.ebuild:
