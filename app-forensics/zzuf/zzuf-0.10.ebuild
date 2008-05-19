@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.10.ebuild,v 1.1 2008/04/19 00:37:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.10.ebuild,v 1.2 2008/05/19 00:25:47 carlo Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://sam.zoy.org/zzuf/${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""

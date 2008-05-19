@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/zzuf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.1 2008/04/19 00:37:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.2 2008/05/19 00:25:47 carlo Exp $
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org> zzuf-0.10.ebuild:
+  Keyword ~x86.
 
 *zzuf-0.10 (19 Apr 2008)
 
