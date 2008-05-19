@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/mgopen
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/ChangeLog,v 1.1 2008/05/19 23:18:40 dirtyepic Exp $
+
+*mgopen-1.0 (19 May 2008)
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +mgopen-1.0.ebuild:
+  Initial import, bug #93548.
+
