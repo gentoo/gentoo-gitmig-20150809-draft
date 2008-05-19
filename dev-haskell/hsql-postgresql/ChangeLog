@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql-postgresql
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.8 2007/12/13 05:42:46 dcoutts Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.9 2008/05/19 19:19:58 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org>
   hsql-postgresql-1.7.ebuild:
