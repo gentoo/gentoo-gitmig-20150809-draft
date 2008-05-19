@@ -1,0 +1,24 @@
+--- src/svncpp/client_status.cpp.orig	2008-03-08 03:05:30.000000000 +0500
++++ src/svncpp/client_status.cpp	2008-04-08 00:48:41.000000000 +0600
+@@ -66,14 +66,18 @@
+            hi != NULL;
+            hi = apr_hash_next (hi))
+       {
+-        char *path;
++      	 typedef union {
++            char *cpath;
++            void *vpath;
++        } upath;
++        upath path;
+         void *val;
+-        apr_hash_this (hi, (const void **)&path, NULL, &val);
++        apr_hash_this (hi, (const void **)&path.vpath, NULL, &val);
+ 
+         svn_log_changed_path_t *log_item = reinterpret_cast<svn_log_changed_path_t *> (val);
+         
+         entry.changedPaths.push_back (
+-              LogChangePathEntry (path,
++              LogChangePathEntry (path.cpath,
+                                   log_item->action,
+                                   log_item->copyfrom_path,
+                                   log_item->copyfrom_rev) );
