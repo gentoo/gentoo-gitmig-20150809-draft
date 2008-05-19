@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.33 2008/03/03 15:48:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.34 2008/05/19 20:20:13 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> mailutils-1.2.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *mailutils-1.2 (03 Mar 2008)
 
