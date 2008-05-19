@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.60 2008/05/13 14:25:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.61 2008/05/19 07:12:40 yuval Exp $
+
+*Apache-Test-1.30 (19 May 2008)
+
+  19 May 2008; Yuval Yaari <yuval@gentoo.org> +Apache-Test-1.30.ebuild:
+  Version bump (bug #222681)
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> Apache-Test-1.29.ebuild:
   Marked ~hppa (LuckyLuke).
