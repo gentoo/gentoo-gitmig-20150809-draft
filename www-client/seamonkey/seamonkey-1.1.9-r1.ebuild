@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.9-r1.ebuild,v 1.6 2008/05/18 15:55:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.9-r1.ebuild,v 1.7 2008/05/19 20:37:06 dev-zero Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -29,7 +29,7 @@ RDEPEND="java? ( virtual/jre )
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl
-	postgres? ( >=dev-db/postgresql-7.2.0 )"
+	postgres? ( >=virtual/postgresql-server-7.2.0 )"
 
 S="${WORKDIR}/mozilla"
 
