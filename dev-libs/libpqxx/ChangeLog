@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpqxx
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.49 2007/10/06 05:28:45 tgall Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.50 2008/05/19 19:39:38 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> libpqxx-2.6.8.ebuild,
+  libpqxx-2.6.9.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org> libpqxx-2.6.9.ebuild:
   stable on ppc64 
