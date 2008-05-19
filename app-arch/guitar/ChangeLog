@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/guitar
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.18 2007/08/29 16:58:35 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.19 2008/05/19 14:14:39 drac Exp $
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> -files/install.gnome,
+  guitar-0.1.4.ebuild:
+  Pass --disable-gnome since it's for GNOME 1.x libs. Removed USE gnome.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for

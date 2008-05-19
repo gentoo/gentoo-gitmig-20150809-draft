@@ -1,33 +1,40 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.28 2005/01/01 11:45:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.29 2008/05/19 14:14:39 drac Exp $
+
+inherit eutils toolchain-funcs
 
 MY_P=guiTAR-${PV}
-S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Extraction tool, supports tar, tar.Z, tar.gz, tar.bz2, lha, lzh, rar, arj, zip, and slp formats"
-HOMEPAGE="http://artemis.efes.net/disq/guitar/"
-SRC_URI="http://artemis.efes.net/disq/guitar/${MY_P}.tar.gz"
+# No HOMEPAGE available. Debian has this left in oldstable.
+HOMEPAGE="http://packages.debian.org/sarge/guitar"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="gnome"
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
 	app-arch/tar
 	app-arch/bzip2
-	x86? ( app-arch/rar )
-	app-arch/unrar
 	app-arch/gzip
 	app-arch/zip
 	app-arch/unzip"
 
+S=${WORKDIR}/${MY_P}
+
 src_compile() {
-	econf $(use_enable gnome) || die
-	emake || die
+	tc-export CC
+	# Disable GNOME 1.x library support.
+	econf --disable-gnome
+	emake || die "emake failed."
 }
 
 src_install() {
-	use gnome && cp ${FILESDIR}/install.gnome ${S}
-	make install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS BUGS NEWS README TODO
+	newicon src/icon.xpm guiTAR.xpm
+	make_desktop_entry ${PN} "Graphical User Interface for TAR" guiTAR
 }
