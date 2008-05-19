@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r8.ebuild,v 1.1 2007/11/22 14:29:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r8.ebuild,v 1.2 2008/05/19 20:03:26 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,7 +24,7 @@ COMMON_DEPEND="clamav?		( >=app-antivirus/clamav-0.90.2 )
 	mysql?		( virtual/mysql )
 	sqlite?		( =dev-db/sqlite-3* )"
 DEPEND="${COMMON_DEPEND}
-	postgres?	( >=dev-db/libpq-8 )"
+	postgres?	( >=virtual/postgresql-base-8 )"
 RDEPEND="${COMMON_DEPEND}
 	postgres?	( || ( dev-python/psycopg >=dev-db/postgresql-8 ) )
 	sys-process/cronbase

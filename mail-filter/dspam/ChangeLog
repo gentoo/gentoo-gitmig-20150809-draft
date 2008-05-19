@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.110 2008/04/20 12:26:23 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.111 2008/05/19 20:03:26 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> dspam-3.8.0-r7.ebuild,
+  dspam-3.8.0-r8.ebuild, dspam-3.8.0-r9.ebuild, dspam-3.8.0-r10.ebuild,
+  dspam-3.8.0-r11.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   20 Apr 2008; Richard Freeman <rich0@gentoo.org> dspam-3.8.0-r11.ebuild:
   amd64 stable - 211398
