@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.44 2008/04/18 10:12:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.45 2008/05/19 15:43:31 fmccor Exp $
+
+  19 May 2008; Ferris McCormick <fmccor@gentoo.org> gimp-help-2.4.1.ebuild:
+  Sparc stable, Bug #222791. Builds files and installs them, gimp seems to use
+  them.
 
 *gimp-help-2.4.1 (18 Apr 2008)
 
