@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/pgadmin3
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.34 2007/07/02 14:31:03 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.35 2008/05/19 19:10:18 dev-zero Exp $
+
+*pgadmin3-1.8.2 (19 May 2008)
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/pgadmin3-1.2.2-configure.patch,
+  +files/1.8.2-as_needed_ssl_detect_broken.patch, -pgadmin3-1.2.2.ebuild,
+  pgadmin3-1.4.3.ebuild, +pgadmin3-1.8.2.ebuild:
+  Version bump (bug #148707). Dropped old version. Changed dependency for
+  postgresql to virtual/postgresql-base
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> pgadmin3-1.2.2.ebuild:
   (QA) RESTRICT clean up.

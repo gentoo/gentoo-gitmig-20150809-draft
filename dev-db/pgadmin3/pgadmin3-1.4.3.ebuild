@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.4.3.ebuild,v 1.6 2007/06/04 22:05:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.4.3.ebuild,v 1.7 2008/05/19 19:10:18 dev-zero Exp $
 
 inherit wxwidgets eutils autotools
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="debug"
 
 DEPEND="=x11-libs/wxGTK-2.6*
-	>=dev-db/libpq-7.4
+	>=virtual/postgresql-base-7.4
 	>=dev-libs/libxml2-2.5
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"

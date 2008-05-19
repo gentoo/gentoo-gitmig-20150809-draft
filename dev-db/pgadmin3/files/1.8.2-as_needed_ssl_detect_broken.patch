@@ -1,0 +1,10 @@
+--- acinclude.m4.orig	2008-05-19 20:33:59.000000000 +0200
++++ acinclude.m4	2008-05-19 20:35:01.000000000 +0200
+@@ -465,6 +465,7 @@
+ 	        			PG_SSL="no"
+ 		        	fi
+         		else
++					LIBS="${LIBS} -lssl"
+ 	        		AC_CHECK_LIB(pq, SSL_connect, [PG_SSL=yes], [PG_SSL=no])
+ 	        	fi
+                 fi
