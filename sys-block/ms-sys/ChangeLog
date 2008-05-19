@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/ms-sys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.1 2008/05/18 09:09:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.2 2008/05/19 11:47:50 cla Exp $
+
+  19 May 2008; Dawid Węgliński <cla@gentoo.org> ms-sys-2.1.3.ebuild:
+  Add ~x86 keyword
 
 *ms-sys-2.1.3 (18 May 2008)
 

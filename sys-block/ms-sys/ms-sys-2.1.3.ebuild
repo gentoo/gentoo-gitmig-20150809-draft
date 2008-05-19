@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.1.3.ebuild,v 1.1 2008/05/18 09:09:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.1.3.ebuild,v 1.2 2008/05/19 11:47:50 cla Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
