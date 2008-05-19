@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1422 2008/05/19 02:26:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1423 2008/05/19 03:08:28 dirtyepic Exp $
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> updates/2Q-2008:
+  Move ttf-sil-ezra -> sil-ezra.
 
   19 May 2008; Ryan Hill <dirtyepic@gentoo.org> updates/2Q-2008:
   Move ttf-sil-arabicfonts -> sil-arabicfonts.
