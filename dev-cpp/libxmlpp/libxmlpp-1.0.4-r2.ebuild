@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4-r2.ebuild,v 1.6 2008/03/23 14:14:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4-r2.ebuild,v 1.7 2008/05/19 21:01:54 dang Exp $
 
 inherit libtool multilib
 
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/libxml2-2.5.8
-		>=sys-devel/automake-1.7
-		>=sys-devel/autoconf-2.5"
+RDEPEND=">=dev-libs/libxml2-2.5.8"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.5"
 
 S="${WORKDIR}/${MY_P}"
 MAKEOPTS="${MAKEOPTS} -j1"
