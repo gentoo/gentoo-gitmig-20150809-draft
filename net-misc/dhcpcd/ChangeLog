@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.191 2008/05/19 11:02:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.192 2008/05/19 14:01:39 armin76 Exp $
+
+*dhcpcd-4.0.0_beta4 (19 May 2008)
+
+  19 May 2008; Raúl Porcel <armin76@gentoo.org> +dhcpcd-4.0.0_beta4.ebuild:
+  Version bump
 
   19 May 2008; Raúl Porcel <armin76@gentoo.org> dhcpcd-4.0.0_beta3.ebuild:
   Add keepdir /var/lib/dhcpcd, per Uberlord's request
