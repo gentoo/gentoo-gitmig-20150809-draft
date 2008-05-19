@@ -1,0 +1,46 @@
+# ChangeLog for media-fonts/ttf-sil-galatia
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-galatia/ChangeLog,v 1.1 2008/05/19 20:56:53 dirtyepic Exp $
+
+*sil-galatia-2.01 (19 May 2008)
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +sil-galatia-2.01.ebuild:
+  Move ttf-sil-galatia -> sil-galatia.
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~alpha
+
+  25 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~ia64 wrt bug 154088
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~x86-fbsd keyword.
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  keyworded ~x86, bug #154088
+
+  05 Nov 2006; Jeroen Roovers <jer@gentoo.org> ttf-sil-galatia-2.01.ebuild:
+  Marked ~hppa (bug #154088).
+
+  05 Nov 2006; Ferris McCormick <fmccor@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~sparc keyword --- Bug #154088
+
+  05 Nov 2006; nixnut <nixnut@gentoo.org> ttf-sil-galatia-2.01.ebuild:
+  Added ~ppc keyword wrt bug 154088
+
+  05 Nov 2006; Olivier Crête <tester@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Mark ~amd64, bug #154088
+
+*ttf-sil-galatia-2.01 (04 Nov 2006)
+
+  04 Nov 2006; Joshua <joslwah@gentoo.org> +metadata.xml,
+  +ttf-sil-galatia-2.01.ebuild:
+  Initial commit of Galatia SIL Greek Unicode Fonts.
+
