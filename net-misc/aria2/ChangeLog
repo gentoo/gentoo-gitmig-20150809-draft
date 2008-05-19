@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.23 2008/03/15 22:39:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.24 2008/05/19 11:35:25 dev-zero Exp $
+
+*aria2-0.13.1_p2 (19 May 2008)
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.13.1_p2-missing_includes.patch, -aria2-0.12.1_p1.ebuild,
+  -aria2-0.13.1.ebuild, +aria2-0.13.1_p2.ebuild:
+  Version bump.
 
 *aria2-0.13.1 (15 Mar 2008)
 

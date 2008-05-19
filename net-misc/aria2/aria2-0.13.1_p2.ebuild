@@ -1,38 +1,42 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.12.1_p1.ebuild,v 1.1 2008/02/16 23:01:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.13.1_p2.ebuild,v 1.1 2008/05/19 11:35:25 dev-zero Exp $
 
 inherit eutils
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-
-MY_P=${P/_p/+}
+MY_P="aria2c-${PV/_p/+}"
 
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="ares bittorrent gnutls metalink nls ssl test"
+IUSE="ares bittorrent expat gnutls metalink nls ssl test"
 
 CDEPEND="ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl ) )
 	ares? ( >=net-dns/c-ares-1.3.1 )
 	bittorrent? ( gnutls? ( dev-libs/libgcrypt ) )
-	metalink? ( >=dev-libs/libxml2-2.6.26 )"
+	metalink? (
+		!expat? ( >=dev-libs/libxml2-2.6.26 )
+		expat? ( dev-libs/expat )
+	)"
 DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	test? ( >=dev-util/cppunit-1.12.0 )"
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	ewarn "This version can NOT resume downloads started/stopped with prior versions,"
-	ewarn "you'll have to finish them using the old version."
-	ebeep 5
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/0.13.1-broken_tests.patch" \
+		"${FILESDIR}/${PV}-missing_includes.patch"
 }
 
 src_compile() {
@@ -42,13 +46,15 @@ src_compile() {
 	# Note:
 	# - we don't have ares, only libcares
 	# - depends on libgcrypt only when using openssl
+	# - links only against libxml2 and libexpat when metalink is enabled
 	econf \
 		$(use_enable nls) \
 		$(use_enable metalink) \
+		$(use_with expat libexpat) \
+		$(use_with !expat libxml2) \
 		$(use_enable bittorrent) \
 		--without-ares \
 		$(use_with ares libcares) \
-		$(use_with metalink libxml2) \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
