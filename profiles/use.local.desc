@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3544 2008/05/16 05:49:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3545 2008/05/19 18:27:34 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -258,7 +258,7 @@ app-office/dia:gnome-print - Gnome-Print support
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
-app-office/grisbi:print - Enable TeX and printing support
+app-office/grisbi:print - Enable printing support
 app-office/imposter:iksemel - Enable external iksemel parsing support.
 app-office/kmymoney2:hbci - Adds HBCI online banking support
 app-office/mozilla-sunbird:moznopango - Disable pango during runtime
