@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/sil-doulos
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-doulos/ChangeLog,v 1.1 2008/05/19 19:22:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-doulos/ChangeLog,v 1.2 2008/05/19 19:29:33 dirtyepic Exp $
+
+*sil-doulos-4.104 (19 May 2008)
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> +sil-doulos-4.104.ebuild:
+  Version bump.
 
 *sil-doulos-4.100.0 (19 May 2008)
 
