@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.7 2008/01/28 16:15:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.8 2008/05/19 07:04:35 drac Exp $
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> wxsvg-1.0_beta7.ebuild:
+  Move pkgconfig to DEPEND.
 
   28 Jan 2008; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Replace wxwindows with wxwidgets in metadata

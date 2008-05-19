@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.6 2007/06/17 11:22:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0_beta7.ebuild,v 1.7 2008/05/19 07:04:35 drac Exp $
 
 inherit eutils wxwidgets
 
-MY_PV="${PV/_beta/b}"
+MY_PV=${PV/_beta/b}
 
 DESCRIPTION="C++ library to create, manipulate and render SVG files."
 HOMEPAGE="http://wxsvg.sourceforge.net/"
@@ -15,13 +15,14 @@ KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="=x11-libs/wxGTK-2.6*
+RDEPEND="=x11-libs/wxGTK-2.6*
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.26
 	>=media-libs/fontconfig-2.4
 	>=media-libs/freetype-2.2.0
 	>=media-libs/libart_lgpl-2.3.17
-	>=x11-libs/pango-1.14.9
+	>=x11-libs/pango-1.14.9"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -29,7 +30,6 @@ S=${WORKDIR}/${PN}-${MY_PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}"/${P}-freetype.patch
 }
 
@@ -43,6 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog TODO
 }
