@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.62 2008/05/09 19:18:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.63 2008/05/19 16:24:31 nixnut Exp $
+
+  19 May 2008; nixnut <nixnut@gentoo.org> balsa-2.3.22.ebuild:
+  Stable on ppc wrt bug 216903
 
   09 May 2008; Markus Meier <maekke@gentoo.org> balsa-2.3.22.ebuild:
   amd64/x86 stable, bug #216903
