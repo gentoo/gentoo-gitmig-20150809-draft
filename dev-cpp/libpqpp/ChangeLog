@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libpqpp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.19 2007/05/24 14:59:48 gustavoz Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.20 2008/05/19 18:06:22 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/libpqpp-4.0-PIC.patch, -libpqpp-4.0-r4.ebuild,
+  libpqpp-4.0-r6.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base. Dropped old
+  version.
 
   24 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> libpqpp-4.0-r6.ebuild:
   Stable on sparc

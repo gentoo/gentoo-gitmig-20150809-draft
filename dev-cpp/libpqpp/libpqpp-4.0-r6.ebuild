@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r6.ebuild,v 1.6 2007/05/24 14:59:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r6.ebuild,v 1.7 2008/05/19 18:06:22 dev-zero Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="examples"
 
-DEPEND="dev-db/libpq"
+DEPEND="virtual/postgresql-base"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
