@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.19.ebuild,v 1.9 2008/01/20 06:14:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.19.ebuild,v 1.10 2008/05/19 19:19:30 dev-zero Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -23,7 +23,8 @@ DEPEND="virtual/libc
 	readline? ( >=sys-libs/readline-4.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	!dev-db/postgresql-base"
 RDEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
