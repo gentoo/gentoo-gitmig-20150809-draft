@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.11.0.ebuild,v 1.3 2008/04/24 09:39:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.11.0.ebuild,v 1.4 2008/05/19 20:00:21 dev-zero Exp $
 
 inherit gnustep-2
 
@@ -17,7 +17,7 @@ IUSE="postgres sqlite"
 S=${WORKDIR}/${MY_P}
 
 DEPEND="gnustep-apps/gorm
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	sqlite? ( >=dev-db/sqlite-3 )"
 RDEPEND="${DEPEND}"
 

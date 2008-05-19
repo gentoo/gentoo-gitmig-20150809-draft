@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/gdl2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/ChangeLog,v 1.12 2008/04/24 09:39:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/ChangeLog,v 1.13 2008/05/19 20:00:21 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> gdl2-0.11.0.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   24 Apr 2008; Bernard Cafarelli <voyageur@gentoo.org> gdl2-0.11.0.ebuild:
   Depends on gorm, remove old blocker on sope, bug #219071
