@@ -6,5 +6,5 @@ Exec=grisbi
 Icon=grisbi/grisbi.png
 Terminal=false
 Type=Application
-MimeType=application/x-grisbi
+MimeType=application/x-grisbi;
 Categories=Application;Office;

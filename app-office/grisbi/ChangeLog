@@ -1,6 +1,10 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.28 2008/05/18 14:06:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.29 2008/05/19 18:25:19 dang Exp $
+
+  19 May 2008; Daniel Gryniewicz <dang@gentoo.org> files/grisbi.desktop,
+  grisbi-0.5.8.ebuild, grisbi-0.5.9.ebuild:
+  Fix grisbi deps for new latex virtuals; bug #196745
 
   18 May 2008; Gilles Dartiguelongue <eva@gentoo.org> -grisbi-0.5.7.ebuild,
   grisbi-0.5.8.ebuild, grisbi-0.5.9.ebuild:

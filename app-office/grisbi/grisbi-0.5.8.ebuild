@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.8.ebuild,v 1.5 2008/05/18 14:06:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.8.ebuild,v 1.6 2008/05/19 18:25:19 dang Exp $
 
 inherit eutils
 
@@ -17,8 +17,10 @@ KEYWORDS="amd64 ~ppc sparc x86"
 RDEPEND="dev-libs/libxml2
 	>=x11-libs/gtk+-2.2.0
 	ofx? ( >=dev-libs/libofx-0.7.0 )
-	print? ( virtual/tetex
-	>=dev-tex/latex-unicode-20041017 )"
+	print? (
+		virtual/latex-base
+		|| ( dev-texlive/texlive-latexextra >=dev-tex/latex-unicode-20041017 )
+		)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20"
 
@@ -61,9 +63,9 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	insinto /usr/share/applications
-	doins ${FILESDIR}/grisbi.desktop
+	doins "${FILESDIR}"/grisbi.desktop
 }
 
 pkg_postinst() {
