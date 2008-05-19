@@ -1,0 +1,11 @@
+# ChangeLog for dev-cpp/gtksourceviewmm
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.1 2008/05/19 14:25:15 remi Exp $
+
+*gtksourceviewmm-2.2.0 (19 May 2008)
+
+  19 May 2008; Rémi Cardona <remi@gentoo.org> +metadata.xml,
+  +gtksourceviewmm-2.2.0.ebuild:
+  New package gtksourceviewmm which is just a rename of libgtksourceviewmm,
+  API and installed files are the same
+
