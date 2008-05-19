@@ -23,3 +23,4 @@ move app-doc/kchmviewer app-text/kchmviewer
 move media-fonts/ttf-sil-charis media-fonts/sil-charis
 move media-fonts/ttf-sil-arabicfonts media-fonts/sil-arabicfonts
 move media-fonts/ttf-sil-ezra media-fonts/sil-ezra
+move media-fonts/ttf-gentium media-fonts/sil-gentium
