@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-3.4.ebuild,v 1.1 2007/08/08 09:51:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-3.4.ebuild,v 1.2 2008/05/19 19:12:55 dev-zero Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="dev-db/libpq"
+DEPEND="virtual/postgresql-base"
 
 src_unpack() {
 	unpack ${A}

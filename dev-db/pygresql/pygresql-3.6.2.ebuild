@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.6.2.ebuild,v 1.9 2006/11/08 19:34:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.6.2.ebuild,v 1.10 2008/05/19 19:14:12 dev-zero Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-db/libpq"
+DEPEND="virtual/postgresql-base"
 RDEPEND="${DEPEND}
 		dev-python/egenix-mx-base"
 
