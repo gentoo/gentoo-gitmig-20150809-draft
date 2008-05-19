@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.10 2007/07/16 21:14:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.11 2008/05/19 19:47:13 dev-zero Exp $
 
 inherit eutils distutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://initd.org/pub/software/psycopg/${PN}2-${PV}.tar.gz"
 HOMEPAGE="http://initd.org/projects/psycopg2"
 
 DEPEND=">=dev-lang/python-2.4
-	>=dev-db/libpq-7.4"
+	>=virtual/postgresql-base-7.4"
 
 SLOT="2"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"

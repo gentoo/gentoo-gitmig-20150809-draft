@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.15 2008/03/01 16:29:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.16 2008/05/19 19:48:35 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> pypgsql-2.4.ebuild,
+  pypgsql-2.5.1.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *pypgsql-2.5.1 (01 Mar 2008)
 

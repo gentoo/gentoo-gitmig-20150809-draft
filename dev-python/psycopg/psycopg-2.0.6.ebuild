@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.6.ebuild,v 1.1 2007/08/05 21:10:36 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.6.ebuild,v 1.2 2008/05/19 19:47:13 dev-zero Exp $
 
 NEED_PYTHON=2.4
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 IUSE="debug doc examples mxdatetime"
 
-DEPEND="dev-db/libpq
+DEPEND="virtual/postgresql-base
 	mxdatetime? ( dev-python/egenix-mx-base )"
 RDEPEND="${DEPEND}"
 
