@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.7 2008/05/11 18:43:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.8 2008/05/19 20:23:47 dev-zero Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -37,7 +37,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	nas? ( >=media-libs/nas-1.5 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	x11-proto/inputproto

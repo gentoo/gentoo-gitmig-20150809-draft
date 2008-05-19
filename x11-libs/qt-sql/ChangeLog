@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.7 2008/05/16 09:29:59 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.8 2008/05/19 20:26:17 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> qt-sql-4.4.0.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   16 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -qt-sql-4.4.0_rc1.ebuild:

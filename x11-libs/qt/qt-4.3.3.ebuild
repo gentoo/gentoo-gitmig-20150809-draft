@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.12 2008/04/18 22:52:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.13 2008/05/19 20:23:47 dev-zero Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -41,7 +41,7 @@ RDEPEND="x11-libs/libXrandr
 	sqlite3? ( =dev-db/sqlite-3* )
 	sqlite? ( =dev-db/sqlite-2* )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	cups? ( net-print/cups )
 	zlib? ( sys-libs/zlib )
 	glib? ( dev-libs/glib )
