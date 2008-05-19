@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.262 2008/05/15 02:39:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.263 2008/05/19 20:07:28 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> amarok-1.4.8.ebuild,
+  amarok-1.4.9.1.ebuild, amarok-1.4.9999-r2.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   15 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/amarok-1.4.9.1-helix+gcc-4.3.patch, amarok-1.4.9.1.ebuild:

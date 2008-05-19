@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.3 2008/05/15 02:39:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.4 2008/05/19 20:07:28 dev-zero Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -45,7 +45,7 @@ RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	>=media-libs/taglib-1.4
 	mysql? ( >=virtual/mysql-4.0 )
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	opengl? ( virtual/opengl )
 	visualization? ( media-libs/libsdl
 		=media-plugins/libvisual-plugins-0.4* )
