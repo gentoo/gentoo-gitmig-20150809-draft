@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.22 2008/04/16 18:04:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.23 2008/05/19 16:46:29 drac Exp $
+
+*libprojectm-1.1 (19 May 2008)
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> +libprojectm-1.1.ebuild:
+  Version bump.
 
 *libprojectm-1.01-r2 (16 Apr 2008)
 
