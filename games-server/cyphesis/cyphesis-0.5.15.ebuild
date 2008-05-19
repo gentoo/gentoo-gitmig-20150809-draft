@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.15.ebuild,v 1.1 2007/12/14 11:27:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.15.ebuild,v 1.2 2008/05/19 19:56:20 dev-zero Exp $
 
 inherit eutils autotools games
 
@@ -21,7 +21,7 @@ DEPEND=">=media-libs/skstream-0.3.6
 	=dev-libs/libsigc++-2.0*
 	=media-libs/atlas-c++-0.6*
 	>=media-libs/varconf-0.6.4
-	dev-db/libpq"
+	virtual/postgresql-base"
 
 src_unpack() {
 	unpack ${A}
