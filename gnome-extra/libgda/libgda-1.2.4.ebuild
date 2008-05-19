@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.12 2007/11/10 12:12:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.13 2008/05/19 19:57:54 dev-zero Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2
 	berkdb? ( sys-libs/db )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/libpq-7.2.1 )
+	postgres? ( >=virtual/postgresql-base-7.2.1 )
 	freetds? ( >=dev-db/freetds-0.62 )
 	xbase? ( dev-db/xbase )
 	sqlite3? ( >=dev-db/sqlite-3 )

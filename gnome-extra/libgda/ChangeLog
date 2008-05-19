@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.119 2008/04/10 22:00:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.120 2008/05/19 19:57:54 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> libgda-1.2.4.ebuild,
+  libgda-3.0.1.ebuild, libgda-3.0.4.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *libgda-3.0.4 (10 Apr 2008)
 
