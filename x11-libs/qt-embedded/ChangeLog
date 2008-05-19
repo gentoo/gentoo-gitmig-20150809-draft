@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-embedded
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.23 2007/04/28 16:56:09 swegener Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.24 2008/05/19 20:35:46 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  qt-embedded-3.3.8.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-server
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> qt-embedded-3.3.8.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.2 2007/04/28 16:56:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.3 2008/05/19 20:35:46 dev-zero Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.trolltech.com/products/embedded/"
@@ -20,7 +20,7 @@ DEPEND="media-libs/libpng
 	firebird? ( dev-db/firebird )
 	mysql? ( virtual/mysql )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 PDEPEND="odbc? ( ~dev-db/qt-unixODBC-3.3.8 )"
 
 S=${WORKDIR}/qt-embedded-free-${PV}
