@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/sil-charis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-charis/ChangeLog,v 1.1 2008/05/19 00:50:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-charis/ChangeLog,v 1.2 2008/05/19 01:25:58 dirtyepic Exp $
+
+*sil-charis-4.104 (19 May 2008)
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> +sil-charis-4.104.ebuild:
+  Version bump.
 
 *sil-charis-4.100 (19 May 2008)
 
