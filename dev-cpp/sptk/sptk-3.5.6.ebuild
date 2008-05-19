@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.3 2008/02/26 13:09:58 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.4 2008/05/19 18:08:30 dev-zero Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -18,7 +18,7 @@ DEPEND="dev-util/cmake
 	fltk?     ( >=x11-libs/fltk-1.1.6 )
 	odbc?     ( >=dev-db/unixODBC-2.2.6 )
 	sqlite3?  ( >=dev-db/sqlite-3 )
-	postgres? ( >=dev-db/libpq-8.0 )
+	postgres? ( >=virtual/postgresql-base-8.0 )
 	aspell?   ( >=app-text/aspell-0.50 )
 	doc?      ( app-doc/doxygen )"
 
