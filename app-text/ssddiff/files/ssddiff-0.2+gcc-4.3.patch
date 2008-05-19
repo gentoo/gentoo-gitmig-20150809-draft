@@ -1,0 +1,24 @@
+Index: ssddiff-0.2/src/rel_count.h
+===================================================================
+--- ssddiff-0.2.orig/src/rel_count.h
++++ ssddiff-0.2/src/rel_count.h
+@@ -15,6 +15,7 @@
+ #include "rel_eqclass.h"
+ #include <vector>
+ #include <ext/hash_map>
++#include <climits>
+ 
+ using namespace std;
+ 
+Index: ssddiff-0.2/src/ustring.h
+===================================================================
+--- ssddiff-0.2.orig/src/ustring.h
++++ ssddiff-0.2/src/ustring.h
+@@ -17,6 +17,7 @@
+ #include <iostream>
+ #include <map>
+ #include <ext/hash_map>
++#include <cstring>
+ 
+ #include <libxml/tree.h> /* for xmlChar */
+ 

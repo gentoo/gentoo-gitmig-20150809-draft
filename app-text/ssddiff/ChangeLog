@@ -1,0 +1,10 @@
+# ChangeLog for app-text/ssddiff
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ssddiff/ChangeLog,v 1.1 2008/05/19 10:22:30 flameeyes Exp $
+
+*ssddiff-0.2 (19 May 2008)
+
+  19 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/ssddiff-0.2+gcc-4.3.patch, +metadata.xml, +ssddiff-0.2.ebuild:
+  Initial import of ssddiff, a C++ implementation of xmldiff.
+
