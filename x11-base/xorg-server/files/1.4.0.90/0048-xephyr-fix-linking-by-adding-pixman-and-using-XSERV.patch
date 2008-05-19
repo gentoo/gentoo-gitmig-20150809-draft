@@ -1,4 +1,4 @@
-From 09df8eb5321d92817f2dd398ad0ae4551163fc82 Mon Sep 17 00:00:00 2001
+From 9df3886354152250983171825daeb93a6a845369 Mon Sep 17 00:00:00 2001
 From: Donnie Berkholz <dberkholz@gentoo.org>
 Date: Thu, 8 May 2008 00:06:16 -0700
 Subject: [PATCH] xephyr: fix linking by adding pixman and using XSERVER_LIBS.

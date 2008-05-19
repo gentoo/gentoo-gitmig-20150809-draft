@@ -1,0 +1,121 @@
+From ddcca23a81abf5215f906a7ad097f1ed088ed92b Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter@cs.unisa.edu.au>
+Date: Thu, 7 Feb 2008 15:48:04 +1030
+Subject: [PATCH] xkb: when copying the keymap, make sure the structs default to 0/NULL.
+
+It actually does help if a pointer is NULL rather than pointing to nirvana
+when you're trying to free it lateron. Who would have thought?
+(cherry picked from commit 7a97ca667405a42d008265c3a870210cc1da97dd)
+(cherry picked from commit 0b0a09797302ac2171db5df20fc5110aafc8efbb)
+---
+ xkb/xkbUtils.c |   23 +++++++++++++++--------
+ 1 files changed, 15 insertions(+), 8 deletions(-)
+
+diff --git a/xkb/xkbUtils.c b/xkb/xkbUtils.c
+index e90df0d..ce4df4c 100644
+--- a/xkb/xkbUtils.c
++++ b/xkb/xkbUtils.c
+@@ -1707,9 +1707,8 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+         else {
+             if (dst->geom->sz_shapes) {
+                 xfree(dst->geom->shapes);
+-                dst->geom->shapes = NULL;
+             }
+-            
++            dst->geom->shapes = NULL;
+             dst->geom->num_shapes = 0;
+             dst->geom->sz_shapes = 0;
+         }
+@@ -1758,6 +1757,7 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+             }
+ 
+             dst->geom->num_sections = 0;
++            dst->geom->sections = NULL;
+         }
+ 
+         if (src->geom->num_sections) {
+@@ -1769,6 +1769,7 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+                 tmp = xalloc(src->geom->num_sections * sizeof(XkbSectionRec));
+             if (!tmp)
+                 return FALSE;
++            memset(tmp, 0, src->geom->num_sections * sizeof(XkbSectionRec));
+             dst->geom->sections = tmp;
+             dst->geom->num_sections = src->geom->num_sections;
+ 
+@@ -1804,6 +1805,10 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+                         return FALSE;
+                     dsection->doodads = tmp;
+                 }
++                else {
++                    dsection->doodads = NULL;
++                }
++
+                 for (k = 0,
+                       sdoodad = ssection->doodads,
+                       ddoodad = dsection->doodads;
+@@ -1831,9 +1836,9 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+         else {
+             if (dst->geom->sz_sections) {
+                 xfree(dst->geom->sections);
+-                dst->geom->sections = NULL;
+             }
+ 
++            dst->geom->sections = NULL;
+             dst->geom->num_sections = 0;
+             dst->geom->sz_sections = 0;
+         }
+@@ -1862,6 +1867,8 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+                     }
+                 }
+             }
++            dst->geom->num_doodads = 0;
++            dst->geom->doodads = NULL;
+         }
+ 
+         if (src->geom->num_doodads) {
+@@ -1874,7 +1881,7 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+                               sizeof(XkbDoodadRec));
+             if (!tmp)
+                 return FALSE;
+-            bzero(tmp, src->geom->num_doodads * sizeof(XkbDoodadRec));
++            memset(tmp, 0, src->geom->num_doodads * sizeof(XkbDoodadRec));
+             dst->geom->doodads = tmp;
+ 
+             dst->geom->sz_doodads = src->geom->num_doodads;
+@@ -1903,9 +1910,9 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+         else {
+             if (dst->geom->sz_doodads) {
+                 xfree(dst->geom->doodads);
+-                dst->geom->doodads = NULL;
+             }
+ 
++            dst->geom->doodads = NULL;
+             dst->geom->num_doodads = 0;
+             dst->geom->sz_doodads = 0;
+         }
+@@ -1933,10 +1940,10 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+             dst->geom->num_key_aliases = dst->geom->sz_key_aliases;
+         }
+         else {
+-            if (dst->geom->sz_key_aliases && dst->geom->key_aliases) {
++            if (dst->geom->key_aliases) {
+                 xfree(dst->geom->key_aliases);
+-                dst->geom->key_aliases = NULL;
+             }
++            dst->geom->key_aliases = NULL;
+             dst->geom->num_key_aliases = 0;
+             dst->geom->sz_key_aliases = 0;
+         }
+@@ -1967,8 +1974,8 @@ XkbCopyKeymap(XkbDescPtr src, XkbDescPtr dst, Bool sendNotifies)
+         else {
+             if (dst->geom->label_font) {
+                 xfree(dst->geom->label_font);
+-                dst->geom->label_font = NULL;
+             }
++            dst->geom->label_font = NULL;
+             dst->geom->label_color = NULL;
+             dst->geom->base_color = NULL;
+         }
+-- 
+1.5.5.1
+

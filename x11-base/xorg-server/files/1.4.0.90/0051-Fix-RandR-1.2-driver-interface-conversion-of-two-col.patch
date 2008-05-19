@@ -1,4 +1,4 @@
-From 0c30521759eb9ad4cbb47b6fd79630a424352bc6 Mon Sep 17 00:00:00 2001
+From 2621380cf680941a0423d64d827fb3513545ebf5 Mon Sep 17 00:00:00 2001
 From: =?utf-8?q?Michel=20D=C3=A4nzer?= <michel@tungstengraphics.com>
 Date: Thu, 20 Mar 2008 09:18:29 -0400
 Subject: [PATCH] Fix RandR 1.2 driver interface conversion of two colour cursors to ARGB

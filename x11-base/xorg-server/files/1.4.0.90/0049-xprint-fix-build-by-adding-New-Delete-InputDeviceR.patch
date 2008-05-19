@@ -1,4 +1,4 @@
-From a678833702ca931687252799fa3453f7decb2e93 Mon Sep 17 00:00:00 2001
+From 1022c7774b0a92946e87c61aa79b076a6ffe95ff Mon Sep 17 00:00:00 2001
 From: Donnie Berkholz <dberkholz@gentoo.org>
 Date: Thu, 8 May 2008 00:07:57 -0700
 Subject: [PATCH] xprint: fix build by adding {New,Delete}InputDeviceRequest.

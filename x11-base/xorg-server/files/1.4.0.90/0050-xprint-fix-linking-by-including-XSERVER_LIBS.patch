@@ -1,4 +1,4 @@
-From 1b2d80aa7862397309c59819d42d27dab879b08d Mon Sep 17 00:00:00 2001
+From 9db5401d69f1fab8db4bdd166536a25e4516e231 Mon Sep 17 00:00:00 2001
 From: Donnie Berkholz <dberkholz@gentoo.org>
 Date: Thu, 8 May 2008 00:08:12 -0700
 Subject: [PATCH] xprint: fix linking by including XSERVER_LIBS.

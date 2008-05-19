@@ -1,4 +1,4 @@
-From 57af7704ec129ae0dbd941dece62bba3401e008f Mon Sep 17 00:00:00 2001
+From 71f0711f40d825de3f1a7a09de78c6181fb3a521 Mon Sep 17 00:00:00 2001
 From: Donnie Berkholz <dberkholz@gentoo.org>
 Date: Thu, 8 May 2008 00:04:36 -0700
 Subject: [PATCH] dmx: fix build by adding {New,Delete}InputDeviceRequest.

@@ -1,0 +1,26 @@
+From d0554a57489e272233bcb38cb453f2c0bc0b1729 Mon Sep 17 00:00:00 2001
+From: Alan Coopersmith <alan.coopersmith@sun.com>
+Date: Tue, 13 May 2008 16:39:30 -0700
+Subject: [PATCH] When XKB fails to open rules file, log the file name, not the NULL file pointer
+ (cherry picked from commit 7cdc19b29d93bf15cecfd6b69e269fab2501bca0)
+
+---
+ xkb/ddxLoad.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/xkb/ddxLoad.c b/xkb/ddxLoad.c
+index ea9c3ff..eb03cde 100644
+--- a/xkb/ddxLoad.c
++++ b/xkb/ddxLoad.c
+@@ -525,7 +525,7 @@ XkbRF_RulesPtr	rules;
+ 
+     file = fopen(buf, "r");
+     if (!file) {
+-        LogMessage(X_ERROR, "XKB: Couldn't open rules file %s\n", file);
++        LogMessage(X_ERROR, "XKB: Couldn't open rules file %s\n", buf);
+ 	return False;
+     }
+ 
+-- 
+1.5.5.1
+

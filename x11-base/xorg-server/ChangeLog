@@ -1,6 +1,45 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.328 2008/05/10 06:50:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.329 2008/05/19 05:18:23 dberkholz Exp $
+
+  19 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/1.4.0.90/0038-dmx-fix-build-by-adding-New-Delete-InputDeviceRequ.pa
+  tch, -files/1.4.0.90/0039-dmx-link-in-XSERVER_LIBS.patch,
+  -files/1.4.0.90/0040-xephyr-fix-linking-by-adding-pixman-and-using-XSERV.p
+  atch,
+  -files/1.4.0.90/0041-xprint-fix-build-by-adding-New-Delete-InputDeviceR.pa
+  tch,
+  -files/1.4.0.90/0042-xprint-fix-linking-by-including-XSERVER_LIBS.patch,
+  -files/1.4.0.90/0043-Fix-RandR-1.2-driver-interface-conversion-of-two-col.
+  patch,
+  -files/1.4.0.90/0044-Fix-overly-restrictive-integer-overflow-check-in-EXA.
+  patch, +files/1.4.0.90/0044-kdrive-allow-disabling-Composite.patch,
+  +files/1.4.0.90/0045-When-XKB-fails-to-open-rules-file-log-the-file-name.p
+  atch,
+  +files/1.4.0.90/0046-dmx-fix-build-by-adding-New-Delete-InputDeviceRequ.pa
+  tch, +files/1.4.0.90/0047-dmx-link-in-XSERVER_LIBS.patch,
+  +files/1.4.0.90/0048-xephyr-fix-linking-by-adding-pixman-and-using-XSERV.p
+  atch,
+  +files/1.4.0.90/0049-xprint-fix-build-by-adding-New-Delete-InputDeviceR.pa
+  tch,
+  +files/1.4.0.90/0050-xprint-fix-linking-by-including-XSERVER_LIBS.patch,
+  +files/1.4.0.90/0051-Fix-RandR-1.2-driver-interface-conversion-of-two-col.
+  patch,
+  +files/1.4.0.90/0052-Fix-overly-restrictive-integer-overflow-check-in-EXA.
+  patch, +files/1.4.0.90/0053-Fix-hal-shutdown-crash.patch,
+  +files/1.4.0.90/0054-Bump-DEFAULT_DPI-to-96.patch,
+  +files/1.4.0.90/0055-Bug-13962-Re-arm-the-DPMS-timer-when-re-enabling-D.pa
+  tch,
+  +files/1.4.0.90/0056-Prevent-the-wm-command-line-option-from-causing-a-S.p
+  atch,
+  +files/1.4.0.90/0057-EXA-Skip-empty-glyphs.-cherry-picked-from-commit-c.pa
+  tch,
+  +files/1.4.0.90/0058-xf86-Add-AutoConfig-driver-for-PCI-ID-1022-2081-to.pa
+  tch,
+  +files/1.4.0.90/0059-xkb-when-copying-the-keymap-make-sure-the-structs.pat
+  ch:
+  Update 1.4.0.90 patches to latest in server-1.4-branch, which incorporates
+  all the Gentoo build/link fixes.
 
   10 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.4.0.90/0038-dmx-fix-build-by-adding-New-Delete-InputDeviceRequ.pa
