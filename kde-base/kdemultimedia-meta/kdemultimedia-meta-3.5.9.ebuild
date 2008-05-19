@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5.9.ebuild,v 1.7 2008/05/18 21:12:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5.9.ebuild,v 1.8 2008/05/19 23:20:23 carlo Exp $
 
 EAPI="1"
 inherit kde-functions
@@ -27,7 +27,10 @@ RDEPEND="arts? ( >=kde-base/artsplugin-akode-${PV}:${SLOT}
 	>=kde-base/kmid-${PV}:${SLOT}
 	>=kde-base/kmix-${PV}:${SLOT}
 	>=kde-base/kscd-${PV}:${SLOT}
-	>=kde-base/libkcddb-${PV}:${SLOT}"
+	>=kde-base/libkcddb-${PV}:${SLOT}
+	!=kde-base/artsplugin-mpeglib-3.5*
+	!=kde-base/artsplugin-mpg123-3.5*
+	!=kde-base/mpeglib-3.5*"
 
 # Not really useful, these are scheduled for being removed from KDE soon.
 #>=kde-base/artsplugin-mpeglib-${PV}:${SLOT}

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.94 2008/05/18 21:12:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.95 2008/05/19 23:20:23 carlo Exp $
+
+  19 May 2008; Carsten Lohrke <carlo@gentoo.org>
+  kdemultimedia-meta-3.5.9.ebuild:
+  Block packages you want to get rid of, commenting out doesn't count.
 
   18 May 2008; Markus Meier <maekke@gentoo.org>
   kdemultimedia-meta-3.5.9.ebuild:
