@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.13 2008/05/19 19:49:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r3.ebuild,v 1.1 2008/05/19 19:49:04 drac Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -10,18 +10,16 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="alsa debug doc flac jack ladspa oss portaudio"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="alsa debug doc flac jack ladspa oss"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
 	media-libs/audiofile
 	flac? ( media-libs/flac )
-	portaudio? ( =media-libs/portaudio-18* )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )"
-
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-sgml-utils )
 	dev-util/pkgconfig"
@@ -73,8 +71,9 @@ src_compile() {
 	# PortMidi not yet in the repository
 	# export PORTMIDIPATH="/usr"
 
+	# Disable portaudio v18 support wrt #222841
 	local myconf="$(use_enable jack jack-support) \
-			$(use_enable portaudio) \
+			--disable-portaudio \
 			$(use_enable alsa) \
 			$(use_enable debug) \
 			$(use_enable flac flac_support) \
