@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.94 2008/05/14 15:52:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.95 2008/05/19 19:48:22 maekke Exp $
+
+  18 May 2008; Markus Meier <maekke@gentoo.org> kdepim-meta-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   14 May 2008; Markus Rothe <corsair@gentoo.org> kdepim-meta-3.5.9.ebuild:
   Stable on ppc64; bug #221063
