@@ -1,0 +1,57 @@
+# ChangeLog for media-fonts/sil-gentium
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.1 2008/05/19 04:46:05 dirtyepic Exp $
+
+*sil-gentium-1.0.2 (19 May 2008)
+*sil-gentium-1.0.1 (19 May 2008)
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +sil-gentium-1.0.1.ebuild, +sil-gentium-1.0.2.ebuild:
+  Move ttf-gentium -> sil-gentium.
+
+  21 Mar 2008; Samuli Suominen <drac@gentoo.org> ttf-gentium-1.0.2.ebuild:
+  amd64 stable
+
+  05 Feb 2008; Markus Rothe <corsair@gentoo.org> ttf-gentium-1.0.2.ebuild:
+  Stable on ppc64
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> ttf-gentium-1.0.2.ebuild:
+  alpha/ia64/sparc/x86 stable
+
+  22 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> ttf-gentium-1.0.1.ebuild:
+  touchup
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ttf-gentium-1.0.2.ebuild:
+  Add ~x86-fbsd keyword.
+
+*ttf-gentium-1.0.2 (15 Sep 2006)
+
+  15 Sep 2006; Luca Barbato <lu_zero@gentoo.org> +ttf-gentium-1.0.2.ebuild:
+  New version from Jakub Moc <jakub@gentoo.org>
+
+  23 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ttf-gentium-1.0.1.ebuild:
+  Stable on sparc
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ttf-gentium-1.0.1.ebuild:
+  Added ~sparc
+
+  03 Jan 2005; Markus Rothe <corsair@gentoo.org> ttf-gentium-1.0.1.ebuild:
+  Stable on ppc64
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> ttf-gentium-1.0.1.ebuild:
+  Stable on x86, alpha and ppc. Changed HOMEPAGE and LICENSE;
+  suggested by gna <gnagent2@yahoo.com.au>, bug #63402.
+
+  29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> ttf-gentium-1.0.1.ebuild:
+  Marked ~amd64.
+
+*ttf-gentium-1.0.1 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +ttf-gentium-1.0.1.ebuild:
+  Initial import. Ebuild submitted by Dorian Gray <gentoo-bugs@tintar.com>,
+  closing bug #38659
+
