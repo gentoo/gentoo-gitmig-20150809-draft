@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1.ebuild,v 1.1 2008/05/18 07:26:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1.ebuild,v 1.2 2008/05/19 23:59:45 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,4 +58,3 @@ pkg_postrm() {
 	gnome2_pkg_postrm
 	python_mod_cleanup /usr/share/${PN}
 }
-
