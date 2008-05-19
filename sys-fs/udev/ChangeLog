@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.384 2008/05/14 15:36:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.385 2008/05/19 12:23:11 zzam Exp $
+
+*udev-122 (19 May 2008)
+
+  19 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-122.sh, +udev-122.ebuild:
+  Version bumped. Needed to change udev-start to use udevadm subcommands
+  instead of standalone ones (udevtrigger, udevsettle).
 
 *udev-121 (14 May 2008)
 
