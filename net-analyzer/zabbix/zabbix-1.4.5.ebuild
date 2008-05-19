@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.5.ebuild,v 1.1 2008/03/29 07:05:44 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.5.ebuild,v 1.2 2008/05/19 20:13:57 dev-zero Exp $
 
 inherit eutils flag-o-matic webapp depend.php
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	)
 	mysql? ( virtual/mysql )
 	sqlite3? ( =dev-db/sqlite-3* )
-	postgres? ( dev-db/libpq )
+	postgres? ( virtual/postgresql-base )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )"
 RDEPEND="${RDEPEND}

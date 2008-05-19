@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-server
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.16 2007/05/01 22:50:32 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.17 2008/05/19 20:15:37 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  zabbix-server-1.1.6.ebuild, zabbix-server-1.1.7.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
   01 May 2007; Marius Mauch <genone@gentoo.org> zabbix-server-1.0.ebuild,
   zabbix-server-1.1_alpha7.ebuild, zabbix-server-1.1.ebuild,

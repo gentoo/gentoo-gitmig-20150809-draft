@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.88 2008/04/27 18:25:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.89 2008/05/19 20:08:49 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  nagios-plugins-1.4.11.ebuild, nagios-plugins-1.4.11-r1.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *nagios-plugins-1.4.11-r102 (27 Apr 2008)
 
