@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.16 2008/04/27 20:06:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.17 2008/05/19 17:19:29 cryos Exp $
+
+*openbabel-2.2.0_beta5 (19 May 2008)
+
+  19 May 2008; Marcus D. Hanwell <cryos@gentoo.org>
+  +openbabel-2.2.0_beta5.ebuild:
+  Version bump.
 
   27 Apr 2008; Marcus D. Hanwell <cryos@gentoo.org>
   -openbabel-2.2.0_beta4.ebuild:
