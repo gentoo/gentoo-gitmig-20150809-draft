@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.12 2008/05/01 14:22:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.13 2008/05/19 17:12:03 drac Exp $
 
 inherit distutils multilib
 
@@ -13,15 +13,16 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 LICENSE="visual"
 
-DEPEND=">=dev-lang/python-2.3
-		virtual/opengl
-		=x11-libs/gtk+-1.2*
-		=x11-libs/gtkglarea-1.2*
-		dev-util/pkgconfig
-		>=dev-libs/boost-1.31
-		numeric? ( dev-python/numeric )
-		numarray? ( >=dev-python/numarray-1.0 )
-		!numeric? ( !numarray? ( dev-python/numeric ) )"
+RDEPEND=">=dev-lang/python-2.3
+	virtual/opengl
+	=x11-libs/gtk+-1.2*
+	=x11-libs/gtkglarea-1.2*
+	>=dev-libs/boost-1.31
+	numeric? ( dev-python/numeric )
+	numarray? ( >=dev-python/numarray-1.0 )
+	!numeric? ( !numarray? ( dev-python/numeric ) )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	local myconf="--without-numarray --without-numeric"

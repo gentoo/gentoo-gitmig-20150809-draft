@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pystatgrab
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.7 2007/07/15 09:06:42 lucass Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.8 2008/05/19 17:14:15 drac Exp $
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> pystatgrab-0.3.ebuild:
+  Move pkgconfig to DEPEND.
 
 *pystatgrab-0.5 (15 Jul 2007)
 
