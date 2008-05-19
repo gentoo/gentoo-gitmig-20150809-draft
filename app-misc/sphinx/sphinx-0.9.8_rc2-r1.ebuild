@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8_rc2-r1.ebuild,v 1.1 2008/04/09 18:36:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8_rc2-r1.ebuild,v 1.2 2008/05/19 18:01:26 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="debug mysql postgres stemmer"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( dev-db/libpq )"
+	postgres? ( virtual/postgresql-base )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

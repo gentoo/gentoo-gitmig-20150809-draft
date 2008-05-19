@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.6 2008/04/09 18:36:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.7 2008/05/19 18:01:26 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  sphinx-0.9.8_rc1-r1.ebuild, sphinx-0.9.8_rc2.ebuild,
+  sphinx-0.9.8_rc2-r1.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *sphinx-0.9.8_rc2-r1 (09 Apr 2008)
 
