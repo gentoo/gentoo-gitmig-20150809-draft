@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.34 2008/03/26 10:32:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.35 2008/05/19 12:37:40 pva Exp $
+
+*metasploit-3.1_p5507 (19 May 2008)
+
+  19 May 2008; Peter Volkov <pva@gentoo.org> +metasploit-3.1_p5507.ebuild:
+  Update to current HEAD, to get all updates.
 
   26 Mar 2008; Peter Volkov <pva@gentoo.org> -files/metasploit-3.0.patch,
   -metasploit-3.1.ebuild, -metasploit-3.1_p5422.ebuild,
