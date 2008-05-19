@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0_beta3.ebuild,v 1.1 2008/05/19 09:40:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0_beta3.ebuild,v 1.2 2008/05/19 11:02:53 armin76 Exp $
 
 EAPI=1
 
@@ -59,6 +59,8 @@ src_install() {
 	doins hook-samples/ntp.sh
 	# The sample ypbind script only works with linux
 	use elibc_glibc && doins hook-samples/ypbind.sh
+
+	keepdir /var/lib/dhcpcd
 }
 
 pkg_postinst() {
