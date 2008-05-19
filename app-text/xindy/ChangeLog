@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xindy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.1 2008/05/17 16:32:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.2 2008/05/19 23:26:37 aballier Exp $
+
+  19 May 2008; Alexis Ballier <aballier@gentoo.org> xindy-2.3.ebuild:
+  We need some cyrillic fonts too, thanks to Philipp Riegger
+  <stoile@anderedomain.de> for reporting in bug #222785
 
 *xindy-2.3 (17 May 2008)
 
