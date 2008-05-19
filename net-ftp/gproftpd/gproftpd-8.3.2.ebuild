@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.3 2008/05/19 09:42:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.4 2008/05/19 09:44:34 drac Exp $
 
 DESCRIPTION="GTK frontend to proftpd"
 HOMEPAGE="http://mange.dynup.net/linux.html"
@@ -42,15 +42,15 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "Installation failure"
+	emake DESTDIR="${D}" install || die "Installation failure"
 
 #         Add the Gnome menu entry
 	if use gnome; then
 		insinto /usr/share/gnome/apps/Internet/
-		doins ${S}/desktop/net-gproftpd.desktop
+		doins "${S}"/desktop/net-gproftpd.desktop
 	fi
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL README
+	dodoc AUTHORS ChangeLog README
 }
 
 pkg_postinst() {
