@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.14 2008/04/08 07:56:40 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.15 2008/05/19 14:42:06 remi Exp $
+
+  19 May 2008; Rémi Cardona <remi@gentoo.org> -nemiver-0.4.0-r1.ebuild,
+  nemiver-0.5.2.ebuild:
+  dep on gtksourceviewmm instead of libgtksourceviewmm, little tidying up
 
 *nemiver-0.5.2 (07 Apr 2008)
 

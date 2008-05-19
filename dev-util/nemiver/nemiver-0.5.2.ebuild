@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.5.2.ebuild,v 1.1 2008/04/08 07:56:40 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.5.2.ebuild,v 1.2 2008/05/19 14:42:06 remi Exp $
 
 inherit gnome2 eutils
 
@@ -13,18 +13,18 @@ KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/glib-2.14
+	>=dev-libs/glib-2.16
 	>=dev-cpp/glibmm-2.15.2
 	>=dev-cpp/gtkmm-2.10.0
 	>=dev-cpp/libglademm-2.6.0
-	>=dev-cpp/libgtksourceviewmm-0.3.0
+	  dev-cpp/gtksourceviewmm
 	>=gnome-base/libgtop-2.19.0
 	>=gnome-base/libgnome-2.0
 	>=x11-libs/vte-0.12.0
 	>=gnome-base/gconf-2.14.0
 	>=dev-db/sqlite-3.0
-	sys-devel/gdb
-	dev-libs/boost
+	  sys-devel/gdb
+	  dev-libs/boost
 	"
 
 DEPEND="${RDEPEND}
