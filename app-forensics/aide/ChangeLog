@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.35 2008/04/13 16:17:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.36 2008/05/19 16:16:13 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org> aide-0.13.1.ebuild,
+  aide-0.13.1-r1.ebuild, aide-0.13.1-r2.ebuild:
+  Changed dependency for postgresql to virtual/postgresql-base
 
 *aide-0.13.1-r2 (13 Apr 2008)
 
