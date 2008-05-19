@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.12 2008/01/10 09:02:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.13 2008/05/19 23:41:14 truedfx Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch ../${DILLO_I18N_P}.diff
 	epatch "${FILESDIR}"/${PN}-build-fix.patch
 	epatch "${FILESDIR}"/${PN}-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-ac_subst.patch
 	AT_M4DIR="${S}/m4" eautoreconf
 
 	if [ "${DILLO_ICONSET}" = "kde" ]

@@ -1,0 +1,17 @@
+
+  AC_SUBST only takes a single variable name, so the below line is
+  broken. It is also unnecessary and has already been removed upstream
+  in the dillo2 branch.
+
+  http://bugs.gentoo.org/220511, reported by Christian Lerrahn
+
+--- dillo-0.8.6/configure.in
++++ dillo-0.8.6/configure.in
+@@ -427,7 +427,6 @@
+ AC_SUBST(LIBFLTK_CXXFLAGS)
+ AC_SUBST(LIBFLTK_LIBS)
+ AC_SUBST(datadir)
+-AC_SUBST(src doc bin util lib)
+ 
+ AC_OUTPUT(Makefile dpip/Makefile dpid/Makefile dpi/Makefile doc/Makefile src/Makefile src/IO/Makefile)
+ 
