@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.74 2008/05/16 07:04:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.75 2008/05/19 20:02:14 maekke Exp $
+
+  19 May 2008; Markus Meier <maekke@gentoo.org> korundum-3.5.9.ebuild:
+  amd64/x86 stable, bug #221063
 
   16 May 2008; Markus Rothe <corsair@gentoo.org> korundum-3.5.9.ebuild:
   Stable on ppc64; bug #221063
