@@ -1,6 +1,11 @@
 # ChangeLog for virtual/postgresql-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.3 2008/04/15 09:43:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.4 2008/05/19 07:13:12 dev-zero Exp $
+
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postgresql-server-8.3.ebuild:
+  Dropped ~s390 and ~sparc-fbsd keyword for 8.3 ({postgresql,libs}-8.3 are
+  p.masked anyway)
 
 *postgresql-server-8.3 (15 Apr 2008)
 
