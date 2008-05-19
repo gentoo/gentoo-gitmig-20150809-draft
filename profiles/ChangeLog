@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1429 2008/05/19 18:53:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1430 2008/05/19 19:30:55 dirtyepic Exp $
+
+  19 May 2008; Ryan Hill <dirtyepic@gentoo.org> updates/2Q-2008:
+  Move ttf-sil-doulos -> sil-doulos.
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Masked pgst and pgeasy: dead upstream
