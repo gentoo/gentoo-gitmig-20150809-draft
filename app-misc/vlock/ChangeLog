@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/vlock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.26 2008/05/12 20:51:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.27 2008/05/19 12:59:19 pva Exp $
+
+*vlock-2.2.2 (19 May 2008)
+
+  19 May 2008; Peter Volkov <pva@gentoo.org> +vlock-2.2.2.ebuild:
+  Version bump. Some of our fixes integrated!
 
 *vlock-2.2.1 (12 May 2008)
 
