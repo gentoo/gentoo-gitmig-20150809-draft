@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.2.ebuild,v 1.2 2008/05/18 13:51:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.2.ebuild,v 1.3 2008/05/19 03:09:30 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -50,6 +50,7 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
+	gtk? ( x11-proto/scrnsaverproto )
 	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"
 
