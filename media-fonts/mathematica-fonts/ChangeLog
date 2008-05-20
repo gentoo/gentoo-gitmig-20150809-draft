@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/mathematica-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.12 2008/01/23 18:25:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.13 2008/05/20 00:04:26 dirtyepic Exp $
+
+*mathematica-fonts-6.0-r1 (20 May 2008)
+
+  20 May 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +mathematica-fonts-6.0-r1.ebuild:
+  Install the Linux-specific fonts rather than the general Windows ones.
+  Fixes rendering issues reported on bug #203739.
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   mathematica-fonts-6.0.ebuild:
