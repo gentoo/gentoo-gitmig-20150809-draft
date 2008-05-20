@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procinfo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.21 2007/07/15 08:07:04 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.22 2008/05/20 11:47:41 armin76 Exp $
+
+  20 May 2008; Raúl Porcel <armin76@gentoo.org> procinfo-18-r1.ebuild:
+  Add ~ia64
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-admin/procinfo to m-needed, as beu is being retired (#66608).
