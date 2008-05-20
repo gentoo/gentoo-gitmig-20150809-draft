@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.6.ebuild,v 1.3 2008/04/05 17:24:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.6.ebuild,v 1.4 2008/05/20 17:55:15 cardoe Exp $
 
 NEED_PYTHON="2.3"
 
@@ -84,7 +84,7 @@ pkg_postinst() {
 	elog "if desired.  If you need to run more than one master or slave"
 	elog "just copy the scripts."
 	elog ""
-	elog "Upstream recommands the following when upgrading:"
+	elog "Upstream recommends the following when upgrading:"
 	elog "Each time you install a new version of Buildbot, you should run the new"
 	elog "'buildbot upgrade-master' command on each of your pre-existing buildmasters."
 	elog "This will add files and fix (or at least detect) incompatibilities between"
