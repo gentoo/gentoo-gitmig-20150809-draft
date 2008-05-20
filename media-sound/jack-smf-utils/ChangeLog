@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/jack-smf-utils
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-smf-utils/ChangeLog,v 1.1 2008/05/20 20:53:04 aballier Exp $
+
+*jack-smf-utils-1.0 (20 May 2008)
+
+  20 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +jack-smf-utils-1.0.ebuild:
+  initial import
+
