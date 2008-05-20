@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1436 2008/05/20 09:13:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1437 2008/05/20 09:38:00 pva Exp $
+#
+# This ChangeLog should include records for all changes in profiles directory.
+# Only typo fixes which don't affect portage/repoman behaviour could be avoided
+# here. If doubt put a record here!
 
   20 May 2008; <chainsaw@gentoo.org> package.mask:
   Mask audacious-crossfade for planned removal on June 30; bug #222883.
