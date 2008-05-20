@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mixxx
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.35 2007/07/02 15:15:32 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.36 2008/05/20 23:54:27 drac Exp $
+
+*mixxx-1.6.0_beta2 (20 May 2008)
+
+  20 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/mixxx-1.6.0_beta2-toolchain.patch, +mixxx-1.6.0_beta2.ebuild:
+  Version bump wrt #147042, thanks to Alex Barker and Markus Giese.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   (QA) RESTRICT clean up.

@@ -1,0 +1,428 @@
+diff -ur mixxx-1.6.0beta2.orig/src/SConscript mixxx-1.6.0beta2/src/SConscript
+--- mixxx-1.6.0beta2.orig/src/SConscript	2008-02-04 22:27:19.000000000 +0200
++++ mixxx-1.6.0beta2/src/SConscript	2008-05-21 01:15:04.000000000 +0300
+@@ -21,6 +21,15 @@
+ #Useful functions
+ #
+ 
++def getSVNRevision(): # GPL code taken from http://trac.zeitherrschaft.org/zzub/browser/trunk/SConstruct
++	# if this is a repository, take the string from svnversion
++	svnversionpath = env.WhereIs('svnversion', os.environ['PATH'])
++	if os.path.isdir('../.svn') and (svnversionpath != None):  # we always start in .obj for some reason, so we must use ../.svn
++		rev = os.popen('svnversion ..').readline().strip()
++		if rev != "" and rev != "exported":
++			return rev
++	return ""
++
+ #Checks for OpenGL on all three platforms
+ def CheckOpenGL():
+ 	if not conf.CheckLib('GL') and not conf.CheckLib('opengl32') and not conf.CheckCHeader('/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers/gl.h'):
+@@ -58,6 +67,48 @@
+ 
+ 	return
+ 
++#Check for FFMPEG support
++def CheckFFMPEG(conf, sources):
++	flags_ffmpeg = ARGUMENTS.get('ffmpeg', 0)
++	if int(flags_ffmpeg):
++		if platform == 'linux':
++			#Check for libavcodec, libavformat
++			#I just randomly picked version numbers lower than mine for this - Albert
++			if not conf.CheckForPKG('libavcodec', '51.20.0'):
++				print 'libavcodec not found.'
++				Exit(1)
++			if not conf.CheckForPKG('libavformat', '51.1.0'):
++				print 'libavcodec not found.'
++				Exit(1)
++			else:
++				#Grabs the libs and cflags for ffmpeg
++				env.ParseConfig('pkg-config libavcodec --silence-errors --cflags --libs') 
++				env.ParseConfig('pkg-config libavformat --silence-errors --cflags --libs') 
++				env.Append(CXXFLAGS = '-D__FFMPEGFILE__')
++		else:
++			# aptitude install libavcodec-dev libavformat-dev liba52-0.7.4-dev libdts-dev
++			env.Append(LIBS = 'avcodec')
++			env.Append(LIBS = 'avformat')
++			env.Append(LIBS = 'z')
++			env.Append(LIBS = 'a52')
++			env.Append(LIBS = 'dts')
++			env.Append(LIBS = 'gsm')
++			env.Append(LIBS = 'dc1394_control')
++			env.Append(LIBS = 'dl')
++			env.Append(LIBS = 'vorbisenc')
++			env.Append(LIBS = 'raw1394')
++			env.Append(LIBS = 'avutil')
++			env.Append(LIBS = 'vorbis')
++			env.Append(LIBS = 'm')
++			env.Append(LIBS = 'ogg')
++			env.Append(CXXFLAGS = '-D__FFMPEGFILE__')
++		sources += Split("""soundsourceffmpeg.cpp """)
++		print "Not working FFMPEG support... enabled"
++	else:
++		print "Not working FFMPEG support... disabled"
++	return	
++
++
+ # Checks for pkg-config on Linux
+ def CheckForPKGConfig( context, version='0.0.0' ):
+ 	context.Message( "Checking for pkg-config (at least version %s)... " % version )
+@@ -99,6 +150,22 @@
+ 			result.append(el)
+ 	return result
+ 
++def getFlags(env, argflag, default=0):
++	"""
++	* get value passed as an argument to scons as argflag=value
++	* if no value is passed to scons use stored value
++	* if no value is stored, use default
++	Returns the value and stores it in env[argflag]
++	"""
++	flags = ARGUMENTS.get(argflag, -1)
++	if int(flags) < 0:
++		if env.has_key(argflag):
++			flags = env[argflag]
++		else: #default value
++			flags = default
++	env[argflag] = flags
++	return flags
++1
+ ###### MAIN LINE ######
+ #######################
+ #Get the platform/OS that we're building on:
+@@ -115,7 +182,6 @@
+ 	print 'Platform: Unknown (assuming Linux-like)'
+ 	platform = 'linux'
+ 
+-
+ #Figure out what the QT path is
+ if platform == 'linux':
+ 	default_qtdir = '/usr/share/qt4'
+@@ -146,7 +212,55 @@
+ 	env = Environment(tools=['default','qt4', 'msvs'], toolpath=['../', './'], QTDIR=flags_qtdir, QT_LIB='', VCINSTALLDIR = os.getenv('VCInstallDir'), ENV = os.environ)
+ #	env.Append(LIBPATH = (flags_qtdir + "/plugins/iconengines"))
+ 
+-#env.Append(CPPPATH='.')
++## Global cache directory
++## Put all project files in it so a rm -rf cache will clean up the config
++if not env.has_key('CACHEDIR'):
++  env['CACHEDIR'] =os.getcwd()+ '/../../cache/'
++if not os.path.isdir(env['CACHEDIR']):
++  os.mkdir(env['CACHEDIR'])
++
++## Avoid spreading .sconsign files everywhere - keep this line
++env.SConsignFile(env['CACHEDIR']+'/scons_signatures')
++
++#Hijack scons -h and --help
++cachefile = env['CACHEDIR'] + 'custom.py'
++opts = Options(cachefile)
++opts.Add('prefix', 'Set to your install prefix', '/usr/local')
++opts.Add('qtdir', 'Set to your QT4 directory', '/usr/share/qt4')
++opts.Add('djconsole', 'Set to 1 to enable Hercules support through libdjconsole', 0)
++opts.Add('djconsole_legacy', 'Set to 1 to enable legacy Hercules support (for Hercules MP3 Control only, not MK2', 0)
++opts.Add('hifieq', 'Set to 1 to enable high quality EQs', 1)
++opts.Add('ladspa', '(EXPERIMENTAL) Set to 1 to enable LADSPA plugin support', 0)
++opts.Add('ffmpeg', '(EXPERIMENTAL) Set to 1 to enable FFMPEG support', 0)
++opts.Add('vinylcontrol', 'Set to 1 to enable vinyl control support', 1)
++opts.Add('shoutcast', 'Set to 1 to enable shoutcast support', 0)
++opts.Add('msvshacks', 'Set to 1 to build properly with MS Visual Studio 2005 (Express users should leave this off)', 0)
++opts.Add('cmetrics', 'Set to 1 to enable crash reporting/usage statistics via Case Metrics (This should be disabled on development builds)', 0)
++opts.Add('optimize', 'Set to 1 to enable -O3 compiler optimizations. Set to 2 to enable Pentium 4 optimizations.', 1)
++if not platform == 'win32':
++	opts.Add('gprof', '(DEVELOPER) Set to 1 to enable profiling using gprof', 0)
++	opts.Add('tuned', '(EXPERIMENTAL) Set to 1 to optimise mixxx for this CPU', 0)
++#env = Environment(options = opts)
++opts.Update(env)
++Help(opts.GenerateHelpText(env))
++
++# user-defined CXXFLAGS
++if os.environ.has_key('CXXFLAGS'):
++	env.Append(CXXFLAGS = SCons.Util.CLVar( os.environ['CXXFLAGS'] ))
++if os.environ.has_key('CXX'):
++	env['CXX'] = os.environ['CXX']
++
++### embed SVN version into build
++build_rev = getSVNRevision()
++### Old way - causes everything to be rebuilt each time the SVN ver moves. :(
++#if build_rev != '': 
++# 	env.Append(CXXFLAGS = '-DBUILD_REV=\\"' + build_rev + '\\"')
++### Put version info into a file, so it doesn't force a rebuild of everything :)
++f = open("../.mixxx_version.svn","w")
++try:
++	f.write('#define BUILD_REV "' + build_rev + '"\n')
++finally:
++	f.close()
+ 
+ #Mixxx sources to build
+ sources = Split("""enginebuffercue.cpp input.cpp mixxxmenuplaylists.cpp trackplaylistlist.cpp mixxxkeyboard.cpp configobject.cpp controlobjectthread.cpp
+@@ -226,6 +340,9 @@
+ 
+ 	#Check for OpenGL (it's messy to do it for all three platforms)
+ 	CheckOpenGL()
++	
++	#Check if FFMPEG was enabled
++	CheckFFMPEG(conf, sources)
+ 
+ 	#Platform-specific checks for Linux and Win32...
+ 	if platform == 'linux' or platform == 'win32':
+@@ -247,7 +364,7 @@
+ 		if os.system("which g++ > /dev/null"): #Checks for non-zero return code
+ 			print "Did not find gcc/g++, exiting!"
+ 			Exit(1)
+-			
++		
+ 		#Check for pkg-config
+ 		if not conf.CheckForPKGConfig('0.15.0'):
+ 			print 'pkg-config >= 0.15.0 not found.'
+@@ -272,8 +389,8 @@
+ 			Exit(1)
+ 
+         #Check for libdjconsole, if it was passed as a flag
+-		flags_djconsole = ARGUMENTS.get('djconsole', 0)
+-		flags_djconsole_legacy = ARGUMENTS.get('djconsole_legacy', 0)
++		flags_djconsole = getFlags(env, 'djconsole', 0)
++		flags_djconsole_legacy = getFlags(env, 'djconsole_legacy', 0)
+ 		if int(flags_djconsole):
+ 			if not conf.CheckLibWithHeader('djconsole', 'libdjconsole/djconsole.h', 'C++'):
+ 				print "Did not find libdjconsole or it\'s development headers, exiting!"
+@@ -401,6 +518,7 @@
+ env.Uic4('dlgbpmschemedlg.ui')
+ env.Uic4('dlgbpmtapdlg.ui')
+ env.Uic4('dlgprefvinyldlg.ui')
++env.Uic4('dlgprefrecorddlg.ui')
+ env.Uic4('dlgaboutdlg.ui')
+ 
+ #Add the QRC file which compiles in some extra resources (prefs icons, etc.)
+@@ -456,7 +574,7 @@
+ 
+ 
+ #Parse command-line build flags
+-
++build_flags = ""
+ 
+ print "\nFeatures Summary:\n================"
+ 
+@@ -478,32 +596,24 @@
+ #Hercules support through libdjconsole on Linux
+ #(handled somewhere else above this in the file...
+ # just printing the summary here)
+-flags_djconsole = ARGUMENTS.get('djconsole', 0)
++flags_djconsole = getFlags(env, 'djconsole', 0)
+ if int(flags_djconsole) == 0:
+ 	print "libdjconsole support... disabled"
+ else:
+ 	print "libdjconsole support... enabled"
++	build_flags += 'djconsole '
+ 
+ #High quality EQs
+-flags_hifieq = ARGUMENTS.get('hifieq', 1)
++flags_hifieq = getFlags(env, 'hifieq', 1)
+ if int(flags_hifieq) == 0:
+ 	env.Append(CXXFLAGS = '-D__LOFI__ -D__NO_INTTYPES__') #Enables old crappy EQs
+ 	print "High quality EQs... disabled"
+ else:
+ 	print "High quality EQs... enabled"
+-
+-#Experimental Recording
+-flags_experimentalrecording = ARGUMENTS.get('experimentalrecord', 0)
+-if int(flags_experimentalrecording):
+-	env.Append(CXXFLAGS = '-D__EXPERIMENTAL_RECORDING__')
+-	env.Uic4('dlgprefrecorddlg.ui')
+-	sources += Split(""" dlgprefrecord.cpp enginerecord.cpp writeaudiofile.cpp """ )
+-	print "Experimental recording... enabled"
+-else:
+-	print "Experimental recording... disabled"
++	build_flags += 'hifieq '
+ 
+ #Case Metrics
+-flags_cmetrics = ARGUMENTS.get('cmetrics', 0)
++flags_cmetrics = getFlags(env, 'cmetrics', 0)
+ if int(flags_cmetrics):
+ 	env.Append(CXXFLAGS = '-D__C_METRICS__')
+ 	if platform == 'win32':
+@@ -515,11 +625,12 @@
+ 	    env.Append(CPPPATH='../../lib/cmetrics')
+ 	    sources += SConscript('../../lib/cmetrics/SConscript')
+ 	print "Case Metrics profiling... enabled"
++	build_flags += 'cmetrics '
+ else:
+ 	print "Case Metrics profiling... disabled"
+ 
+ #Experimental Shoutcast
+-flags_shoutcast = ARGUMENTS.get('shoutcast', 0)
++flags_shoutcast = getFlags(env, 'shoutcast', 0)
+ if int(flags_shoutcast):
+ #TODO: check for libshout
+ 	env.Append(LIBS = 'shout');
+@@ -528,21 +639,23 @@
+ 	sources += Split(""" dlgprefshoutcast.cpp engineshoutcast.cpp encodervorbis.cpp """ )
+ 	env.Uic4('dlgprefshoutcastdlg.ui')
+ 	print "Shoutcast support... enabled"
++	build_flags += 'shoutcast '
+ else:
+ 	print "Shoutcast support... disabled"
+ 
+ #LADSPA
+ #TODO: Make sure we check for ladspa.h and the library...
+-flags_ladspa = ARGUMENTS.get('ladspa', 0)
++flags_ladspa = getFlags(env, 'ladspa', 0)
+ if int(flags_ladspa):
+ 	env.Append(CXXFLAGS = '-D__LADSPA__')
+ 	sources += Split("""engineladspa.cpp ladspaloader.cpp ladspalibrary.cpp ladspaplugin.cpp ladspainstance.cpp ladspacontrol.cpp ladspainstancestereo.cpp ladspainstancemono.cpp ladspaview.cpp ladspapreset.cpp ladspapresetmanager.cpp ladspapresetknob.cpp ladspapresetinstance.cpp dlgladspa.cpp""")
+ 	print "LADSPA support... enabled"
++	build_flags += 'ladspa '
+ else:
+ 	print "LADSPA support... disabled"
+ 
+ #Vinyl Control
+-flags_vinylcontrol = ARGUMENTS.get('vinylcontrol', 1)
++flags_vinylcontrol = getFlags(env, 'vinylcontrol', 1)
+ if int(flags_vinylcontrol):
+ 	env.Append(CXXFLAGS = '-D__VINYLCONTROL__')
+ 	sources += Split(""" vinylcontrol.cpp vinylcontrolproxy.cpp vinylcontrolscratchlib.cpp vinylcontrolxwax.cpp dlgprefvinyl.cpp
+@@ -555,24 +668,27 @@
+ 	env.Append(CPPPATH='../../lib/scratchlib')
+ 	sources += Split("""../../lib/scratchlib/DAnalyse.cpp """)
+ 	print "Vinyl Control... enabled"
++	build_flags += 'vinylcontrol '
+ else:
+ 	print "Vinyl Control... disabled"
+ 
+-flags_msvcdebug = ARGUMENTS.get('msvcdebug', 1)
++flags_msvcdebug = getFlags(env, 'msvcdebug', 1)
+ if int(flags_msvcdebug) and platform == 'win32':
+ 	env.Append(LINKFLAGS = '/DEBUG')
+ 	env.Append(CXXFLAGS = '/ZI')
+ 	print "MSVC Debugging... enabled"
++	build_flags += 'msvcdebug '
+ else:
+ 	print "MSVC Debugging... disabled"
+ 
+-flags_script = ARGUMENTS.get('script', 0)
++flags_script = getFlags(env, 'script', 0)
+ if int(flags_script):
+ 	if platform == 'win32':
+ 		env.Append(LIBS = 'QtScript4')
+ 	else:
+ 		env.Append(LIBS = 'QtScript')
+ 	print "SuperCoolAwesomeScript (name contest pending)... enabled"
++	build_flags += 'script '
+ 	sources += Split("""script/scriptengine.cpp script/scriptcontrolqueue.cpp
+ 			script/scriptstudio.cpp script/scriptrecorder.cpp
+ 			script/playinterface.cpp script/macro.cpp
+@@ -591,9 +707,9 @@
+ 
+ #Optimization
+ if platform == 'win32':
+-    flags_optimize = ARGUMENTS.get('optimize', 0)   #Default to off on win32
++    flags_optimize = getFlags(env, 'optimize', 0)   #Default to off on win32
+ else:
+-    flags_optimize = ARGUMENTS.get('optimize', 1)   #Default to on for Linux/OS X
++    flags_optimize = getFlags(env, 'optimize', 1)   #Default to on for Linux/OS X
+ if int(flags_optimize):
+ 	if platform == 'win32':
+ 		if int(flags_msvcdebug):
+@@ -604,6 +720,7 @@
+ 			env.Append(LINKFLAGS = '/LTCG:STATUS')
+ 	else:
+ 		print "Optimizations... enabled"
++		build_flags += 'optimize=' + str(flags_optimize) + ' '
+ 		if flags_optimize=='1':
+ 			env.Append(CXXFLAGS = '-O3')
+ 		elif flags_optimize=='2':
+@@ -619,80 +736,52 @@
+ 	print "Optimizations... disabled"
+ 
+ 
+-#ffmpeg support
+-flags_ffmpeg = ARGUMENTS.get('ffmpeg', 0)
+-if int(flags_ffmpeg):
+-        env.Append(LIBS = 'avcodec')
+-        env.Append(LIBS = 'avformat')
+-        env.Append(LIBS = 'z')
+-        env.Append(LIBS = 'a52')
+-        env.Append(LIBS = 'dts')
+-        env.Append(LIBS = 'gsm')
+-        env.Append(LIBS = 'dc1394_control')
+-        env.Append(LIBS = 'dl')
+-        env.Append(LIBS = 'vorbisenc')
+-        env.Append(LIBS = 'raw1394')
+-        env.Append(LIBS = 'avutil')
+-        env.Append(LIBS = 'vorbis')
+-        env.Append(LIBS = 'm')
+-        env.Append(LIBS = 'ogg')
+-        env.Append(CXXFLAGS = '-D__FFMPEGFILE__')
+-	sources += Split("""soundsourceffmpeg.cpp """)
+-	print "Not working FFMPEG support... enabled"
+-else:
+-	print "Not working FFMPEG support... disabled"
++
+ 
+ # Profiling and Optimization
+ if not platform == 'win32':
+-	flags_gprof = ARGUMENTS.get('gprof', 0)
++	flags_gprof = getFlags(env, 'gprof', 0)
+ 	if int(flags_gprof):
+ 		env.Append(CCFLAGS = '-pg')
+ 		env.Append(LINKFLAGS = '-pg')
+ 		print "gprof profiling support... enabled"
++		build_flags += 'gprof '
+ 	else:
+ 		print "gprof profiling support... disabled"
+-	flags_tuned = ARGUMENTS.get('tuned', 0)
++	flags_tuned = getFlags(env, 'tuned', 0)
+ 	if int(flags_tuned):
+ 		ccv = env['CCVERSION'].split('.')
+ 		if int(ccv[0]) >= 4 and int(ccv[1]) >= 2:
+ 			env.Append(CCFLAGS = '-march=native')
+ 			env.Append(LINKFLAGS = '-march=native')
+ 			print "Optimizing for this CPU... yes"
++			build_flags += 'tuned '
+ 		else:
+ 			print "Optimizing for this CPU... no (requires gcc >= 4.2.0)"
+ 	else:
+ 		print "Optimizing for this CPU... no"
+ 
+ #Visual Studio 2005 hacks (MSVS Express Edition users shouldn't enable this)
+-flags_msvshacks = ARGUMENTS.get('msvshacks', 0)
++flags_msvshacks = getFlags(env, 'msvshacks', 0)
+ if int(flags_msvshacks):
+ 	env.Append(CXXFLAGS = '-D__MSVS2005__')
+ 	print "MSVS 2005 hacks... enabled"
++	build_flags += 'msvshacks '
+ else:
+ 	print "MSVS 2005 hacks... disabled"
+ 
+ print "================\n"
+ 
+-#Hijack scons -h and --help
+-opts = Options('custom.py')
+-opts.Add('prefix', 'Set to your install prefix', '/usr/local')
+-opts.Add('qtdir', 'Set to your QT4 directory', '/usr/share/qt4')
+-opts.Add('djconsole', 'Set to 1 to enable Hercules support through libdjconsole', 0)
+-opts.Add('djconsole_legacy', 'Set to 1 to enable legacy Hercules support (for Hercules MP3 Control only, not MK2', 0)
+-opts.Add('experimentalrecord', '(EXPERIMENTAL) Set to 1 to enable output recording feature', 0)
+-opts.Add('hifieq', 'Set to 1 to enable high quality EQs', 1)
+-opts.Add('ladspa', '(EXPERIMENTAL) Set to 1 to enable LADSPA plugin support', 0)
+-opts.Add('ffmpeg', '(EXPERIMENTAL) Set to 1 to enable FFMPEG support', 0)
+-opts.Add('vinylcontrol', 'Set to 1 to enable vinyl control support', 1)
+-opts.Add('msvshacks', 'Set to 1 to build properly with MS Visual Studio 2005 (Express users should leave this off)', 0)
+-opts.Add('cmetrics', 'Set to 1 to enable crash reporting/usage statistics via Case Metrics (This should be disabled on development builds)', 0)
+-opts.Add('optimize', 'Set to 1 to enable -O3 compiler optimizations. Set to 2 to enable Pentium 4 optimizations.', 1)
+-if not platform == 'win32':
+-	opts.Add('gprof', '(DEVELOPER) Set to 1 to enable profiling using gprof', 0)
+-	opts.Add('tuned', '(EXPERIMENTAL) Set to 1 to optimise mixxx for this CPU', 0)
+-#env = Environment(options = opts)
+-Help(opts.GenerateHelpText(env))
++### Put flags info into a file
++f = open("../.mixxx_flags.svn","w")
++try:
++	f.write('#define BUILD_FLAGS "' + build_flags + '"\n')
++finally:
++	f.close()
++
+ 
++#Save the options to cache
++opts.Save(cachefile, env)
+ 
+ #Tell SCons to build Mixxx
+ #=========================
