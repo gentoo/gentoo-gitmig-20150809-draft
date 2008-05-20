@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8642 2008/05/20 09:13:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8643 2008/05/20 09:53:19 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -272,6 +272,9 @@ media-sound/lastfmproxy
 # Masked for testing
 >=net-libs/xulrunner-1.9_beta4
 >=www-client/mozilla-firefox-3.0_beta4
+>=www-client/mozilla-firefox-bin-3.0_beta1
+>=dev-libs/nss-3.12_alpha1
+>=dev-libs/nspr-4.7.1_beta1
 
 # Ben de Groot <yngwin@gentoo.org> (7 Apr 2008)
 # Versioning scheme change after pkgmove from -svn
@@ -923,11 +926,6 @@ sys-kernel/hppa-sources
 # Segfaults with IMAP
 =x11-plugins/replytolist-0.3.0
 
-# Raúl Porcel <armin76@gentoo.org> (12 Dec 2007)
-# P.mask snapshots
->=dev-libs/nss-3.12_alpha1
->=dev-libs/nspr-4.7.1_beta1
-
 # Raúl Porcel <armin76@gentoo.org> (04 Dec 2007)
 # Mozilla stopped supporting 1.5 series in October 2007
 # Will be removed when mips stabilizes 2.0
@@ -960,10 +958,6 @@ sys-kernel/hppa-sources
 >=sys-auth/policykit-0.6
 >=gnome-base/gnome-mount-0.7
 >=gnome-extra/policykit-gnome-0.6
-
-# Raúl Porcel <armin76@gentoo.org> (22 Nov 2007)
-# Needs a lot of testing
-=www-client/mozilla-firefox-bin-3.0_beta*
 
 # Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
 # There is a serious regression (bug #199450) due to
