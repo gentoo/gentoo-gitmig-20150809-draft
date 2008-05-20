@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.35 2008/02/22 15:40:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.36 2008/05/20 23:20:02 marineam Exp $
+
+*ampache-3.4 (20 May 2008)
+
+  20 May 2008; Michael Marineau <marineam@gentoo.org> +ampache-3.4.ebuild:
+  Version bump to make vollmer happy.
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> ampache-3.3.3.5.ebuild:
   add need_httpd_cgi wrt #208584
