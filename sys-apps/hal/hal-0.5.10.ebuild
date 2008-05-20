@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.15 2008/04/20 12:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.16 2008/05/20 04:30:38 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -84,7 +84,7 @@ function check_acpi_proc() {
 
 pkg_setup() {
 	if use kernel_linux ; then
-		if [ -e ${ROOT}/usr/src/linux/.config ] ; then
+		if [ -e "${ROOT}/usr/src/linux/.config" ] ; then
 			kernel_is ge 2 6 19 || \
 				ewarn "HAL requires a kernel version 2.6.19 or newer"
 			if kernel_is lt 2 6 23 && use acpi ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.19 2008/04/14 18:36:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.20 2008/05/20 04:30:38 compnerd Exp $
 
 inherit eutils linux-info
 
@@ -64,7 +64,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if [ -e ${ROOT}/usr/src/linux/.config ] ; then
+	if [ -e "${ROOT}/usr/src/linux/.config" ] ; then
 		if kernel_is ge 2 6 16 ; then
 			check_hotplug_net
 		elif kernel_is eq 2 6 15 ; then

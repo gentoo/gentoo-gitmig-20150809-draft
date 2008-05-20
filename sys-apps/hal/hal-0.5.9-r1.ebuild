@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.21 2008/04/14 18:36:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.22 2008/05/20 04:30:38 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -80,7 +80,7 @@ pkg_setup() {
 	fi
 
 	if use kernel_linux ; then
-		if [ -e ${ROOT}/usr/src/linux/.config ] ; then
+		if [ -e "${ROOT}/usr/src/linux/.config" ] ; then
 			kernel_is ge 2 6 17 || \
 				ewarn "HAL requires a kernel version 2.6.17 or newer"
 		fi

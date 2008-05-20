@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.232 2008/05/20 04:21:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.233 2008/05/20 04:30:38 compnerd Exp $
+
+  20 May 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  hal-0.5.7.1-r5.ebuild, hal-0.5.9-r1.ebuild, hal-0.5.9.1-r1.ebuild,
+  hal-0.5.9.1-r2.ebuild, hal-0.5.9.1-r3.ebuild, hal-0.5.10.ebuild:
+  Fix minor quoting issues
 
 *hal-0.5.11 (20 May 2008)
 
