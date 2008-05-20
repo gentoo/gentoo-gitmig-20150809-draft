@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.12 2008/05/12 04:59:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.13 2008/05/20 09:46:03 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (20 May 2008)
+# Needs to be tested
+xfce-base/xfce4-extras lm_sensors
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
