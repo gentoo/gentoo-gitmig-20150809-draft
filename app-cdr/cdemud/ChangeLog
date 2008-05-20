@@ -1,0 +1,17 @@
+# ChangeLog for app-cdr/cdemud
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.1 2008/05/20 02:24:03 vanquirius Exp $
+
+*cdemud-1.0.0 (19 May 2008)
+
+  19 May 2008; Marcelo Goes <vanquirius@gentoo.org> +files/cdemud.conf.d,
+  +files/cdemud.init.d, +metadata.xml, +cdemud-1.0.0.ebuild:
+  Add cdemud for bug 198672 - userspace cdemu. Thanks to Daniel Lin <ephemient
+  at gmail dot com>, Daniel Fullmer <cgibreak at gmail dot com>, Sebastian
+  Stammler <stammler at stud.tu-darmstadt.de>, Rafal Muzylo <galtgendo at o2
+  dot pl>, Jan Bessai <Jan.Bessai at gmx dot de>, Pham Ngoc Hai <pngochai at
+  yahoo dot com>, Petr Sykora <petr.sykora at gmail dot com>, Dirk Best
+  <fatplumber at gmx dot de>, Marcel Schmedes <sm at kleinreich dot de>, Vladi
+  <vladimir.elisseev at gmail dot com>, Ambroz BIzjak <ambro at b4ever dot
+  net> and anyone I missed.
+
