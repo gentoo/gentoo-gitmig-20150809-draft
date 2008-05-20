@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.175 2008/05/19 17:39:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.176 2008/05/20 14:02:12 fmccor Exp $
+
+  20 May 2008; Ferris McCormick <fmccor@gentoo.org> libxslt-1.1.24.ebuild:
+  Sparc stable --- Security Bug #222499 --- test suite runs successfully.
 
 *libxslt-1.1.24 (19 May 2008)
 
