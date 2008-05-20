@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.2 2007/12/03 10:15:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.3 2008/05/20 18:54:17 bicatali Exp $
 
+EAPI=1
 inherit multilib qt4
 
 DESCRIPTION="Qt4/OpenGL-based 3D widget library for C++"
@@ -13,7 +14,8 @@ SLOT="0"
 IUSE="doc examples"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="$(qt4_min_version 4)"
+RDEPEND="|| ( >=x11-libs/qt-4:4
+			  ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

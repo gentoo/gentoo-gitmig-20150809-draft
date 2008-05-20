@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.11 2007/11/28 23:13:49 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.12 2008/05/20 18:54:17 bicatali Exp $
+
+  20 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  qwtplot3d-0.2.7.ebuild:
+  Added qt-4.4 support (bug #217189)
 
 *qwtplot3d-0.2.7 (28 Nov 2007)
 
