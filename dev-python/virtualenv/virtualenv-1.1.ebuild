@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.0.ebuild,v 1.2 2008/04/03 03:56:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.1.ebuild,v 1.1 2008/05/20 23:38:36 pythonhead Exp $
 
 NEED_PYTHON="2.3"
 
@@ -13,11 +13,13 @@ LICENSE="MIT"
 KEYWORDS="~x86"
 SLOT="0"
 IUSE=""
-DEPEND=">=dev-python/setuptools-0.6_rc7-r1"
+RDEPEND=">=dev-python/setuptools-0.6_rc8"
+DEPEND="${RDEPEND}"
 DOCS="docs/index.txt"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	rm ez_setup.py
+	#We have setuptools, don't need this installed.
+	rm support-files/ez_setup.py
 }
