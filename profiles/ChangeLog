@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1438 2008/05/20 13:31:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1439 2008/05/20 23:53:10 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org> use.local.desc,
+  package.mask:
+  Added use flags for mixxx-1.6.0_beta2 and masked it, because it needs
+  masked portaudio v19.
 
   20 May 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removed masking for lightspeed
