@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-1.6.5.ebuild,v 1.5 2006/10/19 00:22:58 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-1.6.5.ebuild,v 1.6 2008/05/20 08:29:46 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
-PATCHES="${FILESDIR}/1.6.5-fix_no_dri.patch"
+PATCHES=("${FILESDIR}/1.6.5-fix_no_dri.patch")
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
