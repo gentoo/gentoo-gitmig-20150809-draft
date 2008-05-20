@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1434 2008/05/20 04:42:08 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1435 2008/05/20 07:42:35 caster Exp $
+
+  20 May 2008; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Split one app-arch/rpm mask to two masks - one for a specific revision of
+  4.4.7, one for 5.0.
 
   20 May 2008; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
   Add ntp useflag for pm-utils
