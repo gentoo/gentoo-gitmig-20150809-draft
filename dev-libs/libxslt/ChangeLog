@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.179 2008/05/20 16:31:24 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.180 2008/05/20 18:38:46 opfer Exp $
+
+  20 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  libxslt-1.1.24.ebuild:
+  stable x86
 
   20 May 2008; Jose Luis Rivero <yoswink@gentoo.org> libxslt-1.1.24.ebuild:
   Stable on alpha wrt security bug #222499
