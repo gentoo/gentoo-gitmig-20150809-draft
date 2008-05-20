@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.0.0.ebuild,v 1.1 2008/05/20 02:18:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.0.0.ebuild,v 1.2 2008/05/20 18:08:38 zzam Exp $
 
 inherit linux-info linux-mod eutils
 
@@ -22,9 +22,8 @@ BUILD_TARGETS="clean modules"
 
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_SR ~CHR_DEV_SG"
-	linux-info_pkg_setup
-	BUILD_PARAMS="KDIR=${KV_DIR}"
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KDIR=${KV_DIR}"
 }
 
 src_unpack() {

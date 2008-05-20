@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.1 2008/05/20 02:18:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.2 2008/05/20 18:08:38 zzam Exp $
+
+  20 May 2008; Matthias Schwarzott <zzam@gentoo.org> vhba-1.0.0.ebuild:
+  Remove redundant linux-info_pkg_setup call.
 
 *vhba-1.0.0 (19 May 2008)
 
