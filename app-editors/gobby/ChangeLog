@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.22 2008/03/27 17:53:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.23 2008/05/20 01:01:23 jer Exp $
+
+  20 May 2008; Jeroen Roovers <jer@gentoo.org> gobby-0.4.5-r1.ebuild:
+  Marked ~hppa.
 
 *gobby-0.4.5-r1 (27 Mar 2008)
 
