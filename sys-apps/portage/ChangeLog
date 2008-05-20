@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.517 2008/05/14 21:33:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.518 2008/05/20 19:23:49 zmedico Exp $
+
+*portage-2.1.5.2 (20 May 2008)
+
+  20 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.2.ebuild:
+  2.1.5.2 bump. This fixes a regression which prevented sys-apps/portage
+  updates from being promoted to the front of the merge list. There are
+  a few other small fixes, including bug #222623. Bug #216231 tracks all
+  bugs fixed since 2.1.4.x.
 
 *portage-2.1.5 (14 May 2008)
 
