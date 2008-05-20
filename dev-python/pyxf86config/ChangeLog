@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.9 2008/03/19 07:46:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.10 2008/05/20 14:50:22 jer Exp $
+
+  20 May 2008; Jeroen Roovers <jer@gentoo.org>
+  pyxf86config-0.3.34-r1.ebuild:
+  Marked ~hppa (bug #222899).
 
   19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0.3.34-remove-rgbpath.patch, +files/Makefile.am,
