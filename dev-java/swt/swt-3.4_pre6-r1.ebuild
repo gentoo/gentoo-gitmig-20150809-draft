@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.2 2008/04/11 23:50:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.3 2008/05/20 21:15:15 betelgeuse Exp $
 
 EAPI="1"
 
@@ -23,11 +23,14 @@ SRC_URI="x86? (
 		)
 		ppc? (
 			http://${MY_DMF}/${MY_P}-gtk-linux-ppc.zip
+		)
+		ppc64? (
+			http://${MY_DMF}/${MY_P}-gtk-linux-x86_64.zip
 		)"
 
 SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 IUSE="cairo firefox gnome seamonkey opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
@@ -126,6 +129,8 @@ src_compile() {
 		AWT_ARCH="i386"
 	elif [[ $(tc-arch) == 'ppc' ]] ; then
 		AWT_ARCH="ppc"
+	elif [[ $(tc-arch) == 'ppc64' ]] ; then
+		AWT_ARCH="ppc"
 	else
 		AWT_ARCH="amd64"
 	fi
@@ -141,7 +146,7 @@ src_compile() {
 	fi
 
 	# Fix the pointer size for AMD64
-	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
+	[[ ${ARCH} == 'amd64' || ${ARCH} == 'ppc64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
 
 	local platform="linux"
 
