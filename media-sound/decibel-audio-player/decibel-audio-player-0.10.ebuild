@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-0.10.ebuild,v 1.1 2008/05/16 05:50:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-0.10.ebuild,v 1.2 2008/05/20 00:00:08 mr_bones_ Exp $
 
 DESCRIPTION="A GTK+ audio player which aims at being very straightforward to use."
 HOMEPAGE="http://decibel.silent-blade.org"
@@ -30,4 +30,3 @@ src_install() {
 	install || die "emake install failed"
 	dodoc doc/ChangeLog || die "dodoc failed"
 }
-
