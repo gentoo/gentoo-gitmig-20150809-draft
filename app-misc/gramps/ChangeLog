@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.61 2008/05/20 16:51:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.62 2008/05/20 17:06:20 opfer Exp $
+
+  20 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  gramps-3.0.0-r1.ebuild, gramps-3.0.1.ebuild:
+  remove dev-python/reportlab from DEPEND, reported by Zsolt Foldvari <zsolt
+  DOT foldvari AT gmail.com> by email
 
   20 May 2008; Christian Faulhammer <opfer@gentoo.org>
   +files/gramps-2.2.2-desktop-entry-icon.patch:

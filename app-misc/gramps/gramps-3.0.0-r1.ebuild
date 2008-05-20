@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0-r1.ebuild,v 1.3 2008/05/19 23:59:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.0-r1.ebuild,v 1.4 2008/05/20 17:06:20 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,8 +20,7 @@ RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/pygtk-2.10.0
 	>=dev-python/gnome-python-2.6
 	>=app-text/gnome-doc-utils-0.6.1
-	media-gfx/graphviz
-	>=dev-python/reportlab-1.11"
+	media-gfx/graphviz"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	app-text/scrollkeeper
