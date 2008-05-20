@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.5.ebuild,v 1.4 2008/05/20 19:14:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.5.ebuild,v 1.5 2008/05/20 21:56:27 dragonheart Exp $
 
 inherit libtool autotools eutils
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
+#SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
+SRC_URI="mirror://gnu/gnutls/${P}.tar.bz2"
 
 # GPL-3 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-3"
