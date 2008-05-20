@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.113 2008/05/18 16:23:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.114 2008/05/20 14:27:34 armin76 Exp $
+
+  20 May 2008; Raúl Porcel <armin76@gentoo.org> bugzilla-2.20.6.ebuild,
+  bugzilla-2.22.4.ebuild, bugzilla-3.0.4.ebuild:
+  alpha/ia64/sparc stable wrt security #220799
 
   18 May 2008; Markus Meier <maekke@gentoo.org> bugzilla-2.22.4.ebuild:
   x86 stable, bug #220799
