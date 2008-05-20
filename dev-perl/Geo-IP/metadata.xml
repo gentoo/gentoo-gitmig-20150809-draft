@@ -2,5 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<herd>perl</herd>
 <longdescription>Look up country by IP Address</longdescription>
 </pkgmetadata>
