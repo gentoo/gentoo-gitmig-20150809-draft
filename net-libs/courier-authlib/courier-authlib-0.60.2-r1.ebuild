@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2-r1.ebuild,v 1.1 2008/05/20 10:20:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2-r1.ebuild,v 1.2 2008/05/20 10:51:01 hanno Exp $
 
 inherit eutils flag-o-matic autotools
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 
 DESCRIPTION="Courier authentication library."
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="berkdb crypt debug gdbm ldap mysql pam postgres"
+IUSE="berkdb crypt debug gdbm ldap mysql pam postgres vpopmail"
 
 RESTRICT="userpriv"
 
@@ -34,6 +34,16 @@ pkg_setup() {
 		ewarn 'However non-system authentication modules (LDAP, MySQL, PostgreSQL,'
 		ewarn 'and others) will work just fine.'
 	fi
+
+	if use vpopmail ; then
+		eerror
+		eerror "vpopmail support has been removed, it's unmaintained upstream and will be"
+		eerror "removed with the next release."
+		eerror
+		eerror "Please remove vpopmail USE-flag."
+		die "vpopmail support removed"
+	fi
+
 }
 
 src_unpack() {
@@ -173,6 +183,4 @@ pkg_postinst() {
 		elog "The following files are no longer needed and can likely be removed:"
 		elog " rm $(echo \"${list}\")"
 	fi
-
-	ewarn "vpopmail support has been removed, it's unmaintained upstream and will be removed with the next release."
 }
