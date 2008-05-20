@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/qtada
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/ChangeLog,v 1.1 2008/05/20 09:32:07 george Exp $
+
+*qtada-1.0.3 (20 May 2008)
+
+  20 May 2008; George Shapovalov <george@gentoo.org> +qtada-1.0.3.ebuild:
+  added qtada - Ada bindings to qt. Thanks to  Maxim Reznik for some input at
+  early stages (bug #143226).
+
