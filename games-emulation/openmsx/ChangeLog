@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.25 2008/05/15 19:50:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.26 2008/05/20 16:26:08 fmccor Exp $
+
+  20 May 2008; Ferris McCormick <fmccor@gentoo.org> openmsx-0.6.3.ebuild:
+  Sparc stable, Bug #222133.
 
   15 May 2008; Markus Meier <maekke@gentoo.org> openmsx-0.6.3.ebuild:
   amd64/x86 stable, bug #222133
