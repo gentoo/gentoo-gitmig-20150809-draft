@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc5.ebuild,v 1.1 2008/05/05 11:47:09 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc5-r1.ebuild,v 1.1 2008/05/20 18:24:05 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
 MY_P="${P/_/.}"
 MY_PV12=$(get_version_component_range 1-2 ${PV})
 S="${WORKDIR}/${MY_P}"
-SIEVE="dovecot-sieve-1.1.4"
+SIEVE="dovecot-sieve-1.1.5"
 SIEVE_S="${WORKDIR}/${SIEVE}"
 MANAGESIEVE_PATCH="managesieve-0.10.2"
 MANAGESIEVE="managesieve-0.10.2"
