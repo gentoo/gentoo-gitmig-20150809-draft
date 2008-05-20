@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.10 2008/05/20 14:50:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.11 2008/05/20 17:17:14 fmccor Exp $
+
+  20 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  pyxf86config-0.3.34-r1.ebuild:
+  Add ~sparc --- Bug #222899 --- it builds, but I can't see the point.
 
   20 May 2008; Jeroen Roovers <jer@gentoo.org>
   pyxf86config-0.3.34-r1.ebuild:
