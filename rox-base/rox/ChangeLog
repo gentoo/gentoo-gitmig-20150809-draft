@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.56 2008/02/29 20:32:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.57 2008/05/20 02:58:23 lack Exp $
+
+*rox-2.8 (20 May 2008)
+
+  20 May 2008; Jim Ramsay <lack@gentoo.org> +files/rox-2.8-nostrip.patch,
+  +rox-2.8.ebuild:
+  New version 2.8 is released
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> rox-2.6.1.ebuild,
   rox-2.7.ebuild:
