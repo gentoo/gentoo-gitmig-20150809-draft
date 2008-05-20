@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaccessibility-colorschemes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.7 2008/05/15 23:02:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.8 2008/05/20 10:50:26 ingmar Exp $
+
+  20 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> Manifest:
+  Manifest.
 
 *kdeaccessibility-colorschemes-4.0.4 (15 May 2008)
 
