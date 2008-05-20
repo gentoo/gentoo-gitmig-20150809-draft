@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/gtk-splitter
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.10 2006/09/21 22:17:29 blubb Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.11 2008/05/20 13:08:14 drac Exp $
+
+*gtk-splitter-2.2.1 (20 May 2008)
+
+  20 May 2008; Samuli Suominen <drac@gentoo.org> +gtk-splitter-2.2.1.ebuild:
+  Version bump wrt #222827.
 
   21 Sep 2006; <blubb@gentoo.org> gtk-splitter-2.2.ebuild:
   stable on amd64
