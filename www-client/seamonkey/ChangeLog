@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.138 2008/05/19 20:37:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.139 2008/05/20 16:33:26 dertobi123 Exp $
+
+  20 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  seamonkey-1.1.9-r1.ebuild:
+  ppc stable, bug #218065
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> seamonkey-1.1.7.ebuild,
   seamonkey-1.1.9.ebuild, seamonkey-1.1.9-r1.ebuild:
