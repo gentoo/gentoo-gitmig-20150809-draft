@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.4-r1.ebuild,v 1.1 2008/05/16 16:12:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.4-r1.ebuild,v 1.2 2008/05/20 00:00:30 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -59,4 +59,3 @@ pkg_preinst() {
 		mv "${old}" "${new}"
 	fi
 }
-
