@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.233 2008/05/20 04:30:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.234 2008/05/20 18:33:36 jer Exp $
+
+  20 May 2008; Jeroen Roovers <jer@gentoo.org> hal-0.5.11.ebuild:
+  Marked ~hppa (bug #222899).
 
   20 May 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   hal-0.5.7.1-r5.ebuild, hal-0.5.9-r1.ebuild, hal-0.5.9.1-r1.ebuild,
