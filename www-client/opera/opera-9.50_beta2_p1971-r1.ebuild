@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1971-r1.ebuild,v 1.1 2008/05/20 23:38:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1971-r1.ebuild,v 1.2 2008/05/20 23:57:01 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -177,8 +177,10 @@ src_install() {
 pkg_postinst() {
 	use gnome && gnome2_pkg_postinst
 
-	elog "For localized language files take a look at:"
-	elog " http://www.opera.com/download/languagefiles/index.dml"
+	elog "To change the UI language, choose [Tools] -> [Preferences], open the"
+	elog "open the [General] tab, click on [Details...] then [Choose...] and"
+	elog "point the file chooser at /opt/opera/share/opera/locale/, then enter"
+	elog "the directory for the language you want and open the .lng file."
 	elog
 	elog "To use the spellchecker (USE=spell) for non-English simply do"
 	elog "$ emerge app-dicts/aspell-[your language]."
