@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.8 2008/05/18 11:19:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.4.ebuild,v 1.9 2008/05/20 00:01:17 mr_bones_ Exp $
 
 inherit fortran flag-o-matic
 
-# we need this to prevent itpp's specialized debug lib 
+# we need this to prevent itpp's specialized debug lib
 # (built with USE="debug" set) from being stripped
 RESTRICT="strip"
 
