@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8640 2008/05/20 07:42:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8641 2008/05/20 09:09:10 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1236,6 +1236,7 @@ games-rpg/openrpg
 # Alexis Ballier <aballier@gentoo.org> (30 Mar 2007)
 # Portaudio v19 : api changes
 >=media-libs/portaudio-19_pre061121
+=media-sound/jack-audio-connection-kit-0.109.2-r1
 
 # Piotr Jaroszyński <peper@gentoo.org> (28 Mar 2006)
 # Unusable for now.
