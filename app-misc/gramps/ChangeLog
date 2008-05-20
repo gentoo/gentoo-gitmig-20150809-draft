@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.60 2008/05/18 07:37:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.61 2008/05/20 16:51:34 opfer Exp $
+
+  20 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/gramps-2.2.2-desktop-entry-icon.patch:
+  revert patch, as it is still needed
 
   18 May 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/gramps-2.2.2-desktop-entry-icon.patch, -gramps-2.0.9.ebuild,
