@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.123 2008/05/13 14:24:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.124 2008/05/20 05:50:01 mr_bones_ Exp $
+
+  20 May 2008; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.4.2.ebuild:
+  force the built_with_use check for USE=X with libsdl (bug #222033)
 
   13 May 2008; Ferris McCormick <fmccor@gentoo.org> wesnoth-1.4.2.ebuild:
   Sparc stable --- Bug #220957 --- plays for me.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.2.ebuild,v 1.4 2008/05/13 14:24:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.2.ebuild,v 1.5 2008/05/20 05:50:01 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -44,7 +44,8 @@ pkg_setup() {
 	if ! built_with_use media-libs/sdl-image png ; then
 		die "Please emerge media-libs/sdl-image with USE=png"
 	fi
-	if ! use dedicated && ! built_with_use media-libs/libsdl X ; then
+	# dedicated also needs USE=X for libsdl: bug #222033
+	if ! built_with_use media-libs/libsdl X ; then
 		die "Please emerge media-libs/libsdl with USE=X"
 	fi
 	games_pkg_setup
