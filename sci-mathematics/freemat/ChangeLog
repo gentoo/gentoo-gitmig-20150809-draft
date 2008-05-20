@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.9 2008/03/24 09:48:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.10 2008/05/20 16:44:51 bicatali Exp $
+
+  20 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/freemat-3.6-includes.patch, freemat-3.6.ebuild:
+  Fixed for gcc-4.3, some includes files and adpated for qt-4.4. Also set
+  some use flags as default
 
 *freemat-3.6 (24 Mar 2008)
 
