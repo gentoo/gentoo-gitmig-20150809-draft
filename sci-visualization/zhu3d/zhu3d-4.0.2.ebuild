@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.0.2.ebuild,v 1.1 2008/04/01 11:27:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.0.2.ebuild,v 1.2 2008/05/20 18:59:00 bicatali Exp $
 
 EAPI=1
 
@@ -16,7 +16,8 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
-RDEPEND="$(qt4_min_version 4.0)
+RDEPEND="|| ( >=x11-libs/qt-4.2:4
+			  ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) )
 		virtual/glu"
 DEPEND="${RDEPEND}"
 
