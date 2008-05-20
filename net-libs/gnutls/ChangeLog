@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.149 2008/05/20 15:56:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.150 2008/05/20 19:08:46 armin76 Exp $
+
+  20 May 2008; Raúl Porcel <armin76@gentoo.org> gnutls-2.2.5.ebuild:
+  alpha/ia64/sparc/x86 stable wrt security #222823
 
   20 May 2008; Jeroen Roovers <jer@gentoo.org> gnutls-2.2.5.ebuild:
   Stable for HPPA (bug #222823).
