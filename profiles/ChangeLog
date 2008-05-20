@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1433 2008/05/20 00:05:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1434 2008/05/20 04:42:08 compnerd Exp $
+
+  20 May 2008; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
+  Add ntp useflag for pm-utils
 
   20 May 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
   p.mask app-vim/exheres-syntax-99999999 for testing.
