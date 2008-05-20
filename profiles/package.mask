@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8641 2008/05/20 09:09:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8642 2008/05/20 09:13:35 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tony Vroon <chainsaw@gentoo.org> (20 May 2008)
+# This package is unmaintained and is unstable for
+# Audacious 1.5.0; bug #222883.
+# Removal planned for June 30, 2008.
+media-plugins/audacious-crossfade
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
