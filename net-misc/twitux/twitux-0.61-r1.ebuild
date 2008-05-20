@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.61-r1.ebuild,v 1.1 2008/04/22 14:06:53 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.61-r1.ebuild,v 1.2 2008/05/20 16:28:27 gregkh Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/twitux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="spell gnome-keyring"
 
 DEPEND="net-libs/libsoup:2.4
