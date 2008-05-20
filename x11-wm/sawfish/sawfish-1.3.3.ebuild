@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.5 2008/05/19 20:47:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.6 2008/05/20 15:26:48 armin76 Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -22,7 +22,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="gnome esd nls audiofile pango"
 
 RDEPEND=">=x11-libs/rep-gtk-0.17
