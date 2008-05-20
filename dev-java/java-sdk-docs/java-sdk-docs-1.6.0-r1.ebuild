@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0-r1.ebuild,v 1.10 2008/05/12 10:52:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0-r1.ebuild,v 1.11 2008/05/20 14:36:58 caster Exp $
 
 ORIG_NAME="jdk-6-doc.zip"
 SRC_URI="jdk-6-doc-${PR}.zip"
@@ -14,14 +14,14 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 RESTRICT="fetch"
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-6-doc-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DOWNLOAD_URL="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6-doc-oth-JPR@CDS-CDS_Developer"
 
 S="${WORKDIR}/docs"
 
 pkg_nofetch() {
 	einfo "Please download ${ORIG_NAME} from "
 	einfo "${DOWNLOAD_URL}"
-	einfo "and place it in ${DISTDIR} named as"
+	einfo "(select English and agree to the licence) and place it in ${DISTDIR} named as"
 	einfo "${SRC_URI}. Notice the ${PR}. Because Sun changes the doc zip file"
 	einfo "without changing the filename, we have to resort to renaming to keep"
 	einfo "the md5sum verification working for existing and new downloads."

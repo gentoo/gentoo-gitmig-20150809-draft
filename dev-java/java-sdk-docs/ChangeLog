@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.59 2008/05/12 10:52:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.60 2008/05/20 14:36:58 caster Exp $
+
+  20 May 2008; Vlastimil Babka <caster@gentoo.org>
+  java-sdk-docs-1.5.0-r1.ebuild, java-sdk-docs-1.6.0-r1.ebuild:
+  Update download links to new Sun scheme. Bug #221007.
 
   12 May 2008; nixnut <nixnut@gentoo.org> java-sdk-docs-1.6.0-r1.ebuild:
   Stable on ppc wrt bug 217442
