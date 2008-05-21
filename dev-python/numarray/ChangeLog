@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.31 2008/02/23 13:16:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.32 2008/05/21 15:13:32 jer Exp $
+
+  21 May 2008; Jeroen Roovers <jer@gentoo.org> numarray-1.5.2-r1.ebuild:
+  Marked ~hppa too.
 
   23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
   numarray-1.5.2-r1.ebuild:
