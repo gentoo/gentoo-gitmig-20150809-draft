@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.10.ebuild,v 1.1 2008/04/21 18:30:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.10.ebuild,v 1.2 2008/05/21 18:37:38 jokey Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/vte
 		gnome-base/libglade
 		dev-python/pygtksourceview:2
 		app-portage/portage-utils
-		=dev-python/lxml-1.3.6
+		|| ( =dev-python/lxml-1.3.6 >=dev-python/lxml-2.0.4 )
 		>=dev-python/pygtk-2.12.0
 		>=sys-apps/portage-2.1.2 <sys-apps/portage-2.2
 
