@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.45 2008/05/21 17:25:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.46 2008/05/21 18:47:56 opfer Exp $
+
+  21 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnome2-wnck-0.16.ebuild:
+  stable x86, bug 204386
 
   21 May 2008; nixnut <nixnut@gentoo.org> gnome2-wnck-0.16.ebuild:
   Stable on ppc wrt bug 204386
