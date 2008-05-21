@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.0.ebuild,v 1.1 2008/05/19 20:17:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.0.ebuild,v 1.2 2008/05/21 21:20:14 cryos Exp $
 
 RESTRICT="mirror"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="python"
 
-DEPEND=">=dev-util/cmake-2.4.6
+DEPEND=">=dev-util/cmake-2.4.8
 	>=dev-cpp/eigen-1.0.5
 	${RDEPEND}"
 RDEPEND=">=x11-libs/qt-4.3.0
