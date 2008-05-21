@@ -1,0 +1,11 @@
+# ChangeLog for sci-visualization/gle
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.1 2008/05/21 21:13:42 grozin Exp $
+
+*gle-4.1.2b (22 May 2008)
+
+  22 May 2008; Andrey Grozin <grozin@gentoo.org> +files/64gle-gentoo.el,
+  +metadata.xml, +gle-4.1.2b.ebuild:
+  Initial import. Closing bug #128322. Thanks to Sebastien Fabbro for help
+  with this ebuild in the science overlay.
+
