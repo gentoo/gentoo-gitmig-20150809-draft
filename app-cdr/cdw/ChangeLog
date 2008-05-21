@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.21 2008/02/29 17:41:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.22 2008/05/21 18:06:46 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org> cdw-0.2.4.ebuild:
+  Move intltool to DEPEND wrt #221507.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> cdw-0.2.4.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

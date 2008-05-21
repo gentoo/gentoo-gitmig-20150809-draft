@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.12 2008/02/29 17:44:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.13 2008/05/21 18:06:46 drac Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,6 @@ SLOT="0"
 IUSE="encode gtk mysql nls vorbis sqlite"
 
 RDEPEND="virtual/cdrtools
-	>=dev-util/intltool-0.21
 	gtk? ( >=x11-libs/gtk+-2
 			>=dev-libs/glib-2 )
 	sys-libs/ncurses
@@ -25,6 +24,7 @@ RDEPEND="virtual/cdrtools
 	mysql? ( virtual/mysql )
 	encode? ( media-sound/lame )"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.21
 	nls? ( sys-devel/gettext )
 	gtk? ( dev-util/pkgconfig )"
 
