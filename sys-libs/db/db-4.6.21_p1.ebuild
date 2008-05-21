@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.19.ebuild,v 1.2 2007/10/24 07:07:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.21_p1.ebuild,v 1.1 2008/05/21 18:31:01 caleb Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2
 
