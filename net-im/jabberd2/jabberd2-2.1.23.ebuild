@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.23.ebuild,v 1.2 2008/03/22 18:05:05 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.23.ebuild,v 1.3 2008/05/21 18:55:11 dev-zero Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -21,7 +21,7 @@ DEPEND="dev-libs/expat
 	>=sys-libs/db-4.1.24
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	sqlite? ( >=dev-db/sqlite-3 )"
 RDEPEND="${DEPEND}
 	>=net-im/jabber-base-0.01
