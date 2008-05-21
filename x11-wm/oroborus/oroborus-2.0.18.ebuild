@@ -1,46 +1,45 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.8 2007/11/23 12:50:44 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.9 2008/05/21 17:03:43 drac Exp $
+
+inherit autotools
 
 DESCRIPTION="Small and fast window manager."
-HOMEPAGE="http://www.oroborus.org/"
+HOMEPAGE="http://www.oroborus.org"
 SRC_URI="http://www.oroborus.org/debian/dists/sid/main/source/x11/${PN}_${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="gnome"
 
-RDEPEND="x11-libs/libXxf86vm
-	x11-libs/libXpm"
+RDEPEND="x11-libs/libXpm
+	x11-libs/libXext
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	x11-proto/xf86vidmodeproto
+	x11-proto/xproto
 	x11-proto/xextproto"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf
+}
+
 src_compile() {
-	aclocal
-	autoheader
-	automake --add-missing
-	autoconf
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc/X11/oroborus \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		|| die
-	emake || die
+	econf --disable-dependency-tracking
+	emake || die "emake failed."
 }
 
 src_install () {
-	make prefix="${D}"/usr \
-		sysconfdir="${D}"/etc/X11/oroborus \
-		infodir="${D}"/usr/share/info \
-		mandir="${D}"/usr/share/man \
-		install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 
-	if use gnome ; then
+	if use gnome; then
 		insinto /usr/share/gnome/wm-properties
-		doins "${FILESDIR}"/oroborus.desktop
+		doins "${FILESDIR}"/${PN}.desktop
 	fi
 
-	dodoc README INSTALL ChangeLog TODO AUTHORS example.oroborusrc
+	dodoc AUTHORS ChangeLog example.${PN}rc README TODO
 }

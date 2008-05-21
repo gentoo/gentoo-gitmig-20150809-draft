@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.31 2007/11/23 12:39:38 cla Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.32 2008/05/21 17:03:43 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org> -oroborus-2.0.4-r1.ebuild,
+  -oroborus-2.0.7.ebuild, -oroborus-2.0.9.ebuild, -oroborus-2.0.13.ebuild,
+  oroborus-2.0.18.ebuild:
+  Convert to using autotools.eclass, econf, emake and DESTDIR.
 
   23 Nov 2007; Dawid Węgliński <cla@gentoo.org> oroborus-2.0.18.ebuild:
   Stable on x86
