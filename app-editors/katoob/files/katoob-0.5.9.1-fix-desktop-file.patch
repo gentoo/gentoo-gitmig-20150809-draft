@@ -1,0 +1,21 @@
+--- katoob.desktop.in.in.old	2008-05-21 11:03:57.000000000 +0200
++++ katoob.desktop.in.in	2008-05-21 14:05:14.000000000 +0200
+@@ -1,13 +1,9 @@
+ [Desktop Entry]
+-Version=1.0
+ Type=Application
+-_Name=Katoob
+-_Comment=Multilingual Unicode Text Editor
+-TryExec=@prefix@/katoob
+-Exec=@prefix@/bin/katoob %F
+-Icon=@KATOOB_ICON@
+-Encoding=UTF-8
+-Terminal=false
+-Categories=Utility;TextEditor
++Name=Katoob
++Comment=Multilingual Unicode Text Editor
++Exec=katoob %F
++Icon=katoob-icon
++Categories=GNOME;GTK;Utility;TextEditor;
+ MimeType=text/plain;
+ @X_OSSO_SERVICE@

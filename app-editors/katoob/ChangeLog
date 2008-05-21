@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.21 2008/05/21 07:20:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.22 2008/05/21 12:21:14 remi Exp $
+
+  21 May 2008; Rémi Cardona <remi@gentoo.org>
+  +files/katoob-0.5.9.1-fix-desktop-file.patch, katoob-0.5.9.1.ebuild:
+  add patch to fix the installed desktop file
 
 *katoob-0.5.9.1 (21 May 2008)
 

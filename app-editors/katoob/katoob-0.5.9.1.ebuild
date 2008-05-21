@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.1 2008/05/21 07:20:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.2 2008/05/21 12:21:14 remi Exp $
 
 inherit eutils gnome2
 
@@ -28,6 +28,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9"
 
+DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
+
 pkg_setup() {
 	G2CONF="$(use_enable spell aspell) \
 		$(use_enable bidi fribidi) \
@@ -38,8 +40,7 @@ pkg_setup() {
 		$(use_enable !debug release)"
 }
 
-#src_install() {
-#	make DESTDIR="${D}" install || die "Installation failed"
-#
-#	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-#}
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}/${PN}-0.5.9.1-fix-desktop-file.patch"
+}
