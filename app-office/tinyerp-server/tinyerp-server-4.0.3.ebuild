@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.3.ebuild,v 1.3 2007/07/23 20:21:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.3.ebuild,v 1.4 2008/05/21 15:53:11 dev-zero Exp $
 
 inherit eutils distutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-7.4
+DEPEND=">=virtual/postgresql-server-7.4
 	dev-python/pypgsql
 	dev-python/reportlab
 	dev-python/pyparsing

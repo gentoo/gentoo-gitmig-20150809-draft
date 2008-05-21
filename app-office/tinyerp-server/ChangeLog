@@ -1,6 +1,11 @@
 # ChangeLog for app-office/tinyerp-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.12 2008/04/04 20:19:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.13 2008/05/21 15:53:11 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  tinyerp-server-4.0.3.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   04 Apr 2008; Cédric Krier <cedk@gentoo.org> metadata.xml:
   Remove maintainer
