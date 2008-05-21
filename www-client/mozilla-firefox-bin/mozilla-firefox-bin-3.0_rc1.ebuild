@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_rc1.ebuild,v 1.1 2008/05/17 10:12:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_rc1.ebuild,v 1.2 2008/05/21 14:25:35 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -42,7 +42,6 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
-		=virtual/libstdc++-3.3
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
