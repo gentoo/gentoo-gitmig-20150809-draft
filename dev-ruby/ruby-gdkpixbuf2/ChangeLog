@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.42 2008/04/06 17:28:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.43 2008/05/21 12:55:17 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org>
+  ruby-gdkpixbuf2-0.16.0.ebuild:
+  Move pkgconfig to DEPEND.
 
   06 Apr 2008; Hans de Graaff <graaff@gentoo.org>
   ruby-gdkpixbuf2-0.16.0.ebuild:
