@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/proxytunnel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.20 2008/01/01 12:30:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.21 2008/05/21 20:35:54 jokey Exp $
+
+*proxytunnel-1.9.0 (21 May 2008)
+
+  21 May 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml,
+  +proxytunnel-1.9.0.ebuild:
+  Version bump + maintainer update
 
 *proxytunnel-1.8.0 (01 Jan 2008)
 
