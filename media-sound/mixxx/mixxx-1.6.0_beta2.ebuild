@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0_beta2.ebuild,v 1.2 2008/05/21 00:03:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0_beta2.ebuild,v 1.3 2008/05/21 00:16:50 drac Exp $
 
 EAPI=1
 
@@ -27,7 +27,6 @@ RDEPEND="media-libs/mesa
 	djconsole? ( media-libs/libdjconsole )
 	shout? ( media-libs/libshout )
 	ladspa? ( media-libs/ladspa-sdk )
-	media-libs/mesa
 	virtual/glu
 	|| ( ( x11-libs/qt-core
 		x11-libs/qt-gui
