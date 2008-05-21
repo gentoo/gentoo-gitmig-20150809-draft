@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sdricoh_cs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/ChangeLog,v 1.6 2008/05/03 16:58:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/ChangeLog,v 1.7 2008/05/21 13:24:53 hanno Exp $
+
+*sdricoh_cs-0.1.3_p20080521 (21 May 2008)
+
+  21 May 2008; Hanno Boeck <hanno@gentoo.org>
+  +sdricoh_cs-0.1.3_p20080521.ebuild:
+  New snapshot, upstream included some fixes from Andrew Morton.
 
 *sdricoh_cs-0.1.3_p20080503 (03 May 2008)
 
