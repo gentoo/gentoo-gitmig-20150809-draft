@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.159 2008/04/13 23:06:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.160 2008/05/21 16:06:02 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postfix-2.2.11-r1.ebuild, postfix-2.3.8-r1.ebuild,
+  postfix-2.4.6-r2.ebuild, postfix-2.4.7.ebuild, postfix-2.5.0.ebuild,
+  postfix-2.5.1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   13 Apr 2008; Ulrich Mueller <ulm@gentoo.org> -postfix-2.4.5.ebuild:
   Remove last vulnerable ebuild wrt bug 201671.

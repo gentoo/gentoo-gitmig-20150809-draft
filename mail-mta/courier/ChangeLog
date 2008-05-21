@@ -1,6 +1,16 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.104 2008/05/14 09:11:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.105 2008/05/21 16:04:43 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  courier-0.53.2-r1.ebuild, courier-0.55.1-r1.ebuild, courier-0.59.0.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  courier-0.53.2-r1.ebuild, courier-0.55.1-r1.ebuild, courier-0.59.0.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   14 May 2008; Hanno Boeck <hanno@gentoo.org> courier-0.59.0.ebuild:
   Remove uclibc-sed (this is already in upstream). remove global eautoreconf

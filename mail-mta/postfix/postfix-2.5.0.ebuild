@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.0.ebuild,v 1.1 2008/03/17 18:43:21 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.0.ebuild,v 1.2 2008/05/21 16:06:02 dev-zero Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -43,7 +43,7 @@ DEPEND=">=sys-libs/db-3.2
 		ldap? ( >=net-nds/openldap-1.2 )
 		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-7.1 )
+		postgres? ( >=virtual/postgresql-server-7.1 )
 		sasl? (  >=dev-libs/cyrus-sasl-2 )
 		ssl? ( >=dev-libs/openssl-0.9.6g )"
 
@@ -188,7 +188,7 @@ src_compile() {
 	fi
 
 	if use postgres ; then
-		if best_version '=dev-db/postgresql-7.3*' ; then
+		if best_version '=virtual/postgresql-server-7.3*' ; then
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
 		else
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql/pgsql"
