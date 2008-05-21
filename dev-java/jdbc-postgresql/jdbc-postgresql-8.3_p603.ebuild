@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p603.ebuild,v 1.1 2008/02/06 18:14:45 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p603.ebuild,v 1.2 2008/05/21 15:58:55 dev-zero Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -30,7 +30,7 @@ DEPEND=">=dev-java/java-config-2.0.31
 		=dev-java/junit-3.8*
 		>=dev-java/ant-1.6
 		dev-java/ant-junit
-		dev-db/postgresql
+		virtual/postgresql-server
 	)"
 RDEPEND="!java5? ( >=virtual/jre-1.4 )
 	java5? ( >=virtual/jre-1.5 )"

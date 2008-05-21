@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.21 2008/05/12 11:04:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.22 2008/05/21 15:58:55 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  jdbc-postgresql-8.2_p504.ebuild, jdbc-postgresql-8.2_p505.ebuild,
+  jdbc-postgresql-8.2_p506.ebuild, jdbc-postgresql-8.3_p603.ebuild,
+  jdbc-postgresql-8.3_p603-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   12 May 2008; nixnut <nixnut@gentoo.org>
   jdbc-postgresql-8.3_p603-r1.ebuild:
