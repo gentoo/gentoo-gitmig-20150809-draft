@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3548 2008/05/21 10:50:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3549 2008/05/21 13:44:40 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1276,6 +1276,7 @@ media-video/transcode:network - Enables network streaming support
 media-video/transcode:nuv - NuppelVideo container format demuxing
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
+media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
 media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
 media-video/vdr:child-protection - Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)
@@ -1297,6 +1298,7 @@ media-video/vdr:dvlrecscriptaddon - enhancement for record-script
 media-video/vdr:dvlvidprefer - controls video-dir choice on recording
 media-video/vdr:dxr3 - Enable tweaks to improve vdr behaviour on dxr3-cards
 media-video/vdr:dxr3-audio-denoise - Mutes audio noise occurring with dxr3-cards using analog audio-out when e.g. cutting
+media-video/vdr:em84xx - Add support for em84xx plugin
 media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.7
 media-video/vdr:hardlinkcutter - Speed up cutting by hardlinking unchanged files
 media-video/vdr:iptv - Enables support for vdr-iptv
