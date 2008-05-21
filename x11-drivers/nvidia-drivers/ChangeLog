@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.97 2008/05/09 09:55:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.98 2008/05/21 15:09:11 chainsaw Exp $
+
+  21 May 2008; <chainsaw@gentoo.org>
+  +files/NVIDIA_kernel-71.86.04-2305230.diff,
+  nvidia-drivers-71.86.04.ebuild:
+  Add patch to allow building on 2.6.25 kernels; thanks to Andreas
+  <andreas.schuerch@nativenet.ch>. No revision bump, the module didnt build
+  for affected users. Closes bug #223047.
 
   09 May 2008; Mark Loeser <halcy0n@gentoo.org>
   nvidia-drivers-173.08.ebuild:

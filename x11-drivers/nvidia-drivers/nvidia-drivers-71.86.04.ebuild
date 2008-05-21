@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.04.ebuild,v 1.2 2008/05/07 16:33:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.04.ebuild,v 1.3 2008/05/21 15:09:11 chainsaw Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -181,6 +181,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
+
+	# Support 2.6.25 kernels; bug #223047
+	kernel_is ge 2 6 25 && epatch "${FILESDIR}"/NVIDIA_kernel-71.86.04-2305230.diff
 
 	if ! use x86-fbsd; then
 		# Quiet down warnings the user does not need to see
