@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8646 2008/05/21 00:15:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8647 2008/05/21 15:47:50 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -275,6 +275,8 @@ media-sound/lastfmproxy
 >=www-client/mozilla-firefox-bin-3.0_beta1
 >=dev-libs/nss-3.12_alpha1
 >=dev-libs/nspr-4.7.1_beta1
+>=mail-client/mozilla-thunderbird-3.0_alpha1
+>=mail-client/mozilla-thunderbird-bin-3.0_alpha1
 
 # Ben de Groot <yngwin@gentoo.org> (7 Apr 2008)
 # Versioning scheme change after pkgmove from -svn
