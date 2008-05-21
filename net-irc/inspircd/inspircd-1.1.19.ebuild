@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.3 2008/04/28 17:46:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.4 2008/05/21 18:56:03 dev-zero Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
@@ -19,7 +19,7 @@ RDEPEND="
 	openssl? ( dev-libs/openssl )
 	gnutls? ( net-libs/gnutls )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	sqlite? ( >=dev-db/sqlite-3.0 )
 	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}"

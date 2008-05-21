@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.23 2008/04/28 17:46:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.24 2008/05/21 18:56:03 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> inspircd-1.1.19.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   28 Apr 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   inspircd-1.1.19.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/atheme
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.6 2007/07/03 17:57:58 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.7 2008/05/21 18:55:28 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> atheme-0.2.2.ebuild,
+  atheme-1.2.1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   03 Jul 2007; Peter Weller <welp@gentoo.org> atheme-0.2.2.ebuild,
   atheme-1.2.1.ebuild:

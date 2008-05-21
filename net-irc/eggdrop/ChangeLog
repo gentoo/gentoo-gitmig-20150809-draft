@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.77 2008/03/31 05:31:01 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.78 2008/05/21 18:55:53 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  eggdrop-1.6.18-r3.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   31 Mar 2008; <ricmm@gentoo.org> eggdrop-1.6.18-r3.ebuild:
   Drop to ~mips due to unstable deps
