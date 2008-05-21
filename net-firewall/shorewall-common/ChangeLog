@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-common
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.14 2008/05/04 13:16:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.15 2008/05/21 18:01:40 jokey Exp $
+
+*shorewall-common-4.0.11 (21 May 2008)
+
+  21 May 2008; Markus Ullmann <jokey@gentoo.org>
+  +shorewall-common-4.0.11.ebuild:
+  Version bump
 
   04 May 2008; Peter Volkov <pva@gentoo.org> files/shorewall.initd:
   Updated init.d script to fix reports of status, bug #219740, thank Vieri
