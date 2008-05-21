@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.28 2008/04/20 14:30:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.29 2008/05/21 16:02:02 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> global-4.7.2.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   20 Apr 2008; Markus Meier <maekke@gentoo.org> global-5.6.2.ebuild:
   x86 stable, bug #217407

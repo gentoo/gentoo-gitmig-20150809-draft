@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.16.ebuild,v 1.3 2007/06/26 02:04:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.16.ebuild,v 1.4 2008/05/21 16:01:49 dev-zero Exp $
 
 inherit eutils qt3
 
@@ -17,7 +17,7 @@ RDEPEND="$(qt_min_version 3.2)
 	kde? ( >=kde-base/kdelibs-3.2 )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer sys-libs/gpm )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	curl? ( net-misc/curl )
 	sqlite? ( =dev-db/sqlite-2* )
 	xml? ( dev-libs/libxml2 )
