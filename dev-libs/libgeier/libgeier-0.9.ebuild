@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9.ebuild,v 1.2 2008/03/17 15:04:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9.ebuild,v 1.3 2008/05/21 15:21:59 wrobel Exp $
 
 inherit versionator
 
@@ -18,13 +18,16 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-libs/openssl
+RDEPEND="dev-libs/openssl
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/xmlsec
 	=net-libs/xulrunner-1.8*
-	sys-libs/zlib
+	sys-libs/zlib"
+
+DEPEND="${DEPEND}
 	dev-lang/swig"
+
 
 src_compile() {
 	econf || die "Configure failed!"
