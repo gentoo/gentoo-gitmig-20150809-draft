@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.7 2007/07/02 14:12:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.8 2008/05/21 15:50:55 dev-zero Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -14,7 +14,7 @@ RESTRICT="strip"
 
 DEPEND="crypt? ( >=app-crypt/gnupg-1.2 )
 		mysql? ( virtual/mysql )
-		postgres? ( >=dev-db/postgresql-7.2 )
+		postgres? ( >=virtual/postgresql-server-7.2 )
 		prelude? ( >=dev-libs/libprelude-0.8.10 )
 		>=sys-apps/sed-4
 		app-arch/tar
