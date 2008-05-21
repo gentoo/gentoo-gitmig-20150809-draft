@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.8.ebuild,v 1.1 2007/10/19 15:32:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.8.ebuild,v 1.2 2008/05/21 16:06:38 dev-zero Exp $
 
 DESCRIPTION="Motion is a video motion detector with tracking-support for webcams."
 HOMEPAGE="http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome"
@@ -15,7 +15,7 @@ DEPEND="sys-libs/zlib
 	media-libs/jpeg
 	ffmpeg? ( media-video/ffmpeg )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 src_compile() {
 	econf --without-optimizecpu \

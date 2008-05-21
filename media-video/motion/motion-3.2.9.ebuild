@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.9.ebuild,v 1.1 2007/11/19 21:09:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.9.ebuild,v 1.2 2008/05/21 16:06:38 dev-zero Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="sys-libs/zlib
 	media-video/mjpegtools
 	ffmpeg? ( media-video/ffmpeg )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 pkg_setup() {
 	enewuser motion -1 -1 -1 "video" || die "failed to create motion user"
