@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/multisync-gui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.7 2008/01/26 15:11:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.8 2008/05/21 12:46:16 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org>
+  multisync-gui-0.91.0.ebuild:
+  Move pkgconfig to DEPEND.
 
   26 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   multisync-gui-0.91.0.ebuild:
