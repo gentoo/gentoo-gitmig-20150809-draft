@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1.ebuild,v 1.3 2008/05/20 17:06:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1-r1.ebuild,v 1.1 2008/05/21 15:34:54 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,16 +14,14 @@ SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="reports"
 
 RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/pygtk-2.10.0
 	>=dev-python/gnome-python-2.6
-	>=app-text/gnome-doc-utils-0.6.1
-	media-gfx/graphviz"
+	reports? ( media-gfx/graphviz )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	app-text/scrollkeeper
 	virtual/libiconv
 	dev-util/pkgconfig"
 
@@ -43,7 +41,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
-	# tree
+	# file system
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
 }
