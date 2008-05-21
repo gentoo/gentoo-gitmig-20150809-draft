@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.44 2008/05/21 12:42:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.45 2008/05/21 17:25:36 nixnut Exp $
+
+  21 May 2008; nixnut <nixnut@gentoo.org> gnome2-wnck-0.16.ebuild:
+  Stable on ppc wrt bug 204386
 
   21 May 2008; Ferris McCormick <fmccor@gentoo.org> gnome2-wnck-0.16.ebuild:
   Sparc stable, Bug #204386.
