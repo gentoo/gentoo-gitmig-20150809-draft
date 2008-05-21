@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-3.1.7.ebuild,v 1.2 2008/05/13 20:52:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-3.1.7.ebuild,v 1.3 2008/05/21 20:19:24 opfer Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.spamdyke.org/releases/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+tls"
 
 DEPEND="tls? ( dev-libs/openssl )"
