@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/libprojectm-qt-1.1_p3.ebuild,v 1.1 2008/05/20 14:27:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/libprojectm-qt-1.1_p3.ebuild,v 1.2 2008/05/21 10:57:32 aballier Exp $
 
 EAPI=1
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 MY_TP=${P/m/M}
 MY_P=${MY_TP%_p*}
