@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-net
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.26 2007/07/28 18:50:33 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.27 2008/05/21 06:42:34 corsair Exp $
+
+  21 May 2008; Markus Rothe <corsair@gentoo.org> sdl-net-1.2.7.ebuild:
+  Stable on ppc64; bug #222995
 
   28 Jul 2007; Steve Dibb <beandog@gentoo.org> sdl-net-1.2.6.ebuild:
   amd64 stable, bug 186151
