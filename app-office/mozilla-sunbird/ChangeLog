@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.30 2008/04/19 17:04:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.31 2008/05/21 11:23:02 armin76 Exp $
+
+  21 May 2008; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.8.ebuild:
+  x86 stable
 
   19 Apr 2008; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild,
   mozilla-sunbird-0.8.ebuild:
