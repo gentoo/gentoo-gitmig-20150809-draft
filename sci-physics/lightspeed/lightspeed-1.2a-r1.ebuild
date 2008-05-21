@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.3 2008/01/08 01:21:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.4 2008/05/21 14:10:49 drac Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	doicon src/icon.xpm
+	newicon src/icon.xpm lightspeed.xpm
 	make_desktop_entry lightspeed lightspeed \
 		lightspeed.xpm "Science;Physics;Education"
 	dodoc AUTHORS ChangeLog MATH NEWS README TODO || die
