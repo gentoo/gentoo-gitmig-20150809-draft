@@ -1,9 +1,10 @@
 # ChangeLog for sci-physics/lightspeed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.8 2008/05/21 14:10:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.9 2008/05/21 14:15:11 drac Exp $
 
   21 May 2008; Samuli Suominen <drac@gentoo.org> lightspeed-1.2a-r1.ebuild:
-  Use newicon instead of doicon to install properly.
+  Use newicon instead of doicon to install properly. Remove filetype extension
+  from Icon= for Theme Specification.
 
 *lightspeed-1.2a-r1 (06 Jan 2008)
 
