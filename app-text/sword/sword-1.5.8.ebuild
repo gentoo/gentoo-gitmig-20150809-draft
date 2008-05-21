@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8.ebuild,v 1.7 2007/01/28 06:05:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8.ebuild,v 1.8 2008/05/21 12:51:33 drac Exp $
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -30,7 +30,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS CODINGSTYLE ChangeLog INSTALL README
 
-	cp -R samples examples ${D}/usr/share/doc/${PF}/
+	cp -R samples examples "${D}"/usr/share/doc/${PF}/
 }
 
 pkg_postinst() {

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.40 2008/02/22 14:18:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.41 2008/05/21 12:51:33 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org> sword-1.5.8-r2.ebuild,
+  sword-1.5.9-r2.ebuild, sword-1.5.10-r2.ebuild:
+  Move pkgconfig to DEPEND.
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org> sword-1.5.8-r2.ebuild,
+  sword-1.5.9-r2.ebuild, sword-1.5.10-r2.ebuild:
+  Move pkgconfig to DEPEND.
 
   22 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   sword-1.5.8-r2.ebuild:

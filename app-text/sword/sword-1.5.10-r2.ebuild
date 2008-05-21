@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.1 2008/02/20 04:04:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.2 2008/05/21 12:51:33 drac Exp $
 
 inherit flag-o-matic
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="curl debug doc icu lucene"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
 	icu? ( dev-libs/icu )
-	lucene? ( dev-cpp/clucene )
+	lucene? ( dev-cpp/clucene )"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
