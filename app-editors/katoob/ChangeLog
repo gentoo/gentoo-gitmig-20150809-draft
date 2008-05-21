@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/katoob
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.20 2007/10/11 19:44:58 remi Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.21 2008/05/21 07:20:53 remi Exp $
+
+*katoob-0.5.9.1 (21 May 2008)
+
+  21 May 2008; Rémi Cardona <remi@gentoo.org> +katoob-0.5.9.1.ebuild:
+  bump to 0.5.9.1 (which now deps on the new gtksourceviewmm)
 
   11 Oct 2007; Rémi Cardona <remi@gentoo.org> katoob-0.3.8.ebuild:
   update gtksourceview deps (see bug #195366)
