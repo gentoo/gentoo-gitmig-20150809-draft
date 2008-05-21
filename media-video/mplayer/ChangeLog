@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.574 2008/05/21 06:39:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.575 2008/05/21 14:14:52 fmccor Exp $
+
+  21 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  mplayer-1.0_rc2_p26753-r1.ebuild:
+  Sparc stable, Security Bug #215006.  All works well.
 
   21 May 2008; Markus Rothe <corsair@gentoo.org>
   mplayer-1.0_rc2_p26753-r1.ebuild:
