@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.152 2008/05/20 21:56:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.153 2008/05/21 15:12:05 rich0 Exp $
+
+  21 May 2008; Richard Freeman <rich0@gentoo.org> gnutls-2.2.5.ebuild:
+  amd64 stable - 222823
 
   20 May 2008; Daniel Black <dragonheart@gentoo.org> gnutls-2.2.5.ebuild:
   -m moved URL to mirror:// thanks to Blackbird on irc
