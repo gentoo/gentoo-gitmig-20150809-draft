@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/anubis
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.12 2008/05/14 22:08:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.13 2008/05/21 16:02:32 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> anubis-3.9.95.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> anubis-3.9.95.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.

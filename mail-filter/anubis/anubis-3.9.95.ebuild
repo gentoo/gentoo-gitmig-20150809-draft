@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.9.95.ebuild,v 1.7 2008/05/14 22:08:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.9.95.ebuild,v 1.8 2008/05/21 16:02:32 dev-zero Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="crypt? ( >=app-crypt/gpgme-0.9.0 )
 	guile? ( >=dev-scheme/guile-1.6 )
 	mysql? ( virtual/mysql )
 	pam?   ( virtual/pam )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	nls? ( sys-devel/gettext )
 	pcre? ( >=dev-libs/libpcre-3.9 )
 	sasl? ( virtual/gsasl )

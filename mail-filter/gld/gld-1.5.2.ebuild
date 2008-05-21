@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.6 2007/03/18 04:20:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.7 2008/05/21 16:03:03 dev-zero Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="postgres"
 DEPEND="virtual/libc
 	sys-libs/zlib
 	>=dev-libs/openssl-0.9.6
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	!postgres? ( virtual/mysql )"
 RDEPEND="${DEPEND}
 	>=mail-mta/postfix-2.1"
