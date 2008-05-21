@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.52 2008/05/18 20:58:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.53 2008/05/21 17:40:24 ulm Exp $
+
+  21 May 2008; Ulrich Mueller <ulm@gentoo.org>
+  slime-2.0_p20070816-r1.ebuild:
+  Set VARTEXFONTS, bug 223077.
 
   18 May 2008; Ulrich Mueller <ulm@gentoo.org> slime-2.0_p20061118.ebuild,
   slime-2.0_p20070816-r1.ebuild:

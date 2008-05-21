@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.4 2008/03/23 18:06:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.5 2008/05/21 17:43:55 ulm Exp $
 
 inherit distutils elisp
 
@@ -25,7 +25,8 @@ src_compile() {
 	emake || die "emake failed"
 	elisp-compile pymacs.el || die "elisp-compile failed"
 	if use doc; then
-		emake pymacs.pdf || die "emake pymacs.pdf failed"
+		VARTEXFONTS="${T}"/fonts \
+			emake pymacs.pdf || die "emake pymacs.pdf failed"
 	fi
 }
 
