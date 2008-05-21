@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/v4l-dvb-hg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.18 2008/05/15 08:59:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.19 2008/05/21 13:30:44 zzam Exp $
+
+  21 May 2008; Matthias Schwarzott <zzam@gentoo.org>
+  v4l-dvb-hg-0.1-r2.ebuild:
+  Now install the dvb header files to /usr/include/v4l-dvb-hg.
 
   15 May 2008; Matthias Schwarzott <zzam@gentoo.org>
   v4l-dvb-hg-0.1-r2.ebuild:

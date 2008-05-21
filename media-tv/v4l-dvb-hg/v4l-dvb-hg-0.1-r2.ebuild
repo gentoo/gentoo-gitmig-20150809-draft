@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.14 2008/05/15 08:59:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.15 2008/05/21 13:30:44 zzam Exp $
 
 : ${EHG_REPO_URI:=${V4L_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
 
@@ -83,6 +83,13 @@ src_unpack() {
 	|| die "Failed removing depmod call from Makefile"
 
 	grep depmod * && die "Not removed depmod found."
+
+	mkdir "${WORKDIR}"/header
+	cd "${WORKDIR}"/header
+	cp "${S}"/../linux/include/linux/dvb/* .
+	sed -e '/compiler/d' \
+		-e 's/__user//' \
+		-i *.h
 }
 
 src_install() {
@@ -97,6 +104,10 @@ src_install() {
 	cd "${S}"/..
 	dodoc linux/Documentation/dvb/*.txt
 	dosbin linux/Documentation/dvb/get_dvb_firmware
+
+	insinto /usr/include/v4l-dvb-hg/linux/dvb
+	cd "${WORKDIR}/header"
+	doins *.h
 }
 
 pkg_postinst() {
