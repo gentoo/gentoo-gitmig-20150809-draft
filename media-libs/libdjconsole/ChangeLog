@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdjconsole
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.4 2008/04/13 21:30:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.5 2008/05/21 14:05:50 fmccor Exp $
+
+  21 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  libdjconsole-0.1.2.ebuild:
+  Add ~sparc, a dependency for Bug #223015.
 
   13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   libdjconsole-0.1.2.ebuild:
