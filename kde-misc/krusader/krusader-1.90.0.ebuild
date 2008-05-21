@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0.ebuild,v 1.3 2008/05/20 19:21:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0.ebuild,v 1.4 2008/05/21 17:31:20 nixnut Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/krusader/${MY_P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 IUSE="javascript kde"
 
 DEPEND="kde? ( || ( ( =kde-base/libkonq-3.5* =kde-base/kdebase-kioslaves-3.5* )

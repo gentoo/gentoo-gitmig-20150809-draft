@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.69 2008/05/20 19:21:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.70 2008/05/21 17:31:20 nixnut Exp $
+
+  21 May 2008; nixnut <nixnut@gentoo.org> krusader-1.90.0.ebuild:
+  Stable on ppc wrt bug 222875
 
   20 May 2008; Markus Rothe <corsair@gentoo.org> krusader-1.90.0.ebuild:
   Stable on ppc64; bug #222875
