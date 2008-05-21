@@ -1,6 +1,10 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.15 2008/01/29 10:17:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.16 2008/05/21 16:02:11 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> pvpgn-1.8.0.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   29 Jan 2008; Tristan Heaven <nyhm@gentoo.org> pvpgn-1.8.0.ebuild:
   Don't specify compression type in doc elog, bug #169772
