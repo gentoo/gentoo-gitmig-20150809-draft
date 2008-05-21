@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.1 2008/05/21 08:51:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.2 2008/05/21 15:53:01 grozin Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
-SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
+SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 	doc? ( mirror://gentoo/${P}-manual-en.tar.bz2 )"
 
 LICENSE="GPL-2"
