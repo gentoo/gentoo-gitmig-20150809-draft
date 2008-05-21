@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.29 2008/04/05 10:24:24 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.30 2008/05/21 18:54:03 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> nufw-2.2.8.ebuild,
+  nufw-2.2.13.ebuild, nufw-2.2.14.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
 *nufw-2.2.14 (05 Apr 2008)
 
