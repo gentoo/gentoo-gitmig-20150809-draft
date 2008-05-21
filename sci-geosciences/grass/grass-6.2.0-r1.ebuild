@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.10 2008/03/22 02:31:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.11 2008/05/21 19:01:32 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -41,7 +41,7 @@ RDEPEND=">=sys-devel/make-3.80
 	opengl? ( ( virtual/opengl )
 	    glw? ( media-libs/mesa ) )
 	png? ( >=media-libs/libpng-1.2.2 )
-	postgres? ( >=dev-db/postgresql-7.3 )
+	postgres? ( >=virtual/postgresql-server-7.3 )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite )
