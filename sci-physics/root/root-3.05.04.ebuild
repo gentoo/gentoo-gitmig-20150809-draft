@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-3.05.04.ebuild,v 1.4 2007/12/16 05:05:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-3.05.04.ebuild,v 1.5 2008/05/21 19:02:38 dev-zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libXpm
 	>=media-libs/freetype-2.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.1.3-r4 )"
+	postgres? ( virtual/postgresql-server )"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
