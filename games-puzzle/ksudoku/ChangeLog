@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ksudoku
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.13 2008/04/20 09:01:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.14 2008/05/21 18:56:54 jokey Exp $
+
+  21 May 2008; Markus Ullmann <jokey@gentoo.org> ksudoku-0.4.ebuild:
+  Fix built_with_use check for bug #220253
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   +files/ksudoku-0.4-gcc43.patch, ksudoku-0.4.ebuild:
