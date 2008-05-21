@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.73 2008/02/11 22:40:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.74 2008/05/21 22:35:34 eva Exp $
+
+  21 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  meld-1.1.5.1-r1.ebuild:
+  don't create empty /usr/doc/meld, bug #206453
 
 *meld-1.1.5.1-r1 (11 Feb 2008)
 

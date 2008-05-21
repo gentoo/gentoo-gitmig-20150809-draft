@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.1 2008/02/11 22:40:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.2 2008/05/21 22:35:34 eva Exp $
 
 inherit python gnome2 eutils multilib
 
@@ -33,6 +33,9 @@ src_unpack() {
 	sed -i -e 's:/usr/local:/usr:' INSTALL
 	sed -i -e "s:\$(prefix)/lib:\$(prefix)/$(get_libdir):" INSTALL
 
+	# don't install anything to /usr/share/doc/meld
+	sed -i -e "s:\$(docdir)/meld:\$(docdir)/${PF}:" INSTALL
+
 	# let the python eclass handle python objects
 	sed -i -e '/$(PYTHON) .* .import compileall;/s/\t/&#/g' GNUmakefile
 
@@ -45,7 +48,7 @@ src_compile() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/$(get_libdir)/meld
+	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/meld
 }
 
 pkg_postrm() {
