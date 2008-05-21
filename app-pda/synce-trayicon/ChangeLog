@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-trayicon
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.16 2008/01/25 23:47:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.17 2008/05/21 12:48:15 drac Exp $
+
+  21 May 2008; Samuli Suominen <drac@gentoo.org>
+  synce-trayicon-0.9.0.ebuild:
+  Move pkgconfig to DEPEND.
 
   25 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   synce-trayicon-0.9.0.ebuild:
