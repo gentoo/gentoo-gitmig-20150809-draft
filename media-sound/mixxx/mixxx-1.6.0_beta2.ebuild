@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0_beta2.ebuild,v 1.4 2008/05/21 00:19:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0_beta2.ebuild,v 1.5 2008/05/21 13:44:52 fmccor Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mixxx/${MY_P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug djconsole hifieq ladspa recording shout +vinylcontrol"
 
 # TODO. It bundles libs, like samplerate, why?

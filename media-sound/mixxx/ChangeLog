@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.36 2008/05/20 23:54:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.37 2008/05/21 13:44:52 fmccor Exp $
+
+  21 May 2008; Ferris McCormick <fmccor@gentoo.org>
+  mixxx-1.6.0_beta2.ebuild:
+  Add back ~sparc for testing at developer request (drac), Bug #223015.
 
 *mixxx-1.6.0_beta2 (20 May 2008)
 
