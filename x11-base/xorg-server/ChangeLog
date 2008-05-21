@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.329 2008/05/19 05:18:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.330 2008/05/21 17:22:00 dberkholz Exp $
+
+  21 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4.0.90-r3.ebuild, xorg-server-1.4.0.90-r4.ebuild:
+  (#222683) Make sure libxf86config gets built PIC by always setting
+  SNAPSHOT=yes.
 
   19 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.4.0.90/0038-dmx-fix-build-by-adding-New-Delete-InputDeviceRequ.pa
