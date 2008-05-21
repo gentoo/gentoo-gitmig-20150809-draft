@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.17 2008/03/09 23:44:25 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.18 2008/05/21 18:57:28 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,7 +25,7 @@ DEPEND="gdbm? ( sys-libs/gdbm )
 		pam? ( >=sys-libs/pam-0.75 )
 		mysql? ( virtual/mysql )
 		ldap? ( >=net-nds/openldap-1.2.11 )
-		postgres? ( >=dev-db/postgresql-7.2 )"
+		postgres? ( >=virtual/postgresql-server-7.2 )"
 
 RDEPEND="gdbm? ( sys-libs/gdbm )
 		!gdbm? ( sys-libs/db )"

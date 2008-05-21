@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2.ebuild,v 1.3 2008/05/18 23:27:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.2.ebuild,v 1.4 2008/05/21 18:57:28 dev-zero Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-7.2 )"
+		postgres? ( >=virtual/postgresql-server-7.2 )"
 
 pkg_setup() {
 	enewuser mail -1 -1 /var/spool/mail
