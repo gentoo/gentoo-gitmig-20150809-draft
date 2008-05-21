@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.11-r102.ebuild,v 1.2 2008/05/21 18:09:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.11-r102.ebuild,v 1.3 2008/05/21 18:51:51 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ nagios-ssh nagios-game ups ipv6 radius"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.2 )
+	postgres? ( >=virtual/postgresql-server-7.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 

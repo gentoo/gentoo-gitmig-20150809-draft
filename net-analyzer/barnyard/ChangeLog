@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/barnyard
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.18 2007/12/05 22:28:27 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.19 2008/05/21 18:46:22 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  barnyard-0.2.0-r1.ebuild, barnyard-0.2.0-r2.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> barnyard-0.2.0-r2.ebuild:
   Fix some autotools mess, quotes, bugs 199118 and bug 199119, thanks to jakub

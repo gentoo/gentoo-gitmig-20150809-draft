@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.35 2008/01/26 13:23:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.36 2008/05/21 18:49:07 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  flow-tools-0.68-r5.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   26 Jan 2008; <pva@gentoo.org> flow-tools-0.68-r5.ebuild:
   Moved autotools stuff to src_unpack, bug #207463, thank Diego Pettenò

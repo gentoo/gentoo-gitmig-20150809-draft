@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.4 2007/05/01 22:50:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.5 2008/05/21 18:52:04 dev-zero Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	snmp? ( net-analyzer/net-snmp )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 RDEPEND="${RDEPEND} net-analyzer/fping"
 
 S=${WORKDIR}/${MY_P}-${MY_PV}

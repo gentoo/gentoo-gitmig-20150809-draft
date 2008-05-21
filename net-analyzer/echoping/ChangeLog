@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.14 2008/01/26 10:36:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.15 2008/05/21 18:47:00 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   26 Jan 2008; <pva@gentoo.org> echoping-6.0.2.ebuild:
   Do not die if ssl and gnutls are enabled, better chose gnutls, thank Paul

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.3 2008/01/26 10:36:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.4 2008/05/21 18:47:00 dev-zero Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="gnutls http icp idn priority smtp ssl tos postgres ldap"
 DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	idn? ( net-dns/libidn )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	ldap? ( net-nds/openldap )"
 
 src_compile() {

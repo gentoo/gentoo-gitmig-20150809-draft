@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipac-ng
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.27 2007/10/28 13:52:51 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.28 2008/05/21 18:49:18 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> ipac-ng-1.31-r2.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   28 Oct 2007; Christian Heim <phreak@gentoo.org> ipac-ng-1.31-r2.ebuild:
   Include virtual/logger in RDEPEND, as the initscript already specifies 'need

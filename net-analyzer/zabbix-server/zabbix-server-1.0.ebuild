@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.6 2007/07/11 23:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.7 2008/05/21 18:52:04 dev-zero Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="snmp mysql postgres"
 
 DEPEND="snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:"
 RDEPEND="net-analyzer/fping"
