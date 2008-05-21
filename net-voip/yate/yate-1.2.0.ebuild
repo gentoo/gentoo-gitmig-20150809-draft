@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.2.0.ebuild,v 1.2 2007/06/26 02:38:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.2.0.ebuild,v 1.3 2008/05/21 19:01:06 dev-zero Exp $
 
 IUSE="doc gsm gtk h323 ilbc postgres zaptel"
 
@@ -23,7 +23,7 @@ DEPEND="media-sound/sox
 	gtk? ( >=x11-libs/gtk+-2.6.8 )
 	gsm? ( media-sound/gsm )
 	doc? ( >=dev-util/kdoc-2.0_alpha54 )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 src_unpack() {
 	unpack ${A}
