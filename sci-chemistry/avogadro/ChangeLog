@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.10 2008/05/19 20:17:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.11 2008/05/21 08:19:00 tove Exp $
 
 *avogadro-0.8.0 (19 May 2008)
 
@@ -27,7 +27,7 @@
   23 Oct 2007; Marcus D. Hanwell <cryos@gentoo.org> +avogadro-0.2.0.ebuild:
   Version bump.
 
-  01 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-avogadro-0.1.0, Manifest:
   (QA) Add digests.
 
