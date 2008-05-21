@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.89 2008/04/08 09:30:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.90 2008/05/21 12:40:28 fmccor Exp $
+
+  21 May 2008; Ferris McCormick <fmccor@gentoo.org> glib-perl-1.182.ebuild:
+  Sparc stable, required for Bug #204386.
 
 *glib-perl-1.182 (08 Apr 2008)
 
