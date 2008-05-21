@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.1 2008/05/21 11:15:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.2 2008/05/21 15:18:08 armin76 Exp $
+
+  21 May 2008; Raúl Porcel <armin76@gentoo.org> xfmpc-0.0.6.ebuild:
+  Add ~sparc/~x86
 
   21 May 2008; Samuli Suominen <drac@gentoo.org> +xfmpc-0.0.6.ebuild:
   Move from xfce-extra.
