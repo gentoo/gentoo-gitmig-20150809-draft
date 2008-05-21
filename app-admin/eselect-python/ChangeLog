@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.2 2008/05/21 10:25:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.3 2008/05/21 12:44:57 hawking Exp $
+
+*eselect-python-20080521 (21 May 2008)
+
+  21 May 2008; Ali Polatel <hawking@gentoo.org>
+  +eselect-python-20080521.ebuild:
+  Version bump. Implemented update --if-unset so it can be used from ebuilds
+  easily.
 
   21 May 2008; Ali Polatel <hawking@gentoo.org>
   eselect-python-20080124.ebuild:
