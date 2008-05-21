@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.4 2008/05/14 22:01:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.5 2008/05/21 18:53:26 dev-zero Exp $
 
 inherit libtool eutils pam
 
@@ -19,7 +19,7 @@ DEPEND="!net-dialup/freeradius
 	!net-dialup/cistronradius
 	guile? ( >=dev-scheme/guile-1.4 )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
 	readline? ( sys-libs/readline )
 	dbm? ( sys-libs/gdbm )

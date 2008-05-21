@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.77 2008/05/14 21:15:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.78 2008/05/21 18:53:24 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  freeradius-1.1.7.ebuild, freeradius-2.0.3.ebuild, freeradius-2.0.4.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
 *freeradius-2.0.4 (14 May 2008)
 
