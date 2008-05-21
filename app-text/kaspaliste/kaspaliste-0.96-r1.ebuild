@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.6 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.7 2008/05/21 15:53:54 dev-zero Exp $
 
 ARTS_REQUIRED="yes"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-7.3"
+DEPEND=">=virtual/postgresql-server-7.3"
 need-kde 3
 
 src_unpack() {

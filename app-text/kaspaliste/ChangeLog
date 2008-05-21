@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kaspaliste
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.12 2007/01/28 05:53:42 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.13 2008/05/21 15:53:54 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  kaspaliste-0.96-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> kaspaliste-0.96-r1.ebuild:
   Replacing einfo with elog
