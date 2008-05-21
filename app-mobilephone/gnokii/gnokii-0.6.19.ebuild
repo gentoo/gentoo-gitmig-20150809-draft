@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.19.ebuild,v 1.1 2007/10/25 20:43:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.19.ebuild,v 1.2 2008/05/21 15:52:49 dev-zero Exp $
 
 inherit eutils linux-info
 
@@ -18,7 +18,7 @@ RESTRICT="test" #test fails; maybe it will work in the future, but till then...
 RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
 	sms? ( >=dev-libs/glib-2.10.3
-	       postgres? ( >=dev-db/postgresql-8.0.8 )
+	       postgres? ( >=virtual/postgresql-server-8.0 )
 	       mysql? ( >=virtual/mysql-4.1 )
 	     )
 	ical? ( >=dev-libs/libical-0.26.6 )

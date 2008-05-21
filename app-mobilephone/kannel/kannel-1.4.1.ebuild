@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.6 2008/05/14 21:59:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.7 2008/05/21 15:52:40 dev-zero Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.26
 	mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( >=dev-db/sqlite-3.2.1 )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	pcre? ( dev-libs/libpcre )
 	doc? ( media-gfx/transfig
 		app-text/jadetex

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.5 2008/03/24 12:28:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.6 2008/05/21 15:52:49 dev-zero Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -20,7 +20,7 @@ RESTRICT="test" #test fails; maybe it will work in the future, but till then...
 RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
 	sms? ( >=dev-libs/glib-2.10.3
-	       postgres? ( >=dev-db/postgresql-8.0.8 )
+	       postgres? ( >=virtual/postgresql-server-8.0 )
 	       mysql? ( >=virtual/mysql-4.1 )
 	     )
 	ical? ( >=dev-libs/libical-0.26.6 )

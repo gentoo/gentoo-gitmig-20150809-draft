@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.12.0.ebuild,v 1.2 2007/08/22 07:05:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.12.0.ebuild,v 1.3 2008/05/21 15:51:48 dev-zero Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,7 @@ IUSE="debug bluetooth irda mysql postgres nls"
 
 RDEPEND="bluetooth? ( net-wireless/bluez-libs )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	dev-util/dialog"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
