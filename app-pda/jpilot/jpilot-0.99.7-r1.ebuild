@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7-r1.ebuild,v 1.11 2007/01/24 03:30:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7-r1.ebuild,v 1.12 2008/05/21 12:44:39 drac Exp $
 
 inherit eutils multilib
 
@@ -21,10 +21,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} || die
+	cd "${S}"
 
 	# Patch for gcc-2.95 compilation, thanks to Matt Black in #70127
-	epatch ${FILESDIR}/jpilot-0.99.7-gcc2.patch
+	epatch "${FILESDIR}"/jpilot-0.99.7-gcc2.patch
 
 	# There are four icons available.  Use the third.
 	sed -i 's/jpilot.xpm/jpilot-icon3.xpm/' jpilot.desktop || die
@@ -36,18 +36,18 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} \
+	make install DESTDIR="${D}" \
 		libdir=/usr/$(get_libdir) \
 		docdir=/usr/share/doc/${PF} \
 		icondir=/usr/share/pixmaps \
 		desktopdir=/usr/share/applications || die "install failed"
 
-	dodoc README TODO UPGRADING ABOUT-NLS BUGS ChangeLog COPYING INSTALL
+	dodoc README TODO UPGRADING BUGS ChangeLog
 	doman docs/*.1
 
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
-	doins ${S}/jpilotrc.*
+	doins "${S}"/jpilotrc.*
 }
 
 pkg_postinst() {

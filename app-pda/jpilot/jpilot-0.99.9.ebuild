@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.9.ebuild,v 1.5 2008/02/17 18:35:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.9.ebuild,v 1.6 2008/05/21 12:44:39 drac Exp $
 
 inherit eutils multilib
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="nls"
 
-DEPEND=">=app-pda/pilot-link-0.11.8
-		>=x11-libs/gtk+-2.6.10-r1
-		nls? ( sys-devel/gettext )
-		>=dev-perl/XML-Parser-2.34
-		>=dev-util/pkgconfig-0.22"
-RDEPEND="${DEPEND}"
+RDEPEND=">=app-pda/pilot-link-0.11.8
+	>=x11-libs/gtk+-2.6.10-r1"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	>=dev-perl/XML-Parser-2.34
+	>=dev-util/pkgconfig-0.22"
 
 src_unpack() {
 	unpack ${A}
