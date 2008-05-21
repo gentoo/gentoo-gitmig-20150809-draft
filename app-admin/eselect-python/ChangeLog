@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.1 2008/01/24 06:16:55 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.2 2008/05/21 10:25:05 hawking Exp $
+
+  21 May 2008; Ali Polatel <hawking@gentoo.org>
+  eselect-python-20080124.ebuild:
+  Keyworded ~amd64
 
 *eselect-python-20080124 (24 Jan 2008)
 
