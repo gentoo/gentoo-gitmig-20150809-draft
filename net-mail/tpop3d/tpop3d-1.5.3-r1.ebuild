@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.5 2007/06/12 13:08:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.6 2008/05/21 18:59:22 dev-zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	ssl?		( >=dev-libs/openssl-0.9.6 )
 	ldap? 		( >=net-nds/openldap-2.0.7 )
 	mysql? 		( virtual/mysql )
-	postgres?	( >=dev-db/postgresql-7.3 )
+	postgres?	( >=virtual/postgresql-server-7.3 )
 	perl?		( >=dev-lang/perl-5.6.1 )
 	pam? 		( >=sys-libs/pam-0.75
 				  >=net-mail/mailbase-0.00-r8 )

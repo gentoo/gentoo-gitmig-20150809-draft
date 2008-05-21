@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.159 2008/03/17 04:55:13 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.160 2008/05/21 18:57:42 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  courier-imap-3.0.8.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   17 Mar 2008; <ricmm@gentoo.org> courier-imap-3.0.8.ebuild,
   courier-imap-4.0.1.ebuild, courier-imap-4.0.4.ebuild:

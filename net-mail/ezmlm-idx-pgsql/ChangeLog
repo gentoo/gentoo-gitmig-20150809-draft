@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/ezmlm-idx-pgsql
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ChangeLog,v 1.9 2006/11/23 16:06:46 vivo Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ChangeLog,v 1.10 2008/05/21 18:58:31 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  ezmlm-idx-pgsql-0.40-r2.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   ezmlm-idx-pgsql-0.40-r2.ebuild:

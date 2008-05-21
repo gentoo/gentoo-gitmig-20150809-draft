@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.24 2008/05/14 23:00:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.25 2008/05/21 18:59:22 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> tpop3d-1.5.3.ebuild,
+  tpop3d-1.5.3-r1.ebuild, tpop3d-1.5.4.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> tpop3d-1.5.4.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.

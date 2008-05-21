@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/teapop
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.23 2007/04/22 09:13:32 ticho Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.24 2008/05/21 18:59:10 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> teapop-0.3.8.ebuild,
+  teapop-0.3.8-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   22 Apr 2007; Andrej Kacian <ticho@gentoo.org> teapop-0.3.8.ebuild,
   teapop-0.3.8-r1.ebuild:

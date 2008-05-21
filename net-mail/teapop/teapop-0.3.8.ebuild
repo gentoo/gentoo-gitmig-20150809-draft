@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8.ebuild,v 1.8 2007/04/22 09:13:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8.ebuild,v 1.9 2008/05/21 18:59:10 dev-zero Exp $
 
 DESCRIPTION="Tiny POP3 server"
 SRC_URI="ftp://ftp.toontown.org/pub/teapop/${P}.tar.gz"
 HOMEPAGE="http://www.toontown.org/teapop/"
 DEPEND="virtual/libc
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.0 )
+	postgres? ( >=virtual/postgresql-server-7.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	java? ( virtual/jre )"

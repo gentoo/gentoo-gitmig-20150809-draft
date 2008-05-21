@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.163 2008/05/20 18:24:05 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.164 2008/05/21 18:58:16 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  dovecot-1.0.13-r1.ebuild, dovecot-1.0.13-r5.ebuild,
+  dovecot-1.1_rc5-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
 *dovecot-1.1_rc5-r1 (20 May 2008)
 *dovecot-1.0.13-r5 (20 May 2008)
