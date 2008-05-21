@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.170 2008/04/24 18:04:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.171 2008/05/21 18:54:35 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  proftpd-1.3.1_rc2-r3.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   24 Apr 2008; Luca Longinotti <chtekk@gentoo.org>
   +files/proftpd-1.3.1-bug218850.patch, proftpd-1.3.1.ebuild:

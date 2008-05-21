@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.74 2008/04/21 09:49:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.75 2008/05/21 18:54:39 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  pure-ftpd-1.0.21-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   21 Apr 2008; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
   Metadata update.
