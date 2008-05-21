@@ -1,14 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.3.0_beta1.ebuild,v 1.1 2008/04/23 13:25:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.3.0.ebuild,v 1.1 2008/05/21 18:10:19 caleb Exp $
 
 inherit eutils
 
-MY_P=Ice-3.3b
-
 DESCRIPTION="ICE middleware C++ bindings"
 HOMEPAGE="http://www.zeroc.com/index.html"
-SRC_URI="http://www.zeroc.com/download/Ice/3.3/${MY_P}.tar.gz"
+SRC_URI="http://www.zeroc.com/download/Ice/3.3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,7 +23,7 @@ DEPEND="${RDEPEND}
 	ncurses? ( sys-libs/ncurses sys-libs/readline )
 	test? ( >=dev-lang/python-2.4 )"
 
-S=${WORKDIR}/${MY_P}/cpp
+S=${WORKDIR}/${P}/cpp
 
 pkg_setup() {
 	if built_with_use sys-libs/db nocxx; then
