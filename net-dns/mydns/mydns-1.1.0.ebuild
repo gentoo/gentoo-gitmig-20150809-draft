@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.10 2007/05/06 08:58:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.11 2008/05/21 18:53:56 dev-zero Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="debug nls postgres ssl static zlib"
 RDEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	!postgres? ( virtual/mysql )"
 DEPEND="${RDEPEND}
 	sys-devel/bison"

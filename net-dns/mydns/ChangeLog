@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/mydns
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.30 2007/11/02 04:21:02 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.31 2008/05/21 18:53:56 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> mydns-1.1.0.ebuild,
+  mydns-1.1.0-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> mydns-1.1.0-r1.ebuild:
   amd64 stable, bug 196072
