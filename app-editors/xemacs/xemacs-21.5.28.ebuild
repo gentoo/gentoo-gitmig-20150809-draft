@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.28.ebuild,v 1.1 2008/05/04 01:54:46 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.28.ebuild,v 1.2 2008/05/21 15:50:20 dev-zero Exp $
 
 inherit autotools eutils
 
@@ -37,7 +37,7 @@ DEPEND="virtual/libc
 	nas? ( media-libs/nas )
 	ncurses? ( sys-libs/ncurses )
 	png? ( media-libs/libpng )
-	postgres? ( >=dev-db/postgresql-7.2 )
+	postgres? ( >=virtual/postgresql-server-7.2 )
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	tiff? ( media-libs/tiff )
 	xface? ( media-libs/compface )
