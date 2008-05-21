@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.5 2006/11/23 19:37:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.6 2008/05/21 16:00:14 dev-zero Exp $
 
 inherit common-lisp eutils multilib
 
@@ -17,7 +17,7 @@ DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	dev-lisp/cl-md5
 	>=dev-lisp/cl-uffi-1.4.38
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( =dev-db/sqlite-3* )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.33 2008/05/19 19:41:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.34 2008/05/21 16:00:14 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> cl-sql-3.2.1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> cl-sql-3.7.0.ebuild,
   cl-sql-3.7.1.ebuild, cl-sql-3.7.7.ebuild:
