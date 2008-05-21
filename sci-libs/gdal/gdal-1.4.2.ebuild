@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.4.2.ebuild,v 1.3 2008/01/04 05:24:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.4.2.ebuild,v 1.4 2008/05/21 19:01:41 dev-zero Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
@@ -30,7 +30,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	ogdi? ( sci-libs/ogdi )
 	gml? ( <dev-libs/xerces-c-2.8.0 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	|| (
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )
