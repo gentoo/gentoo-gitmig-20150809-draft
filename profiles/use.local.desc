@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3549 2008/05/21 13:44:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3550 2008/05/21 14:12:11 voyageur Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1692,6 +1692,7 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:realms - Enable realms support (see http://vcalinus.gemenii.ro/quaggarealms.html)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are chosen otherwise.
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
+net-misc/rdesktop:pcsc-lite - Enable smartcard support with pcsc-lite driver
 net-misc/scponly:rsync - Enabling rsync compatibility with potential security risks
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites.  sftp is a much more secure protocol and is preferred.
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  This system allows users to collaborate on websites using a web based interface.  See the ebuild for an FAQ page.  Enables neon as well to handle webdav support.
