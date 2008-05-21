@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.2.ebuild,v 1.7 2007/03/03 23:02:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.2.ebuild,v 1.8 2008/05/21 15:59:25 dev-zero Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	>=dev-libs/libprelude-0.9.0
 	doc? ( dev-util/gtk-doc )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( virtual/postgresql-server )"
 
 src_compile() {
 	local myconf

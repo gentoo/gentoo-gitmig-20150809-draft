@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.13.ebuild,v 1.5 2007/12/25 14:58:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.13.ebuild,v 1.6 2008/05/21 15:59:25 dev-zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	>=dev-libs/libprelude-0.9.10
 	doc? ( dev-util/gtk-doc )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( virtual/postgresql-server )
 	sqlite3? ( =dev-db/sqlite-3* )"
 RDEPEND="${DEPEND}"
 
