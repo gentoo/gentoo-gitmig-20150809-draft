@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9.ebuild,v 1.4 2008/05/19 19:48:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9.ebuild,v 1.5 2008/05/21 06:37:06 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -31,6 +31,7 @@ CONFIG_CHECK="SERIAL_8250"
 SERIAL_8250_ERROR="This driver requires you to compile your kernel with serial core (CONFIG_SERIAL_8250) support."
 
 pkg_setup() {
+	kernel_is ge 2 6 24 && CONFIG_CHECK="${CONFIG_CHECK} PCI_LEGACY"
 	linux-mod_pkg_setup
 
 	if kernel_is 2 4; then
