@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.65 2008/05/21 18:59:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.66 2008/05/21 19:12:16 opfer Exp $
+
+  21 May 2008; Christian Faulhammer <opfer@gentoo.org> nagios-2.12.ebuild:
+  stable x86, security bug 208398
 
   21 May 2008; Ferris McCormick <fmccor@gentoo.org> nagios-2.12.ebuild:
   Sparc stable, Security Bug #208398.
