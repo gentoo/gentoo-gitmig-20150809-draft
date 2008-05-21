@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/qtada-1.0.3.ebuild,v 1.1 2008/05/20 09:32:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/qtada-1.0.3.ebuild,v 1.2 2008/05/21 16:42:20 mr_bones_ Exp $
 
 # We only need gnat.eclass for a few vars and helper functions.
 # We will not use src_* functions though.
@@ -38,7 +38,6 @@ pkg_setup() {
 		die "Rebuild qt-4 with USE=accessibility"
 	fi
 }
-
 
 # As this version of qtada only compiles with gnat-gpl-4.1 and we already
 # verified that it is active, we do not switch profiles or do any majic here.
