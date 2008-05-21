@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.41 2008/05/21 17:12:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.42 2008/05/21 19:06:06 nixnut Exp $
+
+  21 May 2008; nixnut <nixnut@gentoo.org> glob2-0.9.3.ebuild:
+  Stable on ppc wrt bug 223097
 
   21 May 2008; Jeroen Roovers <jer@gentoo.org> glob2-0.9.3.ebuild:
   Marked ~hppa too.

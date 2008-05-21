@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.5 2008/05/21 17:12:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.3.ebuild,v 1.6 2008/05/21 19:06:06 nixnut Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.sv.nongnu.org/releases/glob2/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
