@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.235 2008/05/20 19:08:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.236 2008/05/21 11:58:33 armin76 Exp $
+
+  21 May 2008; Raúl Porcel <armin76@gentoo.org> hal-0.5.11.ebuild:
+  Add ~ia64 wrt #222899
 
   20 May 2008; Ferris McCormick <fmccor@gentoo.org> hal-0.5.11.ebuild:
   Add back ~sparc keyword, Bug #222899.
