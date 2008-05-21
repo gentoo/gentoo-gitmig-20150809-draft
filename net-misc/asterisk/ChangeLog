@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.179 2008/03/25 16:12:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.180 2008/05/21 19:00:02 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> asterisk-1.2.13.ebuild,
+  asterisk-1.2.13-r1.ebuild, asterisk-1.2.14.ebuild,
+  asterisk-1.2.14-r1.ebuild, asterisk-1.2.14-r2.ebuild,
+  asterisk-1.2.17.ebuild, asterisk-1.2.17-r1.ebuild,
+  asterisk-1.2.21.1.ebuild, asterisk-1.2.21.1-r1.ebuild,
+  asterisk-1.2.27.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   25 Mar 2008; Ferris McCormick <fmccor@gentoo.org> asterisk-1.2.27.ebuild:
   Sparc stable, security Bug #213883.
