@@ -1,6 +1,11 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.23 2008/03/14 10:40:04 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.24 2008/05/21 19:00:41 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  pykota-1.25_p2437-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Christian Andreetta (satya, #48841) from metadata.xml.
