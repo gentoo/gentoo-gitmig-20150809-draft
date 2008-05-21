@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1_alpha3.ebuild,v 1.5 2007/07/02 19:47:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1_alpha3.ebuild,v 1.6 2008/05/21 15:54:06 dev-zero Exp $
 
 inherit eutils python
 
@@ -30,7 +30,7 @@ IUSE="doc firebird mysql odbc postgres sqlite sqlite3"
 
 RDEPEND="firebird? ( dev-db/firebird )
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.3 )
+	postgres? ( >=virtual/postgresql-server-7.3 )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"

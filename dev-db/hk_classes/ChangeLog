@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.56 2008/04/25 23:38:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.57 2008/05/21 15:54:06 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  hk_classes-0.7.1.ebuild, hk_classes-0.7.4a.ebuild,
+  hk_classes-0.8.1_alpha3.ebuild, hk_classes-0.8.1.ebuild,
+  hk_classes-0.8.2_alpha3.ebuild, hk_classes-0.8.3.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   25 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/hk_classes-0.8.3-gcc43.patch, hk_classes-0.8.3.ebuild:

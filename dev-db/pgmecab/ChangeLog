@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgmecab
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/ChangeLog,v 1.1 2007/01/15 08:43:09 nakano Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/ChangeLog,v 1.2 2008/05/21 15:56:55 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> pgmecab-1.1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
 *pgmecab-1.1 (15 Jan 2007)
 

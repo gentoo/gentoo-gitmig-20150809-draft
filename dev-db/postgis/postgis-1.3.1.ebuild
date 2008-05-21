@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.1.ebuild,v 1.4 2008/02/25 13:23:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.1.ebuild,v 1.5 2008/05/21 15:57:24 dev-zero Exp $
 
 inherit autotools eutils versionator
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="geos proj doc"
 
-RDEPEND=">=dev-db/postgresql-7.4
+RDEPEND=">=virtual/postgresql-server-7.4
 	geos? ( sci-libs/geos )
 	proj? ( sci-libs/proj )"
 

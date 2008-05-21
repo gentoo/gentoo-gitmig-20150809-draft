@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.2.7.ebuild,v 1.5 2005/07/09 15:40:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.2.7.ebuild,v 1.6 2008/05/21 15:54:48 dev-zero Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 IUSE="arts"
 
-DEPEND="dev-db/postgresql
+DEPEND="virtual/postgresql-server
 	>=dev-libs/libpqxx-2.2.1"
 
 need-kde 3.2

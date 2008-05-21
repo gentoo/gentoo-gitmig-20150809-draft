@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgaccess
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.14 2007/02/05 23:30:17 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.15 2008/05/21 15:56:32 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> pgaccess-0.98.8.ebuild,
+  pgaccess-0.99.0.20040219.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.19 2008/03/14 09:57:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.20 2008/05/21 15:58:19 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> slony1-1.1.5.ebuild,
+  slony1-1.2.10.ebuild, slony1-1.2.12.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> slony1-1.1.5.ebuild,
   slony1-1.2.10.ebuild, slony1-1.2.12.ebuild:

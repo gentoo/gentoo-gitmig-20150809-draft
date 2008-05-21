@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/pgmecab-1.1.ebuild,v 1.1 2007/01/15 08:43:09 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/pgmecab-1.1.ebuild,v 1.2 2008/05/21 15:56:55 dev-zero Exp $
 
 DESCRIPTION="PostgreSQL function to Wakachigaki for Japanese words"
 HOMEPAGE="http://www.emaki.minidns.net/Programming/postgres/index.html"
 SRC_URI="http://www.emaki.minidns.net/Programming/postgres/${P}.tar.bz2"
 
 DEPEND="app-text/mecab
-	>=dev-db/postgresql-7.4"
+	>=virtual/postgresql-server-7.4"
 
 LICENSE="GPL-2"
 SLOT="0"
