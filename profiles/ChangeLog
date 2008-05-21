@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1441 2008/05/21 10:50:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1442 2008/05/21 11:17:17 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 May 2008; Samuli Suominen <drac@gentoo.org> updates/2Q-2008:
+  Move xfce-extra/xfmpc to media-sound/xfmpc.
 
   21 May 2008; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
   Added local USE flag 'cupsddk' for net-print/hplip.
