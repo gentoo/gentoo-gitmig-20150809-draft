@@ -1,0 +1,62 @@
+diff -r -U2 qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro qtiplot-0.9.6.2/qtiplot/qtiplot.pro
+--- qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro	2008-05-19 14:26:41.000000000 +0700
++++ qtiplot-0.9.6.2/qtiplot/qtiplot.pro	2008-05-21 23:15:15.000000000 +0700
+@@ -18,5 +18,5 @@
+ # the *.path variables defined bellow.
+ ######################################################################################
+-#CONFIG          += CustomInstall
++CONFIG          += CustomInstall
+ 
+ CONFIG          += release
+@@ -28,10 +28,9 @@
+ #############################################################################
+ 
+-INCLUDEPATH       += ../3rdparty/muparser/include
+-INCLUDEPATH       += ../3rdparty/qwtplot3d/include
+-INCLUDEPATH       += ../3rdparty/qwt/src
+-INCLUDEPATH       += ../3rdparty/liborigin
+-INCLUDEPATH       += ../3rdparty/gsl/include
+-INCLUDEPATH       += ../3rdparty/zlib123/include
++INCLUDEPATH       += /usr/include/muparser
++INCLUDEPATH       += /usr/include/qwtplot3d
++INCLUDEPATH       += /usr/include/qwt5
++INCLUDEPATH       += /usr/include/liborigin
++INCLUDEPATH       += /usr/include/gsl
+ 
+ ##################### 3rd PARTY LIBRARIES SECTION ###########################
+@@ -42,15 +41,17 @@
+ 
+ # statically link against libraries in 3rdparty
+-unix:LIBS         += ../3rdparty/muparser/lib/libmuparser.a
+-unix:LIBS         += ../3rdparty/qwtplot3d/lib/libqwtplot3d.a
+-unix:LIBS         += ../3rdparty/qwt/lib/libqwt.a
+-unix:LIBS         += ../3rdparty/gsl/lib/libgsl.a
+-unix:LIBS         += ../3rdparty/gsl/lib/libgslcblas.a
++#unix:LIBS         += ../3rdparty/muparser/lib/libmuparser.a
++#unix:LIBS         += ../3rdparty/qwtplot3d/lib/libqwtplot3d.a
++#unix:LIBS         += ../3rdparty/qwt/lib/libqwt.a
++#unix:LIBS         += ../3rdparty/gsl/lib/libgsl.a
++#unix:LIBS         += ../3rdparty/gsl/lib/libgslcblas.a
+ 
+ # dynamically link against dependencies if they are installed system-wide
+-#unix:LIBS         += -lmuparser
+-#unix:LIBS         += -lqwtplot3d
+-#unix:LIBS         += -lqwt
+-#unix:LIBS         += -lgsl -lgslcblas
++unix:LIBS         += -lmuparser
++unix:LIBS         += -lqwtplot3d
++unix:LIBS         += -lqwt
++unix:LIBS         += $$system(pkg-config --libs gsl)
++unix:LIBS         += -lorigin
++unix:LIBS         += -lz
+ 
+ ##################### Windows ###############################################
+@@ -240,6 +241,6 @@
+ ###############################################################
+ 
+-	HEADERS += ../3rdparty/liborigin/OPJFile.h
+-	SOURCES += ../3rdparty/liborigin/OPJFile.cpp
++#	HEADERS += ../3rdparty/liborigin/OPJFile.h
++#	SOURCES += ../3rdparty/liborigin/OPJFile.cpp
+ 
+ ###############################################################
