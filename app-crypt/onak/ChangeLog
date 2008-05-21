@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/onak
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/ChangeLog,v 1.4 2007/05/23 14:19:53 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/ChangeLog,v 1.5 2008/05/21 15:49:17 dev-zero Exp $
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> onak-0.3.3-r1.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
 
 *onak-0.3.3-r1 (23 May 2007)
 
