@@ -1,6 +1,12 @@
 # ChangeLog for app-text/man2html
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.19 2007/09/01 12:38:24 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.20 2008/05/21 23:35:12 mpagano Exp $
+
+*man2html-1.6f (21 May 2008)
+
+  21 May 2008; Mike Pagano <mpagano@gentoo.org> +files/mansec-1.6f.patch,
+  +man2html-1.6f.ebuild:
+  Version bump. Added patch from bug #174730 tks to Ed Catmur
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
