@@ -1,11 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.3.0_beta1.ebuild,v 1.1 2008/04/23 13:28:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.3.0.ebuild,v 1.1 2008/05/21 18:12:04 caleb Exp $
 
 inherit eutils
 
 MY_P=${P/Ruby/}
-MY_P=${MY_P/3.3.0_beta1/3.3b}
 
 DESCRIPTION="ICE middleware C++ bindings"
 HOMEPAGE="http://www.zeroc.com/index.html"
@@ -18,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="test debug"
 
-RDEPEND="~dev-cpp/Ice-3.3.0_beta1
+RDEPEND="~dev-cpp/Ice-3.3.0
 	>=dev-lang/ruby-1.8.6"
 
 DEPEND="${RDEPEND}
