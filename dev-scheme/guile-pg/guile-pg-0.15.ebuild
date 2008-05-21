@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-pg/guile-pg-0.15.ebuild,v 1.3 2007/07/15 06:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-pg/guile-pg-0.15.ebuild,v 1.4 2008/05/21 16:01:30 dev-zero Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 SLOT="0"
 
 DEPEND="virtual/libc
-		dev-db/postgresql
+		virtual/postgresql-server
 		dev-scheme/guile"
 
 src_compile() {
