@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.38 2008/01/27 20:16:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.39 2008/05/21 01:55:03 williamh Exp $
+
+*mbrola-3.0.1h-r5 (21 May 2008)
+
+  21 May 2008; William Hubbs <williamh@gentoo.org> +mbrola-3.0.1h-r5.ebuild:
+  Rev bump for bug #222787. Added Latin and Polish voices for bug #197837.
 
   27 Jan 2008; William Hubbs <williamh@gentoo.org> -mbrola-3.0.1h-r1.ebuild,
   -mbrola-3.0.1h-r3.ebuild:
