@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.184 2008/05/22 17:40:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.185 2008/05/22 22:46:12 eva Exp $
+
+  22 May 2008; Gilles Dartiguelongue <eva@gentoo.org> libxslt-1.1.24.ebuild:
+  Fix broken <python-2.5 site-packages detection, see bug #86756 and bug
+  #218643.
 
   22 May 2008; Raúl Porcel <armin76@gentoo.org> libxslt-1.1.24.ebuild:
   ia64 stable wrt #222499
