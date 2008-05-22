@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1447 2008/05/21 19:30:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1448 2008/05/22 02:43:04 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 May 2008; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Mask dev-cpp/libwrapiter for removal
 
   21 May 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Add revision of timidity++ into portaudio v19 mask.
