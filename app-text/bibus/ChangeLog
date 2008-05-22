@@ -1,6 +1,14 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.5 2008/02/08 14:16:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.6 2008/05/22 14:18:45 markusle Exp $
+
+*bibus-1.4.3 (22 May 2008)
+
+  22 May 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/bibus-1.4.3-install.patch, +bibus-1.4.3.ebuild:
+  Version bump and added fixed desktop entry file (fixes bugs #223173 and
+  #168037). Thanks much to Attila Tóth <atoth@atoth.sote.hu> for his
+  patches.
 
 *bibus-1.4.0_rc2 (08 Feb 2008)
 
