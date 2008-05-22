@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.20 2008/04/06 12:18:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.21 2008/05/22 14:45:33 bicatali Exp $
+
+  22 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  cgkit-2.0.0_alpha7.ebuild, cgkit-2.0.0_alpha8.ebuild:
+  Added ~amd64 move scons to DEPEND, and removed unecessary numarray
+  dependencies.
 
 *cgkit-2.0.0_alpha8 (06 Apr 2008)
 

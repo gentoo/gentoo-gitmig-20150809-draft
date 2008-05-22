@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.1 2008/04/06 12:18:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.2 2008/05/22 14:45:33 bicatali Exp $
 
 inherit distutils flag-o-matic
 
@@ -8,19 +8,20 @@ MY_P=${P/_/}
 DESCRIPTION="Python library for creating 3D images"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://cgkit.sourceforge.net"
-DEPEND="dev-lang/python
+RDEPEND="dev-lang/python
 	dev-python/pyrex
-	dev-util/scons
 	dev-libs/boost
 	dev-python/pyprotocols
-	dev-python/numarray
 	dev-python/pyopengl
 	dev-python/pygame
 	dev-python/imaging
 	3ds? ( media-libs/lib3ds )"
+DEPEND="${RDEPEND}
+	dev-util/scons"
+
 SLOT="0"
 LICENSE="LGPL-2.1 MPL-1.1 GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="3ds"
 
 S=${WORKDIR}/${MY_P}
