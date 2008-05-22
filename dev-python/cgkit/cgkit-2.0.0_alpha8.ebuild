@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.2 2008/05/22 14:45:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.3 2008/05/22 20:46:25 maekke Exp $
 
 inherit distutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="LGPL-2.1 MPL-1.1 GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="3ds"
 
 S=${WORKDIR}/${MY_P}
