@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.0.0012.ebuild,v 1.1 2008/04/13 13:45:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.0.0012.ebuild,v 1.2 2008/05/22 21:56:23 maekke Exp $
 
 inherit versionator
 
@@ -69,7 +69,7 @@ src_install() {
 	# Copy all the example code.
 	cd usr/local/Cg/examples
 	for dir in $(find . -type d) ; do
-		insinto usr/share/doc/${PF}/examples/${dir}
-		doins ${dir}/*
+		insinto usr/share/doc/${PF}/examples/"${dir}"
+		doins "${dir}"/*
 	done
 }
