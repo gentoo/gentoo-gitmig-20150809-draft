@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8.ebuild,v 1.6 2007/10/13 00:03:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8.ebuild,v 1.7 2008/05/22 18:26:27 maekke Exp $
 
 inherit wxwidgets eutils
 DESCRIPTION="Comical is a sequential image display program, to deal with .cbr and .cbz files."
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	dobin comical
-	dodoc AUTHORS ChangeLog COPYING README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
