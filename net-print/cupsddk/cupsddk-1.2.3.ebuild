@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/cupsddk-1.2.3.ebuild,v 1.3 2008/03/02 15:02:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/cupsddk-1.2.3.ebuild,v 1.4 2008/05/22 07:34:56 corsair Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="fltk"
 
 DEPEND=">=net-print/cups-1.2
