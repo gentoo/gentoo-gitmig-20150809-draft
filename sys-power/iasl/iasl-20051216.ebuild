@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20051216.ebuild,v 1.1 2005/12/27 19:08:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20051216.ebuild,v 1.2 2008/05/22 21:21:59 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -23,7 +23,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${MY_PN}-20051216-buildfixup.patch
+	EPATCH_OPTS="-p1 -d '${S}'" epatch "${FILESDIR}"/${MY_PN}-20051216-buildfixup.patch
 }
 
 src_compile() {

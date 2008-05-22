@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20060912.ebuild,v 1.5 2007/05/21 10:10:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20060912.ebuild,v 1.6 2008/05/22 21:21:59 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -23,14 +23,14 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${MY_PN}-20060512-buildfixup.patch
+	EPATCH_OPTS="-p1 -d '${S}'" epatch "${FILESDIR}"/${MY_PN}-20060512-buildfixup.patch
 }
 
 src_compile() {
 	# fix stupid flex 2.5.31 bug
 	emake -C compiler aslcompilerlex.c || die "emake aslcompilerlex.c failed"
 	sed -i.orig -e '/#define unput/s,yytext_ptr,AslCompilertext,' \
-		${S}/compiler/aslcompilerlex.c || die "sed failed"
+		"${S}"/compiler/aslcompilerlex.c || die "sed failed"
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 

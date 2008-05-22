@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20050513.ebuild,v 1.3 2005/11/24 15:49:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20050513.ebuild,v 1.4 2008/05/22 21:21:59 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -21,12 +21,12 @@ DEPEND="sys-devel/bison
 RDEPEND=""
 
 src_compile() {
-	cd ${S}/compiler
+	cd "${S}"/compiler
 	emake -j1 CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
 	dobin compiler/iasl
 
-	dodoc ${S}/README
+	dodoc "${S}"/README
 }

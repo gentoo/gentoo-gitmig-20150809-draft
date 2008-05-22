@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080514.ebuild,v 1.1 2008/05/22 21:13:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080514.ebuild,v 1.2 2008/05/22 21:21:59 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -105,7 +105,7 @@ aslts_test() {
 
 aapits_test() {
 	mv "${WORKDIR}/${MY_TESTS_P}/tests/aapits" "${S}/tools/" || die "mv failed"
-	cd "${S}/tools/aapits" || die "cd ${S}/tools/aapits failed"
+	cd "${S}/tools/aapits" || die "cannot find ${S}/tools/aapits"
 	edos2unix $(find . -type 'f') || die "edos2unix failed in aapits"
 	chmod +x $(find bin/ | sed  -r -e '/\/[A-Z_]+$/d') || die "chmod bin +x failed"
 	make || die "make in aapits failed"
