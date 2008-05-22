@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.78 2008/05/22 14:42:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.79 2008/05/22 20:58:31 maekke Exp $
+
+  22 May 2008; Markus Meier <maekke@gentoo.org> itpp-4.0.4.ebuild:
+  amd64/x86 stable, bug #223209
 
   22 May 2008; Ferris McCormick <fmccor@gentoo.org> itpp-4.0.4.ebuild:
   Sparc stable, Bug #223209.  It's been around a while and all tests are good.
