@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.28 2008/05/21 18:44:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.29 2008/05/22 17:59:43 armin76 Exp $
+
+  22 May 2008; Raúl Porcel <armin76@gentoo.org>
+  extutils-depends-0.300.ebuild:
+  ia64 stable wrt #204386
 
   21 May 2008; Christian Faulhammer <opfer@gentoo.org>
   extutils-depends-0.300.ebuild:
