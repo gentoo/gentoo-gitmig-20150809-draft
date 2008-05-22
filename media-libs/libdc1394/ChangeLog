@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.32 2008/02/21 18:23:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.33 2008/05/22 19:41:32 corsair Exp $
+
+  22 May 2008; Markus Rothe <corsair@gentoo.org> libdc1394-2.0.0-r1.ebuild:
+  Stable on ppc64
 
   21 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   libdc1394-2.0.0.ebuild, libdc1394-2.0.0-r1.ebuild:
