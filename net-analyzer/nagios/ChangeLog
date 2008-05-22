@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.66 2008/05/21 19:12:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.67 2008/05/22 07:33:22 corsair Exp $
+
+  22 May 2008; Markus Rothe <corsair@gentoo.org> nagios-2.12.ebuild:
+  Stable on ppc64; bug #208398
 
   21 May 2008; Christian Faulhammer <opfer@gentoo.org> nagios-2.12.ebuild:
   stable x86, security bug 208398
