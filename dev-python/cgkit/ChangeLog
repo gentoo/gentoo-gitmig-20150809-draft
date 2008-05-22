@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.22 2008/05/22 20:46:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.23 2008/05/22 21:17:39 mr_bones_ Exp $
+
+  22 May 2008; Michael Sterrett <mr_bones_@gentoo.org> -cgkit-1.2.0.ebuild,
+  -cgkit-2.0.0_alpha7.ebuild:
+  punt old ebuilds
 
   22 May 2008; Markus Meier <maekke@gentoo.org> cgkit-2.0.0_alpha8.ebuild:
   x86 stable, bug #223237
