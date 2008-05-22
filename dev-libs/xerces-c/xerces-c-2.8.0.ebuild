@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.3 2008/01/04 13:36:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.4 2008/05/22 13:50:10 dev-zero Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/xerces/c/sources/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc iconv icu libwww +threads elibc_Darwin elibc_FreeBSD"
+IUSE="debug doc iconv icu libwww +threads elibc_Darwin elibc_FreeBSD xqilla"
 
 RDEPEND="icu? ( <dev-libs/icu-3.8 )
 	libwww? ( net-libs/libwww )
@@ -61,6 +61,11 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}/${P}-64bit_cast.patch" \
 		"${FILESDIR}/${P}-icu_ressource_fix.patch"
+
+	use xqilla && epatch \
+		"${FILESDIR}/xqilla-xercesc_content_type.patch" \
+		"${FILESDIR}/xqilla-xercesc_regex.patch"
+
 }
 
 src_compile() {
@@ -122,10 +127,21 @@ src_install () {
 	cd src/xercesc
 	emake DESTDIR="${D}" MLIBDIR=$(get_libdir) install || die "emake failed"
 
+	if use xqilla; then
+		insinto /usr/include/xercesc/dom/impl
+		cd dom/impl
+		doins \
+			DOMAttrImpl.hpp DOMAttrMapImpl.hpp DOMCasts.hpp DOMCharacterDataImpl.hpp \
+			DOMChildNode.hpp DOMDeepNodeListPool.hpp DOMDocumentImpl.hpp \
+			DOMDocumentTypeImpl.hpp DOMElementImpl.hpp DOMElementNSImpl.hpp \
+			DOMNodeIDMap.hpp DOMNodeImpl.hpp DOMNodeListImpl.hpp DOMParentNode.hpp \
+			DOMRangeImpl.hpp DOMTextImpl.hpp DOMTypeInfoImpl.hpp DOMWriterImpl.hpp
+	fi
+
 	cd "${S}"
 	doenvd "${FILESDIR}/50xerces-c"
 
-	# Upstream seems to have forgotten this
+	# Upstream forgot this
 	if use icu ; then
 		dolib.so lib/libXercesMessages.so.28.0
 		dosym libXercesMessages.so.28.0 /usr/$(get_libdir)/libXercesMessages.so.28
