@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.1 2008/05/22 14:40:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.2 2008/05/22 14:43:40 drac Exp $
 
 inherit autotools eutils multilib toolchain-funcs
 
@@ -28,8 +28,9 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	econf --disable-dependency-tracking
-	emake -j1 CC=$(tc-getCC) || die "emake failed."
+	emake -j1 || die "emake failed."
 }
 
 src_install() {
@@ -37,7 +38,7 @@ src_install() {
 		includedir="${D}/usr/include" sysconfdir="${D}/etc" \
 		install || die "emake install failed."
 
-	dodoc AUTHORS ChangeLog NEWS NOTES README
+	dodoc AUTHORS ChangeLog NEWS NOTES README xmlsysd/DESIGN
 
 	# FIXME: Update to Gentoo style init script.
 	rm -rf "${D}"/etc/init.d/wulf2html
