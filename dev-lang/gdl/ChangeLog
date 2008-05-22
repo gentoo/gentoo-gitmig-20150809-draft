@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.6 2008/04/13 18:31:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.7 2008/05/22 15:29:37 bicatali Exp $
+
+*gdl-0.9_rc1 (22 May 2008)
+
+  22 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/gdl-0.9_rc1-proj4.patch, -gdl-0.9_pre5.ebuild, +gdl-0.9_rc1.ebuild:
+  Version bump
 
   13 Apr 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gdl-0.9_pre6-plplot-5.9.patch, gdl-0.9_pre6.ebuild:

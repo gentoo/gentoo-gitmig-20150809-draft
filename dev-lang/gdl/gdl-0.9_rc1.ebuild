@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_pre5.ebuild,v 1.2 2008/03/21 20:43:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.1 2008/05/22 15:29:37 bicatali Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 MYP=${P/_/}
 DESCRIPTION="An Interactive Data Language compatible incremental compiler"
@@ -21,9 +21,7 @@ RDEPEND=">=sys-libs/readline-4.3
 	hdf? ( sci-libs/hdf )
 	hdf5? ( sci-libs/hdf5 )
 	netcdf? ( sci-libs/netcdf )
-	python? ( virtual/python
-			dev-python/numarray
-			dev-python/matplotlib )
+	python? ( dev-python/numarray dev-python/matplotlib )
 	fftw? ( >=sci-libs/fftw-3 )
 	proj? ( sci-libs/proj )"
 
@@ -36,6 +34,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-proj4.patch
+	epatch "${FILESDIR}"/${PN}-0.9_pre6-magick.patch
+
+	#if has_version ">=sci-libs/plplot-5.9.0"; then
+		#epatch "${FILESDIR}"/${PN}-0.9_pre6-plplot-5.9.patch
+	#fi
+	eautoreconf
 }
 
 src_compile() {
@@ -55,18 +59,17 @@ src_compile() {
 
 src_test() {
 	cd "${S}"/testsuite
-	PATH=${S}/src gdl <<EOF
-test_suite
-EOF
+	PATH="${S}"/src gdl <<-EOF
+		test_suite
+	EOF
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto /usr/share/${PN}
-	doins -r src/pro
-	doins -r src/py
-	dodoc README PYTHON.txt AUTHORS ChangeLog NEWS TODO HACKING
+	doins -r src/pro src/py || die "install pro and py files failed"
+	dodoc README PYTHON.txt AUTHORS ChangeLog NEWS TODO HACKING || die
 
 	# add GDL provided routines to IDL_PATH
 	echo "GDL_STARTUP=/usr/share/${PN}/pro" > 99gdl
