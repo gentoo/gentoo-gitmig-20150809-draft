@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rsstail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.7 2008/05/21 23:06:11 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.8 2008/05/22 20:56:25 maekke Exp $
+
+  22 May 2008; Markus Meier <maekke@gentoo.org> rsstail-1.3.ebuild:
+  x86 stable, bug #223143
 
   21 May 2008; Robert Buchholz <rbu@gentoo.org> rsstail-1.3.ebuild:
   amd64 stable, bug #223143
