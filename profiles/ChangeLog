@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1448 2008/05/22 02:43:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1449 2008/05/22 13:49:00 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 May 2008; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Add xqilla USE-flag for xerces-c
 
   22 May 2008; Mark Loeser <halcy0n@gentoo.org> package.mask:
   Mask dev-cpp/libwrapiter for removal

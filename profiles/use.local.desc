@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3551 2008/05/21 15:32:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3552 2008/05/22 13:49:00 dev-zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -531,6 +531,7 @@ dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/qsa:ide - enable the qsa ide
 dev-libs/soprano:clucene - Enable clucene backend support (recommended)
 dev-libs/xerces-c:icu - Use ICU as message loader and transcoder instead of builtin or iconv
+dev-libs/xerces-c:xqilla - Apply patches from the XQilla project and install additional header files
 dev-libs/yaz:icu - Enable ICU (Internationalization Components for Unicode) support, using dev-libs/icu
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
 dev-lisp/abcl:clisp - Build Armed Bear Common Lisp using GNU CLISP
