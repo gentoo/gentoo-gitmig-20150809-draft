@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.7 2008/04/29 16:22:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.8 2008/05/22 01:24:52 jsbronder Exp $
+
+  22 May 2008; Justin Bronder <jsbronder@gentoo.org> camd-2.2.0.ebuild:
+  Adding ~ppc, no bug but required for cholmod (#219458)
 
   29 Apr 2008; Brent Baude <ranger@gentoo.org> camd-2.2.0.ebuild:
   keyworded ~arch for ppc64, bug 219466
