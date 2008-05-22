@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.80.2-r1.ebuild,v 1.7 2008/02/19 01:31:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.80.2-r1.ebuild,v 1.8 2008/05/22 23:16:32 ingmar Exp $
 
 inherit kde eutils
 
@@ -24,4 +24,13 @@ src_unpack() {
 
 	# Fix the desktop file for compliance with the spec. Fixes bug 188755.
 	epatch "${FILESDIR}/${PN}-desktop-file.patch"
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	# Bug 220175
+	ewarn "NOTE: As of >=sys-apps/portage-2.1.5 the 'Updating Portage cache' routine"
+	ewarn "\t isn't run anymore at the end of 'emerge --sync', even though ${PN} relies on said cache."
+	ewarn "\tTo fully use ${PN}, add FEATURES=\"${FEATURES} metadata-transfer\" to /etc/make.conf."
 }

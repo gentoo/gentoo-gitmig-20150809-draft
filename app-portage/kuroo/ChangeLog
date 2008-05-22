@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.29 2008/04/26 18:29:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.30 2008/05/22 23:16:32 ingmar Exp $
+
+  22 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> kuroo-0.80.2-r1.ebuild,
+  kuroo-0.81_rc1.ebuild:
+  Instruct users to add FEATURES=\"metadata-transfer\", since
+  >=sys-apps/portage-2.1.5 doesnt have this on by default anymore and Kuroo
+  doesnt function properly without it. Thanks to Billy DeVincentis in bug
+  220175.
 
   26 Apr 2008; nixnut <nixnut@gentoo.org> kuroo-0.81_rc1.ebuild:
   Stable on ppc wrt bug 218768
