@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/makeself
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.14 2007/03/30 14:02:34 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.15 2008/05/22 00:01:49 darkside Exp $
+
+*makeself-2.1.5 (19 May 2008)
+
+  19 May 2008; Jeremy Olexa <darkside@gentoo.org> +makeself-2.1.5.ebuild:
+  Version bump. bug 217218
 
   30 Mar 2007; Steve Dibb <beandog@gentoo.org> makeself-2.1.4.ebuild:
   amd64 stable
