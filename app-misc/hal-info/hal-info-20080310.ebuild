@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20080310.ebuild,v 1.1 2008/05/20 04:06:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20080310.ebuild,v 1.2 2008/05/22 10:44:40 klausman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/hal-0.5.10"

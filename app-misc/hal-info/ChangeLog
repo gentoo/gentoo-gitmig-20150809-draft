@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.30 2008/05/20 04:06:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.31 2008/05/22 10:44:40 klausman Exp $
+
+  22 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  hal-info-20080310.ebuild:
+  Keyworded on alpha, bug #222899
 
 *hal-info-20080310 (20 May 2008)
 
