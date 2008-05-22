@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.178 2008/05/18 01:00:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.179 2008/05/22 16:06:06 matsuu Exp $
+
+  22 May 2008; MATSUU Takuto <matsuu@gentoo.org> uim-1.5.1.ebuild:
+  Added -j1 to emake install, bug #222677. Added elibtoolize.
 
 *uim-1.5.1 (18 May 2008)
 
