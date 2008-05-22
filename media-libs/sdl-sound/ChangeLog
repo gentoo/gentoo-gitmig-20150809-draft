@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.34 2008/04/20 21:09:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.35 2008/05/22 18:22:48 fmccor Exp $
+
+  22 May 2008; Ferris McCormick <fmccor@gentoo.org> sdl-sound-1.0.3.ebuild:
+  Sparc stable --- Bug #223243 --- works just fine.
 
 *sdl-sound-1.0.3 (20 Apr 2008)
 
