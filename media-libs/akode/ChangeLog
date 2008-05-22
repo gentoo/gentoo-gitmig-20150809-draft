@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.39 2008/05/22 11:07:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.40 2008/05/22 18:11:15 armin76 Exp $
+
+  22 May 2008; Raúl Porcel <armin76@gentoo.org> akode-2.0.2.ebuild:
+  ia64/sparc/x86 stable wrt #222873
 
   22 May 2008; Tobias Klausmann <klausman@gentoo.org> akode-2.0.2.ebuild:
   Stable on alpha, bug #222873
