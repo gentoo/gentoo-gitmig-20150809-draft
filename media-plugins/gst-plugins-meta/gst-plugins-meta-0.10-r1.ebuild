@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r1.ebuild,v 1.1 2008/02/21 17:49:51 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r1.ebuild,v 1.2 2008/05/22 07:44:30 corsair Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
 
 LICENSE="GPL-2"
 SLOT="0.10"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="alsa esd oss X xv dvb mythtv"
 
 RDEPEND="oss? ( >=media-plugins/gst-plugins-oss-0.10 )
