@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.91 2008/05/20 08:29:46 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.92 2008/05/22 12:19:29 remi Exp $
+
+*xf86-video-i810-2.3.1-r1 (22 May 2008)
+
+  22 May 2008; Rémi Cardona <remi@gentoo.org>
+  +files/2.3.1/0001-Skip-copying-on-FOURCC_XVMC-surfaces.patch,
+  +files/2.3.1/0002-Only-use-FOURCC_XVMC-when-INTEL_XVMC-is-defined.patch,
+  +files/2.3.1/0003-Panel-fitting-fix-letterbox-modes.patch,
+  +files/2.3.1/0004-Add-glproto-to-DRI-dependencies.patch,
+  +files/2.3.1/0005-Revert-Add-FIFO-watermark-regs-to-register-dumper.patch,
+  +xf86-video-i810-2.3.1-r1.ebuild:
+  Add a few patches from the xf86-video-intel-2.3-branch, containing a fix
+  for bug #222981
 
   20 May 2008; Rémi Cardona <remi@gentoo.org> xf86-video-i810-1.6.5.ebuild,
   xf86-video-i810-2.2.1.ebuild:
