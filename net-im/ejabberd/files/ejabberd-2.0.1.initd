@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.0.1.initd,v 1.1 2008/05/22 11:43:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.0.1.initd,v 1.2 2008/05/22 12:26:06 caleb Exp $
 
 opts="${opts} reload"
 
@@ -33,6 +33,7 @@ start() {
 			SMPOPT="disable"
 		;;
 	esac
+	cd /var/lib/ejabberd
 	start-stop-daemon --start --quiet --chuid jabber:jabber \
 		--name $BEAMNAME \
 		--exec /usr/sbin/ejabberd -- -detached -noinput -smp $SMPOPT

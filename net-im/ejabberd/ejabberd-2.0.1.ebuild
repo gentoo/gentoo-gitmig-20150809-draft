@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1.ebuild,v 1.1 2008/05/22 11:43:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1.ebuild,v 1.2 2008/05/22 12:26:06 caleb Exp $
 
 inherit eutils multilib
 
@@ -37,11 +37,6 @@ src_unpack() {
 
 	# Bug #171427
 	epatch "${FILESDIR}/2.0.0-missing-declaration.patch"
-	# Bug #215853
-	#epatch "${FILESDIR}/${MY_PV}-erlang12-s2s-in.patch"
-	# patch for mod_proxy65 using erlang12
-	# http://support.process-one.net/browse/EJAB-542
-	#epatch "${FILESDIR}/${MY_PV}-ejab-542-mod_proxy65.patch"
 
 	# get rid of the prefix
 	sed -i -e "s/\\@prefix\\@//" "${S}/Makefile.in" \
@@ -79,7 +74,7 @@ src_install() {
 		install || die "install failed"
 
 	# remove the default ejabberdctl as we use our own
-	rm "${D}/usr/sbin/ejabberdctl"
+	rm "${D}/sbin/ejabberdctl"
 
 	insinto ${JABBER_ETC}
 
@@ -97,14 +92,14 @@ src_install() {
 	dohtml *.{html,png}
 
 	# set up /usr/sbin/ejabberd wrapper
-	cat "${FILESDIR}/ejabberd-wrapper-2.0.0.template" \
+	cat "${FILESDIR}/ejabberd-wrapper-${MY_PV}.template" \
 		| sed -e "s/\@libdir\@/$(get_libdir)/g" -e "s/\@version\@/${PV}/g" \
 		> "${T}/ejabberd"
 	exeinto /usr/sbin
 	doexe "${T}/ejabberd"
 
 	# set up /usr/sbin/ejabberdctl wrapper
-	cat "${FILESDIR}/ejabberdctl-wrapper-2.0.0.template" \
+	cat "${FILESDIR}/ejabberdctl-wrapper-${MY_PV}.template" \
 		| sed -e "s/\@libdir\@/$(get_libdir)/g" -e "s/\@version\@/${PV}/g" \
 		> "${T}/ejabberdctl"
 	doexe "${T}/ejabberdctl"
