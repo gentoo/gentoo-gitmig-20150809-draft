@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.29 2007/09/06 16:13:07 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.30 2008/05/22 00:26:47 vapier Exp $
+
+*arping-2.06 (22 May 2008)
+
+  22 May 2008; Mike Frysinger <vapier@gentoo.org> +arping-2.06.ebuild:
+  Version bump.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -files/1.06-libnet-1.0.patch, -arping-1.06-r1.ebuild:
