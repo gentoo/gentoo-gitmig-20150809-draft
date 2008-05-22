@@ -1,0 +1,40 @@
+--- pyfits-1.3/test/testPyfitsTable.py.orig	2007-12-18 19:10:29.000000000 +0000
++++ pyfits-1.3/test/testPyfitsTable.py	2008-05-22 17:11:12.000000000 +0100
+@@ -128,7 +128,7 @@
+         # the table HDU's data is a subclass of a record array, so we can access
+         # one row like this:
+ 
+-        self.assertEqual(str(tbhdu.data[1]),"('def', 12.0, 4, 2, (4.0+4.0j), array([ True], dtype=bool), 102, array([False,  True,  True,  True,  True, False, False, False, False,\n        True, False], dtype=bool))")
++        self.assertEqual(str(tbhdu.data[1]),"('def', 12.0, 4, 2, (4+4j), array([ True], dtype=bool), 102, array([False,  True,  True,  True,  True, False, False, False, False,\n        True, False], dtype=bool))")
+ 
+         # and a column like this:
+         self.assertEqual(str(tbhdu.data.field('abc')),"['abc' 'def' 'xx']")
+@@ -306,11 +306,25 @@
+                                 formats='int16,a20,float32,a10',\
+                                 names='order,name,mag,Sp')
+         hdu=pyfits.new_table(bright,nrows=2,tbtype='TableHDU')
+-        s="[(1, 'Serius', -1.45, 'A1V') (2, 'Canopys', -0.73000002, 'F0Ib')]"
+-        self.assertEqual(str(hdu.data[:]),s)
++        self.assertEqual(hdu.data.field(0).all(),
++                         num.array([1,2],dtype=num.int16).all())
++        self.assertEqual(hdu.data[0][1],'Serius')
++        self.assertEqual(hdu.data[1][1],'Canopys')
++        self.assertEqual(hdu.data.field(2).all(),
++                         num.array([-1.45,-0.73],dtype=num.float32).all())
++        self.assertEqual(hdu.data[0][3],'A1V')
++        self.assertEqual(hdu.data[1][3],'F0Ib')
+         hdu.writeto('toto.fits', clobber=True)
+         hdul = pyfits.open('toto.fits')
+-        self.assertEqual(str(hdul[1].data[:]),s)
++        self.assertEqual(hdul[1].data.field(0).all(),
++                         num.array([1,2],dtype=num.int16).all())
++        self.assertEqual(hdul[1].data[0][1],'Serius')
++        self.assertEqual(hdul[1].data[1][1],'Canopys')
++        self.assertEqual(hdul[1].data.field(2).all(),
++                         num.array([-1.45,-0.73],dtype=num.float32).all())
++        self.assertEqual(hdul[1].data[0][3],'A1V')
++        self.assertEqual(hdul[1].data[1][3],'F0Ib')
++
+         os.remove('toto.fits')
+         hdu=pyfits.new_table(bright,nrows=2)
+         tmp=pyfits.rec.array([(1,'Serius',-1.45,'A1V'),\
