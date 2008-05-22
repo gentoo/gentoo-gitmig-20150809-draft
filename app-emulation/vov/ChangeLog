@@ -1,9 +1,12 @@
 # ChangeLog for app-emulation/vov
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.1 2008/02/18 11:14:30 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.2 2008/05/22 21:44:49 s4t4n Exp $
 
-*vov-2.0.0 (18 Feb 2007)
+  22 May 2008; Michele Noberasco <s4t4n@gentoo.org> vov-2.0.0.ebuild:
+  Stable for x86.
 
-  18 Feb 2007; Michele Noberasco <s4t4n@gentoo.org> vov-2.0.0.ebuild:
+*vov-2.0.0 (18 Feb 2008)
+
+  18 Feb 2008; Michele Noberasco <s4t4n@gentoo.org> vov-2.0.0.ebuild:
   Initial import.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.1 2008/02/18 11:14:30 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.2 2008/05/22 21:44:49 s4t4n Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/vov/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug gprof"
 
 RDEPEND="virtual/libc"
