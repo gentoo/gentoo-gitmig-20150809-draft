@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.3 2008/05/17 16:14:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.4 2008/05/23 15:42:55 drac Exp $
+
+  23 May 2008; Samuli Suominen <drac@gentoo.org> Readonly-1.03.ebuild:
+  ~amd64 wrt #219164
 
   17 May 2008; nixnut <nixnut@gentoo.org> Readonly-1.03.ebuild:
   Added ~ppc wrt bug 219164
