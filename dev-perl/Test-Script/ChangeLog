@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.5 2008/05/17 15:04:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.6 2008/05/23 15:58:55 drac Exp $
+
+  23 May 2008; Samuli Suominen <drac@gentoo.org> Test-Script-1.03.ebuild:
+  ~amd64 wrt #219723
 
   17 May 2008; nixnut <nixnut@gentoo.org> Test-Script-1.03.ebuild:
   Added ~ppc wrt bug 219723
