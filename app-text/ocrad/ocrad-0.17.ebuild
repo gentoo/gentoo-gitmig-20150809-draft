@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.17.ebuild,v 1.1 2008/04/22 19:33:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.17.ebuild,v 1.2 2008/05/23 14:08:37 fmccor Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/ocrad/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
