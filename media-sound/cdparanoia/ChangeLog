@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.75 2008/04/17 17:48:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.76 2008/05/23 23:33:10 drac Exp $
+
+*cdparanoia-3.10_pre2 (23 May 2008)
+
+  23 May 2008; Samuli Suominen <drac@gentoo.org>
+  +cdparanoia-3.10_pre2.ebuild:
+  Version bump.
 
   17 Apr 2008; nixnut <nixnut@gentoo.org> cdparanoia-3.10_pre0-r1.ebuild:
   Stable on ppc wrt bug 217627
