@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.8 2008/03/15 16:34:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.9 2008/05/23 22:30:13 ken69267 Exp $
+
+  23 May 2008; Kenneth Prugh <ken69267@gentoo.org> xmlc-2.3.ebuild:
+  amd64 stable, bug #212664
 
   15 Mar 2008; nixnut <nixnut@gentoo.org> xmlc-2.3.ebuild:
   Added ~ppc wrt bug 168655
