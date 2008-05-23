@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.26 2008/05/23 14:08:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.27 2008/05/23 21:08:37 maekke Exp $
+
+  23 May 2008; Markus Meier <maekke@gentoo.org> ocrad-0.17.ebuild:
+  amd64/x86 stable, bug #223343
 
   23 May 2008; Ferris McCormick <fmccor@gentoo.org> ocrad-0.17.ebuild:
   Sparc stable --- Bug #223343 --- builds fine and test passes.
