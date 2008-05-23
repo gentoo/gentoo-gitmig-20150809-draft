@@ -1,0 +1,10 @@
+# ChangeLog for www-client/jd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.1 2008/05/23 15:51:46 matsuu Exp $
+
+*jd-2.0.0_beta080418 (23 May 2008)
+
+  23 May 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +jd-2.0.0_beta080418.ebuild:
+  Initial import. ebuild is submitted by Ryoichiro Suzuki, bug #211400.
+
