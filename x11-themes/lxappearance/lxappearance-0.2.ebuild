@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lxappearance/lxappearance-0.2.ebuild,v 1.1 2008/05/17 15:14:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lxappearance/lxappearance-0.2.ebuild,v 1.2 2008/05/23 07:24:33 calchan Exp $
 
-DESCRIPTION="a desktop-independent theme swither for GTK+"
+DESCRIPTION="a desktop-independent theme switcher for GTK+"
 HOMEPAGE="http://lxde.sourceforge.net"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
