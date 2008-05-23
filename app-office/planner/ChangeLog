@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.40 2008/04/26 16:50:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.41 2008/05/23 12:54:39 fmccor Exp $
+
+  23 May 2008; Ferris McCormick <fmccor@gentoo.org> planner-0.14.3.ebuild:
+  Sparc stable, Bug #223297.  Nice application.
 
   26 Apr 2008; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.3.ebuild:
   add gtk-doc-am because of eautomake, bug #219337
