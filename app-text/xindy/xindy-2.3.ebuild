@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.3.ebuild,v 1.2 2008/05/19 23:26:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.3.ebuild,v 1.3 2008/05/23 21:13:14 maekke Exp $
 
 DESCRIPTION="A Flexible Indexing System"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/xindy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="doc"
 RDEPEND="virtual/latex-base
