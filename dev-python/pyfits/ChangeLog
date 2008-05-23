@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.4 2008/02/26 12:45:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.5 2008/05/23 21:04:18 maekke Exp $
+
+  23 May 2008; Markus Meier <maekke@gentoo.org> pyfits-1.3.ebuild:
+  amd64/x86 stable, bug #223257
 
 *pyfits-1.3 (26 Feb 2008)
 
