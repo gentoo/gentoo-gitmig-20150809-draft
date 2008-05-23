@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.6 2008/05/23 08:07:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.7 2008/05/23 08:10:33 opfer Exp $
 
 inherit kde eutils
 
@@ -46,7 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-ipod-191195.patch"
 
 	# remove configure script to trigger its rebuild during kde_src_compile
-	rm -f ${S}/configure
+	rm -f "${S}"/configure
 }
 
 src_compile() {

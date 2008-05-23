@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.6 2008/05/17 16:15:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.7 2008/05/23 08:10:33 opfer Exp $
 
 EAPI=1
 inherit kde eutils
@@ -45,7 +45,7 @@ src_unpack() {
 	kde_src_unpack
 
 	# remove configure script to trigger its rebuild during kde_src_compile
-	rm -f ${S}/configure
+	rm -f "${S}"/configure
 }
 
 src_compile() {
