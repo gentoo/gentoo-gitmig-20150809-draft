@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.26.53.ebuild,v 1.1 2008/04/13 07:06:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.26.53.ebuild,v 1.2 2008/05/23 16:42:23 maekke Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips s390 sh sparc x86"
 IUSE="svga jpeg tiff png zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
