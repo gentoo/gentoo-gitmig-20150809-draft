@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libmatchbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/ChangeLog,v 1.9 2008/02/27 16:55:02 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/ChangeLog,v 1.10 2008/05/23 11:28:02 solar Exp $
+
+  23 May 2008; <solar@gentoo.org> libmatchbox-1.9.ebuild:
+  - Keyworded
 
   27 Feb 2008; Yuri Vasilevski <yvasilev@gentoo.org> libmatchbox-1.8.ebuild,
   libmatchbox-1.9.ebuild:

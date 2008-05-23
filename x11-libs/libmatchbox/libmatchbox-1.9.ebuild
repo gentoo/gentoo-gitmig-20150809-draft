@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.4 2008/02/27 16:55:02 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.5 2008/05/23 11:28:02 solar Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,8 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~arm ~hppa ~x86"
+
+KEYWORDS="~arm ~hppa ~x86 ~amd64 ~ppc ~mips"
 IUSE="debug doc jpeg pango png truetype X xsettings"
 
 RDEPEND="x11-libs/libXext
@@ -20,8 +21,7 @@ RDEPEND="x11-libs/libXext
 	png? ( media-libs/libpng )
 	xsettings? ( x11-libs/libxsettings-client )"
 
-DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+DEPEND="doc? ( app-doc/doxygen )"
 
 pkg_setup() {
 	# Bug #138135
