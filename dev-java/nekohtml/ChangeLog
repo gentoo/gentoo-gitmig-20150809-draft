@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nekohtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.9 2008/03/15 15:59:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.10 2008/05/23 22:22:04 ken69267 Exp $
+
+  23 May 2008; Kenneth Prugh <ken69267@gentoo.org> nekohtml-1.9.6.ebuild:
+  amd64 stable, bug #212664
 
   15 Mar 2008; nixnut <nixnut@gentoo.org> nekohtml-1.9.6.ebuild:
   Added ~ppc wrt bug 168655

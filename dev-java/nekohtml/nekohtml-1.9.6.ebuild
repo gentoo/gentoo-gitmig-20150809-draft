@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-1.9.6.ebuild,v 1.3 2008/03/15 15:59:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-1.9.6.ebuild,v 1.4 2008/05/23 22:22:04 ken69267 Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 COMMON_DEP=">=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
