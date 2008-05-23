@@ -20,3 +20,8 @@ app-misc/jitac
 dev-tex/ppower4
 net-p2p/xnap
 dev-util/jarwizard
+
+# Tobias Klausmann <klausman@gentoo.org> (23 May 2008)
+# Masked since it's broken completely right now
+# https://bugs.freedesktop.org/show_bug.cgi?id=16060
+=x11-drivers/xf86-video-glint-1.2.0
