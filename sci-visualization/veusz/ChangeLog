@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/veusz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.6 2007/11/09 12:26:05 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.7 2008/05/23 21:06:10 maekke Exp $
+
+  23 May 2008; Markus Meier <maekke@gentoo.org> veusz-1.0-r1.ebuild:
+  amd64/x86 stable, bug #223261
 
 *veusz-1.0-r1 (09 Nov 2007)
 
