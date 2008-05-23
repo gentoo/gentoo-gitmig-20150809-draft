@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.23 2008/03/28 14:44:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.24 2008/05/23 10:37:53 bicatali Exp $
+
+*cln-1.2.2 (23 May 2008)
+
+  23 May 2008; Sébastien Fabbro <bicatali@gentoo.org> +cln-1.2.2.ebuild:
+  Version bump
 
 *cln-1.2.1 (28 Mar 2008)
 
