@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.181 2008/05/22 21:01:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.182 2008/05/23 13:19:54 armin76 Exp $
+
+  23 May 2008; Raúl Porcel <armin76@gentoo.org> syslog-ng-2.0.9.ebuild:
+  alpha/ia64/sparc stable wrt #223241
 
   22 May 2008; Markus Meier <maekke@gentoo.org> syslog-ng-2.0.9.ebuild:
   amd64/x86 stable, bug #223241
