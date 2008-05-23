@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.2 2008/05/22 14:43:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.3 2008/05/23 08:41:21 drac Exp $
 
 inherit autotools eutils multilib toolchain-funcs
 
@@ -45,14 +45,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you havent done so already please execute the following command"
-	elog "\"emerge --config =${CATEGORY}/${PF}\""
-	elog "to add xmlsysd to /etc/services."
+	elog "Add following line to /etc/services if you haven't done so already:"
+	elog
+	elog "xmlsysd       7887/tcp    # xmlsysd remote system stats"
 	elog
 	elog "Be sure to edit /etc/xinetd.d/xmylsysd to suit your own options."
-}
-
-pkg_config() {
-	echo "xmlsysd		7887/tcp	# xmlsysd remote system stats" >> /etc/services
-	einfo "Added xmlsysd to /etc/services"
 }
