@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.6 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.7 2008/05/23 16:32:55 maekke Exp $
 
 inherit eutils versionator
 
@@ -37,21 +37,21 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# ordinary yacc fails
-	epatch ${FILESDIR}/use-byacc.patch
+	epatch "${FILESDIR}"/use-byacc.patch
 	# support for amd64, sparc and alpha
-	epatch ${FILESDIR}/support-archs.patch
+	epatch "${FILESDIR}"/support-archs.patch
 	# freetype2 wasn't enabled by default
-	epatch ${FILESDIR}/freetype2-activate.patch
+	epatch "${FILESDIR}"/freetype2-activate.patch
 	# extra #include statement necessary for freetype2
-	epatch ${FILESDIR}/freetype2-includes.patch
+	epatch "${FILESDIR}"/freetype2-includes.patch
 	# script aiding in manual installation required csh
-	epatch ${FILESDIR}/no-csh.patch
+	epatch "${FILESDIR}"/no-csh.patch
 	# put files in sane places
-	epatch ${FILESDIR}/gentoo-paths-v2.patch
+	epatch "${FILESDIR}"/gentoo-paths-v2.patch
 	# fix compilation with gcc-4
-	epatch ${FILESDIR}/gcc4-support.patch
+	epatch "${FILESDIR}"/gcc4-support.patch
 }
 
 src_compile() {
