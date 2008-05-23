@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfakekey
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.4 2007/09/26 04:06:37 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.5 2008/05/23 06:28:49 solar Exp $
+
+  23 May 2008; <solar@gentoo.org> libfakekey-0.1.ebuild:
+  - Keyworded ~amd64
 
   26 Sep 2007; Jeroen Roovers <jer@gentoo.org> libfakekey-0.1.ebuild:
   Marked ~hppa too.
