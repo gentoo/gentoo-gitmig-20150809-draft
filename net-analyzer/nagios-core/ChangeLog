@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.124 2008/05/22 18:32:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.125 2008/05/23 19:24:14 dertobi123 Exp $
+
+  23 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  nagios-core-3.0.2.ebuild:
+  s/doinitd/newinitd/g, thanks to Wolfram Schlich.
 
   22 May 2008; Markus Meier <maekke@gentoo.org> nagios-core-2.12.ebuild:
   amd64 stable, bug #208398

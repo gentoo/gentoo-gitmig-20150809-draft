@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.2.ebuild,v 1.1 2008/05/21 17:43:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.2.ebuild,v 1.2 2008/05/23 19:24:14 dertobi123 Exp $
 
 EAPI="1"
 
@@ -113,7 +113,7 @@ src_install() {
 	emake DESTDIR="${D}" install-config
 	emake DESTDIR="${D}" install-commandmode
 
-	doinitd "${FILESDIR}"/nagios3 nagios
+	newinitd "${FILESDIR}"/nagios3 nagios
 	newconfd "${FILESDIR}"/conf.d nagios
 
 	# Apache Module
