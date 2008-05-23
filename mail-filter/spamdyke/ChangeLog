@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamdyke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.6 2008/05/21 20:19:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.7 2008/05/23 07:41:30 tupone Exp $
+
+*spamdyke-3.1.8 (23 May 2008)
+
+  23 May 2008; <atupone@gentoo.org> +spamdyke-3.1.8.ebuild:
+  Version bump to 3.1.8 Bug #223157 by toto
 
   21 May 2008; Christian Faulhammer <opfer@gentoo.org>
   spamdyke-3.1.7.ebuild:
