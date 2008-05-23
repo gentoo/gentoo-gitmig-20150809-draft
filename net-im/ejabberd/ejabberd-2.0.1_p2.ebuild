@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2.ebuild,v 1.1 2008/05/23 12:14:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2.ebuild,v 1.2 2008/05/23 12:59:10 caleb Exp $
 
 inherit eutils multilib
 
@@ -18,7 +18,7 @@ SRC_URI="http://process-one.net/en/projects/${PN}/download/${MY_PV}/${P/p/}.tar.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc ssl web zlib"
+IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc pam ssl web zlib"
 
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/expat-1.95
@@ -56,6 +56,7 @@ src_compile() {
 		$(use_enable web) \
 		$(use_enable odbc) \
 		$(use_enable zlib ejabberd_zlib) \
+		$(use_enable pam) \
 		|| die "econf failed"
 
 	if useq debug; then
@@ -85,6 +86,13 @@ src_install() {
 	if useq ssl ; then
 		doins "${FILESDIR}/ssl.cnf"
 		newins "${FILESDIR}/self-cert-v2.sh" self-cert.sh
+	fi
+
+	# Pam helper module permissions
+	# http://www.process-one.net/docs/ejabberd/guide_en.html
+	if useq pam; then
+		chown root:jabber "${D}"/usr/lib/erlang/lib/${P}/priv/bin/epam
+		chmod 4750 "${D}"/usr/lib/erlang/lib/${P}/priv/bin/epam
 	fi
 
 	cd "${WORKDIR}/${MY_P}/doc"
