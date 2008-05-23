@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.3 2008/04/24 02:01:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.4 2008/05/23 01:36:07 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,6 +30,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+
+	#.mod was renamed to .fmod in lua 5.1.3 - bug #223271
+	sed -i \
+		-e 's/\.mod(/.fmod(/' \
+		$(grep -rl "\.mod\>" "${WORKDIR}"/fillets-ng-data-${DATA_PV}) \
+		|| die "sed failed"
 }
 
 src_compile() {

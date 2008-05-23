@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.29 2008/04/24 02:01:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.30 2008/05/23 01:36:07 mr_bones_ Exp $
+
+  23 May 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  fish-fillets-0.8.0.ebuild:
+  fix run-time error with USE=-deprecated lua 5.1.3 (bug #223271)
 
   24 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/fish-fillets-0.8.0-gcc43.patch, fish-fillets-0.8.0.ebuild:
