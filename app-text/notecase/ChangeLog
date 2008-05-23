@@ -1,6 +1,12 @@
 # ChangeLog for app-text/notecase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.17 2008/04/29 09:25:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.18 2008/05/23 17:25:03 armin76 Exp $
+
+*notecase-1.9.1 (23 May 2008)
+
+  23 May 2008; Raúl Porcel <armin76@gentoo.org> -notecase-1.8.4.ebuild,
+  +notecase-1.9.1.ebuild:
+  Version bump
 
 *notecase-1.8.8 (29 Apr 2008)
 
