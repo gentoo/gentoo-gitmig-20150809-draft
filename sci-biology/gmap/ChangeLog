@@ -1,0 +1,9 @@
+# ChangeLog for sci-biology/gmap
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.1 2008/05/23 16:20:53 weaver Exp $
+
+*gmap-2007.09.28 (23 May 2008)
+
+  23 May 2008; weaver <weaver@gentoo.org> +gmap-2007.09.28.ebuild:
+  New package from sunrise, bug 135103
+
