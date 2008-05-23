@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.72 2008/05/23 19:48:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.73 2008/05/23 21:11:25 maekke Exp $
+
+  23 May 2008; Markus Meier <maekke@gentoo.org> libevent-1.4.3.ebuild:
+  amd64/x86 stable, bug #223369
 
   23 May 2008; Ferris McCormick <fmccor@gentoo.org> libevent-1.4.3.ebuild:
   Sparc stable, Bug #223369.  All tests pass.
