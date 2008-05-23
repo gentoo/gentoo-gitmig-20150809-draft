@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.1 2008/05/23 18:17:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.2 2008/05/23 19:06:54 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -18,7 +18,6 @@ RDEPEND="python? ( virtual/python )"
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	app-arch/unzip"
-
 
 S="${WORKDIR}/${P/_beta/}"
 src_unpack() {
