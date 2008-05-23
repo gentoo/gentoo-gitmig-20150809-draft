@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.519 2008/05/22 00:54:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.520 2008/05/23 09:31:53 zmedico Exp $
+
+  23 May 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_pre7.ebuild:
+  Stop building and installing tbz2tool for Bug #220701.
 
 *portage-2.2_pre7 (22 May 2008)
 
