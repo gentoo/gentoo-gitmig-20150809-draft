@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.21 2008/05/16 18:39:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.22 2008/05/24 13:41:08 maekke Exp $
+
+  24 May 2008; Markus Meier <maekke@gentoo.org> ftpbase-0.01-r1.ebuild:
+  amd64 stable, bug #222151
 
   16 May 2008; nixnut <nixnut@gentoo.org> ftpbase-0.01-r1.ebuild:
   Stable on ppc wrt bug 222151
