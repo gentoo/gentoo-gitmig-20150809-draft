@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.469 2008/05/19 00:55:58 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.470 2008/05/24 17:50:25 pva Exp $
+
+  24 May 2008; Peter Volkov <pva@gentoo.org>
+  vanilla-sources-2.6.16.46.ebuild:
+  Droped amd64 stable as this kernel isn't buildable, bug #212361.
 
 *vanilla-sources-2.6.26_rc3 (19 May 2008)
 
