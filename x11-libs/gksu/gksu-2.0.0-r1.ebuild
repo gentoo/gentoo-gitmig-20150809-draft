@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0-r1.ebuild,v 1.2 2008/05/24 16:13:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0-r1.ebuild,v 1.3 2008/05/24 19:12:28 mr_bones_ Exp $
 
 inherit gnome2 fixheadtails eutils autotools
 
@@ -39,7 +39,7 @@ src_unpack() {
 	if use gnome ; then
 		sed -i 's/x-terminal-emulator/gnome-terminal/' gksu.desktop
 	else
-		sed -i 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' Makefile.am 
+		sed -i 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' Makefile.am
 		sed -i 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' Makefile.in
 	fi
 
