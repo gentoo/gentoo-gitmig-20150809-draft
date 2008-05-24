@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueproxy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueproxy/ChangeLog,v 1.4 2007/08/30 13:27:54 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueproxy/ChangeLog,v 1.5 2008/05/24 20:17:30 solar Exp $
+
+  24 May 2008; <solar@gentoo.org> blueproxy-1.3.ebuild:
+  - Keyworded ~arm ~amd64. Fixed RDEPEND/DEPEND problem. And made sure we can
+  cross compile correctly
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for

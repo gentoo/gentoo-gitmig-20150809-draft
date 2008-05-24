@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueproxy/blueproxy-1.1.ebuild,v 1.3 2007/02/02 19:33:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueproxy/blueproxy-1.1.ebuild,v 1.4 2008/05/24 20:17:30 solar Exp $
 
 inherit eutils
 
