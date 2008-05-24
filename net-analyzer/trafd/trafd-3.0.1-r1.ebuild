@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1-r1.ebuild,v 1.2 2007/03/20 20:19:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1-r1.ebuild,v 1.3 2008/05/24 14:09:14 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,8 +16,7 @@ IUSE=""
 
 # -lbpft -lpcap -lcurses -ltermcap -lfl
 DEPEND="net-libs/libpcap
-	sys-libs/ncurses
-	sys-devel/flex"
+	sys-libs/ncurses"
 
 src_unpack() {
 	unpack ${A}
