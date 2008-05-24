@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/smooth-themes-0.5.8-r1.ebuild,v 1.9 2008/05/24 13:32:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/smooth-themes-0.5.8-r1.ebuild,v 1.10 2008/05/24 13:34:59 maekke Exp $
 
 WANT_AUTOMAKE=1.8
 inherit autotools eutils
@@ -18,7 +18,7 @@ DEPEND=""
 RDEPEND=">=x11-themes/gtk-engines-2"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Remove unnecessary checks in the configure script
