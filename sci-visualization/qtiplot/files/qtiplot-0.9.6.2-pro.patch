@@ -1,6 +1,6 @@
 diff -r -U2 qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro qtiplot-0.9.6.2/qtiplot/qtiplot.pro
 --- qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro	2008-05-19 14:26:41.000000000 +0700
-+++ qtiplot-0.9.6.2/qtiplot/qtiplot.pro	2008-05-21 23:15:15.000000000 +0700
++++ qtiplot-0.9.6.2/qtiplot/qtiplot.pro	2008-05-25 07:47:27.000000000 +0700
 @@ -18,5 +18,5 @@
  # the *.path variables defined bellow.
  ######################################################################################
@@ -60,3 +60,10 @@ diff -r -U2 qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro qtiplot-0.9.6.2/qtiplot/qti
 +#	SOURCES += ../3rdparty/liborigin/OPJFile.cpp
  
  ###############################################################
+@@ -474,5 +475,5 @@
+   						qti_wordlist.txt \
+ 
+-  	unix: pythonconfig.path = /usr/local/qtiplot
++  	unix: pythonconfig.path = /usr/share/qtiplot
+   	win32: pythonconfig.path = $$INSTALLBASE
+   	DEFINES += PYTHON_CONFIG_PATH="\\\"$$replace(pythonconfig.path," ","\ ")\\\"
