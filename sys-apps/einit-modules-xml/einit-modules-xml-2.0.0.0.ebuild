@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/einit-modules-xml-2.0.0.0.ebuild,v 1.2 2008/04/24 11:51:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-xml/einit-modules-xml-2.0.0.0.ebuild,v 1.3 2008/05/24 14:18:13 maekke Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://einit.jyujin.de/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/einit-0.40.0"
