@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.1.ebuild,v 1.4 2008/04/21 15:59:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.1.ebuild,v 1.5 2008/05/24 17:39:38 markusle Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 	epatch "${FILESDIR}"/${MY_PN}-${PATCH_V}-decl-fix.patch
+	epatch "${FILESDIR}"/${P}-gemm-fix.patch
 
 	BLD_DIR="${S}"/gentoo-build
 	mkdir "${BLD_DIR}" || die "failed to generate build directory"
