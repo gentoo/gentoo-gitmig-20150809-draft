@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.30 2008/05/14 20:16:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.31 2008/05/24 22:10:20 yngwin Exp $
+
+*PyQt4-4.4.2 (24 May 2008)
+
+  24 May 2008; Ben de Groot <yngwin@gentoo.org> +PyQt4-4.4.2.ebuild:
+  Version bump. Updated homepage URL. Added split qt deps from bug 222709.
 
 *PyQt4-4.4 (14 May 2008)
 
