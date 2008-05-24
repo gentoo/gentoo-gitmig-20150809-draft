@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.1 2008/05/22 15:29:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.2 2008/05/24 17:52:25 markusle Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -34,7 +34,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-proj4.patch
-	epatch "${FILESDIR}"/${PN}-0.9_pre6-magick.patch
+	epatch "${FILESDIR}"/${P}-magick.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 
 	#if has_version ">=sci-libs/plplot-5.9.0"; then
 		#epatch "${FILESDIR}"/${PN}-0.9_pre6-plplot-5.9.patch

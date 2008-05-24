@@ -1,0 +1,58 @@
+diff -Naur gdl-0.9rc1/src/antlr/CharScanner.hpp gdl-0.9rc1.new/src/antlr/CharScanner.hpp
+--- gdl-0.9rc1/src/antlr/CharScanner.hpp	2008-04-03 18:09:26.000000000 -0400
++++ gdl-0.9rc1.new/src/antlr/CharScanner.hpp	2008-05-24 13:30:50.000000000 -0400
+@@ -11,6 +11,10 @@
+ #include <antlr/config.hpp>
+ 
+ #include <map>
++#include <cstdlib>
++#include <cstring>
++
++
+ 
+ #ifdef HAS_NOT_CCTYPE_H
+ #include <ctype.h>
+diff -Naur gdl-0.9rc1/src/antlr/Parser.cpp gdl-0.9rc1.new/src/antlr/Parser.cpp
+--- gdl-0.9rc1/src/antlr/Parser.cpp	2008-04-03 18:09:26.000000000 -0400
++++ gdl-0.9rc1.new/src/antlr/Parser.cpp	2008-05-24 13:31:51.000000000 -0400
+@@ -12,6 +12,7 @@
+ #include "antlr/MismatchedTokenException.hpp"
+ //#include "antlr/ASTFactory.hpp"
+ #include <iostream>
++#include <cstdlib>
+ 
+ #ifdef ANTLR_CXX_SUPPORTS_NAMESPACE
+ namespace antlr {
+diff -Naur gdl-0.9rc1/src/antlr/TreeParser.cpp gdl-0.9rc1.new/src/antlr/TreeParser.cpp
+--- gdl-0.9rc1/src/antlr/TreeParser.cpp	2008-04-03 18:09:26.000000000 -0400
++++ gdl-0.9rc1.new/src/antlr/TreeParser.cpp	2008-05-24 13:32:28.000000000 -0400
+@@ -9,6 +9,7 @@
+ #include "antlr/ASTNULLType.hpp"
+ #include "antlr/MismatchedTokenException.hpp"
+ #include <iostream>
++#include <cstdlib>
+ #include <stdio.h>
+ 
+ #ifdef ANTLR_CXX_SUPPORTS_NAMESPACE
+diff -Naur gdl-0.9rc1/src/basic_op.cpp gdl-0.9rc1.new/src/basic_op.cpp
+--- gdl-0.9rc1/src/basic_op.cpp	2008-04-03 18:09:27.000000000 -0400
++++ gdl-0.9rc1.new/src/basic_op.cpp	2008-05-24 13:34:56.000000000 -0400
+@@ -26,6 +26,7 @@
+ 
+ //#include <csignal>
+ #include "sigfpehandler.hpp"
++#include <iterator>
+ 
+ using namespace std;
+ 
+diff -Naur gdl-0.9rc1/src/basic_pro.cpp gdl-0.9rc1.new/src/basic_pro.cpp
+--- gdl-0.9rc1/src/basic_pro.cpp	2008-04-05 22:06:34.000000000 -0400
++++ gdl-0.9rc1.new/src/basic_pro.cpp	2008-05-24 13:35:13.000000000 -0400
+@@ -21,6 +21,7 @@
+ #include <fstream>
+ #include <memory>
+ #include <set>
++#include <iterator>
+ 
+ #include <sys/stat.h>
+ #include <sys/types.h>
