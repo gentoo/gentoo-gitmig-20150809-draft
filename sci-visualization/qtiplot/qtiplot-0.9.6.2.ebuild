@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.2 2008/05/21 15:53:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.3 2008/05/24 09:08:15 grozin Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime
@@ -96,6 +96,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
 	if use doc; then
 		elog "On the first start, do Help -> Choose Help Folder"
 		elog "and select /usr/share/doc/${PF}/html"
@@ -103,10 +104,6 @@ pkg_postinst() {
 		elog "set Python Configuration Files to /usr/share/${PN}"
 		elog "and Translations to /usr/share/${PN}/translations"
 	fi
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
