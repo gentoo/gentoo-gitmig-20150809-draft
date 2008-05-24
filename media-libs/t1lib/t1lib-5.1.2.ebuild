@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.1.2.ebuild,v 1.1 2008/05/04 15:11:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.1.2.ebuild,v 1.2 2008/05/24 00:41:21 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool toolchain-funcs
 
@@ -42,7 +42,7 @@ src_compile() {
 	if ! use doc; then
 		myopt="without_doc"
 	else
-		addwrite /var/cache/fonts
+		VARTEXFONTS=${T}/fonts
 	fi
 
 	econf \
