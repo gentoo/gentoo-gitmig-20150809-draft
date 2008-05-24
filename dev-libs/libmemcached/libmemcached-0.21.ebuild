@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.16.ebuild,v 1.2 2008/03/27 22:43:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.21.ebuild,v 1.1 2008/05/24 22:55:08 caleb Exp $
 
 DESCRIPTION="a C client library to the memcached server"
 HOMEPAGE="http://tangent.org/552/libmemcached.html"
@@ -8,7 +8,7 @@ SRC_URI="http://download.tangent.org/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86"
 IUSE=""
 
 RDEPEND=""
