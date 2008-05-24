@@ -1,6 +1,6 @@
-diff -Nur -x '*.orig' Jubler-3.9.0/build.xml Jubler-3.9.0_patched/build.xml
+diff -Nur Jubler-3.9.0/build.xml Jubler-3.9.0_patched/build.xml
 --- Jubler-3.9.0/build.xml	2008-05-14 16:13:30.000000000 +0300
-+++ Jubler-3.9.0_patched/build.xml	2008-05-14 22:22:23.000000000 +0300
++++ Jubler-3.9.0_patched/build.xml	2008-05-24 11:58:56.000000000 +0300
 @@ -69,22 +69,6 @@
  
  
@@ -34,9 +34,9 @@ diff -Nur -x '*.orig' Jubler-3.9.0/build.xml Jubler-3.9.0_patched/build.xml
  	<target name="-post-compile">
  		<delete dir="build/classes/com/apple" failonerror="false"/>
  		<delete dir="src/com/apple" failonerror="false"/>
-diff -Nur -x '*.orig' Jubler-3.9.0/resources/ffdecode/Makefile Jubler-3.9.0_patched/resources/ffdecode/Makefile
+diff -Nur Jubler-3.9.0/resources/ffdecode/Makefile Jubler-3.9.0_patched/resources/ffdecode/Makefile
 --- Jubler-3.9.0/resources/ffdecode/Makefile	2008-03-18 00:01:03.000000000 +0200
-+++ Jubler-3.9.0_patched/resources/ffdecode/Makefile	2008-05-14 22:19:47.000000000 +0300
++++ Jubler-3.9.0_patched/resources/ffdecode/Makefile	2008-05-24 12:00:50.000000000 +0300
 @@ -12,9 +12,6 @@
  # Name of the produced library
  PROJ=ffdecode
@@ -64,9 +64,17 @@ diff -Nur -x '*.orig' Jubler-3.9.0/resources/ffdecode/Makefile Jubler-3.9.0_patc
  
  
  develop:javacheck
-diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrowser.java Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java
+@@ -157,7 +153,6 @@
+ 
+ ${LIBNAME}:${LIBRARYREQ} ${OBJS} ${RANLIBREQ}
+ 	${LD} ${GCCOPTS} -o ${LIBNAME} ${OBJS} ${LIBS}
+-	${STRIP} ${LIBNAME}
+ 
+ 
+ clean:
+diff -Nur Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrowser.java Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java
 --- Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrowser.java	2008-03-30 23:04:05.000000000 +0300
-+++ Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java	2008-05-14 22:22:23.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java	2008-05-24 11:58:56.000000000 +0300
 @@ -47,7 +47,7 @@
          
          history = new ArrayList<String>();
@@ -76,9 +84,9 @@ diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrow
          setPage(initpage);
          history.add(initpage);
          
-diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/Main.java Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java
+diff -Nur Jubler-3.9.0/src/com/panayotis/jubler/Main.java Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java
 --- Jubler-3.9.0/src/com/panayotis/jubler/Main.java	2008-03-30 23:04:08.000000000 +0300
-+++ Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java	2008-05-14 22:22:23.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java	2008-05-24 11:58:56.000000000 +0300
 @@ -84,17 +84,9 @@
          /* Load arguments, in a mac way */
          SystemDependent.initApplication();
@@ -97,9 +105,9 @@ diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/Main.java Jubler-3.9
                  
      }
          
-diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java
+diff -Nur Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java
 --- Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.java	2008-03-31 02:00:49.000000000 +0300
-+++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java	2008-05-14 22:22:23.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java	2008-05-24 11:58:56.000000000 +0300
 @@ -25,10 +25,6 @@
  
  import static com.panayotis.jubler.i18n.I18N._;
@@ -159,9 +167,9 @@ diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.j
 -        Main.asyncAddSubtitle(event.getFilename());
 -    }
 -}
-diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/os/SystemFileFinder.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java
+diff -Nur Jubler-3.9.0/src/com/panayotis/jubler/os/SystemFileFinder.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java
 --- Jubler-3.9.0/src/com/panayotis/jubler/os/SystemFileFinder.java	2008-03-30 23:04:04.000000000 +0300
-+++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java	2008-05-14 22:22:23.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java	2008-05-24 11:58:56.000000000 +0300
 @@ -58,15 +58,12 @@
      }
      

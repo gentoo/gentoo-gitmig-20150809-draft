@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.17 2008/05/24 06:50:01 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.18 2008/05/24 12:28:42 serkan Exp $
+
+  24 May 2008; Serkan Kaba <serkan@gentoo.org> files/jubler-3.9.0.patch:
+  Fix QA warning for pre-stripped binary.
 
 *jubler-3.9.0 (22 May 2008)
 
