@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.93 2008/05/23 13:14:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.94 2008/05/24 15:52:01 klausman Exp $
+
+  24 May 2008; Tobias Klausmann <klausman@gentoo.org>
+  gtk-doc-1.10-r1.ebuild:
+  Stable on alpha, bug #223297
 
   23 May 2008; Ferris McCormick <fmccor@gentoo.org> gtk-doc-1.10-r1.ebuild:
   Add sparc keyword, required for Bug #223297.
