@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.49 2008/05/21 11:12:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.50 2008/05/24 13:46:23 maekke Exp $
+
+  24 May 2008; Markus Meier <maekke@gentoo.org> gimp-help-2.4.1.ebuild:
+  amd64 stable, bug #222791
 
   21 May 2008; Raúl Porcel <armin76@gentoo.org> gimp-help-2.4.1.ebuild:
   alpha/ia64/x86 stable wrt #222791
