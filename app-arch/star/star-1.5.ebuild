@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.ebuild,v 1.7 2008/05/20 18:42:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.ebuild,v 1.8 2008/05/24 13:30:02 maekke Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ fi
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
@@ -29,12 +29,6 @@ src_unpack() {
 		-e 's:bin:root:g' \
 		-e 's:/usr/src/linux/include:/usr/include:' \
 		Defaults.linux
-
-	if use amd64 ; then
-		cd "${S}"/RULES
-		cp i386-linux-cc.rul x86_64-linux-cc.rul
-		cp i386-linux-gcc.rul x86_64-linux-gcc.rul
-	fi
 
 	if use ppc64 ; then
 		cd "${S}"/RULES
