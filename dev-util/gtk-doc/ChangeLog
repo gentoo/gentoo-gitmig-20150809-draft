@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.94 2008/05/24 15:52:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.95 2008/05/24 20:10:07 nixnut Exp $
+
+  24 May 2008; nixnut <nixnut@gentoo.org> gtk-doc-1.10-r1.ebuild:
+  Stable on ppc wrt bug 223297
 
   24 May 2008; Tobias Klausmann <klausman@gentoo.org>
   gtk-doc-1.10-r1.ebuild:
