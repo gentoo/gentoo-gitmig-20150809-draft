@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.18 2008/05/23 10:40:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.19 2008/05/24 20:31:29 markusle Exp $
+
+  24 May 2008; Markus Dittrich <markusle@gentoo.org> ginac-1.4.3.ebuild:
+  Fixed compile problems with USE="doc" (see bug #223407).
 
 *ginac-1.4.3 (23 May 2008)
 
