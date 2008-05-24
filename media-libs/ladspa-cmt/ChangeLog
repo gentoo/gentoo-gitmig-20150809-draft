@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.28 2007/11/20 19:24:33 grobian Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.29 2008/05/24 16:59:22 josejx Exp $
+
+  24 May 2008; Joseph Jezak <josejx@gentoo.org> ladspa-cmt-1.15.ebuild:
+  Marked ppc64 stable.
 
   20 Nov 2007; Fabian Groffen <grobian@gentoo.org> ladspa-cmt-1.15.ebuild,
   ladspa-cmt-1.16.ebuild:
