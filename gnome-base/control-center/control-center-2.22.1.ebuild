@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.22.1.ebuild,v 1.1 2008/04/10 21:47:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.22.1.ebuild,v 1.2 2008/05/24 12:29:14 eva Exp $
 
 EAPI="1"
 
-inherit eutils gnome2 autotools
+inherit gnome2
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -76,26 +76,21 @@ DEPEND="${RDEPEND}
 		dev-util/desktop-file-utils
 
 		app-text/scrollkeeper
-		gnome-base/gnome-common
 		>=app-text/gnome-doc-utils-0.10.1"
+# Needed for autoreconf
+#		gnome-base/gnome-common
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 S="${WORKDIR}/gnome-${P}"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-update-mimedb \
-			--enable-vfs-methods              \
-			--enable-gstreamer=0.10           \
-			$(use_enable alsa)                \
-			$(use_enable eds aboutme)         \
-			$(use_enable esd)                 \
-			$(use_enable hal)"
+	G2CONF="${G2CONF}
+		--disable-update-mimedb
+		--enable-vfs-methods
+		--enable-gstreamer=0.10
+		$(use_enable alsa)
+		$(use_enable eds aboutme)
+		$(use_enable esd)
+		$(use_enable hal)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
-
-	# Allow building with scrollkeeper
-	epatch "${FILESDIR}/${PN}-2.18.1-gnome-doc-utils-fix.patch"
-	eautoreconf
-}
