@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smooth-themes
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/ChangeLog,v 1.9 2007/06/16 17:01:23 angelos Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/ChangeLog,v 1.10 2008/05/24 13:32:35 maekke Exp $
+
+  24 May 2008; Markus Meier <maekke@gentoo.org>
+  smooth-themes-0.5.8-r1.ebuild:
+  amd64 stable, bug #220633
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org>
   smooth-themes-0.5.8-r1.ebuild:
