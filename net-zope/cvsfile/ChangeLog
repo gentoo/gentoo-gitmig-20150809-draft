@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/cvsfile
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cvsfile/ChangeLog,v 1.6 2007/07/02 15:21:14 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cvsfile/ChangeLog,v 1.7 2008/05/24 21:28:41 tupone Exp $
+
+  24 May 2008; Tupone Alfredo <tupone@gentoo.org> metadata.xml,
+  cvsfile-0.9.0.ebuild:
+  Fix DESCRIPTION.toolong
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> cvsfile-0.9.0.ebuild:
   (QA) RESTRICT clean up.
