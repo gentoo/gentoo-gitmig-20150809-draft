@@ -1,0 +1,10 @@
+--- ttconv/pprdrv_tt2.cpp.orig	2008-05-24 08:58:22.000000000 +0100
++++ ttconv/pprdrv_tt2.cpp	2008-05-24 08:59:34.000000000 +0100
+@@ -36,6 +36,7 @@
+ #include <string.h>
+ #include <memory.h>
+ #include "pprdrv.h" 
++#include <cstdio>
+ #include "truetype.h"
+ #include <algorithm>
+ #include <stack>

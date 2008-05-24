@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.2.ebuild,v 1.4 2008/05/10 10:34:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.2.ebuild,v 1.5 2008/05/24 08:03:30 bicatali Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils
+inherit eutils distutils
 
 DOC_PV=${PV}svn
 
@@ -58,6 +58,7 @@ use_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
 		[provide_packages]
