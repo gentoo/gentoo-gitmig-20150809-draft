@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.36 2008/01/28 18:51:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.37 2008/05/24 17:08:40 josejx Exp $
+
+  24 May 2008; Joseph Jezak <josejx@gentoo.org> fluidsynth-1.0.7a.ebuild:
+  Marked ppc64 stable.
 
 *fluidsynth-1.0.8 (28 Jan 2008)
 
