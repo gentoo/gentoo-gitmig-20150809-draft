@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.3.ebuild,v 1.1 2008/05/22 17:46:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.3.ebuild,v 1.2 2008/05/24 06:30:43 jer Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.redhat.com/sgrubb/audit/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ldap"
 # Testcases are pretty useless as they are built for RedHat users/groups and
 # kernels.
