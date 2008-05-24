@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.110 2007/02/21 23:27:36 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.111 2008/05/24 12:26:36 eva Exp $
+
+  24 May 2008; Gilles Dartiguelongue <eva@gentoo.org> ggv-2.12.0.ebuild:
+  remove unneeded src_unpack
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
