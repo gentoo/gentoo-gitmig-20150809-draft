@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.38 2008/02/02 21:26:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.39 2008/05/24 06:04:16 graaff Exp $
+
+*ruby-gettext-1.91.0 (24 May 2008)
+
+  24 May 2008; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gettext-1.91.0.ebuild:
+  Version bump: bug fixes and speed improvements; only compatible with Rails
+  2.0.x. Fix dependencies.
 
 *ruby-gettext-1.90.0 (02 Feb 2008)
 
