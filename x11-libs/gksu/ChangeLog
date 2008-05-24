@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.46 2008/05/02 15:36:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.47 2008/05/24 16:11:15 dang Exp $
+
+*gksu-2.0.0-r1 (24 May 2008)
+
+  24 May 2008; Daniel Gryniewicz <dang@gentoo.org> +gksu-2.0.0-r1.ebuild:
+  Bug #158469
+  - Only install gksu.desktop if use gnome
+  - Make it use gnome-terminal
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org> gksu-2.0.0.ebuild:
   remove global scoped variables
