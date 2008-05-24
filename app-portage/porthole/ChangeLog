@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.33 2008/05/02 18:14:04 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.34 2008/05/24 18:29:22 nixnut Exp $
+
+  24 May 2008; nixnut <nixnut@gentoo.org> porthole-0.6.0_rc2.ebuild:
+  Added ~ppc wrt bug 219968
 
   02 May 2008; Ferris McCormick <fmccor@gentoo.org>
   porthole-0.6.0_rc2.ebuild:
