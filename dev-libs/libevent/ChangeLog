@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.75 2008/05/24 11:20:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.76 2008/05/24 16:45:58 nixnut Exp $
+
+  24 May 2008; nixnut <nixnut@gentoo.org> libevent-1.4.3.ebuild:
+  Stable on ppc wrt bug 223369
 
   24 May 2008; Raúl Porcel <armin76@gentoo.org> libevent-1.4.3.ebuild:
   alpha/ia64 stable wrt #223369
