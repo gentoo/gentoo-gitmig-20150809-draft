@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.2 2008/03/09 15:13:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.3 2008/05/24 18:56:05 markusle Exp $
 
 EAPI="1"
 
@@ -75,6 +75,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/${P}-tcl8.5.patch.bz2
 	epatch "${FILESDIR}"/${PN}-5.0.3-mpi.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 }
 
 src_compile() {
