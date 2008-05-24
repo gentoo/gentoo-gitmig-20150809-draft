@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_usb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.13 2008/05/15 01:39:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.14 2008/05/24 12:38:03 flameeyes Exp $
+
+  24 May 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/pam_usb-0.4.2-openpam.patch:
+  Fix patch see bug #223117.
 
   15 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/pam_usb-0.4.2-openpam.patch, pam_usb-0.4.2.ebuild:
