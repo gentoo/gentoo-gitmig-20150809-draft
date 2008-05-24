@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.46 2008/05/24 06:30:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.47 2008/05/24 15:10:48 opfer Exp $
+
+  24 May 2008; Christian Faulhammer <opfer@gentoo.org> audit-1.7.3.ebuild:
+  stable x86, security bug 215705
 
   24 May 2008; Jeroen Roovers <jer@gentoo.org> audit-1.7.3.ebuild:
   Stable for HPPA (bug #215705).
