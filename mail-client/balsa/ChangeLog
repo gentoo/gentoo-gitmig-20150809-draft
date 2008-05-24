@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.63 2008/05/19 16:24:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.64 2008/05/24 11:26:39 eva Exp $
+
+  24 May 2008; Gilles Dartiguelongue <eva@gentoo.org> -balsa-2.3.20.ebuild:
+  remove old revisions, bug #221619.
 
   19 May 2008; nixnut <nixnut@gentoo.org> balsa-2.3.22.ebuild:
   Stable on ppc wrt bug 216903
