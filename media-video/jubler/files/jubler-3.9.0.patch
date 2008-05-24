@@ -1,6 +1,6 @@
-diff -Nur jubler/build.xml jubler_fixed/build.xml
---- jubler/build.xml	2007-11-18 18:13:00.000000000 +0200
-+++ jubler_fixed/build.xml	2007-11-18 18:16:11.000000000 +0200
+diff -Nur -x '*.orig' Jubler-3.9.0/build.xml Jubler-3.9.0_patched/build.xml
+--- Jubler-3.9.0/build.xml	2008-05-14 16:13:30.000000000 +0300
++++ Jubler-3.9.0_patched/build.xml	2008-05-14 22:22:23.000000000 +0300
 @@ -69,22 +69,6 @@
  
  
@@ -24,17 +24,19 @@ diff -Nur jubler/build.xml jubler_fixed/build.xml
  
  
  
-@@ -393,7 +377,6 @@
+@@ -397,9 +381,6 @@
+ 	
  
  	
- 	<target name="-pre-compile">
+-	<target name="-pre-compile">
 -		<copy todir="src/com"> <fileset dir="resources/system/no_mac"/> </copy>
- 	</target>
+-	</target>
  	<target name="-post-compile">
  		<delete dir="build/classes/com/apple" failonerror="false"/>
-diff -Nur jubler/resources/ffdecode/Makefile jubler_fixed/resources/ffdecode/Makefile
---- jubler/resources/ffdecode/Makefile	2007-11-12 22:43:21.000000000 +0200
-+++ jubler_fixed/resources/ffdecode/Makefile	2007-11-18 18:18:00.000000000 +0200
+ 		<delete dir="src/com/apple" failonerror="false"/>
+diff -Nur -x '*.orig' Jubler-3.9.0/resources/ffdecode/Makefile Jubler-3.9.0_patched/resources/ffdecode/Makefile
+--- Jubler-3.9.0/resources/ffdecode/Makefile	2008-03-18 00:01:03.000000000 +0200
++++ Jubler-3.9.0_patched/resources/ffdecode/Makefile	2008-05-14 22:19:47.000000000 +0300
 @@ -12,9 +12,6 @@
  # Name of the produced library
  PROJ=ffdecode
@@ -42,39 +44,29 @@ diff -Nur jubler/resources/ffdecode/Makefile jubler_fixed/resources/ffdecode/Mak
 -# Paths of include files
 -JAVA_HOME=${shell /bin/sh ../system/findjava.sh -j}
 -
- # Path of the local ffmpeg source structure (already inside the source version of Jubler)
- FFMPEG=../ffmpeg-svn
+ # Current Path
+ CPATH=${shell pwd}
  
-@@ -40,7 +37,7 @@
- SRCS=${shell ls 2>/dev/null *.c}
- OBJS=${SRCS:.c=.o}
+@@ -106,7 +103,6 @@
+ CCPREF_NOS=${shell echo ${CCPREF} | sed -e 's/-$$//g' }
+ DCONFIG=--with-mp4v2 --host=${CCPREF_NOS}
  
--COMPFLAGS=${CFLAGS} -std=c99 -pedantic -O3 -Wall -fPIC
-+COMPFLAGS=${CFLAGS} -std=c99 -pedantic -Wall -fPIC
- 
- ifeq (${STATIC},no)
- 	FFMPEGREQ=
-@@ -98,7 +95,6 @@
- 
- FCONFCOMMON=--disable-debug --enable-gpl --enable-a52 --disable-ffmpeg --disable-ffserver --disable-ffplay --disable-encoders --disable-vhook --disable-ipv6 --disable-network --disable-dv1394 --disable-bktr --disable-v4l2 --disable-v4l --disable-audio-beos --disable-audio-oss
- 
--CC=${PREF}gcc ${COMPARCH}
- RANLIB=${PREF}ranlib
+-CC=${CCPREF}gcc
+ RANLIB=${CCPREF}ranlib
  
  
-@@ -152,8 +148,7 @@
- LIB:${LIBNAME}
+@@ -115,7 +111,7 @@
+ .SUFFIXES:.o .c
  
- ${LIBNAME}:${FFMPEGREQ} ${OBJS} ${RANLIBREQ}
--	${LD} ${COMPARCH} -o ${LIBNAME} ${OBJS} ${LIBS}
--	${STRIP} ${LIBNAME}
-+	${LD} -o ${LIBNAME} ${OBJS} ${LIBS}
+ .c.o:
+-	${CC} ${CFLAGS} ${GCCOPTS} -std=c99 -pedantic -O3 -Wall ${INCS} -I${JAVA_HOME}/include -I${JAVA_HOME}/include/${SYSTEM} -c -o $@ $?
++	${CC} ${CFLAGS} ${GCCOPTS} -std=c99 -pedantic -Wall ${INCS} -I${JAVA_HOME}/include -I${JAVA_HOME}/include/${SYSTEM} -c -o $@ $?
  
  
- clean:
-diff -Nur jubler/src/com/panayotis/jubler/information/HelpBrowser.java jubler_fixed/src/com/panayotis/jubler/information/HelpBrowser.java
---- jubler/src/com/panayotis/jubler/information/HelpBrowser.java	2007-11-18 18:12:50.000000000 +0200
-+++ jubler_fixed/src/com/panayotis/jubler/information/HelpBrowser.java	2007-11-18 18:18:44.000000000 +0200
+ develop:javacheck
+diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrowser.java Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java
+--- Jubler-3.9.0/src/com/panayotis/jubler/information/HelpBrowser.java	2008-03-30 23:04:05.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java	2008-05-14 22:22:23.000000000 +0300
 @@ -47,7 +47,7 @@
          
          history = new ArrayList<String>();
@@ -84,10 +76,10 @@ diff -Nur jubler/src/com/panayotis/jubler/information/HelpBrowser.java jubler_fi
          setPage(initpage);
          history.add(initpage);
          
-diff -Nur jubler/src/com/panayotis/jubler/Main.java jubler_fixed/src/com/panayotis/jubler/Main.java
---- jubler/src/com/panayotis/jubler/Main.java	2007-11-18 18:12:50.000000000 +0200
-+++ jubler_fixed/src/com/panayotis/jubler/Main.java	2007-11-19 06:10:30.000000000 +0200
-@@ -86,17 +86,9 @@
+diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/Main.java Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java
+--- Jubler-3.9.0/src/com/panayotis/jubler/Main.java	2008-03-30 23:04:08.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/Main.java	2008-05-14 22:22:23.000000000 +0300
+@@ -84,17 +84,9 @@
          /* Load arguments, in a mac way */
          SystemDependent.initApplication();
  
@@ -105,9 +97,9 @@ diff -Nur jubler/src/com/panayotis/jubler/Main.java jubler_fixed/src/com/panayot
                  
      }
          
-diff -Nur jubler/src/com/panayotis/jubler/os/SystemDependent.java jubler_fixed/src/com/panayotis/jubler/os/SystemDependent.java
---- jubler/src/com/panayotis/jubler/os/SystemDependent.java	2007-11-18 18:12:50.000000000 +0200
-+++ jubler_fixed/src/com/panayotis/jubler/os/SystemDependent.java	2007-11-18 18:23:47.000000000 +0200
+diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java
+--- Jubler-3.9.0/src/com/panayotis/jubler/os/SystemDependent.java	2008-03-31 02:00:49.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemDependent.java	2008-05-14 22:22:23.000000000 +0300
 @@ -25,10 +25,6 @@
  
  import static com.panayotis.jubler.i18n.I18N._;
@@ -119,7 +111,7 @@ diff -Nur jubler/src/com/panayotis/jubler/os/SystemDependent.java jubler_fixed/s
  import com.panayotis.jubler.Jubler;
  import com.panayotis.jubler.Main;
  import com.panayotis.jubler.StaticJubler;
-@@ -104,10 +100,6 @@
+@@ -110,10 +106,6 @@
      
      
      public static void initApplication() {
@@ -130,7 +122,7 @@ diff -Nur jubler/src/com/panayotis/jubler/os/SystemDependent.java jubler_fixed/s
      }
      
      
-@@ -322,36 +314,3 @@
+@@ -328,36 +320,3 @@
          return home+".jubler/output.log";
      }
  }
@@ -167,9 +159,9 @@ diff -Nur jubler/src/com/panayotis/jubler/os/SystemDependent.java jubler_fixed/s
 -        Main.asyncAddSubtitle(event.getFilename());
 -    }
 -}
-diff -Nur jubler/src/com/panayotis/jubler/os/SystemFileFinder.java jubler_fixed/src/com/panayotis/jubler/os/SystemFileFinder.java
---- jubler/src/com/panayotis/jubler/os/SystemFileFinder.java	2007-11-18 18:12:50.000000000 +0200
-+++ jubler_fixed/src/com/panayotis/jubler/os/SystemFileFinder.java	2007-11-19 06:06:58.000000000 +0200
+diff -Nur -x '*.orig' Jubler-3.9.0/src/com/panayotis/jubler/os/SystemFileFinder.java Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java
+--- Jubler-3.9.0/src/com/panayotis/jubler/os/SystemFileFinder.java	2008-03-30 23:04:04.000000000 +0300
++++ Jubler-3.9.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java	2008-05-14 22:22:23.000000000 +0300
 @@ -58,15 +58,12 @@
      }
      
