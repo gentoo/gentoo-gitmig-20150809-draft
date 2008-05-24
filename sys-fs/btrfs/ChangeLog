@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/btrfs
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.1 2008/05/24 19:49:32 lavajoe Exp $
+
+*btrfs-0.14 (24 May 2008)
+
+  24 May 2008; Joe Peterson <lavajoe@gentoo.org>
+  +files/btrfs-0.14-hotfix.patch, +metadata.xml, +btrfs-0.14.ebuild:
+  New package: Btrfs filesystem kernel module
+

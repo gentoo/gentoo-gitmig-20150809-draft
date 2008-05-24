@@ -1,0 +1,268 @@
+diff -Nur btrfs-progs-0.14/.hg_archival.txt progs-c0d6cfa51166/.hg_archival.txt
+--- btrfs-progs-0.14/.hg_archival.txt	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/.hg_archival.txt	2008-05-02 14:12:02.000000000 -0600
+@@ -1,2 +1,2 @@
+ repo: 972e56533d49456b288abe364ba0295fa8c0e0ad
+-node: 9a59768215d93fa8a3dcdcabe17d6555028ebbec
++node: c0d6cfa51166d680173dbe5b3dd283acbfe2265e
+diff -Nur btrfs-progs-0.14/Makefile progs-c0d6cfa51166/Makefile
+--- btrfs-progs-0.14/Makefile	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/Makefile	2008-05-02 14:12:02.000000000 -0600
+@@ -1,6 +1,6 @@
+ CC=gcc
+ AM_CFLAGS = -Wall -fno-strict-aliasing -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2
+-CFLAGS = -g -Werror
++CFLAGS = -g -Werror -Os
+ objects = ctree.o disk-io.o radix-tree.o extent-tree.o print-tree.o \
+ 	  root-tree.o dir-item.o hash.o file-item.o inode-item.o \
+ 	  inode-map.o crc32c.o rbtree.o extent-cache.o extent_io.o \
+diff -Nur btrfs-progs-0.14/bcp progs-c0d6cfa51166/bcp
+--- btrfs-progs-0.14/bcp	1969-12-31 17:00:00.000000000 -0700
++++ progs-c0d6cfa51166/bcp	2008-05-02 14:12:02.000000000 -0600
+@@ -0,0 +1,161 @@
++#!/usr/bin/env python
++# Copyright (C) 2007 Oracle.  All rights reserved.
++#
++# This program is free software; you can redistribute it and/or
++# modify it under the terms of the GNU General Public
++# License v2 as published by the Free Software Foundation.
++# 
++# This program is distributed in the hope that it will be useful,
++# but WITHOUT ANY WARRANTY; without even the implied warranty of
++# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++# General Public License for more details.
++# 
++# You should have received a copy of the GNU General Public
++# License along with this program; if not, write to the
++# Free Software Foundation, Inc., 59 Temple Place - Suite 330,
++# Boston, MA 021110-1307, USA.
++#
++import sys, os, stat, fcntl
++from optparse import OptionParser
++
++def copylink(srcname, dst, filename, statinfo, force_name):
++    dstname = os.path.join(dst, force_name or filename)
++    if not os.path.exists(dstname):
++        link_target = os.readlink(srcname)
++        os.symlink(link_target, dstname)
++
++def copydev(srcname, dst, filename, statinfo, force_name):
++    devbits = statinfo.st_mode & (stat.S_IFBLK | stat.S_IFCHR)
++    mode = stat.S_IMODE(statinfo.st_mode) | devbits
++    dstname = os.path.join(dst, force_name or filename)
++    if not os.path.exists(dstname):
++        os.mknod(dstname, mode, statinfo.st_rdev)
++
++def copyfile(srcname, dst, filename, statinfo, force_name):
++    written = 0
++    dstname = os.path.join(dst, force_name or filename)
++
++    st_mode = statinfo.st_mode
++    if stat.S_ISLNK(st_mode):
++        copylink(srcname, dst, part, statinfo, None)
++        return
++    elif stat.S_ISBLK(st_mode) or stat.S_ISCHR(st_mode):
++        copydev(srcname, dst, part, statinfo, None)
++        return
++    elif not stat.S_ISREG(st_mode):
++        return
++
++    try:
++        os.unlink(dstname)
++    except:
++        pass
++
++    if options.link:
++        os.link(srcname, dstname)
++        return
++
++    dstf = file(dstname, 'w')
++    srcf = file(srcname, 'r')
++
++    ret = 1
++
++    try:
++        if not options.copy:
++            ret = fcntl.ioctl(dstf.fileno(), 1074041865, srcf.fileno())
++    except:
++        pass
++
++    if ret != 0:
++        while True:
++            buf = srcf.read(256 * 1024)
++            if not buf:
++                break
++            written += len(buf)
++            dstf.write(buf)
++
++    os.chmod(dstname, stat.S_IMODE(statinfo.st_mode))
++    os.chown(dstname, statinfo.st_uid, statinfo.st_gid)
++
++
++usage = "usage: %prog [options]"
++parser = OptionParser(usage=usage)
++parser.add_option("-l", "--link", help="Create hard links", default=False,
++                  action="store_true")
++parser.add_option("-c", "--copy", help="Copy file bytes (don't cow)",
++                  default=False, action="store_true")
++
++(options,args) = parser.parse_args()
++
++if len(args) < 2:
++    sys.stderr.write("source or destination not specified\n")
++    sys.exit(1)
++
++if options.link and options.copy:
++    sys.stderr.write("Both -l and -c specified, using copy mode\n")
++    options.link = False
++
++
++total_args = len(args)
++src_args = total_args - 1
++orig_dst = args[-1]
++
++if src_args > 1:
++    if not os.path.exists(orig_dst):
++        os.makedirs(orig_dst)
++    if not os.path.isdir(orig_dst):
++        sys.stderr.write("Destination %s is not a directory\n" % orig_dst)
++        exit(1)
++
++for srci in xrange(0, src_args):
++    src = args[srci]
++    if os.path.isfile(src):
++        statinfo = os.lstat(src)
++        force_name = None
++        if src_args == 1:
++            if not os.path.isdir(orig_dst):
++                force_name = os.path.basename(orig_dst)
++                orig_dst = os.path.dirname(orig_dst) or '.'
++        copyfile(src, orig_dst, os.path.basename(src), statinfo, force_name)
++        continue
++
++    if src_args > 1 or os.path.exists(orig_dst):
++        dst = os.path.join(orig_dst, os.path.basename(src))
++    else:
++        dst = orig_dst
++
++    if not os.path.exists(dst):
++        os.makedirs(dst)
++        statinfo = os.stat(src)
++        os.chmod(dst, stat.S_IMODE(statinfo.st_mode))
++        os.chown(dst, statinfo.st_uid, statinfo.st_gid)
++        
++    iter = os.walk(src, topdown=True)
++
++    for (dirpath, dirnames, filenames) in iter:
++        for x in dirnames:
++            srcname = os.path.join(dirpath, x)
++            statinfo = os.lstat(srcname)
++
++            if srcname.startswith(src):
++                part = srcname[len(src) + 1:]
++
++            if stat.S_ISLNK(statinfo.st_mode):
++                copylink(srcname, dst, part, statinfo, None)
++                continue
++
++            dst_dir = os.path.join(dst, part)
++            if not os.path.exists(dst_dir):
++                os.makedirs(dst_dir)
++
++            os.chmod(dst_dir, stat.S_IMODE(statinfo.st_mode))
++            os.chown(dst_dir, statinfo.st_uid, statinfo.st_gid)
++
++        for f in filenames:
++            srcname = os.path.join(dirpath, f)
++            if srcname.startswith(src):
++                part = srcname[len(src) + 1:]
++
++            statinfo = os.lstat(srcname)
++            copyfile(srcname, dst, part, statinfo, None)
++
++
+diff -Nur btrfs-progs-0.14/btrfs-vol.c progs-c0d6cfa51166/btrfs-vol.c
+--- btrfs-progs-0.14/btrfs-vol.c	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/btrfs-vol.c	2008-05-02 14:12:02.000000000 -0600
+@@ -71,9 +71,9 @@
+ 	char *mnt = NULL;
+ 	int ret;
+ 	int option_index = 0;
+-	int cmd;
++	int cmd = 0;
+ 	int fd;
+-	int devfd;
++	int devfd = 0;
+ 	DIR *dirstream;
+ 	struct btrfs_ioctl_vol_args args;
+ 	u64 dev_block_count = 0;
+diff -Nur btrfs-progs-0.14/btrfsck.c progs-c0d6cfa51166/btrfsck.c
+--- btrfs-progs-0.14/btrfsck.c	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/btrfsck.c	2008-05-02 14:12:02.000000000 -0600
+@@ -606,6 +606,9 @@
+ 
+ 			data_bytes_allocated +=
+ 				btrfs_file_extent_disk_num_bytes(buf, fi);
++			if (data_bytes_allocated < root->sectorsize) {
++				abort();
++			}
+ 			data_bytes_referenced +=
+ 				btrfs_file_extent_num_bytes(buf, fi);
+ 			ret = add_extent_rec(extent_cache, NULL, bytenr,
+diff -Nur btrfs-progs-0.14/ioctl.h progs-c0d6cfa51166/ioctl.h
+--- btrfs-progs-0.14/ioctl.h	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/ioctl.h	2008-05-02 14:12:02.000000000 -0600
+@@ -36,6 +36,7 @@
+ 				   struct btrfs_ioctl_vol_args)
+ #define BTRFS_IOC_SCAN_DEV _IOW(BTRFS_IOCTL_MAGIC, 4, \
+ 				   struct btrfs_ioctl_vol_args)
++#define BTRFS_IOC_CLONE        _IOW(BTRFS_IOCTL_MAGIC, 9, int)
+ #define BTRFS_IOC_ADD_DEV _IOW(BTRFS_IOCTL_MAGIC, 10, \
+ 				   struct btrfs_ioctl_vol_args)
+ #define BTRFS_IOC_RM_DEV _IOW(BTRFS_IOCTL_MAGIC, 11, \
+diff -Nur btrfs-progs-0.14/mkfs.c progs-c0d6cfa51166/mkfs.c
+--- btrfs-progs-0.14/mkfs.c	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/mkfs.c	2008-05-02 14:12:02.000000000 -0600
+@@ -308,7 +308,7 @@
+ 	u64 block_count = 0;
+ 	u64 dev_block_count = 0;
+ 	u64 blocks[6];
+-	u64 alloc_start;
++	u64 alloc_start = 0;
+ 	u64 metadata_profile = BTRFS_BLOCK_GROUP_RAID1 | BTRFS_BLOCK_GROUP_DUP;
+ 	u64 data_profile = BTRFS_BLOCK_GROUP_RAID0;
+ 	u32 leafsize = getpagesize();
+diff -Nur btrfs-progs-0.14/utils.c progs-c0d6cfa51166/utils.c
+--- btrfs-progs-0.14/utils.c	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/utils.c	2008-05-02 14:12:02.000000000 -0600
+@@ -645,7 +645,7 @@
+ 
+ int btrfs_scan_one_dir(char *dirname, int run_ioctl)
+ {
+-	DIR *dirp;
++	DIR *dirp = NULL;
+ 	struct dirent *dirent;
+ 	struct pending_dir *pending;
+ 	struct stat st;
+@@ -734,7 +734,8 @@
+ 	ret = 0;
+ fail:
+ 	free(pending);
+-	closedir(dirp);
++	if (dirp)
++		closedir(dirp);
+ 	return ret;
+ }
+ 
+diff -Nur btrfs-progs-0.14/volumes.c progs-c0d6cfa51166/volumes.c
+--- btrfs-progs-0.14/volumes.c	2008-04-29 12:29:18.000000000 -0600
++++ progs-c0d6cfa51166/volumes.c	2008-05-02 14:12:02.000000000 -0600
+@@ -478,7 +478,7 @@
+ 	struct extent_buffer *leaf;
+ 	struct btrfs_key key;
+ 	unsigned long ptr;
+-	u64 free_devid;
++	u64 free_devid = 0;
+ 
+ 	root = root->fs_info->chunk_root;
+ 
