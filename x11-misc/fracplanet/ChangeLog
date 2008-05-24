@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/fracplanet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fracplanet/ChangeLog,v 1.1 2008/05/24 12:48:20 drac Exp $
+
+*fracplanet-0.3.3 (24 May 2008)
+
+  24 May 2008; Samuli Suominen <drac@gentoo.org> +fracplanet-0.3.3.ebuild:
+  Initial commit for bug 177277, thanks to Denilson.
+
