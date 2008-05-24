@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.125 2008/05/20 09:41:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.126 2008/05/24 09:44:11 maekke Exp $
+
+*libgphoto2-2.4.1-r1 (24 May 2008)
+
+  24 May 2008; Markus Meier <maekke@gentoo.org> +files/gphoto2-ixany.patch,
+  libgphoto2-2.4.1.ebuild, +libgphoto2-2.4.1-r1.ebuild:
+  Fix building on alpha, bug #221853 comment #6, patch from fedora. Move
+  libtool to DEPEND.
 
   20 May 2008; Raúl Porcel <armin76@gentoo.org> libgphoto2-2.2.1-r1.ebuild,
   libgphoto2-2.3.1-r5.ebuild, libgphoto2-2.4.0-r1.ebuild,

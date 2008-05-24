@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1.ebuild,v 1.12 2008/05/24 09:44:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1-r1.ebuild,v 1.1 2008/05/24 09:44:11 maekke Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="nls doc exif hal kernel_linux"
 RESTRICT="test"
@@ -78,6 +78,9 @@ src_unpack() {
 
 	# Fix bug #216206, libusb detection
 	sed -i "s:usb_busses:usb_find_busses:g" libgphoto2_port/configure || die "libusb sed failed"
+
+	# Fix building on alpha, bug #221853 comment #6
+	epatch "${FILESDIR}"/gphoto2-ixany.patch
 }
 
 src_compile() {
