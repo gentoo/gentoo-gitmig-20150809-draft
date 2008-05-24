@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.21 2008/05/06 21:53:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.22 2008/05/24 20:46:26 tupone Exp $
+
+*zprod-manager-0.3.2-r1 (24 May 2008)
+
+  24 May 2008; Tupone Alfredo <tupone@gentoo.org> -files/0.1/zprod-manager,
+  files/0.3.2/zprod-manager, -files/0.2/zprod-manager,
+  -zprod-manager-0.3.2.ebuild, +zprod-manager-0.3.2-r1.ebuild:
+  Removing unused files. Removed warning when product does not use lib/python
 
 *zprod-manager-0.3.2 (06 May 2008)
 

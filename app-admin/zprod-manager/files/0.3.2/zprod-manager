@@ -2,7 +2,7 @@
 # Gentoo Zope Product selection tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.3.2/zprod-manager,v 1.1 2008/05/06 21:53:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.3.2/zprod-manager,v 1.2 2008/05/24 20:46:27 tupone Exp $
 
 VERSION="0.3.1"
 COMMAND_LIST="add del"
@@ -220,30 +220,31 @@ prod_add()
             return ${E_OVERWRITE}
         fi
     done
-    for N in $(cat "${1}/${ZPROD_LLIST_FNAME}")
-    do
-        if [ -d ${2}/lib/python/${N} ]
-        then
-            echo "ZPROD-MANAGER WARNING: Overwrite possiblity detected at ${N}"
-            return ${E_OVERWRITE}
-        fi
-    done
+    if [ -f "${1}/${ZPROD_LLIST_FNAME}" ]; then
+    	for N in $(cat "${1}/${ZPROD_LLIST_FNAME}"); do
+	    if [ -d ${2}/lib/python/${N} ]; then
+	    	echo "ZPROD-MANAGER WARNING: Overwrite detected at ${N}"
+		return ${E_OVERWRITE}
+	    fi
+	done
+    fi
 
+     # we do copy instead of link, because its much safer,
+     # and zope-development-way compliant
     if [ -e ${1}/Products ] ; then
     	for N in $(cat "${1}/${ZPROD_FLIST_FNAME}") ; do
-            # we do copy instead of link, because its much safer, and zope-development-way compliant
 	    cp -Ra ${1}/Products/${N} ${2}/Products
     	done
     else
     	for N in $(cat "${1}/${ZPROD_FLIST_FNAME}") ; do
-            # we do copy instead of link, because its much safer, and zope-development-way compliant
 	    cp -Ra ${1}/${N} ${2}/Products
     	done
     fi
-    for N in $(cat "${1}/${ZPROD_LLIST_FNAME}") ; do
-        # we do copy instead of link, because its much safer, and zope-development-way compliant
-	cp -Ra ${1}/lib/python/${N} ${2}/lib/python
-    done
+    if [ -f "${1}/${ZPROD_LLIST_FNAME}" ]; then
+    	for N in $(cat "${1}/${ZPROD_LLIST_FNAME}") ; do
+	    cp -Ra ${1}/lib/python/${N} ${2}/lib/python
+    	done
+    fi
     RESULT=$?
     if [ ${RESULT} -eq 0 ] ; then
 	# basically adding ${PF} to .zproduct.lst
@@ -252,26 +253,20 @@ prod_add()
 	mv -f ${2}/.tmp ${2}/${ZPROD_PLIST_FNAME}
 	RESULT=$?
     
+        # setting owner and group as in Products folder, so we can compile
+        # python scripts with the zope user
+        # gives group writing perms (very often need in development teams)
+        # takes all perms from others to comply with 770 instance policy
         for N in $(cat "${1}/${ZPROD_FLIST_FNAME}") ; do
-            # setting owner and group as in Products folder, so we can compile
-            # python scripts with the zope user
-        
             chown -R  `stat -c %U:%G ${2}/Products` ${2}/Products/${N}
-
-            # gives group writing perms (very often need in development teams)
-            # takes all perms from others to comply with 770 instance policy
             chmod -R g+rwX,o-rwx ${2}/Products/${N}
         done
-        for N in $(cat "${1}/${ZPROD_LLIST_FNAME}") ; do
-            # setting owner and group as in Products folder, so we can compile
-            # python scripts with the zope user
-        
-            chown -R  `stat -c %U:%G ${2}/Products` ${2}/lib/python/${N}
-
-            # gives group writing perms (very often need in development teams)
-            # takes all perms from others to comply with 770 instance policy
-            chmod -R g+rwX,o-rwx ${2}/lib/python/${N}
-        done
+    	if [ -f "${1}/${ZPROD_LLIST_FNAME}" ]; then
+            for N in $(cat "${1}/${ZPROD_LLIST_FNAME}") ; do
+            	chown -R  `stat -c %U:%G ${2}/Products` ${2}/lib/python/${N}
+            	chmod -R g+rwX,o-rwx ${2}/lib/python/${N}
+            done
+	fi
     fi
 
     return ${RESULT}
@@ -293,9 +288,11 @@ prod_del()
 	for N in $(cat ${1}/${ZPROD_FLIST_FNAME}) ; do
 	    rm -rf ${2}/Products/${N}
     	done
-	for N in $(cat ${1}/${ZPROD_LLIST_FNAME}) ; do
-	    rm -rf ${2}/lib/python/${N}
-    	done
+    	if [ -f "${1}/${ZPROD_LLIST_FNAME}" ]; then
+	    for N in $(cat ${1}/${ZPROD_LLIST_FNAME}) ; do
+	    	rm -rf ${2}/lib/python/${N}
+    	    done
+	fi
 	# remove zproduct from .zproduct.lst
 	sed -i -e "s/${PF}$//" -e "/^$/d" ${2}/${ZPROD_PLIST_FNAME}
 	RESULT=$?
