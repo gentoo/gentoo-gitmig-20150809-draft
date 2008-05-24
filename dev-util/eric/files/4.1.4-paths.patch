@@ -1,0 +1,32 @@
+--- eric4-4.1.4-orig/install.py	2008-05-22 00:13:29.000000000 +0200
++++ eric4-4.1.4/install.py	2008-05-22 00:21:27.000000000 +0200
+@@ -187,7 +187,7 @@
+     fname = os.path.join(pdir, "__init__.py")
+     if not os.path.exists(fname):
+         if not os.path.exists(pdir):
+-            os.mkdir(pdir,  0755)
++            os.makedirs(pdir,  0755)
+         f = open(fname, "wb")
+         f.write(\
+ '''# -*- coding: utf-8 -*-
+@@ -210,7 +210,10 @@
+     
+     try:
+         from PyQt4 import pyqtconfig
+-        qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
++        if distDir:
++            qtDataDir = distDir + pyqtconfig._pkg_config["qt_data_dir"]
++        else:
++            qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
+     except (AttributeError, ImportError):
+         print
+         print "Please enter the name of the Qt data directory."
+@@ -475,7 +478,7 @@
+        cfg['ericTemplatesDir'],
+        cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
+        cfg['bindir'], cfg['mdir'], 
+-       getAPIsPath(), apis)
++       getAPIsPath()[len(distDir):], apis)
+     copyToFile(fn, config)
+ 
+ def doDependancyChecks():    
