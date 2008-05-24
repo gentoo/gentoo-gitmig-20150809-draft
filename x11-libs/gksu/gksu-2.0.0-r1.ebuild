@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0-r1.ebuild,v 1.1 2008/05/24 16:11:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0-r1.ebuild,v 1.2 2008/05/24 16:13:46 dang Exp $
 
 inherit gnome2 fixheadtails eutils autotools
 
@@ -19,6 +19,7 @@ RDEPEND=">=x11-libs/libgksu-2
 	gnome? (
 		>=gnome-base/gnome-vfs-2
 		>=gnome-base/nautilus-2
+		x11-terms/gnome-terminal
 		)"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.47 2008/05/24 16:11:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.48 2008/05/24 16:13:46 dang Exp $
+
+  24 May 2008; Daniel Gryniewicz <dang@gentoo.org> gksu-2.0.0-r1.ebuild:
+  Oops, forgot the dep on gnome-terminal
 
 *gksu-2.0.0-r1 (24 May 2008)
 
