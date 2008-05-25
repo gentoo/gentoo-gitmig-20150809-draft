@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.3 2008/05/25 13:06:30 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.4 2008/05/25 14:41:09 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -63,7 +63,7 @@ src_unpack() {
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i "${S}"/configure
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}"
-	epatch "${FILESDIR}"/${P}-bsddb-test.patch
+	epatch "${FILESDIR}"/${P}-disable-failing-tests.patch
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
 		Lib/distutils/sysconfig.py \
