@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.8 2008/05/21 15:51:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.9 2008/05/25 17:20:15 caleb Exp $
+
+  25 May 2008; Caleb Tennis <caleb@gentoo.org>
+  -files/sphinx-0.9.7-fix-sandbox.patch, -sphinx-0.9.7.ebuild,
+  -sphinx-0.9.8_rc1.ebuild, -sphinx-0.9.8_rc1-r1.ebuild:
+  remove older versions
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> sphinx-0.9.7.ebuild,
   sphinx-0.9.8_rc1.ebuild:
