@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.97 2008/05/25 10:17:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.98 2008/05/25 12:43:02 maekke Exp $
+
+  25 May 2008; Markus Meier <maekke@gentoo.org> inkscape-0.46-r2.ebuild:
+  amd64/x86 stable, bug #223443
 
   25 May 2008; Markus Rothe <corsair@gentoo.org> inkscape-0.46-r2.ebuild:
   Stable on ppc64; bug #223443
