@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2.ebuild,v 1.2 2008/05/23 12:59:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2.ebuild,v 1.3 2008/05/25 18:35:07 caleb Exp $
 
 inherit eutils multilib
 
@@ -112,6 +112,7 @@ src_install() {
 		> "${T}/ejabberdctl"
 	doexe "${T}/ejabberdctl"
 
+	dodir /var/lib/ejabberd
 	newinitd "${FILESDIR}/${MY_P}.initd" ${PN}
 	newconfd "${FILESDIR}/${MY_P}.confd" ${PN}
 
