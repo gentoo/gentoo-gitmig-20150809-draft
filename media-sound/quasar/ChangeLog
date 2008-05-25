@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quasar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/ChangeLog,v 1.1 2008/05/25 13:24:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/ChangeLog,v 1.2 2008/05/25 13:45:16 loki_val Exp $
+
+  25 May 2008; <pa@gentoo.org> quasar-0.9_beta3.ebuild:
+  Use portage functions.
 
 *quasar-0.9_beta3 (25 May 2008)
 

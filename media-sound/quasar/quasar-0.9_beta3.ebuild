@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/quasar-0.9_beta3.ebuild,v 1.1 2008/05/25 13:24:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/quasar-0.9_beta3.ebuild,v 1.2 2008/05/25 13:45:16 loki_val Exp $
 
 inherit eutils qt3
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/v${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/quasar-0.9_beta3-use-system.patch"
+	epatch "${FILESDIR}/${P}-use-system.patch"
 }
 
 src_compile() {
@@ -35,8 +35,8 @@ src_compile() {
 
 src_install() {
 	dobin quasar || die "dobin failed"
-	dodir /usr/share/quasar
-	cp -r distro/skins "${D}"/usr/share/quasar
+	insinto /usr/share/quasar/skins/default/
+	doins distro/skins/default/*
 	dodoc README
 
 }
