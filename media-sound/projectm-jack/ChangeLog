@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/projectm-jack
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.1 2008/05/25 08:31:17 aballier Exp $
+
+*projectm-jack-1.1 (25 May 2008)
+
+  25 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +projectm-jack-1.1.ebuild:
+  Initial import, thanks to drac for the initial ebuild
+
