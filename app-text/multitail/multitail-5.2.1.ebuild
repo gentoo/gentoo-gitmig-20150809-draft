@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.1.ebuild,v 1.1 2008/05/04 15:31:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.1.ebuild,v 1.2 2008/05/25 18:28:07 jer Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug"
 
 DEPEND="sys-libs/ncurses"
