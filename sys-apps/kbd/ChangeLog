@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.74 2008/04/10 03:56:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.75 2008/05/25 06:32:24 corsair Exp $
+
+  25 May 2008; Markus Rothe <corsair@gentoo.org> kbd-1.14.1-r1.ebuild:
+  Stable on ppc64
 
   10 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   kbd-1.14.1-r1.ebuild:
