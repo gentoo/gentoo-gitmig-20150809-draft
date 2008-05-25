@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/turbotail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.5 2008/05/25 18:26:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.6 2008/05/25 18:34:24 jer Exp $
+
+  25 May 2008; Jeroen Roovers <jer@gentoo.org> turbotail-0.2-r1.ebuild:
+  Marked ~hppa too.
 
   25 May 2008; Jeroen Roovers <jer@gentoo.org> turbotail-0.2.ebuild,
   turbotail-0.2-r1.ebuild:
