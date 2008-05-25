@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.47 2008/05/22 18:03:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.48 2008/05/25 12:50:27 maekke Exp $
+
+  25 May 2008; Markus Meier <maekke@gentoo.org> gnome2-wnck-0.16.ebuild:
+  amd64 stable, bug #204386
 
   22 May 2008; Raúl Porcel <armin76@gentoo.org> gnome2-wnck-0.16.ebuild:
   ia64 stable wrt #204386
