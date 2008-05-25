@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/twisted-names-0.2.0.ebuild,v 1.6 2006/07/13 02:33:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/twisted-names-0.2.0.ebuild,v 1.7 2008/05/25 20:27:22 lordvan Exp $
 
 MY_PACKAGE=Names
 
