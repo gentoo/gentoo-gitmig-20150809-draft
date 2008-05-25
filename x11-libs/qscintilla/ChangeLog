@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.9 2008/05/24 22:38:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.10 2008/05/25 10:34:25 yngwin Exp $
+
+  25 May 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/qscintilla-2.2-qt4.patch:
+  Adding patch that I forgot to copy over. Fixes bug 223507.
 
 *qscintilla-2.2 (24 May 2008)
 
