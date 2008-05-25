@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.9 2008/05/23 17:55:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.10 2008/05/25 18:15:26 klausman Exp $
+
+  25 May 2008; Tobias Klausmann <klausman@gentoo.org> package.mask:
+  libggi compiles on alpha these days
 
   23 May 2008; Tobias Klausmann <klausman@gentoo.org> package.mask:
   The glint driver is broken completely currently
