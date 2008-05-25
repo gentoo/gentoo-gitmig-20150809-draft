@@ -1,0 +1,39 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.2.ebuild,v 1.1 2008/05/25 03:42:54 vapier Exp $
+
+inherit games
+
+EP=${PV:0:1}
+REV=${PV:2:1}
+
+DESCRIPTION="On the Rain-Slick Precipice of Darkness, Episode One"
+HOMEPAGE="http://www.playgreenhouse.com/game/HOTHG-000001-01/"
+SRC_URI="http://download.playgreenhouse.com/rainslickep${EP}_linux_r${REV}.tgz"
+
+LICENSE="as-is"
+SLOT="${EP}"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+RESTRICT="strip"
+
+RDEPEND="sys-libs/glibc
+	virtual/opengl
+	x11-libs/libXrandr
+	x11-libs/libX11
+	x11-libs/libXext
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+	)"
+
+S=${WORKDIR}/rainslickep1
+
+src_install() {
+	local dir="${GAMES_PREFIX_OPT}/${PN}/ep${EP}"
+	dodir "${dir}"
+	cp -pPR * "${D}/${dir}/" || die
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}/RainSlickEp1" "${GAMES_BINDIR}/RainSlickEp1" || die
+	prepgamesdirs
+}
