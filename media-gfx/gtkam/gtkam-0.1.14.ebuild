@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.8 2008/05/18 16:01:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.9 2008/05/25 12:58:43 maekke Exp $
 
 inherit autotools eutils gnome2
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	nls? ( >=sys-devel/gettext-0.14.1 )"
 
-DOCS="ABOUT-NLS AUTHORS MANUAL NEWS README"
+DOCS="ABOUT-NLS AUTHORS NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
