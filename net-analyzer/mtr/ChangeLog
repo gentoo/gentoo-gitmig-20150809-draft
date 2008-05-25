@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.78 2008/05/25 15:53:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.79 2008/05/25 16:29:56 jer Exp $
+
+  25 May 2008; Jeroen Roovers <jer@gentoo.org> mtr-0.73-r2.ebuild:
+  Stable for HPPA (bug #223017).
 
   25 May 2008; Raúl Porcel <armin76@gentoo.org> mtr-0.73-r2.ebuild:
   alpha/ia64/sparc stable wrt security #223017
