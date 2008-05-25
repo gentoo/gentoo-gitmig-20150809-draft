@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3555 2008/05/25 19:40:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3556 2008/05/25 21:15:30 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -587,6 +587,7 @@ dev-python/paste:flup - enable support for flup (and therefore for various wgsi 
 dev-python/paste:openid - enable OpenID support
 dev-python/psycopg:mxdatetime - choose MX DateTime support instead of built-in datetime
 dev-python/pycairo:numeric - enable Numeric support
+dev-python/pygobject:libffi - Enable support to connect to signals on python objects from C.
 dev-python/PyQt4:qt3support - enable the Qt3Support libraries for Qt4
 dev-python/pyyaml:libyaml - enable libyaml support
 dev-python/pyzor:pyzord - enable support for pyzord
