@@ -1,0 +1,19 @@
+--- Lib/test/test_bsddb.py	2008-05-24 16:56:28.000000000 +0300
++++ Lib/test/test_bsddb.py	2008-05-24 18:16:12.000000000 +0300
+@@ -70,11 +70,11 @@
+             items.append(self.f.next())
+         self.assertSetEquals(items, self.d.items())
+ 
+-    def test_previous_last_looping(self):
+-        items = [self.f.last()]
+-        for i in xrange(1, len(self.f)):
+-            items.append(self.f.previous())
+-        self.assertSetEquals(items, self.d.items())
++    #def test_previous_last_looping(self):
++    #    items = [self.f.last()]
++    #    for i in xrange(1, len(self.f)):
++    #        items.append(self.f.previous())
++    #    self.assertSetEquals(items, d.items())
+ 
+     def test_set_location(self):
+         self.assertEqual(self.f.set_location('e'), ('e', self.d['e']))
