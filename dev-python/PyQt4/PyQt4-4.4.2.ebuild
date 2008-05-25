@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.2.ebuild,v 1.1 2008/05/24 22:10:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.2.ebuild,v 1.2 2008/05/25 13:05:29 ingmar Exp $
 
 EAPI=1
 
@@ -17,13 +17,12 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus debug doc examples opengl qt3support svg X"
 
 RDEPEND=">=dev-python/sip-4.7.6
-	|| ( ( x11-libs/qt-core:4
-		dbus? ( x11-libs/qt-dbus:4 )
-		opengl? ( x11-libs/qt-opengl:4 )
-		svg? ( x11-libs/qt-svg:4 )
-		qt3support? ( x11-libs/qt-qt3support:4 )
-		X? ( x11-libs/qt-gui:4 ) )
-	=x11-libs/qt-4* )"
+	>=x11-libs/qt-core-4.4.0:4
+	dbus? ( >=x11-libs/qt-dbus-4.4.0:4 )
+	opengl? ( >=x11-libs/qt-opengl-4.4.0:4 )
+	svg? ( >=x11-libs/qt-svg-4.4.0:4 )
+	qt3support? ( >=x11-libs/qt-qt3support-4.4.0:4 )
+	X? ( >=x11-libs/qt-gui-4.4.0:4 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
