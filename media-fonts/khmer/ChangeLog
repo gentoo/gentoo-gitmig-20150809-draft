@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/khmer
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/khmer/ChangeLog,v 1.1 2008/05/25 02:55:16 dirtyepic Exp $
+
+*khmer-5.0 (25 May 2008)
+
+  25 May 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +khmer-5.0.ebuild:
+  Initial import for bug #216414. Ebuild by Peter Alfredsen.
+
