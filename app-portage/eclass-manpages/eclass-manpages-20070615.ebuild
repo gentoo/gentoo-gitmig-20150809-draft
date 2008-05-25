@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20070615.ebuild,v 1.4 2008/02/19 05:13:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20070615.ebuild,v 1.5 2008/05/25 04:55:59 zmedico Exp $
 
 DESCRIPTION="collection of Gentoo eclass manpages"
 HOMEPAGE="http://www.gentoo.org/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
-RDEPEND="!app-portage/portage-manpages"
+RDEPEND="!app-portage/portage-manpages !app-admin/webapp-config"
 
 S=${WORKDIR}
 
