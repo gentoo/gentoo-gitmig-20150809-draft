@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.1 2008/05/02 04:47:32 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.2 2008/05/25 12:40:20 coldwind Exp $
+
+  25 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  decorator-2.2.0.ebuild:
+  add ~amd64 wrt bug #220011
 
 *decorator-2.2.0 (02 May 2008)
 
