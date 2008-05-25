@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080102.ebuild,v 1.2 2008/02/01 13:58:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080102.ebuild,v 1.3 2008/05/25 18:30:49 solar Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
+KEYWORDS="amd64 arm x86 ~mips ~ppc"
 IUSE="xattr"
 
 S=${WORKDIR}/${PN}.git
