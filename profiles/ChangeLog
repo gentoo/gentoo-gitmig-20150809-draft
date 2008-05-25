@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1451 2008/05/24 22:08:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1452 2008/05/25 13:04:02 ingmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  25 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Package.mask dev-python/PyQt-4.4.2.
 
   24 May 2008; Ben de Groot <yngwin@gentoo.org> use.local.desc:
   Added qt3support useflag for dev-python/PyQt4
