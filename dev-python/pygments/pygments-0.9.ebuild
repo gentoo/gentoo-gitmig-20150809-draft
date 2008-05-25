@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.6 2007/12/22 18:55:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.7 2008/05/25 06:39:07 corsair Exp $
 
 NEED_PYTHON=2.3
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://pygments.org/"
 SRC_URI="http://cheeseshop.python.org/packages/source/P/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc"
 
