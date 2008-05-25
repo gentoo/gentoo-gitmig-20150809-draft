@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.28 2008/05/25 14:50:47 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.29 2008/05/25 17:36:14 jer Exp $
+
+  25 May 2008; Jeroen Roovers <jer@gentoo.org> ZendFramework-1.5.2.ebuild:
+  Marked ~hppa (bug #223565).
 
 *ZendFramework-1.5.2 (25 May 2008)
 
