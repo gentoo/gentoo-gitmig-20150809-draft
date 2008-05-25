@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/turbotail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.4 2007/02/09 05:43:43 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.5 2008/05/25 18:26:37 jer Exp $
+
+  25 May 2008; Jeroen Roovers <jer@gentoo.org> turbotail-0.2.ebuild,
+  turbotail-0.2-r1.ebuild:
+  Correct HOMEPAGE.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

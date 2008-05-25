@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/turbotail-0.2-r1.ebuild,v 1.1 2005/08/08 17:03:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/turbotail-0.2-r1.ebuild,v 1.2 2008/05/25 18:26:37 jer Exp $
 
 inherit eutils
 
 DESCRIPTION="drop-in replacement for 'tail' which uses the kernel DNOTIFY-api"
-HOMEPAGE="http://www.vanheusden.com/Linux/"
+HOMEPAGE="http://www.vanheusden.com/turbotail/"
 SRC_URI="http://www.vanheusden.com/Linux/${P}.tgz"
 
 LICENSE="GPL-2"
