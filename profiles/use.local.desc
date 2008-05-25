@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3554 2008/05/25 04:23:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3555 2008/05/25 19:40:57 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -768,6 +768,7 @@ games-strategy/x2:modkit - Install the modkit
 gnome-base/gdm:dmx - Enable Distributed Multihead X (DMX) support
 gnome-base/gdm:remote - Enable secure remote support
 gnome-base/gnome-mount:nautilus - Enable the nautilus plugin
+gnome-base/gnome-volume-manager:automount - Enable automount of devices supported by nautilus
 gnome-base/gvfs:cdda - Enable Compact Disc Digital Audio support (audio CD standard)
 gnome-base/gvfs:fuse - Enable fuse mount points in ~/.gvfs for legacy application access
 gnome-base/nautilus:beagle - Enable support for beagle searching

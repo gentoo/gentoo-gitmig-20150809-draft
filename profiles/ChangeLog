@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1454 2008/05/25 18:12:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1455 2008/05/25 19:40:57 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  25 May 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add automount USE flag for gnome-base/gnome-volume-manager
 
   25 May 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
   Correct PyQt4 package.mask - it's PyQt4, not PyQt
