@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.79 2008/05/23 11:14:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.80 2008/05/25 12:11:34 hanno Exp $
+
+  25 May 2008; Hanno Boeck <hanno@gentoo.org> courier-authlib-0.60.2.ebuild,
+  courier-authlib-0.60.2-r1.ebuild:
+  Fix license (GPL-3).
 
   23 May 2008; Raúl Porcel <armin76@gentoo.org>
   courier-authlib-0.60.2-r1.ebuild:
