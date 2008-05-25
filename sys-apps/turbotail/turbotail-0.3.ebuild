@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/turbotail-0.3.ebuild,v 1.2 2008/05/25 20:45:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/turbotail-0.3.ebuild,v 1.3 2008/05/25 20:48:52 jer Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="fam"
 
-DEPEND="app-admin/gamin"
+DEPEND="fam? ( app-admin/gamin )"
 
 src_compile() {
 	local myconf
