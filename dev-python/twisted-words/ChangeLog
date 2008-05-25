@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.27 2008/03/12 18:43:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.28 2008/05/25 20:33:20 lordvan Exp $
+
+*twisted-words-8.1.0 (25 May 2008)
+
+  25 May 2008; Thomas Raschbacher <lordvan@gentoo.org>
+  +twisted-words-8.1.0.ebuild:
+  Version bump
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
