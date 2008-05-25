@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.2.0.ebuild,v 1.14 2005/11/03 21:04:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.2.0.ebuild,v 1.15 2008/05/25 20:23:51 lordvan Exp $
 
 inherit distutils
 
-DESCRIPTION="collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included."
+DESCRIPTION="An asynchronous networking framework written in Python"
 HOMEPAGE="http://www.twistedmatrix.com/"
 SRC_URI="http://twisted.sourceforge.net/Twisted_NoDocs-${PV}.tar.bz2"
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-lang/python-2.2
 	gtk? ( >=dev-python/pygtk-1.99 )
 	doc? ( =dev-python/twisted-docs-${PV} )"
 
-S=${WORKDIR}/Twisted-${PV}
+S="${WORKDIR}/Twisted-${PV}"
 
 src_install() {
 	distutils_src_install
@@ -29,6 +29,6 @@ src_install() {
 	if use gtk; then
 		sed -e 's/import manhole/import manhole2/' \
 			-e 's/manhole\.run()/manhole2.run()/' \
-			-i ${D}/usr/bin/manhole
+			-i '${D}/usr/bin/manhole'
 	fi
 }

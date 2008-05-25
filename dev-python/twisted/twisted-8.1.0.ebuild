@@ -1,36 +1,40 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.0.1.ebuild,v 1.12 2008/05/25 20:23:51 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-8.1.0.ebuild,v 1.1 2008/05/25 20:23:51 lordvan Exp $
 
 inherit eutils distutils versionator
 
-MY_P=Twisted-${PV}
+MY_P=TwistedCore-${PV}
 
 DESCRIPTION="An asynchronous networking framework written in Python"
 HOMEPAGE="http://www.twistedmatrix.com/"
-SRC_URI="http://tmrc.mit.edu/mirror/twisted/Twisted/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
+SRC_URI="http://tmrc.mit.edu/mirror/${PN}/Core/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="gtk serial crypt"
 
-DEPEND=">=dev-lang/python-2.2
+DEPEND=">=dev-lang/python-2.3
 	>=net-zope/zopeinterface-3.0.1
 	serial? ( dev-python/pyserial )
 	crypt? ( >=dev-python/pyopenssl-0.5.1 )
 	gtk? ( >=dev-python/pygtk-1.99 )
 	!dev-python/twisted-docs"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-DOCS="ChangeLog CREDITS INSTALL NEWS README"
+DOCS="CREDITS NEWS README"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# give a load-sensitive test a better chance of succeeding
-	epatch "${FILESDIR}/${P}-echo-less.patch"
+
+	# Give a load-sensitive test a better chance of succeeding.
+	epatch "${FILESDIR}/${PN}-2.1.0-echo-less.patch"
+
+	# Pass valid arguments to "head" in the zsh completion function.
+	epatch "${FILESDIR}/${PN}-2.1.0-zsh-head.patch"
 }
 
 src_install() {
@@ -98,5 +102,7 @@ src_test() {
 	# docstrings in all packages
 	echo "'''plugins stub'''" > twisted/plugins/__init__.py || die
 
-	PYTHONPATH=. "${T}"/tests/usr/bin/trial -R twisted || die "trial failed"
+	PYTHONPATH=. "${T}"/tests/usr/bin/trial twisted || die "trial failed"
+	cd "${S}"
+	rm -rf "${T}/tests"
 }
