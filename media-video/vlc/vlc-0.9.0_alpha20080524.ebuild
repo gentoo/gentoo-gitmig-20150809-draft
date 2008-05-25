@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080524.ebuild,v 1.1 2008/05/24 09:12:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080524.ebuild,v 1.2 2008/05/25 19:10:31 aballier Exp $
 
 EAPI="1"
 
@@ -276,7 +276,7 @@ src_compile () {
 		$(use_enable skins skins2) \
 		$(use_enable speex) \
 		$(use_enable sse) \
-		$(use_enable stream sout) \
+		--enable-sout \
 		$(use_enable svg) \
 		$(use_enable svga svgalib) \
 		$(use_enable taglib) \
@@ -304,6 +304,9 @@ src_compile () {
 		--disable-optimizations \
 		--enable-fast-install \
 		${myconf} || die "configuration failed"
+
+	# Reminder to re-add this when disabling it will not be broken
+	# $(use_enable stream sout) \
 
 	if [[ $(gcc-major-version) == 2 ]]; then
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"

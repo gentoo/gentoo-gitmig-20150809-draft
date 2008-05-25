@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.336 2008/05/24 09:12:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.337 2008/05/25 19:10:31 aballier Exp $
+
+  25 May 2008; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20080524.ebuild:
+  Always enable sout as disabling it will cause vlc to fail to build. Bug
+  #223515
 
 *vlc-0.9.0_alpha20080524 (24 May 2008)
 
