@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.2.1.ebuild,v 1.3 2007/12/13 17:34:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.2.1.ebuild,v 1.4 2008/05/25 11:14:18 kolmodin Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -24,6 +24,6 @@ S="${WORKDIR}/ghc-${GHC_PV}/libraries/${MY_PN}"
 
 # Sadly Setup.hs in the ghc-6.6.1 extralibs was not tested with Cabal-1.1.6.x
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	sed -i -e "/type Hook/ s/UserHooks/Maybe UserHooks/" "${S}/Setup.hs"
 }

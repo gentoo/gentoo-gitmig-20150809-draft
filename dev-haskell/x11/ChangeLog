@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/x11
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.6 2007/12/15 23:11:47 kolmodin Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.7 2008/05/25 11:14:18 kolmodin Exp $
+
+  25 May 2008; Lennart Kolmodin <kolmodin@gentoo.org> x11-1.2.1.ebuild,
+  x11-1.4.0.ebuild, x11-1.4.1.ebuild:
+  Add IUSE="xinerama" and add missing dependency on libXinerama.
+  This requires >=cabal-1.2.3.0.
+  Reported by Prashanth Mundkur <prashanth.mundkur@gmail.com>.
+  This fixes bug #223377.
+  Fix minor repoman issue with x11-1.2.1.
 
 *x11-1.4.1 (16 Dec 2007)
 
