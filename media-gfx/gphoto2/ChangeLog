@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.65 2008/05/24 12:02:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.66 2008/05/25 13:09:50 maekke Exp $
+
+  25 May 2008; Markus Meier <maekke@gentoo.org> gphoto2-2.4.1.ebuild:
+  amd64 stable, bug #221853
 
   24 May 2008; Tobias Klausmann <klausman@gentoo.org> gphoto2-2.4.1.ebuild:
   Stable on alpha, bug #221853
