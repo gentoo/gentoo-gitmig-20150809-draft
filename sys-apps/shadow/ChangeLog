@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.202 2008/05/17 14:20:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.203 2008/05/25 20:21:59 vapier Exp $
+
+*shadow-4.1.2 (25 May 2008)
+
+  25 May 2008; Mike Frysinger <vapier@gentoo.org> +shadow-4.1.2.ebuild:
+  Version bump.
 
   17 May 2008; nixnut <nixnut@gentoo.org> shadow-4.1.0-r1.ebuild:
   Added ~ppc wrt bug 210769
