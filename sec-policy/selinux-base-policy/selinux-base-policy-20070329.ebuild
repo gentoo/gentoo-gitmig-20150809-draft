@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.3 2007/06/04 00:26:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20070329.ebuild,v 1.4 2008/05/25 23:49:52 pebenito Exp $
 
 IUSE=""
 
@@ -27,12 +27,12 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}/refpolicy
-	epatch ${FILESDIR}/${PN}-${PV}.diff
+	cd "${S}/refpolicy"
+	epatch "${FILESDIR}/${PN}-${PV}.diff"
 
 	for i in ${POLICY_TYPES}; do
-		mkdir -p ${S}/${i}/policy
-		cp ${FILESDIR}/modules.conf.${i} ${S}/${i}/policy/modules.conf
+		mkdir -p "${S}/${i}/policy"
+		cp "${FILESDIR}/modules.conf.${i}" "${S}/${i}/policy/modules.conf"
 	done
 }
 
@@ -40,17 +40,17 @@ src_compile() {
 	local OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y"
 	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
-	cd ${S}/refpolicy
+	cd "${S}/refpolicy"
 
 	make ${OPTS} generate || die "Failed to create generated module files"
 
 	make ${OPTS} xml || die "XML generation failed."
 
 	for i in ${POLICY_TYPES}; do
-#		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} conf \
+#		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT="${S}/${i}" conf \
 #			|| die "${i} modules.conf update failed"
 
-		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} base \
+		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT="${S}/${i}" base \
 			|| die "${i} compile failed"
 	done
 }
@@ -59,18 +59,18 @@ src_install() {
 	local OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y DESTDIR=${D}"
 	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
-	cd ${S}/refpolicy
+	cd "${S}/refpolicy"
 
 	for i in ${POLICY_TYPES}; do
-		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} install \
+		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT="${S}/${i}" install \
 			|| die "${i} install failed."
 
 		make ${OPTS} TYPE=${i} NAME=${i} install-headers \
 			|| die "${i} headers install failed."
 
-		echo "run_init_t" > ${D}/etc/selinux/${i}/contexts/run_init_type
+		echo "run_init_t" > "${D}/etc/selinux/${i}/contexts/run_init_type"
 
-		echo "textrel_shlib_t" >> ${D}/etc/selinux/${i}/contexts/customizable_types
+		echo "textrel_shlib_t" >> "${D}/etc/selinux/${i}/contexts/customizable_types"
 
 		# libsemanage won't make this on its own
 		keepdir /etc/selinux/${i}/policy
@@ -79,7 +79,7 @@ src_install() {
 	dodoc doc/Makefile.example doc/example.{te,fc,if}
 
 	insinto /etc/selinux
-	doins ${FILESDIR}/config
+	doins "${FILESDIR}/config"
 }
 
 pkg_postinst() {

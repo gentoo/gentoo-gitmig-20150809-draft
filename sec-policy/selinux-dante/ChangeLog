@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-dante
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dante/ChangeLog,v 1.18 2008/03/16 04:06:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dante/ChangeLog,v 1.19 2008/05/25 23:49:48 pebenito Exp $
+
+*selinux-dante-20080525 (25 May 2008)
+
+  25 May 2008; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-dante-20080525.ebuild:
+  New SVN snapshot.
 
   16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
   -selinux-dante-20050201.ebuild, -selinux-dante-20050308.ebuild,

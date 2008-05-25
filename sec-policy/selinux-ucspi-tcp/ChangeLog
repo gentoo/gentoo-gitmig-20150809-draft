@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ucspi-tcp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.21 2008/03/16 04:06:39 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.22 2008/05/25 23:49:38 pebenito Exp $
+
+*selinux-ucspi-tcp-20080525 (25 May 2008)
+
+  25 May 2008; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-ucspi-tcp-20080525.ebuild:
+  New SVN snapshot.
 
   16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
   -selinux-ucspi-tcp-20050316.ebuild, -selinux-ucspi-tcp-20050507.ebuild,

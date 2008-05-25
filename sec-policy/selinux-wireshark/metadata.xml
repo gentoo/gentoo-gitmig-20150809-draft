@@ -5,7 +5,7 @@
 	<maintainer>
 		<email>pebenito@gentoo.org</email>
 		<name>Chris PeBenito</name>
-		<description>Backup Maintainer</description>
+		<description>Primary Maintainer</description>
 	</maintainer>
 	<longdescription>
 		Gentoo SELinux policy for wireshark.

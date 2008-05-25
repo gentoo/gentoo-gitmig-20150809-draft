@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-screen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.12 2008/04/28 15:39:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.13 2008/05/25 23:49:33 pebenito Exp $
+
+*selinux-screen-20080525 (25 May 2008)
+
+  25 May 2008; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-screen-20080525.ebuild:
+  New SVN snapshot.
 
   28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
