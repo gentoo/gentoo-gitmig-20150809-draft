@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.76 2008/05/25 14:57:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.77 2008/05/25 15:52:10 armin76 Exp $
+
+  25 May 2008; Raúl Porcel <armin76@gentoo.org> mtr-0.73-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt security #223017
 
   25 May 2008; Markus Rothe <corsair@gentoo.org> mtr-0.73-r2.ebuild:
   Added ~ppc64
