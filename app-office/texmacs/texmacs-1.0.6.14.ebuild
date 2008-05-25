@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6.14.ebuild,v 1.1 2008/03/22 13:55:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6.14.ebuild,v 1.2 2008/05/25 19:35:47 coldwind Exp $
 inherit eutils
 MY_P=${P/tex/TeX}-src
 DESCRIPTION="Wysiwyg text processor with high-quality maths"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.texmacs.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="imlib jpeg svg netpbm spell"
-KEYWORDS="~amd64 ~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/latex-base
 	virtual/ghostscript

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.58 2008/03/22 13:55:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.59 2008/05/25 19:35:47 coldwind Exp $
+
+  25 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  texmacs-1.0.6.14.ebuild:
+  amd64 stable wrt bug #223601
 
 *texmacs-1.0.6.14 (22 Mar 2008)
 
