@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.96 2008/05/20 09:46:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.97 2008/05/25 18:01:55 klausman Exp $
+
+  25 May 2008; Tobias Klausmann <klausman@gentoo.org> package.mask:
+  The glint driver is broken completely currently
 
   20 May 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Package.use.mask lm_sensors on xfce4-extras, needs to be keyworded
