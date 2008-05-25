@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.4 2008/05/25 14:41:09 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.5 2008/05/25 16:27:19 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -232,7 +232,7 @@ src_test() {
 
 	# test_pow fails on alpha.
 	# http://bugs.python.org/issue756093
-	[[ ${ARCH} == "alpha" ]] && skip_tests="${skip_tests} pow"
+	[[ ${ARCH} == "alpha" ]] && skip_tests="${skip_tests} pow"
 
 	for test in ${skip_tests} ; do
 		mv "${S}"/Lib/test/test_${test}.py "${T}"
