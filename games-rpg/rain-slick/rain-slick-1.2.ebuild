@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.2.ebuild,v 1.1 2008/05/25 03:42:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.2.ebuild,v 1.2 2008/05/25 03:55:51 vapier Exp $
 
 inherit games
 
@@ -33,7 +33,6 @@ src_install() {
 	local dir="${GAMES_PREFIX_OPT}/${PN}/ep${EP}"
 	dodir "${dir}"
 	cp -pPR * "${D}/${dir}/" || die
-	dodir "${GAMES_BINDIR}"
-	dosym "${dir}/RainSlickEp1" "${GAMES_BINDIR}/RainSlickEp1" || die
+	games_make_wrapper RainSlickEp1 "${dir}/RainSlickEp1" || die
 	prepgamesdirs
 }
