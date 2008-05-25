@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8652 2008/05/25 13:04:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8653 2008/05/25 14:21:27 ingmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -917,6 +917,7 @@ dev-lang/entity
 =x11-libs/qt-4.4*
 =x11-libs/qt-assistant-4.4*
 =x11-libs/qt-core-4.4*
+=x11-libs/qt-demo-4.4*
 =x11-libs/qt-gui-4.4*
 =x11-libs/qt-script-4.4*
 =x11-libs/qt-test-4.4*
