@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/quasar
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/ChangeLog,v 1.1 2008/05/25 13:24:47 loki_val Exp $
+
+*quasar-0.9_beta3 (25 May 2008)
+
+  25 May 2008; <pa@gentoo.org> +files/quasar-0.9_beta3-use-system.patch,
+  +metadata.xml, +quasar-0.9_beta3.ebuild:
+  Initial commit. Ebuild by me.
+

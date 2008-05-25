@@ -1,0 +1,42 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quasar/quasar-0.9_beta3.ebuild,v 1.1 2008/05/25 13:24:47 loki_val Exp $
+
+inherit eutils qt3
+
+DESCRIPTION="Quasar Media Player is a micro media player for embedded devices"
+
+HOMEPAGE="http://www.katastrophos.net/quasar"
+SRC_URI="http://katastrophos.net/zaurus/sources/quasar/${P/-/_}_sources.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+
+IUSE=""
+
+DEPEND="$(qt_min_version 3.3.8)
+	>=media-libs/taglib-1.5
+	>=dev-db/sqlite-3.5.6
+	>=media-video/mplayer-1.0_rc2_p26753"
+
+S=${WORKDIR}/v${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/quasar-0.9_beta3-use-system.patch"
+}
+
+src_compile() {
+	eqmake3 quasar-qt.pro || die "eqmake3 failed"
+	emake || die "emake failed"
+}
+
+src_install() {
+	dobin quasar || die "dobin failed"
+	dodir /usr/share/quasar
+	cp -r distro/skins "${D}"/usr/share/quasar
+	dodoc README
+
+}

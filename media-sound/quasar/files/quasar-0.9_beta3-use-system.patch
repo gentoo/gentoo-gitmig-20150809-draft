@@ -1,0 +1,75 @@
+diff -NraU5 v0.9_beta3/quasar-qt.pro v0.9_beta3.new/quasar-qt.pro
+--- v0.9_beta3/quasar-qt.pro	2008-05-25 15:01:46.000000000 +0200
++++ v0.9_beta3.new/quasar-qt.pro	2008-05-25 15:01:11.000000000 +0200
+@@ -4,34 +4,35 @@
+ TEMPLATE	= app
+ 
+ #CONFIG		= qt warn_on
+ CONFIG		= qt warn_on debug
+ 
+-# for native compilation with ccache:
+-TMAKE_CC	= ccache gcc
+-TMAKE_CXX	= ccache g++
+-TMAKE_LINK	= ccache g++
++# for native compilation with :
++TMAKE_CC	=  gcc
++TMAKE_CXX	=  g++
++TMAKE_LINK	=  g++
+ 
+ # for native compilation with pdaxii13's zgcc:
+ #TMAKE_CC	= gcc
+ #TMAKE_CXX	= g++
+ #TMAKE_LINK	= g++
+ 
+ # for pdaXii13 cross compiler:
+-#TMAKE_CC	= ccache armv5tel-cacko-linux-gcc
+-#TMAKE_CXX	= ccache armv5tel-cacko-linux-g++
+-#TMAKE_LINK	= ccache armv5tel-cacko-linux-g++
++#TMAKE_CC	=  armv5tel-cacko-linux-gcc
++#TMAKE_CXX	=  armv5tel-cacko-linux-g++
++#TMAKE_LINK	=  armv5tel-cacko-linux-g++
+ 
+ SQLITE_FLAGS = -DSQLITE_OMIT_UTF16 -DSQLITE_OMIT_AUTHORIZATION -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DEFAULT_TEMP_CACHE_SIZE=1000 -DTHREADSAFE=0 -DSQLITE_ENABLE_MEMORY_MANAGEMENT
+ 
+ TMAKE_CFLAGS	= $$TMAKE_CFLAGS $$SQLITE_FLAGS -DQUASAR -O3
+ TMAKE_CXXFLAGS  = $$TMAKE_CXXFLAGS $$SQLITE_FLAGS -DQUASAR -O3
+ 
+-LIBS		= -liconv -lz -lstdc++
++LIBS		= -lsqlite3 -lz -lstdc++
+ 
+ INCLUDEPATH	= \
+ 		. \
++		/usr/include/taglib \
+ 		compat \
+ 		config \
+ 		tkmix \
+ 		tag/taglib \
+ 		tag/taglib/taglib \
+@@ -54,12 +55,11 @@
+ 		tag/taglib_addons/speex \
+ 		tag/taglib_addons/trueaudio \
+ 		tag/taglib_addons/wav \
+ 		tag/taglib_addons/wavpack \
+ 		tag/taglib_addons/wma \
+-		kmdcodec \
+-		sqlite_source
++		kmdcodec 
+ 		
+ HEADERS		= \
+ 		configuration.h \
+ 		configurationdialog.h \
+ 		media.h \
+@@ -255,12 +255,11 @@
+ 		tag/taglib_addons/wma/taglib_wmafiletyperesolver.cpp \
+ 		tag/taglib_addons/wma/wmaattribute.cpp \
+ 		tag/taglib_addons/wma/wmafile.cpp \
+ 		tag/taglib_addons/wma/wmaproperties.cpp \
+ 		tag/taglib_addons/wma/wmatag.cpp \
+-		kmdcodec/kmdcodec.cpp \
+-		sqlite_source/sqlite3.c
++		kmdcodec/kmdcodec.cpp 
+ 
+ TRANSLATIONS	= \
+ 		quasar_ja.ts
+ 
+ MOC_DIR		= .moc
