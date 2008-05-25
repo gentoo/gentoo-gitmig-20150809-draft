@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.0_rc2.ebuild,v 1.1 2008/05/24 15:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.0_rc2.ebuild,v 1.2 2008/05/25 00:36:35 vapier Exp $
 
 EAPI="1"
 
@@ -53,8 +53,10 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
-		>=app-emulation/emul-linux-x86-xlibs-2.1
-		>=app-emulation/emul-linux-x86-soundlibs-2.1
+		X? (
+			>=app-emulation/emul-linux-x86-xlibs-2.1
+			>=app-emulation/emul-linux-x86-soundlibs-2.1
+		)
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
