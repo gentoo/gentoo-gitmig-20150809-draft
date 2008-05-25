@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.73 2008/05/24 15:37:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.74 2008/05/25 11:53:56 pva Exp $
+
+*mtr-0.73-r2 (25 May 2008)
+
+  25 May 2008; Peter Volkov <pva@gentoo.org> +mtr-0.73-r2.ebuild:
+  Fixed permitions problems, bug #223017, noticed by Markus Meier.
 
 *mtr-0.73-r1 (24 May 2008)
 
