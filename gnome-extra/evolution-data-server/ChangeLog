@@ -1,6 +1,37 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.178 2008/05/02 18:45:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.179 2008/05/26 21:13:08 eva Exp $
+
+*evolution-data-server-2.22.2 (26 May 2008)
+
+  26 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -evolution-data-server-1.12.1.ebuild,
+  -evolution-data-server-2.22.0.ebuild,
+  +evolution-data-server-2.22.2.ebuild:
+  New version for GNOME-2.22.2. Bug fixes and translation updates. Cleaning
+  up old revisions.
+  #325882: If a parent window was given, make the password dialog transient
+  for the parent and center it over the parent. (Matthew Barnes)
+  #354923: Store passwords in the keyring by server, username and protocol
+  (Matthew Barnes)
+  #388579: (Novell Bugzilla) Exchange crashes everytime on startup. A
+  regression patch for the leak fixes. (Chenthill Palanisamy)
+  #517244: Add test for nl_langinfo(CODESET). Defines HAVE_CODESET (Matthew
+  Barnes)
+  #523541: Fix a memory leak (Milan Crha)
+  #530514: Added a necessary condition to handle a specific server response
+  and to prevent a crash (Sankar P)
+  #530543: Large memory leak while syncing mails for offline usage (Sankar
+  P)
+  #530763: Return NULL if the value of dest_folder is disturbed to prevent
+  the crash (Bharath Acharya)
+  #531009: Use the right iterator to prevent a crash in offline mail
+  movement (Sankar P)
+  #531439: Prevent GPG passphrases from destroying other passwords (Matthew
+  Barnes)
+  #532284: Fixes a double free (Sankar P)
+  #533058: Enable GROUPWISE_DEBUG logs. (Sankar P)
+  #534077: Don't use freed memory (Paul Smith)
 
 *evolution-data-server-2.22.1.1 (02 May 2008)
 
