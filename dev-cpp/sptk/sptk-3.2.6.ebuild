@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.2.6.ebuild,v 1.6 2008/03/17 05:13:39 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.2.6.ebuild,v 1.7 2008/05/26 02:37:35 halcy0n Exp $
 
 inherit autotools
 
@@ -14,9 +14,11 @@ SLOT="3"
 LICENSE="|| ( FLTK GPL-2 )"
 KEYWORDS="alpha ~amd64 ~mips ~ppc ~sparc x86"
 
-DEPEND="fltk? ( x11-libs/fltk )
+RDEPEND="fltk? ( x11-libs/fltk )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
-	sqlite3? ( >=dev-db/sqlite-3 )
+	sqlite3? ( >=dev-db/sqlite-3 )"
+
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

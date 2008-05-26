@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.32 2008/05/19 18:08:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.33 2008/05/26 02:37:35 halcy0n Exp $
+
+  26 May 2008; Mark Loeser <halcy0n@gentoo.org> sptk-3.0.6.ebuild,
+  sptk-3.2.6.ebuild, sptk-3.5.6.ebuild, sptk-3.5.7.05.ebuild,
+  sptk-3.5.7.10.ebuild:
+  Fix RDEPEND on doxygen and cmake; bug #220453
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> sptk-3.5.6.ebuild,
   sptk-3.5.7.05.ebuild, sptk-3.5.7.10.ebuild:
