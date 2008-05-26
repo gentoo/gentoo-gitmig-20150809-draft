@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.16 2008/05/21 16:24:32 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.17 2008/05/26 00:18:36 lavajoe Exp $
+
+*squeezecenter-7.0.2_beta20080524 (26 May 2008)
+
+  26 May 2008; Joe Peterson <lavajoe@gentoo.org>
+  +files/Gentoo-plugins-7.0.2-README.txt,
+  +files/filepaths-7.0.2-gentoo.patch, +files/squeezecenter-7.0.2.init.d,
+  +squeezecenter-7.0.2_beta20080524.ebuild:
+  Add 7.0.2 beta nightly for 2008-05-24; introduce new file layout based on
+  the Gentoo file structure and using examples from squeezecenter on other
+  distros
 
 *squeezecenter-7.0.1 (21 May 2008)
 
