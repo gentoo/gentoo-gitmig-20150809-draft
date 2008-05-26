@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.15 2008/03/18 20:03:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.16 2008/05/26 11:20:21 drac Exp $
+
+  26 May 2008; Samuli Suominen <drac@gentoo.org> qt4-qtruby-1.4.8.ebuild,
+  -qt4-qtruby-1.4.9.ebuild, -qt4-qtruby-1.4.9-r1.ebuild,
+  -qt4-qtruby-1.4.9-r2.ebuild, qt4-qtruby-1.4.9-r3.ebuild:
+  Move cmake to DEPEND wrt #220453.
 
   18 Mar 2008; Raúl Porcel <armin76@gentoo.org> qt4-qtruby-1.4.9-r3.ebuild:
   Re-add ~sparc

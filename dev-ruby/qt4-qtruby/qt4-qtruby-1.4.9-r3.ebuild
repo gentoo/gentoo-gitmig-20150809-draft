@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.9-r3.ebuild,v 1.2 2008/03/18 20:03:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.9-r3.ebuild,v 1.3 2008/05/26 11:20:21 drac Exp $
 
 inherit toolchain-funcs eutils qt4 cmake-utils
 
@@ -11,10 +11,10 @@ SRC_URI="http://rubyforge.org/frs/download.php/21951/${P}.tgz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
-DEPEND=">=virtual/ruby-1.8
+RDEPEND=">=virtual/ruby-1.8
 	=x11-libs/qt-4*
 	=x11-libs/qwt-5*"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.6"
 
 SLOT="0"
