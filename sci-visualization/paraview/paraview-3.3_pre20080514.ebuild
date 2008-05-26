@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.1 2008/05/16 01:45:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.2 2008/05/26 16:22:52 markusle Exp $
 
 EAPI="1"
 
@@ -21,6 +21,9 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 				sys-cluster/openmpi
 				sys-cluster/mpich2 ) )
 	python? ( >=dev-lang/python-2.0 )
+	qt4? ( || ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4
+				x11-libs/qt-assistant:4 )
+		>=x11-libs/qt-4.3:4 ) )
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/jpeg
@@ -28,6 +31,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	dev-libs/expat
 	sys-libs/zlib
 	media-libs/freetype
+	>=app-admin/eselect-opengl-1.0.6-r1
 	virtual/opengl
 	sci-libs/netcdf
 	x11-libs/libXmu"
@@ -56,7 +60,7 @@ src_unpack() {
 	mkdir "${BUILDDIR}" || die "Failed to generate build directory"
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
-	epatch "${FILESDIR}"/${P}-qt.patch
+	epatch "${FILESDIR}"/${P}-qt4.4.patch
 	epatch "${FILESDIR}"/${PN}-3.2.1-openmpi.patch
 
 	# rename paraview's assistant wrapper
@@ -125,6 +129,7 @@ src_compile() {
 
 	if use qt4; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_QT_GUI:BOOL=ON"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR=/${PVLIBDIR}/plugins/designer"
 	else
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_QT_GUI:BOOL=OFF"
 	fi
@@ -135,12 +140,10 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=OFF"
 	fi
 
-	#CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_OFFSCREEN=TRUE"
-
 	cmake ${CMAKE_VARIABLES} "${S}" \
 		|| die "cmake configuration failed"
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 }
 
