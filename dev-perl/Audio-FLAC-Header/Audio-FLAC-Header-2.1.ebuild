@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/Audio-FLAC-Header-1.4.ebuild,v 1.6 2007/07/19 01:57:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/Audio-FLAC-Header-2.1.ebuild,v 1.1 2008/05/26 19:27:32 drac Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND="media-libs/flac
 	dev-lang/perl"
