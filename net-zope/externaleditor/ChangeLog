@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/externaleditor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.16 2008/03/23 17:47:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.17 2008/05/26 21:37:48 tupone Exp $
+
+  26 May 2008; Tupone Alfredo <tupone@gentoo.org>
+  externaleditor-0.7-r1.ebuild, externaleditor-0.7.2.ebuild,
+  externaleditor-0.8.ebuild:
+  Making repoman happy
 
   23 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   externaleditor-0.9.1.ebuild:
