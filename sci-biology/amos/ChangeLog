@@ -1,0 +1,9 @@
+# ChangeLog for sci-biology/amos
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.1 2008/05/26 14:47:52 weaver Exp $
+
+*amos-2.0.5 (26 May 2008)
+
+  26 May 2008; weaver <weaver@gentoo.org> +metadata.xml, +amos-2.0.5.ebuild:
+  Initial commit. New package from sunrise, bug 175293
+
