@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.12 2008/05/21 18:56:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.13 2008/05/26 02:26:38 halcy0n Exp $
 
 inherit flag-o-matic multilib kde eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-util/cmake-2.4.6"
+RDEPEND=""
 
 need-kde 3.3
 
