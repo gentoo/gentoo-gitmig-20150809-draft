@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.4.ebuild,v 1.1 2008/04/21 21:15:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.4.ebuild,v 1.2 2008/05/26 06:42:47 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Simulated obstacle course for automobiles"
-HOMEPAGE="http://www.sturmbahnfahrer.com/"
+HOMEPAGE="http://bram.creative4vision.nl/stormbaancoureur/"
 SRC_URI="http://bram.creative4vision.nl/stormbaancoureur/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
