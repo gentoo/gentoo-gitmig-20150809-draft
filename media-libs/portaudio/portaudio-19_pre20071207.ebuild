@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20071207.ebuild,v 1.7 2008/05/22 17:46:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20071207.ebuild,v 1.8 2008/05/26 12:54:35 drac Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="18"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc64 ~sh ~sparc ~x86"
 IUSE="alsa +cxx debug jack oss"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
