@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/gmap-2007.09.28.ebuild,v 1.1 2008/05/23 16:20:53 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/gmap-2007.09.28.ebuild,v 1.2 2008/05/26 14:34:52 weaver Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.gene.com/share/gmap/src/gmap-${MY_PV}.tar.gz"
 LICENSE="gmap"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
