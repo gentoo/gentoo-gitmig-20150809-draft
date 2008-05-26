@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.20.ebuild,v 1.3 2008/05/26 16:10:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.20.ebuild,v 1.4 2008/05/26 17:47:41 nixnut Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="!sys-apps/slocate
