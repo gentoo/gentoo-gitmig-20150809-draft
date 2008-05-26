@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.49 2008/05/25 12:28:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.50 2008/05/26 08:46:36 armin76 Exp $
+
+  26 May 2008; Raúl Porcel <armin76@gentoo.org> audit-1.7.3.ebuild:
+  ia64/sparc stable wrt security #215705
 
   25 May 2008; Markus Meier <maekke@gentoo.org> audit-1.7.3.ebuild:
   amd64 stable, bug #215705
