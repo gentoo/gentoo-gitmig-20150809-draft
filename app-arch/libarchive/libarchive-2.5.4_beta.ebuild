@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.0_beta.ebuild,v 1.2 2008/03/16 15:55:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.4_beta.ebuild,v 1.1 2008/05/26 12:17:19 flameeyes Exp $
 
 MY_P="${P/_beta/b}"
 
@@ -32,6 +32,9 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${MY_P}-glibc.patch"
+
 	elibtoolize
 	epunt_cxx
 }
@@ -43,7 +46,8 @@ src_compile() {
 		myconf="--enable-bsdtar=shared --enable-bsdcpio=shared"
 	fi
 
-	econf --bindir=/bin --enable-bsdcpio \
+	econf --bindir=/bin \
+		--enable-bsdtar --enable-bsdcpio \
 		$(use_enable acl) $(use_enable xattr) \
 		${myconf} \
 		--disable-dependency-tracking || die "econf failed."
