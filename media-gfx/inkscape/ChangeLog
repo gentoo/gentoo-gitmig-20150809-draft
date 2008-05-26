@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.98 2008/05/25 12:43:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.99 2008/05/26 15:31:55 armin76 Exp $
+
+  26 May 2008; Raúl Porcel <armin76@gentoo.org> inkscape-0.46-r2.ebuild:
+  sparc stable wrt #223443
 
   25 May 2008; Markus Meier <maekke@gentoo.org> inkscape-0.46-r2.ebuild:
   amd64/x86 stable, bug #223443
