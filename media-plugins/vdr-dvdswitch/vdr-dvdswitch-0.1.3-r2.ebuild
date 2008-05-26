@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/vdr-dvdswitch-0.1.3-r2.ebuild,v 1.3 2008/04/29 11:40:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/vdr-dvdswitch-0.1.3-r2.ebuild,v 1.4 2008/05/26 09:51:49 zzam Exp $
 
 inherit vdr-plugin
 
 DESCRIPTION="vdr plugin to play dvds and dvd file structures"
-HOMEPAGE="http://vdrportal.de/board/thread.php?threadid=39984"
+HOMEPAGE="http://www.vdr-portal.de/board/thread.php?threadid=49165"
 SRC_URI="http://download.schmidtie.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
