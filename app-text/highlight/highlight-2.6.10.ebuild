@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.10.ebuild,v 1.1 2008/05/23 14:12:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.6.10.ebuild,v 1.2 2008/05/26 15:20:39 drac Exp $
 
 WX_GTK_VER=2.6
 
@@ -46,5 +46,7 @@ src_install() {
 		emake -f makefile \
 			DESTDIR="${D}" \
 			install-gui || die "emake install-gui failed."
+		doicon src/gui/${PN}.xpm
+		make_desktop_entry ${PN}-gui Highlight ${PN} "Utility;TextTools"
 	fi
 }
