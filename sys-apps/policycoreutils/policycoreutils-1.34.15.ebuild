@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.15.ebuild,v 1.2 2008/05/13 02:22:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.15.ebuild,v 1.3 2008/05/26 15:03:39 pebenito Exp $
 
 IUSE="nls"
 
 inherit eutils python
 
 EXTRAS_VER="1.18"
-SEMNG_VER="1.10"
+SEMNG_VER="1.10.9"
 SELNX_VER="1.34"
 
 # BUGFIX_PATCH="${FILESDIR}/policycoreutils-1.30.6.diff"
