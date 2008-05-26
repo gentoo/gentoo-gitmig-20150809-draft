@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.1 2008/05/24 04:10:30 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.2 2008/05/26 14:46:28 weaver Exp $
 
 MY_P="MUMmer${PV}"
 DESCRIPTION="A rapid whole genome aligner"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mummer/${MY_P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
