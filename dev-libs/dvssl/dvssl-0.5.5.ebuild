@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.5.ebuild,v 1.1 2008/01/04 08:22:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.5.ebuild,v 1.2 2008/05/26 02:17:58 halcy0n Exp $
 
 DESCRIPTION="Provides a simple interface to OpenSSL"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvssl/html/"
-SRC_URI="http://tinfpc2.vub.ac.be/~dvermeir/software/dv/${PN}/download/${P}.tar.gz"
+SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/${PN}/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
