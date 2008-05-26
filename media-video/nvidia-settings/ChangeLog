@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.45 2008/03/31 10:22:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.46 2008/05/26 15:51:51 chainsaw Exp $
+
+*nvidia-settings-173.08 (26 May 2008)
+
+  26 May 2008; <chainsaw@gentoo.org> +nvidia-settings-173.08.ebuild:
+  Version bump. Upstream no longer uses imake, simplify ebuild accordingly.
 
 *nvidia-settings-171.05 (31 Mar 2008)
 
