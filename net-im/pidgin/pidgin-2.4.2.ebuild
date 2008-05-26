@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.2.ebuild,v 1.3 2008/05/19 03:09:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.2.ebuild,v 1.4 2008/05/26 17:26:14 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -120,6 +120,13 @@ pkg_setup() {
 		die "Configure failed"
 	fi
 
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/pidgin-2.4.2-jabber_crash_fix.patch"
 }
 
 src_compile() {
