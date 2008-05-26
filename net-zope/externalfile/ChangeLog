@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/externalfile
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/ChangeLog,v 1.9 2007/07/02 15:22:04 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/ChangeLog,v 1.10 2008/05/26 21:54:59 tupone Exp $
+
+  26 May 2008; Tupone Alfredo <tupone@gentoo.org> metadata.xml,
+  externalfile-1.2.0.ebuild:
+  Make repoman happy
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   externalfile-1.2.0.ebuild:
