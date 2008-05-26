@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.12 2008/05/19 19:47:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.13 2008/05/26 12:51:17 nelchael Exp $
 
 inherit python
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# fix for bug #134873
@@ -35,13 +35,12 @@ src_compile() {
 }
 
 src_install () {
-	cd ${S}
 	sed -e 's:\(echo "  install -m 555 $$mod \)\($(PY_MOD_DIR)\)\("; \\\):\1${D}\2/$$mod\3:' \
 		-e 's:\($(INSTALL)  -m 555 $$mod \)\($(PY_MOD_DIR)\)\(; \\\):\1${D}\2/$$mod\3:' \
 		-i Makefile
 	make install || die
 
-	dodoc AUTHORS ChangeLog COPYING CREDITS INSTALL README NEWS RELEASE-1.0 SUCCESS TODO
+	dodoc AUTHORS ChangeLog CREDITS README NEWS RELEASE-1.0 SUCCESS TODO
 	docinto doc
 	dodoc   doc/*
 	insinto /usr/share/doc/${PF}/examples
