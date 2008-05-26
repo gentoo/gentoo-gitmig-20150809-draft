@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.2.ebuild,v 1.2 2008/05/26 12:21:45 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.2.ebuild,v 1.3 2008/05/26 12:27:10 araujo Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal eutils autotools
@@ -27,7 +27,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack $A
 	cd "${S}"
-	use xinerama && epatch "${FILESDIR}/${P}-with-xinerama.patch"
+	epatch "${FILESDIR}/${P}-with-xinerama.patch"
 	eautoreconf
 }
 
