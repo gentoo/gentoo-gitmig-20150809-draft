@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.15.0-r1.ebuild,v 1.2 2008/04/30 16:51:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.15.0-r1.ebuild,v 1.3 2008/05/26 09:34:52 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -197,7 +197,7 @@ src_install() {
 	insinto /usr/share/${PN}/${PV}/doc
 	doins AUTHORS COPYING README README.lisps || die
 	dodir /usr/share/doc
-	dosym ../../${PN}/${PV}/doc /usr/share/doc/${PF}
+	dosym ../${PN}/${PV}/doc /usr/share/doc/${PF} || die
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
