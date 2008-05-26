@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.83.ebuild,v 1.1 2008/03/24 13:37:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.86.ebuild,v 1.1 2008/05/26 12:25:32 wschlich Exp $
 
 inherit eutils toolchain-funcs
 
