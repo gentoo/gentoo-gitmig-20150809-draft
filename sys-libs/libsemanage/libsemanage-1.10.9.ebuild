@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.2 2008/05/13 02:34:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.3 2008/05/26 15:00:28 pebenito Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ inherit eutils multilib python
 
 # BUGFIX_PATCH="${FILESDIR}/libsemanage-1.6.6.diff"
 
-SEPOL_VER="1.16"
+SEPOL_VER="1.16.11"
 SELNX_VER="1.34"
 
 DESCRIPTION="SELinux kernel and policy management library"
