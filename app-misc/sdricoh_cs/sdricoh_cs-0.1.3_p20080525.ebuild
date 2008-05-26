@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/sdricoh_cs-0.1.3_p20080503.ebuild,v 1.1 2008/05/03 16:58:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/sdricoh_cs-0.1.3_p20080525.ebuild,v 1.1 2008/05/26 21:04:18 hanno Exp $
 
 inherit linux-mod
 
