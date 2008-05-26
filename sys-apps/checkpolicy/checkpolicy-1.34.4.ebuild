@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.34.4.ebuild,v 1.2 2008/05/13 02:28:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.34.4.ebuild,v 1.3 2008/05/26 15:02:26 pebenito Exp $
 
 IUSE="debug"
 
 inherit eutils
 
-SEMNG_VER="1.10"
+SEMNG_VER="1.10.9"
 
 # BUGFIX_PATCH="${FILESDIR}/checkpolicy-1.30.4.diff"
 
