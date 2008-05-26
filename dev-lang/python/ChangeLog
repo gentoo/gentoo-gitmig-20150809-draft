@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.317 2008/05/25 17:44:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.318 2008/05/26 09:13:12 armin76 Exp $
+
+  26 May 2008; Raúl Porcel <armin76@gentoo.org> python-2.3.6-r6.ebuild,
+  python-2.4.4-r13.ebuild:
+  ia64/sparc stable wrt security #216673
 
   25 May 2008; Tobias Klausmann <klausman@gentoo.org>
   python-2.3.6-r6.ebuild:
