@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3556 2008/05/25 21:15:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3557 2008/05/26 00:36:30 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1246,7 +1246,10 @@ media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mplayer:color-console - Enable color console output (UNSUPPORTED)
 media-video/mplayer:cpudetection - Enables runtime cpudetection
-media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
+media-video/mplayer:custom-cflags - Enables custom CFLAGS (UNSUPPORTED)
+media-video/mplayer:custom-cpuopts - Fine-tune custom CPU optimizations (UNSUPPORTED)
+media-video/mplayer:dxr2 - Enable DXR2 video output
+media-video/mplayer:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
