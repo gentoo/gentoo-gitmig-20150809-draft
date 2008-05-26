@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020.ebuild,v 1.1 2008/05/23 10:27:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020.ebuild,v 1.2 2008/05/26 09:29:41 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -232,7 +232,7 @@ mkl_add_profile() {
 		cat > ${x}-${prof}.pc <<-EOF
 			prefix=/usr
 			libdir=${MKL_LIBDIR}
-			includedir=${prefix}/include
+			includedir=${MKL_DIR}/include
 			Name: ${x}
 			Description: Intel(R) Math Kernel Library implementation of ${p}
 			Version: ${PV}
