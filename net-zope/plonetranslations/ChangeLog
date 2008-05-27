@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/plonetranslations
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonetranslations/ChangeLog,v 1.7 2007/02/05 20:34:08 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonetranslations/ChangeLog,v 1.8 2008/05/27 06:23:04 tupone Exp $
+
+  27 May 2008; Tupone Alfredo <tupone@gentoo.org>
+  plonetranslations-0.1.ebuild, plonetranslations-0.5.ebuild:
+  Making repoman happy
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

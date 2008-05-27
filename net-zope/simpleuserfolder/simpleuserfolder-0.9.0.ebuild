@@ -1,14 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/simpleuserfolder-0.9.0.ebuild,v 1.4 2006/01/27 02:46:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/simpleuserfolder-0.9.0.ebuild,v 1.5 2008/05/27 06:28:04 tupone Exp $
 
 inherit zproduct
 
 MY_PN="SimpleUserFolder"
 MY_PV="${PV//./-}"
 MY_P="${MY_PN}-${MY_PV}"
-DESCRIPTION="This is a User Folder replacement that will let you customize the source of users and roles for a particular folder or complete Zope instance"
-HOMEPAGE="http://www.zope.org/Members/NIP/${MY_PN}"
+DESCRIPTION="A User Folder replacement that will let you customize the source of users and roles"
+HOMEPAGE="http://www.zope.org/Members/NIP/SimpleUserFolder"
 SRC_URI="${HOMEPAGE}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
