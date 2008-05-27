@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.2 2008/05/20 16:44:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.3 2008/05/27 21:40:26 grozin Exp $
 
 EAPI="1"
-inherit eutils autotools
+inherit eutils autotools fdo-mime
 
 MY_PN=FreeMat
 MY_P=${MY_PN}-${PV}
@@ -67,6 +67,13 @@ src_install() {
 }
 
 pkg_postint() {
-	einfo "Initializing freemat data directory"
-	FreeMat -i "${ROOT}"/usr/share/${MY_P}
+	fdo-mime_desktop_database_update
+	elog "Before using ${MY_PN}, do (as a normal user)"
+	elog "FreeMat -i /usr/share/${MY_P}"
+	elog "Then start ${MY_PN}, choose Tools -> Path Tool,"
+	elog "select /usr/share/${MY_P}/toolbox and Add With Subfolders"
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
