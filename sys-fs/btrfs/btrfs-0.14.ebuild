@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.14.ebuild,v 1.1 2008/05/24 19:49:32 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.14.ebuild,v 1.2 2008/05/27 18:57:43 lavajoe Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"
-PDEPEND="=sys-fs/btrfs-progs-${PV}"
+PDEPEND="~sys-fs/btrfs-progs-${PV}"
 
 pkg_setup()
 {
@@ -52,7 +52,7 @@ src_install()
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	ewarn "WARNING: Btrfs is under heavy development, and is not suitable for"
+	ewarn "WARNING: Btrfs is under heavy development and is not suitable for"
 	ewarn "any uses other than benchmarking and review."
 	ewarn "The Btrfs disk format is not yet finalized."
 }
