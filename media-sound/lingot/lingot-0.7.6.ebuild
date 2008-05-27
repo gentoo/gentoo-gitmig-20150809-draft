@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.2 2008/05/27 13:57:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.3 2008/05/27 14:02:52 drac Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -34,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" libgotdocdir="/usr/share/doc/${PF}" \
+	emake DESTDIR="${D}" lingotdocdir="/usr/share/doc/${PF}" \
 		install || die "emake install failed."
 	prepalldocs
 }
