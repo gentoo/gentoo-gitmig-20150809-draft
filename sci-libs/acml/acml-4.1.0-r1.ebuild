@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.1 2008/05/06 17:57:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.2 2008/05/27 10:16:17 bicatali Exp $
 
 EAPI="1"
 
@@ -170,9 +170,9 @@ src_install() {
 
 			# eselect files
 			cat > eselect.${prof}.${x} <<-EOF
-				${libname}.so /usr/@LIBDIR@/lib${l}.so.0
-				${libname}.so /usr/@LIBDIR@/lib${l}.so
-				${libname}.a /usr/@LIBDIR@/lib${l}.a
+				${libname}.so /usr/@LIBDIR@/lib${x}.so.0
+				${libname}.so /usr/@LIBDIR@/lib${x}.so
+				${libname}.a /usr/@LIBDIR@/lib${x}.a
 				${acmldir}/lib/${x}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc
 			EOF
 			eselect ${x} add $(get_libdir) eselect.${prof}.${x} ${prof}
