@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.3 2008/03/23 17:46:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.4 2008/05/27 06:37:04 tupone Exp $
 
 inherit distutils
 
-DESCRIPTION="Configurable helper application that allows you to drop into your favorite editor(s) directly from the ZMI"
+DESCRIPTION="Configurable helper application that drop you into your favorite editor(s) directly from the ZMI"
 HOMEPAGE="http://plope.com/software/ExternalEditor/"
 SRC_URI="http://plope.com/software/ExternalEditor/zopeedit-${PV}-src.tgz"
 
