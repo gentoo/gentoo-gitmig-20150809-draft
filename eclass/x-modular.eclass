@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.97 2008/05/09 07:18:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.98 2008/05/27 18:40:19 dberkholz Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -361,7 +361,7 @@ x-modular_src_configure() {
 # @VARIABLE: CONFIGURE_OPTIONS
 # @DESCRIPTION:
 # Any options to pass to configure
-[[ -n ${CONFIGURE_OPTIONTS} ]]
+[[ -n ${CONFIGURE_OPTIONS} ]]
 
 	# If prefix isn't set here, .pc files cause problems
 	if [[ -x ${ECONF_SOURCE:-.}/configure ]]; then
