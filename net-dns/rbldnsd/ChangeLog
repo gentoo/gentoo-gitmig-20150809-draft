@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.10 2007/12/28 16:09:53 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.11 2008/05/27 07:42:08 jer Exp $
+
+*rbldnsd-0.996b (27 May 2008)
+
+  27 May 2008; Jeroen Roovers <jer@gentoo.org> +rbldnsd-0.996b.ebuild:
+  Version bump (bug #223789).
 
 *rbldnsd-0.996a (28 Dec 2007)
 
