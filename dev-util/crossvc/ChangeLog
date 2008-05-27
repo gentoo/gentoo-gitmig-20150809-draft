@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/crossvc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/ChangeLog,v 1.7 2008/03/17 21:40:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/ChangeLog,v 1.8 2008/05/27 14:41:54 mpagano Exp $
+
+  27 May 2008; Mike Pagano <mpagano@gentoo.org> crossvc-1.5.2.ebuild:
+  Fix perms as per bug #223509
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org> crossvc-1.5.2.ebuild:
   Add ~alpha/~sparc wrt #213496
