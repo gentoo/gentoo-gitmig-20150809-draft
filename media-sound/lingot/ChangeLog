@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lingot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/ChangeLog,v 1.1 2008/05/08 11:10:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/ChangeLog,v 1.2 2008/05/27 13:57:34 nyhm Exp $
+
+  27 May 2008; Tristan Heaven <nyhm@gentoo.org> lingot-0.7.6.ebuild:
+  Add ~x86 keyword
 
 *lingot-0.7.6 (08 May 2008)
 

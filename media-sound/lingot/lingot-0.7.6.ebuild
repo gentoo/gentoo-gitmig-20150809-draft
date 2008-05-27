@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.1 2008/05/08 11:10:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.2 2008/05/27 13:57:34 nyhm Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
