@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.26 2008/05/24 17:02:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.27 2008/05/27 21:09:44 grozin Exp $
+
+  28 May 2008; Andrey Grozin <grozin@gentoo.org>
+  files/qtiplot-0.9.6.2-pro.patch, qtiplot-0.9.6.2.ebuild:
+  Python files are now installed to the proper place and compiled (bugs
+  #223671, #223673)
 
   25 May 2008; Andrey Grozin <grozin@gentoo.org>
   files/qtiplot-0.9.6.2-pro.patch:

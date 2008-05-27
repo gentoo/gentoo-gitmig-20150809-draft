@@ -60,10 +60,3 @@ diff -r -U2 qtiplot-0.9.6.2.orig/qtiplot/qtiplot.pro qtiplot-0.9.6.2/qtiplot/qti
 +#	SOURCES += ../3rdparty/liborigin/OPJFile.cpp
  
  ###############################################################
-@@ -474,5 +475,5 @@
-   						qti_wordlist.txt \
- 
--  	unix: pythonconfig.path = /usr/local/qtiplot
-+  	unix: pythonconfig.path = /usr/share/qtiplot
-   	win32: pythonconfig.path = $$INSTALLBASE
-   	DEFINES += PYTHON_CONFIG_PATH="\\\"$$replace(pythonconfig.path," ","\ ")\\\"

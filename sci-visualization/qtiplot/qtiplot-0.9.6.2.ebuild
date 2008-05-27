@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.3 2008/05/24 09:08:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.4 2008/05/27 21:09:44 grozin Exp $
 
 EAPI="1"
-inherit eutils multilib qt4 fdo-mime
+inherit eutils multilib qt4 fdo-mime python
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
@@ -47,9 +47,13 @@ src_unpack() {
 		-e '/manual/d'\
 		-e '/3rd/d' \
 		qtiplot.pro || die "sed qtiplot.pro failed"
+
+	python_version
+
 	sed -i \
 		-e '/manual/d' \
 		-e "s:doc/${PN}:doc/${PF}:" \
+		-e "s:local/${PN}:$(get_libdir)/python${PYVER}/site-packages:" \
 		qtiplot/qtiplot.pro || die " sed for qtiplot/qtiplot.pro failed"
 
 	if ! use python; then
@@ -83,6 +87,7 @@ src_compile() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die 'emake install failed'
 	rm -f "${D}"/usr/share/${PN}/translations/*.ts
+	use python && chmod -x "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/qti_wordlist.txt
 
 	newicon qtiplot_logo.png qtiplot.png
 	make_desktop_entry qtiplot QtiPlot qtiplot
@@ -97,15 +102,25 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	if use python; then
+		python_version
+		for pymod in qtiplotrc qtiUtil; do
+			python_mod_compile "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}.py
+		done
+	fi
+
 	if use doc; then
 		elog "On the first start, do Help -> Choose Help Folder"
 		elog "and select /usr/share/doc/${PF}/html"
-		elog "Also do View -> Preferences, in the tab File Locations"
-		elog "set Python Configuration Files to /usr/share/${PN}"
-		elog "and Translations to /usr/share/${PN}/translations"
 	fi
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+
+	if use python; then
+		python_version
+		python_mod_cleanup
+	fi
 }
