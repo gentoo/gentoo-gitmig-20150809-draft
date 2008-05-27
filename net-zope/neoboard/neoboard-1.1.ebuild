@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.7 2006/01/27 02:39:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.8 2008/05/27 21:14:32 tupone Exp $
 
 inherit zproduct
 
@@ -18,7 +18,7 @@ ZPROD_LIST="NeoBoard"
 
 src_unpack() {
 	unpack ${A}
-	mv ${S}/${P_NEW} ${S}/NeoBoard
+	mv "${S}"/${P_NEW} "${S}"/NeoBoard
 }
 
 pkg_postinst() {

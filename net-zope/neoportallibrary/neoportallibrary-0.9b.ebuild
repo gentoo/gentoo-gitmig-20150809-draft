@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoportallibrary/neoportallibrary-0.9b.ebuild,v 1.6 2006/01/27 02:39:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoportallibrary/neoportallibrary-0.9b.ebuild,v 1.7 2008/05/27 21:17:39 tupone Exp $
 
 inherit zproduct
 
@@ -17,5 +17,5 @@ MYDOC="doc/Developers_Guide.txt ${MYDOC}"
 
 src_unpack() {
 	unpack ${A}
-	mv ${S}/${P_NEW} ${S}/NeoPortalLibrary
+	mv "${S}"/${P_NEW} "${S}"/NeoPortalLibrary
 }
