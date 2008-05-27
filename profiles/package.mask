@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8656 2008/05/27 12:50:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8657 2008/05/27 13:00:04 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -192,19 +192,6 @@ media-fonts/sharefonts
 # masked until tmw works with the newer version.
 >=dev-games/guichan-0.8
 
-# Samuli Suominen <drac@gentoo.org> (27 Apr 2008)
-# Spring clean unported GTK+-1.2 media applications.
-# Tracked in bug 214788.
-# iv - replacements: gqview, mirage, pornview
-# gqcam - replacements: camorama, cheese
-# gtkguitune - replacement: lingot, k3guitune
-# playspc_gtk - replacement: playspc
-media-gfx/iv
-media-video/gqcam
-media-sound/gtkguitune
-media-sound/playspc_gtk
-media-sound/yconsole
-
 # Mike Auty <ikelos@gentoo.org> (26 Apr 2008)
 # Masking all app-emulation/vmware-workstation-tools packages
 # in favour of app-emulation/open-vm-tools
@@ -236,20 +223,9 @@ x11-themes/openbox-themes
 # Please enable the vim-syntax flag for conky instead.
 app-vim/conky-syntax
 
-# Samuli Suominen <drac@gentoo.org> (21 Apr 2008)
-# Masked for removal in 30 days. Doesn't build
-# wrt bug 178036 and has open CVE-2007-4773 wrt
-# security bug 203195.
-sys-apps/systrace
-
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # mask beta version
 =net-libs/gloox-1.0_beta*
-
-# Samuli Suominen <drac@gentoo.org> (21 Apr 2008)
-# Masked by treecleaners for bug 160267. Removed in ~60 days.
-# Has been included in 2.6 kernel series.
-net-fs/coda-kernel
 
 # Diego Pettenò <flameeyes@gentoo.org> (19 Apr 2008)
 # Masked until we remove "children" .la files, or get better tools -
