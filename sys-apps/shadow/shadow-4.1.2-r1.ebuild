@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.ebuild,v 1.1 2008/05/25 20:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2-r1.ebuild,v 1.1 2008/05/27 00:19:58 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -115,9 +115,8 @@ src_install() {
 		done
 
 		# comment out login.defs options that pam hates
-		gawk -f "${FILESDIR}"/login_defs.awk \
-			lib/getdef.c etc/login.defs \
-			> "${D}"/etc/login.defs
+		sed -i -f "${FILESDIR}"/login_defs_pam.sed \
+			"${D}"/etc/login.defs
 
 		# remove manpages that pam will install for us
 		# and/or don't apply when using pam
