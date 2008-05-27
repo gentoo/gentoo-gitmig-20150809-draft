@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.264 2008/05/20 18:28:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.265 2008/05/27 02:55:28 ingmar Exp $
+
+  27 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  files/amarok-1.4.9.1-helix+gcc-4.3.patch:
+  Fix a typo in amarok-1.4.9.1-helix+gcc-4.3.patch, as noted by Rick Harris
+  in bug 223287.
 
   20 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/amarok-1.4.9.1-helix+gcc-4.3.patch:

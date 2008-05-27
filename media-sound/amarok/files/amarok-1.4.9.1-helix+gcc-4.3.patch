@@ -7,7 +7,7 @@ Index: amarok-1.4.9.1/amarok/src/engine/helix/hxplayercontrol.cpp
  #include <unistd.h>
  #include <iostream>
 +#include <cstring>
-+#include <cstlib>
++#include <cstdlib>
  #include <sys/mman.h>
  
  using namespace std;
