@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zodb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.26 2007/02/22 01:50:38 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.27 2008/05/27 21:31:53 tupone Exp $
+
+  27 May 2008; Tupone Alfredo <tupone@gentoo.org> zodb-3.3.1.ebuild,
+  zodb-3.4.0.ebuild, zodb-3.4.1.ebuild:
+  Making repoman happy
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

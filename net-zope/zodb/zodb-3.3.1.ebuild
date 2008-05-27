@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.3.1.ebuild,v 1.4 2006/11/23 19:36:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.3.1.ebuild,v 1.5 2008/05/27 21:31:53 tupone Exp $
 
 inherit distutils
 
@@ -20,8 +20,8 @@ S=${WORKDIR}/${MY_P}3-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/${ZPROD_LIST}
-	epatch ${FILESDIR}/${PF}_umaskbug.patch
+	cd "${S}"/${ZPROD_LIST}
+	epatch "${FILESDIR}"/${PF}_umaskbug.patch
 }
 
 src_compile() {

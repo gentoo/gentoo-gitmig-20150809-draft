@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.0.ebuild,v 1.4 2006/01/27 02:52:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.0.ebuild,v 1.5 2008/05/27 21:34:41 tupone Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ src_install() {
 	distutils_src_install
 
 	if use doc ; then
-		cp -a $MY_PN ${D}/usr/share/doc/${PF}/
+		cp -a $MY_PN "${D}"/usr/share/doc/${PF}/
 	fi
 }
 

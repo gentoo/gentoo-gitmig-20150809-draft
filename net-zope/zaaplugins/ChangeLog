@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zaaplugins
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/ChangeLog,v 1.4 2007/02/22 01:49:54 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/ChangeLog,v 1.5 2008/05/27 21:27:22 tupone Exp $
+
+  27 May 2008; Tupone Alfredo <tupone@gentoo.org> zaaplugins-2.12.ebuild:
+  Making repoman happy
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

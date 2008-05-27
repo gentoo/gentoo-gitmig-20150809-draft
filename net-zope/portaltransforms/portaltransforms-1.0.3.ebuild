@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.3.ebuild,v 1.7 2006/01/27 02:43:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.3.ebuild,v 1.8 2008/05/27 21:23:18 tupone Exp $
 
 inherit zproduct
 
@@ -40,5 +40,5 @@ src_install() {
 	DIR=`ls -d build/scripts*`
 	S=${S}/build dobin ${DIR}/transform
 	S=${S}/build/lib/Products zproduct_src_install all
-	cp -a ${S}/{zope,www,skins} ${D}/${ZP_DIR}/${PF}/PortalTransforms
+	cp -a "${S}"/{zope,www,skins} "${D}"/${ZP_DIR}/${PF}/PortalTransforms
 }

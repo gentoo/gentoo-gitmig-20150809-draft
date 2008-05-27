@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.4 2006/03/18 19:03:22 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.5 2008/05/27 21:27:22 tupone Exp $
 
 inherit zproduct
 
@@ -19,10 +19,10 @@ DEPEND=">=net-zope/zattachmentattribute-2.12
 ZPROD_LIST="ZAAPlugins"
 
 src_install () {
-	rm -rf ${WORKDIR}/ZAAPlugins/MSExcel/win32
-	rm -rf ${WORKDIR}/ZAAPlugins/MSPowerPoint/win32
-	rm -f  ${WORKDIR}/ZAAPlugins/MSPowerPoint/ppthtml.exe
-	rm -rf ${WORKDIR}/ZAAPlugins/MSWord/win32
-	rm -rf ${WORKDIR}/ZAAPlugins/PDF/win32
+	rm -rf "${WORKDIR}"/ZAAPlugins/MSExcel/win32
+	rm -rf "${WORKDIR}"/ZAAPlugins/MSPowerPoint/win32
+	rm -f  "${WORKDIR}"/ZAAPlugins/MSPowerPoint/ppthtml.exe
+	rm -rf "${WORKDIR}"/ZAAPlugins/MSWord/win32
+	rm -rf "${WORKDIR}"/ZAAPlugins/PDF/win32
 	zproduct_src_install
 }
