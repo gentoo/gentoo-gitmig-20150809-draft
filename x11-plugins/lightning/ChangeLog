@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/lightning
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.5 2008/04/08 11:25:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.6 2008/05/27 14:16:50 armin76 Exp $
+
+  27 May 2008; Raúl Porcel <armin76@gentoo.org> -lightning-0.7.ebuild:
+  old
 
 *lightning-0.8 (08 Apr 2008)
 
