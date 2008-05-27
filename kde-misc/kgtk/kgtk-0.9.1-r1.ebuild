@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1-r1.ebuild,v 1.2 2007/10/13 22:47:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1-r1.ebuild,v 1.3 2008/05/27 01:04:02 halcy0n Exp $
 
 ARTS_REQUIRED="never"
 inherit kde
@@ -15,9 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="qt4"
 
-DEPEND=">=x11-libs/gtk+-2.6
-	dev-util/cmake
+RDEPEND=">=x11-libs/gtk+-2.6
 	qt4? ( =x11-libs/qt-4* )"
+
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 need-kde 3.4
 
 src_compile() {

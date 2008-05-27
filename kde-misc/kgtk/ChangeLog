@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.12 2008/04/09 18:15:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.13 2008/05/27 01:04:02 halcy0n Exp $
+
+  27 May 2008; Mark Loeser <halcy0n@gentoo.org> kgtk-0.9.1-r1.ebuild,
+  kgtk-0.9.4.ebuild:
+  Remove RDEPEND on cmake; bug #220453
 
   09 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org> kgtk-0.9.4.ebuild:
   Make dependencies compatible with split Qt:4.

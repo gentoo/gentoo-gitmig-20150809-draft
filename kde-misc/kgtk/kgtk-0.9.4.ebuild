@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.4.ebuild,v 1.2 2008/04/09 18:15:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.4.ebuild,v 1.3 2008/05/27 01:04:02 halcy0n Exp $
 
 ARTS_REQUIRED="never"
 EAPI="1"
@@ -16,9 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="qt4"
 
-DEPEND=">=x11-libs/gtk+-2.6
-	dev-util/cmake
+RDEPEND=">=x11-libs/gtk+-2.6
 	qt4? ( || ( x11-libs/qt-gui:4 x11-libs/qt:4 ) )"
+
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 need-kde 3.4
 
 src_compile() {
