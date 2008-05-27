@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.98 2008/05/27 18:40:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.99 2008/05/27 18:42:33 dberkholz Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -45,27 +45,35 @@ fi
 
 # Set up SRC_URI for individual modular releases
 BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"
-if [[ ${CATEGORY} = x11-apps ]] || [[ ${CATEGORY} = x11-wm ]]; then
-	MODULE="app"
-elif [[ ${CATEGORY} = app-doc ]]; then
-	MODULE="doc"
-# x11-misc contains data and util, x11-themes contains data
-elif [[ ${CATEGORY} = x11-misc ]] || [[ ${CATEGORY} = x11-themes ]]; then
-	if [[ ${PN} == xbitmaps || ${PN} == xcursor-themes || ${PN} == xkbdata ]]; then
-		MODULE="data"
-	else
-		MODULE="util"
+if [[ -z ${MODULE} ]]; then
+# @ECLASS-VARIABLE: MODULE
+# @DESCRIPTION:
+# The subdirectory to download source from. Possible settings are app,
+# doc, data, util, driver, font, lib, proto, xserver. Set above the
+# inherit to override the default autoconfigured module.
+	MODULE=""
+	if [[ ${CATEGORY} = x11-apps ]] || [[ ${CATEGORY} = x11-wm ]]; then
+		MODULE="app"
+	elif [[ ${CATEGORY} = app-doc ]]; then
+		MODULE="doc"
+	# x11-misc contains data and util, x11-themes contains data
+	elif [[ ${CATEGORY} = x11-misc ]] || [[ ${CATEGORY} = x11-themes ]]; then
+		if [[ ${PN} == xbitmaps || ${PN} == xcursor-themes || ${PN} == xkbdata ]]; then
+			MODULE="data"
+		else
+			MODULE="util"
+		fi
+	elif [[ ${CATEGORY} = x11-drivers ]]; then
+		MODULE="driver"
+	elif [[ ${CATEGORY} = media-fonts ]]; then
+		MODULE="font"
+	elif [[ ${CATEGORY} = x11-libs ]]; then
+		MODULE="lib"
+	elif [[ ${CATEGORY} = x11-proto ]]; then
+		MODULE="proto"
+	elif [[ ${CATEGORY} = x11-base ]]; then
+		MODULE="xserver"
 	fi
-elif [[ ${CATEGORY} = x11-drivers ]]; then
-	MODULE="driver"
-elif [[ ${CATEGORY} = media-fonts ]]; then
-	MODULE="font"
-elif [[ ${CATEGORY} = x11-libs ]]; then
-	MODULE="lib"
-elif [[ ${CATEGORY} = x11-proto ]]; then
-	MODULE="proto"
-elif [[ ${CATEGORY} = x11-base ]]; then
-	MODULE="xserver"
 fi
 
 if [[ -n ${GIT_ECLASS} ]]; then
