@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonecollectorng/plonecollectorng-1.2.6.ebuild,v 1.3 2006/01/27 02:41:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonecollectorng/plonecollectorng-1.2.6.ebuild,v 1.4 2008/05/27 06:12:19 tupone Exp $
 
 inherit zproduct
 
-DESCRIPTION="PCNG is a bugtracking system for Plone. It is based on the concepts and ideas of CMFCollector and CMFCollectorNG but it is a complete re-write"
+DESCRIPTION="Bugtracking system for Plone."
 HOMEPAGE="http://www.zope.org/Members/ajung/PloneCollectorNG"
 SRC_URI="mirror://sourceforge/collective/PloneCollectorNG-${PV}.tar.gz"
 
