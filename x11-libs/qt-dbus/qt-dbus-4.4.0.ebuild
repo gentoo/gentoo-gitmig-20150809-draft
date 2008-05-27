@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0.ebuild,v 1.3 2008/05/26 18:13:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0.ebuild,v 1.4 2008/05/27 13:09:35 armin76 Exp $
 
 inherit qt4-build
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.trolltech.com/"
 
 LICENSE="|| ( QPL-1.0 GPL-3 GPL-2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # depend on gui instead of core.  There's a GUI based viewer that's built, and since it's a desktop
