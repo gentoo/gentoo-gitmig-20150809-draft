@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.42 2008/05/05 14:57:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.43 2008/05/27 00:53:25 halcy0n Exp $
+
+  27 May 2008; Mark Loeser <halcy0n@gentoo.org> kdesvn-0.11.2.ebuild,
+  kdesvn-0.13.0.ebuild, kdesvn-0.14.1.ebuild, kdesvn-0.14.2.ebuild:
+  Remove RDEPEND on cmake; bug #220453
 
   05 May 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.2.ebuild:
   subversion-1.5 is really raw, forcing <1.5 in 0.14.2 too

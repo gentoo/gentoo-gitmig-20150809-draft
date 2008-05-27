@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.2.ebuild,v 1.5 2007/08/31 12:47:12 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.2.ebuild,v 1.6 2008/05/27 00:53:25 halcy0n Exp $
 
 inherit eutils versionator kde-functions toolchain-funcs
 
@@ -15,8 +15,10 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND=">=dev-util/subversion-1.3
-		net-misc/neon
+RDEPEND=">=dev-util/subversion-1.3
+		net-misc/neon"
+
+DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4"
 
 need-kde 3.3
