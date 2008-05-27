@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.ebuild,v 1.2 2007/07/08 18:17:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.1.ebuild,v 1.1 2008/05/27 15:05:53 drac Exp $
 
-inherit distutils python
+NEED_PYTHON=2.4
 
-MY_P="PythonDaap-${PV}"
+inherit distutils multilib python
+
+MY_P=PythonDaap-${PV}
 
 DESCRIPTION="PyDaap is a DAAP client implemented in Python, based on PyTunes"
 HOMEPAGE="http://jerakeen.org/code/pythondaap"
@@ -12,12 +14,10 @@ SRC_URI="http://jerakeen.org/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=">=dev-lang/python-2.4"
-
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_install() {
 	distutils_src_install
@@ -30,10 +30,10 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"usr/lib*/python${PYVER}/site-packages
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup "${ROOT}"usr/lib*/python${PYVER}/site-packages
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
 }
