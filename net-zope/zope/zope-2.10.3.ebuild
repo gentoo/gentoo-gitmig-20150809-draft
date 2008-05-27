@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.10.3.ebuild,v 1.2 2007/04/06 21:27:06 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.10.3.ebuild,v 1.3 2008/05/27 20:59:50 tupone Exp $
 
 inherit eutils multilib
 
@@ -37,11 +37,6 @@ ZSERVDIR=${ZS_DIR}/${P}
 # like e.g /usr/lib/python we do not store any user data there,
 # currently removed all custom permission stuff, for ${ZSERVDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
 	./configure  --prefix="${D}${ZSERVDIR}" --with-python=/usr/bin/python2.4 || die "Failed to execute ./configure ..."
 	emake || die "Failed to compile."
@@ -53,12 +48,12 @@ src_install() {
 	docinto PLATFORMS ; dodoc Zope/doc/PLATFORMS/*
 	docinto ZEO ; dodoc Zope/doc/ZEO/*
 
-	make install prefix=${D}${ZSERVDIR} || die "Failed to install into ${D}${ZSERVDIR}"
-	rm -rf ${D}${ZSERVDIR}/doc
+	make install prefix="${D}"${ZSERVDIR} || die "Failed to install into ${D}${ZSERVDIR}"
+	rm -rf "${D}"${ZSERVDIR}/doc
 	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
 
 	# copy the init script skeleton to skel directory of our installation
-	cp ${FILESDIR}/zope.initd ${D}/${ZSERVDIR}/skel/zope.initd
+	cp "${FILESDIR}"/zope.initd "${D}"/${ZSERVDIR}/skel/zope.initd
 }
 
 src_test() {

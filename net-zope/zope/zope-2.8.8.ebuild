@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.8.ebuild,v 1.6 2006/09/03 15:39:30 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.8.ebuild,v 1.7 2008/05/27 20:59:50 tupone Exp $
 
 inherit eutils multilib
 
@@ -40,11 +40,6 @@ ZSERVDIR=${ZS_DIR}/${P}
 # like e.g /usr/lib/python we do not store any user data there,
 # currently removed all custom permission stuff, for ${ZSERVDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
 	./configure --ignore-largefile --prefix=. --with-python=/usr/bin/python2.3 || die "Failed to configure."
 	emake || die "Failed to compile."
@@ -56,17 +51,17 @@ src_install() {
 	docinto PLATFORMS ; dodoc doc/PLATFORMS/*
 	docinto ZEO ; dodoc doc/ZEO/*
 
-	make install PREFIX=${D}${ZSERVDIR}
-	rm -rf ${D}${ZSERVDIR}/doc
+	make install PREFIX="${D}"${ZSERVDIR}
+	rm -rf "${D}"${ZSERVDIR}/doc
 	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
 	# copy the init script skeleton to skel directory of our installation
 	skel=${D}${ZSERVDIR}/skel
 	# <radek@gentoo.org> from 2.7.4 release i think that we can use the same
 	# file for every one, and not separate it by PV
-	cp ${FILESDIR}/zope.initd ${skel}/zope.initd
+	cp "${FILESDIR}"/zope.initd "${skel}"/zope.initd
 
 	# hotfixes to be applied
-	cp -a ${WORKDIR}/Hotfix_20060821/ ${D}${ZSERVDIR}/lib/python/Products/
+	cp -a "${WORKDIR}"/Hotfix_20060821/ "${D}"${ZSERVDIR}/lib/python/Products/
 
 }
 

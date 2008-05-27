@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.3.1.ebuild,v 1.2 2007/11/25 01:31:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.3.1.ebuild,v 1.3 2008/05/27 20:59:50 tupone Exp $
 
 inherit eutils multilib
 
@@ -30,15 +30,11 @@ ZINSTDIR=/var/lib/zope/${P}
 
 src_compile() {
 
-	cd ${S}
-
-	./configure --prefix=${D}${ZSERVDIR} --with-python=/usr/bin/python2.4 || die "Failed to configure."
+	./configure --prefix="${D}"${ZSERVDIR} --with-python=/usr/bin/python2.4 || die "Failed to configure."
 	emake || die "Failed to compile."
 }
 
 src_install() {
-
-	cd ${S}
 
 	dodoc README.txt
 	dodoc Zope/doc/*.txt
@@ -48,12 +44,12 @@ src_install() {
 	  dodoc Zope/doc/${DIR}/*
 	done
 
-	make install prefix=${D}${ZSERVDIR}
+	make install prefix="${D}"${ZSERVDIR}
 
 	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
 
 	# copy the init script skeleton to zopeskel directory of our installation
-	cp ${FILESDIR}/zope.initd ${D}${ZSKELDIR}/zope.initd
+	cp "${FILESDIR}"/zope.initd "${D}"${ZSKELDIR}/zope.initd
 }
 
 pkg_postinst() {
