@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.64 2008/05/13 14:25:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.65 2008/05/28 13:25:32 gmsoft Exp $
+
+  28 May 2008; Guy Martin <gmsoft@gentoo.org> ChangeLog:
+  Stable on hppa.
 
   13 May 2008; Jeroen Roovers <jer@gentoo.org> mod_perl-2.0.3-r2.ebuild:
   Marked ~hppa (LuckyLuke).
