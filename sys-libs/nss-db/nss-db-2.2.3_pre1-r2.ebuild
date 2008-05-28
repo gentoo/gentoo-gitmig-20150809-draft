@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.3 2008/05/28 21:20:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.4 2008/05/28 21:24:10 maekke Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -59,7 +59,7 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-root-upgrade-only.patch
 
 	# make sure we use the correct version of DB
-	cd ${S}
+	cd "${S}"
 	DB_PV="$(db_getver)"
 	DB_SYM="$(db_getversym ${DB_PV})"
 	DB_PV_MAJORMINOR="$(get_version_component_range 1-2 ${DB_PV})"
@@ -81,7 +81,7 @@ src_unpack() {
 	eautoreconf
 
 	# This is an evil target and we don't like it
-	sed -i -e '/^install-data-am:.*install-data-local/s,install-data-local,,g' ${S}/src/Makefile.in
+	sed -i -e '/^install-data-am:.*install-data-local/s,install-data-local,,g' "${S}"/src/Makefile.in
 }
 
 src_compile() {
@@ -98,11 +98,11 @@ src_install() {
 	doins db-Makefile
 
 	exeinto /usr/sbin
-	doexe ${FILESDIR}/remake-all-db
+	doexe "${FILESDIR}"/remake-all-db
 
 	dodoc ABOUT-NLS AUTHORS COPYING* ChangeLog INSTALL NEWS README THANKS
 
 	dodir /usr/$(get_libdir)/
-	mv ${D}/$(get_libdir)/*.la ${D}/usr/$(get_libdir)/ || \
+	mv "${D}"/$(get_libdir)/*.la "${D}"/usr/$(get_libdir)/ || \
 		die "failed to set up .la"
 }
