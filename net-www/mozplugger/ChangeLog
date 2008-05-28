@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozplugger
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.19 2008/03/17 15:33:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.20 2008/05/28 13:44:28 hanno Exp $
+
+*mozplugger-1.10.2 (28 May 2008)
+
+  28 May 2008; Hanno Boeck <hanno@gentoo.org> +mozplugger-1.10.2.ebuild:
+  Version bump.
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org> mozplugger-1.7.3-r1.ebuild:
   Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
