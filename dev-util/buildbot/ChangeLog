@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.24 2008/05/28 18:40:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.25 2008/05/28 19:16:17 maekke Exp $
+
+  28 May 2008; Markus Meier <maekke@gentoo.org> buildbot-0.7.7-r1.ebuild:
+  amd64/x86 stable, bug #223437
 
   28 May 2008; Raúl Porcel <armin76@gentoo.org> buildbot-0.7.7-r1.ebuild:
   ia64/sparc stable wrt #223437
