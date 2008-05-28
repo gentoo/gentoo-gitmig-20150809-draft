@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.12 2008/04/30 21:09:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.13 2008/05/28 20:58:57 coldwind Exp $
+
+  28 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -files/museek+-0.1.12-libxmlpp-dep-order.patch,
+  -files/museek+-0.1.12-musetup-gtk-spaces.patch,
+  -files/museek+-0.1.12-scons-0.96.94.patch, -files/museek,
+  -museek+-0.1.12.ebuild:
+  Remove old version.
 
 *museek+-0.1.13-r3 (30 Apr 2008)
 
