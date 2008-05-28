@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.12 2008/04/30 23:34:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.13 2008/05/28 09:23:02 corsair Exp $
+
+  28 May 2008; Markus Rothe <corsair@gentoo.org> package.use.mask:
+  Remove "sys-apps/paludis python" from package.use.mask; bug #198989
 
   30 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +ppc64/32ul/make.defaults, +ppc64/32ul/parent, +ppc64/32ul/use.mask,
