@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.0_rc3.ebuild,v 1.1 2008/05/27 19:09:02 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.0_rc3.ebuild,v 1.2 2008/05/28 17:44:39 aballier Exp $
 
 inherit eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/porthole/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug nls"
 
 RDEPEND=">=dev-lang/python-2.3
