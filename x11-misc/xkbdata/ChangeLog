@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkbdata
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/ChangeLog,v 1.23 2006/07/21 16:19:10 gmsoft Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/ChangeLog,v 1.24 2008/05/28 01:36:30 dberkholz Exp $
+
+  28 May 2008; Donnie Berkholz <dberkholz@gentoo.org>; xkbdata-1.0.1.ebuild:
+  Manually specify module to download from, so we can simplify the eclass.
 
   21 Jul 2006; Guy Martin <gmsoft@gentoo.org> xkbdata-1.0.1.ebuild:
   Stable on hppa.

@@ -1,10 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/xkbdata-1.0.1.ebuild,v 1.11 2006/09/10 08:46:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/xkbdata-1.0.1.ebuild,v 1.12 2008/05/28 01:36:30 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
+MODULE="data"
 inherit x-modular multilib
 
 DESCRIPTION="X.Org xkbdata data"
