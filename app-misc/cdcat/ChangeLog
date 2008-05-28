@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdcat
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.14 2006/09/22 13:30:21 centic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.15 2008/05/28 19:15:48 phreak Exp $
+
+  28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Dominik Stadler (centic) from metadata.xml (as per #40994).
+  Assigning to maintainer-needed.
 
   22 Sep 2006; Dominik Stadler <centic@gentoo.org> -cdcat-0.2.ebuild,
   cdcat-0.3.ebuild:
