@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/btrace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.13 2007/12/16 09:57:44 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.14 2008/05/28 18:17:37 robbat2 Exp $
+
+*btrace-0.99.3 (28 May 2008)
+
+  28 May 2008; Robin H. Johnson <robbat2@gentoo.org> +btrace-0.99.3.ebuild:
+  Version bump, also fix doc installing per bug #222717.
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org>
   btrace-0.0.20071210202527.ebuild:
