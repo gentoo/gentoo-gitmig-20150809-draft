@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.4 2007/01/25 05:35:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.5 2008/05/28 20:45:34 maekke Exp $
 
 inherit eutils
 
@@ -20,26 +20,27 @@ S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-errno.patch
-	epatch ${WORKDIR}/${P}-gentoo.patch
-	epatch ${WORKDIR}/${P}-webplan.patch
+	epatch "${WORKDIR}"/${P}-errno.patch
+	epatch "${WORKDIR}"/${P}-gentoo.patch
+	epatch "${WORKDIR}"/${P}-webplan.patch
+	epatch "${FILESDIR}"/makefile.patch
 }
 
 src_compile() {
-	make SHARE=/usr/share/plan linux || die "make failed"
+	emake CC=$(tc-getCC) SHARE=/usr/share/plan linux || die
 }
 
 src_install() {
-	make \
-		DESTDIR=${D} \
+	emake \
+		DESTDIR="${D}" \
 		SHARE=/usr/share/plan \
 		install || die "install failed"
 	keepdir /usr/share/plan/netplan.dir
 
-	cd ${S}/..
+	cd "${S}"/..
 	dodoc HISTORY README || die "dodoc failed"
 
-	cd ${S}/../misc
+	cd "${S}"/../misc
 	doman netplan.1 plan.1 plan.4 || die "doman failed"
 
 	insinto /usr/share/${PN}/misc
@@ -48,7 +49,7 @@ src_install() {
 	exeinto /usr/share/${PN}/misc
 	doexe Killpland cvs vsc msschedule2plan plan2vcs || die "misc files install failed"
 
-	cd ${S}/../web
+	cd "${S}"/../web
 	insinto /usr/share/${PN}/web
 	doins help.html bottom.html cgi-lib.pl common.pl holiday_webplan rtsban.jpg \
 		|| die "webplan install failed"
@@ -61,6 +62,6 @@ pkg_postinst() {
 	elog " Check /usr/share/${PN}/holiday for examples to set your"
 	elog " ~/.holiday according to your country."
 	elog
-	elog " WebPlan 1.8 can be found in /usr/share/${PN}/web."
+	elog " WebPlan ${PV} can be found in /usr/share/${PN}/web."
 	elog
 }
