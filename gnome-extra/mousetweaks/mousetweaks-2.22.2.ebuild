@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.0.ebuild,v 1.3 2008/04/03 18:28:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.22.2.ebuild,v 1.1 2008/05/28 21:10:40 eva Exp $
 
 inherit gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Mousetweaks/Home"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.10
@@ -22,11 +22,3 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libgnomeui-2
 	x11-libs/libXfixes"
 DEPEND="${RDEPEND}"
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix -Wl,--as-needed failure, FIXME: report upstream
-	sed -i "s/_LDFLAGS/_LDADD/g" src/Makefile.am
-	eautoreconf
-}
