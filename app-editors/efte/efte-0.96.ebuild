@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-0.96.ebuild,v 1.1 2008/02/18 00:24:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-0.96.ebuild,v 1.2 2008/05/28 13:55:33 hanno Exp $
 
 DESCRIPTION="A fast text editor supporting folding, syntax highlighting, etc."
 HOMEPAGE="http://efte.sourceforge.net"
@@ -13,8 +13,11 @@ IUSE="gpm X"
 
 RDEPEND="sys-libs/ncurses
 	gpm? ( sys-libs/gpm )
-	X? ( x11-base/xorg-x11
-		x11-libs/libXpm )"
+	X? (
+		x11-libs/libXpm
+		x11-libs/libXdmcp
+		x11-libs/libXau
+	)"
 DEPEND="${RDEPEND}
 	dev-util/cmake"
 
