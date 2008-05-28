@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.1.ebuild,v 1.11 2008/05/25 13:09:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.1.ebuild,v 1.12 2008/05/28 20:24:06 maekke Exp $
 
 inherit eutils
 
@@ -36,6 +36,7 @@ pkg_setup() {
 
 src_compile() {
 	econf \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_with aalib) \
 		$(use_with aalib jpeg) \
 		$(use_with exif) \
@@ -47,7 +48,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" \
-		gphotodocdir="${D}"/usr/share/doc/${PF} \
 		HTML_DIR="${D}"/usr/share/doc/${PF}/sgml \
 		install || die "installation failed"
 
