@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/nss-db
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.14 2007/02/26 09:12:22 robbat2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.15 2008/05/28 21:20:49 maekke Exp $
+
+  28 May 2008; Markus Meier <maekke@gentoo.org> nss-db-2.2.3_pre1-r2.ebuild:
+  add ~amd64, bug #213760
 
   26 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> nss-db-2.2-r1.ebuild:
   Bug #163190, fix mirror://gnu usage.
