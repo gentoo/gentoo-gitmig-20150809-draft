@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/thaifonts-scalable
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/ChangeLog,v 1.1 2008/05/28 06:07:52 loki_val Exp $
+
+*thaifonts-scalable-0.4.10 (28 May 2008)
+
+  28 May 2008; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +thaifonts-scalable-0.4.10.ebuild:
+  Initial commit. Fixes bug 216521.
+
