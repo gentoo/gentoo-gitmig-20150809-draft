@@ -1,3 +1,17 @@
+Implement 95% of the NO_PERL functionality, to build Git without any Perl
+support, because some Gentoo users want a Git without any Perl whatesoever
+(Gentoo bug #214168).
+
+Remaining bits are doing configure.ac as well as git-remote usage in:
+t5502-quickfetch.sh
+t5512-ls-remote.sh
+t5520-pull.sh
+
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+Bugzilla-URL: http://bugs.gentoo.org/show_bug.cgi?id=214168
+Notes: Ported from 20080423-git-1.5.5.1-noperl.patch
+Notes: Ported from 20080322-git-1.5.4.5-noperl.patch
+
 diff -Nuar --exclude '*.orig' --exclude '*.rej' git-1.5.5.3.orig/builtin-add.c git-1.5.5.3/builtin-add.c
 --- git-1.5.5.3.orig/builtin-add.c	2008-05-28 00:56:46.000000000 -0700
 +++ git-1.5.5.3/builtin-add.c	2008-05-28 10:38:12.566970120 -0700
