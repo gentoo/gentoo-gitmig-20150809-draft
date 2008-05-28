@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.189 2008/05/25 20:46:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.190 2008/05/28 19:48:53 mrness Exp $
+
+*squid-3.0.6-r1 (28 May 2008)
+*squid-2.6.20-r1 (28 May 2008)
+
+  28 May 2008; Alin Năstac <mrness@gentoo.org>
+  +files/squid-2.6.20-lincapver.patch, +files/squid-3.0.6-lincapver.patch,
+  +squid-2.6.20-r1.ebuild, +squid-3.0.6-r1.ebuild:
+  Fix issues with the new linux-headers-2.6.25 (#223051).
 
 *squid-3.0.6 (25 May 2008)
 

@@ -1,0 +1,21 @@
+diff -Nru squid-3.0.STABLE6.orig/src/tools.cc squid-3.0.STABLE6/src/tools.cc
+--- squid-3.0.STABLE6.orig/src/tools.cc	2008-05-20 18:01:16.000000000 +0300
++++ squid-3.0.STABLE6/src/tools.cc	2008-05-28 22:41:54.000000000 +0300
+@@ -1354,10 +1354,14 @@
+ restoreCapabilities(int keep)
+ {
+ #if defined(_SQUID_LINUX_) && HAVE_SYS_CAPABILITY_H
+-    cap_user_header_t head = (cap_user_header_t) xcalloc(1, sizeof(cap_user_header_t));
+-    cap_user_data_t cap = (cap_user_data_t) xcalloc(1, sizeof(cap_user_data_t));
+-
++    cap_user_header_t head = (cap_user_header_t) xcalloc(1, sizeof(*head));
++    cap_user_data_t cap = (cap_user_data_t) xcalloc(1, sizeof(*cap));
++ 
++#ifdef  _LINUX_CAPABILITY_VERSION_1
++    head->version = _LINUX_CAPABILITY_VERSION_1;
++#else
+     head->version = _LINUX_CAPABILITY_VERSION;
++#endif
+ 
+     if (capget(head, cap) != 0) {
+         debugs(50, 1, "Can't get current capabilities");
