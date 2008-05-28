@@ -1,14 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0.ebuild,v 1.2 2008/05/28 12:00:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.1.ebuild,v 1.1 2008/05/28 12:00:58 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
 
-MY_P="${P}final"
 DESCRIPTION="Great front-end for mplayer written in Qt4"
 HOMEPAGE="http://smplayer.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -18,7 +17,7 @@ DEPEND="|| ( x11-libs/qt-gui:4
 RDEPEND="${DEPEND}
 	>media-video/mplayer-1.0_rc1"
 
-LANGS="bg cs de en_US es eu fi fr hu it ja ka ko mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
+LANGS="bg ca cs de en_US es eu fi fr hu it ja ka ko mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
 NOLONGLANGS="el_GR ro_RO ru_RU uk_UA"
 for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
@@ -27,10 +26,8 @@ for X in ${NOLONGLANGS}; do
 	IUSE="${IUSE} linguas_${X%_*}"
 done
 
-S=${WORKDIR}/${MY_P}
-
 src_compile() {
-	local MY_SVNREV="1247"
+	local MY_SVNREV="1304"
 	echo "SVN-r${MY_SVNREV}" > svn_revision.txt
 	echo "#define SVN_REVISION \"SVN-r${MY_SVNREV}\"" > src/svn_revision.h
 
