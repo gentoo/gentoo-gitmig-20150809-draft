@@ -1,0 +1,39 @@
+Index: pygtk-2.0.pc.in
+===================================================================
+--- pygtk-2.0.pc.in	(revision 2949)
++++ pygtk-2.0.pc.in	(working copy)
+@@ -12,7 +12,7 @@
+ 
+ # same here.  Useful when calling the code generator in addon packages.
+ defsdir=${datadir}/pygtk/2.0/defs
+-codegendir=${datadir}/pygtk/2.0/codegen
++codegendir=${pyexecdir}/gtk-2.0/codegen
+ 
+ Name: PyGTK
+ Description: Python bindings for GTK+ and related libraries
+Index: codegen/pygtk-codegen-2.0.in
+===================================================================
+--- codegen/pygtk-codegen-2.0.in	(revision 2949)
++++ codegen/pygtk-codegen-2.0.in	(working copy)
+@@ -3,7 +3,7 @@
+ prefix=@prefix@
+ datarootdir=@datarootdir@
+ datadir=@datadir@
+-codegendir=${datadir}/pygtk/2.0/codegen
++codegendir=@pyexecdir@/gtk-2.0/codegen
+ 
+ PYTHONPATH=$codegendir
+ export PYTHONPATH
+Index: codegen/Makefile.am
+===================================================================
+--- codegen/Makefile.am	(revision 2949)
++++ codegen/Makefile.am	(working copy)
+@@ -2,7 +2,7 @@
+ 
+ bin_SCRIPTS = pygtk-codegen-$(PLATFORM_VERSION)
+ 
+-codegendir = $(pkgdatadir)/$(PLATFORM_VERSION)/codegen
++codegendir = $(pyexecdir)/gtk-2.0/codegen
+ 
+ codegen_PYTHON = \
+ 	__init__.py \
