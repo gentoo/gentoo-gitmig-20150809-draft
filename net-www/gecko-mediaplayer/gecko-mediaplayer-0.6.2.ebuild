@@ -1,20 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.6.0.ebuild,v 1.2 2008/03/14 17:37:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.6.2.ebuild,v 1.1 2008/05/28 12:16:40 drac Exp $
 
-inherit multilib
+GCONF_DEBUG=no
+
+inherit gnome2 multilib
 
 DESCRIPTION="A browser plug-in for GNOME MPlayer."
-HOMEPAGE="http://dekorte.homeip.net/download/gecko-mediaplayer"
-SRC_URI="http://dekorte.homeip.net/download/${PN}/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/gecko-mediaplayer"
+SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/dbus-glib-0.7
-	>=media-video/gnome-mplayer-0.6
+RDEPEND="dev-libs/dbus-glib
+	>=media-video/gnome-mplayer-0.6.2
 	|| ( =net-libs/xulrunner-1.8*
 		=www-client/mozilla-firefox-2*
 		=www-client/seamonkey-1*
@@ -24,12 +26,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_install() {
+	addpredict /etc/gconf/gconf.xml.defaults/.testing.writeability
 	emake DESTDIR="${D}" install || die "emake install failed."
 
 	dodir /usr/$(get_libdir)/nsbrowser/plugins
 
 	mv "${D}"/usr/$(get_libdir)/mozilla/plugins/${PN}* \
-		"${D}"/usr/$(get_libdir)/nsbrowser/plugins
+		"${D}"/usr/$(get_libdir)/nsbrowser/plugins || die "mv plugins failed."
 
 	rm -rf "${D}"/usr/share/doc/${PN}
 
