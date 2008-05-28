@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.77 2008/04/05 15:58:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.78 2008/05/28 18:45:42 phreak Exp $
+
+  28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Alon Bar-Lev (alonbl) from metadata.xml (as per #147110).
 
 *hibernate-script-1.98.1 (05 Apr 2008)
 
