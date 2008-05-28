@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac-webadmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.8 2008/04/27 12:42:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.9 2008/05/28 19:24:58 phreak Exp $
+
+  28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Julien Allanos (dju) from metadata.xml (as per #87168).
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org>
   trac-webadmin-0.1.2-r1.ebuild:
