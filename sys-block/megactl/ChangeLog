@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megactl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megactl/ChangeLog,v 1.2 2008/02/13 10:01:22 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megactl/ChangeLog,v 1.3 2008/05/28 21:18:58 maekke Exp $
+
+  28 May 2008; Markus Meier <maekke@gentoo.org> megactl-0.4.1.ebuild:
+  add ~amd64, bug #218606
 
   13 Feb 2008; Wolfram Schlich <wschlich@gentoo.org> megactl-0.4.1.ebuild:
   extend DESCRIPTION
