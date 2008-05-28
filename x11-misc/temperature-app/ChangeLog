@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/temperature-app
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.8 2007/07/22 03:42:37 dberkholz Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.9 2008/05/28 20:34:46 maekke Exp $
+
+  28 May 2008; Markus Meier <maekke@gentoo.org> temperature-app-1.4.ebuild:
+  add ~amd64, bug #219805
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   temperature-app-1.4.ebuild:
