@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.3.0.ebuild,v 1.1 2008/01/13 20:26:29 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.3.0.ebuild,v 1.2 2008/05/29 14:41:50 hawking Exp $
 
 NEED_PYTHON="2.4"
 
@@ -35,7 +35,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize
+	python_version
+	python_mod_optimize \
+		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/butterfly
 }
 
 pkg_postrm() {
