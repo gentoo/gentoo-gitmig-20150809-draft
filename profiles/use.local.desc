@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3557 2008/05/26 00:36:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3558 2008/05/29 18:54:02 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1928,8 +1928,10 @@ sci-misc/h5utils:octave - Build Octave plugins
 sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
 sci-misc/nco:udunits - Add udunits files support
 sci-misc/ncview:udunits - Add udunits files support
-sci-physics/root:cern -Enable hbook i/o functionality to root (needs cernlib)
+sci-physics/root:cern - Enable hbook i/o functionality to root (needs cernlib)
 sci-physics/root:cint7 - Build the experimental C/C++ interpretor version 7
+sci-physics/root:math - Build extra math and numerical libraries for root (needs gsl)
+sci-physics/root:xrootd - Adds xrootd support, a low latency file server
 sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
 sci-visualization/hippodraw:root - Add root i/o, and minuit support
