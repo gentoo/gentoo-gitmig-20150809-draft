@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.73 2008/03/13 21:42:01 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.74 2008/05/29 14:50:15 dev-zero Exp $
+
+  29 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/360-unixODBC-2.2.12-libltdlfixes.patch, unixODBC-2.2.12.ebuild:
+  Removed bundled libltdl (fixes bug #221879).
 
   13 Mar 2008; <ricmm@gentoo.org> unixODBC-2.2.11-r1.ebuild,
   unixODBC-2.2.12.ebuild:

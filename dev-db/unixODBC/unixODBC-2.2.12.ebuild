@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.13 2008/03/13 21:42:01 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.14 2008/05/29 14:50:15 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 PATCH_VERSION="2.2.12-r0"
 PATCH_P="${PN}-${PATCH_VERSION}-patches"
 
-inherit eutils multilib autotools gnuconfig
+inherit eutils multilib autotools gnuconfig libtool
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
@@ -22,8 +22,8 @@ IUSE="qt3 gnome"
 RDEPEND=">=sys-libs/readline-4.1
 		>=sys-libs/ncurses-5.2
 		qt3? ( =x11-libs/qt-3* )
-		gnome? ( gnome-base/libgnomeui )"
-
+		gnome? ( gnome-base/libgnomeui )
+		sys-devel/libtool"
 DEPEND="${RDEPEND}
 	gnome? ( dev-util/cvs )" # see Bug 173256
 
@@ -32,7 +32,14 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${WORKDIR}"/${PATCH_P}/*
-	epatch "${FILESDIR}"/350-${P}-gODBCConfig-as-needed.patch
+	epatch \
+		"${FILESDIR}/350-${P}-gODBCConfig-as-needed.patch" \
+		"${FILESDIR}/360-${P}-libltdlfixes.patch"
+
+	# Remove bundled libltdl copy
+	rm -rf libltdl
+
+	eautoreconf
 }
 
 src_compile() {
@@ -44,15 +51,13 @@ src_compile() {
 		myconf="--enable-gui=no"
 	fi
 
-	# Detect mips systems properly
-	eautoreconf
-
 	econf --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc/${PN} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-static \
 		--enable-fdb \
+		--enable-ltdllib \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 
