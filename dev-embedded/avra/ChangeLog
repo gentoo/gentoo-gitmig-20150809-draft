@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avra
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/ChangeLog,v 1.4 2007/11/23 21:39:57 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/ChangeLog,v 1.5 2008/05/29 06:13:03 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
+  to maintainer-needed.
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org> avra-1.0.1.ebuild:
   Keyword ~amd64 wrt #187145, Fix LD, CC, LDFLAGS, CFLAGS, pre-stripped files,

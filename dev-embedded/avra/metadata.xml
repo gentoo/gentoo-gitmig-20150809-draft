@@ -3,9 +3,10 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>pylon@gentoo.org</email>
-		<name>Lars Weiler</name>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
 	</maintainer>
-	<longdescription lang="en">Assembler for Atmel AVR microprocessors</longdescription>
+	<longdescription lang="en">
+		Assembler for Atmel AVR microprocessors
+	</longdescription>
 </pkgmetadata>
-
