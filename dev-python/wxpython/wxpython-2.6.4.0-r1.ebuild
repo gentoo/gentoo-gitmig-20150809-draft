@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.13 2008/03/21 01:56:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.14 2008/05/29 16:40:05 hawking Exp $
 
 EAPI=1
 
@@ -102,9 +102,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize
-
 	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
+
+	python_mod_optimize ${size_pkgs}
 
 	alternatives_auto_makesym \
 		"${site_pkgs}/wx.pth" "${site_pkgs}/wx.pth-[0-9].[0-9]"
