@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a-r1.ebuild,v 1.1 2007/02/12 21:10:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a-r1.ebuild,v 1.2 2008/05/29 12:16:46 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -16,9 +16,9 @@ IUSE="doc nls"
 RDEPEND="media-libs/sdl-ttf
 	media-libs/sdl-mixer
 	media-libs/libsdl
-	dev-lang/swig
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-lang/swig
 	doc? (
 		media-gfx/graphviz
 		app-doc/doxygen
