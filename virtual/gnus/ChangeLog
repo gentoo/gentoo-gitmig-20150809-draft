@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.10 2008/01/22 10:25:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.11 2008/05/29 13:44:18 ulm Exp $
+
+  29 May 2008; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
+  Empty HOMEPAGE according to devmanual.
 
   22 Jan 2008; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
   Stable on arm/s390/sh, following stabilisation of virtual/emacs-22.
