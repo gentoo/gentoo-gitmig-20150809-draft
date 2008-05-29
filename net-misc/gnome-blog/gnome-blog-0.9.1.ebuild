@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.6 2008/04/12 13:46:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.7 2008/05/29 17:44:16 hawking Exp $
 
 inherit gnome2 python
 
@@ -37,11 +37,10 @@ src_unpack () {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/gnomeblog
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/gnomeblog
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/gnomeblog
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/gnomeblog
 }
