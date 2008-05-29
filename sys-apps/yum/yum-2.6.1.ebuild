@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.4 2008/05/29 18:04:58 hawking Exp $
 
 inherit python distutils eutils
 
@@ -44,28 +44,26 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc README AUTHORS ChangeLog TODO
 	useq doc && dodoc PLUGINS
 
 	# Makefile explicitly compiles python files
-	find ${D}/usr/ -name *.py[co] -exec rm {} \;
+	find "${D}"/usr/ -name *.py[co] -exec rm {} \;
 
 	# yum's auto-update functionality doesn't make
 	# sense for a system managed by portage
-	rm -rf ${D}/etc/cron.{daily,weekly}
-	rm -rf ${D}/etc/{rc.d,yum}
+	rm -rf "${D}"/etc/cron.{daily,weekly}
+	rm -rf "${D}"/etc/{rc.d,yum}
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize ${ROOT}usr/share/${PN}-cli
+	python_mod_optimize /usr/share/${PN}-cli
 	distutils_pkg_postinst
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup ${ROOT}usr/share/${PN}-cli
+	python_mod_cleanup /usr/share/${PN}-cli
 	distutils_pkg_postrm
 }

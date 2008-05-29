@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.4 2008/01/06 18:39:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.5 2008/05/29 18:04:58 hawking Exp $
 
 NEED_PYTHON=1
-inherit python eutils
+inherit python eutils multilib
 
 DESCRIPTION="automatic updater and package installer/remover for rpm systems"
 HOMEPAGE="http://linux.duke.edu/projects/yum/"
@@ -42,9 +42,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/{yum,rpmUtils} "${ROOT}"/usr/share/yum-cli
+	python_version
+	python_mod_optimize \
+		/usr/$(get_libdir)/python${PYVER}/site-packages/{yum,rpmUtils} \
+		/usr/share/yum-cli
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/{yum,rpmUtils} "${ROOT}"/usr/share/yum-cli
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/{yum,rpmUtils} /usr/share/yum-cli
 }
