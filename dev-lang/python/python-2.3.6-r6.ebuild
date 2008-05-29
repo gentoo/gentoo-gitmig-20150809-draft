@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.11 2008/05/29 16:06:26 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.6-r6.ebuild,v 1.12 2008/05/29 21:29:02 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -194,7 +194,7 @@ pkg_postinst() {
 
 	python_makesym
 	python_mod_optimize
-	python_mod_optimize -x site-packages -x test /usr/$(get_libdir)/python${PYVER}
+	python_mod_optimize -x "(site-packages|test)" /usr/$(get_libdir)/python${PYVER}
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
