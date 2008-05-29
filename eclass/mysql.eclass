@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.91 2008/05/29 03:15:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.92 2008/05/29 05:17:16 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -713,21 +713,21 @@ mysql_src_install() {
 
 	# Docs
 	dodoc README COPYING ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
-	doinfo ${S}/Docs/mysql.info
+	doinfo "${S}"/Docs/mysql.info
 
 	# Minimal builds don't have the MySQL server
 	if ! use minimal ; then
 		docinto "support-files"
 		for script in \
-			support-files/my-*.cnf \
-			support-files/magic \
-			support-files/ndb-config-2-node.ini
+			"${S}"/support-files/my-*.cnf \
+			"${S}"/support-files/magic \
+			"${S}"/support-files/ndb-config-2-node.ini
 		do
 			dodoc "${script}"
 		done
 
 		docinto "scripts"
-		for script in scripts/mysql* ; do
+		for script in "${S}"/scripts/mysql* ; do
 			[[ "${script%.sh}" == "${script}" ]] && dodoc "${script}"
 		done
 
