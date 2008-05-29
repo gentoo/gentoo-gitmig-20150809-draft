@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8662 2008/05/29 13:13:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8663 2008/05/29 15:42:28 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -29,7 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Joe Peterson <lavajoe@gentoo.org> (28 May 1008)
+# Raúl Porcel <armin76@gentoo.org> (29 May 2008)
+# resolvconf-gentoo is deprecated, please use
+# net-dns/openresolv, bug #219270
+net-dns/resolvconf-gentoo
+
+# Joe Peterson <lavajoe@gentoo.org> (28 May 2008)
 # Beta 25 is broken - intermittently does not work (bombs out).
 # Will test new beta (26) and unmask if working.
 >=media-gfx/povray-3.7.0_beta
