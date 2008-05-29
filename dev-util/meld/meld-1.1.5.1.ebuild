@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1.ebuild,v 1.8 2008/01/18 12:40:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1.ebuild,v 1.9 2008/05/29 16:48:04 hawking Exp $
 
-inherit python gnome2 eutils
+inherit python gnome2 eutils multilib
 
 DESCRIPTION="A graphical (GNOME 2) diff and merge tool"
 HOMEPAGE="http://meld.sourceforge.net/"
@@ -41,9 +41,9 @@ src_compile() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/lib/meld
+	python_mod_optimize /usr/$(get_libdir)/meld
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/lib/meld
+	python_mod_cleanup /usr/$(get_libdir)/meld
 }

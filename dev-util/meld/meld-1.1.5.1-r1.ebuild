@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.2 2008/05/21 22:35:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.3 2008/05/29 16:48:04 hawking Exp $
 
 inherit python gnome2 eutils multilib
 
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/meld
+	python_mod_optimize /usr/$(get_libdir)/meld
 }
 
 pkg_postrm() {
