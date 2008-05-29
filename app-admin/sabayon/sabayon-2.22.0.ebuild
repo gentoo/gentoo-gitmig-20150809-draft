@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.0.ebuild,v 1.2 2008/03/29 19:51:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.0.ebuild,v 1.3 2008/05/29 15:31:35 hawking Exp $
 
 inherit gnome2 eutils python multilib
 #pam
@@ -82,7 +82,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/sabayon
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/sabayon
 
 	# unfortunately /etc/gconf is CONFIG_PROTECT_MASK'd
 	elog "To apply Sabayon defaults and mandatory settings to all users, put"

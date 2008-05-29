@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9-r1.ebuild,v 1.2 2008/04/05 19:43:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9-r1.ebuild,v 1.3 2008/05/29 15:28:59 hawking Exp $
 
 inherit autotools eutils libtool python
 
@@ -56,7 +56,7 @@ src_install() {
 pkg_postinst() {
 	if use python; then
 		python_version
-		python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 	fi
 }
 
