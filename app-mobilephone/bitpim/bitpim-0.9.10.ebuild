@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.5 2008/02/09 22:06:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.6 2008/05/29 15:44:38 hawking Exp $
 
 inherit distutils multilib
 
@@ -153,10 +153,9 @@ src_install() {
 
 pkg_postinst() {
 	# Optimize in installed directory
-	python_mod_optimize "${ROOT}usr/$(get_libdir)/${P}"
+	python_mod_optimize /usr/$(get_libdir)/${P}
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup "${ROOT}usr/$(get_libdir)/${P}"
+	python_mod_cleanup /usr/$(get_libdir)/${P}
 }
