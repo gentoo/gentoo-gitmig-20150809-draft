@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.56 2007/09/22 07:18:21 tgall Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.57 2008/05/29 16:31:38 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> pyorbit-2.14.3.ebuild:
+  Made the ebuild multilib-safe.
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> pyorbit-2.14.3.ebuild:
   stable on ppc64

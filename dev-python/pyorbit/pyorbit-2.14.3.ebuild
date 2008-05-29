@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.14.3.ebuild,v 1.10 2007/09/22 07:18:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.14.3.ebuild,v 1.11 2008/05/29 16:31:38 hawking Exp $
 
-inherit python gnome2
+inherit python gnome2 multilib
 
 DESCRIPTION="ORBit2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
@@ -22,27 +22,26 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
 src_unpack() {
 	unpack ${A}
 	# disable pyc compiling
-	mv ${S}/py-compile ${S}/py-compile.orig
-	ln -s $(type -P true) ${S}/py-compile
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s $(type -P true) "${S}"/py-compile
 }
 
 src_install() {
 	gnome2_src_install
 
 	python_version
-	mv ${D}/usr/lib/python${PYVER}/site-packages/CORBA.py \
-		${D}/usr/lib/python${PYVER}/site-packages/pyorbit_CORBA.py
+	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/CORBA.py \
+		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_CORBA.py
 
-	mv ${D}/usr/lib/python${PYVER}/site-packages/PortableServer.py \
-		${D}/usr/lib/python${PYVER}/site-packages/pyorbit_PortableServer.py
+	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/PortableServer.py \
+		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_PortableServer.py
 }
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize /usr/lib/python${PYVER}/site-packages
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }
