@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/lightyears
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.5 2008/03/28 12:22:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.6 2008/05/29 16:55:42 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> lightyears-1.2a.ebuild:
+  python_mod_optimize is ROOT aware.
 
   28 Mar 2008; Tristan Heaven <nyhm@gentoo.org> lightyears-1.2a.ebuild:
   Fix python eclass usage
