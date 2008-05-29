@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/medit/medit-0.9.2.ebuild,v 1.3 2008/03/26 15:54:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/medit/medit-0.9.2.ebuild,v 1.4 2008/05/29 15:36:36 hawking Exp $
 
 inherit eutils python fdo-mime gnome2-utils multilib
 
@@ -51,7 +51,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
-	use python && python_mod_optimize "${ROOT}"usr/$(get_libdir)/moo/plugins
+	use python && python_mod_optimize /usr/$(get_libdir)/moo/plugins
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.1.ebuild,v 1.2 2008/05/10 18:27:46 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.1.ebuild,v 1.3 2008/05/29 15:35:21 hawking Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -80,7 +80,7 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize "${ROOT}usr/$(get_libdir)/gedit-2/plugins"
+	use python && python_mod_optimize /usr/$(get_libdir)/gedit-2/plugins
 }
 
 pkg_postrm() {

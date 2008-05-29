@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.3 2008/01/23 14:22:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.4 2008/05/29 15:37:32 hawking Exp $
 
 NEED_PYTHON=2.5
 
@@ -45,7 +45,7 @@ src_unpack() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/SCRIBES
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/SCRIBES
 }
 
 pkg_postrm() {
