@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.46 2008/03/11 03:36:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.47 2008/05/29 16:50:57 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> wxglade-0.6.ebuild,
+  wxglade-0.6.1.ebuild, wxglade-0.6.3.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware.
 
 *wxglade-0.6.3 (11 Mar 2008)
 
