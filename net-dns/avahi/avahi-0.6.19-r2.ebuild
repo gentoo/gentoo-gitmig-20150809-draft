@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.7 2008/01/03 17:53:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.8 2008/05/29 17:36:48 hawking Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
@@ -170,11 +170,14 @@ src_install() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/avahi
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/avahi
+	if use python; then
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/avahi
+	fi
 
 	if use autoipd
 	then

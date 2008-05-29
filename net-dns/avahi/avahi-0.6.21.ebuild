@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.11 2008/01/03 17:53:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.12 2008/05/29 17:36:48 hawking Exp $
 
 inherit eutils mono python qt3 qt4 multilib
 
@@ -171,7 +171,10 @@ pkg_postrm() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages/avahi
+	if use python; then
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/avahi
+	fi
 
 	if use autoipd
 	then

@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.142 2008/05/13 11:40:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.143 2008/05/29 17:36:48 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> avahi-0.6.19-r2.ebuild,
+  avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild, avahi-0.6.22.ebuild,
+  avahi-0.6.22-r1.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware.
 
   13 May 2008; Raúl Porcel <armin76@gentoo.org> avahi-0.6.22-r1.ebuild:
   alpha/ia64/sparc stable wrt #220803
