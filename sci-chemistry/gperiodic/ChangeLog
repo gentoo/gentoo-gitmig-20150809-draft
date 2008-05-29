@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gperiodic
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.7 2008/05/29 13:29:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.8 2008/05/29 18:54:02 markusle Exp $
+
+  29 May 2008; Markus Dittrich <markusle@gentoo.org> gperiodic-2.0.7.ebuild,
+  gperiodic-2.0.10.ebuild:
+  Fixed broken HOMEPAGE and SRC_URI.
 
 *gperiodic-2.0.10 (29 May 2008)
 

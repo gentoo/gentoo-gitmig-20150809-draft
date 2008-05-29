@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.1 2008/05/29 13:29:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.2 2008/05/29 18:54:02 markusle Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Periodic table application for Linux"
-SRC_URI="http://www.acclab.helsinki.fi/~frantz/software/${P}.tar.gz"
-HOMEPAGE="http://www.acclab.helsinki.fi/~frantz/software/gperiodic.php"
+SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
+HOMEPAGE="http://www.frantz.fi/index.php?page=software"
 
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
