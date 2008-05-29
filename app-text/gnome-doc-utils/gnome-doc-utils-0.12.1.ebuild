@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.12.1.ebuild,v 1.9 2008/03/22 03:55:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.12.1.ebuild,v 1.10 2008/05/29 15:54:17 hawking Exp $
 
 inherit eutils python gnome2
 
@@ -40,12 +40,11 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/share/xml2po
+	python_mod_optimize /usr/share/xml2po
 	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
-	# mod_cleanup adds $ROOT in front for us, while mod_optimize does not
 	python_mod_cleanup /usr/share/xml2po
 	gnome2_pkg_postrm
 }

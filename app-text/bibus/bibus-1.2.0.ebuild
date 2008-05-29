@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.2.0.ebuild,v 1.3 2007/09/22 14:02:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.2.0.ebuild,v 1.4 2008/05/29 15:52:15 hawking Exp $
 
 inherit python multilib
 
@@ -70,9 +70,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/share/bibus
+	python_mod_optimize /usr/share/bibus
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"usr/share/bibus
+	python_mod_cleanup /usr/share/bibus
 }
