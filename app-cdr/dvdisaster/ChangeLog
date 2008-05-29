@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.9 2008/03/02 19:34:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.10 2008/05/29 06:08:44 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
 
   02 Mar 2008; Markus Meier <maekke@gentoo.org> dvdisaster-0.70.4.ebuild:
   x86 stable, bug #209875
