@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fuse-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.5 2008/05/17 12:55:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.6 2008/05/29 14:12:00 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> fuse-python-0.2.ebuild:
+  python_mod_compile is ROOT aware.
 
   17 May 2008; Samuli Suominen <drac@gentoo.org> fuse-python-0.2.ebuild:
   Byte-compile.
