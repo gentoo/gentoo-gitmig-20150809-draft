@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0.ebuild,v 1.1 2008/03/13 00:51:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0.ebuild,v 1.2 2008/05/29 17:54:58 hawking Exp $
 
 inherit multilib distutils
 
@@ -21,9 +21,9 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	python setup.py install --prefix="${D}/usr" || die "install failed"
-	dobin ${S}/applications/* ${S}/examples/*
-	dodoc ${S}/README.txt
-	dohtml -r ${S}/doc
+	dobin "${S}"/applications/* "${S}"/examples/*
+	dodoc "${S}"/README.txt
+	dohtml -r "${S}"/doc
 
 	# numpy >= 0.9.8 moved lost of numpy.linalg methods to numpy.linalg.old
 #	local b="numpy.linalg"

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.6 2007/07/22 07:01:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.7 2008/05/29 17:54:58 hawking Exp $
 
 inherit multilib python
 
@@ -25,14 +25,14 @@ src_compile() {
 
 src_install() {
 	python setup.py install --prefix="${D}/usr" || die "install failed"
-	dobin ${S}/applications/* ${S}/examples/*
-	dodoc ${S}/README.txt
-	dohtml -r ${S}/doc
+	dobin "${S}"/applications/* "${S}"/examples/*
+	dodoc "${S}"/README.txt
+	dohtml -r "${S}"/doc
 
 	# numpy >= 0.9.8 moved lost of numpy.linalg methods to numpy.linalg.old
 	local b="numpy.linalg"
 	ebegin "Updating for numpy >= 0.9.8"
-	find ${D} -name '*.py' \
+	find "${D}" -name '*.py' \
 	| xargs sed -i \
 		-e "s:\(${b}.\)\(determinant\):\1old.\2:g" \
 		-e "s:\(${b}.\)\(eigenvalues\):\1old.\2:g" \
@@ -43,10 +43,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/mmLib
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/mmLib
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/mmLib
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/mmLib
 }

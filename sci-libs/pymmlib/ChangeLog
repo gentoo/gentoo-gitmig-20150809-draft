@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pymmlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.14 2008/03/13 00:51:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.15 2008/05/29 17:54:58 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> pymmlib-0.9.7.ebuild,
+  pymmlib-0.9.8.ebuild, pymmlib-1.0.0.ebuild:
+  python_mod_optimize is ROOT aware. Multilib love. Quoting.
 
 *pymmlib-1.0.0 (13 Mar 2008)
 
