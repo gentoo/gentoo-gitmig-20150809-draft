@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.5 2007/07/15 13:04:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.6 2008/05/29 17:46:17 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -47,9 +47,9 @@ src_install() {
 # Luma installs it's stuff to /usr/lib/luma, even on 64bit-systems.
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}/usr/lib/luma"
+	python_mod_optimize /usr/lib/luma
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}/usr/lib/luma"
+	python_mod_cleanup /usr/lib/luma
 }
