@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.237 2008/05/22 10:52:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.238 2008/05/29 02:26:11 compnerd Exp $
+
+*hal-0.5.11-r1 (29 May 2008)
+
+  29 May 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  +hal-0.5.11-r1.ebuild:
+  Fix building with libtool, optionalize the X dep with the X useflag.
 
   22 May 2008; Tobias Klausmann <klausman@gentoo.org> hal-0.5.11.ebuild:
   Keyworded on alpha, bug #222899
