@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.11-r102.ebuild,v 1.4 2008/05/29 12:57:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12.ebuild,v 1.1 2008/05/29 12:57:42 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ nagios-ssh nagios-game ups ipv6 radius"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
-	postgres? ( >=virtual/postgresql-server-7.2 )
+	postgres? ( >=virtual/postgresql-base-7.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 
@@ -55,7 +55,6 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
-	epatch "${FILESDIR}"/${P}-autoconf-2.62.patch
 
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
@@ -75,9 +74,10 @@ src_compile() {
 		$(use_with ipv6) \
 		${conf} \
 		--host=${CHOST} \
-		--prefix=/usr \
-		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
-		--sysconfdir=/etc/nagios || die "econf failed"
+		--prefix=/usr/nagios \
+		--sysconfdir=/etc/nagios \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man || die "econf failed"
 
 	# fix problem with additional -
 	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
@@ -99,22 +99,20 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if use mysql || use postgres; then
-		dodir /usr/$(get_libdir)/nagios/plugins
-		exeinto /usr/$(get_libdir)/nagios/plugins
+		dodir /usr/nagios/libexec
+		exeinto /usr/nagios/libexec
 		doexe "${S}"/contrib/check_nagios_db.pl
 	fi
 
-	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
+	dodir /usr/nagios/libexec/
+	mv "${S}"/contrib "${D}"/usr/nagios/libexec/contrib
 
-	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins \
-		|| die "Failed chown of ${D}usr/$(get_libdir)/nagios/plugins"
+	chown root:nagios "${D}"/usr/nagios || die "Failed Chown of ${D}usr/nagios"
+	chown -R root:nagios "${D}"/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
 
-	chmod -R o-rwx "${D}"/usr/$(get_libdir)/nagios/plugins \
-		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins"
+	chmod -R o-rwx "${D}"/usr/nagios/libexec || die "Failed Chmod of ${D}usr/nagios/libexec"
 
-	chmod 04710 "${D}"/usr/$(get_libdir)/nagios/plugins/check_icmp \
-		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins/check_icmp"
-
+	chmod 04710 "${D}"/usr/nagios/libexec/check_icmp || die "Failed Chmod of ${D}usr/nagios/libexec/check_icmp"
 }
 
 pkg_postinst() {
@@ -122,5 +120,5 @@ pkg_postinst() {
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
 	echo
-	einfo "contrib plugins are installed into /usr/$(get_libdir)/nagios/plugins/contrib"
+	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
 }
