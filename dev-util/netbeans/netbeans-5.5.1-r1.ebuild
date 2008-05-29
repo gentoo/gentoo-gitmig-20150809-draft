@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.3 2008/05/05 00:35:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.4 2008/05/29 16:14:32 opfer Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
@@ -16,11 +16,11 @@ MY_PV=$(replace_all_version_separators '_')
 FILE_IDE="${PN}-${MY_PV}-ide_sources.tar.bz2"
 FILE_CPP="${PN}-c++-${MY_PV}-linux.bin"
 SRC_URI="http://dlc.sun.com/${PN}/download/${MY_PV}/fcs/200704122300/${FILE_IDE}
-	c++? ( http://dlc.sun.com/${PN}/download/${MY_PV}/cnd/mlfcs/070610/${FILE_CPP} )"
+	cxx? ( http://dlc.sun.com/${PN}/download/${MY_PV}/cnd/mlfcs/070610/${FILE_CPP} )"
 LICENSE="CDDL"
 SLOT="5.5"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="c++ debug"
+IUSE="cxx debug"
 
 COMMON_DEPEND="
 	>=dev-java/commons-logging-1.0.4
@@ -99,7 +99,7 @@ JAVA_PKG_BSFIX="off"
 
 src_unpack () {
 	unpack "${FILE_IDE}"
-	use c++ && unpack_extra ${FILE_CPP} cpp
+	use cxx && unpack_extra ${FILE_CPP} cpp
 	cd "${S}"
 	find -name "*.jar" | grep "/test/" | xargs rm -v
 	find -name "*.class" -delete
@@ -176,7 +176,7 @@ src_install() {
 	cd ${BUILDDESTINATION} || die
 	doins -r *
 
-	if use c++ ; then
+	if use cxx ; then
 		install_extra cpp
 		echo "cnd1" >> ${BUILDDESTINATION}/etc/netbeans.clusters
 	fi
