@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17100.ebuild,v 1.1 2008/04/23 16:42:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17100.ebuild,v 1.2 2008/05/29 17:26:10 hawking Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
@@ -275,7 +275,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/MythTV"
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/MythTV
 
 	echo
 	elog "Want mythfrontend to start automatically?"
@@ -305,8 +305,7 @@ pkg_postinst() {
 
 pkg_postrm()
 {
-	python_version
-	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/MythTV"
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/MythTV
 }
 
 pkg_info() {
