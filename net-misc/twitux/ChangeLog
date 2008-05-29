@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/twitux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/ChangeLog,v 1.5 2008/05/20 16:28:27 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/ChangeLog,v 1.6 2008/05/29 16:11:28 welp Exp $
+
+*twitux-0.62 (29 May 2008)
+
+  29 May 2008; <welp@gentoo.org> +twitux-0.62.ebuild:
+  Bug 220925
 
   20 May 2008; Greg Kroah-Hartman <gregkh@gentoo.org> twitux-0.61-r1.ebuild:
   added ~x86
