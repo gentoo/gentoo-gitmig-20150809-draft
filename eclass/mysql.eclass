@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.93 2008/05/29 05:28:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.94 2008/05/29 05:33:49 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -853,8 +853,8 @@ mysql_pkg_config() {
 	popd &>/dev/null
 	[[ -f "${ROOT}/${MY_DATADIR}/mysql/user.frm" ]] \
 	|| die "MySQL databases not installed"
-	chown -R mysql:mysql "${ROOT}/${MY_DATADIR}" 2> /dev/null
-	chmod 0750 "${ROOT}/${MY_DATADIR}" 2> /dev/null
+	chown -R mysql:mysql "${ROOT}/${MY_DATADIR}" 2>/dev/null
+	chmod 0750 "${ROOT}/${MY_DATADIR}" 2>/dev/null
 
 	if mysql_version_is_at_least "4.1.3" ; then
 		options="--skip-ndbcluster"
