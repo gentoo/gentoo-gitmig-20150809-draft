@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.5 2007/03/15 08:44:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.6 2008/05/29 15:41:32 hawking Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -105,7 +105,8 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		python_mod_optimize "${ROOT}/usr/$(get_libdir)/python*/site-packages/g15daemon"
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/g15daemon
 		echo ""
 	fi
 
