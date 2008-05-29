@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.1 2008/05/29 04:35:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.2 2008/05/29 04:39:20 wolf31o2 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -25,8 +25,8 @@ HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~amd64 ~x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 RESTRICT=""
 IUSE="ccache"
 
