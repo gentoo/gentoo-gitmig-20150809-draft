@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.9 2008/03/11 00:24:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.10 2008/05/29 16:28:47 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  pygtksourceview-2.0.0-r1.ebuild, pygtksourceview-2.2.0.ebuild:
+  python_mod_optimize is ROOT aware. Run python_mod_cleanup in pkg_postrm.
 
 *pygtksourceview-2.2.0 (11 Mar 2008)
 
