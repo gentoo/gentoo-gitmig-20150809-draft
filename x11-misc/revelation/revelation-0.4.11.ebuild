@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.7 2008/03/24 11:30:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.8 2008/05/29 18:20:23 hawking Exp $
 
 inherit multilib python gnome2
 
@@ -38,7 +38,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 }
 
 pkg_postrm() {

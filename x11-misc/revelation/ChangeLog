@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.9 2008/03/24 11:30:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.10 2008/05/29 18:20:23 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> revelation-0.4.11.ebuild:
+  python_mod_optimize is ROOT aware.
 
   24 Mar 2008; Tristan Heaven <nyhm@gentoo.org> revelation-0.4.11.ebuild:
   Fix python eclass usage
