@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.3 2008/05/13 00:15:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.4 2008/05/29 00:24:45 jsbronder Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -28,11 +28,11 @@ pkg_setup() {
 
 	if kernel_is 2 4; then
 		BUILD_TARGETS="just_kmod24"
-		ECONF_PARAMS="--with-kernel24=${KV_DIR}"
+		ECONF_PARAMS="--with-kernel24=${KV_OUT_DIR}"
 		MODULE_NAMES="pvfs2(fs::src/kernel/linux-2.4)"
 	else
 		BUILD_TARGETS="just_kmod"
-		ECONF_PARAMS="--with-kernel=${KV_DIR} --enable-verbose-build"
+		ECONF_PARAMS="--with-kernel=${KV_OUT_DIR} --enable-verbose-build"
 		MODULE_NAMES="pvfs2(fs::src/kernel/linux-2.6)"
 	fi
 
