@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.1 2008/03/28 19:54:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.2 2008/05/29 16:54:46 hawking Exp $
 
 inherit eutils python games
 
@@ -42,7 +42,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}$(games_get_libdir)"/${PN}
+	python_mod_optimize "$(games_get_libdir)"/${PN}
 	games_pkg_postinst
 }
 
