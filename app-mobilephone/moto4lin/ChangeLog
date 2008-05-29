@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/moto4lin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.9 2007/09/07 20:07:51 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.10 2008/05/29 07:14:43 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Carlos Silva (r3pek) from metadata.xml (as per #80351).
 
   07 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   moto4lin-0.3_p20051125.ebuild:
