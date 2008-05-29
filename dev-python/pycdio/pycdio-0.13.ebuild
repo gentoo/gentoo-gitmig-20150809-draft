@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.13.ebuild,v 1.2 2008/05/14 23:05:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.13.ebuild,v 1.3 2008/05/29 14:21:17 hawking Exp $
 
 inherit eutils distutils flag-o-matic multilib
 
@@ -52,7 +52,6 @@ src_install(){
 
 pkg_postinst() {
 	python_version
-	for pymod in cdio pycdio iso9660 pyiso9660; do
-		python_mod_compile "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}.py
-	done
+	python_mod_compile \
+		/usr/$(get_libdir)/python${PYVER}/site-packages/{,py}{cdio,iso9660}.py
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycdio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.4 2008/05/14 23:05:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.5 2008/05/29 14:21:17 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> pycdio-0.13.ebuild:
+  python_mod_compile is ROOT aware and can take multiple file arguments.
 
   14 May 2008; Stefan Briesenick <sbriesen@gentoo.org> pycdio-0.13.ebuild:
   fixed dependencies (solves bug #221473).
