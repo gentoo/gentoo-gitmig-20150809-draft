@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8661 2008/05/29 02:07:51 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8662 2008/05/29 13:13:56 wolf31o2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -459,15 +459,6 @@ games-fps/quake4-bin
 games-fps/quake4-data
 games-fps/quake4-deltactf
 games-fps/quake4-demo
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (27 Feb 2008)
-# Masking these versions because I'm sick of people reporting bugs that have
-# already been fixed in newer versions or SVN.  Here's a tip for all of you
-# ~arch users out there.  If you're going to use ~arch and you're planning on
-# filing bug reports, make sure your bug is actually still valid before filing
-# it.  It really does help out tremendously to not have to dig through tons of
-# code only to find that the issue was already resolved 5 revisions ago.
->=dev-util/catalyst-2.0.6_pre1
 
 # Benedikt Böhm <hollow@gentoo.org> (23 Feb 2008)
 # Masked due to security issues.
