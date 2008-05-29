@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/fwbuilder
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.66 2007/09/29 23:04:46 r3pek Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.67 2008/05/29 07:18:41 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Carlos Silva (r3pek) from metadata.xml (as per #80351). Assigning
+  to maintainer-needed.
 
 *fwbuilder-2.1.14 (29 Sep 2007)
 
