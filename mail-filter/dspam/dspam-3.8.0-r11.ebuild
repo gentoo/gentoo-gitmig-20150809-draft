@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r11.ebuild,v 1.4 2008/05/21 16:03:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r11.ebuild,v 1.5 2008/05/29 23:15:33 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils autotools flag-o-matic multilib
+inherit eutils autotools multilib
 
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
@@ -65,9 +65,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch"
 	epatch "${WORKDIR}"/patches
-
-	# Fix Lazy bindings
-	append-flags $(bindnow-flags)
 
 	AT_M4DIR="${S}/m4"
 	eautoreconf
