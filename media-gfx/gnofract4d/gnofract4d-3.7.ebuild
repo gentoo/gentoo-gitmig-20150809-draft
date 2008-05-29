@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.7.ebuild,v 1.3 2008/02/20 07:37:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.7.ebuild,v 1.4 2008/05/29 17:13:35 hawking Exp $
 
 inherit distutils fdo-mime multilib python
 
@@ -28,7 +28,7 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/fract*
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/fract*
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
