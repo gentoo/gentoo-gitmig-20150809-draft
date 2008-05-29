@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.3-r1.ebuild,v 1.3 2008/05/27 17:35:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.3-r1.ebuild,v 1.4 2008/05/29 11:47:07 nyhm Exp $
 
 inherit eutils wxwidgets games
 
@@ -43,6 +43,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -i \
+		-e '/HWND/d' \
+		src/porting/windows.h \
+		|| die "sed failed" #213872
 }
 
 src_compile() {
