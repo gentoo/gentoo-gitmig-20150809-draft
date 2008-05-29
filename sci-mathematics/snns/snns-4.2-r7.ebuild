@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.8 2007/07/22 06:58:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.9 2008/05/29 14:37:00 hawking Exp $
 
-inherit eutils python
+inherit eutils python multilib
 
 MY_P="SNNSv${PV}"
 MYPATCH="${P}-20040227"
@@ -36,14 +36,14 @@ src_unpack() {
 	if use python; then
 		unpack ${MYPYTHONEXT}.tar.gz
 
-		cd ${S}
-		epatch ${FILESDIR}/${PV}-fPIC-python.patch
-		cd ${WORKDIR}
+		cd "${S}"
+		epatch "${FILESDIR}"/${PV}-fPIC-python.patch
+		cd "${WORKDIR}"
 		unpack ${MYPYTHONPATCH}.gz
-		cd ${S}
-		epatch ${WORKDIR}/${MYPYTHONPATCH}
+		cd "${S}"
+		epatch "${WORKDIR}"/${MYPYTHONPATCH}
 	fi
-	cd ${S}/xgui/sources
+	cd "${S}"/xgui/sources
 	for file in *.c; do
 		sed -e "s:X11/Xaw/:X11/Xaw3d/:g" -i "${file}"
 	done
@@ -65,8 +65,9 @@ src_compile() {
 	make ${compileopts} || die "make failed"
 
 	if use python; then
+		python_version
 		cd python
-		python setup.py build || die "could not build python extension"
+		${python} setup.py build || die "could not build python extension"
 	fi
 }
 
@@ -79,23 +80,24 @@ src_install() {
 		newbin xgui/sources/xgui snns
 
 		dodir /etc/env.d
-		echo XGUILOADPATH=/usr/share/doc/${PF}/ > ${D}/etc/env.d/99snns
+		echo XGUILOADPATH=/usr/share/doc/${PF}/ > "${D}"/etc/env.d/99snns
 
 		insinto /usr/share/doc/${PF}
 		doins default.cfg help.hdoc
 	fi
 
 	if use python; then
+		python_version
 		cd python
-		python setup.py install --prefix=${D}/usr || die "could not install python module"
-		cp -pPR examples ${D}/usr/share/doc/${PF}/python-examples
-		chmod +x ${D}/usr/share/doc/${PF}/python-examples/*.py
+		${python} setup.py install --prefix="${D}"/usr || die "could not install python module"
+		cp -pPR examples "${D}"/usr/share/doc/${PF}/python-examples
+		chmod +x "${D}"/usr/share/doc/${PF}/python-examples/*.py
 		newdoc README README.python
-		cd ${S}
+		cd "${S}"
 	fi
 
 	insinto /usr/share/doc/${PF}
-	use doc && doins ${DISTDIR}/${MY_P}.Manual.pdf
+	use doc && doins "${DISTDIR}"/${MY_P}.Manual.pdf
 
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
@@ -109,7 +111,7 @@ pkg_postinst() {
 		python_version
 		for file in __init__.py util.py; do
 			python_mod_compile \
-				${ROOT}/usr/lib/python${PYVER}/site-packages/snns/${file}
+				/usr/$(get_libdir)/python${PYVER}/site-packages/snns/${file}
 		done
 	fi
 }
