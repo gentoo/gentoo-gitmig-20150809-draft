@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.94 2008/05/29 05:33:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.95 2008/05/29 05:38:48 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -242,8 +242,9 @@ mysql_init_vars() {
 
 		if [[ -z "${PREVIOUS_DATADIR}" ]] ; then
 			if [[ -e "${MY_DATADIR}" ]] ; then
-				elog "Previous datadir found, it's YOUR job to change"
-				elog "ownership and take care of it"
+				# If you get this and you're wondering about it, see bug #207636
+				elog "MySQL datadir found in ${MY_DATADIR}"
+				elog "A new one will not be created."
 				PREVIOUS_DATADIR="yes"
 			else
 				PREVIOUS_DATADIR="no"
