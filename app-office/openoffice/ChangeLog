@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.398 2008/05/29 09:50:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.399 2008/05/29 12:24:40 suka Exp $
+
+  29 May 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.4.0.ebuild, openoffice-2.4.1_rc1.ebuild:
+  bison and flex are only build time dependencies (bugs #221317 and
+  #221581), also remove javaldx hack, shouldn't be necessary anymore
 
   29 May 2008; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.4.1_rc1.ebuild:

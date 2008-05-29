@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.18 2008/05/23 12:56:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.19 2008/05/29 12:24:40 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -89,8 +89,6 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	cups? ( net-print/cups )
 	media-libs/jpeg
 	media-libs/libpng
-	sys-devel/flex
-	sys-devel/bison
 	app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
@@ -124,6 +122,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	>=dev-libs/boost-1.33.1
+	sys-devel/flex
+	sys-devel/bison
 	dev-libs/libxslt
 	>=dev-libs/libxml2-2.0
 	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
@@ -358,9 +358,6 @@ src_install() {
 
 	# record java libraries
 	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/program/classes/*.jar
-
-	# trying to work around javaldx problems on start
-	cp ${S}/build/${MST}/solver/*/*/lib/sunjavapluginrc ${D}/usr/$(get_libdir)/openoffice/program/ || die "Java config not found!"
 
 }
 
