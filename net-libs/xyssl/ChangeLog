@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xyssl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/ChangeLog,v 1.4 2008/03/30 09:22:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/ChangeLog,v 1.5 2008/05/29 06:58:20 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
+  to maintainer-needed.
 
   30 Mar 2008; Lars Weiler <pylon@gentoo.org> -xyssl-0.7.ebuild,
   -xyssl-0.8.ebuild, xyssl-0.9.ebuild:
