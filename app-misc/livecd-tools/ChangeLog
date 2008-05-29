@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.104 2008/05/29 04:25:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.105 2008/05/29 04:37:32 wolf31o2 Exp $
+
+  29 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-tools-1.0.40.ebuild:
+  Marking stable for 2008.0's release.
 
   29 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -livecd-tools-1.0.40_pre3.ebuild, +livecd-tools-1.0.40.ebuild:
