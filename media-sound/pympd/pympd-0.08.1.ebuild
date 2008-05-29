@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.3 2008/04/22 19:17:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.4 2008/05/29 17:19:20 hawking Exp $
 
-inherit eutils toolchain-funcs python
+inherit eutils toolchain-funcs python multilib
 
 DESCRIPTION="a Rhythmbox-like PyGTK+ client for Music Player Daemon"
 HOMEPAGE="http://sourceforge.net/projects/pympd"
@@ -46,10 +46,9 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize /usr/lib/python${PYVER}/site-packages/pympd
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/pympd
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }
