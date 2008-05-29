@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.22.1.ebuild,v 1.1 2008/04/10 22:42:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.22.1.ebuild,v 1.2 2008/05/29 15:26:57 hawking Exp $
 
 inherit gnome2 python
 
@@ -45,7 +45,7 @@ src_unpack() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/orca
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/orca
 }
 
 pkg_postrm() {
