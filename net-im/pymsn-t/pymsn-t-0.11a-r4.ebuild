@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11a-r4.ebuild,v 1.4 2007/04/28 17:37:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11a-r4.ebuild,v 1.5 2008/05/29 17:41:37 hawking Exp $
 
 inherit eutils python
 
@@ -53,7 +53,7 @@ src_install() {
 		"s:<jid>[^\<]*</jid>:<jid>msn.example.org</jid>:" \
 		/etc/jabber/${PN}.xml
 
-	newinitd ${FILESDIR}/pymsn-t.initd pymsn-t
+	newinitd "${FILESDIR}"/pymsn-t.initd pymsn-t
 	dosed "s/PATH/python${PYVER}/" /etc/init.d/pymsn-t
 }
 
