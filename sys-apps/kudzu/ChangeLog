@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.28 2008/03/19 07:48:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.29 2008/05/29 14:46:44 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> kudzu-1.2.71.ebuild,
+  kudzu-1.2.83.ebuild:
+  python_mod_compile is ROOT aware.
 
 *kudzu-1.2.83 (19 Mar 2008)
 

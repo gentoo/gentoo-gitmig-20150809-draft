@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.1 2008/03/19 07:48:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.2 2008/05/29 14:46:44 hawking Exp $
 
 inherit eutils python rpm multilib toolchain-funcs
 
@@ -57,7 +57,7 @@ pkg_postinst() {
 	python_version
 
 	python_mod_compile \
-		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/kudzu.py
+		/usr/$(get_libdir)/python${PYVER}/site-packages/kudzu.py
 }
 
 pkg_postrm() {
