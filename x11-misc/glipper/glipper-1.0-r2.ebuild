@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r2.ebuild,v 1.1 2008/03/23 13:28:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r2.ebuild,v 1.2 2008/05/29 18:19:27 hawking Exp $
 
 GCONF_DEBUG="no"
 
-inherit gnome2 python eutils
+inherit gnome2 python eutils multilib
 
 DESCRIPTION="GNOME Clipboard Manager"
 HOMEPAGE="http://glipper.sourceforge.net/"
@@ -40,7 +40,8 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages/glipper
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/glipper
 
 	elog "Glipper has been completely rewritten as a panel applet. Please remove your"
 	elog "existing ~/.glipper directory and then add glipper as a new panel applet."
