@@ -1,18 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-5.3.1.062.ebuild,v 1.1 2007/12/28 11:24:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-5.3.3.075.ebuild,v 1.1 2008/05/29 08:10:57 bicatali Exp $
 
-inherit versionator multilib
+inherit versionator multilib check-reqs
 
-PID=921
+PID=1097
 PB=${PN}
 DESCRIPTION="Intel(R) Integrated Performance Primitive library for multimedia and data processing"
 HOMEPAGE="http://developer.intel.com/software/products/ipp/"
 
 KEYWORDS="~amd64 ~x86 ~ia64"
-SRC_URI="amd64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PB}_em64t_p_${PV}.tgz )
-	x86? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PB}_ia32_p_${PV}.tgz )
-	ia64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PB}_itanium_p_${PV}.tgz )"
+COM_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}"
+SRC_URI="amd64? ( ${COM_URI}/l_${PB}_em64t_p_${PV}.tgz )
+	x86? ( ${COM_URI}/l_${PB}_ia32_p_${PV}.tgz )
+	ia64? ( ${COM_URI}/l_${PB}_itanium_p_${PV}.tgz )"
 
 SLOT=0
 LICENSE="Intel-SDP"
@@ -20,32 +21,41 @@ LICENSE="Intel-SDP"
 IUSE=""
 RESTRICT="strip mirror"
 
-pkg_setup() {
-	# setting up license
-	[[ -z ${IPP_LICENSE} ]] && [[ -d ${ROOT}/opt/intel/licenses ]] && \
-		IPP_LICENSE="$(find ${ROOT}/opt/intel/licenses -name *IPP*.lic)"
-	# Alternative license file, the file might be included in a `package deal`
-	[[ -z ${IPP_LICENSE} ]] && \
-		IPP_LICENSE="$(grep 'COMPONENTS="PerfPrimL PerfPrim"' ${ROOT}/opt/intel/licenses/*|cut -d: -f1)"
+INTEL_LIC_DIR=/opt/intel/licenses
 
+pkg_setup() {
+	# Check the license
+	if [[ -z ${IPP_LICENSE} ]]; then
+		IPP_LICENSE="$(grep -ls PerfPrim ${ROOT}${INTEL_LIC_DIR}/* | tail -n 1)"
+		IPP_LICENSE=${IPP_LICENSE/${ROOT}/}
+	fi
 	if  [[ -z ${IPP_LICENSE} ]]; then
 		eerror "Did not find any valid ipp license."
-		eerror "Please locate your license file and run:"
-		eerror "\t IPP_LICENSE=/my/license/dir emerge ${PN}"
-		eerror "or place your license in /opt/intel/licenses"
-		eerror "Hint: the license file is in the email Intel sent you"
-		die "setup ipp license failed"
+		eerror "Register at ${HOMEPAGE} to receive a license"
+		eerror "and place it in ${INTEL_LIC_DIR} or run:"
+		eerror "export IPP_LICENSE=/my/license/file emerge ipp"
+		die "license setup failed"
 	fi
+
+	local disq_req
 	IPP_ARCH=
 	if use amd64; then
-		IPP_ARCH=em64t
+		IPP_ARCH="em64t"
+		disk_req="800"
 	elif use x86; then
-		IPP_ARCH=ia32
+		IPP_ARCH="ia32"
+		disk_req="600"
 	elif use ia64; then
-		IPP_ARCH=ia64
+		IPP_ARCH="ia64"
+		disk_req="700"
 	fi
 	einfo "IPP_LICENSE=${IPP_LICENSE}"
 	einfo "IPP_ARCH=${IPP_ARCH}"
+
+	# Check if we have enough RAM and free diskspace
+	CHECKREQS_MEMORY="512"
+	CHECKREQS_DISK_BUILD=${disk_req}
+	check_reqs
 }
 
 src_unpack() {
@@ -61,10 +71,6 @@ src_unpack() {
 	# to produce such a file, first do it interactively
 	# tar xf l_*; ./install.sh --duplicate ipp.ini;
 	# the file will be instman/ipp.ini
-	# NOTE: Command line arguments tend to be more portable
-	# across Intel installations, so put as much of the settings
-	# in the command line as you can (for reuse purposes)
-
 	# binary blob extractor installs crap in /opt/intel
 	addwrite /opt/intel
 	cp ${IPP_LICENSE} "${WORKDIR}"/
@@ -104,8 +110,8 @@ src_install() {
 	dodir ${instdir}
 
 	# install license file
-	if  [[ ! -f /opt/intel/licenses/${IPP_TMP_LICENSE} ]]; then
-		insinto /opt/intel/licenses
+	if  [[ ! -f ${INTEL_LIC_DIR}/${IPP_TMP_LICENSE} ]]; then
+		insinto ${INTEL_LIC_DIR}
 		doins "${WORKDIR}"/${IPP_TMP_LICENSE}
 	fi
 
