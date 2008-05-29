@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.41 2008/04/30 20:03:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.42 2008/05/29 10:53:38 opfer Exp $
+
+  29 May 2008; Christian Faulhammer <opfer@gentoo.org> clanlib-0.8.1.ebuild:
+  stable x86, bug 214803
 
 *clanlib-0.8.1 (30 Apr 2008)
 
