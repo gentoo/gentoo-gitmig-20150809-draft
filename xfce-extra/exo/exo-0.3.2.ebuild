@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.18 2008/03/20 21:13:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.19 2008/05/29 15:48:32 angelos Exp $
 
 inherit xfce44 python
 
@@ -47,10 +47,10 @@ src_install() {
 
 pkg_postinst() {
 	xfce44_pkg_postinst
-	python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages
+	python_mod_optimize /usr/lib*/python*/site-packages
 }
 
 pkg_postrm() {
 	xfce44_pkg_postrm
-	python_mod_cleanup "${ROOT}"/usr/lib*/python*/site-packages
+	python_mod_cleanup /usr/lib*/python*/site-packages
 }

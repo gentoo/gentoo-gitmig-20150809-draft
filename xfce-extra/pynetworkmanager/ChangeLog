@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/pynetworkmanager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/ChangeLog,v 1.5 2007/07/05 18:07:10 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/ChangeLog,v 1.6 2008/05/29 15:50:55 angelos Exp $
+
+  29 May 2008; Christoph Mende <angelos@gentoo.org>
+  pynetworkmanager-0.3-r1.ebuild:
+  python_mod_* functions are already aware
 
 *pynetworkmanager-0.3-r1 (05 Jul 2007)
 

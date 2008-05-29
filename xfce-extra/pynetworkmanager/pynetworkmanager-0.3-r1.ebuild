@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.3-r1.ebuild,v 1.1 2007/07/05 18:07:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.3-r1.ebuild,v 1.2 2008/05/29 15:50:55 angelos Exp $
 
 MY_PN="${PN/n/N}" ; MY_PN="${MY_PN/m/M}" ; MY_P="${MY_PN}-${PV}"
 
@@ -41,7 +41,7 @@ src_install() {
 
 pkg_postinst() {
 	xfce44_pkg_postinst
-	python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages
+	python_mod_optimize /usr/lib*/python*/site-packages
 
 	elog "Note: This version of pyNetworkManager doesn't support encrypted networks,"
 	elog "and doesn't work with old versions so you need to remove file:"
@@ -57,5 +57,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	xfce44_pkg_postrm
-	python_mod_cleanup "${ROOT}"/usr/lib*/python*/site-packages
+	python_mod_cleanup /usr/lib*/python*/site-packages
 }
