@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.38 2008/05/29 20:01:55 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.39 2008/05/29 21:19:19 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -137,7 +137,7 @@ python_mod_compile() {
 
 	# Check if phase is pkg_postinst()
 	[[ ${EBUILD_PHASE} != postinst ]] &&\
-		die "${FUNCNAME} should only be run in pkg_postinst()"
+		die "${FUNCNAME} should only be run in pkg_postinst()"
 
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
@@ -173,24 +173,44 @@ python_mod_compile() {
 # in the supplied directory
 # This function should only be run in pkg_postinst()
 #
+# Options passed to this function are passed to compileall.py
+#
 # Example:
 #         python_mod_optimize /usr/share/codegen
 python_mod_optimize() {
-	local mydirs myfiles myroot path
+	local mydirs myfiles myroot myopts path
 
 	# Check if phase is pkg_postinst()
 	[[ ${EBUILD_PHASE} != postinst ]] &&\
-		die "${FUNCNAME} should only be run in pkg_postinst()"
+		die "${FUNCNAME} should only be run in pkg_postinst()"
 
 	# strip trailing slash
 	myroot="${ROOT%/}"
 
-	# respect ROOT
-	for path in $@; do
-		[ ! -e "${myroot}/${path}" ] && ewarn "${myroot}/${path} doesn't exist!"
-		[ -d "${myroot}/${path#/}" ] && mydirs="${mydirs} ${myroot}/${path#/}"
-		# Files are passed to python_mod_compile which is ROOT-aware
-		[ -f "${myroot}/${path}" ] && myfiles="${myfiles} ${path}"
+	# respect ROOT and options passed to compileall.py
+	while [ $# -gt 0 ]; do
+		case $1 in
+			-l|-f|-q)
+				myopts="${myopts} $1"
+				;;
+			-d|-x)
+				# -x takes regexp as argument so quoting is necessary.
+				myopts="${myopts} $1 \"$2\""
+				shift
+				;;
+			-*)
+				ewarn "${FUNCNAME}: Ignoring compile option $1"
+				;;
+			*)
+				for path in $@; do
+					[ ! -e "${myroot}/${path}" ] && ewarn "${myroot}/${path} doesn't exist!"
+					[ -d "${myroot}/${path#/}" ] && mydirs="${mydirs} ${myroot}/${path#/}"
+					# Files are passed to python_mod_compile which is ROOT-aware
+					[ -f "${myroot}/${path}" ] && myfiles="${myfiles} ${path}"
+				done
+				;;
+		esac
+		shift
 	done
 
 	# allow compiling for older python versions
@@ -211,10 +231,10 @@ python_mod_optimize() {
 	if [ -n "${mydirs}" ]; then
 		python${PYVER} \
 			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${compileopts} ${mydirs}
+			${compileopts} ${myopts} ${mydirs}
 		python${PYVER} -O \
 			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${compileopts} ${mydirs}
+			${compileopts} ${myopts} ${mydirs}
 	fi
 
 	if [ -n "${myfiles}" ]; then
@@ -240,7 +260,7 @@ python_mod_cleanup() {
 
 	# Check if phase is pkg_postrm()
 	[[ ${EBUILD_PHASE} != postrm ]] &&\
-		die "${FUNCNAME} should only be run in pkg_postrm()"
+		die "${FUNCNAME} should only be run in pkg_postrm()"
 
 	# strip trailing slash
 	myroot="${ROOT%/}"
