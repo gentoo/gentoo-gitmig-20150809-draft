@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.8c.ebuild,v 1.2 2008/05/26 11:47:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.8c.ebuild,v 1.3 2008/05/29 17:27:21 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -31,7 +31,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/${PN}
+	python_mod_optimize /usr/$(get_libdir)/${PN}
 	elog "To create DIVX/MPEG4 files, be sure that MPlayer is compiled with LAME support."
 	elog "In this case you want to check for both the encode and mp3 USE flags."
 	elog "To change the font used to render the subtitles, choose a TrueType font you like"

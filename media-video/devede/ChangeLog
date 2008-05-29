@@ -1,6 +1,10 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.14 2008/05/26 11:44:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.15 2008/05/29 17:27:21 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> devede-3.6.ebuild,
+  devede-3.8c.ebuild:
+  python_mod_optimize is ROOT aware.
 
 *devede-3.8c (26 May 2008)
 
