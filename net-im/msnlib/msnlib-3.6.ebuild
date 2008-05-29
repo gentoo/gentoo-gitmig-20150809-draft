@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.6.ebuild,v 1.4 2008/04/17 23:24:01 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.6.ebuild,v 1.5 2008/05/29 14:13:51 hawking Exp $
 
 NEED_PYTHON=2.2.2
 inherit python multilib distutils
@@ -33,9 +33,7 @@ src_install() {
 pkg_postinst() {
 	local module
 	python_version
-	for module in msncb.py msnlib.py; do
-		python_mod_compile "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${module}
-	done
+	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/msn{cb,lib}.py
 }
 
 pkg_postrm() {
