@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.73 2008/03/31 17:56:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.74 2008/05/29 16:13:39 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  gnome-python-extras-2.14.2-r1.ebuild:
+  python_mod_optimize is ROOT aware.
 
   31 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   gnome-python-extras-2.19.1-r1.ebuild:

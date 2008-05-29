@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.3.ebuild,v 1.1 2007/12/08 03:55:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.3.ebuild,v 1.2 2008/05/29 16:09:46 hawking Exp $
 
 inherit python multilib
 
@@ -43,7 +43,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages/dbus
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/dbus
 }
 
 pkg_postrm() {

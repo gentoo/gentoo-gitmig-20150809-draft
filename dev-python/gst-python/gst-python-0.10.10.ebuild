@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.3 2008/02/24 19:45:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.4 2008/05/29 16:14:52 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -49,7 +49,7 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize	"${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/gst-0.10
+	python_mod_optimize	/usr/$(get_libdir)/python${PYVER}/site-packages/gst-0.10
 }
 
 pkg_postrm() {
