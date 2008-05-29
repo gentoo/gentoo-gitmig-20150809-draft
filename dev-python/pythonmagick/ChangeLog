@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.9 2007/11/20 01:03:38 hawking Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.10 2008/05/29 16:33:34 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> pythonmagick-0.6.ebuild,
+  pythonmagick-0.7.ebuild:
+  python_mod_optimize is ROOT aware. Fix multilib usage.
 
 *pythonmagick-0.7 (20 Nov 2007)
 

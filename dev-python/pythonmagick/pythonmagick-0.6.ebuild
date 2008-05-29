@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.6.ebuild,v 1.2 2007/06/06 19:45:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.6.ebuild,v 1.3 2008/05/29 16:33:34 hawking Exp $
 
-inherit eutils python toolchain-funcs
+inherit eutils python multilib toolchain-funcs
 
 KEYWORDS="~x86"
 
@@ -45,6 +45,6 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/lib/python${PYVER}/site-packages
+	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doins -r PythonMagick
 }
