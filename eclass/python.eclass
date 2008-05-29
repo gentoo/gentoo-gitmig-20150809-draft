@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.37 2008/05/29 18:36:20 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.38 2008/05/29 20:01:55 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -238,7 +238,7 @@ python_mod_optimize() {
 python_mod_cleanup() {
 	local SEARCH_PATH myroot
 
-	# Check if phase is pkg_postinst()
+	# Check if phase is pkg_postrm()
 	[[ ${EBUILD_PHASE} != postrm ]] &&\
 		die "${FUNCNAME} should only be run in pkg_postrm()"
 
