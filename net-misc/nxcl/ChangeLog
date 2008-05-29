@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.3 2008/05/26 08:18:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.4 2008/05/29 10:37:17 opfer Exp $
+
+  29 May 2008; Christian Faulhammer <opfer@gentoo.org> nxcl-0.9.ebuild:
+  x86 stable, bug #222967
 
   26 May 2008; Bernard Cafarelli <voyageur@gentoo.org> nxcl-0.9.ebuild:
   Needs nxssh, currently provided by net-misc/nxclient. Spotted by pva

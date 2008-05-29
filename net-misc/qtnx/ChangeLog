@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/qtnx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtnx/ChangeLog,v 1.1 2008/03/14 14:37:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtnx/ChangeLog,v 1.2 2008/05/29 10:37:56 opfer Exp $
+
+  29 May 2008; Christian Faulhammer <opfer@gentoo.org> qtnx-0.9.ebuild:
+  x86 stable, bug #222967
 
 *qtnx-0.9 (14 Mar 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.49 2008/05/02 16:54:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.50 2008/05/29 10:36:39 opfer Exp $
+
+  29 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  nxserver-freenx-0.7.2-r2.ebuild:
+  x86 stable, bug #222967
 
   02 May 2008; Bernard Cafarelli <voyageur@gentoo.org>
   -files/nxserver-freenx-0.7.1-cups.patch,
