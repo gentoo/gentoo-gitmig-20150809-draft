@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.12 2008/04/18 07:39:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.13 2008/05/29 18:12:41 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> mod_python-3.3.1.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware.
 
   18 Apr 2008; Benedikt Böhm <hollow@gentoo.org> mod_python-3.3.1.ebuild:
   fix #200122
