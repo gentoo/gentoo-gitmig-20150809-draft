@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.16.ebuild,v 1.2 2008/02/13 20:48:56 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.16.ebuild,v 1.3 2008/05/29 01:51:43 halcy0n Exp $
 
 inherit eutils
 
@@ -13,9 +13,10 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
-DEPEND=">=mail-client/claws-mail-3.1.0
+RDEPEND=">=mail-client/claws-mail-3.1.0
 		=gnome-extra/gtkhtml-2*
-		net-misc/curl
+		net-misc/curl"
+DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
