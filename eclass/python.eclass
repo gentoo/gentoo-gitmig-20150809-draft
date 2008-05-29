@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.36 2008/05/29 15:24:35 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.37 2008/05/29 18:36:20 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -127,13 +127,18 @@ python_mod_exists() {
 # @USAGE: < file > [more files ...]
 # @DESCRIPTION:
 # Given filenames, it will pre-compile the module's .pyc and .pyo.
-# should only be run in pkg_postinst()
+# This function should only be run in pkg_postinst()
 #
 # Example:
 #         python_mod_compile /usr/lib/python2.3/site-packages/pygoogle.py
 #
 python_mod_compile() {
 	local f myroot
+
+	# Check if phase is pkg_postinst()
+	[[ ${EBUILD_PHASE} != postinst ]] &&\
+		die "${FUNCNAME} should only be run in pkg_postinst()"
+
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
@@ -166,11 +171,17 @@ python_mod_compile() {
 #
 # If supplied with arguments, it will recompile all modules recursively
 # in the supplied directory
+# This function should only be run in pkg_postinst()
 #
 # Example:
 #         python_mod_optimize /usr/share/codegen
 python_mod_optimize() {
 	local mydirs myfiles myroot path
+
+	# Check if phase is pkg_postinst()
+	[[ ${EBUILD_PHASE} != postinst ]] &&\
+		die "${FUNCNAME} should only be run in pkg_postinst()"
+
 	# strip trailing slash
 	myroot="${ROOT%/}"
 
@@ -222,8 +233,14 @@ python_mod_optimize() {
 # It will recursively scan all compiled python modules in the directories
 # and determine if they are orphaned (eg. their corresponding .py is missing.)
 # if they are, then it will remove their corresponding .pyc and .pyo
+#
+# This function should only be run in pkg_postrm()
 python_mod_cleanup() {
 	local SEARCH_PATH myroot
+
+	# Check if phase is pkg_postinst()
+	[[ ${EBUILD_PHASE} != postrm ]] &&\
+		die "${FUNCNAME} should only be run in pkg_postrm()"
 
 	# strip trailing slash
 	myroot="${ROOT%/}"
