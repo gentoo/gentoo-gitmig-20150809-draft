@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/nxtvepg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.17 2008/03/30 14:57:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.18 2008/05/29 06:51:41 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
 
 *nxtvepg-2.8.0 (30 Mar 2008)
 
