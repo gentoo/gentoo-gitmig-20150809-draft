@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.119 2008/05/28 18:51:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.120 2008/05/29 09:51:08 armin76 Exp $
+
+  29 May 2008; Raúl Porcel <armin76@gentoo.org> tor-0.1.2.19-r2.ebuild:
+  sparc stable wrt #223705, thanks to Friedrich Oslage for testing
 
   28 May 2008; Peter Volkov <pva@gentoo.org> tor-0.1.2.19-r2.ebuild:
   amd64 stable, bug #223705.
