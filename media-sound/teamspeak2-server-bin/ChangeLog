@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.33 2008/02/27 01:27:11 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.34 2008/05/29 06:00:57 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Martin Jackson (mjolnir) from metadata.xml (as per #159513).
 
   27 Feb 2008; Martin Jackson <mjolnir@gentoo.org>
   files/teamspeak2-server-ng.rc6,
