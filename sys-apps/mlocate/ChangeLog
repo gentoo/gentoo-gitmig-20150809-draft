@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.20 2008/05/29 10:07:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.21 2008/05/29 10:24:20 opfer Exp $
 
   29 May 2008; Christian Faulhammer <opfer@gentoo.org> -mlocate-0.18.ebuild,
   -mlocate-0.19.ebuild:
@@ -13,7 +13,7 @@
   Stable on ppc wrt bug 223709
 
   26 May 2008; Christian Faulhammer <opfer@gentoo.org> mlocate-0.20.ebuild:
-  stable x86, but 223709
+  stable x86, bug 223709
 
   27 Apr 2008; Ulrich Mueller <ulm@gentoo.org> mlocate-0.20.ebuild:
   Copy distfile to mirrors and use its canonical name, bugs 219271 and 219302.
