@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.12 2008/05/08 22:24:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.13 2008/05/29 18:17:03 hawking Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools python versionator
@@ -81,7 +81,6 @@ pkg_setup() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	if use python; then
-		python_version
 		python_mod_optimize	/usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
 	fi
 }
@@ -89,7 +88,6 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 	if use python; then
-		python_version
 		python_mod_cleanup /usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
 	fi
 }
