@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.95.0-r1.ebuild,v 1.1 2008/05/10 10:09:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.95.0-r1.ebuild,v 1.2 2008/05/29 11:05:47 ulm Exp $
 
 inherit eutils multilib
 
@@ -21,8 +21,6 @@ RDEPEND="!x11-libs/motif-config
 	x11-libs/libXft"
 
 DEPEND="${RDEPEND}"
-
-PROVIDE="virtual/motif"
 
 src_unpack() {
 	unpack ${A}
