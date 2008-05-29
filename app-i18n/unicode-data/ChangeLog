@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.3 2008/05/29 18:15:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.4 2008/05/29 21:46:08 welp Exp $
+
+  29 May 2008; <welp@gentoo.org> unicode-data-5.2.0.ebuild:
+  Bug 223973
 
   29 May 2008; Jeroen Roovers <jer@gentoo.org> unicode-data-5.2.0.ebuild:
   Marked ~hppa (bug #223973).
