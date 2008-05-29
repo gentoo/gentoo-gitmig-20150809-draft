@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/supybot-plugins-20060723.ebuild,v 1.2 2007/09/28 07:19:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/supybot-plugins-20060723.ebuild,v 1.3 2008/05/29 17:42:55 hawking Exp $
 
-inherit python
+inherit python multilib
 
 MY_PNAME="Supybot-plugins"
 MY_P="${MY_PNAME}-${PV}"
@@ -30,9 +30,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize	"${ROOT}"usr/$(get_libdir)/python*/site-packages/supybot/plugins
+	python_version
+	python_mod_optimize	/usr/$(get_libdir)/python${PYVER}/site-packages/supybot/plugins
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/python*/site-packages/supybot/plugins
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/supybot/plugins
 }

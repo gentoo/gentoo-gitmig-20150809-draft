@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/supybot-plugins
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.1 2007/09/26 20:01:31 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.2 2008/05/29 17:42:55 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  supybot-plugins-20060723.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware. Inherit multilib.
 
 *supybot-plugins-20060723 (26 Sep 2007)
 
