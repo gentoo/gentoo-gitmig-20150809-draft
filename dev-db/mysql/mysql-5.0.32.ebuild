@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.32.ebuild,v 1.3 2007/01/12 17:58:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.32.ebuild,v 1.4 2008/05/29 19:36:57 robbat2 Exp $
 
 MY_EXTRAS_VER="20070108"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -22,7 +22,7 @@ src_test() {
 		# mysqladmin start before dir creation
 		mkdir -p "${S}"/mysql-test/var{,/log}
 
-		if ! hasq "userpriv" ${FEATURES} ; then
+		if [[ $UID -eq 0 ]]; then
 			mysql_disable_test	"im_daemon_life_cycle"	"fails as root"
 			mysql_disable_test	"im_life_cycle"			"fails as root"
 			mysql_disable_test	"im_options_set"		"fails as root"

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.450 2008/05/29 05:51:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.451 2008/05/29 19:36:57 robbat2 Exp $
+
+  29 May 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.26-r2.ebuild,
+  mysql-5.0.32.ebuild, mysql-5.0.34.ebuild, mysql-5.0.38.ebuild,
+  mysql-5.0.40.ebuild, mysql-5.0.42.ebuild, mysql-5.0.44.ebuild,
+  mysql-5.0.44-r1.ebuild, mysql-5.0.44-r2.ebuild, mysql-5.0.54.ebuild,
+  mysql-5.0.56.ebuild, mysql-5.0.60.ebuild:
+  Convert all all FEATURES=userpriv tests to be UID -eq 0 to make Paludis et
+  al happy.
 
 *mysql-5.0.60 (29 May 2008)
 

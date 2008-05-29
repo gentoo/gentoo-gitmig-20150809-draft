@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.10 2008/01/28 07:06:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.11 2008/05/29 19:36:57 robbat2 Exp $
 
 MY_EXTRAS_VER="20080124"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -16,7 +16,7 @@ EPATCH_EXCLUDE=''
 src_test() {
 	make check || die "make check failed"
 	if ! use "minimal" ; then
-		if ! hasq "userpriv" ${FEATURES} ; then
+		if [[ $UID -eq 0 ]]; then
 			die "Testing with FEATURES=-userpriv is no longer supported by upstream"
 		fi
 		cd "${S}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44.ebuild,v 1.5 2007/08/25 22:35:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44.ebuild,v 1.6 2008/05/29 19:36:57 robbat2 Exp $
 
 MY_EXTRAS_VER="20070710"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -29,7 +29,7 @@ src_test() {
 		# Ensure that parallel runs don't die
 		export MTR_BUILD_THREAD="$((${RANDOM} % 100))"
 
-		if ! hasq "userpriv" ${FEATURES} ; then
+		if [[ $UID -eq 0 ]]; then
 			# As of 5.0.38, these work with the sandbox
 			# but they break if you are root
 			for t in \
