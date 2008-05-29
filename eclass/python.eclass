@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.35 2008/05/29 14:10:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.36 2008/05/29 15:24:35 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -168,11 +168,19 @@ python_mod_compile() {
 # in the supplied directory
 #
 # Example:
-#         python_mod_optimize ${ROOT}usr/share/codegen
+#         python_mod_optimize /usr/share/codegen
 python_mod_optimize() {
-	local myroot
+	local mydirs myfiles myroot path
 	# strip trailing slash
 	myroot="${ROOT%/}"
+
+	# respect ROOT
+	for path in $@; do
+		[ ! -e "${myroot}/${path}" ] && ewarn "${myroot}/${path} doesn't exist!"
+		[ -d "${myroot}/${path#/}" ] && mydirs="${mydirs} ${myroot}/${path#/}"
+		# Files are passed to python_mod_compile which is ROOT-aware
+		[ -f "${myroot}/${path}" ] && myfiles="${myfiles} ${path}"
+	done
 
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
@@ -189,8 +197,19 @@ python_mod_optimize() {
 	fi
 
 	ebegin "Byte compiling python modules for python-${PYVER} .."
-	python${PYVER} ${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py ${compileopts} $@
-	python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py ${compileopts} $@
+	if [ -n "${mydirs}" ]; then
+		python${PYVER} \
+			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
+			${compileopts} ${mydirs}
+		python${PYVER} -O \
+			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
+			${compileopts} ${mydirs}
+	fi
+
+	if [ -n "${myfiles}" ]; then
+		python_mod_compile ${myfiles}
+	fi
+
 	eend $?
 }
 
