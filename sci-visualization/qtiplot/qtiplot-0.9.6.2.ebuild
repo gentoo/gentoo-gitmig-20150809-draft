@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.4 2008/05/27 21:09:44 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.5 2008/05/29 14:44:44 hawking Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime python
@@ -105,9 +105,8 @@ pkg_postinst() {
 
 	if use python; then
 		python_version
-		for pymod in qtiplotrc qtiUtil; do
-			python_mod_compile "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}.py
-		done
+		python_mod_compile \
+			/usr/$(get_libdir)/python${PYVER}/site-packages/qti{plotrc,Util}.py
 	fi
 
 	if use doc; then
