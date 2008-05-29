@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r4.ebuild,v 1.3 2007/11/15 10:11:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r4.ebuild,v 1.4 2008/05/29 14:29:53 hawking Exp $
 
 inherit eutils flag-o-matic multilib python
 
@@ -83,9 +83,9 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_compile "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/cs_helpers.py
+	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/cs_helpers.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/python*/site-packages
+	python_mod_cleanup
 }
