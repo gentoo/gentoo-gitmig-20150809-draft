@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.8 2007/07/13 06:57:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.9 2008/05/29 17:51:17 hawking Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc-41.patch
+	epatch "${FILESDIR}"/${P}-gcc-41.patch
 	cd "${S}"
 	eautoreconf
 }
@@ -33,7 +33,7 @@ src_compile() {
 	emake || die "Error: emake failed"
 	if use python; then
 		einfo "Compilling PyGEOS"
-		cd ${S}/swig/python
+		cd "${S}"/swig/python
 		swig -c++ -python -modern -o geos_wrap.cxx ../geos.i
 		python setup.py build
 	fi
@@ -44,13 +44,13 @@ src_install(){
 	make DESTDIR="${D}" install
 	dodoc AUTHORS COPYING INSTALL NEWS README TODO
 	if use doc; then
-		cd ${S}/doc
+		cd "${S}"/doc
 		make doxygen-html
 		dohtml -r doxygen_docs/html/*
 	fi
 	if use python; then
 		einfo "Intalling PyGEOS"
-		cd ${S}/swig/python
+		cd "${S}"/swig/python
 		python setup.py install --prefix="${D}/usr/"
 		insinto /usr/share/doc/${PF}/python
 		doins README.txt tests/*.py

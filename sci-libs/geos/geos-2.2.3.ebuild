@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.5 2008/02/13 13:52:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.6 2008/05/29 17:51:17 hawking Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
@@ -101,13 +101,12 @@ src_install(){
 pkg_postinst() {
 	if use python; then
 		python_version
-		python_mod_optimize "${ROOT}"usr/bin
+		python_mod_optimize /usr/bin
 	fi
 }
 
 pkg_postrm() {
 	if use python; then
-		python_version
 		python_mod_cleanup
 	fi
 }
