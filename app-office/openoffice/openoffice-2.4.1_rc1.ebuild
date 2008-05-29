@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1_rc1.ebuild,v 1.1 2008/05/27 21:08:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1_rc1.ebuild,v 1.2 2008/05/29 09:50:33 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -40,7 +40,7 @@ for X in ${LANGS} ; do
 done
 
 for Y in ${LANGS1} ; do
-	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/contrib/rc/${PV}/${SRC}_l10n.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_l10n.tar.bz2 )"
 done
 
 HOMEPAGE="http://go-oo.org"
