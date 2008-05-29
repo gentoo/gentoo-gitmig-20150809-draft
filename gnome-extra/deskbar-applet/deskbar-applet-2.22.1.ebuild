@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.1.ebuild,v 1.1 2008/04/09 21:09:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.1.ebuild,v 1.2 2008/05/29 17:04:56 hawking Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -56,8 +56,8 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/deskbar
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/deskbar-applet/modules-2.20-compatible
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/deskbar
+	python_mod_optimize /usr/$(get_libdir)/deskbar-applet/modules-2.20-compatible
 
 	ebeep 5
 	ewarn "The dictionary plugin in deskbar-applet uses the dictionary from "
@@ -68,7 +68,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/deskbar
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/deskbar
 	python_mod_cleanup /usr/$(get_libdir)/deskbar-applet/modules-2.20-compatible
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.22.0.ebuild,v 1.1 2008/03/27 23:49:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.22.0.ebuild,v 1.2 2008/05/29 17:08:09 hawking Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -117,11 +117,10 @@ pkg_postinst() {
 	games_pkg_postinst
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages
 }

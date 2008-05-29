@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.10 2008/05/18 21:14:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.11 2008/05/29 17:03:11 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  avant-window-navigator-0.2.1-r1.ebuild,
+  avant-window-navigator-0.2.6-r1.ebuild:
+  python_mod_optimize is ROOT aware. Fixed python_mod_cleanup.
 
   18 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
   avant-window-navigator-0.2.6-r1.ebuild:

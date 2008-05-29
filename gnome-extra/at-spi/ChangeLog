@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.165 2008/04/10 21:51:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.166 2008/05/29 17:01:51 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> at-spi-1.22.0.ebuild,
+  at-spi-1.22.1.ebuild:
+  python_mod_optimize is ROOT aware. Fixed python_mod_cleanup.
 
 *at-spi-1.22.1 (10 Apr 2008)
 

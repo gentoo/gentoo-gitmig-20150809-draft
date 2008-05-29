@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.6 2008/05/18 21:14:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.7 2008/05/29 17:03:11 hawking Exp $
 
 inherit autotools gnome2 python
 
@@ -74,11 +74,10 @@ src_compile() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/awn
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/awn
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/awn
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/awn
 }
