@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.95 2008/05/29 05:38:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.96 2008/05/29 19:35:51 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -471,7 +471,7 @@ mysql_pkg_setup() {
 	if hasq test ${FEATURES} ; then
 		if ! use minimal ; then
 			if [[ $UID -eq 0 ]]; then
-				die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
+				eerror "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
 			fi
 		fi
 	fi
