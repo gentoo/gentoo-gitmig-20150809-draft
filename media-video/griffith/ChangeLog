@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.21 2008/05/04 14:11:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.22 2008/05/29 17:28:55 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> griffith-0.9.5.ebuild:
+  python_mod_{cleanup,optimize} is ROOT aware.
 
   04 May 2008; Samuli Suominen <drac@gentoo.org> griffith-0.9.5.ebuild:
   Use berlios mirrors:// wrt #218657

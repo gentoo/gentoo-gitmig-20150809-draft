@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.7 2008/05/04 14:11:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.8 2008/05/29 17:28:55 hawking Exp $
 
 inherit python
 
@@ -58,9 +58,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}usr/share/${PN}/lib"
+	python_mod_optimize /usr/share/${PN}/lib
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}usr/share/${PN}/lib"
+	python_mod_cleanup /usr/share/${PN}/lib
 }
