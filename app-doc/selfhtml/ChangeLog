@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/selfhtml
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.17 2007/04/21 23:11:19 pylon Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.18 2008/05/29 06:12:08 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
+  to maintainer-needed.
 
   21 Apr 2007; Lars Weiler <pylon@gentoo.org> -selfhtml-8.1.1.ebuild,
   selfhtml-8.1.2.ebuild:
