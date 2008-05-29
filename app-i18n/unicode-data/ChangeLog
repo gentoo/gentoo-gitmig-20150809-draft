@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.2 2008/05/29 17:14:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.3 2008/05/29 18:15:16 jer Exp $
+
+  29 May 2008; Jeroen Roovers <jer@gentoo.org> unicode-data-5.2.0.ebuild:
+  Marked ~hppa (bug #223973).
 
   29 May 2008; Markus Rothe <corsair@gentoo.org> unicode-data-5.2.0.ebuild:
   Added ~ppc64; bug #223973
