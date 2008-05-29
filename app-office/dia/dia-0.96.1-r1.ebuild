@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96.1-r1.ebuild,v 1.6 2008/05/07 18:50:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.96.1-r1.ebuild,v 1.7 2008/05/29 15:46:28 hawking Exp $
 
 inherit eutils gnome2 libtool autotools versionator python
 
@@ -81,7 +81,7 @@ src_unpack() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	use python && python_mod_optimize "${ROOT}"/usr/share/dia
+	use python && python_mod_optimize /usr/share/dia
 }
 
 pkg_postrm() {
