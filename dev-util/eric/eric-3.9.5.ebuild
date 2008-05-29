@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.5 2007/11/20 05:42:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.6 2008/05/29 16:46:16 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -80,10 +80,10 @@ pkg_postinst() {
 	elog "  \"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric3/patch_modpython.py\"."
 
 	python_version
-	python_mod_optimize "/usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/eric3
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/eric3"
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/eric3
 }

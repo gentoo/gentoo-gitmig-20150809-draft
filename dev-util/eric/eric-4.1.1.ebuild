@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.1.1.ebuild,v 1.2 2008/04/14 11:40:58 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.1.1.ebuild,v 1.3 2008/05/29 16:46:16 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -62,7 +62,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/eric4{,plugins}
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/eric4{,plugins}
 	elog "If you want to use eric4 with mod_python, have a look at"
 	elog "\"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric4/patch_modpython.py\"."
 	elog
@@ -75,6 +76,6 @@ pkg_postinst() {
 	elog "the App itself. You may want to check those as well"
 }
 
-pkg_posrm() {
-	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/eric4{,plugins}
+pkg_postrm() {
+	python_mod_cleanup
 }

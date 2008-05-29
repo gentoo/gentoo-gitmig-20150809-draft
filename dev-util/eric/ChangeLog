@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.60 2008/05/24 22:54:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.61 2008/05/29 16:46:16 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> eric-3.9.5.ebuild,
+  eric-4.1.1.ebuild, eric-4.1.4.ebuild:
+  python_mod_optimize is ROOT aware. Fixed python_mod_cleanup.
 
 *eric-4.1.4 (24 May 2008)
 
