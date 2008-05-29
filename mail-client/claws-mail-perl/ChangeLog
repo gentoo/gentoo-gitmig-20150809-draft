@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-perl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.17 2008/05/12 12:47:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.18 2008/05/29 02:10:40 halcy0n Exp $
+
+  29 May 2008; Mark Loeser <halcy0n@gentoo.org>
+  claws-mail-perl-0.9.10.ebuild, claws-mail-perl-0.9.11.ebuild,
+  claws-mail-perl-0.9.12.ebuild:
+  Fix RDEPEND on pkgconfig; bug #217278
 
 *claws-mail-perl-0.9.13 (12 May 2008)
 

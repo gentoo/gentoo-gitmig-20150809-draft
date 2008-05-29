@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.97.ebuild,v 1.9 2008/02/13 21:05:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.97.ebuild,v 1.10 2008/05/29 02:16:51 halcy0n Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
-DEPEND=">=mail-client/claws-mail-3.0.0
-		>=net-misc/curl-7.9.7
+RDEPEND=">=mail-client/claws-mail-3.0.0
+		>=net-misc/curl-7.9.7"
+DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
