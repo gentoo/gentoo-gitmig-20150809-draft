@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.2.0.ebuild,v 1.1 2008/04/09 09:51:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.2.0.ebuild,v 1.2 2008/05/29 10:29:55 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/nxnode-${MY_PV}.x86_
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="rdesktop vnc"
 RESTRICT="strip"
 
