@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.20 2008/05/26 15:00:28 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.21 2008/05/29 18:09:54 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> libsemanage-1.10.9.ebuild:
+  python_mod_optimize is ROOT aware. Fixed python_mod_cleanup.
 
   26 May 2008; Chris PeBenito <pebenito@gentoo.org>
   libsemanage-1.10.9.ebuild:

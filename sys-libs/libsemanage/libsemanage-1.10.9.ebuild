@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.3 2008/05/26 15:00:28 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.4 2008/05/29 18:09:54 hawking Exp $
 
 IUSE=""
 
@@ -49,10 +49,9 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}usr/lib/python${PYVER}/site-packages"
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup "${ROOT}usr/lib/python${PYVER}/site-packages"
+	python_mod_cleanup
 }
