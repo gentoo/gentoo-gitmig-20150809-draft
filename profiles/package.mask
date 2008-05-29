@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8663 2008/05/29 15:42:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8664 2008/05/29 19:14:29 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1067,11 +1067,6 @@ dev-php4/pecl-http
 x11-plugins/gai-pal
 x11-plugins/gai-pager
 x11-libs/gai
-
-# Sébastien Fabbro <bicatali@gentoo.org> (05 Oct 2007)
-# Masked. Still buggy with gsl-1.10 and fail many tests.
-# Bug #194358. Downgrade to pygsl-0.9.0 for a more stable version.
-=dev-python/pygsl-0.9.1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (05 Oct 2007)
 # This is masked for removal in 30 days due to security bug #194609 and no
