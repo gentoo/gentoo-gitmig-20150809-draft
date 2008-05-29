@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r3.ebuild,v 1.1 2008/05/28 21:52:46 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r3.ebuild,v 1.2 2008/05/29 01:40:07 lavajoe Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -39,11 +39,7 @@ src_unpack() {
 	sed -i -e 's:^  -DPOVCONFDIR=.*:  -DPOVCONFDIR=\\"@sysconfdir@/'"${PN}"'\\" \\:' Makefile.am
 	cd ..
 
-	# Use of "automake" below will cause a QA warning,
-	# but eautoreconf does not work for this source.
-	eaclocal
-	eautoconf
-	automake
+	AT_NO_RECURSIVE="yes" eautoreconf
 }
 
 src_compile() {
