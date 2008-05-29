@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.6 2008/03/28 12:16:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.7 2008/05/29 16:53:25 hawking Exp $
 
 inherit eutils python games
 
@@ -70,7 +70,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}$(games_get_libdir)"/${PN}
+	python_mod_optimize "$(games_get_libdir)"/${PN}
 	games_pkg_postinst
 }
 
