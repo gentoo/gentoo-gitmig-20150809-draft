@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/flowcanvas
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/ChangeLog,v 1.1 2008/05/29 08:43:51 aballier Exp $
+
+*flowcanvas-0.4.0 (29 May 2008)
+
+  29 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +flowcanvas-0.4.0.ebuild:
+  initial import, ebuild by me
+
