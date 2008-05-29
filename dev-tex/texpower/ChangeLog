@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.24 2007/08/25 17:39:39 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.25 2008/05/29 06:18:10 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> texpower-0.2.ebuild:
   amd64 stable
