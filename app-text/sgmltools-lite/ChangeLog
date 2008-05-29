@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.49 2007/03/12 23:28:08 leonardop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.50 2008/05/29 15:56:34 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  sgmltools-lite-3.0.3-r10.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware. Quoting.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml,
   -sgmltools-lite-3.0.3-r7.ebuild:
