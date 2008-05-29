@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.7.1.ebuild,v 1.6 2007/07/22 10:22:14 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.7.1.ebuild,v 1.7 2008/05/29 14:01:40 fuzzyray Exp $
 
 DESCRIPTION="Man page editor using XML tags"
 HOMEPAGE="http://wolfpack.twu.net/ManEdit/"
@@ -48,5 +48,5 @@ src_install() {
 		ICONS_DIR=${D}/usr/share/pixmaps \
 		install || die "make install failed."
 
-	dodoc AUTHORS LICENSE README
+	dodoc AUTHORS README
 }

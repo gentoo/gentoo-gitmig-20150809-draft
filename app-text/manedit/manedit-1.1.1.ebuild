@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.4 2008/05/29 14:01:40 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-1.1.1.ebuild,v 1.1 2008/05/29 14:01:40 fuzzyray Exp $
 
 inherit eutils
 
 DESCRIPTION="Man page editor using XML tags"
-HOMEPAGE="http://wolfpack.twu.net/ManEdit/"
-SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
+HOMEPAGE="http://www.battlefieldlinux.com/wolfpack/ManEdit/"
+SRC_URI="http://www.battlefieldlinux.com/wolfpack/packages/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +21,7 @@ RDEPEND="=x11-libs/gtk+-1*
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	# Patch to fix QA warnings and to generate man page.
+	# Patch to fix generate man page.
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PF}-gentoo.patch

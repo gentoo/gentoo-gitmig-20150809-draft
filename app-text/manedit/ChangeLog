@@ -1,6 +1,13 @@
 # ChangeLog for app-text/manedit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.31 2007/07/22 10:22:14 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.32 2008/05/29 14:01:40 fuzzyray Exp $
+
+*manedit-1.1.1 (29 May 2008)
+
+  29 May 2008; Paul Varner <fuzzyray@gentoo.org>
+  +files/manedit-1.1.1-gentoo.patch, manedit-0.7.1.ebuild,
+  manedit-0.8.1.ebuild, +manedit-1.1.1.ebuild:
+  Version bump. Removed dodoc LICENSE in all ebuilds.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> manedit-0.7.1.ebuild,
   manedit-0.8.1.ebuild:
