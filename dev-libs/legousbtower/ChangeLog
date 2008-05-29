@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/legousbtower
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/ChangeLog,v 1.3 2007/03/03 22:46:15 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/ChangeLog,v 1.4 2008/05/29 06:14:51 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
+  to maintainer-needed.
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> legousbtower-0.5.4.ebuild:
   Replacing einfo with elog
