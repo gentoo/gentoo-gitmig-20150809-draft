@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.5 2008/04/18 09:55:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.6 2008/05/29 17:15:05 hawking Exp $
 
 EAPI=1
 
@@ -77,7 +77,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/${PN}
+	python_mod_optimize /usr/$(get_libdir)/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	elog "You need media-plugins/gst-plugins-gnomevfs for streaming, but you may also try"
