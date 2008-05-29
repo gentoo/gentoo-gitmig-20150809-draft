@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.451 2008/05/29 19:36:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.452 2008/05/29 19:54:19 robbat2 Exp $
+
+  29 May 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.27-r1.ebuild,
+  mysql-4.1.22-r1.ebuild:
+  Drop mips down to ~mips to make repoman happy.
 
   29 May 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.26-r2.ebuild,
   mysql-5.0.32.ebuild, mysql-5.0.34.ebuild, mysql-5.0.38.ebuild,
