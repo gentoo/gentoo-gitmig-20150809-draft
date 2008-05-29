@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.39 2008/05/29 21:19:19 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.40 2008/05/29 22:03:59 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -178,7 +178,7 @@ python_mod_compile() {
 # Example:
 #         python_mod_optimize /usr/share/codegen
 python_mod_optimize() {
-	local mydirs myfiles myroot myopts path
+	local mydirs myfiles myroot myopts
 
 	# Check if phase is pkg_postinst()
 	[[ ${EBUILD_PHASE} != postinst ]] &&\
@@ -202,12 +202,10 @@ python_mod_optimize() {
 				ewarn "${FUNCNAME}: Ignoring compile option $1"
 				;;
 			*)
-				for path in $@; do
-					[ ! -e "${myroot}/${path}" ] && ewarn "${myroot}/${path} doesn't exist!"
-					[ -d "${myroot}/${path#/}" ] && mydirs="${mydirs} ${myroot}/${path#/}"
-					# Files are passed to python_mod_compile which is ROOT-aware
-					[ -f "${myroot}/${path}" ] && myfiles="${myfiles} ${path}"
-				done
+				[ ! -e "${myroot}/${1}" ] && ewarn "${myroot}/${1} doesn't exist!"
+				[ -d "${myroot}/${1#/}" ] && mydirs="${mydirs} ${myroot}/${1#/}"
+				# Files are passed to python_mod_compile which is ROOT-aware
+				[ -f "${myroot}/${1}" ] && myfiles="${myfiles} ${1}"
 				;;
 		esac
 		shift
