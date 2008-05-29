@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.1 2007/07/27 21:45:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.2 2008/05/29 17:16:58 hawking Exp $
 
-inherit distutils python
+inherit distutils python multilib
 
 DESCRIPTION="Moosic is a music player that focuses on easy playlist management"
 HOMEPAGE="http://www.nanoo.org/~daniel/moosic"
@@ -35,10 +35,9 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"/usr/lib*/python${PYVER}/site-packages
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup "${ROOT}"/usr/lib*/python${PYVER}/site-packages
+	python_mod_cleanup
 }
