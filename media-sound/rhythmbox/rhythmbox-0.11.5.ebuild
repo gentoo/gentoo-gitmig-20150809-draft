@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.7 2008/05/27 19:34:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.8 2008/05/29 17:20:54 hawking Exp $
 
 EAPI="1"
 
@@ -125,7 +125,7 @@ src_compile() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	use python && python_mod_optimize "${ROOT}"/usr/$(get_libdir)/rhythmbox/plugins
+	use python && python_mod_optimize /usr/$(get_libdir)/rhythmbox/plugins
 
 	ewarn
 	ewarn "If ${PN} doesn't play some music format, please check your"
