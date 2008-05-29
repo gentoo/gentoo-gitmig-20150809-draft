@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre7.ebuild,v 1.2 2008/05/23 09:31:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre7.ebuild,v 1.3 2008/05/29 18:01:52 hawking Exp $
 
 inherit eutils multilib python
 
@@ -220,7 +220,7 @@ pkg_preinst() {
 pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
-	python_mod_optimize "${ROOT}usr/$(get_libdir)/portage/pym"
+	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
 	if [ -n "${MIGRATION_UPGRADE}" ]; then
 		einfo "moving set references from the worldfile into world_sets"
@@ -263,5 +263,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}usr/$(get_libdir)/portage/pym"
+	python_mod_cleanup /usr/$(get_libdir)/portage/pym
 }

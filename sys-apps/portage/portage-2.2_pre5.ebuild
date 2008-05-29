@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre5.ebuild,v 1.1 2008/03/19 22:07:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre5.ebuild,v 1.2 2008/05/29 18:01:52 hawking Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib python
 
@@ -223,7 +223,7 @@ pkg_postinst() {
 
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
-	python_mod_optimize "${ROOT}usr/$(get_libdir)/portage/pym"
+	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
 	elog
 	elog "For help with using portage please consult the Gentoo Handbook"
@@ -246,5 +246,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}usr/$(get_libdir)/portage/pym"
+	python_mod_cleanup /usr/$(get_libdir)/portage/pym
 }
