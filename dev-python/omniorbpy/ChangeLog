@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/omniorbpy
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.15 2007/02/02 23:31:52 kloeri Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.16 2008/05/29 16:22:55 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> omniorbpy-2.5.ebuild,
+  omniorbpy-2.6.ebuild, omniorbpy-2.7.ebuild, omniorbpy-3.0.ebuild:
+  python_mod_optimize is ROOT aware. Fixed python_mod_cleanup. Fixed
+  multilib. Quoting.
 
 *omniorbpy-3.0 (02 Feb 2007)
 
