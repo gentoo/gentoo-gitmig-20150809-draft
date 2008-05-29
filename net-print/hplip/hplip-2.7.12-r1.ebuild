@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12-r1.ebuild,v 1.3 2008/03/24 19:38:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12-r1.ebuild,v 1.4 2008/05/29 17:47:41 hawking Exp $
 
 inherit eutils linux-info python
 
@@ -123,7 +123,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/share/hplip
+	python_mod_optimize /usr/share/hplip
 	elog "You should run hp-setup as root if you are installing hplip for the first time, and may also"
 	elog "need to run it if you are upgrading from an earlier version."
 	elog
