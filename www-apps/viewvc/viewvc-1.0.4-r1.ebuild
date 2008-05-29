@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.3 2008/03/07 16:33:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.4 2008/05/29 18:15:17 hawking Exp $
 
 inherit confutils webapp python eutils
 
@@ -103,7 +103,7 @@ src_install() {
 pkg_postinst() {
 	webapp_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}${MOD_PATH}"
+	python_mod_optimize "${MOD_PATH}"
 	elog "Now read INSTALL in /usr/share/doc/${PF} to configure ${PN}"
 }
 

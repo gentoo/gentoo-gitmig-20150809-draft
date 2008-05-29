@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4.ebuild,v 1.10 2008/02/20 13:04:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4.ebuild,v 1.11 2008/05/29 18:15:17 hawking Exp $
 
 inherit python eutils
 
@@ -97,13 +97,12 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 
 	local mansuffix=$(ecompress --suffix)
 	elog "Now read /usr/share/doc/${P}/INSTALL${mansuffix} to configure ${PN}"
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }
