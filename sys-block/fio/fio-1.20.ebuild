@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.20.ebuild,v 1.1 2008/05/28 18:08:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.20.ebuild,v 1.2 2008/05/29 00:09:38 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -28,4 +28,5 @@ src_install() {
 	dodoc README REPORTING-BUGS HOWTO
 	docinto examples
 	dodoc examples/*
+	doman fio.1
 }
