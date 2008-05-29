@@ -1,6 +1,20 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.24 2008/05/21 19:02:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.25 2008/05/29 18:55:33 bicatali Exp $
+
+*root-5.18.00d (29 May 2008)
+
+  29 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-5.18.00d-gcc43.patch, +files/root-5.18.00d-makefile.patch,
+  +files/xrootd-20071116-checksymbol.patch,
+  +files/xrootd-20071116-gcc43.patch, +root-5.18.00d.ebuild:
+  Version bump. This version is includes patches from upstream (included in
+  sources), some local gcc-4.3 patches and various xrootd patches. Now works
+  with afs on amd64. Removed cint7 flag as it is still too buggy, added
+  xrootd use flag, added a math flag triggering all math libraries
+  (mathcore, mathmore, minuit2, roofit, unuran). Much cleanup: qt-4.4 ready,
+  removed afterimage dependency (will be back in 5.20). This version should
+  be targeted for stabilization.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> root-3.05.04.ebuild,
   root-5.16.00.ebuild, root-5.16.00-r1.ebuild, root-5.18.00.ebuild:
