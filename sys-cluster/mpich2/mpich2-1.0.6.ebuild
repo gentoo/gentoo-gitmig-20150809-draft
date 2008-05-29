@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.5 2008/03/15 05:25:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.6 2008/05/29 18:07:10 hawking Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
@@ -317,8 +317,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize "${ROOT}"usr/bin
+	python_mod_optimize /usr/bin
 
 	elog ""
 	elog "Several specific options are left set to default values; if"
@@ -349,7 +348,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }
 

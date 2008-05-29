@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.10 2008/03/22 00:56:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.11 2008/05/29 18:07:10 hawking Exp $
 
 WANT_AUTOCONF="2.5"
 inherit fortran distutils eutils autotools toolchain-funcs
@@ -199,8 +199,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize "${ROOT}"usr/bin
+	python_mod_optimize /usr/bin
 
 	elog
 	elog "Note: this package still needs testing with other Fortran90"
@@ -214,6 +213,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }
