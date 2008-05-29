@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/bootcreator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.5 2007/02/10 22:19:45 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.6 2008/05/29 07:11:27 phreak Exp $
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
 
 *bootcreator-1.2 (10 Feb 2007)
 
