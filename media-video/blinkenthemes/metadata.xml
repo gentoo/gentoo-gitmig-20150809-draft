@@ -3,16 +3,15 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>pylon@gentoo.org</email>
-		<name>Lars Weiler</name>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
 	</maintainer>
 	<longdescription lang="en">
-		Some nice themes for blinkensim.  Included are themes of the "Haus des
-		Lehrers" at Alexanderplatz n Berlin.  This is the place where the
-		original Blinkenlights installation where set up.  Then there are themes
+		Some nice themes for blinkensim. Included are themes of the "Haus des
+		Lehrers" at Alexanderplatz n Berlin. This is the place where the
+		original Blinkenlights installation where set up. Then there are themes
 		of the "Bibliothèque nationale de France" in Paris where the second
-		installation called "Arcade" took place.  Furthermore you can find some
+		installation called "Arcade" took place. Furthermore you can find some
 		experimental themes for LED-clones.
 	</longdescription>
 </pkgmetadata>
-

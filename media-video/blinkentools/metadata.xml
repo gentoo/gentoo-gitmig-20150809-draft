@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>pylon@gentoo.org</email>
-		<name>Lars Weiler</name>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
 	</maintainer>
 	<longdescription lang="en">
 		The blinkentools bring you scripts for handling and playing the beloved
@@ -13,4 +13,3 @@
 		to use them for.
 	</longdescription>
 </pkgmetadata>
-
