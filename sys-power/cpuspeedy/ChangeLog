@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpuspeedy
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.3 2007/02/01 11:31:14 dragonheart Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.4 2008/05/29 18:11:15 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> cpuspeedy-0.4.1.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware. Quoting.
 
   01 Feb 2007; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.4.1.ebuild:
   amd64 lib path compatible thanks to Jakub - bug #164809
