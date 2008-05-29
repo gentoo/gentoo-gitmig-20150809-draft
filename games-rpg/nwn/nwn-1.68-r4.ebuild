@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r4.ebuild,v 1.1 2008/02/20 11:34:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r4.ebuild,v 1.2 2008/05/29 14:23:24 opfer Exp $
 
 inherit eutils games
 
@@ -47,7 +47,7 @@ SRC_URI="http://dev.gentoo.org/~calchan/distfiles/nwn-libsdl-1.2.13.tar.bz2
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE="sou hou ${LANGUAGES}"
 # nowin USE flag not used anymore by pkg_setup()
 RESTRICT="mirror strip"
