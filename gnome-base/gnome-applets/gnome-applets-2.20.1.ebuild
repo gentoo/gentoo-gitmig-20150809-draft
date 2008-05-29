@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.20.1.ebuild,v 1.10 2008/04/12 14:35:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.20.1.ebuild,v 1.11 2008/05/29 16:57:31 hawking Exp $
 
 inherit eutils gnome2 autotools python
 
@@ -125,7 +125,7 @@ pkg_postinst() {
 
 	# check for new python modules on bumps
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/invest
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/invest
 }
 
 pkg_postrm() {
