@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.6 2008/05/29 14:41:50 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.7 2008/05/29 17:48:54 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org>
+  telepathy-butterfly-0.3.0.ebuild, telepathy-butterfly-0.3.1.ebuild:
+  python_mod_optimize is ROOT aware.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org>
   telepathy-butterfly-0.3.0.ebuild, telepathy-butterfly-0.3.1.ebuild:
