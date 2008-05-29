@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3-r1.ebuild,v 1.13 2008/04/25 21:11:38 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3-r1.ebuild,v 1.14 2008/05/29 15:50:39 hawking Exp $
 
 inherit eutils python
 
@@ -32,7 +32,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/lib/gentoolkit
+	python_mod_optimize /usr/lib/gentoolkit
 	echo
 	ewarn "The qpkg and etcat tools are deprecated in favor of equery and"
 	ewarn "are no longer installed in ${ROOT}usr/bin in this release."
@@ -45,5 +45,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"usr/lib/gentoolkit
+	python_mod_cleanup /usr/lib/gentoolkit
 }

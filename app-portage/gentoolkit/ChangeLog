@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.129 2008/04/25 21:11:38 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.130 2008/05/29 15:50:39 hawking Exp $
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> gentoolkit-0.2.3-r1.ebuild,
+  gentoolkit-0.2.3.1.ebuild, gentoolkit-0.2.4_pre7.ebuild,
+  gentoolkit-0.2.4_pre8.ebuild, gentoolkit-0.2.4_rc2.ebuild,
+  gentoolkit-0.2.4_rc3.ebuild, gentoolkit-0.2.4_rc4.ebuild:
+  python_mod_{cleanup,optimize} are ROOT aware.
 
   25 Apr 2008; <ricmm@gentoo.org> gentoolkit-0.2.3-r1.ebuild:
   Drop to ~mips due to unstable deps

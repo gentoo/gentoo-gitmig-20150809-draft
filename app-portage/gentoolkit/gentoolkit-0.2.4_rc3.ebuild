@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_rc3.ebuild,v 1.1 2008/02/26 03:52:40 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_rc3.ebuild,v 1.2 2008/05/29 15:50:39 hawking Exp $
 
 inherit eutils python
 
@@ -25,7 +25,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"usr/lib/gentoolkit
+	python_mod_optimize /usr/lib/gentoolkit
 	echo
 	elog "Another alternative to equery is app-portage/portage-utils"
 	elog
@@ -35,5 +35,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"usr/lib/gentoolkit
+	python_mod_cleanup /usr/lib/gentoolkit
 }
