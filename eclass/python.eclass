@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.34 2008/03/28 07:11:57 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.35 2008/05/29 14:10:48 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -124,15 +124,16 @@ python_mod_exists() {
 }
 
 # @FUNCTION: python_mod_compile
-# @USAGE: < file >
+# @USAGE: < file > [more files ...]
 # @DESCRIPTION:
-# Given a filename, it will pre-compile the module's .pyc and .pyo.
+# Given filenames, it will pre-compile the module's .pyc and .pyo.
 # should only be run in pkg_postinst()
 #
 # Example:
-#         python_mod_compile ${ROOT}usr/lib/python2.3/site-packages/pygoogle.py
+#         python_mod_compile /usr/lib/python2.3/site-packages/pygoogle.py
 #
 python_mod_compile() {
+	local f myroot
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
@@ -140,13 +141,19 @@ python_mod_compile() {
 		python_version
 	fi
 
-	if [ -f "$1" ]; then
-		python${PYVER} -c "import py_compile; py_compile.compile('${1}')" || \
-			ewarn "Failed to compile ${1}"
-		python${PYVER} -O -c "import py_compile; py_compile.compile('${1}')" || \
-			ewarn "Failed to compile ${1}"
+	# strip trailing slash
+	myroot="${ROOT%/}"
+
+	# respect ROOT
+	for f in $@; do
+		[ -f "${myroot}/${f}" ] && myfiles="${myfiles} ${myroot}/${f}"
+	done
+
+	if [ -n "${myfiles}" ]; then
+		python${PYVER} ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py ${myfiles}
+		python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py ${myfiles}
 	else
-		ewarn "Unable to find ${1}"
+		ewarn "No files to compile!"
 	fi
 }
 
