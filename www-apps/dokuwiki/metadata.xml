@@ -6,11 +6,6 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
-	<maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
-		<description>Backup maintainer</description>
-	</maintainer>
 	<longdescription lang="en">
 		DokuWiki is a standards compliant, simple to use Wiki, mainly aimed at
 		creating documentation of any kind. It is targeted at developer teams,
