@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.87 2008/04/22 02:32:54 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.88 2008/05/30 23:25:07 nixphoeni Exp $
+
+  30 May 2008; Joe Sapp <nixphoeni@gentoo.org>
+  gdesklets-core-0.36-r1.ebuild:
+  Generate .py[co] files at pkg_postinst so they're compiled for the target
+  machine. See bug #215538 (thanks eva).
 
   22 Apr 2008; Joe Sapp <nixphoeni@gentoo.org>
   +files/gdesklets-core-0.36_beta-linguas.patch:

@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36-r1.ebuild,v 1.1 2008/04/20 05:08:54 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36-r1.ebuild,v 1.2 2008/05/30 23:25:07 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
-inherit gnome2 eutils autotools multilib
+inherit gnome2 python eutils autotools multilib
 
 MY_PN="gdesklets"
 MY_P="${MY_PN}-${PV/_/}"
@@ -46,6 +46,10 @@ src_unpack() {
 
 	gnome2_src_unpack
 
+	# Postpone pyc compiling until pkg_postinst
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+
 	# Use po/LINGUAS - see gnome bug #506828
 	epatch "${FILESDIR}/${PN}-0.36_beta-linguas.patch"
 
@@ -73,16 +77,22 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
+	# Compile pyc files on target system
+	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/gdesklets
+
 	echo
 	elog "gDesklets Displays are required before the library"
-	elog "will be usable. The displays are found in -"
+	elog "will be usable.  Core displays (Calendar, Clock, Quote-of-the-Day,"
+	elog "and the 15pieces game) are already installed in"
+	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/Displays"
+	elog "Additional displays can be found in -"
 	elog "           x11-plugins/desklet-* ,"
 	elog "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
 	elog
 	elog "Next you'll need to start gdesklets using"
 	elog "           ${ROOT}usr/bin/gdesklets start"
-	elog "If you're using GNOME this can be done conveniently"
-	elog "through Applications->Accessories->gDesklets"
+	elog "If you're using GNOME this can be done conveniently through"
+	elog "Applications->Accessories->gDesklets"
 	elog
 	elog "If you're updating from a version less than 0.35_rc1,"
 	elog "you can migrate your desklet configurations by"
@@ -94,5 +104,14 @@ pkg_postinst() {
 	# This stuff is important, especially the migration-tool
 	# information which flies by on an update.
 	epause 9
+
+}
+
+pkg_postrm() {
+
+	gnome2_pkg_postrm
+	# Cleanup after our cavalier python compilation
+	# The function takes care of ${ROOT} for us
+	python_mod_cleanup /usr/$(get_libdir)/gdesklets
 
 }
