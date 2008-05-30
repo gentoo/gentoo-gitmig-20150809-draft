@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnomevfs-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.30 2008/03/12 13:49:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.31 2008/05/30 23:07:31 jurek Exp $
+
+  30 May 2008; Jurek Bartuszek <jurek@gentoo.org>
+  gnomevfs-sharp-2.8.2.ebuild, gnomevfs-sharp-2.16.0.ebuild:
+  Added dev-util/pkgconfig dependency (bug #216418)
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
