@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.3.ebuild,v 1.2 2007/04/29 18:03:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.3.ebuild,v 1.3 2008/05/30 22:51:22 jurek Exp $
 
 inherit mono autotools eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND=">=dev-lang/mono-${PV}"
+DEPEND=">=dev-lang/mono-${PV}
+		dev-util/pkgconfig"
 
 pkg_preinst() {
 	enewgroup aspnet

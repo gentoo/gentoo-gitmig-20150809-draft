@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.5.ebuild,v 1.1 2007/09/10 19:35:53 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.5.ebuild,v 1.2 2008/05/30 22:51:22 jurek Exp $
 
 inherit mono multilib autotools eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND=">=dev-lang/mono-${PV}"
+DEPEND=">=dev-lang/mono-${PV}
+	    dev-util/pkgconfig"
 
 pkg_preinst() {
 	enewgroup aspnet
@@ -45,10 +46,10 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	sed -i -e "s#/usr/lib/#/usr/$(get_libdir)/#" \
-		${D}/usr/bin/xsp{,2} \
-		${D}/usr/bin/mod-mono-server{,2} \
-		${D}/usr/bin/asp-state{,2} \
-		${D}/usr/bin/dbsessmgr{,2} \
+		"${D}"/usr/bin/xsp{,2} \
+		"${D}"/usr/bin/mod-mono-server{,2} \
+		"${D}"/usr/bin/asp-state{,2} \
+		"${D}"/usr/bin/dbsessmgr{,2} \
 	|| die
 
 	newinitd "${FILESDIR}"/${PV}/xsp.initd xsp

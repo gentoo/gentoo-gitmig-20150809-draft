@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.1.ebuild,v 1.5 2007/04/29 18:03:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.1.ebuild,v 1.6 2008/05/30 22:51:22 jurek Exp $
 
 inherit mono autotools eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 
-DEPEND=">=dev-lang/mono-${PV}"
+DEPEND=">=dev-lang/mono-${PV}
+	    dev-util/pkgconfig"
 
 pkg_preinst() {
 	enewgroup aspnet
@@ -25,10 +26,10 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:mkinstalldirs) \$(data:mkinstalldirs) \$(DESTDIR)\$(data:" \
 		-e "s:gif \$(data:gif \$(DESTDIR)\$(data:" \
-		${S}/test/2.0/treeview/Makefile.am
+		"${S}"/test/2.0/treeview/Makefile.am
 	eautoreconf
 }
 
@@ -42,11 +43,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	newinitd ${FILESDIR}/${PV}/xsp.initd xsp
-	newinitd ${FILESDIR}/${PV}/mod-mono-server.initd mod-mono-server
-	newconfd ${FILESDIR}/${PV}/xsp.confd xsp
-	newconfd ${FILESDIR}/${PV}/mod-mono-server.confd mod-mono-server
+	make DESTDIR="${D}" install || die
+	newinitd "${FILESDIR}"/${PV}/xsp.initd xsp
+	newinitd "${FILESDIR}"/${PV}/mod-mono-server.initd mod-mono-server
+	newconfd "${FILESDIR}"/${PV}/xsp.confd xsp
+	newconfd "${FILESDIR}"/${PV}/mod-mono-server.confd mod-mono-server
 
 	keepdir /var/run/aspnet
 

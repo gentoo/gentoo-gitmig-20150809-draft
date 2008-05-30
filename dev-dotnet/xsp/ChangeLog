@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.53 2008/05/06 20:22:31 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.54 2008/05/30 22:51:22 jurek Exp $
+
+  30 May 2008; Jurek Bartuszek <jurek@gentoo.org> xsp-1.2.1.ebuild,
+  xsp-1.2.3.ebuild, xsp-1.2.4.ebuild, xsp-1.2.4-r1.ebuild, xsp-1.2.5.ebuild:
+  Added dev-util/pkgconfig dependency (bug #216415)
 
   06 May 2008; Lance Albertson <ramereth@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
