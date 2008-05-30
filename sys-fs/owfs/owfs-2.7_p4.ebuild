@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p4.ebuild,v 1.1 2008/03/22 17:53:35 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p4.ebuild,v 1.2 2008/05/30 20:07:55 wschlich Exp $
 
 inherit eutils depend.php
 
@@ -10,13 +10,17 @@ DESCRIPTION="Access 1-Wire devices like a filesystem"
 SRC_URI="mirror://sourceforge/owfs/${MY_P}.tar.gz"
 HOMEPAGE="http://www.owfs.org/ http://owfs.sourceforge.net/"
 LICENSE="GPL-2"
-DEPEND="fuse? ( sys-fs/fuse )
-	perl? ( dev-lang/perl dev-lang/swig )
-	php? ( dev-lang/php dev-lang/swig )
-	python? ( dev-lang/python dev-lang/swig )
+RDEPEND="fuse? ( sys-fs/fuse )
+	perl? ( dev-lang/perl )
+	php? ( dev-lang/php )
+	python? ( dev-lang/python )
 	tcl? ( dev-lang/tcl )
 	usb? ( dev-libs/libusb )
 	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )"
+DEPEND="${RDEPEND}
+	perl? ( dev-lang/swig )
+	php? ( dev-lang/swig )
+	python? ( dev-lang/swig )"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="debug fuse ftpd httpd parport perl php python server tcl usb zeroconf"
