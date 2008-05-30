@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.3 2008/04/11 15:34:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.4 2008/05/30 01:25:41 mr_bones_ Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -152,6 +152,7 @@ games-rpg/nwmovies
 games-rpg/nwn
 games-rpg/nwn-cep
 games-rpg/nwn-data
+games-rpg/rain-slick
 games-server/nwn-ded
 games-server/ut2003-ded
 games-simulation/bcs-demo
