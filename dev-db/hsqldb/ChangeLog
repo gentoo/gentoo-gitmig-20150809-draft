@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.44 2008/05/30 19:47:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.45 2008/05/30 22:19:19 betelgeuse Exp $
+
+  30 May 2008; Petteri Räty <betelgeuse@gentoo.org>
+  hsqldb-1.8.0.9-r1.ebuild:
+  Add unzip to DEPEND. Fixes bug #224151.
 
   30 May 2008; Petteri Räty <betelgeuse@gentoo.org> -hsqldb-1.8.0.9.ebuild:
   Remove old revision.
