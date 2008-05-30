@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/psmon
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.14 2007/08/30 13:39:34 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.15 2008/05/30 06:26:21 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986). Assigning
+  to maintainer-needed.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing mcummings from metadata due to his retirement (see #105718 for
