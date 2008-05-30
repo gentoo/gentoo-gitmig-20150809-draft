@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/monouml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/ChangeLog,v 1.5 2007/08/11 14:48:14 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/ChangeLog,v 1.6 2008/05/30 22:45:28 jurek Exp $
+
+  30 May 2008; Jurek Bartuszek <jurek@gentoo.org> monouml-0.1.ebuild:
+  Added dev-util/pkgconfig dependency (bug #206118)
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> monouml-0.1.ebuild:
   amd64 stable, bug 186690
