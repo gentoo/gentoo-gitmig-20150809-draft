@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.40 2008/05/29 22:03:59 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.41 2008/05/30 09:58:28 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -194,8 +194,7 @@ python_mod_optimize() {
 				myopts="${myopts} $1"
 				;;
 			-d|-x)
-				# -x takes regexp as argument so quoting is necessary.
-				myopts="${myopts} $1 \"$2\""
+				myopts="${myopts} $1 $2"
 				shift
 				;;
 			-*)
@@ -218,21 +217,17 @@ python_mod_optimize() {
 		python_version
 	fi
 
-	# set opts
-	if [ "${PYVER}" = "2.2" ]; then
-		compileopts=""
-	else
-		compileopts="-q"
-	fi
+	# set additional opts
+	myopts="${myopts} -q"
 
 	ebegin "Byte compiling python modules for python-${PYVER} .."
 	if [ -n "${mydirs}" ]; then
 		python${PYVER} \
 			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${compileopts} ${myopts} ${mydirs}
+			${myopts} ${mydirs}
 		python${PYVER} -O \
 			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${compileopts} ${myopts} ${mydirs}
+			${myopts} ${mydirs}
 	fi
 
 	if [ -n "${myfiles}" ]; then
