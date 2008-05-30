@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.4.ebuild,v 1.1 2008/05/15 23:19:07 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.4.ebuild,v 1.2 2008/05/30 00:07:47 zlin Exp $
 
 EAPI="1"
 
@@ -72,18 +72,18 @@ RDEPEND="${COMMONDEPEND}
 
 # Patch to respect the sandbox when cmake tries to create symlinks,
 # or executes an external program that tries to write files.
-PATCHES="${FILESDIR}/e-tempdir.patch
-${FILESDIR}/${PN}-4.0.2-X11-optional.patch
-${FILESDIR}/${PN}-4.0.2-alsa-optional.patch"
+PATCHES=("${FILESDIR}/e-tempdir.patch"
+"${FILESDIR}/${PN}-4.0.2-X11-optional.patch"
+"${FILESDIR}/${PN}-4.0.2-alsa-optional.patch")
 # Create CMake switches to make Xcomposite, Xinerama & Xscreensaver optional.
 
 pkg_setup() {
-	KDE4_BUILT_WITH_USE_CHECK="--missing true sys-apps/dbus X"
-	use alsa && KDE4_BUILT_WITH_USE_CHECK="${KDE4_BUILT_WITH_USE_CHECK}
-		--missing true media-libs/alsa-lib midi"
+	KDE4_BUILT_WITH_USE_CHECK=("--missing true sys-apps/dbus X")
+	if use alsa; then
+		KDE4_BUILT_WITH_USE_CHECK+=("--missing true media-libs/alsa-lib midi")
+	fi
 	if use zeroconf && has_version net-dns/avahi; then
-		KDE4_BUILT_WITH_USE_CHECK="${KDE4_BUILT_WITH_USE_CHECK}
-			net-dns/avahi mdnsresponder-compat"
+		KDE4_BUILT_WITH_USE_CHECK+=("net-dns/avahi mdnsresponder-compat")
 	fi
 
 	kde4-base_pkg_setup
