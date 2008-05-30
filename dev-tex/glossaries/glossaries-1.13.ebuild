@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.13.ebuild,v 1.1 2008/05/30 10:40:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.13.ebuild,v 1.2 2008/05/30 16:00:25 mr_bones_ Exp $
 
 inherit latex-package
 
@@ -8,7 +8,7 @@ DESCRIPTION="Create glossaries and lists of acronyms."
 HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/glossaries.html"
 SRC_URI="mirror://gentoo/${P}.zip"
 
-# Taken from : 
+# Taken from :
 # ftp://tug.ctan.org/tex-archive/macros/latex/contrib/${PN}.zip"
 
 LICENSE="LPPL-1.2"
