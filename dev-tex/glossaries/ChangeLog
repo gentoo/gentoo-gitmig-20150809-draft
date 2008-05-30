@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.3 2008/02/29 08:57:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.4 2008/05/30 10:40:36 aballier Exp $
+
+*glossaries-1.13 (30 May 2008)
+
+  30 May 2008; Alexis Ballier <aballier@gentoo.org> -glossaries-1.02.ebuild,
+  +glossaries-1.13.ebuild:
+  Bump to latest version from CTAN, use versionned tarballs mirrored on our
+  mirrors instead of grabbing unversionned ones from CTAN, add unzip to
+  build time dependecies (bug #224159).
 
   29 Feb 2008; Alexis Ballier <aballier@gentoo.org> glossaries-1.02.ebuild:
   Adapt deps for texlive, thanks to Boris in bug #210469
