@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/libplasma-4.0.4.ebuild,v 1.1 2008/05/16 00:48:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/libplasma-4.0.4.ebuild,v 1.2 2008/05/30 09:12:50 zlin Exp $
 
 EAPI="1"
 
@@ -14,8 +14,7 @@ DESCRIPTION="Plasma: KDE desktop framework"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl test xinerama"
 
-COMMONDEPEND="
-	!<kde-base/plasma-3.96.0
+COMMONDEPEND="!<kde-base/plasma-3.96.0
 	>=kde-base/libkworkspace-${PV}:${SLOT}
 	>=kde-base/libtaskmanager-${PV}:${SLOT}
 	x11-libs/libXau
@@ -34,7 +33,7 @@ KMEXTRACTONLY="krunner/org.freedesktop.ScreenSaver.xml
 	libs/taskmanager/"
 KMSAVELIBS="true"
 
-KDE4_BUILT_WITH_USE_CHECK="app-misc/strigi dbus qt4"
+KDE4_BUILT_WITH_USE_CHECK=("app-misc/strigi dbus qt4")
 
 # Disabling tests for now. 3 out of 3 broken now. last tested on 4.0.1.
 RESTRICT="test"

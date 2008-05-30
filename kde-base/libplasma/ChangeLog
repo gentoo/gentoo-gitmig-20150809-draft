@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libplasma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/ChangeLog,v 1.7 2008/05/16 00:48:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/ChangeLog,v 1.8 2008/05/30 09:12:50 zlin Exp $
+
+  30 May 2008; Bo Ørsted Andresen <zlin@gentoo.org> libplasma-4.0.4.ebuild:
+  KDE4_BUILT_WITH_USE_CHECK is now always an array. Bug #216863.
 
 *libplasma-4.0.4 (15 May 2008)
 
