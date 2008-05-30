@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/nzbget
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.13 2007/05/18 18:17:15 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.14 2008/05/30 22:00:35 swegener Exp $
+
+*nzbget-0.4.0 (30 May 2008)
+
+  30 May 2008; Sven Wegener <swegener@gentoo.org> +nzbget-0.4.0.ebuild:
+  Version bump, security bug #224193, also solving part of bug #217359.
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> nzbget-0.2.3-r1.ebuild:
   Add ~alpha wrt #159654
