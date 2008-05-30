@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
-	</maintainer>
 	<longdescription>
 		pympd is a GTK+ front end client for the music playing daemon MPD
 	</longdescription>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
-<maintainer>
-	<email>ticho@gentoo.org</email>
-</maintainer>
-<longdescription>QMPDClient is an easy to use MPD client written in Qt 4</longdescription>
+	<herd>sound</herd>
+	<longdescription lang="en">
+		QMPDClient is an easy to use MPD client written in Qt 4
+	</longdescription>
 </pkgmetadata>
