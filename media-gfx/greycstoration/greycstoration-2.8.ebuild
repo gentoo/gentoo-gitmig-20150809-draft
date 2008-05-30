@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.8.ebuild,v 1.1 2008/03/30 17:55:38 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.8.ebuild,v 1.2 2008/05/30 11:13:08 calchan Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fftw imagemagick jpeg lapack png tiff X"
 
-DEPEND="fftw? ( >=sci-libs/fftw-3 )
+RDEPEND="fftw? ( >=sci-libs/fftw-3 )
 	imagemagick? ( media-gfx/imagemagick )
 	jpeg? ( media-libs/jpeg )
 	lapack? ( virtual/lapack )
@@ -21,6 +21,8 @@ DEPEND="fftw? ( >=sci-libs/fftw-3 )
 	X? ( x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXrandr )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/GREYCstoration-${PV}/src"
 
