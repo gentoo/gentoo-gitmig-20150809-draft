@@ -1,0 +1,11 @@
+# ChangeLog for x11-terms/sakura
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.1 2008/05/30 07:39:36 jmglov Exp $
+
+*sakura-2.1.1 (30 May 2008)
+
+  30 May 2008; Josh Glover <jmglov@gentoo.org> +metadata.xml,
+  +sakura-2.1.1.ebuild:
+  This package was submitted by Josh Glover in bug #187785; thanks to Michal
+  Kurgan <moloh@gentoo.org> for his 2.x ebuilds
+
