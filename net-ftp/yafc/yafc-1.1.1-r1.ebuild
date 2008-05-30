@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1-r1.ebuild,v 1.7 2007/09/23 22:23:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1-r1.ebuild,v 1.8 2008/05/30 04:50:23 darkside Exp $
 
 inherit autotools eutils
 
@@ -31,8 +31,23 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	use kerberos && myconf="${myconf} --with-krb5=/usr/ --with-gssapi=/usr" \
-		|| myconf="${myconf} --with-krb5=no --with-gssapi=no"
+	if use kerberos ; then
+		if has_version app-crypt/heimdal ; then
+			myconf="${myconf} --with-krb5=/usr/ --with-krb4=no --with-gssapi=/usr"
+		elif has_version app-crypt/mit-krb5 ; then
+			if built_with_use app-crypt/mit-krb5 krb4 ; then
+				myconf="${myconf} --with-krb5=/usr/ --with-krb4=/usr/ --with-gssapi=/usr"
+			else
+				myconf="${myconf} --with-krb5=/usr/ --with-krb4=no --with-gssapi=/usr"
+			fi
+		else
+			die "No supported kerberos provider detected"
+		fi
+	else
+		myconf="${myconf} --without-krb4 --without-krb5"
+	fi
+#	use kerberos && myconf="${myconf} --with-krb5=/usr/ --with-gssapi=/usr" \
+#		|| myconf="${myconf} --with-krb5=no --with-krb4=no --with-gssapi=no"
 	use socks5 && myconf="${myconf} --with-socks5=/usr" \
 		|| myconf="${myconf} --with-socks5=no"
 	use readline && myconf="${myconf} --with-readline=/usr" \
