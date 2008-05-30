@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.58 2008/03/12 13:46:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.59 2008/05/30 23:10:33 jurek Exp $
+
+  30 May 2008; Jurek Bartuszek <jurek@gentoo.org> glade-sharp-1.0.10.ebuild,
+  glade-sharp-2.8.2.ebuild, glade-sharp-2.10.0.ebuild:
+  Added dev-util/pkgconfig dependency (bug #216419)
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
