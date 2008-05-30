@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/fuse
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.21 2008/05/30 01:26:13 darkside Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.22 2008/05/30 01:37:31 darkside Exp $
+
+  30 May 2008; Jeremy Olexa <darkside@gentoo.org> fuse-0.7.0.ebuild:
+  changed ebuild to explicitly require libspectrum-0.2.2*. Thanks to Jouni
+  Rinne for reporting in bug #222335
 
   29 May 2008; Jeremy Olexa <darkside@gentoo.org>; +fuse-0.9.0.ebuild:
   version bump app-emulation/fuse to 0.9.0. Thanks to José Manuel Ferrer Ortiz
