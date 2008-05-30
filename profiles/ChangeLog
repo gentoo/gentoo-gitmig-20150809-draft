@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1464 2008/05/29 19:14:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1465 2008/05/30 21:58:45 swegener Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  30 May 2008; Sven Wegener <swegener@gentoo.org> use.local.desc:
+  Add parcheck USE flags for net-nntp/nzbget.
 
   29 May 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removed dev-python/pygsl-0.9.1 from package.mask since it is gone from the
