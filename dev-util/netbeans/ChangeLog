@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.82 2008/05/29 16:14:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.83 2008/05/30 14:22:34 opfer Exp $
+
+  30 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  netbeans-5.5.1-r1.ebuild:
+  stable x86, bug 220223
 
   29 May 2008; Christian Faulhammer <opfer@gentoo.org>
   netbeans-5.5.1-r1.ebuild:
