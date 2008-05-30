@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-mail</herd>
-	<maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
-		<description>net-mail: In case I am not available, feel free to touch this package.</description>
-	</maintainer>
-	<longdescription>A ncurses-based tool for handling postfix queues</longdescription>
+	<longdescription lang="en">
+		A ncurses-based tool for handling postfix queues.
+	</longdescription>
 </pkgmetadata>
