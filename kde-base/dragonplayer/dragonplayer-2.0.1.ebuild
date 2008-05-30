@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-2.0.1.ebuild,v 1.1 2008/03/11 01:25:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-2.0.1.ebuild,v 1.2 2008/05/30 08:39:34 zlin Exp $
 
 EAPI="1"
 
@@ -32,7 +32,7 @@ RDEPEND=">=kde-base/kdelibs-4.0.1-r1:${SLOT}
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-KDE4_BUILT_WITH_USE_CHECK="kde-base/phonon:${SLOT} xcb"
+KDE4_BUILT_WITH_USE_CHECK=("kde-base/phonon:${SLOT} xcb")
 
 src_compile() {
 	comment_all_add_subdirectory po/ || die "sed to remove all linguas failed."
