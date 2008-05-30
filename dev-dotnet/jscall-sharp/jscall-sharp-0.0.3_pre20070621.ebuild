@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/jscall-sharp-0.0.3_pre20070621.ebuild,v 1.3 2008/03/17 15:31:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/jscall-sharp-0.0.3_pre20070621.ebuild,v 1.4 2008/05/30 23:15:00 jurek Exp $
 
 inherit mono eutils
 
@@ -17,12 +17,13 @@ DEPEND="|| ( =www-client/mozilla-firefox-2*
 			=www-client/seamonkey-1* )
 		>=dev-lang/mono-1.1.9
 		>=dev-dotnet/gtk-sharp-2.4
-		>=dev-dotnet/gecko-sharp-0.10"
+		>=dev-dotnet/gecko-sharp-0.10
+		dev-util/pkgconfig"
 
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	einfo "Running autogen..."
 	./autogen.sh || die "autogen failed"
@@ -30,9 +31,9 @@ src_unpack()
 
 src_install()
 {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) \
+	make GACUTIL_FLAGS="/root "${D}"/usr/$(get_libdir) \
 		/gacdir /usr/$(get_libdir) /package ${PN}-0.0.3" \
-		DESTDIR=${D} install || die
+		DESTDIR="${D}" install || die
 
-	dodoc ChangeLog README COPYING AUTHORS
+	dodoc ChangeLog README AUTHORS
 }
