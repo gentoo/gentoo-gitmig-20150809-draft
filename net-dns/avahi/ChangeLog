@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.143 2008/05/29 17:36:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.144 2008/05/30 21:05:55 swegener Exp $
+
+  30 May 2008; Sven Wegener <swegener@gentoo.org>
+  -files/avahi-0.6.20-cleanup-dns-compression-table.patch,
+  -files/avahi-0.6.20-make-known-answers-not-conflict.patch,
+  -files/avahi-0.6.20-ui-sharp-gtk.patch,
+  -files/avahi-0.6.21-browse-help.patch,
+  -files/avahi-0.6.21-dbus-compat.patch,
+  -files/avahi-0.6.21-no-browse-domains-segfault.patch,
+  -files/avahi-0.6.21-no-ipv6.patch,
+  -files/avahi-0.6.21-service_name_chosen.patch, -avahi-0.6.20-r2.ebuild,
+  -avahi-0.6.21.ebuild, -avahi-0.6.22.ebuild:
+  Cleanup.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> avahi-0.6.19-r2.ebuild,
   avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild, avahi-0.6.22.ebuild,
