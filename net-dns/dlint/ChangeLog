@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dlint
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.16 2008/04/24 16:44:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.17 2008/05/30 07:08:41 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
 
 *dlint-1.4.1 (24 Apr 2008)
 
