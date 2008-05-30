@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.7 2008/05/25 08:33:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.8 2008/05/30 05:37:02 jer Exp $
+
+  30 May 2008; Jeroen Roovers <jer@gentoo.org> qt-webkit-4.4.0.ebuild:
+  Marked ~hppa (bug #223557).
 
   25 May 2008; Markus Rothe <corsair@gentoo.org> qt-webkit-4.4.0.ebuild:
   Added ~ppc/~ppc64
