@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.47 2008/05/29 15:24:51 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.48 2008/05/30 10:22:35 hawking Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
-# Alastair Tse <liquidx@gentoo.org>
+# <python@gentoo.org>
 #
 # Original author: Jon Nelson <jnelson@gentoo.org>
 # @BLURB: This eclass allows easier installation of distutils-based python modules
