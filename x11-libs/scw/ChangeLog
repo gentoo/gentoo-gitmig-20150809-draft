@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/scw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.7 2008/05/18 13:38:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.8 2008/05/30 07:24:17 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986). Assigning
+  to maintainer-needed.
 
   18 May 2008; Samuli Suominen <drac@gentoo.org> scw-0.4.7.ebuild:
   Move pkgconfig to DEPEND.
