@@ -525,21 +525,17 @@
  
  #include "XrdOuc/XrdOucEnv.hh"
  #include "XrdOuc/XrdOucStream.hh"
---- xrootd/src/XrdOuc/XrdOucTrace.hh.orig	2007-07-31 02:25:53.000000000 +0000
-+++ xrootd/src/XrdOuc/XrdOucTrace.hh	2008-05-26 16:38:39.779442480 +0000
-@@ -11,13 +11,8 @@
- /******************************************************************************/
+--- xrootd/src/XrdOuc/XrdOucTrace.hh.orig	2008-05-30 08:52:24.585885892 +0000
++++ xrootd/src/XrdOuc/XrdOucTrace.hh	2008-05-30 08:52:55.919671503 +0000
+@@ -14,8 +14,5 @@
  
- //         $Id: xrootd-20071116-gcc43.patch,v 1.1 2008/05/29 18:55:34 bicatali Exp $
--
 -#ifndef WIN32
 -#include <iostream.h>
 -#else
  #include <iostream>
  using namespace std;
 -#endif
- 
- #include "XrdSys/XrdSysError.hh"
++
  
 --- xrootd/src/XrdPosix/XrdPosix.cc.orig	2007-07-28 00:25:25.000000000 +0000
 +++ xrootd/src/XrdPosix/XrdPosix.cc	2008-05-26 11:18:18.119907423 +0000
@@ -902,20 +898,18 @@
  
  #define NOUC ((uid_t)(-1))
  #define NOGC ((gid_t)(-1))
---- xrootd/src/XrdSys/XrdSysXSLock.cc.orig	2007-07-31 02:26:53.000000000 +0000
-+++ xrootd/src/XrdSys/XrdSysXSLock.cc	2008-05-26 16:49:42.632709871 +0000
-@@ -12,12 +12,8 @@
- 
- const char *XrdSysXSLockCVSID = "$Id: xrootd-20071116-gcc43.patch,v 1.1 2008/05/29 18:55:34 bicatali Exp $";
+--- xrootd/src/XrdSys/XrdSysXSLock.cc.orig	2008-05-30 08:56:14.698999291 +0000
++++ xrootd/src/XrdSys/XrdSysXSLock.cc	2008-05-30 08:57:02.805740738 +0000
+@@ -14,8 +14,6 @@
    
 -#ifndef WIN32
 -#include <iostream.h>
 -#else
++
  #include <iostream>
  using namespace std;
 -#endif
- 
- #include "XrdSys/XrdSysXSLock.hh"
++
  
 --- xrootd/src/XrdXrootd/XrdXrootdConfig.cc.orig	2007-10-02 02:30:01.000000000 +0000
 +++ xrootd/src/XrdXrootd/XrdXrootdConfig.cc	2008-05-26 11:18:27.808459542 +0000
