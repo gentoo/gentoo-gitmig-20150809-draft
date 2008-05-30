@@ -21,6 +21,7 @@ lesspipe_file() {
 	local out=$(file -L -- "$1")
 	local suffix
 	case ${out} in
+		*" 7-zip archive"*) suffix="7z";;
 		*" ar archive"*)    suffix="a";;
 		*" CAB-Installer"*) suffix="cab";;
 		*" cpio archive"*)  suffix="cpio";;
@@ -229,7 +230,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.29 2008/04/18 19:58:13 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.30 2008/05/30 23:54:10 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2008 Gentoo Foundation
