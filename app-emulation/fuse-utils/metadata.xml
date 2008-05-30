@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>darkside@gentoo.org</email>
+		<description>Proxy Maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>jmfo1982@yahoo.es</email>
+		<description>Proxied Maintainer. Please CC on bugs.</description>
+		<name>José Manuel Ferrer Ortiz</name>
+	</maintainer>
+</pkgmetadata>
