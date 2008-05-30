@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/pgf-2.00.ebuild,v 1.1 2008/03/01 11:46:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/pgf-2.00.ebuild,v 1.2 2008/05/30 12:07:02 aballier Exp $
 
 inherit latex-package
 
@@ -28,9 +28,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO licenses/LICENSE
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
+		doins pgfmanual.pdf
 		doins -r images macros text-en version-for-dvipdfm version-for-dvips \
 			version-for-pdftex version-for-tex4ht version-for-vtex || die \
 			"Failed to install documentation"
-		prepalldocs
 	fi
 }
