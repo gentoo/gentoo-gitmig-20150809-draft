@@ -1,12 +1,16 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.44 2008/05/29 14:07:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.45 2008/05/30 13:41:06 george Exp $
+
+  30 May 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.1.ebuild,
+  kdesvn-0.14.2.ebuild:
+  changed < to != dependency for subversion-1.5
 
 *kdesvn-0.14.4 (29 May 2008)
 
   29 May 2008; George Shapovalov <george@gentoo.org>
   +files/kdesvn-0.14.4-linkage.patch, +kdesvn-0.14.4.ebuild:
-  added new version
+  added new version, this one is supposed to handle utf-8 issues better..
 
   27 May 2008; Mark Loeser <halcy0n@gentoo.org> kdesvn-0.11.2.ebuild,
   kdesvn-0.13.0.ebuild, kdesvn-0.14.1.ebuild, kdesvn-0.14.2.ebuild:
