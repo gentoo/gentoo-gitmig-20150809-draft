@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-att-remover
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.12 2008/05/28 01:48:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.13 2008/05/30 06:39:29 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
 
   28 May 2008; Mark Loeser <halcy0n@gentoo.org>
   claws-mail-att-remover-1.0.4.ebuild, claws-mail-att-remover-1.0.5.ebuild,

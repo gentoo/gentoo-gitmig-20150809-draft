@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-perl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.18 2008/05/29 02:10:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.19 2008/05/30 06:47:13 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
 
   29 May 2008; Mark Loeser <halcy0n@gentoo.org>
   claws-mail-perl-0.9.10.ebuild, claws-mail-perl-0.9.11.ebuild,

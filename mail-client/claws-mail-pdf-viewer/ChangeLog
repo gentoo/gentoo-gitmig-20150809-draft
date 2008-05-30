@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.24 2008/05/29 02:08:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.25 2008/05/30 06:46:31 phreak Exp $
+
+  30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
 
   29 May 2008; Mark Loeser <halcy0n@gentoo.org>
   claws-mail-pdf-viewer-0.6.ebuild, claws-mail-pdf-viewer-0.7.ebuild,
