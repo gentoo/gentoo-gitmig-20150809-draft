@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.0.4.ebuild,v 1.1 2008/05/16 00:16:48 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.0.4.ebuild,v 1.2 2008/05/30 09:05:08 zlin Exp $
 
 EAPI="1"
 
@@ -11,8 +11,7 @@ DESCRIPTION="VNC-compatible server to share KDE desktops"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook zeroconf"
 
-DEPEND="
-	>=net-libs/libvncserver-0.9
+DEPEND=">=net-libs/libvncserver-0.9
 	net-libs/openslp
 	x11-libs/libXdamage
 	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )"
@@ -20,8 +19,7 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if use zeroconf && has_version net-dns/avahi; then
-		KDE4_BUILT_WITH_USE_CHECK="
-			${KDE4_BUILT_WITH_USE_CHECK} net-dns/avahi mdnsresponder-compat"
+		KDE4_BUILT_WITH_USE_CHECK=("net-dns/avahi mdnsresponder-compat")
 	fi
 	kde4-meta_pkg_setup
 }
