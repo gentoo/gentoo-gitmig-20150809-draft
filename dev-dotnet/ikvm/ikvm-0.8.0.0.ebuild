@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.8.0.0.ebuild,v 1.7 2007/02/05 00:23:11 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.8.0.0.ebuild,v 1.8 2008/05/30 23:03:46 jurek Exp $
 
 inherit mono
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Fix some makefile borkage.
-	sed -i -e 's:-e$:-e \\:' ${S}/scripts/Makefile.in
+	sed -i -e 's:-e$:-e \\:' "${S}"/scripts/Makefile.in
 }
 
 src_compile() {
@@ -31,5 +31,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }

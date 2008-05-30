@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/ikvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.20 2008/03/12 13:52:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.21 2008/05/30 23:03:46 jurek Exp $
+
+  30 May 2008; Jurek Bartuszek <jurek@gentoo.org> ikvm-0.8.0.0.ebuild,
+  ikvm-0.14.0.1.ebuild, ikvm-0.14.0.1-r1.ebuild, ikvm-0.14.0.1-r2.ebuild,
+  ikvm-0.20.0.0.ebuild, ikvm-0.34.0.2.ebuild, ikvm-0.36.0.5.ebuild:
+  Added dev-util/pkgconfig dependency (bug #206101)
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.

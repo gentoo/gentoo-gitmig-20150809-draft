@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.5.ebuild,v 1.2 2008/01/02 21:46:51 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.5.ebuild,v 1.3 2008/05/30 23:03:46 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 		!dev-dotnet/ikvm-bin
 		>=dev-dotnet/nant-0.85
 		>=virtual/jdk-1.5
-		app-arch/unzip"
+		app-arch/unzip
+		dev-util/pkgconfig"
 
 src_compile() {
 	# Add missing strong name key

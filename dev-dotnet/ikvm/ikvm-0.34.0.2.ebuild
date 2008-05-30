@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.4 2007/07/28 12:46:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.5 2008/05/30 23:03:46 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -24,7 +24,8 @@ DEPEND="${RDEPEND}
 		!dev-dotnet/ikvm-bin
 		>=dev-dotnet/nant-0.85
 		>=virtual/jdk-1.5
-		app-arch/unzip"
+		app-arch/unzip
+		dev-util/pkgconfig"
 
 src_compile() {
 	# Remove unneccesary executables and
@@ -54,6 +55,6 @@ src_install() {
 	dodir /usr/$(get_libdir)/pkgconfig
 	sed -e "s:@VERSION@:${PV}:" \
 		-e "s:@LIBDIR@:$(get_libdir):" \
-		${FILESDIR}/${PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${PN}.pc \
+		"${FILESDIR}"/${PN}.pc.in > "${D}"/usr/$(get_libdir)/pkgconfig/${PN}.pc \
 	|| die "sed failed"
 }
