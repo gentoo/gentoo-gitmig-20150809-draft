@@ -1,5 +1,5 @@
---- emacspeak-28.0/servers/linux-espeak/tclespeak.cpp.orig	2008-05-17 12:34:21.000000000 -0500
-+++ emacspeak-28.0/servers/linux-espeak/tclespeak.cpp	2008-05-17 12:38:41.000000000 -0500
+--- ./emacspeak-28.0/servers/linux-espeak/tclespeak.cpp	2008-05-17 12:34:21.000000000 -0500
++++ ./emacspeak-28.0/servers/linux-espeak/tclespeak.cpp	2008-05-17 12:38:41.000000000 -0500
 @@ -593,20 +593,18 @@
  	  continue;
  	}

@@ -1,5 +1,5 @@
---- emacspeak-28.0/Makefile.orig	2008-05-16 08:49:54.000000000 -0500
-+++ emacspeak-28.0/Makefile	2008-05-16 08:52:53.000000000 -0500
+--- ./emacspeak-28.0/Makefile	2008-05-16 08:49:54.000000000 -0500
++++ ./emacspeak-28.0/Makefile	2008-05-16 08:52:53.000000000 -0500
 @@ -149,7 +149,6 @@
  FORMS =etc/forms/*.el
  REALAUDIO=realaudio
