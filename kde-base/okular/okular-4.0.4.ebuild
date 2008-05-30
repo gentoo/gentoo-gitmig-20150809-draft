@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.4.ebuild,v 1.1 2008/05/16 00:53:27 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.4.ebuild,v 1.2 2008/05/30 09:22:22 zlin Exp $
 
 EAPI="1"
 
@@ -11,8 +11,7 @@ DESCRIPTION="Okular is an universal document viewer based on KPDF for KDE 4."
 KEYWORDS="~amd64 ~x86"
 IUSE="chm debug djvu htmlhandbook jpeg pdf tiff"
 
-RDEPEND="
-	>=app-text/libspectre-0.2
+RDEPEND=">=app-text/libspectre-0.2
 	media-libs/freetype
 	kde-base/qimageblitz
 	chm? ( dev-libs/chmlib )
@@ -24,12 +23,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/${KMNAME}-4.0.2-system-libspectre.patch"
+PATCHES=("${FILESDIR}/${KMNAME}-4.0.2-system-libspectre.patch")
 
 pkg_setup() {
 	if use pdf; then
-		KDE4_BUILT_WITH_USE_CHECK="${KDE4_BUILT_WITH_USE_CHECK}
-			app-text/poppler-bindings qt4"
+		KDE4_BUILT_WITH_USE_CHECK=("app-text/poppler-bindings qt4")
 	fi
 	kde4-meta_pkg_setup
 }
