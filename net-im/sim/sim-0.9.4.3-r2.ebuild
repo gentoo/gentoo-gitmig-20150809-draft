@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.9 2008/05/30 07:33:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r2.ebuild,v 1.1 2008/05/30 07:33:53 pva Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/sim-im/${P}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug kde spell ssl"
 
 RESTRICT="fetch"
@@ -73,6 +73,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-double-message-fix.patch
+	epatch "${FILESDIR}"/${P}-sslv23.patch
 	epatch ../${P}-r1919_1924.patch
 	if use kde; then
 		set-kdedir 3
