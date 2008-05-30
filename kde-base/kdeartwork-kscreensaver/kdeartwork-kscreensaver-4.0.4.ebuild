@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.0.4.ebuild,v 1.1 2008/05/15 23:08:21 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.0.4.ebuild,v 1.2 2008/05/30 08:52:55 zlin Exp $
 
 EAPI="1"
 
@@ -20,17 +20,11 @@ DEPEND="${DEPEND}
 	xscreensaver? ( x11-misc/xscreensaver )"
 RDEPEND="${DEPEND}"
 
-PATCHES="${FILESDIR}/${PN}-4.0.2-xscreensaver.patch"
+PATCHES=("${FILESDIR}/${PN}-4.0.2-xscreensaver.patch")
 
 pkg_setup() {
 	if use opengl; then
-		if has_version kde-base/kscreensaver:${SLOT}; then
-			KDE4_BUILT_WITH_USE_CHECK="
-				kde-base/kscreensaver:${SLOT} opengl"
-		else
-			KDE4_BUILT_WITH_USE_CHECK="
-				kde-base/kdebase:${SLOT} opengl"
-		fi
+		KDE4_BUILT_WITH_USE_CHECK=("kde-base/kscreensaver:${SLOT} opengl")
 	fi
 
 	kde4-meta_pkg_setup
