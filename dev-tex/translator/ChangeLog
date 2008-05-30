@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/translator
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.1 2008/05/30 13:10:37 aballier Exp $
+
+*translator-1.00 (30 May 2008)
+
+  30 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +translator-1.00.ebuild:
+  Initial import, ebuild by me.
+
