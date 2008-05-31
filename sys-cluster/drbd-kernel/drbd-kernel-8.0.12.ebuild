@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.12.ebuild,v 1.1 2008/04/29 21:36:38 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.12.ebuild,v 1.2 2008/05/31 15:46:09 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 MY_PN="${PN/-kernel/}"
 MY_P="${MY_PN}-${PV}"
