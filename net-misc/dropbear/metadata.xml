@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
+<herd>embedded</herd>
 <longdescription>
 I was looking for a small and secure SSH server to fit on a laptop with 4 megs ram and no hard 
 disk, and couldn't find one which was satisfactory. I decided to write my own, and Dropbear is 
