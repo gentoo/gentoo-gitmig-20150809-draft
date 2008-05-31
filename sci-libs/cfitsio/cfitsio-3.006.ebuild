@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.4 2006/06/02 05:42:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.5 2008/05/31 13:26:35 markusle Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -20,12 +20,12 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-configure.patch || die "epatch failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-configure.patch || die "epatch failed"
 }
 
 src_compile() {
-	econf --host=${CHOST} --prefix=${D}usr --libdir=${D}usr/$(get_libdir) || die "econf failed"
+	econf --host=${CHOST} --prefix="${D}"usr --libdir="${D}"usr/$(get_libdir) || die "econf failed"
 	make || die "make failed"
 	make shared fitscopy imcopy listhead
 }
@@ -33,6 +33,7 @@ src_compile() {
 src_install () {
 	dodir /usr/include
 	dolib.so libcfitsio.so.*
+	dolib.a libcfitsio.a
 	dobin fitscopy imcopy listhead
 	dodoc changes.txt README
 
@@ -42,7 +43,7 @@ src_install () {
 
 	insinto /usr/include
 	doins fitsio.h fitsio2.h longnam.h drvrsmem.h
-	cd ${D}/usr/$(get_libdir)
+	cd "${D}"/usr/$(get_libdir)
 	    dosym libcfitsio.so.0.0 /usr/$(get_libdir)/libcfitsio.so
 	    dosym libcfitsio.so.0.0 /usr/$(get_libdir)/libcfitsio.so.0
 }

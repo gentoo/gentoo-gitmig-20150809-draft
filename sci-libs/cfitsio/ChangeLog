@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.13 2008/01/24 15:18:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.14 2008/05/31 13:26:35 markusle Exp $
+
+  31 May 2008; Markus Dittrich <markusle@gentoo.org>
+  cfitsio-2.510-r1.ebuild, cfitsio-3.006.ebuild:
+  Added installation of static library (see bug #224225) and fixed general
+  QA things.
 
   24 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/cfitsio-3.060-autotools.patch, cfitsio-3.060.ebuild:
