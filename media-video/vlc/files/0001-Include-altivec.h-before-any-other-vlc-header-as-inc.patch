@@ -1,0 +1,37 @@
+From 8e52e60b3fe3c9f416cbef521367f9e7259c2ed6 Mon Sep 17 00:00:00 2001
+From: Alexis Ballier <aballier@gentoo.org>
+Date: Sat, 31 May 2008 10:14:02 +0200
+Subject: [PATCH] Include altivec.h before any other vlc header as including it after stdbool will cause compile failures as pointed by Mike Frysinger in https://bugs.gentoo.org/show_bug.cgi?id=224289
+
+---
+ modules/video_filter/deinterlace.c |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/modules/video_filter/deinterlace.c b/modules/video_filter/deinterlace.c
+index 5dc4eeb..e65a7df 100644
+--- a/modules/video_filter/deinterlace.c
++++ b/modules/video_filter/deinterlace.c
+@@ -30,16 +30,16 @@
+ # include "config.h"
+ #endif
+ 
++#ifdef HAVE_ALTIVEC_H
++#   include <altivec.h>
++#endif
++
+ #include <vlc/vlc.h>
+ #include <vlc_plugin.h>
+ #include <vlc_vout.h>
+ #include <vlc_sout.h>
+ #include "vlc_filter.h"
+ 
+-#ifdef HAVE_ALTIVEC_H
+-#   include <altivec.h>
+-#endif
+-
+ #ifdef CAN_COMPILE_MMXEXT
+ #   include "mmx.h"
+ #endif
+-- 
+1.5.5.1
+

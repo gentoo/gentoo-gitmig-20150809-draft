@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.338 2008/05/31 08:25:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.339 2008/05/31 08:42:13 aballier Exp $
+
+  31 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/0001-Include-altivec.h-before-any-other-vlc-header-as-inc.patch,
+  vlc-0.9.0_alpha20080524.ebuild:
+  Add a patch to fix build failures on altivec ppc, thanks to vapier in bug
+  #224289.
 
   31 May 2008; Alexis Ballier <aballier@gentoo.org>
   -vlc-0.9.0_alpha20080409.ebuild:
