@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1466 2008/05/31 07:15:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1467 2008/05/31 08:03:46 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -9,6 +9,9 @@
   31 May 2008; Peter Alfredsen <loki_val@gentoo.org> updates/2Q-2008:
   move media-fonts/fireflysung --> media-fonts/opendesktop-fonts, WRT bug
   224189
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop masks for ezm3/cvsup since they've been dropped from the tree.
 
   30 May 2008; Sven Wegener <swegener@gentoo.org> use.local.desc:
   Add parcheck USE flags for net-nntp/nzbget.
