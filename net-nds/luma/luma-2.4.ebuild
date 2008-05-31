@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.4.ebuild,v 1.1 2008/05/13 18:30:08 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.4.ebuild,v 1.2 2008/05/31 11:31:36 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 	# We do the optimization seperately
 	sed -i \
-		-e '/^doCompile/d' \
+		-e '/^[[:space:]]*doCompile/d' \
 		install.py || "sed failed"
 }
 
