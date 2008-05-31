@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.50 2008/05/31 00:40:14 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.51 2008/05/31 14:16:35 opfer Exp $
+
+  31 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  xmlrpc-c-1.06.09-r2.ebuild:
+  stable x86, bug 224275
 
   31 May 2008; Peter Alfredsen <loki_val@gentoo.org>
   xmlrpc-c-1.06.09-r2.ebuild, xmlrpc-c-1.06.27.ebuild:
