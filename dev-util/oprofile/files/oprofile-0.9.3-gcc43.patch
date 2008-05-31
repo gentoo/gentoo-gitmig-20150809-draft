@@ -188,3 +188,26 @@ diff -urp oprofile-0.9.3-orig/pp/opgprof_options.cpp oprofile-0.9.3/pp/opgprof_o
  
  #include "opgprof_options.h"
  #include "popt_options.h"
+diff -urp oprofile-0.9.3-orig/libabi/tests/abi_test.cpp oprofile-0.9.3/libabi/tests/abi_test.cpp
+--- oprofile-0.9.3-orig/libabi/tests/abi_test.cpp	2007-07-16 20:22:17.000000000 +0200
++++ oprofile-0.9.3/libabi/tests/abi_test.cpp	2008-05-23 14:31:44.000000000 +0200
+@@ -17,6 +17,8 @@
+ 
+ #include <fstream>
+ #include <iostream>
++#include <cstdlib>
++#include <cstring>
+ 
+ using namespace std;
+ 
+diff -urp oprofile-0.9.3-orig/libregex/tests/regex_test.cpp oprofile-0.9.3/libregex/tests/regex_test.cpp
+--- oprofile-0.9.3-orig/libregex/tests/regex_test.cpp	2007-07-16 20:22:17.000000000 +0200
++++ oprofile-0.9.3/libregex/tests/regex_test.cpp	2008-05-23 14:32:25.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ #include <iostream>
+ #include <fstream>
++#include <cstdlib>
+ 
+ using namespace std;
+ 
