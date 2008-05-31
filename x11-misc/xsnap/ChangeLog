@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnap
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.26 2006/11/09 17:18:46 nelchael Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.27 2008/05/31 22:25:17 coldwind Exp $
+
+  31 May 2008; Santiago M. Mola <coldwind@gentoo.org> xsnap-1.5.2.ebuild:
+  amd64 stable and fix quoting.
 
 *xsnap-1.5.2 (09 Nov 2006)
 
