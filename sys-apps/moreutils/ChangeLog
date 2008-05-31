@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.3 2008/05/15 14:41:22 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.4 2008/05/31 16:48:38 coldwind Exp $
+
+  31 May 2008; Santiago M. Mola <coldwind@gentoo.org> moreutils-0.30.ebuild:
+  Depend on new docbook2X, fixes #223971. Use S and remove redundant
+  src_unpack.
 
 *moreutils-0.30 (15 May 2008)
 

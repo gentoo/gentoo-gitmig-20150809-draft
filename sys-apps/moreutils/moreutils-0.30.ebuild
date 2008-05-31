@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.30.ebuild,v 1.1 2008/05/15 14:41:22 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.30.ebuild,v 1.2 2008/05/31 16:48:38 coldwind Exp $
 
 inherit eutils
 
@@ -15,20 +15,14 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
-	app-text/docbook2X"
+	>=app-text/docbook2X-0.8.8-r2"
 
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}/moreutils"
-	# any patches?
-}
+S=${WORKDIR}/${PN}
 
 src_compile() {
-	cd "${WORKDIR}/moreutils"
 	emake CFLAGS="${CFLAGS}" DOCBOOK2XMAN="docbook2man.pl" || die "emake failed"
 }
 
 src_install() {
-	cd "${WORKDIR}/moreutils"
 	emake DESTDIR="${D}" install || die "install failed"
 }
