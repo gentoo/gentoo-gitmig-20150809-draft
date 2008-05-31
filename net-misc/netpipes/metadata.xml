@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-	<email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>the network swiss army knife</longdescription>
 <longdescription lang="ja">ネットワークにおけるスイス・アーミ・ナイフです。</longdescription>
 </pkgmetadata>
