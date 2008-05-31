@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080514.ebuild,v 1.1 2008/05/25 04:32:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080514.ebuild,v 1.2 2008/05/31 18:40:25 robbat2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Common CA Certificates PEM files"
-HOMEPAGE="http://www.cacert.org/"
+HOMEPAGE="http://packages.debian.org/sid/ca-certificates"
 SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}_all.deb"
 
 LICENSE="MPL-1.1"

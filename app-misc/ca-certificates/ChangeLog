@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.17 2008/05/31 18:37:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.18 2008/05/31 18:40:25 robbat2 Exp $
+
+  31 May 2008; Robin H. Johnson <robbat2@gentoo.org>
+  ca-certificates-20070303-r1.ebuild, ca-certificates-20080514.ebuild,
+  ca-certificates-20080514-r1.ebuild:
+  Fix up the HOMEPAGE, as it merely contains cacert stuff, but it's actually
+  from Debian.
 
   31 May 2008; Robin H. Johnson <robbat2@gentoo.org>
   ca-certificates-20070303-r1.ebuild:
