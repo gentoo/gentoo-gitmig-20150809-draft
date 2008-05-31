@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.2.20080216.1.ebuild,v 1.1 2008/05/30 17:37:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.2.20080216.1.ebuild,v 1.2 2008/05/31 04:51:56 mr_bones_ Exp $
 
 inherit font
 
@@ -37,7 +37,6 @@ FONT_CONF=(	"25-ttf-arphic-ukai-render.conf"
 		"41-ttf-arphic-uming.conf"
 		"64-ttf-arphic-uming.conf"
 		"90-ttf-arphic-uming-embolden.conf" )
-
 
 src_unpack() {
 	#All of this is to ensure that we don't overwrite one font's docs
