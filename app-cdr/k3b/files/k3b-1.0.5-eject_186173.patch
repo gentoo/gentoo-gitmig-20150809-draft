@@ -1,0 +1,90 @@
+diff -ur k3b-1.0.4/ChangeLog k3b-1.0.4-verification-always-reload/ChangeLog
+--- k3b-1.0.4/ChangeLog	2007-11-02 10:55:57.000000000 +0100
++++ k3b-1.0.4-verification-always-reload/ChangeLog	2007-12-07 19:33:18.000000000 +0100
+@@ -4,9 +4,6 @@
+  * Unmount medium before DVD formatting
+  * Silently (without introducing new strings for translation) allow the burning of files
+    bigger than 4 GB with appropriate versions of genisoimage or mkisofs.
+- * Do only reload the medium before verification if necessary, i.e. if the newly written
+-   track cannot be read otherwise (many old drives depend on this). Hopefully this will
+-   at least work around the aweful "DMA disabled" bug for many users.
+ 	
+ 1.0.3
+ =====
+diff -ur k3b-1.0.4/libk3b/jobs/k3bverificationjob.cpp k3b-1.0.4-verification-always-reload/libk3b/jobs/k3bverificationjob.cpp
+--- k3b-1.0.4/libk3b/jobs/k3bverificationjob.cpp	2007-11-02 10:55:53.000000000 +0100
++++ k3b-1.0.4-verification-always-reload/libk3b/jobs/k3bverificationjob.cpp	2007-07-21 21:53:53.000000000 +0200
+@@ -84,8 +84,6 @@
+   K3bPipe pipe;
+ 
+   bool readSuccessful;
+-
+-  bool mediumHasBeenReloaded;
+ };
+ 
+ 
+@@ -151,13 +149,11 @@
+   d->currentTrackIndex = 0;
+   d->alreadyReadSectors = 0;
+ 
+-  emit newTask( i18n("Checking medium") );
++  // first we need to reload and mount the device
++  emit newTask( i18n("Reloading the medium") );
+ 
+-  d->mediumHasBeenReloaded = false;
+-  connect( K3bDevice::sendCommand( K3bDevice::DeviceHandler::DISKINFO, d->device ),
+-           SIGNAL(finished(K3bDevice::DeviceHandler*)),
+-           this,
+-           SLOT(slotDiskInfoReady(K3bDevice::DeviceHandler*)) );
++  connect( K3bDevice::reload( d->device ), SIGNAL(finished(bool)),
++	   this, SLOT(slotMediaReloaded(bool)) );
+ }
+ 
+ 
+@@ -169,8 +165,6 @@
+ 		  K3bDevice::MEDIA_WRITABLE,
+ 		  i18n("Unable to Close the Tray") );
+ 
+-  d->mediumHasBeenReloaded = true;
+-
+   emit newTask( i18n("Checking medium") );
+ 
+   connect( K3bDevice::sendCommand( K3bDevice::DeviceHandler::DISKINFO, d->device ),
+@@ -191,6 +185,12 @@
+   d->toc = dh->toc();
+   d->totalSectors = 0;
+ 
++  if ( d->toc.isEmpty() ) {
++      emit infoMessage( i18n( "No tracks to verify found." ), ERROR );
++      jobFinished( false );
++      return;
++  }
++
+   // just to be sure check if we actually have all the tracks
+   int i = 0;
+   for( QValueList<K3bVerificationJobTrackEntry>::iterator it = d->tracks.begin();
+@@ -201,21 +201,9 @@
+       (*it).trackNumber = d->toc.count();
+ 
+     if( (int)d->toc.count() < (*it).trackNumber ) {
+-        if ( d->mediumHasBeenReloaded ) {
+-            emit infoMessage( i18n("Internal Error: Verification job improperly initialized (%1)")
+-                              .arg( "Specified track number not found on medium" ), ERROR );
+-            jobFinished( false );
+-            return;
+-        }
+-        else {
+-            // many drives need to reload the medium to return to a proper state
+-            emit newTask( i18n("Reloading the medium") );
+-            connect( K3bDevice::reload( d->device ),
+-                     SIGNAL(finished(bool)),
+-                     this,
+-                     SLOT(slotMediaReloaded(bool)) );
+-            return;
+-        }
++      emit infoMessage( i18n("Internal Error: Verification job improperly initialized"), ERROR );
++      jobFinished( false );
++      return;
+     }
+ 
+     d->totalSectors += trackLength( i );
