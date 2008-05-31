@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-passwd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.14 2007/07/12 14:29:55 gustavoz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.15 2008/05/31 05:13:43 vapier Exp $
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> horde-passwd-3.0.1.ebuild:
+  Depend on either horde or horde-groupware or horde-webmail as pointed out by
+  Robin Bankhead #217326.
 
   12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   horde-passwd-3.0.1.ebuild:
