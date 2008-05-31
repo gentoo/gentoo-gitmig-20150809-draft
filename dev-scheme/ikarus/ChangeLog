@@ -1,0 +1,13 @@
+# ChangeLog for dev-scheme/ikarus
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ChangeLog,v 1.1 2008/05/31 21:17:57 pchrist Exp $
+
+*ikarus-0.0.3 (31 May 2008)
+
+  31 May 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +files/ikarus-0.0.3-cpu_has_sse2.patch,
+  +files/ikarus-0.0.3-ikarus-enter.patch, +ikarus-0.0.3.ebuild:
+  Initial Commit of dev-scheme/ikarus. Ebuild first written by Marijn
+  Schouten <hkBst@gentoo.org> and updated by me. Moved from the overlay to
+  the main tree.
+
