@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.138 2008/05/31 11:25:25 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.139 2008/05/31 12:25:23 jurek Exp $
+
+*mono-1.9.1 (31 May 2008)
+*mono-1.9 (31 May 2008)
+
+  31 May 2008; Jurek Bartuszek <jurek@gentoo.org> +mono-1.9.ebuild,
+  +mono-1.9.1.ebuild:
+  Version bump (bug #213381)
 
 *mono-1.2.6-r3 (31 May 2008)
 
