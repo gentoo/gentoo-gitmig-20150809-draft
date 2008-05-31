@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.37 2008/05/29 13:47:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.38 2008/05/31 07:04:58 vapier Exp $
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> openrc-0.2.5.ebuild,
+  openrc-9999.ebuild:
+  Do the timezone upgrade before moving the clock conf.d as pointed out by
+  Hopeless #222867.
 
 *openrc-0.2.5 (29 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.33 2008/05/05 03:54:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.34 2008/05/31 07:04:58 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -127,6 +127,14 @@ pkg_preinst() {
 	mv "${D}"/etc/conf.d/net "${T}"/
 	[[ -e ${ROOT}/etc/conf.d/net ]] && cp "${ROOT}"/etc/conf.d/net "${T}"/
 
+	# upgrade timezone file ... do it before moving clock
+	if [[ -e ${ROOT}/etc/conf.d/clock && ! -e ${ROOT}/etc/timezone ]] ; then
+		(
+		source "${ROOT}"/etc/conf.d/clock
+		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
+		)
+	fi
+
 	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
 	local clock
 	use kernel_FreeBSD && clock="adjkerntz" || clock="hwclock"
@@ -147,14 +155,6 @@ pkg_preinst() {
 		elog "/etc/conf.d/rc is no longer used for configuration."
 		elog "Please migrate your settings to /etc/rc.conf as applicable"
 		elog "and delete /etc/conf.d/rc"
-	fi
-
-	# upgrade timezone file
-	if [[ -e ${ROOT}/etc/conf.d/clock && ! -e ${ROOT}/etc/timezone ]] ; then
-		(
-		source "${ROOT}"/etc/conf.d/clock
-		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
-		)
 	fi
 
 	# force net init.d scripts into symlinks
