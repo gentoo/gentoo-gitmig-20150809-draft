@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
+<herd>video</herd>
 <longdescription>
 SDLcam is a simple Video4Linux program, that was designed to view video streams coming from a Philips USB 
 Webcam.
