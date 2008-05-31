@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.0.ebuild,v 1.2 2008/01/09 08:33:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.0.ebuild,v 1.3 2008/05/31 15:56:14 yngwin Exp $
 
+EAPI=1
 inherit autotools eutils qt4
 
 DESCRIPTION="A viewer for comic book archives containing jpeg/png images."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="$(qt4_min_version 4.0)
+RDEPEND="|| ( x11-libs/qt-gui:4 x11-libs/qt:4 )
 	media-libs/imlib2
 	|| ( app-arch/unrar app-arch/rar )
 	app-arch/zip"
@@ -23,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}/src/"
-	sed -i -e 's,moc-qt4,moc,g' Makefile.am || die "sed failed"
+	sed -i -e 's,moc-qt4,moc,g' Makefile.in || die "sed failed"
 }
 
 src_compile() {
