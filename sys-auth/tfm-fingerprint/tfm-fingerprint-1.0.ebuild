@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.3 2008/02/27 10:59:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.4 2008/05/31 05:21:31 vapier Exp $
 
 inherit multilib
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="sys-auth/bioapi"
+RDEPEND="sys-auth/bioapi"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
