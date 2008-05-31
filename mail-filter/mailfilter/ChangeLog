@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/mailfilter
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.22 2007/09/16 09:42:01 tove Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.23 2008/05/31 10:27:04 tove Exp $
+
+  31 May 2008; Torsten Veller <tove@gentoo.org> +files/0.8.1-gcc43.patch,
+  mailfilter-0.8.1.ebuild:
+  Add gcc-4.3 patch. Add flex to DEPEND
 
 *mailfilter-0.8.1 (16 Sep 2007)
 
