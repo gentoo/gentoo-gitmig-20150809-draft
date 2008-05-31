@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.4 2008/05/31 16:48:38 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.5 2008/05/31 17:16:47 coldwind Exp $
+
+*moreutils-0.30-r1 (31 May 2008)
+
+  31 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/moreutils-0.30-dtd-path.patch, +moreutils-0.30-r1.ebuild:
+  Fix docbook-xml-dtd dep and handling (#222209) and pre-striping (#222283)
+  thanks to Tristan Heaven <nyhm@gentoo.org>.
 
   31 May 2008; Santiago M. Mola <coldwind@gentoo.org> moreutils-0.30.ebuild:
   Depend on new docbook2X, fixes #223971. Use S and remove redundant
