@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.22.0-r2.ebuild,v 1.1 2008/03/23 11:24:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.22.2.ebuild,v 1.1 2008/05/31 12:13:47 eva Exp $
 
 inherit gnome2 eutils pam
 
@@ -27,13 +27,6 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
-src_unpack() {
-	gnome2_src_unpack
-
-	echo "gkr-pk-object-storage.c" >> po/POTFILES.in
-	echo "gkr-ask-tool.c" >> po/POTFILES.in
-}
 
 pkg_setup() {
 	G2CONF="${G2CONF}
