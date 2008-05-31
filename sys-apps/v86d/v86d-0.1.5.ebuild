@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.5.ebuild,v 1.1 2008/05/01 21:11:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.5.ebuild,v 1.2 2008/05/31 12:37:21 spock Exp $
 
-inherit linux-info
+inherit linux-info multilib
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
@@ -19,7 +19,7 @@ RDEPEND=""
 S="${WORKDIR}/${P//_*/}"
 
 pkg_setup() {
-	if [ -z "$(grep V86D /usr/lib/klibc/include/linux/connector.h)" ]; then
+	if [ -z "$(grep V86D /usr/$(get_libdir)/klibc/include/linux/connector.h)" ]; then
 		eerror "You need to compile klibc against a kernel tree patched with uvesafb"
 		eerror "prior to merging this package."
 		die "Kernel not patched with uvesafb."
