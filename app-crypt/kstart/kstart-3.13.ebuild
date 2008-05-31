@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.13.ebuild,v 1.1 2008/05/31 10:15:19 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.13.ebuild,v 1.2 2008/05/31 20:02:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,4 +35,3 @@ src_install() {
 	doman k5start.1 krenew.1
 	dodoc README NEWS || die
 }
-
