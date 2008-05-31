@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/opendesktop-fonts/opendesktop-fonts-1.4.2.ebuild,v 1.1 2008/05/30 08:10:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/opendesktop-fonts/opendesktop-fonts-1.4.2.ebuild,v 1.2 2008/05/31 06:59:36 loki_val Exp $
 
 inherit font
 
@@ -19,4 +19,5 @@ FONT_CONF=( "69-odofonts.conf"
 	"80-odofonts-original.conf"
 	"80-odofonts-simulate-MS-simplified-chinese.conf"
 	"80-odofonts-simulate-MS-triditional-chinese.conf" )
+
 DOCS="AUTHORS Changelog*"
