@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1469 2008/05/31 11:14:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1470 2008/05/31 11:23:32 jurek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  31 May 2008; Jurek Bartuszek <jurek@gentoo.org> use.local.desc:
+  Added dev-lang/mono:moonlight local use flag description
 
   31 May 2008; Ben de Groot <yngwin@gentoo.org> use.local.desc:
   Adding media-sound/qtscrobbler:cli to use.local.desc

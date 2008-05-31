@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3560 2008/05/31 11:14:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3561 2008/05/31 11:23:32 jurek Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -449,6 +449,7 @@ dev-lang/idb:ifc - Use ifc to install idb
 dev-lang/lisaac:vim - install a syntax file for vim
 dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
+dev-lang/mono:moonlight - add moonlight support
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
