@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.55 2008/05/31 12:39:35 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.56 2008/05/31 15:31:00 jurek Exp $
+
+  31 May 2008; Jurek Bartuszek <jurek@gentoo.org> Manifest:
+  Fixed digests
 
 *xsp-1.9.1 (31 May 2008)
 *xsp-1.9 (31 May 2008)
