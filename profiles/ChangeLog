@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1472 2008/05/31 18:01:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1473 2008/05/31 18:07:21 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> updates/2Q-2008:
+  Replace portage-manpages with eclass-manpages.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> profiles.desc:
   Convert arm/s390/sh profiles from "stable" to "dev".
