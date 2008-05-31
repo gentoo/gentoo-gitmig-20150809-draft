@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.66 2008/04/21 07:08:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.67 2008/05/31 04:25:08 vapier Exp $
+
+*gpm-1.20.4 (31 May 2008)
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> +gpm-1.20.4.ebuild:
+  Version bump.
 
   21 Apr 2008; Ulrich Mueller <ulm@gentoo.org>
   +files/gpm-1.20.3-no-emacs-dir.patch, gpm-1.20.3.ebuild:
