@@ -1,7 +1,0 @@
-*default tag=.
-*default host=cvsup.gentoo.org
-*default prefix=/usr
-*default base=/var/cvsup
-*default release=cvs delete use-rel-suffix compress
-
-portage

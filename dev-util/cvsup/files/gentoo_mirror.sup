@@ -1,7 +1,0 @@
-# gentoo mirror supfile (mirrors the actual repository)
-*default host=cvs.gentoo.org
-*default prefix=/var/cvsup/repository
-*default base=/var/cvsup
-*default release=cvs
-*default delete use-rel-suffix
-portage
