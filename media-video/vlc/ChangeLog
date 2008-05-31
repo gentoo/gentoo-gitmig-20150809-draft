@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.339 2008/05/31 08:42:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.340 2008/05/31 09:48:56 aballier Exp $
+
+  31 May 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/0002-Explicitly-check-for-and-link-to-libavutil-since-av_.patch,
+  vlc-0.9.0_alpha20080524.ebuild:
+  While I'm at it, backport another patch to fix linking with ffmpeg trunk.
 
   31 May 2008; Alexis Ballier <aballier@gentoo.org>
   +files/0001-Include-altivec.h-before-any-other-vlc-header-as-inc.patch,

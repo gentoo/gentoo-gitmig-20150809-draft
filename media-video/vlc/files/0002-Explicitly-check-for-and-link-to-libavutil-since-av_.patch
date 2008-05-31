@@ -1,0 +1,25 @@
+From b41bc1645bcb2f3942e57ff19e4791a1f892de7a Mon Sep 17 00:00:00 2001
+From: Alexis Ballier <aballier@gentoo.org>
+Date: Sat, 31 May 2008 11:17:56 +0200
+Subject: [PATCH] Explicitly check for and link to libavutil since av_free and friends are used in the ffmpeg plugin and after r13528 ffmpeg's .pc files do not tell anymore to link needlessly to its private library requirements.
+
+---
+ configure.ac |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 2aa5359..e03cac8 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -3000,7 +3000,7 @@ if test "${enable_ffmpeg}" != "no"
+ then
+ 
+ dnl Trying with pkg-config
+-   PKG_CHECK_MODULES(FFMPEG,[libavcodec, libavformat],
++   PKG_CHECK_MODULES(FFMPEG,[libavcodec, libavformat, libavutil],
+     [
+      VLC_SAVE_FLAGS
+      CPPFLAGS="${CPPFLAGS} ${FFMPEG_CFLAGS}"
+-- 
+1.5.5.3
+

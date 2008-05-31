@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080524.ebuild,v 1.3 2008/05/31 08:42:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080524.ebuild,v 1.4 2008/05/31 09:48:56 aballier Exp $
 
 EAPI="1"
 
@@ -177,6 +177,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	epatch "${FILESDIR}/0001-Include-altivec.h-before-any-other-vlc-header-as-inc.patch"
+	epatch "${FILESDIR}/0002-Explicitly-check-for-and-link-to-libavutil-since-av_.patch"
 	AT_M4DIR="m4 ${WORKDIR}/${PN}-m4" eautoreconf
 }
 
