@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/xtla
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.14 2007/11/06 22:14:55 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.15 2008/05/31 07:58:57 ulm Exp $
+
+  31 May 2008; Ulrich Mueller <ulm@gentoo.org> -xtla-1.2.ebuild,
+  xtla-1.2.1.ebuild:
+  Remove dependency on dev-util/bazaar since it is going to be removed,
+  bug 219236. Remove old.
 
 *xtla-1.2.1 (06 Nov 2007)
 
