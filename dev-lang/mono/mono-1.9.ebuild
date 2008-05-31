@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.9.ebuild,v 1.1 2008/05/31 12:25:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.9.ebuild,v 1.2 2008/05/31 12:31:14 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -54,7 +54,7 @@ src_unpack() {
 	# Remove dummy ltconfig and let libtool handle it
 	rm -f "${S}"/libgc/ltconfig
 
-	epatch "${FILESDIR}/${PN}-bigint_overflow.patch"
+	epatch "${FILESDIR}/${PN}-biginteger_overflow.diff"
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
