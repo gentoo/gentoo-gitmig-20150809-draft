@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.8.ebuild,v 1.1 2008/05/31 01:04:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.8.ebuild,v 1.2 2008/05/31 04:52:17 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils qt4
@@ -30,7 +30,6 @@ src_unpack() {
 	cd "${S}/src/cli"
 	sed -i -e "s:CFLAGS =.*:CFLAGS = \$(INCLUDE) `curl-config --cflags` ${CFLAGS}:" Makefile
 }
-
 
 src_compile() {
 	cd "${S}/src/cli"
