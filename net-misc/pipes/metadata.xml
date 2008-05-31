@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
+<herd>netmon</herd>
 <longdescription>
 I just noticed that netpipes doesn't support bidirectional pipes.
 So I made my own version.
