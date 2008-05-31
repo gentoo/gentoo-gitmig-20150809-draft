@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.20 2007/07/08 16:52:02 remi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.21 2008/05/31 13:13:56 remi Exp $
+
+*gtk+extra-2.1.1-r2 (31 May 2008)
+
+  31 May 2008; Rémi Cardona <remi@gentoo.org>
+  +files/gtk+extra-2.1.1-fix-row-deletion-segfault.patch,
+  +files/gtk+extra-2.1.1-glib2.10-full-fix.patch,
+  +gtk+extra-2.1.1-r2.ebuild:
+  add patches to fix segfaults, see bug #219777
 
   08 Jul 2007; Remi Cardona <remi@gentoo.org> -gtk+extra-0.99.17.ebuild:
   punt old version 0.99.17 (see bug 160195)
