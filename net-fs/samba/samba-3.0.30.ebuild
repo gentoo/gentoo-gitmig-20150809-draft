@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.27.ebuild,v 1.11 2007/12/29 10:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.30.ebuild,v 1.1 2008/05/31 08:27:47 dev-zero Exp $
 
-inherit eutils pam python multilib versionator confutils
+inherit autotools eutils pam python multilib versionator confutils
 
 MY_P=${PN}-${PV/_/}
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://samba/${MY_P}.tar.gz
 	mirror://samba/old-versions/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE_LINGUAS="linguas_ja linguas_pl"
 IUSE="${IUSE_LINGUAS} acl ads async automount caps cups doc examples ipv6 kernel_linux ldap fam
 	pam python quotas readline selinux swat syslog winbind"
@@ -34,6 +34,9 @@ RDEPEND="dev-libs/popt
 	caps?      ( sys-libs/libcap )"
 DEPEND="${RDEPEND}"
 
+# Tests are broken now :-(
+RESTRICT="test"
+
 S=${WORKDIR}/${MY_P}
 CONFDIR=${FILESDIR}/config
 PRIVATE_DST=/var/lib/samba/private
@@ -46,12 +49,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}/source"
 
-	# This patch adds "-Wl,-z,now" to smb{mnt,umount}
-	# Please read ... for further informations
-	epatch "${FILESDIR}/3.0.26a-lazyldflags.patch"
+	# lazyldflags.patch: adds "-Wl,-z,now" to smb{mnt,umount}
+	# invalid-free-fix.patch: Bug #196015 (upstream: #5021)
 
-	# Bug #196015 (upstream: #5021)
-	epatch "${FILESDIR}/3.0.26a-invalid-free-fix.patch"
+	epatch \
+		"${FILESDIR}/3.0.26a-lazyldflags.patch" \
+		"${FILESDIR}/3.0.26a-invalid-free-fix.patch" \
+		"${FILESDIR}/3.0.28-libcap_detection.patch" \
+		"${FILESDIR}/3.0.28-fix_broken_readdir_detection.patch" \
+		"${FILESDIR}/3.0.28-autoconf-2.62-fix.patch" \
+		"${FILESDIR}/3.0.28a-wrong_python_ldflags.patch"
+
+	eautoconf -I. -Ilib/replace
 
 	# Ok, agreed, this is ugly. But it avoids a patch we
 	# need for every samba version and we don't need autotools
@@ -61,6 +70,7 @@ src_unpack() {
 		configure || die "sed failed"
 
 	rm "${S}/docs/manpages"/{mount,umount}.cifs.8
+
 }
 
 src_compile() {
@@ -102,6 +112,7 @@ src_compile() {
 		--localstatedir=/var \
 		--with-configdir=/etc/samba \
 		--with-libdir=/usr/$(get_libdir)/samba \
+		--with-pammodulesdir=$(getpam_mod_dir) \
 		--with-swatdir=/usr/share/doc/${PF}/swat \
 		--with-piddir=/var/run/samba \
 		--with-lockdir=/var/cache/samba \
@@ -153,17 +164,15 @@ src_install() {
 	# remove .old stuff from /usr/bin:
 	rm -f "${D}"/usr/bin/*.old
 
+	# Removing executable bits from header-files
+	fperms 644 /usr/include/lib{msrpc,smbclient}.h
+
 	# Nsswitch extensions. Make link for wins and winbind resolvers
 	if use winbind ; then
 		dolib.so nsswitch/libnss_wins.so
 		dosym libnss_wins.so /usr/$(get_libdir)/libnss_wins.so.2
 		dolib.so nsswitch/libnss_winbind.so
 		dosym libnss_winbind.so /usr/$(get_libdir)/libnss_winbind.so.2
-	fi
-
-	if use pam ; then
-		dopammod bin/pam_smbpass.so
-		use winbind && dopammod bin/pam_winbind.so
 	fi
 
 	if use kernel_linux ; then
@@ -200,7 +209,7 @@ src_install() {
 	newins "${CONFDIR}/smb.conf.example-samba3" smb.conf.example
 
 	newpamd "${CONFDIR}/samba.pam" samba
-	use winbind && doins ${CONFDIR}/system-auth-winbind
+	use winbind && dopamd "${CONFDIR}/system-auth-winbind"
 	if use swat ; then
 		insinto /etc/xinetd.d
 		newins "${CONFDIR}/swat.xinetd" swat
@@ -223,7 +232,7 @@ src_install() {
 	fi
 
 	# dirs
-	diropts -m0700 ; keepdir ${PRIVATE_DST}
+	diropts -m0700 ; keepdir "${PRIVATE_DST}"
 	diropts -m1777 ; keepdir /var/spool/samba
 
 	diropts -m0755
@@ -234,7 +243,7 @@ src_install() {
 
 	# docs
 	dodoc "${FILESDIR}/README.gentoo"
-	dodoc "${S}"/{README,Roadmap,WHATSNEW.txt}
+	dodoc "${S}"/{MAINTAINERS,README,Roadmap,WHATSNEW.txt}
 	dodoc "${CONFDIR}/nsswitch.conf-wins"
 	use winbind && dodoc "${CONFDIR}/nsswitch.conf-winbind"
 
@@ -291,13 +300,17 @@ pkg_postinst() {
 		einfo "  change the /etc/xinetd.d/smb configuration"
 	fi
 
-	elog "It is possible to start/stop daemons seperately:"
+	elog "It is possible to start/stop daemons separately:"
 	elog "  Create a symlink from /etc/init.d/samba.{smbd,nmbd,winbind} to"
 	elog "  /etc/init.d/samba. Calling /etc/init.d/samba directly will start"
 	elog "  the daemons configured in /etc/conf.d/samba"
 
 	elog "The mount/umount.cifs helper applications are not included anymore."
 	elog "Please install net-fs/mount-cifs instead."
+
+	ewarn "If you're upgrading from 3.0.24 or earlier, please make sure to"
+	ewarn "restart your clients to clear any cached information about the server."
+	ewarn "Otherwise they might not be able to connect to the volumes."
 }
 
 pkg_postrm() {
