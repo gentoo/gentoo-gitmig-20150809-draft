@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
- <email>vapier@gentoo.org</email>
-</maintainer>
-<maintainer>
  <email>dragonheart@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
