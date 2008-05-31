@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>A program to split files into smaller pieces and the put them back together.</longdescription>
 </pkgmetadata>
