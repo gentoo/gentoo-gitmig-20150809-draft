@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.30 2008/05/30 21:37:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.31 2008/05/31 08:39:47 aballier Exp $
+
+  31 May 2008; Alexis Ballier <aballier@gentoo.org> dvipng-1.11.ebuild:
+  Set VARTEXFONTS to something sane here, even if that does not cause
+  sandbox violations it tries to generate some fonts.
 
 *dvipng-1.11 (30 May 2008)
 

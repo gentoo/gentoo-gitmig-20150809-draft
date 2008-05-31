@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.1 2008/05/30 21:37:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.2 2008/05/31 08:39:47 aballier Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	export VARTEXFONTS="${T}/fonts"
 	econf $(use_with truetype freetype) || die "Configure failed"
 	emake || die "Compile failed"
 }
