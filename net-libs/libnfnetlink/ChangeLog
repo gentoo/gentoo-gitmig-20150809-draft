@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.20 2008/05/09 22:17:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.21 2008/05/31 21:53:46 cedk Exp $
+
+*libnfnetlink-0.0.38 (31 May 2008)
+
+  31 May 2008; Cédric Krier <cedk@gentoo.org> +libnfnetlink-0.0.38.ebuild:
+  Version bump
 
   09 May 2008; Markus Meier <maekke@gentoo.org> libnfnetlink-0.0.33.ebuild:
   amd64 stable, bug #214072
