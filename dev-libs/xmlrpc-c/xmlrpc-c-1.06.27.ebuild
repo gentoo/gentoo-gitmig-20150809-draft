@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.27.ebuild,v 1.1 2008/05/30 23:55:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.27.ebuild,v 1.2 2008/05/31 00:40:14 loki_val Exp $
 
 EAPI=1
 
@@ -43,6 +43,9 @@ src_unpack() {
 }
 
 src_compile() {
+	#Bug 214137: We need to filter this.
+	unset SRCDIR
+
 	# Respect the user's LDFLAGS.
 	export LADD=${LDFLAGS}
 	econf --disable-wininet-client --enable-libxml2-backend --disable-libwww-client \
@@ -52,6 +55,7 @@ src_compile() {
 }
 
 src_test() {
+	unset SRCDIR
 	unset LDFLAGS LADD
 	cd "${S}"/src/test/
 	einfo "Building general tests"
@@ -69,6 +73,7 @@ src_test() {
 
 
 src_install() {
+	unset SRCDIR
 	emake -j1 DESTDIR="${D}" install || die "installation failed"
 
 	dodoc README doc/CREDITS doc/DEVELOPING doc/HISTORY doc/SECURITY doc/TESTING \
