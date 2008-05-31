@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/glftpd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.17 2007/11/11 17:45:59 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.18 2008/05/31 05:23:22 vapier Exp $
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> files/glftpd.xinetd.d:
+  Dont both listing cert path in xinetd as it should be handled in the glftpd
+  conf file #205389 by Jiri Tyr.
 
   11 Nov 2007; Raúl Porcel <armin76@gentoo.org> glftpd-2.01.ebuild:
   x86 stable
