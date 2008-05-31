@@ -1,6 +1,6 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.30 2008/05/31 11:48:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.31 2008/05/31 11:53:00 drac Exp $
 
 *xfce4-sensors-0.10.99.3-r1 (31 May 2008)
 
@@ -8,7 +8,7 @@
   +files/xfce4-sensors-0.10.99.3-acpi.patch,
   +files/xfce4-sensors-0.10.99.3-hddtemp.patch,
   +xfce4-sensors-0.10.99.3-r1.ebuild:
-  Apply patches ffrom bugs 217743 and 214527, thanks to Torsten Krah, Paolo
+  Apply patches from bugs 217743 and 214527, thanks to Torsten Krah, Paolo
   Pedroni, Tim Taubert and Andy Crook. Fixes for ACPI and hddtemp.
 
   22 Mar 2008; nixnut <nixnut@gentoo.org> xfce4-sensors-0.10.99.3.ebuild:
