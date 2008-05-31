@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>vapier@gentoo.org</email>
-	<description>If you want this package and you dont suck, e-mail me</description>
-</maintainer>
+<herd>svgalib</herd>
 </pkgmetadata>

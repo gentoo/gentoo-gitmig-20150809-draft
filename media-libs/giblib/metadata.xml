@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>
 giblib is a utility library used by many of the applications I write. It 
 incorporates doubly linked lists, some string functions, and a wrapper 
