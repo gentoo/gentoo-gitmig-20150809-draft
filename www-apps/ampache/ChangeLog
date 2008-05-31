@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.36 2008/05/20 23:20:02 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.37 2008/05/31 17:14:37 marineam Exp $
+
+*ampache-3.4.1 (31 May 2008)
+
+  31 May 2008; Michael Marineau <marineam@gentoo.org> +ampache-3.4.1.ebuild:
+  Version bump, bugfix release.
 
 *ampache-3.4 (20 May 2008)
 
