@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.0.ebuild,v 1.2 2008/03/22 23:56:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.2.ebuild,v 1.1 2008/05/31 14:27:12 eva Exp $
 
 inherit gnome2 eutils multilib
 
@@ -16,7 +16,7 @@ IUSE="avahi doc networkmanager python spell xulrunner"
 # dang: *after* webkit actually works.
 # this release should work with xulrunner 1.9 so not slotting right now
 
-RDEPEND=">=dev-libs/glib-2.15.6
+RDEPEND=">=dev-libs/glib-2.16.0
 	>=x11-libs/gtk+-2.12.0
 	>=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.7
