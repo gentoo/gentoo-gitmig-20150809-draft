@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.13 2008/01/12 03:50:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.14 2008/06/01 10:30:18 zmedico Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -15,7 +15,6 @@ SLOT="0"
 IUSE="build doc selinux"
 DEPEND=">=dev-lang/python-2.2.1"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !mips? ( >=sys-apps/sandbox-1.2.17 ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
-PDEPEND="doc? ( app-portage/portage-manpages )"
 PROVIDE="virtual/portage"
 
 S=${WORKDIR}/${PN}-${PV}

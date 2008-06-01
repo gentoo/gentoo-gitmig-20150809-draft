@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.4.ebuild,v 1.8 2008/02/18 09:51:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.4.ebuild,v 1.9 2008/06/01 10:30:18 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -24,9 +24,6 @@ RDEPEND=">=dev-lang/python-2.4
 	>=app-misc/pax-utils-0.1.13
 	selinux? ( >=dev-python/python-selinux-2.16 )"
 PDEPEND="
-	doc? (
-		|| ( app-portage/eclass-manpages app-portage/portage-manpages )
-	)
 	!build? (
 		>=net-misc/rsync-2.6.4
 		userland_GNU? ( >=sys-apps/coreutils-6.4 )

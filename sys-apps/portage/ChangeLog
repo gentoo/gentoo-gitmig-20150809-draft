@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.521 2008/05/29 18:01:52 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.522 2008/06/01 10:30:18 zmedico Exp $
+
+*portage-2.1.5.3 (01 Jun 2008)
+
+  01 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.3.ebuild:
+  2.1.5.3 bump. This fixes bugs #223417 (KeyError in merge phase),
+  #223447 (depclean removes newly installed packages), and #223685
+  (elog messages lost after build failure). Bug #216231 tracks all
+  bugs fixed since 2.1.4.x.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> portage-2.2_pre3.ebuild,
   portage-2.2_pre5.ebuild, portage-2.2_pre6.ebuild, portage-2.2_pre7.ebuild:
