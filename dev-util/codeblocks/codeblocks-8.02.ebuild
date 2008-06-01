@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02.ebuild,v 1.1 2008/06/01 00:12:46 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02.ebuild,v 1.2 2008/06/01 03:34:09 mr_bones_ Exp $
 
 inherit autotools wxwidgets flag-o-matic eutils
 
@@ -64,7 +64,7 @@ src_compile() {
 #			$(use_enable debuger) \
 #			$(use_enable mime-handler) \
 #			$(use_enable open-files-list) \
-#			
+#
 #			$(use_enable projects-importer) \
 #			$(use_enable source-formatter) \
 #			$(use_enable todo) \
