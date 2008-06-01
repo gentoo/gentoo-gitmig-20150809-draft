@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.22 2008/01/02 23:20:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.23 2008/06/01 09:08:17 wschlich Exp $
+
+  01 Jun 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -inotify-tools-3.11.ebuild, inotify-tools-3.12.ebuild,
+  inotify-tools-3.13.ebuild:
+  add missing IUSE as per bug #224375, remove old versions
 
 *inotify-tools-3.13 (02 Jan 2008)
 
