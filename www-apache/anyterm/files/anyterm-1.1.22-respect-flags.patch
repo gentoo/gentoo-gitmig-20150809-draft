@@ -1,0 +1,64 @@
+--- apachemod/Makefile
++++ apachemod/Makefile
+@@ -85,7 +85,7 @@
+ 	-DUSE_SHMEM \
+ 	-I../boost_shmem
+ 
+-COMPILE_FLAGS=$(CPP_FLAGS) $(shell $(APR_CONFIG) --cflags) -Wall -O0 -g
++COMPILE_FLAGS=$(CPP_FLAGS) $(shell $(APR_CONFIG) --cflags) -Wall
+ 
+ C_COMPILE_FLAGS=$(COMPILE_FLAGS) -std=gnu99
+ 
+@@ -108,23 +108,23 @@
+ OBJS=$(addsuffix .lo,$(basename $(C_SRCS) $(CC_SRCS)))
+ 
+ %.lo: %.cc
+-	$(LIBTOOL) --mode=compile --tag=CXX $(CXX) $(CC_COMPILE_FLAGS) -o $@ -c $<
++	$(LIBTOOL) --mode=compile --tag=CXX $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CC_COMPILE_FLAGS) -o $@ -c $<
+ 
+ %.lo: %.c
+-	$(LIBTOOL) --mode=compile $(CC) $(C_COMPILE_FLAGS) -o $@ -c $<
++	$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) $(C_COMPILE_FLAGS) -o $@ -c $<
+ 
+ 
+ compile: $(OBJS) $(LIBPBE_LIB)
+-	$(APXS) -c -o anyterm.la $(OBJS) $(LINK_FLAGS)
++	$(APXS) $(LDFLAGS) -c -o anyterm.la $(OBJS) $(LINK_FLAGS)
+ 
+ install: FORCE
+ 	$(APXS) -n anyterm -i anyterm.la
+ 
+ %.d: %.cc
+-	$(CXX) -MM -MG -MT $@ -MT $(<:%.cc=%.lo) $(CPP_FLAGS) -o $@ $<
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MM -MG -MT $@ -MT $(<:%.cc=%.lo) $(CPP_FLAGS) -o $@ $<
+ 
+ %.d: %.c
+-	$(CC) -MM -MG -MT $@ -MT $(<:%.c=%.lo) $(CPP_FLAGS) -o $@ $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) -MM -MG -MT $@ -MT $(<:%.c=%.lo) $(CPP_FLAGS) -o $@ $<
+ 
+ DEPENDS=$(addsuffix .d,$(basename $(OBJS)))
+ 
+--- libpbe/build/Makefile
++++ libpbe/build/Makefile
+@@ -53,7 +53,7 @@
+ 
+ WARN_FLAGS=-W -Wall
+ 
+-OPTIMISE_FLAGS=-O
++OPTIMISE_FLAGS=
+ 
+ DEBUG_FLAGS=
+ 
+@@ -71,10 +71,10 @@
+ 	$(AR) ruv $(LIBRARY) $(OBJS)
+ 
+ %.o: %.cc
+-	$(CXX) $(COMPILE_FLAGS) -c $<
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(COMPILE_FLAGS) -c $<
+ 
+ %.d: %.cc
+-	$(CXX) -pthread -MM -MT $@ -MT $(notdir $(<:%.cc=%.o)) $(INC_FLAGS) -o $@ $<
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -pthread -MM -MT $@ -MT $(notdir $(<:%.cc=%.o)) $(INC_FLAGS) -o $@ $<
+ 
+ all: $(EXECUTABLE)
+ 

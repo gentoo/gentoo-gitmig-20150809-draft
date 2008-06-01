@@ -1,23 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.22.ebuild,v 1.1 2008/03/22 16:35:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.22.ebuild,v 1.2 2008/06/01 09:29:03 hollow Exp $
 
 inherit apache-module eutils toolchain-funcs webapp
-
-KEYWORDS="~x86"
 
 DESCRIPTION="A terminal anywhere."
 HOMEPAGE="http://anyterm.org/"
 SRC_URI="http://anyterm.org/download/${P}.tbz2"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86"
 IUSE="opera pam ssl"
 
 DEPEND="dev-libs/boost
 		>=dev-libs/rote-0.2.8
 		>=sys-devel/gcc-3
 		virtual/ssh
-		pam? ( www-apache/mod_auth_pam )"
+		pam? ( || ( www-apache/mod_authn_pam www-apache/mod_auth_pam ) )"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="50_${PN}"
@@ -48,10 +48,18 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.1.15-browser-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-1.1.22-respect-flags.patch
 	sed -i -e "s:apr-config:apr-1-config:g" apachemod/Makefile
 }
 
 src_compile() {
+	local my_LDFLAGS
+	for flag in ${LDFLAGS} ; do
+		my_LDFLAGS="${my_LDFLAGS} -Wl,${flag}"
+	done
+	unset flag
+	export LDFLAGS="${my_LDFLAGS# }"
+
 	cd apachemod
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "Apachemod make failed"
 	cd ..
