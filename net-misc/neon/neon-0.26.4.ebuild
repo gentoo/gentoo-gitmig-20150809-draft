@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.4.ebuild,v 1.9 2008/04/13 14:22:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.4.ebuild,v 1.10 2008/06/01 12:08:15 hollow Exp $
 
 inherit eutils libtool versionator autotools
 
@@ -24,7 +24,10 @@ DEPEND="expat? ( dev-libs/expat )
 
 src_unpack() {
 	unpack ${A}
-	elibtoolize
+	cd "${S}"
+
+	sed -i -e "s/socks5/socks/g" macros/neon.m4
+	AT_M4DIR="macros" eautoreconf
 }
 
 src_compile() {
