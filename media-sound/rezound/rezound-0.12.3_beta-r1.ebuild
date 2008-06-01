@@ -1,16 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.5 2008/04/24 10:01:47 armin76 Exp $
-
-WANT_AUTOMAKE=1.9
-WANT_AUTOCONF=2.5
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.6 2008/06/01 23:19:21 aballier Exp $
 
 inherit eutils autotools
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
-PATCHLEVEL="4"
+PATCHLEVEL="5"
 DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz

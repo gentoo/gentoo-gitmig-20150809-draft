@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.53 2008/04/24 10:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.54 2008/06/01 23:19:21 aballier Exp $
+
+  01 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  rezound-0.12.3_beta-r1.ebuild:
+  Add various patches: gcc 4.3 and endianness typo ported from debian by
+  Peter Alfredsen <loki_val@gentoo.org>, bug #219438, another one to shut up
+  autofoo warnings and a last one to fix build with new libtools
 
   24 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   rezound-0.12.3_beta-r1.ebuild:
