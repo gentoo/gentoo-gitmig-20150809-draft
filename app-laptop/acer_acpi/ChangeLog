@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/acer_acpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.15 2008/01/30 23:44:16 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.16 2008/06/01 00:27:22 jurek Exp $
+
+*acer_acpi-0.11.2 (01 Jun 2008)
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> +acer_acpi-0.11.2.ebuild:
+  Version bump (bug #214632)
 
   30 Jan 2008; Jurek Bartuszek <jurek@gentoo.org> acer_acpi-0.10.ebuild:
   Appended BACKLIGHT_LCD_SUPPORT to CONFIG_CHECK (bug #195803)
