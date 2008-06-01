@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.60 2008/03/21 11:43:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.61 2008/06/01 21:38:51 vapier Exp $
+
+*horde-3.2 (01 Jun 2008)
+
+  01 Jun 2008; Mike Frysinger <vapier@gentoo.org> +horde-3.2.ebuild:
+  Version bump #224333 by Arfrever Frehtes Taifersar Arahesis.
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> horde-3.1.7.ebuild:
   amd64 stable, security bug #213493

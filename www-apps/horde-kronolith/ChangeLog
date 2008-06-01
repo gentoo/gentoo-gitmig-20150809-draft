@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.42 2008/03/14 08:12:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.43 2008/06/01 21:46:50 vapier Exp $
+
+*horde-kronolith-2.2 (01 Jun 2008)
+
+  01 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  +horde-kronolith-2.2.ebuild:
+  Version bump #224333 by Arfrever Frehtes Taifersar Arahesis.
 
   14 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   horde-kronolith-2.1.7.ebuild:

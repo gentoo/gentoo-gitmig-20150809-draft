@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-mimp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/ChangeLog,v 1.4 2008/05/31 05:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/ChangeLog,v 1.5 2008/06/01 21:43:19 vapier Exp $
+
+*horde-mimp-1.1 (01 Jun 2008)
+
+  01 Jun 2008; Mike Frysinger <vapier@gentoo.org> +horde-mimp-1.1.ebuild:
+  Version bump #224333 by Arfrever Frehtes Taifersar Arahesis.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> horde-mimp-1.0.2.ebuild:
   Depend on either horde or horde-groupware or horde-webmail as pointed out by

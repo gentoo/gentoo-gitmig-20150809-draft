@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.42 2008/05/31 05:11:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.43 2008/06/01 21:42:21 vapier Exp $
+
+*horde-imp-4.2 (01 Jun 2008)
+
+  01 Jun 2008; Mike Frysinger <vapier@gentoo.org> +horde-imp-4.2.ebuild:
+  Version bump #224333 by Arfrever Frehtes Taifersar Arahesis.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> horde-imp-4.1.6.ebuild:
   Depend on either horde or horde-groupware as pointed out by Robin Bankhead
