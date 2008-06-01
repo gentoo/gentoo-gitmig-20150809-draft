@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/cutecom
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.15 2007/10/01 11:52:11 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.16 2008/06/01 01:20:58 jurek Exp $
+
+*cutecom-0.20.0 (01 Jun 2008)
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> +cutecom-0.20.0.ebuild:
+  Version bump (bug #213533)
 
   01 Oct 2007; Alin Năstac <mrness@gentoo.org> cutecom-0.14.1.ebuild:
   Fix compilation failure when qt4 is present.
