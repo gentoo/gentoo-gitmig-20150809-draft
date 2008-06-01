@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.2 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.3 2008/06/01 00:57:28 jurek Exp $
 
 inherit eutils
 
@@ -21,12 +21,11 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 
 	unpack ${A} || die "unpack failed"
-
-	cd ${S}
+	cd "${S}"
 
 	# The upstream maintainer was informed of this patch,
 	# so it might be integrated in future versions
-	epatch ${FILESDIR}/${P}-Adapt_paths.patch || die "epatch failed"
+	epatch "${FILESDIR}"/${P}-Adapt_paths.patch || die "epatch failed"
 }
 
 src_install() {
@@ -77,7 +76,7 @@ src_install() {
 	# Documentation
 	#
 
-	dodoc ${S}/README || die "dodoc failed"
+	dodoc "${S}"/README || die "dodoc failed"
 }
 
 pkg_postinst() {
