@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3562 2008/06/01 00:41:14 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3563 2008/06/01 21:06:40 loki_val Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -952,6 +952,7 @@ mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
 mail-mta/qmail-ldap:rfc2307 - Add support for RFC2307 compliant uid/gid attributes
 mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
+media-fonts/dejavu:fontforge - Enables fontforge build
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/autotrace:flash - Adds support for creating SWF files using Ming
