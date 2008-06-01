@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3561 2008/05/31 11:23:32 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3562 2008/06/01 00:41:14 jurek Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -659,7 +659,6 @@ dev-util/mercurial:git - Support conversion of Git repositories to Mercurial.
 dev-util/mercurial:gpg - Support signing with GnuPG.
 dev-util/mercurial:zsh-completion - Install zsh command completion for hg.
 dev-util/monodevelop:aspnet - Enable ASP.NET support
-dev-util/monodevelop:aspnetedit - Enable ASP.NET visual designer support
 dev-util/monodevelop:boo - Enable support for the boo programming language
 dev-util/monodevelop:c++ - Enable support for C/C++ programming languages
 dev-util/netbeans:c++ - Adds Netbeans C/C++ Pack
