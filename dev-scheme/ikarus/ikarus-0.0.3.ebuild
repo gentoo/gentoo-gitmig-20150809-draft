@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3.ebuild,v 1.2 2008/06/01 03:33:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3.ebuild,v 1.3 2008/06/01 18:03:13 pchrist Exp $
 
 inherit eutils flag-o-matic autotools
 
-DESCRIPTION="Ikarus is a free optimizing incremental native-code compiler for R6RS Scheme."
+DESCRIPTION="A free optimizing incremental native-code compiler for R6RS Scheme."
 HOMEPAGE="http://www.cs.indiana.edu/~aghuloum/ikarus/"
 SRC_URI="http://www.cs.indiana.edu/~aghuloum/ikarus/${P}.tar.gz"
 
