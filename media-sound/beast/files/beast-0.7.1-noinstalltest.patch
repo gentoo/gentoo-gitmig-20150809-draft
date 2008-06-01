@@ -14,3 +14,19 @@ Index: beast-0.7.1/shell/Makefile.in
  	done
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+Index: beast-0.7.1/shell/Makefile.am
+===================================================================
+--- beast-0.7.1.orig/shell/Makefile.am
++++ beast-0.7.1/shell/Makefile.am
+@@ -859,10 +859,7 @@ check-before: check-installation
+ check-installation:
+ 	@for p in $(bin_PROGRAMS) ; do					\
+ 	  pp="$(DESTDIR)$(bindir)/$$p" ;				\
+-	  echo "TEST: test -x \"$$pp\"" ;				\
+-	  test -x "$$pp" ||						\
+-	    { echo "Failed to verify installation of executable: $$pp";	\
+-	      exit 1 ; }						\
++	  echo "TEST: test -x \"$$pp\" Test disabled" ;				\
+ 	done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

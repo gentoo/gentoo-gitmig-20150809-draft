@@ -1,0 +1,22 @@
+--- beast-0.7.1.orig/bse/Makefile.am	2008-06-01 13:12:28.116708321 +0200
++++ beast-0.7.1/bse/Makefile.am	2008-06-01 13:12:40.000000000 +0200
+@@ -10,7 +10,7 @@
+ # need -I$(top_builddir) for <sfi/sficonfig.h>
+ # need -I$(srcdir) for "bseserver.h" in .genprc.c
+ # need -I. (builddir) for "bsecore.genidl.hh" in bsecore.cc
+-INCLUDES += -I$(top_srcdir) -I$(top_builddir) -I$(srcdir) -I. $(BSE_CFLAGS) -DG_DISABLE_DEPRECATED -DG_DISABLE_CONST_RETURNS
++INCLUDES += -I$(top_srcdir) -I$(top_builddir) -I$(srcdir) -I. $(BSE_CFLAGS) -DG_DISABLE_CONST_RETURNS
+ DEFS     += $(strip \
+ 	$(patsubst %, -DG_LOG_DOMAIN=\"BSE\" -DBSE_COMPILATION, \
+ 	              $(filter $(<F), $(bse_sources) $(bse_sources))) \
+--- beast-0.7.1.orig/bse/zintern/Makefile.am	2008-06-01 13:14:25.880028999 +0200
++++ beast-0.7.1/bse/zintern/Makefile.am	2008-06-01 13:14:38.000000000 +0200
+@@ -4,7 +4,7 @@
+ ## GNU Lesser General Public License version 2 or any later version.
+ include $(top_srcdir)/Makefile.decl
+ 
+-INCLUDES += -I$(top_srcdir) -I$(top_builddir) $(BSE_CFLAGS) -DG_DISABLE_DEPRECATED -DG_DISABLE_CONST_RETURNS
++INCLUDES += -I$(top_srcdir) -I$(top_builddir) $(BSE_CFLAGS) -DG_DISABLE_CONST_RETURNS
+ 
+ ZFILE_DEFS = $(strip \
+ 	wave-mono		$(srcdir)/wave-mono.bse		\

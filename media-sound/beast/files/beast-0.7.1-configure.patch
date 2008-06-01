@@ -1,0 +1,77 @@
+--- a/configure.in	2008-06-01 15:19:46.000000000 +0200
++++ b/configure.in	2008-06-01 15:27:45.000000000 +0200
+@@ -159,39 +159,33 @@
+ dnl # Define package requirements.
+ dnl #
+ dnl ## include acintltool.m4 to provide IT_PROG_INTLTOOL
+-builtin(include, acintltool.m4)dnl
+-AC_DEFUN([AC_I18N_REQUIREMENTS],
+-[
+-    ALL_LINGUAS=`cat "$srcdir/po/LINGUAS" | grep -v '^#' | xargs echo -n `
+-    AC_SUBST(ALL_LINGUAS)
+-    AC_SUBST([CONFIG_STATUS_DEPENDENCIES], ['$(top_srcdir)/po/LINGUAS'])
+-
+-    dnl # versioned BEAST gettext domain (po/)
+-    BST_GETTEXT_DOMAIN=beast-v$BIN_VERSION    # version without -rcZ
+-    AC_SUBST(BST_GETTEXT_DOMAIN)
+-    AC_DEFINE_UNQUOTED(BST_GETTEXT_DOMAIN, "$BST_GETTEXT_DOMAIN", [Versioned BEAST gettext domain])
+-    GETTEXT_PACKAGE=$BST_GETTEXT_DOMAIN
+-    AC_SUBST(GETTEXT_PACKAGE)
+-
+-    dnl # locale directory for all domains
+-    dnl # (AM_GLIB_DEFINE_LOCALEDIR() could do this if it would do AC_SUBST())
+-    saved_prefix="$prefix"
+-    saved_exec_prefix="$exec_prefix"
+-    test "x$prefix" = xNONE && prefix=$ac_default_prefix
+-    test "x$exec_prefix" = xNONE && exec_prefix=$prefix
+-    if test "x$CATOBJEXT" = "x.mo" ; then
+-      beastlocaledir=`eval echo "${libdir}/locale"`
+-    else
+-      beastlocaledir=`eval echo "${datadir}/locale"`
+-    fi
+-    exec_prefix="$saved_exec_prefix"
+-    prefix="$saved_prefix"
+-    AC_SUBST(beastlocaledir)
+-
+-    dnl # do gettext checks and prepare for intltool
+-    AM_GLIB_GNU_GETTEXT
+-    IT_PROG_INTLTOOL
+-])
++IT_PROG_INTLTOOL([0.35.0])
++
++dnl # versioned BEAST gettext domain (po/)
++BST_GETTEXT_DOMAIN=beast-v$BIN_VERSION    # version without -rcZ
++AC_SUBST(BST_GETTEXT_DOMAIN)
++AC_DEFINE_UNQUOTED(BST_GETTEXT_DOMAIN, "$BST_GETTEXT_DOMAIN", [Versioned BEAST gettext domain])
++GETTEXT_PACKAGE=$BST_GETTEXT_DOMAIN
++AC_SUBST(GETTEXT_PACKAGE)
++
++dnl # locale directory for all domains
++dnl # (AM_GLIB_DEFINE_LOCALEDIR() could do this if it would do AC_SUBST())
++saved_prefix="$prefix"
++saved_exec_prefix="$exec_prefix"
++test "x$prefix" = xNONE && prefix=$ac_default_prefix
++test "x$exec_prefix" = xNONE && exec_prefix=$prefix
++if test "x$CATOBJEXT" = "x.mo" ; then
++  beastlocaledir=`eval echo "${libdir}/locale"`
++else
++  beastlocaledir=`eval echo "${datadir}/locale"`
++fi
++exec_prefix="$saved_exec_prefix"
++prefix="$saved_prefix"
++AC_SUBST(beastlocaledir)
++
++dnl # do gettext checks and prepare for intltool
++AM_GLIB_GNU_GETTEXT
++
+ AC_DEFUN([AC_SFI_REQUIREMENTS],
+ [
+     dnl # check for GLib libs, libbirnet already provides gthread-2.0 and glib-2.0
+@@ -570,7 +564,6 @@
+ AC_BIRNET_REQUIREMENTS
+ 
+ # Check requirement sets
+-AC_I18N_REQUIREMENTS
+ AC_SFI_REQUIREMENTS
+ AC_BSE_REQUIREMENTS
+ AC_BSESCM_REQUIREMENTS
