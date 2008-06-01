@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.112 2008/05/21 15:50:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.113 2008/06/01 08:58:04 graaff Exp $
+
+  01 Jun 2008; Hans de Graaff <graaff@gentoo.org> -xemacs-21.5.28.ebuild:
+  Remove broken and insecure 21.5.28 version. If you must use 21.5 now then
+  please use the version from the xemacs overlay or have a bit of patience as I
+  intend to add that version here shortly.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> xemacs-21.4.21.ebuild,
   xemacs-21.4.21-r1.ebuild, xemacs-21.5.28.ebuild:
