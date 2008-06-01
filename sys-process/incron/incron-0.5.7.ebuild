@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.7.ebuild,v 1.1 2007/12/19 20:50:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.7.ebuild,v 1.2 2008/06/01 10:20:48 hollow Exp $
 
 inherit eutils linux-info toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

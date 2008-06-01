@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/incron
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.2 2007/12/19 20:56:37 hollow Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.3 2008/06/01 10:20:48 hollow Exp $
+
+  01 Jun 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/incron-0.5.7-gcc43.patch, metadata.xml, incron-0.5.7.ebuild:
+  fix #219673
 
   19 Dec 2007; Benedikt Böhm <hollow@gentoo.org>
   files/incron-0.5.7-gentoo.patch:
