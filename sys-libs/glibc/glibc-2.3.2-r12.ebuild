@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.23 2007/07/15 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.24 2008/06/01 02:34:57 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -291,7 +291,7 @@ src_unpack() {
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
-	use_nptl || tar xjf ${DESTDIR}/glibc-${MY_PV}-manpages.tar.bz2
+	use_nptl || tar xjf ${DISTDIR}/glibc-${MY_PV}-manpages.tar.bz2
 
 	cd ${S}
 	# Extract our threads package ...
