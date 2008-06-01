@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.65 2008/06/01 01:37:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.66 2008/06/01 01:38:09 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -12,84 +12,6 @@
 
 ___ECLASS_RECUR_MULTILIB="yes"
 [[ -z ${___ECLASS_RECUR_TOOLCHAIN_FUNCS} ]] && inherit toolchain-funcs
-
-# is_final_abi:
-# Return true if ${ABI} is the final abi to be installed (and thus we are
-# on our last run through a src_* function.
-
-# number_abis:
-# echo the number of ABIs we will be installing for
-
-# get_install_abis:
-# Return a list of the ABIs we want to install for with
-# the last one in the list being the default.
-
-# get_all_abis:
-# Return a list of the ABIs supported by this profile.
-# the last one in the list being the default.
-
-# get_all_libdirs:
-# Returns a list of all the libdirs used by this profile.  This includes
-# those that might not be touched by the current ebuild and always includes
-# "lib".
-
-# get_libdir:
-# Returns the libdir for the selected ABI.  This is backwards compatible
-# and simply calls get_abi_LIBDIR() on newer profiles.  You should use this
-# to determine where to install shared objects (ex: /usr/$(get_libdir))
-
-# get_abi_var <VAR> [<ABI>]:
-# returns the value of ${<VAR>_<ABI>} which should be set in make.defaults
-#
-# get_abi_CFLAGS:
-# get_abi_CDEFINE:
-# get_abi_LIBDIR:
-# Aliases for 'get_abi_var CFLAGS', etc.
-
-# get_ml_incdir [<include dir> [<ABI>]]
-# include dir defaults to /usr/include
-# ABI defaults to ${ABI} or ${DEFAULT_ABI}
-#
-# If a multilib include dir is associated with the passed include dir, then
-# we return it, otherwise, we just echo back the include dir.  This is
-# neccessary when a built script greps header files rather than testing them
-# via #include (like perl) to figure out features.
-
-# prep_ml_includes:
-# Some includes (include/asm, glibc, etc) are ABI dependent.  In this case,
-# We can install them in different locations for each ABI and create a common
-# header which includes the right one based on CDEFINE_${ABI}.  If your
-# package installs ABI-specific headers, just add 'prep_ml_includes' to the
-# end of your src_install().  It takes a list of directories that include
-# files are installed in (default is /usr/include if none are passed).
-#
-# Example:
-# src_install() {
-#    ...
-#    prep_ml_includes /usr/qt/3/include
-# }
-
-# create_ml_includes <include dir> <symbol 1>:<dir 1> [<symbol 2>:<dir 2> ...]
-# If you need more control than prep_ml_includes can offer (like linux-headers
-# for the asm-* dirs, then use create_ml_includes.  The firs argument is the
-# common dir.  The remaining args are of the form <symbol>:<dir> where
-# <symbol> is what is put in the #ifdef for choosing that dir.
-#
-# Ideas for this code came from debian's sparc-linux headers package.
-#
-# Example:
-# create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
-# create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
-
-# get_libname [version]
-# returns libname with proper suffix {.so,.dylib} and optionally supplied version
-# for ELF/MACH-O shared objects
-#
-# Example:
-# get_libname libfoo ${PV}
-# Returns: libfoo.so.${PV} (ELF) || libfoo.${PV}.dylib (MACH)
-
-### END DOCUMENTATION ###
 
 # Defaults:
 export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
