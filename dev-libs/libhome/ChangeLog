@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.4 2008/05/21 15:59:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.5 2008/06/01 12:53:13 hollow Exp $
+
+  01 Jun 2008; Benedikt Böhm <hollow@gentoo.org> libhome-0.10.1.ebuild:
+  fix #220887
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> libhome-0.10.1.ebuild:
   Changed dependency for postgresql from dev-db/postgresql to
