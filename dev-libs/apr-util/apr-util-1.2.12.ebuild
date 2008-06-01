@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.12.ebuild,v 1.2 2008/05/19 19:26:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.12.ebuild,v 1.3 2008/06/01 11:42:35 hollow Exp $
 
 inherit autotools eutils flag-o-matic libtool db-use
 
@@ -15,16 +15,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~spa
 IUSE="berkdb doc gdbm ldap mysql postgres sqlite sqlite3"
 RESTRICT="test"
 
-DEPEND="dev-libs/expat
+RDEPEND="dev-libs/expat
 	>=dev-libs/apr-${PV}
 	berkdb? ( =sys-libs/db-4* )
-	doc? ( app-doc/doxygen )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )
 	mysql? ( =virtual/mysql-5* )
 	postgres? ( virtual/postgresql-base )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( =dev-db/sqlite-3* )"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
