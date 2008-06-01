@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.3.1.ebuild,v 1.1 2008/05/31 12:36:07 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.3.1.ebuild,v 1.2 2008/06/01 11:03:20 jurek Exp $
 
 inherit mono multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/mono-1.2.5.1-r1
+RDEPEND=">=dev-lang/mono-1.9
 		 >=dev-dotnet/gtk-sharp-2.0"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"

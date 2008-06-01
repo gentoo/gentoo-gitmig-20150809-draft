@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.7 2008/05/31 12:36:07 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.8 2008/06/01 11:03:20 jurek Exp $
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> mono-addins-0.3.1.ebuild:
+  Updated dev-lang/mono dependency to >=1.9 (bug #224441)
 
   31 May 2008; Jurek Bartuszek <jurek@gentoo.org> mono-addins-0.2.ebuild,
   +mono-addins-0.3.1.ebuild:
