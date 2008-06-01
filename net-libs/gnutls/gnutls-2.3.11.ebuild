@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.3.ebuild,v 1.1 2008/05/06 17:27:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.3.11.ebuild,v 1.1 2008/06/01 05:11:12 dragonheart Exp $
 
 inherit libtool autotools eutils
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
+SRC_URI="http://www.gnu.org/software/gnutls/releases/${P}.tar.bz2"
+#SRC_URI="mirror://gnu/gnutls/${P}.tar.bz2"
 
 # GPL-3 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-3"
@@ -48,11 +49,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use bindist && myconf="--disable-lzo" || myconf="$(use_enable lzo)"
+	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
 	econf  \
 		--without-included-opencdk \
 		$(use_with zlib) \
-		$(use_with lzo) \
 		$(use_enable nls) \
 		$(use_enable guile) \
 		$(use_enable doc gtk-doc) \
