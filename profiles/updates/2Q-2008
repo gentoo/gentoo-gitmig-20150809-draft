@@ -32,3 +32,4 @@ move media-fonts/ttf-sil-galatia media-fonts/sil-galatia
 move xfce-extra/xfmpc media-sound/xfmpc
 move media-fonts/fireflysung media-fonts/opendesktop-fonts
 move app-portage/portage-manpages app-portage/eclass-manpages
+move gnome-extra/gnome2-user-docs gnome-extra/gnome-user-docs
