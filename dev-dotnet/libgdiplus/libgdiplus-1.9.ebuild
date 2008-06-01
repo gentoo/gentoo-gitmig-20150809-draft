@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.9.ebuild,v 1.1 2008/05/31 12:22:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.9.ebuild,v 1.2 2008/06/01 01:47:30 jurek Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXt
+		x11-libs/cairo
 		 exif? ( media-libs/libexif )
 		 gif? ( >=media-libs/giflib-4.1.3 )
 		 jpeg? ( media-libs/jpeg )
@@ -35,6 +36,10 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.2.5-imglibs.patch"
 
+	sed -i \
+		-e 's/FONTCONFIG-CONFIG/FONTCONFIG_CONFIG/' \
+		-e 's/FREETYPE-CONFIG/FREETYPE_CONFIG/' \
+		configure.in || die 'configure.in not found'
 	eautoreconf
 }
 
@@ -47,6 +52,8 @@ src_compile() {
 
 	# Disable glitz support as libgdiplus does not use it, and it causes errors
 	econf --disable-glitz          \
+		--disable-dependency-tracking \
+		--with-cairo=system \
 		  $(use_with exif libexif) \
 		  $(use_with gif libgif)   \
 		  $(use_with jpeg libjpeg) \

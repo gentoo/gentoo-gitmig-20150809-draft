@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.85 2008/05/31 12:22:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.86 2008/06/01 01:47:30 jurek Exp $
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> libgdiplus-1.2.4.ebuild,
+  libgdiplus-1.9.ebuild:
+  Fixed newer autoconf versions handling (bugs #217355 #224335)
 
 *libgdiplus-1.9 (31 May 2008)
 

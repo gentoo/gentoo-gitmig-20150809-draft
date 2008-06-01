@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.4.ebuild,v 1.7 2008/04/18 22:19:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.4.ebuild,v 1.8 2008/06/01 01:47:30 jurek Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -35,6 +35,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.1.13-libungif-configure-fix.diff"
 	epatch "${FILESDIR}/${P}-cairo.patch"
+
+	sed -i \
+		-e 's/FONTCONFIG-CONFIG/FONTCONFIG_CONFIG/' \
+		-e 's/FREETYPE-CONFIG/FREETYPE_CONFIG/' \
+		configure.in || die 'configure.in not found'
 	eautoreconf
 }
 
