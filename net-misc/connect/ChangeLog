@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/connect
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.6 2007/10/25 08:18:22 wschlich Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.7 2008/06/01 08:52:05 wschlich Exp $
+
+  01 Jun 2008; Wolfram Schlich <wschlich@gentoo.org> -connect-1.95.ebuild,
+  -connect-1.96.ebuild, connect-100.ebuild:
+  add missing IUSE as per bug #224375, remove old versions
 
 *connect-100 (25 Oct 2007)
 
