@@ -1,14 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0-r1.ebuild,v 1.3 2008/06/01 15:08:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.2.0.ebuild,v 1.1 2008/06/01 15:08:28 wrobel Exp $
 
 inherit eutils webapp depend.php confutils
 
 DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users."
 HOMEPAGE="http://high5.net/postfixadmin/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.gz"
+RESTRICT="mirror"
 
-LICENSE="MPL-1.1"
+LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres"
 
@@ -41,12 +42,6 @@ src_unpack() {
 	ecvs_clean
 
 	mv VIRTUAL_VACATION/INSTALL.TXT VIRTUAL_VACATION_INSTALL.TXT
-
-	mv DATABASE_MYSQL.TXT "${T}"/mysql-setup.sql
-	mv TABLE_CHANGES.TXT  "${T}"/mysql-update.sql
-	mv DATABASE_PGSQL.TXT "${T}"/postgres-setup.sql
-
-	mv config.inc.php{.sample,}
 }
 
 src_install() {
@@ -61,33 +56,25 @@ src_install() {
 		insopts -m770 -o vacation -g vacation
 		doins "${S}"/VIRTUAL_VACATION/vacation.pl
 
-	        diropts -m775 -o root -g root
-	        insopts -m644 -o root -g root
+		diropts -m775 -o root -g root
+		insopts -m644 -o root -g root
 	fi
 
-	local docs="BACKUP_MX.TXT CHANGELOG.TXT INSTALL.TXT LANGUAGE.TXT
-		TABLE_BACKUP_MX.TXT UPGRADE.TXT VIRTUAL_VACATION_INSTALL.TXT"
+	local docs="DOCUMENTS/BACKUP_MX.txt CHANGELOG.TXT INSTALL.TXT
+		DOCUMENTS/LANGUAGE.txt DOCUMENTS/UPGRADE.txt
+		VIRTUAL_VACATION_INSTALL.TXT"
 	dodoc ${docs}
-	rm -rf ${docs} LICENSE.TXT ADDITIONS/
 
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
-	if use mysql; then
-		webapp_sqlscript mysql "${T}"/mysql-setup.sql
-		webapp_sqlscript mysql "${T}"/mysql-update.sql 2.0.x
-		webapp_sqlscript mysql "${T}"/mysql-update.sql 1.5x
-		webapp_postinst_txt en "${FILESDIR}"/postinstall-en-mysql.txt
-	fi
-	if use postgres; then
-		webapp_sqlscript postgresql "${T}"/postgres-setup.sql
-		webapp_postinst_txt en "${FILESDIR}"/postinstall-en-postgres.txt
-	fi
+	for FILE in ${docs} GPL-LICENSE.TXT LICENSE.TXT ADDITIONS/ debian/
+	do
+	  rm -rf ${FILE}
+	done
 
 	webapp_configfile "${MY_HTDOCSDIR}"/config.inc.php
-	webapp_configfile "${MY_HTDOCSDIR}"/admin/.htpasswd
 
-	webapp_hook_script "${FILESDIR}"/config-hook.sh
-
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-2.2.0.txt
 	webapp_src_install
 }
