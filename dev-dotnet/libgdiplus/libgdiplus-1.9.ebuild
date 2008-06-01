@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.9.ebuild,v 1.2 2008/06/01 01:47:30 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.9.ebuild,v 1.3 2008/06/01 11:51:35 jurek Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -29,6 +29,13 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 
 RESTRICT="test"
+
+pkg_setup() {
+	if ! built_with_use x11-libs/cairo X; then
+		eerror "you need to compile x11-libs/cairo with X USE flag enabled"
+		die "missing X USE flag on x11-libs/cairo"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.86 2008/06/01 01:47:30 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.87 2008/06/01 11:51:35 jurek Exp $
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> libgdiplus-1.9.ebuild:
+  Added check whether x11-libs/cairo has been built with X USE flag enabled
 
   01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> libgdiplus-1.2.4.ebuild,
   libgdiplus-1.9.ebuild:
