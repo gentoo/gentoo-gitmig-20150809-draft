@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r11.ebuild,v 1.6 2008/05/30 15:32:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r11.ebuild,v 1.7 2008/06/01 08:22:28 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -104,7 +104,7 @@ src_compile() {
 	if use postgres ; then
 		STORAGE="${STORAGE},pgsql_drv"
 		myconf="${myconf} --with-pgsql-includes=/usr/include/postgresql"
-		myconf="${myconf} --with-pgsql-libraries=/usr/$(get_libdir)/postgresql"
+		myconf="${myconf} --with-pgsql-libraries=/usr/$(get_libdir)"
 	fi
 
 	econf --with-storage-driver=${STORAGE} \
