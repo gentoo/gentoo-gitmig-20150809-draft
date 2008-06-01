@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.452 2008/05/29 19:54:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.453 2008/06/01 21:27:03 robbat2 Exp $
+
+*mysql-5.0.60-r1 (01 Jun 2008)
+
+  01 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-5.0.60-r1.ebuild:
+  mysql_config did not return correct output, per bug #224451. Revision bump
+  with a fix.
 
   29 May 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.27-r1.ebuild,
   mysql-4.1.22-r1.ebuild:
