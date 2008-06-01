@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.77 2008/05/13 12:17:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.78 2008/06/01 15:55:51 nyhm Exp $
+
+*allegro-4.2.2-r1 (01 Jun 2008)
+
+  01 Jun 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/allegro-4.2.2-autoconf.patch, +allegro-4.2.2-r1.ebuild:
+  Fix autoconf-2.62 failure, bug #218208; Install liballeg.so symlink, bug
+  #220955
 
   13 May 2008; Ferris McCormick <fmccor@gentoo.org> allegro-4.2.2.ebuild:
   Sparc stable, Bug #221821.
