@@ -1,5 +1,6 @@
---- src/NAnt.Core/Task.cs.orig	2007-02-24 00:08:34.000000000 -0600
-+++ src/NAnt.Core/Task.cs	2007-02-24 00:08:45.000000000 -0600
+diff -Naur nant-0.85_a/src/NAnt.Core/Task.cs nant-0.85_b/src/NAnt.Core/Task.cs
+--- nant-0.85_a/src/NAnt.Core/Task.cs	2005-10-21 19:13:06.000000000 +0200
++++ nant-0.85_b/src/NAnt.Core/Task.cs	2008-04-20 18:27:02.000000000 +0200
 @@ -400,7 +400,9 @@
          #region Protected Instance Methods
  
@@ -10,3 +11,15 @@
          protected override void InitializeElement(XmlNode elementNode) {
              // Just defer for now so that everything just works
              InitializeTask(elementNode);
+diff -Naur nant-0.85_a/src/NAnt.DotNet/Tasks/ScriptTask.cs nant-0.85_b/src/NAnt.DotNet/Tasks/ScriptTask.cs
+--- nant-0.85_a/src/NAnt.DotNet/Tasks/ScriptTask.cs	2006-09-13 18:31:26.000000000 +0200
++++ nant-0.85_b/src/NAnt.DotNet/Tasks/ScriptTask.cs	2008-04-20 18:25:39.000000000 +0200
+@@ -516,7 +516,7 @@
+         #region Private Static Methods
+ 
+         private static CodeDomProvider CreateCodeDomProvider(string typeName, string assemblyName) {
+-            Assembly providerAssembly = Assembly.LoadWithPartialName(assemblyName);
++            Assembly providerAssembly = Assembly.Load(assemblyName);
+             if (providerAssembly == null) {
+                 throw new ArgumentException(string.Format(CultureInfo.InvariantCulture,
+                     ResourceUtils.GetString("NA2037"), assemblyName));

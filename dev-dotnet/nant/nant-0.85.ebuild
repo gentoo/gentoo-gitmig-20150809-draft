@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.9 2008/05/30 23:05:34 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.10 2008/06/01 11:21:09 jurek Exp $
 
 inherit mono eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-threadingfix.patch
 
 	# Patch to allow building on current mono releases
-	epatch "${FILESDIR}"/${PN}-0.85-obselencense.patch
+	epatch "${FILESDIR}"/${P}-obselencense.patch
 }
 
 src_compile() {
