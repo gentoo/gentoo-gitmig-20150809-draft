@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.57 2008/06/01 00:32:40 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.58 2008/06/01 14:52:30 jurek Exp $
+
+*monodevelop-1.0 (01 Jun 2008)
+
+  01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org>
+  +files/monodevelop-1.0-configure.patch,
+  +files/monodevelop-1.0-libstetic.patch,
+  +files/monodevelop-1.0-parallel-build.patch, +monodevelop-1.0.ebuild:
+  Version bump (bug #195925)
 
   01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org>
   -files/monodevelop-0.15-aspnet-template-fix.patch,
