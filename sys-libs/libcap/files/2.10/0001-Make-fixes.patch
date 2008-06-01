@@ -1,0 +1,43 @@
+From 8e9b94b41f3f7e90404fe492f7bc7bc438726218 Mon Sep 17 00:00:00 2001
+From: Hao Xu <hxunix@gmail.com>
+Date: Thu, 29 May 2008 07:18:21 -0700
+Subject: [PATCH] Make fixes.
+
+Don't need to do -O2 twice.
+Install the static library with the static libraries name(!)
+
+Signed-off-by: Andrew G. Morgan <morgan@kernel.org>
+---
+ Make.Rules      |    2 +-
+ libcap/Makefile |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Make.Rules b/Make.Rules
+index 577ceda..ca2da0d 100644
+--- a/Make.Rules
++++ b/Make.Rules
+@@ -46,7 +46,7 @@ CC ?= gcc
+ AR ?= ar
+ RANLIB ?= ranlib
+ COPTFLAGS=-O2
+-DEBUG=-O2 -g #-DDEBUG
++DEBUG=-g #-DDEBUG
+ WARNINGS=-fPIC -Wall -Wwrite-strings \
+         -Wpointer-arith -Wcast-qual -Wcast-align \
+         -Wstrict-prototypes -Wmissing-prototypes \
+diff --git a/libcap/Makefile b/libcap/Makefile
+index c86d765..871f727 100644
+--- a/libcap/Makefile
++++ b/libcap/Makefile
+@@ -58,7 +58,7 @@ install: all
+ 	mkdir -p -m 0755 $(INCDIR)/sys
+ 	install -m 0644 include/sys/capability.h $(INCDIR)/sys
+ 	mkdir -p -m 0755 $(LIBDIR)
+-	install -m 0644 $(STALIBNAME) $(LIBDIR)/$(MINLIBNAME)
++	install -m 0644 $(STALIBNAME) $(LIBDIR)/$(STALIBNAME)
+ 	install -m 0644 $(MINLIBNAME) $(LIBDIR)/$(MINLIBNAME)
+ 	ln -sf $(MINLIBNAME) $(LIBDIR)/$(MAJLIBNAME)
+ 	ln -sf $(MAJLIBNAME) $(LIBDIR)/$(LIBNAME)
+-- 
+1.5.5.3
+

@@ -1,0 +1,198 @@
+From c41493d80bb65e11a14f4cf6174e9d4a4b3226f3 Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Sat, 31 May 2008 22:21:31 -0400
+Subject: [PATCH] cleanup build system
+
+This refactors the homebrewed build system to work much better "out of the
+box" for people.  It moves tools/flags into appropriate env-overridable
+variables as well as simplifies the subdirectory handling and flag passing.
+A few bug fixes are also mixed in such as proper link order, parallel build
+failure due to local header generation, and splitting up of logic between
+binaries compiled and run on the build system and binaries compiled to run
+on the target system.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ Make.Rules       |   27 +++++++++++----------------
+ Makefile         |    8 ++++----
+ libcap/Makefile  |   16 +++++++++-------
+ pam_cap/Makefile |    9 ++++++---
+ progs/Makefile   |    7 +++++--
+ 5 files changed, 35 insertions(+), 32 deletions(-)
+
+diff --git a/Make.Rules b/Make.Rules
+index ca2da0d..1b14658 100644
+--- a/Make.Rules
++++ b/Make.Rules
+@@ -43,33 +43,28 @@ MINOR=10
+ # Compilation specifics
+ 
+ CC ?= gcc
++BUILD_CC ?= $(CC)
+ AR ?= ar
+ RANLIB ?= ranlib
+-COPTFLAGS=-O2
+-DEBUG=-g #-DDEBUG
+-WARNINGS=-fPIC -Wall -Wwrite-strings \
++CFLAGS ?= -O2
++BUILD_CFLAGS ?= $(CFLAGS)
++WARNINGS=-Wall -Wwrite-strings \
+         -Wpointer-arith -Wcast-qual -Wcast-align \
+         -Wstrict-prototypes -Wmissing-prototypes \
+         -Wnested-externs -Winline -Wshadow
+ LD=$(CC) -Wl,-x -shared
+-LDFLAGS=#-g
++LDFLAGS ?= #-g
+ 
+ KERNEL_HEADERS = $(topdir)/libcap/include
+-SYSTEM_HEADERS = /usr/include
+-IPATH += -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
++LIBCAP_CPPFLAGS = -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
++CPPFLAGS += $(LIBCAP_CPPFLAGS)
++BUILD_CPPFLAGS += $(LIBCAP_CPPFLAGS)
+ INCS=$(topdir)/libcap/include/sys/capability.h
+-LIBS=-L$(topdir)/libcap -lcap
+-CFLAGS=-Dlinux $(WARNINGS) $(DEBUG) $(COPTFLAG) $(IPATH)
++LDFLAGS += -L$(topdir)/libcap
++CPPFLAGS += -Dlinux
++CFLAGS += $(WARNINGS)
+ PAM_CAP ?= $(shell if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi)
+ # Global cleanup stuff
+ 
+ LOCALCLEAN=rm -f *~ core
+ DISTCLEAN=@find . \( -name '*.orig' -o -name '*.rej' \) | xargs rm -f
+-
+-# Flags to pass down recursive makes
+-
+-MAKE_DEFS = CC='$(CC)' CFLAGS='$(CFLAGS)' \
+-	LD='$(LD)' LIBS='$(LIBS)' LDFLAGS='$(LDFLAGS)' \
+-	VERSION='$(VERSION)' MINOR='$(MINOR)' \
+-	LIBDIR='$(LIBDIR)' INCDIR='$(INCDIR)' \
+-	SBINDIR='$(SBINDIR)' MANDIR='$(MANDIR)'
+diff --git a/Makefile b/Makefile
+index 52f7b42..9076724 100644
+--- a/Makefile
++++ b/Makefile
+@@ -9,12 +9,12 @@ include Make.Rules
+ #
+ 
+ all install clean: %: %-here
+-	$(MAKE) -C libcap $(MAKE_DEFS) $@
++	$(MAKE) -C libcap $@
+ ifneq ($(PAM_CAP),no)
+-	$(MAKE) -C pam_cap $(MAKE_DEFS) $@
++	$(MAKE) -C pam_cap $@
+ endif
+-	$(MAKE) -C progs $(MAKE_DEFS) $@
+-	$(MAKE) -C doc $(MAKE_DEFS) $@
++	$(MAKE) -C progs $@
++	$(MAKE) -C doc $@
+ 
+ all-here:
+ 
+diff --git a/libcap/Makefile b/libcap/Makefile
+index 871f727..86a7289 100644
+--- a/libcap/Makefile
++++ b/libcap/Makefile
+@@ -17,7 +17,9 @@ OBJS=$(addsuffix .o, $(FILES))
+ MAJLIBNAME=$(LIBNAME).$(VERSION)
+ MINLIBNAME=$(MAJLIBNAME).$(MINOR)
+ GPERF_OUTPUT = _caps_output.gperf
+-LDFLAGS+=-lattr
++LDLIBS += -lattr
++CFLAGS += -fPIC
++INCLS += cap_names.h
+ 
+ all: $(MINLIBNAME) $(STALIBNAME)
+ 
+@@ -27,7 +29,7 @@ INCLUDE_GPERF_OUTPUT = -include $(GPERF_OUTPUT)
+ endif
+ 
+ _makenames: _makenames.c cap_names.sed
+-	$(CC) $(CFLAGS) $< -o $@
++	$(BUILD_CC) $(BUILD_CFLAGS) $(BUILD_CPPFLAGS) $< -o $@
+ 
+ cap_names.h: _makenames
+ 	./_makenames > cap_names.h
+@@ -40,19 +42,19 @@ cap_names.sed: Makefile $(KERNEL_HEADERS)/linux/capability.h
+ 	@sed -ne '/^#define[ \t]CAP[_A-Z]\+[ \t]\+[0-9]\+/{s/^#define \([^ \t]*\)[ \t]*\([^ \t]*\)/\{\"\1\",\2\},/;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/;p;}' < $(KERNEL_HEADERS)/linux/capability.h | fgrep -v 0x > $@
+ 
+ $(STALIBNAME): $(OBJS)
+-	$(AR) rcs $(STALIBNAME) $(OBJS)
+-	$(RANLIB) $(STALIBNAME)
++	$(AR) rcs $@ $^
++	$(RANLIB) $@
+ 
+ $(MINLIBNAME): $(OBJS)
+-	$(LD) $(LDFLAGS) $(COPTFLAG) -Wl,-soname,$(MAJLIBNAME) -o $@ $(OBJS)
++	$(LD) $(CFLAGS) $(LDFLAGS) -Wl,-soname,$(MAJLIBNAME) -o $@ $^ $(LDLIBS)
+ 	ln -sf $(MINLIBNAME) $(MAJLIBNAME)
+ 	ln -sf $(MAJLIBNAME) $(LIBNAME)
+ 
+ %.o: %.c $(INCLS)
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+ 
+ cap_text.o: cap_text.c $(USE_GPERF_OUTPUT) $(INCLS)
+-	$(CC) $(CFLAGS) $(INCLUDE_GPERF_OUTPUT) -c $< -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(INCLUDE_GPERF_OUTPUT) -c $< -o $@
+ 
+ install: all
+ 	mkdir -p -m 0755 $(INCDIR)/sys
+diff --git a/pam_cap/Makefile b/pam_cap/Makefile
+index 8819af2..bef59d2 100644
+--- a/pam_cap/Makefile
++++ b/pam_cap/Makefile
+@@ -3,6 +3,9 @@
+ topdir=$(shell pwd)/..
+ include ../Make.Rules
+ 
++LDLIBS += -lcap
++CFLAGS += -fPIC
++
+ all: pam_cap.so
+ 	$(MAKE) testcompile
+ 
+@@ -11,13 +14,13 @@ install: all
+ 	install -m 0755 pam_cap.so $(LIBDIR)/security
+ 
+ pam_cap.so: pam_cap.o
+-	$(LD) -o pam_cap.so $< $(LIBS)
++	$(LD) $(CFLAGS) $(LDFLAGS) -o pam_cap.so $< $(LDLIBS)
+ 
+ pam_cap.o: pam_cap.c
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+ 
+ testcompile: test.c pam_cap.o
+-	$(CC) $(CFLAGS) -o $@ $+ -lpam -ldl $(LIBS)
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $+ -lpam -ldl $(LDLIBS)
+ 
+ clean:
+ 	rm -f *.o *.so testcompile *~
+diff --git a/progs/Makefile b/progs/Makefile
+index ee03efa..f568225 100644
+--- a/progs/Makefile
++++ b/progs/Makefile
+@@ -6,13 +6,16 @@ include $(topdir)/Make.Rules
+ #
+ PROGS=getpcaps getcap setcap capsh
+ 
++LDFLAGS += --static
++LDLIBS += -lcap
++
+ all: $(PROGS)
+ 
+ $(PROGS): %: %.o
+-	$(CC) --static $(COPTFLAG) $(LDFLAGS) -o $@ $< $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< $(LDLIBS)
+ 
+ %.o: %.c $(INCS)
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+ 
+ install: all
+ 	mkdir -p -m 0755 $(SBINDIR)
+-- 
+1.5.5.3
+
