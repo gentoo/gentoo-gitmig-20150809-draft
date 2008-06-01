@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.16.00.ebuild,v 1.3 2008/05/17 10:15:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.16.00.ebuild,v 1.4 2008/06/01 10:24:45 markusle Exp $
+
+inherit eutils
 
 MY_PN=Minuit2
 
@@ -19,6 +21,13 @@ DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+}
+
 
 src_compile() {
 	econf || die "econf failed"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/minuit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.5 2008/05/17 10:15:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.6 2008/06/01 10:24:45 markusle Exp $
+
+  01 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/minuit-5.16.00-gcc4.3.patch, minuit-5.16.00.ebuild:
+  Added gcc-4.3 compatibility patch.
 
   17 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
   minuit-5.16.00.ebuild:
