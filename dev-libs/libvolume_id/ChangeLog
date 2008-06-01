@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libvolume_id
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/ChangeLog,v 1.4 2008/06/01 16:46:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/ChangeLog,v 1.5 2008/06/01 16:48:12 aballier Exp $
+
+  01 Jun 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  assign to bsd herd
 
 *libvolume_id-0.81.0 (01 Jun 2008)
 
