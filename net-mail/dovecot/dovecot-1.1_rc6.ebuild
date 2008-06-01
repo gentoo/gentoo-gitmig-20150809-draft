@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc5-r1.ebuild,v 1.2 2008/05/21 18:58:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc6.ebuild,v 1.1 2008/06/01 11:09:25 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
