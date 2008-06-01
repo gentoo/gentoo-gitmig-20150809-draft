@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.1.4_rc1.ebuild,v 1.2 2008/01/29 18:01:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.4.ebuild,v 1.1 2008/06/01 12:40:31 hollow Exp $
 
 inherit apache-module
 
@@ -14,29 +14,44 @@ SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
-IUSE="doc"
+IUSE="lua"
 
-DEPEND="dev-libs/libxml2"
+DEPEND="dev-libs/libxml2
+	lua? ( >=dev-lang/lua-5.1 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-APXS2_ARGS="-DWITH_LIBXML2 -I/usr/include/libxml2 -lxml2 -S LIBEXECDIR=${S} -c -o ${PN}2.so ${S}/apache2/*.c"
-APACHE2_MOD_FILE=".libs/${PN}2.so"
+APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
 APACHE2_MOD_CONF="2.1.2/99_mod_security"
 APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
 
+src_compile() {
+	cd apache2
+
+	econf --with-apxs="${APXS}" \
+		--without-curl \
+		$(use_with lua) \
+		|| die "econf failed"
+
+	emake || die "emake failed"
+}
+
 src_install() {
 	apache-module_src_install
+
+	# install rules updater
+	newbin tools/rules-updater.pl rules-updater
 
 	# install documentation
 	dodoc CHANGES
 	newdoc rules/CHANGELOG CHANGES.crs
 	newdoc rules/README README.crs
 	dohtml doc/*.html doc/*.gif doc/*.jpg doc/*.css doc/*.pdf
-	cp -r "${S}"/doc/html-multipage "${D}"/usr/share/doc/${P}/html/
+	insinto /usr/share/doc/${P}/html/
+	doins -r doc/html-multipage
 
 	# Prepare the core ruleset
 	sed -i -e 's:logs/:/var/log/apache2/:g' "${S}"/rules/*.conf
