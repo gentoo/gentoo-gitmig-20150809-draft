@@ -1,15 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/exheres-syntax-99999999.ebuild,v 1.1 2008/05/20 00:08:07 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/exheres-syntax-20080601.ebuild,v 1.1 2008/06/01 13:11:21 coldwind Exp $
 
-inherit vim-plugin subversion
+inherit vim-plugin
 
 DESCRIPTION="vim plugin: exheres format highlighting"
 HOMEPAGE="http://www.exherbo.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://svn.exherbo.org/exheres-syntax/trunk"
+SRC_URI="http://dev.exherbo.org/~eroyf/pub/software/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="vim"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
