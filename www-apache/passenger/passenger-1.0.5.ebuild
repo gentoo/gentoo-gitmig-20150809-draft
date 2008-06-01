@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-1.0.5.ebuild,v 1.1 2008/06/01 11:04:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-1.0.5.ebuild,v 1.2 2008/06/01 11:06:22 hollow Exp $
 
 inherit apache-module flag-o-matic ruby
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/1.0.1-gentoo.patch
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
 
 	# set version here to prevent Rakefile parsing
 	sed -i -e "s/\(PASSENGER_VERSION\) = .*/\1 = '${PV}'/" \
