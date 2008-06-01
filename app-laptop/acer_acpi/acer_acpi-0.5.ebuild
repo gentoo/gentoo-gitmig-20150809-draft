@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.4 2007/08/29 13:32:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.5 2008/06/01 01:32:35 jurek Exp $
 
 inherit linux-mod
 
@@ -21,9 +21,14 @@ pkg_setup() {
 	BUILD_PARAMS="KERNELSRC=${KV_DIR} KERNELVERSION=${KV_FULL}"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e "s/CFLAGS+/EXTRA_CFLAGS/" "${WORKDIR}"/${P}/Makefile
+}
 src_install() {
 	linux-mod_src_install
-	dodoc README COPYING NEWS AUTHORS
+	dodoc README NEWS AUTHORS
 }
 
 pkg_postinst() {
