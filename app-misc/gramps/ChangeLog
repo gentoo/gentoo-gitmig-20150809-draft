@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.63 2008/05/21 15:34:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.64 2008/06/01 08:18:22 opfer Exp $
+
+  01 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/gramps-3.0.1-no_scrollkeeper.patch, gramps-3.0.1-r1.ebuild:
+  remove check for scrollkeeper from configure, patch provided by Zsolt
+  Foldvari <zsolt DOT foldvari AT gmail DOT com>
 
 *gramps-3.0.1-r1 (21 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1-r1.ebuild,v 1.1 2008/05/21 15:34:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1-r1.ebuild,v 1.2 2008/06/01 08:18:22 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,6 +40,8 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+	# will be fixed in 3.0.2
+	epatch "${FILESDIR}"/${P}-no_scrollkeeper.patch
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
 	# file system
 	mv "${S}"/py-compile "${S}"/py-compile.orig
