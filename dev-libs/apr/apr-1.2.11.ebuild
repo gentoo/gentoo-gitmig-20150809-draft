@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.11.ebuild,v 1.10 2007/12/11 10:06:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.11.ebuild,v 1.11 2008/06/01 11:35:11 hollow Exp $
 
 inherit autotools
 
@@ -15,6 +15,7 @@ IUSE="doc ipv6 urandom debug"
 RESTRICT="test"
 
 DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
