@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3.ebuild,v 1.1 2008/05/31 21:17:57 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3.ebuild,v 1.2 2008/06/01 03:33:46 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -55,4 +55,3 @@ src_install() {
 		dodoc doc/*.pdf
 	fi
 }
-
