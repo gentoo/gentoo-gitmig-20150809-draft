@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.12 2008/04/13 16:49:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.13 2008/06/01 10:16:08 hollow Exp $
 
 inherit bash-completion depend.apache flag-o-matic elisp-common eutils java-pkg-opt-2 libtool multilib perl-module python
 
@@ -17,7 +17,6 @@ RESTRICT="test"
 
 COMMONDEPEND=">=dev-libs/apr-util-1.2.8
 			berkdb? ( =sys-libs/db-4* )
-			doc? ( app-doc/doxygen )
 			emacs? ( virtual/emacs )
 			nls? ( sys-devel/gettext )
 			!nowebdav? ( =net-misc/neon-0.26* )
@@ -31,6 +30,7 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 		>=sys-devel/autoconf-2.59
+		doc? ( app-doc/doxygen )
 		java? ( >=virtual/jdk-1.4 )
 		ruby? ( dev-lang/swig )
 		perl? ( dev-lang/swig )
