@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.19.1.ebuild,v 1.2 2008/06/01 20:14:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3.ebuild,v 1.1 2008/06/01 20:14:33 markusle Exp $
 
 inherit eutils qt3
 
@@ -39,6 +39,9 @@ S=${WORKDIR}/${MY_PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+	epatch "${FILESDIR}"/${P}-numarray.patch
+
 	local docdir=/usr/share/doc/${PF}
 	# fix the install doc directory to gentoo's one
 	sed -i \
