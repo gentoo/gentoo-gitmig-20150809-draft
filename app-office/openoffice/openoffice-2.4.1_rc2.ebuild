@@ -1,19 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1_rc1.ebuild,v 1.3 2008/05/29 12:24:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1_rc2.ebuild,v 1.1 2008/06/01 19:14:34 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
 
-IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk opengl pam seamonkey webdav xulrunner"
+IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk opengl pam seamonkey xulrunner"
 
-MY_PV="2.4.1.1"
-MY_PV2="2.4.1rc1"
+MY_PV="2.4.1.3"
+MY_PV2="2.4.1rc2"
 PATCHLEVEL="OOH680"
 SRC="OOo_${MY_PV2}_src"
-MST="OOH680_m16"
+MST="OOH680_m17"
 S="${WORKDIR}/ooo"
 S_OLD="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
@@ -82,8 +82,8 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1*
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) ) )
-	webdav? ( >=net-misc/neon-0.24.7
-		>=dev-libs/openssl-0.9.8g )
+	>=net-misc/neon-0.24.7
+	>=dev-libs/openssl-0.9.8g
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.3.0
@@ -223,8 +223,8 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}/gentoo-${PV}.diff"
-	epatch "${FILESDIR}/${PV}/ooo-env_log.diff"
+	epatch "${FILESDIR}/gentoo-${PV}.diff"
+	epatch "${FILESDIR}/ooo-env_log.diff"
 
 	#Use flag checks
 	if use java ; then
@@ -270,9 +270,9 @@ src_unpack() {
 	echo "`use_enable ldap`" >> ${CONFFILE}
 	echo "`use_enable opengl`" >> ${CONFFILE}
 	echo "`use_with ldap openldap`" >> ${CONFFILE}
-	echo "`use_enable webdav neon`" >> ${CONFFILE}
-	echo "`use_with webdav system-neon`" >> ${CONFFILE}
-	echo "`use_with webdav system-openssl`" >> ${CONFFILE}
+	echo "--enable-neon" >> ${CONFFILE}
+	echo "--with-system-neon" >> ${CONFFILE}
+	echo "--with-system-openssl" >> ${CONFFILE}
 
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
 
