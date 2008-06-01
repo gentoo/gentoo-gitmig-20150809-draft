@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.15 2007/07/28 18:21:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.16 2008/06/01 10:33:52 mrness Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -15,14 +15,14 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ~ppc ~sparc x86"
 IUSE="bluetooth debug nls perl python swig tcl"
 
-RDEPEND=">=dev-libs/openobex-1.1
-	bluetooth? ( >=net-wireless/bluez-libs-2.19 )
-	perl? ( >=dev-lang/perl-5.8.6 )
+RDEPEND="dev-libs/openobex
+	bluetooth? ( net-wireless/bluez-libs )
+	perl? ( dev-lang/perl )
 	python? ( >=dev-lang/python-2.4.2 )
-	tcl? ( >=dev-lang/tcl-8.4.9 )
-	swig? ( >=dev-lang/swig-1.3.7 )"
+	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	swig? ( dev-lang/swig )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
