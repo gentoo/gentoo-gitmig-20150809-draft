@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/utrac/utrac-0.3.0.ebuild,v 1.1 2006/06/04 21:05:57 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/utrac/utrac-0.3.0.ebuild,v 1.2 2008/06/01 08:38:50 wschlich Exp $
 
+IUSE=""
 DESCRIPTION="Universal Text Recognizer and Converter"
 HOMEPAGE="http://utrac.sourceforge.net/"
 SRC_URI="http://utrac.sourceforge.net/download/${P}.tar.gz"
