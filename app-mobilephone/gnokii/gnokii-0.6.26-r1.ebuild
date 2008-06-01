@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26.ebuild,v 1.1 2008/06/01 12:18:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r1.ebuild,v 1.1 2008/06/01 21:44:29 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -36,15 +36,10 @@ CONFIG_CHECK="UNIX98_PTYS"
 MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	strip-linguas ${MY_AVAILABLE_LINGUAS}
-}
-
 src_compile() {
-	config_xdebug="--disable-xdebug"
+	strip-linguas ${MY_AVAILABLE_LINGUAS}
+
+	local config_xdebug="--disable-xdebug"
 	use X && use debug && config_xdebug="--enable-xdebug"
 
 	econf \
@@ -54,49 +49,36 @@ src_compile() {
 		$(use_enable irda) \
 		$(use_enable bluetooth) \
 		$(use_with X x) \
-		$(use_enable debug) \
+		$(use_with sms smsd) \
+		$(use_enable debug fulldebug) \
 		${config_xdebug} \
 		$(use_enable debug rlpdebug) \
-	    --enable-security \
+		--enable-security \
 		--disable-unix98test \
+		--disable-libpcsclite \
 		|| die "configure failed"
 
 	emake -j1 || die "make failed"
-
-	if use sms;	then
-		pushd "${S}/smsd"
-		emake || die "smsd make install failed"
-		popd
-	fi
 }
 
 src_install() {
 	einstall || die "make install failed"
+
+	insinto /etc
+	doins Docs/sample/gnokiirc
+	sed -i -e 's:/usr/local:/usr:' "${D}/etc/gnokiirc"
+
+	# only one file needs suid root to make a pseudo device
+	fperms 4755 /usr/sbin/mgnokiidev
 
 	if use X; then
 		insinto /usr/share/pixmaps
 		newins Docs/sample/logo/gnokii.xpm xgnokii.xpm
 	fi
 
-	insinto /etc
-	doins Docs/sample/gnokiirc
-	sed -i -e 's:/usr/local:/usr:' "${D}/etc/gnokiirc"
-
-	doman Docs/man/*
-
-	dodir "/usr/share/doc/${PF}"
-	cp -r Docs/sample "${D}/usr/share/doc/${PF}/sample"
-	cp -r Docs/protocol "${D}/usr/share/doc/${PF}/protocol"
-	rm -rf Docs/man Docs/sample Docs/protocol
-	dodoc Docs/* ChangeLog TODO MAINTAINERS
-
-	# only one file needs suid root to make a pseudo device
-	fperms 4755 /usr/sbin/mgnokiidev
-
-	if use sms;	then
+	if use sms; then
 		pushd "${S}/smsd"
-		einstall || die "smsd make install failed"
-		insinto /usr/share/doc/${PF}/smsd
+		insinto /usr/share/doc/${PN}/smsd
 		use mysql && doins sms.tables.mysql.sql README.MySQL
 		use postgres && doins sms.tables.pq.sql
 		doins README ChangeLog README.Tru64 action
