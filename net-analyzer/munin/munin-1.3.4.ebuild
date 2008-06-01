@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4.ebuild,v 1.1 2008/05/31 21:10:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4.ebuild,v 1.2 2008/06/01 20:56:24 robbat2 Exp $
 
 inherit eutils
 
@@ -107,7 +107,9 @@ pkg_config() {
 	einfo "installation from /var/lib/munin/crontab"
 	einfo "If you have a large site, you may wish to customize it."
 	read
-	crontab -u munin /var/lib/munin/crontab
+	# dcron is very fussy about syntax
+	# the following is the only form that works in BOTH dcron and vixie-cron
+	crontab - -u munin </var/lib/munin/crontab
 }
 
 pkg_postinst() {
