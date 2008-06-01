@@ -1,6 +1,6 @@
 diff -ur mozart-1.3.2.20060615.orig/Makefile.in mozart-1.3.2.20060615/Makefile.in
 --- mozart-1.3.2.20060615.orig/Makefile.in	2004-05-19 10:56:54.000000000 +1200
-+++ mozart-1.3.2.20060615/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -111,7 +111,7 @@
  ./config.status: ./configure
  	./config.status --recheck
@@ -12,7 +12,7 @@ diff -ur mozart-1.3.2.20060615.orig/Makefile.in mozart-1.3.2.20060615/Makefile.i
  	$(INSTALL_FILE) $< $@
 diff -ur mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in mozart-1.3.2.20060615/platform/emulator/Makefile.in
 --- mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in	2004-01-12 23:03:44.000000000 +1300
-+++ mozart-1.3.2.20060615/platform/emulator/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/platform/emulator/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -226,10 +226,15 @@
  .PHONY:	all first install install-bin install-inc \
  	install-dir depend tags clean cleaner distclean veryclean
@@ -30,7 +30,7 @@ diff -ur mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in mozart-1.3.2.2
  $(MODINTERS): bidecl.perl
  
  .PHONY: libDPB.a DPB.so-$(PLATFORM)
-@@ -400,7 +400,7 @@
+@@ -400,7 +405,7 @@
  $(NEWCACHEDIR):
  	$(INSTALL_DIR) $@
  
@@ -41,7 +41,7 @@ diff -ur mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in mozart-1.3.2.2
  install-inc: $(INCDIR)
 diff -ur mozart-1.3.2.20060615.orig/platform/emulator/libdp/Makefile.in mozart-1.3.2.20060615/platform/emulator/libdp/Makefile.in
 --- mozart-1.3.2.20060615.orig/platform/emulator/libdp/Makefile.in	2002-08-03 08:20:44.000000000 +1200
-+++ mozart-1.3.2.20060615/platform/emulator/libdp/Makefile.in	2008-02-23 14:53:00.000000000 +1300
++++ mozart-1.3.2.20060615/platform/emulator/libdp/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -88,7 +88,7 @@
  	$(AR) -rc $@ $< && $(RANLIB) $@
  
@@ -62,7 +62,7 @@ diff -ur mozart-1.3.2.20060615.orig/platform/emulator/libdp/Makefile.in mozart-1
  	etags \
 diff -ur mozart-1.3.2.20060615.orig/platform/tools/gump/Makefile.in mozart-1.3.2.20060615/platform/tools/gump/Makefile.in
 --- mozart-1.3.2.20060615.orig/platform/tools/gump/Makefile.in	2003-01-08 02:40:10.000000000 +1300
-+++ mozart-1.3.2.20060615/platform/tools/gump/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/platform/tools/gump/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -66,15 +66,15 @@
  $(SHAREDIR) $(PLATFORMDIR) $(INCDIR) $(NEWCACHEDIR):
  	$(MKINSTALLDIRS) $@
@@ -85,7 +85,7 @@ diff -ur mozart-1.3.2.20060615.orig/platform/tools/gump/Makefile.in mozart-1.3.2
  clean veryclean:
 diff -ur mozart-1.3.2.20060615.orig/share/bin/Makefile.in mozart-1.3.2.20060615/share/bin/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/bin/Makefile.in	2001-08-05 10:24:41.000000000 +1200
-+++ mozart-1.3.2.20060615/share/bin/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/share/bin/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -55,13 +55,13 @@
  install: $(BINDIR) $(LIB_SCRIPTS) $(LIB_LINKS) $(WRAPPERS)
  
@@ -105,7 +105,7 @@ diff -ur mozart-1.3.2.20060615.orig/share/bin/Makefile.in mozart-1.3.2.20060615/
  $(BINDIR):
 diff -ur mozart-1.3.2.20060615.orig/share/demo/Makefile.in mozart-1.3.2.20060615/share/demo/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/demo/Makefile.in	2001-10-16 23:10:03.000000000 +1300
-+++ mozart-1.3.2.20060615/share/demo/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/share/demo/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -83,16 +83,19 @@
  install:: $(OZDEMO) $(DEMOAPPLETS) \
  	$(SYSTEMDOC) $(SYSTEMOZF) $(SYSTEMOZF)/MT10.ozf $(SYSTEMDOC)/MT10.oz
@@ -161,7 +161,7 @@ diff -ur mozart-1.3.2.20060615.orig/share/demo/Makefile.in mozart-1.3.2.20060615
  
 diff -ur mozart-1.3.2.20060615.orig/share/elisp/Makefile.in mozart-1.3.2.20060615/share/elisp/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/elisp/Makefile.in	2002-04-02 00:31:22.000000000 +1200
-+++ mozart-1.3.2.20060615/share/elisp/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/share/elisp/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -75,10 +75,10 @@
  $(ELISPDIR):
  	$(INSTALL_DIR) $@
@@ -177,7 +177,7 @@ diff -ur mozart-1.3.2.20060615.orig/share/elisp/Makefile.in mozart-1.3.2.2006061
  clean:
 diff -ur mozart-1.3.2.20060615.orig/share/examples/Makefile.in mozart-1.3.2.20060615/share/examples/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/examples/Makefile.in	2003-04-23 21:49:55.000000000 +1200
-+++ mozart-1.3.2.20060615/share/examples/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/share/examples/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -63,15 +63,17 @@
  	$(FUNCTORS:%=$(OZEX)/fd/graphics/%)
  
@@ -228,7 +228,7 @@ diff -ur mozart-1.3.2.20060615.orig/share/examples/Makefile.in mozart-1.3.2.2006
  
 diff -ur mozart-1.3.2.20060615.orig/share/lib/Makefile.in mozart-1.3.2.20060615/share/lib/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/lib/Makefile.in	2003-12-05 10:55:34.000000000 +1300
-+++ mozart-1.3.2.20060615/share/lib/Makefile.in	2007-02-18 09:32:05.000000000 +1300
++++ mozart-1.3.2.20060615/share/lib/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -11,7 +11,7 @@
  PREFIX		= @prefix@
  OZPREFIX	= @prefix@
@@ -238,6 +238,15 @@ diff -ur mozart-1.3.2.20060615.orig/share/lib/Makefile.in mozart-1.3.2.20060615/
  OZLIB		= $(PREFIX)/share
  IMAGESDIR	= $(OZLIB)/images
  SHELL		= /bin/sh
+@@ -290,7 +290,7 @@
+ Builtins.ozf: compiler/Builtins.oz GroundZip.ozf compiler-Builtins.oz
+ 
+ Unnester.ozf: compiler/Unnester.oz compiler/TupleSyntax.oz \
+-	compiler/BindingAnalysis.oz compiler/UnnestFD.oz
++	compiler/BindingAnalysis.oz compiler/UnnestFD.oz Builtins.ozf
+ 
+ Annotate.ozf: compiler/Annotate.oz
+ 
 @@ -343,14 +343,14 @@
  	$(FUNCTORS:%=$(OZLIB)/%)
  
@@ -305,7 +314,7 @@ diff -ur mozart-1.3.2.20060615.orig/share/lib/Makefile.in mozart-1.3.2.20060615/
  		OZENGINE=$(SRCDIR)/oze.sh \
 diff -ur mozart-1.3.2.20060615.orig/share/tools/Makefile.in mozart-1.3.2.20060615/share/tools/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/tools/Makefile.in	2002-01-30 01:39:23.000000000 +1300
-+++ mozart-1.3.2.20060615/share/tools/Makefile.in	2007-02-18 09:31:31.000000000 +1300
++++ mozart-1.3.2.20060615/share/tools/Makefile.in	2008-06-02 10:04:05.000000000 +1200
 @@ -7,7 +7,7 @@
  PREFIX		= @prefix@
  PLATFORM	= @PLATFORM@
