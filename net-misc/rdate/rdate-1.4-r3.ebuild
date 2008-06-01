@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r3.ebuild,v 1.9 2008/06/01 21:21:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r3.ebuild,v 1.10 2008/06/01 21:25:53 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ src_compile() {
 }
 
 src_install(){
-	make prefix="${D}/usr" install || die "make install failed"
-	newinitd ${FILESDIR}/rdate-initd-1.4-r3 rdate
-	newconfd ${FILESDIR}/rdate-confd rdate
+	emake -j1 prefix="${D}/usr" install || die "make install failed"
+	newinitd "${FILESDIR}"/rdate-initd-1.4-r3 rdate
+	newconfd "${FILESDIR}"/rdate-confd rdate
 }
