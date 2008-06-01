@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/asedriveiiie-serial
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/ChangeLog,v 1.4 2007/02/15 19:33:02 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/ChangeLog,v 1.5 2008/06/01 03:38:07 dragonheart Exp $
+
+  01 Jun 2008; Daniel Black <dragonheart@gentoo.org>
+  asedriveiiie-serial-3.4.ebuild:
+  QA - add IUSE - bug #224349 thanks Marek Miller
 
   15 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
   asedriveiiie-serial-3.4.ebuild:

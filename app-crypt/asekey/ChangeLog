@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/asekey
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.4 2007/02/15 19:31:29 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.5 2008/06/01 03:37:06 dragonheart Exp $
+
+  01 Jun 2008; Daniel Black <dragonheart@gentoo.org> asekey-3.3.ebuild:
+  QA - add IUSE - bug #224349 thanks Marek Miller
 
   15 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> asekey-3.3.ebuild:
   Fix postrm for multi libraries
