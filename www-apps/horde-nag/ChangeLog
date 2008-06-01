@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.30 2008/03/21 11:39:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.31 2008/06/01 21:47:04 vapier Exp $
+
+*horde-nag-2.2 (01 Jun 2008)
+
+  01 Jun 2008; Mike Frysinger <vapier@gentoo.org> +horde-nag-2.2.ebuild:
+  Version bump #221505 by Arfrever Frehtes Taifersar Arahesis.
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> horde-nag-2.1.4.ebuild:
   amd64 stable, security bug #212635
