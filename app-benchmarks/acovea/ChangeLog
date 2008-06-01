@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/acovea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.11 2008/04/21 16:31:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.12 2008/06/01 16:58:14 pchrist Exp $
+
+  01 Jun 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +files/acovea-5.1.1-libevocosm.patch, acovea-5.1.1.ebuild:
+  Apply patch which fixes dev-libs/libevocosm issue. Patch created by John
+  Brooks <aspecialj@gmail.com>, bug 219998
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
