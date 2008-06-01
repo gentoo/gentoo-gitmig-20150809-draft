@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.1.ebuild,v 1.2 2008/05/08 12:24:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.1.ebuild,v 1.3 2008/06/01 20:49:28 remi Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -116,7 +116,7 @@ RDEPEND="
 
 	>=x11-libs/startup-notification-0.9
 
-	>=gnome-extra/gnome2-user-docs-2.22.0
+	>=gnome-extra/gnome-user-docs-2.22.0
 	>=gnome-extra/yelp-2.22.1
 	>=gnome-extra/zenity-2.22.1
 

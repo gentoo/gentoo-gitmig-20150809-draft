@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.335 2008/06/01 11:26:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.336 2008/06/01 20:49:28 remi Exp $
+
+  01 Jun 2008; Rémi Cardona <remi@gentoo.org> gnome-2.20.3.ebuild,
+  gnome-2.22.0.ebuild, gnome-2.22.1.ebuild:
+  pkgmove from gnome2-user-docs to gnome-user-docs
 
   01 Jun 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Added ~ppc wrt bug 218794
