@@ -1,0 +1,10 @@
+# ChangeLog for 
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/wiiload/ChangeLog,v 1.1 2008/06/02 08:29:20 vapier Exp $
+
+*wiiload-0_beta7 (02 Jun 2008)
+
+  02 Jun 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +wiiload-0_beta7.ebuild:
+  Initial ebuild by me.
+
