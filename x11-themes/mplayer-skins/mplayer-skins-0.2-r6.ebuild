@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r6.ebuild,v 1.1 2007/11/02 03:12:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r6.ebuild,v 1.2 2008/06/02 03:17:45 jer Exp $
 
 S="${WORKDIR}"
 DESCRIPTION="Collection of mplayer themes"
@@ -75,7 +75,7 @@ SRC_URI="${THEME_URI}Abyss-1.6.tar.bz2
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

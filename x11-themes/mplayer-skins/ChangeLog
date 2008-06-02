@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/mplayer-skins
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.24 2007/11/02 03:12:58 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.25 2008/06/02 03:17:45 jer Exp $
+
+  02 Jun 2008; Jeroen Roovers <jer@gentoo.org> mplayer-skins-0.2-r6.ebuild:
+  Stable for HPPA too.
 
 *mplayer-skins-0.2-r6 (02 Nov 2007)
 
