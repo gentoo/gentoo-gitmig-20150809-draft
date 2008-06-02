@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.25-r1.ebuild,v 1.1 2008/06/01 21:28:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.25-r1.ebuild,v 1.2 2008/06/02 01:27:23 mr_bones_ Exp $
 
 EAPI=1
 
@@ -75,4 +75,3 @@ pkg_postinst() {
 	ewarn "${PN}-2.21"
 	ewarn
 }
-
