@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.14 2008/05/31 13:26:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.15 2008/06/02 08:21:45 bicatali Exp $
+
+*cfitsio-2.510-r2 (02 Jun 2008)
+
+  02 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cfitsio-2.510-autotools.patch, +cfitsio-2.510-r2.ebuild:
+  Better autotoolization with libtool for cfitsio-2.510, for consistency
+  with newer versions. Fix license (mainly BSD with pieces of
+  GPL-2). Dropped alpha, ppc and ppc64 keywords because of use of
+  dev-lang/cfortran.
+	
 
   31 May 2008; Markus Dittrich <markusle@gentoo.org>
   cfitsio-2.510-r1.ebuild, cfitsio-3.006.ebuild:
