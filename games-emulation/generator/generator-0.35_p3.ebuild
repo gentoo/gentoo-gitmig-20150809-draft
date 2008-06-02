@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.5 2008/05/05 20:28:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.6 2008/06/02 06:33:10 corsair Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ghostwhitecrab.com/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="sdlaudio svga"
 
 RDEPEND="media-libs/jpeg
