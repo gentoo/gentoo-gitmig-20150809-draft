@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.12 2008/03/31 17:56:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.13 2008/06/02 21:06:04 eva Exp $
 
 inherit eutils gnome2 python virtualx autotools
 
@@ -33,6 +33,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
+
+# Tests are broken and not that useful anyway, see bug #209846
+RESTRICT="test"
 
 pkg_setup() {
 	# only controls linking, can't disable w/o a patch :)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.74 2008/05/29 16:13:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.75 2008/06/02 21:06:04 eva Exp $
+
+  02 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-python-extras-2.19.1-r1.ebuild:
+  restrict tests, see bug #209846.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org>
   gnome-python-extras-2.14.2-r1.ebuild:
