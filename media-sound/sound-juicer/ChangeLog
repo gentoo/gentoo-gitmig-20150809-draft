@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.139 2008/06/01 11:16:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.140 2008/06/02 23:33:39 aballier Exp $
+
+  02 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  sound-juicer-2.22.0.ebuild:
+  keyword ~x86-fbsd
 
   01 Jun 2008; nixnut <nixnut@gentoo.org> sound-juicer-2.22.0.ebuild:
   Added ~ppc wrt bug 218794
