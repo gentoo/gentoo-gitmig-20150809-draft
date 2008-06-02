@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.31 2008/05/17 18:27:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.32 2008/06/02 20:01:03 hanno Exp $
+
+*gpsd-2.37 (02 Jun 2008)
+
+  02 Jun 2008; Hanno Boeck <hanno@gentoo.org> +gpsd-2.37.ebuild:
+  Version bump, removed autotools-calls, not needed when not patching
+  anything, removed flag-o-matic (not called anywhere), re-enable test
+  (works for me).
 
   17 May 2008; Steve Arnold <nerdboy@gentoo.org> gpsd-2.34-r1.ebuild:
   Applying updates from bug #211456 due to device breakage in 2.36 (no
