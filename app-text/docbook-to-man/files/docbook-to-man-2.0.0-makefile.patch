@@ -1,0 +1,72 @@
+diff -NrU5 docbook-to-man-2.0.0.orig/cmd/Makefile docbook-to-man-2.0.0/cmd/Makefile
+--- docbook-to-man-2.0.0.orig/cmd/Makefile	1999-07-03 14:58:23.000000000 +0200
++++ docbook-to-man-2.0.0/cmd/Makefile	2008-05-05 10:35:51.000000000 +0200
+@@ -41,10 +41,11 @@
+ 
+ 
+ all:	docbook-to-man
+ 
+ install:	all
++	if [ ! -d $(BIN) ]; then mkdir -p $(BIN); fi
+ 	cp docbook-to-man $(BIN)
+ 
+ 
+ clean:
+ 
+diff -NrU5 docbook-to-man-2.0.0.orig/Instant/Makefile docbook-to-man-2.0.0/Instant/Makefile
+--- docbook-to-man-2.0.0.orig/Instant/Makefile	1999-07-03 14:58:23.000000000 +0200
++++ docbook-to-man-2.0.0/Instant/Makefile	2008-05-05 10:36:31.000000000 +0200
+@@ -94,10 +94,11 @@
+ 
+ instant: $(OBJ)
+ 	$(CC) -o $@ $(LDFLAGS) $(OBJ) $(REGEX)
+ 
+ install: all
++	if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi
+ 	cp $(PROGS) $(BINDIR)
+ 
+ 
+ Version:	allVersion.o
+ 
+diff -NrU5 docbook-to-man-2.0.0.orig/Instant/tptregexp/Makefile docbook-to-man-2.0.0/Instant/tptregexp/Makefile
+--- docbook-to-man-2.0.0.orig/Instant/tptregexp/Makefile	1999-07-03 14:58:23.000000000 +0200
++++ docbook-to-man-2.0.0/Instant/tptregexp/Makefile	2008-05-05 10:38:55.000000000 +0200
+@@ -60,10 +60,11 @@
+ 	regmagic.h try.c timer.c tests
+ 
+ all: libtptregexp.a
+ install: libtptregexp.a
+ #	@echo "No install of regex lib - install in a lib directory by hand if desired."
++	if [ ! -d $(LIBDIR) ]; then mkdir -p $(LIBDIR); fi
+ 	cp libtptregexp.a $(LIBDIR)
+ 
+ try:	try.o $(OBJ)
+ 	$(CC) $(LDFLAGS) try.o $(OBJ) -o try
+ 
+diff -NrU5 docbook-to-man-2.0.0.orig/Instant/tptregexp/regerror.c docbook-to-man-2.0.0/Instant/tptregexp/regerror.c
+--- docbook-to-man-2.0.0.orig/Instant/tptregexp/regerror.c	1999-07-03 14:58:24.000000000 +0200
++++ docbook-to-man-2.0.0/Instant/tptregexp/regerror.c	2008-05-05 10:25:17.000000000 +0200
+@@ -1,6 +1,7 @@
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ void
+ tpt_regerror(s)
+ char *s;
+ {
+diff -NrU5 docbook-to-man-2.0.0.orig/Transpec/Makefile docbook-to-man-2.0.0/Transpec/Makefile
+--- docbook-to-man-2.0.0.orig/Transpec/Makefile	1999-07-03 14:58:24.000000000 +0200
++++ docbook-to-man-2.0.0/Transpec/Makefile	2008-05-05 10:39:52.000000000 +0200
+@@ -45,11 +45,11 @@
+ FILES =		docbook-to-man.ts roff.cmap roff.sdata
+ 
+ all:
+ 
+ install:	all
+-	if [ ! -d $(TPTLIB) ]; then mkdir $(TPTLIB); fi
++	if [ ! -d $(TPTLIB) ]; then mkdir -p $(TPTLIB); fi
+ 	cd $(TPTLIB); rm -f $(FILES)
+ 	cp $(FILES) $(TPTLIB)
+ 
+ 
+ clean:
