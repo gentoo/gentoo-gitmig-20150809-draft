@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.4 2008/04/06 17:46:10 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.5 2008/06/02 14:32:00 hanno Exp $
+
+*libhx-1.17 (02 Jun 2008)
+
+  02 Jun 2008; Hanno Boeck <hanno@gentoo.org> +libhx-1.17.ebuild:
+  Version bump.
 
 *libhx-1.15 (06 Apr 2008)
 
