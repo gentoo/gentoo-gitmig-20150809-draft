@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.8.ebuild,v 1.5 2008/05/08 03:24:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.8.ebuild,v 1.6 2008/06/02 09:30:49 aballier Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://gdata-python-client.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="examples"
 
 DEPEND=""
