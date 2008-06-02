@@ -1,6 +1,18 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.239 2008/05/29 17:26:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.240 2008/06/02 15:53:58 cardoe Exp $
+
+*mythtv-0.21_p17435 (02 Jun 2008)
+
+  02 Jun 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.21_p17435.ebuild:
+  upstream revision bump. Remove OpenGL XvMC and OpenGL video support after
+  discussions with upstream and how other distros are packaging MythTV.
+  Support for those features is known to be an issue. Most users don't want
+  it anyway since they have worse performance unless you've got a specific
+  Quatro card. Additionally, we're always using XvMCW and requiring users to
+  configure their XvMC provider via eselect-xvmc, based on patch from Rick
+  Harris <rickfharris@yahoo.com.au> on bug #220857
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> mythtv-0.21_p16867.ebuild,
   mythtv-0.21_p16926.ebuild, mythtv-0.21_p16944.ebuild,
