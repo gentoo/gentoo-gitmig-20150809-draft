@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.16.00.ebuild,v 1.4 2008/06/01 10:24:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.16.00.ebuild,v 1.5 2008/06/02 01:27:44 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 }
-
 
 src_compile() {
 	econf || die "econf failed"
