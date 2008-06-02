@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20080409.ebuild,v 1.1 2008/06/02 12:17:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20080409.ebuild,v 1.2 2008/06/02 12:21:04 loki_val Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -17,7 +17,5 @@ RDEPEND=""
 IUSE=""
 
 src_install() {
-	# emake install causes an access violation
-	#einstall || die
 	emake DESTDIR="${D}" install
 }
