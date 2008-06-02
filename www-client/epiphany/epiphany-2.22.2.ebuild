@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.2.ebuild,v 1.1 2008/05/31 14:27:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.2.ebuild,v 1.2 2008/06/02 22:57:09 leio Exp $
 
 inherit gnome2 eutils multilib
 
@@ -12,9 +12,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi doc networkmanager python spell xulrunner"
 
-# FIXME: add webkit/gecko switch possibility
-# dang: *after* webkit actually works.
-# this release should work with xulrunner 1.9 so not slotting right now
+# This release should work with xulrunner 1.9, but this revision is a
+# stable candidate, so stick with 1.8 here.
+# xulrunner-1.9 can be achieved via --with-engine=xulrunner, while
+# --with-engine=mozilla goes with 1.8
 
 RDEPEND=">=dev-libs/glib-2.16.0
 	>=x11-libs/gtk+-2.12.0
@@ -31,8 +32,8 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	>=app-text/iso-codes-0.35
 	avahi? ( >=net-dns/avahi-0.6.22 )
 	networkmanager? ( net-misc/networkmanager )
-	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
-	xulrunner? ( net-libs/xulrunner )
+	!xulrunner? ( =www-client/mozilla-firefox-2* )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1

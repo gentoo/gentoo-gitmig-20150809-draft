@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.157 2008/05/31 14:27:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.158 2008/06/02 22:57:09 leio Exp $
+
+  02 Jun 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.1.1.ebuild,
+  epiphany-2.22.2.ebuild:
+  Fix deps to net-libs/xulrunner-1.8 or www-client/mozilla-firefox-2 - the
+  configure options passed wanted =xul-1.8 anyway; a future revision will be
+  made to work with xul-1.9
 
 *epiphany-2.22.2 (31 May 2008)
 
