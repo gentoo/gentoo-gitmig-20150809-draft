@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.105 2008/05/21 16:04:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.106 2008/06/02 13:28:47 jer Exp $
+
+  02 Jun 2008; Jeroen Roovers <jer@gentoo.org> courier-0.59.0.ebuild:
+  Stable for HPPA (bug #223767).
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   courier-0.53.2-r1.ebuild, courier-0.55.1-r1.ebuild, courier-0.59.0.ebuild:
