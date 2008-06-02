@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.2 2008/06/01 18:11:54 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.3 2008/06/02 22:06:26 pchrist Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ pkg_setup() {
 	ewarn "Stalin is an ugly beast, which will eat all your memory and stress your"
 	ewarn "processor to levels you have never experienced. If you want to abort,"
 	ewarn "please do it now. You have been warned."
-	epause 10
 }
 
 src_compile() {
