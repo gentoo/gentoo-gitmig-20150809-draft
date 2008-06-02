@@ -26,7 +26,8 @@ sys-auth/consolekit pam
 net-im/pidgin networkmanager zephyr
 
 # nvtv is probably Linux only, someone with an nvidia card plz test
-media-video/totem bluetooth nvtv
+# app-misc/tracker seems to have code tight to linux, mask it
+media-video/totem bluetooth nvtv tracker
 
 # Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
 mail-client/evolution pda
