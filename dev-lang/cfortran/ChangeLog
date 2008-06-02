@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.6 2008/04/03 05:41:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.7 2008/06/02 08:14:54 bicatali Exp $
+
+*cfortran-4.4-r1 (02 Jun 2008)
+
+  02 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +cfortran-4.4-r1.ebuild:
+  Add new patch from Debebian, few trivial qa fixes
 
   03 Apr 2008; Jeroen Roovers <jer@gentoo.org> cfortran-4.4.ebuild:
   Marked ~hppa too.
