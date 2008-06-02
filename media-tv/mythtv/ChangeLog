@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.240 2008/06/02 15:53:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.241 2008/06/02 19:18:00 cardoe Exp $
+
+  02 Jun 2008; Doug Goldstein <cardoe@gentoo.org> mythtv-0.21_p17435.ebuild:
+  missing * from x11-libs/qt-3. bug #224649
 
 *mythtv-0.21_p17435 (02 Jun 2008)
 

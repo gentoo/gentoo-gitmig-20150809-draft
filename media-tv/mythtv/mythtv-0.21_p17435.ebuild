@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17435.ebuild,v 1.1 2008/06/02 15:53:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17435.ebuild,v 1.2 2008/06/02 19:18:00 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -62,7 +62,7 @@ MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
 
-	confutils_require_built_with_all =x11-libs/qt-3 mysql opengl
+	confutils_require_built_with_all =x11-libs/qt-3* mysql opengl
 
 	elog "This ebuild now uses a heavily stripped down version of your CFLAGS"
 
