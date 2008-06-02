@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.12 2008/05/25 23:39:12 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.13 2008/06/02 10:07:31 aballier Exp $
+
+  02 Jun 2008; Alexis Ballier <aballier@gentoo.org> gtk-vnc-0.3.6.ebuild:
+  keyword ~x86-fbsd
 
 *gtk-vnc-0.3.6 (25 May 2008)
 
