@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.49 2008/04/10 05:43:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.50 2008/06/02 06:25:51 opfer Exp $
+
+  02 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  dnetc-2.9015.504.ebuild:
+  stable x86
 
   10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> files/dnetc.initd:
   Updated Fair CPU Scheduler support with a patch from Arthur Hagen
