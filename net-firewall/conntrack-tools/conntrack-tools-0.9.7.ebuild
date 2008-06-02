@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.7.ebuild,v 1.1 2008/05/31 22:37:01 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.7.ebuild,v 1.2 2008/06/02 08:35:52 dragonheart Exp $
 
 inherit linux-info
 
 DESCRIPTION="Connection tracking userspace tools"
-HOMEPAGE="http://people.netfilter.org/pablo/conntrack-tools/"
+HOMEPAGE="http://conntrack-tools.netfilter.org"
 SRC_URI="http://www.netfilter.org/projects/conntrack-tools/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
