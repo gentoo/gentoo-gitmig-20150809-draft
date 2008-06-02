@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028.ebuild,v 1.1 2008/06/01 21:32:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028.ebuild,v 1.2 2008/06/02 03:11:39 beandog Exp $
 
 inherit nsplugins eutils rpm
 
 MY_PN="RealPlayer"
 DESCRIPTION="Real Media Player"
 HOMEPAGE="http://www.real.com/ http://player.helixcommunity.org/"
-SRC_URI="href=http://forms.real.com/real/player/download.html?f=unix/RealPlayer11GOLD.rpm"
+SRC_URI="http://forms.real.com/real/player/download.html?f=unix/RealPlayer11GOLD.rpm"
 LICENSE="HBRL"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
