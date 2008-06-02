@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.2 2008/06/02 21:54:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.3 2008/06/02 22:19:05 wolf31o2 Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,6 @@ TARBALL="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
 DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://cco.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
 SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
-#SRC_URI="http://tuxx-home.at/vpn/Linux/${TARBALL}"
 
 LICENSE="cisco-vpn-client"
 SLOT="0"
@@ -49,11 +48,10 @@ src_unpack () {
 }
 
 src_install() {
+	local binaries="vpnclient ipseclog cisco_cert_mgr"
 	linux-mod_src_install
-#	newinitd ${FILESDIR}/vpnclient.rc vpnclient
 
 	# Binaries
-	binaries="vpnclient ipseclog cisco_cert_mgr"
 	exeinto /opt/cisco-vpnclient/bin
 	exeopts -m0111
 	doexe ${binaries}
@@ -73,16 +71,16 @@ src_install() {
 	doins *.pcf
 	dodir ${CFGDIR}/Certificates
 
-	# Make sure we keep these, even if they're empty.
-	keepdir ${CFGDIR}/Certificates
-	keepdir ${CFGDIR}/Profiles
-
 	# Create some symlinks
 	dodir /usr/bin
 	for filename in ${binaries}
 	do
 		dosym ${VPNDIR}/bin/${filename} /usr/bin/${filename}
 	done
+
+	# Make sure we keep these, even if they're empty.
+	keepdir ${CFGDIR}/Certificates
+	keepdir ${CFGDIR}/Profiles
 }
 
 pkg_postinst() {
@@ -91,7 +89,7 @@ pkg_postinst() {
 	then
 		elog "Found an old ${OLDCFG} configuration directory."
 		elog "Moving ${OLDCFG} files to ${CFGDIR}."
-		cp -pPR ${OLDCFG}/* ${CFGDIR} && rm -f ${OLDCFG}
+		cp -pPR ${OLDCFG}/* ${CFGDIR} && rm -rf ${OLDCFG}
 	fi
 	if [ -e "/etc/init.d/vpnclient" ]
 	then
