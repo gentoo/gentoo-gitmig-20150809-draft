@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.522 2008/06/01 10:30:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.523 2008/06/02 10:27:18 genone Exp $
+
+*portage-2.2_pre7-r1 (02 Jun 2008)
+
+  02 Jun 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre3.ebuild,
+  -portage-2.2_pre5.ebuild, -portage-2.2_pre6.ebuild,
+  -portage-2.2_pre7.ebuild, +portage-2.2_pre7-r1.ebuild:
+  Fix several critical bugs in the NEEDED conversion code, requiring all
+  NEEDED.ELF.2 files to be regenerated.
 
 *portage-2.1.5.3 (01 Jun 2008)
 

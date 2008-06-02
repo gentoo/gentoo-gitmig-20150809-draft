@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre3.ebuild,v 1.2 2008/05/29 18:01:52 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre7-r1.ebuild,v 1.1 2008/06/02 10:27:18 genone Exp $
 
-inherit toolchain-funcs eutils flag-o-matic multilib python
+inherit eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -62,6 +62,8 @@ S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 pkg_setup() {
 	MINOR_UPGRADE=$(has_version '>=sys-apps/portage-2.2_alpha' && echo true)
+	WORLD_MIGRATION_UPGRADE=$(has_version '<=sys-apps/portage-2.2_pre5' && echo true)
+	NEEDED_REBUILD_UPGRADE=$(has_version '<=sys-apps/portage-2.2_pre7' && echo true)
 }
 
 src_unpack() {
@@ -77,11 +79,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-lfs-flags
-
-	cd "${S}"/src
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
-		die "Failed to build tbz2tool"
 
 	if use doc; then
 		cd "${S}"/doc
@@ -112,9 +109,14 @@ src_install() {
 	local libdir=$(get_libdir)
 	local portage_base="/usr/${libdir}/portage"
 	local portage_share_config=/usr/share/portage/config
+
 	cd "${S}"/cnf
 	insinto /etc
-	doins etc-update.conf dispatch-conf.conf make.globals
+	doins etc-update.conf dispatch-conf.conf
+
+	dodir "${portage_share_config}"
+	insinto "${portage_share_config}"
+	doins "${S}/cnf/"{sets.conf,make.globals}
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
 			die "Failed to patch make.conf.example"
@@ -126,6 +128,8 @@ src_install() {
 		eerror ""
 		newins make.conf make.conf.example
 	fi
+
+	dosym ..${portage_share_config}/make.globals /etc/make.globals
 
 	insinto /etc/logrotate.d
 	doins "${S}"/cnf/logrotate.d/elog-save-summary
@@ -140,7 +144,6 @@ src_install() {
 
 	cd "${S}"/bin
 	doexe *
-	doexe "${S}"/src/tbz2tool
 	dosym newins ${portage_base}/bin/donewins
 
 	local symlinks
@@ -174,7 +177,7 @@ src_install() {
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
-	for x in ebuild emerge portageq repoman tbz2tool xpak; do
+	for x in ebuild emerge portageq repoman xpak; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 
@@ -197,9 +200,6 @@ src_install() {
 
 	dodir /etc/portage
 	keepdir /etc/portage
-	dodir "${portage_share_config}"
-	insinto "${portage_share_config}"
-	doins "${S}/cnf/sets.conf"
 }
 
 pkg_preinst() {
@@ -213,17 +213,41 @@ pkg_preinst() {
 			ewarn "See bug #198398 for more information."
 		fi
 	fi
+	if [ -f "${ROOT}/etc/make.globals" ]; then
+		rm "${ROOT}/etc/make.globals"
+	fi
 }
 
 pkg_postinst() {
-	for x in "${ROOT}"/etc/._cfg????_make.globals; do
-		# Overwrite the globals file automatically.
-		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
-	done
-
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
+
+	if [ -n "${WORLD_MIGRATION_UPGRADE}" ]; then
+		einfo "moving set references from the worldfile into world_sets"
+		cd "${ROOT}/var/lib/portage/"
+		grep "^@" world >> world_sets
+		sed -i -e '/^@/d' world
+	fi
+
+	if [ -n "${NEEDED_REBUILD_UPGRADE}" ]; then
+		einfo "rebuilding NEEDED.ELF.2 files"
+		for cpv in "${ROOT}/var/db/pkg"/*/*; do
+			if [ -f "${cpv}/NEEDED" ]; then
+				rm -f "${cpv}/NEEDED.ELF.2"
+				while read line; do
+					filename=${line% *}
+					needed=${line#* }
+					needed=${needed//+/++}
+					needed=${needed//#/##}
+					needed=${needed//%/%%}
+					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
+					newline=${newline//  -  }
+					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
+				done < "${cpv}/NEEDED"
+			fi
+		done
+	fi
 
 	elog
 	elog "For help with using portage please consult the Gentoo Handbook"
