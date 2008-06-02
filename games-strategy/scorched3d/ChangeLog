@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.54 2008/05/29 11:47:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.55 2008/06/02 09:42:45 tupone Exp $
+
+  02 Jun 2008; Tupone Alfredo <tupone@gentoo.org> scorched3d-41.3-r1.ebuild:
+  Fix for a WIN32 only macro conflict
 
   29 May 2008; Tristan Heaven <nyhm@gentoo.org> scorched3d-41.3-r1.ebuild:
   Fix compilation with wxGTK USE=odbc by Arttu Valo, bug #213872
