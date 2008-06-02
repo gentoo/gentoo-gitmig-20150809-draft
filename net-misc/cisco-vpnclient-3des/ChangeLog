@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.58 2008/06/02 20:55:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.59 2008/06/02 21:54:03 wolf31o2 Exp $
+
+  02 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.8.01.0640.ebuild:
+  Add back the RESTRICT=fetch code and adding RESTRICT=mirror.
 
   02 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/4.8.01.0640-2.6.24.patch, +files/4.8.01.0640-amd64.patch:

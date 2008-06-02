@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.1 2008/06/02 20:55:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.2 2008/06/02 21:54:03 wolf31o2 Exp $
 
 inherit eutils linux-mod
 
@@ -9,14 +9,14 @@ TARBALL="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
 
 DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://cco.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
-#SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
-SRC_URI="http://tuxx-home.at/vpn/Linux/${TARBALL}"
+SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
+#SRC_URI="http://tuxx-home.at/vpn/Linux/${TARBALL}"
 
 LICENSE="cisco-vpn-client"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="fetch mirror strip"
 
 S=${WORKDIR}/vpnclient
 
@@ -34,11 +34,11 @@ QA_EXECSTACK="${VPNDIR:1}/lib/libvpnapi.so
 MODULE_NAMES="cisco_ipsec(CiscoVPN)"
 BUILD_TARGETS="clean default"
 
-#pkg_nofetch() {
-#	einfo "Please visit:"
-#	einfo " ${HOMEPAGE}"
-#	einfo "and download ${A} to ${DISTDIR}"
-#}
+pkg_nofetch() {
+	einfo "Please visit:"
+	einfo " ${HOMEPAGE}"
+	einfo "and download ${A} to ${DISTDIR}"
+}
 
 src_unpack () {
 	unpack ${A}
