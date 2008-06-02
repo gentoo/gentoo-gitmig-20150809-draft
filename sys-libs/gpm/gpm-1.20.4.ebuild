@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.4.ebuild,v 1.1 2008/05/31 04:25:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.4.ebuild,v 1.2 2008/06/02 17:06:17 vapier Exp $
 
 # emacs support disabled due to Bug 99533
 
@@ -12,8 +12,7 @@ SRC_URI="http://linux.schottelius.org/gpm/archives/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-# need to sort out SONAME first
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
 DEPEND="sys-libs/ncurses
@@ -24,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.20.3-no-emacs-dir.patch
+	epatch "${FILESDIR}"/${PN}-1.20.4-abi.patch
 }
 
 src_compile() {
