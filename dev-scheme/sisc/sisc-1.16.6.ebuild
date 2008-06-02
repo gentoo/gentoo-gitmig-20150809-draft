@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/sisc/sisc-1.16.6.ebuild,v 1.1 2008/06/02 21:28:25 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/sisc/sisc-1.16.6.ebuild,v 1.2 2008/06/02 22:09:41 pchrist Exp $
 
 EAPI=1
 inherit eutils java-pkg-2 java-ant-2
@@ -22,8 +22,8 @@ src_unpack() {
 }
 
 src_compile() {
-eant clean || die "Cleaning with ant failed."
-eant all || die "building all target with ant, failed."
+	eant clean || die "Cleaning with ant failed."
+	eant all || die "building all target with ant, failed."
 }
 
 src_install() {
