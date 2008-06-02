@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.19.1.ebuild,v 1.2 2008/06/01 20:14:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.19.1.ebuild,v 1.3 2008/06/02 10:30:39 markusle Exp $
 
 inherit eutils qt3
 
@@ -35,6 +35,14 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+
+pkg_setup() {
+	# need python threads (see bug #224269)
+	if ! built_with_use dev-lang/python threads; then
+		die "hippodraw needs dev-lang/python with USE=\"threads\""
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
