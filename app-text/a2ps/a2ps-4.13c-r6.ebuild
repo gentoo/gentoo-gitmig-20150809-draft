@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.9 2008/04/29 12:22:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.10 2008/06/02 21:59:57 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -67,6 +67,12 @@ src_unpack() {
 
 	# fix chmod error, #167670
 	epatch "${FILESDIR}/a2ps-4.13-manpage-chmod.patch"
+
+	# add configure check for mempcpy, bug 216588
+	epatch "${FILESDIR}/a2ps-4.14-check-mempcpy.patch"
+
+	# fix compilation error due to invalid stpcpy() prototype, bug 216588
+	epatch "${FILESDIR}/a2ps-4.14-fix-stpcpy-proto.patch"
 
 	AT_M4DIR="m4" eautoreconf || die "eautoreconf failed"
 }
