@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.49 2008/06/01 14:20:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.50 2008/06/02 01:59:41 mr_bones_ Exp $
+
+  02 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.4.8.ebuild:
+  strip-flags for bugs like #186734
 
 *ogre-1.4.8 (01 Jun 2008)
 

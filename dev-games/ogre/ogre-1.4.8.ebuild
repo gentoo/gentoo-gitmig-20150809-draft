@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.8.ebuild,v 1.1 2008/06/01 14:20:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.8.ebuild,v 1.2 2008/06/02 01:59:41 mr_bones_ Exp $
 
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
@@ -58,6 +58,7 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-flags
 	econf \
 		--disable-dependency-tracking \
 		--disable-freeimage \
