@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.67 2008/04/25 13:33:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.68 2008/06/02 05:59:23 jer Exp $
+
+  02 Jun 2008; Jeroen Roovers <jer@gentoo.org>
+  kdebluetooth-1.0_beta8.ebuild:
+  Stable for HPPA (bug #224409).
 
   25 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   kdebluetooth-1.0_beta1-r2.ebuild, kdebluetooth-1.0_beta2-r2.ebuild,
