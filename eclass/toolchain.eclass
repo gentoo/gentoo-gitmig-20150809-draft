@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.354 2008/04/22 19:26:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.355 2008/06/02 15:38:52 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1240,7 +1240,7 @@ gcc_do_configure() {
 	[[ $(tc-is-softfloat) == "yes" ]] && confgcc="${confgcc} --with-float=soft"
 
 	# Native Language Support
-	if use nls && ! use build ; then
+	if use nls ; then
 		confgcc="${confgcc} --enable-nls --without-included-gettext"
 	else
 		confgcc="${confgcc} --disable-nls"
@@ -1416,10 +1416,10 @@ gcc_do_make() {
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
-	if ! use build && ! is_crosscompile && ! use nocxx && use doc ; then
+	if ! is_crosscompile && ! use nocxx && use doc ; then
 		if type -p doxygen > /dev/null ; then
 			cd "${CTARGET}"/libstdc++-v3
-			make doxygen-man || ewarn "failed to make docs"
+			emake doxygen-man || ewarn "failed to make docs"
 		else
 			ewarn "Skipping libstdc++ manpage generation since you don't have doxygen installed"
 		fi
@@ -1651,74 +1651,72 @@ gcc-compiler_src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if ! use build ; then
-		cd "${D}"${LIBPATH}
+	cd "${D}"${LIBPATH}
 
-		# Move Java headers to compiler-specific dir
-		for x in "${D}"${PREFIX}/include/gc*.h "${D}"${PREFIX}/include/j*.h ; do
-			[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/include/
-		done
-		for x in gcj gnu java javax org ; do
-			if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
-				dodir /${LIBPATH}/include/${x}
-				mv -f "${D}"${PREFIX}/include/${x}/* "${D}"${LIBPATH}/include/${x}/
-				rm -rf "${D}"${PREFIX}/include/${x}
-			fi
-		done
+	# Move Java headers to compiler-specific dir
+	for x in "${D}"${PREFIX}/include/gc*.h "${D}"${PREFIX}/include/j*.h ; do
+		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/include/
+	done
+	for x in gcj gnu java javax org ; do
+		if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
+			dodir /${LIBPATH}/include/${x}
+			mv -f "${D}"${PREFIX}/include/${x}/* "${D}"${LIBPATH}/include/${x}/
+			rm -rf "${D}"${PREFIX}/include/${x}
+		fi
+	done
 
-		if [[ -d ${D}${PREFIX}/lib/security ]] ; then
-			dodir /${LIBPATH}/security
-			mv -f "${D}"${PREFIX}/lib/security/* "${D}"${LIBPATH}/security
-			rm -rf "${D}"${PREFIX}/lib/security
+	if [[ -d ${D}${PREFIX}/lib/security ]] ; then
+		dodir /${LIBPATH}/security
+		mv -f "${D}"${PREFIX}/lib/security/* "${D}"${LIBPATH}/security
+		rm -rf "${D}"${PREFIX}/lib/security
+	fi
+
+	# Move libgcj.spec to compiler-specific directories
+	[[ -f ${D}${PREFIX}/lib/libgcj.spec ]] && \
+		mv -f "${D}"${PREFIX}/lib/libgcj.spec "${D}"${LIBPATH}/libgcj.spec
+
+	# Rename jar because it could clash with Kaffe's jar if this gcc is
+	# primary compiler (aka don't have the -<version> extension)
+	cd "${D}"${BINPATH}
+	[[ -f jar ]] && mv -f jar gcj-jar
+
+	# Move <cxxabi.h> to compiler-specific directories
+	[[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ]] && \
+		mv -f "${D}"${STDCXX_INCDIR}/cxxabi.h "${D}"${LIBPATH}/include/
+
+	# These should be symlinks
+	dodir /usr/bin
+	cd "${D}"${BINPATH}
+	for x in cpp gcc g++ c++ g77 gcj gcjh gfortran ; do
+		# For some reason, g77 gets made instead of ${CTARGET}-g77...
+		# this should take care of that
+		[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
+
+		if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile ; then
+			ln -sf ${CTARGET}-${x} ${x}
+
+			# Create version-ed symlinks
+			dosym ${BINPATH}/${CTARGET}-${x} \
+				/usr/bin/${CTARGET}-${x}-${GCC_CONFIG_VER}
+			dosym ${BINPATH}/${CTARGET}-${x} \
+				/usr/bin/${x}-${GCC_CONFIG_VER}
 		fi
 
-		# Move libgcj.spec to compiler-specific directories
-		[[ -f ${D}${PREFIX}/lib/libgcj.spec ]] && \
-			mv -f "${D}"${PREFIX}/lib/libgcj.spec "${D}"${LIBPATH}/libgcj.spec
-
-		# Rename jar because it could clash with Kaffe's jar if this gcc is
-		# primary compiler (aka don't have the -<version> extension)
-		cd "${D}"${BINPATH}
-		[[ -f jar ]] && mv -f jar gcj-jar
-
-		# Move <cxxabi.h> to compiler-specific directories
-		[[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ]] && \
-			mv -f "${D}"${STDCXX_INCDIR}/cxxabi.h "${D}"${LIBPATH}/include/
-
-		# These should be symlinks
-		dodir /usr/bin
-		cd "${D}"${BINPATH}
-		for x in cpp gcc g++ c++ g77 gcj gcjh gfortran ; do
-			# For some reason, g77 gets made instead of ${CTARGET}-g77...
-			# this should take care of that
-			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
-
-			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile ; then
-				ln -sf ${CTARGET}-${x} ${x}
-
-				# Create version-ed symlinks
-				dosym ${BINPATH}/${CTARGET}-${x} \
-					/usr/bin/${CTARGET}-${x}-${GCC_CONFIG_VER}
-				dosym ${BINPATH}/${CTARGET}-${x} \
-					/usr/bin/${x}-${GCC_CONFIG_VER}
-			fi
-
-			if [[ -f ${CTARGET}-${x}-${GCC_CONFIG_VER} ]] ; then
-				rm -f ${CTARGET}-${x}-${GCC_CONFIG_VER}
-				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${GCC_CONFIG_VER}
-			fi
-		done
-
-		# I do not know if this will break gcj stuff, so I'll only do it for
-		#	objc for now; basically "ffi.h" is the correct file to include,
-		#	but it gets installed in .../GCCVER/include and yet it does
-		#	"#include <ffitarget.h>" which (correctly, as it's an "extra" file)
-		#	is installed in .../GCCVER/include/libffi; the following fixes
-		#	ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
-		if [[ -d ${D}${LIBPATH}/include/libffi ]] ; then
-			mv -i "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include || die
-			rm -r "${D}"${LIBPATH}/include/libffi || die
+		if [[ -f ${CTARGET}-${x}-${GCC_CONFIG_VER} ]] ; then
+			rm -f ${CTARGET}-${x}-${GCC_CONFIG_VER}
+			ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${GCC_CONFIG_VER}
 		fi
+	done
+
+	# I do not know if this will break gcj stuff, so I'll only do it for
+	#	objc for now; basically "ffi.h" is the correct file to include,
+	#	but it gets installed in .../GCCVER/include and yet it does
+	#	"#include <ffitarget.h>" which (correctly, as it's an "extra" file)
+	#	is installed in .../GCCVER/include/libffi; the following fixes
+	#	ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
+	if [[ -d ${D}${LIBPATH}/include/libffi ]] ; then
+		mv -i "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include || die
+		rm -r "${D}"${LIBPATH}/include/libffi || die
 	fi
 
 	# Now do the fun stripping stuff
@@ -1729,7 +1727,7 @@ gcc-compiler_src_install() {
 		env RESTRICT="" CHOST=${CHOST} prepstrip "${D}${PREFIX}/libexec/gcc/${CTARGET}/${GCC_CONFIG_VER}"
 
 	cd "${S}"
-	if use build || is_crosscompile; then
+	if is_crosscompile; then
 		rm -rf "${D}"/usr/share/{man,info}
 		rm -rf "${D}"${DATAPATH}/{man,info}
 	else
@@ -2338,68 +2336,57 @@ is_multilib() {
 
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
-	use build && return 1
 	! use nocxx
 }
 
 is_d() {
 	gcc-lang-supported d || return 1
-	use build && return 1
 	use d
 }
 
 is_f77() {
 	gcc-lang-supported f77 || return 1
-	use build && return 1
 	use fortran
 }
 
 is_f95() {
 	gcc-lang-supported f95 || return 1
-	use build && return 1
 	use fortran
 }
 
 is_fortran() {
 	gcc-lang-supported fortran || return 1
-	use build && return 1
 	use fortran
 }
 
 is_gcj() {
 	gcc-lang-supported java || return 1
-	use build && return 1
 	use gcj
 }
 
 is_libffi() {
 	has libffi ${USE} || return 1
-	use build && return 1
 	use libffi
 }
 
 is_objc() {
 	gcc-lang-supported objc || return 1
-	use build && return 1
 	use objc
 }
 
 is_objcxx() {
 	gcc-lang-supported 'obj-c++' || return 1
-	use build && return 1
 	use objc++
 }
 
 is_ada() {
 	gcc-lang-supported ada || return 1
-	use build && return 1
 	use ada
 }
 
 is_treelang() {
 	is_crosscompile && return 1 #199924
 	gcc-lang-supported treelang || return 1
-	use build && return 1
 	#use treelang
 	return 0
 }
