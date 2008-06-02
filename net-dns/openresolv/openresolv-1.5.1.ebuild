@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-1.5.1.ebuild,v 1.1 2008/04/09 12:13:38 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-1.5.1.ebuild,v 1.2 2008/06/02 08:54:14 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="!net-dns/resolvconf-gentoo
