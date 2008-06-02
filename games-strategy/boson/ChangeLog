@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/boson
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.31 2007/10/12 09:53:37 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.32 2008/06/02 22:09:29 loki_val Exp $
+
+*boson-0.13-r1 (02 Jun 2008)
+
+  02 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> +boson-0.13-r1.ebuild:
+  Revision bump to fix a number of bugs. Among those are: GCC-4.{2,3}
+  support, subtle python crashes and varied typoes. Also closes bug 220409.
+  Dropped ppc keywords, a bug to readd them in the works.
 
   12 Oct 2007; Lars Weiler <pylon@gentoo.org> boson-0.13.ebuild:
   stable ppc, bug #195007
