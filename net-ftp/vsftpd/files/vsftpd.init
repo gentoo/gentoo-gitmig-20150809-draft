@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.5 2007/04/10 13:00:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.6 2008/06/02 04:18:15 darkside Exp $
 
 VSFTPD_NAME=${SVCNAME##*.}
 if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
@@ -56,8 +56,7 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --exec /usr/sbin/vsftpd \
-		--pidfile "${VSFTPD_PID}"
+	start-stop-daemon --stop --exec /usr/sbin/vsftpd 
 	eend $?
 }
 
