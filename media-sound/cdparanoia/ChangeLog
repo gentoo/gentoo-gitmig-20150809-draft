@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.77 2008/05/26 15:49:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.78 2008/06/02 11:47:31 drac Exp $
+
+  02 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  cdparanoia-3.10_pre2.ebuild:
+  Force LC_ALL=C for econf wrt #223513. Thanks to Priit Laes.
 
   26 May 2008; Samuli Suominen <drac@gentoo.org>
   -cdparanoia-3.10_pre0.ebuild, cdparanoia-3.10_pre0-r1.ebuild:
