@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.38 2008/05/13 13:02:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.39 2008/06/02 06:16:39 jer Exp $
+
+  02 Jun 2008; Jeroen Roovers <jer@gentoo.org> bluez-hcidump-1.41.ebuild:
+  Stable for HPPA (bug #224409).
 
   13 May 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove proxy maintainer as he doesn't use Gentoo any more.
