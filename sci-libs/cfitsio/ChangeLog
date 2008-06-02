@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.15 2008/06/02 08:21:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.16 2008/06/02 08:26:51 bicatali Exp $
+
+*cfitsio-3.080 (02 Jun 2008)
+
+  02 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cfitsio-3.080-autotools.patch, +cfitsio-3.080.ebuild:
+  Version bump with similar autotools changes and license fix (see below for
+  cfitsio-2.510-r2)
 
 *cfitsio-2.510-r2 (02 Jun 2008)
 
