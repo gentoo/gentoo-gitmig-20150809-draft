@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.3 2008/02/21 23:42:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.4 2008/06/02 14:26:15 hanno Exp $
 
 DESCRIPTION="md4 and edonkey hash algorithm tool"
 HOMEPAGE="http://absinth.dyndns.org/linux/c/"
@@ -8,6 +8,7 @@ SRC_URI="http://absinth.dyndns.org/linux/c/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
+IUSE=""
 
 src_compile() {
 	econf || die "econf failed"
@@ -17,7 +18,7 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/share/man/man1
+	mkdir -p "${D}/usr/bin"
+	mkdir -p "${D}/usr/share/man/man1"
 	einstall || die "einstall failed"
 }
