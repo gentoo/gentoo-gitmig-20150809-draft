@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ck4up/ck4up-1.0.ebuild,v 1.1 2008/05/31 19:16:37 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ck4up/ck4up-1.0.ebuild,v 1.2 2008/06/02 06:36:15 bangert Exp $
 
 DESCRIPTION="Check for Updates on HTTP pages"
 HOMEPAGE="http://jue.li/crux/ck4up/"
@@ -19,6 +19,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	doman ck4up.1
+	newbin ck4up.rb ck4up
 	dodoc ChangeLog || die
 }
