@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtecla
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.9 2007/02/09 02:34:39 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.10 2008/06/03 13:10:03 markusle Exp $
+
+  03 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/libtecla-1.6.1-install.patch, libtecla-1.6.0-r1.ebuild,
+  libtecla-1.6.1.ebuild:
+  Cleaned up ebuild and fixes QA issues. Added amd64 keyword.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
