@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.10.ebuild,v 1.2 2008/03/09 04:31:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.10.ebuild,v 1.3 2008/06/03 02:26:55 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,6 @@ RDEPEND="dbus? ( sys-apps/dbus )
 			gsm? ( sys-apps/pcsc-lite )
 		 	madwifi? ( ||
 				( >net-wireless/madwifi-ng-tools-0.9.3
-				<net-wireless/madwifi-ng-0.9.3-r4
 				net-wireless/madwifi-old )
 			)
 		)
