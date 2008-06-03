@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0.1_beta20080501.ebuild,v 1.3 2008/05/21 14:47:51 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0.2_beta20080530.ebuild,v 1.1 2008/06/03 21:22:02 lavajoe Exp $
 
 inherit eutils
 
-SVN_VER="19294"
+SVN_VER="20324"
 MAJOR_VER="${PV:0:3}"
 MINOR_VER="${PV:4:1}"
-SRC_DIR="SqueezeCenter_trunk_v${PV:10:4}-${PV:14:2}-${PV:16:2}"
+SRC_DIR="SqueezeCenter_7.0_v${PV:10:4}-${PV:14:2}-${PV:16:2}"
 MY_P="squeezecenter-${MAJOR_VER}.${MINOR_VER}-${SVN_VER}-noCPAN"
 
 DESCRIPTION="Logitech SqueezeCenter music server"
@@ -44,10 +44,14 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-INSTROOT="/opt"
-PREFS="/etc/squeezecenter.prefs"
-CACHED_PREFS="/var/cache/squeezecenter/prefs/server.prefs"
+PREFS="/var/lib/squeezecenter/prefs/squeezecenter.prefs"
+LIVE_PREFS="/var/lib/squeezecenter/prefs/server.prefs"
+DOCDIR="/usr/share/doc/squeezecenter-${MAJOR_VER}.${MINOR_VER}"
+SHAREDIR="/usr/share/squeezecenter"
+LIBDIR="/usr/lib/squeezecenter"
 DBUSER="squeezecenter"
+OLDPLUGINSDIR=/opt/squeezecenter/Plugins
+NEWPLUGINSDIR=/var/lib/squeezecenter/Plugins
 
 pkg_setup() {
 	# Sox has optional OGG support, so make sure it has been built that way
@@ -60,7 +64,7 @@ pkg_setup() {
 
 	# Create the user and group if not already present
 	enewgroup squeezecenter || die
-	enewuser squeezecenter -1 -1 "${INSTROOT}/squeezecenter" squeezecenter || die
+	enewuser squeezecenter -1 -1 "/dev/null" squeezecenter || die
 }
 
 src_unpack() {
@@ -69,20 +73,7 @@ src_unpack() {
 
 	# Apply patches
 	epatch "${FILESDIR}/mDNSResponder-${MAJOR_VER}-gentoo.patch"
-
-	# Remove bundled binaries that are supplied by other ebuilds
-	einfo "Removing binaries provided by other ebuilds ..."
-	rm "${S}"/Bin/*/mDNSResponderPosix || die	# net-misc/mDNSResponder
-	rm "${S}"/Bin/*/alac || die					# media-sound/alac_decoder
-	rm "${S}"/Bin/*/flac || die					# media-libs/flac
-	rm "${S}"/Bin/*/sox || die					# media-sound/sox
-	rm "${S}"/Bin/*/wvunpack || die				# media-sound/wavpack
-	rm "${S}"/Bin/*/mppdec || die				# media-sound/musepack-tools
-
-	# Remove bundled MySQL as we depend on an external instance
-	einfo "Removing bundled MySQL ..."
-	rm -r "${S}"/MySQL || die
-	rm "${S}"/Bin/*/mysqld || die				# virtual/mysql
+	epatch "${FILESDIR}/filepaths-${MAJOR_VER}.${MINOR_VER}-gentoo.patch"
 }
 
 src_compile() {
@@ -92,29 +83,76 @@ src_compile() {
 }
 
 src_install() {
-	# Copy all files.
-	dodir "${INSTROOT}/squeezecenter"
-	cp -r * "${D}/${INSTROOT}/squeezecenter"
 
-	# Install init scripts.
+	# The main Perl executables
+	exeinto /usr/sbin
+	newexe slimserver.pl squeezecenter-server
+	newexe scanner.pl squeezecenter-scanner
+
+	# Get the Perl package name and version
+	eval `perl '-V:package'`
+	eval `perl '-V:version'`
+
+	# The server Perl modules
+	dodir "/usr/lib/${package}/vendor_perl/${version}"
+	cp -r Slim "${D}/usr/lib/${package}/vendor_perl/${version}"
+
+	# Various directories of architecture-independent static files
+	dodir "${SHAREDIR}"
+	cp -r Firmware "${D}/${SHAREDIR}"
+	cp -r Graphics "${D}/${SHAREDIR}"
+	cp -r HTML "${D}/${SHAREDIR}"
+	cp -r IR "${D}/${SHAREDIR}"
+	cp -r SQL "${D}/${SHAREDIR}"
+	cp -r CPAN "${D}/${SHAREDIR}"
+
+	# Architecture-dependent static files
+	dodir "${LIBDIR}"
+	cp -r lib/* "${D}/${LIBDIR}"
+
+	# Strings and version identification
+	insinto "${SHAREDIR}"
+	doins strings.txt
+	doins revision.txt
+
+	# Documentation
+	dodoc Changelog*.html
+	dodoc Installation.txt
+	dodoc License*.txt
+	newdoc "${FILESDIR}/Gentoo-plugins-7.0.2-README.txt" Gentoo-plugins-README.txt
+
+	# Configuration files
+	insinto /etc/squeezecenter
+	doins convert.conf
+	doins types.conf
+	doins modules.conf
+
+	# Install init scripts
 	newconfd "${FILESDIR}/squeezecenter-${MAJOR_VER}.conf.d" squeezecenter
-	newinitd "${FILESDIR}/squeezecenter-${MAJOR_VER}.init.d" squeezecenter
+	newinitd "${FILESDIR}/squeezecenter-${MAJOR_VER}.${MINOR_VER}.init.d" squeezecenter
 
-	# Install default preferences.
-	insinto /etc
+	# Install default preferences
+	insinto /var/lib/squeezecenter/prefs
 	newins "${FILESDIR}/squeezecenter-${MAJOR_VER}.prefs" squeezecenter.prefs
+	fowners squeezecenter:squeezecenter /var/lib/squeezecenter/prefs
+	fperms 770 /var/lib/squeezecenter/prefs
 
-	# Install the SQL configuration scripts.
-	insinto "${INSTROOT}/squeezecenter/SQL/mysql"
+	# Install the SQL configuration scripts
+	insinto "${SHAREDIR}/SQL/mysql"
 	doins "${FILESDIR}/dbdrop-${MAJOR_VER}-gentoo.sql"
 	doins "${FILESDIR}/dbcreate-${MAJOR_VER}-gentoo.sql"
 
-	# Initialize /var/{cache,run}.
-	keepdir /var/{cache,run}/squeezecenter
-	fowners squeezecenter:squeezecenter /var/{cache,run}/squeezecenter
-	fperms 770 /var/{cache,run}/squeezecenter
+	# Initialize run directory (where the PID file lives)
+	dodir /var/run/squeezecenter
+	fowners squeezecenter:squeezecenter /var/run/squeezecenter
+	fperms 770 /var/run/squeezecenter
 
-	# Initialize /var/log.
+	# Initialize server cache directory
+	dodir /var/lib/squeezecenter/cache
+	fowners squeezecenter:squeezecenter /var/lib/squeezecenter/cache
+	fperms 770 /var/lib/squeezecenter/cache
+
+	# Initialize the log directory
 	dodir /var/log/squeezecenter
 	fowners squeezecenter:squeezecenter /var/log/squeezecenter
 	fperms 770 /var/log/squeezecenter
@@ -125,11 +163,14 @@ src_install() {
 	fowners squeezecenter:squeezecenter /var/log/squeezecenter/scanner.log
 	fowners squeezecenter:squeezecenter /var/log/squeezecenter/perfmon.log
 
-	# Install logrotate support.
+	# Initialise the user-installed plugins directory
+	dodir "${NEWPLUGINSDIR}"
+
+	# Install logrotate support
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/squeezecenter-${MAJOR_VER}.logrotate.d" squeezecenter
 
-	# Install Avahi support (if USE flag is set).
+	# Install Avahi support (if USE flag is set)
 	if use avahi; then
 		insinto /etc/avahi/services
 		newins "${FILESDIR}/avahi-${MAJOR_VER}-squeezecenter.service" squeezecenter.service
@@ -151,7 +192,7 @@ sc_starting_instr() {
 
 	# Discover the port number from the preferences, but if it isn't there
 	# then report the standard one.
-	httpport=$(gawk '$1 == "httpport:" { print $2 }' "${ROOT}${CACHED_PREFS}" 2>/dev/null)
+	httpport=$(gawk '$1 == "httpport:" { print $2 }' "${ROOT}${LIVE_PREFS}" 2>/dev/null)
 	elog "You may access and configure SqueezeCenter by browsing to:"
 	elog "\thttp://localhost:${httpport:-9000}/"
 }
@@ -288,23 +329,35 @@ pkg_config() {
 	# from this as it probably just indicates that the database wasn't
 	# yet present.
 	einfo "Dropping old SqueezeCenter database and user ..."
-	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" < "${INSTROOT}/squeezecenter/SQL/mysql/dbdrop-${MAJOR_VER}-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" >/dev/null 2>&1
+	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" < "${SHAREDIR}/SQL/mysql/dbdrop-${MAJOR_VER}-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" >/dev/null 2>&1
 
 	# Drop and create the SqueezeCenter user and database.
 	einfo "Creating SqueezeCenter MySQL user and database (${DBUSER}) ..."
-	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" -e "s/__DBPASSWORD__/${DBUSER_PASSWD}/" < "${INSTROOT}/squeezecenter/SQL/mysql/dbcreate-${MAJOR_VER}-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" || die "Unable to create MySQL database and user"
+	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" -e "s/__DBPASSWORD__/${DBUSER_PASSWD}/" < "${SHAREDIR}/SQL/mysql/dbcreate-${MAJOR_VER}-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" || die "Unable to create MySQL database and user"
 
 	# Remove the existing MySQL preferences from SqueezeCenter (if any).
 	sc_remove_db_prefs "${PREFS}"
-	[ -f "${CACHED_PREFS}" ] && sc_remove_db_prefs ${CACHED_PREFS}
+	[ -f "${LIVE_PREFS}" ] && sc_remove_db_prefs ${LIVE_PREFS}
 
 	# Insert the external MySQL configuration into the preferences.
 	sc_update_prefs "${PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
-	[ -f "${CACHED_PREFS}" ] && sc_update_prefs "${CACHED_PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
+	[ -f "${LIVE_PREFS}" ] && sc_update_prefs "${LIVE_PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
 
-	# Phew - all done.
-	# Give some tips on what to do now.
+	# Phew - all done. Give some tips on what to do now.
 	einfo "Database configuration complete."
 	einfo ""
 	sc_starting_instr
+}
+
+pkg_preinst() {
+	# Warn the user if there are old plugins that he may need to migrate
+	if [ -d "${OLDPLUGINSDIR}" ]; then
+		if [ ! -z "$(ls ${OLDPLUGINSDIR})" ]; then
+			ewarn "Note: It appears that plugins are installed in the old location of:"
+			ewarn "${OLDPLUGINSDIR}"
+			ewarn "If these are to be used then they must be migrated to the new location:"
+			ewarn "${NEWPLUGINSDIR}"
+			ewarn ""
+		fi
+	fi
 }
