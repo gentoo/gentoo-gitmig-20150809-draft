@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ffmpeg-php-0.5.1.ebuild,v 1.1 2007/08/30 13:00:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ffmpeg-php-0.5.3.ebuild,v 1.1 2008/06/03 03:17:04 chtekk Exp $
 
 PHP_EXT_NAME="ffmpeg"
 PHP_EXT_INI="yes"
