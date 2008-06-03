@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.34 2008/05/02 02:40:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.35 2008/06/03 14:14:05 nixnut Exp $
+
+  03 Jun 2008; nixnut <nixnut@gentoo.org> package.use.mask:
+  mask laptop sys-apps/hal
 
   02 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc64/2006.1/64bit-userland/use.mask,
