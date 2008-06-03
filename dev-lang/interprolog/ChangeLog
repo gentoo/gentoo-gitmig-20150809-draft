@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/interprolog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/interprolog/ChangeLog,v 1.3 2008/01/10 23:13:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/interprolog/ChangeLog,v 1.4 2008/06/03 06:33:32 keri Exp $
+
+  03 Jun 2008; keri <keri@gentoo.org> files/build.xml,
+  interprolog-2.1.2.ebuild:
+  Fix ups deps and javadoc classpath.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> interprolog-2.1.2.ebuild:
   Restrict junit dependency.

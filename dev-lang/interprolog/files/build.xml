@@ -18,7 +18,7 @@
 
 	<!-- compile everything -->
 	<target depends="init" name="compile">
-		<javac classpath="${classpath}" deprecation="on" destdir="${build.dir}" encoding="ISO-8859-1" source="1.4" srcdir="${src.dir}" target="1.4"/>
+		<javac classpath="${gentoo.classpath}" deprecation="on" destdir="${build.dir}" encoding="ISO-8859-1" source="1.4" srcdir="${src.dir}" target="1.4"/>
 		<copy todir="${build.dir}">
 			<fileset dir="${src.dir}">
 				<exclude name="**/*.java"/>
@@ -33,7 +33,7 @@
 
 	<!-- generate javadocs -->
 	<target depends="init" name="javadoc">
-		<javadoc author="true" destdir="${docs.dir}" encoding="ISO-8859-1" packagenames="com.*" source="1.4" sourcepath="${src.dir}" use="true" version="true" windowtitle="${ant.project.name} API"/>
+		<javadoc classpath="${gentoo.classpath}" author="true" destdir="${docs.dir}" encoding="ISO-8859-1" packagenames="com.*" source="1.4" sourcepath="${src.dir}" use="true" version="true" windowtitle="${ant.project.name} API"/>
 	</target>
 
 	<!-- clean up -->
