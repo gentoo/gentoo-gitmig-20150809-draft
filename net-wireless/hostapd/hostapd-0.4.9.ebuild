@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.6 2007/12/10 09:42:02 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.7 2008/06/03 02:01:41 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,6 @@ IUSE="ipv6 logwatch madwifi ssl"
 RDEPEND="ssl? ( dev-libs/openssl )
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
-		<net-wireless/madwifi-ng-0.9.3-r4
 		net-wireless/madwifi-old ) )"
 DEPEND="${RDEPEND}
 		sys-apps/sed"

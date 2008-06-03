@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.78 2008/05/14 22:08:23 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.79 2008/06/03 02:01:41 mr_bones_ Exp $
+
+  03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> hostapd-0.4.9.ebuild,
+  hostapd-0.5.10.ebuild, hostapd-0.6.3.ebuild:
+  remove reference to old, removed net-wireless/madwifi-ng
 
 *hostapd-0.5.10 (15 May 2008)
 
