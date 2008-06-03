@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmciautils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.32 2007/09/26 02:52:37 hanno Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.33 2008/06/03 02:29:59 mr_bones_ Exp $
+
+  03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  pcmciautils-014-r1.ebuild:
+  fix yacc typo
 
   26 Sep 2007; Hanno Boeck <hanno@gentoo.org> pcmciautils-014-r1.ebuild:
   Can use bison's yacc.
