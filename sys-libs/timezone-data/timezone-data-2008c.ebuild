@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.1 2008/05/31 10:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.2 2008/06/03 14:42:36 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -56,23 +56,29 @@ pkg_config() {
 	# make sure the /etc/localtime file does not get stale #127899
 	local tz src
 
-	if [[ -e ${ROOT}/etc/timezone ]] ; then
-		src="/etc/timezone"
-		tz=$(<"${ROOT}"/etc/timezone)
-	else
+	if has_version '<sys-apps/baselayout-2' ; then
 		src="/etc/conf.d/clock"
 		tz=$(unset TIMEZONE ; source "${ROOT}"/etc/conf.d/clock ; echo ${TIMEZONE-FOOKABLOIE})
 		[[ -z ${tz} ]] && return 0
-		if [[ ${tz} == "FOOKABLOIE" ]] ; then
-			elog "You do not have TIMEZONE set in /etc/conf.d/clock."
-			if [[ ! -e ${ROOT}/etc/localtime ]] ; then
-				cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
-				elog "Setting /etc/localtime to Factory."
-			else
-				elog "Skipping auto-update of /etc/localtime."
-			fi
-			return 0
+	else
+		src="/etc/timezone"
+		if [[ -e ${ROOT}/etc/timezone ]] ; then
+			tz=$(<"${ROOT}"/etc/timezone)
+		else
+			tz="FOOKABLOIE"
 		fi
+	fi
+
+	if [[ ${tz} == "FOOKABLOIE" ]] ; then
+		elog "You do not have TIMEZONE set in ${src}."
+
+		if [[ ! -e ${ROOT}/etc/localtime ]] ; then
+			cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
+			elog "Setting /etc/localtime to Factory."
+		else
+			elog "Skipping auto-update of /etc/localtime."
+		fi
+		return 0
 	fi
 
 	if [[ ! -e ${ROOT}/usr/share/zoneinfo/${tz} ]] ; then
