@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.2 2008/06/03 14:42:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.3 2008/06/03 20:02:40 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -59,7 +59,6 @@ pkg_config() {
 	if has_version '<sys-apps/baselayout-2' ; then
 		src="/etc/conf.d/clock"
 		tz=$(unset TIMEZONE ; source "${ROOT}"/etc/conf.d/clock ; echo ${TIMEZONE-FOOKABLOIE})
-		[[ -z ${tz} ]] && return 0
 	else
 		src="/etc/timezone"
 		if [[ -e ${ROOT}/etc/timezone ]] ; then
@@ -68,6 +67,7 @@ pkg_config() {
 			tz="FOOKABLOIE"
 		fi
 	fi
+	[[ -z ${tz} ]] && return 0
 
 	if [[ ${tz} == "FOOKABLOIE" ]] ; then
 		elog "You do not have TIMEZONE set in ${src}."
