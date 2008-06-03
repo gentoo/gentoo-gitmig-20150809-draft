@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-372-r1.ebuild,v 1.1 2008/03/23 11:51:43 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-372-r1.ebuild,v 1.2 2008/06/03 10:19:12 dev-zero Exp $
 
 inherit eutils latex-package
 
@@ -32,8 +32,14 @@ DEPEND="${RDEPEND} !dev-tex/slatex"
 S="${WORKDIR}/plt-${PV%%_p*}"
 
 src_unpack() {
-	unpack ${A}; cd "${S}"
-	sed "s,docdir=\"\${datadir}/plt/doc,docdir=\"\${datadir}/doc/${PF}," -i src/configure
+	unpack ${A}
+	cd "${S}"
+
+	sed -i \
+		-e "s,docdir=\"\${datadir}/plt/doc,docdir=\"\${datadir}/doc/${PF}," \
+		src/configure || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-as_needed.patch"
 }
 
 src_compile() {
