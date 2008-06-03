@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.4 2008/03/22 11:45:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.5 2008/06/03 02:19:01 mr_bones_ Exp $
 
 inherit eutils libtool
 
@@ -18,7 +18,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	dev-libs/libxml2
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	python? ( dev-lang/python )
-	|| ( sys-libs/readline sys-libs/libedit )"
+	|| ( sys-libs/readline dev-libs/libedit )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-lang/swig-1.3.31 )"
