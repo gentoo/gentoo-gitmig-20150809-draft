@@ -1,6 +1,14 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.25 2008/04/28 18:05:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.26 2008/06/03 10:12:53 hkbst Exp $
+
+*bigloo-3.1a (03 Jun 2008)
+
+  03 Jun 2008; Marijn Schouten <hkBst@gentoo.org> +bigloo-3.1a.ebuild:
+  bump:
+   * Support for an exact arithmetic (big numbers).
+   * A new version of the garbage collector (Boehm's collector v7.1).
+   * Major improvement in the implementation of the multi-threading.
 
   28 Apr 2008; nixnut <nixnut@gentoo.org> bigloo-3.0c_p4.ebuild:
   Stable on ppc wrt bug 219012
