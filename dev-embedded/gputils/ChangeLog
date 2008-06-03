@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.35 2008/05/18 19:15:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.36 2008/06/03 08:35:02 calchan Exp $
+
+*gputils-0.13.6-r1 (03 Jun 2008)
+
+  03 Jun 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/gputils-0.13.6-code_pack.patch, +gputils-0.13.6-r1.ebuild:
+  Fixed bad files when using CODE_PACK, thanks to David Barnett (bug
+  #224719).
 
 *gputils-0.13.6 (18 May 2008)
 
