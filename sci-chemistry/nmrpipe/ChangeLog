@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/nmrpipe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.14 2007/11/28 07:17:20 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.15 2008/06/03 14:28:44 je_fro Exp $
+
+*nmrpipe-9.27.2007.222.14.56 (03 Jun 2008)
+
+  03 Jun 2008; Jeff Gardner <je_fro@gentoo.org>
+  -nmrpipe-2.5.2006.184.15.37.ebuild, +nmrpipe-9.27.2007.222.14.56.ebuild:
+  New version, removed old as it's no longer available. Thanks to toto.
 
   28 Nov 2007; Jeff Gardner <je_fro@gentoo.org>
   nmrpipe-2.5.2006.184.15.37.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.5.2006.184.15.37.ebuild,v 1.3 2007/11/28 07:17:20 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-9.27.2007.222.14.56.ebuild,v 1.1 2008/06/03 14:28:44 je_fro Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
