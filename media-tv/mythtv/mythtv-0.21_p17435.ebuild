@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17435.ebuild,v 1.3 2008/06/03 03:22:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17435.ebuild,v 1.4 2008/06/03 14:20:56 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -277,8 +277,7 @@ pkg_postinst() {
 	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
 	ewarn "chown -R mythtv /path/to/store"
 
-	if use xvmc && [ ! -f /etc/X11/XvMCConfig ] || \
-		[ -z `cat /etc/X11/XvMCConfig` ]; then
+	if use xvmc && [[ ! -s /etc/X11/XvMCConfig ]]; then
 		ewarn
 		ewarn "No XvMC implementation has been selected yet"
 		ewarn "Use 'eselect xvmc list' for a list of available choices"
