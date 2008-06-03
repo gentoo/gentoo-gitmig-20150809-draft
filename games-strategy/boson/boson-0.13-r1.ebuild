@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13-r1.ebuild,v 1.1 2008/06/02 22:09:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13-r1.ebuild,v 1.2 2008/06/03 22:12:19 loki_val Exp $
 
-inherit eutils flag-o-matic kde-functions cmake-utils
+inherit eutils flag-o-matic kde-functions multilib cmake-utils
 
 MY_P=${PN}-all-${PV}
 DESCRIPTION="real-time strategy game, with the feeling of Command&Conquer(tm)"
@@ -34,18 +34,14 @@ src_unpack() {
 	EPATCH_SOURCE="${WORKDIR}/${P}-patches"
 	EPATCH_SUFFIX="patch"
 	epatch
+	#Let's be multilib-strict. We likez ze discipline :-)
+	sed -r -i \
+		-e "s/(KDE3_LIB_INSTALL_DIR )\/lib/\1\/$(get_libdir)/" \
+		{data,code,music}/CMakeLists.txt
+
 }
 
 src_compile() {
 	append-flags -fno-strict-aliasing
 	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-
-	for sgmlman in "${WORKDIR}/${P}-patches"/man-pages/*.sgml; do
-		docbook-to-man "${sgmlman}" > "${sgmlman%.sgml}".6 || die
-		doman "${sgmlman%.sgml}".6 || die
-	done
 }
