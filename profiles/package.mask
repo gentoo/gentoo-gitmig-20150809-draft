@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8675 2008/06/03 02:23:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8676 2008/06/03 10:46:26 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Raúl Porcel <armin76@gentoo.org> (3 Jun 2008)
+# P.mask snapshots
+>=net-libs/rb_libtorrent-0.13_p2335
+>=net-p2p/qbittorrent-1.1.0_beta1
 
 # Jeremy Olexa <darkside@gentoo.org> (2 Jun 2008)
 # Doesn't compile, dead project. Masked via maintainer request, bug #222595

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1483 2008/06/03 00:46:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1484 2008/06/03 10:46:26 armin76 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Jun 2008; Raúl Porcel <armin76@gentoo.org> package.mask:
+  P.mask net-libs/rb_libtorrent snapshots and the qbittorrent ebuild
+  depending on them
 
   03 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask sys-apps/nictools for removal in 30 days by treecleaners, bug #222595
