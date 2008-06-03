@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.2.ebuild,v 1.1 2004/12/28 19:56:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.2.ebuild,v 1.2 2008/06/03 10:37:38 markusle Exp $
 
 DESCRIPTION="BuDDY - A Binary Decision Diagram Package"
 HOMEPAGE="http://www.itu.dk/research/buddy/"
@@ -23,10 +23,10 @@ src_compile() {
 }
 
 src_install() {
-	install -d ${D}/usr/lib ${D}/usr/include
+	install -d "${D}"/usr/lib "${D}"/usr/include
 	make install \
-	LIBDIR=${D}/usr/lib \
-	INCDIR=${D}/usr/include || die
+	LIBDIR="${D}"/usr/lib \
+	INCDIR="${D}"/usr/include || die
 	dodoc CHANGES README doc/*.txt
 	insinto /usr/share/doc/${P}/ps
 	doins doc/*.ps
