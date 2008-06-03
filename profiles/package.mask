@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8674 2008/06/03 01:51:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8675 2008/06/03 02:23:48 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1180,10 +1180,6 @@ kde-misc/kdbus
 # Jurek Bartuszek <jurek@gentoo.org> (23 Jun 2007)
 # Beta versions, testing required
 =app-emulation/ies4linux-2.5*
-
-# Peter Weller <welp@gentoo.org> (16 Jun 2007)
-# Masked wrt bug #180577
-dev-util/larch
 
 # Raúl Porcel <armin76@gentoo.org> (15 Jun 2007)
 # Mask livesvn ebuild
