@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.1 2008/05/08 14:15:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.2 2008/06/03 14:19:32 nyhm Exp $
 
 inherit eutils games
 
@@ -30,6 +30,12 @@ DEPEND="${RDEPEND}
 	dev-util/cmake"
 
 S=${WORKDIR}/OpenAstroMenaceSVN
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-cmake.patch
+}
 
 src_compile() {
 	cmake -DDATADIR="${GAMES_DATADIR}"/${PN} . || die "cmake failed"
