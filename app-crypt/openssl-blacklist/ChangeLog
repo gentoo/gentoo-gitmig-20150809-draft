@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/openssl-blacklist
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.4 2008/05/31 14:51:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.5 2008/06/03 13:47:50 hanno Exp $
+
+*openssl-blacklist-0.3.2 (03 Jun 2008)
+
+  03 Jun 2008; Hanno Boeck <hanno@gentoo.org>
+  +openssl-blacklist-0.3.2.ebuild:
+  Version bump.
 
   31 May 2008; Alexis Ballier <aballier@gentoo.org>
   openssl-blacklist-0.3.ebuild:
