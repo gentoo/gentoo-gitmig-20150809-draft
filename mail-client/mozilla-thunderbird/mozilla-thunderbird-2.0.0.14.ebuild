@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.14.ebuild,v 1.5 2008/05/05 14:12:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.14.ebuild,v 1.6 2008/06/03 15:57:22 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -144,6 +144,12 @@ src_compile() {
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
 
+	# Bug 223375, 217805
+	# Breaks builds with gcc-4.3
+	if [[ $(gcc-version) == "4.3" ]]; then
+		mozconfig_annotate 'gcc-4.3 breaks builds' --disable-optimize
+	fi
+
 	# Bug #72667
 	if use mozdom; then
 		mozconfig_annotate '' --enable-extensions=default,inspector
@@ -175,6 +181,7 @@ src_compile() {
 	CPPFLAGS="${CPPFLAGS}" \
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	econf || die
+	die
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
