@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.4 2008/05/18 16:18:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.5 2008/06/03 15:04:10 flameeyes Exp $
 
 EAPI=1
 
 inherit qt4
 
 if [[ ${PV} == 9999 ]]; then
-	inherit subversion
-	ESVN_REPO_URI="http://svn.quassel-irc.org/trunk"
+	inherit git
+	EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
 else
 	MY_P="${P/_/-}"
 	SRC_URI="http://quassel-irc.org/system/files/${MY_P}.tar.bz2"
