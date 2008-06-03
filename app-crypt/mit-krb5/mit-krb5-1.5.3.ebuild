@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.3.ebuild,v 1.8 2007/08/25 11:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.3.ebuild,v 1.9 2008/06/03 13:56:15 cardoe Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -24,6 +24,7 @@ IUSE="krb4 tcl ipv6 doc"
 RDEPEND="!virtual/krb5
 	sys-libs/com_err
 	sys-libs/ss
+	>=dev-libs/openssl-0.9.8
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )"
