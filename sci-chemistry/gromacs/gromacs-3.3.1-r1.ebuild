@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.9 2007/06/13 18:15:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.10 2008/06/03 18:45:14 je_fro Exp $
 
 inherit eutils fortran multilib
 
@@ -32,12 +32,7 @@ DEPEND=">=sci-libs/fftw-3.0.1
 src_unpack() {
 
 	unpack ${A}
-	if use ppc64 && use altivec ; then
-		epatch "${FILESDIR}"/${PN}-ppc64-altivec.patch
-	fi
-
 	cd "${S}"
-
 # Fix typos in a couple of files.
 	sed -e "s:_nb_kerne010_x86_64_sse2:_nb_kernel010_x86_64_sse2:" \
 		-i src/gmxlib/nonbonded/nb_kernel_x86_64_sse2/nb_kernel010_x86_64_sse2.intel_syntax.s \
@@ -184,22 +179,22 @@ src_compile() {
 }
 
 src_install () {
-	cd ${WORKDIR}/${P}-single ;
-	emake DESTDIR=${D} install || die "installing single failed"
+	cd "${WORKDIR}"/${P}-single ;
+	emake DESTDIR="${D}" install || die "installing single failed"
 
 	if use mpi ; then
 		cd "${WORKDIR}"/${P}-single-mpi
-		emake DESTDIR=${D} install-mdrun \
+		emake DESTDIR="${D}" install-mdrun \
 		|| die "installing mdrun_mpi failed"
 	fi
 
 	if use double-precision ; then
-		cd ${WORKDIR}/${P}-double && emake DESTDIR=${D} install \
+		cd "${WORKDIR}"/${P}-double && emake DESTDIR="${D}" install \
 		|| die "installing double failed"
 
 		if use mpi ; then
 			cd "${WORKDIR}"/${P}-double-mpi
-			emake DESTDIR=${D} install-mdrun \
+			emake DESTDIR="${D}" install-mdrun \
 		|| die "installing mdrun_mpi_d failed"
 		fi
 

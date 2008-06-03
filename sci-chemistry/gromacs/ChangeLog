@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.23 2007/06/13 18:15:51 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.24 2008/06/03 18:45:14 je_fro Exp $
+
+  03 Jun 2008; Jeff Gardner <je_fro@gentoo.org> gromacs-3.3.1-r1.ebuild:
+  No altivec patching with this gromacs version. Thanks to Maik Nijhuis in
+  bug #224773.
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org> gromacs-3.3.1-r1.ebuild:
   Modify the ebuild so it compiles on alpha and mark stable wrt #168182

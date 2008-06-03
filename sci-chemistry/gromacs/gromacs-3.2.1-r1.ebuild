@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1-r1.ebuild,v 1.4 2006/06/25 00:28:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1-r1.ebuild,v 1.5 2008/06/03 18:45:14 je_fro Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="=sci-libs/fftw-2.1*
 src_unpack() {
 	unpack ${A}
 	if use ppc64 && use altivec ; then
-		epatch ${FILESDIR}/${PN}-ppc64-altivec.patch
+		epatch "${FILESDIR}"/${PN}-ppc64-altivec.patch
 	fi
 }
 
@@ -56,12 +56,12 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Install documentation.
-	dodoc AUTHORS COPYING INSTALL README
+	dodoc AUTHORS INSTALL README
 
 	#move html docs under /usr/share/doc
 	#and leave examples and templates under /usr/gromacs...
-	mv ${D}/usr/share/${P}/html ${D}/usr/share/doc/${PF}
+	mv "${D}"/usr/share/${P}/html "${D}"/usr/share/doc/${PF}
 }
