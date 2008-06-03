@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.31 2008/05/22 10:44:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.32 2008/06/03 14:32:27 nixnut Exp $
+
+  03 Jun 2008; nixnut <nixnut@gentoo.org> hal-info-20071030.ebuild:
+  Added ~ppc wrt bug 200050
 
   22 May 2008; Tobias Klausmann <klausman@gentoo.org>
   hal-info-20080310.ebuild:
