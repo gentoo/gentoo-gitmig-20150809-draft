@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2-r1.ebuild,v 1.2 2008/01/31 19:55:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2-r1.ebuild,v 1.3 2008/06/03 02:36:33 mr_bones_ Exp $
 
 inherit fortran toolchain-funcs
 
@@ -14,10 +14,7 @@ LICENSE="Tinker"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND="X? (
-			|| ( dev-java/blackdown-java3d-bin
-			dev-java/sun-java3d-bin )
-		)"
+DEPEND="X? ( dev-java/sun-java3d-bin )"
 S=${WORKDIR}/tinker/source
 
 src_compile() {
