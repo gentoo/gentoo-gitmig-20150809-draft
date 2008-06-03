@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13-r1.ebuild,v 1.2 2008/06/03 22:12:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.13-r1.ebuild,v 1.3 2008/06/03 22:16:53 loki_val Exp $
 
 inherit eutils flag-o-matic kde-functions multilib cmake-utils
 
@@ -19,8 +19,7 @@ RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/openal"
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.6-r1
-	app-text/docbook-to-man"
+	>=dev-util/cmake-2.4.6-r1"
 
 need-kde 3
 
