@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.2 2008/02/06 09:21:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.3 2008/06/03 02:07:38 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs multilib python
 
@@ -16,7 +16,7 @@ IUSE=""
 RESTRICT="mirror"
 RDEPEND="=dev-lang/python-2.4*
 	=dev-lang/tk-8.4*
-	|| ( app-shells/tcsh app-shells/csh )"
+	app-shells/tcsh"
 DEPEND="${RDEPEND}
 	>=app-shells/bash-3
 	net-misc/rsync"

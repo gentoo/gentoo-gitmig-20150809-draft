@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.7 2007/07/22 07:18:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.8 2008/06/03 02:11:18 mr_bones_ Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -65,7 +65,7 @@ RDEPEND="X? (
 		sci-chemistry/pdb-extract
 		sci-chemistry/rasmol
 		sci-libs/mccp4
-		|| ( app-shells/tcsh app-shells/csh )
+		app-shells/tcsh
 		!app-office/sc"
 DEPEND="${RDEPEND}
 		X? (
