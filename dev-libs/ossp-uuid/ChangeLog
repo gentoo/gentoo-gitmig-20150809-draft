@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ossp-uuid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.9 2008/05/19 07:04:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.10 2008/06/03 21:24:04 aballier Exp $
+
+  03 Jun 2008; Alexis Ballier <aballier@gentoo.org> ossp-uuid-1.6.1.ebuild:
+  keyword ~sparc-fbsd
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> ossp-uuid-1.6.1.ebuild:
   ~mips keyword added
