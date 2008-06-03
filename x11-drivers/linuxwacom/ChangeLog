@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.23 2008/05/04 16:20:08 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.24 2008/06/03 17:31:28 rbu Exp $
+
+*linuxwacom-0.8.0_p3 (03 Jun 2008)
+
+  03 Jun 2008; Robert Buchholz <rbu@gentoo.org> +linuxwacom-0.8.0_p3.ebuild:
+  Version bump
 
 *linuxwacom-0.8.0 (04 May 2008)
 
