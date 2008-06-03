@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.19.2.ebuild,v 1.1 2008/05/19 16:13:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.19.5.ebuild,v 1.1 2008/06/03 07:15:02 dev-zero Exp $
 
-inherit autotools eutils versionator
+inherit autotools versionator
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
@@ -21,15 +21,9 @@ DEPEND="kerberos? ( virtual/krb5 )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
+PROVIDE="virtual/logger"
 
 BRANCH="3-devel"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-as_needed.patch"
-	eautomake
-}
 
 src_compile() {
 	# Maintainer notes:
