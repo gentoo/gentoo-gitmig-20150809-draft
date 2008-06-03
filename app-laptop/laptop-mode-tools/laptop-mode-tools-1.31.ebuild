@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.31.ebuild,v 1.5 2007/11/11 08:49:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.31.ebuild,v 1.6 2008/06/03 22:45:17 darkside Exp $
 
 inherit fixheadtails linux-info
 
 MY_P="${PN}_${PV}"
 
 DESCRIPTION="Linux kernel laptop_mode user-space utilities"
-HOMEPAGE="http://www.samwel.tk/laptop_mode/index.html"
+HOMEPAGE="http://www.samwel.tk/laptop_mode/"
 SRC_URI="http://www.samwel.tk/laptop_mode/tools/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
