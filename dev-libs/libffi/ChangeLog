@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.51 2007/12/27 09:39:03 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.52 2008/06/03 02:16:24 mr_bones_ Exp $
+
+  03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> libffi-3.4.1.ebuild,
+  libffi-3.4.1-r1.ebuild, libffi-3.4.3.ebuild:
+  remove reference to app-admin/eselect-compiler which has been removed
 
   27 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fixing the maintainer. It's supposed to be maintainer-needed.
