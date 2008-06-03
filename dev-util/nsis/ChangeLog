@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.18 2008/04/27 10:47:38 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.19 2008/06/03 00:49:57 vapier Exp $
+
+*nsis-2.37 (03 Jun 2008)
+
+  03 Jun 2008; Mike Frysinger <vapier@gentoo.org> +nsis-2.37.ebuild:
+  Version bump.
 
   27 Apr 2008; Cédric Krier <cedk@gentoo.org> Manifest:
   Fix Manifest for nsis-2.34
