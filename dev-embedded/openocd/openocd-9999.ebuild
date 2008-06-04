@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.1 2008/04/20 01:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.2 2008/06/04 17:03:03 flameeyes Exp $
 
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/openocd/trunk"
-inherit eutils subversion
+inherit eutils subversion autotools
 
 DESCRIPTION="OpenOCD - Open On-Chip Debugger"
 HOMEPAGE="http://openocd.berlios.de/web/"
@@ -29,7 +29,7 @@ pkg_setup() {
 src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
-	./bootstrap || die "Can't bootstrap!"
+	eautoreconf
 }
 
 src_compile() {

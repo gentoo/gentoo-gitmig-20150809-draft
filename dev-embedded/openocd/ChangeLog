@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.1 2008/04/20 01:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.2 2008/06/04 17:03:03 flameeyes Exp $
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> openocd-9999.ebuild:
+  Use eautoreconf, not the bootstrap script.
 
 *openocd-9999 (19 Apr 2008)
 
