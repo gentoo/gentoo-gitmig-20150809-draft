@@ -11,6 +11,7 @@ chasen
 mono
 beagle
 networkmanager
+ocamlopt
 
 # dietlibc
 diet

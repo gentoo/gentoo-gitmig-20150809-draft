@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.14 2008/06/04 16:46:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.15 2008/06/04 18:38:14 corsair Exp $
+
+  04 Jun 2008; Markus Rothe <corsair@gentoo.org> ppc64/64ul/use.mask:
+  add ocamlopt use flag to use.mask. this didn't made the change from
+  default-linux/ to default/ profiles
 
   03 Jun 2008; nixnut <nixnut@gentoo.org> package.use.mask:
   mask laptop sys-apps/hal
