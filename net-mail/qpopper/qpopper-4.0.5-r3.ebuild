@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.4 2008/05/14 23:05:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.5 2008/06/04 04:46:21 darkside Exp $
 
 inherit eutils
 
-IUSE="debug gdbm mailbox pam ssl xinetd"
+IUSE="apop debug gdbm mailbox pam ssl xinetd"
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A POP3 Server"
@@ -28,7 +28,7 @@ KEYWORDS="~amd64 sparc x86"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-CAN-2005-1151.patch" || die "first patch failed"
 	epatch "${FILESDIR}/${PN}-CAN-2005-1152.patch" || die "second patch failed"
 }
@@ -40,11 +40,11 @@ src_compile() {
 	use mailbox && myconf="${myconf} --enable-home-dir-mail=Mailbox"
 	use xinetd && myconf="${myconf} --disable-standalone" || \
 		myconf="${myconf} --enable-standalone"
+	use apop && myconf="${myconf} --enable-apop=/etc/pop.auth"
 	myconf="${myconf} $(use_enable debug debugging)"
 	myconf="${myconf} $(use_with ssl openssl)"
 	myconf="${myconf} $(use_with gdbm)"
-	econf --enable-apop=/etc/pop.auth \
-		--enable-popuid=pop \
+	econf --enable-popuid=pop \
 		--enable-log-login \
 		--enable-specialauth \
 		--enable-log-facility=LOG_MAIL \
@@ -76,7 +76,7 @@ EOF
 	fi
 
 	if ! use gdbm; then
-		sed -i -e 's|#define HAVE_GDBM_H|//#define HAVE_GDBM_H|g' ${S}/config.h || \
+		sed -i -e 's|#define HAVE_GDBM_H|//#define HAVE_GDBM_H|g' "${S}"/config.h || \
 			die "sed failed"
 	fi
 
@@ -91,14 +91,14 @@ src_install() {
 		dodir /etc/mail/certs
 		fowners root:mail /etc/mail/certs
 		fperms 660 /etc/mail/certs
-		mv cert.pem ${D}/etc/mail/certs
+		mv cert.pem "${D}"/etc/mail/certs
 		fperms 600 /etc/mail/certs/cert.pem
 		fowners root:0 /etc/mail/certs/cert.pem
 	fi
 
 	doman man/popauth.8 man/popper.8
 
-	dodoc ${WORKDIR}/GUIDE.pdf
+	dodoc "${WORKDIR}"/GUIDE.pdf
 
 	docinto rfc
 	dodoc doc/rfc*.txt
@@ -110,7 +110,7 @@ src_install() {
 	# fi
 
 	insinto /etc/xinetd.d
-	newins ${WORKDIR}/pop3.xinetd  pop-3
+	newins "${WORKDIR}"/pop3.xinetd  pop-3
 }
 
 pkg_postinst () {

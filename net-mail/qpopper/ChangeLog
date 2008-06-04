@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.24 2008/05/14 23:05:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.25 2008/06/04 04:46:21 darkside Exp $
+
+  04 Jun 2008; Jeremy Olexa <darkside@gentoo.org> qpopper-4.0.5-r3.ebuild:
+  break out --enable-apop into a USE flag. Closes bug #106367, thanks to
+  Christian Heutger for reporting
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   qpopper-4.0.5-r3.ebuild:
