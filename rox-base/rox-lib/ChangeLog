@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.25 2008/06/04 12:34:25 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.26 2008/06/04 13:15:41 lack Exp $
+
+  04 Jun 2008; Jim Ramsay <lack@gentoo.org> rox-lib-2.0.4.ebuild,
+  rox-lib-2.0.4-r1.ebuild, rox-lib-2.0.5.ebuild:
+  Changed python_mod_cleanup to actually clean up the proper location
 
   04 Jun 2008; Jim Ramsay <lack@gentoo.org> rox-lib-2.0.4.ebuild,
   rox-lib-2.0.4-r1.ebuild, rox-lib-2.0.5.ebuild:

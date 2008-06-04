@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5.ebuild,v 1.3 2008/06/04 12:34:25 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5.ebuild,v 1.4 2008/06/04 13:15:41 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -51,5 +51,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	local baselibdir="/usr/$(get_libdir)"
+	python_mod_cleanup "${baselibdir}/ROX-Lib2/"
 }

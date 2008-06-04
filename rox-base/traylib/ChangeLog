@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/traylib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.5 2008/06/04 12:35:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.6 2008/06/04 13:17:09 lack Exp $
+
+  04 Jun 2008; Jim Ramsay <lack@gentoo.org> traylib-0.2.5.ebuild,
+  traylib-0.3.2.1.ebuild:
+  Changed python_mod_cleanup to actually clean up the proper location
 
   04 Jun 2008; Jim Ramsay <lack@gentoo.org> traylib-0.2.5.ebuild,
   traylib-0.3.2.1.ebuild:

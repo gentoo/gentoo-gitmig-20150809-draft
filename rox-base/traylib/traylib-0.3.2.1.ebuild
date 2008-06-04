@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.2 2008/06/04 12:35:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.3 2008/06/04 13:17:09 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -33,5 +33,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	local baselibdir="/usr/$(get_libdir)"
+	python_mod_cleanup "${baselibdir}/${MY_PN}/"
 }
