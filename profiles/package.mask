@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8681 2008/06/04 16:17:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8682 2008/06/04 21:21:47 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (4 Jun 2008)
+# Beta versions, need testing
+>=app-office/lyx-1.6.0_beta
 
 # Ben de Groot <yngwin@gentoo.org> (4 Jun 2008)
 # depends on p.masked qt-webkit-4.4
