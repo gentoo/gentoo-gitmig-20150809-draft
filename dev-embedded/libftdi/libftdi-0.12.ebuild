@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.12.ebuild,v 1.6 2008/06/01 13:04:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.12.ebuild,v 1.7 2008/06/04 14:55:51 beandog Exp $
 
 DESCRIPTION="Userspace access to FTDI USB interface chips"
 HOMEPAGE="http://www.intra2net.com/opensource/ftdi/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.intra2net.com/opensource/ftdi/TGZ/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc examples"
 
 RDEPEND=">=dev-libs/libusb-0.1.7"
@@ -35,6 +35,6 @@ src_install() {
 	fi
 	if use examples ; then
 		docinto examples
-		dodoc examples/*.c || die
+		dodoc examples/*.c
 	fi
 }
