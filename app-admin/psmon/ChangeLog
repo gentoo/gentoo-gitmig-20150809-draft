@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/psmon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.15 2008/05/30 06:26:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.16 2008/06/04 22:53:39 darkside Exp $
+
+*psmon-1.39 (04 Jun 2008)
+
+  04 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +psmon-1.39.ebuild:
+  Version bump. bug #224805. Thanks to Pinky for reporting!
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986). Assigning
