@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.1.ebuild,v 1.6 2008/04/12 22:13:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.5.ebuild,v 1.1 2008/06/04 07:47:09 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source test"
 EAPI="1"
