@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.15.ebuild,v 1.2 2008/06/04 21:14:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.15.ebuild,v 1.3 2008/06/04 21:44:07 dev-zero Exp $
 
 EAPI="1"
 
@@ -29,13 +29,14 @@ wanted_languages() {
 }
 
 RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}
-		perl? ( >=dev-lang/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-		selinux? ( sec-policy/selinux-postgresql )
-		tcl? ( >=dev-lang/tcl-8 )
-		xml? ( dev-libs/libxml2 dev-libs/libxslt )"
+	perl? ( >=dev-lang/perl-5.6.1-r2 )
+	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
+	selinux? ( sec-policy/selinux-postgresql )
+	tcl? ( >=dev-lang/tcl-8 )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt )"
 DEPEND="${RDEPEND}
-		xml? ( dev-util/pkgconfig )"
+	sys-devel/flex
+	xml? ( dev-util/pkgconfig )"
 PDEPEND="doc? ( dev-db/postgresql-docs:${SLOT} )"
 
 S="${WORKDIR}/postgresql-${PV}"

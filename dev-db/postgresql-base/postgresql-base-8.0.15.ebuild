@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.15.ebuild,v 1.2 2008/06/04 21:07:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.15.ebuild,v 1.3 2008/06/04 21:46:14 dev-zero Exp $
 
 EAPI="1"
 
@@ -41,6 +41,7 @@ RDEPEND="kerberos? ( virtual/krb5 )
 	!dev-db/libpq
 	!dev-db/postgresql"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	>=sys-devel/bison-1.875
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( dev-db/postgresql-docs:${SLOT} )"
