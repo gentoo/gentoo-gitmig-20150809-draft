@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/dot2texi
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.1 2008/06/04 21:42:55 aballier Exp $
+
+*dot2texi-3.0 (04 Jun 2008)
+
+  04 Jun 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +dot2texi-3.0.ebuild:
+  Initial import, ebuild by Alet Roux <alet_roux@yahoo.co.uk>, bug #214714
+
