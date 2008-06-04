@@ -1,8 +1,8 @@
-# Copyright 2008 Gentoo Foundation
+# Copyright 2008-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0.ebuild,v 1.1 2008/05/11 05:58:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0.ebuild,v 1.2 2008/06/04 18:25:09 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Touchscreen Access Library"
 KEYWORDS="~arm ~amd64 ~x86"
@@ -20,8 +20,7 @@ src_unpack() {
 	cd "${S}"
 	# patches come from buildroot + openembedded + suse
 	epatch "${WORKDIR}"/patches/*.patch
-	einfo "Running autogen"
-	./autogen.sh
+	eautoreconf
 }
 
 src_compile() {
