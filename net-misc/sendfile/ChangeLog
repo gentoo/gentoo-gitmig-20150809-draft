@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/sendfile
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/ChangeLog,v 1.9 2007/05/14 19:45:45 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/ChangeLog,v 1.10 2008/06/04 04:20:16 darkside Exp $
+
+*sendfile-2.1b (04 Jun 2008)
+
+  04 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +files/sendfiled,
+  +sendfile-2.1b.ebuild:
+  Version bump. bug #100399. Added tips from Patrick Mairif & Muelli in this
+  version.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
