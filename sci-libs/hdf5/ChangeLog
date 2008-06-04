@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.24 2008/04/15 14:06:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.25 2008/06/04 06:12:36 nerdboy Exp $
+
+  04 Jun 2008; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.6.ebuild:
+  Fixed some build and test script issues, and updated the test function so 
+  the MPI tests work on a single CPU box.  Marking ~hppa appears premature,
+  as it really needs some szip and mpich2 keywording and/or use-masking luv
+  first, then add ~hppa back in.  Not sure what it has to do with bug 
+  #216855 tho...
 
   15 Apr 2008; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.6.ebuild:
   Fixed messed up symlinks for libh5test.so (see bug #217720).
