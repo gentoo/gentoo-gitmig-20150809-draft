@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/torrentzip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.2 2007/07/23 13:48:32 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.3 2008/06/04 18:02:29 flameeyes Exp $
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  torrentzip-0.2-r1.ebuild:
+  Use eautoreconf, not the bootstrap script.
 
 *torrentzip-0.2-r1 (23 Jul 2007)
 

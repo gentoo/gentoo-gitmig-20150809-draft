@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.1 2007/07/23 13:48:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.2 2008/06/04 18:02:29 flameeyes Exp $
 
-inherit versionator eutils
+inherit versionator eutils autotools
 
 DESCRIPTION="archiving program that uses standard values when creating zips to create identical files over multiple systems with the ability to create a torrentzip format from a zip file"
 HOMEPAGE="https://sourceforge.net/projects/trrntzip"
@@ -26,17 +26,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/fix-perms.patch
-}
 
-src_compile() {
-	./autogen.sh
-
-	econf --host=${CHOST} \
-		--prefix=/usr   \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "econf failed"
-
-	emake || die "emake failed"
+	eautoreconf
 }
 
 src_install() {
