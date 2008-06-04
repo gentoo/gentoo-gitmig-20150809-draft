@@ -1,0 +1,16 @@
+
+--- a/src/lib-mail/istream-header-filter.c	Mon Jun 02 21:19:26 2008 +0300
++++ b/src/lib-mail/istream-header-filter.c	Tue Jun 03 16:04:32 2008 +0300
+@@ -233,7 +233,7 @@ static ssize_t read_header(struct header
+ 		}
+ 	}
+ 
+-	if (!mstream->seen_eoh && mstream->add_missing_eoh) {
++	if (hdr_ret < 0 && !mstream->seen_eoh && mstream->add_missing_eoh) {
+ 		mstream->seen_eoh = TRUE;
+ 		add_eol(mstream);
+ 	}
+
+
+
+
