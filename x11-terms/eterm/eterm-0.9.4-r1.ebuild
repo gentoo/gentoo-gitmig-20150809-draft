@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4-r1.ebuild,v 1.7 2008/05/04 10:50:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4-r1.ebuild,v 1.8 2008/06/04 18:21:51 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P=Eterm-${PV}
 
@@ -58,7 +58,7 @@ src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		cvs_src_unpack
 		cd "${S}"
-		NOCONFIGURE=yes ./autogen.sh || die "autogen failed"
+		eautoreconf
 	else
 		unpack ${MY_P}.tar.gz
 		cd "${S}"
