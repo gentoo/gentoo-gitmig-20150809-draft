@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r4.ebuild,v 1.4 2007/09/11 19:06:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r4.ebuild,v 1.5 2008/06/04 18:04:34 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Various sparc utilities from Debian GNU/Linux"
-HOMEPAGE="http://www.debian.org/"
-SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz
-	http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}-3.diff.gz"
+HOMEPAGE="http://packages.debian.org/sparc-utils"
+SRC_URI="mirror://debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz
+	mirror://debian/pool/main/s/${PN}/${PN}_${PV}-3.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -70,7 +70,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "In order to /usr/sbin/eeprom, make sure you build /dev/openprom"
+	ewarn "In order to have /usr/sbin/eeprom, make sure you build /dev/openprom"
 	ewarn "device support (CONFIG_SUN_OPENPROMIO) into the kernel, or as a"
 	ewarn "module (and that the module is loaded)."
 }
