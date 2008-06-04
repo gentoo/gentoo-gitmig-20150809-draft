@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta2.ebuild,v 1.3 2007/11/27 12:36:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta2.ebuild,v 1.4 2008/06/04 18:36:44 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P="${PN}${PV/_beta/b}"
 S=${WORKDIR}/${MY_P}
@@ -18,8 +18,6 @@ IUSE="gtk qt3"
 RDEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-2* )
 	qt3? ( =x11-libs/qt-3* )"
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
@@ -28,12 +26,11 @@ src_unpack() {
 	# Patch to fix broken autoconf macro "--with-qt-libs" needed below
 	# Submitted upstream, hopefully fixed in a later version
 	use qt3 && epatch "${FILESDIR}"/nvclock_acinclude_qtlibs.patch
+
+	eautoreconf
 }
 
 src_compile() {
-	mv configure.in configure.ac
-	./autogen.sh || die
-
 	# Needed to ensure it compiles against Qt3 rather than Qt4
 	export QTDIR=/usr/qt/3
 	export MOC=${QTDIR}/bin/moc
