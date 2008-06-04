@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.5 2008/02/29 19:25:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.6 2008/06/04 00:13:42 nyhm Exp $
 
 inherit eutils games
 
-DESCRIPTION="Postal 2: Share The Pain"
+DESCRIPTION="Postal 2: Share the Pain"
 HOMEPAGE="http://www.gopostal.com/"
 SRC_URI="http://updatefiles.linuxgamepublishing.com/${PN}/${P/%?/1}.run
 	http://updatefiles.linuxgamepublishing.com/${PN}/${P}.run"
@@ -16,13 +16,9 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="games-util/loki_patch"
-RDEPEND="x11-libs/libXext
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-compat )"
+RDEPEND="sys-libs/glibc
+	virtual/opengl
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
@@ -57,7 +53,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${PN}-bin "${dir}"/System .
 	doicon "${CDROM_ROOT}"/.installation_data/${PN}.xpm
-	make_desktop_entry ${PN} "Postal 2: Share The Pain" ${PN}
+	make_desktop_entry ${PN} "Postal 2: Share the Pain"
 
 	prepgamesdirs
 }
