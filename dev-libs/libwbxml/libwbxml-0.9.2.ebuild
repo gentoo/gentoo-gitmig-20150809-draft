@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2.ebuild,v 1.7 2007/06/26 01:53:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2.ebuild,v 1.8 2008/06/04 15:40:03 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 IUSE=""
 
@@ -26,29 +26,19 @@ S="${WORKDIR}/${MY_P}"
 src_unpack()
 {
 	unpack ${A}
-
-	cd ${S}
-
-	# Remove ./configure stuff from the bootstrap script,
-	# we will handle that step directly
-	subst="./configure --prefix=/usr"
-	sed -i -e "s:${subst}:#${subst}:" bootstrap
+	cd "${S}"
 
 	# Remove doc stuff from Makefile.am, otherwise make install complains
-	epatch ${FILESDIR}/${MY_P}.make_install.patch
+	epatch "${FILESDIR}/${MY_P}.make_install.patch"
 
-	# Add support for our own CFLAGS
-	sed -i -e "s:	 -g::" -e "s:-O3\\\:${CFLAGS}:" {src,tools}/Makefile.am
+	# Don't rewrite use CFLAGS, pass everything as AM_CFLAGS instead.
+	sed -i \
+		-e '/-\(O3\|g\)/d' \
+		-e '/-Wall/s:\\::' \
+		-e 's:CFLAGS:AM_CFLAGS:' \
+		{src,tools}/Makefile.am
 
-	chmod 755 bootstrap
-}
-
-src_compile()
-{
-	./bootstrap
-
-	econf || die "Configuration failed"
-	emake || die "Compilation failed"
+	eautoreconf
 }
 
 src_install()
