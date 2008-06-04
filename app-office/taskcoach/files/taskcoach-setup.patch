@@ -1,0 +1,11 @@
+--- setup.py.orig	2008-06-04 10:16:13.000000000 +0200
++++ setup.py	2008-06-04 10:15:39.000000000 +0200
+@@ -20,7 +20,7 @@
+ 
+ import platform
+ from distutils.core import setup
+-from taskcoachlib import meta
++from taskcoachlib import meta, thirdparty
+ 
+ 
+ setupOptions = { 

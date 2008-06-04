@@ -1,6 +1,11 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.6 2008/05/12 19:32:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.7 2008/06/04 08:24:45 caster Exp $
+
+  04 Jun 2008; Vlastimil Babka <caster@gentoo.org>
+  +files/taskcoach-setup.patch, taskcoach-0.70.0.ebuild:
+  Fix bug #222391 for python 2.4 users. Also switch to icon that's now
+  included in the upstream distfile instead of distributing own.
 
 *taskcoach-0.70.0 (12 May 2008)
 
