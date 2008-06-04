@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.28 2008/06/04 12:37:33 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.29 2008/06/04 13:12:23 lack Exp $
 
 # ROX eclass Version 3
 
@@ -309,7 +309,7 @@ rox_pkg_postinst() {
 }
 
 rox_pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup "${APPDIR}"
 }
 
 
