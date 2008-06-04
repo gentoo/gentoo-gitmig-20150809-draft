@@ -1,0 +1,20 @@
+Modifies the set of accepted characters in folder names for the cyrus imapd server [Version: 2.3.9]
+
+diff -r a83b43bb79a3 imap/mboxname.c
+--- a/imap/mboxname.c	Tue Dec 11 11:22:14 2007 +0100
++++ b/imap/mboxname.c	Tue Dec 11 11:22:22 2007 +0100
+@@ -712,8 +712,13 @@ int mboxname_netnewscheck(char *name)
+ /*
+  * Apply site policy restrictions on mailbox names.
+  * Restrictions are hardwired for now.
+- */
++
++ * original definition 
+ #define GOODCHARS " +,-.0123456789:=@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz~"
++ */
++
++#define GOODCHARS " #$%'()*+,-.0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~"
++
+ int mboxname_policycheck(char *name)
+ {
+     unsigned i;

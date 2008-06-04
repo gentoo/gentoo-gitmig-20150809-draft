@@ -1,0 +1,19 @@
+This patch was downloaded from https://bugzilla.andrew.cmu.edu/cgi-bin/cvsweb.cgi/src/cyrus/timsieved/parser.c.diff?r1=1.44;r2=1.45
+(minus the CVS keywords)
+
+It should be reverse-applied with patch -p2 -R to work around the kontact
+behaviour described in kolab/issue2443 (kontact aborts sieve when imapd sends
+capabilities after starttls) and can be dropped as soon as kontact has a way
+to work with old and new cyrus imapd servers.
+
+--- a/timsieved/parser.c	2007/11/26 20:23:06	1.44
++++ b/timsieved/parser.c	2007/12/10 14:47:08	1.45
+@@ -861,7 +861,7 @@ static int cmd_starttls(struct protstrea
+ 
+     starttls_done = 1;
+ 
+-    return capabilities(sieved_out, sieved_saslconn, starttls_done, authenticated);
++    return result;
+ }
+ #else
+ static int cmd_starttls(struct protstream *sieved_out, struct protstream *sieved_in)
