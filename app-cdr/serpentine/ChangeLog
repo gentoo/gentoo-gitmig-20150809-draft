@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/serpentine
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.14 2007/12/16 21:59:10 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.15 2008/06/04 18:56:14 drac Exp $
+
+  04 Jun 2008; Samuli Suominen <drac@gentoo.org> serpentine-0.9.ebuild:
+  Fix test suite. Move use_enable inside function.
 
 *serpentine-0.9 (16 Dec 2007)
 

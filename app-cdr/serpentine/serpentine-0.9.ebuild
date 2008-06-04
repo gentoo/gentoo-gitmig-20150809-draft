@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9.ebuild,v 1.1 2007/12/16 21:59:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9.ebuild,v 1.2 2008/06/04 18:56:14 drac Exp $
 
 inherit gnome2 mono
 
@@ -25,6 +25,14 @@ RDEPEND=">=dev-lang/python-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	G2CONF="${G2CONF} $(use_enable muine)"
+}
 
-G2CONF="${G2CONF} $(use_enable muine)"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	echo serpentine/gtkutil.py >> po/POTFILES.skip
+	echo serpentine/plugins/plugsuspend.py >> po/POTFILES.skip
+}
