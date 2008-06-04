@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.5.3.1.ebuild,v 1.2 2008/03/14 11:10:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.5.3.1.ebuild,v 1.3 2008/06/04 18:09:14 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P//./-}-src
 
@@ -26,13 +26,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-}
 
-src_compile() {
-	sh autogen.sh
-
-	econf || die "econf failed"
-	emake || die "emake failed"
+	eautoreconf
 }
 
 src_install() {
