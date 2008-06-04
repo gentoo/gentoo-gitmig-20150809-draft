@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.92 2008/05/10 09:00:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.93 2008/06/04 20:43:51 robbat2 Exp $
+
+*grub-0.97-r6 (04 Jun 2008)
+
+  04 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/grub.conf.gentoo, +grub-0.97-r6.ebuild:
+  Improve the Grub /boot setup procedure, to support people with more
+  unusual grub setups where the default config file may not be suitable to
+  pass into the grub shell, per bug #218599. Include a stock grub.conf for
+  Gentoo users. Install the splashimage to /usr and copy to /boot later
+  rather than direct to /boot.
 
   10 May 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r5.ebuild:
   Restore menu.lst symlink #220737 / #221055.
