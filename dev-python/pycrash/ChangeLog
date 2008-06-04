@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrash
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.15 2007/10/23 17:58:40 welp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.16 2008/06/04 11:47:53 jer Exp $
+
+  04 Jun 2008; Jeroen Roovers <jer@gentoo.org> pycrash-0.4_pre3.ebuild:
+  Marked ~hppa too.
 
   23 Oct 2007; Peter Weller <welp@gentoo.org> pycrash-0.4_pre2.ebuild,
   pycrash-0.4_pre3.ebuild:
