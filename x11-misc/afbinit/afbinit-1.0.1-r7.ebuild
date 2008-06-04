@@ -1,19 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r7.ebuild,v 1.2 2008/04/25 13:31:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r7.ebuild,v 1.3 2008/06/04 18:10:47 armin76 Exp $
 
 inherit eutils
 
 DESCRIPTION="loads the microcode for Elite3D framebuffers to use X"
 HOMEPAGE="I dont have a home :("
-SRC_URI="http://cvs.gentoo.org/~weeve/files/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 IUSE=""
 
 LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="-* sparc"
 
-DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	sys-apps/util-linux"
 
