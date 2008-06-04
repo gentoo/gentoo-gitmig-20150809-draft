@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.6 2008/06/03 15:59:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.7 2008/06/04 14:23:54 aballier Exp $
+
+  04 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  unicode-data-5.1.0.ebuild, unicode-data-5.2.0.ebuild:
+  keyword ~x86-fbsd
 
   03 Jun 2008; Raúl Porcel <armin76@gentoo.org> unicode-data-5.2.0.ebuild:
   Add ~alpha/~ia64/~sparc
