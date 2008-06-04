@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/tos-uisp-1.1.15.ebuild,v 1.3 2007/07/23 05:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/tos-uisp-1.1.15.ebuild,v 1.4 2008/06/04 17:06:43 flameeyes Exp $
+
+inherit autotools
 
 CVS_MONTH="Dec"
 CVS_YEAR="2005"
@@ -20,11 +22,13 @@ RDEPEND="!dev-embedded/uisp"
 
 S=${WORKDIR}/${MY_P}-${PV}${CVS_MONTH}${CVS_YEAR}cvs/tools/src/uisp
 
-src_compile() {
-	dosed "s:AM_INIT_AUTOMAKE(uisp, 20050519tinyos):AM_INIT_AUTOMAKE(tos-uisp, ${PV}):" configure.in
-	./bootstrap
-	econf || die "configure failed"
-	emake || die "make failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e "s:AM_INIT_AUTOMAKE(uisp, 20050519tinyos):AM_INIT_AUTOMAKE(tos-uisp, ${PV}):" configure.in
+
+	eautoreconf
 }
 
 src_install() {

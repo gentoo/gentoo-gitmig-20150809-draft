@@ -1,6 +1,9 @@
 # ChangeLog for dev-tinyos/tos-uisp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/ChangeLog,v 1.4 2007/07/23 05:28:16 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/ChangeLog,v 1.5 2008/06/04 17:06:43 flameeyes Exp $
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> tos-uisp-1.1.15.ebuild:
+  Use eautoreconf, not the bootstrap script.
 
   23 Jul 2007; Mike Frysinger <vapier@gentoo.org> tos-uisp-1.1.15.ebuild:
   Punt bindnow-flags usage.
