@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.25-r1.ebuild,v 1.2 2008/06/02 01:27:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.25-r1.ebuild,v 1.3 2008/06/04 09:13:50 corsair Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ SRC_URI="!fontforge? (  mirror://sourceforge/${PN}/${MY_BP}.tar.bz2 )
 	fontforge? ( mirror://sourceforge/${PN}/${MY_SP}.tar.bz2 )"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 
 IUSE="+fontforge"
 DEPEND="fontforge? ( x11-apps/mkfontscale
