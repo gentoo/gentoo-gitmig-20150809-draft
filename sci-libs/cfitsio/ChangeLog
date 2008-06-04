@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.16 2008/06/02 08:26:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.17 2008/06/04 09:25:22 corsair Exp $
+
+  04 Jun 2008; Markus Rothe <corsair@gentoo.org> cfitsio-2.510-r2.ebuild,
+  cfitsio-3.080.ebuild:
+  Added ~ppc64; bug #224585
 
 *cfitsio-3.080 (02 Jun 2008)
 
