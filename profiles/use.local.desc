@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3566 2008/06/04 04:43:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3567 2008/06/04 16:30:32 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1911,6 +1911,7 @@ sci-libs/scipy:umfpack - Add support for sparse solving via UMFPACK
 sci-libs/vtk:patented - Builds patented classes.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
+sci-mathematics/dataplot:gs - Adds Ghostscript support
 sci-mathematics/freemat:arpack - Add sparse eigen value support via arpack
 sci-mathematics/freemat:ffcall - Enables uses of ffcall
 sci-mathematics/freemat:umfpack - Add sparse solving via umfpack

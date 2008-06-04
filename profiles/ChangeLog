@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1489 2008/06/04 15:43:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1490 2008/06/04 16:30:32 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  04 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Add local gs for sci-mathematics/dataplot
 
   04 Jun 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Adding mask for www-client/arora because it depends on p.masked qt-webkit.
