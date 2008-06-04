@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.124 2008/03/15 23:14:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.125 2008/06/04 18:56:56 dertobi123 Exp $
+
+*cyrus-imapd-2.3.12_p2 (04 Jun 2008)
+
+  04 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/kolab/2.3.12_p2/annotations2.patch,
+  +files/kolab/2.3.12_p2/cyradm_annotations.patch,
+  +files/kolab/2.3.12_p2/folder-names.patch,
+  +files/kolab/2.3.12_p2/groups.patch, +files/kolab/2.3.12_p2/logging.patch,
+  +files/kolab/2.3.12_p2/timsieved_starttls-sendcaps.patch,
+  +files/kolab/2.3.12_p2/uid.patch, +cyrus-imapd-2.3.12_p2.ebuild:
+  Version bump, include kolab patches (#194361), force -j1 (#222529) and
+  stop forcing synchronous writes on ext3 (#224845)
 
   15 Mar 2008; Mark Loeser <halcy0n@gentoo.org> cyrus-imapd-2.3.9-r1.ebuild,
   cyrus-imapd-2.3.11.ebuild:
