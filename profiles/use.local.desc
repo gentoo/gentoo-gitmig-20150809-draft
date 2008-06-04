@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3569 2008/06/04 21:17:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3570 2008/06/04 21:39:52 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -630,6 +630,8 @@ dev-scheme/guile:discouraged - (implied by deprecated) enable merely discouraged
 dev-scheme/guile:elisp - enable Emacs Lisp support
 dev-scheme/guile:networking - include networking interfaces
 dev-scheme/guile:regex - include regular expression interfaces
+dev-tex/dot2texi:pgf - Enables pgf (The TeX Portable Graphic Format) support.
+dev-tex/dot2texi:pstricks - Enables pstricks support.
 dev-tex/latex-beamer:lyx - Install with LyX layouts
 dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
