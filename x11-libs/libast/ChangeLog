@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libast
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.30 2008/03/09 21:01:12 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.31 2008/06/04 18:18:19 flameeyes Exp $
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> libast-9999.ebuild:
+  Use eautoreconf, not the bootstrap script.
 
   09 Mar 2008; <ricmm@gentoo.org> libast-0.7.ebuild:
   Marked unstable on mips due to unstable deps
