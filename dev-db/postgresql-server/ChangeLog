@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.5 2008/05/20 05:56:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.6 2008/06/04 21:14:20 dev-zero Exp $
+
+  04 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postgresql-server-7.3.21.ebuild, postgresql-server-7.4.19.ebuild,
+  postgresql-server-8.0.15.ebuild, postgresql-server-8.1.11.ebuild,
+  postgresql-server-8.2.7.ebuild, postgresql-server-8.3.1.ebuild:
+  Fixed bug #223189 (thanks to Jose Quinteiro)
 
   20 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   files/postgresql-8.3-server.patch:

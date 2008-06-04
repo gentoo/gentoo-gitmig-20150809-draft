@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.19.ebuild,v 1.1 2008/04/15 09:29:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.19.ebuild,v 1.2 2008/06/04 21:14:20 dev-zero Exp $
 
 EAPI="1"
 
@@ -23,7 +23,7 @@ IUSE="doc perl python selinux tcl xml nls kernel_linux ${IUSE_LINGUAS}"
 
 wanted_languages() {
 	for u in ${IUSE_LINGUAS} ; do
-		use $u && echo ${u#linguas_}
+		use $u && echo -n "${u#linguas_} "
 	done
 }
 
