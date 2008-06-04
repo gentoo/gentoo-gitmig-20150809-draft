@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.6 2007/10/28 13:28:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.7 2008/06/04 18:32:10 flameeyes Exp $
 
-inherit linux-mod eutils
+inherit linux-mod eutils autotools
 
 DESCRIPTION="GPL Driver for Eagle Chipset powered ADSL modem"
 SRC_URI="http://baud123.free.fr/eagle-usb/${PN}-${PV%.*}/${P}.tar.bz2"
@@ -38,10 +38,10 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-kernel-2.6.14.patch"
+	eautoreconf
 }
 
 src_compile() {
-	./autogen.sh || die "autogen.sh failed"
 	CONFIG_FILES=Makefile.common econf --with-kernel-src="${KV_DIR}" || die "econf failed"
 	for i in pppoa utils/scripts utils/eagleconnect; do
 		emake -C ${i} || die "emake ${i} failed"
