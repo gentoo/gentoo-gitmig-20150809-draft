@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8676 2008/06/03 10:46:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8677 2008/06/04 08:50:45 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -342,11 +342,6 @@ media-sound/lastfmproxy
 # Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
 <net-misc/ltsp-5
-
-# Stefan Schweizer <genstef@gentoo.org> (1 Apr 2008)
-# New library, API compatibility with evince/xpdf/okular/epdfview needs to be checked first
->=app-text/poppler-0.8.0
->=app-text/poppler-bindings-0.8.0
 
 # Denis Dupeyron <calchan@gentoo.org> (31 Mar 2008)
 # New versions using guile-1.8 and gtk-2 used to build and run at some point,
