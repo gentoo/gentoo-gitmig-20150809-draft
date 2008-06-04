@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1488 2008/06/04 13:33:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1489 2008/06/04 15:43:19 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,9 @@
 
   04 Jun 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Adding mask for www-client/arora because it depends on p.masked qt-webkit.
+
+  04 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  masking app-text/docbook-to-man cause it really sucks. See bug 224679.
 
   04 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   package.mask xmlrpc-c-1.14.07

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8679 2008/06/04 13:33:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8680 2008/06/04 15:43:19 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -32,6 +32,12 @@
 # Ben de Groot <yngwin@gentoo.org> (4 Jun 2008)
 # depends on p.masked qt-webkit-4.4
 www-client/arora
+
+# Peter Alfredsen <loki_val@gentoo.org> (4 Jun 2008)
+# masking app-text/docbook-to-man for removal. It never
+# really worked and never really will. Debian will also
+# punt it. See bug 224679.
+app-text/docbook-to-man 
 
 # Peter Alfredsen <loki_val@gentoo.org> (4 Jun 2008)
 # xmlrpc-c-1.14.07 is experimental but has the advantage of being current.
