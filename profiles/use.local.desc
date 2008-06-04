@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3565 2008/06/02 16:08:05 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3566 2008/06/04 04:43:23 darkside Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1635,6 +1635,7 @@ net-mail/mailman:qmail - Build with delivery options for qmail
 net-mail/mailman:sendmail - Build with delivery options for sendmail
 net-mail/mailman:xmail - Build with delivery options for xmail
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
+net-mail/qpopper:apop - Enables the pop.auth file in /etc/pop.auth
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/teapop:virtual - Enable teapop's virtual domain support.
 net-mail/tpop3d:authexternal - Enable authentication by an external program
