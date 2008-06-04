@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.10 2008/04/13 18:49:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.11 2008/06/04 18:47:15 drac Exp $
+
+*libisofs-0.6.6 (04 Jun 2008)
+
+  04 Jun 2008; Samuli Suominen <drac@gentoo.org> +libisofs-0.6.6.ebuild:
+  Version bump.
 
   13 Apr 2008; Samuli Suominen <drac@gentoo.org> -libisofs-0.2.3.ebuild,
   libisofs-0.2.4.ebuild, -libisofs-0.2.8.ebuild:
