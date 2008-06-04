@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.2 2008/06/04 16:40:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.3 2008/06/04 17:07:06 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools fortran
 
@@ -13,7 +13,6 @@ DESCRIPTION="A program for scientific visualization and statistical analyis"
 HOMEPAGE="http://www.itl.nist.gov/div898/software/dataplot/"
 SRC_URI="ftp://ftp.nist.gov/pub/dataplot/unix/dpsrc.${MY_PV}.tar.gz
 	ftp://ftp.nist.gov/pub/dataplot/unix/dplib.${MY_PV}.tar.gz"
-
 
 LICENSE="public-domain"
 SLOT="0"
