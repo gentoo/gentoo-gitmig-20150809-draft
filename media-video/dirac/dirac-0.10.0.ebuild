@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.9.1.ebuild,v 1.3 2008/03/05 23:20:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.10.0.ebuild,v 1.1 2008/06/04 23:06:45 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,7 +31,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-0.5.2-doc.patch"
 
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
@@ -41,7 +41,7 @@ src_compile() {
 		$(use_enable doc) \
 		|| die "econf failed"
 
-	emake || die "emake failed"
+	VARTEXFONTS="${T}/fonts" emake || die "emake failed"
 }
 
 src_install() {
