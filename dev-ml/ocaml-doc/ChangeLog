@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-doc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.4 2007/07/15 09:15:42 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.5 2008/06/04 13:51:03 aballier Exp $
+
+*ocaml-doc-3.10 (04 Jun 2008)
+
+  04 Jun 2008; Alexis Ballier <aballier@gentoo.org> +ocaml-doc-3.10.ebuild:
+  bump to latest
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to ml, as nattfodd is being retired (#108329).
