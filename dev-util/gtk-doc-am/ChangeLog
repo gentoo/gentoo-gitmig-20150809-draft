@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.10 2008/06/04 03:22:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.11 2008/06/04 09:30:00 corsair Exp $
+
+  04 Jun 2008; Markus Rothe <corsair@gentoo.org> gtk-doc-am-1.10-r1.ebuild:
+  Stable on ppc64; bug #224817
 
   04 Jun 2008; Jeroen Roovers <jer@gentoo.org> gtk-doc-am-1.10-r1.ebuild:
   Stable for HPPA (bug #224817).
