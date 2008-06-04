@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.7 2008/06/04 06:12:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.8 2008/06/04 07:08:20 nerdboy Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -10,9 +10,8 @@ SRC_URI="ftp://ftp.hdfgroup.org/HDF5/current/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~sparc"
-# need to update szip to get alpha, ia64, etc back in here, 
-# and hppa needs both szip and mpich2 (mask mpe-sdk for the latter)
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~sparc"
+# need to update szip to get alpha, ia64, etc back in here,
 IUSE="cxx debug fortran mpi ssl szip threads tools zlib "
 
 DEPEND="!sparc? ( mpi? ( >=sys-cluster/mpich2-1.0.6
