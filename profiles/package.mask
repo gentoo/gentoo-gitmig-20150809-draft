@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8678 2008/06/04 12:04:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8679 2008/06/04 13:33:42 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (4 Jun 2008)
+# depends on p.masked qt-webkit-4.4
+www-client/arora
 
 # Peter Alfredsen <loki_val@gentoo.org> (4 Jun 2008)
 # xmlrpc-c-1.14.07 is experimental but has the advantage of being current.
