@@ -32,3 +32,6 @@ gnome-base/gnome mono
 # nixnut <nixnut@gentoo.org> (11 mar 2008)
 # USE=musepack wants musepack-tools which can't be build on ppc
 media-sound/squeezecenter musepack
+
+# USE=laptop wants x86 specific packages which can't be build on ppc
+sys-apps/hal laptop
