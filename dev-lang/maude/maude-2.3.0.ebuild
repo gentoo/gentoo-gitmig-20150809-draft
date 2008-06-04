@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.3.0.ebuild,v 1.1 2008/06/04 03:40:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.3.0.ebuild,v 1.2 2008/06/04 15:55:37 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils versionator
 
@@ -25,7 +25,6 @@ RDEPEND="sci-libs/buddy
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
-
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV}
 
