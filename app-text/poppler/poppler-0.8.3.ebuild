@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.8.0.ebuild,v 1.1 2008/04/01 16:17:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.8.3.ebuild,v 1.1 2008/06/04 08:43:49 loki_val Exp $
 
 inherit libtool
 
