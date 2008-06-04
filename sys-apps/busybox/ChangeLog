@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.189 2008/05/13 07:27:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.190 2008/06/04 17:30:18 jer Exp $
+
+  04 Jun 2008; Jeroen Roovers <jer@gentoo.org> busybox-1.10.1-r2.ebuild:
+  Stable for HPPA (bug #219516).
 
 *busybox-1.10.1-r3 (13 May 2008)
 
