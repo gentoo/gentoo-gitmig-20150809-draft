@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-lib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.24 2007/12/12 19:56:48 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.25 2008/06/04 12:34:25 lack Exp $
+
+  04 Jun 2008; Jim Ramsay <lack@gentoo.org> rox-lib-2.0.4.ebuild,
+  rox-lib-2.0.4-r1.ebuild, rox-lib-2.0.5.ebuild:
+  Moved python_mod_optimize to pkg_postinst (Bug #224833)
 
   12 Dec 2007; Jim Ramsay <lack@gentoo.org> rox-lib-2.0.4-r1.ebuild,
   rox-lib-2.0.5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4-r1.ebuild,v 1.3 2007/12/12 19:56:48 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4-r1.ebuild,v 1.4 2008/06/04 12:34:25 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -29,7 +29,6 @@ src_install() {
 
 	dodir "${baselibdir}"
 	cp -r ROX-Lib2/ "${D}${baselibdir}"
-	python_mod_optimize "${D}${baselibdir}/ROX-Lib2/" >/dev/null 2>&1
 	dodir /usr/share/doc/
 	dosym "${baselibdir}/ROX-Lib2/Help" "/usr/share/doc/${P}"
 
@@ -44,4 +43,13 @@ src_install() {
 	local cachedname
 	cachedname=$(0distutils -c tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-Lib2/.DirIcon" "${ICON_CACHE_DIR}/${cachedname}"
+}
+
+pkg_postinst() {
+	local baselibdir="/usr/$(get_libdir)"
+	python_mod_optimize "${baselibdir}/ROX-Lib2/"
+}
+
+pkg_postrm() {
+	python_mod_cleanup
 }
