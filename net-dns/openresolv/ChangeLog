@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.13 2008/06/03 02:36:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.14 2008/06/04 07:28:57 corsair Exp $
+
+  04 Jun 2008; Markus Rothe <corsair@gentoo.org> openresolv-1.5.1.ebuild:
+  Stable on ppc/ppc64; bug #224097
 
   03 Jun 2008; Jeroen Roovers <jer@gentoo.org> openresolv-1.5.1.ebuild:
   Stable for HPPA (bug #224097).
