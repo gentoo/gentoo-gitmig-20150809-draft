@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.5 2008/06/04 21:46:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.6 2008/06/04 21:56:57 dev-zero Exp $
+
+  04 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  postgresql-base-8.3.1.ebuild:
+  Re-added ~sparc-fbsd keyword since ossp-uuid got keyworded
 
   04 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   postgresql-base-7.3.21.ebuild, postgresql-base-7.4.19.ebuild,
