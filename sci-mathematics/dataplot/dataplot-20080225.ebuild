@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.1 2008/06/04 16:31:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.2 2008/06/04 16:40:53 bicatali Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools fortran
 
@@ -48,9 +48,12 @@ pkg_setup() {
 src_unpack() {
 	# unpacking and renaming because
 	# upstream does not use directories
-	mkdir "${S_AUX}" && cd "${S_AUX}"
+	mkdir "${S_AUX}"
+	pushd "${S_AUX}"
 	unpack ${MY_P_AUX}.tar.gz
-	mkdir ${MY_P} && cd "${S}"
+	popd
+	mkdir ${MY_P}
+	cd "${S}"
 	unpack ${MY_P}.tar.gz
 
 	# autotoolization: need to fix a few files with

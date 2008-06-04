@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/dataplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.1 2008/06/04 16:31:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.2 2008/06/04 16:40:53 bicatali Exp $
+
+  04 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  dataplot-20080225.ebuild:
+  Fixed directory changes
 
 *dataplot-20080225 (04 Jun 2008)
 
