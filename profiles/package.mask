@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8677 2008/06/04 08:50:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8678 2008/06/04 12:04:11 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Alfredsen <loki_val@gentoo.org> (4 Jun 2008)
+# xmlrpc-c-1.14.07 is experimental but has the advantage of being current.
+# o Adds 64 bit integers (whoo!)
+# o Fails its own tests in horrendous ways (buuh!)
+=dev-libs/xmlrpc-c-1.14.07*
 
 # Raúl Porcel <armin76@gentoo.org> (3 Jun 2008)
 # P.mask snapshots
