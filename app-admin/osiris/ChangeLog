@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.15 2008/04/21 16:12:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.16 2008/06/04 16:52:15 flameeyes Exp $
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> osiris-4.2.2.ebuild:
+  Use eautoreconf, not the bootstrap script.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

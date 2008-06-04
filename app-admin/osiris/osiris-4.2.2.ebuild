@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.4 2007/07/13 06:07:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.5 2008/06/04 16:52:15 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -32,8 +32,7 @@ src_unpack()
 	unpack ${P}.tar.gz
 	epatch "${FILESDIR}"/${P}-externaldb.patch
 	cd "${S}"
-	./bootstrap
-	#eautomake
+	eautoreconf
 	cd "${WORKDIR}"
 	unpack mod_uptime.tar.gz
 	unpack mod_dns.tar.gz
