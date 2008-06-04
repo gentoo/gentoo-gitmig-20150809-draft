@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.4.ebuild,v 1.2 2008/04/11 23:50:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.6.4.ebuild,v 1.3 2008/06/04 19:07:15 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -57,6 +57,8 @@ src_unpack() {
 }
 
 src_compile() {
+	local use_xcb
+
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
@@ -64,11 +66,15 @@ src_compile() {
 		export glitz_LIBS=-lglitz-glx
 	fi
 
-	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
-		  $(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
-		  $(use_enable debug test-surfaces) --enable-pdf  --enable-png \
-		  --enable-freetype --enable-ps $(use_enable xcb) \
-		  || die "configure failed"
+	use_xcb="--disable_xcb"
+	use X && use xcb && use_xcb="--enable-xcb"
+
+	econf $(use_enable X xlib) $(use_enable doc gtk-doc) \
+		$(use_enable directfb) ${use_xcb} \
+		$(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
+		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
+		--enable-freetype --enable-ps \
+		|| die "configure failed"
 
 	emake || die "compile failed"
 }
