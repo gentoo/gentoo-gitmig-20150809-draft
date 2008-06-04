@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.1 2008/06/04 20:43:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.2 2008/06/04 20:44:15 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -199,7 +199,7 @@ setup_boot_dir() {
 		[[ -e "${s}.gz" ]] && zcat "${s}.gz" >${dir}/grub.conf
 		[[ -e "${s}.bz2" ]] && bzcat "${s}.bz2" >${dir}/grub.conf
 	fi
-	
+
 	# Per bug 218599, we support grub.conf.install for users that want to run a
 	# specific set of Grub setup commands rather than the default ones.
 	grub_config=${dir}/grub.conf.install
