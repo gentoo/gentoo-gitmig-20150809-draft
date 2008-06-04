@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.21 2006/02/17 13:42:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.22 2008/06/04 17:24:30 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A Gtk Interface for coin"
 HOMEPAGE="http://www.coin3d.org"
@@ -24,12 +24,11 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${P}-string.patch
+
+	eautoreconf
 }
 
 src_compile() {
-
-	./bootstrap --add
-
 	local myconf
 
 	if ! use nls
