@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.4 2007/04/28 16:55:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.5 2008/06/04 03:40:46 markusle Exp $
 
 inherit toolchain-funcs eutils
 
@@ -37,8 +37,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.4.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc3.4.patch
 }
 
 src_compile() {
@@ -48,13 +48,13 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D}
+	make install DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# Sets the full maude library path.
-	doenvd ${FILESDIR}/23maude
+	doenvd "${FILESDIR}"/23maude
 
-	cd ${WORKDIR}/${PN}-full-doc-${PV}
+	cd "${WORKDIR}"/${PN}-full-doc-${PV}
 
 	# Full maude library
 	insinto /usr/share/${PN}
