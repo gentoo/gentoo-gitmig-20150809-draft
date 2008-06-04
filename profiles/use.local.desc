@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3570 2008/06/04 21:39:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3571 2008/06/04 22:00:25 cla Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1553,7 +1553,9 @@ net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:extraicons - Enables extra icon sets
 net-im/kadu:extramodules - Enables extra module in kadu
+net-im/kadu:libgadu - Build against existing libgadu rather than built-in
 net-im/kadu:mail - Enables mail module in kadu
+net-im/kadu:powerkadu - Installs extra powerkadu modules
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
 net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging

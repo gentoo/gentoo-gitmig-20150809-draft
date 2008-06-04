@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1491 2008/06/04 21:21:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1492 2008/06/04 22:00:25 cla Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  05 Jun 2008; Dawid Węgliński <cla@gentoo.org> use.local.desc:
+  Add local useflags for net-im/kadu-0.6.0.1
 
   04 Jun 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   Mask lyx 1.6 beta
