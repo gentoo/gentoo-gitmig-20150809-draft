@@ -1,16 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.2.ebuild,v 1.3 2008/05/02 15:00:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.2.ebuild,v 1.4 2008/06/05 18:34:55 drac Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="GnomeBaker is a GTK2/Gnome cd burning application."
 HOMEPAGE="http://gnomebaker.sf.net"
-SRC_URI="mirror://sourceforge/gnomebaker/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="dvdr flac libnotify mp3 nls vorbis"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+
 RDEPEND="app-cdr/cdrdao
 	virtual/cdrtools
 	>=dev-libs/glib-2.4.0
@@ -42,8 +44,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-genisofs.patch
-	epatch "${FILESDIR}"/${P}-fix_fstab_parsing.patch
+	echo gnomebaker.desktop.in >> po/POTFILES.skip
+
+	epatch "${FILESDIR}"/${P}-genisofs.patch \
+		"${FILESDIR}"/${P}-fix_fstab_parsing.patch
 
 	gnome2_omf_fix
 }
