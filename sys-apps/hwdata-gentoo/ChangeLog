@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.15 2008/04/10 06:33:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.16 2008/06/05 18:33:34 wolf31o2 Exp $
+
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/0.3-fglrx.patch, -files/0.3-nv-fbdev.patch,
+  -files/0.3-nv-vesa.patch, -files/0.3-nvidia.patch,
+  -hwdata-gentoo-0.3.ebuild:
+  Removing 0.3 version.
 
   10 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/0.4-openchrome.patch, hwdata-gentoo-0.4.ebuild:
