@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.37 2008/06/04 11:48:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.38 2008/06/05 04:44:01 fuzzyray Exp $
+
+*porthole-0.6.0_rc4 (05 Jun 2008)
+
+  05 Jun 2008; Paul Varner <fuzzyray@gentoo.org> +porthole-0.6.0_rc4.ebuild:
+  Version bump, more minor bugfixes.
 
   04 Jun 2008; Jeroen Roovers <jer@gentoo.org> porthole-0.6.0_rc3.ebuild:
   Marked ~hppa too.
