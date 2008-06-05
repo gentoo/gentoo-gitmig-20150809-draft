@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/pothana2k-2006-r1.ebuild,v 1.1 2008/06/05 11:44:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/pothana2k-2006-r1.ebuild,v 1.2 2008/06/05 17:56:04 corsair Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
