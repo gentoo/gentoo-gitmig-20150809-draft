@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.138 2008/06/01 11:53:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.139 2008/06/05 05:54:06 tupone Exp $
+
+  05 Jun 2008; Tupone Alfredo <tupone@gentoo.org> zope-2.9.8.ebuild:
+  Stable on amd64 wrt bug 224015
 
   01 Jun 2008; nixnut <nixnut@gentoo.org> zope-2.9.8.ebuild:
   Stable on ppc wrt bug 224015
