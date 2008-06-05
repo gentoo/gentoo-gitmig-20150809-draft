@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.12 2008/06/01 20:49:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.13 2008/06/05 11:49:25 remi Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -55,7 +55,7 @@ RDEPEND="
 	>=gnome-base/libglade-2.6.2
 
 	>=gnome-extra/bug-buddy-2.20.1
-	>=gnome-base/control-center-2.20.1
+	>=gnome-base/gnome-control-center-2.20.1
 
 	>=gnome-base/eel-2.20.0
 	>=gnome-base/nautilus-2.20.0

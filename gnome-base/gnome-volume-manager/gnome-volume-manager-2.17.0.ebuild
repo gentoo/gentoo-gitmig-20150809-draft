@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0.ebuild,v 1.14 2007/09/23 05:06:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0.ebuild,v 1.15 2008/06/05 11:55:09 remi Exp $
 
 inherit gnome2 eutils autotools
 
@@ -20,7 +20,7 @@ RDEPEND="gnome-base/nautilus
 	>=gnome-base/libglade-2
 	>=x11-libs/libnotify-0.3
 	>=gnome-base/gconf-2
-	>=gnome-base/control-center-2.0
+	>=gnome-base/gnome-control-center-2.0
 	gnome-base/gnome-mime-data
 	gnome-base/gnome-mount"
 

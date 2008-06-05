@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.22.0.ebuild,v 1.1 2008/04/01 08:20:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.22.0.ebuild,v 1.2 2008/06/05 11:51:11 remi Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -49,7 +49,7 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/libglade-2.6.2
 
 	>=gnome-base/gnome-settings-daemon-2.22.0
-	>=gnome-base/control-center-2.22.0
+	>=gnome-base/gnome-control-center-2.22.0
 
 	>=gnome-base/eel-2.22.0
 	>=gnome-base/gvfs-0.2.0.1

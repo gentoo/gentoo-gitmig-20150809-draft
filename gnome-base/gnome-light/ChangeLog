@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.87 2008/04/01 08:20:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.88 2008/06/05 11:51:11 remi Exp $
+
+  05 Jun 2008; Rémi Cardona <remi@gentoo.org> gnome-light-2.20.3.ebuild,
+  gnome-light-2.22.0.ebuild:
+  pkgmove to gnome-base/gnome-control-center
 
 *gnome-light-2.22.0 (01 Apr 2008)
 
