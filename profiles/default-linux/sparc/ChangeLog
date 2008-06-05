@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.102 2008/05/12 11:29:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.103 2008/06/05 11:39:22 armin76 Exp $
+
+  05 Jun 2008; Raúl Porcel <armin76@gentoo.org> sparc64/package.mask:
+  Unmask selinux packages since we have >=glibc-2.4
 
   12 May 2008; Raúl Porcel <armin76@gentoo.org> +sparc64/2006.1/deprecated:
   Deprecate 2006.1
