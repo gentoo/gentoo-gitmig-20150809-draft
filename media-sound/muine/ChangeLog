@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.44 2008/03/12 14:15:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.45 2008/06/05 08:35:26 opfer Exp $
+
+  05 Jun 2008; Christian Faulhammer <opfer@gentoo.org> muine-0.8.8.ebuild:
+  stable x86, bug 218112
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
