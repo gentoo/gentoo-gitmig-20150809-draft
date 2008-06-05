@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.92 2008/05/30 09:05:08 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.93 2008/06/05 22:14:58 keytoaster Exp $
+
+*krfb-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> +krfb-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of krfb.
 
   30 May 2008; Bo Ørsted Andresen <zlin@gentoo.org> krfb-4.0.4.ebuild:
   KDE4_BUILT_WITH_USE_CHECK is now always an array. Bug #216863.
