@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.22 2008/05/07 08:33:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.23 2008/06/05 10:19:21 bicatali Exp $
+
+  05 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> -rpy-1.0.1.ebuild,
+  -rpy-1.0.2.ebuild, rpy-1.0.2-r1.ebuild:
+  Fixed lapack detection again (bug #224935) and switch texlive and tetex
+  order for doc flag. Cleaned for old versions.
 
 *rpy-1.0.2-r1 (07 May 2008)
 
