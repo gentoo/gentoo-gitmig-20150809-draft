@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.2 2008/05/29 04:39:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.3 2008/06/05 18:30:02 wolf31o2 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -16,7 +16,7 @@ then
 else
 	inherit eutils multilib
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
+		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 fi
 
 DESCRIPTION="release metatool used for creating Gentoo releases"
