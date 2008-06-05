@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/heliodor/heliodor-0.1.3.ebuild,v 1.1 2006/12/19 22:11:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/heliodor/heliodor-0.1.3.ebuild,v 1.2 2008/06/05 11:59:14 remi Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=x11-libs/gtk+-2.8.0
 	>=x11-libs/libwnck-2.14.2
 	>=gnome-base/gconf-2
-	>=gnome-base/control-center-2.14
+	>=gnome-base/gnome-control-center-2.14
 	>=x11-wm/metacity-2.16
 	~x11-wm/beryl-core-${PV}"
 
