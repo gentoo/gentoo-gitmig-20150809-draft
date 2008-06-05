@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.130 2008/04/30 11:45:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.131 2008/06/05 08:42:08 opfer Exp $
+
+  05 Jun 2008; Christian Faulhammer <opfer@gentoo.org> no-nptl/package.mask:
+  remove SELinux maskings as requested on bug 224641
 
   30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
   Removed masking of icc and ifc flags (now only local flags). Removed
