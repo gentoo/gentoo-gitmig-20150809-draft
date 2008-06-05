@@ -1,6 +1,15 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.15 2007/03/12 23:43:37 nattfodd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.16 2008/06/05 15:40:22 opfer Exp $
+
+  05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  active-dvi-1.6.0-r1.ebuild:
+  put man page in correct directory, see bug 168542 by Horst Prote
+  <prote AT fmi DOT uni-stuttgart DOT de>; quote variables
+
+  05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  active-dvi-1.6.0-r1.ebuild:
+  stable x86, bug 224893
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).

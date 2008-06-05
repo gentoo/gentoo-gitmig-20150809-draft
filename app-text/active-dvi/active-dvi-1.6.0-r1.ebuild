@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0-r1.ebuild,v 1.3 2007/01/28 05:36:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0-r1.ebuild,v 1.4 2008/06/05 15:40:22 opfer Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1"
 
 IUSE="cjk tk"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	>=dev-ml/camlimages-2.20
@@ -54,8 +54,8 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-warn-error.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-warn-error.patch
 	# need to remove texhash, it'll cause problems with
 	# the sandbox if we try and run it during emerge
 	sed -i -e "s/texhash//" Makefile
@@ -86,16 +86,16 @@ src_install() {
 	TEXMFADVI="/usr/share/texmf/tex/latex/advi"
 
 	dodir /usr/bin $TEXMFADVI
-	make MANDIR=${D}/usr/share/man/man1 \
-		ADVI_LOC=${D}/${TEXMFADVI} \
-		prefix=${D}/usr install || die
+	make MANDIR="${D}"/usr/share/man \
+		ADVI_LOC="${D}"/${TEXMFADVI} \
+		prefix="${D}"/usr install || die
 
 	# only include the jpfonts.config if use cjk
-	use cjk || rm ${D}${TEXMFADVI}/jpfonts.conf
+	use cjk || rm "${D}"${TEXMFADVI}/jpfonts.conf
 
 	# now install the documentation
 	dodoc ${DOCS}
-	cd ${S}/doc
+	cd "${S}"/doc
 	dohtml *.{jpg,gif,css,html}
 	dodoc manual.{dvi,pdf,ps}
 	# and the manual page
