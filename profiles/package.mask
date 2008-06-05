@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8685 2008/06/05 11:46:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8686 2008/06/05 20:02:37 wolf31o2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1121,11 +1121,6 @@ dev-php4/pecl-http
 x11-plugins/gai-pal
 x11-plugins/gai-pager
 x11-libs/gai
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (05 Oct 2007)
-# This is masked for removal in 30 days due to security bug #194609 and no
-# newer version of the package being available.  Sorry, folks.
-games-fps/americas-army
 
 # Peter Volkov <pva@gentoo.org> (28 Sep 2007)
 # masked for testing
