@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ekushey-bangla-fonts/ekushey-bangla-fonts-20070420.ebuild,v 1.1 2008/06/05 14:00:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ekushey-bangla-fonts/ekushey-bangla-fonts-20070420.ebuild,v 1.2 2008/06/05 15:39:53 mr_bones_ Exp $
 
 inherit font
 
@@ -29,7 +29,6 @@ SRC_URI="mirror://sourceforge/ekushey/${P_LOHIT}.ttf
 	mirror://sourceforge/ekushey/${P_PUNARBHABA}.ttf
 	mirror://sourceforge/ekushey/${P_SOLAIMANLIPI}.ttf
 	mirror://sourceforge/ekushey/${P_RUPALI}.ttf"
-
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
