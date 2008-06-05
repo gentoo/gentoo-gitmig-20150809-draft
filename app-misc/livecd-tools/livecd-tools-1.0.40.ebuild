@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40.ebuild,v 1.6 2008/06/05 18:36:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40.ebuild,v 1.7 2008/06/05 18:46:16 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Gentoo LiveCD tools for autoconfiguration of hardware"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://wolf31o2.org/projects/livecd-tools"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 
