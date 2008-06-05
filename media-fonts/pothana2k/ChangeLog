@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/pothana2k
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.1 2008/06/05 11:13:24 loki_val Exp $
+
+*pothana2k-2006 (05 Jun 2008)
+
+  05 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +pothana2k-2006.ebuild:
+  Initial commit. Closes bug 102389. Thanks to Francisco José Cañizares
+  Santofimia <telefrancisco@gmail.com> for providing the initial ebuild.
+
