@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/qtnx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtnx/ChangeLog,v 1.3 2008/06/04 22:19:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtnx/ChangeLog,v 1.4 2008/06/05 15:24:06 pva Exp $
+
+  05 Jun 2008; Peter Volkov <pva@gentoo.org> qtnx-0.9.ebuild:
+  amd64 stable, bug #222967.
 
   04 Jun 2008; Bernard Cafarelli <voyageur@gentoo.org> qtnx-0.9.ebuild:
   Actually depend on qt-4 (both monolithic and splitted versions), thanks pva
