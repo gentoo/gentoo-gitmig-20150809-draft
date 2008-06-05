@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.4 2008/02/29 19:17:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.5 2008/06/05 20:22:27 wolf31o2 Exp $
+
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Removing myself as maintainer.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> openarena-0.7.1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
