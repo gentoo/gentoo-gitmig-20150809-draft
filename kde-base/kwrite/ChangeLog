@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.7 2008/05/16 00:42:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.8 2008/06/05 22:35:18 keytoaster Exp $
+
+*kwrite-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> +kwrite-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kwrite.
 
 *kwrite-4.0.4 (15 May 2008)
 
