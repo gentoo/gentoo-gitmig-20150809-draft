@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.31 2008/05/31 11:53:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.32 2008/06/05 12:45:27 drac Exp $
+
+*xfce4-sensors-0.10.99.3-r2 (05 Jun 2008)
+
+  05 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +xfce4-sensors-0.10.99.3-r2.ebuild:
+  Revert fix for bug #217743 since it breaks wrt bug #224443.
 
 *xfce4-sensors-0.10.99.3-r1 (31 May 2008)
 
