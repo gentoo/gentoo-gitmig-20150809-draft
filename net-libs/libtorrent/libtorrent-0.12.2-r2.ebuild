@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.0.ebuild,v 1.2 2008/04/21 14:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.2-r2.ebuild,v 1.1 2008/06/05 06:41:55 loki_val Exp $
 
-inherit eutils toolchain-funcs flag-o-matic libtool
+inherit autotools eutils toolchain-funcs flag-o-matic libtool
 
 DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://libtorrent.rakshasa.no/"
@@ -14,16 +14,20 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug ipv6"
 
 RDEPEND=">=dev-libs/libsigc++-2"
-
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.11"
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Patch taken from Debian.
-	epatch "${FILESDIR}/${PN}-0.11.9+gcc-4.3.patch"
+	epatch "${FILESDIR}"/${PN}-0.11.9+gcc-4.3.patch
+	epatch "${FILESDIR}"/${P}-dht_bounds_fix.patch
+	epatch "${FILESDIR}"/${P}-fix_cull.patch
+	epatch "${FILESDIR}"/${P}-fix_dht_target.patch
+	epatch "${FILESDIR}"/${P}-lt-ver.patch
+	epatch "${FILESDIR}"/${P}-tracker_timer_fix.patch
+	elibtoolize #Don't remove
+	eautoreconf
 }
 
 src_compile() {
@@ -33,7 +37,6 @@ src_compile() {
 		filter-flags -fomit-frame-pointer -fforce-addr
 	fi
 
-	elibtoolize
 	econf \
 		$(use_enable debug) \
 		$(use_enable ipv6) \
@@ -47,5 +50,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS NEWS README
 }
