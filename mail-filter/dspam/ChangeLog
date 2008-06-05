@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.115 2008/06/01 08:22:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.116 2008/06/05 16:02:27 bluebird Exp $
+
+  05 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
+  dspam-3.8.0-r11.ebuild:
+  sparc stable, bug 224169
 
   01 Jun 2008; Alin Năstac <mrness@gentoo.org> dspam-3.8.0-r11.ebuild:
   Correct pgsql libdir (#224169).
