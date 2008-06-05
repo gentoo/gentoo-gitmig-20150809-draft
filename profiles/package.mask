@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8687 2008/06/05 20:12:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8688 2008/06/05 20:35:41 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -286,11 +286,6 @@ media-fonts/sharefonts
 # Linkage 0.1.5 needs unreleased C++ bindings for DBUS.
 # Mask it until I figure out the best way to handle 0.1.5.
 net-p2p/linkage
-
-# Tiziano Müller <dev-zero@gentoo.org> (24 Apr 2008)
-# Mask for testing. NOT finished yet and largely untested!
-=dev-util/boost-build-1.35.0
-=dev-libs/boost-1.35.0
 
 # David Shakaryan <omp@gentoo.org> (24 Apr 2008)
 # Masked for removal in 30 days. (bug #197277)
