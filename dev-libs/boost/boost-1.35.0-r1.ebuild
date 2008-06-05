@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0.ebuild,v 1.1 2008/04/24 15:01:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r1.ebuild,v 1.1 2008/06/05 20:33:53 dev-zero Exp $
 
-inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
+inherit python flag-o-matic multilib toolchain-funcs versionator check-reqs
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 MY_P=${PN}_$(replace_all_version_separators _)
-PATCHSET_VERSION="${PV}-1"
+PATCHSET_VERSION="${PV}-2"
 
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
@@ -15,13 +15,15 @@ SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
 	mirror://gentoo/boost-patches-${PATCHSET_VERSION}.tbz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="debug doc icu pyste tools"
+IUSE="debug doc expat icu mpi tools"
 
-DEPEND="icu? ( >=dev-libs/icu-3.2 )
-		sys-libs/zlib
-		~dev-util/boost-build-${PV}"
-RDEPEND="${DEPEND}
-		pyste? ( dev-cpp/gccxml dev-python/elementtree )"
+RDEPEND="icu? ( >=dev-libs/icu-3.3 )
+	expat? ( dev-libs/expat )
+	mpi? ( || ( sys-cluster/openmpi sys-cluster/mpich2 ) )
+	sys-libs/zlib
+	virtual/python"
+DEPEND="${RDEPEND}
+	>=dev-util/boost-build-${PV}-r1"
 
 S=${WORKDIR}/${MY_P}
 
@@ -55,8 +57,6 @@ src_unpack() {
 	EPATCH_SUFFIX="patch"
 	epatch
 
-	rm boost-build.jam
-
 	# This enables building the boost.random library with /dev/urandom support
 	if ! use userland_Darwin ; then
 		mkdir -p libs/random/build
@@ -65,8 +65,6 @@ src_unpack() {
 }
 
 generate_options() {
-	LINK_OPTIONS="static shared"
-
 	# Maintainer information:
 	# The debug-symbols=none and optimization=none
 	# are not official upstream flags but a Gentoo
@@ -76,22 +74,25 @@ generate_options() {
 	# "-O0" and override "-O2" set by the user.
 	# Please take a look at the boost-build ebuild
 	# for more infomration.
-	if ! use debug ; then
-		OPTIONS="release debug-symbols=none"
-	else
-		OPTIONS="debug"
+
+	OPTIONS="gentoorelease"
+	use debug && OPTIONS="gentoodebug"
+
+	use icu && OPTIONS="${OPTIONS} -sICU_PATH=/usr"
+	if use expat ; then
+		OPTIONS="${OPTIONS} -sEXPAT_INCLUDE=/usr/include -sEXPAT_LIBPATH=/usr/$(get_libdir)"
 	fi
 
-	OPTIONS="${OPTIONS} optimization=none"
+	if ! use mpi ; then
+		OPTIONS="${OPTIONS} --without-mpi"
+	fi
 
-	use icu && OPTIONS="${OPTIONS} -sHAVE_ICU=1 -sICU_PATH=/usr"
-
-	OPTIONS="${OPTIONS} --user-config=${S}/user-config.jam"
+	OPTIONS="${OPTIONS} --user-config=${S}/user-config.jam --boost-build=/usr/share/boost-build"
 }
 
 generate_userconfig() {
 	einfo "Writing new user-config.jam"
-	distutils_python_version
+	python_version
 
 	local compiler compilerVersion compilerExecutable
 	if [[ ${CHOST} == *-darwin* ]] ; then
@@ -106,12 +107,18 @@ generate_userconfig() {
 	fi
 
 	cat > "${S}/user-config.jam" << __EOF__
-import toolset : using ;
-import toolset : flags ;
+
+variant gentoorelease : release : <optimization>none ;
+variant gentoodebug : debug : <optimization>none ;
+
 using ${compiler} : ${compilerVersion} : ${compilerExecutable} : <cxxflags>"${CXXFLAGS}" <linkflags>"${LDFLAGS}" ;
 using python : ${PYVER} : /usr : /usr/include/python${PYVER} : /usr/lib/python${PYVER} ;
+
 __EOF__
 
+	if use mpi ; then
+		echo "using mpi ;" >> "${S}/user-config.jam"
+	fi
 }
 
 src_compile() {
@@ -125,34 +132,22 @@ src_compile() {
 	elog "  ${OPTIONS}"
 
 	export BOOST_ROOT=${S}
-	export BOOST_BUILD_PATH=/usr/share/boost-build
 
-	for linkoption in ${LINK_OPTIONS} ; do
-		einfo "Building ${linkoption} libraries"
-		bjam ${NUMJOBS} -q \
-			${OPTIONS} \
-			threading=single,multi \
-			runtime-link=${linkoption} link=${linkoption} \
-			--prefix="${D}/usr" \
-			--layout=system \
-			|| die "building boost failed"
-	done
-
-	if use pyste; then
-		cd "${S}/libs/python/pyste/install"
-		distutils_src_compile
-	fi
+	bjam ${NUMJOBS} -q \
+		${OPTIONS} \
+		threading=single,multi link=shared,static runtime-link=shared,static \
+		--prefix="${D}/usr" \
+		--layout=system \
+		|| die "building boost failed"
 
 	if use tools; then
 		cd "${S}/tools/"
 		# We have to set optimization to -O0 or -O1 to work around a gcc-bug
 		# optimization=off adds -O0 to the compiler call and overwrites our settings.
 		bjam ${NUMJOBS} -q \
-			release debug-symbols=none \
-			optimization=off \
+			${OPTIONS} \
 			--prefix="${D}/usr" \
 			--layout=system \
-			--user-config="${S}/user-config.jam" \
 			|| die "building tools failed"
 	fi
 
@@ -172,24 +167,30 @@ src_install () {
 	generate_options
 
 	export BOOST_ROOT=${S}
-	export BOOST_BUILD_PATH=/usr/share/boost-build
 
-	for linkoption in ${LINK_OPTIONS} ; do
-		bjam -q \
-			${OPTIONS} \
-			threading=single,multi \
-			runtime-link=${linkoption} link=${linkoption} \
-			--prefix="${D}/usr" \
-			--includedir="${D}/usr/include" \
-			--libdir="${D}/usr/$(get_libdir)" \
-			--layout=system \
-			install || die "install failed"
-	done
+	bjam -q \
+		${OPTIONS} \
+		threading=single,multi link=shared,static runtime-link=shared,static \
+		--prefix="${D}/usr" \
+		--includedir="${D}/usr/include" \
+		--libdir="${D}/usr/$(get_libdir)" \
+		--layout=system \
+		install || die "install failed for options '${OPTIONS}'"
+
+	# Move the mpi.so to the right place
+	if use mpi; then
+		mkdir -p "${D}/usr/$(get_libdir)/python${PYVER}/site-packages"
+		mv "${D}/usr/$(get_libdir)/mpi.so" "${D}/usr/$(get_libdir)/python${PYVER}/site-packages"
+	fi
 
 	if use doc ; then
-		dohtml -A pdf,txt \
-			*.htm *.png *.css \
-			-r doc libs more people wiki
+		find libs -iname "test" -or -iname "src" | xargs rm -rf
+		dohtml \
+			-A pdf,txt,cpp \
+			*.{htm,html,png,css} \
+			-r doc more people wiki
+		insinto /usr/share/doc/${PF}/html
+		doins -r libs
 
 		# To avoid broken links
 		insinto /usr/share/doc/${PF}/html
@@ -212,11 +213,6 @@ src_install () {
 		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 	done
 
-	if use pyste; then
-		cd "${S}/libs/python/pyste/install"
-		distutils_src_install
-	fi
-
 	if use tools; then
 		cd "${S}/dist"
 		dobin bin/*
@@ -236,7 +232,6 @@ src_test() {
 	generate_options
 
 	export BOOST_ROOT=${S}
-	export BOOST_BUILD_PATH=/usr/share/boost-build
 
 	cd "${S}/status"
 
