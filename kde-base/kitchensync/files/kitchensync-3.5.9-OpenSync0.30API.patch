@@ -1,0 +1,4030 @@
+diff --exclude=.svn -NrU5 kitchensync.orig/configure.in.bot kitchensync/configure.in.bot
+--- kitchensync.orig/configure.in.bot	2008-05-31 11:37:20.000000000 +0200
++++ kitchensync/configure.in.bot	2008-05-31 11:31:48.000000000 +0200
+@@ -1,8 +1,8 @@
+-if test "$HAVE_OPENSYNC" = 0 -o "$HAVE_OPENSYNC_ENGINE" = 0; then
++if test "$HAVE_OPENSYNC" = 0; then
+ 	echo ""
+ 	echo "You're missing a compatible version of libopensync."
+-        echo "Version 0.19 or greater is needed."
++        echo "Version 0.31 or greater is needed."
+ 	echo "kitchensync will not be built."
+ 	echo ""
+ 	all_tests=bad
+ fi
+diff --exclude=.svn -NrU5 kitchensync.orig/configure.in.in kitchensync/configure.in.in
+--- kitchensync.orig/configure.in.in	2008-05-31 11:37:20.000000000 +0200
++++ kitchensync/configure.in.in	2008-05-31 11:31:48.000000000 +0200
+@@ -27,13 +27,11 @@
+ fi
+ export PKG_CONFIG_PATH=${PKG_CONFIG_PATH}:$prefix/lib/pkgconfig:/usr/local/lib/pkgconfig
+ 
+ 
+ HAVE_OPENSYNC=0
+-HAVE_OPENSYNC_ENGINE=0
+-PKG_CHECK_MODULES(OPENSYNC, opensync-1.0 >= 0.19, HAVE_OPENSYNC=1,HAVE_OPENSYNC=0)
+-PKG_CHECK_MODULES(OPENSYNCENGINE, osengine-1.0 >= 0.19, HAVE_OPENSYNC_ENGINE=1, HAVE_OPENSYNC_ENGINE=0)
++PKG_CHECK_MODULES(OPENSYNC, opensync-1.0 >= 0.33, HAVE_OPENSYNC=1,HAVE_OPENSYNC=0)
+ PKG_CHECK_MODULES(LIBXML,   libxml-2.0, , HAVE_OPENSYNC=0)
+ PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.6, , HAVE_OPENSYNC=0)
+ 
+ if test -z "PKG_CONFIG"; then
+     AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
+@@ -50,13 +48,13 @@
+ AC_SUBST(OPENSYNC_PLUGINDIR)
+ AC_SUBST(OPENSYNC_FORMATSDIR)
+ AC_SUBST(OPENSYNC_HEADERDIR)
+ 
+ dnl Check if we can compile KitchenSync
+-AM_CONDITIONAL(compile_kitchensync, test "$HAVE_OPENSYNC" = 1 -a "$HAVE_OPENSYNC_ENGINE" = 1)
++AM_CONDITIONAL(compile_kitchensync, test "$HAVE_OPENSYNC" = 1)
+ 
+-if test "$HAVE_OPENSYNC" = 1 -a "$HAVE_OPENSYNC_ENGINE" = 1 ; then
++if test "$HAVE_OPENSYNC" = 1; then
+     AC_MSG_RESULT([found])
+ else
+     AC_MSG_RESULT([not found])
+     DO_NOT_COMPILE="$DO_NOT_COMPILE kitchensync"
+ fi
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/callbackhandler.cpp kitchensync/libqopensync/callbackhandler.cpp
+--- kitchensync.orig/libqopensync/callbackhandler.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/callbackhandler.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -17,16 +17,17 @@
+     along with this library; see the file COPYING.LIB.  If not, write to
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+-#include <osengine/engine.h>
+-
+-#include <libqopensync/engine.h>
++#include <opensync/opensync.h>
++#include <opensync/opensync-engine.h>
+ 
+ #include <qapplication.h>
+ 
++#include "engine.h"
++
+ #include "callbackhandler.h"
+ 
+ using namespace QSync;
+ 
+ class CallbackHandler::ConflictEvent : public QCustomEvent
+@@ -109,15 +110,15 @@
+ 
+ void CallbackHandler::setEngine( Engine *engine )
+ {
+   mEngine = engine;
+ 
+-  osengine_set_conflict_callback( engine->mEngine, &conflict_callback, this );
+-  osengine_set_changestatus_callback( engine->mEngine, &change_callback, this );
+-  osengine_set_mappingstatus_callback( engine->mEngine, &mapping_callback, this );
+-  osengine_set_enginestatus_callback( engine->mEngine, &engine_callback, this );
+-  osengine_set_memberstatus_callback( engine->mEngine, &member_callback, this );
++  osync_engine_set_conflict_callback( engine->mEngine, &conflict_callback, this );
++  osync_engine_set_changestatus_callback( engine->mEngine, &change_callback, this );
++  osync_engine_set_mappingstatus_callback( engine->mEngine, &mapping_callback, this );
++  osync_engine_set_enginestatus_callback( engine->mEngine, &engine_callback, this );
++  osync_engine_set_memberstatus_callback( engine->mEngine, &member_callback, this );
+ }
+ 
+ Engine* CallbackHandler::engine() const
+ {
+   return mEngine;
+@@ -141,20 +142,20 @@
+     MemberEvent *memberEvent = static_cast<MemberEvent*>( event );
+     emit member( memberEvent->member() );
+   }
+ }
+ 
+-void CallbackHandler::conflict_callback( OSyncEngine *engine, OSyncMapping *omapping, void *data )
++void CallbackHandler::conflict_callback( OSyncEngine *engine, OSyncMappingEngine *omapping, void *data )
+ {
+   SyncMapping mapping( omapping, engine );
+ 
+   CallbackHandler *handler = static_cast<CallbackHandler*>( data );
+ 
+   QApplication::postEvent( handler, new ConflictEvent( mapping ) );
+ }
+ 
+-void CallbackHandler::change_callback( OSyncEngine*, OSyncChangeUpdate *update, void *data )
++void CallbackHandler::change_callback( OSyncChangeUpdate *update, void *data )
+ {
+   SyncChangeUpdate change( update );
+ 
+   CallbackHandler *handler = static_cast<CallbackHandler*>( data );
+ 
+@@ -168,11 +169,11 @@
+   SyncMappingUpdate mapping( update, handler->engine()->mEngine );
+ 
+   QApplication::postEvent( handler, new MappingEvent( mapping ) );
+ }
+ 
+-void CallbackHandler::engine_callback( OSyncEngine*, OSyncEngineUpdate *update, void *data )
++void CallbackHandler::engine_callback( OSyncEngineUpdate *update, void *data )
+ {
+   SyncEngineUpdate engine( update );
+ 
+   CallbackHandler *handler = static_cast<CallbackHandler*>( data );
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/callbackhandler.h kitchensync/libqopensync/callbackhandler.h
+--- kitchensync.orig/libqopensync/callbackhandler.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/callbackhandler.h	2008-05-31 11:31:48.000000000 +0200
+@@ -74,14 +74,14 @@
+     class ChangeEvent;
+     class MappingEvent;
+     class EngineEvent;
+     class MemberEvent;
+ 
+-    static void conflict_callback( OSyncEngine*, OSyncMapping*, void* );
+-    static void change_callback( OSyncEngine*, OSyncChangeUpdate*, void* );
++    static void conflict_callback( OSyncEngine*, OSyncMappingEngine*, void* );
++    static void change_callback( OSyncChangeUpdate*, void* );
+     static void mapping_callback( OSyncMappingUpdate*, void* );
+-    static void engine_callback( OSyncEngine*, OSyncEngineUpdate*, void* );
++    static void engine_callback( OSyncEngineUpdate*, void* );
+     static void member_callback( OSyncMemberUpdate*, void* );
+ 
+     Engine* mEngine;
+ };
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/conversion.cpp kitchensync/libqopensync/conversion.cpp
+--- kitchensync.orig/libqopensync/conversion.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/conversion.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,10 +18,11 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <opensync/opensync.h>
++#include <opensync/opensync-format.h>
+ 
+ #include "conversion.h"
+ 
+ using namespace QSync;
+ 
+@@ -41,18 +42,22 @@
+ 
+ QStringList Conversion::objectTypes() const
+ {
+   Q_ASSERT( mEnvironment );
+ 
+-  OSyncFormatEnv *formatEnv = osync_conv_env_new( mEnvironment );
++  OSyncError *error = NULL;
++  OSyncFormatEnv *formatEnv = osync_format_env_new( &error );
+   Q_ASSERT( formatEnv );
+ 
++  osync_format_env_load_plugins(formatEnv, NULL, &error);
++
+   QStringList types;	
+-  for ( int i = 0; i < osync_conv_num_objtypes( formatEnv ); i++ ) {
+-    OSyncObjType *type = osync_conv_nth_objtype( formatEnv, i );
+-    types.append( QString::fromUtf8( osync_objtype_get_name( type ) ) );
+-  }
+ 
+-  osync_conv_env_free( formatEnv );
++  for (int i = 0; i < osync_format_env_num_objformats(formatEnv); i++) {
++    OSyncObjFormat *format = osync_format_env_nth_objformat(formatEnv, i);
++    types.append( QString::fromUtf8( osync_objformat_get_objtype(format) ) );
++ }
++
++  osync_format_env_free( formatEnv );
+ 
+   return types;
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/conversion.h kitchensync/libqopensync/conversion.h
+--- kitchensync.orig/libqopensync/conversion.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/conversion.h	2008-05-31 11:31:48.000000000 +0200
+@@ -22,17 +22,17 @@
+ #ifndef QSYNC_CONVERSION_H
+ #define QSYNC_CONVERSION_H
+ 
+ #include <qstringlist.h>
+ 
+-class OSyncEnv;
++class OSyncGroupEnv;
+ 
+ namespace QSync {
+ 
+ class Conversion
+ {
+-  friend class Environment;
++  friend class PluginEnv;
+ 
+   public:
+     Conversion();
+     ~Conversion();
+ 
+@@ -45,11 +45,11 @@
+       Returns the list of names of supported object types.
+      */
+     QStringList objectTypes() const;
+ 
+   private:
+-    OSyncEnv *mEnvironment;
++    OSyncGroupEnv *mGroupEnv;
+ };
+ 
+ }
+ 
+ #endif
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/engine.cpp kitchensync/libqopensync/engine.cpp
+--- kitchensync.orig/libqopensync/engine.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/engine.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,50 +18,76 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <opensync/opensync.h>
+-#include <osengine/engine.h>
++#include <opensync/opensync-engine.h>
++
++#include "group.h"
++#include "member.h"
++#include "result.h"
+ 
+ #include "engine.h"
+ 
+ using namespace QSync;
+ 
+ Engine::Engine( const Group &group )
+ {
+   OSyncError *error = 0;
+-  mEngine = osengine_new( group.mGroup, &error );
++  mEngine = osync_engine_new( group.mGroup, &error );
+ }
+ 
+ Engine::~Engine()
+ {
+-  osengine_free( mEngine );
++  osync_engine_unref( mEngine );
+   mEngine = 0;
+ }
+ 
+ Result Engine::initialize()
+ {
++  Q_ASSERT( mEngine );
++
+   OSyncError *error = 0;
+-  if ( !osengine_init( mEngine, &error ) )
++  if ( !osync_engine_initialize	( mEngine, &error ) )
+     return Result( &error );
+   else
+     return Result();
+ }
+ 
+ void Engine::finalize()
+ {
+-  osengine_finalize( mEngine );
++  Q_ASSERT( mEngine );
++
++  OSyncError *error = 0;
++  osync_engine_finalize( mEngine , &error );
+ }
+ 
+ Result Engine::synchronize()
+ {
++  Q_ASSERT( mEngine );
++
+   OSyncError *error = 0;
+-  if ( !osengine_synchronize( mEngine, &error ) )
++  if ( !osync_engine_synchronize( mEngine, &error ) )
++    return Result( &error );
++  else
++    return Result();
++}
++
++Result Engine::discover( const Member &member )
++{
++  Q_ASSERT( mEngine );
++
++  OSyncError *error = 0;
++  if ( !osync_engine_discover_and_block( mEngine, member.mMember, &error ) )
+     return Result( &error );
+   else
+     return Result();
+ }
+ 
+ void Engine::abort()
+ {
+-  osengine_abort( mEngine );
++  Q_ASSERT( mEngine );
++
++// TODO
++//  osync_engine_abort( mEngine );
+ }
++
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/engine.h kitchensync/libqopensync/engine.h
+--- kitchensync.orig/libqopensync/engine.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/engine.h	2008-05-31 11:31:48.000000000 +0200
+@@ -20,16 +20,18 @@
+ */
+ 
+ #ifndef QSYNC_ENGINE_H
+ #define QSYNC_ENGINE_H
+ 
+-#include <libqopensync/group.h>
+-
+ class OSyncEngine;
+ 
+ namespace QSync {
+ 
++class Group;
++class Member;
++class Result;
++
+ class Engine
+ {
+   friend class CallbackHandler;
+ 
+   public:
+@@ -57,10 +59,15 @@
+       Starts the synchronization process.
+      */
+     Result synchronize();
+ 
+     /**
++      Starts the discover process for a certain member.
++     */
++    Result discover( const Member &member );
++
++    /**
+       Stops the synchronization process.
+      */
+     void abort();
+ 
+   private:
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/environment.cpp kitchensync/libqopensync/environment.cpp
+--- kitchensync.orig/libqopensync/environment.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/environment.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -1,172 +0,0 @@
+-/*
+-    This file is part of libqopensync.
+-
+-    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
+-
+-    This library is free software; you can redistribute it and/or
+-    modify it under the terms of the GNU Library General Public
+-    License as published by the Free Software Foundation; either
+-    version 2 of the License, or (at your option) any later version.
+-
+-    This library is distributed in the hope that it will be useful,
+-    but WITHOUT ANY WARRANTY; without even the implied warranty of
+-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+-    Library General Public License for more details.
+-
+-    You should have received a copy of the GNU Library General Public License
+-    along with this library; see the file COPYING.LIB.  If not, write to
+-    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+-    Boston, MA 02110-1301, USA.
+-*/
+-
+-#include "environment.h"
+-
+-#include <opensync/opensync.h>
+-
+-using namespace QSync;
+-
+-Environment::Environment()
+-{
+-  mEnvironment = osync_env_new();
+-}
+-
+-Environment::~Environment()
+-{
+-  osync_env_free( mEnvironment );
+-}
+-
+-Environment::GroupIterator Environment::groupBegin()
+-{
+-  GroupIterator it( this );
+-  it.mPos = 0;
+-
+-  return it;
+-}
+-
+-Environment::GroupIterator Environment::groupEnd()
+-{
+-  GroupIterator it( this );
+-  it.mPos = groupCount();
+-
+-  return it;
+-}
+-
+-Environment::PluginIterator Environment::pluginBegin()
+-{
+-  PluginIterator it( this );
+-  it.mPos = 0;
+-
+-  return it;
+-}
+-
+-Environment::PluginIterator Environment::pluginEnd()
+-{
+-  PluginIterator it( this );
+-  it.mPos = pluginCount();
+-
+-  return it;
+-}
+-
+-Result Environment::initialize()
+-{
+-  OSyncError *error = 0;
+-  if ( !osync_env_initialize( mEnvironment, &error ) )
+-    return Result( &error );
+-  else
+-    return Result();
+-}
+-
+-Result Environment::finalize()
+-{
+-  OSyncError *error = 0;
+-  if ( !osync_env_finalize( mEnvironment, &error ) )
+-    return Result( &error);
+-  else
+-    return Result();
+-}
+-
+-int Environment::groupCount() const
+-{
+-  return osync_env_num_groups( mEnvironment );
+-}
+-
+-Group Environment::groupAt( int pos ) const
+-{
+-  Group group;
+-
+-  if ( pos < 0 || pos >= groupCount() )
+-    return group;
+-
+-  OSyncGroup *ogroup = osync_env_nth_group( mEnvironment, pos );
+-  group.mGroup = ogroup;
+-
+-  return group;
+-}
+-
+-Group Environment::groupByName( const QString &name ) const
+-{
+-  Group group;
+-
+-  OSyncGroup *ogroup = osync_env_find_group( mEnvironment, name.latin1() );
+-  if ( ogroup )
+-    group.mGroup = ogroup;
+-
+-  return group;
+-}
+-
+-Group Environment::addGroup()
+-{
+-  Group group;
+-
+-  OSyncGroup *ogroup = osync_group_new( mEnvironment );
+-  if ( ogroup )
+-    group.mGroup = ogroup;
+-
+-  return group;
+-}
+-
+-Result Environment::removeGroup( const Group &group )
+-{
+-  OSyncError *error = 0;
+-  if ( !osync_group_delete( group.mGroup, &error ) )
+-    return Result( &error );
+-  else
+-    return Result();
+-}
+-
+-int Environment::pluginCount() const
+-{
+-  return osync_env_num_plugins( mEnvironment );
+-}
+-
+-Plugin Environment::pluginAt( int pos ) const
+-{
+-  Plugin plugin;
+-
+-  if ( pos < 0 || pos >= pluginCount() )
+-    return plugin;
+-
+-  OSyncPlugin *oplugin = osync_env_nth_plugin( mEnvironment, pos );
+-  plugin.mPlugin = oplugin;
+-
+-  return plugin;
+-}
+-
+-Plugin Environment::pluginByName( const QString &name ) const
+-{
+-  Plugin plugin;
+-
+-  OSyncPlugin *oplugin = osync_env_find_plugin( mEnvironment, name.latin1() );
+-  if ( oplugin )
+-    plugin.mPlugin = oplugin;
+-
+-  return plugin;
+-}
+-
+-Conversion Environment::conversion() const
+-{
+-  Conversion conversion;
+-  conversion.mEnvironment = mEnvironment;
+-
+-  return conversion;
+-}
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/environment.h kitchensync/libqopensync/environment.h
+--- kitchensync.orig/libqopensync/environment.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/environment.h	2008-05-31 11:31:48.000000000 +0200
+@@ -1,199 +0,0 @@
+-/*
+-    This file is part of libqopensync.
+-
+-    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
+-
+-    This library is free software; you can redistribute it and/or
+-    modify it under the terms of the GNU Library General Public
+-    License as published by the Free Software Foundation; either
+-    version 2 of the License, or (at your option) any later version.
+-
+-    This library is distributed in the hope that it will be useful,
+-    but WITHOUT ANY WARRANTY; without even the implied warranty of
+-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+-    Library General Public License for more details.
+-
+-    You should have received a copy of the GNU Library General Public License
+-    along with this library; see the file COPYING.LIB.  If not, write to
+-    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+-    Boston, MA 02110-1301, USA.
+-*/
+-
+-#ifndef OSYNC_ENVIRONMENT_H
+-#define OSYNC_ENVIRONMENT_H
+-
+-#include <qstring.h>
+-
+-#include <libqopensync/group.h>
+-#include <libqopensync/plugin.h>
+-#include <libqopensync/result.h>
+-#include <libqopensync/conversion.h>
+-
+-struct OSyncEnv;
+-
+-namespace QSync {
+-
+-class Environment
+-{
+-  public:
+-    Environment();
+-    ~Environment();
+-
+-    class GroupIterator
+-    {
+-      friend class Environment;
+-
+-      public:
+-        GroupIterator( Environment *environment )
+-          : mEnvironment( environment ), mPos( -1 )
+-        {
+-        }
+-
+-        GroupIterator( const GroupIterator &it )
+-        {
+-          mEnvironment = it.mEnvironment;
+-          mPos = it.mPos;
+-        }
+-
+-        Group operator*() 
+-        {
+-          return mEnvironment->groupAt( mPos );
+-        }
+-
+-        GroupIterator &operator++() { mPos++; return *this; }
+-        GroupIterator &operator++( int ) { mPos++; return *this; }
+-        GroupIterator &operator--() { mPos--; return *this; }
+-        GroupIterator &operator--( int ) { mPos--; return *this; }
+-        bool operator==( const GroupIterator &it ) { return mEnvironment == it.mEnvironment && mPos == it.mPos; }
+-        bool operator!=( const GroupIterator &it ) { return mEnvironment == it.mEnvironment && mPos != it.mPos; }
+-
+-      private:
+-        Environment *mEnvironment;
+-        int mPos;
+-    };
+-
+-    class PluginIterator
+-    {
+-      friend class Environment;
+-
+-      public:
+-        PluginIterator( Environment *environment )
+-          : mEnvironment( environment ), mPos( -1 )
+-        {
+-        }
+-
+-        PluginIterator( const PluginIterator &it )
+-        {
+-          mEnvironment = it.mEnvironment;
+-          mPos = it.mPos;
+-        }
+-
+-        Plugin operator*() 
+-        {
+-          return mEnvironment->pluginAt( mPos );
+-        }
+-
+-        PluginIterator &operator++() { mPos++; return *this; }
+-        PluginIterator &operator++( int ) { mPos++; return *this; }
+-        PluginIterator &operator--() { mPos--; return *this; }
+-        PluginIterator &operator--( int ) { mPos--; return *this; }
+-        bool operator==( const PluginIterator &it ) { return mEnvironment == it.mEnvironment && mPos == it.mPos; }
+-        bool operator!=( const PluginIterator &it ) { return mEnvironment == it.mEnvironment && mPos != it.mPos; }
+-
+-      private:
+-        Environment *mEnvironment;
+-        int mPos;
+-    };
+-
+-    /**
+-      Returns an iterator pointing to the first item in the group list.
+-      This iterator equals groupEnd() if the group list is empty.
+-     */
+-    GroupIterator groupBegin();
+-
+-    /**
+-      Returns an iterator pointing past the last item in the group list.
+-      This iterator equals groupBegin() if the group list is empty.
+-     */
+-    GroupIterator groupEnd();
+-
+-    /**
+-      Returns an iterator pointing to the first item in the plugin list.
+-      This iterator equals pluginEnd() if the group list is empty.
+-     */
+-    PluginIterator pluginBegin();
+-
+-    /**
+-      Returns an iterator pointing past the last item in the plugin list.
+-      This iterator equals pluginBegin() if the plugin list is empty.
+-     */
+-    PluginIterator pluginEnd();
+-
+-    /**
+-      Initializes the environment ( e.g. loads the groups and plugins ).
+-      Has to be called before the groups or plugins can be accessed.
+-     */
+-    Result initialize();
+-
+-    /**
+-      Finalizes the environment ( e.g. unloads the groups and plugins ).
+-      Should be the last call before the object is deleted.
+-     */
+-    Result finalize();
+-
+-    /**
+-      Returns the number of groups.
+-     */
+-    int groupCount() const;
+-
+-    /**
+-      Returns the group at position @param pos.
+-     */
+-    Group groupAt( int pos ) const;
+-
+-    /**
+-      Returns a group by name or an invalid group when the group with this
+-      name doesn't exists.
+-     */
+-    Group groupByName( const QString &name ) const;
+-
+-    /**
+-      Adds a new group to the environment.
+-
+-      @returns the new group.
+-     */
+-    Group addGroup();
+-
+-    /**
+-      Removes a group from the environment.
+-     */
+-    Result removeGroup( const Group &group );
+-
+-    /**
+-      Returns the number of plugins.
+-     */
+-    int pluginCount() const;
+-
+-    /**
+-      Returns the plugin at position @param pos.
+-     */
+-    Plugin pluginAt( int pos ) const;
+-
+-    /**
+-      Returns a plugin by name or an invalid plugin when the plugin with this
+-      name doesn't exists.
+-     */
+-    Plugin pluginByName( const QString &name ) const;
+-
+-    /**
+-      Returns the conversion object of this environment.
+-     */
+-    Conversion conversion() const;
+-
+-  private:
+-    OSyncEnv *mEnvironment;
+-};
+-
+-}
+-
+-#endif
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/filter.cpp kitchensync/libqopensync/filter.cpp
+--- kitchensync.orig/libqopensync/filter.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/filter.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,10 +18,11 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <opensync/opensync.h>
++#include <opensync/opensync-format.h>
+ 
+ #include "filter.h"
+ 
+ using namespace QSync;
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/group.cpp kitchensync/libqopensync/group.cpp
+--- kitchensync.orig/libqopensync/group.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/group.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -23,90 +23,22 @@
+ #include <qdom.h>
+ #include <qfile.h>
+ /** hack includes **/
+ 
+ #include <opensync/opensync.h>
++#include <opensync/opensync-group.h>
+ 
+ #include "conversion.h"
++#include "filter.h"
++#include "member.h"
++#include "plugin.h"
++#include "result.h"
++
+ #include "group.h"
+ 
+ using namespace QSync;
+ 
+-/**
+-  This class is a quick hack for OpenSync 0.19 and 0.20 because
+-  the engine doesn't stores the filter settings itself when calling
+-  osync_group_set_objtype_enabled(), so we have to store it for every
+-  group in a separated config file. This class encapsulates it.
+- */
+-GroupConfig::GroupConfig()
+-  : mGroup( 0 )
+-{
+-}
+-
+-QStringList GroupConfig::activeObjectTypes() const
+-{
+-  Q_ASSERT( mGroup );
+-
+-  const QString fileName = QString( "%1/filter.conf" ).arg( osync_group_get_configdir( mGroup ) );
+-
+-  QFile file( fileName );
+-  if ( !file.open( IO_ReadOnly ) )
+-    return QStringList();
+-
+-  QDomDocument document;
+-
+-  QString message;
+-  if ( !document.setContent( &file, &message ) ) {
+-    qDebug( "Error on loading %s: %s", fileName.latin1(), message.latin1() );
+-    return QStringList();
+-  }
+-  file.close();
+-
+-  QStringList objectTypes;
+-
+-  QDomElement element = document.documentElement();
+-  QDomNode node = element.firstChild();
+-  while ( !node.isNull() ) {
+-    QDomElement childElement = node.toElement();
+-    if ( !childElement.isNull() )
+-      objectTypes.append( childElement.tagName() );
+-
+-    node = node.nextSibling();
+-  }
+-
+-  return objectTypes;
+-}
+-
+-void GroupConfig::setActiveObjectTypes( const QStringList &objectTypes )
+-{
+-  Q_ASSERT( mGroup );
+-
+-  QDomDocument document( "Filter" );
+-  document.appendChild( document.createProcessingInstruction(
+-                        "xml", "version=\"1.0\" encoding=\"UTF-8\"" ) );
+-
+-  QDomElement element = document.createElement( "filter" );
+-  document.appendChild( element );
+-
+-  for ( uint i = 0; i < objectTypes.count(); ++i ) {
+-    QDomElement entry = document.createElement( objectTypes[ i ] );
+-    element.appendChild( entry );
+-  }
+-
+-  const QString fileName = QString( "%1/filter.conf" ).arg( osync_group_get_configdir( mGroup ) );
+-
+-  QFile file( fileName );
+-  if ( !file.open( IO_WriteOnly ) )
+-    return;
+-
+-  QTextStream s( &file );
+-  s.setEncoding( QTextStream::UnicodeUTF8 );
+-  s << document.toString();
+-  file.close();
+-}
+-
+-
+ Group::Group()
+   : mGroup( 0 )
+ {
+ }
+ 
+@@ -117,26 +49,10 @@
+ bool Group::isValid() const
+ {
+   return ( mGroup != 0 );
+ }
+ 
+-Group::Iterator Group::begin()
+-{
+-  Iterator it( this );
+-  it.mPos = 0;
+-
+-  return it;
+-}
+-
+-Group::Iterator Group::end()
+-{
+-  Iterator it( this );
+-  it.mPos = memberCount();
+-
+-  return it;
+-}
+-
+ void Group::setName( const QString &name )
+ {
+   Q_ASSERT( mGroup );
+ 
+   osync_group_set_name( mGroup, name.latin1() );
+@@ -186,22 +102,26 @@
+       return LockStale;
+       break;
+   }
+ }
+ 
+-void Group::unlock( bool removeFile )
++void Group::unlock()
+ {
+   Q_ASSERT( mGroup );
+ 
+-  osync_group_unlock( mGroup, removeFile );
++  osync_group_unlock( mGroup );
+ }
+ 
+-Member Group::addMember()
++Member Group::addMember( const QSync::Plugin &plugin )
+ {
+   Q_ASSERT( mGroup );
+ 
+-  OSyncMember *omember = osync_member_new( mGroup );
++  OSyncError *error = 0;
++
++  OSyncMember *omember = osync_member_new( &error );
++  osync_group_add_member( mGroup, omember );
++  osync_member_set_pluginname( omember, plugin.name().utf8() );
+ 
+   Member member;
+   member.mMember = omember;
+ 
+   save();
+@@ -267,10 +187,34 @@
+     return Result( &error );
+   else
+     return Result();
+ }
+ 
++void Group::setUseMerger( bool use )
++{
++  Q_ASSERT( mGroup );
++  osync_group_set_merger_enabled( mGroup, use );
++}
++
++bool Group::useMerger() const
++{
++  Q_ASSERT( mGroup );
++  return osync_group_get_merger_enabled( mGroup );
++}
++
++void Group::setUseConverter( bool use )
++{
++  Q_ASSERT( mGroup );
++  osync_group_set_converter_enabled( mGroup, use );
++}
++
++bool Group::useConverter() const
++{
++  Q_ASSERT( mGroup );
++  return osync_group_get_converter_enabled( mGroup );
++}
++
+ void Group::setObjectTypeEnabled( const QString &objectType, bool enabled )
+ {
+   Q_ASSERT( mGroup );
+ 
+   osync_group_set_objtype_enabled( mGroup, objectType.utf8(), enabled );
+@@ -279,14 +223,15 @@
+ bool Group::isObjectTypeEnabled( const QString &objectType ) const
+ {
+   return osync_group_objtype_enabled( mGroup, objectType.utf8() );
+ }
+ 
+-GroupConfig Group::config() const
++Result Group::cleanup() const
+ {
+   Q_ASSERT( mGroup );
+ 
+-  GroupConfig config;
+-  config.mGroup = mGroup;
+-
+-  return config;
++  OSyncError *error = 0;
++  if ( !osync_group_delete( mGroup, &error ) )
++    return Result( &error );
++  else
++    return Result();
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/groupenv.cpp kitchensync/libqopensync/groupenv.cpp
+--- kitchensync.orig/libqopensync/groupenv.cpp	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/libqopensync/groupenv.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,121 @@
++/*
++    This file is part of libqopensync.
++
++    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#include <opensync/opensync.h>
++#include <opensync/opensync-group.h>
++
++#include "group.h"
++#include "result.h"
++
++#include "groupenv.h"
++
++using namespace QSync;
++
++GroupEnv::GroupEnv()
++{
++  OSyncError *error = 0;
++  mGroupEnv = osync_group_env_new( &error );
++}
++
++GroupEnv::~GroupEnv()
++{
++  osync_group_env_free( mGroupEnv );
++}
++
++Result GroupEnv::initialize()
++{
++  Q_ASSERT( mGroupEnv );
++
++  OSyncError *error = 0;
++  if ( !osync_group_env_load_groups( mGroupEnv, NULL, &error ) )
++    return Result( &error );
++  else
++    return Result();
++}
++
++void GroupEnv::finalize()
++{
++}
++
++int GroupEnv::groupCount() const
++{
++  Q_ASSERT( mGroupEnv );
++
++  return osync_group_env_num_groups( mGroupEnv );
++}
++
++Group GroupEnv::groupAt( int pos ) const
++{
++  Q_ASSERT( mGroupEnv );
++
++  Group group;
++
++  if ( pos < 0 || pos >= groupCount() )
++    return group;
++
++  OSyncGroup *ogroup = osync_group_env_nth_group( mGroupEnv, pos );
++  group.mGroup = ogroup;
++
++  return group;
++}
++
++Group GroupEnv::groupByName( const QString &name ) const
++{
++  Q_ASSERT( mGroupEnv );
++
++  Group group;
++
++  OSyncGroup *ogroup = osync_group_env_find_group( mGroupEnv, name.latin1() );
++  if ( ogroup )
++    group.mGroup = ogroup;
++
++  return group;
++}
++
++Group GroupEnv::addGroup( const QString &name )
++{
++  Q_ASSERT( mGroupEnv );
++
++  Group group;
++  OSyncError *error = 0;
++
++  OSyncGroup *ogroup = osync_group_new( &error );
++  if ( ogroup )
++    group.mGroup = ogroup;
++
++  group.setName( name );
++
++  if ( !osync_group_env_add_group( mGroupEnv, ogroup, &error ) ) {
++    Result res( &error );
++    qDebug( "Error on adding group: %s", res.message().latin1() );
++  }
++
++  return group;
++}
++
++void GroupEnv::removeGroup( const Group &group )
++{
++  Q_ASSERT( mGroupEnv );
++
++  group.cleanup();
++
++  osync_group_env_remove_group( mGroupEnv, group.mGroup );
++}
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/groupenv.h kitchensync/libqopensync/groupenv.h
+--- kitchensync.orig/libqopensync/groupenv.h	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/libqopensync/groupenv.h	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,86 @@
++/*
++    This file is part of libqopensync.
++
++    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#ifndef OSYNC_GROUPENV_H
++#define OSYNC_GROUPENV_H
++
++#include <qstring.h>
++
++struct OSyncGroupEnv;
++
++namespace QSync {
++
++class Group;
++class Result;
++
++class GroupEnv
++{
++  public:
++    GroupEnv();
++    ~GroupEnv();
++
++    /**
++      Initializes the environment ( e.g. loads the groups and plugins ).
++      Has to be called before the groups or plugins can be accessed.
++     */
++    Result initialize();
++
++    /**
++      Finalizes the environment ( e.g. unloads the groups and plugins ).
++      Should be the last call before the object is deleted.
++     */
++    void finalize();
++
++    /**
++      Returns the number of groups.
++     */
++    int groupCount() const;
++
++    /**
++      Returns the group at position @param pos.
++     */
++    Group groupAt( int pos ) const;
++
++    /**
++      Returns a group by name or an invalid group when the group with this
++      name doesn't exists.
++     */
++    Group groupByName( const QString &name ) const;
++
++    /**
++      Adds a new group to the environment.
++
++      @returns the new group.
++     */
++    Group addGroup( const QString &name );
++
++    /**
++      Removes a group from the environment.
++     */
++    void removeGroup( const Group &group );
++
++  private:
++    OSyncGroupEnv *mGroupEnv;
++};
++
++}
++
++#endif
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/group.h kitchensync/libqopensync/group.h
+--- kitchensync.orig/libqopensync/group.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/group.h	2008-05-31 11:31:48.000000000 +0200
+@@ -23,39 +23,26 @@
+ #define QSYNC_GROUP_H
+ 
+ #include <qdatetime.h>
+ #include <qstringlist.h>
+ 
+-#include <libqopensync/filter.h>
+-#include <libqopensync/member.h>
+-
+ class OSyncGroup;
+ 
+ namespace QSync {
+ 
++class Filter;
++class Member;
++class Plugin;
++class Result;
++
+ /**
+   @internal
+  */
+-class GroupConfig
+-{
+-  friend class Group;
+-
+-  public:
+-    GroupConfig();
+-
+-    QStringList activeObjectTypes() const;
+-    void setActiveObjectTypes( const QStringList &objectTypes );
+-
+-  private:
+-    OSyncGroup *mGroup;
+-};
+-
+-
+ class Group
+ {
+   friend class Engine;
+-  friend class Environment;
++  friend class GroupEnv;
+ 
+   public:
+     enum LockType
+     {
+       LockOk,
+@@ -69,55 +56,10 @@
+     /**
+       Returns whether the object is a valid group.
+      */
+     bool isValid() const;
+ 
+-    class Iterator
+-    {
+-      friend class Group;
+-
+-      public:
+-        Iterator( Group *group )
+-          : mGroup( group ), mPos( -1 )
+-        {
+-        }
+-
+-        Iterator( const Iterator &it )
+-        {
+-          mGroup = it.mGroup;
+-          mPos = it.mPos;
+-        }
+-
+-        Member operator*() 
+-        {
+-          return mGroup->memberAt( mPos );
+-        }
+-
+-        Iterator &operator++() { mPos++; return *this; }
+-        Iterator &operator++( int ) { mPos++; return *this; }
+-        Iterator &operator--() { mPos--; return *this; }
+-        Iterator &operator--( int ) { mPos--; return *this; }
+-        bool operator==( const Iterator &it ) { return mGroup == it.mGroup && mPos == it.mPos; }
+-        bool operator!=( const Iterator &it ) { return mGroup == it.mGroup && mPos != it.mPos; }
+-
+-      private:
+-        Group *mGroup;
+-        int mPos;
+-    };
+-
+-    /**
+-      Returns an iterator pointing to the first item in the member list.
+-      This iterator equals end() if the member list is empty.
+-     */
+-    Iterator begin();
+-
+-    /**
+-      Returns an iterator pointing past the last item in the member list.
+-      This iterator equals begin() if the member list is empty.
+-     */
+-    Iterator end();
+-
+     /**
+       Sets the name of the group.
+      */
+     void setName( const QString &name );
+ 
+@@ -143,21 +85,19 @@
+      */
+     LockType lock();
+ 
+     /**
+       Unlocks the group.
+-
+-      @param removeFile Whether the lock file shall be removed.
+      */
+-    void unlock( bool removeFile = true );
++    void unlock();
+ 
+     /**
+       Adds a new member to the group.
+ 
+       @returns the new member.
+      */
+-    Member addMember();
++    Member addMember( const QSync::Plugin &plugin );
+ 
+     /**
+       Removes a member from the group.
+      */
+     void removeMember( const Member &member );
+@@ -193,23 +133,41 @@
+       this group.
+      */
+     bool isObjectTypeEnabled( const QString &objectType ) const;
+ 
+     /**
+-      Saves the configuration to hard disc.
++      Sets whether this group uses the merger for synchronization.
+      */
+-    Result save();
++    void setUseMerger( bool use );
+ 
+     /**
+-      Returns the config object of this group.
++      Returns whether this group uses the merger for synchronization.
++     */
++    bool useMerger() const;
+ 
+-      Note: This method is only available for OpenSync 0.19 and 0.20.
++    /**
++      Sets whether this group uses the converter for synchronization.
+      */
+-    GroupConfig config() const;
++    void setUseConverter( bool use );
++
++    /**
++      Returns whether this group uses the converter for synchronization.
++     */
++    bool useConverter() const;
++
++    /**
++      Saves the configuration to hard disc.
++     */
++    Result save();
+ 
+     bool operator==( const Group &group ) const { return mGroup == group.mGroup; }
+ 
++    /**
++      Removes all group configurations from the hard disc.
++     */
++    Result cleanup() const;
++
+   private:
+     OSyncGroup *mGroup;
+ };
+ 
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/Makefile.am kitchensync/libqopensync/Makefile.am
+--- kitchensync.orig/libqopensync/Makefile.am	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/Makefile.am	2008-05-31 11:31:48.000000000 +0200
+@@ -1,19 +1,23 @@
+ INCLUDES = -I$(top_srcdir)/kitchensync/src \
+            -I$(top_srcdir)/kitchensync \
+            -I$(top_srcdir) \
+            $(OPENSYNC_CFLAGS) \
+-           $(OPENSYNCENGINE_CFLAGS) \
++           $(GLIB_CFLAGS) \
+            $(all_includes)
+ 
+ lib_LTLIBRARIES = libqopensync.la
+ 
+-libqopensync_la_SOURCES = callbackhandler.cpp conversion.cpp engine.cpp environment.cpp filter.cpp group.cpp \
++libqopensync_la_SOURCES = callbackhandler.cpp engine.cpp groupenv.cpp pluginenv.cpp filter.cpp group.cpp \
+ 	member.cpp plugin.cpp result.cpp syncmapping.cpp syncupdates.cpp \
+ 	syncchange.cpp
+-libqopensync_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -no-undefined
+-libqopensync_la_LIBADD = $(LIB_KDEUI) $(OPENSYNC_LIBS) $(OPENSYNCENGINE_LIBS)
++
++# FIXME: -no-undefined break the build for some unkown reason - libopensync broken?!
++#libqopensync_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -no-undefined
++libqopensync_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++libqopensync_la_LIBADD = $(LIB_KDEUI) $(OPENSYNC_LIBS)
++
+ 
+ METASOURCES = AUTO
+ 
+ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp *.h -o $(podir)/libqopensync.pot
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/member.cpp kitchensync/libqopensync/member.cpp
+--- kitchensync.orig/libqopensync/member.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/member.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,12 +18,16 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <opensync/opensync.h>
++#include <opensync/opensync-group.h>
++
+ #include <stdlib.h>
+ 
++#include "result.h"
++
+ #include "member.h"
+ 
+ using namespace QSync;
+ 
+ Member::Member()
+@@ -40,13 +44,13 @@
+   OSyncError *error = 0;
+ 
+   if ( !mMember )
+     return false;
+ 
+-  if ( !osync_member_instance_plugin( mMember, pluginName().utf8(), &error ) ) {
++  if ( !osync_member_load( mMember, configurationDirectory().utf8(), &error ) ) {
+     qDebug( "Plugin %s is not valid: %s", pluginName().latin1(), osync_error_print( &error ) );
+-    osync_error_free( &error );
++    osync_error_unref( &error );
+     return false;
+   }
+ 
+   return true;
+ }
+@@ -63,23 +67,10 @@
+   Q_ASSERT( mMember );
+ 
+   return QString::fromLatin1( osync_member_get_pluginname( mMember ) );
+ }
+ 
+-Plugin Member::plugin() const
+-{
+-  Q_ASSERT( mMember );
+-
+-  Plugin plugin;
+-
+-  OSyncPlugin *oplugin = osync_member_get_plugin( mMember );
+-  if ( oplugin )
+-    plugin.mPlugin = oplugin;
+-
+-  return plugin;
+-}
+-
+ int Member::id() const
+ {
+   Q_ASSERT( mMember );
+ 
+   return osync_member_get_id( mMember );
+@@ -101,31 +92,32 @@
+ 
+ void Member::setConfiguration( const QByteArray &configurationData )
+ {
+   Q_ASSERT( mMember );
+ 
+-  osync_member_set_config( mMember, configurationData.data(), configurationData.size() );
++  osync_member_set_config( mMember, configurationData.data() );
+ }
+ 
+ Result Member::configuration( QByteArray &configurationData, bool useDefault )
+ {
+   Q_ASSERT( mMember );
+ 
+-  char *data;
+-  int size;
++  const char *data;
++  int size = 0;
+ 
+   OSyncError *error = 0;
+-  osync_bool ok = false;
+   if ( useDefault )
+-    ok = osync_member_get_config_or_default( mMember, &data, &size, &error );
++    data = osync_member_get_config_or_default( mMember, &error );
+   else
+-    ok = osync_member_get_config( mMember, &data, &size, &error );
++    data = osync_member_get_config( mMember, &error );
+ 
+-  if ( !ok ) {
++
++  if ( !data ) {
+     return Result( &error );
+   } else {
+-    configurationData.resize( size );
++    size = strlen(data);
++    configurationData.resize( size );	  
+     memcpy( configurationData.data(), data, size );
+ 
+     return Result();
+   }
+ }
+@@ -139,50 +131,29 @@
+     return Result( &error );
+   else
+     return Result();
+ }
+ 
+-Result Member::instance( const Plugin &plugin )
++Result Member::instance()
+ {
+   OSyncError *error = 0;
+-  if ( !osync_member_instance_plugin( mMember, plugin.name().utf8(), &error ) )
++  if ( !osync_member_load( mMember, configurationDirectory().utf8(), &error ) )
+     return Result( &error );
+   else
+     return Result();
+ }
+ 
+ bool Member::operator==( const Member &member ) const
+ {
+   return mMember == member.mMember;
+ }
+ 
+-QString Member::scanDevices( const QString &query )
+-{
+-  Q_ASSERT( mMember );
+-
+-  OSyncError *error = 0;
+-  char *data = (char*)osync_member_call_plugin( mMember, "scan_devices", const_cast<char*>( query.utf8().data() ), &error );
+-  if ( error != 0 ) {
+-    osync_error_free( &error );
+-    return QString();
+-  } else {
+-    QString xml = QString::fromUtf8( data );
+-    free( data );
+-    return xml;
+-  }
+-}
+-
+-bool Member::testConnection( const QString &configuration )
++Result Member::cleanup() const
+ {
+   Q_ASSERT( mMember );
+ 
+   OSyncError *error = 0;
+-  int *result = (int*)osync_member_call_plugin( mMember, "test_connection", const_cast<char*>( configuration.utf8().data() ), &error );
+-  if ( error != 0 ) {
+-    osync_error_free( &error );
+-    return false;
+-  } else {
+-    bool value = ( *result == 1 ? true : false );
+-    free( result );
+-    return value;
+-  }
++  if ( !osync_member_delete( mMember, &error ) )
++    return Result( &error );
++  else
++    return Result();
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/member.h kitchensync/libqopensync/member.h
+--- kitchensync.orig/libqopensync/member.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/member.h	2008-05-31 11:31:48.000000000 +0200
+@@ -20,23 +20,25 @@
+ */
+ 
+ #ifndef QSYNC_MEMBER_H
+ #define QSYNC_MEMBER_H
+ 
+-#include <libqopensync/plugin.h>
+-#include <libqopensync/result.h>
+-#include <libqopensync/plugin.h>
++#include <qstring.h>
+ 
+ class OSyncMember;
+ 
+ namespace QSync {
+ 
++class Result;
++
+ class Member
+ {
+   friend class Group;
++  friend class Engine;
+   friend class SyncChange;
+   friend class SyncMemberUpdate;
++  friend class SyncChangeUpdate;
+ 
+   public:
+     Member();
+     ~Member();
+ 
+@@ -54,15 +56,10 @@
+       Returns the name of the plugin, the member belongs to.
+      */
+     QString pluginName() const;
+ 
+     /**
+-      Returns the plugin, the member belongs to.
+-     */
+-    Plugin plugin() const;
+-
+-    /**
+       Returns the id of the plugin.
+     */
+     int id() const;
+ 
+     /**
+@@ -100,11 +97,11 @@
+     Result save();
+ 
+     /**
+       Make this member an instance of the given plugin.
+     */
+-    Result instance( const Plugin & );
++    Result instance();
+ 
+     bool operator==( const Member& ) const;
+ 
+     /**
+       This method can be used to query the plugin for scanning devices.
+@@ -117,10 +114,16 @@
+       This method can be used to test whether the plugin can connect
+       to the device with the given configuration.
+      */
+     bool testConnection( const QString &configuration );
+ 
++
++    /**
++     * Deletes the member's information from the hard disc.
++     */
++    Result cleanup() const;
++
+   private:
+     OSyncMember *mMember;
+ };
+ 
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/plugin.cpp kitchensync/libqopensync/plugin.cpp
+--- kitchensync.orig/libqopensync/plugin.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/plugin.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,10 +18,11 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <opensync/opensync.h>
++#include <opensync/opensync-plugin.h>
+ 
+ #include "plugin.h"
+ 
+ using namespace QSync;
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/pluginenv.cpp kitchensync/libqopensync/pluginenv.cpp
+--- kitchensync.orig/libqopensync/pluginenv.cpp	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/libqopensync/pluginenv.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,96 @@
++/*
++    This file is part of libqopensync.
++
++    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
++    Copyright (c) 2007 Daniel Gollub <dgollub@suse.de>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#include <opensync/opensync.h>
++#include <opensync/opensync-plugin.h>
++
++#include "plugin.h"
++#include "result.h"
++
++#include "pluginenv.h"
++
++using namespace QSync;
++
++PluginEnv::PluginEnv()
++{
++  OSyncError *error = 0;
++  mPluginEnv = osync_plugin_env_new( &error );
++}
++
++PluginEnv::~PluginEnv()
++{
++  osync_plugin_env_free( mPluginEnv );
++}
++
++Result PluginEnv::initialize()
++{
++  OSyncError *error = 0;
++  if ( !osync_plugin_env_load( mPluginEnv, NULL, &error ) )
++    return Result( &error );
++  else
++    return Result();
++}
++
++Result PluginEnv::finalize()
++{
++  osync_plugin_env_free( mPluginEnv ); 
++  return Result();
++}
++
++int PluginEnv::pluginCount() const
++{
++  return osync_plugin_env_num_plugins( mPluginEnv );
++}
++
++Plugin PluginEnv::pluginAt( int pos ) const
++{
++  Plugin plugin;
++
++  if ( pos < 0 || pos >= pluginCount() )
++    return plugin;
++
++  OSyncPlugin *oplugin = osync_plugin_env_nth_plugin( mPluginEnv, pos );
++  plugin.mPlugin = oplugin;
++
++  return plugin;
++}
++
++Plugin PluginEnv::pluginByName( const QString &name ) const
++{
++  Plugin plugin;
++
++  OSyncPlugin *oplugin = osync_plugin_env_find_plugin( mPluginEnv, name.latin1() );
++  if ( oplugin )
++    plugin.mPlugin = oplugin;
++
++  return plugin;
++}
++
++/*
++Conversion PluginEnv::conversion() const
++{
++  Conversion conversion;
++  conversion.mPluginEnv = mPluginEnv;
++
++  return conversion;
++}
++*/
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/pluginenv.h kitchensync/libqopensync/pluginenv.h
+--- kitchensync.orig/libqopensync/pluginenv.h	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/libqopensync/pluginenv.h	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,80 @@
++/*
++    This file is part of libqopensync.
++
++    Copyright (c) 2005 Tobias Koenig <tokoe@kde.org>
++    Copyright (c) 2007 Daniel Gollub <dgollub@suse.de>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#ifndef OSYNC_PLUGINENV_H
++#define OSYNC_PLUGINENV_H
++
++#include <qstring.h>
++
++struct OSyncPluginEnv;
++
++namespace QSync {
++
++class Plugin;
++class Result;
++
++class PluginEnv
++{
++  public:
++    PluginEnv();
++    ~PluginEnv();
++
++    /**
++      Initializes the environment ( e.g. loads the groups and plugins ).
++      Has to be called before the groups or plugins can be accessed.
++     */
++    Result initialize();
++
++    /**
++      Finalizes the environment ( e.g. unloads the groups and plugins ).
++      Should be the last call before the object is deleted.
++     */
++    Result finalize();
++
++    /**
++      Returns the number of plugins.
++     */
++    int pluginCount() const;
++
++    /**
++      Returns the plugin at position @param pos.
++     */
++    Plugin pluginAt( int pos ) const;
++
++    /**
++      Returns a plugin by name or an invalid plugin when the plugin with this
++      name doesn't exists.
++     */
++    Plugin pluginByName( const QString &name ) const;
++
++    /**
++      Returns the conversion object of this environment.
++     */
++//    Conversion conversion() const;
++
++  private:
++    OSyncPluginEnv *mPluginEnv;
++};
++
++}
++
++#endif
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/plugin.h kitchensync/libqopensync/plugin.h
+--- kitchensync.orig/libqopensync/plugin.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/plugin.h	2008-05-31 11:31:48.000000000 +0200
+@@ -28,11 +28,11 @@
+ 
+ namespace QSync {
+ 
+ class Plugin
+ {
+-  friend class Environment;
++  friend class PluginEnv;
+   friend class Member;
+ 
+   public:
+     Plugin();
+     ~Plugin();
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/result.cpp kitchensync/libqopensync/result.cpp
+--- kitchensync.orig/libqopensync/result.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/result.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -98,11 +98,11 @@
+   mType = type;
+   mName = QString::fromUtf8( osync_error_get_name( error ) );
+   mMessage = QString::fromUtf8( osync_error_print( error ) );
+ 
+   if ( deleteError )
+-    osync_error_free( error );
++    osync_error_unref( error );
+ }
+ 
+ Result::~Result()
+ {
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncchange.cpp kitchensync/libqopensync/syncchange.cpp
+--- kitchensync.orig/libqopensync/syncchange.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncchange.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -17,12 +17,17 @@
+     along with this library; see the file COPYING.LIB.  If not, write to
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
++#include <stdlib.h>
++
+ #include <opensync/file.h>
++
+ #include <opensync/opensync.h>
++#include <opensync/opensync-data.h>
++#include <opensync/opensync-format.h>
+ 
+ #include "syncchange.h"
+ 
+ using namespace QSync;
+ 
+@@ -62,73 +67,85 @@
+ QString SyncChange::hash() const
+ {
+   return QString::fromUtf8( osync_change_get_hash( mSyncChange ) );
+ }
+ 
+-void SyncChange::setData( const QString &data )
++void SyncChange::setData( const QString &data , OSyncObjFormat *format )
+ {
+-  osync_change_set_data( mSyncChange, const_cast<char*>( data.utf8().data() ), data.utf8().size(), true );
++  OSyncError *error = 0;	
++
++  OSyncData *odata = osync_data_new( const_cast<char*>( data.utf8().data() ), data.utf8().size(), format, &error );
++  osync_change_set_data( mSyncChange, odata );
+ }
+ 
+ QString SyncChange::data() const
+ {
+-  int size = osync_change_get_datasize( mSyncChange );
++  char *buf;
++  unsigned int size;
++
++  OSyncData *data = osync_change_get_data( mSyncChange );
++
++  osync_data_get_data( data, &buf, &size );
+ 
+   QString content;
+   if ( objectFormatName() == "file" ) {
+-    fileFormat *format = (fileFormat*)osync_change_get_data( mSyncChange );
++    OSyncFileFormat *format = (OSyncFileFormat*) buf;
+     if ( format )
+       content = QString::fromUtf8( format->data, format->size );
+   } else
+-    content = QString::fromUtf8( osync_change_get_data( mSyncChange ), size );
++    content = QString::fromUtf8( buf, size );
++
++  free( buf );
+ 
+   return content;
+ }
+ 
+ bool SyncChange::hasData() const
+ {
+-  return osync_change_has_data( mSyncChange );
++  return osync_data_has_data( osync_change_get_data( mSyncChange ) );
+ }
+ 
+ QString SyncChange::objectFormatName() const
+ {
+-  OSyncObjFormat *format = osync_change_get_objformat( mSyncChange );
++  OSyncObjFormat *format = osync_data_get_objformat( osync_change_get_data( mSyncChange ) );
+   Q_ASSERT( format );
+ 
+   return QString::fromUtf8( osync_objformat_get_name( format ) );
+ }
+ 
++/*
+ Member SyncChange::member() const
+ {
+   OSyncMember *omember = osync_change_get_member( mSyncChange );
+ 
+   Member m;
+   m.mMember = omember;
+ 
+   return m;
+ }
++*/
+ 
+ void SyncChange::setChangeType( Type changeType )
+ {
+   OSyncChangeType ochangeType;
+ 
+   switch ( changeType ) {
+     case AddedChange:
+-      ochangeType = CHANGE_ADDED;
++      ochangeType = OSYNC_CHANGE_TYPE_ADDED;
+       break;
+     case UnmodifiedChange:
+-      ochangeType = CHANGE_UNMODIFIED;
++      ochangeType = OSYNC_CHANGE_TYPE_UNMODIFIED;
+       break;
+     case DeletedChange:
+-      ochangeType = CHANGE_DELETED;
++      ochangeType = OSYNC_CHANGE_TYPE_DELETED;
+       break;
+     case ModifiedChange:
+-      ochangeType = CHANGE_MODIFIED;
++      ochangeType = OSYNC_CHANGE_TYPE_MODIFIED;
+       break;
+     case UnknownChange:
+     default:
+-      ochangeType = CHANGE_UNKNOWN;
++      ochangeType = OSYNC_CHANGE_TYPE_UNKNOWN;
+       break;
+   }
+ 
+   osync_change_set_changetype( mSyncChange, ochangeType );
+ }
+@@ -136,23 +153,23 @@
+ SyncChange::Type SyncChange::changeType() const
+ {
+   OSyncChangeType ochangeType = osync_change_get_changetype( mSyncChange );
+ 
+   switch ( ochangeType ) {
+-    case CHANGE_ADDED:
++    case OSYNC_CHANGE_TYPE_ADDED:
+       return AddedChange;
+       break;
+-    case CHANGE_UNMODIFIED:
++    case OSYNC_CHANGE_TYPE_UNMODIFIED:
+       return UnmodifiedChange;
+       break;
+-    case CHANGE_DELETED:
++    case OSYNC_CHANGE_TYPE_DELETED:
+       return DeletedChange;
+       break;
+-    case CHANGE_MODIFIED:
++    case OSYNC_CHANGE_TYPE_MODIFIED:
+       return ModifiedChange;
+       break;
+-    case CHANGE_UNKNOWN:
++    case OSYNC_CHANGE_TYPE_UNKNOWN:
+     default:
+       return UnknownChange;
+       break;
+   }
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncchange.h kitchensync/libqopensync/syncchange.h
+--- kitchensync.orig/libqopensync/syncchange.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncchange.h	2008-05-31 11:31:48.000000000 +0200
+@@ -23,10 +23,11 @@
+ #define QSYNC_SYNCCHANGE_H
+ 
+ #include <libqopensync/member.h>
+ 
+ class OSyncChange;
++class OSyncObjFormat;
+ 
+ namespace QSync {
+ 
+ class SyncChange
+ {
+@@ -72,11 +73,11 @@
+     QString hash() const;
+ 
+     /**
+       Sets the data provided by the plugin.
+      */
+-    void setData( const QString &data );
++    void setData( const QString &data, OSyncObjFormat *format );
+ 
+     /**
+       Returns the data provided by the plugin.
+      */
+     QString data() const;
+@@ -92,11 +93,11 @@
+     QString objectFormatName() const;
+ 
+     /**
+       Returns the parent member of this change.
+      */
+-    Member member() const;
++//    Member member() const;
+ 
+     /**
+       Sets the change type.
+      */
+     void setChangeType( Type changeType );
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncmapping.cpp kitchensync/libqopensync/syncmapping.cpp
+--- kitchensync.orig/libqopensync/syncmapping.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncmapping.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -18,83 +18,90 @@
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <qstring.h>
+-#include <osengine/engine.h>
++#include <opensync/opensync.h>
++#include <opensync/opensync-engine.h>
+ 
+ #include "syncmapping.h"
+ 
+ using namespace QSync;
+ 
+ SyncMapping::SyncMapping()
+-  : mEngine( 0 ), mMapping( 0 )
++  : mEngine( 0 ), mMappingEngine( 0 )
+ {
+ }
+ 
+-SyncMapping::SyncMapping( OSyncMapping *mapping, OSyncEngine *engine )
+-  : mEngine( engine ), mMapping( mapping )
++SyncMapping::SyncMapping( OSyncMappingEngine *mapping, OSyncEngine *engine )
++  : mEngine( engine ), mMappingEngine( mapping )
+ {
+ }
+ 
+ SyncMapping::~SyncMapping()
+ {
+ }
+ 
+ bool SyncMapping::isValid() const
+ {
+-  return ( mEngine != 0 && mMapping != 0 );
++  return ( mEngine != 0 && mMappingEngine != 0 );
+ }
+ 
++/*
+ long long SyncMapping::id() const
+ {
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
+ 
+-  return osengine_mapping_get_id( mMapping );
++  return osync_mapping_engine_get_id( mMappingEngine );
+ }
++*/
+ 
+ void SyncMapping::duplicate()
+ {
+   Q_ASSERT( mEngine );
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
++
++  OSyncError *error = 0;
+ 
+-  osengine_mapping_duplicate( mEngine, mMapping );
++  osync_mapping_engine_duplicate( mMappingEngine, &error );
+ }
+ 
+ void SyncMapping::solve( const SyncChange &change )
+ {
+   Q_ASSERT( mEngine );
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
+   Q_ASSERT( change.isValid() );
+ 
+-  osengine_mapping_solve( mEngine, mMapping, change.mSyncChange );
++  OSyncError *error = 0;
++
++  osync_mapping_engine_solve( mMappingEngine, change.mSyncChange, &error );
+ }
+ 
+ void SyncMapping::ignore()
+ {
+   Q_ASSERT( mEngine );
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
+ 
+   //TODO: error should be returned as Result
+   OSyncError *error = 0;
+-  osengine_mapping_ignore_conflict( mEngine, mMapping, &error );
++  osync_mapping_engine_ignore( mMappingEngine, &error );
+ }
+ 
+ int SyncMapping::changesCount() const
+ {
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
+ 
+-  return osengine_mapping_num_changes( mMapping );
++  return osync_mapping_engine_num_changes( mMappingEngine );
+ }
+ 
+ SyncChange SyncMapping::changeAt( int pos )
+ {
+-  Q_ASSERT( mMapping );
++  Q_ASSERT( mMappingEngine );
+ 
+-  if ( pos < 0 || pos >= osengine_mapping_num_changes( mMapping ) )
++  if ( pos < 0 || pos >= osync_mapping_engine_num_changes( mMappingEngine ) )
+     return SyncChange();
+ 
+-  OSyncChange *ochange = osengine_mapping_nth_change( mMapping, pos );
++  OSyncChange *ochange = osync_mapping_engine_nth_change( mMappingEngine, pos );
+ 
+   return SyncChange( ochange );
+ }
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncmapping.h kitchensync/libqopensync/syncmapping.h
+--- kitchensync.orig/libqopensync/syncmapping.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncmapping.h	2008-05-31 11:31:48.000000000 +0200
+@@ -23,21 +23,21 @@
+ #define QSYNC_SYNCMAPPING_H
+ 
+ #include <libqopensync/syncchange.h>
+ 
+ class OSyncEngine;
+-class OSyncMapping;
++class OSyncMappingEngine;
+ 
+ namespace QSync {
+ 
+ class SyncMapping
+ {
+   friend class SyncMappingUpdate;
+ 
+   public:
+     SyncMapping();
+-    SyncMapping( OSyncMapping*, OSyncEngine* );
++    SyncMapping( OSyncMappingEngine*, OSyncEngine* );
+     ~SyncMapping();
+ 
+     bool isValid() const;
+ 
+     long long id() const;
+@@ -49,11 +49,11 @@
+     int changesCount() const;
+     SyncChange changeAt( int pos );
+ 
+   private:
+     OSyncEngine *mEngine;
+-    OSyncMapping *mMapping;
++    OSyncMappingEngine *mMappingEngine;
+ };
+ 
+ }
+ 
+ #endif
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncupdates.cpp kitchensync/libqopensync/syncupdates.cpp
+--- kitchensync.orig/libqopensync/syncupdates.cpp	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncupdates.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -17,11 +17,12 @@
+     along with this library; see the file COPYING.LIB.  If not, write to
+     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+     Boston, MA 02110-1301, USA.
+ */
+ 
+-#include <osengine/engine.h>
++#include <opensync/opensync.h>
++#include <opensync/opensync-engine.h>
+ 
+ #include "syncupdates.h"
+ 
+ using namespace QSync;
+ 
+@@ -30,36 +31,30 @@
+ }
+ 
+ SyncMemberUpdate::SyncMemberUpdate( OSyncMemberUpdate *update )
+ {
+   switch ( update->type ) {
+-    case MEMBER_CONNECTED:
++    case OSYNC_CLIENT_EVENT_CONNECTED:
+       mType = Connected;
+       break;
+-    case MEMBER_SENT_CHANGES:
+-      mType = SentChanges;
+-      break;
+-    case MEMBER_COMMITTED_ALL:
+-      mType = CommittedAll;
+-      break;
+-    case MEMBER_DISCONNECTED:
++    case OSYNC_CLIENT_EVENT_DISCONNECTED:
+       mType = Disconnected;
+       break;
+-    case MEMBER_CONNECT_ERROR:
+-      mType = ConnectError;
++    case OSYNC_CLIENT_EVENT_READ:
++      mType = Read; 
+       break;
+-    case MEMBER_GET_CHANGES_ERROR:
+-      mType = GetChangesError;
++    case OSYNC_CLIENT_EVENT_WRITTEN:
++      mType = Written;
+       break;
+-    case MEMBER_COMMITTED_ALL_ERROR:
+-      mType = CommittedAllError;
++    case OSYNC_CLIENT_EVENT_SYNC_DONE:
++      mType = SyncDone;
+       break;
+-    case MEMBER_SYNC_DONE_ERROR:
+-      mType = SyncDoneError;
++    case OSYNC_CLIENT_EVENT_DISCOVERED:
++      mType = Discovered;
+       break;
+-    case MEMBER_DISCONNECT_ERROR:
+-      mType = DisconnectedError;
++    case OSYNC_CLIENT_EVENT_ERROR:
++      mType = Error;
+       break;
+   }
+ 
+   if ( update->error )
+     mResult = Result( &(update->error) );
+@@ -92,32 +87,26 @@
+ }
+ 
+ SyncChangeUpdate::SyncChangeUpdate( OSyncChangeUpdate *update )
+ {
+   switch ( update->type ) {
+-    case CHANGE_RECEIVED:
+-      mType = Received;
+-      break;
+-    case CHANGE_RECEIVED_INFO:
+-      mType = ReceivedInfo;
++    case OSYNC_CHANGE_EVENT_READ:
++      mType = Read;
+       break;
+-    case CHANGE_SENT:
+-      mType = Sent;
++    case OSYNC_CHANGE_EVENT_WRITTEN:
++      mType = Written;
+       break;
+-    case CHANGE_WRITE_ERROR:
+-      mType = WriteError;
+-      break;
+-    case CHANGE_RECV_ERROR:
+-      mType = ReceiveError;
++    case OSYNC_CHANGE_EVENT_ERROR:
++      mType = Error;
+       break;
+   }
+ 
+   if ( update->error )
+     mResult = Result( &(update->error) );
+ 
+   mChange = SyncChange( update->change );
+-  mMemberId = update->member_id;
++  mMember.mMember = update->member;
+   mMappingId = update->mapping_id;
+ }
+ 
+ SyncChangeUpdate::~SyncChangeUpdate()
+ {
+@@ -136,13 +125,13 @@
+ SyncChange SyncChangeUpdate::change() const
+ {
+   return mChange;
+ }
+ 
+-int SyncChangeUpdate::memberId() const
++Member SyncChangeUpdate::member() const
+ {
+-  return mMemberId;
++  return mMember;
+ }
+ 
+ int SyncChangeUpdate::mappingId() const
+ {
+   return mMappingId;
+@@ -153,27 +142,29 @@
+ }
+ 
+ SyncMappingUpdate::SyncMappingUpdate( OSyncMappingUpdate *update, OSyncEngine *engine )
+ {
+   switch ( update->type ) {
+-    case MAPPING_SOLVED:
++    case OSYNC_MAPPING_EVENT_SOLVED:
+       mType = Solved;
+       break;
+-    case MAPPING_SYNCED:
+-      mType = Synced;
+-      break;
+-    case MAPPING_WRITE_ERROR:
+-      mType = WriteError;
++//    case OSYNC_MAPPING_EVENT_SYNCED:
++  //    mType = Synced;
++    //  break;
++    case OSYNC_MAPPING_EVENT_ERROR:
++      mType = Error;
+       break;
+   }
+ 
+   if ( update->error )
+     mResult = Result( &(update->error) );
+ 
+   mWinner = update->winner;
+   mMapping.mEngine = engine;
+-  mMapping.mMapping = update->mapping;
++
++  // TODO PORTING
++//  mMapping.mMapping = update->mapping;
+ }
+ 
+ SyncMappingUpdate::~SyncMappingUpdate()
+ {
+ }
+@@ -203,34 +194,37 @@
+ }
+ 
+ SyncEngineUpdate::SyncEngineUpdate( OSyncEngineUpdate *update )
+ {
+   switch ( update->type ) {
+-    case ENG_ENDPHASE_CON:
+-      mType = EndPhaseConnected;
++    case OSYNC_ENGINE_EVENT_CONNECTED:
++      mType = Connected;
+       break;
+-    case ENG_ENDPHASE_READ:
+-      mType = EndPhaseRead;
++    case OSYNC_ENGINE_EVENT_READ:
++      mType = Read;
+       break;
+-    case ENG_ENDPHASE_WRITE:
+-      mType = EndPhaseWrite;
++    case OSYNC_ENGINE_EVENT_WRITTEN:
++      mType = Written;
+       break;
+-    case ENG_ENDPHASE_DISCON:
+-      mType = EndPhaseDisconnected;
++    case OSYNC_ENGINE_EVENT_DISCONNECTED: 
++      mType = Disconnected;
+       break;
+-    case ENG_ERROR:
++    case OSYNC_ENGINE_EVENT_ERROR:
+       mType = Error;
+       break;
+-    case ENG_SYNC_SUCCESSFULL:
+-      mType = SyncSuccessfull;
++    case OSYNC_ENGINE_EVENT_SUCCESSFUL:
++      mType = SyncSuccessful;
+       break;
+-    case ENG_PREV_UNCLEAN:
++    case OSYNC_ENGINE_EVENT_PREV_UNCLEAN:
+       mType = PrevUnclean;
+       break;
+-    case ENG_END_CONFLICTS:
++    case OSYNC_ENGINE_EVENT_END_CONFLICTS:
+       mType = EndConflicts;
+       break;
++    case OSYNC_ENGINE_EVENT_SYNC_DONE:
++      mType = SyncDone;
++      break;
+   }
+ 
+   if ( update->error )
+     mResult = Result( &(update->error) );
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/libqopensync/syncupdates.h kitchensync/libqopensync/syncupdates.h
+--- kitchensync.orig/libqopensync/syncupdates.h	2008-05-31 11:37:13.000000000 +0200
++++ kitchensync/libqopensync/syncupdates.h	2008-05-31 11:31:48.000000000 +0200
+@@ -40,18 +40,16 @@
+   friend class CallbackHandler;
+ 
+   public:
+     enum Type {
+       Connected,
+-      SentChanges,
+-      CommittedAll,
+       Disconnected,
+-      ConnectError,
+-      GetChangesError,
+-      CommittedAllError,
+-      SyncDoneError,
+-      DisconnectedError
++      Read,
++      Written,
++      SyncDone,
++      Discovered,
++      Error
+     };
+ 
+     SyncMemberUpdate();
+     SyncMemberUpdate( OSyncMemberUpdate* );
+     ~SyncMemberUpdate();
+@@ -70,44 +68,42 @@
+ {
+   friend class CallbackHandler;
+ 
+   public:
+     enum Type {
+-      Received = 1,
+-      ReceivedInfo,
+-      Sent,
+-      WriteError,
+-      ReceiveError
++      Read = 1,
++      Written,
++      Error
+     };
+ 
+     SyncChangeUpdate();
+     SyncChangeUpdate( OSyncChangeUpdate* );
+     ~SyncChangeUpdate();
+ 
+     Type type() const;
+     Result result() const;
+     SyncChange change() const;
+-    int memberId() const;
++    Member member() const;
+     int mappingId() const;
+ 
+   private:
+     Type mType;
+     Result mResult;
+     SyncChange mChange;
+-    int mMemberId;
++    Member mMember;
+     int mMappingId;
+ };
+ 
+ class SyncMappingUpdate
+ {
+   friend class CallbackHandler;
+ 
+   public:
+     enum Type {
+       Solved = 1,
+-      Synced,
+-      WriteError
++      //Synced,
++      Error
+     };
+ 
+     SyncMappingUpdate();
+     SyncMappingUpdate( OSyncMappingUpdate*, OSyncEngine* );
+     ~SyncMappingUpdate();
+@@ -128,18 +124,19 @@
+ {
+   friend class CallbackHandler;
+ 
+   public:
+     enum Type {
+-      EndPhaseConnected = 1,
+-      EndPhaseRead,
+-      EndPhaseWrite,
+-      EndPhaseDisconnected,
++      Connected = 1,
++      Read,
++      Written,
++      Disconnected,
+       Error,
+-      SyncSuccessfull,
++      SyncSuccessful,
+       PrevUnclean,
+-      EndConflicts
++      EndConflicts,
++      SyncDone
+     };
+ 
+     SyncEngineUpdate();
+     SyncEngineUpdate( OSyncEngineUpdate* );
+     ~SyncEngineUpdate();
+diff --exclude=.svn -NrU5 kitchensync.orig/src/configguifile.cpp kitchensync/src/configguifile.cpp
+--- kitchensync.orig/src/configguifile.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/configguifile.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -53,29 +53,41 @@
+ void ConfigGuiFile::load( const QString &xml )
+ {
+   QDomDocument doc;
+   doc.setContent( xml );
+   QDomElement docElement = doc.documentElement();
+-  QDomNode n;
+-  for( n = docElement.firstChild(); !n.isNull(); n = n.nextSibling() ) {
+-    QDomElement e = n.toElement();
+-    if ( e.tagName() == "path" ) {
+-      mFilename->setURL( e.text() );
+-    } else if ( e.tagName() == "recursive" ) {
+-      mRecursive->setChecked( e.text() == "TRUE" );
++
++  QDomNode node;
++  for ( node = docElement.firstChild(); !node.isNull(); node = node.nextSibling() ) {
++    QDomElement e = node.toElement();
++    if ( e.tagName() == "directory" ) {
++      QDomNode subNode;
++      for ( subNode = e.firstChild(); !subNode.isNull(); subNode = subNode.nextSibling() ) {
++        QDomElement subElement = subNode.toElement();
++        if ( subElement.tagName() == "path" ) {
++          mFilename->setURL( subElement.text() );
++        } else if ( subElement.tagName() == "recursive" ) {
++          mRecursive->setChecked( subElement.text() == "TRUE" );
++        }
++      }
+     }
+   }
+ }
+ 
+ QString ConfigGuiFile::save() const
+ {
+   QString xml;
+-  xml = "<config>";
+-  xml += "<path>" + mFilename->url() + "</path>";
+-  xml += "<recursive>";
+-  if ( mRecursive->isChecked() ) xml += "TRUE";
+-  else xml += "FALSE";
+-  xml += "</recursive>";
+-  xml += "</config>";
++  xml = "<config>\n";
++  xml += "  <directory>\n";
++  xml += "    <path>" + mFilename->url() + "</path>\n";
++  xml += "    <objtype>data</objtype>\n";
++  xml += "    <recursive>";
++  if ( mRecursive->isChecked() )
++    xml += "TRUE";
++  else
++    xml += "FALSE";
++  xml += "</recursive>\n";
++  xml += "  </directory>\n";
++  xml += "</config>\n";
+ 
+   return xml;
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/src/configguisyncmlhttp.cpp kitchensync/src/configguisyncmlhttp.cpp
+--- kitchensync.orig/src/configguisyncmlhttp.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/configguisyncmlhttp.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -119,20 +119,20 @@
+   // recvLimit
+   label = new QLabel( i18n("Receive Limit:"), optionWidget );
+   mGridLayout->addWidget( label, 5, 0 );
+ 
+   mRecvLimit = new QSpinBox( optionWidget );
+-  mRecvLimit->setMinValue( 1 );
++  mRecvLimit->setMinValue( 0 );
+   mRecvLimit->setMaxValue( 65536 );
+   mGridLayout->addWidget( mRecvLimit, 5, 1 );
+ 
+   // maxObjSize 
+   label = new QLabel( i18n("Maximum Object Size"), optionWidget );
+   mGridLayout->addWidget( label, 6, 0 );
+ 
+   mMaxObjSize = new QSpinBox( optionWidget );
+-  mMaxObjSize->setMinValue( 1 );
++  mMaxObjSize->setMinValue( 0 );
+   mMaxObjSize->setMaxValue( 65536 );
+   mGridLayout->addWidget( mMaxObjSize, 6, 1 );
+ 
+   topLayout()->addStretch( 1 );
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/src/configguisyncmlobex.cpp kitchensync/src/configguisyncmlobex.cpp
+--- kitchensync.orig/src/configguisyncmlobex.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/configguisyncmlobex.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -151,20 +151,20 @@
+   // recvLimit
+   label = new QLabel( i18n("Receive Limit:"), optionsWidget );
+   mGridLayout->addWidget( label, 14, 0 );
+ 
+   mRecvLimit = new QSpinBox( optionsWidget );
+-  mRecvLimit->setMinValue( 1 );
++  mRecvLimit->setMinValue( 0 );
+   mRecvLimit->setMaxValue( 65536 );
+   mGridLayout->addWidget( mRecvLimit, 14, 1 );
+ 
+   // maxObjSize
+   label = new QLabel( i18n("Maximum Object Size"), optionsWidget );
+   mGridLayout->addWidget( label, 15, 0 );
+ 
+   mMaxObjSize = new QSpinBox( optionsWidget );
+-  mMaxObjSize->setMinValue( 1 );
++  mMaxObjSize->setMinValue( 0 );
+   mMaxObjSize->setMaxValue( 65536 );
+   mGridLayout->addWidget( mMaxObjSize, 15, 1 );
+ 
+   topLayout()->addStretch( 1 );
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfigcommon.cpp kitchensync/src/groupconfigcommon.cpp
+--- kitchensync.orig/src/groupconfigcommon.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfigcommon.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -28,18 +28,19 @@
+ #include <qlabel.h>
+ #include <qlayout.h>
+ #include <qcheckbox.h>
+ 
+ #include <libqopensync/group.h>
+-#include <libqopensync/conversion.h>
+-#include <libqopensync/environment.h>
++//#include <libqopensync/conversion.h>
+ 
+ #include "syncprocess.h"
+ #include "syncprocessmanager.h"
+ 
+ #include "groupconfigcommon.h"
+ 
++// TODO: port ObjectTypeSelector to ported solution of Conversation class
++#if 0
+ ObjectTypeSelector::ObjectTypeSelector( QWidget *parent )
+   : QWidget( parent )
+ {
+   QGridLayout *layout = new QGridLayout( this );
+   layout->setMargin( 0 );
+@@ -122,10 +123,11 @@
+   objectTypes.append( "data" );
+ 
+   QSync::GroupConfig config = group.config();
+   config.setActiveObjectTypes( objectTypes );
+ }
++#endif
+ 
+ GroupConfigCommon::GroupConfigCommon( QWidget *parent )
+   : QWidget( parent )
+ {
+   QGridLayout *layout = new QGridLayout( this, 2, 2, KDialog::marginHint(), KDialog::spacingHint() );
+@@ -133,26 +135,31 @@
+   layout->addWidget( new QLabel( i18n( "Name:" ), this ), 0, 0 );
+ 
+   mGroupName = new KLineEdit( this );
+   layout->addWidget( mGroupName, 0, 1 );
+ 
+-  layout->addWidget( new QLabel( i18n( "Object Types to be Synchronized:"), this ), 1, 0, Qt::AlignTop );
++  //layout->addWidget( new QLabel( i18n( "Object Types to be Synchronized:"), this ), 1, 0, Qt::AlignTop );
+ 
+-  mObjectTypeSelector = new ObjectTypeSelector( this );
+-  layout->addWidget( mObjectTypeSelector, 1, 1 );
++  // TODO port ObjectTypeSelector class..
++  //mObjectTypeSelector = new ObjectTypeSelector( this );
++  //layout->addWidget( mObjectTypeSelector, 1, 1 );
+ 
+   layout->setRowStretch( 2, 1 );
+ }
+ 
+ void GroupConfigCommon::setSyncProcess( SyncProcess *syncProcess )
+ {
+   mSyncProcess = syncProcess;
+ 
+   mGroupName->setText( mSyncProcess->group().name() );
+-  mObjectTypeSelector->load( mSyncProcess->group() );
++
++  // TODO port ObjectTypeSelector class..
++  //mObjectTypeSelector->load( mSyncProcess->group() );
+ }
+ 
+ void GroupConfigCommon::save()
+ {
+   mSyncProcess->group().setName( mGroupName->text() );
+-  mObjectTypeSelector->save( mSyncProcess->group() );
++
++  // TODO port ObjectTypeSelector class..
++  //mObjectTypeSelector->save( mSyncProcess->group() );
+ }
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfigcommon.h kitchensync/src/groupconfigcommon.h
+--- kitchensync.orig/src/groupconfigcommon.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfigcommon.h	2008-05-31 11:31:48.000000000 +0200
+@@ -28,10 +28,12 @@
+ 
+ class KLineEdit;
+ class SyncProcess;
+ class QCheckBox;
+ 
++//TODO: Conversation needs to be ported before...
++#if 0
+ class ObjectTypeSelector : public QWidget
+ {
+   public:
+     ObjectTypeSelector( QWidget *parent );
+ 
+@@ -39,10 +41,11 @@
+     void save( QSync::Group group );
+ 
+   private:
+     QMap<QString,QCheckBox *> mObjectTypeChecks;
+ };
++#endif
+ 
+ class GroupConfigCommon : public QWidget
+ {
+   public:
+     GroupConfigCommon( QWidget *parent );
+@@ -50,11 +53,11 @@
+     void setSyncProcess( SyncProcess *syncProcess );
+     void save();
+ 
+   private:
+     KLineEdit *mGroupName;
+-    ObjectTypeSelector *mObjectTypeSelector;
++  //  ObjectTypeSelector *mObjectTypeSelector;
+ 
+     SyncProcess *mSyncProcess;
+ };
+ 
+ #endif
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfig.cpp kitchensync/src/groupconfig.cpp
+--- kitchensync.orig/src/groupconfig.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfig.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -25,12 +25,14 @@
+ #include "memberinfo.h"
+ #include "pluginpicker.h"
+ #include "syncprocess.h"
+ #include "syncprocessmanager.h"
+ 
++#include <libqopensync/engine.h>
+ #include <libqopensync/group.h>
+ #include <libqopensync/plugin.h>
++#include <libqopensync/result.h>
+ 
+ #include <kdialog.h>
+ #include <kiconloader.h>
+ #include <kjanuswidget.h>
+ #include <klocale.h>
+@@ -38,10 +40,11 @@
+ 
+ 
+ #include <qlabel.h>
+ #include <qlayout.h>
+ #include <qpushbutton.h>
++#include <qtimer.h>
+ 
+ GroupConfig::GroupConfig( QWidget *parent )
+   : QWidget( parent )
+ {
+   QBoxLayout *topLayout = new QVBoxLayout( this );
+@@ -82,25 +85,19 @@
+   nameLayout->addStretch( 1 );
+ 
+   mMemberView = new KJanusWidget( this, 0, KJanusWidget::IconList );
+   topLayout->addWidget( mMemberView );
+ 
+-  QBoxLayout *buttonLayout = new QHBoxLayout( topLayout );
+-
+-  QPushButton *addButton = new QPushButton( i18n("Add Member..."), this );
+-  connect( addButton, SIGNAL( clicked() ), SLOT( addMember() ) );
+-  buttonLayout->addWidget( addButton );
+-
+-  buttonLayout->addStretch( 1 );
+-
+   icon = KGlobal::iconLoader()->loadIcon( "bookmark", KIcon::Desktop );
+   QFrame *page = mMemberView->addPage( i18n("Group"),
+     i18n("General Group Settings"), icon );
+   QBoxLayout *pageLayout = new QVBoxLayout( page );
+ 
+   mCommonConfig = new GroupConfigCommon( page );
+   pageLayout->addWidget( mCommonConfig );
++
++  connect( mMemberView, SIGNAL( aboutToShowPage( QWidget* ) ), SLOT( memberWidgetSelected( QWidget* ) ) );
+ }
+ 
+ void GroupConfig::setSyncProcess( SyncProcess *process )
+ {
+   mProcess = process;
+@@ -111,54 +108,68 @@
+   updateMembers();
+ }
+ 
+ void GroupConfig::updateMembers()
+ {
+-  QValueList<MemberConfig *>::ConstIterator memberIt;
++  QMap<QWidget*, MemberConfig *>::ConstIterator memberIt;
+   for ( memberIt = mMemberConfigs.begin(); memberIt != mMemberConfigs.end(); ++memberIt )
+-    (*memberIt)->saveData();
++    memberIt.data()->saveData();
+ 
+   QValueList<QFrame *>::ConstIterator it2;
+   for ( it2 = mConfigPages.begin(); it2 != mConfigPages.end(); ++it2 ) {
+     mMemberView->removePage( *it2 );
+     delete *it2;
+   }
+   mConfigPages.clear();
+   mMemberConfigs.clear();
+ 
+-  QSync::Group group = mProcess->group();
+-  QSync::Group::Iterator it( group.begin() );
+-  for ( ; it != group.end(); ++it ) {
+-    QSync::Member member = *it;
++  const QSync::Group group = mProcess->group();
++  for ( int i = 0; i < group.memberCount(); ++i ) {
++    QSync::Member member = group.memberAt( i );
+     MemberInfo mi( member );
+     QFrame *page = mMemberView->addPage( mi.name(), 
+       QString( "%1 (%2)" ).arg( mi.name() ).arg(member.pluginName()), mi.desktopIcon() );
+ 
+     QBoxLayout *pageLayout = new QVBoxLayout( page );
+     mConfigPages.append( page );
+ 
+     MemberConfig *memberConfig = new MemberConfig( page, member );
+-    mMemberConfigs.append( memberConfig );
++    mMemberConfigs.insert( page, memberConfig );
+     pageLayout->addWidget( memberConfig );
+ 
+     memberConfig->loadData();
+   }
+ }
+ 
+ void GroupConfig::saveConfig()
+ {
+   mProcess->group().save();
+ 
+-  QValueList<MemberConfig *>::ConstIterator it;
++  QMap<QWidget*, MemberConfig*>::ConstIterator it;
+   for ( it = mMemberConfigs.begin(); it != mMemberConfigs.end(); ++it )
+-    (*it)->saveData();
++    it.data()->saveData();
+ 
+   mCommonConfig->save();
+ 
++  const QSync::Group group = mProcess->group();
++  for ( int i = 0; i < group.memberCount(); ++i ) {
++    const QSync::Member member = group.memberAt( i );
++    mProcess->engine()->discover( member );
++  }
++
+   mProcess->reinitEngine();
+ }
+ 
++void GroupConfig::memberWidgetSelected( QWidget *wdg )
++{
++  /**
++   * Emit 'true' whenever a real member widget is selected by the
++   * user.
++   */
++  emit memberSelected( wdg != mCommonConfig->parentWidget() );
++}
++
+ void GroupConfig::addMember()
+ {
+   QSync::Plugin plugin = PluginPickerDialog::getPlugin( this );
+ 
+   if ( plugin.isValid() ) {
+@@ -174,6 +185,19 @@
+       mMemberView->showPage( index );
+     }
+   }
+ }
+ 
++void GroupConfig::removeMember()
++{
++  QWidget *selectedWidget = mMemberView->pageWidget( mMemberView->activePageIndex() );
++  if ( selectedWidget && mMemberConfigs.contains( selectedWidget ) ) {
++    MemberConfig *config = mMemberConfigs[ selectedWidget ];
++
++    SyncProcessManager::self()->removeMember( mProcess, config->member() );
++    mMemberConfigs.remove( selectedWidget );
++
++    QTimer::singleShot( 0, this, SLOT( updateMembers() ) );
++  }
++}
++
+ #include "groupconfig.moc"
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfigdialog.cpp kitchensync/src/groupconfigdialog.cpp
+--- kitchensync.orig/src/groupconfigdialog.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfigdialog.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -26,11 +26,11 @@
+ 
+ #include <qlayout.h>
+ 
+ GroupConfigDialog::GroupConfigDialog( QWidget *parent, SyncProcess *process )
+   : KDialogBase( parent, 0, true, i18n("Configure Synchronization Group"),
+-     Ok )
++     Ok | User1 | User2, Ok )
+ {
+   QFrame *topFrame = makeMainWidget();
+ 
+   QBoxLayout *topLayout = new QVBoxLayout( topFrame );
+ 
+@@ -38,10 +38,17 @@
+   topLayout->addWidget( mConfigWidget );
+ 
+   mConfigWidget->setSyncProcess( process );
+ 
+   setInitialSize( configDialogSize( "size_groupconfigdialog" ) );
++
++  enableButton( User1, false );
++  setButtonText( User1, i18n( "Remove Member" ) );
++
++  connect( mConfigWidget, SIGNAL( memberSelected( bool ) ), SLOT( memberSelected( bool ) ) );
++
++  setButtonText( User2, i18n("Add Member...") );
+ }
+ 
+ GroupConfigDialog::~GroupConfigDialog()
+ {
+   saveDialogSize( "size_groupconfigdialog" );
+@@ -52,6 +59,21 @@
+   mConfigWidget->saveConfig();
+ 
+   accept();
+ }
+ 
++void GroupConfigDialog::slotUser1()
++{
++  mConfigWidget->removeMember();
++}
++
++void GroupConfigDialog::slotUser2()
++{
++  mConfigWidget->addMember();
++}
++
++void GroupConfigDialog::memberSelected( bool selected )
++{
++  enableButton( User1, selected );
++}
++
+ #include "groupconfigdialog.moc"
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfigdialog.h kitchensync/src/groupconfigdialog.h
+--- kitchensync.orig/src/groupconfigdialog.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfigdialog.h	2008-05-31 11:31:48.000000000 +0200
+@@ -33,10 +33,15 @@
+     GroupConfigDialog( QWidget *parent, SyncProcess * );
+     ~GroupConfigDialog();
+ 
+   protected slots:
+     void slotOk();
++    void slotUser1();
++    void slotUser2();
++
++  private slots:
++    void memberSelected( bool );
+ 
+   private:
+     GroupConfig *mConfigWidget;
+ };
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupconfig.h kitchensync/src/groupconfig.h
+--- kitchensync.orig/src/groupconfig.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupconfig.h	2008-05-31 11:31:48.000000000 +0200
+@@ -38,25 +38,32 @@
+   public:
+     GroupConfig( QWidget *parent );
+ 
+     void setSyncProcess( SyncProcess *process );
+ 
++    void saveConfig();
++
++  public slots:
++    void addMember();
++    void removeMember();
++
+     void updateMembers();
+ 
+-    void saveConfig();
++  signals:
++    void memberSelected( bool );
+ 
+   protected slots:
+-    void addMember();
++    void memberWidgetSelected( QWidget* );
+ 
+   private:
+     QLabel *mNameLabel;
+ 
+     KJanusWidget *mMemberView;
+ 
+     SyncProcess *mProcess;
+ 
+     GroupConfigCommon *mCommonConfig;
+-    QValueList<MemberConfig *> mMemberConfigs;
+-    QValueList<QFrame *> mConfigPages;
++    QMap<QWidget*, MemberConfig*> mMemberConfigs;
++    QValueList<QFrame*> mConfigPages;
+ };
+ 
+ #endif
+diff --exclude=.svn -NrU5 kitchensync.orig/src/groupitem.cpp kitchensync/src/groupitem.cpp
+--- kitchensync.orig/src/groupitem.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/groupitem.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -31,10 +31,13 @@
+ #include <qlayout.h>
+ #include <qpixmap.h>
+ #include <qprogressbar.h>
+ #include <qvbox.h>
+ 
++#include <libqopensync/plugin.h>
++#include <libqopensync/pluginenv.h>
++
+ #include "memberinfo.h"
+ #include "multiconflictdialog.h"
+ #include "singleconflictdialog.h"
+ #include "syncprocessmanager.h"
+ 
+@@ -148,16 +151,13 @@
+     mTime->setText( i18n( "Not synchronized yet" ) );
+ 
+   mProgressBar->reset();
+   mProgressBar->hide();
+ 
+-  QSync::Group group = mSyncProcess->group();
+-  QSync::Group::Iterator memberIt( group.begin() );
+-  QSync::Group::Iterator memberEndIt( group.end() );
+-
+-  for ( ; memberIt != memberEndIt; ++memberIt ) {
+-    MemberItem *item = new MemberItem( mBox, mSyncProcess, *memberIt );
++  const QSync::Group group = mSyncProcess->group();
++  for ( int i = 0; i < group.memberCount(); ++i ) {
++    MemberItem *item = new MemberItem( mBox, mSyncProcess, group.memberAt( i ) );
+     item->show();
+     item->setStatusMessage( i18n( "Ready" ) );
+     mMemberItems.append( item );
+   }
+ }
+@@ -185,18 +185,15 @@
+ }
+ 
+ void GroupItem::change( const QSync::SyncChangeUpdate &update )
+ {
+   switch ( update.type() ) {
+-    case QSync::SyncChangeUpdate::Received:
++    case QSync::SyncChangeUpdate::Read:
+       mProcessedItems++;
+       mStatus->setText( i18n( "%1 entries read" ).arg( mProcessedItems ) );
+       break;
+-    case QSync::SyncChangeUpdate::ReceivedInfo:
+-      mStatus->setText( i18n( "Receive information" ) );
+-      break;
+-    case QSync::SyncChangeUpdate::Sent:
++    case QSync::SyncChangeUpdate::Written:
+       mProcessedItems--;
+       mStatus->setText( i18n( "%1 entries written" ).arg( mMaxProcessedItems - mProcessedItems ) );
+ 
+       mProgressBar->show();
+ 
+@@ -209,15 +206,11 @@
+           progress = 0;
+ 
+         mProgressBar->setProgress( 100 - progress );
+       }
+       break;
+-    case QSync::SyncChangeUpdate::WriteError:
+-      mStatus->setText( i18n( "Error" ) );
+-      KPassivePopup::message( update.result().message(), this );
+-      break;
+-    case QSync::SyncChangeUpdate::ReceiveError:
++    case QSync::SyncChangeUpdate::Error:
+       mStatus->setText( i18n( "Error" ) );
+       KPassivePopup::message( update.result().message(), this );
+       break;
+     default:
+       mStatus->setText( QString() );
+@@ -230,36 +223,36 @@
+ }
+ 
+ void GroupItem::engine( const QSync::SyncEngineUpdate &update )
+ {
+   switch ( update.type() ) {
+-    case QSync::SyncEngineUpdate::EndPhaseConnected:
++    case QSync::SyncEngineUpdate::Connected:
+       mStatus->setText( i18n( "Connected" ) );
+       mProgressBar->setProgress( 0 );
+       mSynchronizing = true;
+       mSyncAction->setText( "Abort Synchronization" );
+       break;
+-    case QSync::SyncEngineUpdate::EndPhaseRead:
++    case QSync::SyncEngineUpdate::Read:
+       mStatus->setText( i18n( "Data read" ) );
+       break;
+-    case QSync::SyncEngineUpdate::EndPhaseWrite:
++    case QSync::SyncEngineUpdate::Written:
+       mStatus->setText( i18n( "Data written" ) );
+       mProgressBar->setProgress( 100 );
+       mProcessedItems = mMaxProcessedItems = 0;
+       break;
+-    case QSync::SyncEngineUpdate::EndPhaseDisconnected:
++    case QSync::SyncEngineUpdate::Disconnected:
+       mStatus->setText( i18n( "Disconnected" ) );
+       break;
+     case QSync::SyncEngineUpdate::Error:
+       mStatus->setText( i18n( "Synchronization failed" ) );
+       KPassivePopup::message( update.result().message(), this );
+       this->update();
+ 
+       mSynchronizing = false;
+       mSyncAction->setText( i18n( "Synchronize Now" ) );
+       break;
+-    case QSync::SyncEngineUpdate::SyncSuccessfull:
++    case QSync::SyncEngineUpdate::SyncSuccessful:
+       mStatus->setText( i18n( "Successfully synchronized" ) );
+       mSyncProcess->group().setLastSynchronization( QDateTime::currentDateTime() );
+       mSyncProcess->group().save();
+       this->update();
+ 
+@@ -286,32 +279,26 @@
+     if ( (*it)->member() == update.member() ) {
+       switch ( update.type() ) {
+         case QSync::SyncMemberUpdate::Connected:
+           (*it)->setStatusMessage( i18n( "Connected" ) );
+           break;
+-        case QSync::SyncMemberUpdate::SentChanges:
++        case QSync::SyncMemberUpdate::Read:
+           (*it)->setStatusMessage( i18n( "Changes read" ) );
+           break;
+-        case QSync::SyncMemberUpdate::CommittedAll:
++        case QSync::SyncMemberUpdate::Written:
+           (*it)->setStatusMessage( i18n( "Changes written" ) );
+           break;
+         case QSync::SyncMemberUpdate::Disconnected:
+           (*it)->setStatusMessage( i18n( "Disconnected" ) );
+           break;
+-        case QSync::SyncMemberUpdate::ConnectError:
+-          (*it)->setStatusMessage( i18n( "Error: %1" ).arg( update.result().message() ) );
++        case QSync::SyncMemberUpdate::SyncDone:
++          (*it)->setStatusMessage( i18n( "Synchronization done" ) );
+           break;
+-        case QSync::SyncMemberUpdate::GetChangesError:
+-          (*it)->setStatusMessage( i18n( "Error: %1" ).arg( update.result().message() ) );
++        case QSync::SyncMemberUpdate::Discovered:
++          (*it)->setStatusMessage( i18n( "Discovered" ) );
+           break;
+-        case QSync::SyncMemberUpdate::CommittedAllError:
+-          (*it)->setStatusMessage( i18n( "Error: %1" ).arg( update.result().message() ) );
+-          break;
+-        case QSync::SyncMemberUpdate::SyncDoneError:
+-          (*it)->setStatusMessage( i18n( "Error: %1" ).arg( update.result().message() ) );
+-          break;
+-        case QSync::SyncMemberUpdate::DisconnectedError:
++        case QSync::SyncMemberUpdate::Error:
+           (*it)->setStatusMessage( i18n( "Error: %1" ).arg( update.result().message() ) );
+           break;
+         default:
+           break;
+       }
+@@ -350,15 +337,12 @@
+   : QWidget( parent ), mSyncProcess( process ), mMember( member )
+ {
+   QFont boldFont;
+   boldFont.setBold( true );
+ 
+-  MemberInfo mi( member );
+-
+-  QPixmap icon = mi.smallIcon();
+-
+-  QSync::Plugin plugin = member.plugin();
++  const MemberInfo mi( member );
++  const QPixmap icon = mi.smallIcon();
+ 
+   QVBoxLayout *layout = new QVBoxLayout( this );
+ 
+   QHBox* box = new QHBox( this );
+   box->setMargin( 5 );
+@@ -376,11 +360,18 @@
+   mDescription = new QLabel( nameBox );
+ 
+   mStatus = new QLabel( box );
+ 
+   mMemberName->setText( member.name() );
+-  mDescription->setText( plugin.longName() );
++
++  const QSync::PluginEnv *env = SyncProcessManager::self()->pluginEnv();
++  const QSync::Plugin plugin = env->pluginByName( member.pluginName() );
++
++  if ( plugin.isValid() )
++    mDescription->setText( plugin.longName() );
++  else
++    mDescription->setText( i18n("Plugin \"%1\" can't get initialized!").arg( member.pluginName() ) );
+ }
+ 
+ void MemberItem::setStatusMessage( const QString &msg )
+ {
+   mStatus->setText( msg );
+diff --exclude=.svn -NrU5 kitchensync.orig/src/kitchensync.desktop kitchensync/src/kitchensync.desktop
+--- kitchensync.orig/src/kitchensync.desktop	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/kitchensync.desktop	2008-05-31 11:31:48.000000000 +0200
+@@ -1,20 +1,20 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=KitchenSync
+ Name[pt]=KitchenSyncFilter
++Name[pt_BR]=KitchenSyncFilter
+ Name[sv]=Kitchensync
+ GenericName=Synchronization
+ GenericName[af]=Sinkronisasie
+ GenericName[bg]=Синхронизация
+ GenericName[ca]=Sincronització
+ GenericName[cs]=Synchronizace
+ GenericName[cy]=Cydamseriad
+ GenericName[da]=Synkronisering
+ GenericName[de]=Abgleich
+ GenericName[el]=Συγχρονισμός
+-GenericName[eo]=Sinkronigo
+ GenericName[es]=Sincronización
+ GenericName[et]=Sünkroniseerimine
+ GenericName[eu]=Sinkronizazioa
+ GenericName[fa]=همگامی
+ GenericName[fi]=Synkronointi
+@@ -45,11 +45,10 @@
+ GenericName[sr@Latn]=Sinhronizacija
+ GenericName[sv]=Synkronisering
+ GenericName[ta]=கூட்டிணைப்பு
+ GenericName[tr]=Senkronizasyon
+ GenericName[uk]=Синхронізація
+-GenericName[zh_CN]=同步
+ Exec=kitchensync
+ Icon=kitchensync
+ Type=Application
+ DocPath=kitchensync/index.html
+ Terminal=false
+diff --exclude=.svn -NrU5 kitchensync.orig/src/mainwidget.cpp kitchensync/src/mainwidget.cpp
+--- kitchensync.orig/src/mainwidget.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/mainwidget.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -24,11 +24,11 @@
+ #include "groupconfigdialog.h"
+ #include "groupview.h"
+ #include "syncprocess.h"
+ #include "syncprocessmanager.h"
+ 
+-#include <libqopensync/environment.h>
++#include <libqopensync/result.h>
+ 
+ #include <kaboutdata.h>
+ #include <kaction.h>
+ #include <kdebug.h>
+ #include <kinputdialog.h>
+@@ -44,17 +44,10 @@
+   : QWidget( widget, name ), mGUIClient( guiClient )
+ {
+   initGUI();
+   initActions();
+ 
+-  /** apply object type filter hack **/
+-  int count = SyncProcessManager::self()->count();
+-  for ( int i = 0; i < count; ++i ) {
+-    SyncProcessManager::self()->at( i )->applyObjectTypeFilter();
+-  }
+-  /** apply object type filter hack **/
+-
+   mGroupView->updateView();
+ 
+   connect( SyncProcessManager::self(), SIGNAL( changed() ),
+            mGroupView, SLOT( updateView() ) );
+   connect( SyncProcessManager::self(), SIGNAL( syncProcessChanged( SyncProcess* ) ),
+@@ -123,16 +116,23 @@
+ 
+ void MainWidget::addGroup()
+ {
+   bool ok;
+   QString name = KInputDialog::getText( i18n("Create Synchronization Group"),
+-    i18n("Name for new synchronization group."), QString::null, &ok, this );
++    i18n("Name for new synchronization group."), i18n( "Default" ), &ok, this );
+   if ( ok ) {
++    SyncProcess *process = SyncProcessManager::self()->byGroupName( name );
++    if ( process ) {
++      KMessageBox::error( this, i18n( "A group with the same name exists already.\nPlease choose another name." ),
++                          i18n( "Duplicated Group Name" ) );
++      return;
++    }
++
+     SyncProcessManager::self()->addGroup( name );
+     enableActions();
+ 
+-    SyncProcess *process = SyncProcessManager::self()->byGroupName( name );
++    process = SyncProcessManager::self()->byGroupName( name );
+     if ( process )
+       editGroup( process );
+   }
+ }
+ 
+diff --exclude=.svn -NrU5 kitchensync.orig/src/Makefile.am kitchensync/src/Makefile.am
+--- kitchensync.orig/src/Makefile.am	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/Makefile.am	2008-05-31 11:31:48.000000000 +0200
+@@ -22,11 +22,11 @@
+                             groupconfig.cpp groupitem.cpp groupview.cpp memberconfig.cpp \
+                             syncprocess.cpp syncprocessmanager.cpp connectionwidgets.cpp \
+                             pluginpicker.cpp configgui.cpp configguiblank.cpp configguifile.cpp \
+                             memberinfo.cpp groupconfigcommon.cpp kwidgetlist.cpp \
+                             configguipalm.cpp conflictdialog.cpp singleconflictdialog.cpp \
+-                            addresseediffalgo.cpp calendardiffalgo.cpp \
++                            addresseediffalgo.cpp calendardiffalgo.cpp xmldiffalgo.cpp \
+                             htmldiffalgodisplay.cpp genericdiffalgo.cpp multiconflictdialog.cpp \
+                             configguiirmc.cpp \
+                             configguisyncmlobex.cpp configguisyncmlhttp.cpp configguiopie.cpp  \
+                             configguignokii.cpp configguigcalendar.cpp configguildap.cpp configguigpe.cpp \
+                             configguijescs.cpp configguievo2.cpp configguimoto.cpp configguisynce.cpp \
+diff --exclude=.svn -NrU5 kitchensync.orig/src/memberconfig.cpp kitchensync/src/memberconfig.cpp
+--- kitchensync.orig/src/memberconfig.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/memberconfig.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -21,10 +21,12 @@
+ #include "memberconfig.h"
+ 
+ #include "configgui.h"
+ #include "memberinfo.h"
+ 
++#include <libqopensync/result.h>
++
+ #include <klocale.h>
+ #include <kmessagebox.h>
+ 
+ #include <qlabel.h>
+ #include <qlayout.h>
+@@ -65,15 +67,18 @@
+   QString txt = mGui->save();
+ 
+   if ( txt.isEmpty() ) {
+     KMessageBox::sorry( this, i18n("Configuration of %1 is empty.").arg( mMember.pluginName() ) );
+   } else {
+-    QByteArray cfg = txt.utf8();
+-    cfg.truncate(cfg.size() - 1); /* discard NUL terminator */
+-    mMember.setConfiguration( cfg );
++    mMember.setConfiguration( txt.utf8() );
+     mMember.setName( mGui->instanceName() );
+     // TODO: Check for save() error.
+     mMember.save();
+   }
+ }
+ 
++QSync::Member MemberConfig::member() const
++{
++  return mMember;
++}
++
+ #include "memberconfig.moc"
+diff --exclude=.svn -NrU5 kitchensync.orig/src/memberconfig.h kitchensync/src/memberconfig.h
+--- kitchensync.orig/src/memberconfig.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/memberconfig.h	2008-05-31 11:31:48.000000000 +0200
+@@ -36,10 +36,12 @@
+     ~MemberConfig();
+ 
+     void loadData();
+     void saveData();
+ 
++    QSync::Member member() const;
++
+   private:
+     QSync::Member mMember;
+ 
+     ConfigGui *mGui;
+ };
+diff --exclude=.svn -NrU5 kitchensync.orig/src/multiconflictdialog.cpp kitchensync/src/multiconflictdialog.cpp
+--- kitchensync.orig/src/multiconflictdialog.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/multiconflictdialog.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -37,12 +37,14 @@
+       : KWidgetListItem( parent ),
+         mChange( change )
+     {
+       QGridLayout *layout = new QGridLayout( this, 2, 1, KDialog::marginHint(), KDialog::spacingHint() );
+ 
+-      MemberInfo mi( change.member() );
+-      layout->addWidget( new QLabel( mi.name(), this ), 0, 0 );
++      // TODO change doesn't contain member as struct member .. use SyncMapping to determine the correct member.
++      //MemberInfo mi( change.member() );
++      //layout->addWidget( new QLabel( mi.name(), this ), 0, 0 );
++      layout->addWidget( new QLabel( "PORTING TODO", this ), 0, 0 );
+ 
+       QString type;
+       switch ( change.changeType() ) {
+         case QSync::SyncChange::UnknownChange:
+           type = i18n( "Unknown" );
+diff --exclude=.svn -NrU5 kitchensync.orig/src/pluginpicker.cpp kitchensync/src/pluginpicker.cpp
+--- kitchensync.orig/src/pluginpicker.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/pluginpicker.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -22,11 +22,11 @@
+ #include "pluginpicker.h"
+ 
+ #include "memberinfo.h"
+ #include "syncprocessmanager.h"
+ 
+-#include <libqopensync/environment.h>
++#include <libqopensync/pluginenv.h>
+ 
+ #include <kdialog.h>
+ #include <kglobal.h>
+ #include <kiconloader.h>
+ #include <klocale.h>
+@@ -75,16 +75,18 @@
+ 
+ void PluginPicker::updatePluginList()
+ {
+   mPluginList->clear();
+ 
+-  QSync::Environment *env = SyncProcessManager::self()->environment();
++  const QSync::PluginEnv *env = SyncProcessManager::self()->pluginEnv();
++
++  for ( int i = 0; i < env->pluginCount(); ++i ) {
++    QSync::Plugin plugin = env->pluginAt( i );
++
++    if ( plugin.isValid() )
++      mPluginList->appendItem( new PluginItem( mPluginList, plugin ) );
+ 
+-  QSync::Environment::PluginIterator it( env->pluginBegin() );
+-  for( ; it != env->pluginEnd(); ++it ) {
+-    QSync::Plugin plugin = *it;
+-    mPluginList->appendItem( new PluginItem( mPluginList, plugin ) );
+   }
+ }
+ 
+ QSync::Plugin PluginPicker::selectedPlugin() const
+ {
+diff --exclude=.svn -NrU5 kitchensync.orig/src/singleconflictdialog.cpp kitchensync/src/singleconflictdialog.cpp
+--- kitchensync.orig/src/singleconflictdialog.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/singleconflictdialog.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -25,10 +25,11 @@
+ #include <qlayout.h>
+ #include <qpushbutton.h>
+ 
+ #include "addresseediffalgo.h"
+ #include "genericdiffalgo.h"
++#include "xmldiffalgo.h"
+ #include "htmldiffalgodisplay.h"
+ #include "memberinfo.h"
+ 
+ #include "singleconflictdialog.h"
+ 
+@@ -41,20 +42,26 @@
+   QSync::SyncChange leftChange = mapping.changeAt( 0 );
+   QSync::SyncChange rightChange = mapping.changeAt( 1 );
+ 
+   if ( format == "file" ) {
+     mDiffAlgo = new KSync::GenericDiffAlgo( leftChange.data(), rightChange.data() );
+-  } else if ( format == "vcard" ) {
+-  } else if ( format == "calendar" ) {
+-  } else if ( format == "xml-contact" ) {
++  } else if ( format == "vcard21" || format == "vcard30" ) {
+     mDiffAlgo = new KSync::AddresseeDiffAlgo( leftChange.data(), rightChange.data() );
++  } else if ( format == "calendar" ) {
++  } else if ( format == "xmlformat-contact" || format == "xmlformat-note"
++	   || format == "xmlformat-event" || format == "xmlformat-todo") { 
++    mDiffAlgo = new KSync::XmlDiffAlgo( leftChange.data(), rightChange.data() );
+   }
+ 
++// TODO: SyncChange doesn't have member as struct member anymore ...
++// Use SyncMapping to determine the member .. see msynctool for example implementation of conlicthandler
++#if 0  
+   MemberInfo miLeft( leftChange.member() );
+   mDiffAlgoDisplay->setLeftSourceTitle( miLeft.name() );
+   MemberInfo miRight( rightChange.member() );
+   mDiffAlgoDisplay->setRightSourceTitle( miRight.name() );
++#endif  
+ 
+   if ( mDiffAlgo ) {
+     mDiffAlgo->addDisplay( mDiffAlgoDisplay );
+     mDiffAlgo->run();
+   }
+@@ -97,10 +104,11 @@
+ void SingleConflictDialog::initGUI()
+ {
+   QGridLayout *layout = new QGridLayout( this, 3, 4, KDialog::marginHint(), KDialog::spacingHint() );
+ 
+   layout->addMultiCellWidget( new QLabel( i18n( "A conflict has appeared, please solve it manually." ), this ), 0, 0, 0, 3 );
++
+   mDiffAlgoDisplay = new KSync::HTMLDiffAlgoDisplay( this );
+ 
+   layout->addMultiCellWidget( mDiffAlgoDisplay, 1, 1, 0, 3 );
+ 
+   QPushButton *button = new QPushButton( i18n( "Use Item" ), this );
+diff --exclude=.svn -NrU5 kitchensync.orig/src/syncprocess.cpp kitchensync/src/syncprocess.cpp
+--- kitchensync.orig/src/syncprocess.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/syncprocess.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -17,14 +17,16 @@
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ */
+ 
+ #include <libqopensync/engine.h>
+-#include <libqopensync/environment.h>
++#include <libqopensync/member.h>
++#include <libqopensync/result.h>
+ 
+ #include <kdebug.h>
+ #include <klocale.h>
++#include <kmessagebox.h>
+ 
+ #include "syncprocess.h"
+ #include "syncprocessmanager.h"
+ 
+ using namespace QSync;
+@@ -58,51 +60,38 @@
+   return i18n( "Ready" );
+ }
+ 
+ QSync::Result SyncProcess::addMember( const QSync::Plugin &plugin )
+ {
+-  QSync::Member member = mGroup.addMember();
+-  QSync::Result result = member.instance( plugin );
++  QSync::Member member = mGroup.addMember( plugin );
++  QSync::Result result = member.instance();
+ 
+   if ( !result.isError() )
+     mGroup.save();
+ 
+   return result;
+ }
+ 
++void SyncProcess::removeMember( const QSync::Member &member )
++{
++  member.cleanup();
++  mGroup.removeMember( member );
++  mGroup.save();
++}
++
+ void SyncProcess::reinitEngine()
+ {
+   mEngine->finalize();
+   delete mEngine;
+   mEngine = new QSync::Engine( mGroup );
+   Result result = mEngine->initialize();
+-  if ( result.isError() )
++  if ( result.isError() ) {
+     kdDebug() << "SyncProcess::reinitEngine: " << result.message() << endl;
++    KMessageBox::error( 0, i18n("Error initializing Synchronization Engine for group \"%1\":\n %2")
++		    .arg( mGroup.name() ).arg( result.message() ) );
+ 
+-  applyObjectTypeFilter();
++  }
+ 
+   emit engineChanged( mEngine );
+ }
+ 
+-void SyncProcess::applyObjectTypeFilter()
+-{
+-  const QSync::Conversion conversion = SyncProcessManager::self()->environment()->conversion();
+-  const QStringList objectTypes = conversion.objectTypes();
+-  const QStringList activeObjectTypes = mGroup.config().activeObjectTypes();
+-
+-  for ( uint i = 0; i < objectTypes.count(); ++i ) {
+-    if ( activeObjectTypes.contains( objectTypes[ i ] ) ) {
+-      kdDebug() << "Enabled object type: " <<  objectTypes[ i ] << endl;
+-      /*
+-       * This is not required. Also this lead to filtering problems when sync with "file-sync".
+-       * Uncomment this line again when OpenSync is fixed!
+-       *
+-       * mGroup.setObjectTypeEnabled( objectTypes[ i ], true );
+-       */
+-    } else {
+-      kdDebug() << "Disabled object type: " <<  objectTypes[ i ] << endl;
+-      mGroup.setObjectTypeEnabled( objectTypes[ i ], false );
+-    }
+-  }
+-}
+-
+ #include "syncprocess.moc"
+diff --exclude=.svn -NrU5 kitchensync.orig/src/syncprocess.h kitchensync/src/syncprocess.h
+--- kitchensync.orig/src/syncprocess.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/syncprocess.h	2008-05-31 11:31:48.000000000 +0200
+@@ -42,16 +42,14 @@
+ 
+     QString groupStatus() const;
+     QString memberStatus( const QSync::Member &member ) const;
+ 
+     QSync::Result addMember( const QSync::Plugin &plugin );
++    void removeMember( const QSync::Member &member );
+ 
+     void reinitEngine();
+ 
+-    /** apply object type filter hack **/
+-    void applyObjectTypeFilter();
+-
+   signals:
+     /**
+       This signal is emitted whenever the engine has changed ( reinitialized ).
+      */
+     void engineChanged( QSync::Engine *engine );
+diff --exclude=.svn -NrU5 kitchensync.orig/src/syncprocessmanager.cpp kitchensync/src/syncprocessmanager.cpp
+--- kitchensync.orig/src/syncprocessmanager.cpp	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/syncprocessmanager.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -21,11 +21,14 @@
+ 
+ #include "syncprocessmanager.h"
+ 
+ #include "syncprocess.h"
+ 
+-#include <libqopensync/environment.h>
++#include <libqopensync/groupenv.h>
++#include <libqopensync/member.h>
++#include <libqopensync/pluginenv.h>
++#include <libqopensync/result.h>
+ 
+ #include <kstaticdeleter.h>
+ #include <kmessagebox.h>
+ #include <klocale.h>
+ 
+@@ -41,30 +44,40 @@
+   return mSelf;
+ }
+ 
+ SyncProcessManager::SyncProcessManager()
+ {
+-  mEnvironment = new QSync::Environment;
+-  QSync::Result result = mEnvironment->initialize();
++  mGroupEnv = new QSync::GroupEnv;
++  QSync::Result result = mGroupEnv->initialize();
+   if ( result.isError() ) {
+     KMessageBox::error( 0, i18n("Error initializing OpenSync.\n%1")
+       .arg( result.message() ) );
+   } else {
+-    init( mEnvironment );
++    initGroup( mGroupEnv );
+   }
++
++  mPluginEnv = new QSync::PluginEnv;
++  result = mPluginEnv->initialize();
++  if ( result.isError() ) {
++    KMessageBox::error( 0, i18n("Error initializing OpenSync.\n%1")
++      .arg( result.message() ) );
++  } else {
++//    initPlugin( mPluginEnv );
++  }
++
+ }
+ 
+ SyncProcessManager::~SyncProcessManager()
+ {
+   QValueList<SyncProcess*>::Iterator it;
+   for ( it = mProcesses.begin(); it != mProcesses.end(); ++it )
+     delete *it;
+ 
+   mProcesses.clear();
+ 
+-  mEnvironment->finalize();
+-  delete mEnvironment;
++  mGroupEnv->finalize();
++  delete mGroupEnv;
+ }
+ 
+ int SyncProcessManager::count() const
+ {
+   return mProcesses.count();
+@@ -100,12 +113,11 @@
+ 
+ void SyncProcessManager::addGroup( const QString &name )
+ {
+   SyncProcess* process = byGroupName( name );
+   if ( !process ) {
+-    QSync::Group group = mEnvironment->addGroup();
+-    group.setName( name );
++    QSync::Group group = mGroupEnv->addGroup( name );
+     group.save();
+ 
+     mProcesses.append( new SyncProcess( group ) );
+ 
+     emit changed();
+@@ -118,26 +130,25 @@
+   if ( syncProcess ) {
+     mProcesses.remove( syncProcess );
+     const QSync::Group group = syncProcess->group();
+     delete syncProcess;
+ 
+-    mEnvironment->removeGroup( group );
++    mGroupEnv->removeGroup( group );
+ 
+     emit changed();
+   }
+ }
+ 
+-void SyncProcessManager::init( QSync::Environment *environment )
++void SyncProcessManager::initGroup( QSync::GroupEnv *groupEnv )
+ {
+-  QSync::Environment::GroupIterator it( environment->groupBegin() );
+-  for ( ; it != environment->groupEnd(); ++it ) {
++  for ( int i = 0; i < groupEnv->groupCount(); ++i ) {
+     /**
+      * We check whether the group is valid before we append them
+      * to mProcesses. That avoids crashes if the plugin of one of
+      * the members isn't loaded (e.g. not installed).
+      */
+-    const QSync::Group group = *it;
++    const QSync::Group group = groupEnv->groupAt( i );
+     int count = group.memberCount();
+ 
+     bool isValid = true;
+     for ( int i = 0; i < count; ++i ) {
+       const QSync::Member member = group.memberAt( i );
+@@ -147,11 +158,11 @@
+         break;
+       }
+     }
+ 
+     if ( isValid )
+-      mProcesses.append( new SyncProcess( *it ) );
++      mProcesses.append( new SyncProcess( group ) );
+   }
+ 
+   emit changed();
+ }
+ 
+@@ -167,6 +178,15 @@
+   }
+ 
+   return result;
+ }
+ 
++void SyncProcessManager::removeMember( SyncProcess *process, const QSync::Member &member )
++{
++  Q_ASSERT( process );
++
++  process->removeMember( member );
++  process->group().save();
++  emit syncProcessChanged( process );
++}
++
+ #include "syncprocessmanager.moc"
+diff --exclude=.svn -NrU5 kitchensync.orig/src/syncprocessmanager.h kitchensync/src/syncprocessmanager.h
+--- kitchensync.orig/src/syncprocessmanager.h	2008-05-31 11:37:19.000000000 +0200
++++ kitchensync/src/syncprocessmanager.h	2008-05-31 11:31:48.000000000 +0200
+@@ -24,11 +24,12 @@
+ #include <qobject.h>
+ 
+ #include <libqopensync/group.h>
+ 
+ namespace QSync {
+-class Environment;
++class GroupEnv;
++class PluginEnv;
+ }
+ 
+ class SyncProcess;
+ 
+ class SyncProcessManager : public QObject
+@@ -41,13 +42,18 @@
+       Destroys the SyncProcessList.
+      */
+     ~SyncProcessManager();
+ 
+     /**
+-      Return OpenSync Environment.
++      Return OpenSync GroupEnv.
+     */
+-    QSync::Environment *environment() const { return mEnvironment; }
++    QSync::GroupEnv *groupEnv() const { return mGroupEnv; }
++
++    /**
++      Return OpenSync PluginEnv.
++    */
++    QSync::PluginEnv *pluginEnv() const { return mPluginEnv; }
+ 
+     /**
+       Returns the number of SyncProcesses.
+      */
+     int count() const;
+@@ -80,21 +86,28 @@
+     /**
+       Adds @param plugin instance as member to the group of @param process.
+      */
+     QSync::Result addMember( SyncProcess *process, const QSync::Plugin &plugin );
+ 
++    /**
++      Removes the @param member from the group of @param process.
++     */
++    void removeMember( SyncProcess *process, const QSync::Member &member );
++
+   signals:
+     void changed();
+     void syncProcessChanged( SyncProcess *process );
+ 
+   private:
+     SyncProcessManager();
+ 
+-    void init( QSync::Environment *environment );
++    void initGroup( QSync::GroupEnv *groupEnv );
++//    void initPlugin( QSync::PluginEnv *pluginEnv );
+ 
+     QValueList<SyncProcess*> mProcesses;
+-    QSync::Environment *mEnvironment;
++    QSync::GroupEnv *mGroupEnv;
++    QSync::PluginEnv *mPluginEnv;
+ 
+     static SyncProcessManager *mSelf;
+ };
+ 
+ #endif
+diff --exclude=.svn -NrU5 kitchensync.orig/src/xmldiffalgo.cpp kitchensync/src/xmldiffalgo.cpp
+--- kitchensync.orig/src/xmldiffalgo.cpp	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/src/xmldiffalgo.cpp	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,166 @@
++/*
++    This file is part of KitchenSync.
++
++    Copyright (c) 2006 Daniel Gollub <dgollub@suse.de> 
++
++    This program is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#include "xmldiffalgo.h"
++
++#include <kdebug.h>
++
++using namespace KSync;
++
++#ifndef KDE_USE_FINAL
++// With --enable-final, we get the (identical) compareString from
++// addresseediffalgo.cpp
++//
++static bool compareString( const QString &left, const QString &right )
++{
++  if ( left.isEmpty() && right.isEmpty() )
++    return true;
++  else
++    return left == right;
++}
++#endif
++
++XmlDiffAlgo::XmlDiffAlgo( const QString &leftXml, const QString &rightXml )
++{
++  kdDebug() << __func__ << " " << __LINE__ << endl;
++
++  mLeftXml.setContent( leftXml );
++  mRightXml.setContent( rightXml );
++
++}
++
++XmlDiffAlgo::XmlDiffAlgo( const QDomDocument &leftXml, const QDomDocument &rightXml )
++  : mLeftXml( leftXml ), mRightXml( rightXml )
++{
++  kdDebug() << __func__ << " " << __LINE__ << endl;
++}
++
++void XmlDiffAlgo::appendSingleNodes(QDomElement &element, bool isLeft)
++{
++  QDomNode node;
++
++  for ( node = element.firstChild(); !node.isNull(); node = node.nextSibling() ) {
++    QDomElement child = node.toElement();
++
++    if (isLeft)
++      additionalLeftField( node.nodeName(), child.text() );
++    else
++      additionalRightField( node.nodeName(), child.text() );
++  }
++
++}
++
++void XmlDiffAlgo::appendConflictNodes(QDomElement &leftElement, QDomElement &rightElement)
++{
++  QDomNode left, right;
++  QDomElement leftChild, rightChild;
++
++  for ( left = leftElement.firstChild(); !left.isNull(); left = left.nextSibling() ) {
++    leftChild = left.toElement();
++
++    for ( right = rightElement.firstChild(); !right.isNull(); right = right.nextSibling() ) {
++      rightChild = right.toElement();
++
++      if ( leftChild.tagName() != rightChild.tagName() )
++        continue;
++
++      if (leftChild.text().isEmpty() || rightChild.text().isEmpty())
++        continue;
++
++      QString id = leftChild.tagName();
++      if (id == "Content")
++        id = left.parentNode().nodeName();
++
++      conflictField( id, leftChild.text(), rightChild.text() );
++
++      left.parentNode().removeChild( left );
++      left = leftElement.firstChild();
++
++      right.parentNode().removeChild( right );
++      right = rightElement.firstChild();
++
++    }
++  }
++}
++
++void XmlDiffAlgo::compareNode(QDomElement &leftElement, QDomElement &rightElement)
++{
++  QDomNode left, right;
++  QDomElement leftChild, rightChild;
++  QDomNodeList nlist;
++top:;
++
++  for ( left = leftElement.firstChild(); !left.isNull(); left = left.nextSibling() ) {
++    leftChild = left.toElement();
++
++    for ( right = rightElement.firstChild(); !right.isNull(); right = right.nextSibling() ) {
++      rightChild = right.toElement();
++
++      if (leftChild.tagName() != rightChild.tagName())
++        continue;
++
++      if ( left.childNodes().count() > 1 && right.childNodes().count() > 1 ) {
++        compareNode( leftChild, rightChild );
++
++        if ( !left.hasChildNodes() && !right.hasChildNodes() ) {
++          left.parentNode().removeChild( left );
++          right.parentNode().removeChild( right );
++          goto top;
++        }
++
++        break;
++      }
++
++      if ( leftChild.text() == rightChild.text() ) {
++        QString id = leftChild.tagName();
++
++        if ( id == "Content" )
++          id = left.parentNode().nodeName(); 
++ 
++	if ( id != "Type" )
++          //matchingField( id, leftChild.text(), rightChild.text() );
++
++        left.parentNode().removeChild( left );
++        right.parentNode().removeChild( right );
++        goto top;
++      }
++    }
++  }
++
++  appendConflictNodes(rightElement, leftElement);
++
++  appendSingleNodes(rightElement, false);
++  appendSingleNodes(leftElement, true);
++}
++
++void XmlDiffAlgo::run()
++{
++  kdDebug() << __func__ << endl;	
++  begin();
++
++  QDomElement leftElement = mLeftXml.documentElement();
++  QDomElement rightElement = mRightXml.documentElement();
++
++  compareNode( leftElement, rightElement );
++
++  end();
++}
++
+diff --exclude=.svn -NrU5 kitchensync.orig/src/xmldiffalgo.h kitchensync/src/xmldiffalgo.h
+--- kitchensync.orig/src/xmldiffalgo.h	1970-01-01 01:00:00.000000000 +0100
++++ kitchensync/src/xmldiffalgo.h	2008-05-31 11:31:48.000000000 +0200
+@@ -0,0 +1,54 @@
++/*
++    This file is part of KitchenSync 
++
++    Copyright (c) 2006 Daniel Gollub <dgollub@suse.de>
++
++    This program is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++    Boston, MA 02110-1301, USA.
++*/
++
++#ifndef KSYNC_XMLDIFFALGO_H
++#define KSYNC_XMLDIFFALGO_H
++
++#include <qdom.h>
++
++#include <libkdepim/diffalgo.h>
++
++using namespace KPIM;
++
++namespace KSync {
++
++class XmlDiffAlgo : public DiffAlgo
++{
++  public:
++    XmlDiffAlgo( const QString &leftXml, const QString &rightXml );
++    XmlDiffAlgo( const QDomDocument &leftXml, const QDomDocument &rightXml );
++
++    void run();
++
++  private:
++    void appendConflictNodes(QDomElement &leftElement, QDomElement &rightElement);
++    void appendSingleNodes(QDomElement &element, bool isLeft);
++
++
++    void compareNode(QDomElement &leftElement, QDomElement &rightElement);
++
++    QDomDocument mLeftXml;
++    QDomDocument mRightXml;
++};
++
++}
++
++#endif
