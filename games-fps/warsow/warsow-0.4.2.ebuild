@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.2 2008/04/06 02:40:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.3 2008/06/05 09:24:31 opfer Exp $
 
 inherit eutils toolchain-funcs versionator games
 
@@ -13,7 +13,7 @@ SRC_URI="http://tastyspleen.net/quake/downloads/mods/warsow/${MY_P}_unified.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug dedicated irc openal opengl"
 
 UIRDEPEND="media-libs/jpeg
