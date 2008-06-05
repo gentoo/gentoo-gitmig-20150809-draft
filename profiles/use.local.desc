@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3571 2008/06/04 22:00:25 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3572 2008/06/05 16:22:45 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -670,6 +670,7 @@ dev-util/monodevelop:aspnet - Enable ASP.NET support
 dev-util/monodevelop:c++ - Enable support for C/C++ programming languages
 dev-util/netbeans:c++ - Adds Netbeans C/C++ Pack
 dev-util/nsis:config-log - Enable the logging facility (useful in debugging installers)
+dev-util/nsis:prebuilt-system - Use the pre-compiled System.dll from the release to workaround the System::Call issue under GCC
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/strace:aio - Enable libaio support
 dev-util/subversion:extras - Install extras scripts (examples, tools, hooks)
