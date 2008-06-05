@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.3 2008/06/04 07:39:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.4 2008/06/05 08:58:34 opfer Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/libvisual/${P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0.4"
-KEYWORDS="~amd64 ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="alsa debug esd gtk jack mplayer opengl"
 
 RDEPEND="~media-libs/libvisual-${PV}
