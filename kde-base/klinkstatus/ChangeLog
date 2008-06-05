@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.86 2008/05/18 15:34:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.87 2008/06/05 21:56:22 keytoaster Exp $
+
+*klinkstatus-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +klinkstatus-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of klinkstatus.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> klinkstatus-3.5.9.ebuild:
   amd64/x86 stable, bug #221063
