@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chardet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.3 2007/02/06 12:20:54 blubb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.4 2008/06/05 20:50:07 dev-zero Exp $
+
+*chardet-1.0.1 (05 Jun 2008)
+
+  05 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> +chardet-1.0.1.ebuild:
+  Version bump
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org> chardet-1.0.ebuild:
   stable on amd64; bug 163608
