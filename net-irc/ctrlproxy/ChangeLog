@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ctrlproxy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.27 2008/04/15 13:14:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.28 2008/06/05 18:18:48 armin76 Exp $
+
+  05 Jun 2008; Raúl Porcel <armin76@gentoo.org> -ctrlproxy-3.0.5.ebuild,
+  ctrlproxy-3.0.6.ebuild:
+  alpha/ia64/x86 stable, remove old
 
 *ctrlproxy-3.0.6 (15 Apr 2008)
 
