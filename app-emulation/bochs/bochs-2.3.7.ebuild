@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.6.ebuild,v 1.3 2008/06/05 02:22:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.1 2008/06/05 02:22:51 lu_zero Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -33,6 +33,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack "${P}.tar.gz"
 	cd "${S}"
+
+	epatch "${FILESDIR}/bochs-2.3.7-typos.patch"
 
 	# we already downloaded dlxlinux4.tar.gz so let the Makefile cp it instead
 	# of downloading it again
@@ -77,24 +79,53 @@ src_compile() {
 		myconf="${myconf} --enable-all-optimizations"
 
 	econf \
+		--enable-pae \
+		--enable-large-pages \
+		--enable-global-pages \
+		--enable-mtrr \
+		--enable-guest2host-tlb \
+		--enable-repeat-speedups \
+		--enable-trace-cache \
+		--enable-icache \
+		--enable-fast-function-calls \
+		--enable-ignore-bad-msr \
+		--enable-port-e9-hack \
+		--enable-disasm \
+		--enable-logging \
+		--enable-raw-serial \
+		--enable-vbe \
+		--enable-clgd54xx \
+		--enable-fpu \
+		--enable-vme \
+		--enable-alignment-check \
+		--enable-sep \
+		--enable-popcnt \
+		--enable-monitor-mwait \
+		--enable-gameport \
+		--enable-iodebug \
 		--prefix=/usr \
 		--enable-ne2000 \
 		--enable-sb16=linux \
 		--enable-plugins \
 		--enable-cdrom \
 		--enable-pci \
+		--enable-pcidev \
+		--enable-pnic \
 		--enable-mmx \
 		--enable-sse=2 \
 		--enable-3dnow \
 		--enable-cpu-level=6 \
+		--enable-smp \
 		--with-nogui \
+		--enable-xsave \
+		--enable-aes \
 		$(use_enable usb) \
 		$(use_enable readline) \
 		$(use_enable debugger) \
 		$(use_with X) \
 		$(use_with sdl) \
 		$(use_with svga) \
-		$(use_with acpi) \
+		$(use_enable acpi) \
 		${myconf} || \
 		die "econf failed"
 
