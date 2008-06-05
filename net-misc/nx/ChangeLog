@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.25 2008/05/29 10:37:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.26 2008/06/05 15:05:05 pva Exp $
+
+  05 Jun 2008; Peter Volkov <pva@gentoo.org> nx-3.2.0.ebuild:
+  amd64 stable, bug #222967.
 
   29 May 2008; Christian Faulhammer <opfer@gentoo.org> nx-3.2.0.ebuild:
   x86 stable, bug #222967
