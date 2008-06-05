@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.69 2008/05/18 15:15:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.70 2008/06/05 22:13:48 keytoaster Exp $
+
+*kreadconfig-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kreadconfig-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kreadconfig.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> kreadconfig-3.5.9.ebuild:
   amd64/x86 stable, bug #221063
