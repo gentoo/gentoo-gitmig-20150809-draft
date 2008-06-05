@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kturtle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kturtle/ChangeLog,v 1.91 2008/05/18 17:12:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kturtle/ChangeLog,v 1.92 2008/06/05 22:29:26 keytoaster Exp $
+
+*kturtle-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kturtle-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kturtle.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> kturtle-3.5.9.ebuild:
   amd64/x86 stable, bug #221063
