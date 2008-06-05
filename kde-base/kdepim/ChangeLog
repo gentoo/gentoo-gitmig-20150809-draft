@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.310 2008/05/18 21:44:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.311 2008/06/05 22:46:42 loki_val Exp $
+
+*kdepim-3.5.9-r2 (05 Jun 2008)
+
+  05 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/kitchensync-3.5.9-OpenSync0.30API.patch, +kdepim-3.5.9-r2.ebuild:
+  Adding libopensync >=0.36 compatible version to tree per IRC convo with
+  zlin. Bug 202974.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> kdepim-3.5.9-r1.ebuild:
   amd64/x86 stable, bug #221063
