@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/pothana2k
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.1 2008/06/05 11:13:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.2 2008/06/05 11:44:24 loki_val Exp $
+
+*pothana2k-2006-r1 (05 Jun 2008)
+
+  05 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/65-pothana2k.conf, -pothana2k-2006.ebuild,
+  +pothana2k-2006-r1.ebuild:
+  adding fontconfig file to enable rendering Telugu even though a single
+  glyph is missing
 
 *pothana2k-2006 (05 Jun 2008)
 
