@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.4 2006/11/20 18:06:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.5 2008/06/05 11:57:38 remi Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="dev-python/gnome-python-desktop
 	x11-themes/gnome-themes"
 
 RDEPEND="${DEPEND}
-	gnome-base/control-center"
+	gnome-base/gnome-control-center"
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
