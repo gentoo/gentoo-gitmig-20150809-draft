@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.11 2008/05/30 09:22:22 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.12 2008/06/05 22:43:14 keytoaster Exp $
+
+*okular-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> +okular-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of okular.
 
   30 May 2008; Bo Ørsted Andresen <zlin@gentoo.org> okular-4.0.4.ebuild:
   KDE4_BUILT_WITH_USE_CHECK is now always an array. Bug #216863.
