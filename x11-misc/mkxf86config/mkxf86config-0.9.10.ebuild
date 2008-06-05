@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.1 2008/04/10 03:50:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.2 2008/06/05 18:49:14 wolf31o2 Exp $
 
 inherit eutils
 
-DESCRIPTION="xorg-x11 configuration builder for Gentoo - used only on LiveCD"
-SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
+DESCRIPTION="xorg-x11 configuration builder - used only on LiveCD"
+SRC_URI="http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
 SLOT="0"
