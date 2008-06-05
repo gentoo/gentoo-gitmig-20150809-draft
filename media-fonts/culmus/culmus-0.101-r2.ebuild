@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r1.ebuild,v 1.9 2008/06/05 12:37:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r2.ebuild,v 1.1 2008/06/05 12:37:03 loki_val Exp $
 
 inherit font
 
@@ -13,30 +13,26 @@ SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
 	http://culmus.sourceforge.net/fancy/comix.tar.gz
 	http://culmus.sourceforge.net/fancy/ktav-yad.tar.gz"
 HOMEPAGE="http://culmus.sourceforge.net/"
-KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="|| ( GPL-2 LICENSE-BITSTREAM )"
 IUSE=""
 
+S="${WORKDIR}/${P}"
+FONT_S="${S}"
 FONT_SUFFIX="afm pfa"
-DOCS="CHANGES LICENSE LICENSE-BITSTREAM"
+FONT_CONF=( "65-culmus.conf" )
+DOCS="CHANGES"
 
 src_unpack() {
 	unpack ${A}
-	mv *.{afm,pfa} "${S}"
-}
-
-src_install () {
-	font_src_install
-
-	insinto /etc/fonts/conf.d/
-	doins culmus.conf
-	dosym /etc/fonts/conf.d/culmus.conf /etc/fonts/conf.d/10-culmus.conf
+	mv *.afm *.pfa "${S}"/
+	cd "${S}"
+	mv culmus.conf 65-culmus.conf
 }
 
 pkg_postinst() {
-	elog "Please add ${FONTPATH} to your FontPath"
-	elog "in XF86Config to make the fonts available to all X11 apps and"
-	elog "not just those that use fontconfig (the latter category includes"
-	elog "kde 3.1 and gnome 2.2)."
+	elog "This font contains support for fontconfig, which may make"
+	elog "it render more smoothly. To enable it, do:"
+	elog "eselect fontconfig enable 65-culmus.conf"
 }
