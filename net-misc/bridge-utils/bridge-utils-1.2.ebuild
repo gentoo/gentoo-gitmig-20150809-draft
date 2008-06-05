@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.10 2008/04/28 18:07:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.11 2008/06/05 17:48:08 robbat2 Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -21,7 +21,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	WANT_AUTOMAKE=1.9 eautomake || die "Failed to run autoconf"
 	WANT_AUTOCONF=2.5 eautoconf || die "Failed to run autoconf"
 }
