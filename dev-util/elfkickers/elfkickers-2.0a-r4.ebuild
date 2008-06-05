@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.5 2008/06/02 17:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.6 2008/06/05 06:29:54 corsair Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~arm hppa ~mips ~ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND="app-misc/pax-utils"

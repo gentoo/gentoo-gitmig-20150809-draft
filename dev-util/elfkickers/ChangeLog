@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.26 2008/06/02 17:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.27 2008/06/05 06:29:54 corsair Exp $
+
+  05 Jun 2008; Markus Rothe <corsair@gentoo.org> elfkickers-2.0a-r4.ebuild:
+  Stable on ppc64; bug #197752
 
   02 Jun 2008; Jeroen Roovers <jer@gentoo.org> elfkickers-2.0a-r4.ebuild:
   Stable for HPPA (bug #197752).
