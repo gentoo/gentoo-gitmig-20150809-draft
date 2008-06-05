@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.21 2008/03/07 20:15:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.22 2008/06/05 19:55:11 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -52,7 +52,7 @@ src_unpack() {
 		|| die "setting statedir"
 	sed -i \
 		-e "s:GENTOO_HACKDIR:${HACKDIR}:" include/config.h \
-		|| die "seting hackdir"
+		|| die "setting hackdir"
 	# set the default pager from the environment bug #52122
 	if [[ -n "${PAGER}" ]] ; then
 		sed -i \

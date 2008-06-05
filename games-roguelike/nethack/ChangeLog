@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.28 2008/03/07 20:15:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.29 2008/06/05 19:55:11 wolf31o2 Exp $
+
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  nethack-3.4.3-r1.ebuild:
+  Small typo fix.
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   nethack-3.4.3-r1.ebuild:
