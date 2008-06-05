@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.1 2008/04/17 10:39:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.2 2008/06/05 21:26:46 tove Exp $
 
 MY_P=${P/_beta/-BETA-}
 
@@ -25,7 +25,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dobin www/rem2html || die "dobin failed"
 
-	dodoc README COPYRIGHT WINDOWS www/README.* || die "dodoc failed"
+	dodoc docs/WHATSNEW examples/defs.rem www/README.* || die "dodoc failed"
 
 	if ! use tk ; then
 		rm "${D}"/usr/bin/tkremind "${D}"/usr/share/man/man1/tkremind* \
