@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.95 2008/05/18 21:14:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.96 2008/06/05 21:30:57 keytoaster Exp $
+
+*kdegames-meta-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kdegames-meta-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kdegames-meta.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> kdegames-meta-3.5.9.ebuild:
   amd64/x86 stable, bug #221063
