@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heavygear2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/ChangeLog,v 1.19 2008/02/29 18:45:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/ChangeLog,v 1.20 2008/06/05 19:06:45 wolf31o2 Exp $
+
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Removing myself as maintainer.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> heavygear2-1.0b.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
