@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.23 2008/03/13 23:55:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.24 2008/06/05 21:50:54 eva Exp $
+
+*gnome-phone-manager-0.51 (05 Jun 2008)
+
+  05 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-phone-manager-0.51.ebuild:
+  bump to 0.51. Add spell checking to "Send Message", fix accessing devices
+  via IrDA, USB and serial cables.
 
 *gnome-phone-manager-0.50 (13 Mar 2008)
 
