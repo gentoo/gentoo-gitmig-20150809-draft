@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.3.ebuild,v 1.2 2008/06/03 02:01:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.3-r1.ebuild,v 1.1 2008/06/05 14:15:22 gurligebis Exp $
 
-inherit toolchain-funcs linux-info
+inherit toolchain-funcs linux-info eutils
 
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ipv6 logwatch madwifi ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
+	>=dev-libs/libnl-1.1
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
 		net-wireless/madwifi-old ) )"
@@ -48,24 +49,43 @@ generate_config() {
 	echo "CONFIG_EAP_GPSK=y" >> ${CONFIG}
 	echo "CONFIG_EAP_GPSK_SHA256=y" >> ${CONFIG}
 
+	einfo "Enabling drivers: "
+
 	# drivers
 	echo "CONFIG_DRIVER_HOSTAP=y" >> ${CONFIG}
+	einfo "  HostAP driver enabled"
 	echo "CONFIG_DRIVER_WIRED=y" >> ${CONFIG}
+	einfo "  Wired driver enabled"
 	echo "CONFIG_DRIVER_PRISM54=y" >> ${CONFIG}
+	einfo "  Prism54 driver enabled"
 
 	if use madwifi; then
 		# Add include path for madwifi-driver headers
+		einfo "  Madwifi driver enabled"
 		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
 		echo "CONFIG_DRIVER_MADWIFI=y" >> ${CONFIG}
+	else
+		einfo "  HostAP driver disabled"
 	fi
 
-	# REMOVED FOR NOW, BROKEN
-	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
-	#	# Kernel source has the mac80211 subsystem, so we enable the driver
-	#	echo "CONFIG_DRIVER_DEVICESCAPE=y" >> ${CONFIG}
-	#	echo "WIRELESS_DEV=\"${KV_DIR}\"" >> ${CONFIG}
-	#	echo "CFLAGS += -I\$(WIRELESS_DEV)/net/mac80211" >> ${CONFIG}
-	#fi
+	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 || ${KV_PATCH} -ge 26 ]] ; then
+		# Test if header version is new enough (2.6.26+)
+		if [ "$(grep NL80211_MNTR_FLAG_COOK_FRAMES /usr/include/linux/nl80211.h)" ]; then
+			# Test to see if cfg.c contains to code to enable AP mode
+			if [ "$(grep NL80211_IFTYPE_AP: ${KV_DIR}/net/mac80211/cfg.c)" ]; then
+				einfo "  nl80211 driver enabled"
+				echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
+				echo "CFLAGS += -I/usr/include/netlink" >> ${CONFIG}
+				echo "LIBS += -L/usr/lib" >> ${CONFIG}
+			else
+				einfo "  nl80211 driver disabled (due to no AP support in cfg.c file)"
+			fi
+		else
+			einfo "  nl80211 driver disabled (due to header version below 2.6.26)"
+		fi
+	else
+		einfo "  nl80211 driver disabled (due to kernel version below 2.6.26)"
+	fi
 
 	# misc
 	echo "CONFIG_PKCS12=y" >> ${CONFIG}
@@ -86,6 +106,9 @@ generate_config() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/004-nl80211-rename-STAT-to-INFO.patch"
 
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf"
