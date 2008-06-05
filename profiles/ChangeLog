@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1494 2008/06/05 08:19:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1495 2008/06/05 11:53:49 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  05 Jun 2008; Samuli Suominen <drac@gentoo.org> package.mask:
+  Masked dev-libs/libffi for removal wrt #163724.
 
   05 Jun 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask dirac now that it passes its tests and ffmpeg trunk can use it, it
