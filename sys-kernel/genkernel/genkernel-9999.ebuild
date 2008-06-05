@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.7 2008/03/14 19:54:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.8 2008/06/05 18:30:56 wolf31o2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -12,7 +12,7 @@ VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
 VERSION_LVM='2.02.28'
 
-MY_HOME="http://dev.gentoo.org/~wolf31o2"
+MY_HOME="http://wolf31o2.org"
 RH_HOME="ftp://sources.redhat.com/pub"
 DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
 BB_HOME="http://www.busybox.net/downloads"
@@ -36,7 +36,7 @@ then
 else
 	inherit bash-completion eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		${MY_HOME}/${P}.tar.bz2
+		${MY_HOME}/sources/genkernel/${P}.tar.bz2
 		${COMMON_URI}"
 fi
 
