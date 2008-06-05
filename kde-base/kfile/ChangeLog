@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.7 2008/05/15 23:32:55 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.8 2008/06/05 21:43:32 keytoaster Exp $
+
+*kfile-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> +kfile-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kfile.
 
 *kfile-4.0.4 (15 May 2008)
 
