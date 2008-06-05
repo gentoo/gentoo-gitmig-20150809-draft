@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.217 2008/06/02 09:51:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.218 2008/06/05 11:56:57 remi Exp $
+
+  05 Jun 2008; Rémi Cardona <remi@gentoo.org> totem-2.20.3.ebuild,
+  totem-2.20.4.ebuild:
+  pkgmove to gnome-base/gnome-control-center
 
   02 Jun 2008; Alexis Ballier <aballier@gentoo.org> totem-2.22.2-r1.ebuild:
   keyword ~x86-fbsd

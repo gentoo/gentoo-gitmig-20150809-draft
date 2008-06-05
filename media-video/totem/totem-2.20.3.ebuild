@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.9 2008/03/17 15:21:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.10 2008/06/05 11:56:57 remi Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -45,7 +45,7 @@ RDEPEND=">=dev-libs/glib-2.13.4
 				>=gnome-base/libgnomeui-2.4
 				>=gnome-base/gnome-desktop-2.2
 				>=gnome-base/nautilus-2.10
-	 			>=gnome-base/control-center-2.18
+	 			>=gnome-base/gnome-control-center-2.18
 			)
 	 hal? ( =sys-apps/hal-0.5* )
 	 lirc? ( app-misc/lirc )
