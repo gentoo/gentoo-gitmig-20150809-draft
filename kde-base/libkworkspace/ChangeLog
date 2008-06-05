@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.7 2008/05/16 00:48:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.8 2008/06/05 22:39:31 keytoaster Exp $
+
+*libkworkspace-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +libkworkspace-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of libkworkspace.
 
 *libkworkspace-4.0.4 (15 May 2008)
 
