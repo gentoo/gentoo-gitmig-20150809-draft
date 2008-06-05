@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/duma
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.3 2007/10/10 00:35:22 nerdboy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.4 2008/06/05 03:04:58 nerdboy Exp $
+
+*duma-2.5.13 (05 Jun 2008)
+
+  05 Jun 2008; Steve Arnold <nerdboy@gentoo.org> +duma-2.5.13.ebuild,
+  duma-2.5.8.ebuild, duma-2.4.27.ebuild:
+  Added latest version; removed patch, and simplified install function.
+  Closes bug #219011.  Also fixed minor QA issues in all three versions.
 
 *duma-2.5.8 (10 Oct 2007)
 

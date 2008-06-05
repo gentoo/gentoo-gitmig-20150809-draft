@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.3 2007/10/10 00:35:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.4 2008/06/05 03:04:58 nerdboy Exp $
 
 inherit eutils versionator multilib toolchain-funcs
 # flag-o-matic
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_unpack(){
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-types.patch"
 	epatch "${FILESDIR}/${P}-make.patch"
