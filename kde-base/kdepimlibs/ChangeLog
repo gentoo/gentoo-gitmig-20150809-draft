@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.10 2008/05/15 23:23:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.11 2008/06/05 21:35:27 keytoaster Exp $
+
+*kdepimlibs-4.0.5 (05 Jun 2008)
+
+  05 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kdepimlibs-4.0.5.ebuild:
+  Added the KDE 4.0.5 version of kdepimlibs.
 
 *kdepimlibs-4.0.4 (15 May 2008)
 
