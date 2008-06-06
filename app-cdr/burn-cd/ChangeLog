@@ -1,0 +1,9 @@
+# ChangeLog for app-cdr/burn-cd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burn-cd/ChangeLog,v 1.1 2008/06/06 21:38:03 drac Exp $
+
+*burn-cd-1.7.4 (06 Jun 2008)
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org> +burn-cd-1.7.4.ebuild:
+  Initial commit for bug 204841. Ebuild by Alexander Glyzov.
+
