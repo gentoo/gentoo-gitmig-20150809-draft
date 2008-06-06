@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.116 2008/06/05 11:54:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.117 2008/06/06 18:51:06 pva Exp $
+
+  06 Jun 2008; Peter Volkov <pva@gentoo.org> dejavu-2.25-r1.ebuild:
+  keyword ~amd64, bug #224541
 
   05 Jun 2008; Raúl Porcel <armin76@gentoo.org> dejavu-2.25-r1.ebuild:
   Re-add ~alpha/~ia64/~sparc wrt #224541
