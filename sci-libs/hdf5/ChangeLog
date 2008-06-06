@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.26 2008/06/04 07:08:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.27 2008/06/06 15:04:44 markusle Exp $
+
+  06 Jun 2008; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.5-r1.ebuild,
+  hdf5-1.6.6.ebuild:
+  Removed quotes around myconf since they break configure 
+  (see bug #225021). Thanks much to Nuno Sucena Almeida 
+  <slug@aeminium.org> for pointing this out.
 
   04 Jun 2008; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.6.ebuild:
   Adding ~hppa back in (doh! needed a full tree updated)

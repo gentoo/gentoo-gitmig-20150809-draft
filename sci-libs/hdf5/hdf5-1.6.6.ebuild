@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.8 2008/06/04 07:08:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.9 2008/06/06 15:04:44 markusle Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -20,7 +20,6 @@ DEPEND="!sparc? ( mpi? ( >=sys-cluster/mpich2-1.0.6
 	szip? ( sci-libs/szip )
 	zlib? ( sys-libs/zlib )
 	threads? ( virtual/libc )
-	sys-devel/gcc
 	sys-apps/coreutils
 	sys-apps/which
 	sys-process/time"
@@ -141,7 +140,7 @@ src_compile() {
 		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
 		--enable-shared --with-pic \
-		"${myconf}" || die "configure failed"
+		${myconf} || die "configure failed"
 
 	# restore the ARCH environment variable
 	ARCH="${EBUILD_ARCH}"

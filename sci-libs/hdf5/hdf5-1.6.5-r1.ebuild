@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.6 2008/02/04 07:58:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.7 2008/06/06 15:04:44 markusle Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -18,7 +18,6 @@ DEPEND="mpi? ( virtual/mpi )
 	ssl? ( dev-libs/openssl )
 	szip? ( sci-libs/szip )
 	zlib? ( sys-libs/zlib )
-	sys-devel/gcc
 	sys-apps/coreutils
 	sys-apps/which
 	sys-process/time"
