@@ -1,6 +1,11 @@
 # ChangeLog for net-im/silc-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.35 2008/04/24 18:51:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.36 2008/06/06 10:45:13 armin76 Exp $
+
+*silc-server-1.1.8 (06 Jun 2008)
+
+  06 Jun 2008; Raúl Porcel <armin76@gentoo.org> +silc-server-1.1.8.ebuild:
+  Version bump
 
 *silc-server-1.1.6 (24 Apr 2008)
 
