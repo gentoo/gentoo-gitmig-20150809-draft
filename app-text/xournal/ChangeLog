@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.1 2008/04/06 12:30:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.2 2008/06/06 07:58:27 opfer Exp $
+
+  06 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  xournal-0.4.2.1.ebuild:
+  stable x86, bug 224897
 
 *xournal-0.4.2.1 (06 Apr 2008)
 
