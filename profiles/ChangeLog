@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1501 2008/06/06 19:54:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1502 2008/06/06 19:56:59 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  06 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> desc/lirc_devices.desc:
+  Added imon_lcd to list of possible lirc_devices, thanks to Jan Paesmans
+  <jan.paesmans@gmail.com>.
 
   06 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added athena, data, dawn, gdml, geant3, global, openinventor, raytracerx,
