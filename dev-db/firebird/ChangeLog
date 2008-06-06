@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.93 2008/04/19 01:35:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.94 2008/06/06 02:43:42 wltjr Exp $
+
+*firebird-2.1.0.17798.0-r1 (06 Jun 2008)
+*firebird-2.0.3.12981.0-r7 (06 Jun 2008)
+
+  06 Jun 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird.conf.d, +firebird-2.0.3.12981.0-r7.ebuild,
+  -firebird-2.1.0.17798.0.ebuild, +firebird-2.1.0.17798.0-r1.ebuild:
+  New conf.d file with updated root path to resolve bug #224715. Removed
+  legacy env.d file.
 
 *firebird-2.1.0.17798.0 (19 Apr 2008)
 
