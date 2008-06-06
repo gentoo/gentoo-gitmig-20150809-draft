@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.15 2008/05/10 15:27:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.16 2008/06/06 15:29:40 jer Exp $
+
+  06 Jun 2008; Jeroen Roovers <jer@gentoo.org> gdl-0.7.11.ebuild:
+  Marked ~hppa (maybe remi).
 
   10 May 2008; Raúl Porcel <armin76@gentoo.org> gdl-0.7.6.ebuild:
   sparc stable
