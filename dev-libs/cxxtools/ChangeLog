@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cxxtools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.4 2008/05/03 11:30:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.5 2008/06/06 18:39:00 zzam Exp $
+
+*cxxtools-1.4.8 (06 Jun 2008)
+
+  06 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> +cxxtools-1.4.8.ebuild:
+  Version bumped.
 
 *cxxtools-1.4.7 (03 May 2008)
 
