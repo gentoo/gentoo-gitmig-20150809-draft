@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.2.ebuild,v 1.5 2008/06/06 06:01:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.2.ebuild,v 1.6 2008/06/06 08:12:37 opfer Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="dvdr flac libnotify mp3 nls vorbis"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc x86"
 
 RDEPEND="app-cdr/cdrdao
 	virtual/cdrtools
