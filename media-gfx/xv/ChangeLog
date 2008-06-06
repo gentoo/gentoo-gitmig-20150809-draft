@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.90 2008/05/06 22:31:25 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.91 2008/06/06 06:06:45 corsair Exp $
+
+  06 Jun 2008; Markus Rothe <corsair@gentoo.org> xv-3.10a-r15.ebuild:
+  Stable on ppc64; bug #225085
 
 *xv-3.10a-r15 (06 May 2008)
 
