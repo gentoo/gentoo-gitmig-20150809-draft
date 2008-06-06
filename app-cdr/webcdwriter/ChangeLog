@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/webcdwriter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.14 2007/10/24 02:00:30 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.15 2008/06/06 21:00:37 drac Exp $
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  webcdwriter-2.8.0-r1.ebuild:
+  Use virtual/mpg123 wrt #222473.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -webcdwriter-2.6.8-r1.ebuild, -webcdwriter-2.7.3.ebuild,

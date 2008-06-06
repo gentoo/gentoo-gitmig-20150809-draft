@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.2 2007/10/24 02:00:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.3 2008/06/06 21:00:37 drac Exp $
 
 inherit eutils java-pkg-2
 
@@ -17,7 +17,7 @@ IUSE="pam mp3 sox vorbis"
 RDEPEND="
 	app-cdr/cdrdao
 	virtual/cdrtools
-	mp3? ( media-sound/mpg123 )
+	mp3? ( virtual/mpg123 )
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )
 	>=virtual/jre-1.4
