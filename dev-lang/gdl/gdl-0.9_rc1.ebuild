@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.3 2008/06/06 14:31:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.4 2008/06/06 15:56:03 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_compile() {
 
-	# need to check for old plplot 
+	# need to check for old plplot
 	local myconf
 	if has_version '<sci-libs/plplot-5.9.0'; then
 		myconf="${myconf} --enable-oldplplot"
