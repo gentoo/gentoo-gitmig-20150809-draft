@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.2 2008/05/24 17:52:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc1.ebuild,v 1.3 2008/06/06 14:31:45 markusle Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -44,6 +44,13 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# need to check for old plplot 
+	local myconf
+	if has_version '<sci-libs/plplot-5.9.0'; then
+		myconf="${myconf} --enable-oldplplot"
+	fi
+
 	use proj && append-cppflags -DPJ_LIB__
 	econf \
 	  $(use_with python) \
@@ -53,6 +60,7 @@ src_compile() {
 	  $(use_with netcdf) \
 	  $(use_with imagemagick Magick) \
 	  $(use_with proj libproj4) \
+	  ${myconf} \
 	  || die "econf failed"
 
 	emake || die "emake failed"

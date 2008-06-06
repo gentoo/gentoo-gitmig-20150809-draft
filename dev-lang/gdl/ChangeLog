@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.8 2008/05/24 17:52:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.9 2008/06/06 14:31:45 markusle Exp $
+
+  06 Jun 2008; Markus Dittrich <markusle@gentoo.org> gdl-0.9_rc1.ebuild:
+  Make gdl backward compatible to <plplot-5.9 (fixes bug #225027).
 
   24 May 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gdl-0.9_rc1-magick.patch, +files/gdl-0.9_rc1-gcc4.3.patch,
