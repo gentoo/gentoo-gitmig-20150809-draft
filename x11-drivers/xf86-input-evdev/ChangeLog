@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.76 2008/04/09 17:19:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.77 2008/06/06 22:07:08 dberkholz Exp $
+
+*xf86-input-evdev-1.99.2 (06 Jun 2008)
+
+  06 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.99.2/0001-Fail-if-the-device-cannot-be-grabbed-during-the-prob.pa
+  tch,
+  +files/1.99.2/0002-Check-for-XINPUT-ABI-parameters-of-InitValuatorClas.pat
+  ch, +xf86-input-evdev-1.99.2.ebuild:
+  Bump. This reverts a lot of code and goes back to a driver based off the
+  1.1 series. It's apparently intended to now satisfy the basic input needs
+  instead of doing everything and replacing drivers like synaptics.
 
   09 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   xf86-input-evdev-1.2.0.ebuild:

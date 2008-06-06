@@ -1,0 +1,40 @@
+From 15e0091f0b4b0d7dff29da143d405255a1c3bc12 Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter@cs.unisa.edu.au>
+Date: Wed, 21 May 2008 16:48:32 +0930
+Subject: [PATCH] Fail if the device cannot be grabbed during the probe.
+
+If the grab fails, this is most likely a sign that the device has been grabbed
+already (probably by a device specified in xorg.conf). So let's not add the
+device to the server's input device list, since it won't generate events
+anyway.
+
+Exception: keyboards and kernel 2.4 are not affected.
+---
+ src/evdev.c |   11 ++++++++---
+ 1 files changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/src/evdev.c b/src/evdev.c
+index e212c14..13f03d3 100644
+--- a/src/evdev.c
++++ b/src/evdev.c
+@@ -901,9 +901,14 @@ EvdevProbe(InputInfoPtr pInfo)
+     int i, has_axes, has_buttons, has_keys;
+     EvdevPtr pEvdev = pInfo->private;
+ 
+-    if (ioctl(pInfo->fd, EVIOCGRAB, (void *)1) && errno == EINVAL) {
+-        /* keyboards are unsafe in 2.4 */
+-        pEvdev->kernel24 = 1;
++    if (ioctl(pInfo->fd, EVIOCGRAB, (void *)1)) {
++        if (errno == EINVAL) {
++            /* keyboards are unsafe in 2.4 */
++            pEvdev->kernel24 = 1;
++        } else {
++            xf86Msg(X_ERROR, "Grab failed. Device already configured?\n");
++            return 1;
++        }
+     } else {
+         ioctl(pInfo->fd, EVIOCGRAB, (void *)0);
+     }
+-- 
+1.5.5.1
+
