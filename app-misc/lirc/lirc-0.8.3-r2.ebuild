@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.1 2008/05/19 12:10:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.2 2008/06/06 20:04:01 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -44,7 +44,7 @@ IUSE_LIRC_DEVICES_DIRECT="
 	devinput digimatrix dsp dvico ea65
 	exaudio flyvideo gvbctv5pci hauppauge
 	hauppauge_dvb hercules_smarttv_stereo
-	igorplugusb imon imon_knob imon_pad imon_rsc
+	igorplugusb imon imon_knob imon_lcd imon_pad imon_rsc
 	irdeo irdeo_remote irman irreal it87
 	knc_one kworld leadtek_0007 leadtek_0010
 	leadtek_pvr2000 livedrive_midi
@@ -70,7 +70,7 @@ IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
-	all atilibusb sasem igorplugusb imon imon_pad imon_pad2keys
+	all atilibusb sasem igorplugusb imon imon_lcd imon_pad imon_pad2keys
 	imon_rsc streamzap mceusb mceusb2 xboxusb"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
