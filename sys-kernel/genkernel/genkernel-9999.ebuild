@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.8 2008/06/05 18:30:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.9 2008/06/06 16:12:20 wolf31o2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -12,7 +12,7 @@ VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
 VERSION_LVM='2.02.28'
 
-MY_HOME="http://wolf31o2.org"
+MY_HOME="http://dev.gentoo.org/~wolf31o2"
 RH_HOME="ftp://sources.redhat.com/pub"
 DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
 BB_HOME="http://www.busybox.net/downloads"
@@ -49,7 +49,7 @@ RESTRICT=""
 # Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 # Release Engineering, it's easier for us to deal with all arches at once.
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 KEYWORDS=""
 IUSE="ibm selinux"
 
@@ -89,6 +89,17 @@ src_install() {
 	doins -r "${S}"/* || die "doins"
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
 		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
+
+	# Copy files to /var/cache/genkernel/src
+	elog "Copying files to /var/cache/genkernel/src..."
+	mkdir -p "${D}"/var/cache/genkernel/src
+	cp -f \
+		"${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
+		"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
+		"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
+		"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
+		"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
+		"${D}"/var/cache/genkernel/src || die "Copying distfiles..."
 
 	dobashcompletion "${FILESDIR}"/genkernel.bash
 }

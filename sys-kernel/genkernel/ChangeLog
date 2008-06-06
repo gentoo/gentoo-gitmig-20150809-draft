@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.203 2008/06/05 18:30:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.204 2008/06/06 16:12:20 wolf31o2 Exp $
+
+*genkernel-3.4.10-r1 (06 Jun 2008)
+
+  06 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.10.ebuild, +genkernel-3.4.10-r1.ebuild,
+  genkernel-9999.ebuild:
+  Fixed the copying of our tarballs. Thanks to Andrew Gaffney for pointing
+  out that I had forgotten to add this code to the genkernel 3.4.10 ebuild.
 
 *genkernel-3.4.10 (05 Jun 2008)
 
