@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.27 2008/06/04 12:33:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.28 2008/06/06 17:01:55 bluebird Exp $
+
+  06 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gtk-engines-qtcurve-0.59.4.ebuild:
+  add ~sparc keyword, bug 218436
 
 *gtk-engines-qtcurve-0.59.4 (04 Jun 2008)
 

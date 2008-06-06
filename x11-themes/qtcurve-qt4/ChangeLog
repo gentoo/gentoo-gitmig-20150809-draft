@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.24 2008/06/04 12:27:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.25 2008/06/06 17:06:59 bluebird Exp $
+
+  06 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
+  qtcurve-qt4-0.59.3.ebuild:
+  add ~sparc keyword, bug 218436
 
 *qtcurve-qt4-0.59.3 (04 Jun 2008)
 

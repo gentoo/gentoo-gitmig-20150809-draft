@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.3.ebuild,v 1.1 2008/06/04 12:27:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.3.ebuild,v 1.2 2008/06/06 17:06:59 bluebird Exp $
 
 EAPI="1"
 inherit cmake-utils
@@ -12,7 +12,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
 
 DEPEND="|| ( >=x11-libs/qt-4.0:4 x11-libs/qt-gui:4 )"
 
