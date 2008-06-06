@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.13 2008/05/15 09:49:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.14 2008/06/06 08:16:10 remi Exp $
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
@@ -74,7 +74,7 @@
 ->=media-sound/rhythmbox-0.11.4
 ->=media-video/totem-2.22
 -gnome-base/gnome-settings-daemon
-->=gnome-base/control-center-2.22
+->=gnome-base/gnome-control-center-2.22
 ->=gnome-base/gnome-session-2.22
 ->=gnome-base/eel-2.22
 -gnome-base/gvfs

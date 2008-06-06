@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.4 2008/02/14 15:44:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.5 2008/06/06 08:16:11 remi Exp $
+
+  06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  pkgmove to gnome-base/gnome-control-center
 
   14 Feb 2008; Raúl Porcel <armin76@gentoo.org> virtuals:
   Remove useless virtual/bittorrent

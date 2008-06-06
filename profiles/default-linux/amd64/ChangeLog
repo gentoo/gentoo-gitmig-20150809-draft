@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.143 2008/05/18 14:22:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.144 2008/06/06 08:16:10 remi Exp $
+
+  06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  pkgmove to gnome-base/gnome-control-center
 
   18 May 2008; Marijn Schouten <hkBst@gentoo.org> use.mask:
   don't use mask mzscheme anymore, dev-libs/mzscheme has been integrated

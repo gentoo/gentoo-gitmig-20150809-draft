@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.mask,v 1.5 2008/05/15 09:49:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.mask,v 1.6 2008/06/06 08:16:09 remi Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (03 Apr 2008)
 # The Great GNOME 2.22 Unmask (tm)
@@ -68,7 +68,7 @@
 ->=media-sound/rhythmbox-0.11.4
 ->=media-video/totem-2.22
 -gnome-base/gnome-settings-daemon
-->=gnome-base/control-center-2.22
+->=gnome-base/gnome-control-center-2.22
 ->=gnome-base/gnome-session-2.22
 ->=gnome-base/eel-2.22
 -gnome-base/gvfs

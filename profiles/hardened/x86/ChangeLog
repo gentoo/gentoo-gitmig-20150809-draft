@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.16 2007/09/22 19:58:26 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.17 2008/06/06 08:16:11 remi Exp $
+
+  06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  pkgmove to gnome-base/gnome-control-center
 
   22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Masking app-editors/{ghex,conglomerate} and app-pda/gnome-pilot since they
