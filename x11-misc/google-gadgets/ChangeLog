@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/google-gadgets
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.1 2008/06/06 16:51:12 loki_val Exp $
+
+*google-gadgets-0.9.2 (06 Jun 2008)
+
+  06 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +google-gadgets-0.9.2.ebuild:
+  Initial commit.
+
