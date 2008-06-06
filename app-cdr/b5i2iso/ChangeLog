@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/b5i2iso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.7 2008/05/29 06:06:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.8 2008/06/06 21:03:24 drac Exp $
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org> b5i2iso-0.1.ebuild,
+  b5i2iso-0.2.ebuild:
+  Use mirrors:// for berlios.
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
