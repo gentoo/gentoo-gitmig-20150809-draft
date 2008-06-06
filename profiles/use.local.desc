@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3572 2008/06/05 16:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3573 2008/06/06 19:11:27 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1944,6 +1944,7 @@ sci-misc/h5utils:octave - Build Octave plugins
 sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
 sci-misc/nco:udunits - Add udunits files support
 sci-misc/ncview:udunits - Add udunits files support
+sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
 sci-physics/root:cern - Enable hbook i/o functionality to root (needs cernlib)
 sci-physics/root:cint7 - Build the experimental C/C++ interpretor version 7
 sci-physics/root:math - Build extra math and numerical libraries for root (needs gsl)
