@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.0.0.ebuild,v 1.1 2008/05/20 02:24:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.0.0.ebuild,v 1.2 2008/06/06 07:48:08 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="alsa"
 
 S="${WORKDIR}/cdemu-daemon-${PV}"
