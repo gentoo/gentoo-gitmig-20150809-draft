@@ -1,0 +1,9 @@
+# ChangeLog for app-cdr/binflash
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/binflash/ChangeLog,v 1.1 2008/06/06 22:26:15 drac Exp $
+
+*binflash-1.44 (06 Jun 2008)
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org> +binflash-1.44.ebuild:
+  Initial commit for bug 162260. Ebuild partly by Mark Silinio.
+
