@@ -1,17 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.36.ebuild,v 1.1 2008/04/20 09:32:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.36.ebuild,v 1.2 2008/06/06 12:43:41 vapier Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
 DESCRIPTION="Nullsoft Scriptable Install System"
 HOMEPAGE="http://nsis.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
+	prebuilt-system? ( mirror://sourceforge/${PN}/${P}.zip )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="bzip2 config-log zlib"
+IUSE="bzip2 config-log prebuilt-system zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
 #	wxwindows? ( x11-libs/wxGTK )
@@ -73,6 +74,10 @@ src_compile() {
 
 src_install() {
 	do_scons install || die "scons failed"
+	if use prebuilt-system ; then
+		insinto /usr/share/nsis/Plugins
+		doins "${WORKDIR}"/${P}/Plugins/System.dll || die
+	fi
 
 	fperms -R go-w,a-x,a+X /usr/share/${PN}/ /usr/share/doc/${PF}/ /etc/nsisconf.nsh
 
