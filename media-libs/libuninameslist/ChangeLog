@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.21 2008/06/05 17:17:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.22 2008/06/06 18:21:03 pva Exp $
+
+  06 Jun 2008; Peter Volkov <pva@gentoo.org>
+  libuninameslist-20060907.ebuild:
+  amd64 stable, bug #224599
 
   05 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   libuninameslist-20060907.ebuild:

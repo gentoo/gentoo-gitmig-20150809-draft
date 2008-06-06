@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20060907.ebuild,v 1.5 2008/06/05 17:17:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20060907.ebuild,v 1.6 2008/06/06 18:21:03 pva Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libuninameslist.sourceforge.net/"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 DEPEND=""
 RDEPEND=""
 IUSE=""
