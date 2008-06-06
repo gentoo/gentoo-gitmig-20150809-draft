@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.13.ebuild,v 1.1 2008/05/02 15:42:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.14.ebuild,v 1.1 2008/06/06 09:30:45 armin76 Exp $
 
 inherit eutils
 
