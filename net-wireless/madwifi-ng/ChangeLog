@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.51 2008/02/14 05:25:13 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.52 2008/06/06 04:57:56 pva Exp $
+
+  06 Jun 2008; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Added myself as maintainer.
 
 *madwifi-ng-0.9.4 (14 Feb 2008)
 
