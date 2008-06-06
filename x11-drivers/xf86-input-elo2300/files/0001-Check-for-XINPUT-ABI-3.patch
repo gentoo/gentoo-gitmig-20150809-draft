@@ -1,0 +1,28 @@
+From cc77936174d60ae25aab137225190dc6d31eba92 Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter@cs.unisa.edu.au>
+Date: Mon, 26 May 2008 22:06:23 +0930
+Subject: [PATCH] Check for XINPUT ABI 3.
+
+---
+ src/elo.c |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+diff --git a/src/elo.c b/src/elo.c
+index 5ed67f0..8382313 100644
+--- a/src/elo.c
++++ b/src/elo.c
+@@ -309,7 +309,10 @@ DeviceInit( DeviceIntPtr dev )
+ 	 * Device reports motions on 2 axes in absolute coordinates.
+ 	 * Device may reports touch pressure on the 3rd axis.
+ 	 */
+-	if (InitValuatorClassDeviceStruct (dev, priv->axes, xf86GetMotionEvents,
++	if (InitValuatorClassDeviceStruct (dev, priv->axes,
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
++                    xf86GetMotionEvents,
++#endif
+ 									local->history_size, Absolute) == FALSE)
+ 	{
+ 		ErrorF ("Unable to allocate Elographics touchscreen ValuatorClassDeviceStruct\n");
+-- 
+1.5.5.1
+
