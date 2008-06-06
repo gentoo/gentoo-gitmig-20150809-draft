@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/dvd95
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.4 2007/12/16 21:15:59 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.5 2008/06/06 20:32:37 drac Exp $
+
+*dvd95-1.3_p2 (06 Jun 2008)
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/dvd95-1.3_p2-desktop-entry.patch, -dvd95-1.2_p0.ebuild,
+  +dvd95-1.3_p2.ebuild:
+  Version bump for bug 223927. Fix desktop entry for bug 204319. Try to
+  handle LINGUAS for bug 204322. Missing deps for bug 205020.
 
 *dvd95-1.3_p0 (16 Dec 2007)
 
