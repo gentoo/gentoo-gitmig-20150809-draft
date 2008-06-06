@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/mybashburn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.1 2007/11/02 04:56:22 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.2 2008/06/06 22:10:06 drac Exp $
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org> mybashburn-1.0.2.ebuild:
+  Add virtual/mpg123 dep. behind USE mp3 wrt #223461.
 
 *mybashburn-1.0.2 (02 Nov 2007)
 
