@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/arabeyes-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/ChangeLog,v 1.15 2008/06/06 17:44:36 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/ChangeLog,v 1.16 2008/06/06 18:17:35 pva Exp $
+
+  06 Jun 2008; Peter Volkov <pva@gentoo.org> arabeyes-fonts-2.0.ebuild:
+  amd64 stable, bug #224865.
 
   06 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   arabeyes-fonts-2.0.ebuild:
