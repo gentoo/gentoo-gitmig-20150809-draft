@@ -1,0 +1,52 @@
+r16705 | tanders | 2007-09-21 01:55:49 +0400 (Птн, 21 Сен 2007) | 3 lines
+
+CHANGES: snmpd: PATCH: 1746831: from cunnijd: fix process checking race
+condition under Linux and platform #ifdefs
+
+--- agent/mibgroup/ucd-snmp/proc.c	(revision 16704)
++++ agent/mibgroup/ucd-snmp/proc.c	(revision 16705)
+@@ -427,7 +427,7 @@
+     return count;
+ }
+ 
+-#elif OSTYPE == NETSNMP_LINUXID
++#elif NETSNMP_OSTYPE == NETSNMP_LINUXID
+ 
+ #include <dirent.h>
+ #include <fcntl.h>
+@@ -452,7 +452,7 @@
+ #ifdef USE_PROC_CMDLINE  /* old method */
+       /* read /proc/XX/cmdline */
+       sprintf(cmdline,"/proc/%s/cmdline",ent->d_name);
+-      if((fd = open(cmdline, O_RDONLY)) < 0) break;
++      if((fd = open(cmdline, O_RDONLY)) < 0) continue;
+       len = read(fd,cmdline,sizeof(cmdline) - 1);
+       close(fd);
+       if(len <= 0) continue;
+@@ -464,7 +464,7 @@
+       /* read /proc/XX/status */
+       sprintf(cmdline,"/proc/%s/status",ent->d_name);
+       if ((status = fopen(cmdline, "r")) == NULL)
+-          break;
++          continue;
+       if (fgets(cmdline, sizeof(cmdline), status) == NULL) {
+           fclose(status);
+           break;
+@@ -507,7 +507,7 @@
+     return total;
+ }
+ 
+-#elif OSTYPE == NETSNMP_ULTRIXID
++#elif NETSNMP_OSTYPE == NETSNMP_ULTRIXID
+ 
+ #define	NPROCS		32      /* number of proces to read at once */
+ 
+@@ -688,7 +688,7 @@
+         return (0);
+     return (1);
+ }
+-#elif OSTYPE == NETSNMP_SOLARISID
++#elif NETSNMP_OSTYPE == NETSNMP_SOLARISID
+ 
+ #ifdef _SLASH_PROC_METHOD_
+ 

@@ -1,6 +1,22 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.167 2008/03/31 05:26:17 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.168 2008/06/06 20:06:33 pva Exp $
+
+*net-snmp-5.4.1-r4 (06 Jun 2008)
+
+  06 Jun 2008; Peter Volkov <pva@gentoo.org>
+  +files/net-snmp-5.1.2-snmpconf-selinux.patch,
+  +files/net-snmp-5.4.1-CVE-2008-2292.patch,
+  +files/net-snmp-5.4.1-incorrect-hrFSStorageIndex.patch,
+  +files/net-snmp-5.4.1-ipAddressTable-crash-with-double-free.patch,
+  +files/net-snmp-5.4.1-process-count-race.patch,
+  +files/net-snmp-5.4-exec-crash.patch, +net-snmp-5.4.1-r4.ebuild:
+  Incorporated patches from upstream to fix different issues: bug #203127 -
+  error on subcontainer, followed by crash, thank Andrew Belousoff for
+  report and Thomas Anders for the fix; bug #21660 - hrFSStorageIndex
+  incorrect, thank for report Dominique PRUNIER; bug #213415 - process
+  checking bug, reported by David Bosso; security bug #222265 - perl/python
+  module buffer overflow (CVE-2008-2292), thank Robert Buchholz for report.
 
   31 Mar 2008; <ricmm@gentoo.org> net-snmp-5.4.ebuild:
   Drop to ~mips due to unstable deps

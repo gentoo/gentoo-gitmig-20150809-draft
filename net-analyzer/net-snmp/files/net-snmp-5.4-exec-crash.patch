@@ -1,0 +1,14 @@
+https://bugzilla.redhat.com/show_bug.cgi?id=243536
+
+--- net-snmp-5.4/agent/mibgroup/agent/extend.c.orig	2006-10-18 21:07:35.000000000 +0200
++++ net-snmp-5.4/agent/mibgroup/agent/extend.c	2007-06-27 14:30:08.000000000 +0200
+@@ -448,6 +448,9 @@
+         extension->command  = strdup( exec_command );
+         if (cptr)
+             extension->args = strdup( cptr );
++    } else {
++    	snmp_log(LOG_ERR, "Duplicate MIBOID '%s' detected in exec statement, only the first one will be used.\n", exec_name);
++    	return;
+     }
+ 
+ #ifndef USING_UCD_SNMP_EXTENSIBLE_MODULE

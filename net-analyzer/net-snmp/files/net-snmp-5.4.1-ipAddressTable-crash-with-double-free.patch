@@ -1,0 +1,134 @@
+r16804 | magfr | 2008-02-14 02:37:48 +0300 (Чтв, 14 Фев 2008) | 2 lines
+
+NEWS: snmplib: Change CONTAINER_INSERT to not do partial inserts in containers with multiple indices when one insert fails.
+
+http://sourceforge.net/tracker/index.php?func=detail&aid=1733344&group_id=12694&atid=112694
+
+http://bugs.gentoo.org/show_bug.cgi?id=203127
+
+Index: snmplib/container.c
+===================================================================
+--- snmplib/container.c	(revision 16803)
++++ snmplib/container.c	(revision 16804)
+@@ -282,31 +282,41 @@
+  * These functions should EXACTLY match the inline version in
+  * container.h. If you change one, change them both.
+  */
+-int CONTAINER_INSERT(netsnmp_container *x, const void *k)
+-{ 
+-    int rc2, rc = 0;
+-    
+-    /** start at first container */
+-    while(x->prev)
+-        x = x->prev;
+-    for(; x; x = x->next) {
+-        if ((NULL != x->insert_filter) &&
+-            (x->insert_filter(x,k) == 1))
+-            continue;
+-        rc2 = x->insert(x,k);
+-        if (rc2) {
++int CONTAINER_INSERT_HELPER(netsnmp_container* x, const void* k)
++{
++    while(x && x->insert_filter && x->insert_filter(x,k) == 1)
++        x = x->next;
++    if(x) {
++        int rc = x->insert(x,k);
++        if(rc)
+             snmp_log(LOG_ERR,"error on subcontainer '%s' insert (%d)\n",
+-                     x->container_name ? x->container_name : "", rc2);
+-            rc = rc2;
++                     x->container_name ? x->container_name : "", rc);
++        else {
++            rc = CONTAINER_INSERT_HELPER(x->next, k);
++            if(rc)
++                x->remove(x,k);
+         }
++        return rc;
+     }
+-    return rc;
++    return 0;
+ }
+ 
+ /*------------------------------------------------------------------
+  * These functions should EXACTLY match the inline version in
+  * container.h. If you change one, change them both.
+  */
++int CONTAINER_INSERT(netsnmp_container* x, const void* k)
++{
++    /** start at first container */
++    while(x->prev)
++        x = x->prev;
++    return CONTAINER_INSERT_HELPER(x, k);
++}
++
++/*------------------------------------------------------------------
++ * These functions should EXACTLY match the inline version in
++ * container.h. If you change one, change them both.
++ */
+ int CONTAINER_REMOVE(netsnmp_container *x, const void *k)
+ {
+     int rc2, rc = 0;
+Index: include/net-snmp/library/container.h
+===================================================================
+--- include/net-snmp/library/container.h	(revision 16803)
++++ include/net-snmp/library/container.h	(revision 16804)
+@@ -364,32 +364,43 @@
+      * container.c. If you change one, change them both.
+      */
+     NETSNMP_STATIC_INLINE /* gcc docs recommend static w/inline */
+-    int CONTAINER_INSERT(netsnmp_container *x, const void *k)
++    int CONTAINER_INSERT_HELPER(netsnmp_container* x, const void* k)
+     {
+-        int rc2, rc = 0;
+-        
+-        /** start at first container */
+-        while(x->prev)
+-            x = x->prev;
+-        for(; x; x = x->next) {
+-            if ((NULL != x->insert_filter) &&
+-                (x->insert_filter(x,k) == 1))
+-                continue;
+-            rc2 = x->insert(x,k);
+-            if (rc2) {
++        while(x && x->insert_filter && x->insert_filter(x,k) == 1)
++            x = x->next;
++        if(x) {
++            int rc = x->insert(x,k);
++            if(rc)
+                 snmp_log(LOG_ERR,"error on subcontainer '%s' insert (%d)\n",
+-                         x->container_name ? x->container_name : "", rc2);
+-                rc = rc2;
++                         x->container_name ? x->container_name : "", rc);
++            else {
++                rc = CONTAINER_INSERT_HELPER(x->next, k);
++                if(rc)
++                    x->remove(x,k);
+             }
++            return rc;
+         }
+-        return rc;
++        return 0;
+     }
+-    
++
+     /*------------------------------------------------------------------
+      * These functions should EXACTLY match the function version in
+      * container.c. If you change one, change them both.
+      */
+     NETSNMP_STATIC_INLINE /* gcc docs recommend static w/inline */
++    int CONTAINER_INSERT(netsnmp_container* x, const void* k)
++    {
++        /** start at first container */
++        while(x->prev)
++            x = x->prev;
++        return CONTAINER_INSERT_HELPER(x, k);
++    }
++
++    /*------------------------------------------------------------------
++     * These functions should EXACTLY match the function version in
++     * container.c. If you change one, change them both.
++     */
++    NETSNMP_STATIC_INLINE /* gcc docs recommend static w/inline */
+     int CONTAINER_REMOVE(netsnmp_container *x, const void *k)
+     {
+         int rc2, rc = 0;
