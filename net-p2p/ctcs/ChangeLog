@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ctcs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.5 2008/04/18 14:55:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.6 2008/06/06 10:15:39 armin76 Exp $
+
+*ctcs-1.4.1 (06 Jun 2008)
+
+  06 Jun 2008; Raúl Porcel <armin76@gentoo.org> +ctcs-1.4.1.ebuild:
+  Version bump
 
   18 Apr 2008; Samuli Suominen <drac@gentoo.org> ctcs-1.4.ebuild:
   Keyword for ~amd64 wrt #218270, thanks to Dmitrij D. Czarkoff.
