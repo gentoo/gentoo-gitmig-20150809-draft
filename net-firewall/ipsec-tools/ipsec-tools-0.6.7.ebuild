@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.12 2008/03/13 11:23:52 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.13 2008/06/06 23:53:31 swegener Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -141,11 +141,11 @@ kernel_check() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# fix for bug #76741
 	sed -i 's:#include <sys/sysctl.h>::' src/racoon/pfkey.c src/setkey/setkey.c
 	# fix for bug #124813
-	sed -i 's:-Werror::g' ${S}/configure.ac
+	sed -i 's:-Werror::g' "${S}"/configure.ac
 
 	AT_M4DIR="${S}" eautoreconf
 	epunt_cxx
@@ -157,7 +157,7 @@ src_compile() {
 
 	kernel_check
 
-	myconf="${myconf} --with-kernel-headers=/lib/modules/${KV_FULL}/build/include"
+	myconf="${myconf} --with-kernel-headers=${KV_DIR}/include"
 
 	use nat && myconf="${myconf} --enable-natt --enable-natt-versions=yes"
 #	myconf="${myconf} $(use_enable broken-natt)"
@@ -197,8 +197,7 @@ src_compile() {
 	#myconf="${myconf} --enable-samode-unspec"
 
 	econf ${myconf} || die
-	MAKEOPTS="${MAKEOPTS} -j1" # parallel make is still broken
-	emake || die
+	emake -j1 || die
 
 }
 
@@ -232,33 +231,32 @@ src_install() {
 
 pkg_postinst() {
 	if use nat; then
-		elog ""
+		elog
 		elog " You have enabled the nat traversal functionnality."
 		elog " Nat versions wich are enabled by default are 00,02,rfc"
 		elog " you can find those drafts in the CVS repository:"
 		elog "cvs -d anoncvs@anoncvs.netbsd.org:/cvsroot co ipsec-tools"
-		elog ""
+		elog
 		elog "If you feel brave enough and you know what you are"
 		elog "doing, you can consider emerging this ebuild"
 		elog "with"
 		elog "EXTRA_ECONF=\"--enable-natt-versions=08,07,06\""
-		elog ""
+		elog
 	fi;
 
 	if use ldap; then
-		elog ""
+		elog
 		elog " You have enabled ldap support with {$PN}."
 		elog " The man page does NOT contain any information on it yet."
 		elog " Consider to use a more recent version or CVS"
-		elog ""
+		elog
 	fi;
 
-	elog ""
+	elog
 	elog "Please have a look in /usr/share/doc/${P} and visit"
 	elog "http://www.netbsd.org/Documentation/network/ipsec/"
 	elog "to find a lot of information on how to configure this great tool."
-	elog ""
-
+	elog
 }
 
 # vim: set foldmethod=marker nowrap :

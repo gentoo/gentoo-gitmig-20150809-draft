@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.59 2008/03/13 11:23:52 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.60 2008/06/06 23:53:31 swegener Exp $
+
+  06 Jun 2008; Sven Wegener <swegener@gentoo.org> ipsec-tools-0.6.7.ebuild:
+  Use KV_DIR instead of relying on the /lib/modules build symlink pointing
+  to the source, which is broken behaviour.
 
   13 Mar 2008; Wolfram Schlich <wschlich@gentoo.org>
   ipsec-tools-0.6.7.ebuild:
