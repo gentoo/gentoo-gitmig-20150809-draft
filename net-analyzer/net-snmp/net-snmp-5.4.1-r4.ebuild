@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r4.ebuild,v 1.1 2008/06/06 20:06:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r4.ebuild,v 1.2 2008/06/06 21:33:17 mr_bones_ Exp $
 
 inherit fixheadtails flag-o-matic perl-module python
 
@@ -55,9 +55,9 @@ src_unpack() {
 	fi
 
 	# snmpd crashes when snmpd.conf contains more than one "exec shelltest" line
-	# https://bugzilla.redhat.com/show_bug.cgi?id=85071 
+	# https://bugzilla.redhat.com/show_bug.cgi?id=85071
 	epatch "${FILESDIR}"/${PN}-5.4-exec-crash.patch
-	# agent: suppress annoying "registration != duplicate" warning for root oids 
+	# agent: suppress annoying "registration != duplicate" warning for root oids
 	epatch "${FILESDIR}"/${P}-suppresssuppress-annoying.patch
 	# bug 180266
 	epatch "${FILESDIR}"/${P}-clientaddr-fix.patch
