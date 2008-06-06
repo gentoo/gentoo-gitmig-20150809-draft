@@ -1,0 +1,10 @@
+--- Random/test/testRandom.cc.orig	2003-07-17 19:20:29.000000000 +0000
++++ Random/test/testRandom.cc	2008-06-06 19:12:09.000000000 +0000
+@@ -3,6 +3,7 @@
+ // ----------------------------------------------------------------------
+ #include "CLHEP/Random/Randomize.h"
+ #include <iostream>
++#include <cstdlib>
+ 
+ using std::cout;
+ using std::endl;
