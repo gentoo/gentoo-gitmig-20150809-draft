@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.6 2008/06/07 01:39:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.7 2008/06/07 01:39:59 robbat2 Exp $
+
+  07 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  -files/pmtools-20051111-acpixtract-pmtools.patch,
+  -files/pmtools-20051111-madt.patch,
+  -files/pmtools-20061130-acpixtract-pmtools.patch,
+  -files/pmtools-20061130-madt.patch, -pmtools-20051111.ebuild,
+  -pmtools-20051111-r1.ebuild, -pmtools-20061130.ebuild:
+  Remove old versions.
 
   07 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
   +files/pmtools-20071116-acpixtract-pmtools.patch, pmtools-20071116.ebuild:
