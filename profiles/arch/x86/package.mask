@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.mask,v 1.6 2008/06/06 08:16:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.mask,v 1.7 2008/06/07 08:08:12 drac Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (03 Apr 2008)
 # The Great GNOME 2.22 Unmask (tm)
@@ -72,6 +72,7 @@
 ->=gnome-base/gnome-session-2.22
 ->=gnome-base/eel-2.22
 -gnome-base/gvfs
+->=app-cdr/brasero-0.7.90
 ->=gnome-base/nautilus-2.22
 ->=gnome-extra/nautilus-cd-burner-2.22
 ->=gnome-extra/nautilus-open-terminal-0.9

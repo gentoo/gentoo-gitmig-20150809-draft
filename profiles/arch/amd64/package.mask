@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.mask,v 1.6 2008/06/06 08:16:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.mask,v 1.7 2008/06/07 08:08:11 drac Exp $
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
@@ -78,6 +78,7 @@
 ->=gnome-base/gnome-session-2.22
 ->=gnome-base/eel-2.22
 -gnome-base/gvfs
+->=app-cdr/brasero-0.7.90
 ->=gnome-base/nautilus-2.22
 ->=gnome-extra/nautilus-cd-burner-2.22
 ->=gnome-extra/nautilus-open-terminal-0.9

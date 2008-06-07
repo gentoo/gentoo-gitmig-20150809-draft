@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1503 2008/06/06 20:34:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1504 2008/06/07 08:08:11 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  07 Jun 2008; Samuli Suominen <drac@gentoo.org> arch/amd64/package.mask,
+  arch/x86/package.mask, base/package.mask,
+  default-linux/amd64/package.mask, default-linux/x86/package.mask:
+  Mask and unmask new brasero with gvfs.
 
   06 Jun 2008; Samuli Suominen <drac@gentoo.org> desc/linguas.desc:
   Add et_EE for bug 204322, app-cdr/dvd95. Hope I got it right.
