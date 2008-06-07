@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.36 2008/04/27 19:51:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.37 2008/06/07 09:47:20 mrness Exp $
+
+*python-gammu-0.26 (07 Jun 2008)
+
+  07 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  -files/python-gammu-0.22-fixups.patch, -python-gammu-0.20.ebuild,
+  -python-gammu-0.21.ebuild, -python-gammu-0.22.ebuild,
+  -python-gammu-0.23.ebuild, +python-gammu-0.26.ebuild:
+  Remove obsolete versions. Version bump.
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org> python-gammu-0.24.ebuild:
   amd64 stable, bug #210013
