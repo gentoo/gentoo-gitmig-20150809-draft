@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.9 2008/02/19 01:08:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.10 2008/06/07 12:11:20 drac Exp $
 
 inherit kde eutils
 
@@ -19,7 +19,12 @@ DEPEND="!app-cdr/kover
 
 need-kde 3.3
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	kde_src_unpack
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	if ! use cddb ; then

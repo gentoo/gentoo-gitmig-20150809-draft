@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.26 2008/02/19 01:08:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.27 2008/06/07 12:11:20 drac Exp $
+
+  07 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/koverartist-0.5-gcc43.patch, koverartist-0.5.ebuild:
+  Fix building with GCC 4.3 and partly fix desktop entry, at least point to
+  correct Category.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   koverartist-0.4.4.ebuild, koverartist-0.5.ebuild:

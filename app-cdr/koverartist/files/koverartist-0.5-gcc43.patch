@@ -1,0 +1,26 @@
+diff -ur koverartist.orig/src/cddbquery.cpp koverartist/src/cddbquery.cpp
+--- koverartist.orig/src/cddbquery.cpp	2006-11-01 12:42:59.000000000 +0200
++++ koverartist/src/cddbquery.cpp	2008-06-07 14:56:35.000000000 +0300
+@@ -34,7 +34,7 @@
+ #include <iostream>
+ #include <errno.h>
+ #include <string.h>
+-
++#include <stdlib.h>
+ 
+ 
+ #ifdef ENABLE_AUDIOCD
+diff -ur koverartist.orig/src/koverartist.desktop koverartist/src/koverartist.desktop
+--- koverartist.orig/src/koverartist.desktop	2006-03-15 16:05:27.000000000 +0200
++++ koverartist/src/koverartist.desktop	2008-06-07 14:55:28.000000000 +0300
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KoverArtist
+ Name[xx]=xxKoverArtistxx
+ Exec=koverartist %i %m -caption "%c"
+@@ -41,3 +40,4 @@
+ Comment[xx]=xxA KDE KPart Applicationxx
+ Comment[zh_CN]=一个 KDE KPart 应用程序
+ Terminal=false
++Categories=DiscBurning;
