@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/vanilla-dmz-aa-xcursors-0.4.ebuild,v 1.8 2007/08/11 19:12:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/vanilla-dmz-aa-xcursors-0.4.ebuild,v 1.9 2008/06/07 09:57:59 bluebird Exp $
 
 MY_PN="Vanilla-DMZ-AA"
 DESCRIPTION="Style neutral scalable cursor theme"
@@ -9,7 +9,7 @@ SRC_URI="http://jimmac.musichall.cz/zip/${P/-xcursors}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_PN}
