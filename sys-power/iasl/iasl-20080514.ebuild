@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080514.ebuild,v 1.2 2008/05/22 21:21:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080514.ebuild,v 1.3 2008/06/07 02:55:49 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -74,8 +74,8 @@ src_install() {
 		dobin "${T}"/${bin}
 	done
 	dodoc README changes.txt
-	if use test
-	then
+	if hasq test $FEATURES ; then
+		export ASLTSDIR="$(<"${T}"/asltdir)"
 		cd "${ASLTSDIR}"/tmp/RESULTS || die "cd ${ASLTSDIR}/tmp/RESULTS failed"
 		ebegin "Creating Test Tarball"
 		tar -cjf testresults.tar.bz2 * || die "tar failed"
@@ -92,6 +92,7 @@ aslts_test() {
 		acpiexec="${T}"/acpiexec \
 		ASLTSDIR="${WORKDIR}/${MY_TESTS_P}"/tests/aslts
 	export	PATH="${PATH}:${ASLTSDIR}/bin"
+	echo "$ASLTSDIR" >"${T}"/asltdir
 	cd "${ASLTSDIR}"
 	edos2unix $(find . -type 'f') || die "edos2unix failed in aslts"
 	make install || die "make install aslts test failed"
