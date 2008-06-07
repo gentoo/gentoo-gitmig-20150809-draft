@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/com_err
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.67 2008/05/26 08:34:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.68 2008/06/07 16:30:41 vapier Exp $
+
+*com_err-1.40.10 (07 Jun 2008)
+
+  07 Jun 2008; Mike Frysinger <vapier@gentoo.org> +com_err-1.40.10.ebuild:
+  Version bump #225161 by Krzysztof Olędzki.
 
   26 May 2008; Raúl Porcel <armin76@gentoo.org> com_err-1.40.8.ebuild:
   ia64 stable wrt #213588
