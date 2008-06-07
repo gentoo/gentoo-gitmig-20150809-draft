@@ -1,0 +1,11 @@
+# ChangeLog for app-cdr/cdcover
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdcover/ChangeLog,v 1.1 2008/06/07 09:23:27 drac Exp $
+
+*cdcover-0.7.3 (07 Jun 2008)
+
+  07 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/cdcover-0.7.3-install_all_images.patch, +cdcover-0.7.3.ebuild:
+  Initial commit for bug 81768, thanks to Roland Schäuble and BT <amak79 AT
+  gmail DOT com>
+
