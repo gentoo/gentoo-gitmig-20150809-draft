@@ -1,0 +1,11 @@
+--- lib/initialize.py.orig	2008-06-07 18:45:17.000000000 +0200
++++ lib/initialize.py	2008-06-07 18:46:13.000000000 +0200
+@@ -78,7 +78,7 @@
+ 
+ 	elif os.name == 'posix':
+ 		locations['home']  = os.path.join(os.path.expanduser('~'), '.griffith').decode(defaultEnc)
+-		locations['share'] = os.path.abspath(os.path.join(locations['lib'], '..'))
++		locations['share'] = os.path.abspath(os.path.join(locations['lib'], '../../share/griffith'))
+ 		locations['glade'] = os.path.join(locations['share'], 'glade')
+ 		locations['i18n']  = os.path.abspath(os.path.join(locations['share'], '..', 'locale'))
+ 		if not os.path.isdir(locations['i18n']):

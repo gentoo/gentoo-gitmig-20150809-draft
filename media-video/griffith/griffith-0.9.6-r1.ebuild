@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6.ebuild,v 1.2 2008/06/07 12:55:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6-r1.ebuild,v 1.1 2008/06/07 16:50:11 dev-zero Exp $
 
 EAPI="1"
 
-inherit python
+inherit eutils python multilib
 
 ARTWORK_PV="0.9.4"
 
@@ -12,7 +12,6 @@ DESCRIPTION="Movie collection manager"
 HOMEPAGE="http://griffith.berlios.de/"
 SRC_URI="mirror://berlios/griffith/${P/_/-}.tar.gz
 	mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -41,6 +40,8 @@ src_unpack() {
 	sed -i \
 		-e 's/ISO-8859-1/UTF-8/' \
 		lib/gconsole.py || die "sed failed"
+
+	epatch "${FILESDIR}/${PV}-moving_share_dir.patch"
 }
 
 src_compile() {
@@ -51,7 +52,10 @@ src_compile() {
 src_install() {
 	use doc || sed -i -e '/docs/d' Makefile
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	python_version
+	emake \
+		LIBDIR="${D}/usr/$(get_libdir)/griffith" \
+		DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO NEWS TRANSLATORS
 
 	cd "${WORKDIR}/${PN}-extra-artwork-${ARTWORK_PV}/"
@@ -59,9 +63,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/${PN}/lib
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}/lib
+	python_version
+	python_mod_cleanup /usr/$(get_libdir)/${PN}
 }

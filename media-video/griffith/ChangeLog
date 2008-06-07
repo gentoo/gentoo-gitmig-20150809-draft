@@ -1,6 +1,13 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.23 2008/06/07 12:54:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.24 2008/06/07 16:50:11 dev-zero Exp $
+
+*griffith-0.9.6-r1 (07 Jun 2008)
+
+  07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.9.6-moving_share_dir.patch, -griffith-0.9.6.ebuild,
+  +griffith-0.9.6-r1.ebuild:
+  Finally fixed bug #202484
 
 *griffith-0.9.6 (07 Jun 2008)
 
