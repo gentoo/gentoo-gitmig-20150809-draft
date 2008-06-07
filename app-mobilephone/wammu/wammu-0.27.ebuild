@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.24.ebuild,v 1.1 2007/12/01 10:03:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.27.ebuild,v 1.1 2008/06/07 12:54:56 mrness Exp $
 
 inherit distutils eutils versionator
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
 RDEPEND="=dev-python/wxpython-2.6*
-	>=dev-python/python-gammu-0.23
+	>=dev-python/python-gammu-0.24
 	bluetooth? (
 		|| (
 			dev-python/pybluez
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" af ca cs de es et fi fr hu it ko nl pl pt_BR ru sk sv zh_CN"
+MY_AVAILABLE_LINGUAS=" af ca cs de es et fi fr gl he hu it ko nl pl pt_BR ru sk sv zh_CN zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_unpack() {
@@ -55,13 +55,23 @@ src_unpack() {
 		> "${T}"/${PN}-wxversion.patch
 	epatch "${T}"/${PN}-wxversion.patch
 
-	cd locale || die "locale directory not found"
-	local lang
+	pushd locale || die "locale directory not found"
+	local lang support_linguas=no
 	for lang in ${MY_AVAILABLE_LINGUAS} ; do
-		if ! use linguas_${lang} ; then
-			rm -r ${lang}
+		if use linguas_${lang} ; then
+			support_linguas=yes
+			break
 		fi
 	done
+	# install all languages when all selected LINGUAS aren't supported
+	if [ "${support_linguas}" = "yes" ]; then
+		for lang in ${MY_AVAILABLE_LINGUAS} ; do
+			if ! use linguas_${lang} ; then
+				rm -r ${lang}
+			fi
+		done
+	fi
+	popd
 }
 
 src_compile() {
