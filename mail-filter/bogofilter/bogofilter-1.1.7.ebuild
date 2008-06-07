@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.7.ebuild,v 1.5 2008/06/07 11:47:09 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.7.ebuild,v 1.6 2008/06/07 12:42:34 bluebird Exp $
 
 inherit db-use flag-o-matic
 
@@ -72,6 +72,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "If you need '${ROOT}usr/bin/bf_tar' please install app-arch/pax."
+	elog "If you need \"${ROOT}usr/bin/bf_tar\" please install app-arch/pax."
 	echo
 }
