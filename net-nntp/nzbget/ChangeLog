@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.18 2008/06/07 20:28:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.19 2008/06/07 21:19:45 swegener Exp $
+
+*nzbget-0.4.0-r1 (07 Jun 2008)
+
+  07 Jun 2008; Sven Wegener <swegener@gentoo.org> +files/nzbget.confd,
+  +files/nzbget.initd, +nzbget-0.4.0-r1.ebuild:
+  Add support for a system-wide nzbget daemon, bug #217359. Credit for the
+  idea goes to Chris Carlin.
 
   07 Jun 2008; Sven Wegener <swegener@gentoo.org> -files/0.2.3-gcc41.patch,
   -files/0.2.3-include-order.patch, -files/0.2.3-double-free.patch,

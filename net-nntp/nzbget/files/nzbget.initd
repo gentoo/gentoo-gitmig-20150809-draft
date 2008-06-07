@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/files/nzbget.initd,v 1.1 2008/06/07 21:19:45 swegener Exp $
+
+opts="pause unpause"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting nzbget"
+	start-stop-daemon --quiet --start --chuid "${NZBGET_USER}" \
+		--group "${NZBGET_GROUP}" --exec /usr/bin/nzbget -- \
+		--configfile "${NZBGET_CONFIGFILE}" --daemon \
+		${NZBGET_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping nzbget"
+	/usr/bin/nzbget --configfile "${NZBGET_CONFIGFILE}" --quit >/dev/null
+	eend $?
+}
+
+pause() {
+	ebegin "Pausing nzbget"
+	/usr/bin/nzbget --configfile "${NZBGET_CONFIGFILE}" --pause >/dev/null
+	eend $?
+}
+
+unpause() {
+	ebegin "Unpausing nzbget"
+	/usr/bin/nzbget --configfile "${NZBGET_CONFIGFILE}" --unpause >/dev/null
+	eend $?
+}
