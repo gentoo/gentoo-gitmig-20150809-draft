@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.92 2008/06/05 22:18:19 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.93 2008/06/07 12:39:57 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kshisen-3.5.8.ebuild, -kshisen-4.0.2.ebuild, -kshisen-4.0.3.ebuild:
+  Removed old versions.
 
 *kshisen-4.0.5 (05 Jun 2008)
 

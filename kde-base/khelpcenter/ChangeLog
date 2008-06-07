@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.99 2008/06/05 21:49:44 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.100 2008/06/07 12:39:04 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -khelpcenter-3.5.8.ebuild, -khelpcenter-4.0.2.ebuild,
+  -khelpcenter-4.0.3.ebuild:
+  Removed old versions.
 
 *khelpcenter-4.0.5 (05 Jun 2008)
 

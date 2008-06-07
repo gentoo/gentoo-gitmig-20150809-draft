@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmrml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/ChangeLog,v 1.76 2008/05/19 19:55:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/ChangeLog,v 1.77 2008/06/07 12:00:28 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -kmrml-3.5.8.ebuild:
+  Removed old versions.
 
   19 May 2008; Markus Meier <maekke@gentoo.org> kmrml-3.5.9.ebuild:
   amd64/x86 stable, bug #221063
