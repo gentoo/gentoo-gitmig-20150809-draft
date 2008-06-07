@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6.ebuild,v 1.1 2008/06/07 12:54:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6.ebuild,v 1.2 2008/06/07 12:55:34 dev-zero Exp $
 
 EAPI="1"
 
@@ -41,9 +41,6 @@ src_unpack() {
 	sed -i \
 		-e 's/ISO-8859-1/UTF-8/' \
 		lib/gconsole.py || die "sed failed"
-
-	# Don't install bundled sqlalchemy
-	sed -i -e '/sqlalchemy/d' Makefile || die "sed failed"
 }
 
 src_compile() {
