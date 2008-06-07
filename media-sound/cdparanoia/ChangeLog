@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.78 2008/06/02 11:47:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.79 2008/06/07 12:23:55 flameeyes Exp $
+
+  07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  cdparanoia-3.10_pre2.ebuild:
+  Fix bug #223513 in a different way: let it use autoconf 2.5 series, which
+  is what upstream uses now too.
 
   02 Jun 2008; Samuli Suominen <drac@gentoo.org>
   cdparanoia-3.10_pre2.ebuild:
