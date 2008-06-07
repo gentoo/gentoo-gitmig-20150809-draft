@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3573 2008/06/06 19:11:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3574 2008/06/07 14:01:38 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1945,6 +1945,15 @@ sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs de
 sci-misc/nco:udunits - Add udunits files support
 sci-misc/ncview:udunits - Add udunits files support
 sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
+sci-physics/geant:athena - Enables the MIT Athena widget set (default is motif)
+sci-physics/geant:data - Adds a lot of standard physics data files for geant4
+sci-physics/geant:dawn - Adds dawn support (3D postscript rendering)
+sci-physics/geant:gdml - Enables geometry markup language for xml 
+sci-physics/geant:geant3 - Adds compatibility for geant321 to geant4
+sci-physics/geant:global - Produces a huge global library instead of small ones
+sci-physics/geant:openinventor - Adds support for openinventor SGI toolkit
+sci-physics/geant:raytracerx - Enable raytracing for physics events
+sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/root:cern - Enable hbook i/o functionality to root (needs cernlib)
 sci-physics/root:cint7 - Build the experimental C/C++ interpretor version 7
 sci-physics/root:math - Build extra math and numerical libraries for root (needs gsl)
