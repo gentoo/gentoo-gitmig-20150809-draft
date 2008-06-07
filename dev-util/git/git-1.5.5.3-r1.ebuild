@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.ebuild,v 1.3 2008/02/11 19:52:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.5.3-r1.ebuild,v 1.1 2008/06/07 15:47:28 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -18,25 +18,44 @@ SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk threads webdav"
+IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk threads webdav xinetd cvs subversion vim-syntax"
 
 DEPEND="
 	!app-misc/git
 	dev-libs/openssl
 	sys-libs/zlib
-	dev-lang/perl
 	app-arch/cpio
+	perl?   ( dev-lang/perl )
 	tk?     ( dev-lang/tk )
-	curl?   ( net-misc/curl )
-	webdav? ( dev-libs/expat )
+	curl?   (
+		net-misc/curl
+		webdav? ( dev-libs/expat )
+	)
 	emacs?  ( virtual/emacs )"
+
 RDEPEND="${DEPEND}
-	cgi?    ( virtual/perl-CGI )
-	perl?   ( dev-perl/Error )
-	gtk?    ( >=dev-python/pygtk-2.8 )"
+	perl? ( dev-perl/Error
+			dev-perl/Net-SMTP-SSL
+			dev-perl/Authen-SASL
+			cgi? ( virtual/perl-CGI )
+			cvs? ( >=dev-util/cvsps-2.1 dev-perl/DBI dev-perl/DBD-SQLite )
+			subversion? ( dev-util/subversion dev-perl/libwww-perl dev-perl/TermReadKey )
+			)
+	gtk?  ( >=dev-python/pygtk-2.8 )"
 
 SITEFILE=72${PN}-gentoo.el
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if ! use perl ; then
+		use cgi && ewarn "gitweb needs USE=perl, ignoring USE=cgi"
+		use cvs && ewarn "CVS integration needs USE=perl, ignoring USE=cvs"
+		use subversion && "git-svn needs USE=perl, it won't work"
+	fi
+	if use webdav && ! use curl ; then
+		ewarn "USE=webdav needs USE=curl. Ignoring"
+	fi
+}
 
 # This is needed because for some obscure reasons future calls to make don't
 # pick up these exports if we export them in src_unpack()
@@ -53,22 +72,15 @@ exportmakeopts() {
 		use webdav || myopts="${myopts} NO_EXPAT=YesPlease"
 	else
 		myopts="${myopts} NO_CURL=YesPlease"
-		use webdav && ewarn "USE=webdav only matters with USE=curl. Ignoring."
 	fi
-
-	myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
 
 	use iconv || myopts="${myopts} NO_ICONV=YesPlease"
 	use tk || myopts="${myopts} NO_TCLTK=YesPlease"
+	use perl || myopts="${myopts} NO_PERL=YesPlease"
 	use threads && myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
+	use subversion || myopts="${myopts} NO_SVN_TESTS=YesPlease"
 
-	export MY_MAKEOPTS=${myopts}
-}
-
-showpkgdeps() {
-	local pkg=$1
-	shift
-	elog "  $(printf "%-17s:" ${pkg}) ${@}"
+	export MY_MAKEOPTS="${myopts}"
 }
 
 src_unpack() {
@@ -78,14 +90,13 @@ src_unpack() {
 	use doc && cd "${S}"/Documentation && unpack ${PN}-htmldocs-${DOC_VER}.tar.bz2
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-1.5.3-symlinks.patch
+	epatch "${FILESDIR}"/20080528-${PN}-1.5.5.3-noperl.patch
 
 	sed -i \
 		-e "s:^\(CFLAGS =\).*$:\1 ${CFLAGS} -Wall:" \
 		-e "s:^\(LDFLAGS =\).*$:\1 ${LDFLAGS}:" \
 		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
 		-e "s:^\(AR = \).*$:\1$(tc-getAR):" \
-		-e 's:ln :ln -s :g' \
 		Makefile || die "sed failed"
 
 	exportmakeopts
@@ -97,7 +108,7 @@ src_compile() {
 	if use emacs ; then
 		elisp-compile contrib/emacs/{,vc-}git.el || die "emacs modules failed"
 	fi
-	if use cgi ; then
+	if use perl && use cgi ; then
 		emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
 		prefix=/usr \
@@ -134,13 +145,18 @@ src_install() {
 	if use gtk ; then
 		dobin "${S}"/contrib/gitview/gitview
 		dodoc "${S}"/contrib/gitview/gitview.txt
-		newbin "${S}"/contrib/blameview/blameview.perl blameview
-		newdoc "${S}"/contrib/blameview/README README.blameview
 	fi
 
 	dobin contrib/fast-import/git-p4
 	dodoc contrib/fast-import/git-p4.txt
 	newbin contrib/fast-import/import-tars.perl import-tars
+
+	if use vim-syntax ; then
+		insinto /usr/share/vim/vimfiles/syntax/
+		doins contrib/vim/syntax/gitcommit.vim
+		insinto /usr/share/vim/vimfiles/ftdetect/
+		newins "${FILESDIR}"/vim-ftdetect-gitcommit.vim gitcommit.vim
+	fi
 
 	dodir /usr/share/${PN}/contrib
 	# The following are excluded:
@@ -149,27 +165,34 @@ src_install() {
 	# examples - these are stuff that is not used in Git anymore actually
 	# patches - stuff the Git guys made to go upstream to other places
 	for i in continuous fast-import hg-to-git \
-		hooks remotes2config.sh vim stats \
-		workdir convert-objects ; do
+		hooks remotes2config.sh stats \
+		workdir convert-objects blameview ; do
 		cp -rf \
 			"${S}"/contrib/${i} \
 			"${D}"/usr/share/${PN}/contrib \
 			|| die "Failed contrib ${i}"
 	done
 
-	if use cgi ; then
+	if use perl && use cgi ; then
 		dodir /usr/share/${PN}/gitweb
 		insinto /usr/share/${PN}/gitweb
-		doins "${S}"/gitweb/gitweb.{cgi,css}
+		doins "${S}"/gitweb/gitweb.cgi
+		doins "${S}"/gitweb/gitweb.css
 		doins "${S}"/gitweb/git-{favicon,logo}.png
-		docinto /
+
+		# Make sure it can run
+		fperms 0755 /usr/share/${PN}/gitweb/gitweb.cgi
+
 		# INSTALL discusses configuration issues, not just installation
+		docinto /
 		newdoc  "${S}"/gitweb/INSTALL INSTALL.gitweb
 		newdoc  "${S}"/gitweb/README README.gitweb
 	fi
 
-	insinto /etc/xinetd.d
-	newins "${FILESDIR}"/git-daemon.xinetd git-daemon
+	if use xinetd ; then
+		insinto /etc/xinetd.d
+		newins "${FILESDIR}"/git-daemon.xinetd git-daemon
+	fi
 
 	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
 	newconfd "${FILESDIR}"/git-daemon.confd git-daemon
@@ -178,19 +201,58 @@ src_install() {
 }
 
 src_test() {
-	has_version dev-util/subversion || \
-		MY_MAKEOPTS="${MY_MAKEOPTS} NO_SVN_TESTS=YesPlease"
+	local disabled=""
+	local tests_cvs="t9200-git-cvsexportcommit.sh \
+					t9400-git-cvsserver-server.sh \
+					t9600-cvsimport.sh"
+	local tests_perl="t5502-quickfetch.sh \
+					t5512-ls-remote.sh \
+					t5520-pull.sh"
+
+	# Unzip is used only for the testcase code, not by any normal parts of Git.
 	has_version app-arch/unzip || \
-		rm "${S}"/t/t5000-tar-tree.sh
+		einfo "Disabling tar-tree tests" && \
+		disabled="${disabled} \
+					t5000-tar-tree.sh"
+
 	if ! has userpriv "${FEATURES}"; then
 		ewarn "Skipping CVS tests because CVS does not work as root!"
 		ewarn "You should retest with FEATURES=userpriv!"
-		for i in t9200-git-cvsexportcommit.sh t9600-cvsimport.sh ; do
-			rm "${S}"/t/${i} || die "Failed to remove ${i}"
-		done
+		disabled="${disabled} \
+					${tests_cvs}"
 	fi
-	built_with_use dev-util/cvs server || rm "${S}"/t/t9600-cvsimport.sh
+
+	use cvs && \
+		has_version dev-util/cvs && \
+		built_with_use dev-util/cvs server || \
+		einfo "Disabling CVS tests (needs dev-util/cvs[USE=server])" && \
+		disabled="${disabled} \
+					${tests_cvs}"
+
+	use perl || \
+		einfo "Disabling tests that need Perl" && \
+		disabled="${disabled} \
+					${tests_perl}"
+
+	# Reset all previously disabled tests
+	cd "${S}/t"
+	for i in *.sh.DISABLED ; do
+		[[ -f "${i}" ]] && mv -f "${i}" "${i%.DISABLED}"
+	done
+	einfo "Disabled tests:"
+	for i in ${disabled} ; do
+		[[ -f "${i}" ]] && mv -f "${i}" "${i}.DISABLED" && einfo "Disabled $i"
+	done
+	cd "${S}"
+	# Now run the tests
+	einfo "Start test run"
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr test || die "tests failed"
+}
+
+showpkgdeps() {
+	local pkg=$1
+	shift
+	elog "  $(printf "%-17s:" ${pkg}) ${@}"
 }
 
 pkg_postinst() {
@@ -200,22 +262,16 @@ pkg_postinst() {
 		elog "You can disable the emacs USE flag for dev-util/git"
 		elog "if you are using such a version."
 	fi
+	if use subversion && ! built_with_use dev-util/subversion perl ; then
+		ewarn "You must build dev-util/subversion with USE=perl"
+		ewarn "to get the full functionality of git-svn!"
+	fi
 	elog "These additional scripts need some dependencies:"
-	elog "(These are also needed for FEATURES=test)"
 	echo
 	showpkgdeps git-archimport "dev-util/tla"
-	showpkgdeps git-cvsimport ">=dev-util/cvsps-2.1"
-	showpkgdeps git-svn \
-		"USE=perl" \
-		"dev-util/subversion(USE=perl)" \
-		"dev-perl/libwww-perl" \
-		"dev-perl/TermReadKey"
 	showpkgdeps git-quiltimport "dev-util/quilt"
-	showpkgdeps git-cvsserver "dev-perl/DBI" "dev-perl/DBD-SQLite"
 	showpkgdeps git-instaweb \
 		"|| ( www-servers/lighttpd www-servers/apache )"
-	showpkgdeps git-send-email "USE=perl"
-	showpkgdeps git-remote "USE=perl"
 	echo
 }
 
