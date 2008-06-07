@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.15.0-r1.ebuild,v 1.3 2008/05/21 15:51:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.20.0.ebuild,v 1.1 2008/06/07 09:42:54 mrness Exp $
 
 inherit cmake-utils
 
@@ -31,13 +31,14 @@ src_unpack() {
 	unpack ${A}
 
 	# sys-devel/gettext is needed for creating .mo files
-	cd "${S}/locale"
+	pushd "${S}/locale"
 	local lang
 	for lang in ${MY_AVAILABLE_LINGUAS} ; do
 		if ! use linguas_${lang} ; then
 			sed -i -e "/^[[:space:]]*${lang}[[:space:]]*$/d" CMakeLists.txt
 		fi
 	done
+	popd
 }
 
 src_compile() {
@@ -48,4 +49,8 @@ src_compile() {
 		$(cmake-utils_use_with postgres Postgres) \
 		-DENABLE_SHARED=ON"
 	cmake-utils_src_compile
+}
+
+src_test() {
+	LD_LIBRARY_PATH="${WORKDIR}"/${PN}_build/common cmake-utils_src_test
 }
