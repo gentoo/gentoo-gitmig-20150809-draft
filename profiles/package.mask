@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8694 2008/06/07 17:32:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8695 2008/06/07 22:59:55 tupone Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alfredo Tupone <tupone@gentoo.org> (08 Jun 2008)
+# Masked for removal in 30 days.
+# Depend on dev-lang/python 2.3 (bug #222037) that is 
+# going to be dropped
+<net-zope/zope-2.9
+<net-zope/plone-2.5
+net-zope/calendarx
+net-zope/plonelanguagetool
+<net-zope/plonepopoll-2.6
 
 # Sven Wegener <swegener@gentoo.org> (07 Jun 2008)
 # Not working properly, bug #225181
