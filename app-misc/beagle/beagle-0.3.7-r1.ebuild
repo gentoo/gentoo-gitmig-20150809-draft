@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7.ebuild,v 1.1 2008/05/30 20:01:33 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.1 2008/06/07 14:40:09 cedk Exp $
 
 EAPI=1
 
@@ -90,6 +90,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-evo-sharp.patch
 	# Multilib fix
 	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
 		configure.in || die "sed failed"
