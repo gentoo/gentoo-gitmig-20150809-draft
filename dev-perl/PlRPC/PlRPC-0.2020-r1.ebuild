@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2020-r1.ebuild,v 1.8 2008/03/28 09:16:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2020-r1.ebuild,v 1.9 2008/06/07 09:48:58 aballier Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/~mnooning/"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 PATCHES="${FILESDIR}/perldoc-remove.patch"
