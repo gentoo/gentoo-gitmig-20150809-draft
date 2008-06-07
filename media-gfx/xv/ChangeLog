@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.95 2008/06/07 19:08:23 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.96 2008/06/07 19:45:37 armin76 Exp $
+
+  07 Jun 2008; Raúl Porcel <armin76@gentoo.org> xv-3.10a-r15.ebuild:
+  alpha/ia64/sparc stable wrt #225085
 
   07 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> xv-3.10a-r15.ebuild:
   amd64 stable, bug #225085
