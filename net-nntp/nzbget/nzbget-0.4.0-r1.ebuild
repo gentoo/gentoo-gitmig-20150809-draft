@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.1 2008/06/07 21:19:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.2 2008/06/07 21:22:53 swegener Exp $
 
 EAPI="1"
 
@@ -25,12 +25,13 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 
+	cp "${S}"/nzbget{,d}.conf.example
 	sed -i \
 		-e 's:^$MAINDIR=.*:$MAINDIR=/var/lib/nzbget:' \
 		-e 's:^LockFile=.*:LockFile=/var/run/nzbget/nzbget.pid:' \
 		-e 's:^LogFile=.*:LogFile=/var/log/nzbget/nzbget.log:' \
-		"${S}"/nzbget.conf.example \
-		|| die "sed nzbget.conf.example failed"
+		"${S}"/nzbgetd.conf.example \
+		|| die "sed nzbgetd.conf.example failed"
 }
 
 src_compile() {
@@ -46,7 +47,8 @@ src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 
 	insinto /etc
-	newins nzbget.conf.example nzbgetd.conf || die "newins failed"
+	newins nzbget.conf.example nzbget.conf || die "newins failed"
+	newins nzbgetd.conf.example nzbgetd.conf || die "newins failed"
 
 	keepdir /var/lib/nzbget/{dst,nzb,queue,tmp}
 	keepdir /var/{log,run}/nzbget
