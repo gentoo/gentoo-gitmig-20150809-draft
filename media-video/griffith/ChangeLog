@@ -1,6 +1,13 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.22 2008/05/29 17:28:55 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.23 2008/06/07 12:54:13 dev-zero Exp $
+
+*griffith-0.9.6 (07 Jun 2008)
+
+  07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> metadata.xml,
+  +griffith-0.9.6.ebuild:
+  Version bump (bug #210993): Currently installs a copy of SQLAlchemy-0.3,
+  this will be fixed in 0.10.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> griffith-0.9.5.ebuild:
   python_mod_{cleanup,optimize} is ROOT aware.
