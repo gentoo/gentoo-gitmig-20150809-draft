@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.234 2008/06/06 05:03:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.235 2008/06/07 15:39:39 jer Exp $
+
+*opera-9.50_beta2_p2025 (07 Jun 2008)
+
+  07 Jun 2008; Jeroen Roovers <jer@gentoo.org>
+  +opera-9.50_beta2_p2025.ebuild:
+  Version bump <http://my.opera.com/desktopteam/blog/2008/06/06/turtle-wax>.
 
 *opera-9.50_beta2_p2021 (06 Jun 2008)
 
