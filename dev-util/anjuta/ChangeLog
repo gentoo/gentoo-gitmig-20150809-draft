@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.83 2008/05/10 15:29:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.84 2008/06/07 15:32:48 jer Exp $
+
+  07 Jun 2008; Jeroen Roovers <jer@gentoo.org> anjuta-2.4.1.ebuild:
+  Marked ~hppa too.
 
   10 May 2008; Raúl Porcel <armin76@gentoo.org> anjuta-2.2.0-r1.ebuild:
   sparc stable
