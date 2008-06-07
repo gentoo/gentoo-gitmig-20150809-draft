@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.5 2008/05/17 05:15:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.6 2008/06/07 12:50:58 aballier Exp $
+
+  07 Jun 2008; Alexis Ballier <aballier@gentoo.org> serf-0.1.2.ebuild:
+  keyword ~x86-fbsd
 
   17 May 2008; Jeroen Roovers <jer@gentoo.org> serf-0.1.2.ebuild:
   Marked ~hppa (bug #219882).
