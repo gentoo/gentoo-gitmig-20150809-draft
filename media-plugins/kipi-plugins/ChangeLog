@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.36 2008/05/25 13:13:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.37 2008/06/07 14:39:56 ingmar Exp $
+
+  07 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kipi-plugins-0.1.4-r1.ebuild, kipi-plugins-0.1.5.ebuild:
+  Add $DEPEND to $RDEPEND, bug 225217.
 
   25 May 2008; Markus Meier <maekke@gentoo.org>
   kipi-plugins-0.1.4-r1.ebuild:
