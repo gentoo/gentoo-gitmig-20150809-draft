@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.10 2008/05/19 20:37:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.11 2008/06/07 22:53:23 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -50,21 +50,17 @@ src_unpack() {
 	sed -e "/^doc-all:/s/mgetty.asc mgetty.info mgetty.dvi mgetty.ps/mgetty.info/" \
 		-i "${S}/doc/Makefile"
 	if use doc; then
-		sed -e "s:dvips -o mgetty.ps:dvips -M -o mgetty.ps:" \
-			-e "s/^doc-all:/doc-all: mgetty.ps/" \
+		sed -e "s/^doc-all:/doc-all: mgetty.ps/" \
 			-i "${S}/doc/Makefile"
 	fi
 }
 
 src_compile() {
-	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices
-	append-ldflags $(bindnow-flags)
-
 	use fidonet && append-flags "-DFIDO"
 	append-flags "-DAUTO_PPP"
 
 	# parallel make fix later - 'sedscript' issue
-	make prefix=/usr \
+	VARTEXFONTS="${T}"/fonts make prefix=/usr \
 		CC="$(tc-getCC)" \
 		CONFDIR=/etc/mgetty+sendfax \
 		CFLAGS="${CFLAGS}" \
