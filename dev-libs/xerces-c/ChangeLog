@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.57 2008/06/07 14:35:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.58 2008/06/07 19:53:10 dev-zero Exp $
+
+  07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/xerces-c-2.8.0-IconvGNUTransService.cpp.patch,
+  xerces-c-2.8.0.ebuild:
+  Added patch to fix compilation-problems with USE="icon -threads" (bug
+  #218964, thanks to Kai Blaschke)
 
   07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   xerces-c-2.7.0-r1.ebuild:
