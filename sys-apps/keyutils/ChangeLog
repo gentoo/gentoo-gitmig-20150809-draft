@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/keyutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.8 2007/12/10 17:09:14 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.9 2008/06/07 02:48:07 robbat2 Exp $
+
+*keyutils-1.2-r1 (07 Jun 2008)
+
+  07 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/keyutils-1.2-makefile-fixup.patch, +keyutils-1.2-r1.ebuild:
+  Resolve bug #198352 where the binaries were built before the new lib
+  sometimes, leading to bad linking.
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org> keyutils-1.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #201744
