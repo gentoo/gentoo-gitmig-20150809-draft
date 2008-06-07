@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04.ebuild,v 1.2 2007/08/25 22:58:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.1 2008/06/07 08:52:00 bicatali Exp $
 
 inherit eutils multilib fortran
 
 DEB_PN=paw
 DEB_PV=${PV}.dfsg.2
-DEB_PR=1
+DEB_PR=5
 DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN's Physics Analysis Workstation data analysis program"
@@ -26,7 +26,7 @@ RDEPEND="virtual/motif
 	x11-libs/xbae"
 
 DEPEND="${RDEPEND}
-	virtual/tetex
+	virtual/latex-base
 	x11-misc/imake
 	x11-misc/makedepend"
 
@@ -42,38 +42,37 @@ src_unpack() {
 
 	cd "${S}"
 	cp debian/add-ons/Makefile .
+	export DEB_BUILD_OPTIONS="${FORTRANC} nostrip nocheck"
+
 	# fix some path stuff and collision for comis.h,
 	# already installed by cernlib and replace hardcoded fortran compiler
 	sed -i \
 		-e 's:/usr/local:/usr:g' \
 		-e '/comis.h/d' \
-		-e "s/g77/${FORTRANC}/g" \
+		-e "s/gfortran/${FORTRANC}/g" \
 		Makefile || "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
-	emake -j1 \
-		DEB_BUILD_OPTIONS="${FORTRANC} ${nostrip}" \
-		patch || die "make patch failed"
+	emake -j1 patch || die "make patch failed"
 
 	# since we depend on cfortran, do not use the one from cernlib
-	# (adapted from debian/cernlib-debian.mk)
-	mv -f src/include/cfortran/cfortran.h \
-		src/include/cfortran/cfortran.h.disabled
-	# create local LaTeX cache directory
-	mkdir -p .texmf-var
+	rm -f src/include/cfortran/cfortran.h
 }
 
 src_compile() {
-	emake -j1 \
-		DEB_BUILD_OPTIONS="${FORTRANC} nostrip" \
-		|| die "emake failed"
+	# create local LaTeX cache directory
+	#mkdir -p .texmf-var
+	VARTEXFONTS="${T}"/fonts
+	emake -j1 cernlib-indep cernlib-arch || die "emake failed"
+}
+
+src_test() {
+	LD_LIBRARY_PATH="${S}"/shlib \
+		emake -j1 cernlib-test || die "emake test failed"
 }
 
 src_install() {
-	emake \
-		DEB_BUILD_OPTIONS="${FORTRANC} nostrip" \
-		DESTDIR="${D}" \
-		install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	cd "${S}"/debian
 	dodoc changelog README.* deadpool.txt copyright || die "dodoc failed"
 	newdoc add-ons/README README.add-ons || die "newdoc failed"
@@ -82,6 +81,6 @@ src_install() {
 pkg_postinst() {
 	if use amd64; then
 		elog "Please see the possible warnings in using ${PN} on 64 bits:"
-		elog "/usr/share/doc/${PF}/README.*64*"
+		elog "${ROOT}/usr/share/doc/${PF}/README.*64*"
 	fi
 }
