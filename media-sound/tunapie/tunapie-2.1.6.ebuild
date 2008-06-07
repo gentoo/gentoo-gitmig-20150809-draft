@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.1.6.ebuild,v 1.2 2008/05/29 17:21:50 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.1.6.ebuild,v 1.3 2008/06/07 11:28:53 drac Exp $
 
 inherit eutils multilib python
 
@@ -31,7 +31,7 @@ src_install() {
 	doicon src/tplogo.xpm
 
 	insinto /usr/$(get_libdir)/${PN}
-	doins src/{*.py,*.png}
+	doins src/{*.py,*.png} || die "doins failed."
 
 	dodir /etc
 
