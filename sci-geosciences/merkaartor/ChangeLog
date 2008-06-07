@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.2 2008/03/24 21:40:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.3 2008/06/07 22:27:31 hanno Exp $
+
+*merkaartor-9999 (07 Jun 2008)
+
+  07 Jun 2008; Hanno Boeck <hanno@gentoo.org> +merkaartor-9999.ebuild:
+  Add live svn ebuild, needs qt 4.4.
 
 *merkaartor-0.0.10 (24 Mar 2008)
 
