@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.9.5.ebuild,v 1.1 2008/03/23 15:14:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.10.2.ebuild,v 1.1 2008/06/07 03:40:09 chtekk Exp $
 
 NEED_PYTHON=2.3
 
