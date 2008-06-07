@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.5_pre070703.ebuild,v 1.1 2008/01/19 01:13:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.5_pre070703.ebuild,v 1.2 2008/06/07 11:47:04 flameeyes Exp $
+
+inherit autotools
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -20,6 +22,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${P/_pre*}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautomake
+}
 
 src_compile() {
 	econf $(use_enable truetype xft) || die "configure failed"
