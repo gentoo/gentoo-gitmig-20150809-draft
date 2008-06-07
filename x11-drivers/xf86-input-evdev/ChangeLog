@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.77 2008/06/06 22:07:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.78 2008/06/07 19:35:15 dberkholz Exp $
+
+*xf86-input-evdev-1.99.2-r1 (07 Jun 2008)
+
+  07 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.99.2/0004-Check-for-XINPUT-ABI-3-corrected-version.patch,
+  +files/1.99.2/0003-Revert-Check-for-XINPUT-ABI-parameters-of-InitValu.patc
+  h, +xf86-input-evdev-1.99.2-r1.ebuild:
+  (#225181) Revbump to get X working again. Still an issue with moving
+  pointers to other screens on multi-monitor setups.
 
 *xf86-input-evdev-1.99.2 (06 Jun 2008)
 

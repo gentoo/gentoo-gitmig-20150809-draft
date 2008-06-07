@@ -1,0 +1,44 @@
+From d40125ea8c2ce6ec0f98bdc0655f79aa7274152e Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter@cs.unisa.edu.au>
+Date: Sun, 8 Jun 2008 00:09:40 +0930
+Subject: [PATCH] Revert "Check for XINPUT ABI, parameters of InitValuatorClassRec have changed."
+
+GetMotionEvents() doesn't exist, led to compile errors with servers pre-MPX
+merge. Thanks to Sven Wegener for pointing this out.
+
+This reverts commit 42422d8f69e6806e1adfd93017cac064a75041c7.
+---
+ src/evdev.c |   10 ++--------
+ 1 files changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/src/evdev.c b/src/evdev.c
+index 3fe0708..13f03d3 100644
+--- a/src/evdev.c
++++ b/src/evdev.c
+@@ -726,10 +726,7 @@ EvdevAddAbsClass(DeviceIntPtr device)
+     pEvdev->min_y = absinfo_y.minimum;
+     pEvdev->max_y = absinfo_y.maximum;
+ 
+-    if (!InitValuatorClassDeviceStruct(device, 2,
+-#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
+-                                       GetMotionEvents(),
+-#endif
++    if (!InitValuatorClassDeviceStruct(device, 2, GetMotionHistory,
+                                        GetMotionHistorySize(), Absolute))
+         return !Success;
+ 
+@@ -759,10 +756,7 @@ EvdevAddRelClass(DeviceIntPtr device)
+ 
+     pInfo = device->public.devicePrivate;
+ 
+-    if (!InitValuatorClassDeviceStruct(device, 2,
+-#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
+-                                       GetMotionEvents(),
+-#endif
++    if (!InitValuatorClassDeviceStruct(device, 2, GetMotionHistory,
+                                        GetMotionHistorySize(), Relative))
+         return !Success;
+ 
+-- 
+1.5.5.1
+
