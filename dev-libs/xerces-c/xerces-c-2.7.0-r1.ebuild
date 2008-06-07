@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.13 2008/05/12 01:35:18 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.14 2008/06/07 14:35:25 dev-zero Exp $
 
 inherit eutils multilib versionator
 
@@ -50,9 +50,9 @@ src_install () {
 	emake DESTDIR="${D}" MLIBDIR=$(get_libdir) install || die "emake failed"
 
 	if use doc; then
-		dodir /usr/share/doc/${P}
-		cp -pPR "${S}"/samples "${D}"/usr/share/doc/${P}
-		cd "${S}"/doc; doxygen
+		dodir /usr/share/doc/${PF}
+		cp -pPR "${S}/samples" "${D}/usr/share/doc/${PF}"
+		cd "${S}/doc"; doxygen
 		dohtml -r html
 	fi
 
