@@ -1,0 +1,82 @@
+Fix for bug: evolution leaves deleted messages strike through
+http://bugzilla.gnome.org/show_bug.cgi?id=535749
+
+--- branches/gnome-2-22/mail/message-list.c	2008/06/04 10:47:09	35595
++++ branches/gnome-2-22/mail/message-list.c	2008/06/04 14:37:00	35596
+@@ -3889,19 +3889,31 @@
+ 	if (expr == NULL) {
+ 		uids = camel_folder_get_uids (m->folder);
+ 	} else {
+-		char *tmp_expr = NULL;
++		searchuids = uids = camel_folder_search_by_expression (m->folder, expr, &m->base.ex);
+ 
+ 		/* If m->changes is not NULL, then it means we are called from folder_changed event,
+ 		   thus we will keep the selected message to be sure it doesn't disappear because
+ 		   it no longer belong to our search filter. */
+-		if (m->changes && m->ml->search && m->ml->cursor_uid) {
+-			tmp_expr = g_strdup_printf ("(or %s (match-all (uid \"%s\")))", expr, m->ml->cursor_uid);
+-			expr = tmp_expr;
+-		}
++		if (m->changes && m->ml->search && m->ml->cursor_uid && uids) {
++			for (i = 0; i < uids->len; i++) {
++				if (g_str_equal (m->ml->cursor_uid, uids->pdata [i]))
++					break;
++			}
+ 
+-		searchuids = uids = camel_folder_search_by_expression (m->folder, expr, &m->base.ex);
++			/* cursor_uid has been filtered out */
++			if (i == uids->len) {
++				gboolean was_deleted = (camel_folder_get_message_flags (m->folder, m->ml->cursor_uid) & CAMEL_MESSAGE_DELETED) != 0;
++
++				/* I would really like to check for CAMEL_MESSAGE_FOLDER_FLAGGED on a message,
++				   so I would know whether it was changed locally, and then just check the changes
++				   struct whether change came from the server, but with periodical save it doesn't
++				   matter. So here just check whether the file was deleted and we show it based
++				   on the flag whether we can view deleted messages or not. */
+ 
+-		g_free (tmp_expr);
++				if (!was_deleted || (was_deleted && !m->hidedel))
++					g_ptr_array_add (uids, g_strdup (m->ml->cursor_uid));
++			}
++		}
+ 	}
+ 
+ 	if (camel_exception_is_set (&m->base.ex))
+@@ -4182,6 +4194,10 @@
+ 	struct _regen_list_msg *m;
+ 	GConfClient *gconf;
+ 
++	/* report empty search as NULL, not as one/two-space string */
++	if (search && (strcmp (search, " ") == 0 || strcmp (search, "  ") == 0))
++		search = NULL;
++
+ 	if (ml->folder == NULL) {
+ 		if (ml->search != search) {
+ 			g_free(ml->search);
+--- branches/gnome-2-22/widgets/misc/e-filter-bar.c	2008/06/04 10:47:09	35595
++++ branches/gnome-2-22/widgets/misc/e-filter-bar.c	2008/06/04 14:37:00	35596
+@@ -592,8 +592,11 @@
+ 	ESearchBar *esb = E_SEARCH_BAR (object);
+ 
+ 	switch (property_id) {
+-	case PROP_QUERY:
+-		if (efb->current_query) {
++	case PROP_QUERY: {
++		char *text = e_search_bar_get_text (E_SEARCH_BAR (efb));
++
++		/* empty search text means searching turned off */
++		if (efb->current_query && text && *text) {
+ 			GString *out = g_string_new ("");
+ 
+ 			filter_rule_build_code (efb->current_query, out);
+@@ -602,7 +605,9 @@
+ 		} else {
+ 			g_value_set_string (value, NULL);
+ 		}
+-		break;
++
++		g_free (text);
++		break; }
+ 	case PROP_STATE: {
+ 		/* FIXME: we should have ESearchBar save its own state to the xmlDocPtr */
+ 		xmlChar *xmlbuf;

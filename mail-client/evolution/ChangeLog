@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.237 2008/06/04 13:24:36 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.238 2008/06/07 12:22:56 eva Exp $
+
+*evolution-2.22.2-r2 (07 Jun 2008)
+
+  07 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-2.22.2-deleted-mails.patch, +evolution-2.22.2-r2.ebuild:
+  leaves last deleted mail strike-through, bug #224991.
 
 *evolution-2.22.2-r1 (04 Jun 2008)
 *evolution-2.12.3-r2 (04 Jun 2008)
