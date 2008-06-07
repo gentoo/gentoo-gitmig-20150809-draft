@@ -1,0 +1,36 @@
+version="@VERSION@"
+description = "Image manipulation library"
+
+requires="graphics"
+
+archive(byte)   ="ci_core.cma"
+archive(byte)  +="ci_freetype.cma"
+archive(byte)  +="ci_gif.cma"
+archive(byte)  +="ci_jpeg.cma"
+archive(byte)  +="ci_tiff.cma"
+archive(byte)  +="ci_bmp.cma"
+archive(byte)  +="ci_ppm.cma"
+archive(byte)  +="ci_png.cma"
+archive(byte)  +="ci_xvthumb.cma"
+archive(byte)  +="ci_xpm.cma"
+archive(byte)  +="ci_ps.cma"
+archive(byte)  +="ci_graphics.cma"
+
+archive(native) ="ci_core.cmxa"
+archive(native)+="ci_freetype.cmxa"
+archive(native)+="ci_gif.cmxa"
+archive(native)+="ci_jpeg.cmxa"
+archive(native)+="ci_tiff.cmxa"
+archive(native)+="ci_bmp.cmxa"
+archive(native)+="ci_ppm.cmxa"
+archive(native)+="ci_png.cmxa"
+archive(native)+="ci_xvthumb.cmxa"
+archive(native)+="ci_xpm.cmxa"
+archive(native)+="ci_ps.cmxa"
+archive(native)+="ci_graphics.cmxa"
+
+package "lablgtk2" (
+	requires="camlimages lablgtk2"
+	archive(byte)="ci_lablgtk2.cma"
+	archive(native)="ci_lablgtk2.cmxa"
+)
