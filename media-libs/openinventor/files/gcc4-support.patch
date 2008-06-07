@@ -101,3 +101,98 @@ diff -urN ./inventor-old/libSoXt/src/SoXtRsrc.c++ ./inventor/libSoXt/src/SoXtRsr
      }
  
      // make the last entry the NULL sentinel
+--- ./inventor-old/apps/demos/drop/drop.c++	2008-06-06 10:44:36.000000000 +0100
++++ ./inventor/apps/demos/drop/drop.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -93,5 +93,6 @@
+     // Enter the Xt event loop
+     SoXt::show( appWindow );
+     SoXt::mainLoop();
++    return 0;
+ }
+ 
+--- ./inventor-old/apps/demos/maze/maze.c++	2008-06-06 10:44:36.000000000 +0100
++++ ./inventor/apps/demos/maze/maze.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -1332,5 +1332,6 @@
+ 
+     SoXt::show(mainWindow);
+     SoXt::mainLoop();
++    return 0;
+ }
+ 
+--- ./inventor-old/apps/demos/noodle/noodle.c++	2008-06-06 10:44:36.000000000 +0100
++++ ./inventor/apps/demos/noodle/noodle.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -679,5 +679,6 @@
+     SoXt::show(mainWindow);
+ 
+     SoXt::mainLoop();
++    return 0;
+ }
+ 
+--- ./inventor-old/apps/demos/SceneViewer/SceneViewer.c++	2008-06-06 10:44:36.000000000 +0100
++++ ./inventor/apps/demos/SceneViewer/SceneViewer.c++	2008-06-04 15:22:04.000000000 +0100
+@@ -230,4 +230,5 @@
+     // Loop forever
+     //
+     SoXt::mainLoop();
++    return 0;
+ }
+--- ./inventor-old/apps/samples/widgets/componentTest.c++	2008-06-06 10:44:36.000000000 +0100
++++ ./inventor/apps/samples/widgets/componentTest.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -60,7 +60,7 @@
+ }
+ 
+ int
+-main(unsigned int argc, char *argv[])
++main(int argc, char *argv[])
+ {
+     if (argc != 2)
+ 	usage(argv[0]);
+@@ -85,4 +85,5 @@
+     XtRealizeWidget(mainWindow);
+     
+     SoXt::mainLoop();
++    return 0;
+ }
+--- ./inventor-old/doc/man/ivman/ClassDef.c++	2008-06-06 10:44:38.000000000 +0100
++++ ./inventor/doc/man/ivman/ClassDef.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -237,7 +237,7 @@
+ 
+ #define NUM_KEY_WORDS (sizeof(keywords) / sizeof(keywords[0]))
+ 
+-    int	i;
++    size_t i;
+ 
+     if (names == NULL) {
+ 	names = new SbName[NUM_KEY_WORDS];
+--- ./inventor-old/doc/man/ivman/Main.c++	2008-06-06 10:44:38.000000000 +0100
++++ ./inventor/doc/man/ivman/Main.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -89,7 +89,7 @@
+ //
+ /////////////////////////////////////////////////////////////////////////////
+ 
+-main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+     SbBool	ok = TRUE;
+     int		c, curArg;
+--- ./inventor-old/doc/man/ivman/Man.c++	2008-06-06 10:44:38.000000000 +0100
++++ ./inventor/doc/man/ivman/Man.c++	2008-06-04 15:22:05.000000000 +0100
+@@ -806,7 +806,7 @@
+ 
+ #define NUM_OP_NAMES (sizeof(opNames) / sizeof(opNames[0]))
+ 
+-		int op;
++		size_t op;
+ 		for (op = 0; op < NUM_OP_NAMES; op++) {
+ 		    if (name == opNames[op][0]) {
+ 			name = opNames[op][1];
+--- ./inventor-old/doc/man/ivman/Man.h	2008-06-06 10:44:38.000000000 +0100
++++ ./inventor/doc/man/ivman/Man.h	2008-06-04 15:22:05.000000000 +0100
+@@ -131,6 +131,7 @@
+     virtual void	write(SbBool runIn) = 0;
+     virtual SbBool	read()  = 0;
+     virtual int		getNumPreTabChars() const;
++    virtual             ~Item() {}
+   protected:
+     Item();
+   private:

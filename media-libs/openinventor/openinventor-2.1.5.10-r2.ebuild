@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.7 2008/05/23 16:32:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.8 2008/06/07 08:57:45 bicatali Exp $
 
-inherit eutils versionator
+inherit eutils versionator flag-o-matic
 
 MY_PV=$(replace_version_separator 3 '-')
 MY_PN="inventor"
@@ -17,9 +17,10 @@ KEYWORDS="alpha amd64 x86"
 IUSE=""
 
 RDEPEND="media-libs/mesa
-	virtual/motif
+	x11-libs/openmotif
 	>=media-libs/jpeg-6b
-	>=media-libs/freetype-2.0"
+	>=media-libs/freetype-2.0
+	media-fonts/corefonts"
 DEPEND="dev-util/byacc
 	${RDEPEND}"
 
@@ -55,6 +56,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# -O2 segfaults on amd64 gcc-4.3 with ivman command (bicatali jun.08)
+	replace-flags -O? -O1
+
 	# VLDOPTS: find libraries during linking of executables
 	# VLDDSOOPTS: find libraries during linking of libraries
 	# VCFLAGS / VCXXFLAGS: pass user-chosen compiler flags
@@ -80,7 +84,7 @@ src_install() {
 	# system
 	# IVLIBDIR: multilib-strict compliance
 	# LD_LIBRARY_PATH: support executables ran during install
-	make \
+	emake -j1 \
 		IVROOT="${D}" \
 		LLDOPTS= \
 		IVLIBDIR="${D}usr/$(get_libdir)" \
