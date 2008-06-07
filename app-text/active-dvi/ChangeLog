@@ -1,6 +1,13 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.17 2008/06/05 15:42:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.18 2008/06/07 20:39:53 aballier Exp $
+
+*active-dvi-1.7.3 (07 Jun 2008)
+
+  07 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/active-dvi-1.7.3-asneeded.patch, +active-dvi-1.7.3.ebuild:
+  Version bump for bug #225005, give it ocamlopt optional support, fix bug
+  #174232, and add ~amd64
 
   05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   active-dvi-1.6.0-r1.ebuild:
