@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.4.ebuild,v 1.6 2005/08/29 20:57:20 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.4.ebuild,v 1.7 2008/06/07 21:31:39 jer Exp $
 
 inherit multilib
 
 DESCRIPTION="A ELF object file access library"
-HOMEPAGE="http://www.stud.uni-hannover.de/~michael/software/"
-SRC_URI="http://www.stud.uni-hannover.de/~michael/software/${P}.tar.gz"
+HOMEPAGE="http://www.mr511.de/software/"
+SRC_URI="http://www.mr511.de/software/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
