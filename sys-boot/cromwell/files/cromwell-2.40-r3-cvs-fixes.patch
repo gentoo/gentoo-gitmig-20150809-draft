@@ -1,0 +1,704 @@
+--- cromwell-2.40/boot/LoadLinux.c
++++ cromwell-2.40/boot/LoadLinux.c
+@@ -33,10 +33,12 @@
+ 
+ 
+ void ExittoLinux(CONFIGENTRY *config);
+-void startLinux(void* initrdStart, unsigned long initrdSize, const char* appendLine);
++void startLinux(void* initrdStart, unsigned long initrdSize, const char* appendLine, unsigned int entry);
+ void setup(void* KernelPos, void* PhysInitrdPos, unsigned long InitrdSize, const char* kernel_cmdline);
+ void I2CRebootSlow(void);
+ 
++void try_elf_boot (char* data, int len);
++
+ 
+ void BootPrintConfig(CONFIGENTRY *config) {
+ 	int CharsProcessed=0, CharsSinceNewline=0, Length=0;
+@@ -69,6 +71,10 @@
+ 	unsigned int nSizeHeader=((*(kernelOrg + 0x01f1))+1)*512;
+ 	memcpy((u8 *)KERNEL_SETUP, kernelOrg, nSizeHeader);
+ 	memcpy((u8 *)KERNEL_PM_CODE,(kernelOrg+nSizeHeader),kernelSize-nSizeHeader);
++
++	/* Try to execute a pure ELF binary here, using the etherboot
++	 * code. This is required for ELF kernels, such as FreeBSD */
++	try_elf_boot ((char*)kernelOrg, kernelSize);
+ }
+ 
+ 
+@@ -313,9 +319,15 @@
+ 			configLoaded=1;
+ 			break;
+ 		}
++		dwConfigSize = BootIso9660GetFile(cdromId,"/linuxboot.cfg", (u8 *)KERNEL_SETUP, 0x800);
++		if (dwConfigSize>0) {
++			configLoaded=1;
++			break;
++		}
+ 		wait_ms(250);
+ 	}
+ 
++	//We couldn't read the disk, so we eject the drive so the user can insert one.
+ 	if (!configLoaded) {
+ 		//Needs to be changed for non-xbox drives, which don't have an eject line
+ 		//Need to send ATA eject command.
+@@ -326,20 +338,29 @@
+ 		printk("\2Please insert CD and press Button A\n\n");
+ 
+ 		while(1) {
++			// Make button 'A' close the DVD tray
+ 			if (risefall_xpad_BUTTON(TRIGGER_XPAD_KEY_A) == 1) {
+-				I2CTransmitWord(0x10, 0x0c01); // close DVD tray
++				I2CTransmitWord(0x10, 0x0c01);
+ 				wait_ms(500);
+ 				break;
+ 			}
+-			wait_ms(10);
+-		
+-			//Keep trying to read, in case somebody puts the tray in manually, without pressing A
+-			dwConfigSize = BootIso9660GetFile(cdromId,"/linuxboo.cfg", (u8 *)KERNEL_SETUP, 0x800);
+-			if (dwConfigSize>0) {
+-				configLoaded=1;
++			else if (DVD_TRAY_STATE == DVD_CLOSING) {
++				//It's an xbox drive, and somebody pushed the tray in manually
++				wait_ms(500);
+ 				break;
+ 			}
+-		}						
++			else if (BootIso9660GetFile(cdromId,"/linuxboo.cfg", (u8 *)KERNEL_SETUP, 0x800)>0) {
++				//It isnt an xbox drive, and somebody pushed the tray in manually, and 
++				//the cd is valid.
++				break;
++			}
++			else if (BootIso9660GetFile(cdromId,"/linuxboot.cfg", (u8 *)KERNEL_SETUP, 0x800)>0) {
++				break;
++			}
++			wait_ms(10);
++		}
++
++		wait_ms(250);
+ 
+ 		VIDEO_ATTR=0xffffffff;
+ 
+@@ -351,6 +372,11 @@
+ 				configLoaded=1;
+ 				break;
+ 			}
++			dwConfigSize = BootIso9660GetFile(cdromId,"/linuxboot.cfg", (u8 *)KERNEL_SETUP, 0x800);
++			if (dwConfigSize>0) {
++				configLoaded=1;
++				break;
++			}
+ 			wait_ms(250);
+ 		}
+ 	}
+@@ -423,7 +449,7 @@
+ 	//Try for 4 seconds.
+ 	I2CTransmitWord(0x10, 0x0c01); // close DVD tray
+ 	for (n=0;n<16;++n) {
+-		if((BootIso9660GetFile(cdromId,"/image.bin", (u8 *)KERNEL_SETUP, 0x10)) >=0 ) {
++		if((BootIso9660GetFile(cdromId,"/image.bin", (u8 *)KERNEL_PM_CODE, 0x10)) >=0 ) {
+ 			cdPresent=1;
+ 			break;
+ 		}
+@@ -454,7 +480,7 @@
+ 
+ 		// wait until the media is readable
+ 		while(1) {
+-			if((BootIso9660GetFile(cdromId,"/image.bin", (u8 *)KERNEL_SETUP, 0x10)) >=0 ) {
++			if((BootIso9660GetFile(cdromId,"/image.bin", (u8 *)KERNEL_PM_CODE, 0x10)) >=0 ) {
+ 				break;
+ 			}
+ 			wait_ms(200);
+@@ -462,7 +488,7 @@
+ 	}
+ 	printk("CDROM: ");
+ 	printk("Loading bios image from CDROM:/image.bin. \n");
+-	dwConfigSize=BootIso9660GetFile(cdromId, "/image.bin", (u8 *)KERNEL_PM_CODE, 256*1024);
++	dwConfigSize=BootIso9660GetFile(cdromId, "/image.bin", (u8 *)KERNEL_PM_CODE, 	256*1024);
+ 	
+ 	if( dwConfigSize < 0 ) { //It's not there
+ 		printk("image.bin not found on CDROM... Halting\n");
+@@ -508,12 +534,12 @@
+ 		VIDEO_ATTR=0xff9f9fbf;
+ 		printk(sz);
+ 	}
+-	I2cSetFrontpanelLed(I2C_LED_RED0 | I2C_LED_RED1 | I2C_LED_RED2 | I2C_LED_RED3 );
+-	startLinux((void*)INITRD_START, dwInitrdSize, config->szAppend);
++	setLED("rrrr");
++	startLinux((void*)INITRD_START, dwInitrdSize, config->szAppend, 0x100000);
+ }
+ 	
+ 
+-void startLinux(void* initrdStart, unsigned long initrdSize, const char* appendLine)
++void startLinux(void* initrdStart, unsigned long initrdSize, const char* appendLine, unsigned int entry)
+ {
+ 	int nAta=0;
+ 	// turn off USB
+@@ -535,10 +561,7 @@
+ 	BootIdeSetTransferMode(1, 0x40 | nAta);
+ 
+ 	// orange, people seem to like that colour
+-	I2cSetFrontpanelLed(
+-		I2C_LED_GREEN0 | I2C_LED_GREEN1 | I2C_LED_GREEN2 | I2C_LED_GREEN3 |
+-		I2C_LED_RED0 | I2C_LED_RED1 | I2C_LED_RED2 | I2C_LED_RED3
+-	);
++	setLED("oooo");
+ 	         
+ 	// Set framebuffer address to final location (for vesafb driver)
+ 	(*(unsigned int*)0xFD600800) = (0xf0000000 | ((xbox_ram*0x100000) - FB_SIZE));
+@@ -549,6 +572,8 @@
+ 	// clear idt area
+ 	memset((void*)IDT_LOC,0x0,1024*8);
+ 	
++	__asm__ ("movl %0,%%ebx" : : "a" (entry));	/* ebx = entry */
++	
+ 	__asm __volatile__ (
+ 	"wbinvd\n"
+ 	
+@@ -597,13 +622,15 @@
+ 	// Set the stack pointer to give us a valid stack
+ 	"movl $0x03BFFFFC, %esp \n"
+ 	
+-	"xor 	%ebx, %ebx \n"
+ 	"xor 	%eax, %eax \n"
+ 	"xor 	%ecx, %ecx \n"
+ 	"xor 	%edx, %edx \n"
+ 	"xor 	%edi, %edi \n"
+ 	"movl 	$0x90000, %esi\n"       // kernel setup area
+-	"ljmp 	$0x10, $0x100000\n"     // Jump to Kernel protected mode entry
++	"pushl	$0x10\n"
++	"pushl	%ebx\n"			// 0x10:ebx is the entry point
++	"xor	%ebx,%ebx\n"		// clean leftover ebx (held entry point)
++	".byte	0xcb\n	"		// retf
+ 	);
+ 	
+ 	// We are not longer here, we are already in the Linux loader, we never come back here
+--- cromwell-2.40/boot_rom/bootrom.ld
++++ cromwell-2.40/boot_rom/bootrom.ld
+@@ -45,6 +45,7 @@
+        	.rodata ( RAM_CODE + SIZEOF(.text) + SIZEOF(.data) ) : AT ( SIZEOF(.low_rom) + SIZEOF(.text) + SIZEOF(.data)) {
+ 		*(.rodata);
+ 		*(.rodata.str1.1);
++		*(.rodata.str1.4);
+ 		*(.rodata.str1.32);
+ 		*(.rodata.cst4);
+ 		*(.rodata.cst8);
+--- cromwell-2.40/drivers/ide/BootHddKey.c
++++ cromwell-2.40/drivers/ide/BootHddKey.c
+@@ -5,13 +5,8 @@
+ #include <stdarg.h>
+ //#include <string.h>
+ 
+-
+-
+ void HMAC_hdd_calculation(int version,unsigned char *HMAC_result, ... );
+ 
+-extern size_t strlen(const char * s);
+-
+-
+ int copy_swap_trim(unsigned char *dst, unsigned char *src, int len)
+ {
+ 	unsigned char tmp;
+--- cromwell-2.40/drivers/video/encoder.h
++++ cromwell-2.40/drivers/video/encoder.h
+@@ -21,13 +21,13 @@
+ #define NUM_CONEXANT_REGS       0x69
+ #define MAX_ENCODER_REGS        256
+ 
+-#define u8 unsigned char 
+ #define U032 long
+ #ifndef encoder_h
+ #define encoder_h
+ 
+ //#include <linux/xboxfbctl.h>
+ #include "VideoInitialization.h"
++#include "boot.h"
+ 
+ typedef struct {
+ 	double m_dHzBurstFrequency;
+--- cromwell-2.40/drivers/video/focus.c
++++ cromwell-2.40/drivers/video/focus.c
+@@ -13,6 +13,7 @@
+ */
+ #include "focus.h"
+ #include "encoder.h"
++#include "boot.h"
+ 
+ typedef struct _focus_pll_settings{
+ 	long dotclock;
+--- cromwell-2.40/etherboot/core/Makefile
++++ cromwell-2.40/etherboot/core/Makefile
+@@ -1,4 +1,4 @@
+ 
+-O_TARGET := nfs.o nic.o osloader.o proto_tftm.o xbox_misc.o xbox_pci.o etherboot_config.o xbox_main.o
++O_TARGET := nfs.o nic.o osloader.o proto_tftm.o xbox_misc.o xbox_pci.o etherboot_config.o xbox_main.o exec_elf.o
+ 
+ include $(TOPDIR)/Rules.make
+--- cromwell-2.40/etherboot/core/exec_elf.c
++++ cromwell-2.40/etherboot/core/exec_elf.c
+@@ -0,0 +1,22 @@
++#include "etherboot.h"
++
++/*
++ * This is a helper function; it tries to execute an ELF image using
++ * the Etherboot code. This is because *BSD kernels are raw ELF files,
++ * which are unsupported when booting from CD-ROM or disk.
++ */
++void
++try_elf_boot (char* image, int len)
++{
++	os_download_t os_download;
++
++	/* do nothing if the ELF magic mismatches */
++	if (*(int*)image != 0x464c457f)
++		return;
++
++	os_download = probe_image (image, len);
++	if (os_download == 0)
++		return;
++
++	os_download (image, len, 1);
++}
+--- cromwell-2.40/fs/cdrom/iso9660.c
++++ cromwell-2.40/fs/cdrom/iso9660.c
+@@ -10,7 +10,11 @@
+ 	2004-07-22 "Edgar Hucek"<hostmaster@ed-soft.at>  Created
+ */
+ 
++#ifndef STANDALONE
+ #include "boot.h"
++#else
++#	define printk printf
++#endif
+ #include "iso_fs.h"
+ 
+ int isupper( int ch )
+@@ -96,25 +100,31 @@
+ 			sprintf(newfilename, "%s/",filename);
+ 			iso9660_name_translate(newfilename + strlen(newfilename), 
+ 					dir->name, (unsigned char)dir->name_len[0]);
+-//			printk("Read : Sector %d Filename %s %d\n", 
+-//					*((unsigned long *)(dir->extent)),  newfilename,
+-//					(unsigned char)dir->ext_attr_length[0]);
++#ifdef DEBUG_ISO
++			printk("Read : Sector %d Filename %s %d\n", 
++				*((unsigned long *)(dir->extent)),  newfilename,
++				(unsigned char)dir->ext_attr_length[0]);
++#endif
+ 		}
+ 		
+ 		if(strlen(newfilename) <= strlen(search)) {
+ 			if(memcmp(newfilename, search, strlen(search)) == 0) {
+ 				sect = *((unsigned long *)(dir->extent));
+ 				memcpy(dir_found, dir, sizeof(struct iso_directory_record));
+-//				printk("Found : Sector %d Directory %s Filename %s  %d %d \n", 
+-//					sect, newfilename, search, 
+-//					strlen(newfilename), strlen(search));
++#ifdef DEBUG_ISO
++				printk("Found : Sector %d Directory %s Filename %s  %d %d \n", 
++					sect, newfilename, search, 
++					strlen(newfilename), strlen(search));
++#endif
+ //				free(newfilename);
+ //				free(buffer);
+ 				return sect;
+ 			}
+ 		}
+ 		if((*((char *)(dir->flags)) & IS_DIR) && (*((unsigned char *)(dir->name_len)) > 1)) {
+-//			printk("Directory %s Filename %s\n", newfilename, search);
++#ifdef DEBUG_ISO
++			printk("Directory %s Filename %s\n", newfilename, search);
++#endif
+ 			if (strlen(newfilename) < strlen(search) && !memcmp(search,newfilename,
+ 						strlen(newfilename)) && search[strlen(newfilename)]=='/') {
+ 				sect = read_dir(driveId, dir, search, newfilename, dir_found);
+@@ -131,35 +141,46 @@
+ 	return sect;
+ }
+ 
+-void read_file(int driveId, struct iso_directory_record *dir_read, char *buffer) {
++unsigned long read_file(int driveId, struct iso_directory_record *dir_read, char *buffer, unsigned int max_bytes_to_read) {
+ 	unsigned long read_size;
++	unsigned long bytes_read;
+ 	unsigned long offset;
+ 	int i;
+ 	char *tmpbuff;
+ 
++	
+ 	offset = *((unsigned long *)(dir_read->extent));
+ 	tmpbuff = (char *) malloc(ISO_BLOCKSIZE);
++
++	if (max_bytes_to_read > *((unsigned int *)(dir_read->size)) ) {
++		read_size = *(unsigned long *)dir_read->size;
++	}
++	else read_size = *(unsigned long *)max_bytes_to_read;
++	
++	bytes_read = read_size;
+ 	
+-	read_size = *((unsigned long *)(dir_read->size));	
+ 	if(read_size <= ISO_BLOCKSIZE) {
+ 		read_size = ISO_BLOCKSIZE;
+ 	} else {
+ 		read_size+=(ISO_BLOCKSIZE - (read_size % ISO_BLOCKSIZE));
+ 	}
+ 	
+-//	printk("         read_file sector %d %d\n", offset, read_size);
+-	
++#ifdef DEBUG_ISO
++	printk("         read_file sector %d %d\n", offset, read_size);
++#endif	
+ 	for(i = 0; i < (read_size >> ISOFS_BLOCK_BITS) ; i++) {
+ 		memset(tmpbuff, 0x0, ISO_BLOCKSIZE);
+ 		BootIdeReadSector(driveId, tmpbuff, offset , 0, ISO_BLOCKSIZE);
+ 		offset++;
+ 		if(((i+1) * ISO_BLOCKSIZE) > read_size) {
+-			memcpy(&buffer[i * ISO_BLOCKSIZE], tmpbuff, (i * ISO_BLOCKSIZE) - *((unsigned long *)(dir_read->size)));
++			memcpy(&buffer[i * ISO_BLOCKSIZE], tmpbuff, (i * ISO_BLOCKSIZE) - read_size);
+ 		} else {
+ 			memcpy(&buffer[i * ISO_BLOCKSIZE], tmpbuff, ISO_BLOCKSIZE);
+ 		}
+ 	}
+ 	free(tmpbuff);
++
++	return bytes_read;
+ }
+ 
+ int BootIso9660GetFile(int driveId, char *szcPath, unsigned char *pbaFile, unsigned int dwFileLengthMax) {
+@@ -177,7 +198,9 @@
+ 	memset(dir,0x0,sizeof(struct iso_directory_record));
+ 	
+ 	if(BootIdeReadSector(driveId, pvd, 16 , 0, ISO_BLOCKSIZE)) {
+-//		printk("BootIso9660GetFile : Error read Sector\n");
++#ifdef DEBUG_ISO
++		printk("BootIso9660GetFile : Error read Sector\n");
++#endif
+ 		free(pvd);
+ 		free(dir);
+ 		return -1;
+@@ -187,14 +210,9 @@
+ 	offset = read_dir(driveId, rootd, szcPath, "", dir);
+ 	
+ 	if(offset > 0) {
+-		if(*((unsigned long *)(dir->size)) > dwFileLengthMax) {
+-			free(pvd);
+-			free(dir);
+-			return -1;
+-		}
+-		read_file(driveId, dir, pbaFile);
+-		return *((unsigned long *)(dir->size));
++		return read_file(driveId, dir, pbaFile, dwFileLengthMax);
+ 	} else {
++		//Not found
+ 		free(pvd);
+ 		free(dir);
+ 		return -1;
+--- cromwell-2.40/fs/grub/fsys_ext2fs.c
++++ cromwell-2.40/fs/grub/fsys_ext2fs.c
+@@ -16,6 +16,7 @@
+  *  along with this program; if not, write to the Free Software
+  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
++#include "boot.h"
+ 
+ #ifdef FSYS_EXT2FS
+ 
+--- cromwell-2.40/fs/grub/fsys_reiserfs.c
++++ cromwell-2.40/fs/grub/fsys_reiserfs.c
+@@ -17,7 +17,7 @@
+  *  along with this program; if not, write to the Free Software
+  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+-
++#include "boot.h"
+ #ifdef FSYS_REISERFS
+ #include "shared.h"
+ #include "filesys.h"
+@@ -367,7 +367,7 @@
+ 
+ 
+ static __inline__ unsigned long
+-log2 (unsigned long word)
++reiser_log2 (unsigned long word)
+ {
+   __asm__ ("bsfl %1,%0"
+ 	   : "=r" (word)
+@@ -609,7 +609,7 @@
+   
+   INFO->version = super.s_version;
+   INFO->blocksize = super.s_blocksize;
+-  INFO->fullblocksize_shift = log2 (super.s_blocksize);
++  INFO->fullblocksize_shift = reiser_log2 (super.s_blocksize);
+   INFO->blocksize_shift = INFO->fullblocksize_shift - SECTOR_BITS;
+   INFO->cached_slots = 
+     (FSYSREISER_CACHE_SIZE >> INFO->fullblocksize_shift) - 1;
+--- cromwell-2.40/include/boot.h
++++ cromwell-2.40/include/boot.h
+@@ -331,8 +331,12 @@
+                 unsigned char *text1, int text1_length,
+                 unsigned char *text2, int text2_length );
+ 
+-char *HelpGetLine(char *ptr);
+-void HelpGetParm(char *szBuffer, char *szOrig);
+ char *strrchr0(char *string, char ch);
+ 
++void setLED(void *pattern);
++
++int strlen(const char * s);
++int sprintf(char * buf, const char *fmt, ...);
++char * strncpy(char * dest,const char *src,int count);
++char * strstr(const char * s1,const char * s2);
+ #endif // _Boot_H_
+--- cromwell-2.40/include/config.h
++++ cromwell-2.40/include/config.h
+@@ -1,7 +1,7 @@
+ ////////////////////// compile-time options ////////////////////////////////
+ 
+ //Cromwell version number
+-#define VERSION "2.40"
++#define VERSION "2.40-r3"
+ 
+ // selects between the supported video modes, see boot.h for enum listing those available
+ //#define VIDEO_PREFERRED_MODE VIDEO_MODE_800x600
+--- cromwell-2.40/lib/gzip/misc.c
++++ cromwell-2.40/lib/gzip/misc.c
+@@ -29,8 +29,6 @@
+  *
+  * Incomprehensible are the ways of bootloaders.
+  */
+-static void* memset(void *, int, size_t);
+-static void* memcpy(void *, __const void *, size_t);
+ #define memzero(s, n)     memset ((s), 0, (n))
+ 
+ typedef unsigned char  uch;
+@@ -138,25 +136,6 @@
+ 	free_mem_ptr = (long) *ptr;
+ }
+  
+-static void* memset(void* s, int c, size_t n)
+-{
+-	int i;
+-	char *ss = (char*)s;
+-
+-	for (i=0;i<n;i++) ss[i] = c;
+-	return s;
+-}
+-
+-static void* memcpy(void* __dest, __const void* __src,
+-			    size_t __n)
+-{
+-	int i;
+-	char *d = (char *)__dest, *s = (char *)__src;
+-
+-	for (i=0;i<__n;i++) d[i] = s[i];
+-	return __dest;
+-}
+-
+ /* ===========================================================================
+  * Fill the input buffer. This is called only when the buffer is empty
+  * and at least one byte is really needed.
+--- cromwell-2.40/lib/misc/BootLibrary.c
++++ cromwell-2.40/lib/misc/BootLibrary.c
+@@ -36,7 +36,7 @@
+ }
+ 
+ 
+-size_t strlen(const char * s)
++int strlen(const char * s)
+ {
+ 	int d0;
+ 	register int __res;
+@@ -99,7 +99,7 @@
+ 	return dest;
+ }
+ 
+-char * strncpy(char * dest,const char *src,size_t count)
++char * strncpy(char * dest,const char *src,int count)
+ {
+ 	int d0, d1, d2, d3;
+ 	__asm__ __volatile__(
+--- cromwell-2.40/lib/misc/LED.c
++++ cromwell-2.40/lib/misc/LED.c
+@@ -0,0 +1,52 @@
++/**
++ * Xbox LED Pattern setting for Cromwell.
++ * Copyright (C) Thomas "ShALLaX" Pedley (gentoox@shallax.com)
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++ */
++
++// Set the pattern of the LED.
++// The pattern must be 4 characters long and must consist
++// only of 'r', 'g', 'o' and 'x'.
++//
++// r = Red
++// g = Green
++// o = Orange
++// x = Off
++// 
++// E.g. rgog will cycle through red, green, orange, green and then loop.
++
++void setLED(char *pattern) {
++	int i, r, g;
++	r = g = 0;
++	
++	for (i=0; i<4; ++i) {
++		switch (pattern[i]) {
++			case 'r':
++				r++; 
++				break;
++			case 'g':
++				g++;
++				break;
++			case 'o':
++				r++;
++				g++;
++				break;
++		}
++		r *= 2;
++		g *= 2;
++	}
++	I2cSetFrontpanelLed(((r<<4) & 0xF0) + (g & 0xF));
++}
+--- cromwell-2.40/lib/misc/Makefile
++++ cromwell-2.40/lib/misc/Makefile
+@@ -1,4 +1,4 @@
+ 
+-O_TARGET := BootLibrary.o  BootParser.o setup.o vsprintf.o
++O_TARGET := BootLibrary.o  BootParser.o setup.o vsprintf.o LED.o
+ 
+ include $(TOPDIR)/Rules.make
+--- cromwell-2.40/menu/iconmenu/IconMenuInit.c
++++ cromwell-2.40/menu/iconmenu/IconMenuInit.c
+@@ -26,7 +26,7 @@
+ 		if (tsaHarddiskInfo[i].m_fAtapi) {
+ 			char *driveName=malloc(sizeof(char)*14);
+ 			sprintf(driveName,"CD-ROM (hd%c)",i ? 'b':'a');
+-			iconPtr = (ICON *)malloc(sizeof(ICON));
++			iconPtr = malloc(sizeof(ICON));
+ 			iconPtr->iconSlot = ICON_SOURCE_SLOT2;
+ 			iconPtr->szCaption = driveName;
+ 			iconPtr->functionPtr = BootFromCD;
+@@ -41,7 +41,7 @@
+ 	
+ #ifdef ETHERBOOT
+ 	//Etherboot icon - if it's compiled in, it's always available.
+-	iconPtr = (ICON *)malloc(sizeof(ICON));
++	iconPtr = malloc(sizeof(ICON));
+ 	iconPtr->iconSlot = ICON_SOURCE_SLOT3;
+ 	iconPtr->szCaption = "Etherboot";
+ 	iconPtr->functionPtr = BootFromEtherboot;
+@@ -49,7 +49,7 @@
+ #endif	
+ 
+ #ifdef ADVANCED_MENU
+-	iconPtr = (ICON *)malloc(sizeof(ICON));
++	iconPtr = malloc(sizeof(ICON));
+ 	iconPtr->iconSlot = ICON_SOURCE_SLOT0;
+ 	iconPtr->szCaption = "Advanced";
+ 	iconPtr->functionPtr = AdvancedMenu;
+@@ -74,7 +74,7 @@
+ 			CONFIGENTRY *entry = (CONFIGENTRY*)LoadConfigFatX();
+ 			if (entry !=NULL) {
+ 				//There is a config file present.
+-				iconPtr = (ICON *)malloc(sizeof(ICON));
++				iconPtr = malloc(sizeof(ICON));
+ 		   		iconPtr->iconSlot = ICON_SOURCE_SLOT4;
+ 				iconPtr->szCaption="FatX (E:)";
+ 				iconPtr->functionPtr = DrawBootMenu;
+@@ -101,10 +101,10 @@
+ 			memset(ba,0x00,512);
+ 			BootIdeReadSector(driveId, ba, 0, 0, 512);
+ 			        
+-			//See if there is an MBR - no MBR means no native boot options.
+-			if( !(ba[0x1fe]==0x55) || !(ba[0x1ff]==0xaa)) return;
++			//See if there is an MBR - no MBR means no native boot options for this drive.
++			if( !(ba[0x1fe]==0x55) || !(ba[0x1ff]==0xaa)) continue;
+ 	
+-			(volatile u8 *)pb=&ba[0x1be];
++			pb=&ba[0x1be];
+ 			//Check the primary partitions
+ 			for (n=0; n<4; n++,pb+=16) {
+ 				if(pb[0]&0x80) {
+@@ -113,10 +113,10 @@
+ 					if (entry!=NULL) {
+ 						//There is a valid config file here.
+ 						//Add an icon for this partition 
+-						iconPtr = (ICON *)malloc(sizeof(ICON));
++						iconPtr = malloc(sizeof(ICON));
+ 			  			iconPtr->iconSlot = ICON_SOURCE_SLOT1;
+ 						iconPtr->szCaption=malloc(10);
+-						sprintf(iconPtr->szCaption, "hd%c%d", driveId+'a', n);
++						sprintf(iconPtr->szCaption, "hd%c%d", driveId+'a', n+1);
+ 						iconPtr->functionPtr = DrawBootMenu;
+ 						iconPtr->functionDataPtr = (void *)entry;
+ 			  			AddIcon(iconPtr);
+--- cromwell-2.40/Makefile
++++ cromwell-2.40/Makefile
+@@ -10,11 +10,15 @@
+ 	-I$(TOPDIR)/startuploader -I$(TOPDIR)/drivers/cpu \
+ 	-I$(TOPDIR)/lib/jpeg/
+ 
+-CFLAGS	= -O2 -mcpu=pentium -Werror $(INCLUDE) -Wstrict-prototypes -fomit-frame-pointer -pipe
++#These are intended to be non-overridable.
++CROM_CFLAGS=$(INCLUDE)
+ 
+-# add the option for gcc 3.3 only
++#You can override these if you wish.
++CFLAGS= -O2 -g -march=pentium -pipe -fomit-frame-pointer -Wstrict-prototypes
++
++# add the option for gcc 3.3 only, again, non-overridable
+ ifeq ($(GCC_3.3), 1)
+-CFLAGS += -fno-zero-initialized-in-bss
++CROM_CFLAGS += -fno-zero-initialized-in-bss
+ endif
+ 
+ LD      = ld
+@@ -27,9 +31,9 @@
+ #### Etherboot specific stuff
+ ifeq ($(ETHERBOOT), yes)
+ ETH_SUBDIRS = etherboot
+-CFLAGS	+= -DETHERBOOT
++CROM_CFLAGS    += -DETHERBOOT
+ ETH_INCLUDE = 	-I$(TOPDIR)/etherboot/include -I$(TOPDIR)/etherboot/arch/i386/include	
+-ETH_CFLAGS  = 	-O2 -mcpu=pentium -Werror $(ETH_INCLUDE) -Wstrict-prototypes -fomit-frame-pointer -pipe -Ui386
++ETH_CFLAGS  = 	-O2 -march=pentium -Werror $(ETH_INCLUDE) -Wstrict-prototypes -fomit-frame-pointer -pipe -Ui386
+ endif
+ 
+ LDFLAGS-ROM     = -s -S -T $(TOPDIR)/scripts/ldscript-crom.ld
+@@ -107,6 +111,7 @@
+ OBJECTS-CROM += $(TOPDIR)/obj/BootEEPROM.o
+ OBJECTS-CROM += $(TOPDIR)/obj/BootParser.o
+ OBJECTS-CROM += $(TOPDIR)/obj/BootFATX.o
++OBJECTS-CROM += $(TOPDIR)/obj/LED.o
+ #USB
+ OBJECTS-CROM += $(TOPDIR)/obj/config.o 
+ OBJECTS-CROM += $(TOPDIR)/obj/hcd-pci.o
+@@ -137,6 +142,7 @@
+ OBJECTS-CROM += $(TOPDIR)/obj/etherboot_config.o
+ OBJECTS-CROM += $(TOPDIR)/obj/xbox_main.o
+ OBJECTS-CROM += $(TOPDIR)/obj/elf.o
++OBJECTS-CROM += $(TOPDIR)/obj/exec_elf.o
+ endif
+ 
+ RESOURCES = $(TOPDIR)/obj/backdrop.elf
+@@ -159,7 +165,7 @@
+ 
+ cromsubdirs: $(patsubst %, _dir_%, $(SUBDIRS))
+ $(patsubst %, _dir_%, $(SUBDIRS)) : dummy
+-	$(MAKE) CFLAGS="$(CFLAGS)" -C $(patsubst _dir_%, %, $@)
++	$(MAKE) CFLAGS="$(CFLAGS) $(CROM_CFLAGS)" -C $(patsubst _dir_%, %, $@)
+ 
+ dummy:
+ 
