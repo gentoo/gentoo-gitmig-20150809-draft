@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.43 2008/04/22 18:23:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.44 2008/06/07 16:06:18 nixnut Exp $
+
+  07 Jun 2008; nixnut <nixnut@gentoo.org> Cairo-1.06.0.ebuild:
+  Stable on ppc wrt bug 225185
 
 *Cairo-1.06.0 (22 Apr 2008)
 
