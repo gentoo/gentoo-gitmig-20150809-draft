@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.21 2008/01/26 07:51:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.22 2008/06/07 17:04:23 flameeyes Exp $
+
+  07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> inn-2.4.3-r1.ebuild:
+  Remove filtering of --as-needed (it's not a fix) and appending of
+  bindnow-flags (deprecated). Run elibtoolize in src_unpack rather than
+  src_compile.
 
   26 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -files/2.4.1-berkdb.patch,
   -inn-2.4.1.ebuild, -inn-2.4.3.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3-r1.ebuild,v 1.4 2008/01/25 22:05:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3-r1.ebuild,v 1.5 2008/06/07 17:04:23 flameeyes Exp $
 
 WANT_AUTOCONF="2.1"
 
-inherit fixheadtails ssl-cert eutils multilib libtool flag-o-matic autotools
+inherit fixheadtails ssl-cert eutils multilib libtool autotools
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="http://www.isc.org/products/INN"
@@ -46,14 +46,11 @@ src_unpack() {
 
 	# Fixes problems with the test suite.
 	epatch "${FILESDIR}/${P}-runtests.patch"
+
+	elibtoolize
 }
 
 src_compile() {
-	elibtoolize
-
-	filter-ldflags -Wl,--as-needed
-	append-ldflags $(bindnow-flags)
-
 	econf \
 		--prefix=/usr/$(get_libdir)/news \
 		--mandir=/usr/share/man \
