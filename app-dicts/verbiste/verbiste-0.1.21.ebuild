@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.21.ebuild,v 1.1 2007/12/02 18:12:48 tester Exp $
-
-inherit autotools eutils
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.21.ebuild,v 1.2 2008/06/07 20:52:45 flameeyes Exp $
 
 DESCRIPTION="French conjugation system"
 HOMEPAGE="http://sarrazip.com/dev/verbiste.html"
