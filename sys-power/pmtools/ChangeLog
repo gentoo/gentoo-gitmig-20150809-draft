@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/pmtools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.4 2007/04/01 22:13:13 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.5 2008/06/07 01:23:05 robbat2 Exp $
+
+*pmtools-20071116 (07 Jun 2008)
+
+  07 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +pmtools-20071116.ebuild:
+  Bug #187537, version bump. MADT patch integrated upstream.
 
 *pmtools-20061130 (01 Apr 2007)
 
