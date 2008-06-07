@@ -1,0 +1,9 @@
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# # $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/use.mask,v 1.1 2008/06/07 15:22:59 jer Exp $
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (7 Jun 2008)
+# dev-util/valgrind has not been ported to HPPA.
+valgrind
+
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
