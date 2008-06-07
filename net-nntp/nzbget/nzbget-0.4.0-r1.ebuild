@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.2 2008/06/07 21:22:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.3 2008/06/07 21:25:39 swegener Exp $
 
 EAPI="1"
 
@@ -25,12 +25,11 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 
-	cp "${S}"/nzbget{,d}.conf.example
-	sed -i \
+	sed \
 		-e 's:^$MAINDIR=.*:$MAINDIR=/var/lib/nzbget:' \
 		-e 's:^LockFile=.*:LockFile=/var/run/nzbget/nzbget.pid:' \
 		-e 's:^LogFile=.*:LogFile=/var/log/nzbget/nzbget.log:' \
-		"${S}"/nzbgetd.conf.example \
+		"${S}"/nzbget.conf.example >"${S}"/nzbgetd.conf.example \
 		|| die "sed nzbgetd.conf.example failed"
 }
 
