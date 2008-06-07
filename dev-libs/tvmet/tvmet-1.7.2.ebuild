@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvmet/tvmet-1.7.2.ebuild,v 1.1 2008/03/23 12:09:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvmet/tvmet-1.7.2.ebuild,v 1.2 2008/06/07 15:11:49 dev-zero Exp $
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Tiny Vector Matrix library using Expression Templates"
 HOMEPAGE="http://tvmet.sourceforge.net/"
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc test"
 
-DEPEND="doc? ( app-doc/doxygen )"
+DEPEND="doc? ( app-doc/doxygen )
+	test? ( dev-util/cppunit )"
 RDEPEND=""
 
 src_unpack() {
@@ -24,8 +25,6 @@ src_unpack() {
 	sed -i \
 		-e 's|^GENERATE_LATEX.*|GENERATE_LATEX = NO|' \
 		doc/Doxyfile.in || die "sed failed"
-
-	AT_M4DIR="config" eautoreconf
 }
 
 src_compile() {
