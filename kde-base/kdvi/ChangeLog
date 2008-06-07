@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.89 2008/05/18 21:36:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.90 2008/06/07 10:52:38 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -kdvi-3.5.8.ebuild:
+  Removed old versions.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> kdvi-3.5.9.ebuild:
   amd64/x86 stable, bug #221063

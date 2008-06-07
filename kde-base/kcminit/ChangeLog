@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.80 2008/06/05 21:13:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.81 2008/06/07 11:24:56 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kcminit-3.5.8.ebuild, -kcminit-4.0.2.ebuild, -kcminit-4.0.3.ebuild:
+  Removed old versions.
 
 *kcminit-4.0.5 (05 Jun 2008)
 

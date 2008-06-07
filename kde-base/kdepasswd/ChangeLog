@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.98 2008/06/05 21:34:59 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.99 2008/06/07 11:15:27 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kdepasswd-3.5.8.ebuild, -kdepasswd-4.0.2.ebuild, -kdepasswd-4.0.3.ebuild:
+  Removed old versions.
 
 *kdepasswd-4.0.5 (05 Jun 2008)
 
