@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1b.ebuild,v 1.2 2007/01/25 22:04:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1b.ebuild,v 1.3 2008/06/07 20:48:05 flameeyes Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -20,22 +20,28 @@ RDEPEND=">=media-libs/libsdl-1.2
 	dev-lang/tcl
 	dev-lang/tk"
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	mv TkGui.tcl Src
+
+	cd "${S}"/Src
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+
+	eautoreconf
+}
+
 src_compile() {
-	cd ${S}
 	append-flags "-DX_USE_SHM"
-	mv TkGui.tcl ${S}/Src
-	cd ${S}/Src
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	rm configure
-	autoconf
 	econf || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	cd ${S}/Src
+	cd "${S}"/Src
 	dobin Frodo FrodoPC FrodoSC TkGui.tcl
-	cd ${S}
+	cd "${S}"
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 	doins \
@@ -44,7 +50,7 @@ src_install() {
 		"Char ROM" \
 		"Kernal ROM"
 	dodir /usr/share/${PN}/64prgs
-	cd ${S}/64prgs
+	cd "${S}"/64prgs
 	insinto /usr/share/${PN}/64prgs
 	doins \
 		3fff \
@@ -59,7 +65,7 @@ src_install() {
 		stretch \
 		tech-tech \
 		text26
-	dohtml -r ${S}/Docs/*.html
+	dohtml -r "${S}"/Docs/*.html
 }
 
 pkg_postinst() {

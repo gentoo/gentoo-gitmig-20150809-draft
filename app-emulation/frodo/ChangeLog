@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/frodo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.10 2007/05/13 18:28:44 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.11 2008/06/07 20:48:05 flameeyes Exp $
+
+  07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> frodo-4.1b.ebuild:
+  Fix autotools handling, use eautoreconf as the ebuild is inheriting
+  autotools.eclass. Patch during unpack phase, not compile.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
