@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ocaml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.16 2008/03/19 19:49:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.17 2008/06/07 15:45:28 jer Exp $
+
+  07 Jun 2008; Jeroen Roovers <jer@gentoo.org> ocaml-0.06.ebuild:
+  Stable for HPPA (bug #224893).
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
