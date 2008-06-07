@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r1.ebuild,v 1.3 2008/05/07 00:17:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r1.ebuild,v 1.4 2008/06/07 23:22:31 leio Exp $
 
 inherit eutils autotools gnome2
 
@@ -48,6 +48,7 @@ src_unpack() {
 	# patch to fix parallel make, see bug #217250
 	sed -e "s/install-exec-local:/install-exec-hook:/" -i src/Makefile.am
 
+	intltoolize --force --automake || die "intltoolize failed"
 	eautoreconf
 
 	# strip stupid options in configure, see bug #196621
