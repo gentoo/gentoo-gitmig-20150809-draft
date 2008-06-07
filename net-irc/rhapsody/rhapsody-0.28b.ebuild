@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.28b.ebuild,v 1.3 2008/03/25 18:24:41 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.28b.ebuild,v 1.4 2008/06/07 09:40:20 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -14,6 +14,13 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-uclibc.patch
+}
 
 src_compile() {
 	./configure -i /usr/share/rhapsody || die "configure failed"
