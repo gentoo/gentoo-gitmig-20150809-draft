@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.0.5.ebuild,v 1.1 2008/06/05 22:33:40 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.0.5.ebuild,v 1.2 2008/06/07 02:28:52 ingmar Exp $
 
 EAPI="1"
 
@@ -27,6 +27,8 @@ DEPEND="${COMMONDEPEND}
 	xcomposite? ( x11-proto/compositeproto )
 	xinerama? ( x11-proto/xineramaproto )"
 RDEPEND="${COMMONDEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-no-compositing.patch" )
 
 src_compile() {
 	if ! use captury; then

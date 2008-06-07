@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.128 2008/06/05 22:33:40 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.129 2008/06/07 02:28:52 ingmar Exp $
+
+  07 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/kwin-4.0.5-no-compositing.patch, kwin-4.0.5.ebuild:
+  Compile without compositing, bug 225129.
 
 *kwin-4.0.5 (05 Jun 2008)
 

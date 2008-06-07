@@ -1,0 +1,13 @@
+--- kdebase/workspace/kwin/lib/kwineffects.cpp	2008/05/08 19:06:28	805574
++++ kdebase/workspace/kwin/lib/kwineffects.cpp	2008/05/24 08:24:48	811956
+@@ -294,8 +294,10 @@
+     {
+     switch( compositing_type )
+         {
++#ifdef KWIN_HAVE_OPENGL_COMPOSITING
+         case OpenGLCompositing:
+             return GLTexture::saturationSupported();
++#endif
+         case XRenderCompositing:
+             return false; // never
+         default:
