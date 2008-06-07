@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgeier
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.10 2008/05/21 15:21:59 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.11 2008/06/07 15:50:02 flameeyes Exp $
+
+  07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> libgeier-0.9.ebuild:
+  Fix obvious typo, RDEPEND is needed at build-time too.
 
   21 May 2008; wrobel@gentoo.org -libgeier-0.6.ebuild, -libgeier-0.7.ebuild,
   libgeier-0.9.ebuild:

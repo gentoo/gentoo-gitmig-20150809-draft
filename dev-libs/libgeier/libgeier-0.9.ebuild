@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9.ebuild,v 1.4 2008/05/21 16:42:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9.ebuild,v 1.5 2008/06/07 15:50:02 flameeyes Exp $
 
 inherit versionator
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/openssl
 	=net-libs/xulrunner-1.8*
 	sys-libs/zlib"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-lang/swig"
 
 src_compile() {
