@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.6 2008/06/06 08:34:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r1.ebuild,v 1.7 2008/06/07 18:24:01 bluebird Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2318/${P}.tar.gz
 			http://dev.gentoo.org/~phosphan/${BROTHERMFCDRIVER}.bz2 )"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 sparc x86"
 
 # To enable specific backends, define SANE_BACKENDS with the backends you want
 # in those:
