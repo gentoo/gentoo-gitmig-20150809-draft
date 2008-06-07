@@ -1,6 +1,10 @@
 # ChangeLog for virtual/c++-tr1-functional
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/c++-tr1-functional/ChangeLog,v 1.4 2007/12/25 14:17:50 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/c++-tr1-functional/ChangeLog,v 1.5 2008/06/07 19:35:03 dev-zero Exp $
+
+  07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  c++-tr1-functional-0.ebuild:
+  Changed version for boost-dependency to 1.34.0 (bug #197843)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kugelfang from metadata.xml as per #46972.
