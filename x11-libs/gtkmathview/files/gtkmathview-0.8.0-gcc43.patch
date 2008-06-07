@@ -43,3 +43,14 @@ diff -urN gtkmathview-0.8.0-orig/src/engine/mathml/mathVariantAux.cc gtkmathview
  #include "mathVariantAux.hh"
  
  static MathVariantAttributes vattr[] = {
+diff -urN gtkmathview-0.8.0-orig/src/backend/ps/T1_FontDataBase.cc gtkmathview-0.8.0/src/backend/ps/T1_FontDataBase.cc
+--- gtkmathview-0.8.0-orig/src/backend/ps/T1_FontDataBase.cc	2007-08-17 12:02:40.000000000 +0200
++++ gtkmathview-0.8.0/src/backend/ps/T1_FontDataBase.cc		2008-06-07 12:26:01.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <stdlib.h>
+ #include <iostream>
+ #include <list>
++#include <cstring>
+ 
+ #include "String.hh"
+ #include "T1_FontDataBase.hh"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.23 2008/06/02 20:25:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.24 2008/06/07 11:37:45 eva Exp $
+
+  07 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  files/gtkmathview-0.8.0-gcc43.patch:
+  update gcc43 patch for t1lib backend, bug #215965.
 
 *gtkmathview-0.8.0 (02 Jun 2008)
 
