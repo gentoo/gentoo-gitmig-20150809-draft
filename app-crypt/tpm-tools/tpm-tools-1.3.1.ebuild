@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.1.ebuild,v 1.1 2008/01/07 20:05:17 alonbl Exp $
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.1.ebuild,v 1.2 2008/06/07 20:51:32 flameeyes Exp $
 
 DESCRIPTION="TrouSerS' support tools for the Trusted Platform Modules"
 HOMEPAGE="http://trousers.sf.net"
@@ -13,7 +11,7 @@ KEYWORDS="~x86"
 IUSE="nls"
 
 COMMON_DEPEND=">=app-crypt/trousers-0.3.0"
-DEPEND="${COMMON_DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	nls? ( virtual/libintl )"
 # TODO: add optionnal opencryptoki support
 DEPEND="${COMMON_DEPEND}
