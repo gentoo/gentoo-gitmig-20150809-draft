@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.80 2008/06/05 21:12:27 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.81 2008/06/07 15:32:36 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kcharselect-3.5.8.ebuild, -kcharselect-4.0.2.ebuild,
+  -kcharselect-4.0.3.ebuild:
+  Removed old versions.
 
 *kcharselect-4.0.5 (05 Jun 2008)
 

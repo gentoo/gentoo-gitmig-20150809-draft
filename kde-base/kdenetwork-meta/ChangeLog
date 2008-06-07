@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.98 2008/06/05 21:34:26 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.99 2008/06/07 15:26:45 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kdenetwork-meta-3.5.8.ebuild, -kdenetwork-meta-4.0.2.ebuild,
+  -kdenetwork-meta-4.0.3.ebuild:
+  Removed old versions.
 
 *kdenetwork-meta-4.0.5 (05 Jun 2008)
 

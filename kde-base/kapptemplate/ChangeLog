@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.69 2008/06/05 21:06:42 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.70 2008/06/07 14:41:15 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kapptemplate-3.5.8.ebuild, -kapptemplate-4.0.2.ebuild,
+  -kapptemplate-4.0.3.ebuild:
+  Removed old versions.
 
 *kapptemplate-4.0.5 (05 Jun 2008)
 

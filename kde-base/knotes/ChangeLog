@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.87 2008/05/18 22:02:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.88 2008/06/07 15:09:43 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -knotes-3.5.8.ebuild:
+  Removed old versions.
 
   18 May 2008; Markus Meier <maekke@gentoo.org> knotes-3.5.9.ebuild:
   amd64/x86 stable, bug #221063

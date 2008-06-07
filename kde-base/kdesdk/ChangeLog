@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.169 2008/05/19 23:26:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.170 2008/06/07 14:57:35 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -kdesdk-3.5.8.ebuild:
+  Removed old versions.
 
   19 May 2008; Carsten Lohrke <carlo@gentoo.org> kdesdk-3.5.9.ebuild:
   Stable on amd64 and x86.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.64 2008/06/05 21:46:49 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.65 2008/06/07 15:53:37 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kgeography-3.5.8.ebuild, -kgeography-4.0.2.ebuild,
+  -kgeography-4.0.3.ebuild:
+  Removed old versions.
 
 *kgeography-4.0.5 (05 Jun 2008)
 

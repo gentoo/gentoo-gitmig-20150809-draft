@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.96 2008/06/05 21:30:57 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.97 2008/06/07 14:32:38 keytoaster Exp $
+
+  07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kdegames-meta-3.5.8-r1.ebuild, -kdegames-meta-4.0.2.ebuild,
+  -kdegames-meta-4.0.3.ebuild:
+  Removed old versions.
 
 *kdegames-meta-4.0.5 (05 Jun 2008)
 
