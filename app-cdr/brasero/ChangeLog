@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.32 2008/04/07 17:22:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.33 2008/06/07 08:08:13 drac Exp $
+
+*brasero-0.7.90 (07 Jun 2008)
+
+  07 Jun 2008; Samuli Suominen <drac@gentoo.org> -brasero-0.6.1-r1.ebuild,
+  -brasero-0.6.90-r1.ebuild, -brasero-0.7.0.ebuild, +brasero-0.7.90.ebuild:
+  Version bump, thanks to Joonas Henriksson, Pacho Ramos and Milos Popovic.
+  Bug 224593.
 
   07 Apr 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.1.ebuild:
   Allow also usage of dev-libs/libbeagle, thanks to bheekling from #-desktop
