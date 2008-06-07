@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.25 2008/06/06 17:06:59 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.26 2008/06/07 17:11:51 yngwin Exp $
+
+*qtcurve-qt4-0.59.3-r1 (07 Jun 2008)
+
+  07 Jun 2008; Ben de Groot <yngwin@gentoo.org>
+  +qtcurve-qt4-0.59.3-r1.ebuild:
+  Add kde useflag and dependencies needed to fix bugs #225173 and #225197.
+  With thanks to jmbsvicetto, zlin and Ingmar for feedback and testing.
 
   06 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   qtcurve-qt4-0.59.3.ebuild:
