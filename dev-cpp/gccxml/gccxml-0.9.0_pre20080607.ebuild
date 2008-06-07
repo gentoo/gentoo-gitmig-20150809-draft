@@ -1,15 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.7.0_pre20060311.ebuild,v 1.4 2007/04/07 16:39:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.9.0_pre20080607.ebuild,v 1.1 2008/06/07 16:57:59 dev-zero Exp $
 
 inherit eutils toolchain-funcs
 
-MY_PNV=${PN}_${PV/_pre/+cvs}.orig
-
 DESCRIPTION="XML output extension to GCC"
 HOMEPAGE="http://www.gccxml.org/"
-SRC_URI="mirror://debian/pool/main/g/${PN}/${MY_PNV}.tar.gz"
-
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86"
@@ -18,8 +15,8 @@ IUSE=""
 DEPEND=">=dev-util/cmake-2.4.6"
 RDEPEND=""
 
-S=${WORKDIR}/${MY_PNV/_/-}
-MYBUILDDIR=${WORKDIR}/build
+S="${WORKDIR}/${P}"
+MYBUILDDIR="${WORKDIR}/build"
 
 src_unpack() {
 	mkdir "${MYBUILDDIR}"
@@ -29,11 +26,11 @@ src_unpack() {
 	# patch below taken from Debian
 	sed -i \
 		-e 's/xatexit.c//' \
-		${S}/GCC/libiberty/CMakeLists.txt
+		"${S}/GCC/libiberty/CMakeLists.txt" || die "sed failed"
 }
 src_compile() {
-	cd ${MYBUILDDIR}
-	cmake ${S} \
+	cd "${MYBUILDDIR}"
+	cmake "${S}" \
 		-DCMAKE_INSTALL_PREFIX:PATH=/usr \
 		-DCMAKE_CXX_COMPILER:FILEPATH="$(tc-getCXX)" \
 		-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
@@ -44,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${MYBUILDDIR}
+	cd "${MYBUILDDIR}"
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
