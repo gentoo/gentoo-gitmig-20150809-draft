@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ulex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.17 2008/06/07 16:10:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.18 2008/06/07 21:30:47 aballier Exp $
+
+  07 Jun 2008; Alexis Ballier <aballier@gentoo.org> -ulex-0.8.ebuild,
+  -ulex-1.0.ebuild:
+  remove old
 
   07 Jun 2008; nixnut <nixnut@gentoo.org> ulex-1.1.ebuild:
   Stable on ppc wrt bug 224893
