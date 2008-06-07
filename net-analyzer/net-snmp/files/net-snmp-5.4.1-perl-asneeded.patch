@@ -1,0 +1,33 @@
+Index: net-snmp-5.4.1/configure.in
+===================================================================
+--- net-snmp-5.4.1.orig/configure.in
++++ net-snmp-5.4.1/configure.in
+@@ -2,7 +2,7 @@
+ # the Net-SNMP's COPYING file for more details and other copyrights
+ # that may apply:
+ #
+-# Portions Copyright © 2003 Sun Microsystems, Inc. All rights reserved.
++# Portions Copyright Â© 2003 Sun Microsystems, Inc. All rights reserved.
+ # Use is subject to license terms specified in the COPYING file
+ # distributed with the Net-SNMP package.
+ #
+@@ -3097,8 +3097,8 @@ fi
+ 
+ # check needed functions
+ if test "x$embed_perl" != "xno" ; then
+-    OLDLDFLAGS="$LDFLAGS"
+-    LDFLAGS="$LDFLAGS $netsnmp_perlldopts"
++    OLDLIBS="$LIBS"
++    LIBS="$LIBS $netsnmp_perlldopts"
+ 
+     # newer perl vs older perl call functions
+     AC_CHECK_FUNCS(eval_pv)
+@@ -3109,7 +3109,7 @@ if test "x$embed_perl" != "xno" ; then
+     AC_CHECK_FUNC(perl_eval_pv, AC_DEFINE(HAVE_PERL_EVAL_PV_LC))
+     AC_CHECK_FUNC(Perl_eval_pv, AC_DEFINE(HAVE_PERL_EVAL_PV_UC))
+ 
+-    LDFLAGS="$OLDLDFLAGS"
++    LIBS="$OLDLIBS"
+ 
+ 
+     if test "x$ac_cv_func_perl_eval_pv" != "xyes" -a "x$ac_cv_func_Perl_eval_pv" != "xyes" -a "x$ac_cv_func_eval_pv" != "xyes" ; then

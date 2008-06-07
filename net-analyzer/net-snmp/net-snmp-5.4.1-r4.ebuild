@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r4.ebuild,v 1.2 2008/06/06 21:33:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r4.ebuild,v 1.3 2008/06/07 14:54:11 flameeyes Exp $
 
-inherit fixheadtails flag-o-matic perl-module python
+inherit fixheadtails flag-o-matic perl-module python autotools
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -69,6 +69,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-CVE-2008-2292.patch #222265
 	epatch "${FILESDIR}"/${P}-process-count-race.patch #213415
 	epatch "${FILESDIR}"/${P}-incorrect-hrFSStorageIndex.patch #211660
+
+	epatch "${FILESDIR}"/${P}-perl-asneeded.patch #224251
+
+	eautoreconf
+
 	ht_fix_all
 }
 
@@ -76,10 +81,6 @@ src_compile() {
 	local mibs
 
 	strip-flags
-
-	# filter for bug #145960
-	# as it seems that the option is not enough
-	filter-ldflags -Wl,--as-needed
 
 	mibs="host ucd-snmp/dlmod"
 	use smux && mibs="${mibs} smux"
