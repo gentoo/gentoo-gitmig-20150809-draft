@@ -33,7 +33,7 @@ diff -Naur Singular-3-0-4/kernel/feResource.cc Singular-3-0-4.new/kernel/feResou
 -  {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/info/singular.hlp", ""},
 -  {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/doc/singular.idx",  ""},
 -  {"HtmlDir",   'h',    feResDir,   "SINGULAR_HTML_DIR",    "%r/html",              ""},
-+  {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/share/singular/singular.hlp", ""},
++  {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/share/info/singular.info.bz2", ""},
 +  {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/share/singular/singular.idx",  ""},
 +  {"HtmlDir",   'h',    feResDir,   "SINGULAR_HTML_DIR",    "%r/share/doc/PFSUBST/html",              ""},
  #ifdef ix86_Win
@@ -50,8 +50,8 @@ diff -Naur Singular-3-0-4/kernel/feResource.cc Singular-3-0-4.new/kernel/feResou
    {"SingularEmacs",'M',feResBinary, "ESINGULAR_SINGULAR",    "%b/Singular",           ""},
 -  {"EmacsLoad",'l',    feResFile,   "ESINGULAR_EMACS_LOAD",  "%e/.emacs-singular",             ""},
 -  {"EmacsDir",  'e',    feResDir,   "ESINGULAR_EMACS_DIR",   "%r/emacs",             ""},
-+  {"EmacsLoad",'l',    feResFile,   "ESINGULAR_EMACS_LOAD",  "%r/share/singular/emacs/.emacs-singular",             ""},
-+  {"EmacsDir",  'e',    feResDir,   "ESINGULAR_EMACS_DIR",   "%r/share/singular/emacs",             ""},
++  {"EmacsLoad",'l',    feResFile,   "ESINGULAR_EMACS_LOAD",  "%r/share/emacs/site-lisp/singular/.emacs-singular",             ""},
++  {"EmacsDir",  'e',    feResDir,   "ESINGULAR_EMACS_DIR",   "%r/share/emacs/site-lisp/singular",             ""},
  #elif defined(TSINGULAR)
    {"SingularXterm",'M',feResBinary, "TSINGULAR_SINGULAR",    "%b/Singular",           ""},
  #ifdef ix86_Win
@@ -60,7 +60,7 @@ diff -Naur Singular-3-0-4/kernel/feResource.cc Singular-3-0-4.new/kernel/feResou
  #endif
  #else
 -  {"EmacsDir",  'e',    feResDir,   "SINGULAR_EMACS_DIR",   "%r/emacs",             ""},
-+  {"EmacsDir",  'e',    feResDir,   "SINGULAR_EMACS_DIR",   "%r/share/singular/emacs",             ""},
++  {"EmacsDir",  'e',    feResDir,   "SINGULAR_EMACS_DIR",   "%r/share/emacs/site-lisp/singular",             ""},
  #endif
    {NULL, 0, feResUndef, NULL, NULL, NULL}, // must be the last record
  };
