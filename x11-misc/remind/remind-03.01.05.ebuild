@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.2 2008/06/05 21:26:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.3 2008/06/07 15:56:20 nixnut Exp $
 
 MY_P=${P/_beta/-BETA-}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.roaringpenguin.com/products/remind"
 SRC_URI="http://www.roaringpenguin.com/files/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="tk"
 
 RDEPEND="tk? ( dev-lang/tk dev-tcltk/tcllib )"
