@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.68 2008/05/31 15:19:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.69 2008/06/08 14:36:40 spock Exp $
+
+  08 Jun 2008; Michał Januszewski <spock@gentoo.org> files/hddtemp-init:
+  Add 'net' as a initscript dependency (bug #217243).
 
   31 May 2008; Michał Januszewski <spock@gentoo.org> files/hddtemp.db:
   Update the upstream hddtemp database (bug #223755).

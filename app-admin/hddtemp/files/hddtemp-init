@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/files/hddtemp-init,v 1.4 2007/03/25 19:35:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/files/hddtemp-init,v 1.5 2008/06/08 14:36:40 spock Exp $
 
 depend() {
-	need localmount
+	need localmount net
 }
 
 start() {
