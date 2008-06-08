@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.53 2008/02/15 09:31:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.54 2008/06/08 20:30:40 vapier Exp $
+
+  08 Jun 2008; Mike Frysinger <vapier@gentoo.org> openct-0.6.14-r1.ebuild:
+  Fix building with glibc-2.8 #225435 by Mario Fetka.
 
 *openct-0.6.14-r1 (15 Feb 2008)
 
