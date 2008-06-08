@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.6.7.ebuild,v 1.1 2007/12/30 00:53:45 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.1 2008/06/08 09:20:57 je_fro Exp $
 
 inherit eutils flag-o-matic cmake-utils
 
 DESCRIPTION="A software suite to predict/analyze mass spectrometric data on (bio)polymers."
 HOMEPAGE="http://massxpert.org/wiki/"
-SRC_URI="http://www.massxpert.org/downloads/source/${PF}.tar.gz"
+SRC_URI="http://download.tuxfamily.org/massxpert/source/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,7 +34,7 @@ RDEPEND=">=x11-libs/qt-4.3.3
 		media-libs/libpng
 		dev-libs/libxml2"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${P}"
 CMAKE_IN_SOURCE_BUILD="true"
 
 pkg_setup() {
@@ -46,7 +46,6 @@ pkg_setup() {
 }
 
 src_compile() {
-
 	sed -e "s:/lib/:/$(get_libdir)/:g" -i CMakeLists.txt || \
 		die "sed failed"
 
