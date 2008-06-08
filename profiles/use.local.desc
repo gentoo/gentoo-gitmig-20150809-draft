@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3576 2008/06/08 19:28:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3577 2008/06/08 22:51:00 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1229,6 +1229,7 @@ media-video/avidemux:amrnb - Enable Narrow Band Adaptive Multi-Rate Audio suppor
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cinepaint:gutenprint - Enable support for gutenprint
 media-video/devede:psyco - psyco python accelerator
+media-video/dv2sub:kino - install kino plugin
 media-video/dvd-slideshow:themes - Install theme pack
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
