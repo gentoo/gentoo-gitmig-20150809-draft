@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.9 2008/04/06 23:16:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.10 2008/06/08 22:31:13 the_paya Exp $
+
+  08 Jun 2008; Javier Villavicencio <the_paya@gentoo.org>
+  pam_mktemp-1.0.3.ebuild:
+  Keyworded ~x86-fbsd.
 
   06 Apr 2008; Joseph Jezak <josejx@gentoo.org> pam_mktemp-1.0.3.ebuild:
   Marked ~ppc/~ppc64.
