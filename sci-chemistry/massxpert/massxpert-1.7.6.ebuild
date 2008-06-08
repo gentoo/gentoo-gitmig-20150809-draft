@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.1 2008/06/08 09:20:57 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.2 2008/06/08 09:24:02 je_fro Exp $
 
 inherit eutils flag-o-matic cmake-utils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A software suite to predict/analyze mass spectrometric data on (bio
 HOMEPAGE="http://massxpert.org/wiki/"
 SRC_URI="http://download.tuxfamily.org/massxpert/source/${PF}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
