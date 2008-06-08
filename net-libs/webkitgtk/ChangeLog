@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkitgtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkitgtk/ChangeLog,v 1.1 2008/06/08 18:19:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkitgtk/ChangeLog,v 1.2 2008/06/08 18:40:30 jokey Exp $
+
+  08 Jun 2008; Markus Ullmann <jokey@gentoo.org> webkitgtk-34382.ebuild:
+  actually add the improved ebuild
 
 *webkitgtk-34382 (08 Jun 2008)
 
