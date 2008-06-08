@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.4 2008/06/07 16:09:50 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.01.05.ebuild,v 1.5 2008/06/08 10:00:51 tove Exp $
 
 MY_P=${P/_beta/-BETA-}
 
@@ -19,6 +19,14 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	sed -i 's:$(MAKE) install:&-nostripped:' "${S}"/Makefile || die
+}
+
+src_test() {
+	if [[ $UID -eq 0 ]] ; then
+		ewarn "Testing fails if run as root. Skipping tests."
+		return
+	fi
+	make test || die
 }
 
 src_install() {

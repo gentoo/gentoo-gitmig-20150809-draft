@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.32 2008/06/07 16:09:50 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.33 2008/06/08 10:00:51 tove Exp $
+
+  08 Jun 2008; Torsten Veller <tove@gentoo.org> remind-03.01.05.ebuild:
+  Run test only as non-root user (#225187)
 
   07 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   remind-03.01.05.ebuild:
