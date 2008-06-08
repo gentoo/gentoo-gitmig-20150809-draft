@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.10.ebuild,v 1.10 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.10.ebuild,v 1.11 2008/06/08 09:48:31 bluebird Exp $
 
 inherit kde
 need-kde 3
@@ -10,7 +10,7 @@ SRC_URI="http://knowit.sourceforge.net/files/${P}.tar.bz2"
 HOMEPAGE="http://knowit.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc amd64 ~sparc"
+KEYWORDS="amd64 ppc sparc x86"
 
 IUSE=""
 SLOT="0"
