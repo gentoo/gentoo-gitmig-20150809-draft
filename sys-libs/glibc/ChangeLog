@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.577 2008/05/12 16:17:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.578 2008/06/08 00:49:09 vapier Exp $
+
+*glibc-2.8_p20080602 (08 Jun 2008)
+
+  08 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_unpack.eblit, +glibc-2.8_p20080602.ebuild:
+  Version bump #225175 by Arfrever Frehtes Taifersar Arahesis.
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> glibc-2.7-r2.ebuild:
   Stable on ppc64
