@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3575 2008/06/08 18:39:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3576 2008/06/08 19:28:19 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1624,13 +1624,13 @@ net-libs/opal:noaudio - Disable audio codecs
 net-libs/opal:novideo - Disable video codecs
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
-net-libs/webkitgtk:coverage - enable code coverage support
-net-libs/webkitgtk:dom-storage - enable HTML5 client-side session and persistent storage support
-net-libs/webkitgtk:hildon - Use Hildon UI extensions
-net-libs/webkitgtk:pango - Use pango as fontbackend instead of freetype
-net-libs/webkitgtk:soup - Use SOUP as backend instead of curl
-net-libs/webkitgtk:svg-experimental - enable additional experimental svg extensions
-net-libs/webkitgtk:xslt - enable support for XSLT
+net-libs/webkit-gtk:coverage - enable code coverage support
+net-libs/webkit-gtk:dom-storage - enable HTML5 client-side session and persistent storage support
+net-libs/webkit-gtk:hildon - Use Hildon UI extensions
+net-libs/webkit-gtk:pango - Use pango as fontbackend instead of freetype
+net-libs/webkit-gtk:soup - Use SOUP as backend instead of curl
+net-libs/webkit-gtk:svg-experimental - enable additional experimental svg extensions
+net-libs/webkit-gtk:xslt - enable support for XSLT
 net-mail/cyrus-imapd:autocreate - Enable not supported (by upstream) patch from University of Athens for automatic creation of user mailboxes
 net-mail/cyrus-imapd:autosieve - Enable not supported (by upstream) patch from University of Athens for "on demand" creation of any folder requested by a sieve filter
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
