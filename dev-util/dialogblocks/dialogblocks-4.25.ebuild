@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.21.ebuild,v 1.1 2007/12/30 08:59:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.25.ebuild,v 1.1 2008/06/08 08:33:58 mrness Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=x11-libs/gtk+-2
+	x11-libs/libXinerama
 	>=media-libs/libpng-1.2
 	media-libs/jpeg
 	>=media-libs/tiff-3"
