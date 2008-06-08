@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.54 2008/05/18 18:28:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.55 2008/06/08 15:20:58 armin76 Exp $
+
+  08 Jun 2008; Raúl Porcel <armin76@gentoo.org> dcopperl-3.5.9.ebuild:
+  sparc stable wrt #221063
 
   18 May 2008; Markus Meier <maekke@gentoo.org> dcopperl-3.5.9.ebuild:
   amd64/x86 stable, bug #221063

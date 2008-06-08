@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.60 2008/06/07 12:12:42 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.61 2008/06/08 15:21:24 armin76 Exp $
+
+  08 Jun 2008; Raúl Porcel <armin76@gentoo.org> smoke-3.5.9.ebuild:
+  sparc stable wrt #221063
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -smoke-3.5.8.ebuild:
   Removed old versions.
