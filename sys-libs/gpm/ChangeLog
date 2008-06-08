@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.68 2008/06/02 17:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.69 2008/06/08 21:17:53 vapier Exp $
+
+  08 Jun 2008; Mike Frysinger <vapier@gentoo.org> gpm-1.20.4.ebuild:
+  Append _GNU_SOURCE to CPPFLAGS to fix building with glibc-2.8 #225375 by
+  Jose daLuz.
 
   02 Jun 2008; Mike Frysinger <vapier@gentoo.org>
   +files/gpm-1.20.4-abi.patch, gpm-1.20.4.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.4.ebuild,v 1.2 2008/06/02 17:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.4.ebuild,v 1.3 2008/06/08 21:17:53 vapier Exp $
 
 # emacs support disabled due to Bug 99533
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="http://linux.schottelius.org/gpm/"
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.20.3-no-emacs-dir.patch
 	epatch "${FILESDIR}"/${PN}-1.20.4-abi.patch
+	append-flags -D_GNU_SOURCE #225375
 }
 
 src_compile() {
