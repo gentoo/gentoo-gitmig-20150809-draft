@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.59 2008/06/07 12:34:01 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.60 2008/06/08 06:53:27 jer Exp $
+
+  08 Jun 2008; Jeroen Roovers <jer@gentoo.org> kalyptus-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kalyptus-3.5.8.ebuild:
