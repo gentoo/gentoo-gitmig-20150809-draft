@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r1.ebuild,v 1.1 2008/06/08 08:31:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r1.ebuild,v 1.2 2008/06/08 08:36:55 drac Exp $
+
+GCONF_DEBUG=no
 
 inherit eutils gnome2 mono multilib python
 
-DESCRIPTION="Serpentine is an application for writing CD-Audio discs. It aims
-for simplicity, usability and compability."
+DESCRIPTION="An application for writing CD-Audio discs. It aims for simplicity, usability and compability."
 HOMEPAGE="http://irrepupavel.com/projects/serpentine/"
 SRC_URI="mirror://berlios/serpentine/${P}.tar.bz2"
 
