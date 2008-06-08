@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.5.ebuild,v 1.2 2008/06/08 13:18:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.5.ebuild,v 1.3 2008/06/08 16:35:38 bluebird Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gtk-gnutella.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ppc sparc ~x86 ~x86-fbsd"
 
 DEPEND=">=dev-libs/libxml2-2.6.0
 	>=x11-libs/gtk+-2.2.1
