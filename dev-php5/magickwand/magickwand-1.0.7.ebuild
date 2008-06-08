@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/magickwand-1.0.7.ebuild,v 1.1 2008/06/03 03:20:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/magickwand-1.0.7.ebuild,v 1.2 2008/06/08 13:31:32 hoffie Exp $
 
 PHP_EXT_NAME="magickwand"
 PHP_EXT_ZENDEXT="no"
@@ -18,7 +18,7 @@ LICENSE="MagickWand"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=media-gfx/imagemagick-6.3.5.9"
+DEPEND=">=media-gfx/imagemagick-6.3.9.7"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
