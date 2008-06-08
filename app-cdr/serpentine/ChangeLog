@@ -1,10 +1,6 @@
 # ChangeLog for app-cdr/serpentine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.18 2008/06/08 08:36:55 drac Exp $
-
-  08 Jun 2008; Samuli Suominen <drac@gentoo.org> serpentine-0.9-r1.ebuild:
-  Remove USE debug by passing GCONF_DEBUG=no into gnome2.eclass and fix
-  DESCRIPTION.toolong by removing word serpentine.
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.19 2008/06/08 10:02:14 drac Exp $
 
 *serpentine-0.9-r1 (08 Jun 2008)
 
@@ -14,6 +10,9 @@
   +serpentine-0.9-r1.ebuild:
   Fix byte-compiling with Python 2.4 by not using exception handling from
   2.5. Remove pyxml depend. Thanks to Peter Volkov wrt #218112, Comment #7.
+  Remove USE debug by passing GCONF_DEBUG=no into gnome2.eclass and fix
+  DESCRIPTION.toolong by removing word serpentine. Run eautoreconf because
+  we modify Makefile.am, and intltoolize to translation building failure.
 
   05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   serpentine-0.9.ebuild:

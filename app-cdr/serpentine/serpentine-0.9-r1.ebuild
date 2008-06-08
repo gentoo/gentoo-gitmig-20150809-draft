@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r1.ebuild,v 1.2 2008/06/08 08:36:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r1.ebuild,v 1.3 2008/06/08 10:02:14 drac Exp $
 
 GCONF_DEBUG=no
 
-inherit eutils gnome2 mono multilib python
+inherit autotools eutils gnome2 mono multilib python
 
 DESCRIPTION="An application for writing CD-Audio discs. It aims for simplicity, usability and compability."
 HOMEPAGE="http://irrepupavel.com/projects/serpentine/"
@@ -23,6 +23,8 @@ RDEPEND=">=dev-lang/python-2.4
 	>=media-plugins/gst-plugins-gnomevfs-0.10
 	muine? ( media-sound/muine )"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 pkg_setup() {
@@ -33,12 +35,18 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	echo serpentine/gtkutil.py >> po/POTFILES.skip
 	echo serpentine/plugins/plugsuspend.py >> po/POTFILES.skip
+
 	epatch "${FILESDIR}"/${P}-drop_pyxml.patch \
 		"${FILESDIR}"/${P}-python24_compat.patch
-	rm -f py-compile || die "removing failed."
-	ln -s $(type -P true) py-compile || die "symlinking failed."
+
+	rm -f py-compile || die "rm failed."
+	ln -s $(type -P true) py-compile || die "ln failed."
+
+	intltoolize --force --copy --automake || die "intltoolize failed."
+	eautoreconf
 }
 
 pkg_postinst() {
