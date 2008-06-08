@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.9.2.ebuild,v 1.1 2008/06/06 16:51:12 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.9.2-r1.ebuild,v 1.1 2008/06/08 15:49:55 loki_val Exp $
 
 EAPI=1
 
-inherit base autotools libtool
+inherit base eutils
 
 MY_PN=${PN}-for-linux
 MY_P=${MY_PN}-${PV}
@@ -48,22 +48,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	base_src_unpack
-	cd "${S}"
-	elibtoolize
-	AT_M4DIR="libltdl"
-	eautoreconf
-}
+RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${P}-gcc43-test.patch" )
 
 pkg_setup() {
 	if ! use qt4
 	then
 		ewarn "Since >=x11-libs/qt-core-4.4.0 and related packages are package.masked"
-		ewarn "pending updates to the tree, the qt backend for ${PN} will not be built"
+		ewarn "pending updates to the tree, the qt4 backend for ${PN} will not be built"
 		ewarn "unless you unmask the qt dependencies of this package and add"
-		ewarn "${CATEGORY}/${PN} qt4"
-		ewarn "to /etc/portage/profile/package.use.force"
+		ewarn "${CATEGORY}/${PN} -qt4"
+		ewarn "to /etc/portage/profile/package.use.mask"
 	fi
 
 	# If a non-google, non-qt4 and non-gtk host system for google-gadgets is ever developed,
@@ -121,6 +117,30 @@ src_compile() {
 		$(use_enable qt4 qt-xml-http-request) \
 		|| die "econf failed"
 	emake || die "emake failed"
+}
+
+
+src_test() {
+	make check &> "${WORKDIR}"/check
+}
+
+src_install() {
+	base_src_install
+
+	#Icon
+	newicon resources/gadgets.png googlegadgets.png
+
+	# Desktop entries
+	if use gtk
+	then
+		make_desktop_entry "ggl-gtk" "Google Gadgets (GTK)" googlegadgets
+		make_desktop_entry "ggl-gtk -s" "Google Gadgets (GTK sidebar)" googlegadgets
+	fi
+
+	if use qt4
+	then
+		make_desktop_entry "ggl-qt" "Google Gadgets (QT)" googlegadgets
+	fi
 }
 
 curl_die() {

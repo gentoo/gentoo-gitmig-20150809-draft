@@ -1,0 +1,43 @@
+--- google-gadgets-for-linux-0.9.2.orig/ggadget/tests/backoff_test.cc	2008-06-06 21:26:11.000000000 +0200
++++ google-gadgets-for-linux-0.9.2/ggadget/tests/backoff_test.cc	2008-06-06 21:29:54.000000000 +0200
+@@ -11,10 +11,11 @@
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
++#include  <cstdlib>
+ 
+ #include "ggadget/backoff.h"
+ #include "ggadget/string_utils.h"
+ #include "unittest/gtest.h"
+ 
+
+--- google-gadgets-for-linux-0.9.2.orig/ggadget/tests/native_main_loop.cc	2008-06-06 23:18:19.000000000 +0200
++++ google-gadgets-for-linux-0.9.2/ggadget/tests/native_main_loop.cc	2008-06-06 23:18:36.000000000 +0200
+@@ -12,10 +12,11 @@
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+ 
++#include <limits.h>
+ #include <sys/time.h>
+ #include <sys/select.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <time.h>
+--- google-gadgets-for-linux-0.9.2.orig/ggadget/tests/main_loop_test.h	2008-06-06 23:26:39.000000000 +0200
++++ google-gadgets-0.9.2/work/google-gadgets-for-linux-0.9.2/ggadget/tests/main_loop_test.h	2008-06-06 23:26:57.000000000 +0200
+@@ -14,10 +14,11 @@
+   limitations under the License.
+ */
+ 
+ #ifndef GGADGET_TESTS_MAIN_LOOP_TEST_H__
+ #define GGADGET_TESTS_MAIN_LOOP_TEST_H__
++#include <cstdlib>
+ #include <unistd.h>
+ #include <cstring>
+ #include <vector>
+ #include <string>
+ 
