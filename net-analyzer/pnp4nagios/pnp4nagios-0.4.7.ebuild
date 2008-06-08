@@ -1,14 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.7.ebuild,v 1.1 2008/04/12 18:42:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.7.ebuild,v 1.2 2008/06/08 13:34:34 dertobi123 Exp $
 
 MY_P=pnp-${PV}
 
 DESCRIPTION="A performance data analyzer for nagios"
 HOMEPAGE="http://www.pnp4nagios.org"
+
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
+
 KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=dev-lang/php-4.3
