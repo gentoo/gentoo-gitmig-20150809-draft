@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.134 2008/04/30 06:53:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.135 2008/06/08 19:54:05 robbat2 Exp $
+
+*lvm2-2.02.37 (08 Jun 2008)
+
+  08 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-stop.sh-2.02.37, +lvm2-2.02.37.ebuild:
+  Version bump. Fixes bugs #210879, and #214194 (same as #202058). Make sure
+  you hvae the new .26 of device-mapper.
 
 *lvm2-2.02.36 (30 Apr 2008)
 
