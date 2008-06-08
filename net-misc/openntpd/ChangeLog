@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.39 2008/01/26 13:53:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.40 2008/06/08 21:48:13 bangert Exp $
+
+  08 Jun 2008; Thilo Bangert <bangert@gentoo.org> files/openntpd.rc:
+  add after ntp-client - bug #225269
 
   26 Jan 2008; Thilo Bangert <bangert@gentoo.org> openntpd-3.9_p1-r1.ebuild:
   fix quoting
