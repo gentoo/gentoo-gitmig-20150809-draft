@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/files/ndo2db.init-nagios3,v 1.1 2008/06/08 18:37:51 dertobi123 Exp $
+
+depends() {
+	before nagios
+	need mysql
+}
+
+start() {
+	ebegin "Starting ndo2db"
+	start-stop-daemon --start --quiet --exec /usr/nagios/bin/ndo2db-2x \
+	-- -c /etc/nagios/ndo2db.cfg
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ndo2db"
+	start-stop-daemon --stop --quiet --exec /usr/nagios/bin/ndo2db-2x
+	eend $?
+}
