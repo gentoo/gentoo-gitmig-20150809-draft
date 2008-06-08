@@ -4,7 +4,7 @@
 
 set -f
 
-source /etc/conf.d/metalog
+. /etc/conf.d/metalog
 if [ -z "${CONSOLE}" ] ; then
 	CONSOLE="/dev/console"
 fi

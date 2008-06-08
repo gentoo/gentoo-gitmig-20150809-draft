@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.80 2008/04/24 04:37:35 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.81 2008/06/08 20:18:01 vapier Exp $
+
+  08 Jun 2008; Mike Frysinger <vapier@gentoo.org> files/consolelog.sh:
+  Dont use "source" keyword #225317 by Martin Väth.
 
   24 Apr 2008; <ricmm@gentoo.org> metalog-0.8-r1.ebuild:
   Drop to ~mips due to unstable deps
