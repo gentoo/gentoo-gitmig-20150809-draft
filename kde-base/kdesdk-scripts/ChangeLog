@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.76 2008/06/07 14:23:10 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.77 2008/06/08 00:51:02 jer Exp $
+
+  08 Jun 2008; Jeroen Roovers <jer@gentoo.org> kdesdk-scripts-3.5.9.ebuild:
+  Stable for HPPA (bug #221063).
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kdesdk-scripts-3.5.8.ebuild, -kdesdk-scripts-4.0.2.ebuild,
