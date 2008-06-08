@@ -1,5 +1,5 @@
---- dkim-milter-2.5.2.orig/devtools/Site/site.config.m4 06:29:18.000000000 +1100
-+++ dkim-milter-2.5.2/devtools/Site/site.config.m4	2008-04-03 22:12:18.000000000 +1100
+--- dkim-milter-2.5.5.orig/devtools/Site/site.config.m4	2008-06-08 12:47:04.000000000 +0300
++++ dkim-milter-2.5.5/devtools/Site/site.config.m4	2008-06-08 12:47:37.000000000 +0300
 @@ -11,7 +11,10 @@
  dnl If you are encountering coredumps and want to be able to analyze them
  dnl using something like "gdb", enable this next line by deleting the "dnl"
@@ -48,8 +48,8 @@
  dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
  
---- dkim-milter-2.5.2.orig/dkim-filter/dkim-filter.conf.sample	2008-03-05 09:50:22.000000000 +1100
-+++ dkim-milter-2.5.2/dkim-filter/dkim-filter.conf.sample	2008-04-03 22:12:18.000000000 +1100
+--- dkim-milter-2.5.5.orig/dkim-filter/dkim-filter.conf.sample	2008-03-05 00:50:22.000000000 +0200
++++ dkim-milter-2.5.5/dkim-filter/dkim-filter.conf.sample	2008-06-08 12:47:37.000000000 +0300
 @@ -37,13 +37,6 @@
  
  # AutoRestartRate	n/tu
