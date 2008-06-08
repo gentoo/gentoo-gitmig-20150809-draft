@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1510 2008/06/07 22:59:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1511 2008/06/08 18:07:23 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  08 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  remove package.mask for sherman-aquarium since it's gone.
 
   08 Jun 2008; Alfredo Tupone <tupone@gentoo.org> package.mask:
   Mask for removal net-zope products that block removal of python-2.3
