@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.113 2008/04/21 18:22:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.114 2008/06/08 19:10:22 robbat2 Exp $
+
+*device-mapper-1.02.26 (08 Jun 2008)
+
+  08 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/device-mapper-1.02.26-export-format.diff,
+  +device-mapper-1.02.26.ebuild:
+  Version bump, with new output-field-name prefix support.
 
   21 Apr 2008; Jeroen Roovers <jer@gentoo.org>
   device-mapper-1.02.24-r1.ebuild:
