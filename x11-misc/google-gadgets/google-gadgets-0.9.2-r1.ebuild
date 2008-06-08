@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.9.2-r1.ebuild,v 1.1 2008/06/08 15:49:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.9.2-r1.ebuild,v 1.2 2008/06/08 18:22:53 mr_bones_ Exp $
 
 EAPI=1
 
@@ -118,7 +118,6 @@ src_compile() {
 		|| die "econf failed"
 	emake || die "emake failed"
 }
-
 
 src_test() {
 	make check &> "${WORKDIR}"/check
