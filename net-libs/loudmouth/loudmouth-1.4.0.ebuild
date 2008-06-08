@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.3.3.ebuild,v 1.3 2008/03/18 09:50:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.0.ebuild,v 1.1 2008/06/08 18:45:55 eva Exp $
 
 inherit gnome2
 
@@ -12,13 +12,13 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc gnutls ssl debug test"
+IUSE="asyncns doc ssl debug test"
 
 RDEPEND=">=dev-libs/glib-2.4
-	ssl? ( || (
-		gnutls? ( >=net-libs/gnutls-1.4.0 )
-		!gnutls? ( dev-libs/openssl )
-		) )"
+	ssl? ( >=net-libs/gnutls-1.4.0 )"
+# FIXME: can't build against system lib
+#	asyncns? ( net-libs/libasyncns )"
+#   openssl dropped because of bug #216705
 
 DEPEND="${RDEPEND}
 	test? ( dev-libs/check )
@@ -29,12 +29,11 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		$(use_enable debug)"
+		$(use_enable debug)
+		$(use_with asyncns)"
 
-	if use ssl && use gnutls; then
+	if use ssl; then
 		G2CONF="${G2CONF} --with-ssl=gnutls"
-	elif use ssl; then
-		G2CONF="${G2CONF} --with-ssl=openssl"
 	else
 		G2CONF="${G2CONF} --with-ssl=no"
 	fi
