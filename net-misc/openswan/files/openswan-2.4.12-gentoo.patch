@@ -22,9 +22,7 @@ diff -Nru openswan-2.4.12.orig/Makefile.inc openswan-2.4.12/Makefile.inc
 diff -Nru openswan-2.4.12.orig/programs/_confread/_confread.in openswan-2.4.12/programs/_confread/_confread.in
 --- openswan-2.4.12.orig/programs/_confread/_confread.in	2008-06-08 16:37:30.000000000 +0300
 +++ openswan-2.4.12/programs/_confread/_confread.in	2008-06-08 16:30:13.000000000 +0300
-@@ -14,7 +14,7 @@
- #
- # RCSID $Id: openswan-2.4.12-gentoo.patch,v 1.1 2008/06/08 14:06:56 mrness Exp $
+@@ -16,5 +16,5 @@
  #
 -# Extract configuration info from /etc/ipsec.conf, repackage as assignments
 +# Extract configuration info from /etc/ipsec/ipsec.conf, repackage as assignments
@@ -34,12 +32,9 @@ diff -Nru openswan-2.4.12.orig/programs/_confread/_confread.in openswan-2.4.12/p
 diff -Nru openswan-2.4.12.orig/programs/_confread/ipsec.conf.in openswan-2.4.12/programs/_confread/ipsec.conf.in
 --- openswan-2.4.12.orig/programs/_confread/ipsec.conf.in	2008-06-08 16:37:30.000000000 +0300
 +++ openswan-2.4.12/programs/_confread/ipsec.conf.in	2008-06-08 16:30:13.000000000 +0300
-@@ -1,4 +1,4 @@
+@@ -1,1 +1,1 @@
 -# /etc/ipsec.conf - Openswan IPsec configuration file
 +# /etc/ipsec/ipsec.conf - Openswan IPsec configuration file
- # RCSID $Id: openswan-2.4.12-gentoo.patch,v 1.1 2008/06/08 14:06:56 mrness Exp $
- 
- # This file:  @FINALEXAMPLECONFDIR@/ipsec.conf-sample
 diff -Nru openswan-2.4.12.orig/programs/examples/l2tp-psk.conf.in openswan-2.4.12/programs/examples/l2tp-psk.conf.in
 --- openswan-2.4.12.orig/programs/examples/l2tp-psk.conf.in	2007-11-02 03:49:40.000000000 +0200
 +++ openswan-2.4.12/programs/examples/l2tp-psk.conf.in	2008-06-08 16:37:41.000000000 +0300
