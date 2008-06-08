@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.83 2008/04/26 07:39:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.84 2008/06/08 13:18:29 nixnut Exp $
+
+  08 Jun 2008; nixnut <nixnut@gentoo.org> gtk-gnutella-0.96.5.ebuild:
+  Stable on ppc wrt bug 225345
 
 *gtk-gnutella-0.96.5 (26 Apr 2008)
 
