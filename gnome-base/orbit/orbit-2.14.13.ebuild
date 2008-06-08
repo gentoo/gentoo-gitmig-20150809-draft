@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.10.ebuild,v 1.9 2008/04/20 01:36:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.13.ebuild,v 1.1 2008/06/08 18:19:40 eva Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/ORBit2/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.8
@@ -31,7 +31,7 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* TODO"
 src_unpack() {
 	gnome2_src_unpack
 
-	# Filter out G_DISABLE_DEPRECATED to work with glib-2.16 and be future-proof, bug 213434
+	# Filter out G_DISABLE_DEPRECATED to be future-proof, related to bug 213434
 	sed -i -e '/DISABLE_DEPRECATED/d' \
 		"${S}/linc2/src/Makefile.am" "${S}/linc2/src/Makefile.in"
 
