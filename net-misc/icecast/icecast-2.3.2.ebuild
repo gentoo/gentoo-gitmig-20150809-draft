@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.1-r2.ebuild,v 1.1 2007/10/17 18:22:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.2.ebuild,v 1.1 2008/06/08 21:15:33 loki_val Exp $
 
-inherit eutils
+EAPI=1
+
+inherit libtool base eutils
 
 DESCRIPTION="An opensource alternative to shoutcast that supports mp3, ogg (vorbis/theora) and aac streaming"
 HOMEPAGE="http://www.icecast.org/"
@@ -11,24 +13,31 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="ogg speex theora vorbis yp"
+IUSE="+speex +ssl +theora +yp"
 
+#Although there is a --with-ogg and --with-orbis configure option, they're
+#only useful for specifying paths, not for disabling.
 DEPEND="dev-libs/libxslt
-	ogg? ( media-libs/libogg )
-	vorbis? ( media-libs/libvorbis )
+	dev-libs/libxml2
+	media-libs/libogg
+	media-libs/libvorbis
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )
-	yp? ( net-misc/curl )"
+	yp? ( net-misc/curl )
+	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-nocurlpassword.patch"
+	base_src_unpack
+	elibtoolize
 }
 
 src_compile() {
-	econf \
+	econf 	--disable-dependency-tracking \
 		--sysconfdir=/etc/icecast2 \
+		$(use_with theora) \
+		$(use_with speex) \
+		$(use_with yp curl) \
+		$(use_with ssl openssl) \
 		$(use_enable yp) || die "configure failed"
 
 	emake || die "make failed"
@@ -40,7 +49,7 @@ pkg_preinst() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist
+	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist || die
 	dohtml -A chm,hhc,hhp doc/*
 	doman "${S}/debian/icecast2.1"
 
@@ -50,8 +59,9 @@ src_install() {
 	doins "${FILESDIR}/icecast.xml"
 	fperms 600 /etc/icecast2/icecast.xml
 
+	diropts -m0764 -o icecast -g nogroup
+	dodir /var/log/icecast
 	keepdir /var/log/icecast
-	fowners icecast:nogroup /var/log/icecast
-
 	rm -rf "${D}/usr/share/doc/icecast"
 }
+
