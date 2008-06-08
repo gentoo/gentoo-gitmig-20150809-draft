@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.5.9.ebuild,v 1.4 2008/05/18 20:51:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.5.9.ebuild,v 1.5 2008/06/08 06:11:58 jer Exp $
 
 EAPI="1"
 inherit kde-functions
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="subversion elibc_glibc"
 
 RDEPEND="
