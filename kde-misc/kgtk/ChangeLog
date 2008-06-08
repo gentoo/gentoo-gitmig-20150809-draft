@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.13 2008/05/27 01:04:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.14 2008/06/08 23:50:30 carlo Exp $
+
+*kgtk-0.9.5 (08 Jun 2008)
+
+  08 Jun 2008; Carsten Lohrke <carlo@gentoo.org> +kgtk-0.9.5.ebuild:
+  Version bump.
 
   27 May 2008; Mark Loeser <halcy0n@gentoo.org> kgtk-0.9.1-r1.ebuild,
   kgtk-0.9.4.ebuild:
