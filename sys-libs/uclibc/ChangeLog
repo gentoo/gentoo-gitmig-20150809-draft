@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.34 2008/05/05 18:50:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.35 2008/06/08 05:42:04 solar Exp $
+
+*uclibc-0.9.28.3-r7 (08 Jun 2008)
+
+  08 Jun 2008; <solar@gentoo.org> +uclibc-0.9.28.3-r7.ebuild:
+  - fix up a few cross compile problems for arm
 
 *uclibc-0.9.28.3-r6 (05 May 2008)
 
