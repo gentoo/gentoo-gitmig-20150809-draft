@@ -1,0 +1,164 @@
+=== modified file 'Makefile.am'
+--- Makefile.am	2007-08-13 15:30:11 +0000
++++ Makefile.am	2008-03-07 16:05:24 +0000
+@@ -34,6 +34,7 @@
+ 	serpentine/common.py        \
+ 	serpentine/urlutil.py       \
+ 	serpentine/errors.py        \
++	serpentine/compatxml.py     \
+ 	serpentine/release.py
+ 
+ serpentine_pluginsdir = $(pythondir)/serpentine/plugins
+
+=== modified file 'serpentine/__init__.py'
+--- serpentine/__init__.py	2007-10-15 10:55:52 +0000
++++ serpentine/__init__.py	2008-03-07 16:05:24 +0000
+@@ -458,7 +458,7 @@
+         """
+         # Clean window object
+         Application.stop(self)
+-        self.__window.destroy()
++#        self.__window.destroy()
+         del self.__window
+         
+ 
+
+=== added file 'serpentine/compatxml.py'
+--- serpentine/compatxml.py	1970-01-01 00:00:00 +0000
++++ serpentine/compatxml.py	2008-03-07 16:05:24 +0000
+@@ -0,0 +1,29 @@
++"""
++Compability layer of XML.
++"""
++try:
++	from Ft.Xml.Domlette import NonvalidatingReader
++	parseUri = NonvalidatingReader.parseUri
++        parseString = NonvalidatingReader.parseString
++	del NonvalidatingReader
++	from Ft.Xml.XPath import Evaluate
++except ImportError:
++	from xml.dom.minidom import parse as parseUri
++	from xml.dom.minidom import parseString
++	from xml.xpath import Evaluate
++
++def get_node_attr(node, attr):
++	"""
++	Tries to uniform the way to get the *value* of an attribute in
++	both minidom and in 4Suite.
++	"""
++	try:
++		return node.attributes[attr].value
++	except KeyError:
++		return node.attributes[(None, attr)].value
++
++def node_contains_attr(node, attr):
++	"""
++	Uniforms the attributes in both minidom and in 4Suite.
++	"""
++	return attr in node.attributes or (None, attr) in node.attributes
+
+=== modified file 'serpentine/plugins/plugfilter_k3b.py'
+--- serpentine/plugins/plugfilter_k3b.py	2007-08-02 17:26:16 +0000
++++ serpentine/plugins/plugfilter_k3b.py	2008-03-07 16:05:24 +0000
+@@ -21,8 +21,8 @@
+ 
+ import zipfile, gnomevfs
+ 
+-from xml.dom import minidom
+-from xml.xpath import Evaluate
++from serpentine.compatxml import parseString, Evaluate, get_node_attr
++
+ from xml.parsers.expat import ExpatError
+ 
+ from serpentine.mastering import HintsFilter
+@@ -70,7 +70,7 @@
+         try:
+             zfile = zipfile.ZipFile(fd)
+             buff = zfile.read("maindata.xml")
+-            root = minidom.parseString(buff)
++            root = parseString(buff)
+             
+         except (zipfile.BadZipfile, IOError, KeyError, ExpatError):
+             raise UnsupportedLocationError()
+@@ -81,7 +81,7 @@
+         hints_list = []
+         for node in Evaluate ("/k3b_audio_project/contents/track", root):
+             try:
+-                hints_list.append ({"location": node.attributes["url"].value})
++                hints_list.append ({"location": get_node_attr(node, "url")})
+             except KeyError:
+                 # skip elements without the 'url' attribute set
+                 pass
+@@ -92,9 +92,8 @@
+         for node in Evaluate ("/k3b_audio_project/contents/track/sources/file",
+                               root):
+             try:
+-                hints_list.append ({"location": node.attributes["url"].value})
++                hints_list.append ({"location": get_node_attr(node, "url")})
+             except KeyError:
+-                # skip elements with not 'url' attribute set
+                 pass
+ 
+         return hints_list
+
+=== modified file 'serpentine/plugins/plugrhythmbox.py'
+--- serpentine/plugins/plugrhythmbox.py	2007-08-14 08:43:07 +0000
++++ serpentine/plugins/plugrhythmbox.py	2008-03-07 16:05:24 +0000
+@@ -3,8 +3,8 @@
+ import os.path
+ import weakref
+ 
+-from xml.xpath import Evaluate
+-from xml.dom import minidom
++from serpentine.compatxml import Evaluate, parseUri, get_node_attr, node_contains_attr
++
+ from gettext import gettext as _
+ 
+ if __name__ == '__main__':
+@@ -20,17 +20,17 @@
+ 
+ def rhythmbox_list_names():
+     try:
+-        root = minidom.parse(PLAYLISTS)
++        root = parseUri(PLAYLISTS)
+     except IOError:
+         return ()
+     
+     nodes = Evaluate("/rhythmdb-playlists/playlist", root)
+-    return [node.attributes["name"].value for node in nodes]
++    return [get_node_attr(node, "name") for node in nodes if node_contains_attr(node, "name")]
+ 
+ 
+ def rhythmbox_get_playlist(playlist_name):
+     try:
+-        root = minidom.parse(PLAYLISTS)
++        root = parseUri(PLAYLISTS)
+     except IOError:
+         return ()
+     
+
+=== modified file 'serpentine/xspf.py'
+--- serpentine/xspf.py	2007-08-02 17:20:48 +0000
++++ serpentine/xspf.py	2008-03-07 16:05:24 +0000
+@@ -23,8 +23,8 @@
+ This is a very simple utility module for retrieving basic XSPF playlist data.
+ Basically it retrieves the playlist tracks' title, artist, location and duration.
+ """
+-from xml.dom import minidom
+-from xml.xpath import Evaluate
++
++from serpentine.compatxml import parseUri, Evaluate
+ from xml.dom.minidom import getDOMImplementation
+ 
+ class _Field(object):
+@@ -121,7 +121,8 @@
+ 		return doc
+ 
+ 	def parse (self, file_or_filename):
+-		root = minidom.parse (file_or_filename)
++		#root = minidom.parse (file_or_filename)
++		root = parseUri(file_or_filename)
+ 		# Iterate over tracks
+ 		for track_node in Evaluate ("/playlist/trackList/track", root):
+ 			t = Track()
+

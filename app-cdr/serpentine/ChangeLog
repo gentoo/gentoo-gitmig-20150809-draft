@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/serpentine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.16 2008/06/05 08:34:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.17 2008/06/08 08:31:42 drac Exp $
+
+*serpentine-0.9-r1 (08 Jun 2008)
+
+  08 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/serpentine-0.9-drop_pyxml.patch,
+  +files/serpentine-0.9-python24_compat.patch, -serpentine-0.7.ebuild,
+  +serpentine-0.9-r1.ebuild:
+  Fix byte-compiling with Python 2.4 by not using exception handling from
+  2.5. Remove pyxml depend. Thanks to Peter Volkov wrt #218112, Comment #7.
 
   05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   serpentine-0.9.ebuild:
