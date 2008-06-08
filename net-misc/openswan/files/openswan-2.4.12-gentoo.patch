@@ -1,0 +1,135 @@
+diff -Nru openswan-2.4.12.orig/Makefile.inc openswan-2.4.12/Makefile.inc
+--- openswan-2.4.12.orig/Makefile.inc	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/Makefile.inc	2008-06-08 16:30:13.000000000 +0300
+@@ -46,7 +46,7 @@
+ DESTDIR?=
+ 
+ # "local" part of tree, used in building other pathnames
+-INC_USRLOCAL=/usr/local
++INC_USRLOCAL?=/usr
+ 
+ # PUBDIR is where the "ipsec" command goes; beware, many things define PATH
+ # settings which are assumed to include it (or at least, to include *some*
+@@ -91,7 +91,7 @@
+ 
+ # sample configuration files go into
+ INC_DOCDIR?=share/doc
+-FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
++FINALEXAMPLECONFDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
+ EXAMPLECONFDIR=${DESTDIR}${FINALEXAMPLECONFDIR}
+ 
+ FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
+diff -Nru openswan-2.4.12.orig/programs/_confread/_confread.in openswan-2.4.12/programs/_confread/_confread.in
+--- openswan-2.4.12.orig/programs/_confread/_confread.in	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/_confread/_confread.in	2008-06-08 16:30:13.000000000 +0300
+@@ -14,7 +14,7 @@
+ #
+ # RCSID $Id: openswan-2.4.12-gentoo.patch,v 1.1 2008/06/08 14:06:56 mrness Exp $
+ #
+-# Extract configuration info from /etc/ipsec.conf, repackage as assignments
++# Extract configuration info from /etc/ipsec/ipsec.conf, repackage as assignments
+ # to shell variables or tab-delimited fields.  Success or failure is reported
+ # inline, as extra data, due to the vagaries of shell backquote handling.
+ # In the absence of --varprefix, output is tab-separated fields, like:
+diff -Nru openswan-2.4.12.orig/programs/_confread/ipsec.conf.in openswan-2.4.12/programs/_confread/ipsec.conf.in
+--- openswan-2.4.12.orig/programs/_confread/ipsec.conf.in	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/_confread/ipsec.conf.in	2008-06-08 16:30:13.000000000 +0300
+@@ -1,4 +1,4 @@
+-# /etc/ipsec.conf - Openswan IPsec configuration file
++# /etc/ipsec/ipsec.conf - Openswan IPsec configuration file
+ # RCSID $Id: openswan-2.4.12-gentoo.patch,v 1.1 2008/06/08 14:06:56 mrness Exp $
+ 
+ # This file:  @FINALEXAMPLECONFDIR@/ipsec.conf-sample
+diff -Nru openswan-2.4.12.orig/programs/examples/l2tp-psk.conf.in openswan-2.4.12/programs/examples/l2tp-psk.conf.in
+--- openswan-2.4.12.orig/programs/examples/l2tp-psk.conf.in	2007-11-02 03:49:40.000000000 +0200
++++ openswan-2.4.12/programs/examples/l2tp-psk.conf.in	2008-06-08 16:37:41.000000000 +0300
+@@ -11,7 +11,7 @@
+ 	#
+ 	# Use a Preshared Key. Disable Perfect Forward Secrecy.
+ 	#
+-	# PreSharedSecret needs to be specified in /etc/ipsec.secrets as
++	# PreSharedSecret needs to be specified in /etc/ipsec/ipsec.secrets as
+ 	# YourIPAddress  %any: "sharedsecret"
+ 	authby=secret
+ 	pfs=no
+diff -Nru openswan-2.4.12.orig/programs/_include/_include.in openswan-2.4.12/programs/_include/_include.in
+--- openswan-2.4.12.orig/programs/_include/_include.in	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/_include/_include.in	2008-06-08 16:30:13.000000000 +0300
+@@ -47,10 +47,10 @@
+ do
+ 	if test ! -r "$f"
+ 	then
+-		if test ! "$f" = "/etc/ipsec.conf"
++		if test ! "$f" = "/etc/ipsec/ipsec.conf"
+ 		then
+ 			echo "#:cannot open configuration file \'$f\'"
+-			if test "$f" = "/etc/ipsec.secrets"
++			if test "$f" = "/etc/ipsec/ipsec.secrets"
+ 			then
+ 				echo "#:Your secrets file will be created when you start FreeS/WAN for the first time."
+ 			fi
+diff -Nru openswan-2.4.12.orig/programs/mailkey/mailkey.in openswan-2.4.12/programs/mailkey/mailkey.in
+--- openswan-2.4.12.orig/programs/mailkey/mailkey.in	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/mailkey/mailkey.in	2008-06-08 16:30:13.000000000 +0300
+@@ -60,7 +60,7 @@
+ 
+ "$test1st"
+ 
+-Common concerns: This account must be able to read /etc/ipsec.secrets. 
++Common concerns: This account must be able to read /etc/ipsec/ipsec.secrets. 
+ If you haven't generated your key yet, please run 'ipsec newhostkey'." 
+ exit 0
+ }
+diff -Nru openswan-2.4.12.orig/programs/pluto/Makefile openswan-2.4.12/programs/pluto/Makefile
+--- openswan-2.4.12.orig/programs/pluto/Makefile	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/pluto/Makefile	2008-06-08 16:30:13.000000000 +0300
+@@ -210,7 +210,7 @@
+ endif
+ 
+ ifeq ($(USE_WEAKSTUFF),true)
+-WEAK_DEFS=-DUSE_VERYWEAK_DH1=1 #-DUSE_1DES
++WEAK_DEFS=-DUSE_VERYWEAK_DH1=1 -DUSE_1DES
+ endif
+ 
+ ifeq ($(USE_EXTRACRYPTO),true)
+diff -Nru openswan-2.4.12.orig/programs/setup/Makefile openswan-2.4.12/programs/setup/Makefile
+--- openswan-2.4.12.orig/programs/setup/Makefile	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/setup/Makefile	2008-06-08 16:30:13.000000000 +0300
+@@ -33,25 +33,10 @@
+ 	@rm -f $(BINDIR)/setup
+ 	@$(INSTALL) $(INSTBINFLAGS) setup $(RCDIR)/ipsec
+ 	@ln -s $(FINALRCDIR)/ipsec $(BINDIR)/setup
+-	-@for i in 0 1 2 3 4 5 6; do mkdir -p $(RCDIR)/../rc$$i.d; done
+-	-@cd $(RCDIR)/../rc0.d && ln -f -s ../init.d/ipsec K76ipsec
+-	-@cd $(RCDIR)/../rc1.d && ln -f -s ../init.d/ipsec K76ipsec
+-	-@cd $(RCDIR)/../rc2.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc3.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc4.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc5.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc6.d && ln -f -s ../init.d/ipsec K76ipsec
+ 
+ install_file_list::
+ 	@echo $(RCDIR)/ipsec
+ 	@echo $(BINDIR)/setup
+-	@echo $(RCDIR)/../rc0.d/K76ipsec
+-	@echo $(RCDIR)/../rc1.d/K76ipsec
+-	@echo $(RCDIR)/../rc2.d/S47ipsec
+-	@echo $(RCDIR)/../rc3.d/S47ipsec
+-	@echo $(RCDIR)/../rc4.d/S47ipsec
+-	@echo $(RCDIR)/../rc5.d/S47ipsec
+-	@echo $(RCDIR)/../rc6.d/K76ipsec
+ 
+ clean::
+ 	@rm -f setup
+diff -Nru openswan-2.4.12.orig/programs/showhostkey/showhostkey.in openswan-2.4.12/programs/showhostkey/showhostkey.in
+--- openswan-2.4.12.orig/programs/showhostkey/showhostkey.in	2008-06-08 16:37:30.000000000 +0300
++++ openswan-2.4.12/programs/showhostkey/showhostkey.in	2008-06-08 16:30:13.000000000 +0300
+@@ -18,7 +18,7 @@
+ usage="Usage: $me [--file secrets] [--left] [--right] [--txt gateway] [--id id]
+                   [--dhclient] [--ipseckey]"
+ 
+-file=/etc/ipsec.secrets
++file=/etc/ipsec/ipsec.secrets
+ fmt=""
+ gw=
+ id=

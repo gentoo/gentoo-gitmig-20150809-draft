@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.44 2008/01/29 12:44:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.45 2008/06/08 14:06:55 mrness Exp $
+
+*openswan-2.4.12 (08 Jun 2008)
+
+  08 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  +files/openswan-2.4.12-deprecated-ldap.patch,
+  +files/openswan-2.4.12-gentoo.patch, +openswan-2.4.12.ebuild:
+  Version bump.
 
 *openswan-2.4.11 (29 Jan 2008)
 
