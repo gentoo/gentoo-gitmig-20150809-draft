@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.12.ebuild,v 1.2 2008/03/19 17:24:02 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.12.ebuild,v 1.3 2008/06/08 20:41:36 the_paya Exp $
 
 inherit eutils multilib flag-o-matic libtool toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/libiconv/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="!sys-libs/glibc
