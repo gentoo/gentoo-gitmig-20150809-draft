@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.14 2008/06/02 17:05:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.15 2008/06/08 13:48:14 leio Exp $
+
+  08 Jun 2008; Mart Raudsepp <leio@gentoo.org> gtk-vnc-0.3.6.ebuild:
+  Remove USE=debug as it does not affect anything anymore
 
   02 Jun 2008; Brent Baude <ranger@gentoo.org> gtk-vnc-0.3.6.ebuild:
   Marking gtk-vnc-0.3.6 ~ppc to satisfy broken tree dep as noted by Mr Bones

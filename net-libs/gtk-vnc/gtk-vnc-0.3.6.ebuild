@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.6.ebuild,v 1.3 2008/06/02 17:05:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.6.ebuild,v 1.4 2008/06/08 13:48:14 leio Exp $
 
+GCONF_DEBUG=no
 inherit gnome2
 
 DESCRIPTION="VNC viewer widget for GTK."
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug examples python opengl"
+IUSE="examples python opengl"
 
 # what shall we do about libview
 # TODO: review nsplugin when it will be considered less experimental
@@ -24,7 +25,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		$(use_enable debug)
 		$(use_with examples)
 		$(use_with python)
 		$(use_with opengl gtkglext)
