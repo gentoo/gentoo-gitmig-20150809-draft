@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/kbabel-3.5.9.ebuild,v 1.5 2008/06/07 19:15:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/kbabel-3.5.9.ebuild,v 1.6 2008/06/08 15:14:25 armin76 Exp $
 
 KMNAME=kdesdk
 EAPI="1"
 inherit db-use kde-meta eutils
 
 DESCRIPTION="KBabel - An advanced PO file editor"
-KEYWORDS="~alpha amd64 hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="berkdb kdehiddenvisibility"
 
 DEPEND="berkdb? ( =sys-libs/db-4* )"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.87 2008/06/08 05:53:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.88 2008/06/08 15:13:32 armin76 Exp $
+
+  08 Jun 2008; Raúl Porcel <armin76@gentoo.org> kcachegrind-3.5.9.ebuild:
+  alpha/sparc stable wrt #221063
 
   08 Jun 2008; Jeroen Roovers <jer@gentoo.org> kcachegrind-3.5.9.ebuild:
   Stable for HPPA (bug #221063).
