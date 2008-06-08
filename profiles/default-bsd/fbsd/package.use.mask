@@ -82,7 +82,9 @@ dev-lang/swig chicken
 # ConsoleKit's PAM module only works on Linux right now.
 # pam_cracklib is only provided by Linux-PAM which is not usable on
 # Gentoo/FreeBSD.
-sys-auth/pambase consolekit cracklib
+# Javier Villavicencio <the_paya@gentoo.org> (08 Jun 2008)
+# passwdqc needs fix for 6.2 and 7.0.
+sys-auth/pambase consolekit cracklib passwdqc
 
 # Alexis Ballier <aballier@gentoo.org> (7 Apr 2008)
 # bug #216855

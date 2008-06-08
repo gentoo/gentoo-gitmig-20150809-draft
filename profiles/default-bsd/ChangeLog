@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.23 2008/06/08 19:24:40 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.24 2008/06/08 22:13:18 the_paya Exp $
+
+  08 Jun 2008; Javier Villavicencio <the_paya@gentoo.org>
+  fbsd/package.use.mask:
+  Temporary mask passwdqc for 7.0.
 
   08 Jun 2008; Javier Villavicencio <the_paya@gentoo.org>
   fbsd/6.2/package.mask:
