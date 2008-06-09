@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.5 2008/06/01 12:53:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.6 2008/06/09 15:51:18 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libhome-0.10.1-fixlt.patch, libhome-0.10.1.ebuild:
+  Add a patch to fix bug #225579. Yes you can shoot yourself in the foot
+  with autotools doing crazy stuff.
 
   01 Jun 2008; Benedikt Böhm <hollow@gentoo.org> libhome-0.10.1.ebuild:
   fix #220887
