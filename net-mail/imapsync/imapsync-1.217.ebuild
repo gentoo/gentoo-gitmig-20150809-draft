@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.217.ebuild,v 1.1 2007/04/01 17:51:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.217.ebuild,v 1.2 2008/06/09 10:37:55 tove Exp $
 
 inherit eutils
 
@@ -13,16 +13,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-perl/Mail-IMAPClient-2.1.4"
-
+DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	virtual/perl-Digest-MD5
 	dev-perl/Net-SSLeay
 	virtual/perl-MIME-Base64
 	dev-perl/TermReadKey
-	dev-perl/IO-Socket-SSL"
+	dev-perl/IO-Socket-SSL
+	dev-perl/Digest-HMAC
+	>=dev-perl/Mail-IMAPClient-2.1.4"
 
 RESTRICT="test"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e "s/^install: testp/install:/" \
+		-e "s/^\(all: ChangeLog README\) VERSION/\1/" "${S}"/Makefile || die
+}
+
+src_compile() {
+	emake all || die
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make failed"
