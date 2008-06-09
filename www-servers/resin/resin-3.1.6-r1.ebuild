@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6.ebuild,v 1.4 2008/05/12 09:37:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6-r1.ebuild,v 1.1 2008/06/09 21:49:33 nelchael Exp $
 
 EAPI="1"
 
@@ -117,6 +117,8 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PV}/resin.init" resin
 	newconfd "${FILESDIR}/${PV}/resin.conf" resin
+
+	sed -i -e "s,__RESIN_HOME__,${RESIN_HOME},g" "${D}/etc/init.d/resin"
 
 	rm -f "${S}/lib/tools.jar"
 	java-pkg_dojar "${S}"/lib/*.jar

@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.76 2008/05/12 09:37:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.77 2008/06/09 21:49:33 nelchael Exp $
+
+*resin-3.1.6-r1 (09 Jun 2008)
+
+  09 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> files/3.1.6/resin.init,
+  -resin-3.1.6.ebuild, +resin-3.1.6-r1.ebuild:
+  Fix root-directory issue, see bug #222865.
 
   12 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.1.6.ebuild:
   Add ~ppc keyword.
