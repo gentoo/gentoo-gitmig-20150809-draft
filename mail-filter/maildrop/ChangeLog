@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.79 2007/12/22 11:39:03 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.80 2008/06/09 09:15:29 ferdy Exp $
+
+  09 Jun 2008; Fernando J. Pereda <ferdy@gentoo.org>
+  -maildrop-2.0.2-r1.ebuild, -maildrop-2.0.3.ebuild:
+  Spring cleaning.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   maildrop-2.0.4.ebuild:
