@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.385 2008/05/19 12:23:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.386 2008/06/09 19:42:04 zzam Exp $
+
+*udev-122-r1 (09 Jun 2008)
+
+  09 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-122-r1.sh, +files/udev-122-rules-update.diff,
+  +udev-122-r1.ebuild:
+  Load unix sockets module before starting udevd, Bug #221253. Print some
+  elog info about persistent-net, Bug 225033. Add rules to set permissions
+  for rfcomm and ttyACM devices, Bug #223757 and Bug #208578.
 
 *udev-122 (19 May 2008)
 
