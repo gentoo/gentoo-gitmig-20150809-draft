@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.1 2008/06/09 07:32:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.2 2008/06/09 16:19:12 mr_bones_ Exp $
 
 EAPI=1
 
@@ -147,4 +147,3 @@ pkg_postrm() {
 		distutils_pkg_postrm
 	fi
 }
-
