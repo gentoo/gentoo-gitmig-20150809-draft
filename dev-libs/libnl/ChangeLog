@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.26 2008/04/28 04:30:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.27 2008/06/09 08:06:56 pva Exp $
+
+  09 Jun 2008; Peter Volkov <pva@gentoo.org>
+  +files/libnl-1.1-glibc-2.8-ULONG_MAX.patch, libnl-1.1-r1.ebuild:
+  Fixes build with glibc-2.8, bug #225393, thank Tobias Senner and Jose
+  daLuz for report.
 
   28 Apr 2008; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r1.ebuild:
   Marked ~sparc too.

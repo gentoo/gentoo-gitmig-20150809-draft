@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1-r1.ebuild,v 1.3 2008/04/28 04:30:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1-r1.ebuild,v 1.4 2008/06/09 08:06:56 pva Exp $
 
 inherit eutils multilib linux-info
 
@@ -18,6 +18,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-vlan-header.patch
 	epatch "${FILESDIR}"/${P}-minor-leaks.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.8-ULONG_MAX.patch
 }
 
 src_install() {
