@@ -1,0 +1,36 @@
+From fec73e1418a4da1b64496faca27b06fef0aa5206 Mon Sep 17 00:00:00 2001
+From: Sven Wegener <swegener@gentoo.org>
+Date: Sat, 7 Jun 2008 13:01:22 +0200
+Subject: [PATCH] evdev: Port b4a5a204 "Fix pointer crossing screen bug." to current master branch
+
+The commit b4a5a204 fixed an issue, where we can't move the pointer to
+other screens and this happens in current master branch again. This commit
+ports the old commit to the current master branch.
+
+Signed-off-by: Sven Wegener <swegener@gentoo.org>
+Signed-off-by: Peter Hutterer <peter@cs.unisa.edu.au>
+---
+ src/evdev.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/evdev.c b/src/evdev.c
+index b146d41..bd01316 100644
+--- a/src/evdev.c
++++ b/src/evdev.c
+@@ -767,11 +767,11 @@ EvdevAddRelClass(DeviceIntPtr device)
+         return !Success;
+ 
+     /* X valuator */
+-    xf86InitValuatorAxisStruct(device, 0, 0, -1, 1, 0, 1);
++    xf86InitValuatorAxisStruct(device, 0, -1, -1, 1, 0, 1);
+     xf86InitValuatorDefaults(device, 0);
+ 
+     /* Y valuator */
+-    xf86InitValuatorAxisStruct(device, 1, 0, -1, 1, 0, 1);
++    xf86InitValuatorAxisStruct(device, 1, -1, -1, 1, 0, 1);
+     xf86InitValuatorDefaults(device, 1);
+     xf86MotionHistoryAllocate(pInfo);
+ 
+-- 
+1.5.5.1
+
