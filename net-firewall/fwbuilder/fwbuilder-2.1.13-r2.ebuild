@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.13-r2.ebuild,v 1.1 2007/09/07 01:26:17 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.13-r2.ebuild,v 1.2 2008/06/09 00:55:17 darkside Exp $
 
 inherit eutils qt3 autotools
 
@@ -19,10 +19,10 @@ DEPEND="~net-libs/libfwbuilder-${PV}
 	>=dev-libs/libxslt-1.0.7"
 
 pkg_setup() {
-	if built_with_use dev-java/antlr nocxx; then
-		eerror "dev-java/antlr can't be compiled with nocxx."
-		eerror "recompile it without that use flag set."
-		die "Need dev-java/antlr compiled without the nocxx use flag set"
+	if ! built_with_use dev-java/antlr cxx; then
+		eerror "dev-java/antlr must be compiled with cxx."
+		eerror "recompile it with that use flag set."
+		die "Need dev-java/antlr compiled with the cxx use flag set"
 	fi
 }
 
