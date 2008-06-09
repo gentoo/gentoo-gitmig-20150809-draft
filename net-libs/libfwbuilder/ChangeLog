@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.71 2008/05/29 07:22:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.72 2008/06/09 01:20:22 darkside Exp $
+
+*libfwbuilder-2.1.18 (09 Jun 2008)
+
+  09 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/libfwbuilder-2.1.18-gcc43.patch, +libfwbuilder-2.1.18.ebuild:
+  Version bump with patch for gcc-4.3 compatibility. bug #219462. Thanks
+  loki_val for doing the hard part on this one!
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Carlos Silva (r3pek) from metadata.xml (as per #80351). Assigning

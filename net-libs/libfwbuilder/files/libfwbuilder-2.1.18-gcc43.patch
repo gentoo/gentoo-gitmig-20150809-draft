@@ -1,0 +1,13 @@
+make sure that libfwbuilder builds with gcc-4.3
+
+--- libfwbuilder-2.1.17.orig/src/fwbuilder/IPAddress.h
++++ libfwbuilder-2.1.17/src/fwbuilder/IPAddress.h
+@@ -29,6 +29,8 @@
+ 
+ #include <string>
+ #include <vector>
++#include <cstdlib>
++#include <cstring>
+ 
+ #ifndef _WIN32
+ #  include <sys/types.h>
