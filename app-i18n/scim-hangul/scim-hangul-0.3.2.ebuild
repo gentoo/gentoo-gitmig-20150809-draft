@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.2.ebuild,v 1.1 2007/12/31 14:37:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.2.ebuild,v 1.2 2008/06/09 12:24:14 flameeyes Exp $
+
+inherit base
 
 DESCRIPTION="Hangul IMEngine for SCIM ported from imhangul"
 HOMEPAGE="http://www.scim-im.org/"
@@ -18,6 +20,10 @@ RDEPEND="|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}+gcc-4.3.patch
+)
 
 src_compile() {
 	econf \

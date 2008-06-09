@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-hangul
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.23 2007/12/31 14:37:39 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.24 2008/06/09 12:24:14 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/scim-hangul-0.3.2+gcc-4.3.patch, scim-hangul-0.3.2.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Steve Warren in bug #222557.
 
 *scim-hangul-0.3.2 (31 Dec 2007)
 
