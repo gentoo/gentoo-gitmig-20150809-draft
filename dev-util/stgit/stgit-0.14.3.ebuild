@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.12.1-r1.ebuild,v 1.1 2007/04/10 18:07:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.14.3.ebuild,v 1.1 2008/06/09 07:43:45 ferdy Exp $
 
 inherit distutils bash-completion
 
@@ -20,7 +20,7 @@ src_install() {
 	sed -i -e 's-\(prefix:\) ~-\1 /usr-' setup.cfg
 	distutils_src_install
 	dodir /usr/share/doc/${PF}
-	mv ${D}/usr/share/${PN}/examples ${D}/usr/share/doc/${PF}
-	rmdir ${D}/usr/share/doc/${PN}
+	mv "${D}/usr/share/${PN}/examples" "${D}/usr/share/doc/${PF}"
+	rmdir "${D}/usr/share/doc/${PN}"
 	dobashcompletion contrib/stgit-completion.bash ${PN}
 }
