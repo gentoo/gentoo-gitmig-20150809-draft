@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.1 2007/08/25 16:49:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.2 2008/06/09 00:57:06 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
 inherit eutils toolchain-funcs git
@@ -23,8 +23,6 @@ src_unpack() {
 	git_src_unpack
 	cd "${S}"
 	sed -i "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
-
-	epatch "${FILESDIR}"/${PN}-2.6.16.20060323-build.patch #137574
 
 	# don't build arpd if USE=-berkdb #81660
 	use berkdb || sed -i '/^TARGETS=/s: arpd : :' misc/Makefile
