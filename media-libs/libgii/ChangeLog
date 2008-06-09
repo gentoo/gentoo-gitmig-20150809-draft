@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgii
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.39 2007/07/27 11:20:54 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.40 2008/06/09 09:11:26 vapier Exp $
+
+  09 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  files/libgii-1.0.2-configure-cpuid-pic.patch, libgii-1.0.2.ebuild:
+  Fix local libtool handling #218483 by Ewgenij Starostin.
 
   27 Jul 2007; Roy Marples <uberlord@gentoo.org> libgii-1.0.2.ebuild:
   Keyworded ~x86-fbsd
