@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.30 2008/06/09 13:59:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.31 2008/06/09 19:29:48 ranger Exp $
+
+  09 Jun 2008; Brent Baude <ranger@gentoo.org> eselect-wxwidgets-0.8.ebuild:
+  stable ppc64, bug 225261
 
   09 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   eselect-wxwidgets-0.8.ebuild:
