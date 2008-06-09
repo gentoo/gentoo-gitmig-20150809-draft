@@ -1,10 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.121 2008/05/10 15:01:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.122 2008/06/09 15:34:30 jer Exp $
 
   10 May 2008; Markus Dittrich <markusle@gentoo.org> R-2.7.0.ebuild:
   Fixed improper binary path in Rscript (see bug #221061).
 
+*R-2.7.0 (23 Apr 2008)
   23 Apr 2008; Markus Dittrich <markusle@gentoo.org> +R-2.7.0.ebuild:
   Version bump.
 
