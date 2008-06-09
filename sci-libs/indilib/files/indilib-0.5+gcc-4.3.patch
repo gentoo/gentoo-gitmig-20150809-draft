@@ -1,0 +1,10 @@
+--- src/sbigcam.h.orig	2008-06-07 22:18:07.000000000 +0200
++++ src/sbigcam.h	2008-06-07 22:18:35.000000000 +0200
+@@ -33,6 +33,7 @@
+ #include <math.h>
+ #include <time.h>
+ #include <string>
++#include <cstring>
+ #include "sbigudrv.h"
+ 
+ // Define INDI if INDI driver should be generated, otherwise only SbigCam class without

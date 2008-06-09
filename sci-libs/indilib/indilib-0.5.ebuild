@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.5.ebuild,v 1.1 2008/01/13 20:04:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.5.ebuild,v 1.2 2008/06/09 12:04:02 flameeyes Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="INDI Astronomical Control Protocol library"
 HOMEPAGE="http://indi.sourceforge.net/index.php/Main_Page"
@@ -20,6 +20,13 @@ RDEPEND="sci-libs/cfitsio
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/indi"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
+}
 
 src_compile(){
 	myconf="${myconf} $(use_enable usb) $(use_enable v4l2)"
