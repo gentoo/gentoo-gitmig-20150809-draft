@@ -1,0 +1,35 @@
+# allow usage of <imagemagick-6.3.8, bug 215671
+# patch by Martin von Gagern <Martin.vGagern@gmx.net>
+
+--- MagickWandForPHP-1.0.7-1/config.m4	2008-04-13 19:30:55.000000000 +0200
++++ MagickWandForPHP-1.0.7/config.m4	2008-06-09 17:08:03.000000000 +0200
+@@ -34,7 +34,7 @@
+ 		if test "$IMAGEMAGICK_VERSION_MASK" -ge 6003005; then
+ 				AC_MSG_RESULT(found version $IMAGEMAGICK_VERSION_ORIG)
+ 		else
+-				AC_MSG_ERROR(no. You need at least ImageMagick version 6.3.8 to use MagickWand for PHP.)
++				AC_MSG_ERROR(no. You need at least ImageMagick version 6.3.5 to use MagickWand for PHP.)
+ 		fi
+ 
+ 		AC_MSG_CHECKING(if PHP version is at least 4.1.3)
+@@ -63,16 +63,13 @@
+ 
+ 		AC_DEFINE(HAVE_MAGICKWAND,1,[ ])
+ 
+-		PHP_ADD_LIBRARY_WITH_PATH(MagickCore, $WAND_DIR/lib, MAGICKWAND_SHARED_LIBADD)
+-		PHP_ADD_LIBRARY_WITH_PATH(MagickWand, $WAND_DIR/lib, MAGICKWAND_SHARED_LIBADD)
+-		PHP_ADD_INCLUDE($WAND_DIR/include/ImageMagick)
+-		AC_MSG_CHECKING(MagickWand-config --cppflags)
+-		WAND_CPPFLAGS="`$WAND_CONFIG_PATH/MagickWand-config --cppflags`"
++		AC_MSG_CHECKING(Wand-config --cppflags)
++		WAND_CPPFLAGS="`$WAND_CONFIG_PATH/Wand-config --cppflags`"
+ 		AC_MSG_RESULT($WAND_CPPFLAGS)
+ 		PHP_EVAL_INCLINE($WAND_CPPFLAGS)
+ 
+-		AC_MSG_CHECKING(MagickWand-config --libs)
+-		WAND_LIBS="`$WAND_CONFIG_PATH/MagickWand-config --libs`"
++		AC_MSG_CHECKING(Wand-config --libs)
++		WAND_LIBS="`$WAND_CONFIG_PATH/Wand-config --libs`"
+ 		AC_MSG_RESULT($WAND_LIBS)
+ 		PHP_EVAL_LIBLINE($WAND_LIBS, MAGICKWAND_SHARED_LIBADD)
+ 
