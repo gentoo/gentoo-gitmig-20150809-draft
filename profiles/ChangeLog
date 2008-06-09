@@ -1,13 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1519 2008/06/09 16:39:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1520 2008/06/09 16:46:15 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
 
   09 Jun 2008; Samuli Suominen <drac@gentoo.org> package.mask:
-  gai, gai-pal and gai-pager removed wrt #207749
+  Removed daemontools-scripts wrt #212331. Removed gai, gai-pal,
+  gai-pager wrt #207749.
 
   09 Jun 2008; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop libtool-2.2 mask so we can actually find broken packages instead of

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8702 2008/06/09 16:39:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8703 2008/06/09 16:46:15 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -244,11 +244,6 @@ x11-libs/lesstif
 # masked until bug #217901 is fixed, again.
 # Still has broken deps and missing license.
 games-server/greenhouse
-
-# Samuli Suominen <drac@gentoo.org> (05 May 2008)
-# Masked for removal by treecleaners wrt bug 212331
-# As requested by base-system. Gone in 30 days.
-sys-process/daemontools-scripts
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (04 May 2008)
 # Some of the older 0.9x regex packages are experimental versions and does
