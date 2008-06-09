@@ -1,0 +1,11 @@
+diff -aur jabberd14-1.6.1.1-orig/jabberd/Makefile.am jabberd14-1.6.1.1/jabberd/Makefile.am
+--- jabberd14-1.6.1.1-orig/jabberd/Makefile.am	2007-04-07 15:43:18.000000000 -0400
++++ jabberd14-1.6.1.1/jabberd/Makefile.am	2008-06-02 10:39:18.000000000 -0400
+@@ -6,7 +6,7 @@
+ jabberd_SOURCES = jabberd.cc
+ 
+ jabberd_LDADD = $(top_builddir)/jabberd/base/libjabberdbase.la \
+-		$(top_builddir)/jabberd/libjabberd.la \
++		libjabberd.la \
+ 		-lpopt
+ jabberd_LDFLAGS = @LDFLAGS@ -export-dynamic

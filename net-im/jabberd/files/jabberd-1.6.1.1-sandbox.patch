@@ -1,0 +1,14 @@
+diff -ur jabberd14-1.6.1.1.orig/po/Makefile.in jabberd14-1.6.1.1.patched/po/Makefile.in
+--- jabberd14-1.6.1.1.orig/po/Makefile.in	2007-07-19 04:24:44.000000000 +0600
++++ jabberd14-1.6.1.1.patched/po/Makefile.in	2008-01-11 18:05:36.000000000 +0500
+@@ -335,8 +335,8 @@
+ 
+ install-data-hook:
+ 	-for f in $(LANGS); do \
+-	    test -z "$(localedir)/$${f%.po}/LC_MESSAGES" || $(mkdir_p) "$(localedir)/$${f%.po}/LC_MESSAGES"; \
+-	     msgfmt -o "$(localedir)/$${f%.po}/LC_MESSAGES/jabberd14.mo" $$f; \
++	    test -z "$(DESTDIR)$(localedir)/$${f%.po}/LC_MESSAGES" || $(mkdir_p) "$(DESTDIR)$(localedir)/$${f%.po}/LC_MESSAGES"; \
++	     msgfmt -o "$(DESTDIR)$(localedir)/$${f%.po}/LC_MESSAGES/jabberd14.mo" $$f; \
+ 	     done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
