@@ -1,9 +1,0 @@
---- java_ext/Makefile.old	2006-02-19 16:26:49.000000000 -0500
-+++ java_ext/Makefile	2006-02-19 16:27:24.000000000 -0500
-@@ -1,5 +1,5 @@
- 
--JAVADIR=/usr/java/sdk
-+JAVADIR=`java-config --jdk-home`
- MINGDIR=..
- 
- COMPILE = $(JAVADIR)/bin/javac -sourcepath .
