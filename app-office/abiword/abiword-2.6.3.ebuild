@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.3.ebuild,v 1.1 2008/05/04 19:19:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.3.ebuild,v 1.2 2008/06/09 19:58:36 opfer Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug gnome spell xml"
 
 # FIXME: gsf could probably be conditional
