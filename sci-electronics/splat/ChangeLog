@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/splat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.6 2007/05/10 19:39:37 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.7 2008/06/09 09:49:17 loki_val Exp $
+
+*splat-1.2.2 (09 Jun 2008)
+
+  09 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/splat-1.2.2-gcc43.patch, -splat-1.1.0.ebuild, +splat-1.2.2.ebuild:
+  Fix and bump for gcc-4.3, Closes bug #217972.
 
   10 May 2007; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Fix metadata
