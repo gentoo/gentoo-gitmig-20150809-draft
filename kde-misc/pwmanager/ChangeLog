@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/pwmanager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.16 2007/11/16 14:45:32 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.17 2008/06/09 01:08:46 carlo Exp $
+
+*pwmanager-1.2.4-r3 (09 Jun 2008)
+
+  09 Jun 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/pwmanager-1.2.4-desktop-entry.diff,
+  +files/pwmanager-1.2.4-gcc43.patch, +pwmanager-1.2.4-r3.ebuild:
+  GCC 4.3 compatibily, see bug #225451. Desktop entry standard compliance and
+  getting rid of the arts use flag.
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> pwmanager-1.2.4-r2.ebuild:
   amd64 stable, bug 192840

@@ -1,0 +1,43 @@
+--- pwmanager/serializer.h.orig	2008-06-08 23:31:18.000000000 +0200
++++ pwmanager/serializer.h	2008-06-08 23:31:57.000000000 +0200
+@@ -16,6 +16,8 @@
+ 
+ #include <qcstring.h>
+ #include <qdom.h>
++#include <cstdlib>
++
+ 
+ #include <vector>
+ 
+--- pwmanager/main.cpp.orig	2008-06-08 23:34:59.000000000 +0200
++++ pwmanager/main.cpp	2008-06-08 23:35:22.000000000 +0200
+@@ -9,6 +9,7 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++#include <cstdlib>
+ #include <kcmdlineargs.h>
+ #include <kaboutdata.h>
+ #include <klocale.h>
+
+--- pwmanager/base64.h.orig	2008-06-08 23:38:32.000000000 +0200
++++ pwmanager/base64.h	2008-06-08 23:38:51.000000000 +0200
+@@ -44,6 +44,7 @@
+ #ifndef __BASE64_H
+ #define __BASE64_H
+ 
++#include <cstdlib>
+ #include <string>
+ 
+ using std::string;
+
+--- pwmanager/compressbzip2.h.orig	2008-06-08 23:42:08.000000000 +0200
++++ pwmanager/compressbzip2.h	2008-06-08 23:42:24.000000000 +0200
+@@ -12,6 +12,7 @@
+ #ifndef COMPRESSBZIP2_H
+ #define COMPRESSBZIP2_H
+ 
++#include <cstring>
+ #include <string>
+ using std::string;
+ 

@@ -1,0 +1,20 @@
+--- ./pwmanager/pwmanager.desktop.orig	2008-06-09 01:56:40.000000000 +0200
++++ ./pwmanager/pwmanager.desktop	2008-06-09 01:56:54.000000000 +0200
+@@ -1,7 +1,6 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+-Exec=pwmanager -caption "%c" %i %m
++Exec=pwmanager -caption "%c" %i
+ Icon=pwmanager
+ Comment=The convenient way of managing passwords
+ Comment[da]=Den bekvemme måde at håndtere kodeord på
+--- pwmanager/Makefile.am.orig	2008-06-09 02:06:33.000000000 +0200
++++ pwmanager/Makefile.am	2008-06-09 02:07:00.000000000 +0200
+@@ -125,5 +125,5 @@
+ 
+ KDE_ICON = pwmanager
+ 
+-kdelnkdir   = $(kde_appsdir)/Applications
++kdelnkdir   = $(xdg_appsdir)
+ kdelnk_DATA = pwmanager.desktop
