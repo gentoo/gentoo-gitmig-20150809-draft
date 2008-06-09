@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.69 2008/06/09 00:55:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.70 2008/06/09 01:55:32 darkside Exp $
+
+*fwbuilder-2.1.18 (09 Jun 2008)
+
+  09 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +fwbuilder-2.1.18.ebuild:
+  Version bump, bug #219471. Adds gcc-4.3 compatibility according to loki_val.
 
   09 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
   fwbuilder-2.1.13-r2.ebuild, fwbuilder-2.1.14.ebuild:
