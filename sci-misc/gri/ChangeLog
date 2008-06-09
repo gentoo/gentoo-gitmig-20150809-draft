@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/gri
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.20 2007/11/02 14:43:51 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.21 2008/06/09 10:46:40 markusle Exp $
+
+*gri-2.12.17 (09 Jun 2008)
+
+  09 Jun 2008; Markus Dittrich <markusle@gentoo.org> gri-2.12.14.ebuild,
+  gri-2.12.16-r1.ebuild, +gri-2.12.17.ebuild:
+  Version bump. Also switched virtual/tetex -> virtual/latex-base 
+  (see bug #222501).
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> gri-2.12.16-r1.ebuild:
   amd64 stable, bug 196887
