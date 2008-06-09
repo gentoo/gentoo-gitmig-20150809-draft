@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r2.ebuild,v 1.15 2007/12/18 16:20:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r2.ebuild,v 1.16 2008/06/09 13:05:14 flameeyes Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -52,12 +52,14 @@ src_unpack() {
 	# scripts fixing bug 147972 (removes LAN browsing detection)
 	sed -i \
 		-e '/^---.*ui_browse_share_ctl.patch/,/^---/{/^---.*ui_browse_share_ctl.patch/!d;}' \
-	 	${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
+		${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
 	epatch ${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
 	# gksudo does not always work
 	sed -i "s:gksudo:gksu:" debian/patches/change-su-command.patch
 	cd ${S}
 	epatch ${WORKDIR}/ubuntu/debian/patches/*
+
+	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
 
 	# bug 141929
 	use amd64 && replace-flags -O* -O0
