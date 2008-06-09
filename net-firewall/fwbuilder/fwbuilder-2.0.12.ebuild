@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.0.12.ebuild,v 1.7 2007/05/06 09:41:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.0.12.ebuild,v 1.8 2008/06/09 00:48:32 darkside Exp $
 
 inherit eutils
 
@@ -18,6 +18,11 @@ DEPEND="~net-libs/libfwbuilder-${PV}
 	>=dev-libs/libxslt-1.0.7"
 
 src_compile() {
+	# prevent install script from automatically stripping binaries
+	# let portage do that
+	sed -i -e 's/s) stripcmd="$stripprog"$/s)/' install.sh \
+		|| die "sed install.sh failed"
+
 	export QMAKESPEC="linux-g++"
 	export QMAKE="${QTDIR}/bin/qmake"
 
@@ -28,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DDIR=${D} install || die
+	emake DDIR="${D}" install || die
 	insinto /usr/share/pixmaps
 	doins src/gui/icons/firewall_64.png
 	make_desktop_entry fwbuilder "Firewall Builder" "/usr/share/pixmaps/firewall_64.png" "System;Qt"

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.67 2008/05/29 07:18:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.68 2008/06/09 00:48:32 darkside Exp $
+
+  09 Jun 2008; Jeremy Olexa <darkside@gentoo.org> fwbuilder-2.0.12.ebuild:
+  Fixed QA issue regarding pre-stripped files. bug #198635.
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Carlos Silva (r3pek) from metadata.xml (as per #80351). Assigning
