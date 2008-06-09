@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.26 2008/05/09 01:54:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.27 2008/06/09 12:50:18 loki_val Exp $
+
+  09 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/0.9.12-gcc43.patch, chromium-0.9.12-r7.ebuild:
+  Gcc4.3 fix; bug 217710
 
   09 May 2008; Michael Sterrett <mr_bones_@gentoo.org>
   files/0.9.12-configure.patch:

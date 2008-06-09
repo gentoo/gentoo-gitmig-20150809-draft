@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r7.ebuild,v 1.1 2007/08/03 17:47:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r7.ebuild,v 1.2 2008/06/09 12:50:18 loki_val Exp $
 
 inherit eutils flag-o-matic qt3 toolchain-funcs versionator games
 
@@ -33,11 +33,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch \
-		"${FILESDIR}"/${PV}-gcc3-gentoo.patch \
 		"${FILESDIR}"/${PV}-freealut.patch \
 		"${FILESDIR}"/${PV}-configure.patch \
 		"${FILESDIR}"/${PV}-qt3.patch \
-		"${FILESDIR}"/${PV}-png.patch
+		"${FILESDIR}"/${PV}-png.patch \
+		"${FILESDIR}"/${PV}-gcc43.patch
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
 	append-flags -DPKGBINDIR="'\"${GAMES_BINDIR}\"'"
 	sed -i \
