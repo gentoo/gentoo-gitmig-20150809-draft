@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.10.ebuild,v 1.2 2008/06/07 16:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.10.ebuild,v 1.3 2008/06/09 02:31:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -32,6 +32,15 @@ src_unpack() {
 
 	# make sure we error out if com_err is attempted to be built
 	rm -f lib/et/*.c
+	# since we've split out com_err/ss into their own ebuilds, we
+	# need to fake out the local files.  let the toolchain find them.
+	mkdir tc || die
+	echo "GROUP ( libcom_err.a )" > tc/libcom_err.a
+	echo "GROUP ( libcom_err.so )" > tc/libcom_err.so
+	sed -i \
+		-e '/^LIBCOM_ERR/s:$(LIB):$(top_builddir)/tc:' \
+		MCONFIG.in || die
+	ln -s $(type -P compile_et) lib/et/compile_et
 }
 
 src_compile() {
