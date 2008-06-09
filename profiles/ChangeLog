@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1515 2008/06/09 01:25:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1516 2008/06/09 05:09:32 dberkholz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  09 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Unmask evdev, new patches fix the issues.
 
   09 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Adding a bit to media-libs/ming package mask to catch newer version.
