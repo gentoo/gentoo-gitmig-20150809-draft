@@ -1,0 +1,12 @@
+diff -Naur cups-1.3.7/backend/ipp.c cups-1.3.7.new/backend/ipp.c
+--- cups-1.3.7/backend/ipp.c	2008-01-23 23:23:42.000000000 +0100
++++ cups-1.3.7.new/backend/ipp.c	2008-06-09 15:03:37.794195564 +0200
+@@ -1410,7 +1410,7 @@
+ {
+   (void)prompt;
+ 
+-  if (password && password_tries < 3)
++  if (password && *password && password_tries < 3)
+   {
+     password_tries ++;
+ 
