@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1-r1.ebuild,v 1.5 2008/01/10 19:44:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1-r1.ebuild,v 1.6 2008/06/09 11:42:33 flameeyes Exp $
 
 inherit eutils flag-o-matic libtool autotools
 
@@ -35,6 +35,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.2.7-gcc4.patch
 
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
+
+	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
 
 	eautoreconf
 	elibtoolize

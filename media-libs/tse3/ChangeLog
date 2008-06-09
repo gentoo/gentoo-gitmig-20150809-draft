@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.27 2008/02/15 16:13:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.28 2008/06/09 11:42:33 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tse3-0.3.1+gcc-4.3.patch, tse3-0.3.1-r1.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Marek Miller in bug #225335.
 
   15 Feb 2008; Samuli Suominen <drac@gentoo.org> -tse3-0.3.1.ebuild:
   Remove old.
