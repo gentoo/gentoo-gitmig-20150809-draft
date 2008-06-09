@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.5 2007/11/13 02:29:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.6 2008/06/09 08:41:59 vapier Exp $
 
 inherit eutils autotools
 
@@ -64,6 +64,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/globals-core.c.diff
 	epatch "${FILESDIR}"/${P}-build.patch
+	# remove local libtool garbage injected by upstream #220819
+	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
 
 	sed -i \
