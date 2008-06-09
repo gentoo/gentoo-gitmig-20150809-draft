@@ -1,0 +1,20 @@
+--- kguitar/convertgp3.h.orig	2008-06-08 14:51:30.000000000 +0200
++++ kguitar/convertgp3.h	2008-06-08 14:52:01.000000000 +0200
+@@ -1,6 +1,7 @@
+ #ifndef CONVERTGP3_H
+ #define CONVERTGP3_H
+ 
++#include <cstdlib>
+ #include "global.h"
+ #include "convertbase.h"
+ 
+--- kguitar/convertgtp.h.orig	2008-06-08 14:59:45.000000000 +0200
++++ kguitar/convertgtp.h	2008-06-08 15:00:01.000000000 +0200
+@@ -1,6 +1,7 @@
+ #ifndef CONVERTGTP_H
+ #define CONVERTGTP_H
+ 
++#include <cstdlib>
+ #include "global.h"
+ #include "convertbase.h"
+ 

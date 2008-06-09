@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kguitar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.6 2008/03/12 09:43:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.7 2008/06/09 11:28:33 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kguitar-0.5+gcc-4.3.patch, kguitar-0.5.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Marek Miller in bug #225349.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Eldad Zack (eldad, #53978) from metadata.xml.
