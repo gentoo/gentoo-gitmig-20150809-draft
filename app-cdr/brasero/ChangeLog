@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.35 2008/06/09 03:28:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.36 2008/06/09 18:43:05 drac Exp $
+
+  09 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.1.ebuild:
+  QA. Move use_enable from global scope inside function.
 
   09 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.90.ebuild:
   We need libbeagle instead of beagle, and starting from version 0.3.0.

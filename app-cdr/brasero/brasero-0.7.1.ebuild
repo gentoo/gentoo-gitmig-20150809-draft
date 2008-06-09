@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.2 2008/04/07 17:22:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.3 2008/06/09 18:43:05 drac Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="beagle dbus dvd gdl libburn libnotify nls totem"
+IUSE="beagle dbus dvd gdl libburn libnotify totem"
 
 RESTRICT="test"
 
@@ -32,39 +32,33 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 		app-cdr/dvd+rw-tools )
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
-	beagle? ( || ( dev-libs/libbeagle >=app-misc/beagle-0.2.18 ) )
+	beagle? ( || ( dev-libs/libbeagle ~app-misc/beagle-0.2.18 ) )
 	libnotify? ( >=x11-libs/libnotify-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.4.0
 		>=dev-libs/libisofs-0.2.8 )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
 
-G2CONF="${G2CONF} \
-	$(use_enable totem playlist) \
-	$(use_enable beagle search) \
-	$(use_enable dbus) \
-	$(use_enable libburn libburnia) \
-	$(use_enable libnotify) \
-	--disable-caches"
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-caches
+		$(use_enable totem playlist)
+		$(use_enable beagle search)
+		$(use_enable dbus)
+		$(use_enable libburn libburnia)
+		$(use_enable libnotify)"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO.tasks"
-USE_DESTDIR="1"
-
-src_install() {
-	gnome2_src_install
-	use nls || rm -rf "${D}"/usr/share/locale
+	DOCS="AUTHORS ChangeLog NEWS README TODO.tasks"
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	elog
+	echo
 	elog "For the best experience you should have a Linux kernel >= 2.6.13"
 	elog "to enable system features such as Extended Attributes and inotify."
-	elog
+	echo
 	elog "To use the libburn backend you need to add USE=libburn and activate"
 	elog "it in gconf editor. Note that the default backend is cdrtools/cdrkit."
-	elog
+	echo
 }
