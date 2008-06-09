@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.90.ebuild,v 1.2 2008/06/08 06:22:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.90.ebuild,v 1.3 2008/06/09 03:28:56 drac Exp $
 
 GCONF_DEBUG=no
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.15.6
 		app-cdr/dvd+rw-tools )
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-2.20 )
-	beagle? ( || ( dev-libs/libbeagle >=app-misc/beagle-0.3 ) )
+	beagle? ( >=dev-libs/libbeagle-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.4.0
 		>=dev-libs/libisofs-0.6.4 )"
 DEPEND="${RDEPEND}

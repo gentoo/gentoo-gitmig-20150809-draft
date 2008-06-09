@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.34 2008/06/08 06:22:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.35 2008/06/09 03:28:56 drac Exp $
+
+  09 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.90.ebuild:
+  We need libbeagle instead of beagle, and starting from version 0.3.0.
+  Thanks to bheekling.
 
   08 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.90.ebuild:
   Remove nautilus-cd-burner dep. which is not required, thanks to
