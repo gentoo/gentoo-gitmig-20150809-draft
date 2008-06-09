@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.7 2006/11/12 00:31:34 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.8 2008/06/09 08:07:57 ferdy Exp $
 
 manpagesextra=${PN}-extra-0.8a
 S2=${WORKDIR}/${manpagesextra}
@@ -25,6 +25,9 @@ src_install() {
 
 	# These are provided by sys-apps/shadow, see bug #154140
 	rm -f {"${S}","${S2}"}/man{1/{passwd,su,newgrp,login}.1,8/{vigr,vipw}.8}
+
+	# This one by app-misc/mc, see bug #206361
+	rm -f {"${S}","${S2}"}/man1/mc.1
 
 	dodoc man?/{LEAME,README}
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-es
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.9 2007/05/13 18:28:40 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.10 2008/06/09 08:07:57 ferdy Exp $
+
+  09 Jun 2008; Fernando J. Pereda <ferdy@gentoo.org>
+  man-pages-es-1.55-r1.ebuild:
+  Remove file collision as per bug #206361
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
