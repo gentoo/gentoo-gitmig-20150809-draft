@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.00.ebuild,v 1.4 2006/11/24 21:49:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.00.ebuild,v 1.5 2008/06/09 09:15:45 je_fro Exp $
 
 inherit autotools eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-really-find-blas-and-lapack.patch
+	epatch "${FILESDIR}"/${PV}-really-find-blas-and-lapack.patch
 	cd "${S}"
 	eautoreconf
 }
