@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.2 2008/01/20 09:44:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.3 2008/06/09 08:44:07 loki_val Exp $
 
 inherit qt3 eutils multilib
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-nodocs.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	ebegin 'Fixing install paths'
 	grep -rl '/usr/local' * \

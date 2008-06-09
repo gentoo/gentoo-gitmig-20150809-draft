@@ -1,9 +1,0 @@
-diff -Naur qtstalker-orig/qtstalker.pro qtstalker/qtstalker.pro
---- qtstalker-orig/qtstalker.pro	2006-09-25 17:21:13.000000000 +0200
-+++ qtstalker/qtstalker.pro	2007-03-01 20:19:07.000000000 +0100
-@@ -30,5 +30,3 @@
- SUBDIRS += plugins/indicator/VIDYA
- SUBDIRS += plugins/indicator/VOL
- SUBDIRS += plugins/indicator/VOLA
--
--SUBDIRS += docs
