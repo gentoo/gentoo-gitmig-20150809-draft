@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1520 2008/06/09 16:46:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1521 2008/06/09 16:51:52 lavajoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  09 Jun 2008; Joe Peterson <lavajoe@gentoo.org> package.mask:
+  Mask btrfs live ebuilds - too volatile for normal use
 
   09 Jun 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Removed daemontools-scripts wrt #212331. Removed gai, gai-pal,
