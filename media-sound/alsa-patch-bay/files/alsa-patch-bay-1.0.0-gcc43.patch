@@ -1,0 +1,59 @@
+--- alsa-patch-bay-1.0.0-orig/src/driver/jack/jack-addr.cpp     2003-02-07 13:06:25.000000000 -0800
++++ alsa-patch-bay-1.0.0/src/driver/jack/jack-addr.cpp  2008-04-16 20:02:00.000000000 -0700
+@@ -10,7 +10,8 @@
+  */
+
+ #include <iostream>
+-
++#include <cstring>
++#include <cstdlib>
+ #include "jack-addr.h"
+
+ namespace APB {
+--- alsa-patch-bay-1.0.0-orig/src/driver/jack/jack-driver.cpp   2003-02-08 02:50:34.000000000 -0800
++++ alsa-patch-bay-1.0.0/src/driver/jack/jack-driver.cpp        2008-04-16 20:00:33.000000000 -0700
+@@ -18,7 +18,8 @@
+ #include "misc.h"
+ #include "plugin.h"
+ #include "ui.h"
+-
++#include <cstdlib>
++#include <cstring>
+ namespace APB {
+ namespace Jack {
+
+--- alsa-patch-bay-1.0.0-orig/src/misc.cpp      2002-11-25 11:48:10.000000000 -0800
++++ alsa-patch-bay-1.0.0/src/misc.cpp   2008-04-16 20:03:52.000000000 -0700
+@@ -10,7 +10,7 @@
+  */
+
+ #include <sstream>
+-
++#include <cstdlib>
+ #include "misc.h"
+
+ namespace APB {
+--- alsa-patch-bay-1.0.0-orig/src/plugins.cpp   2003-01-04 00:43:15.000000000 -0800
++++ alsa-patch-bay-1.0.0/src/plugins.cpp        2008-04-16 20:04:32.000000000 -0700
+@@ -14,7 +14,7 @@
+ #include <dirent.h>
+ #include <errno.h>
+ #include <string.h>
+-
++#include <cstdlib>
+ #include <iostream>
+ #include <list>
+ #include <string>
+
+--- alsa-patch-bay-1.0.0-orig/src/driver.cpp    2003-01-04 00:42:44.000000000 -0800
++++ alsa-patch-bay-1.0.0/src/driver.cpp 2008-04-16 20:03:07.000000000 -0700
+@@ -15,7 +15,7 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <fcntl.h>
+-
++#include <cstdlib>
+ #include "driver.h"
+
+ namespace APB {
+
