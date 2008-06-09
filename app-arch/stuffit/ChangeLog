@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/stuffit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.17 2007/07/02 13:39:12 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.18 2008/06/09 02:43:07 darkside Exp $
+
+  09 Jun 2008; Jeremy Olexa <darkside@gentoo.org> stuffit-5.2.0.611.ebuild:
+  Ebuild cleanup, fix SRC_URI, and fix env.d file issue in bug #133620
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   stuffit-5.2.0.611.ebuild:
