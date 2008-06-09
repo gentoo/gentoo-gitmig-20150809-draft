@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.15.ebuild,v 1.1 2008/05/29 16:59:52 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.15.ebuild,v 1.2 2008/06/09 17:01:34 lavajoe Exp $
 
 inherit eutils linux-mod
 
@@ -51,8 +51,8 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	ewarn "WARNING: Btrfs is under heavy development and is not suitable for"
-	ewarn "any uses other than benchmarking and review."
-	ewarn "The Btrfs disk format is not yet finalized."
+	ewarn "         any uses other than benchmarking and review."
+	ewarn "         The Btrfs disk format is not yet finalized."
 	ewarn ""
 	ewarn "Note: If upgrading from 0.14, there is no disk format change,"
 	ewarn "      but it might be prudent to fsck after upgrading."

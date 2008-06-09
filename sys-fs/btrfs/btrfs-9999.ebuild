@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.14.ebuild,v 1.3 2008/06/09 17:01:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.1 2008/06/09 17:01:34 lavajoe Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-mod mercurial
 
 DESCRIPTION="A checksumming copy-on-write filesystem"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/${P}.tar.bz2"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"
 PDEPEND="~sys-fs/btrfs-progs-${PV}"
+
+S="${WORKDIR}/kernel"
 
 pkg_setup()
 {
@@ -36,10 +38,8 @@ pkg_setup()
 }
 
 src_unpack() {
-	unpack ${A}
+	mercurial_fetch http://www.kernel.org/hg/btrfs/kernel
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-hotfix.patch"
 }
 
 src_install()
@@ -55,4 +55,8 @@ pkg_postinst() {
 	ewarn "WARNING: Btrfs is under heavy development and is not suitable for"
 	ewarn "         any uses other than benchmarking and review."
 	ewarn "         The Btrfs disk format is not yet finalized."
+	ewarn ""
+	ewarn "Note: This version is installed from a live ebuild, so the disk"
+	ewarn "      format can change from install to install as the upstream"
+	ewarn "      source changes."
 }
