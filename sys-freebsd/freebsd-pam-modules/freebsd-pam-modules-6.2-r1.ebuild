@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-6.2-r1.ebuild,v 1.1 2008/02/19 12:03:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-6.2-r1.ebuild,v 1.2 2008/06/09 21:13:21 the_paya Exp $
 
 inherit bsdmk freebsd multilib pam
 
 DESCRIPTION="FreeBSD's PAM authentication modules"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
 IUSE="kerberos nis"
 
