@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.1.ebuild,v 1.3 2008/06/09 19:36:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.2.ebuild,v 1.1 2008/06/09 19:36:38 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -21,7 +21,8 @@ IUSE="cdb dovecot-sasl hardened ipv6 ldap mailwrapper mbox mysql nis pam postgre
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_P="${P}-vda-ng-r1"
+VDA_PV="2.5.1"
+VDA_P="${PN}-${VDA_PV}-vda-ng-r1"
 RC_VER="2.5"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
@@ -183,7 +184,7 @@ src_compile() {
 	fi
 
 	if use mysql ; then
-		mycc="${mycc} -DHAS_MYSQL -I/usr/include/mysql"
+		mycc="${mycc} -DHAS_MYSQL $(mysql_config --include)"
 		mylibs="${mylibs} -lmysqlclient -lm -lz"
 	fi
 
