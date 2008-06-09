@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/klibido
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.24 2007/05/18 20:20:44 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.25 2008/06/09 11:56:59 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/klibido-0.2.5+gcc-4.3.patch:
+  Add patch to build with GCC 4.3. Thanks to Marek Miller in bug #225359.
 
   18 May 2007; Raúl Porcel <armin76@gentoo.org> klibido-0.2.5.ebuild:
   Add ~alpha wrt #159654
