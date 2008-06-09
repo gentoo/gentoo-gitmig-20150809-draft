@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.9.7.ebuild,v 1.4 2007/07/22 08:43:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.9.7.ebuild,v 1.5 2008/06/09 19:24:37 araujo Exp $
 
 inherit base versionator fixheadtails eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X mmx threads iconv"
 
-DEPEND="dev-libs/libffi
-	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt )"
+DEPEND="X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt )"
 RDEPEND="${DEPEND}
 	virtual/squeak-image"
 
