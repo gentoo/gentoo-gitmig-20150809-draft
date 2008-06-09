@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.2 2008/06/08 19:31:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.3 2008/06/09 02:13:51 mr_bones_ Exp $
 
 inherit git eutils
 
@@ -28,4 +28,3 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog INSTALL TODO
 }
-
