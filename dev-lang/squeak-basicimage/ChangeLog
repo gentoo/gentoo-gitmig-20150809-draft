@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/squeak-basicimage
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.8 2007/02/22 00:12:19 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.9 2008/06/09 17:58:06 araujo Exp $
+
+*squeak-basicimage-3.10 (09 Jun 2008)
+
+  09 Jun 2008; Luis F. Araujo <araujo@gentoo.org>
+  +squeak-basicimage-3.10.ebuild:
+  Adding new image version.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
