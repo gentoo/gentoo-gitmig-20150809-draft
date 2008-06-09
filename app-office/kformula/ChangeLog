@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.82 2008/02/19 01:32:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.83 2008/06/09 05:42:07 dirtyepic Exp $
+
+  09 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/kformula-1.6.2-gcc-4.3.patch, kformula-1.6.2.ebuild:
+  Add patch to fix build w/ GCC 4.3.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kformula-1.6.2.ebuild:
   Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.

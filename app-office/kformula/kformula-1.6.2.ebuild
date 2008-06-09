@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/kformula-1.6.2.ebuild,v 1.13 2008/02/19 01:32:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/kformula-1.6.2.ebuild,v 1.14 2008/06/09 05:42:07 dirtyepic Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -41,4 +41,6 @@ src_unpack() {
 
 	# Fixing desktop files, cf. bug 190006
 	sed -i -e "s:x-kformula$:x-kformula;:g" "${S}"/kformula/kformula.desktop
+
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch   # 214365
 }
