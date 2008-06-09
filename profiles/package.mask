@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8699 2008/06/09 05:09:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8700 2008/06/09 07:34:49 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1396,10 +1396,6 @@ dev-libs/alchemist
 dev-python/pycups
 # for system-config-bind
 net-dns/bind-dns-keygen
-
-# Luca Longinotti <chtekk@gentoo.org> (29 Aug 2006)
-# Masking media-libs/ming-0.3.0, breaks PHP compilation
-=media-libs/ming-0.3.0*
 
 # Alastair Tse <liquidx@gentoo.org> (27 Jul 2006)
 # Masking synce-0.9.2 because of breakages (#141466) (#141491)
