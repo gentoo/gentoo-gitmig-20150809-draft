@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.45 2008/03/26 23:50:42 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.46 2008/06/09 21:39:41 sbriesen Exp $
+
+*exiv2-0.17 (09 Jun 2008)
+
+  09 Jun 2008; Stefan Briesenick <sbriesen@gentoo.org> +exiv2-0.17.ebuild:
+  version bump (see bug #225485).
 
   26 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org> -exiv2-0.13.ebuild,
   -exiv2-0.13-r1.ebuild:
