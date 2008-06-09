@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.1.ebuild,v 1.1 2007/08/30 13:04:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.1.ebuild,v 1.2 2008/06/09 19:40:02 swegener Exp $
 
 PHP_EXT_NAME="gnupg"
 PHP_EXT_INI="yes"
@@ -15,5 +15,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="app-crypt/gpgme"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
