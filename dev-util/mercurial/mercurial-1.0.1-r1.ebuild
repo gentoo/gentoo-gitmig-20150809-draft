@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.0.1-r1.ebuild,v 1.1 2008/06/09 19:29:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.0.1-r1.ebuild,v 1.2 2008/06/09 19:34:22 nelchael Exp $
 
 inherit bash-completion distutils elisp-common flag-o-matic
 
@@ -65,6 +65,11 @@ src_install() {
 	rm -f contrib/bash_completion
 	cp -r contrib "${D}"/usr/share/doc/${PF}/
 	doman doc/*.?
+
+	cat > "${T}/80mercurial" <<-EOF
+HG=/usr/bin/hg
+EOF
+	doenvd "${T}/80mercurial"
 
 	if use emacs; then
 		elisp-install ${PN} contrib/mercurial.el* || die "elisp-install failed!"
