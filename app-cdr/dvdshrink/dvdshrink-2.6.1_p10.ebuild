@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.1 2008/06/07 06:12:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.2 2008/06/09 20:09:57 drac Exp $
 
 inherit eutils
 
@@ -47,9 +47,10 @@ src_install() {
 	fi
 
 	insinto /usr/share
-	doins -r usr/share/applications/dvdshrink
+	doins -r usr/share/applications/dvdshrink || die "doins failed."
 
 	dodoc usr/share/doc/dvdshrink/{batchrip.txt,example.xml,README.txt}
 
 	doicon usr/share/icons/{batchrip.xpm,dvdshrink.xpm}
+	use gtk && make_desktop_entry xdvdshrink.pl xDVDShrink ${PN} AudioVideo
 }
