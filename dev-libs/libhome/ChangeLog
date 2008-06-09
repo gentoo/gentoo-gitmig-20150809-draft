@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.6 2008/06/09 15:51:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.7 2008/06/09 19:27:57 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/libhome-0.10.1-fixlt.patch:
+  Fix patch to avoid CVS keywords.
 
   09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/libhome-0.10.1-fixlt.patch, libhome-0.10.1.ebuild:

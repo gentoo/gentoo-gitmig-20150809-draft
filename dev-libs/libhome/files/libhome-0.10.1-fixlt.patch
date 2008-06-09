@@ -2,8 +2,7 @@ Index: libhome-0.10.1/configure.in
 ===================================================================
 --- libhome-0.10.1.orig/configure.in
 +++ libhome-0.10.1/configure.in
-@@ -21,9 +21,9 @@ dnl   USA
- dnl $Id: libhome-0.10.1-fixlt.patch,v 1.1 2008/06/09 15:51:18 flameeyes Exp $
+@@ -21,8 +21,8 @@ dnl   USA
  dnl Process this file with autoconf to produce a configure script.
  
 -define(VERSION, esyscmd([awk '{printf "%s", $0}' VERSION]))
@@ -11,6 +10,6 @@ Index: libhome-0.10.1/configure.in
  
 -AC_INIT(libhome, VERSION, lwa@teaser.fr)
 +AC_INIT(libhome, __PKG_VERSION, lwa@teaser.fr)
- AC_REVISION($Revision: 1.1 $)
+ AC_REVISION($Revision: 1.2 $)
  AC_CONFIG_HEADER(config.h)
  AC_PREREQ(2.53)
