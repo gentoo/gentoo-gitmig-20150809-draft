@@ -1,7 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r3.ebuild,v 1.1 2008/06/09 01:08:46 carlo Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r3.ebuild,v 1.2 2008/06/09 04:07:42 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 
