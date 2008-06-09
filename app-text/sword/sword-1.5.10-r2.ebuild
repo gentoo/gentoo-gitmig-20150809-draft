@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.2 2008/05/21 12:51:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.3 2008/06/09 12:53:11 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/escape_range.patch"
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
 }
 
 src_compile() {
