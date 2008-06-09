@@ -1,0 +1,11 @@
+
+--- synce-kde-0.9.1.orig/raki/matchmaker.cpp
++++ synce-kde-0.9.1/raki/matchmaker.cpp
+@@ -24,6 +24,7 @@
+ #include "rapiwrapper.h"
+ #include <klocale.h>
+ #include <kdebug.h>
++#include <cstdlib>
+ 
+ MatchMaker::MatchMaker(QString pdaName)
+ {
