@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
+<herd>fonts</herd>
 <maintainer>
-<email>graphics@gentoo.org</email>
+	<email>graphics@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>loki_val@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
