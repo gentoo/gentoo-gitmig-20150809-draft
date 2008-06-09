@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.3 2008/04/11 18:38:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.4 2008/06/09 21:07:49 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -53,6 +53,9 @@ pkg_setup() {
 		elog "- workbench for MySQL Workbench"
 		die "Please activate at least one of the following USE flags: administrator, query-browser, workbench"
 	fi
+
+	# Needed for gcc-4.3
+	append-cppflags -D_GNU_SOURCE
 }
 
 src_unpack() {
@@ -64,6 +67,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-workbench-lua.patch
 	epatch "${FILESDIR}"/${P}-query-browser-sps.patch
 	epatch "${FILESDIR}"/${P}-libsigc++-2.2.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 
 	sed -i \
 		-e "s/\\(^\\|[[:space:]]\\)-ltermcap\\($\\|[[:space:]]\\)/ /g" \
