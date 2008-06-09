@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewstuff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.8 2008/06/05 22:05:20 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.9 2008/06/09 14:54:20 keytoaster Exp $
+
+  09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -knewstuff-4.0.2.ebuild, -knewstuff-4.0.3.ebuild:
+  Removed old versions.
 
 *knewstuff-4.0.5 (05 Jun 2008)
 

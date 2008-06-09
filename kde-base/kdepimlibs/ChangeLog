@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.11 2008/06/05 21:35:27 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.12 2008/06/09 15:02:43 keytoaster Exp $
+
+  09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -kdepimlibs-4.0.2.ebuild, -kdepimlibs-4.0.3.ebuild:
+  Removed old versions.
 
 *kdepimlibs-4.0.5 (05 Jun 2008)
 

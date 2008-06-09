@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.12 2008/06/05 22:43:14 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.13 2008/06/09 15:22:08 keytoaster Exp $
+
+  09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -okular-4.0.2.ebuild,
+  -okular-4.0.3.ebuild:
+  Removed old versions.
 
 *okular-4.0.5 (05 Jun 2008)
 

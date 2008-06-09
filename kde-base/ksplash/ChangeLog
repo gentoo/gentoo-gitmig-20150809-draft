@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.9 2008/06/05 22:20:13 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.10 2008/06/09 15:03:28 keytoaster Exp $
+
+  09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -ksplash-4.0.2.ebuild, -ksplash-4.0.3.ebuild:
+  Removed old versions.
 
 *ksplash-4.0.5 (05 Jun 2008)
 

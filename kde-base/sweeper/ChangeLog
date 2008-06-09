@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.8 2008/06/05 22:48:02 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.9 2008/06/09 15:12:53 keytoaster Exp $
+
+  09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  -sweeper-4.0.2.ebuild, -sweeper-4.0.3.ebuild:
+  Removed old versions.
 
 *sweeper-4.0.5 (05 Jun 2008)
 
