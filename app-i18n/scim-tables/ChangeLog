@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.53 2008/02/24 15:59:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.54 2008/06/09 12:39:53 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/scim-tables-0.5.8+gcc-4.3.patch, scim-tables-0.5.8.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Steve Warren in bug #222561.
 
 *scim-tables-0.5.8 (24 Feb 2008)
 
