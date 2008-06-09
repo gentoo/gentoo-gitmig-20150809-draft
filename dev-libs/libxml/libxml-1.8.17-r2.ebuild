@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.28 2007/02/07 14:09:48 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.29 2008/06/09 23:01:00 darkside Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,10 +13,10 @@ SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="doc"
 
-RDEPEND=">=sys-libs/ncurses-5.2
-	doc? ( >=dev-util/gtk-doc-1 )"
+RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND="${RDEPEND}
-	>=sys-libs/readline-4.1"
+	>=sys-libs/readline-4.1
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 src_unpack() {
 	unpack ${A}
