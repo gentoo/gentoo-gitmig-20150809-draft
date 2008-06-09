@@ -1,9 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.6.ebuild,v 1.2 2006/10/24 08:49:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.6.ebuild,v 1.3 2008/06/09 12:46:04 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
-WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 
@@ -27,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/zhcon-0.2.5.make-fix.patch
 	epatch "${FILESDIR}"/${P}.sysconfdir.patch
 	epatch "${FILESDIR}"/${P}.configure.in.patch
+	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
 	eautoreconf
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.11 2008/02/08 14:45:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.12 2008/06/09 12:46:04 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/zhcon-0.2.6+gcc-4.3.patch, zhcon-0.2.6.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Peter Alfredsen (loki_val) in
+  bug #219769.
 
   08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Fix metadata.
