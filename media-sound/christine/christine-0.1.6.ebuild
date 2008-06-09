@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.1.6.ebuild,v 1.1 2008/06/08 18:45:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.1.6.ebuild,v 1.2 2008/06/09 15:06:12 armin76 Exp $
 
 inherit multilib python
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="readline"
 
 RDEPEND="readline? ( sys-libs/readline )
