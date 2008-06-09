@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.2.ebuild,v 1.1 2008/06/09 19:36:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.2.ebuild,v 1.2 2008/06/09 19:47:11 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -307,6 +307,7 @@ src_install () {
 	dodir /var/lib/postfix
 	keepdir /var/lib/postfix
 	fowners postfix:postfix /var/lib/postfix
+	fowners postfix:postfix /var/lib/postfix/.keep_${CATEGORY}_${PN}-${SLOT}
 	fperms 0750 /var/lib/postfix
 	fowners root:postdrop /usr/sbin/post{drop,queue}
 	fperms 02711 /usr/sbin/post{drop,queue}

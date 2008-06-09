@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.161 2008/06/09 19:36:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.162 2008/06/09 19:47:11 dertobi123 Exp $
+
+  09 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  postfix-2.5.0.ebuild, postfix-2.5.1.ebuild, postfix-2.5.2.ebuild:
+  chown keepfile in /var/lib/postfix to postfix to get rid of a postfix
+  warning (#214342)
 
 *postfix-2.5.2 (09 Jun 2008)
 
