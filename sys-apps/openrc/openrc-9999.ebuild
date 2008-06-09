@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.36 2008/06/01 03:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.37 2008/06/09 14:38:45 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -256,6 +256,9 @@ pkg_postinst() {
 		einfo "Copying across default runlevels"
 		cp -RPp "${ROOT}"/usr/share/${PN}/runlevels "${ROOT}"/etc
 	fi
+
+	# update the dependency tree bug #224171
+	[[ "${ROOT}" = "/" ]] && "${ROOT}/${LIBDIR}"/rc/bin/rc-depend -u
 
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
