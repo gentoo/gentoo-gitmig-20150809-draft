@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.123 2008/04/09 22:03:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.124 2008/06/09 03:50:07 dirtyepic Exp $
+
+  09 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/dasher-4.7.3-gcc-4.3.patch, dasher-4.7.3.ebuild:
+  Add patch to fix build w/ GCC 4.3. Bug #211589.
 
 *dasher-4.7.3 (09 Apr 2008)
 

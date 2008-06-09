@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.7.3.ebuild,v 1.1 2008/04/09 22:03:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.7.3.ebuild,v 1.2 2008/06/09 03:50:07 dirtyepic Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -70,6 +70,10 @@ src_unpack() {
 
 	# Fix build with --as-needed (upstream bug #525028)
 	epatch "${FILESDIR}/${PN}-4.7.0-as-needed.patch"
+
+	# https://bugs.gentoo.org/211589
+	# https://bugzilla.gnome.org/522121
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 
 	eautomake
 	intltoolize --force || die "intltoolize failed"

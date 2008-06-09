@@ -1,0 +1,10 @@
+--- dasher-4.7.3/Src/Gtk2/dasher_action_speech.cpp.old	2008-06-06 20:54:34.098275404 +0200
++++ dasher-4.7.3/Src/Gtk2/dasher_action_speech.cpp	2008-06-06 20:55:38.331005219 +0200
+@@ -8,6 +8,7 @@
+ #include <glib/gi18n.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include <libbonobo.h>
++#include <cstring>
+ //#include <libintl.h>
+ //#include <string.h>
+
