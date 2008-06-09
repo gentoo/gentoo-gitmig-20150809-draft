@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.1 2008/06/09 17:01:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.2 2008/06/09 18:03:12 lavajoe Exp $
 
 inherit eutils linux-mod mercurial
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="sys-fs/e2fsprogs"
 PDEPEND="~sys-fs/btrfs-progs-${PV}"
 
-S="${WORKDIR}/kernel"
+S="${WORKDIR}/kernel-unstable"
 
 pkg_setup()
 {
@@ -38,7 +38,7 @@ pkg_setup()
 }
 
 src_unpack() {
-	mercurial_fetch http://www.kernel.org/hg/btrfs/kernel
+	mercurial_fetch http://www.kernel.org/hg/btrfs/kernel-unstable
 	cd "${S}"
 }
 

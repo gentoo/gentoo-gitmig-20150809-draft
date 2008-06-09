@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.6 2008/06/09 17:02:29 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.7 2008/06/09 18:03:52 lavajoe Exp $
+
+  09 Jun 2008; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-9999.ebuild:
+  Use unstable repo for live ebuild
 
 *btrfs-progs-9999 (09 Jun 2008)
 
