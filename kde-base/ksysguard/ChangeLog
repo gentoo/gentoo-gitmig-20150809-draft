@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.111 2008/06/07 11:20:39 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.112 2008/06/10 22:47:26 tgurr Exp $
+
+*ksysguard-3.5.9-r1 (10 Jun 2008)
+
+  10 Jun 2008; Timo Gurr <tgurr@gentoo.org> +ksysguard-3.5.9-r1.ebuild:
+  Add ksysguard-3.5.9-r1.ebuild, fixes broken lm_sensors support bug
+  #223867.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -ksysguard-3.5.8.ebuild, -ksysguard-4.0.2.ebuild, -ksysguard-4.0.3.ebuild:
