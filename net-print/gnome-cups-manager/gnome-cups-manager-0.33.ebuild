@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33.ebuild,v 1.2 2008/06/10 17:11:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33.ebuild,v 1.3 2008/06/10 20:12:26 dang Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -33,6 +33,8 @@ src_unpack() {
 	gnome2_src_unpack
 	cd ${S}
 
+	rm "${WORKDIR}"/patches/140_all_ui_tooltip.patch || \
+		die "removing patch failed"
 	export	EPATCH_SOURCE="${WORKDIR}/patches" \
 		EPATCH_SUFFIX="patch" \
 		EPATCH_MULTI_MSG="Applying Ubuntu patches (enhancements) ..."

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.75 2008/06/10 15:20:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.76 2008/06/10 20:12:26 dang Exp $
+
+  10 Jun 2008; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-cups-manager-0.33.ebuild:
+  Fix building of some locales. Bug #225779
 
 *gnome-cups-manager-0.33 (10 Jun 2008)
 
