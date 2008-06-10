@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtomfloat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.5 2008/06/10 03:16:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.6 2008/06/10 13:14:03 darkside Exp $
+
+  10 Jun 2008; Jeremy Olexa <darkside@gentoo.org> libtomfloat-0.02.ebuild:
+  Punt DEPEND on app-arch/unzip as SRC_URI has changed
 
   10 Jun 2008; Jeremy Olexa <darkside@gentoo.org> libtomfloat-0.02.ebuild:
   ah, found the issues with bug #206158 - missing dep on dev-libs/libtommath.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/libtomfloat-0.02.ebuild,v 1.5 2008/06/10 03:16:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/libtomfloat-0.02.ebuild,v 1.6 2008/06/10 13:14:03 darkside Exp $
 
 DESCRIPTION="library for floating point number manipulation"
 HOMEPAGE="http://libtom.org/"
@@ -10,8 +10,8 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND="app-arch/unzip
-	dev-libs/libtommath"
+
+DEPEND="dev-libs/libtommath"
 RDEPEND=""
 
 src_install() {
