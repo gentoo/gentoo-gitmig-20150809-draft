@@ -1,6 +1,10 @@
 # ChangeLog for games-board/kcheckers
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.10 2006/11/19 11:25:25 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.11 2008/06/10 00:46:51 mr_bones_ Exp $
+
+  10 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  kcheckers-0.8.1.ebuild:
+  use slotted deps for qt for bug #217170
 
 *kcheckers-0.8.1 (19 Nov 2006)
 
