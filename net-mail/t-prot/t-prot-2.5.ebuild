@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.5.ebuild,v 1.1 2007/09/20 08:37:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.5.ebuild,v 1.2 2008/06/10 19:42:30 tove Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.escape.de/users/tolot/mutt/t-prot/downloads/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 RDEPEND="dev-lang/perl
 	dev-perl/Locale-gettext
