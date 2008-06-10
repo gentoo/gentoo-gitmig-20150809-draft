@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.2.ebuild,v 1.1 2008/06/10 16:05:56 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.2.ebuild,v 1.2 2008/06/10 22:25:18 cedk Exp $
 
 inherit distutils
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="dev-python/pyparsing
+DEPEND=""
+RDEPEND="dev-python/pyparsing
 	media-gfx/graphviz"
 
 PYTHON_MODNAME="pydot.py dot_parser.py"
