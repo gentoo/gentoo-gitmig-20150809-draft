@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.4.ebuild,v 1.1 2008/05/05 03:17:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.4.ebuild,v 1.2 2008/06/10 04:34:48 vapier Exp $
 
+LIBTOOLIZE="true" #225559
 inherit eutils autotools
 
 DESCRIPTION="A shared library tool for developers"
