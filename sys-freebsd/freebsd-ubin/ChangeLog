@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.54 2008/02/20 00:07:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.55 2008/06/10 19:02:24 aballier Exp $
+
+  10 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  freebsd-ubin-6.2-r2.ebuild:
+  keyword ~sparc-fbsd
 
   20 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.2-r2.ebuild:
