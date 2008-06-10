@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-9999.ebuild,v 1.1 2008/06/10 07:17:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.3.1_pre20080528.ebuild,v 1.1 2008/06/10 07:37:50 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,6 +9,8 @@ inherit autotools x-modular git
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/mesa/drm"
 EGIT_BOOTSTRAP="eautoreconf"
+EGIT_BRANCH="libdrm-2_3-branch"
+EGIT_TREE="6a30539814fe20ff25e8f853c2e212f9ebadfadc"
 
 DESCRIPTION="X.Org libdrm library"
 HOMEPAGE="http://dri.freedesktop.org/"
