@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.129 2008/04/10 06:34:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.130 2008/06/10 14:01:46 armin76 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -28,6 +28,7 @@ lirc
 lm_sensors
 mod
 modplug
+mpi
 mpm-peruser
 mythtv
 networkmanager

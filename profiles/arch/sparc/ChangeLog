@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.11 2008/06/05 11:38:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.12 2008/06/10 14:05:14 armin76 Exp $
+
+  10 Jun 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask mpi for bug #217854
 
   05 Jun 2008; Raúl Porcel <armin76@gentoo.org> package.mask:
   Unmask selinux packages since we have >=glibc-2.4
