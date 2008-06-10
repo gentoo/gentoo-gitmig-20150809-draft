@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29.ebuild,v 1.8 2008/04/22 11:18:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29.ebuild,v 1.9 2008/06/10 13:13:48 flameeyes Exp $
 
-inherit toolchain-funcs multilib
+inherit toolchain-funcs multilib eutils
 
 # The following works with both pre-releases and releases
 MY_P=${PN/-/_}.${PV/_/.}

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.131 2008/04/22 11:18:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.132 2008/06/10 13:13:48 flameeyes Exp $
+
+  10 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  wireless-tools-29.ebuild:
+  Add missing eutils inherit.
 
   22 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/wireless-tools-29-asneeded.patch, wireless-tools-29.ebuild:
