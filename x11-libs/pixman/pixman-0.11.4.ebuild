@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.11.2.ebuild,v 1.1 2008/06/09 19:50:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.11.4.ebuild,v 1.1 2008/06/10 00:39:14 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
