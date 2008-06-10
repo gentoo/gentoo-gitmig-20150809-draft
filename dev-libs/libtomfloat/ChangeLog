@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtomfloat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.3 2007/02/22 01:02:57 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.4 2008/06/10 03:09:59 darkside Exp $
+
+  10 Jun 2008; Jeremy Olexa <darkside@gentoo.org> libtomfloat-0.02.ebuild:
+  Minor QA fixes: HOMEPAGE, SRC_URI, dodoc
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
