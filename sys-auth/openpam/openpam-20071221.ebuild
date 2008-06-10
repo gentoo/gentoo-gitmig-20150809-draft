@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.2 2008/06/09 07:01:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.3 2008/06/10 19:04:34 aballier Exp $
 
 inherit multilib flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE="debug vim-syntax"
 
 RDEPEND="!virtual/pam"

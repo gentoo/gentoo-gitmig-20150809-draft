@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.11 2008/06/09 07:01:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.12 2008/06/10 19:04:34 aballier Exp $
+
+  10 Jun 2008; Alexis Ballier <aballier@gentoo.org> openpam-20071221.ebuild:
+  keyword ~sparc-fbsd
 
   09 Jun 2008; Alexis Ballier <aballier@gentoo.org> openpam-20071221.ebuild:
   Add missing trailing slash to the modules dir (otherwise modules will not
