@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.28 2008/05/30 11:30:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.29 2008/06/10 16:50:19 matsuu Exp $
+
+*vlgothic-20080610 (10 Jun 2008)
+
+  10 Jun 2008; MATSUU Takuto <matsuu@gentoo.org> +vlgothic-20080610.ebuild:
+  Version bumped.
 
 *vlgothic-20080429 (30 May 2008)
 
