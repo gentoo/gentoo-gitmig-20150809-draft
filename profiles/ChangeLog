@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1522 2008/06/09 21:54:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1523 2008/06/10 07:05:53 dberkholz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  10 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Mask xorg-server-1.5 / mesa 7.1 prereleases.
 
   09 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> use.local.desc:
   Munin 1.3.4 has totally new USE flags, much reduced, and mainly using
