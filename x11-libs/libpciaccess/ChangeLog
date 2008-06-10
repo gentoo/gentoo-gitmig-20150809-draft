@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libpciaccess
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.1 2008/06/10 07:03:32 dberkholz Exp $
+
+*libpciaccess-0.10.2 (10 Jun 2008)
+
+  10 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +libpciaccess-0.10.2.ebuild:
+  New package, used by xorg-server-1.5: Library providing generic access to
+  the PCI bus and devices.
+
