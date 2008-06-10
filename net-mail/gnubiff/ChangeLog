@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.19 2008/06/10 18:37:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.20 2008/06/10 18:41:17 dertobi123 Exp $
+
+  10 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnubiff-2.2.10.ebuild:
+  Fix pkgconfig dep (#205440)
 
 *gnubiff-2.2.10 (10 Jun 2008)
 

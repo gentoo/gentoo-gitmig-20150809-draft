@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.10.ebuild,v 1.1 2008/06/10 18:37:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.10.ebuild,v 1.2 2008/06/10 18:41:17 dertobi123 Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	fam? ( virtual/fam )
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
-	gnome? ( dev-util/pkgconfig )"
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf $(use_enable debug) \
