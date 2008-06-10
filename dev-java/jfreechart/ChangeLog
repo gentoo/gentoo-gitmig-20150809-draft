@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.43 2008/05/04 11:40:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.44 2008/06/10 20:49:39 serkan Exp $
+
+*jfreechart-1.0.10 (10 Jun 2008)
+
+  10 Jun 2008; Serkan Kaba <serkan@gentoo.org>
+  -files/1.0.8-test-timezone.patch, +jfreechart-1.0.10.ebuild:
+  Version bump and remove unused patch. Fixes bug #225713. Thanks to Jan
+  Vansteenkiste <Jan@buitendezone.be> for reporting.
 
   04 May 2008; Christian Faulhammer <opfer@gentoo.org>
   jfreechart-1.0.9-r1.ebuild:
