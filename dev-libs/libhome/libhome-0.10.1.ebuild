@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.1.ebuild,v 1.5 2008/06/09 15:51:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.1.ebuild,v 1.6 2008/06/10 09:29:48 flameeyes Exp $
 
 inherit autotools db-use eutils
 
@@ -25,7 +25,10 @@ src_unpack() {
 	cd "${S}"
 	rm -f aclocal.m4
 	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-fixlt.patch
+
+	# bug 225579
+	sed -i -e 's:\<VERSION\>:__PKG_VERSION:' configure.in
+
 	eautoreconf
 }
 
