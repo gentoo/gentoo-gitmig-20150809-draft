@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.7 2008/05/10 19:59:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.8 2008/06/10 07:24:08 dberkholz Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -32,6 +32,7 @@ nv - VIDEO_CARDS setting to build driver for nv video cards
 nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 r128 - VIDEO_CARDS setting to build driver for r128 video cards
 radeon - VIDEO_CARDS setting to build driver for radeon video cards
+radeonhd - VIDEO_CARDS setting to build driver for radeon HD video cards (radeon also works)
 rendition - VIDEO_CARDS setting to build driver for rendition video cards
 s3 - VIDEO_CARDS setting to build driver for s3 video cards
 s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
