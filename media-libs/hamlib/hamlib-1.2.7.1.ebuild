@@ -1,28 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.5.ebuild,v 1.4 2007/04/11 19:14:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.7.1.ebuild,v 1.1 2008/06/10 14:45:12 drac Exp $
 
-inherit eutils multilib
+inherit eutils multilib libtool
 
 DESCRIPTION="Ham radio backend rig control libraries"
 HOMEPAGE="http://hamlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="doc gd python tk X"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-fbsd"
+IUSE="doc python tcl"
 
 RESTRICT="test"
 
 RDEPEND="virtual/libc
-	gd? ( media-libs/gd )
 	python? ( dev-lang/python
 		dev-lang/tcl )
-	tk? ( dev-lang/tk )"
-DEPEND=">=sys-devel/libtool-1.5
-	>=sys-devel/autoconf-2.54
-	>=sys-devel/automake-1.7
+	tcl? ( dev-lang/tcl )"
+
+DEPEND=" ${RDEPEND}
+	>=sys-devel/libtool-1.5
 	>=dev-util/pkgconfig-0.15
 	>=dev-lang/swig-1.3.14
 	dev-libs/libxml2
@@ -32,8 +31,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-pkgconfig-fix.diff || \
-		die "epatch failed"
+	epatch "${FILESDIR}"/${PN}-pkgconfig-fix.diff
+
+	# Needed for FreeBSD - Please do not remove
+	elibtoolize
 }
 
 src_compile() {
@@ -44,10 +45,7 @@ src_compile() {
 		--without-rpc-backends \
 		--without-perl-binding \
 		$(use_with python python-binding) \
-		$(use_with tk tcl-binding) \
-		$(use_with gd rigmatrix) \
-		$(use_with X x) \
-		|| die "configure failed"
+		$(use_with tcl tcl-binding)
 
 	emake || die "emake failed"
 

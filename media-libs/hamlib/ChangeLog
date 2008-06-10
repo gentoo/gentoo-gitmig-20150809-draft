@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/hamlib
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.23 2007/11/09 19:44:14 lavajoe Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.24 2008/06/10 14:45:11 drac Exp $
+
+*hamlib-1.2.7.1 (10 Jun 2008)
+
+  10 Jun 2008; Samuli Suominen <drac@gentoo.org> -hamlib-1.2.5.ebuild,
+  +hamlib-1.2.7.1.ebuild:
+  Version bump from Sunrise's portage-review. Remove unnecessary USE flag X
+  and gd, since rigmatrix doesn't get built. Thanks to Thomas Beierlein wrt
+  #219057.
 
   09 Nov 2007; Joe Peterson <lavajoe@gentoo.org> hamlib-1.2.6.1.ebuild:
   Add ~x86-fbsd keyword and elibtoolize (bug #198475)
