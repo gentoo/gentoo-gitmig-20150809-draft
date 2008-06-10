@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33.ebuild,v 1.1 2008/06/10 15:20:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33.ebuild,v 1.2 2008/06/10 17:11:23 mr_bones_ Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -26,7 +26,6 @@ DEPEND=">=x11-libs/gtk+-2.3.1
 	>=dev-util/intltool-0.28"
 RDEPEND="${DEPEND}
 	x11-libs/gksu"
-
 
 DOCS="ChangeLog NEWS README"
 
