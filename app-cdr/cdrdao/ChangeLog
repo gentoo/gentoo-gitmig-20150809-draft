@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.109 2008/05/05 21:47:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.110 2008/06/10 18:11:52 drac Exp $
+
+*cdrdao-1.2.2-r2 (10 Jun 2008)
+
+  10 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/cdrdao-1.2.2-excl.patch, +cdrdao-1.2.2-r2.ebuild:
+  Use O_EXCL to avoid HAL from polling at burning time wrt #193603, thanks
+  to Sebastian for reporting.
 
   05 May 2008; Samuli Suominen <drac@gentoo.org> cdrdao-1.2.2-r1.ebuild:
   Rename USE gnome to USE gcdmaster since it's pulling a lot of -mm
