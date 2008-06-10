@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtomcrypt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.27 2006/04/27 17:01:12 marienz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.28 2008/06/10 02:58:09 darkside Exp $
+
+*libtomcrypt-1.17 (10 Jun 2008)
+
+  10 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +libtomcrypt-1.17.ebuild:
+  Version bump, bug #162164. Thanks to hawking and Perttu Luukko for the ebuilds
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-libtomcrypt-1.03, files/digest-libtomcrypt-1.06, Manifest:
