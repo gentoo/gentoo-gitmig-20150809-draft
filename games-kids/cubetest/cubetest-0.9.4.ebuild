@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.4 2007/02/05 21:24:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.5 2008/06/10 00:40:13 mr_bones_ Exp $
 
-inherit qt4 eutils games
+EAPI=1
+inherit eutils games
 
 DESCRIPTION="A program to train your spatial insight"
 HOMEPAGE="http://www.vandenoever.info/software/cubetest/"
@@ -13,19 +14,19 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="$(qt4_min_version 4)"
+DEPEND="x11-libs/qt:4"
 
 pkg_setup() {
 	games_pkg_setup
-	if has_version ">=x11-libs/qt-4.2.2" ; then
-		if ! built_with_use x11-libs/qt qt3support ; then
-			eerror "${PN} requires qt3support"
-			die "rebuild >=x11-libs/qt-4.2.2 with the qt3support USE flag"
-		fi
+	if ! built_with_use --missing true "x11-libs/qt:4" qt3support ; then
+		eerror "${PN} requires qt3support"
+		die "rebuild x11-libs/qt:4 with the qt3support USE flag"
 	fi
 }
 
 src_unpack() {
+	local i
+
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
