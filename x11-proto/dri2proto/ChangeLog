@@ -1,0 +1,10 @@
+# ChangeLog for x11-proto/dri2proto
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.1 2008/06/10 07:16:06 dberkholz Exp $
+
+*dri2proto-9999 (10 Jun 2008)
+
+  10 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +dri2proto-9999.ebuild:
+  New package: X.Org DRI2 protocol headers.
+
