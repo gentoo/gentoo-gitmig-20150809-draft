@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-2.77.ebuild,v 1.2 2008/06/07 12:50:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-2.77.ebuild,v 1.3 2008/06/10 07:49:31 robbat2 Exp $
 
 inherit distutils
 
@@ -11,6 +11,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
+
+PYTHON_MODNAME="coverage.py"
 
 src_install() {
 	distutils_src_install
