@@ -19,15 +19,4 @@
  +CFLAGS+=-DUSE_MODERN_SPIRIT
  +.ENDIF
   .ENDIF
---- configure.in 
-+++ configure.in 
-@@ -1136,7 +1136,7 @@
- elif test "$with_tag" = "OOH680_m12" ; then
-    UPSTREAM_VERSION=2.4.0
- elif test "$with_tag" = "OOH680_m17" ; then
--   UPSTREAM_VERSION=2.4.1
-+   UPSTREAM_VERSION=2.4.1rc2
- fi
- if test -n "$UPSTREAM_VERSION"; then
-    UPSTREAM_NAME="OOo_${UPSTREAM_VERSION}_src"
 
