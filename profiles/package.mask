@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8707 2008/06/10 07:13:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8708 2008/06/10 07:37:21 dberkholz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -34,7 +34,7 @@
 =x11-base/xorg-server-1.4.99*
 =media-libs/mesa-7.1*
 >=x11-proto/dri2proto-9999
->=x11-libs/libdrm-9999
+=x11-libs/libdrm-2.3.1_pre*
 
 # Joe Peterson <lavajoe@gentoo.org> (09 Jun 2008)
 # Live ebuilds too volatile for normal use.

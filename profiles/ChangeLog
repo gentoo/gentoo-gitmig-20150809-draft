@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1525 2008/06/10 07:24:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1526 2008/06/10 07:37:21 dberkholz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  10 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Change libdrm mask to the prerelease snapshot ebuild.
 
   10 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   desc/video_cards.desc:
