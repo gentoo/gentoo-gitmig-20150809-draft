@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.1.8_p0.ebuild,v 1.1 2008/06/04 18:51:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.1.8_p0.ebuild,v 1.2 2008/06/10 18:56:28 armin76 Exp $
 
 DESCRIPTION="Enables creation and expansion of ISO-9660 filesystems on all
 CD/DVD media supported by libburn"
@@ -9,7 +9,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P/_p0/.pl00}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libburn-0.4.8
