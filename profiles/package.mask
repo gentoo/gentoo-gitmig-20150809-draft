@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8708 2008/06/10 07:37:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8709 2008/06/10 10:07:39 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -145,10 +145,6 @@ net-dns/resolvconf-gentoo
 # Dead upstream, broken package. Removal request via netmon team. bug #223479
 # Masked for removal in 30 days by the treecleaners.
 net-analyzer/sonar
-
-# Andreas Proschofsky <suka@gentoo.org> (27 May 2008)
-# Release Candidate, masked for testing
->=app-office/openoffice-2.4.1_rc1
 
 # Rémi Cardona <remi@gentoo.org> (27 Mai 2008)
 # mildly broken, see bug #156583
