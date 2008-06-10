@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.1 2007/12/29 23:07:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.2 2008/06/10 17:21:11 mrness Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -19,6 +19,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-headers.patch
+	epatch "${FILESDIR}"/${P}-glibc28.patch
 
 	sed -i '/#define _LINUX_NETDEVICE_H/d' \
 		src/arpd/*.c || die "sed command on arpd/*.c files failed"

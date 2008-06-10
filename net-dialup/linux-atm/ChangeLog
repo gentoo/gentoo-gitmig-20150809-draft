@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/linux-atm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.30 2007/12/29 23:07:30 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.31 2008/06/10 17:21:11 mrness Exp $
+
+  10 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  +files/linux-atm-2.5.0-glibc28.patch, linux-atm-2.5.0.ebuild:
+  Fix broken compiling on glibc-2.8 boxes (#225611).
 
 *linux-atm-2.5.0 (29 Dec 2007)
 
