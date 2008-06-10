@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.2.0.ebuild,v 1.4 2007/09/28 20:17:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.2.0.ebuild,v 1.5 2008/06/10 16:59:12 matsuu Exp $
 
 DESCRIPTION="scim-uim is an input module for Smart Common Input Method (SCIM) which uses uim as backend"
 HOMEPAGE="http://www.scim-im.org/"
@@ -12,6 +12,7 @@ KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/uim-1.1.0
+	<app-i18n/uim-1.5
 	|| (
 		>=app-i18n/scim-1.4.0
 		>=app-i18n/scim-cvs-1.4.0
