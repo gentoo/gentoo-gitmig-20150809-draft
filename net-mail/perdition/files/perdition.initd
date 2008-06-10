@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/files/perdition.initd,v 1.1 2005/01/25 18:07:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/files/perdition.initd,v 1.2 2008/06/10 18:28:27 dertobi123 Exp $
 
 depend() {
 	need net
@@ -18,7 +18,7 @@ check_key() {
 
 start() {
 	if [ "${POP3}" = "yes" ]; then
-		ebegin "Starting peridtion services (POP3)"
+		ebegin "Starting perdition services (POP3)"
 		start-stop-daemon --quiet --start --startas /usr/sbin/perdition.pop3 -p ${PIDDIR}/pop3.pid \
 			-- ${FLAGS} ${POP3_FLAGS} -u ${PERDITION_USER} --pid_file ${PIDDIR}/pop3.pid
 		eend $?

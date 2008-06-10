@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.17.1.ebuild,v 1.2 2008/05/21 18:58:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.17.1.ebuild,v 1.3 2008/06/10 18:28:26 dertobi123 Exp $
 
 inherit eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls pam ssl mysql odbc postgres gdbm ldap"
 
-DEPEND="!mail-client/mailx
-	!mail-client/nmh
-	dev-scheme/guile
+DEPEND="dev-scheme/guile
 	>=dev-libs/vanessa-logger-0.0.6
 	>=dev-libs/vanessa-adt-0.0.6
 	>=net-libs/vanessa-socket-0.0.7
