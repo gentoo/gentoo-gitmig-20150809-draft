@@ -12,3 +12,8 @@ games-fps/freedoom doomsday
 # hardened has the nvidia-drivers masked so you can't use
 # opengl-xvmc support in MythTV, which requires nvidia-drivers
 media-tv/mythtv opengl-xvmc
+
+# Ben de Groot <yngwin@gentoo.org> (10 Jun 2008)
+# use.masking for as long as kde4 is p.masked, see bug 225197
+x11-themes/qtcurve-qt4 kde
+

@@ -19,3 +19,8 @@ sys-libs/glibc hardened
 # Security bug #190835
 games-fps/doom-data doomsday
 games-fps/freedoom doomsday
+
+# Ben de Groot <yngwin@gentoo.org> (10 Jun 2008)
+# use.masking for as long as kde4 is p.masked, see bug 225197
+x11-themes/qtcurve-qt4 kde
+
