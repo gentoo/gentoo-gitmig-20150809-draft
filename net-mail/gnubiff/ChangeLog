@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.18 2008/03/14 10:07:57 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.19 2008/06/10 18:37:17 dertobi123 Exp $
+
+*gnubiff-2.2.10 (10 Jun 2008)
+
+  10 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -gnubiff-2.1.9.ebuild, -gnubiff-2.2.1.ebuild, -gnubiff-2.2.2.ebuild,
+  -gnubiff-2.2.5.ebuild, +gnubiff-2.2.10.ebuild:
+  cleanup, version bump (#225209)
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml,
   gnubiff-2.1.3.ebuild, gnubiff-2.1.9.ebuild, gnubiff-2.2.1.ebuild,

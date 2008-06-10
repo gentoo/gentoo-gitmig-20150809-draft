@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.2.ebuild,v 1.3 2008/03/14 10:07:57 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.10.ebuild,v 1.1 2008/06/10 18:37:17 dertobi123 Exp $
 
 inherit eutils
 
