@@ -1,0 +1,206 @@
+diff -Naurp fakechroot-2.6-orig/src/libfakechroot.c fakechroot-2.6/src/libfakechroot.c
+--- fakechroot-2.6-orig/src/libfakechroot.c	2008-06-11 00:19:33.000000000 +0200
++++ fakechroot-2.6/src/libfakechroot.c	2008-06-11 00:21:08.000000000 +0200
+@@ -321,7 +321,9 @@ static char *  (*next_canonicalize_file_
+ #endif
+ static int     (*next_chdir) (const char *path) = NULL;
+ static int     (*next_chmod) (const char *path, mode_t mode) = NULL;
++static int     (*next_fchmodat) (int dfd, const char *path, mode_t mode, int flag) = NULL;
+ static int     (*next_chown) (const char *path, uid_t owner, gid_t group) = NULL;
++static int     (*next_fchownat) (int dfd, const char *path, uid_t owner, gid_t group, int flag) = NULL;
+ /* static int     (*next_chroot) (const char *path) = NULL; */
+ static int     (*next_creat) (const char *pathname, mode_t mode) = NULL;
+ static int     (*next_creat64) (const char *pathname, mode_t mode) = NULL;
+@@ -422,12 +424,14 @@ static int     (*next_nftw) (const char 
+ static int     (*next_nftw64) (const char *dir, int (*fn)(const char *file, const struct stat64 *sb, int flag, struct FTW *s), int nopenfd, int flags) = NULL;
+ #endif
+ static int     (*next_open) (const char *pathname, int flags, ...) = NULL;
++static int     (*next_openat) (int dfd, const char *pathname, int flags, ...) = NULL;
+ static int     (*next_open64) (const char *pathname, int flags, ...) = NULL;
++static int     (*next_openat64) (int dfd, const char *pathname, int flags, ...) = NULL;
+ #if !defined(HAVE___OPENDIR2)
+ static DIR *   (*next_opendir) (const char *name) = NULL;
+ #endif
+ static long    (*next_pathconf) (const char *path, int name) = NULL;
+-static int     (*next_readlink) (const char *path, char *buf, READLINK_TYPE_ARG3) = NULL;
++static ssize_t     (*next_readlink) (const char *path, char *buf, READLINK_TYPE_ARG3) = NULL;
+ static char *  (*next_realpath) (const char *name, char *resolved) = NULL;
+ static int     (*next_remove) (const char *pathname) = NULL;
+ #ifdef HAVE_REMOVEXATTR
+@@ -463,6 +467,9 @@ static int     (*next_truncate) (const c
+ static int     (*next_truncate64) (const char *path, off64_t length) = NULL;
+ #endif
+ static int     (*next_unlink) (const char *pathname) = NULL;
++static int     (*next_unlinkat) (int dirfd, const char *pathname, int flags) = NULL;
++static int     (*next___fxstatat) (int ver, int dirfd, const char *pathname, struct stat *buf, int flags) = NULL;
++static int     (*next___fxstatat64) (int ver, int dirfd, const char *pathname, struct stat64 *buf, int flags) = NULL;
+ #ifdef HAVE_ULCKPWDF
+ /* static int     (*next_ulckpwdf) (void) = NULL; */
+ #endif
+@@ -536,7 +543,9 @@ void fakechroot_init (void)
+ #endif
+     nextsym(chdir, "chdir");
+     nextsym(chmod, "chmod");
++    nextsym(fchmodat, "fchmodat");
+     nextsym(chown, "chown");
++    nextsym(fchownat, "fchownat");
+ /*    nextsym(chroot, "chroot"); */
+     nextsym(creat, "creat");
+     nextsym(creat64, "creat64");
+@@ -637,7 +646,9 @@ void fakechroot_init (void)
+     nextsym(nftw64, "nftw64");
+ #endif
+     nextsym(open, "open");
++    nextsym(openat, "openat");
+     nextsym(open64, "open64");
++    nextsym(openat64, "openat64");
+ #if !defined(HAVE___OPENDIR2)
+     nextsym(opendir, "opendir");
+ #endif
+@@ -678,6 +689,9 @@ void fakechroot_init (void)
+     nextsym(truncate64, "truncate64");
+ #endif
+     nextsym(unlink, "unlink");
++    nextsym(unlinkat, "unlinkat");
++    nextsym(__fxstatat, "__fxstatat");
++    nextsym(__fxstatat64, "__fxstatat64");
+ #ifdef HAVE_ULCKPWDF
+ /*    nextsym(ulckpwdf, "ulckpwdf"); */
+ #endif
+@@ -921,6 +935,13 @@ int chmod (const char *path, mode_t mode
+     if (next_chmod == NULL) fakechroot_init();
+     return next_chmod(path, mode);
+ }
++int fchmodat (int dfd, const char *path, mode_t mode, int flag)
++{
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(path, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++    if (next_fchmodat == NULL) fakechroot_init();
++    return next_fchmodat(dfd, path, mode, flag);
++}
+ 
+ 
+ /* #include <sys/types.h> */
+@@ -933,6 +954,13 @@ int chown (const char *path, uid_t owner
+     return next_chown(path, owner, group);
+ }
+ 
++int fchownat (int dfd, const char *path, uid_t owner, gid_t group, int flag)
++{
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(path, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++    if (next_fchownat == NULL) fakechroot_init();
++    return next_fchownat(dfd, path, owner, group, flag);
++}
+ 
+ /* #include <unistd.h> */
+ int chroot (const char *path)
+@@ -1921,6 +1949,21 @@ int open (const char *pathname, int flag
+     return next_open(pathname, flags, mode);
+ }
+ 
++int openat (int dfd, const char *pathname, int flags, ...) {
++    int mode = 0;
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(pathname, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++
++    if (flags & O_CREAT) {
++        va_list arg;
++        va_start (arg, flags);
++        mode = va_arg (arg, int);
++        va_end (arg);
++    }
++
++    if (next_openat == NULL) fakechroot_init();
++    return next_openat(dfd, pathname, flags, mode);
++}
+ 
+ /* #include <sys/types.h> */
+ /* #include <sys/stat.h> */
+@@ -1942,6 +1985,22 @@ int open64 (const char *pathname, int fl
+     return next_open64(pathname, flags, mode);
+ }
+ 
++int openat64 (int dfd, const char *pathname, int flags, ...)
++{
++    int mode = 0;
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(pathname, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++
++    if (flags & O_CREAT) {
++        va_list arg;
++        va_start (arg, flags);
++        mode = va_arg (arg, int);
++        va_end (arg);
++    }
++
++    if (next_openat64 == NULL) fakechroot_init();
++    return next_openat64(dfd, pathname, flags, mode);
++}
+ 
+ #if !defined(HAVE___OPENDIR2)
+ /* #include <sys/types.h> */
+@@ -1967,7 +2026,7 @@ long pathconf (const char *path, int nam
+ 
+ 
+ /* #include <unistd.h> */
+-int readlink (const char *path, char *buf, READLINK_TYPE_ARG3)
++ssize_t readlink (const char *path, char *buf, READLINK_TYPE_ARG3)
+ {
+     int status;
+     char tmp[FAKECHROOT_MAXPATH], *tmpptr;
+@@ -2222,6 +2281,31 @@ int unlink (const char *pathname)
+     return next_unlink(pathname);
+ }
+ 
++/* #include <fcntl.h> */
++int unlinkat (int dirfd, const char *pathname, int flags)
++{
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(pathname, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++    if (next_unlinkat == NULL) fakechroot_init();
++    return next_unlinkat(dirfd, pathname, flags);
++}
++
++/* #include <fcntl.h> */
++/* #include <sys/stat.h> */
++int __fxstatat (int ver, int dirfd, const char *pathname, struct stat *buf, int flags)
++{
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(pathname, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++    if (next___fxstatat == NULL) fakechroot_init();
++    return next___fxstatat(ver, dirfd, pathname, buf, flags);
++}
++int __fxstatat64 (int ver, int dirfd, const char *pathname, struct stat64 *buf, int flags)
++{
++    char *fakechroot_path, *fakechroot_ptr, fakechroot_buf[FAKECHROOT_MAXPATH];
++    expand_chroot_path(pathname, fakechroot_path, fakechroot_ptr, fakechroot_buf);
++    if (next___fxstatat64 == NULL) fakechroot_init();
++    return next___fxstatat64(ver, dirfd, pathname, buf, flags);
++}
+ 
+ /* #include <sys/types.h> */
+ /* #include <utime.h> */
+diff -Naurp fakechroot-2.6-orig/test/fakechroot.sh fakechroot-2.6/test/fakechroot.sh
+--- fakechroot-2.6-orig/test/fakechroot.sh	2008-06-11 00:19:33.000000000 +0200
++++ fakechroot-2.6/test/fakechroot.sh	2008-06-11 00:21:08.000000000 +0200
+@@ -30,8 +30,12 @@ for f in \
+     /bin/bash \
+     /bin/grep \
+     /bin/ls \
++    /bin/cp \
++    /bin/mkdir \
++    /bin/chmod \
+     /bin/pwd \
+     /bin/sh \
++    /bin/rm \
+     /usr/bin/id \
+     /usr/bin/find \
+     /usr/bin/perl \
+@@ -63,5 +67,5 @@ export LD_PRELOAD
+ if [ -n "$*" ]; then
+     HOME=/root /usr/sbin/chroot `pwd`/testtree "$@"
+ else
+-    HOME=/root /usr/sbin/chroot `pwd`/testtree /bin/sh
++    HOME=/root /usr/sbin/chroot `pwd`/testtree /bin/bash
+ fi
