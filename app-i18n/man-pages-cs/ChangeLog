@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/man-pages-cs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.6 2008/06/02 04:04:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.7 2008/06/10 01:44:31 darkside Exp $
+
+*man-pages-cs-0.17-r1 (10 Jun 2008)
+
+  10 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  +man-pages-cs-0.17-r1.ebuild, -man-pages-cs-0.17.20080113.ebuild:
+  Fix bug #224615 by removing man pages provided by other packages. Remove
+  version with long version number and bump to -r1
 
 *man-pages-cs-0.17.20080113 (02 Jun 2008)
 
