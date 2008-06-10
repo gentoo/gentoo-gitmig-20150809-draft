@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.24 2008/03/17 12:37:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.25 2008/06/10 07:29:10 george Exp $
+
+*gnat-gcc-4.3.1 (10 Jun 2008)
+
+  10 Jun 2008; George Shapovalov <george@gentoo.org> +gnat-gcc-4.3.1.ebuild:
+  new version out
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> gnat-gcc-3.4.6.ebuild,
   gnat-gcc-4.2.2.ebuild:
