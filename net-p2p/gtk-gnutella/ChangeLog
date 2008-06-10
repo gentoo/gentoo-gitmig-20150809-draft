@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.85 2008/06/08 16:35:38 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.86 2008/06/10 13:23:05 armin76 Exp $
+
+  10 Jun 2008; Raúl Porcel <armin76@gentoo.org> gtk-gnutella-0.96.5.ebuild:
+  alpha/x86 stable wrt #225345
 
   08 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   gtk-gnutella-0.96.5.ebuild:
