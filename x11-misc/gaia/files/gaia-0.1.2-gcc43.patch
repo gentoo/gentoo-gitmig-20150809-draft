@@ -1,0 +1,21 @@
+--- gaia-0.1.2.orig/programs/gaia/GPSSourceNMEA.h
++++ gaia-0.1.2/programs/gaia/GPSSourceNMEA.h
+@@ -20,6 +20,8 @@
+ #ifndef __GAIA__GPSSOURCENMEA_H__
+ #define __GAIA__GPSSOURCENMEA_H__
+ 
++#include <cstdio>
++#include <cctype>
+ #include <vector>
+ #include <string.h>
+ #include <fcntl.h>
+--- gaia-0.1.2.orig/programs/gaia/Hud.h
++++ gaia-0.1.2/programs/gaia/Hud.h
+@@ -20,6 +20,7 @@
+ #ifndef __GAIA__HUD_H__
+ #define __GAIA__HUD_H__
+ 
++#include <algorithm>
+ #include <vector>
+ #include <GL/gl.h>
+ 

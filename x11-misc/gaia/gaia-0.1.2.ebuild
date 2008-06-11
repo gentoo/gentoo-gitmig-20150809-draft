@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.9 2008/05/29 12:06:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.10 2008/06/11 06:55:50 opfer Exp $
 
 inherit eutils
 
@@ -29,6 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-scons-0.98.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-curl-7.18.patch"
 
 	# the binary would fail with a wrong hard coded path for font.png
 	cd "${S}/programs/gaia/"

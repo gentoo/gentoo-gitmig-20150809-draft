@@ -1,0 +1,20 @@
+--- gaia-0.1.2.orig/lib/wwfetch/wwfetch_http.c
++++ gaia-0.1.2/lib/wwfetch/wwfetch_http.c
+@@ -19,6 +19,8 @@
+ 
+ #include "wwfetch_internal.h"
+ 
++#define GAIA_USERAGENT "gaia/" GAIA_VERSION
++
+ /**
+  * Internal function used in curl
+  *
+@@ -96,7 +98,7 @@
+ 	if ((handle->lastcurlerror = curl_easy_setopt(handle->curl, CURLOPT_HTTPHEADER, handle->curlheaders)) != CURLE_OK)
+ 		return WWFETCH_CURL_ERROR;
+ 
+-	if ((handle->lastcurlerror = curl_easy_setopt(handle->curl, CURLOPT_USERAGENT, "gaia/%s", GAIA_VERSION)) != CURLE_OK)
++	if ((handle->lastcurlerror = curl_easy_setopt(handle->curl, CURLOPT_USERAGENT, GAIA_USERAGENT)) != CURLE_OK)
+ 		return WWFETCH_CURL_ERROR;
+ 
+ 	if ((handle->lastcurlerror = curl_easy_setopt(handle->curl, CURLOPT_URL, url)) != CURLE_OK)

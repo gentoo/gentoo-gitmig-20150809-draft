@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gaia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.19 2008/05/29 12:06:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.20 2008/06/11 06:55:50 opfer Exp $
+
+  11 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/gaia-0.1.2-curl-7.18.patch, +files/gaia-0.1.2-gcc43.patch,
+  gaia-0.1.2.ebuild:
+  fix build errors with GCC 4.3 and curl 7.18, thanks to loki_val in bug 225265
 
   29 May 2008; Christian Faulhammer <opfer@gentoo.org>
   +files/gaia-0.1.2-scons-0.98.patch, gaia-0.1.2.ebuild:
