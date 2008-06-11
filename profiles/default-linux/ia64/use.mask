@@ -13,6 +13,7 @@ nvtv
 pcmcia
 pda
 pkcs11
+scanner
 sms
 wifi
 
