@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0.ebuild,v 1.1 2008/06/11 13:44:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0.ebuild,v 1.2 2008/06/11 15:29:59 loki_val Exp $
 
 EAPI=1
 
@@ -70,15 +70,16 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
-S="${WORKDIR}/${PN}-1-${PV}"
+S=${WORKDIR}/${PN}-1-${PV}
 
 pkg_setup() {
-	export G2CONF="${G2CONF} \
+	G2CONF="${G2CONF} \
 		$(use_enable doc docs) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
 		$(use_enable ipod) \
 		$(use_enable podcast) \
 		$(use_enable test tests)"
-	export MAKEOPTS="${MAKEOPTS} -j1"
+
+	MAKEOPTS="${MAKEOPTS} -j1"
 }
