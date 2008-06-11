@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.25_rc5-r1.ebuild,v 1.1 2008/03/11 10:20:15 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.26_rc5-r2.ebuild,v 1.1 2008/06/11 11:00:04 voxus Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -18,7 +18,7 @@ SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/akpm/patches/2.6/${KV
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-K_EXTRAELOG="This kernel is not supported by Gentoo due to its unstable and
+K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
 experimental nature. If you have any issues, try a matching vanilla-sources
 ebuild -- if the problem persists there, please file a bug at http://bugme.osdl.org.
 If the problem only occurs with mm-sources then please contact Andrew Morton to
