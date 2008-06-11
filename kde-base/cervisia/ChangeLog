@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.90 2008/06/08 15:15:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.91 2008/06/11 14:28:30 ranger Exp $
+
+  11 Jun 2008; Brent Baude <ranger@gentoo.org> cervisia-3.5.9.ebuild:
+  marking cervisia-3.5.9 ppc stable; no bug, fixing tree borkage
 
   08 Jun 2008; Raúl Porcel <armin76@gentoo.org> cervisia-3.5.9.ebuild:
   alpha/sparc stable wrt #221063
