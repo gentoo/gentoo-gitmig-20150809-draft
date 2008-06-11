@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.65 2008/01/19 20:56:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.66 2008/06/11 10:36:07 armin76 Exp $
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org> xsane-0.994.ebuild,
+  xsane-0.995.ebuild:
+  Drop ia64 keyword, no hardware to test
 
   19 Jan 2008; Patrick Kursawe <phosphan@gentoo.org> -xsane-0.991.ebuild:
   Cleanup
