@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.56 2008/06/10 13:46:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.57 2008/06/11 17:39:24 nixnut Exp $
+
+  11 Jun 2008; nixnut <nixnut@gentoo.org> scummvm-0.11.1.ebuild:
+  Stable on ppc wrt bug 225619
 
   10 Jun 2008; Raúl Porcel <armin76@gentoo.org> scummvm-0.11.1.ebuild:
   sparc/x86 stable wrt #225619
