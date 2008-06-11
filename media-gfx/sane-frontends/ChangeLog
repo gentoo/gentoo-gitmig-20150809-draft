@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.38 2008/05/07 14:37:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.39 2008/06/11 10:30:59 armin76 Exp $
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  sane-frontends-1.0.13.ebuild, sane-frontends-1.0.14.ebuild:
+  Drop ia64 keyword, no hardware to test
 
   07 May 2008; Tobias Klausmann <klausman@gentoo.org>
   sane-frontends-1.0.14.ebuild:
