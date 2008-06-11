@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.269 2008/06/07 10:48:23 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.270 2008/06/11 22:37:11 tgurr Exp $
+
+  11 Jun 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/arts-1.5.9-glibc2.8-build-fix.patch, arts-3.5.9.ebuild:
+  Fix arts-3.5.9.ebuild, glibc-2.8 compatibility bug #225763.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -arts-3.5.8.ebuild:
   Removed old versions.

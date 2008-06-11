@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.9.ebuild,v 1.7 2008/05/18 14:32:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.9.ebuild,v 1.8 2008/06/11 22:37:11 tgurr Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils versionator
@@ -34,11 +34,16 @@ RDEPEND="$(qt_min_version 3.3)
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/arts-1.5.0-bindnow.patch
-	${FILESDIR}/arts-1.5.4-multilib.patch"
+#PATCHES="${FILESDIR}/arts-1.5.0-bindnow.patch
+#	${FILESDIR}/arts-1.5.4-multilib.patch
+#	${FILESDIR}/arts-1.5.9-glibc2.8-build-fix.patch"
 
 src_unpack() {
 	kde_src_unpack
+
+	epatch "${FILESDIR}/arts-1.5.0-bindnow.patch"
+	epatch "${FILESDIR}/arts-1.5.4-multilib.patch"
+	epatch "${FILESDIR}/arts-1.5.9-glibc2.8-build-fix.patch"
 
 	sed -i -e "s:GENTOO_LIB64:$(get_abi_LIBDIR amd64):" \
 		-e "s:GENTOO_LIB32:$(get_abi_LIBDIR x86):" artsc/artsdsp.in \
