@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.110 2008/06/10 18:11:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.111 2008/06/11 10:20:23 armin76 Exp $
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org> cdrdao-1.2.2-r2.ebuild:
+  Add ~ia64 wrt #225781
 
 *cdrdao-1.2.2-r2 (10 Jun 2008)
 
