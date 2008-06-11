@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.275 2008/06/11 03:45:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.276 2008/06/11 14:56:30 ken69267 Exp $
+
+  11 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> git-1.5.4.5.ebuild:
+  amd64 stable, bug #225231
 
 *git-1.5.5.4 (11 Jun 2008)
 
