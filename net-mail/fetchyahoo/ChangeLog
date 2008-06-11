@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.46 2008/03/20 04:07:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.47 2008/06/11 20:49:08 kanaka Exp $
+
+*fetchyahoo-2.12.0_alpha11 (11 Jun 2008)
+
+  11 Jun 2008; Joel Martin <kanaka@gentoo.org> -fetchyahoo-2.10.8.ebuild,
+  +fetchyahoo-2.12.0_alpha11.ebuild:
+  Update to 2.12.0 alpha 11 which has initial support for the new yahoo mail
+  interface.
 
   20 Mar 2008; Jeroen Roovers <jer@gentoo.org> fetchyahoo-2.11.1.ebuild:
   Marked ~hppa (bug #213938).
