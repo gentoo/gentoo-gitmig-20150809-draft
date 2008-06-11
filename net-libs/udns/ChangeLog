@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.2 2008/06/10 21:45:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.3 2008/06/11 17:06:52 bluebird Exp $
+
+  11 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> udns-0.0.9.ebuild:
+  add ~sparc keyword, bug #225801
 
   10 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> udns-0.0.9.ebuild:
   Improve ebuild, changes by Thomas Anderson (gentoofan23)
