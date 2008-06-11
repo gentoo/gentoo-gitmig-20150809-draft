@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.10.ebuild,v 1.1 2008/06/11 08:36:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.10.ebuild,v 1.2 2008/06/11 18:06:21 mr_bones_ Exp $
 
 EAPI="1"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -23,7 +23,7 @@ IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CON
 # samba adding openssl is intentional --jokey
 RDEPEND="sys-libs/ncurses
 	tcpd? ( sys-apps/tcp-wrappers )
-	ssl? ( !gnults? ( dev-libs/openssl )
+	ssl? ( !gnutls? ( dev-libs/openssl )
 		gnutls? ( net-libs/gnutls ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	!minimal? (
