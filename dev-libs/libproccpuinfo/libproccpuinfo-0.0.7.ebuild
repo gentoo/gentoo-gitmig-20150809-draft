@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/libproccpuinfo-0.0.7.ebuild,v 1.1 2008/04/13 14:43:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/libproccpuinfo-0.0.7.ebuild,v 1.2 2008/06/11 22:19:42 darkside Exp $
 
 inherit cmake-utils
 
@@ -19,3 +19,9 @@ RDEPEND="${DEPEND}"
 DOCS="AUTHORS ChangeLog HACKING README THANKS TODO"
 
 CMAKE_IN_SOURCE_BUILD="yes"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -e "s#DESTINATION lib#DESTINATION $(get_libdir)#" -i CMakeLists.txt
+}
