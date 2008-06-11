@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-2.77.ebuild,v 1.3 2008/06/10 07:49:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-2.77.ebuild,v 1.4 2008/06/11 23:06:49 opfer Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://nedbatchelder.com/code/modules/coverage.html"
 SRC_URI="http://nedbatchelder.com/code/modules/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 PYTHON_MODNAME="coverage.py"

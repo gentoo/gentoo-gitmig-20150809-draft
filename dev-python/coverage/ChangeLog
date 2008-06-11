@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.3 2008/06/10 07:49:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.4 2008/06/11 23:06:49 opfer Exp $
+
+  11 Jun 2008; Christian Faulhammer <opfer@gentoo.org> coverage-2.77.ebuild:
+  stable x86, bug 209511
 
   10 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> coverage-2.77.ebuild:
   Bug #225701, make sure the bytecode gets compiled, thanks to Paweł Hajdan
