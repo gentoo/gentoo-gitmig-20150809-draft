@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.17 2008/06/11 13:33:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.18 2008/06/11 22:54:17 opfer Exp $
+
+  11 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-notification-0.16.ebuild:
+  stable x86, bug 222167
 
   11 Jun 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   Changing maintainers
