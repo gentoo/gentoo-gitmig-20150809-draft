@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r7.ebuild,v 1.9 2008/01/12 18:46:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.8-r4.ebuild,v 1.1 2008/06/11 19:08:59 hollow Exp $
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20080107"
+GENTOO_PATCHSTAMP="20080611"
 GENTOO_DEVELOPER="hollow"
 
 # IUSE/USE_EXPAND magic
@@ -17,7 +17,7 @@ charset_lite dav dav_fs dav_lock dbd deflate dir disk_cache dumpio env expires
 ext_filter file_cache filter headers ident imagemap include info log_config
 log_forensic logio mem_cache mime mime_magic negotiation proxy proxy_ajp
 proxy_balancer proxy_connect proxy_ftp proxy_http rewrite setenvif speling
-status unique_id userdir usertrack version vhost_alias"
+status substitute unique_id userdir usertrack version vhost_alias"
 
 # inter-module dependencies
 # TODO: this may still be incomplete
@@ -37,7 +37,7 @@ MODULE_DEPENDS="
 	proxy_connect:proxy
 	proxy_ftp:proxy
 	proxy_http:proxy
-	usertrack:unique_id
+	substitute:filter
 "
 
 # module<->define mappings
@@ -65,10 +65,11 @@ MODULE_DEFINES="
 	userdir:USERDIR
 "
 
+# critical modules for the default config
 MODULE_CRITICAL="
-authz_host
-dir
-mime
+	authz_host
+	dir
+	mime
 "
 
 inherit apache-2
@@ -79,7 +80,7 @@ HOMEPAGE="http://httpd.apache.org/"
 # some helper scripts are apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="sni"
 
 DEPEND="${DEPEND}
