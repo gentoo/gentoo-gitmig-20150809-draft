@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.118 2007/09/07 11:33:43 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.119 2008/06/11 07:27:46 mueli Exp $
+
+*heimdal-1.2.1_rc1 (11 Jun 2008)
+
+  11 Jun 2008; Michael Hammer <mueli@gentoo.org>
+  +files/heimdal-kdc-sans_pkinit.patch,
+  +files/heimdal-r23235-kb5-libwind_la.patch,
+  +files/heimdal-r23238-kb5_locl_h-wind_h.patch,
+  +files/heimdal-system_sqlite.patch, +heimdal-1.2.1_rc1.ebuild:
+  Added new heimdal version. This one is really unstable but should work so
+  far except a few issues. Please have a look at #185899 for history and
+  future development of heimdal in gentoo
 
   07 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/heimdal-0.7.2-as_needed.patch, heimdal-0.7.2-r3.ebuild:
