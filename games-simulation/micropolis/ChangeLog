@@ -1,0 +1,9 @@
+# ChangeLog for games-simulation/micropolis
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.1 2008/06/11 15:11:49 hanno Exp $
+
+*micropolis-1.0 (11 Jun 2008)
+
+  11 Jun 2008; Hanno Boeck <hanno@gentoo.org> +micropolis-1.0.ebuild:
+  Initial commit, based on the ebuilds from matsuu and Mike Gualtieri.
+
