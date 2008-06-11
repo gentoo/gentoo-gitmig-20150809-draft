@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.13 2008/03/30 09:34:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.14 2008/06/11 16:31:25 bluebird Exp $
+
+  11 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> metadata.xml:
+  add myself as maintainer
 
   30 Mar 2008; Raúl Porcel <armin76@gentoo.org> icecream-0.7.14.ebuild:
   Add ~sparc wrt #215131
