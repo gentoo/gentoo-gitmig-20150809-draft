@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-cs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.7 2008/06/10 01:44:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.8 2008/06/11 04:42:21 darkside Exp $
+
+  11 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  man-pages-cs-0.17-r1.ebuild:
+  Set  explicitly, fixes bug #225825. silly mistake that I should have caught
 
 *man-pages-cs-0.17-r1 (10 Jun 2008)
 
