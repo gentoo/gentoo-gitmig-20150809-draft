@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.331 2008/06/10 07:30:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.332 2008/06/11 19:26:31 dberkholz Exp $
+
+*xorg-server-1.4.2 (11 Jun 2008)
+*xorg-server-1.3.0.0-r6 (11 Jun 2008)
+
+  11 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/xorg-xserver-1.4-cve-2008-1377.diff,
+  +files/xorg-xserver-1.4-cve-2008-2360.diff,
+  +files/xorg-xserver-1.4-cve-2008-1379.diff,
+  +files/xorg-xserver-1.4-cve-2008-2361.diff,
+  +files/xorg-xserver-1.4-cve-2008-2362.diff,
+  +xorg-server-1.3.0.0-r6.ebuild, +xorg-server-1.4.2.ebuild:
+  (#225419) Security bump. Local root vulnerability, or must be already
+  authenticated to access X remotely (via xauth, xhost, etc.). The 1.4.x
+  series bump also contains large quantities of other bugfixes and will be a
+  stable candidate in 30 days.
 
 *xorg-server-1.4.99.902 (10 Jun 2008)
 
