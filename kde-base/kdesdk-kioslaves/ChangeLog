@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.88 2008/06/08 15:10:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.89 2008/06/11 14:37:11 ranger Exp $
+
+  11 Jun 2008; Brent Baude <ranger@gentoo.org>
+  kdesdk-kioslaves-3.5.9.ebuild:
+  Marking kdesdk-kioslaves-3.5.9 ppc stable; no bug, fixing tree borkage
 
   08 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   kdesdk-kioslaves-3.5.9.ebuild:
