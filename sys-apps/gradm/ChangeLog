@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.98 2008/05/24 15:47:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.99 2008/06/11 18:05:31 phreak Exp $
+
+*gradm-2.1.12.200805181037 (11 Jun 2008)
+
+  11 Jun 2008; Christian Heim <phreak@gentoo.org>
+  +gradm-2.1.12.200805181037.ebuild:
+  Adding the newest version of gradm to the tree, as per Gordon's request.
 
   24 May 2008; nixnut <nixnut@gentoo.org> gradm-2.1.11.200803171746.ebuild:
   Stable on ppc wrt bug 214593
