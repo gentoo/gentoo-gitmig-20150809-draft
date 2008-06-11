@@ -1,0 +1,18 @@
+--- tenshi.orig	2008-06-09 21:33:55.000000000 +0100
++++ tenshi	2008-06-09 21:35:41.000000000 +0100
+@@ -45,7 +45,6 @@
+ 
+ my $our_hostname = hostname();
+ my @startup_time = localtime();
+-my $timezone     = get_timezone();
+ 
+ my ($uid, $gid);
+ 
+@@ -818,6 +817,7 @@
+         return;
+     }
+ 
++    my $timezone = get_timezone();
+     my $subject = $main{$queue}{'subject'} || $subject;
+ 
+     $smtp->datasend("From: $main{$queue}{'mailfrom'}\n");
