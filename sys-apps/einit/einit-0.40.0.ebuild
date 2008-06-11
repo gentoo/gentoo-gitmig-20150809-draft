@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.5 2008/05/24 14:19:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.6 2008/06/11 16:36:53 dertobi123 Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://einit.jyujin.de/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="debug doc +relaxng"
 
