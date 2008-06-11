@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080102.ebuild,v 1.1 2008/03/30 15:11:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080102.ebuild,v 1.2 2008/06/11 22:02:15 darkside Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit kde-functions
 
 DESCRIPTION="Multi Purpose Voice Services System, including Qtel for EchoLink"
 HOMEPAGE="http://svxlink.sourceforge.net/"
-SRC_URI="mirror://sourceforge/svxlink/svxlink-070415.tar.gz"
+SRC_URI="mirror://sourceforge/svxlink/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"

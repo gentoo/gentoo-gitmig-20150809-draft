@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.3 2008/04/06 15:44:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.4 2008/06/11 22:02:15 darkside Exp $
+
+  11 Jun 2008; Jeremy Olexa <darkside@gentoo.org> svxlink-080102.ebuild:
+  Fix SRC_URI, thanks to Tobias Blomberg for reporting, bug #216451
 
   06 Apr 2008; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
   Maintainer retired.
