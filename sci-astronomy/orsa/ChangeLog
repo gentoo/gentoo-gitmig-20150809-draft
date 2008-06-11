@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/orsa
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.14 2006/10/25 18:37:45 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.15 2008/06/11 22:51:12 markusle Exp $
+
+  11 Jun 2008; Markus Dittrich <markusle@gentoo.org> orsa-0.6.1.ebuild,
+  orsa-0.7.0.ebuild, +files/orsa-0.7.0-gcc4.3.patch:
+  Fixed typo in ebuild and added gcc-4.3 patch (#225797).
 
 *orsa-0.7.0 (25 Oct 2006)
 
