@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.22 2008/06/10 18:52:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.23 2008/06/11 10:02:31 armin76 Exp $
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org> ots-0.5.0.ebuild:
+  alpha stable
 
   10 Jun 2008; Brent Baude <ranger@gentoo.org> ots-0.5.0.ebuild:
   Marking ots-0.5.0 ppc for bug 225395
