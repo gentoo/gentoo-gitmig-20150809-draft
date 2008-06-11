@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.162 2008/06/09 20:58:02 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.163 2008/06/11 10:25:19 armin76 Exp $
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org> gnucash-2.2.5.ebuild:
+  alpha stable wrt #225399
 
   09 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> gnucash-2.2.5.ebuild:
   stable on sparc, bug #225399
