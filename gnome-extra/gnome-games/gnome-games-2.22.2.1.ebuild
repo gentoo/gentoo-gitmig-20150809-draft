@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.22.2.1.ebuild,v 1.1 2008/06/01 15:21:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.22.2.1.ebuild,v 1.2 2008/06/11 12:45:16 remi Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit games eutils gnome2 python autotools virtualx
+inherit games games-ggz eutils gnome2 python autotools virtualx
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/GnomeGames/"
@@ -55,6 +55,7 @@ pkg_setup() {
 
 	G2CONF="${G2CONF}
 		--with-scores-group=${GAMES_GROUP}
+		--enable-noregistry=\"${GGZ_MODDIR}\"
 		--with-platform=gnome
 		--with-sound=gstreamer
 		--enable-scalable"
@@ -80,7 +81,7 @@ src_unpack() {
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
 
-	AT_M4DIR="m4" eautoreconf
+	eautoreconf
 }
 
 src_test() {
@@ -115,12 +116,14 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
+	games-ggz_update_modules
 	gnome2_pkg_postinst
 	python_version
 	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
+	games-ggz_update_modules
 	gnome2_pkg_postrm
 	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages
 }
