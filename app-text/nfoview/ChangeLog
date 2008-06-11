@@ -1,6 +1,11 @@
 # ChangeLog for app-text/nfoview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.3 2008/03/30 17:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.4 2008/06/11 00:20:43 vapier Exp $
+
+*nfoview-1.2 (11 Jun 2008)
+
+  11 Jun 2008; Mike Frysinger <vapier@gentoo.org> +nfoview-1.2.ebuild:
+  Version bump #225795 by Benoît Giraudou.
 
   30 Mar 2008; Mike Frysinger <vapier@gentoo.org> nfoview-1.1.ebuild,
   nfoview-9999.ebuild:
