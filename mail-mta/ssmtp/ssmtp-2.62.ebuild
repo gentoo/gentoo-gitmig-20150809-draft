@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62.ebuild,v 1.3 2008/06/11 16:03:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62.ebuild,v 1.4 2008/06/11 18:00:53 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 md5sum"
 
-DEPEND="!net-mail/mailwrapper
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}
+	!net-mail/mailwrapper
+	!virtual/mta"
 PROVIDE="virtual/mta"
 
 S="${WORKDIR}/${PN}"
