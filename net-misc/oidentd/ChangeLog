@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.39 2008/04/27 14:54:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.40 2008/06/11 17:41:17 angelos Exp $
+
+  11 Jun 2008; Christoph Mende <angelos@gentoo.org> oidentd-2.0.8-r2.ebuild:
+  Stable on amd64, bug #225949
 
 *oidentd-2.0.8-r2 (27 Apr 2008)
 
