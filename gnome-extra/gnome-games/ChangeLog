@@ -1,9 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.237 2008/06/11 12:45:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.238 2008/06/11 12:48:01 remi Exp $
 
   11 Jun 2008; Rémi Cardona <remi@gentoo.org> gnome-games-2.22.2.1.ebuild:
-  use games-ggz.eclass to update /etc/ggz.modules
+  use games-ggz.eclass to update /etc/ggz.modules, patch by nyhm
 
 *gnome-games-2.22.2.1 (01 Jun 2008)
 
