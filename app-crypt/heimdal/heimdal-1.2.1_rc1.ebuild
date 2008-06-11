@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1_rc1.ebuild,v 1.1 2008/06/11 07:27:46 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1_rc1.ebuild,v 1.2 2008/06/11 18:02:25 mr_bones_ Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -77,7 +77,6 @@ src_compile() {
 		--libexecdir=/usr/sbin \
 		${myconf} || die "econf failed"
 #		$(use_enable ldap-shared hdb-openldap-module) \
-
 
 	local ltversion=`libtool --version |grep 'GNU libtool' |sed -e's/^.*(GNU libtool) \([0-9]\+\.[0-9]\+\(\.[0-9]\+\)\+\) .*$/\1/'`
 	local ltmajor=`echo $ltversion |sed -e's/^\([0-9]\+\)\..*$/\1/'`
