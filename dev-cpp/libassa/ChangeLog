@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libassa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.4 2008/05/14 00:09:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.5 2008/06/11 17:34:58 angelos Exp $
+
+  11 Jun 2008; Christoph Mende <angelos@gentoo.org> -libassa-3.4.2.ebuild:
+  Remove old
 
   14 May 2008; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild:
   Stable on amd64
