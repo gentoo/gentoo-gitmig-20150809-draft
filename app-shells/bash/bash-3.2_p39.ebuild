@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p39.ebuild,v 1.4 2008/05/31 06:57:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p39.ebuild,v 1.5 2008/06/12 17:38:35 zlin Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -46,6 +46,14 @@ pkg_setup() {
 		eerror "Detected bad CFLAGS '-malign-double'.  Do not use this"
 		eerror "as it breaks LFS (struct stat64) on x86."
 		die "remove -malign-double from your CFLAGS mr ricer"
+	fi
+
+	if hasq unmerge-orphans ${FEATURES} && \
+			has_version "<sys-apps/portage-2.1.5" && \
+			has_version "<app-shells/bash-3.2_p39"; then
+		eerror "Please upgrade bash with FEATURES=-unmerge-orphans to prevent /bin/sh"
+		eerror "from being removed. See bug #222721 for further details."
+		die "Upgrade bash with FEATURES=-unmerge-orphans"
 	fi
 }
 
@@ -186,5 +194,11 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# If /bin/sh does not exist, provide it
-	[[ ! -e ${ROOT}/bin/sh ]] && ln -sf bash "${ROOT}"/bin/sh
+	if [[ ! -e ${ROOT}/bin/sh ]]; then
+		ln -sf bash "${ROOT}"/bin/sh
+	elif [[ -L ${ROOT}/bin/sh ]]; then
+		# rewrite the symlink to ensure that its mtime changes
+		local target=$(readlink "${ROOT}"/bin/sh)
+		ln -sf "${target}" "${ROOT}"/bin/sh
+	fi
 }
