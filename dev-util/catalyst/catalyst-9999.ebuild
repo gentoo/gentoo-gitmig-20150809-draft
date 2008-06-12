@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.4 2008/05/03 06:25:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.5 2008/06/12 23:54:26 wolf31o2 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -16,7 +16,7 @@ then
 else
 	inherit eutils multilib
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://dev.gentoo.org/~wolf31o2/${P}.tar.bz2"
+		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 fi
 
 DESCRIPTION="release metatool used for creating Gentoo releases"
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+#KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 KEYWORDS=""
 RESTRICT=""
 IUSE="ccache"
