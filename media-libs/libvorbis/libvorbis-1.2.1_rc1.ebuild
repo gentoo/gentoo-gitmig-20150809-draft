@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.2.1_rc1.ebuild,v 1.2 2008/06/12 14:58:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.2.1_rc1.ebuild,v 1.3 2008/06/12 15:46:48 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -57,4 +57,3 @@ src_install() {
 		dohtml -r doc
 	fi
 }
-
