@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jid3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.7 2008/06/12 18:35:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.8 2008/06/12 19:13:07 serkan Exp $
+
+  12 Jun 2008; Serkan Kaba <serkan@gentoo.org> -jid3-0.46.ebuild:
+  Remove old revision which has failing tests with several JVM's. See bug
+  #220245 for more info.
 
   12 Jun 2008; Christian Faulhammer <opfer@gentoo.org> jid3-0.46-r1.ebuild:
   stable x86, bug 225647
