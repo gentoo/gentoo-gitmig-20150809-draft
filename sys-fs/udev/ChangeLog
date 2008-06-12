@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.386 2008/06/09 19:42:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.387 2008/06/12 05:55:08 zzam Exp $
+
+*udev-123 (12 Jun 2008)
+
+  12 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> +udev-123.ebuild:
+  Version bumped.
 
 *udev-122-r1 (09 Jun 2008)
 
