@@ -1,6 +1,10 @@
 # ChangeLog for media-video/acidrip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.26 2008/06/10 13:51:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.27 2008/06/12 14:27:36 drac Exp $
+
+  12 Jun 2008; Samuli Suominen <drac@gentoo.org> acidrip-0.14-r1.ebuild,
+  acidrip-0.14-r2.ebuild:
+  Fix broken SRC_URI, thanks to CCIEChad for reporting.
 
 *acidrip-0.14-r2 (10 Jun 2008)
 
