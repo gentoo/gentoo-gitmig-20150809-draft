@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.1.0.ebuild,v 1.1 2008/05/12 14:26:15 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.1.0.ebuild,v 1.2 2008/06/12 15:55:41 lack Exp $
 
 inherit eutils
 
@@ -12,15 +12,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-cpp/gtkmm
-	>=dev-libs/glib-2.14
-	dev-cpp/libglademm
-	dev-libs/libsigc++
-	dev-cpp/glibmm
-	sys-devel/bc"
+RDEPEND="sys-devel/bc
+	>=x11-wm/fluxbox-1.0
+	>=dev-cpp/gtkmm-2.4
+	>=dev-cpp/glibmm-2.14.0
+	>=dev-cpp/libglademm-2.4"
 
-RDEPEND="${DEPEND}
-	>=x11-wm/fluxbox-1.0"
+DEPEND="dev-util/pkgconfig
+	${RDEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
