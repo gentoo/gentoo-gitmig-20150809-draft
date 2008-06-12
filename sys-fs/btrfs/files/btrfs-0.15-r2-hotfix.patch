@@ -1,0 +1,111 @@
+Files btrfs-0.15/.hg/00changelog.i and kernel/.hg/00changelog.i differ
+diff -Nur btrfs-0.15/.hg/branch kernel/.hg/branch
+--- btrfs-0.15/.hg/branch	1969-12-31 17:00:00.000000000 -0700
++++ kernel/.hg/branch	2008-06-11 23:19:10.000000000 -0600
+@@ -0,0 +1 @@
++default
+diff -Nur btrfs-0.15/.hg/branch.cache kernel/.hg/branch.cache
+--- btrfs-0.15/.hg/branch.cache	1969-12-31 17:00:00.000000000 -0700
++++ kernel/.hg/branch.cache	2008-06-11 23:19:09.000000000 -0600
+@@ -0,0 +1,2 @@
++9da425337329bbdd0c1cfd37deb058885744a140 558
++9da425337329bbdd0c1cfd37deb058885744a140 default
+Files btrfs-0.15/.hg/dirstate and kernel/.hg/dirstate differ
+diff -Nur btrfs-0.15/.hg/hgrc kernel/.hg/hgrc
+--- btrfs-0.15/.hg/hgrc	1969-12-31 17:00:00.000000000 -0700
++++ kernel/.hg/hgrc	2008-06-11 23:19:09.000000000 -0600
+@@ -0,0 +1,2 @@
++[paths]
++default = http://www.kernel.org/hg/btrfs/kernel
+diff -Nur btrfs-0.15/.hg/requires kernel/.hg/requires
+--- btrfs-0.15/.hg/requires	1969-12-31 17:00:00.000000000 -0700
++++ kernel/.hg/requires	2008-06-11 23:19:04.000000000 -0600
+@@ -0,0 +1,2 @@
++revlogv1
++store
+Files btrfs-0.15/.hg/store/00changelog.d and kernel/.hg/store/00changelog.d differ
+Files btrfs-0.15/.hg/store/00changelog.i and kernel/.hg/store/00changelog.i differ
+Files btrfs-0.15/.hg/store/00manifest.d and kernel/.hg/store/00manifest.d differ
+Files btrfs-0.15/.hg/store/00manifest.i and kernel/.hg/store/00manifest.i differ
+Files btrfs-0.15/.hg/store/data/.hgtags.i and kernel/.hg/store/data/.hgtags.i differ
+Files btrfs-0.15/.hg/store/data/_c_o_p_y_i_n_g.i and kernel/.hg/store/data/_c_o_p_y_i_n_g.i differ
+Files btrfs-0.15/.hg/store/data/_i_n_s_t_a_l_l.i and kernel/.hg/store/data/_i_n_s_t_a_l_l.i differ
+Files btrfs-0.15/.hg/store/data/_makefile.i and kernel/.hg/store/data/_makefile.i differ
+Files btrfs-0.15/.hg/store/data/_t_o_d_o.i and kernel/.hg/store/data/_t_o_d_o.i differ
+Files btrfs-0.15/.hg/store/data/acl.c.i and kernel/.hg/store/data/acl.c.i differ
+Files btrfs-0.15/.hg/store/data/bit-radix.c.i and kernel/.hg/store/data/bit-radix.c.i differ
+Files btrfs-0.15/.hg/store/data/bit-radix.h.i and kernel/.hg/store/data/bit-radix.h.i differ
+Files btrfs-0.15/.hg/store/data/btrfs__inode.h.i and kernel/.hg/store/data/btrfs__inode.h.i differ
+Files btrfs-0.15/.hg/store/data/compat.h.i and kernel/.hg/store/data/compat.h.i differ
+Files btrfs-0.15/.hg/store/data/crc32c.h.i and kernel/.hg/store/data/crc32c.h.i differ
+Files btrfs-0.15/.hg/store/data/ctree.c.i and kernel/.hg/store/data/ctree.c.i differ
+Files btrfs-0.15/.hg/store/data/ctree.h.i and kernel/.hg/store/data/ctree.h.i differ
+Files btrfs-0.15/.hg/store/data/debug-tree.c.i and kernel/.hg/store/data/debug-tree.c.i differ
+Files btrfs-0.15/.hg/store/data/dir-item.c.i and kernel/.hg/store/data/dir-item.c.i differ
+Files btrfs-0.15/.hg/store/data/dir-test.c.i and kernel/.hg/store/data/dir-test.c.i differ
+Files btrfs-0.15/.hg/store/data/disk-io.c.i and kernel/.hg/store/data/disk-io.c.i differ
+Files btrfs-0.15/.hg/store/data/disk-io.h.i and kernel/.hg/store/data/disk-io.h.i differ
+Files btrfs-0.15/.hg/store/data/extent-tree.c.i and kernel/.hg/store/data/extent-tree.c.i differ
+Files btrfs-0.15/.hg/store/data/extent__io.c.i and kernel/.hg/store/data/extent__io.c.i differ
+Files btrfs-0.15/.hg/store/data/extent__io.h.i and kernel/.hg/store/data/extent__io.h.i differ
+Files btrfs-0.15/.hg/store/data/extent__map.c.i and kernel/.hg/store/data/extent__map.c.i differ
+Files btrfs-0.15/.hg/store/data/extent__map.h.i and kernel/.hg/store/data/extent__map.h.i differ
+Files btrfs-0.15/.hg/store/data/file-item.c.i and kernel/.hg/store/data/file-item.c.i differ
+Files btrfs-0.15/.hg/store/data/file.c.i and kernel/.hg/store/data/file.c.i differ
+Files btrfs-0.15/.hg/store/data/hash.c.i and kernel/.hg/store/data/hash.c.i differ
+Files btrfs-0.15/.hg/store/data/hash.h.i and kernel/.hg/store/data/hash.h.i differ
+Files btrfs-0.15/.hg/store/data/hasher.c.i and kernel/.hg/store/data/hasher.c.i differ
+Files btrfs-0.15/.hg/store/data/inode-item.c.i and kernel/.hg/store/data/inode-item.c.i differ
+Files btrfs-0.15/.hg/store/data/inode-map.c.i and kernel/.hg/store/data/inode-map.c.i differ
+Files btrfs-0.15/.hg/store/data/inode.c.i and kernel/.hg/store/data/inode.c.i differ
+Files btrfs-0.15/.hg/store/data/ioctl.h.i and kernel/.hg/store/data/ioctl.h.i differ
+Files btrfs-0.15/.hg/store/data/kerncompat.h.i and kernel/.hg/store/data/kerncompat.h.i differ
+Files btrfs-0.15/.hg/store/data/list.h.i and kernel/.hg/store/data/list.h.i differ
+Files btrfs-0.15/.hg/store/data/mkfs.c.i and kernel/.hg/store/data/mkfs.c.i differ
+Files btrfs-0.15/.hg/store/data/ordered-data.c.i and kernel/.hg/store/data/ordered-data.c.i differ
+Files btrfs-0.15/.hg/store/data/ordered-data.h.i and kernel/.hg/store/data/ordered-data.h.i differ
+Files btrfs-0.15/.hg/store/data/print-tree.c.i and kernel/.hg/store/data/print-tree.c.i differ
+Files btrfs-0.15/.hg/store/data/print-tree.h.i and kernel/.hg/store/data/print-tree.h.i differ
+Files btrfs-0.15/.hg/store/data/quick-test.c.i and kernel/.hg/store/data/quick-test.c.i differ
+Files btrfs-0.15/.hg/store/data/radix-tree.c.i and kernel/.hg/store/data/radix-tree.c.i differ
+Files btrfs-0.15/.hg/store/data/radix-tree.h.i and kernel/.hg/store/data/radix-tree.h.i differ
+Files btrfs-0.15/.hg/store/data/random-test.c.i and kernel/.hg/store/data/random-test.c.i differ
+Files btrfs-0.15/.hg/store/data/root-tree.c.i and kernel/.hg/store/data/root-tree.c.i differ
+Files btrfs-0.15/.hg/store/data/struct-funcs.c.i and kernel/.hg/store/data/struct-funcs.c.i differ
+Files btrfs-0.15/.hg/store/data/super.c.i and kernel/.hg/store/data/super.c.i differ
+Files btrfs-0.15/.hg/store/data/sysfs.c.i and kernel/.hg/store/data/sysfs.c.i differ
+Files btrfs-0.15/.hg/store/data/transaction.c.i and kernel/.hg/store/data/transaction.c.i differ
+Files btrfs-0.15/.hg/store/data/transaction.h.i and kernel/.hg/store/data/transaction.h.i differ
+Files btrfs-0.15/.hg/store/data/tree-defrag.c.i and kernel/.hg/store/data/tree-defrag.c.i differ
+Files btrfs-0.15/.hg/store/data/volumes.c.i and kernel/.hg/store/data/volumes.c.i differ
+Files btrfs-0.15/.hg/store/data/volumes.h.i and kernel/.hg/store/data/volumes.h.i differ
+Files btrfs-0.15/.hg/store/data/xattr.c.i and kernel/.hg/store/data/xattr.c.i differ
+Files btrfs-0.15/.hg/store/data/xattr.h.i and kernel/.hg/store/data/xattr.h.i differ
+Files btrfs-0.15/.hg/store/undo and kernel/.hg/store/undo differ
+diff -Nur btrfs-0.15/.hg_archival.txt kernel/.hg_archival.txt
+--- btrfs-0.15/.hg_archival.txt	2008-05-29 08:31:43.000000000 -0600
++++ kernel/.hg_archival.txt	1969-12-31 17:00:00.000000000 -0700
+@@ -1,2 +0,0 @@
+-repo: 972e56533d49456b288abe364ba0295fa8c0e0ad
+-node: 4b7e2b315a32d2a1175f70f39f38b8824d8ed9e1
+diff -Nur btrfs-0.15/transaction.c kernel/transaction.c
+--- btrfs-0.15/transaction.c	2008-05-29 08:31:43.000000000 -0600
++++ kernel/transaction.c	2008-06-11 23:19:10.000000000 -0600
+@@ -56,7 +56,6 @@
+ 		total_trans++;
+ 		BUG_ON(!cur_trans);
+ 		root->fs_info->generation++;
+-		root->fs_info->running_transaction = cur_trans;
+ 		root->fs_info->last_alloc = 0;
+ 		root->fs_info->last_data_alloc = 0;
+ 		cur_trans->num_writers = 1;
+@@ -74,6 +73,9 @@
+ 		extent_io_tree_init(&cur_trans->dirty_pages,
+ 				     root->fs_info->btree_inode->i_mapping,
+ 				     GFP_NOFS);
++		spin_lock(&root->fs_info->new_trans_lock);
++		root->fs_info->running_transaction = cur_trans;
++		spin_unlock(&root->fs_info->new_trans_lock);
+ 	} else {
+ 		cur_trans->num_writers++;
+ 		cur_trans->num_joined++;
