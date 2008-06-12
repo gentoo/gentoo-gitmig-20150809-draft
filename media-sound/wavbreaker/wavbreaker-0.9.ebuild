@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.9.ebuild,v 1.3 2008/01/16 11:57:00 opfer Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.9.ebuild,v 1.4 2008/06/12 19:39:46 drac Exp $
 
 DESCRIPTION="wavbreaker/wavmerge GTK+ utility to break or merge WAV files"
 HOMEPAGE="http://wavbreaker.sourceforge.net"
