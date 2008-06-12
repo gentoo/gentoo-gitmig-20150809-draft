@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.237 2008/06/12 14:16:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.238 2008/06/12 14:37:29 jer Exp $
+
+  12 Jun 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.50_beta2.ebuild,
+  -opera-9.50_beta2_p1951.ebuild, -opera-9.50_beta2_p1962.ebuild,
+  -opera-9.50_beta2_p1971.ebuild, -opera-9.50_beta2_p1971-r1.ebuild,
+  -opera-9.50_beta2_p1983.ebuild, -opera-9.50_beta2_p1992.ebuild,
+  -opera-9.50_beta2_p1997.ebuild, -opera-9.50_beta2_p2021.ebuild,
+  -opera-9.50_beta2_p2025.ebuild, -opera-9.50_beta2_p2034.ebuild:
+  Remove betas (maybe bug #226079).
 
 *opera-9.50 (12 Jun 2008)
 
