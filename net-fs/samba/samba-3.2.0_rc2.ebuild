@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.2.0_pre2.ebuild,v 1.1 2008/03/08 12:24:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.2.0_rc2.ebuild,v 1.1 2008/06/12 12:10:25 dev-zero Exp $
 
-inherit autotools eutils pam multilib versionator confutils
+inherit eutils pam multilib versionator confutils
 
 MY_P=${PN}-${PV/_/}
 
 DESCRIPTION="A suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org/"
-SRC_URI="mirror://samba/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -19,19 +19,18 @@ IUSE="${IUSE_LINGUAS} acl ads async automount caps cups doc examples ipv6 kernel
 RDEPEND="dev-libs/popt
 	dev-libs/iniparser
 	virtual/libiconv
-	acl?       ( kernel_linux? ( sys-apps/acl ) )
-	cups?      ( net-print/cups )
-	ipv6?      ( sys-apps/xinetd )
-	ads?       ( virtual/krb5
-		sys-fs/e2fsprogs )
-	ldap?      ( net-nds/openldap )
-	pam?       ( virtual/pam )
-	readline?  ( sys-libs/readline )
-	selinux?   ( sec-policy/selinux-samba )
-	swat?      ( sys-apps/xinetd )
-	syslog?    ( virtual/logger )
-	fam?       ( virtual/fam )
-	caps?      ( sys-libs/libcap )"
+	acl? ( kernel_linux? ( sys-apps/acl ) )
+	cups? ( net-print/cups )
+	ipv6? ( sys-apps/xinetd )
+	ads? ( virtual/krb5 sys-fs/e2fsprogs )
+	ldap? ( net-nds/openldap )
+	pam? ( virtual/pam )
+	readline? ( sys-libs/readline )
+	selinux? ( sec-policy/selinux-samba )
+	swat? ( sys-apps/xinetd )
+	syslog? ( virtual/logger )
+	fam? ( virtual/fam )
+	caps? ( sys-libs/libcap )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -60,10 +59,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}/source"
-
-	epatch "${FILESDIR}/3.0.28-libcap_detection.patch"
-
-	eautoconf -Im4 -Ilib/replace
 
 	# Ok, agreed, this is ugly. But it avoids a patch we
 	# need for every samba version and we don't need autotools
@@ -165,7 +160,7 @@ src_install() {
 	rm -f "${D}"/usr/bin/*.old
 
 	# Removing executable bits from header-files
-	fperms 644 /usr/include/lib{msrpc,smbclient}.h
+	fperms 644 /usr/include/libsmbclient.h
 
 	# Nsswitch extensions. Make link for wins and winbind resolvers
 	if use winbind ; then
