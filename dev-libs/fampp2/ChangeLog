@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fampp2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.6 2007/02/22 00:36:58 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.7 2008/06/12 03:57:05 vapier Exp $
+
+*fampp2-6.0.0 (12 Jun 2008)
+
+  12 Jun 2008; Mike Frysinger <vapier@gentoo.org> +fampp2-6.0.0.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
