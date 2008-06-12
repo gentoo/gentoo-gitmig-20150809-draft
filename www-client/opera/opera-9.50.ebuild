@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50.ebuild,v 1.2 2008/06/12 15:47:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50.ebuild,v 1.3 2008/06/12 17:38:40 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -35,7 +35,7 @@ SRC_URI="
 		x86? ( ${O_URI}linux${O_FTP}i386/${P}.gcc4-qt4.i386.tar.bz2 )
 	)
 	!qt-static? (
-		x86? ( ${O_URI}linux${O_FTP}i386/${P}.gcc4-shared-qt3.i386.tar.bz2 )
+		x86? ( ${O_URI}linux${O_FTP}i386/shared/${P}.gcc3-shared-qt3.i386.tar.bz2 )
 	)
 	"
 
@@ -68,7 +68,7 @@ pkg_setup() {
 		if use qt-static; then
 			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-qt4.i386"
 		else
-			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.i386"
+			S="${WORKDIR}/${P}-${O_SUFF}.gcc3-shared-qt3.i386"
 		fi
 	fi
 }
