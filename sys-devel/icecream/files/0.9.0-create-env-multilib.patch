@@ -1,0 +1,30 @@
+diff -urN icecream.orig/icecc-create-env icecream/icecc-create-env
+--- icecream.orig/client/icecc-create-env
++++ icecream/client/icecc-create-env
+@@ -11,6 +11,16 @@
+   is_darwin=1
+ fi
+ 
++lib_is_symlink=0
++if test -L /lib; then
++	lib_is_symlink=1
++	real_libdir="`readlink /lib`"
++	if [[ "`readlink /usr/lib`" != "$real_libdir" ]]; then
++		echo "Hmmm, /lib is a symlink to $real_libdir but /usr/lib is not...this doesn't look sane!"
++		exit 1
++	fi
++fi
++
+ is_contained ()
+ {
+   case " $target_files " in
+@@ -55,6 +65,9 @@
+ 	      # and prefer that on the assumption that it is a more generic one.
+ 	      local baselib=`echo "$lib" | sed 's,\(/[^/]*\)/.*\(/[^/]*\)$,\1\2,'`
+ 	      test -f "$baselib" && lib=$baselib
++              if test "$lib_is_symlink" = 1; then
++                  lib="${lib/\/lib\///$real_libdir/}"
++              fi
+               add_file "$lib"
+            done
+         fi
