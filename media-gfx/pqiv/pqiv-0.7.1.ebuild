@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.7.1.ebuild,v 1.1 2008/05/24 11:05:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.7.1.ebuild,v 1.2 2008/06/12 15:52:27 drac Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pberndt.com/raw/Programme/Linux/${PN}/_download/${P}.tbz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.8"
