@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.90.ebuild,v 1.3 2008/06/09 03:28:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.90.ebuild,v 1.4 2008/06/12 13:51:48 drac Exp $
 
 GCONF_DEBUG=no
 
@@ -18,8 +18,8 @@ RDEPEND=">=dev-libs/glib-2.15.6
 	>=x11-libs/gtk+-2.11.6
 	>=gnome-base/libgnome-2.10
 	>=gnome-base/libgnomeui-2.10
-	>=media-libs/gstreamer-0.10.6
-	>=media-libs/gst-plugins-base-0.10.6
+	>=media-libs/gstreamer-0.10.17
+	>=media-libs/gst-plugins-base-0.10.17
 	>=media-plugins/gst-plugins-ffmpeg-0.10
 	>=dev-libs/libxml2-2.6
 	sys-apps/hal
