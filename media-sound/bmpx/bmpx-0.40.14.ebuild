@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.14.ebuild,v 1.2 2008/05/13 06:16:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.14.ebuild,v 1.3 2008/06/12 17:17:46 drac Exp $
 
 EAPI=1
 
@@ -33,6 +33,7 @@ RDEPEND=">=net-libs/libsoup-2.2.100:2.2
 	>=dev-libs/dbus-glib-0.61
 	>=media-libs/taglib-1.4
 	dev-libs/libcdio
+	>=media-plugins/gst-plugins-cdio-0.10
 	app-arch/zip
 	media-libs/alsa-lib
 	>=dev-libs/boost-1.33.1

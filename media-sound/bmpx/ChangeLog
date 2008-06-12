@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.77 2008/05/13 06:16:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.78 2008/06/12 17:17:46 drac Exp $
+
+  12 Jun 2008; Samuli Suominen <drac@gentoo.org> bmpx-0.40.14.ebuild:
+  libcdio isn't optional but it doesn't do anything without
+  gst-plugins-cdio. fix it wrt #225291, thanks to Pacho Ramos.
 
   13 May 2008; Samuli Suominen <drac@gentoo.org> bmpx-0.40.14.ebuild:
   Change libsoup dep. to >=net-libs/libsoup-2.2.100:2.2 wrt #220333 by
