@@ -41,4 +41,5 @@ gnome-base/gnome mono
 
 # Brent Baude <ranger@gentoo.org> (11 June 2008)
 # Mask out java from openoffice; not applicable for powerpc
-app-office/openoffice
+app-office/openoffice java
+
