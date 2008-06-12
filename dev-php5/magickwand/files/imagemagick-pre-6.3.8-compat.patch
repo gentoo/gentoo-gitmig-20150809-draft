@@ -2,7 +2,44 @@
 # patch by Martin von Gagern <Martin.vGagern@gmx.net>
 
 --- MagickWandForPHP-1.0.7-1/config.m4	2008-04-13 19:30:55.000000000 +0200
-+++ MagickWandForPHP-1.0.7/config.m4	2008-06-09 17:08:03.000000000 +0200
++++ MagickWandForPHP-1.0.7/config.m4	2008-06-10 11:34:24.000000000 +0200
+@@ -3,30 +3,30 @@
+ 
+ if test $PHP_MAGICKWAND != "no"; then
+ 
+-    if test -r $PHP_MAGICKWAND/bin/MagickWand-config; then
++    if test -r $PHP_MAGICKWAND/bin/Wand-config; then
+         WAND_CONFIG_PATH=$PHP_MAGICKWAND/bin
+     else
+-        AC_MSG_CHECKING(MagickWand-config in default path)
++        AC_MSG_CHECKING(Wand-config in default path)
+ 
+         for i in /usr/local /usr;
+         do
+-            test -r $i/bin/MagickWand-config && WAND_CONFIG_PATH=$i/bin && break
++            test -r $i/bin/Wand-config && WAND_CONFIG_PATH=$i/bin && break
+         done
+ 
+         if test -z "$WAND_CONFIG_PATH"; then
+             for i in $PHP_MAGICKWAND /usr/local /usr;
+             do
+-                test -r $i/MagickWand-config && WAND_CONFIG_PATH=$i && break
++                test -r $i/Wand-config && WAND_CONFIG_PATH=$i && break
+             done
+         fi
+         if test -z "$WAND_CONFIG_PATH"; then
+-            AC_MSG_ERROR(Cannot locate configuration program MagickWand-config)
++            AC_MSG_ERROR(Cannot locate configuration program Wand-config)
+         else
+             AC_MSG_RESULT(found in $WAND_CONFIG_PATH)
+         fi
+     fi
+ 
+-		IMAGEMAGICK_VERSION_ORIG=`$WAND_CONFIG_PATH/MagickWand-config --version`
++		IMAGEMAGICK_VERSION_ORIG=`$WAND_CONFIG_PATH/Wand-config --version`
+ 		IMAGEMAGICK_VERSION_MASK=`echo ${IMAGEMAGICK_VERSION_ORIG} | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+ 
+ 
 @@ -34,7 +34,7 @@
  		if test "$IMAGEMAGICK_VERSION_MASK" -ge 6003005; then
  				AC_MSG_RESULT(found version $IMAGEMAGICK_VERSION_ORIG)

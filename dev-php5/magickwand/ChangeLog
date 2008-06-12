@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/magickwand
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.8 2008/06/09 15:33:53 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.9 2008/06/12 17:39:18 hoffie Exp $
+
+  12 Jun 2008; Christian Hoffmann <hoffie@gentoo.org>
+  files/imagemagick-pre-6.3.8-compat.patch:
+  updated patch by Martin von Gagern <Martin.vGagern@gmx.net> (bug 215671),
+  previous version missed some MagickWand-config calls. magickwand-1.0.7
+  should now really build with <imagemagick-6.3.8
 
   09 Jun 2008; Christian Hoffmann <hoffie@gentoo.org>
   +files/imagemagick-pre-6.3.8-compat.patch, magickwand-1.0.7.ebuild:
