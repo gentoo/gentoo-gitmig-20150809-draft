@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1.ebuild,v 1.6 2008/06/02 06:43:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1.ebuild,v 1.7 2008/06/12 06:55:18 mr_bones_ Exp $
 
+EAPI=1
 inherit toolchain-funcs eutils qt4
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
@@ -20,7 +21,7 @@ RDEPEND="virtual/opengl
 	dev-libs/boost
 	media-libs/jpeg
 	net-misc/curl
-	$(qt4_min_version 4.2)
+	>=x11-libs/qt-4.2:4
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.6
