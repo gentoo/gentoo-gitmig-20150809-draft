@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-123.ebuild,v 1.1 2008/06/12 05:55:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-124.ebuild,v 1.1 2008/06/12 12:27:12 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 

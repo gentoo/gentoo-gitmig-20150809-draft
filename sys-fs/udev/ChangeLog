@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.387 2008/06/12 05:55:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.388 2008/06/12 12:27:12 zzam Exp $
+
+*udev-124 (12 Jun 2008)
+
+  12 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> -udev-123.ebuild,
+  +udev-124.ebuild:
+  Bugfix release to make cdrom_id work correct.
 
 *udev-123 (12 Jun 2008)
 
