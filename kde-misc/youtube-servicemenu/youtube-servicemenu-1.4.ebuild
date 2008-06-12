@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/youtube-servicemenu-1.3h.ebuild,v 1.1 2008/03/07 00:04:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/youtube-servicemenu-1.4.ebuild,v 1.1 2008/06/12 12:53:03 hanno Exp $
 
 DESCRIPTION="Download YouTube (tm) Videos"
 HOMEPAGE="http://www.kde-apps.org/content/show.php/Get+YouTube+Video+(improved)?content=41456"
