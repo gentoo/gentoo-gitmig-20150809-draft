@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvipost
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.22 2008/05/16 19:04:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.23 2008/06/12 22:48:41 aballier Exp $
+
+  12 Jun 2008; Alexis Ballier <aballier@gentoo.org> dvipost-1.1.ebuild:
+  no need to depend on virtual/tetex here, bug #225995
 
   16 May 2008; Alexis Ballier <aballier@gentoo.org>
   -files/dvipost-1.0-src_test.diff, -dvipost-1.0.ebuild:
