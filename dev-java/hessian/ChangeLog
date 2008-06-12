@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/hessian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.16 2008/05/03 15:52:51 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.17 2008/06/12 12:01:17 nelchael Exp $
+
+*hessian-3.1.6 (12 Jun 2008)
+*hessian-3.0.20 (12 Jun 2008)
+
+  12 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/build.xml-3.0.20, +files/build.xml-3.1.6, +hessian-3.0.20.ebuild,
+  +hessian-3.1.6.ebuild:
+  Version bump.
 
   03 May 2008; Kenneth Prugh <ken69267@gentoo.org> hessian-3.0.8-r5.ebuild:
   amd64 stable, bug #219650
