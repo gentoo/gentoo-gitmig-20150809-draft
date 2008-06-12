@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.9 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.10 2008/06/12 23:48:08 darkside Exp $
 
 DESCRIPTION="Gentoo Developer chroots installation/configuration launcher"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/docs/devel-chroots-intro.xml"
@@ -18,6 +18,13 @@ KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
 DEPEND="app-misc/screen net-misc/wget sys-apps/sed"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e 's/\/bin\/install/install/' Makefile || die "sed failed"
+}
 
 src_compile() {
 	emake || die "emake failed"
