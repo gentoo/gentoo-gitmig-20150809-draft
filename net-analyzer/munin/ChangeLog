@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.13 2008/06/01 20:56:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.14 2008/06/12 04:01:55 robbat2 Exp $
+
+*munin-1.3.4-r1 (09 Jun 2008)
+
+  09 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/munin-1.3.4-no-html-if-no-input.patch, +munin-1.3.4-r1.ebuild~,
+  +munin-1.3.4-r1.ebuild:
+  Resolve bug #225671 and also clean up USE flags to better represent the
+  new 1.3.4 version.
 
   01 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> munin-1.3.4.ebuild:
   Bug #205293, dcron is fussy about crontab call syntax.

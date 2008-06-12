@@ -1,0 +1,19 @@
+If munin-update has not yet produced any RRD files, then we cannot produce HTML
+output yet.
+
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+
+diff -Nuar munin-1.3.4.orig/server/munin-html.in munin-1.3.4/server/munin-html.in
+--- munin-1.3.4.orig/server/munin-html.in	2008-03-07 17:42:40.000000000 -0800
++++ munin-1.3.4/server/munin-html.in	2008-06-09 14:30:23.000000000 -0700
+@@ -154,6 +154,10 @@
+     $groups = $groups->{"groups"}; # root->groups
+ }
+ 
++if(scalar(keys(%$groups)) == 0) {
++    die "No data available from munin-update yet";
++}
++
+ # Draw main index
+ my $template = HTML::Template->new(filename => "$config->{tmpldir}/munin-overview.tmpl",
+ 				   die_on_bad_params => 0,
