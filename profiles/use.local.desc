@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3582 2008/06/12 02:59:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3583 2008/06/12 14:54:09 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -444,6 +444,7 @@ dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
+dev-lang/erlang:sctp - Support for Stream Control Transmission Protocol
 dev-lang/erlang:smp - Enable support for multiprocessors
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:proj - Adds proj library support (geographic projections)
