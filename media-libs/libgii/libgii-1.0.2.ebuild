@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.13 2008/06/09 09:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.14 2008/06/12 14:53:16 drac Exp $
 
 inherit autotools eutils
 
@@ -20,8 +20,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.9.0-linux26-headers.patch
-	epatch "${FILESDIR}"/${P}-configure-cpuid-pic.patch
+	epatch "${FILESDIR}"/${PN}-0.9.0-linux26-headers.patch \
+		"${FILESDIR}"/${P}-configure-cpuid-pic.patch \
+		"${FILESDIR}"/${P}-libtool_1.5_compat.patch
 	rm -f acinclude.m4 m4/libtool.m4 m4/lt*.m4
 	AT_M4DIR=m4 eautoreconf
 }

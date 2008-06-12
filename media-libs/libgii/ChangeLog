@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.40 2008/06/09 09:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.41 2008/06/12 14:53:17 drac Exp $
+
+  12 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libgii-1.0.2-libtool_1.5_compat.patch, libgii-1.0.2.ebuild:
+  Fix compability with libtool 1.5 by Chad A. Simmons. Closes bug 225637.
 
   09 Jun 2008; Mike Frysinger <vapier@gentoo.org>
   files/libgii-1.0.2-configure-cpuid-pic.patch, libgii-1.0.2.ebuild:
