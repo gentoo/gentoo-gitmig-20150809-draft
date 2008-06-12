@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.5 2008/05/18 13:31:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.6 2008/06/12 16:44:19 armin76 Exp $
 
 inherit eutils multilib autotools
 
@@ -55,6 +55,7 @@ src_unpack() {
 	if use mplayer-bin; then
 		epatch "${FILESDIR}/${PN}-mplayer-bin.patch"
 	fi
+	epatch "${FILESDIR}/${PN}_xulrunner-1.9.patch"
 	epatch "${FILESDIR}/${P}-seamonkey.patch"
 	eautoconf
 }
@@ -77,7 +78,7 @@ src_compile() {
 		ABI="x86"
 		econf \
 			${myconf} \
-			--x-libraries=/emul/linux/x86/usr/lib/ \
+			--x-libraries=/usr/lib32/ \
 			--enable-x86_64 \
 			${myconf2} \
 			$(use_enable divx dvx) \

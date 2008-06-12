@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.104 2008/03/14 17:40:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.105 2008/06/12 16:44:19 armin76 Exp $
+
+  12 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  +files/mplayerplug-in_xulrunner-1.9.patch, mplayerplug-in-3.50.ebuild:
+  Add a patch to make it compile if xulrunner-1.9 is installed, bug #213461,
+  patch by Nirbheek Chauhan, fix amd64 compilation failure, bug #208262
 
   14 Mar 2008; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.35.ebuild,
   mplayerplug-in-3.45.ebuild, mplayerplug-in-3.50.ebuild:
