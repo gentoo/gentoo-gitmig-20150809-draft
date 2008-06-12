@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.17 2008/04/21 16:44:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.18 2008/06/12 22:57:15 darkside Exp $
+
+  12 Jun 2008; Jeremy Olexa <darkside@gentoo.org> pearpc-0.4.ebuild:
+  Make pkg_setup() actually do something. Thanks to f.mensik for the fix in
+  bug #219004
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
