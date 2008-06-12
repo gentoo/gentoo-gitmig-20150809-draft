@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/uif2iso
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.1 2008/06/12 12:34:30 flameeyes Exp $
+
+*uif2iso-0.1.4 (12 Jun 2008)
+
+  12 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +uif2iso-0.1.4.ebuild:
+  Initial import of uif2iso, to convert MagicISO files in standard ISOs.
+
