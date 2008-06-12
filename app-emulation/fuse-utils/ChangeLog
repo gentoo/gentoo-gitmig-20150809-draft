@@ -1,13 +1,13 @@
 # ChangeLog for app-emulation/fuse-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.3 2008/06/11 22:45:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.4 2008/06/12 08:25:01 grobian Exp $
 
 *fuse-utils-0.9.0-r2 (11 Jun 2008)
 
   11 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
   +files/fuse-utils-0.9.0-without-audiofile.patch,
   +fuse-utils-0.9.0-r2.ebuild:
-  patch configure.in to actually disable audiofile support. Thanks JosÃ Manuel
+  patch configure.in to actually disable audiofile support. Thanks José Manuel
   Ferrer Ortiz for the patch, bug #224321
 
 *fuse-utils-0.9.0-r1 (02 Jun 2008)
@@ -15,7 +15,7 @@
   02 Jun 2008; Jeremy Olexa <darkside@gentoo.org> -fuse-utils-0.9.0.ebuild,
   +fuse-utils-0.9.0-r1.ebuild:
   replace old version with improved ebuild. Minor copy/paste errors and added
-  audiofile use flag & dep. Thanks to JosÃ© Manuel Ferrer Ortiz, bug #224321
+  audiofile use flag & dep. Thanks to José Manuel Ferrer Ortiz, bug #224321
 
 *fuse-utils-0.9.0 (30 May 2008)
 
