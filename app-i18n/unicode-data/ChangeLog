@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.7 2008/06/04 14:23:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.8 2008/06/12 18:02:28 nixnut Exp $
+
+  12 Jun 2008; nixnut <nixnut@gentoo.org> unicode-data-5.1.0.ebuild:
+  Added ~ppc wrt bug 224541
 
   04 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   unicode-data-5.1.0.ebuild, unicode-data-5.2.0.ebuild:
