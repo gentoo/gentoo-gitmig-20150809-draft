@@ -1,0 +1,48 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/files/deluged.init,v 1.1 2008/06/12 15:44:36 armin76 Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [[ "${DELUGED_USER}" == "" ]] ; then
+		eerror "Please edit /etc/conf.d/deluged"
+		eerror "You have to specify a user to run deluged as, as we will not run it as root!"
+		eerror "Modify DELUGED_USER to your needs (you can also add a group, after a colon)"
+		return 1
+	fi
+	if ! `getent passwd | cut -d ':' -f 1 | grep $( echo "${DELUGED_USER}" | cut -d ':' -f 1 ) -sq` ; then
+		eerror "Please edit /etc/conf.d/deluged"
+		eerror "Your user has to exist!"
+		return 1
+	fi
+	if ! `echo "${DELUGED_USER}" | grep ':' -sq` ; then
+		return 0
+	else
+		if ! `cut -d ':' -f 1 /etc/group | grep $( echo "${DELUGED_USER}" | cut -d ':' -f 2 ) -sq` ; then
+			eerror "Please edit /etc/conf.d/deluged"
+			eerror "Your group has to exist too!"
+			return 1
+		fi
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+	ebegin "Starting Deluged"
+	start-stop-daemon --start --user "${DELUGED_USER}" \
+	--name deluged --pidfile /var/run/deluged.pid --background --make-pidfile \
+	--exec /usr/bin/deluged -- --do-not-daemonize "${DELUDED_OPTS}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Deluged"
+	start-stop-daemon --stop --user "${DELUGED_USER}" \
+	--name deluged --pidfile /var/run/deluged.pid
+	eend $?
+}

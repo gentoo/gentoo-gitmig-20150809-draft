@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.71 2008/05/21 10:51:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.72 2008/06/12 15:44:35 armin76 Exp $
+
+*deluge-0.6_pre9999 (12 Jun 2008)
+*deluge-0.5.9999 (12 Jun 2008)
+
+  12 Jun 2008; Raúl Porcel <armin76@gentoo.org> +files/deluged.conf,
+  +files/deluged.init, +deluge-0.5.9999.ebuild, +deluge-0.6_pre9999.ebuild,
+  -deluge-9999.ebuild:
+  Add 0.6 livesvn ebuild, bug #220355, thanks to Benedikt Morbach and Andrew
+  Resch
 
 *deluge-0.5.9.1 (21 May 2008)
 
