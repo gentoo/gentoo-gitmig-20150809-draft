@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.10 2007/07/22 09:26:13 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.11 2008/06/12 23:16:56 darkside Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/pearpc/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="x86? ( dev-lang/nasm )
 	x11-libs/libXt"
@@ -74,7 +74,7 @@ src_compile() {
 
 src_install() {
 	dobin src/ppc
-	dodoc ChangeLog AUTHORS COPYING README TODO
+	dodoc ChangeLog AUTHORS README TODO
 
 	dodir /usr/share/${P}
 	insinto /usr/share/${P}
@@ -88,7 +88,7 @@ src_install() {
 
 	dodir /usr/share/${P}/scripts
 	insinto /usr/share/${P}/scripts
-	doins ${DISTDIR}/createdisk.py
+	doins "${DISTDIR}"/createdisk.py
 }
 
 pkg_postinst() {

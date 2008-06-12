@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.18 2008/06/12 22:57:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.19 2008/06/12 23:16:56 darkside Exp $
+
+  12 Jun 2008; Jeremy Olexa <darkside@gentoo.org> pearpc-0.3.1.ebuild:
+  Remove ~amd64 kw, bug #179952
 
   12 Jun 2008; Jeremy Olexa <darkside@gentoo.org> pearpc-0.4.ebuild:
   Make pkg_setup() actually do something. Thanks to f.mensik for the fix in
