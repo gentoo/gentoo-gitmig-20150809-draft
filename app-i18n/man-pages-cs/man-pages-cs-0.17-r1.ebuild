@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/man-pages-cs-0.17-r1.ebuild,v 1.2 2008/06/11 04:42:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/man-pages-cs-0.17-r1.ebuild,v 1.3 2008/06/12 22:17:32 darkside Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux czech man page translations"
 HOMEPAGE="http://www.win.tue.nl/~aeb/linux/man/"
@@ -17,13 +17,12 @@ RDEPEND="virtual/man"
 S="${WORKDIR}/${P}.${MY_PV}" #not sure if this is the best approach.
 
 src_compile() {
-	make latest || die "make latest failed"
-	make DESTDIR="${D}" || die "make DESTDIR failed"
+	make DESTDIR="${D}" latest || die "make latest failed"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	#make MANDIR="${D}"/usr/share/man/cs install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+	
 	dodoc CONTRIB README*
 
 	# remove man pages that are provided by other packages.
