@@ -34,6 +34,6 @@ gnome-base/gnome mono
 # ppc does not have nvidia-drivers
 media-tv/mythtv opengl-xvmc
 
-# openoffice does not build with IBM Java
-app-office/openoffice java
-
+# Brent Baude <ranger@gentoo.org> (11 June 2008)
+# Mask out java from openoffice; not applicable for powerpc
+ app-office/openoffice java
