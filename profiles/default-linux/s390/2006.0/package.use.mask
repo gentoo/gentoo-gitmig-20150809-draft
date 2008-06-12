@@ -7,3 +7,6 @@ sys-apps/paludis python
 # Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
 # Mask ruby flag until s390 keyword is added to dev-ruby/syntax - #198864 and dev-ruby/allison - #206031.
 sys-apps/paludis ruby
+
+# missing keyword for sys-cluster/openmpi sys-cluster/mpich2
+dev-libs/boost mpi
