@@ -39,3 +39,6 @@ sys-fs/evms hb hb2
 # Mask mono flag for gnome as tomboy is segfaulting.
 gnome-base/gnome mono
 
+# Brent Baude <ranger@gentoo.org> (11 June 2008)
+# Mask out java from openoffice; not applicable for powerpc
+app-office/openoffice
