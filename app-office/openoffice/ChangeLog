@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.402 2008/06/11 21:41:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.403 2008/06/12 00:24:21 ranger Exp $
+
+  12 Jun 2008; Brent Baude <ranger@gentoo.org> openoffice-2.4.1.ebuild:
+  Marking openoffice-2.4.1 ppc for bug 225723
 
   11 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   openoffice-2.4.1.ebuild:
