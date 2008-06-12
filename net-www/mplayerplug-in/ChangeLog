@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.105 2008/06/12 16:44:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.106 2008/06/12 18:22:58 armin76 Exp $
+
+  12 Jun 2008; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.35.ebuild,
+  mplayerplug-in-3.45.ebuild, mplayerplug-in-3.50.ebuild:
+  Fix xulrunner depends, bug #217160
 
   12 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   +files/mplayerplug-in_xulrunner-1.9.patch, mplayerplug-in-3.50.ebuild:
