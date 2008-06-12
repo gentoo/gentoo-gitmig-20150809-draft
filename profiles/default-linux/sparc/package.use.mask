@@ -15,3 +15,6 @@ dev-lang/swig	pike
 
 #wavgain fails to build
 media-sound/rubyripper wav
+
+# depends on mpich2 which isn't keyworded (bug #217854)
+sci-libs/hdf5 mpi
