@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.6.0.ebuild,v 1.1 2008/03/30 02:20:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.6.0.ebuild,v 1.2 2008/06/12 19:15:17 rich0 Exp $
 
 inherit games
 
@@ -45,6 +45,7 @@ src_install() {
 	# These are provided by eternal-lands ebuild
 
 	rm license.txt
+	rm commands.lst
 
 	insopts -m 0660
 	insinto "${GAMES_DATADIR}/${MY_PN}"

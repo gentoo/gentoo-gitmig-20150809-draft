@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.15 2008/03/30 02:36:42 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.16 2008/06/12 19:15:17 rich0 Exp $
+
+  12 Jun 2008; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-data-1.6.0.ebuild:
+  Fix file collision - 226053 - thanks to Shaun Bouckaert
 
   30 Mar 2008; Richard Freeman <rich0@gentoo.org>
   -eternal-lands-data-1.5.0.ebuild:
