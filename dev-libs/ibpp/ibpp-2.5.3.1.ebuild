@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.5.3.1.ebuild,v 1.4 2008/06/11 22:47:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.5.3.1.ebuild,v 1.5 2008/06/13 07:35:49 opfer Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ibpp.org/"
 SRC_URI="mirror://sourceforge/ibpp/${MY_P}.zip"
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-db/firebird-1.5.1"
