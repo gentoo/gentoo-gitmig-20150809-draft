@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/switcher
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/switcher/ChangeLog,v 1.7 2006/10/30 20:41:36 troll Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/switcher/ChangeLog,v 1.8 2008/06/13 19:55:44 flameeyes Exp $
+
+  13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> switcher-0.3.7a.ebuild:
+  Update kde's admin directory rather than changing its content.
 
   30 Oct 2006; Przemysław Maciąg <troll@gentoo.org>
   +files/switcher-0.3.7a-clear_from_warnings.patch,
