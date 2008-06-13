@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.18 2008/06/04 16:21:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.19 2008/06/13 07:11:19 wormo Exp $
+
+  13 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  cfitsio-2.510-r2.ebuild, cfitsio-3.080.ebuild:
+  mark ~ppc (bug #224585)
 
   04 Jun 2008; Raúl Porcel <armin76@gentoo.org> cfitsio-2.510-r2.ebuild,
   cfitsio-3.080.ebuild:
