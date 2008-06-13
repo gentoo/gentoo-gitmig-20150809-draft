@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.2.ebuild,v 1.1 2008/06/13 19:35:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.2.ebuild,v 1.2 2008/06/13 23:07:31 mr_bones_ Exp $
 
 EAPI=1
 
@@ -26,7 +26,7 @@ RDEPEND="sys-libs/zlib
 		x11-libs/qt-qt3support:4 )
 		>=x11-libs/qt-4.3:4 )"
 DEPEND="${RDEPEND}
-	|| ( dev-texlive/texlive-context app-text/tetex ) 
+	|| ( dev-texlive/texlive-context app-text/tetex )
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}/mscore
