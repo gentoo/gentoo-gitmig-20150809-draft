@@ -1,0 +1,4 @@
+# Brent Baude <ranger@gentoo.org> (11 June 2008)
+# Masking out passwdqc from pambase since passwdqc 
+sys-auth/pambase passwdqc
+

@@ -10,3 +10,7 @@ sys-fs/evms hb hb2
 # media-plugins/gst-plugins-mythtv not keyworded
 media-plugins/gst-plugins-meta mythtv
 
+# Brent Baude <ranger@gentoo.org> (11 June 2008)
+# Masking out passwdqc from pambase since passwdqc 
+sys-auth/pambase passwdqc
+
