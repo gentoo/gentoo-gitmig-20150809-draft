@@ -1,10 +1,14 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.38 2008/06/12 13:51:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.39 2008/06/13 18:35:43 drac Exp $
+
+  13 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.90.ebuild:
+  Remove gnome-mount dep. and require totem-pl-parser instead of totem,
+  thanks to metalgod.
 
   12 Jun 2008; Samuli Suominen <drac@gentoo.org> brasero-0.7.1.ebuild,
   brasero-0.7.90.ebuild:
-  stable amd64, bug 225627. update gst dep to >=0.10.17 for 225471, thanks
+  stable amd64, bug 225627. update gst dep to >=0.10.15 for 225471, thanks
   to Josh Saddler and Jon Wilson.
 
   12 Jun 2008; Christian Faulhammer <opfer@gentoo.org> brasero-0.7.1.ebuild:
