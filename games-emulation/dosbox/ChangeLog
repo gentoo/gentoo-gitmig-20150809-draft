@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dosbox
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.38 2007/10/22 04:40:37 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.39 2008/06/13 16:34:56 flameeyes Exp $
+
+  13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/dosbox-0.72+gcc-4.3.patch, dosbox-0.72.ebuild:
+  Add patch to build with gcc 4.3 from bug #218320, thanks to Peter
+  Alfredsen (loki_val). Make alsa USE flag work again (bug #225919).
 
   22 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -files/dosbox-0.70-alsa.patch, -dosbox-0.58.ebuild, -dosbox-0.65.ebuild,
