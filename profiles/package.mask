@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8719 2008/06/13 16:57:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8720 2008/06/13 20:45:32 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -99,8 +99,7 @@ www-apps/gitweb
 =dev-python/django-9999
 
 # Samuli Suominen <drac@gentoo.org> (05 Jun 2008)
-# Masked for removal in ~30 days by treecleaners.
-# Replaced by USE libffi in sys-devel/gcc. Bug 163724.
+# Masked for testing wrt #163724
 dev-libs/libffi
 x11-libs/gtk-server
 
