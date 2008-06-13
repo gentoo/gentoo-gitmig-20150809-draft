@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/musescore
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.17 2008/04/14 21:48:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.18 2008/06/13 19:35:11 drac Exp $
+
+*musescore-0.9.2 (13 Jun 2008)
+
+  13 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  -files/musescore-0.9.1d-desktop-entry.patch,
+  +files/musescore-0.9.2-install.patch, -musescore-0.9.1d.ebuild,
+  +musescore-0.9.2.ebuild:
+  Version bump.
 
   14 Apr 2008; Samuli Suominen <drac@gentoo.org> musescore-0.9.1d.ebuild:
   Change qt4 depends for bug 217161.

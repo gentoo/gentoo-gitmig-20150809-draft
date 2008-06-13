@@ -1,0 +1,29 @@
+diff -ur mscore-0.9.2.orig/mscore/CMakeLists.txt mscore-0.9.2/mscore/CMakeLists.txt
+--- mscore-0.9.2.orig/mscore/CMakeLists.txt	2008-04-12 19:49:39.000000000 +0300
++++ mscore-0.9.2/mscore/CMakeLists.txt	2008-06-13 21:59:49.000000000 +0300
+@@ -117,7 +117,7 @@
+ if (MINGW)
+       set(TEXEXEC_PATH "/usr/bin")
+ else (MINGW)
+-      find_path( TEXEXEC_PATH texutil )
++      
+       if (NOT TEXEXEC_PATH)
+             message("texexec from ConTeXt package not found. Documentation will not be build")
+       endif (NOT TEXEXEC_PATH)
+diff -ur mscore-0.9.2.orig/mscore/share/locale/CMakeLists.txt mscore-0.9.2/mscore/share/locale/CMakeLists.txt
+--- mscore-0.9.2.orig/mscore/share/locale/CMakeLists.txt	2008-04-12 19:49:01.000000000 +0300
++++ mscore-0.9.2/mscore/share/locale/CMakeLists.txt	2008-06-13 22:19:27.000000000 +0300
+@@ -19,13 +19,9 @@
+ #=============================================================================
+ 
+ install(FILES
+-      mscore_de.qm
+       mscore_de.ts
+-      mscore_it.qm
+       mscore_it.ts
+-      mscore_pt.qm
+       mscore_pt.ts
+-      mscore_ru.qm
+       mscore_ru.ts
+       DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}locale
+       )
