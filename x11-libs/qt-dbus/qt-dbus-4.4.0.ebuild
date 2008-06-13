@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0.ebuild,v 1.4 2008/05/27 13:09:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0.ebuild,v 1.5 2008/06/13 23:20:45 ingmar Exp $
 
+EAPI="1"
 inherit qt4-build
 
 DESCRIPTION="The DBus module for the Qt toolkit."
@@ -16,7 +17,8 @@ IUSE=""
 # protocol I don't know if there's value trying to derive it out into a core build
 # The library itself, however, only depends on core and xml
 DEPEND="~x11-libs/qt-core-${PV}
-	>=sys-apps/dbus-1.0.2"
+	>=sys-apps/dbus-1.0.2
+	!<=x11-libs/qt-4.4.0_alpha:${SLOT}"
 RDEPEND="${DEPEND}"
 
 QT4_TARGET_DIRECTORIES="

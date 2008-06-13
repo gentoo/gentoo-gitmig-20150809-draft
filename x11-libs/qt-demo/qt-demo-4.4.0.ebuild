@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.2 2008/05/25 14:56:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.3 2008/06/13 23:21:15 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -27,6 +27,7 @@ DEPEND="
 	~x11-libs/qt-test-${PV}:${SLOT}
 	~x11-libs/qt-webkit-${PV}:${SLOT}
 	~x11-libs/qt-xmlpatterns-${PV}:${SLOT}
+	!<=x11-libs/qt-4.4.0_alpha:${SLOT}
 	"
 RDEPEND="${DEPEND}"
 

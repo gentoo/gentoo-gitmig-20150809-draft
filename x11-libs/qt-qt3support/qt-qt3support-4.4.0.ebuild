@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0.ebuild,v 1.4 2008/05/30 03:41:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0.ebuild,v 1.5 2008/06/13 23:23:25 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+accessibility"
 
 DEPEND="~x11-libs/qt-gui-${PV}
-	~x11-libs/qt-sql-${PV}"
+	~x11-libs/qt-sql-${PV}
+	!<=x11-libs/qt-4.4.0_alpha:${SLOT}"
 RDEPEND="${DEPEND}"
 
 QT4_TARGET_DIRECTORIES="

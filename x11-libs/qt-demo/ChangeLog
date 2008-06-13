@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.2 2008/05/25 14:56:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.3 2008/06/13 23:21:15 ingmar Exp $
+
+  13 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org> qt-demo-4.4.0.ebuild:
+  Make all split Qt4 ebuilds block the old monolithic ebuild.
 
   25 May 2008; Markus Rothe <corsair@gentoo.org> qt-demo-4.4.0.ebuild:
   Added ~ppc/~ppc64
