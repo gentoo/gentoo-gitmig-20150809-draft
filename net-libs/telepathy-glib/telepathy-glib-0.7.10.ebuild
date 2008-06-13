@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.6.ebuild,v 1.1 2008/04/10 11:20:43 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.10.ebuild,v 1.1 2008/06/13 17:17:39 coldwind Exp $
 
 DESCRIPTION="GLib binding for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
