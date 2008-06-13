@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.7 2008/05/29 17:48:54 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.8 2008/06/13 16:17:24 coldwind Exp $
+
+  13 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -telepathy-butterfly-0.3.0.ebuild:
+  Remove old.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org>
   telepathy-butterfly-0.3.0.ebuild, telepathy-butterfly-0.3.1.ebuild:
