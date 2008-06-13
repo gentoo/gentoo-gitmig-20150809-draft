@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.35 2008/05/19 19:10:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.36 2008/06/13 20:50:02 dev-zero Exp $
+
+*pgadmin3-1.8.4 (13 Jun 2008)
+
+  13 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> +pgadmin3-1.8.4.ebuild:
+  Version bump
 
 *pgadmin3-1.8.2 (19 May 2008)
 
