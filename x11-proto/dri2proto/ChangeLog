@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/dri2proto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.1 2008/06/10 07:16:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.2 2008/06/13 16:14:30 dberkholz Exp $
+
+*dri2proto-1.1 (13 Jun 2008)
+
+  13 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +dri2proto-1.1.ebuild, -dri2proto-9999.ebuild:
+  There actually have been releases of this, announcements never made it to
+  the list so I didn't see them.
 
 *dri2proto-9999 (10 Jun 2008)
 
