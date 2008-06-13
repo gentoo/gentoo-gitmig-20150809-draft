@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.9.0.ebuild,v 1.1 2008/05/24 06:50:01 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.9.0.ebuild,v 1.2 2008/06/13 20:08:17 serkan Exp $
 
 inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mplayer nls spell"
 
 RDEPEND=">=virtual/jre-1.5
-	media-video/ffmpeg
+	<media-video/ffmpeg-0.4.9_p20080206
 	mplayer? ( media-video/mplayer )
 	spell?
 	(
