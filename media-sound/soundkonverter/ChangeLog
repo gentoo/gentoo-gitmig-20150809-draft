@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/soundkonverter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.5 2008/04/24 17:34:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.6 2008/06/13 13:24:53 yngwin Exp $
+
+*soundkonverter-0.3.8 (13 Jun 2008)
+
+  13 Jun 2008; Ben de Groot <yngwin@gentoo.org>
+  +soundkonverter-0.3.8.ebuild:
+  Version bump. This version also works with new ffmpeg headers location.
+  Gcc-4.3 patch still applies.
 
   24 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/soundkonverter-0.3.6-gcc43.patch, soundkonverter-0.3.6.ebuild:
