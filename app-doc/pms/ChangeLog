@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/pms
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.1 2008/06/13 01:02:43 ingmar Exp $
+
+*pms-99999999 (13 Jun 2008)
+
+  13 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
+  +pms-99999999.ebuild:
+  Import app-doc/pms, an ebuild for the latest pms.pdf draft. ebuild by
+  David Leverton.
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>ingmar@gentoo.org</email>
+		<name>Ingmar Vanhassel</name>
+	</maintainer>
+	<maintainer>
+		<email>zlin@gentoo.org</email>
+		<name>Bo Ørsted Andresen</name>
+	</maintainer>
+</pkgmetadata>
