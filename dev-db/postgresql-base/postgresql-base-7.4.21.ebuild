@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.15.ebuild,v 1.4 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.21.ebuild,v 1.1 2008/06/13 21:46:29 dev-zero Exp $
 
 EAPI="1"
 
@@ -17,9 +17,8 @@ SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
-	linguas_af linguas_cs linguas_de linguas_es linguas_fa linguas_fr
-	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
-	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
+	linguas_cs linguas_de linguas_es linguas_fr linguas_hr linguas_hu
+	linguas_it linguas_nb linguas_pt_BR linguas_ru linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
 IUSE="doc kerberos nls pam pg-intdatetime readline ssl threads zlib ${IUSE_LINGUAS}"
 RESTRICT="test"
@@ -52,9 +51,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/postgresql-${SLOT}.15-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-base.patch" \
-		"${FILESDIR}/postgresql-8.x-relax_ssl_perms.patch"
+	epatch "${FILESDIR}/postgresql-${PV}-autoconf.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-hppa.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-base.patch"
 
 	# to avoid collision - it only should be installed by server
 	rm "${S}/src/backend/nls.mk"
@@ -62,7 +61,7 @@ src_unpack() {
 	# because psql/help.c includes the file
 	ln -s "${S}/src/include/libpq/pqsignal.h" "${S}/src/bin/psql/"
 
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {
@@ -72,6 +71,7 @@ src_compile() {
 		--includedir=/usr/include/postgresql-${SLOT} \
 		--with-locale-dir=/usr/share/postgresql-${SLOT}/locale \
 		--mandir=/usr/share/postgresql-${SLOT}/man \
+		--host=${CHOST} \
 		--with-docdir=/usr/share/doc/${PF} \
 		--without-tcl \
 		--without-perl \
@@ -82,8 +82,7 @@ src_compile() {
 		$(use_enable pg-intdatetime integer-datetimes ) \
 		$(use_with readline) \
 		$(use_with ssl openssl) \
-		$(use_enable threads thread-safety) \
-		$(use_enable threads thread-safety-force) \
+		$(use_enable threads thread-safety ) \
 		$(use_with zlib) \
 		|| die "configure failed"
 
@@ -100,7 +99,7 @@ src_install() {
 	dodir /usr/share/postgresql-${SLOT}/man/man1
 	tar -zxf "${S}/doc/man.tar.gz" -C "${D}"/usr/share/postgresql-${SLOT}/man man1/{ecpg,pg_config}.1
 
-	rm "${D}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,ipcclean,pg_controldata,pg_ctl,pg_resetxlog,pg_restore,postgres,postmaster}.1
+	rm "${D}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,initlocation,ipcclean,pg_controldata,pg_ctl,pg_resetxlog,pg_restore,postgres,postmaster}.1
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
 	cd "${S}/contrib"
@@ -123,11 +122,11 @@ postgres_symlinks=(
 )
 __EOF__
 
-	cat >"${T}/50postgresql-97-${SLOT}" <<-__EOF__
+	cat >"${T}/50postgresql-98-${SLOT}" <<-__EOF__
 		LDPATH=/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 		MANPATH=/usr/share/postgresql-${SLOT}/man
 	__EOF__
-	doenvd "${T}/50postgresql-97-${SLOT}"
+	doenvd "${T}/50postgresql-98-${SLOT}"
 
 	keepdir /etc/postgresql-${SLOT}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.15.ebuild,v 1.4 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.2.9.ebuild,v 1.1 2008/06/13 21:46:29 dev-zero Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ IUSE_LINGUAS="
 	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
 	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="doc kerberos nls pam pg-intdatetime readline ssl threads zlib ${IUSE_LINGUAS}"
+IUSE="doc kerberos nls pam pg-intdatetime readline ssl threads zlib ldap ${IUSE_LINGUAS}"
 RESTRICT="test"
 
 wanted_languages() {
@@ -39,7 +39,8 @@ RDEPEND="kerberos? ( virtual/krb5 )
 	!dev-db/postgresql-libs
 	!dev-db/postgresql-client
 	!dev-db/libpq
-	!dev-db/postgresql"
+	!dev-db/postgresql
+	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/bison-1.875
@@ -52,7 +53,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/postgresql-${SLOT}.15-common.patch" \
+	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-base.patch" \
 		"${FILESDIR}/postgresql-8.x-relax_ssl_perms.patch"
 
@@ -73,18 +74,22 @@ src_compile() {
 		--with-locale-dir=/usr/share/postgresql-${SLOT}/locale \
 		--mandir=/usr/share/postgresql-${SLOT}/man \
 		--with-docdir=/usr/share/doc/${PF} \
+		--enable-depend \
 		--without-tcl \
 		--without-perl \
 		--without-python \
+		--without-libedit \
+		$(use_with readline) \
 		$(use_with kerberos krb5) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
 		$(use_with pam) \
 		$(use_enable pg-intdatetime integer-datetimes ) \
-		$(use_with readline) \
 		$(use_with ssl openssl) \
 		$(use_enable threads thread-safety) \
 		$(use_enable threads thread-safety-force) \
 		$(use_with zlib) \
+		$(use_with ldap) \
+		${myconf} \
 		|| die "configure failed"
 
 	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake failed"
@@ -123,11 +128,11 @@ postgres_symlinks=(
 )
 __EOF__
 
-	cat >"${T}/50postgresql-97-${SLOT}" <<-__EOF__
+	cat >"${T}/50postgresql-95-${SLOT}" <<-__EOF__
 		LDPATH=/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 		MANPATH=/usr/share/postgresql-${SLOT}/man
 	__EOF__
-	doenvd "${T}/50postgresql-97-${SLOT}"
+	doenvd "${T}/50postgresql-95-${SLOT}"
 
 	keepdir /etc/postgresql-${SLOT}
 }

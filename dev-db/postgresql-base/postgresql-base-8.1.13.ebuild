@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.15.ebuild,v 1.4 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.1.13.ebuild,v 1.1 2008/06/13 21:46:29 dev-zero Exp $
 
 EAPI="1"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/postgresql-${SLOT}.15-common.patch" \
+	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-base.patch" \
 		"${FILESDIR}/postgresql-8.x-relax_ssl_perms.patch"
 
@@ -123,11 +123,11 @@ postgres_symlinks=(
 )
 __EOF__
 
-	cat >"${T}/50postgresql-97-${SLOT}" <<-__EOF__
+	cat >"${T}/50postgresql-96-${SLOT}" <<-__EOF__
 		LDPATH=/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 		MANPATH=/usr/share/postgresql-${SLOT}/man
 	__EOF__
-	doenvd "${T}/50postgresql-97-${SLOT}"
+	doenvd "${T}/50postgresql-96-${SLOT}"
 
 	keepdir /etc/postgresql-${SLOT}
 }

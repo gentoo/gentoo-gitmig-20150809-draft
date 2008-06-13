@@ -1,5 +1,5 @@
 diff --git a/config/programs.m4 b/config/programs.m4
-index 3f87396..9c7fbf0 100644
+index ae3b91a..6af24d2 100644
 --- a/config/programs.m4
 +++ b/config/programs.m4
 @@ -153,13 +153,13 @@ AC_DEFUN([PGAC_CHECK_GETTEXT],
@@ -24,53 +24,25 @@ index 3f87396..9c7fbf0 100644
    AC_SUBST(localedir)
    AC_DEFINE_UNQUOTED(LOCALEDIR, ["$exp_localedir"],
 diff --git a/configure.in b/configure.in
-index c71b175..674036a 100644
+index f7bdec3..c8b5b7e 100644
 --- a/configure.in
 +++ b/configure.in
-@@ -19,10 +19,6 @@ m4_pattern_forbid(^PGAC_)dnl to catch undefined macros
- 
- AC_INIT([PostgreSQL], [8.0.15], [pgsql-bugs@postgresql.org])
- 
+@@ -19,17 +19,8 @@ m4_pattern_forbid(^PGAC_)dnl to catch undefined macros
+ dnl
+ dnl The GNU folks apparently haven't heard that some people don't use
+ dnl Texinfo. Use this sorcery to use "docdir" instead of "infodir".
+-m4_define([info], [doc])
+-m4_define([infodir], [docdir])
+ AC_INIT([PostgreSQL], [7.4.21], [pgsql-bugs@postgresql.org])
+-m4_undefine([infodir])
+-m4_undefine([info])
+-AC_SUBST(docdir)
+-
 -m4_if(m4_defn([m4_PACKAGE_VERSION]), [2.53], [], [m4_fatal([Autoconf version 2.53 is required.
 -Untested combinations of 'autoconf' and PostgreSQL versions are not
 -recommended.  You can remove the check from 'configure.in' but it is then
 -your responsibility whether the result works or not.])])
- AC_COPYRIGHT([Copyright (c) 1996-2005, PostgreSQL Global Development Group])
++
+ AC_COPYRIGHT([Copyright 2004 PostgreSQL Global Development Group])
  AC_CONFIG_SRCDIR([src/backend/access/common/heaptuple.c])
  AC_CONFIG_AUX_DIR(config)
-diff --git a/src/include/storage/s_lock.h b/src/include/storage/s_lock.h
-index 0c2dff0..d548d4d 100644
---- a/src/include/storage/s_lock.h
-+++ b/src/include/storage/s_lock.h
-@@ -239,6 +239,31 @@ tas(volatile slock_t *lock)
- #endif	 /* __s390__ || __s390x__ */
- 
- 
-+#if defined(__sh__)
-+#define HAS_TEST_AND_SET
-+
-+typedef unsigned char slock_t;
-+
-+#define TAS(lock) tas(lock)
-+
-+static __inline__ int
-+tas(volatile slock_t *lock)
-+{
-+	register int _res = 1;
-+
-+	__asm__ __volatile__(
-+		"tas.b	@%1\n\t"
-+		"movt	%0\n\t"
-+		"xor	#1,%0"
-+:		"=z"(_res)
-+:		"r"(lock)
-+:		"t","memory");
-+	return _res;
-+}
-+
-+#endif	 /* __sh__ */
-+
-+
- #if defined(__sparc__)
- #define HAS_TEST_AND_SET
- 
