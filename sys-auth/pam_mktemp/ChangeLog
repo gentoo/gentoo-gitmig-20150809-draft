@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.11 2008/06/10 19:00:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.12 2008/06/13 12:37:20 jer Exp $
+
+  13 Jun 2008; Jeroen Roovers <jer@gentoo.org> pam_mktemp-1.0.3.ebuild:
+  Stable for HPPA (bug #225901).
 
   10 Jun 2008; Alexis Ballier <aballier@gentoo.org> pam_mktemp-1.0.3.ebuild:
   keyword ~sparc-fbsd
