@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.22 2008/02/12 14:46:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.23 2008/06/13 21:40:13 yngwin Exp $
+
+*ffmpeg2theora-0.21 (13 Jun 2008)
+
+  13 Jun 2008; Ben de Groot <yngwin@gentoo.org> +ffmpeg2theora-0.21.ebuild:
+  Version bump, also fixes bug 218101.
 
 *ffmpeg2theora-9999 (12 Feb 2008)
 
