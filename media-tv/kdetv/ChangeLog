@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.36 2008/02/15 16:57:14 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.37 2008/06/13 20:24:26 flameeyes Exp $
+
+  13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdetv-0.8.9-bindnow.patch, kdetv-0.8.9.ebuild:
+  Force rebuilding of autotools rather than leaving to maintainer mode.
+  Remove bindnow flags as they are deprecated now.
 
   15 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> kdetv-0.8.9.ebuild:
   Add dependency on x11-proto/xf86dgaproto (bug #205589).

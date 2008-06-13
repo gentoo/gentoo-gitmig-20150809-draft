@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.9 2008/02/15 16:57:14 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.10 2008/06/13 20:24:25 flameeyes Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -39,8 +39,7 @@ DEPEND="${RDEPEND}
 
 need-kde 3.2
 
-PATCHES="${FILESDIR}/${P}-xinerama.patch
-	${FILESDIR}/${P}-bindnow.patch"
+PATCHES=( "${FILESDIR}/${P}-xinerama.patch" )
 
 pkg_setup() {
 	if use opengl && ! built_with_use '=x11-libs/qt-3*' opengl ; then
@@ -57,7 +56,8 @@ src_compile() {
 	fi
 	append-flags -fno-strict-aliasing
 
-	export BINDNOW_FLAGS="$(bindnow-flags)"
+	rm "${S}"/configure
+
 	kde_src_compile all
 }
 
