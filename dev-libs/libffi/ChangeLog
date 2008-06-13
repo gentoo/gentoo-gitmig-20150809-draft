@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.52 2008/06/03 02:16:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.53 2008/06/13 20:29:14 drac Exp $
+
+*libffi-3.0.5 (13 Jun 2008)
+
+  13 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  -files/libffi-soversion.dpatch, -files/libffi-without-libgcj.dpatch,
+  +libffi-3.0.5.ebuild, -libffi-3.4.1.ebuild, -libffi-3.4.1-r1.ebuild,
+  -libffi-3.4.3.ebuild:
+  Version bump for testing wrt #163724, thanks to Marijn Schouten. Remove
+  old versions which came from GCC 3.4.x.
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> libffi-3.4.1.ebuild,
   libffi-3.4.1-r1.ebuild, libffi-3.4.3.ebuild:
