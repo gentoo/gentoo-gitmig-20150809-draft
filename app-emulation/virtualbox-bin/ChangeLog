@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.25 2008/05/14 08:14:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.26 2008/06/13 22:44:27 cardoe Exp $
+
+*virtualbox-bin-1.6.2 (13 Jun 2008)
+
+  13 Jun 2008; Doug Goldstein <cardoe@gentoo.org> +files/vboxwebsrv-confd,
+  +files/vboxwebsrv-initd, files/virtualbox-bin.desktop,
+  files/virtualbox-bin-wrapper, +virtualbox-bin-1.6.2.ebuild:
+  copy changes from jokey's overlay to the tree as jokey requested
 
   14 May 2008; Peter Volkov <pva@gentoo.org> virtualbox-bin-1.5.4.ebuild,
   virtualbox-bin-1.5.6.ebuild:

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Innotek VirtualBox
+Name=Sun xVM VirtualBox
 Type=Application
 Comment=Run several virtual systems on a single host computer
 Exec=VirtualBox

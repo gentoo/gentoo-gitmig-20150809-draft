@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.39 2008/05/02 12:55:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.40 2008/06/13 22:45:18 cardoe Exp $
+
+*virtualbox-1.6.2 (13 Jun 2008)
+
+  13 Jun 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/virtualbox-1.6.2-remove-unused.patch, files/virtualbox.desktop,
+  files/virtualbox-wrapper, +virtualbox-1.6.2.ebuild:
+  copy changes from jokey's overlay to the tree as jokey requested
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org> virtualbox-1.5.6.ebuild:
   Fix virtualbox-modules dependency so 1.5.7 can be installed, bug #218198

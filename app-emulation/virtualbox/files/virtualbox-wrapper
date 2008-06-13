@@ -121,6 +121,9 @@ case "$APP" in
   VBoxSDL)
     exec "$INSTALL_DIR/VBoxSDL" "$@"
   ;;
+  VBoxHeadless)
+  exec "$INSTALL_DIR/VBoxHeadless" "$@"
+  ;;
   *)
     echo "Unknown application - $APP"
   ;;

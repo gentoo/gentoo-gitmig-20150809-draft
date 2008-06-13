@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/files/vboxwebsrv-initd,v 1.1 2008/06/13 22:44:28 cardoe Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ -z "${RDATE_SERVER}" ] ; then
+		eerror "Please edit /etc/conf.d/rdate"
+		eerror "I need to know what server to use!"
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	#checkconfig || return $?
+
+	ebegin "Starting VirtualBox WebService"
+	start-stop-daemon --start --quiet --pidfile /var/run/vboxwebsrv.pid \
+		--background --make-pidfile --exec /usr/bin/vboxwebsrv \
+		-- -H ${VBOXWEBSRV_HOST} -p ${VBOXWEBSRV_PORT} -t ${VBOXWEBSRV_TIMEOUT} -i ${VBOXWEBSRV_INTERVAL}
+	eend $?
+}
+
+stop() {
+        ebegin "Stopping VirtualBox WebService"
+        start-stop-daemon --stop --quiet --pidfile /var/run/vboxwebsrv.pid
+        eend $?
+}
