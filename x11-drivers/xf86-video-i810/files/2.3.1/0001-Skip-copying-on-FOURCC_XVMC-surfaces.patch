@@ -70,5 +70,5 @@ index 67fe291..5d6c209 100644
  
      if (pDraw->type == DRAWABLE_WINDOW) {
 -- 
-1.5.5.1
+1.5.5.3
 

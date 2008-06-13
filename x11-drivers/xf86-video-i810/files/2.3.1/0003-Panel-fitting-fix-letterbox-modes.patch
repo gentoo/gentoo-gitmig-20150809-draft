@@ -23,5 +23,5 @@ index 48402df..899c6cb 100644
  		if (mode->VDisplay & 1)
  		    bottom_border++;
 -- 
-1.5.5.1
+1.5.5.3
 

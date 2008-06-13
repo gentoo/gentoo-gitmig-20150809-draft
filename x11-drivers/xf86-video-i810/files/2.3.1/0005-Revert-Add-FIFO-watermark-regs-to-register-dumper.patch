@@ -37,5 +37,5 @@ index 0eba57f..15b02ce 100644
      DEFINEREG2(FPA1, i830_debug_fp),
      DEFINEREG2(DPLL_A, i830_debug_dpll),
 -- 
-1.5.5.1
+1.5.5.3
 
