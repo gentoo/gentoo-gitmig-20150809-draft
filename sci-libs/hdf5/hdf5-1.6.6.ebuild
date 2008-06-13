@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.9 2008/06/06 15:04:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.10 2008/06/13 13:22:24 markusle Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~sparc"
 # need to update szip to get alpha, ia64, etc back in here,
 IUSE="cxx debug fortran mpi ssl szip threads tools zlib "
 
-DEPEND="!sparc? ( mpi? ( >=sys-cluster/mpich2-1.0.6
-		net-fs/nfs-utils ) )
+DEPEND="mpi? ( >=sys-cluster/mpich2-1.0.6
+		net-fs/nfs-utils )
 	ssl? ( dev-libs/openssl )
 	szip? ( sci-libs/szip )
 	zlib? ( sys-libs/zlib )
