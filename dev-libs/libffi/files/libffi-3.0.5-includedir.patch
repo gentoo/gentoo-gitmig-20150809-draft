@@ -1,0 +1,10 @@
+diff -ur libffi-3.0.5.orig/include/Makefile.am libffi-3.0.5/include/Makefile.am
+--- libffi-3.0.5.orig/include/Makefile.am	2008-02-14 17:37:00.000000000 +0200
++++ libffi-3.0.5/include/Makefile.am	2008-06-14 00:47:21.000000000 +0300
+@@ -5,5 +5,5 @@
+ DISTCLEANFILES=ffitarget.h
+ EXTRA_DIST=ffi.h.in ffi_common.h
+ 
+-includesdir = $(libdir)/@PACKAGE_NAME@-@PACKAGE_VERSION@/include
++includesdir = $(includedir)
+ nodist_includes_HEADERS = ffi.h ffitarget.h 
