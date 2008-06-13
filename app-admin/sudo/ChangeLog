@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.135 2008/06/12 10:52:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.136 2008/06/13 16:02:17 armin76 Exp $
+
+  13 Jun 2008; Raúl Porcel <armin76@gentoo.org> sudo-1.6.9_p16.ebuild:
+  ia64/sparc stable wrt #225905
 
 *sudo-1.7.0_rc2 (12 Jun 2008)
 
