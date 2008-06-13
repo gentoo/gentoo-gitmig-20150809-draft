@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/l7-filter-userspace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.2 2008/06/09 22:30:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.3 2008/06/13 12:50:36 dragonheart Exp $
+
+  13 Jun 2008; Daniel Black <dragonheart@gentoo.org>
+  +files/l7-filter-userspace-0.6-gcc4.3compat.patch,
+  l7-filter-userspace-0.6.ebuild:
+  added gcc4.3 fixes as per bug #225761. Thanks Alois Hammer and Jeroen Roovers
 
 *l7-filter-userspace-0.6 (09 Jun 2008)
 

@@ -1,0 +1,23 @@
+diff -ru l7-filter-userspace-0.6.orig/l7-conntrack.cpp l7-filter-userspace-0.6/l7-conntrack.cpp
+--- l7-filter-userspace-0.6.orig/l7-conntrack.cpp	2008-05-08 14:28:31.000000000 +1000
++++ l7-filter-userspace-0.6/l7-conntrack.cpp	2008-06-13 22:48:04.000000000 +1000
+@@ -21,6 +21,7 @@
+ #include <errno.h>
+ #include <signal.h>
+ #include <map>
++#include <string.h>
+ 
+ extern "C" {
+ #include <linux/netfilter.h>
+diff -ru l7-filter-userspace-0.6.orig/l7-queue.cpp l7-filter-userspace-0.6/l7-queue.cpp
+--- l7-filter-userspace-0.6.orig/l7-queue.cpp	2007-05-14 12:47:09.000000000 +1000
++++ l7-filter-userspace-0.6/l7-queue.cpp	2008-06-13 22:46:35.000000000 +1000
+@@ -35,6 +35,8 @@
+ #include <map>
+ #include <netinet/in.h>
+ 
++#include <string.h>
++
+ #include "l7-conntrack.h"
+ #include "l7-queue.h"
+ #include "util.h"
