@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.5.ebuild,v 1.1 2008/06/13 20:29:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.5.ebuild,v 1.2 2008/06/13 20:54:59 drac Exp $
 
 inherit eutils
 
@@ -13,14 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-pkg_setup() {
-		if built_with_use --missing true sys-devel/gcc libffi; then
-			eerror "Only one libffi installed is supported."
-			die "Re-emerge sys-devel/gcc without USE libffi."
-		fi
+src_compile() {
+	econf --disable-dependency-tracking || die "econf failed."
+	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc ChangeLog* README TODO
+}
+
+pkg_postinst() {
+	elog "This package replaces USE libffi from sys-devel/gcc, please unset it."
 }
