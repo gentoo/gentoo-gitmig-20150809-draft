@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/zzuf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.2 2008/05/19 00:25:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.3 2008/06/13 18:04:52 flameeyes Exp $
+
+*zzuf-0.12 (13 Jun 2008)
+
+  13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> -zzuf-0.10.ebuild,
+  +zzuf-0.12.ebuild:
+  Version bump, fix tests being built unconditionally (bug #226355), add
+  src_test for the testsuite, which doesn't work with sandbox.
 
   19 May 2008; Carsten Lohrke <carlo@gentoo.org> zzuf-0.10.ebuild:
   Keyword ~x86.
