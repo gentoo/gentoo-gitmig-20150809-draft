@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8718 2008/06/13 16:13:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8719 2008/06/13 16:57:39 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1059,11 +1059,6 @@ sys-kernel/hppa-sources
 # anyone looking to take over maintaining heimdal
 # from seemant would make both of us happy
 =app-crypt/heimdal-1.0.1
-
-# Jeroen Roovers <jer@gentoo.org> (13 Nov 2007)
-# These are weeklies, unlike www-client/opera-9.50_beta1, and they appear to be
-# much less stable, so I am masking them for now.
-=www-client/opera-9.50_beta2_p*
 
 # Robin H. Johnson <robbat2@gentoo.org> (02 Nov 2007)
 # Brokeness in these
