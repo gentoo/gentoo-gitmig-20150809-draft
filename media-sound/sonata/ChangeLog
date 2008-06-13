@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.30 2008/05/15 19:49:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.31 2008/06/13 08:22:00 angelos Exp $
+
+*sonata-1.5.2 (13 Jun 2008)
+
+  13 Jun 2008; Christoph Mende <angelos@gentoo.org> -sonata-1.5.1.ebuild,
+  +sonata-1.5.2.ebuild:
+  Version bump with reintroduced optional dbus support, remove old
 
   15 May 2008; Markus Meier <maekke@gentoo.org> sonata-1.5.1.ebuild:
   add ~x86, bug #222011
