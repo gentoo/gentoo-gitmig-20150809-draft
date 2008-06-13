@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Cracklib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.16 2008/04/29 05:58:06 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.17 2008/06/13 17:00:25 armin76 Exp $
+
+  13 Jun 2008; Raúl Porcel <armin76@gentoo.org> Crypt-Cracklib-1.2.ebuild:
+  ia64/x86 stable
 
 *Crypt-Cracklib-1.2 (29 Apr 2008)
 
