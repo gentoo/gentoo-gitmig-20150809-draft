@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.94 2008/06/13 13:46:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.95 2008/06/13 14:30:20 flameeyes Exp $
+
+  13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libcdio-0.80-minimal.patch, libcdio-0.80.ebuild:
+  Fix building with minimal USE flag enabled. Remove C++ bindings pkg-config
+  datafiles when cxx USE flag is disabled (fixed upstream).
 
 *libcdio-0.80 (13 Jun 2008)
 

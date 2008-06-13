@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.80.ebuild,v 1.1 2008/06/13 13:46:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.80.ebuild,v 1.2 2008/06/13 14:30:20 flameeyes Exp $
 
 EAPI=1
 
-inherit eutils libtool multilib
+inherit eutils libtool multilib autotools
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control"
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
@@ -28,6 +28,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.79-gcc-4.3-include.patch
+	epatch "${FILESDIR}"/${P}-minimal.patch
+
+	eautomake
 	elibtoolize
 }
 
@@ -56,9 +59,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 
 	# maybe next version is fixed
-	if use minimal; then
-		rm -f "${D}/usr/$(get_libdir)/pkgconfig/libcdio_cdda.pc"
-		rm -f "${D}/usr/include/cdio/cdda.h"
+	# yes it's a different one than before
+	if ! use cxx; then
+		rm "${D}"/usr/$(get_libdir)/pkgconfig/{libcdio,libiso9660}++.pc
 	fi
 }
 
