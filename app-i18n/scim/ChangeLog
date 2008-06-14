@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.120 2007/07/22 09:20:28 calchan Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.121 2008/06/14 09:40:12 flameeyes Exp $
+
+*scim-1.4.7-r1 (14 Jun 2008)
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/scim-1.4.7-syslibltdl.patch, +scim-1.4.7-r1.ebuild:
+  Use system libltdl, not the internal copy (should fix building with
+  libtool 2.2 hopefully).
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> scim-1.4.5-r1.ebuild:
   Drop virtual/x11 dependency.
