@@ -1,0 +1,60 @@
+diff -Naur vdict-1.97.orig/fd/fd.cpp vdict-1.97/fd/fd.cpp
+--- vdict-1.97.orig/fd/fd.cpp	2005-10-07 02:55:58.000000000 +0900
++++ vdict-1.97/fd/fd.cpp	2008-06-14 13:37:49.000000000 +0900
+@@ -97,11 +97,11 @@
+ 	fdMainMenu->insertSeparator();
+ 	for( uint i=0; i<dictList.count(); i++ ) {
+ 		cdict = dictList.at(i);
+-		fdMainMenu->insertItem( cdict->getDescription(), (int)cdict );
++		fdMainMenu->insertItem( cdict->getDescription(), (intptr_t)cdict );
+ 	}
+ 	if( dictList.count()>0 ) {
+ 		cdict = dictList.at(0);
+-		fdMainMenu->setItemChecked( (int)cdict, true );
++		fdMainMenu->setItemChecked( (intptr_t)cdict, true );
+ 		fdlookup->updateInfo();
+ 	}
+ 	fdMainMenu->insertSeparator();
+@@ -247,10 +247,10 @@
+ void FD::updateItem( int t )
+ {
+ 	VDictDB *d = dictList.at( t );
+-	fdMainMenu->insertItem( d->getDescription(), (int)d, t+2 );
++	fdMainMenu->insertItem( d->getDescription(), (intptr_t)d, t+2 );
+ 	if( !cdict ) {
+ 		cdict = d;
+-		fdMainMenu->setItemChecked( (int)d, true );
++		fdMainMenu->setItemChecked( (intptr_t)d, true );
+ 	}
+ }
+ /*----------------------------------------------------------------------------*/
+@@ -263,15 +263,15 @@
+ void FD::modifyItem( int t )
+ {
+ 	VDictDB *d = dictList.at( t );
+-	fdMainMenu->changeItem( (int)d, d->getDescription() );
++	fdMainMenu->changeItem( (intptr_t)d, d->getDescription() );
+ }
+ /*----------------------------------------------------------------------------*/
+ void FD::moveItem( int t, int n )
+ {
+ 	VDictDB *d = dictList.at( n );
+ 	fdMainMenu->removeItemAt( t + 2 );
+-	fdMainMenu->insertItem( d->getDescription(), (int)d, n+2 );
+-	if( cdict == d ) fdMainMenu->setItemChecked( (int)d, true );
++	fdMainMenu->insertItem( d->getDescription(), (intptr_t)d, n+2 );
++	if( cdict == d ) fdMainMenu->setItemChecked( (intptr_t)d, true );
+ }
+ /*----------------------------------------------------------------------------*/
+ void FD::fdMainMenuClicked( int id )
+@@ -291,8 +291,8 @@
+ 			break;
+ 		default:
+ 			if( id>=0 && cdict!=(VDictDB *)id ) {
+-				fdMainMenu->setItemChecked( (int)cdict, false );
+-				fdMainMenu->setItemChecked( (int)(cdict = (VDictDB *)id), true );
++				fdMainMenu->setItemChecked( (intptr_t)cdict, false );
++				fdMainMenu->setItemChecked( (intptr_t)(cdict = (VDictDB *)id), true );
+ 			}
+ 			break;
+ 	}

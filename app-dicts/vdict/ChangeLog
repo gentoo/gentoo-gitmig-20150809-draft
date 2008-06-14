@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/vdict
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.4 2007/01/25 04:54:29 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.5 2008/06/14 05:06:45 matsuu Exp $
+
+*vdict-1.97-r1 (14 Jun 2008)
+
+  14 Jun 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/vdict-1.97-intptr_t.patch, vdict-1.94.ebuild, -vdict-1.97.ebuild,
+  +vdict-1.97-r1.ebuild:
+  Fixed qt dependency, bug #217164. Fixed to work with amd64.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> vdict-1.94.ebuild,
   vdict-1.97.ebuild:
