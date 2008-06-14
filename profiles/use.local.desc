@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3586 2008/06/13 22:47:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3587 2008/06/14 16:54:19 mueli Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,6 +70,7 @@ app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:openct - build using dev-libs/openct compatibility
 app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gpgme:pth - Enable support for GNU Portable Threads multithreading library
+app-crypt/heimdal:otp - Enable support for one-time passwords (OTP) in some heimdal apps
 app-crypt/heimdal:pkinit - Enable pkinit support to get the initial ticket
 app-crypt/johntheripper:custom-cflags - Enables custom cflags (not supported)
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1546 2008/06/14 14:54:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1547 2008/06/14 16:54:19 mueli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  14 Jun 2008; Michael Hammer <mueli@gentoo.org>;
+  use.local.desc:
+  Add USE=otp for app-crypt/heimdal
 
   14 Jun 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Removed wulfstat, xmlsysd which got replaced by wulfware (and rhide).
