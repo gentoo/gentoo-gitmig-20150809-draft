@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sary-ruby
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.30 2007/12/25 17:07:43 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.31 2008/06/14 20:58:05 graaff Exp $
+
+  14 Jun 2008; Hans de Graaff <graaff@gentoo.org> -sary-ruby-1.1.0.1.ebuild:
+  Remove old version
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
