@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3587 2008/06/14 16:54:19 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3588 2008/06/14 18:20:02 dertobi123 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -904,6 +904,7 @@ mail-filter/MailScanner:f-prot - Enable usage of fprot virus scanner
 mail-filter/MailScanner:postfix - Set postfix to used MTA
 mail-filter/MailScanner:spamassassin - Enable usage of spamassassin for spam detection
 mail-filter/amavisd-new:courier - Add support for usage with courierfilter
+mail-filter/amavisd-new:dkim - Add optional DomainKeys support
 mail-filter/amavisd-new:qmail - Add support for qmail
 mail-filter/ask:procmail - Adds support for procmail
 mail-filter/assp:spf - Adds support for Sender Policy Framework
