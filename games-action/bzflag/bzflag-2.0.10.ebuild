@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.10.ebuild,v 1.3 2008/02/29 18:21:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.10.ebuild,v 1.4 2008/06/14 15:12:56 coldwind Exp $
 
 inherit eutils flag-o-matic games
 
@@ -43,6 +43,12 @@ pkg_setup() {
 		ewarn "emerging net-misc/curl with USE=\"ares\"."
 	fi
 	games_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 }
 
 src_compile() {

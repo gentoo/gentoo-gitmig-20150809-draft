@@ -1,0 +1,393 @@
+--- ./src/bzfs/CustomGroup.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomGroup.cxx	2008-06-10 01:24:51.000000000 +0200
+@@ -16,6 +16,7 @@
+ /* system headers */
+ #include <sstream>
+ #include <string>
++#include <cstring>
+ 
+ /* common headers */
+ #include "global.h" // for CtfTeams
+--- ./src/bzfs/WorldFileObstacle.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/WorldFileObstacle.cxx	2008-06-10 01:34:39.000000000 +0200
+@@ -16,6 +16,7 @@
+ 
+ #include "common.h"
+ #include <math.h>
++#include <cstring>
+ 
+ #include "WorldFileObstacle.h"
+ 
+--- ./src/bzfs/WorldFileObject.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/WorldFileObject.cxx	2008-06-10 01:34:09.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <string>
+ #include <iostream>
+ #include <vector>
++#include <cstring>
+ 
+ WorldFileObject::WorldFileObject()
+ {
+--- ./src/bzfs/CustomDynamicColor.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomDynamicColor.cxx	2008-06-10 01:24:31.000000000 +0200
+@@ -18,6 +18,7 @@
+ /* system implementation headers */
+ #include <sstream>
+ #include <vector>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "DynamicColor.h"
+--- ./src/bzfs/Authentication.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/Authentication.cxx	2008-06-10 01:23:10.000000000 +0200
+@@ -20,6 +20,7 @@
+ #endif
+ 
+ /* system implementation headers */
++#include <cstring>
+ #ifdef HAVE_KRB5
+ #include <com_err.h>
+ #endif
+--- ./src/bzfs/TeamBases.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/TeamBases.cxx	2008-06-10 01:33:13.000000000 +0200
+@@ -19,6 +19,8 @@
+ #include "Pack.h"
+ #include "BZDBCache.h"
+ 
++#include <cstring>
++
+ TeamBases::TeamBases()
+ {
+     color = RedTeam;
+--- ./src/bzfs/CustomWeapon.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomWeapon.cxx	2008-06-10 01:28:34.000000000 +0200
+@@ -18,6 +18,7 @@
+ #include <sstream>
+ #include <string>
+ #include <math.h>
++#include <cstring>
+ 
+ /* local implementation headers */
+ #include "WorldWeapons.h"
+--- ./src/bzfs/CustomWaterLevel.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomWaterLevel.cxx	2008-06-10 01:27:59.000000000 +0200
+@@ -23,6 +23,8 @@
+ #include "BzMaterial.h"
+ #include "TextureMatrix.h"
+ 
++#include <cstring>
++
+ 
+ CustomWaterLevel::CustomWaterLevel()
+ {
+--- ./src/bzfs/ParseMaterial.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/ParseMaterial.cxx	2008-06-10 01:30:10.000000000 +0200
+@@ -16,6 +16,7 @@
+ 
+ /* system headers */
+ #include <sstream>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "ParseColor.h"
+--- ./src/bzfs/WorldFileLocation.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/WorldFileLocation.cxx	2008-06-10 01:33:56.000000000 +0200
+@@ -17,6 +17,7 @@
+ #include "Pack.h"
+ #include <math.h>
+ #include <sstream>
++#include <cstring>
+ 
+ #include "WorldFileObject.h"
+ #include "WorldFileLocation.h"
+--- ./src/bzfs/CustomPhysicsDriver.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomPhysicsDriver.cxx	2008-06-10 01:27:01.000000000 +0200
+@@ -17,6 +17,7 @@
+ 
+ /* system implementation headers */
+ #include <sstream>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "PhysicsDriver.h"
+--- ./src/bzfs/CustomMeshTransform.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomMeshTransform.cxx	2008-06-10 01:26:30.000000000 +0200
+@@ -17,6 +17,7 @@
+ 
+ /* system implementation headers */
+ #include <sstream>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "MeshTransform.h"
+--- ./src/bzfs/CustomBase.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomBase.cxx	2008-06-10 01:24:10.000000000 +0200
+@@ -12,6 +12,7 @@
+ 
+ /* interface header */
+ #include "CustomBase.h"
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "global.h" // for CtfTeams
+--- ./src/bzfs/CustomTextureMatrix.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomTextureMatrix.cxx	2008-06-10 01:27:26.000000000 +0200
+@@ -17,6 +17,7 @@
+ 
+ /* system implementation headers */
+ #include <math.h>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "TextureMatrix.h"
+--- ./src/bzfs/CustomZone.cxx	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzfs/CustomZone.cxx	2008-06-10 01:29:24.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <string>
+ #include <sstream>
+ #include <math.h>
++#include <cstring>
+ 
+ /* local implementation headers */
+ //#include "EntryZones.h"
+--- ./src/3D/FontManager.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/3D/FontManager.cxx	2008-06-10 01:09:48.000000000 +0200
+@@ -19,6 +19,7 @@
+ // System headers
+ #include <math.h>
+ #include <string>
++#include <cstring>
+ 
+ // Global implementation headers
+ #include "bzfgl.h"
+--- ./src/net/AresHandler.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/net/AresHandler.cxx	2008-06-10 01:14:50.000000000 +0200
+@@ -12,6 +12,7 @@
+ 
+ /* interface header */
+ #include "AresHandler.h"
++#include <cstring>
+ 
+ /* system implementation headers */
+ #include <errno.h>
+--- ./src/scene/BSPSceneDatabase.cxx	2007-11-15 23:10:54.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/scene/BSPSceneDatabase.cxx	2008-06-10 01:21:02.000000000 +0200
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include "common.h"
++#include <cstring>
+ #include "SceneNode.h"
+ #include <assert.h>
+ #include "BSPSceneDatabase.h"
+--- ./src/geometry/TankSceneNode.cxx	2007-11-15 23:10:49.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/geometry/TankSceneNode.cxx	2008-06-10 01:18:04.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ // system headers
+ #include <math.h>
++#include <cstring>
+ 
+ // common implementation headers
+ #include "StateDatabase.h"
+--- ./src/geometry/WallSceneNode.cxx	2007-11-15 23:10:49.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/geometry/WallSceneNode.cxx	2008-06-10 01:18:28.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <math.h>
++#include <cstring>
+ 
+ // common implementation headers
+ #include "StateDatabase.h"
+--- ./src/common/StateDatabase.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/StateDatabase.cxx	2008-06-10 01:13:15.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <iostream>
+ #include <math.h>
+ #include <string>
++#include <cstring>
+ 
+ // local implementation headers
+ #include "ErrorHandler.h"
+--- ./src/common/AccessList.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/AccessList.cxx	2008-06-10 01:10:18.000000000 +0200
+@@ -18,6 +18,7 @@
+ // system headers
+ #include <stdio.h>
+ #include <ctype.h>
++#include <cstring>
+ 
+ // common headers
+ #include "bzfio.h"
+--- ./src/common/TimeKeeper.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/TimeKeeper.cxx	2008-06-10 01:14:06.000000000 +0200
+@@ -16,6 +16,7 @@
+ /* system implementation headers */
+ #include <time.h>
+ #include <string>
++#include <cstring>
+ #ifdef HAVE_UNISTD_H
+ #  include <unistd.h>
+ #endif
+--- ./src/common/TextUtils.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/TextUtils.cxx	2008-06-10 01:13:47.000000000 +0200
+@@ -18,6 +18,7 @@
+ 
+ // system headers
+ #include <string>
++#include <cstring>
+ #include <algorithm>
+ #include <sstream>
+ #include <stdarg.h>
+--- ./src/common/Flag.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/Flag.cxx	2008-06-10 01:11:59.000000000 +0200
+@@ -18,6 +18,7 @@
+ /* system implementation headers */
+ #include <math.h>
+ #include <string>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "Team.h"
+--- ./src/common/cURLManager.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/cURLManager.cxx	2008-06-10 01:14:25.000000000 +0200
+@@ -13,6 +13,7 @@
+ // class interface header
+ 
+ #include "cURLManager.h"
++#include <cstring>
+ 
+ // common implementation headers
+ #include "bzfio.h"
+--- ./src/common/Bundle.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/common/Bundle.cxx	2008-06-10 01:11:18.000000000 +0200
+@@ -20,6 +20,7 @@
+ // system headers
+ #include <fstream>
+ #include <stdio.h>
++#include <cstring>
+ 
+ // local implementation headers
+ #include "StateDatabase.h"
+--- ./src/ogl/OpenGLTexture.cxx	2007-11-15 23:10:46.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/ogl/OpenGLTexture.cxx	2008-06-10 01:20:10.000000000 +0200
+@@ -14,6 +14,7 @@
+ 
+ // system headers
+ #include <string>
++#include <cstring>
+ 
+ // common headers
+ #include "bzfio.h"
+--- ./src/mediafile/PNGImageFile.cxx	2007-11-15 23:10:46.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/mediafile/PNGImageFile.cxx	2008-06-10 01:21:39.000000000 +0200
+@@ -13,6 +13,7 @@
+ #include "common.h"
+ #include "PNGImageFile.h"
+ #include <iostream>
++#include <cstring>
+ #include "Pack.h"
+ #include "bzfio.h"
+ #include "../zlib/zconf.h"
+--- ./src/bzadmin/OptionParser.cxx	2007-11-15 23:10:48.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzadmin/OptionParser.cxx	2008-06-10 01:46:08.000000000 +0200
+@@ -16,6 +16,7 @@
+ 
+ /* interface header */
+ #include "OptionParser.h"
++#include <cstring>
+ 
+ 
+ OptionParser::OptionParser(const std::string& helpPrefix,
+--- ./src/game/ServerItem.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/game/ServerItem.cxx	2008-06-10 01:15:35.000000000 +0200
+@@ -14,6 +14,7 @@
+ 
+ /* system headers */
+ #include <string>
++#include <cstring>
+ 
+ /* interface header */
+ #include "ServerItem.h"
+--- ./src/game/ServerListCache.cxx	2007-11-16 23:56:01.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/game/ServerListCache.cxx	2008-06-10 01:16:56.000000000 +0200
+@@ -15,6 +15,7 @@
+ 
+ /* system headers */
+ #include <fstream>
++#include <cstring>
+ 
+ // invoke persistent rebuilding for build versioning
+ #include "version.h"
+--- ./src/game/ServerList.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/game/ServerList.cxx	2008-06-10 01:16:09.000000000 +0200
+@@ -17,6 +17,8 @@
+ #include <iostream>
+ #include <vector>
+ #include <string>
++#include <cstring>
++
+ #if !defined(_WIN32)
+ #include <errno.h>
+ #endif
+--- ./src/bzflag/ServerMenu.cxx	2007-11-15 23:10:58.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzflag/ServerMenu.cxx	2008-06-10 01:43:53.000000000 +0200
+@@ -12,6 +12,7 @@
+ 
+ /* interface header */
+ #include "ServerMenu.h"
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "FontManager.h"
+--- ./src/bzflag/HelpMenu.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzflag/HelpMenu.cxx	2008-06-10 01:41:02.000000000 +0200
+@@ -17,6 +17,7 @@
+ #include "KeyManager.h"
+ #include "Flag.h"
+ #include "FontManager.h"
++#include <cstring>
+ 
+ /* local implementation headers */
+ #include "HUDDialogStack.h"
+--- ./src/bzflag/sound.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzflag/sound.cxx	2008-06-10 01:45:35.000000000 +0200
+@@ -16,6 +16,7 @@
+ // system headers
+ #include <vector>
+ #include <map>
++#include <cstring>
+ 
+ // common headers
+ #include "BzfMedia.h"
+--- ./src/bzflag/ControlPanel.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzflag/ControlPanel.cxx	2008-06-10 01:39:00.000000000 +0200
+@@ -19,6 +19,7 @@
+ /* system headers */
+ #include <assert.h>
+ #include <time.h>
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "BZDBCache.h"
+--- ./src/bzflag/JoinMenu.cxx	2007-11-15 23:10:59.000000000 +0100
++++ ../bzflag-2.0.10.cstring/./src/bzflag/JoinMenu.cxx	2008-06-10 01:42:37.000000000 +0200
+@@ -12,6 +12,7 @@
+ 
+ /* interface header */
+ #include "JoinMenu.h"
++#include <cstring>
+ 
+ /* common implementation headers */
+ #include "FontManager.h"
+--- src/bzfs/AccessControlList.h	2007-11-15 23:10:56.000000000 +0100
++++ ../bzflag-2.0.10/src/bzfs/AccessControlList.h	2008-06-10 02:08:42.000000000 +0200
+@@ -15,6 +15,7 @@
+ 
+ #include <vector>
+ #include <string>
++#include <cstring>
+ 
+ #include "TimeKeeper.h"
+ #include "Address.h"
