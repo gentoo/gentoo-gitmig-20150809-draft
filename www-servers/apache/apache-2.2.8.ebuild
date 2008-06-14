@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.8.ebuild,v 1.8 2008/04/20 21:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.8.ebuild,v 1.9 2008/06/14 13:13:42 zmedico Exp $
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20080119"
@@ -96,12 +96,29 @@ src_unpack() {
 	apache-2_src_unpack
 }
 
+pkg_preinst() {
+	has_version ">=${CATEGORY}/${PN}-2.2.4"
+	remove_upstream_configs=$?
+
+	has_version "<${CATEGORY}/${PN}-2.2.6-r1"
+	auth_ldap_define_changed=$?
+
+	has_version "<${CATEGORY}/${PN}-2.2.4-r7"
+	vhost_directives_moved=$?
+
+	has_version "<${CATEGORY}/${PN}-2.2.4-r5"
+	config_layout_changed=$?
+
+	has_version "<${CATEGORY}/${PN}-2.2.0"
+	previous_less_than_2_2_0=$?
+}
+
 pkg_postinst() {
 	apache-2_pkg_postinst
 
 	# previous installations of apache-2.2 installed the upstream configuration
 	# files, which shouldn't even have been installed!
-	if has_version '>=www-servers/apache-2.2.4' ; then
+	if [[ $remove_upstream_configs = 0 ]] ; then
 		if [[ -f "${ROOT}"etc/apache2/apache2.conf ]] ; then
 			rm -f "${ROOT}"/etc/apache2/apache2.conf >/dev/null 2>&1
 		fi
@@ -114,7 +131,7 @@ pkg_postinst() {
 	fi
 
 	# note regarding IfDefine changes
-	if has_version '<www-servers/apache-2.2.6-r1' ; then
+	if [[ $auth_ldap_define_changed = 0 ]] ; then
 		elog
 		elog "When upgrading from versions 2.2.6 or earlier, please be aware"
 		elog "that the define for mod_authnz_ldap has changed from AUTH_LDAP"
@@ -124,7 +141,7 @@ pkg_postinst() {
 	fi
 
 	# note the changes regarding DEFAULT_VHOST and SSL_DEFAULT_VHOST
-	if has_version '<www-servers/apache-2.2.4-r7' ; then
+	if [[ $vhost_directives_moved = 0 ]] ; then
 		elog
 		elog "Listen directives have been moved into the default virtual host"
 		elog "configuation. At least DEFAULT_VHOST has been enabled for you"
@@ -136,7 +153,7 @@ pkg_postinst() {
 	fi
 
 	# note the user of the config changes
-	if has_version '<www-servers/apache-2.2.4-r5' ; then
+	if [[ $config_layout_changed = 0 ]] ; then
 		elog
 		elog "Please make sure that you update your /etc directory."
 		elog "Between the versions, we had to changes some config files"
@@ -149,7 +166,7 @@ pkg_postinst() {
 	fi
 
 	# check for dual/upgrade install
-	if has_version '<www-servers/apache-2.2.0' ; then
+	if [[ $previous_less_than_2_2_0 = 0 ]] ; then
 		elog
 		elog "When upgrading from versions below 2.2.0 to this version, you"
 		elog "need to rebuild all your modules. Please do so for your modules"
