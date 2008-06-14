@@ -1,0 +1,11 @@
+diff -ru conntrack-tools-0.9.7~/src/ignore_pool.c conntrack-tools-0.9.7/src/ignore_pool.c
+--- conntrack-tools-0.9.7~/src/ignore_pool.c	2008-06-14 18:23:09.000000000 +0200
++++ conntrack-tools-0.9.7/src/ignore_pool.c	2008-06-14 21:17:13.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <libnetfilter_conntrack/libnetfilter_conntrack.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <limits.h>
+ 
+ /* XXX: These should be configurable, better use a rb-tree */
+ #define IGNORE_POOL_SIZE 128
