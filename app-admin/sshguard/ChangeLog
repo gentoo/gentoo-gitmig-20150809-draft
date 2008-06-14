@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sshguard
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.4 2007/08/15 13:54:57 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.5 2008/06/14 10:20:16 armin76 Exp $
+
+  14 Jun 2008; Raúl Porcel <armin76@gentoo.org> sshguard-1.0.ebuild:
+  x86 stable wrt #225235
 
   15 Aug 2007; Steve Dibb <beandog@gentoo.org> sshguard-1.0.ebuild:
   add ~amd64, bug 188693
