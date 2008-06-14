@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.ebuild,v 1.6 2007/09/28 23:38:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.ebuild,v 1.7 2008/06/14 22:30:05 lu_zero Exp $
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets autotools
 
 DESCRIPTION="a LGPL-ed pc emulator"
 HOMEPAGE="http://bochs.sourceforge.net/"
@@ -49,6 +49,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-redog.patch
 	epatch ${FILESDIR}/${P}-floppy.patch
 	epatch ${FILESDIR}/${P}-ne2k.patch
+	eautoconf
 }
 
 src_compile() {
@@ -84,8 +85,6 @@ src_compile() {
 		myconf="$myconf --with-nogui"
 	fi
 
-# needed to use gtk2 includes and libs
-	autoconf
 	./configure \
 		--enable-usb --enable-pci --enable-vbe \
 		--enable-sse=2 --enable-3dnow --enable-plugins \
