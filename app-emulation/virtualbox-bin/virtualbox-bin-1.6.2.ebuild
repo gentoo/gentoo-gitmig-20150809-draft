@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.1 2008/06/13 22:44:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.2 2008/06/14 03:52:08 mr_bones_ Exp $
 
 inherit eutils fdo-mime qt3 pax-utils
 
@@ -87,7 +87,7 @@ src_install() {
 			newicon VBox.png virtualbox.png
 			newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
 	fi
-		
+
 	# create virtualbox configurations files
 	insinto /etc/vbox
 	newins "${FILESDIR}/${PN}-config" vbox.cfg
