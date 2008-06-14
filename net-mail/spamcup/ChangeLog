@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/spamcup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.6 2008/05/30 07:19:04 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.7 2008/06/14 19:33:37 dertobi123 Exp $
+
+*spamcup-1.09 (14 Jun 2008)
+
+  14 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +spamcup-1.09.ebuild:
+  Version bump (#222253)
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
