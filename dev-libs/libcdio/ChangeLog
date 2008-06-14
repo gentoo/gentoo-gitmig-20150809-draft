@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.95 2008/06/13 14:30:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.96 2008/06/14 10:56:42 flameeyes Exp $
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.80.ebuild:
+  Disable testdefault build during src_compile phase (fixed upstream too);
+  remove test restriction as they should pass now.
 
   13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/libcdio-0.80-minimal.patch, libcdio-0.80.ebuild:
