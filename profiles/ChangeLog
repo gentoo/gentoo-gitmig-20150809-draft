@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1544 2008/06/13 22:47:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1545 2008/06/14 01:46:01 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask net-analyzer/nepenthes-0.2.0 because it doesn't compile. bug #199168
 
   13 Jun 2008; Doug Goldstein <cardoe@gentoo.org> use.local.desc:
   copy changes from jokey's overlay to the tree as jokey requested
