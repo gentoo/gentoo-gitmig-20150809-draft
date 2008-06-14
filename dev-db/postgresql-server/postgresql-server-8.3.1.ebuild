@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.1.ebuild,v 1.4 2008/06/04 21:44:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.1.ebuild,v 1.5 2008/06/14 11:49:54 dev-zero Exp $
 
 EAPI="1"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-server.patch"
+		"${FILESDIR}/postgresql-${SLOT}.1-server.patch"
 
 	if hasq test ${FEATURES}; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source

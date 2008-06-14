@@ -31,7 +31,7 @@ index c71b175..674036a 100644
  
  AC_INIT([PostgreSQL], [8.0.15], [pgsql-bugs@postgresql.org])
  
--m4_if(m4_defn([m4_PACKAGE_VERSION]), [2.53], [], [m4_fatal([Autoconf version 2.53 is required.
+-m4_if(m4_defn([m4_PACKAGE_VERSION]), [2.53], [], [m4_fatal([Autoconf version 2.59 is required.
 -Untested combinations of 'autoconf' and PostgreSQL versions are not
 -recommended.  You can remove the check from 'configure.in' but it is then
 -your responsibility whether the result works or not.])])

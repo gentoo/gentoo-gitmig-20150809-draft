@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.7.ebuild,v 1.3 2008/06/04 21:44:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.7.ebuild,v 1.4 2008/06/14 11:49:54 dev-zero Exp $
 
 EAPI="1"
 
@@ -113,8 +113,7 @@ src_install() {
 	newinitd "${FILESDIR}/postgresql.init-${SLOT}" postgresql-${SLOT} || die "Inserting init.d-file failed"
 	newconfd "${FILESDIR}/postgresql.conf-${SLOT}" postgresql-${SLOT} || die "Inserting conf.d-file failed"
 
-	# Workaround for paludis
-	[ -f "${ROOT}/var/run/postgresql/.keep" ] || keepdir /var/run/postgresql
+	keepdir /var/run/postgresql
 	fperms 0770 /var/run/postgresql
 	fowners postgres:postgres /var/run/postgresql
 }

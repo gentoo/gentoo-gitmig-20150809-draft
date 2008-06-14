@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.15.ebuild,v 1.4 2008/06/14 11:49:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.9.ebuild,v 1.1 2008/06/14 11:49:54 dev-zero Exp $
 
 EAPI="1"
 
@@ -43,18 +43,20 @@ S="${WORKDIR}/postgresql-${PV}"
 
 pkg_setup() {
 	enewgroup postgres 70
-	enewuser postgres 70 /bin/bash /var/lib postgres
+	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/postgresql-${SLOT}.15-common.patch" \
+	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-server.patch"
 
 	if hasq test ${FEATURES}; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
+	else
+		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
 
 	eautoconf
@@ -66,6 +68,7 @@ src_compile() {
 
 	# eval is needed to get along with pg_config quotation of space-rich entities.
 	eval econf "$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --configure)" \
+		--disable-thread-safety \
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with tcl) \
@@ -73,10 +76,11 @@ src_compile() {
 		"$(built_with_use ~dev-db/postgresql-base-${PV} nls && use_enable nls nls "$(wanted_languages)")" \
 		|| die "configure failed"
 
-	for bd in . contrib $(use xml && echo contrib/xml2) ; do
+	for bd in . contrib $(use xml && echo contrib/xml2); do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake -C $bd -j1 LD="$(tc-getLD) $(get_abi_LDFLAGS)" \
 				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+				PGXS_IN_SERVER=1 PGXS_WITH_SERVER="${S}/src/backend/postgres" \
 				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake in $bd failed"
 	done
 }
@@ -91,11 +95,13 @@ src_install() {
 	for bd in . contrib $(use xml && echo contrib/xml2) ; do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake install -C $bd -j1 DESTDIR="${D}" \
+				PGXS_IN_SERVER=1 PGXS_WITH_SERVER="${S}/src/backend/postgres" \
 				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
 				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake install in $bd failed"
 	done
-	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/"
-	rm "${D}"/usr/share/postgresql-${SLOT}/man/man1/{clusterdb,create{db,lang,user},drop{db,lang,user},ecpg,pg_{config,dump,dumpall,restore},psql,vacuumdb}.1
+
+	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/" "${D}/usr/share/doc/${PF}/html"
+	rm "${D}"/usr/share/postgresql-${SLOT}/man/man1/{clusterdb,create{db,lang,user},drop{db,lang,user},ecpg,pg_{config,dump,dumpall,restore},psql,reindexdb,vacuumdb}.1
 
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
@@ -132,6 +138,9 @@ pkg_postinst() {
 	elog
 	elog "emerge --config =${CATEGORY}/${PF}"
 	elog
+	elog "The autovacuum function, which was in contrib, has been moved to the main"
+	elog "PostgreSQL functions starting with 8.1."
+	elog "You can enable it in the clusters postgresql.conf."
 }
 
 pkg_postrm() {
@@ -222,10 +231,6 @@ pkg_config() {
 }
 
 src_test() {
-	sed -i \
-		-e '/test: horology/d' \
-		src/test/regress/{parallel_schedule,serial_schedule} || die "sed failed"
-
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 		emake -j1 check \

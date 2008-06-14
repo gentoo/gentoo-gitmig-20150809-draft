@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.7 2008/06/04 21:44:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.8 2008/06/14 11:49:54 dev-zero Exp $
+
+*postgresql-server-8.3.3 (14 Jun 2008)
+*postgresql-server-8.2.9 (14 Jun 2008)
+*postgresql-server-8.1.13 (14 Jun 2008)
+*postgresql-server-8.0.17 (14 Jun 2008)
+*postgresql-server-7.4.21 (14 Jun 2008)
+
+  14 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/postgresql-7.4.21-autoconf.patch,
+  +files/postgresql-8.0.15-common.patch, files/postgresql-8.0-common.patch,
+  +files/postgresql-8.3.1-server.patch, files/postgresql-8.3-server.patch,
+  +postgresql-server-7.4.21.ebuild, postgresql-server-8.0.15.ebuild,
+  +postgresql-server-8.0.17.ebuild, +postgresql-server-8.1.13.ebuild,
+  postgresql-server-8.2.7.ebuild, +postgresql-server-8.2.9.ebuild,
+  postgresql-server-8.3.1.ebuild, +postgresql-server-8.3.3.ebuild:
+  Changed home-path for the postgresql from /var/lib to /var/lib/postgresql
+  (bug #177085). Fixed elog for the location of postgresql.conf (bug
+  #194701). Change to not install the html-docs since they're provided by
+  postgresql-docs (bug #225629).
 
   04 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   postgresql-server-7.3.21.ebuild, postgresql-server-7.4.19.ebuild,
