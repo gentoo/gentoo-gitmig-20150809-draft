@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.31 2008/06/14 08:59:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.32 2008/06/14 19:42:21 ken69267 Exp $
+
+  14 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
+  claws-mail-gtkhtml-0.18.ebuild:
+  amd64 stable, bug #222167
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> claws-mail-gtkhtml-0.18.ebuild:
   Stable on ppc wrt bug 222167
