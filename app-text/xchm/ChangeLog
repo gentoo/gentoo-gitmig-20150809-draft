@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.1 2008/05/19 13:14:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.2 2008/06/14 09:02:59 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> xchm-1.14.ebuild:
+  Stable on ppc wrt bug 226451
 
   19 May 2008; Peter Volkov <pva@gentoo.org> +files/xchm-1.13-gcc-4.3.patch,
   +files/xchm.desktop, +files/xchm.xml, +metadata.xml, +xchm-1.13.ebuild,
