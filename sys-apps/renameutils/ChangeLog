@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/renameutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.7 2007/12/11 08:41:48 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.8 2008/06/14 00:03:27 darkside Exp $
+
+  14 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/renameutils-0.9.0-destdir.patch, renameutils-0.9.0.ebuild:
+  add patch to honor DESTDIR. Thanks to pavelo@centrum.sk for providing fix,
+  bug #215954
 
 *renameutils-0.9.0 (11 Dec 2007)
 
