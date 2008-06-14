@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/files/zebedee,v 1.3 2004/07/15 00:16:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/files/zebedee,v 1.4 2008/06/14 03:35:45 darkside Exp $
 
 depend() {
 	need net
@@ -10,25 +10,21 @@ depend() {
 
 start() {
 	ebegin "Starting Zebedee"
-	start-stop-daemon --quiet --start --startas /usr/bin/zebedee \
+	start-stop-daemon --start --startas /usr/bin/zebedee \
 		-m -b -p /var/run/zebedee.pid \
 		-- -f /etc/zebedee/server.zbd
-	eend $? "Failed to start Zebedee"
+	eend $?
 }
 
 stop() {
 	ebegin "Stopping Zebedee"
-	start-stop-daemon --quiet --stop \
-	-p /var/run/zebedee.pid
-	eend $? "Failed to stop Zebedee"
-
-	# clean stale pidfile
-	[ -f /var/run/zebedee.pid ] && rm -f /var/run/zebedee.pid
+	start-stop-daemon --stop -p /var/run/zebedee.pid
+	eend $? 
 }
 
 restart() {
 	ebegin "Restarting Zebedee"
 	svc_stop
 	svc_start
-	eend $? "Failed to restart Zebedee"
+	eend $? 
 }

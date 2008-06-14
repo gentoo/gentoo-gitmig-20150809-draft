@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zebedee
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.20 2007/10/31 03:28:14 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.21 2008/06/14 03:35:44 darkside Exp $
+
+  14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> files/zebedee,
+  zebedee-2.4.1-r1.ebuild:
+  Minor QA: quoting & fixed init script to actually be able to start daemon
+  after stopping it. Thanks to WayneSherman in bug #197948
 
   31 Oct 2007; Mike Frysinger <vapier@gentoo.org> zebedee-2.5.3.ebuild:
   Use doinitd rather than newinitd #197482.
