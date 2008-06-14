@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.138 2008/06/14 06:30:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.139 2008/06/14 08:28:56 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> sudo-1.6.9_p16.ebuild:
+  Stable on ppc wrt bug 225905
 
   14 Jun 2008; Jeroen Roovers <jer@gentoo.org> sudo-1.6.9_p16.ebuild:
   Stable for HPPA (bug #225905).
