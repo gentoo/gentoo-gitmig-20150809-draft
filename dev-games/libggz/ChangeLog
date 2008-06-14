@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.21 2008/05/05 15:46:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.22 2008/06/14 10:11:37 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> libggz-0.0.14.1.ebuild:
+  Stable on ppc wrt bug 226019
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> libggz-0.0.14.1.ebuild:
   Add ~alpha/~ia64 wrt #218794
