@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.97 2008/06/14 11:02:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.98 2008/06/14 11:04:50 flameeyes Exp $
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libcdio-0.78.2-bug203777.patch, +libcdio-0.78.2-r3.ebuild:
+  Restore ebuild I removed by mistake. Sorry Mike (only your arches are
+  involved).
 
   14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   -files/libcdio-0.77-nocxx.patch, -files/libcdio-0.78.2-bug203777.patch,
