@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.1 2008/06/04 21:42:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.2 2008/06/14 10:19:13 armin76 Exp $
+
+  14 Jun 2008; Raúl Porcel <armin76@gentoo.org> dot2texi-3.0.ebuild:
+  Add ~x86 wrt #225749
 
 *dot2texi-3.0 (04 Jun 2008)
 

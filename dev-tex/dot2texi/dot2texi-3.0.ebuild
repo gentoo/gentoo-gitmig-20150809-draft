@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/dot2texi-3.0.ebuild,v 1.1 2008/06/04 21:42:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/dot2texi-3.0.ebuild,v 1.2 2008/06/14 10:19:13 armin76 Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/dot2texi.html"
 SRC_URI="mirror://gentoo/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="pgf pstricks examples"
 DEPEND="app-arch/unzip"
 RDEPEND="pstricks? ( || ( dev-texlive/texlive-pstricks app-text/tetex ) )
