@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.15 2008/06/13 19:36:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.16 2008/06/14 08:25:05 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> pam_mktemp-1.0.3.ebuild:
+  Stable on ppc wrt bug 225901
 
   13 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
   pam_mktemp-1.0.3.ebuild:
