@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r6.ebuild,v 1.7 2008/05/19 18:06:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r6.ebuild,v 1.8 2008/06/14 18:58:08 swegener Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-Makefile.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 }
 
 src_compile() {
