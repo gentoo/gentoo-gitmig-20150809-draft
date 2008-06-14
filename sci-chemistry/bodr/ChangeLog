@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/bodr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.4 2007/08/27 10:26:05 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.5 2008/06/14 14:24:28 markusle Exp $
+
+*bodr-8 (14 Jun 2008)
+
+  14 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/bodr-6-install.patch, bodr-6.ebuild, +bodr-8.ebuild:
+  Version bump and general cleanup. Also removed calls to autoconf and
+  friends (fixes bug #205307 and #226613).
 
   27 Aug 2007; Raúl Porcel <armin76@gentoo.org> bodr-6.ebuild:
   Add ~x86 wrt #190130

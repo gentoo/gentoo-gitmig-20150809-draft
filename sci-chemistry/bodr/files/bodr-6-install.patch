@@ -1,0 +1,26 @@
+diff -Naur bodr-6/elements/Makefile.in bodr-6.new/elements/Makefile.in
+--- bodr-6/elements/Makefile.in	2007-03-10 11:32:24.000000000 -0500
++++ bodr-6.new/elements/Makefile.in	2008-06-14 10:01:22.000000000 -0400
+@@ -194,7 +194,7 @@
+ crystal_DATA = crystalstructures.xml
+ elementdir = ${pkgdatadir}
+ element_DATA = elements.xml
+-docsdir = ${datadir}/doc/${PACKAGE}/bibxml
++docsdir = ${datadir}/doc/${PACKAGE}-${VERSION}/bibxml
+ docs_DATA = elements_biblio.html crystalstructures_biblio.html
+ all: all-am
+ 
+diff -Naur bodr-6/Makefile.in bodr-6.new/Makefile.in
+--- bodr-6/Makefile.in	2007-03-10 11:32:24.000000000 -0500
++++ bodr-6.new/Makefile.in	2008-06-14 09:56:04.000000000 -0400
+@@ -175,8 +175,8 @@
+ # if the generated archives should be removed too, add the following
+ # filename to the maintainer-clean target too:
+ # @PACKAGE@-@VERSION@.tar.{bz2,gz}
+-docsdir = ${datadir}/doc/${PACKAGE}
+-docs_DATA = AUTHORS THANKS ChangeLog COPYING README
++docsdir = ${datadir}/doc/${PACKAGE}-${VERSION}
++docs_DATA = AUTHORS THANKS ChangeLog README
+ pkgconfigdir = ${datadir}/pkgconfig
+ pkgconfig_DATA = bodr.pc
+ all: all-recursive
