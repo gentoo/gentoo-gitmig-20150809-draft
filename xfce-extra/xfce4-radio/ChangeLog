@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-radio
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio/ChangeLog,v 1.5 2007/10/09 18:49:43 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio/ChangeLog,v 1.6 2008/06/14 14:37:54 angelos Exp $
+
+*xfce4-radio-0.3.0 (14 Jun 2008)
+
+  14 Jun 2008; Christoph Mende <angelos@gentoo.org>
+  +xfce4-radio-0.3.0.ebuild:
+  Version bump
 
   09 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   xfce4-radio-0.2.1.ebuild:
