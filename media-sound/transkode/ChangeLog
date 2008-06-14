@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.9 2008/04/24 11:22:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.10 2008/06/14 02:44:59 yngwin Exp $
+
+*transkode-0.7 (14 Jun 2008)
+
+  14 Jun 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/transkode-0.7-gcc-4.3.patch, +transkode-0.7.ebuild:
+  Version bump, with changes to the ebuild submitted by Jure Kobal in bug
+  187996. Updated gcc-4.3 patch. Dropped ~x86-fbsd because xineadump needs
+  to be keyworded for that arch first.
 
   24 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/transkode-0.6+gcc-4.3.patch, transkode-0.6-r1.ebuild:
