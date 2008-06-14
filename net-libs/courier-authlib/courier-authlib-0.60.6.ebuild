@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.5 2008/06/11 11:25:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.6 2008/06/14 14:19:11 flameeyes Exp $
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools libtool
 
 KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 
@@ -66,8 +66,10 @@ src_unpack() {
 	for d in $(find -name configure.in) ; do
 		[[ ${d} == */libltdl/* ]] && continue
 		cd "${S}"/${d%configure.in}
-		eautoreconf
+		AT_NO_RECURSIVE="yes" AT_NOELIBTOOLIZE="yes" eautoreconf
 	done
+
+	elibtoolize
 }
 
 src_compile() {

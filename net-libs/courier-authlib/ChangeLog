@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.85 2008/06/11 11:25:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.86 2008/06/14 14:19:11 flameeyes Exp $
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  courier-authlib-0.60.6.ebuild:
+  Don't run eautoreconf twice (first recursive and then non-recursive), as
+  it would also have deleted elibtoolize results.
 
   11 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   courier-authlib-0.60.6.ebuild:
