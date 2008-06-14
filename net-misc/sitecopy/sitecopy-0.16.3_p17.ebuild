@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3_p17.ebuild,v 1.1 2008/04/09 18:14:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3_p17.ebuild,v 1.2 2008/06/14 13:21:10 nixnut Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="mirror://debian/pool/main/s/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/s/${PN}/${MY_P}-${DEB_PL}.diff.gz"
 HOMEPAGE="http://packages.debian.org/unstable/sitecopy http://www.lyra.org/sitecopy/"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
