@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.21 2008/01/27 17:16:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.22 2008/06/14 03:12:59 darkside Exp $
+
+*psh-1.8.1 (14 Jun 2008)
+
+  14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +psh-1.8.1.ebuild:
+  Version bump. Changed dependancy based on Possum's suggestion in bug
+  #197904. Dropped kw's to ~ARCH and removed ia64, ppc, & alpha because
+  package now requires a dep they don't have
 
   27 Jan 2008; Raúl Porcel <armin76@gentoo.org> psh-1.8-r1.ebuild:
   alpha/ia64/sparc/x86 stable
