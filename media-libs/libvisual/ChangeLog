@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.32 2008/06/08 16:04:19 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.33 2008/06/14 10:08:35 angelos Exp $
+
+  14 Jun 2008; Christoph Mende <angelos@gentoo.org>
+  libvisual-0.4.0-r1.ebuild:
+  Stable on amd64, bug #224377
 
   08 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   libvisual-0.4.0-r1.ebuild:
