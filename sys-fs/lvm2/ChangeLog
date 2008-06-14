@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.135 2008/06/08 19:54:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.136 2008/06/14 09:34:52 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> lvm2-2.02.36.ebuild:
+  Stable on ppc wrt bug 207612
 
 *lvm2-2.02.37 (08 Jun 2008)
 
