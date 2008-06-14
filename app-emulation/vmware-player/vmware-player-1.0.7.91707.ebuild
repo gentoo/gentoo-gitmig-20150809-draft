@@ -1,33 +1,26 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.0.2.59824.ebuild,v 1.1 2007/11/25 12:59:44 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.7.91707.ebuild,v 1.1 2008/06/14 23:14:03 ikelos Exp $
 
-inherit versionator eutils vmware
+inherit eutils vmware versionator
 
 S=${WORKDIR}/vmware-player-distrib
-MY_PN="VMware-player-$(get_version_component_range 1-3)-$(get_version_component_range 4)"
+MY_P="VMware-player-$(get_version_component_range 1-3)-$(get_version_component_range 4)"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/player/"
-SRC_URI="x86? ( mirror://vmware/software/vmplayer/${MY_PN}.i386.tar.gz )
-	amd64? ( mirror://vmware/software/vmplayer/${MY_PN}.x86_64.tar.gz )
+SRC_URI="http://download3.vmware.com/software/vmplayer/${MY_P}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
-	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
-	mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libcrypto.so.0.9.7l.tar.bz2
-	mirror://gentoo/vmware-libcrypto.so.0.9.7l.tar.bz2"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz"
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip"
-
-S=${WORKDIR}/vmware-player-distrib
 
 DEPEND="${RDEPEND} virtual/os-headers
 	!app-emulation/vmware-workstation"
@@ -45,9 +38,9 @@ RDEPEND="sys-libs/glibc
 	>=dev-lang/perl-5
 	!app-emulation/vmware-workstation
 	!app-emulation/vmware-server
-	~app-emulation/vmware-modules-1.0.0.17
-	!<app-emulation/vmware-modules-1.0.0.17
-	!>=app-emulation/vmware-modules-1.0.0.18
+	~app-emulation/vmware-modules-1.0.0.15
+	!<app-emulation/vmware-modules-1.0.0.15
+	!>=app-emulation/vmware-modules-1.0.0.16
 	sys-apps/pciutils"
 
 RUN_UPDATE="no"
@@ -81,22 +74,8 @@ QA_EXECSTACK_amd64="${dir:1}/bin/vmnet-bridge
 	${dir:1}/lib/bin-debug/vmware-vmx
 	${dir:1}/lib/lib/libpixops.so.2.0.1/libpixops.so.2.0.1"
 
-pkg_setup() {
-	if use x86; then
-		MY_P="${MY_PN}.i386"
-	elif use amd64; then
-		MY_P="${MY_PN}.x86_64"
-	fi
-	vmware_pkg_setup
-}
-
 src_install() {
 	vmware_src_install
 
-	doicon lib/share/pixmaps/vmware-player.png
-	make_desktop_entry vmplayer "VMWare Player" vmware-player.png System
-
-	# Nasty hack to ensure the EULA is included
-	insinto /opt/vmware/player/lib/share
-	newins doc/EULA EULA.txt
+	make_desktop_entry vmplayer "VMware Player" ${PN}.png System
 }
