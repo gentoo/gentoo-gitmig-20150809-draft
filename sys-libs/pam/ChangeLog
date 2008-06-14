@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.215 2008/06/13 15:56:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.216 2008/06/14 08:26:50 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> pam-1.0.1.ebuild:
+  Stable on ppc wrt bug 225901
 
   13 Jun 2008; Raúl Porcel <armin76@gentoo.org> pam-1.0.1.ebuild:
   ia64/sparc stable wrt #225901
