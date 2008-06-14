@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r14.ebuild,v 1.3 2008/03/31 04:38:30 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r14.ebuild,v 1.4 2008/06/14 16:54:53 zmedico Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info pam
 
@@ -132,7 +132,11 @@ src_compile() {
 }
 
 pkg_preinst() {
-	if use radius && [ -d "${ROOT}/etc/radiusclient" ] && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
+	has_version "<${CATEGORY}/${PN}-2.4.3-r5"
+	previous_less_than_2_4_3_r5=$?
+
+	if use radius && [ -d "${ROOT}/etc/radiusclient" ] && \
+		[[ $previous_less_than_2_4_3_r5 = 0 ]] ; then
 		ebegin "Copy /etc/radiusclient to /etc/ppp/radius"
 		cp -pPR "${ROOT}/etc/radiusclient" "${ROOT}/etc/ppp/radius"
 		eend $?
@@ -281,7 +285,7 @@ pkg_postinst() {
 	# lib name has changed
 	sed -i -e "s:^pppoe.so:rp-pppoe.so:" "${ROOT}/etc/ppp/options"
 
-	if use radius && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
+	if use radius && [[ $previous_less_than_2_4_3_r5 = 0 ]] ; then
 		echo
 		ewarn "As of ${PN}-2.4.3-r5, the RADIUS configuration files have moved from"
 		ewarn "   /etc/radiusclient to /etc/ppp/radius."
