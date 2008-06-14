@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.21.ebuild,v 1.8 2008/05/21 15:50:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.21.ebuild,v 1.9 2008/06/14 08:32:40 ulm Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -46,7 +46,7 @@ DEPEND="virtual/libc
 	canna? ( app-i18n/canna )
 	!amd64? ( freewnn? ( app-i18n/freewnn ) )
 	>=sys-libs/ncurses-5.2
-	>=app-admin/eselect-emacs-0.7-r1"
+	>=app-admin/eselect-emacs-1.2"
 
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"
@@ -225,9 +225,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }
 
 pkg_postrm() {
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }

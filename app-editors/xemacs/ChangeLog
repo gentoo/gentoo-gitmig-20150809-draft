@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.113 2008/06/01 08:58:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.114 2008/06/14 08:32:40 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> xemacs-21.4.21.ebuild,
+  xemacs-21.4.21-r1.ebuild:
+  Change to new syntax of eselect-emacs and update dependency.
 
   01 Jun 2008; Hans de Graaff <graaff@gentoo.org> -xemacs-21.5.28.ebuild:
   Remove broken and insecure 21.5.28 version. If you must use 21.5 now then
