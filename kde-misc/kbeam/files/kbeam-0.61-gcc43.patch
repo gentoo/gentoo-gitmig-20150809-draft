@@ -1,0 +1,11 @@
+diff -Naur kbeam-0.61/src/main.cpp kbeam-0.61.new/src/main.cpp
+--- kbeam-0.61/src/main.cpp	2004-09-01 23:16:04.000000000 +0200
++++ kbeam-0.61.new/src/main.cpp	2008-06-14 14:56:38.350783134 +0200
+@@ -18,6 +18,7 @@
+  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+  ***************************************************************************/
+ 
++#include <stdlib.h>
+ #include <kaboutdata.h>
+ #include <klocale.h>
+ #include <kcmdlineargs.h>
