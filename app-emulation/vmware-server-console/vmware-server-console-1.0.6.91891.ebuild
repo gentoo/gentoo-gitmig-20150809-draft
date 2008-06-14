@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.4.56528.ebuild,v 1.7 2008/04/26 15:40:42 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.6.91891.ebuild,v 1.1 2008/06/14 23:27:33 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -16,16 +16,12 @@ S="${WORKDIR}/${PN}-distrib"
 
 DESCRIPTION="VMware Remote Console for Linux"
 HOMEPAGE="http://www.vmware.com/"
-SRC_URI="http://download3.vmware.com/software/vmserver/${FN}.zip
-		http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
-		mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2
-		http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libcrypto.so.0.9.7l.tar.bz2
-		mirror://gentoo/vmware-libcrypto.so.0.9.7l.tar.bz2"
+SRC_URI="http://download3.vmware.com/software/vmserver/${FN}.zip"
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip"
 
 DEPEND=">=sys-libs/glibc-2.3.5
@@ -67,15 +63,14 @@ src_unpack() {
 	cd "${WORKDIR}"
 	unpack ${A}
 	unpack ./${MY_P}.tar.gz
-	cd "${S}"
-	unpack vmware-libssl.so.0.9.7l.tar.bz2
-	unpack vmware-libcrypto.so.0.9.7l.tar.bz2
 }
 
 src_install() {
 	echo 'libdir = "'${VMWARE_INSTALL_DIR}'/lib"' > etc/config
 	vmware_src_install
 
+	# Fix an ugly GCC error on start
+	rm -f "${D}${VMWARE_INSTALL_DIR}/lib/lib/libgcc_s.so.1/libgcc_s.so.1"
 	make_desktop_entry ${PN} "VMWare Remote Console" ${PN}.png System
 
 	dodir /usr/bin
