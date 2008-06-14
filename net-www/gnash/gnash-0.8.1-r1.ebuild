@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.3 2008/01/20 04:04:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.4 2008/06/14 15:49:34 jer Exp $
 
 inherit nsplugins kde-functions qt3 multilib
 set-kdedir eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="agg cairo fbcon ffmpeg gstreamer gtk kde mad nsplugin opengl qt3 sdl video_cards_i810"
 
 RDEPEND="
