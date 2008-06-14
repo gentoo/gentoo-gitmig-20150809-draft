@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2tex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.3 2008/06/04 20:12:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.4 2008/06/14 10:18:22 armin76 Exp $
+
+  14 Jun 2008; Raúl Porcel <armin76@gentoo.org> dot2tex-2.8.2.ebuild:
+  Add ~x86
 
 *dot2tex-2.8.2 (04 Jun 2008)
 
