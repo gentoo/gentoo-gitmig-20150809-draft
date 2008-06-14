@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.31 2008/06/13 09:25:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.32 2008/06/14 09:15:56 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> aircrack-ng-0.9.3.ebuild:
+  Stable on ppc wrt bug 225241
 
   13 Jun 2008; Raúl Porcel <armin76@gentoo.org> aircrack-ng-0.9.3.ebuild:
   x86 stable wrt #225241
