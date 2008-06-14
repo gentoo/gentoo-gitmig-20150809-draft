@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.31 2008/06/10 17:21:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.32 2008/06/14 13:18:35 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> linux-atm-2.5.0.ebuild:
+  Stable on ppc wrt bug 225777
 
   10 Jun 2008; Alin Năstac <mrness@gentoo.org>
   +files/linux-atm-2.5.0-glibc28.patch, linux-atm-2.5.0.ebuild:
