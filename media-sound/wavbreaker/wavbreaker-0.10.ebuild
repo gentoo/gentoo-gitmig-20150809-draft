@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.10.ebuild,v 1.1 2008/06/12 19:38:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.10.ebuild,v 1.2 2008/06/14 12:32:36 drac Exp $
+
+inherit autotools eutils
 
 DESCRIPTION="wavbreaker/wavmerge GTK+ utility to break or merge WAV files"
 HOMEPAGE="http://wavbreaker.sourceforge.net"
@@ -18,6 +20,13 @@ RDEPEND="dev-libs/libxml2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+	eautoreconf
+}
 
 src_compile() {
 	econf --disable-dependency-tracking \

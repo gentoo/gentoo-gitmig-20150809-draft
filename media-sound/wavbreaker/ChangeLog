@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.25 2008/06/12 19:38:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.26 2008/06/14 12:32:36 drac Exp $
+
+  14 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/wavbreaker-0.10-pkgconfig.patch, wavbreaker-0.10.ebuild:
+  Need PKG_PROG_PKG_CONFIG in configure.in or ./configure dies in first
+  --disable flag.
 
 *wavbreaker-0.10 (12 Jun 2008)
 
