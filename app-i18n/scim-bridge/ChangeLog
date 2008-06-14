@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.18 2008/02/24 15:39:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.19 2008/06/14 05:11:31 matsuu Exp $
+
+*scim-bridge-0.4.15-r1 (14 Jun 2008)
+
+  14 Jun 2008; MATSUU Takuto <matsuu@gentoo.org> scim-bridge-0.4.9.ebuild,
+  -scim-bridge-0.4.13-r1.ebuild, -scim-bridge-0.4.14.ebuild,
+  -scim-bridge-0.4.15.ebuild, +scim-bridge-0.4.15-r1.ebuild:
+  Fixed qt dependency, bug #217164. Fixed doxygen dependency, bug #221641.
+  Removed old versions.
 
 *scim-bridge-0.4.15 (24 Feb 2008)
 

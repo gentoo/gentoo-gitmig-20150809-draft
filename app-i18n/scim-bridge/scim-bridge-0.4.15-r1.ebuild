@@ -1,8 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.13-r1.ebuild,v 1.2 2008/01/10 16:53:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.15-r1.ebuild,v 1.1 2008/06/14 05:11:31 matsuu Exp $
 
-inherit eutils qt3 qt4
+EAPI="1"
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit autotools eutils qt3
 
 DESCRIPTION="Yet another IM-client of SCIM"
 HOMEPAGE="http://www.scim-im.org/projects/scim_bridge"
@@ -23,7 +27,8 @@ RDEPEND=">=app-i18n/scim-1.4.6
 		>=x11-libs/pango-1.1
 	)
 	qt4? (
-		$(qt4_min_version 4.0.0)
+		|| ( ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
+			>=x11-libs/qt-4.0:4 )
 		>=x11-libs/pango-1.1
 	)"
 DEPEND="${RDEPEND}
@@ -42,6 +47,13 @@ pkg_setup() {
 	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
 		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.4.14-qt4.patch
+	eautoreconf
 }
 
 src_compile() {
