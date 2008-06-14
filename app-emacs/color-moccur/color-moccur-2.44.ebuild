@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-moccur/color-moccur-2.44.ebuild,v 1.1 2008/02/28 17:40:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-moccur/color-moccur-2.44.ebuild,v 1.2 2008/06/14 23:23:01 ulm Exp $
 
 inherit elisp
 
@@ -15,5 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-SIMPLE_ELISP=t
-SITEFILE="50${PN}-gentoo.el"
+SITEFILE=50${PN}-gentoo.el

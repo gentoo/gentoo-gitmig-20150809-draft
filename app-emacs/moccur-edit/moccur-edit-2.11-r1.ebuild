@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/moccur-edit-2.11-r1.ebuild,v 1.1 2008/04/25 14:34:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/moccur-edit-2.11-r1.ebuild,v 1.2 2008/06/14 23:28:14 ulm Exp $
 
 inherit elisp
 
@@ -18,5 +18,4 @@ IUSE=""
 RDEPEND="app-emacs/color-moccur"
 DEPEND="${RDEPEND}"
 
-SIMPLE_ELISP=t
-SITEFILE="60${PN}-gentoo.el"
+SITEFILE=60${PN}-gentoo.el

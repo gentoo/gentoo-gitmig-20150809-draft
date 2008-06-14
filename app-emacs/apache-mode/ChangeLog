@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/apache-mode
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.15 2007/07/03 19:01:26 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.16 2008/06/14 23:21:19 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> apache-mode-1.1.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> apache-mode-1.1.ebuild:
   Remove redundant functions.

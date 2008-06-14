@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.21.ebuild,v 1.1 2008/05/21 21:34:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.21.ebuild,v 1.2 2008/06/14 23:22:04 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-SIMPLE_ELISP=t
 SITEFILE=51${PN}-gentoo.el
 
 src_compile() {

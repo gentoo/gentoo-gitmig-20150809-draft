@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/sawfish-1.32.ebuild,v 1.6 2007/10/23 11:56:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/sawfish-1.32.ebuild,v 1.7 2008/06/14 23:29:43 ulm Exp $
 
 inherit elisp
 
@@ -15,5 +15,4 @@ IUSE=""
 
 RDEPEND="x11-wm/sawfish"
 
-SIMPLE_ELISP=t
 SITEFILE=50${PN}-gentoo.el

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/csharp-mode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.7 2008/02/17 14:53:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.8 2008/06/14 23:24:19 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> csharp-mode-0.7.0.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   csharp-mode-0.7.0.ebuild:

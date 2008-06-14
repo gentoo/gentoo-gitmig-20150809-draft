@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/javascript
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.4 2007/10/29 14:12:16 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.5 2008/06/14 23:26:59 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> javascript-2.0_beta8.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   29 Oct 2007; Diego Pettenò <flameeyes@gentoo.org>
   javascript-2.0_beta8.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mode-compile/mode-compile-2.29.ebuild,v 1.2 2007/05/16 06:08:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mode-compile/mode-compile-2.29.ebuild,v 1.3 2008/06/14 23:28:25 ulm Exp $
 
 inherit elisp
 
@@ -14,5 +14,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-SIMPLE_ELISP=t
 SITEFILE=50${PN}-gentoo.el

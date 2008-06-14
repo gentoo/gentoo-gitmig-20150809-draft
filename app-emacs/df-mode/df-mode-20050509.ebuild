@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/df-mode-20050509.ebuild,v 1.3 2008/01/13 23:42:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/df-mode-20050509.ebuild,v 1.4 2008/06/14 23:25:16 ulm Exp $
 
 inherit elisp
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-SIMPLE_ELISP=t
 SITEFILE=50${PN}-gentoo.el
 
 pkg_postinst() {

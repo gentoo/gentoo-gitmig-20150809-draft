@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/table
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.20 2007/09/27 12:43:46 fmccor Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.21 2008/06/14 23:30:29 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> table-1.5.54-r2.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   27 Sep 2007; Ferris McCormick <fmccor@gentoo.org> table-1.5.54-r2.ebuild:
   Sparc stable --- Bug #193832 --- works fine.

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/sawfish
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.10 2007/10/23 11:56:03 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.11 2008/06/14 23:29:43 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> sawfish-1.32.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   23 Oct 2007; Ulrich Mueller <ulm@gentoo.org> sawfish-1.32.ebuild:
   amd64 stable, bug 195512

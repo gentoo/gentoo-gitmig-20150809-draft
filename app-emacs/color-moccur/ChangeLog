@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/color-moccur
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-moccur/ChangeLog,v 1.2 2008/02/28 17:40:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-moccur/ChangeLog,v 1.3 2008/06/14 23:23:01 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> color-moccur-2.42.ebuild,
+  color-moccur-2.44.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
 *color-moccur-2.44 (28 Feb 2008)
 

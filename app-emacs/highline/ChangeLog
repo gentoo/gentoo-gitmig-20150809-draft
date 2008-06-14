@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/highline
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.21 2008/02/26 18:44:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.22 2008/06/14 23:26:49 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> highline-4.2.1.ebuild,
+  highline-6.1.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   26 Feb 2008; nixnut <nixnut@gentoo.org> highline-6.1.ebuild:
   Stable on ppc wrt bug 211278

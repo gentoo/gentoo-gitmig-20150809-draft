@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/table-1.5.54-r2.ebuild,v 1.5 2007/09/27 12:43:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/table-1.5.54-r2.ebuild,v 1.6 2008/06/14 23:30:29 ulm Exp $
 
 inherit elisp versionator
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
-SIMPLE_ELISP=t
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	elisp-compile *.el || die "elisp-compile failed"

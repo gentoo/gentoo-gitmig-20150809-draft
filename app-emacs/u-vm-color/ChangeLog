@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.23 2008/05/01 11:58:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.24 2008/06/14 23:31:15 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> u-vm-color-2.10.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
   01 May 2008; Ulrich Mueller <ulm@gentoo.org> -u-vm-color-2.8.1.ebuild:
   Remove old.

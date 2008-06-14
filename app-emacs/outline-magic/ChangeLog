@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/outline-magic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.1 2008/01/23 13:49:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.2 2008/06/14 23:28:58 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> outline-magic-0.9.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
 *outline-magic-0.9 (23 Jan 2008)
 

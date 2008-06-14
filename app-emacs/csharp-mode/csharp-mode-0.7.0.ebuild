@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.4 2008/02/17 14:53:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.5 2008/06/14 23:24:19 ulm Exp $
 
 inherit elisp versionator
 
@@ -18,7 +18,6 @@ NEED_CCMODE=5.30
 DEPEND="|| ( >=app-emacs/cc-mode-${NEED_CCMODE} >=virtual/emacs-22 )"
 RDEPEND="${DEPEND}"
 
-SIMPLE_ELISP=t
 SITEFILE=80${PN}-gentoo.el
 
 pkg_setup () {

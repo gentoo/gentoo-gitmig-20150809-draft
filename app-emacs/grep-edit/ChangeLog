@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/grep-edit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/grep-edit/ChangeLog,v 1.1 2008/03/27 19:24:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/grep-edit/ChangeLog,v 1.2 2008/06/14 23:26:11 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> grep-edit-2.5.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
 
 *grep-edit-2.5 (27 Mar 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/u-vm-color-2.10.ebuild,v 1.3 2008/05/01 09:38:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/u-vm-color-2.10.ebuild,v 1.4 2008/06/14 23:31:15 ulm Exp $
 
 inherit elisp
 
@@ -17,5 +17,4 @@ IUSE=""
 DEPEND="app-emacs/vm"
 RDEPEND="${DEPEND}"
 
-SIMPLE_ELISP=t
 SITEFILE=51${PN}-gentoo.el
