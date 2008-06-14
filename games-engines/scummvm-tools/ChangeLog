@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.14 2008/06/13 07:17:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.15 2008/06/14 11:23:50 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> scummvm-tools-0.11.0.ebuild:
+  Stable on ppc wrt bug 225621
 
   13 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   scummvm-tools-0.11.0.ebuild:
