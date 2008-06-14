@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.12 2008/04/12 14:04:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.13 2008/06/14 08:18:53 flameeyes Exp $
+
+*iscsitarget-0.4.16 (14 Jun 2008)
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/iscsitarget-0.4.16+glibc-2.8-lists.patch,
+  +iscsitarget-0.4.16.ebuild:
+  Version bump (bug #223093), and apply patch to fix building with glibc 2.8
+  (bug #225719).
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> iscsitarget-0.4.15-r1.ebuild:
   Stable on ppc wrt bug 214805
