@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.2 2008/06/09 18:03:12 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.3 2008/06/14 20:28:21 swegener Exp $
 
 inherit eutils linux-mod mercurial
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"
+RDEPEND="${DEPEND}"
 PDEPEND="~sys-fs/btrfs-progs-${PV}"
 
 S="${WORKDIR}/kernel-unstable"
@@ -23,7 +24,7 @@ pkg_setup()
 	linux-mod_pkg_setup
 
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KERNELDIR=/lib/modules/${KV_FULL}/build"
+	BUILD_PARAMS="KERNELDIR=${KV_OUT_DIR}"
 	MODULE_NAMES="btrfs(fs:${S}/"
 
 	if ! kernel_is 2 6; then
@@ -39,7 +40,6 @@ pkg_setup()
 
 src_unpack() {
 	mercurial_fetch http://www.kernel.org/hg/btrfs/kernel-unstable
-	cd "${S}"
 }
 
 src_install()
@@ -55,7 +55,7 @@ pkg_postinst() {
 	ewarn "WARNING: Btrfs is under heavy development and is not suitable for"
 	ewarn "         any uses other than benchmarking and review."
 	ewarn "         The Btrfs disk format is not yet finalized."
-	ewarn ""
+	ewarn
 	ewarn "Note: This version is installed from a live ebuild, so the disk"
 	ewarn "      format can change from install to install as the upstream"
 	ewarn "      source changes."

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.14.ebuild,v 1.3 2008/06/09 17:01:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-0.14.ebuild,v 1.4 2008/06/14 20:28:21 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"
+RDEPEND="${DEPEND}"
 PDEPEND="~sys-fs/btrfs-progs-${PV}"
 
 pkg_setup()
@@ -21,7 +22,7 @@ pkg_setup()
 	linux-mod_pkg_setup
 
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KERNELDIR=/lib/modules/${KV_FULL}/build"
+	BUILD_PARAMS="KERNELDIR=${KV_OUT_DIR}"
 	MODULE_NAMES="btrfs(fs:${S}/"
 
 	if ! kernel_is 2 6; then
