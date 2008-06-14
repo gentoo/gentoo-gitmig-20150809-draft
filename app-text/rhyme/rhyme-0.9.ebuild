@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.9 2007/12/23 05:53:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.10 2008/06/14 00:50:18 darkside Exp $
 
 inherit ccc
 
@@ -27,8 +27,7 @@ src_compile() {
 	# termcap is used by default, switch to ncurses
 	sed -i 's/-ltermcap/-lncurses/g' "${S}"/Makefile
 
-	# works fine with parallel build
-	emake || die
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

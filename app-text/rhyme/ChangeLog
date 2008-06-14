@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.10 2007/12/25 15:49:16 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.11 2008/06/14 00:50:18 darkside Exp $
+
+  14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> rhyme-0.9.ebuild:
+  doesn't work with parallel building, bug #125967
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
