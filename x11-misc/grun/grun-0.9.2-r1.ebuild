@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.2 2008/03/23 01:04:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.3 2008/06/14 12:49:15 nixnut Exp $
 
 PATCH_LEVEL=14.1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/g/grun/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2"
