@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.34 2007/11/14 22:50:56 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.35 2008/06/14 09:00:57 flameeyes Exp $
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> acpid-1.0.6-r1.ebuild:
+  Enable GNU sources for glibc 2.8 (bug #225417).
 
   14 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> acpid-1.0.6-r1.ebuild:
   Marked stable on amd64 for bug #194636

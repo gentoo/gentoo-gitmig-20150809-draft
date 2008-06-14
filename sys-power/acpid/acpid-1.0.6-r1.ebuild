@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.6-r1.ebuild,v 1.4 2007/11/14 22:50:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.6-r1.ebuild,v 1.5 2008/06/14 09:00:57 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
 HOMEPAGE="http://acpid.sourceforge.net"
@@ -25,6 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -D_GNU_SOURCE
+
 	# DO NOT COMPILE WITH OPTIMISATIONS (bug #22365)
 	# That is a note to the devs.  IF you are a user, go ahead and optimise
 	# if you want, but we won't support bugs associated with that.
