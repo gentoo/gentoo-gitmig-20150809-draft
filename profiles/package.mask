@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8722 2008/06/14 14:54:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8723 2008/06/14 18:33:48 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -445,6 +445,7 @@ media-sound/lastfmproxy
 =media-gfx/blender-2.46-r1
 =x11-misc/xvidcap-1.1.7_rc1
 >=media-sound/picard-0.10.0_rc1
+>=media-video/ffmpeg2theora-0.21
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (25 Mar 2008)
 # Masked due to bugs and availability of forked alternative Frostwire.
