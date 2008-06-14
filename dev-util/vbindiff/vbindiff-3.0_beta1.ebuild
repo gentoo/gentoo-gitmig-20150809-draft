@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/vbindiff-3.0_beta1.ebuild,v 1.3 2008/02/01 12:35:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/vbindiff-3.0_beta1.ebuild,v 1.4 2008/06/14 10:20:37 angelos Exp $
 
 DESCRIPTION="Visual binary diff utility"
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.cjmweb.net/vbindiff/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
