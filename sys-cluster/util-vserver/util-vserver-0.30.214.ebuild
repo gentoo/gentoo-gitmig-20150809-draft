@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.4 2008/04/13 10:24:11 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.5 2008/06/14 11:02:06 zmedico Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -76,6 +76,11 @@ src_install() {
 	dodoc README ChangeLog NEWS AUTHORS THANKS util-vserver.spec
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.30.211"
+	old_init_script_warn=$?
+}
+
 pkg_postinst() {
 	# Create VDIRBASE in postinst, so it is (a) not unmerged and (b) also
 	# present when merging.
@@ -95,7 +100,7 @@ pkg_postinst() {
 	elog " rc-update add vprocunhide default"
 	elog
 
-	if has_version "<${CATEGORY}/${PN}-0.30.211" ; then
+	if [[ $old_init_script_warn = 0 ]] ; then
 		ewarn "Please make sure, that you remove the old init-script from any"
 		ewarn "runlevel and remove it from your init.d dir!"
 		ewarn
