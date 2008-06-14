@@ -1,6 +1,42 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.177 2008/05/12 15:45:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.178 2008/06/14 23:33:07 ikelos Exp $
+
+*vmware-workstation-6.0.4.93057 (14 Jun 2008)
+*vmware-workstation-5.5.7.91707 (14 Jun 2008)
+
+  14 Jun 2008; <mike@gentoo.org>
+  -files/5.5.5.56455/000_all_initd-location.patch,
+  -files/5.5.5.56455/001_all_fix-permissions.patch,
+  -files/5.5.5.56455/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.5.56455/004_all_do-not-build-modules.patch,
+  -files/5.5.5.56455/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.5.56455/009_all_init.d-modules-warning.patch,
+  +files/5.5.7.91707/000_all_initd-location.patch,
+  +files/5.5.7.91707/001_all_fix-permissions.patch,
+  +files/5.5.7.91707/002_all_pagebreak-detection-fix.patch,
+  +files/5.5.7.91707/004_all_do-not-build-modules.patch,
+  +files/5.5.7.91707/007_all_use-modprobe-over-insmod.patch,
+  +files/5.5.7.91707/009_all_init.d-modules-warning.patch,
+  -files/6.0.2.59824/000_all_initd-location.patch,
+  -files/6.0.2.59824/001_all_fix-permissions.patch,
+  -files/6.0.2.59824/002_all_pagebreak-detection-fix.patch,
+  -files/6.0.2.59824/004_all_do-not-build-modules.patch,
+  -files/6.0.2.59824/007_all_use-modprobe-over-insmod.patch,
+  -files/6.0.2.59824/009_all_init.d-modules-warning.patch,
+  -files/6.0.2.59824/011_all_legit-modules-only.patch,
+  +files/6.0.4.93057/000_all_initd-location.patch,
+  +files/6.0.4.93057/001_all_fix-permissions.patch,
+  +files/6.0.4.93057/002_all_pagebreak-detection-fix.patch,
+  +files/6.0.4.93057/004_all_do-not-build-modules.patch,
+  +files/6.0.4.93057/007_all_use-modprobe-over-insmod.patch,
+  +files/6.0.4.93057/009_all_init.d-modules-warning.patch,
+  +files/6.0.4.93057/011_all_legit-modules-only.patch,
+  -vmware-workstation-5.5.5.56455.ebuild,
+  +vmware-workstation-5.5.7.91707.ebuild,
+  -vmware-workstation-6.0.2.59824.ebuild,
+  +vmware-workstation-6.0.4.93057.ebuild:
+  Version bump for bug 224637. Also clear out old version.
 
   12 May 2008; Markus Meier <maekke@gentoo.org>
   vmware-workstation-5.5.6.80404.ebuild:

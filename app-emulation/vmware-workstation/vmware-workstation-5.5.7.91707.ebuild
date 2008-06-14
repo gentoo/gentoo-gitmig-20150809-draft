@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.5.56455.ebuild,v 1.3 2007/10/11 07:14:54 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.7.91707.ebuild,v 1.1 2008/06/14 23:33:07 ikelos Exp $
 
-inherit vmware eutils
+inherit vmware eutils versionator
 
-MY_P="VMware-workstation-5.5.5-56455"
+MY_P="VMware-workstation-$(replace_version_separator 3 - $PV)"
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
-HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
+HOMEPAGE="http://www.vmware.com/download/ws/ws5.html"
 SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 	http://download.softpedia.ro/linux/${MY_P}.tar.gz
+	mirror://gentoo/${ANY_ANY}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
@@ -19,9 +20,9 @@ SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="fetch strip"
 
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
@@ -85,6 +86,8 @@ src_install() {
 	vmware_src_install
 
 	doicon lib/share/pixmaps/vmware-player.png
+	# Fix an ugly GCC error on start
+	rm -f "${Ddir}lib/lib/libgcc_s.so.1/libgcc_s.so.1"
 	make_desktop_entry vmware "VMWare Workstation" ${PN}.png System
 	make_desktop_entry vmplayer "VMWare Player" vmware-player.png System
 }
