@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.23 2008/06/14 12:04:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.24 2008/06/14 12:17:12 dev-zero Exp $
+
+*kpogre-1.6.6 (14 Jun 2008)
+
+  14 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> +kpogre-1.6.6.ebuild:
+  Version bump (solves bug #185642)
 
   14 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> -kpogre-1.2.7.ebuild:
   Dropped old version
