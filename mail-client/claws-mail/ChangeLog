@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.76 2008/06/14 08:52:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.77 2008/06/14 19:23:47 ken69267 Exp $
+
+  14 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> claws-mail-3.4.0.ebuild:
+  amd64 stable, bug #222167
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> claws-mail-3.4.0.ebuild:
   Stable on ppc wrt bug 222167
