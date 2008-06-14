@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.91_beta.ebuild,v 1.3 2007/07/03 04:26:15 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-6.02_beta1.ebuild,v 1.1 2008/06/14 22:16:02 je_fro Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -11,13 +11,13 @@ inherit eutils
 
 DESCRIPTION="Folding@Home is a distributed computing project for protein folding."
 HOMEPAGE="http://folding.stanford.edu/FAQ-SMP.html"
-SRC_URI="http://folding.stanford.edu/release/FAH_SMP_Linux.tgz"
+SRC_URI="http://www.stanford.edu/group/pandegroup/folding/release/FAH6.02beta1-Linux.tgz"
 
 LICENSE="folding-at-home"
 SLOT="0"
 
-# This beta just died...we're waiting on the next revision.
-KEYWORDS=""
+# This is for x86_64 only.
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/baselayout-1.8.0
@@ -29,10 +29,10 @@ S="${WORKDIR}"
 
 src_install() {
 	exeinto ${I}
-	newexe ${FILESDIR}/5.91_beta/initfolding initfolding
-	doexe fah5 mpiexec
-	newconfd ${FILESDIR}/5.91_beta/folding-conf.d foldingathome
-	newinitd ${FILESDIR}/5.91_beta/fah-init foldingathome
+	newexe "${FILESDIR}"/${PV}/initfolding initfolding
+	doexe fah6 mpiexec
+	newconfd "${FILESDIR}"/${PV}/folding-conf.d foldingathome
+	newinitd "${FILESDIR}"/${PV}/fah-init foldingathome
 }
 
 pkg_preinst() {

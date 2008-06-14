@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/foldingathome
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.19 2007/07/12 17:19:05 angelos Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.20 2008/06/14 22:16:02 je_fro Exp $
+
+*foldingathome-6.02_beta1 (14 Jun 2008)
+
+  14 Jun 2008; Jeff Gardner <je_fro@gentoo.org> -files/5.91_beta/fah-init,
+  -files/5.91_beta/initfolding, -files/5.91_beta/folding-conf.d,
+  +files/6.02_beta1/fah-init, +files/6.02_beta1/folding-conf.d,
+  +files/6.02_beta1/initfolding, -foldingathome-5.91_beta.ebuild,
+  +foldingathome-6.02_beta1.ebuild:
+  Latest beta client
 
   12 Jul 2007; Christoph Mende <angelos@gentoo.org>
   foldingathome-5.0.2-r5.ebuild:

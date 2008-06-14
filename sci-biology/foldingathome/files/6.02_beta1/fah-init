@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/5.91_beta/fah-init,v 1.1 2007/04/10 10:37:24 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.02_beta1/fah-init,v 1.1 2008/06/14 22:16:03 je_fro Exp $
 
 opts="${opts} unitinfo"
 
@@ -13,13 +13,13 @@ unitinfo() {
 start() {
 	ebegin "Starting Folding@Home"
 	cd /opt/foldingathome/amd64-smp
-	start-stop-daemon -v --chdir ${PWD} --chuid foldingathome --nicelevel 19 --start --background --exec ./fah5 -- ${FOLD_OPTS}
+	start-stop-daemon -v --chdir ${PWD} --chuid foldingathome --nicelevel 19 --start --background --exec ./fah6 -- ${FOLD_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Folding@Home"
-	start-stop-daemon -vv --stop --user foldingathome --exec /opt/foldingathome/amd64-smp/fah5
+	start-stop-daemon -vv --stop --user foldingathome --exec /opt/foldingathome/amd64-smp/fah6
 	cd /opt/foldingathome/amd64-smp
 	for I in FahCore*.exe; do
 		if ps ax|grep $I > /dev/null 2>&1; then
@@ -27,7 +27,7 @@ stop() {
 		fi
 	done
 	sleep 1
-	if ps ax|grep '[/]opt[/]foldingathome[/]amd64-smp[/]fah5' > /dev/null 2>&1; then
+	if ps ax|grep '[/]opt[/]foldingathome[/]amd64-smp[/]fah6' > /dev/null 2>&1; then
 		eend 1
 	else
 		eend 0

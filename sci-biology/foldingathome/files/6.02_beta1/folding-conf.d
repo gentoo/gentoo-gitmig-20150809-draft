@@ -16,3 +16,5 @@
 # as a service.
 #
 FOLD_OPTS="-local"
+PIDFILE=/var/run/folding
+
