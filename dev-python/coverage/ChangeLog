@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.4 2008/06/11 23:06:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.5 2008/06/14 17:56:45 coldwind Exp $
+
+  14 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> coverage-2.77.ebuild:
+  amd64 stable wrt bug #209511
 
   11 Jun 2008; Christian Faulhammer <opfer@gentoo.org> coverage-2.77.ebuild:
   stable x86, bug 209511
