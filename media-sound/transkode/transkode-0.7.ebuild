@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.1 2008/06/14 02:44:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.2 2008/06/14 18:20:00 yngwin Exp $
 
 ARTS_REQUIRED="never"
 
@@ -39,7 +39,7 @@ PATCHES=( "${FILESDIR}/${P}-gcc-4.3.patch" )
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
-	if ! use ffmpeg || ! use mplayer || ! use gstreamer; then
+	if ! use ffmpeg && ! use mplayer && ! use gstreamer && ! use xine; then
 		echo
 		ewarn "TransKode should be emerged with at least one of next"
 		ewarn "use flags: mplayer, ffmpeg, gstreamer or xine!"
