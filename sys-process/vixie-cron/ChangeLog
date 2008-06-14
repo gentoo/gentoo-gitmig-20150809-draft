@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/vixie-cron
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.53 2007/04/24 11:02:34 eroyf Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.54 2008/06/14 12:12:06 zmedico Exp $
+
+  14 Jun 2008; Zac Medico <zmedico@gentoo.org> vixie-cron-4.1-r10.ebuild:
+  Bug #226505 - For compatibility with phase execution order in
+  >=portage-2.1.5, call has_version inside pkg_preinst instead of
+  pkg_postinst.
 
   24 Apr 2007; Alexander Færøy <eroyf@gentoo.org>
   vixie-cron-4.1-r10.ebuild:

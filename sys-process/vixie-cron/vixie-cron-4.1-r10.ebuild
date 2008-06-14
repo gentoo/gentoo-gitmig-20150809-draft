@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.11 2007/06/24 22:20:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.12 2008/06/14 12:12:06 zmedico Exp $
 
 inherit cron toolchain-funcs pam
 
@@ -82,6 +82,11 @@ src_install() {
 	dodoc CHANGES CONVERSION FEATURES MAIL README THANKS
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-4.1-r10"
+	fix_spool_dir_perms=$?
+}
+
 pkg_postinst() {
 	if [[ -f ${ROOT}/etc/init.d/vcron ]]
 	then
@@ -103,7 +108,7 @@ pkg_postinst() {
 	fi
 
 	# bug 164466
-	if has_version '<sys-process/vixie-cron-4.1-r10' ; then
+	if [[ $fix_spool_dir_perms = 0 ]] ; then
 		echo
 		ewarn "Previous ebuilds didn't correctly set permissions on"
 		ewarn "the crontabs spool directory. Proper permissions are"
