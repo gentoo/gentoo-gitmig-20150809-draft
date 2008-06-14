@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.26 2008/06/13 11:56:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.27 2008/06/14 08:58:21 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> claws-mail-mailmbox-1.14.1.ebuild:
+  Stable on ppc wrt bug 222167
 
   13 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   claws-mail-mailmbox-1.14.1.ebuild:
