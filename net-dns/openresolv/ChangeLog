@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.16 2008/06/13 20:16:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.17 2008/06/14 10:07:27 angelos Exp $
+
+  14 Jun 2008; Christoph Mende <angelos@gentoo.org> openresolv-1.5.1.ebuild:
+  Stable on amd64, bug #224097
 
   13 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
   openresolv-1.5.1.ebuild:
