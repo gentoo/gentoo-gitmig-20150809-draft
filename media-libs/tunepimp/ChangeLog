@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.60 2008/04/07 05:49:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.61 2008/06/14 12:40:44 tgurr Exp $
+
+  14 Jun 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/tunepimp-0.5.3-build-fix.patch,
+  +files/tunepimp-0.5.3-libtool.patch, tunepimp-0.5.3.ebuild,
+  tunepimp-0.5.3-r1.ebuild:
+  Fix tunepimp-0.5.3-r1.ebuild, libtool2 compatibility bug #220565. Huge
+  thanks to Mike Weissman for providing the necessary patches.
 
   06 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/tunepimp-0.5.3-gcc43.patch, tunepimp-0.5.3-r1.ebuild:

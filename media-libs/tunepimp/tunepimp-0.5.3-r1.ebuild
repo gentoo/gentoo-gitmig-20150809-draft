@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.3 2008/04/07 05:49:25 philantrop Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.4 2008/06/14 12:40:44 tgurr Exp $
 
 EAPI="1"
 
@@ -44,6 +41,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-libtool.patch"
+	epatch "${FILESDIR}/${P}-build-fix.patch"
 
 	sed -i -e "s: tta::" configure.in
 
