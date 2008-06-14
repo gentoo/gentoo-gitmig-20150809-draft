@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-2007.4.ebuild,v 1.2 2008/01/27 16:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-2007.4.ebuild,v 1.3 2008/06/14 08:57:54 flameeyes Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 MY_PV=${PV/./Q}
 DESCRIPTION="check the permissions of a file system against a spec file"
@@ -15,6 +15,13 @@ KEYWORDS="~amd64 ~ppc ~s390 ~x86"
 IUSE=""
 
 S=${WORKDIR}/pkgsrc/pkgtools
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}+glibc-2.8.patch"
+}
 
 src_compile() {
 	cd "${S}"/libnbcompat/files
