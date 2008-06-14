@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pakchois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.4 2008/03/06 11:01:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.5 2008/06/14 16:31:57 nixnut Exp $
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> pakchois-0.4.ebuild:
+  Added ~ppc wrt bug 212056
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> pakchois-0.4.ebuild:
   Add ~alpha/~ia64/~sparc wrt #212056
