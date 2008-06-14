@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.4 2007/02/07 13:51:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.5 2008/06/14 15:34:07 coldwind Exp $
 
 inherit eutils autotools games
 
@@ -27,6 +27,11 @@ src_unpack() {
 		"${FILESDIR}"/${P}-execstacks.patch \
 		"${FILESDIR}"/${P}-concurrentMake.patch
 	eautoreconf
+}
+
+src_compile() {
+	egamesconf $(use_enable x86 i386asm) || die "egamesconf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
