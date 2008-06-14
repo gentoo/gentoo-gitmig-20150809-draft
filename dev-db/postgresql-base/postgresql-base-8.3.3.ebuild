@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.3.ebuild,v 1.1 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.3.ebuild,v 1.2 2008/06/14 10:42:50 dev-zero Exp $
 
 EAPI="1"
 
@@ -73,7 +73,7 @@ src_compile() {
 		--includedir=/usr/include/postgresql-${SLOT} \
 		--with-locale-dir=/usr/share/postgresql-${SLOT}/locale \
 		--mandir=/usr/share/postgresql-${SLOT}/man \
-		--with-docdir=/usr/share/doc/${PF} \
+		--without-docdir \
 		--enable-depend \
 		--without-tcl \
 		--without-perl \

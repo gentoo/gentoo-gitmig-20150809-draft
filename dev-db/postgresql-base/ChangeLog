@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.7 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.8 2008/06/14 10:42:50 dev-zero Exp $
+
+*postgresql-base-7.4.21-r1 (14 Jun 2008)
+
+  14 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -postgresql-base-7.4.21.ebuild, +postgresql-base-7.4.21-r1.ebuild,
+  postgresql-base-8.0.17.ebuild, postgresql-base-8.1.13.ebuild,
+  postgresql-base-8.2.9.ebuild, postgresql-base-8.3.3.ebuild:
+  Fixed 7.4.21 to install libpgport.a, don't install html-documentation
+  since provided by postgresql-doc (bug #225629).
 
 *postgresql-base-8.3.3 (13 Jun 2008)
 *postgresql-base-8.2.9 (13 Jun 2008)

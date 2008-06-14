@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.21.ebuild,v 1.1 2008/06/13 21:46:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.21-r1.ebuild,v 1.1 2008/06/14 10:42:50 dev-zero Exp $
 
 EAPI="1"
 
@@ -72,7 +72,7 @@ src_compile() {
 		--with-locale-dir=/usr/share/postgresql-${SLOT}/locale \
 		--mandir=/usr/share/postgresql-${SLOT}/man \
 		--host=${CHOST} \
-		--with-docdir=/usr/share/doc/${PF} \
+		--docdir=/usr/share/doc/${PF} \
 		--without-tcl \
 		--without-perl \
 		--without-python \
@@ -96,9 +96,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	insinto /usr/include/postgresql-${SLOT}/postmaster
 	doins "${S}"/src/include/postmaster/*.h
+
+	# Install missing libpgport.a
+	insinto /usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
+	doins "${S}/src/port/libpgport.a"
+
 	dodir /usr/share/postgresql-${SLOT}/man/man1
 	tar -zxf "${S}/doc/man.tar.gz" -C "${D}"/usr/share/postgresql-${SLOT}/man man1/{ecpg,pg_config}.1
 
+	rm -rf "${D}/usr/share/doc/${PF}/html"
 	rm "${D}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,initlocation,ipcclean,pg_controldata,pg_ctl,pg_resetxlog,pg_restore,postgres,postmaster}.1
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
