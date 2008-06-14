@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.1.ebuild,v 1.4 2008/05/12 10:53:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.1.ebuild,v 1.5 2008/06/14 09:24:27 betelgeuse Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -76,6 +76,8 @@ RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
 RDEPEND="
+	ppc? ( =virtual/libstdc++-3.3 )
+	ppc64? ( =virtual/libstdc++-3.3 )
 	X? (
 		x11-libs/libXext
 		x11-libs/libXft
