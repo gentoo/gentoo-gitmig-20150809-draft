@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.98 2008/06/14 11:04:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.99 2008/06/14 11:05:39 flameeyes Exp $
+
+  14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Force manifest regen (Attic/ issue).
 
   14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/libcdio-0.78.2-bug203777.patch, +libcdio-0.78.2-r3.ebuild:
