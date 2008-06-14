@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r3.ebuild,v 1.9 2008/03/16 08:48:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r3.ebuild,v 1.10 2008/06/14 14:04:51 zmedico Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -192,6 +192,11 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+	has_version "=${CATEGORY}/${PN}-1.2*"
+	upgrade_from_1_2_x=$?
+}
+
 pkg_postinst() {
 	elog "This package now includes an initscript which loads and saves"
 	elog "rules stored in /var/lib/iptables/rules-save"
@@ -213,7 +218,7 @@ pkg_postinst() {
 		ewarn "  net.ipv6.ip_forward = 1"
 		ewarn "for ipv6."
 	fi
-	if has_version '=net-firewall/iptables-1.2*' ; then
+	if [[ $upgrade_from_1_2_x = 0 ]] ; then
 		ewarn
 		ewarn "When upgrading from iptables-1.2.x, you may be unable to remove"
 		ewarn "rules added with iptables-1.2.x.  This is a known issue, please see:"
