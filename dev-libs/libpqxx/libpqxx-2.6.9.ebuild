@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.9.ebuild,v 1.7 2008/05/19 19:39:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.9.ebuild,v 1.8 2008/06/14 11:59:49 dev-zero Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	# should be safe enough to remove the lines directly from configure,
 	# since it's copied directly from configure.ac

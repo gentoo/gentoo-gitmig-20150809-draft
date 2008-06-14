@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.50 2008/05/19 19:39:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.51 2008/06/14 11:59:49 dev-zero Exp $
+
+  14 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/libpqxx-2.6.9-gcc43.patch, libpqxx-2.6.9.ebuild:
+  Added patch to fix compilation problems with gcc-4.3 (bug #218547 thanks
+  to Holger Ackermann)
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> libpqxx-2.6.8.ebuild,
   libpqxx-2.6.9.ebuild:
