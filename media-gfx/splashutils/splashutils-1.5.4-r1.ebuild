@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.4 2008/04/17 13:11:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4-r1.ebuild,v 1.5 2008/06/14 15:17:16 zmedico Exp $
 
 EAPI="1"
 
@@ -158,6 +158,14 @@ src_install() {
 	dosym /${LIB}/splash/bin/fbres /sbin/fbres
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-1.0"
+	previous_less_than_1_0=$?
+
+	has_version "<${CATEGORY}/${PN}-1.5.3"
+	previous_less_than_1_5_3=$?
+}
+
 pkg_postinst() {
 	if has_version sys-fs/devfsd || ! has_version sys-fs/udev ; then
 		elog "This package has been designed with udev in mind. Other solutions, such as"
@@ -168,13 +176,13 @@ pkg_postinst() {
 		elog ""
 	fi
 
-	if has_version '<media-gfx/splashutils-1.0' ; then
+	if [[ $previous_less_than_1_0 = 0 ]] ; then
 		elog "Since you are upgrading from a pre-1.0 version, please make sure that you"
 		elog "rebuild your initrds. You can use the splash_geninitramfs script to do that."
 		elog ""
 	fi
 
-	if has_version '<media-gfx/splashutils-1.5.3' && ! use fbcondecor ; then
+	if [[ $previous_less_than_1_5_3 = 0 ]] && ! use fbcondecor ; then
 		elog "Starting with splashutils-1.5.3, support for the fbcondecor kernel patch"
 		elog "is optional and dependent on the the 'fbcondecor' USE flag.  If you wish"
 		elog "to use fbcondecor, run:"
