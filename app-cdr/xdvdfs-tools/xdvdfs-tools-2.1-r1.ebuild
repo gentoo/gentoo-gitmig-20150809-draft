@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/xdvdfs-tools-2.1-r1.ebuild,v 1.1 2005/05/25 23:16:32 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/xdvdfs-tools-2.1-r1.ebuild,v 1.2 2008/06/14 16:13:13 drac Exp $
 
 inherit eutils
 
@@ -14,19 +14,20 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="app-arch/unrar"
+RDEPEND=""
 
-S=${WORKDIR}/"XDVDFS_Tools/src"
+S=${WORKDIR}/XDVDFS_Tools/src
 
 src_unpack() {
-	unrar x ${DISTDIR}/XDVDFSToolsv${PV}.rar
+	unrar x "${DISTDIR}"/XDVDFSToolsv${PV}.rar
 	mv "XDVDFS Tools" XDVDFS_Tools
 	sed -i -e "s:CCFLAGS = .*:CCFLAGS = ${CFLAGS}:g" "${S}"/makefile.prefab
-	epatch ${FILESDIR}/${P}-fnamefix.patch
-	mkdir ${S}/xdvdfs_extract/output ${S}/xdvdfs_maker/output
+	epatch "${FILESDIR}"/${P}-fnamefix.patch
+	mkdir "${S}"/xdvdfs_extract/output "${S}"/xdvdfs_maker/output
 }
 
 src_compile() {
-	cd ${S}/xdvdfs_dumper
+	cd "${S}"/xdvdfs_dumper
 	emake || die "xdvdfs_dumper"
 	cd ../xdvdfs_extract
 	emake || die "xdvdfs_extract"
