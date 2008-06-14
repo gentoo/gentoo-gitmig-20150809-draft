@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.4.ebuild,v 1.2 2008/05/21 18:53:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.4-r1.ebuild,v 1.1 2008/06/14 11:09:41 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.freeradius.org/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bindist debug edirectory firebird frascend frxp kerberos ldap mysql pam postgres snmp ssl threads udpfromto"
+IUSE="bindist debug edirectory firebird frascend frxp kerberos ldap mysql pam postgres snmp ssl threads udpfromto \
+    elibc_glibc"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
@@ -49,6 +50,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-versionless-la-files.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
+	use elibc_glibc && epatch "${FILESDIR}/${P}-gnu-source.patch"
 
 	cd "${S}"
 
@@ -85,6 +87,7 @@ src_unpack() {
 		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
 	fi
 
+	eautoheader || die "eautoheaders failed"
 	eautoconf || die "eautoconf failed"
 }
 
@@ -103,7 +106,7 @@ src_compile() {
 		myconf="${myconf} --enable-heimdal-krb5"
 	fi
 
-	econf --disable-ltdl-install \
+	econf --disable-ltdl-install --with-system-libtool \
 		 --localstatedir=/var ${myconf} || die "econf failed"
 
 	make || die "make failed"

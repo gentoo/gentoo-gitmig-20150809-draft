@@ -1,0 +1,12 @@
+--- freeradius-server-2.0.4.orig/configure.in	2008-04-26 17:10:09.000000000 +0200
++++ freeradius-server-2.0.4/configure.in	2008-06-13 14:18:04.000000000 +0200
+@@ -38,6 +38,9 @@
+ dnl #
+ dnl #############################################################
+ 
++dnl Define _GNU_SOURCE, this should be done before any feature test.
++AC_DEFINE(_GNU_SOURCE, 1, [Define on Linux to activate all library features])
++
+ dnl Check for GNU cc
+ AC_PROG_CC
+ AC_PROG_CXX
