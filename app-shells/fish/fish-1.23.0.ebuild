@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.1 2008/01/13 09:45:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.2 2008/06/15 22:27:56 loki_val Exp $
+
+inherit base
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://fishshell.org/"
@@ -15,6 +17,8 @@ RDEPEND="sys-libs/ncurses
 	X? ( x11-misc/xsel )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen"
+
+PATCHES=( "${FILESDIR}/${P}-glibc-2.8.patch" )
 
 src_compile() {
 	# Set things up for fish to be a default shell.
