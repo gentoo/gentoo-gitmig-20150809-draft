@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1-r1.ebuild,v 1.1 2008/06/14 12:15:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1-r1.ebuild,v 1.2 2008/06/15 20:37:43 mr_bones_ Exp $
 
 EAPI=1
 inherit toolchain-funcs eutils qt4
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="nls"
 
 RDEPEND="virtual/opengl
