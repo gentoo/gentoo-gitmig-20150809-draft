@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.3 2008/06/06 21:00:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.4 2008/06/15 12:14:37 drac Exp $
 
 inherit eutils java-pkg-2
 
@@ -160,7 +160,7 @@ src_install() {
 	java-pkg_jarinto /var/CDWserver/export/Server/tools
 	java-pkg_dojar "${S}/MD5Verify/MD5Verify.jar"
 
-	dodoc COPYING ChangeLog README CREDITS || die
+	dodoc ChangeLog README CREDITS || die
 	dohtml *.html || die
 }
 
