@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.10 2008/06/15 18:52:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.11 2008/06/15 18:54:59 swegener Exp $
+
+*pdsh-2.16 (15 Jun 2008)
+
+  15 Jun 2008; Sven Wegener <swegener@gentoo.org> +pdsh-2.16.ebuild:
+  Version bump.
 
   15 Jun 2008; Sven Wegener <swegener@gentoo.org>
   +files/pdsh-2.14-gcc-4.3-unistd.h.patch,
