@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.22 2008/06/14 03:12:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.23 2008/06/15 12:15:42 klausman Exp $
+
+  15 Jun 2008; Tobias Klausmann <klausman@gentoo.org> psh-1.8.1.ebuild:
+  Keyworded on alpha, bug #226479
 
 *psh-1.8.1 (14 Jun 2008)
 
