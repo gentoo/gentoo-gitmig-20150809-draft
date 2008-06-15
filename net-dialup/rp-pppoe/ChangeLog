@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.89 2008/01/06 12:49:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.90 2008/06/15 14:20:33 mrness Exp $
+
+  15 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  +files/rp-pppoe-3.8-autoheader.patch, rp-pppoe-3.8-r2.ebuild:
+  Use eautoreconf instead eautoconf. Drop bindnow-flags (#226999).
 
 *rp-pppoe-3.8-r2 (06 Jan 2008)
 
