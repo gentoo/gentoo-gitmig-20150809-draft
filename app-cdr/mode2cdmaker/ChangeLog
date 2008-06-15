@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/mode2cdmaker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/ChangeLog,v 1.3 2007/02/21 20:18:01 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/ChangeLog,v 1.4 2008/06/15 16:30:38 drac Exp $
+
+  15 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/mode2cdmaker-1.5.1-gentoo.patch, mode2cdmaker-1.5.1.ebuild:
+  Fix implicit declarations and respect CC, CFLAGS, LDFLAGS. Keyword ~amd64.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
