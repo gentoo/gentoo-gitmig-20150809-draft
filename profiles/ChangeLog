@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1553 2008/06/15 14:36:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1554 2008/06/15 18:52:50 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add xfce use flag for sys-block/gparted
 
   15 Jun 2008; Alin Năstac <mrness@gentoo.org> package.mask:
   Remove net-dialup/{mclient,mserver,linesrv,xlc} p.mask (packages were removed).
