@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.6 2007/10/12 00:32:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.7 2008/06/15 20:50:15 serkan Exp $
 
 jcefile="jce_policy-1_5_0.zip"
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
-FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce_policy-1.5.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_JCE="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jce_policy-1.5.0-oth-JPR@CDS-CDS_Developer"
 
 pkg_nofetch() {
 	einfo "Please download ${jcefile} from:"
@@ -27,7 +27,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${jcefile} ]; then
+	if [ ! -r "${DISTDIR}"/${jcefile} ]; then
 		die "cannot read ${jcefile}. Please check the permission and try again."
 	fi
 }
@@ -37,7 +37,7 @@ src_install() {
 	dodir /opt/${P}/jre/lib/security
 
 	cd "${D}"/opt/${P}/jre/lib/security
-	unzip ${DISTDIR}/${jcefile} || die "failed to unzip jce"
+	unzip "${DISTDIR}"/${jcefile} || die "failed to unzip jce"
 	mv jce unlimited-jce
 	dodir /opt/${P}/jre/lib/security/strong-jce
 }

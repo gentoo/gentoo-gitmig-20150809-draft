@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.3 2007/10/12 00:32:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.4 2008/06/15 20:50:15 serkan Exp $
 
 jcefile="jce_policy-6.zip"
 
@@ -18,7 +18,7 @@ RDEPEND=""
 
 S="${WORKDIR}/jce"
 
-FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce_policy-6-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_JCE="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jce_policy-6-oth-JPR@CDS-CDS_Developer"
 
 pkg_nofetch() {
 	einfo "Please download ${jcefile} from:"
@@ -28,7 +28,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${jcefile} ]; then
+	if [ ! -r "${DISTDIR}"/${jcefile} ]; then
 		die "cannot read ${jcefile}. Please check the permission and try again."
 	fi
 
