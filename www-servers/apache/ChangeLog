@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.76 2008/06/15 16:09:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.77 2008/06/15 18:59:25 dertobi123 Exp $
+
+  15 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org> apache-2.2.9.ebuild:
+  ppc stable, bug #227111
 
   15 Jun 2008; Benedikt Böhm <hollow@gentoo.org> apache-2.2.9.ebuild:
   remove old warning cruft
