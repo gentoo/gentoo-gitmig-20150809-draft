@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.105 2008/06/02 05:57:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.106 2008/06/15 12:18:43 betelgeuse Exp $
+
+*bluez-libs-3.32 (15 Jun 2008)
+
+  15 Jun 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +bluez-libs-3.32.ebuild:
+  Version bump.
 
   02 Jun 2008; Jeroen Roovers <jer@gentoo.org> bluez-libs-3.30.ebuild:
   Stable for HPPA (bug #224409).
