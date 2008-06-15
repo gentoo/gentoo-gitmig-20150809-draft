@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.6 2006/11/13 18:42:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.7 2008/06/15 06:52:09 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -49,8 +49,13 @@ src_install() {
 	doman ${PN}.1
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.12.0"
+	previous_less_than_0_12_0=$?
+}
+
 pkg_postinst() {
-	if has_version '<app-portage/conf-update-0.12.0' ; then
+	if [[ $previous_less_than_0_12_0 = 0 ]] ; then
 		ewarn "Note that the format for /etc/conf-update.conf changed in this"
 		ewarn "version. You should merge the update of that file with e.g."
 		ewarn "etc-update."
