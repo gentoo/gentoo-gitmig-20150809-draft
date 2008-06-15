@@ -1,6 +1,15 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.20 2008/03/28 02:03:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.21 2008/06/15 21:21:17 eva Exp $
+
+
+*gurlchecker-0.10.2 (15 Jun 2008)
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gurlchecker-0.10.2-clamav093.patch,
+  +files/gurlchecker-0.10.2-configure.in.patch, +gurlchecker-0.10.2.ebuild:
+  bump to 0.10.2, bug #215139.
+  fix compilation against app-antivirus/clamav-0.93, bug #221175.
 
   28 Mar 2008; Jeroen Roovers <jer@gentoo.org> gurlchecker-0.10.1.ebuild:
   Marked ~hppa too. Fixed quoting issues.

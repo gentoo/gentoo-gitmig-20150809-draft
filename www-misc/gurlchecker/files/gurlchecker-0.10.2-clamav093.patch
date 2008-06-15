@@ -1,0 +1,13 @@
+--- var/tmp/portage/www-misc/gurlchecker-0.10.2/work/gurlchecker-0.10.2/src/ucclam.c 
++++ home/eva/Téléchargements/gurlchecker-scm-2008-06-15/src/ucclam.c 
+@@ -34,9 +34,8 @@
+   clam->limits.maxfiles = 1;
+   clam->limits.maxfilesize = 10 * 1048576;
+   clam->limits.maxreclevel = 1;
+-  clam->limits.maxratio = 200;
+   clam->limits.archivememlim = 0;
+-  if (cl_loaddbdir (cl_retdbdir (), &clam->root, &clam->no) ||
++  if (cl_load (cl_retdbdir (), &clam->root, &clam->no, CL_DB_STDOPT) ||
+       cl_build (clam->root))
+     {
+       uc_ucclam_free (clam);
