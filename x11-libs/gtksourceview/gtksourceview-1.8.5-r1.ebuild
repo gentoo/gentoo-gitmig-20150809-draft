@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.10 2007/12/11 22:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.11 2008/06/15 19:44:52 swegener Exp $
 
-inherit gnome2
+inherit gnome2 flag-o-matic
 
 DESCRIPTION="A text widget implementing syntax highlighting and other features"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,6 +29,9 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 pkg_setup() {
 	# Removes the gnome-vfs dep
 	G2CONF="${G2CONF} --disable-build-tests"
+
+	# Needed for gcc-4.3
+	append-cppflags -D_GNU_SOURCE
 }
 
 src_install() {
