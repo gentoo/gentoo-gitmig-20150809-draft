@@ -1,5 +1,0 @@
-# linesrv login requires auth and a valid account
-# uncomment the following line only if you have a list of allowed users in a certain file.
-#auth       required   pam_listfile.so item=user sense=allow file=/etc/linesrv/linesrv.users onerr=fail
-auth       required   pam_pwdb.so
-account	   required   pam_pwdb.so

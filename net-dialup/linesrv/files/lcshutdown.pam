@@ -1,4 +1,0 @@
-# All clients that are able to send a shutdown command should
-# already be authenticated with the pam service linecontrol.
-# so in this service we do only an additional check.
-auth       required   pam_listfile.so item=user sense=allow file=/etc/linesrv/linesrv.shutdown.users onerr=fail

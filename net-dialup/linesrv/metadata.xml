@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>net-dialup</herd>
-  <longdescription>LineControl allows you to remotely control the internet connection of a linux masquerading server from 
-multiple clients. It takes care with the number of clients using the connection and decides upon this number 
-whether the connection should be up or down.</longdescription>
-</pkgmetadata>
