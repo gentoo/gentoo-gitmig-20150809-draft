@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.8-r1.ebuild,v 1.2 2008/06/07 14:01:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.8-r1.ebuild,v 1.3 2008/06/15 15:40:46 hollow Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,8 +45,6 @@ src_compile() {
 
 	if use ssl ; then
 		myconf="${myconf} --with-ssl=/usr --enable-ssl"
-		append-flags -DHAVE_OPENSSL -DUSE_SSL -I/usr/include/openssl
-		append-ldflags -lssl
 	fi
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
