@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/radvd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.39 2007/12/25 16:28:41 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.40 2008/06/15 11:19:23 wschlich Exp $
+
+*radvd-1.1 (15 Jun 2008)
+
+  15 Jun 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/radvd-1.1-gnu-source.patch, +radvd-1.1.ebuild:
+  version bump wrt bug #226509
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.
