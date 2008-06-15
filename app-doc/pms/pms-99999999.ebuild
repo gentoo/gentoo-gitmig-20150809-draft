@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.1 2008/06/13 01:02:43 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.2 2008/06/15 11:00:23 ingmar Exp $
 
 inherit git
 
@@ -13,9 +13,9 @@ SRC_URI=""
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="all-options kdebuild"
+IUSE="all-options html kdebuild"
 
-DEPEND="
+DEPEND="html? ( dev-tex/tex4ht )
 	dev-texlive/texlive-latex
 	dev-texlive/texlive-latexrecommended
 	dev-texlive/texlive-latexextra
@@ -31,9 +31,16 @@ set_conditional() {
 src_compile() {
 	set_conditional all-options
 	set_conditional kdebuild
+
 	emake || die "emake failed"
+	if use html; then
+		emake html || die "emake html failed"
+	fi
 }
 
 src_install() {
 	dodoc pms.pdf || die "dodoc failed"
+	if use html; then
+		dohtml *.html pms.css $(shopt -s nullglob; echo *.png) || die "dohtml failed"
+	fi
 }
