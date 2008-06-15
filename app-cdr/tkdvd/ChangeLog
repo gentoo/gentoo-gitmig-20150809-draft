@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/tkdvd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.17 2008/02/15 21:03:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.18 2008/06/15 17:33:46 drac Exp $
+
+*tkdvd-4.0.8 (15 Jun 2008)
+
+  15 Jun 2008; Samuli Suominen <drac@gentoo.org> +tkdvd-4.0.8.ebuild:
+  Version bump.
 
   15 Feb 2008; nixnut <nixnut@gentoo.org> tkdvd-4.0.7.ebuild:
   Stable on ppc wrt bug 209882
