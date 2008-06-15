@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.3.ebuild,v 1.5 2008/01/01 23:51:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.3.ebuild,v 1.6 2008/06/15 12:04:15 drac Exp $
 
 inherit kde eutils
 
@@ -135,7 +135,7 @@ src_install() {
 
 pkg_preinst() {
 	kde_pkg_preinst
-	use kde || rm ${D}/usr/share/applications/kde/k3bsetup2.desktop
+	use kde || rm "${D}"/usr/share/applications/kde/k3bsetup2.desktop
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.15 2008/01/01 23:51:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.16 2008/06/15 12:04:15 drac Exp $
 
 inherit kde eutils
 
@@ -124,9 +124,9 @@ src_install() {
 
 	# Move menu entry
 	if use kde; then
-		mv ${D}/usr/share/applnk/Settings/System/k3bsetup2.desktop ${D}/usr/share/applications/kde/
+		mv "${D}"/usr/share/applnk/Settings/System/k3bsetup2.desktop "${D}"/usr/share/applications/kde/
 	fi
-	rm -fR ${D}/usr/share/applnk/
+	rm -fR "${D}"/usr/share/applnk/
 }
 
 pkg_postinst() {
