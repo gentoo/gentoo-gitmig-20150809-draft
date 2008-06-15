@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.6 2008/04/20 11:25:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.7 2008/06/15 11:46:08 graaff Exp $
 
 inherit fixheadtails eutils autotools multilib
 
@@ -47,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --without-included-ltdl || die "./configure failed"
+	econf --libdir=/usr/$(get_libdir) --without-included-ltdl || die "./configure failed"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.43 2008/04/20 11:25:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.44 2008/06/15 11:46:08 graaff Exp $
+
+  15 Jun 2008; Hans de Graaff <graaff@gentoo.org> wml-2.0.11-r3.ebuild:
+  Revert removal of --libdir setting which breaks wml, fixing #225075
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   +files/wml-2.0.11-autotools.patch, wml-2.0.11-r3.ebuild:
