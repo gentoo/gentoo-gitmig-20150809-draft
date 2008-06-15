@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.2.ebuild,v 1.9 2008/04/13 22:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.2.ebuild,v 1.10 2008/06/15 19:47:58 swegener Exp $
 
-inherit gnome2 eutils autotools
+inherit gnome2 eutils
 
 DESCRIPTION="A text widget implementing syntax highlighting and other features"
 HOMEPAGE="http://www.gnome.org/"
