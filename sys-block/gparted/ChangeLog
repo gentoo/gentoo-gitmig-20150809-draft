@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.48 2008/05/04 11:43:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.49 2008/06/15 18:54:28 eva Exp $
+
+*gparted-0.3.7-r1 (15 Jun 2008)
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gparted-0.3.7-hal-lock.patch, +gparted-0.3.7-r1.ebuild:
+  do not fail in absence of hal, bug #220459. 
+  more su helper sweetness, bug #220383.
 
 *gparted-0.3.7 (04 May 2008)
 
