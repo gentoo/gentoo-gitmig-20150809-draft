@@ -1,0 +1,34 @@
+AC_SUBST only takes a single variable
+
+--- urlgfe-1.0.2/configure.in
++++ urlgfe-1.0.2/configure.in
+@@ -53,7 +53,8 @@
+ 	LFS_CFLAGS=`$GETCONF LFS_CFLAGS`
+ 	LFS_LDFLAGS=`$GETCONF LFS_LDFLAGS`
+ fi
+-AC_SUBST(LFS_CFLAGS LFS_LDFLAGS)
++AC_SUBST(LFS_CFLAGS)
++AC_SUBST(LFS_LDFLAGS)
+ 
+ AC_PATH_PROG(CURL_CONFIG, curl-config)
+ if test "x$CURL_CONFIG" = "x" ; then
+@@ -61,7 +62,8 @@
+ fi
+ CURL_CFLAGS=`$CURL_CONFIG --cflags`
+ CURL_LIBS=`$CURL_CONFIG --libs`
+-AC_SUBST(CURL_CFLAGS CURL_LIBS)
++AC_SUBST(CURL_CFLAGS)
++AC_SUBST(CURL_LIBS)
+ 
+ AC_PATH_PROG(PCRE_CONFIG, pcre-config)
+ if test "x$PCRE_CONFIG" = "x" ; then
+@@ -70,7 +72,8 @@
+ 
+ PCRE_CFLAGS=`$PCRE_CONFIG --cflags`
+ PCRE_LIBS=`$PCRE_CONFIG --libs`
+-AC_SUBST(PCRE_CFLAGS PCRE_LIBS)
++AC_SUBST(PCRE_CFLAGS)
++AC_SUBST(PCRE_LIBS)
+ dnl checks for requirements.  --- end ---
+ 
+ 
