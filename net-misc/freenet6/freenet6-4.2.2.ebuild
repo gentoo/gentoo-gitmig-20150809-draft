@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-4.2.2.ebuild,v 1.7 2007/06/16 03:13:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-4.2.2.ebuild,v 1.8 2008/06/15 10:44:02 zmedico Exp $
 
 inherit eutils versionator
 
@@ -43,8 +43,13 @@ src_install() {
 	doman man/{man5/gw6c.conf.5,man8/gw6c.8}
 }
 
+pkg_preinst() {
+	has_version "=${CATEGORY}/${PN}-1*"
+	upgrade_from_1_x=$?
+}
+
 pkg_postinst() {
-	if has_version '=net-misc/freenet6-1*' ; then
+	if [[ $upgrade_from_1_x = 0 ]] ; then
 		ewarn "Warning: you are upgrading from an older version"
 		ewarn "The configuration file has been renamed to gw6c.conf"
 		ewarn "Remember to port your personal settings from tspc.conf to it"
