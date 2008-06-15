@@ -1,0 +1,31 @@
+diff -NrU5 CRF++-0.50.orig/freelist.h CRF++-0.50/freelist.h
+--- CRF++-0.50.orig/freelist.h	2008-06-15 22:42:21.000000000 +0200
++++ CRF++-0.50/freelist.h	2008-06-15 22:47:44.000000000 +0200
+@@ -7,10 +7,11 @@
+ //
+ #ifndef CRFPP_FREELIST_H__
+ #define CRFPP_FREELIST_H__
+ 
+ #include <vector>
++#include <cstring>
+ 
+ namespace CRFPP {
+   template <class T>
+   class Length {
+   public:
+diff -NrU5 CRF++-0.50.orig/param.h CRF++-0.50/param.h
+--- CRF++-0.50.orig/param.h	2008-06-15 22:42:21.000000000 +0200
++++ CRF++-0.50/param.h	2008-06-15 22:44:33.000000000 +0200
+@@ -28,11 +28,11 @@
+     }
+     return result;
+   }
+ 
+   template <>
+-  static std::string lexical_cast<std::string, std::string>(std::string arg) {
++  std::string lexical_cast<std::string, std::string>(std::string arg) {
+     return arg;
+   }
+ 
+   struct Option {
+     const char *name;

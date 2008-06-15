@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.47.ebuild,v 1.1 2007/05/02 17:21:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.50.ebuild,v 1.1 2008/06/15 20:59:21 loki_val Exp $
 
-inherit eutils
+inherit eutils base
 
 MY_P="${P/crf/CRF}"
 S="${WORKDIR}/${MY_P}"
@@ -19,6 +19,8 @@ IUSE="examples"
 
 DEPEND=""
 
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
+
 src_test() {
 	for task in example/* ; do
 		cd ${task}
@@ -28,7 +30,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS README
 	dohtml doc/*

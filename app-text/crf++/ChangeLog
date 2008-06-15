@@ -1,6 +1,13 @@
 # ChangeLog for app-text/crf++
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.7 2007/12/25 16:58:51 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.8 2008/06/15 20:59:21 loki_val Exp $
+
+*crf++-0.50 (15 Jun 2008)
+
+  15 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/crf++-0.50-gcc43.patch, -crf++-0.45.ebuild, -crf++-0.47.ebuild,
+  +crf++-0.50.ebuild:
+  Fix 227295, Gcc-4.3 compatibility. Bump to newest, remove old.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
