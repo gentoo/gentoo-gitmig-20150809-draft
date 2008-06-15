@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.34 2008/05/14 21:38:13 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.35 2008/06/15 10:19:03 zmedico Exp $
+
+  15 Jun 2008; Zac Medico <zmedico@gentoo.org> mailgraph-1.14.ebuild:
+  Bug #226505 - For compatibility with phase execution order in
+  >=portage-2.1.5, call has_version inside pkg_preinst instead of
+  pkg_postinst.
 
   14 May 2008; Stefan Briesenick <sbriesen@gentoo.org>
   files/mailgraph.initd-new:

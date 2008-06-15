@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14.ebuild,v 1.9 2007/12/27 23:50:58 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14.ebuild,v 1.10 2008/06/15 10:19:03 zmedico Exp $
 
 inherit eutils webapp
 
@@ -86,10 +86,15 @@ src_install() {
 	dodoc README CHANGES
 }
 
+pkg_preinst() {
+	has_version "<=${CATEGORY}/${PN}-1.12"
+	previous_less_or_equal_to_1_12=$?
+}
+
 pkg_postinst() {
 	# Fix ownerships - previous versions installed these with
 	# root as owner
-	if has_version '<=net-mail/mailgraph-1.12' ; then
+	if [[ $previous_less_or_equal_to_1_12 = 0 ]] ; then
 		if [[ -d /var/lib/mailgraph ]] ; then
 			chown mgraph:mgraph /var/lib/mailgraph
 		fi
