@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20060301-r2.ebuild,v 1.3 2008/01/12 18:35:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20060301-r3.ebuild,v 1.1 2008/06/15 23:22:31 zlin Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN/-/_}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/20050721
 	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
 }
@@ -45,7 +45,7 @@ src_install() {
 		bash_completion || die "failed to split bash_completion"
 
 	exeinto /etc/profile.d
-	doexe ${FILESDIR}/bash-completion.sh || die "failed to install profile.d"
+	doexe "${FILESDIR}"/bash-completion.sh || die "failed to install profile.d"
 
 	# dev-util/subversion provides an extremely superior completion
 	rm contrib/subversion
@@ -61,7 +61,7 @@ pkg_preinst() {
 	if [[ -f ${ROOT}/etc/profile.d/bash-completion && \
 		! -f ${ROOT}/etc/profile.d/bash-completion.sh ]]
 	then
-		mv ${ROOT}/etc/profile.d/bash-completion{,.sh}
+		mv "${ROOT}"/etc/profile.d/bash-completion{,.sh}
 	fi
 }
 
