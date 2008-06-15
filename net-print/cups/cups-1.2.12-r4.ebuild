@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.5 2008/04/05 13:42:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.6 2008/06/15 01:14:09 zmedico Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -180,6 +180,8 @@ src_install() {
 pkg_preinst() {
 	# cleanups
 	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/${PN}-*
+	has_version "=${CATEGORY}/${PN}-1.1*"
+	upgrade_from_1_1=$?
 }
 
 pkg_postinst() {
@@ -205,7 +207,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "You need to emerge ghostscript with the \"cups\" USE flag turned on"
 	fi
-	if has_version =net-print/cups-1.1*; then
+	if [[ $upgrade_from_1_1 = 0 ]] ; then
 		ewarn
 		ewarn "The configuration changed with cups-1.2, you may want to save the old"
 		ewarn "one and start from scratch:"

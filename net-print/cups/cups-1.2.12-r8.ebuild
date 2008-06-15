@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r8.ebuild,v 1.8 2008/04/17 11:15:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r8.ebuild,v 1.9 2008/06/15 01:14:09 zmedico Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -182,6 +182,8 @@ src_install() {
 pkg_preinst() {
 	# cleanups
 	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/${PN}-*
+	has_version "=${CATEGORY}/${PN}-1.1*"
+	upgrade_from_1_1=$?
 }
 
 pkg_postinst() {
@@ -207,7 +209,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "You need to emerge ghostscript with the \"cups\" USE flag turned on"
 	fi
-	if has_version =net-print/cups-1.1*; then
+	if [[ $upgrade_from_1_1 = 0 ]] ; then
 		ewarn
 		ewarn "The configuration changed with cups-1.2, you may want to save the old"
 		ewarn "one and start from scratch:"

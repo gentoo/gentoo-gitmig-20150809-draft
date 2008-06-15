@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r1.ebuild,v 1.6 2008/05/18 14:37:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r1.ebuild,v 1.7 2008/06/15 01:14:09 zmedico Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -232,6 +232,8 @@ src_install() {
 pkg_preinst() {
 	# cleanups
 	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/"${PN}"-*
+	has_version "=${CATEGORY}/${PN}-1.2*"
+	upgrade_from_1_2=$?
 }
 
 pkg_postinst() {
@@ -253,7 +255,7 @@ pkg_postinst() {
 		echo
 	fi
 
-	if has_version =net-print/cups-1.2* ; then
+	if [[ $upgrade_from_1_2 = 0 ]] ; then
 		echo
 		ewarn "You have upgraded from an older cups version. Please make sure"
 		ewarn "to run \"etc-update\" and \"revdep-rebuild\" NOW."
