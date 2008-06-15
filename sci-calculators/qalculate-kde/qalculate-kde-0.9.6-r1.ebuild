@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6-r1.ebuild,v 1.4 2008/06/15 14:31:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6-r1.ebuild,v 1.5 2008/06/15 19:30:20 mr_bones_ Exp $
 
-inherit kde 
+inherit kde
 
 DESCRIPTION="A modern multi-purpose calculator for KDE"
 LICENSE="GPL-2"
