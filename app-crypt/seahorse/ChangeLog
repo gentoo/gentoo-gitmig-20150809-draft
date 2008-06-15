@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.101 2008/06/15 12:24:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.102 2008/06/15 12:34:40 eva Exp $
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/seahorse-2.22.2-fbsd.patch, seahorse-2.22.2.ebuild:
+  fix compilation on fbsd, bug #224591.
 
   15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
   seahorse-2.20.3.ebuild, seahorse-2.22.1.ebuild, seahorse-2.22.2.ebuild:
