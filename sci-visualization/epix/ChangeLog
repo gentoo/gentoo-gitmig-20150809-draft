@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.25 2008/03/17 02:19:29 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.26 2008/06/15 10:55:27 markusle Exp $
+
+*epix-1.2.4 (15 Jun 2008)
+
+  15 Jun 2008; Markus Dittrich <markusle@gentoo.org> -epix-1.0.7.ebuild,
+  -epix-1.0.24.ebuild, +epix-1.2.4.ebuild:
+  Version bump (fixes gcc4.3 issues reported in #226965) and removed 
+  old ebuilds.
 
   17 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> epix-1.2.1.ebuild:
   amd64 stable, bug #205779
