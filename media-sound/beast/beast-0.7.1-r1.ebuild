@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.1 2008/06/01 21:21:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.2 2008/06/15 12:45:59 eva Exp $
 
-inherit autotools eutils flag-o-matic fdo-mime
+inherit autotools eutils fdo-mime
 
 IUSE="debug mad static"
 
@@ -57,9 +57,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# avoid suid related security issues.
-	append-ldflags $(bindnow-flags)
-
 	#for some weird reasons there is no doxer in this release
 	econf $(use_enable debug) \
 		$(use_enable static) \

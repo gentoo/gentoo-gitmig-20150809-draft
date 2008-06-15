@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.31 2008/06/01 21:21:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.32 2008/06/15 12:45:59 eva Exp $
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> beast-0.7.1-r1.ebuild:
+  remove calls to append-ldflags, bug #226977.
 
 *beast-0.7.1-r1 (01 Jun 2008)
 
