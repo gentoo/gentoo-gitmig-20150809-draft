@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.8-r2.ebuild,v 1.1 2008/06/15 11:09:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.8-r2.ebuild,v 1.2 2008/06/15 11:14:03 dertobi123 Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_install() {
 
 	dohtml *.html
 
-	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README README.NTLM README.SSL TODO
+	dodoc FAQ FEATURES NEWS NOTES README README.NTLM README.SSL TODO
 
 	newinitd "${FILESDIR}"/fetchmail fetchmail
 	newconfd "${FILESDIR}"/conf.d-fetchmail fetchmail
