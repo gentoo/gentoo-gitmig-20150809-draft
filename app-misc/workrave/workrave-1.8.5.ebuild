@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.5.ebuild,v 1.2 2008/06/14 09:06:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.5.ebuild,v 1.3 2008/06/15 17:35:03 eva Exp $
 
 inherit eutils gnome2
 
@@ -72,6 +72,12 @@ src_unpack() {
 	# Fix compilation issues, bug #220657
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-libsigc++-2.2.2.patch"
+
+	# Fix intltool tests
+	echo "common/src/glibnls.c" >> po/POTFILES.in
+	echo "frontend/gtkmm/src/gnome_applet/GNOME_WorkraveApplet.xml" >> po/POTFILES.in
+	echo "frontend/gtkmm/src/gnome_applet/Workrave-Applet.server.in" >>	po/POTFILES.in
+	echo "frontend/gtkmm/src/gnome_applet/WorkraveApplet.c" >> po/POTFILES.in
 }
 
 src_compile() {
