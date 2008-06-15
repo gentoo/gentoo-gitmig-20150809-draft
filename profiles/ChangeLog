@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1549 2008/06/14 18:33:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1550 2008/06/15 10:33:36 ikelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  15 Jun 2008; Mike Auty <ikelos@gentoo.org> package.mask:
+  Masking vmware-workstation-4.5.3 for removal due to no upstream support
+  and multiple security advisories.
 
   14 Jun 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Adding media-video/ffmpeg2theora-0.21 to the ffmpeg migration mask
