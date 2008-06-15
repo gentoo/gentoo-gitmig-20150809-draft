@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.42 2008/06/14 11:34:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.43 2008/06/15 09:46:46 armin76 Exp $
+
+  15 Jun 2008; Raúl Porcel <armin76@gentoo.org> oidentd-2.0.8-r2.ebuild:
+  ia64/sparc/x86 stable wrt #225949
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> oidentd-2.0.8-r2.ebuild:
   Stable on ppc wrt bug 225949
