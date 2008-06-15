@@ -1,10 +1,11 @@
 # ChangeLog for app-emulation/vmware-server-console
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.31 2008/06/14 23:27:33 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.32 2008/06/15 09:42:56 ikelos Exp $
 
 *vmware-server-console-1.0.6.91891 (14 Jun 2008)
 
-  14 Jun 2008; <mike@gentoo.org> -vmware-server-console-1.0.4.56528.ebuild,
+  14 Jun 2008; Mike Auty <ikelos@gentoo.org> 
+  -vmware-server-console-1.0.4.56528.ebuild,
   +vmware-server-console-1.0.6.91891.ebuild:
   Version bump for bug 224637. Also clear out old version.
 

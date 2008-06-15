@@ -1,10 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.30 2008/06/14 23:11:19 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.31 2008/06/15 09:40:05 ikelos Exp $
 
 *vmware-modules-1.0.0.20 (14 Jun 2008)
 
-  14 Jun 2008; <mike@gentoo.org> +vmware-modules-1.0.0.20.ebuild:
+  14 Jun 2008; Mike Auty <ikelos@gentoo.org> +vmware-modules-1.0.0.20.ebuild:
   Add in vmware-modules-1.0.0.20 for workstation 6.0.4 and player 2.0.4.
 
   26 Apr 2008; Mike Auty <ikelos@gentoo.org>

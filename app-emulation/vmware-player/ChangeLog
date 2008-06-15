@@ -1,11 +1,11 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.52 2008/06/14 23:14:03 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.53 2008/06/15 09:38:48 ikelos Exp $
 
 *vmware-player-2.0.4.93057 (14 Jun 2008)
 *vmware-player-1.0.7.91707 (14 Jun 2008)
 
-  14 Jun 2008; <mike@gentoo.org>
+  14 Jun 2008; Mike Auty <ikelos@gentoo.org>
   -files/1.0.5.56455/000_all_initd-location.patch,
   -files/1.0.5.56455/001_all_fix-permissions.patch,
   -files/1.0.5.56455/002_all_pagebreak-detection-fix.patch,
