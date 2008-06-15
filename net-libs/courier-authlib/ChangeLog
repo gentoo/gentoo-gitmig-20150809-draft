@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.86 2008/06/14 14:19:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.87 2008/06/15 11:21:14 flameeyes Exp $
+
+  15 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  courier-authlib-0.60.6.ebuild:
+  Don't install libltdl in any case, replace the installable macro with the
+  convenience one.
 
   14 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   courier-authlib-0.60.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.6 2008/06/14 14:19:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.7 2008/06/15 11:21:14 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools libtool
 
@@ -61,6 +61,9 @@ src_unpack() {
 	sed -i -e'/for dir in/a@@INDENT@@/etc/courier/authlib \\' authmigrate.in || die "sed failed"
 	sed -i -e"s|@@INDENT@@|		|g" authmigrate.in || die "sed failed"
 	sed -i -e"s|\$sbindir/makeuserdb||g" authmigrate.in || die "sed failed"
+
+	sed -i -e 's:AC_LIBLTDL_INSTALLABLE:AC_LIBLTDL_CONVENIENCE:' configure.in \
+		|| die "fixing libltdl call failed"
 
 	local d
 	for d in $(find -name configure.in) ; do
