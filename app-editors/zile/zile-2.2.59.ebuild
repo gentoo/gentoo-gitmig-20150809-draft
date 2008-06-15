@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.59.ebuild,v 1.3 2008/06/14 18:21:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.59.ebuild,v 1.4 2008/06/15 12:27:53 klausman Exp $
 
 DESCRIPTION="Zile is a small Emacs clone"
 HOMEPAGE="http://www.gnu.org/software/zile/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
