@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.0.9.ebuild,v 1.3 2008/06/11 17:06:52 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.0.9.ebuild,v 1.4 2008/06/15 20:05:42 nelchael Exp $
 
 inherit multilib
 
@@ -20,10 +20,7 @@ src_compile() {
 
 	# Uses non-standard configure script, econf doesn't work
 	./configure $(use_enable ipv6) || die "Configure failed"
-	emake sharedlib || die "Shared library compilation failed"
-	if use static; then
-		emake staticlib || die "Static library compilation failed"
-	fi
+	emake sharedlib staticlib || die "compilation failed"
 
 }
 
@@ -31,9 +28,7 @@ src_install() {
 
 	dolib.so libudns.so.0 || die "dolib.so failed"
 	dosym libudns.so.0 "/usr/$(get_libdir)/libudns.so" || die "dosym failed"
-	if use static; then
-		dolib.a libudns.a || die "dolib.a failed"
-	fi
+	dolib.a libudns.a || die "dolib.a failed"
 
 	insinto /usr/include
 	doins udns.h || die "doins failed"
