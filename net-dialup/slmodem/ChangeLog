@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.96 2008/05/19 20:26:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.97 2008/06/15 13:29:55 mrness Exp $
+
+  15 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  slmodem-2.9.11_pre20080417.ebuild:
+  Remove slusb if kernel version is >=2.6.25; exclude unused modules from
+  compilation (#218381).
 
 *slmodem-2.9.11_pre20080417 (19 May 2008)
 
