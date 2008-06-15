@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.12.ebuild,v 1.5 2008/05/02 21:23:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.12.ebuild,v 1.6 2008/06/15 21:20:17 hd_brummy Exp $
 
 inherit eutils
 
@@ -23,8 +23,9 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
-	sed -i "s:usr/local:usr:" Makefile
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
+	sed -i "s:usr/local:usr:" Makefile
 }
 
 src_compile() {

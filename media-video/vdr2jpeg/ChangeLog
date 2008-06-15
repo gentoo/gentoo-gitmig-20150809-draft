@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr2jpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.15 2008/05/02 21:23:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.16 2008/06/15 21:20:17 hd_brummy Exp $
+
+  15 Jun 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr2jpeg-0.0.12-gcc43.patch, vdr2jpeg-0.0.12.ebuild:
+  patch to fix gcc-4.3.x compile problems; thanks to M.Brakemeier on bug
+  #227167
 
   02 May 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr2jpeg-0.0.12.ebuild, vdr2jpeg-0.1.0.ebuild:
