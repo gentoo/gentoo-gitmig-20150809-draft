@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.338 2008/06/13 23:47:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.339 2008/06/15 14:21:40 lu_zero Exp $
+
+  15 Jun 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/1.4.2-unbreak-endianess.patch, xorg-server-1.4.2.ebuild:
+  Make xorg-server build again on ppc
 
   13 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4.2.ebuild:

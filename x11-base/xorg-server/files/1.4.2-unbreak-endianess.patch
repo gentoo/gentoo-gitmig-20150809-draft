@@ -1,0 +1,43 @@
+--- configure.ac.orig	2008-06-15 03:34:11.000000000 +0200
++++ configure.ac	2008-06-15 04:02:34.000000000 +0200
+@@ -1104,18 +1104,8 @@
+ AC_MSG_RESULT([yes])], AC_MSG_RESULT([no]))
+ 
+ XSERVER_CFLAGS="$XSERVER_CFLAGS $CORE_INCS $XEXT_INC $COMPOSITE_INC $DAMAGE_INC $FIXES_INC $XI_INC $MI_INC $MIEXT_SHADOW_INC $MIEXT_LAYER_INC $MIEXT_DAMAGE_INC $RENDER_INC $RANDR_INC $FB_INC"
+-AC_DEFINE_UNQUOTED(_X_BYTE_ORDER,[$ENDIAN],[Endian order])
+ AH_VERBATIM([X_BYTE_ORDER],[
+-/* Deal with multiple architecture compiles on Mac OS X */
+-#ifndef __APPLE_CC__
+-#define X_BYTE_ORDER _X_BYTE_ORDER
+-#else
+-#ifdef __BIG_ENDIAN__
+-#define X_BYTE_ORDER X_BIG_ENDIAN
+-#else
+-#define X_BYTE_ORDER X_LITTLE_ENDIAN
+-#endif
+-#endif
++#include <X11/Xarch.h>
+ ])
+ 
+ AC_SUBST([XSERVER_LIBS])
+--- include/dix-config.h.in.orig	2008-06-15 12:46:48.000000000 +0200
++++ include/dix-config.h.in	        2008-06-15 12:47:32.000000000 +0200
+@@ -429,17 +429,7 @@
+ #undef XVENDORNAME
+ 
+ /* Endian order */
+-#undef _X_BYTE_ORDER
+-/* Deal with multiple architecture compiles on Mac OS X */
+-#ifndef __APPLE_CC__
+-#define X_BYTE_ORDER _X_BYTE_ORDER
+-#else
+-#ifdef __BIG_ENDIAN__
+-#define X_BYTE_ORDER X_BIG_ENDIAN
+-#else
+-#define X_BYTE_ORDER X_LITTLE_ENDIAN
+-#endif
+-#endif
++#include <X11/Xarch.h>
+ 
+ /* Enable GNU and other extensions to the C environment for GLIBC */
+ #undef _GNU_SOURCE
