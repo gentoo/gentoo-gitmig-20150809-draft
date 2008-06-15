@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.5 2008/05/05 13:32:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.6 2008/06/15 09:25:03 graaff Exp $
+
+*xemacs-packages-all-2007.04.27-r1 (15 Jun 2008)
+
+  15 Jun 2008; Hans de Graaff <graaff@gentoo.org>
+  +xemacs-packages-all-2007.04.27-r1.ebuild:
+  Bump edit-utils dependency to 2.39 as part of the fix for #221197.
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org>
   xemacs-packages-all-2007.04.27.ebuild:
