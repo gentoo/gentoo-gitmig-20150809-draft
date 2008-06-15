@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.23 2008/04/30 20:42:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.24 2008/06/15 23:13:42 nerdboy Exp $
 
-inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
+WANT_AUTOCONF="2.5"
+inherit eutils autotools wxwidgets flag-o-matic fdo-mime
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
@@ -12,15 +13,19 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
-DEPEND=">=dev-util/subversion-1.4.0
+COMMON_DEP=">=dev-util/subversion-1.4.0
 	>=net-misc/neon-0.26
 	=x11-libs/wxGTK-2.6*
 	>=dev-libs/apr-1.2.10
-	>=dev-libs/apr-util-1.2.10
+	>=dev-libs/apr-util-1.2.10"
+
+DEPEND="${COMMON_DEP}
 	doc? ( dev-libs/libxslt
-	    app-text/docbook-sgml-utils
-	    app-doc/doxygen
-	    app-text/docbook-xsl-stylesheets )"
+		app-text/docbook-sgml-utils
+		app-doc/doxygen
+		app-text/docbook-xsl-stylesheets )"
+
+RDEPEND="${COMMON_DEP}"
 
 src_unpack() {
 	unpack ${A}
@@ -29,9 +34,7 @@ src_unpack() {
 	# Apparently we still the --as-needed link patch...
 	epatch "${FILESDIR}/${PN}"-svncpp_link.patch || die "epatch failed"
 
-	export WANT_AUTOCONF=2.5
-	autoconf
-	elibtoolize
+	eautoreconf
 }
 
 src_compile() {

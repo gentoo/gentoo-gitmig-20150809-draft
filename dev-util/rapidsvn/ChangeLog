@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.58 2008/05/19 04:46:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.59 2008/06/15 23:13:42 nerdboy Exp $
+
+  15 Jun 2008; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
+  rapidsvn-0.9.4.ebuild:
+  Updated older versions for bug #226427 to use eautoreconf, as well as the
+  newer dep layout.
 
   19 May 2008; Steve Arnold <nerdboy@gentoo.org> +files/rapidsvn-sar.patch:
   re-adding lost patch for gcc warnings (bug #216800).  Thanks to
