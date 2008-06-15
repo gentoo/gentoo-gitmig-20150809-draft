@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-1.8.1.ebuild,v 1.2 2008/06/15 12:15:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-1.8.1.ebuild,v 1.3 2008/06/15 14:22:14 armin76 Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.focusresearch.com/gregor/download/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="readline"
 
 DEPEND=">=dev-lang/perl-5"
