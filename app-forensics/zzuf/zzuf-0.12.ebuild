@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.12.ebuild,v 1.1 2008/06/13 18:04:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.12.ebuild,v 1.2 2008/06/15 14:09:11 mr_bones_ Exp $
 
 inherit autotools
 
 DESCRIPTION="Transparent application input fuzzer"
 HOMEPAGE="http://libcaca.zoy.org/wiki/zzuf/"
-SRC_URI="mirro://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
