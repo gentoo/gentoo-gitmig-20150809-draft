@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0-r1.ebuild,v 1.6 2007/07/05 22:49:55 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0-r1.ebuild,v 1.7 2008/06/15 09:21:26 zmedico Exp $
 
 inherit distutils
 
@@ -31,8 +31,13 @@ src_install() {
 	doman man/*.1 || die "doman failed"
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.7"
+	previous_less_than_0_7=$?
+}
+
 pkg_postinst() {
-	if has_version '<net-analyzer/fail2ban-0.7' ; then
+	if [[ $previous_less_than_0_7 = 0 ]] ; then
 		elog
 		elog "Configuration files are now in /etc/fail2ban/"
 		elog "You probably have to manually update your configuration"

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.2.ebuild,v 1.2 2008/03/18 19:09:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.2.ebuild,v 1.3 2008/06/15 09:21:26 zmedico Exp $
 
 inherit distutils
 
@@ -35,8 +35,13 @@ src_install() {
 	newins "${FILESDIR}"/${PN}-logrotate ${PN} || die
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.7"
+	previous_less_than_0_7=$?
+}
+
 pkg_postinst() {
-	if has_version '<net-analyzer/fail2ban-0.7' ; then
+	if [[ $previous_less_than_0_7 = 0 ]] ; then
 		elog
 		elog "Configuration files are now in /etc/fail2ban/"
 		elog "You probably have to manually update your configuration"
