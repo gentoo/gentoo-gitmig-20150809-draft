@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.2.1.ebuild,v 1.7 2007/07/13 05:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.2.1.ebuild,v 1.8 2008/06/15 11:46:08 drac Exp $
 
 DESCRIPTION="A Perl module and a collection of easy-to-use text based interfaces to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -31,5 +31,5 @@ src_install() {
 	insinto ${modulePath}
 	doins Burncenter.pm
 
-	dodoc COPYING DEVELOP-FRONTENDS README TODO
+	dodoc DEVELOP-FRONTENDS README TODO
 }
