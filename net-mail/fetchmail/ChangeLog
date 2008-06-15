@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchmail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.139 2007/09/03 14:33:43 falco Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.140 2008/06/15 11:09:01 dertobi123 Exp $
+
+*fetchmail-6.3.8-r2 (15 Jun 2008)
+
+  15 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/fetchmail-6.3.8-resize-buffer.patch, +fetchmail-6.3.8-r2.ebuild:
+  revbump, include fix for security bug #227105
 
   03 Sep 2007; Raphael Marichez <falco@gentoo.org> ChangeLog:
   Fix possible security issue (DoS), bug 191154
