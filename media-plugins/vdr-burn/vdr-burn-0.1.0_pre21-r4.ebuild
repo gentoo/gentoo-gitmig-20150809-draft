@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.1 2008/05/15 16:48:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.2 2008/06/15 20:04:10 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -24,7 +24,8 @@ PATCHES=("${FILESDIR}/${PV}/i18n.diff"
 	"${FILESDIR}/${PV}/${P}_setdefaults.diff"
 	"${FILESDIR}/${PV}/${P}-gentoo.diff"
 	"${FILESDIR}/${PV}/requantfactor.diff"
-	"${FILESDIR}/${PV}/charset-vdr-1.5.diff")
+	"${FILESDIR}/${PV}/charset-vdr-1.5.diff"
+	"${FILESDIR}/${PV}/${P}-gcc43.patch")
 
 DEPEND=">=media-video/vdr-1.4
 		>=dev-libs/libcdio-0.71
