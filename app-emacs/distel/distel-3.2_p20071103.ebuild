@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-3.2_p20071103.ebuild,v 1.1 2008/01/23 08:24:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-3.2_p20071103.ebuild,v 1.2 2008/06/15 15:11:58 ulm Exp $
 
-inherit elisp
+inherit elisp eutils
 
 DESCRIPTION="Distributed Emacs Lisp for Erlang"
 HOMEPAGE="http://fresh.homeunix.net/~luke/distel/"
@@ -19,6 +19,11 @@ DEPEND=">=dev-lang/erlang-11.2.5"
 RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
+
+pkg_setup() {
+	built_with_use dev-lang/erlang emacs \
+		|| die "${PN} requires dev-lang/erlang built with USE=emacs"
+}
 
 src_compile() {
 	emake base info || die "emake failed"
