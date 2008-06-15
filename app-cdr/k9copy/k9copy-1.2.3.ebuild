@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.3 2008/03/28 20:43:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.4 2008/06/15 12:17:30 drac Exp $
 
 EAPI="1"
 
@@ -29,8 +29,8 @@ DEPEND="media-video/dvdauthor
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${P}-desktop-entry.diff
-		${FILESDIR}/${P}-gcc43.patch"
+PATCHES=( "${FILESDIR}"/${P}-desktop-entry.diff
+		"${FILESDIR}"/${P}-gcc43.patch )
 
 pkg_setup() {
 	kde_pkg_setup
