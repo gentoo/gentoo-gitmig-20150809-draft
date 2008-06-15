@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8-r2.ebuild,v 1.1 2007/01/05 07:56:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8-r2.ebuild,v 1.2 2008/06/15 12:54:41 eva Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit autotools eutils flag-o-matic
+inherit autotools eutils
 
 DESCRIPTION="Utility that allows you to jot down sensitive data"
 HOMEPAGE="http://devel.pluto.linux.it/projects/Gringotts/"
@@ -39,13 +39,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.2.8-no-strip.patch
 
 	eautoreconf
-}
-
-src_compile() {
-	append-ldflags $(bindnow-flags)
-
-	econf || die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
