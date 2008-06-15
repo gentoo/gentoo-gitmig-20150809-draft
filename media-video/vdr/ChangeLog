@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.115 2008/05/21 13:46:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.116 2008/06/15 09:00:01 zmedico Exp $
+
+  15 Jun 2008; Zac Medico <zmedico@gentoo.org> vdr-1.4.6.ebuild,
+  vdr-1.4.7-r10.ebuild, vdr-1.6.0.ebuild, vdr-1.6.0-r1.ebuild,
+  vdr-1.6.0-r2.ebuild, vdr-1.6.0_p1.ebuild, vdr-1.6.0_p1-r1.ebuild:
+  Bug #226505 - For compatibility with phase execution order in
+  >=portage-2.1.5, call has_version inside pkg_preinst instead of
+  pkg_postinst.
 
 *vdr-1.6.0_p1-r1 (21 May 2008)
 

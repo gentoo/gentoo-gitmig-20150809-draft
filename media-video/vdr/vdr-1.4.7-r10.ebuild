@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.6 2008/05/12 17:15:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.7 2008/06/15 09:00:01 zmedico Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -329,9 +329,14 @@ src_install() {
 	chown -R vdr:vdr "${D}/${CONF_DIR}"
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-1.3.36-r3"
+	previous_less_than_1_3_36_r3=$?
+}
+
 pkg_postinst() {
 	elog "It is a good idea to run vdrplugin-rebuild now."
-	if has_version "<media-video/vdr-1.3.36-r3"; then
+	if [[ $previous_less_than_1_3_36_r3 = 0 ]] ; then
 		ewarn "Upgrade Info:"
 		ewarn
 		ewarn "If you had used the use-flags lirc, rcu or vfat"
