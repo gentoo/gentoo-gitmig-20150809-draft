@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.388 2008/06/12 12:27:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.389 2008/06/15 05:54:32 zmedico Exp $
+
+  15 Jun 2008; Zac Medico <zmedico@gentoo.org> udev-114.ebuild,
+  udev-114-r1.ebuild, udev-114-r2.ebuild, udev-115.ebuild,
+  udev-115-r1.ebuild, udev-115-r5.ebuild, udev-115-r6.ebuild,
+  udev-116.ebuild, udev-116-r1.ebuild, udev-117.ebuild, udev-118.ebuild,
+  udev-118-r1.ebuild, udev-118-r2.ebuild, udev-118-r3.ebuild,
+  udev-119.ebuild, udev-119-r1.ebuild, udev-120.ebuild, udev-121.ebuild,
+  udev-122.ebuild, udev-122-r1.ebuild, udev-124.ebuild:
+  Bug #226505 - For compatibility with phase execution order in
+  >=portage-2.1.5, call has_version inside pkg_preinst instead of
+  pkg_postinst.
 
 *udev-124 (12 Jun 2008)
 

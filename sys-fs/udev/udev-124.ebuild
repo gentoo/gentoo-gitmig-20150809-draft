@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-124.ebuild,v 1.1 2008/06/12 12:27:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-124.ebuild,v 1.2 2008/06/15 05:54:32 zmedico Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -254,6 +254,18 @@ pkg_preinst() {
 	then
 		coldplug_stale="1"
 	fi
+
+	has_version "=${CATEGORY}/${PN}-103-r3"
+	previous_equal_to_103_r3=$?
+
+	has_version "<${CATEGORY}/${PN}-104-r5"
+	previous_less_than_104_r5=$?
+
+	has_version "<${CATEGORY}/${PN}-106-r5"
+	previous_less_than_106_r5=$?
+
+	has_version "<${CATEGORY}/${PN}-113"
+	previous_less_than_113=$?
 }
 
 pkg_postinst() {
@@ -271,7 +283,7 @@ pkg_postinst() {
 	fi
 
 	# delete 40-scsi-hotplug.rules - all integrated in 50-udev.rules
-	if has_version "=sys-fs/udev-103-r3" &&
+	if [[ $previous_equal_to_103_r3 = 0 ]] &&
 		[[ -e ${ROOT}/etc/udev/rules.d/40-scsi-hotplug.rules ]]
 	then
 		ewarn "Deleting stray 40-scsi-hotplug.rules"
@@ -286,13 +298,13 @@ pkg_postinst() {
 	fi
 
 	# Removing some old file
-	if has_version "<sys-fs/udev-104-r5"
+	if [[ $previous_less_than_104_r5 = 0 ]]
 	then
 		rm -f "${ROOT}"/etc/dev.d/net/hotplug.dev
 		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/net 2>/dev/null
 	fi
 
-	if has_version "<sys-fs/udev-106-r5" &&
+	if [[ $previous_less_than_106_r5 = 0 ]] &&
 		[[ -e ${ROOT}/etc/udev/rules.d/95-net.rules ]]
 	then
 		rm -f "${ROOT}"/etc/udev/rules.d/95-net.rules
@@ -311,7 +323,7 @@ pkg_postinst() {
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed
-	if has_version "<sys-fs/udev-113" &&
+	if [[ $previous_less_than_113 = 0 ]] &&
 		[[ -f ${ROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
