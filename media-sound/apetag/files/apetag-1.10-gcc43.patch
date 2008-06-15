@@ -1,0 +1,44 @@
+diff -NrU5 Apetag.orig/basic.C Apetag/basic.C
+--- Apetag.orig/basic.C	2008-06-15 12:32:43.000000000 +0200
++++ Apetag/basic.C	2008-06-15 12:46:06.000000000 +0200
+@@ -24,10 +24,11 @@
+ /* ================================================================== */
+ 
+ using namespace std;
+ 
+ #include <string>
++#include <cstdlib>
+ #include "basic.H"
+ 
+ /* ================================================================== */
+ // special imports
+ /* ================================================================== */
+@@ -268,11 +269,11 @@
+ {
+     exit(-1);
+ }
+ 
+ // ========================================================================
+-LOCALFUN VOID DefaultSignalHandler(int arg)
++LOCALFUN VOID DefaultSignalHandler(int __attribute__((unused)) arg)
+ {
+     if( !has_executed_before )
+     {
+         TraceCallBack();
+         TerminateCallBack();
+diff -NrU5 Apetag.orig/switch.H Apetag/switch.H
+--- Apetag.orig/switch.H	2008-06-15 12:32:43.000000000 +0200
++++ Apetag/switch.H	2008-06-15 12:36:59.000000000 +0200
+@@ -17,10 +17,12 @@
+ */
+ 
+ #ifndef SWITCH_H
+ #define SWITCH_H
+ 
++#include <cstdlib>
++
+ typedef enum
+ {
+     SWITCH_TYPE_INVALID,
+     SWITCH_TYPE_BOOL,
+     SWITCH_TYPE_INT32,
