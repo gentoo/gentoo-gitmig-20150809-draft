@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6-r1.ebuild,v 1.3 2008/04/27 03:31:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6-r1.ebuild,v 1.4 2008/06/15 14:31:40 markusle Exp $
 
-myconf="--disable-clntest"
-
-inherit kde autotools
+inherit kde 
 
 DESCRIPTION="A modern multi-purpose calculator for KDE"
 LICENSE="GPL-2"
@@ -25,5 +23,19 @@ src_unpack() {
 	kde_src_unpack
 	epatch "${FILESDIR}"/${P}-remove-link.patch
 	epatch "${FILESDIR}"/${P}-cln-config.patch
-	eautoconf
+}
+
+src_compile() {
+	# remove configure to force rebuild of autotools
+	# by the kde eclass
+	rm -f ./configure || die "Failed to remove configure"
+
+	kde_src_compile myconf configure
+
+	# get rid of the -fno-exceptions flag since it breaks cln
+	sed -e "s:\$CXXFLAGS -fno-exceptions:\$CXXFLAGS:" \
+		-i configure \
+		|| die "Failed to remove -fno-exceptions from configure script"
+
+	kde_src_compile make
 }
