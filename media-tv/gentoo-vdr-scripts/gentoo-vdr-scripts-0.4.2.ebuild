@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.2.ebuild,v 1.2 2007/12/11 23:16:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.2.ebuild,v 1.3 2008/06/15 08:13:58 zmedico Exp $
 
 inherit eutils
 
@@ -66,12 +66,18 @@ pkg_preinst() {
 			echo ${PLUGIN} >> "${D}"/etc/conf.d/vdr.plugins
 		done
 	fi
+
+	has_version "<${CATEGORY}/${PN}-0.3.6"
+	previous_less_than_0_3_6=$?
+
+	has_version "<${CATEGORY}/${PN}-0.3.7"
+	previous_less_than_0_3_7=$?
 }
 
 VDRSUDOENTRY="vdr ALL=NOPASSWD:/usr/share/vdr/bin/vdrshutdown-really.sh"
 
 pkg_postinst() {
-	if has_version "<media-tv/gentoo-vdr-scripts-0.3.6"; then
+	if [[ $previous_less_than_0_3_6 = 0 ]] ; then
 		ewarn
 		ewarn "A shutdown-file has been changed."
 		ewarn "You really have to execute"
@@ -96,7 +102,7 @@ pkg_postinst() {
 		elog "or just emerge nvram-wakeup."
 	fi
 
-	if has_version "<media-tv/gentoo-vdr-scripts-0.3.7"; then
+	if [[ $previous_less_than_0_3_7 = 0 ]] ; then
 		einfo
 		einfo "Plugins which should be used are now set via its"
 		einfo "own config-file called /etc/conf.d/vdr.plugins"
