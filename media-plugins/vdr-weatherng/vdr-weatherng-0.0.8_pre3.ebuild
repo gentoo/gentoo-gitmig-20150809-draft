@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.9 2008/04/28 09:05:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.10 2008/06/15 21:32:01 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -42,6 +42,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-timeout.diff"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	use dxr3 && epatch "${FILESDIR}/${P}-dxr3.diff"
 }
