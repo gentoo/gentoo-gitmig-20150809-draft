@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.4.0.ebuild,v 1.3 2008/06/15 11:21:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.4.0.ebuild,v 1.4 2008/06/15 11:23:44 drac Exp $
 
 DESCRIPTION="Burn mp3s without filling up your disk with .wav files"
 HOMEPAGE="http://sourceforge.net/projects/mp3burn/"
@@ -18,6 +18,7 @@ RDEPEND="${DEPEND}
 	 media-sound/vorbis-tools
 	 virtual/cdrtools
 	 dev-perl/MP3-Info
+	 dev-perl/ogg-vorbis-header
 	 dev-perl/String-ShellQuote"
 
 S=${WORKDIR}/${PN}
