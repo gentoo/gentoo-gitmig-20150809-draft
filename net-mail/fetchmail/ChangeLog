@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.142 2008/06/15 12:03:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.143 2008/06/15 12:22:12 klausman Exp $
+
+  15 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  fetchmail-6.3.8-r2.ebuild:
+  Stable on alpha, bug #227105
 
   15 Jun 2008; Brent Baude <ranger@gentoo.org> fetchmail-6.3.8-r2.ebuild:
   Marking fetchmail-6.3.8-r2 ppc64 for bug 227105
