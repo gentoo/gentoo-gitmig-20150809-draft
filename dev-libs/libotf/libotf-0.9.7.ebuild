@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.7.ebuild,v 1.3 2008/02/02 22:19:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.7.ebuild,v 1.4 2008/06/15 06:34:03 zmedico Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -39,8 +39,13 @@ src_install() {
 	dodoc AUTHORS NEWS README ChangeLog
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.9.3"
+	previous_less_than_0_9_3=$?
+}
+
 pkg_postinst() {
-	if has_version '<dev-libs/libotf-0.9.3' ; then
+	if [[ $previous_less_than_0_9_3 = 0 ]] ; then
 		ewarn
 		ewarn "Shared library extension has been changed. You may need to recompile"
 		ewarn "everything depending on this library (in short, please remerge m17n-lib"
