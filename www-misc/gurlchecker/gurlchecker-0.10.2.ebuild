@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.2.ebuild,v 1.1 2008/06/15 21:21:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.2.ebuild,v 1.2 2008/06/15 21:25:19 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.30
 	app-text/docbook-sgml-utils
+	dev-util/gtk-doc-am
 	doc? ( >dev-util/gtk-doc-1.1 )"
 
 DOCS="AUTHORS CONTRIBUTORS ChangeLog FAQ NEWS README THANKS TODO"

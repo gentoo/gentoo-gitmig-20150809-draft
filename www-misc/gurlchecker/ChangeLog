@@ -1,7 +1,10 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.21 2008/06/15 21:21:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.22 2008/06/15 21:25:19 eva Exp $
 
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gurlchecker-0.10.2.ebuild:
+  add dev-util/gtk-doc-am for eautoreconf.
 
 *gurlchecker-0.10.2 (15 Jun 2008)
 
