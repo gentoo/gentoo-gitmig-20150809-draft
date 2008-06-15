@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.14 2008/05/29 14:50:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.15 2008/06/15 17:33:57 hoffie Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,6 +40,13 @@ src_unpack() {
 	rm -rf libltdl
 
 	eautoreconf
+
+	if use gnome ; then
+		cd gODBCConfig
+		touch ChangeLog
+		autopoint -f || die "autopoint -f failed"
+		eautoreconf --install
+	fi
 }
 
 src_compile() {
@@ -68,9 +75,6 @@ src_compile() {
 		ln -s "${S}"/odbcinst/.libs ./lib/.libs
 
 		cd gODBCConfig
-		touch ChangeLog
-		gnuconfig_update
-		autoreconf --install
 		econf --host=${CHOST} \
 			--with-odbc="${S}" \
 			--enable-static \
