@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/vdrplugin-rebuild-0.2.ebuild,v 1.6 2007/11/27 10:40:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/vdrplugin-rebuild-0.2.ebuild,v 1.7 2008/06/15 08:29:59 zmedico Exp $
 
 DESCRIPTION="A utility to rebuild any plugins for vdr which you have installed."
 HOMEPAGE="http://www.gentoo.org/"
@@ -18,8 +18,13 @@ src_install() {
 	keepdir /usr/share/vdr/vdrplugin-rebuild
 }
 
+pkg_preinst() {
+	has_version "<=${CATEGORY}/${PN}-0.1"
+	previous_less_or_equal_to_0_1=$?
+}
+
 pkg_postinst() {
-	if has_version "<=media-tv/vdrplugin-rebuild-0.1"; then
+	if [[ $previous_less_or_equal_to_0_1 = 0 ]] ; then
 		# populate new database
 		"${ROOT}"/usr/sbin/vdrplugin-rebuild populate
 
