@@ -1,0 +1,13 @@
+gcc-4.3 no longer includes this by default, needed to get the ssize_t type.
+
+--- pdsh-2.14/src/modules/machines.c
++++ pdsh-2.14/src/modules/machines.c
+@@ -28,6 +28,8 @@
+ #  include "config.h"
+ #endif
+ 
++#include <unistd.h>
++
+ #include "src/pdsh/wcoll.h"
+ #include "src/pdsh/mod.h"
+ #include "src/common/hostlist.h"

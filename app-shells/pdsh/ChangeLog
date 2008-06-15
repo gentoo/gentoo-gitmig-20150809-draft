@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.9 2008/03/14 12:18:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.10 2008/06/15 18:52:27 swegener Exp $
+
+  15 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  +files/pdsh-2.14-gcc-4.3-unistd.h.patch,
+  +files/pdsh-2.14-glibc-2.8-ARG_MAX.patch, pdsh-2.14.ebuild:
+  Add compability patches for gcc-4.3 and glibc-2.8.
 
   14 Mar 2008; Caleb Tennis <caleb@gentoo.org> pdsh-2.14.ebuild:
   amd64 stable

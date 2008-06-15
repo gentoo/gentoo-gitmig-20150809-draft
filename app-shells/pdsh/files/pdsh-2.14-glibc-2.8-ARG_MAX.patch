@@ -1,0 +1,41 @@
+glibc-2.8 no longer provides the ARG_MAX macro.
+
+--- pdsh-2.14/src/pdsh/xpopen.c
++++ pdsh-2.14/src/pdsh/xpopen.c
+@@ -84,10 +84,17 @@
+     struct pid *cur;
+     int fds[2], read, fd;
+     pid_t pid;
+-    char *av[ARG_MAX + 1];
+     int maxfd = sysconf(_SC_OPEN_MAX);
++    long arg_max;
++    char **av;
++
++    arg_max = sysconf(_SC_ARG_MAX);
++    if (arg_max < 0)
++        errx("%p: unable to get _SC_OPEN_MAX (%m)\n");
++
++    av = Malloc(sizeof(char *) * (arg_max + 1));
+     
+-    _parse_command_with_quotes(av, ARG_MAX, cmd);
++    _parse_command_with_quotes(av, arg_max, cmd);
+ 
+     if ((*mode != 'r' && *mode != 'w') || mode[1] != '\0') {
+         errno = EINVAL;
+@@ -101,6 +106,7 @@
+     if (pipe(fds) < 0) {
+         close(fds[0]);
+         close(fds[1]);
++        Free((void **) &av);
+         Free((void **) &cur);
+         errx("%p: unable to dup stdout\n");
+     }
+@@ -143,6 +149,8 @@
+     cur->next = pidlist;
+     pidlist = cur;
+ 
++    Free((void **) &av);
++
+     return (cur->fp);
+ 
+ }
