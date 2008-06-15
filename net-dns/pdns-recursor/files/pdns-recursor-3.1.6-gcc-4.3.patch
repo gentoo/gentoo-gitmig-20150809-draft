@@ -1,0 +1,12 @@
+gcc-4.3 no longer includes this by default.
+
+--- pdns-recursor-3.1.6/dns_random.cc
++++ pdns-recursor-3.1.6/dns_random.cc
+@@ -1,6 +1,7 @@
+ #include "aescpp.h"
+ #include <iostream>
+ #include <cstring>
++#include <limits>
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <sys/time.h>

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.6.ebuild,v 1.1 2008/05/03 14:22:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.6.ebuild,v 1.2 2008/06/15 18:38:19 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -19,6 +19,9 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 
 	sed -i -e s:/var/run/:/var/lib/powerdns: "${S}"/config.h || die
 }
