@@ -9,6 +9,7 @@
 #  -verbosity x Sets the output level, from 1 to 9 (max). The default is 3
 #  -forceasm    Force core assembly optimizations to be used if available
 #  -advmethods  Request to be assigned any new Cores or work units.
+#  -smp		Set the client to run in SMP mode (multicore)
 #
 # A full listing of options can be found here:
 # http://www.stanford.edu/group/pandegroup/folding/console-userguide.html
