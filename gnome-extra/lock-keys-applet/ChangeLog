@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/lock-keys-applet
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/ChangeLog,v 1.8 2008/02/24 22:33:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/ChangeLog,v 1.9 2008/06/15 13:12:30 eva Exp $
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  lock-keys-applet-1.0.ebuild:
+  call eautomake when touching Makefile.am, bug #226731.
 
   24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/lock-keys-applet-1.0-gtk-disable-deprecated.patch,
