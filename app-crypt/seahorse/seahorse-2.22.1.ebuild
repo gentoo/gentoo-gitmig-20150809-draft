@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.1.ebuild,v 1.4 2008/05/12 04:00:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.1.ebuild,v 1.5 2008/06/15 12:24:26 eva Exp $
 
 EAPI="1"
 
-inherit gnome2 eutils flag-o-matic
+inherit eutils gnome2
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -96,11 +96,6 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}/${PN}-0.9.10-update-mime.patch"
-}
-
-src_compile() {
-	append-ldflags $(bindnow-flags)
-	gnome2_src_compile
 }
 
 src_install() {

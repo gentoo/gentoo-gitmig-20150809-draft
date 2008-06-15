@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.100 2008/06/01 11:12:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.101 2008/06/15 12:24:26 eva Exp $
+
+  15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  seahorse-2.20.3.ebuild, seahorse-2.22.1.ebuild, seahorse-2.22.2.ebuild:
+  removing append-ldflags calls, bug #218925.
 
   01 Jun 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Added ~ppc wrt bug 218794
