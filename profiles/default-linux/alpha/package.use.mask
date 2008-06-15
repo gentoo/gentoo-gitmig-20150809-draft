@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.13 2008/05/20 09:46:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.14 2008/06/15 10:50:00 klausman Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (20 May 2008)
 # Needs to be tested
@@ -20,3 +20,8 @@ sys-apps/hal laptop
 # Has massive QA issues with the java depends
 dev-util/astyle java
 
+# Tobias Klausmann <klausman@gentoo.org> (15 Jun 2008)
+# No hardware to test net-dialup/linux-atm on alpha, so mask atm use flag 
+# on those.
+sys-apps/iproute2 atm
+net-dialup/ppp atm

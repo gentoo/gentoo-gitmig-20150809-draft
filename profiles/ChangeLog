@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1550 2008/06/15 10:33:36 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1551 2008/06/15 10:49:59 klausman Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  15 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  arch/alpha/package.use.mask, default-linux/alpha/package.use.mask:
+  Since we can't test net-dialup/linux-atm on alpha, use mask the
+  corresponding use flags on iproute2 and ppp.
 
   15 Jun 2008; Mike Auty <ikelos@gentoo.org> package.mask:
   Masking vmware-workstation-4.5.3 for removal due to no upstream support

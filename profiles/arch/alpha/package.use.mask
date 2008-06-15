@@ -1,4 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.5 2008/05/20 09:50:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.6 2008/06/15 10:49:59 klausman Exp $
+
+# Tobias Klausmann <klausman@gentoo.org> (15 Jun 2008)
+# No hardware to test net-dialup/linux-atm on alpha, so mask atm use flag 
+# on those.
+sys-apps/iproute2 atm
+net-dialup/ppp atm
 
 # Raúl Porcel <armin76@gentoo.org> (20 May 2008)
 # Needs to be tested
@@ -11,3 +17,4 @@ net-im/mcabber otr
 # Needs valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+
