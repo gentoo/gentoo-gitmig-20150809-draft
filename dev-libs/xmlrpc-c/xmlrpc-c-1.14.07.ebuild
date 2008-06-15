@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.1 2008/06/04 12:19:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.2 2008/06/15 16:00:19 loki_val Exp $
 
 EAPI=1
 
-inherit eutils autotools
+inherit eutils autotools base
 
 DESCRIPTION="A lightweigt RPC library based on XML and HTTP"
 SRC_URI="mirror://gentoo/${PN}/${P}.tar.bz2"
@@ -25,13 +25,17 @@ pkg_setup() {
 	fi
 }
 
+PATCHES=( "${FILESDIR}/${P}-abyss-disable.patch" )
+
 src_unpack() {
-	unpack ${A}
+	base_src_unpack
 	cd "${S}"
 
 	# Respect the user's CFLAGS/CXXFLAGS.
-	sed -i -e "/CFLAGS_COMMON/s:-g -O3$:${CFLAGS}:" Makefile.common
-	sed -i -e "/CXXFLAGS_COMMON/s:-g$:${CXXFLAGS}:" Makefile.common
+	sed -i \
+		-e "/CFLAGS_COMMON/s:-g -O3$:${CFLAGS}:" \
+		-e "/CXXFLAGS_COMMON/s:-g$:${CXXFLAGS}:" \
+		"${S}"/Makefile.common
 	eautoreconf
 }
 
