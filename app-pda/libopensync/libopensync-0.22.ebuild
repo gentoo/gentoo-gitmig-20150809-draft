@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22.ebuild,v 1.15 2008/03/02 17:34:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22.ebuild,v 1.16 2008/06/15 06:11:14 zmedico Exp $
 
 inherit eutils
 
@@ -56,12 +56,17 @@ src_install() {
 	use doc && dohtml docs/html/*
 }
 
+pkg_preinst() {
+	has_version "<${CATEGORY}/${PN}-0.21"
+	previous_less_than_0_21=$?
+}
+
 pkg_postinst() {
 	elog "Building with 'debug' useflag is highly encouraged"
 	elog "and requiered for bug reports."
 	elog "Also see http://www.opensync.org/wiki/tracing"
 
-	if has_version '<app-pda/libopensync-0.21'; then
+	if [[ $previous_less_than_0_21 = 0 ]] ; then
 		echo ""
 		elog "You are updating from version prior to 0.21 and hence you need to rebuild your db."
 		elog "How: http://www.opensync.org/wiki/FAQ#HowdoIcleanupasyncgroupfortesting"
