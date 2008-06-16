@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.17 2008/06/16 12:37:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.18 2008/06/16 17:28:52 nixnut Exp $
+
+  16 Jun 2008; nixnut <nixnut@gentoo.org> pydf-6.ebuild:
+  Stable on ppc wrt bug 227425
 
   16 Jun 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Taking ownership of this maintainer-needed package
