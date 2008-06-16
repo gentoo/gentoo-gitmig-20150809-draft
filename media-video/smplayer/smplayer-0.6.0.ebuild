@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0.ebuild,v 1.8 2008/06/16 19:08:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0.ebuild,v 1.9 2008/06/16 19:24:19 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -28,6 +28,18 @@ for X in ${NOLONGLANGS}; do
 done
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if has_version ">=x11-libs/qt-4.3:4"; then
+		QT4_BUILT_WITH_USE_CHECK="qt3support"
+	else
+		if ! built_with_use "x11-libs/qt-gui:4" qt3support; then
+			eerror "You have to built x11-libs/qt-gui:4 with qt3support."
+			die "qt3support in qt-gui disabled"
+		fi
+	fi
+	qt4_pkg_setup
+}
 
 src_compile() {
 	local MY_SVNREV="1247"
