@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.526 2008/06/12 01:19:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.527 2008/06/16 08:51:53 zmedico Exp $
+
+  16 Jun 2008; Zac Medico <zmedico@gentoo.org>
+  portage-2.1.5.5.ebuild, portage-2.2_pre7-r1.ebuild,
+  portage-2.2_pre8.ebuild:
+  Bug #223417 - Temporarily bump the python dep to >=python-2.5 for
+  float mtime support. This dep can revert to python-2.4 when bug
+  #223417 is fixed.
 
 *portage-2.1.5.5 (12 Jun 2008)
 
