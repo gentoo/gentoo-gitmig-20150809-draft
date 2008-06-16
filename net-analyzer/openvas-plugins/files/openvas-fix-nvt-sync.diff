@@ -1,0 +1,11 @@
+--- openvas-plugins-1.0.1/openvas-nvt-sync.in.orig	2008-06-16 16:32:36.000000000 +0200
++++ openvas-plugins-1.0.1/openvas-nvt-sync.in	2008-06-16 16:32:44.000000000 +0200
+@@ -77,7 +77,7 @@
+ sync_nvts (){
+   echo "Synchonizing NVTs via RSYNC ..."
+ 
+-  mkdir -p \"$NVT_DIR\"
++  mkdir -p "$NVT_DIR"
+   eval "rsync -avrP \"$FEED\" \"$NVT_DIR\""
+   if [ $? -ne 0 ] ; then
+     echo "Error: rsync failed. Your NVT collection might be broken now."
