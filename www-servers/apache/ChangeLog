@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.80 2008/06/16 11:41:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.81 2008/06/16 13:33:44 armin76 Exp $
+
+  16 Jun 2008; Raúl Porcel <armin76@gentoo.org> apache-2.2.9.ebuild:
+  alpha/ia64/sparc stable wrt #227111
 
   16 Jun 2008; Benedikt Böhm <hollow@gentoo.org> apache-2.2.9.ebuild:
   stable amd64, security bug 227111
