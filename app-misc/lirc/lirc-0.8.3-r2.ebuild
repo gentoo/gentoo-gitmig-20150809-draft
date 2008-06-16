@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.2 2008/06/06 20:04:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.3 2008/06/16 14:46:43 drac Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -261,6 +261,10 @@ src_unpack() {
 	# setting default device-node
 	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' configure.ac acconfig.h
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
+
+	if has_version "=media-libs/portaudio-19*"; then
+		epatch "${FILESDIR}"/${P}-pa19.patch
+	fi
 
 	eautoreconf
 }

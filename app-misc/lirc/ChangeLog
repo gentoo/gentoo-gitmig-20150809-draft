@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.180 2008/06/06 20:04:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.181 2008/06/16 14:46:43 drac Exp $
+
+  16 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/lirc-0.8.3-pa19.patch, lirc-0.8.3-r2.ebuild:
+  Portaudio v19 patch from bug 222841, Comment #8 by Thomas Beierlein.
 
   06 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.3-r2.ebuild:
   Added imon_lcd to list of possible lirc_devices, thanks to Jan Paesmans
