@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.116 2008/06/01 14:27:58 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.117 2008/06/16 21:27:50 beandog Exp $
+
+  16 Jun 2008; Steve Dibb <beandog@gentoo.org> bugzilla-2.22.4.ebuild:
+  amd64 stable
 
   01 Jun 2008; wrobel@gentoo.org -bugzilla-2.20.5.ebuild,
   -bugzilla-2.22.3.ebuild, -bugzilla-3.0.2.ebuild:
