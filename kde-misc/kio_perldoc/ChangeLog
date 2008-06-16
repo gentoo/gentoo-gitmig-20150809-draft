@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kio_perldoc
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/ChangeLog,v 1.1 2008/06/16 23:58:34 ingmar Exp $
+
+*kio_perldoc-0.9 (16 Jun 2008)
+
+  16 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/kio_perldoc-0.9-kdeexport.patch, +kio_perldoc-0.9.ebuild:
+  Initial import of kio_perldoc, a KIO slave to read perldoc output. Ebuild
+  by Tanktalus, fixes bug 227661.
+
