@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.1 2008/06/10 07:03:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.2 2008/06/16 12:00:14 hanno Exp $
+
+  16 Jun 2008; Hanno Boeck <hanno@gentoo.org> libpciaccess-0.10.2.ebuild:
+  Add ~x86.
 
 *libpciaccess-0.10.2 (10 Jun 2008)
 
