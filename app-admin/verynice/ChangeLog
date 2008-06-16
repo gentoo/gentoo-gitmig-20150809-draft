@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.14 2008/04/21 16:17:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.15 2008/06/16 14:06:31 drac Exp $
+
+  16 Jun 2008; Samuli Suominen <drac@gentoo.org> verynice-1.1.ebuild:
+  Fix HOMEPAGE and SRC_URI.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
