@@ -1,20 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0.ebuild,v 1.3 2008/06/11 15:40:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0.ebuild,v 1.4 2008/06/16 13:35:01 drac Exp $
 
 EAPI=1
 
-inherit eutils mono gnome2
+inherit gnome2 mono
 
 GVER=0.10.3
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
 SRC_URI="http://download.banshee-project.org/${PN}/${PN}-1-${PV}.tar.bz2"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +boo +daap doc +encode +flac +ipod +mad +mtp +podcast test +vorbis"
+IUSE="+aac +boo daap doc +encode +flac ipod +mad mtp +podcast test +vorbis"
 
 RDEPEND=">=dev-lang/mono-1.2.4
 	>=dev-dotnet/gtk-sharp-2.10
@@ -58,7 +59,7 @@ RDEPEND=">=dev-lang/mono-1.2.4
 		>=media-plugins/gst-plugins-mad-${GVER}
 	)
 	mtp? (
-		>=media-libs/libmtp-0.2.0
+		>=media-libs/libmtp-0.2.5-r1
 	)
 	vorbis? (
 		>=media-plugins/gst-plugins-ogg-${GVER}
