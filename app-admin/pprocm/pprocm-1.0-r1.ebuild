@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.4 2007/11/26 20:30:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.5 2008/06/16 14:18:40 drac Exp $
 
 MY_P="PProcM-"${PV}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="PProcM is a Curses App which monitors the system\'s CPU/Disk/Network/Memory usage.  Very small and lightweight"
+DESCRIPTION="a ncurses which monitors the CPU, disk, network and memory usage."
 HOMEPAGE="http://www.fusedcreations.com/PProcM/"
 SRC_URI="http://www.fusedcreations.com/PProcM/${MY_P}.tar.gz"
 
