@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.7 2008/06/12 18:22:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.8 2008/06/16 03:13:51 josejx Exp $
 
 inherit eutils multilib autotools
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gtk divx firefox gmedia mplayer-bin nls quicktime realmedia seamonkey wmp xulrunner"
+KEYWORDS="~alpha ~amd64 -hppa ~ia64 ppc ppc64 ~sparc ~x86"
+IUSE="gtk divx firefox gmedia mplayer-bin multilib nls quicktime realmedia seamonkey wmp xulrunner"
 
 LANGS="cs da de en_US es fr hu it ja ko nb nl pl pt_BR ru sk se tr wa zh_CN"
 for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
@@ -30,16 +30,14 @@ RDEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
 		mplayer-bin? ( media-video/mplayer-bin )
 		!mplayer-bin? ( >=media-video/mplayer-1.0_pre7 )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
-
-		if has_multilib_profile; then
-			DEPEND="${DEPEND}
+		dev-util/pkgconfig
+		multilib? (
 				amd64? (
 					app-emulation/emul-linux-x86-xlibs
 					app-emulation/emul-linux-x86-baselibs
 					app-emulation/emul-linux-x86-gtklibs
-				)"
-		fi
+				)
+		)"
 
 S=${WORKDIR}/${PN}
 
