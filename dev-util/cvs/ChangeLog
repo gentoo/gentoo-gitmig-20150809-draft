@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.124 2007/12/07 00:49:05 robbat2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.125 2008/06/16 18:05:22 robbat2 Exp $
+
+  16 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> cvs-1.12.12-r2.ebuild:
+  Repoman cleanups, first pass.
 
   01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> +cvs-1.12.13.1.ebuild,
   cvs-1.12.13-r1.ebuild, cvs-1.12.13.1-block-requests.patch,

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.13 2006/01/13 21:04:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.14 2008/06/16 18:05:22 robbat2 Exp $
 
 inherit eutils pam
 
@@ -18,8 +18,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 IUSE="crypt doc emacs kerberos pam"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.4
+DEPEND=">=sys-libs/zlib-1.1.4
 	kerberos? ( virtual/krb5 )
 	pam? ( virtual/pam )"
 
