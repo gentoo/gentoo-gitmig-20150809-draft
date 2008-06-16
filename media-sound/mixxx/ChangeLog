@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.37 2008/05/21 13:44:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.38 2008/06/16 17:13:46 drac Exp $
+
+*mixxx-1.6.0_beta3 (16 Jun 2008)
+
+  16 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/mixxx-1.6.0_beta3-debug.patch, +mixxx-1.6.0_beta3.ebuild:
+  Version bump wrt #203335, thanks to Alex Barker. Attached patch is a
+  compile time fix from upstream.
 
   21 May 2008; Ferris McCormick <fmccor@gentoo.org>
   mixxx-1.6.0_beta2.ebuild:

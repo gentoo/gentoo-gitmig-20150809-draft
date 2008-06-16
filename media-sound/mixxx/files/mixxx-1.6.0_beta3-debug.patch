@@ -1,0 +1,10 @@
+--- src/enginefilterblock.cpp.orig	2008-05-22 09:27:10.000000000 -0700
++++ src/enginefilterblock.cpp	2008-05-22 09:27:16.000000000 -0700
+@@ -21,6 +21,7 @@
+ #include "enginefilteriir.h"
+ #include "enginefilter.h"
+ #include "enginefilterbutterworth8.h"
++#include <QtDebug>
+ 
+ EngineFilterBlock::EngineFilterBlock(const char * group)
+ {
