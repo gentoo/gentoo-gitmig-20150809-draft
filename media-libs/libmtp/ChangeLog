@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.46 2008/04/16 16:45:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.47 2008/06/16 17:44:41 nixnut Exp $
+
+  16 Jun 2008; nixnut <nixnut@gentoo.org> libmtp-0.2.6.1.ebuild:
+  Stable on ppc wrt bug 227435
 
 *libmtp-0.2.6.1 (16 Apr 2008)
 
