@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.1.ebuild,v 1.3 2008/06/15 10:44:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.1.ebuild,v 1.4 2008/06/16 18:05:04 voyageur Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -22,6 +22,9 @@ S="${WORKDIR}/tspc-advanced"
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+
 	for i in gw6c-config gw6c-messaging ; do
 		sed -i -e "/ARCHIVER=/s:ar:$(tc-getAR):" \
 			-e "/COMPILER=/s:g++:$(tc-getCXX):" \
