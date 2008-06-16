@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.7 2008/06/12 12:24:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.8 2008/06/16 02:02:58 jer Exp $
+
+  16 Jun 2008; Jeroen Roovers <jer@gentoo.org> rsyslog-3.19.7.ebuild:
+  Marked ~hppa too.
 
 *rsyslog-3.19.7 (12 Jun 2008)
 
