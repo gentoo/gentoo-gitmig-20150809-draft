@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.14 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.15 2008/06/16 21:34:42 vapier Exp $
 
-inherit rpm eutils flag-o-matic
+inherit rpm eutils
 
 MY_P=${P%.*}-${PV##*.}
 S=${WORKDIR}/${P%.*}
@@ -16,9 +16,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="!virtual/utempter"
-RDEPEND="virtual/libc
-	!virtual/utempter"
-
 PROVIDE="virtual/utempter"
 
 pkg_setup() {
@@ -27,41 +24,34 @@ pkg_setup() {
 
 src_unpack() {
 	rpm_src_unpack
-	cd ${S}
-	epatch ${FILESDIR}/${P}-soname-makefile-fix.patch
-	epatch ${FILESDIR}/${P}-no_utmpx.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-soname-makefile-fix.patch
+	epatch "${FILESDIR}"/${P}-no_utmpx.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
-
-	make RPM_OPT_FLAGS="${CFLAGS}" || die
+	emake RPM_OPT_FLAGS="${CFLAGS} ${CPPFLAGS}" || die
 }
 
 src_install() {
-	make \
+	emake \
 		RPM_BUILD_ROOT="${D}" \
 		LIBDIR=/usr/$(get_libdir) \
 		install || die
-	dobin utmp
+	dobin utmp || die
 
 	fowners root:utmp /usr/sbin/utempter
 	fperms 2755 /usr/sbin/utempter
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
-		if [ -f /var/log/wtmp ]
-		then
-			chown root:utmp /var/log/wtmp
-			chmod 664 /var/log/wtmp
-		fi
-
-		if [ -f /var/run/utmp ]
-		then
-			chown root:utmp /var/run/utmp
-			chmod 664 /var/run/utmp
-		fi
+	if [ -f "${ROOT}"/var/log/wtmp ] ; then
+		chown root:utmp "${ROOT}"/var/log/wtmp
+		chmod 664 "${ROOT}"/var/log/wtmp
+	fi
+	if [ -f "${ROOT}"/var/run/utmp ] ; then
+		chown root:utmp "${ROOT}"/var/run/utmp
+		chmod 664 "${ROOT}"/var/run/utmp
 	fi
 }
