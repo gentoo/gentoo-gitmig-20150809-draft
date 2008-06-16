@@ -1,6 +1,21 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.24 2008/06/03 17:31:28 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.25 2008/06/16 08:12:51 rbu Exp $
+
+*linuxwacom-0.8.0_p3-r1 (16 Jun 2008)
+*linuxwacom-0.7.8_p3-r2 (16 Jun 2008)
+
+  16 Jun 2008; Robert Buchholz <rbu@gentoo.org>
+  -files/linuxwacom-0.7.9-2.6.24.patch, -files/linuxwacom-xorg71.diff,
+  -files/linuxwacom-0.7.9-no-tcl.patch,
+  +files/linuxwacom-0.8.0-xserver-xorg-input-wacom.udev,
+  -linuxwacom-0.7.4_p3.ebuild, -linuxwacom-0.7.8_p3-r1.ebuild,
+  +linuxwacom-0.7.8_p3-r2.ebuild, -linuxwacom-0.7.9_p7.ebuild,
+  -linuxwacom-0.8.0.ebuild, -linuxwacom-0.8.0_p3.ebuild,
+  +linuxwacom-0.8.0_p3-r1.ebuild:
+  Merge in new device IDs from Debian ruleset, and fix udev symlinking (bug
+  #220805).
+  Remove unnecessary libpixman depenency, clean up old versions.
 
 *linuxwacom-0.8.0_p3 (03 Jun 2008)
 

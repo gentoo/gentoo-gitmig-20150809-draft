@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.9_p7.ebuild,v 1.4 2008/02/25 01:39:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.0_p3-r1.ebuild,v 1.1 2008/06/16 08:12:51 rbu Exp $
 
 inherit eutils autotools toolchain-funcs linux-mod
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="x11-proto/inputproto
 	x11-base/xorg-server
-	media-libs/libpixman
 	gtk? ( >=x11-libs/gtk+-2 )
 	tcl? ( dev-lang/tcl )
 	tk?  ( dev-lang/tk )
@@ -42,10 +41,11 @@ wacom_check() {
 			eerror "Enable it in the kernel, found at:"
 			eerror
 			eerror " Device Drivers"
-			eerror "     USB support"
-			eerror "           <M> Wacom Intuos/Graphire tablet support"
+			eerror "    Input device support"
+			eerror "        Tablets"
+			eerror "            <M> Wacom Intuos/Graphire tablet support (USB)"
 			eerror
-			eerror "(in the same page is suggested to include as modules also:"
+			eerror "(in the "USB support" page it is suggested to include also:"
 			eerror "EHCI , OHCI , USB Human Interface Device+HID input layer)"
 			eerror
 			eerror "Then recompile kernel. Otherwise, remove the module USE flag."
@@ -73,8 +73,6 @@ src_unpack() {
 		sed -i -e "s:-Wno-variadic-macros::" src/xdrv/Makefile.am
 	fi
 
-	epatch "${FILESDIR}"/${P%_p*}-no-tcl.patch
-	epatch "${FILESDIR}"/${P%_p*}-2.6.24.patch
 	eautoreconf
 }
 
@@ -110,7 +108,7 @@ src_install() {
 	fi
 
 	insinto /etc/udev/rules.d/
-	newins "${FILESDIR}"/xserver-xorg-input-wacom.udev 60-wacom.rules
+	newins "${FILESDIR}"/${P%_p*}-xserver-xorg-input-wacom.udev 60-wacom.rules
 
 	exeinto /lib/udev/
 	doexe "${FILESDIR}"/check_driver
