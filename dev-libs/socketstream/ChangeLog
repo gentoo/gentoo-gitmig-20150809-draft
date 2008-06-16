@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/socketstream
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.14 2008/05/12 01:33:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.15 2008/06/16 20:14:10 dev-zero Exp $
+
+  16 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.7.0-missing_includes.patch, -socketstream-0.3.0.ebuild,
+  socketstream-0.7.0-r1.ebuild:
+  Fixed gcc-4.3.x compilation (bug #227617), dropped old version.
 
   12 May 2008; Mark Loeser <halcy0n@gentoo.org>
   socketstream-0.7.0-r1.ebuild:

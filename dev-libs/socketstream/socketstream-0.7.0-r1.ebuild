@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.5 2008/05/12 01:33:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.6 2008/06/16 20:14:10 dev-zero Exp $
+
+inherit eutils
 
 DESCRIPTION="C++ Streaming sockets library"
 HOMEPAGE="http://socketstream.sourceforge.net/"
@@ -20,6 +22,8 @@ src_unpack() {
 	# include/Makefile uses DIST_SUBDIRS and thus headers dont get installed
 	sed -i 's|^DIST_\(SUBDIRS =\)|\1|' include/Makefile.in || \
 		die "sed include/Makefile.in failed"
+
+	epatch "${FILESDIR}/${PV}-missing_includes.patch"
 }
 
 src_compile() {
@@ -32,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README* HACKING TODO
 	use doc && dohtml -r docs/html/*
 }
