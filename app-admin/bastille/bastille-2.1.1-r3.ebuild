@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.5 2007/10/28 12:46:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.6 2008/06/16 15:40:49 drac Exp $
 
 inherit perl-app eutils
 
@@ -27,25 +27,22 @@ RDEPEND="net-firewall/iptables
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-gentoo-${PATCHVER}.patch
-	epatch ${FILESDIR}/bastille-firewall-imap.patch
-	epatch ${FILESDIR}/${P}-hlist-fix.patch
+	epatch "${WORKDIR}"/${P}-gentoo-${PATCHVER}.patch
+	epatch "${FILESDIR}"/bastille-firewall-imap.patch
+	epatch "${FILESDIR}"/${P}-hlist-fix.patch
 }
 
 src_compile() {
-	cd ${S}
-	cp ${FILESDIR}/bastille-${PV}-firewall.init ./bastille-firewall
+	cp "${FILESDIR}"/bastille-${PV}-firewall.init ./bastille-firewall
 
-	cd ${S}/psad/Psad.pm
+	cd "${S}"/psad/Psad.pm
 	perl-module_src_compile
 }
 
 src_install() {
-
 	keepdir /var/lock/subsys/${PN}
 	dodir /etc/Bastille
 
-	cd ${S}
 	into /usr
 	dosbin bastille AutomatedBastille InteractiveBastille \
 		BastilleBackEnd RevertBastille *.pl
@@ -74,7 +71,7 @@ src_install() {
 	doman docs/bastille.1m
 	dodoc docs/* firewall/*.txt
 
-	cd ${S}/Bastille
+	cd "${S}"/Bastille
 
 	insinto /usr/lib/Bastille
 	doins AccountSecurity.pm Apache.pm API.pm OSX_API.pm BootSecurity.pm \
@@ -88,11 +85,11 @@ src_install() {
 		test_SecureInetd.pm test_Sendmail.pm TestAPI.pm IPFilter.pm
 
 	# psad interface module
-	cd ${S}/psad/Psad.pm
+	cd "${S}"/psad/Psad.pm
 	newins Psad.pm PSAD.pm
 
 	# Documentation
-	cd ${S}
+	cd "${S}"
 	dodoc *.txt BUGS Change* README*
 }
 
