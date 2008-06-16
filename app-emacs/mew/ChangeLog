@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.57 2008/06/14 16:49:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.58 2008/06/16 07:44:47 opfer Exp $
+
+  16 Jun 2008; Christian Faulhammer <opfer@gentoo.org> mew-5.2.ebuild:
+  stable x86/amd64, bug 226715
 
 *mew-6.1 (14 Jun 2008)
 
