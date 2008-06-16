@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cuecue
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.6 2008/05/02 21:22:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.7 2008/06/16 20:01:20 drac Exp $
+
+  16 Jun 2008; Samuli Suominen <drac@gentoo.org> cuecue-0.2.2-r1.ebuild:
+  Don't modify (sed) configure* but instead pass CFLAGS to emake.
 
   02 May 2008; Stefan Briesenick <sbriesen@gentoo.org>
   cuecue-0.2.2-r1.ebuild:
