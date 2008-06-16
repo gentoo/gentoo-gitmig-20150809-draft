@@ -1,0 +1,11 @@
+--- ext/loki/loki-0.1.6/src/SmallObj.cpp.orig	2008-06-16 20:10:07.676442069 +0200
++++ ext/loki/loki-0.1.6/src/SmallObj.cpp	2008-06-16 20:10:21.139446807 +0200
+@@ -22,6 +22,8 @@
+ #include <vector>
+ #include <bitset>
+ 
++#include <limits.h>
++
+ //#define DO_EXTRA_LOKI_TESTS
+ //#define USE_NEW_TO_ALLOCATE
+ 
