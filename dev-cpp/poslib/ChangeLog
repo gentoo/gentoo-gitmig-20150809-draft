@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/poslib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.20 2008/04/04 01:19:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.21 2008/06/16 20:30:53 dev-zero Exp $
+
+  16 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.0.6-missing_includes.patch, poslib-1.0.6.ebuild:
+  Fixed glibc-2.8 compilation problem (bug #227483).
 
   04 Apr 2008; Mark Loeser <halcy0n@gentoo.org> poslib-1.0.6.ebuild:
   Fix homepage; bug #212615

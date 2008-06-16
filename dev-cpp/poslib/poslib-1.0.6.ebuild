@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.6.ebuild,v 1.8 2008/04/04 01:19:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.6.ebuild,v 1.9 2008/06/16 20:30:53 dev-zero Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="A library for creating C++ programs using the Domain Name System"
 HOMEPAGE="http://posadis.sourceforge.net/"
@@ -14,6 +14,13 @@ KEYWORDS="amd64 ppc x86"
 IUSE="ipv6"
 
 DEPEND=""
+RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-missing_includes.patch"
+}
 
 src_compile() {
 	append-flags -funsigned-char
