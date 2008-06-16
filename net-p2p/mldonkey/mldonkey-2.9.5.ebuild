@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.5.ebuild,v 1.1 2008/05/05 10:16:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.5.ebuild,v 1.2 2008/06/16 19:54:27 aballier Exp $
 
 WANT_AUTOCONF=2.5
 
-inherit flag-o-matic eutils autotools
+inherit flag-o-matic eutils autotools toolchain-funcs
 
 EAPI="1"
 
@@ -59,6 +59,14 @@ pkg_setup() {
 		eerror "You first need to have a native code ocaml compiler."
 		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
 		die "Please install ocaml with ocamlopt useflag"
+	fi
+	# dev-lang/ocaml creates its own objects but calls gcc for linking, which will
+	# results in relocations if gcc wants to create a PIE executable
+	if gcc-specs-pie ; then
+		append-ldflags -nopie
+		ewarn "Ocaml generates its own native asm, you're using a PIE compiler"
+		ewarn "We have appended -nopie to ocaml build options"
+		ewarn "because linking an executable with pie while the objects are not pic will not work"
 	fi
 }
 
