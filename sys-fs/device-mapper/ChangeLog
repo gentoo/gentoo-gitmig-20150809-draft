@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.115 2008/06/14 09:36:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.116 2008/06/16 05:43:46 jer Exp $
+
+  16 Jun 2008; Jeroen Roovers <jer@gentoo.org> device-mapper-1.02.26.ebuild:
+  Stable for HPPA (bug #207612).
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 207612
