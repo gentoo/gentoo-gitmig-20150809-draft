@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.2 2008/05/16 13:16:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.3 2008/06/16 17:29:50 drac Exp $
 
-inherit kde-functions virtualx eutils
+inherit kde-functions eutils
 
 MY_P=${P/museseq/muse}
 
@@ -38,9 +38,9 @@ src_unpack() {
 }
 
 src_compile() {
-	Xeconf --disable-suid-build --disable-optimize \
+	econf --disable-suid-build --disable-optimize \
 		$(use_enable lash) $(use_enable debug) \
-		|| die "Xeconf failed."
+		|| die "econf failed."
 
 	emake || die "emake failed."
 }
