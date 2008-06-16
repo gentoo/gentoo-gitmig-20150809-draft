@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.170 2008/06/16 13:48:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.171 2008/06/16 17:16:27 pva Exp $
+
+  16 Jun 2008; Peter Volkov <pva@gentoo.org> -files/snmpd-5.1.conf,
+  -files/snmpd-5.1.rc6, -files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch,
+  -files/net-snmp-5.2.2-asneeded.patch,
+  -files/net-snmp-5.2.2-conf-elf-rpm-bz2.patch,
+  -files/net-snmp-5.3.1-retrans-time.patch,
+  -files/net-snmp-5.3.1-tcp-udp-mib-byteorder.patch,
+  -files/net-snmp-maxreps.patch, -net-snmp-5.2.2-r3.ebuild,
+  -net-snmp-5.3.1-r1.ebuild:
+  Removed old. This also fixes bug #226583, thank Diego Pettenò for his
+  work.
 
 *net-snmp-5.4.1.1 (16 Jun 2008)
 
