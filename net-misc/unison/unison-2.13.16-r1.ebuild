@@ -1,0 +1,82 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16-r1.ebuild,v 1.1 2008/06/16 20:20:07 aballier Exp $
+
+EAPI=1
+
+inherit eutils versionator
+
+IUSE="gtk doc static debug threads"
+
+DESCRIPTION="Two-way cross-platform file synchronizer"
+HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
+LICENSE="GPL-2"
+SLOT="$(get_version_component_range 1-2 ${PV})"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+
+DEPEND=">=dev-lang/ocaml-3.04
+	gtk? ( >=dev-ml/lablgtk-2.2 )"
+
+RDEPEND="gtk? ( >=dev-ml/lablgtk-2.2
+	|| ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )
+	!net-misc/unison:0
+	app-admin/eselect-unison"
+
+PDEPEND="gtk? ( media-fonts/font-schumacher-misc )"
+
+SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}.tar.gz
+doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.pdf
+	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.html )"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	# Fix for coreutils change of tail syntax
+	cd "${S}"
+	sed -i -e 's/tail -1/tail -n 1/' Makefile.OCaml
+	epatch "${FILESDIR}/${PN}-2.27.57-as-needed.patch"
+}
+
+src_compile() {
+	local myconf
+
+	if use threads; then
+		myconf="$myconf THREADS=true"
+	fi
+
+	if use static; then
+		myconf="$myconf STATIC=true"
+	fi
+
+	if use debug; then
+		myconf="$myconf DEBUGGING=true"
+	fi
+
+	if use gtk; then
+		myconf="$myconf UISTYLE=gtk2"
+	else
+		myconf="$myconf UISTYLE=text"
+	fi
+
+	# Discard cflags as it will try to pass them to ocamlc...
+	emake -j1 $myconf CFLAGS="" || die "error making unsion"
+}
+
+src_install () {
+	# install manually, since it's just too much
+	# work to force the Makefile to do the right thing.
+	newbin unison unison-${SLOT} || die
+	dodoc BUGS.txt CONTRIB INSTALL NEWS \
+	      README ROADMAP.txt TODO.txt || die
+
+	if use doc; then
+		dohtml "${DISTDIR}/${P}-manual.html" || die
+		dodoc "${DISTDIR}/${P}-manual.pdf" || die
+	fi
+}
+
+pkg_postinst() {
+	elog "Unison now uses SLOTs, so you can specify servercmd=/usr/bin/unison-${SLOT}"
+	elog "in your profile files to access exactly this version over ssh."
+	elog "Or you can use 'eselect unison' to set the version."
+}
