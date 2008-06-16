@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.6_pre9999.ebuild,v 1.1 2008/06/12 15:44:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.6_pre9999.ebuild,v 1.2 2008/06/16 11:39:48 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -20,6 +20,7 @@ DEPEND=">=dev-lang/python-2.3
 	dev-libs/boost"
 RDEPEND="${DEPEND}
 	dev-python/pyxdg
+	dev-python/setuptools
 	gtk? (
 		>=dev-python/pygtk-2
 		dev-python/pyxdg
