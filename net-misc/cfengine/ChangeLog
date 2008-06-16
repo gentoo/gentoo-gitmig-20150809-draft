@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.84 2008/06/08 11:58:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.85 2008/06/16 16:37:11 ramereth Exp $
+
+*cfengine-2.2.7 (16 Jun 2008)
+
+  16 Jun 2008; Lance Albertson <ramereth@gentoo.org> +cfengine-2.2.7.ebuild:
+  Bump version
 
   08 Jun 2008; nixnut <nixnut@gentoo.org> cfengine-2.1.22-r1.ebuild:
   Stable on ppc wrt bug 220927
