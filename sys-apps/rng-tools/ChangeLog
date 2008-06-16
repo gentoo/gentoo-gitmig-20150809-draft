@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.21 2007/10/27 13:02:23 nelchael Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.22 2008/06/16 07:36:10 nelchael Exp $
+
+  16 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> rng-tools-2.ebuild:
+  Fix autotools handling, bug #226619.
 
   27 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> rng-tools-2.ebuild:
   Fix variable quoting.
