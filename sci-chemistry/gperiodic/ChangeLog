@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gperiodic
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.8 2008/05/29 18:54:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.9 2008/06/16 11:02:02 markusle Exp $
+
+  16 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/gperiodic-1.3.2-gentoo.diff:
+  Removed unused patch which triggered bug #Bug 226815.
 
   29 May 2008; Markus Dittrich <markusle@gentoo.org> gperiodic-2.0.7.ebuild,
   gperiodic-2.0.10.ebuild:
