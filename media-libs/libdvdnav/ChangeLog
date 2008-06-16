@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.40 2008/05/08 01:17:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.41 2008/06/16 11:44:03 flameeyes Exp $
+
+  16 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/libdvdnav-0.1.10-build.patch,
+  +files/libdvdnav-0.1.10-dontbuild-examples.patch, libdvdnav-0.1.10.ebuild:
+  Disable building of examples. Closes bug #226339
 
   08 May 2008; Steve Dibb <beandog@gentoo.org>
   -libdvdnav-4.1.1_p997-r1.ebuild:

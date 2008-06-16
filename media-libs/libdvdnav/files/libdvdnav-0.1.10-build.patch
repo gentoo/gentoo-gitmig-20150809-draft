@@ -1,29 +1,33 @@
 Use CFLAGS from environment and make sure we install the .m4 into the
 correct place regardless of whether `aclocal` is installed on the host.
-
---- configure
-+++ configure
-@@ -21459,8 +21459,9 @@
-     ;;
- esac
- 
+Index: libdvdnav-0.1.10/configure.ac
+===================================================================
+--- libdvdnav-0.1.10.orig/configure.ac
++++ libdvdnav-0.1.10/configure.ac
+@@ -175,8 +175,9 @@ dnl ------------------------------------
+ dnl cflags
+ dnl ---------------------------------------------
+ dnl Common cflags for all platforms
 -CFLAGS="-O3 -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE $CFLAGS"
 -DEBUG_CFLAGS="-g -DDEBUG $CFLAGS"
-+CFLAGS="$CFLAGS -Wall"
-+CPPFLAGS="$CPPFLAGS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE"
-+DEBUG_CFLAGS="$CFLAGS -g -DDEBUG"
++CFLAGS="${CFLAGS} -Wall"
++CPPFLAGS="${CPPFLAGS} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE"
++DEBUG_CFLAGS="${CFLAGS} -g -DDEBUG"
  
+ AC_SUBST(DEBUG_CFLAGS)
  
- 
---- m4/Makefile.in
-+++ m4/Makefile.in
-@@ -116,8 +116,7 @@
+Index: libdvdnav-0.1.10/m4/Makefile.am
+===================================================================
+--- libdvdnav-0.1.10.orig/m4/Makefile.am
++++ libdvdnav-0.1.10/m4/Makefile.am
+@@ -2,10 +2,6 @@ include $(top_srcdir)/misc/Makefile.comm
  
  EXTRA_DIST = dvdnav.m4
  
--@INSTALL_M4_TRUE@m4datadir = @ACLOCAL_DIR@
--@INSTALL_M4_FALSE@m4datadir = $(datadir)/aclocal
-+m4datadir = $(datadir)/aclocal
+-if INSTALL_M4
+-m4datadir = @ACLOCAL_DIR@
+-else
+ m4datadir = $(datadir)/aclocal
+-endif
  
  m4data_DATA = dvdnav.m4
- subdir = m4
