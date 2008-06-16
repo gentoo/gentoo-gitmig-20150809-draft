@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.19 2008/06/13 22:17:59 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.20 2008/06/16 10:32:48 flameeyes Exp $
+
+*libdca-0.0.5-r2 (16 Jun 2008)
+
+  16 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdca-0.0.5-constant.patch,
+  files/libdca-0.0.5-tests-optional.patch, -libdca-0.0.5-r1.ebuild,
+  +libdca-0.0.5-r2.ebuild:
+  Fix the test building with a slightly different patch, that doesn't expose
+  a conditional during configure (and thus an USE flag). Add my costantise
+  patch (that has been applied upstream already) to reduce memory footprint.
 
 *libdca-0.0.5-r1 (13 Jun 2008)
 
