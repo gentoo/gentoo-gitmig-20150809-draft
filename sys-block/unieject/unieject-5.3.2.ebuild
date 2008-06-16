@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.2.ebuild,v 1.9 2008/02/18 18:10:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.2.ebuild,v 1.10 2008/06/16 11:22:25 flameeyes Exp $
 
-inherit eutils libtool flag-o-matic
+inherit eutils libtool
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
 HOMEPAGE="http://www.flameeyes.eu/projects#unieject"
@@ -40,8 +40,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use pmount && append-ldflags $(bindnow-flags)
-
 	econf \
 		$(use_enable nls) \
 		--enable-lock-workaround \
