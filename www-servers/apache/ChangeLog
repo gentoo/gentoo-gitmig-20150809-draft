@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.81 2008/06/16 13:33:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.82 2008/06/16 16:12:41 ranger Exp $
+
+  16 Jun 2008; Brent Baude <ranger@gentoo.org> apache-2.2.9.ebuild:
+  Marking apache-2.2.9 ppc64 for bug 227111
 
   16 Jun 2008; Raúl Porcel <armin76@gentoo.org> apache-2.2.9.ebuild:
   alpha/ia64/sparc stable wrt #227111
