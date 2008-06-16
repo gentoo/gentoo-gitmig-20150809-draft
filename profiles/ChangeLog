@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1555 2008/06/16 00:29:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1556 2008/06/16 13:58:23 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  16 Jun 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Unmask new gnustep base packages
 
   15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
   add xfce use flag for sys-block/gparted
