@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.171 2008/06/16 17:16:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.172 2008/06/16 18:52:10 pva Exp $
+
+  16 Jun 2008; Peter Volkov <pva@gentoo.org> net-snmp-5.4.1.1.ebuild:
+  Added dependency on autoconf-2.62 as a temporary measure untill we update
+  dependency in autotools.eclass, fixes bug #225893, thank Mark Haney for
+  report.
 
   16 Jun 2008; Peter Volkov <pva@gentoo.org> -files/snmpd-5.1.conf,
   -files/snmpd-5.1.rc6, -files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch,
