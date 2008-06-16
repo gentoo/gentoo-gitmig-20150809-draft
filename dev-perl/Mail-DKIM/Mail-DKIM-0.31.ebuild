@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.31.ebuild,v 1.1 2008/04/24 16:50:09 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.31.ebuild,v 1.2 2008/06/16 18:31:59 ranger Exp $
 
 inherit perl-module
 
@@ -18,6 +18,6 @@ DEPEND="dev-perl/Crypt-OpenSSL-RSA
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 SRC_TEST="do"
