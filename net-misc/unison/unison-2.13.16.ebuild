@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16.ebuild,v 1.6 2007/07/22 08:10:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16.ebuild,v 1.7 2008/06/16 20:51:23 aballier Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	# Fix for coreutils change of tail syntax
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's/tail -1/tail -n 1/' Makefile.OCaml
 }
 
@@ -60,11 +60,11 @@ src_install () {
 	# install manually, since it's just too much
 	# work to force the Makefile to do the right thing.
 	dobin unison || die
-	dodoc BUGS.txt CONTRIB COPYING INSTALL NEWS \
+	dodoc BUGS.txt CONTRIB INSTALL NEWS \
 	      README ROADMAP.txt TODO.txt || die
 
 	if use doc; then
-		dohtml ${DISTDIR}/${P}-manual.html || die
-		dodoc ${DISTDIR}/${P}-manual.pdf || die
+		dohtml "${DISTDIR}/${P}-manual.html" || die
+		dodoc "${DISTDIR}/${P}-manual.pdf" || die
 	fi
 }

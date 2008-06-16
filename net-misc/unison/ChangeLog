@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.51 2008/06/16 20:46:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.52 2008/06/16 20:51:23 aballier Exp $
+
+  16 Jun 2008; Alexis Ballier <aballier@gentoo.org> unison-2.13.16.ebuild:
+  quote variables and dont dodoc copying
 
   16 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   -files/unison-2.12.0-gtk2-bug.patch, -files/unison-2.17.1-io-error.patch,
