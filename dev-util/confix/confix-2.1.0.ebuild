@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0.ebuild,v 1.2 2008/05/13 16:13:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0.ebuild,v 1.3 2008/06/16 08:36:21 haubi Exp $
 
 inherit distutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/confix/Confix-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}
