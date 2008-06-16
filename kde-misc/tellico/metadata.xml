@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
-<maintainer>
-<email>beandog@gentoo.org</email>
-<name>Steve Dibb</name>
-</maintainer>
 <longdescription lang="en">
 Tellico is a KDE application for organizing your collections. It provides
 default templates for books, bibliographies, videos, music, video games, coins,
