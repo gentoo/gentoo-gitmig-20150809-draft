@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.3 2008/06/16 06:42:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.4 2008/06/16 17:25:53 nixnut Exp $
 
 inherit elisp-common eutils ruby
 
@@ -11,7 +11,7 @@ SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="emacs vim-syntax"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND="emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
@@ -34,9 +34,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch
-		"${FILESDIR}/${PN}-0.24.2-gentoo.patch" \
-		"${FILESDIR}/${P}-openrc_initd.patch"
+	epatch "${FILESDIR}/${PN}-0.24.2-gentoo.patch" 
+	epatch "${FILESDIR}/${P}-openrc_initd.patch"
 }
 
 src_compile() {
