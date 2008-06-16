@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.14 2008/06/16 18:05:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.15 2008/06/16 18:11:58 robbat2 Exp $
 
 inherit eutils pam
 
@@ -25,7 +25,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 src_unpack() {
 	unpack ${P}.tar.bz2
 	use doc && unpack cederqvist-${PV}.html.tar.bz2
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.12.12-cvsbug-tmpfix.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
 }
 
 src_compile() {
@@ -43,7 +43,7 @@ src_install() {
 	einstall || die
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver || die "newins failed"
+	newins "${FILESDIR}"/cvspserver.xinetd.d cvspserver || die "newins failed"
 
 	dodoc BUGS ChangeLog* DEVEL* FAQ HACKING \
 		MINOR* NEWS PROJECTS README* TESTS TODO
@@ -54,15 +54,15 @@ src_install() {
 	fi
 
 	if use doc; then
-		dodoc ${DISTDIR}/cederqvist-${PV}.pdf
-		dodoc ${DISTDIR}/cederqvist-${PV}.ps
-		tar xjf ${DISTDIR}/cederqvist-${PV}.html.tar.bz2
+		dodoc "${DISTDIR}"/cederqvist-${PV}.pdf
+		dodoc "${DISTDIR}"/cederqvist-${PV}.ps
+		tar xjf "${DISTDIR}"/cederqvist-${PV}.html.tar.bz2
 		dohtml -r cederqvist-${PV}.html/*
-		cd ${D}/usr/share/doc/${PF}/html/
+		cd "${D}"/usr/share/doc/${PF}/html/
 		ln -s cvs.html index.html
 	fi
 
-	newpamd ${FILESDIR}/cvs.pam-include-1.12.12 cvs
+	newpamd "${FILESDIR}"/cvs.pam-include-1.12.12 cvs
 }
 
 src_test() {

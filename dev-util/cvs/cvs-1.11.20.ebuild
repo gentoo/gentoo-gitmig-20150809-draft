@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.20.ebuild,v 1.10 2005/07/23 11:33:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.20.ebuild,v 1.11 2008/06/16 18:11:58 robbat2 Exp $
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.cvshome.org/"
@@ -25,7 +25,7 @@ src_install() {
 	einstall || die
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver || die "newins failed"
+	newins "${FILESDIR}"/cvspserver.xinetd.d cvspserver || die "newins failed"
 
 	dodoc BUGS ChangeLog* DEVEL* FAQ HACKING \
 		MINOR* NEWS PROJECTS README* TESTS TODO
@@ -36,11 +36,11 @@ src_install() {
 	fi
 
 	if use doc; then
-		dodoc ${DISTDIR}/cederqvist-${PV}.pdf
-		dodoc ${DISTDIR}/cederqvist-${PV}.ps
-		tar xjf ${DISTDIR}/cederqvist-${PV}.html.tar.bz2
+		dodoc "${DISTDIR}"/cederqvist-${PV}.pdf
+		dodoc "${DISTDIR}"/cederqvist-${PV}.ps
+		tar xjf "${DISTDIR}"/cederqvist-${PV}.html.tar.bz2
 		dohtml -r cederqvist-${PV}.html/*
-		cd ${D}/usr/share/doc/${PF}/html/
+		cd "${D}"/usr/share/doc/${PF}/html/
 		ln -s cvs.html index.html
 	fi
 }
