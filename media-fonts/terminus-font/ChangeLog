@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.55 2008/06/16 06:04:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.56 2008/06/16 11:04:22 coldwind Exp $
+
+  16 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  terminus-font-4.26.ebuild:
+  amd64 stable wrt bug #227179, quoting fixed.
 
   16 Jun 2008; Joseph Jezak <josejx@gentoo.org> terminus-font-4.26.ebuild:
   Marked ppc/ppc64 stable for bug #227179.
