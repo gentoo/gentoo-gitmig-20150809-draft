@@ -1,23 +1,25 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r9.ebuild,v 1.10 2008/06/16 20:40:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r9.ebuild,v 1.11 2008/06/16 21:09:13 vapier Exp $
 
 inherit eutils pam toolchain-funcs
 
-PATCHVER="1.0"
+PATCHVER="2"
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
 	mirror://gentoo/rexec-1.5.tar.gz
-	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCHVER}.tar.lzma"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="pam"
 
-DEPEND=">=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2
 	pam? ( >=sys-auth/pambase-20080219.1 )"
+DEPEND="${RDEPEND}
+	app-arch/lzma-utils"
 
 src_unpack() {
 	unpack ${A}
