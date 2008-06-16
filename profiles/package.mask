@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8727 2008/06/16 13:58:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8728 2008/06/16 19:47:14 dberkholz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -46,8 +46,7 @@
 # Donnie Berkholz <dberkholz@gentoo.org> (11 Jun 2008)
 # (#225907) Huge memory leaks, and 0.11.2 is just broken so try to get 
 # people off it.
-=x11-libs/pixman-0.11.2
-=x11-libs/pixman-0.11.4
+=x11-libs/pixman-0.11*
 
 # Torsten Veller <tove@gentoo.org> (11 Jun 2008)
 # Masked for removal in 30 days
