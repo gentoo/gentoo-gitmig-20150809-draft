@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a-r1.ebuild,v 1.3 2007/07/22 08:57:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a-r1.ebuild,v 1.4 2008/06/16 19:04:09 robbat2 Exp $
 
 MY_PN="v"
 MY_PV="${PV/a}"
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
+# Does NOT compile against freeglut
 RDEPEND="media-libs/glut
 	x11-libs/libXaw
 	virtual/opengl
