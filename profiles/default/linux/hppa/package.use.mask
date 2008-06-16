@@ -1,0 +1,9 @@
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.1 2008/06/16 04:46:03 jer Exp $
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (16 Jun 2008)
+# No mpi implementation in the tree currently works, so mask mpi (bug #225045).
+dev-libs/boost mpi
+
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
