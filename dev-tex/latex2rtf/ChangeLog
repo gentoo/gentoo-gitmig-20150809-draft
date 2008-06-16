@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.20 2008/03/03 22:21:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.21 2008/06/16 03:59:33 jer Exp $
+
+  16 Jun 2008; Jeroen Roovers <jer@gentoo.org> latex2rtf-1.9.19.ebuild:
+  Marked ~hppa (bug #225877).
 
   03 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   -files/latex2rtf-Makefile-gentoo.diff,
