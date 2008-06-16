@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.1 2008/06/13 14:06:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.2 2008/06/16 10:42:16 flameeyes Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -14,7 +14,7 @@ SRC_URI="http://liba52.sourceforge.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="oss djbfft test"
+IUSE="oss djbfft"
 
 RDEPEND="djbfft? ( sci-libs/djbfft )"
 DEPEND="${RDEPEND}"
@@ -38,7 +38,6 @@ src_compile() {
 	use oss || myconf="${myconf} --disable-oss"
 	econf \
 		$(use_enable djbfft) \
-		$(use_enable test tests) \
 		${myconf} || die
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
