@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.1.ebuild,v 1.2 2008/06/15 20:51:38 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.1.ebuild,v 1.3 2008/06/16 17:19:22 nixnut Exp $
 
 DESCRIPTION="Uriparser is a strictly RFC 3986 compliant URI parsing library in C"
 HOMEPAGE="http://uriparser.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=""
