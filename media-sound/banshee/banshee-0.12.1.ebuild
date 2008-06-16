@@ -1,14 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.1.ebuild,v 1.7 2008/01/01 22:34:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.1.ebuild,v 1.8 2008/06/16 13:37:46 drac Exp $
 
-inherit autotools eutils gnome2 mono
+inherit eutils gnome2 mono
 
-DESCRIPTION="Banshee allows you to import CDs, sync your music collection, play
-music directly from an iPod, create playlists with songs from your library, and
-create audio and MP3 CDs from subsets of your library."
+DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
