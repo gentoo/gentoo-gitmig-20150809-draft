@@ -4,10 +4,6 @@
 <herd>video</herd>
 <herd>dotnet</herd>
 <maintainer>
-<email>beandog@gentoo.org</email>
-<name>Steve Dibb</name>
-</maintainer>
-<maintainer>
 <email>mail@pedrocastro.org</email>
 <name>Pedro Castro</name>
 </maintainer>
