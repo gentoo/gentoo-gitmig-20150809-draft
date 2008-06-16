@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.40 2008/06/06 15:33:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.41 2008/06/16 04:35:46 jer Exp $
+
+  16 Jun 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask dev-lib/boost's upcoming USE=mpi (bug #225045).
 
   06 Jun 2008; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask valgrind USE flag (as used by dev-util/anjuta).
