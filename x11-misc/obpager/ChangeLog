@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obpager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.10 2008/02/18 00:29:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.11 2008/06/16 14:13:35 yngwin Exp $
+
+  16 Jun 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/obpager-1.8-gcc43.patch, obpager-1.8.ebuild:
+  Added gcc-4.3 patch by loki_val in bug 226007.
 
   18 Feb 2008; David Shakaryan <omp@gentoo.org>
   +files/obpager-1.8-as-needed.patch, obpager-1.8.ebuild:

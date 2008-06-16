@@ -1,0 +1,33 @@
+diff -NrU5 obpager-1.8.orig/src/main.cc obpager-1.8/src/main.cc
+--- obpager-1.8.orig/src/main.cc	2008-06-15 00:11:45.000000000 +0200
++++ obpager-1.8/src/main.cc	2008-06-15 00:12:04.000000000 +0200
+@@ -24,11 +24,11 @@
+ 
+ // Other system necessary headers
+ 
+ #include <sys/types.h>
+ #include <unistd.h>
+-
++#include <cstdlib>
+ 
+ // Include the headers for the pager class and also the spiffy custom exception class
+ 
+ #include "OBPager.h"
+ #include "VerboseException.h"
+diff -NrU5 obpager-1.8.orig/src/OBPager.cc obpager-1.8/src/OBPager.cc
+--- obpager-1.8.orig/src/OBPager.cc	2008-06-15 00:11:45.000000000 +0200
++++ obpager-1.8/src/OBPager.cc	2008-06-15 00:14:43.000000000 +0200
+@@ -20,11 +20,12 @@
+ #include "OBPager.h"
+ #include "VerboseException.h"
+ 
+ #include <string>
+ #include <sstream>
+-
++#include <cstdlib>
++#include <memory>
+ 
+ // We need to work with these properties
+ 
+ #define UTF8_STRING_PROP "UTF8_STRING"
+ #define NET_CURRENT_DESKTOP_PROP "_NET_CURRENT_DESKTOP"
