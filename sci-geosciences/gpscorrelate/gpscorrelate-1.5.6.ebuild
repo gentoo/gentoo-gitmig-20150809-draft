@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.5.6.ebuild,v 1.1 2008/05/18 22:17:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.5.6.ebuild,v 1.2 2008/06/16 23:29:23 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freefoote.dview.net/linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~hppa ~x86"
 IUSE="doc gtk"
 DEPEND="dev-libs/libxml2
 	media-gfx/exiv2
