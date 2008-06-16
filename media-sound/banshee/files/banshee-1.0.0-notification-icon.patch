@@ -1,0 +1,27 @@
+If the panel in which the notification area sits is vertical, the icon size
+will be set to abnormally big. Changing panel to horizontal then back to
+vertical returns to a normal-sized icon.
+Bug has been reported upstream[1] and a patch is available.
+Patch is attached to this bug report.
+Tried in overlay with adding patch. It compiles and runs fine.
+
+[1]: http://bugzilla.gnome.org/show_bug.cgi?id=537679
+
+Index: src/Extensions/Banshee.NotificationArea/Banshee.NotificationArea/X11NotificationAreaBox.cs
+===================================================================
+--- src/Extensions/Banshee.NotificationArea/Banshee.NotificationArea/X11NotificationAreaBox.cs	(revision 4138)
++++ src/Extensions/Banshee.NotificationArea/Banshee.NotificationArea/X11NotificationAreaBox.cs	(working copy)
+@@ -149,11 +149,11 @@
+             // Determine whether the tray is inside a horizontal or vertical
+             // panel so the size of the icon can adjust correctly.
+         
+-            if (ParentWindow == null) {
++            if (event_box.ParentWindow == null) {
+                 return PanelOrientation.Horizontal;
+             }
+ 
+-            Gdk.Window top_level_window = ParentWindow.Toplevel;
++            Gdk.Window top_level_window = event_box.ParentWindow.Toplevel;
+ 
+             Gdk.Rectangle rect = top_level_window.FrameExtents;
+             if (rect.Width < rect.Height) {

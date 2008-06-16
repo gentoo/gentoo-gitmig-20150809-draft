@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0.ebuild,v 1.4 2008/06/16 13:35:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0-r1.ebuild,v 1.1 2008/06/16 19:29:51 loki_val Exp $
 
 EAPI=1
 
-inherit gnome2 mono
+inherit base gnome2 mono
 
 GVER=0.10.3
 
@@ -69,6 +69,8 @@ RDEPEND=">=dev-lang/mono-1.2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+PATCHES=( "${FILESDIR}/${P}-notification-icon.patch" )
+
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 S=${WORKDIR}/${PN}-1-${PV}
@@ -83,4 +85,10 @@ pkg_setup() {
 		$(use_enable test tests)"
 
 	MAKEOPTS="${MAKEOPTS} -j1"
+}
+
+src_unpack() {
+	base_src_unpack
+	gnome2_omf_fix
+	elibtoolize
 }
