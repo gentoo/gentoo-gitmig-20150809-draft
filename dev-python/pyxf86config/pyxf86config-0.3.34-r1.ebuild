@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.7 2008/05/22 10:42:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.8 2008/06/16 13:04:57 leio Exp $
 
 inherit eutils python rpm autotools
 
@@ -24,6 +24,15 @@ RDEPEND="=dev-libs/glib-2*
 		  dev-lang/python"
 DEPEND="${RDEPEND}
 		>=x11-base/xorg-server-1.1.1-r1"
+
+pkg_setup() {
+	if built_with_use x11-base/xorg-server minimal; then
+		eerror "To build ${PN} you need the libxf86config static library from"
+		eerror "x11-base/xorg-server, which is not built when the minimal USE flag is used."
+		eerror "Please disable the minimal USE flag for x11-base/xorg-server"
+		die "Missing libxf86config.a"
+	fi
+}
 
 src_unpack() {
 	rpm_src_unpack
