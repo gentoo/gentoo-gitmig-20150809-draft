@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.14 2008/05/01 19:10:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.15 2008/06/16 06:42:46 dev-zero Exp $
+
+  16 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/puppet-0.24.4-openrc_initd.patch, files/puppetmaster.init,
+  puppet-0.24.4.ebuild:
+  Added fix to make scripts work with baselayout-2/openrc (bug #218071)
 
   01 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   puppet-0.24.4.ebuild:

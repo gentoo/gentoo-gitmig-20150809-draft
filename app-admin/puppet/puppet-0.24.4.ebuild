@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.2 2008/05/01 19:10:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.3 2008/06/16 06:42:46 dev-zero Exp $
 
 inherit elisp-common eutils ruby
 
@@ -34,7 +34,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-0.24.2-gentoo.patch
+	epatch
+		"${FILESDIR}/${PN}-0.24.2-gentoo.patch" \
+		"${FILESDIR}/${P}-openrc_initd.patch"
 }
 
 src_compile() {

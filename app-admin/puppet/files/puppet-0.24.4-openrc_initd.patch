@@ -1,0 +1,12 @@
+diff -Naur puppet-0.24.4.orig/conf/gentoo/init.d/puppet puppet-0.24.4/conf/gentoo/init.d/puppet
+--- puppet-0.24.4.orig/conf/gentoo/init.d/puppet	2008-06-11 19:06:26.000000000 +0200
++++ puppet-0.24.4/conf/gentoo/init.d/puppet	2008-06-11 19:06:45.000000000 +0200
+@@ -24,7 +24,7 @@
+         [[ -n "${PUPPET_EXTRA_OPTS}" ]] && options="${options} ${PUPPET_EXTRA_OPTS}"
+ 
+         ebegin "Starting puppet"
+-        start-stop-daemon --start --quiet --exec /usr/bin/puppetd -- ${options}
++        start-stop-daemon --start --quiet --exec /usr/bin/ruby /usr/bin/puppetd -- ${options}
+         eend $? "Failed to start puppet"
+ }
+ 
