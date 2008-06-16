@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/thin
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.1 2008/06/16 19:32:57 robbat2 Exp $
+
+*thin-0.8.1 (16 Jun 2008)
+
+  16 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +thin-0.8.1.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
