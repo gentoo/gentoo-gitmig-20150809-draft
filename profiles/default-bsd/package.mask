@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.9 2008/04/07 09:33:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.10 2008/06/16 21:10:48 aballier Exp $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible
 # Also mask packages that are depending on Linux kernel
 sys-apps/apmd
-sys-apps/debianutils
 sys-apps/eject
 sys-apps/net-tools
 sys-apps/pam-login
