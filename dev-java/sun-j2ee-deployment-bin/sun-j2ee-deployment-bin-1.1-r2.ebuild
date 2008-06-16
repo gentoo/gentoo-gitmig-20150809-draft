@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/sun-j2ee-deployment-bin-1.1-r2.ebuild,v 1.5 2008/05/12 09:24:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/sun-j2ee-deployment-bin-1.1-r2.ebuild,v 1.6 2008/06/16 19:05:24 serkan Exp $
 
 inherit java-pkg-2
 
@@ -24,8 +24,8 @@ RESTRICT="fetch"
 
 S=${WORKDIR}
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=J2EE_DEPLOYMENT-1.1-FR-CLASS-G-F&SiteId=JSC&TransactionId=noreg"
-DOWNLOAD_URL_DOC="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=J2EE_DEPLOYMENT-1.1-FR-DOC-G-F&SiteId=JSC&TransactionId=noreg"
+DOWNLOAD_URL="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=J2EE_DEPLOYMENT-1.1-FR-CLASS-G-F@CDS-CDS_Developer"
+DOWNLOAD_URL_DOC="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=J2EE_DEPLOYMENT-1.1-FR-DOC-G-F@CDS-CDS_Developer"
 
 pkg_nofetch() {
 	einfo "Please download \"J2EE Deployment API Class Files 1.1\" - ${CLASS_URI}"
