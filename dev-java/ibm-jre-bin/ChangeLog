@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.96 2008/06/15 23:06:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.97 2008/06/16 07:35:13 opfer Exp $
+
+  16 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  ibm-jre-bin-1.4.2.11.ebuild:
+  stable x86, security bug 216112
 
   15 Jun 2008; Vlastimil Babka <caster@gentoo.org> ChangeLog:
   Version bump, security bug #216112.
