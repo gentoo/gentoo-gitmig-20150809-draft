@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.12 2008/06/16 14:06:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.13 2008/06/16 14:07:32 drac Exp $
 
 DESCRIPTION="A tool for dynamically adjusting the nice-level of processes"
 HOMEPAGE="http://ahab.cnde.iastate.edu/~sdh4/verynice/"
-SRC_URI="http://thermal.cnde.iastate.edu/~sdh4/verynice/down/verynice-1.1.tar.gz"
+SRC_URI="http://thermal.cnde.iastate.edu/~sdh4/verynice/down/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
