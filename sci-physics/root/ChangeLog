@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.26 2008/05/30 09:08:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.27 2008/06/16 15:05:57 bicatali Exp $
+
+  16 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/root-5.18.00d-gcc43.patch:
+  Added more gcc-4.3 love to the mathcore, thanks to Derek Dolney, bug
+  #226013
 
   30 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/xrootd-20071116-gcc43.patch:

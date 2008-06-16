@@ -418,6 +418,17 @@
  
  namespace ROOT {
  
+--- ./mathcore/inc/Math/Minimizer.h.orig	2008-05-29 10:59:38.000000000 -0400
++++ ./mathcore/inc/Math/Minimizer.h	2008-06-11 23:36:33.000000000 -0400
+@@ -22,6 +22,8 @@
+ 
+ #include <limits> 
+ 
++#include <string>
++
+ //#define DEBUG
+ #ifdef DEBUG
+ #include <iostream> 
 --- ./mlp/src/TMLPAnalyzer.cxx.orig	2008-05-25 10:26:07.216552738 +0000
 +++ ./mlp/src/TMLPAnalyzer.cxx	2008-05-25 10:26:20.093286541 +0000
 @@ -38,6 +38,7 @@
