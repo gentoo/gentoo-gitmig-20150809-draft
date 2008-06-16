@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/sucs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.11 2007/12/18 19:57:56 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.12 2008/06/16 20:00:34 dev-zero Exp $
+
+  16 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  files/sucs-1.0.0-various_fixes.diff:
+  Updated patch to fix bug #227621)
 
   18 Dec 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/sucs-1.0.0-gcc4.diff, -files/sucs-1.0.0-signals.diff,

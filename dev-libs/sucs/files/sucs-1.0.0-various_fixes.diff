@@ -1,28 +1,102 @@
+diff -Naur sucs-1.0.0.orig/daemon/daemon.cpp sucs-1.0.0/daemon/daemon.cpp
+--- sucs-1.0.0.orig/daemon/daemon.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/daemon/daemon.cpp	2008-06-16 21:51:52.000000000 +0200
+@@ -22,7 +22,8 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <signal.h>
+-
++#include <cstring>
++#include <cstdlib>
+ #include "daemon.h"
+ 
+ using namespace sucs;
+@@ -93,6 +94,11 @@
+ 	exit(RunProgram());
+ }
+ 
++void Daemon::DontDaemonise()
++{
++	exit(RunProgram());
++}
++
+ Daemon::Daemon()
+ {
+ }
+diff -Naur sucs-1.0.0.orig/daemon/daemon.h sucs-1.0.0/daemon/daemon.h
+--- sucs-1.0.0.orig/daemon/daemon.h	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/daemon/daemon.h	2008-06-16 21:51:03.000000000 +0200
+@@ -28,7 +28,7 @@
+ 	void Daemonise();
+ 
+ 	// Does nothing except run the derived program.
+-	void DontDaemonise() { exit(RunProgram()); }
++	void DontDaemonise();
+ 
+ 	Daemon();
+ 	virtual ~Daemon();
+diff -Naur sucs-1.0.0.orig/ipc/mutex.cpp sucs-1.0.0/ipc/mutex.cpp
+--- sucs-1.0.0.orig/ipc/mutex.cpp	2008-06-16 21:40:31.000000000 +0200
++++ sucs-1.0.0/ipc/mutex.cpp	2008-06-16 21:47:30.000000000 +0200
+@@ -18,6 +18,7 @@
+ 
+ #include <iostream>
+ #include <cassert>
++#include <cstring>
+ using namespace std;
+ 
+ #include <errno.h>
 diff -Naur sucs-1.0.0.orig/ipc/sema.cpp sucs-1.0.0/ipc/sema.cpp
---- sucs-1.0.0.orig/ipc/sema.cpp	2007-12-18 20:43:20.000000000 +0100
-+++ sucs-1.0.0/ipc/sema.cpp	2007-12-18 20:49:08.000000000 +0100
-@@ -15,6 +15,7 @@
+--- sucs-1.0.0.orig/ipc/sema.cpp	2008-06-16 21:40:31.000000000 +0200
++++ sucs-1.0.0/ipc/sema.cpp	2008-06-16 21:44:42.000000000 +0200
+@@ -15,6 +15,8 @@
  #pragma implementation
  
  #include <iostream>
 +#include <cerrno>
++#include <cstring>
  using namespace std;
  
  #include <semaphore.h>
-diff -Naur sucs-1.0.0.orig/network/link.cpp sucs-1.0.0/network/link.cpp
---- sucs-1.0.0.orig/network/link.cpp	2007-12-18 20:43:20.000000000 +0100
-+++ sucs-1.0.0/network/link.cpp	2007-12-18 20:49:08.000000000 +0100
+diff -Naur sucs-1.0.0.orig/kohonen/kohonendata.cpp sucs-1.0.0/kohonen/kohonendata.cpp
+--- sucs-1.0.0.orig/kohonen/kohonendata.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/kohonen/kohonendata.cpp	2008-06-16 21:57:53.000000000 +0200
 @@ -17,6 +17,7 @@
  #include <string>
- //#include <cstring>
+ #include <vector>
+ #include <cmath>
++#include <cstdlib>
+ 
+ using namespace std;
+ 
+diff -Naur sucs-1.0.0.orig/kohonen/kohonennet.cpp sucs-1.0.0/kohonen/kohonennet.cpp
+--- sucs-1.0.0.orig/kohonen/kohonennet.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/kohonen/kohonennet.cpp	2008-06-16 21:57:05.000000000 +0200
+@@ -17,6 +17,7 @@
+ #include <string>
+ #include <vector>
+ #include <cmath>
++#include <cstdlib>
+ 
+ using namespace std;
+ 
+diff -Naur sucs-1.0.0.orig/network/link.cpp sucs-1.0.0/network/link.cpp
+--- sucs-1.0.0.orig/network/link.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/network/link.cpp	2008-06-16 21:48:41.000000000 +0200
+@@ -15,8 +15,9 @@
+ 
+ #include <iostream>
+ #include <string>
+-//#include <cstring>
++#include <cstring>
  #include <cassert>
 +#include <cerrno>
  using namespace std;
  
  #include <netinet/in.h>
 diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp sucs-1.0.0/signals/signallistener.cpp
---- sucs-1.0.0.orig/signals/signallistener.cpp	2007-12-18 20:43:20.000000000 +0100
-+++ sucs-1.0.0/signals/signallistener.cpp	2007-12-18 20:49:08.000000000 +0100
+--- sucs-1.0.0.orig/signals/signallistener.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/signals/signallistener.cpp	2008-06-16 21:44:30.000000000 +0200
 @@ -29,6 +29,8 @@
  namespace sucs
  {
@@ -43,7 +117,7 @@ diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp sucs-1.0.0/signals/signall
  	SignalListener *l = SignalListener::signalListener();
 diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp.orig sucs-1.0.0/signals/signallistener.cpp.orig
 --- sucs-1.0.0.orig/signals/signallistener.cpp.orig	1970-01-01 01:00:00.000000000 +0100
-+++ sucs-1.0.0/signals/signallistener.cpp.orig	2007-12-18 20:48:54.000000000 +0100
++++ sucs-1.0.0/signals/signallistener.cpp.orig	2008-06-16 21:44:30.000000000 +0200
 @@ -0,0 +1,93 @@
 +//
 +// C++ Implementation: signallistener
@@ -138,18 +212,30 @@ diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp.orig sucs-1.0.0/signals/si
 +}
 +
 +};
+diff -Naur sucs-1.0.0.orig/sonic/stub.cpp sucs-1.0.0/sonic/stub.cpp
+--- sucs-1.0.0.orig/sonic/stub.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/sonic/stub.cpp	2008-06-16 21:58:56.000000000 +0200
+@@ -14,6 +14,7 @@
+ 
+ #include <iostream>
+ #include <cmath>
++#include <cstdlib>
+ 
+ using namespace std;
+ 
 diff -Naur sucs-1.0.0.orig/thread/thread.cpp sucs-1.0.0/thread/thread.cpp
---- sucs-1.0.0.orig/thread/thread.cpp	2007-12-18 20:43:20.000000000 +0100
-+++ sucs-1.0.0/thread/thread.cpp	2007-12-18 20:49:08.000000000 +0100
-@@ -17,6 +17,7 @@
+--- sucs-1.0.0.orig/thread/thread.cpp	2008-06-16 21:40:32.000000000 +0200
++++ sucs-1.0.0/thread/thread.cpp	2008-06-16 21:48:06.000000000 +0200
+@@ -17,6 +17,8 @@
  #include <iostream>
  #include <string>
  #include <cassert>
 +#include <cerrno>
++#include <cstring>
  using namespace std;
  
  #include <csignal>
-@@ -28,17 +29,24 @@
+@@ -28,17 +30,24 @@
  
  Sema sucs::__output;
  
@@ -181,8 +267,17 @@ diff -Naur sucs-1.0.0.orig/thread/thread.cpp sucs-1.0.0/thread/thread.cpp
  
  void Thread::waitForDeath() const
 diff -Naur sucs-1.0.0.orig/xml/xmlreader.cpp sucs-1.0.0/xml/xmlreader.cpp
---- sucs-1.0.0.orig/xml/xmlreader.cpp	2007-12-18 20:43:20.000000000 +0100
-+++ sucs-1.0.0/xml/xmlreader.cpp	2007-12-18 20:46:02.000000000 +0100
+--- sucs-1.0.0.orig/xml/xmlreader.cpp	2008-06-16 21:40:31.000000000 +0200
++++ sucs-1.0.0/xml/xmlreader.cpp	2008-06-16 21:55:39.000000000 +0200
+@@ -15,7 +15,7 @@
+ #include <iostream>
+ #include <string>
+ #include <map>
+-
++#include <cstring>
+ using namespace std;
+ 
+ #include <expat.h>
 @@ -24,6 +24,12 @@
  
  using namespace sucs;
