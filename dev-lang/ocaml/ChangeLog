@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.147 2008/06/16 19:42:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.148 2008/06/16 19:44:37 aballier Exp $
+
+  16 Jun 2008; Alexis Ballier <aballier@gentoo.org> ocaml-3.08.4.ebuild,
+  ocaml-3.10.2.ebuild:
+  shorten description to please repoman
 
   16 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   -files/ocaml-3.09.3-Makefile.patch, -files/ocaml-3.09.3-automagic.patch,
