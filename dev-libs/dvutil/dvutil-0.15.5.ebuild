@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.5 2008/01/03 22:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.6 2008/06/16 20:22:27 dev-zero Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Provides some general C++ utility classes for files, directories, dates, property lists, reference counted pointers, number conversion etc. "
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvutil/html/"
@@ -22,6 +22,8 @@ src_unpack() {
 
 	sed -i 's|^\(SUBDIRS =.*\)doc\(.*\)$|\1\2|' Makefile.in || \
 		die "sed Makefile.in failed"
+
+	epatch "${FILESDIR}/${P}-missing_includes.patch"
 }
 
 src_compile() {

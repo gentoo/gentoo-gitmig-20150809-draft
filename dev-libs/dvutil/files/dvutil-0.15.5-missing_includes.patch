@@ -1,0 +1,11 @@
+diff -Naur dvutil-0.15.5.orig/dvutil/ntostr.C dvutil-0.15.5/dvutil/ntostr.C
+--- dvutil-0.15.5.orig/dvutil/ntostr.C	2008-06-16 22:16:22.000000000 +0200
++++ dvutil-0.15.5/dvutil/ntostr.C	2008-06-16 22:17:16.000000000 +0200
+@@ -5,6 +5,7 @@
+ #include <stdio.h> // sprintf
+ #include <stdlib.h> // strtod, strtol, strtoul
+ #include <ctype.h> // tolower
++#include <string.h>
+ 
+ namespace Dv {
+ namespace Util {
