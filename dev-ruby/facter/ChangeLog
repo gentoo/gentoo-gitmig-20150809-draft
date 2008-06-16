@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.5 2007/12/08 00:06:08 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.6 2008/06/16 17:24:20 nixnut Exp $
+
+  16 Jun 2008; nixnut <nixnut@gentoo.org> facter-1.3.8.ebuild:
+  Stable on ppc wrt bug 227375
 
 *facter-1.3.8 (08 Dec 2007)
 
