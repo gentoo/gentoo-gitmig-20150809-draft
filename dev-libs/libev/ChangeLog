@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libev
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.1 2008/06/17 23:44:29 matsuu Exp $
+
+*libev-3.42 (17 Jun 2008)
+
+  17 Jun 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/libev-3.42-gentoo.patch, +metadata.xml, +libev-3.42.ebuild:
+  Initial import, bug #227819.
+
