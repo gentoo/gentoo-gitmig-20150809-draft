@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.36 2008/02/26 15:31:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.37 2008/06/17 06:36:29 wormo Exp $
+
+  16 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  socat-1.6.0.1.ebuild:
+  stable on ppc (bus #210328)
 
   26 Feb 2008; Raúl Porcel <armin76@gentoo.org> socat-1.6.0.0.ebuild:
   alpha/ia64/sparc stable wrt #210328
