@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.2 2005/05/06 18:27:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.3 2008/06/17 09:17:49 bicatali Exp $
 
 IUSE=""
 
@@ -12,13 +12,18 @@ DEPEND=""
 RDEPEND="dev-lang/perl"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 
 src_compile() {
-	emake || die
+	sed -i \
+		-e 's/^RPMDIR/#RPMDIR/' \
+		-e 's/COPYING//' \
+		-e '/^DOCS/s/MANIFEST//' \
+		Makefile || die "sed Makefile failed"
+
+	emake || die "emake failed"
 }
 
 src_install () {
-	make ROOT=${D} install || die
-	dodoc CHANGELOG COPYING GOALS LICENSE MANIFEST README VERSION WARNING
+	emake ROOT="${D}" install || die "emake install failed"
 }
