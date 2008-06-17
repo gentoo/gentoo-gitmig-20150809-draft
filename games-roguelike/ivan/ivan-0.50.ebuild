@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.7 2007/02/03 10:56:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.8 2008/06/17 01:47:44 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,7 +20,8 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
-		"${FILESDIR}"/${P}-install.patch
+		"${FILESDIR}"/${P}-install.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
