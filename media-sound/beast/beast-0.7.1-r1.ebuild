@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.2 2008/06/15 12:45:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.3 2008/06/17 00:39:05 leio Exp $
 
 inherit autotools eutils fdo-mime
 
@@ -52,8 +52,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-configure.patch"
 
+	intltoolize --force --automake --copy || die "intltoolize failed"
 	eautoreconf
-	intltoolize --force || die "intltoolize failed"
 }
 
 src_compile() {

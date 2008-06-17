@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.32 2008/06/15 12:45:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.33 2008/06/17 00:39:05 leio Exp $
+
+  17 Jun 2008; Mart Raudsepp <leio@gentoo.org> beast-0.7.1-r1.ebuild:
+  Call intltoolize before eautoreconf as it is safer, not vice-versa
 
   15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> beast-0.7.1-r1.ebuild:
   remove calls to append-ldflags, bug #226977.
