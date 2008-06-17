@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.20.ebuild,v 1.1 2008/06/12 12:01:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.20.ebuild,v 1.2 2008/06/17 12:39:25 nelchael Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -13,7 +13,7 @@ SRC_URI="http://hessian.caucho.com/download/${P}-src.jar"
 
 LICENSE="Apache-1.1"
 SLOT="3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
