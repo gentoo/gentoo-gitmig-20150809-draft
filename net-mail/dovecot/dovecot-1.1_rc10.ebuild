@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc8.ebuild,v 1.1 2008/06/04 08:16:55 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc10.ebuild,v 1.1 2008/06/17 15:08:18 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -46,8 +46,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# http://hg.dovecot.org/dovecot-1.1/rev/e043135e971d
-	epatch "${FILESDIR}"/${P}-mbox-fixup.patch
 	if use managesieve; then
 		epatch "${WORKDIR}"/${MY_P}-${MANAGESIEVE_PATCH}.diff
 		eautoreconf
