@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.6 2008/05/11 18:30:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.7 2008/06/17 22:18:52 opfer Exp $
 
 inherit eutils
 
 DESCRIPTION="A Query Object Framework"
-HOMEPAGE="http://qof.sourceforge.net/"
+HOMEPAGE="http://qof.alioth.debian.org/"
 SRC_URI="mirror://sourceforge/qof/${P}.tar.gz"
 LICENSE="GPL-2"
 
@@ -20,6 +20,7 @@ RDEPEND="gnome-extra/libgda
 	dev-libs/libxml2
 	sqlite? ( =dev-db/sqlite-2* )"
 DEPEND="${DEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

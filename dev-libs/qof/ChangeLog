@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.20 2008/05/11 18:30:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.21 2008/06/17 22:18:52 opfer Exp $
+
+  17 Jun 2008; Christian Faulhammer <opfer@gentoo.org> qof-0.7.5.ebuild:
+  change HOMEPAGE and add pkgconfig dependency, see bug 227557 reported by
+  Patrick Lauer
 
   11 May 2008; Christian Faulhammer <opfer@gentoo.org> qof-0.7.5.ebuild:
   move doxygen dependency into build-time dependency field as reported on bug
