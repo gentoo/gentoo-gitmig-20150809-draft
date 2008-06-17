@@ -372,3 +372,15 @@
  
  private:
      int       socketFd_;           // listen socket
+--- cat/generic/AstroQuery.h.orig	2008-06-16 17:14:15.000000000 +0000
++++ cat/generic/AstroQuery.h	2008-06-16 17:14:32.000000000 +0000
+@@ -16,6 +16,8 @@
+  */
+ 
+ 
++
++#include <cstring>
+ #include <cstdio>
+ #include "WorldOrImageCoords.h"
+ 
+

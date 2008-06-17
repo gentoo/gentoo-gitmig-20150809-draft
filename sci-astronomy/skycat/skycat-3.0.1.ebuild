@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.0.1.ebuild,v 1.1 2008/04/11 11:29:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.0.1.ebuild,v 1.2 2008/06/17 08:57:32 bicatali Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="threads"
 
-DEPEND=">=dev-tcltk/tclx-2.4
+DEPEND="x11-libs/libXext
+	>=dev-tcltk/tclx-2.4
 	>=dev-tcltk/blt-2.4
 	>=dev-tcltk/itcl-3.3
 	>=dev-tcltk/iwidgets-4.0.1
@@ -25,7 +26,7 @@ src_unpack() {
 	# fix buggy tcl.m4 for bash3
 	epatch "${FILESDIR}"/${P}-m4.patch
 	# fix old style headers, set as error by new g++
-	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoconf
 }
 
