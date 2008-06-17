@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.14 2008/01/09 15:27:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.15 2008/06/17 03:19:26 darkside Exp $
+
+  17 Jun 2008; Jeremy Olexa <darkside@gentoo.org> xse-2.1.ebuild:
+  Add missing dep. Thanks Patrick, bug #227659
 
   09 Jan 2008; Raúl Porcel <armin76@gentoo.org> -xse-2.0.ebuild,
   xse-2.1.ebuild:
