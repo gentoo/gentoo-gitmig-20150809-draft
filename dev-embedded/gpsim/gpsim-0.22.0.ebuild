@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.22.0.ebuild,v 1.7 2007/07/15 03:57:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.22.0.ebuild,v 1.8 2008/06/17 11:33:00 calchan Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,6 +29,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# Fix compilation with gcc 4.3, bug #218210
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+
 	epatch "${FILESDIR}/${P}-eXdbm.patch"
 	eautoreconf
 }
@@ -39,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	# install boring documentation
 	dodoc AUTHORS ChangeLog HISTORY PROCESSORS README README.MODULES TODO
