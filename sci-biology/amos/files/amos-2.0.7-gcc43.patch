@@ -1,0 +1,84 @@
+--- src/Foundation/ConfigFile.cc.orig	2008-06-16 18:12:13.000000000 +0000
++++ src/Foundation/ConfigFile.cc	2008-06-16 18:12:28.000000000 +0000
+@@ -35,6 +35,8 @@
+ 
+ #include "ConfigFile.hh"
+ 
++#include <cstring>
++
+ //! Constructor
+ /*! Creates a ConfigFile class. Also loads, parses, and resolves
+  *  variable substitution.
+
+--- src/Foundation/Logger.cc.orig	2008-06-16 18:13:45.000000000 +0000
++++ src/Foundation/Logger.cc	2008-06-16 18:14:03.000000000 +0000
+@@ -58,6 +58,8 @@
+  */
+ 
+ #include "Logger.hh"
++#include <cstdlib>
++
+ 
+ //! Sets default values for class
+ /*! Note: Log is disabled until a filter level is set\n
+
+--- src/Foundation/OptionResult.cc.orig	2008-06-16 18:15:41.000000000 +0000
++++ src/Foundation/OptionResult.cc	2008-06-16 18:15:51.000000000 +0000
+@@ -9,6 +9,8 @@
+ //! @brief OptionResult class implementation
+ 
+ #include "OptionResult.hh"
++#include <cstdlib>
++
+ 
+ //! Sets defaults for all results
+ OptionResult::OptionResult(const std::string & optionHelp)
+
+--- src/Foundation/Options.cc.orig	2008-06-16 18:17:01.000000000 +0000
++++ src/Foundation/Options.cc	2008-06-16 18:17:11.000000000 +0000
+@@ -26,6 +26,8 @@
+  */
+ 
+ #include "Options.hh"
++#include <cstring>
++
+ 
+ //! Constructor takes command line options in standard argc, argv format
+ /*! Initializes application name, filespec, and invocation
+
+--- src/Align/missing-reads.cc.orig	2008-06-16 18:22:21.000000000 +0000
++++ src/Align/missing-reads.cc	2008-06-16 18:22:34.000000000 +0000
+@@ -9,6 +9,8 @@
+ #include  <vector>
+ #include  <algorithm>
+ #include  <cassert>
++#include  <cstring>
++
+ using namespace std;
+ 
+ const int  MAX_LINE = 1000;
+
+--- src/Utils/runAmos.cc.orig	2008-06-16 18:30:30.000000000 +0000
++++ src/Utils/runAmos.cc	2008-06-16 18:30:42.000000000 +0000
+@@ -18,6 +18,8 @@
+ #include <dirent.h>
+ #include <fcntl.h>
+ #include <iostream>
++#include <cstdlib>
++
+ 
+ #define MAX_STRING 256         // length of various char*s in file
+ 
+
+--- src/bankViewer/HistogramWindow.cc.orig	2008-06-16 18:36:40.000000000 +0000
++++ src/bankViewer/HistogramWindow.cc	2008-06-16 18:37:04.000000000 +0000
+@@ -1,6 +1,8 @@
+ #include "HistogramWindow.hh"
+ #include "HistogramWidget.hh"
+ #include "InsertStats.hh"
++#include <cstdlib>
++
+ 
+ #include <qspinbox.h>
+ #include <qcheckbox.h>
+
