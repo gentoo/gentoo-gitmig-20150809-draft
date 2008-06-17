@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.258 2008/06/17 15:59:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.259 2008/06/17 16:30:49 jer Exp $
+
+  17 Jun 2008; Jeroen Roovers <jer@gentoo.org> sylpheed-2.4.8.ebuild:
+  Stable for HPPA (bug #212606).
 
   17 Jun 2008; Samuli Suominen <drac@gentoo.org> sylpheed-2.4.8.ebuild:
   Fix autotools handling so that aclocal doesn't die when ./m4 is missing
