@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999-r1.ebuild,v 1.1 2008/06/16 16:19:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999-r1.ebuild,v 1.2 2008/06/17 10:58:15 flameeyes Exp $
 
 EAPI=1
 
@@ -42,7 +42,8 @@ RDEPEND="|| (
 		)
 		=x11-libs/qt-4.3*:4
 	)"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.4.7"
 
 DOCS="ChangeLog README README.Qtopia"
 
