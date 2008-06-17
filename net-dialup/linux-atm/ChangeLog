@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.33 2008/06/15 10:50:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.34 2008/06/17 01:11:57 jer Exp $
+
+  17 Jun 2008; Jeroen Roovers <jer@gentoo.org> linux-atm-2.5.0.ebuild:
+  Stable for HPPA (bug #225777).
 
   15 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
   linux-atm-2.4.1-r2.ebuild:
