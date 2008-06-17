@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.7 2008/02/21 15:11:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.8 2008/06/17 23:42:56 darkside Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,8 @@ IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
 	x11-libs/openmotif
-	x11-libs/libXp"
+	x11-libs/libXp
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	|| ( dev-util/yacc sys-devel/bison )"
 
