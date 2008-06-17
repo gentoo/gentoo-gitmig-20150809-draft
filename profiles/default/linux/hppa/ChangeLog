@@ -1,6 +1,10 @@
 # ChangeLog for profiles/default/linux/hppa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.3 2008/06/16 19:27:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.4 2008/06/17 03:04:41 jer Exp $
+
+  17 Jun 2008; Jeroen Roovers <jer@gentoo.org> +package.use.mask:
+  Masking jabber USE flag for abiword-plugins (net-libs/loudmouth does not
+  work, bugs #215125 and #225395).
 
   16 Jun 2008; Jeroen Roovers <jer@gentoo.org> -package.use.mask, use.mask:
   Block USE=mpi altogether instead of adding it piecemeal to p.u.m.
