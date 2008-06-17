@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.58 2008/06/03 18:50:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.59 2008/06/17 15:45:10 ranger Exp $
+
+  17 Jun 2008; Brent Baude <ranger@gentoo.org> pan-0.132-r3.ebuild:
+  Marking pan-0.132-r3 ppc64 for bug 227679
 
 *pan-0.132-r3 (03 Jun 2008)
 
