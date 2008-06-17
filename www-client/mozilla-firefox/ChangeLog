@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.409 2008/06/12 15:23:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.410 2008/06/17 13:56:45 armin76 Exp $
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.0_rc3.ebuild:
+  Add missing dep on pkg-config
 
 *mozilla-firefox-3.0_rc3 (12 Jun 2008)
 
