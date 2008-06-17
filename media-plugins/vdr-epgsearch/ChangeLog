@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.35 2008/06/15 07:29:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.36 2008/06/17 11:45:44 zzam Exp $
+
+  17 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-epgsearch-0.9.24-langinfo.diff, vdr-epgsearch-0.9.24.ebuild:
+  Fix compiling with gcc-4.3, Bug #227091. Thanks to Michael Brakemeier
+  <michael@brakemeier.de> for the patch.
 
   15 Jun 2008; Zac Medico <zmedico@gentoo.org> vdr-epgsearch-0.9.19.ebuild,
   vdr-epgsearch-0.9.20.ebuild, vdr-epgsearch-0.9.21.ebuild,
