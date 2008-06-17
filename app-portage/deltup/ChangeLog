@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.17 2008/04/02 20:31:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.18 2008/06/17 14:07:54 drac Exp $
+
+  17 Jun 2008; Samuli Suominen <drac@gentoo.org> deltup-0.4.4.ebuild:
+  Fix xdelta dep. from >=1.1.3 to =1* wrt #206006.
 
   02 Apr 2008; Stefan Schweizer <genstef@gentoo.org>
   +files/gcc-4.3-compile.fix, deltup-0.4.4.ebuild:
