@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.122 2008/06/17 15:45:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.123 2008/06/17 16:04:48 dertobi123 Exp $
+
+  17 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/amavisd-new-2.4.1-amavisd.conf-gentoo.patch,
+  -files/amavisd-new-2.4-qmail-lf-workaround.patch,
+  -amavisd-new-2.4.1.ebuild, -amavisd-new-2.5.3.ebuild,
+  amavisd-new-2.6.0.ebuild:
+  Added ~ppc (#219448), Clean-up
 
   17 Jun 2008; Raúl Porcel <armin76@gentoo.org> amavisd-new-2.6.0.ebuild:
   Add ~alpha/~sparc wrt #219448
