@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.43 2008/05/29 15:31:35 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.44 2008/06/17 13:23:00 remi Exp $
+
+  17 Jun 2008; Rémi Cardona <remi@gentoo.org> sabayon-2.20.1-r1.ebuild,
+  sabayon-2.22.0.ebuild:
+  sabayon uses gnome-vfs (provided by gnome-python) to watch files
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> sabayon-2.22.0.ebuild:
   python_mod_optimize is ROOT aware.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1-r1.ebuild,v 1.7 2008/02/03 11:43:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1-r1.ebuild,v 1.8 2008/06/17 13:23:00 remi Exp $
 
 inherit gnome2 eutils python multilib pam
 
@@ -24,7 +24,6 @@ DEPEND="dev-lang/python
 RDEPEND="${DEPEND}
 	virtual/pam
 	dev-python/pyxdg
-	app-admin/gamin
 	dev-libs/libxml2
 	>=gnome-base/gconf-2.8.1
 	>=dev-python/gnome-python-2.6.0
