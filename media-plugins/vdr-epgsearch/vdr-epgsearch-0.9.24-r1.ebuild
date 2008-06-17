@@ -1,19 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24_beta26.ebuild,v 1.2 2008/06/15 07:29:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24-r1.ebuild,v 1.1 2008/06/17 12:24:33 zzam Exp $
 
 inherit vdr-plugin
 
 DESCRIPTION="Video Disk Recorder epgsearch plugin"
 HOMEPAGE="http://winni.vdr-developer.org/epgsearch"
 
-if [[ ${P/beta/} != ${P} ]]; then
-	MY_P="${P/_/.}"
-	SRC_URI="http://winni.vdr-developer.org/epgsearch/downloads/beta/${MY_P}.tgz"
-	S="${WORKDIR}/${MY_P#vdr-}"
-else
-	SRC_URI="http://winni.vdr-developer.org/epgsearch/downloads/${P}.tgz"
-fi
+case ${P#*_} in
+	rc*|beta*)
+		MY_P="${P/_/.}"
+		SRC_URI="http://winni.vdr-developer.org/epgsearch/downloads/beta/${MY_P}.tgz"
+		S="${WORKDIR}/${MY_P#vdr-}"
+		;;
+	*)
+		SRC_URI="http://winni.vdr-developer.org/epgsearch/downloads/${P}.tgz"
+		;;
+esac
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,6 +25,8 @@ IUSE="pcre"
 
 DEPEND=">=media-video/vdr-1.3.45
 	pcre? ( dev-libs/libpcre )"
+
+PATCHES=("${FILESDIR}/${P}-langinfo.diff")
 
 src_unpack() {
 	vdr-plugin_src_unpack
@@ -34,10 +39,16 @@ src_unpack() {
 
 src_install() {
 	vdr-plugin_src_install
+	cd "${S}"
 	diropts "-m755 -o vdr -g vdr"
 	keepdir /etc/vdr/plugins/epgsearch
+	insinto /etc/vdr/plugins/epgsearch
 
-	cd "${S}"
+	doins conf/epgsearchmenu.conf
+	doins conf/epgsearchconflmail.templ conf/epgsearchupdmail.templ
+
+	dodoc conf/*.templ
+
 	emake install-doc MANDIR="${D}/usr/share/man"
 	dodoc MANUAL
 }

@@ -1,6 +1,18 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.36 2008/06/17 11:45:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.37 2008/06/17 12:24:33 zzam Exp $
+
+*vdr-epgsearch-0.9.24-r1 (17 Jun 2008)
+
+  17 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  -vdr-epgsearch-0.9.17d.ebuild, -vdr-epgsearch-0.9.19.ebuild,
+  -vdr-epgsearch-0.9.20.ebuild, -vdr-epgsearch-0.9.21.ebuild,
+  -vdr-epgsearch-0.9.22.ebuild, -vdr-epgsearch-0.9.24_beta19.ebuild,
+  -vdr-epgsearch-0.9.24_beta22.ebuild, -vdr-epgsearch-0.9.24_beta23.ebuild,
+  -vdr-epgsearch-0.9.24_beta26.ebuild, -vdr-epgsearch-0.9.24_rc2.ebuild,
+  +vdr-epgsearch-0.9.24-r1.ebuild:
+  Install some conf-files for menu-layout and mail-sending. Remove old
+  ebuilds.
 
   17 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-epgsearch-0.9.24-langinfo.diff, vdr-epgsearch-0.9.24.ebuild:
