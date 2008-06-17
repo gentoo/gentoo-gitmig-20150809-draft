@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mummer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.1 2008/05/24 04:10:30 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.2 2008/06/17 21:14:33 weaver Exp $
+
+  17 Jun 2008; weaver <weaver@gentoo.org> ChangeLog:
+  Add gcc-4.3 patch, bug 227561, thanks to Marek Miller
 
 *mummer-3.20 (24 May 2008)
 
