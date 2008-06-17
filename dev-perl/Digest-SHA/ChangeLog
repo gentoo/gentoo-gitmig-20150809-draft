@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-SHA
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.29 2008/06/17 15:42:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.30 2008/06/17 15:51:22 ranger Exp $
+
+  17 Jun 2008; Brent Baude <ranger@gentoo.org> Digest-SHA-5.46.ebuild:
+  Marking Digest-SHA-5.46 ~ppc64 for bug 219448
 
   17 Jun 2008; Raúl Porcel <armin76@gentoo.org> Digest-SHA-5.46.ebuild:
   Add ~alpha wrt #219448
