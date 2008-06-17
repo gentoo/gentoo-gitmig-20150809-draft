@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.27 2008/03/25 01:36:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.28 2008/06/17 09:01:28 eva Exp $
+
+  17 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> gcolor2-0.4-r3.ebuild:
+  add intltool to DEPEND, bug #227739
 
   25 Mar 2008; Brent Baude <ranger@gentoo.org> gcolor2-0.4-r3.ebuild:
   Marking gcolor2-0.4-r3 ppc for bug 214322
