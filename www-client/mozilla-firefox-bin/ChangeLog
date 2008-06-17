@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.141 2008/06/12 13:46:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.142 2008/06/17 15:31:16 armin76 Exp $
+
+*mozilla-firefox-bin-3.0_rc3-r1 (17 Jun 2008)
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-firefox-bin-3.0_rc3.ebuild,
+  +mozilla-firefox-bin-3.0_rc3-r1.ebuild:
+  Fix plugins symlink, bug #224675
 
 *mozilla-firefox-bin-3.0_rc3 (12 Jun 2008)
 

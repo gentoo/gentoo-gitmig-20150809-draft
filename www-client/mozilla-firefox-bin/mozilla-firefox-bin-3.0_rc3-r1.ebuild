@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_rc3.ebuild,v 1.1 2008/06/12 13:46:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0_rc3-r1.ebuild,v 1.1 2008/06/17 15:31:16 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -129,8 +129,8 @@ src_install() {
 	# install ldpath env.d
 	doenvd "${FILESDIR}"/71firefox-bin
 
-	rm -rf ${D}${MOZILLA_FIVE_HOME}/plugins
-	dosym /opt/netscape/plugins ${MOZILLA_FIVE_HOME}/plugins
+	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
+	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins
 }
 
 pkg_preinst() {
