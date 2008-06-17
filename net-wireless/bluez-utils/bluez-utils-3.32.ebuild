@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.32.ebuild,v 1.1 2008/06/15 12:19:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.32.ebuild,v 1.2 2008/06/17 19:30:28 betelgeuse Exp $
 
 inherit autotools multilib eutils
 
@@ -28,6 +28,7 @@ RDEPEND="
 	sys-apps/dbus"
 
 DEPEND="
+	!<dev-libs/libnl-1.1
 	sys-devel/flex
 	${RDEPEND}"
 
