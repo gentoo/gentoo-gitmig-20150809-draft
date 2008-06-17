@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.14 2008/06/16 18:31:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.15 2008/06/17 15:44:23 armin76 Exp $
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org> Mail-DKIM-0.31.ebuild:
+  Add ~alpha/~sparc wrt #219448
 
   16 Jun 2008; Brent Baude <ranger@gentoo.org> Mail-DKIM-0.31.ebuild:
   Marking Mail-DKIM-0.31 ~ppc64 for bug 219448
