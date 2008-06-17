@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/uif2iso-0.1.4.ebuild,v 1.1 2008/06/12 12:34:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/uif2iso-0.1.4.ebuild,v 1.2 2008/06/17 20:49:13 opfer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
