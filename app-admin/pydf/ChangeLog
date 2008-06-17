@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.18 2008/06/16 17:28:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.19 2008/06/17 14:38:45 armin76 Exp $
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org> pydf-6.ebuild:
+  sparc/x86 stable wrt #227425
 
   16 Jun 2008; nixnut <nixnut@gentoo.org> pydf-6.ebuild:
   Stable on ppc wrt bug 227425
