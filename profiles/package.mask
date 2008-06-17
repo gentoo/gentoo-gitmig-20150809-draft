@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8734 2008/06/17 15:25:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8735 2008/06/17 18:56:10 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -389,11 +389,6 @@ media-sound/lastfmproxy
 
 # Raúl Porcel <armin76@gentoo.org> (8 Apr 2008)
 # Masked for testing
->=net-libs/xulrunner-1.9_beta4
->=www-client/mozilla-firefox-3.0_beta4
->=www-client/mozilla-firefox-bin-3.0_beta1
->=dev-libs/nss-3.12_alpha1
->=dev-libs/nspr-4.7.1_beta1
 >=mail-client/mozilla-thunderbird-3.0_alpha1
 >=mail-client/mozilla-thunderbird-bin-3.0_alpha1
 
