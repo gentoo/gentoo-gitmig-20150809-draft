@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.8 2007/12/25 20:29:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.9 2008/06/17 09:41:28 pva Exp $
 
 inherit eutils multilib autotools
 
@@ -29,10 +29,7 @@ src_unpack() {
 	# /usr/bin - this patch prefixes them with 'hunspell-'.
 	# It modifies a Makefile.am file, hence autoreconf.
 	epatch "${FILESDIR}"/hunspell-1.1.5-renameexes.patch
-	# Would do eautoreconf - but until bug #142787 is fixed, eautoreconf
-	# isn't enough.
-	libtoolize --copy --force
-	autoreconf -f
+	eautoreconf -f
 }
 
 src_compile() {
