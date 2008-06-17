@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cddetect
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddetect/ChangeLog,v 1.1 2008/06/17 13:45:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddetect/ChangeLog,v 1.2 2008/06/17 16:26:02 drac Exp $
+
+*cddetect-2.1 (17 Jun 2008)
+
+  17 Jun 2008; Samuli Suominen <drac@gentoo.org> -cddetect-2.0.ebuild,
+  +cddetect-2.1.ebuild:
+  Version bump wrt #227843, seems upstream released 2.1 with my gcc-4.3 fix
+  and 2.0 never made into the mirrors. Thanks to Benjamin Franzke for
+  reporting.
 
 *cddetect-2.0 (17 Jun 2008)
 
