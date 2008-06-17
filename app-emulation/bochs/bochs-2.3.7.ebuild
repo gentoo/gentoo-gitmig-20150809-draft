@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.1 2008/06/05 02:22:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.2 2008/06/17 10:11:42 lu_zero Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/bochs-2.3.7-typos.patch"
+	epatch "${FILESDIR}/bochs-2.3.7-gcc43.patch"
 
 	# we already downloaded dlxlinux4.tar.gz so let the Makefile cp it instead
 	# of downloading it again

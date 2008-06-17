@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.77 2008/06/14 22:30:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.78 2008/06/17 10:11:42 lu_zero Exp $
+
+  17 Jun 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/bochs-2.3.7-gcc43.patch, bochs-2.3.7.ebuild:
+  Address gcc-4.3 issues, thanks to Vladimir Lushnikov <vl210@bath.ac.uk>,
+  fix bug #218888
 
   14 Jun 2008; Luca Barbato <lu_zero@gentoo.org> -bochs-2.2.6.ebuild,
   bochs-2.3.ebuild, -bochs-2.3.5.ebuild:
