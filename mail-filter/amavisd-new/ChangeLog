@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.121 2008/06/16 18:42:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.122 2008/06/17 15:45:26 armin76 Exp $
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org> amavisd-new-2.6.0.ebuild:
+  Add ~alpha/~sparc wrt #219448
 
   16 Jun 2008; Brent Baude <ranger@gentoo.org> amavisd-new-2.6.0.ebuild:
   Marking amavisd-new-2.6.0 ~ppc64 for bug 219448
