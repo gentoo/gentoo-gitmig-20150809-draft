@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.2 2008/05/26 14:46:28 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.3 2008/06/17 18:40:09 weaver Exp $
+
+inherit eutils
 
 MY_P="MUMmer${PV}"
 DESCRIPTION="A rapid whole genome aligner"
@@ -16,6 +18,12 @@ DEPEND=""
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	emake || die "emake failed"
