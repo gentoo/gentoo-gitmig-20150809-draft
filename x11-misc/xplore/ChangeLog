@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplore
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.12 2008/05/12 08:32:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.13 2008/06/17 12:44:34 nelchael Exp $
+
+  17 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> xplore-1.2a.ebuild:
+  Add missing x11-libs/libXpm to DEPEND, bug #227663.
 
   12 May 2008; Krzysiek Pawlik <nelchael@gentoo.org> xplore-1.2a.ebuild:
   Fix RDEPEND, see bug #221435.
