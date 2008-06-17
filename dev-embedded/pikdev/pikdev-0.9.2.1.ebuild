@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.5 2007/04/12 22:55:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.6 2008/06/17 10:08:30 calchan Exp $
 
 inherit kde versionator
 
@@ -22,8 +22,14 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 	cd "${S}"
+
 	# Do not install .desktop file, it's misplaced and useless
-	sed -i -e "s:install-shelldesktopDATA install-shellrcDATA:install-shellrcDATA:" src/Makefile.in
+	sed -i -e "s:install-shelldesktopDATA install-shellrcDATA:install-shellrcDATA:" \
+		src/Makefile.in || die "sed failed"
+
+	# Fix compilation with gcc 4.3, bug #227501
+	sed -i -e '/^#include <iomanip>/ a\
+#include <cstring>' src/pkp.cc || die "sed failed"
 }
 
 src_install() {
