@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.1 2008/06/10 07:30:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.2 2008/06/17 21:04:41 hanno Exp $
 
 ### Designed for use with mesa 7.1_rc1 and with patches to pull in the
 ### swrast dri driver from the master branch.
@@ -118,7 +118,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	>=x11-libs/libXmu-1.0.3
 	>=x11-libs/libXrender-0.9.4
 	>=x11-libs/libXi-1.1.3
-	>=x11-libs/pixman-0.11.4
+	>=x11-libs/pixman-0.10
 	media-libs/freetype
 	>=media-libs/mesa-7.1_rc1
 	media-fonts/font-adobe-75dpi
