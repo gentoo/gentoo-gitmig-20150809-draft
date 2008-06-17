@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8733 2008/06/17 13:59:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8734 2008/06/17 15:25:52 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (17 Jun 2008)
+# Masked for security bug #226079.
+<=www-client/opera-9.27
 
 # Jeremy Olexa <darkside@gentoo.org> (17 Jun 2008)
 # Masked for removal in ~30 days by treecleaners at maintainer's request.
