@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.24 2008/06/15 14:22:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.25 2008/06/17 06:52:20 wormo Exp $
+
+  17 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  psh-1.8.1.ebuild:
+  mark ~ppc (bug #226479)
 
   15 Jun 2008; Raúl Porcel <armin76@gentoo.org> psh-1.8.1.ebuild:
   Add ~ia64 wrt #226479
