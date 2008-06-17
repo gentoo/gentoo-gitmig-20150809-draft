@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.143 2008/06/17 17:32:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.144 2008/06/17 17:36:20 armin76 Exp $
+
+  17 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-bin-3.0.ebuild:
+  Remove redundant variables
 
 *mozilla-firefox-bin-3.0 (17 Jun 2008)
 

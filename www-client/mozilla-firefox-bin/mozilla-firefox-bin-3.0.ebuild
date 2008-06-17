@@ -1,17 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.ebuild,v 1.1 2008/06/17 17:32:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.ebuild,v 1.2 2008/06/17 17:36:20 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
 LANGS="af ar be ca cs da de el en-GB en-US es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru si sk sl sq sr sv-SE tr uk zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
 
-MY_PV=${PV/_rc/rc}
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="Firefox Web Browser"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/linux-i686/en-US/firefox-${MY_PV}.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
 
@@ -23,14 +20,14 @@ IUSE="restrict-javascript"
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+			linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+				linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -83,11 +80,11 @@ linguas() {
 }
 
 src_unpack() {
-	unpack firefox-${MY_PV}.tar.bz2
+	unpack firefox-${PV}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${MY_P/-bin/}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
@@ -103,7 +100,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${MY_P/-bin/}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
 	done
 
 	local LANG=${linguas%% *}
