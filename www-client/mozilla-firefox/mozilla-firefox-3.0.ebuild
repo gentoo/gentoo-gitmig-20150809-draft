@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.ebuild,v 1.1 2008/06/17 18:55:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.ebuild,v 1.2 2008/06/17 19:33:09 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -21,6 +21,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="java mozdevelop bindist restrict-javascript +xulrunner"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~armin76/${P}.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
 	!xulrunner? ( mirror://gentoo/xulrunner-1.9${MY_PV}.tar.bz2 )"
 
