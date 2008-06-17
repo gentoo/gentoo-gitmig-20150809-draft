@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/treeviewx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.17 2008/06/16 10:45:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.18 2008/06/17 10:16:06 markusle Exp $
+
+  17 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  files/treeviewx-0.5.1-gcc4.3.patch:
+  Slightly modified gcc-4.3 patch since it got mangled by cvs during commit.
 
 *treeviewx-0.5.1-r1 (16 Jun 2008)
 
