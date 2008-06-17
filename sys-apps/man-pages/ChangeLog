@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.108 2008/06/17 11:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.109 2008/06/17 12:02:59 vapier Exp $
+
+  17 Jun 2008; Mike Frysinger <vapier@gentoo.org> man-pages-3.00.ebuild:
+  Drag in split man-pages-posix package.
 
 *man-pages-3.00 (17 Jun 2008)
 
