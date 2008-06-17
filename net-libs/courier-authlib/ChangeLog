@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.87 2008/06/15 11:21:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.88 2008/06/17 20:13:46 opfer Exp $
+
+  17 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  courier-authlib-0.60.6.ebuild:
+  don't execute tests when USE=berkdb is disabled
 
   15 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   courier-authlib-0.60.6.ebuild:

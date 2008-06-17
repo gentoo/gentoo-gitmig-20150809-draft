@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.7 2008/06/15 11:21:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.60.6.ebuild,v 1.8 2008/06/17 20:13:46 opfer Exp $
 
 inherit eutils flag-o-matic autotools libtool
 
@@ -13,7 +13,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="berkdb crypt debug gdbm ldap mysql pam postgres vpopmail"
 
-RESTRICT="userpriv"
+RESTRICT="userpriv
+	!berkdb? ( test )"
 
 RDEPEND="gdbm? ( sys-libs/gdbm )
 		!gdbm? ( sys-libs/db )"
