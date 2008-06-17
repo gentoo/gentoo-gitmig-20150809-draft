@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/cddetect
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddetect/ChangeLog,v 1.1 2008/06/17 13:45:09 drac Exp $
+
+*cddetect-2.0 (17 Jun 2008)
+
+  17 Jun 2008; Samuli Suominen <drac@gentoo.org> +cddetect-2.0.ebuild:
+  Initial commit for bug 111804, thanks to Fernando V., Tristan Heaven and
+  Jakub Moc.
+
