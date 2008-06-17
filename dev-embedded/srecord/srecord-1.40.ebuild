@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.40.ebuild,v 1.1 2008/04/28 12:50:30 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.40.ebuild,v 1.2 2008/06/17 08:06:37 calchan Exp $
 
 DESCRIPTION="A collection of powerful tools for manipulating EPROM load files."
 HOMEPAGE="http://srecord.sourceforge.net/"
@@ -11,7 +11,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="test"
 
-DEPEND="test? ( app-arch/sharutils )"
+DEPEND="dev-libs/boost
+	test? ( app-arch/sharutils )"
+RDEPEND=""
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
