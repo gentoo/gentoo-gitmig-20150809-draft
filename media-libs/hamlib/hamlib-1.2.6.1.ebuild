@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.6.1.ebuild,v 1.2 2007/11/09 19:44:14 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.6.1.ebuild,v 1.3 2008/06/17 20:43:31 opfer Exp $
 
 inherit eutils multilib libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="doc gd python tk X"
 
 RESTRICT="test"
