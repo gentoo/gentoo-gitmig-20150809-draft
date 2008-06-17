@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pg_top
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.1 2008/06/16 10:51:27 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.2 2008/06/17 15:27:20 cedk Exp $
+
+  17 Jun 2008; Cédric Krier <cedk@gentoo.org> pg_top-3.6.2.ebuild:
+  Add ~amd64 keyword for bug #227817
 
 *pg_top-3.6.2 (16 Jun 2008)
 
