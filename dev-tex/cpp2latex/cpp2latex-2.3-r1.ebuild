@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3-r1.ebuild,v 1.2 2007/02/06 16:45:54 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3-r1.ebuild,v 1.3 2008/06/17 17:06:12 aballier Exp $
 
 inherit eutils
 
@@ -17,17 +17,15 @@ KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 # neither a compile or runtime dependency
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S}/cpp2latex
+	unpack ${A}
+	cd "${S}/cpp2latex"
 	# bug 44585
-	epatch ${FILESDIR}/cpp2latex-2.3.patch || die
-}
-
-src_compile() {
-	econf || die
-	emake || die
+	epatch "${FILESDIR}/cpp2latex-2.3.patch"
+	# bug #227863
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-tests.patch"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die "make install failed"
 }

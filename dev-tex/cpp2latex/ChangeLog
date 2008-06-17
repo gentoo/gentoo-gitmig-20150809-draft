@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/cpp2latex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.10 2007/03/13 00:12:21 nattfodd Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.11 2008/06/17 17:06:12 aballier Exp $
+
+  17 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/cpp2latex-2.3-gcc43.patch, +files/cpp2latex-2.3-tests.patch,
+  cpp2latex-2.3-r1.ebuild:
+  fix build with gcc 4.3, bug #227863 and fix tests build
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
