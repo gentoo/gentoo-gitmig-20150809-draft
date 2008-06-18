@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-streamdev-server
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/ChangeLog,v 1.18 2007/05/10 18:35:06 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/ChangeLog,v 1.19 2008/06/18 16:34:10 zzam Exp $
+
+  18 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-streamdev-server-0.3.3_pre20060502.ebuild,
+  vdr-streamdev-server-0.3.3_pre20061206.ebuild,
+  vdr-streamdev-server-0.3.3_pre20070510.ebuild:
+  Block vdr-streamdev package. Fix minor errors.
 
   10 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/vdr-streamdev-server-0.3.3_pre20070510-gentoo.diff:

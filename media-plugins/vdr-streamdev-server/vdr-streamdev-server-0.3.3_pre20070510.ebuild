@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.3 2007/05/10 15:51:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20070510.ebuild,v 1.4 2008/06/18 16:34:10 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -15,14 +15,15 @@ SRC_URI="mirror://gentoo/vdr-${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.3.24"
+DEPEND=">=media-video/vdr-1.3.24
+	!media-plugins/vdr-streamdev"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff"
+PATCHES=("${FILESDIR}/${P}-gentoo.diff")
 
 VDRPLUGIN_MAKE_TARGET="libvdr-${VDRPLUGIN}.so"
 
@@ -30,7 +31,7 @@ EXTERNREMUX_PATH=/usr/share/vdr/streamdev/externremux.sh
 
 src_unpack() {
 	vdr-plugin_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	#seems to no longer work, if needed, please open a bug
 	#if grep -q "virtual bool Active" /usr/include/vdr/plugin.h; then
@@ -53,10 +54,10 @@ src_unpack() {
 src_install() {
 	vdr-plugin_src_install
 
-	cd ${S}
+	cd "${S}"
 	insinto /etc/vdr/plugins/streamdev
 	newins streamdevhosts.conf.example streamdevhosts.conf
-	chown vdr:vdr ${D}/etc/vdr -R
+	chown vdr:vdr "${D}"/etc/vdr -R
 }
 
 pkg_postinst() {
@@ -66,7 +67,7 @@ pkg_postinst() {
 
 	if [[ -e ${ROOT}/etc/vdr/plugins/streamdevhosts.conf ]]; then
 		einfo "move config file to new config DIR ${ROOT}/etc/vdr/plugins/streamdev/"
-		mv ${ROOT}/etc/vdr/plugins/streamdevhosts.conf ${ROOT}/etc/vdr/plugins/streamdev/streamdevhosts.conf
+		mv "${ROOT}"/etc/vdr/plugins/streamdevhosts.conf "${ROOT}"/etc/vdr/plugins/streamdev/streamdevhosts.conf
 	fi
 
 }
