@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.8 2006/10/23 11:38:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.9 2008/06/18 01:57:46 darkside Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="An advanced TCP connection forwarder."
 HOMEPAGE="http://jumpgate.sourceforge.net"
@@ -21,11 +21,11 @@ src_unpack() {
 
 	if [ "$(gcc-major-version)" == "4" ] ; then
 		sed -i -e '/^AC_CHECK_TYPE/d' configure.in
-		autoconf || die "autoconf failed"
+		eautoreconf || die "eautoreconf failed"
 	fi
 }
 
 src_install() {
-	make install install_prefix=${D} || die
+	emake install install_prefix="${D}" || die
 	dodoc README ChangeLog
 }

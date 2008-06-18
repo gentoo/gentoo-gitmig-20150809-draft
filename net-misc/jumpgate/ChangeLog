@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jumpgate
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.7 2007/02/21 22:34:00 masterdriverz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.8 2008/06/18 01:57:46 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> jumpgate-0.7.ebuild:
+  autoconf -> eautoreconf, make -> emake. bug #226603
 
   21 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   avenj has retired - removing from metadata
