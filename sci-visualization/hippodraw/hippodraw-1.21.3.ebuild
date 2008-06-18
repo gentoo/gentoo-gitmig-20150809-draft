@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3.ebuild,v 1.2 2008/06/02 10:30:39 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3.ebuild,v 1.3 2008/06/18 10:51:21 markusle Exp $
 
 inherit eutils qt3
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.slac.stanford.edu/users/pfkeb/${PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="root fits numarray doc"
+IUSE="root fits numpy doc"
 
 # minuit: included in root-5, but standalone cheaper to build
 # qt4 not implemented:
@@ -25,9 +25,9 @@ IUSE="root fits numarray doc"
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/boost-1.32
 	$(qt_min_version 3.1)
-	numarray? ( dev-python/numarray )
+	numpy? ( dev-python/numpy )
 	fits? ( sci-libs/cfitsio
-		numarray? ( dev-python/pyfits ) )
+		numpy? ( dev-python/pyfits ) )
 	!root? ( >=sci-libs/minuit-5 )
 	root? ( >=sci-physics/root-5 )"
 
@@ -74,19 +74,17 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf="--with-boost-include=/usr/include"
+	myconf="${myconf} --with-boost-lib=/usr/$(get_libdir)"
+	myconf="${myconf} --with-boost-libname=boost_python"
+	myconf="${myconf} --with-minuit2-include=/usr/include"
+	myconf="${myconf} --with-minuit2-lib=/usr/$(get_libdir)"
+	myconf="${myconf} --disable-numarraybuild"
+	#built_with_use dev-libs/boost threads && myconf="${myconf}-mt"
+
 	myconf="${myconf} --with-Qt-include-dir=/usr/qt/3/include"
 	myconf="${myconf} --with-Qt-lib-dir=/usr/qt/3/$(get_libdir)"
 	myconf="${myconf} --with-Qt-bin-dir=/usr/qt/3/bin"
-	myconf="${myconf} --with-boost-lib=/usr/$(get_libdir)"
-	myconf="${myconf} --with-boost-libname=boost_python"
-	#built_with_use dev-libs/boost threads && myconf="${myconf}-mt"
-
-	if use minuit && ! use root; then
-		myconf="${myconf} --with-minuit2-include=/usr/include"
-		myconf="${myconf} --with-minuit2-lib=/usr/$(get_libdir)"
-	fi
 
 	if use root; then
 		myconf="${myconf} --with-root-include=/usr/include/root"
@@ -99,7 +97,7 @@ src_compile() {
 	fi
 
 	econf \
-		$(use_enable numarray numarraybuild) \
+		$(use_enable numpy numpybuild) \
 		$(use_enable doc help) \
 		${myconf} || die "econf failed"
 	# qtui failed with -j2, so build it first with -j1
