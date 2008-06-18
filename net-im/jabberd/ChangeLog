@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.104 2008/06/09 20:22:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.105 2008/06/18 12:24:55 nelchael Exp $
+
+  18 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/jabberd-1.6.1.1.init:
+  Add missing init.d script.
 
 *jabberd-1.6.1.1 (09 Jun 2008)
 
