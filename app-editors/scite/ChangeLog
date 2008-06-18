@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.72 2008/06/14 08:36:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.73 2008/06/18 07:55:41 opfer Exp $
+
+  18 Jun 2008; Christian Faulhammer <opfer@gentoo.org> scite-1.76.ebuild:
+  stable x86, bug 225663
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> scite-1.76.ebuild:
   Stable on ppc wrt bug 225663
