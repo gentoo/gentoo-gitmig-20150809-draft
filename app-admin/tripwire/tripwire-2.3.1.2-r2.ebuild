@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.12 2007/08/07 11:46:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.13 2008/06/18 02:57:18 darkside Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 TW_VER="2.3.1-2"
 DESCRIPTION="Open Source File Integrity Checker and IDS"
@@ -42,6 +42,8 @@ src_unpack() {
 	epatch ${FILESDIR}/tripwire-friend-classes.patch
 	epatch ${DISTDIR}/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
 	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch
+
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
@@ -51,24 +53,11 @@ src_compile() {
 	strip-flags
 	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""' -fno-strict-aliasing
 
-	einfo "Preparing build..."
-		rm -f ${S}/configure
-		ebegin "	Running aclocal"
-			aclocal &> /dev/null || true
-		eend
-		ebegin "	Running autoheader"
-			autoheader &> /dev/null || true
-		eend
-		ebegin "	Running automake"
-			automake --add-missing &> /dev/null || true
-		eend
-		ebegin "	Running autoreconf"
-			autoreconf &> /dev/null || true
-		eend
 		ebegin "	Preparing Directory"
 			mkdir ${S}/lib ${S}/bin || die
 		eend
 	einfo "Done."
+	chmod +x configure
 	econf `use_enable ssl openssl` || die
 	emake || die
 }

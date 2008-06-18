@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.26 2007/12/25 15:32:27 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.27 2008/06/18 02:57:18 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  tripwire-2.3.1.2-r2.ebuild:
+  use autotools better. bug #226527
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
