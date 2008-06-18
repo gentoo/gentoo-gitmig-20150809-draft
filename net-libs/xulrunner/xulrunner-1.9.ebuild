@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.ebuild,v 1.5 2008/06/18 14:59:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.ebuild,v 1.6 2008/06/18 16:20:47 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -81,6 +81,7 @@ src_compile() {
 	# regardless of java setting.
 	mozconfig_annotate '' --enable-oji --enable-mathml
 	mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
+	mozconfig_annotate '' --enable-safe-browsing
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --enable-jsd
