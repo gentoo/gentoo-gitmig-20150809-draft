@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1b.ebuild,v 1.3 2008/06/07 20:48:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1b.ebuild,v 1.4 2008/06/18 01:46:34 darkside Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -33,6 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
+	cd "${S}"/Src
 	append-flags "-DX_USE_SHM"
 	econf || die
 	emake || die "emake failed"
