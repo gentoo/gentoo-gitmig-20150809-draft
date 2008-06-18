@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.14 2007/12/02 13:29:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.15 2008/06/18 02:13:54 darkside Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/Regina-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	eautoconf || die "autoconf problem"
+	eautoreconf || die "eautoreconf problem"
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.20 2008/04/21 17:08:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.21 2008/06/18 02:13:54 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> regina-rexx-3.0.1.ebuild,
+  regina-rexx-3.3.ebuild:
+  Minor QA & eautoconf -> eautoreconf. bug #226551
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
