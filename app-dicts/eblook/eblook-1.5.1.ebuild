@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.10 2005/01/01 12:51:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.11 2008/06/18 02:38:29 darkside Exp $
 
-inherit eutils
+inherit eutils autotools
 
 IUSE=""
 
@@ -21,18 +21,17 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-eb4-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-eb4-gentoo.diff"
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
-	autoreconf || die
-
 	econf --with-eb-conf=/etc/eb.conf || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README VERSION
 }
