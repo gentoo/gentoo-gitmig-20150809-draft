@@ -1,0 +1,10 @@
+--- opendbx-1.3.10/test/odbxplus-regression.cpp
++++ opendbx-1.3.10/test/odbxplus-regression.cpp
+@@ -12,6 +12,7 @@
+ #include <vector>
+ #include <iostream>
+ #include <opendbx/api>
++#include <cstdlib>
+ 
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
