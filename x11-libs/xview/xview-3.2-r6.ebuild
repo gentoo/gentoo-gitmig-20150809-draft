@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r6.ebuild,v 1.4 2007/09/12 21:41:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r6.ebuild,v 1.5 2008/06/18 00:44:24 darkside Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ KEYWORDS="-alpha -amd64 ~ppc ~sparc x86"
 RDEPEND="x11-libs/libXpm
 	x11-proto/xextproto
 	media-fonts/font-bh-75dpi
-	media-fonts/font-sun-misc"
+	media-fonts/font-sun-misc
+	x11-misc/xbitmaps"
 
 DEPEND="${RDEPEND}
 	app-text/rman

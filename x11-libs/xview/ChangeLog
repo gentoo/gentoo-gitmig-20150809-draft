@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.29 2008/04/21 18:30:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.30 2008/06/18 00:44:24 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> xview-3.2-r6.ebuild:
+  Add missing dep x11-misc/xbitmaps to xview. bug #227587
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
