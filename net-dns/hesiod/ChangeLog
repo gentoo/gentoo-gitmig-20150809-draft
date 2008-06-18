@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.34 2008/03/07 16:27:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.35 2008/06/18 02:06:21 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> hesiod-3.0.2-r2.ebuild:
+  autoconf -> eautoreconf. bug #226597
 
   07 Mar 2008; Steve Dibb <beandog@gentoo.org> hesiod-3.0.2-r2.ebuild:
   amd64 stable, bug 206904
