@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.6.1-r1.ebuild,v 1.5 2008/05/02 07:34:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.6.1-r1.ebuild,v 1.6 2008/06/18 08:14:29 dragonheart Exp $
 
 inherit eutils multilib
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-asm.patch"
 	epatch "${FILESDIR}/${P}-gcc-4.2.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 }
 
 src_compile() {

@@ -1,0 +1,19 @@
+#
+# old_revision [0f5f960e749e55bc7b457b944ec168184353c300]
+#
+# patch "modules/es_unix/unix_cmd.cpp"
+#  from [a6f6bcae52c8704373362bde3174cc1688b65702]
+#    to [9727c050244b2a27760d460a060ed36ebd37b08d]
+#
+============================================================
+--- modules/es_unix/unix_cmd.cpp       
+a6f6bcae52c8704373362bde3174cc1688b65702
++++ modules/es_unix/unix_cmd.cpp       
+9727c050244b2a27760d460a060ed36ebd37b08d
+@@ -16,6 +16,7 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <signal.h>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.31 2008/05/02 07:34:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.32 2008/06/18 08:14:29 dragonheart Exp $
+
+  18 Jun 2008; Daniel Black <dragonheart@gentoo.org>
+  files/botan-1.6.1-gcc-4.2.patch, +files/botan-1.6.1-gcc-4.3.patch,
+  botan-1.6.1-r1.ebuild:
+  patch for gcc-4.3 compatibility thanks to Jack. bug #227535
 
   02 May 2008; Alon Bar-Lev <alonbl@gentoo.org>
   +files/botan-1.6.1-gcc-4.2.patch, botan-1.6.1-r1.ebuild:
