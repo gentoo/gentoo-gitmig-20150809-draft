@@ -1,0 +1,16 @@
+will change config dir to /etc/vdr/plugins/${pluginname}
+
+Joerg Bornkessel <hd_brummy@gentoo.org> 10 May 2007
+
+diff -Naur streamdev-20070510.orig/server/server.h streamdev-20070510/server/server.h
+--- streamdev-20070510.orig/server/server.h	2007-05-10 17:02:45.084274870 +0200
++++ streamdev-20070510/server/server.h	2007-05-10 17:10:32.652139993 +0200
+@@ -10,7 +10,7 @@
+ #include "server/component.h"
+ #include "server/connection.h"
+ 
+-#define STREAMDEVHOSTSPATH (*AddDirectory(cPlugin::ConfigDirectory(), "streamdevhosts.conf"))
++#define STREAMDEVHOSTSPATH (*AddDirectory(cPlugin::ConfigDirectory( "streamdev" ), "streamdevhosts.conf"))
+ 
+ class cStreamdevServer: public cThread {
+ private:

@@ -1,0 +1,16 @@
+# ChangeLog for media-plugins/vdr-streamdev
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.3 2008/06/18 16:36:36 zzam Exp $
+
+  18 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-streamdev-0.3.4-gentoo.diff, +metadata.xml,
+  +vdr-streamdev-0.3.4.ebuild:
+  Merge vdr-streamdev-{client,server} into one package, adding blockers to
+  the old split ebuilds. Version bumped to 0.3.4.
+
+*vdr-streamdev-0.3.4 (04 Jun 2008)
+
+  04 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-streamdev-0.3.4.ebuild:
+  Merged vdr-streamdev-{client,server}.
+
