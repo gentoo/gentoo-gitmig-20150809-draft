@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/b43-fwcutter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.11 2008/06/16 01:41:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.12 2008/06/18 07:21:40 opfer Exp $
+
+  18 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  b43-fwcutter-011.ebuild:
+  stable x86, bug 224963
 
   16 Jun 2008; Joseph Jezak <josejx@gentoo.org> b43-fwcutter-011.ebuild:
   Marked ppc/ppc64 stable for bug #224963.
