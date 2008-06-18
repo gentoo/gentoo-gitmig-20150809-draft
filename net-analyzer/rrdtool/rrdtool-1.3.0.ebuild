@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.0.ebuild,v 1.1 2008/06/17 19:41:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.0.ebuild,v 1.2 2008/06/18 03:52:44 jer Exp $
 
 inherit flag-o-matic multilib perl-module
 
@@ -32,7 +32,7 @@ HTMLDOC_DIR="${PF}/html"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/cairo svg; then
-		eerror "This package requires x11-libs/cairo compiled with svn support."
+		eerror "This package requires x11-libs/cairo compiled with svg support."
 		die "Please reemerge x11-libs/cairo with USE=\"svg\"."
 	fi
 	use perl && perl-module_pkg_setup
