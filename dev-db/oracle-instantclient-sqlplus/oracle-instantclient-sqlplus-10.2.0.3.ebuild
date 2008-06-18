@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3.ebuild,v 1.6 2008/03/08 21:02:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3.ebuild,v 1.7 2008/06/18 22:35:36 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( ${MY_P_amd64}.zip )
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="fetch"
 IUSE=""
 
