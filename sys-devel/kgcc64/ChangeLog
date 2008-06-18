@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/kgcc64
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.14 2007/11/20 04:06:21 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.15 2008/06/18 09:58:16 vapier Exp $
+
+*kgcc64-4.3.1 (18 Jun 2008)
+*kgcc64-4.2.4 (18 Jun 2008)
+
+  18 Jun 2008; Mike Frysinger <vapier@gentoo.org> +kgcc64-4.2.4.ebuild,
+  +kgcc64-4.3.1.ebuild:
+  Version bumps #228015.
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org> kgcc64-4.1.2.ebuild:
   Stable on mips, per #194953.
