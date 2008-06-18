@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.9.ebuild,v 1.2 2008/06/15 12:54:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.9.ebuild,v 1.3 2008/06/18 08:01:04 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="suid"
 
 RDEPEND=">=dev-libs/libgringotts-1.2
