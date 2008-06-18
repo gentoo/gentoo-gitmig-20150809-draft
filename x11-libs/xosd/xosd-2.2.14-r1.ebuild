@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.17 2007/10/07 15:54:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.18 2008/06/18 00:30:09 darkside Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,7 +25,8 @@ DEPEND="x11-libs/libX11
 	x11-proto/xproto
 	xinerama?	( x11-proto/xineramaproto )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -45,5 +46,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS COPYING README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
