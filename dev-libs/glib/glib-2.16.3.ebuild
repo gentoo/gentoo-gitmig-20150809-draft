@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.16.3.ebuild,v 1.2 2008/06/18 15:41:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.16.3.ebuild,v 1.3 2008/06/18 22:02:53 mr_bones_ Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -49,7 +49,6 @@ src_unpack() {
 	# GNOME bug #538836, fix gio test failure on various arches
 	sed -i -e 's:|\\<g_atomic_int\\|:|\\<g_atomic_int\\|\\<g_atomic_pointer_get\\|:' \
 		"${S}/gio/pltcheck.sh"
-
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
