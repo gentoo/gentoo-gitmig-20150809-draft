@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.16.ebuild,v 1.4 2008/05/21 16:01:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.16.ebuild,v 1.5 2008/06/18 02:24:59 darkside Exp $
 
-inherit eutils qt3
+inherit eutils qt3 autotools
 
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net/"
@@ -38,7 +38,7 @@ src_unpack() {
 	rm Makefile*
 	cp "${FILESDIR}/Makefile.am-1.0_rc2" ./Makefile.am
 
-	aclocal && autoconf && automake || die "autotools failed"
+	eautoreconf || die "autotools failed"
 }
 
 src_compile() {
@@ -75,7 +75,7 @@ src_install() {
 		mv "${D}"/usr/share/${PN}/help "${D}"/usr/share/doc/${PF}/html
 		mv "${D}"/usr/share/${PN}/examples "${D}"/usr/share/doc/${PF}/examples
 	else
-		dohtml ${FILESDIR}/WebHome.html
+		dohtml "${FILESDIR}/WebHome.html"
 	fi
 	rm -r "${D}"/usr/share/${PN}/help "${D}"/usr/share/${PN}/examples
 	dosym ../doc/${PF}/html /usr/share/${PN}/help

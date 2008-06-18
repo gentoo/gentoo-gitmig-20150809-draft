@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.44 2008/05/21 16:01:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.45 2008/06/18 02:24:59 darkside Exp $
+
+  18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> gambas-1.0.14.ebuild,
+  gambas-1.0.16.ebuild, gambas-1.0.17.ebuild:
+  use eautoreconf instead of direct autotools
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> gambas-1.0.14.ebuild,
   gambas-1.0.16.ebuild, gambas-1.0.17.ebuild, gambas-1.9.23.ebuild:
