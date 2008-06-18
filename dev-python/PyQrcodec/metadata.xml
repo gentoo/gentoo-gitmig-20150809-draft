@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>jmglov@gentoo.org</email>
+<name>Josh Glover</name>
+</maintainer>
+<longdescription>PyQrCodec is a Python module for encoding and decoding QrCode images.
+PyQrCodec wraps encoding library libqrencode by Fukuchi kentaro and decoding library libdecodeqr by Nishi Takao, the former being a C library and the latter a C++ library. The implementation of the libraries in native code makes both the encoding and decoding very quick.</longdescription>
+</pkgmetadata>
