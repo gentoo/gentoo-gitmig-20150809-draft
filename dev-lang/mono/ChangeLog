@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.140 2008/05/31 12:31:14 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.141 2008/06/18 02:52:17 compnerd Exp $
+
+  18 Jun 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/mono-1.9.1-glibc-2.8-deprecated-arg-max.patch, mono-1.9.1.ebuild:
+  Add patch for building against glibc 2.8
 
   31 May 2008; Jurek Bartuszek <jurek@gentoo.org> mono-1.9.ebuild,
   mono-1.9.1.ebuild:

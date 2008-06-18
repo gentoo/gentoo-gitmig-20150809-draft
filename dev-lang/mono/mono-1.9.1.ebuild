@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.9.1.ebuild,v 1.2 2008/05/31 12:31:14 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.9.1.ebuild,v 1.3 2008/06/18 02:52:17 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -55,6 +55,7 @@ src_unpack() {
 	rm -f "${S}"/libgc/ltconfig
 
 	epatch "${FILESDIR}/${PN}-biginteger_overflow.diff"
+	epatch "${FILESDIR}/${PN}-1.9.1-glibc-2.8-deprecated-arg-max.patch"
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
