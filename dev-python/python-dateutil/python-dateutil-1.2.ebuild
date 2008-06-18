@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.2.ebuild,v 1.5 2008/01/14 20:10:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.2.ebuild,v 1.6 2008/06/18 14:27:36 coldwind Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,6 +19,8 @@ DEPEND="!<=dev-python/matplotlib-0.82"
 RDEPEND="${DEPEND}"
 
 DOCS="NEWS example.py sandbox/rrulewrapper.py sandbox/scheduler.py"
+
+PYTHON_MODNAME="${PN/python-/}"
 
 src_test() {
 	PYTHONPATH="." "${python}" test.py || die "tests failed"
