@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.22 2008/06/01 13:07:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.23 2008/06/18 13:06:17 fmccor Exp $
+
+  18 Jun 2008; Ferris McCormick <fmccor@gentoo.org> openmpi-1.2.6.ebuild:
+  Sparc stable, bug #224099.
 
   01 Jun 2008; nixnut <nixnut@gentoo.org> openmpi-1.2.6.ebuild:
   Stable on ppc wrt bug 224099
