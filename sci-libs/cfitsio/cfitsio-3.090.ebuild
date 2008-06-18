@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.060.ebuild,v 1.2 2008/01/24 15:18:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.090.ebuild,v 1.1 2008/06/18 21:47:57 bicatali Exp $
 
 inherit eutils fortran autotools
 
@@ -8,12 +8,13 @@ DESCRIPTION="C and Fortran library for manipulating FITS files"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
 SRC_URI="ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/${PN}${PV//.}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc fortran"
 
 DEPEND="fortran? ( dev-lang/cfortran )"
+RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 
@@ -43,22 +44,9 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_test() {
-	einfo "Testing cfitsio"
-	./testprog > testprog.lis
-	diff testprog.lis testprog.out || die "test failed"
-	cmp testprog.fit testprog.std  || die "failed"
-	if use fortran; then
-		einfo "Testing cfitsio fortran wrappers"
-		./testf77 > testf77.lis
-		diff testf77.lis testf77.out || die "test failed"
-		cmp testf77.fit testf77.std  || die "failed"
-	fi
-}
-
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc changes.txt README License.txt cfitsio.doc || die "dodoc failed"
+	dodoc changes.txt README cfitsio.doc || die "dodoc failed"
 	insinto /usr/share/doc/${PF}/examples
 	doins cookbook.c testprog.c speed.c smem.c || die "install examples failed"
 	use doc && dodoc cfitsio.ps quick.ps
