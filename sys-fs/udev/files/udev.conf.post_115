@@ -1,3 +1,0 @@
-# The maximum size reserved for the tmpfs mounted on /dev
-tmpfs_size="10M"
-

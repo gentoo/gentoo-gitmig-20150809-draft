@@ -1,6 +1,0 @@
-# The maximum size reserved for the tmpfs mounted on /dev
-tmpfs_size="10M"
-
-# The maximum number of inodes reserved for the tmpfs mounted on /dev
-#tmpfs_inodes="4k"
-

@@ -1,6 +1,38 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.389 2008/06/15 05:54:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.390 2008/06/18 12:27:58 zzam Exp $
+
+  18 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  -files/05-udev-early.rules-104-r5, -files/udev.rules-104-r10,
+  -files/udev-104-netif-rename-busywait.patch,
+  -files/udev-104-peristent-net-disable-xen.patch,
+  -files/udev-104-persistent-net-fix-name-dups.patch,
+  -files/udev-start-104-r12.sh, -files/udev-start-104-r13.sh,
+  -files/udev-stop-104-r13.sh, -files/udev-stop-104-r8.sh,
+  -files/udev-105-unlink-db-files.patch, -files/udev-105-vol_id-fix.patch,
+  -files/modprobe-105.sh, -files/05-udev-early.rules-106-r5,
+  -files/udev-start-110-r1.sh, -files/udev-stop-110-r1.sh,
+  -files/udev-start-111-r3.sh, -files/udev-112-rules.diff,
+  -files/udev-113-r1-rules.diff, -files/udev-113-r2-rules.diff,
+  -files/udev-114-fix-persistent-net.diff, -files/95-net.rules,
+  -files/modprobe-111-r1.sh, -files/udev-115-add-special-rule-files.diff,
+  -files/95-udev-late.rules, -files/modprobe-104-r12.sh,
+  -files/modprobe-113-r2.sh, -files/udev-115-fix-modprobe-calls.diff,
+  -files/udev-start-115-r3.sh, -files/udev-start-115-r6.sh,
+  -files/udev-115-rules-update.diff,
+  -files/udev-115-update-gentoo-rules-2.diff,
+  -files/udev-116-gentoo-rules-update.diff,
+  -files/udev-116-path-to-logger.diff, -files/udev-start-118-r1.sh,
+  -files/udev-start-119-r1.sh, -files/udev-121-cdrom_id-segfault.diff,
+  -files/move_tmp_persistent_rules.sh, -files/seq_node.sh,
+  -files/udev.conf.115-r6, -files/udev.conf.post_081,
+  -files/udev.conf.post_108, -files/udev.conf.post_115, -udev-114-r1.ebuild,
+  -udev-114-r2.ebuild, -udev-115.ebuild, -udev-115-r5.ebuild,
+  -udev-115-r6.ebuild, -udev-116.ebuild, -udev-116-r1.ebuild,
+  -udev-117.ebuild, -udev-118.ebuild, -udev-118-r1.ebuild,
+  -udev-118-r2.ebuild, -udev-118-r3.ebuild, -udev-119-r1.ebuild,
+  -udev-120.ebuild, -udev-121.ebuild:
+  Removed old ebuilds.
 
   15 Jun 2008; Zac Medico <zmedico@gentoo.org> udev-114.ebuild,
   udev-114-r1.ebuild, udev-114-r2.ebuild, udev-115.ebuild,
