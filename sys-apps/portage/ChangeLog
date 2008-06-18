@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.527 2008/06/16 08:51:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.528 2008/06/18 00:11:04 zmedico Exp $
+
+*portage-2.1.5.6 (17 Jun 2008)
+
+  17 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.6.ebuild:
+  2.1.5.6 bump. This fixes bug #223417 (random KeyError during merge
+  phase with <python-2.5). Bug #216231 tracks all bugs fixed since
+  2.1.4.x.
 
   16 Jun 2008; Zac Medico <zmedico@gentoo.org>
   portage-2.1.5.5.ebuild, portage-2.2_pre7-r1.ebuild,
