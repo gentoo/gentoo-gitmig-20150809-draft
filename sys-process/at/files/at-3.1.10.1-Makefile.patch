@@ -1,6 +1,5 @@
 - install into Gentoo/FHS doc dir
 - respect Gentoo LDFLAGS
-- at is setuid, link with bind now
 - dont allow install to strip binaries
 
 --- Makefile.in.	2005-08-29 10:08:28.000000000 +0200
