@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3592 2008/06/18 05:23:36 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3593 2008/06/18 10:45:22 markusle Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1983,6 +1983,7 @@ sci-physics/root:math - Build extra math and numerical libraries for root (needs
 sci-physics/root:xrootd - Adds xrootd support, a low latency file server
 sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
+sci-visualization/hippodraw:numpy - Add numpy support
 sci-visualization/hippodraw:root - Add root i/o, and minuit support
 sci-visualization/labplot:R - Enable R support
 sci-visualization/labplot:cdf - Adds cdf data exchange format support
