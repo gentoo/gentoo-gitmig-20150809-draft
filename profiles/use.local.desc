@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3591 2008/06/16 08:35:29 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3592 2008/06/18 05:23:36 jmglov Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1027,6 +1027,7 @@ media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/mediastreamer:gsm - Include support for the gsm audio codec
 media-libs/mediastreamer:video - Enable video support (display/capture)
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
+media-libs/opencv:swig - Use swig to generate binding
 media-libs/openjpeg:tools - Installs tools (j2k_to_image and image_to_j2k)
 media-libs/panda3d:fmod - Enables support for using mod files for audio support
 media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, used in network interface functionality (ie. multiplayer online game networking).
