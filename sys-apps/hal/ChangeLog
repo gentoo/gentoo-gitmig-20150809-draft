@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.240 2008/06/16 16:51:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.241 2008/06/19 03:23:42 tester Exp $
+
+  19 Jun 2008; Olivier Crête <tester@gentoo.org> hal-0.5.11-r1.ebuild:
+  amd64 stable, bug #222219
 
   16 Jun 2008; Raúl Porcel <armin76@gentoo.org> hal-0.5.11-r1.ebuild:
   ia64/sparc stable wrt #222219
