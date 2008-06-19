@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/whichwayisup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.10 2008/05/29 16:52:24 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.11 2008/06/19 17:22:14 nixnut Exp $
+
+  19 Jun 2008; nixnut <nixnut@gentoo.org> whichwayisup-0.7.9.ebuild:
+  Stable on ppc wrt bug 227647
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> whichwayisup-0.7.0.ebuild,
   whichwayisup-0.7.9.ebuild:
