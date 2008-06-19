@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.158 2008/06/02 22:57:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.159 2008/06/19 16:59:46 leio Exp $
+
+*epiphany-2.22.2-r10 (19 Jun 2008)
+
+  19 Jun 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/epiphany-2.22.2-xul1.9-ContentHandler-fix.patch,
+  +epiphany-2.22.2-r10.ebuild:
+  Add a revision that uses xulrunner-1.9, also solves bug 213361
 
   02 Jun 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.1.1.ebuild,
   epiphany-2.22.2.ebuild:

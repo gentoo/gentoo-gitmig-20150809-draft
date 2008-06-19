@@ -1,0 +1,12 @@
+--- branches/gnome-2-22/embed/mozilla/ContentHandler.cpp	2008/06/12 17:21:16	8278
++++ branches/gnome-2-22/embed/mozilla/ContentHandler.cpp	2008/06/13 00:36:19	8279
+@@ -135,6 +135,9 @@
+ 				    nsISupports *aWindowContext,
+ 				    const PRUnichar *aDefaultFile,
+ 				    const PRUnichar *aSuggestedFileExtension,
++#ifdef HAVE_GECKO_1_9
++				    PRBool aForcePrompt,
++#endif
+ 				    nsILocalFile **_retval)
+ {
+ 	EphyFileChooser *dialog;
