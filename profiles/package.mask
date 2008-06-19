@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8739 2008/06/19 12:08:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8740 2008/06/19 21:03:28 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (19 Jun 2008)
+# masked until bug #217901 is fixed
+# http://bugs.gentoo.org/show_bug.cgi?id=225883
+# Patches welcome.
+=games-kids/gcompris-8.4.5
 
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
