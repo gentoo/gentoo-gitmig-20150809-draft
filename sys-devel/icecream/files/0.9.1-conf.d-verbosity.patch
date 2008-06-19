@@ -1,6 +1,6 @@
 diff -urN icecream.orig/suse/sysconfig.icecream icecream/suse/sysconfig.icecream
---- icecream.orig/suse/sysconfig.icecream	2004-08-30 10:01:30.000000000 +0100
-+++ icecream/suse/sysconfig.icecream	2006-08-12 16:05:09.000000000 +0100
+--- icecream.orig/suse/sysconfig.icecream
++++ icecream/suse/sysconfig.icecream
 @@ -39,6 +39,15 @@
  #
  ## Type: string
