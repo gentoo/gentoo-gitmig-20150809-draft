@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8-r1.ebuild,v 1.3 2007/01/04 18:33:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8-r1.ebuild,v 1.4 2008/06/19 07:03:57 wormo Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -17,6 +17,7 @@ KEYWORDS="-ppc -ppc64"
 IUSE=""
 
 DEPEND=">=sys-devel/gcc-3.4"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
