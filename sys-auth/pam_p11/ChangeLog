@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_p11
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.18 2007/11/13 20:02:03 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.19 2008/06/19 11:04:39 dragonheart Exp $
+
+  19 Jun 2008; Daniel Black <dragonheart@gentoo.org> pam_p11-0.1.3.ebuild:
+  depend on openssl - bug #228177 thanks Evil Compile Person
 
   13 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> -pam_p11-0.1.2.ebuild:
   Version bump

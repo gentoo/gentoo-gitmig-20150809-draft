@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.3.ebuild,v 1.9 2007/11/13 20:00:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.3.ebuild,v 1.10 2008/06/19 11:04:39 dragonheart Exp $
 
 inherit pam eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/pam
-		dev-libs/libp11"
+		dev-libs/libp11
+		dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
