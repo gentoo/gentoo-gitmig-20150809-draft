@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/shake-0.31.ebuild,v 1.1 2008/02/10 22:02:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/shake-0.31.ebuild,v 1.2 2008/06/19 07:36:54 voyageur Exp $
 
 inherit cmake-utils
 
@@ -13,5 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="sys-apps/attr"
-RDEPEND="${DEPEND}"
+RDEPEND="sys-apps/attr"
+DEPEND="${RDEPEND}
+	sys-apps/help2man"
