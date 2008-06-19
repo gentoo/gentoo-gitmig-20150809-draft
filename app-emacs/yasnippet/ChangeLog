@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/yasnippet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yasnippet/ChangeLog,v 1.1 2008/06/19 12:14:11 ulm Exp $
+
+*yasnippet-0.5.5 (19 Jun 2008)
+
+  19 Jun 2008; Ulrich Mueller <ulm@gentoo.org> +files/50yasnippet-gentoo.el,
+  +metadata.xml, +yasnippet-0.5.5.ebuild:
+  Initial import, from Emacs overlay. Ebuild contributed by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com>, bug 214667.
+

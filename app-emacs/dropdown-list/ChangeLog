@@ -1,0 +1,12 @@
+# ChangeLog for app-emacs/dropdown-list
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dropdown-list/ChangeLog,v 1.1 2008/06/19 12:13:25 ulm Exp $
+
+*dropdown-list-20080316 (19 Jun 2008)
+
+  19 Jun 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/50dropdown-list-gentoo.el, +metadata.xml,
+  +dropdown-list-20080316.ebuild:
+  Initial import, from Emacs overlay. Ebuild contributed by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com>, bug 214667.
+
