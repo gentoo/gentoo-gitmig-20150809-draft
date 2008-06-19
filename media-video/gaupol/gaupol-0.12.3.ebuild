@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.12.3.ebuild,v 1.1 2008/06/18 16:05:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.12.3.ebuild,v 1.2 2008/06/19 11:32:27 drac Exp $
 
 inherit distutils fdo-mime gnome2-utils versionator
 
@@ -27,8 +27,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog CREDITS NEWS TODO README"
 
 src_compile() {
-	addpredict $(unset HOME; echo ~)/.gconf
-	addpredict $(unset HOME; echo ~)/.gconfd
+	addpredict /root/.gconf
+	addpredict /root/.gconfd
 	distutils_src_compile
 }
 
