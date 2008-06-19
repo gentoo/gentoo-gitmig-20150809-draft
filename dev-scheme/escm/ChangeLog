@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/escm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.5 2007/02/22 01:25:00 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.6 2008/06/19 15:21:05 hattya Exp $
+
+  19 Jun 2008; Akinori Hattori <hattya@gentoo.org> escm-1.1.ebuild:
+  fixes bug #226561.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
