@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.17 2008/04/29 09:01:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.18 2008/06/19 15:16:24 bicatali Exp $
+
+  19 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  wxmaxima-0.7.5.ebuild:
+  Added gnuplot for run-time dependency for plotting and a warning if not
+  built with wxwindows flag, see bug #225507
 
 *wxmaxima-0.7.5 (29 Apr 2008)
 
