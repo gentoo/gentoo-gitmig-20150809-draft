@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fracplanet/fracplanet-0.3.3.ebuild,v 1.1 2008/05/24 12:48:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fracplanet/fracplanet-0.3.3.ebuild,v 1.2 2008/06/19 11:21:35 drac Exp $
 
 EAPI=1
 
-inherit qt3
+inherit eutils qt3
 
 DESCRIPTION="Interactive tool for creating fractal planets with terrains, oceans, rivers, lakes and icecaps."
 HOMEPAGE="http://www.bottlenose.demon.co.uk/share/fracplanet"
@@ -24,6 +24,12 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	if ! built_with_use x11-libs/qt:3 opengl; then
+		die "Re-emerge x11-libs/qt with USE opengl."
+	fi
+}
 
 src_compile() {
 	export PATH="${QTDIR}/bin:${PATH}"
