@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/postgresql-ocaml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.7 2008/05/21 16:00:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.8 2008/06/19 07:26:34 aballier Exp $
+
+  19 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  postgresql-ocaml-1.8.2.ebuild:
+  Depend on virtual/postgresql-base too as we need libpq, bug #227655
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   postgresql-ocaml-1.4.6.ebuild, postgresql-ocaml-1.8.2.ebuild:
