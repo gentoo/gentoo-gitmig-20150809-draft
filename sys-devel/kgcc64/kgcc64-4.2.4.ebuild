@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.2.4.ebuild,v 1.1 2008/06/18 09:58:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.2.4.ebuild,v 1.2 2008/06/19 02:38:58 vapier Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -32,12 +32,14 @@ DEPEND="hppa? ( sys-devel/binutils-hppa64 )
 	!sys-devel/gcc-powerpc64
 	!sys-devel/gcc-sparc64"
 
-src_install() {
-	toolchain_src_install
-
+pkg_postinst() {
+	cd "${ROOT}"/usr/bin
 	local x
 	for x in gcc cpp ; do
-		newbin "${FILESDIR}"/wrapper ${CTARGET%%-*}-linux-${x}
-		dosed "s:TARGET:${CTARGET}-${x}:" /usr/bin/${CTARGET%%-*}-linux-${x}
+		cat <<-EOF >${CTARGET%%-*}-linux-${x}
+		#!/bin/sh
+		exec ${CTARGET}-${x} "\$@"
+		EOF
+		chmod a+rx ${CTARGET%%-*}-linux-${x}
 	done
 }

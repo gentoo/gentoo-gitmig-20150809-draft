@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.15 2008/06/18 09:58:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.16 2008/06/19 02:38:58 vapier Exp $
+
+  19 Jun 2008; Mike Frysinger <vapier@gentoo.org> -files/wrapper,
+  kgcc64-3.4.6.ebuild, kgcc64-4.1.2.ebuild, kgcc64-4.2.4.ebuild,
+  kgcc64-4.3.1.ebuild:
+  Create the files on the fly to avoid file collision #228157 by Robin
+  Johnson.
 
 *kgcc64-4.3.1 (18 Jun 2008)
 *kgcc64-4.2.4 (18 Jun 2008)

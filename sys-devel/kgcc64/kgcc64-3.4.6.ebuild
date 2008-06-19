@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.7 2007/01/18 12:45:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.8 2008/06/19 02:38:58 vapier Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -60,12 +60,14 @@ src_unpack() {
 	esac
 }
 
-src_install() {
-	toolchain_src_install
-
+pkg_postinst() {
+	cd "${ROOT}"/usr/bin
 	local x
 	for x in gcc cpp ; do
-		newbin "${FILESDIR}"/wrapper ${CTARGET%%-*}-linux-${x}
-		dosed "s:TARGET:${CTARGET}-${x}:" /usr/bin/${CTARGET%%-*}-linux-${x}
+		cat <<-EOF >${CTARGET%%-*}-linux-${x}
+		#!/bin/sh
+		exec ${CTARGET}-${x} "\$@"
+		EOF
+		chmod a+rx ${CTARGET%%-*}-linux-${x}
 	done
 }
