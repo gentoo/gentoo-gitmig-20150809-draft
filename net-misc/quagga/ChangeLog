@@ -2,7 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.74 2008/06/18 20:05:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.75 2008/06/19 22:10:17 mrness Exp $
+
+*quagga-0.99.10-r1 (19 Jun 2008)
+
+  19 Jun 2008; Alin Năstac <mrness@gentoo.org> -quagga-0.99.10.ebuild,
+  +quagga-0.99.10-r1.ebuild:
+  Drop old AS4 patch, the new version has support for this.
 
 *quagga-0.99.10 (18 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.10.ebuild,v 1.1 2008/06/18 20:05:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.10-r1.ebuild,v 1.1 2008/06/19 22:10:17 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -10,12 +10,12 @@ inherit eutils multilib autotools linux-info
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20080618.tar.gz"
+	mirror://gentoo/${P}-patches-20080619.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="caps ipv6 snmp pam tcpmd5 bgpas4 bgpclassless ospfapi realms multipath tcp-zebra"
+IUSE="caps ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms multipath tcp-zebra"
 RESTRICT="userpriv"
 
 DEPEND="sys-libs/readline
@@ -37,9 +37,6 @@ src_unpack() {
 
 	cd "${S}" || die "source dir not found"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
-
-	# free AS number format (aka AS4) support (original found at http://quagga.ncc.eurodata.de)
-	use bgpas4 && epatch "${WORKDIR}/patch/quagga-cvs20071015-freeasnumberformat.patch"
 
 	if use tcpmd5 ; then
 		if kernel_is lt 2 6 20 ; then
