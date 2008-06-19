@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.15.0-r1.ebuild,v 1.3 2008/05/26 09:34:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.15.0-r1.ebuild,v 1.4 2008/06/19 15:17:51 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -127,10 +127,11 @@ pkg_setup() {
 		fi
 	fi
 
-	if use X && ! built_with_use sci-visualization/gnuplot gd; then
+	if use X && ! built_with_use sci-visualization/gnuplot gd wxwindows; then
 		elog "To benefit full plotting capability of maxima,"
 		elog "enable the gd USE flag for sci-visualization/gnuplot"
-		elog "Then re-emerge maxima"
+		elog "And if you are planning to use wxmaxima, you want to"
+		elog "also add the wxwindows flag to gnuplot."
 		epause 5
 	fi
 }
