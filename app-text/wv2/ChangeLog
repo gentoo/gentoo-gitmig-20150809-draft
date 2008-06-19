@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.45 2008/04/18 18:48:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.46 2008/06/19 01:10:15 dirtyepic Exp $
+
+  19 Jun 2008; Ryan Hill <dirtyepic@gentoo.org> files/wv2-0.2.3-gcc43.patch:
+  Extend GCC 4.3 patch to also fix testsuite.
 
   18 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/wv2-0.2.3-gcc43.patch, wv2-0.2.3.ebuild:
