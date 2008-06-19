@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3593 2008/06/18 10:45:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3594 2008/06/19 04:41:15 dirtyepic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -86,6 +86,7 @@ app-dicts/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just m
 app-dicts/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinees language) about geographical position, owner, etc. for IP address
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/gimp-help:webinstall - optimize images for web installation (fewer colors, depends on imagemagick)
+app-doc/linuxfromscratch:htmlsingle - Also install all-on-one-page HTML version
 app-doc/pms:all-options - Include both sides of kdebuild conditionals, shown in different colours (PDF only)
 app-doc/pms:html - Generate PMS as .html as well
 app-doc/pms:kdebuild - Include specification for the kdebuild EAPI, see http://www.gentoo.org/proj/en/desktop/kde/kdebuild-1.xml

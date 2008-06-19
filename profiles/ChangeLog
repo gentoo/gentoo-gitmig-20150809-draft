@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1565 2008/06/19 01:25:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1566 2008/06/19 04:41:14 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  19 Jun 2008; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Add local htmlsingle USE flag for app-doc/linuxfromscratch.
 
   19 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Remove app-pda/syncekonnector from p.mask, removed from tree. bug #180883
