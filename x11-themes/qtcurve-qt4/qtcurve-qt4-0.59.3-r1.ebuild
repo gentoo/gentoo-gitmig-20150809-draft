@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.3-r1.ebuild,v 1.4 2008/06/11 04:45:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.3-r1.ebuild,v 1.5 2008/06/19 13:26:44 yngwin Exp $
 
 EAPI="1"
 inherit flag-o-matic cmake-utils
@@ -25,7 +25,7 @@ DOCS="ChangeLog README TODO"
 
 src_compile() {
 	if use !kde ; then
-		append_cppflags "-DQTC_NO_KDE4_LINKING=true -DQTC_DISABLE_KDEFILEDIALOG_CALLS=true";
+		append-cppflags "-DQTC_NO_KDE4_LINKING=true -DQTC_DISABLE_KDEFILEDIALOG_CALLS=true";
 		sed -i "s/find_package(KDE4)/#&/" "${S}"/CMakeLists.txt
 	fi
 	cmake-utils_src_compile
