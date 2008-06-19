@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8736 2008/06/18 16:55:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8737 2008/06/19 01:25:39 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1149,10 +1149,6 @@ dev-php4/pecl-http
 # Robert Buchholz <rbu@gentoo.org> (29 Aug 2007)
 # PPTP Plugin doesn't work on amd64
 net-misc/networkmanager-pptp
-
-# Carsten Lohrke <carlo@gentoo.org> (11 Aug 2007)
-# Masked since KDE 3.5.7 doesn't come with KSync anymore.
-app-pda/syncekonnector
 
 # Tristan Heaven <nyhm@gentoo.org> (11 Aug 2007)
 # Masked until bug #178110 can be resolved properly.
