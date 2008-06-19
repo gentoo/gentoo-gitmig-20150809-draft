@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnots
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.1 2008/04/10 08:55:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.2 2008/06/19 06:22:00 nelchael Exp $
+
+  19 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> xnots-0.2.ebuild:
+  Add missing dev-util/pkgconfig to DEPEND, bug #228235.
 
 *xnots-0.2 (10 Apr 2008)
 
