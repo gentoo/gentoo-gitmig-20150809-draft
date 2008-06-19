@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8737 2008/06/19 01:25:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8738 2008/06/19 04:50:43 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ryan Hill <dirtyepic@gentoo.org> (18 Jun 2008)
+# Consolidated linuxfromscratch ebuilds into one.
+# Please use app-doc/linuxfromscratch instead.
+# Masked for removal 20080718.
+app-doc/linuxfromscratch-html
+app-doc/linuxfromscratch-pdf
+app-doc/linuxfromscratch-text
 
 # Hanno Böck <hanno@gentoo.org (18 Jun 2008)
 # Masked for now, see #226021.
