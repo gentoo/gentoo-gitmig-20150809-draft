@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.4 2008/05/29 02:33:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.5 2008/06/19 03:23:15 tester Exp $
+
+  19 Jun 2008; Olivier Crête <tester@gentoo.org> pm-utils-0.99.4.ebuild:
+  amd64 stable, bug #222219
 
 *pm-utils-1.1.2.1 (29 May 2008)
 
