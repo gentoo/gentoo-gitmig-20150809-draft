@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.31 2008/06/19 17:48:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.32 2008/06/19 22:26:11 ken69267 Exp $
+
+  19 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
+  skencil-0.6.18_pre20080519.ebuild:
+  amd64 stable, bug #228161
 
   19 Jun 2008; nixnut <nixnut@gentoo.org> skencil-0.6.18_pre20080519.ebuild:
   Stable on ppc wrt bug 228161
