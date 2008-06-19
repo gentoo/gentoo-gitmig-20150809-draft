@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/package.use.mask,v 1.5 2007/09/10 18:38:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/package.use.mask,v 1.6 2008/06/19 19:18:55 mr_bones_ Exp $
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
@@ -10,3 +10,6 @@ media-gfx/graphviz pango
 # bug #172097
 # The app in question is sys-auth/consolekit
 x11-apps/xinit hal
+
+# missing keyword for dev-libs/oniguruma
+sys-libs/slang cjk
