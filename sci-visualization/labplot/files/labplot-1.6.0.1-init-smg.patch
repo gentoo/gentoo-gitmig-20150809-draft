@@ -1,0 +1,25 @@
+--- src/MainWin.cc.orig
++++ src/MainWin.cc
+@@ -218,11 +218,6 @@ MainWin::MainWin(const char *name, const char *filen, bool is_part)
+ 		readScript(fn);
+ #endif
+ 
+-	if(QFile::exists(fn) && fn.contains(".lpl"))
+-		openLPL(fn);
+-	else if(QFile::exists(fn) && ( fn.contains(".lml") || fn.contains(".xml") ))
+-		openXML(fn);
+-
+ 	modified = false;
+ 	is_fullscreen=false;
+ 
+@@ -231,6 +226,10 @@ MainWin::MainWin(const char *name, const char *filen, bool is_part)
+ 	smg = new QSignalMapper(this);
+ 	connect(smg,SIGNAL(mapped(int)),this,SLOT(changeGraph(int)));
+ 
++	if(QFile::exists(fn) && fn.contains(".lpl"))
++		openLPL(fn);
++	else if(QFile::exists(fn) && ( fn.contains(".lml") || fn.contains(".xml") ))
++		openXML(fn);
+ }
+ 
+ MainWin::~MainWin() {

@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.20 2008/03/17 17:51:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.21 2008/06/19 11:52:11 bicatali Exp $
+
+  19 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/labplot-1.6.0.1-audiofile.patch,
+  +files/labplot-1.6.0.1-init-smg.patch, -labplot-1.5.1.6-r1.ebuild,
+  -labplot-1.6.0.1.ebuild, labplot-1.6.0.1-r1.ebuild:
+  Added a patch to make it work when audiofile is not selected (bug #228165)
+  and an init patch from Debian. Removed older versions
 
 *labplot-1.6.0.1-r1 (17 Mar 2008)
 
