@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.100 2008/06/17 21:40:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.101 2008/06/19 12:13:03 chainsaw Exp $
+
+*nvidia-drivers-177.13 (19 Jun 2008)
+
+  19 Jun 2008; <chainsaw@gentoo.org> +nvidia-drivers-177.13.ebuild:
+  Masked beta driver 177.13; unsupported by nVidia. Adds support for GeForce
+  GTX 260 & 280 products. Upstream release announcement at
+  http://www.nvnews.net/vbulletin/showthread.php?t=114955
 
 *nvidia-drivers-173.14.09 (17 Jun 2008)
 
