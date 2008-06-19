@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.6.4.ebuild,v 1.2 2007/10/23 15:49:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.6.4.ebuild,v 1.3 2008/06/19 12:04:03 dev-zero Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A graphical user interface to OpenSSL, RSA public keys, certificates, signing requests and revokation lists"
 HOMEPAGE="http://www.hohnstaedt.de/xca.html"
@@ -40,6 +40,7 @@ src_compile() {
 		LINUXDOC="${LINUXDOC}" \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getLD)" \
+		LDFLAGS="$(raw-ldflags)" \
 		prefix=/usr \
 		./configure || die	"configure failed"
 	emake || die "emake failed"
@@ -48,7 +49,7 @@ src_compile() {
 src_install() {
 	emake destdir="${D}" mandir="share/man" install || die "install failed"
 
-	dodoc README CREDITS AUTHORS COPYRIGHT
+	dodoc AUTHORS
 
 	insinto /etc/xca
 	doins misc/*.txt
