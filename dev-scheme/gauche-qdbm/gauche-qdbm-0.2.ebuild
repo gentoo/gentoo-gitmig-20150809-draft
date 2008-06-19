@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/gauche-qdbm-0.2.ebuild,v 1.5 2007/01/10 17:12:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/gauche-qdbm-0.2.ebuild,v 1.6 2008/06/19 15:29:46 hattya Exp $
 
-inherit eutils
+inherit autotools eutils
 
 IUSE=""
 
@@ -23,20 +23,18 @@ DEPEND="dev-scheme/gauche
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if has_version '>=dev-scheme/gauche-0.8'; then
-		epatch ${FILESDIR}/${P}-gpd.diff
-
-		aclocal
-		autoconf
+		epatch "${FILESDIR}"/${P}-gpd.diff
+		eautoreconf
 	fi
 
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README
 
 	if has_version '>=dev-scheme/gauche-0.8'; then
