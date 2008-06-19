@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.317 2008/06/19 03:47:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.318 2008/06/19 18:52:26 nixnut Exp $
+
+  19 Jun 2008; nixnut <nixnut@gentoo.org> glib-2.16.3.ebuild:
+  Stable on ppc wrt bug 227679
 
   19 Jun 2008; Olivier Crête <tester@gentoo.org> glib-2.16.3.ebuild:
   amd64 stable, bug #227679
