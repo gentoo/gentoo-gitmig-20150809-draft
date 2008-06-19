@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.49 2008/06/15 17:35:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.50 2008/06/19 16:46:26 ken69267 Exp $
+
+  19 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> workrave-1.8.5.ebuild:
+  amd64 stable, bug #225391
 
   15 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> workrave-1.8.5.ebuild:
   fix intltool tests, bug #225391.
