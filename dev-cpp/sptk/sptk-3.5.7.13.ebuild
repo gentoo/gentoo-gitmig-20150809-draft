@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.5 2008/05/26 02:37:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.7.13.ebuild,v 1.1 2008/06/19 16:04:11 iluxa Exp $
 
 inherit eutils flag-o-matic autotools
 
