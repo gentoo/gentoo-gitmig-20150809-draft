@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdynamite
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/ChangeLog,v 1.7 2008/01/12 16:44:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/ChangeLog,v 1.8 2008/06/19 19:54:04 nelchael Exp $
+
+  19 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> jdynamite-1.2.ebuild:
+  Add ~amd64 keyword.
 
   12 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from <maintainer>.
