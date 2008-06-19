@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.216 2008/06/19 18:55:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.217 2008/06/19 19:32:25 armin76 Exp $
+
+  19 Jun 2008; Raúl Porcel <armin76@gentoo.org> pango-1.20.3.ebuild:
+  alpha/ia64/sparc stable wrt #227679
 
   19 Jun 2008; nixnut <nixnut@gentoo.org> pango-1.20.3.ebuild:
   Stable on ppc wrt bug 227679
