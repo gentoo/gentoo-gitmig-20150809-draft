@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.7 2007/01/10 17:13:34 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.8 2008/06/19 15:24:04 hattya Exp $
 
-inherit eutils
+inherit autotools eutils
 
 IUSE=""
 
@@ -23,26 +23,25 @@ DEPEND=">=dev-scheme/gauche-0.7.4
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-tinycdb.diff
+	epatch "${FILESDIR}"/${P}-tinycdb.diff
 
 	if has_version '>=dev-scheme/gauche-0.8'; then
-		epatch ${FILESDIR}/${P}-gpd.diff
+		epatch "${FILESDIR}"/${P}-gpd.diff
 	fi
 
-	aclocal
-	autoconf
+	eautoreconf
 
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README
 
 	if has_version '>=dev-scheme/gauche-0.8'; then
-		insinto $(gauche-config --sitelibdir)/.packages
+		insinto "$(gauche-config --sitelibdir)/.packages"
 		doins ${MY_P%-*}.gpd
 	fi
 
