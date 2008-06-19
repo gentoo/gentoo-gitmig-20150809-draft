@@ -1,6 +1,11 @@
 # ChangeLog for media-video/thoggen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.16 2008/05/02 15:18:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.17 2008/06/19 16:00:13 hanno Exp $
+
+*thoggen-0.7.1 (19 Jun 2008)
+
+  19 Jun 2008; Hanno Boeck <hanno@gentoo.org> +thoggen-0.7.1.ebuild:
+  Version bump.
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org> thoggen-0.6.0.ebuild,
   thoggen-0.7.0.ebuild:
