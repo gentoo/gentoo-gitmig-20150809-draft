@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/linuxfromscratch
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.1 2008/06/19 04:45:34 dirtyepic Exp $
+
+*linuxfromscratch-6.3 (19 Jun 2008)
+
+  19 Jun 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +linuxfromscratch-6.3.ebuild:
+  Consolidate linuxfromscratch ebuilds into one.
+
