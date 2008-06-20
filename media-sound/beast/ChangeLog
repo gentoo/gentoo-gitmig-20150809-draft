@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.33 2008/06/17 00:39:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.34 2008/06/20 10:40:40 opfer Exp $
+
+  20 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  beast-0.7.1-r1.ebuild:
+  stable x86, bug 227679
 
   17 Jun 2008; Mart Raudsepp <leio@gentoo.org> beast-0.7.1-r1.ebuild:
   Call intltoolize before eautoreconf as it is safer, not vice-versa
