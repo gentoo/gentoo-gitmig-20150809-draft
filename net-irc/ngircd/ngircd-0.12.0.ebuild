@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.12.0.ebuild,v 1.2 2008/06/20 21:17:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.12.0.ebuild,v 1.3 2008/06/20 21:42:27 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="A IRC server written from scratch."
 HOMEPAGE="http://ngircd.barton.de/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.gz
+SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.gz
 	ftp://ngircd.barton.de/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
