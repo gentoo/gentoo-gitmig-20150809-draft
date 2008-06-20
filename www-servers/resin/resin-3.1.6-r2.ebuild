@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6-r1.ebuild,v 1.1 2008/06/09 21:49:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.6-r2.ebuild,v 1.1 2008/06/20 23:16:20 nelchael Exp $
 
 EAPI="1"
 
@@ -19,17 +19,17 @@ IUSE="admin"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
-	>=dev-java/iso-relax-20050331
+	dev-java/iso-relax
 	dev-java/aopalliance
 	=dev-java/sun-j2ee-deployment-bin-1.1*
 	dev-java/jax-ws-api:2
 	dev-java/jaxb:2
-	>=dev-java/sun-javamail-1.4
-	>=dev-java/sun-jaf-1.1"
+	java-virtuals/javamail
+	java-virtuals/jaf"
 
-RDEPEND="=virtual/jdk-1.5*
+RDEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
-DEPEND="${RDEPEND}
+DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	dev-java/ant-core
 	dev-libs/openssl
@@ -77,8 +77,8 @@ src_compile() {
 
 	mkdir "${S}/lib"
 	cd "${S}/lib"
-	java-pkg_jar-from sun-jaf
-	java-pkg_jar-from sun-javamail
+	java-pkg_jar-from --virtual jaf
+	java-pkg_jar-from --virtual javamail
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from aopalliance-1
 	java-pkg_jar-from sun-j2ee-deployment-bin-1.1
