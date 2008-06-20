@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.7 2008/06/16 17:35:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.8 2008/06/20 14:30:30 yngwin Exp $
 
 EAPI="1"
 
@@ -52,6 +52,14 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.4"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if hasq distcc ${FEATURES}; then
+		eerror "Avidemux does not compile with distcc. Please retry with"
+		eerror "FEATURES='-distcc' emerge avidemux"
+		die "distcc not supported for this package"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
