@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.37.ebuild,v 1.2 2008/06/05 16:23:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.37.ebuild,v 1.3 2008/06/20 21:01:37 mrness Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
@@ -19,7 +19,7 @@ IUSE="bzip2 config-log prebuilt-system zlib"
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
-	>=dev-util/scons-0.96.93"
+	>=dev-util/scons-0.98"
 
 S=${WORKDIR}/${P}-src
 
