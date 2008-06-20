@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.122 2008/06/19 17:31:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.123 2008/06/20 11:17:01 armin76 Exp $
+
+  20 Jun 2008; Raúl Porcel <armin76@gentoo.org> qdbm-1.8.77.ebuild:
+  alpha/ia64/sparc stable wrt #212590
 
   19 Jun 2008; nixnut <nixnut@gentoo.org> qdbm-1.8.77.ebuild:
   Stable on ppc wrt bug 212590
