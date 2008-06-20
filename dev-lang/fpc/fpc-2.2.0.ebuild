@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.0.ebuild,v 1.2 2008/06/20 11:00:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.0.ebuild,v 1.3 2008/06/20 11:06:15 opfer Exp $
 
 inherit eutils
 
@@ -53,8 +53,8 @@ set_pp() {
 	esac
 
 	case ${1} in
-	bootstrap)	pp=${WORKDIR}/lib/fpc/${PV_BIN}/ppc${FPC_ARCH} ;;
-	new) 	pp=${S}/compiler/ppc${FPC_ARCH} ;;
+	bootstrap)	pp="${WORKDIR}"/lib/fpc/${PV_BIN}/ppc${FPC_ARCH} ;;
+	new) 	pp="${S}"/compiler/ppc${FPC_ARCH} ;;
 	*)	die "set_pp: unknown argument: ${1}" ;;
 	esac
 }
