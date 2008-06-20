@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.3.2.ebuild,v 1.2 2005/05/07 14:48:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.3.2.ebuild,v 1.3 2008/06/20 14:07:12 loki_val Exp $
+
+inherit eutils
 
 DESCRIPTION="synchronisation tool for http file repositories"
 HOMEPAGE="http://clc.berlios.de/projects/httpup/"
@@ -19,6 +21,7 @@ src_unpack() {
 	sed -i \
 		-e 's:g++:$(CXX) $(CFLAGS) $(LDFLAGS):' \
 		Makefile
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
