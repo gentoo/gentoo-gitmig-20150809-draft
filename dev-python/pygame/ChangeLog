@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.46 2008/04/09 04:44:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.47 2008/06/20 17:53:36 coldwind Exp $
+
+*pygame-1.7.1-r1 (20 Jun 2008)
+
+  20 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/pygame-1.7.1-python2.5.patch, +pygame-1.7.1-r1.ebuild,
+  -pygame-1.8.0_rc4.ebuild:
+  Fix bug with python 2.5 and amd64, bug #194932. Remove old rc.
 
 *pygame-1.8.0 (09 Apr 2008)
 
