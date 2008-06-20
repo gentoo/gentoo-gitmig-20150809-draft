@@ -3,11 +3,8 @@
 <pkgmetadata>
 <herd>sci-mathematics</herd>
 <maintainer>
-  <email>gentoofan23@gmail.com</email>
+  <email>gentoofan23@gentoo.org</email>
   <name>Thomas Anderson</name>
-  <description>Third party maintainer, through the sci-mathematics herd 
-    as a proxy
-  </description>
 </maintainer>
 <longdescription lang="en">
   Dataplot is a software system for scientific visualization,
