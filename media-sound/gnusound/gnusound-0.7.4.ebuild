@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.7 2007/09/23 11:40:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.8 2008/06/20 23:45:25 aballier Exp $
 
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
@@ -10,7 +10,7 @@ inherit toolchain-funcs eutils autotools
 IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
 ogg oss sse vorbis"
 
-PATCHLEVEL="1"
+PATCHLEVEL="2"
 M4TARBALL_REV="1"
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
@@ -49,7 +49,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	cp "${WORKDIR}"/m4/* config/
-	epatch "${FILESDIR}"/${P}-gtk212.patch
 	AT_M4DIR="config" eautoreconf
 }
 
@@ -75,7 +74,7 @@ src_compile() {
 		${myconf} \
 		--with-gnome2 \
 		|| die "Configure failure"
-	emake CC=$(tc-getCC) || die "Make failure"
+	emake CC="$(tc-getCC)" || die "Make failure"
 }
 
 src_install() {
