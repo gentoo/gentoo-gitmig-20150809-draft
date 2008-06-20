@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.11.ebuild,v 1.1 2008/04/25 21:45:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.11.ebuild,v 1.2 2008/06/20 17:13:32 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Utility to trace the route of IP packets"
-HOMEPAGE="http://dmitry.butskoy.name/traceroute"
-SRC_URI="http://www.odu.neva.ru/buc/traceroute/${P}.tar.gz"
+HOMEPAGE="http://traceroute.sourceforge.net/"
+SRC_URI="mirror://sourceforge/traceroute/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
