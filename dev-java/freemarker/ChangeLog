@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.19 2008/04/05 00:40:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.20 2008/06/20 21:51:13 nelchael Exp $
+
+  20 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +freemarker-2.3.10-r1.ebuild:
+  Restore 2.3.10-r1 as 2.3.11 is package.masked.
 
   05 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
   -freemarker-2.3.10.ebuild, -freemarker-2.3.10-r1.ebuild:
