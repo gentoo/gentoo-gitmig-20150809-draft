@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6-r1.ebuild,v 1.3 2008/02/06 14:16:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6-r1.ebuild,v 1.4 2008/06/20 10:09:57 angelos Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/boost
 	dev-libs/libtasn1
 	dev-util/dialog
 	net-libs/gnutls
-	net-libs/rb_libtorrent
+	=net-libs/rb_libtorrent-0.12*
 	gtk? ( >=dev-cpp/gtkmm-2.4
 		x11-libs/pango )
 	webinterface? ( =dev-lang/php-5* )"

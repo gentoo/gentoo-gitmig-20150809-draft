@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.6 2008/02/06 14:16:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.7 2008/06/20 10:09:57 angelos Exp $
+
+  20 Jun 2008; Christoph Mende <angelos@gentoo.org> btg-0.9.6-r1.ebuild:
+  Changed rb_libtorrent dependency to =0.12*
 
   06 Feb 2008; Christoph Mende <angelos@gentoo.org> -btg-0.9.6.ebuild,
   btg-0.9.6-r1.ebuild:
