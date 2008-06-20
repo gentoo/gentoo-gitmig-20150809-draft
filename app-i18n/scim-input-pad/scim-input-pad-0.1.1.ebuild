@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.1.ebuild,v 1.4 2007/09/10 16:24:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.1.ebuild,v 1.5 2008/06/20 23:52:52 matsuu Exp $
 
 DESCRIPTION="Input pad for SCIM used to input symbols and special characters"
 HOMEPAGE="http://www.scim-im.org/"
@@ -11,10 +11,11 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="nls"
 
-DEPEND=">=app-i18n/scim-1.2.0
+RDEPEND=">=app-i18n/scim-1.2.0
 	>=x11-libs/gtk+-2.6.0"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf $(use_enable nls) || die "Error: econf failed!"
@@ -22,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Error: install failed!"
+	emake DESTDIR="${D}" install || die "Error: install failed!"
 	dodoc ChangeLog README TODO
 }
 

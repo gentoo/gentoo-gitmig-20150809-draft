@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-input-pad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.4 2007/09/10 16:24:53 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.5 2008/06/20 23:52:52 matsuu Exp $
+
+  20 Jun 2008; MATSUU Takuto <matsuu@gentoo.org>
+  scim-input-pad-0.1.1.ebuild:
+  Added dev-util/pkgconfig to DEPEND, bug #227575.
 
   10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   scim-input-pad-0.1.1.ebuild:
