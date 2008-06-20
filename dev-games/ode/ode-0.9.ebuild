@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.9.ebuild,v 1.2 2008/02/24 09:45:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.9.ebuild,v 1.3 2008/06/20 01:42:01 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -29,8 +29,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-flags.patch
-	epatch "${FILESDIR}"/${P}-x-flags.patch
+	epatch \
+		"${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-x-flags.patch \
+		"${FILESDIR}"/${P}-destdir.patch
+
 	eautoreconf
 
 	sed -i \
@@ -44,12 +47,6 @@ src_unpack() {
 	sed -i \
 		-e "s/inline_[\t]*void[\t*]ResetCountDown/void ResetCountDown/" \
 		OPCODE/OPC_TreeCollider.h \
-		|| die "sed failed"
-	sed -i \
-		-e '/USE_SONAME_TRUE/s:\(\$(libdir)\):$(DESTDIR)\1:' \
-		-e '/USE_SONAME_TRUE.*ldconfig/d' \
-		-e '/USE_SONAME_TRUE.*ln -s/s:\$(DESTDIR)::' \
-		Makefile.in \
 		|| die "sed failed"
 }
 
