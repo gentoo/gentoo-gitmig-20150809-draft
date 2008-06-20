@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r2.ebuild,v 1.2 2008/06/20 14:37:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r2.ebuild,v 1.3 2008/06/20 14:38:32 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -50,7 +50,7 @@ src_unpack() {
 	eautoreconf || die "failed  running eautoreconf"
 
 	# We need to re-patch this because autoreconf overwrites it
-#	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
+	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
 }
 
 src_compile() {
