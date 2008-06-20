@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.2.0.ebuild,v 1.7 2008/03/18 19:44:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.2.0.ebuild,v 1.8 2008/06/20 17:08:20 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -85,6 +85,10 @@ src/page_bttv.cc' po/POTFILES.in || die "sed failed"
 
 	sed -i -e 's:^#include <quicktime.h>:#include <lqt/quicktime.h>:' \
 		src/filehandler.h || die "sed failed"
+
+	# Fix compilation with gcc-4.3, see bug #215160
+	sed -i -e '/C++ includes/ a\
+#include <algorithm>' src/playlist.cc || die "sed failed"
 }
 
 src_compile() {
