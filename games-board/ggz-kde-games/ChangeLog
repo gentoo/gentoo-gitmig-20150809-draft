@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-kde-games
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ChangeLog,v 1.11 2008/06/16 17:40:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ChangeLog,v 1.12 2008/06/20 18:21:35 ken69267 Exp $
+
+  20 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
+  ggz-kde-games-0.0.14.1.ebuild:
+  amd64 stable, bug #227371
 
   16 Jun 2008; nixnut <nixnut@gentoo.org> ggz-kde-games-0.0.14.1.ebuild:
   Stable on ppc wrt bug 227371
