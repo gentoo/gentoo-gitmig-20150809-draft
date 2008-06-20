@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.16 2006/10/21 23:50:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.17 2008/06/20 20:43:19 loki_val Exp $
 
-inherit kde-functions
+inherit base
 
 DESCRIPTION="A hierarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
@@ -14,12 +14,10 @@ SLOT="0"
 
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
-DEPEND="${DEPEND}
-		=x11-libs/qt-3*
-		sys-apps/sed"
+DEPEND="=x11-libs/qt-3*
+	sys-apps/sed"
 
-# This implies >=qt-3, thus qt4 as well - we don't build with qt4 (bug #96201)
-#need-qt 3.1
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_compile() {
 	sed -i -e 's:/usr/local:/usr:g' \
