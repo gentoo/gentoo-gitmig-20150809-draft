@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8744 2008/06/20 12:37:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8745 2008/06/20 13:06:51 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -474,10 +474,6 @@ media-sound/lastfmproxy
 # Hanno Boeck <hanno@gentoo.org> (31 Mar 2008)
 # As 1.3.3.x became a stable series and 1.3.4 has crash issues, mask it for now.
 =app-office/scribus-1.3.4-r1
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (29 Mar 2008
-# masked depend on bug #214740, wait for unmask depend ffmpeg version
-=media-video/vdr2jpeg-0.1.0
 
 # Markus Ullmann <jokey@gentoo.org> (27 Mar 2008)
 # mask beta version
