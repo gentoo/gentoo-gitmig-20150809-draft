@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.ebuild,v 1.5 2008/06/18 18:49:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0-r1.ebuild,v 1.1 2008/06/20 09:03:39 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -52,8 +52,7 @@ RDEPEND="java? ( virtual/jre )
 	>=dev-libs/nspr-4.7.1
 	>=media-libs/lcms-1.17
 	>=app-text/hunspell-1.1.9
-	>=dev-db/sqlite-3.5.6
-	xulrunner? ( >=net-libs/xulrunner-1.9${MY_PV} )"
+	xulrunner? ( >=net-libs/xulrunner-1.9${MY_PV}-r2 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -156,7 +155,7 @@ src_compile() {
 	mozconfig_annotate 'broken' --disable-mochitest
 	mozconfig_annotate 'broken' --disable-crashreporter
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --enable-system-sqlite
+	#mozconfig_annotate '' --enable-system-sqlite
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-system-nspr
@@ -255,7 +254,7 @@ src_install() {
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
 			mozilla-firefox-3.0.desktop
 	else
-		newicon "${S}"/browser/base/branding/firefox/content/icon48.png firefox-icon-unbranded.png
+		newicon "${S}"/browser/base/branding/icon48.png firefox-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
 			mozilla-firefox-3.0.desktop
 	fi
@@ -270,7 +269,7 @@ src_install() {
 		sed -i -e "s|MinVersion=.*$|MinVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
 		sed -i -e "s|MaxVersion=.*$|MaxVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
 		# Create /usr/bin/firefox
-		cat <<EOF >${D}/usr/bin/firefox
+		cat <<EOF >"${D}"/usr/bin/firefox
 #!/bin/sh
 export LD_LIBRARY_PATH="/usr/$(get_libdir)/mozilla-firefox"
 exec /usr/$(get_libdir)/mozilla-firefox/firefox "\$@"
