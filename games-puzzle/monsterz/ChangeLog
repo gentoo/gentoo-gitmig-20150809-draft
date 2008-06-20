@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/monsterz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.16 2008/05/14 21:56:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.17 2008/06/20 22:30:04 gentoofan23 Exp $
+
+  20 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  monsterz-0.7.1-r1.ebuild:
+  amd64 stable, bug #228603
 
 *monsterz-0.7.1-r1 (14 May 2008)
 
