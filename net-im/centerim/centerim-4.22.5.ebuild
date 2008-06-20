@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.5.ebuild,v 1.1 2008/04/10 19:11:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.5.ebuild,v 1.2 2008/06/20 22:37:30 swegener Exp $
 
 inherit eutils
 
@@ -82,6 +82,16 @@ pkg_setup() {
 		ewarn "You need jpeg support to be able to register Gadu-Gadu accounts!"
 		ewarn
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	# Don't execute git commands, bug #228151
+	cat >"${S}"/misc/git-version-gen <<-EOF
+		#!/bin/sh
+		echo -n "${PVR}"
+	EOF
 }
 
 src_compile() {
