@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6.ebuild,v 1.5 2007/10/09 08:11:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6.ebuild,v 1.6 2008/06/20 05:38:34 je_fro Exp $
 
 IUSE="acpi doc opengl"
 
