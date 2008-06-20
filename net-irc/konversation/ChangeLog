@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.62 2007/10/20 19:34:15 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.63 2008/06/20 21:19:22 swegener Exp $
+
+  20 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  konversation-1.0.1-r3.ebuild, konversation-1.0.1-r4.ebuild:
+  Switch to mirror://, bug #218657.
 
 *konversation-1.0.1-r4 (20 Oct 2007)
 

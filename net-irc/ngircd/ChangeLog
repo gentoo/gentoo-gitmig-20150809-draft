@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.43 2008/06/06 09:22:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.44 2008/06/20 21:17:11 swegener Exp $
+
+  20 Jun 2008; Sven Wegener <swegener@gentoo.org> ngircd-0.11.1.ebuild,
+  ngircd-0.12.0.ebuild:
+  Switch to mirror://, bug #218657.
 
 *ngircd-0.12.0 (06 Jun 2008)
 
