@@ -1,6 +1,11 @@
 # ChangeLog for net-news/rsstool
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.6 2007/12/22 07:31:01 jsin Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.7 2008/06/20 21:13:43 swegener Exp $
+
+  20 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  rsstool-1.0.0_rc2-r1.ebuild, rsstool-1.0.0_rc3-r1.ebuild,
+  rsstool-1.0.0_rc4.ebuild:
+  Switch to mirror://, bug #218657.
 
 *rsstool-1.0.0_rc4 (22 Dec 2007)
 
