@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.73 2008/06/18 00:30:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.74 2008/06/20 14:31:39 darkside Exp $
+
+  20 Jun 2008; Jeremy Olexa <darkside@gentoo.org> xosd-2.2.14-r1.ebuild:
+  Move pkgconfig from RDEPEND to DEPEND, build time tool. My mistake.
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> xosd-2.2.14-r1.ebuild:
   Add missing pkgconfig dep to xosd. Fixes bug #227713
