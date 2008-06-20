@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20070108.ebuild,v 1.1 2007/02/18 21:13:31 swegener Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20070108.ebuild,v 1.2 2008/06/20 21:08:42 swegener Exp $
 
 MY_P=${P/_/.}a
 
@@ -22,8 +20,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
-
 	econf \
 		--sysconfdir=/etc/leafnode \
 		--with-runas-user=news \
