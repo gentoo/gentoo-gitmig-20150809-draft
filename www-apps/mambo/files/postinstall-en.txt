@@ -1,30 +1,32 @@
 You are almost done!
 
-  0. Setup the db.
+You will need to provide a database for your ${PN} installation.
 
-  1. Restart Apache
+This assumes you have some knowledge of MySQL, and already have it
+installed and configured. If not, please refer to the Gentoo MySQL
+guide at the following URL:
 
-  2. Login on http://${VHOST_HOSTNAME}/${VHOST_APPDIR} 
-  and finish the installation. IMPORTANT: the web
-  installer will complain that configuration.php is not writeable. When you
-  are done, create configuration.php in ${MY_INSTALLDIR} and copy the generated
-  configuration into it. Then execute the following:
-  # cd ${MY_INSTALLDIR}
-  # chown apache:apache configuration.php
-  # chmod u+w configuration.php
+http://www.gentoo.org/doc/en/mysql-howto.xml
 
-  3. (Stolen from
-  http://www.mamboserver.com/MOS_FAQs/Installing_Mambo_Open_Source/Installing_Mambo_Open_Source/
-  , which you should also read)
+Once you have a database ready all you need to do is to go to this 
+location
 
-  CONFIGURE MOS
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install.php
 
-  You can now launch your browser and point it to your MOS site e.g.
+and provide the credentials required for the database access.
 
-  http://${VHOST_HOSTNAME}/${VHOST_APPDIR} -> Main Site
-  http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/administrator -> Admin
+After the setup you can launch your browser and point it to your S{PN}
+site e.g.
 
-  You can log into Admin using the username 'admin' along with the
-  password that was generated or you chose during the web based install.
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR} -> Main Site
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/administrator -> Admin
 
-  Enjoy Mambo!
+You can log in as administrator using the username 'admin' along with the
+password that was generated or you chose during the web based installation.
+
+If your site is working fine you should ensure you secure your installation
+by removing the "installation" directory from the installed web application:
+
+  rm -rf ${MY_INSTALLDIR}/installation
+
+Enjoy ${PN}!

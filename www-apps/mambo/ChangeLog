@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.35 2008/02/03 17:08:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.36 2008/06/20 16:10:29 wrobel Exp $
+
+*mambo-4.6.4 (20 Jun 2008)
+
+  20 Jun 2008; wrobel@gentoo.org files/postinstall-en.txt,
+  -mambo-4.6.3-r1.ebuild, +mambo-4.6.4.ebuild:
+  Updated mambo in response to sec issue #224513.
 
   03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mambo-4.6.3-r1.ebuild:
   merge from webapps overlay wrt #208584
