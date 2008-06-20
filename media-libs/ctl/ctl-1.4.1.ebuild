@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.8 2008/04/13 10:49:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.9 2008/06/20 19:46:06 loki_val Exp $
+
+inherit base
 
 DESCRIPTION="AMPAS' Color Transformation Language"
 HOMEPAGE="http://sourceforge.net/projects/ampasctl"
@@ -14,6 +16,8 @@ IUSE="doc"
 RDEPEND="media-libs/ilmbase"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
