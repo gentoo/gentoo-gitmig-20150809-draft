@@ -1,6 +1,17 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.105 2008/06/18 12:24:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.106 2008/06/20 19:16:49 gentoofan23 Exp $
+
+*jabberd-1.6.1.1-r1 (20 Jun 2008)
+
+  20 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  files/jabberd-1.6.1.1-sandbox.patch,
+  +files/jabberd-1.6.1.1-undefineddebug.patch, metadata.xml,
+  -jabberd-1.6.1.1.ebuild, +jabberd-1.6.1.1-r1.ebuild:
+  Revision bump; fixes bug #228021, bug #228375, and bug #226411; Also
+  removing nelchael from metadata.xml as he is no longer maintaining this
+  package; Remove USE flags that do nothing; Disable conditional gnutls
+  dependency as its always necessary
 
   18 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/jabberd-1.6.1.1.init:
