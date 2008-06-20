@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.404 2008/06/20 05:28:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.405 2008/06/20 08:25:44 suka Exp $
+
+  20 Jun 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.4.1.ebuild:
+  Check for python built with threads USE flag, closes bug #227287
 
   20 Jun 2008; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.4.1.ebuild:

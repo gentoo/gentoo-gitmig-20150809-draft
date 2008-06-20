@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1.ebuild,v 1.4 2008/06/20 05:28:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.1.ebuild,v 1.5 2008/06/20 08:25:44 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -204,6 +204,13 @@ pkg_setup() {
 		else
 			die "USE flag [xulrunner] set but not found!"
 		fi
+	fi
+
+	# Check python
+	if ! built_with_use dev-lang/python threads
+	then
+	    eerror "Python needs to be built with threads."
+	    die
 	fi
 
 	java-pkg-opt-2_pkg_setup
