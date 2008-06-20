@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.2 2008/06/20 19:22:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.3 2008/06/20 19:32:42 gentoofan23 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://download.jabberd.org/jabberd14/jabberd14-${PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="mysql postgres"
+IUSE="ipv6 mysql postgres"
 
 RDEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/pth-1.4.0
@@ -53,10 +53,13 @@ src_unpack() {
 src_compile() {
 	unset LC_ALL LC_CTYPE
 
+	local myconf=
+	use ipv6 && local myconf="--enable-ipv6"
 	econf \
 		--sysconfdir=/etc/jabber \
 		--disable-debug \
 		--disable-pool_debug \
+		${myconf} \
 		$(use_with mysql) \
 		$(use_with postgres postgresql) \
 		|| die "econf failed"
