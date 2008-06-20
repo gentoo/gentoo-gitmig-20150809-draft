@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.7.2.ebuild,v 1.1 2008/06/12 10:40:16 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.7.2.ebuild,v 1.2 2008/06/20 08:35:51 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,7 +25,12 @@ RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	admin? ( dev-lang/python )"
 DEPEND="${RDEPEND}"
 
-#S="${WORKDIR}/${P}b1240"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-signed_unsigned_char.patch"
+}
 
 src_compile() {
 	local myconf

@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.40 2008/06/12 10:40:16 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.41 2008/06/20 08:35:51 dev-zero Exp $
+
+  20 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/cherokee-0.7.2-signed_unsigned_char.patch, cherokee-0.7.2.ebuild:
+  Added patch for authentication problem on ppc (upstream bug:
+  http://code.google.com/p/cherokee/issues/detail?id=45)
 
 *cherokee-0.7.2 (12 Jun 2008)
 
