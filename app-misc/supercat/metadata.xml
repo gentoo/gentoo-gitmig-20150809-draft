@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>shell-tools</herd>
 <maintainer>
-  <email>tester@gentoo.org</email>
-  <description>Proxy for upstream Thomas Anderson (gentoofan23@gmail.com)</description>
+  <email>gentoofan23@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
