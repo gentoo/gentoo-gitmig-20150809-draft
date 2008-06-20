@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc1.ebuild,v 1.1 2008/06/20 07:14:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc1.ebuild,v 1.2 2008/06/20 08:48:54 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -155,7 +155,7 @@ src_install() {
 		insinto ${portage_base}/${mydir}
 		cd "${S}"/${mydir}
 		doins *.py
-		symlinks=$(find -mindepth 1 -maxdepth 1 -type l)
+		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
 		[ -n "${symlinks}" ] && cp -P ${symlinks} "${D}${portage_base}/${mydir}"
 	done
 
