@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.501.ebuild,v 1.2 2008/06/20 05:47:11 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -46,7 +46,8 @@ QA_EXECSTACK_amd64="usr/lib64/dri/fglrx_dri.so
 QA_TEXTRELS_x86="usr/lib/dri/fglrx_dri.so
 	usr/lib/xorg/modules/drivers/fglrx_drv.so
 	usr/lib/opengl/ati/lib/libGL.so.1.2
-	usr/lib/xorg/modules/glesx.so"
+	usr/lib/xorg/modules/glesx.so
+	usr/lib/xorg/modules/amdxmm.so"
 QA_TEXTRELS_amd64="
 	usr/lib64/opengl/ati/lib/libGL.so.1.2
 	usr/lib32/opengl/ati/lib/libGL.so.1.2
@@ -195,7 +196,7 @@ src_compile() {
 
 	# The -DUSE_GLU is needed to compile using nvidia headers
 	# according to a comment in ati-drivers-extra-8.33.6.ebuild.
-	"$(tc-getCC)" -o fgl_fglxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
+	"$(tc-getCC)" -o fgl_glxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
 		-I"${S}"/common/usr/include fgl_glxgears.c \
 		-lGL -lGLU -lX11 -lm || die "fgl_glxgears build failed"
 
@@ -274,7 +275,7 @@ src_install() {
 	exeinto /usr/$(get_libdir)/xorg/modules/linux
 	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/linux/libfglrxdrm.so
 	exeinto /usr/$(get_libdir)/xorg/modules
-	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so}
+	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so,amdxmm.so}
 
 	# Arch-specific files.
 	# (s)bin.
@@ -338,7 +339,7 @@ src_install() {
 	fi
 
 	# Done with the "source" tree. Install tools we rebuilt:
-	dobin extra/fgl_glxgears/fgl_fglxgears
+	dobin extra/fgl_glxgears/fgl_glxgears
 	newdoc extra/fgl_glxgears/README README.fgl_glxgears
 
 	dolib extra/lib/fglrx_gamma/*so*
