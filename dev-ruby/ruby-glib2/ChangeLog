@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.55 2008/06/19 19:27:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.56 2008/06/20 10:38:36 opfer Exp $
+
+  20 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  ruby-glib2-0.16.0-r3.ebuild:
+  stable x86, bug 227679
 
   19 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   ruby-glib2-0.16.0-r3.ebuild:
