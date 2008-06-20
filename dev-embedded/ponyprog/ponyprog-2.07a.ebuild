@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.3 2008/02/29 17:53:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.4 2008/06/20 20:24:44 calchan Exp $
 
 inherit eutils
 
@@ -31,13 +31,16 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
+
 	sed -i \
 		-e "s:\$(HOME)/Progetti/PonyProg_Sourceforge/v:${S}/v:" \
 		-e 's/\-O2//' \
-		v/Config.mk
-	sed -i -e 's/<asm\/io.h>/<sys\/io.h>/' *.cpp
+		v/Config.mk || die "sed failed"
+
+	sed -i -e 's/<asm\/io.h>/<sys\/io.h>/' *.cpp || die "sed failed"
+
 	if use epiphany ; then
 		sed -i -e 's/netscape/epiphany/' e2cmdw.cpp
 	fi
@@ -48,6 +51,9 @@ src_unpack() {
 		sed -i -e 's/netscape/seamonkey/' e2cmdw.cpp
 	fi
 	convert ponyprog.ico ponyprog.png
+
+	# Fix compilation with gcc-4.3, bug #227503
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {

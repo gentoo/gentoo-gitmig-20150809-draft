@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.11 2007/07/22 07:49:25 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.12 2008/06/20 20:24:44 calchan Exp $
 
 S=${WORKDIR}
 DESCRIPTION="EEprom e Pic Programmer"
@@ -29,9 +29,9 @@ src_install () {
 	einfo "Installing binaries"
 
 	into /opt/${PN}
-	dobin ${S}/usr/local/bin/ponyprog2000
+	dobin "${S}"/usr/local/bin/ponyprog2000
 	dodir /opt/${PN}/lib
-	dolib ${S}/usr/lib/*
+	dolib "${S}"/usr/lib/*
 
 	dodir /opt/bin
 	dosym /opt/${PN}/bin/ponyprog2000 /opt/bin/ponyprog

@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.13 2008/02/29 17:53:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.14 2008/06/20 20:24:44 calchan Exp $
+
+  20 Jun 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/ponyprog-2.07a-gcc43.patch, ponyprog-2.07a.ebuild:
+  Fixed compilation with gcc 4.3, thanks to Peter Alfredsen (bug #227503).
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ponyprog-2.07a.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
