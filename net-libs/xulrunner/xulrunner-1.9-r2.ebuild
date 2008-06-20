@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r2.ebuild,v 1.3 2008/06/20 14:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r2.ebuild,v 1.4 2008/06/20 15:03:42 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -37,6 +37,20 @@ S="${WORKDIR}/mozilla"
 export MOZ_CO_PROJECT=xulrunner
 export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
+
+pkg_setup(){
+	if ! built_with_use x11-libs/cairo X; then
+		eerror "Cairo is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge cairo."
+		die "Cairo needs X"
+	fi
+
+	if ! built_with_use --missing true x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
