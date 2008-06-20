@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.1 2008/06/20 19:16:50 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.2 2008/06/20 19:22:33 gentoofan23 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -55,6 +55,8 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/jabber \
+		--disable-debug \
+		--disable-pool_debug \
 		$(use_with mysql) \
 		$(use_with postgres postgresql) \
 		|| die "econf failed"
