@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8741 2008/06/20 02:46:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8742 2008/06/20 07:17:40 genone Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -624,10 +624,6 @@ x11-misc/mkxf86config
 # If 0.20 fails with hardmasked ffmpeg snapshot,
 # try this instead.
 ~media-video/ffmpeg2theora-9999
-
-# Marius Mauch <genone@gentoo.org> (09 Feb 2008)
-# First public test releases of portage-2.2
->=sys-apps/portage-2.2_alpha
 
 # Sebastien Fabbro <bicatali@gentoo.org> (05 Feb 2008)
 # sci-libs/metis-5.* still experimental
