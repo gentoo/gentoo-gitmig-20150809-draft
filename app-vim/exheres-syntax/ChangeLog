@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/exheres-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.2 2008/06/01 13:11:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.3 2008/06/20 21:17:54 coldwind Exp $
+
+  20 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  exheres-syntax-20080601.ebuild:
+  Update SRC_URI.
 
 *exheres-syntax-20080601 (01 Jun 2008)
 
