@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.3.0.ebuild,v 1.4 2008/05/01 09:24:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.3.0.ebuild,v 1.5 2008/06/20 15:26:55 coldwind Exp $
 
 inherit python eutils distutils
 
@@ -17,6 +17,8 @@ RDEPEND="dev-libs/libxml2
 	dev-python/pynotifier
 	sqlite? ( >=dev-libs/glib-2.4.0 >=dev-python/pysqlite-2.2 )
 	lirc? ( dev-python/pylirc )"
+
+PYTHON_MODNAME="kaa"
 
 src_unpack() {
 	distutils_src_unpack

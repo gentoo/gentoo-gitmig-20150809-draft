@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.10 2008/05/01 09:24:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.11 2008/06/20 15:26:55 coldwind Exp $
+
+  20 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> kaa-base-0.3.0.ebuild:
+  Set PYTHON_MODNAME to fit new distutils.eclass behaviour.
 
   01 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   kaa-base-0.3.0.ebuild:
