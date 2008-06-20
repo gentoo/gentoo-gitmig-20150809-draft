@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8745 2008/06/20 13:06:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8746 2008/06/20 21:49:34 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -43,8 +43,6 @@ media-plugins/vdr-graphtft
 # sound herd, bug 218099:
 media-sound/gnusound
 media-sound/potamus
-# video herd, bug 218101, see also security bug 227053:
-media-video/motion
 # voip herd, bug 218102:
 media-libs/mediastreamer
 # no herd, bug 218105:
