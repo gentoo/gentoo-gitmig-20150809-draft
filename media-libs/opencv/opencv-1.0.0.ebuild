@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0.ebuild,v 1.3 2008/06/19 03:56:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0.ebuild,v 1.4 2008/06/20 12:05:12 drac Exp $
 
 inherit eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ffmpeg gtk ieee1394 python swig v4l v4l2 xine"
 
-DEPEND="
-	dev-util/pkgconfig
-	media-libs/jasper
+RDEPEND="media-libs/jasper
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/tiff
@@ -26,9 +24,9 @@ DEPEND="
 	gtk?      ( >=x11-libs/gtk+-2          )
 	python?   ( >=dev-lang/python-2.3      )
 	swig?     ( dev-lang/swig              )
-	xine?     ( media-libs/xine-lib        )
-"
-RDEPEND="${DEPEND}"
+	xine?     ( media-libs/xine-lib        )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	local myconf="--without-quicktime"
