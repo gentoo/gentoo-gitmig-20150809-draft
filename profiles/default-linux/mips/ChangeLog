@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.20 2008/05/03 22:20:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.21 2008/06/20 06:40:55 iluxa Exp $
+
+  20 Jun 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> use.mask:
+  Mask out postgresql, since it's not supported by MIPS any more
 
   03 May 2008; Ryan Hill <dirtyepic@gentoo.org> use.mask:
   Mask various gnome-related USE flags.
