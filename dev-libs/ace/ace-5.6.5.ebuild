@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.9.ebuild,v 1.2 2007/07/22 08:33:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.6.5.ebuild,v 1.1 2008/06/20 14:21:27 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -34,7 +34,7 @@ src_compile() {
 	# This disables a silly test which fills the memory
 	# waiting for a bad_alloc exception and happily
 	# leaking memory (bug #169647)
-	export ace_cv_new_throws_bad_alloc_exception="yes"
+	#export ace_cv_new_throws_bad_alloc_exception="yes"
 
 	ECONF_SOURCE="${S}"
 	econf \
@@ -59,15 +59,18 @@ src_install() {
 src_test() {
 	cd "${S}/build"
 	emake ACE_ROOT="${S}" check || die "self test failed"
+	sed -i -e "^#define PACKAGE_.*//g" /usr/include/ace/config.h
 }
 
 pkg_postinst() {
-	# This is required, as anything trying to compile against ACE will have
-	# problems with conflicting OS.h files if this is not done.
 
 	local CC_MACHINE=$($(tc-getCC) -dumpmachine)
-	if [ -d "/usr/lib/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace" ]; then
-		mv "/usr/lib/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace" \
-			"/usr/lib/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace.old"
+	if [ -d "/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace" ]; then
+	ewarn "moving /usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace to"
+	ewarn "ace.old"
+	ewarn "This is required, as anything trying to compile against ACE will"
+	ewarn "have problems with conflicting OS.h files if this is not done."
+		mv "/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace" \
+			"/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace.old"
 	fi
 }

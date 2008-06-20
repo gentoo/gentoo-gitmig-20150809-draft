@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ace
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.52 2007/10/08 09:06:40 dragonheart Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.53 2008/06/20 14:21:27 dragonheart Exp $
+
+*ace-5.6.5 (20 Jun 2008)
+
+  20 Jun 2008; Daniel Black <dragonheart@gentoo.org> -ace-5.5.9.ebuild,
+  +ace-5.6.5.ebuild:
+  version bump inspired by bug #227533. removed old unstable version
 
   08 Oct 2007; Daniel Black <dragonheart@gentoo.org> ace-5.5-r1.ebuild,
   -ace-5.5.8.ebuild, ace-5.6.1.ebuild:
