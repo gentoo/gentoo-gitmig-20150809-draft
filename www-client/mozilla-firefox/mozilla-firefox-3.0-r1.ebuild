@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0-r1.ebuild,v 1.1 2008/06/20 09:03:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0-r1.ebuild,v 1.2 2008/06/20 14:41:05 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -131,10 +131,13 @@ src_unpack() {
 	# Apply our patches
 	cd "${S}" || die "cd failed"
 	EPATCH_SUFFIX="patch" \
-EPATCH_FORCE="yes" \
+	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
 
-	eautoreconf || die "failed  running eautoreconf"
+	eautoreconf
+
+	# We need to re-patch this because autoreconf overwrites it
+	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
 }
 
 src_compile() {
