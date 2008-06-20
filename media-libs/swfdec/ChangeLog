@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.38 2008/06/02 10:39:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.39 2008/06/20 21:34:31 cardoe Exp $
+
+*swfdec-0.6.6-r1 (20 Jun 2008)
+
+  20 Jun 2008; Doug Goldstein <cardoe@gentoo.org> +swfdec-0.6.6-r1.ebuild:
+  as per upstream, using libmad and ffmpeg directly are bad and causes
+  issues for many people. Building that way is not recommened and
+  unsupported. I forwarded my discussions with upstream to gnome@ and
+  pclouds@, however the ebuild hasn't changed. So I'm changing it.
 
   02 Jun 2008; Alexis Ballier <aballier@gentoo.org> swfdec-0.6.6.ebuild:
   keyword ~x86-fbsd
