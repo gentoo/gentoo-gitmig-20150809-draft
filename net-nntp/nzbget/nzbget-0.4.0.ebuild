@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0.ebuild,v 1.5 2008/06/05 19:30:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0.ebuild,v 1.6 2008/06/20 20:48:44 swegener Exp $
 
 EAPI="1"
+
+inherit eutils
 
 DESCRIPTION="A command-line based binary newsgrabber supporting .nzb files"
 HOMEPAGE="http://nzbget.sourceforge.net/"
@@ -19,6 +21,13 @@ DEPEND="dev-libs/libxml2
 	)
 	ncurses? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
+}
 
 src_compile() {
 	econf \

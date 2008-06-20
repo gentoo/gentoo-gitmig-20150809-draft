@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.3 2008/06/07 21:25:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.4.0-r1.ebuild,v 1.4 2008/06/20 20:48:44 swegener Exp $
 
 EAPI="1"
 
@@ -24,6 +24,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 
 	sed \
 		-e 's:^$MAINDIR=.*:$MAINDIR=/var/lib/nzbget:' \
