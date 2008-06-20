@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.31 2008/06/20 21:08:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.32 2008/06/20 21:10:01 swegener Exp $
+
+  20 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  leafnode-2.0.0_alpha20070108.ebuild:
+  Add ~amd64 keyword.
 
   20 Jun 2008; Sven Wegener <swegener@gentoo.org>
   leafnode-2.0.0_alpha20070108.ebuild:
