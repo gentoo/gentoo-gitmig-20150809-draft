@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.1 2007/06/29 03:16:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.2 2008/06/20 18:26:39 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="a simple interactive planetary system simulator"
-SRC_URI="http://planets.homedns.org/dist/${P}.tgz"
 HOMEPAGE="http://planets.homedns.org/"
+SRC_URI="http://planets.homedns.org/dist/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
