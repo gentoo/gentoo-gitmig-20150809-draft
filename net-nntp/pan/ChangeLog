@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.61 2008/06/19 18:19:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.62 2008/06/20 10:46:24 opfer Exp $
+
+  20 Jun 2008; Christian Faulhammer <opfer@gentoo.org> pan-0.132-r3.ebuild:
+  stable x86, bug 227679
 
   19 Jun 2008; nixnut <nixnut@gentoo.org> pan-0.132-r2.ebuild:
   Stable on ppc wrt bug 227679
