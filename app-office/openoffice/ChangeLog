@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.403 2008/06/12 00:24:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.404 2008/06/20 05:28:32 suka Exp $
+
+  20 Jun 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.4.1.ebuild:
+  ooo-build patchset bump to 2.4.1.6, should also fix the randr-related
+  crash on exit, see bug #225853
 
   12 Jun 2008; Brent Baude <ranger@gentoo.org> openoffice-2.4.1.ebuild:
   Marking openoffice-2.4.1 ppc for bug 225723
