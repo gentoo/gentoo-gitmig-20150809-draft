@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r1.ebuild,v 1.1 2008/06/19 08:52:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9-r2.ebuild,v 1.1 2008/06/20 08:55:33 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -23,8 +23,7 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 	>=dev-libs/nss-3.12
 	>=dev-libs/nspr-4.7.1
 	>=app-text/hunspell-1.1.9
-	>=media-libs/lcms-1.17
-	>=dev-db/sqlite-3.5.6"
+	>=media-libs/lcms-1.17"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
@@ -68,7 +67,7 @@ src_compile() {
 	mozconfig_annotate 'broken' --disable-mochitest
 	mozconfig_annotate 'broken' --disable-crashreporter
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --enable-system-sqlite
+	#mozconfig_annotate '' --enable-system-sqlite
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	#mozconfig_annotate '' --enable-js-binary
