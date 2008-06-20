@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kooldock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.24 2007/10/30 21:47:24 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.25 2008/06/20 22:06:51 loki_val Exp $
+
+  20 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/kooldock-0.4.7-gcc43.patch, kooldock-0.4.7.ebuild:
+  Add gcc-4.3 fix. Bug 227223. Thanks to Marek Miller <mlm@shells.pl> for
+  the patch.
 
 *kooldock-0.4.7 (30 Oct 2007)
 

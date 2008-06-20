@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.4.7.ebuild,v 1.1 2007/10/30 21:47:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.4.7.ebuild,v 1.2 2008/06/20 22:06:51 loki_val Exp $
 
 inherit kde
 
@@ -22,6 +22,8 @@ LANGS="cs de es fr it nl pl sv"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_unpack() {
 	kde_src_unpack
