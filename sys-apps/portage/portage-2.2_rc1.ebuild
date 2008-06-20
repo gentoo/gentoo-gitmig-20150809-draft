@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre7-r1.ebuild,v 1.2 2008/06/16 08:51:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc1.ebuild,v 1.1 2008/06/20 07:14:58 genone Exp $
 
 inherit eutils multilib python
 
@@ -12,10 +12,7 @@ PROVIDE="virtual/portage"
 SLOT="0"
 IUSE="build doc epydoc selinux linguas_pl"
 
-# Need >=python-2.5 for float mtime support. This dep
-# can revert to python-2.4 when bug #223417 is fixed.
-#python_dep=">=dev-lang/python-2.4"
-python_dep=">=dev-lang/python-2.5"
+python_dep=">=dev-lang/python-2.4"
 
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
