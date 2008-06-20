@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.4 2008/02/21 23:49:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.5 2008/06/20 14:32:02 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,7 @@ src_unpack() {
 	mv "${WORKDIR}/${P}"-src-algorithmpatch/Hash* "${S}"
 	epatch "${FILESDIR}/${P}-makefile.patch"
 	epatch "${FILESDIR}/${P}-share.patch"
+	epatch "${FILESDIR}/${P}-types.patch"
 	sed -i "s#@@SHARE@@#/usr/share/${P}#g" ChainWalkContext.cpp || die
 }
 
