@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.7-r1.ebuild,v 1.2 2008/03/07 07:33:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.7-r1.ebuild,v 1.3 2008/06/20 10:48:36 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
 
 	econf \
 		--enable-symcryptrun \
