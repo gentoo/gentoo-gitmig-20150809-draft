@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.19 2007/11/15 17:08:52 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.20 2008/06/21 11:03:11 armin76 Exp $
+
+  21 Jun 2008; Raúl Porcel <armin76@gentoo.org> xtermcontrol-2.9.ebuild:
+  alpha/ia64/x86 stable wrt #227521
 
 *xtermcontrol-2.9 (15 Nov 2007)
 
