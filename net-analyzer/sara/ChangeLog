@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sara
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.23 2007/09/06 17:55:11 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.24 2008/06/21 16:06:23 vanquirius Exp $
+
+*sara-7.5.6 (21 Jun 2008)
+
+  21 Jun 2008; Marcelo Goes <vanquirius@gentoo.org> +sara-7.5.6.ebuild:
+  7.5.6 version bump for bug 206796. Thanks to Raul Porcel <armin76@gentoo.org>.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -sara-6.0.7d.ebuild:
   Cleanup
