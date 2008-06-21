@@ -1,8 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.10.ebuild,v 1.4 2007/06/23 14:08:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.10.ebuild,v 1.5 2008/06/21 00:14:46 mrness Exp $
 
-inherit eutils linux-info
+WANT_AUTOCONF=none
+WANT_AUTOMAKE=1.7
+
+inherit eutils linux-info autotools
 
 DESCRIPTION="FUSE filesystem interface for ObexFTP"
 HOMEPAGE="http://triq.net/obex/"
@@ -20,7 +23,9 @@ DEPEND=">=net-wireless/bluez-libs-2.19
 src_unpack() {
 	unpack ${A}
 
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	eautomake
 }
 
 src_install() {
