@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1579 2008/06/21 08:53:17 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1580 2008/06/21 09:42:11 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  21 Jun 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Added USE flags for terminus-font.
 
   21 Jun 2008; Serkan Kaba <serkan@gentoo.org>
   default/linux/package.use.mask, package.mask:
