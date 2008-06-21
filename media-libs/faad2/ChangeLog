@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.98 2008/06/21 04:58:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.99 2008/06/21 16:03:01 nixnut Exp $
+
+  21 Jun 2008; nixnut <nixnut@gentoo.org> faad2-2.6.1-r1.ebuild:
+  Stable on ppc wrt bug 228647
 
   21 Jun 2008; Ferris McCormick <fmccor@gentoo.org> faad2-2.6.1-r1.ebuild:
   Sparc stable --- Bug #228647.
