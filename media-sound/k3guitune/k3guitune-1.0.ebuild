@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.0.ebuild,v 1.2 2008/06/20 22:07:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.0.ebuild,v 1.3 2008/06/21 09:28:51 opfer Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.planet.nl/~lamer024/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa oss jack"
 
 DEPEND="=sci-libs/fftw-3*
