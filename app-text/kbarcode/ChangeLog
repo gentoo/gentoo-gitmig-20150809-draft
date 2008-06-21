@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbarcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.47 2008/05/22 20:48:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.48 2008/06/21 10:38:41 carlo Exp $
+
+*kbarcode-2.0.7 (21 Jun 2008)
+
+  21 Jun 2008; Carsten Lohrke <carlo@gentoo.org> +kbarcode-2.0.7.ebuild:
+  Version bump.
 
   22 May 2008; Markus Meier <maekke@gentoo.org> kbarcode-2.0.6.ebuild:
   amd64/x86 stable, bug #222877
