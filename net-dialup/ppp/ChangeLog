@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.215 2008/06/21 17:11:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.216 2008/06/21 19:58:27 corsair Exp $
+
+  21 Jun 2008; Markus Rothe <corsair@gentoo.org> ppp-2.4.4-r15.ebuild:
+  Stable on ppc64; bug #227183
 
   21 Jun 2008; Raúl Porcel <armin76@gentoo.org> ppp-2.4.4-r15.ebuild:
   ia64/sparc stable wrt #227183
