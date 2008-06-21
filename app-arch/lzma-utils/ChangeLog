@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzma-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.36 2008/06/21 07:52:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.37 2008/06/21 13:11:03 armin76 Exp $
+
+  21 Jun 2008; Raúl Porcel <armin76@gentoo.org> lzma-utils-4.32.6.ebuild:
+  alpha/ia64/sparc stable wrt #228671
 
   21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   lzma-utils-4.32.6.ebuild:
