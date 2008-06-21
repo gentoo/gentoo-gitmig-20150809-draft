@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.61-r1.ebuild,v 1.15 2008/06/21 06:27:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.61-r2.ebuild,v 1.1 2008/06/21 06:27:48 pva Exp $
+
+inherit eutils
 
 DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
@@ -8,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="emacs"
 
 DEPEND=">=sys-apps/texinfo-4.3
@@ -17,6 +19,12 @@ DEPEND=">=sys-apps/texinfo-4.3
 RDEPEND="${DEPEND}
 	>=sys-devel/autoconf-wrapper-4-r2"
 PDEPEND="emacs? ( app-emacs/autoconf-mode )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-GETMNTENT.patch
+}
 
 src_compile() {
 	# Disable Emacs in the build system since it is in a separate package.
