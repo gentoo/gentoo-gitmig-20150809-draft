@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.56 2008/05/12 15:53:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.57 2008/06/21 14:11:20 aballier Exp $
+
+  21 Jun 2008; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4.ebuild:
+  Fix implicit declarations, bug #216848
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> gpac-0.4.4.ebuild:
   Stable on ppc64
