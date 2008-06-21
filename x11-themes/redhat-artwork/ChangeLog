@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.92 2007/12/06 09:05:10 nelchael Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.93 2008/06/21 08:50:28 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  stable x86, bug 226641
 
   06 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
