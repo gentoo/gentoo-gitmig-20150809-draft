@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.105 2008/06/12 21:15:12 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.106 2008/06/21 16:39:23 bluebird Exp $
+
+  21 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> use.mask:
+  Mask openct use flag, no hardware to test
 
   12 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> package.use.mask,
   use.mask:

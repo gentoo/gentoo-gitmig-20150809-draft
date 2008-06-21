@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.131 2008/06/12 21:15:12 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.132 2008/06/21 16:39:23 bluebird Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -54,6 +54,7 @@ ivtv
 laptop
 njb
 pkcs11
+openct
 
 # Asterisk use flag masking
 bri
