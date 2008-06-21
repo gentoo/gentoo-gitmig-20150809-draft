@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.16.ebuild,v 1.3 2008/05/12 07:44:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.16.ebuild,v 1.4 2008/06/21 15:04:19 nixnut Exp $
 
 inherit distutils portability eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://wiki.osafoundation.org/pub/Projects/MeTooCrypto/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="~amd64 ~ia64 ppc x86"
 IUSE="doc"
 
 #S="${WORKDIR}/${MY_P}"
