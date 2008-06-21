@@ -1,8 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7_p20080621.ebuild,v 1.2 2008/06/21 18:51:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7_p20080621.ebuild,v 1.3 2008/06/21 19:29:12 swegener Exp $
 
-inherit linux-info eutils
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.10"
+
+inherit linux-info eutils autotools
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
@@ -36,6 +39,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/systemtap-20080119-grsecurity.patch
+	epatch "${FILESDIR}"/systemtap-20080621-as-needed.patch
+
+	eautoreconf
 }
 
 src_compile() {

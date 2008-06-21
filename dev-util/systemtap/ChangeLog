@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.64 2008/06/21 18:51:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.65 2008/06/21 19:29:12 swegener Exp $
+
+  21 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  +files/systemtap-20080621-as-needed.patch, systemtap-0.7_p20080621.ebuild:
+  Add --as-needed patch, bug #228761.
 
   21 Jun 2008; Sven Wegener <swegener@gentoo.org>
   systemtap-0.7_p20080531.ebuild, systemtap-0.7_p20080607.ebuild,
