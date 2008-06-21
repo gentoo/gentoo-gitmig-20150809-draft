@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyvorbis
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.38 2008/06/20 16:57:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.39 2008/06/21 16:04:29 nixnut Exp $
+
+  21 Jun 2008; nixnut <nixnut@gentoo.org> pyvorbis-1.4-r3.ebuild:
+  Stable on ppc wrt bug 228541
 
   20 Jun 2008; Ferris McCormick <fmccor@gentoo.org> pyvorbis-1.4-r3.ebuild:
   Sparc stable, Bug #228541.
