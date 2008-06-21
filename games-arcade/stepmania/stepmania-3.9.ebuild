@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.13 2008/04/14 19:57:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.14 2008/06/21 13:20:46 hanno Exp $
 
 inherit autotools eutils games
 
@@ -49,6 +49,8 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patches
 	epatch "${T}"/gentoo.patch
+
+	epatch "${FILESDIR}/${P}-newffmpeg.diff"
 
 	AT_M4DIR="autoconf/m4"
 	eautoreconf
