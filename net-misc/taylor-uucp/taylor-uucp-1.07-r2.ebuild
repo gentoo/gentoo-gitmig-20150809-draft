@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r2.ebuild,v 1.1 2007/04/15 15:24:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r2.ebuild,v 1.2 2008/06/21 08:53:01 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,8 +22,6 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-	#disable lazy bindings
-	sed -i -e "s:^LDFLAGS *=.*\$:& ${LDFLAGS} $(bindnow-flags):" "${S}/Makefile.in"
 }
 
 src_compile() {
