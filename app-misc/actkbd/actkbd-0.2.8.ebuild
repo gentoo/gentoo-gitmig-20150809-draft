@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.8.ebuild,v 1.1 2007/07/07 15:15:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.8.ebuild,v 1.2 2008/06/21 13:19:02 swegener Exp $
 
-inherit linux-info eutils
+inherit linux-info eutils toolchain-funcs
 
 DESCRIPTION="A keyboard shortcut daemon"
 HOMEPAGE="http://www.softlab.ece.ntua.gr/~thkala/projects/actkbd/"
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
