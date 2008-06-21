@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libptp2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.17 2008/06/20 14:11:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.18 2008/06/21 14:34:14 nixnut Exp $
+
+  21 Jun 2008; nixnut <nixnut@gentoo.org> libptp2-1.1.10.ebuild:
+  Stable on ppc wrt bug 228543
 
   20 Jun 2008; Daniel Black <dragonheart@gentoo.org>
   files/libptp2-1.1.10-makefile.patch:
