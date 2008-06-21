@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.2.2.ebuild,v 1.13 2007/08/25 17:13:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.2.2.ebuild,v 1.14 2008/06/21 13:57:30 dirtyepic Exp $
 
 inherit eutils
 
@@ -14,21 +14,25 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
-DEPEND="virtual/libc
-	sys-libs/zlib
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+}
 
 src_compile () {
 	econf \
 		--with-pkgdocdir=/usr/share/doc/${PF}/html \
-		`use_enable nls` \
-		`use_enable threads pthread` \
-		`use_enable ipv6` || die
-	emake || die
+		$(use_enable nls) \
+		$(use_enable threads pthread) \
+		$(use_enable ipv6) || die "Failed configure."
+	emake || die "Failed make."
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "Failed install."
 
 	dodoc AUTHORS INSTALL* NEWS README*
 }

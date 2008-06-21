@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.36 2007/12/25 17:06:38 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.37 2008/06/21 13:57:30 dirtyepic Exp $
+
+  21 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/eb-4.2.2-as-needed.patch, eb-4.2.2.ebuild:
+  Fix building with --as-needed and clean up ebuild.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
