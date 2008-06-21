@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-0.7.6.ebuild,v 1.6 2008/05/10 15:27:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-0.7.6.ebuild,v 1.7 2008/06/21 19:44:28 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE="gnome"
 
 RDEPEND=">=dev-libs/glib-2
