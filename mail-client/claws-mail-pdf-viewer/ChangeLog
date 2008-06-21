@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.29 2008/06/14 19:36:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.30 2008/06/21 06:16:42 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  claws-mail-pdf-viewer-0.9.1.ebuild:
+  added correct email address for Ken and fixed bug 228681, reported by
+  corsair: app-text/poppler needs to be built with USE=gtk enabled, so add a
+  check
 
   14 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
   claws-mail-pdf-viewer-0.9.1.ebuild:
