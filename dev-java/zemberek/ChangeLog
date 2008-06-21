@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/zemberek
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.3 2007/11/25 12:29:35 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.4 2008/06/21 11:51:50 serkan Exp $
+
+*zemberek-2.1_rc1 (21 Jun 2008)
+
+  21 Jun 2008; Serkan Kaba <serkan@gentoo.org> +zemberek-2.1_rc1.ebuild:
+  Version bump and turn linguas_tr on by default for desktop profile.
 
   25 Nov 2007; Samuli Suominen <drac@gentoo.org> zemberek-2.0.ebuild:
   amd64 stable wrt #200242
