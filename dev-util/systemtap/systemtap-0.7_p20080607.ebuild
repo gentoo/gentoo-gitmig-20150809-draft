@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7_p20080607.ebuild,v 1.1 2008/06/07 17:43:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7_p20080607.ebuild,v 1.2 2008/06/21 18:51:48 swegener Exp $
 
 inherit linux-info eutils
 
@@ -16,11 +16,11 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="sqlite"
 
 DEPEND=">=dev-libs/elfutils-0.122
 	sys-libs/libcap
-	=dev-db/sqlite-3*"
+	sqlite? ( =dev-db/sqlite-3* )"
 RDEPEND="${DEPEND}
 	virtual/linux-sources"
 
@@ -36,6 +36,11 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/systemtap-20080119-grsecurity.patch
+}
+
+src_compile() {
+	econf $(use_enable sqlite) || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.63 2008/06/21 14:58:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.64 2008/06/21 18:51:48 swegener Exp $
+
+  21 Jun 2008; Sven Wegener <swegener@gentoo.org>
+  systemtap-0.7_p20080531.ebuild, systemtap-0.7_p20080607.ebuild,
+  systemtap-0.7_p20080614.ebuild, systemtap-0.7_p20080621.ebuild:
+  Add sqlite USE flag.
 
 *systemtap-0.7_p20080621 (21 Jun 2008)
 
