@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.1-r1.ebuild,v 1.3 2008/06/21 12:28:30 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.1-r1.ebuild,v 1.4 2008/06/21 13:50:55 nixnut Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://sam.zoy.org/projects/monsterz/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc sparc ~x86"
+KEYWORDS="amd64 ~hppa ppc sparc ~x86"
 IUSE=""
 
 DEPEND="dev-python/pygame"
