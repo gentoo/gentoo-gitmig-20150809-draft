@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.6.1.ebuild,v 1.4 2008/06/17 22:11:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.6.1.ebuild,v 1.5 2008/06/21 20:02:33 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="doc examples"
 
 RDEPEND="dev-libs/libusb"
