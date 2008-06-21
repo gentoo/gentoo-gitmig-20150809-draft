@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.3 2008/06/21 14:46:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.4 2008/06/21 19:00:08 tester Exp $
 
 inherit distutils eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/foursuite/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.4suite.org/"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-python/pyxml-0.8.4"
