@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19.ebuild,v 1.4 2007/01/24 03:32:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19.ebuild,v 1.5 2008/06/21 09:02:45 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
+	append-flags -fno-strict-aliasing # fix QA issues
 	sed -i "s:\$(LDFLAGS):${LDFLAGS}:" "${S}/server/Makefile.in"
 
 	econf || die "econf failed"
