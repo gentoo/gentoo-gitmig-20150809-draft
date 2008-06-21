@@ -1,6 +1,25 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.120 2008/05/14 22:59:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.121 2008/06/21 01:34:57 mrness Exp $
+
+*wvstreams-4.4.1 (21 Jun 2008)
+
+  21 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  +files/wvstreams-4.4.1-MOC-fix.patch,
+  +files/wvstreams-4.4.1-as-needed.patch,
+  +files/wvstreams-4.4.1-external-xplc.patch,
+  +files/wvstreams-4.4.1-gcc43.patch, +files/wvstreams-4.4.1-gnulib.patch,
+  +files/wvstreams-4.4.1-linux-serial.patch,
+  +files/wvstreams-4.4.1-sigaction.patch,
+  +files/wvstreams-4.4.1-type-punned.patch,
+  +files/wvstreams-4.4.1-uniconfd-ini.patch,
+  +files/wvstreams-4.4.1-valgrind.patch,
+  +files/wvstreams-4.4.1-wireless-user.patch,
+  +files/wvstreams-4.4.1-wvconfemu.patch,
+  +files/wvstreams-4.4-valgrind.patch, wvstreams-4.4.ebuild,
+  +wvstreams-4.4.1.ebuild:
+  Fix broken compilation when valgrind is installed (#210867). Version bump
+  (#211327).
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> wvstreams-4.4.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.

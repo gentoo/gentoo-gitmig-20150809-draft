@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.10 2008/06/21 01:34:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.1.ebuild,v 1.1 2008/06/21 01:34:57 mrness Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
@@ -13,19 +13,19 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="qt3 qdbm pam slp doc debug"
 
 RESTRICT="test"
 
 RDEPEND=">=sys-libs/db-4
-	>=sys-libs/zlib-1.2.3
-	>=dev-libs/openssl-0.9.8e
-	>=dev-libs/xplc-0.3.13
+	sys-libs/zlib
+	dev-libs/openssl
+	dev-libs/xplc
 	qt3? ( $(qt_min_version 3.1) )
 	qdbm? ( dev-db/qdbm )
-	pam? ( virtual/pam )
-	slp? ( >=net-libs/openslp-1.2.1 )"
+	pam? ( sys-libs/pam )
+	slp? ( net-libs/openslp )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -38,30 +38,20 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-wireless-user.patch"
 	epatch "${FILESDIR}/${P}-uniconfd-ini.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
-	epatch "${FILESDIR}/${P}-sane-cflags.patch"
 	epatch "${FILESDIR}/${P}-type-punned.patch"
 	epatch "${FILESDIR}/${P}-sigaction.patch"
 	epatch "${FILESDIR}/${P}-wvconfemu.patch"
-	epatch "${FILESDIR}/${P}-valgrind.patch"
-
 	epatch "${FILESDIR}/${P}-external-xplc.patch"
-	local XPLC_VER=`best_version dev-libs/xplc`
-	XPLC_VER=${XPLC_VER#*/*-} #reduce it to ${PV}-${PR}
-	XPLC_VER=${XPLC_VER%%[_-]*} # main version without beta/pre/patch/revision
-	sed -i -e "s:^xplc_version=.*:xplc_version='${XPLC_VER}':" "${S}/configure.ac" \
-		|| die "failed to set current xplc version"
-	rm -r "${S}/xplc"
-
 	use qt3 && epatch "${FILESDIR}/${P}-MOC-fix.patch"
+	epatch "${FILESDIR}/${P}-valgrind.patch"
+	epatch "${FILESDIR}/${P}-gnulib.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	ht_fix_file "${S}/configure.ac"
 
-	#needed by xplc and as-needed patch:
+	#needed by xplc, as-needed and gnulib patch
 	cd "${S}"
-	eautoconf || die "autoconf failed"
-	#without following, the makefile would remove some files and request
-	#you to run ./configure again
-	touch include/wvautoconf.h.in configure
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
@@ -71,6 +61,7 @@ src_compile() {
 		`use_with slp openslp` \
 		`use_with qt3 qt` \
 		`use_enable debug` \
+		--disable-optimization \
 		--without-tcl \
 		--without-swig \
 		--with-xplc \
@@ -84,7 +75,7 @@ src_compile() {
 }
 
 src_install() {
-	emake CXXOPTS="-fPIC -DPIC" COPTS="-fPIC -DPIC" DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	if use doc ; then
 		#the list of files is too big for dohtml -r Docs/doxy-html/*
