@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1.1.ebuild,v 1.2 2008/06/16 18:52:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1.1.ebuild,v 1.3 2008/06/21 06:35:10 pva Exp $
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 
 # Dependency on autoconf due to bug #225893
 DEPEND="${DEPEND}
-	>=sys-devel/autoconf-2.62
+	>=sys-devel/autoconf-2.61-r2
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
 
