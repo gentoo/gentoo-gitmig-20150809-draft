@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.173 2008/06/21 06:35:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.174 2008/06/21 09:24:54 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  net-snmp-5.4.1.1.ebuild:
+  stable x86, security bug 225105
 
   21 Jun 2008; Peter Volkov <pva@gentoo.org> net-snmp-5.4.1.1.ebuild:
   autoconf-2.62 is not ready to be stabilized. Updating dependency to a
