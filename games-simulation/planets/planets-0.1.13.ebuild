@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.3 2008/06/20 21:57:03 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.4 2008/06/21 12:16:39 bluebird Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://planets.homedns.org/dist/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/tcl
