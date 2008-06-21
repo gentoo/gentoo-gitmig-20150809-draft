@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r3.ebuild,v 1.2 2008/06/21 11:43:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r3.ebuild,v 1.3 2008/06/21 11:52:02 gentoofan23 Exp $
 
 inherit flag-o-matic eutils
 
@@ -56,8 +56,6 @@ src_install() {
 
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins "${S}/gtk2/ochusha48.png" ochusha.png
-	insinto /usr/share/icons/hicolor/32x32/apps
-	newins "${S}/gtk2/ochusha32.png" ochusha.png
 
 	dodoc ACKNOWLEDGEMENT AUTHORS BUGS \
 		ChangeLog INSTALL* NEWS README TODO

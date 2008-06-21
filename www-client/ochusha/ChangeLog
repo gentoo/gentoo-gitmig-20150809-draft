@@ -1,6 +1,10 @@
 # ChangeLog for www-client/ochusha
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.27 2008/06/21 11:43:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.28 2008/06/21 11:52:02 gentoofan23 Exp $
+
+  21 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  ochusha-0.5.8.2-r3.ebuild:
+  Remove insert of no-longer existant ochusha32.png
 
   21 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   ochusha-0.5.8.2-r1.ebuild, ochusha-0.5.8.2-r3.ebuild:
