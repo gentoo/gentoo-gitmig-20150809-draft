@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8757 2008/06/21 21:54:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8758 2008/06/21 22:46:36 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -35,7 +35,7 @@
 # Can be removed after bug #228777 is fixed.
 =dev-java/sun-jmx-1.2.1-r2
 dev-java/jgroups
-dev-java/jconfig
+dev-util/jconfig
 dev-java/jcs
 dev-java/hibernate
 dev-java/oscache
