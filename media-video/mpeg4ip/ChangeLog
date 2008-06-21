@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.60 2008/05/07 21:12:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.61 2008/06/21 21:24:35 yngwin Exp $
+
+*mpeg4ip-1.5.0.1-r5 (21 Jun 2008)
+
+  21 Jun 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/mpeg4ip-1.5.0.1-avcodec_extern_c-2.patch,
+  +files/mpeg4ip-1.5.0.1-ffmpeg-headers.patch, +mpeg4ip-1.5.0.1-r5.ebuild:
+  Add patches to make mpeg4ip compile with new ffmpeg headers location,
+  thanks to Andrew Church in bug 218105.
 
   07 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/mpeg4ip-1.5.0.1+gcc-4.3.patch, mpeg4ip-1.5.0.1-r4.ebuild:
