@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.35 2008/06/20 11:05:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.36 2008/06/21 19:46:40 corsair Exp $
+
+  21 Jun 2008; Markus Rothe <corsair@gentoo.org> linux-atm-2.5.0.ebuild:
+  Stable on ppc64; bug #225777
 
   20 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   linux-atm-2.5.0.ebuild:
