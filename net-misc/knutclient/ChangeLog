@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.35 2008/02/19 12:05:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.36 2008/06/21 11:07:26 carlo Exp $
+
+*knutclient-0.9.3-r1 (21 Jun 2008)
+
+  21 Jun 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/knutclient-0.9.3-xdg-desktop-entry.diff,
+  +knutclient-0.9.3-r1.ebuild:
+  Fix desktop entry properly, get rid of the superfluous arts use flag.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -knutclient-0.9.ebuild,
   -knutclient-0.9.1.ebuild:
