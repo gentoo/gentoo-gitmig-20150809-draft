@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.139 2008/06/16 05:43:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.140 2008/06/21 19:24:29 corsair Exp $
+
+  21 Jun 2008; Markus Rothe <corsair@gentoo.org> lvm2-2.02.37.ebuild:
+  Stable on ppc64; bug #207612
 
   16 Jun 2008; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.37.ebuild:
   Stable for HPPA (bug #207612).
