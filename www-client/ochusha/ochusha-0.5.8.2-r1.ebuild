@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r1.ebuild,v 1.7 2006/11/24 22:33:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r1.ebuild,v 1.8 2008/06/21 11:43:36 gentoofan23 Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc ABOUT-NLS ACKNOWLEDGEMENT AUTHORS BUGS \
 		ChangeLog INSTALL* NEWS README TODO
