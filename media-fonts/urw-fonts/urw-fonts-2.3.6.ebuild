@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.3.6.ebuild,v 1.8 2008/03/21 12:19:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.3.6.ebuild,v 1.9 2008/06/21 06:01:53 pva Exp $
 
 inherit eutils rpm font versionator
 
@@ -17,10 +17,12 @@ SLOT="0"
 IUSE=""
 
 S=${WORKDIR}
-FONT_S="${S}"
+FONT_S=${S}
 FONT_SUFFIX="afm pfb"
 DOCS="ChangeLog README* TODO"
 
-src_install() {
-	font_src_install
+pkg_postinst() {
+	font_pkg_postinst
+	elog "If you upgraded from ${PN}-2.1-r2 some fonts will look a bit"
+	elog "differently. Take a look at bug #208990 if interested."
 }
