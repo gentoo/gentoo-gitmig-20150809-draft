@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.4 2008/06/21 06:01:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2008c.ebuild,v 1.5 2008/06/21 06:11:48 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -39,14 +39,14 @@ src_compile() {
 	fi
 	emake || die "emake failed"
 	if tc-is-cross-compiler ; then
-		make -C "${S}"-native CC=$(tc-getBUILD_CC) CFLAGS="${BUILD_CFLAGS}" zic || die
+		emake -C "${S}"-native CC=$(tc-getBUILD_CC) CFLAGS="${BUILD_CFLAGS}" zic || die
 	fi
 }
 
 src_install() {
 	local zic=""
 	tc-is-cross-compiler && zic="zic=${S}-native/zic"
-	make install ${zic} DESTDIR="${D}" || die
+	emake install ${zic} DESTDIR="${D}" || die
 	rm -rf "${D}"/usr/share/zoneinfo-leaps
 	dodoc README Theory
 	dohtml *.htm *.jpg
