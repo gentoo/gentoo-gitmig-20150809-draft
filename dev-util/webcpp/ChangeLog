@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/webcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/ChangeLog,v 1.14 2008/06/20 14:20:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/ChangeLog,v 1.15 2008/06/21 14:39:33 nixnut Exp $
+
+  21 Jun 2008; nixnut <nixnut@gentoo.org> webcpp-0.8.4.ebuild:
+  Stable on ppc wrt bug 228549
 
   20 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/webcpp-0.8.4-gcc43.patch, webcpp-0.8.4.ebuild:
