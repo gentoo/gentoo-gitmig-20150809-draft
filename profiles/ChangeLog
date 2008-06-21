@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1578 2008/06/21 01:33:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1579 2008/06/21 08:53:17 serkan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  21 Jun 2008; Serkan Kaba <serkan@gentoo.org>
+  default/linux/package.use.mask, package.mask:
+  Mask dev-java/sun-jmx since the sources are no longer available. See bug
+  #226381.
 
   21 Jun 2008; Alin Năstac <mrness@gentoo.org> package.mask:
   P.mask net-libs/wvstreams-4.4.1 (#211327).
