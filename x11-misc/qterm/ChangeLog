@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.26 2008/06/21 09:22:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.27 2008/06/21 13:53:18 nixnut Exp $
+
+  21 Jun 2008; nixnut <nixnut@gentoo.org> qterm-0.5.2.ebuild:
+  Stable on ppc wrt bug 216466
 
   21 Jun 2008; Christian Faulhammer <opfer@gentoo.org> qterm-0.5.2.ebuild:
   stable x86, bug 216466
