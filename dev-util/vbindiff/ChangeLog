@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/vbindiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.5 2008/06/14 10:20:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.6 2008/06/21 08:02:17 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  vbindiff-3.0_beta1.ebuild:
+  stable x86, bug 226049
 
   14 Jun 2008; Christoph Mende <angelos@gentoo.org>
   vbindiff-3.0_beta1.ebuild:
