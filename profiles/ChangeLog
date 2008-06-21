@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1582 2008/06/21 15:52:10 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1583 2008/06/21 16:46:16 serkan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  21 Jun 2008; Serkan Kaba <serkan@gentoo.org> package.mask:
+  Add note on dev-java/sun-jmx stabilization bug.
 
   21 Jun 2008; Serkan Kaba <serkan@gentoo.org> package.mask:
   Move dev-java/sun-jmx mask to top of package.mask file. Limit it to
