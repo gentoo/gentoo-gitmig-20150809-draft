@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.3-r1.ebuild,v 1.2 2008/06/21 08:16:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.3-r1.ebuild,v 1.3 2008/06/21 08:39:14 opfer Exp $
 
 WANT_AUTOMAKE=none
 
@@ -9,7 +9,7 @@ inherit eutils autotools
 DESCRIPTION="Combined filter, redirector and access controller plugin for Squid."
 HOMEPAGE="http://www.squidguard.org"
 SRC_URI="http://www.squidguard.org/Downloads/squidGuard-${PV}.tar.gz
-    http://www.squidguard.org/Downloads/Patches/${PV}/squidGuard-${PV}-patch-20080613.tar.gz"
+	http://www.squidguard.org/Downloads/Patches/${PV}/squidGuard-${PV}-patch-20080613.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
