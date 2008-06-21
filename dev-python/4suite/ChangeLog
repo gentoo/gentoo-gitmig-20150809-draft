@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.37 2008/06/21 19:00:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.38 2008/06/21 19:25:05 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  4suite-1.0.2-r1.ebuild:
+  stable x86, bug 228567
 
   21 Jun 2008; Olivier Crête <tester@gentoo.org> 4suite-1.0.2-r1.ebuild:
   Stable on amd64, bug #228567
