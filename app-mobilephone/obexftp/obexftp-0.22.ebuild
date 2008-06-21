@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.1 2008/06/20 23:43:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.2 2008/06/21 22:45:08 mrness Exp $
 
 inherit eutils perl-module flag-o-matic python
 
@@ -35,9 +35,6 @@ src_compile() {
 		strip-flags
 		append-flags "-g -DOBEXFTP_DEBUG=5"
 	fi
-	if use ruby && ! use bluetooth ; then
-		sed -i -e "s/^\(.*bluetooth.*\)$/#\1/" swig/ruby/extconf.rb
-	fi
 
 	econf \
 		$(use_enable bluetooth) \
@@ -50,6 +47,9 @@ src_compile() {
 }
 
 src_install() {
+	# -j1 because "make -fMakefile.ruby install" fails
+	# upstream added -j1 to that command so it should be removed 
+	# from here in the next version bump
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README* THANKS TODO
