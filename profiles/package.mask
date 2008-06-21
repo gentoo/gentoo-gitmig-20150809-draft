@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8752 2008/06/21 13:23:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8753 2008/06/21 15:52:10 serkan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
+# Masked since dev-java/sun-jmx sources
+# are no longer available. See bug #226381.
+=dev-java/sun-jmx-1.2.1-r2
+dev-java/jgroups
+dev-java/jconfig
+dev-java/jcs
+dev-java/hibernate
+dev-java/oscache
+dev-java/swarmcache
 
 # Alin Năstac <mrness@gentoo.org> (20 Jun 2008)
 # Non-working version (#211327)
@@ -1597,8 +1608,3 @@ games-fps/aaut
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
-
-# Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
-# Masked since the sources are no longer available
-# See bug #226381.
-dev-java/sun-jmx
