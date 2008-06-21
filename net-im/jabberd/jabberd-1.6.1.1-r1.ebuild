@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.3 2008/06/20 19:32:42 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.4 2008/06/21 01:25:54 gentoofan23 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -53,13 +53,10 @@ src_unpack() {
 src_compile() {
 	unset LC_ALL LC_CTYPE
 
-	local myconf=
-	use ipv6 && local myconf="--enable-ipv6"
 	econf \
 		--sysconfdir=/etc/jabber \
-		--disable-debug \
-		--disable-pool_debug \
-		${myconf} \
+		--enable-ssl \
+		$(use_enable ipv6) \
 		$(use_with mysql) \
 		$(use_with postgres postgresql) \
 		|| die "econf failed"
