@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.10 2007/11/04 17:26:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.11 2008/06/21 10:33:41 carlo Exp $
 
 inherit kde
 
@@ -62,5 +62,5 @@ src_unpack() {
 	fi
 
 	# Fixes bug 186942
-	epatch "${FILESDIR}"/${P}-fix-desktop-file.patch
+#	epatch "${FILESDIR}"/${P}-fix-desktop-file.patch
 }

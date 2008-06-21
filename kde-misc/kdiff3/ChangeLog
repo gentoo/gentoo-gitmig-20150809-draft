@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kdiff3
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.30 2007/11/04 17:26:04 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.31 2008/06/21 10:33:41 carlo Exp $
+
+*kdiff3-0.9.92-r1 (21 Jun 2008)
+
+  21 Jun 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdiff3-0.9.92-desktop-entry-fix.diff, kdiff3-0.9.92.ebuild,
+  +kdiff3-0.9.92-r1.ebuild:
+  Fix desktop entry properly, get rid of arts use flag.
 
   04 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
   files/kdiff3-0.9.92-fix-desktop-file.patch, kdiff3-0.9.92.ebuild:
