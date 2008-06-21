@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/consolekit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.32 2007/12/06 22:15:06 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.33 2008/06/21 20:38:24 yngwin Exp $
+
+*consolekit-0.2.10 (21 Jun 2008)
+
+  21 Jun 2008; Ben de Groot <yngwin@gentoo.org> +consolekit-0.2.10.ebuild:
+  Version bump. Fixes compilation with glibc-2.8, bug 225405.
 
   06 Dec 2007; Steve Dibb <beandog@gentoo.org> consolekit-0.2.3.ebuild:
   amd64 stable, bug 201103
