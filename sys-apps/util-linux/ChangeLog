@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.239 2008/06/07 17:46:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.240 2008/06/21 04:46:29 vapier Exp $
+
+*util-linux-2.14 (21 Jun 2008)
+
+  21 Jun 2008; Mike Frysinger <vapier@gentoo.org> +util-linux-2.14.ebuild:
+  Version bump #228061 by Conrad Kostecki.
 
   07 Jun 2008; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.13.1-no-a.out.patch, util-linux-2.13.1.1.ebuild:
