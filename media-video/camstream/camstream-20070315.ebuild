@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.6 2008/04/15 11:51:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.7 2008/06/21 11:42:07 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -23,19 +23,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.9.6"
-
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}.patch"
-	for dir in "${S}" "${S}"/ccvt; do
-		cd ${dir}
-		eautoconf
-		elibtoolize
-		libtoolize --copy --force
-	done
+	eautoreconf
+
 	# Camstream has 32 bit asssembler normally.
 	# patch has to be adapted
 	#use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
