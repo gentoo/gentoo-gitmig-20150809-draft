@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.4 2008/06/20 10:40:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.5 2008/06/21 13:12:08 nixnut Exp $
 
 inherit autotools eutils fdo-mime
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.bz2
 	mirror://gentoo/${P}-guile-1.8.diff.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0
