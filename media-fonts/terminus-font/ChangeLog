@@ -1,6 +1,15 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.56 2008/06/16 11:04:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.57 2008/06/21 09:25:04 pva Exp $
+
+*terminus-font-4.26-r1 (21 Jun 2008)
+
+  21 Jun 2008; Peter Volkov <pva@gentoo.org> -terminus-font-4.07.ebuild,
+  +terminus-font-4.26-r1.ebuild:
+  Added upstream patches to change view of some letters, bug #199696, thank
+  Kir Kolyshkin for report and Leonid Evdokimov for work. Ported to use
+  font.eclass; changed installation to install all fonts not depending on X
+  USE flag, bug #155783, thank J.Taimr for report.
 
   16 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   terminus-font-4.26.ebuild:
