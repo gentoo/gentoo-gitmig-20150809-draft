@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.6.ebuild,v 1.1 2008/06/02 13:28:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.6.ebuild,v 1.2 2008/06/21 18:53:45 hanno Exp $
 
-inherit fdo-mime flag-o-matic multilib python eutils autotools
+inherit gnome2 fdo-mime flag-o-matic multilib python eutils autotools
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
@@ -52,6 +52,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )"
 
+DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
+
 pkg_setup() {
 	if use pdf && ! built_with_use app-text/poppler-bindings gtk; then
 		eerror "This package requires app-text/poppler-bindings compiled with GTK+ support."
@@ -61,11 +63,34 @@ pkg_setup() {
 		eerror "This package requires media-libs/alsa-lib compiled with midi support."
 		die "Please reemerge media-libs/alsa-lib with USE=\"midi\"."
 	fi
+
+	G2CONF="--enable-default-binary \
+		--with-x \
+		$(use_with aalib aa) \
+		$(use_with alsa) \
+		$(use_enable altivec) \
+		$(use_with curl libcurl) \
+		$(use_with dbus) \
+		$(use_with hal) \
+		$(use_with gnome gnomevfs) \
+		$(use_with gtkhtml gtkhtml2) \
+		--with-libjpeg \
+		$(use_with exif libexif) \
+		$(use_with lcms) \
+		$(use_enable mmx) \
+		$(use_with mng libmng) \
+		$(use_with pdf poppler) \
+		$(use_with png libpng) \
+		$(use_enable python) \
+		$(use_enable smp mp) \
+		$(use_enable sse) \
+		$(use_with svg librsvg) \
+		$(use_with tiff libtiff) \
+		$(use_with wmf)"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	gnome2_src_unpack
 	epatch "${FILESDIR}/gimp-web-browser.patch"
 
 	# Workaround for MIME-type, this is fixed in gimp trunk, so we can
@@ -87,45 +112,11 @@ src_compile() {
 		append-flags "-fsigned-char"
 	fi
 
-	econf --enable-default-binary \
-		--with-x \
-		$(use_with aalib aa) \
-		$(use_with alsa) \
-		$(use_enable altivec) \
-		$(use_with curl) \
-		$(use_enable debug) \
-		$(use_enable doc gtk-doc) \
-		$(use_with dbus) \
-		$(use_with hal) \
-		$(use_with gnome gnomevfs) \
-		$(use_with gtkhtml gtkhtml2) \
-		--with-libjpeg \
-		$(use_with exif libexif) \
-		$(use_with lcms) \
-		$(use_enable mmx) \
-		$(use_with mng libmng) \
-		$(use_with pdf poppler) \
-		$(use_with png libpng) \
-		$(use_enable python) \
-		$(use_enable smp mp) \
-		$(use_enable sse) \
-		$(use_with svg librsvg) \
-		$(use_with tiff libtiff) \
-		$(use_with wmf) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-
-	dodoc AUTHORS ChangeLog* HACKING NEWS README*
+	gnome2_src_compile
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
+	gnome2_pkg_postinst
 
 	elog
 	elog "If you want Postscript file support, emerge ghostscript."
@@ -136,8 +127,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
+	gnome2_pkg_postrm
 	python_mod_cleanup /usr/$(get_libdir)/gimp/2.0/python \
 		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }
