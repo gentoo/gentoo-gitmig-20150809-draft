@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzma-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.35 2008/06/21 04:25:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.36 2008/06/21 07:52:22 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  lzma-utils-4.32.6.ebuild:
+  stable x86, bug 228671
 
   21 Jun 2008; Mike Frysinger <vapier@gentoo.org> lzma-utils-4.32.6.ebuild:
   Block older p7zip to force smooth upgrade #228113 by Andrey Kislyuk.
