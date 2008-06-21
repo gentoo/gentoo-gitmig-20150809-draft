@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.105 2008/06/09 00:58:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.106 2008/06/21 05:50:02 vapier Exp $
+
+  21 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-2.6.25.20080417-build.patch,
+  iproute2-2.6.25.20080417.ebuild:
+  Respect env CPPFLAGS, add fix by Bertrand Jacquin for cross-compiling
+  #226035, and build against system headers rather than local copies #226359
+  by Derk W te Bokkel.
 
 *iproute2-2.6.25.20080417 (09 Jun 2008)
 

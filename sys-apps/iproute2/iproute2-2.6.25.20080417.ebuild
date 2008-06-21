@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.25.20080417.ebuild,v 1.1 2008/06/09 00:58:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.25.20080417.ebuild,v 1.2 2008/06/21 05:50:02 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,11 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
+	sed -i "s:-O2:${CFLAGS} ${CPPFLAGS}:" Makefile || die "sed Makefile failed"
+	epatch "${FILESDIR}"/${P}-build.patch #226035
+
+	# build against system headers
+	rm -r include/linux include/netinet #include/ip{,6}tables{,_common}.h include/libiptc
 
 	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
 	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
