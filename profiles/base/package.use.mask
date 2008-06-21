@@ -71,3 +71,8 @@ dev-java/ibm-jre-bin alsa
 # Sven Wegener <swegener@gentoo.org> (17 Feb 2008)
 # Needed depenencies have been removed from the tree
 dev-db/mysql-gui-tools workbench
+
+# Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
+# Masked since dev-java/sun-jmx sources are no longer available
+# See bug #226381.
+dev-java/log4j jmx
