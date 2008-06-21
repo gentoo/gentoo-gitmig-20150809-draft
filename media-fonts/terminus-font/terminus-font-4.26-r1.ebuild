@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.26-r1.ebuild,v 1.1 2008/06/21 09:25:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.26-r1.ebuild,v 1.2 2008/06/21 09:58:16 pva Exp $
 
 EAPI="1"
 
@@ -26,7 +26,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="a-like-o ru-dv +ru-g qoute ru-i ru-k width bolddiag"
 
-DEPEND="sys-apps/gawk"
+DEPEND="sys-apps/gawk
+		x11-apps/bdftopcf"
 
 FONTDIR=/usr/share/fonts/terminus
 DOCS="README README-BG"
