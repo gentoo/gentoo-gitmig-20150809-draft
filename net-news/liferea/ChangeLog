@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.153 2008/06/20 15:50:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.154 2008/06/21 19:13:03 bluebird Exp $
+
+  21 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> liferea-1.4.15.ebuild:
+  Stable on sparc, bug #228357
 
 *liferea-1.4.16b (20 Jun 2008)
 
