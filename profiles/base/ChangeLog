@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.41 2008/06/21 08:48:08 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.42 2008/06/21 15:41:05 serkan Exp $
+
+  21 Jun 2008; Serkan Kaba <serkan@gentoo.org> package.use.mask:
+  Move dev-java/log4j jmx to top of the package.use.mask file.
 
   21 Jun 2008; Serkan Kaba <serkan@gentoo.org> package.use.mask:
   Add dev-java/log4j jmx because dev-java/sun-jms is masked.
