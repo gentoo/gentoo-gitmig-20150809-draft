@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.60 2008/06/21 15:01:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.61 2008/06/21 15:05:18 opfer Exp $
+
+  21 Jun 2008; Christian Faulhammer <opfer@gentoo.org> -mew-5.1.ebuild:
+  clean up
 
   21 Jun 2008; nixnut <nixnut@gentoo.org> mew-5.2.ebuild:
   Stable on ppc wrt bug 226715
