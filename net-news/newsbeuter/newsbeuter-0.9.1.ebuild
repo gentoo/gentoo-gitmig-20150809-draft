@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.7-r1.ebuild,v 1.1 2008/01/27 14:13:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.9.1.ebuild,v 1.1 2008/06/22 18:08:25 gentoofan23 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://synflood.at/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnxml-0.18
@@ -20,12 +20,8 @@ DEPEND=">=net-libs/libnxml-0.18
 		net-misc/curl"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
-
-	if has_version ">=dev-db/sqlite-3.5" ; then
-		epatch "${FILESDIR}"/${PV}-sqlite-3.5.patch || die
-	fi
 
 	sed -i \
 		-e "s:-ggdb:${CXXFLAGS}:" \

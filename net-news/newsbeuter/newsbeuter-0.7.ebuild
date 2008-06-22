@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.7.ebuild,v 1.3 2008/01/27 14:13:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.7.ebuild,v 1.4 2008/06/22 18:08:25 gentoofan23 Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,7 @@ DEPEND=">=net-libs/libnxml-0.18
 		net-misc/curl"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e "s:-ggdb:${CXXFLAGS}:" \

@@ -1,6 +1,13 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.12 2008/05/30 07:21:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.13 2008/06/22 18:08:25 gentoofan23 Exp $
+
+*newsbeuter-0.9.1 (22 Jun 2008)
+
+  22 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  -files/0.7-sqlite-3.5.patch, newsbeuter-0.7.ebuild,
+  -newsbeuter-0.7-r1.ebuild, +newsbeuter-0.9.1.ebuild:
+  Version bump, keyworded ~amd64, bug #209304
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986). Assigning
