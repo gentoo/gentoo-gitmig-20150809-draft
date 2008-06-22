@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.2.4.ebuild,v 1.1 2008/06/19 05:54:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.2.4-r1.ebuild,v 1.1 2008/06/22 12:43:38 pva Exp $
 
 inherit eutils multilib autotools
 
@@ -38,7 +38,7 @@ src_compile() {
 	# I wanted to put the include files in /usr/include/hunspell
 	# but this means the openoffice build won't find them.
 	econf \
-		$(use_with nls) \
+		$(use_enable nls) \
 		$(use_with ncurses ui) \
 		$(use_with readline readline) \
 		|| die "econf failed"
