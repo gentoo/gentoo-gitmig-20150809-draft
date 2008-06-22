@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.159 2008/06/19 16:59:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.160 2008/06/22 02:24:18 leio Exp $
+
+  22 Jun 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.2-r10.ebuild:
+  Add back accidentally lost enchant dependency for spellchecking, bug 228817;
+  Reintroduce sandbox error workaround, bug 228589
 
 *epiphany-2.22.2-r10 (19 Jun 2008)
 

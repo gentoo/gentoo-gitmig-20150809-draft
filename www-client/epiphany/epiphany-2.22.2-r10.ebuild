@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.2-r10.ebuild,v 1.1 2008/06/19 16:59:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.2-r10.ebuild,v 1.2 2008/06/22 02:24:18 leio Exp $
 
 inherit gnome2 eutils multilib
 
@@ -36,6 +36,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 		>=dev-python/pygtk-2.7.1
 		>=dev-python/gnome-python-2.6
 	)
+	spell? ( app-text/enchant )
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -67,6 +68,10 @@ src_compile() {
 	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/xpti.dat
 	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/xpti.dat.tmp
 	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/compreg.dat.tmp
+
+	# Why are these write-opened per bug 228589?
+	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat
+	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat.tmp
 
 	gnome2_src_compile
 }
