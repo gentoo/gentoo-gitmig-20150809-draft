@@ -2,3 +2,4 @@ move xfce-extra/xfce4-icon-theme x11-themes/xfce4-icon-theme
 move xfce-extra/ristretto media-gfx/ristretto
 move xfce-extra/terminal x11-terms/terminal
 move xfce-extra/xfburn app-cdr/xfburn
+move xfce-extra/mousepad app-editors/mousepad
