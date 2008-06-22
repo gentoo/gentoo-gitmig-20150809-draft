@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vmailmgr
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.29 2007/09/26 04:54:46 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.30 2008/06/22 22:18:05 mrness Exp $
+
+  22 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  files/vmailmgr-0.97-gentoo.patch,
+  -files/vmailmgr-0.97-no-authvmailmgr.patch, vmailmgr-0.97.ebuild:
+  Sanitize patches (#226797).
 
   26 Sep 2007; Alin Năstac <mrness@gentoo.org> vmailmgr-0.97.ebuild:
   Sanitize ebuild code.

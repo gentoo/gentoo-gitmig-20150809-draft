@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.8 2007/09/26 04:54:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.9 2008/06/22 22:18:05 mrness Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils autotools
 
 DESCRIPTION="virtual domains for qmail"
 HOMEPAGE="http://www.vmailmgr.org/"
@@ -21,12 +21,9 @@ RDEPEND=">=sys-apps/ucspi-unix-0.34
 src_unpack() {
 	unpack ${A}
 
+	cd "${S}" || die "source dir not found"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-
-	#Remove support for courier-imap authentication
-	#since it is incompatible with the latest version of courier-authlib
-	epatch "${FILESDIR}/${P}-no-authvmailmgr.patch"
-	rm -rf "${S}/lib/courier-authlib"
+	eautoreconf
 }
 
 src_install() {
