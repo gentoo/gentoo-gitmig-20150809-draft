@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1591 2008/06/22 17:19:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1592 2008/06/22 18:15:50 keytoaster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> package.mask:
+  Removing mask on kde-base/ksync since it got removed.
 
   22 Jun 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Unmask media-plugins/vdr-graphtft wrt bug 214740.
