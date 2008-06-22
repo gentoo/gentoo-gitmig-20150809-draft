@@ -1,6 +1,6 @@
 # Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.2 2008/06/20 20:02:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.3 2008/06/22 17:25:17 yngwin Exp $
 
 inherit vdr-plugin
 
@@ -11,8 +11,7 @@ SRC_URI="http://www.kost.sh/vdr/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
-IUSE="imagemagick debug vorbis oss ff-card 4mb-mod sndfile"
-# graphtft
+IUSE="imagemagick debug vorbis oss ff-card graphtft 4mb-mod sndfile"
 
 PATCHES="${FILESDIR}/${P}-gentoo.diff
 	${FILESDIR}/${P}-vdr-1.5.x.diff
@@ -29,9 +28,8 @@ DEPEND=">=media-video/vdr-1.3.30
 
 RDEPEND="dev-java/blackdown-jre
 	media-tv/shoutcast2vdr
-	sys-process/at"
-	# add back in when unmasking vdr-graphtft
-	# graphtft? ( >=media-plugins/vdr-graphtft-0.1.5 )
+	sys-process/at
+	graphtft? ( >=media-plugins/vdr-graphtft-0.1.5 )"
 
 pkg_setup() {
 
@@ -51,7 +49,7 @@ pkg_setup() {
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	# use graphtft && epatch "${FILESDIR}/${P}-graphtftcoverfix.diff"
+	use graphtft && epatch "${FILESDIR}/${P}-graphtftcoverfix.diff"
 
 	use !ff-card && sed -i Makefile -e "s:HAVE_FFCARD=1:#HAVE_FFCARD=1:"
 	use !vorbis && sed -i Makefile -e "s:#WITHOUT_LIBVORBISFILE=1:WITHOUT_LIBVORBISFILE=1:"

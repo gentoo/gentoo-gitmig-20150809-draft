@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-music
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.3 2008/06/20 20:02:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.4 2008/06/22 17:25:17 yngwin Exp $
+
+  22 Jun 2008; Ben de Groot <yngwin@gentoo.org> vdr-music-0.2.0.ebuild:
+  Undoing previous change, as media-plugins/vdr-graphtft is unmasked again.
 
   20 Jun 2008; Ben de Groot <yngwin@gentoo.org> vdr-music-0.2.0.ebuild:
   Commenting out graphtft options, as media-plugins/vdr-graphtft is p.masked
