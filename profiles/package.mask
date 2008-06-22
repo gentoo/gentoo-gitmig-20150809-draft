@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8759 2008/06/22 01:48:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8760 2008/06/22 02:56:35 serkan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -37,11 +37,12 @@
 # Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
 # Masked since dev-java/sun-jmx sources
 # are no longer available. See bug #226381.
-# Can be removed after bug #228777 is fixed.
+# Can be removed after dev-java/sun-jmx-1.2.1-r2
+# is stabilized for amd64 ppc x86.
 =dev-java/sun-jmx-1.2.1-r2
 dev-java/jgroups
 dev-util/jconfig
-dev-java/jcs
+=dev-java/jcs-1.2.7.9*
 dev-java/hibernate
 dev-java/oscache
 dev-java/swarmcache
