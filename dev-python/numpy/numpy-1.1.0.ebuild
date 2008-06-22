@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4-r2.ebuild,v 1.11 2008/06/22 11:13:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.1.0.ebuild,v 1.1 2008/06/22 11:13:01 bicatali Exp $
 
-NEED_PYTHON=2.3
+NEED_PYTHON=2.4
 
 inherit distutils eutils flag-o-matic fortran
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 
 IUSE="lapack"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 LICENSE="BSD"
 
 # whatever LDFLAGS set will break linking
@@ -63,13 +63,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Fix some paths and docs in f2py
-	epatch "${FILESDIR}"/${PN}-1.0.1-f2py.patch
-
-	# Patch to use feclearexcept(3) rather than fpsetsticky(3) on FreeBSD 5.3+
-	epatch "${FILESDIR}"/${P}-freebsd.patch
-
-	# Detect phenom and nocona hardware correctly.  Bug #183236.
-	epatch "${FILESDIR}"/${P}-cpuinfo.patch
+	epatch "${FILESDIR}"/${P}-f2py.patch
 
 	if use lapack; then
 		append-ldflags "$(pkg-config --libs-only-other cblas lapack)"
