@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.3.ebuild,v 1.6 2007/11/16 00:48:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.3.ebuild,v 1.7 2008/06/22 12:48:55 hanno Exp $
+
+inherit eutils
 
 MY_P="${PN}3-${PV}"
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -20,7 +22,7 @@ DEPEND=">=sys-libs/gwenhywfar-2.6.1
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/libchipcard-ccid-dir.diff"
 }
