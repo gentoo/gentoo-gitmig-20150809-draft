@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.ebuild,v 1.1 2008/06/22 21:27:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.ebuild,v 1.2 2008/06/22 22:21:16 mr_bones_ Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -58,4 +58,4 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
-}					
+}
