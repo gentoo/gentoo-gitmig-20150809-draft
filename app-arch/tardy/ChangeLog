@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/tardy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.7 2006/11/05 07:34:52 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.8 2008/06/22 18:24:41 vanquirius Exp $
+
+*tardy-1.16 (22 Jun 2008)
+
+  22 Jun 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +files/tardy-1.12-gcc43.patch, +files/tardy-1.16-gcc43.patch,
+  metadata.xml, tardy-1.12.ebuild, +tardy-1.16.ebuild:
+  Add gcc-4.3 patch for bug 226861. Thanks to Evil Compile Person <bugs at
+  dev.gentooexperimental.org> and Jeremy Olexa <darkside at gentoo dot org>.
+  1.16 version bump. Adding myself as a maintainer in metadata.
 
   05 Nov 2006; Mike Frysinger <vapier@gentoo.org>
   +files/tardy-1.12-sort.patch, tardy-1.12.ebuild:
