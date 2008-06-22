@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.28 2008/06/13 13:22:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.29 2008/06/22 11:35:43 markusle Exp $
+
+  22 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/hdf5-1.6.6-gcc4.3.patch, hdf5-1.6.6.ebuild:
+  Added patch to allow compilation with gcc-4.3 (fixes bug #228341). 
+  Thanks much to Pinky <master_up@post.cz> for his patch.
 
   13 Jun 2008; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.6.ebuild:
   Removed sparc specific mask of mpi in DEPEND in favor of package.use.mask
