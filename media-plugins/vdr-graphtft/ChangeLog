@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.4 2008/05/15 12:22:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.5 2008/06/22 11:56:51 hd_brummy Exp $
+
+  22 Jun 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-graphtft-0.1.16_alpha-gentoo.diff,
+  -files/ffmpeg-0.4.9_p20080326-new_header.diff,
+  -vdr-graphtft-0.1.16_alpha.ebuild:
+  cleanup old version; not fixed for newer ffmpeg
 
   15 May 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-graphtft-0.1.18_alpha-ffmpeg-0.4.9_p20080326-new_header.diff,
