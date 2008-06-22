@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aften
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.4 2008/06/16 17:34:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.5 2008/06/22 15:13:14 maekke Exp $
+
+  22 Jun 2008; Markus Meier <maekke@gentoo.org> aften-0.0.8.ebuild:
+  amd64/x86 stable, bug #227307
 
   16 Jun 2008; nixnut <nixnut@gentoo.org> aften-0.0.8.ebuild:
   Stable on ppc wrt bug 227307
