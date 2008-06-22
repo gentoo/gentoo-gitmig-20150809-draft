@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.31 2008/06/22 14:51:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.32 2008/06/22 15:26:49 ken69267 Exp $
+
+  22 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> privoxy-3.0.8.ebuild:
+  amd64 stable, bug #228745
 
   22 Jun 2008; Markus Rothe <corsair@gentoo.org> privoxy-3.0.8.ebuild:
   Stable on ppc64; bug #228745
