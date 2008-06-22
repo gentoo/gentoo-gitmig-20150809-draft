@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzma-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.40 2008/06/21 20:25:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.41 2008/06/22 01:18:08 vapier Exp $
+
+  22 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/lzma-utils-4.32.6-semicolon.patch, lzma-utils-4.32.6.ebuild:
+  Add fix from upstream for building with -pedantic #228725 by Nico R.
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> lzma-utils-4.32.6.ebuild:
   Stable on ppc64; bug #228671
