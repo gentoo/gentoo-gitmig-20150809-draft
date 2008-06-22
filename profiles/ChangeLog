@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1590 2008/06/22 12:27:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1591 2008/06/22 17:19:46 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 Jun 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Unmask media-plugins/vdr-graphtft wrt bug 214740.
 
   22 Jun 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
   Fixed other left typos in USE flags descriptions for terminus font, thank
