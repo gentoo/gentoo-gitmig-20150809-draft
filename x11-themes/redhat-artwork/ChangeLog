@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.93 2008/06/21 08:50:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.94 2008/06/22 16:23:27 armin76 Exp $
+
+  22 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  alpha/ia64/sparc stable wrt #226641
 
   21 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
