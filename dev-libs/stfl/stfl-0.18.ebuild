@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.18.ebuild,v 1.1 2007/12/27 12:47:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.18.ebuild,v 1.2 2008/06/22 17:30:49 gentoofan23 Exp $
 
-inherit perl-module toolchain-funcs eutils
+inherit perl-module toolchain-funcs eutils multilib
 
 DESCRIPTION="A library which implements a curses-based widget set for text terminals"
 HOMEPAGE="http://www.clifford.at/stfl/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.clifford.at/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="examples perl ruby"
 
@@ -23,13 +23,14 @@ RDEPEND="sys-libs/ncurses
 		ruby? ( dev-lang/ruby )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e "s!-Os -ggdb!!" \
 		-e "s!^all:.*!all: libstfl.a!" \
 		Makefile
 
+	epatch "${FILESDIR}/${P}-multilib.patch"
 	sed -i -e "s:/usr/lib/python2.4:${D}/usr/lib/python2.4:" \
 		python/Makefile.snippet
 
@@ -56,7 +57,7 @@ src_install() {
 	local exdir="/usr/share/doc/${PF}/examples"
 
 	dodir /usr/lib/python2.4/lib-dynload
-	emake -j1 prefix="/usr" DESTDIR="${D}" install || die "make install failed"
+	emake -j1 prefix="/usr" DESTDIR="${D}" LIBDIR="$(get_libdir)" install || die "make install failed"
 
 	dodoc README
 

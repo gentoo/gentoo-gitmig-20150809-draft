@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.3 2007/12/27 12:50:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.4 2008/06/22 17:30:49 gentoofan23 Exp $
 
 inherit perl-module toolchain-funcs eutils
 
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/ncurses
 		ruby? ( dev-lang/ruby )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e "s!-Os -ggdb!!" \
