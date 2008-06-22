@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/s3cmd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.3 2008/03/12 10:32:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.4 2008/06/22 19:26:36 darkside Exp $
+
+*s3cmd-0.9.7 (22 Jun 2008)
+
+  22 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +s3cmd-0.9.7.ebuild:
+  Version bump. bug #212010
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.
