@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.42 2008/06/21 20:00:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.43 2008/06/22 15:18:48 maekke Exp $
+
+  22 Jun 2008; Markus Meier <maekke@gentoo.org> libnjb-2.2.6.ebuild:
+  amd64/x86 stable, bug #227433
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> libnjb-2.2.6.ebuild:
   Stable on ppc64; bug #227433
