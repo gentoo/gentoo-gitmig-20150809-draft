@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.40 2008/06/20 11:06:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.41 2008/06/22 06:22:37 welp Exp $
+
+  22 Jun 2008; <welp@gentoo.org> fpc-2.2.0.ebuild:
+  Stable on amd64; bug 194646
 
   20 Jun 2008; Christian Faulhammer <opfer@gentoo.org> fpc-2.2.0.ebuild:
   quote variables
