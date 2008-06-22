@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8758 2008/06/21 22:46:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8759 2008/06/22 01:48:20 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steve Dibb <beandog@gentoo.org> (21 Jun 2008)
+# Needs testing; Added custom-cpuopts flag for more fine-grained
+# control.  Aside from that, everything is normal.
+>=media-video/mplayer-1.0_rc2_p27120
 
 # Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
 # Masked since dev-java/sun-jmx sources
@@ -261,10 +266,6 @@ net-analyzer/sonar
 # Rémi Cardona <remi@gentoo.org> (27 Mai 2008)
 # mildly broken, see bug #156583
 =app-text/gtranslator-1.1.7
-
-# Steve Dibb <beandog@gentoo.org> (25 May 2008)
-# Needs testing
->=media-video/mplayer-1.0_rc2_p26753-r2
 
 # Ingmar Vanhassel <ingmar@gentoo.org (25 May 2008)
 # Needs Qt-4.4.0, which is package.mask'ed.
