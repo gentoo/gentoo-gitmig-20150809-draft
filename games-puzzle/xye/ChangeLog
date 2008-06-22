@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xye
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.7 2008/05/02 14:29:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.8 2008/06/22 23:19:29 gentoofan23 Exp $
+
+  22 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> xye-0.8.0.ebuild:
+  amd64 stable, bug #228963
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/xye-0.8.0-gcc43.patch, xye-0.8.0.ebuild:
