@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libvformat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.6 2007/09/25 20:54:38 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.7 2008/06/22 17:10:59 mrness Exp $
+
+  22 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  files/libvformat-nodoc.patch, libvformat-1.13.ebuild:
+  Patch only the .am file and run eautoreconf (#226707).
 
   25 Sep 2007; Alin Năstac <mrness@gentoo.org> libvformat-1.13.ebuild:
   Cosmetic changes.
