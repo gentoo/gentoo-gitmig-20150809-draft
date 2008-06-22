@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1588 2008/06/22 02:56:35 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1589 2008/06/22 10:57:35 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 Jun 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Fixed typo in USE flag for terminus font: qoute -> quote, bug #228813,
+  thank Franz Metz for report.
 
   22 Jun 2008; Serkan Kaba <serkan@gentoo.org> package.mask:
   Fix note on dev-java/sun-jmx mask and limit dev-java/jcs mask.
