@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mini-xml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.13 2008/03/21 13:39:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.14 2008/06/22 20:53:28 darkside Exp $
+
+*mini-xml-2.5 (22 Jun 2008)
+
+  22 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +mini-xml-2.5.ebuild:
+  Version bump. Bug #213861. Also, fixed to not execute/compile testsuite by
+  default. Use FEATURES=test to run testsuite
 
   21 Mar 2008; Vlastimil Babka <caster@gentoo.org> mini-xml-2.4.ebuild:
   Add missing unpack commands for Flameeyes, bug #214128.
