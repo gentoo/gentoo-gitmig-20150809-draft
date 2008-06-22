@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.100 2008/06/21 20:24:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.101 2008/06/22 12:50:49 gentoofan23 Exp $
+
+  22 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  faad2-2.0-r13.ebuild, faad2-2.6.1-r1.ebuild:
+  amd64 stable, bug #228647; fix minor repoman warnings in faad2-2.0-r13
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> faad2-2.6.1-r1.ebuild:
   Stable on ppc64; bug #228647

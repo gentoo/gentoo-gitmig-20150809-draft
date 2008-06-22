@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r13.ebuild,v 1.14 2007/05/21 21:03:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r13.ebuild,v 1.15 2008/06/22 12:50:49 gentoofan23 Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
@@ -55,7 +55,7 @@ src_install() {
 	# which is needed by /usr/include/mp4.h... so we just
 	# include <sys/types.h> instead.  See bug #55767
 	sed -i -e "s:#include <systems.h>:#include <sys/types.h>:" \
-		${D}/usr/include/mpeg4ip.h
+		"${D}"/usr/include/mpeg4ip.h
 	sed -i -e "s:\"mp4ff_int_types.h\":<stdint.h>:" \
-		${D}/usr/include/mp4ff.h
+		"${D}"/usr/include/mp4ff.h
 }
