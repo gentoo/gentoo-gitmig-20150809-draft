@@ -17,3 +17,7 @@ media-tv/mythtv opengl-xvmc
 # use.masking for as long as kde4 is p.masked, see bug 225197
 x11-themes/qtcurve-qt4 kde
 
+# Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
+# does not work with ffmpeg new headers yet
+net-www/gnash ffmpeg
+

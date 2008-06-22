@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8762 2008/06/22 18:15:50 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8763 2008/06/22 22:39:14 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -63,7 +63,6 @@ media-sound/potamus
 # voip herd, bug 218102:
 media-libs/mediastreamer
 # no herd, bug 218105:
-net-www/gnash
 # mpeg4ip-1.5.0.1-r5 has new patches
 =media-video/mpeg4ip-1.5.0.1-r3
 =media-video/mpeg4ip-1.5.0.1-r4
