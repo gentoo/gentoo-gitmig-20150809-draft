@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.5 2008/02/19 17:34:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.6 2008/06/22 21:37:46 mr_bones_ Exp $
 
+EAPI=1
 inherit toolchain-funcs eutils qt3 games
 
 DESCRIPTION="highly addictive and remotely related to tetris"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3)"
+DEPEND=">=x11-libs/qt-3.3:3"
 
 S=${WORKDIR}/${P/_}
 
