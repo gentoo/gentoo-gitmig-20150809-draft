@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.26 2008/03/20 20:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.27 2008/06/22 10:52:50 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -206,39 +206,7 @@ src_unpack() {
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch
 
-		# check for the glibc to have the guard
-		if	[ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep OBJECT | grep '__guard')" ] &&
-			[ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
-		then
-			ewarn "this sys-libs/glibc has __guard object and __stack_smash_handler functions"
-			ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
-			ewarn "please do not press crtl-C or crtl-Z during this period - it will continue"
-			SCANPATH="$(for i in $(cat /etc/ld.so.conf | grep -v '/usr/lib/gcc-lib' | grep -v '^\#'); do echo -n $i; echo -n ' '; done) $(echo ${PATH} | sed 's,:, ,g')"
-			if [ "$(find ${SCANPATH} -type f -perm -1 -maxdepth 9 -exec readelf -s {} \; 2>&1 | grep "__guard\@GCC" 2>&1 1>/dev/null; echo $?)" == "0" ]
-			then
-				eerror "found binaries that are dynamically linked to the libgcc with __guard@@GCC"
-				eerror "you need to compile these binaries without CFLAGS -fstack-protector/hcc -r"
-				echo
-				eerror "also you have to make sure that using ccache needs the cache to be flushed"
-				eerror "wipe out /var/tmp/ccache or /root/.ccache, this will remove possible saved"
-				eerror "-fstack-protector arguments that still may reside in such a compiler cache"
-				echo
-				eerror "when such binaries are found, gcc cannot remove libgcc propolice functions"
-				eerror "leading to gcc -static -fstack-protector breaking, see gentoo bug id 25299"
-				einfo  "you can run 'qpkg -f' from the gentoolkit package and reemerge the program"
-				einfo  "to do a full scan on your system, enter this following command in a shell:"
-				echo
-				einfo  "find / -type f -perm -1 -maxdepth 9 -exec echo -n '__guard at GCC check in: {} ' \; -exec qpkg -f {} \; -exec readelf -s {} \; 2>&1 | grep __guard | grep -B1 '__guard\@GCC'"
-				echo
-				exit 1
-			else
-				echo
-				einfo  "no binaries with suspicious libgcc __guard@GCC dependencies in ${SCANPATH}"
-				echo
-				epatch ${FILESDIR}/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch
-			fi
-		fi
-		# end of check for the glibc to have the guard
+		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch
 	fi
 
 	# Patches from Mandrake/Suse ...
@@ -251,6 +219,7 @@ src_unpack() {
 	# GCC bugfixes ...
 	epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
 	epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
+	epatch ${FILESDIR}/3.2.3/gcc-3.2.3-poisoned-malloc.patch #225743
 
 	# Get gcc to decreases the number of times the collector has to be run
 	# by increasing its memory workspace, bug #16548.
