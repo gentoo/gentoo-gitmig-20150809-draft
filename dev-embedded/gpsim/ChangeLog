@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.38 2008/06/17 11:33:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.39 2008/06/22 08:22:48 calchan Exp $
+
+  22 Jun 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/gpsim-0.22.0-gcc43.patch:
+  Committed the gcc 4.3 patch this time, thanks to Christopher Head (bug
+  #228819).
 
   17 Jun 2008; Denis Dupeyron <calchan@gentoo.org> gpsim-0.22.0.ebuild:
   Fixed compilation with gcc 4.3, thanks to GerbilSoft (bug #218210).
