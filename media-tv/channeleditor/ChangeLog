@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/channeleditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.2 2008/06/18 19:42:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.3 2008/06/22 15:41:32 maekke Exp $
+
+  22 Jun 2008; Markus Meier <maekke@gentoo.org> channeleditor-1.9.2.ebuild:
+  x86 stable, bug #228147
 
 *channeleditor-1.9.2.1 (18 Jun 2008)
 
