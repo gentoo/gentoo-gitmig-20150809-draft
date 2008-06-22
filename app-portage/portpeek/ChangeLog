@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.4 2008/03/31 18:41:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.5 2008/06/22 16:10:44 mpagano Exp $
+
+*portpeek-1.6.0 (22 Jun 2008)
+
+  22 Jun 2008; Mike Pagano <mpagano@gentoo.org> +portpeek-1.6.0.ebuild:
+  Remove use of deprecated portage modules
 
   31 Mar 2008; Doug Goldstein <cardoe@gentoo.org> portpeek-1.5.7.ebuild:
   Add ~amd64
