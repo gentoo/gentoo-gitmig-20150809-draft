@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.26-r1.ebuild,v 1.2 2008/06/21 09:58:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.26-r2.ebuild,v 1.1 2008/06/22 11:33:59 pva Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.html"
 SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz
 		ru-dv? ( http://www.is-vn.bg/hamster/${P}-dv1.diff.gz )
 		ru-g? ( http://www.is-vn.bg/hamster/${P}-ge1.diff.gz )
-		qoute? ( http://www.is-vn.bg/hamster/${P}-gq2.diff.gz )
+		quote? ( http://www.is-vn.bg/hamster/${P}-gq2.diff.gz )
 		width? ( http://www.is-vn.bg/hamster/${P}-cm2.diff.gz )
 		bolddiag? ( http://www.is-vn.bg/hamster/${P}-kx3.diff.gz
 				a-like-o? ( http://www.is-vn.bg/hamster/terminus-font-4.26-kx3-ao2.diff.gz )
@@ -24,10 +24,11 @@ SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="a-like-o ru-dv +ru-g qoute ru-i ru-k width bolddiag"
+IUSE="a-like-o ru-dv +ru-g quote ru-i ru-k width bolddiag"
 
 DEPEND="sys-apps/gawk
 		x11-apps/bdftopcf"
+RDEPEND=""
 
 FONTDIR=/usr/share/fonts/terminus
 DOCS="README README-BG"
@@ -53,7 +54,7 @@ src_unpack() {
 	fi
 	use ru-dv && epatch "${WORKDIR}"/${P}-dv1.diff
 	use ru-g && epatch "${WORKDIR}"/${P}-ge1.diff
-	use qoute && epatch "${WORKDIR}"/${P}-gq2.diff
+	use quote && epatch "${WORKDIR}"/${P}-gq2.diff
 	use width && epatch "${WORKDIR}"/${P}-cm2.diff
 }
 

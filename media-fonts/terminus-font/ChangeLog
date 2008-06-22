@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.58 2008/06/21 09:58:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.59 2008/06/22 11:33:59 pva Exp $
+
+*terminus-font-4.26-r2 (22 Jun 2008)
+
+  22 Jun 2008; Peter Volkov <pva@gentoo.org> -terminus-font-4.26-r1.ebuild,
+  +terminus-font-4.26-r2.ebuild:
+  Fixed typo in USE flag for terminus font: qoute -> quote, bug #228813,
+  thank Franz Metz for report. Added RDEPEND to avoid implicit
+  RDEPEND=DEPEND.
 
   21 Jun 2008; Peter Volkov <pva@gentoo.org> terminus-font-4.26-r1.ebuild:
   Updated lost in the previous commit dependency.
