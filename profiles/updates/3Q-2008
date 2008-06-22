@@ -4,3 +4,4 @@ move xfce-extra/terminal x11-terms/terminal
 move xfce-extra/xfburn app-cdr/xfburn
 move xfce-extra/mousepad app-editors/mousepad
 move xfce-extra/xfwm4-themes x11-themes/xfwm4-themes
+move xfce-base/xfprint net-print/xfprint

@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1600 2008/06/22 22:39:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1601 2008/06/22 22:54:28 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -14,7 +14,8 @@
   22 Jun 2008; Samuli Suominen <drac@gentoo.org> +updates/3Q-2008:
   Move xfce4-icon-theme to x11-themes. Move ristretto to media-gfx.
   Move terminal to x11-terms. Move xfburn to app-cdr. Move mousepad
-  to app-editors. Move xfwm4-themes to x11-themes.
+  to app-editors. Move xfwm4-themes to x11-themes. Move xfprint to
+  net-print.
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org> thirdpartymirrors:
   New mirror:// for Xfce4 desktop environment.
