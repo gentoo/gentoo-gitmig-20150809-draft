@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.2 2008/05/15 12:22:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.3 2008/06/22 17:43:34 hd_brummy Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -26,7 +26,8 @@ DEPEND=">=media-video/vdr-1.4.7-r9
 		directfb? ( dev-libs/DirectFB )
 		graphtft-fe? ( $(qt4_min_version 4.0.0) )"
 
-PATCHES=("${FILESDIR}/${P}-gentoo.diff")
+PATCHES=("${FILESDIR}/${P}-gentoo.diff"
+		"${FILESDIR}/gcc-4.3-missing_includes.diff")
 
 S="${WORKDIR}/graphtft-${MY_PV}"
 
@@ -56,6 +57,10 @@ src_unpack() {
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
 		epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326-new_header.diff"
+	fi
+
+	if has_version ">=media-gfx/imagemagick-6.4" ; then
+		epatch "${FILESDIR}/${P}-imagemagick-6.4-new_header.diff"
 	fi
 
 	use directfb && sed -i Makefile \
