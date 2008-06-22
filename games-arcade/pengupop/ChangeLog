@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pengupop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.14 2008/06/19 17:24:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.15 2008/06/22 15:37:05 maekke Exp $
+
+  22 Jun 2008; Markus Meier <maekke@gentoo.org> pengupop-2.2.3.ebuild:
+  x86 stable, bug #227649
 
   19 Jun 2008; nixnut <nixnut@gentoo.org> pengupop-2.2.3.ebuild:
   Stable on ppc wrt bug 227649
