@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.83 2008/02/22 10:41:38 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.84 2008/06/22 23:23:57 loki_val Exp $
+
+*gst-plugins-ffmpeg-0.10.4 (22 Jun 2008)
+
+  22 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +gst-plugins-ffmpeg-0.10.4.ebuild:
+  Bumping to 0.10.4, to get something that compiles with gcc-4.3. Solves
+  226023, 225855 and 137401. Uses system ffmpeg, despite upstream
+  recommending against it. Debian, Ubuntu and a few others are already doing
+  this, though.
 
   22 Feb 2008; Zaheer Abbas Merali <zaheerm@gentoo.org> 
   gst-plugins-ffmpeg-0.10.1-r1.ebuild,
