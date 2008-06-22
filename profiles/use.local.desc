@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3598 2008/06/22 10:57:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3599 2008/06/22 12:27:09 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -978,11 +978,11 @@ media-fonts/dejavu:fontforge - Enables fontforge build
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:bolddiag - Boldified diagonal parts of '4', 'k', 'x' and some other chars
-media-fonts/terminus-font:ru-dv - Changes view of russian letters 'de' and 've' (see homepage)
-media-fonts/terminus-font:ru-i - Changes view of russian letter 'i' - not like latin u, but like "mirrored" N (see homepage)
-media-fonts/terminus-font:ru-g - Changes view of russian letter 'ge' (see homepage)
-media-fonts/terminus-font:ru-k - Changes view of russian letter 'k' (see homepage)
-media-fonts/terminus-font:quote - Changes view of quotes: symetric ` and ' instead of asymetric one (see homepage)
+media-fonts/terminus-font:ru-dv - Changes view of Russian letters 'de' and 've' (see homepage)
+media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
+media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepage)
+media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
+media-fonts/terminus-font:quote - Changes view of quotes: symmetric ` and ' instead of asymmetric one (see homepage)
 media-fonts/terminus-font:width - Wider versions of some font elements
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/autotrace:flash - Adds support for creating SWF files using Ming
