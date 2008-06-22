@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.3 2008/06/21 06:05:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.4 2008/06/22 01:26:33 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -321,6 +321,7 @@ pkg_preinst() {
 	# they will fail.  also, skip if this glibc is a cross compiler.
 	[[ ${ROOT} != "/" ]] && return 0
 	[[ -d ${D}/$(get_libdir) ]] || return 0
+	cd / #228809
 	local x striptest
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
