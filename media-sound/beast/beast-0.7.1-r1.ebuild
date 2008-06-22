@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.5 2008/06/21 13:12:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.6 2008/06/22 22:10:00 eva Exp $
 
 inherit autotools eutils fdo-mime
 
@@ -50,7 +50,14 @@ src_unpack() {
 	# Remove G_DISABLE_DEPRECATED, bug #223291
 	epatch "${FILESDIR}/${P}-glib.patch"
 
+	# Fix macro definition to properly use intltool
 	epatch "${FILESDIR}/${P}-configure.patch"
+
+	# Fix po tests
+	epatch "${FILESDIR}/${P}-potfiles.patch"
+
+	# Remove useless dist check that makes tests fail
+	sed -i "s/\.PHONY:.*/.PHONY:/" Makefile.decl || die "sed failed"
 
 	intltoolize --force --automake --copy || die "intltoolize failed"
 	eautoreconf

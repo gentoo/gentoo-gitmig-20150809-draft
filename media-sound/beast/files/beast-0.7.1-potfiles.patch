@@ -1,0 +1,32 @@
+--- a/po/POTFILES.in	2008-06-22 15:12:10.000000000 +0200
++++ b/po/POTFILES.in	2008-06-22 15:13:28.000000000 +0200
+@@ -131,3 +131,29 @@
+ plugins/davxtalstrings.c
+ plugins/freeverb/bsefreeverb.c
+ tools/bsewavetool.cc
++
++beast-gtk/bstgentypes.c
++birnet/birnetcpu.cc
++birnet/birnetutils.hh
++bse/bsebus.genprc.c
++bse/bsebusmodule.genidl.hh
++bse/bsecontainer.genprc.c
++bse/bsecore.genidl.hh
++bse/bseieee754.h
++bse/bseladspamodule.c
++bse/bseparasite.genprc.c
++bse/bsesong.genprc.c
++bse/bsesource.genprc.c
++bse/bsetrack.genprc.c
++plugins/artscompressor.genidl.hh
++plugins/bseamplifier.genidl.hh
++plugins/bsebalance.genidl.hh
++plugins/bsecontribsampleandhold.genidl.hh
++plugins/bsenoise.genidl.hh
++plugins/bsequantizer.genidl.hh
++plugins/bsesummation.genidl.hh
++plugins/davbassfilter.genidl.hh
++plugins/davchorus.genidl.hh
++plugins/standardguspatchenvelope.genidl.hh
++plugins/standardsaturator.genidl.hh
++tests/latency/bselatencytest.genidl.hh
