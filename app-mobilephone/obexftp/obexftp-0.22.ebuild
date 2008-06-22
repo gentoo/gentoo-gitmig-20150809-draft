@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.2 2008/06/21 22:45:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.3 2008/06/22 00:04:47 mr_bones_ Exp $
 
 inherit eutils perl-module flag-o-matic python
 
@@ -48,7 +48,7 @@ src_compile() {
 
 src_install() {
 	# -j1 because "make -fMakefile.ruby install" fails
-	# upstream added -j1 to that command so it should be removed 
+	# upstream added -j1 to that command so it should be removed
 	# from here in the next version bump
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
