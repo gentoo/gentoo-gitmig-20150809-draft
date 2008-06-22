@@ -1,3 +1,15 @@
+diff -Naur libev-3.42.orig/Makefile.am libev-3.42/Makefile.am
+--- libev-3.42.orig/Makefile.am	2008-05-11 09:12:36.000000000 +0900
++++ libev-3.42/Makefile.am	2008-06-22 09:23:05.000000000 +0900
+@@ -9,7 +9,7 @@
+ 
+ man_MANS = ev.3
+ 
+-include_HEADERS = ev.h ev++.h event.h
++include_HEADERS = ev.h ev++.h
+ 
+ lib_LTLIBRARIES = libev.la
+ 
 diff -Naur libev-3.42.orig/configure.ac libev-3.42/configure.ac
 --- libev-3.42.orig/configure.ac	2008-06-17 19:12:02.000000000 +0900
 +++ libev-3.42/configure.ac	2008-06-18 01:23:21.000000000 +0900
