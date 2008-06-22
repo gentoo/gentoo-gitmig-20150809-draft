@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0.ebuild,v 1.4 2008/05/18 16:31:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0.ebuild,v 1.5 2008/06/22 16:38:05 gentoofan23 Exp $
 
-inherit eutils mono
+inherit eutils mono multilib
 
 DESCRIPTION="Support library for using Rio devices with mtp"
 HOMEPAGE="http://www.freakysoft.de/html/libkarma/"
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use !mono && epatch "${FILESDIR}/libkarma-0.0.6-mono.patch"
+	epatch "${FILESDIR}/${P}-multilib.patch"
 }
 
 src_compile() {
@@ -29,5 +30,6 @@ src_compile() {
 }
 
 src_install() {
+	export _LIBDIR=$(get_libdir)
 	emake -j1 PREFIX="${D}/usr" install || die "emake install failed"
 }
