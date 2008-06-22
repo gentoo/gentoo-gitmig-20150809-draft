@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.18 2008/06/20 21:47:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.19 2008/06/22 11:30:00 maekke Exp $
+
+  22 Jun 2008; Markus Meier <maekke@gentoo.org> motion-3.2.10.1.ebuild:
+  amd64 stable, bug #227053
 
 *motion-3.2.10.1 (20 Jun 2008)
 
