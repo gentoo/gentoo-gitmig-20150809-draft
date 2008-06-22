@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.2.ebuild,v 1.13 2008/06/22 22:56:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.2.ebuild,v 1.14 2008/06/22 23:23:32 drac Exp $
 
 HOMEPAGE="http://www.xfce.org"
 DESCRIPTION="Meta package for Xfce4 desktop, merge this package to install."
@@ -23,7 +23,7 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	alsa? ( >=xfce-extra/xfce4-mixer-4.4 )
 	oss? ( >=xfce-extra/xfce4-mixer-4.4 )
 	cups? ( >=net-print/xfprint-4.4 )
-	!minimal? ( >=xfce-base/orage-4.4
+	!minimal? ( >=app-office/orage-4.4
 		app-editors/mousepad
 		x11-themes/xfwm4-themes
 		x11-terms/terminal
