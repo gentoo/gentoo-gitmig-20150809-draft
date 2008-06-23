@@ -1,6 +1,6 @@
-# ChangeLog for xfce-extra/notification-daemon-xfce
+# ChangeLog for x11-misc/notification-daemon-xfce
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.1 2008/06/23 02:00:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.2 2008/06/23 02:19:08 drac Exp $
 
   23 Jun 2008; Samuli Suominen <drac@gentoo.org>
   +files/0.3.7/01_all_fix_autoconf.patch,
