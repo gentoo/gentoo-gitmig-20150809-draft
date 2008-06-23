@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.31 2008/06/23 08:25:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.32 2008/06/23 09:10:46 bicatali Exp $
+
+  23 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  grace-5.1.21-r1.ebuild:
+  Re-added Debian patching, wrongly removed on previous commit
 
   22 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/grace-5.1.21-m4-netcdf.patch, +files/grace-5.1.21-netcdf.patch,

@@ -1,13 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21-r1.ebuild,v 1.4 2008/06/23 08:25:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21-r1.ebuild,v 1.5 2008/06/23 09:10:46 bicatali Exp $
 
 EAPI="1"
 inherit eutils fortran
 
+DEB_PR=2
+
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
-SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
+SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-${DEB_PR}.diff.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
@@ -37,9 +40,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	epatch ${PN}_${PV}-${DEB_PR}.diff
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-mkstemp.diff
+	epatch debian/patches/tmpnam_to_mkstemp.diff
+
 	# fix configure instead of aclocal.m4
 	epatch "${FILESDIR}"/${P}-netcdf.patch
 	# fix for missing defines when fortran is disabled
