@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.29 2008/05/29 09:44:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.30 2008/06/23 08:51:56 bicatali Exp $
+
+*mkl-10.0.3.020-r1 (23 Jun 2008)
+
+  23 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +mkl-10.0.3.020-r1.ebuild:
+  Added a symlink for cblas.h, pkg-config options for include directories,
+  and removed rpm cruft from unpacking.
 
   29 May 2008; Sébastien Fabbro <bicatali@gentoo.org>
   mkl-10.0.3.020.ebuild:
