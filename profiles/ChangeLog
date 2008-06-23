@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1604 2008/06/23 00:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1605 2008/06/23 00:39:58 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jun 2008; Jeroen Roovers <jer@gentoo.org> use.local.desc:
+  Add qt3-static USE flag description for www-client/opera (bug #222975).
 
   23 Jun 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask >www-client/opera-9.50 (snapshots).
