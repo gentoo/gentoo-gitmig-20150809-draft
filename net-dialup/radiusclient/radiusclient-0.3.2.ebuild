@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.20 2007/11/16 20:48:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.21 2008/06/23 22:54:56 mrness Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A library for writing RADIUS clients accompanied with several client utilities."
 HOMEPAGE="http://freshmeat.net/projects/radiusclient/"
@@ -16,7 +16,9 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 
+	cd "${S}"
 	epatch "${FILESDIR}/pkgsysconfdir-install.patch"
+	eautoreconf
 }
 
 src_install() {
