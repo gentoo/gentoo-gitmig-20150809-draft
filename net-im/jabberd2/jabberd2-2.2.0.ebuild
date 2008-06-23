@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.23.ebuild,v 1.3 2008/05/21 18:55:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0.ebuild,v 1.1 2008/06/23 13:15:40 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -11,18 +11,19 @@ SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug memdebug ipv6 ldap mysql pam pipe sasl postgres sqlite"
+IUSE="debug memdebug ipv6 ldap mysql pam pipe postgres sqlite"
 
 DEPEND="dev-libs/expat
-	dev-libs/openssl
-	>=virtual/gsasl-0.2.14
-	>=net-dns/libidn-0.6
+	>=dev-libs/openssl-0.9.6b
+	net-libs/udns
+	>=net-dns/libidn-0.3
 	ldap? ( net-nds/openldap )
 	>=sys-libs/db-4.1.24
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
-	sqlite? ( >=dev-db/sqlite-3 )"
+	sqlite? ( >=dev-db/sqlite-3 )
+	>=virtual/gsasl-0.2.26"
 RDEPEND="${DEPEND}
 	>=net-im/jabber-base-0.01
 	!net-im/jabberd"
@@ -34,10 +35,12 @@ src_compile() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
 	replace-flags -O[3s] -O2
 
+	local myconf="--with-sasl=gsasl"
+
 	if use debug; then
-		localconf="${localconf} --enable-debug"
+		myconf="${myconf} --enable-debug"
 		# --enable-pool-debug is currently broken
-		use memdebug && localconf="${localconf} --enable-nad-debug"
+		use memdebug && myconf="${myconf} --enable-nad-debug"
 	else
 		if use memdebug; then
 			ewarn
@@ -50,33 +53,30 @@ src_compile() {
 		--sysconfdir=/etc/jabber \
 		--enable-db \
 		--with-extra-include-path=$(db_includedir) \
-		${localconf} \
+		${myconf} \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
 		$(use_enable mysql) \
 		$(use_enable pam) \
 		$(use_enable pipe) \
 		$(use_enable postgres pgsql) \
-		$(use_enable sqlite) \
-		$(use_with sasl gsasl) \
-		|| die "econf failed"
+		$(use_enable sqlite)
 	emake || die "make failed"
 
 }
 
 src_install() {
-
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	fowners jabber:jabber /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}
 	fperms 750 /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}
 
-	newinitd "${FILESDIR}/jabberd2-${PV}.init" jabberd || die "newinitd failed"
-	newpamd "${FILESDIR}/jabberd2-${PV}.pamd" jabberd || die "newpamd failed"
+	newinitd "${FILESDIR}/${P}.init" jabberd || die "newinitd failed"
+	newpamd "${FILESDIR}/${P}.pamd" jabberd || die "newpamd failed"
 
-	dodoc AUTHORS BUGS PROTOCOL README UPGRADE
+	dodoc AUTHORS README UPGRADE
 	docinto tools
-	dodoc tools/db-setup{.mysql,-status.mysql,.pgsql,.sqlite}
+	dodoc tools/db-setup{.mysql,.pgsql,.sqlite}
 	dodoc tools/{migrate.pl,pipe-auth.pl}
 
 	cd "${D}/etc/jabber/"
