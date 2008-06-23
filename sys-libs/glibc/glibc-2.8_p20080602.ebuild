@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.6 2008/06/23 00:48:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.7 2008/06/23 01:39:12 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -295,6 +295,9 @@ fix_lib64_symlinks() {
 }
 
 pkg_preinst() {
+	# nothing to do if just installing headers
+	just_headers && return
+
 	# PPC64+others may want to eventually be added to this logic if they
 	# decide to be multilib compatible and FHS compliant. note that this
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
@@ -337,6 +340,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	# nothing to do if just installing headers
+	just_headers && return
+
 	if ! tc-is-cross-compiler && [[ -x ${ROOT}/usr/sbin/iconvconfig ]] ; then
 		# Generate fastloading iconv module configuration file.
 		"${ROOT}"/usr/sbin/iconvconfig --prefix="${ROOT}"
