@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.40 2007/12/13 19:32:10 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.41 2008/06/23 13:37:59 drac Exp $
+
+  23 Jun 2008; Samuli Suominen <drac@gentoo.org> libnotify-0.4.4.ebuild:
+  Because repoman ci is broken commit to fix notification-daemon-xfce
+  category failed without error message. Thanks to Mr. Bones.
 
   14 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -libnotify-0.4.3.ebuild:
