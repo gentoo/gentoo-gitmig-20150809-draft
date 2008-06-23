@@ -1,0 +1,12 @@
+diff -ur notification-daemon-xfce-0.3.7.orig/configure.in notification-daemon-xfce-0.3.7/configure.in
+--- notification-daemon-xfce-0.3.7.orig/configure.in	2007-05-26 12:52:28.000000000 +0300
++++ notification-daemon-xfce-0.3.7/configure.in	2008-06-23 04:38:53.000000000 +0300
+@@ -18,7 +18,7 @@
+ dnl *********************
+ dnl *** init autoconf ***
+ dnl *********************
+-AC_INIT([notification-daemon-xfce], [notification_daemon_version()], [http://bugzilla.xfce.org/])
++AC_INIT([notification-daemon-xfce], [notification_daemon_version], [http://bugzilla.xfce.org/])
+ AC_PREREQ([2.50])
+ 
+ dnl *********************
