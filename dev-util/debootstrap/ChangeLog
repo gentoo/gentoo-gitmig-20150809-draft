@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.57 2008/06/16 02:32:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.58 2008/06/23 14:28:39 gentoofan23 Exp $
+
+  23 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  debootstrap-1.0.9.ebuild:
+  amd64 stable, bug #225533
 
   16 Jun 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Take up maintainership.
