@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1608 2008/06/23 02:04:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1609 2008/06/23 02:12:24 drac Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jun 2008; Samuli Suominen <drac@gentoo.org> use.local.desc:
+  Two new local USE flags, xfce and xfce. :-)
 
   23 Jun 2008; Samuli Suominen <drac@gentoo.org> updates/3Q-2008:
   Move notification-daemon-xfce to x11-misc next to original.
