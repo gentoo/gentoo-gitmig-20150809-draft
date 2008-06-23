@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.3 2008/06/20 12:05:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.4 2008/06/23 00:27:07 gentoofan23 Exp $
+
+*opencv-1.0.0-r1 (23 Jun 2008)
+
+  23 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/opencv-1.0.0-addoptionalsamples.patch,
+  +files/opencv-1.0.0-automagicdependencies.patch,
+  +files/opencv-1.0.0-cvcapffmpegundefinedsymbols.patch,
+  +files/opencv-1.0.0-enableuseflags.patch,
+  +files/opencv-1.0.0-fixpythonmultilib.patch,
+  +files/opencv-1.0.0-havepngexrdefs.patch, -opencv-1.0.0.ebuild,
+  +opencv-1.0.0-r1.ebuild:
+  Import changes from science overlay, fixes tons of automagic bugs as well as
+  multilib bugs. Keyworded ~amd64
 
   20 Jun 2008; Samuli Suominen <drac@gentoo.org> opencv-1.0.0.ebuild:
   QAbaddep; pkgconfig is only a build-time depend.
