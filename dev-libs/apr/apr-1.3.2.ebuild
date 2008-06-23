@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.2.ebuild,v 1.1 2008/06/23 18:05:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.2.ebuild,v 1.2 2008/06/23 18:24:27 hollow Exp $
 
 inherit autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="doc ipv6 urandom debug"
+IUSE="doc urandom debug"
 RESTRICT="test"
 
 DEPEND="doc? ( app-doc/doxygen )"
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	# For now we always enable ipv6. Testing has shown that is still works
 	# correctly in ipv4 systems, and currently, the ipv4-only support
-	# is broken in apr. (ipv6 is enabled by default)
+	# is broken in apr. (ipv6 is enabled by default) Bug #123320
 	#myconf="${myconf} $(use_enable ipv6)"
 
 	if use urandom; then
