@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1606 2008/06/23 00:59:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1607 2008/06/23 01:55:00 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jun 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Adjust www-client/opera snapshots mask to cover only 9.51.
 
   23 Jun 2008; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   Add ia32 USE flag description for www-client/opera.
