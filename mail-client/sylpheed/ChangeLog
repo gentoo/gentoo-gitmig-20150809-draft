@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.266 2008/06/22 19:31:13 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.267 2008/06/23 09:19:13 hattya Exp $
+
+  23 Jun 2008; Akinori Hattori <hattya@gentoo.org> -sylpheed-2.4.5.ebuild,
+  -sylpheed-2.4.7.ebuild:
+  cleaned out old ebuild(s).
 
   22 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> sylpheed-2.4.8.ebuild:
   amd64 stable, bug #212606
