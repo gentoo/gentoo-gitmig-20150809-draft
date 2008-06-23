@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.161 2008/05/19 00:18:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.162 2008/06/23 15:33:57 carlo Exp $
+
+*kdevelop-3.5.2-r1 (23 Jun 2008)
+
+  23 Jun 2008; Carsten Lohrke <carlo@gentoo.org> +kdevelop-3.5.2-r1.ebuild:
+  Sync to branch, fixes linking and desktop entry standard comliance issues.
 
 *kdevelop-3.5.2 (19 May 2008)
 
