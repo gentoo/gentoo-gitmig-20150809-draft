@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.8a.ebuild,v 1.1 2007/08/15 02:38:19 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.10a.ebuild,v 1.1 2008/06/23 06:39:57 dev-zero Exp $
 
 inherit distutils
 
