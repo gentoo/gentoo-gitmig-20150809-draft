@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.10 2008/05/25 18:15:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.11 2008/06/23 18:28:16 armin76 Exp $
+
+  23 Jun 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask mtp, no hardware to test
 
   25 May 2008; Tobias Klausmann <klausman@gentoo.org> package.mask:
   libggi compiles on alpha these days

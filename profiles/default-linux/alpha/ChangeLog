@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.99 2008/06/09 18:42:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.100 2008/06/23 18:26:31 armin76 Exp $
+
+  23 Jun 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask mtp, no hardware to test
 
   09 Jun 2008; Raúl Porcel <armin76@gentoo.org> 2007.0/package.mask,
   package.mask:
