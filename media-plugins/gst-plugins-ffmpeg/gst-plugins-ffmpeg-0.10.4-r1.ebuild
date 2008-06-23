@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.4.ebuild,v 1.1 2008/06/22 23:23:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.4-r1.ebuild,v 1.1 2008/06/23 22:34:46 loki_val Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils base
 
-MY_PN=${PN/-plugins/}
+PD=${FILESDIR}/${PV}
+MY_PN=${PN/-plugins}
 MY_P=${MY_PN}-${PV}
 
 # Create a major/minor combo for SLOT
@@ -29,9 +30,15 @@ RDEPEND=">=media-libs/gstreamer-0.10.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+PATCHES=(	"${PD}/01_new-codec-ids.patch"
+		"${PD}/02_av_picture_copy.patch"
+		"${PD}/03_disable-aac.patch"
+		"${PD}/04_disable-mpegts.patch" )
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	base_src_unpack autopatch
 	sed -i \
 		-e 's,ffmpeg/avformat.h,libavformat/avformat.h,'		\
 		-e 's,ffmpeg/avcodec.h,libavcodec/avcodec.h,'			\
