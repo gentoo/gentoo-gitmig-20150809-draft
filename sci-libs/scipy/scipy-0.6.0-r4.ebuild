@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.3 2008/04/17 00:43:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.4 2008/06/23 15:11:53 bicatali Exp $
 
+EAPI=1
 NEED_PYTHON=2.3
-
 inherit eutils distutils fortran flag-o-matic
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -17,9 +17,9 @@ IUSE="fftw umfpack sandbox"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-CDEPEND=">=dev-python/numpy-1.0.4-r1
+CDEPEND="dev-python/numpy
 	virtual/lapack
-	fftw? ( =sci-libs/fftw-2.1* )
+	fftw? ( sci-libs/fftw:2.1 )
 	umfpack? ( sci-libs/umfpack )
 	sandbox? ( >=sci-libs/netcdf-3.6 x11-libs/libX11 )"
 
@@ -89,9 +89,14 @@ src_unpack() {
 		library_dirs = /usr/$(get_libdir)
 		include_dirs = /usr/include
 		[atlas]
-		atlas_libs = $(pkg-config --libs-only-l lapack \
-				| sed -e 's/^-l//' -e 's/ -l/,/g')
-
+		include_dirs = $(pkg-config --cflags-only-I lapack \
+			| sed -e 's/^-I//' -e 's/ -I/:/g')
+		library_dirs = $(pkg-config --libs-only-L lapack \
+			| sed -e 's/^-L//' -e 's/ -L/:/g')
+		atlas_libs = $(pkg-config --libs-only-l blas \
+			| sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
+		lapack_libs = $(pkg-config --libs-only-l lapack \
+			| sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 	EOF
 	if use sandbox; then
 		cd scipy/sandbox

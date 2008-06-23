@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.30 2008/04/21 16:06:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.31 2008/06/23 15:11:53 bicatali Exp $
+
+  23 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  scipy-0.6.0-r4.ebuild:
+  Added a few configuration options for lapack and atlas
 
   21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/scipy-0.6.0-clapack-symbol-fix.patch, -scipy-0.5.2.ebuild,
