@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.8.ebuild,v 1.9 2008/06/22 19:31:13 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.8.ebuild,v 1.10 2008/06/23 09:24:52 hattya Exp $
 
 inherit autotools eutils
 
@@ -28,16 +28,22 @@ RDEPEND="${COMMON_DEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
+AT_M4DIR="ac"
+
 src_unpack() {
+
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.*.diff
 
-	mkdir m4 # bug 219341
+	epatch "${FILESDIR}"/${PN}-2.*.diff
 
 	use crypt || cp ac/missing/gpgme.m4 ac
 
-	AT_M4DIR="ac" eautoreconf
+	# remove "-I m4" from aclocal arguments
+	sed -i "/^ACLOCAL_AMFLAGS/d" Makefile.am
+
+	eautomake
+
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.5.0.ebuild,v 1.1 2008/06/19 15:06:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.5.0.ebuild,v 1.2 2008/06/23 09:24:52 hattya Exp $
 
 inherit autotools eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.*.diff
 
 	use crypt || cp ac/missing/gpgme.m4 ac
+
+	# remove "-I m4" from aclocal arguments
+	sed -i "/^ACLOCAL_AMFLAGS/d" Makefile.am
 
 	eautomake
 
