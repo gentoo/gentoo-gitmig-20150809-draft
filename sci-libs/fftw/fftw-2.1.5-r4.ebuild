@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r4.ebuild,v 1.1 2008/04/29 22:11:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r4.ebuild,v 1.2 2008/06/23 14:31:13 bicatali Exp $
 
 inherit eutils flag-o-matic multilib autotools fortran
 
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-configure.in.patch"
+	epatch "${FILESDIR}/${P}-no-test.patch"
 
 	# fix info files
 	for infofile in doc/fftw*info*; do
@@ -89,9 +90,9 @@ src_compile() {
 
 src_test() {
 	cd "${S}-single"
-	emake check || die "emake check single failed"
+	emake -j1 check || die "emake check single failed"
 	cd "${S}-double"
-	emake check || die "emake check double failed"
+	emake -j1 check || die "emake check double failed"
 }
 
 src_install () {
