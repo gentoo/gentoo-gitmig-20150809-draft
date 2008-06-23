@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-3.0.ebuild,v 1.1 2007/07/11 21:56:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-3.0.ebuild,v 1.2 2008/06/23 09:26:05 ulm Exp $
 
 NEED_EMACS=22
 
@@ -19,8 +19,8 @@ IUSE=""
 DEPEND="media-libs/taglib"
 
 # EMMS can use almost anything for playing media files therefore the dependency
-# posibilities are so broad that we refrain from setting anything explicitly in
-# DEPEND/RDEPEND.
+# possibilities are so broad that we refrain from setting anything explicitly
+# in DEPEND/RDEPEND.
 
 SITEFILE=50${PN}-gentoo.el
 
