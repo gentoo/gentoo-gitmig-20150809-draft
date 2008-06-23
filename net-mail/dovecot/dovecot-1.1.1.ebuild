@@ -1,19 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.14.ebuild,v 1.1 2008/06/04 08:16:55 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.1.ebuild,v 1.1 2008/06/23 19:20:53 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
 MY_P="${P/_/.}"
 MY_PV12=$(get_version_component_range 1-2 ${PV})
 S="${WORKDIR}/${MY_P}"
-SIEVE="dovecot-sieve-1.0.3"
+SIEVE="dovecot-sieve-1.1.5"
 SIEVE_S="${WORKDIR}/${SIEVE}"
-MANAGESIEVE="MANAGESIEVE-v9.3"
+MANAGESIEVE_PATCH="managesieve-0.10.2"
+MANAGESIEVE="managesieve-0.10.2"
+MANAGESIEVE_S="${WORKDIR}/${PN}-${MY_PV12}-${MANAGESIEVE}"
 
-SRC_URI="http://dovecot.org/releases/1.0/${MY_P}.tar.gz
+SRC_URI="http://dovecot.org/releases/${MY_PV12}/${MY_P}.tar.gz
 sieve? ( http://dovecot.org/releases/sieve/${SIEVE}.tar.gz )
-managesieve? ( http://www.rename-it.nl/${PN}/${MY_PV12}/${MY_P}-${MANAGESIEVE}.diff.gz )"
+managesieve? ( http://www.rename-it.nl/${PN}/${MY_PV12}/${MY_P}-${MANAGESIEVE_PATCH}.diff.gz
+http://www.rename-it.nl/${PN}/${MY_PV12}/${PN}-${MY_PV12}-${MANAGESIEVE}.tar.gz )"
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://www.dovecot.org/"
@@ -44,7 +47,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	if use managesieve; then
-		epatch "${WORKDIR}"/${MY_P}-${MANAGESIEVE}.diff
+		epatch "${WORKDIR}"/${MY_P}-${MANAGESIEVE_PATCH}.diff
 		eautoreconf
 	fi
 }
@@ -89,6 +92,14 @@ src_compile() {
 		econf --with-dovecot="${S}" || die "configure failed (sieve)"
 		emake || die "make failed (sieve)"
 	fi
+
+	if use managesieve; then
+		einfo "Building managesieve"
+		cd "${MANAGESIEVE_S}"
+		econf --with-dovecot="${S}" --with-dovecot-sieve="${SIEVE_S}" \
+			|| die "configure failed (managesieve)"
+		emake || die "make failed (managesieve)"
+	fi
 }
 
 src_install () {
@@ -97,12 +108,12 @@ src_install () {
 
 	rm -f "${D}"/etc/dovecot/dovecot-{ldap,sql}-example.conf
 
-	newinitd "${FILESDIR}"/dovecot.init dovecot
+	newinitd "${FILESDIR}"/dovecot.init-r1 dovecot
 
 	# Documentation
 	rm -rf "${D}"/usr/share/doc/dovecot
 	dodoc AUTHORS NEWS README TODO dovecot-example.conf
-	use managesieve && dodoc README.managesieve
+	use managesieve && newdoc ${MANAGESIEVE_S}/README README.managesieve
 	if use doc; then
 		dodoc doc/*.txt
 	else
@@ -170,6 +181,12 @@ src_install () {
 	if use sieve; then
 		make -C "${SIEVE_S}" DESTDIR="${D}" install \
 			|| die "make install failed (sieve)"
+	fi
+
+	# Install managesieve
+	if use managesieve; then
+		make -C "${MANAGESIEVE_S}" DESTDIR="${D}" install \
+			|| die "make install failed (managesieve)"
 	fi
 
 	dodir /var/run/dovecot
