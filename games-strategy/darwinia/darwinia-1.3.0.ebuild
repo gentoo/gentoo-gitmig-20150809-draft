@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.6 2008/02/29 19:42:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.7 2008/06/23 17:42:55 nyhm Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ LICENSE="Introversion"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="cdinstall"
-RESTRICT="strip"
+RESTRICT="mirror strip"
 
 RDEPEND="sys-libs/glibc
 	virtual/opengl

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/darwinia-demo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.10 2008/02/29 19:44:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.11 2008/06/23 17:44:49 nyhm Exp $
+
+  23 Jun 2008; Tristan Heaven <nyhm@gentoo.org> darwinia-demo-1.3.0.ebuild:
+  RESTRICT=mirror
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> darwinia-demo-1.3.0.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
