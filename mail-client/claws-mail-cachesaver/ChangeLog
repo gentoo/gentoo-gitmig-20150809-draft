@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail-cachesaver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-cachesaver/ChangeLog,v 1.21 2008/06/21 19:37:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-cachesaver/ChangeLog,v 1.22 2008/06/23 06:48:00 opfer Exp $
+
+  23 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  -claws-mail-cachesaver-0.10.3.ebuild,
+  -claws-mail-cachesaver-0.10.4.ebuild,
+  -claws-mail-cachesaver-0.10.5.ebuild,
+  -claws-mail-cachesaver-0.10.6.ebuild:
+  clean up
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org>
   claws-mail-cachesaver-0.10.7.ebuild:
