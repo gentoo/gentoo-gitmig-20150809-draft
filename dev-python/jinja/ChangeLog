@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.1 2008/06/07 08:29:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.2 2008/06/23 08:27:58 cedk Exp $
+
+  23 Jun 2008; Cédric Krier <cedk@gentoo.org> jinja-1.2.ebuild:
+  Add ~x86 keyword
 
 *jinja-1.2 (07 Jun 2008)
 
