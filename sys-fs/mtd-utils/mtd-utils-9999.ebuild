@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-9999.ebuild,v 1.3 2008/02/01 13:58:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-9999.ebuild,v 1.4 2008/06/23 00:54:37 zmedico Exp $
 
 ECVS_USER="anoncvs"
 ECVS_PASS="anoncvs"
@@ -34,8 +34,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local myflags=""
-	use xattr || myflags="WITHOUT_XATTR=1"
+	local myflags="-j1"
+	use xattr || myflags+=" WITHOUT_XATTR=1"
 	emake DESTDIR="${D}" \
 		OPTFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	rm -r "${D}"/usr/include || die
+	rm -rf "${D}"/usr/include || die
 	dodoc *.txt
 	# TODO: check ubi-utils for docs+scripts
 }

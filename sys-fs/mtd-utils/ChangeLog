@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.13 2008/06/16 02:00:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.14 2008/06/23 00:54:37 zmedico Exp $
+
+  22 Jun 2008; Zac Medico <zmedico@gentoo.org> mtd-utils-9999.ebuild:
+  Add -f to rm arguments in src_install since ${D}/usr/include doesn't
+  necessarily exist. Also add emake -j1 option to avoid make failures.
 
   16 Jun 2008; <solar@gentoo.org> mtd-utils-20080102.ebuild:
   - don't use argp.h http://patchwork.ozlabs.org/linux-mtd/patch?id=17501
