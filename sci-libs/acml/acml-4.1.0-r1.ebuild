@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.2 2008/05/27 10:16:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.3 2008/06/23 14:43:38 bicatali Exp $
 
 EAPI="1"
 
@@ -19,14 +19,10 @@ SRC_URI="
 		!ifc? (
 			!gfortran? ( ${MY_P}-gfortran-64bit.tgz
 				int64? ( ${MY_P}-gfortran-64bit-int64.tgz ) ) ) )
-	x86? ( ${MY_P}-ifort-32bit.tgz )"
-
-# Once gfortran builds appear, replace x86?
-# and remove the hack_x86 in the ebuild
-#	x86? (
-#		ifc? ( ${MY_P}-ifort-32bit.tgz )
-#		gfortran? ( ${MY_P}-gfortran-32bit.tgz )
-#		!ifc? ( !gfortran (	${MY_P}-gfortran-32bit.tgz ) ) )"
+	x86? (
+		ifc? ( ${MY_P}-ifort-32bit.tgz )
+		gfortran? ( ${MY_P}-gfortran-32bit.tgz )
+		!ifc? ( !gfortran? ( ${MY_P}-gfortran-32bit.tgz ) ) )"
 
 IUSE="doc examples gfortran ifc int64 openmp test"
 KEYWORDS="~amd64 ~x86"
@@ -35,13 +31,9 @@ RESTRICT="strip fetch"
 LICENSE="ACML"
 SLOT="0"
 
-#	gfortran? ( sys-devel/gcc:4.2 )
-#	!gfortran? ( !ifc? ( sys-devel/gcc:4.2 ) ) )
-# hack_x86
 CDEPEND="ifc? ( dev-lang/ifc )
-	amd64? ( gfortran? ( sys-devel/gcc:4.2 )
-			!gfortran? ( !ifc? ( amd64? ( sys-devel/gcc:4.2 ) ) ) )
-	x86? ( dev-lang/ifc )"
+	gfortran? ( sys-devel/gcc:4.2 )
+	!gfortran? ( !ifc? ( sys-devel/gcc:4.2 ) )"
 
 DEPEND="test? (	${CDEPEND} )
 	app-admin/eselect-blas
@@ -64,18 +56,11 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	# hack_x86
-	if use x86 && ! use ifc; then
-		ewarn "On x86 architectures, acml is only available with ifc."
-		ewarn "Make sure you have proper licenses to use ifc"
-	fi
 	FORTRAN=""
 	if use test; then
 		use gfortran &&	FORTRAN="${FORTRAN} gfortran"
 		use ifc && FORTRAN="${FORTRAN} ifc"
 		use gfortran || use ifc || FORTRAN="gfortran"
-		# hack_x86
-		use x86 && FORTRAN="ifc"
 		fortran_pkg_setup
 		# work around incomplete fortran eclass
 		if  use gfortran &&
@@ -90,9 +75,7 @@ pkg_setup() {
 	# construct default profile dprof from default ddir
 	local ddir=gfortran
 	use ifc && ddir=ifort
-	# hack_x86
-	use x86 && ddir=ifort32 || ddir=ifort64
-	#use x86 && ddir=${ddir}32 || ddir=${ddir}64
+	use x86 && ddir=${ddir}32 || ddir=${ddir}64
 	use openmp && ddir=${ddir}_mp
 	use int64 && ddir=${ddir}_int64
 	ACML_DEFAULT_DIR=${ddir}
