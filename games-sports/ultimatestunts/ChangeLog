@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/ultimatestunts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.18 2008/02/24 07:32:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.19 2008/06/23 17:30:44 mr_bones_ Exp $
+
+*ultimatestunts-0.7.5 (23 Jun 2008)
+
+  23 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ultimatestunts-0.7.5-paths.patch, +ultimatestunts-0.7.5.ebuild:
+  version bump
 
 *ultimatestunts-0.7.4 (24 Feb 2008)
 
