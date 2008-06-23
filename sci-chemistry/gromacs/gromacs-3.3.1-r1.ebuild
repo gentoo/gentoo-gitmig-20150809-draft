@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.10 2008/06/03 18:45:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.11 2008/06/23 03:08:17 je_fro Exp $
 
 inherit eutils fortran multilib
 
@@ -50,6 +50,13 @@ src_unpack() {
 	sed -e "s:\$\$libdir:\$temp_libdir:" \
 	-i src/tools/Makefile.am \
 	|| die "sed tools/Makefile.am failed"
+
+# Rename disco manpage to fix bug #210083
+	sed "s:disco.1:g_disco.1:" \
+	-i "${S}"/man/man1/Makefile.am \
+	|| die "sed failed to rename disco"
+
+	mv "${S}"/man/man1/disco.1 "${S}"/man/man1/g_disco.1
 
 	cd "${WORKDIR}" && mv ${P} ${P}-single ;
 
