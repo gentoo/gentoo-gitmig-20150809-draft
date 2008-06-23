@@ -40,5 +40,26 @@
     to enable the "dict" plugin for rbot. If the USE flag is disabled
     the plugin is also disabled by default.
   </flag>
+  <flag name="figlet">
+    Add dependency over <pkg>app-misc/figlet</pkg>, which is needed to
+    enable the "figlet" plugin for rbot. If the USE flag is disable
+    dthe plugin is also disabled by default.
+  </flag>
+  <flag name="fortune">
+    Add dependency over <pkg>games-misc/fortune-mod</pkg>, which is
+    needed to enable the "fortune" plugin for rbot. If the USE flag is
+    disable dthe plugin is also disabled by default.
+  </flag>
+  <flag name="cal">
+    Add dependency over a package providing the /usr/bin/cal command,
+    which is needed to enable the "cal" plugin for rbot. If the USE
+    flag is disable dthe plugin is also disabled by default.
+  </flag>
+  <flag name="host">
+    Add dependency over <pkg>net-dns/bind-tools</pkg> (providing
+    /usr/bin/host), which is needed to enable the "host" plugin for
+    rbot. If the USE flag is disable dthe plugin is also disabled by
+    default.
+  </flag>
 </use>
 </pkgmetadata>

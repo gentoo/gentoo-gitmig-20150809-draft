@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.28 2008/02/13 17:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.29 2008/06/23 14:51:12 flameeyes Exp $
+
+  23 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  rbot-9999-r8.ebuild:
+  Add a few more USE flags to enable/disable the plugins that use external
+  commands (and proper dependencies on them).
 
 *rbot-9999-r8 (13 Feb 2008)
 

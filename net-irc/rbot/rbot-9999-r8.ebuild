@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r8.ebuild,v 1.1 2008/02/13 17:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r8.ebuild,v 1.2 2008/06/23 14:51:12 flameeyes Exp $
 
 inherit ruby gems eutils
 
@@ -29,7 +29,11 @@ RDEPEND=">=virtual/ruby-1.8
 	translator? ( dev-ruby/mechanize )
 	shorturl? ( dev-ruby/shorturl )
 	nls? ( dev-ruby/ruby-gettext )
-	dict? ( dev-ruby/ruby-dict )"
+	dict? ( dev-ruby/ruby-dict )
+	figlet? ( app-misc/figlet )
+	fortune? ( games-misc/fortune-mod )
+	cal? ( || ( sys-apps/util-linux sys-freebsd/freebsd-ubin ) )
+	host? ( net-dns/bind-tools )"
 DEPEND=""
 
 if [[ ${PV} == "9999" ]]; then
@@ -103,6 +107,10 @@ src_install() {
 	use translator || disable_rbot_plugin translator
 	use shorturl || disable_rbot_plugin shortenurls
 	use dict || disable_rbot_plugin dictclient
+	use figlet || disable_rbot_plugin figlet
+	use fortune || disable_rbot_plugin fortune
+	use cal || disable_rbot_plugin cal
+	use host || disable_rbot_plugin host
 
 	# This is unfortunately pretty manual at the moment, but it's just
 	# to avoid having to run special scripts to package new versions
