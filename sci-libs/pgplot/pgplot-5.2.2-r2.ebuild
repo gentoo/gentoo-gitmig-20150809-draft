@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.3 2007/10/11 17:50:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.4 2008/06/23 09:28:30 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libX11
 	motif? ( virtual/motif )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 S="${WORKDIR}/${PN}"
 
@@ -33,14 +33,16 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-compile-setup.patch
 	epatch "${FILESDIR}"/${PN}-pgdisp.patch
 
-	# gfortran does not compile gif, pp and wd drivers (last check: gfortran-4.2)
-	if [[ "${FORTRANC}" == gfortran ]]; then
+	# gfortran < 4.3 does not compile gif, pp and wd drivers
+	if [[ "${FORTRANC}" == gfortran ]] &&
+		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]] ; then
 		ewarn
 		ewarn "Warning!"
-		ewarn "gfortran selected: does not yet compile all drivers"
+		ewarn "gfortran < 4.3 selected: does not compile all drivers"
 		ewarn "disabling gif, wd, and ppd drivers"
-		ewarn "if you want more drivers, use g77 or ifort"
+		ewarn "if you want more drivers, use gfortran >= 4.3, g77 or ifort"
 		ewarn
+		epause 4
 		sed -i \
 			-e 's/GIDRIV/! GIDRIV/g' \
 			-e 's/PPDRIV/! GIDRIV/g' \

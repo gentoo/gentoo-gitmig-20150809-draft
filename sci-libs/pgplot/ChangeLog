@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.10 2007/10/11 17:50:41 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.11 2008/06/23 09:28:30 bicatali Exp $
+
+  23 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  pgplot-5.2.2-r2.ebuild:
+  Enabling gif, wd and ppd drivers to be compiled when gfortran >= 4.3, some
+  minor qa fixes
 
   11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> -pgplot-5.2.2.ebuild,
   -pgplot-5.2.2-r1.ebuild, pgplot-5.2.2-r2.ebuild:
