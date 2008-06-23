@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080602.ebuild,v 1.1 2008/06/03 13:31:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080602.ebuild,v 1.2 2008/06/23 23:43:16 hanno Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -65,6 +65,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-defaultx264tocqp.patch"
+	epatch "${FILESDIR}/cinelerra-libtool22.diff"
 	AT_M4DIR="m4" eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.46 2008/06/21 13:11:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.47 2008/06/23 23:43:15 hanno Exp $
+
+  23 Jun 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/cinelerra-libtool22.diff, cinelerra-cvs-20080602.ebuild:
+  Fix build with libtool 2.2.
 
   21 Jun 2008; Hanno Boeck <hanno@gentoo.org>
   -files/cinelerra-cvs-gcc-4.3.patch, -files/cinelerra-compilewarnings.diff,
