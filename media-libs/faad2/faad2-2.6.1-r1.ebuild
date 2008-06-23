@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1-r1.ebuild,v 1.6 2008/06/23 17:57:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1-r1.ebuild,v 1.7 2008/06/23 20:29:29 gentoofan23 Exp $
 
 inherit eutils autotools
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-abi_has_changed.patch"
 	epatch "${FILESDIR}/${P}-libtool22.patch"
 	epatch "${FILESDIR}/${P}-broken-pipe.patch"
+	epatch "${FILESDIR}/${P}-implicitdeclar.patch"
 	eautoreconf
 }
 
