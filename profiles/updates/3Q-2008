@@ -6,3 +6,4 @@ move xfce-extra/mousepad app-editors/mousepad
 move xfce-extra/xfwm4-themes x11-themes/xfwm4-themes
 move xfce-base/xfprint net-print/xfprint
 move xfce-base/orage app-office/orage
+move xfce-extra/notification-daemon-xfce x11-misc/notification-daemon-xfce
