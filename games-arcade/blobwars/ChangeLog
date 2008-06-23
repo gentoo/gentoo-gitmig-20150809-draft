@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.33 2008/05/02 15:56:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.34 2008/06/23 22:45:46 gentoofan23 Exp $
+
+  23 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  blobwars-1.08.ebuild:
+  amd64 stable, bug #229137
 
   02 May 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/blobwars-1.08-es.patch, blobwars-1.08.ebuild:
