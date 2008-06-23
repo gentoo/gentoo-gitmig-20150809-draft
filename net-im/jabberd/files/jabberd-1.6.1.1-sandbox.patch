@@ -6,6 +6,6 @@
  	-for f in $(LANGS); do \
 -	    test -z "$(localedir)/$${f%.po}/LC_MESSAGES" || $(mkdir_p) "$(localedir)/$${f%.po}/LC_MESSAGES"; \
 -	     msgfmt -o "$(localedir)/$${f%.po}/LC_MESSAGES/jabberd14.mo" $$f; \
-+	    test -z "$(localedir)/$${f%.po}/LC_MESSAGES" || $(mkdir_p) "$(DESTDIR)/$(localedir)/$${f%.po}/LC_MESSAGES"; \
++	    test -z "$(DESTDIR)/$(localedir)/$${f%.po}/LC_MESSAGES" || $(mkdir_p) "$(DESTDIR)/$(localedir)/$${f%.po}/LC_MESSAGES"; \
 +	     msgfmt -o "$(DESTDIR)$(localedir)/$${f%.po}/LC_MESSAGES/jabberd14.mo" $$f; \
  	     done
