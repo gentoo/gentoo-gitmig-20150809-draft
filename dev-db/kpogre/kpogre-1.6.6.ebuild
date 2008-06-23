@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.6.6.ebuild,v 1.1 2008/06/14 12:17:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.6.6.ebuild,v 1.2 2008/06/23 07:46:04 opfer Exp $
 
 inherit kde
 
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc x86"
 
 DESCRIPTION="KDE GUI for PostgreSQL."
 HOMEPAGE="http://kpogre.sourceforge.net/"
