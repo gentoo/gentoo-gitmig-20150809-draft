@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50-r1.ebuild,v 1.1 2008/06/23 01:15:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50-r1.ebuild,v 1.2 2008/06/23 04:53:29 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -66,9 +66,9 @@ RDEPEND="media-libs/libexif
 pkg_setup() {
 	if use amd64; then
 		if use ia32; then
-			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.x86_64"
-		else
 			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.i386"
+		else
+			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.x86_64"
 		fi
 	fi
 	use ppc && S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.ppc"

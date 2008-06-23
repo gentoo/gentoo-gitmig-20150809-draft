@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.248 2008/06/23 01:15:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.249 2008/06/23 04:53:29 jer Exp $
+
+  23 Jun 2008; Jeroen Roovers <jer@gentoo.org> opera-9.50-r1.ebuild:
+  Change S to reflect USE flag usage (bug #229009, thanks to Branko BAdrljica).
 
 *opera-9.50-r1 (23 Jun 2008)
 
