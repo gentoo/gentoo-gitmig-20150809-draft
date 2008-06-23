@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/pothana2k
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.4 2008/06/08 21:39:18 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.5 2008/06/23 06:58:38 wormo Exp $
+
+  23 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pothana2k-2006-r1.ebuild:
+  mark ~ppc (bug #224979)
 
   08 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> pothana2k-2006-r1.ebuild:
   added ~amd64, bug #224979
