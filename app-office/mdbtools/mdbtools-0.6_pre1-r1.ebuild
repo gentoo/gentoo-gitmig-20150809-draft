@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1-r1.ebuild,v 1.17 2008/04/06 17:19:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1-r1.ebuild,v 1.18 2008/06/23 18:49:42 graaff Exp $
 
 WANT_AUTOMAKE="1.7"
 
@@ -39,9 +39,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-strlen.patch
 
-	# This is necessary since the upstream tarball was created with a buggy
-	# libtool, and the .so suffix in library names is lost in some platforms
-	# (e.g. amd64).
+	# This is necessary since the upstream tarball was created with a
+	# buggy libtool, and the .so suffix in library names is lost in
+	# some platforms (e.g. amd64).  Starting with libtool 2.2.4 it is
+	# also necessary to remove the acinclude.m4 file since it contains
+	# an old libtool.m4 that is obsolete, #227257.
+	rm "${S}"/acinclude.m4
 	eautoreconf
 }
 
