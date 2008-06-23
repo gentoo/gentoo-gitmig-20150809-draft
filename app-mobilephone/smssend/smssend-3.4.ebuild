@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.5 2007/08/18 08:15:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.6 2008/06/23 23:05:12 mrness Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Universal SMS sender"
 HOMEPAGE="None available" # was http://zekiller.skytech.org/smssend_menu_en.html
@@ -18,9 +18,11 @@ DEPEND=">=dev-libs/skyutils-2.7"
 src_unpack() {
 	unpack ${A}
 
+	cd "${S}"
 	# Patch for Verizon Wireless support
 	# absinthe@gentoo.org 12/16
 	epatch "${FILESDIR}/${P}-verizon.diff"
+	eautoreconf
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/smssend
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.6 2007/08/18 08:15:16 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.7 2008/06/23 23:05:12 mrness Exp $
+
+  23 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  files/smssend-3.4-verizon.diff, smssend-3.4.ebuild:
+  Sanitize patch (#226693).
 
   18 Aug 2007; Alin Năstac <mrness@gentoo.org> smssend-3.4.ebuild:
   Set HOMEPAGE to N/A.
