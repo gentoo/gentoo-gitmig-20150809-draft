@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0-r2.ebuild,v 1.9 2008/04/25 16:03:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0-r2.ebuild,v 1.10 2008/06/23 02:15:31 drac Exp $
 
 inherit autotools eutils xfce44
 
@@ -12,7 +12,7 @@ IUSE="debug"
 
 DEPEND="dev-util/pkgconfig
 	dev-util/intltool
-	xfce-extra/xfce4-dev-tools"
+	dev-util/xfce4-dev-tools"
 
 src_unpack() {
 	unpack ${A}
