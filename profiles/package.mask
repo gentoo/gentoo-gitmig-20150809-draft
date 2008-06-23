@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8765 2008/06/23 01:55:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8766 2008/06/23 07:52:50 ali_bush Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -45,7 +45,7 @@
 # is stabilized for amd64 ppc x86.
 =dev-java/sun-jmx-1.2.1-r2
 dev-java/jgroups
-dev-util/jconfig
+=dev-util/jconfig-2.8-r2
 =dev-java/jcs-1.2.7.9*
 dev-java/hibernate
 dev-java/oscache
