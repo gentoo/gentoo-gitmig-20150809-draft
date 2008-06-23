@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8763 2008/06/22 22:39:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8764 2008/06/23 00:25:26 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (23 Jun 2008)
+# Please read http://my.opera.com/desktopteam/blog before using these snapshots
+>www-client/opera-9.50
 
 # Steve Dibb <beandog@gentoo.org> (21 Jun 2008)
 # Needs testing; Added custom-cpuopts flag for more fine-grained
