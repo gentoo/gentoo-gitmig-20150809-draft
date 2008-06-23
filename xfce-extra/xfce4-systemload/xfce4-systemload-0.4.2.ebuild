@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.4.2.ebuild,v 1.16 2008/04/25 15:52:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.4.2.ebuild,v 1.17 2008/06/23 00:04:34 drac Exp $
 
 inherit autotools xfce44
 
@@ -9,7 +9,7 @@ xfce44
 DESCRIPTION="System load monitor panel plugin"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 
-DEPEND="xfce-extra/xfce4-dev-tools
+DEPEND="dev-util/xfce4-dev-tools
 	dev-util/intltool"
 
 src_unpack() {

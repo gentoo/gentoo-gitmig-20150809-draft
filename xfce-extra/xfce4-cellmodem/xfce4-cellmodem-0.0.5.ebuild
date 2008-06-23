@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.4 2007/08/24 23:23:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.5 2008/06/23 00:02:26 drac Exp $
 
 inherit autotools eutils xfce44
 
@@ -14,7 +14,7 @@ IUSE="debug"
 RDEPEND="sys-apps/pciutils
 	>=dev-libs/libusb-0.1.12"
 DEPEND="${RDEPEND}
-	>=xfce-extra/xfce4-dev-tools-${XFCE_MASTER_VERSION}
+	>=dev-util/xfce4-dev-tools-${XFCE_MASTER_VERSION}
 	dev-util/pkgconfig
 	dev-util/intltool"
 

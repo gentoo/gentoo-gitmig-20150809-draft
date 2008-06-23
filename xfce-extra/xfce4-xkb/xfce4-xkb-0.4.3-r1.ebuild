@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/xfce4-xkb-0.4.3-r1.ebuild,v 1.15 2008/04/25 16:10:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/xfce4-xkb-0.4.3-r1.ebuild,v 1.16 2008/06/23 00:05:04 drac Exp $
 
 inherit autotools xfce44
 
@@ -12,7 +12,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 DEPEND="dev-util/pkgconfig
 	dev-util/intltool
 	x11-proto/kbproto
-	xfce-extra/xfce4-dev-tools"
+	dev-util/xfce4-dev-tools"
 
 src_unpack() {
 	unpack ${A}
