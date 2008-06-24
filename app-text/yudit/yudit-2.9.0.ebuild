@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.9.0.ebuild,v 1.1 2008/06/24 05:08:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.9.0.ebuild,v 1.2 2008/06/24 16:07:36 mr_bones_ Exp $
 
 DESCRIPTION="free (Y)unicode text editor for all unices"
 SRC_URI="http://yudit.org/download/${P}.tar.gz"
@@ -33,4 +33,3 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc *.TXT
 }
-
