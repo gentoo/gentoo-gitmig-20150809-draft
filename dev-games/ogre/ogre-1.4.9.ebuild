@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.1 2008/06/20 17:11:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.2 2008/06/24 16:17:27 opfer Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc cegui cg devil double-precision examples gtk openexr threads"
 RESTRICT="test" #139905
 
