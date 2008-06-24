@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/translator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.2 2008/06/24 18:12:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.3 2008/06/24 22:01:52 opfer Exp $
+
+  24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  translator-1.00.ebuild:
+  keyworded ~x86, bug 229249
 
   24 Jun 2008; Ferris McCormick <fmccor@gentoo.org> translator-1.00.ebuild:
   Add ~sparc for texlive 2008, Bug #229249.
