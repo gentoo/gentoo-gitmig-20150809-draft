@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1611 2008/06/24 12:23:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1612 2008/06/24 16:50:30 hawking Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  24 Jun 2008; Ali Polatel <hawking@gentoo.org> package.mask:
+  Masked python-2.3 (second try)
 
   24 Jun 2008; Hanno Boeck <hanno@gentoo.org> updates/2Q-2008:
   Move cinelerra-cvs to cinelerra.
