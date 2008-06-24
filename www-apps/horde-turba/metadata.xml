@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
- <email>vapier@gentoo.org</email>
+ <email>wrobel@gentoo.org</email>
 </maintainer>
 <longdescription>
 Turba is the Horde contact management application. It is a production 
