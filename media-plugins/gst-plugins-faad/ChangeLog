@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.58 2008/02/21 12:06:50 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.59 2008/06/24 16:23:47 drac Exp $
+
+  24 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-faad-0.10.5.ebuild, gst-plugins-faad-0.10.5-r1.ebuild:
+  Marked -r1 stable as there is no change to -r0, except -r0 had invalid
+  faad dep which broke depgraph.
 
 *gst-plugins-faad-0.10.6 (21 Feb 2008)
 
