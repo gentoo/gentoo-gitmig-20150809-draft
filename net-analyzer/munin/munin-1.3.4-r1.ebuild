@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.1 2008/06/12 04:01:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.2 2008/06/24 06:13:18 robbat2 Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			ssl? ( dev-perl/Net-SSLeay )
 			mysql? ( virtual/mysql )
-			postgres? ( dev-perl/DBD-Pg dev-db/postgresql )
+			postgres? ( dev-perl/DBD-Pg virtual/postgresql-base )
 			irc? ( dev-perl/Net-IRC )
 			dev-perl/DateManip
 			dev-perl/Net-Netmask
