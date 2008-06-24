@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.8 2008/06/24 00:31:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.9 2008/06/24 00:32:49 mrness Exp $
 
 WANT_AUTOMAKE=none
 
@@ -80,7 +80,7 @@ src_install() {
 	if use doc; then
 		emake DESTDIR="${D}" install-docs || die "emake install-docs failed"
 	fi
-	dodoc README LICENSE
+	dodoc README
 
 	diropts -g kannel -m0750
 	dodir /etc/kannel
