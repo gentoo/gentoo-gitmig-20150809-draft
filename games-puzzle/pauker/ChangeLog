@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pauker
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.19 2008/06/24 20:24:59 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.20 2008/06/24 22:36:22 opfer Exp $
+
+  24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  pauker-1.7.5-r1.ebuild:
+  stable x86, bug 229235
 
   24 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> pauker-1.7.5-r1.ebuild:
   amd64 stable, bug #229235
