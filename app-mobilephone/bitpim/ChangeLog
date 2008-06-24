@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.24 2008/05/29 15:44:38 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.25 2008/06/24 20:04:42 mrness Exp $
+
+  24 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  -files/bitpim-0.9.10-gentoo.patch, -files/bitpim-0.9.13-gentoo.patch,
+  -bitpim-0.9.10.ebuild, -bitpim-0.9.13.ebuild, bitpim-1.0.5.ebuild:
+  Remove obsolete versions. Remove swig runtime dependency (#221455).
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> bitpim-0.9.10.ebuild,
   bitpim-0.9.13.ebuild, bitpim-1.0.5.ebuild:
