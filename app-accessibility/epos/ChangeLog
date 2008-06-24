@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.25 2008/05/10 03:27:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.26 2008/06/24 20:30:42 drac Exp $
+
+*epos-2.5.37-r1 (24 Jun 2008)
+
+  24 Jun 2008; Samuli Suominen <drac@gentoo.org> +epos-2.5.37-r1.ebuild:
+  Revision bump without portaudio support wrt #222939.
 
   10 May 2008; Mark Loeser <halcy0n@gentoo.org>
   +files/epos-2.5.37-gcc43.patch, epos-2.5.37.ebuild:
