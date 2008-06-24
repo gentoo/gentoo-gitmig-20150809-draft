@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.62 2008/06/24 10:55:54 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.63 2008/06/24 10:58:28 wrobel Exp $
+
+  24 Jun 2008; wrobel@gentoo.org -horde-3.2.ebuild:
+  Removed vulnerable horde-3.2 (#228507).
 
 *horde-3.2.1 (24 Jun 2008)
 *horde-3.1.8 (24 Jun 2008)
