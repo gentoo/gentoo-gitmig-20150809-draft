@@ -1,6 +1,9 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.28 2008/03/27 17:08:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.29 2008/06/24 19:26:53 ken69267 Exp $
+
+  24 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> atanks-2.9.ebuild:
+  amd64 stable, bug #229241
 
 *atanks-2.9 (27 Mar 2008)
 
