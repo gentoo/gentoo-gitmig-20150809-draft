@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.10.ebuild,v 1.2 2008/06/23 22:01:07 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.10.ebuild,v 1.3 2008/06/24 10:08:11 opfer Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mainreactor.net/holotzcastle/download/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/opengl
