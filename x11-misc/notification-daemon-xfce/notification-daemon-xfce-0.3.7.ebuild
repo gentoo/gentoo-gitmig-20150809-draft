@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.2 2008/06/23 02:05:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.3 2008/06/24 19:57:45 drac Exp $
 
 EAPI=1
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Port of notification daemon for Xfce Desktop Environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/notification-daemon-xfce"
@@ -19,20 +19,22 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=xfce-base/libxfcegui4-4.3.90
 	>=xfce-base/libxfce4util-4.3.90
-	>=xfce-base/xfce-mcs-manager-4.2.2
+	xfce? ( >=xfce-base/xfce-mcs-manager-4.2.2 )
 	>=x11-libs/libsexy-0.1.3
 	dev-libs/dbus-glib"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext
+	dev-util/xfce4-dev-tools
 	!x11-misc/notification-daemon"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	EPATCH_SUFFIX="patch" epatch "${FILESDIR}"/${PV}
-	eautoreconf
+	intltoolize --force --copy --automake || die "intltoolize failed."
+	AT_M4DIR="/usr/share/xfce4/dev-tools/m4macros" eautoreconf
 }
 
 src_compile() {
