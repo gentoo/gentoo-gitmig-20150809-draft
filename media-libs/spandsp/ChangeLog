@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.11 2008/06/20 10:08:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.12 2008/06/24 16:15:41 drac Exp $
+
+*spandsp-0.0.5_pre3 (24 Jun 2008)
+
+  24 Jun 2008; Samuli Suominen <drac@gentoo.org> +spandsp-0.0.5_pre3.ebuild:
+  Committing _pre3 as it's the required version for callweaver-1.2.0.1 which
+  might get added into Sunrise.
 
 *spandsp-0.0.5_pre4 (20 Jun 2008)
 
