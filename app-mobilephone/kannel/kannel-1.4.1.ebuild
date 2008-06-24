@@ -1,7 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.7 2008/05/21 15:52:40 dev-zero Exp $
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.8 2008/06/24 00:31:46 mrness Exp $
+
+WANT_AUTOMAKE=none
+
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="Powerful SMS and WAP gateway"
 HOMEPAGE="http://www.kannel.org/"
@@ -38,17 +41,19 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-custom-wap-ports.patch"
-
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-custom-wap-ports.patch"
+	epatch "${FILESDIR}/${P}-nolex.patch" # flex is not used
+
 	#by default, use current directory for logging
 	sed -i -e 's:/tmp/::' doc/examples/kannel.conf
-	#correct doc path
-	sed -i -e "s:share/doc/kannel:share/doc/${P}:" configure configure.in
+
+	eautoconf
 }
 
 src_compile() {
-	econf \
+	append-flags -fno-strict-aliasing # some code breaks strict aliasing
+	econf --docdir=/usr/share/doc/${P} \
 		--enable-localtime \
 		--disable-start-stop-daemon \
 		$(use_enable pam) \
@@ -60,19 +65,21 @@ src_compile() {
 		$(use_with sqlite) \
 		$(use_with sqlite3) \
 		$(use_with postgres pgsql) \
-		|| die "./configure failed"
+		|| die "econf failed"
 
 	emake || die "emake failed"
 }
 
 src_test() {
-	make check || die "make check failed"
+	emake check || die "make check failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	use doc && make DESTDIR="${D}" install-docs
+	if use doc; then
+		emake DESTDIR="${D}" install-docs || die "emake install-docs failed"
+	fi
 	dodoc README LICENSE
 
 	diropts -g kannel -m0750
