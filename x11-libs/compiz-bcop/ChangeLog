@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/compiz-bcop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.4 2007/10/25 13:58:39 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.5 2008/06/24 02:12:24 hanno Exp $
+
+  24 Jun 2008; Hanno Boeck <hanno@gentoo.org> compiz-bcop-0.6.0.ebuild:
+  Add pkgconfig dep.
 
   25 Oct 2007; Olivier Crête <tester@gentoo.org> compiz-bcop-0.6.0.ebuild:
   Marked ~amd64
