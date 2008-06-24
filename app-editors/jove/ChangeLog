@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.18 2008/02/24 17:24:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.19 2008/06/24 14:32:07 opfer Exp $
+
+  24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  -jove-4.16.0.56.1.ebuild, -jove-4.16.0.65.4.ebuild:
+  clean up
 
   24 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   jove-4.16.0.70.3.ebuild:
