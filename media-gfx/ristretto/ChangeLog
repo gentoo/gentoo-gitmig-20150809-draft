@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.1 2008/06/22 20:49:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.2 2008/06/24 10:05:18 opfer Exp $
+
+  24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  ristretto-0.0.20.ebuild:
+  stable x86, bug 228961
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org>
   +ristretto-0.0.17.ebuild, +ristretto-0.0.20.ebuild:
