@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1610 2008/06/23 14:50:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1611 2008/06/24 12:23:54 hanno Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  24 Jun 2008; Hanno Boeck <hanno@gentoo.org> updates/2Q-2008:
+  Move cinelerra-cvs to cinelerra.
 
   23 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add a few more local USE flags for rbot.
