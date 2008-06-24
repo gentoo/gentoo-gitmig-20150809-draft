@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20071103.ebuild,v 1.1 2008/02/04 22:32:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20071103.ebuild,v 1.2 2008/06/24 21:11:43 mr_bones_ Exp $
 
 inherit autotools eutils games
 
@@ -34,6 +34,8 @@ src_unpack() {
 	sed "s:GAMES_DATADIR:${GAMES_DATADIR}:g" \
 		"${FILESDIR}"/${PN}.sh > "${T}"/${PN}.sh \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-speex.patch"
+	eautoreconf
 }
 
 src_compile() {
