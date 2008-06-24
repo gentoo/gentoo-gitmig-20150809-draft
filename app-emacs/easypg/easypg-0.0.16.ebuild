@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.1 2008/04/21 11:22:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.2 2008/06/24 06:24:01 opfer Exp $
 
 inherit elisp versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/epg/29289/${MY_PN}-${PV}.tar.gz
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gnus"
 
 DEPEND="app-crypt/gnupg"
