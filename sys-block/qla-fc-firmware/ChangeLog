@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/qla-fc-firmware
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.20 2008/06/19 17:50:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.21 2008/06/24 16:36:27 armin76 Exp $
+
+  24 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  qla-fc-firmware-20071207-r1.ebuild:
+  sparc stable wrt #227979
 
   19 Jun 2008; nixnut <nixnut@gentoo.org>
   qla-fc-firmware-20071207-r1.ebuild:
