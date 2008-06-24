@@ -1,0 +1,48 @@
+diff -Nru dante-1.1.19.orig/acinclude.m4 dante-1.1.19/acinclude.m4
+--- dante-1.1.19.orig/acinclude.m4	2005-12-18 21:57:57.000000000 +0100
++++ dante-1.1.19/acinclude.m4	2008-06-24 22:37:05.000000000 +0200
+@@ -260,4 +260,4 @@
+ 
+ tproto($@)])
+ 
+-# -- acinclude end --
+\ No newline at end of file
++# -- acinclude end --
+diff -Nru dante-1.1.19.orig/configure.ac dante-1.1.19/configure.ac
+--- dante-1.1.19.orig/configure.ac	2008-06-24 22:36:55.000000000 +0200
++++ dante-1.1.19/configure.ac	2008-06-24 22:36:12.000000000 +0200
+@@ -1288,15 +1288,18 @@
+  [  --without-pam           disable pam support @<:@default=detect@:>@],
+  [PAM=$withval])
+ 
++LIBPAM=
+ if test "${PAM}" != no; then
+ 	#look for PAM header and lib
+ 	AC_CHECK_HEADERS(security/pam_appl.h, [have_pam_header=t])
+-	AC_SEARCH_LIBS(pam_start, pam, [have_libpam=t])
++	AC_CHECK_LIB(pam, pam_start, [have_libpam=t])
+ 
+ 	if test x"${have_pam_header}" != x -a x"${have_libpam}" != x; then
+ 		AC_DEFINE(HAVE_PAM, 1, [PAM support])
++		LIBPAM=-lpam
+ 	fi
+ fi
++AC_SUBST(LIBPAM)
+ 
+ #expected select behaviour?
+ unset nb_select_err
+diff -Nru dante-1.1.19.orig/sockd/Makefile.am dante-1.1.19/sockd/Makefile.am
+--- dante-1.1.19.orig/sockd/Makefile.am	2008-06-24 22:36:55.000000000 +0200
++++ dante-1.1.19/sockd/Makefile.am	2008-06-24 22:36:12.000000000 +0200
+@@ -35,9 +35,9 @@
+ 
+ #XXXhack
+ if STATIC_SOCKD
+-sockd_LDADD = ../libscompat/sockatmark.o ${LIBWRAP}
++sockd_LDADD = ../libscompat/sockatmark.o ${LIBWRAP} ${LIBPAM}
+ else
+-sockd_LDADD = ../libscompat/libscompat.la ${LIBWRAP}
++sockd_LDADD = ../libscompat/libscompat.la ${LIBWRAP} ${LIBPAM}
+ endif
+ 
+ INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/libscompat
