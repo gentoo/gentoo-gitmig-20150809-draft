@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
- <email>vapier@gentoo.org</email>
+ <email>wrobel@gentoo.org</email>
 </maintainer>
 <longdescription>
 Kronolith is the Horde calendar application. It provides a stable and 
