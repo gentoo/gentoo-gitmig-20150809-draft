@@ -1,6 +1,10 @@
 # ChangeLog for games-action/powermanga
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.13 2008/06/24 21:43:18 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.14 2008/06/24 22:53:34 opfer Exp $
+
+  24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  powermanga-0.90.ebuild:
+  stable x86, bug 229239
 
   24 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   powermanga-0.90.ebuild:
