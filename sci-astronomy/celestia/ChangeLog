@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.40 2008/04/15 15:52:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.41 2008/06/24 17:20:03 markusle Exp $
+
+*celestia-1.5.1 (24 Jun 2008)
+
+  24 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/celestia-1.5.1-arts.patch, +celestia-1.5.1.ebuild:
+  Version bump, including fix for libtool-2.2 problems (bug #228865 
+  and #218982). Thanks much to Aleksandr Yakimov <aleks@spamtest.ru> 
+  for his patches.
 
   15 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/celestia-1.5.0-gcc43.patch, celestia-1.5.0.ebuild:
