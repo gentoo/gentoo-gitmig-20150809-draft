@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.14 2008/05/21 19:01:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.15 2008/06/24 07:45:51 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,13 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE="tk png jpeg tiff postgres odbc motif gdal mysql blas lapack X fftw truetype nls opengl"
 
-RDEPEND=">=sys-devel/make-3.80
-	>=sys-libs/zlib-1.1.4
-	>=sys-devel/flex-2.5.4a
-	>=sys-devel/bison-1.35
+RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.3
 	>=sys-libs/gdbm-1.8.0
-	>=sys-devel/gcc-3.2.2
 	virtual/man
 	>=sci-libs/proj-4.4.7
 	blas? ( virtual/blas )
@@ -51,6 +47,10 @@ RDEPEND=">=sys-devel/make-3.80
 	)"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/make-3.80
+	>=sys-devel/flex-2.5.4a
+	>=sys-devel/bison-1.35
+	>=sys-devel/gcc-3.2.2
 	X? (
 		x11-proto/xproto
 		x11-proto/xextproto

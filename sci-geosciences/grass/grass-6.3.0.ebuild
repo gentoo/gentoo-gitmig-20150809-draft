@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.8 2008/06/24 07:45:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.1 2008/06/24 07:45:51 nerdboy Exp $
 
-inherit eutils fdo-mime versionator
+inherit eutils distutils fdo-mime versionator wxwidgets
 
 MY_PV=$(get_version_component_range 1-2 ${PV})
 MY_PVM=$(delete_all_version_separators ${MY_PV})
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="ffmpeg fftw glw gmath jpeg largefile mysql nls odbc opengl png \
-postgres python readline sqlite tiff truetype X"
+postgres python readline sqlite tiff truetype wxwindows X"
 
 RESTRICT="strip"
 
@@ -40,12 +40,16 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	    ( x11-libs/openmotif )
 	    glw? ( media-libs/mesa ) )
 	png? ( >=media-libs/libpng-1.2.2 )
-	postgres? ( >=virtual/postgresql-server-7.3 )
+	postgres? ( >=dev-db/postgresql-7.3 )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( >=media-libs/freetype-2.0 )
+	wxwindows? (
+		>=dev-python/wxpython-2.8.1.1
+		>=dev-lang/python-2.4
+	)
 	X? (
 		x11-libs/libXmu
 		x11-libs/libXext
@@ -63,6 +67,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.4a
 	>=sys-devel/bison-1.35
+	wxwindows? ( >=dev-lang/swig-1.3.31 )
 	X? (
 		x11-proto/xproto
 		x11-proto/xextproto
@@ -70,6 +75,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	local myblas
+	elog ""
+	elog "This version enables the experimental wxpython interface, which"
+	elog "you may want to try, since the legacy GUI seems a little wonky"
+	elog "in this version; just enable the wxwindows USE flag and build."
+	elog ""
 	if use gmath; then
 		for d in $(eselect lapack show); do myblas=${d}; done
 		if [[ -z "${myblas/reference/}" ]] && [[ -z "${myblas/atlas/}" ]]; then
@@ -112,8 +122,6 @@ src_unpack() {
 	epatch rpm/fedora/grass-readline.patch
 
 	if use opengl; then
-	    epatch "${FILESDIR}"/${P}-html-nviz-fix.patch
-	else
 	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
 	fi
 
@@ -124,6 +132,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	use python || use wxindows && distutils_python_version
+
 	myconf="--prefix=/usr --with-cxx --enable-shared \
 		--with-gdal=$(type -P gdal-config) --with-curses --with-proj \
 		--with-includes=/usr/include --with-libs=/usr/$(get_libdir) \
@@ -132,9 +142,20 @@ src_compile() {
 		--with-proj-share=/usr/share/proj"
 
 	if use X; then
-		myconf="${myconf} --with-tcltk --with-x \
-		    --with-tcltk-includes=/usr/include \
-		    --with-tcltk-libs=/usr/$(get_libdir)/tcl8.4"
+	    if has_version ">=dev-lang/tcl-8.5"; then
+		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
+	    else
+		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.4"
+	    fi
+	    myconf="${myconf} --with-tcltk --with-x \
+	        --with-tcltk-includes=/usr/include \
+		--with-tcltk-libs=${TCL_LIBDIR}"
+	    if use wxwindows; then
+		WX_GTK_VER=2.8
+		need-wxwidgets gtk2
+		LIBGDI="/usr/$(get_libdir)/python${PYVER}/site-packages/wx-2.8-gtk2-unicode/wx/_gdi_.so"
+		myconf="${myconf} --with-python --with-wxwidgets=${WX_CONFIG}"
+	    fi
 	else
 		myconf="${myconf} --without-tcltk --without-x"
 	fi
@@ -154,8 +175,9 @@ src_compile() {
 	    myconf="${myconf} --with-ffmpeg \
 	        --with-ffmpeg-libs=/usr/$(get_libdir)"
 	    if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
-	        myconf="${myconf} \
-	    	    --with-ffmpeg-includes=/usr/include/libavcodec"
+		# must pass multiple include dirs now; if you have a better
+		# way to do this, please speak up and file a bug :)
+	        myconf="${myconf} --with-ffmpeg-includes=/usr/include/libav*"
 	    else
 		myconf="${myconf} --with-ffmpeg-includes=/usr/include/ffmpeg"
 	    fi
@@ -176,8 +198,8 @@ src_compile() {
 	fi
 
 	if use sqlite; then
-		myconf="${myconf} --with-sqlite --with-sqlite-includes=/usr/include
-		--with-sqlite-libs=/usr/$(get_libdir)"
+		myconf="${myconf} --with-sqlite --with-sqlite-includes=/usr/include \
+		    --with-sqlite-libs=/usr/$(get_libdir)"
 	else
 		myconf="${myconf} --without-sqlite"
 	fi
@@ -198,14 +220,27 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with tiff) || die "configure failed!"
 
-	emake -j1 || die "emake failed!"
+	if use wxwindows; then
+	    emake -j1
+	    ln -sf "${LIBGDI}" dist.x86_64-pc-linux-gnu/lib/libgdi.so \
+		|| die "making libgdi link failed"
+	    cd gui/wxpython/vdigit
+	    make default -j1 || die "make vdigit failed!"
+	else
+	    emake -j1 || die "make failed!"
+	fi
 }
 
 src_install() {
 	elog "Grass Home is ${MY_PM}"
 	make install UNIX_BIN="${D}"usr/bin BINDIR="${D}"usr/bin \
-		PREFIX="${D}"usr INST_DIR="${D}"usr/${MY_PM} \
-		|| die "make install failed!"
+	    PREFIX="${D}"usr INST_DIR="${D}"usr/${MY_PM} \
+	    || die "make install failed!"
+
+	if use wxwindows; then
+	    ln -sf "${LIBGDI}" "${D}"usr/${MY_PM}/lib/libgdi.so \
+		|| die "failed to find wx library"
+	fi
 
 	# get rid of DESTDIR in script path
 	sed -i -e "s@${D}@/@" "${D}"usr/bin/${MY_PM}
@@ -235,6 +270,9 @@ pkg_postrm() {
 }
 
 generate_files() {
+	local GUI="-gui"
+	use wxwindows && GUI="-wxpython"
+
 	cat <<-EOF > 99grass-6
 	GRASS_LD_LIBRARY_PATH="/usr/${MY_PM}/lib"
 	LDPATH="/usr/${MY_PM}/lib"
@@ -249,7 +287,7 @@ generate_files() {
 	Name=Grass ${PV}
 	Type=Application
 	Comment=GRASS Open Source GIS, derived from the original US Army Corps of Engineers project.
-	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM} -gui
+	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM} ${GUI}
 	Path=
 	Icon=grass_icon.png
 	Categories=Science;Education;

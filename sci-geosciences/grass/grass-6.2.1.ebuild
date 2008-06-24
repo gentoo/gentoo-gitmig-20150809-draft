@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.11 2008/05/21 19:01:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.12 2008/06/24 07:45:50 nerdboy Exp $
 
-inherit eutils autotools
+inherit eutils libtool
 
 DESCRIPTION="An open-source GIS with raster and vector functionality, as well as 3D vizualization."
 HOMEPAGE="http://grass.itc.it/"
@@ -18,13 +18,9 @@ postgres python readline sqlite tcl tk tiff truetype X"
 
 RESTRICT="strip"
 
-RDEPEND=">=sys-devel/make-3.80
-	>=sys-libs/zlib-1.1.4
-	>=sys-devel/flex-2.5.4a
-	>=sys-devel/bison-1.35
+RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.3
 	>=sys-libs/gdbm-1.8.0
-	>=sys-devel/gcc-3.2.2
 	|| (
 	    sys-apps/man
 	    sys-apps/man-db )
@@ -62,6 +58,10 @@ RDEPEND=">=sys-devel/make-3.80
 	)"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/make-3.80
+	>=sys-devel/flex-2.5.4a
+	>=sys-devel/bison-1.35
+	>=sys-devel/gcc-3.2.2
 	X? (
 		x11-proto/xproto
 		x11-proto/xextproto

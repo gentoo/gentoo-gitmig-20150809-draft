@@ -1,6 +1,18 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.57 2008/05/21 19:01:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.58 2008/06/24 07:45:51 nerdboy Exp $
+
+*grass-6.3.0 (24 Jun 2008)
+
+  24 Jun 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.3.0-html-nonviz.patch, grass-5.4.0.ebuild,
+  grass-6.0.1.ebuild, grass-6.2.0-r1.ebuild, grass-6.2.1.ebuild,
+  grass-6.2.3.ebuild, +grass-6.3.0.ebuild:
+  Added latest release with wxpython gui support and tested with gcc 4.3.1
+  (see bugs #223639 and #217917).  Now includes multiple ffmpeg dirctories
+  so sing out if you know of a better way...  Also fixed more QA warnings
+  in older versions.
+
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> grass-5.4.0.ebuild,
   grass-6.0.1.ebuild, grass-6.2.0-r1.ebuild, grass-6.2.1.ebuild,
@@ -24,7 +36,7 @@
   04 May 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.3.ebuild:
   Updated for changed include path in latest ffmpeg.  Still needs testing,
   but it builds and runs; so far I've only found avcodec included in the
-  source.
+  source for Grass 6.2.3.
 
 *grass-6.2.3 (01 May 2008)
 
