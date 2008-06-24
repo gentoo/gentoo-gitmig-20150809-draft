@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r3.ebuild,v 1.2 2008/06/24 08:43:21 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r3.ebuild,v 1.3 2008/06/24 16:07:58 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib autotools
 
@@ -23,7 +23,6 @@ DEPEND=">=sys-apps/texinfo-4.7-r1
 			x11-libs/libSM
 			x11-libs/libICE
 		)"
-
 
 src_unpack() {
 	unpack ${A}
