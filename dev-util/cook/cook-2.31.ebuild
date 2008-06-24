@@ -1,25 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.24.ebuild,v 1.11 2008/01/26 19:15:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.31.ebuild,v 1.1 2008/06/24 04:00:02 darkside Exp $
 
 inherit eutils
 
 DESCRIPTION="tool for constructing files; a drop in replacement for make"
 HOMEPAGE="http://www.canb.auug.org.au/~millerp/cook/cook.html"
-SRC_URI="http://www.canb.auug.org.au/~millerp/cook/${P}.tar.gz"
+SRC_URI="http://miller.emu.id.au/pmiller/software/cook/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/bison"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-bugfix.patch
-}
+RDEPEND=""
 
 src_compile() {
 	econf || die "./configure failed"
