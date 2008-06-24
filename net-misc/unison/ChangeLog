@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.52 2008/06/16 20:51:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.53 2008/06/24 09:02:56 aballier Exp $
+
+  24 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  unison-2.13.16-r1.ebuild, unison-2.27.57-r1.ebuild:
+  Add support for no-ocamlopt installs, bug #229129
 
   16 Jun 2008; Alexis Ballier <aballier@gentoo.org> unison-2.13.16.ebuild:
   quote variables and dont dodoc copying
