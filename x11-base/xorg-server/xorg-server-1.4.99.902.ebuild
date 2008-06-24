@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.2 2008/06/17 21:04:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.3 2008/06/24 13:08:49 chainsaw Exp $
 
 ### Designed for use with mesa 7.1_rc1 and with patches to pull in the
 ### swrast dri driver from the master branch.
@@ -233,6 +233,7 @@ PDEPEND="
 		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.8 )
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.2.1 )
 		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.9 )
+		video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-173.14.09 )
 		video_cards_r128? ( >=x11-drivers/xf86-video-ati-6.8.0-r1 )
 		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.8.0-r1 )
 		video_cards_radeonhd? ( >=x11-drivers/xf86-video-radeonhd-1.2.1 )
@@ -253,7 +254,6 @@ PDEPEND="
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
 
 		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
-		!x11-drivers/nvidia-drivers
 		!x11-drivers/ati-drivers
 
 		!x11-drivers/xf86-video-impact

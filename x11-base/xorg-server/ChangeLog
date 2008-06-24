@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.341 2008/06/17 21:04:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.342 2008/06/24 13:08:49 chainsaw Exp $
+
+  24 Jun 2008; <chainsaw@gentoo.org> xorg-server-1.4.99.902.ebuild:
+  As of 173.14.09 we can stop blocking the nVidia proprietary drivers for
+  the 1.5 pre-release. Closes bug #226151 by Chris Gianelloni
+  <wolf31o2@gentoo.org>.
 
   17 Jun 2008; Hanno Boeck <hanno@gentoo.org> xorg-server-1.4.99.902.ebuild:
   Lower pixman dep, pixman 0.11 has many issues.
