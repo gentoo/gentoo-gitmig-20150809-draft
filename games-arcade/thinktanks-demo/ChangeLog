@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/thinktanks-demo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.6 2008/06/24 10:11:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.7 2008/06/25 16:33:42 ken69267 Exp $
+
+  25 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
+  thinktanks-demo-1.1-r1.ebuild:
+  amd64 stable, bug #229131
 
   24 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   thinktanks-demo-1.1-r1.ebuild:
