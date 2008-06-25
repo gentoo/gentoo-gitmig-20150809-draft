@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.62 2008/06/25 07:28:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.63 2008/06/25 18:00:56 gentoofan23 Exp $
+
+  25 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  tintin-1.98.2.ebuild:
+  amd64 stable, bug #229279
 
   25 Jun 2008; Christian Faulhammer <opfer@gentoo.org> tintin-1.98.2.ebuild:
   stable x86, bug 229279
