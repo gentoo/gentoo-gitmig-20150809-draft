@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.1 2008/06/24 07:45:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.2 2008/06/25 04:28:50 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -78,7 +78,8 @@ pkg_setup() {
 	elog ""
 	elog "This version enables the experimental wxpython interface, which"
 	elog "you may want to try, since the legacy GUI seems a little wonky"
-	elog "in this version; just enable the wxwindows USE flag and build."
+	elog "in this version; just enable the wxwindows USE flag and rebuild"
+	elog "grass to use it."
 	elog ""
 	if use gmath; then
 		for d in $(eselect lapack show); do myblas=${d}; done
@@ -152,8 +153,11 @@ src_compile() {
 		--with-tcltk-libs=${TCL_LIBDIR}"
 	    if use wxwindows; then
 		WX_GTK_VER=2.8
-		need-wxwidgets gtk2
-		LIBGDI="/usr/$(get_libdir)/python${PYVER}/site-packages/wx-2.8-gtk2-unicode/wx/_gdi_.so"
+		need-wxwidgets unicode
+		# The following lib should be there, based on the above and the
+		# wxpython dependency (in theory).  I still need a good way to
+		# query for the location...
+		LIBGDI="/usr/$(get_libdir)/python${PYVER}/site-packages/wx-${WX_GTK_VER}-gtk2-unicode/wx/_gdi_.so"
 		myconf="${myconf} --with-python --with-wxwidgets=${WX_CONFIG}"
 	    fi
 	else
@@ -222,7 +226,7 @@ src_compile() {
 
 	if use wxwindows; then
 	    emake -j1
-	    ln -sf "${LIBGDI}" dist.x86_64-pc-linux-gnu/lib/libgdi.so \
+	    ln -sf "${LIBGDI}" dist.${CHOST}/lib/libgdi.so \
 		|| die "making libgdi link failed"
 	    cd gui/wxpython/vdigit
 	    make default -j1 || die "make vdigit failed!"
