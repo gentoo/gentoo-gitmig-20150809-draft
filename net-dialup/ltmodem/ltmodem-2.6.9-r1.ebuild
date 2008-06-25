@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9.ebuild,v 1.5 2008/05/21 06:37:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.1 2008/06/25 20:59:56 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://linmodems.technion.ac.il/"
 SRC_URI="http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/ltmodem-${MY_ALK_VER}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 RESTRICT="userpriv"
@@ -70,9 +70,9 @@ pkg_postinst() {
 			udevcontrol reload_rules
 		eend $?
 	else
-		mknod --mode=0660 /dev/ttyLTM0 c 62 64 && chgrp dialout /dev/ttyLTM0
+		mknod --mode=0660 /dev/ttySLTM0 c 62 64 && chgrp dialout /dev/ttySLTM0
 	fi
-	elog "Use /dev/ttyLTM0 to access modem"
+	elog "Use /dev/ttySLTM0 to access modem"
 
 	echo
 	ewarn "Remember, in order to access the modem,"
