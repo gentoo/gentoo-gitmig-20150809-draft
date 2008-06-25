@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/usbmon-5.ebuild,v 1.1 2008/06/25 03:54:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/usbmon-5.ebuild,v 1.2 2008/06/25 03:55:42 robbat2 Exp $
 
 DESCRIPTION="Userland for USB monitoring framework"
 HOMEPAGE="http://people.redhat.com/zaitcev/linux/"
@@ -14,7 +14,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e '/CFLAGS =/s, = , \+= ,g' ${S}/Makefile
+	sed -i -e '/CFLAGS =/s, = , \+= ,g' "${S}"/Makefile
 }
 
 src_install() {
