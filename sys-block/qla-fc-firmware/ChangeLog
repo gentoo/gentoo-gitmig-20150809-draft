@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/qla-fc-firmware
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.21 2008/06/24 16:36:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.22 2008/06/25 02:54:13 robbat2 Exp $
+
+  25 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  qla-fc-firmware-20071207-r1.ebuild:
+  Stable on amd64 per bug #227979. Tested on Gentoo infrastructure.
 
   24 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   qla-fc-firmware-20071207-r1.ebuild:
