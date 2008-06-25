@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51_pre2052.ebuild,v 1.1 2008/06/25 16:07:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51_pre2052.ebuild,v 1.2 2008/06/25 16:11:56 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 
-IUSE="elibc_FreeBSD gnome qt-static qt3-static spell"
+IUSE="elibc_FreeBSD gnome ia32 qt-static qt3-static spell"
 MY_LINGUAS="be bg cs da de el en en-GB es-ES es-LA fi fr fr-CA fy hi
 hr hu it ja ka ko lt mk nb nl nn pl pt pt-BR ru sv tr zh-CN zh-TW"
 
