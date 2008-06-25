@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.6.ebuild,v 1.6 2008/06/18 13:06:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.6.ebuild,v 1.7 2008/06/25 14:53:03 jsbronder Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
 
@@ -76,7 +76,7 @@ src_compile() {
 
 	econf ${myconf} \
 		$(use_enable !nocxx mpi-cxx) \
-		$(use_enable romio romio-io) \
+		$(use_enable romio io-romio) \
 		$(use_enable smp smp-locks) \
 		$(use_enable heterogeneous) \
 		$(use_with pbs tm) \
