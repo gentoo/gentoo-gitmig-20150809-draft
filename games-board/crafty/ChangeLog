@@ -1,6 +1,9 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.29 2008/06/24 16:06:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.30 2008/06/25 19:12:04 nixnut Exp $
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> crafty-22.1.ebuild:
+  Stable on ppc wrt bug 229161
 
   24 Jun 2008; Christian Faulhammer <opfer@gentoo.org> crafty-22.1.ebuild:
   stable x86, bug 229161

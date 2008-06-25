@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.1.ebuild,v 1.3 2008/06/24 16:06:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.1.ebuild,v 1.4 2008/06/25 19:12:04 nixnut Exp $
 
 inherit flag-o-matic games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/source/${P}.zip
 
 LICENSE="crafty"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="no-opts"
 RESTRICT="test"
 
