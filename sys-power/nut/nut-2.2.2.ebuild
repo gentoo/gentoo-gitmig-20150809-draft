@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.1 2008/06/25 02:29:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.2 2008/06/25 16:03:48 mr_bones_ Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -60,7 +60,7 @@ src_unpack() {
 
 	sed -e "s:GD_LIBS.*=.*-L/usr/X11R6/lib \(.*\) -lXpm -lX11:GD_LIBS=\"\1:" \
 		-i configure.in || die "sed failed"
-	
+
 	sed -e "s:52_nut-usbups.rules:70-nut-usbups.rules:" \
 		-i scripts/udev/Makefile.am || die "sed failed"
 
@@ -128,7 +128,7 @@ src_install() {
 
 	docinto cables
 	dodoc docs/cables/*
-	
+
 	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsd upsd
 	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsdrv upsdrv
 	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsmon upsmon
