@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.0.ebuild,v 1.1 2008/03/12 14:55:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.0.ebuild,v 1.2 2008/06/25 14:27:44 george Exp $
 
 inherit gnatbuild
 
@@ -20,6 +20,10 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	amd64? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-amd64.tar.bz2 )"
 
 KEYWORDS="~amd64 ~ppc ~x86"
+
+# starting with 4.3.0 gnat needs these libs
+DEPEND=">=dev-libs/mpfr-2.3.1
+	>=dev-libs/gmp-4.2.2"
 
 QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind ${BINPATH:1}/gnatmake
 	${LIBEXECPATH:1}/gnat1 ${LIBPATH:1}/adalib/libgnat-${SLOT}.so"
