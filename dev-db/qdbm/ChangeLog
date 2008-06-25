@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.124 2008/06/21 19:28:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.125 2008/06/25 23:07:47 gentoofan23 Exp $
+
+  25 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> qdbm-1.8.77.ebuild:
+  stable amd64, bug 212590
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> qdbm-1.8.77.ebuild:
   Stable on ppc64; bug #212590
