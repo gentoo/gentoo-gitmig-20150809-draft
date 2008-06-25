@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut-2.2.2-init.d-upsmon,v 1.1 2008/06/25 02:29:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut-2.2.2-init.d-upsmon,v 1.2 2008/06/25 02:53:08 robbat2 Exp $
 
 opts="reload"
 pidfile=/var/run/upsmon.pid
@@ -13,13 +13,13 @@ depend() {
 
 start() {
 	ebegin "Starting upsmon"
-	start-stop-daemon --start --quiet --exec /usr/sbin/upsmon
+	start-stop-daemon --start --quiet --exec ${bin}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping upsmon"
-	start-stop-daemon --stop --quiet --pidfile /var/run/upsmon.pid
+	start-stop-daemon --stop --quiet --pidfile ${pidfile}
 	eend $?
 }
 reload() {
