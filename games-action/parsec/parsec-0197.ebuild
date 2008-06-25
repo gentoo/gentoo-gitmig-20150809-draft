@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.15 2008/06/25 13:43:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.16 2008/06/25 16:03:26 mr_bones_ Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/glibc
 	virtual/opengl
 	x86? (
 		sys-libs/lib-compat
-		virtual/glu		
+		virtual/glu
 		virtual/glut
 		media-libs/openal
 		=x11-libs/gtk+-1.2*
