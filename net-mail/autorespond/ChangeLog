@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/autorespond
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.12 2006/02/20 00:11:02 hansmi Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.13 2008/06/25 03:53:43 robbat2 Exp $
+
+*autorespond-2.0.5 (25 Jun 2008)
+
+  25 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/autorespond-2.0.5-no-include-bounce.patch,
+  +autorespond-2.0.5.ebuild:
+  Version bump per bug #173333.
 
   20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   autorespond-2.0.4.ebuild:
