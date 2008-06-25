@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-MapUTF8
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.18 2007/12/27 20:13:55 ticho Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.19 2008/06/25 18:03:24 corsair Exp $
+
+  25 Jun 2008; Markus Rothe <corsair@gentoo.org>
+  Unicode-MapUTF8-1.11.ebuild:
+  Stable on ppc64; bug #229403
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org> Unicode-MapUTF8-1.11.ebuild:
   Stable on x86.
