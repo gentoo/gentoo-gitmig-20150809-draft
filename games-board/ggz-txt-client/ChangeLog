@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-txt-client
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.18 2008/06/25 07:26:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.19 2008/06/25 12:24:03 coldwind Exp $
+
+  25 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ggz-txt-client-0.0.14.1.ebuild:
+  amd64 stable wrt bug #229169
 
   25 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   ggz-txt-client-0.0.14.1.ebuild:
