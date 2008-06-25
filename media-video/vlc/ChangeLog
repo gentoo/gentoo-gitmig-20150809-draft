@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.343 2008/06/25 14:06:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.344 2008/06/25 14:15:05 aballier Exp $
+
+  25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20080625.ebuild:
+  make qt4 a default enabled useflag as most people expect to have a gui and
+  the wx gui is gone
 
   25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20080625.ebuild:
