@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/upslug2-11.ebuild,v 1.1 2005/11/30 06:51:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/upslug2-11.ebuild,v 1.2 2008/06/25 08:45:55 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nslu/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm x86"
 IUSE=""
 
 DEPEND=""
