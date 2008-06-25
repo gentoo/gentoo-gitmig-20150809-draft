@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8.ebuild,v 1.1 2008/06/20 23:57:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8.ebuild,v 1.2 2008/06/25 17:35:16 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,12 +10,13 @@ SRC_URI="http://christophe.varoqui.free.fr/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=sys-fs/device-mapper-1.00.19-r1
 	sys-fs/udev
-	sys-fs/sysfsutils"
+	sys-fs/sysfsutils
+	dev-libs/libaio"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
