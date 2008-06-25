@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.40.ebuild,v 1.2 2008/06/25 10:17:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.40.ebuild,v 1.3 2008/06/25 13:23:18 remi Exp $
 
 inherit fdo-mime
 
@@ -35,7 +35,7 @@ pkg_postinst() {
 
 	# see bug #228885
 	elog
-	elog "The database format has changed bewteen 0.30 and 0.40."
+	elog "The database format has changed between 0.30 and 0.40."
 	elog "You may need to update all your local databases and caches."
 	elog "To do so, please run the following commands:"
 	elog "(for each user) $ update-mime-database ~/.local/share/mime/"
