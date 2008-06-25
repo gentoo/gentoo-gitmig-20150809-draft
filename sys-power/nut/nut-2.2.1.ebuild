@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.1.ebuild,v 1.1 2008/03/09 06:03:26 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.1.ebuild,v 1.2 2008/06/25 01:19:47 robbat2 Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -145,9 +145,11 @@ src_install() {
 	fperms 0700 /var/lib/nut
 	fowners nut:nut /var/lib/nut
 
+	# Do not remove eval here, because the variables contain shell expansions.
 	eval fperms 0640 ${NUT_PRIVATE_FILES}
 	eval fowners root:nut ${NUT_PRIVATE_FILES}
 
+	# Do not remove eval here, because the variables contain shell expansions.
 	eval fperms 0644 ${NUT_PUBLIC_FILES}
 	eval fowners root:root ${NUT_PUBLIC_FILES}
 
@@ -175,9 +177,11 @@ pkg_postinst() {
 	chown nut:nut "${ROOT}"/var/lib/nut 2>/dev/null
 	chmod 0700 "${ROOT}"/var/lib/nut 2>/dev/null
 
+	# Do not remove eval here, because the variables contain shell expansions.
 	eval chown root:nut "${ROOT}"${NUT_PRIVATE_FILES} 2>/dev/null
 	eval chmod 0640 "${ROOT}"${NUT_PRIVATE_FILES} 2>/dev/null
 
+	# Do not remove eval here, because the variables contain shell expansions.
 	eval chown root:root "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
 	eval chmod 0644 "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
 
