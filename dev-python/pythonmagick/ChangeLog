@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.10 2008/05/29 16:33:34 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.11 2008/06/25 17:57:42 hawking Exp $
+
+*pythonmagick-0.7-r1 (25 Jun 2008)
+
+  25 Jun 2008; Ali Polatel <hawking@gentoo.org> -pythonmagick-0.7.ebuild,
+  +pythonmagick-0.7-r1.ebuild:
+  Revision bump. Fixes #215038, thanks to René 'Necoro' Neumann. Keyworded
+  ~amd64. Drop old.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> pythonmagick-0.6.ebuild,
   pythonmagick-0.7.ebuild:
