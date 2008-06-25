@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.2 2008/06/21 19:48:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.3 2008/06/25 21:38:34 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -48,15 +48,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	elog "To activate the client part for this vdr-plugin execute the following command:"
-	elog "\teselect vdr-plugin enable ${PN#vdr-}-client"
-	elog
-	echo
-	elog "To activate the server part for this vdr-plugin execute the following command:"
-	elog "\teselect vdr-plugin enable ${PN#vdr-}-server"
-	elog
-	echo
+	vdr-plugin_pkg_postinst
 	elog "If you want to use the externremux-feature, then put"
 	elog "your custom script as ${EXTERNREMUX_PATH}."
 
