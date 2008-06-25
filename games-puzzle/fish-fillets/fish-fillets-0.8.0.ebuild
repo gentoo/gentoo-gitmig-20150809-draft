@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.6 2008/06/24 17:01:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.7 2008/06/25 19:07:15 nixnut Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fillets/fillets-ng-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="X"
 
 RDEPEND=">=media-libs/libsdl-1.2
