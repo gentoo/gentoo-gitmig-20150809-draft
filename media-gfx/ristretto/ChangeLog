@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.4 2008/06/25 17:25:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.5 2008/06/25 19:00:26 nixnut Exp $
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> ristretto-0.0.20.ebuild:
+  Stable on ppc wrt bug 228961
 
   25 Jun 2008; Markus Rothe <corsair@gentoo.org> ristretto-0.0.20.ebuild:
   Stable on ppc64; bug #228961
