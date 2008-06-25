@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.10 2007/10/09 00:45:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.11 2008/06/25 02:32:01 robbat2 Exp $
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails autotools
 
 MY_P="${P/_/-}"
 
@@ -61,7 +61,7 @@ src_unpack() {
 		-i configure.in || die "sed failed"
 
 	ebegin "Recreating configure"
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 eautoconf || die "autoconf failed"
 	eend $?
 }
 
