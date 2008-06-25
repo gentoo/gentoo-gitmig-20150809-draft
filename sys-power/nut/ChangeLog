@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.53 2008/06/25 01:19:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.54 2008/06/25 02:29:03 robbat2 Exp $
+
+*nut-2.2.2 (25 Jun 2008)
+
+  25 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nut-2.2.2-init.d-upsd, +files/nut-2.2.2-init.d-upsdrv,
+  +files/nut-2.2.2-init.d-upsmon, +nut-2.2.2.ebuild:
+  Version bump per bug #226157. Fix bugs #177887, #211505 for baselayout2.
+  Provide better support for multiple UPS per bug #149687. Please read the
+  postinst about upsdrv!.
 
   25 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> nut-2.2.1.ebuild:
   Add warning about shell expansions.

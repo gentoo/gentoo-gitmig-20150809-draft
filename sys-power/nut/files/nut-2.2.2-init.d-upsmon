@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut-2.2.2-init.d-upsmon,v 1.1 2008/06/25 02:29:04 robbat2 Exp $
+
+opts="reload"
+pidfile=/var/run/upsmon.pid
+bin=/usr/sbin/upsmon
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting upsmon"
+	start-stop-daemon --start --quiet --exec /usr/sbin/upsmon
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping upsmon"
+	start-stop-daemon --stop --quiet --pidfile /var/run/upsmon.pid
+	eend $?
+}
+reload() {
+	ebegin "Reloading upsd"
+	start-stop-daemon --stop --signal HUP --oknodo --quiet --pidfile ${pidfile}
+	eend $?
+}
