@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsvg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.23 2008/06/20 17:17:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.24 2008/06/25 18:00:48 maekke Exp $
+
+  25 Jun 2008; Markus Meier <maekke@gentoo.org> xsvg-0.2.1.ebuild:
+  x11-libs/cairo must be built with USE="X", bug #225223
 
   20 Jun 2008; Ferris McCormick <fmccor@gentoo.org> xsvg-0.2.1.ebuild:
   Add ~sparc for testing at user request (Guido Winkelmann), Bug #228579.
