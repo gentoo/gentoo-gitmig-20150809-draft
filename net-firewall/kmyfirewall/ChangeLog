@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.36 2008/06/25 19:39:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.37 2008/06/25 21:49:50 opfer Exp $
+
+  25 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  kmyfirewall-1.1.1.ebuild:
+  stable x86, bug 229411
 
   25 Jun 2008; Jeremy Olexa <darkside@gentoo.org> kmyfirewall-1.1.1.ebuild:
   Stable amd64, bug #229411
