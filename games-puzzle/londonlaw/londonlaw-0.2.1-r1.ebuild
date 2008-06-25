@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r1.ebuild,v 1.3 2008/06/25 16:08:58 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r1.ebuild,v 1.4 2008/06/25 19:42:01 nixnut Exp $
 
 inherit eutils python games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.eecs.umich.edu/~pelzlpj/londonlaw/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
