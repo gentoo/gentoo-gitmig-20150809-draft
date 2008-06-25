@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.144 2008/05/30 21:05:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.145 2008/06/25 19:26:13 swegener Exp $
+
+*avahi-0.6.23 (25 Jun 2008)
+
+  25 Jun 2008; Sven Wegener <swegener@gentoo.org> +avahi-0.6.23.ebuild:
+  Version bump.
 
   30 May 2008; Sven Wegener <swegener@gentoo.org>
   -files/avahi-0.6.20-cleanup-dns-compression-table.patch,
