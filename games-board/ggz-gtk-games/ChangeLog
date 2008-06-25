@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-games
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.20 2008/06/25 07:25:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.21 2008/06/25 12:29:27 coldwind Exp $
+
+  25 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ggz-gtk-games-0.0.14.1.ebuild:
+  amd64 stable wrt bug #229165
 
   25 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   ggz-gtk-games-0.0.14.1.ebuild:
