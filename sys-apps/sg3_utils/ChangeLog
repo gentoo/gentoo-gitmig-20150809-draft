@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.41 2008/03/22 22:50:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.42 2008/06/25 17:33:58 robbat2 Exp $
+
+*sg3_utils-1.26 (25 Jun 2008)
+
+  25 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +sg3_utils-1.26.ebuild:
+  Version bump.
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> sg3_utils-1.25.ebuild:
   amd64 stable wrt bug #205925
