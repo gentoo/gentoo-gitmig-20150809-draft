@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.61 2008/06/24 20:20:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.62 2008/06/25 07:28:21 opfer Exp $
+
+  25 Jun 2008; Christian Faulhammer <opfer@gentoo.org> tintin-1.98.2.ebuild:
+  stable x86, bug 229279
 
   24 Jun 2008; Ferris McCormick <fmccor@gentoo.org> tintin-1.98.2.ebuild:
   Sparc stable, Bug #229279.  The interpreter works, at least.
