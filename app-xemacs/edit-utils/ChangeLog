@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edit-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.23 2008/06/25 13:03:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.24 2008/06/25 17:11:54 corsair Exp $
+
+  25 Jun 2008; Markus Rothe <corsair@gentoo.org> edit-utils-2.39.ebuild:
+  Stable on ppc64; bug #221197
 
   25 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   edit-utils-2.39.ebuild:
