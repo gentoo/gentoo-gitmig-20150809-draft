@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.33 2008/05/02 16:08:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.34 2008/06/25 17:24:22 aballier Exp $
+
+  25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/noteedit-2.8.1+gcc-4.3.1.patch, noteedit-2.8.1-r1.ebuild:
+  fix build with gcc 4.3 with tse3 useflag on, by Markus Rathgeb
+  <maggu2810@web.de>, bug #229291
 
   02 May 2008; Samuli Suominen <drac@gentoo.org> noteedit-2.8.1-r1.ebuild:
   Use berlios mirrors://

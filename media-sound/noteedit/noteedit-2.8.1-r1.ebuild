@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1-r1.ebuild,v 1.6 2008/05/02 16:08:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1-r1.ebuild,v 1.7 2008/06/25 17:24:22 aballier Exp $
 
 IUSE="kmid tse3"
 
@@ -23,7 +23,7 @@ DEPEND="kmid? ( || ( kde-base/kmid kde-base/kdemultimedia )  )
 
 need-kde 3
 
-PATCHES=( "${FILESDIR}/${P}-desktop-file.patch" "${FILESDIR}/${P}+gcc-4.3.patch" )
+PATCHES=( "${FILESDIR}/${P}-desktop-file.patch" "${FILESDIR}/${P}+gcc-4.3.patch" "${FILESDIR}/${P}+gcc-4.3.1.patch" )
 
 src_compile() {
 	use tse3 || use kmid || myconf="--without-libs"
