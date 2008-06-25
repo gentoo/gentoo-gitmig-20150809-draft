@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.1 2008/06/25 08:49:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.2 2008/06/25 14:06:19 aballier Exp $
 
 EAPI="1"
 
@@ -262,6 +262,7 @@ src_compile () {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
+		$(use_enable gnutls remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable samba smb) \
 		$(use_enable sdl) \

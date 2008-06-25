@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.342 2008/06/25 08:49:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.343 2008/06/25 14:06:19 aballier Exp $
+
+  25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20080625.ebuild:
+  disable remoteosd when we don't have gnutls/gcrypt support, bug #229363
 
 *vlc-0.9.0_alpha20080625 (25 Jun 2008)
 
