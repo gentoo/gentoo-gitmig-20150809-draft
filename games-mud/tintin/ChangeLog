@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.63 2008/06/25 18:00:56 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.64 2008/06/25 19:37:08 nixnut Exp $
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> tintin-1.98.2.ebuild:
+  Stable on ppc wrt bug 229279
 
   25 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   tintin-1.98.2.ebuild:
