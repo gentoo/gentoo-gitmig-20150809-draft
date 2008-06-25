@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.35 2008/06/09 07:32:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.36 2008/06/25 17:25:37 loki_val Exp $
+
+*ming-0.4.0_beta5 (25 Jun 2008)
+
+  25 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +ming-0.4.0_beta5.ebuild:
+  Bump, solving 222321. This version radically improves Flash compilation.
+  Dropped keywords for arm, mips, sh and s390 due to new swig dep, see bug
+  229423.
 
 *ming-0.3.0-r1 (09 Jun 2008)
 
