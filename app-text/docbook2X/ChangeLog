@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.25 2008/06/25 16:12:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.26 2008/06/25 21:53:30 opfer Exp $
+
+  25 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  docbook2X-0.8.8-r2.ebuild:
+  stable x86, bug 222041
 
   25 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   docbook2X-0.8.8-r2.ebuild:
