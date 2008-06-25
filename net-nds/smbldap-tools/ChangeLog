@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/smbldap-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.26 2008/06/25 14:55:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.27 2008/06/25 18:16:11 corsair Exp $
+
+  25 Jun 2008; Markus Rothe <corsair@gentoo.org>
+  smbldap-tools-0.9.4-r1.ebuild:
+  Stable on ppc64; bug #229403
 
 *smbldap-tools-0.9.5 (25 Jun 2008)
 
