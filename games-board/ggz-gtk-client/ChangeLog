@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ggz-gtk-client
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.20 2008/06/25 12:27:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.21 2008/06/25 19:13:31 nixnut Exp $
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> ggz-gtk-client-0.0.14.1.ebuild:
+  Stable on ppc wrt bug 229163
 
   25 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   ggz-gtk-client-0.0.14.1.ebuild:
