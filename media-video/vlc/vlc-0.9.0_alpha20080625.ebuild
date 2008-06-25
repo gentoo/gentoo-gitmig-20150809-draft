@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.4 2008/06/25 15:14:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.5 2008/06/25 20:06:47 aballier Exp $
 
 EAPI="1"
 
@@ -72,7 +72,7 @@ RDEPEND="
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
-		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r2 )
 		flac? ( media-libs/libogg
 			>=media-libs/flac-1.1.2 )
 		fluidsynth? ( media-sound/fluidsynth )
