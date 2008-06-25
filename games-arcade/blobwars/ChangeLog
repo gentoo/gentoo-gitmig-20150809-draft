@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.36 2008/06/24 20:48:38 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.37 2008/06/25 19:04:31 nixnut Exp $
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> blobwars-1.08.ebuild:
+  Stable on ppc wrt bug 229137
 
   24 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> blobwars-1.08.ebuild:
   stable on sparc, bug #229137
