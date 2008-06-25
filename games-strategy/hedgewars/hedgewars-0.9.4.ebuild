@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.4.ebuild,v 1.1 2008/06/19 20:41:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.4.ebuild,v 1.2 2008/06/25 12:46:44 nyhm Exp $
 
 EAPI=1
 inherit eutils games
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-4.2:4
+RDEPEND="|| (
+		( x11-libs/qt-gui:4 x11-libs/qt-svg:4 )
+		x11-libs/qt:4
+	)
 	media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer
