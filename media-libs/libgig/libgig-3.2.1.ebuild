@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/libgig-3.2.1.ebuild,v 1.1 2008/01/12 10:04:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/libgig-3.2.1.ebuild,v 1.2 2008/06/25 17:07:50 aballier Exp $
 
 inherit eutils
 
@@ -18,6 +18,12 @@ RDEPEND=">=media-libs/libsndfile-1.0.2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-gcc-4.3.patch"
+}
 
 src_compile() {
 	econf

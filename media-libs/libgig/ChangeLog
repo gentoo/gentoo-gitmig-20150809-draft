@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.8 2008/01/27 10:21:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.9 2008/06/25 17:07:50 aballier Exp $
+
+  25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/libgig-gcc-4.3.patch, libgig-3.2.1.ebuild:
+  gcc 4.3 build fix, thanks to Olivier Huber <oli.huber@gmail.com> in bug
+  #229039
 
   27 Jan 2008; Alexis Ballier <aballier@gentoo.org> -libgig-2.0.0.ebuild,
   -libgig-2.0.1.ebuild, -libgig-3.1.1.ebuild:
