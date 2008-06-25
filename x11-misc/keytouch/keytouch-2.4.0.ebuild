@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.0.ebuild,v 1.1 2008/06/13 18:34:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.0.ebuild,v 1.2 2008/06/25 09:37:05 nyhm Exp $
 
 inherit autotools eutils linux-info
 
@@ -18,7 +18,10 @@ RDEPEND=">=x11-libs/gtk+-2
 	gnome-base/gnome-menus
 	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	x11-proto/inputproto
+	x11-proto/xextproto
+	x11-proto/xproto"
 RDEPEND="${RDEPEND}
 	acpi? ( sys-power/acpid )
 	kde? ( || (
