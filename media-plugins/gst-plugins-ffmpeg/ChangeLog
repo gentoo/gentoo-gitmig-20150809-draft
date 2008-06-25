@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.85 2008/06/23 22:34:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.86 2008/06/25 20:13:38 loki_val Exp $
+
+  25 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/0.10.4/system-ffmpeg-warning.patch,
+  gst-plugins-ffmpeg-0.10.4-r1.ebuild:
+  Removed 15 second wait and warning message using unspeakable means.
 
 *gst-plugins-ffmpeg-0.10.4-r1 (23 Jun 2008)
 

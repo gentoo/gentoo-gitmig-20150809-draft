@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.4-r1.ebuild,v 1.1 2008/06/23 22:34:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.4-r1.ebuild,v 1.2 2008/06/25 20:13:38 loki_val Exp $
 
 inherit flag-o-matic eutils base
 
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}
 PATCHES=(	"${PD}/01_new-codec-ids.patch"
 		"${PD}/02_av_picture_copy.patch"
 		"${PD}/03_disable-aac.patch"
-		"${PD}/04_disable-mpegts.patch" )
+		"${PD}/04_disable-mpegts.patch"
+		"${PD}/system-ffmpeg-warning.patch"	 )
 
 src_unpack() {
 	unpack ${A}
