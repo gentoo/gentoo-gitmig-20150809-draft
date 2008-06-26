@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.6 2008/06/20 11:23:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.7 2008/06/26 11:29:25 gentoofan23 Exp $
 
 inherit elisp-common eutils ruby
 
@@ -11,7 +11,7 @@ SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="emacs vim-syntax"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
