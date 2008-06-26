@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.28 2008/01/30 23:27:53 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.29 2008/06/26 08:39:18 bangert Exp $
+
+  26 Jun 2008; Thilo Bangert <bangert@gentoo.org> -thttpd-2.25b-r6.ebuild,
+  thttpd-2.25b-r7.ebuild:
+  remove bindnow-flags - as per bug #227029 - remove ancient version - fix
+  quoting
 
   30 Jan 2008; Thilo Bangert <bangert@gentoo.org> -thttpd-2.25b-r5.ebuild:
   remove vulnerable version - bug #159941

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.5 2007/10/01 17:53:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.6 2008/06/26 08:39:18 bangert Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,8 +20,8 @@ THTTPD_GROUP=thttpd
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${MY_P}/*.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${MY_P}/*.diff
 }
 
 pkg_setup() {
@@ -31,8 +31,6 @@ pkg_setup() {
 
 src_compile() {
 	## TODO: what to do with IPv6?
-
-	append-ldflags $(bindnow-flags)
 	use static && append-ldflags -static
 
 	econf || die "econf failed"
@@ -41,17 +39,17 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/man/man1
-	make prefix=${D}/usr \
-		MANDIR=${D}/usr/share/man \
+	make prefix="${D}"/usr \
+		MANDIR="${D}"/usr/share/man \
 		WEBGROUP=${THTTPD_GROUP} \
-		WEBDIR=${D}/var/www/localhost \
+		WEBDIR="${D}"/var/www/localhost \
 		"$@" install || die "make install failed"
 
-	mv ${D}/usr/sbin/{,th_}htpasswd
-	mv ${D}/usr/share/man/man1/{,th_}htpasswd.1
+	mv "${D}"/usr/sbin/{,th_}htpasswd
+	mv "${D}"/usr/share/man/man1/{,th_}htpasswd.1
 
-	newinitd ${FILESDIR}/${MY_P}/thttpd.init thttpd
-	newconfd ${FILESDIR}/${MY_P}/thttpd.confd thttpd
+	newinitd "${FILESDIR}"/${MY_P}/thttpd.init thttpd
+	newconfd "${FILESDIR}"/${MY_P}/thttpd.confd thttpd
 
 	dodoc README INSTALL TODO
 
@@ -59,7 +57,7 @@ src_install () {
 	newins "${FILESDIR}/thttpd.logrotate" thttpd
 
 	insinto /etc/thttpd
-	doins ${FILESDIR}/${MY_P}/thttpd.conf.sample
+	doins "${FILESDIR}"/${MY_P}/thttpd.conf.sample
 }
 
 pkg_postinst() {
