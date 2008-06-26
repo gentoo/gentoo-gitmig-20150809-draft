@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/wmpuzzle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.2 2008/01/18 12:24:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.3 2008/06/26 08:42:17 opfer Exp $
+
+  26 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  wmpuzzle-0.5.0.ebuild:
+  stable x86, bug 229485
 
   18 Jan 2008; Samuli Suominen <drac@gentoo.org>
   +files/wmpuzzle-0.5.0-asneeded.patch, wmpuzzle-0.5.0.ebuild:
