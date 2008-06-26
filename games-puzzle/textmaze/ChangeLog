@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/textmaze
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/ChangeLog,v 1.3 2008/03/07 19:26:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/ChangeLog,v 1.4 2008/06/26 08:44:33 opfer Exp $
+
+  26 Jun 2008; Christian Faulhammer <opfer@gentoo.org> textmaze-1.2.ebuild:
+  stable x86, bug 229491
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> textmaze-1.2.ebuild:
   QA cleanup: Fix quoting.
