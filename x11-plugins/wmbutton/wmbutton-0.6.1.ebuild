@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.5 2008/01/14 13:26:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.6 2008/06/26 13:06:01 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-Makefile.patch
-	use branding && cp ${DISTDIR}/${PN}-buttons.xpm buttons.xpm
+	use branding && cp "${DISTDIR}"/${PN}-buttons.xpm buttons.xpm
 }
 
 src_compile() {
