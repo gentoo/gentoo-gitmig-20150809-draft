@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.6.0.ebuild,v 1.1 2008/06/22 16:10:44 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.6.1.ebuild,v 1.1 2008/06/26 12:57:58 mpagano Exp $
 
 DESCRIPTION="A helper program for maintaining the package.keyword and package.unmask files"
 HOMEPAGE="http://www.mpagano.com/blog/?page_id=3"
