@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.244 2008/06/10 14:35:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.245 2008/06/26 21:40:21 cardoe Exp $
+
+  26 Jun 2008; Doug Goldstein <cardoe@gentoo.org> mythtv-0.21_p16867.ebuild,
+  mythtv-0.21_p16926.ebuild, mythtv-0.21_p16944.ebuild,
+  mythtv-0.21_p17100.ebuild, mythtv-0.21_p17435.ebuild,
+  mythtv-0.22_alpha17132.ebuild, mythtv-0.22_alpha17449.ebuild:
+  remove libdvdnav depend per bug #223765 and dvd USE flag as a result
 
 *mythtv-0.22_alpha17449 (10 Jun 2008)
 
