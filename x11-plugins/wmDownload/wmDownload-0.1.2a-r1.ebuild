@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a-r1.ebuild,v 1.2 2008/06/26 16:09:16 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a-r1.ebuild,v 1.3 2008/06/26 17:19:11 nixnut Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://wmdownload.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libdockapp
