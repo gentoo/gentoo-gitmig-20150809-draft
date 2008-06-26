@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.3.ebuild,v 1.1 2008/06/25 18:35:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.3.ebuild,v 1.2 2008/06/26 02:17:56 mr_bones_ Exp $
 
 EAPI=1
 
@@ -268,4 +268,3 @@ pkg_postinst() {
 		ewarn	"FAIL: astests-v8-Runner: expected: 4 obtained: 45 [./Date.as:551]"
 	fi
 }
-
