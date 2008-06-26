@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Technologies, Inc.
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.2 2008/05/05 19:40:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.3 2008/06/26 01:55:12 beandog Exp $
 
 DESCRIPTION="Watch word program for the GNOME2 desktop (watch word (german): losung)"
 HOMEPAGE="http://www.godehardt.org/losung.html"
@@ -8,6 +8,7 @@ SRC_URI="mirror://sourceforge/glosung/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2.0
 	>=x11-libs/gtk+-2.4

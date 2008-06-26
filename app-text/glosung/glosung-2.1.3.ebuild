@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-2.1.3.ebuild,v 1.3 2006/06/28 17:16:19 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-2.1.3.ebuild,v 1.4 2008/06/26 01:55:12 beandog Exp $
 
 DESCRIPTION="watch word program for the GNOME2 desktop (watch word (german): losung)"
 HOMEPAGE="http://www.godehardt.org/losung.html"
@@ -15,16 +15,15 @@ RDEPEND=">=gnome-base/gconf-2.0
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2"
-DEPEND=">=dev-util/scons-0.93
+DEPEND="${RDEPEND}
+	>=dev-util/scons-0.93
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.22
-	>=sys-devel/gettext-0.10
-	>=sys-apps/sed-4
-	${RDEPEND}"
+	>=sys-devel/gettext-0.10"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	#remove -Werror for updated glibc and gcc
 	sed -i -e 's:-Werror ::g' SConstruct
 }
@@ -34,5 +33,5 @@ src_compile() {
 }
 
 src_install() {
-	scons install DESTDIR=${D} || die
+	scons install DESTDIR="${D}" || die
 }
