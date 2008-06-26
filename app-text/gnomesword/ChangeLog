@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.28 2008/05/02 15:02:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.29 2008/06/26 01:47:25 beandog Exp $
+
+*gnomesword-2.3.1-r2 (26 Jun 2008)
+
+  26 Jun 2008; Steve Dibb <beandog@gentoo.org>
+  +files/gnomesword-gcc43.patch, +gnomesword-2.3.1-r2.ebuild:
+  Fix gcc 4.3 compilation, bug 226659, thanks to Marek Miller for patch; Add
+  missing dep, bug 227145
 
   02 May 2008; Doug Goldstein <cardoe@gentoo.org> gnomesword-2.1.7.ebuild,
   gnomesword-2.3.1-r1.ebuild:
