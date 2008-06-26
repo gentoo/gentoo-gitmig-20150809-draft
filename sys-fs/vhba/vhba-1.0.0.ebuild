@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.0.0.ebuild,v 1.3 2008/06/06 07:46:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.0.0.ebuild,v 1.4 2008/06/26 13:27:30 coldwind Exp $
 
 inherit linux-info linux-mod eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdemu/vhba-module-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.6.19"
