@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.18 2008/06/26 08:45:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.19 2008/06/26 11:08:59 gentoofan23 Exp $
+
+  26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> pingus-0.7.2.ebuild:
+  stable amd64, bug 229493
 
   26 Jun 2008; Christian Faulhammer <opfer@gentoo.org> pingus-0.7.2.ebuild:
   stable x86, bug 229493
