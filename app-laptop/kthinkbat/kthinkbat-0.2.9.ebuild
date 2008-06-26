@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/kthinkbat/kthinkbat-0.2.9.ebuild,v 1.1 2008/04/12 18:36:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/kthinkbat/kthinkbat-0.2.9.ebuild,v 1.2 2008/06/26 23:13:51 dirtyepic Exp $
+
+EAPI=1
 
 inherit kde
 
@@ -10,7 +12,7 @@ SRC_URI="http://lepetitfou.dyndns.org/download/kthinkbat/src/kthinkbat-0.2.x/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="smapi"
+IUSE="+smapi"
 
 DEPEND=""
 RDEPEND="smapi? ( app-laptop/tp_smapi )"
@@ -23,23 +25,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "KThinkBat can make use of the SMAPI BIOS interface found on most"
-	einfo "ThinkPads. "
-	einfo
-	einfo "If you want to use this feature, make sure you have"
-	einfo "the kernel module tp_smapi (from app-laptop/tp_smapi)"
-	einfo "loaded."
-	einfo
-	einfo "To autoload this kernel module at system startup type"
-	einfo
-	einfo "  # echo \"tp_smapi\" >> /etc/modules.autoload.d/kernel-2.6"
-	einfo
+	elog
+	elog "KThinkBat can make use of the SMAPI BIOS interface found on most"
+	elog "ThinkPads. "
+	elog
+	elog "If you want to use this feature, make sure you have"
+	elog "the kernel module tp_smapi (from app-laptop/tp_smapi)"
+	elog "loaded."
+	elog
+	elog "To autoload this kernel module at system startup type"
+	elog
+	elog "  # echo \"tp_smapi\" >> /etc/modules.autoload.d/kernel-2.6"
+	elog
 
 	buildsycoca
-}
-
-src_install() {
-	kde_src_install
-	dodoc COPYING* Contributors README
 }
