@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.24 2008/02/29 20:48:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.25 2008/06/26 17:31:17 nixnut Exp $
+
+  26 Jun 2008; nixnut <nixnut@gentoo.org> asmon-0.71.ebuild:
+  Stable on ppc wrt bug 229539
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> asmon-0.7.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
