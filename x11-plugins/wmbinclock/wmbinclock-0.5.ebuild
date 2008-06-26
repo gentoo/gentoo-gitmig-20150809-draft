@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.5.ebuild,v 1.2 2008/06/26 14:41:25 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.5.ebuild,v 1.3 2008/06/26 17:27:35 nixnut Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
