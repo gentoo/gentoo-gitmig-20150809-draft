@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.80.ebuild,v 1.1 2008/01/30 23:06:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.80.ebuild,v 1.2 2008/06/26 07:58:40 bangert Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Secure Remote Log transmission system"
 HOMEPAGE="http://untroubled.org/srlog2/"
@@ -19,7 +19,6 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	append-ldflags $(bindnow-flags)
 	echo -n "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo -n "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo -n "/usr/include/bglibs" > conf-bgincs
