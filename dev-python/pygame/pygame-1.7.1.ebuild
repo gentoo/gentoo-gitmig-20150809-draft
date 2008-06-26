@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.7.1.ebuild,v 1.12 2007/08/07 07:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.7.1.ebuild,v 1.13 2008/06/26 18:36:15 pythonhead Exp $
 
 inherit distutils
 
@@ -24,10 +24,18 @@ DEPEND="virtual/python
 	>=dev-python/numeric-22.0
 	>=media-libs/smpeg-0.4.4-r1"
 
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-image png jpeg ; then
+		eerror "Please re-emerge media-libs/sdl-image with the png and jpeg
+		USE-flags set."
+		die "Missing USE-flag for media-libs/sdl-image"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	# Search correct libdir for existing sdl libs
-	sed -i -e "s:/lib:/$(get_libdir):" ${S}/config_unix.py || die
+	sed -i -e "s:/lib:/$(get_libdir):" "${S}"/config_unix.py || die
 }
 
 src_install() {
@@ -36,9 +44,9 @@ src_install() {
 
 	if use doc; then
 		dohtml -r docs/*
-		insinto /usr/share/doc/${PF}/examples
-		doins ${S}/examples/*
-		insinto /usr/share/doc/${PF}/examples/data
-		doins ${S}/examples/data/*
+		insinto /usr/share/doc/"${PF}"/examples
+		doins "${S}"/examples/*
+		insinto /usr/share/doc/"${PF}"/examples/data
+		doins "${S}"/examples/data/*
 	fi
 }
