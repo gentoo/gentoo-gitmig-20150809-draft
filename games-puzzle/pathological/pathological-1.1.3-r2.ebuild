@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r2.ebuild,v 1.7 2008/06/25 18:56:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r2.ebuild,v 1.8 2008/06/26 03:29:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -21,8 +21,9 @@ src_unpack() {
 	cd "${S}"
 	unpack ./${PN}.6.gz
 
-	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-music-py.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-music-py.patch
 
 	if use doc ; then
 		sed -i \
