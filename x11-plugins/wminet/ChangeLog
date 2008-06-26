@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wminet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.12 2008/06/26 14:39:03 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.13 2008/06/26 17:15:53 nixnut Exp $
+
+  26 Jun 2008; nixnut <nixnut@gentoo.org> wminet-3.0.0.ebuild:
+  Stable on ppc wrt bug 229571
 
   26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> wminet-3.0.0.ebuild:
   stable amd64, bug 229571
