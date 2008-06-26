@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.4.ebuild,v 1.2 2008/01/13 12:29:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.4.ebuild,v 1.3 2008/06/26 14:06:12 fmccor Exp $
 
 DESCRIPTION="a dockable weather monitor for standard METAR stations using ICAO location."
 HOMEPAGE="http://www.godisch.de/debian/wmweather"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/w/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
