@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.23 2008/01/16 14:05:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.24 2008/06/26 14:43:29 gentoofan23 Exp $
+
+  26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  wmcpuload-1.1.0_pre5.ebuild:
+  stable amd64, bug 229559
 
 *wmcpuload-1.1.0_pre5 (16 Jan 2008)
 
