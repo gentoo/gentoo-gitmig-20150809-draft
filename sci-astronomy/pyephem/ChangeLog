@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.5 2008/01/29 12:59:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.6 2008/06/26 12:06:17 bicatali Exp $
+
+*pyephem-3.7.2.4 (26 Jun 2008)
+
+  26 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +pyephem-3.7.2.4.ebuild:
+  Version bump. No more examples.
 
 *pyephem-3.7.2.3 (29 Jan 2008)
 
