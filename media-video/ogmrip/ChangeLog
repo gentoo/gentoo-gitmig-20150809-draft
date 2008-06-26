@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.30 2008/04/28 20:12:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.31 2008/06/26 02:05:22 beandog Exp $
+
+*ogmrip-0.12.0 (26 Jun 2008)
+
+  26 Jun 2008; Steve Dibb <beandog@gentoo.org> +ogmrip-0.12.0.ebuild:
+  Version bump, bug 225415
 
   28 Apr 2008; Samuli Suominen <drac@gentoo.org> ogmrip-0.11.2-r1.ebuild:
   Fails to build with -j4, forcing -j1 for now. Thanks to rushfan at #-amd64
