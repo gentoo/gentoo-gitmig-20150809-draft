@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/nistp224-0.75.ebuild,v 1.1 2008/01/30 22:57:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/nistp224-0.75.ebuild,v 1.2 2008/06/26 07:57:55 bangert Exp $
 
 inherit toolchain-funcs flag-o-matic fixheadtails
 
@@ -21,7 +21,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-declare-exit.patch
 	cd "${S}"
 	ht_fix_file Makefile print*.sh
-	append-ldflags $(bindnow-flags)
 	append-flags -fPIC
 	echo -n "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo -n "$(tc-getCC) ${LDFLAGS}" > conf-ld

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/nistp224
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.1 2008/01/30 22:57:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.2 2008/06/26 07:57:55 bangert Exp $
+
+  26 Jun 2008; Thilo Bangert <bangert@gentoo.org> nistp224-0.75.ebuild:
+  remove bindnow-flags - as per bug #226945
 
 *nistp224-0.75 (30 Jan 2008)
 
