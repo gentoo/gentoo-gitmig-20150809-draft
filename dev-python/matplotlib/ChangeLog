@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.48 2008/06/23 15:16:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.49 2008/06/26 11:26:00 bicatali Exp $
+
+*matplotlib-0.98.1 (26 Jun 2008)
+*matplotlib-0.91.4 (26 Jun 2008)
+
+  26 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +matplotlib-0.91.4.ebuild, +matplotlib-0.98.1.ebuild:
+  Versions bumps
 
 *matplotlib-0.98.0 (22 Jun 2008)
 *matplotlib-0.91.3 (22 Jun 2008)
