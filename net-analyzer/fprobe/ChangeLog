@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/fprobe
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.13 2008/03/17 08:41:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.14 2008/06/26 20:41:24 robbat2 Exp $
+
+*fprobe-1.1-r2 (26 Jun 2008)
+
+  26 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> files/init.d-fprobe,
+  +fprobe-1.1-r2.ebuild:
+  The init script was always running in promisc mode UNLESS you tried to not
+  run promisc.
 
 *fprobe-1.1-r1 (17 Mar 2008)
 

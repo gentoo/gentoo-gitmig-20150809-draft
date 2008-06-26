@@ -14,7 +14,7 @@ PIDFILE="/var/run/fprobe$PIDFILE_EXTRA.pid"
 start() {
 	ebegin "Starting fprobe"
 	local OPTS=""
-	[ "${PROMISC}" == "yes" ] && OPTS="${OPTS} -p"
+	[ "${PROMISC}" == "yes" ] || OPTS="${OPTS} -p"
 	[ -n "${FILTER}" ] && OPTS="${OPTS} -f '${FILTER}'"
 	for optname in i:IFACE s:TIMER_EXPIRED g:TIME_FRAGMENTED d:TIMER_IDLE \
 		e:TIMER_ACTIVE n:FLOW_VER a:LOCALIP x:SNMP_IFACE b:MEMBULK \
