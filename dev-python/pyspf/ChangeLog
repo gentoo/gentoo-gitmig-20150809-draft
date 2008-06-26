@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyspf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.3 2007/12/07 07:27:17 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.4 2008/06/26 08:37:55 dragonheart Exp $
+
+*pyspf-2.0.4 (26 Jun 2008)
+
+  26 Jun 2008; Daniel Black <dragonheart@gentoo.org> +pyspf-2.0.4.ebuild:
+  version bump
 
   07 Dec 2007; Christian Faulhammer <opfer@gentoo.org> pyspf-2.0.3.ebuild:
   keywording ~x86, bug 201487
