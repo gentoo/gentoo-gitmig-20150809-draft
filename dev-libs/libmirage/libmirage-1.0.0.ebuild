@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.0.0.ebuild,v 1.3 2008/06/06 07:48:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.0.0.ebuild,v 1.4 2008/06/26 12:37:55 coldwind Exp $
 
 DESCRIPTION="libMirage is a CD-ROM image access library"
 HOMEPAGE="http://cdemu.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc"
 
 DEPEND=">=dev-libs/glib-2.6
