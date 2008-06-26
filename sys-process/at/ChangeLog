@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.11 2008/06/18 03:15:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.12 2008/06/26 10:37:33 bangert Exp $
+
+  26 Jun 2008; Thilo Bangert <bangert@gentoo.org> at-3.1.8-r11.ebuild,
+  at-3.1.8-r12.ebuild, at-3.1.10.1.ebuild:
+  add virtual/mta to DEPEND (bug #170542) - fix quoting
 
 *at-3.1.10.1 (18 Jun 2008)
 

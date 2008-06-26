@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.7 2007/10/28 14:01:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.8 2008/06/26 10:37:33 bangert Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
+DEPEND="virtual/mta
+	virtual/libc
 	>=sys-devel/flex-2.5.4a"
 RDEPEND="virtual/libc
 	virtual/mta
@@ -26,7 +27,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# respect LDFLAGS
 	sed -i \
@@ -35,7 +36,7 @@ src_unpack() {
 
 	# Fix bug 33696 by allowing usernames longer than 8 chars,
 	# thanks to Yuval Kogman for the patch
-	epatch ${FILESDIR}/at-3.1.8-longuser.patch
+	epatch "${FILESDIR}"/at-3.1.8-longuser.patch
 }
 
 src_compile() {
@@ -68,13 +69,13 @@ src_install() {
 		dodir /var/spool/at/${i}
 		fowners at:at /var/spool/at/${i}
 		fperms 700 /var/spool/at/${i}
-		touch ${D}/var/spool/at/${i}/.SEQ
+		touch "${D}"/var/spool/at/${i}/.SEQ
 	done
 
-	newinitd ${FILESDIR}/atd.rc6 atd
+	newinitd "${FILESDIR}"/atd.rc6 atd
 	insinto /etc/at
 	insopts -m 0644
-	doins ${FILESDIR}/at.deny
+	doins "${FILESDIR}"/at.deny
 	doman at.1 at_allow.5 atd.8 atrun.8
 	dodoc ChangeLog Problems README timespec
 }
