@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/cputnik-0.2.0.ebuild,v 1.1 2008/04/04 09:26:21 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/cputnik-0.2.0.ebuild,v 1.2 2008/06/26 12:55:37 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
-S="${WORKDIR}/${P}/src"
+S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
@@ -32,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin cputnik
+	dobin cputnik || die "dobin failed."
 	dodoc ../{AUTHORS,NEWS,README}
 }
