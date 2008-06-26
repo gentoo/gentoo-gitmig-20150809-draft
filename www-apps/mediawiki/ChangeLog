@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.107 2008/06/01 14:43:08 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.108 2008/06/26 11:15:46 armin76 Exp $
+
+  26 Jun 2008; Raúl Porcel <armin76@gentoo.org> mediawiki-1.12.0.ebuild:
+  Add ~alpha wrt #229197
 
   01 Jun 2008; wrobel@gentoo.org +files/access_restrict_1.12.0.patch,
   mediawiki-1.12.0.ebuild:
