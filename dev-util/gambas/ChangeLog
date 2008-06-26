@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.45 2008/06/18 02:24:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.46 2008/06/26 23:32:09 darkside Exp $
+
+*gambas-2.7.0 (26 Jun 2008)
+
+  26 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/gambas-2.5.0-gcc-libffi-path.patch,
+  +files/gambas-2.5.0-mimetype-registration.patch,
+  +files/gambas-2.5.0-sdl.patch, +files/gambas-2.7.0-help-path.patch,
+  +gambas-2.7.0.ebuild:
+  Version bump, bug #146871
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> gambas-1.0.14.ebuild,
   gambas-1.0.16.ebuild, gambas-1.0.17.ebuild:
