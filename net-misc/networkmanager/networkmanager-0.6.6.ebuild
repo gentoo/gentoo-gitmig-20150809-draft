@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.6.ebuild,v 1.1 2008/03/07 09:27:02 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.6.ebuild,v 1.2 2008/06/26 14:10:20 rbu Exp $
 
 inherit autotools gnome2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt doc gnome"
 
 # Yes, I know that configure will accept libnl 1.0-pre8, however we only have

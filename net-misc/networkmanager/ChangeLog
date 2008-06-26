@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.30 2008/03/07 09:27:02 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.31 2008/06/26 14:10:20 rbu Exp $
+
+  26 Jun 2008; Robert Buchholz <rbu@gentoo.org>
+  networkmanager-0.6.5_p20070823.ebuild,
+  -networkmanager-0.6.5_p20080205.ebuild, networkmanager-0.6.6.ebuild:
+  Readd ~ppc which was dropped due to >=hal-0.5.10 dependency, and remove old
+  version. Block latest version of libnl (bug #223381).
 
   07 Mar 2008; Steev Klimaszewski <steev@gentoo.org>
   -files/NM-po-linguas.patch, -networkmanager-0.6.5.98.ebuild,
