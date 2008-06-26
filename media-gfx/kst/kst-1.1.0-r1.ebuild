@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.0-r1.ebuild,v 1.3 2005/11/21 18:56:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.0-r1.ebuild,v 1.4 2008/06/26 13:58:51 markusle Exp $
 
 inherit kde
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 
 need-kde 3.1
 
-PATCHES="${FILESDIR}/${P}-netcdf-fix.patch"
+PATCHES=( "${FILESDIR}/${P}-netcdf-fix.patch" )
 
 src_unpack(){
 	kde_src_unpack
