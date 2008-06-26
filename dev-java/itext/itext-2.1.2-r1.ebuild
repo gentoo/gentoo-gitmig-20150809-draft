@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.2-r1.ebuild,v 1.1 2008/06/03 00:47:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.2-r1.ebuild,v 1.2 2008/06/26 09:51:19 ali_bush Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -56,7 +56,7 @@ src_unpack() {
 	cd "${WORKDIR}/lib" || die "Could not cd ${WORKDIR}/lib"
 	java-pkg_jar-from bcmail bcmail.jar "bcmail-jdk14-${BCV/./}.jar"
 	java-pkg_jar-from bcprov bcprov.jar "bcprov-jdk14-${BCV/./}.jar"
-	java-pkg_jar-from dom4j-1 dom4j.jar "dom4j-1.6.1.jar"
+	use rups && java-pkg_jar-from dom4j-1 dom4j.jar "dom4j-1.6.1.jar"
 }
 
 src_compile() {
