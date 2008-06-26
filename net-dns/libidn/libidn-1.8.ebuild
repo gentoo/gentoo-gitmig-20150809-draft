@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.5.ebuild,v 1.1 2008/02/29 00:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.8.ebuild,v 1.1 2008/06/26 09:58:29 bangert Exp $
 
 inherit java-pkg-opt-2 mono autotools elisp-common
 
@@ -18,6 +18,12 @@ DEPEND="mono? ( >=dev-lang/mono-0.95 )
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	mono? ( >=dev-lang/mono-0.95 )
 	emacs? ( virtual/emacs )"
+
+src_unpack() {
+	unpack ${A}
+	# bundled, with wrong bytecode
+	rm "${S}/java/${P}.jar" || die
+}
 
 src_compile() {
 	local myconf=" --disable-csharp"
