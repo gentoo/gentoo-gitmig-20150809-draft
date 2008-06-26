@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edit-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.24 2008/06/25 17:11:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.25 2008/06/26 11:58:03 armin76 Exp $
+
+  26 Jun 2008; Raúl Porcel <armin76@gentoo.org> edit-utils-2.39.ebuild:
+  alpha/sparc stable wrt #221197
 
   25 Jun 2008; Markus Rothe <corsair@gentoo.org> edit-utils-2.39.ebuild:
   Stable on ppc64; bug #221197
