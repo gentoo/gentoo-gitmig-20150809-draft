@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.5 2008/06/25 20:06:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.6 2008/06/26 07:32:26 aballier Exp $
 
 EAPI="1"
 
@@ -78,7 +78,8 @@ RDEPEND="
 		fluidsynth? ( media-sound/fluidsynth )
 		ggi? ( media-libs/libggi )
 		gnome? ( gnome-base/gnome-vfs )
-		gnutls? ( >=net-libs/gnutls-1.3.3 >=dev-libs/libgcrypt-1.2.0 )
+		gnutls? ( >=net-libs/gnutls-1.3.3 )
+		>=dev-libs/libgcrypt-1.2.0
 		hal? ( sys-apps/hal )
 		id3tag? ( media-libs/libid3tag
 			sys-libs/zlib )
@@ -237,7 +238,7 @@ src_compile () {
 		$(use_enable jack) \
 		--disable-kate \
 		$(use_enable libcaca caca) \
-		$(use_enable gnutls libgcrypt) \
+		--enable-libgcrypt \
 		$(use_enable libnotify notify) \
 		--disable-libproxy \
 		--disable-libtar \
