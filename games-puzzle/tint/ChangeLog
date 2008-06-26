@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tint
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.11 2008/06/26 08:34:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.12 2008/06/26 10:16:35 coldwind Exp $
+
+  26 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> tint-0.03b.ebuild:
+  amd64 stable wrt bug #229479
 
   26 Jun 2008; Christian Faulhammer <opfer@gentoo.org> tint-0.03b.ebuild:
   stable x86, bug 229479
