@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmMoonClock
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/ChangeLog,v 1.10 2008/01/28 13:43:13 s4t4n Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/ChangeLog,v 1.11 2008/06/26 14:20:16 gentoofan23 Exp $
+
+  26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  wmMoonClock-1.27-r1.ebuild:
+  stable amd64, bug 229585
 
 *wmMoonClock-1.27-r1 (28 Jan 2008)
 

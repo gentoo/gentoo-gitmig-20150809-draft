@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27-r1.ebuild,v 1.1 2008/01/28 13:43:13 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27-r1.ebuild,v 1.2 2008/06/26 14:20:16 gentoofan23 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~mips ~ppc ~sparc"
+KEYWORDS="amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${P}/Src"
