@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.3 2008/05/04 20:53:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.4 2008/06/26 08:47:27 opfer Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.emma-soft.com/games/amoebax/download/${P}.tar.bz2"
 
 LICENSE="FreeArt GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
