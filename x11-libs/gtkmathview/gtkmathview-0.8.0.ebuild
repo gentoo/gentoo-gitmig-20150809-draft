@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.1 2008/06/02 20:25:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.2 2008/06/26 18:58:59 dang Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-cond-t1.patch"
 }
 
 src_compile() {
