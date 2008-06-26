@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.8 2008/06/26 12:00:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.9 2008/06/26 15:57:40 coldwind Exp $
+
+  26 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  xemacs-packages-all-2007.04.27-r1.ebuild:
+  amd64 stable wrt security bug #221197 (and redo alpha/sparc)
 
   26 Jun 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
   alpha/sparc stable wrt #221197
