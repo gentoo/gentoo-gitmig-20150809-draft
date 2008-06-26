@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/wmMatrix-0.2-r1.ebuild,v 1.1 2008/01/28 13:57:14 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/wmMatrix-0.2-r1.ebuild,v 1.2 2008/06/26 14:44:01 coldwind Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -8,16 +8,18 @@ DESCRIPTION="WMaker DockApp: Slightly modified version of Jamie Zawinski's xmatr
 SRC_URI="http://www.dockapps.org/download.php/id/17/${P}.tar.gz"
 HOMEPAGE="http://www.dockapps.org/file.php/id/10"
 
-RDEPEND="x11-libs/libX11
+CDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
+RDEPEND="${CDEPEND}
+	x11-misc/xscreensaver"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~ppc64"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
