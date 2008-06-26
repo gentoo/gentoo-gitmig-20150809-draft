@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/pypolicyd-spf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.6 2008/05/03 00:05:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.7 2008/06/26 08:36:04 dragonheart Exp $
+
+*pypolicyd-spf-0.7 (26 Jun 2008)
+
+  26 Jun 2008; Daniel Black <dragonheart@gentoo.org>
+  -pypolicyd-spf-0.6.ebuild, +pypolicyd-spf-0.7.ebuild:
+  version bump as per bug #229075 thanks to Wolfram Schlich
 
 *pypolicyd-spf-0.6.1 (03 May 2008)
 
