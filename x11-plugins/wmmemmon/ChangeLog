@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemmon
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.21 2008/06/27 13:33:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.22 2008/06/27 20:18:45 armin76 Exp $
+
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> wmmemmon-1.0.2_pre2.ebuild:
+  alpha/sparc/x86 stable wrt #229581
 
   27 Jun 2008; Brent Baude <ranger@gentoo.org> wmmemmon-1.0.2_pre2.ebuild:
   stable ppc64, bug 229581
