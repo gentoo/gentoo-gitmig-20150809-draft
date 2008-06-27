@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.15 2007/07/22 09:54:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.16 2008/06/27 10:07:16 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	X? ( x11-libs/libX11
 		x11-libs/libXt
 		x11-libs/libXpm
-		virtual/motif
+		x11-libs/openmotif
 	)
 	!media-gfx/fbi
 	media-libs/libexif
@@ -38,7 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -e 's/DGifOpenFileName,ungif/DGifOpenFileName,gif/' \
-	    -e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
+		-e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
 
 	if [[ `gcc-major-version` -lt 4 ]]; then
 		sed	-e 's/-Wno-pointer-sign//' -i ${S}/GNUmakefile

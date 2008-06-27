@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.5 2007/07/22 09:54:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03-r4.ebuild,v 1.6 2008/06/27 10:07:16 ulm Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	X? ( x11-libs/libX11
 		x11-libs/libXt
 		x11-libs/libXpm
-		virtual/motif
+		x11-libs/openmotif
 	)
 	!media-gfx/fbi
 	media-libs/libexif
@@ -39,7 +39,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-fbgs.patch
 	sed -e 's/DGifOpenFileName,ungif/DGifOpenFileName,gif/' \
-	    -e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
+		-e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
 	sed -e 's/SAVER/SAFER/g' -i ${S}/fbgs
 
 	# We don't want the binaries to be stripped automatically.

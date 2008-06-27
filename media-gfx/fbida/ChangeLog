@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.48 2008/05/12 15:59:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.49 2008/06/27 10:07:16 ulm Exp $
+
+  27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> fbida-2.03-r4.ebuild,
+  fbida-2.05.ebuild, fbida-2.06.ebuild:
+  Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
 
   12 May 2008; Markus Meier <maekke@gentoo.org> fbida-2.06.ebuild:
   amd64 stable, bug #217328
