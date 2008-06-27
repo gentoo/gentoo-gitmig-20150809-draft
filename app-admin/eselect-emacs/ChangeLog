@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.46 2008/06/27 09:13:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.47 2008/06/27 11:19:11 fmccor Exp $
+
+  27 Jun 2008; Ferris McCormick <fmccor@gentoo.org>
+  eselect-emacs-1.5.ebuild:
+  Sparc stable, part of Bug #229605.
 
   27 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   eselect-emacs-1.5.ebuild:
