@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.4 2008/06/23 09:28:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.5 2008/06/27 10:35:17 ulm Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -15,7 +15,7 @@ IUSE="doc motif tk"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	media-libs/libpng
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
