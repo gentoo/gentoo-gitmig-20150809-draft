@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.3 2008/06/27 10:11:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.4 2008/06/27 21:42:38 dberkholz Exp $
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
 
@@ -9,7 +9,7 @@ inherit autotools multilib flag-o-matic git portability
 OPENGL_DIR="xorg-x11"
 
 MY_PN="${PN/m/M}"
-MY_P="${MY_PN}-${PV//_}"
+MY_P="${MY_PN}-${PV//_/-}"
 MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
@@ -98,8 +98,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	git_src_unpack
+	unpack ${A}
 	cd "${S}"
+
+	# Disable TTM
+	epatch "${FILESDIR}/0001-mesa-drm-ttm-allow-build-against-non-TTM-aware-libd.patch"
+
+	cp "${FILESDIR}/version.mk" bin/ || die
 
 	# FreeBSD 6.* doesn't have posix_memalign().
 	[[ ${CHOST} == *-freebsd6.* ]] && sed -i -e "s/-DHAVE_POSIX_MEMALIGN//" configure.ac
@@ -110,7 +115,7 @@ src_unpack() {
 	   find src/mesa/drivers/dri -name *.[hc] -exec egrep -l "\#define\W+DO_DEBUG\W+1" {} \; | xargs sed -i -re "s/\#define\W+DO_DEBUG\W+1/\#define DO_DEBUG 0/" ;
 	fi
 
-	eautoreconf
+	eautoconf
 }
 
 src_compile() {
@@ -118,6 +123,9 @@ src_compile() {
 
 	# This is where we might later change to build xlib/osmesa
 	myconf="${myconf} --with-driver=dri"
+
+	# No TTM
+	myconf="${myconf} --disable-ttm-api"
 
 	# Do we want thread-local storage (TLS)?
 	myconf="${myconf} $(use_enable nptl glx-tls)"
@@ -157,7 +165,10 @@ src_compile() {
 
 	myconf="${myconf} $(use_enable motif glw)"
 
+	emake realclean || die
 	econf ${myconf} || die
+	# So makedepend runs for header changes
+	find src/mesa/drivers/dri/ | xargs touch
 	emake || die
 }
 

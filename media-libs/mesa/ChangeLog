@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.174 2008/06/27 10:11:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.175 2008/06/27 21:42:38 dberkholz Exp $
+
+  27 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0001-mesa-drm-ttm-allow-build-against-non-TTM-aware-libd.patch,
+  mesa-7.1_rc1.ebuild:
+  Stop fetching from git pointlessly after downloading the tarball. Add a
+  patch to attempt allowing builds against libdrm 2.3.1. It still doesn't
+  actually work for reasons I don't understand, but it seems to have
+  something to do with the 'depend' files mesa's weird build system uses.
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> mesa-6.5.2-r1.ebuild,
   mesa-7.0.2.ebuild, mesa-7.0.3.ebuild, mesa-7.1_rc1.ebuild:
