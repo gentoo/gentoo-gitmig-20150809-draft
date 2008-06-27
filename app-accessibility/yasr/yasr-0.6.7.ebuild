@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.7.ebuild,v 1.2 2008/02/03 23:32:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.7.ebuild,v 1.3 2008/06/27 02:59:23 williamh Exp $
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -11,15 +11,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-devel/make-3.80
-	>=sys-devel/autoconf-2.58
-	>=sys-apps/sed-4"
+DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}
-	sed -i '/^aclocaldir.*=/s:@aclocaldir@:$(destdir)/usr/share/aclocal:' ${S}/m4/Makefile.*
+	cd "${S}"
+	sed -i '/^aclocaldir.*=/s:@aclocaldir@:$(destdir)/usr/share/aclocal:' "${S}"/m4/Makefile.*
 }
 
 src_compile() {
@@ -28,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README ChangeLog AUTHORS BUGS CREDITS
-	rm -rf ${D}/usr/share/aclocal
+	rm -rf "${D}"/usr/share/aclocal
 }

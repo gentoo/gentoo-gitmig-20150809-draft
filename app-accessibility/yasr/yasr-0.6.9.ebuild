@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.3 2008/02/05 14:28:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.4 2008/06/27 02:59:23 williamh Exp $
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -12,6 +12,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/autoconf-2.58"
+RDEPEND=""
 
 src_compile() {
 	econf --datadir='/etc' || die "econf failed"
