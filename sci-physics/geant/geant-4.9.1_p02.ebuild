@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.1 2008/06/06 19:58:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.2 2008/06/27 10:46:34 ulm Exp $
 
 EAPI="1"
 
@@ -32,7 +32,7 @@ IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
 	+opengl openinventor +raytracerx static +vrml zlib"
 
 DEPEND="sci-physics/clhep
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	athena? ( x11-libs/libXaw )
 	openinventor? ( media-libs/openinventor )
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006.ebuild,v 1.1 2007/08/24 21:36:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006.ebuild,v 1.2 2008/06/27 10:42:59 ulm Exp $
 
 inherit eutils multilib fortran
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	virtual/lapack
 	dev-lang/cfortran
 	sci-physics/cernlib"

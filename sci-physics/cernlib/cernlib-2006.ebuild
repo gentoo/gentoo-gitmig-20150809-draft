@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.9 2008/03/11 12:09:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.10 2008/06/27 10:39:23 ulm Exp $
 
 inherit eutils multilib fortran
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2 BSD"
 
 SLOT="0"
 
-DEPEND="virtual/motif
+DEPEND="x11-libs/openmotif
 	virtual/lapack
 	virtual/tetex
 	dev-lang/cfortran
@@ -27,7 +27,7 @@ DEPEND="virtual/motif
 	x11-misc/makedepend
 	app-admin/eselect-blas"
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	virtual/lapack
 	dev-lang/cfortran"
 

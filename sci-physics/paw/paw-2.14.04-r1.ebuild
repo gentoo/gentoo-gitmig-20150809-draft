@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r1.ebuild,v 1.1 2008/03/11 12:12:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r1.ebuild,v 1.2 2008/06/27 10:46:39 ulm Exp $
 
 inherit eutils multilib fortran
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	virtual/lapack
 	dev-lang/cfortran
 	sci-physics/cernlib

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.1 2008/06/06 19:58:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.2 2008/06/27 10:46:34 ulm Exp $
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="3"
 IUSE=""
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	virtual/lapack
 	dev-lang/cfortran
 	sci-physics/cernlib
