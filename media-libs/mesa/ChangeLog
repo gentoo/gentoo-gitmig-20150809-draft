@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.173 2008/06/13 16:16:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.174 2008/06/27 10:11:26 ulm Exp $
+
+  27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> mesa-6.5.2-r1.ebuild,
+  mesa-7.0.2.ebuild, mesa-7.0.3.ebuild, mesa-7.1_rc1.ebuild:
+  Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
 
   13 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.1_rc1.ebuild:
   Change libdrm dep to 2.3.1 or newer. It won't actually build for the intel

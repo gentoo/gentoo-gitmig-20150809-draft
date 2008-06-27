@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.2.ebuild,v 1.6 2007/11/16 18:16:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.2.ebuild,v 1.7 2008/06/27 10:11:26 ulm Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -52,7 +52,7 @@ RDEPEND="app-admin/eselect-opengl
 	x11-libs/libXdamage
 	>=x11-libs/libdrm-2.2
 	x11-libs/libICE
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	doc? ( app-doc/opengl-manpages )
 	!<=x11-base/xorg-x11-6.9
 	xcb? ( x11-libs/libxcb )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.2 2008/06/13 16:16:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.3 2008/06/27 10:11:26 ulm Exp $
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
 
@@ -56,7 +56,7 @@ RDEPEND="app-admin/eselect-opengl
 	x11-libs/libXdamage
 	>=x11-libs/libdrm-2.3.1_pre1
 	x11-libs/libICE
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	doc? ( app-doc/opengl-manpages )
 	!<=x11-base/xorg-x11-6.9"
 DEPEND="${RDEPEND}
