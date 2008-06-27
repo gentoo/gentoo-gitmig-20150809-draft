@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.23 2008/06/27 18:13:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.24 2008/06/27 20:47:47 armin76 Exp $
+
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> asmem-1.12.ebuild:
+  x86 stable wrt #229541
 
   27 Jun 2008; Ferris McCormick <fmccor@gentoo.org> asmem-1.12.ebuild:
   Sparc stable, Bug #229541.  Does what it says it does.
