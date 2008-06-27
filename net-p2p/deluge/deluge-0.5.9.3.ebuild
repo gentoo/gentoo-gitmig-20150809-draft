@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.9.2.ebuild,v 1.1 2008/06/20 18:03:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.9.3.ebuild,v 1.1 2008/06/27 18:05:48 armin76 Exp $
 
 inherit eutils distutils flag-o-matic
 
