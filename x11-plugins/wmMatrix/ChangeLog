@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmMatrix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.16 2008/06/27 13:31:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.17 2008/06/27 20:49:29 armin76 Exp $
+
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> wmMatrix-0.2-r1.ebuild:
+  sparc/x86 stable
 
   27 Jun 2008; Brent Baude <ranger@gentoo.org> wmMatrix-0.2-r1.ebuild:
   stable ppc64, bug 229577
