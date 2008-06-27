@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.5 2008/06/25 19:00:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.6 2008/06/27 20:28:30 armin76 Exp $
+
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> ristretto-0.0.20.ebuild:
+  alpha/ia64/sparc stable wrt #228961
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> ristretto-0.0.20.ebuild:
   Stable on ppc wrt bug 228961
