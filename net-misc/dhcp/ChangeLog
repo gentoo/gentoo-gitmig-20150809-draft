@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.142 2008/03/29 19:47:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.143 2008/06/27 10:10:50 chainsaw Exp $
+
+*dhcp-3.1.1 (27 Jun 2008)
+
+  27 Jun 2008; <chainsaw@gentoo.org> +dhcp-3.1.1.ebuild:
+  Version bump for bug #227135.
 
   29 Mar 2008; Mike Frysinger <vapier@gentoo.org>
   files/dhcp-3.0.3-dhclient-ntp.patch,
