@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.61 2008/06/17 00:59:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.62 2008/06/27 17:49:53 gentoofan23 Exp $
+
+  27 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  valknut-0.3.13.ebuild:
+  stable amd64, bug 225029
 
   17 Jun 2008; Jeroen Roovers <jer@gentoo.org> valknut-0.3.13.ebuild:
   Stable for HPPA (bug #225029).

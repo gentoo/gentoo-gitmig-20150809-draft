@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.13.ebuild,v 1.5 2008/06/17 00:59:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.13.ebuild,v 1.6 2008/06/27 17:48:59 gentoofan23 Exp $
 
 DESCRIPTION="DirectConnect client library"
 HOMEPAGE="http://sourceforge.net/projects/wxdcgui"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND=">=app-arch/bzip2-1.0.2
