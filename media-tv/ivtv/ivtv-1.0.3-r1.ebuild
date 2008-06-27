@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3-r1.ebuild,v 1.2 2007/12/19 15:23:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3-r1.ebuild,v 1.3 2008/06/27 16:36:47 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -37,7 +37,7 @@ pkg_setup() {
 		eerror "b) emerge a different ivtv driver"
 		eerror ""
 		eerror "See http://ivtvdriver.org/ for more information"
-		die "This only works on 2.6.22 and greater kernels"
+		die "This only works on 2.6.22 and 2.6.23 kernels"
 	fi
 
 	if use fbcon; then
