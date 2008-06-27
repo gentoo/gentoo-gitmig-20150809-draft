@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240-r1.ebuild,v 1.2 2008/04/05 11:28:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240-r1.ebuild,v 1.3 2008/06/27 05:40:44 beandog Exp $
 
-inherit eutils qt4
+inherit eutils multilib qt4
 
 MY_P="${P/lastfmplayer/lastfm}.dfsg"
 
@@ -57,6 +57,7 @@ src_install() {
 	insinto /usr/share/lastfm/icons
 	doins user_*.png
 
+	sed -i -e "s,/usr/lib,/usr/$(get_libdir),g" debian/lastfm.install
 	# make directories
 	for i in $(<debian/lastfm.install); do [ ${i:0:1} == / ] && dodir $i; done
 	# debian installation
@@ -64,8 +65,8 @@ src_install() {
 	bash debian/lastfm.install
 
 	# copied..
-	mv ${D}/usr/bin/last{.,}fm
-	rm -f ${D}/usr/share/lastfm/icons/{*profile24,systray_mac}.png
+	mv "${D}"/usr/bin/last{.,}fm
+	rm -f "${D}"/usr/share/lastfm/icons/{*profile24,systray_mac}.png
 }
 
 pkg_postinst() {
