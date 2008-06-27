@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.7 2007/04/22 10:05:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.8 2008/06/27 10:15:52 ulm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="cups doc X"
 DEPEND="X? ( x11-libs/libX11
 		x11-libs/libXpm
 		x11-libs/libXt
-		virtual/motif )
+		x11-libs/openmotif )
 	cups? ( net-print/cups )
 	dev-libs/libusb"
 

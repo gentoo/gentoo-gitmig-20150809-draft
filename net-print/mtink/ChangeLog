@@ -1,6 +1,9 @@
 # ChangeLog for net-print/mtink
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.29 2007/04/22 10:05:34 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.30 2008/06/27 10:15:52 ulm Exp $
+
+  27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> mtink-1.0.11.ebuild:
+  Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
 
   22 Apr 2007; Samuli Suominen <drac@gentoo.org> -mtink-1.0.9.ebuild,
   mtink-1.0.11.ebuild:
