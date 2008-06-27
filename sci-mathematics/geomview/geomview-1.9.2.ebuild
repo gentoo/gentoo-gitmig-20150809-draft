@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.5 2007/12/18 16:43:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.6 2008/06/27 10:38:36 ulm Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="avg bzip2 debug emacs netpbm pdf zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
-	virtual/motif
+	x11-libs/openmotif
 	virtual/opengl"
 
 RDEPEND="${DEPEND}
@@ -37,14 +37,14 @@ src_compile() {
 	# GNU standard is /usr/share/doc/${PN}, so override this; also note
 	# that motion averaging is still experimental.
 	if use pdf; then
-	    local myconf="--docdir=/usr/share/doc/${PF}"
+		local myconf="--docdir=/usr/share/doc/${PF}"
 	else
-	    local myconf="--docdir=/usr/share/doc/${PF} --without-pdfviewer"
+		local myconf="--docdir=/usr/share/doc/${PF} --without-pdfviewer"
 	fi
 
 	econf ${myconf} $(use_enable debug d1debug) $(use_with zlib) \
-	    $(use_enable avg motion-averaging) \
-	    || die "could not configure"
+		$(use_enable avg motion-averaging) \
+		|| die "could not configure"
 
 	make || die "make failed"
 }
@@ -54,18 +54,18 @@ src_install() {
 
 	doicon "${FILESDIR}"/geomview.png
 	make_desktop_entry geomview "GeomView ${PV}" \
-	    "/usr/share/pixmaps/geomview.png" \
-	    "Science;Math;Education"
+		"/usr/share/pixmaps/geomview.png" \
+		"Science;Math;Education"
 
 	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview
 
 	if ! use pdf; then
-	    rm "${D}"usr/share/doc/${PF}/${PN}.pdf
+		rm "${D}"usr/share/doc/${PF}/${PN}.pdf
 	fi
 
 	if use emacs; then
-	    insinto /usr/share/geomview
-	    doins "${FILESDIR}"/gvcl-mode.el || die
+		insinto /usr/share/geomview
+		doins "${FILESDIR}"/gvcl-mode.el || die
 	fi
 }
 
