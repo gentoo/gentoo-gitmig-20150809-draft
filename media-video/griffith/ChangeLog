@@ -1,6 +1,10 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.24 2008/06/07 16:50:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.25 2008/06/27 18:05:04 dev-zero Exp $
+
+  27 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  griffith-0.9.6-r1.ebuild:
+  Added csv USE flag and dependency on dev-python/chardet
 
 *griffith-0.9.6-r1 (07 Jun 2008)
 

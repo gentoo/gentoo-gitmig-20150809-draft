@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6-r1.ebuild,v 1.1 2008/06/07 16:50:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.6-r1.ebuild,v 1.2 2008/06/27 18:05:04 dev-zero Exp $
 
 EAPI="1"
 
@@ -15,13 +15,14 @@ SRC_URI="mirror://berlios/griffith/${P/_/-}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc spell"
+IUSE="csv doc spell"
 
 RDEPEND="dev-python/imaging
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1
 	dev-python/pysqlite:2
 	>=dev-python/reportlab-1.19
+	csv? ( dev-python/chardet )
 	spell? ( >=dev-python/gnome-python-extras-2.0 )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )"
