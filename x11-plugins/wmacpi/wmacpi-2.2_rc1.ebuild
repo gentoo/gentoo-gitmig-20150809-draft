@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.2_rc1.ebuild,v 1.1 2008/02/01 15:13:01 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.2_rc1.ebuild,v 1.2 2008/06/27 09:04:25 coldwind Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://himi.org/wmacpi/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 -ppc -sparc ~x86"
+KEYWORDS="amd64 -ppc -sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libdockapp
@@ -22,7 +22,7 @@ DEPEND="x11-libs/libdockapp
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-        # acpi and acpi.1 conflict with sys-power/acpi - Bug #60685
+	# acpi and acpi.1 conflict with sys-power/acpi - Bug #60685
 	mv acpi.c acpi-batt-status.c
 	mv acpi.1 acpi-batt-status.1
 	epatch "${FILESDIR}"/${P}-makefile.patch
