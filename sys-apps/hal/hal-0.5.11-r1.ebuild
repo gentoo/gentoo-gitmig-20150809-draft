@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.4 2008/06/23 16:19:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.5 2008/06/27 14:49:01 tester Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 					app-text/xmlto
 					dev-libs/libxml2
 				)"
-PDEPEND="=app-misc/hal-info-20080310
+PDEPEND=">=app-misc/hal-info-20080310
 		 !gnome-extra/hal-device-manager
 		 laptop? ( >=sys-power/pm-utils-0.99.3 )"
 
