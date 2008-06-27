@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.3 2008/06/24 19:57:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.4 2008/06/27 12:31:31 drac Exp $
 
 EAPI=1
 
-inherit autotools eutils
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="Port of notification daemon for Xfce Desktop Environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/notification-daemon-xfce"
@@ -48,4 +48,12 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
