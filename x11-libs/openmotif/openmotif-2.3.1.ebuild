@@ -1,17 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r3.ebuild,v 1.9 2008/06/27 11:17:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.1.ebuild,v 1.1 2008/06/27 11:17:37 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
+DOC_P=${PN}-2.3.0
 DESCRIPTION="Open Motif"
 HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/${P}.tar.gz
-	doc? ( http://www.motifzone.net/files/documents/${P}-manual.pdf.tgz )"
+	doc? ( http://www.motifzone.net/files/documents/${DOC_P}-manual.pdf.tgz )"
 
 LICENSE="MOTIF libXpm doc? ( OPL )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples jpeg png xft"
 
 # make people unmerge motif-config and all previous slots
@@ -29,8 +30,6 @@ RDEPEND="!x11-libs/motif-config
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	x11-misc/xbitmaps"
-
-PROVIDE="virtual/motif"
 
 pkg_setup() {
 	# clean up orphaned cruft left over by motif-config
@@ -61,9 +60,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-sensitivity-invisible.patch"
-	epatch "${FILESDIR}/${P}-fix-nedit-segfaults.patch"
-	epatch "${FILESDIR}/${P}-freebsd-libiconv.patch"
+	epatch "${FILESDIR}/${PN}-2.3.0-freebsd-libiconv.patch"
 
 	# disable compilation of demo binaries
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/[ \t\n\\]*demos//;}' Makefile.am
@@ -109,7 +106,7 @@ src_install() {
 	mv -f "${D}"/usr/$(get_libdir)/X11/system.mwmrc "${D}"/etc/X11/mwm
 	dosym /etc/X11/mwm/system.mwmrc /usr/$(get_libdir)/X11/
 
-	if use examples ; then
+	if use examples; then
 		emake -j1 -C demos DESTDIR="${D}" install-data \
 			|| die "installation of demos failed"
 		dodir /usr/share/doc/${PF}/demos
