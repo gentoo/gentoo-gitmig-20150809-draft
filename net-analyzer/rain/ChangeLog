@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rain
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.6 2007/04/07 08:19:10 welp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.7 2008/06/27 18:23:47 fmccor Exp $
+
+  27 Jun 2008; Ferris McCormick <fmccor@gentoo.org> rain-1.2.8_p2.ebuild:
+  Add ~sparc keyword at user (Thomas Coquelin) request --- Bug #229657 ---
+  seems to work fine.
 
   07 Apr 2007; Peter Weller <welp@gentoo.org> rain-1.2.8_p2.ebuild:
   Stable on amd64 wrt bug 173626
