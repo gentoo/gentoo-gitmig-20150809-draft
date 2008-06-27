@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.11 2007/11/01 16:46:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.12 2008/06/27 10:27:01 ulm Exp $
 
 inherit eutils qt3
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 DEPEND="virtual/libc
-	!qt3? ( virtual/motif )
+	!qt3? ( x11-libs/openmotif )
 	qt3? ( $(qt_min_version 3.1) )"
 
 src_unpack() {

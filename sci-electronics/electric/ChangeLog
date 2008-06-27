@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.28 2008/04/21 21:28:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.29 2008/06/27 10:27:01 ulm Exp $
+
+  27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> electric-7.00.ebuild:
+  Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
 
 *electric-8.06 (21 Apr 2008)
 
