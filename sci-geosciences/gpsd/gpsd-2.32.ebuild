@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.6 2008/05/06 16:51:51 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.7 2008/06/27 10:31:15 ulm Exp $
 
 inherit eutils libtool distutils
 
@@ -24,7 +24,7 @@ RDEPEND="X? (
 		x11-libs/libICE
 		x11-libs/libXpm
 		x11-libs/libXaw
-		virtual/motif
+		x11-libs/openmotif
 	)
 	usb? ( sys-apps/hotplug )
 	dbus? ( >=sys-apps/dbus-0.6 )
@@ -59,19 +59,19 @@ src_install() {
 	make DESTDIR="${D}" install
 
 	if use usb ; then
-	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
-	    insinto /etc/hotplug/usb
-	    doins gpsd.usermap
-	    exeinto /etc/hotplug/usb
-	    newexe gpsd.hotplug gpsd
+		sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
+		insinto /etc/hotplug/usb
+		doins gpsd.usermap
+		exeinto /etc/hotplug/usb
+		newexe gpsd.hotplug gpsd
 	else
-	    newconfd "${FILESDIR}"/gpsd.conf gpsd
-	    newinitd "${FILESDIR}"/gpsd.init gpsd
+		newconfd "${FILESDIR}"/gpsd.conf gpsd
+		newinitd "${FILESDIR}"/gpsd.init gpsd
 	fi
 	if use X ; then
-	    insinto /etc/X11/app-defaults
-	    newins xgps.ad Xgps
-	    newins xgpsspeed.ad Xgpsspeed
+		insinto /etc/X11/app-defaults
+		newins xgps.ad Xgps
+		newins xgpsspeed.ad Xgpsspeed
 	fi
 	dobin logextract
 	diropts "-m0644"

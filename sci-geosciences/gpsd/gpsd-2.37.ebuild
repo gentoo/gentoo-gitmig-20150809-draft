@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.1 2008/06/02 20:01:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.2 2008/06/27 10:31:15 ulm Exp $
 
 inherit eutils distutils
 
@@ -25,7 +25,7 @@ RDEPEND="X? (
 		x11-libs/libICE
 		x11-libs/libXpm
 		x11-libs/libXaw
-		virtual/motif
+		x11-libs/openmotif
 	)
 	python? ( dev-lang/python )
 
@@ -48,33 +48,33 @@ DEPEND="${RDEPEND}
 src_compile() {
 
 	local my_conf="--enable-shared --with-pic --enable-static \
-	    --disable-garmin --disable-garmintxt"
+		--disable-garmin --disable-garmintxt"
 	# Garmin support is broken in this version
 
 	use python && distutils_python_version
 
 	if use ntp; then
-	    my_conf="${my_conf} --enable-ntpshm --enable-pps"
+		my_conf="${my_conf} --enable-ntpshm --enable-pps"
 	else
-	    my_conf="${my_conf} --disable-ntpshm --disable-pps"
+		my_conf="${my_conf} --disable-ntpshm --disable-pps"
 	fi
 
 	if use minimal; then
-	    local max_clients="5"
-	    local max_devices="2"
-	    if ! use ntp; then
+		local max_clients="5"
+		local max_devices="2"
+		if ! use ntp; then
 		my_conf="${my_conf} --disable-pps"
-	    fi
-	    my_conf="${my_conf} --enable-squelch --without-x \
+		fi
+		my_conf="${my_conf} --enable-squelch --without-x \
 		--enable-max-devices=${max_devices} \
 		--enable-max-clients=${max_clients}"
 
-	    WITH_XSLTPROC=no WITH_XMLTO=no econf ${my_conf} \
+		WITH_XSLTPROC=no WITH_XMLTO=no econf ${my_conf} \
 		$(use_enable dbus) $(use_enable italk) \
 		$(use_enable itrax) $(use_enable python) \
 		|| die "econf failed"
 	else
-	    econf ${my_conf} $(use_enable dbus) $(use_enable italk) \
+		econf ${my_conf} $(use_enable dbus) $(use_enable italk) \
 		$(use_enable itrax) $(use_enable python) $(use_with X x) \
 		|| die "econf failed"
 	fi
@@ -89,24 +89,24 @@ src_install() {
 	make DESTDIR="${D}" install
 
 	if use usb ; then
-	    insinto /etc/hotplug/usb
-	    doins gpsd.usermap
-	    exeinto /etc/hotplug/usb
-	    doexe gpsd.hotplug
-	    insinto /etc/udev/rules.d
-	    doins "${FILESDIR}"/99-gpsd-usb.rules
-	    keepdir /var/run/usb # needed for REMOVER
+		insinto /etc/hotplug/usb
+		doins gpsd.usermap
+		exeinto /etc/hotplug/usb
+		doexe gpsd.hotplug
+		insinto /etc/udev/rules.d
+		doins "${FILESDIR}"/99-gpsd-usb.rules
+		keepdir /var/run/usb # needed for REMOVER
 	else
-	    newconfd "${FILESDIR}"/gpsd.conf gpsd
-	    newinitd "${FILESDIR}"/gpsd.init gpsd
+		newconfd "${FILESDIR}"/gpsd.conf gpsd
+		newinitd "${FILESDIR}"/gpsd.init gpsd
 	fi
 
 	if use X && ! use minimal ; then
-	    insinto /etc/X11/app-defaults
-	    newins xgps.ad Xgps
-	    newins xgpsspeed.ad Xgpsspeed
+		insinto /etc/X11/app-defaults
+		newins xgps.ad Xgps
+		newins xgpsspeed.ad Xgpsspeed
 	else
-	    rm "${D}usr/share/man/man1/xgpsspeed.1.bz2" \
+		rm "${D}usr/share/man/man1/xgpsspeed.1.bz2" \
 		"${D}usr/share/man/man1/xgps.1.bz2"
 	fi
 
@@ -114,13 +114,13 @@ src_install() {
 	dobin logextract
 
 	if use python ; then
-	    exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
-	    doexe gps.py gpsfake.py gpspacket.so
+		exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
+		doexe gps.py gpsfake.py gpspacket.so
 	fi
 
 	if use minimal; then
-	    doman gpsctl.1 gpsflash.1 gpspipe.1 gpsd.8 gps.1
-	    use python && doman gpsprof.1 gpsfake.1 gpscat.1
+		doman gpsctl.1 gpsflash.1 gpspipe.1 gpsd.8 gps.1
+		use python && doman gpsprof.1 gpsfake.1 gpscat.1
 	fi
 
 	dodoc INSTALL README TODO

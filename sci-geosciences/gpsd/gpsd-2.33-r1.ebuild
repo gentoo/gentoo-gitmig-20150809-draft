@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.5 2008/05/06 16:51:51 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.6 2008/06/27 10:31:15 ulm Exp $
 
 inherit eutils libtool distutils
 
@@ -24,7 +24,7 @@ RDEPEND="X? (
 		x11-libs/libICE
 		x11-libs/libXpm
 		x11-libs/libXaw
-		virtual/motif
+		x11-libs/openmotif
 	)
 	dev-lang/python
 	app-text/xmlto
@@ -55,17 +55,17 @@ src_compile() {
 	local my_conf="--enable-shared"
 
 	if ! use static; then
-	    my_conf="${my_conf} --with-pic --disable-static"
+		my_conf="${my_conf} --with-pic --disable-static"
 	else
-	    my_conf="${my_conf} --enable-static"
+		my_conf="${my_conf} --enable-static"
 	fi
 
 	if ! use ntp; then
-	    my_conf="${my_conf} --disable-ntpshm"
+		my_conf="${my_conf} --disable-ntpshm"
 	fi
 
 	econf ${my_conf} $(use_enable dbus) $(use_enable tntc tnt) \
-	    $(use_with X x) || die "econf failed"
+		$(use_with X x) || die "econf failed"
 
 	emake LDFLAGS="${LDFLAGS} -lm" || die "emake failed"
 }
@@ -74,20 +74,20 @@ src_install() {
 	make DESTDIR="${D}" install
 
 	if use usb ; then
-	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
-	    insinto /etc/hotplug/usb
-	    doins gpsd.usermap
-	    exeinto /etc/hotplug/usb
-	    newexe gpsd.hotplug gpsd
+		sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
+		insinto /etc/hotplug/usb
+		doins gpsd.usermap
+		exeinto /etc/hotplug/usb
+		newexe gpsd.hotplug gpsd
 		keepdir /var/run/usb # needed for REMOVER
 	else
-	    newconfd "${FILESDIR}"/gpsd.conf gpsd
-	    newinitd "${FILESDIR}"/gpsd.init gpsd
+		newconfd "${FILESDIR}"/gpsd.conf gpsd
+		newinitd "${FILESDIR}"/gpsd.init gpsd
 	fi
 	if use X ; then
-	    insinto /etc/X11/app-defaults
-	    newins xgps.ad Xgps
-	    newins xgpsspeed.ad Xgpsspeed
+		insinto /etc/X11/app-defaults
+		newins xgps.ad Xgps
+		newins xgpsspeed.ad Xgpsspeed
 	fi
 	dobin logextract
 	diropts "-m0644"
