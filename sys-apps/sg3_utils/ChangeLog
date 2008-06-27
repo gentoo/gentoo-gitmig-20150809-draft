@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.42 2008/06/25 17:33:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.43 2008/06/27 14:38:10 robbat2 Exp $
+
+*sg3_utils-1.26-r1 (27 Jun 2008)
+
+  27 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/sg3_utils-1.26-stdint.patch, +sg3_utils-1.26-r1.ebuild:
+  Bug #229653, fix need for stdint.h headers thanks to Ed Catmur
+  <ed@catmur.co.uk>.
 
 *sg3_utils-1.26 (25 Jun 2008)
 
