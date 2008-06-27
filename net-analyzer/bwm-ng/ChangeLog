@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.13 2008/02/19 22:50:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.14 2008/06/27 21:14:15 armin76 Exp $
+
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> -bwm-ng-0.5.ebuild:
+  old
 
   19 Feb 2008; Christian Faulhammer <opfer@gentoo.org> bwm-ng-0.6.ebuild:
   shorten DESCRIPTION, don't install COPYING and use emake instead of plain make
