@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.3 2008/06/24 13:08:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.902.ebuild,v 1.4 2008/06/27 05:24:48 dberkholz Exp $
 
 ### Designed for use with mesa 7.1_rc1 and with patches to pull in the
 ### swrast dri driver from the master branch.
@@ -229,13 +229,13 @@ PDEPEND="
 		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.3.0 )
 		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.2.0 )
 		video_cards_i810? ( >=x11-drivers/xf86-video-i810-2.3.1-r1 )
-		video_cards_mach64? ( >=x11-drivers/xf86-video-ati-6.8.0-r1 )
+		video_cards_mach64? ( >=x11-drivers/xf86-video-mach64-6.8.0 )
 		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.8 )
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.2.1 )
 		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.9 )
 		video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-173.14.09 )
-		video_cards_r128? ( >=x11-drivers/xf86-video-ati-6.8.0-r1 )
-		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.8.0-r1 )
+		video_cards_r128? ( >=x11-drivers/xf86-video-r128-6.8.0 )
+		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.9.0 )
 		video_cards_radeonhd? ( >=x11-drivers/xf86-video-radeonhd-1.2.1 )
 		video_cards_rendition? ( >=x11-drivers/xf86-video-rendition-4.2.0 )
 		video_cards_s3? ( >=x11-drivers/xf86-video-s3-0.6.0 )

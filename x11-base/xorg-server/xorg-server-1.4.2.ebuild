@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.3 2008/06/15 14:21:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.4 2008/06/27 05:24:48 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -231,14 +231,14 @@ PDEPEND="
 		video_cards_i810? ( >=x11-drivers/xf86-video-i810-1.6.0 )
 		video_cards_impact? ( >=x11-drivers/xf86-video-impact-0.2.0 )
 		video_cards_imstt? ( >=x11-drivers/xf86-video-imstt-1.1.0 )
-		video_cards_mach64? ( >=x11-drivers/xf86-video-ati-6.6.0 )
+		video_cards_mach64? ( >=x11-drivers/xf86-video-mach64-6.8.0 )
 		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.1 )
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.1.1 )
 		video_cards_newport? ( >=x11-drivers/xf86-video-newport-0.2.0 )
 		video_cards_nsc? ( >=x11-drivers/xf86-video-nsc-2.8.1 )
 		video_cards_nv? ( >=x11-drivers/xf86-video-nv-1.1.1 )
-		video_cards_r128? ( >=x11-drivers/xf86-video-ati-6.6.0 )
-		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.6.0 )
+		video_cards_r128? ( >=x11-drivers/xf86-video-r128-6.8.0 )
+		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.9.0 )
 		video_cards_rendition? ( >=x11-drivers/xf86-video-rendition-4.1.0 )
 		video_cards_s3? ( >=x11-drivers/xf86-video-s3-0.4.1 )
 		video_cards_s3virge? ( >=x11-drivers/xf86-video-s3virge-1.9.1 )

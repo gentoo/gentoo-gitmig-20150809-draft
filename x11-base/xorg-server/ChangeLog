@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.342 2008/06/24 13:08:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.343 2008/06/27 05:24:48 dberkholz Exp $
+
+  27 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4.2.ebuild, xorg-server-1.4.99.902.ebuild:
+  Update deps related to xf86-video-ati split out of mach64/r128 drivers.
+  Pull in the latest versions of each.
 
   24 Jun 2008; <chainsaw@gentoo.org> xorg-server-1.4.99.902.ebuild:
   As of 173.14.09 we can stop blocking the nVidia proprietary drivers for
