@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.19 2008/03/09 23:23:27 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.20 2008/06/27 10:04:08 ulm Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,7 +26,7 @@ IUSE="nodrm linguas_ar linguas_zh_CN linguas_zh_TW linguas_ru linguas_el
 linguas_he linguas_ja linguas_ko linguas_la linguas_th linguas_tr"
 
 RDEPEND=">=app-text/poppler-0.5.1
-	virtual/motif
+	x11-libs/openmotif
 	x11-libs/libX11
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
