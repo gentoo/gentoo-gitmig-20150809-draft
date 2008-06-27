@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.62 2008/04/10 08:04:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.63 2008/06/27 05:20:55 dberkholz Exp $
+
+*xf86-video-ati-6.9.0 (27 Jun 2008)
+
+  27 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.9.0.ebuild:
+  Bump. Major features include: Improved EXA render support for r1xx/r2xx
+  cards; EXA render support for r3xx/r4xx/r5xx cards; Textured video support
+  for Xv (r1xx-r5xx). Also, the mach64 and r128 drivers now exist as their
+  own packages, xf86-video-mach64 and xf86-video-r128. If you have
+  VIDEO_CARDS set up, they should get pulled in automatically by
+  xorg-server-1.4.2 and newer. (I'm committing those changes right after
+  this.)
 
 *xf86-video-ati-6.8.0-r1 (10 Apr 2008)
 
