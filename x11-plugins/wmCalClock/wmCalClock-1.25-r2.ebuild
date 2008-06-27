@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r2.ebuild,v 1.3 2008/06/26 17:25:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r2.ebuild,v 1.4 2008/06/27 13:29:14 ranger Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~mips ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${P}/Src"

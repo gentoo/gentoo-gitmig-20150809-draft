@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmCalClock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.18 2008/06/26 17:25:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.19 2008/06/27 13:29:14 ranger Exp $
+
+  27 Jun 2008; Brent Baude <ranger@gentoo.org> wmCalClock-1.25-r2.ebuild:
+  stable ppc64, bug 229553
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> wmCalClock-1.25-r2.ebuild:
   Stable on ppc wrt bug 229553
