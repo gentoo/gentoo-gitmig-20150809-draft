@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2.ebuild,v 1.1 2008/06/27 15:25:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2.ebuild,v 1.2 2008/06/27 17:33:22 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,9 +45,7 @@ src_install() {
 	mkdir "${D}/usr"
 
 	emake \
-		# The perl-module Makefile will obey this
 		DESTDIR="${D}" \
-		# Unfortunately the rest does its own thing
 		ROOTDIR="${D}/usr/snips" \
 		DATADIR="${D}/usr/snips/data" \
 		ETCDIR="${D}/usr/snips/etc" \
