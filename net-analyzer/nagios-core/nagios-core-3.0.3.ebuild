@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.3.ebuild,v 1.1 2008/06/25 18:39:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.3.ebuild,v 1.2 2008/06/27 20:03:52 dertobi123 Exp $
 
 EAPI="1"
 
@@ -136,9 +136,9 @@ src_install() {
 		chown -R nagios:nagios "${D}/${dir}" || die "Failed chown of ${D}/${dir}"
 	done
 
-	chown -R root:root "${D}"/usr/lib/nagios
-	find "${D}"/usr/lib/nagios -type d -print0 | xargs -0 chmod 755
-	find "${D}"/usr/lib/nagios/cgi-bin -type f -print0 | xargs -0 chmod 755
+	chown -R root:root "${D}"/usr/$(get_libdir)/nagios
+	find "${D}"/usr/$(get_libdir)/nagios -type d -print0 | xargs -0 chmod 755
+	find "${D}"/usr/$(get_libdir)/nagios/cgi-bin -type f -print0 | xargs -0 chmod 755
 
 	keepdir /etc/nagios
 	keepdir /var/nagios
