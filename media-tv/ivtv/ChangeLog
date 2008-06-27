@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.103 2008/06/27 16:36:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.104 2008/06/27 16:40:21 cardoe Exp $
+
+*ivtv-1.2.0 (27 Jun 2008)
+*ivtv-1.1.0 (27 Jun 2008)
+
+  27 Jun 2008; Doug Goldstein <cardoe@gentoo.org> +ivtv-1.1.0.ebuild,
+  +ivtv-1.2.0.ebuild:
+  add support for 2.6.24 and 2.6.25 with two new versions
 
   27 Jun 2008; Doug Goldstein <cardoe@gentoo.org> -ivtv-0.4.5.ebuild,
   -ivtv-0.4.7.ebuild, -ivtv-0.4.8.ebuild, -ivtv-0.4.9.ebuild,
