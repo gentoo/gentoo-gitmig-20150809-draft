@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-chtheme
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.16 2008/06/27 17:04:19 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.17 2008/06/27 17:05:56 gentoofan23 Exp $
+
+  27 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  gtk-chtheme-0.3.1-r1.ebuild:
+  stable amd64, bug 215121
 
   27 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   +files/gtk-chtheme-0.3.1-implicit.patch, gtk-chtheme-0.3.1-r1.ebuild:
