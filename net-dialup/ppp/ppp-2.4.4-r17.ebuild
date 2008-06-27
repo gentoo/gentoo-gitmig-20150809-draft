@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r16.ebuild,v 1.1 2008/06/25 21:12:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r17.ebuild,v 1.1 2008/06/27 19:24:03 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://dev.gentoo.org/~mrness/distfiles/${P}-gentoo-20080625.tar.gz
+	http://dev.gentoo.org/~mrness/distfiles/${P}-gentoo-20080627.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -172,10 +172,10 @@ src_install() {
 
 	exeinto /etc/ppp
 	for i in ip-up ip-down ; do
-		doexe "${WORKDIR}/scripts/${i}"
+		doexe "${WORKDIR}/scripts/${i}" || die "failed to install ${i} script"
 		insinto /etc/ppp/${i}.d
 		use ipv6 && dosym ${i} /etc/ppp/${i/ip/ipv6}
-		doins "${WORKDIR}/scripts/${i}.d"/*
+		doins "${WORKDIR}/scripts/${i}.d"/* || die "failed to install ${i}.d scripts"
 	done
 
 	pamd_mimic_system ppp auth account session
@@ -219,16 +219,16 @@ src_install() {
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dodoc "${FILESDIR}/README.mpls"
 
-	dosbin scripts/pon
-	dosbin scripts/poff
-	dosbin scripts/plog
-	doman scripts/pon.1
+	dosbin scripts/pon && \
+	    dosbin scripts/poff && \
+	    dosbin scripts/plog && \
+	    doman scripts/pon.1 || die "failed to install pon&poff scripts"
 
 	# Adding misc. specialized scripts to doc dir
 	insinto /usr/share/doc/${PF}/scripts/chatchat
-	doins scripts/chatchat/*
+	doins scripts/chatchat/* || die "failed to install chat scripts in doc dir"
 	insinto /usr/share/doc/${PF}/scripts
-	doins scripts/*
+	doins scripts/* || die "failed to install scripts in doc dir"
 
 	if use gtk; then
 		dosbin contrib/pppgetpass/{pppgetpass.vt,pppgetpass.gtk}
