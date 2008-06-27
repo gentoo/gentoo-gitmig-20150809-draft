@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21.ebuild,v 1.2 2007/08/09 21:43:47 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21.ebuild,v 1.3 2008/06/27 10:43:17 ulm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="debug fftw jpeg netcdf pdf png"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	>=sys-libs/zlib-1.0.3
 	>=media-libs/t1lib-1.3.1
 	>=media-libs/tiff-3.5
