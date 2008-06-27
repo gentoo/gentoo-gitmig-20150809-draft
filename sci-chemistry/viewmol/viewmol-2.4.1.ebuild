@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.3 2007/07/22 07:23:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.4 2008/06/27 10:32:55 ulm Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 RDEPEND="media-libs/tiff
 	virtual/opengl
-	virtual/motif
+	x11-libs/openmotif
 	media-libs/libpng
 	>=dev-lang/python-2.2
 	x11-libs/libXmu
