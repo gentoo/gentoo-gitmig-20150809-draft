@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.1 2008/02/06 15:05:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.2 2008/06/27 17:21:17 markusle Exp $
+
+  27 Jun 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/meep-0.10.1-gcc4.3.patch, meep-0.10.1.ebuild:
+  Added gcc-4.3 compatibility patch (fixes #229693).
 
 *meep-0.10.1 (06 Feb 2008)
 
