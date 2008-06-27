@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.21 2008/06/26 17:30:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.22 2008/06/27 13:26:13 ranger Exp $
+
+  27 Jun 2008; Brent Baude <ranger@gentoo.org> asmem-1.12.ebuild:
+  stable ppc64, bug 229541
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> asmem-1.12.ebuild:
   Stable on ppc wrt bug 229541
