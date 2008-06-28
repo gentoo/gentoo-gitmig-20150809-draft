@@ -1,6 +1,6 @@
-# ChangeLog for xfce-extra/terminal
+# ChangeLog for x11-terms/terminal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.1 2008/06/22 21:27:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.2 2008/06/28 12:20:24 swegener Exp $
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org> +terminal-0.2.8.ebuild:
   Move from xfce-extra.
