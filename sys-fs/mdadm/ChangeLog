@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.98 2008/05/12 15:42:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.99 2008/06/28 16:36:45 vapier Exp $
+
+  28 Jun 2008; Mike Frysinger <vapier@gentoo.org>
+  -files/raid-stop.sh-2.6.3-r2, +files/64-md-raid.rules,
+  -files/64-md-raid.rules-2.6.3-r2, +files/raid-stop.sh,
+  mdadm-2.6.4-r1.ebuild, mdadm-2.6.4-r2.ebuild:
+  Shuffle files around.
 
   12 May 2008; Markus Meier <maekke@gentoo.org> mdadm-2.6.4-r1.ebuild:
   amd64 stable, bug #215353

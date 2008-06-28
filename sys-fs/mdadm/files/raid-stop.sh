@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/raid-stop.sh:  Stop raid volumes at shutdown
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-stop.sh-2.6.3-r2,v 1.1 2007/10/03 11:58:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-stop.sh,v 1.4 2008/06/28 16:36:46 vapier Exp $
 
 [ -f /proc/mdstat ] || exit 0
 

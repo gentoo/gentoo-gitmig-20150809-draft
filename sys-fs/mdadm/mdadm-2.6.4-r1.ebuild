@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4-r1.ebuild,v 1.5 2008/05/12 15:42:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4-r1.ebuild,v 1.6 2008/06/28 16:36:45 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,7 +33,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	exeinto /$(get_libdir)/rcscripts/addons
 	newexe "${FILESDIR}"/raid-start.sh-2.6.4 raid-start.sh || die "addon failed"
-	newexe "${FILESDIR}"/raid-stop.sh-2.6.3-r2 raid-stop.sh || die "addon failed"
+	newexe "${FILESDIR}"/raid-stop.sh raid-stop.sh || die "addon failed"
 	dodoc ChangeLog INSTALL TODO README* ANNOUNCE-${PV}
 
 	insinto /etc
@@ -43,7 +43,7 @@ src_install() {
 	newinitd "${FILESDIR}"/mdraid.rc-2.6.3-r4 mdraid || die "installing mdraid.rc failed"
 
 	insinto /etc/udev/rules.d/
-	newins "${FILESDIR}"/64-md-raid.rules-2.6.3-r2 64-md-raid.rules || die
+	newins "${FILESDIR}"/64-md-raid.rules 64-md-raid.rules || die
 }
 
 pkg_postinst() {
