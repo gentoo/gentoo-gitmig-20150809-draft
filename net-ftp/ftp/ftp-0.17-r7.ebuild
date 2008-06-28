@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.4 2008/06/28 15:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.5 2008/06/28 15:40:25 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${MY_P}-segv.patch #fedora
 	epatch "${FILESDIR}"/${MY_P}-custom-cflags.patch
 	epatch "${FILESDIR}"/${MY_P}-sigseg.patch #fedora, #199206
+	epatch "${FILESDIR}"/${MY_P}-arg_max.patch #fedora, #226513
 	append-lfs-flags #101038
 }
 
