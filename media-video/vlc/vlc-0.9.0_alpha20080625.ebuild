@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.7 2008/06/28 10:33:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.8 2008/06/28 14:20:05 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -173,7 +173,6 @@ vlc_use_enable_force() {
 		echo "--disable-$2"
 	fi
 }
-
 
 pkg_setup() {
 	vlc_use_needs skins truetype
