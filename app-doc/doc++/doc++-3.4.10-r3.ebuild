@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10-r3.ebuild,v 1.1 2007/08/04 21:47:21 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10-r3.ebuild,v 1.2 2008/06/28 23:16:12 loki_val Exp $
 
 inherit eutils
 
@@ -17,8 +17,9 @@ RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/flex.patch
-	sed -i -e "s/locale.alias//g" ${S}/intl/Makefile.in
+	epatch "${FILESDIR}"/${P}-flex.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -i -e "s/locale.alias//g" "${S}"/intl/Makefile.in
 }
 
 src_compile() {
