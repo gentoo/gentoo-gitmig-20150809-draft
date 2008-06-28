@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20080219_p1.ebuild,v 1.1 2008/02/22 08:41:54 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20080626.ebuild,v 1.1 2008/06/28 11:34:38 wschlich Exp $
 
 inherit eutils
 

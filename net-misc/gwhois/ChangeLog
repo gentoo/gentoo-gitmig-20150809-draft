@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.33 2008/03/27 23:12:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.34 2008/06/28 11:34:38 wschlich Exp $
+
+*gwhois-20080626 (27 Jun 2008)
+
+  27 Jun 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -gwhois-20061002.ebuild, -gwhois-20080219_p1.ebuild,
+  +gwhois-20080626.ebuild:
+  version bump, removed old versions
 
   27 Mar 2008; Jeroen Roovers <jer@gentoo.org> gwhois-20071030.ebuild:
   Stable for HPPA (bug #214728).
