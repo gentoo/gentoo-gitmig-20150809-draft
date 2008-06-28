@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.530 2008/06/20 08:48:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.531 2008/06/28 18:01:55 vapier Exp $
+
+  28 Jun 2008; Mike Frysinger <vapier@gentoo.org> portage-2.2_rc1.ebuild:
+  Force newer pax-utils #229213 by Andrey Kislyuk.
 
   20 Jun 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_rc1.ebuild:
   For posix compatibility, always pass an initial path argument to find.
