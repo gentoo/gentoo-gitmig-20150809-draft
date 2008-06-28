@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.2 2008/06/27 17:21:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.3 2008/06/28 13:14:21 markusle Exp $
+
+  28 Jun 2008; Markus Dittrich <markusle@gentoo.org> meep-0.10.1.ebuild:
+  Since blas-reference seems to result in a faulty meep, let's depend
+  explicitly on blas-atlas and add a warning in case the user has 
+  selected blas-reference (see bug #229693). Thanks much to 
+  Dustin Surawicz for tracking this down.
 
   27 Jun 2008; Markus Dittrich <markusle@gentoo.org>
   +files/meep-0.10.1-gcc4.3.patch, meep-0.10.1.ebuild:

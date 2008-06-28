@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.2 2008/06/27 17:21:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.3 2008/06/28 13:14:21 markusle Exp $
 
 inherit eutils autotools
 
@@ -17,9 +17,23 @@ DEPEND="sci-libs/fftw
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )
 	sci-physics/harminv
+	sci-libs/blas-atlas
+	virtual/lapack
 	guile? ( >=sci-libs/libctl-3.0 )
 	hdf5? ( sci-libs/hdf5 )
 	mpi? ( virtual/mpi )"
+
+pkg_setup() {
+	SELECTED_BLAS=$(eselect blas show | cut -d' ' -f2)
+	if [[ ${SELECTED_BLAS} == "reference" ]]; then
+		ewarn "You have selected blas-reference which may yield a"
+		ewarn "broken meep and cause test failures (see bug #229693)"
+		ewarn "We highly recommend that you use blas-atlas"
+		ewarn "when compiling and using meep."
+		epause 5
+	fi
+}
+
 
 src_unpack() {
 	unpack ${A}
@@ -49,3 +63,13 @@ src_install() {
 		doins -r examples || die "install examples failed"
 	fi
 }
+
+pkg_postinst() {
+	# warn the user that meep + blas-reference may cause problems
+	echo
+	elog "Please note that meep may produce bad results when"
+	elog "used in conjunction with blas-reference. We recommend"
+	elog "that you use blas-atlas instead."
+	echo
+}
+
