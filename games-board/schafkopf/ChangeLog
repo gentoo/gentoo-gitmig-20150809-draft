@@ -1,6 +1,9 @@
 # ChangeLog for games-board/schafkopf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/schafkopf/ChangeLog,v 1.4 2007/02/07 13:44:57 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/schafkopf/ChangeLog,v 1.5 2008/06/28 07:35:30 maekke Exp $
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> schafkopf-0.7.ebuild:
+  x86 stable, bug #229637
 
   07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> schafkopf-0.7.ebuild:
   Use mirror://berlios
