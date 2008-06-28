@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+  <email>dev-zero@gentoo.org</email>
   <name>Tiziano Müller</name>
-  <email>dev-zero@gentoo.org</name>
 </maintainer>
 </pkgmetadata>
