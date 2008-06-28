@@ -1,0 +1,20 @@
+--- xephem-3.7.3-orig/GUI/xephem/Makefile	2006-05-14 01:06:06.000000000 +0200
++++ xephem-3.7.3/GUI/xephem/Makefile	2008-06-28 11:23:32.000000000 +0200
+@@ -15,7 +15,7 @@
+ LIBLIB = -lastro -lip -llilxml -ljpegd -lpng -lz
+ 
+ # MOTIFI is the directory containing the Xm directory of include files.
+-# MOTIFL is the directory containing the libXm.a library.
++# MOTIFL is the directory containing libXm
+ # MOTIF can be used to set one common directory if desired.
+ # Defaults work ok for Linux and Mac OS X.
+ ifdef MOTIF
+@@ -34,7 +34,7 @@
+ CLDFLAGS = -g
+ CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall -I$(MOTIFI) -I/usr/X11R6/include
+ LDFLAGS = $(LIBLNK) $(CLDFLAGS) -L$(MOTIFL) -L/usr/X11R6/lib
+-XLIBS = $(MOTIFL)/libXm.a -lXp -lXt -lXext -lXmu -lX11
++XLIBS = -lXm -lXp -lXt -lXext -lXmu -lX11
+ LIBS = $(XLIBS) $(LIBLIB) -lm
+ 
+ # for ppc Apple OS X to make universal (i386 and ppc binary), requires

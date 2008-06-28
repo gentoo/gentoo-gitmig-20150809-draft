@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.2 2008/06/27 10:18:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.3 2008/06/28 13:30:30 ulm Exp $
 
 inherit eutils
 
@@ -17,6 +17,10 @@ DEPEND="!media-gfx/feh
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Link against Motif shared lib, bug 229761
+	epatch "${FILESDIR}/${P}-link-motif.patch"
+
 	for i in libastro/Makefile libip/Makefile libjpegd/Makefile \
 		liblilxml/Makefile GUI/xephem/Makefile GUI/xephem/tools/*/Makefile ; do
 		einfo "Fixing CFLAGS in ${i}"
