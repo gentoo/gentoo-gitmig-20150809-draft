@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalendar
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.15 2008/06/26 17:24:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.16 2008/06/28 06:44:41 maekke Exp $
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> wmcalendar-0.5.2.ebuild:
+  x86 stable, bug #229555
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> wmcalendar-0.5.2.ebuild:
   Stable on ppc wrt bug 229555
