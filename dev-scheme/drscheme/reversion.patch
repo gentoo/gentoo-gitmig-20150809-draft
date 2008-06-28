@@ -1,0 +1,12 @@
+--- drscheme-372-r1.ebuild	2008-06-03 12:45:14.000000000 +0200
++++ drscheme-0.372-r1.ebuild	2008-06-28 16:25:28.000000000 +0200
+@@ -4,6 +4,9 @@
+ 
+ inherit eutils latex-package
+ 
++#reversion for 4.0.x
++PV=${PV/0./}
++
+ SRC_URI="http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz
+ 		 http://pre.plt-scheme.org/installers/plt-${PV}-src-unix.tgz"
+ #"mirror://gentoo/plt-${PV%%_p*}-src-unix.tgz"
