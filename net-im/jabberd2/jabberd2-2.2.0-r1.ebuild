@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0.ebuild,v 1.1 2008/06/23 13:15:40 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r1.ebuild,v 1.1 2008/06/28 11:24:35 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -11,14 +11,15 @@ SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug memdebug ipv6 ldap mysql pam pipe postgres sqlite"
+IUSE="berkdb debug memdebug mysql ldap pam pipe postgres sqlite ssl zlib"
 
 DEPEND="dev-libs/expat
-	>=dev-libs/openssl-0.9.6b
+	zlib? ( sys-libs/zlib )
+	ssl? ( >=dev-libs/openssl-0.9.6b )
 	net-libs/udns
 	>=net-dns/libidn-0.3
 	ldap? ( net-nds/openldap )
-	>=sys-libs/db-4.1.24
+	berkdb? ( >=sys-libs/db-4.1.24 )
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
@@ -30,12 +31,42 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/jabberd-${PV}"
 
+pkg_setup() {
+	if ! use berkdb && ! use postgres && ! use mysql && ! use sqlite; then
+		eerror 'You have no storage backend selected.'
+		eerror 'Please set one of the following USE flags:'
+		eerror '    berkdb'
+		eerror '    postgres'
+		eerror '    mysql'
+		eerror '    sqlite'
+		die 'Please enable one of the storage backends mentioned.'
+	fi
+
+	if ! use berkdb && ! use mysql && ! use postgres \
+	&& ! use pam && ! use ldap; then
+		eerror 'You have no Authentication mechanism selected.'
+		eerror 'Please set one of the following USE flags for authentication:'
+		eerror '    berkdb'
+		eerror '    mysql'
+		eerror '    postgres'
+		eerror '    pam'
+		eerror '    ldap'
+		die 'Please enable one of the authentication mechanisms mentioned.'
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-apr_base64.patch
+}
+
 src_compile() {
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
 	replace-flags -O[3s] -O2
 
-	local myconf="--with-sasl=gsasl"
+	use berkdb && myconf="${myconf} --with-extra-include-path=$(db_includedir)"
 
 	if use debug; then
 		myconf="${myconf} --enable-debug"
@@ -51,16 +82,16 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/jabber \
-		--enable-db \
-		--with-extra-include-path=$(db_includedir) \
 		${myconf} \
-		$(use_enable ipv6) \
+		$(use_enable berkdb db)
 		$(use_enable ldap) \
 		$(use_enable mysql) \
 		$(use_enable pam) \
 		$(use_enable pipe) \
 		$(use_enable postgres pgsql) \
-		$(use_enable sqlite)
+		$(use_enable sqlite) \
+		$(use_enable ssl) \
+		$(use_with zlib)
 	emake || die "make failed"
 
 }
