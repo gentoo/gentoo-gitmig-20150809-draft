@@ -1,6 +1,6 @@
-# ChangeLog for xfce-base/xfprint
+# ChangeLog for net-print/xfprint
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.1 2008/06/22 22:55:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.2 2008/06/28 12:17:24 swegener Exp $
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org>
   +files/4.4.2/01_all_no_default_printer.patch, +metadata.xml,
