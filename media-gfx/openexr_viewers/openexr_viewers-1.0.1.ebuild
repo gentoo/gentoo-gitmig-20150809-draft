@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.1.ebuild,v 1.8 2008/04/13 11:05:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.1.ebuild,v 1.9 2008/06/28 22:01:36 loki_val Exp $
 
 inherit autotools eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.0.0-nvidia-automagic.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 
