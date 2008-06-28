@@ -1,6 +1,11 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.15 2008/06/28 11:24:35 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.16 2008/06/28 22:23:10 gentoofan23 Exp $
+
+  28 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  jabberd2-2.2.0-r1.ebuild:
+  Add missing \ on econf, was preventing any backends but berkdb from being
+  enabled
 
 *jabberd2-2.2.0-r1 (28 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r1.ebuild,v 1.1 2008/06/28 11:24:35 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r1.ebuild,v 1.2 2008/06/28 22:23:10 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -83,7 +83,7 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/jabber \
 		${myconf} \
-		$(use_enable berkdb db)
+		$(use_enable berkdb db) \
 		$(use_enable ldap) \
 		$(use_enable mysql) \
 		$(use_enable pam) \
