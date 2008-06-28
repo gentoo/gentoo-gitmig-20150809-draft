@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmMoonClock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/ChangeLog,v 1.13 2008/06/26 17:09:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/ChangeLog,v 1.14 2008/06/28 07:09:28 maekke Exp $
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> wmMoonClock-1.27-r1.ebuild:
+  x86 stable, bug #229585
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> wmMoonClock-1.27-r1.ebuild:
   Stable on ppc wrt bug 229585
