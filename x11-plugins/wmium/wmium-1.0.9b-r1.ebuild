@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.4 2007/07/22 04:59:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.5 2008/06/28 07:04:21 maekke Exp $
 
 IUSE="gtk"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.earthmagic.org/?software"
 SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="virtual/libc
 	dev-libs/openssl
 	gtk? (
