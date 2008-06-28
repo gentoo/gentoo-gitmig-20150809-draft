@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.4 2008/06/27 02:59:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.5 2008/06/28 23:40:16 loki_val Exp $
+
+inherit base
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -13,6 +15,8 @@ IUSE=""
 
 DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_compile() {
 	econf --datadir='/etc' || die "econf failed"

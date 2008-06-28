@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/yasr
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.20 2008/06/27 02:59:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.21 2008/06/28 23:40:16 loki_val Exp $
+
+  28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/yasr-0.6.9-gcc43.patch, yasr-0.6.9.ebuild:
+  Fix for gcc-4.3, bug #226523.
 
   27 Jun 2008; William Hubbs <williamh@gentoo.org> yasr-0.6.5.ebuild,
   yasr-0.6.7.ebuild, yasr-0.6.8.ebuild, yasr-0.6.9.ebuild:
