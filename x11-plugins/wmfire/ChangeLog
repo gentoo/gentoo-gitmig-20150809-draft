@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfire
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.12 2008/06/26 17:17:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.13 2008/06/28 06:57:33 maekke Exp $
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> wmfire-1.2.3.ebuild:
+  x86 stable, bug #229563
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> wmfire-1.2.3.ebuild:
   Stable on ppc wrt bug 229563
