@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.54 2008/06/19 17:39:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.55 2008/06/28 09:13:48 wolf31o2 Exp $
+
+  28 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  squashfs-tools-3.2_p2.ebuild, squashfs-tools-3.3.ebuild:
+  Marking 3.2_p2 stable for 2.6.23 kernels. Thanks to Kerin Millar
+  <kerframil@gmail.com> for pointing it out in bug #227461. This was used
+  during the 2008.0 release cycle, so it received plenty of testing. Also,
+  changing the elog to ewarn for 3.3 and the 2.6.24 requirement notice.
 
   19 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   squashfs-tools-3.3.ebuild:
