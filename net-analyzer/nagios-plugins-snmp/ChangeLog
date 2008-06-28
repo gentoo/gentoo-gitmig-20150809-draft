@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios-plugins-snmp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.3 2007/06/30 16:37:45 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.4 2008/06/28 09:48:18 dertobi123 Exp $
+
+*nagios-plugins-snmp-0.6.0 (28 Jun 2008)
+
+  28 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +nagios-plugins-snmp-0.6.0.ebuild:
+  Version bump, added ~amd64, added eautoreconf run due to maintainer mode,
+  migrated to nagios-3, fix quotation.
 
   30 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   nagios-plugins-snmp-0.5.5.ebuild:
