@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.6 2004/09/04 23:19:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.7 2008/06/28 13:02:11 dertobi123 Exp $
 
 inherit eutils fixheadtails
 
@@ -17,8 +17,8 @@ DEPEND="sys-apps/groff"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-errno.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-errno.patch"
 	ht_fix_file Makefile
 
 	echo "gcc ${CFLAGS}" > conf-cc
