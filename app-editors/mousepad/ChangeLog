@@ -1,6 +1,6 @@
-# ChangeLog for xfce-extra/mousepad
+# ChangeLog for app-editors/mousepad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.1 2008/06/22 23:43:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.2 2008/06/28 12:14:46 swegener Exp $
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org> +mousepad-0.2.13.ebuild:
   Move from xfce-extra.
