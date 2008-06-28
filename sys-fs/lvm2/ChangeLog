@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.143 2008/06/28 09:12:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.144 2008/06/28 09:17:12 robbat2 Exp $
+
+  28 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.39.ebuild:
+  Add a warning to satisfy bug #225769.
 
 *lvm2-2.02.39 (28 Jun 2008)
 

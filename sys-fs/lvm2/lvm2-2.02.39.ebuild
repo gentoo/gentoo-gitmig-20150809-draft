@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.39.ebuild,v 1.1 2008/06/28 09:12:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.39.ebuild,v 1.2 2008/06/28 09:17:12 robbat2 Exp $
 
 inherit eutils multilib
 
@@ -141,6 +141,7 @@ pkg_postinst() {
 	elog "lvm volumes are no longer automatically created for"
 	elog "baselayout-2 users. If you are using baselayout-2, be sure to"
 	elog "run: # rc-update add lvm boot"
+	elog "Do NOT add it if you are using baselayout-1 still."
 }
 
 src_test() {
