@@ -1,6 +1,6 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.60 2008/06/28 16:53:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.61 2008/06/28 16:55:35 hkbst Exp $
 
 *drscheme-4.0.1 (28 Jun 2008)
 *drscheme-0.372-r1 (28 Jun 2008)
@@ -8,6 +8,7 @@
   28 Jun 2008; Marijn Schouten <hkBst@gentoo.org> +reversion.patch,
   +drscheme-0.372-r1.ebuild, +drscheme-4.0.1.ebuild:
   add new major version 4.0.1 and reversion latest ~
+  fix bug 225215
 
   03 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/drscheme-372-as_needed.patch, drscheme-372-r1.ebuild:
