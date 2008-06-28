@@ -1,0 +1,36 @@
+diff -Naur xerces-c-3.0.0.b1.orig/samples/src/CreateDOMDocument/CreateDOMDocument.cpp xerces-c-3.0.0.b1/samples/src/CreateDOMDocument/CreateDOMDocument.cpp
+--- xerces-c-3.0.0.b1.orig/samples/src/CreateDOMDocument/CreateDOMDocument.cpp	2008-06-27 22:33:03.000000000 +0200
++++ xerces-c-3.0.0.b1/samples/src/CreateDOMDocument/CreateDOMDocument.cpp	2008-06-27 22:37:21.000000000 +0200
+@@ -89,7 +89,7 @@
+ //  main
+ // ---------------------------------------------------------------------------
+ 
+-int main(int argC, char* /* argV[] */)
++int main(int argC, char** /* argV[] */)
+ {
+     // Initialize the XML4C2 system.
+     try
+diff -Naur xerces-c-3.0.0.b1.orig/tests/src/UtilTests/CoreTestsMain.cpp xerces-c-3.0.0.b1/tests/src/UtilTests/CoreTestsMain.cpp
+--- xerces-c-3.0.0.b1.orig/tests/src/UtilTests/CoreTestsMain.cpp	2008-06-27 22:33:01.000000000 +0200
++++ xerces-c-3.0.0.b1/tests/src/UtilTests/CoreTestsMain.cpp	2008-06-27 22:37:35.000000000 +0200
+@@ -46,7 +46,7 @@
+ extern bool testValueVector();
+ 
+ 
+-int main()
++int main(int, char**)
+ {
+     // Do the platform initialization
+     try
+diff -Naur xerces-c-3.0.0.b1.orig/tests/src/XSValueTest/XSValueTest.cpp xerces-c-3.0.0.b1/tests/src/XSValueTest/XSValueTest.cpp
+--- xerces-c-3.0.0.b1.orig/tests/src/XSValueTest/XSValueTest.cpp	2008-06-27 22:33:00.000000000 +0200
++++ xerces-c-3.0.0.b1/tests/src/XSValueTest/XSValueTest.cpp	2008-06-27 22:37:56.000000000 +0200
+@@ -6693,7 +6693,7 @@
+ // ---------------------------------------------------------------------------
+ //  Program entry point
+ // ---------------------------------------------------------------------------
+-int main(int, char* )
++int main(int, char** )
+ {
+ 
+     // Initialize the XML4C system

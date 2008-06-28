@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.58 2008/06/07 19:53:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.59 2008/06/28 06:34:06 dev-zero Exp $
+
+*xerces-c-3.0.0_beta1 (28 Jun 2008)
+
+  28 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/xerces-c-3.0.0_beta1-fix-tests-and-samples.patch,
+  +xerces-c-3.0.0_beta1.ebuild:
+  Added beta version for testing
 
   07 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/xerces-c-2.8.0-IconvGNUTransService.cpp.patch,
