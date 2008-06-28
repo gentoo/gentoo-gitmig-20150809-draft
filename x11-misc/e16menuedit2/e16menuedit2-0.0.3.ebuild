@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.7 2008/03/26 13:47:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.8 2008/06/28 15:25:46 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 arm ~ppc sh sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-wm/enlightenment-0.16
+	>=gnome-base/libglade-2.4
 	=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
