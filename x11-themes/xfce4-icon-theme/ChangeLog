@@ -1,6 +1,6 @@
-# ChangeLog for x11-theme/xfce4-icon-theme
+# ChangeLog for x11-themes/xfce4-icon-theme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.1 2008/06/22 22:22:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.2 2008/06/28 12:21:03 swegener Exp $
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org>
   +xfce4-icon-theme-4.4.2.ebuild:
