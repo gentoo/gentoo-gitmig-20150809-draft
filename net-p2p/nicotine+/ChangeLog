@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.28 2008/03/31 14:24:54 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.29 2008/06/28 22:31:59 coldwind Exp $
+
+*nicotine+-1.2.10_pre705 (28 Jun 2008)
+
+  28 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +nicotine+-1.2.10_pre705.ebuild:
+  Bump to subversion snapshot, r705.
 
 *nicotine+-1.2.9-r1 (31 Mar 2008)
 
