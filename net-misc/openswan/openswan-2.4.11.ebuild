@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.11.ebuild,v 1.2 2008/06/19 11:34:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.11.ebuild,v 1.3 2008/06/28 21:28:48 gentoofan23 Exp $
 
 inherit eutils linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="curl ldap smartcard extra-algorithms weak-algorithms"
 
 COMMON_DEPEND="!net-misc/strongswan
