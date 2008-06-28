@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.17 2008/06/20 20:43:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.18 2008/06/28 15:44:25 loki_val Exp $
 
-inherit base
+inherit base qt3
 
 DESCRIPTION="A hierarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
