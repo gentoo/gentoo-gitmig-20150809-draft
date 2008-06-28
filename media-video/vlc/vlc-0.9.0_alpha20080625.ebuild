@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.6 2008/06/26 07:32:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.7 2008/06/28 10:33:06 aballier Exp $
 
 EAPI="1"
 
@@ -111,6 +111,7 @@ RDEPEND="
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
 		shout? ( media-libs/libshout )
+		skins? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2.0:4 ) )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
@@ -158,9 +159,25 @@ vlc_use_needs() {
 	use $1 && use !$2 && ewarn "USE=$1 requires $2, $1 will be disabled."
 }
 
+# Notify the user that some useflag have been forced on
+vlc_use_force() {
+	use $1 && use !$2 && ewarn "USE=$1 requires $2, $2 will be enabled."
+}
+
+# Use when $2 depends strictly on $3
+# if use $1 then enable $2 and $3, otherwise disable $2
+vlc_use_enable_force() {
+	if use $1 ; then
+		echo "--enable-$2 --enable-$3"
+	else
+		echo "--disable-$2"
+	fi
+}
+
+
 pkg_setup() {
 	vlc_use_needs skins truetype
-	vlc_use_needs skins qt4
+	vlc_use_force skins qt4
 	vlc_use_needs cdda cdio
 	vlc_use_needs vcdx cdio
 	vlc_use_needs bidi truetype
@@ -181,10 +198,6 @@ src_compile () {
 
 	local XPIDL=""
 	local MOZILLA_CONFIG=""
-
-	use vlm && \
-		myconf="${myconf} --enable-vlm --enable-sout" || \
-		myconf="${myconf} --disable-vlm"
 
 	if use nsplugin; then
 		if use xulrunner; then
@@ -298,7 +311,8 @@ src_compile () {
 		--disable-growl \
 		--disable-optimizations \
 		--enable-fast-install \
-		${myconf} || die "configuration failed"
+		$(vlc_use_enable_force vlm vlm sout) \
+		$(vlc_use_enable_force skins skins2 qt4)
 
 	# Reminder to re-add this when disabling it will not be broken
 	# $(use_enable stream sout) \
