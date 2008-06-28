@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.12.5.ebuild,v 1.1 2007/12/10 15:51:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.14.4.ebuild,v 1.1 2008/06/28 08:43:58 maekke Exp $
 
 DESCRIPTION="VIPS Image Processing Library"
-SRC_URI="http://www.vips.ecs.soton.ac.uk/vips-7.12/${P}.tar.gz"
+SRC_URI="http://www.vips.ecs.soton.ac.uk/supported/7.14/${P}.tar.gz"
 HOMEPAGE="http://vips.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE="exif fftw imagemagick jpeg lcms openexr png threads tiff zlib"
 
 RDEPEND="virtual/libc
