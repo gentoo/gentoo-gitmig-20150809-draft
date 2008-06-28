@@ -1,21 +1,21 @@
-# Copyright 2003-2007 Gentoo Foundation
+# Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.12.5.ebuild,v 1.1 2007/12/10 15:53:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.14.4.ebuild,v 1.1 2008/06/28 08:46:37 maekke Exp $
 
 inherit fdo-mime
 
 DESCRIPTION="VIPS Image Processing Graphical User Interface"
-SRC_URI="http://www.vips.ecs.soton.ac.uk/vips-7.12/${P}.tar.gz"
+SRC_URI="http://www.vips.ecs.soton.ac.uk/supported/7.14/${P}.tar.gz"
 HOMEPAGE="http://vips.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 
 IUSE="fftw"
 
-RDEPEND=">=media-libs/vips-7.12.5
+RDEPEND=">=media-libs/vips-7.14.1
 	>=x11-libs/gtk+-2.4
 	dev-libs/libxml2
 	>=dev-libs/glib-2
