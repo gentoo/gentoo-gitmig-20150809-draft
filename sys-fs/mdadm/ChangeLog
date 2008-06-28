@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.99 2008/06/28 16:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.100 2008/06/28 16:44:39 vapier Exp $
+
+*mdadm-2.6.4-r3 (28 Jun 2008)
+
+  28 Jun 2008; Mike Frysinger <vapier@gentoo.org> +files/mdraid.rc,
+  +files/raid-start.sh, +mdadm-2.6.4-r3.ebuild:
+  Fix mdraid on no-multilib systems and tweak minor node discovery #229501
+  by Ian Kelling.
 
   28 Jun 2008; Mike Frysinger <vapier@gentoo.org>
   -files/raid-stop.sh-2.6.3-r2, +files/64-md-raid.rules,
