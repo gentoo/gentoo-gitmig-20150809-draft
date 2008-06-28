@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmweather
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/ChangeLog,v 1.24 2008/06/27 13:27:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/ChangeLog,v 1.25 2008/06/28 06:30:50 maekke Exp $
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> wmweather-2.4.4.ebuild:
+  x86 stable, bug #229537
 
   27 Jun 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   stable ppc64, bug 229537
