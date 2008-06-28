@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.142 2008/06/23 18:54:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.143 2008/06/28 09:12:00 robbat2 Exp $
+
+*lvm2-2.02.39 (28 Jun 2008)
+
+  28 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.39.ebuild:
+  Version bump.
 
   23 Jun 2008; Raúl Porcel <armin76@gentoo.org> lvm2-2.02.37.ebuild:
   ia64/sparc stable wrt #207612
