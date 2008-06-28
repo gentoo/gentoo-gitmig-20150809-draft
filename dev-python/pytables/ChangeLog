@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pytables
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.25 2008/02/23 13:21:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.26 2008/06/28 19:30:55 pythonhead Exp $
+
+*pytables-2.0.3 (28 Jun 2008)
+
+  28 Jun 2008; Rob Cakebread <pythonhead@gentoo.org> pytables-2.0.2.ebuild,
+  +pytables-2.0.3.ebuild:
+  Version bump. Fixed depend on sci-libs/hdf5, dropped ia64 because it
+  doesn't have hdf5 keyword
 
 *pytables-2.0.2 (23 Feb 2008)
 
