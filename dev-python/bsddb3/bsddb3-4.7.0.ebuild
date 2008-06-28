@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.0.ebuild,v 1.1 2008/06/25 14:10:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.0.ebuild,v 1.2 2008/06/28 20:52:51 dev-zero Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-RDEPEND="sys-libs/db:4.3"
+RDEPEND="sys-libs/db:4.6"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
