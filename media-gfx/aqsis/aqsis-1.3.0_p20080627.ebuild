@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.3.0_p20080627.ebuild,v 1.2 2008/06/28 14:19:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.3.0_p20080627.ebuild,v 1.3 2008/06/28 14:42:46 maekke Exp $
 
 EAPI="1"
 
-inherit versionator multilib eutils
+inherit versionator multilib eutils cmake-utils
 
 DESCRIPTION="Open source RenderMan-compliant 3D rendering solution"
 HOMEPAGE="http://www.aqsis.org"
@@ -41,41 +41,27 @@ src_compile() {
 		# (upstream doesn't autodetect the gentoo install path for fltk)
 		fltk_version="$(get_version_component_range 1-2 \
 			$(best_version x11-libs/fltk | sed -e 's/^x11-libs\/fltk//'))"
-		fltk_flags="
+		mycmakeargs="${mycmakeargs}
 			-DAQSIS_USE_FLTK:BOOL=ON
 			-DAQSIS_FLTK_INCLUDE_DIR:PATH=/usr/include/fltk-${fltk_version}
 			-DAQSIS_FLTK_LIBRARIES_DIR:PATH=/usr/$(get_libdir)/fltk-${fltk_version}"
 	else
-		fltk_flags="-DAQSIS_USE_FLTK:BOOL=OFF"
+		mycmakeargs="${mycmakeargs} -DAQSIS_USE_FLTK:BOOL=OFF"
 	fi
 
-	if use openexr ; then
-		exr_flags="-DAQSIS_USE_OPENEXR:BOOL=ON"
-	else
-		exr_flags="-DAQSIS_USE_OPENEXR:BOOL=OFF"
-	fi
+	mycmakeargs="${mycmakeargs}
+		-DAQSIS_BOOST_LIB_SUFFIX:STRING=-mt
+		-DAQSIS_USE_OPENEXR:BOOL=$(use openexr && echo ON || echo OFF)
+		-DAQSIS_USE_RPATH:BOOL=OFF
+		-DLIBDIR:STRING=$(get_libdir)
+		-DSYSCONFDIR:STRING=/etc
+		-DCMAKE_INSTALL_PREFIX:PATH=/usr"
 
-	# The aqsis build system prevents in-source builds, so we make a seperate
-	# directory inside ${S} to perform the build.
-	mkdir _build
-	cd _build
-
-	cmake -DAQSIS_BOOST_LIB_SUFFIX:STRING=-mt \
-		${fltk_flags} \
-		${exr_flags} \
-		-DAQSIS_USE_RPATH:BOOL=OFF \
-		-DLIBDIR:STRING=$(get_libdir) \
-		-DSYSCONFDIR:STRING=/etc \
-		-DCMAKE_INSTALL_PREFIX:PATH=/usr \
-		"${S}"
-
-	emake || die "Compilation failed"
+	cmake-utils_src_compile
 }
 
 src_install() {
-	cd _build
-	emake install DESTDIR="${D}"
-	cd ..
-	dodoc AUTHORS INSTALL README ReleaseNotes
+	DOCS="AUTHORS INSTALL README ReleaseNotes"
+	cmake-utils_src_install
 	# TODO: Make sure examples are installed.
 }
