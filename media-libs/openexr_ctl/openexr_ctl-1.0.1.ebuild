@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1.ebuild,v 1.8 2008/04/13 10:51:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1.ebuild,v 1.9 2008/06/28 21:35:35 loki_val Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="OpenEXR CTL libraries"
 HOMEPAGE="http://sourceforge.net/projects/ampasctl"
@@ -16,6 +18,14 @@ RDEPEND="media-libs/ilmbase
 	media-libs/ctl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-configure_gcc43.patch
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.13 2008/04/13 10:51:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.14 2008/06/28 21:35:35 loki_val Exp $
+
+  28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/openexr_ctl-1.0.1-configure_gcc43.patch,
+  +files/openexr_ctl-1.0.1-gcc43.patch, openexr_ctl-1.0.1.ebuild:
+  Fix for gcc-4.3.
 
   13 Apr 2008; Markus Rothe <corsair@gentoo.org> openexr_ctl-1.0.1.ebuild:
   Stable on ppc64; bug #207663
