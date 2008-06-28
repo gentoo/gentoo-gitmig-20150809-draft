@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.3 2007/03/31 16:29:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.4 2008/06/28 20:20:16 loki_val Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 KEYWORDS="~amd64 ~ppc x86"
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	sed -i \
 		-e '/^GCC/d' \
 		-e '/^CFLAGS/d' \
