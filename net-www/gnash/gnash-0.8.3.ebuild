@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.3.ebuild,v 1.2 2008/06/26 02:17:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.3.ebuild,v 1.3 2008/06/28 11:42:55 loki_val Exp $
 
 EAPI=1
 
-inherit nsplugins kde-functions qt3 multilib
+inherit autotools nsplugins kde-functions qt3 multilib
 
 set-kdedir 3.5
 
@@ -74,6 +74,7 @@ RDEPEND="
 	x11-libs/libXt
 	x11-proto/xproto
 	dbus? ( sys-apps/dbus )
+	sys-devel/libtool
 	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -149,6 +150,9 @@ src_unpack() {
 	sed -i \
 		-e 's,config.h,gnashconfig.h,' \
 		./extensions/dbus/dbus_ext.h || die
+	epatch "${FILESDIR}"/${P}-boost-dynamic-link.patch
+	epatch "${FILESDIR}"/${P}-libtool-2.2.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -209,6 +213,9 @@ src_compile() {
 		--with-extensions=${extensions} \
 		--with-ffmpeg-incl=/usr/include \
 		--with-kde-pluginprefix=${KDEDIR} \
+		--without-included-ltdl \
+		--with-ltdl-include=/usr/include \
+		--with-ltdl-lib=/usr/lib \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -217,7 +224,8 @@ src_compile() {
 src_test() {
 	cd testsuite
 	make check || die  "make check failed"
-	./anaylse-results.sh > TESTRESULTS.txt || die "Analyzing results failed."
+	./anaylse-results.sh > TESTRESULTS.txt
+	cat TESTRESULTS.txt
 }
 
 src_install() {

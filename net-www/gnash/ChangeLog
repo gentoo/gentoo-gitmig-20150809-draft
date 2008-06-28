@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.57 2008/06/25 18:35:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.58 2008/06/28 11:42:55 loki_val Exp $
+
+  28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/gnash-0.8.3-boost-dynamic-link.patch,
+  +files/gnash-0.8.3-libtool-2.2.patch, gnash-0.8.3.ebuild:
+  Fix a compilation problem on amd64, bug #229453.
 
 *gnash-0.8.3 (25 Jun 2008)
 
