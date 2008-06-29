@@ -1,6 +1,13 @@
 # ChangeLog for app-office/magicpoint
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.37 2007/12/25 16:51:56 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.38 2008/06/29 16:57:33 darkside Exp $
+
+*magicpoint-1.13a (29 Jun 2008)
+
+  29 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/magicpoint-1.13a-implicit-declaration.patch,
+  +magicpoint-1.13a.ebuild:
+  Version bump with re-worked implicit declerations patch. bug #220563
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
