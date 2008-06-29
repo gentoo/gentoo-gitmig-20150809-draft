@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.39 2008/06/29 10:16:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.40 2008/06/29 16:51:01 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  ming-0.4.0_beta5.ebuild:
+  AT_M4DIR needs to be set for those who do not have autoconf-archive
+  installed....
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> ming-0.3.0-r1.ebuild:
   Add missing die: || "..." -> || die "..."
