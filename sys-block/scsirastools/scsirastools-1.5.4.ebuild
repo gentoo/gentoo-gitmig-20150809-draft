@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.4.ebuild,v 1.3 2008/01/14 01:56:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.4.ebuild,v 1.4 2008/06/29 07:53:32 tove Exp $
 
 inherit autotools
 
@@ -47,7 +47,7 @@ src_install() {
 	into /usr
 	docdir="/usr/share/doc/${PF}/"
 	emake install DESTDIR="${D}" datato="${D}${docdir}" \
-		|| "emake install failed"
+		|| die "emake install failed"
 	dosbin files/sgevt
 	dosbin files/mdevt
 	# unneeded files
