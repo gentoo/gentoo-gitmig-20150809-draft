@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.167 2008/05/25 21:44:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.168 2008/06/29 16:56:51 corsair Exp $
+
+  29 Jun 2008; Markus Rothe <corsair@gentoo.org> gnumeric-1.8.3.ebuild:
+  Stable on ppc64; bug #230031
 
 *gnumeric-1.8.3 (25 May 2008)
 
