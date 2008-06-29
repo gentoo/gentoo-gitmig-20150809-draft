@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnomoradio
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.18 2008/01/13 16:51:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.19 2008/06/29 11:55:15 drac Exp $
+
+  29 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +files/gnomoradio-0.15.1-gcc42.patch, gnomoradio-0.15.1.ebuild:
+  Select one libsigc++ slot wrt #228483. Fix building with GCC 4.2 (and thus
+  also 4.3).
 
   13 Jan 2008; Samuli Suominen <drac@gentoo.org> gnomoradio-0.15.1.ebuild:
   depend on dev-util/pkgconfig wrt #205653
