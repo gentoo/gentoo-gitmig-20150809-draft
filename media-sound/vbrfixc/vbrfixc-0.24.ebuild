@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vbrfixc/vbrfixc-0.24.ebuild,v 1.3 2007/07/10 17:37:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vbrfixc/vbrfixc-0.24.ebuild,v 1.4 2008/06/29 10:15:48 loki_val Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ src_unpack() {
 
 	# every bigendian arch needs this patch
 	#use ppc && epatch "${FILESDIR}/${P}-bigendian.diff"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+
 }
 
 src_install() {
