@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.93 2008/06/21 21:01:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.94 2008/06/29 11:04:12 klausman Exp $
+
+  28 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  rp-pppoe-3.8-r2.ebuild:
+  Stable on alpha, bug #227197
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> rp-pppoe-3.8-r2.ebuild:
   Stable on ppc64; bug #227197
