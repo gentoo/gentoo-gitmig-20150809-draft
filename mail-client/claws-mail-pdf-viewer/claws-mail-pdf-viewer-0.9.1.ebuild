@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.9.1.ebuild,v 1.7 2008/06/21 19:34:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.9.1.ebuild,v 1.8 2008/06/29 17:55:05 opfer Exp $
+
+inherit eutils
 
 MY_P="${P#claws-mail-}"
 MY_P="${MY_P/-/_}"
