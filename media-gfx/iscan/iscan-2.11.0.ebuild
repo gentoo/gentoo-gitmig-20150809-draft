@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.2 2008/06/29 10:39:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.3 2008/06/29 22:56:43 loki_val Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -199,8 +199,11 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-libltdl.patch
 	# autotool stuff
-	eautoconf
+	rm libltdl/acinclude.m4
+	rm m4/libtool.m4
+	eautoreconf
 }
 
 src_compile() {
