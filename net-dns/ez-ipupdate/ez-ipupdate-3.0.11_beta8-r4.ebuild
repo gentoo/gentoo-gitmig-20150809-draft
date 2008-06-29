@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.7 2008/05/12 16:41:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.8 2008/06/29 10:04:41 tove Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --bindir=/usr/sbin || "econf failed"
+	econf --bindir=/usr/sbin || die "econf failed"
 	emake || die "emake failed"
 }
 

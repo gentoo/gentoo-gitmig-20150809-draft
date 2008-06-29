@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996a.ebuild,v 1.1 2007/12/28 16:09:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996a.ebuild,v 1.2 2008/06/29 10:02:55 tove Exp $
 
 inherit eutils
 DESCRIPTION="a DNS daemon which is designed to serve DNSBL zones"
@@ -19,7 +19,7 @@ src_compile() {
 	# econf doesn't work
 	./configure \
 		$(use_enable ipv6) \
-		$(use_enable zlib) || "./configure failed"
+		$(use_enable zlib) || die "./configure failed"
 
 	emake || die "emake failed"
 }
