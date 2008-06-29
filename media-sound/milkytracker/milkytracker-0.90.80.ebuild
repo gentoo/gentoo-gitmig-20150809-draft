@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.80.ebuild,v 1.2 2008/06/29 11:32:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.80.ebuild,v 1.3 2008/06/29 11:38:35 drac Exp $
 
 inherit eutils
 
@@ -19,8 +19,6 @@ DEPEND=">=media-libs/libsdl-1.2
 
 src_compile() {
 	econf --disable-dependency-tracking \
-		--disable-alsatest \
-		--disable-sdltest \
 		$(use_with alsa) \
 		$(use_with jack)
 	emake || die "emake failed."
