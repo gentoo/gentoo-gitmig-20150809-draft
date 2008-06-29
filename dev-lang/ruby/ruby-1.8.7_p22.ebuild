@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7.ebuild,v 1.1 2008/06/10 13:23:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p22.ebuild,v 1.1 2008/06/29 19:39:14 caleb Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,9 +13,12 @@ inherit autotools eutils flag-o-matic multilib versionator
 SLOT=$(get_version_component_range 1-2)
 MY_SUFFIX=$(delete_version_separator 1 ${SLOT})
 
+MY_P="${PN}-$(replace_version_separator 3 '-')"
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${SLOT}/${P}.tar.bz2"
+SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2"
 #	cjk? ( http://www.geocities.jp/kosako3/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
