@@ -1,0 +1,24 @@
+--- misc/filelight.desktop.orig	2008-06-29 16:30:55.000000000 +0200
++++ misc/filelight.desktop	2008-06-29 16:31:09.000000000 +0200
+@@ -1,12 +1,10 @@
+-# KDE Config File
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Filelight
+ Name[xx]=xxFilelightxx
+-Generic Name=Disk Usage Statistics
++GenericName=Disk Usage Statistics
+ Type=Application
+ Exec=filelight %f
+-Icon=filelight.png
++Icon=filelight
+ Comment=View disk usage information
+ Comment[bg]=Информация за използване на диска
+ Comment[cs]=Zobrazení využití disku
+@@ -35,5 +33,5 @@
+ Comment[xx]=xxView disk usage informationxx
+ Comment[zh_CN]=查看磁盘使用信息
+ Terminal=false
+-MimeType=inode/directory
++MimeType=inode/directory;
+ Categories=Qt;KDE;Utility;
