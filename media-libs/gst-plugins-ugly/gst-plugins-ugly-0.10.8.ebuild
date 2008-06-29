@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.10.7.ebuild,v 1.1 2008/02/21 10:32:15 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.10.8.ebuild,v 1.1 2008/06/29 18:38:50 drac Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-ugly gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -11,21 +11,26 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE=""
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.17
 	 >=media-libs/gstreamer-0.10.17
-	 >=dev-libs/liboil-0.3
-	 >=dev-libs/glib-2.6"
+	 >=dev-libs/liboil-0.3.8
+	 >=dev-libs/glib-2.12"
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
-	>=dev-util/pkgconfig-0.9
+	dev-util/pkgconfig
 	!<media-libs/gst-plugins-bad-0.10.6"
 
 GST_PLUGINS_BUILD=""
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	elibtoolize
+}
 
+src_compile() {
 	# gst doesnt handle optimisations well
 	strip-flags
 	replace-flags "-O3" "-O2"
