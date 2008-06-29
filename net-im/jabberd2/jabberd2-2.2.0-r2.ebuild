@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r1.ebuild,v 1.2 2008/06/28 22:23:10 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r2.ebuild,v 1.1 2008/06/29 11:08:48 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -11,49 +11,25 @@ SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="berkdb debug memdebug mysql ldap pam pipe postgres sqlite ssl zlib"
+IUSE="berkdb debug memdebug mysql ldap pam postgres sqlite ssl zlib"
 
 DEPEND="dev-libs/expat
-	zlib? ( sys-libs/zlib )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
 	net-libs/udns
 	>=net-dns/libidn-0.3
-	ldap? ( net-nds/openldap )
+	>=virtual/gsasl-0.2.26
 	berkdb? ( >=sys-libs/db-4.1.24 )
-	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
+	ldap? ( net-nds/openldap )
+	pam? ( virtual/pam )
 	postgres? ( virtual/postgresql-server )
+	ssl? ( >=dev-libs/openssl-0.9.6b )
 	sqlite? ( >=dev-db/sqlite-3 )
-	>=virtual/gsasl-0.2.26"
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	>=net-im/jabber-base-0.01
 	!net-im/jabberd"
 
 S="${WORKDIR}/jabberd-${PV}"
-
-pkg_setup() {
-	if ! use berkdb && ! use postgres && ! use mysql && ! use sqlite; then
-		eerror 'You have no storage backend selected.'
-		eerror 'Please set one of the following USE flags:'
-		eerror '    berkdb'
-		eerror '    postgres'
-		eerror '    mysql'
-		eerror '    sqlite'
-		die 'Please enable one of the storage backends mentioned.'
-	fi
-
-	if ! use berkdb && ! use mysql && ! use postgres \
-	&& ! use pam && ! use ldap; then
-		eerror 'You have no Authentication mechanism selected.'
-		eerror 'Please set one of the following USE flags for authentication:'
-		eerror '    berkdb'
-		eerror '    mysql'
-		eerror '    postgres'
-		eerror '    pam'
-		eerror '    ldap'
-		die 'Please enable one of the authentication mechanisms mentioned.'
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -82,6 +58,7 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/jabber \
+		--enable-fs --enable-pipe --enable-anon \
 		${myconf} \
 		$(use_enable berkdb db) \
 		$(use_enable ldap) \
@@ -99,8 +76,8 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	fowners jabber:jabber /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}
-	fperms 750 /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}
+	fowners jabber:jabber /usr/bin/{jabberd,router,sm,c2s,s2s}
+	fperms 750 /usr/bin/{jabberd,router,sm,c2s,s2s}
 
 	newinitd "${FILESDIR}/${P}.init" jabberd || die "newinitd failed"
 	newpamd "${FILESDIR}/${P}.pamd" jabberd || die "newpamd failed"

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.16 2008/06/28 22:23:10 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.17 2008/06/29 11:08:48 gentoofan23 Exp $
+
+*jabberd2-2.2.0-r2 (29 Jun 2008)
+
+  29 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  -jabberd2-2.2.0-r1.ebuild, +jabberd2-2.2.0-r2.ebuild:
+  Revision bump to fix bug #229935. Also remove references to the resolver
+  component. Reorder dependencies to be alphabetically ordered by USE flags,
+  no content of dependencies changed. Force building of anon, fs, and pipe, we
+  have to have something usable even if all USE flags are off.
 
   28 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   jabberd2-2.2.0-r1.ebuild:
