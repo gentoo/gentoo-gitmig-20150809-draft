@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8776 2008/06/29 03:38:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8777 2008/06/29 03:53:39 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
+# Removal in ~30 days. Only keep the latest version in the tree. 
+# Fixes bug #224911. Please comment on bug if you need an older version.
+<app-pda/synce-rra-0.9.1-r1
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Doesn't compile, removal in ~30 days. Later version in tree works.

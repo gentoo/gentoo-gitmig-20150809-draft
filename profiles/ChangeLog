@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1624 2008/06/29 03:38:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1625 2008/06/29 03:53:39 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  29 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask <app-pda/synce-rra-0.9.1-r1 for removal in 30 days. bug #224911
 
   29 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask app-benchmarks/acovea-4.0.0 for removal in 30 days, bug #226517
