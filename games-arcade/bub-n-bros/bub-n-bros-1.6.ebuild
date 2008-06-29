@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.ebuild,v 1.4 2008/06/22 15:02:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.ebuild,v 1.5 2008/06/29 11:03:16 klausman Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-lang/python"
