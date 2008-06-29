@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.08.ebuild,v 1.7 2008/06/25 19:04:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.08.ebuild,v 1.8 2008/06/29 10:52:13 klausman Exp $
 
 inherit eutils gnome2-utils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}-1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
