@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.1 2008/06/23 00:27:07 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.2 2008/06/29 14:41:01 loki_val Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic autotools
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug demos examples ffmpeg gtk ieee1394 jpeg jpeg2k openexr png python tiff xine v4l zlib"
 
-COMMON_DEPEND="ffmpeg? ( media-video/ffmpeg )
+COMMON_DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	gtk? ( x11-libs/gtk+:2 )
 	ieee1394? ( >=sys-libs/libraw1394-1.2.0 media-libs/libdc1394:1 )
 	jpeg? ( media-libs/jpeg )
@@ -44,6 +44,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-havepngexrdefs.patch
 	epatch "${FILESDIR}"/${P}-addoptionalsamples.patch
 	epatch "${FILESDIR}"/${P}-cvcapffmpegundefinedsymbols.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg-0.4.9_p20080326.patch
 
 	eautoreconf || die "eautoreconf failed"
 }
