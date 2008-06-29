@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.36 2008/06/22 22:10:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.37 2008/06/29 17:46:18 eva Exp $
+
+  29 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> -beast-0.7.1.ebuild:
+  clean up old broken revision, fix bug #226761.
 
   22 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/beast-0.7.1-potfiles.patch, beast-0.7.1-r1.ebuild:
