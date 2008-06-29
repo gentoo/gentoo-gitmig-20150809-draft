@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.190 2008/06/07 19:12:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.191 2008/06/29 04:31:58 dirtyepic Exp $
+
+*wxGTK-2.6.4.0-r4 (29 Jun 2008)
+
+  29 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxGTK-2.6.4-mmedia.patch, +wxGTK-2.6.4.0-r4.ebuild:
+  Stop installing the mmedia library which has an automagic dependency on
+  esd. Bug #174874 by Volker Hemmann.
 
 *wxGTK-2.8.7.1-r2 (07 Jun 2008)
 
