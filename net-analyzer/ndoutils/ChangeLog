@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ndoutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.5 2008/06/08 18:37:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.6 2008/06/29 10:07:24 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> ndoutils-1.4_beta7.ebuild,
+  ndoutils-1.4_beta7-r1.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *ndoutils-1.4_beta7-r1 (08 Jun 2008)
 

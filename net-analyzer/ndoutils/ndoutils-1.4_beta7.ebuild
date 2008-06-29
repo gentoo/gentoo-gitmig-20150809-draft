@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta7.ebuild,v 1.2 2008/06/08 18:37:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta7.ebuild,v 1.3 2008/06/29 10:07:24 tove Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install() {
 	cp -R "${S}"/db "${D}"/usr/nagios/share
 
 	chown -R root:nagios "${D}"/usr/nagios || die "Failed chown of "${D}"/usr/nagios"
-	chmod 750 "${D}"/usr/nagios/bin/{file2sock,log2ndo,ndo2db-2x,ndomod-2x.o,sockdebug} || "Failed chmod"
+	chmod 750 "${D}"/usr/nagios/bin/{file2sock,log2ndo,ndo2db-2x,ndomod-2x.o,sockdebug} || die "Failed chmod"
 
 	dodoc README REQUIREMENTS TODO UPGRADING Changelog "docs/NDOUTILS DB Model.pdf" "docs/NDOUtils Documentation.pdf"
 

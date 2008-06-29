@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.12.ebuild,v 1.5 2008/05/22 18:32:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.12.ebuild,v 1.6 2008/06/29 10:10:06 tove Exp $
 
 EAPI="1"
 
@@ -93,7 +93,7 @@ src_compile() {
 		make CC=$(tc-getCC) DESTDIR="${D}" cgis || die
 	fi
 
-	emake -C contrib all || "contrib make filed"
+	emake -C contrib all || die "contrib make filed"
 
 }
 

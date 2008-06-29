@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.10 2007/11/02 18:39:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.11 2008/06/29 10:11:21 tove Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	doman man/firewalk.8
 	dodoc README TODO BUGS
 }
