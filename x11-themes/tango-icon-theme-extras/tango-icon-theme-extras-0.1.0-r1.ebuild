@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.10 2007/06/06 15:55:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.11 2008/06/29 07:41:08 tove Exp $
 
 inherit eutils gnome2-utils
 
 DESCRIPTION="This is an extension to the Tango Icon Theme. It includes Tango icons for iPod Digital Audio Player (DAP) devices and the Dell Pocket DJ DAP."
-HOMEPAGE="http://tango-project.org/"
-SRC_URI="http://tango-project.org/releases/${P}.tar.gz"
+HOMEPAGE="http://tango.freedesktop.org"
+SRC_URI="http://tango.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 }
 

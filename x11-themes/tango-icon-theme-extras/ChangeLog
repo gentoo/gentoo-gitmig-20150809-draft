@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.19 2007/06/06 15:55:30 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.20 2008/06/29 07:41:08 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  Fix HOMEPAGE. Add missing die
 
   06 Jun 2007; Markus Rothe <corsair@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild:
