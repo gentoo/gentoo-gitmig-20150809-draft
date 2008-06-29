@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.3 2007/06/30 09:53:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.4 2008/06/29 07:48:22 tove Exp $
 
 GCONF_DEBUG="no"
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed."
 
 	# Almost like bug #58322 but directory name changed.
 	rm -rf "${D}"/usr/share/doc/${PN}
