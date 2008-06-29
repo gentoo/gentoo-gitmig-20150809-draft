@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.9 2007/01/04 18:25:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.10 2008/06/29 12:20:55 loki_val Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -15,18 +15,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="debug"
-DEPEND="sys-fs/lufis
-		sys-devel/automake
-		sys-devel/autoconf"
+RDEPEND="sys-fs/lufis"
+DEPEND="${RDEPEND}
+	sys-devel/automake
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-fPIC.patch
-	epatch ${FILESDIR}/lufs-automount-port.diff
-	epatch ${FILESDIR}/${P}-enable-gnome-2.patch
-	epatch ${FILESDIR}/lufs-no-kernel.patch
+	epatch "${FILESDIR}"/${P}-fPIC.patch
+	epatch "${FILESDIR}"/lufs-automount-port.diff
+	epatch "${FILESDIR}"/${P}-enable-gnome-2.patch
+	epatch "${FILESDIR}"/lufs-no-kernel.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	filesystems="ftpfs localfs sshfs"
 	useq amd64 && filesystems="ftpfs localfs"
@@ -53,7 +55,7 @@ src_install() {
 	for i in ${filesystems}
 	do
 		cd ${i}
-		make DESTDIR=${D} install || die "make install failed"
+		make DESTDIR="${D}" install || die "make install failed"
 		cd ..
 	done
 }
