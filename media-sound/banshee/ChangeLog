@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.63 2008/06/23 23:14:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.64 2008/06/29 10:13:54 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> banshee-0.12.1.ebuild,
+  banshee-0.13.1.ebuild:
+  Add missing die: || "..." -> || die "..."
 
   23 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   banshee-1.0.0-r1.ebuild:
