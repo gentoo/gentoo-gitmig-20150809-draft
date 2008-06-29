@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.7.ebuild,v 1.9 2007/07/22 04:26:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.7.ebuild,v 1.10 2008/06/29 13:46:30 drac Exp $
 
 inherit eutils
 
 IUSE="high-ints"
-DESCRIPTION="WMaker DockUp to monitor: CPU, Memory, Swap usage, system uptime, hardware interrupts, paging and swap activity."
+DESCRIPTION="a dockapp to monitor: CPU, Memory, Uptime, IRQs, Paging and Swap activity."
 SRC_URI="http://www.gnugeneration.com/software/wmsysmon/src/${P}.tar.gz
 	mirror://gentoo/${P}-s4t4n.patch.bz2"
 HOMEPAGE="http://www.gnugeneration.com/software/wmsysmon/"
@@ -22,15 +22,15 @@ DEPEND="${RDEPEND}
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# bug 48851
-	epatch ${WORKDIR}/${P}-s4t4n.patch
+	epatch "${WORKDIR}"/${P}-s4t4n.patch
 
 	# Monitor all the 24 interrupts on alpha and x86 SMP machines
 	if use alpha || use high-ints; then
 		cd src
-		epatch ${FILESDIR}/${PN}-high-ints.patch
+		epatch "${FILESDIR}"/${PN}-high-ints.patch
 	fi
 }
 
