@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lavaps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.20 2008/06/29 12:44:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.21 2008/06/29 13:19:23 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  files/lavaps-2.7-build-fixes.patch,
+  files/lavaps-2.7-this-makes-it-compile.patch, lavaps-2.7-r2.ebuild:
+  Build-only fixes to avoid makefile patching, acinclude patching, and
+  sundry other ways people have abused this package over the years. Fixes
+  bug #226845.
 
   29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/lavaps-2.7-gcc43.patch, lavaps-2.7-r2.ebuild:

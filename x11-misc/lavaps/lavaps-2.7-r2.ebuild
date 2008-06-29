@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.2 2008/06/29 12:44:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.3 2008/06/29 13:19:23 loki_val Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Lava Lamp graphical representation of running processes."
 HOMEPAGE="http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/"
@@ -16,7 +16,8 @@ IUSE="gtk"
 DEPEND=">=dev-lang/tk-8.3.3
 	gtk? ( >=x11-libs/gtk+-2.2
 		>=gnome-base/libgnomecanvas-2.2
-		>=gnome-base/libgnomeui-2.2 )
+		>=gnome-base/libgnomeui-2.2
+		dev-util/intltool )
 	!gtk? ( dev-lang/tcl )"
 RDEPEND="${DEPEND}"
 
@@ -26,6 +27,14 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-this-makes-it-compile.patch"
 	epatch "${FILESDIR}/${P}-build-fixes.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	#We need to get rid of the old macros.
+	rm acinclude.m4
+	#Update to newer namespace.
+	sed -i \
+		-e "s:AC_PROG_INTLTOOL:IT_PROG_INTLTOOL:" \
+		-e "s:AM_GLIB_GNU_GETTEXT:GLIB_GNU_GETTEXT:" \
+		configure.gtk.ac
+	eautoreconf
 }
 
 src_compile() {
