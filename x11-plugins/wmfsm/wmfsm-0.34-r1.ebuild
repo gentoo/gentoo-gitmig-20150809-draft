@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r1.ebuild,v 1.6 2007/07/22 05:08:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r1.ebuild,v 1.7 2008/06/29 14:07:56 drac Exp $
 
 inherit eutils
 
@@ -22,25 +22,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_unpack() {
-
 	unpack ${A}
-	cd ${S}/wmfsm
-	#einfo "Applying patch to hide virtual filesystems..."
-	epatch ${FILESDIR}/${P}.linux-fs.patch
-	#patch -p0 < ${FILES}/${P}.linux-fs.diff
-
-}
-
-src_compile() {
-
-	econf || die "configure failed"
-	emake || die "parallel make failed"
-
+	cd "${S}"/wmfsm
+	epatch "${FILESDIR}"/${P}.linux-fs.patch
 }
 
 src_install() {
-
 	einstall || die "make install failed"
 	dodoc AUTHORS ChangeLog
-
 }
