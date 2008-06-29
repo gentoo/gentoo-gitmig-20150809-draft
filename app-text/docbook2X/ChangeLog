@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.27 2008/06/26 16:25:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.28 2008/06/29 10:17:23 armin76 Exp $
+
+  29 Jun 2008; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r2.ebuild:
+  sparc stable wrt #222041
 
   26 Jun 2008; nixnut <nixnut@gentoo.org> docbook2X-0.8.8-r2.ebuild:
   Stable on ppc wrt bug 222041
