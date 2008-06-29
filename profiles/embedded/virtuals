@@ -29,6 +29,5 @@ virtual/tetex			app-text/tetex
 virtual/tftp			sys-apps/busybox
 virtual/wine			app-emulation/wine
 virtual/xemacs			app-editors/xemacs
-virtual/motif			x11-libs/openmotif
 virtual/utempter 		sys-apps/utempter
 virtual/eject			sys-apps/busybox
