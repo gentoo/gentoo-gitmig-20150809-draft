@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.31 2008/05/27 01:06:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.32 2008/06/29 16:44:41 corsair Exp $
+
+  29 Jun 2008; Markus Rothe <corsair@gentoo.org>
+  gtk-engines-qt-0.8-r1.ebuild:
+  Stable on ppc64; bug #224879
 
   27 May 2008; Mark Loeser <halcy0n@gentoo.org> gtk-engines-qt-0.8.ebuild:
   Remove RDEPEND on cmake; bug #220453
