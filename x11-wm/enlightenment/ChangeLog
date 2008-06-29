@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.95 2008/06/29 16:51:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.96 2008/06/29 18:46:29 ken69267 Exp $
+
+  29 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
+  enlightenment-0.16.8.13.ebuild:
+  amd64 stable, bug #229907
 
   29 Jun 2008; Markus Rothe <corsair@gentoo.org>
   enlightenment-0.16.8.13.ebuild:
