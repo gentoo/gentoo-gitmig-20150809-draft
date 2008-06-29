@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.25.20080417.ebuild,v 1.4 2008/06/28 17:59:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.25.20080417.ebuild,v 1.5 2008/06/29 06:14:42 zmedico Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ IUSE="atm berkdb minimal"
 RDEPEND="!minimal? ( berkdb? ( sys-libs/db ) )
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
-	elibc_glibc? ( >=sys-libs/glibc-2.7* )
+	elibc_glibc? ( >=sys-libs/glibc-2.7 )
 	>=virtual/os-headers-2.6.25"
 
 S=${WORKDIR}/${MY_P}
