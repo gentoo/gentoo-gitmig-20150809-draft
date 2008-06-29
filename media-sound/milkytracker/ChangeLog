@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/milkytracker
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/ChangeLog,v 1.1 2008/06/29 11:25:35 drac Exp $
+
+*milkytracker-0.90.80 (29 Jun 2008)
+
+  29 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  +milkytracker-0.90.80.ebuild:
+  Initial commit for bug 217702, thanks to Christopher O'Neill.
+
