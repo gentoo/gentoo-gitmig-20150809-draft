@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.4.ebuild,v 1.1 2008/05/15 22:46:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.4.ebuild,v 1.2 2008/06/29 14:02:24 eva Exp $
 
-inherit eutils gnome2 flag-o-matic
+inherit autotools eutils gnome2 flag-o-matic
 
 DESCRIPTION="A library of document-centric objects and utilities"
 HOMEPAGE="http://freshmeat.net/projects/goffice/"
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.14
 	gnome? (
 		>=gnome-base/gconf-2
 		>=gnome-base/libgnomeui-2 )"
-# libpcre raised to unicode USE flag
+# libpcre raised for unicode USE flag
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
@@ -69,6 +69,8 @@ src_unpack() {
 	mv "${S}"/docs/reference/goffice{,-0.6}-overrides.txt
 	mv "${S}"/docs/reference/goffice{,-0.6}-sections.txt
 	mv "${S}"/docs/reference/goffice{,-0.6}.types
+
+	eautomake
 }
 
 src_compile() {
