@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.9 2008/05/11 18:39:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.10 2008/06/29 08:21:03 tove Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -69,9 +69,9 @@ src_unpack() {
 
 	# greate proper activate sourcefile
 	cp "./tools/actvte.code" "./tools/actvte.f" || \
-		die || "Failed to create actvte.f"
+		die "Failed to create actvte.f"
 	sed -e "s/^\*UNX/    /" -i "./tools/actvte.f" || \
-		die || "Failed to perform UNX substitutions in actvte.f"
+		die "Failed to perform UNX substitutions in actvte.f"
 
 	# fix GAMESS' compall script to use proper CC
 	sed -e "s|\$CCOMP -c \$extraflags source/zunix.c|$(tc-getCC) -c \$extraflags source/zunix.c|" \
