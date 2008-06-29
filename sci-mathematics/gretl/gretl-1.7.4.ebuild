@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.4.ebuild,v 1.1 2008/05/20 13:46:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.4.ebuild,v 1.2 2008/06/29 08:04:44 tove Exp $
 
 USE_EINSTALL=true
 
@@ -85,7 +85,7 @@ src_install() {
 	if use gnome; then
 		gnome2_src_install gnome_prefix="${D}"/usr
 	else
-		einstall || "die einstall failed"
+		einstall || die "einstall failed"
 	fi
 	if use gtk && ! use gnome; then
 		doicon gnome/gretl.png

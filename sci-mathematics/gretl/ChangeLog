@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.9 2008/05/20 13:46:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.10 2008/06/29 08:04:44 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> gretl-1.7.1.ebuild,
+  gretl-1.7.2.ebuild, gretl-1.7.4.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *gretl-1.7.4 (20 May 2008)
 
