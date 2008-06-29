@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lavaps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.19 2008/03/08 19:54:29 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.20 2008/06/29 12:44:25 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/lavaps-2.7-gcc43.patch, lavaps-2.7-r2.ebuild:
+  Fix for gcc-4.3, bug #225377. Thanks Marek Miller <mlm@shells.pl> for
+  initial patch
 
 *lavaps-2.7-r2 (08 Mar 2008)
 

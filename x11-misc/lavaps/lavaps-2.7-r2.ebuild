@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.1 2008/03/08 19:54:29 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.2 2008/06/29 12:44:25 loki_val Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-this-makes-it-compile.patch"
 	epatch "${FILESDIR}/${P}-build-fixes.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
