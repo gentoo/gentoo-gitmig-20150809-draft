@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.2 2008/06/09 16:19:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.3 2008/06/29 10:16:53 tove Exp $
 
 EAPI=1
 
@@ -54,14 +54,14 @@ src_compile() {
 	if use perl
 	then
 		cd "${S}/perl_ext"
-		perl-module_src_compile || "perl make failed"
+		perl-module_src_compile || die "perl make failed"
 	fi
 
 	if use python
 	then
 		cd "${S}/py_ext"
 		python_version
-		distutils_src_compile || "python make failed"
+		distutils_src_compile || die "python make failed"
 	fi
 	if use php
 	then

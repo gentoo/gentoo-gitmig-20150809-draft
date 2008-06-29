@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316.ebuild,v 1.7 2008/04/29 16:35:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316.ebuild,v 1.8 2008/06/29 10:19:09 tove Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -68,7 +68,7 @@ src_compile() {
 	cd "${S}"/freetype1-contrib/ttf2pk
 	einfo "Building ttf2pk..."
 	econf ${kpathseaconf} || die "econf ttf2pk failed"
-	emake || "emake ttf2pk failed"
+	emake || die "emake ttf2pk failed"
 	for x in ttf2bdf ttf2pfb ttfbanner; do
 		cd "${S}"/freetype1-contrib/${x}
 		einfo "Building ${x}..."
