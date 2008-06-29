@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.26 2008/06/29 18:46:01 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.27 2008/06/29 22:52:01 coldwind Exp $
+
+*linuxdcpp-1.0.1-r2 (29 Jun 2008)
+
+  29 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
+  files/linuxdcpp-1.0.1-fix-remote-vulnerability.patch,
+  -linuxdcpp-1.0.1-r1.ebuild, +linuxdcpp-1.0.1-r2.ebuild:
+  Security fix, second round.
 
 *linuxdcpp-1.0.1-r1 (29 Jun 2008)
 
