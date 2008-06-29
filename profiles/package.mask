@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8778 2008/06/29 06:37:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8779 2008/06/29 19:20:33 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <drac@gentoo.org> (29 Jun 2008)
+# Masked for removal since it seems to have disappeared
+# from upstream -bad, -good, -ugly or -base packages.
+media-plugins/gst-plugins-opengl
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Removal in ~30 days. Only keep the latest version in the tree. 
