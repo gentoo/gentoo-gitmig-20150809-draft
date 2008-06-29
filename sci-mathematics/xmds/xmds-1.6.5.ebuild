@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.2 2008/03/15 15:46:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.3 2008/06/29 08:59:38 spock Exp $
+
+inherit eutils
 
 doc_ver=20080226
 
@@ -19,6 +21,9 @@ DEPEND="sci-libs/fftw
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-1.6.5-gcc43.patch
+	touch "${S}/source/version.h"
 
 	# Fix broken installation of sample scripts.
 	sed -i -e 's/install-data-am: install-dist_doc_examplesDATA install-man/install-data-am: install-man/' Makefile.in
