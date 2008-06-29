@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvbsnoop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/ChangeLog,v 1.15 2008/06/27 19:17:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/ChangeLog,v 1.16 2008/06/29 10:12:51 zzam Exp $
+
+  29 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> dvbsnoop-1.4.50.ebuild:
+  Marked stable on x86.
 
   27 Jun 2008; Doug Goldstein <cardoe@gentoo.org> dvbsnoop-1.4.50.ebuild:
   stabilize since I'm using this on a stable box for a while
