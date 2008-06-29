@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.14.ebuild,v 1.7 2008/04/19 15:58:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.14.ebuild,v 1.8 2008/06/29 20:50:57 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -59,6 +59,12 @@ pkg_setup() {
 	# Please keep this in future versions
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
 	has_multilib_profile && ABI="x86"
+
+	if ! built_with_use --missing true x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
 }
 
 linguas() {
