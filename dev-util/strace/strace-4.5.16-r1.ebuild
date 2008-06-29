@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.11 2008/04/09 17:08:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.12 2008/06/29 14:28:35 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sparc-updates.patch #162789
 	epatch "${FILESDIR}"/${P}-sparc-times.patch #204457
 	epatch "${FILESDIR}"/${P}-getdents-infinite-loop.patch
+	epatch "${FILESDIR}"/${P}-sparc-{fix,socketipc}.patch #fedora, 229229
 
 	eautoreconf
 }
