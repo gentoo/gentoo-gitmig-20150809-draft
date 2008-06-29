@@ -1,10 +1,10 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.27 2008/06/29 10:39:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.28 2008/06/29 10:41:30 loki_val Exp $
 
   29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/iscan-2.11.0-gcc43.patch, iscan-2.11.0.ebuild:
-  Fix for gcc-4.3. Thanks to sbriesen.
+  Fix for gcc-4.3. Thanks to unK <electricityispower@gmail.com>.
 
 *iscan-2.11.0 (14 May 2008)
 
