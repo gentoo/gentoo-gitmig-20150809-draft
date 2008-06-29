@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.2.0.ebuild,v 1.2 2008/06/29 06:56:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.2.0.ebuild,v 1.3 2008/06/29 21:06:53 graaff Exp $
 
 inherit ruby
 
@@ -62,7 +62,7 @@ src_install() {
 	doenvd "${FILESDIR}/10rubygems" || die "doenvd 10rubygems failed"
 
 	if use server; then
-		newinitd "${FILESDIR}/init.d-gem_server" gem_server || die "newinitd failed"
+		newinitd "${FILESDIR}/init.d-gem_server2" gem_server || die "newinitd failed"
 		newconfd "${FILESDIR}/conf.d-gem_server" gem_server || die "newconfd failed"
 	fi
 }

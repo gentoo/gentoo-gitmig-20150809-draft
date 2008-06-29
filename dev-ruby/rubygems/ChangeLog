@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.94 2008/06/29 06:56:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.95 2008/06/29 21:06:53 graaff Exp $
+
+  29 Jun 2008; Hans de Graaff <graaff@gentoo.org> +files/init.d-gem_server2,
+  rubygems-1.1.1.ebuild, rubygems-1.2.0.ebuild:
+  The syntax to start the gem server has changed slightly, as reflected in the
+  updated init.d file, fixing a problem reported in #229875.
 
   29 Jun 2008; Hans de Graaff <graaff@gentoo.org> rubygems-0.9.4-r2.ebuild,
   rubygems-1.1.1.ebuild, rubygems-1.2.0.ebuild:
