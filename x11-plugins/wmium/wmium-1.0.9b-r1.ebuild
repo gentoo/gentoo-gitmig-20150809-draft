@@ -1,37 +1,27 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.5 2008/06/28 07:04:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.6 2008/06/29 13:41:28 drac Exp $
 
-IUSE="gtk"
-
-DESCRIPTION="WindowMaker DockApp/Grellm2 plugin that fetches the DSL usage information for Australian ISP Internode"
+DESCRIPTION="a dockapp and gkrellm2 plugin that fetches the DSL usage information for Australian ISP Internode"
 HOMEPAGE="http://www.earthmagic.org/?software"
 SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-DEPEND="virtual/libc
-	dev-libs/openssl
-	gtk? (
-		>=x11-libs/gtk+-2
-		=app-admin/gkrellm-2*
-		dev-util/pkgconfig
-	)
-	>=x11-libs/libX11-1.0.0
-	>=x11-libs/libXext-1.0.0
-	>=x11-libs/libXpm-3.5.4.2
-	>=x11-proto/xextproto-7.0.2"
+IUSE="gtk"
 
-RDEPEND="virtual/libc
-	dev-libs/openssl
+RDEPEND="dev-libs/openssl
 	gtk? (
 		>=x11-libs/gtk+-2
 		=app-admin/gkrellm-2*
 	)
 	!gtk? ( x11-wm/windowmaker )
-	>=x11-libs/libX11-1.0.0
-	>=x11-libs/libXext-1.0.0
-	>=x11-libs/libXpm-3.5.4.2
+	>=x11-libs/libX11-1
+	>=x11-libs/libXext-1
+	>=x11-libs/libXpm-3.5.4.2"
+DEPEND="${RDEPEND}
+	gtk? ( dev-util/pkgconfig )
 	>=x11-proto/xextproto-7.0.2"
 
 src_compile() {
@@ -49,8 +39,7 @@ src_install() {
 
 	dobin src/wmium
 
-	dodoc BUGS INSTALL-GK2  README dot.wmiumrc.sample \
-		CHANGES  INSTALL README-GK2
+	dodoc BUGS README dot.wmiumrc.sample CHANGES README-GK2
 
 	doman src/wmium.1
 
