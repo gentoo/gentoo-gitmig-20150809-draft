@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.93 2008/06/28 11:37:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.94 2008/06/29 06:56:40 graaff Exp $
+
+  29 Jun 2008; Hans de Graaff <graaff@gentoo.org> rubygems-0.9.4-r2.ebuild,
+  rubygems-1.1.1.ebuild, rubygems-1.2.0.ebuild:
+  The distribution no longer contains dot files, so remove the (broken) find.
+  Thanks to Henning Schild in #229897 for finding this.
 
   28 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   rubygems-1.1.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.1.1.ebuild,v 1.2 2008/06/28 11:37:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.1.1.ebuild,v 1.3 2008/06/29 06:56:40 graaff Exp $
 
 inherit ruby
 
@@ -28,10 +28,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-setup.patch"
-
-	# Delete mis-packaged . files
-	find -name '.*' -type f -print0|xargs -0 rm
-
 }
 
 src_compile() {
