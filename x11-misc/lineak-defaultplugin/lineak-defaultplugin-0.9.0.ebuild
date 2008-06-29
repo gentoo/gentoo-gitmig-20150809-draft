@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.9.0.ebuild,v 1.5 2008/04/22 17:04:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.9.0.ebuild,v 1.6 2008/06/29 11:26:12 loki_val Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
-DEPEND="=x11-misc/lineakd-${PV}*"
+DEPEND="=x11-misc/lineakd-${PV}*
+	x11-proto/inputproto"
 
 S=${WORKDIR}/${MY_P}
 
