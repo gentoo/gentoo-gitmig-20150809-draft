@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_beta5.ebuild,v 1.3 2008/06/29 16:51:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_beta5.ebuild,v 1.4 2008/06/29 16:55:00 loki_val Exp $
 
 EAPI=1
 
@@ -44,6 +44,7 @@ src_unpack() {
 	sed -i \
 		-e 's/libming.a/libming.so/' \
 		perl_ext/Makefile.PL
+	rm macros/libtool.m4
 	AT_M4DIR="macros" eautoreconf
 }
 
