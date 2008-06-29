@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.17 2008/06/19 16:29:38 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.18 2008/06/29 07:51:55 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> icecream-0.9.0-r1.ebuild,
+  icecream-0.9.1.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *icecream-0.9.1 (19 Jun 2008)
 
