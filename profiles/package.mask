@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8775 2008/06/29 00:59:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8776 2008/06/29 03:38:42 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
+# Doesn't compile, removal in ~30 days. Later version in tree works.
+# See bug #226517.
+=app-benchmarks/acovea-4.0.0
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Upstram doesn't support old version and we have the latest version in the 
