@@ -1,23 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/apetag-1.10.ebuild,v 1.1 2008/06/15 11:09:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/apetag-1.10.ebuild,v 1.2 2008/06/29 11:14:41 drac Exp $
 
 inherit eutils toolchain-funcs base
 
 DESCRIPTION="Command-line ape 2.0 tagger"
 HOMEPAGE="http://muth.org/Robert/Apetag/"
 SRC_URI="http://muth.org/Robert/Apetag/${PN}.${PV}.tar.gz"
+
 LICENSE="GPL-3"
 SLOT="0"
-
+KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-KEYWORDS="-amd64 ~x86"
 
 DEPEND=""
 RDEPEND="dev-lang/python"
 
-S="${WORKDIR}/Apetag"
+S=${WORKDIR}/Apetag
 
 PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
