@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/bashmark-0.6.2.ebuild,v 1.4 2008/01/05 16:01:49 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/bashmark-0.6.2.ebuild,v 1.5 2008/06/29 10:00:27 loki_val Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/bashmark-0.6.2-as-needed.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
