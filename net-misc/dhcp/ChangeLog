@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.148 2008/06/28 16:02:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.149 2008/06/29 10:11:32 bluebird Exp $
+
+  29 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> dhcp-3.1.1.ebuild:
+  Stable on sparc, bug #227135
 
   28 Jun 2008; Jeroen Roovers <jer@gentoo.org> dhcp-3.1.1.ebuild:
   Stable for HPPA (bug #227135).
