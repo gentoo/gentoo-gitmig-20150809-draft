@@ -1,6 +1,12 @@
 # ChangeLog for net-news/straw
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.9 2007/04/08 15:10:44 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.10 2008/06/29 18:46:45 eva Exp $
+
+*straw-0.27 (29 Jun 2008)
+
+  29 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +straw-0.27.ebuild:
+  adding maintainer-needed in metadata.xml
 
   08 Apr 2007; Tiziano Müller <dev-zero@gentoo.org> straw-0.26.ebuild:
   Fixed bug #173761 (thanks to Anton Kuzmin) by adding a sed-line to replace
