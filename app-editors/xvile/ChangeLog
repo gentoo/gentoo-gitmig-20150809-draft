@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xvile
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.19 2007/07/22 09:10:28 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.20 2008/06/29 19:34:26 hawking Exp $
+
+*xvile-9.6 (29 Jun 2008)
+
+  29 Jun 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  +xvile-9.6.ebuild:
+  Version bump. Add vim to metadata.xml.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> xvile-9.4d-r1.ebuild:
   Remove unneeded comment.
