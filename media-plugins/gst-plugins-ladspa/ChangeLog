@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ladspa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.4 2008/02/21 12:21:05 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.5 2008/06/29 18:28:07 drac Exp $
+
+*gst-plugins-ladspa-0.10.7 (29 Jun 2008)
+
+  29 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-ladspa-0.10.6.ebuild, +gst-plugins-ladspa-0.10.7.ebuild:
+  Version bump.
 
 *gst-plugins-ladspa-0.10.6 (21 Feb 2008)
 
