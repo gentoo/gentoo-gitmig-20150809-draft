@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.8 2008/06/07 14:39:56 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.9 2008/06/29 15:56:50 keytoaster Exp $
 
 EAPI=1
 inherit kde eutils
@@ -29,7 +29,9 @@ DEPEND="calendar? ( || ( kde-base/libkcal:3.5 kde-base/kdepim:3.5 ) )
 		ipod? ( >=media-libs/libgpod-0.4.2 )"
 RDEPEND="${DEPEND}
 		>=media-gfx/imagemagick-6.2.4
-		>=media-video/mjpegtools-1.6.0"
+		>=media-video/mjpegtools-1.6.0
+		media-sound/vorbis-tools
+		virtual/mpg123"
 
 need-kde 3.5
 

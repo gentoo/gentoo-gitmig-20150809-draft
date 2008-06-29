@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.37 2008/06/07 14:39:56 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.38 2008/06/29 15:56:50 keytoaster Exp $
+
+  29 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  kipi-plugins-0.1.4-r1.ebuild, kipi-plugins-0.1.5.ebuild:
+  Depend on virtual/mpg123 and media-sound/vorbis-tools, bug #222903.
 
   07 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   kipi-plugins-0.1.4-r1.ebuild, kipi-plugins-0.1.5.ebuild:

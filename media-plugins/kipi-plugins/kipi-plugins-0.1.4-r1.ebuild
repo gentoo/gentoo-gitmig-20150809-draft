@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.9 2008/06/07 14:39:56 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.10 2008/06/29 15:56:50 keytoaster Exp $
 
 inherit kde eutils
 
@@ -27,7 +27,9 @@ DEPEND=">=media-libs/libkipi-0.1.5
 		>=media-libs/tiff-3.5
 		>=dev-libs/libxslt-1.1
 		ipod? ( >=media-libs/libgpod-0.4.2 )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		media-sound/vorbis-tools
+		virtual/mpg123"
 
 need-kde 3.5
 
