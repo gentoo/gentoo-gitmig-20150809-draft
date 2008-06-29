@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.9 2007/07/22 04:44:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.10 2008/06/29 14:23:31 drac Exp $
 
 inherit eutils
 
@@ -23,19 +23,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha amd64 ppc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
-	# Misc patchset, bug #72818
-	epatch ${WORKDIR}/${P}-misc.patch
-
-	# Issue already taken care of in prev patchset
-	# epatch ${FILESDIR}/${P}-nonx86.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-misc.patch # bug 72818
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed"
-
-	emake CDEBUGFLAGS="${CFLAGS}" || die "parallel make failed"
+	xmkmf || die "xmkmf failed."
+	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed."
 }
 
 src_install() {
