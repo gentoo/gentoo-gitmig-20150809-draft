@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-173.08.ebuild,v 1.1 2008/05/26 15:51:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-173.08.ebuild,v 1.2 2008/06/29 15:25:51 peper Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -25,7 +25,8 @@ DEPEND=">=x11-libs/gtk+-2
 	x11-base/xorg-server
 	x11-libs/libXt
 	x11-libs/libXv
-	x11-proto/xf86driproto"
+	x11-proto/xf86driproto
+	x11-proto/xf86vidmodeproto"
 
 RDEPEND=">=x11-libs/gtk+-2
 	x11-base/xorg-server

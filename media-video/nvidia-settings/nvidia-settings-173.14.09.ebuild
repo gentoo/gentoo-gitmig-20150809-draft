@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20070621.ebuild,v 1.4 2008/06/29 15:25:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-173.14.09.ebuild,v 1.1 2008/06/29 15:25:51 peper Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -8,11 +8,11 @@ MY_P="${PN}-1.0"
 
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.gz"
+SRC_URI="ftp://download.nvidia.com/XFree86/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 # xorg-server is used in the depends as nvidia-settings builds against some
@@ -26,9 +26,7 @@ DEPEND=">=x11-libs/gtk+-2
 	x11-libs/libXt
 	x11-libs/libXv
 	x11-proto/xf86driproto
-	x11-proto/xf86vidmodeproto
-	x11-misc/imake
-	x11-misc/gccmakedep"
+	x11-proto/xf86vidmodeproto"
 
 RDEPEND=">=x11-libs/gtk+-2
 	x11-base/xorg-server
@@ -37,35 +35,11 @@ RDEPEND=">=x11-libs/gtk+-2
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}/src/libXNVCtrl"
-	einfo "Tweaking libXNVCtrl for build..."
-
-	# This next voodoo is just to work around xmkmf's broken behaviour
-	# after the Xorg move to /usr (or I think, as I have not messed
-	# with it in ages).
-	#ln -snf /usr/include/X11 include
-
-	# Ensure that libNVCtrl.a is actually built
-	# Regardless of how NormalLibXrandr was built
-	# (NormalLibXrandr indicates if Xrandr was built as static or not)
-	# NormalLibXrandr was 'YES' in Xorg-6.8, but is 'NO' in 7.0.
-	sed -i.orig \
-		-e 's,DoNormalLib NormalLibXrandr,DoNormalLib YES,g' \
-		Imakefile
-
-	# for a rainy day, when we need a shared libXNVCtrl.so
-	#-e 'a#define DoSharedLib YES\n' \
-}
-
 src_compile() {
 	einfo "Building libXNVCtrl..."
 	cd "${S}/src/libXNVCtrl"
-	xmkmf -a || die "Running xmkmf failed!"
 	make clean || die "Cleaning old libXNVCtrl failed"
-	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" all || die "Building libXNVCtrl failed!"
+	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" libXNVCtrl.a || die "Building libXNVCtrl failed!"
 
 	cd "${S}"
 	einfo "Building nVidia-Settings..."

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.46 2008/05/26 15:51:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.47 2008/06/29 15:25:51 peper Exp $
+
+*nvidia-settings-173.14.09 (29 Jun 2008)
+
+  29 Jun 2008; Piotr Jaroszyński <peper@gentoo.org>
+  nvidia-settings-1.0.20070621.ebuild, nvidia-settings-169.04.ebuild,
+  nvidia-settings-169.07.ebuild, nvidia-settings-171.05.ebuild,
+  nvidia-settings-173.08.ebuild, +nvidia-settings-173.14.09.ebuild:
+  Add 173.14.09 and missing x11-proto/xf86vidmodeproto dep.
 
 *nvidia-settings-173.08 (26 May 2008)
 
