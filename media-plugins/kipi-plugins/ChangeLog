@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.38 2008/06/29 15:56:50 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.39 2008/06/29 16:10:31 keytoaster Exp $
+
+*kipi-plugins-0.1.4-r2 (29 Jun 2008)
+
+  29 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/kipi-plugins-default_chroma_opt.patch,
+  +kipi-plugins-0.1.4-r2.ebuild, kipi-plugins-0.1.5.ebuild:
+  Set default for the -S option for images2mpeg to work correctly, bug
+  #208133
 
   29 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   kipi-plugins-0.1.4-r1.ebuild, kipi-plugins-0.1.5.ebuild:
