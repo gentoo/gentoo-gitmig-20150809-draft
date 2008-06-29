@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1-r1.ebuild,v 1.2 2008/06/01 08:18:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.1-r1.ebuild,v 1.3 2008/06/29 17:50:27 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -23,7 +23,8 @@ RDEPEND=">=dev-lang/python-2.5
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/libiconv
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-text/gnome-doc-utils"
 
 DOCS="NEWS README TODO"
 

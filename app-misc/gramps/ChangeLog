@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.64 2008/06/01 08:18:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.65 2008/06/29 17:50:27 opfer Exp $
+
+  29 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  gramps-3.0.1-r1.ebuild:
+  readd back app-text/gnome-doc-utils as the no-scrollkeeper patch is not
+  complete...fixes bug 229617
 
   01 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   +files/gramps-3.0.1-no_scrollkeeper.patch, gramps-3.0.1-r1.ebuild:
