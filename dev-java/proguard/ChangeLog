@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/proguard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.12 2008/03/29 02:20:13 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.13 2008/06/29 10:42:35 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> proguard-4.1.ebuild,
+  proguard-4.2.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *proguard-4.2 (29 Mar 2008)
 

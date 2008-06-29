@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.2.ebuild,v 1.1 2008/03/29 02:20:13 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.2.ebuild,v 1.2 2008/06/29 10:42:35 tove Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -39,7 +39,7 @@ src_compile() {
 
 	einfo "Compiling ${PN}gui.jar"
 	mkdir -p build/proguardgui/classes
-	ejavac -sourcepath src -d build/proguardgui/classes src/proguard/gui/ProGuardGUI.java || "Cannot compile 'proguardgui'"
+	ejavac -sourcepath src -d build/proguardgui/classes src/proguard/gui/ProGuardGUI.java || die "Cannot compile 'proguardgui'"
 	jar -cf "${S}"/dist/${PN}gui.jar -C build/proguardgui/classes proguard || die "Cannot create ${PN}gui.jar"
 
 	einfo "Compiling retrace.jar"

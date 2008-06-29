@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0-r2.ebuild,v 1.4 2007/05/26 14:59:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0-r2.ebuild,v 1.5 2008/06/29 10:43:59 tove Exp $
 
 inherit java-pkg-2 eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 	emake -j1 || die "emake failed"
 
 	if use doc; then
-		emake apidoc || "emake apidoc failed"
+		emake apidoc || die "emake apidoc failed"
 		mv apidoc api || die "Renaming apidoc failed."
 	fi
 }
