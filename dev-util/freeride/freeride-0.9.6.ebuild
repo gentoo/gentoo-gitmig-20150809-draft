@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.6.ebuild,v 1.1 2006/10/06 09:52:38 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.6.ebuild,v 1.2 2008/06/29 10:30:46 tove Exp $
 
 inherit ruby eutils
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/ruby
 src_install() {
 	siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 	insinto "${siteruby}/${PN}"
-	doins *.rb || "doins *.rb failed"
+	doins *.rb || die "doins *.rb failed"
 
 	cp -R config freebase plugins redist so test \
 		"${D}${siteruby}/${PN}" || die "cp -R failed"
