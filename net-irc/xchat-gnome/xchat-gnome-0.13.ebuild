@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.13.ebuild,v 1.3 2007/02/10 23:30:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.13.ebuild,v 1.4 2008/06/29 21:47:16 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -39,9 +39,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/0.11-libnotify-libsexy-configure.patch
+	epatch "${FILESDIR}/0.11-libnotify-libsexy-configure.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }

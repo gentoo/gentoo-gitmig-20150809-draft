@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat-gnome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.32 2007/12/05 21:40:55 dsd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.33 2008/06/29 21:47:16 eva Exp $
+
+  29 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  xchat-gnome-0.13.ebuild, -xchat-gnome-0.15.ebuild,
+  -xchat-gnome-0.16.ebuild, -xchat-gnome-0.17.ebuild,
+  xchat-gnome-0.18.ebuild:
+  add gnome herd to metadata.xml. Fix dependencies wrt to bug #214762.
+  Better use of gnome2 eclass. Clean up old revisions. Fix repoman
+  warnings.
 
   05 Dec 2007; Daniel Drake <dsd@gentoo.org> xchat-gnome-0.18.ebuild:
   Fix compilation error thanks to Ed Catmur and Cosimo Cecchi in bug #198090
