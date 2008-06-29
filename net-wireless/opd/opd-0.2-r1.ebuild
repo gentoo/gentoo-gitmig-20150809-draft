@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.4 2007/07/24 15:26:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.5 2008/06/29 08:29:38 tove Exp $
 
 inherit eutils
 
@@ -22,16 +22,16 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-compile-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-compile-fix.patch
 	sed -i -e "s| -lsdp||" Makefile
-	make || "compilation failed"
+	make || die "compilation failed"
 }
 
 src_install() {
 	dobin opd
-	newinitd ${FILESDIR}/${PN}.rc ${PN}
-	newconfd ${FILESDIR}/${PN}.conf ${PN}
+	newinitd "${FILESDIR}"/${PN}.rc ${PN}
+	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 }
 
 pkg_postinst() {

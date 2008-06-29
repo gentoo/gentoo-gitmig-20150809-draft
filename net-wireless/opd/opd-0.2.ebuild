@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2.ebuild,v 1.2 2007/07/15 03:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2.ebuild,v 1.3 2008/06/29 08:29:38 tove Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ DEPEND="virtual/libc
 S=${WORKDIR}
 
 src_compile() {
-	epatch ${FILESDIR}/${PV}-compile-fix.patch
-	make || "compilation failed"
+	epatch "${FILESDIR}"/${PV}-compile-fix.patch
+	make || die "compilation failed"
 }
 
 src_install() {
