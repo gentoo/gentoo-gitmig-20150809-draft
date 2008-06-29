@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.29 2008/05/16 07:27:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.30 2008/06/29 10:21:06 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> f-spot-0.4.2.ebuild,
+  f-spot-0.4.3.1.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *f-spot-0.4.3.1 (16 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.3.1.ebuild,v 1.1 2008/05/16 07:27:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.3.1.ebuild,v 1.2 2008/06/29 10:21:06 tove Exp $
 
 inherit gnome2 mono autotools
 
@@ -50,5 +50,5 @@ src_unpack() {
 	sed -i -e '/PKG_CHECK_MODULES.*BEAGLE/,/AC_SUBST.*LINK_BEAGLE/ d' configure.in || die "sed failed"
 
 	eautoreconf
-	intltoolize --force || "intltoolize --force failed"
+	intltoolize --force || die "intltoolize --force failed"
 }
