@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.26 2008/05/17 07:40:13 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.27 2008/06/29 15:57:17 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/1.23.1/zm_mpeg_ofc.patch, zoneminder-1.23.3.ebuild:
+  Fix compatibility with ffmpeg-0.4.9_p20080326 with judicious sedding. Drop
+  patch which caused build error against 0.4.9_p20080326. Raise deps to
+  >=ffmpeg-0.4.9_p20080326. Fixes bug #228731.
 
   17 May 2008; wrobel@gentoo.org -files/postinstall-2.txt,
   -files/Makefile.am.patch, -files/ffmpeg.patch, -files/postupgrade.txt,

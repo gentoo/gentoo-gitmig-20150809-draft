@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.2 2008/05/17 07:40:13 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.3 2008/06/29 15:57:17 loki_val Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -40,7 +40,7 @@ DEPEND="app-admin/sudo
 	X10? ( dev-perl/X10 )"
 
 RDEPEND="dev-perl/DBD-mysql
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	media-libs/netpbm"
 
 # we cannot use need_httpd_cgi here, since we need to setup permissions for the
@@ -60,9 +60,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PATCH_PV}/Makefile.am.patch
 	epatch "${FILESDIR}"/${PATCH_PV}/zm_create.sql.in.patch
-	epatch "${FILESDIR}"/${PATCH_PV}/zm_mpeg_ofc.patch
 	epatch "${FILESDIR}"/${PATCH_PV}/zm_remote_camera.patch
-
+	sed -i \
+		-e 's:ffmpeg/avformat.h:libavformat/avformat.h:' \
+		-e 's:ffmpeg/swscale.h:libswscale/swscale.h:' \
+		src/zm_mpeg.h || die "404. File not found sedding src/zmpeg.h"
 	eautoreconf
 }
 
