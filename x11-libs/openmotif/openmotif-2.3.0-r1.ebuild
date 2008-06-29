@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.21 2008/06/02 22:09:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.22 2008/06/29 12:39:13 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -28,8 +28,6 @@ RDEPEND="!x11-libs/motif-config
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	x11-misc/xbitmaps"
-
-PROVIDE="virtual/motif"
 
 pkg_setup() {
 	# clean up orphaned cruft left over by motif-config
