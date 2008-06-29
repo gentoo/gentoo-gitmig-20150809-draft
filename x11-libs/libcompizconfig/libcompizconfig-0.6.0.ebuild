@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.6.0.ebuild,v 1.5 2008/06/24 02:10:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.6.0.ebuild,v 1.6 2008/06/29 07:49:44 tove Exp $
 
 DESCRIPTION="Compiz configuration library"
 HOMEPAGE="http://compiz-fusion.org"
@@ -19,5 +19,5 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc TODO || "dodoc failed"
+	dodoc TODO || die "dodoc failed"
 }
