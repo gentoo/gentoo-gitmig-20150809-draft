@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.9 2005/11/19 13:40:51 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.10 2008/06/29 12:48:06 drac Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -43,7 +43,7 @@ src_install() {
 	dohtml -r docs/images
 	dohtml -r docs/config
 
-	newan docs/gentoo.1x gentoo.1
+	newman docs/gentoo.1x gentoo.1
 
 	docinto scratch
 	dodoc docs/scratch/*

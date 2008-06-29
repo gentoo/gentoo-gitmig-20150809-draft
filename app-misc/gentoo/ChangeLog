@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.71 2007/12/25 14:44:49 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.72 2008/06/29 12:48:06 drac Exp $
+
+  29 Jun 2008; Samuli Suominen <drac@gentoo.org> gentoo-0.11.55.ebuild,
+  gentoo-0.11.56.ebuild:
+  Fix typing error, newan -> newman. Thanks to Olivier Huber, bug 228315.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing seemant from metadata.xml as per #202469.
