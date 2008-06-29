@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kobodeluxe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.26 2008/06/24 15:54:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.27 2008/06/29 10:53:17 klausman Exp $
+
+  28 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  kobodeluxe-0.5.1.ebuild:
+  Stable on alpha, bug #229117
 
   24 Jun 2008; Joseph Jezak <josejx@gentoo.org> kobodeluxe-0.5.1.ebuild:
   Marked ppc/ppc64 stable for bug #229117.
