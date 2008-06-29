@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_beta1.ebuild,v 1.2 2008/05/18 16:18:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_beta1.ebuild,v 1.3 2008/06/29 10:01:09 tove Exp $
 
 EAPI=1
 
@@ -80,5 +80,5 @@ src_install() {
 		domenu ${PN}.desktop || die "desktop file install failed"
 	fi
 
-	dodoc ChangeLog README README.Qtopia || "dodoc failed"
+	dodoc ChangeLog README README.Qtopia || die "dodoc failed"
 }
