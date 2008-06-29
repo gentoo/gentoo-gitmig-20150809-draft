@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.10 2008/01/15 08:42:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.11 2008/06/29 09:39:05 loki_val Exp $
 
 inherit autotools eutils
 
@@ -30,7 +30,9 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${P}-header.patch \
-		"${FILESDIR}"/${P}-asneeded.patch
+		"${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
+
 	eautoreconf
 }
 
