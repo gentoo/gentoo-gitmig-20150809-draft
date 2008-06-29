@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-1.7.ebuild,v 1.2 2006/10/17 15:16:45 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-1.7.ebuild,v 1.3 2008/06/29 08:08:55 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,9 +45,9 @@ src_install(){
 	done
 
 	dodir /usr/include || die "Unable to create include dir"
-	cp -r ./inc/* "${D}/usr/include/" || "Unable to copy headers"
+	cp -r ./inc/* "${D}/usr/include/" || die "Unable to copy headers"
 
-	dodoc FAQs README || "Unable to install default doc"
+	dodoc FAQs README || die "Unable to install default doc"
 	if use doc; then
 		dodoc doc/ANNOUNCEMENT* doc/*pdf doc/papers/* || \
 			die "Unable to install doc"

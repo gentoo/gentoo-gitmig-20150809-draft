@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.8 2008/03/29 08:46:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.9 2008/06/29 08:10:43 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> arpack-96-r2.ebuild:
+  Add missing die: || "..." -> || die "..."
 
   29 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> arpack-96-r2.ebuild:
   Changed sed separator to : for robust path string substitution (BLAS_LIBS)
