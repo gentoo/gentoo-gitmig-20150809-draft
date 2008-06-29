@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.80.ebuild,v 1.2 2007/07/15 02:43:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.80.ebuild,v 1.3 2008/06/29 10:23:40 tove Exp $
 
 inherit eutils
 
@@ -30,12 +30,12 @@ src_unpack() {
 	    -e s:DAEMON=0:DAEMON=1:g \
 	    -e s:DEBUG=3:DEBUG=0:g \
 	    -e s:DATABASE_KEEPALIVE=0:DATABASE_KEEPALIVE=1:g \
-	    policyd.conf || "sed failed"
+	    policyd.conf || die "sed failed"
 	eend
 }
 
 src_compile() {
-	emake build || "emake build failed"
+	emake build || die "emake build failed"
 }
 
 src_install() {
