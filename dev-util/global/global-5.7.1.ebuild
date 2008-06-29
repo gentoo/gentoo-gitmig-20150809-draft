@@ -1,21 +1,22 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.3.ebuild,v 1.2 2007/08/27 17:15:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.1.ebuild,v 1.1 2008/06/29 17:59:26 darkside Exp $
 
 inherit elisp-common
 
-DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in C, C++, Yacc, Java and assembler sources."
+DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources."
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc vim emacs"
-DEPEND="virtual/libc
-	doc? ( sys-apps/texinfo )
-	vim? ( app-editors/vim )
+
+RDEPEND="vim? ( || ( app-editors/vim app-editors/gvim ) )
 	emacs? ( virtual/emacs )"
+DEPEND="${DEPEND}
+	doc? ( sys-apps/texinfo )"
 
 SITEFILE=50gtags-gentoo.el
 
@@ -35,12 +36,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	if use doc; then
 		dohtml doc/global.html
 		dodoc  doc/global.pdf
 	fi
-	dodoc AUTHORS LICENSE FAQ INSTALL NEWS README THANKS
+	dodoc AUTHORS FAQ NEWS README THANKS
 
 	insinto /etc
 	doins gtags.conf
@@ -54,7 +55,7 @@ src_install() {
 
 	if use emacs; then
 		elisp-install gtags *.{el,elc}
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 
