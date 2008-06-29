@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3609 2008/06/29 11:03:15 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3610 2008/06/29 13:27:57 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1366,6 +1366,7 @@ media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
 media-video/vdr:setup - Enable support for the plugin vdr-setup
 media-video/vdr:setup-plugin - Enable support for the plugin vdr-setup
+media-video/vdr:shutdown_rewrite - use rewritten shutdown code from vdr-1.5
 media-video/vdr:sortrecords - allows to change sort order of recordings
 media-video/vdr:sourcecaps - Adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
 media-video/vdr:submenu - Enable support for the plugin vdr-submenu.
