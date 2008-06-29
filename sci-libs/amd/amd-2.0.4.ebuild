@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.0.4.ebuild,v 1.2 2008/03/03 18:55:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.0.4.ebuild,v 1.3 2008/06/29 08:13:40 tove Exp $
 
 inherit autotools eutils fortran
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README.txt Doc/ChangeLog
 	if use doc; then
 		insinto /usr/share/doc/${PF}
