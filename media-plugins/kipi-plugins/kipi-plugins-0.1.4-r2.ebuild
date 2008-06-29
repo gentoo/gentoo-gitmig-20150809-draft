@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r2.ebuild,v 1.1 2008/06/29 16:10:31 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r2.ebuild,v 1.2 2008/06/29 19:53:21 keytoaster Exp $
 
 inherit kde eutils
 
@@ -38,6 +38,13 @@ pkg_setup(){
 		eerror "X support is required in media-libs/imlib2 in order to be able"
 		eerror "to compile media-plugins/kipi-plugins. Please, re-emerge"
 		eerror "media-libs/imlib2 with the 'X' USE flag enabled."
+		die
+	fi
+
+	if ! built_with_use x11-libs/qt:3 opengl ; then
+		eerror "OpenGL support is required in x11-libs/qt in order to be able"
+		eerror "to compile media-plugins/kipi-plugins. Please, re-emerge"
+		eerror "x11-libs/qt with the 'opengl' USE flag enabled."
 		die
 	fi
 }
