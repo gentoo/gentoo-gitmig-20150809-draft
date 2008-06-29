@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.22.2.1.ebuild,v 1.1 2008/06/05 11:21:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.22.2.1.ebuild,v 1.2 2008/06/29 22:04:28 eva Exp $
 
 EAPI="1"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa eds esd hal"
+IUSE="eds esd hal"
 
 RDEPEND=">=virtual/xft-2.1.2
 		 >=x11-libs/gtk+-2.11.6
@@ -42,7 +42,6 @@ RDEPEND=">=virtual/xft-2.1.2
 		dev-libs/libxml2
 		media-libs/freetype
 
-		!arm? ( alsa? ( >=media-libs/alsa-lib-0.9.0 ) )
 		eds? ( >=gnome-extra/evolution-data-server-1.7.90 )
 		esd? ( >=media-sound/esound-0.2.28 )
 		hal? ( >=sys-apps/hal-0.5.6 )
@@ -86,8 +85,14 @@ pkg_setup() {
 		--disable-update-mimedb
 		--enable-vfs-methods
 		--enable-gstreamer=0.10
-		$(use_enable alsa)
 		$(use_enable eds aboutme)
 		$(use_enable esd)
 		$(use_enable hal)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Show more apps for favorite app selection, bug #215313
+	epatch "${FILESDIR}/${P}-extra-programs.patch"
 }
