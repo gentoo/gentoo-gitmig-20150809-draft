@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.14 2007/12/11 11:07:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.15 2008/06/29 14:13:08 loki_val Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ IUSE="aac amr debug ffmpeg jpeg javascript mad ogg opengl oss png sdl ssl theora
 S="${WORKDIR}/${PN}"
 
 RDEPEND="aac? ( media-libs/faad2 )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( <media-video/ffmpeg-0.4.9_p20080326 )
 	jpeg? ( media-libs/jpeg )
 	javascript? ( dev-lang/spidermonkey )
 	mad? ( media-libs/libmad )

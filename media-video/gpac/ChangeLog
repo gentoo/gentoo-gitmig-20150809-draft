@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.57 2008/06/21 14:11:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.58 2008/06/29 14:13:08 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> -gpac-0.4.2.ebuild,
+  gpac-0.4.2-r1.ebuild:
+  Fix deps for stable gpac to not include >=ffmpeg-0.4.9_p20080326. Fixes
+  bug #229889.
 
   21 Jun 2008; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4.ebuild:
   Fix implicit declarations, bug #216848
