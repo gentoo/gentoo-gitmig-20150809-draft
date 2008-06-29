@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.6 2008/06/16 20:22:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.7 2008/06/29 10:39:46 tove Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {
 	if ! use ssl ; then
-		sed -i -e 's/"ssl"//' configure || "sed failed"
+		sed -i -e 's/"ssl"//' configure || die "sed failed"
 	fi
 
 	# problems with openssl

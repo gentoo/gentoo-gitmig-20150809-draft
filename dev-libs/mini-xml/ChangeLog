@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mini-xml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.14 2008/06/22 20:53:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.15 2008/06/29 10:38:20 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> mini-xml-2.5.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *mini-xml-2.5 (22 Jun 2008)
 

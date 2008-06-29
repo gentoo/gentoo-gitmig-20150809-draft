@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.5.ebuild,v 1.1 2008/06/22 20:53:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.5.ebuild,v 1.2 2008/06/29 10:38:20 tove Exp $
 
 inherit autotools multilib
 
@@ -29,7 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "s:755 -s:755:" Makefile.in || die "sed failed"
-	sed -i "/^TARGETS/s: testmxml::" Makefile.in || "sed failed"
+	sed -i "/^TARGETS/s: testmxml::" Makefile.in || die "sed failed"
 	rm configure
 	eautoreconf
 }
