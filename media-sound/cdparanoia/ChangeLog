@@ -1,11 +1,15 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.85 2008/06/29 10:33:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.86 2008/06/29 11:08:31 klausman Exp $
 
 *cdparanoia-3.10.0 (29 Jun 2008)
 
   29 Jun 2008; Samuli Suominen <drac@gentoo.org> +cdparanoia-3.10.0.ebuild:
   Version bump to final release.
+
+  28 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  cdparanoia-3.10_pre2.ebuild:
+  Stable on alpha, bug #223513
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org>
   cdparanoia-3.10_pre2.ebuild:
