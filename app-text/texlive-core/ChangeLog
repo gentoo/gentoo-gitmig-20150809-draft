@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.61 2008/06/29 10:54:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.62 2008/06/29 11:37:29 fmccor Exp $
+
+  29 Jun 2008; Ferris McCormick <fmccor@gentoo.org>
+  texlive-core-2007-r13.ebuild:
+  Sparc stable, Bug #229993, good over a month now.
 
   29 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2007-r12.ebuild, texlive-core-2007-r13.ebuild:
