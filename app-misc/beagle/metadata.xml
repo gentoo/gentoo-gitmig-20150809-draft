@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>dsd@gentoo.org</email>
-		<name>Daniel Drake</name>
-	</maintainer>
-	<maintainer>
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
