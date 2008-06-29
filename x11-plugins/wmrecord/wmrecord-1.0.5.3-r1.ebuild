@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.4 2007/07/22 04:34:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.5 2008/06/29 13:28:39 drac Exp $
 
 IUSE=""
 
@@ -18,15 +18,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 
-S="${WORKDIR}/${PN}-1.0.5"
+S=${WORKDIR}/${PN}-1.0.5
 
-src_compile()
-{
+src_compile() {
 	emake CFLAGS="${CFLAGS} -Wall" || die "make failed"
 }
 
-src_install()
-{
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	einstall BINDIR="${D}/usr/bin" MANDIR="${D}/usr/share/man/man1" || die "make install failed"
@@ -34,5 +32,5 @@ src_install()
 	dodoc Changelog README TODO
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop
 }

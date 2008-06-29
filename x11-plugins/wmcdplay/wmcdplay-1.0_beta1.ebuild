@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.6 2007/07/22 05:19:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.7 2008/06/29 13:19:19 drac Exp $
 
 inherit eutils
 
@@ -25,25 +25,21 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-xpmdir.patch
-	epatch ${FILESDIR}/${PN}-ComplexProgramTargetNoMan.patch
-	epatch ${FILESDIR}/${PN}-c++.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-xpmdir.patch
+	epatch "${FILESDIR}"/${PN}-ComplexProgramTargetNoMan.patch
+	epatch "${FILESDIR}"/${PN}-c++.patch
 }
 
-src_compile()
-{
-	PATH=${PATH}:/usr/X11R6/bin
-	xmkmf || die "xmkmf failed"
-	emake CDEBUGFLAGS="${CFLAGS}" || die "Compilation failed"
+src_compile() {
+	xmkmf || die "xmkmf failed."
+	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed."
 }
 
-src_install()
-{
-	einstall DESTDIR="${D}" BINDIR="/usr/bin" || die "Installation failed"
+src_install() {
+	einstall DESTDIR="${D}" BINDIR="/usr/bin" || die "emake install failed."
 
 	insinto /usr/share/WMcdplay
 	doins XPM/*.art
@@ -51,5 +47,5 @@ src_install()
 	dodoc ARTWORK README
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop
 }
