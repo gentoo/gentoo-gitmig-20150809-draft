@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8779 2008/06/29 19:20:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8780 2008/06/29 20:32:30 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
+# Masked for removal in 30 days. Only works with kernels <2.6.24. See HOMEPAGE
+# for details or bug #105919. Going forward this needs to be compiled into the
+# kernel.
+sys-fs/trustees
 
 # Samuli Suominen <drac@gentoo.org> (29 Jun 2008)
 # Masked for removal since it seems to have disappeared

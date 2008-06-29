@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1630 2008/06/29 19:20:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1631 2008/06/29 20:32:30 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  29 Jun 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask sys-fs/trustees for removal in 30 days. bug #105919
 
   29 Jun 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Mask gst-plugins-opengl for removal since it's disappeared from upstream
