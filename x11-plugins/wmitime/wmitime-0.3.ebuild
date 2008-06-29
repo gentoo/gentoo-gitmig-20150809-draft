@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.16 2007/07/22 04:59:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.17 2008/06/29 13:55:57 drac Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 IUSE=""
 DESCRIPTION="Overglorified clock dockapp w/time, date, and internet time"
 HOMEPAGE="http://www.neotokyo.org/illusion/"
@@ -21,19 +21,20 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/makefile.diff
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/makefile.diff
 }
 
 src_compile() {
-	cd ${S}/wmitime
+	cd "${S}"/wmitime
 	make || die "make failed"
 }
 
 src_install() {
-	cd ${S}/wmitime
+	cd "${S}"/wmitime
 	dobin wmitime
 
-	cd ${S}
+	cd "${S}"
 	dodoc BUGS CHANGES README
 }

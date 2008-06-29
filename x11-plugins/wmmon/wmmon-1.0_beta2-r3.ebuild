@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.7 2007/07/22 04:50:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.8 2008/06/29 13:56:56 drac Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${PN}.app"
+S=${WORKDIR}/${PN}.app
 IUSE=""
 DESCRIPTION="Dockable system resources monitor applet for WindowMaker"
 WMMON_VERSION=1_0b2
@@ -23,8 +23,9 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}/${PN}
-	epatch ${FILESDIR}/${P}-kernel26-v2.patch
+	unpack ${A}
+	cd "${S}"/${PN}
+	epatch "${FILESDIR}"/${P}-kernel26-v2.patch
 	sed -i -e "s|-O2|${CFLAGS}|" Makefile
 }
 
