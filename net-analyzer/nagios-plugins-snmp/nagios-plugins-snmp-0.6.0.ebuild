@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0.ebuild,v 1.1 2008/06/28 09:48:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0.ebuild,v 1.2 2008/06/29 11:20:13 tove Exp $
 
 inherit eutils autotools
 
@@ -42,7 +42,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins || die "Failed Chown of ${D}usr/$(get_libdir)/nagios/plugins"
-	chmod -R o-rwx "${D}"/usr/$(get_libdir)/nagios/plugins || "Failed Chmod of ${D}usr/$(get_libdir)/nagios/plugins"
+	chmod -R o-rwx "${D}"/usr/$(get_libdir)/nagios/plugins || die "Failed Chmod of ${D}usr/$(get_libdir)/nagios/plugins"
 
 	dodoc README NEWS AUTHORS
 }
