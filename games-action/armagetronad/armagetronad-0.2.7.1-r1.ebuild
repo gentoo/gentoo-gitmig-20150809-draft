@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.7 2008/05/10 10:59:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.8 2008/06/29 10:28:37 tove Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_compile() {
 	use dedicated && myconf="--disable-glout"
 	egamesconf ${myconf} || die "egamesconf failed"
 	emake || die "emake failed"
-	make documentation || "make doc failed"
+	make documentation || die "make doc failed"
 }
 
 src_install() {
