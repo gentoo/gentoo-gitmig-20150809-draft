@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.8 2008/06/28 14:20:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080625.ebuild,v 1.9 2008/06/29 14:15:43 aballier Exp $
 
 EAPI="1"
 
@@ -44,7 +44,7 @@ IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio dbus dc1394
 	debug directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac ggi gnome gnutls hal httpd
 	id3tag jack libcaca libnotify lirc live lua matroska mmx modplug mp3 mpeg
 	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png	pulseaudio pvr +qt4
-	rtsp samba sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
+	remoteosd rtsp samba sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs
 	X x264 xinerama xml xosd xulrunner xv"
 
@@ -107,6 +107,7 @@ RDEPEND="
 		png? ( media-libs/libpng )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
 		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2.0:4 ) )
+		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( net-fs/samba )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
@@ -275,7 +276,7 @@ src_compile () {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
-		$(use_enable gnutls remoteosd) \
+		$(use_enable remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable samba smb) \
 		$(use_enable sdl) \
