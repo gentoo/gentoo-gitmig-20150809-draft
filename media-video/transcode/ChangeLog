@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.211 2008/05/24 02:47:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.212 2008/06/29 14:49:10 loki_val Exp $
+
+  29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> transcode-1.0.4.ebuild,
+  transcode-1.0.4-r2.ebuild, -transcode-1.0.5-r2.ebuild:
+  Fix deps for ffmpeg wrt bug #228833.
 
   24 May 2008; Steve Dibb <beandog@gentoo.org>
   transcode-1.0.6_rc2-r1.ebuild:
