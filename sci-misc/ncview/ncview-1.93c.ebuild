@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.3 2008/02/27 10:18:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.4 2008/06/29 08:02:03 tove Exp $
 
 inherit multilib
 
@@ -43,7 +43,7 @@ src_install() {
 		MANDIR="${D}/usr/share/man/man1" \
 		NCVIEW_LIB_DIR="${D}/usr/share/${PN}" \
 		XAPPLRESDIR="${D}/usr/share/X11/app-defaults" \
-		install || "emake install failed"
+		install || die "emake install failed"
 	insinto /usr/share/${PN}
 	doins *.ncmap nc_overlay* || die "doins failed"
 	dodoc README README_WISH_LIST RELEASE_NOTES || die
