@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.117 2008/06/27 13:09:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.118 2008/06/29 13:32:41 zzam Exp $
+
+*vdr-1.4.7-r12 (29 Jun 2008)
+
+  29 Jun 2008; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.7-r12.ebuild:
+  Added use-flag shutdown_rewrite to use the new shutdown code of vdr-1.5
+  and newer.
 
 *vdr-1.4.7-r11 (27 Jun 2008)
 
