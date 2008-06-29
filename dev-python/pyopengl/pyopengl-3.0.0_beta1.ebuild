@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.0_beta1.ebuild,v 1.2 2008/02/24 17:20:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.0_beta1.ebuild,v 1.3 2008/06/29 10:34:02 tove Exp $
 
 EAPI="1"
 NEED_PYTHON="2.4"
@@ -48,7 +48,7 @@ src_compile() {
 		einfo "Generating API docs as requested..."
 		mkdir "${S}/api"
 		cd "${S}/api"
-		PYTHONPATH="${S}" "${python}" "${S}/documentation/pydoc/builddocs.py" || "generating docs failed"
+		PYTHONPATH="${S}" "${python}" "${S}/documentation/pydoc/builddocs.py" || die "generating docs failed"
 	fi
 }
 
