@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit-mock/testunit-mock-0.03.ebuild,v 1.2 2006/03/30 04:00:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit-mock/testunit-mock-0.03.ebuild,v 1.3 2008/06/29 10:32:08 tove Exp $
 
 inherit ruby
 
@@ -32,5 +32,5 @@ src_install() {
 }
 
 src_test() {
-	ruby test.rb || "test.rb failed"
+	ruby test.rb || die "test.rb failed"
 }
