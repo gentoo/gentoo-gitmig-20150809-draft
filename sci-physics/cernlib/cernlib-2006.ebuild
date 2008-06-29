@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.10 2008/06/27 10:39:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.11 2008/06/29 08:00:48 tove Exp $
 
 inherit eutils multilib fortran
 
@@ -71,7 +71,7 @@ src_unpack() {
 	cp debian/add-ons/Makefile .
 	sed -i \
 		-e 's:/usr/local:/usr:g' \
-		Makefile || "sed'ing the Makefile failed"
+		Makefile || die "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
 	emake -j1 \

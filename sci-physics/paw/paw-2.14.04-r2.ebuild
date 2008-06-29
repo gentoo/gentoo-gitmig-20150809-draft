@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.2 2008/06/27 10:46:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.3 2008/06/29 07:55:15 tove Exp $
 
 inherit eutils multilib fortran
 
@@ -50,7 +50,7 @@ src_unpack() {
 		-e 's:/usr/local:/usr:g' \
 		-e '/comis.h/d' \
 		-e "s/gfortran/${FORTRANC}/g" \
-		Makefile || "sed'ing the Makefile failed"
+		Makefile || die "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "make patch failed"

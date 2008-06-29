@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r1.ebuild,v 1.2 2008/06/27 10:46:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r1.ebuild,v 1.3 2008/06/29 07:57:53 tove Exp $
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
@@ -46,7 +46,7 @@ src_unpack() {
 	export DEB_BUILD_OPTIONS="${FORTRANC} nostrip nocheck"
 	sed -i \
 		-e 's:/usr/local:/usr:g' \
-		Makefile || "sed'ing the Makefile failed"
+		Makefile || die "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "debian patch failed"

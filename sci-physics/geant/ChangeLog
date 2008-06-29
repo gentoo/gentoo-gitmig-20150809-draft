@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.5 2008/06/27 10:46:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.6 2008/06/29 07:57:53 tove Exp $
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> geant-3.21.14-r1.ebuild,
+  geant-3.21.14-r2.ebuild:
+  Add missing die: || "..." -> || die "..."
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> geant-3.21.14-r1.ebuild,
   geant-3.21.14-r2.ebuild, geant-4.9.1_p02.ebuild:
