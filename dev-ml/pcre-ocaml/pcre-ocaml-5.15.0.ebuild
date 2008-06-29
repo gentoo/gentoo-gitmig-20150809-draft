@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.1 2008/05/12 07:00:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.2 2008/06/29 19:31:22 aballier Exp $
 
 inherit findlib eutils
 
@@ -42,10 +42,7 @@ src_install () {
 	dodoc README VERSION Changes
 
 	if use examples; then
-		for dir in examples/*
-		do
-		  docinto $dir
-		  dodoc $dir/*
-		done
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 }
