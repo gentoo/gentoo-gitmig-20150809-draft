@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.85 2008/05/31 14:21:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.86 2008/06/29 20:41:36 eva Exp $
+
+  29 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/deskbar-applet-2.15.3-multilib.patch, deskbar-applet-2.20.3.ebuild,
+  -deskbar-applet-2.22.0.1.ebuild, deskbar-applet-2.22.1.ebuild,
+  deskbar-applet-2.22.2.1.ebuild:
+  remove gnome-python-extras from RDEPEND, bug #214311. Clean up old
+  revision.
 
 *deskbar-applet-2.22.2.1 (31 May 2008)
 
