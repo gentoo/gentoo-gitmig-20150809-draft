@@ -1,6 +1,10 @@
 # ChangeLog for games-action/barrage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.16 2008/06/25 19:22:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.17 2008/06/29 12:34:22 bluebird Exp $
+
+  29 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
+  barrage-1.0.2-r1.ebuild:
+  Stable on sparc, bug #229237
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> barrage-1.0.2-r1.ebuild:
   Stable on ppc wrt bug 229237
