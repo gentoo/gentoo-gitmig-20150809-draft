@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0.ebuild,v 1.5 2008/06/29 14:05:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0.ebuild,v 1.6 2008/06/30 20:51:11 coldwind Exp $
 
 inherit eutils distutils
 
@@ -36,6 +36,10 @@ pkg_setup() {
 		ewarn "by installing media-libs/libdiscid."
 	fi
 
+	if ! built_with_use --missing true dev-lang/python cxx ; then
+		eerror "Please, rebuild dev-lang/python with USE=\"cxx\"."
+		die "dev-lang/python built without cxx support"
+	fi
 }
 
 src_compile() {
