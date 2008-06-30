@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r9.ebuild,v 1.1 2008/06/23 15:46:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.1 2008/06/30 16:53:24 flameeyes Exp $
 
 inherit ruby eutils
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS=""
 IUSE="spell aspell timezone translator shorturl nls dict figlet
-	fortune cal host nls"
+	fortune cal host nls toilet hunspell"
 ILINGUAS="zh_CN zh_TW ru nl de fr it ja"
 
 for lang in $ILINGUAS; do
@@ -25,13 +25,17 @@ RDEPEND=">=virtual/ruby-1.8
 	timezone? ( dev-ruby/tzinfo )
 	spell? (
 		aspell? ( app-text/aspell )
-		!aspell? ( app-text/ispell )
+		!aspell? (
+			hunspell? ( app-text/hunspell )
+			!hunspell? ( app-text/ispell )
+		)
 	)
 	translator? ( dev-ruby/mechanize )
 	shorturl? ( dev-ruby/shorturl )
 	nls? ( dev-ruby/ruby-gettext )
 	dict? ( dev-ruby/ruby-dict )
 	figlet? ( app-misc/figlet )
+	toilet? ( app-misc/toilet )
 	fortune? ( games-misc/fortune-mod )
 	cal? ( || ( sys-apps/util-linux sys-freebsd/freebsd-ubin ) )
 	host? ( net-dns/bind-tools )
@@ -55,8 +59,6 @@ src_unpack() {
 	git_src_unpack
 
 	cd "${S}"
-	sed -i -e "/s.version =/s:'.\+':'9999':" Rakefile \
-		|| die  "Unable to fix Rakefile version."
 	sed -i -e '/\$version=/s:".\+":"'9999'":' bin/rbot \
 		|| die "Unable to fix rbot script version."
 }
@@ -69,26 +71,47 @@ src_compile() {
 		use $1 && return
 		disable_rbot_plugin "$2"
 	}
+	rbot_conf() {
+		echo "$1: $2" >> "${T}"/rbot.conf
+	}
+	use_rbot_conf_path() {
+		use "$1" \
+			&& rbot_conf "$2" "$3" \
+			|| rbot_conf "$2" /bin/false
+	}
 
-	if ! use spell; then
-		disable_rbot_plugin spell || die "Unable to disable spell plugin"
+	local spell_program="/usr/bin/ispell"
+	if use !spell; then
+		disable_rbot_plugin spell
+		spell_program="/bin/false"
 	elif use aspell; then
-		# This is not officially supported, but as ispell is quite a
-		# bad piece of code, at least give an opportunity to use
-		# something that works a bit better.
-		sed -i -e 's:ispell:ispell-aspell:' \
-			"${S}"/data/rbot/plugins/spell.rb \
-			|| die "Unable to replace ispell with aspell."
+		spell_program="/usr/bin/ispell-aspell"
+	elif use hunspell; then
+		spell_program="/usr/bin/hunspell -i"
 	fi
+
+	rbot_conf spell.program "${spell_program}"
+
+	if use !figlet && use !toilet; then
+		disable_rbot_plugin figlet
+	fi
+
+	use_rbot_conf_path figlet figlet.path /usr/bin/figlet
+	use_rbot_conf_path toilet toilet.path /usr/bin/toilet
 
 	use_rbot_plugin timezone time
 	use_rbot_plugin translator translator
 	use_rbot_plugin shorturl shortenurls
 	use_rbot_plugin dict dictclient
-	use_rbot_plugin figlet figlet
+
 	use_rbot_plugin fortune fortune
+	use_rbot_conf_path fortune fortune.path /usr/bin/fortune
+
 	use_rbot_plugin cal cal
+	use_rbot_conf_path cal cal.path /usr/bin/cal
+
 	use_rbot_plugin host host
+	use_rbot_conf_path host host.path /usr/bin/host
 
 	local rbot_datadir="${D}"/usr/share/rbot
 
@@ -139,6 +162,9 @@ src_install() {
 
 	diropts -o rbot -g nobody -m 0700
 	keepdir /var/lib/rbot
+
+	insinto /etc
+	doins "${T}"/rbot.conf
 
 	newinitd "${FILESDIR}/rbot.init" rbot
 	newconfd "${FILESDIR}/rbot.conf" rbot
