@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fahrenheit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.7 2008/04/27 17:01:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.8 2008/06/30 00:55:10 carlo Exp $
+
+  30 Jun 2008; Carsten Lohrke <carlo@gentoo.org> fahrenheit-0.1.ebuild:
+  Really fix bug 204929.
 
   27 Apr 2008; Wulf C. Krueger <philantrop@gentoo.org>
   fahrenheit-0.1.ebuild:
