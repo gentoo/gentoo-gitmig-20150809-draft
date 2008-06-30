@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.2.0-r1.ebuild,v 1.1 2008/05/28 09:23:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.2.0-r2.ebuild,v 1.1 2008/06/30 12:32:30 voyageur Exp $
 
 inherit autotools eutils multilib
 
@@ -8,8 +8,8 @@ DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-1.tar.gz"
-SRC_NXAGENT="nxagent-$PV-5.tar.gz"
+SRC_NX_X11="nx-X11-$PV-2.tar.gz"
+SRC_NXAGENT="nxagent-$PV-7.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
 SRC_NXCOMP="nxcomp-$PV-7.tar.gz"
 SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"
