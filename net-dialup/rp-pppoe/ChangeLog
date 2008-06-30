@@ -1,6 +1,18 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.95 2008/06/30 18:50:32 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.96 2008/06/30 21:40:25 mrness Exp $
+
+*rp-pppoe-3.10 (30 Jun 2008)
+
+  30 Jun 2008; Alin Năstac <mrness@gentoo.org>
+  +files/rp-pppoe-3.10-autotools.patch,
+  +files/rp-pppoe-3.10-gentoo-netscripts.patch,
+  +files/rp-pppoe-3.10-linux-headers.patch,
+  +files/rp-pppoe-3.10-plugin-options.patch,
+  +files/rp-pppoe-3.10-session-offset.patch,
+  +files/rp-pppoe-3.10-username-charset.patch, rp-pppoe-3.8-r2.ebuild,
+  +rp-pppoe-3.10.ebuild:
+  Version bump (#230013). Depend on <sys-kernel/linux-headers-2.6.24 (#227197).
 
   30 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   rp-pppoe-3.8-r2.ebuild:

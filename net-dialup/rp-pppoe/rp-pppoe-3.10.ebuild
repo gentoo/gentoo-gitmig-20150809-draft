@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8-r2.ebuild,v 1.8 2008/06/30 21:40:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.10.ebuild,v 1.1 2008/06/30 21:40:25 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -9,12 +9,12 @@ inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/pppoe/"
-SRC_URI="http://www.roaringpenguin.com/penguin/pppoe/${P}.tar.gz
-	ftp://ftp.samba.org/pub/ppp/ppp-2.4.3.tar.gz"
+SRC_URI="http://www.roaringpenguin.com/files/download/${P}.tar.gz
+	ftp://ftp.samba.org/pub/ppp/ppp-2.4.4.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ~mips ~ppc ppc64 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="X"
 
 DEPEND="<sys-kernel/linux-headers-2.6.24
@@ -30,9 +30,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-username-charset.patch" # bug 82410
 	epatch "${FILESDIR}/${P}-plugin-options.patch"
-	epatch "${FILESDIR}/${P}-configure.patch"
-	epatch "${FILESDIR}/${P}-autoheader.patch"
+	epatch "${FILESDIR}/${P}-autotools.patch"
 	epatch "${FILESDIR}/${P}-session-offset.patch" # bug 204476
+	epatch "${FILESDIR}/${P}-linux-headers.patch"
 
 	cd "${S}"/src
 	eautoreconf
@@ -42,7 +42,7 @@ src_compile() {
 	addpredict /dev/ppp
 
 	cd "${S}/src"
-	econf --enable-plugin=../../ppp-2.4.3 || die "econf failed"
+	econf --enable-plugin=../../ppp-2.4.4 || die "econf failed"
 	emake || die "emake failed"
 
 	if use X; then
@@ -52,7 +52,7 @@ src_compile() {
 
 src_install () {
 	cd "${S}/src"
-	make RPM_INSTALL_ROOT="${D}" docdir=/usr/share/doc/${PF} install \
+	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install \
 		|| die "install failed"
 
 	#Don't use compiled rp-pppoe plugin - see pkg_preinst below
@@ -61,8 +61,8 @@ src_install () {
 	prepalldocs
 
 	if use X; then
-		make -C "${S}/gui" install RPM_INSTALL_ROOT="${D}" \
-		datadir=/usr/share/doc/${PF}/ || die "gui install failed"
+		emake -C "${S}/gui" DESTDIR="${D}" datadir=/usr/share/doc/${PF}/ install \
+			|| die "gui install failed"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe
 	fi
 }
