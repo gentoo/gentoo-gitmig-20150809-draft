@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.29 2008/06/30 10:06:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.30 2008/06/30 12:55:11 corsair Exp $
+
+  30 Jun 2008; Markus Rothe <corsair@gentoo.org> linuxdcpp-1.0.1-r2.ebuild:
+  Added ~ppc/~ppc64
 
   30 Jun 2008; Raúl Porcel <armin76@gentoo.org> +files/1.0.1-gcc-4.3.patch,
   linuxdcpp-1.0.1-r2.ebuild:
