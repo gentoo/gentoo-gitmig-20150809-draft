@@ -1,6 +1,69 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.78 2008/06/30 06:45:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.79 2008/06/30 07:06:13 opfer Exp $
+
+*claws-mail-3.5.0 (30 Jun 2008)
+
+  30 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
+  +claws-mail-3.5.0.ebuild:
+  Added an option, "Use secure file deletion if possible", which
+  enables shredding of temporary files and messages instead of
+  just removing them. This is available on the Other preferences
+  page.
+  
+  Added an option, "Select the HTML part of multipart/alternative
+  messages". This is available on the Message View/Text Options
+  preferences page. 
+  
+  Added an option to the 'Create new folder' dialogue which enables
+  new folders to inherit the properties of their parent folders
+  during folder creation.
+  
+  Added a hidden option, "two_line_vertical", which toggles the
+  2-line view in the message list when using the 3-column layout.
+  Defaults to '1', show 2 lines.
+  
+  Added a hidden option, "outgoing_fallback_to_ascii", which allows
+  the user to specify an outgoing charset/encoding, but still fall
+  back to 7bit US-ASCII when possible.
+  Defaults to '1', fallback when possible.
+  
+  Added support for the Avant Window Navgator (Awn) information
+  bubble. This is automatically enabled if dbus is available.
+  
+  Face and X-Face headers can now be added globally and per-account
+  from configuration files under ~/.claws-mail/autofaces/. Further
+  information is provided in the manual.
+  
+  The SHA1 fingerprint is now shown on the SSL certificate dialogue
+  and the labels are now selectable.
+  
+  Several GUI improvements have been made, (Address book, filtering
+  dialogue, Actions dialogue, and Account preferences).
+  
+  New icons have been added for 'Reply to list' and 'Cancel'. The
+  'Insert file' and 'Close' icons have been improved, as have the
+  tray icons. 
+  
+  Added the Trash and Delete icons to the Custom Toolbars options.
+  
+  SMTP-only accounts are now not shown in the Receive menus and
+  Account lists in filtering/processing, as they are irrelevant here.
+  
+  tools/csv2addressbook.pl
+  Support for a gmail exported csv address book was added.
+  
+  Updated English, French, and Spanish manuals.
+  
+  Updated translations: Brazilian Portuguese, Finnish, French,
+  German, and Spanish.
+  
+  Removed unmaintained translations: Bulgarian, Croatian, Czech,
+  Dutch, Greek, Hebrew, Japanese, Korean, Norwegian, Russian,
+  Swedish, and Taiwanese. (New maintainers are very welcome,
+  contact paul@claws-mail.org)
+  
+  Bug fixes
 
   30 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   -claws-mail-3.0.2-r1.ebuild, -claws-mail-3.2.0.ebuild,
