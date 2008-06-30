@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.7 2008/01/27 10:15:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.8 2008/06/30 01:43:53 darkside Exp $
 
 IUSE="tk"
 
@@ -13,6 +13,7 @@ DEPEND="sys-libs/zlib
 	sys-apps/groff
 	sys-devel/bison
 	tk? ( >=dev-lang/tk-8.3 )"
+RDEPEND="" #221421
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -55,5 +56,5 @@ src_install () {
 	# Config file examples are documentation.
 	mv "${D}"/usr/share/aegis/config.example "${D}"/usr/share/doc/${PF}/
 
-	dodoc LICENSE BUILDING MANIFEST README
+	dodoc BUILDING MANIFEST README
 }

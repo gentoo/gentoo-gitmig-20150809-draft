@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.16.ebuild,v 1.6 2007/04/09 15:37:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.24.ebuild,v 1.1 2008/06/30 01:43:53 darkside Exp $
+
+inherit autotools
 
 IUSE="tk"
 
@@ -12,11 +14,23 @@ DEPEND="sys-libs/zlib
 	sys-devel/gettext
 	sys-apps/groff
 	sys-devel/bison
+	dev-libs/libxml2
 	tk? ( >=dev-lang/tk-8.3 )"
+RDEPEND="" #221421
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~alpha ~ppc ~sparc ~x86"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	#FIXME: ? Not sure what effect this has. Only way to get it to compile.
+	sed -i 's/$(SH) etc\/compat.2.3//' Makefile.in || \
+		die "sed Makefile.in failed"
+	eautomake || die "eautomake failed"
+}
 
 src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)
@@ -29,32 +43,26 @@ src_compile() {
 		${myconf} || die "./configure failed"
 
 	# Second ebuild causes redefined/undefined function errors
-	make clean
+	#make clean
 
 	# not emake safe, I think
 	make || die
 }
 
 src_install () {
-	make RPM_BUILD_ROOT=${D} install || die
-
-	# Alas gentoo appears to have no profile.d mechanism, so:
-	rm ${D}/etc/profile.d/aegis.sh
-	rm ${D}/etc/profile.d/aegis.csh
-	rmdir ${D}/etc/profile.d
-	rmdir ${D}/etc
+	make RPM_BUILD_ROOT="${D}" install || die
 
 	# OK so ${D}/var/lib/aegis gets UID=3, but for some
 	# reason so do the files under /usr/share, even though
 	# they are read-only.
-	chown -R root:root ${D}/usr/share
+	chown -R root:root "${D}"/usr/share
 	dodoc lib/en/*
 
 	# Link to share dir so user has a chance of noticing it.
 	dosym /usr/share/aegis /usr/share/doc/${PF}/scripts
 
 	# Config file examples are documentation.
-	mv ${D}/usr/share/aegis/config.example ${D}/usr/share/doc/${PF}/
+	mv "${D}"/usr/share/aegis/config.example "${D}"/usr/share/doc/"${PF}"/
 
-	dodoc LICENSE BUILDING MANIFEST README
+	dodoc BUILDING README
 }
