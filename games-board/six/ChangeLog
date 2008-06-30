@@ -1,6 +1,10 @@
 # ChangeLog for games-board/six
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.12 2006/06/21 00:24:40 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.13 2008/06/30 06:22:27 mr_bones_ Exp $
+
+  30 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/six-0.5.3-gcc43.patch, six-0.5.3.ebuild:
+  add patch for building with gcc-4.3; submitting by Dieter Ries via bug #227151
 
 *six-0.5.3 (19 Jun 2006)
 
