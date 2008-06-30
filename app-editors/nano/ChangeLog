@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.196 2008/06/30 20:10:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.197 2008/06/30 20:24:50 fmccor Exp $
+
+  30 Jun 2008; Ferris McCormick <fmccor@gentoo.org> nano-2.1.2-r1.ebuild:
+  Sparc stable, Bug #230001. It works fine, but see the bug for concerns about
+  the IUSE= flags.
 
   30 Jun 2008; nixnut <nixnut@gentoo.org> nano-2.1.2-r1.ebuild:
   Stable on ppc wrt bug 230001
