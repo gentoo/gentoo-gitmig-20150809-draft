@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.76 2008/06/30 19:23:49 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.77 2008/06/30 20:00:19 nixnut Exp $
+
+  30 Jun 2008; nixnut <nixnut@gentoo.org> tellico-1.2.14.ebuild:
+  Stable on ppc wrt bug 216755
 
   30 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> tellico-1.2.14.ebuild:
   amd64 stable, bug #216755
