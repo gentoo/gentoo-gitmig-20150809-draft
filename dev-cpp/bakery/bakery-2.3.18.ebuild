@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.3.18.ebuild,v 1.1 2006/05/02 03:38:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.3.18.ebuild,v 1.2 2008/06/30 12:21:05 remi Exp $
 
 inherit gnome2
 
@@ -24,8 +24,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	gnome2_src_unpack
 
 	if ! use examples ; then
 		sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
