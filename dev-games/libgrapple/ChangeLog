@@ -1,0 +1,11 @@
+# ChangeLog for dev-games/libgrapple
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.1 2008/06/30 19:57:23 nyhm Exp $
+
+*libgrapple-0.9.3 (30 Jun 2008)
+
+  30 Jun 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/libgrapple-0.9.3-64bit.patch, +metadata.xml,
+  +libgrapple-0.9.3.ebuild:
+  Initial commit, bug #145204
+
