@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.29 2008/04/21 15:15:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.30 2008/06/30 01:38:27 carlo Exp $
+
+  30 Jun 2008; Carsten Lohrke <carlo@gentoo.org>
+  -files/tork-0.24-ext_tsocks.patch, -tork-0.26.ebuild, tork-0.27.ebuild:
+  Get rid of the arts use flag, correct the split/monolithic ebuild depend
+  order, fix bug #226319.
 
   21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/tork-0.27+gcc-4.3.patch, tork-0.27.ebuild:

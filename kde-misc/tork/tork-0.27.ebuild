@@ -1,10 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.2 2008/04/21 15:15:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.3 2008/06/30 01:38:27 carlo Exp $
+
+ARTS_REQUIRED="never"
 
 inherit kde multilib
 
-DESCRIPTION="A Tor controller for the KDE desktop"
+DESCRIPTION="TorK is a powerful anonymity manager for the KDE and acts as a frontedn to Tor."
 HOMEPAGE="http://tork.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -17,7 +19,7 @@ DEPEND="dev-libs/openssl
 	>=dev-libs/geoip-1.4.0
 	gnutls? ( >=net-libs/gnutls-2.2.2 )
 	!gnutls? ( >=dev-libs/openssl-0.9.8g )
-	|| ( =kde-base/kdebase-3.5* =kde-base/libkonq-3.5* )"
+	|| ( =kde-base/libkonq-3.5* =kde-base/kdebase-3.5* )"
 
 RDEPEND="${DEPEND}
 	>=net-misc/tor-0.1.2.14
@@ -36,6 +38,7 @@ src_compile() {
 	local myconf="--with-external-geoip --with-conf=/etc/socks/tsocks.conf"
 	use gnutls && myconf="${myconf} --enable-gnutls"
 
+	rm "${S}"/configure
 	kde_src_compile
 }
 
