@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.35 2008/03/28 20:43:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.36 2008/06/30 02:50:46 carlo Exp $
+
+*k9copy-1.2.3-r1 (30 Jun 2008)
+
+  30 Jun 2008; Carsten Lohrke <carlo@gentoo.org>
+  -files/k9copy-1.1.2_p2-desktop-entry.diff,
+  -files/k9copy-1.2.2-desktop-entry.diff,
+  -files/k9copy-1.2.3-desktop-entry.diff,
+  +files/k9copy-1.2.3-desktop-entry-2.diff, -k9copy-1.2.3.ebuild,
+  +k9copy-1.2.3-r1.ebuild:
+  Assorted fixes, triggered by bug #223765.
 
   28 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/k9copy-1.2.3-gcc43.patch, k9copy-1.2.3.ebuild:

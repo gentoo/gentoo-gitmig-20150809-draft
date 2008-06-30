@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.4 2008/06/15 12:17:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3-r1.ebuild,v 1.1 2008/06/30 02:50:46 carlo Exp $
 
 EAPI="1"
+
+ARTS_REQUIRED="never"
 
 inherit kde
 
@@ -16,20 +18,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND="media-video/dvdauthor
-	media-libs/libdvdread
-	media-libs/libdvdnav
-	app-cdr/dvd+rw-tools
-	>=media-video/vamps-0.98
+DEPEND="media-libs/libdvdread
 	>=app-cdr/k3b-0.12.10
 	dev-libs/dbus-qt3-old
 	sys-apps/hal
 	>=media-video/ffmpeg-0.4.9_p20070616
 	media-video/mplayer"
-
+RDEPEND="${DEPEND}
+	media-video/dvdauthor"
 need-kde 3.5
 
-PATCHES=( "${FILESDIR}"/${P}-desktop-entry.diff
+PATCHES=( "${FILESDIR}"/${P}-desktop-entry-2.diff
 		"${FILESDIR}"/${P}-gcc43.patch )
 
 pkg_setup() {
