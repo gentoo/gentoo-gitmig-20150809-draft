@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8780 2008/06/29 20:32:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8781 2008/06/30 09:56:38 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
+# Masked for removal for license issues, see bug 230157
+mail-client/claws-mail-pdf-viewer
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Masked for removal in 30 days. Only works with kernels <2.6.24. See HOMEPAGE
