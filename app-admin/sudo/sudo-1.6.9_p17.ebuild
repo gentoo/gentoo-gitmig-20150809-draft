@@ -1,24 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc1.ebuild,v 1.2 2008/05/11 17:22:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p17.ebuild,v 1.1 2008/06/30 07:53:30 flameeyes Exp $
 
 inherit eutils pam confutils
 
-MY_P=${P/_/}
-MY_P=${MY_P/beta/b}
-
-case "${P}" in
-	*_beta* | *_rc*)
-		uri_prefix=beta/
-		;;
-	*)
-		uri_prefix=""
-		;;
-esac
-
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
-SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
@@ -35,7 +23,7 @@ RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	${DEPEND}"
 DEPEND="${RDEPEND} sys-devel/bison"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P/_/}
 
 pkg_setup() {
 	confutils_use_conflict skey pam
@@ -68,14 +56,6 @@ src_unpack() {
 	# XXX: <?> = probably safe enough for most circumstances.
 
 	einfo "Blacklisting common variables (env_delete)..."
-		sudo_bad_var() {
-			local target='env.c' marker='\*initial_badenv_table\[\]'
-
-			ebegin "	$1"
-			sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' "${S}"/${target}
-			eend $?
-		}
-
 		sudo_bad_var 'PERLIO_DEBUG'   # perl, write debug to file.
 		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
@@ -116,33 +96,10 @@ src_compile() {
 			done`  && einfo "	Found ROOTPATH..." || \
 				ewarn "	Failed to find ROOTPATH, please report this."
 
-		# remove duplicate path entries from $1
-		cleanpath() {
-			local i=1 x n IFS=:
-			local -a paths;	paths=($1)
-
-			for ((n=${#paths[*]}-1;i<=n;i++)); do
-				for ((x=0;x<i;x++)); do
-					test "${paths[i]}" == "${paths[x]}" && {
-						einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
-						unset paths[i]; continue 2; }
-				done; # einfo "	Adding ${paths[i]}..." 1>&2
-			done; echo "${paths[*]}"
-		}
-
+		# remove any duplicate entries
 		ROOTPATH=$(cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin${ROOTPATH:+:${ROOTPATH}})
 
 		# strip gcc path (bug #136027)
-		rmpath() {
-			declare e newpath oldpath=${!1} PATHvar=$1 thisp IFS=:
-			shift
-			for thisp in $oldpath; do
-				for e; do [[ $thisp == $e ]] && continue 2; done
-				newpath=$newpath:$thisp
-			done
-			eval $PATHvar='${newpath#:}'
-		}
-
 		rmpath ROOTPATH '*/gcc-bin/*'
 
 	einfo "...done."
@@ -164,7 +121,7 @@ src_compile() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die
-	dodoc ChangeLog HISTORY PORTING README TROUBLESHOOTING \
+	dodoc BUGS CHANGES HISTORY PORTING README TROUBLESHOOTING \
 		UPGRADE sample.sudoers sample.syslog.conf
 
 	if use ldap; then
@@ -191,18 +148,41 @@ EOF
 	fperms 0440 /etc/sudoers
 }
 
+# remove duplicate path entries from $1
+cleanpath() {
+	local i=1 x n IFS=:
+	local -a paths;	paths=($1)
+
+	for ((n=${#paths[*]}-1;i<=n;i++)); do
+		for ((x=0;x<i;x++)); do
+			test "${paths[i]}" == "${paths[x]}" && {
+				einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
+				unset paths[i]; continue 2; }
+		done; # einfo "	Adding ${paths[i]}..." 1>&2
+	done; echo "${paths[*]}"
+}
+
+# add $1 to default env_delete list.
+sudo_bad_var() {
+	local target='env.c' marker='\*initial_badenv_table\[\]'
+
+	ebegin "	$1"
+		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' "${S}"/${target}
+	eend $?
+}
+
+rmpath() {
+	declare e newpath oldpath=${!1} PATHvar=$1 thisp IFS=:
+	shift
+	for thisp in $oldpath; do
+		for e; do [[ $thisp == $e ]] && continue 2; done
+		newpath=$newpath:$thisp
+	done
+	eval $PATHvar='${newpath#:}'
+}
+
 pkg_postinst() {
-	if use ldap; then
-		ewarn
+	use ldap && {
 		ewarn "sudo uses the /etc/ldap.conf.sudo file for ldap configuration."
-		ewarn
-		if egrep -q '^[[:space:]]*sudoers:' "${ROOT}"/etc/nsswitch.conf; then
-			ewarn "In 1.7 series, LDAP is no more consulted, unless explicitly"
-			ewarn "configured in /etc/nsswitch.conf."
-			ewarn
-			ewarn "To make use of LDAP, add this line to your /etc/nsswitch.conf:"
-			ewarn "  sudoers: ldap files"
-			ewarn
-		fi
-	fi
+	}
 }
