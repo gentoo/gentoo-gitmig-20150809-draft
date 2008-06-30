@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97_rc1.ebuild,v 1.3 2007/07/14 11:59:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97.1.ebuild,v 1.1 2008/06/30 22:15:43 tester Exp $
 
 inherit autotools eutils fdo-mime gnome2-utils
 
@@ -30,12 +30,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-autoconf-logic.patch
-	epatch ${FILESDIR}/${P}-nostrip.patch
-	eaclocal
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.97_rc1-nostrip.patch"
 	eautoconf
-	eautomake
 }
 
 src_compile() {
@@ -51,7 +48,7 @@ src_install() {
 	dodoc AGREEMENT TODO README FAQ CREDITS
 
 	domenu amsn.desktop
-	sed -i -e s:.png:: ${D}/usr/share/applications/amsn.desktop
+	sed -i -e s:.png:: "${D}/usr/share/applications/amsn.desktop"
 
 	cd desktop-icons
 	for i in *; do
