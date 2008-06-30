@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.33 2008/06/30 19:27:59 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.34 2008/06/30 20:33:47 armin76 Exp $
+
+  30 Jun 2008; Raúl Porcel <armin76@gentoo.org> arping-2.06.ebuild:
+  x86 stable, add ~ia64
 
   30 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> arping-2.06.ebuild:
   amd64 stable, bug #229841
