@@ -1,6 +1,12 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.26 2008/04/29 10:31:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.27 2008/06/30 11:17:42 zzam Exp $
+
+*vdradmin-am-3.6.2 (30 Jun 2008)
+
+  30 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +vdradmin-am-3.6.2.ebuild:
+  Version bumped. utf8 support is now contained by default.
 
   29 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdradmin-am-3.6.1-r1.ebuild:
