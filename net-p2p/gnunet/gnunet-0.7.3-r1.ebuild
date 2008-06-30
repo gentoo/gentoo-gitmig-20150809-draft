@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.3 2008/02/25 14:11:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.4 2008/06/30 16:09:45 armin76 Exp $
 
 inherit eutils autotools
 
@@ -59,6 +59,9 @@ src_unpack() {
 	if ! use gtk ; then
 		sed -i "s:AC_DEFINE_UNQUOTED..HAVE_GTK.*:true:" configure.ac
 	fi
+
+	epatch "${FILESDIR}"/${PV}-libtool.patch
+	epatch "${FILESDIR}"/${PV}-configure.patch
 
 	AT_M4DIR="${S}/m4" eautoreconf
 }
