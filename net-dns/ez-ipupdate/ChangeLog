@@ -1,6 +1,20 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.27 2008/06/29 10:04:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.28 2008/06/30 10:16:33 sbriesen Exp $
+
+  30 Jun 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/ez-ipupdate-3.0.11_beta8-syslog.patch,
+  +files/ez-ipupdate-3.0.11_beta8-zoneedit.diff, -files/ez-ipupdate.rc6,
+  -ez-ipupdate-3.0.11_beta8-r1.ebuild, +ez-ipupdate-3.0.11_beta8-r5.ebuild:
+  removing old version
+
+*ez-ipupdate-3.0.11_beta8-r5 (30 Jun 2008)
+
+  30 Jun 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ez-ipupdate-3.0.11_beta8-zoneedit.diff,
+  +ez-ipupdate-3.0.11_beta8-r5.ebuild:
+  update ZONEEDIT_DEFAULT_SERVER from www.zoneedit.com to
+  dynamic.zoneedit.com (see bug #227083).
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org>
   ez-ipupdate-3.0.11_beta8-r4.ebuild:
