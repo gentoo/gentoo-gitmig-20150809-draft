@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.16.1.ebuild,v 1.7 2008/06/30 11:33:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.16.1.ebuild,v 1.8 2008/06/30 16:25:26 jer Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND=">=dev-libs/libsigc++-2.2
