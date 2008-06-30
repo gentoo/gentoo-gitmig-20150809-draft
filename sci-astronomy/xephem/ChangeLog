@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/xephem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.25 2008/06/28 13:30:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.26 2008/06/30 12:36:01 markusle Exp $
+
+  30 Jun 2008; Markus Dittrich <markusle@gentoo.org> -files/xephem-3.7.3-link-motif.patch, +files/xephem-3.7.3-use-system-lib.patch,
+  xephem-3.7.3.ebuild:
+  Added patch to make sure and explicit that only system libs are being used
+  (see bug #229885).
 
   28 Jun 2008; Ulrich Mueller <ulm@gentoo.org>
   +files/xephem-3.7.3-link-motif.patch, xephem-3.7.3.ebuild:

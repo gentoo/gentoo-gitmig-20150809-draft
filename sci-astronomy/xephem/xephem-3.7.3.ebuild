@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.3 2008/06/28 13:30:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.4 2008/06/30 12:36:01 markusle Exp $
 
 inherit eutils
 
@@ -12,17 +12,22 @@ IUSE=""
 SLOT="0"
 LICENSE="as-is"
 DEPEND="!media-gfx/feh
-	x11-libs/openmotif"
+	x11-libs/openmotif
+	media-libs/jpeg
+	media-libs/libpng"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Link against Motif shared lib, bug 229761
-	epatch "${FILESDIR}/${P}-link-motif.patch"
+	# make sure we use system libs not the ones that
+	# ship with the xephem tarball
+	rm -fr libjpegd/ libpng/ libz/ libXm/ \
+		|| die "Failed to remove unneeded libs"
+	epatch "${FILESDIR}"/${P}-use-system-lib.patch
 
-	for i in libastro/Makefile libip/Makefile libjpegd/Makefile \
-		liblilxml/Makefile GUI/xephem/Makefile GUI/xephem/tools/*/Makefile ; do
+	for i in libastro/Makefile libip/Makefile liblilxml/Makefile \
+		GUI/xephem/Makefile GUI/xephem/tools/*/Makefile ; do
 		einfo "Fixing CFLAGS in ${i}"
 		sed -e "s~^CFLAGS[ ]*=\(.*\)-O2\(.*\)~CFLAGS= \1 \2 ${CFLAGS}~" \
 			-i ${i} \
@@ -39,12 +44,10 @@ src_compile() {
 	emake || die "emake failed"
 	local myldflags
 	cd "${S}"
-	for dir in libip liblilxml libjpegd GUI/xephem/tools/* GUI/xephem; do
+	for dir in libip liblilxml GUI/xephem/tools/* GUI/xephem; do
 		echo "going into ${dir}"
 		cd "${S}"/${dir}
-		if [ ${dir:0:3} = "lib" ]; then
-			myldflags=""
-		else
+		if [ ${dir:0:3} != "lib" ]; then
 			myldflags="${CLDFLAGS}"
 		fi
 		emake \
