@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.33 2008/06/29 18:19:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.34 2008/06/30 20:06:59 nixnut Exp $
+
+  30 Jun 2008; nixnut <nixnut@gentoo.org> gtk-engines-qt-0.8-r1.ebuild:
+  Stable on ppc wrt bug 224879
 
   29 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   gtk-engines-qt-0.8-r1.ebuild:
