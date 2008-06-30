@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public Licence v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/files/pydoc.init,v 1.2 2008/06/30 15:10:28 hawking Exp $
 
 depend() {
 	need net
