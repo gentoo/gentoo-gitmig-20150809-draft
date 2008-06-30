@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kload
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.5 2008/02/29 19:52:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.6 2008/06/30 18:07:09 sbriesen Exp $
+
+*kload-0.9.4-r1 (29 Jun 2008)
+
+  29 Jun 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/kload-0.9.4-gcc43.diff, +kload-0.9.4-r1.ebuild:
+  adding patches for GCC 4.3, solving bug #227219.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> kload-0.9.4.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
