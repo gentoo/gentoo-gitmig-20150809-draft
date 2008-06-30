@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/snips
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.1 2008/06/27 15:25:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.2 2008/06/30 12:18:52 chainsaw Exp $
+
+*snips-1.2-r1 (30 Jun 2008)
+
+  30 Jun 2008; <chainsaw@gentoo.org>
+  +files/snips-1.2-destdir-awareness.patch,
+  -files/snips-1.2-precache-config, +files/snips-1.2-r1-precache-config,
+  -snips-1.2.ebuild, +snips-1.2-r1.ebuild:
+  Make the build system DESTDIR-aware to de-uglify the ebuild. Patch applied
+  upstream. Eternal glory for a libtool patch that makes the QA warning go
+  away.
 
 *snips-1.2 (27 Jun 2008)
 

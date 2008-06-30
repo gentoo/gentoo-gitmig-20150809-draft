@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2.ebuild,v 1.2 2008/06/27 17:33:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r1.ebuild,v 1.1 2008/06/30 12:18:52 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,14 +23,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# Gentoo-specific non-interactive configure override
-	cp "${FILESDIR}/${P}-precache-config" "${S}/Config.cache"
+	cp "${FILESDIR}/${PF}-precache-config" "${S}/Config.cache"
 	echo "CFLAGS=\"${CFLAGS} -fPIC\"" >> "${S}/Config.cache"
 	echo "CC=\"$(tc-getCC)\"" >> "${S}/Config.cache"
+	echo "SRCDIR=\"${S}\"" >> "${S}/Config.cache"
 	epatch "${FILESDIR}/${P}-non-interactive.patch"
 	# Applied to upstream CVS
 	epatch "${FILESDIR}/${P}-implicit-declarations.patch"
 	epatch "${FILESDIR}/${P}-conflicting-types.patch"
 	epatch "${FILESDIR}/${P}-code-ordering.patch"
+	epatch "${FILESDIR}/${P}-destdir-awareness.patch"
 }
 
 src_compile() {
@@ -42,23 +44,5 @@ src_compile() {
 }
 
 src_install() {
-	mkdir "${D}/usr"
-
-	emake \
-		DESTDIR="${D}" \
-		ROOTDIR="${D}/usr/snips" \
-		DATADIR="${D}/usr/snips/data" \
-		ETCDIR="${D}/usr/snips/etc" \
-		BINDIR="${D}/usr/snips/bin" \
-		PIDDIR="${D}/usr/snips/run" \
-		INITDIR="${D}/usr/snips/init.d" \
-		MSGSDIR="${D}/usr/snips/msgs" \
-		RRD_DBDIR="${D}/usr/snips/rrddata" \
-		EXAMPLESDIR="${D}/usr/snips/etc/samples" \
-		DEVICEHELPDIR="${D}/usr/snips/device-help" \
-		CGIDIR="${D}/usr/snips/web/cgi" \
-		HTMLDIR="${D}/usr/snips/web/html" \
-		MANDIR="${D}/usr/snips/man" \
-		install \
-		|| die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
