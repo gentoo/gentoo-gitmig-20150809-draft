@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8784 2008/06/30 12:26:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8785 2008/06/30 13:30:17 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -332,12 +332,6 @@ net-analyzer/sonar
 # Dead upstream and not used by anything
 # Masked for removal in 30 days
 dev-cpp/libwrapiter
-
-# Tony Vroon <chainsaw@gentoo.org> (20 May 2008)
-# This package is unmaintained and is unstable for
-# Audacious 1.5.0; bug #222883.
-# Removal planned for June 30, 2008.
-media-plugins/audacious-crossfade
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
