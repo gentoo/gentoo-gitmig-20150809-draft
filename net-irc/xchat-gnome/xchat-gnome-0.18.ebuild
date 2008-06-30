@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.18.ebuild,v 1.3 2008/06/29 21:47:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.18.ebuild,v 1.4 2008/06/30 23:11:18 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools
 
@@ -72,4 +72,3 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS || die "dodoc failed"
 }
-
