@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.22.3.ebuild,v 1.1 2008/06/30 21:43:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.22.3.ebuild,v 1.2 2008/06/30 23:10:33 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README TODO"
-
