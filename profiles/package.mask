@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8782 2008/06/30 09:57:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8783 2008/06/30 12:10:45 carlo Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Carsten Lohrke <carlo@gentoo.org> (30. Jun 2008)
+# Masking as it's pretty broken for a long while now.
+# Will investigate in a few days.
+dev-db/rekall
 
 # Christian Faulhammer <opfer@gentoo.org> (30 Jun 2008)
 # Masked for removal for license issues, see bug 230157
