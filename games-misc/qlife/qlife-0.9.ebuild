@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.2 2008/06/10 00:29:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.3 2008/06/30 23:28:11 nyhm Exp $
 
 EAPI=1
-inherit toolchain-funcs qt4 games
+inherit qt4 games
 
 MY_P=${PN}-qt4-${PV}
 DESCRIPTION="Simulates the classical Game of Life invented by John Conway"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-4.1:4"
+DEPEND="|| ( x11-libs/qt-gui:4 x11-libs/qt:4 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -29,10 +29,7 @@ src_unpack() {
 
 src_compile() {
 	eqmake4
-	emake \
-		CXX=$(tc-getCXX) \
-		LINK=$(tc-getCXX) \
-		|| die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
