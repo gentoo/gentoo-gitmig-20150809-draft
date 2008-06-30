@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.20.3.ebuild,v 1.6 2008/06/21 20:09:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.20.3.ebuild,v 1.7 2008/06/30 16:15:16 jer Exp $
 
 inherit eutils gnome2 multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="X doc"
 
 # glib-2.16.3 dependency instead of 2.14 ensures Unicode 5.1 support on the system
