@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-1.3.ebuild,v 1.3 2007/07/13 05:09:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-1.3.ebuild,v 1.4 2008/06/30 12:33:59 remi Exp $
 
 inherit gnome2 eutils
 
@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.1.0
 		>=gnome-base/gconf-1.1.11
-		>=dev-cpp/gtkmm-2.2.0
+		>=dev-cpp/gtkmm-2.4.0
 		>=dev-cpp/libglademm-2.4.0"
 
 DEPEND="${RDEPEND}
