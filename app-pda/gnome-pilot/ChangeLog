@@ -1,8 +1,9 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.42 2008/06/30 18:26:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.43 2008/06/30 18:28:38 armin76 Exp $
 
-  30 Jun 2008; Raúl Porcel <armin76@gentoo.org> gnome-pilot-2.0.16.ebuild:
+  30 Jun 2008; Raúl Porcel <armin76@gentoo.org> gnome-pilot-2.0.16.ebuild
+  gnome-pilot-2.0.15.ebuild:
   Drop ia64
 
   06 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
