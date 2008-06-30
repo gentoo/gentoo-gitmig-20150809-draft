@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.4.93057.ebuild,v 1.1 2008/06/14 23:33:07 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.4.93057.ebuild,v 1.2 2008/06/30 20:50:11 ikelos Exp $
 
 inherit vmware eutils versionator fdo-mime gnome2-utils
 
@@ -120,7 +120,7 @@ src_install() {
 	rm "${D}${ICONDIR}/index.theme"
 	mkdir -p "${D}/usr/share/icons"
 	mv "${D}${ICONDIR}" "${D}/usr/share/icons"
-	ln -s /usr/share/icons/hicolor "${D}${ICONSDIR}"
+	ln -s /usr/share/icons/hicolor "${D}${ICONDIR}"
 
 	# install .desktop files:
 	insinto /usr/share/applications
