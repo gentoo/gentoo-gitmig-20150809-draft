@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3.1_rc1.ebuild,v 1.1 2007/04/27 15:39:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3.1_rc1.ebuild,v 1.2 2008/06/30 15:22:14 s4t4n Exp $
 
 inherit java-pkg-2
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.slade.altervista.org/downloads/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=virtual/jdk-1.4
 	>=sys-apps/sed-4.1.4
@@ -57,6 +57,6 @@ src_compile()
 src_install()
 {
 	java-pkg_dojar Jif.jar
-	dobin ${FILESDIR}/jif
+	dobin "${FILESDIR}"/jif
 	dodoc CHANGELOG.txt readme.txt
 }
