@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.190 2008/06/30 19:23:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.191 2008/06/30 20:43:36 ranger Exp $
+
+  30 Jun 2008; Brent Baude <ranger@gentoo.org> freetype-2.3.7.ebuild:
+  stable ppc64, bug 230037
 
   30 Jun 2008; Ferris McCormick <fmccor@gentoo.org> freetype-2.3.7.ebuild:
   Sparc stable on rush basis at developer (loki_val) request, Bug #230037.
