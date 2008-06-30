@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/eselect-unison-0.1.ebuild,v 1.7 2008/06/26 00:04:47 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/eselect-unison-0.1.ebuild,v 1.8 2008/06/30 20:37:46 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 IUSE=""
 DEPEND=""

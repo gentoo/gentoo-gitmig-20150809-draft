@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-unison
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.7 2008/06/26 00:04:47 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.8 2008/06/30 20:37:46 armin76 Exp $
+
+  30 Jun 2008; Raúl Porcel <armin76@gentoo.org> eselect-unison-0.1.ebuild:
+  sparc stable wrt #229187
 
   26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   eselect-unison-0.1.ebuild:
