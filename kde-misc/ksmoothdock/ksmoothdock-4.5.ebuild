@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.6 2008/07/01 21:35:27 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.7 2008/07/01 22:50:16 mr_bones_ Exp $
 
 inherit kde
 
@@ -23,4 +23,3 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
-
