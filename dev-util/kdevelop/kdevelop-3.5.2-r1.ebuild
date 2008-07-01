@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.2-r1.ebuild,v 1.2 2008/06/30 22:29:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.2-r1.ebuild,v 1.3 2008/07/01 19:23:38 gentoofan23 Exp $
 
 ARTS_REQUIRED="never"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="3"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion"
 
 DEPEND="sys-devel/gdb
