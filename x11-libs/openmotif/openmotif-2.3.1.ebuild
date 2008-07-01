@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.1.ebuild,v 1.2 2008/06/28 08:46:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.1.ebuild,v 1.3 2008/07/01 19:30:39 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/${P}.tar.gz
 LICENSE="MOTIF libXpm doc? ( OPL )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc examples jpeg png xft"
+IUSE="doc examples jpeg png unicode xft"
 
 # make people unmerge motif-config and all previous slots
 # since the slotting is finally gone now
@@ -22,7 +22,7 @@ RDEPEND="!x11-libs/motif-config
 	!<=x11-libs/openmotif-2.3.0
 	x11-libs/libXmu
 	x11-libs/libXp
-	virtual/libiconv
+	unicode? ( virtual/libiconv )
 	xft? ( x11-libs/libXft )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
@@ -93,6 +93,7 @@ src_compile() {
 	append-flags -fno-strict-aliasing
 
 	econf --with-x \
+		$(use_enable unicode utf8) \
 		$(use_enable xft) \
 		$(use_enable jpeg) \
 		$(use_enable png)
