@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.1.ebuild,v 1.1 2008/06/30 15:40:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.1.ebuild,v 1.2 2008/07/01 11:34:19 angelos Exp $
 
 EAPI=1
+inherit gnome2-utils
 
 DESCRIPTION="a GTK2 MPD (Music Player Daemon) client inspired by Rythmbox"
 HOMEPAGE="http://ario-player.sourceforge.net"
@@ -39,4 +40,12 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

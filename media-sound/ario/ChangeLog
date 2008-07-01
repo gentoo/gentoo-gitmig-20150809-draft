@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.1 2008/06/30 15:40:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.2 2008/07/01 11:34:19 angelos Exp $
+
+  01 Jul 2008; Christoph Mende <angelos@gentoo.org> ario-1.1.ebuild:
+  Added gnome2_icon_cache_update to postinst and postrm, bug 230299
 
 *ario-1.1 (30 Jun 2008)
 
