@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3.ebuild,v 1.9 2008/06/14 12:40:44 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3.ebuild,v 1.10 2008/07/01 18:55:56 keytoaster Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -27,6 +27,7 @@ RDEPEND="sys-libs/zlib
 	>=media-libs/flac-1.1.2
 	media-libs/libmad
 	>=media-libs/musicbrainz-2.1.0
+	=media-libs/musicbrainz-2*
 	media-libs/libofa
 	media-libs/libvorbis
 	!media-sound/trm
