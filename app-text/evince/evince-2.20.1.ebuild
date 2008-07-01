@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.20.1.ebuild,v 1.9 2007/12/11 11:02:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.20.1.ebuild,v 1.10 2008/07/01 21:33:05 eva Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils gnome2 autotools
@@ -38,6 +38,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
+	~app-text/docbook-xml-dtd-4.1.2
 	>=dev-util/pkgconfig-0.9
 	>=sys-devel/automake-1.9
 	>=dev-util/intltool-0.35"
