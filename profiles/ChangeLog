@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1637 2008/06/30 23:59:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1638 2008/07/01 08:46:30 dberkholz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  01 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Change libdrm mask to all 2.3.1 for now, it breaks the intel driver (which
+  shouldn't use 2.3.1 as the check for TTM.
 
   30 Jun 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remove removed packages from package.mask.
