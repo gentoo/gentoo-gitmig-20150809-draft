@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.3.11.ebuild,v 1.3 2008/06/19 09:11:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.4.1.ebuild,v 1.1 2008/07/01 12:38:39 dragonheart Exp $
 
 inherit libtool autotools eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+	epatch "${FILESDIR}"/${PN}-2.3.11+gcc-4.3.patch
 
 	elibtoolize # for sane .so versioning on FreeBSD
 }
