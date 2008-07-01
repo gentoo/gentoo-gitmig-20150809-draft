@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.4-r1.ebuild,v 1.2 2008/07/01 19:56:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.5.ebuild,v 1.1 2008/07/01 19:56:51 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
-inherit eutils multilib autotools pam
+inherit eutils multilib pam
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
@@ -13,8 +13,7 @@ HOMEPAGE="http://www.freeradius.org/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bindist debug edirectory firebird frascend frxp kerberos ldap mysql pam postgres snmp ssl threads udpfromto \
-	elibc_glibc"
+IUSE="bindist debug edirectory firebird frascend frxp kerberos ldap mysql pam postgres snmp ssl threads udpfromto"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
@@ -50,7 +49,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-versionless-la-files.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
-	use elibc_glibc && epatch "${FILESDIR}/${P}-gnu-source.patch"
 
 	cd "${S}"
 
@@ -86,9 +84,6 @@ src_unpack() {
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
 		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
 	fi
-
-	eautoheader || die "eautoheaders failed"
-	eautoconf || die "eautoconf failed"
 }
 
 src_compile() {

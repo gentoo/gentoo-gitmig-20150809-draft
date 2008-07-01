@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.79 2008/06/14 11:09:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.80 2008/07/01 19:56:51 mrness Exp $
+
+*freeradius-2.0.5 (01 Jul 2008)
+
+  01 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  +files/freeradius-2.0.5-ssl.patch,
+  +files/freeradius-2.0.5-versionless-la-files.patch,
+  +freeradius-2.0.5.ebuild:
+  Version bump - fixes randomization of the listening port when compiled with
+  gcc-4.3 -O2 (#228887).
 
 *freeradius-2.0.4-r1 (14 Jun 2008)
 
