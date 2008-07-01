@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.5 2007/07/30 13:20:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.6 2008/07/01 21:35:27 keytoaster Exp $
 
 inherit kde
 
@@ -17,3 +17,10 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 need-kde 3.4
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
+
