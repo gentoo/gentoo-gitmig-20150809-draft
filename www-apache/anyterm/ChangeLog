@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/anyterm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.14 2008/06/01 09:29:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.15 2008/07/01 19:40:48 hollow Exp $
+
+*anyterm-1.1.24 (01 Jul 2008)
+
+  01 Jul 2008; Benedikt Böhm <hollow@gentoo.org> +anyterm-1.1.24.ebuild:
+  version bump wrt #229977
 
   01 Jun 2008; Benedikt Böhm <hollow@gentoo.org>
   +files/anyterm-1.1.22-respect-flags.patch, anyterm-1.1.22.ebuild:
