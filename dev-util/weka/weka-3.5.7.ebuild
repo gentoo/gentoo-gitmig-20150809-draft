@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.5.7.ebuild,v 1.3 2008/05/09 20:43:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.5.7.ebuild,v 1.4 2008/07/01 19:54:16 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -34,7 +34,9 @@ src_compile() {
 	echo "Compiling sources"
 	# We need to set the maximum heap size to 128m to avoid
 	#	OutOfMemoryErrors
-	find src/ -name "*.java" | xargs javac -J-Xmx128m -d build \
+	local mem=128
+	use amd64 && mem=256
+	find src/ -name "*.java" | xargs javac -J-Xmx${mem}m -d build \
 		$(java-pkg_javac-args) -sourcepath src/ -nowarn \
 		|| die "Failed to compile sources"
 
@@ -54,7 +56,7 @@ src_compile() {
 		mkdir -p dist/doc
 		echo "Generating javadocs"
 		find src/ -name "*.java" | xargs javadoc -d dist/doc/ \
-		-J-Xmx128m -quiet || die "Failed to generate javadoc"
+		-J-Xmx${mem}m -quiet || die "Failed to generate javadoc"
 	fi
 }
 
