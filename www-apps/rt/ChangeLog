@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.56 2008/04/03 09:57:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.57 2008/07/01 16:48:46 wrobel Exp $
+
+*rt-3.6.7 (01 Jul 2008)
+
+  01 Jul 2008; wrobel@gentoo.org -rt-3.6.3.ebuild, -rt-3.6.6.ebuild,
+  +rt-3.6.7.ebuild:
+  Removed vulnerable rt-3.6.3, rt-3.6.6, added rt-3.6.7 (sec issue #230007).
 
   03 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
   -files/3.4.5/postinstall-en.txt, -files/3.4.5/reconfig,

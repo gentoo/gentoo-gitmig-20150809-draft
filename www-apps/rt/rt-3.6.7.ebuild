@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.6.ebuild,v 1.2 2008/04/03 09:57:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.1 2008/07/01 16:48:46 wrobel Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -21,7 +21,8 @@ DEPEND="
 	>=dev-perl/class-returnvalue-0.40
 	>=dev-perl/CSS-Squish-0.06
 	>=dev-perl/DBI-1.37
-	>=dev-perl/dbix-searchbuilder-1.50
+	>=dev-perl/dbix-searchbuilder-1.53
+	>=dev-perl/Devel-StackTrace-1.19
 	dev-perl/GD
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
