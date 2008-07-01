@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.35 2008/06/30 20:41:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.36 2008/07/01 00:17:55 jer Exp $
+
+  01 Jul 2008; Jeroen Roovers <jer@gentoo.org> arping-2.06.ebuild:
+  Stable for HPPA (bug #229841).
 
   30 Jun 2008; Brent Baude <ranger@gentoo.org> arping-2.06.ebuild:
   stable ppc64, bug 229841
