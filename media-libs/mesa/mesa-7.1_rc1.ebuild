@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.4 2008/06/27 21:42:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc1.ebuild,v 1.5 2008/07/01 08:35:09 dberkholz Exp $
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
 
@@ -54,7 +54,7 @@ RDEPEND="app-admin/eselect-opengl
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXdamage
-	>=x11-libs/libdrm-2.3.1_pre1
+	>=x11-libs/libdrm-2.3.1
 	x11-libs/libICE
 	motif? ( x11-libs/openmotif )
 	doc? ( app-doc/opengl-manpages )
@@ -103,6 +103,7 @@ src_unpack() {
 
 	# Disable TTM
 	epatch "${FILESDIR}/0001-mesa-drm-ttm-allow-build-against-non-TTM-aware-libd.patch"
+	epatch "${FILESDIR}/0001-dri-drop-asserts-to-make-build-against-stable-libdr.patch"
 
 	cp "${FILESDIR}/version.mk" bin/ || die
 
@@ -165,10 +166,7 @@ src_compile() {
 
 	myconf="${myconf} $(use_enable motif glw)"
 
-	emake realclean || die
 	econf ${myconf} || die
-	# So makedepend runs for header changes
-	find src/mesa/drivers/dri/ | xargs touch
 	emake || die
 }
 

@@ -1,0 +1,42 @@
+From d3f7b463c3975c070503053e4ad70af99016a756 Mon Sep 17 00:00:00 2001
+From: Dave Airlie <airlied@linux.ie>
+Date: Tue, 1 Jul 2008 18:22:12 +1000
+Subject: [PATCH] dri: drop asserts to make build against stable libdrm
+
+These asserts are of questionable use at the moment with things in flux.
+---
+ src/mesa/drivers/dri/common/dri_bufmgr.c |   11 -----------
+ 1 files changed, 0 insertions(+), 11 deletions(-)
+
+diff --git a/src/mesa/drivers/dri/common/dri_bufmgr.c b/src/mesa/drivers/dri/common/dri_bufmgr.c
+index 4df006f..8b5cb76 100644
+--- a/src/mesa/drivers/dri/common/dri_bufmgr.c
++++ b/src/mesa/drivers/dri/common/dri_bufmgr.c
+@@ -40,11 +40,6 @@ dri_bo *
+ dri_bo_alloc(dri_bufmgr *bufmgr, const char *name, unsigned long size,
+ 	     unsigned int alignment, uint64_t location_mask)
+ {
+-   assert((location_mask & ~(DRM_BO_FLAG_MEM_LOCAL | DRM_BO_FLAG_MEM_TT |
+-			     DRM_BO_FLAG_MEM_VRAM | DRM_BO_FLAG_MEM_PRIV0 |
+-			     DRM_BO_FLAG_MEM_PRIV1 | DRM_BO_FLAG_MEM_PRIV2 |
+-			     DRM_BO_FLAG_MEM_PRIV3 | DRM_BO_FLAG_MEM_PRIV4 |
+-			     DRM_BO_FLAG_CACHED | DRM_BO_FLAG_CACHED_MAPPED)) == 0);
+    return bufmgr->bo_alloc(bufmgr, name, size, alignment, location_mask);
+ }
+ 
+@@ -53,12 +48,6 @@ dri_bo_alloc_static(dri_bufmgr *bufmgr, const char *name, unsigned long offset,
+ 		    unsigned long size, void *virtual,
+ 		    uint64_t location_mask)
+ {
+-   assert((location_mask & ~(DRM_BO_FLAG_MEM_LOCAL | DRM_BO_FLAG_MEM_TT |
+-			     DRM_BO_FLAG_MEM_VRAM | DRM_BO_FLAG_MEM_PRIV0 |
+-			     DRM_BO_FLAG_MEM_PRIV1 | DRM_BO_FLAG_MEM_PRIV2 |
+-			     DRM_BO_FLAG_MEM_PRIV3 |
+-			     DRM_BO_FLAG_MEM_PRIV4)) == 0);
+-
+    return bufmgr->bo_alloc_static(bufmgr, name, offset, size, virtual,
+ 				  location_mask);
+ }
+-- 
+1.5.5.4
+
