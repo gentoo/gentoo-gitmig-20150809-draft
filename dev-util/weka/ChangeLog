@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.28 2008/07/01 19:54:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.29 2008/07/01 20:24:10 ken69267 Exp $
+
+  01 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> weka-3.5.7.ebuild:
+  amd64 stable, bug #219670
 
   01 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> weka-3.5.7.ebuild:
   Increase memory on amd64 to 256 from 128.
