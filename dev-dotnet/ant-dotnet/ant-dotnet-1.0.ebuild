@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ant-dotnet/ant-dotnet-1.0.ebuild,v 1.2 2007/07/01 12:40:44 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ant-dotnet/ant-dotnet-1.0.ebuild,v 1.3 2008/07/01 19:45:06 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -21,8 +21,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/apache-${P}"
 
+JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_BUILD_TARGET="antlib"
 EANT_DOC_TARGET=""
+EANT_GENTOO_CLASSPATH="ant-core"
 
 src_install() {
 	java-pkg_newjar build/lib/${P}.jar
