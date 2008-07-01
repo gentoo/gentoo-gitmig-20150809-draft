@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.1-r2.ebuild,v 1.1 2008/06/13 05:15:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.1-r2.ebuild,v 1.2 2008/07/01 19:17:33 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -60,7 +60,8 @@ PATCHES=(
 "${FILESDIR}/2.3.1/0022-Fix-TV-programming-add-vblank-wait-after-TV_CTL-wr.patch"
 "${FILESDIR}/2.3.1/0023-Two-more-Dell-quirks.patch"
 "${FILESDIR}/2.3.1/0024-Set-up-restore-PWRCTXA-from-enter-leavevt-not-server.patch"
-"${FILESDIR}/2.3.1/0025-Fix-compiler-warning-when-disable-xvmc-config.patch")
+"${FILESDIR}/2.3.1/0025-Fix-compiler-warning-when-disable-xvmc-config.patch"
+"${FILESDIR}/0001-intel-fix-drm-check.patch")
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then

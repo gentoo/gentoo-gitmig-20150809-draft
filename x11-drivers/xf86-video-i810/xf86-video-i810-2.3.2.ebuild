@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.2.ebuild,v 1.1 2008/06/18 05:34:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.3.2.ebuild,v 1.2 2008/07/01 19:17:33 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -35,6 +35,10 @@ DEPEND="${RDEPEND}
 			x11-libs/libX11 )"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
+
+PATCHES=(
+"${FILESDIR}/0001-intel-fix-drm-check.patch"
+)
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
