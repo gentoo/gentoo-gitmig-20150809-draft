@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.101 2008/06/19 12:13:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.102 2008/07/01 19:27:04 gentoofan23 Exp $
+
+  01 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  nvidia-drivers-173.14.09.ebuild:
+  stable amd64, bug 230369
 
 *nvidia-drivers-177.13 (19 Jun 2008)
 
