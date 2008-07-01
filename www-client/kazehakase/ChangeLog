@@ -1,6 +1,15 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.59 2008/04/03 17:00:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.60 2008/07/01 00:45:00 matsuu Exp $
+
+*kazehakase-0.5.4-r1 (01 Jul 2008)
+
+  01 Jul 2008; MATSUU Takuto <matsuu@gentoo.org>
+  -files/kazehakase-0.5.3-gcc43.patch,
+  +files/kazehakase-0.5.4-xulrunner19.patch, -kazehakase-0.5.1.ebuild,
+  -kazehakase-0.5.2.ebuild, -kazehakase-0.5.3.ebuild,
+  +kazehakase-0.5.4-r1.ebuild:
+  xulrunner-1.9 support, bug #228417.
 
 *kazehakase-0.5.4 (03 Apr 2008)
 
