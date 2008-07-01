@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-pvr350
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.11 2008/06/02 05:17:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.12 2008/07/01 19:56:23 zzam Exp $
+
+  01 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-pvr350-0.0.4_pre1.ebuild, vdr-pvr350-0.0.4.20070807.ebuild,
+  vdr-pvr350-2008.05.30.ebuild:
+  Add missing a52dec dependency on the newer ebuilds, thanks to gehlhajo.
+  Use BUILD_PARAMS to set additional build parameters.
 
 *vdr-pvr350-2008.05.30 (02 Jun 2008)
 
