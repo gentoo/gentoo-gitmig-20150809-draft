@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.8 2008/06/14 16:41:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.9 2008/07/01 20:11:54 hollow Exp $
+
+*serf-0.2.0 (01 Jul 2008)
+
+  01 Jul 2008; Benedikt Böhm <hollow@gentoo.org> +serf-0.2.0.ebuild:
+  version bump wrt #229367
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> serf-0.1.2.ebuild:
   Added ~ppc
