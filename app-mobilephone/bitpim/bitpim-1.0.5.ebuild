@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.5.ebuild,v 1.4 2008/06/24 20:04:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.5.ebuild,v 1.5 2008/07/01 18:56:50 mrness Exp $
 
 inherit distutils fdo-mime multilib
 
@@ -13,13 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # this needs fixing
 #KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="crypt evo sqlite usb"
+IUSE="crypt evo usb"
 
 COMMON_DEPEND="=dev-python/wxpython-2.8.7.1*
 	>=dev-python/python-dsv-1.4.0
 	>=dev-python/pyserial-2.2
-	sqlite? ( >=dev-db/sqlite-3.3.10
-		>=dev-python/apsw-3.3.13.1 )
+	>=dev-python/apsw-3.3.13.1
 	crypt? ( >=dev-python/paramiko-1.7.1
 		>=dev-python/pycrypto-2.0.1 )
 	usb? ( >=dev-libs/libusb-0.1.10a )"
@@ -60,8 +59,9 @@ maketarball() { #For building the tarball. To be used only by ebuild maintainers
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.patch" || die "gentoo patch failed"
-	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch" || die "ffmpeg patch failed"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	sed -i "s/python2.3/${python}/" "${S}/src/native/usb/build.sh"
 }
 

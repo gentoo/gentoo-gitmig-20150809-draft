@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.25 2008/06/24 20:04:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.26 2008/07/01 18:56:50 mrness Exp $
+
+  01 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  +files/bitpim-1.0.5-gcc43.patch, bitpim-1.0.5.ebuild:
+  Depend unconditionally on dev-python/apsw (#230363). Fix broken build when
+  compiled with gcc-4.3 (#230043).
 
   24 Jun 2008; Alin Năstac <mrness@gentoo.org>
   -files/bitpim-0.9.10-gentoo.patch, -files/bitpim-0.9.13-gentoo.patch,
