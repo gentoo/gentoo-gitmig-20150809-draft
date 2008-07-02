@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.14 2008/06/21 19:26:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.15 2008/07/02 13:25:38 ranger Exp $
+
+  02 Jul 2008; Brent Baude <ranger@gentoo.org> libisofs-0.6.2.1.ebuild:
+  Marking libisofs-0.6.2.1 ppc for bug 208920
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> libisofs-0.6.2.1.ebuild:
   Stable on ppc64; bug #298920
