@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.26 2008/03/27 16:41:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.27 2008/07/02 15:39:01 tester Exp $
+
+*libotr-3.2.0 (02 Jul 2008)
+
+  02 Jul 2008; Olivier Crête <tester@gentoo.org> -libotr-1.0.4.ebuild,
+  -libotr-2.0.0.ebuild, -libotr-2.0.1.ebuild, -libotr-2.0.2.ebuild,
+  -libotr-3.0.0.ebuild, +libotr-3.2.0.ebuild:
+  Version bump, cleanup old
 
   27 Mar 2008; Markus Rothe <corsair@gentoo.org> libotr-3.1.0.ebuild:
   Stable on ppc64; bug #215064
