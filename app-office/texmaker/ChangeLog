@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.45 2008/07/02 15:07:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.46 2008/07/02 20:12:52 aballier Exp $
+
+  02 Jul 2008; Alexis Ballier <aballier@gentoo.org> -texmaker-1.71.ebuild:
+  remove unused version
 
   02 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   files/texmaker-1.71-hunspell.patch, texmaker-1.71-r1.ebuild:
