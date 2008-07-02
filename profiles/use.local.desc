@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3613 2008/06/30 16:49:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3614 2008/07/02 09:18:44 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1942,6 +1942,7 @@ sci-libs/blas-goto:int64 - Build the 64 bits integer library
 sci-libs/cholmod:metis - Enable the Partition module to cholmod using metis
 sci-libs/cholmod:supernodal - Enable the Supernodal module (needs lapack)
 sci-libs/fftw:float - Links default library to single precision instead of double (symlinks only)
+sci-libs/fftw:openmp - Build support for the OpenMP (support parallel computing)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:gml - Enables support for xerces-c API

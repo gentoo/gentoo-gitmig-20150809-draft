@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1638 2008/07/01 08:46:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1639 2008/07/02 09:18:44 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  02 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added openmp local USE flag for sci-libs/fftw
 
   01 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
   Change libdrm mask to all 2.3.1 for now, it breaks the intel driver (which
