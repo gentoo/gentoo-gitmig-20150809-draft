@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-gio
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.1 2008/07/02 21:54:12 drac Exp $
+
+*gst-plugins-gio-0.10.20 (02 Jul 2008)
+
+  02 Jul 2008; Samuli Suominen <drac@gentoo.org>
+  +gst-plugins-gio-0.10.20.ebuild:
+  Initial commit wrt #220791, thanks to Florian Steinel and Igor.
+
