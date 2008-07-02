@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.22 2008/07/02 20:57:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.23 2008/07/02 21:07:35 aballier Exp $
+
+  02 Jul 2008; Alexis Ballier <aballier@gentoo.org> camlp5-5.08.ebuild,
+  camlp5-5.09.ebuild:
+  set eapi before inherit, as pointed out by Thomas Anderson
 
 *camlp5-5.09 (02 Jul 2008)
 
