@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.3 2008/06/29 20:00:01 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.4 2008/07/02 16:28:00 ranger Exp $
 
 inherit findlib eutils
 
@@ -15,7 +15,7 @@ DEPEND=">=dev-lang/ocaml-3.07
 	>=dev-libs/libpcre-4.5"
 SLOT="0"
 IUSE="examples +ocamlopt"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 
 pkg_setup() {
 	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
