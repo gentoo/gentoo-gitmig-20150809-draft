@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.5 2008/05/29 17:56:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.6 2008/07/02 14:19:00 bicatali Exp $
 
 inherit eutils python
 
@@ -17,11 +17,11 @@ RESTRICT="test"
 # should use xdg-utils once those are working for postcript viewers
 RDEPEND=">=dev-python/pyx-0.9
 	sci-libs/scipy
-	virtual/tetex
 	virtual/ghostscript
 	|| ( app-text/gv app-text/ggv )
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}"
+
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
@@ -54,7 +54,6 @@ src_unpack() {
 	sed -i \
 		-e 's/ex_\*/{ex_,fig}\*/' \
 		Makefile.skel || die "sed examples failed"
-
 }
 
 src_compile() {
