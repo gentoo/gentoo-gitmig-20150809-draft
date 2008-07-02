@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.32 2008/06/30 16:53:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.33 2008/07/02 14:04:55 flameeyes Exp $
+
+*rbot-0.9.11_rc1 (02 Jul 2008)
+
+  02 Jul 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +rbot-0.9.11_rc1.ebuild, rbot-9999-r10.ebuild:
+  Add an ebuild for the first release candidate of the new 0.9.11 rbot. As
+  the new version is long overdue, I'm not masking it for now, but I am
+  dropping all the keywords beside the one where I tested it. Note that this
+  RC does not contain nls support for a problem with packaging. Fixed up the
+  live ebuild so that it can be re-used for the next RC too.
 
 *rbot-9999-r10 (30 Jun 2008)
 
