@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.133 2008/06/15 19:47:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.134 2008/07/02 21:03:28 eva Exp $
+
+*gtksourceview-2.2.2 (02 Jul 2008)
+
+  02 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceview-2.2.2.ebuild:
+  bump to 2.2.2.
+   * Improvements to some of the lang files
+   * Misc bugfixes
+   * Updated translations
 
   15 Jun 2008; Sven Wegener <swegener@gentoo.org>
   gtksourceview-2.0.2.ebuild:
