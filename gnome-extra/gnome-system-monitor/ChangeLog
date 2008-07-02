@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.167 2008/05/31 11:27:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.168 2008/07/02 21:18:35 eva Exp $
+
+*gnome-system-monitor-2.22.3 (02 Jul 2008)
+
+  02 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-system-monitor-2.22.3.ebuild:
+  bump to 2.22.3. Do not show interface with a link local or no address.
+  Translation updates.
 
 *gnome-system-monitor-2.22.2 (31 May 2008)
 
