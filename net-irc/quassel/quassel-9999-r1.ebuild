@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999-r1.ebuild,v 1.2 2008/06/17 10:58:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999-r1.ebuild,v 1.3 2008/07/02 16:03:12 flameeyes Exp $
 
 EAPI=1
 
@@ -81,10 +81,8 @@ src_install() {
 
 	# Only install the icons if the X client was installed
 	if use X; then
-		local size
-		for size in 16 24 32 48 64 96 128 256 512; do
-			insinto /usr/share/icons/hicolor/${size}x${size}
-			newins "${S}"/src/icons/quassel/connected/${size}.png quassel.png
-		done
+		insinto /usr/share/icons/hicolor
+		# avoid the connected/ directory, get only the ${size}x${size}
+		doins -r "${S}"/src/icons/quassel/*x*
 	fi
 }
