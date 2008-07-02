@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-1.0.19.ebuild,v 1.1 2008/06/26 23:54:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-1.0.19.ebuild,v 1.2 2008/07/02 01:08:03 darkside Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="static"
 
 DEPEND="${RDEPEND}" #configure bails if libnl isn't present
-RDEPEND="dev-libs/libnl"
+RDEPEND=">=dev-libs/libnl-1.1"
 
 src_compile() {
 	use static && append-ldflags -static
