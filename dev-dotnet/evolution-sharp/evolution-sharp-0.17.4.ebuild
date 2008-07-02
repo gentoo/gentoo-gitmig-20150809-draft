@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.17.4.ebuild,v 1.1 2008/06/27 12:01:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.17.4.ebuild,v 1.2 2008/07/02 16:27:05 ranger Exp $
 
 inherit mono gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/beagle"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8.1-r1

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.23 2008/06/27 12:01:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.24 2008/07/02 16:27:05 ranger Exp $
+
+  02 Jul 2008; Brent Baude <ranger@gentoo.org>
+  evolution-sharp-0.17.4.ebuild:
+  stable ppc, bug 229717
 
 *evolution-sharp-0.17.4 (27 Jun 2008)
 
