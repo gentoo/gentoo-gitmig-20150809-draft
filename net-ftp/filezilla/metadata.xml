@@ -6,6 +6,10 @@
 <email>jsin@gentoo.org</email>
 <name>Jason Smathers</name>
 </maintainer>
+<maintainer>
+<email>voyageur@gentoo.org</email>
+<name>Bernard Cafarelli</name>
+</maintainer>
 <longdescription lang="en">
 The native linux ftp/sftp client GUI built on wxGTK
 </longdescription>
