@@ -1,5 +1,5 @@
---- configure.in.orig	2008-04-01 22:46:45.943787297 +0100
-+++ configure.in	2008-04-01 22:58:13.510969518 +0100
+--- configure.in.orig	2008-06-22 17:01:59.013047109 +0100
++++ configure.in	2008-06-22 17:17:39.421924454 +0100
 @@ -1,6 +1,7 @@
  dnl Process this file with autoconf to produce a configure script.
  AC_INIT(fftw/planner.c)
@@ -95,7 +95,24 @@
  fi
  
  
-@@ -243,7 +244,7 @@
+@@ -230,6 +231,16 @@
+ 		AC_TRY_LINK_FUNC(omp_set_num_threads,THREADLIBS=" "
+ 			omp_enabler="$CC -omp")
+ 		if test -z "$THREADLIBS"; then
++			CFLAGS="$save_CFLAGS -fopenmp"
++			AC_TRY_LINK_FUNC(omp_set_num_threads,THREADLIBS="-lgomp"
++				omp_enabler="$CC -fopenmp")
++		fi
++		if test -z "$THREADLIBS"; then
++			CFLAGS="$save_CFLAGS -fopenmp"
++			AC_TRY_LINK_FUNC(omp_set_num_threads,THREADLIBS=""
++				omp_enabler="$CC -openmp")
++		fi
++		if test -z "$THREADLIBS"; then
+ 			CFLAGS="$save_CFLAGS -mp"
+ 			AC_TRY_LINK_FUNC(omp_set_num_threads,THREADLIBS=" "
+ 				omp_enabler="$CC -mp")
+@@ -243,7 +249,7 @@
  		if test -z "$THREADLIBS"; then
  			AC_MSG_ERROR([don't know how to enable OpenMP])
  		fi
@@ -104,7 +121,7 @@
  	fi
  	if test "$with_sgimp"x != nox; then
  		AC_MSG_CHECKING(how to enable SGI MP)
-@@ -261,7 +262,7 @@
+@@ -261,7 +267,7 @@
  		if test -z "$THREADLIBS"; then 
  			AC_MSG_ERROR([don't know how to enable SGI MP])
  		fi
@@ -113,7 +130,7 @@
  	fi
  
  	# POSIX threads, the default choice:
-@@ -270,38 +271,38 @@
+@@ -270,38 +276,38 @@
  		ACX_PTHREAD([THREADLIBS="$PTHREAD_LIBS "
  	                     CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
  	                     CC="$PTHREAD_CC"
@@ -158,7 +175,7 @@
  	fi
  	if test -z "$THREADLIBS"; then
  		AC_MSG_ERROR(couldn't find threads library for --enable-threads)
-@@ -334,7 +335,7 @@
+@@ -334,7 +340,7 @@
  	CC="$MPICC"
  	ok=yes
  	AC_TRY_LINK([#include <mpi.h>
