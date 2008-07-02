@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/processing-0.52.ebuild,v 1.1 2008/07/02 02:15:58 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/processing-0.52.ebuild,v 1.2 2008/07/02 02:26:15 chtekk Exp $
 
 NEED_PYTHON=2.4
 
@@ -21,3 +21,5 @@ RDEPEND="!>=dev-lang/python-2.6"
 DEPEND="${RDEPEND}
 		app-arch/unzip
 		dev-python/setuptools"
+
+S="${S}/${P}"
