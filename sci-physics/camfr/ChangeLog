@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.7 2008/05/05 21:55:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.8 2008/07/02 13:51:49 bicatali Exp $
+
+  02 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/camfr-20070717-gcc43.patch, camfr-20070717.ebuild:
+  Added gcc-4.3 patch, make it blas/lapack implementation more independent,
+  run tests without X (close bug #229753) and some dep cleaning
 
   05 May 2008; Sébastien Fabbro <bicatali@gentoo.org> -files/SConstruct,
   -files/machine_cfg.py, -files/throw_patch.diff, -camfr-1.2.ebuild:
