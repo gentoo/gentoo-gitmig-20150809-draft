@@ -1,0 +1,20 @@
+diff -u qp8.5.orig/src/pedro_env.cc qp8.5/src/pedro_env.cc
+--- qp8.5.orig/src/pedro_env.cc	2008-06-17 10:16:59.000000000 +1200
++++ qp8.5/src/pedro_env.cc	2008-07-02 18:55:38.000000000 +1200
+@@ -1,4 +1,4 @@
+-
++#include <algorithm>
+ #include <string>
+ #include <sstream>
+ #include <stdio.h>
+diff -u qp8.5.orig/src/system_support.cc qp8.5/src/system_support.cc
+--- qp8.5.orig/src/system_support.cc	2008-06-17 10:16:59.000000000 +1200
++++ qp8.5/src/system_support.cc	2008-07-02 18:56:42.000000000 +1200
+@@ -60,6 +60,7 @@
+ 
+ // PORT
+ #include "system_support.h"
++#include <cstdlib>
+ #include <iostream>
+ using namespace std;
+ 
