@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.15.ebuild,v 1.1 2008/07/02 12:33:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.15.ebuild,v 1.2 2008/07/02 12:35:09 drac Exp $
 
-inherit flag-o-matic autotools
+inherit flag-o-matic
 
 DESCRIPTION="library of simple functions that are optimized for various CPUs"
 HOMEPAGE="http://liboil.freedesktop.org/"
