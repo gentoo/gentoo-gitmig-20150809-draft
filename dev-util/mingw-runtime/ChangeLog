@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mingw-runtime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.10 2008/01/20 03:44:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.11 2008/07/02 21:49:29 vapier Exp $
+
+  02 Jul 2008; Mike Frysinger <vapier@gentoo.org> mingw-runtime-3.14.ebuild:
+  Workaround portage IUSE deficiencies by adding the expanded
+  crosscompile_opts.
 
 *mingw-runtime-3.14 (20 Jan 2008)
 
