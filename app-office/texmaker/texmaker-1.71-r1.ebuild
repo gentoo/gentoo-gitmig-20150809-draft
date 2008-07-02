@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.71-r1.ebuild,v 1.1 2008/05/13 20:34:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.71-r1.ebuild,v 1.2 2008/07/02 15:07:22 aballier Exp $
 
 EAPI=1
 
@@ -31,16 +31,19 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE=""
 
-DEPEND="x11-libs/libX11
+COMMON_DEPEND="x11-libs/libX11
 	x11-libs/libXext
 	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.3.0:4 )
 	>=app-text/hunspell-1.2.2"
 
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm"
+
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

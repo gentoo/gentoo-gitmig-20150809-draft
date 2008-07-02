@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.44 2008/05/13 20:34:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.45 2008/07/02 15:07:22 aballier Exp $
+
+  02 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  files/texmaker-1.71-hunspell.patch, texmaker-1.71-r1.ebuild:
+  fix hunspell detection by using pkgconfig, by René 'Necoro' Neumann
+  <gentoo@necoro.eu>, bug #229729
 
 *texmaker-1.71-r1 (13 May 2008)
 
