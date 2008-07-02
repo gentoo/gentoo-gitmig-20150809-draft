@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.19 2008/06/29 10:01:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.20 2008/07/02 15:47:39 flameeyes Exp $
+
+*quassel-0.2.0_rc1 (02 Jul 2008)
+
+  02 Jul 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +quassel-0.2.0_rc1.ebuild:
+  Update to the Release Candidate (is it today RC day?). This version uses
+  cmake now so there you go with the new deps too.
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> quassel-0.2.0_beta1.ebuild:
   Add missing die: || "..." -> || die "..."
