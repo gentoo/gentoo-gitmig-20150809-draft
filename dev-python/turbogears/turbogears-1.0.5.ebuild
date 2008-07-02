@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.5.ebuild,v 1.1 2008/07/02 05:43:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.5.ebuild,v 1.2 2008/07/02 13:19:09 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -10,7 +10,6 @@ KEYWORDS="~x86"
 
 MY_PN=TurboGears
 MY_P=${MY_PN}-${PV}
-
 
 DESCRIPTION="The rapid web development meta-framework you've been looking for."
 HOMEPAGE="http://www.turbogears.org/"

@@ -1,9 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiref/wsgiref-0.1.2.ebuild,v 1.1 2008/07/02 05:16:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiref/wsgiref-0.1.2.ebuild,v 1.2 2008/07/02 13:19:50 mr_bones_ Exp $
 
 inherit distutils
-
 
 DESCRIPTION="WSGI (PEP 333) Reference Library"
 HOMEPAGE="http://cheeseshop.python.org/pypi/wsgiref"
@@ -15,4 +14,3 @@ IUSE=""
 DEPEND="app-arch/unzip
 	dev-python/setuptools"
 RDEPEND="!>=dev-lang/python-2.5"
-

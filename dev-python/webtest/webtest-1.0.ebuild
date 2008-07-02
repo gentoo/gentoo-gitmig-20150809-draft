@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.0.ebuild,v 1.1 2008/07/02 05:19:59 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.0.ebuild,v 1.2 2008/07/02 13:19:29 mr_bones_ Exp $
 
 inherit distutils
 
@@ -18,5 +18,3 @@ S="${WORKDIR}/${MY_P}"
 DEPEND="dev-python/setuptools"
 RDEPEND="|| ( >=dev-python/wsgiref-0.1.2 >=dev-lang/python-2.5.2-r4 )
 	>=dev-python/webob-0.9.2"
-
-
