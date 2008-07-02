@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/webtest
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.1 2008/07/02 05:19:59 pythonhead Exp $
+
+*webtest-1.0 (02 Jul 2008)
+
+  02 Jul 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +webtest-1.0.ebuild:
+  Initial commit.
+
