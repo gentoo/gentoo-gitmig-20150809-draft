@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.95 2008/07/01 19:17:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.96 2008/07/02 10:02:55 remi Exp $
+
+  02 Jul 2008; Rémi Cardona <remi@gentoo.org>
+  -xf86-video-i810-2.3.0.ebuild, -xf86-video-i810-2.3.1.ebuild,
+  -xf86-video-i810-2.3.1-r1.ebuild, -xf86-video-i810-2.3.1-r2.ebuild:
+  clean up old releases
 
   01 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0001-intel-fix-drm-check.patch, xf86-video-i810-2.3.1-r2.ebuild,
