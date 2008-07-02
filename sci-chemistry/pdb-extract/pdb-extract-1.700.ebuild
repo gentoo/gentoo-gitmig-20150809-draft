@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-1.700.ebuild,v 1.5 2008/04/08 08:02:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-1.700.ebuild,v 1.6 2008/07/02 01:39:27 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -42,9 +42,11 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/bin
-	doexe bin/*
-	dolib.a lib/*
+	doexe bin/* || die
+	dolib.a lib/* || die
 	insinto /usr/include/rcsb
-	doins include/*
+	doins include/* || die
 	dodoc README-source README
+	insinto /usr/lib/rcsb/pdb-extract-data
+	doins pdb-extract-data/* || die
 }
