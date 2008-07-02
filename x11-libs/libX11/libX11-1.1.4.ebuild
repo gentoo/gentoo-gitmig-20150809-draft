@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.1.4.ebuild,v 1.7 2008/06/05 21:09:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.1.4.ebuild,v 1.8 2008/07/02 14:47:17 solar Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
-inherit x-modular
+inherit x-modular toolchain-funcs flag-o-matic
 
 DESCRIPTION="X.Org X11 library"
 
@@ -29,3 +29,11 @@ CONFIGURE_OPTIONS="$(use_enable ipv6)
 	$(use_with xcb)"
 # xorg really doesn't like xlocale disabled.
 # $(use_enable nls xlocale)
+
+x-modular_src_compile() {
+        x-modular_src_configure
+	# [Cross-Compile Love] Disable {C,LD}FLAGS and redefine CC= for 'makekeys'
+	( filter-flags -m* ; cd src/util && make CC=$(tc-getBUILD_CC) CFLAGS="${CFLAGS}" LDFLAGS="" clean all)
+        x-modular_src_make
+}
+
