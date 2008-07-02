@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.3.ebuild,v 1.4 2008/07/02 16:55:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.4.ebuild,v 1.1 2008/07/02 16:55:11 bicatali Exp $
 
 inherit distutils
 
@@ -24,9 +24,9 @@ DEPEND="${RDEPEND}
 
 DOCS="docs/bugs docs/Changelog docs/history"
 
-#src_unpack() {
-#	distutils_src_unpack
-#	cd "${S}"
+src_unpack() {
+	distutils_src_unpack
+	cd "${S}"
 	# removing namespaces in order to avoid annoying warning
-#	sed -i -e '/namespace_packages/d' setup.py
-#}
+	sed -i -e '/namespace_packages/d' setup.py
+}
