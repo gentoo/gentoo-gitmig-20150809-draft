@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/processing
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/ChangeLog,v 1.1 2008/07/02 02:15:58 chtekk Exp $
+
+*processing-0.52 (02 Jul 2008)
+
+  02 Jul 2008; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +processing-0.52.ebuild:
+  Initial rev.
+
