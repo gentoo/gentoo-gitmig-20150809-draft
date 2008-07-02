@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.14 2007/03/21 14:13:24 mcummings Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.15 2008/07/02 19:04:17 ranger Exp $
+
+  02 Jul 2008; Brent Baude <ranger@gentoo.org> Unicode-Map-0.112.ebuild:
+  stable ppc, bug 229403
 
   21 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   Unicode-Map-0.112.ebuild:
