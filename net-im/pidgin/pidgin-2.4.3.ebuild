@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.1.ebuild,v 1.1 2008/04/01 15:28:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.3.ebuild,v 1.1 2008/07/02 04:33:01 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -50,6 +50,7 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
+	gtk? ( x11-proto/scrnsaverproto )
 	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"
 
@@ -192,6 +193,7 @@ src_compile() {
 		$(use_enable prediction cap) \
 		$(use_enable networkmanager nm) \
 		$(use_with zephyr krb4) \
+		$(use_enable bonjour avahi) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		--x-includes=/usr/include/X11 \
