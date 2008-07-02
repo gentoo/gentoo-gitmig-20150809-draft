@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2-r1.ebuild,v 1.1 2008/07/02 09:20:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2-r1.ebuild,v 1.2 2008/07/02 13:20:12 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs autotools fortran
 
@@ -83,7 +83,6 @@ src_compile() {
 		die "econf long double failed"
 	emake || die "emake long double failed"
 }
-
 
 src_test () {
 	# We want this to be a reasonably quick test, but that is still hard...
