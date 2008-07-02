@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.6 2008/05/29 17:51:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.7 2008/07/02 16:51:29 bicatali Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
@@ -28,6 +28,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-swig.patch"
 	epatch "${FILESDIR}/${P}-python-shared.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
