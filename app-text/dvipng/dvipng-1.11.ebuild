@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.6 2008/07/01 16:46:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.7 2008/07/02 16:16:29 jer Exp $
 
 inherit eutils
 
 IUSE="truetype"
 DESCRIPTION="A program to translate a DVI (DeVice Independent) files into PNG (Portable Network Graphics) bitmaps"
 HOMEPAGE="http://dvipng.sourceforge.net/"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
