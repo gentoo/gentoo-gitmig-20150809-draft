@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.4.3.ebuild,v 1.2 2008/03/29 19:31:40 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.4.5.ebuild,v 1.1 2008/07/03 20:55:46 eva Exp $
 
 inherit eutils gnome2
 

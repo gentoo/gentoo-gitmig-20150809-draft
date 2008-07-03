@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.101 2008/05/16 18:44:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.102 2008/07/03 20:55:46 eva Exp $
+
+*glade-3.4.5 (03 Jul 2008)
+
+  03 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/glade-2.0.0-scrollkeeper.patch, -glade-2.12.1.ebuild,
+  -glade-3.4.0-r1.ebuild, -glade-3.4.1-r1.ebuild, -glade-3.4.3.ebuild,
+  +glade-3.4.5.ebuild:
+  bump to 3.4.5. Fixed annoying text editing bug. Close bug #227915.
 
   16 May 2008; nixnut <nixnut@gentoo.org> glade-2.12.2-r1.ebuild:
   Stable on ppc wrt bug 201962
