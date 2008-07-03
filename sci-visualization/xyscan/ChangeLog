@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.1 2008/07/03 22:55:15 markusle Exp $
+
+*xyscan-3.02 (03 Jul 2008)
+
+  03 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/xyscan-3.02-docs.patch, +metadata.xml, +xyscan-3.02.ebuild:
+  New package (see bug #226481). Thanks much to Benjamin Bannier
+  <benni@netronaut.de> for his ebuild.
+
