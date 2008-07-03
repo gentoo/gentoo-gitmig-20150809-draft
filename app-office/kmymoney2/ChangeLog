@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.69 2008/07/03 00:40:09 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.70 2008/07/03 01:07:32 gentoofan23 Exp $
+
+  03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  kmymoney2-0.9.ebuild:
+  Enable some more ofx stuff, and change dependencies accordingly. Add
+  pkgconfig dep as its needed; Commit signed off by keytoaster.
 
 *kmymoney2-0.9 (03 Jul 2008)
 

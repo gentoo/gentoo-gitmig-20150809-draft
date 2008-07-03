@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.ebuild,v 1.1 2008/07/03 00:40:09 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.ebuild,v 1.2 2008/07/03 01:07:32 gentoofan23 Exp $
 
+EAPI="1"
 inherit kde
 
 DESCRIPTION="Personal Finances Manager for KDE."
@@ -15,9 +16,13 @@ IUSE="crypt ofx qtdesigner test"
 
 COMMON_DEPEND="dev-libs/libxml2
 	hbci? ( >=net-libs/aqbanking-1.8.0_beta )
-	ofx? ( >=dev-libs/libofx-0.7 )"
+	ofx? ( >=dev-libs/libofx-0.8.2
+	|| ( dev-cpp/xmlpp:2.6 >=dev-cpp/libxmlpp-1.0.1:0 )
+	>=net-misc/curl-7.9.7
+	app-text/opensp )"
 
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/pkgconfig-0.9.0
 	test? ( >=dev-util/cppunit-1.8.0 )"
 
 RDEPEND="${COMMON_DEPEND}
@@ -36,8 +41,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf="$(use_enable ofx ofxplugin)
-			$(use_enable qtdesigner)
-			$(use_enable test cppunit)"
+		$(use_enable ofx ofxbanking)
+		$(use_enable qtdesigner)
+		$(use_enable test cppunit)"
 
 	# bug 132665
 	replace-flags "-Os" "-O2"
