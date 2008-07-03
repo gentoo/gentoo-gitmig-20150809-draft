@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/enet
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.14 2008/03/27 17:03:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.15 2008/07/03 17:08:29 rich0 Exp $
+
+  03 Jul 2008; Richard Freeman <rich0@gentoo.org> enet-1.2.ebuild:
+  amd64 stable - 229627
 
 *enet-1.2 (27 Mar 2008)
 
