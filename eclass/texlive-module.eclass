@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.10 2008/07/03 22:33:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.11 2008/07/03 22:36:12 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -24,7 +24,8 @@
 # The list of packages that will be installed. This variable will be expanded to
 # SRC_URI:
 #
-# foo -> texlive-module-foo-${PV}.zip
+# For TeX Live 2007: foo -> texlive-module-foo-${PV}.zip
+# For TeX Live 2008: foo -> texlive-module-foo-${PV}.tar.lzma
 
 inherit texlive-common
 
