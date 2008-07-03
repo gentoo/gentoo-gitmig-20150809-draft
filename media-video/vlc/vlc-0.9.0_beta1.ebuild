@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta1.ebuild,v 1.1 2008/07/01 22:51:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta1.ebuild,v 1.2 2008/07/03 19:06:45 aballier Exp $
 
 EAPI="1"
 
@@ -40,7 +40,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio dbus dc1394
 	debug directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac ggi gnome gnutls hal httpd
-	id3tag jack libcaca libnotify lirc live lua matroska mmx modplug mp3 mpeg
+	id3tag jack libcaca +libgcrypt libnotify lirc live lua matroska mmx modplug mp3 mpeg
 	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png	pulseaudio pvr +qt4
 	remoteosd rtsp samba sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs
@@ -77,12 +77,12 @@ RDEPEND="
 		ggi? ( media-libs/libggi )
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.3.3 )
-		>=dev-libs/libgcrypt-1.2.0
 		hal? ( sys-apps/hal )
 		id3tag? ( media-libs/libid3tag
 			sys-libs/zlib )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		libcaca? ( media-libs/libcaca )
+		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2007.02.20 )
@@ -192,6 +192,7 @@ pkg_setup() {
 	vlc_use_needs cdda cdio
 	vlc_use_needs vcdx cdio
 	vlc_use_needs bidi truetype
+	vlc_use_force remoteosd libgcrypt
 }
 
 src_unpack() {
@@ -262,7 +263,7 @@ src_compile () {
 		$(use_enable jack) \
 		--disable-kate \
 		$(use_enable libcaca caca) \
-		--enable-libgcrypt \
+		$(use_enable libgcrypt) \
 		$(use_enable libnotify notify) \
 		--disable-libproxy \
 		--disable-libtar \
@@ -287,7 +288,6 @@ src_compile () {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
-		$(use_enable remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable samba smb) \
 		--disable-schroedinger \
@@ -324,7 +324,8 @@ src_compile () {
 		--disable-optimizations \
 		--enable-fast-install \
 		$(vlc_use_enable_force vlm vlm sout) \
-		$(vlc_use_enable_force skins skins2 qt4)
+		$(vlc_use_enable_force skins skins2 qt4) \
+		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
 
 	# Reminder to re-add this when disabling it will not be broken
 	# $(use_enable stream sout) \

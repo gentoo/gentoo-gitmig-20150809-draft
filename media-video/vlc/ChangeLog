@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.352 2008/07/01 22:51:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.353 2008/07/03 19:06:45 aballier Exp $
+
+  03 Jul 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.9.0_beta1.ebuild:
+  make libgcrypt optional again
 
 *vlc-0.9.0_beta1 (01 Jul 2008)
 
