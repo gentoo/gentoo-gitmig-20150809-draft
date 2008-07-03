@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8795 2008/07/03 16:13:57 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8796 2008/07/03 18:13:59 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1276,10 +1276,6 @@ kde-misc/kdbus
 # Seemant Kulleen <seemant@gentoo.org> (23 May 2007)
 # Masked because 1.2.1 because it is broken
 =net-wireless/ipw3945-1.2.1
-
-# Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
-# development version
-=media-sound/lilypond-2.11*
 
 # Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
 #   Mask for testing.
