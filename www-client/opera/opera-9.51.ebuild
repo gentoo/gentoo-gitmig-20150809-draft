@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.1 2008/07/03 22:52:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.2 2008/07/03 23:13:10 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -29,8 +29,11 @@ O_SUFF="2061"
 
 SRC_URI="
 	ppc? ( ${O_URI}linux${O_FTP}ppc/shared/${P}.gcc4-shared-qt3.ppc.tar.bz2 )
+	x86-fbsd? (
+		qt-static? ( ${O_URI}unix/freebsd${O_FTP}intel/static/${P}-freebsd5-static-qt3.i386.tar.bz2 )
+		!qt-static? ( ${O_URI}unix/freebsd${O_FTP}intel/shared/${P}-freebsd5-shared-qt3.i386.tar.bz2 )
+	)
 	qt-static? (
-		x86-fbsd? ( ${O_URI}unix/freebsd${O_FTP}intel/static/${P}-freebsd5-static-qt3.i386.tar.bz2 )
 		qt3-static? (
 			amd64? (
 				ia32? ( ${O_URI}linux${O_FTP}i386/static/${P}.gcc4-static-qt3.i386.tar.bz2 )
@@ -47,7 +50,6 @@ SRC_URI="
 		)
 	)
 	!qt-static? (
-		x86-fbsd? ( ${O_URI}unix/freebsd${O_FTP}intel/shared/${P}-freebsd5-shared-qt3.i386.tar.bz2 )
 		qt3-static? (
 			amd64? (
 				ia32? ( ${O_URI}linux${O_FTP}i386/shared/${P}.gcc4-shared-qt3.i386.tar.bz2 )
