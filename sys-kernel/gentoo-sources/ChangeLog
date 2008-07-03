@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.526 2008/07/03 19:03:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.527 2008/07/03 19:44:40 bluebird Exp $
+
+  02 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gentoo-sources-2.6.25-r6.ebuild:
+  Stable on sparc, bug #230285
 
   03 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r6.ebuild:
