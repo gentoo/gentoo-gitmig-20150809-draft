@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.6 2008/04/12 18:34:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.7 2008/07/03 11:08:35 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -26,7 +26,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=("${FILESDIR}/${P}-new-ffmpeg.diff")
 
-VDRPLUGIN_MAKE_TARGET="all -j1"
+BUILD_PARAMS="-j1"
 
 src_unpack() {
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	use !exif && sed -i "s:#WITHOUT_LIBEXIF:WITHOUT_LIBEXIF:" Makefile
 	if has_version "<=media-video/ffmpeg-0.4.9_p20061016"; then
-		VDRPLUGIN_MAKE_TARGET="${VDRPLUGIN_MAKE_TARGET} WITHOUT_SWSCALER=1"
+		BUILD_PARAMS="${BUILD_PARAMS} WITHOUT_SWSCALER=1"
 	fi
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
