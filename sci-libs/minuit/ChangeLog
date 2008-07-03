@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/minuit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.6 2008/06/01 10:24:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.7 2008/07/03 10:16:31 bicatali Exp $
+
+*minuit-5.20.00 (03 Jul 2008)
+
+  03 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/minuit-5.20.00-gcc43.patch, metadata.xml, +minuit-5.20.00.ebuild:
+  Version bump.
 
   01 Jun 2008; Markus Dittrich <markusle@gentoo.org>
   +files/minuit-5.16.00-gcc4.3.patch, minuit-5.16.00.ebuild:
