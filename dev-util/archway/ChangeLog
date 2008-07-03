@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/archway
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/archway/ChangeLog,v 1.9 2008/04/21 17:15:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/archway/ChangeLog,v 1.10 2008/07/03 04:09:42 darkside Exp $
+
+  03 Jul 2008; Jeremy Olexa <darkside@gentoo.org> -archway-0.1.1.ebuild,
+  -archway-0.2.0.ebuild, archway-0.2.1.ebuild:
+  Fix & remove deps which were implied and/or not needed. Fixes bug #230605.
+  Also, remove old versions
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
