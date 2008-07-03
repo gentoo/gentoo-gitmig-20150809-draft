@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.172 2008/07/01 00:24:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.173 2008/07/03 19:13:04 bluebird Exp $
+
+  02 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  iptables-1.4.0-r1.ebuild:
+  Stable on sparc, bug #209222
 
   01 Jul 2008; Jeroen Roovers <jer@gentoo.org> iptables-1.4.0-r1.ebuild:
   Stable for HPPA (bug #209222).
