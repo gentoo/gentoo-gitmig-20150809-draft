@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.43 2008/06/15 20:37:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.44 2008/07/03 22:37:54 gentoofan23 Exp $
+
+  03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  stellarium-0.9.1-r1.ebuild:
+  Migrate Dependencies to permit Split QT 4.4 to satisfy dependencies, bug
+  #217189
 
   15 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   -stellarium-0.9.1.ebuild, stellarium-0.9.1-r1.ebuild:
