@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1644 2008/07/03 13:52:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1645 2008/07/03 13:56:33 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Jul 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Update comment on tla mask
 
   03 Jul 2008; Jim Ramsay <lack@gentoo.org> package.mask:
   Removing netscape-flash-10 from mask - It seems reasonably stable now with
