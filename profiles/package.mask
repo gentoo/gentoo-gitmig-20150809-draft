@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8794 2008/07/03 13:56:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8795 2008/07/03 16:13:57 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -266,6 +266,9 @@ www-apps/gitweb
 # Masked for testing wrt #163724
 dev-libs/libffi
 x11-libs/gtk-server
+virtual/libffi
+>=dev-libs/g-wrap-1.9.11
+>=dev-scheme/guile-gnome-platform-2.16.0
 
 # Jeremy Olexa <darkside@gentoo.org> (04 Jun 2008)
 # Can't download distfile. Newer versions in tree. bug #193625
