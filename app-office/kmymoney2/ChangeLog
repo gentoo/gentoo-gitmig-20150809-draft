@@ -1,6 +1,13 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.68 2008/01/24 22:38:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.69 2008/07/03 00:40:09 keytoaster Exp $
+
+*kmymoney2-0.9 (03 Jul 2008)
+
+  03 Jul 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +kmymoney2-0.9.ebuild:
+  Version bump, bug #219325. Patch by gentoofan23, thanks! No hbci in this
+  version. Adding USE="qtdesigner".
 
   24 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kmymoney2-0.8.8.ebuild:
