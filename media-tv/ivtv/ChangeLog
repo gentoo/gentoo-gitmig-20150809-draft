@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.105 2008/06/30 19:38:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.106 2008/07/03 16:22:24 cardoe Exp $
+
+*ivtv-1.1.0-r1 (03 Jul 2008)
+
+  03 Jul 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/ivtv-1.1.0-headers.patch, -ivtv-1.1.0.ebuild,
+  +ivtv-1.1.0-r1.ebuild:
+  fix the includes for the linux/ivtv.h header
 
   30 Jun 2008; Doug Goldstein <cardoe@gentoo.org>
   +files/ivtv-1.2.0-v4l2-dbg-include.patch, ivtv-1.2.0.ebuild:
