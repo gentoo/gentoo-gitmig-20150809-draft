@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.238 2008/06/07 12:22:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.239 2008/07/03 21:31:37 eva Exp $
+
+*evolution-2.22.3.1 (03 Jul 2008)
+
+  03 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -evolution-2.12.3-r1.ebuild, -evolution-2.22.0.ebuild,
+  -evolution-2.22.1.1.ebuild, -evolution-2.22.2.ebuild,
+  +evolution-2.22.3.1.ebuild:
+  bump to 2.22.3.1. A bunch of bug fixes as usual and translation updates.
 
 *evolution-2.22.2-r2 (07 Jun 2008)
 

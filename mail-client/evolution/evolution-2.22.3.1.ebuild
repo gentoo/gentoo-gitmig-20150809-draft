@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.22.1.1.ebuild,v 1.1 2008/05/02 19:32:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.22.3.1.ebuild,v 1.1 2008/07/03 21:31:37 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -106,6 +106,9 @@ src_unpack() {
 
 	# Fix timezone offsets on fbsd.  bug #183708
 	epatch "${FILESDIR}"/${PN}-2.21.3-fbsd.patch
+
+	# Fix extra space in translation, bug #230628
+	sed -i "s/\(Correio \) \(e Agenda do Evolution\)/\1\2/g" po/pt_BR.po
 }
 
 src_compile() {
