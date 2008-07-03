@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.4 2008/06/23 15:11:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.5 2008/07/03 12:13:23 gentoofan23 Exp $
 
 EAPI=1
 NEED_PYTHON=2.3
@@ -80,6 +80,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-implicit.patch
 	epatch "${FILESDIR}"/${P}-randomkit.patch
 	epatch "${FILESDIR}"/${P}-cdf.patch
 	epatch "${FILESDIR}"/${P}-fftw-fix.patch

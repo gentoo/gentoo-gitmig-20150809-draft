@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.31 2008/06/23 15:11:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.32 2008/07/03 12:13:23 gentoofan23 Exp $
+
+  03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/scipy-0.6.0-implicit.patch, scipy-0.6.0-r4.ebuild:
+  Fix implicit declarations, bug #204874, thanks to Dustin Surawicz for
+  reporting.
 
   23 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   scipy-0.6.0-r4.ebuild:
