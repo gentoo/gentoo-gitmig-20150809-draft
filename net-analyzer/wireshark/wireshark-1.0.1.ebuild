@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.10 2008/03/19 11:44:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.1.ebuild,v 1.1 2008/07/03 09:51:16 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -17,7 +17,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 lua portaudio gnutls gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND="zlib? ( sys-libs/zlib )
@@ -58,16 +58,16 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	# Try to drop --as-needed patches for 1.0.1. All problems are supposed to be
+	# fixed there...
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
 	epatch "${FILESDIR}"/${PN}-0.99.8-as-needed.patch
-	epatch "${FILESDIR}"/${P}-libpcap-compile.patch
 
 	cd "${S}"/epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
 
 	cd "${S}"
-	AT_M4DIR="${S}/aclocal-fallback"
 	eautoreconf
 }
 
@@ -84,6 +84,9 @@ src_compile() {
 	# see bug #133092; bugs.wireshark.org/bugzilla/show_bug.cgi?id=1001
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
+
+	# profile and -fomit-frame-pointer are incompatible, bug #215806
+	use profile && filter-flags -fomit-frame-pointer
 
 	local myconf
 	if use gtk; then
@@ -136,7 +139,8 @@ src_install() {
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
-	dodoc AUTHORS ChangeLog NEWS README*
+	# FAQ is not required as is installed from help/faq.txt
+	dodoc AUTHORS ChangeLog NEWS README{,bsd,linux,macos,vmware} doc/randpkt.txt
 
 	if use gtk ; then
 		insinto /usr/share/icons/hicolor/16x16/apps
