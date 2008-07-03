@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.44 2008/05/24 18:56:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.45 2008/07/03 19:56:31 gentoofan23 Exp $
+
+  03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> vtk-5.0.4.ebuild:
+  Migrate Dependencies to permit Split QT 4.4 to satisfy dependencies, bug
+  #217189
 
   24 May 2008; Markus Dittrich <markusle@gentoo.org>
   +files/vtk-5.0.4-gcc4.3.patch, vtk-5.0.4.ebuild:

@@ -1,9 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.3 2008/05/24 18:56:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.4 2008/07/03 19:56:31 gentoofan23 Exp $
 
 EAPI="1"
-
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
 
 # Short package version
@@ -27,8 +26,9 @@ RDEPEND="mpi? ( || (
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	qt3? ( $(qt_min_version 3.3.4) )
-	qt4? ( $(qt4_min_version 4.1) )
+	!qt4? ( qt3? ( >=x11-libs/qt-3.3.4:3 ) )
+	qt4? (
+	|| ( x11-libs/qt-core:4  >=x11-libs/qt-4.1:4 ) )
 	dev-libs/expat
 	media-libs/freetype
 	media-libs/jpeg
@@ -52,14 +52,6 @@ pkg_setup() {
 		echo
 	fi
 
-	use qt4 && use examples && \
-		if ! built_with_use =x11-libs/qt-4* qt3support; then
-			echo
-			eerror 'Please emerge qt4 with USE="qt3support" to'
-			eerror 'build the examples under qt4!'
-			die "qt4 setup error"
-		fi
-
 	if use mpi && has_version sys-cluster/mpich2; then
 		append-flags -DMPICH_IGNORE_CXX_SEEK
 		if ! built_with_use sys-cluster/mpich2 cxx; then
@@ -67,7 +59,10 @@ pkg_setup() {
 		fi
 	fi
 
-	use qt4 && qt4_pkg_setup
+	if use qt4 && use examples; then
+		QT4_BUILT_WITH_USE_CHECK="qt3support"
+		qt4_pkg_setup
+	fi
 }
 
 src_unpack() {
