@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.5 2008/06/26 18:05:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.6 2008/07/03 17:28:22 rich0 Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/enigma-game/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
 RDEPEND="media-libs/sdl-ttf
