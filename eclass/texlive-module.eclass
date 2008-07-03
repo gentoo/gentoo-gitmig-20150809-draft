@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.9 2008/07/03 21:06:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.10 2008/07/03 22:33:00 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -51,7 +51,7 @@ fi
 
 RDEPEND="${COMMON_DEPEND}"
 
-IUSE="doc"
+[ -z "${PN##*documentation*}" ] || IUSE="doc"
 
 S="${WORKDIR}"
 
@@ -128,7 +128,7 @@ texlive-module_src_install() {
 	done
 
 	insinto /usr/share
-	if use doc; then
+	if [ -z "${PN##*documentation*}" ] || use doc; then
 		[ -d texmf-doc ] && doins -r texmf-doc
 	else
 		[ -d texmf/doc ] && rm -rf texmf/doc
