@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1647 2008/07/03 19:04:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1648 2008/07/03 22:28:45 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Unmask final www-client/opera-9.51 (bug #230633).
 
   03 Jul 2008; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   readd vlc libgcrypt useflag

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8796 2008/07/03 18:13:59 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8797 2008/07/03 22:28:45 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -110,7 +110,7 @@ games-board/glchess
 
 # Jeroen Roovers <jer@gentoo.org> (23 Jun 2008)
 # Please read http://my.opera.com/desktopteam/blog before using these snapshots
-=www-client/opera-9.51*
+=www-client/opera-9.51_pre*
 
 # Steve Dibb <beandog@gentoo.org> (21 Jun 2008)
 # Needs testing; Added custom-cpuopts flag for more fine-grained
