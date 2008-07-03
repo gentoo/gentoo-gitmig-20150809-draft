@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8792 2008/07/03 12:51:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8793 2008/07/03 13:52:41 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -377,10 +377,6 @@ dev-util/lincvs
 # Rémi Cardona <remi@gentoo.org> (16 Apr 2008)
 # Masked until somebody picks it up
 dev-cpp/bakery
-
-# Jim Ramsay <lack@gentoo.org> (15 May 2008)
-# New beta version of netscape-flash released, masked for testing.
-=net-www/netscape-flash-10_beta*
 
 # Diego Pettenò <flameeyes@gentoo.org> (11 May 2008)
 # Release candidate version, masked for testing.
@@ -1231,12 +1227,6 @@ media-libs/freeimage
 # Marijn Schouten <hkBst@gentoo.org> (26 Jul 2007)
 # problems starting drscheme (segfault)
 =dev-scheme/drscheme-370.6_p20070725
-
-# Jim Ramsay <lack@gentoo.org> (19 Jul 2007)
-# netscape-flash-9.0.48.0-r1 addresses Gentoo bug #185141 by using the versioned
-# RPM distributed by Adobe instead of their unversioned tar.gz.
-# However, we must still mask the original ebuild, and any previous versions.
-<=net-www/netscape-flash-9.0.48.0
 
 # Raúl Porcel <armin76@gentoo.org> (18 Jul 2007)
 # Mask rc
