@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.7.ebuild,v 1.1 2007/07/25 17:00:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.7.ebuild,v 1.2 2008/07/03 01:10:40 gentoofan23 Exp $
 
 inherit kde
 
@@ -50,5 +50,5 @@ src_compile() {
 src_install() {
 	kde_src_install
 	# bug 139082
-	rm ${D}/usr/bin/kmymoney
+	rm "${D}"/usr/bin/kmymoney
 }
