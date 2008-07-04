@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.33 2008/07/02 14:04:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.34 2008/07/04 08:51:25 opfer Exp $
+
+  04 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  rbot-0.9.11_rc1.ebuild:
+  keyworded ~arch for x86, bug 230517
 
 *rbot-0.9.11_rc1 (02 Jul 2008)
 
