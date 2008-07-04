@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.7 2008/07/04 23:44:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.6.ebuild,v 1.1 2008/07/04 23:44:20 mrness Exp $
 
 inherit eutils autotools
 
@@ -30,9 +30,10 @@ DEPEND="${COMMON_DEPEND}
 # Needed by xmldumpPlugin - couldn't get it to work
 #	dev-libs/gdome2
 #	>=dev-libs/glib-2"
-
 RDEPEND="${COMMON_DEPEND}
 	media-gfx/graphviz"
+
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	# snmp doesn't compile in this release, disabled for now
@@ -62,15 +63,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/globals-core.c.diff
-	epatch "${FILESDIR}"/${P}-build.patch
-	# remove local libtool garbage injected by upstream #220819
-	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
-	eautoreconf
 
-	sed -i \
-		-e "s@/usr/local/bin/dot@/usr/bin/dot@" report.c || die "sed failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+
+	eautoreconf
+	cp /usr/share/aclocal/libtool.m4 libtool.m4.in || die "failed to copy libtool.m4"
 }
 
 src_compile() {
@@ -97,6 +95,7 @@ src_compile() {
 }
 
 src_install() {
+	LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
 	emake DESTDIR="${D}" install || die "install problem"
 
 	keepdir /var/lib/ntop

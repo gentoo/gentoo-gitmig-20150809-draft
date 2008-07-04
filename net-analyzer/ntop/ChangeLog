@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.63 2008/06/09 08:41:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.64 2008/07/04 23:44:20 mrness Exp $
+
+*ntop-3.3.6 (04 Jul 2008)
+
+  04 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  +files/ntop-3.3.6-gentoo.patch, files/ntop-initd, metadata.xml,
+  ntop-3.2-r3.ebuild, ntop-3.3.ebuild, +ntop-3.3.6.ebuild:
+  Version bump. Fix init script (#191576). Fix broken ebuild when locales use
+  other chars than ASCII (#205382). Fix libtool dependency (#221623).
 
   09 Jun 2008; Mike Frysinger <vapier@gentoo.org> ntop-3.3.ebuild:
   Remove stale libtool macros from local m4 files #220819 by Paul Hartman.

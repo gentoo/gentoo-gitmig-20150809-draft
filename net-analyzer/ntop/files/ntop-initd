@@ -17,12 +17,13 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting ntop"
+	LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
 	start-stop-daemon --start --exec /usr/bin/ntop -- -d -L ${NTOP_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping ntop"
-	start-stop-daemon --stop --retry 5 --pidfile /var/lib/ntop/ntop.pid
+	start-stop-daemon --stop --retry 30 --pidfile /var/run/ntop.pid
 	eend $?
 }

@@ -2,5 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<maintainer>
+  <email>mrness@gentoo.org</email>
+  <name>Alin Nastac</name>
+</maintainer>
 <longdescription>tool that shows network usage like top</longdescription>
 </pkgmetadata>
