@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r1.ebuild,v 1.1 2008/06/30 12:18:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r2.ebuild,v 1.1 2008/07/04 11:43:40 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,12 +23,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# Gentoo-specific non-interactive configure override
-	cp "${FILESDIR}/${PF}-precache-config" "${S}/Config.cache"
+	cp "${FILESDIR}/${PF}-precache-config" "${S}/Config.cache" \
+		|| die "Unable to precache configure script answers"
 	echo "CFLAGS=\"${CFLAGS} -fPIC\"" >> "${S}/Config.cache"
 	echo "CC=\"$(tc-getCC)\"" >> "${S}/Config.cache"
 	echo "SRCDIR=\"${S}\"" >> "${S}/Config.cache"
 	epatch "${FILESDIR}/${P}-non-interactive.patch"
 	# Applied to upstream CVS
+	epatch "${FILESDIR}/${P}-install-missing.patch"
 	epatch "${FILESDIR}/${P}-implicit-declarations.patch"
 	epatch "${FILESDIR}/${P}-conflicting-types.patch"
 	epatch "${FILESDIR}/${P}-code-ordering.patch"
@@ -45,4 +47,25 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+}
+
+pkg_preinst() {
+	enewgroup snips
+	enewuser snips -1 -1 /usr/snips snips
+}
+
+pkg_postinst() {
+	ebegin "Fixing permissions"
+	chown -R snips:snips "${ROOT}"usr/snips
+	for x in data logs msgs rrddata run web device-help etc; do
+		chmod -R g+w "${ROOT}usr/snips/${x}" \
+			|| die "Unable to chmod ${x}"
+	done
+	chown root:snips "${ROOT}usr/snips/bin/multiping" || die "chown root failed"
+	chown root:snips "${ROOT}usr/snips/bin/etherload" || die "chown root failed"
+	chown root:snips "${ROOT}usr/snips/bin/trapmon" || die "chown root failed"
+	chmod u+s "${ROOT}usr/snips/bin/multiping" || die "SetUID root failed"
+	chmod u+s "${ROOT}usr/snips/bin/etherload" || die "SetUID root failed"
+	chmod u+s "${ROOT}usr/snips/bin/trapmon" || die "SetUID root failed"
+	eend $?
 }
