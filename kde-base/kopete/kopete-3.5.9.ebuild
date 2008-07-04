@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.9.ebuild,v 1.7 2008/05/18 16:38:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.9.ebuild,v 1.8 2008/07/04 16:15:37 keytoaster Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -77,6 +77,7 @@ src_unpack() {
 	epatch "${FILESDIR}/kopete-0.12_alpha1-xscreensaver.patch"
 	epatch "${FILESDIR}/${PN}-3.5.5-icqfix.patch"
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
+	epatch "${FILESDIR}/${P}-icq-protocol-change.patch"
 
 	use latex || kopete_disable plugin latex
 	use crypt || kopete_disable plugin cryptography
