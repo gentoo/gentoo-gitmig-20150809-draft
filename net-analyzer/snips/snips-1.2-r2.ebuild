@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r2.ebuild,v 1.1 2008/07/04 11:43:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r2.ebuild,v 1.2 2008/07/04 14:46:06 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-conflicting-types.patch"
 	epatch "${FILESDIR}/${P}-code-ordering.patch"
 	epatch "${FILESDIR}/${P}-destdir-awareness.patch"
+	epatch "${FILESDIR}/${P}-link-correct-snmp-lib.patch"
 }
 
 src_compile() {

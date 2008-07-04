@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snips
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.3 2008/07/04 11:43:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.4 2008/07/04 14:46:06 chainsaw Exp $
+
+  04 Jul 2008; <chainsaw@gentoo.org>
+  +files/snips-1.2-link-correct-snmp-lib.patch, snips-1.2-r2.ebuild:
+  Linking fix, trapmon failed to link if net-snmp was installed on the
+  system. No revision bump, if this applied to you then your build broke.
 
 *snips-1.2-r2 (04 Jul 2008)
 
