@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.5-r1.ebuild,v 1.7 2008/07/04 19:33:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.2.1.ebuild,v 1.1 2008/07/04 19:33:07 hkbst Exp $
 
 inherit versionator eutils
 
@@ -8,7 +8,7 @@ inherit versionator eutils
 trarr="0abcdefghi"
 MY_PV="$(get_version_component_range 1)${trarr:$(get_version_component_range 2):1}$(get_version_component_range 3)"
 
-MY_P=${PN}${MY_PV}
+MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${PN}
 DESCRIPTION="library providing functions for Scheme implementations"
 SRC_URI="http://swiss.csail.mit.edu/ftpdir/scm/${MY_P}.zip"
@@ -17,7 +17,7 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SLIB"
 
 SLOT="0"
 LICENSE="public-domain BSD"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="" #test"
 
 #unzip for unpacking
@@ -30,18 +30,12 @@ INSTALL_DIR="/usr/share/slib/"
 src_unpack() {
 	unpack ${A}; cd "${S}"
 
-	cp Makefile Makefile.old
+#	cp Makefile Makefile.old
 
-	E=MAR_IJN
-	echo $PORTAGE_TMPDIR
-	sed "s_prefix = /usr/local/_prefix = ${D}/usr/_" -i Makefile
-#	sed "s_prefix = /usr/local/_prefix = ${E/_/\_}/usr/_" -i Makefile
-
-	diff -u Makefile.old Makefile
-
+	sed "s:prefix = /usr/local/:prefix = ${D}/usr/:" -i Makefile
 	sed 's:libdir = $(exec_prefix)lib/:libdir = $(exec_prefix)share/:' -i Makefile
-	sed 's_mandir = $(prefix)man/_mandir = $(prefix)/share/man/_' -i Makefile
-	sed 's_infodir = $(prefix)info/_infodir = $(prefix)share/info/_' -i Makefile
+	sed 's:mandir = $(prefix)man/:mandir = $(prefix)/share/man/:' -i Makefile
+	sed 's:infodir = $(prefix)info/:infodir = $(prefix)share/info/:' -i Makefile
 
 	sed 's:echo SCHEME_LIBRARY_PATH=$(libslibdir)  >> $(bindir)slib:echo SCHEME_LIBRARY_PATH=/usr/share/slib/ >> $(bindir)slib:' -i Makefile
 
@@ -56,8 +50,6 @@ src_compile() {
 	emake || die "make failed"
 }
 
-#tests are unmaintained upstream and have been removed for 3a6
-RESTRICT="test"
 #slib needs scm for tests, but scm needs slib so we can't depend on it
 src_test() {
 	if has_version dev-scheme/scm; then
@@ -108,7 +100,7 @@ make_installers()
 	PROGRAM="(require 'new-catalog) (slib:report-version)"
 
 	bigloo_install_command="bigloo -s -eval \"(begin "$(make_load_expression bigloo)" ${PROGRAM} (exit))\""
-	drscheme_install_command="mzscheme -vme \"(begin $(make_load_expression DrScheme) ${PROGRAM})\""
+	drscheme_install_command="mzscheme -vme \"(begin $(make_load_expression mzscheme) ${PROGRAM})\""
 	elk_install_command="echo \"$(make_load_expression elk) ${PROGRAM}\" | elk -l -"
 	gambit_install_command="gambit-interpreter -e \"$(make_load_expression gambit) ${PROGRAM}\""
 #	guile_install_command="guile -c \"$(make_load_expression guile) ${PROGRAM}\""
