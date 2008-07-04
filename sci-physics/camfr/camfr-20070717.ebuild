@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717.ebuild,v 1.2 2008/07/02 13:51:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717.ebuild,v 1.3 2008/07/04 17:34:47 bicatali Exp $
 
 inherit eutils distutils fortran
 
@@ -45,10 +45,14 @@ src_unpack() {
 	sed -i -e '/^library_dirs/d'  -e '/^libs/d' machine_cfg.py || die
 	local lapack_libs=
 	for x in $(pkg-config --libs-only-l lapack); do
-		lapack_libs="${lapack_libs}, \"${x/-l/}\""
+		lapack_libs="${lapack_libs}, \"${x#-l}\""
+	done
+	local lapack_libdirs=
+	for x in $(pkg-config --libs-only-L lapack); do
+		lapack_libdirs="${lapack_libdirs}, \"${x#-L}\""
 	done
 	cat <<-EOF >> machine_cfg.py
-		library_dirs = ["$(pkg-config --libs-only-L lapack | sed -e 's/-L/')"]
+		library_dirs = [${lapack_libdirs}]
 		libs = ["boost_python", "blitz"${lapack_libs}]
 	EOF
 }
@@ -57,7 +61,7 @@ src_test() {
 	# trick to avoid X in testing (bug #229753)
 	echo "backend : Agg" > matplotlibrc
 	PYTHONPATH=".:visualisation" ${python} testsuite/camfr_test.py \
-qq		|| die "tests failed"
+		|| die "tests failed"
 	rm -f matplotlibrc
 }
 

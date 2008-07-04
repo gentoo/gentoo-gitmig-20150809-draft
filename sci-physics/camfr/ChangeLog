@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.8 2008/07/02 13:51:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.9 2008/07/04 17:34:47 bicatali Exp $
+
+  04 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  camfr-20070717.ebuild:
+  Fixed a sed syntax errors and cleaned lapack again
 
   02 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/camfr-20070717-gcc43.patch, camfr-20070717.ebuild:
