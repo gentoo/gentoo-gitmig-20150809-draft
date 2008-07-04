@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.6 2007/12/30 18:28:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.7 2008/07/04 20:14:01 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/modutils
-	 >=net-firewall/iptables-1.2.11"
+	 <net-firewall/iptables-1.4.1.1"
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources"
