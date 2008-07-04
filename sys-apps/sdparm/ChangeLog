@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.42 2008/05/11 09:11:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.43 2008/07/04 18:25:46 robbat2 Exp $
+
+*sdparm-1.03 (04 Jul 2008)
+
+  04 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> +sdparm-1.03.ebuild:
+  Version bump per bug #230740, but just from my overlay as it has better
+  SAS support now.
 
   11 May 2008; <solar@gentoo.org> sdparm-1.02.ebuild:
   - keyworded for ~arm
