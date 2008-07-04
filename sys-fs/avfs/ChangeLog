@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.15 2008/07/02 19:18:07 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.16 2008/07/04 16:02:46 armin76 Exp $
+
+  04 Jul 2008; Raúl Porcel <armin76@gentoo.org> avfs-0.9.8.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   02 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> avfs-0.9.8.ebuild:
   stable amd64, bug 230531
