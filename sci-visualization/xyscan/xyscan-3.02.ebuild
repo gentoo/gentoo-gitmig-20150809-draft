@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.02.ebuild,v 1.1 2008/07/03 22:55:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.02.ebuild,v 1.2 2008/07/04 01:23:09 markusle Exp $
 
 EAPI="1"
 
 inherit qt4
 
-DESCRIPTION="Extract data points and errors from graphs"
+DESCRIPTION="tool for extracting data points from graphs"
 HOMEPAGE="http://star.physics.yale.edu/~ullrich/xyscanDistributionPage/"
 SRC_URI="http://star.physics.yale.edu/~ullrich/${PN}DistributionPage/${PV}/${P}-src.tar.gz"
 
