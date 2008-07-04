@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/qtpfsgui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.6 2008/05/02 22:27:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.7 2008/07/04 21:16:55 maekke Exp $
+
+*qtpfsgui-1.9.2-r1 (04 Jul 2008)
+
+  04 Jul 2008; Markus Meier <maekke@gentoo.org>
+  +files/qtpfsgui-1.9.2-trunk.patch, -qtpfsgui-1.9.2.ebuild,
+  +qtpfsgui-1.9.2-r1.ebuild:
+  revision bump for bug #222135; remove broken version
 
 *qtpfsgui-1.9.2 (02 May 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2.ebuild,v 1.1 2008/05/02 22:27:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.1 2008/07/04 21:16:55 maekke Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND="
 	media-gfx/dcraw
@@ -29,8 +29,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-trunk.patch"
+
 	# no insane CXXFLAGS
 	sed -i -e '/QMAKE_CXXFLAGS/d' project.pro || die
+
 }
 
 src_compile() {
@@ -41,4 +44,8 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die
+	dodoc README TODO || die
+	if use doc ; then
+		dohtml -r html/ || die
+	fi
 }
