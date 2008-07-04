@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.219 2008/07/02 17:43:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.220 2008/07/04 19:46:32 ricmm Exp $
+
+  04 Jul 2008; <ricmm@gentoo.org> pam-1.0.1.ebuild:
+  Add ~mips, bug #230743
 
   02 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.1.ebuild:
   Don't stop on pam_radius usage, but suggest to install the package
