@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.5-r1.ebuild,v 1.7 2008/07/04 19:33:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.5-r1.ebuild,v 1.8 2008/07/04 19:38:20 hkbst Exp $
 
 inherit versionator eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 	E=MAR_IJN
 	echo $PORTAGE_TMPDIR
-	sed "s_prefix = /usr/local/_prefix = ${D}/usr/_" -i Makefile
+	sed "s:prefix = /usr/local/:prefix = ${D}/usr/:" -i Makefile
 #	sed "s_prefix = /usr/local/_prefix = ${E/_/\_}/usr/_" -i Makefile
 
 	diff -u Makefile.old Makefile
