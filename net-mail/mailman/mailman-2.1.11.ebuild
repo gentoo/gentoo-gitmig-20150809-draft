@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.9 2008/01/31 20:29:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.11.ebuild,v 1.1 2008/07/04 13:33:42 hanno Exp $
 
 inherit eutils python multilib
 
@@ -21,7 +21,8 @@ DEPEND=">=dev-lang/python-2.3
 pkg_setup() {
 	INSTALLDIR=${MAILMAN_PREFIX:-"/usr/$(get_libdir)/mailman"}
 	VAR_PREFIX=${MAILMAN_VAR_PREFIX:-"/var/lib/mailman"}
-	CGIGID=${MAILMAN_CGIGID:-81}
+	CGIUID=${MAILMAN_CGIUID:-apache}
+	CGIGID=${MAILMAN_CGIGID:-apache}
 	MAILUSR=${MAILMAN_MAILUSR:-mailman}
 	MAILUID=${MAILMAN_MAILUID:-280}
 	MAILGRP=${MAILMAN_MAILGRP:-mailman}
@@ -35,9 +36,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.1.8_rc1-directory-check.patch" || die "patch failed."
+	epatch "${FILESDIR}/${PN}-2.1.9-icons.patch" || die "patch failed."
 }
 
 src_compile() {
@@ -58,11 +60,12 @@ src_install () {
 	emake "DESTDIR=${D}" doinstall || die
 
 	insinto /etc/apache2/modules.d
-	doins "${FILESDIR}/50_mailman.conf"
+	newins "${FILESDIR}/50_mailman.conf-r1" 50_mailman.conf
 	dosed "s:/usr/local/mailman/cgi-bin:${INSTALLDIR}/cgi-bin:g" /etc/apache2/modules.d/50_mailman.conf
+	dosed "s:/usr/local/mailman/icons:${INSTALLDIR}/icons:g" /etc/apache2/modules.d/50_mailman.conf
 	dosed "s:/usr/local/mailman/archives:${VAR_PREFIX}/archives:g" /etc/apache2/modules.d/50_mailman.conf
 
-	newdoc "${FILESDIR}/README.gentoo-r2" README.gentoo || die "newdoc failed"
+	newdoc "${FILESDIR}/README.gentoo-r3" README.gentoo || die "newdoc failed"
 
 	dodoc ACK* BUGS FAQ NEWS README* TODO UPGRADING INSTALL contrib/mailman.mc \
 		contrib/README.check_perms_grsecurity contrib/virtusertable || die "dodoc failed"
@@ -95,9 +98,10 @@ src_install () {
 	keepdir ${VAR_PREFIX}/qfiles
 
 	chown -R ${MAILUSR}:${MAILGRP} "${D}/${VAR_PREFIX}" "${D}/${INSTALLDIR}" "${D}"/etc/mailman/*
+	chown ${CGIUID}:${MAILGRP} "${D}/${VAR_PREFIX}/archives/private"
 	chmod 2775 "${D}/${INSTALLDIR}" "${D}/${INSTALLDIR}"/templates/* \
 		"${D}/${INSTALLDIR}"/messages/* "${D}/${VAR_PREFIX}" "${D}/${VAR_PREFIX}"/{logs,lists,spam,locks,archives/public}
-	chmod 2750 "${D}/${VAR_PREFIX}/archives/private"
+	chmod 2770 "${D}/${VAR_PREFIX}/archives/private"
 	chmod 2770 "${D}/${VAR_PREFIX}/qfiles"
 	chmod 2755 "${D}/${INSTALLDIR}"/cgi-bin/* "${D}/${INSTALLDIR}/mail/mailman"
 
@@ -115,7 +119,7 @@ pkg_postinst() {
 	elog
 
 	elog "An example Mailman configuration file for Apache has been installed into:"
-	elog "  ${APACHE_MODULES_CONFDIR}/50_mailman.conf"
+	elog "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
 	elog
 	elog "To enable, you will need to add \"-D MAILMAN\" to"
 	elog "/etc/conf.d/apache2."
@@ -125,7 +129,8 @@ pkg_postinst() {
 	ewarn "mailman with the following variables:"
 	ewarn "MAILMAN_PREFIX (default: /usr/$(get_libdir)/mailman)"
 	ewarn "MAILMAN_VAR_PREFIX (default: /var/lib/mailman)"
-	ewarn "MAILMAN_CGIGID (default: 81)"
+	ewarn "MAILMAN_CGIUID (default: apache)"
+	ewarn "MAILMAN_CGIGID (default: apache)"
 	ewarn "MAILMAN_CGIEXT (default: empty)"
 	ewarn "MAILMAN_MAILUSR (default: mailman)"
 	ewarn "MAILMAN_MAILUID (default: 280)"
@@ -135,8 +140,16 @@ pkg_postinst() {
 	ewarn "Config file is now symlinked in /etc/mailman, so etc-update works."
 	ewarn
 	ewarn "If you're upgrading from below 2.1.9-r2 or changed MAILMAN_PREFIX, you"
-	ewarn "MUST change the homedir of the mailman-user manually:"
-	ewarn "usermod -d ${INSTALLDIR} mailman"
+	ewarn "NEED to make a few manual updates to your system:"
+	ewarn
+	ewarn "1.  Update your mailman users's home directory: usermod -d ${INSTALLDIR} mailman"
+	ewarn "2.  Re-import the crontab: su - mailman -c 'crontab cron/crontab.in'"
+	ewarn "3.  Copy your old mm_cfg.py file to /etc/mailman/mm_cfg.py"
+	ewarn
+	ewarn "Additionally if you've modified MAILMAN_VAR_PREFIX (or upgraded from"
+	ewarn "a pre 2.1.9-r2 installation), you should move your old lists/ and"
+	ewarn "archives/ directory to the new location, ensuring that the"
+	ewarn "permissions is correct.  See bug #208789 for a discussion."
 	ebeep
 }
 
