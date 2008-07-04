@@ -8,7 +8,7 @@
  FFTWDIR=../fftw
 --- mpi/Makefile.am.orig	2008-06-22 17:21:16.998466390 +0100
 +++ mpi/Makefile.am	2008-06-22 17:27:42.996463162 +0100
-@@ -4,12 +4,12 @@
+@@ -4,8 +4,8 @@
  
  lib_LTLIBRARIES = @FFTW_MPI_LIBLIST@
  include_HEADERS = @FFTW_MPI_INCLUDELIST@
@@ -18,14 +18,9 @@
  EXTRA_LTLIBRARIES = lib@FFTW_PREFIX@fftw_mpi.la \
                      lib@FFTW_PREFIX@rfftw_mpi.la
  EXTRA_HEADERS = @FFTW_PREFIX@fftw_mpi.h @FFTW_PREFIX@rfftw_mpi.h 
--EXTRA_PROGRAMS = test_sched test_transpose_mpi fftw_mpi_test rfftw_mpi_test
-+check_PROGRAMS = test_sched test_transpose_mpi fftw_mpi_test rfftw_mpi_test
- EXTRA_DIST = README.f77
- 
- CC=@MPICC@
 --- threads/Makefile.am.orig	2008-06-22 17:18:18.940409610 +0100
 +++ threads/Makefile.am	2008-06-22 17:28:00.485459803 +0100
-@@ -4,13 +4,13 @@
+@@ -4,9 +4,9 @@
  
  lib_LTLIBRARIES = @FFTW_THREADS_LIBLIST@
  include_HEADERS = @FFTW_THREADS_INCLUDELIST@
@@ -36,8 +31,3 @@
                      lib@FFTW_PREFIX@rfftw_threads.la
  EXTRA_HEADERS = @FFTW_PREFIX@fftw_threads.h \
                  @FFTW_PREFIX@rfftw_threads.h
--EXTRA_PROGRAMS = fftw_threads_test rfftw_threads_test
-+check_PROGRAMS = fftw_threads_test rfftw_threads_test
- 
- FFTWDIR=../fftw
- RFFTWDIR=../rfftw
