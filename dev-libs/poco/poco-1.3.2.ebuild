@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.2.ebuild,v 1.2 2008/06/29 09:37:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.2.ebuild,v 1.3 2008/07/04 19:50:59 dev-zero Exp $
 
 EAPI="1"
 
@@ -77,7 +77,7 @@ src_compile() {
 		-e "s|CXX     = .*|CXX     = $(tc-getCXX)|" \
 		-e "s|RANLIB  = .*|RANLIB  = $(tc-getRANLIB)|" \
 		-e "s|LIB     = ar|LIB     = $(tc-getAR)|" \
-		-e "s|STRIP   = .*|STRIP   = /usr/bin/true|" \
+		-e "s|STRIP   = .*|STRIP   = /bin/true|" \
 		-e "s|CFLAGS          = |CFLAGS          = ${CFLAGS}|" \
 		-e "s|CXXFLAGS        = |CXXFLAGS        = ${CXXFLAGS} |" \
 		-e "s|LINKFLAGS       = |LINKFLAGS       = ${LDFLAG} |" \
