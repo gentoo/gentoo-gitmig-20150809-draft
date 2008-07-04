@@ -1,6 +1,12 @@
 # ChangeLog for games-board/scid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.16 2008/04/06 00:15:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.17 2008/07/04 06:33:16 tupone Exp $
+
+*scid-3.6.24 (04 Jul 2008)
+
+  04 Jul 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/scid-3.6.24-gentoo.patch, +scid-3.6.24.ebuild:
+  Version bump to 3.6.24 Bug #229397 by Thomas Riedel
 
   06 Apr 2008; Tristan Heaven <nyhm@gentoo.org> scid-3.6.1.ebuild,
   scid-3.6.1-r2.ebuild:
