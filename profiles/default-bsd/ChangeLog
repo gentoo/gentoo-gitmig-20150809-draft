@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.26 2008/07/04 07:43:52 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.27 2008/07/04 19:55:23 betelgeuse Exp $
+
+  04 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> use.mask:
+  use.mask java6 as there is no provider for >=virtual/jdk-1.6 on BSD.
 
   04 Jul 2008; Javier Villavicencio <the_paya@gentoo.org> fbsd/packages:
   Add pidof-bsd to fbsd packages.

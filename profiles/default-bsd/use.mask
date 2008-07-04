@@ -1,7 +1,10 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.35 2008/04/02 21:20:17 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.36 2008/07/04 19:55:23 betelgeuse Exp $
 
+# Petteri Räty <betelgeuse@gentoo.org>
+# No java6 for bsd
+java6
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
