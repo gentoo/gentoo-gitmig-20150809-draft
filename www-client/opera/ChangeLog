@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.257 2008/07/04 04:30:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.258 2008/07/04 06:43:24 opfer Exp $
+
+  04 Jul 2008; Christian Faulhammer <opfer@gentoo.org> opera-9.51.ebuild:
+  stable x86, security bug 230633
 
   04 Jul 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.51_pre2050.ebuild,
   -opera-9.51_pre2052.ebuild, -opera-9.51_pre2059.ebuild:
