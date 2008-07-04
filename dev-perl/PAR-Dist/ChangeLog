@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.31 2008/03/28 09:37:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.32 2008/07/04 10:44:20 tove Exp $
+
+*PAR-Dist-0.31 (04 Jul 2008)
+
+  04 Jul 2008; Torsten Veller <tove@gentoo.org> +PAR-Dist-0.31.ebuild:
+  Version bump (#223459)
 
   28 Mar 2008; Jeroen Roovers <jer@gentoo.org> PAR-Dist-0.25.ebuild:
   Stable for HPPA too.
