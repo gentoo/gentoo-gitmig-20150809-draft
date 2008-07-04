@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.4.64.ebuild,v 1.1 2008/05/30 17:41:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.4.76.ebuild,v 1.1 2008/07/04 14:42:25 flameeyes Exp $
 
 NEED_PYTHON=2.5
 
@@ -77,7 +77,7 @@ EOF
 		|| die "post-installation failed."
 
 	rm -r "${D}"/usr/share/applications/{mimeinfo.cache,defaults.list} \
-		"${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs,mime.cache,magic,aliases} \
+		"${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs{,2},mime.cache,magic,aliases,{generic-,}icons} \
 		"${D}"/usr/share/applnk
 }
 
