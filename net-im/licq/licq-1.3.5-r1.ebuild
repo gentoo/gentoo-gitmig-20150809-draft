@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.1 2008/07/04 15:20:01 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.2 2008/07/04 18:38:03 opfer Exp $
 
 inherit autotools eutils kde-functions multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="ssl socks5 qt3 kde ncurses crypt msn debug"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
