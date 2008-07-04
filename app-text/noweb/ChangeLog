@@ -1,6 +1,11 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.32 2008/06/18 06:31:03 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.33 2008/07/04 03:48:21 ulm Exp $
+
+  04 Jul 2008; Ulrich Mueller <ulm@gentoo.org> +files/50noweb-gentoo.el,
+  noweb-2.11b.ebuild:
+  Optionally install Emacs noweb-mode. Ebuild and site-init file provided by
+  Denys Duchier <denys.duchier@univ-orleans.fr>, bug 230229.
 
   18 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   noweb-2.11b.ebuild:

@@ -1,23 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b.ebuild,v 1.2 2008/06/18 06:31:03 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b.ebuild,v 1.3 2008/07/04 03:48:21 ulm Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs elisp-common
 
-SRC_URI="http://www.eecs.harvard.edu/~nr/noweb/dist/${P}.tgz"
-HOMEPAGE="http://www.eecs.harvard.edu/~nr/noweb/"
-LICENSE="freedist"
 DESCRIPTION="a literate programming tool, lighter than web"
+HOMEPAGE="http://www.eecs.harvard.edu/~nr/noweb/"
+SRC_URI="http://www.eecs.harvard.edu/~nr/noweb/dist/${P}.tgz"
 
+LICENSE="freedist emacs? ( GPL-2 )"
 SLOT="0"
-IUSE="examples"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="emacs examples"
 
 DEPEND="virtual/tex-base
 	dev-lang/icon
-	sys-apps/debianutils"
+	sys-apps/debianutils
+	emacs? ( virtual/emacs )"
 
 S=${WORKDIR}/${P}/src
+
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -32,18 +35,22 @@ src_unpack() {
 
 src_compile() {
 	# noweb tries to use notangle and noweb; see bug #50429
-	( cd c; emake ICONC="icont" CC=$(tc-getCC) CFLAGS="${CFLAGS}" LIBSRC="icon" ) || die
+	( cd c; emake ICONC="icont" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LIBSRC="icon" ) || die
 	export PATH="${PATH}:${T}"
-	emake ICONC="icont" CC=$(tc-getCC) BIN="${T}" LIB="${T}" LIBSRC="icon" install-code \
+	emake ICONC="icont" CC="$(tc-getCC)" BIN="${T}" LIB="${T}" LIBSRC="icon" install-code \
 		|| die "make temporal install failed."
 
-	emake ICONC="icont" CC=$(tc-getCC) CFLAGS="${CFLAGS}" LIBSRC="icon" || die "make failed"
+	emake ICONC="icont" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LIBSRC="icon" || die "make failed"
 	# Set awk to awk not nawk
 	./awkname awk
+
+	if use emacs; then
+		elisp-compile elisp/noweb-mode.el || die "elisp-compile failed"
+	fi
 }
 
 src_install () {
-	# It needs the directories to exisst first...
+	# It needs the directories to exist first...
 	dodir /usr/bin
 	dodir /usr/libexec/${PN}
 	dodir /usr/share/man
@@ -63,9 +70,21 @@ src_install () {
 		doins examples/*
 	fi
 	dodoc CHANGES README
+
+	if use emacs; then
+		elisp-install ${PN} src/elisp/noweb-mode.{el,elc} \
+			|| die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+			|| die "elisp-site-file-install failed"
+	fi
 }
 
 pkg_postinst() {
+	use emacs && elisp-site-regen
 	einfo "Running texhash to complete installation.."
 	texhash
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
