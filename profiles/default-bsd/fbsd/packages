@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages,v 1.6 2007/07/13 13:13:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages,v 1.7 2008/07/04 07:43:52 the_paya Exp $
 
 # This files contains a small list of packages that define a 
 # minimal FreeBSD system. DO NOT change this without contacting
@@ -22,3 +22,5 @@
 *app-arch/libarchive
 
 *sys-libs/timezone-data
+
+*sys-process/pidof-bsd
