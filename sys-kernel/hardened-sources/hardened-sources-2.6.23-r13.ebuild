@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.23-r13.ebuild,v 1.2 2008/06/30 00:37:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.23-r13.ebuild,v 1.3 2008/07/04 19:21:58 nixnut Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -18,7 +18,7 @@ DESCRIPTION="Hardened kernel sources ${OKV}"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
