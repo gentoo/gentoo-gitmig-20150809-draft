@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1.ebuild,v 1.5 2008/07/05 23:34:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1-r1.ebuild,v 1.1 2008/07/05 23:34:18 loki_val Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -56,7 +56,7 @@ RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 		media-video/realplayer
 		media-libs/alsa-lib )
 	njb? ( >=media-libs/libnjb-2.2.4 )
-	mtp? ( <=media-libs/libmtp-0.3.0 )
+	mtp? ( >=media-libs/libmtp-0.3.0 )
 	musicbrainz? ( media-libs/tunepimp )
 	=dev-lang/ruby-1.8*"
 
@@ -67,9 +67,8 @@ RDEPEND="${RDEPEND}
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-helix+gcc-4.3.patch
-)
+PATCHES=( 	"${FILESDIR}/${P}-helix+gcc-4.3.patch"
+		"${FILESDIR}/${P}-libmtp-0.3.0-API.patch" )
 
 need-kde 3.3
 
