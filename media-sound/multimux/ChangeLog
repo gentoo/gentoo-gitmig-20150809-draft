@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/multimux
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.14 2007/10/06 13:43:53 sbriesen Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.15 2008/07/05 15:48:55 maekke Exp $
+
+  05 Jul 2008; Markus Meier <maekke@gentoo.org> multimux-0.2.5.2.ebuild:
+  x86 stable, bug #228449
 
   06 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
   multimux-0.2.5.2.ebuild:
