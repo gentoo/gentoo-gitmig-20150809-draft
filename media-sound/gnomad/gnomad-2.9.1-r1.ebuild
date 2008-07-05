@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.1.ebuild,v 1.4 2008/07/05 22:37:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.1-r1.ebuild,v 1.1 2008/07/05 22:37:51 loki_val Exp $
 
 GCONF_DEBUG=no
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 2.4.4: Application crashes on startup (Gnome crash detection)
-KEYWORDS="amd64 ~ppc ~ppc64 -sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/hal
@@ -24,7 +24,7 @@ RDEPEND="sys-apps/hal
 	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=media-libs/libnjb-2.2.4
-	<=media-libs/libmtp-0.3.0
+	>=media-libs/libmtp-0.3.0
 	>=media-libs/taglib-1.4-r1
 	>=media-libs/libid3tag-0.15.1b"
 DEPEND="${RDEPEND}
@@ -38,6 +38,7 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
+	epatch "${FILESDIR}"/${P}-libmtp-0.3.0-API.patch
 }
 
 src_compile() {
