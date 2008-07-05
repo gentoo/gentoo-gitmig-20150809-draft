@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r2.ebuild,v 1.3 2007/11/28 20:10:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r2.ebuild,v 1.4 2008/07/05 09:53:14 loki_val Exp $
 
 inherit flag-o-matic toolchain-funcs versionator autotools java-pkg-2
 
@@ -41,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${MY_P}-nouts.diff"
 
 	# update autotools stuff
+	rm acinclude.m4
 	eautoreconf
 	elibtoolize
 }
