@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.22 2008/07/02 16:28:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.23 2008/07/05 15:59:43 maekke Exp $
+
+  05 Jul 2008; Markus Meier <maekke@gentoo.org> pcre-ocaml-5.15.0.ebuild:
+  x86 stable, bug #229997
 
   02 Jul 2008; Brent Baude <ranger@gentoo.org> pcre-ocaml-5.15.0.ebuild:
   stable ppc, bug 229997
