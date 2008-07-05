@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for sci-visualization/xyscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.1 2008/07/03 22:55:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.2 2008/07/05 06:50:55 swegener Exp $
 
 *xyscan-3.02 (03 Jul 2008)
 
