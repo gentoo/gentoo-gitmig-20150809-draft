@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.228 2008/07/04 19:21:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.229 2008/07/05 00:52:24 solar Exp $
+
+*hardened-sources-2.6.25-r2 (05 Jul 2008)
+
+  05 Jul 2008; <solar@gentoo.org> -hardened-sources-2.6.23-r11.ebuild,
+  -hardened-sources-2.6.23-r12.ebuild, hardened-sources-2.6.24-r3.ebuild,
+  +hardened-sources-2.6.25-r2.ebuild:
+  2.6.23-r4: Stable x86/amd64
+  2.6.25-r2: Update to Linux 2.6.25.10 and latest grsecurity release.
+  2.6.23-r{11,12}: Removed due to multiple vulns.
+  (gengor & kerframil)
 
   04 Jul 2008; nixnut <nixnut@gentoo.org>
   hardened-sources-2.6.23-r13.ebuild:
