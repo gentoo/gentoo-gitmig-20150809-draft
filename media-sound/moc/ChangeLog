@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.58 2008/07/05 06:58:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.59 2008/07/05 13:54:34 coldwind Exp $
+
+  05 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  moc-2.5.0_alpha3-r2.ebuild:
+  amd64 stable wrt bug #230826
 
   05 Jul 2008; Samuli Suominen <drac@gentoo.org>
   +files/moc-2.5.0_alpha3-fix_default_configuration_layout.patch,
