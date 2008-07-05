@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.145 2008/07/04 21:33:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.146 2008/07/05 15:14:52 ranger Exp $
+
+  05 Jul 2008; Brent Baude <ranger@gentoo.org> seamonkey-1.1.10.ebuild:
+  Marking seamonkey-1.1.10 ppc64 and ppc for bug 230567
 
   04 Jul 2008; Markus Meier <maekke@gentoo.org> seamonkey-1.1.10.ebuild:
   amd64 stable, bug #230567
