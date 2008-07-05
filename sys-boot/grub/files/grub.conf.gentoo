@@ -10,7 +10,7 @@ timeout 30
 
 #title Gentoo Linux 2.6.24-r5
 #root (hd0,0)
-#kernel /boot/kernel-genkernel-x86-2.6.24-gentoo-r5 root=/dev/ram0 init=/linuxrc ramdisk=8192 real_root=/dev/sda3 udev
+#kernel /boot/kernel-genkernel-x86-2.6.24-gentoo-r5 root=/dev/ram0 real_root=/dev/sda3
 #initrd /boot/initramfs-genkernel-x86-2.6.24-gentoo-r5
 
 # vim:ft=conf:

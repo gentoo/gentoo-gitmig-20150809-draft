@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.2 2008/06/04 20:44:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.3 2008/07/05 09:59:26 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -221,15 +221,21 @@ setup_boot_dir() {
 }
 
 pkg_postinst() {
-	[[ -n ${DONT_MOUNT_BOOT} ]] && return 0
-	setup_boot_dir "${ROOT}"/boot
-	einfo "To install grub files to another device (like a usb stick), just run:"
-	einfo "   emerge --config =${PF}"
+	[[ -n ${DONT_MOUNT_BOOT} ]] || setup_boot_dir "${ROOT}"/boot
+	elog "To install grub files to another device (like a usb stick), just run:"
+	elog "   emerge --config =${PF}"
+	elog "Alternately, you can use GRUB_ALT_INSTALLDIR=/path/to/use to tell"
+	elog "grub where to install in a non-interactive way."
+
 }
 
 pkg_config() {
 	local dir
-	einfo "Enter the directory where you want to setup grub:"
-	read dir
+	if [ ! -d "${GRUB_ALT_INSTALLDIR}" ]; then
+		einfo "Enter the directory where you want to setup grub:"
+		read dir
+	else
+		dir="${GRUB_ALT_INSTALLDIR}"
+	fi
 	setup_boot_dir "${dir}"
 }
