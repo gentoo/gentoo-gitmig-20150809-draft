@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.3 2008/07/05 10:29:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.4 2008/07/05 14:35:10 loki_val Exp $
+
+WANT_AUTOMAKE=1.9
 
 inherit autotools eutils kde-functions multilib
 
@@ -61,10 +63,24 @@ src_unpack() {
 	sed -i -e 's:$(prefix)/lib:@libdir@:' \
 		"${S}"/plugins/*/src/Makefile.{in,am} || die "sed failed"
 
-	for plugin in msn auto-reply email ; do
+	#Autoconf >=2.62 and libtool >2 requires this. Sigh.
+	rm -f $(find . -name 'acinclude.m4')
+	cp admin/acinclude.m4{.in,}
+	cp acinclude.m4{.in,}
+	AT_M4DIR="admin" eautoreconf
+
+	AT_M4DIR="../../admin"
+	for plugin in auto-reply console email msn rms; do
 		cd "${S}"/plugins/${plugin}
+		cp acinclude.m4{.in,} || die "acinclude not found"
 		eautoreconf
 	done
+	cd "${S}"/plugins/qt-gui
+	cp acinclude.m4{.in,} || die "acinclude not found"
+	eaclocal
+	eautomake
+	perl am_edit {src/,share/,po/}Makefile.in
+	eautoconf
 }
 
 src_compile() {
