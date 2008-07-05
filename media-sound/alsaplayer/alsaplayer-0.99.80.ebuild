@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80.ebuild,v 1.2 2008/03/02 07:14:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80.ebuild,v 1.3 2008/07/05 06:49:43 drac Exp $
 
 inherit autotools eutils
 
@@ -35,7 +35,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}_rc3-flags.patch
+	epatch "${FILESDIR}"/${P}_rc3-flags.patch \
+		"${FILESDIR}"/${P}-missing_limits_h.patch
 	eautoreconf
 }
 
