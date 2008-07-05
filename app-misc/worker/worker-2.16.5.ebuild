@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.16.4.ebuild,v 1.1 2008/07/02 14:56:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.16.5.ebuild,v 1.1 2008/07/05 09:39:07 dertobi123 Exp $
 
 inherit eutils
 
