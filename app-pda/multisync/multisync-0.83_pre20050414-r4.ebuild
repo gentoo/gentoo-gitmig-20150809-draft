@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.9 2007/09/16 15:03:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.10 2008/07/05 11:17:27 loki_val Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -85,7 +85,14 @@ src_unpack() {
 
 	cd "${S}"
 	cp /usr/share/gettext/config.rpath "${S}"
+	elibtoolize
 	AT_M4DIR="plugins/opie_sync/macros" eautoreconf
+	cd "${S}"/plugins/backup_plugin/
+	eautoreconf
+	cd "${S}"/plugins/syncml_plugin/
+	eautoreconf
+
+
 }
 
 run_compile() {
