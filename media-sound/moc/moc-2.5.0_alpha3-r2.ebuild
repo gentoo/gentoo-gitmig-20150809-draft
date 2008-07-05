@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r2.ebuild,v 1.1 2008/05/08 18:27:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r2.ebuild,v 1.2 2008/07/05 06:58:53 drac Exp $
 
 inherit autotools eutils
 
@@ -45,7 +45,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-faad2.patch \
 		"${FILESDIR}"/${P}-ffmpegheaders.patch \
-		"${FILESDIR}"/${P}-libtool22.patch
+		"${FILESDIR}"/${P}-libtool22.patch \
+		"${FILESDIR}"/${P}-fix_default_configuration_layout.patch
 	cp -f "${WORKDIR}"/m4/* m4/
 	AT_M4DIR="m4" eautoreconf
 }
