@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.44 2007/11/18 17:37:25 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.45 2008/07/05 23:01:32 wormo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -222,7 +222,7 @@ src_configure() {
 	then
 		myconf -Dd_dosuid
 		ewarn "You have enabled Perl's suid compile. Please"
-		ewarn "read http://perldoc.com/perl5.8.2/INSTALL.html#suidperl"
+		ewarn "read http://search.cpan.org/~nwclark/perl-5.8.8/INSTALL#suidperl"
 		epause 3
 	fi
 
