@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.107 2008/07/05 13:45:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.108 2008/07/05 13:47:10 ranger Exp $
+
+  05 Jul 2008; Brent Baude <ranger@gentoo.org> rmagick-1.15.14.ebuild:
+  stable ppc64, bug 230822
 
   05 Jul 2008; Brent Baude <ranger@gentoo.org> rmagick-1.15.14.ebuild:
   stable ppc, bug 230822
