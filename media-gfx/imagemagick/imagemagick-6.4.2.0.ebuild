@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.0.ebuild,v 1.1 2008/06/25 22:03:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.0.ebuild,v 1.2 2008/07/05 16:18:36 maekke Exp $
 
 inherit eutils multilib perl-app
 
@@ -16,7 +16,7 @@ LICENSE="imagemagick"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 djvu doc fontconfig fpx graphviz gs hdri jbig jpeg jpeg2k lcms nocxx
-	openexr openmp perl png q8 q32 svg tiff truetype X wmf xml zlib"
+	openexr perl png q8 q32 svg tiff truetype X wmf xml zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	djvu? ( app-text/djvu )
@@ -99,10 +99,10 @@ src_compile() {
 		--with-ltdl-lib=/usr/$(get_libdir) \
 		--with-threads \
 		--with-modules \
+		--disable-openmp \
 		$(use_with perl) \
 		--with-gs-font-dir=/usr/share/fonts/default/ghostscript \
 		$(use_enable hdri) \
-		$(use_enable openmp) \
 		$(use_with truetype windows-font-dir /usr/share/fonts/corefonts) \
 		$(use_with !nocxx magick-plus-plus) \
 		$(use_with bzip2 bzlib) \
