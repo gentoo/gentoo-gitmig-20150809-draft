@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.6.ebuild,v 1.4 2008/06/22 15:18:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.6.ebuild,v 1.5 2008/07/05 11:51:40 drac Exp $
 
 inherit libtool
 
@@ -13,20 +13,19 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-libs/libusb-0.1.7"
-DEPEND="${RDEPEND}"
+DEPEND=">=dev-libs/libusb-0.1.7"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:SUBDIRS = src sample doc:SUBDIRS = src doc:" Makefile.in
+	sed -i \
+		-e "s:SUBDIRS = src sample doc:SUBDIRS = src doc:" \
+		Makefile.in || die "sed failed."
 	elibtoolize
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-# what?
-#	dosym ${PN}.so /usr/$(get_libdir)/${PN}.so.0
 
 	dodoc AUTHORS ChangeLog* FAQ HACKING README
 
