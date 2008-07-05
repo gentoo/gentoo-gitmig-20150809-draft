@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.19 2008/01/14 02:14:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.20 2008/07/05 09:53:38 robbat2 Exp $
+
+*vblade-14-r1 (05 Jul 2008)
+
+  05 Jul 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/init.d-vblade.vblade0-14-r1, +vblade-14-r1.ebuild:
+  Bug #209792, use "vbladed?" and a shorter chunk of arguments to match more
+  processes.
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
   -vblade-6.ebuild, -vblade-9.ebuild, -vblade-10.ebuild,
