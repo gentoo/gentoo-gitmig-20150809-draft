@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0-r1.ebuild,v 1.2 2008/06/23 23:14:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.0.0-r1.ebuild,v 1.3 2008/07/05 07:46:25 loki_val Exp $
 
 EAPI=1
 
@@ -27,7 +27,10 @@ RDEPEND=">=dev-lang/mono-1.2.4
 	>=media-plugins/gst-plugins-alsa-${GVER}
 	>=media-plugins/gst-plugins-gnomevfs-${GVER}
 	>=media-plugins/gst-plugins-gconf-${GVER}
-	>=media-plugins/gst-plugins-cdparanoia-${GVER}
+	|| (
+		>=media-plugins/gst-plugins-cdparanoia-${GVER}
+		>=media-plugins/gst-plugins-cdio-${GVER}
+	)
 	=media-libs/musicbrainz-2*
 	dev-dotnet/dbus-glib-sharp
 	>=dev-dotnet/mono-addins-0.3
