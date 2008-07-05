@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4.ebuild,v 1.2 2008/06/01 18:13:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4.ebuild,v 1.3 2008/07/05 19:54:48 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -115,7 +115,7 @@ src_install() {
 	fixlocalpod
 
 	insinto "${APACHE_MODULES_CONFDIR}"
-	doins "${FILESDIR}"/${PV}/apache2-mod_perl-startup.pl
+	doins "${FILESDIR}"/2.0.3/apache2-mod_perl-startup.pl
 	cp -pPR docs "${D}"/usr/share/doc/${PF}
 	cp -pPR todo "${D}"/usr/share/doc/${PF}
 
