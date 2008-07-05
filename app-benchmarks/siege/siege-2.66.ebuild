@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.66.ebuild,v 1.4 2007/10/26 18:59:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.66.ebuild,v 1.5 2008/07/05 09:11:37 loki_val Exp $
 
-inherit eutils bash-completion
+WANT_AUTOMAKE=1.9
+
+inherit eutils bash-completion autotools
 
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/JoeDog/Siege"
@@ -25,8 +27,7 @@ src_unpack() {
 	# on the last column of the previous line.
 	sed -i 's/\\b\(Transactions:\)/\1/' src/main.c || \
 		die "sed src/main.c failed"
-
-	automake || die "automake failed"
+	eautomake
 }
 
 src_compile() {
