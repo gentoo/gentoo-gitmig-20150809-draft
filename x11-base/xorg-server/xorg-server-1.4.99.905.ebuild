@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.905.ebuild,v 1.1 2008/07/01 08:41:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.99.905.ebuild,v 1.2 2008/07/05 21:26:28 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -104,8 +104,8 @@ IUSE="${IUSE_VIDEO_CARDS}
 	3dfx
 	dri hal ipv6 minimal nptl sdl" # xprint
 RDEPEND="hal? ( sys-apps/hal )
-	>=x11-libs/libXfont-1.3.2
-	>=x11-libs/xtrans-1.0.4
+	>=x11-libs/libXfont-1.3.3
+	>=x11-libs/xtrans-1.2.1
 	>=x11-libs/libXau-1.0.3
 	>=x11-libs/libXext-1.0.4
 	>=x11-libs/libX11-1.1.4
@@ -125,13 +125,13 @@ RDEPEND="hal? ( sys-apps/hal )
 	>=x11-apps/iceauth-1.0.2
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3
-	>=x11-apps/xinit-1.0.8
+	>=x11-apps/xinit-1.0.8-r3
 	app-admin/eselect-opengl
 	>=x11-libs/libXaw-1.0.4
 	>=x11-libs/libXpm-3.5.7
 	>=x11-libs/libXxf86misc-1.0.1
-	>=x11-libs/libXxf86vm-1.0.1
-	>=x11-libs/libpciaccess-0.10
+	>=x11-libs/libXxf86vm-1.0.2
+	>=x11-libs/libpciaccess-0.10.3
 	dmx? ( >=x11-libs/libdmx-1.0.2
 			>=x11-libs/libXfixes-4.0.3 )
 	!minimal? ( >=x11-libs/libXtst-1.0.3
@@ -146,7 +146,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	# liblbxutil is lbx- dependent
 DEPEND="${RDEPEND}
 	!net-dialup/dtrace
-	>=x11-proto/randrproto-1.2.1
+	>=x11-proto/randrproto-1.2.2
 	>=x11-proto/renderproto-0.9.3
 	>=x11-proto/fixesproto-4
 	>=x11-proto/damageproto-1.1
@@ -190,8 +190,8 @@ PDEPEND="
 		input_devices_dmc? ( >=x11-drivers/xf86-input-dmc-1.1.2 )
 		input_devices_dynapro? ( >=x11-drivers/xf86-input-dynapro-1.1.2 )
 		input_devices_elo2300? ( >=x11-drivers/xf86-input-elo2300-1.1.2 )
-		input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.2.1 )
-		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.99.2-r2 )
+		input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.2.2 )
+		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-2.0.1 )
 		input_devices_fpit? ( >=x11-drivers/xf86-input-fpit-1.2.0 )
 		input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.2.0 )
 		input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.2.0 )
@@ -221,14 +221,14 @@ PDEPEND="
 		video_cards_dummy? ( >=x11-drivers/xf86-video-dummy-0.3.0 )
 		video_cards_fbdev? ( >=x11-drivers/xf86-video-fbdev-0.4.0 )
 		video_cards_geode? ( >=x11-drivers/xf86-video-geode-2.9.0  )
-		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.2.0 )
+		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.2.1 )
 		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.3.0 )
 		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.2.0 )
 		video_cards_i810? ( >=x11-drivers/xf86-video-i810-2.3.1-r1 )
 		video_cards_mach64? ( >=x11-drivers/xf86-video-mach64-6.8.0 )
-		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.8 )
+		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.9 )
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.2.1 )
-		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.9 )
+		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.10 )
 		video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-173.14.09 )
 		video_cards_r128? ( >=x11-drivers/xf86-video-r128-6.8.0 )
 		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.9.0 )
@@ -244,8 +244,8 @@ PDEPEND="
 		video_cards_trident? ( >=x11-drivers/xf86-video-trident-1.3.0 )
 		video_cards_tseng? ( >=x11-drivers/xf86-video-tseng-1.2.0 )
 		video_cards_v4l? ( >=x11-drivers/xf86-video-v4l-0.2.0 )
-		video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-1.3.0 )
-		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.16.0 )
+		video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-2.0.0 )
+		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.16.2 )
 		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.2.0 )
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
 
