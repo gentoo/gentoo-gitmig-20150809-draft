@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.13.ebuild,v 1.4 2008/03/10 22:42:35 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.13.ebuild,v 1.5 2008/07/05 23:48:17 araujo Exp $
 
-inherit base eutils ghc-package
+inherit base eutils ghc-package flag-o-matic
 
 DESCRIPTION="A make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -16,8 +16,7 @@ IUSE=""
 DEPEND="!>=dev-lang/ghc-6.8
 		sys-libs/readline
 		>=sys-apps/sandbox-1.2.12"
-RDEPEND="dev-lang/ghc
-		sys-libs/readline"
+RDEPEND="sys-libs/readline"
 
 # sandbox dependency due to bug #97441, #101433
 
@@ -33,6 +32,8 @@ src_unpack() {
 		$1 -E -cpp -optP-dM ghcsym.hs -o ghcsym.out; \
 		grep __GLASGOW_HASKELL__ ghcsym.out | cut -d" " -f 3 > $2;' \
 		"${S}/script/confhc"
+	# Make it compile with LDFLAGS -Wl, -O1
+	filter-ldflags -*
 }
 
 src_compile() {

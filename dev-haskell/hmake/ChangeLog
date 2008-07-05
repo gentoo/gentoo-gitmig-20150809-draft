@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.35 2008/03/10 22:42:35 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.36 2008/07/05 23:48:17 araujo Exp $
+
+  05 Jul 2008; Luis F. Araujo <araujo@gentoo.org> hmake-3.11.ebuild,
+  hmake-3.13.ebuild:
+  Fixed bug #154848. Latest hmake versions only compile with >= 6.8 too
 
   10 Mar 2008; Luis F. Araujo <araujo@gentoo.org> hmake-3.11.ebuild,
   hmake-3.13.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.13 2008/03/10 22:42:35 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.14 2008/07/05 23:48:17 araujo Exp $
 
-inherit base eutils fixheadtails ghc-package
+inherit base eutils fixheadtails ghc-package flag-o-matic
 
 DESCRIPTION="A make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -16,8 +16,7 @@ IUSE=""
 DEPEND="!>=dev-lang/ghc-6.8
 		sys-libs/readline
 		>=sys-apps/sandbox-1.2.12"
-RDEPEND="dev-lang/ghc
-		sys-libs/readline"
+RDEPEND="sys-libs/readline"
 
 # sandbox dependency due to bug #97441, #101433
 
@@ -41,6 +40,8 @@ src_unpack() {
 	# the line above prevents current fixheadtails.eclass from doing nonsense;
 	# double space before -n is significant
 	ht_fix_all
+	# Make it compile with -Wl, -O1
+	filter-ldflags -*
 }
 
 src_compile() {
