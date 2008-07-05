@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.2 2008/06/25 16:03:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.3 2008/07/05 03:15:15 robbat2 Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -57,6 +57,8 @@ src_unpack() {
 	cd "${S}"
 
 	ht_fix_file configure.in
+
+	epatch "${FILESDIR}"/${P}-no-libdummy.patch
 
 	sed -e "s:GD_LIBS.*=.*-L/usr/X11R6/lib \(.*\) -lXpm -lX11:GD_LIBS=\"\1:" \
 		-i configure.in || die "sed failed"
