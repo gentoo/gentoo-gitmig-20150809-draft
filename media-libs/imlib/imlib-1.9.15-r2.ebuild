@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r2.ebuild,v 1.9 2008/01/10 08:50:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r2.ebuild,v 1.10 2008/07/05 08:51:28 loki_val Exp $
 
 inherit autotools eutils gnome.org
 
@@ -40,8 +40,7 @@ src_unpack() {
 	# Fixes #197489
 	epatch "${FILESDIR}"/${P}-fix-rendering.patch
 
-	eautoconf
-	_elibtoolize
+	eautoreconf
 }
 
 src_compile() {
