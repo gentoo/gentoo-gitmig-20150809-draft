@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.3 2008/07/05 03:15:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.4 2008/07/05 03:22:14 robbat2 Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -30,9 +30,11 @@ DEPEND="$RDEPEND
 		>=sys-devel/autoconf-2.58"
 
 # public files should be 644 root:root
-NUT_PUBLIC_FILES="/etc/nut/{{hosts,upsset,ups,upssched}.conf,upsstats{,-single}.html}"
+NUT_PUBLIC_FILES="/etc/nut/{{ups,upssched}.conf}"
 # private files should be 640 root:nut - readable by nut, writeable by root,
 NUT_PRIVATE_FILES="/etc/nut/{upsd.conf,upsd.users,upsmon.conf}"
+# public files should be 644 root:root, only installed if USE=cgi
+NUT_CGI_FILES="/etc/nut/{{hosts,upsset}.conf,upsstats{,-single}.html}"
 
 pkg_setup() {
 	if use cgi && ! built_with_use media-libs/gd png ; then
@@ -151,6 +153,12 @@ src_install() {
 	# Do not remove eval here, because the variables contain shell expansions.
 	eval fperms 0644 ${NUT_PUBLIC_FILES}
 	eval fowners root:root ${NUT_PUBLIC_FILES}
+	
+	# Do not remove eval here, because the variables contain shell expansions.
+	if use cgi; then
+		eval fperms 0644 ${NUT_CGI_FILES}
+		eval fowners root:root ${NUT_CGI_FILES}
+	fi
 
 	# this is installed for 2.4 and fbsd guys
 	if ! has_version sys-fs/udev; then
@@ -183,6 +191,12 @@ pkg_postinst() {
 	# Do not remove eval here, because the variables contain shell expansions.
 	eval chown root:root "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
 	eval chmod 0644 "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
+	
+	# Do not remove eval here, because the variables contain shell expansions.
+	if use cgi; then
+		eval chown root:root "${ROOT}"${NUT_CGI_FILES} 2>/dev/null
+		eval chmod 0644 "${ROOT}"${NUT_CGI_FILES} 2>/dev/null
+	fi
 
 	warningmsg elog
 }
