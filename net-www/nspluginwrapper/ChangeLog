@@ -1,6 +1,12 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.16 2008/03/01 14:04:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.17 2008/07/05 23:52:53 peper Exp $
+
+*nspluginwrapper-1.0.0 (05 Jul 2008)
+
+  05 Jul 2008; Piotr Jaroszyński <peper@gentoo.org>
+  +nspluginwrapper-1.0.0.ebuild:
+  Add 1.0.0.
 
   01 Mar 2008; Christoph Mende <angelos@gentoo.org>
   nspluginwrapper-0.9.91.5-r1.ebuild:
