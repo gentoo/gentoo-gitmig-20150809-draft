@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.94 2008/07/05 09:59:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.95 2008/07/05 23:04:07 gentoofan23 Exp $
+
+  05 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> grub-0.97-r6.ebuild:
+  stable amd64, bug 230836
 
   05 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> files/grub.conf.gentoo,
   grub-0.97-r6.ebuild:
