@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.74 2008/07/04 06:59:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.75 2008/07/05 10:27:40 dertobi123 Exp $
+
+  05 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  mercurial-1.0.1-r2.ebuild:
+  ppc stable, bug #230193
 
 *mercurial-1.0.1-r3 (04 Jul 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.0.1-r2.ebuild,v 1.3 2008/07/03 16:08:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.0.1-r2.ebuild,v 1.4 2008/07/05 10:27:40 dertobi123 Exp $
 
 inherit bash-completion distutils elisp-common flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.selenic.com/mercurial/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="bugzilla cvs darcs emacs git gpg subversion test zsh-completion"
 
 CDEPEND=">=dev-lang/python-2.3"
