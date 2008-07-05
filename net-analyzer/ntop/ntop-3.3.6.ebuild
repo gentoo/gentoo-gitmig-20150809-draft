@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.6.ebuild,v 1.1 2008/07/04 23:44:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.6.ebuild,v 1.2 2008/07/05 15:03:09 loki_val Exp $
 
 inherit eutils autotools
 
@@ -66,9 +66,9 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-
+	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
-	cp /usr/share/aclocal/libtool.m4 libtool.m4.in || die "failed to copy libtool.m4"
+	touch libtool.m4.in
 }
 
 src_compile() {
