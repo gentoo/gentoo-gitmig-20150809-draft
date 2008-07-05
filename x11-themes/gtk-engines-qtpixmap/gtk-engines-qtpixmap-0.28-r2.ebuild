@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.8 2008/06/15 13:07:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.9 2008/07/05 10:44:51 loki_val Exp $
 
 inherit autotools eutils
 
@@ -29,7 +29,10 @@ src_unpack() {
 	# Add switches to enable/disable gtk1 and gtk2 engines in the configure
 	# script.
 	epatch "${FILESDIR}/${P}-gtk_switches.patch"
-
+	sed -i \
+		-e 's/AC_CHECK_COMPILERS/AC_PROG_CC/' \
+		configure.in
+	rm acinclude.m4
 	eautoreconf
 }
 
