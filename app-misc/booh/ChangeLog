@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/booh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.17 2007/02/21 22:21:13 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.18 2008/07/06 12:48:37 dams Exp $
+
+*booh-0.9.1 (06 Jul 2008)
+
+  06 Jul 2008; <dams@gentoo.org> +files/booh-0.9.1-require_gems.patch,
+  +booh-0.9.1.ebuild:
+  - new version 0.9.1
+  - added rubygems patch
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
