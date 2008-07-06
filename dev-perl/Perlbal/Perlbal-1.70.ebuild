@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.70.ebuild,v 1.1 2008/07/06 19:17:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.70.ebuild,v 1.2 2008/07/06 19:37:53 robbat2 Exp $
 
 MODULE_AUTHOR="BRADFITZ"
 inherit perl-module
@@ -23,7 +23,7 @@ DEPEND="dev-perl/libwww-perl
 #SRC_TEST="do" # testing not available on Perlbal yet ;-)
 mydoc="CHANGES"
 
-PATCHES="${FILESDIR}/${PN}-1.58-Use-saner-name-in-process-listing.patch"
+PATCHES=( "${FILESDIR}/${PN}-1.58-Use-saner-name-in-process-listing.patch" )
 
 src_install() {
 	perl-module_src_install || die "perl-module_src_install failed"
