@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080123.74039.ebuild,v 1.1 2008/01/30 14:08:32 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080123.74039.ebuild,v 1.2 2008/07/06 19:41:28 ikelos Exp $
 
-inherit pam eutils linux-mod autotools versionator
+inherit pam eutils linux-mod versionator
 
 MY_DATE="$(get_version_component_range 3)"
 MY_BUILD="$(get_version_component_range 4)"
