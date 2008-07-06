@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.7 2008/07/06 18:38:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.8 2008/07/06 20:58:32 ribosome Exp $
 
 inherit perl-module eutils
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_test() {
-	perl-module_src_test || die "Test failed"
+	make test || die "Tests failed."
 }
 
 src_install() {
