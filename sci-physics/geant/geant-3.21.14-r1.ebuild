@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r1.ebuild,v 1.3 2008/06/29 07:57:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r1.ebuild,v 1.4 2008/07/06 23:31:21 jer Exp $
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
@@ -32,8 +32,6 @@ DEPEND="${RDEPEND}
 	x11-misc/makedepend"
 
 S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
-
-KEYWORDS="~amd64 ~x86"
 
 FORTRAN="gfortran g77 ifc"
 

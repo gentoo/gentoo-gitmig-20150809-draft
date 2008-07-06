@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.7 2008/07/06 23:29:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.8 2008/07/06 23:31:21 jer Exp $
+
+  06 Jul 2008; Jeroen Roovers <jer@gentoo.org> geant-3.21.14-r1.ebuild:
+  Fix duplicate KEYWORDS definition.
 
   06 Jul 2008; Jeroen Roovers <jer@gentoo.org> geant-3.21.14-r2.ebuild:
   Fix duplicate KEYWORDS definition.
