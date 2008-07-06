@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1-r1.ebuild,v 1.7 2008/06/23 20:29:29 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1-r1.ebuild,v 1.8 2008/07/06 08:05:26 cla Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/faac/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="drm"
 
 RDEPEND=""
