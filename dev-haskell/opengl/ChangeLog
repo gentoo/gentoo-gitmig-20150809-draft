@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/opengl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.7 2007/12/16 22:54:32 fmccor Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.8 2008/07/06 20:28:01 maekke Exp $
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> ChangeLog:
+  amd64/x86 stable, bug #230919
 
   16 Dec 2007; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.1.ebuild:
   Add ~sparc keyword, new version (Bug #201984).

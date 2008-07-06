@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.9 2007/12/20 02:33:19 dcoutts Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.10 2008/07/06 20:23:35 maekke Exp $
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> alut-2.1.0.0.ebuild:
+  amd64/x86 stable, bug #230919
 
   20 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> alut-2.1.0.0.ebuild:
   New version. Released with ghc-6.8 but works with ghc-6.6.

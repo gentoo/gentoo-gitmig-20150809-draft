@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.27 2007/12/16 20:22:44 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.28 2008/07/06 20:33:14 maekke Exp $
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> fgl-5.4.1.1.ebuild:
+  amd64/x86 stable, bug #230919
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> fgl-5.4.1.ebuild:
   amd64 stable wrt #201984
