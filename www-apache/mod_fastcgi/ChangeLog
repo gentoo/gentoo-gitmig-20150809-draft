@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fastcgi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.5 2008/07/06 13:01:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.6 2008/07/06 13:03:12 maekke Exp $
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> mod_fastcgi-2.4.6-r1.ebuild:
+  add empty IUSE
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org> mod_fastcgi-2.4.6-r1.ebuild:
   amd64/x86 stable, bug #230930

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.6-r1.ebuild,v 1.2 2008/07/06 13:01:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.6-r1.ebuild,v 1.3 2008/07/06 13:03:12 maekke Exp $
 
 inherit apache-module eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.fastcgi.com/dist/${P}.tar.gz"
 KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="FastCGI"
+IUSE=""
 
 APXS2_ARGS="-c mod_fastcgi.c fcgi*.c"
 APACHE2_MOD_CONF="20_${PN}"
