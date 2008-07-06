@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.107 2008/06/21 16:59:25 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.108 2008/07/06 14:36:12 armin76 Exp $
+
+  06 Jul 2008; Raúl Porcel <armin76@gentoo.org> -sparc64/2006.1/deprecated,
+  -sparc64/2006.1/make.defaults, -sparc64/2006.1/package.mask,
+  -sparc64/2006.1/packages, -sparc64/2006.1/parent:
+  Punt 2006.1 profile, use 2008.0
 
   21 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> package.use.mask:
   Package.use.mask smartcard for net-misc/kvpnc
