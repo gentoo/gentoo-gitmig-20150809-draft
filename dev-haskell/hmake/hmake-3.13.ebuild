@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.13.ebuild,v 1.5 2008/07/05 23:48:17 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.13.ebuild,v 1.6 2008/07/06 01:48:37 araujo Exp $
 
 inherit base eutils ghc-package flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="!>=dev-lang/ghc-6.8
+DEPEND="<dev-lang/ghc-6.8
 		sys-libs/readline
 		>=sys-apps/sandbox-1.2.12"
 RDEPEND="sys-libs/readline"
@@ -33,7 +33,7 @@ src_unpack() {
 		grep __GLASGOW_HASKELL__ ghcsym.out | cut -d" " -f 3 > $2;' \
 		"${S}/script/confhc"
 	# Make it compile with LDFLAGS -Wl, -O1
-	filter-ldflags -*
+	filter-ldflags -Wl,-O1
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.14 2008/07/05 23:48:17 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.15 2008/07/06 01:48:37 araujo Exp $
 
 inherit base eutils fixheadtails ghc-package flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="!>=dev-lang/ghc-6.8
+DEPEND="<dev-lang/ghc-6.8
 		sys-libs/readline
 		>=sys-apps/sandbox-1.2.12"
 RDEPEND="sys-libs/readline"
@@ -41,7 +41,7 @@ src_unpack() {
 	# double space before -n is significant
 	ht_fix_all
 	# Make it compile with -Wl, -O1
-	filter-ldflags -*
+	filter-ldflags -Wl,-O1
 }
 
 src_compile() {
