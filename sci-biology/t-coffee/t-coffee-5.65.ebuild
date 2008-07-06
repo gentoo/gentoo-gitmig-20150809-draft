@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.65.ebuild,v 1.1 2008/04/14 23:16:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.65.ebuild,v 1.2 2008/07/06 21:37:46 ribosome Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tcoffee.org/Packages/T-COFFEE_distribution_Version_${PV}.tar
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 RESTRICT="mirror"
 
