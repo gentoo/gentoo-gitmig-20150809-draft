@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.6 2008/01/02 16:22:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.7 2008/07/06 18:38:13 ribosome Exp $
 
 inherit perl-module eutils
 
@@ -29,7 +29,7 @@ DEPEND="
 	dev-perl/Graph
 	dev-perl/Text-Shellwords
 	~sci-libs/io_lib-1.8.12b
-	!=sci-libs/io_lib-1.9*
+	!>=sci-libs/io_lib-1.9
 	gd? (
 			>=dev-perl/GD-1.32-r1
 			dev-perl/SVG
