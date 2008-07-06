@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ifenslave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.15 2007/10/03 17:53:51 fmccor Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.16 2008/07/06 18:00:09 bluebird Exp $
+
+  06 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  ifenslave-1.1.0-r3.ebuild:
+  Stable on sparc
 
   03 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
   ifenslave-1.1.0-r3.ebuild:
