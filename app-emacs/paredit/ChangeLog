@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/paredit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.5 2007/09/15 23:55:17 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.6 2008/07/06 15:36:20 ulm Exp $
+
+*paredit-21_beta20080429 (06 Jul 2008)
+
+  06 Jul 2008; Ulrich Mueller <ulm@gentoo.org> paredit-20-r1.ebuild,
+  +paredit-21_beta20080429.ebuild:
+  Add beta version, request by Stelian Ionescu. Repackage distfiles since
+  upstream tends to change them after release.
 
 *paredit-20-r1 (15 Sep 2007)
 
