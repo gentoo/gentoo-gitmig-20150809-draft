@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.5 2008/06/25 06:59:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.6 2008/07/06 12:27:15 hanno Exp $
+
+*webkit-gtk-0_p35024 (06 Jul 2008)
+
+  06 Jul 2008; Hanno Boeck <hanno@gentoo.org> +webkit-gtk-0_p35024.ebuild:
+  Version bump.
 
 *webkit-gtk-0_p34753 (25 Jun 2008)
 
