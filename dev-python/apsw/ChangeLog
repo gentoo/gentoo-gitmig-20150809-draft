@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apsw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.7 2007/03/23 09:07:56 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.8 2008/07/06 19:03:52 opfer Exp $
+
+  06 Jul 2008; Christian Faulhammer <opfer@gentoo.org> apsw-3.3.13.1.ebuild:
+  stable x86, bug 230377
 
 *apsw-3.3.13.1 (23 Mar 2007)
 

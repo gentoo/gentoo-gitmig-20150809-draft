@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.3.13.1.ebuild,v 1.1 2007/03/23 09:07:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.3.13.1.ebuild,v 1.2 2008/07/06 19:03:52 opfer Exp $
 
 inherit distutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://initd.org/pub/software/pysqlite/${PN}/${MY_PV}/${PN}-${MY_PV}.zi
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/python
