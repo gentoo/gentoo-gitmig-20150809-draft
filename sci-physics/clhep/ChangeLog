@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.1 2008/06/06 19:17:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.2 2008/07/06 23:11:49 jer Exp $
+
+  06 Jul 2008; Jeroen Roovers <jer@gentoo.org> clhep-2.0.3.3.ebuild:
+  Marked ~hppa (bug #230716).
 
 *clhep-2.0.3.3 (06 Jun 2008)
 
