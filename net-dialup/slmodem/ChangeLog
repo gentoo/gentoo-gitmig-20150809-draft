@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.97 2008/06/15 13:29:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.98 2008/07/06 19:11:56 opfer Exp $
+
+  06 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  slmodem-2.9.11_pre20080417.ebuild:
+  stable x86, bug 230795
 
   15 Jun 2008; Alin Năstac <mrness@gentoo.org>
   slmodem-2.9.11_pre20080417.ebuild:
