@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6.ebuild,v 1.1 2008/06/13 09:56:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6-r1.ebuild,v 1.1 2008/07/06 17:50:05 armin76 Exp $
 
 inherit eutils versionator gnome2
 
@@ -41,6 +41,8 @@ src_unpack() {
 		sed -i -e 's:${prefix}/lib/xchat:${libdir}/xchat:' \
 			"${S}"/configure{,.in} || die
 	fi
+
+	epatch "${FILESDIR}"/xc286-smallfixes.diff
 }
 
 src_compile() {
