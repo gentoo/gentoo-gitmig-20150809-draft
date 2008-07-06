@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.3.8.ebuild,v 1.1 2007/10/22 22:29:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.0.ebuild,v 1.1 2008/07/06 22:09:49 rbu Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
