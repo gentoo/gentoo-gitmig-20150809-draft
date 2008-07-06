@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/io_lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.12 2008/07/06 18:19:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.13 2008/07/06 18:24:52 ribosome Exp $
+
+  06 Jul 2008; Olivier Fisette <ribosome@gentoo.org>
+  -io_lib-1.8.12b-r1.ebuild, -io_lib-1.9.0-r1.ebuild:
+  Pruned old versions.
 
   06 Jul 2008; Olivier Fisette <ribosome@gentoo.org> io_lib-1.10.1.ebuild:
   Stable on x86.
