@@ -1,25 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.0_beta4-r1.ebuild,v 1.1 2008/04/21 05:52:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.0.ebuild,v 1.1 2008/07/06 21:00:29 markusle Exp $
 
 inherit eutils
 
 DESCRIPTION="Open Babel interconverts file formats used in molecular modeling"
-SRC_URI="mirror://sourceforge/openbabel/${PN}-2.2.0b4-20080301-r2299.tar.gz"
+SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 HOMEPAGE="http://openbabel.sourceforge.net/"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-RDEPEND="!sci-chemistry/babel"
-
-S=${WORKDIR}/${PN}-2.2.0b4
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-obconversion_api_fix.diff"
-}
+RDEPEND="!sci-chemistry/babel
+		 dev-libs/libxml2"
+DEPEND="${RDEPEND}
+		dev-libs/boost
+		dev-lang/perl"
 
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed."
