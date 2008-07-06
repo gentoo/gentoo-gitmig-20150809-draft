@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.35 2008/07/02 20:27:39 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.36 2008/07/06 20:33:58 bluebird Exp $
+
+  06 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gtk-engines-qt-0.8-r1.ebuild:
+  Stable on sparc, thanks to Tiago Cunha for testing, bug #224879
 
   02 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   gtk-engines-qt-0.8-r1.ebuild:
