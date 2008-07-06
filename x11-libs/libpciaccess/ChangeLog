@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.3 2008/07/05 06:25:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.4 2008/07/06 15:32:12 bluebird Exp $
+
+  06 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  libpciaccess-0.10.3.ebuild:
+  Add ~sparc keyword
 
 *libpciaccess-0.10.3 (05 Jul 2008)
 
