@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.41 2008/07/06 17:08:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.42 2008/07/06 17:20:49 ranger Exp $
+
+  06 Jul 2008; Brent Baude <ranger@gentoo.org> brasero-0.7.1.ebuild:
+  stable ppc, bug 225627
 
 *brasero-0.7.91 (06 Jul 2008)
 
