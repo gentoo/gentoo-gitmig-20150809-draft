@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/io_lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.15 2008/07/06 18:59:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.16 2008/07/06 19:03:18 ribosome Exp $
+
+  06 Jul 2008; Olivier Fisette <ribosome@gentoo.org>
+  io_lib-1.8.12b-r1.ebuild:
+  Added to amd64 for eventual Bioperl stabilisation (bug #222727).
 
 *io_lib-1.11.2.1 (06 Jul 2008)
 
