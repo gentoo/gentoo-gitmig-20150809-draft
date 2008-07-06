@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5.ebuild,v 1.9 2008/07/06 20:10:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5-r1.ebuild,v 1.1 2008/07/06 20:10:00 loki_val Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	lirc? ( app-misc/lirc )
 	hal? (
 		ipod? ( >=media-libs/libgpod-0.4 )
-		mtp? ( <media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-0.3.0 )
 		>=sys-apps/hal-0.5
 	)
 	daap? ( >=net-dns/avahi-0.6 )
@@ -110,6 +110,8 @@ src_unpack() {
 
 	# backport from svn HEAD, 0.11.6 shouldn't need it
 	epatch "${FILESDIR}/${PN}-0.11.5-fix_gtk_doc.patch"
+	#Fix for libmtp-0.3.0 API change
+	epatch "${FILESDIR}/${P}-libmtp-0.3.0-API.patch"
 	eautomake
 
 	# disable pyc compiling
