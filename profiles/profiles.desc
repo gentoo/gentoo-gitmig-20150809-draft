@@ -36,7 +36,6 @@ hppa		default-linux/hppa/2007.0/desktop		dev
 hppa		default-linux/hppa/2007.0/server		dev
 
 # IA64 Profiles
-ia64		default-linux/ia64/2006.0			stable
 ia64		default-linux/ia64/2007.0			stable
 ia64		default-linux/ia64/2007.0/desktop		dev
 ia64		default-linux/ia64/2007.0/server		dev

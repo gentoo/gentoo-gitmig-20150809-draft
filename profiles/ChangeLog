@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1654 2008/07/06 17:38:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1655 2008/07/06 18:30:05 armin76 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  06 Jul 2008; Raúl Porcel <armin76@gentoo.org> profiles.desc:
+  Remove ia64/2006.0 from profiles.desc
 
   06 Jul 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   sys-apps/nictools was removed from the tree
