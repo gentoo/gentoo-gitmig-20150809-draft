@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.4 2007/01/05 17:42:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1218-r1.ebuild,v 1.1 2008/07/06 19:37:18 loki_val Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic base
 
 IUSE=""
 
@@ -16,29 +16,24 @@ SRC_URI="http://www.peercast.org/src/${P}-src.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch "${FILESDIR}/${PN}-0.1216-makefile.patch"
-	epatch "${FILESDIR}/${PN}-0.1216-amd64.patch"
-}
+PATCHES=(	"${FILESDIR}/${P}-CVE-2008-2040.patch"
+		"${FILESDIR}/${PN}-0.1216-makefile.patch"
+		"${FILESDIR}/${PN}-0.1216-amd64.patch"	)
 
 src_compile() {
 	append-ldflags -pthread
 
-	cd ${S}/ui/linux
+	cd "${S}"/ui/linux
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" AR="$(tc-getAR)" \
 		LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	cd ${S}/ui/linux
+	cd "${S}"/ui/linux
 
 	exeinto /usr/sbin
 	newexe "${FILESDIR}/peercast.wrapper.sh" peercast
@@ -47,8 +42,8 @@ src_install() {
 	doexe peercast
 
 	dodir /usr/share/peercast
-	cd ${S}/ui
-	cp -R html ${D}/usr/share/peercast/
+	cd "${S}"/ui
+	cp -R html "${D}"/usr/share/peercast/
 
 	newinitd "${FILESDIR}/peercast.init.gpl" peercast
 }
