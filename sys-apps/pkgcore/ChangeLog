@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.61 2008/06/12 00:00:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.62 2008/07/06 21:04:14 solar Exp $
+
+*pkgcore-0.4.7.5 (06 Jul 2008)
+
+  06 Jul 2008; <solar@gentoo.org> -pkgcore-0.4.2.ebuild,
+  -pkgcore-0.4.3.ebuild, -pkgcore-0.4.4.ebuild, -pkgcore-0.4.5.ebuild,
+  -pkgcore-0.4.6.ebuild, -pkgcore-0.4.7.ebuild, -pkgcore-0.4.7.1.ebuild,
+  -pkgcore-0.4.7.2.ebuild, -pkgcore-0.4.7.3.ebuild, +pkgcore-0.4.7.5.ebuild:
+  - Version bump to 0.4.7.5. Removed old ebuilds
 
 *pkgcore-0.4.7.4 (11 Jun 2008)
 
