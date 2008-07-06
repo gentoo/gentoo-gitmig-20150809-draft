@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.4 2007/06/26 01:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.5 2008/07/06 13:14:23 george Exp $
 
 inherit gnatbuild
 
@@ -29,7 +29,7 @@ src_unpack() {
 	# prep gcc sources for Ada
 	mv "${GNATSOURCE}/src/ada" "${S}/gcc"
 	cd "${S}"
-	epatch ${WORKDIR}/${PN}-gcc-${SLOT}.diff
+	epatch "${WORKDIR}"/${PN}-gcc-${SLOT}.diff
 
 	gnatbuild_src_unpack common_prep
 
@@ -43,7 +43,7 @@ src_install() {
 
 	# there is something strange with provided Makefiles, causing an
 	# access violation on gprmake. Have to do funny things..
-	make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
+	make DESTDIR="${D}" bindir="${D}${BINPATH}"  install || die
 	mv "${D}${D}${PREFIX}/${CTARGET}" "${D}${PREFIX}"
 	rm -rf "${D}var"
 
@@ -55,11 +55,11 @@ src_install() {
 
 	# misc notes and examples
 	cd ${GNATSOURCE}
-	dodoc COPYING README features-503 features-ada0y known-problems-503a
+	dodoc README features-503 features-ada0y known-problems-503a
 	cp -pPR examples/ "${D}/usr/share/doc/${PF}/"
 
 	# this version of gnat does not provide info files yet
-	rm -f ${D}${DATAPATH}/info/gnat.info
+	rm -f "${D}"${DATAPATH}/info/gnat.info
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.6 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.7 2008/07/06 13:14:23 george Exp $
 
 inherit gnatbuild
 
@@ -34,7 +34,7 @@ src_unpack() {
 	# prep gcc sources for Ada
 	mv "${GNATSOURCE}/src/ada" "${S}/gcc"
 	cd "${S}"
-	epatch ${WORKDIR}/${PN}-gcc-3.4.6.1.diff
+	epatch "${WORKDIR}"/${PN}-gcc-3.4.6.1.diff
 
 	gnatbuild_src_unpack common_prep
 
@@ -62,11 +62,11 @@ src_install() {
 
 	# misc notes and examples
 	cd ${GNATSOURCE}
-	dodoc COPYING features* known-problems-504a
+	dodoc features* known-problems-504a
 	cp -pPR examples/ "${D}/usr/share/doc/${PF}/"
 
 	# this version of gnat does not provide info files yet
-	rm -f ${D}${DATAPATH}/info/gnat.info
+	rm -f "${D}"${DATAPATH}/info/gnat.info
 }
 
 pkg_postinst() {
