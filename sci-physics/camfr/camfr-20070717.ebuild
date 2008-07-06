@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717.ebuild,v 1.3 2008/07/04 17:34:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717.ebuild,v 1.4 2008/07/06 09:56:28 bicatali Exp $
 
 inherit eutils distutils fortran
 
@@ -22,7 +22,7 @@ RDEPEND="sci-libs/scipy
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/scons"
+	>=dev-util/scons-0.98"
 
 S="${WORKDIR}/${P/-/_}"
 
@@ -52,7 +52,7 @@ src_unpack() {
 		lapack_libdirs="${lapack_libdirs}, \"${x#-L}\""
 	done
 	cat <<-EOF >> machine_cfg.py
-		library_dirs = [${lapack_libdirs}]
+		library_dirs = [${lapack_libdirs#,}]
 		libs = ["boost_python", "blitz"${lapack_libs}]
 	EOF
 }

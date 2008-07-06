@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.9 2008/07/04 17:34:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.10 2008/07/06 09:56:28 bicatali Exp $
+
+  06 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  camfr-20070717.ebuild:
+  Fixed a leading ',' in lapack_dirs and forced scons to be at least 0.98.
 
   04 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
   camfr-20070717.ebuild:
