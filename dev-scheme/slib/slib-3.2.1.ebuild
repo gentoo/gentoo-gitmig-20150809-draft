@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.2.1.ebuild,v 1.1 2008/07/04 19:33:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.2.1.ebuild,v 1.2 2008/07/06 11:03:59 hkbst Exp $
 
 inherit versionator eutils
 
@@ -38,8 +38,6 @@ src_unpack() {
 	sed 's:infodir = $(prefix)info/:infodir = $(prefix)share/info/:' -i Makefile
 
 	sed 's:echo SCHEME_LIBRARY_PATH=$(libslibdir)  >> $(bindir)slib:echo SCHEME_LIBRARY_PATH=/usr/share/slib/ >> $(bindir)slib:' -i Makefile
-
-#	sed 's_mkdir_mkdir -p_g' -i Makefile
 
 #	diff -u Makefile.old Makefile
 
