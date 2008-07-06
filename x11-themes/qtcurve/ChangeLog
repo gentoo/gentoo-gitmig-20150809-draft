@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.35 2008/07/01 02:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.36 2008/07/06 17:31:17 bluebird Exp $
+
+  06 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> qtcurve-0.59.2.ebuild:
+  Stable on sparc, bug #228255
 
   01 Jul 2008; Jeroen Roovers <jer@gentoo.org> qtcurve-0.59.2.ebuild:
   Stable for HPPA (bug #228255).
