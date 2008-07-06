@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.5 2008/07/06 21:58:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.6 2008/07/06 22:18:20 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -183,8 +183,7 @@ setup_boot_dir() {
 		ewarn "later stages will be the new version, which could"
 		ewarn "cause problems such as an unbootable system."
 		ewarn "This means you must use either grub-install or perform"
-		ewarn "root/setup ewarn manually! For more help, see the "
-		ewarn "handbook:"
+		ewarn "root/setup manually! For more help, see the handbook:"
 		ewarn "http://www.gentoo.org/doc/en/handbook/handbook-${ARCH}.xml?part=1&chap=10#grub-install-auto"
 		ebeep
 	fi
