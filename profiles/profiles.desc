@@ -162,9 +162,9 @@ hppa		default/linux/hppa/2008.0/desktop		dev
 hppa		default/linux/hppa/2008.0/developer		dev
 hppa		default/linux/hppa/2008.0/server		dev
 ia64		default/linux/ia64/2008.0			stable
-ia64		default/linux/ia64/2008.0/desktop		dev
-ia64		default/linux/ia64/2008.0/developer		dev
-ia64		default/linux/ia64/2008.0/server		dev
+ia64		default/linux/ia64/2008.0/desktop		stable
+ia64		default/linux/ia64/2008.0/developer		stable
+ia64		default/linux/ia64/2008.0/server		stable
 m68k		default/linux/m68k/2008.0			dev
 m68k		default/linux/m68k/2008.0/desktop		dev
 m68k		default/linux/m68k/2008.0/developer		dev
@@ -197,13 +197,13 @@ sh		default/linux/sh/2008.0/developer		dev
 sh		default/linux/sh/2008.0/server			dev
 sparc		default/linux/sparc/2008.0			stable
 sparc		default/linux/sparc/2008.0/desktop		stable
-sparc		default/linux/sparc/2008.0/developer		dev
-sparc		default/linux/sparc/2008.0/server		dev
+sparc		default/linux/sparc/2008.0/developer		stable
+sparc		default/linux/sparc/2008.0/server		stable
 x86		default/linux/x86/2008.0			stable
 x86		default/linux/x86/2008.0/desktop		stable
 x86		default/linux/x86/2008.0/developer		stable
-x86		default/linux/x86/2008.0/no-nptl		stable
-x86		default/linux/x86/2008.0/server			dev
+x86		default/linux/x86/2008.0/no-nptl		dev
+x86		default/linux/x86/2008.0/server			stable
 
 # hardened multiarch profiles
 amd64		hardened/linux/amd64				stable
