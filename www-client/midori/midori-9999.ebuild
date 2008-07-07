@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.3 2008/06/09 02:13:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.4 2008/07/07 10:37:37 armin76 Exp $
 
 inherit git eutils
 
@@ -20,7 +20,7 @@ DEPEND="x11-libs/gtk+
 	net-libs/webkit-gtk"
 
 pkg_setup() {
-	ewarn "Note: this software is not yet in a too marture status so expect some minor things to break"
+	ewarn "Note: this software is not yet in a too mature status so expect some minor things to break"
 }
 
 src_install() {
