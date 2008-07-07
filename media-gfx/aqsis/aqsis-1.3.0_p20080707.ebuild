@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.3.0_p20080627.ebuild,v 1.3 2008/06/28 14:42:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.3.0_p20080707.ebuild,v 1.1 2008/07/07 21:52:33 maekke Exp $
 
 EAPI="1"
 
