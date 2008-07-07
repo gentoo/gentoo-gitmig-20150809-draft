@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.330 2008/07/07 03:46:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.331 2008/07/07 08:47:16 opfer Exp $
+
+  07 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  binutils-2.18-r3.ebuild:
+  stable x86, security bug 230593
 
   07 Jul 2008; Brent Baude <ranger@gentoo.org> binutils-2.18-r3.ebuild:
   Marking binutils-2.18-r3 ppc64 and ppc for bug 230593
