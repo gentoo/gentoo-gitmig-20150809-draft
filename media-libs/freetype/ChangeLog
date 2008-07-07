@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.196 2008/07/06 22:39:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.197 2008/07/07 02:41:24 ranger Exp $
+
+  07 Jul 2008; Brent Baude <ranger@gentoo.org>
+  freetype-1.4_pre20080316-r1.ebuild:
+  Marking freetype-1.4_pre20080316-r1 ppc64 and ppc for bug 225851
 
 *freetype-1.4_pre20080316-r1 (06 Jul 2008)
 
