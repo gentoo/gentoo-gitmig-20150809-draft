@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080702.ebuild,v 1.1 2008/07/07 05:35:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080702.ebuild,v 1.2 2008/07/07 05:36:37 dberkholz Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -31,7 +31,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	gunzip platon.f.Z xdrvr.c.gz
 }
 
@@ -69,8 +69,8 @@ src_install() {
 	insinto /usr/lib/platon
 	doins check.def
 
-	echo "CHECKDEF=\"/usr/lib/platon/check.def\"" > ${T}/env.d
-	newenvd ${T}/env.d 50platon
+	echo "CHECKDEF=\"/usr/lib/platon/check.def\"" > "${T}"/env.d
+	newenvd "${T}"/env.d 50platon
 
 	dodoc README.* VALIDATION.DOC
 }
