@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.53 2008/06/18 07:17:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.54 2008/07/07 22:35:53 gentoofan23 Exp $
+
+  07 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  madwifi-ng-0.9.4.ebuild:
+  stable amd64, bug 225099, thanks to ciberfred for testing
 
   18 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   madwifi-ng-0.9.4.ebuild:
