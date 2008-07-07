@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.4.ebuild,v 1.8 2008/01/05 19:56:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.4.ebuild,v 1.9 2008/07/07 19:39:26 loki_val Exp $
 
 inherit kde eutils
 
@@ -22,7 +22,7 @@ DEPEND="hal? ( dev-libs/dbus-qt3-old sys-apps/hal )
 	media-libs/taglib
 	>=media-sound/cdparanoia-3.9.8
 	sndfile? ( media-libs/libsndfile )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( <media-video/ffmpeg-0.4.9_p20080326 )
 	flac? ( media-libs/flac )
 	mp3? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
