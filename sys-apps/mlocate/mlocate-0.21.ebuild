@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.21.ebuild,v 1.1 2008/07/06 10:28:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.21.ebuild,v 1.2 2008/07/07 15:57:38 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="Merging locate is an utility to index and quickly search for files"
 HOMEPAGE="https://fedorahosted.org/mlocate/"
 SRC_URI="https://fedorahosted.org/releases/m/l/mlocate/${P}.tar.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"
