@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/xylib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/ChangeLog,v 1.1 2008/04/18 08:50:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/ChangeLog,v 1.2 2008/07/07 08:46:45 bicatali Exp $
+
+*xylib-0.3 (07 Jul 2008)
+
+  07 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> +xylib-0.3.ebuild:
+  Version bump, closing bug #230996
 
 *xylib-0.2 (18 Apr 2008)
 
