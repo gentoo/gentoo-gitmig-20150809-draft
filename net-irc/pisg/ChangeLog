@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/pisg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.55 2007/06/03 15:34:51 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.56 2008/07/07 18:24:27 armin76 Exp $
+
+*pisg-0.72 (07 Jul 2008)
+
+  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> +pisg-0.72.ebuild:
+  Version bump
 
   03 Jun 2007; Raúl Porcel <armin76@gentoo.org> -pisg-0.70.ebuild:
   old
