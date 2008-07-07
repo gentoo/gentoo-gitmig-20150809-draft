@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zoo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.41 2008/07/07 16:55:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.42 2008/07/07 21:55:46 coldwind Exp $
+
+  07 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> zoo-2.10-r4.ebuild:
+  amd64 stable wrt bug #231077
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> zoo-2.10-r4.ebuild:
   alpha/sparc/x86 stable
