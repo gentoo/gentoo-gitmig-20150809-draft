@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.53.1-r1.ebuild,v 1.4 2008/06/14 10:17:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.53.1-r1.ebuild,v 1.5 2008/07/07 21:55:24 jokey Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.8"
-DEPEND=">=x11-libs/gtk+-2.8"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
