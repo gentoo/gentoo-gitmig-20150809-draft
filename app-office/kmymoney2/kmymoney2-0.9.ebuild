@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.ebuild,v 1.2 2008/07/03 01:07:32 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.ebuild,v 1.3 2008/07/07 16:25:16 gentoofan23 Exp $
 
 EAPI="1"
 inherit kde
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt ofx qtdesigner test"
 
 COMMON_DEPEND="dev-libs/libxml2
-	hbci? ( >=net-libs/aqbanking-1.8.0_beta )
 	ofx? ( >=dev-libs/libofx-0.8.2
 	|| ( dev-cpp/xmlpp:2.6 >=dev-cpp/libxmlpp-1.0.1:0 )
 	>=net-misc/curl-7.9.7

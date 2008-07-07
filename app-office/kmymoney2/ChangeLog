@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.71 2008/07/03 01:10:40 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.72 2008/07/07 16:25:16 gentoofan23 Exp $
+
+  07 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  kmymoney2-0.9.ebuild:
+  Remove bogus dependency, hbci USE flag was removed, thanks to Mr_Bones_ in
+  #gentoo-dev
 
   03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   kmymoney2-0.8.6.ebuild, kmymoney2-0.8.7.ebuild, kmymoney2-0.8.8.ebuild:
