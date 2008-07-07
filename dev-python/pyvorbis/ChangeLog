@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyvorbis
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.43 2008/06/22 15:56:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.44 2008/07/07 00:06:09 jer Exp $
+
+  07 Jul 2008; Jeroen Roovers <jer@gentoo.org> pyvorbis-1.4-r3.ebuild:
+  Stable for HPPA (bug #228541).
 
   22 Jun 2008; Raúl Porcel <armin76@gentoo.org> pyvorbis-1.4-r3.ebuild:
   alpha/ia64 stable wrt #228541
