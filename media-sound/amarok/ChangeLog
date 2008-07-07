@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.266 2008/07/05 23:34:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.267 2008/07/07 14:23:52 flameeyes Exp $
+
+  07 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.9.1.ebuild,
+  amarok-1.4.9.1-r1.ebuild:
+  Remove old and no more pertinent configure options from myconf.
 
 *amarok-1.4.9.1-r1 (05 Jul 2008)
 

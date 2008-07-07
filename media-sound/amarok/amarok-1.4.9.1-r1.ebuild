@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1-r1.ebuild,v 1.1 2008/07/05 23:34:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9.1-r1.ebuild,v 1.2 2008/07/07 14:23:52 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -75,7 +75,7 @@ need-kde 3.3
 src_compile() {
 	# Extra, unsupported engines are forcefully disabled.
 	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
-				  $(use_with opengl) --without-xmms
+				  $(use_with opengl)
 				  $(use_with visualization libvisual)
 				  $(use_enable amazon)
 				  $(use_with ipod libgpod)
@@ -87,7 +87,6 @@ src_compile() {
 				  $(use_with musicbrainz)
 				  $(use_with daap)
 				  --with-xine
-				  --without-mas
 				  --without-nmm"
 
 	kde_src_compile
