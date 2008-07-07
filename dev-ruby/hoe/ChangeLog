@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.34 2008/07/01 18:01:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.35 2008/07/07 18:46:40 bluebird Exp $
+
+  07 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> hoe-1.7.0.ebuild:
+  Add ~sparc keyword, bug #230517
 
 *hoe-1.7.0 (01 Jul 2008)
 

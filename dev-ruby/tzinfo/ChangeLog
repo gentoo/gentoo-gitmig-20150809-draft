@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.11 2008/04/26 08:06:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.12 2008/07/07 18:53:15 bluebird Exp $
+
+  07 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> tzinfo-0.3.8.ebuild:
+  Add ~sparc keyword, bug #230517
 
 *tzinfo-0.3.8 (26 Apr 2008)
 
