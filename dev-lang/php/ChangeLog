@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.272 2008/07/07 11:22:51 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.273 2008/07/07 21:45:28 maekke Exp $
+
+  07 Jul 2008; Markus Meier <maekke@gentoo.org> php-5.2.6-r2.ebuild:
+  x86 stable, bug #230575
 
   07 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> php-5.2.6-r2.ebuild:
   stable amd64, security bug 230575
