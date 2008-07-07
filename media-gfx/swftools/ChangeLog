@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.27 2008/07/01 03:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.28 2008/07/07 00:53:41 wormo Exp $
+
+  06 Jul 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  swftools-0.8.1.ebuild:
+  mark ~ppc (needed for bug #229427)
 
   01 Jul 2008; Jeroen Roovers <jer@gentoo.org> swftools-0.8.1.ebuild:
   Marked ~hppa (bug #229427).
