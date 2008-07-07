@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.32 2008/06/28 15:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.33 2008/07/07 22:03:11 jer Exp $
+
+  07 Jul 2008; Jeroen Roovers <jer@gentoo.org> ftp-0.17-r7.ebuild:
+  Stable for HPPA too.
 
   28 Jun 2008; Mike Frysinger <vapier@gentoo.org>
   +files/netkit-ftp-0.17-arg_max.patch, ftp-0.17-r7.ebuild:
