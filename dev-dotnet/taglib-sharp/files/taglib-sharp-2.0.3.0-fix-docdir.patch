@@ -1,0 +1,11 @@
+--- taglib-sharp-2.0.3.0/docs/Makefile.am	2008-01-03 10:14:19.000000000 +0200
++++ taglib-sharp-2.0.3.0-new/docs/Makefile.am	2008-07-01 08:14:53.000000000 +0300
+@@ -10,7 +10,7 @@
+ XmlInjector.exe: XmlInjector.cs
+ 	mcs -out:$@ -r:System.Xml $<
+ 
+-monodocdir = $(DESTDIR)$(DOCDIR)
++monodocdir = $(DOCDIR)
+ monodoc_DATA = \
+ 	taglib-sharp-docs.zip \
+ 	taglib-sharp-docs.tree \
