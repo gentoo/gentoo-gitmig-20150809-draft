@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1661 2008/07/07 15:33:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1662 2008/07/07 21:31:05 jokey Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  07 Jul 2008; Markus Ullmann <jokey@gentoo.org> package.mask:
+  mask net-irc/bitchx for bug #190667
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> profiles.desc:
   Mark ia64/sparc profiles as stable, and mark x86/no-nptl as dev
