@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.7 2008/07/06 22:55:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.8 2008/07/07 08:48:08 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -221,13 +221,25 @@ setup_boot_dir() {
 	if [[ ! -e ${dir}/default ]] ; then
 		grub-set-default --root-directory="${boot_dir}" default
 	fi
+	einfo "Grub has been installed to ${boot_dir} successfully."
 }
 
 pkg_postinst() {
-	[[ -n ${DONT_MOUNT_BOOT} ]] || setup_boot_dir "${ROOT}"/boot
-	elog "To install grub files to another device (like a usb stick), just run:"
+	if [[ -n ${DONT_MOUNT_BOOT} ]]; then
+		elog "WARNING: you have DONT_MOUNT_BOOT in effect, so you must apply"
+		elog "the following instructions for your /boot!"
+		elog "Neglecting to do so may cause your system to fail to boot!"
+		elog
+	else
+		setup_boot_dir "${ROOT}"/boot
+		# Trailing output because if this is run from pkg_postinst, it gets mixed into
+		# the other output.
+		einfo ""
+	fi
+	elog "To interactively install grub files to another device such as a USB"
+	elog "stick, just run the following and specify the directory as prompted:"
 	elog "   emerge --config =${PF}"
-	elog "Alternately, you can use GRUB_ALT_INSTALLDIR=/path/to/use to tell"
+	elog "Alternately, you can export GRUB_ALT_INSTALLDIR=/path/to/use to tell"
 	elog "grub where to install in a non-interactive way."
 
 }
