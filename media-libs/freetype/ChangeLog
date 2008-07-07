@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.198 2008/07/07 12:15:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.199 2008/07/07 21:05:22 maekke Exp $
+
+  07 Jul 2008; Markus Meier <maekke@gentoo.org>
+  freetype-1.4_pre20080316-r1.ebuild:
+  amd64/x86 stable, bug #225851
 
   07 Jul 2008; Ferris McCormick <fmccor@gentoo.org>
   freetype-1.4_pre20080316-r1.ebuild:
