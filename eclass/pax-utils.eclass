@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.7 2007/05/07 09:24:16 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.8 2008/07/07 16:48:45 betelgeuse Exp $
 
 # Author:
 #	Kevin F. Quinn <kevquinn@gentoo.org>
@@ -133,6 +133,8 @@ pax-mark() {
 		_pax_list_files elog "$@"
 		scanelf -Xxz ${flags} "$@"
 	elif [[ ${PAX_MARKINGS} != "none" ]]; then
+		elog "No tool to mark executables found. If you want them marked for"
+		elog "PaX kernels please install sys-apps/paxctl."
 		# Out of options!
 		failures="$*"
 		fail=1

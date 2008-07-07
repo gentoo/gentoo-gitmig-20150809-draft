@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.20 2008/03/03 17:20:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.21 2008/07/07 16:48:45 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -26,7 +26,7 @@ export WANT_JAVA_CONFIG=2
 JAVA_VM_CONFIG_DIR="/usr/share/java-config-2/vm"
 JAVA_VM_DIR="/usr/lib/jvm"
 
-EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst pkg_prerm pkg_postrm
 
 java-vm-2_pkg_setup() {
 	if [[ "${SLOT}" != "0" ]]; then
@@ -34,6 +34,85 @@ java-vm-2_pkg_setup() {
 	else
 		VMHANDLE=${PN}
 	fi
+	debug-print "set VMHANDLE to ${VMHANDLE}"
+}
+
+java-vm_2_src_install() {
+	local dirs="${JAVA_VM_SUBDIRS:-bin include jre lib man}"
+	local dest="/opt/${P}"
+	local ddest="${D}/opt/${P}"
+
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler.
+	if hasq hardened $IUSE; then
+		use hardeded && pax-mark m $(list-paxables ${S}{,/jre}/bin/*)
+	fi
+
+	cp -pPR $i "${ddest}" || die "failed to copy"
+
+	if [[ -e COPYRIGHT ]]; then
+		dodoc COPYRIGHT || die
+	fi
+
+	if [[ -e README.html ]]; then
+		dohtml README.html || die
+	fi
+
+	cp -pP src.zip "${D}/opt/${P}/" || die "src.zip doesn't exist"
+
+	if use examples; then
+		local edest="${ddest}/share"
+		dodir "${edest}"
+		cp -pPR demo sample "${edest}" || die
+	fi
+
+	if hasq jce $IUSE && use jce; then
+		cd "${ddest}/jre/lib/security"
+		dodir ${dest}/jre/lib/security/strong-jce
+		mv "${ddest}/jre/lib/security/US_export_policy.jar" "${ddest}"/jre/lib/security/strong-jce
+		mv "${ddest}"/jre/lib/security/local_policy.jar \
+			"${ddest}/jre/lib/security/strong-jce"
+		local jcedir=/opt/sun-jce-bin-${JAVA_VM_JCE_VERSION}/jre/lib/security/unlimited-jce
+		dosym ${jcedir}/US_export_policy.jar ${dest}/jre/lib/security/ || die
+		dosym ${jcedir}/local_policy.jar ${dest}/jre/lib/security/ || die
+	fi
+
+	if use nsplugin; then
+		local plugin_dir="ns7-gcc29"
+
+		if use x86 ; then
+			install_mozilla_plugin ${dest}/jre/plugin/i386/${plugin_dir}/libjavaplugin_oji.so
+		else
+			eerror "No plugin available for amd64 arch"
+		fi
+	fi
+
+	# create dir for system preferences
+	dodir /opt/${P}/jre/.systemPrefs
+	# Create files used as storage for system preferences.
+	touch ${D}/opt/${P}/jre/.systemPrefs/.system.lock
+	chmod 644 ${D}/opt/${P}/jre/.systemPrefs/.system.lock
+	touch ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
+	chmod 644 ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
+
+	if [[ -f ${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop ]]; then
+		# install control panel for Gnome/KDE
+		# The jre also installs these so make sure that they do not have the same
+		# Name
+		sed -e "s/\(Name=\)Java/\1 Java Control Panel for Sun JDK ${SLOT}/" \
+			-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/ControlPanel#" \
+			-e "s#Icon=.*#Icon=/opt/${P}/jre/plugin/desktop/sun_java.png#" \
+			${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
+			${T}/sun_jdk-${SLOT}.desktop
+
+		domenu ${T}/sun_jdk-${SLOT}.desktop
+	fi
+
+	# bug #56444
+	insinto /opt/${P}/jre/lib/
+	newins "${FILESDIR}"/fontconfig.Gentoo.properties fontconfig.properties
+
+	set_java_env
 }
 
 java-vm-2_pkg_postinst() {
@@ -120,15 +199,26 @@ java-vm_set-nsplugin() {
 }
 
 java-vm-2_pkg_prerm() {
-	if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" ]]; then
-		ewarn "It appears you are removing your system-vm!"
-		ewarn "Please run java-config -L to list available VMs,"
-		ewarn "then use java-config -S to set a new system-vm!"
-	fi
+	true # used to have the system vm removing here but can't remove to keep API
 }
 
 java-vm-2_pkg_postrm() {
+	debug-print-function ${FUNCNAME} "${@}"
 	fdo-mime_desktop_database_update
+
+	atom=${CATEGORY}/${PN}
+	[[ ${SLOT} != 0 ]] && atom="=${atom}-${SLOT}*"
+
+	if ! has_version ${atom}; then
+		debug-print "We don't have ${atom} installed so this is not an upgrade."
+		if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" ]]; then
+			ewarn "It appears you are removing your system-vm!"
+			ewarn "Please run java-config -L to list available VMs,"
+			ewarn "then use java-config -S to set a new system-vm!"
+		fi
+	else
+		elog "We have ${atom} installed."
+	fi
 }
 
 java_set_default_vm_() {
