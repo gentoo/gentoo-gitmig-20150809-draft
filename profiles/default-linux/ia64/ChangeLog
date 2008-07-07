@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.52 2008/07/07 13:44:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.53 2008/07/07 15:29:51 armin76 Exp $
+
+  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Reuse.mask hddtemp as its not stable yet, to remove in 30 days
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Unmask hddtemp USE-flag, make dev-lisp/clisp deps minimal

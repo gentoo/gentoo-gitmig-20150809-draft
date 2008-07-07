@@ -1,11 +1,15 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.6 2008/07/07 13:40:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.7 2008/07/07 15:30:13 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
+
+# Raúl Porcel <armin76@gentoo.org> (07 Jul 2008)
+# To be unmasked in 30 days
+hddtemp
 
 # No hardware to test by the team
 3dfx
