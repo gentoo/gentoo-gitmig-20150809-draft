@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.27 2008/07/07 16:48:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.28 2008/07/07 16:54:56 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -49,7 +49,7 @@ if [[ ${CATEGORY} = dev-java && ${PN} = commons-* ]]; then
 	SRC_URI="mirror://apache/${PN/-///}/source/${P}-src.tar.gz"
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_compile src_test
+EXPORT_FUNCTIONS pkg_setup src_compile
 
 # ------------------------------------------------------------------------------
 # @eclass-pkg_setup
@@ -90,60 +90,6 @@ java-pkg-2_src_compile() {
 			eant ${antflags} -f "${EANT_BUILD_XML}" ${EANT_EXTRA_ARGS} "${@}"
 	else
 		echo "${FUNCNAME}: ${EANT_BUILD_XML} not found so nothing to do."
-	fi
-}
-
-java-pkg-2_supports-test() {
-	python << EOF
-from xml.dom.minidom import parse
-import sys
-dom = parse("${1}")
-for elem in dom.getElementsByTagName('target'):
-	if elem.getAttribute('name') == 'test':
-		sys.exit(0)
-sys.exit(1)
-EOF
-	return $?
-}
-
-java-pkg-2_src_test() {
-	[[ -e "${EANT_BUILD_XML:=build.xml}" ]] || return
-
-	if [[ ${EANT_TEST_TARGET} ]] || java-pkg-2_supports-test ${EANT_BUILD_XML}; then
-		local opts task
-
-		if [[ ${EANT_TEST_JUNIT_INTO} ]]; then
-			java-pkg_jar-from --into "${EANT_TEST_JUNIT_INTO}" junit
-		fi
-
-		ANT_TASKS=${EANT_TEST_ANT_TASKS:-${ANT_TASKS:-${EANT_ANT_TASKS}}}
-
-		if [[ ${DEPEND} = *dev-java/ant-junit* ]]; then
-
-			if [[ ${ANT_TASKS} && "${ANT_TASKS}" != none ]]; then
-				ANT_TASKS="${ANT_TASKS} ant-junit"
-			else
-				ANT_TASKS="ant-junit"
-			fi
-
-			task=true
-		fi
-
-		if [[ ${task} ]] || [[ ${DEPEND} = *dev-java/junit* ]]; then
-			opts="-Djunit.jar=\"$(java-pkg_getjar --build-only junit junit.jar)\""
-			if [[ ${EANT_TEST_GENTOO_CLASSPATH} ]]; then
-				EANT_GENTOO_CLASSPATH="${EANT_TEST_GENTOO_CLASSPATH},junit"
-			elif [[ ${EANT_GENTOO_CLASSPATH} ]]; then
-				EANT_GENTOO_CLASSPATH+=',junit'
-			else
-				EANT_GENTOO_CLASSPATH=junit
-			fi
-		fi
-		eant ${opts} -f "${EANT_BUILD_XML}" \
-			${EANT_TEST_EXTRA_ARGS} ${EANT_TEST_TARGET:-test}
-
-	else
-		echo "${FUNCNAME}: No test target in ${EANT_BUILD_XML}"
 	fi
 }
 

@@ -14,7 +14,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.37 2008/07/07 16:48:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.38 2008/07/07 16:54:56 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -37,6 +37,7 @@ inherit java-utils-2
 # dev-java/ant-core into DEPEND.
 
 # construct ant-speficic DEPEND
+JAVA_ANT_E_DEPEND=""
 # add ant-core into DEPEND, unless disabled
 if [[ -z "${JAVA_ANT_DISABLE_ANT_CORE_DEP}" ]]; then
 		JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND} >=dev-java/ant-core-1.7.0"
@@ -50,15 +51,7 @@ if [[ $? != 0 ]]; then
 	eerror "${ANT_TASKS_DEPEND}"
 	die "java-pkg_ant-tasks-depend() failed"
 fi
-
-# We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
-# and ant dependencies constructed above. Python is there for
-# java-ant_remove-taskdefs
-JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND}
-	${ANT_TASKS_DEPEND}
-	${JAVA_PKG_PORTAGE_DEP}
-	>=dev-java/javatoolkit-0.2.0-r1
-	>=dev-lang/python-2.4"
+JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND} ${ANT_TASKS_DEPEND}"
 
 # this eclass must be inherited after java-pkg-2 or java-pkg-opt-2
 # if it's java-pkg-opt-2, ant dependencies are pulled based on USE flag
@@ -68,7 +61,9 @@ elif ! hasq java-pkg-2 ${INHERITED}; then
 	eerror "java-ant-2 eclass can only be inherited AFTER java-pkg-2 or java-pkg-opt-2"
 fi
 
-DEPEND="${JAVA_ANT_E_DEPEND}"
+# We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
+# and ant dependencies constructed above
+DEPEND=">=dev-java/javatoolkit-0.2.0-r1 ${JAVA_PKG_PORTAGE_DEP} ${JAVA_ANT_E_DEPEND}"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX
@@ -397,30 +392,6 @@ java-ant_rewrite-classpath() {
 	if [[ -n "${JAVA_PKG_DEBUG}" ]]; then
 		diff -NurbB "${file}.orig" "${file}"
 	fi
-}
-
-# ------------------------------------------------------------------------------
-# @public java-ant_remove-taskdefs
-#
-# Removes taskdef elements from the file
-# @param $1 - the file to rewrite (defaults to build.xml)
-# ------------------------------------------------------------------------------
-java-ant_remove-taskdefs() {
-	debug-print-function ${FUNCNAME} $*
-	local file=${1:-build.xml}
-	echo "Removing taskdefs from ${file}"
-	python <<EOF
-import sys
-from xml.dom.minidom import parse
-dom = parse("${file}")
-for elem in dom.getElementsByTagName('taskdef'):
-	elem.parentNode.removeChild(elem)
-	elem.unlink()
-f = open("${file}", "w")
-dom.writexml(f)
-f.close()
-EOF
-	[[ $? != 0 ]] && die "Removing taskdefs failed"
 }
 
 # ------------------------------------------------------------------------------
