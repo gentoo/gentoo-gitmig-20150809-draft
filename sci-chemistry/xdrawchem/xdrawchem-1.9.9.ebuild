@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.7 2008/04/27 20:17:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.8 2008/07/07 13:53:30 markusle Exp $
 
-inherit qt3
+inherit qt3 eutils
 
 DESCRIPTION="Molecular structure drawing program"
 HOMEPAGE="http://xdrawchem.sourceforge.net/"
@@ -19,6 +19,12 @@ RDEPEND="$(qt_min_version 3.1)
 DEPEND="${RDEPEND}
 		>=sys-devel/gcc-3.2
 		dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+}
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc
