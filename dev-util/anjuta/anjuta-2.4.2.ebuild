@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.4.2.ebuild,v 1.1 2008/06/08 18:15:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.4.2.ebuild,v 1.2 2008/07/07 13:32:25 remi Exp $
 
 inherit eutils gnome2
 
@@ -83,7 +83,8 @@ src_install() {
 	sed -i -e "s:doc/${PN}:doc/${PF}:g" Makefile
 	sed -i -e "s:doc/${PN}:doc/${PF}/html:g" doc/Makefile
 
-	gnome2_src_install
+	# see Gnome Bug #527144 and Gentoo Bug #216898
+	gnome2_src_install -j1
 	prepalldocs
 }
 
