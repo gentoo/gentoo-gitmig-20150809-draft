@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r1.ebuild,v 1.4 2008/05/21 17:40:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r1.ebuild,v 1.5 2008/07/07 17:09:44 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -15,9 +15,7 @@ IUSE="doc"
 
 RDEPEND="virtual/commonlisp"
 DEPEND="${RDEPEND}
-	doc? ( sys-apps/texinfo
-		virtual/latex-base
-		|| ( dev-texlive/texlive-texinfo app-text/tetex app-text/ptex ) )"
+	doc? ( virtual/texi2dvi )"
 
 CLPACKAGE=swank
 SWANK_VERSION="2007-08-16"
