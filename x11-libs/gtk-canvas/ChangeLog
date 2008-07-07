@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk-canvas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-canvas/ChangeLog,v 1.9 2007/05/30 21:58:19 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-canvas/ChangeLog,v 1.10 2008/07/07 05:20:22 dberkholz Exp $
+
+  07 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  gtk-canvas-0.1.1-r2.ebuild:
+  (#226637) Call eautomake wrapper instead of automake directly.
 
   30 May 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   files/0.1.1-as-needed.patch, gtk-canvas-0.1.1-r2.ebuild:
