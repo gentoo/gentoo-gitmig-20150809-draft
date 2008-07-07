@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dawn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.1 2008/06/06 19:26:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.2 2008/07/07 00:12:51 jer Exp $
+
+  07 Jul 2008; Jeroen Roovers <jer@gentoo.org> dawn-3.88a.ebuild:
+  Marked ~hppa (bug #230716).
 
 *dawn-3.88a (06 Jun 2008)
 

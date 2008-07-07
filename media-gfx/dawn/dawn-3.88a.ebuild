@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.88a.ebuild,v 1.1 2008/06/06 19:26:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.88a.ebuild,v 1.2 2008/07/07 00:12:51 jer Exp $
 
 #EAPI=0
 inherit eutils versionator
@@ -14,7 +14,7 @@ SRC_URI="http://geant4.kek.jp/~tanaka/src/${MYP}.taz"
 LICENSE="public-domain"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc opengl X"
 
 RDEPEND="dev-lang/tk
