@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.1 2006/07/28 19:08:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.2 2008/07/07 20:26:22 cedk Exp $
 
 DESCRIPTION="beaglefs implements a filesystem representing a live Beagle query."
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rml/fuse/beaglefs/"
@@ -26,7 +26,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.gz"
+	einfo "Please read README in /usr/share/doc/${P}"
 	einfo "to learn how to work with beaglefs"
 	einfo
 }
