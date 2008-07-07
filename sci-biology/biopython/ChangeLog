@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.23 2008/07/06 15:21:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.24 2008/07/07 15:49:23 armin76 Exp $
+
+  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> biopython-1.44.ebuild:
+  alpha/sparc/x86 stable wrt #221159
 
 *biopython-1.47 (06 Jul 2008)
 
