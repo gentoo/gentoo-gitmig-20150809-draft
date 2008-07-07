@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018.ebuild,v 1.6 2008/05/26 09:29:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r2.ebuild,v 1.1 2008/07/07 23:41:57 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
-PID=967
+PID=1088
 PB=${PN}
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
@@ -35,15 +35,16 @@ MKL_DIR=/opt/intel/${PN}/${PV}
 INTEL_LIC_DIR=/opt/intel/licenses
 
 pkg_setup() {
-
 	# Check the license
-	[[ -z ${MKL_LICENSE} && -d ${INTEL_LIC_DIR} ]] && \
-		MKL_LICENSE=$(find ${ROOT}/${INTEL_LIC_DIR} -name "*MKL*.lic" | tail -n 1)
+	if [[ -z ${MKL_LICENSE} ]]; then
+		MKL_LICENSE="$(grep -ls MKern ${ROOT}${INTEL_LIC_DIR}/* | tail -n 1)"
+		MKL_LICENSE=${MKL_LICENSE/${ROOT}/}
+	fi
 	if  [[ -z ${MKL_LICENSE} ]]; then
 		eerror "Did not find any valid mkl license."
 		eerror "Register at ${HOMEPAGE} to receive a license"
 		eerror "and place it in ${INTEL_LIC_DIR} or run:"
-		eerror "\t MKL_LICENSE=/my/license/dir emerge mkl"
+		eerror "export MKL_LICENSE=/my/license/file emerge mkl"
 		die "license setup failed"
 	fi
 
@@ -116,15 +117,17 @@ src_unpack() {
 		eerror "See ${PWD}/log.txt to see why"
 		die "extracting failed"
 	fi
+	# remove left over
+	rm -f /opt/intel/.*mkl*.log /opt/intel/intel_sdp_products.db
 
 	# remove unused stuff and set up intel names
 	rm -rf "${WORKDIR}"/l_*
 
 	cd "${S}"
 	# allow openmpi to work
-	epatch "${FILESDIR}"/${P}-openmpi.patch
+	epatch "${FILESDIR}"/${PN}-10.0.2.018-openmpi.patch
 	# make scalapack tests work for gfortran
-	epatch "${FILESDIR}"/${P}-tests.patch
+	epatch "${FILESDIR}"/${PN}-10.0.2.018-tests.patch
 	case ${ARCH} in
 		x86)	MKL_ARCH=32
 				MKL_KERN=ia32
@@ -229,14 +232,15 @@ mkl_add_profile() {
 	insinto ${MKL_LIBDIR}
 	for x in blas cblas lapack; do
 		cat > ${x}-${prof}.pc <<-EOF
-			prefix=/usr
+			prefix=${MKL_DIR}
 			libdir=${MKL_LIBDIR}
-			includedir=${MKL_DIR}/include
+			includedir=\${prefix}/include
 			Name: ${x}
-			Description: Intel(R) Math Kernel Library implementation of ${p}
+			Description: Intel(R) Math Kernel Library implementation of ${x}
 			Version: ${PV}
 			URL: ${HOMEPAGE}
 			Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core ${4} -lpthread
+			Cflags: -I\${includedir}
 		EOF
 		cp eselect.${x} eselect.${x}.${prof}
 		echo "${MKL_LIBDIR}/${x}-${prof}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc" \
@@ -285,7 +289,9 @@ src_install() {
 	local doinsdirs="tools"
 	cp -pPR ${cpdirs} "${D}"${MKL_DIR} \
 		|| die "installing mkl failed"
+	insinto ${MKL_DIR}
 	doins -r ${doinsdirs} || die "doins ${doinsdirs} failed"
+	dosym cblas.h ${MKL_DIR}/include/mkl_cblas.h
 
 	# install blas/lapack profiles
 	mkl_make_generic_profile

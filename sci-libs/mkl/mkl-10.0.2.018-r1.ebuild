@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r1.ebuild,v 1.1 2008/06/23 08:51:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r1.ebuild,v 1.1 2008/07/07 23:41:57 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
-PID=1088
+PID=967
 PB=${PN}
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
@@ -125,9 +125,9 @@ src_unpack() {
 
 	cd "${S}"
 	# allow openmpi to work
-	epatch "${FILESDIR}"/${PN}-10.0.2.018-openmpi.patch
+	epatch "${FILESDIR}"/${P}-openmpi.patch
 	# make scalapack tests work for gfortran
-	epatch "${FILESDIR}"/${PN}-10.0.2.018-tests.patch
+	epatch "${FILESDIR}"/${P}-tests.patch
 	case ${ARCH} in
 		x86)	MKL_ARCH=32
 				MKL_KERN=ia32
@@ -232,15 +232,15 @@ mkl_add_profile() {
 	insinto ${MKL_LIBDIR}
 	for x in blas cblas lapack; do
 		cat > ${x}-${prof}.pc <<-EOF
-			prefix=/usr
+			prefix=${MKL_DIR}
 			libdir=${MKL_LIBDIR}
-			includedir=${MKL_DIR}/include
+			includedir=\${prefix}/include
 			Name: ${x}
-			Description: Intel(R) Math Kernel Library implementation of ${p}
+			Description: Intel(R) Math Kernel Library implementation of ${x}
 			Version: ${PV}
 			URL: ${HOMEPAGE}
 			Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core ${4} -lpthread
-			Cflags: -I${includedir}
+			Cflags: -I\${includedir}
 		EOF
 		cp eselect.${x} eselect.${x}.${prof}
 		echo "${MKL_LIBDIR}/${x}-${prof}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc" \
@@ -291,7 +291,7 @@ src_install() {
 		|| die "installing mkl failed"
 	insinto ${MKL_DIR}
 	doins -r ${doinsdirs} || die "doins ${doinsdirs} failed"
-	dosym mkl_cblas.h ${MKL_DIR}/include/mkl_cblas.h
+	dosym cblas.h ${MKL_DIR}/include/mkl_cblas.h
 
 	# install blas/lapack profiles
 	mkl_make_generic_profile
