@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/varconf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.21 2007/05/07 21:58:04 tupone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.22 2008/07/07 06:01:59 tupone Exp $
+
+  07 Jul 2008; Tupone Alfredo <tupone@gentoo.org> varconf-0.6.4.ebuild:
+  Make 0.6.4 depends only on slot 1.2 of dev-libs/libsigc++.
+  Requested via bug #228479 by Rémi Cardona <remi@gentoo.org>
 
   07 May 2007; Tupone Alfredo <tupone@gentoo.org> varconf-0.6.5.ebuild:
   Added ~amd64 keyword

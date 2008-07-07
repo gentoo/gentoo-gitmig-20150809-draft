@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.4.ebuild,v 1.1 2007/01/10 01:46:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.4.ebuild,v 1.2 2008/07/07 06:01:59 tupone Exp $
 
 DESCRIPTION="A configuration system designed for the STAGE server."
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/libsigc++-1.2"
+RDEPEND="=dev-libs/libsigc++-1.2*"
 DEPEND="$RDEPEND
 	dev-util/pkgconfig"
 
