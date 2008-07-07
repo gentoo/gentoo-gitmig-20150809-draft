@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.11_rc1.ebuild,v 1.2 2008/07/04 08:51:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.11_rc1.ebuild,v 1.3 2008/07/07 18:55:02 bluebird Exp $
 
 inherit ruby eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ruby-rbot.org/"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="spell aspell timezone translator shorturl dict figlet
 	fortune cal host toilet hunspell"
 ILINGUAS="zh_CN zh_TW ru nl de fr it ja"
