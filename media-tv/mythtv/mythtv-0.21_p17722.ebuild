@@ -1,18 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p16867.ebuild,v 1.7 2008/06/26 21:40:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p17722.ebuild,v 1.1 2008/07/07 17:31:34 cardoe Exp $
 
 EAPI=1
-inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
+inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="aac alsa altivec autostart debug directv dvb \
-ieee1394 jack lcd lirc mmx opengl opengl-video opengl-xvmc \
-perl python xvmc ${IUSE_VIDEO_CARDS}"
+IUSE_VIDEO_CARDS="video_cards_nvidia"
+IUSE="aac alsa altivec autostart debug directv dvb dvd fftw ieee1394 jack lcd \
+lirc mmx opengl perl python x264 xvid xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -27,13 +26,16 @@ RDEPEND=">=media-libs/freetype-2.0
 	virtual/opengl
 	virtual/glu
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.43 )
-	aac? ( media-libs/faad2 )
+	aac? ( media-libs/faac
+			media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
 				x11-apps/xset )
 	directv? ( virtual/perl-Time-HiRes )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	dvd? ( media-libs/libdvdcss )
+	fftw? ( sci-libs/fftw:3.0 )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.3
 			>=media-libs/libiec61883-1.0.0 )
@@ -42,7 +44,8 @@ RDEPEND=">=media-libs/freetype-2.0
 	lirc? ( app-misc/lirc )
 	perl? ( dev-perl/DBD-mysql )
 	python? ( dev-python/mysql-python )
-	opengl-xvmc? ( >=x11-drivers/nvidia-drivers-100 )
+	x264? ( media-libs/x264 )
+	xvid? ( media-libs/xvid )
 	xvmc? ( x11-libs/libXvMC
 		app-admin/eselect-xvmc )"
 
@@ -59,37 +62,18 @@ MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
 
-	if ! built_with_use -a =x11-libs/qt-3* mysql opengl ; then
-		echo
-		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
-		eerror "Please re-emerge =x11-libs/qt-3*, after having the use flags set."
-		echo
-		die "Please fix the above issues, before continuing."
+	confutils_require_built_with_all =x11-libs/qt-3* mysql opengl
+
+	elog "This ebuild now uses a heavily stripped down version of your CFLAGS"
+
+	if use xvmc && use video_cards_nvidia; then
+		elog
+		elog "For NVIDIA based cards, the XvMC renderer only works on"
+		elog "the NVIDIA 4, 5, 6 & 7 series cards."
 	fi
 
-	echo
-	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
-	einfo "Don't complain because your -momfg-fast-speed CFLAG is being stripped"
-	einfo "Only additional CFLAG issues that will be addressed are for binary"
-	einfo "package building."
-	echo
-
-	if use xvmc && use opengl-xvmc ; then
-		einfo "Enabling USE=opengl-xvmc results in an experimental OpenGL"
-		einfo "& XvMC renderer that only works on NVIDIA GeForce 4,5,6, & 7"
-		einfo "series of cards. It is typically slower then stock XVideo"
-		einfo "support that is the default in MythTV."
-		echo
-	fi
-
-	if use opengl-video ; then
-		einfo "Enabling USE=opengl-video results in an experimental OpenGL"
-		einfo "renderer that is typically slower then the default XVideo"
-		einfo "renderer. Enable at your own risk."
-		echo
-	fi
-
-	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} \
+		|| die "Problem adding mythtv user"
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
@@ -111,14 +95,26 @@ src_compile() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
-	use aac && myconf="${myconf} --enable-libfaad"
+	use aac && myconf="${myconf} --enable-libfaad --enable-libfaac"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use altivec || myconf="${myconf} --disable-altivec"
+	use fftw && myconf="${myconf} --enable-libfftw3"
 	use jack || myconf="${myconf} --disable-audio-jack"
-	use opengl-video && myconf="${myconf} --enable-opengl-video"
-	use xvmc && ! use video_cards_via && ! use opengl-xvmc && myconf="${myconf} --enable-xvmc --xvmc-lib=XvMCW"
-	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc --enable-xvmc-pro"
-	use xvmc && use video_cards_nvidia && use opengl-xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
+	use x264 && myconf="${myconf} --enable-libx264"
+	use xvid && myconf="${myconf} --enable-libxvid"
+	# let's give this a whirl from bug #220857
+	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw \
+		--disable-xvmc-vld"
+	#use xvmc && ! use video_cards_via && \
+	#	myconf="${myconf} --enable-xvmc"
+	#use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc \
+	#	--enable-xvmc-pro --disable-xvmcw"
+	# nvidia-drivers-71 don't support GLX 1.4
+	#use video_cards_nvidia && has_version =x11-drivers/nvidia-drivers-71* \
+	#	&& myconf="${myconf} --enable-glx-procaddrarb"
+	# according to the Ubuntu guys, this works better always on
+	myconf="${myconf} --enable-glx-procaddrarb"
+
 	myconf="${myconf}
 		$(use_enable dvb)
 		$(use_enable ieee1394 firewire)
@@ -127,10 +123,10 @@ src_compile() {
 		--disable-directfb
 		--dvb-path=/usr/include
 		--enable-opengl-vsync
+		--enable-libmp3lame
 		--enable-xrandr
 		--enable-xv
-		--enable-x11
-		--enable-gpl"
+		--enable-x11"
 
 	if use mmx || use amd64; then
 		myconf="${myconf} --enable-mmx"
@@ -274,20 +270,23 @@ pkg_postinst() {
 	elog "Set USE=autostart. Details can be found at:"
 	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
 
-	echo
+	elog
 	elog "To always have MythBackend running and available run the following:"
 	elog "rc-update add mythbackend default"
-	echo
+	elog
 	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
 	ewarn "chown -R mythtv /path/to/store"
 
-	if use xvmc; then
-		echo
-		elog "Please set the proper XvMC provider with eselect xvmc"
+	if use xvmc && [[ ! -s "${ROOT}/etc/X11/XvMCConfig" ]]; then
+		ewarn
+		ewarn "No XvMC implementation has been selected yet"
+		ewarn "Use 'eselect xvmc list' for a list of available choices"
+		ewarn "Then use 'eselect xvmc set <choice>' to choose"
+		ewarn "'eselect xvmc set nvidia' for example"
 	fi
 
 	if use autostart; then
-		echo
+		elog
 		elog "Please add the following to your /etc/inittab file at the end of"
 		elog "the TERMINALS section"
 		elog "c8:2345:respawn:/sbin/mingetty --autologin mythtv tty8"

@@ -1,6 +1,19 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.246 2008/06/28 01:25:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.247 2008/07/07 17:31:34 cardoe Exp $
+
+*mythtv-0.22_alpha17733 (07 Jul 2008)
+*mythtv-0.21_p17722 (07 Jul 2008)
+
+  07 Jul 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20.2_p14972.ebuild, -mythtv-0.21_p16867.ebuild,
+  -mythtv-0.21_p16926.ebuild, -mythtv-0.21_p16944.ebuild,
+  -mythtv-0.21_p17100.ebuild, -mythtv-0.21_p17435.ebuild,
+  mythtv-0.21_p17637.ebuild, +mythtv-0.21_p17722.ebuild,
+  -mythtv-0.22_alpha17132.ebuild, mythtv-0.22_alpha17449.ebuild,
+  +mythtv-0.22_alpha17733.ebuild:
+  add new 0.21 and 0.22 series versions. Remove old 0.20 and 0.21 versions.
+  Add libdvdcss depend on USE=dvd (bug #231072).
 
 *mythtv-0.21_p17637 (28 Jun 2008)
 
