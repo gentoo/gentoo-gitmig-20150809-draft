@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.94 2008/06/23 18:26:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.95 2008/07/07 13:42:03 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -121,8 +121,6 @@ pcsc-lite
 # conky dependencies missing keywords related (dragonheart -20061112)
 # media-sound/mpd
 mpd
-# app-admin/hddtemp
-hddtemp
 
 # USE=d seems to break gcc-4.1.2 (#178896)
 d
