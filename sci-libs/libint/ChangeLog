@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libint
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.5 2007/02/22 01:21:59 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.6 2008/07/07 06:38:17 dberkholz Exp $
+
+*libint-1.1.4 (07 Jul 2008)
+
+  07 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; +libint-1.1.4.ebuild:
+  Bump. Clean up ebuild, new homepage, keyword ~amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
