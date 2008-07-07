@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.542 2008/07/07 03:45:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.543 2008/07/07 20:57:01 maekke Exp $
+
+  07 Jul 2008; Markus Meier <maekke@gentoo.org> xine-lib-1.1.13.ebuild:
+  amd64/x86 stable, bug #218059
 
   07 Jul 2008; Brent Baude <ranger@gentoo.org> xine-lib-1.1.13.ebuild:
   Marking xine-lib-1.1.13 ppc64 and ppc for bug 218059
