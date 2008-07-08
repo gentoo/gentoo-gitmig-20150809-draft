@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.14 2008/07/08 03:06:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.15 2008/07/08 03:07:27 dberkholz Exp $
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; raster3d-2.7s.ebuild:
+  Keyword ~amd64.
 
 *raster3d-2.7s (08 Jul 2008)
 
