@@ -16,4 +16,4 @@
  INSTALLS += target
  
 -LIBS += -lqscintilla2
-+LIBS += -L../Qt4/lib -lqscintilla2
++LIBS += -L../Qt4 -lqscintilla2

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.11 2008/05/25 10:40:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.12 2008/07/08 12:41:57 griffon26 Exp $
+
+  08 Jul 2008; Maurice van der Pot <griffon26@gentoo.org>
+  files/qscintilla-2.2-qt.patch, files/qscintilla-2.2-qt4.patch:
+  Fixed library path in qscintilla-2.2 patches, because libraries are now built
+  in a different location. Fixes bug #223911 reported by Bryce Verdier
+  <btv@pdx.edu>.
 
   25 May 2008; Ben de Groot <yngwin@gentoo.org>
   +files/qscintilla-2.2-qt.patch, +files/qscintilla-2.2-qt4.patch:
