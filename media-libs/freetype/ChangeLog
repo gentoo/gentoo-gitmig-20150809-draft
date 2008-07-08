@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.200 2008/07/07 23:37:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.201 2008/07/08 12:49:18 armin76 Exp $
+
+  08 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  freetype-1.4_pre20080316-r1.ebuild:
+  alpha/ia64 stable wrt #225851
 
   07 Jul 2008; Jeroen Roovers <jer@gentoo.org>
   freetype-1.4_pre20080316-r1.ebuild:
