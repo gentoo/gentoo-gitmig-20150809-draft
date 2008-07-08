@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5-r1.ebuild,v 1.1 2008/07/06 20:10:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.5-r1.ebuild,v 1.2 2008/07/08 21:26:43 dang Exp $
 
 EAPI="1"
 
@@ -86,6 +86,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable tagwriting tag-writing)
 		$(use_with ipod)
+		$(use_with mtp)
 		$(use_enable ipod ipod-writing)
 		$(use_enable musicbrainz)
 		$(use_with dbus)
@@ -100,7 +101,8 @@ pkg_setup() {
 		--enable-track-transfer
 		--with-metadata-helper
 		--disable-scrollkeeper
-		--disable-schemas-install"
+		--disable-schemas-install
+		--disable-vala"
 
 	export GST_INSPECT=/bin/true
 }
