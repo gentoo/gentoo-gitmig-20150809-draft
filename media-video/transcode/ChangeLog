@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.213 2008/07/07 20:25:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.214 2008/07/08 06:29:28 opfer Exp $
+
+  08 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  transcode-1.0.4-r3.ebuild:
+  stable x86, bug 229953
 
 *transcode-1.0.4-r3 (07 Jul 2008)
 
