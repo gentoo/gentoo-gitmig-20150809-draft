@@ -1,0 +1,22 @@
+Index: build.xml
+===================================================================
+--- build.xml	(revision 6792)
++++ build.xml	(working copy)
+@@ -97,7 +97,7 @@
+ 		
+ 	<target name="-compiler-check">
+ 		<if>
+-			<and>	
++			<or>	
+ 				<not>
+ 					<or>
+ 						<equals arg1="${ant.java.version}" arg2="1.4" />
+@@ -112,7 +112,7 @@
+ 						<available file="${com.mysql.jdbc.java6.rtjar}" />
+ 					</not>
+ 				</or>
+-			</and>
++			</or>
+ 			<then>
+ 				<echo>This version of MySQL Connector/J requires a compiler from Java-1.4 or Java-1.5 to be used, set your JAVA_HOME property to point to one of these versions of the JDK.
+ 							
