@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.24 2008/07/08 06:40:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.25 2008/07/08 06:41:32 dberkholz Exp $
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  libf2c-20070912.ebuild:
+  Fix minor syntax errors.
 
 *libf2c-20070912 (08 Jul 2008)
 
