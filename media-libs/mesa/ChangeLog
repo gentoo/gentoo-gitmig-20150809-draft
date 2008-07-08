@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.178 2008/07/08 22:08:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.179 2008/07/08 22:10:50 dberkholz Exp $
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/0001-dri-drop-asserts-to-make-build-against-stable-libdr.patch,
+  -files/7.0.2-glw.pc.in,
+  -files/0001-mesa-drm-ttm-allow-build-against-non-TTM-aware-libd.patch,
+  -files/version.mk, -mesa-7.0.2.ebuild, -mesa-7.1_rc1.ebuild:
+  Pull old ebuilds that aren't latest stable, ~arch, or RC.
 
 *mesa-7.1_rc2 (08 Jul 2008)
 
