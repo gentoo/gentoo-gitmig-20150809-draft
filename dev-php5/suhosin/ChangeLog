@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.31 2008/07/08 15:22:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.32 2008/07/08 19:29:30 jer Exp $
+
+  08 Jul 2008; Jeroen Roovers <jer@gentoo.org> suhosin-0.9.24.ebuild:
+  Stable for HPPA (bug #230816).
 
   08 Jul 2008; Raúl Porcel <armin76@gentoo.org> suhosin-0.9.24.ebuild:
   alpha/ia64/sparc stable wrt #230816
