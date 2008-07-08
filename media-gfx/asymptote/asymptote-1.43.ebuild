@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.43.ebuild,v 1.1 2008/07/04 04:20:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.43.ebuild,v 1.2 2008/07/08 04:18:31 grozin Exp $
 
 inherit eutils autotools elisp-common latex-package multilib python
 
@@ -27,9 +27,7 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 DEPEND="${RDEPEND}
-	doc? ( dev-lang/perl
-		virtual/latex-base
-		|| ( dev-texlive/texlive-texinfo app-text/tetex app-text/ptex ) )"
+	doc? ( dev-lang/perl virtual/texi2dvi )"
 
 pkg_setup() {
 	# checking if Boehm garbage collector was compiled with c++ support
