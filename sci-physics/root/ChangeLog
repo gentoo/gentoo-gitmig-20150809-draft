@@ -1,6 +1,18 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.27 2008/06/16 15:05:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.28 2008/07/08 16:28:18 bicatali Exp $
+
+*root-5.20.00 (08 Jul 2008)
+
+  08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/root-5.16.00-afs.patch, -files/root-5.16.00-flags.patch,
+  -files/root-5.16.00-postgres.patch, +files/root-5.20.00-configure.patch,
+  +files/root-5.20.00-pic.patch, -files/root-xrootd-flags.patch,
+  -root-5.16.00-r1.ebuild, -root-5.18.00.ebuild, root-5.18.00d.ebuild,
+  +root-5.20.00.ebuild:
+  Version bump, removed some older versions. Still buggy for pre-compiled
+  headers (use flag pch), xrootd+afs, and could not test properly with
+  oracle flag
 
   16 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/root-5.18.00d-gcc43.patch:

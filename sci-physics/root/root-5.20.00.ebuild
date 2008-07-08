@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00d.ebuild,v 1.2 2008/07/08 16:28:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00.ebuild,v 1.1 2008/07/08 16:28:18 bicatali Exp $
 
-EAPI="1"
-inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
+EAPI=1
+inherit versionator flag-o-matic eutils toolchain-funcs qt4 fortran
 
 #DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 DOC_PV=5_16
@@ -17,16 +17,21 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
-IUSE="afs cern doc fftw kerberos ldap +math mysql odbc
-	pch postgres python ruby qt3 qt4 ssl +truetype xml xrootd"
+IUSE="afs cern clarens doc fftw geant4 kerberos ldap +math mysql odbc
+	oracle pch postgres python ruby qt4 ssl xml xrootd"
 
 # libafterimage ignored, may be re-install for >=5.20
 # see https://savannah.cern.ch/bugs/?func=detailitem&item_id=30944
 #	|| ( >=media-libs/libafterimage-1.15 x11-wm/afterstep )
 RDEPEND="sys-apps/shadow
-	x11-libs/libXpm
-	media-libs/ftgl
 	dev-libs/libpcre
+	x11-libs/libXpm
+	x11-libs/libXft
+	media-libs/ftgl
+	media-libs/libpng
+	media-libs/jpeg
+	media-libs/giflib
+	media-libs/tiff
 	virtual/opengl
 	virtual/glu
 	math? ( >=sci-libs/gsl-1.8 )
@@ -35,22 +40,23 @@ RDEPEND="sys-apps/shadow
 	postgres? ( virtual/postgresql-server )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	qt3? ( !qt4? ( $(qt_min_version 3.3.4) ) )
 	qt4? ( || ( >=x11-libs/qt-4.3:4
 				( x11-libs/qt-gui:4
 				  x11-libs/qt-opengl:4
 				  x11-libs/qt-qt3support:4
 				  x11-libs/qt-xml:4 ) ) )
-	fftw? ( >=sci-libs/fftw-3 )
+	fftw? ( sci-libs/fftw:3.0 )
 	python? ( dev-lang/python )
 	ruby? ( dev-lang/ruby )
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
-	cern? ( sci-physics/cernlib )
+	geant4? ( sci-physics/geant:4 )
 	odbc? ( dev-db/unixODBC )
-	truetype? ( x11-libs/libXft )"
+	oracle? ( dev-db/oracle-instantclient-basic )
+	clarens? ( dev-libs/xmlrpc-c )"
 
 DEPEND="${RDEPEND}
+	cern? ( dev-lang/cfortran )
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}"
@@ -60,16 +66,19 @@ QT4_BUILT_WITH_USE_CHECK="qt3support opengl"
 pkg_setup() {
 	elog
 	elog "You may want to build ROOT with these non Gentoo extra packages:"
-	elog "AliEn, castor, Chirp, clarens, gfal, Globus, GEANT4, Monalisa, "
-	elog "Oracle, peac, PYTHIA, PYTHIA6, SapDB, SRP, Venus"
+	elog "AliEn, castor, Chirp, gfal, gLite, Globus, Monalisa, "
+	elog "PYTHIA, PYTHIA6, SapDB, SRP."
 	elog "You can use the env variable EXTRA_ECONF variable for this."
-	elog "Example, for PYTHIA, you would do: "
-	elog "EXTRA_ECONF=\"--enable-pythia --with-pythia-libdir=/usr/$(get_libdir)\""
+	elog "For example, for SRP, you would set: "
+	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=/usr/$(get_libdir)\""
 	elog
-	epause 7
+	epause 5
 	if use cern; then
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
+	else
+		FORTRANC=
+		FFLAGS=
 	fi
 	use qt4 && qt4_pkg_setup
 }
@@ -77,22 +86,19 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-pic.patch
-	epatch "${FILESDIR}"/${PN}-5.16.00-xft.patch
-	epatch "${FILESDIR}"/${P}-gcc43.patch
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	cd xrootd/src
-	local xp=xrootd-20071116
-	tar xfz ${xp}-0000.src.tgz
-	epatch "${FILESDIR}"/${xp}-checksymbol.patch
-	epatch "${FILESDIR}"/${xp}-gcc43.patch
-	tar cfz ${xp}-0000.src.tgz xrootd
+	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-pic.patch
+	# use system cfortran
+	if use cern; then
+		rm -f include/root/cfortran.h
+		ln -s /usr/include/cfortran.h include/cfortran.h
+	fi
 }
 
 src_compile() {
 
 	local target
-	if [[ "$(tc-getCXX)" == icc* ]]; then
+	if [[ "$(tc-getCXX)" == ic* ]]; then
 		if use amd64; then
 			target=linuxx8664icc
 		elif use x86; then
@@ -100,33 +106,29 @@ src_compile() {
 		fi
 	fi
 
-	#local myfortran
-	#use cern && \
-	#	myfortran="${FORTRANC} ${FFLAGS}"
 	local myconf
 	use postgres && \
-		myconf="--with-pgsql-incdir=/usr/include/postgresql"
+		myconf="${myconf} --with-pgsql-incdir=/usr/include/postgresql"
 
-	if use qt3 || use qt4; then
-		myconf="${myconf} --enable-qt --enable-qtgsi"
-	else
-		myconf="${myconf} --disable-qt --disable-qtgsi"
-	fi
 	use qt4 && \
 		myconf="${myconf} --with-qt-incdir=/usr/include/qt4" && \
 		myconf="${myconf} --with-qt-libdir=/usr/$(get_libdir)/qt4"
 
-	use qt3 && ! use qt4 && \
-		myconf="${myconf} --with-qt-incdir=/usr/qt/3/include" && \
-		myconf="${myconf} --with-qt-libdir=/usr/qt/3/$(get_libdir)"
+	use geant4 && \
+		myconf="${myconf} --with-clhep-incdir=/usr/include" && \
+		myconf="${myconf} --with-g4-libdir=${G4LIB}"
 
-	# watch: the configure script is not the standard autotools
-	local docdir=/usr/share/doc/${PF}
+	# the configure script is not the standard autotools
 	./configure \
 		${target} \
+		--fail-on-missing \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir)/${PN} \
-		--docdir=${docdir} \
+		--docdir=/usr/share/doc/${PF} \
+		--with-sys-iconpath=/usr/share/pixmaps \
+		--with-f77="${FORTRANC} ${FFLAGS}" \
+		--with-cc="$(tc-getCC) ${CFLAGS}" \
+		--with-cxx="$(tc-getCXX) ${CXXFLAGS}" \
 		--disable-builtin-afterimage \
 		--disable-builtin-freetype \
 		--disable-builtin-ftgl \
@@ -138,6 +140,7 @@ src_compile() {
 		--enable-exceptions	\
 		--enable-explicitlink \
 		--enable-gdml \
+		--enable-memstat \
 		--enable-opengl \
 		--enable-reflex \
 		--enable-shadowpw \
@@ -146,11 +149,14 @@ src_compile() {
 		--enable-table \
 		${myconf} \
 		$(use_enable afs) \
-		$(use_enable cern) \
+		$(use_enable clarens) \
+		$(use_enable clarens peac) \
 		$(use_enable fftw fftw3) \
+		$(use_enable geant4 g4root) \
 		$(use_enable kerberos krb5) \
 		$(use_enable ldap) \
-		$(use_enable math mathcore) \
+		$(use_enable math gsl-shared) \
+		$(use_enable math genvector) \
 		$(use_enable math mathmore) \
 		$(use_enable math minuit2) \
 		$(use_enable math roofit) \
@@ -160,21 +166,16 @@ src_compile() {
 		$(use_enable pch) \
 		$(use_enable postgres pgsql) \
 		$(use_enable python) \
+		$(use_enable qt4 qt) \
+		$(use_enable qt4 qtgsi) \
 		$(use_enable ruby) \
 		$(use_enable ssl) \
-		$(use_enable truetype xft) \
 		$(use_enable xml) \
 		$(use_enable xrootd) \
 		${EXTRA_ECONF} \
 		|| die "configure failed"
 
-	local myfortran
-	use cern && myfortran="F77=${FORTRANC}"
-	emake \
-		OPT="${CXXFLAGS}" \
-		OPTFLAGS="${CXXFLAGS}" \
-		${myfortran} \
-		|| die "emake failed"
+	emake || die "emake failed"
 	emake cintdlls || die "emake cintdlls failed"
 }
 
