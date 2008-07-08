@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.12 2007/12/13 05:40:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.13 2008/07/08 20:57:37 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal eutils versionator
@@ -27,7 +27,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_PF}"
 
 src_unpack () {
-	unpack "${A}"
+	unpack ${A}
 
 	#FIXME: remove the following two workarounds when haddock-0.9 is released
 
@@ -50,7 +50,7 @@ src_compile () {
 	cabal_src_compile
 	if use doc; then
 		cd "${S}/doc"
-		autoconf
+		eautoconf
 		./configure --prefix="${D}/usr/" \
 			|| die 'error configuring documentation.'
 		make html || die 'error building documentation.'
