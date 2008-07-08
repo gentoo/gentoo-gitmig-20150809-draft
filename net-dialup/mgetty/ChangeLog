@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.85 2008/06/07 22:53:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.86 2008/07/08 02:24:24 nerdboy Exp $
+
+  08 Jul 2008; Steve Arnold <nerdboy@gentoo.org> mgetty-1.1.36-r1.ebuild:
+  Corrected install to remove extraneous frontends when USE=fax is not set,
+  mostly just to tidy up along with the Hylafax updates.
 
   07 Jun 2008; Alin Năstac <mrness@gentoo.org>
   -files/mgetty-1.1.35-callback.patch, -files/mgetty-1.1.35-faxrunq.patch,

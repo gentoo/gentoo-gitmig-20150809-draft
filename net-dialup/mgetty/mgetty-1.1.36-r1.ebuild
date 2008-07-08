@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.11 2008/06/07 22:53:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.12 2008/07/08 02:24:24 nerdboy Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -111,16 +111,23 @@ src_install () {
 	dodoc voice/doc/*
 
 	if use fax; then
-		mv samples/new_fax.all samples_new_fax.all || die "move failed."
-		docinto samples
-		dodoc samples/*
+	    mv samples/new_fax.all samples_new_fax.all || die "move failed."
+	    docinto samples
+	    dodoc samples/*
 
-		docinto samples/new_fax
-		dodoc samples_new_fax.all/*
+	    docinto samples/new_fax
+	    dodoc samples_new_fax.all/*
 	fi
 
+	if ! use fax; then
+	    insinto /usr/share/${PN}/frontends
+	    doins -r frontends/{voice,network}
+	else
+	    insinto /usr/share/${PN}
+	    doins -r frontends
+	fi
 	insinto /usr/share/${PN}
-	doins -r patches frontends
+	doins -r patches
 	insinto /usr/share/${PN}/voice
 	doins -r voice/{contrib,Perl,scripts}
 
