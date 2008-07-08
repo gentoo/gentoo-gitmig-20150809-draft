@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1665 2008/07/08 16:23:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1666 2008/07/08 22:11:42 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  08 Jul 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  adjust removal date of dev-util/tla to match what the policy is, my mistake
 
   08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask,
   use.local.desc:
