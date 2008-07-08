@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/probe
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.6 2008/07/08 01:24:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.7 2008/07/08 01:25:50 dberkholz Exp $
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  probe-2.12.071128.ebuild:
+  Fix minor syntax errors.
 
 *probe-2.12.071128 (08 Jul 2008)
 

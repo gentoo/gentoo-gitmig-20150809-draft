@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.071128.ebuild,v 1.1 2008/07/08 01:24:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.071128.ebuild,v 1.2 2008/07/08 01:25:50 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	# Respect CC
 	sed -i \
 		-e 's:cc:$(CC):g' \
-		${S}/Makefile
+		"${S}"/Makefile
 }
 
 src_compile() {
@@ -35,6 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/probe
-	dodoc ${S}/README*
+	dobin "${S}"/probe
+	dodoc "${S}"/README*
 }
