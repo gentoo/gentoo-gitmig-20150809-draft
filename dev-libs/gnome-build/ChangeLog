@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.14 2008/06/06 15:42:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.15 2008/07/08 14:56:09 remi Exp $
+
+  08 Jul 2008; Rémi Cardona <remi@gentoo.org> gnome-build-0.3.0.ebuild:
+  fix for glibc 2.8, see bug #225447
 
   06 Jun 2008; Jeroen Roovers <jer@gentoo.org> gnome-build-0.3.0.ebuild:
   Marked ~hppa (dev-util/anjuta).

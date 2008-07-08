@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.2 2008/06/06 15:42:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.3 2008/07/08 14:56:09 remi Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 flag-o-matic
 
 DESCRIPTION="The Gnome Build Framework"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
 		 >=x11-libs/gtk+-2.4
@@ -35,4 +36,12 @@ pkg_setup() {
 		eerror 'echo "dev-libs/gdl gnome" >> /etc/portage/package.use" ; emerge -1 gdl'
 		die 'gdl built without gnome'
 	fi
+}
+
+src_compile() {
+	# fix for glibc 2.8 (see bug #225447)
+	# will not be needed for newer versions, offending code is gone
+	append-flags -D_GNU_SOURCE
+
+	gnome2_src_compile
 }
