@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r2.ebuild,v 1.1 2008/06/29 11:08:48 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r2.ebuild,v 1.2 2008/07/08 15:57:59 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -64,7 +64,6 @@ src_compile() {
 		$(use_enable ldap) \
 		$(use_enable mysql) \
 		$(use_enable pam) \
-		$(use_enable pipe) \
 		$(use_enable postgres pgsql) \
 		$(use_enable sqlite) \
 		$(use_enable ssl) \
