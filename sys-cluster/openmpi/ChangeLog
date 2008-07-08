@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.24 2008/06/25 14:53:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.25 2008/07/08 23:16:08 jsbronder Exp $
+
+*openmpi-1.2.6-r1 (08 Jul 2008)
+
+  08 Jul 2008; Justin Bronder <jsbronder@gentoo.org>
+  +openmpi-1.2.6-r1.ebuild:
+  Removing the smp USE flag, see #224099 starting at comment 14.
 
   25 Jun 2008; Justin Bronder <jsbronder@gentoo.org> openmpi-1.2.6.ebuild:
   Fix the romio use flag so romio can be disabled as it was always built before.
