@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.43.ebuild,v 1.2 2008/07/08 04:18:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.43.ebuild,v 1.3 2008/07/08 10:35:25 grozin Exp $
 
 inherit eutils autotools elisp-common latex-package multilib python
 
@@ -21,7 +21,7 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	boehm-gc? ( >=dev-libs/boehm-gc-7.0 )
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
-	X? ( dev-lang/python )
+	X? ( dev-lang/python dev-python/imaging )
 	python? ( dev-lang/python )
 	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs )
@@ -41,8 +41,9 @@ pkg_setup() {
 		fi
 	fi
 
-	if use X; then
-		python_tkinter_exists
+	if use X && ! built_with_use dev-python/imaging tk; then
+		eerror "Please re-emerge dev-python/imaging with the USE flag 'tk'"
+		die "Missing USE flag 'tk' for dev-python/imaging"
 	fi
 
 	if use latex; then
