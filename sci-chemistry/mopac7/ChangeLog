@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/mopac7
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.14 2007/01/07 02:21:42 kugelfang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.15 2008/07/08 06:43:37 dberkholz Exp $
+
+*mopac7-1.13 (08 Jul 2008)
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; +mopac7-1.13.ebuild:
+  Bump. Pull in newer libf2c so configure doesn't fail.
 
   07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -mopac7-1.00-r1.ebuild,
   -mopac7-1.10.ebuild:
