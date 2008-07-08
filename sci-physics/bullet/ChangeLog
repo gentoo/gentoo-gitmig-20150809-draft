@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.1 2008/03/11 19:10:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.2 2008/07/08 14:23:22 bicatali Exp $
+
+*bullet-2.69 (08 Jul 2008)
+
+  08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> bullet-2.67.ebuild,
+  +bullet-2.69.ebuild:
+  Version bump. Removed dev-util/jam now obsolete. Thanks Marek Miller for
+  testing (bug #231168).
 
 *bullet-2.67 (11 Mar 2008)
 
