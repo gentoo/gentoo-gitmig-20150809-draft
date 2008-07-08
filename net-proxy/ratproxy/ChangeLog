@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/ratproxy
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ChangeLog,v 1.1 2008/07/08 19:57:42 drizzt Exp $
+
+*ratproxy-1.51 (08 Jul 2008)
+
+  08 Jul 2008; Timothy Redaelli <drizzt@gentoo.org>
+  +files/ratproxy-Makefile.patch, +metadata.xml, +ratproxy-1.51.ebuild:
+  New ebuild.
+
