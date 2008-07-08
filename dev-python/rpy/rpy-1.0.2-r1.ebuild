@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.2 2008/06/05 10:19:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.3 2008/07/08 08:58:20 bicatali Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ IUSE="doc examples"
 RDEPEND=">=dev-lang/R-2.6.1
 	dev-python/numpy"
 DEPEND="${RDEPEND}
-	doc? ( || ( dev-texlive/texlive-texinfo virtual/tetex ) )"
+	doc? ( || ( virtual/texi2dvi ) )"
 
 src_unpack() {
 	distutils_src_unpack
