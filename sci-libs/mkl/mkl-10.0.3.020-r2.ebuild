@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r2.ebuild,v 1.1 2008/07/07 23:41:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r2.ebuild,v 1.2 2008/07/08 14:31:08 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -291,7 +291,7 @@ src_install() {
 		|| die "installing mkl failed"
 	insinto ${MKL_DIR}
 	doins -r ${doinsdirs} || die "doins ${doinsdirs} failed"
-	dosym cblas.h ${MKL_DIR}/include/mkl_cblas.h
+	dosym mkl_cblas.h ${MKL_DIR}/include/cblas.h
 
 	# install blas/lapack profiles
 	mkl_make_generic_profile

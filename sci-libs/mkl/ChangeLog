@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.31 2008/07/07 23:41:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.32 2008/07/08 14:31:08 bicatali Exp $
+
+  08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  mkl-10.0.2.018-r1.ebuild, mkl-10.0.3.020-r2.ebuild:
+  Fixed a bad symlink for cblas.h when mkl profile is selected, closing bug
+  #231154
 
 *mkl-10.0.3.020-r2 (07 Jul 2008)
 *mkl-10.0.2.018-r1 (07 Jul 2008)
