@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.5 2008/07/05 10:31:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.6 2008/07/08 20:13:42 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -95,54 +95,27 @@ RDEPEND="media-libs/libexif
 	)
 	"
 
-pkg_setup() {
-	if use amd64; then
-		if use ia32; then
-			if use qt-static; then
-				if use qt3-static; then
-					S="${WORKDIR}/${P}-${O_SUFF}.gcc4-static-qt3.i386"
-				else
-					S="${WORKDIR}/${P}-${O_SUFF}.gcc4-qt4.i386"
-				fi
-			else
-				if use qt3-static; then
-					S="${WORKDIR}/${P}-${O_SUFF}.gcc4-static-qt3.i386"
-				else
-					S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.i386"
-				fi
-			fi
-		else
-			S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.x86_64"
-		fi
-	fi
-	use ppc && S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.ppc"
-	use x86-fbsd && S="${WORKDIR}/${P}-${O_SUFF}-freebsd5-shared-qt3.i386"
-	if use x86; then
-		if use qt-static; then
-			if use qt3-static; then
-				S="${WORKDIR}/${P}-${O_SUFF}.gcc4-static-qt3.i386"
-			else
-				S="${WORKDIR}/${P}-${O_SUFF}.gcc4-qt4.i386"
-			fi
-		else
-			if use qt3-static; then
-				S="${WORKDIR}/${P}-${O_SUFF}.gcc4-static-qt3.i386"
-			else
-				S="${WORKDIR}/${P}-${O_SUFF}.gcc4-shared-qt3.i386"
-			fi
-		fi
-	fi
+opera_cd() {
+	cd "${WORKDIR}"/${P}-${O_SUFF}* || die "failed to enter work directory"
+	S="$(pwd)"
+	einfo "Working in ${S}"
 }
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	opera_cd
 
-	epatch "${FILESDIR}/${PN}-9.00-install.patch"
+	epatch "${FILESDIR}/${PN}-9.00-install.patch" || \
+		die "failed to apply install patch"
 
 	# bug #181300:
-	use elibc_FreeBSD || epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
-	use elibc_FreeBSD && epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch"
+	if use elibc_FreeBSD; then
+		epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch" || \
+			die "failed to apply pluginpath patch"
+	else
+		epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch" || \
+			die "failed to apply pluginpath patch"
+	fi
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
