@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.3 2007/11/21 03:42:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.4 2008/07/08 16:52:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ RDEPEND=">=media-libs/freetype-2.1.9-r1
 	>=media-libs/sdl-mixer-1.2.7"
 
 DEPEND="${RDEPEND}
-	|| ( >=dev-util/jam-2.5-r3 dev-util/ftjam )
+	dev-util/ftjam
 	app-arch/unzip"
 
 S=${WORKDIR}/${PN}
