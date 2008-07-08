@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.28 2008/07/07 00:53:41 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.29 2008/07/08 11:36:35 fmccor Exp $
+
+  08 Jul 2008; Ferris McCormick <fmccor@gentoo.org> swftools-0.8.1.ebuild:
+  Add ~sparc for testing, preparation for Bug #229427 (tested with font2swf).
 
   06 Jul 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   swftools-0.8.1.ebuild:
