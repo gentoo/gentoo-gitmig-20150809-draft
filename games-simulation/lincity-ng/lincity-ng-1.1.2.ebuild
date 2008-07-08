@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.1.2.ebuild,v 1.4 2008/06/28 07:38:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.1.2.ebuild,v 1.5 2008/07/08 16:50:32 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/opengl
 	dev-games/physfs"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	|| ( dev-util/ftjam dev-util/jam )"
+	dev-util/ftjam"
 
 pkg_setup() {
 	games_pkg_setup
