@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gebabbel
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.1 2007/09/06 19:25:53 hanno Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.2 2008/07/08 16:51:06 gentoofan23 Exp $
+
+  08 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> gebabbel-0.3.ebuild:
+  Migrate to split qt4 dependencies. Keyworded ~amd64, fix quoting and remove
+  spurious die statement
 
 *gebabbel-0.3 (06 Sep 2007)
 
