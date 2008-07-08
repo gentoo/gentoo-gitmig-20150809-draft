@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.4.3.ebuild,v 1.1 2007/12/30 13:17:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.5.2.ebuild,v 1.1 2008/07/08 19:07:08 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -34,8 +34,8 @@ src_unpack() {
 	cd "${S}"
 
 	# fix sample config file
-	sed -i -e "s:/usr/local/ziproxy/\(ziproxy.passwd\):/etc/\1:g" \
-		-e "s:/var/ziproxy/:/var/lib/ziproxy/:g" etc/ziproxy.conf
+	sed -i -e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
+		etc/ziproxy/ziproxy.conf
 
 	# fix sample xinetd config
 	sed -i -e "s:/usr/bin/:/usr/sbin/:g" \
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-shared-confuse --with-cfgfile=/etc/ziproxy.conf" # --enable-testprogs
+	local myconf="--with-cfgfile=/etc/ziproxy/ziproxy.conf"  # --enable-testprogs
 	use jpeg2k && myconf="${myconf} --with-jasper"  # use_with doesn't work
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
@@ -59,14 +59,14 @@ src_install() {
 	newbin stats.awk ${PN}_stats.awk
 	dobin src/tools/ziproxy_genhtml_stats.sh
 
-	newinitd "${FILESDIR}/${PN}-${PV%.*}.initd" ${PN}
-	newconfd "${FILESDIR}/${PN}-${PV%.*}.confd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
 	dodoc ChangeLog CREDITS README README.tools
 	use jpeg2k && dodoc JPEG2000.txt
 
 	insinto /etc
-	doins etc/ziproxy.conf
+	doins -r etc/ziproxy
 
 	insinto /var/lib/ziproxy/error
 	doins var/ziproxy/error/*.html

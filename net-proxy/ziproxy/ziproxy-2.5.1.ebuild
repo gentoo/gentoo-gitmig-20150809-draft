@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.5.1.ebuild,v 1.1 2008/03/16 23:34:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.5.1.ebuild,v 1.2 2008/07/08 19:07:08 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -59,8 +59,8 @@ src_install() {
 	newbin stats.awk ${PN}_stats.awk
 	dobin src/tools/ziproxy_genhtml_stats.sh
 
-	newinitd "${FILESDIR}/${PN}-${PV%.*}.initd" ${PN}
-	newconfd "${FILESDIR}/${PN}-${PV%.*}.confd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
 	dodoc ChangeLog CREDITS README README.tools
 	use jpeg2k && dodoc JPEG2000.txt
