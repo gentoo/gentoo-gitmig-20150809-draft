@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libf2c
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.23 2007/12/25 14:15:53 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.24 2008/07/08 06:40:44 dberkholz Exp $
+
+*libf2c-20070912 (08 Jul 2008)
+
+  08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/20070912-link-shared-libf2c-correctly.patch,
+  +libf2c-20070912.ebuild:
+  Bump to latest upstream code. (#164397) Provide SONAME in libf2c.so. Also
+  links libf2c with libm so we don't get any undefined symbols.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kugelfang from metadata.xml as per #46972.
