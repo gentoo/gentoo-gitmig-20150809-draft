@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1664 2008/07/08 06:37:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1665 2008/07/08 16:23:47 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask,
+  use.local.desc:
+  Added clarens and geant4 local use flags for sci-physics/root, and masked
+  sci-physics/root-5.20.00 for a testing period
 
   08 Jul 2008; Tupone Alfredo <tupone@gentoo.org> package.mask:
   Old version of zope depending on python-2.3 left the tree

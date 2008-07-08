@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3620 2008/07/06 19:40:09 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3621 2008/07/08 16:23:46 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2010,6 +2010,8 @@ sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/root:cern - Enable hbook i/o functionality to root (needs cernlib)
 sci-physics/root:cint7 - Build the experimental C/C++ interpretor version 7
+sci-physics/root:clarens - Adds support for Clarens Grid Web services and PROOF Analysis Center
+sci-physics/root:geant4 - Adds navigator for the GEANT4 simulation toolkit
 sci-physics/root:math - Build extra math and numerical libraries for root (needs gsl)
 sci-physics/root:xrootd - Adds xrootd support, a low latency file server
 sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
