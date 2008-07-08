@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.9 2008/07/08 02:12:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.7.ebuild,v 1.1 2008/07/08 02:12:02 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
-
-IUSE="jbig pam mgetty html"
 
 DESCRIPTION="Enterprise client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
@@ -13,6 +11,8 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 SLOT="0"
 LICENSE="hylafax"
 KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
+
+IUSE="jbig pam mgetty html"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	virtual/ghostscript
@@ -61,14 +61,14 @@ src_compile() {
 	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
 		&& filter-flags -fstack-protector -fstack-protector-all
 
-	epatch "${FILESDIR}/gentoo-gcc-version.patch" || die "epatch failed"
+#	epatch "${FILESDIR}/gentoo-gcc-version.patch" || die "epatch failed"
 
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
 		--with-DIR_LIB=/usr/$(get_libdir)
 		--with-DIR_LIBEXEC=/usr/sbin
-		--with-DIR_LIBDATA=/usr/$(get_libdir)/fax
+		--with-DIR_LIBDATA=/var/lib/fax
 		--with-DIR_LOCKS=/var/lock
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
