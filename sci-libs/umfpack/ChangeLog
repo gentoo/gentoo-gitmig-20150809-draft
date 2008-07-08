@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.8 2008/04/15 15:49:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.9 2008/07/08 10:04:00 bicatali Exp $
+
+  08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/umfpack-5.0.3-autotools.patch,
+  -files/umfpack-5.1.0-autotools.patch, files/umfpack-5.2.0-autotools.patch,
+  -umfpack-5.0.3.ebuild, -umfpack-5.1.0.ebuild:
+  Removed older versions, make tests not failures not die the src_test since
+  almost all of the failures were only timings. This should be fixed next
+  version bump, upstream contacted.
 
   15 Apr 2008; Jeroen Roovers <jer@gentoo.org> umfpack-5.2.0.ebuild:
   Marked ~hppa (bug #215834).
