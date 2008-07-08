@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.1.ebuild,v 1.1 2008/06/23 19:20:53 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.1-r1.ebuild,v 1.1 2008/07/08 10:06:49 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -9,8 +9,8 @@ MY_PV12=$(get_version_component_range 1-2 ${PV})
 S="${WORKDIR}/${MY_P}"
 SIEVE="dovecot-sieve-1.1.5"
 SIEVE_S="${WORKDIR}/${SIEVE}"
-MANAGESIEVE_PATCH="managesieve-0.10.2"
-MANAGESIEVE="managesieve-0.10.2"
+MANAGESIEVE_PATCH="managesieve-0.10.3"
+MANAGESIEVE="managesieve-0.10.3"
 MANAGESIEVE_S="${WORKDIR}/${PN}-${MY_PV12}-${MANAGESIEVE}"
 
 SRC_URI="http://dovecot.org/releases/${MY_PV12}/${MY_P}.tar.gz
@@ -144,6 +144,8 @@ src_install () {
 	if use pam; then
 		sed -i -e '/passdb pam/, /^[ \t]*}/ s|#args = dovecot|args = "\*"|' \
 			"${conf}" || die "failed to update PAM settings in dovecot.conf"
+		# mailbase does not provide a managesieve pam file
+		dosym imap /etc/pam.d/managesieve
 	fi
 
 	# Listen on ipv6 and ipv4
