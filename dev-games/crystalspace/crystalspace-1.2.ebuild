@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.ebuild,v 1.5 2007/11/21 02:08:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.ebuild,v 1.6 2008/07/08 16:30:49 mr_bones_ Exp $
 
 inherit flag-o-matic java-pkg-opt-2 multilib wxwidgets
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	3ds? ( media-libs/lib3ds )
 	java? ( dev-java/ant-core
 		>=virtual/jdk-1.5 )
-	|| ( dev-util/jam dev-util/ftjam )
+	dev-util/ftjam
 	dev-lang/swig
 	dev-util/pkgconfig"
 
