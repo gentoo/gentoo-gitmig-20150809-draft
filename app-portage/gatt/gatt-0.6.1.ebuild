@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.1.ebuild,v 1.1 2008/06/09 19:51:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.1.ebuild,v 1.2 2008/07/08 22:21:13 opfer Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gatt/${P}.tar.bz2"
 
 LICENSE="GPL-2 GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc libpaludis"
 
 RDEPEND=">=dev-libs/boost-1.33.1
