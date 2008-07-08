@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3_beta20080705.ebuild,v 1.1 2008/07/07 23:58:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3_beta20080705.ebuild,v 1.2 2008/07/08 15:51:13 mr_bones_ Exp $
 
 EAPI=1
 inherit qt4
@@ -34,4 +34,3 @@ src_install() {
 	dodoc ChangeLog README
 	rm "${D}"/usr/share/juffed/{COPYING,README}
 }
-
