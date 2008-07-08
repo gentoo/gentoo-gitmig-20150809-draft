@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/plonepopoll
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonepopoll/ChangeLog,v 1.6 2008/06/02 10:41:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonepopoll/ChangeLog,v 1.7 2008/07/08 06:05:26 tupone Exp $
+
+  08 Jul 2008; Tupone Alfredo <tupone@gentoo.org> -plonepopoll-2.3.ebuild:
+  Removing old version depending on dev-lang/python-2.3
+  Bug #222037 by Ali Polatel <hawking@gentoo.org>
 
 *plonepopoll-2.6.1 (02 Jun 2008)
 
