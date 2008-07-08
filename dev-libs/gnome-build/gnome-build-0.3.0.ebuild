@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.3 2008/07/08 14:56:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.4 2008/07/08 15:13:10 remi Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -20,7 +20,8 @@ RDEPEND=">=dev-libs/glib-2
 		 >=gnome-base/libgnome-2.4
 		 >=gnome-base/gnome-vfs-2.4
 		 >=gnome-base/libgnomeui-2.4
-		 >=gnome-base/libbonoboui-2.4"
+		 >=gnome-base/libbonoboui-2.4
+		   dev-perl/Locale-gettext"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
 		dev-util/pkgconfig
