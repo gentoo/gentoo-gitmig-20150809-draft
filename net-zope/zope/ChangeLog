@@ -1,6 +1,15 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.140 2008/06/05 22:08:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.141 2008/07/08 06:30:50 tupone Exp $
+
+  08 Jul 2008; Tupone Alfredo <tupone@gentoo.org>
+  -files/2.7.8/i18n-1.0.0.patch, -files/2.6.4/zope.confd,
+  -files/2.6.4/zope.initd, -files/2.7.7/i18n-1.0.0.patch,
+  -zope-2.7.9.ebuild, -zope-2.8.4.ebuild, -zope-2.8.6.ebuild,
+  -zope-2.8.7.ebuild, -zope-2.8.8.ebuild, -zope-2.8.9.ebuild,
+  -zope-2.8.9.1.ebuild:
+  Dropped old zope versions depending on python-2.3
+  Bug #222037 by Ali Polatel <hawking@gentoo.org>
 
 *zope-2.9.9 (05 Jun 2008)
 
