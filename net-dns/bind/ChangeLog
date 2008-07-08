@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.193 2008/06/06 14:40:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.194 2008/07/08 18:59:50 dertobi123 Exp $
+
+*bind-9.5.0_p1 (08 Jul 2008)
+*bind-9.4.2_p1 (08 Jul 2008)
+
+  08 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org> -bind-9.4.2.ebuild,
+  +bind-9.4.2_p1.ebuild, -bind-9.5.0.ebuild, +bind-9.5.0_p1.ebuild:
+  Version bump(s), security bug #231201
 
   06 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org> bind-9.5.0.ebuild:
   Remove useless DLZ_VERSION

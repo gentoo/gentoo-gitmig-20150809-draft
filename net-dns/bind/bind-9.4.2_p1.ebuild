@@ -1,14 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2.ebuild,v 1.4 2008/05/11 03:58:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p1.ebuild,v 1.1 2008/07/08 18:59:50 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
 DLZ_VERSION="9.3.3"
+MY_PV="${PV/_p1/-P1}"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
@@ -26,7 +27,7 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
 	resolvconf? ( || ( net-dns/openresolv net-dns/resolvconf-gentoo ) )"
 
-#S="${WORKDIR}/${P/_p1/-P1}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	use threads && {
