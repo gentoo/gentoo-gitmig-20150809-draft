@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.11 2008/05/15 10:23:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.12 2008/07/08 22:57:29 ramereth Exp $
+
+*libvirt-0.4.4 (08 Jul 2008)
+
+  08 Jul 2008; Lance Albertson <ramereth@gentoo.org>
+  +files/libvirt-0.4.4-kvm-cdrom-fix.patch, +files/libvirtd.confd,
+  +files/libvirtd.init, metadata.xml, +libvirt-0.4.4.ebuild:
+  * Bump version
+  * Add init scripts for libvirtd
+  * Add kvm-cdrom-fix patch
+  * Add myself as a maintainer
 
   15 May 2008; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Add myself as maintainer.

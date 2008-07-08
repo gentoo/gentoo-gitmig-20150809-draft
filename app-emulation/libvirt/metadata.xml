@@ -6,4 +6,8 @@
 		<email>dberkholz@gentoo.org</email>
 		<name>Donnie Berkholz</name>
 	</maintainer>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
+	</maintainer>
 </pkgmetadata>

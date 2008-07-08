@@ -1,0 +1,14 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting libvirtd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/libvirtd -- \
+		-d --pid-file /var/run/libvirtd.pid ${LIBVIRTD_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping libvirtd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/libvirtd --pid-file=/var/run/libvirtd.pid
+	eend $?
+}

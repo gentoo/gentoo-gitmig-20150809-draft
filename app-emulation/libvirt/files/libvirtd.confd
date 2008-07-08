@@ -1,0 +1,8 @@
+# /etc/conf.d/libvirtd
+
+# You may want to add '--listen' to have libvirtd listen for tcp/ip connections
+# if you want to use libvirt for remote control
+
+# Please consult 'libvirtd --help' for more options
+
+#LIBVIRTD_OPTS="--listen"
