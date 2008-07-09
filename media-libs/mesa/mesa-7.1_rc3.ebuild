@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc2.ebuild,v 1.1 2008/07/08 22:08:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1_rc3.ebuild,v 1.1 2008/07/09 03:56:04 dberkholz Exp $
 
 GIT=
 if [[ ${PV} = 9999* ]]; then
@@ -108,9 +108,6 @@ src_unpack() {
 		unpack ${A}
 		cd "${S}"
 	fi
-
-	cp "${FILESDIR}"/src-mesa-drivers-Makefile \
-		"${S}"/src/mesa/drivers/Makefile || die
 
 	# Don't compile debug code with USE=-debug - bug #125004
 	if ! use debug; then
