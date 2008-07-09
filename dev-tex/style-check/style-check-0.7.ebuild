@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/style-check-0.7.ebuild,v 1.6 2008/02/27 18:14:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/style-check-0.7.ebuild,v 1.7 2008/07/09 16:19:54 aballier Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="virtual/ruby"
 
 src_install() {
 	dodir /etc/style-check.d
-	make PREFIX=/usr DESTDIR=${D} install || die
+	make PREFIX=/usr DESTDIR="${D}" install || die
 	dodoc README
 	dohtml README.html
 }
