@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6.ebuild,v 1.1 2008/07/09 06:29:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6.ebuild,v 1.2 2008/07/09 06:36:03 remi Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2.8
-	>=dev-libs/totem-pl-parser-2.21.4
+	>=dev-libs/totem-pl-parser-2.22.0
 	>=gnome-extra/nautilus-cd-burner-2.13
 	>=x11-libs/libsexy-0.1.5
 	>=gnome-extra/gnome-media-2.14.0
