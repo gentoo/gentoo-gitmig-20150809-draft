@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.7.2-r1.ebuild,v 1.1 2008/07/08 12:04:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.7.2-r1.ebuild,v 1.2 2008/07/09 08:28:29 opfer Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/archivemail/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3"
 
