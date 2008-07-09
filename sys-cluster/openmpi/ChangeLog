@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.26 2008/07/09 12:15:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.27 2008/07/09 16:28:37 coldwind Exp $
+
+  09 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  openmpi-1.2.6-r1.ebuild:
+  amd64 stable wrt bug #231251
 
   09 Jul 2008; Ferris McCormick <fmccor@gentoo.org> openmpi-1.2.6-r1.ebuild:
   Sparc stable, Bug #231251 (only change is to force smp on, and all my
