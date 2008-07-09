@@ -1,0 +1,33 @@
+diff -urNp truecrypt-6.0-source.dist/Core/FatFormatter.cpp truecrypt-6.0-source/Core/FatFormatter.cpp
+--- truecrypt-6.0-source.dist/Core/FatFormatter.cpp	2008-07-05 14:17:17.000000000 +0200
++++ truecrypt-6.0-source/Core/FatFormatter.cpp	2008-07-05 14:43:32.000000000 +0200
+@@ -14,6 +14,7 @@
+ #include "Platform/Platform.h"
+ #include "FatFormatter.h"
+ #include "RandomNumberGenerator.h"
++#include <cstring>
+ 
+ namespace TrueCrypt
+ {
+diff -urNp truecrypt-6.0-source.dist/Platform/Memory.cpp truecrypt-6.0-source/Platform/Memory.cpp
+--- truecrypt-6.0-source.dist/Platform/Memory.cpp	2008-07-05 14:17:17.000000000 +0200
++++ truecrypt-6.0-source/Platform/Memory.cpp	2008-07-05 14:42:53.000000000 +0200
+@@ -8,6 +8,7 @@
+ 
+ #include "Memory.h"
+ #include "Exception.h"
++#include <cstring>
+ 
+ namespace TrueCrypt
+ {
+diff -urNp truecrypt-6.0-source.dist/Volume/EncryptionTest.cpp truecrypt-6.0-source/Volume/EncryptionTest.cpp
+--- truecrypt-6.0-source.dist/Volume/EncryptionTest.cpp	2008-07-05 14:17:17.000000000 +0200
++++ truecrypt-6.0-source/Volume/EncryptionTest.cpp	2008-07-05 14:42:53.000000000 +0200
+@@ -15,6 +15,7 @@
+ #include "EncryptionModeXTS.h"
+ #include "EncryptionTest.h"
+ #include "Pkcs5Kdf.h"
++#include <cstring>
+ 
+ namespace TrueCrypt
+ {
