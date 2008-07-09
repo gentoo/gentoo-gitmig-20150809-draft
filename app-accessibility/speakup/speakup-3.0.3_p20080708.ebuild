@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.2_p20080520.ebuild,v 1.1 2008/05/21 13:52:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.3_p20080708.ebuild,v 1.1 2008/07/09 03:33:07 williamh Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}/${PN}-3.0.2"
+S="${WORKDIR}/${PN}-3.0.3"
 
 pkg_setup() {
 	linux-mod_pkg_setup
@@ -60,9 +60,4 @@ pkg_postinst() {
 	else
 		elog "This is done via /etc/conf.d/modules."
 	fi
-	ewarn "Note that you do not need the start=1 parameter any longer."
-	ewarn "start=0 should be used to tell a synthesizer module not to start"
-	ewarn "Also, in this version, the serial ports are not probed,"
-	ewarn "so you must pass ser=x to the driver when loading it."
-	ewarn "The serial port number is 0-based, so 0 is the first port."
 }
