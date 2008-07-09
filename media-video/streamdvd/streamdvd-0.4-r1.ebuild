@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.14 2007/11/27 12:10:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.15 2008/07/09 09:24:15 loki_val Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-libdvdread.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
