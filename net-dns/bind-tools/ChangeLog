@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.98 2008/07/09 06:14:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.99 2008/07/09 08:19:58 opfer Exp $
+
+  09 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  bind-tools-9.4.2_p1.ebuild:
+  stable x86, security bug 231201
 
   09 Jul 2008; Markus Rothe <corsair@gentoo.org> bind-tools-9.4.2_p1.ebuild:
   Stable on ppc64; bug #231201
