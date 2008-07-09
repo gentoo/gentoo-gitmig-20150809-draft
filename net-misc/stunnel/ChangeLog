@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.92 2008/04/17 19:23:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.93 2008/07/09 11:04:09 ulm Exp $
+
+*stunnel-4.25 (09 Jul 2008)
+
+  09 Jul 2008; Ulrich Mueller <ulm@gentoo.org> +stunnel-4.25.ebuild:
+  Version bump, security bug 222805, CVE-2008-2420.
 
 *stunnel-4.22 (17 Apr 2008)
 
