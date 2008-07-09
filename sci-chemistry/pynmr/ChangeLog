@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pynmr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/ChangeLog,v 1.5 2007/02/22 01:29:16 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/ChangeLog,v 1.6 2008/07/09 21:05:43 markusle Exp $
+
+  09 Jul 2008; Markus Dittrich <markusle@gentoo.org> pynmr-0.37f.ebuild:
+  Fixed HOMEPAGE and SRC_URI (see bug #231147).
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
