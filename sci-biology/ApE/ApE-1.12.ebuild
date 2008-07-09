@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-1.12.ebuild,v 1.2 2008/07/09 14:07:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-1.12.ebuild,v 1.3 2008/07/09 15:32:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ src_compile() {
 	einfo "Nothing to compile."
 	echo
 }
-
 
 src_install() {
 
