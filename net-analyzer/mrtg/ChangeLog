@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.87 2008/07/07 21:39:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.88 2008/07/09 11:48:47 armin76 Exp $
+
+  09 Jul 2008; Raúl Porcel <armin76@gentoo.org> mrtg-2.16.1.ebuild:
+  alpha/sparc stable wrt #229835
 
   07 Jul 2008; Markus Ullmann <jokey@gentoo.org> mrtg-2.16.1.ebuild:
   Stable for bug #229835
