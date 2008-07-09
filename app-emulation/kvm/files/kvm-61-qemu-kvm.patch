@@ -1,0 +1,15 @@
+--- kvm-61/qemu/Makefile.target	2008-02-19 06:58:28.000000000 -0800
++++ kvm-61/qemu/Makefile.target	2008-02-19 18:38:24.000000000 -0800
+@@ -70,11 +70,7 @@
+ QEMU_PROG=qemu-$(TARGET_ARCH2)
+ else
+ # system emulator name
+-ifeq ($(TARGET_ARCH), i386)
+-QEMU_PROG=qemu$(EXESUF)
+-else
+-QEMU_PROG=qemu-system-$(TARGET_ARCH2)$(EXESUF)
+-endif
++QEMU_PROG=kvm$(EXESUF)
+ endif
+ 
+ PROGS=$(QEMU_PROG)

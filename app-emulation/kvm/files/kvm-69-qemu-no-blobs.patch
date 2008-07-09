@@ -1,0 +1,67 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN kvm-69.orig/qemu/Makefile kvm-69/qemu/Makefile
+--- kvm-69.orig/qemu/Makefile	2008-05-12 07:30:43.000000000 -0400
++++ kvm-69/qemu/Makefile	2008-05-21 09:59:59.000000000 -0400
+@@ -199,8 +199,8 @@ ifneq ($(TOOLS),)
+ 	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
+ endif
+ 	mkdir -p "$(DESTDIR)$(datadir)"
+-	set -e; for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
+-		video.x openbios-sparc32 openbios-sparc64 pxe-ne2k_pci.bin \
++	set -e; for x in bios.bin vgabios.bin vgabios-cirrus.bin \
++		pxe-ne2k_pci.bin \
+ 		pxe-rtl8139.bin pxe-pcnet.bin pxe-e1000.bin extboot.bin \
+ 		bamboo.dtb; \
+         do \
+@@ -301,10 +301,6 @@ tarbin:
+ 	$(datadir)/bios.bin \
+ 	$(datadir)/vgabios.bin \
+ 	$(datadir)/vgabios-cirrus.bin \
+-	$(datadir)/ppc_rom.bin \
+-	$(datadir)/video.x \
+-	$(datadir)/openbios-sparc32 \
+-	$(datadir)/openbios-sparc64 \
+         $(datadir)/pxe-ne2k_pci.bin \
+ 	$(datadir)/pxe-rtl8139.bin \
+         $(datadir)/pxe-pcnet.bin \
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN kvm-69.orig/qemu/pc-bios/README kvm-69/qemu/pc-bios/README
+--- kvm-69.orig/qemu/pc-bios/README	2008-05-12 07:30:43.000000000 -0400
++++ kvm-69/qemu/pc-bios/README	2008-05-21 09:59:34.000000000 -0400
+@@ -1,24 +1,19 @@
+-- The PC BIOS comes from the Bochs project
+-  (http://bochs.sourceforge.net/). A patch from bios.diff was applied.
++- The PC BIOS comes from the Bochs project (http://bochs.sourceforge.net/)
++  The bios.bin binary is provided for convenience.  If you want to rebuild
++  it from source refer to the top level bios directory in the source package.
+ 
+-- The VGA BIOS and the Cirrus VGA BIOS come from the LGPL VGA bios
+-  project (http://www.nongnu.org/vgabios/).
++- The VGA BIOS and the Cirrus VGA BIOS come from the LGPL VGA bios project
++  (http://www.nongnu.org/vgabios/).  The vgabios.bin and vgabios-cirrus.bin
++  binaries are provided for convenience.  If you want to rebuild them from
++  source refer to the top level vgabios directory in the source package.
+ 
+-- The PowerPC Open Hack'Ware Open Firmware Compatible BIOS is
+-  available at http://perso.magic.fr/l_indien/OpenHackWare/index.htm.
++- The PXE roms come from Rom-o-Matic etherboot 5.4.2 (http://rom-o-matic.net/)
+ 
+-- video.x is a PowerMac NDRV compatible driver for a VGA frame
+-  buffer. It comes from the Mac-on-Linux project
+-  (http://www.maconlinux.org/).
++    pcnet32:pcnet32 -- [0x1022,0x2000]
++    ns8390:winbond940 -- [0x1050,0x0940]
++    rtl8139:rtl8139 -- [0x10ec,0x8139]
+ 
+-- OpenBIOS (http://www.openbios.org/) is a free (GPL v2) portable
+-  firmware implementation. The goal is to implement a 100% IEEE
+-  1275-1994 (referred to as Open Firmware) compliant firmware.
+-  The included Sparc32 image is built from SVN revision 185
+-  and Sparc64 from SVN revision 181.
++  For the source code go to the etherboot 5.4 git tree in :
++ 
++     http://git.etherboot.org/?p=etherboot.git
+ 
+-- The PXE roms come from Rom-o-Matic etherboot 5.4.2.
+-  pcnet32:pcnet32 -- [0x1022,0x2000]
+-  ns8390:winbond940 -- [0x1050,0x0940]
+-  rtl8139:rtl8139 -- [0x10ec,0x8139]
+-  http://rom-o-matic.net/

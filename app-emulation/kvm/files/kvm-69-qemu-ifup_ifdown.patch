@@ -1,0 +1,52 @@
+diff -Naur kvm-69.orig/scripts/qemu-ifdown kvm-69/scripts/qemu-ifdown
+--- kvm-69.orig/scripts/qemu-ifdown	1970-01-01 01:00:00.000000000 +0100
++++ kvm-69/scripts/qemu-ifdown	2008-06-03 09:46:53.000000000 +0200
+@@ -0,0 +1,20 @@
++#!/bin/sh
++
++if [ -x /sbin/brctl ]; then
++  BRCTL="/sbin/brctl"
++elif [ -x /usr/sbin/brctl ]; then
++  BRCTL="/usr/sbin/brctl"
++else
++  echo "no bridge utils installed"
++  exit 1
++fi
++
++if [ -x /sbin/ip ]; then
++  switch=$(/sbin/ip route list | awk '/^default / { sub(/.* dev /, ""); print $1 }')
++  ${BRCTL} delif ${switch} $1
++  /sbin/ip link set $1 down
++else
++  switch=$(/bin/netstat -rn | awk '/^0\.0\.0\.0/ { print $NF }')
++  ${BRCTL} delif ${switch} $1
++  /sbin/ifconfig $1 down
++fi
+diff -Naur kvm-69.orig/scripts/qemu-ifup kvm-69/scripts/qemu-ifup
+--- kvm-69.orig/scripts/qemu-ifup	2008-06-03 09:42:05.000000000 +0200
++++ kvm-69/scripts/qemu-ifup	2008-06-03 09:44:30.000000000 +0200
+@@ -1,5 +1,21 @@
+ #!/bin/sh
+ 
+-switch=$(/sbin/ip route list | awk '/^default / { print $NF }')
+-/sbin/ifconfig $1 0.0.0.0 up
+-/usr/sbin/brctl addif ${switch} $1
++if [ -x /sbin/brctl ]; then
++  BRCTL="/sbin/brctl"
++elif [ -x /usr/sbin/brctl ]; then
++  BRCTL="/usr/sbin/brctl"
++else
++  echo "no bridge utils installed"
++  exit 1
++fi
++
++if [ -x /sbin/ip ]; then
++  switch=$(/sbin/ip route list | awk '/^default / { sub(/.* dev /, ""); print $1 }')
++  /sbin/ip link set $1 up
++else
++  switch=$(/bin/netstat -rn | awk '/^0\.0\.0\.0/ { print $NF }')
++  /sbin/ifconfig $1 0.0.0.0 up
++fi
++
++${BRCTL} addif ${switch} $1
++

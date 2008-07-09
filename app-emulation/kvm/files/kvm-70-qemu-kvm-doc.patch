@@ -1,0 +1,339 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN kvm-70.orig/qemu/qemu-doc.texi kvm-70/qemu/qemu-doc.texi
+--- kvm-70.orig/qemu/qemu-doc.texi	2008-06-16 14:25:16.000000000 -0400
++++ kvm-70/qemu/qemu-doc.texi	2008-06-17 09:29:57.000000000 -0400
+@@ -199,7 +199,7 @@ by Tibor "TS" Schütz.
+ Download and uncompress the linux image (@file{linux.img}) and type:
+ 
+ @example
+-qemu linux.img
++kvm linux.img
+ @end example
+ 
+ Linux should boot and give you a prompt.
+@@ -209,7 +209,7 @@ Linux should boot and give you a prompt.
+ 
+ @example
+ @c man begin SYNOPSIS
+-usage: qemu [options] [@var{disk_image}]
++usage: kvm [options] [@var{disk_image}]
+ @c man end
+ @end example
+ 
+@@ -273,53 +273,53 @@ an untrusted format header.
+ 
+ Instead of @option{-cdrom} you can use:
+ @example
+-qemu -drive file=file,index=2,media=cdrom
++kvm -drive file=file,index=2,media=cdrom
+ @end example
+ 
+ Instead of @option{-hda}, @option{-hdb}, @option{-hdc}, @option{-hdd}, you can
+ use:
+ @example
+-qemu -drive file=file,index=0,media=disk
+-qemu -drive file=file,index=1,media=disk
+-qemu -drive file=file,index=2,media=disk
+-qemu -drive file=file,index=3,media=disk
++kvm -drive file=file,index=0,media=disk
++kvm -drive file=file,index=1,media=disk
++kvm -drive file=file,index=2,media=disk
++kvm -drive file=file,index=3,media=disk
+ @end example
+ 
+ You can connect a CDROM to the slave of ide0:
+ @example
+-qemu -drive file=file,if=ide,index=1,media=cdrom
++kvm -drive file=file,if=ide,index=1,media=cdrom
+ @end example
+ 
+ If you don't specify the "file=" argument, you define an empty drive:
+ @example
+-qemu -drive if=ide,index=1,media=cdrom
++kvm -drive if=ide,index=1,media=cdrom
+ @end example
+ 
+ You can connect a SCSI disk with unit ID 6 on the bus #0:
+ @example
+-qemu -drive file=file,if=scsi,bus=0,unit=6
++kvm -drive file=file,if=scsi,bus=0,unit=6
+ @end example
+ 
+ To boot from a SCSI disk, one would use:
+ 
+ @example
+-qemu -drive file=file,if=scsi,boot=on
++kvm -drive file=file,if=scsi,boot=on
+ @end example
+ 
+ Instead of @option{-fda}, @option{-fdb}, you can use:
+ @example
+-qemu -drive file=file,index=0,if=floppy
+-qemu -drive file=file,index=1,if=floppy
++kvm -drive file=file,index=0,if=floppy
++kvm -drive file=file,index=1,if=floppy
+ @end example
+ 
+ By default, @var{interface} is "ide" and @var{index} is automatically
+ incremented:
+ @example
+-qemu -drive file=a -drive file=b"
++kvm -drive file=a -drive file=b"
+ @end example
+ is interpreted like:
+ @example
+-qemu -hda a -hdb b
++kvm -hda a -hdb b
+ @end example
+ 
+ @item -boot [a|c|d|n]
+@@ -356,11 +356,11 @@ Enable audio and selected sound hardware
+ available sound hardware.
+ 
+ @example
+-qemu -soundhw sb16,adlib hda
+-qemu -soundhw es1370 hda
+-qemu -soundhw ac97 hda
+-qemu -soundhw all hda
+-qemu -soundhw ?
++kvm -soundhw sb16,adlib hda
++kvm -soundhw es1370 hda
++kvm -soundhw ac97 hda
++kvm -soundhw all hda
++kvm -soundhw ?
+ @end example
+ 
+ Note that Linux's i810_audio OSS kernel (for AC97) module might
+@@ -599,18 +599,18 @@ hostname reported by the builtin DHCP se
+ @item -net tap[,vlan=@var{n}][,fd=@var{h}][,ifname=@var{name}][,script=@var{file}]
+ Connect the host TAP network interface @var{name} to VLAN @var{n} and
+ use the network script @var{file} to configure it. The default
+-network script is @file{/etc/qemu-ifup}. Use @option{script=no} to
++network script is @file{/etc/kvm/qemu-ifup}. Use @option{script=no} to
+ disable script execution. If @var{name} is not
+ provided, the OS automatically provides one. @option{fd}=@var{h} can be
+ used to specify the handle of an already opened host TAP interface. Example:
+ 
+ @example
+-qemu linux.img -net nic -net tap
++kvm linux.img -net nic -net tap
+ @end example
+ 
+ More complicated example (two NICs, each one connected to a TAP device)
+ @example
+-qemu linux.img -net nic,vlan=0 -net tap,vlan=0,ifname=tap0 \
++kvm linux.img -net nic,vlan=0 -net tap,vlan=0,ifname=tap0 \
+                -net nic,vlan=1 -net tap,vlan=1,ifname=tap1
+ @end example
+ 
+@@ -627,11 +627,11 @@ specifies an already opened TCP socket.
+ Example:
+ @example
+ # launch a first QEMU instance
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:56 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:56 \
+                -net socket,listen=:1234
+ # connect the VLAN 0 of this instance to the VLAN 0
+ # of the first instance
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:57 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:57 \
+                -net socket,connect=127.0.0.1:1234
+ @end example
+ 
+@@ -655,13 +655,13 @@ Use @option{fd=h} to specify an already 
+ Example:
+ @example
+ # launch one QEMU instance
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:56 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:56 \
+                -net socket,mcast=230.0.0.1:1234
+ # launch another QEMU instance on same "bus"
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:57 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:57 \
+                -net socket,mcast=230.0.0.1:1234
+ # launch yet another QEMU instance on same "bus"
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:58 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:58 \
+                -net socket,mcast=230.0.0.1:1234
+ @end example
+ 
+@@ -669,7 +669,7 @@ Example (User Mode Linux compat.):
+ @example
+ # launch QEMU instance (note mcast address selected
+ # is UML's default)
+-qemu linux.img -net nic,macaddr=52:54:00:12:34:56 \
++kvm linux.img -net nic,macaddr=52:54:00:12:34:56 \
+                -net socket,mcast=239.192.168.1:1102
+ # launch UML
+ /path/to/linux ubd0=/path/to/root_fs eth0=mcast
+@@ -694,7 +694,7 @@ a guest from a local directory.
+ 
+ Example (using pxelinux):
+ @example
+-qemu -hda linux.img -boot n -tftp /path/to/tftp/files -bootp /pxelinux.0
++kvm -hda linux.img -boot n -tftp /path/to/tftp/files -bootp /pxelinux.0
+ @end example
+ 
+ @item -smb @var{dir}
+@@ -728,7 +728,7 @@ screen 0, use the following:
+ 
+ @example
+ # on the host
+-qemu -redir tcp:6001::6000 [...]
++kvm -redir tcp:6001::6000 [...]
+ # this host xterm should open in the guest X11 server
+ xterm -display :1
+ @end example
+@@ -738,7 +738,7 @@ the guest, use the following:
+ 
+ @example
+ # on the host
+-qemu -redir tcp:5555::23 [...]
++kvm -redir tcp:5555::23 [...]
+ telnet localhost 5555
+ @end example
+ 
+@@ -815,19 +815,19 @@ they default to @code{0.0.0.0}.
+ When not using a specified @var{src_port} a random port is automatically chosen.
+ 
+ If you just want a simple readonly console you can use @code{netcat} or
+-@code{nc}, by starting qemu with: @code{-serial udp::4555} and nc as:
+-@code{nc -u -l -p 4555}. Any time qemu writes something to that port it
++@code{nc}, by starting kvm with: @code{-serial udp::4555} and nc as:
++@code{nc -u -l -p 4555}. Any time kvm writes something to that port it
+ will appear in the netconsole session.
+ 
+ If you plan to send characters back via netconsole or you want to stop
+-and start qemu a lot of times, you should have qemu use the same
++and start kvm a lot of times, you should have kvm use the same
+ source port each time by using something like @code{-serial
+-udp::4555@@:4556} to qemu. Another approach is to use a patched
++udp::4555@@:4556} to kvm. Another approach is to use a patched
+ version of netcat which can listen to a TCP port and send and receive
+ characters via udp.  If you have a patched version of netcat which
+ activates telnet remote echo and single char transfer, then you can
+ use the following options to step up a netcat redirector to allow
+-telnet on port 5555 to access the qemu port.
++telnet on port 5555 to access the kvm port.
+ @table @code
+ @item Qemu Options:
+ -serial udp::4555@@:4556
+@@ -1461,7 +1461,7 @@ QEMU can automatically create a virtual 
+ directory tree. In order to use it, just type:
+ 
+ @example
+-qemu linux.img -hdb fat:/my_directory
++kvm linux.img -hdb fat:/my_directory
+ @end example
+ 
+ Then you access access to all the files in the @file{/my_directory}
+@@ -1471,14 +1471,14 @@ them via SAMBA or NFS. The default acces
+ Floppies can be emulated with the @code{:floppy:} option:
+ 
+ @example
+-qemu linux.img -fda fat:floppy:/my_directory
++kvm linux.img -fda fat:floppy:/my_directory
+ @end example
+ 
+ A read/write support is available for testing (beta stage) with the
+ @code{:rw:} option:
+ 
+ @example
+-qemu linux.img -fda fat:floppy:rw:/my_directory
++kvm linux.img -fda fat:floppy:rw:/my_directory
+ @end example
+ 
+ What you should @emph{never} do:
+@@ -1516,7 +1516,7 @@ can then configure it as if it was a rea
+ @subsubsection Linux host
+ 
+ As an example, you can download the @file{linux-test-xxx.tar.gz}
+-archive and copy the script @file{qemu-ifup} in @file{/etc} and
++archive and copy the script @file{qemu-ifup} in @file{/etc/kvm} and
+ configure properly @code{sudo} so that the command @code{ifconfig}
+ contained in @file{qemu-ifup} can be executed as root. You must verify
+ that your host kernel supports the TAP network interfaces: the
+@@ -1584,7 +1584,7 @@ kernel testing.
+ 
+ The syntax is:
+ @example
+-qemu -kernel arch/i386/boot/bzImage -hda root-2.4.20.img -append "root=/dev/hda"
++kvm -kernel arch/i386/boot/bzImage -hda root-2.4.20.img -append "root=/dev/hda"
+ @end example
+ 
+ Use @option{-kernel} to provide the Linux kernel image and
+@@ -1599,7 +1599,7 @@ If you do not need graphical output, you
+ the virtual serial port and the QEMU monitor to the console with the
+ @option{-nographic} option. The typical command line is:
+ @example
+-qemu -kernel arch/i386/boot/bzImage -hda root-2.4.20.img \
++kvm -kernel arch/i386/boot/bzImage -hda root-2.4.20.img \
+      -append "root=/dev/hda console=ttyS0" -nographic
+ @end example
+ 
+@@ -1629,7 +1629,7 @@ or the @code{usb_add} monitor command.  
+ Virtual Mouse.  This will override the PS/2 mouse emulation when activated.
+ @item tablet
+ Pointer device that uses absolute coordinates (like a touchscreen).
+-This means qemu is able to report the mouse position without having
++This means kvm is able to report the mouse position without having
+ to grab the mouse.  Also overrides the PS/2 mouse emulation when activated.
+ @item disk:@var{file}
+ Mass storage device based on @var{file} (@pxref{disk_images})
+@@ -1731,7 +1731,7 @@ For this setup it is recommended to rest
+ socket only. For example
+ 
+ @example
+-qemu [...OPTIONS...] -vnc unix:/home/joebloggs/.qemu-myvm-vnc
++kvm [...OPTIONS...] -vnc unix:/home/joebloggs/.qemu-myvm-vnc
+ @end example
+ 
+ This ensures that only users on local box with read/write access to that
+@@ -1752,7 +1752,7 @@ option, and then once QEMU is running th
+ the monitor is used to set the password all clients will be rejected.
+ 
+ @example
+-qemu [...OPTIONS...] -vnc :1,password -monitor stdio
++kvm [...OPTIONS...] -vnc :1,password -monitor stdio
+ (qemu) change vnc password
+ Password: ********
+ (qemu)
+@@ -1769,7 +1769,7 @@ support provides a secure session, but n
+ client to connect, and provides an encrypted session.
+ 
+ @example
+-qemu [...OPTIONS...] -vnc :1,tls,x509=/etc/pki/qemu -monitor stdio
++kvm [...OPTIONS...] -vnc :1,tls,x509=/etc/pki/qemu -monitor stdio
+ @end example
+ 
+ In the above example @code{/etc/pki/qemu} should contain at least three files,
+@@ -1787,7 +1787,7 @@ then validate against the CA certificate
+ in an environment with a private internal certificate authority.
+ 
+ @example
+-qemu [...OPTIONS...] -vnc :1,tls,x509verify=/etc/pki/qemu -monitor stdio
++kvm [...OPTIONS...] -vnc :1,tls,x509verify=/etc/pki/qemu -monitor stdio
+ @end example
+ 
+ 
+@@ -1798,7 +1798,7 @@ Finally, the previous method can be comb
+ to provide two layers of authentication for clients.
+ 
+ @example
+-qemu [...OPTIONS...] -vnc :1,password,tls,x509verify=/etc/pki/qemu -monitor stdio
++kvm [...OPTIONS...] -vnc :1,password,tls,x509verify=/etc/pki/qemu -monitor stdio
+ (qemu) change vnc password
+ Password: ********
+ (qemu)
+@@ -1921,10 +1921,10 @@ copied to the client for which they were
+ QEMU has a primitive support to work with gdb, so that you can do
+ 'Ctrl-C' while the virtual machine is running and inspect its state.
+ 
+-In order to use gdb, launch qemu with the '-s' option. It will wait for a
++In order to use gdb, launch kvm with the '-s' option. It will wait for a
+ gdb connection:
+ @example
+-> qemu -s -kernel arch/i386/boot/bzImage -hda root-2.4.20.img \
++> kvm -s -kernel arch/i386/boot/bzImage -hda root-2.4.20.img \
+        -append "root=/dev/hda"
+ Connected to host network interface: tun0
+ Waiting gdb connection on port 1234

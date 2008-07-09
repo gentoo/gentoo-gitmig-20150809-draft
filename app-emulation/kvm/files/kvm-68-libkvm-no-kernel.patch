@@ -1,0 +1,14 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN kvm-68.orig/libkvm/Makefile kvm-68/libkvm/Makefile
+--- kvm-68.orig/libkvm/Makefile	2008-05-02 07:20:13.000000000 -0400
++++ kvm-68/libkvm/Makefile	2008-05-07 15:25:07.000000000 -0400
+@@ -25,10 +25,6 @@ libkvm.a: libkvm.o $(libkvm-$(ARCH)-objs
+ 
+ install:
+ 	install -D libkvm.h $(DESTDIR)/$(PREFIX)/include/libkvm.h
+-	install -D $(LIBKVM_KERNELDIR)/include/linux/kvm.h \
+-		$(DESTDIR)/$(PREFIX)/include/linux/kvm.h
+-	install -D $(LIBKVM_KERNELDIR)/include/linux/kvm_para.h \
+-		$(DESTDIR)/$(PREFIX)/include/linux/kvm_para.h
+ 	install -D libkvm.a $(DESTDIR)/$(PREFIX)/$(LIBDIR)/libkvm.a
+ 
+ -include .*.d

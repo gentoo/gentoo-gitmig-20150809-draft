@@ -1,0 +1,13 @@
+--- kvm-45/qemu/configure.orig	2007-10-02 12:30:29.000000000 +0200
++++ kvm-45/qemu/configure	2007-10-02 12:31:09.000000000 +0200
+@@ -666,8 +666,8 @@
+       prefix="/usr/local"
+   fi
+   mansuffix="/share/man"
+-  datasuffix="/share/qemu"
+-  docsuffix="/share/doc/qemu"
++  datasuffix="/share/kvm"
++  docsuffix="/share/doc/kvm"
+   binsuffix="/bin"
+ fi
+ 

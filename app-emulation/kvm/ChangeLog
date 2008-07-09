@@ -1,0 +1,14 @@
+# ChangeLog for app-emulation/kvm
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.1 2008/07/09 00:21:56 dang Exp $
+
+*kvm-70 (09 Jul 2008)
+
+  09 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/kvm-45-qemu-configure.patch, +files/kvm-48-kvm.patch,
+  +files/kvm-57-kernel-longmode.patch, +files/kvm-57-qemu-kvm-cmdline.patch,
+  +files/kvm-61-qemu-kvm.patch, +files/kvm-68-libkvm-no-kernel.patch,
+  +files/kvm-69-qemu-ifup_ifdown.patch, +files/kvm-69-qemu-no-blobs.patch,
+  +files/kvm-70-qemu-kvm-doc.patch, +metadata.xml, +kvm-70.ebuild:
+  Add kvm to the tree
+

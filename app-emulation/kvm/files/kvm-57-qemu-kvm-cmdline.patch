@@ -1,0 +1,22 @@
+--- kvm-57/qemu/vl.c	2007-12-18 07:57:46.000000000 -0800
++++ kvm-57/qemu/vl.c	2007-12-20 06:59:55.000000000 -0800
+@@ -136,8 +136,8 @@ int inet_aton(const char *cp, struct in_
+ #include "qemu-kvm.h"
+ #endif
+ 
+-#define DEFAULT_NETWORK_SCRIPT "/etc/qemu-ifup"
+-#define DEFAULT_NETWORK_DOWN_SCRIPT "/etc/qemu-ifdown"
++#define DEFAULT_NETWORK_SCRIPT "/etc/kvm/kvm-ifup"
++#define DEFAULT_NETWORK_DOWN_SCRIPT "/etc/kvm/kvm-ifdown"
+ #ifdef __sun__
+ #define SMBD_COMMAND "/usr/sfw/sbin/smbd"
+ #else
+@@ -7971,7 +7971,7 @@ static void help(int exitcode)
+            "\n"
+            "When using -nographic, press 'ctrl-a h' to get some help.\n"
+            ,
+-           "qemu",
++           "kvm",
+            DEFAULT_RAM_SIZE,
+ #ifndef _WIN32
+            DEFAULT_NETWORK_SCRIPT,

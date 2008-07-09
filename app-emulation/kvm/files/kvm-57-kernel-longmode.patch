@@ -1,0 +1,11 @@
+--- kvm-57/kernel/mmu.h	2007-12-18 08:02:40.000000000 -0800
++++ kvm-57/kernel/mmu.h	2007-12-20 08:19:31.000000000 -0800
+@@ -20,7 +20,7 @@ static inline int kvm_mmu_reload(struct 
+ static inline int is_long_mode(struct kvm_vcpu *vcpu)
+ {
+ #ifdef CONFIG_X86_64
+-	return vcpu->arch.shadow_efer & EFER_LME;
++	return vcpu->arch.shadow_efer & EFER_LMA;
+ #else
+ 	return 0;
+ #endif

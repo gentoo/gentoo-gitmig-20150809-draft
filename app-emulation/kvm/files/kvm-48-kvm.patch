@@ -1,0 +1,134 @@
+--- kvm-48/kvm	2007-10-18 02:58:26.000000000 -0700
++++ kvm-48/kvm	2007-10-18 11:58:57.000000000 -0700
+@@ -15,9 +15,11 @@
+             self.readfp(file, filename)
+ 
+ config = ShellConfigParser()
+-config.read('config.mak')
++config.read('/etc/kvm/config.mak')
+ 
+ external_module = config.get('shell', 'want_module')
++prefix = config.get('shell', 'prefix')
++kerneldir = config.get('shell', 'kerneldir').replace('build', 'misc')
+ privileged = os.getuid() == 0
+ 
+ optparser = optparse.OptionParser()
+@@ -55,6 +57,12 @@
+                      default = not privileged,
+                      )
+ 
++optparser.add_option('--bridge',
++                     help = 'use this device to build the bridge',
++                     dest = 'bridge',
++                     default = None,
++                     )
++
+ optparser.add_option('--mac',
+                      help = 'use this specific mac addr',
+                      dest = 'mac',
+@@ -73,11 +81,19 @@
+                      dest = 'kvm',
+                      default = True,
+                      )
++
++optparser.add_option('--imagesize',
++                     help = 'use this size for the image',
++                     dest = 'imagesize',
++                     default = '30G',
++		     )
++
+ optparser.add_option('--image',
+                      help = 'select disk image',
+                      dest = 'image',
+                      default = '/tmp/disk',
+                      )
++
+ optparser.add_option('--cdrom',
+                      help = 'select cdrom image',
+                      dest = 'cdrom',
+@@ -119,7 +135,7 @@
+ 		     action = 'store_false',
+                      default = True,
+ 		     dest = 'irqchip',
+-                     help = 'avoid using in-kernel irqchip',
++                     help = 'disable KVM kernel mode PIC/IOAPIC/LAPIC',
+                      )
+ 
+ optparser.add_option('-n', '--dry-run',
+@@ -148,7 +164,7 @@
+ 
+ def insert_module(module):
+     if os.spawnl(os.P_WAIT, '/sbin/insmod', 'insmod',
+-                 'kernel/%s.ko' % (module,)) != 0:
++                 kerneldir + '/%s.ko' % (module,)) != 0:
+         raise Exception('failed to load kvm module')
+ 
+ def probe_module(module):
+@@ -181,9 +197,10 @@
+         print '/dev/kvm not present'
+ 
+ disk = options.image
++disksize = options.imagesize
+ if options.install:
+-    (status, output) = commands.getstatusoutput(
+-        'qemu/qemu-img create -f qcow2 "%s" 30G' % disk)
++    cmd = 'qemu-img create -f qcow2 "' + disk + '" ' + disksize
++    (status, output) = commands.getstatusoutput(cmd)
+     if status:
+         raise Exception, output
+ 
+@@ -191,14 +208,11 @@
+ if options.install:
+     bootdisk = 'd'
+ 
++# kvm always compiles for the x86_64 target
+ arch = 'x86_64'
++cmd = 'kvm'
+ 
+-if arch == 'x86_64':
+-    cmd = 'qemu-system-' + arch
+-else:
+-    cmd = 'qemu'
+-
+-local_cmd = 'qemu/' + arch + '-softmmu/' + cmd
++local_cmd = prefix + '/bin/' + cmd
+ if os.access(local_cmd, os.F_OK):
+     cmd = local_cmd
+ else:
+@@ -226,15 +240,31 @@
+ if not options.irqchip:
+     qemu_args += ('-no-kvm-irqchip',)
+ 
++def getmac(interface):
++    if os.access('/sbin/ip', os.F_OK):
++        for line in commands.getoutput('/sbin/ip link show ' + interface).splitlines():
++            m = re.match(r'.*link/ether (..:..:..:..:..:..).*', line)
++	    if m:
++	        mac = m.group(1)
++		return mac
++    else:
++        for line in commands.getoutput('/sbin/ifconfig ' + interface).splitlines():
++            m = re.match(r'.*HWaddr (..:..:..:..:..:..)', line)
++	    if m:
++	        mac = m.group(1)
++		return mac
++    return False
++
+ if not options.notap:
++    bridge = options.bridge
++    if not bridge:
++        bridge = 'eth0'
++
+     mac = options.mac
+     if not mac:
+-        for line in commands.getoutput('/sbin/ip link show eth0').splitlines():
+-            m = re.match(r'.*link/ether (..:..:..:..:..:..).*', line)
+-            if m:
+-                mac = m.group(1)
++        mac = getmac(bridge) 
+         if not mac:
+-            raise Exception, 'Unable to determine eth0 mac address'
++            raise Exception, 'Unable to determine ' + bridge + ' mac address'
+         mac_components = mac.split(':')
+         mac_components[0] = 'a0'
+         mac = ':'.join(mac_components)
