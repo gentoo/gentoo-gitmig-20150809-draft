@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-1.12.ebuild,v 1.1 2008/07/09 03:35:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-1.12.ebuild,v 1.2 2008/07/09 14:07:03 je_fro Exp $
 
 inherit eutils
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.biology.utah.edu/jorgensen/wayned/ape/"
 SRC_URI="http://www.biology.utah.edu/jorgensen/wayned/ape/Download/ApE_linux_current.zip"
 
 LICENSE="ApE"
+RESTRICT="mirror"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

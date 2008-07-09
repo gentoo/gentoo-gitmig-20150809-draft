@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ApE
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.1 2008/07/09 03:35:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.2 2008/07/09 14:07:03 je_fro Exp $
+
+  09 Jul 2008; Jeff Gardner <je_fro@gentoo.org> ApE-1.12.ebuild:
+  RESTRICT=mirror, thanks to tove who caught it.
 
 *ApE-1.12 (09 Jul 2008)
 
