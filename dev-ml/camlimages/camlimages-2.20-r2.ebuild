@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r1.ebuild,v 1.1 2008/06/07 20:32:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r2.ebuild,v 1.1 2008/07/09 15:24:26 aballier Exp $
 
 inherit findlib eutils
 
@@ -77,6 +77,14 @@ src_install() {
 		DESTDIR="${T}/tmp" \
 		install || die
 	sed -e "s/@VERSION@/${PV}/" "${FILESDIR}/META.camlimages.in" > "${T}/tmp/META"
-
+	if use gtk; then
+		cat >> "${T}/tmp/META" << EOF
+package "lablgtk2" (
+	requires="camlimages lablgtk2"
+	archive(byte)="ci_lablgtk2.cma"
+	archive(native)="ci_lablgtk2.cmxa"
+)
+EOF
+	fi
 	ocamlfind install camlimages "${T}"/tmp/*
 }

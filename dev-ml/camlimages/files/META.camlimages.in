@@ -28,9 +28,3 @@ archive(native)+="ci_xvthumb.cmxa"
 archive(native)+="ci_xpm.cmxa"
 archive(native)+="ci_ps.cmxa"
 archive(native)+="ci_graphics.cmxa"
-
-package "lablgtk2" (
-	requires="camlimages lablgtk2"
-	archive(byte)="ci_lablgtk2.cma"
-	archive(native)="ci_lablgtk2.cmxa"
-)
