@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.7 2008/06/22 15:30:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.8 2008/07/09 06:19:10 mrness Exp $
 
-inherit eutils libtool flag-o-matic
+inherit eutils libtool flag-o-matic toolchain-funcs
 
 DESCRIPTION="Tools for ATM"
 HOMEPAGE="http://linux-atm.sourceforge.net/"
@@ -32,7 +32,7 @@ src_unpack() {
 src_compile() {
 	append-flags -fno-strict-aliasing
 
-	econf || die "econf failed"
+	CC_FOR_BUILD=$(tc-getCC) econf || die "econf failed"
 	emake || die "emake failed"
 }
 
