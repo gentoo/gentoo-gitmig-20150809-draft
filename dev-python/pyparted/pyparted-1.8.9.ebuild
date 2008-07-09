@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.8.9.ebuild,v 1.4 2008/07/09 18:53:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.8.9.ebuild,v 1.5 2008/07/09 22:36:51 opfer Exp $
 
 inherit multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dcantrel.fedorapeople.org/pyparted/"
 SRC_URI="http://dcantrel.fedorapeople.org/pyparted/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
