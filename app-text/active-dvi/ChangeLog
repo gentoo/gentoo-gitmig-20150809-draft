@@ -1,6 +1,10 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.18 2008/06/07 20:39:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.19 2008/07/09 15:09:07 aballier Exp $
+
+  09 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  -active-dvi-1.4.0.ebuild, -active-dvi-1.6.0.ebuild:
+  remove old
 
 *active-dvi-1.7.3 (07 Jun 2008)
 
