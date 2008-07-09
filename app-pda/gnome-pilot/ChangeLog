@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.44 2008/07/05 16:18:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.45 2008/07/09 09:49:37 armin76 Exp $
+
+  09 Jul 2008; Raúl Porcel <armin76@gentoo.org> gnome-pilot-2.0.16.ebuild:
+  sparc stable wrt #230067
 
   05 Jul 2008; Markus Meier <maekke@gentoo.org> gnome-pilot-2.0.16.ebuild:
   amd64/x86 stable, bug #230067
