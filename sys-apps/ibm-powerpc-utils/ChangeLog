@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.12 2008/04/21 20:11:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.13 2008/07/09 19:41:26 ranger Exp $
+
+  09 Jul 2008; Brent Baude <ranger@gentoo.org>
+  -files/ibm-powerpc-utils-1.0.4-remove-doc.patch,
+  -ibm-powerpc-utils-1.0.4.ebuild, ibm-powerpc-utils-1.1.0.ebuild:
+  Removing -1.0.4 and keywording 1.1.0 for ppc and ppc64 stable
 
 *ibm-powerpc-utils-1.1.0 (21 Apr 2008)
 
