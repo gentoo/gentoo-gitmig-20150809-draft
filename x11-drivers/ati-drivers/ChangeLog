@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.122 2008/06/20 05:38:34 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.123 2008/07/09 22:33:19 opfer Exp $
+
+  09 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  ati-drivers-8.501.ebuild:
+  stable x86, bug 230772
 
 *ati-drivers-8.501 (20 Jun 2008)
 
