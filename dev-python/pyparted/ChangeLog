@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.31 2007/09/20 20:09:47 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.32 2008/07/09 18:53:12 corsair Exp $
+
+  09 Jul 2008; Markus Rothe <corsair@gentoo.org> pyparted-1.8.9.ebuild:
+  Stable on ppc64; bug #231196
 
   20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.8.9.ebuild:
   Removed rpm dependency, fixed second DEPEND line, removed line using debug
