@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.15.ebuild,v 1.6 2008/04/19 15:03:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.15.ebuild,v 1.7 2008/07/09 20:08:28 serkan Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -32,7 +32,7 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/motif21/libmawt.so
 src_unpack() {
 	mkdir bundled-jdk
 	cd bundled-jdk
-	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
+	sh "${DISTDIR}"/${At} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
 	bash "${FILESDIR}"/construct.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
