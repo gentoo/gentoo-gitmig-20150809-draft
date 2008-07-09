@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.4.0.ebuild,v 1.1 2008/05/29 08:43:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.5.0.ebuild,v 1.1 2008/07/09 09:01:46 aballier Exp $
 
 DESCRIPTION="Gtkmm/Gnomecanvasmm widget for boxes and lines environments"
 HOMEPAGE="http://wiki.drobilla.net/FlowCanvas"
