@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p1.ebuild,v 1.1 2008/07/08 18:59:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p1.ebuild,v 1.2 2008/07/09 06:13:08 corsair Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
@@ -60,7 +60,7 @@ src_unpack() {
 
 	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-	use dlz && use mysql && epatch ${FILESDIR}/bind-dlzmysql5-reconnect.patch
+	use dlz && use mysql && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
