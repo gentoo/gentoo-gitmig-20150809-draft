@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.7 2008/07/09 02:24:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.8 2008/07/09 13:38:15 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -137,6 +137,7 @@ src_compile() {
 }
 
 src_install() {
+	opera_cd
 	# Prepare installation directories for Opera's installer script.
 	dodir /etc
 
