@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.6 2008/07/08 20:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.51.ebuild,v 1.7 2008/07/09 02:24:26 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -105,16 +105,13 @@ src_unpack() {
 	unpack ${A}
 	opera_cd
 
-	epatch "${FILESDIR}/${PN}-9.00-install.patch" || \
-		die "failed to apply install patch"
+	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 
 	# bug #181300:
 	if use elibc_FreeBSD; then
-		epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch" || \
-			die "failed to apply pluginpath patch"
+		epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch"
 	else
-		epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch" || \
-			die "failed to apply pluginpath patch"
+		epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
 	fi
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
