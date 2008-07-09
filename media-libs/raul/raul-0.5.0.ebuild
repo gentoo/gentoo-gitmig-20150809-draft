@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.4.0.ebuild,v 1.1 2008/05/29 08:24:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.5.0.ebuild,v 1.1 2008/07/09 07:44:21 aballier Exp $
 
 DESCRIPTION="C++ utility library primarily aimed at audio/musical applications."
 HOMEPAGE="http://wiki.drobilla.net/Raul"

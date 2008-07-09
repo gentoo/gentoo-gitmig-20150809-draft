@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/raul
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.1 2008/05/29 08:24:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.2 2008/07/09 07:44:21 aballier Exp $
+
+*raul-0.5.0 (09 Jul 2008)
+
+  09 Jul 2008; Alexis Ballier <aballier@gentoo.org> -raul-0.4.0.ebuild,
+  +raul-0.5.0.ebuild:
+  version bump
 
 *raul-0.4.0 (29 May 2008)
 
