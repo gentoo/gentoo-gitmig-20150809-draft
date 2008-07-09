@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/swatch
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.19 2007/02/21 19:47:33 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.20 2008/07/09 06:36:14 tove Exp $
+
+  09 Jul 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove g2boojum from metadata (#208353)
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
