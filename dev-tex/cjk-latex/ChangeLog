@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.26 2008/04/01 18:24:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.27 2008/07/09 16:40:57 aballier Exp $
+
+*cjk-latex-4.8.0 (09 Jul 2008)
+
+  09 Jul 2008; Alexis Ballier <aballier@gentoo.org> +cjk-latex-4.8.0.ebuild:
+  version bump
 
   01 Apr 2008; Alexis Ballier <aballier@gentoo.org> -cjk-latex-4.5.2.ebuild:
   remove old
