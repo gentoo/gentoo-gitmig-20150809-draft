@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.38 2008/07/09 13:38:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.39 2008/07/09 22:12:21 opfer Exp $
+
+  09 Jul 2008; Christian Faulhammer <opfer@gentoo.org> dvipng-1.11.ebuild:
+  unRESTRICT tests and add USE=test with a needed dependency, see bug 230133
 
   09 Jul 2008; Ulrich Mueller <ulm@gentoo.org> dvipng-1.11.ebuild:
   Add RESTRICT="test".

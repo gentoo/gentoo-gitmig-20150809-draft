@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.9 2008/07/09 13:38:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.11.ebuild,v 1.10 2008/07/09 22:12:21 opfer Exp $
 
 inherit eutils
 
@@ -11,8 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="truetype"
-RESTRICT="test"
+IUSE="truetype test"
 
 RDEPEND="media-libs/gd
 	media-libs/libpng
@@ -20,7 +19,8 @@ RDEPEND="media-libs/gd
 	sys-libs/zlib
 	truetype? ( >=media-libs/freetype-2.1.5 )"
 DEPEND="${RDEPEND}
-	virtual/texi2dvi"
+	virtual/texi2dvi
+	test? ( dev-texlive/texlive-fontsrecommended )"
 
 pkg_setup() {
 	if ! built_with_use media-libs/gd jpeg png; then
