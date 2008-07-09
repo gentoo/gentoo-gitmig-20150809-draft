@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.19.ebuild,v 1.5 2008/06/21 19:52:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.19.ebuild,v 1.6 2008/07/09 07:54:49 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,12 +15,7 @@ IUSE="doc test"
 
 DEPEND="virtual/latex-base
 	media-gfx/imagemagick
-	doc? ( || (
-		dev-texlive/texlive-texinfo
-		app-text/tetex
-		app-text/ptex
-		)
-	)
+	doc? ( virtual/texi2dvi )
 	test? ( || (
 		( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended )
 		app-text/tetex
