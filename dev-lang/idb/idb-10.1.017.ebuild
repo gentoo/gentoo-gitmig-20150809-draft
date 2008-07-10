@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.017.ebuild,v 1.1 2008/07/10 15:02:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.017.ebuild,v 1.2 2008/07/10 16:52:17 bicatali Exp $
 
 inherit rpm elisp-common
 
@@ -24,7 +24,7 @@ SRC_URI="amd64? ( ifc? ( !icc? ( ${COM_URI}/${IFC_PID}/l_fc_${xPV}_intel64.tar.g
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="Intel-SDP"
-SLOT="10.1"
+SLOT="0"
 
 RESTRICT="strip mirror"
 IUSE="emacs icc ifc"

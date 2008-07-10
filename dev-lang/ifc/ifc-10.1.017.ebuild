@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.017.ebuild,v 1.1 2008/07/10 14:58:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.017.ebuild,v 1.2 2008/07/10 16:49:54 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
@@ -22,7 +22,7 @@ SRC_URI="amd64? ( ${SRC_COM}_intel64.tar.gz )
 	x86?  ( ${SRC_COM}_ia32.tar.gz )"
 
 LICENSE="Intel-SDP"
-SLOT="10.1"
+SLOT="0"
 
 RESTRICT="test strip mirror"
 IUSE=""

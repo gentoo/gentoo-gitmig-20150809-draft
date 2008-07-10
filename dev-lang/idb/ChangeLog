@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/idb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.9 2008/07/10 15:02:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.10 2008/07/10 16:52:17 bicatali Exp $
+
+  10 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> idb-10.1.017.ebuild:
+  Removed slotting, not ready.
 
 *idb-10.1.017 (10 Jul 2008)
 

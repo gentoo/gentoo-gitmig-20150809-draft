@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.46 2008/07/10 14:58:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.47 2008/07/10 16:49:54 bicatali Exp $
+
+  10 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> ifc-10.1.017.ebuild:
+  Removed slotting, not ready.
 
 *ifc-10.1.017 (10 Jul 2008)
 
