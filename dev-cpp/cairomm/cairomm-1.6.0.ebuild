@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.6.0.ebuild,v 1.2 2008/07/10 14:36:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.6.0.ebuild,v 1.3 2008/07/10 14:49:05 remi Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 	# don't waste time building examples because they are marked as "noinst"
 	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || die "sed failed"
-	
+
 	# don't waste time building tests
 	# they require the boost Unit Testing framework, that's not in base boost
 	sed -i 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' Makefile.in || die "sed failed"
