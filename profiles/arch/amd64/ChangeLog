@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.9 2008/06/06 08:16:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.10 2008/07/10 18:36:20 gentoofan23 Exp $
+
+  10 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  package.use.mask, no-multilib/package.use.mask:
+  Unmask ia32 USE flag for www-client/opera for amd64 multilib
+  profiles.
 
   06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   pkgmove to gnome-base/gnome-control-center
