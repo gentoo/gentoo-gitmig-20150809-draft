@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.18.0.ebuild,v 1.10 2007/10/04 22:07:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.18.0.ebuild,v 1.11 2008/07/10 15:14:10 remi Exp $
 
 inherit gnome2
 
 DESCRIPTION="C++ bindings for gnome-vfs"
-HOMEPAGE="http://gtkmm.sourceforge.net/"
+HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="1.1"
