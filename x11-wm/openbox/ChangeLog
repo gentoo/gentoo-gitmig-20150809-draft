@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.164 2008/05/14 21:49:48 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.165 2008/07/10 12:14:49 omp Exp $
+
+  10 Jul 2008; David Shakaryan <omp@gentoo.org> openbox-3.4.7.2.ebuild:
+  Check for X flag on pango; thanks to Mart Raudsepp. (bug #221819)
 
 *openbox-3.4.7.2 (14 May 2008)
 
