@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.14 2006/07/06 01:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.15 2008/07/10 15:16:28 remi Exp $
 
 inherit eutils
 
 DESCRIPTION="C++ interface for GTK+"
-HOMEPAGE="http://gtkmm.sourceforge.net/"
+HOMEPAGE="http://www.gtkmm.org"
 SRC_URI="http://download.sourceforge.net/gtkmm/${P}.tar.gz"
 #	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 #	 http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz"
