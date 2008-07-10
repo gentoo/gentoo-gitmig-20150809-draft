@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1669 2008/07/10 19:18:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1670 2008/07/10 20:11:12 wolf31o2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  10 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> use.local.desc:
+  Added plugins local USE for net-firewall/arno-iptables-firewall.
 
   10 Jul 2008; Doug Goldstein <cardoe@gentoo.org> package.mask:
   remove man-pages-3.01-r1 mask
