@@ -1,0 +1,12 @@
+diff -Naur avogadro-0.8.1/libavogadro/src/boost.h avogadro-0.8.1.new/libavogadro/src/boost.h
+--- avogadro-0.8.1/libavogadro/src/boost.h	2008-05-14 21:10:06.000000000 -0400
++++ avogadro-0.8.1.new/libavogadro/src/boost.h	2008-07-10 09:02:00.000000000 -0400
+@@ -46,7 +46,7 @@
+ 	void (OBMol::*ToInertialFrame)() = &OBMol::ToInertialFrame;
+ 	void (OBMol::*Center)() = &OBMol::Center;
+ 	bool (OBMol::*DeleteHydrogens)() = &OBMol::DeleteHydrogens;
+-	bool (OBMol::*AddHydrogens)(bool, bool) = &OBMol::AddHydrogens;
++	bool (OBMol::*AddHydrogens)(bool, bool, double) = &OBMol::AddHydrogens;
+ 	OBBond * (OBMol::*GetBondIDX)(int)const = &OBMol::GetBond;
+ 	OBBond * (OBMol::*GetBondAtoms)(int, int)const = &OBMol::GetBond;
+ 

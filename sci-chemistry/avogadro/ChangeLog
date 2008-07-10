@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.12 2008/05/21 21:20:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.13 2008/07/10 13:16:35 markusle Exp $
+
+*avogadro-0.8.1 (10 Jul 2008)
+
+  10 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/avogadro-0.8.1-openbabel-2.2.0.patch, +avogadro-0.8.1.ebuild:
+  Version bump and fixed compile issue due to openbabel-2.2.0 API change
+  (see bug #231173).
 
   21 May 2008; Marcus D. Hanwell <cryos@gentoo.org> avogadro-0.8.0.ebuild:
   Bumped dependency to cmake-2.4.8. Should fix bug 222947.
