@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.1 2008/07/02 09:20:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.2 2008/07/10 14:36:38 bicatali Exp $
 
-inherit eutils flag-o-matic multilib autotools fortran
+inherit eutils flag-o-matic multilib autotools fortran toolchain-funcs
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
@@ -23,9 +23,21 @@ pkg_setup() {
 
 	# here I need (surprise) to increase optimization:
 	# --enable-i386-hacks requires -fomit-frame-pointer to work properly
-	if [ "${ARCH}" == "x86" ]; then
+	if use x86; then
 		is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
 	fi
+	if use openmp &&
+		[[ $(tc-getCC)$ == *gcc* ]] &&
+		[[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+		! built_with_use sys-devel/gcc openmp
+then
+		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
+		ewarn "If you want to build fftw with OpenMP, abort now,"
+		ewarn "and switch CC to an OpenMP capable compiler"
+		ewarn "Otherwise the configure script will select POSIX threads."
+		epause 5
+	fi
+
 	FORTRAN="gfortran ifc g77"
 	use fortran && fortran_pkg_setup
 }
@@ -60,32 +72,32 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf="
+		--enable-shared
+		--enable-type-prefix
+		--enable-vec-recurse
+		$(use_enable fortran)
+		$(use_enable mpi)
+		$(use_enable x86 i386-hacks)"
+	if use openmp; then
+		myconf="${myconf}
+			--enable-threads
+			--with-openmp"
+	elif use threads; then
+		myconf="${myconf}
+			--enable-threads
+			--without-openmp"
+	else
+		myconf="${myconf}
+			--disable-threads
+			--without-openmp"
+	fi
 	cd "${S}-single"
-	econf \
-		--enable-float \
-		--enable-shared \
-		--enable-type-prefix \
-		--enable-vec-recurse \
-		$(use_enable threads) \
-		$(use_with openmp) \
-		$(use_enable fortran) \
-		$(use_enable mpi) \
-		$(use_enable x86 i386-hacks) \
-		|| die "econf for float failed"
+	econf ${myconf} --enable-float || die "econf for float failed"
 	emake || die "emake for float failed"
 
-	# the only difference here is no --enable-float
 	cd "${S}-double"
-	econf \
-		--enable-shared \
-		--enable-type-prefix \
-		--enable-vec-recurse \
-		$(use_enable threads) \
-		$(use_with openmp) \
-		$(use_enable fortran) \
-		$(use_enable mpi) \
-		$(use_enable x86 i386-hacks) \
-		|| die "econf for double failed"
+	econf ${myconf} || die "econf for double failed"
 	emake || die "emake for double failed"
 }
 
@@ -103,13 +115,14 @@ src_install () {
 
 	cd "${S}-single"
 	emake DESTDIR="${D}" install || die "emake install float failed"
+
+	cd "${S}-double"
+	emake DESTDIR="${D}" install || die "emake install double failed"
+
 	insinto /usr/include
 	doins fortran/fftw_f77.i || die "doins failed"
 	dodoc AUTHORS ChangeLog NEWS TODO README README.hacks || die "dodoc failed"
 	use doc && dohtml doc/*
-
-	cd "${S}-double"
-	emake DESTDIR="${D}" install || die "emake install double failed"
 
 	if use float; then
 		for f in "${D}"/usr/{include,$(get_libdir)}/*sfft*; do
