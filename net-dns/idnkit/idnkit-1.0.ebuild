@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.24 2007/06/10 23:42:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.25 2008/07/10 20:11:26 jer Exp $
 
 DESCRIPTION="Toolkit for Internationalized Domain Names (IDN)"
 HOMEPAGE="http://www.nic.ad.jp/ja/idn/idnkit/download/"
@@ -24,5 +24,5 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc Changelog DISTFILES INSTALL INSTALL.ja NEWS README README.ja
+	dodoc ChangeLog DISTFILES INSTALL INSTALL.ja NEWS README README.ja
 }
