@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fampp2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.7 2008/06/12 03:57:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.8 2008/07/10 11:57:24 remi Exp $
+
+  10 Jul 2008; Rémi Cardona <remi@gentoo.org> fampp2-5.1.0.ebuild,
+  fampp2-6.0.0.ebuild:
+  use a single slot for libsigc++ (see bug #228477)
 
 *fampp2-6.0.0 (12 Jun 2008)
 

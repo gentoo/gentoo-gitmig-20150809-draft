@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/fampp2-5.1.0.ebuild,v 1.1 2006/10/29 03:37:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/fampp2-5.1.0.ebuild,v 1.2 2008/07/10 11:57:24 remi Exp $
 
 DESCRIPTION="C++ wrapper for fam"
 HOMEPAGE="http://fampp.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="virtual/fam
 	dev-libs/STLport
 	dev-libs/ferrisloki
-	dev-libs/libsigc++
+	=dev-libs/libsigc++-1.2*
 	=dev-libs/glib-2*
 	=x11-libs/gtk+-2*"
 
