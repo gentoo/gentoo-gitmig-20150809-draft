@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.2 2008/06/27 10:46:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.3 2008/07/10 10:21:10 bicatali Exp $
 
 EAPI="1"
 
@@ -76,6 +76,9 @@ src_unpack() {
 		-e 's:$(G4BIN)/$(G4SYSTEM):$(G4TMP):g' \
 		-e 's:$(G4TMP)/$(G4SYSTEM):$(G4TMP):g' \
 		source/GNUmakefile || die "sed GNUmakefile failed"
+	sed -i \
+		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
+		config/globlib.gmk || die "sed globlib.gmk failed"
 }
 
 src_compile() {
@@ -124,15 +127,15 @@ src_compile() {
 	export G4LIB_BUILD_SHARED=y
 	emake || die "Building shared geant failed"
 
+	if use global; then
+		export G4LIB_USE_GRANULAR=y
+		emake global || die "Building global libraries failed"
+	fi
+
 	if use static; then
 		rm -rf tmp
 		export G4LIB_BUILD_STATIC=y ; unset G4LIB_BUILD_SHARED
 		emake || die "Building static geant failed"
-	fi
-
-	if use global; then
-		export G4LIB_USE_GRANULAR=y
-		emake global || die "Building global libraries failed"
 	fi
 }
 
