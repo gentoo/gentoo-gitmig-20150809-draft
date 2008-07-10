@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-1.3.7.ebuild,v 1.5 2008/04/12 12:10:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-1.3.7.ebuild,v 1.6 2008/07/10 15:17:48 remi Exp $
 
 inherit gnome2
 
 DESCRIPTION="C++ bindings for libgda"
-HOMEPAGE="http://gtkmm.sourceforge.net/"
+HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
