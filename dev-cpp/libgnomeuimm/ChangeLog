@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.62 2008/05/13 10:58:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.63 2008/07/10 15:23:35 remi Exp $
+
+  10 Jul 2008; Rémi Cardona <remi@gentoo.org> libgnomeuimm-2.18.0.ebuild,
+  libgnomeuimm-2.20.0.ebuild, libgnomeuimm-2.20.1.ebuild,
+  libgnomeuimm-2.20.2.ebuild, libgnomeuimm-2.22.0.ebuild:
+  update HOMEPAGE
 
   13 May 2008; Rémi Cardona <remi@gentoo.org> libgnomeuimm-2.22.0.ebuild:
   revert the updated dep on libgnomecanvasmm
