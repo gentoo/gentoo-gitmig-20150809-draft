@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.21 2008/07/06 12:59:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.22 2008/07/10 14:40:26 ranger Exp $
+
+  10 Jul 2008; Brent Baude <ranger@gentoo.org> tagpy-0.94.5.ebuild:
+  stable ppc64, bug 230937
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org> tagpy-0.94.5.ebuild:
   amd64/x86 stable, bug #230937
