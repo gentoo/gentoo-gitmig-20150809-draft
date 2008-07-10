@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.69 2008/06/18 13:04:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.70 2008/07/10 03:28:56 jsbronder Exp $
+
+*torque-2.3.1 (10 Jul 2008)
+
+  10 Jul 2008; Justin Bronder <jsbronder@gentoo.org>
+  +files/torque-2.3-fixes-r2221-2227.patch, +torque-2.3.1.ebuild:
+  Bump torque to 2.3.1, add some fixes from svn for newer gcc's.
 
   18 Jun 2008; Ferris McCormick <fmccor@gentoo.org> torque-2.3.0-r1.ebuild:
   Sparc stable, required for bug #224099.
