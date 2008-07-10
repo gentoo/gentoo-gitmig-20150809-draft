@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-ldap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.56 2007/08/15 11:12:27 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.57 2008/07/10 10:13:09 nelchael Exp $
+
+*python-ldap-2.3.5 (10 Jul 2008)
+
+  10 Jul 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +python-ldap-2.3.5.ebuild:
+  Version bump, see bug #231378.
 
 *python-ldap-2.3.1 (15 Aug 2007)
 
