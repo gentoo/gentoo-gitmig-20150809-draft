@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.7 2008/05/29 16:53:25 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.8 2008/07/10 18:07:22 fmccor Exp $
 
 inherit eutils python games
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ppc64 x86"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86"
 IUSE="extra-cardsets"
 
 DEPEND="virtual/python"
