@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.66 2008/06/03 17:58:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.67 2008/07/10 15:45:12 chutzpah Exp $
+
+*ntfs3g-1.2531-r1 (10 Jul 2008)
+
+  10 Jul 2008; Patrick McLean <chutzpah@gentoo.org> +files/10-ntfs3g.fdi,
+  ntfs3g-1.2531.ebuild, +ntfs3g-1.2531-r1.ebuild:
+  Add "hal" USE flag to install .fdi file so hal will mount NTFS with
+  ntfs-3g rather than the kernel NTFS driver. Thanks to Malte Starostik
+  <m-starostik@versanet.de> (bug #231376). Stabilize ntfs3g-1.2531 on amd64
+  (bug #231422).
 
 *ntfs3g-1.2531 (03 Jun 2008)
 
