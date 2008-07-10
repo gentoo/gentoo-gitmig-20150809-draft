@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r2.ebuild,v 1.6 2008/07/10 18:49:55 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r2.ebuild,v 1.7 2008/07/10 20:20:22 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -38,7 +38,7 @@ inherit versionator php5_2-sapi apache-module
 DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
 DEPEND="app-admin/php-toolkit
-	>=net-libs/c-client-2006k"
+	imap? ( >=net-libs/c-client-2006k )"
 RDEPEND="${DEPEND}"
 if [[ -n "${KOLAB_PATCH}" ]] ; then
 	IUSE="${IUSE} kolab"
