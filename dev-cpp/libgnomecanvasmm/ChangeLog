@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.61 2008/04/11 22:55:12 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.62 2008/07/10 15:21:21 remi Exp $
+
+  10 Jul 2008; Rémi Cardona <remi@gentoo.org>
+  libgnomecanvasmm-2.16.0.ebuild, libgnomecanvasmm-2.20.0.ebuild,
+  libgnomecanvasmm-2.22.0.ebuild:
+  update HOMEPAGE
 
 *libgnomecanvasmm-2.22.0 (11 Apr 2008)
 

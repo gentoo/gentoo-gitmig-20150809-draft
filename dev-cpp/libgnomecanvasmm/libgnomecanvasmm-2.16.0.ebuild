@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.16.0.ebuild,v 1.12 2007/10/12 08:25:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.16.0.ebuild,v 1.13 2008/07/10 15:21:21 remi Exp $
 
 inherit gnome2
 
 DESCRIPTION="C++ bindings for libgnomecanvas"
-HOMEPAGE="http://gtkmm.sourceforge.net/"
+HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"
