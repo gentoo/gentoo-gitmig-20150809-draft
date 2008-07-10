@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.013.ebuild,v 1.1 2008/03/13 21:30:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.013.ebuild,v 1.2 2008/07/10 15:02:02 bicatali Exp $
 
 inherit rpm elisp-common
 
-ICC_PID=952
-IFC_PID=955
+ICC_PID=964
+IFC_PID=965
 xPV=p_${PV}
 
 DESCRIPTION="Intel C/C++/FORTRAN debugger for Linux"

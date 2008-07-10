@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.012.ebuild,v 1.1 2008/02/28 10:43:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.017.ebuild,v 1.1 2008/07/10 15:02:02 bicatali Exp $
 
 inherit rpm elisp-common
 
-ICC_PID=952
-IFC_PID=955
+ICC_PID=1136
+IFC_PID=1137
 xPV=p_${PV}
 
 DESCRIPTION="Intel C/C++/FORTRAN debugger for Linux"
@@ -24,7 +24,7 @@ SRC_URI="amd64? ( ifc? ( !icc? ( ${COM_URI}/${IFC_PID}/l_fc_${xPV}_intel64.tar.g
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="Intel-SDP"
-SLOT="0"
+SLOT="10.1"
 
 RESTRICT="strip mirror"
 IUSE="emacs icc ifc"
@@ -80,7 +80,7 @@ pkg_postinst () {
 	elog "Read the website for more information on this license:"
 	elog "${HOMEPAGE}"
 	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
-	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
+	elog "\nTo use ${PN} issue first \n\tsource ${ROOT}/etc/profile"
 	use emacs && elisp-site-regen
 }
 

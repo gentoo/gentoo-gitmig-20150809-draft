@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.60 2008/03/13 21:25:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.61 2008/07/10 14:56:02 bicatali Exp $
+
+*icc-10.1.017 (10 Jul 2008)
+
+  10 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> -icc-10.1.012.ebuild,
+  +icc-10.1.017.ebuild:
+  Version bump
 
 *icc-10.1.013 (13 Mar 2008)
 

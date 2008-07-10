@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.012.ebuild,v 1.1 2008/02/01 18:28:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.017.ebuild,v 1.1 2008/07/10 14:56:02 bicatali Exp $
 
-inherit rpm eutils
+inherit rpm eutils check-reqs
 
-PID=955
-PB=fc
-PEXEC="ifort"
-DESCRIPTION="Intel FORTRAN 77/95 optimized compiler for Linux"
-HOMEPAGE="http://www.intel.com/software/products/compilers/flin/"
+PID=1136
+PB=cc
+PEXEC="icc icpc"
+DESCRIPTION="Intel C/C++ optimized compiler for Linux"
+HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 
 ###
 # everything below common to ifc and icc
@@ -22,13 +22,23 @@ SRC_URI="amd64? ( ${SRC_COM}_intel64.tar.gz )
 	x86?  ( ${SRC_COM}_ia32.tar.gz )"
 
 LICENSE="Intel-SDP"
-SLOT="0"
+SLOT="10.1"
 
 RESTRICT="test strip mirror"
 IUSE=""
 DEPEND=""
 RDEPEND="virtual/libstdc++
 	amd64? ( app-emulation/emul-linux-x86-compat )"
+
+pkg_setup() {
+	# Check if we have enough RAM and free diskspace
+	CHECKREQS_MEMORY="512"
+	local disk_req="300"
+	use amd64 && disk_req="400"
+	use ia64 && disk_req="350"
+	CHECKREQS_DISK_BUILD=${disk_req}
+	check_reqs
+}
 
 src_unpack() {
 	unpack ${A}
@@ -91,6 +101,6 @@ pkg_postinst () {
 	elog "Read the website for more information on this license:"
 	elog "${HOMEPAGE}"
 	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
-	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
+	elog "\nTo use ${PN} issue first \n\tsource ${ROOT}/etc/profile"
 	elog "Debugger is installed with dev-lang/idb"
 }
