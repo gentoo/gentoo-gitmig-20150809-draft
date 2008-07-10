@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/zemberek
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.5 2008/07/10 18:49:44 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.6 2008/07/10 19:04:59 serkan Exp $
+
+  10 Jul 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/zemberek-2.1-287-kitabevi.patch:
+  Add missing patch.
 
 *zemberek-2.1 (10 Jul 2008)
 
