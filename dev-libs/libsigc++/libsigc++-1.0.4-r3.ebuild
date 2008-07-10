@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.12 2008/07/09 17:53:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.13 2008/07/10 13:45:47 remi Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 
-	# don't waste time building tests, they fail with --as-needed, bug #140248
-	sed -i 's|^\(SUBDIRS =.*\)tests\(.*\)$|\1\2|' Makefile.in || \
-		die "sed tests failed"
+	# fix --as-needed, see bug #140248
+	sed -i -e 's:^libsigc_la_LIBADD =:& $(THREAD_LIB):' \
+		sigc++/Makefile.in || die
 }
 
 src_compile() {
