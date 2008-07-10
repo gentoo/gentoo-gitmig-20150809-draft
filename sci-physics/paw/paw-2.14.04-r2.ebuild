@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.3 2008/06/29 07:55:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.4 2008/07/10 18:29:08 bicatali Exp $
 
 inherit eutils multilib fortran
 
 DEB_PN=paw
 DEB_PV=${PV}.dfsg.2
-DEB_PR=5
+DEB_PR=6
 DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN's Physics Analysis Workstation data analysis program"
@@ -19,13 +19,13 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="x11-libs/openmotif
-	virtual/lapack
-	dev-lang/cfortran
-	sci-physics/cernlib
+RDEPEND="sci-physics/cernlib
+	x11-libs/libXaw
+	x11-libs/openmotif
 	x11-libs/xbae"
 
 DEPEND="${RDEPEND}
+	dev-lang/cfortran
 	virtual/latex-base
 	x11-misc/imake
 	x11-misc/makedepend"
@@ -60,15 +60,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# create local LaTeX cache directory
-	#mkdir -p .texmf-var
 	VARTEXFONTS="${T}"/fonts
 	emake -j1 cernlib-indep cernlib-arch || die "emake failed"
-}
-
-src_test() {
-	LD_LIBRARY_PATH="${S}"/shlib \
-		emake -j1 cernlib-test || die "emake test failed"
 }
 
 src_install() {
