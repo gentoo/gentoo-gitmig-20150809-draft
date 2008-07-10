@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43_rc5.ebuild,v 1.1 2008/07/10 14:52:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43_rc6.ebuild,v 1.1 2008/07/10 16:15:53 chutzpah Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -8,17 +8,18 @@ MY_P="${P/_/}"
 MY_PV="${PV/_/}"
 DESCRIPTION="Small forwarding DNS server"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
-#SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.gz"
-SRC_URI="http://www.thekelleys.org.uk/dnsmasq/release-candidates/${MY_P}.tar.gz"
+#SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
+SRC_URI="http://www.thekelleys.org.uk/dnsmasq/release-candidates/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="dbus ipv6 isc tftp"
+IUSE="dbus ipv6 isc nls tftp"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	dbus? ( sys-apps/dbus )"
+RDEPEND="dbus? ( sys-apps/dbus )
+	nls? ( sys-devel/gettext )"
+
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -38,9 +39,10 @@ src_compile() {
 	use dbus && sed -i '$ a #define HAVE_DBUS' src/config.h
 
 	emake \
+		PREFIX=/usr \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		|| die
+		all$(use nls && echo "-i18n") || die
 }
 
 src_install() {
@@ -48,7 +50,7 @@ src_install() {
 		PREFIX=/usr \
 		MANDIR=/usr/share/man \
 		DESTDIR="${D}" \
-		install || die
+		install$(use nls && echo "-i18n") || die
 
 	dodoc CHANGELOG FAQ
 	dohtml *.html
