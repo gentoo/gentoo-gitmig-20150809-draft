@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.2 2008/07/10 02:17:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.3 2008/07/10 12:47:39 dang Exp $
+
+  10 Jul 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-70.ebuild:
+  Disable the bios flag for now, it doesn't build. Bug #231343
 
   10 Jul 2008; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   I guess virtualization isn't a herd yet

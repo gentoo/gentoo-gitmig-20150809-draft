@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-70.ebuild,v 1.1 2008/07/09 00:21:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-70.ebuild,v 1.2 2008/07/10 12:47:39 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -12,7 +12,8 @@ HOMEPAGE="http://kvm.qumranet.com/kvmwiki"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="alsa bios esd gnutls havekernel ncurses sdl test"
+# Add bios back when it builds again
+IUSE="alsa esd gnutls havekernel ncurses sdl test"
 RESTRICT="mirror test"
 
 RDEPEND="sys-libs/zlib
@@ -22,12 +23,12 @@ RDEPEND="sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( >=media-libs/libsdl-1.2.11 )"
 
+#    bios? (
+#        sys-devel/dev86
+#        dev-lang/perl
+#        sys-power/iasl
+#    )
 DEPEND="${RDEPEND}
-	bios? (
-		sys-devel/dev86
-		dev-lang/perl
-		sys-power/iasl
-	)
 	gnutls? ( dev-util/pkgconfig )
 	app-text/texi2html"
 
@@ -126,10 +127,10 @@ src_compile() {
 		fi
 	fi
 
-	if use bios; then
-		emake bios || die "emake bios failed"
-		emake vgabios || die "emake vgabios failed"
-	fi
+#    if use bios; then
+#        emake bios || die "emake bios failed"
+#        emake vgabios || die "emake vgabios failed"
+#    fi
 
 	emake qemu || die "emake qemu failed"
 }
