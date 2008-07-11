@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1671 2008/07/10 21:52:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1672 2008/07/11 04:54:08 battousai Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  11 Jul 2008; Bryan Stine <battousai@gentoo.org> package.mask:
+  Add x11-drm 20080710 mask for testing modprobe.d
 
   10 Jul 2008; Doug Goldstein <cardoe@gentoo.org> use.local.desc:
   add notice about GLEP 56
