@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.276 2008/07/10 20:20:22 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.277 2008/07/11 01:39:02 jer Exp $
+
+  11 Jul 2008; Jeroen Roovers <jer@gentoo.org> php-5.2.6-r2.ebuild:
+  Stable for HPPA (bug #230575).
 
   10 Jul 2008; Christian Hoffmann <hoffie@gentoo.org> php-5.2.6-r2.ebuild:
   d'oh, the DEPEND on c-client was supposed to only show up for USE=imap,
