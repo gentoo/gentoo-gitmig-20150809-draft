@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.75 2008/04/20 16:54:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.76 2008/07/11 14:35:36 aballier Exp $
+
+*ardour-2.5 (11 Jul 2008)
+
+  11 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/ardour-2.5-gcc43.patch, +ardour-2.5.ebuild:
+  version bump
 
   20 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   +files/ardour-2.4-gcc43.patch, ardour-2.4.1.ebuild:
