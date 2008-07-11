@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.2.ebuild,v 1.1 2008/06/08 18:17:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.2.ebuild,v 1.2 2008/07/11 14:46:01 eva Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -22,7 +22,7 @@ RDEPEND=">=www-client/epiphany-${MY_MAJORV}
 	>=x11-libs/gtk+-2.11.6
 	>=gnome-base/libglade-2
 	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
+	!xulrunner? ( =www-client/mozilla-firefox-2* )
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	python? ( >=dev-python/pygtk-2.11 )"
@@ -58,6 +58,11 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-gecko=xulrunner"
 	else
 		G2CONF="${G2CONF} --with-gecko=firefox"
+
+		if ! built_with_use =www-client/mozilla-firefox-2* filepicker; then
+			ewarn "If you want the Certificate Management extension, please"
+			ewarn "rebuild www-client/mozilla-firefox with USE='filepicker'"
+		fi
 	fi
 }
 
@@ -71,7 +76,7 @@ src_unpack() {
 	# Don't remove sessionsaver, please.  -dang
 	epatch "${FILESDIR}"/${PN}-2.21.92-sessionsaver-v4.patch.gz
 	echo "extensions/sessionsaver/ephy-sessionsaver-extension.c" >> po/POTFILES.in
-	AT_M4DIR="m4" eautoreconf
+	eautoreconf
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.13 2008/05/29 18:17:03 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.14 2008/07/11 14:46:01 eva Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools python versionator
@@ -49,7 +49,7 @@ src_unpack() {
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
 
-	AT_M4DIR="m4" eautoreconf
+	eautoreconf
 }
 
 pkg_setup() {
@@ -75,6 +75,11 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-gecko=xulrunner"
 	else
 		G2CONF="${G2CONF} --with-gecko=firefox"
+
+		if ! built_with_use =www-client/mozilla-firefox-2* filepicker; then
+			ewarn "If you want the Certificate Management extension, please"
+			ewarn "rebuild www-client/mozilla-firefox with USE='filepicker'"
+		fi
 	fi
 }
 
