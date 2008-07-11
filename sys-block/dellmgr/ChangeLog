@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/dellmgr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/ChangeLog,v 1.4 2008/07/11 09:00:26 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/ChangeLog,v 1.5 2008/07/11 09:04:31 wschlich Exp $
+
+  11 Jul 2008; Wolfram Schlich <wschlich@gentoo.org> dellmgr-5.32.ebuild:
+  added missing multilib eclass inheritance
 
 *dellmgr-5.32 (11 Jul 2008)
 

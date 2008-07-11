@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/dellmgr-5.32.ebuild,v 1.1 2008/07/11 09:00:26 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/dellmgr/dellmgr-5.32.ebuild,v 1.2 2008/07/11 09:04:31 wschlich Exp $
 
-inherit rpm
+inherit multilib rpm
 
 MY_PV=${PV}-0
 DESCRIPTION="Dell PERC 2/3/4 RAID controller management tool"
