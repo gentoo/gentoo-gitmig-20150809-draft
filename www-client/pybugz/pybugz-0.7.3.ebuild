@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.7.3.ebuild,v 1.8 2008/06/02 18:16:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.7.3.ebuild,v 1.9 2008/07/11 02:51:19 jer Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pybugz.googlecode.com"
 SRC_URI="http://pybugz.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND="|| ( >=dev-lang/python-2.5
 	( >=dev-lang/python-2.4
