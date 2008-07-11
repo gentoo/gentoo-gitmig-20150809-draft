@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libferrisstreams
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.19 2008/01/06 03:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.20 2008/07/11 07:59:01 remi Exp $
+
+  11 Jul 2008; Rémi Cardona <remi@gentoo.org>
+  libferrisstreams-0.5.0.ebuild, libferrisstreams-0.5.2.ebuild:
+  use only one libsigc++ slot (see bug #230311)
 
 *libferrisstreams-0.5.2 (06 Jan 2008)
 

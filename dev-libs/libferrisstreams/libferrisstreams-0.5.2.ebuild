@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.5.2.ebuild,v 1.1 2008/01/06 03:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.5.2.ebuild,v 1.2 2008/07/11 07:59:01 remi Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-libs/STLport-4.6.2-r1
-	>=dev-libs/libsigc++-1.2
+	=dev-libs/libsigc++-1.2*
 	>=dev-libs/ferrisloki-3.0.1
 	>=dev-libs/glib-2"
 DEPEND="${RDEPEND}
