@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43_rc6.ebuild,v 1.1 2008/07/10 16:15:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43.ebuild,v 1.1 2008/07/11 14:23:12 chutzpah Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -8,8 +8,8 @@ MY_P="${P/_/}"
 MY_PV="${PV/_/}"
 DESCRIPTION="Small forwarding DNS server"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
-#SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
-SRC_URI="http://www.thekelleys.org.uk/dnsmasq/release-candidates/${MY_P}.tar.lzma"
+SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
+#SRC_URI="http://www.thekelleys.org.uk/dnsmasq/release-candidates/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
