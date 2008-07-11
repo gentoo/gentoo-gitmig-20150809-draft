@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/netdiscover-0.3_beta6-r1.ebuild,v 1.1 2008/03/31 08:44:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/netdiscover-0.3_beta6-r1.ebuild,v 1.2 2008/07/11 17:58:56 armin76 Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND=">=net-libs/libnet-1.1.2.1-r1
 	>=net-libs/libpcap-0.8.3-r1"
