@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/x11-drm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.55 2007/10/20 04:41:32 battousai Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.56 2008/07/11 02:51:08 battousai Exp $
+
+  11 Jul 2008; Bryan Stine <battousai@gentoo.org> -x11-drm-20051223.ebuild,
+  x11-drm-20060608-r1.ebuild, x11-drm-20070314.ebuild,
+  x11-drm-20071019.ebuild:
+  Push patchball 0.2 for 20071019 to restore compatibility with 2.6.25.
+  Closes bug #218419, thanks to reporter Antti Mäkelä for providing the
+  patch. Additionally, clean up QA notices and expunge old version 20051223.
 
 *x11-drm-20071019 (20 Oct 2007)
 

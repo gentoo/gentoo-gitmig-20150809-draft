@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.3 2007/10/09 07:36:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.4 2008/07/11 02:51:08 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -61,8 +61,6 @@ src_unpack() {
 	unpack linux-drm-${PV}-kernelsource.tar.bz2
 	unpack ${P}-gentoo-${PATCHVER}.tar.bz2
 
-	cd "${S}"
-
 	patch_prepare
 
 	# Apply patches
@@ -81,7 +79,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
 	# Building the programs. These are useful for developers and getting info from DRI and DRM.
 	#
 	# libdrm objects are needed for drmstat.
