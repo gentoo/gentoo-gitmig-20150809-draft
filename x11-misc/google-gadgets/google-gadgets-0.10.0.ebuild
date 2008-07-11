@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.9.2-r1.ebuild,v 1.3 2008/06/11 11:20:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0.ebuild,v 1.1 2008/07/11 20:20:31 loki_val Exp $
 
 EAPI=1
 
@@ -18,7 +18,6 @@ IUSE="+dbus debug +gtk +qt4 +gstreamer"
 
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I have.
-# google gadgets will compile against xulrunner-1.9. Work, well...
 RDEPEND=">=dev-lang/spidermonkey-1.7.0
 	x11-libs/libX11
 	x11-libs/libXext
@@ -49,8 +48,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 RESTRICT="test"
-
-PATCHES=( "${FILESDIR}/${P}-gcc43-test.patch" )
 
 pkg_setup() {
 	if ! use qt4
