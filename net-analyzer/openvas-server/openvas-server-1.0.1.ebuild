@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-server/openvas-server-1.0.1.ebuild,v 1.1 2008/07/10 09:38:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-server/openvas-server-1.0.1.ebuild,v 1.2 2008/07/11 14:41:42 carlo Exp $
 
 DESCRIPTION="A remote security scanner for Linux (openvas-server)"
 HOMEPAGE="http://www.openvas.org/"
@@ -10,8 +10,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="tcpd gtk debug prelude"
 
-DEPEND=">=net-analyzer/openvas-libraries-1.0.1
-	net-analyzer/openvas-libnasl
+DEPEND=">=net-analyzer/openvas-libraries-1.0.2
+	>=net-analyzer/openvas-libnasl-1.0.1
 	tcpd? ( sys-apps/tcp-wrappers )
 	gtk? ( =x11-libs/gtk+-2* )
 	prelude? ( dev-libs/libprelude )"
