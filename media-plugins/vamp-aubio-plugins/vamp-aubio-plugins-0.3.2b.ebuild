@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.5 2008/01/29 11:56:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.6 2008/07/11 11:58:05 aballier Exp $
 
-inherit flag-o-matic toolchain-funcs multilib
+inherit flag-o-matic toolchain-funcs multilib eutils
 
 DESCRIPTION="Onset detection, pitch tracking, note tracking and tempo tracking plugins"
 HOMEPAGE="http://www.vamp-plugins.org/"
@@ -16,6 +16,12 @@ IUSE=""
 DEPEND=">=media-libs/aubio-0.3.2
 	media-libs/vamp-plugin-sdk
 	=sci-libs/fftw-3*"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	tc-export CXX
