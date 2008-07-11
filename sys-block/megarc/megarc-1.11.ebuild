@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11.ebuild,v 1.1 2008/04/23 21:32:43 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11.ebuild,v 1.2 2008/07/11 09:14:56 wschlich Exp $
 
 inherit multilib
 
@@ -21,6 +21,10 @@ DEPEND="app-arch/unzip
 RESTRICT="strip mirror test"
 
 S="${WORKDIR}"
+
+pkg_setup() {
+	use amd64 && { has_multilib_profile || die "needs multilib profile on amd64"; }
+}
 
 src_compile() {
 	useq doc && antiword ut_linux.doc > ${PN}-manual.txt
