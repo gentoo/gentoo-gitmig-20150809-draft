@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43.ebuild,v 1.4 2008/07/11 15:51:05 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.43.ebuild,v 1.5 2008/07/11 16:23:13 armin76 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="dbus ipv6 isc nls tftp"
 
 RDEPEND="dbus? ( sys-apps/dbus )
