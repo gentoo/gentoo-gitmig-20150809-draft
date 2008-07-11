@@ -30,3 +30,15 @@ diff -NrU5 qtractor-0.1.3.old/src/qtractorAudioVorbisFile.cpp qtractor-0.1.3/src
  // class qtractorAudioVorbisFile -- Buffered audio file implementation.
  //
  
+Index: qtractor-0.1.3/src/qtractorTimeStretcher.cpp
+===================================================================
+--- qtractor-0.1.3.orig/src/qtractorTimeStretcher.cpp
++++ qtractor-0.1.3/src/qtractorTimeStretcher.cpp
+@@ -22,6 +22,7 @@
+ #include "qtractorTimeStretcher.h"
+ 
+ #include <stdio.h>
++#include <cstring>
+ 
+ 
+ // Constructor.
