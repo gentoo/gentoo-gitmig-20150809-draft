@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.6 2007/07/13 07:15:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.7 2008/07/11 07:33:44 remi Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ RDEPEND="virtual/ghostscript
 	>=dev-libs/libxml-1.8.6
 	=dev-libs/glib-1*
 	cups? ( >=net-print/cups-1.1.14 )
-	X? ( >=dev-cpp/gtkmm-1.2.5 )
-	>=dev-libs/libsigc++-1.01
+	X? ( =dev-cpp/gtkmm-1.2* )
+	=dev-libs/libsigc++-1.0*
 	foomaticdb? ( net-print/foomatic-db-engine )"
 
 S="${WORKDIR}/Omni"
