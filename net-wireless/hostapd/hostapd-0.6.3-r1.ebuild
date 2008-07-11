@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.3-r1.ebuild,v 1.1 2008/06/05 14:15:22 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.3-r1.ebuild,v 1.2 2008/07/11 20:50:41 gurligebis Exp $
 
 inherit toolchain-funcs linux-info eutils
 
@@ -65,7 +65,7 @@ generate_config() {
 		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
 		echo "CONFIG_DRIVER_MADWIFI=y" >> ${CONFIG}
 	else
-		einfo "  HostAP driver disabled"
+		einfo "  Madwifi driver disabled"
 	fi
 
 	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 || ${KV_PATCH} -ge 26 ]] ; then
@@ -79,6 +79,7 @@ generate_config() {
 				echo "LIBS += -L/usr/lib" >> ${CONFIG}
 			else
 				einfo "  nl80211 driver disabled (due to no AP support in cfg.c file)"
+				einfo "  (To enable this, use the patch from http://johannes.sipsolutions.net/patches/kernel/all/LATEST until support gets added to the mainline kernel)"
 			fi
 		else
 			einfo "  nl80211 driver disabled (due to header version below 2.6.26)"
