@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.15 2008/07/10 15:16:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.16 2008/07/11 09:00:23 remi Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	# this patch applies only to gtkmm-1.2.9. gtkmm has been fixed
 	# in CVS. It fixes a build problem with gcc3.1.
@@ -27,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/gtkmm-1.2.9-gcc3.1-gentoo.patch
 	epatch "${FILESDIR}"/gtkmm-1.2.9-gcc3.4-gentoo.patch
 	epatch "${FILESDIR}"/gtkmm-1.2.9-gcc4.patch
+	epatch "${FILESDIR}/gtkmm-1.2.9-gcc4.3.patch"
 }
 
 src_compile() {
