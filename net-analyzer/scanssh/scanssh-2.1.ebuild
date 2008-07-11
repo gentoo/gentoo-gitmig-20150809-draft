@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.8 2007/10/09 15:18:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.9 2008/07/11 02:28:08 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://monkey.org/~provos/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
@@ -19,8 +19,8 @@ DEPEND="net-libs/libpcap
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.0-fix-warnings.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.0-fix-warnings.diff
 	touch configure
 }
 
