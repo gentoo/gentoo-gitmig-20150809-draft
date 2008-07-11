@@ -1,9 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.32 2008/07/09 18:48:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.33 2008/07/11 05:55:01 ulm Exp $
 
   09 Jul 2008; Markus Rothe <corsair@gentoo.org> pymacs-0.23.ebuild:
-  Stable on ppc64; bug #202241
+  Stable on ppc64; bug #212241
 
   21 May 2008; Ulrich Mueller <ulm@gentoo.org> pymacs-0.23.ebuild:
   Set VARTEXFONTS, bug 223077.
