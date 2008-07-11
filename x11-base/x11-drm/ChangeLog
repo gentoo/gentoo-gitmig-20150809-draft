@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.57 2008/07/11 04:57:43 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.58 2008/07/11 05:29:05 battousai Exp $
+
+  11 Jul 2008; Bryan Stine <battousai@gentoo.org> x11-drm-20070314.ebuild:
+  20070314 patchball update for updated kernel compatibility.
 
 *x11-drm-20080710 (11 Jul 2008)
 
