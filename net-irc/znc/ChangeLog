@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.14 2008/07/11 18:55:45 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.15 2008/07/11 19:11:19 armin76 Exp $
+
+  11 Jul 2008; Raúl Porcel <armin76@gentoo.org> -znc-0.052.ebuild,
+  -znc-0.054.ebuild:
+  old
 
   11 Jul 2008; Robert Buchholz <rbu@gentoo.org> znc-0.056.ebuild:
   amd64 stable
