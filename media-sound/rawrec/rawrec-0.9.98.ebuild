@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.14 2008/07/12 09:14:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.15 2008/07/12 09:17:48 aballier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -27,9 +27,9 @@ src_compile() {
 }
 
 src_install() {
-	make EXE_DIR=${D}/usr/bin \
-	MAN_DIR=${D}/usr/share/man/man1 install || die
+	make EXE_DIR="${D}/usr/bin" \
+	MAN_DIR="${D}/usr/share/man/man1" install || die
 
 	einfo "Removing SUID from binary.."
-	chmod u-s ${D}/usr/bin/rawrec
+	chmod u-s "${D}/usr/bin/rawrec"
 }

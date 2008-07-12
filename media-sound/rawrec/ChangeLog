@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.14 2008/07/12 09:14:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.15 2008/07/12 09:17:48 aballier Exp $
+
+  12 Jul 2008; Alexis Ballier <aballier@gentoo.org> rawrec-0.9.98.ebuild:
+  quote variables where needed
 
   12 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   +files/rawrec-libs.patch, rawrec-0.9.98.ebuild, rawrec-0.9.991.ebuild:
