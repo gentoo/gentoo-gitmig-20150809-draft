@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/klibido
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.26 2008/06/09 12:01:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.27 2008/07/12 22:39:06 ingmar Exp $
+
+  12 Jul 2008; Ingmar Vanhassel <ingmar@gentoo.org> klibido-0.2.5.ebuild:
+  Trivial fix for db-4.6 compatibility as provided by Philantrop.
 
   09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> klibido-0.2.5.ebuild:
   Better to save the ebuild after modifying it.
