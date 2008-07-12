@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-2008.04.28.ebuild,v 1.2 2008/07/12 15:09:42 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-2008.04.28.ebuild,v 1.3 2008/07/12 15:55:05 ken69267 Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://dronten.googlepages.com/jtagger"
 SRC_URI="http://dronten.googlepages.com/${P}.zip"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SLOT="0"
 
