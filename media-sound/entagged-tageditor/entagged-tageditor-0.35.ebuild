@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/entagged-tageditor/entagged-tageditor-0.35.ebuild,v 1.1 2008/07/12 09:47:13 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/entagged-tageditor/entagged-tageditor-0.35.ebuild,v 1.2 2008/07/12 10:14:51 serkan Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Open-source audiofile tagger"
 HOMEPAGE="http://entagged.sourceforge.net/"
-SRC_URI="http://ebuild.linux-sevenler.org/distfiles/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
