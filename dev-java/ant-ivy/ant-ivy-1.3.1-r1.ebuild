@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-1.3.1-r1.ebuild,v 1.1 2007/03/01 13:33:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-1.3.1-r1.ebuild,v 1.2 2008/07/12 15:58:36 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -25,7 +25,6 @@ COMMON_DEP="
 DEPEND="
 	>=virtual/jdk-1.4
 	app-arch/unzip
-	source? ( app-arch/zip )
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
@@ -42,11 +41,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${MY_P}-noresolve.patch"
 	epatch "${FILESDIR}/${MY_P}-tasks.patch"
 
-	mkdir ${S}/lib
-	cd ${S}/lib
-	java-pkg_jar-from commons-cli-1,commons-httpclient-3,commons-logging,ant-core,jakarta-oro-2.0
+	mkdir "${S}/lib"
+	java-pkg_jar-from --into lib commons-cli-1,commons-httpclient-3,commons-logging,ant-core,jakarta-oro-2.0
 
-	cd ${S}
 	java-ant_bsfix_one build.xml
 }
 
@@ -58,6 +55,9 @@ src_install() {
 	use source && java-pkg_dosrc src/java/*
 }
 
+RESTRICT="test" # fail because of a missing file
+
 src_test() {
-	eant test || die "Junit tests failed"
+	java-pkg_jar-from --into lib junit
+	ANT_TASKS="ant-junit" eant test || die "Junit tests failed"
 }
