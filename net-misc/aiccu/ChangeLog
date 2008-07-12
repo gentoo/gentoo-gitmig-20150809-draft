@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.17 2008/05/12 18:23:10 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.18 2008/07/12 19:31:54 fmccor Exp $
+
+  12 Jul 2008; Ferris McCormick <fmccor@gentoo.org> aiccu-2007.01.15.ebuild:
+  Add ~sparc at usr (EoD) request, bug #231588.
 
   12 May 2008; Robert Buchholz <rbu@gentoo.org>
   +files/aiccu-2007.01.15-as-needed.patch, aiccu-2007.01.15.ebuild:
