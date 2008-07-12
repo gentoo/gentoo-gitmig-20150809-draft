@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.22 2008/07/12 07:56:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.23 2008/07/12 08:43:07 aballier Exp $
+
+  12 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/mlt-0.2.4-avfreestatic.patch, mlt-0.2.4-r2.ebuild:
+  backport a patch from upstream to fix runtime error with recent ffmpegs
 
   12 Jul 2008; Alexis Ballier <aballier@gentoo.org> mlt-0.2.4-r2.ebuild:
   disable kino support when we don't have quicktime or dv, it fails with gcc
