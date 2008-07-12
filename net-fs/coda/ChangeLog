@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/coda
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.31 2007/05/19 16:09:17 griffon26 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.32 2008/07/12 22:31:40 chtekk Exp $
+
+  12 Jul 2008; Luca Longinotti <chtekk@gentoo.org> +files/6.0.15/auth2,
+  +files/6.0.15/coda-update, +files/6.0.15/codasrv, -files/auth2,
+  -files/coda-update, -files/codasrv, coda-6.0.15.ebuild:
+  Move init-scripts to prepare for update from bug #193012. Also minimal
+  cleanup of ebuild.
 
   19 May 2007; Maurice van der Pot <griffon26@gentoo.org>
   -files/coda-6.0.10-venus-setup-fix.patch,

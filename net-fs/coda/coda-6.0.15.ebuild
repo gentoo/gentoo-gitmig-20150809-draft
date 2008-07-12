@@ -1,18 +1,20 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.9 2007/07/12 05:38:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.10 2008/07/12 22:31:40 chtekk Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit autotools eutils
 
-IUSE="kerberos ssl"
+KEYWORDS="~ppc x86"
 
-DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
+DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Uni."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
 SRC_URI="http://www.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
-
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+SLOT="0"
+IUSE="kerberos ssl"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
@@ -34,8 +36,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-mit-krb5-struct.patch"
+	epatch "${FILESDIR}"/${P}-mit-krb5-struct.patch
 }
 
 src_compile() {
@@ -44,11 +47,11 @@ src_compile() {
 	use kerberos && myflags="${myflags} --with-krb5"
 	use ssl && myflags="${myflags} --with-openssl"
 
-	econf ${myflags} || die "configure failed"
+	econf ${myflags} || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	#these crazy makefiles dont seem to use DESTDIR, but they do use these...
 	# (except infodir, but no harm in leaving it there)
 	# see Makeconf.setup in the package
@@ -58,39 +61,35 @@ src_install () {
 	#...you can find out about this from ./configs/Makerules
 	emake \
 		CINIT-SCRIPTS="" \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc/coda \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		oldincludedir=${D}/usr/include client-install || die
+		prefix="${D}"/usr \
+		sysconfdir="${D}"/etc/coda \
+		mandir="${D}"/usr/share/man \
+		infodir="${D}"/usr/share/info \
+		oldincludedir="${D}"/usr/include client-install || die "emake client-install failed"
 
 	emake \
 		SINIT-SCRIPTS="" \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc/coda \
-		mandir=${D}/usr/share/man \
-		oldincludedir=${D}/usr/include server-install || die
-		infodir=${D}/usr/share/info \
+		prefix="${D}"/usr \
+		sysconfdir="${D}"/etc/coda \
+		mandir="${D}"/usr/share/man \
+		infodir="${D}"/usr/share/info \
+		oldincludedir="${D}"/usr/include server-install || die "emake server-install failed"
 
 	dodoc README* ChangeLog CREDITS
 
-	doinitd ${FILESDIR}/${PV}/venus
-	doinitd ${FILESDIR}/coda-update
-	doinitd ${FILESDIR}/codasrv
-	doinitd ${FILESDIR}/auth2
-
-	# We may use a conf.d/coda file at some point ?
-#	insinto /etc/conf.d
-#	newins ${FILESDIR}/coda.conf.d coda
+	doinitd "${FILESDIR}"/${PV}/venus
+	doinitd "${FILESDIR}"/${PV}/coda-update
+	doinitd "${FILESDIR}"/${PV}/codasrv
+	doinitd "${FILESDIR}"/${PV}/auth2
 
 	sed -i -e "s,^#vicedir=/.*,vicedir=/var/lib/vice," \
-		${D}/etc/coda/server.conf.ex
+		"${D}"/etc/coda/server.conf.ex
 
 	sed -i -e "s,^#mountpoint=/.*,mountpoint=/mnt/coda," \
-		${D}/etc/coda/venus.conf.ex
+		"${D}"/etc/coda/venus.conf.ex
 
 	# Fix conflict with backup.sh from tar
-	mv -f ${D}/usr/sbin/backup{,-coda}.sh
+	mv -f "${D}"/usr/sbin/backup{,-coda}.sh
 
 	dodir /var/lib/vice
 	dodir /mnt/coda
@@ -102,8 +101,7 @@ src_install () {
 	dodir /usr/coda/venus.cache
 }
 
-pkg_postinst () {
-	elog
+pkg_postinst() {
 	elog "To enable the coda at boot up, please do:"
 	elog "    rc-update add codasrv default"
 	elog "    rc-update add venus default"
@@ -114,8 +112,7 @@ pkg_postinst () {
 	elog "    emerge --config =${PF}"
 }
 
-pkg_config () {
-
+pkg_config() {
 	# Set of default configuration values
 	local CODA_ROOT_DIR="/var/lib/vice"
 	local CODA_TEST_VOLUME="codatestvol"

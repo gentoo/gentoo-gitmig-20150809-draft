@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/coda-update,v 1.4 2004/07/26 17:50:21 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/6.0.15/coda-update,v 1.1 2008/07/12 22:31:41 chtekk Exp $
 
 depend() {
 	need net auth2
