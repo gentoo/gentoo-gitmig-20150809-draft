@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.26 2008/05/12 08:28:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.27 2008/07/12 09:05:05 aballier Exp $
+
+  12 Jul 2008; Alexis Ballier <aballier@gentoo.org> kdenlive-0.5.ebuild:
+  Check for xml useflag on mlt, thanks to Flyser <hoacha@quantentunnel.de>,
+  bug #225015.
 
   12 May 2008; Alexis Ballier <aballier@gentoo.org>
   +files/kdenlive-0.5-iec61883_automagic.patch, kdenlive-0.5.ebuild:

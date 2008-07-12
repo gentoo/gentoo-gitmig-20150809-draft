@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.5 2008/05/12 08:28:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.5.ebuild,v 1.6 2008/07/12 09:05:05 aballier Exp $
 
 inherit eutils kde
 
@@ -34,6 +34,12 @@ pkg_setup() {
 	if ! built_with_use media-video/ffmpeg X ; then
 		eerror "You need to build media-video/ffmpeg with USE='X'"
 		die "media-video/ffmpeg without X detected"
+	fi
+
+	if ! built_with_use media-libs/mlt xml ; then
+		eerror "You need media-libs/mlt to be built with xml useflag"
+		eerror "in order to use ${PN}."
+		die "Please install media-libs/mlt with xml useflag enabled"
 	fi
 }
 
