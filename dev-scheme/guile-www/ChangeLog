@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.4 2007/01/10 19:40:59 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.5 2008/07/12 12:24:56 hkbst Exp $
+
+*guile-www-2.23 (12 Jul 2008)
+
+  12 Jul 2008; Marijn Schouten <hkBst@gentoo.org> +guile-www-2.23.ebuild:
+  bump
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> guile-www-2.15.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
