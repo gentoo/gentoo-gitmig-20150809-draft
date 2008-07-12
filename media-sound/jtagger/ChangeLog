@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jtagger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.9 2008/07/12 15:55:05 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.10 2008/07/12 18:20:57 serkan Exp $
+
+  12 Jul 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/jtagger-2008.04.28-override-annotation.patch,
+  jtagger-2008.04.28.ebuild:
+  Fix compilation errors with Java 1.5. Reported by Kenneth Prugh
+  <ken69267@gentoo.org> in bug #231571.
 
   12 Jul 2008; Kenneth Prugh <ken69267@gentoo.org>
   jtagger-2008.04.28.ebuild:
