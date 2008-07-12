@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/galicesms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.7 2007/10/25 20:18:36 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.8 2008/07/12 15:17:43 mrness Exp $
+
+*galicesms-1.62 (12 Jul 2008)
+
+  12 Jul 2008; Alin Năstac <mrness@gentoo.org> +galicesms-1.62.ebuild:
+  Version bump.
 
   25 Oct 2007; Alin Năstac <mrness@gentoo.org> -galicesms-1.51.ebuild:
   Remove obsolete version.
