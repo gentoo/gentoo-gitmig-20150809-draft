@@ -1,6 +1,6 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.128 2008/05/21 16:04:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.129 2008/07/12 17:42:23 peitolm Exp $
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> exim-4.69.ebuild,
   exim-4.69-r1.ebuild:
@@ -12,6 +12,14 @@
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> exim-4.69-r1.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.
+
+  05 May 2008; Colin Morey <peitolm@gentoo.org>
+  +files/exim-4.69-r1.27021.patch,
+  +files/exim-4.69-r1.boolean_redefine_protect.152706.patch,
+  exim-4.69-r1.ebuild:
+  Patches added from:-
+  #27021  - mail-mta/exim - Mail filtering and maildir enhancements for exim.conf
+  #152706 - mail-mta/exim - use shared libpcre + other fixed
 
   24 Apr 2008; Raúl Porcel <armin76@gentoo.org> -files/digest-exim-4.68,
   -files/digest-exim-4.69, -files/digest-exim-4.69-r1:

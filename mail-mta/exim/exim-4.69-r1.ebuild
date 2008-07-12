@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.4 2008/05/21 16:04:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r1.ebuild,v 1.5 2008/07/12 17:42:23 peitolm Exp $
 
 inherit eutils
 
@@ -56,6 +56,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/exim-4.14-tail.patch
 	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
+	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
+	epatch "${FILESDIR}"/exim-4.69-r1.boolean_redefine_protect.152706.patch
 
 	if use maildir; then
 		einfo "Patching maildir support into exim.conf"
