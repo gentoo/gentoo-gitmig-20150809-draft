@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.77 2008/06/14 12:10:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.78 2008/07/12 15:56:40 mrness Exp $
+
+  12 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  +files/gnokii-0.6.26-qa-fixes.patch, gnokii-0.6.26-r1.ebuild:
+  Fix implicit declaration QA notice.
 
   14 Jun 2008; Alin Năstac <mrness@gentoo.org>
   -files/gnokii-0.6.14-configure.in.patch,

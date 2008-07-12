@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r1.ebuild,v 1.1 2008/06/01 21:44:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r1.ebuild,v 1.2 2008/07/12 15:56:40 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -35,6 +35,12 @@ CONFIG_CHECK="UNIX98_PTYS"
 # Be sure all languages are prefixed with a single space!
 MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
+
+src_unpack() {
+    unpack ${A}
+
+    epatch "${FILESDIR}"/${P}-qa-fixes.patch
+}
 
 src_compile() {
 	strip-linguas ${MY_AVAILABLE_LINGUAS}
