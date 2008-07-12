@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.2 2008/04/10 17:59:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.3 2008/07/12 07:56:34 aballier Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -83,7 +83,7 @@ src_compile() {
 	use ffmpeg && has_version ">=media-video/ffmpeg-0.4.9_p20070616-r1" &&
 		myconf="${myconf} --avformat-swscale"
 
-	(use quicktime || use dv) ||  myconf="${myconf} --disable-kino"
+	(use quicktime && use dv) ||  myconf="${myconf} --disable-kino"
 
 	econf ${myconf} || die "econf failed"
 	sed -i -e s/^OPT/#OPT/ "${S}/config.mak"
