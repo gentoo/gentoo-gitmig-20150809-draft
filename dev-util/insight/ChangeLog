@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/insight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.46 2008/05/01 22:30:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.47 2008/07/12 12:21:10 tester Exp $
+
+*insight-6.8 (12 Jul 2008)
+
+  12 Jul 2008; Olivier Crête <tester@gentoo.org> +insight-6.8.ebuild:
+  Version bump, bug #226027
 
   01 May 2008; Mike Frysinger <vapier@gentoo.org> insight-6.7.1-r1.ebuild:
   Mark amd64 stable #217467.
