@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.17 2008/03/31 12:58:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.18 2008/07/12 14:37:32 markusle Exp $
+
+*axiom-200805 (12 Jul 2008)
+
+  12 Jul 2008; Markus Dittrich <markusle@gentoo.org> +axiom-200805.ebuild:
+  Version bump. Added check that CONFIG_COMPAT_BRK is set for kernels
+  >=2.6.26 since gcl compilation will fail otherwise.
 
 *axiom-200803 (30 Mar 2008)
 
