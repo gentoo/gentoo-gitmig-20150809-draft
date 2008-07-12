@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.13 2007/02/13 10:55:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.14 2008/07/12 09:14:53 aballier Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 IUSE=""
 
@@ -16,9 +16,14 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 S=${S}/src
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-libs.patch"
+}
+
 src_compile() {
-	append-ldflags -lm -lpthread
-	emake CC="$(tc-getCC)" OPTFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake CC="$(tc-getCC)" OPTFLAGS="${CFLAGS}" || die
 }
 
 src_install() {

@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.991.ebuild,v 1.1 2007/06/10 13:28:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.991.ebuild,v 1.2 2008/07/12 09:14:53 aballier Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="CLI program to play and record audiofiles."
 HOMEPAGE="http://rawrec.sourceforge.net"
@@ -15,14 +15,19 @@ IUSE=""
 
 S="${S}"/src
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-libs.patch"
+}
+
 src_compile() {
-	append-ldflags -lm -lpthread
-	emake CC="$(tc-getCC)" OPTFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed."
+	emake CC="$(tc-getCC)" OPTFLAGS="${CFLAGS}" || die "emake failed."
 }
 
 src_install() {
-	emake EXE_DIR=${D}/usr/bin \
-		MAN_DIR=${D}/usr/share/man/man1 install || die "emake install failed."
+	emake EXE_DIR="${D}/usr/bin" \
+		MAN_DIR="${D}/usr/share/man/man1" install || die "emake install failed."
 
 	einfo "Removing SUID from binary.."
 	fperms 755 /usr/bin/rawrec
