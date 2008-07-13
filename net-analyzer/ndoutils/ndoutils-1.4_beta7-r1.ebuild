@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta7-r1.ebuild,v 1.2 2008/06/29 10:07:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta7-r1.ebuild,v 1.3 2008/07/13 16:21:13 dertobi123 Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	cp -R "${S}"/db "${D}"/usr/share/nagios
 
 	chown -R root:nagios "${D}"/usr/bin || die "Failed chown of "${D}"/usr/nagios"
-	chmod 750 "${D}"/usr/bin/{file2sock,log2ndo,ndo2db-2x,ndomod-2x.o,sockdebug} || die "Failed chmod"
+	chmod 750 "${D}"/usr/bin/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} || die "Failed chmod"
 
 	dodoc README REQUIREMENTS TODO UPGRADING Changelog "docs/NDOUTILS DB Model.pdf" "docs/NDOUtils Documentation.pdf"
 
@@ -61,5 +61,5 @@ src_install() {
 pkg_postinst() {
 	elog "To include NDO in your Nagios setup you'll need to activate the NDO broker module"
 	elog "in /etc/nagios/nagios.cfg:"
-	elog "\tbroker_module=/usr/bin/ndomod-2x.o config_file=/etc/nagios/ndomod.cfg"
+	elog "\tbroker_module=/usr/bin/ndomod-3x.o config_file=/etc/nagios/ndomod.cfg"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ndoutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.6 2008/06/29 10:07:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.7 2008/07/13 16:21:13 dertobi123 Exp $
+
+  13 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  ndoutils-1.4_beta7-r1.ebuild:
+  Fix installation for nagios-3
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> ndoutils-1.4_beta7.ebuild,
   ndoutils-1.4_beta7-r1.ebuild:
