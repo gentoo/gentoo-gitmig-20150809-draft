@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-expat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ChangeLog,v 1.3 2008/03/11 19:19:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ChangeLog,v 1.4 2008/07/13 06:56:01 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> ocaml-expat-0.9.1.ebuild:
+  Marked ~ppc for bug #197363.
 
   11 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   +files/ocaml-expat-0.9.1-test.patch, ocaml-expat-0.9.1.ebuild:

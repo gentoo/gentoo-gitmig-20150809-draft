@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.8 2008/06/07 16:21:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.9 2008/07/13 06:55:09 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> ocaml-sqlite3-1.2.0.ebuild:
+  Marked ~ppc for bug #197363.
 
   07 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   -ocaml-sqlite3-1.0.2.ebuild:
