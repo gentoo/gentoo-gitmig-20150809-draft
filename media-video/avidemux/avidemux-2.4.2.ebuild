@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.2.ebuild,v 1.1 2008/07/12 21:36:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.2.ebuild,v 1.2 2008/07/13 13:43:40 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -122,4 +122,3 @@ src_install() {
 	use qt4 && make_desktop_entry avidemux2_qt4 "Avidemux Qt" \
 		avidemux_icon "AudioVideo;Qt"
 }
-
