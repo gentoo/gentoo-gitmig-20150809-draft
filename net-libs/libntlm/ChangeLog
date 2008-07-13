@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.6 2008/03/30 09:42:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.7 2008/07/13 05:52:07 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> libntlm-0.4.2.ebuild:
+  Marked ~ppc for bug #194282.
 
   30 Mar 2008; Raúl Porcel <armin76@gentoo.org> libntlm-0.4.2.ebuild:
   Add ~sparc wrt #194282
