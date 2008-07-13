@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.19 2008/06/07 02:55:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.20 2008/07/13 19:09:02 robbat2 Exp $
+
+*iasl-20080701 (13 Jul 2008)
+
+  13 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> +iasl-20080701.ebuild:
+  Version bump as the 20080514 version fails under KVM, per bug #231574.
 
   07 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> iasl-20080514.ebuild:
   Per bug #224505, we need to check FEATURES in src_install, as ASLTDIR will
