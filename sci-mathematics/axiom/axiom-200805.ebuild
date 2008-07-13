@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.1 2008/07/12 14:37:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.2 2008/07/13 10:52:18 markusle Exp $
 
-inherit eutils multilib flag-o-matic linux-info
+inherit eutils multilib flag-o-matic
 
 DESCRIPTION="Axiom is a general purpose Computer Algebra system"
 HOMEPAGE="http://axiom.axiom-developer.org/"
@@ -18,17 +18,32 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="virtual/latex-base
-	x11-libs/libXaw"
+	x11-libs/libXaw
+	sys-process/procps"
 
 S="${WORKDIR}"/${PN}
 
 pkg_setup() {
-	# for 2.6.25 kernels and higher we need to have CONFIG_COMPAT_BRK
-	# enabled, otherwise gcl fails to compile (see bug #186926).
-	get_running_version
-	if [[ "${KV_MINOR}" == "6" && "${KV_PATCH}" > "24" ]]; then
-		local CONFIG_CHECK="COMPAT_BRK"
-		check_extra_config
+	# for 2.6.25 kernels and higher we need to have 
+	# /proc/sys/kernel/randomize_va_space set to somthing other
+	# than 2, otherwise gcl fails to compile (see bug #186926).
+	local current_setting=$(/sbin/sysctl kernel.randomize_va_space 2>/dev/null | cut -d' ' -f3)
+	if [[ ${current_setting} == 2 ]]; then
+		echo
+		eerror "You kernel has brk randomization enabled. This will"
+		eerror "cause compilation to fail (see bug #186926). You can"
+		eerror "issue:"
+		eerror
+		eerror "   /sbin/sysctl -w kernel.randomize_va_space=1"
+		eerror
+		eerror "as root to turn brk randomization off temporarily."
+		eerror "Please remember to turn it back on via"
+		eerror
+		eerror "   /sbin/sysctl -w kernel.randomize_va_space=2"
+		eerror
+		eerror "once axiom is done compiling since turning brk"
+		eerror "randomization off results in a less secure kernel."
+		die "Kernel brk randomization detected"
 	fi
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.19 2008/07/12 16:04:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.20 2008/07/13 10:52:18 markusle Exp $
+
+  13 Jul 2008; Markus Dittrich <markusle@gentoo.org> axiom-200805.ebuild:
+  Switched linux-info based brk randomization check to a run-time 
+  check via sysctl (see bug #186926). Thanks much to Martin Väth
+  <vaeth@mathematik.uni-wuerzburg.de> for suggesting this.
 
 *axiom-200805 (12 Jul 2008)
 
