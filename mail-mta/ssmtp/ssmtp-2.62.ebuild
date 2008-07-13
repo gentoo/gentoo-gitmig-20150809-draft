@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62.ebuild,v 1.6 2008/07/13 15:55:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62.ebuild,v 1.7 2008/07/13 18:57:28 dertobi123 Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/"
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-strndup.patch"
+	eautoreconf
 
 	# Respect LDFLAGS (bug #152197)
 	sed -i -e 's:$(CC) -o:$(CC) @LDFLAGS@ -o:' Makefile.in
