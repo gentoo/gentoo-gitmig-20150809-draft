@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.49 2008/04/24 12:04:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.50 2008/07/13 07:53:15 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> libgpod-0.6.0.ebuild:
+  Marked ppc/ppc64 stable.
 
   24 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/libgpod-0.6.0+gcc-4.3.patch, libgpod-0.6.0.ebuild:
