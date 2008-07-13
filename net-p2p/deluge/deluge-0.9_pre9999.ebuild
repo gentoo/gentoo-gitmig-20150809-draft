@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.6_pre9999.ebuild,v 1.2 2008/06/16 11:39:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.9_pre9999.ebuild,v 1.1 2008/07/13 18:12:09 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
-ESVN_REPO_URI="http://svn.deluge-torrent.org/branches/deluge-0.6"
-ESVN_PROJECT="deluge-0.6"
+ESVN_REPO_URI="http://svn.deluge-torrent.org/trunk"
+ESVN_PROJECT="deluge"
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
