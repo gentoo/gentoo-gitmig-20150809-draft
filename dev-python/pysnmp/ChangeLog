@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.25 2008/06/27 20:25:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.26 2008/07/13 19:33:21 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> pysnmp-2.0.9.ebuild:
+  Marked ppc stable for bug #229017.
 
   27 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> +pysnmp-3.4.2.ebuild:
   Readded version 3.4.2 for pykota (thanks to Mr_Bones)
