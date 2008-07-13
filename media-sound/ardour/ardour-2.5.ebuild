@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.5.ebuild,v 1.1 2008/07/11 14:35:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.5.ebuild,v 1.2 2008/07/13 11:05:38 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic versionator
 
@@ -17,7 +17,7 @@ RDEPEND="media-libs/liblo
 	media-libs/aubio
 	>=media-libs/liblrdf-0.4.0
 	>=media-libs/raptor-1.4.2
-	>=media-sound/jack-audio-connection-kit-0.101.1
+	>=media-sound/jack-audio-connection-kit-0.109.2
 	>=dev-libs/glib-2.10.3
 	x11-libs/pango
 	>=x11-libs/gtk+-2.8.8
