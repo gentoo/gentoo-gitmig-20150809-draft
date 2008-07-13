@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.12 2008/06/29 18:21:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.13 2008/07/13 07:22:21 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org>
+  gst-plugins-neon-0.10.7.ebuild:
+  Marked ~ppc for bug #208732.
 
 *gst-plugins-neon-0.10.7 (29 Jun 2008)
 
