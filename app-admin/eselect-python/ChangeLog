@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.10 2008/07/04 04:54:48 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.11 2008/07/13 20:01:02 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org>
+  eselect-python-20080620.ebuild:
+  Marked ~ppc for bug #228611.
 
   04 Jul 2008; <ricmm@gentoo.org> eselect-python-20080620.ebuild:
   Add ~mips, bug #228611
