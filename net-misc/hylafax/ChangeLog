@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.80 2008/07/08 02:12:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.81 2008/07/13 23:05:21 nerdboy Exp $
+
+*hylafax-4.4.4 (13 Jul 2008)
+
+  13 Jul 2008; Steve Arnold <nerdboy@gentoo.org> +hylafax-4.4.4.ebuild:
+  updated to latest 4.4x release (closes bug 231221)
 
 *hylafax-4.3.7 (08 Jul 2008)
 
