@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.35 2008/06/28 14:16:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.36 2008/07/13 14:30:56 mrness Exp $
+
+  13 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  -files/privoxy-3.0.6-implicit-decl.patch, -privoxy-3.0.6.ebuild:
+  Remove obsolete version.
 
   28 Jun 2008; Raúl Porcel <armin76@gentoo.org> privoxy-3.0.8.ebuild:
   alpha stable wrt #228745
