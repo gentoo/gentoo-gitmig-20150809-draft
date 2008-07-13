@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r5.ebuild,v 1.1 2008/06/21 21:24:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r5.ebuild,v 1.2 2008/07/13 16:37:51 loki_val Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -17,7 +17,7 @@ IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame aac id3 player 
 RDEPEND=" media-libs/libsdl
 	player? (
 		>=x11-libs/gtk+-2
-		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 		mpeg2? ( media-libs/libmpeg2 )
 		id3? ( media-libs/libid3tag )
 		a52? ( media-libs/a52dec )
@@ -27,7 +27,7 @@ RDEPEND=" media-libs/libsdl
 		>=x11-libs/gtk+-2
 		lame? ( >=media-sound/lame-3.92 )
 		aac? ( >=media-libs/faac-1.24-r1 )
-		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 		x264? ( media-libs/x264 )
 	)
 	nas? ( media-libs/nas x11-libs/libXt )
