@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.28 2008/07/08 16:28:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.29 2008/07/13 18:15:06 bicatali Exp $
+
+  13 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> root-5.16.00.ebuild:
+  Added libXft dep in 5.16.00 stable version, closing bug #204725
 
 *root-5.20.00 (08 Jul 2008)
 

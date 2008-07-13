@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.11 2008/05/21 19:02:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.12 2008/07/13 18:15:06 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -20,6 +20,7 @@ IUSE="afs cern doc fftw kerberos ldap mysql odbc postgres
 
 DEPEND="sys-apps/shadow
 	x11-libs/libXpm
+	x11-libs/libXft
 	>=sci-libs/gsl-1.8
 	dev-libs/libpcre
 	virtual/opengl
@@ -37,8 +38,7 @@ DEPEND="sys-apps/shadow
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
 	cern? ( sci-physics/cernlib )
-	odbc? ( dev-db/unixODBC )
-	truetype? ( x11-libs/libXft )"
+	odbc? ( dev-db/unixODBC )"
 
 S="${WORKDIR}/${PN}"
 
