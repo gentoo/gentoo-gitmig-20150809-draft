@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r1.ebuild,v 1.2 2008/07/08 14:31:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r1.ebuild,v 1.3 2008/07/13 18:13:16 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 

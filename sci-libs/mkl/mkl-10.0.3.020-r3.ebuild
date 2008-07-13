@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r2.ebuild,v 1.3 2008/07/13 18:13:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r3.ebuild,v 1.1 2008/07/13 18:13:16 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -11,11 +11,6 @@ HOMEPAGE="http://developer.intel.com/software/products/mkl/"
 
 KEYWORDS="~amd64 ~ia64 ~x86"
 SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PN}_p_${PV}.tgz"
-
-#slotting not yet supported (need eselect-mkl)
-#MAJOR=$(get_major_version ${PV})
-#MINOR=$(get_version_component_range 2 ${PV})
-#SLOT="${MAJOR}.${MINOR}"
 
 SLOT="0"
 LICENSE="Intel-SDP"
@@ -229,7 +224,6 @@ mkl_make_generic_profile() {
 mkl_add_profile() {
 	cd "${S}"
 	local prof=${1}
-	insinto ${MKL_LIBDIR}
 	for x in blas cblas lapack; do
 		cat > ${x}-${prof}.pc <<-EOF
 			prefix=${MKL_DIR}
@@ -239,13 +233,26 @@ mkl_add_profile() {
 			Description: Intel(R) Math Kernel Library implementation of ${x}
 			Version: ${PV}
 			URL: ${HOMEPAGE}
-			Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core ${4} -lpthread
-			Cflags: -I\${includedir}
 		EOF
+	done
+	cat >> blas-${prof}.pc <<-EOF
+		Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core ${4} -lpthread
+	EOF
+	cat >> cblas-${prof}.pc <<-EOF
+		Requires: blas
+		Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core ${4} -lpthread
+		Cflags: -I\${includedir}
+	EOF
+	cat >> lapack-${prof}.pc <<-EOF
+		Requires: blas
+		Libs: -Wl,--no-as-needed -L\${libdir} ${2} ${3} -lmkl_core -lmkl_lapack ${4} -lpthread
+	EOF
+	insinto ${MKL_LIBDIR}
+	for x in blas cblas lapack; do
+		doins ${x}-${prof}.pc
 		cp eselect.${x} eselect.${x}.${prof}
 		echo "${MKL_LIBDIR}/${x}-${prof}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc" \
 			>> eselect.${x}.${prof}
-		doins ${x}-${prof}.pc
 		eselect ${x} add $(get_libdir) eselect.${x}.${prof} ${prof}
 	done
 }
@@ -256,18 +263,19 @@ mkl_make_profiles() {
 	built_with_use sys-devel/gcc fortran && clib="${clib} gf"
 	local slib="-lmkl_sequential"
 	local rlib="-liomp5"
+	local pbase=${PN}
 	for c in ${clib}; do
 		local ilib="-lmkl_${c}_lp64"
 		use x86 && ilib="-lmkl_${c}"
 		local tlib="-lmkl_${c/gf/gnu}_thread"
 		local comp="${c/gf/gfortran}"
 		comp="${comp/intel/ifort}"
-		mkl_add_profile mkl-${comp} ${ilib} ${slib}
-		mkl_add_profile mkl-${comp}-threads ${ilib} ${tlib} ${rlib}
+		mkl_add_profile ${pbase}-${comp} ${ilib} ${slib}
+		mkl_add_profile ${pbase}-${comp}-threads ${ilib} ${tlib} ${rlib}
 		if use int64; then
 			ilib="-lmkl_${c}_ilp64"
-			mkl_add_profile mkl-${comp}-int64 ${ilib} ${slib}
-			mkl_add_profile mkl-${comp}-threads-int64 ${ilib} ${tlib} ${rlib}
+			mkl_add_profile ${pbase}-${comp}-int64 ${ilib} ${slib}
+			mkl_add_profile ${pbase}-${comp}-threads-int64 ${ilib} ${tlib} ${rlib}
 		fi
 	done
 }
@@ -306,28 +314,31 @@ src_install() {
 
 pkg_postinst() {
 	# if blas profile is mkl, set lapack and cblas profiles as mkl
-	local blas_lib=$(eselect blas show | cut -d' ' -f2)
+	local blas_prof=$(eselect blas show | cut -d' ' -f2)
 	local def_prof="mkl-gfortran-threads"
 	has_version 'dev-lang/ifc' && def_prof="mkl-ifort-threads"
 	use int64 && def_prof="${def_prof}-int64"
 	for x in blas cblas lapack; do
-		local current_lib=$(eselect ${x} show | cut -d' ' -f2)
-		if [[ -z ${current_lib} || \
-			${current_lib} == mkl* || \
-			${blas_lib} == mkl* ]]; then
+		local cur_prof=$(eselect ${x} show | cut -d' ' -f2)
+		if [[ -z ${cur_prof} ||	${cur_prof} == ${def_prof} ]]; then
 			# work around eselect bug #189942
 			local configfile="${ROOT}"/etc/env.d/${x}/$(get_libdir)/config
 			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${x} set ${def_prof}
 			elog "${x} has been eselected to ${def_prof}"
-			if [[ ${current_lib} != ${blas_lib} ]]; then
-				eselect blas set ${def_prof}
-				elog "${x} is now set to ${def_prof} for consistency"
-			fi
 		else
 			elog "Current eselected ${x} is ${current_lib}"
 			elog "To use one of mkl profiles, issue (as root):"
 			elog "\t eselect ${x} set <profile>"
 		fi
+		if [[ ${blas_prof} == mkl* && ${cur_prof} != ${blas_prof} ]]; then
+			eselect blas set ${def_prof}
+			elog "${x} is now set to ${def_prof} for consistency"
+		fi
 	done
+	if [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]]; then
+		elog "Multi-threading OpenMP for GNU compilers only available"
+		elog "with gcc >= 4.2. Make sure you have a compatible version"
+		elog "and select it with gcc-config before selecting gnu profiles"
+	fi
 }
