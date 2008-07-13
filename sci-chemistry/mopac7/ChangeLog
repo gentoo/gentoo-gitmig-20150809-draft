@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.15 2008/07/08 06:43:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.16 2008/07/13 20:59:11 je_fro Exp $
+
+*mopac7-1.13-r1 (13 Jul 2008)
+
+  13 Jul 2008; Jeff Gardner <je_fro@gentoo.org> +mopac7-1.13-r1.ebuild:
+  Fix to use gfortran
 
 *mopac7-1.13 (08 Jul 2008)
 
