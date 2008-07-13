@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.11 2008/07/07 10:05:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.12 2008/07/13 19:35:18 josejx Exp $
+
+  13 Jul 2008; Joseph Jezak <josejx@gentoo.org> filezilla-3.0.4.ebuild,
+  filezilla-3.0.11.1.ebuild:
+  Marked ~ppc for bug #229001.
 
 *filezilla-3.0.11.1 (07 Jul 2008)
 
