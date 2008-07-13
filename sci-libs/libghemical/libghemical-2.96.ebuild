@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.96.ebuild,v 1.1 2008/07/08 07:09:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.96.ebuild,v 1.2 2008/07/13 21:04:08 je_fro Exp $
 
 inherit autotools
 
@@ -15,7 +15,7 @@ IUSE="mopac7 mpqc"
 
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.15"
-RDEPEND="mopac7? ( >=sci-chemistry/mopac7-1.13 )
+RDEPEND="mopac7? ( >=sci-chemistry/mopac7-1.13-r1 )
 		mpqc? ( >=sci-chemistry/mpqc-2.3.1-r1
 			virtual/blas
 			virtual/lapack )"
