@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.18 2008/07/08 19:07:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.19 2008/07/14 10:42:27 sbriesen Exp $
+
+  14 Jul 2008; Stefan Briesenick <sbriesen@gentoo.org> files/ziproxy.initd:
+  finally fixed init-sript for OpenRC.
 
 *ziproxy-2.5.2 (08 Jul 2008)
 
