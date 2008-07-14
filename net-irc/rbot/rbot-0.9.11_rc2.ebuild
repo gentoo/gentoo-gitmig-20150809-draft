@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.11_rc2.ebuild,v 1.1 2008/07/14 10:29:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.11_rc2.ebuild,v 1.2 2008/07/14 20:47:04 flameeyes Exp $
 
 inherit ruby eutils
 
@@ -39,7 +39,11 @@ RDEPEND=">=virtual/ruby-1.8
 	fortune? ( games-misc/fortune-mod )
 	cal? ( || ( sys-apps/util-linux sys-freebsd/freebsd-ubin ) )
 	host? ( net-dns/bind-tools )"
-DEPEND="nls? ( dev-ruby/ruby-gettext )"
+DEPEND="
+	nls? (
+		dev-ruby/ruby-gettext
+		dev-ruby/rake
+	)"
 
 if [[ ${PV} == *"9999" ]]; then
 	SRC_URI=""

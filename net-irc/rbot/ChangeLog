@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.37 2008/07/14 10:29:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.38 2008/07/14 20:47:04 flameeyes Exp $
+
+  14 Jul 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -rbot-0.9.11_rc1.ebuild, rbot-0.9.11_rc2.ebuild, rbot-9999-r10.ebuild:
+  Add missing dependency over rake when nls USE flag is enabled. Thanks to
+  Chris Henhawke (bunder) for reporting. Remove rc1 ebuild.
 
 *rbot-0.9.11_rc2 (14 Jul 2008)
 
