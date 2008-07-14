@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12_rc4.ebuild,v 1.1 2008/07/14 05:07:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12_rc4.ebuild,v 1.2 2008/07/14 18:34:30 jer Exp $
+
+EAPI="1"
 
 inherit eutils qt4 multilib
 
@@ -16,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 RESTRICT="test"
 
-COMMON_DEPEND="$(qt4_min_version 4.2.3)
+COMMON_DEPEND="|| ( >=x11-libs/qt-4.3:4 x11-libs/qt-gui:4 )
 	=app-crypt/qca-2*
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
@@ -30,8 +32,22 @@ RDEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-QT4_BUILT_WITH_USE_CHECK="qt3support png"
-QT4_OPTIONAL_BUILT_WITH_USE_CHECK="dbus"
+pkg_setup() {
+	if has_version "=x11-libs/qt-4.3*"; then
+		QT4_BUILT_WITH_USE_CHECK="qt3support png"
+		QT4_OPTIONAL_BUILT_WITH_USE_CHECK="dbus"
+	else
+		if ! built_with_use "x11-libs/qt-gui:4" qt3support; then
+			eerror "You have to build x11-libs/qt-gui:4 with qt3support."
+			die "qt3support in qt-gui disabled"
+		fi
+		if ( use dbus && ! built_with_use "x11-libs/qt-gui:4" dbus ); then
+			eerror "You have to build x11-libs/qt-gui:4 with dbus"
+			die "dbus in qt-gui disabled"
+		fi
+	fi
+	qt4_pkg_setup
+}
 
 src_compile() {
 	# disable growl as it is a MacOS X extension only
