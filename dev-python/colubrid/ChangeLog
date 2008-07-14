@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/colubrid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.2 2008/03/18 13:17:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.3 2008/07/14 03:32:08 antarus Exp $
+
+  13 Jul 2008; Alec Warner <antarus@gentoo.org> -colubrid-0.10.ebuild,
+  colubrid-0.10-r1.ebuild:
+  add dep on setuptools per bug 227701.
+  remove old ebuilds.
 
 *colubrid-0.10-r1 (18 Mar 2008)
 
