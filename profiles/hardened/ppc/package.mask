@@ -1,6 +1,10 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.9 2008/06/10 00:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.10 2008/07/14 17:29:05 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (14 Jul 2008)
+# Needs glibc-2.7
+>=sys-apps/iproute2-2.6.25.20080417
 
 # Wulf C. Krueger <philantrop@gentoo.org> (22 Sep 2007)
 # Needs OOo.
