@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.28.ebuild,v 1.1 2007/05/18 14:39:09 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.28.ebuild,v 1.2 2008/07/14 23:32:11 ken69267 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${DEBIAN_BASE_URI}/${PN}_${PV}.orig.tar.gz
 		 ${DEBIAN_BASE_URI}/${PN}_${PV}-${DEBIAN_PV}.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND=">=sys-fs/sysfsutils-2
 		sys-apps/hal
@@ -40,6 +40,6 @@ src_compile(){
 src_install() {
 	emake install DESTDIR="${D}" || die
 	[[ "$(get_libdir)" != "lib" ]] && mv "${D}"/usr/lib "${D}/usr/$(get_libdir)"
-	dodoc VERSION README COPYING
+	dodoc VERSION README
 	doman doc/hwinfo.8
 }
