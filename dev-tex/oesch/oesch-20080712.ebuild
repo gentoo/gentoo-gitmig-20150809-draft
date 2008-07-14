@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/oesch/oesch-20080712.ebuild,v 1.2 2008/07/14 17:03:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/oesch/oesch-20080712.ebuild,v 1.3 2008/07/14 17:04:14 aballier Exp $
 
 inherit latex-package
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND="!<dev-texlive/texlive-fontsextra-2007-r1"
