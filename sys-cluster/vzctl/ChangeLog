@@ -1,6 +1,20 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.54 2008/03/14 20:13:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.55 2008/07/14 06:12:16 pva Exp $
+
+*vzctl-3.0.22-r1 (14 Jul 2008)
+
+  14 Jul 2008; Peter Volkov <pva@gentoo.org>
+  +files/vzctl-3.0.22-capability-fix.patch,
+  +files/vzctl-3.0.22-document-disable-modules.patch,
+  +files/vzctl-3.0.22-glibc28.patch,
+  +files/vzctl-3.0.22-workaround-gentoo-add_ip.patch,
+  +vzctl-3.0.22-r1.ebuild:
+  Fix inability to start container when built against
+  >=linux-headers-2.6.25, bug #221971, thank Romain Riviere for report; Fix
+  build glibc-2.8 problem, bug #228189, thank Evil Compile Person for report
+  and Bandan for patch; Added notice in configuration file on how to disable
+  modules loading, bug #213798, thank Victor Roman Archidona for report.
 
   14 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   fix metadata
