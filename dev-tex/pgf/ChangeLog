@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.45 2008/07/14 12:36:41 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.46 2008/07/14 20:07:38 nixnut Exp $
+
+  14 Jul 2008; nixnut <nixnut@gentoo.org> pgf-2.00.ebuild:
+  Stable on ppc wrt bug 231521
 
   14 Jul 2008; Ferris McCormick <fmccor@gentoo.org> pgf-2.00.ebuild:
   Sparc stable, Bug #231521.
