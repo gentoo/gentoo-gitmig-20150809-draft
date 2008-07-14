@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.7.ebuild,v 1.1 2008/05/31 12:55:51 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.7.ebuild,v 1.2 2008/07/14 19:06:25 armin76 Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi kdeenablefinal"
 
 DEPEND="dev-libs/gmp
