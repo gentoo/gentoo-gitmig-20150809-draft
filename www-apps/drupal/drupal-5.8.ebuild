@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.2.ebuild,v 1.1 2008/04/25 11:30:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.8.ebuild,v 1.1 2008/07/14 11:33:12 pva Exp $
 
 inherit webapp eutils depend.php
 
@@ -21,9 +21,9 @@ pkg_setup() {
 	webapp_pkg_setup
 	has_php
 	if [[ ${PHP_VERSION} == "4" ]] ; then
-		require_php_with_use expat
+		require_php_with_use expat gd
 	else
-		require_php_with_use xml
+		require_php_with_use xml gd
 	fi
 }
 
@@ -40,9 +40,9 @@ src_install() {
 	dodir "${MY_HTDOCSDIR}"/files
 	webapp_serverowned "${MY_HTDOCSDIR}"/files
 	webapp_serverowned "${MY_HTDOCSDIR}"/sites/default
-	webapp_serverowned "${MY_HTDOCSDIR}"/sites/default/default.settings.php
+	webapp_serverowned "${MY_HTDOCSDIR}"/sites/default/settings.php
 
-	webapp_configfile "${MY_HTDOCSDIR}"/sites/default/default.settings.php
+	webapp_configfile "${MY_HTDOCSDIR}"/sites/default/settings.php
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt

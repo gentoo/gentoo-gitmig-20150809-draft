@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.46 2008/04/27 06:32:23 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.47 2008/07/14 11:33:12 pva Exp $
+
+*drupal-6.3 (14 Jul 2008)
+*drupal-5.8 (14 Jul 2008)
+
+  14 Jul 2008; Peter Volkov <pva@gentoo.org> -drupal-5.6.ebuild,
+  -drupal-5.7.ebuild, +drupal-5.8.ebuild, -drupal-6.0.ebuild,
+  -drupal-6.1.ebuild, -drupal-6.2.ebuild, +drupal-6.3.ebuild:
+  Version bump, bug #231748, thank John Klehm for report. Fixes security bug
+  #231372, thank Hanno Boeck and our security team for report. Removed
+  vulnerable versions.
 
 *drupal-5.7 (27 Apr 2008)
 
