@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/lithium-006.ebuild,v 1.2 2007/11/20 14:53:57 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/lithium-006.ebuild,v 1.3 2008/07/14 15:51:31 lack Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox
 
 MY_PN="Lithium"
 DESCRIPTION="Lithium - A battery-status applet for ROX."
-HOMEPAGE="http://www.hayber.us/rox/Lithium"
-SRC_URI="http://www.hayber.us/rox/applets/${MY_PN}-${PV}.tgz"
+HOMEPAGE="http://rox-lithium.googlecode.com"
+SRC_URI="http://rox-lithium.googlecode.com/files/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
