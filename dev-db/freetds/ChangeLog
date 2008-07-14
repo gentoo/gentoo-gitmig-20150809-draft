@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.43 2008/03/31 05:33:43 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.44 2008/07/14 14:27:15 hoffie Exp $
+
+*freetds-0.82 (14 Jul 2008)
+
+  14 Jul 2008; Christian Hoffmann <hoffie@gentoo.org> +freetds-0.82.ebuild:
+  version bump as suggested and tested by Matthias Sch. <matthias@dsx.at> in
+  bug 223891; also did some stylistic and build-related (make -> emake,
+  use_with usage) changes myself
 
   31 Mar 2008; <ricmm@gentoo.org> freetds-0.62.3.ebuild:
   Drop to ~mips due to unstable deps
