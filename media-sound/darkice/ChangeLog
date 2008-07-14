@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.48 2008/07/07 16:40:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.49 2008/07/14 10:30:06 yngwin Exp $
+
+  14 Jul 2008; Ben de Groot <yngwin@gentoo.org> Manifest:
+  Forcing Manifest update to fix bug 231094
 
 *darkice-0.19 (07 Jul 2008)
 
