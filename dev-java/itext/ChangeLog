@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.78 2008/06/26 09:51:19 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.79 2008/07/14 20:07:17 wltjr Exp $
+
+*itext-2.1.3 (14 Jul 2008)
+
+  14 Jul 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -itext-2.0.7.ebuild, -itext-2.1.0.ebuild, -itext-2.1.1.ebuild,
+  -itext-2.1.2.ebuild, +itext-2.1.3.ebuild:
+  Removed older versions, bumped to lastest release, no progress on bug
+  #221011
 
   26 Jun 2008; Alistair Bush <ali_bush@gentoo.org> itext-2.1.2-r1.ebuild:
   Fix build failure. see #229201
