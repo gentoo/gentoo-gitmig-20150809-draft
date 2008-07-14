@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r3.ebuild,v 1.2 2008/07/14 23:04:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r4.ebuild,v 1.1 2008/07/14 23:04:18 sbriesen Exp $
 
 inherit eutils linux-mod
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-kernel-2.6.18.diff"
+	epatch "${FILESDIR}/${P}-kernel-2.6.26.diff"
 	convert_to_m "linux/Makefile.in"
 }
 
