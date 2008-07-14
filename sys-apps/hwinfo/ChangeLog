@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwinfo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.6 2007/05/18 14:39:09 drizzt Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.7 2008/07/14 00:30:54 robbat2 Exp $
+
+*hwinfo-14.19 (14 Jul 2008)
+
+  14 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> +hwinfo-14.19.ebuild:
+  Version bump per bug #231668.
 
 *hwinfo-13.28 (18 May 2007)
 
