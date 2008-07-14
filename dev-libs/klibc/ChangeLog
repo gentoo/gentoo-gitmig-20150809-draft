@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.59 2008/06/26 18:23:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.60 2008/07/14 20:53:08 robbat2 Exp $
+
+*klibc-1.5.12 (14 Jul 2008)
+
+  14 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> +klibc-1.5.12.ebuild:
+  Version bump.
 
   26 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
   -files/klibc-1.2.1-nostdinc-flags.patch, -files/klibc-1.2.4-kbuild.patch,
