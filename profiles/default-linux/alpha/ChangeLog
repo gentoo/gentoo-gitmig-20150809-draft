@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.103 2008/07/07 15:28:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.104 2008/07/14 17:19:14 armin76 Exp $
+
+  14 Jul 2008; Raúl Porcel <armin76@gentoo.org> 2006.1/package.mask:
+  P.mask iproute2 on 2006.1 profile, since it needs glibc-2.7
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Reuse.mask hddtemp as its not stable yet, to remove in 30 days
