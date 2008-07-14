@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.4 2008/07/07 07:38:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.5 2008/07/14 19:56:13 dberkholz Exp $
+
+*iotop-0.2.1 (09 Jul 2008)
+
+  09 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; +iotop-0.2.1.ebuild:
+  UTF-8 fixes.
 
   07 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; iotop-0.2.ebuild:
   (#229985, gregkh) Warn about kernel config instead of dying.
