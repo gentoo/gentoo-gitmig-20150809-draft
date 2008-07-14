@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.49 2008/07/08 17:59:28 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.50 2008/07/14 21:33:22 coldwind Exp $
+
+  14 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -files/pygame-1.7.1-python2.5.patch, -pygame-1.7.1-r1.ebuild:
+  Punting 1.7.1-r1 wrt bug #231250.
 
   08 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
   pygame-1.7.1-r1.ebuild:
