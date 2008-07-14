@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-py26/ssl-py26-1.13.ebuild,v 1.1 2008/05/05 17:19:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-py26/ssl-py26-1.13.ebuild,v 1.2 2008/07/14 16:25:35 chtekk Exp $
 
 NEED_PYTHON=2.3
+PYTHON_MODNAME="ssl"
 
 inherit distutils
 
