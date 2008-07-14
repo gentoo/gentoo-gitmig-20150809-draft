@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.5 2008/05/07 02:29:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.6 2008/07/14 16:28:13 wltjr Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -62,6 +62,8 @@ src_compile() {
 	if ! use gnome && ! use xfce; then
 		sed -i -e 's:--makefile-install-rule $(schemas_DATA)::' \
 			"${S}/src/places/Makefile"
+		sed -i -e 's:--makefile-install-rule $(schemas_DATA)::' \
+			"${S}/src/shiny-switcher/Makefile"
 	fi
 
 	emake || die "emake failed"
