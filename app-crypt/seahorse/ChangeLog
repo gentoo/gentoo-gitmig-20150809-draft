@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.103 2008/07/02 20:40:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.104 2008/07/14 18:50:07 aballier Exp $
+
+  14 Jul 2008; Alexis Ballier <aballier@gentoo.org> seahorse-2.22.3.ebuild:
+  keyword ~x86-fbsd
 
 *seahorse-2.22.3 (02 Jul 2008)
 
