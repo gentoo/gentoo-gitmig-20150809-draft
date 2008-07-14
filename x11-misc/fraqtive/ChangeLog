@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fraqtive
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.2 2007/01/20 14:54:34 drizzt Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.3 2008/07/14 19:12:04 drizzt Exp $
+
+*fraqtive-0.4.3 (14 Jul 2008)
+
+  14 Jul 2008; Timothy Redaelli <drizzt@gentoo.org> +fraqtive-0.4.3.ebuild:
+  Version Bump wrt bug #231536
 
   20 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> fraqtive-0.3.1.ebuild:
   It needs =x11-libs/qt-3* with USE opengl, thanks to Pablo Trabajos wrt bug
