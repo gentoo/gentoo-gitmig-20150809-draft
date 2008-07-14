@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.8.3.ebuild,v 1.7 2008/02/09 12:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.8.3.ebuild,v 1.8 2008/07/14 00:07:42 dirtyepic Exp $
 
 inherit eutils
 
@@ -24,6 +24,9 @@ src_unpack() {
 	cd "${S}/dtd"
 	sed -i -e 's/$(DESTDIR)$(docdir)/$(DESTDIR)$(LIBOFX_DTD_DIR)/g' \
 		Makefile.in
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
