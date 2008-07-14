@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-bdb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.23 2007/11/19 20:23:23 graaff Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.24 2008/07/14 10:36:26 flameeyes Exp $
+
+*ruby-bdb-0.6.5 (14 Jul 2008)
+
+  14 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> +ruby-bdb-0.6.5.ebuild:
+  Version bump to 0.6.5.
 
 *ruby-bdb-0.6.2 (19 Nov 2007)
 
