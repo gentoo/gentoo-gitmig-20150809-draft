@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.26 2008/07/14 01:33:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.27 2008/07/14 16:55:56 mr_bones_ Exp $
+
+  14 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org> +ots-0.4.2.ebuild:
+  resurrect ots-0.4.2.ebuild which is still used by
+  app-office/abiword-plugins-2.4.6
 
   14 Jul 2008; Marcelo Goes <vanquirius@gentoo.org> -ots-0.4.2.ebuild:
   Remove old ebuild.
