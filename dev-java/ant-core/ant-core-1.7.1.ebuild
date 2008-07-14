@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1.ebuild,v 1.1 2008/07/14 21:41:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1.ebuild,v 1.2 2008/07/14 22:16:49 caster Exp $
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -93,4 +93,7 @@ pkg_postinst() {
 	elog "The way of packaging ant in Gentoo has changed significantly since"
 	elog "the 1.7.0 version, For more information, please see:"
 	elog "http://www.gentoo.org/proj/en/java/ant-guide.xml"
+	elog
+	elog "Since 1.7.1, the ant-tasks meta-ebuild has been removed and its USE"
+	elog "flags have been moved to dev-java/ant."
 }

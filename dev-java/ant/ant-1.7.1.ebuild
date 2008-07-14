@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.7.1.ebuild,v 1.1 2008/07/14 22:11:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.7.1.ebuild,v 1.2 2008/07/14 22:18:28 caster Exp $
 
 EAPI="1"
 
@@ -48,6 +48,9 @@ S="${WORKDIR}"
 src_compile() { :; }
 
 pkg_postinst() {
+	elog "Since 1.7.1, the ant-tasks meta-ebuild has been removed and its USE"
+	elog "flags have been moved to dev-java/ant."
+	elog
 	elog "You may now freely set the USE flags of this package without breaking"
 	elog "building of Java packages, which depend on the exact ant tasks they need."
 	elog "The USE flags default to enabled (except X, jai and jmf) for convenience."
