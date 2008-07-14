@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3-r4.ebuild,v 1.2 2008/01/14 02:59:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3-r4.ebuild,v 1.3 2008/07/14 03:49:21 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,10 +25,10 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -lssl
 	econf \
 		--sysconfdir=/etc/vmpsd \
 		--enable-snmp \
+		LIBS="-lssl" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
