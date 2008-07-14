@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.3 2008/07/14 16:21:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.4 2008/07/14 16:41:14 armin76 Exp $
+
+  14 Jul 2008; Raúl Porcel <armin76@gentoo.org> eselect-xvmc-0.1.ebuild:
+  alpha/ia64/x86 stable wrt #231779
 
   14 Jul 2008; Ferris McCormick <fmccor@gentoo.org> eselect-xvmc-0.1.ebuild:
   Sparc stable, Bug #231779.
