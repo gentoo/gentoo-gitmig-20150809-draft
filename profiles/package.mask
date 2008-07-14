@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8819 2008/07/14 18:38:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8820 2008/07/14 18:44:52 hoffie Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Hoffmann <hoffie@gentoo.org> (14 Jul 2008)
+# Masked as its header changes break compatibility (at least w/ php and most
+# likely other packages as well)
+=dev-db/freetds-0.82*
 
 # Jeroen Roovers <jer@gentoo.org> (14 Jul 2008)
 # Masked for testing 
