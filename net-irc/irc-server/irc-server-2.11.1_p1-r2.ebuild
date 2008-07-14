@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.11.1_p1-r1.ebuild,v 1.2 2007/02/22 12:21:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.11.1_p1-r2.ebuild,v 1.1 2008/07/14 14:41:53 armin76 Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -37,8 +37,6 @@ src_unpack() {
 }
 
 src_compile () {
-	append-ldflags -lm
-
 	sed -i \
 		-e "s/^#undef\tOPER_KILL$/#define\tOPER_KILL/" \
 		-e "s/^#undef\tOPER_RESTART$/#define\tOPER_RESTART/" \
@@ -51,11 +49,13 @@ src_compile () {
 		-e "s/^#undef USE_SERVICES$/#define\tUSE_SERVICES/" \
 		"${S}"/support/config.h.dist
 
-	use zlib && sed -i -e "s/^#undef\tZIP_LINKS$/#define\tZIP_LINKS/" ${S}/support/config.h.dist
+	use zlib && sed -i -e "s/^#undef\tZIP_LINKS$/#define\tZIP_LINKS/" "${S}"/support/config.h.dist
 
 	econf \
 		--sysconfdir=/etc/ircd \
 		--localstatedir=/var/run/ircd \
+		--with-logdir=/var/log/ircd \
+		--with-rundir=/var/run/ircd \
 		--mandir='${prefix}/share/man' \
 		$(use_with zlib) \
 		$(use_enable ipv6 ip6) \
@@ -72,16 +72,17 @@ src_install() {
 		prefix=${D}/usr \
 		ircd_conf_dir=${D}/etc/ircd \
 		ircd_var_dir=${D}/var/run/ircd \
-		ircd_log_dir=${D}/var/log \
+		ircd_log_dir=${D}/var/log/ircd \
 		install-server \
 		install-tkserv \
 		|| die "make install failed"
 
 	fowners ircd:ircd /var/run/ircd
+	fowners ircd:ircd /var/log/ircd
 
 	cd ../doc
 	dodoc \
-		*-New alt-irc-faq Authors BUGS ChangeLog Etiquette example.conf \
+		*-New alt-irc-faq Authors BUGS ChangeLog Etiquette \
 		iauth-internals.txt INSTALL.appendix INSTALL.* LICENSE \
 		m4macros README RELEASE* rfc* SERVICE*
 
@@ -98,4 +99,5 @@ src_install() {
 	dodoc Nets/Europe/*
 
 	newinitd "${FILESDIR}"/ircd.rc ircd
+	newconfd "${FILESDIR}"/ircd.confd ircd
 }
