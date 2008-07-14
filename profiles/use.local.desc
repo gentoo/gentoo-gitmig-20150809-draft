@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3626 2008/07/14 06:56:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3627 2008/07/14 22:10:58 caster Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -414,6 +414,20 @@ dev-games/ogre:cg - NVIDIA toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
 dev-games/ogre:double-precision - more precise calculations at the expense of speed
 dev-haskell/gtk2hs:glade - Enable libglade bindings compilation
+dev-java/ant:antlr - Enable ANTLR Ant tasks
+dev-java/ant:bcel - Enable bcel (bytecode manipulation) Ant tasks
+dev-java/ant:bsf - Enable BSF (Bean Scripting Framework) Ant tasks
+dev-java/ant:commonslogging - Enable commons-logging Ant tasks
+dev-java/ant:commonsnet - Enable commons-net Ant tasks
+dev-java/ant:jai - Enable JAI (Java Imaging) Ant task
+dev-java/ant:javamail - Enable JavaMail Ant task
+dev-java/ant:jdepend - Enable Jdepend Ant tasks
+dev-java/ant:jmf - Enable JMF (Java Media Framework) Ant tasks
+dev-java/ant:jsch - Disable Jsch (ssh, scp and related) Ant tasks
+dev-java/ant:log4j - Enable Apache log4j Ant tasks
+dev-java/ant:oro - Enable Apache Oro Ant tasks
+dev-java/ant:regexp - Enable Apache Regexp Ant tasks
+dev-java/ant:resolver - Enable Apache Resolver Ant tasks
 dev-java/ant-tasks:antlr - Enable ANTLR Ant tasks
 dev-java/ant-tasks:bcel - Enable bcel (bytecode manipulation) Ant tasks
 dev-java/ant-tasks:bsf - Enable BSF (Bean Scripting Framework) Ant tasks
