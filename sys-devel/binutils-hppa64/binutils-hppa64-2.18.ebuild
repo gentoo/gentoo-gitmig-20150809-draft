@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.18.ebuild,v 1.1 2008/06/18 09:42:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.18.ebuild,v 1.2 2008/07/14 17:54:30 gmsoft Exp $
 
 export CTARGET=hppa64-${CHOST#*-}
 
@@ -10,7 +10,7 @@ inherit toolchain-binutils
 
 DESCRIPTION="binutils package for building 64bit kernels on HPPA"
 
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 
 src_install() {
 	toolchain-binutils_src_install

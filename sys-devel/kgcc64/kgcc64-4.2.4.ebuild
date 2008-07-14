@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.2.4.ebuild,v 1.2 2008/06/19 02:38:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.2.4.ebuild,v 1.3 2008/07/14 17:57:50 gmsoft Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -22,7 +22,7 @@ inherit toolchain eutils
 
 DESCRIPTION="64bit kernel compiler"
 
-KEYWORDS="-* ~hppa ~mips ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="-* hppa ~mips ~ppc ~s390 ~sparc ~x86"
 
 # unlike every other target, hppa has not unified the 32/64 bit
 # ports in binutils yet
