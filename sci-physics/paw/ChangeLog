@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.6 2008/07/10 18:29:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.7 2008/07/14 19:41:42 jer Exp $
+
+  14 Jul 2008; Jeroen Roovers <jer@gentoo.org> paw-2.14.04-r2.ebuild:
+  Marked ~hppa (bug #230716).
 
   10 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -paw-2.14.04-r1.ebuild, paw-2.14.04-r2.ebuild:
