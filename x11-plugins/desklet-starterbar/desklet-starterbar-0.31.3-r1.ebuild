@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.31.3-r1.ebuild,v 1.7 2007/07/11 20:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.31.3-r1.ebuild,v 1.8 2008/07/14 19:07:49 armin76 Exp $
 
 inherit gdesklets
 
@@ -19,7 +19,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha amd64 ~ia64 ppc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
 
 RDEPEND=">=gnome-extra/gdesklets-core-0.34.3
 	>=gnome-base/gnome-panel-2.10.0-r1"

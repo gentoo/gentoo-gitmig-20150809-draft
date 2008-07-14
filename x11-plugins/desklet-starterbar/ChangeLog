@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-starterbar
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.26 2007/03/28 20:20:16 leio Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.27 2008/07/14 19:07:49 armin76 Exp $
+
+  14 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  desklet-starterbar-0.31.3-r1.ebuild:
+  Add ~sparc
 
   28 Mar 2007; Mart Raudsepp <leio@gentoo.org>
   -desklet-starterbar-0.21.ebuild, -desklet-starterbar-0.30.ebuild,
