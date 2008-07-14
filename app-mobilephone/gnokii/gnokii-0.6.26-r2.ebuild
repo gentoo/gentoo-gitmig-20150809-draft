@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r1.ebuild,v 1.2 2008/07/12 15:56:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r2.ebuild,v 1.1 2008/07/14 20:07:26 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
-RESTRICT="test" #test fails; maybe it will work in the future, but till then...
-
-RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
+RDEPEND="sys-apps/pcsc-lite
+	X? ( >=x11-libs/gtk+-2.8.19 )
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
 	sms? ( >=dev-libs/glib-2.10.3
 	       postgres? ( >=virtual/postgresql-server-8.0 )
@@ -37,9 +36,9 @@ MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_unpack() {
-    unpack ${A}
+	unpack ${A}
 
-    epatch "${FILESDIR}"/${P}-qa-fixes.patch
+	epatch "${FILESDIR}"/${P}-qa-fixes.patch
 }
 
 src_compile() {
@@ -61,7 +60,7 @@ src_compile() {
 		$(use_enable debug rlpdebug) \
 		--enable-security \
 		--disable-unix98test \
-		--disable-libpcsclite \
+		--enable-libpcsclite \
 		|| die "configure failed"
 
 	emake -j1 || die "make failed"
