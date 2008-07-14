@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.4.13.2.ebuild,v 1.1 2008/06/28 19:27:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.4.13.2.ebuild,v 1.2 2008/07/14 11:40:39 flameeyes Exp $
 
 EAPI="1"
 
@@ -54,12 +54,12 @@ DB_VER="4.6"
 
 pkg_setup() {
 	if built_with_use sys-libs/db:${DB_VER} nocxx ; then
-		eerror "dev-libs/db:${DB_VER} must be built without nocxx USE-flag"
-		die "dev-libs/db:${DB_VER} must be built without nocxx USE-flag"
+		eerror "sys-libs/db:${DB_VER} must be built without nocxx USE-flag"
+		die "sys-libs/db:${DB_VER} must be built without nocxx USE-flag"
 	fi
 	if use java && ! built_with_use sys-libs/db:${DB_VER} java ; then
-		eerror "dev-libs/db:${DB_VER} must be built with java USE-flag"
-		die "dev-libs/db:${DB_VER} must be built with java USE-flag"
+		eerror "sys-libs/db:${DB_VER} must be built with java USE-flag"
+		die "sys-libs/db:${DB_VER} must be built with java USE-flag"
 	fi
 	java-pkg-opt-2_pkg_setup
 }
