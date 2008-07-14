@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.23 2008/01/11 08:12:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.24 2008/07/14 06:03:15 dberkholz Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -218,6 +218,9 @@ src_unpack() {
 
 	# Fixing bugs #68531 and #65758 -- this will disable toshiba dpms support
 	sed '/#ifndef TOSHIBA_SMM/,/#endif/d' -i "${S}"/programs/Xserver/hw/kdrive/vesa/vesa.c
+
+	# Workaround for vga.c not using the correct io.h include
+	epatch "${FILESDIR}/${PN}-4.3.0-r5-vga.patch"
 }
 
 src_compile() {
