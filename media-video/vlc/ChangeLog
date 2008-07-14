@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.356 2008/07/14 10:49:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.357 2008/07/14 12:51:09 aballier Exp $
+
+*vlc-0.9.0_beta2 (14 Jul 2008)
+
+  14 Jul 2008; Alexis Ballier <aballier@gentoo.org> +vlc-0.9.0_beta2.ebuild:
+  bump to test2
 
   14 Jul 2008; Raúl Porcel <armin76@gentoo.org> vlc-0.8.6i.ebuild:
   sparc/x86 stable wrt #230692
