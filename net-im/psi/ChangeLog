@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.132 2008/03/27 17:58:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.133 2008/07/14 05:07:30 jer Exp $
+
+*psi-0.12_rc4 (14 Jul 2008)
+
+  14 Jul 2008; Jeroen Roovers <jer@gentoo.org> +psi-0.12_rc4.ebuild:
+  Version bump (bug #215962) thanks to Davide Pesavento fpr noticing
+  and for some of the ebuild changes.
 
   27 Mar 2008; Ferris McCormick <fmccor@gentoo.org> psi-0.11.ebuild:
   Add back ~sparc keyword, Bug #211667.
