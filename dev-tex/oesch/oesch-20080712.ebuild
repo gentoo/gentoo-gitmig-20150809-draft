@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/oesch/oesch-20080712.ebuild,v 1.1 2008/07/12 09:58:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/oesch/oesch-20080712.ebuild,v 1.2 2008/07/14 17:03:18 aballier Exp $
 
 inherit latex-package
 
@@ -23,6 +23,7 @@ TEXMF="/usr/share/texmf-site"
 S=${WORKDIR}/${PN}
 
 src_install() {
+	export VARTEXFONTS="${T}/fonts"
 	latex-package_src_install
 	insinto "${TEXMF}/fonts/source/public"
 	doins *.mf || die "failed to install metafont sources"
