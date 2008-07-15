@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.1 2008/06/14 19:59:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.2 2008/07/15 19:45:31 bluebird Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND="dev-lang/perl
 	)"
 DEPEND="$RDEPEND
 	sys-apps/sed"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 pkg_setup() {
 	has_version dev-perl/IO-Multiplex || die "IO-Multiplex needed. Please emerge it or run g-cpan.pl IO::Multiplex"
@@ -38,7 +38,7 @@ src_unpack() {
 src_install () {
 
 	make gentoo-install ROOTDIR="${D}"
-	dodoc HOWTO FAQ README README.OPTINOUT README.PERF COPYING TODO Changelog
+	dodoc HOWTO FAQ README README.OPTINOUT README.PERF TODO Changelog
 
 	# keeps SQLgrey data in /var/spool/sqlgrey
 	diropts -m0775 -o sqlgrey -g sqlgrey
