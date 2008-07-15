@@ -1,14 +1,68 @@
 #!/sbin/runscript
 
+opts="start stop status reload restart"
+
+depend() {
+    need net
+    before sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp
+}
+
+hypervisor_type() {
+    virsh version | grep "Running hypervisor" | grep QEMU | wc -l
+}
+
+libvirtd_domains() {
+    virsh list | grep running | wc -l
+}
+
 start() {
 	ebegin "Starting libvirtd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/libvirtd -- \
-		-d --pid-file /var/run/libvirtd.pid ${LIBVIRTD_OPTS}
+	start-stop-daemon --start --quiet --exec /usr/sbin/libvirtd -- -d ${LIBVIRTD_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping libvirtd"
+    # try to shutdown all (KVM) domains
+    DOM_COUNT="$(libvirtd_domains)"
+    HYPERVISOR_KVM="$(hypervisor_type)"
+    if [ ${HYPERVISOR_KVM} ] \
+        && [ "${LIBVIRTD_KVM_SHUTDOWN}" = "yes" ] \
+        && [ "${DOM_COUNT}" != "0" ] ; then
+
+        einfo " Shutting down domain(s):"
+        for DOM_ID in $(virsh list | grep running | awk '{ print $1 }') ; do
+            NAME="$(virsh domname ${DOM_ID} | head -n 1)"
+            einfo "   ${NAME}"
+            virsh shutdown ${DOM_ID} > /dev/null
+        done
+
+        if [ -n "${LIBVIRTD_KVM_SHUTDOWN_MAXWAIT}" ] ; then
+            COUNTER="${LIBVIRTD_KVM_SHUTDOWN_MAXWAIT}"
+        else
+            COUNTER=100
+        fi
+
+        einfo " Waiting ${COUNTER} seconds while domains shutdown ..."
+        DOM_COUNT="$(libvirtd_domains)"
+        while [ ${DOM_COUNT} -gt 0 ] && [ ${COUNTER} -gt 0 ] ; do
+            DOM_COUNT="$(libvirtd_domains)"
+            sleep 1
+            let COUNTER=COUNTER-1
+        done
+
+        DOM_COUNT="$(libvirtd_domains)"
+        if [ "${DOM_COUNT}" != "0" ] ; then
+            eerror " !!! Some guests are still running, stopping anyways"
+        fi
+
+    fi
 	start-stop-daemon --stop --quiet --exec /usr/sbin/libvirtd --pid-file=/var/run/libvirtd.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading libvirtd"
+	start-stop-daemon --stop --signal HUP --quiet --pidfile /var/run/libvirtd.pid --oknodo
 	eend $?
 }

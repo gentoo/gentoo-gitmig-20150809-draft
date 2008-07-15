@@ -6,3 +6,10 @@
 # Please consult 'libvirtd --help' for more options
 
 #LIBVIRTD_OPTS="--listen"
+
+# Automatically shutdown KVM domains when stopping libvirtd
+LIBVIRTD_KVM_SHUTDOWN="yes"
+
+# Timeout in seconds until stopping libvirtd and "pulling the plug" on the
+# remaining VM's still in a running state
+#LIBVIRTD_KVM_SHUTDOWN_MAXWAIT="100"

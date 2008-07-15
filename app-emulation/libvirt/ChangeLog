@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.12 2008/07/08 22:57:29 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.13 2008/07/15 17:25:45 ramereth Exp $
+
+*libvirt-0.4.4-r1 (15 Jul 2008)
+
+  15 Jul 2008; Lance Albertson <ramereth@gentoo.org>
+  +files/libvirt-0.4.4-binary-paths.patch,
+  +files/libvirt-0.4.4-capabilities-kvm-path.patch, files/libvirtd.confd,
+  files/libvirtd.init, +libvirt-0.4.4-r1.ebuild:
+  Add support for kvm
+   * Add patches to deal with kvm binary names
+   * Fix DEPEND
+     - Discovered that bridge-utils, nc, and dnsmasq are needed to run libvirt
+       properly. Make dnsmasq a dep only if needing libvirtd
+   * Set default pidfile location to be in /var/run
+   * Add server useflag to choose whether you wanted libvirtd or not
+   * Update init script
+     - Deal with shutting down kvm domains properly
+     - Add reload for libvirtd
+     - Remove need to specify pidfile during startup
 
 *libvirt-0.4.4 (08 Jul 2008)
 
