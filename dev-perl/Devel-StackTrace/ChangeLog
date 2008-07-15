@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.45 2008/07/01 16:46:24 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.46 2008/07/15 18:08:08 armin76 Exp $
+
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  Devel-StackTrace-1.18.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *Devel-StackTrace-1.19 (01 Jul 2008)
 
