@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.10.ebuild,v 1.1 2008/07/15 17:46:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.10.ebuild,v 1.2 2008/07/15 17:55:03 jer Exp ${PN}/${PN}-1.0.10.ebuild,v 1.1 2008/07/15 17:46:08 jer Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="sys-devel/binutils
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	unpack debootstrap_${PV}.tar.gz
+	unpack ${PN}_${PV}.tar.gz
 	cp "${DISTDIR}"/devices.tar.gz "${S}"
 }
 

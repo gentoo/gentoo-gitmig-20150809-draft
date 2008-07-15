@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.60 2008/07/15 17:48:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.61 2008/07/15 17:55:03 jer Exp $
+
+  15 Jul 2008; Jeroen Roovers <jer@gentoo.org> debootstrap-0.2.45-r1.ebuild,
+  debootstrap-0.3.3.2.ebuild, debootstrap-1.0.9.ebuild,
+  debootstrap-1.0.10.ebuild:
+  Use PN instead of package name.
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> -debootstrap-1.0.8.ebuild:
   Remove old version.
