@@ -1,6 +1,9 @@
 # ChangeLog for profiles/default/linux/hppa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.4 2008/06/17 03:04:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.5 2008/07/15 04:24:49 jer Exp $
+
+  15 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Masking openinventor USE flag for sci-physics/geant.
 
   17 Jun 2008; Jeroen Roovers <jer@gentoo.org> +package.use.mask:
   Masking jabber USE flag for abiword-plugins (net-libs/loudmouth does not
