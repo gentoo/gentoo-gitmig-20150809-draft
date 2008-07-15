@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.34 2008/07/13 19:09:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.35 2008/07/15 16:40:09 armin76 Exp $
+
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> pyparted-1.8.9.ebuild:
+  alpha/ia64/sparc stable wrt #231196
 
   13 Jul 2008; Joseph Jezak <josejx@gentoo.org> pyparted-1.8.9.ebuild:
   Marked ppc stable for bug #231196.
