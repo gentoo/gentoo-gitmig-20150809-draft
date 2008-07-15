@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.12 2008/07/15 13:19:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.13 2008/07/15 17:14:34 fmccor Exp $
+
+  15 Jul 2008; Ferris McCormick <fmccor@gentoo.org> geant-4.9.1_p02.ebuild:
+  Add ~sparc for testing and for sci-physics/root --- Bug #230716 which see
+  for comments.
 
   15 Jul 2008; Ferris McCormick <fmccor@gentoo.org> geant-3.21.14-r2.ebuild:
   Add ~sparc for testing, dependency required for Bug #230716.
