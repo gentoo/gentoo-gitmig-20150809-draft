@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.0_rc1.ebuild,v 1.1 2008/07/15 10:10:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.0_rc2.ebuild,v 1.1 2008/07/15 13:18:57 armin76 Exp $
 
 inherit eutils distutils flag-o-matic
 
-MY_PV="0.9.01"
+MY_PV="0.9.02"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="BitTorrent client with a client/server model."
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="gtk"
 
-S="${WORKDIR}"/${MY_P/deluge/deluge-torrent}
+S="${WORKDIR}"/${MY_P}
 
 DEPEND=">=dev-lang/python-2.3
 	dev-libs/boost"
