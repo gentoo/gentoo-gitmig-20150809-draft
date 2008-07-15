@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.2.ebuild,v 1.2 2008/06/15 21:25:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.2.ebuild,v 1.3 2008/07/15 20:23:55 jer Exp $
 
 inherit autotools eutils gnome2
 
@@ -53,6 +53,9 @@ src_unpack() {
 
 	# Fix bad yes/no detection
 	epatch "${FILESDIR}/${P}-configure.in.patch"
+
+	# Fix tidy.h include dir for Gentoo:
+	epatch "${FILESDIR}/${P}-configure.in-2.patch"
 
 	eautoreconf
 }
