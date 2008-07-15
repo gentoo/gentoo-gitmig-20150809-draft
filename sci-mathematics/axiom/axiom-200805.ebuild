@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.3 2008/07/13 13:44:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.4 2008/07/15 02:39:54 markusle Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -24,25 +24,25 @@ DEPEND="virtual/latex-base
 S="${WORKDIR}"/${PN}
 
 pkg_setup() {
-	# for 2.6.25 kernels and higher we need to have
+	# for 2.6.25 kernels and higher we need to have 
 	# /proc/sys/kernel/randomize_va_space set to somthing other
 	# than 2, otherwise gcl fails to compile (see bug #186926).
 	local current_setting=$(/sbin/sysctl kernel.randomize_va_space 2>/dev/null | cut -d' ' -f3)
 	if [[ ${current_setting} == 2 ]]; then
 		echo
-		eerror "You kernel has brk randomization enabled. This will"
-		eerror "cause compilation to fail (see bug #186926). You can"
-		eerror "issue:"
+		eerror "Your kernel has brk randomization enabled. This will"
+		eerror "cause axiom to fail to compile *and* run (see bug #186926)."
+		eerror "You can issue:"
 		eerror
 		eerror "   /sbin/sysctl -w kernel.randomize_va_space=1"
 		eerror
 		eerror "as root to turn brk randomization off temporarily."
-		eerror "Please remember to turn it back on via"
+		eerror "However, when not using axiom you may want to turn"
+		eerror "brk randomization back on via"
 		eerror
 		eerror "   /sbin/sysctl -w kernel.randomize_va_space=2"
 		eerror
-		eerror "once axiom is done compiling since turning brk"
-		eerror "randomization off results in a less secure kernel."
+		eerror "since it results in a less secure kernel."
 		die "Kernel brk randomization detected"
 	fi
 }
@@ -65,7 +65,7 @@ src_compile() {
 	# lots of strict-aliasing badness
 	append-flags -fno-strict-aliasing
 
-	./configure || die "Failed to configure"
+	econf || die "Failed to configure"
 	# use gcl 2.6.7
 	sed -e "s:GCLVERSION=gcl-2.6.8pre$:GCLVERSION=gcl-2.6.7:" \
 		-i Makefile.pamphlet Makefile \
@@ -76,15 +76,17 @@ src_compile() {
 		|| die "Failed to fix libXpm lib paths"
 
 	# Let the fun begin...
-	AXIOM="${S}"/mnt/linux emake -j1 || die
+	AXIOM="${S}"/mnt/linux emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}"/opt/axiom COMMAND="${D}"/opt/axiom/mnt/linux/bin/axiom install \
+	emake DESTDIR="${D}"/opt/axiom COMMAND="${D}"/opt/axiom/mnt/linux/bin/axiom install \
 		|| die 'Failed to install Axiom!'
 
-	mv "${D}"/opt/axiom/mnt/linux/* "${D}"/opt/axiom
-	rm -fr "${D}"/opt/axiom/mnt
+	mv "${D}"/opt/axiom/mnt/linux/* "${D}"/opt/axiom \
+		|| die "Failed to mv axiom into its final destination path."
+	rm -fr "${D}"/opt/axiom/mnt \
+		|| die "Failed to remove old directory."
 
 	dodir /usr/bin
 	dosym /opt/axiom/bin/axiom /usr/bin/axiom
