@@ -21,3 +21,6 @@ sci-libs/hdf5 mpi
 
 # openct isn't keyworded anymore
 net-misc/kpvnc smartcard
+
+#	openinventor does not build on sparc
+sci-physics/geant	openinventor
