@@ -1,17 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-1.2.ebuild,v 1.2 2008/05/19 20:20:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-1.2.ebuild,v 1.3 2008/07/15 03:26:05 dirtyepic Exp $
 
 inherit eutils
+
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
 SRC_URI="http://ftp.gnu.org/gnu/mailutils/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
+
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="nls pam mysql postgres gdbm"
+IUSE="nls pam mysql postgres gdbm test"
 PROVIDE="virtual/mailx"
-DEPEND="!virtual/mailx
+
+RDEPEND="!virtual/mailx
 	!mail-client/nmh
 	!mail-client/elm
 	dev-scheme/guile
@@ -20,6 +23,9 @@ DEPEND="!virtual/mailx
 	postgres? ( virtual/postgresql-base )
 	nls? ( sys-devel/gettext )
 	virtual/mta"
+
+DEPEND="${RDEPEND}
+	test? ( dev-util/dejagnu )"
 
 pkg_setup() {
 	# Default to MySQL if USE="mysql postgres', bug #58162.
@@ -70,7 +76,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	# mail.rc stolen from mailx, resolve bug #37302.
 	insinto /etc
 	doins "${FILESDIR}/mail.rc"

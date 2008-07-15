@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.35 2008/05/21 18:58:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.36 2008/07/15 03:26:05 dirtyepic Exp $
+
+  15 Jul 2008; Ryan Hill <dirtyepic@gentoo.org> mailutils-0.6-r3.ebuild,
+  mailutils-1.2.ebuild:
+  Add test USE flag with dependency on dejagnu for part of bug #172970 by
+  James Rowe.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   mailutils-0.6-r3.ebuild:
