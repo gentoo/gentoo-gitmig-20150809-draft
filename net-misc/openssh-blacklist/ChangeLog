@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh-blacklist
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh-blacklist/ChangeLog,v 1.1 2008/05/31 09:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh-blacklist/ChangeLog,v 1.2 2008/07/15 19:41:47 jer Exp $
+
+  15 Jul 2008; Jeroen Roovers <jer@gentoo.org>
+  openssh-blacklist-0.4.1.ebuild:
+  Marked ~hppa too.
 
 *openssh-blacklist-0.4.1 (31 May 2008)
 
