@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71.ebuild,v 1.1 2008/07/15 18:13:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71-r1.ebuild,v 1.1 2008/07/15 20:16:20 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -13,11 +13,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 # Add bios back when it builds again
-IUSE="gnutls havekernel ncurses sdl test"
+IUSE="alsa esd gnutls havekernel ncurses pulseaudio sdl test"
 RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
-	>=media-libs/alsa-lib-1.0.13
+	alsa? ( >=media-libs/alsa-lib-1.0.13 )
+	esd? ( media-sound/esound )
+	pulseaudio? ( media-sound/pulseaudio )
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( >=media-libs/libsdl-1.2.11 )"
@@ -84,17 +86,22 @@ src_unpack() {
 		"${FILESDIR}"/kvm-69-qemu-no-blobs.patch \
 		"${FILESDIR}"/kvm-69-qemu-ifup_ifdown.patch \
 		"${FILESDIR}"/kvm-70-block-rw-range-check.patch \
-		"${FILESDIR}"/kvm-71-qemu-kvm-doc.patch
+		"${FILESDIR}"/kvm-71-qemu-kvm-doc.patch \
+		"${FILESDIR}"/kvm-71-qemu-configure.patch
 }
 
 src_compile() {
-	local mycc conf_opts
+	local mycc conf_opts audio_opts
 
 	use gnutls || conf_opts="$conf_opts --disable-vnc-tls"
 	use ncurses || conf_opts="$conf_opts --disable-curses"
 	use sdl || conf_opts="$conf_opts --disable-gfx-check --disable-sdl"
+	use alsa && audio_opts="alsa $audio_opts"
+	use esd && audio_opts="esd $audio_opts"
+	use pulseaudio && audio_opts="pa $audio_opts"
 	conf_opts="$conf_opts --disable-gcc-check"
 	conf_opts="$conf_opts --prefix=/usr"
+	conf_opts="$conf_opts --audio-drv-list=$audio_opts"
 
 	./configure ${conf_opts} || die "econf failed"
 
