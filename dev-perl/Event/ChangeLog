@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.60 2008/04/29 05:55:35 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.61 2008/07/15 18:26:21 armin76 Exp $
+
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> Event-1.10.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *Event-1.10 (29 Apr 2008)
 
