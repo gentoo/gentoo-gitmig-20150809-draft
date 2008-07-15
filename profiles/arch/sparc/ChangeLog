@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.16 2008/06/21 17:58:12 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.17 2008/07/15 13:57:40 fmccor Exp $
+
+  15 Jul 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
+  package.use.mask openinventor for sci-physics/geant --- it does not build and
+  this is required for Bug #230716.
 
   21 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> use.mask:
   use.mask multilib, there currently is no profile that supports multilib
