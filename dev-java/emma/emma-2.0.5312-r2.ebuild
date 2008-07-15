@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312-r2.ebuild,v 1.1 2008/07/15 20:15:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312-r2.ebuild,v 1.2 2008/07/15 20:16:59 betelgeuse Exp $
 
 # No support for javadocs in build.xml
 EAPI=1
@@ -24,7 +24,7 @@ DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	launcher? ( !sci-biology/emboss )"
 
-PATCHES="${FILESDIR}/${P}-java15api.patch"
+PATCHES=( "${FILESDIR}/${P}-java15api.patch" )
 
 EANT_BUILD_TARGET="build"
 

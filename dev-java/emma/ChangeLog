@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/emma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.14 2008/07/15 20:15:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.15 2008/07/15 20:16:59 betelgeuse Exp $
+
+  15 Jul 2008; Petteri Räty <betelgeuse@gentoo.org>
+  emma-2.0.5312-r2.ebuild:
+  Convert PATCHES to bash array.
 
 *emma-2.0.5312-r2 (15 Jul 2008)
 
