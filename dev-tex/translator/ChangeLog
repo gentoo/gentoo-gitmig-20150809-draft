@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/translator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.5 2008/06/28 16:04:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.6 2008/07/15 20:18:03 jer Exp $
+
+  15 Jul 2008; Jeroen Roovers <jer@gentoo.org> translator-1.00.ebuild:
+  Marked ~hppa (bug #229249).
 
   28 Jun 2008; Raúl Porcel <armin76@gentoo.org> translator-1.00.ebuild:
   Add ~alpha/~ia64 wrt #229249
