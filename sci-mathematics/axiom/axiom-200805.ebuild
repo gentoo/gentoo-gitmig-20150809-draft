@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.4 2008/07/15 02:39:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.5 2008/07/15 15:52:48 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="virtual/latex-base
 S="${WORKDIR}"/${PN}
 
 pkg_setup() {
-	# for 2.6.25 kernels and higher we need to have 
+	# for 2.6.25 kernels and higher we need to have
 	# /proc/sys/kernel/randomize_va_space set to somthing other
 	# than 2, otherwise gcl fails to compile (see bug #186926).
 	local current_setting=$(/sbin/sysctl kernel.randomize_va_space 2>/dev/null | cut -d' ' -f3)
