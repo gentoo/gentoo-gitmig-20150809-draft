@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p230.ebuild,v 1.3 2008/06/29 20:55:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p230.ebuild,v 1.4 2008/07/15 18:07:16 graaff Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${SLOT}/${MY_P}.tar.bz2
 
 LICENSE="Ruby"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="berkdb cjk debug doc emacs examples gdbm ipv6 rubytests socks5 ssl threads tk xemacs"
+IUSE="berkdb debug doc emacs examples gdbm ipv6 rubytests socks5 ssl threads tk xemacs"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )
@@ -43,13 +43,13 @@ PROVIDE="virtual/ruby"
 src_unpack() {
 	unpack ${A}
 
-	if use cjk ; then
-		einfo "Applying ${ONIGURUMA}"
-		pushd "${WORKDIR}/oniguruma"
-		econf --with-rubydir="${S}" || die "oniguruma econf failed"
-		emake $MY_SUFFIX || die "oniguruma emake failed"
-		popd
-	fi
+#	if use cjk ; then
+#		einfo "Applying ${ONIGURUMA}"
+#		pushd "${WORKDIR}/oniguruma"
+#		econf --with-rubydir="${S}" || die "oniguruma econf failed"
+#		emake $MY_SUFFIX || die "oniguruma emake failed"
+#		popd
+#	fi
 
 	cd "${S}/ext/dl"
 	epatch "${FILESDIR}/${PN}-1.8.6-memory-leak.diff"
