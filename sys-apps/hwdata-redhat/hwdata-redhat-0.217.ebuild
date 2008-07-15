@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.216.ebuild,v 1.1 2008/03/19 07:44:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.217.ebuild,v 1.1 2008/07/15 17:05:57 darkside Exp $
 
 inherit flag-o-matic rpm
 
@@ -13,7 +13,7 @@ RPMREV="1"
 MY_P="${P/-redhat}"
 DESCRIPTION="Hardware identification and configuration data"
 HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
-SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.fc${FCVER}.src.rpm"
+SRC_URI="mirror://fedora-dev/releases/9/Everything/source/SRPMS/${MY_P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~ppc ~ppc64 ~x86 ~amd64"
