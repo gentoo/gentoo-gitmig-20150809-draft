@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Size
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.16 2008/04/08 10:04:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.17 2008/07/15 18:02:10 armin76 Exp $
+
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> Devel-Size-0.69.ebuild:
+  ia64/sparc/x86 stable
 
 *Devel-Size-0.69 (08 Apr 2008)
 
