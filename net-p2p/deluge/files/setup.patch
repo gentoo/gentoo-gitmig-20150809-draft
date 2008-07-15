@@ -1,0 +1,40 @@
+--- setup.py.orig	2008-07-14 22:36:14.000000000 +0200
++++ setup.py	2008-07-14 22:36:48.000000000 +0200
+@@ -53,26 +53,6 @@
+ 
+ # Try to get SVN revision number to append to version
+ revision_string = ""
+-try:
+-    stdout = os.popen("svn info")
+-    for line in stdout:
+-        if line.split(" ")[0] == "Revision:":
+-            revision_string = line.split(" ")[1].strip()
+-            break
+-    # Try to get the SVN revision on Gentoo systems
+-    if revision_string == "":
+-        stdout = os.popen("svn info /usr/portage/distfiles/svn-src/deluge/deluge-0.6")
+-        for line in stdout:
+-            if line.split(" ")[0] == "Revision:":
+-                revision_string = line.split(" ")[1].strip()
+-                break
+-        
+-    f = open("deluge/data/revision", "w")
+-    f.write(revision_string)
+-    f.close()
+-except:
+-    pass
+-
+ 
+ if not os.environ.has_key("CC"):
+     os.environ["CC"] = "gcc"
+@@ -327,10 +307,3 @@
+     url = "http://deluge-torrent.org",
+     version = "0.9.01",
+ )
+-    
+-try:
+-    f = open("deluge/data/revision", "w")
+-    f.write("")
+-    f.close()
+-except:
+-    pass
