@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.15 2008/05/31 12:37:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.16 2008/07/15 20:42:00 spock Exp $
+
+*v86d-0.1.5.1 (15 Jul 2008)
+
+  15 Jul 2008; Michał Januszewski <spock@gentoo.org> +v86d-0.1.5.1.ebuild:
+  Fix compilation with -x86emu and klibc-1.5.12 (bug #231839).
 
   31 May 2008; Michał Januszewski <spock@gentoo.org> v86d-0.1.5.ebuild:
   Fix bug #224243.
