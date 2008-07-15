@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.1.4.ebuild,v 1.1 2008/06/22 13:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.1.4.ebuild,v 1.2 2008/07/15 18:04:59 jer Exp $
 
 inherit eutils multilib
 
@@ -16,6 +16,13 @@ IUSE="nls"
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -e 's| -pipe -O2||g' -i Makefile.in || die "sed failed"
+}
 
 src_compile() {
 	sa_lib_dir=/usr/$(get_libdir)/sa \
