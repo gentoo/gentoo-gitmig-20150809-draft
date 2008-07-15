@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.72.ebuild,v 1.8 2007/12/17 00:59:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.72.ebuild,v 1.9 2008/07/15 06:03:02 jer Exp $
 
 CABAL_FEATURES="profile haddock lib"
 inherit eutils haskell-cabal
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/ghc-6.6"
 CABAL_CORE_LIB_GHC_PV="6.6.1"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Upgrade us from 0.71 to 0.72 which comes with ghc-6.6.1
 	cd "${S}"
