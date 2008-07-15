@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.117 2008/06/08 09:36:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.118 2008/07/15 06:05:12 mrness Exp $
+
+*dspam-3.8.0-r12 (15 Jul 2008)
+
+  15 Jul 2008; Alin Năstac <mrness@gentoo.org> +dspam-3.8.0-r12.ebuild:
+  Add StripRcptDomain option, thanks to Sven Schwyn <gentoo@bitcetera.com>
+  (#231175).
 
   08 Jun 2008; Alin Năstac <mrness@gentoo.org> -files/dspam.cron-r1,
   -files/dspam.cron-r2, -dspam-3.8.0-r7.ebuild, -dspam-3.8.0-r8.ebuild,
