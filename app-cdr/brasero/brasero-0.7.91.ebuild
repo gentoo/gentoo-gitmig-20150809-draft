@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.91.ebuild,v 1.1 2008/07/06 17:08:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.91.ebuild,v 1.2 2008/07/15 10:34:23 armin76 Exp $
 
 EAPI=1
 
@@ -37,6 +37,7 @@ RDEPEND=">=dev-libs/glib-2.15.6
 	libburn? ( >=dev-libs/libburn-0.4.0
 		>=dev-libs/libisofs-0.6.4 )"
 DEPEND="${RDEPEND}
+	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
