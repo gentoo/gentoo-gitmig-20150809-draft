@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.20 2008/02/16 17:34:52 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.21 2008/07/15 06:44:01 keri Exp $
+
+  15 Jul 2008; keri <keri@gentoo.org> +files/yap-5.1.2-config.h.patch,
+  yap-5.1.2.ebuild:
+  Fix up config.h syntax. Thanks to Xavian-Anderson Macpherson and Sven E. in
+  bug #220847.
 
   16 Feb 2008; keri <keri@gentoo.org> yap-5.1.1.ebuild, yap-5.1.2.ebuild:
   Move eautoconf to src_unpack. Closes #207442.

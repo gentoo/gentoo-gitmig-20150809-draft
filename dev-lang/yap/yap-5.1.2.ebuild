@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.2.ebuild,v 1.2 2008/02/16 17:34:52 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.2.ebuild,v 1.3 2008/07/15 06:44:01 keri Exp $
 
 inherit autotools eutils java-pkg-opt-2
 
@@ -30,6 +30,7 @@ S="${WORKDIR}"/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-config.h.patch
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-multilib.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
