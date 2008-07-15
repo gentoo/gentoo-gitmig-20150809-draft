@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.47 2008/07/14 11:33:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.48 2008/07/15 10:50:21 pva Exp $
+
+  15 Jul 2008; Peter Volkov <pva@gentoo.org> drupal-5.8.ebuild,
+  drupal-6.3.ebuild:
+  drupal works with either gd or gd-external in php, fixing php checks.
+  Thank padde for IRC-report.
 
 *drupal-6.3 (14 Jul 2008)
 *drupal-5.8 (14 Jul 2008)
