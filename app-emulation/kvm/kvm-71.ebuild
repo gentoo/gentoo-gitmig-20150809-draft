@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-70.ebuild,v 1.3 2008/07/15 18:13:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71.ebuild,v 1.1 2008/07/15 18:13:12 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -13,12 +13,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 # Add bios back when it builds again
-IUSE="alsa esd gnutls havekernel ncurses sdl test"
-RESTRICT="mirror test"
+IUSE="gnutls havekernel ncurses sdl test"
+RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
-	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	esd? ( media-sound/esound )
+	>=media-libs/alsa-lib-1.0.13
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( >=media-libs/libsdl-1.2.11 )"
@@ -84,14 +83,13 @@ src_unpack() {
 		"${FILESDIR}"/kvm-68-libkvm-no-kernel.patch \
 		"${FILESDIR}"/kvm-69-qemu-no-blobs.patch \
 		"${FILESDIR}"/kvm-69-qemu-ifup_ifdown.patch \
-		"${FILESDIR}"/kvm-70-qemu-kvm-doc.patch
+		"${FILESDIR}"/kvm-70-block-rw-range-check.patch \
+		"${FILESDIR}"/kvm-71-qemu-kvm-doc.patch
 }
 
 src_compile() {
 	local mycc conf_opts
 
-	use alsa && conf_opts="$conf_opts --enable-alsa"
-	use esd && conf_opts="$conf_opts --enable-esd"
 	use gnutls || conf_opts="$conf_opts --disable-vnc-tls"
 	use ncurses || conf_opts="$conf_opts --disable-curses"
 	use sdl || conf_opts="$conf_opts --disable-gfx-check --disable-sdl"
@@ -143,7 +141,9 @@ src_install() {
 
 	mv "${D}"/usr/share/man/man1/qemu.1 "${D}"/usr/share/man/man1/kvm.1
 	mv "${D}"/usr/share/man/man1/qemu-img.1 "${D}"/usr/share/man/man1/kvm-img.1
+	mv "${D}"/usr/share/man/man8/qemu-nbd.8 "${D}"/usr/share/man/man8/kvm-nbd.8
 	mv "${D}"/usr/bin/qemu-img "${D}"/usr/bin/kvm-img
+	mv "${D}"/usr/bin/qemu-nbd "${D}"/usr/bin/kvm-nbd
 
 	insinto /etc/udev/rules.d/
 	doins scripts/65-kvm.rules
@@ -173,6 +173,6 @@ pkg_postinst() {
 	elog "kernel or loaded as a module to use the virtual network device"
 	elog "if using -net tap.  You will also need support for 802.1d"
 	elog "Ethernet Bridging and a configured bridge if using the provided"
-	elog "qemu-ifup script from /etc/kvm."
+	elog "kvm-ifup script from /etc/kvm."
 	echo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-70-r1.ebuild,v 1.1 2008/07/14 12:55:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-70-r1.ebuild,v 1.2 2008/07/15 18:13:12 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -80,7 +80,6 @@ src_unpack() {
 		"${FILESDIR}"/kvm-45-qemu-configure.patch \
 		"${FILESDIR}"/kvm-61-qemu-kvm.patch \
 		"${FILESDIR}"/kvm-57-qemu-kvm-cmdline.patch \
-		"${FILESDIR}"/kvm-48-kvm.patch \
 		"${FILESDIR}"/kvm-57-kernel-longmode.patch \
 		"${FILESDIR}"/kvm-68-libkvm-no-kernel.patch \
 		"${FILESDIR}"/kvm-69-qemu-no-blobs.patch \
