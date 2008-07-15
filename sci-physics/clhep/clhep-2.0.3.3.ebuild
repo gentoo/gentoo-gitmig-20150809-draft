@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.3.3.ebuild,v 1.2 2008/07/06 23:11:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.3.3.ebuild,v 1.3 2008/07/15 12:09:56 fmccor Exp $
 
 inherit autotools flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/distributions/${P
 
 LICENSE="public-domain"
 SLOT="2"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
 IUSE="exceptions"
 RDEPEND=""
