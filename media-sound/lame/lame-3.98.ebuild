@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.ebuild,v 1.2 2008/07/13 12:17:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.ebuild,v 1.3 2008/07/16 13:09:58 aballier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools versionator
 
@@ -40,6 +40,9 @@ src_unpack() {
 	# Fix build of mp3rtp, bug #231541
 	# Dont prevent stdint.h from being included when it's in fact needed
 	epatch "${FILESDIR}"/${PN}-3.98-stdint.patch
+
+	# PIC Fix by the PaX Team, bug #93279
+	epatch "${FILESDIR}"/${PN}-3.98-pic-fix.patch
 
 	AT_M4DIR="${S}" eautoreconf
 	epunt_cxx # embedded bug #74498
