@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-7.0-r1.ebuild,v 1.2 2007/03/03 23:30:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-7.0-r1.ebuild,v 1.3 2008/07/16 14:11:13 aballier Exp $
 
 MY_PV=${PV/./-}
 MY_P=HyperSpec-${MY_PV}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.lispworks.com/reference/HyperSpec/"
 SRC_URI="ftp://ftp.lispworks.com/pub/software_tools/reference/${MY_P}.tar.gz"
 LICENSE="HyperSpec"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 
