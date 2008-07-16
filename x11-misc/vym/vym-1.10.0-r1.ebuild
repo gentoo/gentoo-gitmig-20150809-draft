@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0-r1.ebuild,v 1.1 2007/11/03 16:54:25 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0-r1.ebuild,v 1.2 2008/07/16 17:16:37 yngwin Exp $
 
+EAPI=1
 inherit qt4
 
 DESCRIPTION="View Your Mind -- a mindmap tool"
@@ -13,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="$(qt4_min_version 4.3)"
+DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-sql:4 )
+	=x11-libs/qt-4.3* )"
 RDEPEND="${DEPEND}
 	x11-libs/libX11
 	x11-libs/libXext"
@@ -35,6 +37,8 @@ src_unpack() {
 	# Remove stripping stuff
 	sed -i \
 		-e "/-strip/d" Makefile || die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
