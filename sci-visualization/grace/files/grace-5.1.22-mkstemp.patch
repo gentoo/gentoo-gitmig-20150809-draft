@@ -1,0 +1,55 @@
+--- src/plotone.c.orig	2008-07-16 11:36:43.000000000 +0100
++++ src/plotone.c	2008-07-16 12:14:22.000000000 +0100
+@@ -119,21 +119,29 @@
+         if (print_file[0] == '\0') {
+             Device_entry dev = get_device_props(hdevice);
+             sprintf(print_file, "%s.%s", get_docbname(), dev.fext);
++	    prstream = grace_openw(fname);
+         }
+         strcpy(fname, print_file);
+     } else {
++        int hdfd;
+         s = get_print_cmd();
+         if (s == NULL || s[0] == '\0') {
+             errmsg("No print command defined, output aborted");
+             return;
+         }
+-        tmpnam(fname);
+-        /* VMS doesn't like extensionless files */
+-        strcat(fname, ".prn");
++	strcpy(fname, "grace-hardcopy-XXXXXX");
++	hdfd=mkstemp(fname);
++	if (hdfd == -1) {
++	  errmsg("Could not create a temporary file, output aborted.");
++	  return;
++	}
++	prstream = fdopen(hdfd, "wb");
++	if (prstream == NULL) {
++	  errmsg("Could not create a temporary file, output aborted.");
++	  return;
++	}
+     }
+     
+-    prstream = grace_openw(fname);
+-    
+     if (prstream == NULL) {
+         return;
+     }
+--- src/editpwin.c.orig	2008-07-16 11:37:01.000000000 +0100
++++ src/editpwin.c	2008-07-16 11:39:37.000000000 +0100
+@@ -776,12 +776,12 @@
+  */
+ void do_ext_editor(int gno, int setno)
+ {
+-    char *fname, ebuf[256];
++    char fname[64], ebuf[256];
+     FILE *cp;
+     int save_autos;
+ 
+-    fname = tmpnam(NULL);
+-    cp = grace_openw(fname);
++    strcpy(fname, "grace-XXXXXX");
++    cp = fdopen(mkstemp(fname), "wb");
+     if (cp == NULL) {
+         return;
+     }

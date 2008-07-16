@@ -1,16 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21-r1.ebuild,v 1.7 2008/07/16 11:47:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22.ebuild,v 1.1 2008/07/16 11:47:31 bicatali Exp $
 
 EAPI="1"
 inherit eutils fortran
 
-DEB_PR=2
-
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
-SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz
-	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-${DEB_PR}.diff.gz"
+SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
@@ -40,15 +37,18 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${PN}_${PV}-${DEB_PR}.diff
+
 	cd "${S}"
 
-	epatch debian/patches/tmpnam_to_mkstemp.diff
-
+	# move tmpnam to mkstemp (adapted from debian)
+	epatch "${FILESDIR}"/${P}-mkstemp.patch
 	# fix configure instead of aclocal.m4
-	epatch "${FILESDIR}"/${P}-netcdf.patch
+	epatch "${FILESDIR}"/${PN}-5.1.21-netcdf.patch
 	# fix for missing defines when fortran is disabled
-	epatch "${FILESDIR}"/${P}-fortran.patch
+	epatch "${FILESDIR}"/${PN}-5.1.21-fortran.patch
+	# fix a leak and pdf driver (from freebsd)
+	epatch "${FILESDIR}"/${P}-dlmodule.patch
+	epatch "${FILESDIR}"/${P}-pdfdrv.patch
 
 	# fix for glibc-2.7 (bug #217971)
 	# removed (bug #231607)
@@ -70,11 +70,6 @@ src_unpack() {
 		-e 's:bin/grconvert:grconvert:' \
 		-e 's:auxiliary/fdf2fit:fdf2fit:' \
 		gracerc || die
-
-	# the configure script just produces a basic Make.conf
-	# and a config.h
-
-	cp ac-tools/configure.in .
 }
 
 src_compile() {
@@ -85,6 +80,8 @@ src_compile() {
 		myconf="--without-f77"
 	fi
 
+	# the configure script just produces a basic Make.conf
+	# and a config.h
 	econf \
 		--disable-xmhtml \
 		--without-bundled-xbae \
@@ -113,7 +110,6 @@ src_install() {
 	dosym ../../${PN}/examples /usr/share/doc/${PF}/examples
 	dosym ../../${PN}/doc /usr/share/doc/${PF}/html
 
-	doman debian/fdf2fit.1 || die "doman failed"
 	doman "${D}"/usr/share/doc/${PF}/html/*.1
 	rm -f "${D}"/usr/share/doc/${PF}/html/*.1
 	doicon "${FILESDIR}"/${PN}.png || die "failed installing icon"
