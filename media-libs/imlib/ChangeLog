@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.67 2008/07/05 08:53:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.68 2008/07/16 10:00:37 pva Exp $
+
+  16 Jul 2008; Peter Volkov <pva@gentoo.org>
+  +files/imlib-1.9.15-asneeded.patch, imlib-1.9.15-r2.ebuild:
+  Fixed build problems: 1. when gtk+-1 is not installed AM_PATH_GTK could
+  not be found, 2. build failes with --as-needed, bug #207638, thank Muelli
+  for report.
 
   05 Jul 2008; Peter Alfredsen <loki_val@gentoo.org>
   -imlib-1.9.15-r1.ebuild:

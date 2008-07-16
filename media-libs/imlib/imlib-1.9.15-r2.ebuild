@@ -1,11 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r2.ebuild,v 1.10 2008/07/05 08:51:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r2.ebuild,v 1.11 2008/07/16 10:00:37 pva Exp $
 
-inherit autotools eutils gnome.org
+inherit autotools eutils
 
+PVP=(${PV//[-\._]/ })
 DESCRIPTION="Image loading and rendering library"
 HOMEPAGE="http://ftp.acc.umu.se/pub/GNOME/sources/imlib/1.9/"
+SRC_URI="mirror://gnome/sources/${PN}/${PVP[0]}.${PVP[1]}/${P}.tar.bz2
+	mirror://gentoo/gtk-1-for-imlib.m4.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,17 +33,14 @@ src_unpack() {
 	# Conditionalize gdk functions for bug 40453.
 	# Fix imlib-config for bug 3425.
 	epatch "${FILESDIR}"/${P}.patch
+	epatch "${FILESDIR}"/${PN}-security.patch #security #72681
+	epatch "${FILESDIR}"/${P}-bpp16-CVE-2007-3568.patch # security #201887
+	epatch "${FILESDIR}"/${P}-fix-rendering.patch #197489
+	epatch "${FILESDIR}"/${P}-asneeded.patch #207638
 
-	# Fix security bug 72681.
-	epatch "${FILESDIR}"/${PN}-security.patch
+	mkdir m4 && cp "${WORKDIR}"/gtk-1-for-imlib.m4 m4
 
-	# Fixes security bug #201887
-	epatch "${FILESDIR}"/${P}-bpp16-CVE-2007-3568.patch
-
-	# Fixes #197489
-	epatch "${FILESDIR}"/${P}-fix-rendering.patch
-
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
