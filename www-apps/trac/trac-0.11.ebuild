@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11_beta2.ebuild,v 1.1 2008/04/28 17:40:34 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.ebuild,v 1.1 2008/07/16 21:20:06 pva Exp $
 
 inherit distutils webapp
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 
 IUSE="cgi fastcgi mysql postgres sqlite subversion"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc ~ppc64 ~sparc"
 
 # doing so because tools, python packages... overlap
 SLOT="0"
@@ -28,7 +28,7 @@ DEPEND="
 
 RDEPEND="
 	${RDEPEND}
-	dev-python/genshi
+	>=dev-python/genshi-0.5
 	dev-python/pygments
 	>=dev-python/docutils-0.3.9
 	dev-python/pytz
@@ -114,10 +114,8 @@ pkg_setup() {
 		built_with_use_die dev-util/subversion python
 	fi
 
-	ebegin "Creating tracd group and user"
 	enewgroup tracd
 	enewuser tracd -1 -1 -1 tracd
-	eend ${?}
 }
 
 src_install() {
@@ -128,25 +126,18 @@ src_install() {
 	keepdir /var/lib/trac
 
 	# documentation
-	dodoc AUTHORS RELEASE THANKS UPGRADE
 	cp -r contrib "${D}"/usr/share/doc/${P}/
 
 	# tracd init script
 	newconfd "${FILESDIR}"/tracd.confd tracd
 	newinitd "${FILESDIR}"/tracd.initd tracd
 
-	# prepare webapp master copy
-
-	# if needed, install cgi/fcgi scripts
 	if use cgi ; then
 		cp cgi-bin/trac.cgi "${D}"/${MY_CGIBINDIR} || die
 	fi
 	if use fastcgi ; then
 		cp cgi-bin/trac.fcgi "${D}"/${MY_CGIBINDIR} || die
 	fi
-
-	# copy graphics, css & js
-#	cp -r htdocs/* ${D}/${MY_HTDOCSDIR}
 
 	for lang in en; do
 		webapp_postinst_txt ${lang} "${FILESDIR}"/postinst-${lang}.txt
