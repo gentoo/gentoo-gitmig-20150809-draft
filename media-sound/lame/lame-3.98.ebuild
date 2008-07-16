@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.ebuild,v 1.4 2008/07/16 14:19:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.ebuild,v 1.5 2008/07/16 21:03:56 aballier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools versionator
 
@@ -46,6 +46,9 @@ src_unpack() {
 
 	# Let it use proper %if statements for marking stacks as non executable
 	epatch "${FILESDIR}"/${PN}-3.98-execstacks.patch
+
+	# It fails parallel make otherwise when enabling nasm...
+	mkdir "${S}/libmp3lame/i386/.libs" || die
 
 	AT_M4DIR="${S}" eautoreconf
 	epunt_cxx # embedded bug #74498
