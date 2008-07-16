@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4-r3.ebuild,v 1.5 2008/07/16 16:41:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4-r3.ebuild,v 1.6 2008/07/16 17:08:15 beandog Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -109,7 +109,7 @@ src_compile() {
 		$(use_enable jpeg libjpeg) \
 		$(use_with X x) \
 		--with-mod-path=/usr/$(get_libdir)/transcode \
-		--with-libpostproc-builddir=/usr/$(get_libdir) \
+		--with-libpostproc-prefix=/usr/$(get_libdir) \
 		--disable-avifile \
 		--disable-xio"
 	econf ${myconf} || die "econf died"
