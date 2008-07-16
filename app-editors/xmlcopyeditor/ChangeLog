@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xmlcopyeditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.5 2008/07/04 19:43:04 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.6 2008/07/16 23:52:49 yoswink Exp $
+
+*xmlcopyeditor-1.2.0 (16 Jul 2008)
+
+  16 Jul 2008; Jose Luis Rivero <yoswink@gentoo.org>
+  -xmlcopyeditor-1.1.0.6.ebuild, +xmlcopyeditor-1.2.0.ebuild:
+  Version bump. Introduces background validation. Don't need gcc-4.3 patch
+  anymore. Remove old ebuild
 
   04 Jul 2008; Jose Luis Rivero <yoswink@gentoo.org>
   +files/gcc-4.3-header-dependency.patch, xmlcopyeditor-1.1.0.6.ebuild,
