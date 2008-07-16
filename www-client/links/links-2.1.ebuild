@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1.ebuild,v 1.1 2008/07/14 02:26:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1.ebuild,v 1.2 2008/07/16 15:34:22 jer Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
@@ -17,7 +17,7 @@ SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 directfb fbcon gpm jpeg livecd png sdl ssl svga tiff unicode X zlib"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
