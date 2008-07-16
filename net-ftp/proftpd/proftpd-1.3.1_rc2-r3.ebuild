@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r3.ebuild,v 1.4 2008/05/21 18:54:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r3.ebuild,v 1.5 2008/07/16 16:00:28 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -30,10 +30,10 @@ DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 		ncurses? ( sys-libs/ncurses )
 		opensslcrypt? ( >=dev-libs/openssl-0.9.6f )
 		pam? ( virtual/pam )
-		postgres? ( >=virtual/postgresql-server-7.3 )
+		postgres? ( virtual/postgresql-base )
 		ssl? ( >=dev-libs/openssl-0.9.6f )
 		tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )
-		xinetd? ( sys-apps/xinetd )"
+		xinetd? ( virtual/inetd )"
 
 RDEPEND="${DEPEND}
 		net-ftp/ftpbase
