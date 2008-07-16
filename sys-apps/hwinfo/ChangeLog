@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.9 2008/07/15 13:30:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.10 2008/07/16 12:59:19 nixnut Exp $
+
+  16 Jul 2008; nixnut <nixnut@gentoo.org> hwinfo-13.28.ebuild:
+  Stable on ppc wrt bug 231667
 
   15 Jul 2008; Raúl Porcel <armin76@gentoo.org> hwinfo-13.28.ebuild:
   x86 stable wrt #231667

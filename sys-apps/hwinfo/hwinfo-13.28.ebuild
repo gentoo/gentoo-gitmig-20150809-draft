@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.28.ebuild,v 1.3 2008/07/15 13:30:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.28.ebuild,v 1.4 2008/07/16 12:59:19 nixnut Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${DEBIAN_BASE_URI}/${PN}_${PV}.orig.tar.gz
 		 ${DEBIAN_BASE_URI}/${PN}_${PV}-${DEBIAN_PV}.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 RDEPEND=">=sys-fs/sysfsutils-2
 		sys-apps/hal
