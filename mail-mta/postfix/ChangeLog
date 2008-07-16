@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.162 2008/06/09 19:47:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.163 2008/07/16 16:41:00 chtekk Exp $
+
+  16 Jul 2008; Luca Longinotti <chtekk@gentoo.org> postfix-2.2.11-r1.ebuild,
+  postfix-2.3.8-r1.ebuild, postfix-2.4.6-r2.ebuild, postfix-2.4.7.ebuild,
+  postfix-2.5.0.ebuild, postfix-2.5.1.ebuild, postfix-2.5.2.ebuild:
+  Dep on PostgreSQL libs only.
 
   09 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   postfix-2.5.0.ebuild, postfix-2.5.1.ebuild, postfix-2.5.2.ebuild:

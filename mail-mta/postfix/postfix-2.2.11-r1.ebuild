@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11-r1.ebuild,v 1.9 2008/05/21 16:06:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11-r1.ebuild,v 1.10 2008/07/16 16:41:00 chtekk Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened cdb"
@@ -30,7 +30,7 @@ DEPEND="cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.74 ) )
 	pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( virtual/mysql )
-	postgres? ( >=virtual/postgresql-server-7.1 )
+	postgres? ( virtual/postgresql-base )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 RDEPEND="${DEPEND}
@@ -167,7 +167,7 @@ src_compile() {
 	fi
 
 	if use postgres ; then
-		if best_version '=virtual/postgresql-server-7.3*' ; then
+		if best_version '=virtual/postgresql-base-7.3*' ; then
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
 		else
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql/pgsql"
