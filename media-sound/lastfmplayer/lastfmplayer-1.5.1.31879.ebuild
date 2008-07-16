@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240-r1.ebuild,v 1.4 2008/07/16 19:26:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.1.31879.ebuild,v 1.1 2008/07/16 19:26:40 yngwin Exp $
 
 EAPI=1
 inherit eutils multilib qt4
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/l/lastfm/lastfm_${PV}.dfsg.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT="mirror"
 
@@ -67,7 +67,8 @@ src_install() {
 	bash debian/lastfm.install
 
 	# copied..
-	mv "${D}"/usr/bin/last{.,}fm
+	mv "${D}"/usr/bin/lastfm.sh "${D}"/usr/bin/lastfm
+	fperms 755 /usr/bin/lastfm
 	rm -f "${D}"/usr/share/lastfm/icons/{*profile24,systray_mac}.png
 }
 

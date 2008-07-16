@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240.ebuild,v 1.3 2008/03/11 20:05:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240.ebuild,v 1.4 2008/07/16 19:26:40 yngwin Exp $
 
+EAPI=1
 inherit eutils qt4
 
 MY_P="${P/lastfmplayer/last.fm}"
@@ -16,7 +17,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND="$(qt4_min_version 4.2)
+DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-sql:4 )
+			=x11-libs/qt-4.3* )
 	media-libs/libsamplerate
 	sci-libs/fftw
 	media-libs/libmad
