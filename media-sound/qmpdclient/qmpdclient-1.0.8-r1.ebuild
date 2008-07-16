@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8-r1.ebuild,v 1.3 2008/07/16 20:17:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8-r1.ebuild,v 1.4 2008/07/16 23:12:51 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils multilib qt4 toolchain-funcs
@@ -43,4 +43,3 @@ src_install() {
 	dobin qmpdclient || die "dobin failed"
 	make_desktop_entry qmpdclient "QMPDClient" ${PN} "Qt;AudioVideo;Audio"
 }
-
