@@ -1,12 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.9.ebuild,v 1.1 2008/04/21 11:24:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.9.ebuild,v 1.2 2008/07/16 20:17:17 yngwin Exp $
 
 EAPI=1
-
 inherit eutils multilib qt4 toolchain-funcs
 
-DESCRIPTION="An easy to use MPD client written in Qt4"
+DESCRIPTION="An easy-to-use Qt4 client for MPD"
 HOMEPAGE="http://havtknut.tihlde.org/qmpdclient"
 SRC_URI="http://havtknut.tihlde.org/${PN}/files/${P}.tar.gz"
 
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="|| ( >=x11-libs/qt-4.2:4 x11-libs/qt-gui:4 )"
+DEPEND="|| ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 )"
 
 src_unpack() {
 	unpack ${A}
@@ -39,5 +38,5 @@ src_install() {
 	done
 
 	dobin qmpdclient || die "dobin failed"
-	make_desktop_entry qmpdclient "QMPDClient" ${PN} "Qt;AudioVideo;Audio"
+	make_desktop_entry qmpdclient "QMPDClient" ${PN} "Qt;AudioVideo;Audio;"
 }

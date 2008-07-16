@@ -1,12 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8-r1.ebuild,v 1.2 2008/04/20 18:23:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8-r1.ebuild,v 1.3 2008/07/16 20:17:17 yngwin Exp $
 
 EAPI=1
-
 inherit eutils multilib qt4 toolchain-funcs
 
-DESCRIPTION="An easy to use MPD client written in Qt4"
+DESCRIPTION="An easy-to-use Qt4 client for MPD"
 HOMEPAGE="http://havtknut.tihlde.org/qmpdclient"
 SRC_URI="http://havtknut.tihlde.org/${PN}/files/${P}.tar.gz"
 
@@ -15,13 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="|| ( >=x11-libs/qt-4.2 x11-libs/qt-gui:4 )"
+DEPEND="|| ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Fix a crasher for am64 and possibly others. Bug #183593.
+	# Fix a crasher for amd64 and possibly others. Bug #183593.
 	epatch "${FILESDIR}"/${PV}-argc-ref-fix.patch
 
 	# Fix the install path
@@ -44,3 +43,4 @@ src_install() {
 	dobin qmpdclient || die "dobin failed"
 	make_desktop_entry qmpdclient "QMPDClient" ${PN} "Qt;AudioVideo;Audio"
 }
+

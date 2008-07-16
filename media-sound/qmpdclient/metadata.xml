@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<longdescription lang="en">
-		QMPDClient is an easy to use MPD client written in Qt 4
+		QMPDClient is an easy to use Qt4 client for MPD
 	</longdescription>
 </pkgmetadata>
