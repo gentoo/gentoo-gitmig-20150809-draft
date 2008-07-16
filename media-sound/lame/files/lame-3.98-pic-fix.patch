@@ -1,6 +1,6 @@
 diff -urp lame-398-orig/libmp3lame/i386/choose_table.nas lame-398/libmp3lame/i386/choose_table.nas
---- lame-398-orig/libmp3lame/i386/choose_table.nas	2008-07-16 13:53:55.000000000 +0200
-+++ lame-398/libmp3lame/i386/choose_table.nas	2008-07-16 14:06:08.000000000 +0200
+--- lame-398-orig/libmp3lame/i386/choose_table.nas	2008-07-16 21:47:19.000000000 +0200
++++ lame-398/libmp3lame/i386/choose_table.nas	2008-07-16 21:47:30.000000000 +0200
 @@ -111,33 +111,42 @@ choose_table_H
  	dw	0x1d16, 0x1e16, 0x1e17, 0x1f17, 0x1f17
  
@@ -242,8 +242,8 @@ diff -urp lame-398-orig/libmp3lame/i386/choose_table.nas lame-398/libmp3lame/i38
  
  	end
 diff -urp lame-398-orig/libmp3lame/i386/fft3dn.nas lame-398/libmp3lame/i386/fft3dn.nas
---- lame-398-orig/libmp3lame/i386/fft3dn.nas	2008-07-16 13:53:55.000000000 +0200
-+++ lame-398/libmp3lame/i386/fft3dn.nas	2008-07-16 13:54:07.000000000 +0200
+--- lame-398-orig/libmp3lame/i386/fft3dn.nas	2008-07-16 21:47:19.000000000 +0200
++++ lame-398/libmp3lame/i386/fft3dn.nas	2008-07-16 21:47:30.000000000 +0200
 @@ -24,26 +24,35 @@ D_1_0_0_0	dd	0.0		, 1.0
  
  	segment_code
@@ -436,8 +436,8 @@ diff -urp lame-398-orig/libmp3lame/i386/fft3dn.nas lame-398/libmp3lame/i386/fft3
  	popd	ebp, ebx, esi, edi
  endproc
 diff -urp lame-398-orig/libmp3lame/i386/fftsse.nas lame-398/libmp3lame/i386/fftsse.nas
---- lame-398-orig/libmp3lame/i386/fftsse.nas	2008-07-16 13:53:55.000000000 +0200
-+++ lame-398/libmp3lame/i386/fftsse.nas	2008-07-16 13:54:07.000000000 +0200
+--- lame-398-orig/libmp3lame/i386/fftsse.nas	2008-07-16 21:47:19.000000000 +0200
++++ lame-398/libmp3lame/i386/fftsse.nas	2008-07-16 21:48:10.000000000 +0200
 @@ -25,6 +25,12 @@ costab_fft:
  S_SQRT2	dd	1.414213562
  
@@ -460,8 +460,10 @@ diff -urp lame-398-orig/libmp3lame/i386/fftsse.nas lame-398/libmp3lame/i386/ffts
 +%assign _P 4*5
  
  	;2つ目のループ
- 	mov	eax,[esp+_P+4]	;eax=fz
- 	mov	ebp,[esp+_P+8]	;=n
+-	mov	eax,[esp+_P+4]	;eax=fz
+-	mov	ebp,[esp+_P+8]	;=n
++	mov	eax,[esp+_P+0]	;eax=fz
++	mov	ebp,[esp+_P+4]	;=n
  	shl	ebp,3
  	add	ebp,eax		; fn  = fz + n, この関数終了まで不変
 +	push	ebp
