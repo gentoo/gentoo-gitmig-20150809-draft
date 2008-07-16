@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/emutos
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.7 2008/02/26 08:11:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.8 2008/07/16 13:46:14 nixnut Exp $
+
+  16 Jul 2008; nixnut <nixnut@gentoo.org> emutos-0.8.3.ebuild:
+  Stable on ppc wrt bug 231876
 
 *emutos-0.8.3 (26 Feb 2008)
 
