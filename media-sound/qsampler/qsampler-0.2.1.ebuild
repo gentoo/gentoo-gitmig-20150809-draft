@@ -1,12 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.2 2008/01/27 11:01:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.3 2008/07/16 22:17:44 yngwin Exp $
 
 EAPI="1"
-
 inherit qt4
 
-DESCRIPTION="QSampler is a graphical frontend to the LinuxSampler engine."
+DESCRIPTION="A graphical frontend to the LinuxSampler engine"
 HOMEPAGE="http://www.linuxsampler.org"
 SRC_URI="http://download.linuxsampler.org/packages/${P}.tar.gz"
 
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +libgig"
 
-RDEPEND="$(qt4_min_version 4.1)
+RDEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )
 	>=media-libs/liblscp-0.5.5
 	libgig? ( >=media-libs/libgig-3.2.1 )
 	>=media-sound/linuxsampler-0.5
@@ -34,3 +33,4 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 	doman debian/${PN}.1
 }
+
