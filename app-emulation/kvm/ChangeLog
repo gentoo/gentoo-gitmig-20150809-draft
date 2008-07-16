@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.6 2008/07/15 20:16:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.7 2008/07/16 16:26:43 dang Exp $
+
+*kvm-71-r2 (16 Jul 2008)
+
+  16 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
+  files/kvm-71-qemu-configure.patch, -kvm-71-r1.ebuild, +kvm-71-r2.ebuild:
+  Fix audio configuration again.
+
+  - Add OSS by default (bug #231926)
+
+  - make the sdl flag enable sdl audio (bug #231925)
+
+  - Make it possible to enable multiple outputs (kvm configure was broken
+
+  before)
 
 *kvm-71-r1 (15 Jul 2008)
 

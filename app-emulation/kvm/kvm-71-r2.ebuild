@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71-r1.ebuild,v 1.1 2008/07/15 20:16:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71-r2.ebuild,v 1.1 2008/07/16 16:26:43 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -93,17 +93,19 @@ src_unpack() {
 src_compile() {
 	local mycc conf_opts audio_opts
 
+	audio_opts="oss"
 	use gnutls || conf_opts="$conf_opts --disable-vnc-tls"
 	use ncurses || conf_opts="$conf_opts --disable-curses"
 	use sdl || conf_opts="$conf_opts --disable-gfx-check --disable-sdl"
 	use alsa && audio_opts="alsa $audio_opts"
 	use esd && audio_opts="esd $audio_opts"
 	use pulseaudio && audio_opts="pa $audio_opts"
+	use sdl && audio_opts="sdl $audio_opts"
 	conf_opts="$conf_opts --disable-gcc-check"
 	conf_opts="$conf_opts --prefix=/usr"
-	conf_opts="$conf_opts --audio-drv-list=$audio_opts"
+	#conf_opts="$conf_opts --audio-drv-list=\"$audio_opts\""
 
-	./configure ${conf_opts} || die "econf failed"
+	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
 
 	emake libkvm || die "emake libkvm failed"
 
