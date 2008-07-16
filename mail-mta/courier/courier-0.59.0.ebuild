@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.11 2008/06/14 13:26:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.12 2008/07/16 16:32:11 chtekk Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -35,7 +35,7 @@ DEPEND="
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-1.2.11 )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( virtual/postgresql-base )
 	spell? ( virtual/aspell-dict )
 	fam? ( virtual/fam )
 	!mailwrapper? ( !virtual/mta )

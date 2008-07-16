@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.110 2008/06/14 13:26:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.111 2008/07/16 16:32:11 chtekk Exp $
+
+  16 Jul 2008; Luca Longinotti <chtekk@gentoo.org> courier-0.53.2-r1.ebuild,
+  courier-0.55.1-r1.ebuild, courier-0.59.0.ebuild:
+  Dep on PostgreSQL libs only.
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> courier-0.59.0.ebuild:
   Stable on ppc wrt bug 223767
