@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.4 2008/06/26 13:27:30 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.5 2008/07/16 00:56:51 vanquirius Exp $
+
+*vhba-1.1.0 (16 Jul 2008)
+
+  16 Jul 2008; Marcelo Goes <vanquirius@gentoo.org> +vhba-1.1.0.ebuild:
+  1.1.0 version bump. Thanks to Pham Ngoc Hai <pngochai at yahoo dot com> in
+  bug 198672.
 
   26 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> vhba-1.0.0.ebuild:
   Add ~amd64 keyword wrt bug #198672
