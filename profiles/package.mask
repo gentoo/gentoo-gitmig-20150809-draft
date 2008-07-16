@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8822 2008/07/15 05:38:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8823 2008/07/16 15:55:58 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -165,11 +165,6 @@ games-board/glchess
 # Jeroen Roovers <jer@gentoo.org> (23 Jun 2008)
 # Please read http://my.opera.com/desktopteam/blog before using these snapshots
 =www-client/opera-9.52_pre*
-
-# Steve Dibb <beandog@gentoo.org> (21 Jun 2008)
-# Needs testing; Added custom-cpuopts flag for more fine-grained
-# control.  Aside from that, everything is normal.
->=media-video/mplayer-1.0_rc2_p27120
 
 # Serkan Kaba <serkan@gentoo.org> (21 Jun 2008)
 # Masked since dev-java/sun-jmx sources
