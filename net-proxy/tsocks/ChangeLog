@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.22 2008/02/13 16:17:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.23 2008/07/16 21:19:45 bluebird Exp $
+
+  16 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  tsocks-1.8_beta5-r3.ebuild:
+  Stable on sparc, bug #231690
 
 *tsocks-1.8_beta5-r3 (13 Feb 2008)
 
