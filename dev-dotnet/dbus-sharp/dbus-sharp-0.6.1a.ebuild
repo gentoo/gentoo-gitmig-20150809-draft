@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/dbus-sharp-0.6.1a.ebuild,v 1.1 2008/01/28 18:11:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/dbus-sharp-0.6.1a.ebuild,v 1.2 2008/07/16 12:49:32 nixnut Exp $
 
 inherit mono
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ndesk.org/archive/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.2.4
