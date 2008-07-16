@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r2.ebuild,v 1.2 2008/06/15 01:14:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r3.ebuild,v 1.1 2008/07/16 22:47:37 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -13,11 +13,12 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl avahi dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X zeroconf"
+IUSE="acl avahi dbus gnutls java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
+	gnutls? ( net-libs/gnutls )
 	java? ( >=virtual/jre-1.4 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	kerberos? ( virtual/krb5 )
@@ -28,8 +29,9 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	png? ( >=media-libs/libpng-1.2.1 )
 	python? ( dev-lang/python )
 	slp? ( >=net-libs/openslp-1.0.4 )
-	ssl? ( net-libs/gnutls )
+	ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8g ) )
 	tiff? ( >=media-libs/tiff-3.5.5 )
+	xinetd? ( sys-apps/xinetd )
 	zeroconf? ( !avahi? ( net-misc/mDNSResponder ) )
 	app-text/libpaper
 	dev-libs/libgcrypt"
@@ -103,11 +105,11 @@ src_unpack() {
 	# CVE-2008-1722 security patch, bug #217232
 	epatch "${FILESDIR}/${PN}-1.3.7-CVE-2008-1722.patch"
 
-	# fix compilation against glibc-2.8, bug #225421
-	epatch "${FILESDIR}/${PN}-1.3.7-peercred.patch"
-
-	# fix IPP authentification, upstream bug STR #2750 (already fixed in CUPS SVN)
+	# Already fixed in CUPS SVN
+	# fix IPP authentification, upstream bug STR #2750
 	epatch "${FILESDIR}/${PN}-1.3.7-str2750.patch"
+	# fix compilation against glibc-2.8, upstream bug STR #2860
+	epatch "${FILESDIR}/${PN}-1.3.7-str2860.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -139,6 +141,16 @@ src_compile() {
 		myconf="${myconf} --disable-dnssd"
 	fi
 
+	if use ssl || use gnutls ; then
+		myconf="${myconf} \
+			$(use_enable gnutls) \
+			$(use_enable !gnutls openssl)"
+	else
+		myconf="${myconf} \
+			--disable-gnutls \
+			--disable-openssl"
+	fi
+
 	econf \
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
@@ -147,23 +159,21 @@ src_compile() {
 		--with-docdir=/usr/share/cups/html \
 		--with-languages=${LINGUAS} \
 		--with-system-groups=lpadmin \
+		--with-xinetd=/etc/xinetd.d \
 		$(use_enable acl) \
 		$(use_enable dbus) \
 		$(use_enable jpeg) \
 		$(use_enable kerberos gssapi) \
 		$(use_enable ldap) \
-		$(use_enable nls) \
 		$(use_enable pam) \
 		$(use_enable png) \
 		$(use_enable slp) \
-		$(use_enable ssl) \
 		$(use_enable static) \
 		$(use_enable tiff) \
 		$(use_with java) \
 		$(use_with perl) \
 		$(use_with php) \
 		$(use_with python) \
-		--enable-gnutls \
 		--enable-libpaper \
 		--enable-threads \
 		--disable-pdftops \
@@ -198,17 +208,21 @@ src_install() {
 	# install our pam script
 	pamd_mimic_system cups auth account
 
-	# correct path
-	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" "${D}"/etc/xinetd.d/cups-lpd
-	# it is safer to disable this by default, bug 137130
-	grep -w 'disable' "${D}"/etc/xinetd.d/cups-lpd || \
-		sed -i -e "s:}:\tdisable = yes\n}:" "${D}"/etc/xinetd.d/cups-lpd
+	if use xinetd ; then
+		# correct path
+		sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" "${D}"/etc/xinetd.d/cups-lpd
+		# it is safer to disable this by default, bug #137130
+		grep -w 'disable' "${D}"/etc/xinetd.d/cups-lpd || \
+			sed -i -e "s:}:\tdisable = yes\n}:" "${D}"/etc/xinetd.d/cups-lpd
+	else
+		rm -rf "${D}"/etc/xinetd.d
+	fi
 
 	# install pdftops filter
 	exeinto /usr/libexec/cups/filter/
 	newexe "${FILESDIR}"/pdftops-1.20.gentoo pdftops
 
-	# only for gs-esp this is correct, see bug 163897
+	# only for gs-esp this is correct, see bug #163897
 	if has_version app-text/ghostscript-gpl || has_version app-text/ghostscript-gnu ; then
 		sed -i -e "s:#application/vnd.cups-postscript:application/vnd.cups-postscript:" "${D}"/etc/cups/mime.convs
 	fi

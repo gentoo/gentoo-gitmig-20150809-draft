@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.6 2008/06/15 01:14:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.7 2008/07/16 22:47:37 tgurr Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -81,9 +81,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# upstream does not acknowledge bindnow as a solution
-	epatch "${FILESDIR}"/cups-1.2.0-bindnow.patch
-
 	# CVE-2007-4045 security patch, bug #199195
 	epatch "${FILESDIR}"/${PN}-1.2.12-CVE-2007-4045.patch
 	# CVE-2007-4351 security patch, bug #196736
@@ -109,7 +106,6 @@ src_compile() {
 		--with-system-groups=lpadmin \
 		--localstatedir=/var \
 		--with-docdir=/usr/share/cups/html \
-		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
 		--enable-gnutls \
