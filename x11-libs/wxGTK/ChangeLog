@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.192 2008/06/29 05:22:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.193 2008/07/16 12:47:00 aballier Exp $
+
+  16 Jul 2008; Alexis Ballier <aballier@gentoo.org> wxGTK-2.6.4.0-r4.ebuild,
+  wxGTK-2.8.8.0.ebuild:
+  keyword ~x86-fbsd, thanks to Henning Schild <henning@wh9.tu-dresden.de>,
+  bug #231620
 
 *wxGTK-2.8.8.0 (29 Jun 2008)
 
