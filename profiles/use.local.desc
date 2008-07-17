@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3630 2008/07/16 15:51:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3631 2008/07/17 03:13:24 darkside Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -137,6 +137,8 @@ app-editors/xemacs:xft - Compile with support for Xft client-side font rendering
 app-editors/xemacs:xim - Enable X11 XiM input method
 app-editors/xmlcopyeditor:guidexml - Install GuideXML templates to work with Gentoo official docs
 app-emacs/auctex:preview-latex - Use bundled preview-latex
+app-emulation/basiliskII-jit:fbdev - Enables framebuffer support
+app-emulation/basiliskII-jit:jit - Enables the jit compiler
 app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emacs/easypg:gnus - Include support for the Gnus newsreader
