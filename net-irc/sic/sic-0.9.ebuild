@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-0.9.ebuild,v 1.2 2007/10/25 17:24:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-0.9.ebuild,v 1.3 2008/07/17 18:48:43 aballier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

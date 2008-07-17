@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/sic
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.2 2007/10/25 17:24:37 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.3 2008/07/17 18:48:43 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org> sic-0.9.ebuild:
+  keyword ~x86-fbsd, thanks to Davide Italiano <dav_it@gentoo.org>, bug
+  #232011
 
   25 Oct 2007; Raúl Porcel <armin76@gentoo.org> sic-0.9.ebuild:
   Fix HOMEPAGE
