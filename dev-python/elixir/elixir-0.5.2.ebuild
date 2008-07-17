@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.5.2.ebuild,v 1.2 2008/05/05 20:58:11 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.5.2.ebuild,v 1.3 2008/07/17 17:32:22 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -18,7 +18,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-python/sqlalchemy-0.3.0"
+RDEPEND=">=dev-python/sqlalchemy-0.3.9"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( >=dev-python/docutils-0.4-r3
