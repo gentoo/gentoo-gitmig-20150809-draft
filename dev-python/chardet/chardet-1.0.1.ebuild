@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-1.0.1.ebuild,v 1.1 2008/06/05 20:50:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-1.0.1.ebuild,v 1.2 2008/07/17 19:02:06 aballier Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://chardet.feedparser.org/"
 SRC_URI="http://chardet.feedparser.org/download/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

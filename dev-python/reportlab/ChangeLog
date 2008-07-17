@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.48 2008/07/12 20:19:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.49 2008/07/17 18:59:13 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org> reportlab-2.1.ebuild:
+  keyword ~x86-fbsd
 
   12 Jul 2008; Rob Cakebread <pythonhead@gentoo.org> -reportlab-2.0.ebuild:
   Removed older version. Closes #150877
