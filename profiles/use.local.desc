@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3633 2008/07/17 21:38:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3634 2008/07/17 21:48:24 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -40,8 +40,6 @@ app-arch/dump:ermt - encrypted rmt support
 app-arch/file-roller:nautilus - Enable plugin for integrating into nautilus
 app-arch/rpm:file - add magic file support
 app-arch/rpm:neon - include support for neon
-app-arch/squeeze:pathbar - Include pathbar feature
-app-arch/squeeze:toolbar - Include toolbar feature
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
 app-backup/bacula:bacula-console - Build (GUI) console program(s)
