@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.5 2008/07/15 17:14:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p02.ebuild,v 1.6 2008/07/17 13:46:19 bicatali Exp $
 
 EAPI="1"
 
@@ -130,6 +130,7 @@ src_compile() {
 	if use global; then
 		export G4LIB_USE_GRANULAR=y
 		emake global || die "Building global libraries failed"
+		emake || die "Rebuilding shared geant failed"
 	fi
 
 	if use static; then
@@ -222,7 +223,4 @@ src_install() {
 pkg_postinst() {
 	elog "Geant4 projects are by default build in \$HOME/geant4."
 	elog "If you want to change, set \$G4WORKDIR to another directory."
-	elog
-	elog "Help us to improve the ebuild and dependencies in"
-	elog "http://bugs.gentoo.org/show_bug.cgi?id=212221"
 }
