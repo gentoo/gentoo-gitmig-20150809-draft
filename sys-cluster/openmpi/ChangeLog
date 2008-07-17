@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.29 2008/07/14 18:19:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.30 2008/07/17 19:45:20 corsair Exp $
+
+  17 Jul 2008; Markus Rothe <corsair@gentoo.org> openmpi-1.2.6-r1.ebuild:
+  Stable on ppc64; bug #231251
 
   14 Jul 2008; Raúl Porcel <armin76@gentoo.org> openmpi-1.2.6-r1.ebuild:
   alpha stable wrt #231251
