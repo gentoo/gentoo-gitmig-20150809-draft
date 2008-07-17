@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.59 2008/06/25 04:28:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.60 2008/07/17 08:10:43 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org> grass-6.2.1.ebuild:
+  Fix deps wrt ffmpeg: 0.4.9_p20070616-r3 to -r20 doesn't have swscaler, -r1
+  and -r2 have it, part of bug #231831.
 
   25 Jun 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
   Fixed oversight (bug #229297) and checked for any wxpython use flag issues;

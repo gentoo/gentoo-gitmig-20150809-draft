@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.12 2008/06/24 07:45:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.13 2008/07/17 08:10:43 aballier Exp $
 
 inherit eutils libtool
 
@@ -26,7 +26,9 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	    sys-apps/man-db )
 	sci-libs/gdal
 	>=sci-libs/proj-4.4.7
-	ffmpeg? ( <=media-video/ffmpeg-0.4.9_p20070616 )
+	ffmpeg? ( <media-video/ffmpeg-0.4.9_p20070616-r20
+		!=media-video/ffmpeg-0.4.9_p20070616-r1
+		!=media-video/ffmpeg-0.4.9_p20070616-r2	)
 	fftw? ( sci-libs/fftw )
 	gmath? ( virtual/blas
 	    virtual/lapack )
