@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta2.ebuild,v 1.2 2008/07/17 07:57:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta2.ebuild,v 1.3 2008/07/17 22:27:15 aballier Exp $
 
 EAPI="1"
 
@@ -199,6 +199,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/vlm.patch"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4 ${WORKDIR}/${PN}-m4" eautoreconf
 }
