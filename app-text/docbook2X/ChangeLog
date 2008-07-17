@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.28 2008/06/29 10:17:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.29 2008/07/17 19:06:24 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  docbook2X-0.8.8-r2.ebuild:
+  keyword ~x86-fbsd
 
   29 Jun 2008; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r2.ebuild:
   sparc stable wrt #222041
