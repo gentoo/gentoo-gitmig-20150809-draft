@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imgseek
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.15 2008/02/29 19:54:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.16 2008/07/17 02:28:23 dirtyepic Exp $
+
+  17 Jul 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/imgseek-0.8.6-gcc43.patch, imgseek-0.8.6-r1.ebuild:
+  Add patch to fix build with GCC 4.3. Bug #231219.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> imgseek-0.8.6-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
