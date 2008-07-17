@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.3 2008/07/16 22:17:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.4 2008/07/17 23:04:19 mr_bones_ Exp $
 
 EAPI="1"
 inherit qt4
@@ -33,4 +33,3 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 	doman debian/${PN}.1
 }
-
