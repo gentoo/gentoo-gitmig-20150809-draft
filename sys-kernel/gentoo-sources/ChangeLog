@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.533 2008/07/17 18:55:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.534 2008/07/17 19:19:58 klausman Exp $
+
+  17 Jul 2008; Tobias Klausmann <klausman@gentoo.org>
+  gentoo-sources-2.6.26.ebuild:
+  Keyworded on alpha
 
   17 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.26.ebuild:
