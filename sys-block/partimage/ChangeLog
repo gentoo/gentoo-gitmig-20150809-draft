@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.36 2008/06/15 09:45:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.37 2008/07/17 02:15:20 dirtyepic Exp $
+
+  17 Jul 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/partimage-0.6.7-gcc43.patch, partimage-0.6.7.ebuild:
+  Add patch to fix build errors with GCC 4.3. Bug #227231.
 
   15 Jun 2008; Samuli Suominen <drac@gentoo.org> -partimage-0.6.4-r3.ebuild,
   -partimage-0.6.4-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.7.ebuild,v 1.3 2008/04/07 20:57:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.7.ebuild,v 1.4 2008/07/17 02:15:20 dirtyepic Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -55,6 +55,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-chown.patch || die
 	epatch "${FILESDIR}"/${PN}-0.6.6-disable_header_check.patch || die
 	epatch "${FILESDIR}"/${P}-datadir-path.patch || die
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
