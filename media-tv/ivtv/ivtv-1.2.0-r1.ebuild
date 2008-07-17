@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.2.0.ebuild,v 1.2 2008/06/30 19:38:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.2.0-r1.ebuild,v 1.1 2008/07/17 14:37:55 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -57,6 +57,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.2.0-v4l2-dbg-include.patch
+	epatch "${FILESDIR}"/${PN}-1.1.0-headers.patch
 }
 
 src_compile() {
