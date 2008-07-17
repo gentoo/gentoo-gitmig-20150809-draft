@@ -3,4 +3,8 @@
 <pkgmetadata>
 	<herd>accessibility</herd>
 	<herd>java</herd>
+	<use>
+		<flag name='jsapi'>build Java Speech API (JSAPI)</flag>
+		<flag name='mbrola'>Adds support for mbrola voices</flag>
+	</use>
 </pkgmetadata>

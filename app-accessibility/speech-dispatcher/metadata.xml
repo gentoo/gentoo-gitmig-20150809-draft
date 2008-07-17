@@ -6,4 +6,7 @@
 <maintainer>
 	<email>williamh@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='flite'>Adds support for flite speech engine</flag>
+</use>
 </pkgmetadata>

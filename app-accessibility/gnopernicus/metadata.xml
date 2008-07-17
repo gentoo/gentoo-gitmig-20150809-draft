@@ -12,4 +12,7 @@
     and blind users access to standard GTK+2 and Java-based GUI
     applications via speech and Braille output.
   </longdescription>
+  <use>
+	  <flag name='brltty'>Adds support for braille displays using brltty</flag>
+  </use>
 </pkgmetadata>

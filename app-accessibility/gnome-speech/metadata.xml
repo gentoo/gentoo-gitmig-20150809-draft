@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>java</herd>
 	<herd>gnome-accessibility</herd>
+	<use>
+		<flag name='freetts'>Adds support for the freetts speech driver</flag>
+	</use>
 </pkgmetadata>
