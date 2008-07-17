@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.185 2008/05/25 07:01:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.186 2008/07/17 21:34:13 cardoe Exp $
+
+  17 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   25 May 2008; Markus Rothe <corsair@gentoo.org> syslog-ng-2.0.9.ebuild:
   Stable on ppc64; bug #223241

@@ -6,4 +6,7 @@
 	<email>mr_bones_@gentoo.org</email>
 	<name>Michael Sterrett</name>
 </maintainer>
+<use>
+	<flag name='spoof-source'>Enable support for spoofed source addresses</flag>
+</use>
 </pkgmetadata>

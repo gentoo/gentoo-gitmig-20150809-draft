@@ -19,4 +19,11 @@
 Conky is a system monitor that sits in the corner of your desktop.
 It is a fork of Torsmo that is actually maintained.
 </longdescription>
+<use>
+	<flag name='audacious'>enable monitoring of audio tracks that are playing <pkg>media-sound/bmpx</pkg></flag>
+	<flag name='bmpx'>enable monitoring of audio tracks that are playing <pkg>media-sound/bmpx</pkg></flag>
+	<flag name='mpd'>enable monitoring mpd controlled music <pkg>media-sound/mpd</pkg></flag>
+	<flag name='nano-syntax'>enable syntax highlighting for <pkg>app-editors/nano</pkg></flag>
+	<flag name='smapi'>enable support for smapi</flag>
+</use>
 </pkgmetadata>

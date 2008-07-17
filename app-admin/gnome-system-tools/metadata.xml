@@ -9,4 +9,7 @@
     thought to help from the new Linux or UNIX user to the system
     administrators.
   </longdescription>
+  <use>
+	  <flag name='nfs'>Adds support for NFS shares</flag>
+  </use>
 </pkgmetadata>

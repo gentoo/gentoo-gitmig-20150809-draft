@@ -5,5 +5,8 @@
 	<maintainer>
 		<email>hawking@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name='ipfilter'>Enable ipfilter firewall support (only for *bsd)</flag>
+	</use>
 </pkgmetadata>
 
