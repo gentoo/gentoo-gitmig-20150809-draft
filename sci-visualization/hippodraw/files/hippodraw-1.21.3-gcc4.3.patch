@@ -199,3 +199,13 @@ diff -Naur HippoDraw-1.21.3/qt/QtViewImp.cxx HippoDraw-1.21.3.new/qt/QtViewImp.c
  
  using namespace hippodraw;
  
+--- HippoDraw-1.21.3/transforms/PeriodicBinaryTransform.cxx	2008-07-15 22:48:51.000000000 +0100
++++ HippoDraw-1.21.3/transforms/PeriodicBinaryTransform.cxx	2008-07-15 22:49:25.000000000 +0100
+@@ -32,6 +32,7 @@
+ #include <stdexcept>
+ #include <sstream>
+ #include <cassert>
++#include <cstring>
+ 
+ using namespace hippodraw;
+ 

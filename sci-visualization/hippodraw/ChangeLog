@@ -1,6 +1,17 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.5 2008/07/08 01:31:12 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.6 2008/07/17 17:15:14 bicatali Exp $
+
+*hippodraw-1.21.3-r1 (17 Jul 2008)
+
+  17 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/hippodraw-1.21.3-gcc4.3.patch,
+  +files/hippodraw-1.21.3-minuit2.patch,
+  +files/hippodraw-1.21.3-wcslib.patch, metadata.xml,
+  +hippodraw-1.21.3-r1.ebuild:
+  Revision to add WCS support, added qt4 support, fixed some configure
+  options to avoid automagics, and various sed fixes. Also added use local
+  flag in metadata.xml
 
   08 Jul 2008; Markus Dittrich <markusle@gentoo.org>
   +files/hippodraw-1.21.3-test-fix.patch, hippodraw-1.21.3.ebuild:
