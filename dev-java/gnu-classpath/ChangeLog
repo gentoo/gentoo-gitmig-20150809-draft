@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.83 2008/07/15 21:55:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.84 2008/07/17 05:02:59 darkside Exp $
+
+  17 Jul 2008; Jeremy Olexa <darkside@gentoo.org>
+  gnu-classpath-0.97.2.ebuild:
+  Fix up SRC_URI, upstream calls gnu-classpath by just classpath
 
 *gnu-classpath-0.97.2 (15 Jul 2008)
 

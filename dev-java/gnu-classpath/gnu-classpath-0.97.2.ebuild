@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2.ebuild,v 1.1 2008/07/15 21:27:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2.ebuild,v 1.2 2008/07/17 05:02:59 darkside Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib
 
 MY_P=${P/gnu-/}
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java language"
-SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://gnu/classpath/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/classpath"
 
 LICENSE="GPL-2-with-linking-exception"
