@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.4 2008/07/17 21:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.5 2008/07/17 23:03:35 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC CXX
-	
+
 	# turn off the hackish optimization setting code (bug #230127)
 	scons configure \
 		strip=false \
