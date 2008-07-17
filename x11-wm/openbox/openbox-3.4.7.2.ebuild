@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.7.2.ebuild,v 1.2 2008/07/10 12:14:49 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.7.2.ebuild,v 1.3 2008/07/17 12:03:29 omp Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 pkg_setup() {
-	if has_version >=x11-libs/pango-1.20 && ! built_with_use x11-libs/pango X; then
+	if ! built_with_use --missing true x11-libs/pango X; then
 		eerror "Please rebuild x11-libs/pango with the X USE flag enabled."
 		die "x11-libs/pango needs X USE flag"
 	fi
