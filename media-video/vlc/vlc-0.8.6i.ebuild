@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6i.ebuild,v 1.4 2008/07/15 17:47:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6i.ebuild,v 1.5 2008/07/17 07:57:48 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -40,7 +40,9 @@ optimisememory libnotify jack musepack x264 dc1394 gnome xulrunner"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
-		<media-video/ffmpeg-0.4.9_p20070616-r1
+		<media-video/ffmpeg-0.4.9_p20070616-r20
+		!=media-video/ffmpeg-0.4.9_p20070616-r1
+		!=media-video/ffmpeg-0.4.9_p20070616-r2
 		cdda? ( >=dev-libs/libcdio-0.71
 			cddb? ( >=media-libs/libcddb-1.2.0 ) )
 		live? ( >=media-plugins/live-2005.01.29 )

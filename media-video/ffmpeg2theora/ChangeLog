@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.23 2008/06/13 21:40:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.24 2008/07/17 08:02:42 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg2theora-0.19.ebuild, ffmpeg2theora-0.20.ebuild,
+  ffmpeg2theora-0.21.ebuild, ffmpeg2theora-9999.ebuild:
+  Fix deps wrt ffmpeg: 0.4.9_p20070616-r3 to -r20 doesn't have swscaler, -r1
+  and -r2 have it, part of bug #231831.
 
 *ffmpeg2theora-0.21 (13 Jun 2008)
 

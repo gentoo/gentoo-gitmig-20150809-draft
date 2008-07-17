@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.20.ebuild,v 1.3 2008/01/05 16:11:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.20.ebuild,v 1.4 2008/07/17 08:02:42 aballier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=media-video/ffmpeg-0.4.9_p20070616-r1
+RDEPEND=">=media-video/ffmpeg-0.4.9_p20070616-r20
 	>=media-libs/libvorbis-1.1
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.0_beta1"
