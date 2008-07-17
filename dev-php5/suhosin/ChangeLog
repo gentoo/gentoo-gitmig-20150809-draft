@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.33 2008/07/14 17:33:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.34 2008/07/17 18:55:25 corsair Exp $
+
+  17 Jul 2008; Markus Rothe <corsair@gentoo.org> suhosin-0.9.24.ebuild:
+  Stable on ppc64; bug #230816
 
   14 Jul 2008; nixnut <nixnut@gentoo.org> suhosin-0.9.24.ebuild:
   Stable on ppc wrt bug 230816
