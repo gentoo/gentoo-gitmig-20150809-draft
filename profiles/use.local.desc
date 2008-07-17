@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3631 2008/07/17 03:13:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3632 2008/07/17 16:45:18 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2038,11 +2038,12 @@ sci-physics/root:clarens - Adds support for Clarens Grid Web services and PROOF 
 sci-physics/root:geant4 - Adds navigator for the GEANT4 simulation toolkit
 sci-physics/root:math - Build extra math and numerical libraries for root (needs gsl)
 sci-physics/root:xrootd - Adds xrootd support, a low latency file server
-sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
-sci-visualization/hippodraw:numarray - Add numarray python array support
-sci-visualization/hippodraw:numpy - Add numpy support
-sci-visualization/hippodraw:root - Add root i/o, and minuit support
-sci-visualization/labplot:R - Enable R support
+sci-visualization/hippodraw:fits - Adds FITS format support via cfitsio/pyfits
+sci-visualization/hippodraw:numarray - Adds numarray python array support
+sci-visualization/hippodraw:numpy - Adds numpy python array support
+sci-visualization/hippodraw:root - Adds ROOT i/o support
+sci-visualization/hippodraw:wcs - Adds World Coordinate System support
+sci-visualization/labplot:R - Adds statistical R support
 sci-visualization/labplot:cdf - Adds cdf data exchange format support
 sci-visualization/labplot:kexi - Import and export data from/to MySQL, PostgreSQL etc. via Kexi (app-office/kexi).
 sci-visualization/labplot:qhull - Adds media-libs/qhull (geometric extensions) support
