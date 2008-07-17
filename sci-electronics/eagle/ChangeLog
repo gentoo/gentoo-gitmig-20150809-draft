@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.12 2008/02/29 20:38:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.13 2008/07/17 00:12:09 nixphoeni Exp $
+
+  17 Jul 2008; Joe Sapp <nixphoeni@gentoo.org> ChangeLog:
+  Revised ebuild for eagle version 5, which uses a new packaging system and
+  adds some documentation. Thanks to Lukas Sandström for the bump notice and
+  ebuild help on bug #221847.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> eagle-4.16_p1.ebuild,
   eagle-4.16_p2.ebuild, eagle-4.16_p2-r2.ebuild:
