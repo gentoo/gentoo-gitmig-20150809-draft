@@ -1,14 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.16 2005/07/31 12:38:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.17 2008/07/17 09:38:08 pva Exp $
+
+# @ECLASS: bash-completion.eclass
+# @MAINTAINER:
+# shell-tools@gentoo.org.
 #
+# Original author: Aaron Walker <ka0ttic@gentoo.org>
+# @BLURB: An Interface for installing contributed bash-completion scripts
+# @DESCRIPTION:
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
 # bash-completion scripts.
-#
-# Author: Aaron Walker <ka0ttic@gentoo.org>
-#
-# Please assign any bug reports to shell-tools@gentoo.org.
+
+# @ECLASS-VARIABLE: BASH_COMPLETION_NAME
+# @DESCRIPTION:
+# Install the completion script with this name (see also dobashcompletion)
 
 EXPORT_FUNCTIONS pkg_postinst
 
@@ -23,15 +30,16 @@ RDEPEND="bash-completion?
 			)
 		)"
 
-# dobashcompletion <file> <new file>
-#	First arg, <file>, is required and is the location of the bash-completion
+# @FUNCTION: dobashcompletion
+# @USAGE: < file > [ new_file ]
+# @DESCRIPTION:
+# First arg, <file>, is required and is the location of the bash-completion
 # script to install.  If the variable BASH_COMPLETION_NAME is set in the
 # ebuild, dobashcompletion will install <file> as
 # /usr/share/bash-completion/$BASH_COMPLETION_NAME. If it is not set,
-# dobashcompletion will check if a second arg ($2) was passed, installing as
+# dobashcompletion will check if a second arg [new_file] was passed, installing as
 # the specified name.  Failing both these checks, dobashcompletion will
 # install the file as /usr/share/bash-completion/${PN}.
-
 dobashcompletion() {
 	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
 	[[ -z "${BASH_COMPLETION_NAME}" ]] && BASH_COMPLETION_NAME="${2:-${PN}}"
@@ -42,6 +50,9 @@ dobashcompletion() {
 	fi
 }
 
+# @FUNCTION: bash-completion_pkg_postinst
+# @DESCRIPTION:
+# The bash-completion pkg_postinst function, which is exported
 bash-completion_pkg_postinst() {
 	if useq bash-completion ; then
 		echo
