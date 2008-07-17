@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pouetchess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.9 2008/02/29 18:57:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.10 2008/07/17 21:52:15 mr_bones_ Exp $
+
+  17 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  pouetchess-0.2.0-r1.ebuild:
+  turn off the hackish optimization setting code (bug #230127)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> pouetchess-0.2.0-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
