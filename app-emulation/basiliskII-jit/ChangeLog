@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/basiliskII-jit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.9 2008/04/21 16:42:52 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.10 2008/07/17 03:16:13 darkside Exp $
+
+*basiliskII-jit-1.0_pre20060501 (17 Jul 2008)
+
+  17 Jul 2008; Jeremy Olexa <darkside@gentoo.org>
+  +basiliskII-jit-1.0_pre20060501.ebuild:
+  Version bump of sorts, merged code bases resulted in a lower version number
+  upstream. Thanks to Eric me262 Mason for the ebuild in bug #227763
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
