@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.4 2008/07/12 08:43:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.5 2008/07/17 07:58:38 aballier Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dv xml jack gtk sdl vorbis sox quicktime mmx lame xine lame ogg theora
 xine ffmpeg libsamplerate qt3"
 
-DEPEND="ffmpeg? ( media-video/ffmpeg )
+DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r3 )
 	dv?	( >=media-libs/libdv-0.104 )
 	xml?	( >=dev-libs/libxml2-2.5 )
 	ogg?	( >=media-libs/libogg-1.1.3 )
@@ -81,7 +81,7 @@ src_compile() {
 			$(use_enable xml westley)
 			$(use_enable xine)"
 
-	use ffmpeg && has_version ">=media-video/ffmpeg-0.4.9_p20070616-r1" &&
+	use ffmpeg && has_version ">=media-video/ffmpeg-0.4.9_p20070616-r20" &&
 		myconf="${myconf} --avformat-swscale"
 
 	(use quicktime && use dv) ||  myconf="${myconf} --disable-kino"

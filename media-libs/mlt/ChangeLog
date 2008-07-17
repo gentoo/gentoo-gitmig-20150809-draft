@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.23 2008/07/12 08:43:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.24 2008/07/17 07:58:38 aballier Exp $
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org> mlt-0.2.4-r2.ebuild:
+  Fix deps wrt ffmpeg: 0.4.9_p20070616-r3 to -r20 doesn't have swscaler, -r1
+  and -r2 have it, part of bug #231831.
 
   12 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   +files/mlt-0.2.4-avfreestatic.patch, mlt-0.2.4-r2.ebuild:
