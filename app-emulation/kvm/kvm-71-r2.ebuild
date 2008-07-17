@@ -1,10 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71-r2.ebuild,v 1.1 2008/07/16 16:26:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-71-r2.ebuild,v 1.2 2008/07/17 13:55:58 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+# Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
+PATCHSET="kvm-patches-20080716"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PATCHSET}.tar.gz"
 
 DESCRIPTION="Kernel-based Virtual Machine userland tools"
 HOMEPAGE="http://kvm.qumranet.com/kvmwiki"
@@ -78,16 +81,16 @@ src_unpack() {
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' qemu/Makefile
 
 	epatch \
-		"${FILESDIR}"/kvm-45-qemu-configure.patch \
-		"${FILESDIR}"/kvm-61-qemu-kvm.patch \
-		"${FILESDIR}"/kvm-57-qemu-kvm-cmdline.patch \
-		"${FILESDIR}"/kvm-57-kernel-longmode.patch \
-		"${FILESDIR}"/kvm-68-libkvm-no-kernel.patch \
-		"${FILESDIR}"/kvm-69-qemu-no-blobs.patch \
-		"${FILESDIR}"/kvm-69-qemu-ifup_ifdown.patch \
-		"${FILESDIR}"/kvm-70-block-rw-range-check.patch \
-		"${FILESDIR}"/kvm-71-qemu-kvm-doc.patch \
-		"${FILESDIR}"/kvm-71-qemu-configure.patch
+		"${WORKDIR}/${PATCHSET}"/kvm-45-qemu-configure.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-61-qemu-kvm.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-57-qemu-kvm-cmdline.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-57-kernel-longmode.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-68-libkvm-no-kernel.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-69-qemu-no-blobs.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-69-qemu-ifup_ifdown.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-70-block-rw-range-check.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-71-qemu-kvm-doc.patch \
+		"${WORKDIR}/${PATCHSET}"/kvm-71-qemu-configure.patch
 }
 
 src_compile() {
