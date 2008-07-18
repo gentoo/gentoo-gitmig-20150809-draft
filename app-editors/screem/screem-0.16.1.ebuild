@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.9 2008/07/15 16:21:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.10 2008/07/18 07:53:47 opfer Exp $
 
 inherit gnome2 autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc ~x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="doc ssl zlib dbus spell"
 
 RDEPEND=">=dev-libs/glib-2.6.0
