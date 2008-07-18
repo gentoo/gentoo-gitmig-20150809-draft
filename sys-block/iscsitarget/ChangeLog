@@ -1,6 +1,16 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.13 2008/06/14 08:18:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.14 2008/07/18 16:03:37 flameeyes Exp $
+
+*iscsitarget-0.4.16_p162 (18 Jul 2008)
+
+  18 Jul 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/iscsitarget-0.4.17-build.patch, +files/ietd-init.d-2,
+  +iscsitarget-0.4.16_p162.ebuild:
+  Add a snapshot of current SVN for iscsitarget, this has the proper fixes
+  for glibc 2.8 rather than our hacks, and also builds and runs fine with
+  kernel 2.6.26. Also update to the new init script provided by Natanael
+  Copa in bug #197472 that is POSIX compatible.
 
 *iscsitarget-0.4.16 (14 Jun 2008)
 
