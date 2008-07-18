@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tapeutils
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tapeutils/ChangeLog,v 1.1 2006/06/07 00:43:43 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tapeutils/ChangeLog,v 1.2 2008/07/18 23:04:52 cla Exp $
+
+  18 Jul 2008; Dawid Węgliński <cla@gentoo.org> tapeutils-0.4.ebuild:
+  Add ~amd64 keyword (bug #225989)
 
 *tapeutils-0.4 (07 Jun 2006)
 
