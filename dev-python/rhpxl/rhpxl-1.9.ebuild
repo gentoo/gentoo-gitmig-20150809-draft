@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/rhpxl-0.51.ebuild,v 1.1 2008/03/20 00:17:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/rhpxl-1.9.ebuild,v 1.1 2008/07/18 02:28:08 darkside Exp $
 
 inherit eutils rpm
 
@@ -31,7 +31,7 @@ src_unpack() {
 	rpm_src_unpack
 	cd "${S}"
 	epatch "${FILESDIR}"/0.32-use-radeon-ddc.patch
-	epatch "${FILESDIR}"/rhpxl-0.51-serverflags.patch
+#	epatch "${FILESDIR}"/rhpxl-0.51-serverflags.patch
 }
 
 src_install() {

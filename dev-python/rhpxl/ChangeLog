@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rhpxl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.6 2008/03/20 00:17:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.7 2008/07/18 02:28:08 darkside Exp $
+
+*rhpxl-1.9 (18 Jul 2008)
+
+  18 Jul 2008; Jeremy Olexa <darkside@gentoo.org> -rhpxl-0.51.ebuild,
+  +rhpxl-1.9.ebuild:
+  Version bump. 0.51 was not on upstream mirrors anymore so it was removed
 
 *rhpxl-0.51 (20 Mar 2008)
 
