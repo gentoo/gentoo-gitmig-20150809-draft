@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.1.ebuild,v 1.1 2008/07/10 17:04:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.1.ebuild,v 1.2 2008/07/18 12:45:45 markusle Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="doc java jpeg lapack minimal nls png readline tk X"
+IUSE="doc java jpeg lapack minimal nls png readline tk X cairo"
 
 # common depends
 CDEPEND="dev-lang/perl
@@ -21,6 +21,7 @@ CDEPEND="dev-lang/perl
 	app-arch/bzip2
 	virtual/blas
 	virtual/ghostscript
+	cairo? ( x11-libs/cairo x11-libs/pango )
 	readline? ( sys-libs/readline )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
@@ -46,6 +47,20 @@ pkg_setup() {
 	export FFLAGS="${FFLAGS:--O2}"
 	[[ ${FORTRANC} = gfortran || ${FORTRANC} = if* ]] && \
 		export FCFLAGS="${FCFLAGS:-${FFLAGS}}"
+
+	# make sure cairo and pango are both compiled with "X"
+	# use flag (see bug #231970)
+	if use cairo; then
+		if ( ! built_with_use x11-libs/cairo X ); then
+			eerror "x11-libs/cairo needs to be built with USE=\"X\""
+			die "Please rebuild x11-libs/cairo with USE=\"X\""
+		fi
+
+		if ( ! built_with_use x11-libs/pango X ); then
+			eerror "x11-libs/pango needs to be built with USE=\"X\""
+			die "Please rebuild x11-libs/pango with USE=\"X\""
+		fi
+	fi
 
 	filter-ldflags -Wl,-Bdirect -Bdirect
 }
@@ -89,6 +104,7 @@ src_compile() {
 		$(use_with !minimal recommended-packages) \
 		$(use_with png libpng) \
 		$(use_with readline) \
+		$(use_with cairo) \
 		$(use_with X x) \
 		|| die "econf failed"
 	emake || die "emake failed"

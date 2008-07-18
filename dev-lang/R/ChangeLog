@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.124 2008/07/10 17:04:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.125 2008/07/18 12:45:45 markusle Exp $
+
+  18 Jul 2008; Markus Dittrich <markusle@gentoo.org> R-2.7.1.ebuild:
+  Added missing cairo use flag (see bug #231970).
 
 *R-2.7.1 (10 Jul 2008)
 
