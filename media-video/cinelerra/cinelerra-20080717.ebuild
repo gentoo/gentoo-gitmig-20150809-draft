@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20080717.ebuild,v 1.1 2008/07/17 13:51:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20080717.ebuild,v 1.2 2008/07/18 10:34:24 hanno Exp $
 
 inherit autotools multilib
 
@@ -43,7 +43,7 @@ RDEPEND="media-libs/libpng
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	x86? ( dev-lang/nasm )"
+	mmx? ( dev-lang/nasm )"
 
 S="${WORKDIR}/hvirtual"
 
