@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.48 2008/06/21 20:16:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.49 2008/07/18 06:52:06 wormo Exp $
+
+  18 Jul 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  mecab-0.96.ebuild:
+  stable on ppc (bug #228387)
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> mecab-0.96.ebuild:
   Stable on ppc64; bug #228387
