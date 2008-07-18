@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-1.1.11.ebuild,v 1.1 2008/07/16 11:56:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-1.1.11.ebuild,v 1.2 2008/07/18 09:18:31 opfer Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
