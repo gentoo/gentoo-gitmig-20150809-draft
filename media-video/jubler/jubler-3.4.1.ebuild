@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.7 2008/06/13 20:08:17 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.8 2008/07/18 22:53:23 betelgeuse Exp $
 
 inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -73,4 +73,9 @@ src_install() {
 	doman resources/installers/linux/jubler.1
 	insinto /usr/share/jubler/help
 	doins dist/help/*
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	java-pkg-2_pkg_preinst
 }

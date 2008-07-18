@@ -1,6 +1,10 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.19 2008/06/13 20:08:17 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.20 2008/07/18 22:53:23 betelgeuse Exp $
+
+  18 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> jubler-3.4.1.ebuild,
+  jubler-3.9.0.ebuild:
+  Add pkg_preinst to call both java-pkg-2 and gnome2 functions.
 
   13 Jun 2008; Serkan Kaba <serkan@gentoo.org> jubler-3.4.1.ebuild,
   jubler-3.9.0.ebuild:
