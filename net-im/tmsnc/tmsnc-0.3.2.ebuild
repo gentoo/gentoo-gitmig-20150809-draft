@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2.ebuild,v 1.7 2008/03/30 00:13:27 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2.ebuild,v 1.8 2008/07/18 07:26:59 aballier Exp $
 
 DESCRIPTION="TMSNC is a textbased MSN client written in C."
 HOMEPAGE="http://tmsnc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/tmsnc/${P}.tar.gz"
 
 LICENSE="IRPDL"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa ppc x86 ~x86-fbsd"
 IUSE="ssl talkfilters"
 
 DEPEND="virtual/libc
