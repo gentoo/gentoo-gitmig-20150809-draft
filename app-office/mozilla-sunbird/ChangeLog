@@ -1,6 +1,11 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.33 2008/05/27 14:12:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.34 2008/07/18 11:56:20 aballier Exp $
+
+  18 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  mozilla-sunbird-0.8.ebuild:
+  keyword ~x86-fbsd thanks to Nathan Smith <nathan@ndansmith.net>, bug
+  #190810
 
   27 May 2008; Raúl Porcel <armin76@gentoo.org>
   -mozilla-sunbird-0.7.ebuild:
