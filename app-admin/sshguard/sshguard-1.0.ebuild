@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/sshguard-1.0.ebuild,v 1.5 2008/06/14 10:20:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/sshguard-1.0.ebuild,v 1.6 2008/07/18 23:16:24 cla Exp $
 
 DESCRIPTION="protects hosts from brute force attacks against ssh"
 HOMEPAGE="http://sshguard.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="ipfilter kernel_FreeBSD kernel_linux"
 
 DEPEND="kernel_linux? ( net-firewall/iptables )
