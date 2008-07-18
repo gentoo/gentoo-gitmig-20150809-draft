@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-4.65.ebuild,v 1.3 2008/04/27 04:17:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-4.67.ebuild,v 1.1 2008/07/18 22:44:20 coldwind Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=net-libs/libtelepathy-0.3.2
 	net-libs/telepathy-glib
 	>=dev-libs/dbus-glib-0.51
 	>=gnome-base/gconf-2
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.21 )"
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
