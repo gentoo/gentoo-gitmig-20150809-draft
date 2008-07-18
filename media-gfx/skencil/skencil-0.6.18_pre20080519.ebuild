@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.6 2008/06/22 20:57:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.7 2008/07/18 01:59:46 jer Exp $
 
 inherit python multilib eutils
 
@@ -17,7 +17,7 @@ RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )
 	dev-python/pyxml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 
 pkg_setup() {
 	python_tkinter_exists
