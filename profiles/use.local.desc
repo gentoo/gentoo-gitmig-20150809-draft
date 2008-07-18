@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3635 2008/07/18 17:59:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3636 2008/07/18 20:23:24 serkan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -322,6 +322,9 @@ app-shells/tcsh:catalogs - Adds support for NLS catalogs
 app-text/crm114:mew - Add support for using the mewdecode mime decoder.
 app-text/crm114:mimencode - Adds support for using the mimencode mime
 app-text/crm114:normalizemime - Add support for using the normalizemime
+app-text/enchant:aspell - Adds support for aspell spell checker
+app-text/enchant:hunspell - Adds support for hunspell spell checker
+app-text/enchant:zemberek - Adds support for Zemberek Turkish spell checker server
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/hyperestraier:mecab - Enable mecab support for Estraier
