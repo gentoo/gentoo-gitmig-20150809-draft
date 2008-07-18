@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.12 2008/07/13 18:15:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.13 2008/07/18 09:19:35 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -172,6 +172,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	echo "LDPATH=/usr/$(get_libdir)/root" > 99root
+	use python && echo "PYTHONPATH=/usr/$(get_libdir)/root" >> 99root
 	doenvd 99root || die "doenvd failed"
 
 	if use doc; then
