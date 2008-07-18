@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.29.ebuild,v 1.1 2008/05/21 22:00:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.29.ebuild,v 1.2 2008/07/18 15:13:19 jer Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus eds galago gnome-keyring libnotify spell"
 
 RDEPEND="x11-libs/libXScrnSaver
