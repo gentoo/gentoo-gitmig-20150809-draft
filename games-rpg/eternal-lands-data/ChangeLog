@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/eternal-lands-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.17 2008/07/17 21:07:38 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.18 2008/07/18 16:51:41 rich0 Exp $
+
+*eternal-lands-data-1.7.0-r1 (18 Jul 2008)
+
+  18 Jul 2008; Richard Freeman <rich0@gentoo.org>
+  -eternal-lands-data-1.6.0.ebuild, -eternal-lands-data-1.7.0.ebuild,
+  +eternal-lands-data-1.7.0-r1.ebuild:
+  clean out non-working versions, update to add new skybox directory to data
+  files
 
 *eternal-lands-data-1.7.0 (17 Jul 2008)
 
