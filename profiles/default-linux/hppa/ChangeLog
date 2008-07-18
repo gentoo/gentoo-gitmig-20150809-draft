@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.44 2008/07/15 04:22:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.45 2008/07/18 07:54:15 jer Exp $
+
+  18 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask pch USE flag for x11-libs/qt-* (bug #223775).
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Masking openinventor USE flag for sci-physics/geant.
