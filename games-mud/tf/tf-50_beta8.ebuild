@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8.ebuild,v 1.2 2007/11/07 17:55:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8.ebuild,v 1.3 2008/07/18 16:15:32 mr_bones_ Exp $
 
 inherit games
 
 MY_P="${P/_beta/b}"
-DESCRIPTION="A small, flexible, screen-oriented MUD client"
+DESCRIPTION="A small, flexible, screen-oriented MUD client (aka TinyFugue)"
 HOMEPAGE="http://tinyfugue.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tinyfugue/${MY_P}.tar.gz
 	doc? ( mirror://sourceforge/tinyfugue/${MY_P}-help.tar.gz )"

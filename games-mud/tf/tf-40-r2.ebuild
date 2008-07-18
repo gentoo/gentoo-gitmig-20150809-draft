@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.10 2007/11/07 17:55:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.11 2008/07/18 16:15:32 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P=${P}s1
-DESCRIPTION="A small full-featured MUD client"
+DESCRIPTION="A small, flexible, screen-oriented MUD client (aka TinyFugue)"
 HOMEPAGE="http://tf.tcp.com/~hawkeye/tf/"
 SRC_URI="mirror://tinyfugue/${MY_P}.tar.gz
 	doc? ( mirror://tinyfugue/${MY_P}-help.tar.gz )"
