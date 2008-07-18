@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.152 2008/07/18 09:16:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.153 2008/07/18 17:12:30 armin76 Exp $
+
+*mozilla-firefox-bin-3.0.1-r1 (18 Jul 2008)
+
+  18 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-firefox-bin-3.0.1.ebuild, +mozilla-firefox-bin-3.0.1-r1.ebuild:
+  Fix launcher again, bug #229227
 
   18 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
   mozilla-firefox-bin-2.0.0.16.ebuild:

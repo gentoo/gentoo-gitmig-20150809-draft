@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.1.ebuild,v 1.1 2008/07/17 10:22:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.1-r1.ebuild,v 1.1 2008/07/18 17:12:30 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -112,8 +112,14 @@ src_install() {
 			die "sed failed to change locale"
 	fi
 
-	# Create /usr/bin/firefox-bin
-	make_wrapper firefox-bin "${MOZILLA_FIVE_HOME}/firefox"
+		# Create /usr/bin/firefox-bin
+		dodir /usr/bin/
+		cat <<EOF >"${D}"/usr/bin/firefox-bin
+#!/bin/sh
+unset LD_PRELOAD
+exec /opt/firefox/firefox "\$@"
+EOF
+		fperms 0755 /usr/bin/firefox-bin
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
