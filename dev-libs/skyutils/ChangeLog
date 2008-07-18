@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/skyutils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.24 2007/05/23 10:42:32 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.25 2008/07/18 06:02:14 mrness Exp $
+
+*skyutils-2.8-r2 (18 Jul 2008)
+
+  18 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  +files/skyutils-2.8-libs.patch, +skyutils-2.8-r2.ebuild:
+  Link with dependent libraries (#231981).
 
 *skyutils-2.8-r1 (23 May 2007)
 
