@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.3 2008/06/13 23:21:15 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.4 2008/07/18 06:35:01 jer Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.trolltech.com/"
 
 LICENSE="|| ( QPL-1.0 GPL-3 GPL-2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc64"
 IUSE=""
 
 DEPEND="
@@ -38,7 +38,7 @@ QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 
 src_compile() {
 	# Doesn't find qt-gui and fails linking
-	sed -e '/QT_BUILD_TREE/ a LIBS+=-L/usr/lib64/qt4\n' \
+	sed -e '/QT_BUILD_TREE/ s:=:+=:' \
 		-i "${S}"/examples/tools/plugandpaint/plugandpaint.pro \
 		|| die "Fixing plugandpaint example failed."
 
