@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.41.ebuild,v 1.1 2008/07/18 11:05:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.41.ebuild,v 1.2 2008/07/18 11:25:41 aballier Exp $
 
 inherit versionator perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/D/DR/DROLSKY/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 ) unicode"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 SRC_TEST="do"
 

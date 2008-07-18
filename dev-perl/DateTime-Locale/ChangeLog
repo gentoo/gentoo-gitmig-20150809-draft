@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Locale
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.46 2008/07/18 11:05:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.47 2008/07/18 11:25:41 aballier Exp $
+
+  18 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  DateTime-Locale-0.41.ebuild:
+  keyword ~x86-fbsd, bug #232181
 
 *DateTime-Locale-0.41 (18 Jul 2008)
 
