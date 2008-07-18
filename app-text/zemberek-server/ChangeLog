@@ -1,0 +1,10 @@
+# ChangeLog for app-text/zemberek-server
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/ChangeLog,v 1.1 2008/07/18 19:51:04 serkan Exp $
+
+*zemberek-server-0.7.1 (18 Jul 2008)
+
+  18 Jul 2008; Serkan Kaba <serkan@gentoo.org> +files/pre,
+  +files/zemberek-server, +metadata.xml, +zemberek-server-0.7.1.ebuild:
+  Initial ebuild. Fixes bug #156100.
+
