@@ -1,6 +1,14 @@
 # ChangeLog for app-text/enchant
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.78 2007/11/27 03:38:06 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.79 2008/07/18 20:25:04 serkan Exp $
+
+*enchant-1.4.2 (18 Jul 2008)
+
+  18 Jul 2008; Serkan Kaba <serkan@gentoo.org> metadata.xml,
+  +enchant-1.4.2.ebuild:
+  Version bump. Add myself as a maintainer. Add support for zemberek-server.
+  Drop support for ispell wrt bug #bug #132433. Fix bug #207025, bug
+  #226213, bug #230971.
 
   27 Nov 2007; Jeroen Roovers <jer@gentoo.org> enchant-1.3.0.ebuild:
   Stable for HPPA (bug #199322).
