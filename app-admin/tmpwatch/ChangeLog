@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.72 2008/07/18 11:39:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.73 2008/07/18 16:58:22 coldwind Exp $
+
+  18 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  tmpwatch-2.9.13.2.ebuild:
+  amd64 stable wrt bug #232153
 
   18 Jul 2008; Ferris McCormick <fmccor@gentoo.org>
   tmpwatch-2.9.13.2.ebuild:
