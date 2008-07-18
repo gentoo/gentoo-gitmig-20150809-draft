@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unmakeself/unmakeself-1.0.ebuild,v 1.3 2007/07/13 13:12:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unmakeself/unmakeself-1.0.ebuild,v 1.4 2008/07/18 19:18:03 coldwind Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/bzip2
