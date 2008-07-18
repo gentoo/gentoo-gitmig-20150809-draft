@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-qt/dc-qt-0.1.2.ebuild,v 1.7 2007/02/23 11:49:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-qt/dc-qt-0.1.2.ebuild,v 1.8 2008/07/18 15:24:32 armin76 Exp $
 
-inherit eutils qt3
+inherit eutils qt3 autotools
 
 IUSE="xine"
 
@@ -20,18 +20,18 @@ DEPEND="$(qt_min_version 3.2)
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-xine.patch
-	autoreconf
+	epatch "${FILESDIR}"/${P}-xine.patch
+	eautoreconf
 }
 
 src_compile() {
 	econf \
-		`use_with xine` || die
+		$(use_with xine) || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 }
