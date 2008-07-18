@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.0.1.ebuild,v 1.2 2008/07/16 13:47:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.0.1.ebuild,v 1.3 2008/07/18 18:01:56 coldwind Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hatari/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
