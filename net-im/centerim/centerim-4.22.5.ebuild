@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.5.ebuild,v 1.4 2008/06/25 13:59:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.5.ebuild,v 1.5 2008/07/19 10:38:10 aballier Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ fi
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
