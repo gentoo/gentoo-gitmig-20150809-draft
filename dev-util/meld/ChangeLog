@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.75 2008/05/29 16:48:04 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.76 2008/07/19 17:43:30 leio Exp $
+
+*meld-1.2 (19 Jul 2008)
+
+  19 Jul 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/meld-1.2-fr-help-install-fix.patch, +meld-1.2.ebuild:
+  New version, bug 230665; Includes folder comparison speedups, UI tweaks and
+  cleanups, and various bug fixes
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> meld-1.1.5.1.ebuild,
   meld-1.1.5.1-r1.ebuild:
