@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>caleb@gentoo.org</email>
-  <name>Caleb Tennis</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Hamachi is an encrypted tunneling service that allows pseudo networks to be joined together.
 </longdescription>
