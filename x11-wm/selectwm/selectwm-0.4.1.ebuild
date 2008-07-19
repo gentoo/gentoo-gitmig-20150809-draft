@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.8 2007/09/30 20:09:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.9 2008/07/19 09:54:33 aballier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ordiluc.net/selectwm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
