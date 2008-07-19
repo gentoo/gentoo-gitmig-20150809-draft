@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.7.0-r1.ebuild,v 1.2 2008/07/18 16:49:16 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.7.0-r1.ebuild,v 1.3 2008/07/19 00:53:20 mr_bones_ Exp $
 
 inherit cvs eutils flag-o-matic games
 
@@ -61,11 +61,9 @@ src_unpack() {
 	S_CLIENT="${WORKDIR}/elc"
 	BROWSER="firefox"
 
-
 	cd "${S}"
 
 	epatch "${FILESDIR}/eternal-lands-1.7.0-errors.patch"
-
 
 	# Add debugging options
 	if use debug ; then
