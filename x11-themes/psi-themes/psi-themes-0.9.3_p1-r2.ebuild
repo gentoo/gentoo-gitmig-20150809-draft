@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.4 2007/07/12 07:35:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.5 2008/07/19 12:52:55 aballier Exp $
 
 SMILEYS="critters-1.0.jisp
 	icq-2002a.jisp
@@ -89,7 +89,7 @@ HOMEPAGE="http://psi.affinix.com/ http://jisp.netflint.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=net-im/psi-0.9.2"
 
