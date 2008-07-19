@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.255.ebuild,v 1.1 2008/06/28 13:17:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.255-r1.ebuild,v 1.1 2008/07/19 09:35:19 dertobi123 Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	dev-perl/TermReadKey
 	dev-perl/IO-Socket-SSL
 	dev-perl/Digest-HMAC
-	>=dev-perl/Mail-IMAPClient-2.1.4"
+	=dev-perl/Mail-IMAPClient-2.2.9"
 
 RESTRICT="test"
 

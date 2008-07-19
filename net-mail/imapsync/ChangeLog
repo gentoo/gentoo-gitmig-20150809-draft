@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.19 2008/06/28 13:17:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.20 2008/07/19 09:35:19 dertobi123 Exp $
+
+*imapsync-1.255-r1 (19 Jul 2008)
+
+  19 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -imapsync-1.255.ebuild, +imapsync-1.255-r1.ebuild:
+  Fix dep on Mail-IMAPClient as per #232277
 
 *imapsync-1.255 (28 Jun 2008)
 
