@@ -1,15 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-0.5.0.ebuild,v 1.11 2008/02/21 16:02:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-0.7.0.ebuild,v 1.1 2008/07/19 13:54:03 chainsaw Exp $
 
 DESCRIPTION="High-performance C development framework. Can be used stand-alone or as a supplement to GLib."
 HOMEPAGE="http://www.atheme.org/projects/mowgli.shtml"
-SRC_URI="http://distfiles.atheme.org/${P}.tgz"
+SRC_URI="http://distfiles.atheme.org/${P}.tbz2"
 IUSE="examples"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 src_compile() {
 	econf $(use_enable examples) \
@@ -19,5 +19,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS
+	dodoc AUTHORS README doc/BOOST
 }
