@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.59 2008/01/28 07:07:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.60 2008/07/19 15:48:01 wschlich Exp $
+
+*fcron-3.0.4-r1 (19 Jul 2008)
+
+  19 Jul 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/check_system_crontabs.fcron-config-file.patch,
+  +fcron-3.0.4-r1.ebuild:
+  fix bugs #226629 and #227025
 
   28 Jan 2008; Jeroen Roovers <jer@gentoo.org> fcron-3.0.4.ebuild:
   Stable for HPPA (bug #207266).
