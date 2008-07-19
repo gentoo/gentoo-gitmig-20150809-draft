@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r5.ebuild,v 1.1 2008/07/17 13:54:24 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r5.ebuild,v 1.2 2008/07/19 14:33:44 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -20,7 +20,7 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="4"
+PHP_PATCHSET_REV="5"
 SUHOSIN_PATCH="suhosin-patch-5.2.6-0.9.6.2-r1.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/multilib-search-path.patch"
 # php patch settings, ebuild specific
@@ -169,9 +169,6 @@ src_unpack() {
 		ext/standard/tests/file/006_error.phpt \
 		ext/standard/tests/file/touch.phpt
 
-	# Workaround for autoconf-2.62 behaviour change, bug 217392
-	sed -re 's:(#ifdef HAVE_CONFIG_H.*):#define _GNU_SOURCE\n\1:' -i ext/posix/posix.c
-
 	# REMOVING BROKEN TESTS:
 	# removing this test as it has been broken for ages and is not easily
 	# fixable (depends on a lot of factors)
@@ -194,6 +191,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug 217392 (autconf-2.62 behavior changes)
+	append-flags -D_GNU_SOURCE
 	if use fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
 		src_compile_fastbuild
 	else
