@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebdav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.5 2008/07/18 18:09:56 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.6 2008/07/19 09:37:12 cedk Exp $
+
+  19 Jul 2008; Cédric Krier <cedk@gentoo.org> pywebdav-0.8.ebuild:
+  Remove pyxml from DEPEND
 
 *pywebdav-0.8 (18 Jul 2008)
 
