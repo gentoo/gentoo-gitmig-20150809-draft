@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-IMAPClient
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.19 2008/07/15 20:37:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.20 2008/07/19 09:33:30 armin76 Exp $
+
+  19 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  Mail-IMAPClient-3.06.ebuild:
+  Revert to ~arch since it breaks impasync, bug #232277
 
   15 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   Mail-IMAPClient-3.06.ebuild:
