@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8828 2008/07/18 21:53:12 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8829 2008/07/19 22:40:08 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Pettenò <flameeyes@gentoo.org> (20 Jul 2008)
+# Masked pending removal on August 20th, last release in 2004.
+# Use sys-auth/pam_ssh as a replacement.
+sys-auth/pam_ssh_agent
 
 # Jeremy Olexa <darkside@gentoo.org> (17 Jul 2008)
 # Old, broken version with odd SRC_URI. Use
