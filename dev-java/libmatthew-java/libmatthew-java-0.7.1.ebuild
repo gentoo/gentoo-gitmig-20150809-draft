@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/libmatthew-java-0.7.1.ebuild,v 1.2 2008/07/19 11:57:21 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/libmatthew-java-0.7.1.ebuild,v 1.3 2008/07/19 13:08:26 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 flag-o-matic toolchain-funcs
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	LDFLAGS="$(raw-ldflags)" \
-	CC=$(tc-getCC) LD=$(tc-getLD) \
+	CC=$(tc-getCC) LD=$(tc-getLD) INCLUDES="$(java-pkg_get-jni-cflags)" \
 		emake -j1 JARDIR=/usr/share/libmatthew-java/lib JCFLAGS="$(java-pkg_javac-args)" all $(usev doc) || die "emake failed"
 }
 
