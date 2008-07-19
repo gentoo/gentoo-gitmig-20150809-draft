@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/libmatthew-java-0.7.1.ebuild,v 1.1 2008/07/18 19:31:15 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/libmatthew-java-0.7.1.ebuild,v 1.2 2008/07/19 11:57:21 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 flag-o-matic toolchain-funcs
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.5"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-makefile-fixes.patch
-	rm -v "${S}"/cx/ath/matthew/debug/Debug.{java,class} || die "rm failed"
+	rm -v "${S}"/cx/ath/matthew/debug/Debug.java || die "rm failed"
 }
 
 src_compile() {
