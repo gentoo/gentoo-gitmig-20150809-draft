@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.266 2008/07/18 16:49:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.267 2008/07/19 16:52:20 jer Exp $
+
+*opera-9.52_pre2069 (19 Jul 2008)
+
+  19 Jul 2008; Jeroen Roovers <jer@gentoo.org> +opera-9.52_pre2069.ebuild:
+  Version bump <http://labs.opera.com/news/2008/07/18/>.
 
 *opera-9.52_pre2068 (18 Jul 2008)
 
