@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2-r1.ebuild,v 1.1 2008/07/19 12:22:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2-r1.ebuild,v 1.2 2008/07/19 16:16:36 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -39,7 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}/2.0.0-missing-declaration.patch"
 
 	# Bug #225565
-	epatch "${FILESDIR}/2.0.1-parallel-make.patch"	
+	epatch "${FILESDIR}/2.0.1-parallel-make.patch"
 
 	# get rid of the prefix
 	sed -i -e "s/\\@prefix\\@//" "${S}/Makefile.in" \
