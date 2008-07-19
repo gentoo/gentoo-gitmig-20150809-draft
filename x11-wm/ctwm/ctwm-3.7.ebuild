@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.8 2007/07/13 11:59:37 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.9 2008/07/19 10:00:12 aballier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ctwm.free.lp.se/dist/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
