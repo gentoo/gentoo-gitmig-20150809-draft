@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.33 2008/07/17 21:35:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.34 2008/07/19 14:36:35 dragonheart Exp $
+
+*testdisk-6.10 (19 Jul 2008)
+
+  19 Jul 2008; Daniel Black <dragonheart@gentoo.org> +testdisk-6.10.ebuild:
+  version bump
 
   17 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
