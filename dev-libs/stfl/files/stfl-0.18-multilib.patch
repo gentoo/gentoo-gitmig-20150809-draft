@@ -6,7 +6,7 @@ diff -aur stfl-0.18-orig/python/Makefile.snippet stfl-0.18/python/Makefile.snipp
  install_python: python/_stfl.so python/stfl.py python/stfl.pyc
  	mkdir -p $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/lib-dynload/
 -	cp python/_stfl.so $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/lib-dynload/
-+	[ ! -d $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/ ] && mkdir -p $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/
++	mkdir -p $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/
 +	cp python/_stfl.so $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/
  	cp python/stfl.pyc $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/
  	cp python/stfl.py $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/

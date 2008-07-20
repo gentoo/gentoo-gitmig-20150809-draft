@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.16 2008/06/22 17:30:49 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.17 2008/07/20 22:34:57 gregkh Exp $
+
+  20 Jul 2008; Greg Kroah-Hartman <gregkh@gentoo.org>
+  files/stfl-0.18-multilib.patch:
+  fix patch for non-64 bit arches for 0.18 install phase
 
   22 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   +files/stfl-0.18-multilib.patch, stfl-0.18.ebuild:
