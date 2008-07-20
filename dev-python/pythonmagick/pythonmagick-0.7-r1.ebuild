@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.1 2008/06/25 17:57:42 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.2 2008/07/20 11:38:42 loki_val Exp $
 
 NEED_PYTHON=2.5
 inherit python multilib toolchain-funcs
@@ -17,9 +17,10 @@ LICENSE="as-is"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-gfx/imagemagick-6.2
-		>=dev-libs/boost-1.34.0"
-RDEPEND="${DEPEND}"
+RDEPEND=">=media-gfx/imagemagick-6.2
+	>=dev-libs/boost-1.34.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

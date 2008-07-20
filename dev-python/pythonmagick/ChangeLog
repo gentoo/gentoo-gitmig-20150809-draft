@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.11 2008/06/25 17:57:42 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.12 2008/07/20 11:38:42 loki_val Exp $
+
+  20 Jul 2008; Peter Alfredsen <loki_val@gentoo.org>
+  pythonmagick-0.6.ebuild, pythonmagick-0.7-r1.ebuild:
+  add dev-util/pkgconfig to depend as per bug 232450
 
 *pythonmagick-0.7-r1 (25 Jun 2008)
 
