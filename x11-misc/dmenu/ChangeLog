@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.33 2008/07/20 14:34:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.34 2008/07/20 14:36:03 cedk Exp $
+
+  20 Jul 2008; Cédric Krier <cedk@gentoo.org> -dmenu-3.3.ebuild,
+  -dmenu-3.4.ebuild, -dmenu-3.5.ebuild, -dmenu-3.6.ebuild,
+  -dmenu-3.7.ebuild:
+  Remove old
 
 *dmenu-3.7-r1 (20 Jul 2008)
 
