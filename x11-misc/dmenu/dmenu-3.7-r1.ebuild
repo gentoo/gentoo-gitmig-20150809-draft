@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.1 2008/07/20 14:34:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.2 2008/07/20 14:38:42 cedk Exp $
 
 inherit toolchain-funcs savedconfig eutils
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
 HOMEPAGE="http://www.suckless.org/programs/dmenu.html"
-SRC_URI="http://suckless.org/download/${P}.tar.gz"
+SRC_URI="http://code.suckless.org/dl/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
