@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.279 2008/07/19 14:33:44 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.280 2008/07/20 09:35:46 hoffie Exp $
+
+  20 Jul 2008; Christian Hoffmann <hoffie@gentoo.org> php-5.2.6-r5.ebuild:
+  yet another attempt at fixing _GNU_SOURCE-related build problems
+  (configure screws up FFLAGS which isn't used at all, so we stop
+  manipulating it now), bug 230809
 
   19 Jul 2008; Christian Hoffmann <hoffie@gentoo.org> php-5.2.6-r5.ebuild:
   build-time-specific (no revbump): fixing warnings (which sometimes seem to
