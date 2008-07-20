@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.453 2008/06/01 21:27:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.454 2008/07/20 17:45:19 fmccor Exp $
+
+  20 Jul 2008; Ferris McCormick <fmccor@gentoo.org> mysql-5.0.60-r1.ebuild:
+  Sparc stable, Security Bug #220399 (in use for 6 weeks now).
 
 *mysql-5.0.60-r1 (01 Jun 2008)
 
