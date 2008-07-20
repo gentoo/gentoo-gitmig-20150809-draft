@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.0.1.ebuild,v 1.2 2008/07/18 07:31:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.0.1.ebuild,v 1.3 2008/07/20 14:47:52 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
 DESCRIPTION="a dynamic window manager for X11"
-HOMEPAGE="http://dwm.suckless.org/"
-SRC_URI="http://suckless.org/download/${P}.tar.gz"
+HOMEPAGE="http://www.suckless.org/dwm/"
+SRC_URI="http://code.suckless.org/dl/dwm/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
