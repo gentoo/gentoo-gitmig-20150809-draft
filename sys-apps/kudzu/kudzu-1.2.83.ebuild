@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.2 2008/05/29 14:46:44 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.3 2008/07/20 01:49:49 darkside Exp $
 
 inherit eutils python rpm multilib toolchain-funcs
 
@@ -11,7 +11,9 @@ RPMREV="3"
 MY_P="${PN/lib}-${PV}"
 
 DESCRIPTION="Red Hat Hardware detection tools"
-SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.src.rpm"
+#SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.src.rpm"
+#Workaround to get this file on the Gentoo Mirrors for now. -darkside 
+SRC_URI="http://fedora.mirror.iweb.ca/releases/test/9-Beta/Fedora/source/SRPMS/kudzu-1.2.83-3.src.rpm"
 HOMEPAGE="http://rhlinux.redhat.com/kudzu/"
 
 LICENSE="GPL-2"
