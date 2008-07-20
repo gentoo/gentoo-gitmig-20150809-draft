@@ -1,6 +1,10 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.79 2008/07/18 20:25:04 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.80 2008/07/20 06:04:56 serkan Exp $
+
+  20 Jul 2008; Serkan Kaba <serkan@gentoo.org> enchant-1.4.2.ebuild:
+  Readd ~alpha ~hppa ~ia64 ~ppc64 ~ppc ~sparc ~x86-fbsd since zemberek USE
+  flag is masked in base.
 
 *enchant-1.4.2 (18 Jul 2008)
 
