@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r1.ebuild,v 1.1 2008/07/16 21:00:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r1.ebuild,v 1.2 2008/07/20 09:44:27 loki_val Exp $
 
 EAPI=1
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-lang/spidermonkey-1.7.0
 		>=x11-libs/gtk+-2.12.10
 		>=x11-libs/pango-1.20.3
 		gnome-base/librsvg
-		>=net-libs/xulrunner-1.8.1.14
+		>=net-libs/xulrunner-1.8.1.14:1.8
 		>=net-misc/curl-7.18.1
 		>=dev-libs/atk-1.22.0 )
 

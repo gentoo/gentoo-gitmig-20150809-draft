@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0.ebuild,v 1.1 2008/07/11 20:20:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r2.ebuild,v 1.1 2008/07/20 09:44:27 loki_val Exp $
 
 EAPI=1
 
-inherit base eutils
+inherit autotools base eutils fdo-mime
 
 MY_PN=${PN}-for-linux
 MY_P=${MY_PN}-${PV}
@@ -33,6 +33,7 @@ RDEPEND=">=dev-lang/spidermonkey-1.7.0
 		>=x11-libs/cairo-1.6.4
 		>=x11-libs/gtk+-2.12.10
 		>=x11-libs/pango-1.20.3
+		gnome-base/librsvg
 		>=net-libs/xulrunner-1.8.1.14
 		>=net-misc/curl-7.18.1
 		>=dev-libs/atk-1.22.0 )
@@ -41,13 +42,16 @@ RDEPEND=">=dev-lang/spidermonkey-1.7.0
 		>=x11-libs/qt-core-4.4.0
 		>=x11-libs/qt-webkit-4.4.0
 		>=x11-libs/qt-xmlpatterns-4.4.0
-		>=x11-libs/qt-opengl-4.4.0 )"
+		>=x11-libs/qt-opengl-4.4.0
+		>=x11-libs/qt-script-4.4.0 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20"
 
 S="${WORKDIR}/${MY_P}"
 
 RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${P}-xulrunner-1.9.patch" )
 
 pkg_setup() {
 	if ! use qt4
@@ -93,8 +97,18 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	base_src_unpack
+	cd "${S}"
+	eautoreconf
+}
+
 src_compile() {
-	econf	--disable-dependecy-tracking \
+	#For the time being, the smjs-script runtime is required for both gtk and qt
+	#versions, but the goal is to make the qt4 version depend only on qt-script.
+	econf	--disable-dependency-tracking \
+		--disable-update-desktop-database \
+		--disable-update-mime-database \
 		--disable-werror \
 		--enable-libxml2-xml-parser \
 		--enable-smjs-script-runtime \
@@ -112,31 +126,20 @@ src_compile() {
 		$(use_enable qt4 qt-system-framework) \
 		$(use_enable qt4 qtwebkit-browser-element) \
 		$(use_enable qt4 qt-xml-http-request) \
+		$(use_enable qt4 qt-script-runtime) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_test() {
+	#If someone wants to guarantee that emake will not make
+	#tests fail promiscuosly, please do, otherwise we're using make.
 	make check &> "${WORKDIR}"/check
 }
 
-src_install() {
-	base_src_install
-
-	#Icon
-	newicon resources/gadgets.png googlegadgets.png
-
-	# Desktop entries
-	if use gtk
-	then
-		make_desktop_entry "ggl-gtk" "Google Gadgets (GTK)" googlegadgets
-		make_desktop_entry "ggl-gtk -s" "Google Gadgets (GTK sidebar)" googlegadgets
-	fi
-
-	if use qt4
-	then
-		make_desktop_entry "ggl-qt" "Google Gadgets (QT)" googlegadgets
-	fi
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
 
 curl_die() {
