@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r3.ebuild,v 1.1 2008/06/09 07:55:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r3.ebuild,v 1.2 2008/07/20 10:44:55 loki_val Exp $
 
 EAPI=1
 
@@ -16,11 +16,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="+imagemagick +pdf"
 
-DEPEND="media-libs/libexif
+RDEPEND="media-libs/libexif
 	>=media-libs/libpng-1.2.5-r4
 	>=media-libs/ming-0.3.0
 	pdf? ( media-gfx/pstoedit )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	base_src_unpack
@@ -30,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	#Autotrace can't link to ming. Perhaps it needs 3.0?
+	#Autotrace will autolink to ming if present. Forcing on.
 	econf	--disable-dependency-tracking \
 		--with-ming \
 		$(use_with imagemagick magick) \
