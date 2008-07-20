@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.1 2008/07/03 00:38:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.2 2008/07/20 22:03:18 hanno Exp $
 
 inherit qt3 eutils cmake-utils
 
@@ -37,15 +37,15 @@ pkg_setup() {
 }
 
 src_compile() {
-	local mycmakeargs=" $(cmake-utils_use_want cairo CAIRO)"
-	cmake-utils_src_compile
+	local mycmakeargs="$(cmake-utils_use_want cairo CAIRO)"
+	cmake-utils_src_compile || die "compile failed"
 }
 
 src_install() {
 	cmake-utils_src_install
 
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 
-	domenu scribus.desktop
-	doicon scribus/icons/scribusicon.png
+	newmenu "${FILESDIR}/${P}.desktop" "${PN}.desktop" || die "domenu failed"
+	doicon scribus/icons/scribusicon.png || die "doicon failed"
 }
