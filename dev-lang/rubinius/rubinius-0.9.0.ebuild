@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-0.9.0.ebuild,v 1.1 2008/07/20 00:21:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-0.9.0.ebuild,v 1.2 2008/07/20 06:28:26 mr_bones_ Exp $
 
 EAPI=1
 EGIT_REPO_URI="git://git.rubini.us/code"
@@ -43,7 +43,7 @@ src_install() {
 	mkdir -p "${D}/usr/bin"
 	install -c bin/rbx "${D}/usr/bin"
 
-	export PREFIX="${D}"/usr 
+	export PREFIX="${D}"/usr
 	rake install
 }
 
