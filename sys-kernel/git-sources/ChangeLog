@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.304 2008/07/18 01:49:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.305 2008/07/20 19:57:59 mpagano Exp $
+
+  20 Jul 2008; Mike Pagano <mpagano@gentoo.org>
+  -files/git-sources-2.6.26-r6-arch_ppc_makefile.patch,
+  -git-sources-2.6.26-r6.ebuild:
+  Removal until I can figure out the problem
 
 *git-sources-2.6.26-r6 (18 Jul 2008)
 
