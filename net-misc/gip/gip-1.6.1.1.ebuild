@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.6 2008/03/17 16:27:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.7 2008/07/20 18:31:31 darkside Exp $
 
 inherit versionator distutils
 
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-libsigcpp.patch"
+}
 
 src_compile() {
 	sed -i -e 's@INST_PIXMAPDIR=\"$INST_PREFIX/lib/$EXECUTABLE\"@INST_PIXMAPDIR=\"/usr/lib/$EXECUTABLE\"@g' build.sh
