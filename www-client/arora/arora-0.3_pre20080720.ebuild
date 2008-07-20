@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.2_p20080604.ebuild,v 1.1 2008/06/04 13:36:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.3_pre20080720.ebuild,v 1.1 2008/07/20 14:39:53 yngwin Exp $
 
 EAPI=1
 inherit eutils qt4
@@ -18,12 +18,11 @@ RDEPEND=">=x11-libs/qt-webkit-4.4.0:4"
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	eqmake4 || die "qmake failed"
+	eqmake4 arora.pro PREFIX="${D}/usr" || die "qmake failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	dobin arora
-	newicon src/data/browser.svg arora.svg
-	make_desktop_entry arora Arora arora.svg
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README
 }
