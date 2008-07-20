@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r5.ebuild,v 1.3 2008/07/20 09:35:46 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r5.ebuild,v 1.4 2008/07/20 13:40:26 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -193,7 +193,7 @@ src_unpack() {
 src_compile() {
 	# bug 217392 (autconf-2.62 behavior changes)
 	export CFLAGS="${CFLAGS} -D_GNU_SOURCE"
-	export CXXFLAGS="${CFLAGS} -D_GNU_SOURCE"
+	export CXXFLAGS="${CXXFLAGS} -D_GNU_SOURCE"
 	if use fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
 		src_compile_fastbuild
 	else
