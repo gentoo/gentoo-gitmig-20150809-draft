@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.1 2008/07/20 13:49:00 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.2 2008/07/20 21:16:25 cedk Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -14,12 +14,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="oss jack alsa examples"
 
-COMMON_DEPEND="jack? ( media-sound/jack-audio-connection-kit )
+RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	media-libs/libsndfile"
-RDEPEND="${COMMON_DEPEND}
+	media-libs/libsndfile
 	app-admin/eselect"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
@@ -89,4 +88,7 @@ pkg_postinst() {
 	elog "Chuck now can use many audio engines, so you can specify audio engine"
 	elog "with chuck.{jack,alsa,oss}"
 	elog "Or you can use 'eselect chuck' to set the audio engine"
+
+	einfo "Calling eselect chuck update..."
+	eselect chuck update --if-unset
 }
