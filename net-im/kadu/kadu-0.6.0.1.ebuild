@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.0.1.ebuild,v 1.1 2008/06/04 22:08:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.0.1.ebuild,v 1.2 2008/07/20 18:17:43 darkside Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,7 +53,7 @@ SRC_URI="http://www.kadu.net/download/stable/${P}.tar.bz2
 		http://www.kadu.net/~dorr/moduly/kadu-profiles-${PROFILES}.tar.bz2
 		http://www.kadu.net/~dorr/moduly/kadu-osdhints_notify-${OSD_NOTIFY}.tar.bz2
 		http://www.kadu.net/~dorr/moduly/kadu-firewall-${FIREWALL}.tar.bz2
-		http://kadu.net/~arvenil/tabs/download/${MY_PV}/kadu-tabs-${TABS}.tar.bz2
+		http://kadu.net/~arvenil/tabs/download/${PV}/kadu-tabs-${TABS}.tar.bz2
 		http://www.kadu.net/download/modules_extra/filtering/filtering-${FILTERING}.tar.bz2
 		http://www.kadu.net/download/modules_extra/screenshot/screenshot-${SCREENSHOT}.tar.bz2
 		http://misiek.jah.pl/assets/2008/2/8/agent-${AGENT}.tar.gz )
