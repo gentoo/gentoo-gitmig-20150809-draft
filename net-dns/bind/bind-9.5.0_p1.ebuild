@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p1.ebuild,v 1.1 2008/07/08 18:59:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p1.ebuild,v 1.2 2008/07/20 09:36:05 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -59,7 +59,7 @@ src_unpack() {
 
 	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-	use dlz && use mysql && epatch ${FILESDIR}/bind-dlzmysql5-reconnect.patch
+	use dlz && use mysql && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in

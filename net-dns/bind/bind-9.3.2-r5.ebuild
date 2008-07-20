@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r5.ebuild,v 1.8 2008/02/29 21:59:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r5.ebuild,v 1.9 2008/07/20 09:36:05 dertobi123 Exp $
 
 inherit eutils libtool autotools
 
@@ -58,16 +58,16 @@ src_unpack() {
 	done
 
 	use dlz && {
-		epatch ${DISTDIR}/ctrix_dlz_${DLZ_VERSION}.patch.bz2
-		epatch ${FILESDIR}/${PN}-dlzbdb-includes.patch
+		epatch "${DISTDIR}"/ctrix_dlz_${DLZ_VERSION}.patch.bz2
+		epatch "${FILESDIR}"/${PN}-dlzbdb-includes.patch
 
-		use odbc && epatch ${FILESDIR}/${P}-missing_odbc_test.patch
+		use odbc && epatch "${FILESDIR}"/${P}-missing_odbc_test.patch
 	}
 
-	use idn && epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
+	use idn && epatch "${S}"/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
 
 	# should be installed by bind-tools
-	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
+	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
 
 	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
 
@@ -125,7 +125,7 @@ src_compile() {
 	emake -j1 || die "failed to compile bind"
 
 	use idn && {
-		cd ${S}/contrib/idn/idnkit-1.0-src
+		cd "${S}"/contrib/idn/idnkit-1.0-src
 		econf || die "idn econf failed"
 		emake || die "idn emake failed"
 	}
@@ -154,41 +154,41 @@ src_install() {
 			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
-		cd ${D}/usr/share/doc/${PF}
-		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
+		cd $"{D}"/usr/share/doc/${PF}
+		tar pjxf "${DISTFILES}"/dyndns-samples.tbz2
 	}
 
-	newenvd ${FILESDIR}/10bind.env 10bind
+	newenvd "${FILESDIR}"/10bind.env 10bind
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
 
-	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r3 named.conf
+	insinto /etc/bind ; newins "${FILESDIR}"/named.conf-r3 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.ca:
-	insinto /var/bind ; doins ${FILESDIR}/named.ca
+	insinto /var/bind ; doins "${FILESDIR}"/named.ca
 
 	insinto /var/bind/pri
-	doins ${FILESDIR}/127.zone
-	newins ${FILESDIR}/localhost.zone-r1 localhost.zone
+	doins "${FILESDIR}"/127.zone
+	newins "${FILESDIR}"/localhost.zone-r1 localhost.zone
 
-	newinitd ${FILESDIR}/named.init-r4 named
-	newconfd ${FILESDIR}/named.confd-r1 named
+	newinitd "${FILESDIR}"/named.init-r4 named
+	newconfd "${FILESDIR}"/named.confd-r1 named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
 	if use idn; then
-		cd ${S}/contrib/idn/idnkit-1.0-src
+		cd "${S}"/contrib/idn/idnkit-1.0-src
 		einstall || die "failed to install idn kit"
 		docinto idn
 		dodoc ChangeLog INSTALL{,.ja} README{,.ja} NEWS
 	fi
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f ${D}/usr/share/man/man1/{dig.1,host.1,nslookup.1}
-	rm -f ${D}/usr/bin/{dig,host,nslookup}
+	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1}
+	rm -f "${D}"/usr/bin/{dig,host,nslookup}
 }
 
 pkg_postinst() {
@@ -204,9 +204,9 @@ pkg_postinst() {
 		fi
 	fi
 
-	install -d -o named -g named ${ROOT}/var/run/named \
-		${ROOT}/var/bind/pri ${ROOT}/var/bind/sec
-	chown -R named:named ${ROOT}/var/bind
+	install -d -o named -g named "${ROOT}"/var/run/named \
+		"${ROOT}"/var/bind/pri "${ROOT}"/var/bind/sec
+	chown -R named:named "${ROOT}"/var/bind
 
 	elog "The default zone files are now installed as *.zone,"
 	elog "be careful merging config files if you have modified"

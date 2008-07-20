@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1_p1.ebuild,v 1.11 2008/05/29 19:11:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1_p1.ebuild,v 1.12 2008/07/20 09:36:05 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -55,10 +55,10 @@ src_unpack() {
 			"${i}"
 	done
 
-	use dlz && epatch ${FILESDIR}/${PN}-9.4.0-dlzbdb-close_cursor.patch
+	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
 	# should be installed by bind-tools
-	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
+	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
 
 	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
 
@@ -149,38 +149,38 @@ src_install() {
 			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
-		cd ${D}/usr/share/doc/${PF}
-		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
+		cd "${D}"/usr/share/doc/${PF}
+		tar pjxf "${DISTFILES}"/dyndns-samples.tbz2
 	}
 
-	newenvd ${FILESDIR}/10bind.env 10bind
+	newenvd "${FILESDIR}"/10bind.env 10bind
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
 
-	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r3 named.conf
+	insinto /etc/bind ; newins "${FILESDIR}"/named.conf-r3 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.ca:
-	insinto /var/bind ; doins ${FILESDIR}/named.ca
+	insinto /var/bind ; doins "${FILESDIR}"/named.ca
 
 	insinto /var/bind/pri
-	doins ${FILESDIR}/127.zone
-	newins ${FILESDIR}/localhost.zone-r2 localhost.zone
+	doins "${FILESDIR}"/127.zone
+	newins "${FILESDIR}"/localhost.zone-r2 localhost.zone
 
-	newinitd ${FILESDIR}/named.init-r5 named
-	newconfd ${FILESDIR}/named.confd-r2 named
+	newinitd "${FILESDIR}"/named.init-r5 named
+	newconfd "${FILESDIR}"/named.confd-r2 named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f ${D}/usr/share/man/man1/{dig.1,host.1,nslookup.1}
-	rm -f ${D}/usr/bin/{dig,host,nslookup}
+	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1}
+	rm -f "${D}"/usr/bin/{dig,host,nslookup}
 
 	use resolvconf && {
 		exeinto /etc/resolvconf/update.d
-		newexe ${FILESDIR}/resolvconf.bind bind
+		newexe "${FILESDIR}"/resolvconf.bind bind
 	}
 }
 
@@ -197,9 +197,9 @@ pkg_postinst() {
 		fi
 	fi
 
-	install -d -o named -g named ${ROOT}/var/run/named \
-		${ROOT}/var/bind/pri ${ROOT}/var/bind/sec
-	chown -R named:named ${ROOT}/var/bind
+	install -d -o named -g named "${ROOT}"/var/run/named \
+		"${ROOT}"/var/bind/pri "${ROOT}"/var/bind/sec
+	chown -R named:named "${ROOT}"/var/bind
 
 	elog "The default zone files are now installed as *.zone,"
 	elog "be careful merging config files if you have modified"

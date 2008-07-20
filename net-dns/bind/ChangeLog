@@ -1,6 +1,21 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.200 2008/07/10 20:38:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.201 2008/07/20 09:36:05 dertobi123 Exp $
+
+  20 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/bind-9.2.5-berkdb_fix.patch, -files/bind-9.2.5-dlz-mysql.patch,
+  -files/bind-9.2.5-mysql.patch, -files/bind-9.2.8-missing_odbc_test.patch,
+  -files/bind-9.3.4-missing_odbc_test.patch,
+  -files/bind-dlzbdb-close_cursor.patch, -files/localhost.zone,
+  -files/named.conf-r2, -files/named.confd, -files/named.init,
+  -files/named.init-r2, -files/named.init-r3, -files/named.rc,
+  -files/named.rc6, -files/named.rc6-pid_fix,
+  -files/named.rc6-smart_pid_fix, -bind-9.2.6.ebuild, -bind-9.2.6-r3.ebuild,
+  -bind-9.2.6-r4.ebuild, -bind-9.2.6-r5.ebuild, -bind-9.2.8.ebuild,
+  -bind-9.2.8-r3.ebuild, -bind-9.3.2.ebuild, -bind-9.3.2-r3.ebuild,
+  -bind-9.3.2-r4.ebuild, -bind-9.3.4.ebuild, -bind-9.3.4-r2.ebuild,
+  -bind-9.3.4-r3.ebuild, -bind-9.4.1-r1.ebuild:
+  Cleanup
 
   10 Jul 2008; Guy Martin <gmsoft@gentoo.org> bind-9.4.2_p1.ebuild:
   Stable on hppa, bug #231201
