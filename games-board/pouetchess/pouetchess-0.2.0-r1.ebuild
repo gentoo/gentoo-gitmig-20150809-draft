@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.5 2008/07/17 23:03:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.6 2008/07/20 20:49:15 loki_val Exp $
 
-inherit eutils toolchain-funcs games
+inherit base eutils toolchain-funcs games
 
 MY_PN=${PN/c/C}
 DESCRIPTION="3D and open source chess game"
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/scons"
 
 S=${WORKDIR}/${PN}_src_${PV}
+PATCHES=(	"${FILESDIR}/${P}-sconstruct-sandbox.patch"
+		"${FILESDIR}/${P}-nvidia_glext.patch"
+		"${FILESDIR}/${P}-segfaults.patch"
+		"${FILESDIR}/${P}-gcc43.patch"	)
 
 pkg_setup() {
 	games_pkg_setup
@@ -33,13 +37,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch \
-		"${FILESDIR}"/${P}-sconstruct-sandbox.patch \
-		"${FILESDIR}"/${P}-nvidia_glext.patch \
-		"${FILESDIR}"/${P}-segfaults.patch
+	base_src_unpack
 
+	cd "${S}"
 	# Fix for LibSDL >= 1.2.10 detection
 	sed -i \
 		-e "s:sdlver.split('.') >= \['1','2','8'\]:sdlver.split('.') >= [1,2,8]:" \
