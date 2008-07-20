@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12-r100.ebuild,v 1.2 2008/05/31 08:22:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12-r101.ebuild,v 1.1 2008/07/20 16:09:30 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -55,6 +55,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
+	epatch "${FILESDIR}"/${P}-pgsqlconfigure.patch
 
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
@@ -68,9 +69,12 @@ src_compile() {
 		conf="${conf} --without-openssl"
 	fi
 
+	if use postgres; then
+		conf="${conf} --with-pgsql=/usr"
+	fi
+
 	econf \
 		$(use_with mysql) \
-		$(use_with postgres pgsql) \
 		$(use_with ipv6) \
 		${conf} \
 		--host=${CHOST} \
