@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.10 2008/07/10 18:36:20 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.11 2008/07/20 05:56:25 serkan Exp $
+
+  20 Jul 2008; Serkan Kaba <serkan@gentoo.org> package.use.mask:
+  Add app-text/enchant:zemberek unmask.
 
   10 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   package.use.mask, no-multilib/package.use.mask:
