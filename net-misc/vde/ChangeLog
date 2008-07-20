@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.13 2008/03/11 21:34:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.14 2008/07/20 14:38:55 loki_val Exp $
+
+  20 Jul 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/vde-2.1.6-gcc43.patch, vde-2.1.6-r1.ebuild:
+  Fix to compile with gcc-4.3. Bug 231428. Thanks to Bernd Buschinski
+  <b.buschinski@web.de>
 
   11 Mar 2008; Stefan Schweizer <genstef@gentoo.org> files/vde.init:
   needs to start after net.tap according to Etaoin Shrdlu

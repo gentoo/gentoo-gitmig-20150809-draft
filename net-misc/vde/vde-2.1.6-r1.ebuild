@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.1.6-r1.ebuild,v 1.2 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.1.6-r1.ebuild,v 1.3 2008/07/20 14:38:55 loki_val Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/Unixterm_20070403.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_install() {
