@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/l2fprod-common
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.3 2007/05/07 16:23:09 caster Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.4 2008/07/20 19:09:03 serkan Exp $
+
+*l2fprod-common-7.3 (20 Jul 2008)
+
+  20 Jul 2008; Serkan Kaba <serkan@gentoo.org> +l2fprod-common-7.3.ebuild:
+  Version bump. Fixes bug #216027.
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org>
   l2fprod-common-6.9.1.ebuild:
