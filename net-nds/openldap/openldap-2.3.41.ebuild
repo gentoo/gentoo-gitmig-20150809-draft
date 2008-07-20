@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.41.ebuild,v 1.7 2008/03/18 23:38:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.41.ebuild,v 1.8 2008/07/20 10:19:10 loki_val Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -220,6 +220,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	#Fix for glibc-2.8 and ucred. Bug 228457.
+	append-flags -D_GNU_SOURCE
 
 	# HDB is only available with BerkDB
 	myconf_berkdb='--enable-bdb --enable-ldbm-api=berkeley --enable-hdb=mod'
