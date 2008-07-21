@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.5.ebuild,v 1.1 2008/06/10 06:14:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.5.ebuild,v 1.2 2008/07/21 15:54:02 mr_bones_ Exp $
 
 inherit autotools eutils python games
 
@@ -45,7 +45,9 @@ RDEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-redhat.patch
 	cp /usr/share/gettext/config.rpath .
 	eautoreconf
 }

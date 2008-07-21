@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.40 2008/06/10 06:14:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.41 2008/07/21 15:54:02 mr_bones_ Exp $
+
+  21 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gcompris-8.4.5-redhat.patch, gcompris-8.4.5.ebuild:
+  fix start up problem with patch from redhat, pointed out by Pacho Ramos in bug
+  #225883
 
 *gcompris-8.4.5 (10 Jun 2008)
 
