@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.39.ebuild,v 1.1 2008/07/16 10:33:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.39.ebuild,v 1.2 2008/07/21 17:07:00 remi Exp $
 
 inherit libtool gnome.org eutils flag-o-matic
 
@@ -25,6 +25,13 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	app-admin/eselect-esd"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${PN}-0.2.39-fix-errno.patch"
+}
 
 src_compile() {
 	# Strict aliasing problem
