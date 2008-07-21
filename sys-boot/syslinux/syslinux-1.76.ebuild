@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-1.76.ebuild,v 1.1 2005/01/10 00:26:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-1.76.ebuild,v 1.2 2008/07/21 23:21:18 chainsaw Exp $
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -16,7 +16,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i '/^#/s:^#: #:' memdisk/init.S16 || die "fixing # comments"
 }
 
