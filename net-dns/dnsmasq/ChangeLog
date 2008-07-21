@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.166 2008/07/21 04:40:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.167 2008/07/21 11:44:27 chainsaw Exp $
+
+  21 Jul 2008; <chainsaw@gentoo.org> dnsmasq-2.45.ebuild:
+  AMD64 stable keyword for 2.45; for security bug #232523. Tested on
+  hardened Opteron 2218 (hardened/amd64, gcc-3.4.6, glibc-2.6.1-r0,
+  2.6.24-hardened-r3 x86_64) and Core 2 Duo
+  (default/linux/amd64/2008.0/developer, gcc-4.3.1, glibc-2.8_p20080602-r0,
+  2.6.26 x86_64).
 
 *dnsmasq-2.45 (21 Jul 2008)
 
