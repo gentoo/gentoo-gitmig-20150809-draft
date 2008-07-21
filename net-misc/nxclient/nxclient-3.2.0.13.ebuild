@@ -1,14 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.2.0-r1.ebuild,v 1.1 2008/07/16 21:09:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.2.0.13.ebuild,v 1.1 2008/07/21 15:38:37 voyageur Exp $
 
-inherit eutils
+inherit eutils versionator
 
-MY_PV="${PV}-13"
+MAJOR_PV="$(get_version_component_range 1-3)"
+FULL_PV="${MAJOR_PV}-$(get_version_component_range 4)"
 DESCRIPTION="X11/VNC/NXServer client (remote desktops over low-bandwidth links)"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${MY_PV}.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${MY_PV}.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxclient-${FULL_PV}.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxclient-${FULL_PV}.i386.tar.gz )"
 LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
