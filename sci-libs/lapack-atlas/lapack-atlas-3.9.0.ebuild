@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.1.ebuild,v 1.3 2008/04/23 08:37:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.0.ebuild,v 1.1 2008/07/21 13:44:27 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
 MY_PN="${PN/lapack-/}"
-PATCH_V="3.7.39"
+PATCH_V="3.9.0"
 L_PN="lapack"
 L_PV="3.1.1"
 BlasRelease=$(get_version_component_range 1-3)
@@ -45,6 +45,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
+	epatch "${FILESDIR}"/${MY_PN}-${PV}-upstream-fixes.patch
+	epatch "${FILESDIR}"/${MY_PN}-${PATCH_V}-disable-ilaenv.patch
 
 	# make sure the compile picks up the proper includes
 	sed -i \
@@ -67,14 +69,23 @@ src_unpack() {
 		archselect="-b 32"
 	fi
 
+	# unfortunately, atlas-3.9.0 chokes when passed
+	# x86_64-pc-linux-gnu-gcc and friends instead of
+	# plain gcc. Hence, we'll have to workaround this
+	# until it is fixed by upstream
+	local c_compiler=$(tc-getCC)
+	if [[ "${c_compiler}" == *gcc* ]]; then
+		c_compiler="gcc"
+	fi
+
 	../configure \
-		--cc="$(tc-getCC)" \
+		--cc="${c_compiler}" \
 		--cflags="${CFLAGS}" \
 		--prefix="${D}/${DESTTREE}" \
 		--libdir="${D}/${DESTTREE}"/$(get_libdir)/atlas \
 		--incdir="${D}/${DESTTREE}"/include \
-		-C ac "$(tc-getCC)" -F ac "${CFLAGS}" \
-		-C if ${FORTRANC} -F if "${FFLAGS:--O2}" \
+		-C ac "${c_compiler}" -F ac "${CFLAGS}" \
+		-C if ${FORTRANC} -F if "${FFLAGS:-'-O2'}" \
 		-Ss pmake "\$(MAKE) ${MAKEOPTS}" \
 		-Si cputhrchk 0 ${archselect} \
 		|| die "configure failed"
@@ -98,7 +109,7 @@ src_unpack() {
 src_compile() {
 	# build atlas' part of lapack
 	cd "${BLD_DIR}"
-	for d in src/lapack interfaces/lapack/C/src interfaces/lapack/F77/src; do
+	for d in src/lapack interfaces/lapack/C/src interfaces/lapack/F77/src interfaces/lapack/C2F/src; do
 		cd "${BLD_DIR}"/${d}
 		make lib || die "Failed to make lib in ${d}"
 	done
