@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.11.0.ebuild,v 1.4 2008/05/19 20:00:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.11.0.ebuild,v 1.5 2008/07/21 11:32:41 voyageur Exp $
 
 inherit gnustep-2
 
@@ -27,4 +27,5 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch "${FILESDIR}"/${P}-NSMutableDictionary.patch
+	epatch "${FILESDIR}"/${P}-NSException.patch
 }
