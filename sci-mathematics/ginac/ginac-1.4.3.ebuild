@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.2 2008/05/24 20:31:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.3 2008/07/21 09:35:14 bicatali Exp $
 
 inherit eutils
 
@@ -16,13 +16,9 @@ IUSE="doc"
 RDEPEND="sci-libs/cln"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( app-doc/doxygen media-gfx/transfig virtual/latex-base )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#epatch "${FILESDIR}"/${PN}-1.4.1-gcc4.3.patch
-}
+	doc? ( app-doc/doxygen
+		media-gfx/transfig
+		|| ( dev-texlive/texlive-fontsrecommended app-text/tetex app-text/ptex ) )"
 
 src_compile() {
 	econf || die "econf failed"
