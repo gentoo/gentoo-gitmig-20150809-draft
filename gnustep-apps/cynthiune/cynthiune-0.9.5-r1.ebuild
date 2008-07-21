@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.9 2008/05/17 20:07:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.10 2008/07/21 08:25:11 voyageur Exp $
 
 inherit gnustep-2
 
@@ -48,12 +48,12 @@ cynthiune_get_config() {
 	local myconf="disable-windowsmedia=yes"
 	use arts || myconf="${myconf} disable-arts=yes"
 	use esd || myconf="${myconf} disable-esound=yes"
-	use flac || myconf="${myconf} disable-flac=yes"
+	use flac || myconf="${myconf} disable-flac=yes disable-flactags=yes"
 	use mad || myconf="${myconf} disable-mp3=yes disable-id3tag=yes"
 	use modplug || myconf="${myconf} disable-mod=yes"
 	use musepack || myconf="${myconf} disable-musepack=yes"
 	use timidity || myconf="${myconf} disable-timidity=yes"
-	use vorbis || myconf="${myconf} disable-ogg=yes"
+	use vorbis || myconf="${myconf} disable-ogg=yes disable-vorbistags=yes"
 
 	echo ${myconf}
 }
