@@ -1,22 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.1.0.ebuild,v 1.2 2008/02/18 17:56:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.2.0.13.ebuild,v 1.1 2008/07/21 15:45:35 voyageur Exp $
 
-inherit eutils
+inherit eutils versionator
 
-MY_PV="${PV}-2"
+MAJOR_PV="$(get_version_component_range 1-3)"
+FULL_PV="${MAJOR_PV}-$(get_version_component_range 4)"
 DESCRIPTION="Free edition NX server from NoMachine"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/FE/nxserver-${MY_PV}.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/${PV}/Linux/FE/nxserver-${MY_PV}.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/FE/nxserver-${FULL_PV}.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/FE/nxserver-${FULL_PV}.i386.tar.gz )"
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="=net-misc/nxnode-3.1*
+DEPEND="=net-misc/nxnode-3.2*
 	!net-misc/nxserver-freenx
 	!net-misc/nxserver-2xterminalserver"
 RDEPEND="${DEPEND}
