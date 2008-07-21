@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.52 2008/03/22 03:46:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.53 2008/07/21 14:50:58 dang Exp $
+
+  21 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/alacarte-0.11.5-python-2.6.patch, alacarte-0.11.5.ebuild:
+  Add a python 2.6 compat patch; bug #232378
 
   22 Mar 2008; Daniel Gryniewicz <dang@gentoo.org> alacarte-0.11.4.ebuild:
   Marked stable on amd64 for bug #212986

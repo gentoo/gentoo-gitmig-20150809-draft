@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.5.ebuild,v 1.1 2008/03/10 23:55:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.5.ebuild,v 1.2 2008/07/21 14:50:58 dang Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -33,7 +33,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch "${FILESDIR}"/${PN}-0.11.3-python-2.5.patch
+	epatch "${FILESDIR}"/${PN}-0.11.5-python-2.6.patch
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
