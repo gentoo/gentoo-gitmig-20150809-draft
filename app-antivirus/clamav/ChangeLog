@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.293 2008/07/21 11:29:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.294 2008/07/21 16:37:13 corsair Exp $
+
+  21 Jul 2008; Markus Rothe <corsair@gentoo.org> clamav-0.93.3.ebuild:
+  Stable on ppc64; bug #227351
 
   21 Jul 2008; <chainsaw@gentoo.org> clamav-0.93.3.ebuild:
   AMD64 stable keyword for 0.93.3; for security bug #227351. Tested on
