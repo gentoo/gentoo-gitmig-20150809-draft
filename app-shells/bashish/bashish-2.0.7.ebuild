@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/bashish-2.0.7.ebuild,v 1.1 2008/07/21 05:26:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/bashish-2.0.7.ebuild,v 1.2 2008/07/21 14:51:01 mr_bones_ Exp $
 
 DESCRIPTION="Text console theme engine"
 HOMEPAGE="http://bashish.sourceforge.net/"
@@ -15,4 +15,4 @@ DEPEND=">=dev-util/dialog-1.0"
 
 src_install() {
 	emake DESTDIR=${D} install || die "emake install failed"
-}	
+}
