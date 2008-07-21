@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.33 2008/07/11 05:55:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.34 2008/07/21 06:03:45 opfer Exp $
+
+  21 Jul 2008; Christian Faulhammer <opfer@gentoo.org> pymacs-0.23.ebuild:
+  add USE=test with dependency on dev-texlive/texlive-langfrench, needed to
+  fix bug 232497, reported by carlo
 
   09 Jul 2008; Markus Rothe <corsair@gentoo.org> pymacs-0.23.ebuild:
   Stable on ppc64; bug #212241
