@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.3 2008/07/07 22:35:53 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.4 2008/07/21 19:13:53 steev Exp $
 
 inherit linux-mod
 
@@ -60,6 +60,7 @@ src_unpack() {
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/minstrel ath_rate/onoe ath_rate/sample; do
 		convert_to_m "${S}"/${dir}/Makefile
 	done
+	epatch "${FILESDIR}"/madwifi-dfs-ieee80211-skb-update.patch
 }
 
 src_install() {
