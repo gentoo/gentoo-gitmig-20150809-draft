@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.31.ebuild,v 1.7 2008/03/15 19:39:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.31.ebuild,v 1.8 2008/07/21 17:51:55 dertobi123 Exp $
 
 inherit eutils
 
@@ -52,6 +52,7 @@ src_install () {
 	dodoc Changes README
 
 	# init.d + conf.d files
+	insopts -o root -g root -m 755
 	newinitd "${FILESDIR}"/${PN}.rc.new ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf.new ${PN}
 }
