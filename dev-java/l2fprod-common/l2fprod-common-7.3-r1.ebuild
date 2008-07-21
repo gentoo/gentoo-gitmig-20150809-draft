@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-7.3.ebuild,v 1.1 2008/07/20 19:09:03 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-7.3-r1.ebuild,v 1.1 2008/07/21 21:39:39 serkan Exp $
 
 WANT_ANT_TASKS="ant-trax"
+EAPI="1"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java/Swing GUI components and libraries for building desktop applications"
@@ -12,9 +13,14 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+COMMON_DEPEND="dev-java/nachocalendar
+	dev-java/jcalendar:1.2"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/jreleaseinfo"
-RDEPEND=">=virtual/jre-1.4"
+	dev-java/jreleaseinfo
+	${COMMON_DEPEND}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +36,8 @@ src_unpack() {
 src_compile() {
 	eant init
 	java-ant_bsfix_one build/build4components.xml
-	eant jar
+	java-ant_rewrite-classpath build/build4components.xml
+	eant -Dgentoo.classpath="$(java-pkg_getjar nachocalendar nachocalendar.jar):$(java-pkg_getjars jcalendar-1.2)" jar
 }
 
 src_install() {
