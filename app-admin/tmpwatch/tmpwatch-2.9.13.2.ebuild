@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.13.2.ebuild,v 1.4 2008/07/18 16:58:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.13.2.ebuild,v 1.5 2008/07/21 06:32:22 opfer Exp $
 
 inherit rpm versionator
 
@@ -9,6 +9,9 @@ MY_P="${RPM_P%-*}"
 
 DESCRIPTION="Files which haven't been accessed in a given period of time are removed from specified directories"
 HOMEPAGE="https://fedorahosted.org/tmpwatch/"
+# !!!!!!!!!
+# new URL from next version on, no damn RPM anymore! https://fedorahosted.org/releases/t/m/tmpwatch/tmpwatch-2.9.13.tar.bz2
+#!!!!!!!!!!!!!!!!!!!!!!
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/development/source/SRPMS/${RPM_P}.src.rpm"
 
 LICENSE="GPL-2"
