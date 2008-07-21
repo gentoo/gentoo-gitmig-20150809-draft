@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/tinytableplus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/tinytableplus/ChangeLog,v 1.5 2007/02/05 20:42:13 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tinytableplus/ChangeLog,v 1.6 2008/07/21 20:39:05 tupone Exp $
+
+  21 Jul 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/tinytableplus-0.9-zope-2.9.8.patch, tinytableplus-0.9-r1.ebuild:
+  Make it work with zope >= 2.9.8 . Bug #224529 by <nerdboy@gentoo.org>
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
