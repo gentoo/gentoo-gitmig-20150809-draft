@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.2.ebuild,v 1.7 2007/11/27 23:39:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.2.ebuild,v 1.8 2008/07/21 08:42:51 voyageur Exp $
 
 inherit gnustep-2
 
@@ -13,9 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 SLOT="0"
 
-DEPEND=">=app-text/poppler-0.4
+RDEPEND=">=app-text/poppler-0.4
 	>=media-libs/freetype-2"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

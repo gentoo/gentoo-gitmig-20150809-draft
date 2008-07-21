@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/popplerkit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.12 2007/11/27 23:39:26 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.13 2008/07/21 08:42:51 voyageur Exp $
+
+  21 Jul 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  popplerkit-0.2.ebuild:
+  Add (well hidden) pkgconfig DEPEND, bug #232432
 
   27 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   files/digest-popplerkit-0.2, Manifest:
