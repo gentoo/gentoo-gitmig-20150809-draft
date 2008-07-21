@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.18 2008/07/21 19:16:12 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.19 2008/07/21 19:23:30 ikelos Exp $
+
+  21 Jul 2008; Mike Auty <ikelos@gentoo.org>
+  +files/ophcrack-3.0-makefile.patch:
+  Don't forget the makefile patch.
 
 *ophcrack-3.0 (21 Jul 2008)
 
