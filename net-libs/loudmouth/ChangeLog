@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.65 2008/07/18 16:53:43 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.66 2008/07/21 16:40:24 nixnut Exp $
+
+  21 Jul 2008; nixnut <nixnut@gentoo.org> loudmouth-1.4.0.ebuild:
+  Stable on ppc wrt bug 232205
 
   18 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
   loudmouth-1.4.0.ebuild:
