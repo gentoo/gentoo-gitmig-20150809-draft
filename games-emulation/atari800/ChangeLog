@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/atari800
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.22 2007/07/13 03:25:04 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.23 2008/07/21 17:01:04 nixnut Exp $
+
+  21 Jul 2008; nixnut <nixnut@gentoo.org> atari800-2.0.3.ebuild:
+  Stable on ppc wrt bug 232298
 
 *atari800-2.0.3 (13 Jul 2007)
 
