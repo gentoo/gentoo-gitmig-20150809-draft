@@ -1,0 +1,10 @@
+--- src/fg_mkdir.cxx.old	2008-07-22 20:51:25.000000000 +0200
++++ src/fg_mkdir.cxx	2008-07-22 20:52:30.000000000 +0200
+@@ -34,6 +34,7 @@
+ #endif
+ #include <string.h>
+ #include <string>
++#include <stdlib.h>
+ 
+ using namespace std;
+ 

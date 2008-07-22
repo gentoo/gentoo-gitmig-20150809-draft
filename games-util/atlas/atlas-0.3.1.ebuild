@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1.ebuild,v 1.4 2007/12/26 00:12:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1.ebuild,v 1.5 2008/07/22 19:03:34 tupone Exp $
 
 inherit eutils autotools games
 
@@ -25,7 +25,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-simgearNew.patch
+	epatch "${FILESDIR}"/${P}-simgearNew.patch \
+		"${FILESDIR}"/${P}-gcc-4.3.patch
 	eautoreconf
 }
 
