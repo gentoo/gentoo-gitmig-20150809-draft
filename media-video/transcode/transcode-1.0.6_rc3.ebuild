@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc3.ebuild,v 1.1 2008/07/16 17:03:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc3.ebuild,v 1.2 2008/07/22 07:25:25 aballier Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -23,7 +23,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dvdread? ( >=media-libs/libdvdread-0.9.0 )
 	xvid? ( >=media-libs/xvid-1.0.2 )
 	mjpeg? ( >=media-video/mjpegtools-1.6.2-r3 )
-	lzo? ( =dev-libs/lzo-1* )
+	lzo? ( =dev-libs/lzo-2* )
 	fame? ( >=media-libs/libfame-0.9.1 )
 	imagemagick? ( >=media-gfx/imagemagick-6.4.0.6 )
 	mpeg? ( media-libs/libmpeg3 )
@@ -32,7 +32,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	quicktime? ( >=media-libs/libquicktime-0.9.8 )
 	vorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )
-	nuv? ( =dev-libs/lzo-1* )
+	nuv? ( =dev-libs/lzo-2* )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( >=media-libs/freetype-2 )
