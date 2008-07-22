@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3639 2008/07/22 13:41:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3640 2008/07/22 22:27:11 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2100,6 +2100,7 @@ sys-auth/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
 sys-auth/pambase:consolekit - Enable ConsoleKit support in local login sessions.
 sys-auth/pambase:mktemp - Enable pam_mktemp support in system authentication.
 sys-auth/pambase:passwdqc - Enable pam_passwdqc support in system authentication.
+sys-auth/pambase:ssh - Enable pam_ssh support in system authentication.
 sys-block/gparted:fat - Include FAT16/FAT32 support
 sys-block/gparted:hfs - Include HFS support
 sys-block/gparted:jfs - Include JFS support
