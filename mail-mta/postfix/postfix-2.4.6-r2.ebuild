@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6-r2.ebuild,v 1.12 2008/07/16 16:41:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6-r2.ebuild,v 1.13 2008/07/22 17:44:21 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -50,7 +50,10 @@ DEPEND=">=sys-libs/db-3.2
 # regular ebuild
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
-		!mailwrapper? ( !virtual/mta )
+		!mailwrapper? (
+			!virtual/mta
+			!net-mail/mailwrapper
+		)
 		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 		selinux? ( sec-policy/selinux-postfix )"
 

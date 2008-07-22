@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11-r1.ebuild,v 1.10 2008/07/16 16:41:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11-r1.ebuild,v 1.11 2008/07/22 17:44:21 dertobi123 Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened cdb"
@@ -35,7 +35,10 @@ DEPEND="cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.74 ) )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
-	!mailwrapper? ( !virtual/mta )
+	!mailwrapper? (
+		!virtual/mta
+		!net-mail/mailwrapper
+	)
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	selinux? ( sec-policy/selinux-postfix )"
 
