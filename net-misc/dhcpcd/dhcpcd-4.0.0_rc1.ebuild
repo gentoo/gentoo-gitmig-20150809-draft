@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0_beta7.ebuild,v 1.1 2008/06/20 07:49:16 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0_rc1.ebuild,v 1.1 2008/07/22 09:43:07 armin76 Exp $
 
 EAPI=1
 
@@ -8,6 +8,7 @@ inherit toolchain-funcs
 
 MY_P="${P/_alpha/-alpha}"
 MY_P="${MY_P/_beta/-beta}"
+MY_P="${MY_P/_rc/-rc}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A DHCP client"
@@ -46,15 +47,19 @@ src_unpack() {
 	fi
 }
 
+pkg_setup() {
+	MAKE_ARGS="DBDIR=/var/lib/dhcpcd LIBEXECDIR=/lib/dhcpcd"
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" DBDIR=/var/lib/dhcpcd LIBEXECDIR=/lib/dhcpcd || die
+	[ -z "${MAKE_ARGS}" ] && die "MAKE_ARGS is empty"
+	emake CC="$(tc-getCC)" ${MAKE_ARGS} || die
 }
 
 src_install() {
 	local hooks="50-ntp.conf"
 	use elibc_glibc && hooks="${hooks} 50-yp.conf"
-	emake LIBEXECDIR=/lib/dhcpcd HOOKSCRIPTS="${hooks}" DESTDIR="${D}" install || die
-	keepdir /var/lib/dhcpcd
+	emake ${MAKE_ARGS} HOOKSCRIPTS="${hooks}" DESTDIR="${D}" install || die
 }
 
 pkg_postinst() {
