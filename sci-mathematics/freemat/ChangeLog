@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.11 2008/05/27 21:40:26 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.12 2008/07/22 09:06:45 bicatali Exp $
+
+  22 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/freemat-3.6-includes.patch:
+  Changed a cmath include for a math.h, probably a gcc < 4.3 bug on amd64
+  multilib. Closing bug #232620
 
   28 May 2008; Andrey Grozin <grozin@gentoo.org> freemat-3.6.ebuild:
   Added fdo-mime_desktop_database_update and elogs with instructions for the

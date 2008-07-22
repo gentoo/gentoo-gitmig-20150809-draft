@@ -356,13 +356,11 @@
    void sgemm_ (char * ta, char* tb, int* m, int* n, int* k, float *alp,
 --- ./libs/libFreeMat/Print.cpp.orig	2008-05-20 15:42:54.000000000 +0100
 +++ ./libs/libFreeMat/Print.cpp	2008-05-20 15:43:58.000000000 +0100
-@@ -2,8 +2,8 @@
- #include "IEEEFP.hpp"
+@@ -2,7 +2,7 @@
  #include "FunctionDef.hpp"
  #include "Interpreter.hpp"
--#include <math.h>
+ #include <math.h>
 -#include <string.h>
-+#include <cmath>
 +#include <cstring>
  
  #define MSGBUFLEN 2048
