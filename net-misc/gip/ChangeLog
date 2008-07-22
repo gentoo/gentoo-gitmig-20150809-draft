@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/gip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.15 2008/07/20 18:31:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.16 2008/07/22 04:03:09 darkside Exp $
 
   20 Jul 2008; Jeremy Olexa <darkside@gentoo.org>
   +files/gip-1.6.1.1-libsigcpp.patch, gip-1.6.1.1.ebuild:
   Add patch to fix compilation error due to API change with libsigc++. Thanks
-  to Evildad <Evildad2k@yahoo.de> for submitting patch
+  to Vladimir for submitting patch in bug #231298
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> gip-1.6.1.1.ebuild:
   amd64 stable and pkgconfig dep added (bug #205439).
