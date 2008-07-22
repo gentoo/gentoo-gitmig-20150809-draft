@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.43 2008/07/22 17:42:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.44 2008/07/22 20:03:27 corsair Exp $
+
+  22 Jul 2008; Markus Rothe <corsair@gentoo.org> dwm-5.0.1.ebuild:
+  Stable on ppc64; bug #232477
 
   22 Jul 2008; Cédric Krier <cedk@gentoo.org> files/dwm.desktop:
   Fix desktop type
