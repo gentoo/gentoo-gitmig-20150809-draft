@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8832 2008/07/21 12:47:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8833 2008/07/22 07:57:28 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -406,12 +406,6 @@ dev-cpp/bakery
 # Diego Pettenò <flameeyes@gentoo.org> (11 May 2008)
 # Release candidate version, masked for testing.
 =app-admin/sudo-1.7.0_rc*
-
-# Hans de Graaff <graaff@gentoo.org> (10 May 2008)
-# xemacs-packages-sumo cannot be installed together with any of the separate
-# xemacs packages. Please use xemacs-packages-all instead to install all
-# xemacs packages. See bug 23949.
-app-xemacs/xemacs-packages-sumo
 
 # Ulrich Mueller <ulm@gentoo.org> (10 May 2008)
 # LessTif is unsupported since it has open issues with several packages.
