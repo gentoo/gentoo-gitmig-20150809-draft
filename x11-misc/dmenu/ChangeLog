@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.40 2008/07/22 17:09:19 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.41 2008/07/22 17:12:37 cedk Exp $
+
+  22 Jul 2008; Cédric Krier <cedk@gentoo.org> dmenu-3.7-r1.ebuild:
+  Add missing xinerama in IUSE
 
   22 Jul 2008; Cédric Krier <cedk@gentoo.org> dmenu-3.7-r1.ebuild:
   Fix xinerama dependencies and CFLAGS for bug #232476
