@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.5 2008/07/21 18:28:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1-r1.ebuild,v 1.6 2008/07/22 19:32:26 corsair Exp $
 
 inherit python gnome2 eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://meld.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE="doc gnome"
 
 RDEPEND=">=dev-lang/python-2.3
