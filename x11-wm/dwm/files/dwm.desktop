@@ -5,4 +5,4 @@ Comment=dynamic window manager
 Exec=/etc/X11/Sessions/dwm
 TryExec=dwm
 Icon=
-Type=Xsession
+Type=Application
