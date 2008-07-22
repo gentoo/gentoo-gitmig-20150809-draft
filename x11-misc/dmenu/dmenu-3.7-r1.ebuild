@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.8 2008/07/22 17:12:37 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.9 2008/07/22 17:30:33 tove Exp $
 
 inherit toolchain-funcs savedconfig eutils
 
@@ -10,12 +10,13 @@ SRC_URI="http://code.suckless.org/dl/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="xinerama"
 
-DEPEND="x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )"
-RDEPEND=${DEPEND}
+DEPEND="${RDEPEND}
+	xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
 	unpack ${A}
