@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.105 2008/07/17 13:51:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.106 2008/07/22 15:27:39 chainsaw Exp $
+
+  22 Jul 2008; <chainsaw@gentoo.org>
+  -files/NVIDIA_kernel-71.86.04-2305230.diff,
+  -files/NVIDIA_kernel-96.43.05-2290218.diff,
+  -nvidia-drivers-71.86.01.ebuild, -nvidia-drivers-71.86.04.ebuild,
+  nvidia-drivers-71.86.06.ebuild, -nvidia-drivers-96.43.01.ebuild,
+  -nvidia-drivers-96.43.05.ebuild, nvidia-drivers-96.43.07.ebuild:
+  X86 following the AMD64 lead in fasttrack stable for 71 & 96 branch
+  drivers. Arch testing by hoffie, permission granted by tsunam. Closes bug
+  #232624 by Mike Hammill <michael@hammill.name>. Cleaned up old ebuilds.
 
   17 Jul 2008; <chainsaw@gentoo.org> nvidia-drivers-71.86.06.ebuild,
   nvidia-drivers-96.43.07.ebuild:
