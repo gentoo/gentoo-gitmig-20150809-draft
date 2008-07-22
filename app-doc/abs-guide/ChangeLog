@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.60 2008/07/17 04:26:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.61 2008/07/22 03:49:59 dirtyepic Exp $
+
+*abs-guide-5.4 (22 Jul 2008)
+
+  22 Jul 2008; Ryan Hill <dirtyepic@gentoo.org> +abs-guide-5.4.ebuild:
+  Version bump. See http://personal.riverusers.com/~thegrendel/Change.log
+  for changes.
 
   17 Jul 2008; Ryan Hill <dirtyepic@gentoo.org> Manifest:
   Fix Manifest.
