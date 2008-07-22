@@ -1,0 +1,10 @@
+--- lib/src/libset.c.orig	2008-07-22 12:49:52.000000000 +0100
++++ lib/src/libset.c	2008-07-22 12:34:52.000000000 +0100
+@@ -28,6 +28,7 @@
+ 
+ #include <unistd.h>
+ #include <errno.h>
++#include <locale.h>
+ 
+ #define PDEBUG 0
+ 
