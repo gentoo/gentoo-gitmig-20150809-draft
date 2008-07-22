@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.40 2008/07/04 19:43:58 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.41 2008/07/22 22:27:37 flameeyes Exp $
+
+*pambase-20080723 (22 Jul 2008)
+
+  22 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +pambase-20080723.ebuild:
+  Add new pambase version, with added support for sys-auth/pam_ssh. Also
+  contains fixes for bug #232669 for Gentoo/FreeBSD 7 systems. See bug
+  #232691 for keywording request.
 
   04 Jul 2008; <ricmm@gentoo.org> pambase-20080318.ebuild:
   Add ~mips, bug #230743

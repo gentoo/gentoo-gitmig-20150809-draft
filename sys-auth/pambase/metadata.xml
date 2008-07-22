@@ -40,5 +40,12 @@
       handling. This module creates a private temporary directory for
       the user, and sets TMP and TMPDIR accordingly.
     </flag>
+    <flag name="ssh">
+      Enable pam_ssh module on system auth stack for authentication
+      and session handling. This module will accept as password the
+      passphrase of a private SSH key (one of ~/.ssh/id_rsa,
+      ~/.ssh/id_dsa or ~/.ssh/identity), and will spawn an ssh-agent
+      instance to cache the open key.
+    </flag>
   </use>
 </pkgmetadata>
