@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.3 2008/04/05 13:46:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.4 2008/07/22 10:31:02 aballier Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -35,6 +35,15 @@ pkg_setup() {
 		eerror "${PN} requires x11-libs/fltk to be built with opengl"
 		die "Please install x11-libs/fltk with opengl useflag enabled"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-multiple_parameters_named.patch"
+	epatch "${FILESDIR}/${P}-implicitdecls.patch"
+	epatch "${FILESDIR}/${P}-rpath.patch"
 }
 
 src_compile(){

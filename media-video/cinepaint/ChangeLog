@@ -1,6 +1,14 @@
 # ChangeLog for media-video/cinepaint
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.21 2008/04/05 13:46:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.22 2008/07/22 10:31:02 aballier Exp $
+
+  22 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/cinepaint-0.22.1-gcc43.patch,
+  +files/cinepaint-0.22.1-implicitdecls.patch,
+  +files/cinepaint-0.22.1-multiple_parameters_named.patch,
+  +files/cinepaint-0.22.1-rpath.patch, cinepaint-0.22.1.ebuild:
+  Fix build with gcc 4.3, bug #230321, fix a bunch of trivial implicit
+  declarations warnings, remove the build dir runpath, bug #215203.
 
   05 Apr 2008; Stefan Schweizer <genstef@gentoo.org>
   -files/cinepaint-0.22.0-as-needed.patch, -cinepaint-0.22.0.ebuild,
