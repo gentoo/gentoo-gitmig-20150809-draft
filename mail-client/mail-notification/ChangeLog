@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.69 2008/05/03 06:19:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.70 2008/07/22 09:50:37 graaff Exp $
+
+*mail-notification-5.4 (22 Jul 2008)
+
+  22 Jul 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/mail-notification-5.4-dont-update-cache.patch,
+  +files/mail-notification-5.4-remove-ubuntu-special-case.patch,
+  +mail-notification-5.4.ebuild:
+  Version bump: fix regression for IMAP mailboxes. Also attempt to fix #215281.
 
   03 May 2008; Hans de Graaff <graaff@gentoo.org>
   mail-notification-5.0.ebuild, mail-notification-5.0-r1.ebuild:
