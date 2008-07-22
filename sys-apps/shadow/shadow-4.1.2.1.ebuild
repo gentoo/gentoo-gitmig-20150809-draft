@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.1.ebuild,v 1.1 2008/06/28 23:27:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.1.ebuild,v 1.2 2008/07/22 14:23:53 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="audit cracklib nls pam selinux skey"
 
-# Does not work with OpenPAM (yet?)
 RDEPEND="audit? ( sys-process/audit )
 	cracklib? ( >=sys-libs/cracklib-2.7-r3 )
-	pam? ( >=sys-libs/pam-0.99 )
+	pam? ( virtual/pam )
 	!sys-apps/pam-login
 	!app-admin/nologin
 	skey? ( sys-auth/skey )
@@ -39,6 +38,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.0.13-dots-in-usernames.patch
 	epatch "${FILESDIR}"/${PN}-4.0.13-long-groupnames.patch
 
+	# Support OpenPAM #232586
+	epatch "${FILESDIR}"/${P}+openpam.patch
+
+	eautoreconf
+
 	elibtoolize
 	epunt_cxx
 }
@@ -46,8 +50,6 @@ src_unpack() {
 src_compile() {
 	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
-		--disable-desrpc \
-		--with-libcrypt \
 		--enable-shared=no \
 		--enable-static=yes \
 		$(use_with audit) \

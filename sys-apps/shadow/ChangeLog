@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.205 2008/06/28 23:27:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.206 2008/07/22 14:23:53 flameeyes Exp $
+
+  22 Jul 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/shadow-4.1.2.1+openpam.patch, shadow-4.1.2.1.ebuild:
+  Add patch to build against OpenPAM, thanks to Seraphim Mellos in bug
+  #232586.
 
 *shadow-4.1.2.1 (28 Jun 2008)
 
