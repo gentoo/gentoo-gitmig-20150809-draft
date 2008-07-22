@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.37 2008/07/21 17:21:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.38 2008/07/22 16:23:24 tove Exp $
+
+  22 Jul 2008; Torsten Veller <tove@gentoo.org> dmenu-3.7-r1.ebuild:
+  Stable on x86 (#232476)
 
   21 Jul 2008; nixnut <nixnut@gentoo.org> dmenu-3.7-r1.ebuild:
   Stable on ppc wrt bug 232476
