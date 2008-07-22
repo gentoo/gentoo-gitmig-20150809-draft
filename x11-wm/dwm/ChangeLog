@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.40 2008/07/21 17:19:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.41 2008/07/22 17:03:14 cedk Exp $
+
+  22 Jul 2008; Cédric Krier <cedk@gentoo.org> dwm-5.0.1.ebuild:
+  Fix xinerama dependencies and CFLAGS for bug #232477
 
   21 Jul 2008; nixnut <nixnut@gentoo.org> dwm-5.0.1.ebuild:
   Stable on ppc wrt bug 232477

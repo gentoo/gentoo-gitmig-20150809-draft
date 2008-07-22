@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.0.1.ebuild,v 1.5 2008/07/21 17:19:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.0.1.ebuild,v 1.6 2008/07/22 17:03:14 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -11,9 +11,10 @@ SRC_URI="http://code.suckless.org/dl/dwm/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="xinerama"
 
-DEPEND="x11-libs/libX11"
+DEPEND="x11-libs/libX11
+	xinerama? ( x11-libs/libXinerama )"
 RDEPEND=${DEPEND}
 
 src_unpack() {
@@ -21,8 +22,10 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "s/CFLAGS = -Os/CFLAGS += -g/" \
+		-e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/" \
 		-e "s/LDFLAGS = -s/LDFLAGS += -g/" \
+		-e "s/XINERAMALIBS =/XINERAMALIBS ?=/" \
+		-e "s/XINERAMAFLAGS =/XINERAMAFLAGS ?=/" \
 		config.mk || die "sed failed"
 
 	if use savedconfig; then
@@ -33,7 +36,12 @@ src_unpack() {
 src_compile() {
 	local msg
 	use savedconfig && msg=", please check the configfile"
-	emake CC=$(tc-getCC) || die "emake failed${msg}"
+	if use xinerama; then
+		emake CC=$(tc-getCC) || die "emake failed${msg}"
+	else
+		emake CC=$(tc-getCC) XINERAMAFLAGS="" XINERAMALIBS="" \
+			|| die "emake failed${msg}"
+	fi
 }
 
 src_install() {
