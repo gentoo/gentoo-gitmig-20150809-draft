@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.9 2008/07/22 17:30:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.7-r1.ebuild,v 1.10 2008/07/22 20:01:47 corsair Exp $
 
 inherit toolchain-funcs savedconfig eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://code.suckless.org/dl/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="xinerama"
 
 RDEPEND="x11-libs/libX11
