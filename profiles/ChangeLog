@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1705 2008/07/22 17:29:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1706 2008/07/22 19:52:22 corsair Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 Jul 2008; Markus Rothe <corsair@gentoo.org>
+  arch/powerpc/ppc64/package.use.mask:
+  unmask zemberek use flag for app-text/enchant in ppc64 profiles
 
   22 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org> package.mask:
   Unmask mail-mta/esmtp, masked versions no longer exists

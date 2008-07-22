@@ -2,3 +2,6 @@
 # Masking out passwdqc from pambase since passwdqc 
 sys-auth/pambase passwdqc
 
+# Markus Rothe <corsair@gentoo.org> (22 July 2008)
+# bug #232411
+app-text/enchant -zemberek
