@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.7 2008/07/16 14:12:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.8 2008/07/22 19:22:30 corsair Exp $
+
+  22 Jul 2008; Markus Rothe <corsair@gentoo.org> eselect-xvmc-0.1.ebuild:
+  Stable on ppc64; bug #231779
 
   16 Jul 2008; nixnut <nixnut@gentoo.org> eselect-xvmc-0.1.ebuild:
   Stable on ppc wrt bug 231779
