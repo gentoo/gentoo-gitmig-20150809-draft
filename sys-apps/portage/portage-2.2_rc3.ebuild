@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc2.ebuild,v 1.1 2008/07/23 07:52:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc3.ebuild,v 1.1 2008/07/23 22:17:25 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -55,7 +55,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
 
-PATCHVER="2.2_rc2"
+PATCHVER=${PV}
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	$(prefix_src_archives ${PN}-${PATCHVER}.patch.bz2)"
