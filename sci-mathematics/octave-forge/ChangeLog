@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.27 2008/04/27 15:09:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.28 2008/07/23 17:19:32 markusle Exp $
+
+  23 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  octave-forge-2006.03.17.ebuild, octave-forge-2006.03.17-r1.ebuild:
+  Adjusted dependencies to exclude octave-3* since the 
+  monolithic octave-forge ebuilds do not work with it.
 
   27 Apr 2008; Markus Dittrich <markusle@gentoo.org>
   +files/octave-forge-2006.03.17-gcc43.patch,
