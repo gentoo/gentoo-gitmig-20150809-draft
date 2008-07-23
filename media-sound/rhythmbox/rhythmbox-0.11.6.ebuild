@@ -1,16 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6.ebuild,v 1.3 2008/07/17 23:43:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6.ebuild,v 1.4 2008/07/23 22:48:50 eva Exp $
 
 EAPI="1"
 
-inherit gnome2 eutils python
+inherit gnome2 eutils python virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
-IUSE="daap dbus doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp python tagwriting"
+IUSE="cdr daap dbus doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp python tagwriting"
 
 # I want tagwriting to be on by default in the future. It is just a local flag
 # now because it is still considered experimental by upstream and doesn't work
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2.8
 	>=dev-libs/totem-pl-parser-2.22.0
-	>=gnome-extra/nautilus-cd-burner-2.13
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.13 )
 	>=x11-libs/libsexy-0.1.5
 	>=gnome-extra/gnome-media-2.14.0
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
@@ -33,7 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=net-libs/libsoup-2.4:2.4
 	lirc? ( app-misc/lirc )
 	hal? (
-		ipod? ( >=media-libs/libgpod-0.4 )
+		ipod? ( >=media-libs/libgpod-0.6 )
 		mtp? ( >=media-libs/libmtp-0.3.0 )
 		>=sys-apps/hal-0.5
 	)
@@ -81,6 +81,11 @@ pkg_setup() {
 		ewarn "re-emerge with USE=hal to enable MTP support"
 	fi
 
+	if ! use cdr ; then
+		ewarn "You have cdr USE flag disabled."
+		ewarn "You will not be able to play audio CDs."
+	fi
+
 	if use daap ; then
 		G2CONF="${G2CONF} --enable-daap --with-mdns=avahi"
 	else
@@ -88,18 +93,19 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF}
-		$(use_enable tagwriting tag-writing)
-		$(use_with ipod)
-		$(use_with mtp)
-		$(use_enable ipod ipod-writing)
-		$(use_enable musicbrainz)
+		$(use_with cdr libnautilus-burn)
+		$(use_with cdr cd-burning)
 		$(use_with dbus)
-		$(use_enable python)
+		$(use_with gnome-keyring)
+		$(use_with ipod)
+		$(use_enable ipod ipod-writing)
 		$(use_enable libnotify)
 		$(use_enable lirc)
-		$(use_with gnome-keyring)
+		$(use_enable musicbrainz)
+		$(use_with mtp)
+		$(use_enable python)
+		$(use_enable tagwriting tag-writing)
 		--with-playback=gstreamer-0-10
-		--with-cd-burning
 		--enable-mmkeys
 		--enable-audioscrobbler
 		--enable-track-transfer
@@ -114,7 +120,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	#Fix for libmtp-0.3.0 API change
+	# Fix for libmtp-0.3.0 API change
 	epatch "${FILESDIR}/${PN}-0.11.5-libmtp-0.3.0-API.patch"
 
 	# disable pyc compiling
@@ -126,6 +132,10 @@ src_compile() {
 	addpredict "$(unset HOME; echo ~)/.gconf"
 	addpredict "$(unset HOME; echo ~)/.gconfd"
 	gnome2_src_compile
+}
+
+src_test() {
+	Xemake check || die "test failed"
 }
 
 pkg_postinst() {
@@ -142,6 +152,7 @@ pkg_postinst() {
 	elog "Please emerge gst-plugins-bad and gst-plugins-faad to be able to play m4a files"
 	elog "See bug #159538 for more information"
 }
+
 pkg_postrm() {
 	gnome2_pkg_postrm
 	use python && python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
