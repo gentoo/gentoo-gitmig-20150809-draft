@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1707 2008/07/22 22:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1708 2008/07/23 12:45:27 markusle Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jul 2008; Markus Dittrich <markusle@gentoo.org> package.mask:
+  Extended masking of sci-libs/*-atlas to all of version 3.9.* .
 
   22 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add ssh USE flag for pambase.
