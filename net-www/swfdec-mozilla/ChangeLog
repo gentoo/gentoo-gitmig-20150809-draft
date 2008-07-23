@@ -1,6 +1,9 @@
 # ChangeLog for net-www/swfdec-mozilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.8 2008/04/29 19:23:15 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.9 2008/07/23 18:16:07 dang Exp $
+
+  23 Jul 2008; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Gnome is taking maintainership, since pclouds is retiring
 
   29 Apr 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   swfdec-mozilla-0.6.0.ebuild:
