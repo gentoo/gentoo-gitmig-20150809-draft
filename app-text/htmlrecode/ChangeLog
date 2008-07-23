@@ -1,6 +1,13 @@
 # ChangeLog for app-text/htmlrecode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/ChangeLog,v 1.6 2007/03/12 22:45:41 leonardop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/ChangeLog,v 1.7 2008/07/23 15:55:28 coldwind Exp $
+
+*htmlrecode-1.3.0 (23 Jul 2008)
+
+  23 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/htmlrecode-1.3.0-misc-fixes.patch, +htmlrecode-1.3.0.ebuild:
+  Version bump, add ~amd64 keyword, fix 64bit (bug #228103) and gcc-4.3
+  compatibility.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
