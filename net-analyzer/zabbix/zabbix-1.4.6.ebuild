@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.3.ebuild,v 1.2 2008/05/19 20:13:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.6.ebuild,v 1.1 2008/07/23 15:47:28 wschlich Exp $
 
 inherit eutils flag-o-matic webapp depend.php
 
@@ -109,32 +109,32 @@ pkg_postinst() {
 	# here to catch wrong permissions on existing files in
 	# the live filesystem (yeah, that sucks).
 	chown zabbix:zabbix \
-		${ROOT}etc/zabbix \
-		${ROOT}var/lib/zabbix \
-		${ROOT}var/lib/zabbix/home \
-		${ROOT}var/lib/zabbix/scripts \
-		${ROOT}var/log/zabbix \
-		${ROOT}var/run/zabbix
+		"${ROOT}"/etc/zabbix \
+		"${ROOT}"/var/lib/zabbix \
+		"${ROOT}"/var/lib/zabbix/home \
+		"${ROOT}"/var/lib/zabbix/scripts \
+		"${ROOT}"/var/log/zabbix \
+		"${ROOT}"/var/run/zabbix
 	chmod 0750 \
-		${ROOT}etc/zabbix \
-		${ROOT}var/lib/zabbix \
-		${ROOT}var/lib/zabbix/home \
-		${ROOT}var/lib/zabbix/scripts \
-		${ROOT}var/log/zabbix \
-		${ROOT}var/run/zabbix
+		"${ROOT}"/etc/zabbix \
+		"${ROOT}"/var/lib/zabbix \
+		"${ROOT}"/var/lib/zabbix/home \
+		"${ROOT}"/var/lib/zabbix/scripts \
+		"${ROOT}"/var/log/zabbix \
+		"${ROOT}"/var/run/zabbix
 	if useq server; then
 		chown zabbix:zabbix \
-			${ROOT}etc/zabbix/zabbix_server.conf
+			"${ROOT}"/etc/zabbix/zabbix_server.conf
 		chmod 0640 \
-			${ROOT}etc/zabbix/zabbix_server.conf
+			"${ROOT}"/etc/zabbix/zabbix_server.conf
 	fi
 	if useq agent; then
 		chown zabbix:zabbix \
-			${ROOT}etc/zabbix/zabbix_agent.conf \
-			${ROOT}etc/zabbix/zabbix_agentd.conf
+			"${ROOT}"/etc/zabbix/zabbix_agent.conf \
+			"${ROOT}"/etc/zabbix/zabbix_agentd.conf
 		chmod 0640 \
-			${ROOT}etc/zabbix/zabbix_agent.conf \
-			${ROOT}etc/zabbix/zabbix_agentd.conf
+			"${ROOT}"/etc/zabbix/zabbix_agent.conf \
+			"${ROOT}"/etc/zabbix/zabbix_agentd.conf
 	fi
 
 	if useq server; then
@@ -202,9 +202,9 @@ src_install() {
 	if useq server; then
 		insinto /etc/zabbix
 		doins \
-			${FILESDIR}/${PV}/zabbix_server.conf
+			"${FILESDIR}"/${PV}/zabbix_server.conf
 		doinitd \
-			${FILESDIR}/${PV}/init.d/zabbix-server
+			"${FILESDIR}"/${PV}/init.d/zabbix-server
 		dosbin \
 			src/zabbix_server/zabbix_server
 		dodir \
@@ -222,10 +222,10 @@ src_install() {
 	if useq agent; then
 		insinto /etc/zabbix
 		doins \
-			${FILESDIR}/${PV}/zabbix_agent.conf \
-			${FILESDIR}/${PV}/zabbix_agentd.conf
+			"${FILESDIR}"/${PV}/zabbix_agent.conf \
+			"${FILESDIR}"/${PV}/zabbix_agentd.conf
 		doinitd \
-			${FILESDIR}/${PV}/init.d/zabbix-agentd
+			"${FILESDIR}"/${PV}/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
@@ -260,10 +260,10 @@ src_install() {
 	if useq frontend; then
 		webapp_src_preinst
 		cp -R frontends/php/* "${D}/${MY_HTDOCSDIR}"
-		webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
+		webapp_postinst_txt en "${FILESDIR}"/${PV}/postinstall-en.txt
 		webapp_configfile \
-			${MY_HTDOCSDIR}/include/db.inc.php \
-			${MY_HTDOCSDIR}/include/config.inc.php
+			"${MY_HTDOCSDIR}"/include/db.inc.php \
+			"${MY_HTDOCSDIR}"/include/config.inc.php
 		webapp_src_install
 	fi
 }

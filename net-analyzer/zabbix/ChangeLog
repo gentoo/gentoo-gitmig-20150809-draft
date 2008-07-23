@@ -1,6 +1,35 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.8 2008/05/19 20:13:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.9 2008/07/23 15:47:28 wschlich Exp $
+
+*zabbix-1.4.6 (23 Jul 2008)
+
+  23 Jul 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -files/1.4.1/init.d/zabbix-agentd, -files/1.4.1/init.d/zabbix-server,
+  -files/1.4.1/postinstall-en.txt, -files/1.4.1/zabbix_agent.conf,
+  -files/1.4.1/zabbix_agentd.conf, -files/1.4.1/zabbix_server.conf,
+  -files/1.4.2/init.d/zabbix-agentd, -files/1.4.2/init.d/zabbix-server,
+  -files/1.4.2/initgroups.patch, -files/1.4.2/postinstall-en.txt,
+  -files/1.4.2/zabbix_agent.conf, -files/1.4.2/zabbix_agentd.conf,
+  -files/1.4.2/zabbix_server.conf, -files/1.4.3/init.d/zabbix-agentd,
+  -files/1.4.3/init.d/zabbix-server, -files/1.4.3/postinstall-en.txt,
+  -files/1.4.3/zabbix_agent.conf, -files/1.4.3/zabbix_agentd.conf,
+  -files/1.4.3/zabbix_server.conf, -files/1.4.4/init.d/zabbix-agentd,
+  -files/1.4.4/init.d/zabbix-server, -files/1.4.4/postinstall-en.txt,
+  -files/1.4.4/zabbix_agent.conf, -files/1.4.4/zabbix_agentd.conf,
+  -files/1.4.4/zabbix_server.conf, -files/1.4.5/init.d/zabbix-agentd,
+  -files/1.4.5/init.d/zabbix-server, -files/1.4.5/postinstall-en.txt,
+  -files/1.4.5/zabbix_agent.conf, -files/1.4.5/zabbix_agentd.conf,
+  -files/1.4.5/zabbix_server.conf, +files/1.4.6/init.d/zabbix-agentd,
+  +files/1.4.6/init.d/zabbix-server, +files/1.4.6/postinstall-en.txt,
+  +files/1.4.6/zabbix_agent.conf, +files/1.4.6/zabbix_agentd.conf,
+  +files/1.4.6/zabbix_server.conf, -files/1.4/init.d/zabbix-agentd,
+  -files/1.4/init.d/zabbix-server, -files/1.4/postinstall-en.txt,
+  -files/1.4/zabbix_agent.conf, -files/1.4/zabbix_agentd.conf,
+  -files/1.4/zabbix_server.conf, -zabbix-1.4.ebuild, -zabbix-1.4.1.ebuild,
+  -zabbix-1.4.2.ebuild, -zabbix-1.4.2-r1.ebuild, -zabbix-1.4.3.ebuild,
+  -zabbix-1.4.4.ebuild, -zabbix-1.4.5.ebuild, +zabbix-1.4.6.ebuild:
+  version bump, removed old versions
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> zabbix-1.4.ebuild,
   zabbix-1.4.1.ebuild, zabbix-1.4.2.ebuild, zabbix-1.4.2-r1.ebuild,
