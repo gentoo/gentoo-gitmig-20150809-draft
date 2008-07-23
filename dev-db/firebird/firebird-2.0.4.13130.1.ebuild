@@ -1,11 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.0.17798.0-r1.ebuild,v 1.1 2008/06/06 02:43:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.4.13130.1.ebuild,v 1.1 2008/07/23 22:29:18 wltjr Exp $
 
-inherit flag-o-matic eutils autotools versionator
+inherit flag-o-matic eutils autotools versionator multilib
 
 MY_P=Firebird-$(replace_version_separator 4 -)
-#MY_P=Firebird-${PV/_rc/-ReleaseCandidate}
 
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
@@ -29,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewgroup firebird 450
-	enewuser firebird 450 /bin/bash /usr/lib/firebird firebird
+	enewuser firebird 450 /bin/bash /usr/$(get_libdir)/firebird firebird
 }
 
 function check_sed() {
@@ -69,11 +68,11 @@ src_unpack() {
 	check_sed "$(sed -i -e 's:"isc_event1:"../../../var/run/firebird/isc_event1:w /dev/stdout' \
 		-e 's:"isc_lock1:"../../../var/run/firebird/isc_lock1:w /dev/stdout' \
 		-e 's:"isc_init1:"../../../var/run/firebird/isc_init1:w /dev/stdout' \
+		-e 's:"isc_config:"../../../var/run/firebird/isc_config:w /dev/stdout' \
 		-e 's:"isc_guard1:"../../../var/run/firebird/isc_guard1:w /dev/stdout' \
-		-e 's:"isc_monitor1:"../../../var/run/firebird/isc_monitor1:w /dev/stdout' \
 		-e 's:"firebird.log":"../../../var/log/firebird/firebird.log":w /dev/stdout' \
 		-e 's:"security2.fdb":"../../../etc/firebird/security2.fdb":w /dev/stdout' \
-		src/jrd/file_params.h | wc -l)" "12" "src/jrd/file_params.h" # 12 lines
+		src/jrd/file_params.h | wc -l)" "14" "src/jrd/file_params.h" # 14 lines
 	check_sed "$(sed -i -e 's:"security2.fdb":"../../../etc/firebird/security2.fdb":w /dev/stdout' \
 		src/jrd/jrd_pwd.h | wc -l)" "1" "src/jrd/jrd_pwd.h" # 1 line
 	check_sed "$(sed -i -e 's:"firebird.conf":"../../../etc/firebird/firebird.conf":w /dev/stdout' \
@@ -107,14 +106,8 @@ src_unpack() {
 	check_sed "$(sed -i -e 's:isql :fbsql :w /dev/stdout' \
 		src/msgs/history.sql | wc -l)" "4" "src/msgs/history.sql" # 4 lines
 	check_sed "$(sed -i -e 's:isql :fbsql :w /dev/stdout' \
-		src/msgs/history2.sql | wc -l)" "4" "src/msgs/history2.sql" # 4 lines
-	check_sed "$(sed -i -e 's:isql :fbsql :w /dev/stdout' \
 		-e 's:ISQL :FBSQL :w /dev/stdout' \
 		src/msgs/messages.sql | wc -l)" "4" "src/msgs/messages.sql" # 4 lines
-	check_sed "$(sed -i -e 's:--- ISQL:--- FBSQL:w /dev/stdout' \
-		-e 's:isql :fbsql :w /dev/stdout' \
-		-e 's:ISQL :FBSQL :w /dev/stdout' \
-		src/msgs/messages2.sql | wc -l)" "6" "src/msgs/messages2.sql" # 6 lines
 
 	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
 	rm -rf "${S}"/extern/{editline,icu}
@@ -126,7 +119,7 @@ src_compile() {
 	filter-flags -fprefetch-loop-arrays
 	filter-mfpmath sse
 
-	econf --prefix=/usr/lib/firebird --with-editline \
+	econf --prefix=/usr/$(get_libdir)/firebird --with-editline \
 		$(use_enable !xinetd superserver) \
 		$(use_enable debug) \
 		${myconf} || die "econf failed"
@@ -150,14 +143,14 @@ src_install() {
 	insinto /usr/include
 	doins include/*
 
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	dolib.so lib/*.so*
 	dolib.a lib/*.a*
 
-	insinto /usr/lib/firebird
+	insinto /usr/$(get_libdir)/firebird
 	doins *.msg
 
-	insinto /usr/lib/firebird/help
+	insinto /usr/$(get_libdir)/firebird/help
 	doins help/help.fdb
 
 	insinto /usr/share/firebird/upgrade
@@ -170,13 +163,13 @@ src_install() {
 	insopts -m0660 -o firebird -g firebird
 	doins security2.fdb
 
-	exeinto /usr/lib/firebird/UDF
+	exeinto /usr/$(get_libdir)/firebird/UDF
 	doexe UDF/*.so
 
-	exeinto /usr/lib/firebird/intl
+	exeinto /usr/$(get_libdir)/firebird/intl
 	newexe intl/libfbintl.so fbintl.so
 
-	insinto /usr/lib/firebird/intl
+	insinto /usr/$(get_libdir)/firebird/intl
 	doins ../install/misc/fbintl.conf
 
 	diropts -m 755 -o firebird -g firebird
@@ -186,7 +179,7 @@ src_install() {
 	keepdir /var/run/firebird
 
 	# create links for backwards compatibility
-	cd "${D}/usr/lib"
+	cd "${D}/usr/$(get_libdir)"
 	ln -s libfbclient.so libgds.so
 	ln -s libfbclient.so libgds.so.0
 	ln -s libfbclient.so libfbclient.so.1
@@ -207,7 +200,8 @@ src_install() {
 
 pkg_postinst() {
 	# Hack to fix ownership/perms
-	chown -fR firebird:firebird "${ROOT}/etc/firebird" "${ROOT}/usr/lib/firebird"
+	chown -fR firebird:firebird "${ROOT}/etc/firebird" \
+		"${ROOT}/usr/$(get_libdir)/firebird"
 	chmod 750 "${ROOT}/etc/firebird"
 
 	elog

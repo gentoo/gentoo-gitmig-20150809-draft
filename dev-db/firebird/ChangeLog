@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.94 2008/06/06 02:43:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.95 2008/07/23 22:29:18 wltjr Exp $
+
+*firebird-2.1.1.17910.0 (23 Jul 2008)
+*firebird-2.0.4.13130.1 (23 Jul 2008)
+
+  23 Jul 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.0.4.13130.1-deps-flags-libs.patch,
+  -files/firebird-2.1.0.17798.0-deps-flags-libs.patch,
+  +files/firebird-2.1.1.17910.0-deps-flags-libs.patch,
+  +firebird-2.0.4.13130.1.ebuild, -firebird-2.1.0.17798.0-r1.ebuild,
+  +firebird-2.1.1.17910.0.ebuild:
+  Bumped to latest releases, removed past version. Lastest 2.1.x version
+  seems to have resolved the infamous bug #197664
 
 *firebird-2.1.0.17798.0-r1 (06 Jun 2008)
 *firebird-2.0.3.12981.0-r7 (06 Jun 2008)
