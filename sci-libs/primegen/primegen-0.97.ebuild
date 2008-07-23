@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.5 2008/04/06 17:46:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.6 2008/07/23 20:34:55 spock Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A small, fast library to generate primes in order"
 HOMEPAGE="http://cr.yp.to/primegen.html"
@@ -14,6 +14,12 @@ KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-man.patch"
+}
 
 src_compile() {
 	# Fixes bug #161015
