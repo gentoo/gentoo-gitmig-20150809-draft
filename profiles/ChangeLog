@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1710 2008/07/23 17:05:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1711 2008/07/23 22:00:38 cardoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jul 2008; Doug Goldstein <cardoe@gentoo.org> use.local.desc:
+  remove non-existant USE flag
 
   23 Jul 2008; Fabian Groffen <grobian@gentoo.org> desc/userland.desc:
   Remove Darwin userland
