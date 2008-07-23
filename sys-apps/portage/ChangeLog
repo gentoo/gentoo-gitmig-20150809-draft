@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.531 2008/06/28 18:01:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.532 2008/07/23 07:52:03 zmedico Exp $
+
+*portage-2.2_rc2 (23 Jul 2008)
+
+  23 Jul 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc2.ebuild:
+  2.2_rc2 bump. This fixes bugs #12768 (--keep-going), #147516 (--jobs),
+  #226307 (problem unmerging slots that don't belong to a package set),
+  #228489 (restore repoman ci), #228595 (bogus repo_name warning),
+  #228935 (build log check for 'command not found'), #228939 (merge list
+  displayed twice), #228977 (tight loop when merging glibc), #230053
+  (depclean lib awareness), #230245 (repoman does svn list in wrong dir),
+  #230249 (poor repoman performance in svn repos), #230469 (non-blocking
+  distlocks with --fetchonly), #230579 (exception triggered by empty
+  preserved libs registry), #231358 (exception triggered by conditional
+  in LICENSE), #231382 (mysterious exception raised from getconfig), and
+  #231464 (dropped elog messages). Bug #210077 tracks all bugs fixed
+  since 2.1.5.x.
 
   28 Jun 2008; Mike Frysinger <vapier@gentoo.org> portage-2.2_rc1.ebuild:
   Force newer pax-utils #229213 by Andrey Kislyuk.
