@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.24 2008/07/22 22:07:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.25 2008/07/23 17:35:15 bicatali Exp $
+
+  23 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> glpk-4.29.ebuild:
+  Added dev-db/unixODBC as a possible odbc implementation and changed use
+  flag to odbc. Fixed bug #232755, thanks fmmcor
 
 *glpk-4.29 (22 Jul 2008)
 
