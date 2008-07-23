@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.10 2008/07/22 22:48:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.11 2008/07/23 02:34:27 jer Exp $
+
+  23 Jul 2008; Jeroen Roovers <jer@gentoo.org> pam_ssh-1.92.ebuild:
+  Marked ~hppa (bug #232691).
 
   22 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> pam_ssh-1.92.ebuild:
   Quote variable on line 40 for the latest ebuild and use emake for install
