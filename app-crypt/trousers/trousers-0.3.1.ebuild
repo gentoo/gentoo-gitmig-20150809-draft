@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.3 2008/06/07 20:54:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.4 2008/07/23 09:52:37 loki_val Exp $
 
-inherit eutils linux-info
+inherit base eutils linux-info
 
 DESCRIPTION="An open-source TCG Software Stack (TSS) v1.1 implementation"
 HOMEPAGE="http://trousers.sf.net"
@@ -18,6 +18,10 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+PATCHES=(	"${FILESDIR}/${PN}-0.2.3-nouseradd.patch"
+		"${FILESDIR}/${P}-qa.patch"
+		"${FILESDIR}/${P}-gcc43.patch"	)
 
 pkg_setup() {
 	# Check for driver (not sure it can be an rdep, because ot depends on the
@@ -56,16 +60,6 @@ pkg_setup() {
 	# New user/group for the daemon
 	enewgroup tss
 	enewuser tss -1 -1 /var/lib/tpm tss
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}/dist"
-	#http://sourceforge.net/tracker/index.php?func=detail&aid=1829497&group_id=126012&atid=704361
-	epatch "${FILESDIR}/${PN}-0.2.3-nouseradd.patch"
-	cd "${S}"
-	#http://sourceforge.net/tracker/index.php?func=detail&aid=1794686&group_id=126012&atid=704358
-	epatch "${FILESDIR}/${P}-qa.patch"
 }
 
 src_install() {
