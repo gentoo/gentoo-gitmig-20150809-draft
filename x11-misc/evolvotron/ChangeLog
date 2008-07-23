@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/evolvotron
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.16 2008/02/11 21:57:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.17 2008/07/23 17:57:26 coldwind Exp $
+
+  23 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  evolvotron-0.5.1.ebuild:
+  amd64 stable
 
 *evolvotron-0.5.1 (11 Feb 2008)
 

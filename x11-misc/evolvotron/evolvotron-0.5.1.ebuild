@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.5.1.ebuild,v 1.1 2008/02/11 21:57:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.5.1.ebuild,v 1.2 2008/07/23 17:57:26 coldwind Exp $
 
 inherit qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="$(qt_min_version 3)"
