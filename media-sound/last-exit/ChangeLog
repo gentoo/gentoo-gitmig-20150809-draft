@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.15 2008/02/14 05:41:21 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.16 2008/07/23 20:11:26 coldwind Exp $
+
+*last-exit-6 (23 Jul 2008)
+
+  23 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
+  +last-exit-6.ebuild:
+  Version bump, closes bug #217836. Taking over the maintainance.
 
   14 Feb 2008; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild,
   last-exit-5.0.ebuild:

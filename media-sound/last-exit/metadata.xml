@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>steev@gentoo.org</email>
-	<name>Steev Klimaszewski</name>
+	<email>coldwind@gentoo.org</email>
+	<name>Santiago M. Mola</name>
 </maintainer>
 <herd>sound</herd>
 </pkgmetadata>
