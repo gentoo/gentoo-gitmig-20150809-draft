@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1708 2008/07/23 12:45:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1709 2008/07/23 15:16:44 markusle Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  23 Jul 2008; Markus Dittrich <markusle@gentoo.org> use.local.desc:
+  Added sparse USE flag for upcoming sci-mathematics/octave-3.
 
   23 Jul 2008; Markus Dittrich <markusle@gentoo.org> package.mask:
   Extended masking of sci-libs/*-atlas to all of version 3.9.* .
