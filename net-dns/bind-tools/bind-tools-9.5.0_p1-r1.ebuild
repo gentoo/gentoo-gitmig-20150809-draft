@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.5.0_p1.ebuild,v 1.1 2008/07/08 18:58:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.5.0_p1-r1.ebuild,v 1.1 2008/07/23 19:01:11 dertobi123 Exp $
 
 inherit flag-o-matic
 
@@ -32,6 +32,8 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-configure.patch
 		cd -
 	}
+
+	epatch "${FILESDIR}"/${P}-lwconfig.patch
 
 	# bug #151839
 	sed -e \
