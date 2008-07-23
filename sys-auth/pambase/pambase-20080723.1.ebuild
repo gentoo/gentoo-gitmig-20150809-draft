@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080723.ebuild,v 1.3 2008/07/23 11:18:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080723.1.ebuild,v 1.1 2008/07/23 14:50:40 flameeyes Exp $
 
 inherit eutils
 
