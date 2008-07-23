@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.0.ebuild,v 1.1 2008/07/21 13:44:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.1.ebuild,v 1.1 2008/07/23 14:47:07 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -45,7 +45,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
-	epatch "${FILESDIR}"/${MY_PN}-${PV}-upstream-fixes.patch
 	epatch "${FILESDIR}"/${MY_PN}-${PATCH_V}-disable-ilaenv.patch
 
 	# make sure the compile picks up the proper includes

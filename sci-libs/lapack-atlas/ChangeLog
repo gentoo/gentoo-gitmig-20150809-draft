@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.65 2008/07/21 13:44:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.66 2008/07/23 14:47:07 markusle Exp $
+
+*lapack-atlas-3.9.1 (22 Jul 2008)
+
+  22 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  files/atlas-3.9.0-disable-ilaenv.patch,
+  -files/atlas-3.9.0-upstream-fixes.patch, -lapack-atlas-3.9.0.ebuild,
+  +lapack-atlas-3.9.1.ebuild:
+  Version bump and further fixes to ilaenv patch. The latter now simply
+  disables atlas' oldier version and uses the one in lapack-3.1.1 
+  instead.
 
 *lapack-atlas-3.9.0 (20 Jul 2008)
 
