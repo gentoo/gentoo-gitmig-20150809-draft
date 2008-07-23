@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.1.ebuild,v 1.10 2008/07/04 19:46:32 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.1.ebuild,v 1.11 2008/07/23 15:26:28 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -134,7 +134,7 @@ src_compile() {
 		--enable-isadir=/$(get_libdir)/security \
 		--disable-dependency-tracking \
 		--disable-prelude \
-		--enable-docdir=/usr/share/doc/${PF} \
+		--docdir=/usr/share/doc/${PF} \
 		--disable-regenerate-man \
 		${myconf} || die "econf failed"
 	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"

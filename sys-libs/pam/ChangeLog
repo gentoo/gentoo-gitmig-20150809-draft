@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.220 2008/07/04 19:46:32 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.221 2008/07/23 15:26:28 flameeyes Exp $
+
+  23 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.1.ebuild:
+  Remove --enable-docdir option and use --docdir instead so that
+  documentation is installed properly as we want it to be. Thanks to Afrever
+  Frehtes Taifersar Arahesis in bug #230774.
 
   04 Jul 2008; <ricmm@gentoo.org> pam-1.0.1.ebuild:
   Add ~mips, bug #230743
