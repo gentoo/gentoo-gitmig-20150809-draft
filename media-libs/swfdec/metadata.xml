@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-    <email>pclouds@gentoo.org</email>
-    <name>Nguyễn Thái Ngọc Duy</name>
-</maintainer>
+<herd>gnome</herd>
 <longdescription lang="C">
     Swfdec is a library for rendering Flash&#xAE; animations and games.
     It was originally designed as a basis library for creating Flash
