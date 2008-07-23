@@ -5,4 +5,7 @@
 	<longdescription lang="en">
 		Performance analysis and visualization of the system boot process.
 	</longdescription>
+	<use>
+		<flag name='acct'>Enable process accounting</flag>
+	</use>
 </pkgmetadata>
