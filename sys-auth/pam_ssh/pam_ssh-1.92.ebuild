@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.92.ebuild,v 1.5 2008/07/23 02:34:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.92.ebuild,v 1.6 2008/07/23 11:07:58 fmccor Exp $
 
 inherit pam eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pam-ssh/${P}.tar.bz2"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 # Doesn't work on OpenPAM.
