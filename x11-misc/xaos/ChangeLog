@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.26 2007/06/22 07:05:55 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.27 2008/07/23 21:27:09 spock Exp $
+
+*xaos-3.4 (23 Jul 2008)
+
+  23 Jul 2008; Michał Januszewski <spock@gentoo.org> +xaos-3.4.ebuild:
+  Version bump.
 
   22 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; xaos-3.2.ebuild:
   (#153600) Remove virtual/x11 dep in attempt to fix missing xf86dgaproto error.
