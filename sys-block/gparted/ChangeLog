@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.49 2008/06/15 18:54:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.50 2008/07/23 21:49:47 eva Exp $
+
+*gparted-0.3.8 (23 Jul 2008)
+
+  23 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> -gparted-0.3.6.ebuild,
+  -gparted-0.3.7.ebuild, +gparted-0.3.8.ebuild:
+  bump to 0.3.8. Various bug fixes and translation updates. Hal isn't
+  necessary anymore, dropping patch.
 
 *gparted-0.3.7-r1 (15 Jun 2008)
 
