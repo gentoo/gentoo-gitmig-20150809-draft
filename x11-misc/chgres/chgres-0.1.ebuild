@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/chgres-0.1.ebuild,v 1.10 2008/05/31 23:27:44 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/chgres-0.1.ebuild,v 1.11 2008/07/23 17:44:08 coldwind Exp $
 
 DESCRIPTION="A very simple command line utility for changing X resolutions"
 HOMEPAGE="http://hpwww.ec-lyon.fr/~vincent/"
@@ -8,7 +8,7 @@ SRC_URI="http://hpwww.ec-lyon.fr/~vincent/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
