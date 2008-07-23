@@ -13,7 +13,7 @@ Index: pam_passwdqc-1.0.5/Makefile
  LDFLAGS_LINUX = --shared -Wl,--version-script,$(MAP)
  LDFLAGS_SUN = -G
  LDFLAGS_HP = -b
-@@ -41,13 +41,13 @@ MAP = pam_passwdqc.map
+@@ -41,16 +41,16 @@ MAP = pam_passwdqc.map
  all:
  	case "`uname -s`" in \
  	Linux)	$(MAKE) CFLAGS="$(CFLAGS) -DHAVE_SHADOW" \
@@ -28,5 +28,8 @@ Index: pam_passwdqc-1.0.5/Makefile
 -			LD=ld LDFLAGS="$(LDFLAGS_HP)" LDLIBS="$(LDLIBS_HP)" \
 +			LD=ld LDFLAGS="$(LDFLAGS) $(LDFLAGS_HP)" LDLIBS="$(LDLIBS_HP)" \
  			$(PROJ);; \
- 	*)	$(MAKE) $(PROJ);; \
+-	*)	$(MAKE) $(PROJ);; \
++	*)	$(MAKE) LDFLAGS="$(LDFLAGS) $(LDFLAGS_GENERIC)" $(PROJ);; \
  	esac
+ 
+ $(LIBSHARED): $(OBJS) $(MAP)
