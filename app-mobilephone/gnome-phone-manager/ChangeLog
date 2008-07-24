@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.25 2008/07/12 22:30:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.26 2008/07/24 15:59:01 mrness Exp $
+
+  24 Jul 2008; Alin Năstac <mrness@gentoo.org>
+  gnome-phone-manager-0.60.ebuild:
+  Fix gnokii dependency atom (#232300).
 
 *gnome-phone-manager-0.60 (12 Jul 2008)
 

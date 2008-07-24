@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.60.ebuild,v 1.1 2008/07/12 22:30:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.60.ebuild,v 1.2 2008/07/24 15:59:01 mrness Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=media-libs/gstreamer-0.10
 	>=gnome-base/orbit-2
 	dev-libs/openobex
-	app-mobilephone/gnokii
+	>=app-mobilephone/gnokii-0.6.26
 	>=net-wireless/bluez-libs-3.12
 	>=gnome-base/libglade-2
 	>=gnome-extra/evolution-data-server-1.2.3
