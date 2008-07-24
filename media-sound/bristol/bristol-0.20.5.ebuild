@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.20.5.ebuild,v 1.1 2008/05/01 20:36:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.20.5.ebuild,v 1.2 2008/07/24 19:00:12 armin76 Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bristol/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa jack"
 
 RDEPEND="jack? ( >=media-sound/jack-audio-connection-kit-0.99.0 )
