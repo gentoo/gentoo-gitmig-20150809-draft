@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.457 2008/07/22 19:50:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.458 2008/07/24 08:38:31 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> mysql-5.0.60-r1.ebuild:
+  alpha/ia64/x86 stable wrt security #220399
 
   22 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   mysql-5.0.60-r1.ebuild:
