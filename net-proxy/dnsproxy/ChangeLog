@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dnsproxy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.2 2007/04/11 07:44:40 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.3 2008/07/24 16:06:37 coldwind Exp $
+
+  24 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> dnsproxy-1.15.ebuild:
+  amd64 stable wrt bug #232830
 
   11 Apr 2007; Alin Năstac <mrness@gentoo.org> dnsproxy-1.15.ebuild:
   Added ~amd64.
