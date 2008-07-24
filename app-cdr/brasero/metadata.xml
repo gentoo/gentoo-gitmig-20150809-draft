@@ -2,6 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<longdescription lang="en">
-</longdescription>
+<use>
+	<flag name='beagle'>Enable <pkg>app-misc/beagle</pkg> support for
+		searches</flag>
+	<flag name='gdl'>Enable gdl support for customisable GUI</flag>
+	<flag name='libburn'>Enable <pkg>dev-libs/libburn</pkg> backend</flag>
+	<flag name='totem'>Enable support for <pkg>media-video/totem</pkg>
+		playlists</flag>
+</use>
 </pkgmetadata>
