@@ -6,4 +6,7 @@
 		<email>dirtyepic@gentoo.org</email>
 		<name>Ryan Hill</name>
 	</maintainer>
+	<use>
+		<flag name='htmlsingle'>Also install all-in-one-page HTML version</flag>
+	</use>
 </pkgmetadata>
