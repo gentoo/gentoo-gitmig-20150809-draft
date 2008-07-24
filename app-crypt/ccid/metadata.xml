@@ -8,5 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name='nousb'>Disable USB support via pcsc-lite</flag>
+		<flag name='twinserial'>Enable twinserial reader</flag>
 	</use>
 </pkgmetadata>
