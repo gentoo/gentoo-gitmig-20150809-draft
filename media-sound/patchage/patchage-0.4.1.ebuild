@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.1.ebuild,v 1.1 2008/07/09 09:02:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.1.ebuild,v 1.2 2008/07/24 18:58:40 armin76 Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.drobilla.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa -dbus debug lash"
 
 RDEPEND=">=media-libs/raul-0.5.0
