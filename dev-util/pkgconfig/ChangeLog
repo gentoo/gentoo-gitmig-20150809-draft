@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.75 2008/07/24 15:48:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.76 2008/07/24 15:59:36 jer Exp $
+
+  24 Jul 2008; Jeroen Roovers <jer@gentoo.org> pkgconfig-0.23.ebuild:
+  Stable for HPPA (bug #232484).
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> pkgconfig-0.23.ebuild:
   alpha/ia64/x86 stable wrt #232484
