@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.73 2008/07/24 02:15:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.74 2008/07/24 10:13:10 coldwind Exp $
+
+  24 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> pkgconfig-0.23.ebuild:
+  amd64 stable wrt bug #232484
 
   24 Jul 2008; Ferris McCormick <fmccor@gentoo.org> pkgconfig-0.23.ebuild:
   Sparc stable, Bug #232484 --- It's been fine for over 3 months now.
