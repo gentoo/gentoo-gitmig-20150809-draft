@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/stops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stops/ChangeLog,v 1.1 2008/01/27 19:48:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stops/ChangeLog,v 1.2 2008/07/24 19:03:16 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> stops-0.3.0.ebuild:
+  Add ~x86
 
 *stops-0.3.0 (27 Jan 2008)
 
