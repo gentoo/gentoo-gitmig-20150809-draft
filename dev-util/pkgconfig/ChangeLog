@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.72 2008/04/02 11:26:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.73 2008/07/24 02:15:19 fmccor Exp $
+
+  24 Jul 2008; Ferris McCormick <fmccor@gentoo.org> pkgconfig-0.23.ebuild:
+  Sparc stable, Bug #232484 --- It's been fine for over 3 months now.
 
 *pkgconfig-0.23 (02 Apr 2008)
 
