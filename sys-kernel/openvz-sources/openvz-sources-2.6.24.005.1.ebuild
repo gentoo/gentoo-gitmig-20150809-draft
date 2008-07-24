@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.24.005.1.ebuild,v 1.1 2008/05/27 06:02:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.24.005.1.ebuild,v 1.2 2008/07/24 07:56:21 pva Exp $
 
 inherit versionator
 
@@ -32,4 +32,4 @@ SRC_URI="${KERNEL_URI} ${ARCH_URI}
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KERNEL}.${OVZ_REV}-combined.gz
-"
+${FILESDIR}/openvz-sources-2.6.24.005.1-CONFIG_SYSVIPC-build-fix.patch"
