@@ -6,4 +6,7 @@
   <email>ikelos@gentoo.org</email>
     <name>Mike Auty</name>
 </maintainer>
+<use>
+	<flag name='ophsmall'>Makes use of smaller cracking tables</flag>
+</use>
 </pkgmetadata>
