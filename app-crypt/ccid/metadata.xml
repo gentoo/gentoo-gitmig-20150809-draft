@@ -6,4 +6,7 @@
 		<email>crypto@gentoo.org</email>
 		<name>Crypto Herd</name>
 	</maintainer>
+	<use>
+		<flag name='nousb'>Disable USB support via pcsc-lite</flag>
+	</use>
 </pkgmetadata>
