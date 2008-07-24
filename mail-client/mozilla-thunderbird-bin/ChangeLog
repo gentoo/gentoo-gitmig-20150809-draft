@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.110 2008/07/24 12:39:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.111 2008/07/24 15:20:22 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-bin-2.0.0.16.ebuild:
+  x86 stable wrt security #231975
 
 *mozilla-thunderbird-bin-2.0.0.16 (24 Jul 2008)
 
