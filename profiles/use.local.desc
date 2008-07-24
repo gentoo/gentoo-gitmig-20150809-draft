@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3643 2008/07/24 21:09:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3644 2008/07/24 21:43:44 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -65,6 +65,7 @@ app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-cdr/serpentine:muine - Enable support for the GNOME music player Muine
+app-cdr/xfburn:xfce - Adds integration with Xfce4 desktop environment
 app-crypt/ccid:nousb - Disable USB support via pcsc-lite
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
