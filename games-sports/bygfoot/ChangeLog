@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/bygfoot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.19 2008/07/24 10:10:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.20 2008/07/24 18:23:38 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> bygfoot-2.2.1.ebuild:
+  x86 stable wrt #232770
 
   24 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> bygfoot-2.2.1.ebuild:
   amd64 stable wrt bug #232770
