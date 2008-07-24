@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xblast
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.12 2007/10/28 09:36:53 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.13 2008/07/24 09:59:34 coldwind Exp $
+
+  24 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> xblast-2.10.4.ebuild:
+  amd64 stable wrt bug #232771
 
 *xblast-2.10.4 (28 Oct 2007)
 
