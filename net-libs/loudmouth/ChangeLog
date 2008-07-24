@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.67 2008/07/22 19:30:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.68 2008/07/24 18:17:38 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> loudmouth-1.4.0.ebuild:
+  sparc/x86 stable wrt #232205
 
   22 Jul 2008; Markus Rothe <corsair@gentoo.org> loudmouth-1.4.0.ebuild:
   Stable on ppc64; bug #232205
