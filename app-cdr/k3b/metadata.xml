@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>kde</herd>
 <herd>media-optical</herd>
+<use>
+	<flag name='emovix'>Enable burning support for eMoviX images</flag>
+</use>
 </pkgmetadata>
