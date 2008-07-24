@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.4 2008/07/18 06:35:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.4.0.ebuild,v 1.5 2008/07/24 18:03:09 armin76 Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.trolltech.com/"
 
 LICENSE="|| ( QPL-1.0 GPL-3 GPL-2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~hppa ~ppc64"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.4 2008/07/18 06:35:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.5 2008/07/24 18:03:09 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> qt-demo-4.4.0.ebuild:
+  Re-add ~x86 wrt #224569
 
   18 Jul 2008; Jeroen Roovers <jer@gentoo.org> qt-demo-4.4.0.ebuild:
   Apply LIBS fix by Bernd Steinhauser (bug #224569). Marked ~hppa (bug #223557).
