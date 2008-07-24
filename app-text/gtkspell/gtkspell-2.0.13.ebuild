@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.13.ebuild,v 1.1 2008/07/23 22:31:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.13.ebuild,v 1.2 2008/07/24 15:38:29 zmedico Exp $
 
 inherit eutils
 
 DESCRIPTION="Spell checking widget for GTK2"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
-SRC_URI="mirror://sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

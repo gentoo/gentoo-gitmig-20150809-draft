@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.55 2008/07/23 22:31:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.56 2008/07/24 15:38:29 zmedico Exp $
+
+  24 Jul 2008; Zac Medico <zmedico@gentoo.org> gtkspell-2.0.13.ebuild:
+  Fix typo in SRC_URI. The thirdpartymirror entry is called "sourceforge"
+  rather than "sourceforge.net".
 
 *gtkspell-2.0.13 (23 Jul 2008)
 
