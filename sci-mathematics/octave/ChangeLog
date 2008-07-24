@@ -1,6 +1,23 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.58 2008/04/18 13:13:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.59 2008/07/24 21:59:51 markusle Exp $
+
+*octave-3.0.1 (23 Jul 2008)
+
+  23 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/octave-3.0.0-pkg.patch, +files/octave-3.0.1-add_syspath.patch,
+  +files/octave-3.0.1-chi2rnd.patch,
+  +files/octave-3.0.1-fix_handle_for_plotyy.patch,
+  +files/octave-3.0.1-no_helvetica.patch,
+  +files/octave-3.0.1-test-fix.patch, +octave-3.0.1.ebuild,
+  -octave-2.1.71-r2.ebuild:
+  Version bump (fixes bug #153462). Removed old ebuild.
+  NOTE: octave-3 is incompatible with the current monolithic 
+  octave-forge in portage. Users who need octave-forge can either:
+  (1) mask octave-3 until the new split octave-forge ebuilds are ready, or
+  (2) unmerge octave-forge, emerge octave-3, and then use the split
+  octave-forge ebuilds that are currently maintained in the science
+  overlay (see bug #179885).
 
   18 Apr 2008; Markus Dittrich <markusle@gentoo.org>
   +files/octave-2.1.73-gcc-4.3.patch, octave-2.1.73-r2.ebuild:
