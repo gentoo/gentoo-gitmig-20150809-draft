@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.144 2008/06/06 08:16:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.145 2008/07/24 18:40:01 coldwind Exp $
+
+  24 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
+  2007.0/no-multilib/package.mask:
+  Remove media-sound/peercast from no-multilib p.masks, bug #232800.
 
   06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   pkgmove to gnome-base/gnome-control-center
