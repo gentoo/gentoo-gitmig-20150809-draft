@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.2 2007/04/02 14:57:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.3 2008/07/24 18:02:07 armin76 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/worms3d/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/sdl-net
