@@ -3,4 +3,9 @@
 <pkgmetadata>
 <herd>kerberos</herd>
 <longdescription>Kerberos 5 implementation from KTH</longdescription>
+<use>
+	<flag name='otp'>Enable support for one-time passwords (OTP) in some
+		heimdal apps</flag>
+	<flag name='pkinit'>Enable pkinit support to get the initial ticket</flag>
+</use>
 </pkgmetadata>
