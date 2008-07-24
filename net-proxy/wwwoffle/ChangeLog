@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.43 2008/07/21 17:27:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.44 2008/07/24 17:45:13 armin76 Exp $
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> wwwoffle-2.9d.ebuild:
+  x86 stable wrt #231691
 
   21 Jul 2008; nixnut <nixnut@gentoo.org> wwwoffle-2.9d.ebuild:
   Stable on ppc wrt bug 231691
