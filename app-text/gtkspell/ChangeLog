@@ -1,8 +1,8 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.57 2008/07/24 16:32:56 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.58 2008/07/24 16:38:49 ford_prefect Exp $
 
-  24 Jul 2008; <arun@gentoo.org> gtkspell-2.0.13.ebuild:
+  24 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org> gtkspell-2.0.13.ebuild:
   Fix SRC_URI - gtkspell doesn't seem to use the usual SourceForge mirroring
   system
 
