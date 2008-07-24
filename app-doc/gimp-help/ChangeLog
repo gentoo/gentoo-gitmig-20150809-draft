@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.51 2008/06/07 20:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.52 2008/07/24 21:39:41 cardoe Exp $
+
+  24 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> gimp-help-2.4.1.ebuild:
   Remove unused inherits that were used to patch and re-autotools before.

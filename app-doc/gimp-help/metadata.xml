@@ -6,4 +6,8 @@
   <email>pva@gentoo.org</email>
   <name>Peter Volkov</name>
 </maintainer>
+<use>
+	<flag name='webinstall'>optimize images for web installation (fewer colors,
+		depends on <pkg>media-gfx/imagemagick</pkg>)</flag>
+</use>
 </pkgmetadata>
