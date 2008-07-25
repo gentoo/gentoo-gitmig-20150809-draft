@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.97.ebuild,v 1.3 2008/07/25 19:01:56 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.97-r1.ebuild,v 1.1 2008/07/25 19:01:56 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -9,10 +9,17 @@ HOMEPAGE="http://untroubled.org/ucspi-proxy/"
 SRC_URI="${HOMEPAGE}archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-libs/bglibs-1.025"
+DEPEND=">=dev-libs/bglibs-1.025
+	sys-apps/sed"
 RDEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e '/^>bin$/ac:::755::ucspi-proxy' INSTHIER
+}
 
 src_compile() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
