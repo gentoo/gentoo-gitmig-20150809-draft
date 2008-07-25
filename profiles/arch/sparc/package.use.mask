@@ -21,3 +21,8 @@ net-misc/kpvnc smartcard
 
 # openinventor is not keyworded and will not build (needed for bug #230716).
 sci-physics/geant	openinventor
+
+# Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
+# Mask webkit from liferea: not keyworded
+net-news/liferea webkit
+

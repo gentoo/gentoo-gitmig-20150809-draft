@@ -37,3 +37,8 @@ media-tv/mythtv opengl-xvmc
 # Brent Baude <ranger@gentoo.org> (11 June 2008)
 # Mask out java from openoffice; not applicable for powerpc
  app-office/openoffice java
+
+# Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
+# Mask unkeyworded webkit from liferea
+net-news/liferea webkit
+

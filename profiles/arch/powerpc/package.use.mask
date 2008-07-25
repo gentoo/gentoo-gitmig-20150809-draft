@@ -43,3 +43,6 @@ gnome-base/gnome mono
 # Mask out java from openoffice; not applicable for powerpc
 app-office/openoffice java
 
+# Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
+# Mask webkit from liferea: not keyworded
+net-news/liferea webkit
