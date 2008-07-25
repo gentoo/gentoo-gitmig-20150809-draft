@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.4 2008/06/05 11:58:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.5 2008/07/25 14:03:52 carlo Exp $
+
+EAPI=1
 
 inherit gnome2 eutils
 
@@ -31,7 +33,7 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	dbus? ( >=sys-apps/dbus-1.0
 			dev-libs/dbus-glib )
 	kde? (
-		|| ( kde-base/kdebase kde-base/kwin )
+		|| ( kde-base/kwin:3.5 kde-base/kdebase:3.5 )
 		dev-libs/dbus-qt3-old )"
 
 RDEPEND="${DEPEND}
