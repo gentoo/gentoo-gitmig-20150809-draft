@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.40 2008/04/21 13:53:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.41 2008/07/25 13:25:20 carlo Exp $
+
+*kscope-1.6.2 (25 Jul 2008)
+
+  25 Jul 2008; Carsten Lohrke <carlo@gentoo.org> +kscope-1.6.2.ebuild:
+  Version bump.
 
   21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> kscope-1.6.1.ebuild:
   Make sure to regenerate autotools explicitly or it will fail with autoconf
