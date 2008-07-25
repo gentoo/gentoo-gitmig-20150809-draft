@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.390 2008/06/18 12:27:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.391 2008/07/25 11:36:45 zzam Exp $
+
+*udev-125 (25 Jul 2008)
+
+  25 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/write_root_link_rule-125, +udev-125.ebuild:
+  Version bumped. rules were moved inside the tarball. Rewritten
+  write_root_link_rule due to better support from udevadm.
 
   18 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
   -files/05-udev-early.rules-104-r5, -files/udev.rules-104-r10,
