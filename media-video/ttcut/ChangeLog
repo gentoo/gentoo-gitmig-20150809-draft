@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.15 2008/06/25 07:15:28 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.16 2008/07/25 19:05:05 beandog Exp $
+
+  25 Jul 2008; Steve Dibb <beandog@gentoo.org> ttcut-0.19.6-r1.ebuild:
+  Drop amd64, bug 228145
 
   25 Jun 2008; Dawid Węgliński <cla@gentoo.org> ttcut-0.19.6-r1.ebuild:
   Reverting back to ~amd64
