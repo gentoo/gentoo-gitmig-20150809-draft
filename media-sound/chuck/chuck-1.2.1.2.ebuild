@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.2 2008/07/20 21:16:25 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.3 2008/07/25 06:41:43 cedk Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -59,7 +59,7 @@ compile_backend() {
 	cd "${S}/src"
 	emake -f "makefile.${backend}" CC=$(tc-getCC) CXX=$(tc-getCXX) || die "emake failed"
 	mv chuck{,.${backend}}
-	emale -f "makefile.${backend}" clean
+	emake -f "makefile.${backend}" clean
 }
 
 src_install() {
