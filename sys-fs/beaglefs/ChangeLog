@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/beaglefs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/ChangeLog,v 1.4 2008/07/07 20:26:22 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/ChangeLog,v 1.5 2008/07/25 07:43:32 ford_prefect Exp $
+
+  25 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/beaglefs-1.0.3-libbeagle-0.3.patch, metadata.xml,
+  beaglefs-1.0.3.ebuild:
+  Add patch to support >=app-misc/beagle-0.3.0 (bug #231979) and add me to
+  the list of maintainers
 
   07 Jul 2008; Cédric Krier <cedk@gentoo.org> beaglefs-1.0.3.ebuild:
   Fix einfo for bug #207798
