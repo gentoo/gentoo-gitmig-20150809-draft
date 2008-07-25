@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.11.ebuild,v 1.1 2008/07/25 13:26:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.11.ebuild,v 1.2 2008/07/25 13:31:27 carlo Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kwave/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64"
 IUSE="alsa arts bindist debug flac mp3 ogg oss"
 
 RDEPEND="arts? ( || ( kde-base/kdemultimedia-arts:3.5 kde-base/kdemultimedia:3.5 ) )
@@ -30,6 +30,14 @@ DEPEND="${RDEPEND}
 	app-text/recode
 	media-gfx/imagemagick"
 need-kde 3.5
+
+pkg_setup() {
+	if ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+	die "Missing FLAC C++ bindings."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

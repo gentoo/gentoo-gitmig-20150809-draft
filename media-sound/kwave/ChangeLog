@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.7 2008/07/25 13:26:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.8 2008/07/25 13:31:27 carlo Exp $
+
+  25 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kwave-0.7.11.ebuild:
+  Remove slipped in ~ppc and restor flac cxx check.
 
 *kwave-0.7.11 (25 Jul 2008)
 
