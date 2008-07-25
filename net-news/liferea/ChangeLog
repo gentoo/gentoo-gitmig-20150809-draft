@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.156 2008/06/21 20:15:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.157 2008/07/25 13:56:58 dang Exp $
+
+  25 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
+  -files/liferea-1.4.14-turkish-translation-fix.patch,
+  -liferea-1.4.13.ebuild, -liferea-1.4.14.ebuild:
+  clean up old versions
 
   21 Jun 2008; Markus Rothe <corsair@gentoo.org> liferea-1.4.15.ebuild:
   Stable on ppc64; bug #228357
