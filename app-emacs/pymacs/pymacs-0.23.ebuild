@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.7 2008/07/21 06:03:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.8 2008/07/25 21:23:56 ulm Exp $
 
 inherit distutils elisp
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~arm ~hppa ia64 ppc ppc64 ~s390 ~sh x86 ~x86-fbsd"
 IUSE="doc test"
 
 DEPEND="doc? ( dev-python/docutils virtual/latex-base )
-	test? ( dev-texlive/texlive-langfrench )"
+	test? ( || ( dev-texlive/texlive-langfrench virtual/tetex ) )"
 RDEPEND=""
 
 SITEFILE=50${PN}-gentoo.el
