@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.17 2008/06/01 10:30:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.18 2008/07/25 06:59:00 grobian Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -12,17 +12,17 @@ PROVIDE="virtual/portage"
 SLOT="0"
 # USE_EXPAND_HIDDEN hides ELIBC and USERLAND expansions from emerge output (see make.conf.5).
 IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
-IUSE_USERLAND="userland_Darwin userland_GNU"
+IUSE_USERLAND="userland_GNU"
 IUSE="build doc selinux linguas_pl ${IUSE_ELIBC} ${IUSE_USERLAND}"
 DEPEND=">=dev-lang/python-2.3
 	!build? ( >=sys-apps/sed-4.0.5 )"
 RDEPEND=">=dev-lang/python-2.3
 	!build? ( >=sys-apps/sed-4.0.5
 		dev-python/python-fchksum
-		!userland_Darwin? ( >=app-shells/bash-3.0 ) )
+		>=app-shells/bash-3.0 )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
-	!userland_Darwin? ( >=app-misc/pax-utils-0.1.13 )
+	>=app-misc/pax-utils-0.1.13
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	>=dev-python/pycrypto-2.0.1-r5"
 SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
