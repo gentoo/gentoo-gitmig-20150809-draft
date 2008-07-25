@@ -1,6 +1,13 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.157 2008/07/25 13:56:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.158 2008/07/25 14:57:17 dang Exp $
+
+*liferea-1.4.17 (25 Jul 2008)
+
+  25 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/liferea-1.4.17-xulrunner-1.9.patch, +liferea-1.4.17.ebuild:
+  Now with webkit goodness!
+
 
   25 Jul 2008; Daniel Gryniewicz <dang@gentoo.org>
   -files/liferea-1.4.14-turkish-translation-fix.patch,
