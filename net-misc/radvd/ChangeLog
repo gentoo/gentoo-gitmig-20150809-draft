@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.40 2008/06/15 11:19:23 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.41 2008/07/25 17:14:29 bluebird Exp $
+
+  25 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> radvd-1.0-r1.ebuild:
+  Stable on sparc
 
 *radvd-1.1 (15 Jun 2008)
 
