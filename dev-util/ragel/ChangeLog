@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.10 2008/07/08 17:49:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.11 2008/07/25 11:58:58 lu_zero Exp $
+
+  25 Jul 2008; Luca Barbato <lu_zero@gentoo.org> ragel-6.2.ebuild:
+  Marked ~ppc and ~ppc64
 
   08 Jul 2008; Caleb Tennis <caleb@gentoo.org> ragel-6.2.ebuild:
   mark ~amd64

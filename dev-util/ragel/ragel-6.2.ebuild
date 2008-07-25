@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.2.ebuild,v 1.2 2008/07/08 17:49:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.2.ebuild,v 1.3 2008/07/25 11:58:58 lu_zero Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cs.queensu.ca/~thurston/ragel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc vim-syntax"
 
 DEPEND="doc? ( virtual/tetex
