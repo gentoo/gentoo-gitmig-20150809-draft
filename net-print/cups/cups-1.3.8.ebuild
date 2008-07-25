@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.7-r3.ebuild,v 1.1 2008/07/16 22:47:37 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.8.ebuild,v 1.1 2008/07/25 19:45:54 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl avahi dbus gnutls java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
+IUSE="acl avahi dbus gnutls java jpeg kerberos ldap pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	avahi? ( net-dns/avahi )
@@ -38,12 +38,10 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 
 DEPEND="${COMMON_DEPEND}
 	!<net-print/foomatic-filters-ppds-20070501
-	!<net-print/hplip-1.7.4a-r1
-	nls? ( sys-devel/gettext )"
+	!<net-print/hplip-1.7.4a-r1"
 
 RDEPEND="${COMMON_DEPEND}
 	!virtual/lpr
-	nls? ( virtual/libintl )
 	X? ( x11-misc/xdg-utils )
 	>=app-text/poppler-0.4.3-r1"
 
@@ -72,7 +70,7 @@ RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
-LANGS="de en es et fr he it ja pl sv zh_TW"
+LANGS="de en es et fr he id it ja pl sv zh_TW"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
@@ -101,15 +99,6 @@ src_unpack() {
 
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.3.7-backend-https.patch"
-
-	# CVE-2008-1722 security patch, bug #217232
-	epatch "${FILESDIR}/${PN}-1.3.7-CVE-2008-1722.patch"
-
-	# Already fixed in CUPS SVN
-	# fix IPP authentification, upstream bug STR #2750
-	epatch "${FILESDIR}/${PN}-1.3.7-str2750.patch"
-	# fix compilation against glibc-2.8, upstream bug STR #2860
-	epatch "${FILESDIR}/${PN}-1.3.7-str2860.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
