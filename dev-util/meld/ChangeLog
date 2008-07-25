@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.79 2008/07/22 19:32:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.80 2008/07/25 16:39:15 armin76 Exp $
+
+  25 Jul 2008; Raúl Porcel <armin76@gentoo.org> meld-1.1.5.1-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #232337
 
   22 Jul 2008; Markus Rothe <corsair@gentoo.org> meld-1.1.5.1-r1.ebuild:
   Stable on ppc64; bug #232337
