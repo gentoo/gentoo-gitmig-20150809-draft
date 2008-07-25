@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.0.1.ebuild,v 1.1 2008/06/28 16:53:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.0.1.ebuild,v 1.2 2008/07/25 20:40:57 pchrist Exp $
 
 inherit eutils latex-package
 
@@ -33,7 +33,7 @@ S="${WORKDIR}/plt-${PV%%_p*}"
 
 pkg_setup() {
 	if use cairo; then
-		if ! built_with_use cairo X; then
+		if ! built_with_use x11-libs/cairo X; then
 			eerror "Cairo must be built with X use flag"
 			die "Cairo must be built with X use flag"
 		fi

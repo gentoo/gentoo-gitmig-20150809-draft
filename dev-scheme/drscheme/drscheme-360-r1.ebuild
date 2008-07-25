@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.9 2008/02/29 17:58:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.10 2008/07/25 20:40:57 pchrist Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -75,7 +75,7 @@ src_install() {
 		make DESTDIR="${D}" install-3m || die "make install failed"
 	fi
 
-	dodoc ${WORKDIR}/plt/{readme.txt,src/README}
+	dodoc "${WORKDIR}/plt/{readme.txt,src/README}"
 
 	mv -f "${D}"/usr/share/plt/doc/* "${D}/usr/share/doc/${PF}/"
 	rm -rf "${D}/usr/share/plt/doc"

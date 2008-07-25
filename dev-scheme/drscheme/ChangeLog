@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.63 2008/07/06 10:32:25 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.64 2008/07/25 20:40:57 pchrist Exp $
+
+  25 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
+  drscheme-0.372-r1.ebuild, drscheme-4.0.1.ebuild, drscheme-4.0.2.ebuild,
+  drscheme-360-r1.ebuild, drscheme-360-r2.ebuild, drscheme-360-r3.ebuild:
+  Fix typos and cairo --> x11-libs/cairo in various ebuilds
 
 *drscheme-4.0.1 (05 Jul 2008)
 
