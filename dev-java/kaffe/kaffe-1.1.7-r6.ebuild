@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r6.ebuild,v 1.2 2008/07/25 21:56:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r6.ebuild,v 1.3 2008/07/25 21:58:35 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -134,11 +134,11 @@ src_install() {
 	dosym /usr/bin/fastjar /opt/${P}/bin
 
 	# Remove some files that collide with classpath
-	rm ${D}/usr/share/info/vmintegration.info \
-		${D}/usr/share/info/hacking.info
+	rm "${D}/usr/share/info/vmintegration.info" \
+		"${D}/usr/share/info/hacking.info"
 
 	# Add symlink to glibj.zip, for bug #148607
-	cd ${D}/opt/${P}/jre/lib
+	cd "${D}/opt/${P}/jre/lib"
 	ln -s glibj.zip rt.jar
 }
 
