@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3645 2008/07/25 14:55:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3646 2008/07/25 16:36:00 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -62,6 +62,7 @@ app-cdr/brasero:totem - Enable support for Totem playlists.
 app-cdr/cdrdao:gcdmaster - Enable building of gcdmaster application
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
+app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-cdr/serpentine:muine - Enable support for the GNOME music player Muine
