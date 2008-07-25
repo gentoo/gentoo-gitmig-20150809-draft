@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.6 2007/08/15 09:20:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.7 2008/07/25 21:56:49 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -51,7 +51,7 @@ QA_EXECSTACK_x86="opt/${P}/jre/lib/i386/libkaffevm-1.1.7.so"
 
 pkg_setup() {
 	if ! use gmp; then
-		ewarn "You have don't have the gmp use flag set."
+		ewarn "You don't have the gmp use flag set."
 		ewarn "Using gmp is the default upstream setting."
 		epause 3
 	fi
