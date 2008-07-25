@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.73 2007/08/15 09:20:59 caster Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.74 2008/07/25 21:55:28 betelgeuse Exp $
+
+  25 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> -kaffe-1.1.7-r5.ebuild:
+  Remove old ebuild.
 
   15 Aug 2007; Vlastimil Babka <caster@gentoo.org> kaffe-1.1.7-r4.ebuild,
   kaffe-1.1.7-r5.ebuild:
