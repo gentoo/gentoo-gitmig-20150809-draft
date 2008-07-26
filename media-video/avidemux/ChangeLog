@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.132 2008/07/12 21:36:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.133 2008/07/26 21:34:46 carlo Exp $
+
+  26 Jul 2008; Carsten Lohrke <carlo@gentoo.org> avidemux-2.4.ebuild,
+  avidemux-2.4.1.ebuild, avidemux-2.4.2.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *avidemux-2.4.2 (12 Jul 2008)
 

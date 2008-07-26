@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.16 2008/07/25 19:05:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.17 2008/07/26 21:30:59 carlo Exp $
+
+  26 Jul 2008; Carsten Lohrke <carlo@gentoo.org> ttcut-0.19.6-r1.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   25 Jul 2008; Steve Dibb <beandog@gentoo.org> ttcut-0.19.6-r1.ebuild:
   Drop amd64, bug 228145

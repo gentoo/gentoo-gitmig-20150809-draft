@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.7 2008/07/25 19:05:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.8 2008/07/26 21:30:59 carlo Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-amd64 x86"
 IUSE=""
 
-DEPEND="|| ( >=x11-libs/qt-4.3.0:4 ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) )
+DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3* )
 	>=media-libs/libmpeg2-0.4.0
 	virtual/opengl"
 

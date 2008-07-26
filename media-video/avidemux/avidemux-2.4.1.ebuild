@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.9 2008/06/22 15:14:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.10 2008/07/26 21:34:46 carlo Exp $
 
 EAPI="1"
 
@@ -43,8 +43,8 @@ RDEPEND="dev-libs/libxml2
 	xvid? ( media-libs/xvid )
 	gtk? ( >=x11-libs/gtk+-2
 		x11-libs/libX11 )
-	qt4? ( || ( >=x11-libs/qt-4.3:4
-			x11-libs/qt-gui:4 )
+	qt4? ( || ( x11-libs/qt-gui:4 
+		=x11-libs/qt-4.3* )
 		x11-libs/libX11 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
