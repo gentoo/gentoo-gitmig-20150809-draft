@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/blogtk
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.14 2007/07/02 14:59:23 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.15 2008/07/26 22:48:58 eva Exp $
+
+  26 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+  fix QA warnings. Fix various ebuild issues in 1.1. Add gettext and
+  pkg-config in DEPEND per bug #233070.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> blogtk-1.0.ebuild,
   blogtk-1.1.ebuild:
