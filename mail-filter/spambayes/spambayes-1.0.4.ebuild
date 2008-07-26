@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0.4.ebuild,v 1.5 2007/07/15 02:43:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0.4.ebuild,v 1.6 2008/07/26 02:30:30 pythonhead Exp $
 
 inherit distutils
 
@@ -16,6 +16,11 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2"
+
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}/${P}_import_errors_232461.patch"
+}
 
 src_install() {
 	distutils_src_install
