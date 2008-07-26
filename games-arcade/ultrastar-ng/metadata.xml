@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+  <herd>games</herd>
+  <longdescription lang="en">
 UltraStar-ng : The free Linux karaoke game
 </longdescription>
+  <use>
+    <flag name="novideo">Disable smpeg video support</flag>
+    <flag name="songs">Build with few demo songs</flag>
+  </use>
 </pkgmetadata>
