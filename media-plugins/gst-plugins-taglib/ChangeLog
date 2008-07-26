@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.16 2008/06/29 16:08:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.17 2008/07/26 20:40:42 tester Exp $
 
 *gst-plugins-taglib-0.10.8 (29 Jun 2008)
 
@@ -13,6 +13,10 @@
   09 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-taglib-0.10.7.ebuild:
   Add ~sparc
+
+  01 Jun 2008; Olivier Crête <tester@gentoo.org>
+  gst-plugins-taglib-0.10.6-r1.ebuild:
+  Stable on amd64
 
 *gst-plugins-taglib-0.10.7 (21 Feb 2008)
 

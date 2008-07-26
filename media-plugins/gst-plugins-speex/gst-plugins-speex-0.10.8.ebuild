@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/gst-plugins-speex-0.10.8.ebuild,v 1.1 2008/06/29 16:13:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/gst-plugins-speex-0.10.8.ebuild,v 1.2 2008/07/26 20:40:19 tester Exp $
 
 inherit gst-plugins-good
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 DESCRIPTION="GStreamer plugin to allow encoding and decoding of speex"
 IUSE=""
 
