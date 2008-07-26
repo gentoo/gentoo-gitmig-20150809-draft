@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12_rc4.ebuild,v 1.2 2008/07/14 18:34:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12_rc4.ebuild,v 1.3 2008/07/26 21:37:20 carlo Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 RESTRICT="test"
 
-COMMON_DEPEND="|| ( >=x11-libs/qt-4.3:4 x11-libs/qt-gui:4 )
+COMMON_DEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )
 	=app-crypt/qca-2*
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
