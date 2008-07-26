@@ -1,0 +1,305 @@
+--- test/UtilTest.cc.orig	2008-07-26 14:24:56.000000000 +0200
++++ test/UtilTest.cc	2008-07-26 14:27:58.000000000 +0200
+@@ -565,8 +565,8 @@
+ 
+ void UtilTest::testParseLLInt()
+ {
+-  CPPUNIT_ASSERT_EQUAL(-1LL, Util::parseLLInt(" -1 "));
+-  CPPUNIT_ASSERT_EQUAL(9223372036854775807LL,
++  CPPUNIT_ASSERT_EQUAL((int64_t)-1LL, Util::parseLLInt(" -1 "));
++  CPPUNIT_ASSERT_EQUAL((int64_t)9223372036854775807LL,
+ 		       Util::parseLLInt("9223372036854775807"));
+   try {
+     Util::parseLLInt("9223372036854775808");
+@@ -596,7 +596,7 @@
+ 
+ void UtilTest::testParseULLInt()
+ {
+-  CPPUNIT_ASSERT_EQUAL(18446744073709551615ULL,
++  CPPUNIT_ASSERT_EQUAL((uint64_t)18446744073709551615ULL,
+ 		       Util::parseULLInt("18446744073709551615"));
+   try {
+     Util::parseUInt("-1");
+--- test/HttpHeaderProcessorTest.cc.orig	2008-07-26 14:29:03.000000000 +0200
++++ test/HttpHeaderProcessorTest.cc	2008-07-26 14:29:35.000000000 +0200
+@@ -112,7 +112,7 @@
+ 		       header->getFirst("Date"));
+   CPPUNIT_ASSERT_EQUAL(std::string("Apache/2.2.3 (Debian)"),
+ 		       header->getFirst("Server"));
+-  CPPUNIT_ASSERT_EQUAL(9187ULL, header->getFirstAsULLInt("Content-Length"));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)9187ULL, header->getFirstAsULLInt("Content-Length"));
+   CPPUNIT_ASSERT_EQUAL(std::string("text/html; charset=UTF-8"),
+ 		       header->getFirst("Content-Type"));
+ }
+--- test/BitfieldManTest.cc.orig	2008-07-26 15:37:07.000000000 +0200
++++ test/BitfieldManTest.cc	2008-07-26 15:35:57.000000000 +0200
+@@ -342,7 +342,7 @@
+   btman.setUseBit(index);
+   CPPUNIT_ASSERT_EQUAL((size_t)7, index);
+   CPPUNIT_ASSERT(!btman.getMissingUnusedIndex(index, peerBt, sizeof(peerBt)));
+-  CPPUNIT_ASSERT_EQUAL(12ULL, btman.getFilteredTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)12ULL, btman.getFilteredTotalLength());
+ 
+   // test offset=5, length=2
+   btman.clearAllBit();
+@@ -359,13 +359,13 @@
+   btman.setBit(index);
+   CPPUNIT_ASSERT_EQUAL((size_t)3, index);
+   CPPUNIT_ASSERT(!btman.getMissingUnusedIndex(index, peerBt, sizeof(peerBt)));
+-  CPPUNIT_ASSERT_EQUAL(4ULL, btman.getFilteredTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4ULL, btman.getFilteredTotalLength());
+   CPPUNIT_ASSERT(btman.isFilteredAllBitSet());
+ 
+   BitfieldMan btman2(2, 31);
+   btman2.addFilter(0, 31);
+   btman2.enableFilter();
+-  CPPUNIT_ASSERT_EQUAL(31ULL, btman2.getFilteredTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)31ULL, btman2.getFilteredTotalLength());
+ 
+ }
+ 
+@@ -551,27 +551,27 @@
+   CPPUNIT_ASSERT_EQUAL(totalLength, bf.getMissingUnusedLength(0));
+ 
+   // from index 10 and all blocks are unused and not acquired.
+-  CPPUNIT_ASSERT_EQUAL(10ULL, bf.getMissingUnusedLength(10));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)10ULL, bf.getMissingUnusedLength(10));
+ 
+   // from index -1
+-  CPPUNIT_ASSERT_EQUAL(0ULL, bf.getMissingUnusedLength(-1));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, bf.getMissingUnusedLength(-1));
+ 
+   // from index 11
+-  CPPUNIT_ASSERT_EQUAL(0ULL, bf.getMissingUnusedLength(11));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, bf.getMissingUnusedLength(11));
+ 
+   // from index 12
+-  CPPUNIT_ASSERT_EQUAL(0ULL, bf.getMissingUnusedLength(12));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, bf.getMissingUnusedLength(12));
+ 
+   // from index 0 and 5th block is used.
+   bf.setUseBit(5);
+-  CPPUNIT_ASSERT_EQUAL(5ULL*blockLength, bf.getMissingUnusedLength(0));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)5ULL*blockLength, bf.getMissingUnusedLength(0));
+ 
+   // from index 0 and 4th block is acquired.
+   bf.setBit(4);
+-  CPPUNIT_ASSERT_EQUAL(4ULL*blockLength, bf.getMissingUnusedLength(0));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4ULL*blockLength, bf.getMissingUnusedLength(0));
+ 
+   // from index 1
+-  CPPUNIT_ASSERT_EQUAL(3ULL*blockLength, bf.getMissingUnusedLength(1));
++  CPPUNIT_ASSERT_EQUAL((uint64_t)3ULL*blockLength, bf.getMissingUnusedLength(1));
+ }
+ 
+ void BitfieldManTest::testSetBitRange()
+@@ -589,7 +589,7 @@
+   for(size_t i = 5; i < 10; ++i) {
+     CPPUNIT_ASSERT(!bf.isBitSet(i));
+   }
+-  CPPUNIT_ASSERT_EQUAL(5ULL*blockLength, bf.getCompletedLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)5ULL*blockLength, bf.getCompletedLength());
+ }
+ 
+ void BitfieldManTest::testGetAllMissingIndexes_noarg()
+--- test/HttpResponseTest.cc.orig	2008-07-26 15:37:36.000000000 +0200
++++ test/HttpResponseTest.cc	2008-07-26 15:39:05.000000000 +0200
+@@ -78,7 +78,7 @@
+ {
+   HttpResponse httpResponse;
+ 
+-  CPPUNIT_ASSERT_EQUAL(0ULL, httpResponse.getContentLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, httpResponse.getContentLength());
+ }
+ 
+ void HttpResponseTest::testGetContentLength_contentLength()
+@@ -90,7 +90,7 @@
+ 
+   httpResponse.setHttpHeader(httpHeader);
+ 
+-  CPPUNIT_ASSERT_EQUAL(4294967296ULL, httpResponse.getContentLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4294967296ULL, httpResponse.getContentLength());
+ }
+ 
+ void HttpResponseTest::testGetEntityLength()
+@@ -102,11 +102,11 @@
+ 
+   httpResponse.setHttpHeader(httpHeader);
+ 
+-  CPPUNIT_ASSERT_EQUAL(4294967296ULL, httpResponse.getEntityLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4294967296ULL, httpResponse.getEntityLength());
+ 
+   httpHeader->put("Content-Range", "bytes 1-4294967296/4294967297");
+ 
+-  CPPUNIT_ASSERT_EQUAL(4294967297ULL, httpResponse.getEntityLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4294967297ULL, httpResponse.getEntityLength());
+ 
+ }
+ 
+--- test/DefaultDiskWriterTest.cc.orig	2008-07-26 15:39:33.000000000 +0200
++++ test/DefaultDiskWriterTest.cc	2008-07-26 15:39:54.000000000 +0200
+@@ -24,7 +24,7 @@
+ {
+   DefaultDiskWriter dw;
+   dw.openExistingFile("4096chunk.txt");
+-  CPPUNIT_ASSERT_EQUAL(4096ULL, dw.size());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)4096ULL, dw.size());
+ }
+ 
+ } // namespace aria2
+--- test/BtRequestMessageTest.cc.orig	2008-07-26 15:40:57.000000000 +0200
++++ test/BtRequestMessageTest.cc	2008-07-26 15:41:32.000000000 +0200
+@@ -145,7 +145,7 @@
+   CPPUNIT_ASSERT_EQUAL((uint8_t)6, pm->getId());
+   CPPUNIT_ASSERT_EQUAL((size_t)12345, pm->getIndex());
+   CPPUNIT_ASSERT_EQUAL((uint32_t)256, pm->getBegin());
+-  CPPUNIT_ASSERT_EQUAL((size_t)1024, pm->getLength());
++  CPPUNIT_ASSERT_EQUAL((uint32_t)1024, pm->getLength());
+ 
+   // case: payload size is wrong
+   try {
+--- test/DefaultPieceStorageTest.cc.orig	2008-07-26 15:42:13.000000000 +0200
++++ test/DefaultPieceStorageTest.cc	2008-07-26 15:43:06.000000000 +0200
+@@ -72,7 +72,7 @@
+ void DefaultPieceStorageTest::testGetTotalLength() {
+   DefaultPieceStorage pss(btContext, option);
+ 
+-  CPPUNIT_ASSERT_EQUAL(384ULL, pss.getTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)384ULL, pss.getTotalLength());
+ }
+ 
+ void DefaultPieceStorageTest::testGetMissingPiece() {
+@@ -132,15 +132,15 @@
+ 		       piece->toString());
+ #endif // !__MINGW32__
+ 
+-  CPPUNIT_ASSERT_EQUAL(0ULL, pss.getCompletedLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, pss.getCompletedLength());
+ 
+   pss.completePiece(piece);
+ 
+-  CPPUNIT_ASSERT_EQUAL(128ULL, pss.getCompletedLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)128ULL, pss.getCompletedLength());
+ 
+   SharedHandle<Piece> incompletePiece = pss.getMissingPiece(peer);
+   incompletePiece->completeBlock(0);
+-  CPPUNIT_ASSERT_EQUAL(256ULL, pss.getCompletedLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)256ULL, pss.getCompletedLength());
+ }
+ 
+ void DefaultPieceStorageTest::testGetPiece() {
+--- test/DefaultBtContextTest.cc.orig	2008-07-26 15:43:36.000000000 +0200
++++ test/DefaultBtContextTest.cc	2008-07-26 15:44:01.000000000 +0200
+@@ -129,14 +129,14 @@
+   DefaultBtContext btContext;
+   btContext.load("test.torrent");
+ 
+-  CPPUNIT_ASSERT_EQUAL(384ULL, btContext.getTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)384ULL, btContext.getTotalLength());
+ }
+ 
+ void DefaultBtContextTest::testGetTotalLengthSingle() {
+   DefaultBtContext btContext;
+   btContext.load("single.torrent");
+ 
+-  CPPUNIT_ASSERT_EQUAL(384ULL, btContext.getTotalLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)384ULL, btContext.getTotalLength());
+ }
+ 
+ void DefaultBtContextTest::testGetFileModeMulti() {
+--- test/PeerSessionResourceTest.cc.orig	2008-07-26 15:44:44.000000000 +0200
++++ test/PeerSessionResourceTest.cc	2008-07-26 15:45:26.000000000 +0200
+@@ -103,20 +103,20 @@
+ {
+   PeerSessionResource res(1024, 1024*1024);
+ 
+-  CPPUNIT_ASSERT_EQUAL(0ULL, res.uploadLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, res.uploadLength());
+   res.updateUploadLength(100);
+   res.updateUploadLength(200);
+-  CPPUNIT_ASSERT_EQUAL(300ULL, res.uploadLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)300ULL, res.uploadLength());
+ }
+ 
+ void PeerSessionResourceTest::testUpdateDownloadLength()
+ {
+   PeerSessionResource res(1024, 1024*1024);
+ 
+-  CPPUNIT_ASSERT_EQUAL(0ULL, res.downloadLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, res.downloadLength());
+   res.updateDownloadLength(100);
+   res.updateDownloadLength(200);
+-  CPPUNIT_ASSERT_EQUAL(300ULL, res.downloadLength());
++  CPPUNIT_ASSERT_EQUAL((uint64_t)300ULL, res.downloadLength());
+ }
+ 
+ void PeerSessionResourceTest::testUpdateLatency()
+--- test/Metalink2RequestGroupTest.cc.orig	2008-07-26 15:47:04.000000000 +0200
++++ test/Metalink2RequestGroupTest.cc	2008-07-26 15:47:22.000000000 +0200
+@@ -46,7 +46,7 @@
+     SharedHandle<SingleFileDownloadContext> dctx
+       (dynamic_pointer_cast<SingleFileDownloadContext>(rg->getDownloadContext()));
+     CPPUNIT_ASSERT(!dctx.isNull());
+-    CPPUNIT_ASSERT_EQUAL(0ULL, dctx->getTotalLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, dctx->getTotalLength());
+ #ifdef ENABLE_MESSAGE_DIGEST
+     CPPUNIT_ASSERT_EQUAL(std::string("sha1"), dctx->getChecksumHashAlgo());
+     CPPUNIT_ASSERT_EQUAL(std::string("a96cf3f0266b91d87d5124cf94326422800b627d"),
+--- test/MetalinkParserControllerTest.cc.orig	2008-07-26 15:47:44.000000000 +0200
++++ test/MetalinkParserControllerTest.cc	2008-07-26 15:48:02.000000000 +0200
+@@ -59,7 +59,7 @@
+     CPPUNIT_ASSERT_EQUAL((size_t)1, m->entries.size());
+     SharedHandle<MetalinkEntry> e = m->entries.front();
+     CPPUNIT_ASSERT_EQUAL(std::string("aria2.tar.bz2"), e->file->getPath());
+-    CPPUNIT_ASSERT_EQUAL(1024*1024ULL, e->file->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)(1024*1024ULL), e->file->getLength());
+     CPPUNIT_ASSERT_EQUAL((off_t)0, e->file->getOffset());
+     CPPUNIT_ASSERT_EQUAL(std::string("1.0"), e->version);
+     CPPUNIT_ASSERT_EQUAL(std::string("ja_JP"), e->language);
+--- test/MetalinkProcessorTest.cc.orig	2008-07-26 15:49:34.000000000 +0200
++++ test/MetalinkProcessorTest.cc	2008-07-26 15:50:13.000000000 +0200
+@@ -73,7 +73,7 @@
+ 
+     SharedHandle<MetalinkEntry> entry1 = *entryItr;
+     CPPUNIT_ASSERT_EQUAL(std::string("aria2-0.5.2.tar.bz2"), entry1->getPath());
+-    CPPUNIT_ASSERT_EQUAL(0ULL, entry1->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, entry1->getLength());
+     CPPUNIT_ASSERT_EQUAL(std::string("0.5.2"), entry1->version);
+     CPPUNIT_ASSERT_EQUAL(std::string("en-US"), entry1->language);
+     CPPUNIT_ASSERT_EQUAL(std::string("Linux-x86"), entry1->os);
+@@ -121,7 +121,7 @@
+ 
+     SharedHandle<MetalinkEntry> entry2 = *entryItr;
+     CPPUNIT_ASSERT_EQUAL(std::string("aria2-0.5.1.tar.bz2"), entry2->getPath());
+-    CPPUNIT_ASSERT_EQUAL(345689ULL, entry2->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)345689ULL, entry2->getLength());
+     CPPUNIT_ASSERT_EQUAL(std::string("0.5.1"), entry2->version);
+     CPPUNIT_ASSERT_EQUAL(std::string("ja-JP"), entry2->language);
+     CPPUNIT_ASSERT_EQUAL(std::string("Linux-m68k"), entry2->os);
+@@ -236,7 +236,7 @@
+     std::deque<SharedHandle<MetalinkEntry> >::iterator entryItr = m->entries.begin();
+     SharedHandle<MetalinkEntry> e = *entryItr;
+     CPPUNIT_ASSERT_EQUAL(std::string("aria2-0.5.2.tar.bz2"), e->getPath());
+-    CPPUNIT_ASSERT_EQUAL(0ULL, e->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)0ULL, e->getLength());
+     CPPUNIT_ASSERT_EQUAL(std::string("0.5.2"), e->version);
+     CPPUNIT_ASSERT_EQUAL(std::string("en-US"), e->language);
+     CPPUNIT_ASSERT_EQUAL(std::string("Linux-x86"), e->os);
+@@ -267,7 +267,7 @@
+ 
+     std::deque<SharedHandle<MetalinkEntry> >::iterator entryItr = m->entries.begin();
+     SharedHandle<MetalinkEntry> e = *entryItr;
+-    CPPUNIT_ASSERT_EQUAL(43743838ULL, e->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)43743838ULL, e->getLength());
+   } catch(Exception& e) {
+     CPPUNIT_FAIL(e.stackTrace());
+   }
+@@ -545,7 +545,7 @@
+   try {
+     SharedHandle<Metalinker> m = proc->parseFromBinaryStream(dw);
+     SharedHandle<MetalinkEntry> e = m->entries[0];
+-    CPPUNIT_ASSERT_EQUAL(9223372036854775807ULL, e->getLength());
++    CPPUNIT_ASSERT_EQUAL((uint64_t)9223372036854775807ULL, e->getLength());
+   } catch(Exception& e) {
+     CPPUNIT_FAIL(e.stackTrace());
+   }
