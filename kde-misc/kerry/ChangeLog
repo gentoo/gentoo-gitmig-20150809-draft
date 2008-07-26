@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kerry
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.13 2008/02/18 22:39:50 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.14 2008/07/26 05:16:13 ford_prefect Exp $
+
+  26 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/kerry-0.2.1-libbeagle-0.3.patch, kerry-0.2.1.ebuild:
+  Add support for >=beagle-0.3 (bug #210447)
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kerry-0.1-ebuilds-2.patch, -files/kerry-0.09-del-shortcut.patch,
