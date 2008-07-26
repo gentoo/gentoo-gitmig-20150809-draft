@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.4 2008/07/17 09:59:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.5 2008/07/26 11:32:18 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -240,6 +240,8 @@ src_unpack() {
 	# Rip out dos CRLF
 	edos2unix contrib/lirc.rules
 
+	epatch "${FILESDIR}/${P}-kernel-2.6.26.diff"
+
 	# Apply patches needed for some special device-types
 	epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
 	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
@@ -259,7 +261,10 @@ src_unpack() {
 	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.ac
 
 	# setting default device-node
-	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' configure.ac acconfig.h
+	local f
+	for f in configure.ac acconfig.h; do
+		[[ -f "$f" ]] && sed -i -e '/#define LIRC_DRIVER_DEVICE/d' "$f"
+	done
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
 
 	if has_version "=media-libs/portaudio-19*"; then
