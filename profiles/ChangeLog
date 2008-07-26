@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1715 2008/07/26 19:46:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1716 2008/07/26 20:21:40 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  26 Jul 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Added dev-db/ctdb to p.mask for testing
 
   26 Jul 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Remove gst-plugins-opengl from tree since it disappeared from upstream
