@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.9 2008/06/17 09:41:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.10 2008/07/26 10:59:17 armin76 Exp $
 
 inherit eutils multilib autotools
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://hunspell.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses readline"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
 
 DEPEND="readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )
