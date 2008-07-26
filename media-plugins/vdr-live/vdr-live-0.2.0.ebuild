@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.ebuild,v 1.1 2008/05/01 12:30:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.ebuild,v 1.2 2008/07/26 12:44:49 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -23,6 +23,14 @@ DEPEND="media-video/vdr
 	>=dev-libs/cxxtools-1.4.3"
 
 S="${WORKDIR}/${VDRPLUGIN}-${PV}"
+
+src_unpack() {
+	vdr-plugin_src_unpack
+	cd "${S}"
+
+	# make it work with /bin/sh as indicated in the file header
+	sed -e "18s/==/=/" -i  buildutil/version-util
+}
 
 src_install() {
 	vdr-plugin_src_install

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.16 2008/05/01 12:30:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.17 2008/07/26 12:44:49 zzam Exp $
+
+  26 Jul 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-live-0.2.0.ebuild:
+  Make it compile with sh not being bash.
 
 *vdr-live-0.2.0 (01 May 2008)
 
