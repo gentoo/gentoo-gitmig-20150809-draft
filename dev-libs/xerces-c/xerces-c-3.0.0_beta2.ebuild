@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0_beta1.ebuild,v 1.1 2008/06/28 06:34:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0_beta2.ebuild,v 1.1 2008/07/26 19:08:28 dev-zero Exp $
 
 EAPI="1"
 
@@ -47,8 +47,6 @@ src_unpack() {
 	sed -i \
 		-e 's|$(prefix)/msg|$(DESTDIR)/$(prefix)/share/xerces-c/msg|' \
 		src/xercesc/util/MsgLoaders/MsgCatalog/Makefile.in || die "sed failed"
-
-	epatch "${FILESDIR}/${P}-fix-tests-and-samples.patch"
 }
 
 src_compile() {
