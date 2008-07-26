@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-loadepg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-loadepg/ChangeLog,v 1.3 2007/08/03 09:56:40 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-loadepg/ChangeLog,v 1.4 2008/07/26 13:23:53 zzam Exp $
+
+*vdr-loadepg-0.2.0 (26 Jul 2008)
+
+  26 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-loadepg-0.1.9.ebuild, vdr-loadepg-0.1.11.ebuild,
+  +vdr-loadepg-0.2.0.ebuild:
+  Version bumped. Homepage and src_uri were moved. Thanks to pizzak for
+  notice and testing.
 
 *vdr-loadepg-0.1.11 (03 Aug 2007)
 
