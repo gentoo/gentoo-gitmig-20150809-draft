@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-125-r1.ebuild,v 1.1 2008/07/25 21:43:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-125-r1.ebuild,v 1.2 2008/07/26 08:43:19 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -204,7 +204,6 @@ src_install() {
 
 	# documentation
 	dodoc ChangeLog FAQ README TODO RELEASE-NOTES
-	dodoc docs/{overview,udev_vs_devfs}
 
 	cd docs/writing_udev_rules
 	mv index.html writing_udev_rules.html

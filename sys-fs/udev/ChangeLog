@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.392 2008/07/25 21:43:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.393 2008/07/26 08:43:19 zzam Exp $
+
+  26 Jul 2008; Matthias Schwarzott <zzam@gentoo.org> -udev-125.ebuild,
+  udev-125-r1.ebuild:
+  No longer install old not existant docs, Bug #232972. Removed broken
+  ebuild.
 
 *udev-125-r1 (25 Jul 2008)
 
