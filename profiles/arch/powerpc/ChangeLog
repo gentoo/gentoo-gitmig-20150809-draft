@@ -1,6 +1,15 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.15 2008/06/04 18:38:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.16 2008/07/26 07:59:19 corsair Exp $
+
+  26 Jul 2008; Markus Rothe <corsair@gentoo.org> package.use.mask,
+  ppc64/package.use.mask:
+  Move 'app-text/enchant -zemberek' from ppc64 profile to powerpc profile. The
+  packages are ~ppc now, too.
+
+  22 Jul 2008; Markus Rothe <corsair@gentoo.org>
+  arch/powerpc/ppc64/package.use.mask:
+  unmask zemberek use flag for app-text/enchant in ppc64 profiles
 
   04 Jun 2008; Markus Rothe <corsair@gentoo.org> ppc64/64ul/use.mask:
   add ocamlopt use flag to use.mask. this didn't made the change from

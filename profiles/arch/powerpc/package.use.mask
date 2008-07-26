@@ -46,3 +46,7 @@ app-office/openoffice java
 # Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
 # Mask webkit from liferea: not keyworded
 net-news/liferea webkit
+
+# Markus Rothe <corsair@gentoo.org> (22 July 2008)
+# bug #232411
+app-text/enchant -zemberek
