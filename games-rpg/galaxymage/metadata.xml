@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+  <herd>games</herd>
+  <longdescription lang="en">
 GalaxyMage is a free, open-source tactical/strategic RPG for Windows, Linux, and
 Macintosh, with online multiplayer support.
 
@@ -16,4 +16,7 @@ battle mechanics -- but to also allow for a lot of character development and
 customization. We also intend to create a unique, advanced AI system that allows
 enemy units to work together as a team and employ a wide variety of strategies. 
 </longdescription>
+  <use>
+    <flag name="psyco">psyco python accelerator</flag>
+  </use>
 </pkgmetadata>

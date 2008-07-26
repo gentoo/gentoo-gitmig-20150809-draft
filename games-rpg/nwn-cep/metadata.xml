@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<maintainer>
-  <email>wolf31o2@gentoo.org</email>
-  <name>Chris Gianelloni</name>
-  <description>Primary maintainer</description>
-</maintainer>
-<maintainer>
-  <email>calchan@gentoo.org</email>
-  <name>Denis Dupeyron</name>
-  <description>Secondary maintainer</description>
-</maintainer>
+  <herd>games</herd>
+  <maintainer>
+    <email>wolf31o2@gentoo.org</email>
+    <name>Chris Gianelloni</name>
+    <description>Primary maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>calchan@gentoo.org</email>
+    <name>Denis Dupeyron</name>
+    <description>Secondary maintainer</description>
+  </maintainer>
+  <use>
+    <flag name="hou">Adds support for the Hordes of the Underdark expansion pack</flag>
+    <flag name="sou">Adds support for the Shadows of Undrentide expension pack</flag>
+  </use>
 </pkgmetadata>
