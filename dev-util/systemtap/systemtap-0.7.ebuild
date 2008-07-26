@@ -1,16 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7_p20080712.ebuild,v 1.1 2008/07/12 15:19:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7.ebuild,v 1.1 2008/07/26 15:20:59 swegener Exp $
 
 inherit linux-info eutils
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
-if [[ ${PV} = *_p* ]] # is this a snaphot?
+if [[ ${PV} = *_pre* ]] # is this a snaphot?
 then
-	SRC_URI="ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${PV/*_p/}.tar.bz2"
+	# see configure.ac to see the version of the snapshot
+	SRC_URI="ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${PV/*_pre/}.tar.bz2"
+	S="${WORKDIR}"/src
 else
-	die "Sorry, currently there are only snapshots available." # but they have an internal version (see configure.ac)
+	SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${P}.tar.gz"
+	# use default S for releases
 fi
 
 LICENSE="GPL-2"
@@ -23,8 +26,6 @@ DEPEND=">=dev-libs/elfutils-0.122
 	sqlite? ( =dev-db/sqlite-3* )"
 RDEPEND="${DEPEND}
 	virtual/linux-sources"
-
-S="${WORKDIR}"/src
 
 CONFIG_CHECK="KPROBES ~RELAY ~DEBUG_FS"
 ERROR_KPROBES="${PN} requires support for KProbes Instrumentation (KPROBES) - this can be enabled in 'Instrumentation Support -> Kprobes'."
