@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
-</maintainer>
-<longdescription>
+  <herd>games</herd>
+  <maintainer>
+    <email>vapier@gentoo.org</email>
+  </maintainer>
+  <longdescription>
 In the single player mode, the player squares off 
 against computer controlled Bots in all the game modes 
 through a tournament ladder with increasing difficulty. 
@@ -30,4 +30,7 @@ game is connecting. And thanks to Epic Games' amazing work on Unreal
 Tournament's network play, you can be sure that even a 33.6K modem can get 
 a silky smooth connection to the server.
 </longdescription>
+  <use>
+    <flag name="S3TC">Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)</flag>
+  </use>
 </pkgmetadata>

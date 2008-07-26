@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 Quake III Arena is the third installment of the extremely popular and 
 successful Quake series by id software.  The game was released by id 
 software for both Windows and Linux.  The Linux version of the game was 
@@ -15,4 +15,7 @@ requires the data from a retail copy of the game to play.  If you're
 interested in checking out the technology behind Quake III, then 
 "emerge quake3-demo" to get the playable demo.
 </longdescription>
+  <use>
+    <flag name="teamarena">Adds support for Team Arena expansion pack</flag>
+  </use>
 </pkgmetadata>

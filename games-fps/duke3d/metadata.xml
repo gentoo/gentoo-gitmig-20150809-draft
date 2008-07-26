@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 The third chapter in the series, and the first with a 3D perspective 
 (the original Duke Nukem and the sequel, Duke Nukem II, are side 
 scrolling platform games). This game, set sometime in the early 21st 
@@ -51,4 +51,7 @@ What doesn't work/known bugs:
     * Some text prompts try to read the SDL input queue instead of stdin like they should.
     * Probably other stuff. Do NOT consider this stable and complete yet! 
 </longdescription>
+  <use>
+    <flag name="demo">Install the demo files</flag>
+  </use>
 </pkgmetadata>
