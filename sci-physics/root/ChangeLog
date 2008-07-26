@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.30 2008/07/18 09:19:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.31 2008/07/26 21:40:13 carlo Exp $
+
+  26 Jul 2008; Carsten Lohrke <carlo@gentoo.org> root-5.18.00d.ebuild,
+  root-5.20.00.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   18 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> root-5.16.00.ebuild,
   root-5.18.00d.ebuild, root-5.20.00.ebuild:
