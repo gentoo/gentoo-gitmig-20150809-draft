@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8838 2008/07/24 16:48:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8839 2008/07/26 19:46:54 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -140,11 +140,6 @@ mail-client/claws-mail-pdf-viewer
 # for details or bug #105919. Going forward this needs to be compiled into the
 # kernel.
 sys-fs/trustees
-
-# Samuli Suominen <drac@gentoo.org> (29 Jun 2008)
-# Masked for removal since it seems to have disappeared
-# from upstream -bad, -good, -ugly or -base packages.
-media-plugins/gst-plugins-opengl
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Removal in ~30 days. Only keep the latest version in the tree. 
