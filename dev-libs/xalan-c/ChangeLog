@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.16 2008/04/27 13:17:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.17 2008/07/26 19:31:55 dev-zero Exp $
+
+  26 Jul 2008; Tiziano Müller <dev-zero@gentoo.org> xalan-c-1.10.0.ebuild:
+  Added =dev-libs/xerces-c-2.8.0-r1 as possible dependency
 
   27 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/xalan-c-1.10.0+gcc-4.3.patch, xalan-c-1.10.0.ebuild:

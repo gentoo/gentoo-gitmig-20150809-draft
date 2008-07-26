@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.11 2008/04/27 13:17:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.12 2008/07/26 19:31:55 dev-zero Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="doc"
 
-RDEPEND="~dev-libs/xerces-c-2.7.0"
+RDEPEND="|| ( ~dev-libs/xerces-c-2.7.0 =dev-libs/xerces-c-2.8.0-r1 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
