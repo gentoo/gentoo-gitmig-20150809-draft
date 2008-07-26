@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 OGRE (Object-Oriented Graphics Rendering Engine) is a scene-oriented, flexible 3D 
 engine written in C++ designed to make it easier and more intuitive for developers 
 to produce games and demos utilising 3D hardware. The class library abstracts all 
@@ -73,4 +73,10 @@ Exporters
     * VRML97 (meshes)
     * Maya (meshes)
 </longdescription>
+  <use>
+    <flag name="cegui">build the CEGUI samples</flag>
+    <flag name="cg">NVIDIA toolkit plugin</flag>
+    <flag name="devil">image loading support with DevIL</flag>
+    <flag name="double-precision">more precise calculations at the expense of speed</flag>
+  </use>
 </pkgmetadata>
