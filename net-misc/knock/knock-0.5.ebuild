@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.10 2007/12/27 12:23:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.11 2008/07/26 20:26:13 wormo Exp $
 
 inherit eutils
 
@@ -20,14 +20,20 @@ DEPEND="net-libs/libpcap"
 RDEPEND="net-firewall/iptables
 	${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
+}
+
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README
 	dodoc ChangeLog
 	dodoc TODO
 
 	dosed "s:/usr/sbin/iptables:/sbin/iptables:g" /etc/knockd.conf
 
-	newinitd ${FILESDIR}/knockd.initd knock
-	newconfd ${FILESDIR}/knockd.confd knock
+	newinitd "${FILESDIR}"/knockd.initd knock
+	newconfd "${FILESDIR}"/knockd.confd knock
 }

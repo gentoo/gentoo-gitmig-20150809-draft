@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knock
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.33 2007/12/27 12:23:07 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.34 2008/07/26 20:26:13 wormo Exp $
+
+  26 Jul 2008; <sjl@gentoo.org> +files/knock-0.5-gcc-4.3.patch,
+  knock-0.5.ebuild:
+  gcc 4.3 compile fix from Christian Ruppert (bug #232966)
 
   27 Dec 2007; Raúl Porcel <armin76@gentoo.org> -knock-0.3.ebuild,
   -knock-0.3.1.ebuild, -knock-0.4.ebuild, knock-0.5.ebuild:
