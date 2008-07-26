@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 Mame is an arcade machine emulator. Started in 1997 by Nicola Salmoria, mame started out as a 
 series of emulators for individual games. This series of emulators was combined into a simgle 
 multi-game emulator. This is the current form of mame; no longer a one-man show, there are over 100 
@@ -28,4 +28,7 @@ way xmame/xmess releases are always the same as their mame counterparts.
 
 There are no plans for the independent development of xmame/xmess.
 </longdescription>
+  <use>
+    <flag name="net">Add network support</flag>
+  </use>
 </pkgmetadata>
