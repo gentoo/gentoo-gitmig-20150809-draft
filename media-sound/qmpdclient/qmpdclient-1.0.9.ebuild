@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.9.ebuild,v 1.4 2008/07/24 17:44:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.9.ebuild,v 1.5 2008/07/26 21:28:46 carlo Exp $
 
 EAPI=1
 inherit eutils multilib qt4 toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
-DEPEND="|| ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 )"
+DEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )"
 
 src_unpack() {
 	unpack ${A}
