@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.5.ebuild,v 1.1 2008/06/30 22:07:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.5.ebuild,v 1.2 2008/07/26 22:35:03 eva Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="avahi bluetooth cdda doc fuse gnome gphoto2 hal gnome-keyring samba"
+IUSE="avahi cdda doc fuse gnome gphoto2 hal gnome-keyring samba"
 
 RDEPEND=">=dev-libs/glib-2.16
 		 >=sys-apps/dbus-1.0
@@ -25,11 +25,6 @@ RDEPEND=">=dev-libs/glib-2.16
 		 fuse? ( sys-fs/fuse )
 		 gnome? ( >=gnome-base/gconf-2.0 )
 		 hal? ( >=sys-apps/hal-0.5.10 )
-		 bluetooth? (
-			dev-libs/dbus-glib
-			>=net-wireless/bluez-libs-3.12
-			dev-libs/expat
-			)
 		 gphoto2? ( >=media-libs/libgphoto2-2.4 )
 		 gnome-keyring? ( >=gnome-base/gnome-keyring-1.0 )
 		 samba? ( >=net-fs/samba-3 )"
@@ -43,8 +38,8 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 pkg_setup() {
 	G2CONF="${G2CONF}
 			--enable-http
+			--disable-obexftp
 			$(use_enable avahi)
-			$(use_enable bluetooth obexftp)
 			$(use_enable cdda)
 			$(use_enable fuse)
 			$(use_enable gnome gconf)
