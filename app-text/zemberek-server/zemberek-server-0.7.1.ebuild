@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.3 2008/07/26 07:49:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.4 2008/07/26 10:37:46 serkan Exp $
 
 EAPI=1
 inherit eutils java-pkg-2 java-ant-2
@@ -29,7 +29,7 @@ DEPEND="${CDEPEND}
 EANT_BUILD_TARGET="dist"
 
 pkg_setup() {
-	! built_with_use zemberek linguas_tr \
+	! built_with_use dev-java/zemberek linguas_tr \
 	&& die "Zemberek should be built with Turkish language support"
 	java-pkg-2_pkg_setup
 }
