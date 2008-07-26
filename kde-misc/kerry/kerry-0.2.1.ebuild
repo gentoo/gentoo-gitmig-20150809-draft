@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.4 2008/07/26 05:16:13 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.5 2008/07/26 05:27:31 ford_prefect Exp $
 
 inherit kde
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 need-kde 3.4
 
-PATCHES="${FILESDIR}/${P}-libbeagle-0.3.patch"
+PATCHES=( "${FILESDIR}/${P}-libbeagle-0.3.patch" )
 
 src_unpack() {
 	kde_src_unpack
