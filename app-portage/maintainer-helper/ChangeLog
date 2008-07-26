@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/maintainer-helper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.7 2008/04/21 19:17:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.8 2008/07/26 21:26:26 carlo Exp $
+
+  26 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  maintainer-helper-0.1.2.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   21 Apr 2008; Markus Ullmann <jokey@gentoo.org>
   -maintainer-helper-0.1.1.ebuild:
