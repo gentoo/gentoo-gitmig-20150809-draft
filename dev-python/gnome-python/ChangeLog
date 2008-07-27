@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.117 2008/07/26 23:52:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.118 2008/07/27 23:11:01 tester Exp $
+
+  26 Jul 2008; Olivier Crête <tester@gentoo.org>
+  gnome-python-2.22.0.ebuild:
+  Stable on amd64, bug #229709
 
   23 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-python-2.18.2.ebuild:
