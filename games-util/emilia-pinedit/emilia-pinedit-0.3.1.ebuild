@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.14 2006/09/27 20:14:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.15 2008/07/27 21:52:20 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 games
 
@@ -23,7 +25,7 @@ DEPEND="virtual/xft
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	x11-libs/libXt
-	$(qt_min_version 3.3)
+	x11-libs/qt:3
 	>=games-arcade/emilia-pinball-0.3.1"
 
 src_unpack() {
