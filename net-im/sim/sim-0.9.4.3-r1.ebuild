@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.9 2008/05/30 07:33:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.10 2008/07/27 22:03:57 carlo Exp $
+
+EAPI=1
 
 inherit kde-functions eutils flag-o-matic
 
@@ -19,7 +21,7 @@ RESTRICT="fetch"
 # kdebase-data provides the icon "licq.png"
 RDEPEND="kde? ( =kde-base/kdelibs-3.5*
 				|| ( =kde-base/kdebase-data-3.5* =kde-base/kdebase-3.5* ) )
-		 !kde? ( $(qt_min_version 3)
+		 !kde? ( x11-libs/qt:3
 				 spell? ( app-text/aspell ) )
 		 ssl? ( dev-libs/openssl )
 		 dev-libs/libxml2

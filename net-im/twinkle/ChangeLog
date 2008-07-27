@@ -1,6 +1,10 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.39 2008/05/01 13:17:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.40 2008/07/27 22:07:12 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> twinkle-1.0.1-r1.ebuild,
+  twinkle-1.2.ebuild, twinkle-1.2-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *twinkle-1.2-r1 (01 May 2008)
 

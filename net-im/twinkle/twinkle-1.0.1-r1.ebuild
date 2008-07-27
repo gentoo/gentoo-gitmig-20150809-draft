@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.10 2008/05/01 13:17:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.11 2008/07/27 22:07:12 carlo Exp $
 
+EAPI=1
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
 
@@ -17,7 +18,7 @@ IUSE="arts speex ilbc zrtp kdehiddenvisibility"
 # Requires libqt-mt actually...  Is that *always* built, or do we need to check?
 RDEPEND=">=net-libs/ccrtp-1.5.0
 	>=dev-cpp/commoncpp2-1.4.2
-	$(qt_min_version 3.3.0)
+	x11-libs/qt:3
 	media-libs/libsndfile
 	dev-libs/boost
 	speex? ( media-libs/speex )
