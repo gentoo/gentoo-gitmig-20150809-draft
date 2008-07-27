@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.1.ebuild,v 1.2 2008/05/22 16:06:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.1.ebuild,v 1.3 2008/07/27 00:57:50 carlo Exp $
 
 EAPI=1
 inherit autotools eutils qt3 multilib elisp-common flag-o-matic
@@ -36,7 +36,7 @@ RDEPEND="X? ( x11-libs/libX11
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
 	qt3? ( $(qt_min_version 3.3.4) )
-	qt4? ( || ( x11-libs/qt-core:4 >=x11-libs/qt-4:4 ) )
+	qt4? ( || ( x11-libs/qt-core:4 =x11-libs/qt-4.3*:4 ) )
 	!app-i18n/uim-svn
 	!<app-i18n/prime-0.9.4"
 

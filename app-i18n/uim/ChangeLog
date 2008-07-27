@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.179 2008/05/22 16:06:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.180 2008/07/27 00:57:50 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> uim-1.5.1.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   22 May 2008; MATSUU Takuto <matsuu@gentoo.org> uim-1.5.1.ebuild:
   Added -j1 to emake install, bug #222677. Added elibtoolize.
