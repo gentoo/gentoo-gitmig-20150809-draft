@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.12.ebuild,v 1.1 2008/06/01 12:11:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.12-r1.ebuild,v 1.1 2008/07/27 19:39:23 loki_val Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -55,6 +55,10 @@ src_unpack() {
 		EPATCH_EXCLUDE="001_all_coreutils-gen-progress-bar.patch" \
 		epatch
 	fi
+
+	#Fix bug 224483
+	#sys-apps/coreutils-6.12 - touch uses unknown system call utimensat
+	epatch "${FILESDIR}"/gnulib-utimens-update.patch
 
 	# Since we've patched many .c files, the make process will try to
 	# re-build the manpages by running `./bin --help`.  When doing a
