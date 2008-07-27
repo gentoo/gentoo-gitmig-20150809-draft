@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackconnect
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.21 2008/04/10 18:44:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.22 2008/07/27 21:16:23 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  qjackconnect-0.0.3b-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   10 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   qjackconnect-0.0.3b-r1.ebuild:
