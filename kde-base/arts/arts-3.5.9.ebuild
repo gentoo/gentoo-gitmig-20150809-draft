@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.9.ebuild,v 1.8 2008/06/11 22:37:11 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.9.ebuild,v 1.9 2008/07/27 20:19:23 carlo Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils versionator
@@ -20,7 +20,7 @@ SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="alsa esd artswrappersuid jack mp3 nas vorbis"
 
-RDEPEND="$(qt_min_version 3.3)
+RDEPEND="x11-libs/qt:3
 	>=dev-libs/glib-2
 	alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libogg

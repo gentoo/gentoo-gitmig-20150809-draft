@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.270 2008/06/11 22:37:11 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.271 2008/07/27 20:19:23 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> arts-3.5.9.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   11 Jun 2008; Timo Gurr <tgurr@gentoo.org>
   +files/arts-1.5.9-glibc2.8-build-fix.patch, arts-3.5.9.ebuild:
