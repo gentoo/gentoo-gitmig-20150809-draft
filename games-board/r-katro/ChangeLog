@@ -1,6 +1,9 @@
 # ChangeLog for games-board/r-katro
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.7 2008/05/02 23:29:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.8 2008/07/27 20:58:23 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> r-katro-0.7.0.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/r-katro-0.7.0-gcc43.patch, r-katro-0.7.0.ebuild:
