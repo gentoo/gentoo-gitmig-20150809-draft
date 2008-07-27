@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.66 2008/06/04 06:20:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.67 2008/07/27 22:36:21 tester Exp $
+
+  26 Jul 2008; Olivier Crête <tester@gentoo.org> tomboy-0.10.2.ebuild:
+  Stable on amd64, bug #229709
 
 *tomboy-0.10.2 (04 Jun 2008)
 
