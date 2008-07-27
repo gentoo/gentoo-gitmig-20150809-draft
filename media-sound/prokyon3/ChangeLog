@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/prokyon3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.31 2008/01/01 21:31:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.32 2008/07/27 21:43:19 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> prokyon3-0.9.6.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   01 Jan 2008; Alexis Ballier <aballier@gentoo.org> prokyon3-0.9.6.ebuild:
   Stick to musicbrainz-2, bug #203784, dont advertise xmms
