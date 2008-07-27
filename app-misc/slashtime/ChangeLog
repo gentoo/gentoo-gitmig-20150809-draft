@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/slashtime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.1 2008/06/29 17:18:15 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.2 2008/07/27 15:35:13 ken69267 Exp $
+
+*slashtime-0.5.5 (27 Jul 2008)
+
+  27 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> +slashtime-0.5.5.ebuild:
+  version bump
 
 *slashtime-0.5.4 (29 Jun 2008)
 
