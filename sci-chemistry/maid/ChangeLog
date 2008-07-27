@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/maid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/ChangeLog,v 1.13 2008/06/27 10:27:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/ChangeLog,v 1.14 2008/07/27 15:02:08 markusle Exp $
+
+  27 Jul 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/maid-gcc4.3.patch, maid-20011112.ebuild:
+  Added gcc-4.3 compatibility patch.
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> maid-20011112.ebuild:
   Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.

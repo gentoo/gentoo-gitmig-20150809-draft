@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.8 2008/06/27 10:27:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.9 2008/07/27 15:02:08 markusle Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,10 +32,11 @@ src_unpack() {
 	fi
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${DISTDIR}/maid-fix-compilation.patch.bz2
-	epatch ${FILESDIR}/fix-warnings.patch
+	epatch "${DISTDIR}"/maid-fix-compilation.patch.bz2
+	epatch "${FILESDIR}"/fix-warnings.patch
+	epatch "${FILESDIR}"/${PN}-gcc4.3.patch
 
 	if use X; then
 		ln -s makefile_graphics makefile
