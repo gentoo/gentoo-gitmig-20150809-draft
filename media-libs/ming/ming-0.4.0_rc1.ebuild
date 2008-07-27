@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_beta5.ebuild,v 1.4 2008/06/29 16:55:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_rc1.ebuild,v 1.1 2008/07/27 21:51:53 loki_val Exp $
 
 EAPI=1
 
@@ -23,29 +23,30 @@ RDEPEND="perl? ( dev-lang/perl )
 	sys-libs/zlib
 	!media-libs/libswf"
 DEPEND="${DEPEND}
-	>=dev-lang/swig-1.3.35
 	sys-devel/flex"
 
 S=${WORKDIR}/${P/_/.}
+
+#Tests only work when the package is installed onto a system
+#which does not presently have any version of ming installed.
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	#We need to do this with Swig >=1.3.35, or the tests will
-	#fail for the python extension using gcc-4.3.
-	#probably some aliasing issue with gcc-4.3*
-
-	pushd py_ext &> /dev/null
-	swig -I.. -python ming.i
-	popd &> /dev/null
-
-	#Let's get rid of the TEXTRELS, link dynamic.
+	#Let's get rid of the TEXTRELS, link dynamic. Use gif.
 	sed -i \
 		-e 's/libming.a/libming.so/' \
+		-e 's/lungif/lgif/' \
 		perl_ext/Makefile.PL
+	sed -i \
+		-e 's/ungif/gif/' \
+		py_ext/setup.py.in
+
 	rm macros/libtool.m4
-	AT_M4DIR="macros" eautoreconf
+	eautoreconf
 }
 
 src_compile() {
@@ -89,9 +90,11 @@ pkg_postinst() {
 	fi
 	if use python
 	then
+		python_version
 		ebegin "Compiling ming.py"
-		python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/ming.py || die "ming.py failed"
+		python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/ming.py
 		eend $?
+
 		ebegin "Compiling mingc.py"
 		python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/mingc.py || die "mingc.py failed"
 		eend $?
