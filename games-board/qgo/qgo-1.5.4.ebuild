@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4.ebuild,v 1.4 2008/03/21 16:49:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4.ebuild,v 1.5 2008/07/27 20:51:02 carlo Exp $
+
+EAPI=1
 
 inherit eutils autotools qt3 games
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3)"
+DEPEND="x11-libs/qt:3"
 
 src_unpack() {
 	unpack ${A}
