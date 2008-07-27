@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/zhu3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.5 2008/05/20 18:59:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.6 2008/07/27 02:14:31 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> zhu3d-4.0.2.ebuild,
+  zhu3d-4.0.4.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *zhu3d-4.0.4 (20 May 2008)
 
