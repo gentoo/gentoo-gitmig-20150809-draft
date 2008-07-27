@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kimera
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.10 2007/04/24 17:07:15 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.11 2008/07/27 19:44:54 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kimera-1.32.ebuild,
+  kimera-1.40.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Fix broken inheritance of
+  kde-functions.eclass and qt3.eclass.
 
 *kimera-1.40 (24 Apr 2007)
 

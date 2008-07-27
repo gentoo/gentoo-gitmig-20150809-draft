@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.32.ebuild,v 1.3 2006/10/28 09:11:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.32.ebuild,v 1.4 2008/07/27 19:44:54 carlo Exp $
 
-inherit kde-functions qt3
+EAPI=1
+
+inherit qt3
 
 IUSE="anthy"
 
@@ -14,10 +16,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 x86"
 
-DEPEND="$(qt_min_version 3)
+DEPEND="x11-libs/qt:3
 	anthy? ( app-i18n/anthy )
 	!anthy? ( app-i18n/canna )"
-need-qt 3
 
 src_compile(){
 	local myconf
