@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.7.ebuild,v 1.1 2007/10/11 10:42:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.7.ebuild,v 1.2 2008/07/27 22:02:58 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3)
+DEPEND="x11-libs/qt:3
 	dev-libs/libusb"
 RDEPEND="${DEPEND}
 	net-dialup/ppp

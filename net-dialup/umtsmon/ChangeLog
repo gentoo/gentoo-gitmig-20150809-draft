@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/umtsmon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.7 2008/05/12 11:06:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.8 2008/07/27 22:02:58 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> umtsmon-0.7.ebuild,
+  umtsmon-0.8.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *umtsmon-0.8 (12 May 2008)
 
