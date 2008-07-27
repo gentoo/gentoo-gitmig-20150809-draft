@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.2.ebuild,v 1.6 2004/07/15 00:54:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.2.ebuild,v 1.7 2008/07/27 10:11:05 loki_val Exp $
+
+inherit base autotools
 
 DESCRIPTION="ICQ 200x compatible ICQ libraries."
 SRC_URI="mirror://sourceforge/libicq2000/${P}.tar.gz"
@@ -13,13 +15,10 @@ IUSE=""
 
 DEPEND="=dev-libs/libsigc++-1.0*"
 
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
+
 src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--localstatedir=/var/lib \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf --enable-debug || die "econf failed"
 	emake || die "emake failed"
 
 }
