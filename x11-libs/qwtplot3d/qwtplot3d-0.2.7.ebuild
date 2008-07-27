@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.3 2008/05/20 18:54:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.4 2008/07/27 00:41:56 carlo Exp $
 
 EAPI=1
 inherit multilib qt4
@@ -14,8 +14,8 @@ SLOT="0"
 IUSE="doc examples"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="|| ( >=x11-libs/qt-4:4
-			  ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) )"
+RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) 
+		<x11-libs/qt-4.4:4 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
