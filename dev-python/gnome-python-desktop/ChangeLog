@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.55 2008/07/26 23:41:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.56 2008/07/27 22:27:46 tester Exp $
+
+  26 Jul 2008; Olivier Crête <tester@gentoo.org>
+  gnome-python-desktop-2.22.0.ebuild:
+  Stable on amd64, bug #229709
 
   26 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
   fixing ChangeLog
