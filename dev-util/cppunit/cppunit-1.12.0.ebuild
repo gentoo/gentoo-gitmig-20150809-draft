@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.15 2008/07/14 04:44:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.16 2008/07/27 20:18:05 carlo Exp $
+
+EAPI=1
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -16,7 +18,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples qt3"
 
-RDEPEND="qt3? ( $(qt_min_version 3.3) )"
+RDEPEND="qt3? ( x11-libs/qt:3 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 	media-gfx/graphviz )"
