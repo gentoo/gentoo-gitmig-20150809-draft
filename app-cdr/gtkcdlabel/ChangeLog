@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.35 2008/07/25 19:47:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.36 2008/07/27 16:13:12 bluebird Exp $
+
+  27 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gtkcdlabel-1.12.ebuild:
+  Stable on sparc, bug #227237
 
   25 Jul 2008; Steve Dibb <beandog@gentoo.org> gtkcdlabel-1.12.ebuild:
   amd64 stable, bug 227237
