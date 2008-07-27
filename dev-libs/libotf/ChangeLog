@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.36 2008/06/15 06:34:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.37 2008/07/27 15:43:05 loki_val Exp $
+
+*libotf-0.9.8 (27 Jul 2008)
+
+  27 Jul 2008; Peter Alfredsen <loki_val@gentoo.org> -libotf-0.9.4.ebuild,
+  -libotf-0.9.5.ebuild, +libotf-0.9.8.ebuild:
+  Bump
 
   15 Jun 2008; Zac Medico <zmedico@gentoo.org> libotf-0.9.4.ebuild,
   libotf-0.9.5.ebuild, libotf-0.9.6.ebuild, libotf-0.9.7.ebuild:
