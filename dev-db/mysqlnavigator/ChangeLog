@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.25 2007/03/19 03:41:12 kloeri Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.26 2008/07/27 19:56:11 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  mysqlnavigator-1.4.2.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove vivo from metadata.xml due to retirement.

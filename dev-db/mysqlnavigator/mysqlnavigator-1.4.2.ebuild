@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.17 2007/01/04 14:35:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.18 2008/07/27 19:56:11 carlo Exp $
+
+EAPI=1
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc sparc x86"
 
 DEPEND="virtual/mysql
-		$(qt_min_version 3.1)"
+		x11-libs/qt:3"
 		#!>=virtual/mysql-4.0
 
 src_unpack() {
