@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.2.1.ebuild,v 1.3 2008/05/13 18:30:08 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.2.1.ebuild,v 1.4 2008/07/27 22:12:11 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -13,12 +15,12 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86 ~amd64"
 IUSE="samba"
 
-RDEPEND="$(qt_min_version 3.2)
+RDEPEND="x11-libs/qt:3
 	>=dev-lang/python-2.3
 	>=dev-python/PyQt-3.10
 	>=dev-python/python-ldap-2.0.1
 	samba? ( >=dev-python/py-smbpasswd-1.0 )"
-DEPEND="$(qt_min_version 3.2)
+DEPEND="x11-libs/qt:3
 	>=dev-lang/python-2.3
 	>=dev-python/PyQt-3.10
 	>=dev-python/python-ldap-2.0.1
