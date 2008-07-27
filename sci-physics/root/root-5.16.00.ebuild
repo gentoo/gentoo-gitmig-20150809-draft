@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.13 2008/07/18 09:19:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.14 2008/07/27 22:20:12 carlo Exp $
 
+EAPI=1
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
@@ -31,7 +32,7 @@ DEPEND="sys-apps/shadow
 	afs? ( net-fs/openafs )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	qt3? ( $(qt_min_version 3.3.4) )
+	qt3? ( x11-libs/qt:3 )
 	fftw? ( >=sci-libs/fftw-3 )
 	python? ( dev-lang/python )
 	ruby? ( dev-lang/ruby )

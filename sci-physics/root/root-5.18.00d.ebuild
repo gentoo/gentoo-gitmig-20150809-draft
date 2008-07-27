@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00d.ebuild,v 1.5 2008/07/27 14:23:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00d.ebuild,v 1.6 2008/07/27 22:20:12 carlo Exp $
 
 EAPI="1"
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
@@ -35,7 +35,7 @@ RDEPEND="sys-apps/shadow
 	postgres? ( virtual/postgresql-server )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	qt3? ( !qt4? ( $(qt_min_version 3.3.4) ) )
+	qt3? ( !qt4? ( x11-libs/qt:3 ) )
 	qt4? ( || ( ( x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-qt3support:4
