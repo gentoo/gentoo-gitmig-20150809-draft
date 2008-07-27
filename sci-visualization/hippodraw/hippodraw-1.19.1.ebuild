@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.19.1.ebuild,v 1.4 2008/06/02 16:08:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.19.1.ebuild,v 1.5 2008/07/27 22:25:40 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -24,7 +26,7 @@ IUSE="root fits numarray doc"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/boost-1.32
-	$(qt_min_version 3.1)
+	x11-libs/qt:3
 	numarray? ( dev-python/numarray )
 	fits? ( sci-libs/cfitsio
 		numarray? ( dev-python/pyfits ) )

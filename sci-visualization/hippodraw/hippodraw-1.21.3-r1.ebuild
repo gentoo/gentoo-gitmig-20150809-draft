@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.3 2008/07/27 14:23:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.4 2008/07/27 22:25:40 carlo Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ CDEPEND="dev-libs/boost
 	numpy? ( dev-python/numpy )
 	qt4? (  || ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 )
 			=x11-libs/qt-4.3*:4 ) )
-	!qt4? ( $(qt_min_version 3.1) )
+	!qt4? ( x11-libs/qt:3 )
 	root? ( >=sci-physics/root-5 )
 	!root? ( sci-libs/minuit )
 	wcs? ( sci-astronomy/wcslib )"
