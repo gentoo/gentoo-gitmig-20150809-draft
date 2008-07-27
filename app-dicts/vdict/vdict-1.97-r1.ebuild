@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.97-r1.ebuild,v 1.1 2008/06/14 05:06:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.97-r1.ebuild,v 1.2 2008/07/27 19:15:32 carlo Exp $
 
-inherit eutils qt3
+EAPI=1
+
+inherit eutils
 
 DESCRIPTION="Vdict - Vietnamese Dictionary"
 SRC_URI="http://xvnkb.sourceforge.net/vdict/${P}.tar.bz2"
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3)
+DEPEND="x11-libs/qt:3
 	sys-libs/gdbm
 	media-libs/freetype"
 

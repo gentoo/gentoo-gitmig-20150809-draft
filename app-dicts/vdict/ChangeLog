@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/vdict
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.5 2008/06/14 05:06:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.6 2008/07/27 19:15:32 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> vdict-1.94.ebuild,
+  vdict-1.97-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *vdict-1.97-r1 (14 Jun 2008)
 
