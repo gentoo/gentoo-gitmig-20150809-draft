@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.2 2008/02/15 08:59:07 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.3 2008/07/27 19:14:20 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3.0)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${RDEPEND}"
 
 src_unpack() {
