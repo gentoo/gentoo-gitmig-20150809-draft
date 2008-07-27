@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r7.ebuild,v 1.2 2008/06/09 12:50:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r7.ebuild,v 1.3 2008/07/27 20:17:27 carlo Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic qt3 toolchain-funcs versionator games
 
@@ -22,7 +24,7 @@ DEPEND="virtual/opengl
 		media-libs/smpeg )
 	!sdl? ( virtual/glut )
 	vorbis? ( media-libs/libvorbis )
-	qt3? ( $(qt_min_version 3.3) )
+	qt3? ( x11-libs/qt:3 )
 	media-libs/libpng
 	media-libs/openal
 	media-libs/freealut"
