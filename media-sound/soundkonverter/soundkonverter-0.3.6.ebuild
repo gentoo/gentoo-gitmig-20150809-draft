@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.3 2008/04/24 17:34:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.4 2008/07/27 21:51:36 carlo Exp $
 
-inherit kde eutils qt3
+inherit kde eutils
 
 DESCRIPTION="SoundKonverter: a frontend to various audio converters for KDE"
 HOMEPAGE="http://kde-apps.org/content/show.php?content=29024"
@@ -14,15 +14,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ffmpeg flac kdeenablefinal mp3 musepack vorbis"
 
 DEPEND=">=media-libs/taglib-1.4
-	>=media-sound/cdparanoia-3.9.8-r5
-	$(qt_min_version 3)"
+	>=media-sound/cdparanoia-3.9.8-r5"
 RDEPEND="mp3? ( >=media-sound/lame-3.96 )
 	vorbis? ( >=media-sound/vorbis-tools-1 )
 	flac? ( >=media-libs/flac-1.1.1 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.8 )
 	musepack? ( >=media-sound/musepack-tools-1.15u )"
-
-need-qt 3
 need-kde 3.5
 
 src_unpack() {
