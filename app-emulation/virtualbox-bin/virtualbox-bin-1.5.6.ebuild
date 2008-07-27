@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.3 2008/05/14 08:14:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.4 2008/07/27 19:38:56 carlo Exp $
+
+EAPI=1
 
 inherit eutils fdo-mime qt3 pax-utils
 
@@ -41,7 +43,7 @@ RDEPEND="!app-emulation/virtualbox
 	media-libs/libpng
 	media-libs/freetype
 	media-libs/fontconfig
-	$(qt_min_version 3.3.5)
+	x11-libs/qt:3
 	sys-apps/usermode-utilities
 	net-misc/bridge-utils
 	x86? ( =virtual/libstdc++-3.3 )

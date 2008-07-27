@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.26 2008/06/13 22:44:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.27 2008/07/27 19:38:56 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  virtualbox-bin-1.5.2-r1.ebuild, virtualbox-bin-1.5.4.ebuild,
+  virtualbox-bin-1.5.6.ebuild, virtualbox-bin-1.6.2.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *virtualbox-bin-1.6.2 (13 Jun 2008)
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.2-r1.ebuild,v 1.2 2007/12/05 22:52:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.2-r1.ebuild,v 1.3 2008/07/27 19:36:14 carlo Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic qt3 toolchain-funcs fdo-mime
 
@@ -22,7 +24,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/xerces-c
 	media-libs/libsdl
 	x11-libs/libXcursor
-	$(qt_min_version 3.3.5)"
+	x11-libs/qt:3"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
