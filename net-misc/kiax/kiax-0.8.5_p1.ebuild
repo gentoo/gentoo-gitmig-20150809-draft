@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.5_p1.ebuild,v 1.2 2006/06/22 05:42:38 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.5_p1.ebuild,v 1.3 2008/07/27 22:16:26 carlo Exp $
+
+EAPI=1
 
 inherit eutils kde-functions
 
@@ -16,7 +18,7 @@ KEYWORDS="~amd64 x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="$(qt_min_version 3.2)"
+DEPEND="x11-libs/qt:3"
 
 S="${WORKDIR}/${MY_P}-src"
 
