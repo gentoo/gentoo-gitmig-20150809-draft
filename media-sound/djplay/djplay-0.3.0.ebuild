@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.5 2007/01/05 20:55:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.6 2008/07/27 21:21:45 carlo Exp $
+
+EAPI=1
 
 IUSE=""
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="media-libs/alsa-lib
-	$(qt_min_version 3.2)
+	x11-libs/qt:3
 	=dev-libs/glib-1.2*
 	media-libs/libsamplerate
 	media-libs/libmpeg3
@@ -31,7 +33,7 @@ DEPEND="media-libs/alsa-lib
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s/INCLUDES = -I\$(QTDIR)\/include/INCLUDES = -I\$(QTDIR)\/include -Iplugins\/bitmapbutton -Iplugins\/bitmapslider/" Makefile.am Makefile.in
 	rm moc_*.cpp
 	epatch "${FILESDIR}/${P}-gcc4.patch"

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmidiarp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/ChangeLog,v 1.8 2007/02/03 20:11:45 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/ChangeLog,v 1.9 2008/07/27 21:28:24 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qmidiarp-0.0.2.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Qouting issues.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

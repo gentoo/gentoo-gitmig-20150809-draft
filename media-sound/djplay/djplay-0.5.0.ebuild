@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.1 2007/01/30 20:42:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.2 2008/07/27 21:21:45 carlo Exp $
+
+EAPI=1
 
 inherit autotools eutils qt3
 
@@ -15,7 +17,7 @@ IUSE="audiofile cdparanoia mad mpeg" #sdl
 #Upstream declared that the sdl use flag won't be supported until version 0.7.0
 
 DEPEND="media-libs/alsa-lib
-	$(qt_min_version 3.2.1)
+	x11-libs/qt:3
 	=dev-libs/glib-1.2*
 	media-libs/libsamplerate
 	media-libs/id3lib
@@ -36,7 +38,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-configure.ac.patch"
 	epatch "${FILESDIR}/${P}-libmpeg3.patch"
 
