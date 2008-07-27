@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.36 2008/07/19 22:09:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.37 2008/07/27 00:40:23 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  qtcurve-qt4-0.59.3-r1.ebuild, qtcurve-qt4-0.59.4.ebuild,
+  qtcurve-qt4-0.59.5.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *qtcurve-qt4-0.59.5 (19 Jul 2008)
 
