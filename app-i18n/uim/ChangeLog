@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.180 2008/07/27 00:57:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.181 2008/07/27 19:40:16 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> uim-1.4.1.ebuild,
+  uim-1.4.2.ebuild, uim-1.5.1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> uim-1.5.1.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
