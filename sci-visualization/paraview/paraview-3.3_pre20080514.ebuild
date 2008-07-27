@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.2 2008/05/26 16:22:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.3 2008/07/27 01:20:57 carlo Exp $
 
 EAPI="1"
 
@@ -23,7 +23,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	python? ( >=dev-lang/python-2.0 )
 	qt4? ( || ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4
 				x11-libs/qt-assistant:4 )
-		>=x11-libs/qt-4.3:4 ) )
+		=x11-libs/qt-4.3*:4 ) )
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/jpeg
