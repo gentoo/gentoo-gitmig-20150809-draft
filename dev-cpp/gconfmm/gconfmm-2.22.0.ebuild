@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.22.0.ebuild,v 1.2 2008/07/10 15:09:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.22.0.ebuild,v 1.3 2008/07/27 19:02:41 tester Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND=">=gnome-base/gconf-2.4
