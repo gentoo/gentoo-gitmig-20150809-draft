@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qtella
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.30 2007/01/26 14:35:26 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.31 2008/07/27 22:12:53 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtella-0.7.0-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().Fix KDE dependency.
 
   26 Jan 2007; Raúl Porcel <armin76@gentoo.org> qtella-0.7.0-r1.ebuild:
   fix bug 152241

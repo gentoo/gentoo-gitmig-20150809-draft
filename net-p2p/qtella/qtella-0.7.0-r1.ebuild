@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.8 2007/01/26 14:35:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.9 2008/07/27 22:12:53 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 multilib
 
@@ -14,8 +16,8 @@ IUSE="kde"
 KEYWORDS="ppc ~sparc x86"
 SLOT="0"
 
-DEPEND="$(qt_min_version 3)
-	kde? ( >=kde-base/kdelibs-3 )"
+DEPEND="x11-libs/qt:3
+	kde? ( kde-base/kdelibs:3.5 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
