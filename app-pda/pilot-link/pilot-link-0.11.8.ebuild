@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.17 2007/10/07 17:15:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.18 2008/07/27 13:57:36 loki_val Exp $
 
 inherit perl-module eutils
 
@@ -23,7 +23,9 @@ DEPEND="sys-libs/ncurses
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-java_install_all.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
