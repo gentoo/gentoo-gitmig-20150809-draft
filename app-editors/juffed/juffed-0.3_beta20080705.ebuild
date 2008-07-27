@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3_beta20080705.ebuild,v 1.2 2008/07/08 15:51:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3_beta20080705.ebuild,v 1.3 2008/07/27 02:09:27 carlo Exp $
 
 EAPI=1
 inherit qt4
@@ -17,8 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qscintilla-2.1
-	|| ( >=x11-libs/qt-4.2:4
-		x11-libs/qt-gui:4 )"
+	|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3*:4 )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
