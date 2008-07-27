@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kaconnect
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.10 2006/10/28 01:55:17 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.11 2008/07/27 21:53:07 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kaconnect-1.1.1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kaconnect-1.1.1-gcc41.patch, kaconnect-1.1.1.ebuild:

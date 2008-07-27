@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.11 2006/10/28 01:55:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.12 2008/07/27 21:53:07 carlo Exp $
+
+EAPI=1
 
 inherit qt3 toolchain-funcs eutils
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
 RDEPEND="media-sound/alsa-utils
-	$(qt_min_version 3.1)"
+	x11-libs/qt:3"
 
 DEPEND="${RDEPEND}
 	sys-apps/sed"
