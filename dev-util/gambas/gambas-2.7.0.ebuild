@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.7.0.ebuild,v 1.1 2008/06/26 23:32:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.7.0.ebuild,v 1.2 2008/07/27 21:33:25 carlo Exp $
+
+EAPI=1
 
 inherit autotools eutils qt3
 
@@ -23,14 +25,14 @@ RDEPEND="bzip2?	( >=app-arch/bzip2-1.0.5 )
 	curl?	( >=net-misc/curl-7.15.5-r1 )
 	firebird?	( >=dev-db/firebird-2.1.0.17755_rc2-r1 )
 	gtk?	( >=x11-libs/gtk+-2.10.14 )
-	kde?	( >=kde-base/kdelibs-3.5.9-r1 )
+	kde?	( >=kde-base/kdelibs-3.5.9-r1:3.5 )
 	mysql?	( >=virtual/mysql-5.0 )
 	odbc?	( >=dev-db/unixODBC-2.2.12 )
 	opengl?	( >=media-libs/mesa-7.0.2 )
 	pcre?	( >=dev-libs/libpcre-7.6-r1 )
 	pdf?	( >=app-text/poppler-0.5.3 )
 	postgres?	( >=virtual/postgresql-base-8.2 )
-	qt3?	( $(qt_min_version 3.2) )
+	qt3?	( x11-libs/qt:3 )
 	sdl?	( >=media-libs/sdl-image-1.2.6-r1 >=media-libs/sdl-mixer-1.2.7 )
 	smtp?	( >=dev-libs/glib-2.16.2 )
 	sqlite?	( =dev-db/sqlite-2* )

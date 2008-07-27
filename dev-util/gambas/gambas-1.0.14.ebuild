@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.14.ebuild,v 1.6 2008/06/18 02:24:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.14.ebuild,v 1.7 2008/07/27 21:33:25 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 autotools
 
@@ -13,8 +15,8 @@ SLOT="1"
 KEYWORDS="x86 -amd64"
 IUSE="postgres mysql sdl doc curl sqlite xml xsl zlib kde bzip2"
 
-RDEPEND="$(qt_min_version 3.2)
-	kde? ( >=kde-base/kdelibs-3.2 )
+RDEPEND="x11-libs/qt:3
+	kde? ( kde-base/kdelibs:3.5 )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer sys-libs/gpm )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )

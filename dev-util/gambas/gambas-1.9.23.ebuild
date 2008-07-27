@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.6 2008/05/21 16:01:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.7 2008/07/27 21:33:25 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -18,8 +20,8 @@ IUSE="postgres mysql sdl doc curl sqlite xml zlib kde bzip2 odbc ldap pdf opengl
 S=${WORKDIR}/${MY_P}
 
 # TODO: add flags for opengl, v4l and corba components
-RDEPEND="$(qt_min_version 3.2)
-	kde? ( >=kde-base/kdelibs-3.2 )
+RDEPEND="x11-libs/qt:3
+	kde? ( kde-base/kdelibs:3.5 )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
