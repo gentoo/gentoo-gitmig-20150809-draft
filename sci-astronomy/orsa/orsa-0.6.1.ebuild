@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.10 2008/06/11 22:51:12 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.11 2008/07/27 22:18:43 carlo Exp $
+
+EAPI=1
 
 inherit base flag-o-matic qt3
 
@@ -17,7 +19,7 @@ S="${WORKDIR}/${P/_/-}"
 
 DEPEND="fftw? ( =sci-libs/fftw-2.1* )
 	>=sci-libs/gsl-1.3
-	qt3? ( $(qt_min_version 3.3) )
+	qt3? ( x11-libs/qt:3 )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
 	ginac? ( >=sci-mathematics/ginac-1.2.0 )
