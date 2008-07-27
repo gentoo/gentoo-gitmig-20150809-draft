@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.53 2008/06/16 17:29:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.54 2008/07/27 21:30:21 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> museseq-0.8.1-r1.ebuild,
+  museseq-0.9.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   16 Jun 2008; Samuli Suominen <drac@gentoo.org> museseq-0.9.ebuild:
   Stop using Xeconf since it's causing sandbox violations wrt #222941 by

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.3 2008/06/16 17:29:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.4 2008/07/27 21:30:21 carlo Exp $
+
+EAPI=1
 
 inherit kde-functions eutils
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc lash debug"
 
-RDEPEND="$(qt_min_version 3.2)
+RDEPEND="x11-libs/qt:3
 	>=media-libs/alsa-lib-0.9.0
 	>=media-sound/fluidsynth-1.0.3
 	dev-lang/perl

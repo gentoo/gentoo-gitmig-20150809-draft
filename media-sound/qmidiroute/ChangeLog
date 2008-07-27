@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmidiroute
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.2 2007/01/05 17:47:03 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.3 2008/07/27 21:34:59 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qmidiroute-0.2.1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   qmidiroute-0.2.1.ebuild:
