@@ -1,6 +1,10 @@
 # ChangeLog for games-util/showeq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.23 2008/02/12 19:54:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.24 2008/07/27 21:39:23 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> showeq-5.0.0.18.ebuild,
+  showeq-5.12.0.0.ebuild, showeq-5.12.1.0.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *showeq-5.12.1.0 (12 Feb 2008)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.18.ebuild,v 1.9 2008/01/17 23:28:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.18.ebuild,v 1.10 2008/07/27 21:39:23 carlo Exp $
+
+EAPI=1
 
 inherit kde games
 
@@ -16,7 +18,7 @@ IUSE=""
 DEPEND="x11-libs/libXt
 	media-libs/libpng
 	virtual/libpcap
-	$(qt_min_version 3.1)
+	x11-libs/qt:3
 	>=sys-libs/gdbm-1.8.0"
 
 src_unpack() {
