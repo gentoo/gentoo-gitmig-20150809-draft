@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/qimhangul
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.7 2007/02/21 22:10:36 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.8 2008/07/27 19:48:20 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qimhangul-0.0.2.ebuild,
+  qimhangul-0.0.3.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Quoting issues.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
