@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.199 2008/07/23 16:24:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.200 2008/07/27 10:47:00 ikelos Exp $
+
+*dhcpcd-4.0.0_rc3 (27 Jul 2008)
+
+  27 Jul 2008; Mike Auty <ikelos@gentoo.org> +dhcpcd-4.0.0_rc3.ebuild:
+  Version bump, fixes loop with infinite leases.
 
 *dhcpcd-4.0.0_rc2 (23 Jul 2008)
 
