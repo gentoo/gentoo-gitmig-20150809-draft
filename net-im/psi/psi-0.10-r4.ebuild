@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.2 2008/02/25 17:10:35 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.3 2008/07/27 22:00:56 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -54,7 +56,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="=app-crypt/qca-1*
-	$(qt_min_version 3.3)
+	x11-libs/qt:3
 	xscreensaver? ( x11-misc/xscreensaver )
 	extras? ( audacious? ( media-sound/audacious ) )"
 

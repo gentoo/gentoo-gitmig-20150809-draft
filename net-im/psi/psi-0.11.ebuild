@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.8 2008/07/18 14:11:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.9 2008/07/27 22:00:56 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt4 multilib
 
@@ -14,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 RESTRICT="test"
 
-COMMON_DEPEND="$(qt4_min_version 4.2.3)
+COMMON_DEPEND="x11-libs/qt:4
 	=app-crypt/qca-2*
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
