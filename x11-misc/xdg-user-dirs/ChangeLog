@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.1 2008/07/27 21:50:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.2 2008/07/27 22:01:40 eva Exp $
+
+  27 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  xdg-user-dirs-0.10.ebuild:
+  fixing DEPEND (missing gettext)
 
 *xdg-user-dirs-0.10 (27 Jul 2008)
 
