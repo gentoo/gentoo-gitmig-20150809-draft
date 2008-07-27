@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8840 2008/07/26 20:21:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8841 2008/07/27 20:57:58 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -330,10 +330,7 @@ virtual/libffi
 www-client/arora
 
 # Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
-# >=xmlrpc-c-1.14.0 is experimental but has the advantage of being current.
-# o Adds 64 bit integers (whoo!)
 # o Fails its own tests in horrendous ways (buuh!)
-=dev-libs/xmlrpc-c-1.14*
 =dev-libs/xmlrpc-c-1.15*
 
 # Raúl Porcel <armin76@gentoo.org> (03 Jun 2008)
