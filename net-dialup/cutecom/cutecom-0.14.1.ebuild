@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.14.1.ebuild,v 1.4 2007/10/01 11:52:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.14.1.ebuild,v 1.5 2008/07/27 21:58:55 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.2)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}
 	net-dialup/lrzsz"
 

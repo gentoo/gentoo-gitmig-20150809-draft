@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/cutecom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.16 2008/06/01 01:20:58 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.17 2008/07/27 21:58:55 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> cutecom-0.14.1.ebuild,
+  cutecom-0.20.0.ebuild:
+  QA: Get rid of deprecated qt?_min_version().
 
 *cutecom-0.20.0 (01 Jun 2008)
 
