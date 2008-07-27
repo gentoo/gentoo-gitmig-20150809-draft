@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.63 2008/07/11 18:27:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.64 2008/07/27 22:11:24 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> valknut-0.3.12.ebuild,
+  valknut-0.3.13.ebuild, valknut-0.3.14a.ebuild, valknut-0.3.18.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *valknut-0.3.18 (11 Jul 2008)
 

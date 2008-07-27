@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.14a.ebuild,v 1.1 2008/06/06 10:09:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.14a.ebuild,v 1.2 2008/07/27 22:11:24 carlo Exp $
+
+EAPI=1
 
 inherit qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="ssl"
 
-RDEPEND="$(qt_min_version 3)
+RDEPEND="x11-libs/qt:3
 	>=dev-libs/libxml2-2.4.22
 	~net-p2p/dclib-${PV}
 	ssl? ( dev-libs/openssl )"
