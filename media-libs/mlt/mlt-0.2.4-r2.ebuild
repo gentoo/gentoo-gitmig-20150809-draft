@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.5 2008/07/17 07:58:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.6 2008/07/27 20:57:40 carlo Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs qt3
 
@@ -32,7 +34,7 @@ DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r3 )
 	quicktime? ( media-libs/libquicktime )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
 	lame? ( >=media-sound/lame-3.97_beta2 )
-	qt3? ( $(qt_min_version 3) )
+	qt3? ( x11-libs/qt:3 )
 	theora? ( >=media-libs/libtheora-1.0_alpha5 )"
 RDEPEND=${DEPEND}
 
