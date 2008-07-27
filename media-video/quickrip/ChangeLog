@@ -1,6 +1,9 @@
 # ChangeLog for media-video/quickrip
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.20 2007/11/27 12:35:10 zzam Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.21 2008/07/27 22:04:45 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> quickrip-0.8-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> quickrip-0.8-r1.ebuild:
   Fixed quoting.

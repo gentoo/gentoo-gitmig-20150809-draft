@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.5 2007/11/27 12:35:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.6 2008/07/27 22:04:45 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -14,7 +16,7 @@ KEYWORDS="~amd64 -mips -ppc x86"
 IUSE=""
 DEPEND="virtual/libc
 	>=dev-lang/python-2.2
-	$(qt_min_version 3.1)
+	x11-libs/qt:3
 	>=dev-python/PyQt-3.5-r1
 	media-video/mplayer
 	media-video/transcode"
