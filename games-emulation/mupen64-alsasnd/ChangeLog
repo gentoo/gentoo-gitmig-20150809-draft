@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.12 2007/02/15 09:58:08 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.13 2008/07/27 21:20:19 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  mupen64-alsasnd-0.4-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *mupen64-alsasnd-0.4-r1 (15 Feb 2007)
 

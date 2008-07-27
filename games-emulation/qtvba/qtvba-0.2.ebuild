@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.6 2007/02/03 07:27:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.7 2008/07/27 21:15:46 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 games
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}
 	games-emulation/visualboyadvance"
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4-r1.ebuild,v 1.2 2007/04/06 04:39:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4-r1.ebuild,v 1.3 2008/07/27 21:20:19 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 games
 
@@ -15,7 +17,7 @@ IUSE="gtk qt3"
 
 DEPEND="media-libs/alsa-lib
 	gtk? ( =x11-libs/gtk+-2* )
-	qt3? ( $(qt_min_version 3.3) )
+	qt3? ( x11-libs/qt:3 )
 	!gtk? ( !qt3? ( =x11-libs/gtk+-2* ) )"
 
 S=${WORKDIR}/alsa_plugin
