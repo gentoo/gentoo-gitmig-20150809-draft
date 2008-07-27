@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.19 2007/11/06 12:30:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.20 2008/07/27 19:21:20 carlo Exp $
+
+EAPI=1
 
 inherit qt3
 
@@ -14,7 +16,7 @@ IUSE=""
 KEYWORDS="x86 ppc"
 
 DEPEND="www-misc/htdig
-	$(qt_min_version 3)"
+	x11-libs/qt:3"
 
 src_unpack() {
 	unpack ${A}
