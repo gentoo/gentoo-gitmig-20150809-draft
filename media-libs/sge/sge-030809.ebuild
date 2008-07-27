@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.11 2008/07/25 19:08:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.12 2008/07/27 08:17:00 nixnut Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.etek.chalmers.se/~e8cal1/sge/files/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
 IUSE="doc examples image truetype"
 
 DEPEND="media-libs/libsdl

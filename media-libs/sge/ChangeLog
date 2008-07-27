@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.8 2008/07/25 19:08:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.9 2008/07/27 08:17:00 nixnut Exp $
+
+  27 Jul 2008; nixnut <nixnut@gentoo.org> sge-030809.ebuild:
+  Stable on ppc wrt bug 232702
 
   25 Jul 2008; Steve Dibb <beandog@gentoo.org> sge-030809.ebuild:
   amd64 stable, bug 232702
