@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.364 2008/07/19 09:01:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.365 2008/07/27 01:13:42 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> vlc-0.9.0_beta2.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   19 Jul 2008; Alexis Ballier <aballier@gentoo.org> -vlc-0.8.6g.ebuild:
   remove old
