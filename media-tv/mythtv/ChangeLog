@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.247 2008/07/07 17:31:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.248 2008/07/27 21:44:36 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  mythtv-0.20.2_p15634.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *mythtv-0.22_alpha17733 (07 Jul 2008)
 *mythtv-0.21_p17722 (07 Jul 2008)

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.4 2008/04/03 23:10:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.5 2008/07/27 21:44:36 carlo Exp $
+
+EAPI=1
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -26,7 +28,7 @@ RDEPEND=">=media-libs/freetype-2.0
 		video_cards_via? ( x11-drivers/xf86-video-via )
 		video_cards_i810? ( x11-drivers/xf86-video-i810 )
 	)
-	$(qt_min_version 3.3)
+	x11-libs/qt:3
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
