@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/qsoapman-0.3.ebuild,v 1.8 2007/01/19 15:16:50 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/qsoapman-0.3.ebuild,v 1.9 2008/07/27 21:38:38 carlo Exp $
+
+EAPI=1
 
 inherit qt3
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
-DEPEND="$(qt_min_version 3.1)"
+DEPEND="x11-libs/qt:3"
 
 RDEPEND="${DEPEND}"
 

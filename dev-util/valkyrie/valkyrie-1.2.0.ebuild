@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.2.0.ebuild,v 1.5 2007/12/15 13:35:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.2.0.ebuild,v 1.6 2008/07/27 21:42:32 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}
 	=dev-util/valgrind-3.2*"
 

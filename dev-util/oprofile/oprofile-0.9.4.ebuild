@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.1 2008/07/23 19:44:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.2 2008/07/27 21:40:26 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 linux-info
 
@@ -16,7 +18,7 @@ IUSE="qt3"
 DEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
 	>=sys-libs/glibc-2.3.2-r1
-	qt3? ( $(qt_min_version 3.3) )"
+	qt3? ( x11-libs/qt:3 )"
 
 src_compile() {
 	local myconf=""
