@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.9 2008/02/19 18:43:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.10 2008/07/27 21:25:38 carlo Exp $
+
+EAPI=1
 
 inherit qt3 games
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="xinerama"
 
-DEPEND="$(qt_min_version 3.3)
+DEPEND="x11-libs/qt:3
 	media-libs/libpng
 	media-libs/jpeg
 	xinerama? ( x11-libs/libXinerama )"
