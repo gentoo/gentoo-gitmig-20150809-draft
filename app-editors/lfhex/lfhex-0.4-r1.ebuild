@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4-r1.ebuild,v 1.2 2008/05/02 07:49:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4-r1.ebuild,v 1.3 2008/07/27 00:52:39 carlo Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="|| ( x11-libs/qt-gui:4
-		>=x11-libs/qt-4.2:4 )
+		<x11-libs/qt-4.4:4 )
 		>=x11-libs/libXt-1.0.0"
 
 DEPEND="sys-devel/flex
