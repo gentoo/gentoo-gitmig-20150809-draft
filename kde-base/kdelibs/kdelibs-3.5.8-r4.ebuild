@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.8-r4.ebuild,v 1.3 2008/06/08 15:03:04 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.8-r4.ebuild,v 1.4 2008/07/27 20:49:02 carlo Exp $
+
+EAPI=1
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -19,7 +21,7 @@ IUSE="acl alsa arts bindist branding cups doc jpeg2k kerberos legacyssl utempter
 
 # Added aspell-en as dependency to work around bug 131512.
 # Made openssl and zeroconf mandatory dependencies, see bug #172972 and #175984
-RDEPEND="$(qt_min_version 3.3.3)
+RDEPEND="x11-libs/qt:3
 	arts? ( >=kde-base/arts-3.5.5 )
 	app-arch/bzip2
 	>=media-libs/freetype-2
