@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r31.ebuild,v 1.4 2006/10/22 00:37:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r1.ebuild,v 1.1 2008/07/27 08:04:08 dertobi123 Exp $
 
-inherit eutils toolchain-funcs mailer
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/"
@@ -13,15 +13,24 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 md5sum"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}
+	!net-mail/mailwrapper
+	!virtual/mta"
+PROVIDE="virtual/mta"
 
-S=${WORKDIR}/ssmtp-2.61
+S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	enewgroup ssmtp
+}
 
 src_unpack() {
-	unpack "${A}" ; cd "${S}"
+	unpack ${A}
+	cd "${S}"
 
-	epatch "${FILESDIR}"/ssmtp-2.61-bug127592.patch
+	epatch "${FILESDIR}/${P}-strndup.patch"
+	eautoreconf
 
 	# Respect LDFLAGS (bug #152197)
 	sed -i -e 's:$(CC) -o:$(CC) @LDFLAGS@ -o:' Makefile.in
@@ -52,7 +61,8 @@ src_install() {
 	insinto /etc/ssmtp
 	doins ssmtp.conf revaliases
 
-	local conffile="${D}/etc/ssmtp/ssmtp.conf"
+	local conffile="${D}etc/ssmtp/ssmtp.conf"
+
 	mv "${conffile}" "${conffile}.orig"
 
 	# Sorry about the weird indentation, I couldn't figure out a cleverer way
@@ -64,14 +74,21 @@ src_install() {
 		"${conffile}.orig" > "${conffile}" \
 		|| die "sed failed"
 
-	if use mailwrapper ; then
-		dosym /usr/sbin/ssmtp /usr/bin/sendmail.ssmtp
-		mailer_install_conf
-	else
-		dosym /usr/sbin/ssmtp /usr/lib/sendmail
-		dosym /usr/sbin/ssmtp /usr/bin/sendmail
-		dosym /usr/sbin/ssmtp /usr/sbin/sendmail
-		dosym /usr/sbin/ssmtp /usr/bin/mailq
-		dosym /usr/sbin/ssmtp /usr/bin/newaliases
-	fi
+	rm "${conffile}.orig" || die "Failed to remove temporary created copy of ssmtp.conf"
+
+	# Set restrictive perms on ssmtp.conf as per #187841
+	# Protect the ssmtp configfile from being readable by regular users as it
+	# may contain login/password data to auth against a the mailhub used, add
+	# users to the ssmtp group to enable them to use ssmtp.
+	fowners root:ssmtp /etc/ssmtp/ssmtp.conf
+	fperms 640 /etc/ssmtp/ssmtp.conf
+
+	fowners root:ssmtp /usr/sbin/ssmtp
+	fperms 750 /usr/sbin/ssmtp
+
+	dosym /usr/sbin/ssmtp /usr/lib/sendmail
+	dosym /usr/sbin/ssmtp /usr/bin/sendmail
+	dosym /usr/sbin/ssmtp /usr/sbin/sendmail
+	dosym /usr/sbin/ssmtp /usr/bin/mailq
+	dosym /usr/sbin/ssmtp /usr/bin/newaliases
 }
