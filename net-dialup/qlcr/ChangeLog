@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/qlcr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/ChangeLog,v 1.10 2008/01/07 14:22:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/ChangeLog,v 1.11 2008/07/27 21:54:51 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qlcr-0.4.1-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *qlcr-0.4.1-r1 (07 Jan 2008)
 
