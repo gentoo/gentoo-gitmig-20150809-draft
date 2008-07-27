@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r6.ebuild,v 1.7 2007/09/25 17:01:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r6.ebuild,v 1.8 2008/07/27 21:02:52 eva Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# patch to allow fetching of ssh2 files
 	# that are read-only, see bug #91269 and upstream link.
@@ -44,6 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog* README* THANKS TODO docs/USERS-GUIDE
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.66 2008/01/21 19:33:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.67 2008/07/27 21:02:52 eva Exp $
+
+  27 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -gftp-2.0.18-r4.ebuild, -gftp-2.0.18-r5.ebuild,
+  gftp-2.0.18-r6.ebuild, +gftp-9999.ebuild:
+  remove old revisions, fix QA warnings, add live ebuild.
 
   25 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gftp-2.0.18-r6.ebuild:
