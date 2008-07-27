@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.11.ebuild,v 1.1 2007/12/20 17:15:20 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.11.ebuild,v 1.2 2008/07/27 11:36:31 loki_val Exp $
+
+inherit base
 
 DESCRIPTION="Barry is an Open Source Linux application that will allow
 synchronization, backup, restore, program management, and charging for BlackBerry devices"
@@ -14,6 +16,8 @@ IUSE=""
 
 DEPEND="dev-libs/libusb
 	dev-libs/openssl"
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
