@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.0.ebuild,v 1.2 2007/12/31 19:16:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.1.ebuild,v 1.1 2008/07/27 09:32:33 loki_val Exp $
 
 inherit eutils qt3
 
