@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/kseg-0.403.ebuild,v 1.4 2007/07/18 02:11:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/kseg-0.403.ebuild,v 1.5 2008/07/27 22:21:48 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -11,20 +13,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="examples"
-DEPEND="$(qt_min_version 3.3)"
+DEPEND="x11-libs/qt:3"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Fix silly hardcoded help file path and CCFLAGS.
 	#epatch ${FILESDIR}/${P}-gentoo.patch
 	sed -i -e "s|KSEG_HELP_DIR|${PF}/help|" main.cpp
 }
 
 src_compile() {
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake || die 'qmake failed.'
+	"${QTDIR}"/bin/qmake QMAKE="${QTDIR}"/bin/qmake || die 'qmake failed.'
 	emake || die 'emake failed.'
 }
 

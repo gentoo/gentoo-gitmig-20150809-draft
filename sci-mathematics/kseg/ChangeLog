@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/kseg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/ChangeLog,v 1.5 2007/07/18 02:11:03 cryos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/ChangeLog,v 1.6 2008/07/27 22:21:48 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kseg-0.403.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
   -files/kseg-0.402-gentoo.patch, -kseg-0.402.ebuild, kseg-0.403.ebuild:
