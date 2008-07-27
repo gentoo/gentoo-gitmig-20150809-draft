@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/hardware-monitor
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.21 2007/02/21 16:10:15 dang Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.22 2008/07/27 09:12:20 ford_prefect Exp $
+
+*hardware-monitor-1.4 (27 Jul 2008)
+
+  27 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +hardware-monitor-1.4.ebuild:
+  Bump to version 1.4 (bug #222395). This version adds some bug fixes,
+  translations and support for vertical orientation. Ebuild fixes automagic
+  libsensors detection.
 
   21 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> Manifest:
   Fix new-style manifest
