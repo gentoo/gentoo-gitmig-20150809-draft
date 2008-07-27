@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.20 2008/07/27 01:47:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.21 2008/07/27 19:51:51 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> scim-bridge-0.4.9.ebuild,
+  scim-bridge-0.4.15-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
   scim-bridge-0.4.15-r1.ebuild:

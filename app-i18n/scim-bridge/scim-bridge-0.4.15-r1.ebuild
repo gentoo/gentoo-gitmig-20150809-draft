@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.15-r1.ebuild,v 1.2 2008/07/27 01:47:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.15-r1.ebuild,v 1.3 2008/07/27 19:51:51 carlo Exp $
 
 EAPI="1"
 WANT_AUTOMAKE="latest"
@@ -23,7 +23,7 @@ RDEPEND=">=app-i18n/scim-1.4.6
 		>=x11-libs/pango-1.1
 	)
 	qt3? (
-		$(qt_min_version 3.3.4)
+		x11-libs/qt:3
 		>=x11-libs/pango-1.1
 	)
 	qt4? (

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-qtimm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.47 2007/08/03 00:09:51 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.48 2008/07/27 19:54:45 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> scim-qtimm-0.9.4.ebuild,
+  scim-qtimm-0.9.4-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *scim-qtimm-0.9.4-r1 (03 Aug 2007)
 

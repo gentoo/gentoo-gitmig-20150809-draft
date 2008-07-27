@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.17 2007/05/31 20:32:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.18 2008/07/27 19:54:45 carlo Exp $
+
+EAPI=1
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -20,7 +22,7 @@ IUSE="debug"
 
 RDEPEND=">=app-i18n/scim-1.4.2
 	virtual/libintl
-	$(qt_min_version 3.3.4)"
+	x11-libs/qt:3"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext

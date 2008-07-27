@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.5 2007/10/12 10:57:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.6 2008/07/27 19:49:00 carlo Exp $
+
+EAPI=1
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -38,9 +40,9 @@ RDEPEND="!app-i18n/uim
 	eb? ( dev-libs/eb )
 	emacs? ( virtual/emacs )
 	gtk? ( >=x11-libs/gtk+-2 )
-	immqt? ( $(qt_min_version 3.3.4) )
+	immqt? ( x11-libs/qt:3 )
 	libedit? ( dev-libs/libedit )
-	qt3? ( $(qt_min_version 3.3.4) )
+	qt3? ( x11-libs/qt:3 )
 	m17n-lib? ( dev-libs/m17n-lib )"
 
 src_unpack() {

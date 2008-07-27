@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.31 2007/10/12 10:57:45 hattya Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.32 2008/07/27 19:49:00 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> uim-svn-1.5.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   12 Oct 2007; Akinori Hattori <hattya@gentoo.org> -files/50uim-gentoo.el,
   +files/50uim-svn-gentoo.el, uim-svn-1.5.ebuild:
