@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.10 2007/06/26 01:55:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.11 2008/07/27 20:15:59 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -15,23 +17,23 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc examples ide threads"
 
-DEPEND="$(qt_min_version 3.2)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	! use ide && epatch ${FILESDIR}/${P}-without-examples-using-ide.diff
+	cd "${S}"
+	! use ide && epatch "${FILESDIR}"/${P}-without-examples-using-ide.diff
 
 	if use examples; then
-		epatch ${FILESDIR}/${P}-with-examples.diff
-		epatch ${FILESDIR}/${P}-example-enums.pro.diff
+		epatch "${FILESDIR}"/${P}-with-examples.diff
+		epatch "${FILESDIR}"/${P}-example-enums.pro.diff
 	else
-		epatch ${FILESDIR}/${P}-without-examples.diff
+		epatch "${FILESDIR}"/${P}-without-examples.diff
 	fi
 
-	epatch ${FILESDIR}/${P}-sandbox-fix.diff
+	epatch "${FILESDIR}"/${P}-sandbox-fix.diff
 }
 
 src_compile() {
@@ -46,10 +48,10 @@ src_compile() {
 }
 
 src_install() {
-	into ${QTDIR}
+	into "${QTDIR}"
 
 	#includes
-	insinto ${QTDIR}/include
+	insinto "${QTDIR}"/include
 	doins src/qsa/qsaglobal.h
 	doins src/qsa/qsconfig.h
 	doins src/qsa/qsargument.h
@@ -64,21 +66,21 @@ src_install() {
 	doins src/ide/qsworkbench.h
 
 	#QSA mkspec feature
-	insinto ${QTDIR}/mkspecs/${QMAKESPEC}
+	insinto "${QTDIR}"/mkspecs/${QMAKESPEC}
 	doins src/qsa/qsa.prf
 
 	#libs
 	dolib lib/libqsa.so.1.1.1
-	cd ${D}/${QTDIR}/lib
+	cd "${D}/${QTDIR}"/lib
 	ln -s libqsa.so.1.1.1 libqsa.so.1.1
 	ln -s libqsa.so.1.1 libqsa.so.1
 	ln -s libqsa.so.1 libqsa.so
 	cd -
-	insinto ${QTDIR}/lib
+	insinto "${QTDIR}"/lib
 	doins lib/libqsa.prl
 
 	#QSA plugin (SEditor) for Qt designer
-	insinto ${QTDIR}/plugins/designer
+	insinto "${QTDIR}"/plugins/designer
 	doins plugins/designer/libqseditorplugin.so
 
 	#documentation
