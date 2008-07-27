@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.0.4.ebuild,v 1.1 2008/05/15 22:42:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.0.4.ebuild,v 1.2 2008/07/27 19:07:30 carlo Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ COMMONDEPEND=">=kde-base/libkdeedu-${PV}:${SLOT}
 	cviewer? ( >=dev-cpp/eigen-1.0.5
 		>=sci-chemistry/openbabel-2.1
 		|| ( x11-libs/qt-opengl:4
-			>=x11-libs/qt-4.3.3:4 )
+			=x11-libs/qt-4.3*:4 )
 		virtual/opengl )"
 DEPEND="${DEPEND} ${COMMONDEPEND}
 	solver? ( dev-ml/facile )"
