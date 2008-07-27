@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.5 2008/02/21 23:54:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.6 2008/07/27 11:16:14 loki_val Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	sed -i Make.config -e "s:usr\/local:usr:" -e "s:FLAGS *=:FLAGS ?=:"
 	epatch "${FILESDIR}/${P}-nostrip.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	use !truetype && sed -i "s:HAVE_FREETYPE2:#HAVE_FREETYPE2:" Make.config
 
