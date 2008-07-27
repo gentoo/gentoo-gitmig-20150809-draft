@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.3.ebuild,v 1.3 2008/03/01 23:58:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.3.ebuild,v 1.4 2008/07/27 22:35:16 tester Exp $
 
 inherit mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://go-mono.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.2.5.1-r1
