@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.9 2008/07/27 00:58:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.10 2008/07/27 01:45:16 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> strigi-0.5.8.ebuild,
+  strigi-0.5.9.ebuild, strigi-0.5.10.ebuild:
+  Missed the dbus related Qt 4 dependency.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> strigi-0.5.8.ebuild,
   strigi-0.5.9.ebuild, strigi-0.5.10.ebuild:

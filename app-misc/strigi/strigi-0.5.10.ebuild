@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.10.ebuild,v 1.3 2008/07/27 00:58:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.10.ebuild,v 1.4 2008/07/27 01:45:16 carlo Exp $
 
 EAPI="1"
 inherit eutils cmake-utils
@@ -22,7 +22,7 @@ COMMONDEPEND="
 	dbus? ( sys-apps/dbus
 		|| ( ( x11-libs/qt-dbus:4
 			x11-libs/qt-gui:4 )
-			>=x11-libs/qt-4.3.0:4 )
+			=x11-libs/qt-4.3*:4 )
 		)
 	exiv2? ( media-gfx/exiv2 )
 	fam? ( virtual/fam )
