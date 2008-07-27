@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.3 2008/05/27 21:40:26 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.4 2008/07/27 02:11:20 carlo Exp $
 
 EAPI="1"
 inherit eutils autotools fdo-mime
@@ -17,8 +17,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="|| ( >=x11-libs/qt-4.2:4
-			  ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) )
+RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) 
+		 =x11-libs/qt-4.3*:4 )
 	dev-libs/libpcre
 	virtual/lapack
 	virtual/opengl
