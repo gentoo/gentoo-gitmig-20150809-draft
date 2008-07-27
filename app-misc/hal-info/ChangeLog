@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.37 2008/07/26 21:07:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.38 2008/07/27 17:09:10 bluebird Exp $
+
+  27 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  hal-info-20080508.ebuild:
+  Stable on sparc, bug #222219
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> hal-info-20080508.ebuild:
   Stable on amd64, bug #222219
