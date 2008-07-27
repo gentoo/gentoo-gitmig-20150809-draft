@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.8 2008/05/29 17:36:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.9 2008/07/27 21:57:29 carlo Exp $
+
+EAPI=1
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
@@ -20,8 +22,8 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	dev-libs/expat
 	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
-	qt3? ( $(qt_min_version 3.3.6-r2) )
-	qt4? ( $(qt4_min_version 4) )
+	qt3? ( x11-libs/qt:3 )
+	qt4? ( x11-libs/qt:4 )
 	gtk? (
 		>=x11-libs/gtk+-2.4.0
 		>=gnome-base/libglade-2.4.0
