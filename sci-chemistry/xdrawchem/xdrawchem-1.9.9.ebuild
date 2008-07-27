@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.8 2008/07/07 13:53:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.9 2008/07/27 22:20:58 carlo Exp $
+
+EAPI=1
 
 inherit qt3 eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="$(qt_min_version 3.1)
+RDEPEND="x11-libs/qt:3
 	sci-chemistry/openbabel"
 
 DEPEND="${RDEPEND}
