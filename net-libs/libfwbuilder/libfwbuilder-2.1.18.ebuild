@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.18.ebuild,v 1.1 2008/06/09 01:20:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.18.ebuild,v 1.2 2008/07/27 22:06:20 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -18,7 +20,7 @@ DEPEND=">=dev-libs/libxml2-2.4.10
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( dev-libs/openssl )
 	stlport? ( dev-libs/STLport )
-	$(qt_min_version 3)"
+	x11-libs/qt:3"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.72 2008/06/09 01:20:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.73 2008/07/27 22:06:20 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  libfwbuilder-2.1.13-r1.ebuild, libfwbuilder-2.1.14.ebuild,
+  libfwbuilder-2.1.18.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *libfwbuilder-2.1.18 (09 Jun 2008)
 

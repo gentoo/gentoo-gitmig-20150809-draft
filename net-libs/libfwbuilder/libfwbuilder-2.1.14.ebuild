@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.14.ebuild,v 1.1 2007/09/29 23:02:52 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.14.ebuild,v 1.2 2008/07/27 22:06:20 carlo Exp $
 
+EAPI=1
 inherit eutils qt3
 
 DESCRIPTION="Firewall Builder 2.1 API library and compiler framework"
@@ -18,7 +19,7 @@ DEPEND=">=dev-libs/libxml2-2.4.10
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( dev-libs/openssl )
 	stlport? ( dev-libs/STLport )
-	$(qt_min_version 3)"
+	x11-libs/qt:3"
 
 src_compile() {
 	# we'll use our eqmake instead of bundled script to process qmake files
