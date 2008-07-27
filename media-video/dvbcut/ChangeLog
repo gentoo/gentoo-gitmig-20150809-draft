@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.10 2008/05/10 15:11:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.11 2008/07/27 21:55:26 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> dvbcut-0.5.4.ebuild,
+  dvbcut-0.5.4-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   10 May 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/dvbcut-0.5.4-ffmpeg-0.4.9_p20080326.diff, dvbcut-0.5.4-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qdvdauthor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.23 2008/06/08 22:59:38 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.24 2008/07/27 21:54:04 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qdvdauthor-1.0.0.ebuild,
+  qdvdauthor-1.2.0.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
 *qdvdauthor-1.2.0 (08 Jun 2008)
 

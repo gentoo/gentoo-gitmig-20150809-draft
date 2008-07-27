@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.0.0.ebuild,v 1.2 2008/03/17 22:16:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.0.0.ebuild,v 1.3 2008/07/27 21:54:04 carlo Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic qt3
 
@@ -20,7 +22,7 @@ DEPEND=">=media-video/dvdauthor-0.6.11
 	xine? ( >=media-libs/xine-lib-1.1.0 )
 	mplayer? ( media-video/mplayer )
 	!xine? ( !mplayer? ( >=media-libs/xine-lib-1.1.0 ) )
-	$(qt_min_version 3.2)"
+	x11-libs/qt:3"
 
 RDEPEND="${DEPEND}
 	media-libs/netpbm
