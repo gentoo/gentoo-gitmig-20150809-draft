@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.139 2008/07/14 14:40:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.140 2008/07/27 00:59:56 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> lyx-1.5.5.ebuild,
+  lyx-1.6.0_beta3.ebuild, lyx-1.6.0_beta4.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *lyx-1.6.0_beta4 (14 Jul 2008)
 

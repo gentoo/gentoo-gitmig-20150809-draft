@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_beta3.ebuild,v 1.1 2008/06/04 21:24:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_beta3.ebuild,v 1.2 2008/07/27 00:59:56 carlo Exp $
 
 EAPI=1
 
@@ -33,7 +33,7 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-COMMONDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2.0:4 )
+COMMONDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
 	x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/libXrender
