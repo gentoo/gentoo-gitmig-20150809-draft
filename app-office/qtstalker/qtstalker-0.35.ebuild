@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.3 2008/06/09 08:44:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.4 2008/07/27 19:55:28 carlo Exp $
+
+EAPI=1
 
 inherit qt3 eutils multilib
 
@@ -17,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="$(qt_min_version 3.3)
+DEPEND="x11-libs/qt:3
 	>=sci-libs/ta-lib-0.4.0
 	>=sys-libs/db-4.3"
 

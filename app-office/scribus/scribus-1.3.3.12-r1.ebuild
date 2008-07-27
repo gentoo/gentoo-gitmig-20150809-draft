@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.2 2008/07/20 22:03:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.3 2008/07/27 19:54:02 carlo Exp $
+
+EAPI=1
 
 inherit qt3 eutils cmake-utils
 
@@ -12,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cairo"
 
-DEPEND="$(qt_min_version 3.3.8)
+DEPEND="x11-libs/qt:3
 	>=media-libs/freetype-2.3
 	>=media-libs/lcms-1.17
 	>=media-libs/tiff-3.6
