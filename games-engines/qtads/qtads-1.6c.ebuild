@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.6 2008/05/05 19:14:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.7 2008/07/27 21:22:22 carlo Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic qt3 games
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 
 src_unpack() {
 	unpack ${A}
