@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.39 2008/06/23 16:54:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.40 2008/07/27 21:14:50 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> mixxx-1.4.2.ebuild,
+  mixxx-1.6.0_beta2.ebuild, mixxx-1.6.0_beta3.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Fix broken split Qt 4.4
+  dependencies, cf. bug 217161 comment 11.
 
   23 Jun 2008; nixnut <nixnut@gentoo.org> mixxx-1.6.0_beta2.ebuild:
   Added ~ppc wrt bug 223015
