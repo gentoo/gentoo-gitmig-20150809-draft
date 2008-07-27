@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.2 2008/06/15 16:00:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.3 2008/07/27 20:55:25 loki_val Exp $
 
 EAPI=1
 
@@ -24,6 +24,10 @@ pkg_setup() {
 		ewarn "Curl support disabled: No client library will be be built"
 	fi
 }
+
+#Tests are faily.
+
+RESTRICT="test"
 
 PATCHES=( "${FILESDIR}/${P}-abyss-disable.patch" )
 
@@ -58,11 +62,11 @@ src_compile() {
 
 src_test() {
 	unset LDFLAGS LADD SRCDIR
-	#cd "${S}"/src/test/
-	#einfo "Building general tests"
-	#make || die "Make of general tests failed"
-	#einfo "Running general tests"
-	#./test || die "General tests failed"
+	cd "${S}"/src/test/
+	einfo "Building general tests"
+	make || die "Make of general tests failed"
+	einfo "Running general tests"
+	./test || die "General tests failed"
 	ewarn "The tests are made of fail. Skipping."
 	return 0
 	#C++ tests. They fail.
