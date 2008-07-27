@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0_beta2.ebuild,v 1.2 2008/05/17 12:31:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0_beta2.ebuild,v 1.3 2008/07/27 01:01:22 carlo Exp $
 
 EAPI="1"
 inherit qt4 fdo-mime
@@ -20,8 +20,8 @@ QT4_BUILT_WITH_USE_CHECK="qt3support"
 
 DEPEND="
 	|| ( ( x11-libs/qt-gui:4
-			x11-libs/qt-qt3support )
-		>=x11-libs/qt-4.2 )
+			x11-libs/qt-qt3support:4 )
+		=x11-libs/qt-4.3*:4 )
 	dev-libs/chmlib"
 
 S=${WORKDIR}/${MY_P}
