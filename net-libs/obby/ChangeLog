@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/obby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.23 2008/05/19 19:36:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.24 2008/07/27 13:21:46 loki_val Exp $
+
+*obby-0.4.5 (27 Jul 2008)
+
+  27 Jul 2008; Peter Alfredsen <loki_val@gentoo.org> +obby-0.4.5.ebuild:
+  Bump wrt bug #222845
 
   19 May 2008; Jeroen Roovers <jer@gentoo.org> obby-0.4.4.ebuild:
   Marked ~hppa.
