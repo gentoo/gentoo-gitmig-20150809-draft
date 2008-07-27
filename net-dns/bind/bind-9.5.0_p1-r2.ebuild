@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p1-r1.ebuild,v 1.2 2008/07/25 20:33:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p1-r2.ebuild,v 1.1 2008/07/27 08:56:35 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -127,6 +127,9 @@ src_compile() {
 	else
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
+
+	# bug #227333
+	append-flags -D_GNU_SOURCE
 
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O
