@@ -1,16 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.12.ebuild,v 1.5 2008/04/06 15:04:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.14.ebuild,v 1.1 2008/07/27 17:30:30 ulm Exp $
 
 inherit elisp eutils
 
 DESCRIPTION="Edit remote files like ange-ftp but with rlogin, telnet and/or ssh"
-HOMEPAGE="http://savannah.gnu.org/projects/tramp/"
+HOMEPAGE="http://www.gnu.org/software/tramp/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
