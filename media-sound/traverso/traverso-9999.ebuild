@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-9999.ebuild,v 1.4 2008/04/20 17:58:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-9999.ebuild,v 1.5 2008/07/27 01:06:44 carlo Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS=""
 
 RDEPEND="|| ( ( x11-libs/qt-core x11-libs/qt-gui opengl? ( x11-libs/qt-opengl ) )
-			>=x11-libs/qt-4.3.1:4 )
+			=x11-libs/qt-4.3*:4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
 	>=dev-libs/glib-2.8

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.9 2008/07/18 07:28:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.10 2008/07/27 01:11:24 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtractor-0.1.3.ebuild,
+  qtractor-0.2.0.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *qtractor-0.2.0 (18 Jul 2008)
 

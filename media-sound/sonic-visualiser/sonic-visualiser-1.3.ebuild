@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.3.ebuild,v 1.1 2008/07/11 18:10:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.3.ebuild,v 1.2 2008/07/27 01:09:12 carlo Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="fftw id3tag jack mad ogg osc portaudio pulseaudio"
 
 RDEPEND="|| ( ( x11-libs/qt-core:4  x11-libs/qt-gui:4 )
-				>=x11-libs/qt-4.3:4 )
+				=x11-libs/qt-4.3*:4 )
 	media-libs/libsndfile
 	media-libs/libsamplerate
 	fftw? ( =sci-libs/fftw-3* )

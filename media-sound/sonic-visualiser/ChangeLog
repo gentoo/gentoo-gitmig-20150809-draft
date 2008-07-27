@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.6 2008/07/11 18:10:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.7 2008/07/27 01:09:12 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  sonic-visualiser-1.2.ebuild, sonic-visualiser-1.3.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *sonic-visualiser-1.3 (11 Jul 2008)
 
