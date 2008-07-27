@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qlandkarte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkarte/ChangeLog,v 1.6 2008/07/10 09:09:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkarte/ChangeLog,v 1.7 2008/07/27 01:20:03 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qlandkarte-0.7.2.ebuild,
+  qlandkarte-0.7.3.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
 *qlandkarte-0.7.3 (10 Jul 2008)
 
