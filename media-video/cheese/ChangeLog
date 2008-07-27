@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.4 2008/06/30 21:56:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.5 2008/07/27 18:59:32 tester Exp $
+
+  26 Jul 2008; Olivier Crête <tester@gentoo.org> cheese-2.22.3.ebuild:
+  Stable on amd64, bug #229709
 
 *cheese-2.22.3 (30 Jun 2008)
 
