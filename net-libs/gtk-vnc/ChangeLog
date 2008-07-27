@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.15 2008/06/08 13:48:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.16 2008/07/27 18:36:46 tester Exp $
+
+  26 Jul 2008; Olivier Crête <tester@gentoo.org> gtk-vnc-0.3.6.ebuild:
+  Stable on amd64, bug #229709
 
   08 Jun 2008; Mart Raudsepp <leio@gentoo.org> gtk-vnc-0.3.6.ebuild:
   Remove USE=debug as it does not affect anything anymore
