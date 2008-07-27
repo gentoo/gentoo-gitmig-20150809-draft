@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.5.ebuild,v 1.5 2008/06/14 10:14:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.5.ebuild,v 1.6 2008/07/27 08:24:39 graaff Exp $
 
 inherit eutils
 
@@ -16,11 +16,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
 
-DEPEND=">=dev-libs/libxml2-2.6.0
+RDEPEND=">=dev-libs/libxml2-2.6.0
 	>=x11-libs/gtk+-2.2.1
 	dbus? ( >=sys-apps/dbus-0.35.2 )
 	gnutls? ( >=net-libs/gnutls-1.0.16 )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	# gtk-gnutella now uses a custom build script which in turn drives
