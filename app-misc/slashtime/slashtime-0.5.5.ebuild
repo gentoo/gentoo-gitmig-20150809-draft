@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.5.ebuild,v 1.1 2008/07/27 15:35:13 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.5.ebuild,v 1.2 2008/07/27 17:52:22 ken69267 Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 
 src_compile() {
 	# Handwritten in perl so not using econf
-	./configure --prefix=/usr
+	./configure --prefix=/usr || die
 
 	emake || die "emake failed."
 }
