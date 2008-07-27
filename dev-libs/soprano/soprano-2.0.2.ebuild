@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.2.ebuild,v 1.1 2008/03/08 16:07:52 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.2.ebuild,v 1.2 2008/07/27 01:04:00 carlo Exp $
 
 EAPI="1"
 inherit cmake-utils eutils flag-o-matic
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	>=media-libs/raptor-1.4.16
 	|| ( ( x11-libs/qt-core:4
 		x11-libs/qt-dbus:4 )
-		>=x11-libs/qt-4.3.0:4 )
+		=x11-libs/qt-4.3*:4 )
 	clucene? ( >=dev-cpp/clucene-0.9.19 )"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )"

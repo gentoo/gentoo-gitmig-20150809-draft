@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.6 2008/03/22 14:44:36 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.7 2008/07/27 01:04:00 carlo Exp $
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> soprano-2.0.2.ebuild:
+  Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   22 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -soprano-2.0.0.ebuild,
   -soprano-2.0.3.ebuild:
