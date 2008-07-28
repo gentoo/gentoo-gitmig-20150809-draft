@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.17 2008/06/23 16:15:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.18 2008/07/28 14:07:35 armin76 Exp $
+
+  28 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  pyxf86config-0.3.34-r1.ebuild:
+  x86 stable wrt #222219
 
   23 Jun 2008; Jeroen Roovers <jer@gentoo.org>
   pyxf86config-0.3.34-r1.ebuild:
