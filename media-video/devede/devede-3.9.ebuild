@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.8c.ebuild,v 1.3 2008/05/29 17:27:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.9.ebuild,v 1.1 2008/07/28 14:16:05 drac Exp $
 
 NEED_PYTHON=2.4
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
 
+DEPEND=""
 RDEPEND=">=x11-libs/gtk+-2.6
 	dev-python/pygtk
 	>=media-video/mplayer-1.0_rc1
@@ -22,7 +23,6 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	media-video/vcdimager
 	psyco? ( dev-python/psyco )
 	virtual/cdrtools"
-DEPEND=""
 
 src_install() {
 	./install.sh prefix="/usr" libdir="/usr/$(get_libdir)" \
