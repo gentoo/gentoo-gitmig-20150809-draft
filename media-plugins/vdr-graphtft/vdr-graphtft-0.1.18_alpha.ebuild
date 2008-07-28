@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.3 2008/06/22 17:43:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.4 2008/07/28 21:15:44 carlo Exp $
+
+EAPI=1
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -24,7 +26,7 @@ DEPEND=">=media-video/vdr-1.4.7-r9
 		gnome-base/libgtop
 		>=media-video/ffmpeg-0.4.8
 		directfb? ( dev-libs/DirectFB )
-		graphtft-fe? ( $(qt4_min_version 4.0.0) )"
+		graphtft-fe? ( =x11-libs/qt-4.3*:4 )"
 
 PATCHES=("${FILESDIR}/${P}-gentoo.diff"
 		"${FILESDIR}/gcc-4.3-missing_includes.diff")

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.6 2008/06/22 17:43:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.7 2008/07/28 21:15:44 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
+  vdr-graphtft-0.1.18_alpha.ebuild:
+  QA: Get rid of deprecated qt4_min_version(). Please fix your ebuilds to
+  support split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   22 Jun 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-graphtft-0.1.18_alpha-imagemagick-6.4-new_header.diff,
