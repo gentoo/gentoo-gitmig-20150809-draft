@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.9 2008/07/27 20:46:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.10 2008/07/28 06:16:53 wormo Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.crossvc.com/download/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="kde"
 
 DEPEND="kde? ( >=kde-base/kdelibs-3 )
