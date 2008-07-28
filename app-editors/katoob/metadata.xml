@@ -13,4 +13,7 @@
     in multiple encodings. The main support was for Arabic language
     but more languages are currently supported.
   </longdescription>
+  <use>
+    <flag name='highlight'>Enable source code highlighting</flag>
+  </use>
 </pkgmetadata>

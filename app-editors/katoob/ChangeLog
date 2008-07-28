@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.22 2008/05/21 12:21:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.23 2008/07/28 19:37:04 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   21 May 2008; Rémi Cardona <remi@gentoo.org>
   +files/katoob-0.5.9.1-fix-desktop-file.patch, katoob-0.5.9.1.ebuild:
