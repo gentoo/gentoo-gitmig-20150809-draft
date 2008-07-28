@@ -24,4 +24,7 @@
   fe can easily be modified, because it is structured as an editor library
   with a user interface frontend, all written in C.
 </longdescription>
+<use>
+  <flag name='sendmail'>Send mail after editor abend</flag>
+</use>
 </pkgmetadata>
