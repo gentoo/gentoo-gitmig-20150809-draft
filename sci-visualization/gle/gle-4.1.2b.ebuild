@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.1 2008/05/21 21:13:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.2 2008/07/28 21:43:12 carlo Exp $
+
+EAPI=1
 
 inherit eutils elisp-common qt4
 
@@ -23,7 +25,7 @@ IUSE="X qt4 jpeg png tiff doc emacs vim-syntax"
 
 DEPEND="sys-libs/ncurses
 	X? ( x11-libs/libX11 )
-	qt4? ( $(qt4_min_version 4.1) )
+	qt4? ( =x11-libs/qt-4.3*:4 )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
@@ -34,7 +36,7 @@ RDEPEND="virtual/ghostscript
 	virtual/latex-base
 	sys-libs/ncurses
 	X? ( x11-libs/libX11 )
-	qt4? ( $(qt4_min_version 4.1) )
+	qt4? ( =x11-libs/qt-4.3*:4 )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
