@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.3 2008/07/27 22:51:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.4 2008/07/28 15:48:03 armin76 Exp $
 
 EAPI=1
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="chm debug doc epiphany eds firefox galago gtk pdf inotify ole thunderbird +xscreensaver"
 
 RDEPEND="
