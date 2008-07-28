@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.29 2008/05/29 18:07:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.30 2008/07/28 20:19:28 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> mpich2-1.0.3-r1.ebuild,
   mpich2-1.0.6.ebuild:
