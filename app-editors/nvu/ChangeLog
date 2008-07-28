@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.28 2008/02/12 16:14:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.29 2008/07/28 20:05:13 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   12 Feb 2008; Raúl Porcel <armin76@gentoo.org> nvu-1.0-r4.ebuild:
   Remove useless file, bug #209807
