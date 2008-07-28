@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/delicious
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.7 2007/10/07 19:08:58 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.8 2008/07/28 19:01:25 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   -delicious-0.3.ebuild:

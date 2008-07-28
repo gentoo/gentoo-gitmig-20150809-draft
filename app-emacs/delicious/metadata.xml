@@ -7,4 +7,7 @@
   <name>Gunnar Wrobel</name>
   <description>Primary maintainer</description>
 </maintainer>
+<use>
+  <flag name='planner'>Include support for <pkg>app-emacs/planner</pkg></flag>
+</use>
 </pkgmetadata>
