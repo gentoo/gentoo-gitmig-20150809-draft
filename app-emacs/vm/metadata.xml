@@ -9,4 +9,7 @@
   and reads both the standard UNIX mailbox format and the BABYL format used by
   the RMAIL mailer.
 </longdescription>
+<use>
+  <flag name='bbdb'>Include support for <pkg>app-emacs/bbdb</pkg></flag>
+</use>
 </pkgmetadata>
