@@ -14,4 +14,7 @@ access to GET and POST parameters sent by the client. It does not include
 functionality to programmatically generate HTML output. For this task you can
 use any library you like.
 </longdescription>
+<use>
+<flag name='standalone'> Use TBNL without a front-end (ie. no Apache dependency)</flag>
+</use>
 </pkgmetadata>

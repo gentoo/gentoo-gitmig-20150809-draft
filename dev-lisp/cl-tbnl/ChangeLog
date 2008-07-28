@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-tbnl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.43 2007/06/13 12:30:29 chtekk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.44 2008/07/28 18:43:07 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   13 Jun 2007; Luca Longinotti <chtekk@gentoo.org> -cl-tbnl-0.8.9.ebuild:
   Remove Apache1.
