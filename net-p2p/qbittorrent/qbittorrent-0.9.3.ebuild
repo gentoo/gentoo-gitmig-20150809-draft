@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.9.3.ebuild,v 1.6 2008/04/19 17:13:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-0.9.3.ebuild,v 1.7 2008/07/28 21:35:35 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt4
 
@@ -14,7 +16,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="=net-libs/rb_libtorrent-0.12*
-	$(qt4_min_version 4.2)
+	=x11-libs/qt-4.3*:4
 	>=dev-lang/python-2.3
 	dev-libs/boost
 	net-misc/curl"
