@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbeagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.7 2008/07/27 22:48:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.8 2008/07/28 15:43:22 armin76 Exp $
+
+  28 Jul 2008; Raúl Porcel <armin76@gentoo.org> libbeagle-0.3.5.ebuild:
+  x86 stable wrt #230175
 
   27 Jul 2008; Olivier Crête <tester@gentoo.org> libbeagle-0.3.5.ebuild:
   Stable on amd64, bug #230175
