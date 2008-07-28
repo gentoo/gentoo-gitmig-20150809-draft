@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.10 2008/05/13 07:24:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.11 2008/07/28 07:39:42 s4t4n Exp $
+
+  28 Jul 2008; Michele Noberasco <s4t4n@gentoo.org> wmpop-0.53.ebuild:
+  added libXpm to runtime dependancies. Closes bug #233023.
 
   13 May 2008; Michele Noberasco <s4t4n@gentoo.org> wmpop-0.53.ebuild:
   Remove bison from runtime dependancies. Closes bug #221605.
