@@ -10,4 +10,21 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
+	<use>
+		<flag name='iscsi'>Add support for iSCSI (Internet SCSI) remote
+			storage</flag>
+		<flag name='kvm'>Add support for <pkg>app-emulation/kvm</pkg> based
+			virtual machines</flag>
+		<flag name='lvm'>Add support for the Logical Volume Manager
+			<pkg>sys-apps/lvm2</pkg></flag>
+		<flag name='openvz'>Add support for <pkg>sys-kernel/openvz-sources</pkg>
+			OpenVZ-based virtual machines</flag>
+		<flag name='parted'>Add support for the <pkg>sys-apps/parted</pkg>
+			partition editor</flag>
+		<flag name='qemu'>Add support for <pkg>app-emulation/qemu</pkg> based
+			virtual machines</flag>
+		<flag name='server'>Enables support for libvirtd</flag>
+		<flag name='xen'>Add support for <pkg>app-emulation/xen</pkg> based
+			virtual machines</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.19 2008/06/12 23:16:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.20 2008/07/28 18:57:54 cardoe Exp $
+
+  28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   12 Jun 2008; Jeremy Olexa <darkside@gentoo.org> pearpc-0.3.1.ebuild:
   Remove ~amd64 kw, bug #179952
