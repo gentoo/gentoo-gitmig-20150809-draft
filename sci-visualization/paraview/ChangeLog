@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.22 2008/07/27 01:20:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.23 2008/07/28 21:44:46 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> paraview-3.2.1.ebuild:
+  QA: Get rid of deprecated qt4_min_version().
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
   paraview-3.3_pre20080514.ebuild:
