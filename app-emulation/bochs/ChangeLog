@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.79 2008/07/23 12:36:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.80 2008/07/28 18:33:00 cardoe Exp $
+
+  28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   23 Jul 2008; Peter Alfredsen <loki_val@gentoo.org>
   files/bochs-2.3.7-gcc43.patch:

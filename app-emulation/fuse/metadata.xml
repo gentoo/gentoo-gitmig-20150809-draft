@@ -11,4 +11,8 @@
 		<description>Proxied Maintainer. Please CC on bugs.</description>
 		<name>José Manuel Ferrer Ortiz</name>
 	</maintainer>
+	<use>
+		<flag name='libdsk'>Enable support for the floppy disk emulation
+			library <pkg>app-emulation/libdsk</pkg></flag>
+	</use>
 </pkgmetadata>

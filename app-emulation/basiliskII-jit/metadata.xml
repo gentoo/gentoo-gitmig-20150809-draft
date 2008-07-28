@@ -13,4 +13,8 @@
 		is achieved thanks to the adaptation of Bernie Meyer's excellent
 		just-in-time (JIT) compiler for UAE to Basilisk II.
 	</longdescription>
+	<use>
+		<flag name='fbdev'>Enables framebuffer support</flag>
+		<flag name='jit'>Enables the jit compiler</flag>
+	</use>
 </pkgmetadata>

@@ -15,5 +15,11 @@
 		for Linux on x86 hardware containing virtualization extensions (Intel VT
 		or AMD-V)
 	</longdescription>
+	<use>
+		<flag name='bios'>Compile BIOS from source (not necessary to run
+			<pkg>app-emulation/kvm</pkg></flag>
+		<flag name='havekernel'>Don't require a kernel build tree (useful if
+			using a binary distrbuted kernel aka binary packages)</flag>
+	</use>
 </pkgmetadata>
 
