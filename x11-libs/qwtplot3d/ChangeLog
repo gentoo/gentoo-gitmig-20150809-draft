@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.13 2008/07/27 00:41:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.14 2008/07/28 21:54:21 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qwtplot3d-0.2.6-r2.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Quoting issues.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qwtplot3d-0.2.7.ebuild:
   Fix the fix...

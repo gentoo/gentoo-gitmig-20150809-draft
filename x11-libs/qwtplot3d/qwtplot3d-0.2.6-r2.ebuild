@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.6 2007/02/23 12:06:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.7 2008/07/28 21:54:21 carlo Exp $
+
+EAPI=1
 
 inherit multilib qt3
 
@@ -17,14 +19,14 @@ SLOT="0"
 IUSE="doc examples"
 KEYWORDS="amd64 ~ppc ppc64 ~x86"
 
-DEPEND="$(qt_min_version 3.3)
+DEPEND="x11-libs/qt:3
 	>=sys-apps/sed-4
 	doc? ( app-arch/unzip )"
-RDEPEND="$(qt_min_version 3.3)"
+RDEPEND="x11-libs/qt:3"
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	find . -type f -name "*.pro" | while read file; do
 		sed -e 's/.*no-exceptions.*//g' -i ${file}
 		echo >> ${file} "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
@@ -36,8 +38,8 @@ src_unpack () {
 }
 
 src_compile () {
-	addwrite ${QTDIR}/etc/settings
-	${QTDIR}/bin/qmake qwtplot3d.pro || die "qmake failed."
+	addwrite "${QTDIR}"/etc/settings
+	"${QTDIR}"/bin/qmake qwtplot3d.pro || die "qmake failed."
 	emake || die "emake failed."
 }
 
@@ -50,11 +52,11 @@ src_install () {
 	chmod 755 examples examples/simpleplot/ examples/mesh2/ \
 		examples/enrichments/ examples/axes/ examples/autoswitch/ \
 		examples/axes/src/
-	mkdir -p ${D}/usr/include/qwtplot3d/
-	install include/* ${D}/usr/include/qwtplot3d/
+	mkdir -p "${D}"/usr/include/qwtplot3d/
+	install include/* "${D}"/usr/include/qwtplot3d/
 	if use examples; then
 		dodir /usr/share/doc/${PF}
-		cp -pPR examples ${D}/usr/share/doc/${PF}/
+		cp -pPR examples "${D}"/usr/share/doc/${PF}/
 	fi
 	use doc && dohtml -r doc/web/doxygen/*
 }
