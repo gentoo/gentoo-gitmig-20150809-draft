@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-glib-sharp/dbus-glib-sharp-0.4.1.ebuild,v 1.4 2008/07/18 17:37:51 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-glib-sharp/dbus-glib-sharp-0.4.1.ebuild,v 1.5 2008/07/28 15:45:51 armin76 Exp $
 
 inherit mono multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ndesk.org/archive/dbus-sharp/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
 RDEPEND=">=dev-lang/mono-1.2.4
