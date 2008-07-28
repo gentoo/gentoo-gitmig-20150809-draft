@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.082.ebuild,v 1.5 2008/07/17 20:12:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.082.ebuild,v 1.6 2008/07/28 07:35:32 tove Exp $
 
 inherit perl-module versionator
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-perl/Module-Pluggable-3.1
 	dev-perl/IO-String
 	dev-perl/String-Format
 	dev-perl/perltidy
-	>=dev-perl/PPI-1.118
+	>=dev-perl/PPI-1.201
 	>=dev-perl/set-scalar-1.20
 	dev-perl/B-Keywords
 	dev-perl/Readonly
