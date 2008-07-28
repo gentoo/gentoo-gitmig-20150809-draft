@@ -7,4 +7,9 @@
 		<name>Hans de Graaff</name>
 	</maintainer>
 
+	<use>
+		<flag name='amarok'>Enables the Amarok (<pkg>media-sound/amarok</pkg>)
+			plugin</flag>
+	</use>
+
 </pkgmetadata>

@@ -15,4 +15,9 @@
 	third party applets.
 	</longdescription>
 
+	<use>
+		<flag name='xfce'>Enables support for the XFCE 4 desktop
+			environment</flag>
+	</use>
+
 </pkgmetadata>
