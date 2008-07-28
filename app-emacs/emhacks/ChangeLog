@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emhacks
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emhacks/ChangeLog,v 1.1 2008/03/23 02:21:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emhacks/ChangeLog,v 1.2 2008/07/28 19:07:32 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Sync description of jde USE flag from use.local.desc.
 
 *emhacks-20070920 (23 Mar 2008)
 

@@ -14,7 +14,6 @@
   tabbar,   Display a tab bar in the header line.
 </longdescription>
 <use>
-  <flag name='jde'>Enable support for Java Development Environment.
-  This requires packages app-emacs/jde (and app-emacs/cedet).</flag>
+  <flag name='jde'>Enable support for Java Development Environment</flag>
 </use>
 </pkgmetadata>
