@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/ChangeLog,v 1.12 2008/05/02 16:37:02 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/ChangeLog,v 1.13 2008/07/28 21:11:09 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> php-qt-0.9.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Please fix your ebuilds to
+  support split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   02 May 2008; Luca Longinotti <chtekk@gentoo.org>
   +files/php-qt-0.9-no-qwt.patch:
