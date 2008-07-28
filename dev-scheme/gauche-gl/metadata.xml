@@ -9,4 +9,7 @@
   <longdescription>
     OpenGL binding of Gauche
   </longdescription>
+  <use>
+  <flag name='cg'>Enable NVidia Cg binding</flag>
+  </use>
 </pkgmetadata>

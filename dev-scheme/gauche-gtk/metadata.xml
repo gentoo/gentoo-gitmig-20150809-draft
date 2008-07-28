@@ -9,4 +9,7 @@
   <longdescription>
     Gauche extension module to use GTK.
   </longdescription>
+  <use>
+  <flag name='glgd'>Enable GL graph draw</flag>
+  </use>
 </pkgmetadata>
