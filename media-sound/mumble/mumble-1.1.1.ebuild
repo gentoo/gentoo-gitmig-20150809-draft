@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.4 2008/02/29 20:05:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.5 2008/07/28 21:21:14 carlo Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs qt4
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pulseaudio vanilla"
 
-DEPEND="$(qt4_min_version 4.3)
+DEPEND="=x11-libs/qt-4.3*:4
 	>=media-libs/speex-1.2_beta3
 	media-libs/alsa-lib
 	dev-libs/boost
