@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2.ebuild,v 1.3 2008/06/21 13:53:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2.ebuild,v 1.4 2008/07/28 21:42:48 carlo Exp $
 
 EAPI="1"
 inherit cmake-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="ssl"
 
-RDEPEND="x11-libs/qt:4
+RDEPEND="=x11-libs/qt-4.3*:4
 	dev-libs/openssl"
 
 DEPEND="${RDEPEND}
