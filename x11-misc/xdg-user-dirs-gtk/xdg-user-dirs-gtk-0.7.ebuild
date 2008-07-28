@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.7.ebuild,v 1.1 2008/07/27 22:34:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.7.ebuild,v 1.2 2008/07/28 03:55:48 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -31,4 +31,3 @@ pkg_postinst() {
 	elog
 
 }
-
