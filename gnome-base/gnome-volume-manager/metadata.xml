@@ -4,7 +4,7 @@
 <herd>gnome</herd>
 <use>
 	<flag name="automount">Enable support for automounting devices that are
-	handled by <pkg>gnome-base/nautilus</pkg> since 2.22. This should me off on
+	handled by <pkg>gnome-base/nautilus</pkg> since 2.22. This should be off on
 	most Gnome systems.</flag>
 </use>
 </pkgmetadata>
