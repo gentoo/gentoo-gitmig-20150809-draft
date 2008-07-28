@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>gentopia</herd>
+<use>
+	<flag name='nautilus'>Enables the Nautilus plugin</flag>
+</use>
 </pkgmetadata>

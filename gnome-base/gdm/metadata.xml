@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
+<use>
+	<flag name='gdm'>Enables Distributed Multihead X (DMX) support</flag>
+	<flag name='remote'>Enables support for secure remote connections</flag>
+</use>
 </pkgmetadata>
