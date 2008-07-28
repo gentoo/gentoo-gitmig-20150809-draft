@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.163 2008/07/27 18:52:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.164 2008/07/28 20:40:24 ford_prefect Exp $
+
+  28 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/epiphany-2.22.3-firefox2.0-header-fix.patch,
+  epiphany-2.22.3.ebuild:
+  Fix build against =www-client/mozilla-firefox-2.0* (bug #230834)
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> epiphany-2.22.3.ebuild:
   Stable on amd64, bug #229709
