@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3655 2008/07/28 20:17:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3656 2008/07/28 20:42:01 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -27,8 +27,26 @@
 # app-editors
 # app-emacs
 # app-emulation
+# dev-games
 # dev-lisp
 # dev-scheme
+# games-action
+# games-arcade
+# games-board
+# games-emulation
+# games-engines
+# games-fps
+# games-kids
+# games-misc
+# games-mud
+# games-puzzle
+# games-roguelike
+# games-rpg
+# games-server
+# games-simulation
+# games-sports
+# games-strategy
+# games-util
 # gnome-base
 # gnome-extra
 # End of metadata categories
