@@ -1,9 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.7.1.ebuild,v 1.13 2008/07/28 22:59:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r2.ebuild,v 1.1 2008/07/28 22:59:02 dirtyepic Exp $
 
-EAPI="1"
-WX_GTK_VER="2.8"
+EAPI=1
 
 inherit alternatives eutils multilib python wxwidgets flag-o-matic
 
@@ -16,18 +15,19 @@ HOMEPAGE="http://www.wxpython.org/"
 SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
-SLOT="2.8"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="opengl"
+SLOT="2.6"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="opengl unicode"
 
 RDEPEND=">=dev-lang/python-2.1
-	>=x11-libs/wxGTK-${PV}:2.8
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/wxGTK-${PV}:2.6
+	>=x11-libs/gtk+-2.0
 	>=x11-libs/pango-1.2
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
+	>=sys-libs/zlib-1.1.4
 	opengl? ( >=dev-python/pyopengl-2.0.0.44 )"
 
 DEPEND="${RDEPEND}
@@ -39,15 +39,19 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"
-
-	epatch "${FILESDIR}"/${PN}-2.8.7-wxversion-scripts.patch
-
+	epatch "${FILESDIR}"/scripts-multiver-2.6.1.0.diff
 }
 
 src_compile() {
 	local mypyconf
+	WX_GTK_VER="2.6"
 
-	need-wxwidgets unicode
+	if use unicode; then
+		need-wxwidgets unicode
+	else
+		need-wxwidgets ansi
+	fi
+
 	use opengl && check_wxuse opengl
 
 	append-flags -fno-strict-aliasing
@@ -57,7 +61,11 @@ src_compile() {
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
 
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+	use unicode \
+		&& mypyconf="${mypyconf} UNICODE=1" \
+		|| mypyconf="${mypyconf} UNICODE=0"
+
+	mypyconf="${mypyconf} WXPORT=gtk2"
 
 	python setup.py ${mypyconf} build || die "setup.py build failed"
 }
@@ -71,8 +79,11 @@ src_install() {
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
+	use unicode \
+		&& mypyconf="${mypyconf} UNICODE=1" \
+		|| mypyconf="${mypyconf} UNICODE=0"
 
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+	mypyconf="${mypyconf} WXPORT=gtk2"
 
 	python setup.py ${mypyconf} install --root="${D}" \
 		--install-purelib ${site_pkgs} || die "setup.py install failed"
@@ -95,7 +106,7 @@ src_install() {
 pkg_postinst() {
 	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 
-	python_mod_optimize ${site_pkgs}
+	python_mod_optimize ${size_pkgs}
 
 	alternatives_auto_makesym \
 		"${site_pkgs}/wx.pth" "${site_pkgs}/wx.pth-[0-9].[0-9]"

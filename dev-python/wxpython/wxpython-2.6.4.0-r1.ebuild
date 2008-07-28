@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.15 2008/07/28 21:43:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.16 2008/07/28 22:59:02 dirtyepic Exp $
 
 EAPI=1
 
@@ -95,7 +95,7 @@ src_install() {
 
 	for dir in "${D}"/${site_pkgs}/wx-${SLOT}-gtk2-{ansi,unicode}; do
 		if [[ -d ${dir} ]]; then
-			cp -R "${D}"/${site_pkgs}/wxaddons/ ${dir}
+			cp -R "${D}"/${site_pkgs}/wxaddons/ "${dir}"
 			wxaddons_copied=1
 		fi
 	done
