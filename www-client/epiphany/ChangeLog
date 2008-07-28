@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.164 2008/07/28 20:40:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.165 2008/07/28 22:18:13 eva Exp $
+
+  28 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/epiphany-2.22.2-xul1.9-ContentHandler-fix.patch,
+  -epiphany-2.22.1.1.ebuild, -epiphany-2.22.2.ebuild,
+  -epiphany-2.22.2-r10.ebuild:
+  remove old revisions.
 
   28 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org>
   +files/epiphany-2.22.3-firefox2.0-header-fix.patch,
