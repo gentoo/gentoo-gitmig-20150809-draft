@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.89 2008/07/25 02:44:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.90 2008/07/28 21:43:11 dirtyepic Exp $
+
+  28 Jul 2008; Ryan Hill <dirtyepic@gentoo.org> wxpython-2.6.4.0.ebuild,
+  wxpython-2.6.4.0-r1.ebuild, wxpython-2.8.7.1.ebuild,
+  wxpython-2.8.8.1.ebuild:
+  Work around aliasing bug in GCC 4.1 by building with -fno-strict-aliasing.
+  Manifested as 'TypeError: wx.Window, wx.Sizer, wx.Size, or (w,h) expected
+  for item' errors in various apps.
+  
+  Bug #233154, reported by Henrik Sankala.
 
 *wxpython-2.8.8.1 (25 Jul 2008)
 

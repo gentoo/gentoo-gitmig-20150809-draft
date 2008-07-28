@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.8.1.ebuild,v 1.1 2008/07/25 02:44:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.8.1.ebuild,v 1.2 2008/07/28 21:43:11 dirtyepic Exp $
 
 EAPI="1"
 WX_GTK_VER="2.8"
 
-inherit alternatives eutils multilib python wxwidgets
+inherit alternatives eutils multilib python wxwidgets flag-o-matic
 
 # Note, we don't use distutils.eclass because it doesn't seem to play nice with
 # need-wxwidgets
@@ -51,6 +51,8 @@ src_compile() {
 
 	need-wxwidgets unicode
 	use opengl && check_wxuse opengl
+
+	append-flags -fno-strict-aliasing
 
 	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \

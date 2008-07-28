@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0.ebuild,v 1.13 2008/01/10 09:43:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0.ebuild,v 1.14 2008/07/28 21:43:11 dirtyepic Exp $
 
-inherit python wxwidgets eutils multilib
+inherit python wxwidgets eutils multilib flag-o-matic
 
 MY_P="${P/wxpython-/wxPython-src-}"
 DESCRIPTION="A blending of the wxWindows C++ class library with Python"
@@ -54,6 +54,8 @@ src_compile() {
 	else
 		need-wxwidgets gtk2
 	fi
+
+	append-flags -fno-strict-aliasing
 
 	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
