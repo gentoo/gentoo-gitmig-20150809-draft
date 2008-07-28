@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.6 2008/02/29 20:13:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.7 2008/07/28 21:28:27 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt4 pax-utils
 
@@ -40,7 +42,7 @@ DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 				x11-libs/libXrandr
 				x11-libs/libXrender
 				x11-libs/libX11 )
-		!qt-static? ( $(qt4_min_version 4.2.3)
+		!qt-static? ( =x11-libs/qt-4.3*:4
 				x11-libs/libX11
 				x11-libs/libXau
 				x11-libs/libXdmcp ) )"
