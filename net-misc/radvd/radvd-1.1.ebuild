@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.1 2008/06/15 11:19:23 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.2 2008/07/28 16:00:00 wschlich Exp $
 
 inherit eutils
 
@@ -63,12 +63,12 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "To use ${PN} you must create the configuration file"
-	einfo "/etc/radvd.conf"
+	einfo "${ROOT}/etc/radvd.conf"
 	einfo
-	einfo "An example configuration file has been installed as"
-	einfo "/usr/share/doc/${PF}/radvd.conf.example.gz"
+	einfo "An example configuration file has been installed under"
+	einfo "${ROOT}/usr/share/doc/${PF}"
 	einfo
-	einfo "grsec users should allow a specific group to read /proc"
+	einfo "grsecurity users should allow a specific group to read /proc"
 	einfo "and add the radvd user to that group, otherwise radvd may"
-	einfo "segfault on startup"
+	einfo "segfault on startup."
 }

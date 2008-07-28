@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.41 2008/07/25 17:14:29 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.42 2008/07/28 16:00:00 wschlich Exp $
+
+  28 Jul 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -files/radvd-0.9-conf.d, -files/radvd-0.9-init.d, metadata.xml,
+  -radvd-0.9.ebuild, -radvd-0.9.1.ebuild, -radvd-1.0.ebuild,
+  radvd-1.1.ebuild:
+  removed old versions
+
+  28 Jul 2008; Wolfram Schlich <wschlich@gentoo.org> metadata.xml,
+  radvd-1.1.ebuild:
+  fix metadata.xml, fix paths shown in pkg_postinst()
 
   25 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> radvd-1.0-r1.ebuild:
   Stable on sparc
