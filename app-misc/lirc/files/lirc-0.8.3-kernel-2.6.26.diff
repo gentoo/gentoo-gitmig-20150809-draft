@@ -1,11 +1,5 @@
 --- a/drivers/kcompat.h	2008-01-13 11:26:28.000000000 +0100
 +++ b/drivers/kcompat.h	2008-05-14 18:37:49.000000000 +0200
-@@ -1,4 +1,4 @@
--/*      $Id: lirc-0.8.3-kernel-2.6.26.diff,v 1.1 2008/07/26 11:32:18 zzam Exp $      */
-+/*      $Id: lirc-0.8.3-kernel-2.6.26.diff,v 1.1 2008/07/26 11:32:18 zzam Exp $      */
- 
- #ifndef _KCOMPAT_H
- #define _KCOMPAT_H
 @@ -36,10 +36,10 @@
  	class_simple_destroy(cls);
  }
@@ -78,15 +72,6 @@
  {
 --- a/drivers/lirc_dev/lirc_dev.c	2008-01-13 11:45:02.000000000 +0100
 +++ b/drivers/lirc_dev/lirc_dev.c	2008-05-14 18:37:49.000000000 +0200
-@@ -17,7 +17,7 @@
-  *  along with this program; if not, write to the Free Software
-  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-  *
-- * $Id: lirc-0.8.3-kernel-2.6.26.diff,v 1.1 2008/07/26 11:32:18 zzam Exp $
-+ * $Id: lirc-0.8.3-kernel-2.6.26.diff,v 1.1 2008/07/26 11:32:18 zzam Exp $
-  *
-  */
- 
 @@ -145,7 +145,8 @@
  #ifdef LIRC_HAVE_DEVFS_26
  	devfs_remove(DEV_LIRC "/%u", ir->p.minor);
