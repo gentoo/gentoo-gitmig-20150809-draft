@@ -3,15 +3,14 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>wolf31o2@gentoo.org</email>
-  <name>Chris Gianelloni</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 This is the client configuration utility for the Cisco Aironet series of cards.  It allows you to use functionality of the card which is not available elsewhere.
 </longdescription>
 <longdescription lang="ja">
-これは Cisco 社製品の Aironetカード・シリーズのクライアント用設定
-ユーティリティです。他所のソフトウェアでは利用できないカードの機能も
-使えるようにします。
+ããã¯ Cisco ç¤¾è£½åã® Aironetã«ã¼ãã»ã·ãªã¼ãºã®ã¯ã©ã¤ã¢ã³ãç¨è¨­å®
+ã¦ã¼ãã£ãªãã£ã§ããä»æã®ã½ããã¦ã§ã¢ã§ã¯å©ç¨ã§ããªãã«ã¼ãã®æ©è½ã
+ä½¿ããããã«ãã¾ãã
 </longdescription>
 </pkgmetadata>

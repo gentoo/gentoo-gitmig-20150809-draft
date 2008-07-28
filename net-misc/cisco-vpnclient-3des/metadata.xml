@@ -3,14 +3,13 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>wolf31o2@gentoo.org</email>
-  <name>Chris Gianelloni</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 This is the Cisco VPN Client, which is used to connect to Cisco VPN hardware, such as a VPN Concentrator, VPN Accelerator, or a PIX Firewall.  This client is bound by export restrictions.
 </longdescription>
 <longdescription lang="ja">
-これは Cisco 社の VPN Concentrator、VPN Accelerator、PIX Firewall といった VPN 
-製品と接続するのに使われる VPN クライアントです。このクライアントは輸出制限の範囲にあります。
+ããã¯ Cisco ç¤¾ã® VPN ConcentratorãVPN AcceleratorãPIX Firewall ã¨ãã£ã VPN 
+è£½åã¨æ¥ç¶ããã®ã«ä½¿ããã VPN ã¯ã©ã¤ã¢ã³ãã§ãããã®ã¯ã©ã¤ã¢ã³ãã¯è¼¸åºå¶éã®ç¯å²ã«ããã¾ãã
 </longdescription>
 </pkgmetadata>
