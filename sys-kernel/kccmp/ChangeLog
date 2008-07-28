@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/kccmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.10 2008/04/27 01:46:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.11 2008/07/28 21:29:24 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kccmp-0.2.ebuild,
+  kccmp-0.2-r1.ebuild:
+  QA: Get rid of deprecated qt?_min_version(). Fix invalid monolithic Qt
+  dependency, cf. bug 217161 comment 11.
 
   27 Apr 2008; Michael Pagano <mpagano@gentoo.org>
   +files/kccmp-0.2-r1-no-qt4-missing-include.patch, kccmp-0.2-r1.ebuild:
