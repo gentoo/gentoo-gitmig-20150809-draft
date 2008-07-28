@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwmouse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.7 2008/02/20 11:39:39 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.8 2008/07/28 17:39:35 wolf31o2 Exp $
+
+  28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Removing myself from metadata.xml since I am retiring from the project.
 
 *nwmouse-0.1-r1 (20 Feb 2008)
 
