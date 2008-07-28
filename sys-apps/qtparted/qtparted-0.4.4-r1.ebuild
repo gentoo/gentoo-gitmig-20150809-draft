@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4-r1.ebuild,v 1.6 2006/04/09 16:14:56 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4-r1.ebuild,v 1.7 2008/07/28 21:23:23 carlo Exp $
+
+EAPI=1
 
 inherit qt3 multilib
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.1)
+DEPEND="x11-libs/qt:3
 	>=sys-apps/parted-1.6.7
 	>=sys-fs/e2fsprogs-1.33
 	>=sys-fs/xfsprogs-2.3.9

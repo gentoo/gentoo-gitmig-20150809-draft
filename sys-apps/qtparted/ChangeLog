@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.30 2008/03/12 12:53:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.31 2008/07/28 21:23:23 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtparted-0.4.4.ebuild,
+  qtparted-0.4.4-r1.ebuild, qtparted-0.4.5.ebuild:
+  QA: Get rid of deprecated qt?_min_version(). Quoting issues.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.

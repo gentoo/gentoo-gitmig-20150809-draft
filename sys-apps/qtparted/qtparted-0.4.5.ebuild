@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.6 2008/02/05 03:20:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.7 2008/07/28 21:23:23 carlo Exp $
+
+EAPI=1
 
 inherit qt3 multilib autotools
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="jfs ntfs reiserfs xfs gnome kde" # kdeenablefinal"
 
-DEPEND="$(qt_min_version 3.1)
+DEPEND="x11-libs/qt:3
 	>=sys-apps/parted-1.6.7
 	>=sys-fs/e2fsprogs-1.33
 	jfs? ( >=sys-fs/jfsutils-1.1.2 )
@@ -27,10 +29,10 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix up for parted v1.7
-	epatch ${FILESDIR}/qtparted-0.4.5-parted-1.7-fix.patch
+	epatch "${FILESDIR}"/qtparted-0.4.5-parted-1.7-fix.patch
 
 	# Switch from gksu to kdesu for the KDE desktop.
 	if use kde; then
