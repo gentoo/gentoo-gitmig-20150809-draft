@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.6 2007/07/11 20:39:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.7 2008/07/28 13:46:41 lack Exp $
 
 inherit gkrellm-plugin
 
@@ -13,7 +13,10 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="ppc sparc x86"
 
-DEPEND="x11-libs/libXxf86vm"
+DEPEND="x11-libs/libXxf86vm
+	x11-proto/xf86vidmodeproto"
+
+RDEPEND="x11-libs/libXxf86vm"
 
 PLUGIN_SO=gamma.so
 PLUGIN_DOCS="doc/ChangeLog"

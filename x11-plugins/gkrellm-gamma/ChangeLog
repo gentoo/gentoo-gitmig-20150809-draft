@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.16 2007/06/12 21:03:22 lack Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.17 2008/07/28 13:46:41 lack Exp $
+
+  28 Jul 2008; Jim Ramsay <lack@gentoo.org> gkrellm-gamma-2.03-r1.ebuild:
+  Added dependency on x11-libs/libXxf86vm (Bug #233029)
 
   12 Jun 2007; Jim Ramsay <lack@gentoo.org> -gkrellm-gamma-2.03.ebuild:
   Old version cleanup
