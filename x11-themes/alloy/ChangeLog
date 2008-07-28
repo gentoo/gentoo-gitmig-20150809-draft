@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.27 2008/02/19 02:06:30 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.28 2008/07/28 21:39:23 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> alloy-0.5.2.ebuild,
+  alloy-0.5.3.ebuild:
+  QA: Get rid of deprecated qt_min_version() by removing superfluous Qt
+  dependency. Quoting issue.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> alloy-0.5.2.ebuild:
   Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.3.ebuild,v 1.1 2007/04/08 11:07:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.3.ebuild,v 1.2 2008/07/28 21:39:23 carlo Exp $
 
 inherit kde
 
@@ -13,6 +13,5 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="|| ( kde-base/kwin >=kde-base/kdebase-3.2 )
-	$(qt_min_version 3.3)"
-need-kde 3.2
+DEPEND="|| ( kde-base/kwin >=kde-base/kdebase-3.2 )"
+need-kde 3.5
