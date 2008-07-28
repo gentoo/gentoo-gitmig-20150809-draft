@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.42 2008/07/27 01:10:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.43 2008/07/28 21:24:17 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qsynth-0.3.1-r1.ebuild:
+  QA: Get rid of deprecated qt4_min_version().
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qsynth-0.3.2.ebuild,
   qsynth-0.3.3.ebuild:
