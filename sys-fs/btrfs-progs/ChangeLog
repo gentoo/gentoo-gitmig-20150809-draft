@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.8 2008/07/28 01:39:04 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.9 2008/07/28 17:07:36 lavajoe Exp $
+
+  28 Jul 2008; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-0.15-r2.ebuild,
+  btrfs-progs-9999.ebuild:
+  Set RDEPEND="${DEPEND}"
 
   28 Jul 2008; Joe Peterson <lavajoe@gentoo.org>
   -files/btrfs-progs-0.14-hotfix.patch, -btrfs-progs-0.14.ebuild,

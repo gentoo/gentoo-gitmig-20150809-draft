@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.3 2008/07/28 01:39:04 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.4 2008/07/28 17:07:36 lavajoe Exp $
 
 inherit eutils mercurial
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/progs-unstable"
 
