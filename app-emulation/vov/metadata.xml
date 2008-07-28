@@ -12,4 +12,7 @@ It is basically an interpreter, which reads files in the form of memory assignme
 the encoded instructions. The vov's instructions make you able to perform simple arithmetic data
 manipulation. It is a very useful tool to see if your programs work and how.
 </longdescription>
+<use>
+	<flag name='gprof'>build with profiling support</flag>
+</use>
 </pkgmetadata>

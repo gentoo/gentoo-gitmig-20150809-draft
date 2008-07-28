@@ -13,4 +13,11 @@
 		first incarnation, the A1000, appeared in 1985, followed by the highly
 		successful A500 and A2000 models.
 	</longdescription>
+	<use>
+		<flag name='scsi'>Enable the uaescsi.device</flag>
+		<flag name='sdl-sound'>Use <pkg>media-sound/sdl-sound</pkg> for audio
+			output</flag>
+		<flag name='ui'>Build the user interface (could be gtk or ncurses based,
+			depending on sdl, dga, svga and aalib USE flags)</flag>
+	</use>
 </pkgmetadata>
