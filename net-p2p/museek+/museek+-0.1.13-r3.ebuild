@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r3.ebuild,v 1.1 2008/04/30 21:09:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r3.ebuild,v 1.2 2008/07/28 21:33:08 carlo Exp $
+
+EAPI=1
 
 inherit qt3 eutils distutils multilib
 
@@ -15,7 +17,7 @@ IUSE="debug fam gtk ncurses qsa qt3 trayicon vorbis"
 
 RDEPEND=">=dev-cpp/libxmlpp-1.0.2
 	gtk? ( >=dev-python/pygtk-2.6.1 )
-	qt3? ( $(qt_min_version 3.3) )
+	qt3? ( x11-libs/qt:3 )
 	qsa? ( >=dev-libs/qsa-1.1.1 )
 	vorbis? ( media-libs/libvorbis
 		media-libs/libogg )

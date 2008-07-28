@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.13 2008/05/28 20:58:57 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.14 2008/07/28 21:33:08 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> museek+-0.1.13-r3.ebuild:
+  QA: Get rid of deprecated qt_min_version().
 
   28 May 2008; Santiago M. Mola <coldwind@gentoo.org>
   -files/museek+-0.1.12-libxmlpp-dep-order.patch,
