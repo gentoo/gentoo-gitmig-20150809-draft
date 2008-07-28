@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<maintainer>
-  <email>wolf31o2@gentoo.org</email>
-  <name>Chris Gianelloni</name>
-</maintainer>
 <longdescription>
 TSclient is a GTK2+ frontend for rdesktop.
 </longdescription>
