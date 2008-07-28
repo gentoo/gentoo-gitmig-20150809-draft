@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta-r1.ebuild,v 1.2 2008/01/11 22:39:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta-r1.ebuild,v 1.3 2008/07/28 14:02:14 lack Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
-CDEPEMD="=app-admin/gkrellm-2*
+CDEPEND="=app-admin/gkrellm-2*
 	>=x11-libs/gtk+-2"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
