@@ -26,4 +26,7 @@ ANSI Common Lisp standard. Here is a summary of its main features:
  * a graphical source-level debugger using a Motif interface, and a
    code profiler.
 </longdescription>
+<use>
+<flag name='nosource'>Don't include source code for CMUCL in installation</flag>
+</use>
 </pkgmetadata>
