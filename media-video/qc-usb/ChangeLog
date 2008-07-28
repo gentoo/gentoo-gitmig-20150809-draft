@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.28 2008/02/02 23:43:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.29 2008/07/28 23:31:06 eva Exp $
+
+  28 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> qc-usb-0.6.6.ebuild:
+  fix pre-stripping QA warning.
 
   02 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/qc-usb-0.6.6-kcompat-2.6.24.patch, qc-usb-0.6.6.ebuild:
