@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.144 2008/07/27 21:55:03 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.145 2008/07/28 19:14:12 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
 *sbcl-1.0.18 (27 Jul 2008)
 
