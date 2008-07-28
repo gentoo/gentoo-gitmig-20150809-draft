@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-        <herd>xemacs</herd>
-        <maintainer>
-                <email>xemacs@gentoo.org</email>
-                <description>Primary Maintainer</description>
-        </maintainer>
-        <longdescription></longdescription>
+  <herd>xemacs</herd>
+  <maintainer>
+    <email>xemacs@gentoo.org</email>
+    <description>Primary Maintainer</description>
+  </maintainer>
+  <longdescription></longdescription>
+  <use>
+    <flag name='athena'>Chooses the MIT Athena widget set</flag>
+    <flag name='dnd'>Enables support for the x11-libs/dnd drag-n-drop
+      library</flag>
+    <flag name='eolconv'>Support detection and translation of newline
+      conventions</flag>
+    <flag name='hesiod'>Support Hesiod to get the POP server host</flag>
+    <flag name='pop'>Support POP for mail retrieval</flag>
+    <flag name='purify'>Support memory debugging using Purify</flag>
+    <flag name='quantify'>Support performance debugging using Quantify</flag>
+    <flag name='tooltalk'>Support the ToolTalk IPC protocol</flag>
+    <flag name='xft'>Compile with support for Xft client-side font rendering
+      and anti-aliasing</flag>
+    <flag name='xim'>Enable X11 XiM input method</flag>
+  </use>
 </pkgmetadata>
