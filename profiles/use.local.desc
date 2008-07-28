@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3652 2008/07/28 19:36:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3653 2008/07/28 19:47:44 ulm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -141,7 +141,6 @@ app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/jove:unix98 - Use the Unix98 pty's instead of the BSD pts's
 app-editors/katoob:highlight - Enable source code highlighting
 app-editors/nano:justify - Toggle the justify option ...
-app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 app-editors/tea:enchant - Enable spell checking using enchant
 app-editors/tea:hacking - Enable hacking support...
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links

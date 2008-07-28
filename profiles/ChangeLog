@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1723 2008/07/28 19:30:56 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1724 2008/07/28 19:47:44 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Delete unused app-editors/nvu:moznoxft local USE flag.
 
   28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> use.local.desc:
   delete gcl-cvs entries(deleted package)
