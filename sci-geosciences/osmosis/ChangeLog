@@ -1,0 +1,9 @@
+# ChangeLog for sci-geosciences/osmosis
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osmosis/ChangeLog,v 1.1 2008/07/28 00:59:23 hanno Exp $
+
+*osmosis-0.29 (28 Jul 2008)
+
+  28 Jul 2008; Hanno Boeck <hanno@gentoo.org> +osmosis-0.29.ebuild:
+  Initial commit of osmosis, a tool to process openstreetmap data.
+
