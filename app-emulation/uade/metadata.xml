@@ -5,4 +5,8 @@
 <maintainer>
 	<email>spock@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='audacious'>Enables support for
+		<pkg>media-sound/audacious</pkg></flag>
+</use>
 </pkgmetadata>
