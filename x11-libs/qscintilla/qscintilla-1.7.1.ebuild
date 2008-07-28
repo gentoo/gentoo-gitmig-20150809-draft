@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-1.7.1.ebuild,v 1.1 2007/11/20 05:17:20 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-1.7.1.ebuild,v 1.2 2008/07/28 21:36:25 carlo Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs qt3
 
@@ -17,7 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="$(qt_min_version 3.3)"
+DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
