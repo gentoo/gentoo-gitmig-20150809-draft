@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3650 2008/07/28 19:24:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3651 2008/07/28 19:30:56 pchrist Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -618,9 +618,6 @@ dev-lisp/clisp:pari - Build CLISP with support for the PARI Computer Algebra Sys
 dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine module
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/ecls:c++ - Build ECL with a C++ compiler
-dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
-dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
-dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
 dev-lisp/gcl:ansi - build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl:dlopen - build a GCL which uses dlopen for linking
