@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.9 2008/01/13 17:11:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.10 2008/07/28 21:30:06 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> italc-1.0.2.ebuild,
+  italc-1.0.3.ebuild:
+  QA: Get rid of deprecated qt4_min_version(). Please fix your ebuilds to
+  support split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   13 Jan 2008; Markus Ullmann <jokey@gentoo.org> italc-1.0.3.ebuild:
   Fix missing xinput dep for bug #205432

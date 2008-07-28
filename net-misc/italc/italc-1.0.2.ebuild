@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.2.ebuild,v 1.4 2007/12/20 23:25:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.2.ebuild,v 1.5 2008/07/28 21:30:06 carlo Exp $
+
+EAPI=1
 
 inherit qt4 eutils autotools
 
@@ -19,7 +21,7 @@ DEPEND="dev-libs/lzo
 	media-libs/jpeg
 	sys-libs/zlib
 	dev-libs/openssl
-	$(qt4_min_version 4)
+	=x11-libs/qt-4.3*:4
 	xinerama? ( x11-libs/libXinerama )
 	X? ( x11-libs/libICE
 		x11-libs/libSM
