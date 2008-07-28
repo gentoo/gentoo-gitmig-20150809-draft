@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.534 2008/07/25 06:59:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.535 2008/07/28 10:33:45 zmedico Exp $
+
+*portage-2.2_rc4 (28 Jul 2008)
+
+  28 Jul 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc4.ebuild:
+  2.2_rc4 bump. This fixes bugs #206773 (ionice config via make.conf),
+  #228085 (summarize elog file collision messages), #228117 (handle
+  make.conf ending without newline), #232924 (list package sets when given
+  an invalid set argument), #233077 (new QA check to verify that LDFLAGS is
+  respected), and #233137 (AttributeError when unmerging a set). Bug #210077
+  tracks all bugs fixed since 2.1.5.x. This version adds support for a new
+  EAPI="2_pre0" value that can be used in ebuilds when testing new features
+  such as USE dependencies. This is an experimental EAPI that will not be
+  supported after the final EAPI 2 is defined. For more information about
+  experimental EAPI features, refer to the "Ebuild" chapter of the html
+  documentation that is installed with portage when USE=doc is enabled.
 
   25 Jul 2008; Fabian Groffen <grobian@gentoo.org> portage-2.1.1-r2.ebuild:
   Drop userland_Darwin use, thanks mr_bones_ for noticing
