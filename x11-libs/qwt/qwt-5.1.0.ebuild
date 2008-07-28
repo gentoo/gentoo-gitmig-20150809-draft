@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.1.0.ebuild,v 1.1 2008/05/15 12:53:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.1.0.ebuild,v 1.2 2008/07/28 21:48:46 carlo Exp $
+
+EAPI=1
 
 inherit multilib qt4
 
@@ -12,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="5"
 IUSE="doc svg"
 
-DEPEND="$(qt4_min_version 4.2)"
+DEPEND="=x11-libs/qt-4.3*:4"
 
 src_compile () {
 	# Configuration file

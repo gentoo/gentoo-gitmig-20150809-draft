@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.63 2008/07/13 18:04:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.64 2008/07/28 21:48:46 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qwt-4.2.0-r2.ebuild,
+  qwt-4.2.0-r3.ebuild, qwt-5.0.2-r1.ebuild, qwt-5.1.0.ebuild:
+  QA: Get rid of deprecated qt?_min_version(). Please fix your ebuilds to
+  support split Qt 4.4 dependencies, cf. bug 217161 comment 11.
 
   13 Jul 2008; Tobias Scherbaum <dertobi123@gentoo.org> qwt-5.0.2-r1.ebuild:
   ppc stable, bug #196834

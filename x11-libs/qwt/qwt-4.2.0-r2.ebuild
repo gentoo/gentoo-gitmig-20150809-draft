@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r2.ebuild,v 1.1 2007/08/23 13:01:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r2.ebuild,v 1.2 2008/07/28 21:48:46 carlo Exp $
+
+EAPI=1
 
 inherit multilib qt3
 
@@ -12,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="doc examples"
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 
 src_compile () {
 	# Remove hardcoded -fno-exceptions from CXXFLAGS
