@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1-r1.ebuild,v 1.4 2008/06/09 08:06:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1-r1.ebuild,v 1.5 2008/07/28 18:04:39 ken69267 Exp $
 
 inherit eutils multilib linux-info
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://people.suug.ch/~tgr/libnl/"
 SRC_URI="http://people.suug.ch/~tgr/libnl/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
