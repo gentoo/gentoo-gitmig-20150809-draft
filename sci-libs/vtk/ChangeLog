@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.47 2008/07/27 01:19:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.48 2008/07/28 21:16:46 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> vtk-5.0.3.ebuild:
+  QA: Get rid of deprecated qt?_min_version().
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> vtk-5.0.4.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.

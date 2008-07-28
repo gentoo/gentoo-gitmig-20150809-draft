@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.12 2008/02/29 14:47:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.13 2008/07/28 21:16:46 carlo Exp $
 
 EAPI="1"
 
@@ -26,8 +26,8 @@ RDEPEND="mpi? ( || (
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	qt3? ( $(qt_min_version 3.3.4) )
-	qt4? ( $(qt4_min_version 4.1) )
+	qt3? ( x11-libs/qt:3 )
+	qt4? ( =x11-libs/qt-4.3*:4 )
 	dev-libs/expat
 	media-libs/freetype
 	media-libs/jpeg
