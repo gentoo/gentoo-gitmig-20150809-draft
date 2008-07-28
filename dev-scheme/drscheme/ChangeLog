@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.64 2008/07/25 20:40:57 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.65 2008/07/28 18:01:22 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   25 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   drscheme-0.372-r1.ebuild, drscheme-4.0.1.ebuild, drscheme-4.0.2.ebuild,
