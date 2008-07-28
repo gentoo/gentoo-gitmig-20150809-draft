@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.33 2008/07/11 05:56:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.34 2008/07/28 19:13:11 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   09 Jul 2008; Markus Rothe <corsair@gentoo.org> python-mode-1.0-r1.ebuild:
   Stable on ppc64; bug #212241
@@ -112,7 +115,7 @@
 *python-mode-4.6 (31 Oct 2002)
 
   31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
-  python-mode-4.6.ebuild, files/50python-mode-gentoo.el, 
+  python-mode-4.6.ebuild, files/50python-mode-gentoo.el,
   files/digest-python-mode-4.6 :
 
   Initial import.
