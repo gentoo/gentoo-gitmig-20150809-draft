@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.31 2008/06/26 14:10:20 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.32 2008/07/28 18:48:19 ken69267 Exp $
+
+  28 Jul 2008; Kenneth Prugh <ken69267@gentoo.org>
+  networkmanager-0.6.6.ebuild:
+  amd64 stable, bug #228837. Removed unused autotools inherit.
 
   26 Jun 2008; Robert Buchholz <rbu@gentoo.org>
   networkmanager-0.6.5_p20070823.ebuild,
