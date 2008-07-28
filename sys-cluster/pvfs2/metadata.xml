@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>hp-cluster</herd>
+<use>
+	<flag name='apidocs'>Build API documentation directly from the code using
+	doxygen</flag>
+	<flag name='server'>Enable compilation of server code</flag>
+	<flag name=''></flag>
+</use>
 </pkgmetadata>

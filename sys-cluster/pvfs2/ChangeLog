@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pvfs2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.16 2008/05/29 00:24:45 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.17 2008/07/28 20:51:16 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   29 May 2008; Justin Bronder <jsbronder@gentoo.org> ChangeLog:
   Use KV_OUT_DIR to support out of tree kernel builds.  (#223779).

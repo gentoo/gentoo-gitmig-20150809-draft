@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.70 2008/07/10 03:28:56 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.71 2008/07/28 20:54:59 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
 *torque-2.3.1 (10 Jul 2008)
 
