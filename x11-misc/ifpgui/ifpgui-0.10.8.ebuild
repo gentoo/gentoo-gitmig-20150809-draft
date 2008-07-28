@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ifpgui-0.10.8.ebuild,v 1.4 2007/12/07 14:00:28 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ifpgui-0.10.8.ebuild,v 1.5 2008/07/28 21:43:39 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3
 
@@ -19,7 +21,7 @@ for x in ${LANGS}; do
 done
 
 RDEPEND=">=media-libs/libifp-1.0.0.2
-	$(qt_min_version 3.3)
+	x11-libs/qt:3
 	>=dev-libs/libusb-0.1.7"
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.3.7 )"

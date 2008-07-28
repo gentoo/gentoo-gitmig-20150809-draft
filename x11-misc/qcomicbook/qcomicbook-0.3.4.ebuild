@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.3.4.ebuild,v 1.3 2007/08/21 22:29:55 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.3.4.ebuild,v 1.4 2008/07/28 21:48:04 carlo Exp $
+
+EAPI=1
 
 inherit autotools eutils qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="$(qt_min_version 3.3)
+RDEPEND="x11-libs/qt:3
 	media-libs/imlib2
 	|| ( app-arch/unrar app-arch/rar )
 	app-arch/zip"
