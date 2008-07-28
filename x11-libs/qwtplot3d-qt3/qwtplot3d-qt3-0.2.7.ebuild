@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/qwtplot3d-qt3-0.2.7.ebuild,v 1.3 2008/01/14 11:24:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/qwtplot3d-qt3-0.2.7.ebuild,v 1.4 2008/07/28 22:01:06 carlo Exp $
+
+EAPI=1
 
 inherit eutils multilib qt3
 
@@ -15,7 +17,7 @@ SLOT="0"
 IUSE="doc examples"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="$(qt_min_version 3.3)"
+RDEPEND="x11-libs/qt:3"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
