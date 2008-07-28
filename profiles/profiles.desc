@@ -30,7 +30,6 @@ amd64		default-linux/amd64/2007.0/server		stable
 arm		default-linux/arm/2004.3			dev
 
 # HPPA Profiles
-hppa		default-linux/hppa/2006.1			stable
 hppa		default-linux/hppa/2007.0			stable
 hppa		default-linux/hppa/2007.0/desktop		dev
 hppa		default-linux/hppa/2007.0/server		dev
