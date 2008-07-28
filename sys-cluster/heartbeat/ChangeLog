@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.76 2008/05/15 00:59:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.77 2008/07/28 20:05:31 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   15 May 2008; Diego Pettenò <flameeyes@gentoo.org> heartbeat-2.0.8.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.
