@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/polymer-0.3.2.ebuild,v 1.8 2006/07/08 08:43:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/polymer-0.3.2.ebuild,v 1.9 2008/07/28 21:57:49 carlo Exp $
+
+EAPI=1
 
 inherit qt3
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="mmx sse2"
 
-DEPEND="$(qt_min_version 3.3)"
+DEPEND="x11-libs/qt:3"
 
 src_compile() {
 	local myconf
@@ -27,7 +29,7 @@ src_compile() {
 src_install() {
 	dobin config/polymer-config
 	insopts -m0755
-	insinto ${QTDIR}/plugins/styles
+	insinto "${QTDIR}"/plugins/styles
 	doins style/libpolymer*
 	dodoc AUTHORS ChangeLog README TODO
 }

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8.ebuild,v 1.9 2008/05/27 01:06:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8.ebuild,v 1.10 2008/07/28 21:57:04 carlo Exp $
+
+EAPI=1
 
 ARTS_REQUIRED="never"
 
@@ -15,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="${DEPEND}
-	$(qt_min_version 3.3.8)
+	x11-libs/qt:3
 	>=x11-libs/gtk+-2.2"
 
 DEPEND="${RDEPEND}
