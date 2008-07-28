@@ -9,4 +9,8 @@
 <longdescription>
 	Fast, free, validating XML editor.
 </longdescription>
+<use>
+	<flag name='guidexml'>Install GuideXML templates to work with Gentoo
+	official docs</flag>
+</use>
 </pkgmetadata>

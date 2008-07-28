@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.37 2008/07/03 21:35:11 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.38 2008/07/28 19:52:47 ulm Exp $
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *tea-17.6.3 (03 Jul 2008)
 

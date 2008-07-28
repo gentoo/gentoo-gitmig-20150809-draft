@@ -11,4 +11,8 @@
 	including syntax hilighting and a built in file manager as well as a
 	built in image viewer. It can also read lots of 'other' filetypes.
   </longdescription>
+  <use>
+    <flag name='enchant'>Enable spell checking using enchant</flag>
+    <flag name='hacking'>Enable hacking support</flag>
+  </use>
 </pkgmetadata>
