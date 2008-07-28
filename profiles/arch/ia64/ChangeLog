@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.14 2008/07/07 15:30:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.15 2008/07/28 19:12:31 elvanor Exp $
+
+  28 Jul 2008; Jean-Noël Rivasseau <elvanor@gentoo.org> package.use.mask:
+  Removed test for icu4j as it requires jdk-1.6
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Reuse.mask hddtemp as its not stable yet, to remove in 30 days

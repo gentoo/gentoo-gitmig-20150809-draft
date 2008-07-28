@@ -1,3 +1,7 @@
+# Jean-Noel Rivasseau <elvanor@gentoo.org> (28 Jul 2008)
+# icu4j tests need jdk-1.6
+dev-java/icu4j test
+
 # Java currently uses generation 1
 dev-libs/cyrus-sasl java
 
