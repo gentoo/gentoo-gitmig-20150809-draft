@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/abcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl/ChangeLog,v 1.6 2008/03/24 22:31:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl/ChangeLog,v 1.7 2008/07/28 18:37:42 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   24 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> -abcl-0.0.9.ebuild:
   Delete generation 1 ebuild.
