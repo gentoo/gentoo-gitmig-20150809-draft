@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1721 2008/07/28 14:14:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1722 2008/07/28 17:50:21 wolf31o2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Added masks for livecd-kconfigs and livecd-specs. These packages will be
+  removed soon, but the masks should stay for a while, to let users know
+  where to get the data.
 
   28 Jul 2008; Guy Marting <gmsoft@gentoo.org> profiles.desc: 
   Got rid of hppa/2006.1 profile.

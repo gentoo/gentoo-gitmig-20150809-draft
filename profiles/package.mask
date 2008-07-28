@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8841 2008/07/27 20:57:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8842 2008/07/28 17:50:21 wolf31o2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (28 Jul 2008)
+# These are masked for removal.  Please leave this mask in place, even after the
+# packages have been removed, until at least December 2008.  These packages have
+# been replaced by the Gentoo Release Engineering repository, available via
+# http://sources.gentoo.org/viewcvs.py/releng/
+dev-util/livecd-kconfigs
+dev-util/livecd-specs
 
 # Tiziano Müller <dev-zero@gentoo.org> (26 Jul 2008)
 # Needs testing, no release yet
@@ -635,7 +643,7 @@ sys-apps/mindi-busybox
 =x11-apps/xdm-1.1.6-r1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (3 Mar 2008)
-# Masking due to security bug #194607 and isecurity bug #204067
+# Masking due to security bug #194607 and security bug #204067
 games-fps/doom3
 games-fps/doom3-chextrek
 games-fps/doom3-data
