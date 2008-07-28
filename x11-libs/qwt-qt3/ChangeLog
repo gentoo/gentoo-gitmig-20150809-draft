@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt-qt3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/ChangeLog,v 1.3 2007/08/23 18:50:37 caleb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/ChangeLog,v 1.4 2008/07/28 21:53:18 carlo Exp $
+
+  28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qwt-qt3-5.0.2.ebuild,
+  qwt-qt3-5.0.2-r1.ebuild:
+  QA: Get rid of deprecated qt_min_version(). Quoting issues
 
 *qwt-qt3-5.0.2-r1 (23 Aug 2007)
 

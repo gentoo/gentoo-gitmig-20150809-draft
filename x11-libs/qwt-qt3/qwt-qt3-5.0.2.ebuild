@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2.ebuild,v 1.2 2007/08/09 12:01:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2.ebuild,v 1.3 2008/07/28 21:53:18 carlo Exp $
+
+EAPI=1
 
 inherit multilib eutils qt3
 
@@ -18,12 +20,12 @@ QWTVER="5.0.2"
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 
 src_unpack () {
 	unpack ${A}
 
-	cd {S}
+	cd "{S}"
 
 	sed -i -e "s:TARGET            = qwt:TARGET            = qwt-qt3:" src/src.pro
 	sed -i -e "s:-lqwt:-lqwt-qt3:" designer/designer.pro
@@ -51,11 +53,11 @@ src_unpack () {
 
 src_compile () {
 	# -j1 due to parallel build failures ( bug # 170625 )
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qwt.pro
+	"${QTDIR}"/bin/qmake QMAKE="${QTDIR}"/bin/qmake qwt.pro
 	emake -j1 || die
 }
 
 src_install () {
-	make INSTALL_ROOT=${D} install
-	rm ${D}usr/$(get_libdir)/libqwt-qt3.so
+	make INSTALL_ROOT="${D}" install
+	rm "${D}"usr/$(get_libdir)/libqwt-qt3.so
 }

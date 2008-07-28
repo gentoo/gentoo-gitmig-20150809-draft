@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.2 2007/08/23 20:02:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.3 2008/07/28 21:53:18 carlo Exp $
+
+EAPI=1
 
 inherit multilib qt3
 
@@ -16,7 +18,7 @@ IUSE="doc"
 
 S="${WORKDIR}/${MY_P}"
 
-DEPEND="$(qt_min_version 3)"
+DEPEND="x11-libs/qt:3"
 
 src_compile () {
 	sed -i -e "s:TARGET .* = qwt:TARGET = qwt-qt3:" src/src.pro \
