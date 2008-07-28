@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.54 2008/05/14 20:25:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.55 2008/07/28 19:11:06 cardoe Exp $
+
+  28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   14 May 2008; Markus Meier <maekke@gentoo.org>
   qemu-softmmu-0.9.1-r3.ebuild:

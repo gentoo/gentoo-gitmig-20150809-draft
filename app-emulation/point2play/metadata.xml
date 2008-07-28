@@ -7,4 +7,8 @@ Point2Play, a new intuitive user interface, debuts with this release to help
 novice users easily deal with configuration issues and experienced users gain
 greater system control. 
 </longdescription>
+<use>
+	<flag name='emerald'>For people who are in the Transgaming Emerald
+		Club</flag>
+</use>
 </pkgmetadata>
