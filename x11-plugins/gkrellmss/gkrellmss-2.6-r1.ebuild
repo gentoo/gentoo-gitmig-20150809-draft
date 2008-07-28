@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6-r1.ebuild,v 1.1 2008/04/11 15:12:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6-r1.ebuild,v 1.2 2008/07/28 14:00:10 lack Exp $
 
 inherit gkrellm-plugin
 
@@ -22,6 +22,12 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 PLUGIN_SO="src/gkrellmss.so"
 PLUGIN_DOCS="Themes"
+
+pkg_preinst() {
+	if ! use esd && ! use alsa; then
+		die "You must enable at least one of USE=esd or USE=alsa"
+	fi
+}
 
 src_compile() {
 	local myconf
