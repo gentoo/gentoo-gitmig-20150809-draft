@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.43.ebuild,v 1.1 2008/07/20 10:04:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.44.ebuild,v 1.1 2008/07/28 08:42:53 tove Exp $
 
 MODULE_AUTHOR=DURIST
 inherit perl-module
