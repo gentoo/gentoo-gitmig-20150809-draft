@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.51 2008/04/20 22:00:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.52 2008/07/28 19:08:07 pchrist Exp $
+
+  28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> gcl-2.6.7.ebuild,
   gcl-2.6.7-r1.ebuild:
