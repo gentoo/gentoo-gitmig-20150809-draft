@@ -8,4 +8,7 @@ described in the X3J13 Ansi specification, featuring CLOS (Common Lisp Object
 System), conditions, loops, etc, plus a translator to C, which can produce
 standalone executables.
 </longdescription>
+<use>
+<flag name='c++'>Build ECL with a C++ compiler</flag>
+</use>
 </pkgmetadata>
