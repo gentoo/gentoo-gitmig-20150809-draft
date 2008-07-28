@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.11 2008/07/28 15:47:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.12 2008/07/28 18:20:54 drac Exp $
+
+  28 Jul 2008; Samuli Suominen <drac@gentoo.org>
+  +files/taglib-sharp-2.0.3.0-fix-doc-failure.patch,
+  files/taglib-sharp-2.0.3.0-fix-docdir.patch, taglib-sharp-2.0.3.0.ebuild:
+  Fix documentation building.
 
   28 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   taglib-sharp-2.0.2.0.ebuild:
