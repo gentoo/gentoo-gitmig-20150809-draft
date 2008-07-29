@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.46 2008/07/29 12:08:26 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.47 2008/07/29 16:45:18 ranger Exp $
+
+  29 Jul 2008; Brent Baude <ranger@gentoo.org> pbzip2-1.0.2-r1.ebuild:
+  stable ppc, bug 229881
 
   29 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
   pbzip2-1.0.2-r1.ebuild:
