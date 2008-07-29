@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.67 2008/06/01 21:32:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.68 2008/07/29 15:04:03 beandog Exp $
+
+  29 Jul 2008; Steve Dibb <beandog@gentoo.org>
+  realplayer-11.0.0.4028.ebuild:
+  Add mirror restriction
 
 *realplayer-11.0.0.4028 (01 Jun 2008)
 
