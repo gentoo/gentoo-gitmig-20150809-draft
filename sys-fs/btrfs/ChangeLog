@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.9 2008/07/28 01:37:59 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.10 2008/07/29 03:42:26 lavajoe Exp $
+
+  29 Jul 2008; Joe Peterson <lavajoe@gentoo.org> btrfs-0.15-r2.ebuild,
+  btrfs-9999.ebuild:
+  Add explicit DEPEND (with no deps)
 
   28 Jul 2008; Joe Peterson <lavajoe@gentoo.org>
   -files/btrfs-0.14-hotfix.patch, -btrfs-0.14.ebuild, -btrfs-0.15.ebuild,
