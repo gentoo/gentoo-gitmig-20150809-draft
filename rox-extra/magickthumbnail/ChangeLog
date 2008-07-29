@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/magickthumbnail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.8 2007/11/16 15:19:01 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.9 2008/07/29 15:10:42 lack Exp $
+
+  29 Jul 2008; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  added USE flag descriptions to metadata.xml
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org>
   magickthumbnail-0.5.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/comicthumb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.4 2007/11/16 15:05:52 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.5 2008/07/29 15:09:20 lack Exp $
+
+  29 Jul 2008; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  added USE flag descriptions to metadata.xml
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> comicthumb-0.1.ebuild:
   amd64 stable wrt #197514
