@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.3 2008/07/27 19:38:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.4 2008/07/29 06:56:53 vapier Exp $
 
 EAPI=1
 
@@ -80,8 +80,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	sh "${DISTDIR}/${A}" --keep --noexec
-	unpack ./install/VirtualBox.tar.bz2
+	unpack_makeself
+	unpack ./VirtualBox.tar.bz2
 }
 
 src_install() {
