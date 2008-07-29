@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.69 2008/04/11 20:45:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.70 2008/07/29 15:04:05 yngwin Exp $
+
+*id3lib-3.8.3-r7 (29 Jul 2008)
+
+  29 Jul 2008; Ben de Groot <yngwin@gentoo.org> +id3lib-3.8.3-r7.ebuild:
+  Rev bump to force recompilation, in order to fix bugs #233273 and #233240
 
   11 Apr 2008; Ben de Groot <yngwin@gentoo.org>
   +files/id3lib-3.8.3-gcc-4.3.patch, id3lib-3.8.3-r6.ebuild:
