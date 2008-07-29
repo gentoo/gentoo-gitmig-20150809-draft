@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1729 2008/07/29 14:50:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1730 2008/07/29 21:46:38 markusle Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  29 Jul 2008; Markus Dittrich <markusle@gentoo.org> package.mask:
+  Removed sci-libs/blas-atlas-3.9 and sci-libs/lapack-atlas-3.9 from
+  package.mask after some testing.
 
   29 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   targets/desktop/make.defaults:
