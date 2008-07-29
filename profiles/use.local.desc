@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3657 2008/07/28 21:02:15 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3658 2008/07/29 20:58:17 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -49,6 +49,8 @@
 # games-util
 # gnome-base
 # gnome-extra
+# rox-base
+# rox-extra
 # sys-cluster
 # End of metadata categories
 
