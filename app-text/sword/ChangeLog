@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.42 2008/06/09 12:53:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.43 2008/07/29 02:17:20 beandog Exp $
+
+*sword-1.5.11 (29 Jul 2008)
+
+  29 Jul 2008; Steve Dibb <beandog@gentoo.org> +sword-1.5.11.ebuild:
+  Version bump, bug 232375
 
   09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/sword-1.5.10+gcc-4.3.patch, sword-1.5.10-r2.ebuild:
