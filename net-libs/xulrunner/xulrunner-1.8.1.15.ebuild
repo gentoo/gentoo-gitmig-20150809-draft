@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.15.ebuild,v 1.6 2008/07/05 16:03:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.15.ebuild,v 1.7 2008/07/29 18:33:31 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -143,7 +143,7 @@ src_install() {
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.productSub\",\"${X_DATE}\");" \
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
-	echo "pref(\"general.useragent.productComment\",\"Gentoo\");" \
+	echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 
 	if use java ; then
