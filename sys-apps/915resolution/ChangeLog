@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/915resolution
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.12 2007/06/21 19:43:14 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.13 2008/07/29 20:33:49 chutzpah Exp $
+
+*915resolution-0.5.3-r2 (29 Jul 2008)
+
+  29 Jul 2008; Patrick McLean <chutz@gentoo.org>
+  +files/915resolution-0.5.3-965GM.patch, -915resolution-0.5.3.ebuild,
+  +915resolution-0.5.3-r2.ebuild:
+  Add patch contributed by David Krapohl <david.krapohl@gmail.com> to add
+  support for Intel 965GM (bug #186661). Clean out older version.
 
   21 Jun 2007; Christoph Mende <angelos@gentoo.org>
   915resolution-0.5.3-r1.ebuild:

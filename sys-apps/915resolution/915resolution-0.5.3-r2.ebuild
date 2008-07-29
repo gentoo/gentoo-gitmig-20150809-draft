@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3.ebuild,v 1.1 2007/04/17 16:36:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r2.ebuild,v 1.1 2008/07/29 20:33:49 chutzpah Exp $
+
+inherit eutils flag-o-matic
 
 DESCRIPTION="Utility to patch VBIOS of Intel 855 / 865 / 915 chipsets"
 HOMEPAGE="http://www.geocities.com/stomljen/"
@@ -8,13 +10,24 @@ SRC_URI="http://www.geocities.com/stomljen/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-freebsd.patch"
+
+	# add support for 965GM (bug #186661)
+	epatch "${FILESDIR}/${P}-965GM.patch"
+}
+
 src_compile() {
+	filter-flags -O -O1 -O2 -O3 -Os
 	emake clean
 	emake CFLAGS="${CFLAGS}" || die "Compiliation failed."
 }
@@ -22,7 +35,7 @@ src_compile() {
 src_install() {
 	dosbin ${PN}
 	newconfd "${FILESDIR}/confd" ${PN}
-	newinitd "${FILESDIR}/initd" ${PN}
+	newinitd "${FILESDIR}/initd-r1" ${PN}
 	dodoc README.txt changes.log chipset_info.txt dump_bios
 }
 
