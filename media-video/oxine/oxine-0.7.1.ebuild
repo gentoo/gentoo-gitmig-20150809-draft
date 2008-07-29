@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1.ebuild,v 1.4 2008/07/29 02:04:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1.ebuild,v 1.5 2008/07/29 15:34:25 armin76 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -9,7 +9,7 @@ DESCRIPTION="OSD frontend for Xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="0"
 IUSE="X curl debug dvb exif hal joystick jpeg lirc nls png v4l"
 
