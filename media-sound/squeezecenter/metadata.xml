@@ -15,4 +15,8 @@
     SoftSqueeze - a Logitech media player emulator that you can use as a
     client.
   </longdescription>
+  <use>
+    <flag name='alac'>Enable support for alac</flag>
+    <flag name='bonjour'>Enable support for bonjour</flag>
+  </use>
 </pkgmetadata>

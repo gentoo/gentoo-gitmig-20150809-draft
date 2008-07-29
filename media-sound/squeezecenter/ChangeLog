@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.18 2008/06/03 21:22:02 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.19 2008/07/29 22:29:00 lavajoe Exp $
+
+  29 Jul 2008; Joe Peterson <lavajoe@gentoo.org> metadata.xml:
+  Add local use flags to metadata
 
 *squeezecenter-7.0.2_beta20080530 (03 Jun 2008)
 
