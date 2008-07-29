@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.3.ebuild,v 1.6 2008/04/27 17:54:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.3.ebuild,v 1.7 2008/07/29 08:43:12 carlo Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic toolchain-funcs qt3 fdo-mime
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc nodot qt3 tetex elibc_FreeBSD"
 
-RDEPEND="qt3? ( $(qt_min_version 3.3) )
+RDEPEND="qt3? ( x11-libs/qt:3 )
 	tetex? ( virtual/tetex )
 	virtual/ghostscript
 	!nodot? ( >=media-gfx/graphviz-2.6 )"
