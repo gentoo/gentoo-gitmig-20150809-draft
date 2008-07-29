@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/archive-2.2.ebuild,v 1.1 2008/06/19 15:45:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/archive-2.2.ebuild,v 1.2 2008/07/29 15:07:42 lack Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox-0install
@@ -40,5 +40,10 @@ src_install() {
 		$(usemime ace "application/x-ace")
 		$(usemime rpm "application/x-rpm" )
 		$(usemime cpio "application/x-cpio;application/x-cpio-compressed")"
+	if use rpm && ! use cpio; then
+		APPMIME="${APPMIME}
+			application/x-cpio;application/x-cpio-compressed"
+	fi
+
 	rox-0install_src_install
 }
