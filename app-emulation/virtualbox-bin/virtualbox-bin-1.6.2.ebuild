@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.4 2008/07/29 06:56:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.2.ebuild,v 1.5 2008/07/29 07:02:21 vapier Exp $
 
 EAPI=1
 
@@ -57,7 +57,7 @@ RESTRICT="fetch"
 pkg_nofetch() {
 	elog "Please from the site:"
 	elog "https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_SMI-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=innotek-1.6-G-F@CDS-CDS_SMI"
-	if use amd64; then
+	if use amd64 ; then
 		elog "select \"Linux (AMD64)\" and download \"${MY_P}_amd64.run\""
 	else
 		elog "select \"Linux i386\" and download \"${MY_P}_x86.run\""
@@ -68,12 +68,12 @@ pkg_nofetch() {
 pkg_setup() {
 	# The VBoxSDL frontend needs media-libs/libsdl compiled
 	# with USE flag X enabled (bug #177335)
-	if ! use headless; then
-			if ! built_with_use media-libs/libsdl X; then
-				eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
-				eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
-				die "media-libs/libsdl should be compiled with the \"X\" USE flag."
-			fi
+	if ! use headless ; then
+		if ! built_with_use media-libs/libsdl X ; then
+			eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
+			eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
+			die "media-libs/libsdl should be compiled with the \"X\" USE flag."
+		fi
 	fi
 
 	check_license
@@ -85,9 +85,9 @@ src_unpack() {
 }
 
 src_install() {
-	if ! use headless; then
-			newicon VBox.png virtualbox.png
-			newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
+	if ! use headless ; then
+		newicon VBox.png virtualbox.png
+		newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
 	fi
 
 	# create virtualbox configurations files
@@ -116,31 +116,31 @@ src_install() {
 	fi
 
 	rm -rf src sdk tst* rdesktop-vrdp.tar.gz deffiles install* routines.sh \
-	runlevel.sh vboxdrv.sh VBox.sh VBox.png kchmviewer additions VirtualBox.desktop \
-	VirtualBox.tar.bz2 vboxnet.sh LICENSE VBoxSysInfo.sh rdesktop* vboxwebsrv webtest
+		runlevel.sh vboxdrv.sh VBox.sh VBox.png kchmviewer additions VirtualBox.desktop \
+		VirtualBox.tar.bz2 vboxnet.sh LICENSE VBoxSysInfo.sh rdesktop* vboxwebsrv webtest
 
-	if use headless; then
-			rm -rf VBoxSDL VirtualBox VBoxKeyboard.so VirtualBoxAPI.chm \
+	if use headless ; then
+		rm -rf VBoxSDL VirtualBox VBoxKeyboard.so VirtualBoxAPI.chm \
 			VirtualBox.chm
 	fi
 
-	doins -r *
+	doins -r * || die
 
-	if ! use headless; then
-			for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl,Headless} VirtualBox; do
-				fowners root:vboxusers /opt/VirtualBox/${each}
-				fperms 0750 /opt/VirtualBox/${each}
-				pax-mark -m "${D}"/opt/VirtualBox/${each}
-			done
+	if ! use headless ; then
+		for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl,Headless} VirtualBox; do
+			fowners root:vboxusers /opt/VirtualBox/${each}
+			fperms 0750 /opt/VirtualBox/${each}
+			pax-mark -m "${D}"/opt/VirtualBox/${each}
+		done
 
-			dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
-			dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
+		dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
+		dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
 	else
-			for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,Headless} ; do
-				fowners root:vboxusers /opt/VirtualBox/${each}
-				fperms 0750 /opt/VirtualBox/${each}
-				pax-mark -m "${D}"/opt/VirtualBox/${each}
-			done
+		for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,Headless} ; do
+			fowners root:vboxusers /opt/VirtualBox/${each}
+			fperms 0750 /opt/VirtualBox/${each}
+			pax-mark -m "${D}"/opt/VirtualBox/${each}
+		done
 	fi
 
 	exeinto /opt/VirtualBox
@@ -160,13 +160,13 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog ""
-	if ! use headless; then
-			elog "To launch VirtualBox just type: \"VirtualBox\""
-			elog ""
-			elog "In order to use the online help, create a link"
-			elog "to your favourite chm viewer, for example:"
-			elog "ln -s /usr/bin/kchmviewer /opt/VirtualBox/kchmviewer"
-			elog ""
+	if ! use headless ; then
+		elog "To launch VirtualBox just type: \"VirtualBox\""
+		elog ""
+		elog "In order to use the online help, create a link"
+		elog "to your favourite chm viewer, for example:"
+		elog "ln -s /usr/bin/kchmviewer /opt/VirtualBox/kchmviewer"
+		elog ""
 	fi
 	elog "You must be in the vboxusers group to use VirtualBox"
 	elog ""
