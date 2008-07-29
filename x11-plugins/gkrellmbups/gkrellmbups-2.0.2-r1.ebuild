@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2-r1.ebuild,v 1.4 2007/05/07 17:34:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2-r1.ebuild,v 1.5 2008/07/29 15:23:15 lack Exp $
 
 inherit gkrellm-plugin
 
@@ -17,7 +17,7 @@ RDEPEND="nut? ( sys-power/nut )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's:/usr/include/gkrell:/usr/include/gkrellm2:g' configure
 }
 
