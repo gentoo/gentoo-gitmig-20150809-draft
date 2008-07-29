@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.66 2008/06/11 10:36:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.67 2008/07/29 17:32:49 bluebird Exp $
+
+  29 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> xsane-0.995.ebuild:
+  Stable on sparc, bug #231189
 
   11 Jun 2008; Raúl Porcel <armin76@gentoo.org> xsane-0.994.ebuild,
   xsane-0.995.ebuild:
