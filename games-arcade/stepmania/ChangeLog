@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.22 2008/06/21 13:20:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.23 2008/07/29 19:01:53 drac Exp $
+
+  29 Jul 2008; Samuli Suominen <drac@gentoo.org> stepmania-3.9.ebuild:
+  Bump ffmpeg dep. for last change to 0.4.9_p20080326 wrt #232364.
 
   21 Jun 2008; Hanno Boeck <hanno@gentoo.org>
   +files/stepmania-3.9-newffmpeg.diff, stepmania-3.9.ebuild:

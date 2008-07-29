@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.14 2008/06/21 13:20:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.15 2008/07/29 19:01:53 drac Exp $
 
 inherit autotools eutils games
 
@@ -25,7 +25,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	media-libs/libsdl
 	jpeg? ( media-libs/jpeg )
 	media-libs/libpng
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	vorbis? ( media-libs/libvorbis )
 	virtual/opengl
 	virtual/glu"
