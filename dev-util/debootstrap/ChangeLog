@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.61 2008/07/15 17:55:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.62 2008/07/29 22:04:36 jer Exp $
+
+  29 Jul 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> debootstrap-0.2.45-r1.ebuild,
   debootstrap-0.3.3.2.ebuild, debootstrap-1.0.9.ebuild,

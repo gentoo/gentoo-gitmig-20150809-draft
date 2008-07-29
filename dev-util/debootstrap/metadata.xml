@@ -6,4 +6,7 @@
 		<email>jer@gentoo.org</email>
 		<name>Jeroen Roovers</name>
 	</maintainer>
+	<use>
+		<flag name='nodpkg'>Don't install dpkg (useful for building a non-debian system)</flag>
+	</use>
 </pkgmetadata>
