@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00.ebuild,v 1.3 2008/07/26 21:40:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00.ebuild,v 1.4 2008/07/29 10:43:53 bicatali Exp $
 
 EAPI=1
 inherit versionator flag-o-matic eutils toolchain-funcs qt4 fortran
@@ -18,7 +18,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
 IUSE="afs cern clarens doc fftw geant4 kerberos ldap +math mysql odbc
-	oracle pch postgres python ruby qt4 ssl xml xrootd"
+	oracle postgres python ruby qt4 ssl xml xrootd"
 
 # libafterimage ignored, may be re-install for >=5.20
 # see https://savannah.cern.ch/bugs/?func=detailitem&item_id=30944
@@ -43,7 +43,7 @@ RDEPEND="sys-apps/shadow
 	qt4? ( || ( ( x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-qt3support:4
-			x11-libs/qt-xml:4 )
+			x11-libs/qt-xmlpatterns:4 )
 			=x11-libs/qt-4.3* ) )
 	fftw? ( sci-libs/fftw:3.0 )
 	python? ( dev-lang/python )
@@ -51,7 +51,7 @@ RDEPEND="sys-apps/shadow
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
 	geant4? ( sci-physics/geant:4 )
-	odbc? ( dev-db/unixODBC )
+	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	clarens? ( dev-libs/xmlrpc-c )"
 
@@ -118,6 +118,9 @@ src_compile() {
 		myconf="${myconf} --with-clhep-incdir=/usr/include" && \
 		myconf="${myconf} --with-g4-libdir=${G4LIB}"
 
+	use odbc && [[ -z $(type -P odbc-config) ]] && \
+		myconf="${myconf} --with-odbc-incdir=/usr/include/iodbc"
+
 	# the configure script is not the standard autotools
 	./configure \
 		${target} \
@@ -163,7 +166,6 @@ src_compile() {
 		$(use_enable math unuran) \
 		$(use_enable mysql) \
 		$(use_enable odbc) \
-		$(use_enable pch) \
 		$(use_enable postgres pgsql) \
 		$(use_enable python) \
 		$(use_enable qt4 qt) \

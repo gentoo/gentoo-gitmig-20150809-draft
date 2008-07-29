@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00d.ebuild,v 1.6 2008/07/27 22:20:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00d.ebuild,v 1.7 2008/07/29 10:43:53 bicatali Exp $
 
 EAPI="1"
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
@@ -39,7 +39,7 @@ RDEPEND="sys-apps/shadow
 	qt4? ( || ( ( x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-qt3support:4
-			x11-libs/qt-xml:4 )
+			x11-libs/qt-xmlpatterns:4 )
 			=x11-libs/qt-4.3* ) )
 	fftw? ( >=sci-libs/fftw-3 )
 	python? ( dev-lang/python )

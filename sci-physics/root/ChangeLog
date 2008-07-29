@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.32 2008/07/27 22:20:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.33 2008/07/29 10:43:53 bicatali Exp $
+
+  29 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  root-5.18.00d.ebuild, root-5.20.00.ebuild:
+  Added use flags in metadata.xml, removed pch use flag (buggy upstream),
+  added libiodbc as a possible implementation for ODBC. Also fixed
+  qt-xmlpatterns dependency.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> root-5.16.00.ebuild,
   root-5.18.00d.ebuild:

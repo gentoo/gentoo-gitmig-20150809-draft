@@ -10,4 +10,48 @@
   statistics, serialization, optimization, linear algebra, graphics,
   GUI toolkit, and a complete visualization framework.
 </longdescription>
+<use>
+  <flag name="cern">
+    Build the HBOOK input/ouput functionality. HBOOK is a histogram
+    library. On ROOT versions previous to 5.20.00, it will depend
+    on <pkg>sci-physics/cernlib</pkg>. On versions above, it only need
+    a FORTRAN compiler.
+  </flag>
+  <flag name="cint7">
+    Build the experimental C++ INTerpreter version 7. Use with caution to
+    test this newer interpreter. If not sure, stick with version 6
+    included by default.
+  </flag>
+  <flag name="clarens">
+    Buld the Clarens and PEAC plug-ins, to use in a GRID enabled
+    analysis. The Clarens Grid-Enabled Web Services Framework is an
+    open source portal for ubiquitous access to data and computational
+    resources provided by computing grids. PEAC is an interactive
+    distributed analysis framework that uses Clarens as a glue
+    protocol to advertise and communicate amongst SAM, Global Manager
+    (GM), Local Manager (LM), DCache, and PROOF services.
+    It doesn't need Clarens to build, however if you want to use it,
+    you will require to build Clarens and PEAC on your own, it is not
+    yet in the Gentoo Portage tree. 
+    See http://clarens.sourceforge.net/ for Clarens
+    and http://physics.ucsd.edu/~schsu/project/peac.html for
+    PEAC.
+  </flag>
+  <flag name="geant4">
+    Build the <pkg>sci-physics/geant</pkg> (GEANT4) navigator.    
+  </flag>
+  <flag name="math">
+    Build all math libraries plugins. It includes
+    the <pkg>sci-libs/gsl</pkg> bindings in MathMore, the GenVector
+    physical vectors package, the Minuit2 minimization library (same as
+    standalone <pkg>sci-libs/minuit</pkg>), the RooFit toolkit for
+    distribution modeling, and the Universal Non-Uniform RANdom number
+    generators (UNURAN) library.
+  </flag>
+  <flag name="xrootd">
+    Build the xrootd low latency file server. For more on the eXtended Request
+    Daemon (xrd) and associated software, please see
+    http://xrootd.slac.stanford.edu.
+  </flag>
+</use>
 </pkgmetadata>
