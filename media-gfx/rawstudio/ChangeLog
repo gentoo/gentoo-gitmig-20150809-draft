@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.4 2008/05/03 08:48:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.5 2008/07/29 14:31:26 armin76 Exp $
+
+  29 Jul 2008; Raúl Porcel <armin76@gentoo.org> rawstudio-1.0.ebuild:
+  x86 stable wrt #232809
 
 *rawstudio-1.0 (03 May 2008)
 
