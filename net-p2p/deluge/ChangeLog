@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.83 2008/07/29 13:53:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.84 2008/07/29 20:53:53 armin76 Exp $
+
+  29 Jul 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc2.ebuild,
+  deluge-1.0.0_rc3.ebuild, deluge-1.0.0_rc4.ebuild:
+  1.0.0_rc* should have keywords
 
 *deluge-1.0.0_rc4 (29 Jul 2008)
 
