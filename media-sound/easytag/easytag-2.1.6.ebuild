@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6.ebuild,v 1.1 2008/07/28 14:48:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6.ebuild,v 1.2 2008/07/29 19:37:56 drac Exp $
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac flac mp3 speex vorbis wavpack"
 
 RDEPEND=">=x11-libs/gtk+-2.12
-	mp3? ( >=media-libs/id3lib-3.8.3-r6
+	mp3? ( >=media-libs/id3lib-3.8.3-r7
 		media-libs/libid3tag )
 	flac? ( media-libs/flac
 		media-libs/libvorbis )
