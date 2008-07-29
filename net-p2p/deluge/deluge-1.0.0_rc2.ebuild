@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.0_rc2.ebuild,v 1.1 2008/07/15 13:18:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.0_rc2.ebuild,v 1.2 2008/07/29 13:53:46 armin76 Exp $
 
 inherit eutils distutils flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="gtk"
 
 S="${WORKDIR}"/${MY_P}
 
-DEPEND=">=dev-lang/python-2.3
+DEPEND=">=dev-lang/python-2.4
 	dev-libs/boost"
 RDEPEND="${DEPEND}
 	dev-python/pyxdg
