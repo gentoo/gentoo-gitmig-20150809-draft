@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.161 2008/07/16 16:19:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.162 2008/07/29 20:19:40 chutzpah Exp $
+
+*courier-imap-4.4.1 (29 Jul 2008)
+
+  29 Jul 2008; Patrick McLean <chutz@gentoo.org> metadata.xml,
+  +courier-imap-4.4.1.ebuild:
+  Version bump (bug #183434), allow eautoreconf to be recursive (bug
+  #226127). Take over maintainership.
 
   16 Jul 2008; Luca Longinotti <chtekk@gentoo.org>
   courier-imap-3.0.8.ebuild:
