@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/sublib
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sublib/ChangeLog,v 1.1 2008/07/29 01:16:38 beandog Exp $
+
+*sublib-0.9 (29 Jul 2008)
+
+  29 Jul 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sublib-0.9.ebuild:
+  Initial commit, bug 224547
+
