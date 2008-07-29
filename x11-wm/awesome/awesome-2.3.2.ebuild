@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.2.ebuild,v 1.2 2008/07/18 06:45:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.2.ebuild,v 1.3 2008/07/29 16:21:00 matsuu Exp $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="awesome is a window manager initialy based on a dwm code rewriting"
+DESCRIPTION="A dynamic floating and tiling window manager"
 HOMEPAGE="http://awesome.naquadah.org/"
 SRC_URI="http://awesome.naquadah.org/download/${P}.tar.gz"
 
