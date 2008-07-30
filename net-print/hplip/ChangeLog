@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.100 2008/05/29 17:47:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.101 2008/07/30 14:54:26 calchan Exp $
+
+*hplip-2.8.6b (30 Jul 2008)
+
+  30 Jul 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.8.6b.ebuild:
+  Version bump. Fixed bugs #223121, #223715 and #230913.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> hplip-2.7.12-r1.ebuild:
   python_mod_optimize is ROOT aware.
