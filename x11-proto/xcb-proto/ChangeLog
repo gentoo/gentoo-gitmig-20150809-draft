@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/xcb-proto
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.17 2007/11/07 08:26:07 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.18 2008/07/30 22:29:45 dberkholz Exp $
+
+*xcb-proto-1.2 (30 Jul 2008)
+
+  30 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xcb-proto-1.2.ebuild:
+  Bump. Adds support for XInput and SELinux extensions, the
+  language-independent parts of a Python parser, and other bugfixes.
 
 *xcb-proto-1.1 (07 Nov 2007)
 
