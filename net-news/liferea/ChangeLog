@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.159 2008/07/25 16:40:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.160 2008/07/30 22:39:41 eva Exp $
+
+  30 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> liferea-1.4.17.ebuild:
+  fix package generated with intltool-0.40.
 
   25 Jul 2008; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Add use flags to metadata

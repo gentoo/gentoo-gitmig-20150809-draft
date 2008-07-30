@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.17.ebuild,v 1.1 2008/07/25 14:57:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.17.ebuild,v 1.2 2008/07/30 22:39:41 eva Exp $
 
 WANT_AUTOMAKE=1.7
 inherit gnome2 eutils autotools
@@ -74,11 +74,11 @@ pkg_setup() {
 		die "You must enable on of the backends"
 	fi
 
-	G2CONF="${G2CONF} \
-		$(use_enable dbus) \
-		$(use_enable gnutls) \
-		$(use_enable libnotify) \
-		$(use_enable lua) \
+	G2CONF="${G2CONF}
+		$(use_enable dbus)
+		$(use_enable gnutls)
+		$(use_enable libnotify)
+		$(use_enable lua)
 		$(use_enable networkmanager nm)"
 }
 
@@ -86,6 +86,8 @@ src_unpack() {
 	gnome2_src_unpack
 
 	epatch "${FILESDIR}"/${P}-xulrunner-1.9.patch
+
+	intltoolize --force || die "intltoolize failed"
 	eautoreconf
 }
 
