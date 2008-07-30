@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.105 2008/07/27 18:45:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.106 2008/07/30 21:59:04 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> seahorse-2.22.3.ebuild:
+  Marking seahorse-2.22.3 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> seahorse-2.22.3.ebuild:
   Stable on amd64, bug #229709
