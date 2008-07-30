@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.339 2008/07/27 18:54:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.340 2008/07/30 22:04:47 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gnome-2.22.2.ebuild:
+  Marking gnome-2.22.2 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> gnome-2.22.2.ebuild:
   Stable on amd64, bug #229709
