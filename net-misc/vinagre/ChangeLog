@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.9 2008/07/27 18:37:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.10 2008/07/30 21:54:04 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> vinagre-0.5.1.ebuild:
+  Marking vinagre-0.5.1 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> vinagre-0.5.1.ebuild:
   Stable on amd64, bug #229709
