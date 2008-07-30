@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/ms-sys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.2 2008/05/19 11:47:50 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.3 2008/07/30 16:41:10 drac Exp $
+
+  30 Jul 2008; Samuli Suominen <drac@gentoo.org> ms-sys-2.1.3.ebuild:
+  amd64 stable wrt #232515 and use PREFIX also in src_compile for emake,
+  since it's required to define -DLOCALEDIR at build time.
 
   19 May 2008; Dawid Węgliński <cla@gentoo.org> ms-sys-2.1.3.ebuild:
   Add ~x86 keyword
