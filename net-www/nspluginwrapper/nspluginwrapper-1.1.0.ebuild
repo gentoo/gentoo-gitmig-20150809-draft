@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.5.ebuild,v 1.1 2007/08/28 13:33:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.0.ebuild,v 1.1 2008/07/30 19:46:54 chutzpah Exp $
 
-inherit nsplugins flag-o-matic multilib
+inherit eutils nsplugins multilib
 
 DESCRIPTION="Netscape Plugin Wrapper - Load 32bit plugins on 64bit browser"
 HOMEPAGE="http://www.gibix.net/projects/nspluginwrapper/"
-SRC_URI="http://www.gibix.net/projects/nspluginwrapper/files/${P}.tar.bz2"
+SRC_URI="http://www.gibix.net/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,22 +24,23 @@ src_compile() {
 	econf --with-biarch \
 		--with-lib32=$(ABI=x86 get_libdir) \
 		--with-lib64=$(get_libdir) \
-		--pkglibdir=/usr/$(get_libdir)/${PN} || die
-	emake || die
+		--pkglibdir=/usr/$(get_libdir)/${PN}
+
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" DONT_STRIP=yes install || die
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
-	inst_plugin /usr/$(get_libdir)/nspluginwrapper/x86_64/linux/npwrapper.so
-	dosym /usr/$(get_libdir)/nspluginwrapper/x86_64/linux/npconfig /usr/bin/nspluginwrapper
+	inst_plugin "/usr/$(get_libdir)/${PN}/x86_64/linux/npwrapper.so"
+	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}"
 
 	dodoc NEWS README TODO ChangeLog
 }
 
 pkg_postinst() {
 	einfo "Auto installing 32bit plugins..."
-	nspluginwrapper -a -i
+	${PN} -a -i
 	elog "Any 32bit plugins you currently have installed have now been"
 	elog "configured to work in a 64bit browser. Any plugins you install in"
 	elog "the future will first need to be setup with:"
@@ -54,12 +55,12 @@ pkg_postinst() {
 
 pkg_prerm() {
 	einfo "Removing wrapper plugins..."
-	nspluginwrapper -a -r
+	${PN} --auto --remove
 }
 
 pkg_postrm() {
-	if [[ -x /usr/bin/nspluginwrapper ]]; then
+	if [[ -x /usr/bin/${PN} ]]; then
 		einfo "Auto installing 32bit plugins..."
-		nspluginwrapper -a -i
+		${PN} --auto --install
 	fi
 }
