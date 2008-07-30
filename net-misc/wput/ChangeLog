@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wput
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.21 2008/03/25 16:09:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.22 2008/07/30 01:27:11 yngwin Exp $
+
+  30 Jul 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Taking on maintainership
 
   25 Mar 2008; Raúl Porcel <armin76@gentoo.org> wput-0.6.1.ebuild:
   x86 stable
