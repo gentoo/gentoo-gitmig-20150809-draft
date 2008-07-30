@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.16.ebuild,v 1.7 2008/07/29 18:33:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.16.ebuild,v 1.8 2008/07/30 10:42:58 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -134,13 +134,8 @@ src_compile() {
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	emake DESTDIR="${D}" install || die "emake install failed"
-	X_DATE=`date +%Y%m%d`
 
-	# Add Gentoo package version to preferences - copied from debian rules
-	echo "pref(\"general.useragent.product\",\"Gecko\");" \
-		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
-	echo "pref(\"general.useragent.productSub\",\"${X_DATE}\");" \
-		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
+	# Add vendor
 	echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 
