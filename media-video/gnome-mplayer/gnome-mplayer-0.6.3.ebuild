@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.6.1.ebuild,v 1.1 2008/04/20 13:27:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.6.3.ebuild,v 1.1 2008/07/30 18:08:11 drac Exp $
 
 GCONF_DEBUG=no
 
