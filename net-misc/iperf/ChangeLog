@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.23 2007/06/12 17:54:39 lavajoe Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.24 2008/07/30 01:49:46 jer Exp $
+
+*iperf-2.0.4 (30 Jul 2008)
+
+  30 Jul 2008; Jeroen Roovers <jer@gentoo.org> +iperf-2.0.4.ebuild:
+  Version bump thanks to Jeff Waller (bug #233215).
 
   12 Jun 2007; Joe Peterson <lavajoe@gentoo.org> iperf-2.0.2.ebuild:
   Add ~x86-fbsd keyword
