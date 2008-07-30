@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.100 2008/07/26 23:08:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.101 2008/07/30 13:30:34 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org>
+  gst-plugins-flac-0.10.8.ebuild:
+  Marking gst-plugins-flac-0.10.8 ppc stable for bug 232054
 
   26 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
   fix QA warning "IUSE undefined"
