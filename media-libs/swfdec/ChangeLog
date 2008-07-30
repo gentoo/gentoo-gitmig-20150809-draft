@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.43 2008/07/30 15:47:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.44 2008/07/30 21:56:33 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> swfdec-0.6.6-r1.ebuild:
+  Marking swfdec-0.6.6-r1 ppc stable for bug 229709
 
 *swfdec-0.7.4 (30 Jul 2008)
 
