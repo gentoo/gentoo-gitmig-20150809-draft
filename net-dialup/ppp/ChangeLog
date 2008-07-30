@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.221 2008/07/15 16:19:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.222 2008/07/30 20:37:29 mrness Exp $
+
+*ppp-2.4.4-r18 (30 Jul 2008)
+
+  30 Jul 2008; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r18.ebuild:
+  Link pppoe-discovery program with user selected LDFLAGS (#233317).
 
   15 Jul 2008; Alin Năstac <mrness@gentoo.org> ppp-2.4.4-r15.ebuild,
   ppp-2.4.4-r17.ebuild:
