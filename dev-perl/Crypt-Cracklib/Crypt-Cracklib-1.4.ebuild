@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4.ebuild,v 1.2 2008/07/30 04:15:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4.ebuild,v 1.3 2008/07/30 07:07:46 mr_bones_ Exp $
 
 MODULE_AUTHOR="DANIEL"
 inherit perl-module
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~daniel/${P}/"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~amd64 ~ia64 ~x86"
-IUSE=""
+IUSE="test"
 SRC_TEST="do"
 
 RDEPEND="sys-libs/cracklib
