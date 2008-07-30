@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/viking
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.1 2008/06/24 12:46:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.2 2008/07/30 00:45:59 hanno Exp $
+
+*viking-0.9.5 (30 Jul 2008)
+
+  30 Jul 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/viking-0.9.5-newgoogle.diff, +viking-0.9.5.ebuild:
+  Version bump.
 
 *viking-0.9.4.20080614 (24 Jun 2008)
 
