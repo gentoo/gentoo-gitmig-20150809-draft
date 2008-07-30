@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.57 2008/07/27 22:15:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.58 2008/07/30 22:09:20 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gnome-vfsmm-2.22.0.ebuild:
+  Marking gnome-vfsmm-2.22.0 ppc stable for bug 229709
 
   27 Jul 2008; Olivier Crête <tester@gentoo.org> gnome-vfsmm-2.22.0.ebuild:
   Stable on amd64, bug #229709
