@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.276 2008/07/28 17:57:32 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.277 2008/07/30 21:57:47 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gdm-2.20.7.ebuild:
+  Marking gdm-2.20.7 ppc stable for bug 229709
 
   28 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml:
   Add local USE flags to metadata.xml
