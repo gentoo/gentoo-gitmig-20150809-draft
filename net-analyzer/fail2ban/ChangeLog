@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.43 2008/06/21 11:02:09 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.44 2008/07/30 14:40:56 jer Exp $
+
+*fail2ban-0.8.3 (30 Jul 2008)
+
+  30 Jul 2008; Jeroen Roovers <jer@gentoo.org> +fail2ban-0.8.3.ebuild:
+  Version bump thanks to cilly (bug #232552).
 
   21 Jun 2008; Friedrich Oslage <bluebird@gentoo.org> fail2ban-0.8.2.ebuild:
   Add ~sparc at user request (Guido Winkelmann), bug #228591
