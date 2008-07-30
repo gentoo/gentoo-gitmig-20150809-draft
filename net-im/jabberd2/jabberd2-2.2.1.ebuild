@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.0-r2.ebuild,v 1.3 2008/07/28 14:55:31 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.1.ebuild,v 1.1 2008/07/30 11:34:36 gentoofan23 Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -30,12 +30,6 @@ RDEPEND="${DEPEND}
 	!net-im/jabberd"
 
 S="${WORKDIR}/jabberd-${PV}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-apr_base64.patch
-}
 
 src_compile() {
 
