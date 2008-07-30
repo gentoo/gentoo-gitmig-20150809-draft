@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/libertine-ttf-2.8.14.ebuild,v 1.2 2008/07/29 19:38:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/libertine-ttf-2.8.14.ebuild,v 1.3 2008/07/30 04:15:57 mr_bones_ Exp $
 
 inherit font versionator
 
@@ -18,7 +18,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="!<x11-libs/pango-1.20.4"
-
 
 S="${WORKDIR}/${MY_PN}"
 DOCS="Bugs ChangeLog.txt Readme"
