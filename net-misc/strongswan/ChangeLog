@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.62 2008/05/29 07:08:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.63 2008/07/30 21:22:21 robbat2 Exp $
+
+*strongswan-4.2.3 (30 Jul 2008)
+
+  30 Jul 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/strongswan-4.2.3-install.patch, +strongswan-4.2.3.ebuild:
+  Version bump, since pylon has left.
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
