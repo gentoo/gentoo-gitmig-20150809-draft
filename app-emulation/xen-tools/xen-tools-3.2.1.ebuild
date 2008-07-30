@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.2.1.ebuild,v 1.1 2008/05/04 18:59:10 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.2.1.ebuild,v 1.2 2008/07/30 01:03:09 rbu Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -124,6 +124,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export VARTEXFONTS="${T}/fonts"
 	local myopt myconf
 	use debug && myopt="${myopt} debug=y"
 
