@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p34469.ebuild,v 1.2 2008/06/11 12:35:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.1 2008/07/30 16:54:45 jokey Exp $
 
 inherit autotools
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 		>=media-libs/gst-plugins-base-0.10
 		>=gnome-base/gnome-vfs-2.0
 		)
-	soup? ( >=net-libs/libsoup-2.4 )
+	soup? ( >=net-libs/libsoup-2.23.1 )
 	xslt? ( dev-libs/libxslt )
 	pango? ( x11-libs/pango )"
 
@@ -56,7 +56,6 @@ src_compile() {
 		$(use_enable gstreamer video) \
 		$(use_enable svg) \
 		$(use_enable debug) \
-		$(use_with hildon) \
 		$(use_enable xslt) \
 		$(use_enable coverage) \
 		${myconf} \
