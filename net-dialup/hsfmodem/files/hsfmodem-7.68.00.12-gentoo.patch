@@ -1,0 +1,27 @@
+diff -ur hsfmodem-7.68.00.12x86_64full.orig/modules/Makefile hsfmodem-7.68.00.12x86_64full/modules/Makefile
+--- hsfmodem-7.68.00.12x86_64full.orig/modules/Makefile	2008-07-16 15:24:00.000000000 +0000
++++ hsfmodem-7.68.00.12x86_64full/modules/Makefile	2008-07-30 20:48:03.000000000 +0000
+@@ -145,7 +145,7 @@
+ ifeq ($(ON_BUILD_SYSTEM)-$(CONFIG_SND_HDA_INTEL),no-)
+ # On Ubuntu Gutsy (7.10), the HDA modules are not included in linux-image but in a seprarate package
+ # and CONFIG_SND_HDA_INTEL is not enabled in the kernel .config file
+-CONFIG_SND_HDA_INTEL=$(shell modprobe -n snd-hda-intel > /dev/null 2>&1 && echo y || echo n)
++# CONFIG_SND_HDA_INTEL=$(shell modprobe -n snd-hda-intel > /dev/null 2>&1 && echo y || echo n)
+ endif
+ 
+ else
+diff -ur hsfmodem-7.68.00.12x86_64full.orig/scripts/cnxtconfig.in hsfmodem-7.68.00.12x86_64full/scripts/cnxtconfig.in
+--- hsfmodem-7.68.00.12x86_64full.orig/scripts/cnxtconfig.in	2008-03-27 19:43:38.000000000 +0000
++++ hsfmodem-7.68.00.12x86_64full/scripts/cnxtconfig.in	2008-07-30 20:48:03.000000000 +0000
+@@ -1973,9 +1973,9 @@
+ 	if [ -d /etc/udev/rules.d ]; then
+ 		rm -f /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 		if [ "@CNXTDRIVER@" = "dgc" ]; then
+-			echo 'KERNEL=="ttyACM0", SYMLINK="modem"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
++			echo 'KERNEL=="ttyACM0", SYMLINK="modem", GROUP="dialout"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 		else
+-		echo 'KERNEL=="ttyS@CNXTSERDEV@0", SYMLINK="modem"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
++		echo 'KERNEL=="ttyS@CNXTSERDEV@0", SYMLINK="modem", GROUP="dialout"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 	fi
+ 	fi
+ 
