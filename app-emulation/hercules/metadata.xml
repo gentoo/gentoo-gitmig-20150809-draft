@@ -8,4 +8,8 @@
   software that will run on those computers, provided the peripheral devices
   the program requires are present in the configuration.
 </longdescription>
+<use>
+	<flag name='custom-cflags'>Use CFLAGS from /etc/make.conf rather than the
+		default package CFLAGS (not supported)</flag>
+</use>
 </pkgmetadata>
