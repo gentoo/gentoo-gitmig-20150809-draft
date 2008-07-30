@@ -1,12 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4.ebuild,v 1.3 2008/07/30 07:07:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4-r1.ebuild,v 1.1 2008/07/30 07:21:04 tove Exp $
 
 MODULE_AUTHOR="DANIEL"
 inherit perl-module
 
 DESCRIPTION="Perl interface to Alec Muffett's Cracklib"
-HOMEPAGE="http://search.cpan.org/~daniel/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -19,14 +18,3 @@ RDEPEND="sys-libs/cracklib
 DEPEND="${RDEPEND}
 		test? ( dev-perl/Pod-Coverage
 				dev-perl/Test-Pod-Coverage )"
-
-src_compile() {
-	# this ebuild is very non-standard it seems
-	echo -en "/usr/include\n/usr/lib\n"| perl Makefile.PL
-	emake
-}
-
-src_install() {
-	myinst="DESTDIR=${D}"
-	perl-module_src_install
-}
