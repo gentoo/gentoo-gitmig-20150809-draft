@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-webcal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.87 2008/07/27 18:46:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.88 2008/07/30 21:59:39 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org>
+  evolution-webcal-2.21.92.ebuild:
+  Marking evolution-webcal-2.21.92 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org>
   evolution-webcal-2.21.92.ebuild:
