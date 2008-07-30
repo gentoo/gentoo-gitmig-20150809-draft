@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.3.ebuild,v 1.6 2008/06/17 01:32:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.6.3.ebuild,v 1.7 2008/07/30 21:36:45 eva Exp $
 
 EAPI="1"
 
@@ -51,6 +51,11 @@ DEPEND="${RDEPEND}
 # FIXME: --enable-libabiword fails to compile
 
 pkg_setup() {
+	if ! built_with_use --missing true x11-libs/pango X; then
+		eerror "You must rebuild x11-libs/pango with USE='X'"
+		die "You must rebuild x11-libs/pango with USE='X'"
+	fi
+
 	G2CONF="${G2CONF}
 		$(use_enable debug)
 		$(use_enable debug symbols)
