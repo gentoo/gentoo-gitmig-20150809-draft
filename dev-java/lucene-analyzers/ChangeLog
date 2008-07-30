@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/lucene-analyzers
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.1 2008/07/30 18:23:30 elvanor Exp $
+
+*lucene-analyzers-1.9.1-r1 (30 Jul 2008)
+
+  30 Jul 2008; Jean-Noël Rivasseau <elvanor@gentoo.org> +files/manifest,
+  +lucene-analyzers-1.9.1-r1.ebuild:
+  Initial import to the tree, in order to unbundle that jar from Eclipse-3.4.
+  It was moved from the overlay, credit goes to geki and Serkan for that ebuild.
+
