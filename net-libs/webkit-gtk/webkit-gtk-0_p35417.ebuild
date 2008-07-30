@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.1 2008/07/30 16:54:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.2 2008/07/30 18:08:05 jokey Exp $
 
 inherit autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="coverage debug gstreamer hildon pango soup sqlite svg xslt"
+IUSE="coverage debug gstreamer pango soup sqlite svg xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	dev-libs/icu

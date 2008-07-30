@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.7 2008/07/30 16:54:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.8 2008/07/30 18:08:05 jokey Exp $
+
+  30 Jul 2008; Markus Ullmann <jokey@gentoo.org> webkit-gtk-0_p35417.ebuild:
+  drop hildon from IUSE
 
 *webkit-gtk-0_p35417 (30 Jul 2008)
 
