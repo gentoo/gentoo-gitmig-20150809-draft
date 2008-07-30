@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name='gdm'>Enables Distributed Multihead X (DMX) support</flag>
+	<flag name='gmx'>Enables Distributed Multihead X (DMX) support</flag>
 	<flag name='remote'>Enables support for secure remote connections</flag>
 </use>
 </pkgmetadata>
