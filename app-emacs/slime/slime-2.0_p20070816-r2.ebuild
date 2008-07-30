@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r1.ebuild,v 1.5 2008/07/07 17:09:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r2.ebuild,v 1.1 2008/07/30 09:12:29 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -24,9 +24,19 @@ SITEFILE=71${PN}-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/slime-set-swank-wire-protocol-version.patch
+	epatch "${FILESDIR}"/${PN}-set-swank-wire-protocol-version.patch
+	epatch "${FILESDIR}"/${PN}-changelog-date.patch
 	epatch "${FILESDIR}"/${P}-save-restriction-if-possible.patch
-	sed -i "s:@SWANK-WIRE-PROTOCOL-VERSION@:${SWANK_VERSION}:" swank.lisp
+
+	# extract date of last update from ChangeLog, bug 233270
+	SLIME_CHANGELOG_DATE=$(sed -n \
+		's/^\([0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\)[ \t].*/\1/;T;p;q' ChangeLog)
+	[ -n "${SLIME_CHANGELOG_DATE}" ] || die "cannot determine ChangeLog date"
+
+	sed -i "s:@SWANK-WIRE-PROTOCOL-VERSION@:${SWANK_VERSION}:" swank.lisp \
+		|| die "sed swank.lisp failed"
+	sed -i "s:@SLIME-CHANGELOG-DATE@:${SLIME_CHANGELOG_DATE}:" slime.el \
+		|| die "sed slime.el failed"
 }
 
 src_compile() {
