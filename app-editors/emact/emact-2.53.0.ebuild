@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.50.0.ebuild,v 1.6 2008/03/21 08:42:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.53.0.ebuild,v 1.1 2008/07/30 10:28:09 ulm Exp $
 
 DESCRIPTION="EmACT, a fork of Conroy's MicroEmacs"
 HOMEPAGE="http://www.eligis.com/emacs/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.eligis.com/emacs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
 DEPEND="sys-libs/ncurses
@@ -26,7 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /usr/share
 	emake INSTALL="${D}"/usr install || die "emake install failed"
 	dodoc README || die "dodoc failed"
 }
