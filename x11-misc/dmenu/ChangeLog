@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.43 2008/07/22 20:01:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.44 2008/07/30 18:32:45 cedk Exp $
+
+*dmenu-3.8 (30 Jul 2008)
+
+  30 Jul 2008; Cédric Krier <cedk@gentoo.org> +dmenu-3.8.ebuild:
+  Version bump
 
   22 Jul 2008; Markus Rothe <corsair@gentoo.org> dmenu-3.7-r1.ebuild:
   Stable on ppc64; bug #232476
