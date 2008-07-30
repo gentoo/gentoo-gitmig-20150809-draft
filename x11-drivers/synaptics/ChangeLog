@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.36 2008/04/07 15:17:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.37 2008/07/30 13:13:24 drac Exp $
+
+*synaptics-0.14.6-r3 (30 Jul 2008)
+
+  30 Jul 2008; Samuli Suominen <drac@gentoo.org>
+  +files/synaptics-0.14.6-configurable_polling_interval.patch,
+  +synaptics-0.14.6-r3.ebuild:
+  Apply configurable polling interval patch from Novell so that syndaemon
+  doesn't wake up CPU so often. Bug 216679, thanks to Roland Tapken, Thomas
+  Kirchner and Krister Bäckman.
 
   07 Apr 2008; Doug Goldstein <cardoe@gentoo.org> synaptics-0.14.6.ebuild,
   synaptics-0.14.6-r1.ebuild, synaptics-0.14.6-r2.ebuild:
