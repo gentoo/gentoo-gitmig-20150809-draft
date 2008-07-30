@@ -1,16 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12_rc4.ebuild,v 1.4 2008/07/30 16:50:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.ebuild,v 1.1 2008/07/30 16:50:43 jer Exp $
 
 EAPI="1"
 
 inherit eutils qt4 multilib
 
-MY_P=${P/_rc/-RC}
-
 DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 IUSE="crypt dbus debug doc kernel_linux spell ssl xscreensaver"
 SLOT="0"
@@ -29,8 +27,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	crypt? ( >=app-crypt/qca-gnupg-2.0.0_beta2 )
 	ssl? ( >=app-crypt/qca-ossl-2.0.0_beta2 )"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if has_version "=x11-libs/qt-4.3*"; then
