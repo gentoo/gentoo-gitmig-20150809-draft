@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.241 2008/07/28 18:40:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.242 2008/07/30 22:03:00 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gnome-games-2.22.2.1.ebuild:
+  Marking gnome-games-2.22.2.1 ppc stable for bug 229709
 
   28 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml:
   Add local USE flags to metadata.xml
