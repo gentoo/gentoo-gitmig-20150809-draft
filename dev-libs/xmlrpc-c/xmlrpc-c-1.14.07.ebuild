@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.3 2008/07/27 20:55:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.14.07.ebuild,v 1.4 2008/07/30 08:41:19 loki_val Exp $
 
 EAPI=1
 
@@ -29,7 +29,8 @@ pkg_setup() {
 
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}/${P}-abyss-disable.patch" )
+PATCHES=( "${FILESDIR}/${P}-abyss-disable.patch"
+	"${FILESDIR}/${P}-multilib.patch" )
 
 src_unpack() {
 	base_src_unpack
