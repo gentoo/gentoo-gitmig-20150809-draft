@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4.ebuild,v 1.1 2008/07/29 19:22:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.4.ebuild,v 1.2 2008/07/30 04:15:36 mr_bones_ Exp $
 
 MODULE_AUTHOR="DANIEL"
 inherit perl-module
@@ -17,7 +17,7 @@ SRC_TEST="do"
 RDEPEND="sys-libs/cracklib
 		dev-lang/perl"
 DEPEND="${RDEPEND}
-		test? ( dev-perl/Pod-Coverage 
+		test? ( dev-perl/Pod-Coverage
 				dev-perl/Test-Pod-Coverage )"
 
 src_compile() {
