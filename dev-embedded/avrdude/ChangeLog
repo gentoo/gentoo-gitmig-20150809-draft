@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.39 2008/05/13 08:35:05 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.40 2008/07/30 07:00:31 solar Exp $
+
+  30 Jul 2008; <solar@gentoo.org> avrdude-5.5.ebuild:
+  - stable on x86/amd64 and keyworded ~arm
 
   13 May 2008; Denis Dupeyron <calchan@gentoo.org> avrdude-5.4.ebuild,
   avrdude-5.5.ebuild:
