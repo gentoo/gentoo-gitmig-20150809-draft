@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkglextmm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.16 2008/07/27 22:16:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.17 2008/07/30 22:09:39 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gtkglextmm-1.2.0-r1.ebuild:
+  Marking gtkglextmm-1.2.0-r1 ppc stable for bug 229709
 
   27 Jul 2008; Olivier Crête <tester@gentoo.org>
   gtkglextmm-1.2.0-r1.ebuild:
