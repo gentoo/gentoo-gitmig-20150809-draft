@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.240 2008/07/27 18:53:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.241 2008/07/30 22:04:25 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> evolution-2.22.2-r2.ebuild:
+  Marking evolution-2.22.2-r2 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org>
   evolution-2.22.2-r2.ebuild:
