@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.2 2008/07/30 22:33:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.3 2008/07/30 22:34:30 dberkholz Exp $
+
+  30 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; xpyb-0.9.ebuild:
+  Require xcb-proto 1.2 to make sure everything builds right. Even though it
+  seemed OK with 1.1, I'm not sure why.
 
   30 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; xpyb-0.9.ebuild:
   Bugfix: USE=selinux didn't work as expected.
