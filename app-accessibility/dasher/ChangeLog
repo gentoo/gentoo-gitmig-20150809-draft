@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.125 2008/07/27 18:54:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.126 2008/07/30 22:05:05 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> dasher-4.7.3.ebuild:
+  Marking dasher-4.7.3 ppc stable for bug 229709
 
   26 Jul 2008; Olivier Crête <tester@gentoo.org> dasher-4.7.3.ebuild:
   Stable on amd64, bug #229709
