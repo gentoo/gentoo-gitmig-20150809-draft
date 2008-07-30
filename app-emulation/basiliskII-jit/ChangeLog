@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/basiliskII-jit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.11 2008/07/28 18:31:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.12 2008/07/30 17:07:45 darkside Exp $
+
+  30 Jul 2008; Jeremy Olexa <darkside@gentoo.org>
+  basiliskII-jit-1.0_pre20060501.ebuild:
+  Fix REDPEND to not block itself. Originally, this package was going to be
+  called something else, changed at last minute. Thanks to Mr_Bones_ in irc
+  for reporting
 
   28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

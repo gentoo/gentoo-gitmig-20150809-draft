@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0_pre20060501.ebuild,v 1.1 2008/07/17 03:16:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0_pre20060501.ebuild,v 1.2 2008/07/30 17:07:45 darkside Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,8 +23,7 @@ RDEPEND="esd? ( media-sound/esound )
 	nls? ( virtual/libintl )
 	x11-libs/libSM
 	x11-libs/libXi
-	x11-libs/libXxf86vm
-	!app-emulation/basiliskII-jit"
+	x11-libs/libXxf86vm"
 
 DEPEND="${RDEPEND}
 	!sdl? ( dga? ( x11-proto/xf86dgaproto ) )
