@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.13 2008/07/30 13:51:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.14 2008/07/30 21:56:51 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking gst-plugins-meta-0.10-r2 ppc stable for bug 229709
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org>
   gst-plugins-meta-0.10-r2.ebuild:
