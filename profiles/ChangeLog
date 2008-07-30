@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1730 2008/07/29 21:46:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1731 2008/07/30 11:49:04 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  30 Jul 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Removing mask for non-existing unicode-date-5.2.0
 
   29 Jul 2008; Markus Dittrich <markusle@gentoo.org> package.mask:
   Removed sci-libs/blas-atlas-3.9 and sci-libs/lapack-atlas-3.9 from
