@@ -6,6 +6,5 @@
 	<flag name='apidocs'>Build API documentation directly from the code using
 	doxygen</flag>
 	<flag name='server'>Enable compilation of server code</flag>
-	<flag name=''></flag>
 </use>
 </pkgmetadata>
