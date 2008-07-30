@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.2 2008/07/27 22:16:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.3 2008/07/30 22:10:18 ranger Exp $
+
+  30 Jul 2008; Brent Baude <ranger@gentoo.org> gtksourceviewmm-2.2.0.ebuild:
+  Marking gtksourceviewmm-2.2.0 ppc stable for bug 229709
 
   27 Jul 2008; Olivier Crête <tester@gentoo.org>
   gtksourceviewmm-2.2.0.ebuild:
