@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.1.ebuild,v 1.3 2008/07/18 17:51:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.1.ebuild,v 1.4 2008/07/30 10:48:42 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -276,14 +276,6 @@ src_install() {
 	fi
 
 	if use xulrunner; then
-		PKG_CONFIG=`which pkg-config`
-		X_DATE=`date +%Y%m%d`
-		XULRUNNER_VERSION=`${PKG_CONFIG} --modversion libxul`
-
-		#set the application.ini
-		sed -i -e "s|BuildID=.*$|BuildID=${X_DATE}GentooMozillaFirefox|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
-		sed -i -e "s|MinVersion=.*$|MinVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
-		sed -i -e "s|MaxVersion=.*$|MaxVersion=${XULRUNNER_VERSION}|" "${D}"${MOZILLA_FIVE_HOME}/application.ini
 		# Create /usr/bin/firefox
 		cat <<EOF >"${D}"/usr/bin/firefox
 #!/bin/sh
@@ -294,6 +286,10 @@ EOF
 	else
 		# Create /usr/bin/firefox
 		make_wrapper firefox "${MOZILLA_FIVE_HOME}/firefox"
+
+		# Add vendor
+		echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \
+			>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	fi
 
 }
