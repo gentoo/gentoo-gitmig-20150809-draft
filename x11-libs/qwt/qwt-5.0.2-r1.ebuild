@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.2-r1.ebuild,v 1.13 2008/07/28 21:48:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.0.2-r1.ebuild,v 1.14 2008/07/30 15:20:26 jer Exp $
 
 EAPI=1
 
@@ -14,7 +14,10 @@ KEYWORDS="amd64 hppa ~ia64 ppc ppc64 sparc x86"
 SLOT="5"
 IUSE="doc svg"
 
-DEPEND="=x11-libs/qt-4.3*:4"
+DEPEND="|| (
+	( x11-libs/qt-gui:4
+	  svg? ( x11-libs/qt-svg:4 ) )
+	=x11-libs/qt-4.3*:4 )"
 
 src_compile () {
 	# Configuration file
