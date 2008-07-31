@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.121 2008/07/24 21:23:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.122 2008/07/31 10:52:13 mueli Exp $
+
+*heimdal-1.2.1 (31 Jul 2008)
+
+  31 Jul 2008; Michael Hammer <mueli@gentoo.org> metadata.xml,
+  +heimdal-1.2.1.ebuild:
+  * fixed metadata.xml -> GLEP 56
+  * added heimdal-1.2.1 to tree - that will be the basis for stabalization
 
 *heimdal-1.0.1 (24 Jul 2008)
 
