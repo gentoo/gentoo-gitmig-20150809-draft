@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/wicd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.1 2008/07/31 18:08:54 darkside Exp $
+
+*wicd-1.5.0_rc11 (31 Jul 2008)
+*wicd-1.4.2 (31 Jul 2008)
+
+  31 Jul 2008; Jeremy Olexa <darkside@gentoo.org> +files/wicd-1.4.2-init.d,
+  +files/wicd-1.5.0_rc5-init.d, +metadata.xml, +wicd-1.4.2.ebuild,
+  +wicd-1.5.0_rc11.ebuild:
+  Initial commit of net-misc/wicd, many thanks to the original authors in bug
+  #198281 (too many to list)
+
+  wicd-1.4.2 is the upstream "stable" version and a stable candidate for Gentoo.
+  I still need to work on the init scripts, they aren't quite complete yet, in
+  my opinion. I also am pondering the addition of USE flags for dhcp clients.
+
