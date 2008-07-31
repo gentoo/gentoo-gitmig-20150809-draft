@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.122 2008/07/31 10:52:13 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.123 2008/07/31 10:59:32 mueli Exp $
+
+  31 Jul 2008; Michael Hammer <mueli@gentoo.org>
+  +files/heimdal-autoconf-ipv6-backport.patch,
+  +files/heimdal-symlinked-manpages.patch, -heimdal-1.2.1_rc1-r1.ebuild:
+  - removed heimdal 1.2.1 release candidate
+  - added patches for manpage symlinks and the ipv6 glibc bug
 
 *heimdal-1.2.1 (31 Jul 2008)
 
