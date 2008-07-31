@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.45 2008/07/30 11:22:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.46 2008/07/31 03:47:44 the_paya Exp $
+
+  31 Jul 2008; Javier Villavicencio <the_paya@gentoo.org>
+  pambase-20080730.ebuild:
+  Keyworded ~x86-fbsd.
 
 *pambase-20080730 (30 Jul 2008)
 
