@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-musepack
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.47 2008/07/30 13:52:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.48 2008/07/31 17:02:46 ranger Exp $
+
+  01 Aug 2008; Brent Baude <ranger@gentoo.org>
+  gst-plugins-musepack-0.10.7.ebuild:
+  Marking gst-plugins-musepack-0.10.7 ppc64 stable for bug 232054
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org>
   gst-plugins-musepack-0.10.7.ebuild:
