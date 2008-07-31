@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.24 2008/05/29 21:29:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.25 2008/07/31 20:05:44 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   29 May 2008; Alin Năstac <mrness@gentoo.org> kmobiletools-0.4.3.3.ebuild,
   kmobiletools-0.5.0_beta3.ebuild:
