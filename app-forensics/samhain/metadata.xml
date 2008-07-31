@@ -6,4 +6,18 @@
 	<email>chtekk@gentoo.org</email>
 	<name>Luca Longinotti</name>
 </maintainer>
+<use>
+  <flag name='login-watch'>Compile in the module to watch for login/logout
+    events</flag>
+  <flag name='mounts-check'>Compile in the module to check for correct mount
+    options</flag>
+  <flag name='netclient'>Compile a client, rather than a standalone version
+    </flag>
+  <flag name='netserver'>Compile a server, rather than a standalone version
+    </flag>
+  <flag name='suidcheck'>Compile in the module to check file system for
+    SUID/SGID binaries</flag>
+  <flag name='userfiles'>Compile in the module to check for files in user home
+    directories</flag>
+</use>
 </pkgmetadata>
