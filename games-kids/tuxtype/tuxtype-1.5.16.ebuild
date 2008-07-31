@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.5.16.ebuild,v 1.2 2008/03/17 03:01:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.5.16.ebuild,v 1.3 2008/07/31 19:54:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -29,6 +29,7 @@ src_unpack() {
 		-e 's:$(prefix)/doc/$(PACKAGE):/usr/share/doc/'${PF}':g' \
 		$(find -name Makefile.in) || die "fixing Makefile paths"
 	sed -i \
+		-e '/\.\/data/d' \
 		-e 's:/usr/share:'${GAMES_DATADIR}':' \
 		tuxtype/setup.c || die "fixing src paths"
 }
