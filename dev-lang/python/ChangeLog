@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.334 2008/07/18 13:37:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.335 2008/07/31 13:55:53 dev-zero Exp $
+
+*python-2.5.2-r6 (31 Jul 2008)
+*python-2.4.4-r14 (31 Jul 2008)
+
+  31 Jul 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +python-2.4.4-r14.ebuild, +python-2.5.2-r6.ebuild:
+  Revision bump to fix bug #230640 (CVE-2008-2315, CVE-2008-2316) and bug
+  #232137 (CVE-2008-{3142,3143,3144}).
 
   18 Jul 2008; Olivier Crête <tester@gentoo.org> python-2.5.2-r5.ebuild:
   Stable on amd64, bug #178800
