@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/atokx2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.6 2007/07/02 14:13:06 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.7 2008/07/31 10:06:48 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> atokx2-17.0.ebuild,
   atokx2-17.0-r1.ebuild, atokx2-17.0-r2.ebuild:

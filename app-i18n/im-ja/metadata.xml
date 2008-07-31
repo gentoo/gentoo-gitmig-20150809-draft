@@ -9,4 +9,8 @@
   kanji into a widget using the mouse. This feature is based on the
   KanjiPad application which has been enhanced in IM-JA.
 </longdescription>
+<use>
+  <flag name='anthy'>Support for Anthy input method</flag>
+  <flag name='skk'>Support for SKK input method</flag>
+</use>
 </pkgmetadata>
