@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.89 2008/05/20 21:15:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.90 2008/07/31 09:11:56 elvanor Exp $
+
+*swt-3.4 (31 Jul 2008)
+
+  31 Jul 2008; Jean-Noël Rivasseau <elvanor@gentoo.org> swt-3.3.1.1.ebuild,
+  swt-3.4_pre6-r1.ebuild, +swt-3.4.ebuild:
+  Added swt-3.4 final. Mozilla/Gecko support is now only provided via xulrunner
+  (this matches upstream policy as Firefox 3 needs xulrunner-1.9 for example).
 
   20 May 2008; Petteri Räty <betelgeuse@gentoo.org> swt-3.4_pre6-r1.ebuild:
   Add ppc64 support. Fixes bug #222971. Thanks to Andrew John Hughes

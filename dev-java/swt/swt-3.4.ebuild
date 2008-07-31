@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1.ebuild,v 1.6 2008/07/31 09:11:56 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4.ebuild,v 1.1 2008/07/31 09:11:56 elvanor Exp $
 
 EAPI="1"
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs java-osgi
 
-MY_PV="${PV}"
-MY_DMF="download.eclipse.org/eclipse/downloads/drops/R-${MY_PV}-200710231652"
+MY_PV="${PV/_pre/M}"
+MY_DMF="download.eclipse.org/eclipse/downloads/drops/R-${MY_PV}-200806172000"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="GTK based SWT Library"
@@ -23,58 +23,56 @@ SRC_URI="x86? (
 		)
 		ppc? (
 			http://${MY_DMF}/${MY_P}-gtk-linux-ppc.zip
+		)
+		ppc64? (
+			http://${MY_DMF}/${MY_P}-gtk-linux-x86_64.zip
 		)"
 
-SLOT="3"
+SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="cairo firefox gnome seamonkey opengl xulrunner"
+IUSE="cairo gnome opengl mozilla xulrunner"
 COMMON=">=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6.8
 		>=dev-libs/atk-1.10.2
-		cairo? ( >=x11-libs/cairo-1.0.2 )
+		cairo? ( >=x11-libs/cairo-1.4.14 )
 		gnome?	(
-					=gnome-base/libgnome-2*
-					=gnome-base/gnome-vfs-2*
-					=gnome-base/libgnomeui-2*
+				=gnome-base/libgnome-2*
+				=gnome-base/gnome-vfs-2*
+				=gnome-base/libgnomeui-2*
 				)
-		seamonkey? ( !firefox? ( !xulrunner? (
-			=www-client/seamonkey-1*
-			>=dev-libs/nspr-4.6.2
-		) ) )
-		firefox? ( !xulrunner? (
-			=www-client/mozilla-firefox-2*
-			>=dev-libs/nspr-4.6.2
-		) )
-		xulrunner? (
-			net-libs/xulrunner:1.8
-			>=dev-libs/nspr-4.6.2
-		)
+		mozilla? ( net-libs/xulrunner:1.9 )
+		xulrunner? ( net-libs/xulrunner:1.9 )
 		opengl?	(
 			virtual/opengl
 			virtual/glu
 		)"
+
+# Use a blocker to avoid file collisions when upgrading to the slotted version
+# We cannot use slotmove, java packages are expected to be in /usr/share/PN-SLOT
+# so this is the only way to prevent collisions
+
 DEPEND=">=virtual/jdk-1.4
+		!=dev-java/swt-3.4*:3
 		app-arch/unzip
 		x11-libs/libX11
 		x11-libs/libXrender
 		x11-libs/libXt
 		x11-proto/xextproto
+		x11-proto/inputproto
 		${COMMON}"
 
 RDEPEND=">=virtual/jre-1.4
-		x11-libs/libXtst
-		${COMMON}"
+	x11-libs/libXtst
+	${COMMON}"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	local DISTFILE=${A}
-	unzip -jq "${DISTDIR}"/${DISTFILE} "*src.zip" || die "unable to extract distfile"
-	unpack ./src.zip
-
-#	unpack "${PATCHSET}.tar.bz2"
+	unzip -jq "${DISTDIR}"/${DISTFILE} "*src.zip" || die "Unable to extract distfile"
+	unpack "./src.zip"
 
 	# Cleanup the redirtied directory structure
 	rm -rf about_files/ || die
@@ -83,18 +81,16 @@ src_unpack() {
 	cp "${FILESDIR}/build.xml" "${S}/build.xml" || die "Unable to update build.xml"
 	mkdir "${S}/src" && mv "${S}/org" "${S}/src" || die "Unable to restructure SWT sources"
 
-	# apply all the patches, including arch-specific
-#	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" epatch
+	# Apply all the patches, including arch-specific
+	# EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" epatch
 
 	sed -i "s/CFLAGS = -O -Wall/CFLAGS = ${CFLAGS} -Wall/" \
-		make_linux.mak \
-		|| die "Failed to tweak make_linux.mak"
+		make_linux.mak || die "Failed to tweak make_linux.mak"
 
 	sed -i "s/MOZILLACFLAGS = -O/MOZILLACFLAGS = ${CXXFLAGS}/" \
-		make_linux.mak \
-		|| die "Failed to tweak make_linux.mak"
+		make_linux.mak || die "Failed to tweak make_linux.mak"
 
-	# kill some strict-aliasing warnings
+	# Kill some strict-aliasing warnings
 	epatch "${FILESDIR}/${PN}-3.3-callback-pointer-dereferencing.patch"
 }
 
@@ -102,8 +98,8 @@ get_gecko() {
 	local gecko
 
 	# order here match the logic in DEPEND and USE flag descriptions
-	use seamonkey && gecko="seamonkey"
-	use firefox && gecko="firefox"
+	#use seamonkey && gecko="seamonkey"
+	use mozilla && gecko="xulrunner"
 	use xulrunner && gecko="xulrunner"
 
 	echo ${gecko}
@@ -118,6 +114,8 @@ src_compile() {
 	if [[ $(tc-arch) == 'x86' ]] ; then
 		AWT_ARCH="i386"
 	elif [[ $(tc-arch) == 'ppc' ]] ; then
+		AWT_ARCH="ppc"
+	elif [[ $(tc-arch) == 'ppc64' ]] ; then
 		AWT_ARCH="ppc"
 	else
 		AWT_ARCH="amd64"
@@ -134,7 +132,7 @@ src_compile() {
 	fi
 
 	# Fix the pointer size for AMD64
-	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
+	[[ ${ARCH} == "amd64" || ${ARCH} == "ppc64" ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
 
 	local platform="linux"
 
@@ -159,17 +157,20 @@ src_compile() {
 	local gecko="$(get_gecko)"
 	if [[ ${gecko} ]]; then
 		einfo "Building the Mozilla component against ${gecko}"
-		#local idir="$(pkg-config ${gecko}-xpcom --variable=includedir)"
-		local inc="$(pkg-config ${gecko}-xpcom --cflags)"
-		local libs="$(pkg-config ${gecko}-xpcom --libs)"
-		MOZILLA_INCLUDES="${inc}" \
-		MOZILLA_LIBS="${libs}" \
-			${make} make_mozilla || die "Failed to build ${gecko} support"
+
 		if [[ "${gecko}" = "xulrunner" ]]; then
-			XULRUNNER_INCLUDES="${inc}" \
-			XULRUNNER_LIBS="${libs}" \
-				${make} make_xulrunner || die "Failed to build ${gecko} support"
+			export XULRUNNER_INCLUDES="$(pkg-config mozilla-gtkmozembed --cflags)"
+			export XULRUNNER_LIBS="$(pkg-config mozilla-gtkmozembed --libs)"
+			export MOZILLA_INCLUDES="$(pkg-config mozilla-gtkmozembed --cflags)"
+			export MOZILLA_LIBS="$(pkg-config mozilla-gtkmozembed --libs)"
+
+			${make} make_xulrunner || die "Failed to build ${gecko} support"
+		else
+			export MOZILLA_INCLUDES="$(pkg-config ${gecko}-gtkmozembed --cflags)"
+			export MOZILLA_LIBS="$(pkg-config ${gecko}-gtkmozembed --libs)"
 		fi
+
+		${make} make_mozilla || die "Failed to build ${gecko} support"
 	fi
 
 	if use cairo ; then
@@ -199,15 +200,18 @@ src_install() {
 	use amd64 && swtArch=x86_64
 	use x86-fbsd && swtArch=x86
 
-	sed "s/SWT_ARCH/${swtArch}/" "${FILESDIR}/${PN}-3.3-manifest" > MANIFEST_TMP.MF
+	sed "s/SWT_ARCH/${swtArch}/" "${FILESDIR}/${PN}-3.4-manifest" > "MANIFEST_TMP.MF"
 	java-osgi_newjar-fromfile "swt.jar" "MANIFEST_TMP.MF" "Standard Widget Toolkit for GTK 2.0"
 
 	java-pkg_sointo /usr/$(get_libdir)
 	java-pkg_doso *.so
 
 	local gecko="$(get_gecko)"
-	if [[ -n "${gecko}" ]]; then
+	if [[ "${gecko}" == "seamonkey" ]]; then
 		local gecko_dir="$(pkg-config ${gecko}-xpcom --variable=libdir)"
+		java-pkg_register-environment-variable MOZILLA_FIVE_HOME "${gecko_dir}"
+	elif [[ -n "${gecko}" ]]; then
+		local gecko_dir="$(pkg-config mozilla-gtkmozembed --variable=sdkdir)"
 		java-pkg_register-environment-variable MOZILLA_FIVE_HOME "${gecko_dir}"
 	fi
 

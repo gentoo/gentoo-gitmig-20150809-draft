@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.3 2008/05/20 21:15:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4_pre6-r1.ebuild,v 1.4 2008/07/31 09:11:56 elvanor Exp $
 
 EAPI="1"
 
@@ -80,7 +80,7 @@ RDEPEND=">=virtual/jre-1.4
 S="${WORKDIR}"
 
 src_unpack() {
-	local DISTFILE="${A}"
+	local DISTFILE=${A}
 	unzip -jq "${DISTDIR}"/${DISTFILE} "*src.zip" || die "unable to extract distfile"
 	unpack ./src.zip
 
