@@ -29,6 +29,8 @@
 			applications such as Pidgin to show in the search results.</flag>
 		<flag name='gtk'>Enables the GTK+ Beagle Search UI for showing search
 			results. This is the default GUI for Beagle.</flag>
+		<flag name='inotify'>Enable inotify filesystem monitoring support
+			</flag>
 		<flag name='pdf'>Enables support for indexing of the PDF (Portable Document
 			Format) file format using `pdfinfo` and `pdftotext` from
 			<pkg>app-text/poppler</pkg></flag>

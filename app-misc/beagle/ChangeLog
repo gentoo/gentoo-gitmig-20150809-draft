@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.82 2008/07/28 15:48:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.83 2008/07/31 15:53:56 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add missing USE flag description for inotify to metadata.
 
   28 Jul 2008; Raúl Porcel <armin76@gentoo.org> beagle-0.3.7-r1.ebuild:
   x86 stable wrt #230185
