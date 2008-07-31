@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.7.ebuild,v 1.3 2008/04/13 03:54:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.9.ebuild,v 1.1 2008/07/31 22:58:51 tester Exp $
 
 inherit gst-plugins10
 
