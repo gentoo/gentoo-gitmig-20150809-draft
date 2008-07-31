@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.8.ebuild,v 1.2 2008/07/15 10:50:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.9.ebuild,v 1.1 2008/07/31 20:41:05 wrobel Exp $
 
 inherit webapp eutils depend.php
 
@@ -21,13 +21,9 @@ pkg_setup() {
 	webapp_pkg_setup
 	has_php
 	if [[ ${PHP_VERSION} == "4" ]] ; then
-		local flags="expat"
+		require_php_with_use expat
 	else
-		local flags="xml"
-	fi
-	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} \
-		|| ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
-			die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
+		require_php_with_use xml
 	fi
 }
 

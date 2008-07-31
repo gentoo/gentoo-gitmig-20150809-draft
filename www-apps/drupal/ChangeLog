@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.48 2008/07/15 10:50:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.49 2008/07/31 20:41:04 wrobel Exp $
+
+*drupal-5.9 (31 Jul 2008)
+
+  31 Jul 2008; wrobel@gentoo.org -drupal-5.8.ebuild, +drupal-5.9.ebuild:
+  Bumped to drupal-5.9 in response to sec issue #233478. Removed vulnerable 5.8.
 
   15 Jul 2008; Peter Volkov <pva@gentoo.org> drupal-5.8.ebuild,
   drupal-6.3.ebuild:
