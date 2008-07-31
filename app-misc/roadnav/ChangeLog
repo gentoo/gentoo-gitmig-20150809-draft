@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/roadnav
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.7 2007/12/26 21:50:56 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.8 2008/07/31 16:52:38 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   26 Dec 2007; Christian Heim <phreak@gentoo.org>
   -files/digest-roadnav-0.14, -files/digest-roadnav-0.15:
