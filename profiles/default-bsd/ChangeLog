@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.29 2008/07/28 19:12:31 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.30 2008/07/31 03:45:27 the_paya Exp $
+
+  31 Jul 2008; Javier Villavicencio <the_paya@gentoo.org>
+  fbsd/package.use.mask:
+  Removed passwdqc + added ssh to pambase use masks.
 
   28 Jul 2008; Jean-Noël Rivasseau <elvanor@gentoo.org>
   fbsd/6.2/x86/package.use.mask:
