@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/krystaldrop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.7 2008/01/28 21:17:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.8 2008/07/31 04:21:55 mr_bones_ Exp $
+
+  31 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/krystaldrop-0.7.2-gcc43.patch, krystaldrop-0.7.2.ebuild:
+  patch for building with gcc-4.3 submitted by Jabari R. Roberts via bug #233447
 
   28 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
   krystaldrop-0.7.2.ebuild:
