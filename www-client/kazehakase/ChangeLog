@@ -1,6 +1,14 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.60 2008/07/01 00:45:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.61 2008/07/31 00:16:39 matsuu Exp $
+
+*kazehakase-0.5.5 (31 Jul 2008)
+
+  31 Jul 2008; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.5.4.ebuild,
+  -kazehakase-0.5.4-r1.ebuild, +kazehakase-0.5.5.ebuild:
+  Version bumped. Added webkit USE flag. Removed ~sparc because
+  net-libs/webkit-gtk has no ~sparc KEYWORD. Fixed dependency, bug #230712.
+  Removed old versions.
 
 *kazehakase-0.5.4-r1 (01 Jul 2008)
 
