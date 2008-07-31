@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.32 2008/05/25 13:05:29 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.33 2008/07/31 06:44:05 neurogeek Exp $
+
+*PyQt4-4.4-r1 (31 Jul 2008)
+
+  31 Jul 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/PyQt4-4.4_compile.patch, -PyQt4-4.4.ebuild, +PyQt4-4.4-r1.ebuild:
+  Fixes bugs #233369 and #222435, thanks to Remy Bosch for the patch.
+  Removed old version
 
   25 May 2008; Ingmar Vanhassel <ingmar@gentoo.org> PyQt4-4.4.2.ebuild:
   dev-python/PyQt4-4.4.2 needs Qt-4.4.0, fix dependencies, mask package.

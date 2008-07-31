@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.ebuild,v 1.1 2008/05/14 20:16:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4-r1.ebuild,v 1.1 2008/07/31 06:44:05 neurogeek Exp $
 
 inherit distutils qt4
 
@@ -25,6 +25,7 @@ QT4_BUILT_WITH_USE_CHECK="zlib"
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}/${P}_compile.patch"
 	sed -i -e "s:^[ \t]*check_license():# check_license():" "${S}"/configure.py
 	sed -i -e "s:join(qt_dir, \"mkspecs\":join(\"/usr/share/qt4\",	\"mkspecs\":g" "${S}"/configure.py
 	sed -i -e "s:\"QT_INSTALL_HEADERS\"\:   os.path.join(qt_dir, \"include\":\"QT_INSTALL_HEADERS\"\:   os.path.join(qt_dir, \"include/qt4\":g" "${S}"/configure.py
@@ -39,6 +40,8 @@ src_compile() {
 	use debug && myconf="${myconf} -u"
 
 	"${python}" configure.py ${myconf}
+
+	sed -i -e 'i #!/bin/bash\n' "${S}"/pyuic/pyuic4 || die "sed failed"
 	emake || die "emake failed"
 }
 
