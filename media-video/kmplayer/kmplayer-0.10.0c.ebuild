@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.6 2008/04/26 16:48:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.7 2008/07/31 20:27:20 carlo Exp $
 
 inherit kde eutils
 
@@ -27,7 +27,7 @@ DEPEND="x11-libs/libXv
 		npp? ( >=dev-libs/nspr-4.6.7
 				>=x11-libs/gtk+-2.10.14 )"
 RDEPEND="${DEPEND}
-		mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )"
+		mplayer? ( media-video/mplayer )"
 
 LANGS="ar be br bs ca csb cs cy da de el en_GB es et fi fr ga gl he hi hu is it
 ja ka lt mt nb nl nn pa pl pt_BR pt ro ru rw sk sr@Latn sr sv ta tr uk zh_CN"
