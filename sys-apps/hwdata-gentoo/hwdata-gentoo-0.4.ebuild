@@ -1,22 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.4.ebuild,v 1.2 2008/04/10 06:33:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.4.ebuild,v 1.3 2008/07/31 01:09:56 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Data for the hwsetup program"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/hwdata-gentoo/${P}.tar.bz2"
-HOMEPAGE="http://www.gentoo.org"
+	http://wolf31o2.org/sources/hwdata/${P}.tar.bz2"
+HOMEPAGE="http://wolf31o2.org"
 
 IUSE="opengl binary-drivers"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="!sys-apps/hwdata
-	!sys-apps/hwdata-knoppix
-	!sys-apps/hwdata-redhat"
+DEPEND="!sys-apps/hwdata-redhat"
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.16 2008/06/05 18:33:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.17 2008/07/31 01:09:56 wolf31o2 Exp $
+
+  31 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  hwdata-gentoo-0.4.ebuild:
+  Change SRC_URI to point to wolf31o2.org instead of my dev space on
+  dev.gentoo.org, since I'm retiring from Gentoo.
 
   05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/0.3-fglrx.patch, -files/0.3-nv-fbdev.patch,
