@@ -6,4 +6,7 @@
   <email>nerdboy@gentoo.org</email>
   <name>Steve Arnold</name>
 </maintainer>
+<use>
+  <flag name='garmin'>Adds specific support for Garmin GPS receivers</flag>
+</use>
 </pkgmetadata>

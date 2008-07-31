@@ -16,4 +16,9 @@ DS1820), DS18B20, DS1822, the DS2438 Smart Battery Monitor, DS2422 and DS2423
 Counters, DS2409 MicroLAN Coupler (used in 1-wire hubs), and the AAG TAI-8540
 humidity sensor.
 </longdescription>
+<use>
+  <flag name='ds2490'>Build support for the ds2490 sensor</flag>
+  <flag name='ds9097'>Build support for the ds9097 sensor</flag>
+  <flag name='ds9097u'>Build support for the ds9097u sensor</flag>
+</use>
 </pkgmetadata>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>ruby</herd>
-	<maintainer>
-		<email>dams@gentoo.org</email>
-		<name>dams</name>
-	</maintainer>
+<herd>ruby</herd>
+<maintainer>
+  <email>dams@gentoo.org</email>
+  <name>dams</name>
+</maintainer>
+<use>
+  <flag name='transcode'>Use <pkg>media-video/transcode</pkg> to extract video
+    thumbnails</flag>
+</use>
 </pkgmetadata>

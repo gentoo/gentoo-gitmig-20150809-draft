@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15composer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.18 2008/02/21 23:52:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.19 2008/07/31 16:10:42 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   21 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> g15composer-3.1.ebuild:
   Add ~ppc.

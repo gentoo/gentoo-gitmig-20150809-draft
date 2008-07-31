@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>lcd</herd>
-	<maintainer>
-		<email>chainsaw@gentoo.org</email>
-		<name>Tony Vroon</name>
-	</maintainer>
+<herd>lcd</herd>
+<maintainer>
+  <email>chainsaw@gentoo.org</email>
+  <name>Tony Vroon</name>
+</maintainer>
+<use>
+  <flag name='amarok'>Enable display of titles played in Amarok</flag>
+</use>
 </pkgmetadata>

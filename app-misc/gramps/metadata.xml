@@ -3,12 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>beandog@gentoo.org</email>
-<name>Steve Dibb</name>
+  <email>beandog@gentoo.org</email>
+  <name>Steve Dibb</name>
 </maintainer>
 <maintainer>
-<email>opfer@gentoo.org</email>
-<name>Christian Faulhammer</name>
+  <email>opfer@gentoo.org</email>
+  <name>Christian Faulhammer</name>
 </maintainer>
 <longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit, and
@@ -20,4 +20,8 @@ rearrange/manipulate any/all data events in the entire data base (in any order
 or sequence) to assist the user in doing research, analysis and correlation with
 the potential of filling relationship gaps.
 </longdescription>
+<use>
+  <flag name='reports'>All external software that is needed for graphical
+    reports will be installed</flag>
+</use>
 </pkgmetadata>

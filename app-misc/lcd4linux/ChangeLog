@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.33 2007/12/22 18:07:09 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.34 2008/07/31 16:26:08 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   lcd4linux-0.10.1_rc2-r2.ebuild:

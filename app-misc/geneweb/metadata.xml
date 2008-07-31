@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>tupone@gentoo.org</email>
-<name>Tupone Alfredo</name>
+  <email>tupone@gentoo.org</email>
+  <name>Tupone Alfredo</name>
 </maintainer>
 <longdescription lang="en">
 GeneWeb is a genealogy software program with a Web interface. It can be used
@@ -12,4 +12,8 @@ off-line or in a Web environment. It uses very efficient techniques of
 relationship and consanguinity computing, developed in collaboration with Didier
 Rémy, research Director at INRIA.
 </longdescription>
+<use>
+  <flag name='ocamlopt'>Enable ocamlopt support (<pkg>dev-lang/ocaml</pkg>
+    native code compiler)</flag>
+</use>
 </pkgmetadata>
