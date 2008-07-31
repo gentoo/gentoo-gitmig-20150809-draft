@@ -1,19 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.0_rc9.ebuild,v 1.3 2008/06/15 07:53:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.5.1.ebuild,v 1.1 2008/07/31 14:44:19 hollow Exp $
 
 EAPI="1"
+WANT_AUTOMAKE="none"
 
 inherit autotools bash-completion confutils depend.apache elisp-common eutils flag-o-matic java-pkg-opt-2 libtool multilib perl-module python
 
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="http://subversion.tigris.org/"
-SRC_URI="http://subversion.tigris.org/downloads/${P/_/-}.tar.bz2"
+SRC_URI="http://subversion.tigris.org/downloads/${P/_/-}.tar.bz2
+	mirror://gentoo/${P}-ra_serf-improvements.patch.bz2"
 
 LICENSE="Subversion"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="apache2 berkdb debug doc emacs extras java nls perl python ruby sasl vim-syntax +webdav-neon webdav-serf"
+IUSE="apache2 berkdb debug doc +dso emacs extras java nls perl python ruby sasl vim-syntax +webdav-neon webdav-serf"
 RESTRICT="test"
 
 CDEPEND=">=dev-libs/apr-1.2.8
@@ -70,12 +72,18 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/1.5.0/disable-unneeded-linking.patch
+	epatch "${WORKDIR}"/${P}-ra_serf-improvements.patch
+
+	sed -i \
+		-e "s/\(BUILD_RULES=.*\) bdb-test\(.*\)/\1\2/g" \
+		-e "s/\(BUILD_RULES=.*\) test\(.*\)/\1\2/g" configure.ac
 
 	sed -e 's:@bindir@/svn-contrib:@libdir@/subversion/bin:' \
 		-e 's:@bindir@/svn-tools:@libdir@/subversion/bin:' \
 		-i Makefile.in
 
-	eautoreconf
+	eautoconf
+	elibtoolize
 }
 
 src_compile() {
@@ -96,6 +104,7 @@ src_compile() {
 	econf ${myconf} \
 		$(use_with apache2 apxs "${APXS}") \
 		$(use_with berkdb berkeley-db) \
+		$(use_enable dso runtime-module-search) \
 		$(use_enable java javahl) \
 		$(use_with java jdk "${JAVA_HOME}") \
 		$(use_enable nls) \
@@ -107,8 +116,7 @@ src_compile() {
 		--disable-experimental-libtool \
 		--without-jikes \
 		--without-junit \
-		--disable-mod-activation \
-		--enable-runtime-module-search
+		--disable-mod-activation
 
 	# Respect the user LDFLAGS when building Subversion SWIG bindings.
 	export SWIG_LDFLAGS="${LDFLAGS}"
@@ -280,7 +288,7 @@ EOF
 		ecompressdir /usr/share/doc/${PF}/notes
 
 		if use java; then
-			doins -r doc/javadoc
+			java-pkg_dojavadoc doc/javadoc
 		fi
 	fi
 }
@@ -288,8 +296,8 @@ EOF
 pkg_preinst() {
 	# Compare versions of Berkeley DB, bug 122877.
 	if use berkdb && [[ -f "${ROOT}usr/bin/svn" ]] ; then
-		OLD_BDB_VERSION="$(scanelf -nq "${ROOT}usr/lib/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
-		NEW_BDB_VERSION="$(scanelf -nq "${D}usr/lib/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+		OLD_BDB_VERSION="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+		NEW_BDB_VERSION="$(scanelf -nq "${D}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
 		if [[ "${OLD_BDB_VERSION}" != "${NEW_BDB_VERSION}" ]] ; then
 			CHANGED_BDB_VERSION=1
 		fi
