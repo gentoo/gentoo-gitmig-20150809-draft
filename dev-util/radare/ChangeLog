@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/radare
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.1 2008/07/31 17:54:59 deathwing00 Exp $
+
+*radare-0.9.9 (31 Jul 2008)
+
+  31 Jul 2008; Ioannis Aslanidis <deathwing00@gentoo.org> +metadata.xml,
+  +radare-0.9.9.ebuild:
+  Initial version for testing purposes requested by upstream.
+
