@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.38 2008/07/31 19:17:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.39 2008/07/31 19:20:13 carlo Exp $
+
+  31 Jul 2008; Carsten Lohrke <carlo@gentoo.org> knutclient-0.9.3-r1.ebuild,
+  knutclient-0.9.4.ebuild:
+  Uh, fix homepage url, bug #233514.
 
   31 Jul 2008; Carsten Lohrke <carlo@gentoo.org> knutclient-0.9.3-r1.ebuild,
   knutclient-0.9.4.ebuild:

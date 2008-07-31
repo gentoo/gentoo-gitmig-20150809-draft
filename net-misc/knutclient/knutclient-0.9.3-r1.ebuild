@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.3-r1.ebuild,v 1.2 2008/07/31 19:17:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.3-r1.ebuild,v 1.3 2008/07/31 19:20:13 carlo Exp $
 
 ARTS_REQUIRED="never"
 
@@ -10,7 +10,7 @@ MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Client for the NUT UPS monitoring daemon"
-HOMEPAGE="http://www.alo.cz/knutclient/index.html"
+HOMEPAGE="http://www.knut.noveradsl.cz/knutclient/"
 SRC_URI="ftp://ftp.buzuluk.cz/pub/alo/knutclient/stable/${MY_P}.tar.gz"
 
 SLOT="0"
