@@ -6,4 +6,7 @@
   <email>welp@gentoo.org</email>
   <name>Peter Weller</name>
 </maintainer>
+<use>
+  <flag name='hdaps'>Install a compatible HDAPS module</flag>
+</use>
 </pkgmetadata>
