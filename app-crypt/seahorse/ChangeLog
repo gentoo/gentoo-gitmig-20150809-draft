@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.106 2008/07/30 21:59:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.107 2008/07/31 23:10:46 eva Exp $
+
+  31 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  -seahorse-2.22.1.ebuild, -seahorse-2.22.2.ebuild, seahorse-2.22.3.ebuild:
+  remove old revisions, add xulrunner USE flag per bug #223497.
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org> seahorse-2.22.3.ebuild:
   Marking seahorse-2.22.3 ppc stable for bug 229709
