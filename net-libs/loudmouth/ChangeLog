@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.68 2008/07/24 18:17:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.69 2008/07/31 21:25:20 eva Exp $
+
+*loudmouth-1.4.1 (31 Jul 2008)
+
+  31 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +loudmouth-1.4.1.ebuild:
+  bump to 1.4.1. do not fail if keepalive doesn't work.
+  probably fixes bug #233409.
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> loudmouth-1.4.0.ebuild:
   sparc/x86 stable wrt #232205
