@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.65 2008/04/13 21:18:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.66 2008/07/31 13:28:02 pchrist Exp $
+
+  31 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc
 
   13 Apr 2008; Alexis Ballier <aballier@gentoo.org> lablgtk-2.10.1.ebuild:
   pkgconfig is only a build dep, bug #217278
