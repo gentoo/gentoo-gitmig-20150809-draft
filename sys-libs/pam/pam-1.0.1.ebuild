@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.1.ebuild,v 1.11 2008/07/23 15:26:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.1.ebuild,v 1.12 2008/07/31 14:08:58 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -123,18 +123,27 @@ src_compile() {
 		myconf="${myconf} --disable-pie"
 	fi
 
+	# KEEP COMMENTED OUT! It seems like it fails to build with USE=debug!
+	# Do _not_ move this to $(use_enable) without checking if the
+	# configure.in has been fixed. As of 2008/07/31 it's still broken
+	# on upstream's CVS, and --disable-debug means --enable-debug too.
+	# if use debug; then
+	# 	myconf="${myconf} --enable-debug"
+	# fi
+
 	econf \
+		--libdir=/usr/$(get_libdir) \
+		--docdir=/usr/share/doc/${PF} \
+		--htmldir=/usr/share/doc/${PF}/html \
+		--enable-securedir=/$(get_libdir)/security \
+		--enable-isadir=/$(get_libdir)/security \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		$(use_enable cracklib) \
 		$(use_enable audit) \
-		--libdir=/usr/$(get_libdir) \
 		--disable-db \
-		--enable-securedir=/$(get_libdir)/security \
-		--enable-isadir=/$(get_libdir)/security \
 		--disable-dependency-tracking \
 		--disable-prelude \
-		--docdir=/usr/share/doc/${PF} \
 		--disable-regenerate-man \
 		${myconf} || die "econf failed"
 	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.221 2008/07/23 15:26:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.222 2008/07/31 14:08:58 flameeyes Exp $
+
+  31 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.1.ebuild:
+  Some very basic fixes to the econf call: set all the directories at the
+  top, provide htmldir as well as docdir (bug #2333360)
 
   23 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> pam-1.0.1.ebuild:
   Remove --enable-docdir option and use --docdir instead so that
