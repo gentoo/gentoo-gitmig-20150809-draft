@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.6 2008/02/11 21:30:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.7 2008/07/31 20:16:05 wrobel Exp $
+
+*symfony-1.0.16 (31 Jul 2008)
+
+  31 Jul 2008; wrobel@gentoo.org metadata.xml, -symfony-1.0.9.ebuild,
+  -symfony-1.0.10.ebuild, -symfony-1.0.11.ebuild, +symfony-1.0.16.ebuild:
+  Bumped to symfony-1.0.16 in response to sec issue #222943. Moved to webapps
+  herd. Removed vulnerable versions.
 
 *symfony-1.0.11 (11 Feb 2008)
 
