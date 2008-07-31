@@ -1,39 +1,103 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.10 2008/07/16 21:16:16 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.11 2008/07/31 21:10:20 armin76 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
-# The default on SPARC is non-multilib
-# if a sub-profile want's it, it can -use.mask it
-multilib
+# Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
+# Mono needs gcc4 and it's not yet stable
+beagle
+galago
+mono
 
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# It doesn't even build
+d
+# Mask krb4, it's generally broken and really not secure see #116471
+krb4
+# LCDproc masks see bug #148072
+lcd_devices_g15
+lcd_devices_graphlcd
+lcd_devices_ula200
+# Mask BSDisms, used in net-proxy/squid for example
+ipf-transparent
+pf-transparent
+# mzscheme seems somewhat b0rked and we want vim7
+mzscheme
+# Masking hardened, it isn't really supported, see bugs #144126 #78951
+hardened
+# AIO is b0rked for now....
+aio
+romio
+# They're borked
+dar32
+dar64
+
+# Patrick McLean <chutzpah@gentoo.org> - 02 Jun 2006
+# Mask bmpx USE flag since new versions don't work on sparc (comment #11 
+# on bug #111975)
+bmpx
+
+# 2006/09/05 - Tupone Alfredo <tupone@gentoo.org>
+# doomsday ebuild is not available on this architecture
+doomsday
+
+# Stuff that won't ever work on sparc
 3dfx
 acpi
 afs
 amd
 apm
 battery
+cpufreq
+dell
+dmi
+ibm
+hyperwave-api
+jfs
+libedit
+nforce2
+reiser4
+reiserfs
+voodoo3
+xfs
+
+# Need testing
+ifp
+pyste
+v4l2
+
+# No hardware to test
+ivtv
+laptop
+lm_sensors
+njb
+pkcs11
+openct
+
+# Asterisk use flag masking
+bri
+florz
+resperl
+zaptel
+ukcid
+
+# USE-flags from differents origins
 brltty
 cle266
 cmucl
 commercial
 cpufreq
-dell
 directfb
 djbfft
 dvb
-dmi
 freetts
 glitz
 i8x0
 java
 java-internal
 java-external
-jfs
-ibm
 lirc
-lm_sensors
 mod
 modplug
 mpm-peruser
@@ -46,61 +110,13 @@ pbs
 pcmcia
 rar
 real
-reiser4
-reiserfs
 trusted
 uml
-voodoo3
 wavelan
 wifi
 wlan
-xfs
 xvmc
 zoran
-
-# No hardware to test
-ivtv
-laptop
-njb
-pkcs11
-openct
-
-# Asterisk use flag masking
-bri
-florz
-resperl
-zaptel
-ukcid
-
-# Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
-# Mono needs gcc4 and it's not yet stable
-beagle
-galago
-mono
-
-# pyste has untested/unkeyworded deps on sparc
-pyste
-
-# They're borked <gustavoz> 
-dar32
-dar64
-
-# Seti@home is gone <gustavoz>
-seti
-
-# 2006/09/05 - Tupone Alfredo <tupone@gentoo.org>
-# doomsday ebuild is not available on this architecture
-doomsday
-
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-hyperwave-api
-libedit
-
-# Unmask ultra1
--ultra1
 
 # Other masks
 clisp
@@ -108,8 +124,10 @@ hdf
 hdf5
 pike
 
-# Mask v4l2 as it depends on 2.6 headers and hasn't been confirmed to work yet
-v4l2
+# requires a JDK
+mpe-sdk
+
+# This should probably never be touched 
 
 # Unmask sparc-only video cards
 -video_cards_sunbw2
@@ -145,46 +163,6 @@ video_cards_i810
 video_cards_nv
 video_cards_vesa
 video_cards_vga
-
-# Jason Wever <weeve@gentoo.org> - 10 April 2006
-# Mask ifp use flag for amarok until someone can confirm it works
-ifp
-
-# Jason Wever <weeve@gentoo.org> - 01 May 2006
-# Mask nforce2 use flag as NVIDIA doesn't make mobos for SPARC CPUs (yet :-P)
-nforce2
-
-# Gustavo Zacarias <gustavoz@gentoo.org> - 02 May 2006
-# AIO is b0rked for now....
-aio
-
-# Patrick McLean <chutzpah@gentoo.org> - 02 Jun 2006
-# Mask bmpx USE flag since new versions don't work on sparc (comment #11 
-# on bug #111975)
-bmpx
-
-# Jason Wever <weeve@gentoo.org> - 10 Jun 2006
-# Mask kdehiddenvisibility as we don't have gcc-4.1.x unmasked in any profiles
-kdehiddenvisibility
-
-# Gustavo Zacarias <gustavoz@gentoo.org> - 17 Aug 2006
-# Masking hardened, it isn't really supported, see bugs #144126 #78951
-hardened
-
-# Gustavo Zacarias <gustavoz@gentoo.org> - 04 Sep 2006
-# mzscheme seems somewhat b0rked and we want vim7
-mzscheme
-
-# requires a JDK
-mpe-sdk
-
-# uses libaio
-romio
-
-# Gustavo Zacarias <gustavoz@gentoo.org> - 10 Nov 2006
-# Mask BSDisms, used in net-proxy/squid for example
-ipf-transparent
-pf-transparent
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Sun-specific drivers
@@ -225,24 +203,16 @@ alsa_cards_sgalaxy
 alsa_cards_sscape
 alsa_cards_wavefront
 
-# Gustavo Zacarias <gustavoz@gentoo.org>
 # Enable H264 with x264
 -x264
-
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# LCDproc masks see bug #148072
-lcd_devices_g15
-lcd_devices_graphlcd
-lcd_devices_ula200
-
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# Mask krb4, it's generally broken and really not secure see #116471
-krb4
-
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# It doesn't even build
-d
 
 # Copied over from default-linux/sparc/sparc64
 -gcc64
 -vis
+
+# Unmask ultra1
+-ultra1
+
+# The default on SPARC is non-multilib
+# if a sub-profile want's it, it can -use.mask it
+multilib
