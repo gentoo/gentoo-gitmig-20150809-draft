@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.2 2008/07/30 18:08:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.3 2008/07/31 14:15:03 armin76 Exp $
 
 inherit autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc -sparc ~x86"
 IUSE="coverage debug gstreamer pango soup sqlite svg xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
@@ -44,6 +44,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# It doesn't compile on alpha without this LDFLAGS
+	use alpha && append-ldflags "-Wl,--no-relax"
+
+
 	local myconf
 		use pango && myconf="${myconf} --with-font-backend=pango"
 		use soup && myconf="${myconf} --with-http-backend=soup"
