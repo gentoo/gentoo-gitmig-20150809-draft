@@ -1,5 +1,16 @@
-# Needs libmodplug
-media-libs/sdl-sound mikmod
+# Please add a proper entry, like a ChangeLog file, to the top, thanks.
+
+# openinventor is not keyworded and will not build (needed for bug #230716).
+sci-physics/geant	openinventor
+
+# openct isn't keyworded anymore
+net-misc/kpvnc smartcard
+
+# depends on mpich2 which isn't keyworded (bug #217854)
+sci-libs/hdf5 mpi
+
+# wavgain fails to build
+media-sound/rubyripper wav
 
 # Needs valgrind
 media-libs/gstreamer debug
@@ -10,14 +21,5 @@ dev-lang/swig	chicken
 # Needs pike
 dev-lang/swig	pike
 
-# wavgain fails to build
-media-sound/rubyripper wav
-
-# depends on mpich2 which isn't keyworded (bug #217854)
-sci-libs/hdf5 mpi
-
-# openct isn't keyworded anymore
-net-misc/kpvnc smartcard
-
-# openinventor is not keyworded and will not build (needed for bug #230716).
-sci-physics/geant	openinventor
+# Needs libmodplug
+media-libs/sdl-sound mikmod
