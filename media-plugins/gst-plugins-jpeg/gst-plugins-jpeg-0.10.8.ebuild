@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/gst-plugins-jpeg-0.10.8.ebuild,v 1.4 2008/07/31 17:00:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/gst-plugins-jpeg-0.10.8.ebuild,v 1.5 2008/07/31 18:51:41 armin76 Exp $
 
 inherit gst-plugins-good
 
 DESCRIPTION="plug-in to encode and decode jpeg images"
 
-KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/jpeg
