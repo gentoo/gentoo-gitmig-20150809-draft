@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3667 2008/07/31 13:43:19 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3668 2008/07/31 17:25:23 ulm Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -25,6 +25,7 @@
 # app-forensics
 # app-i18n
 # app-laptop
+# app-misc
 # dev-games
 # dev-lisp
 # dev-ml
