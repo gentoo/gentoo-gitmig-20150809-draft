@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.78 2008/07/31 19:13:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.79 2008/07/31 19:54:33 drac Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@ eautoreconf() {
 	local pwd=$(pwd) x auxdir
 	
 	[[ -f .eautoreconfd ]] && einfo "eautoreconf already ran, skipping" && return 0
-	touch .eautoreconfd
+	>> .eautoreconfd
 
 	if [[ -z ${AT_NO_RECURSIVE} ]]; then
 		# Take care of subdirs
