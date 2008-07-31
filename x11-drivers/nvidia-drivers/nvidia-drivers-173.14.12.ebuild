@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.09.ebuild,v 1.4 2008/07/31 13:30:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.12.ebuild,v 1.1 2008/07/31 13:30:39 chainsaw Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -16,7 +16,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_P
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64 x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
@@ -115,20 +115,19 @@ mtrr_check() {
 	fi
 }
 
-paravirt_check() {
-	ebegin "Checking for Paravirtualized guest support"
-	linux_chkconfig_present PARAVIRT
+sysvipc_check() {
+	ebegin "Checking for SYSVIPC support"
+	linux_chkconfig_present SYSVIPC
+	eend $?
 
-	if [[ $? -eq 0 ]]; then
-		eerror "Please disable PARAVIRT in your kernel config, found at:"
+	if [[ $? -ne 0 ]] ; then
+		eerror "Please enable SYSVIPC support in your kernel config, found at:"
 		eerror
-		eerror "  Processor type and features"
-		eerror "    [*] Paravirtualized guest support"
+		eerror "  General setup"
+		eerror "    [*] System V IPC"
 		eerror
-		eerror "or XEN support"
-		eerror
-		eerror "and recompile your kernel .."
-		die "PARAVIRT support detected!"
+		eerror "and recompile your kernel ..."
+		die "SYSVIPC support not detected!"
 	fi
 }
 
@@ -148,7 +147,7 @@ pkg_setup() {
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
 		mtrr_check
-		paravirt_check
+		sysvipc_check
 	fi
 
 	# On BSD userland it wants real make command
