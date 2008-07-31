@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.181 2008/07/27 19:40:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.182 2008/07/31 10:31:40 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> uim-1.4.1.ebuild,
   uim-1.4.2.ebuild, uim-1.5.1.ebuild:
