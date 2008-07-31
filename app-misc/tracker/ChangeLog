@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.45 2008/07/30 21:40:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.46 2008/07/31 17:17:58 ulm Exp $
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *tracker-9999 (30 Jul 2008)
 
