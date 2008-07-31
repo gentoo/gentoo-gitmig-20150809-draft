@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.6 2007/06/22 07:05:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.7 2008/07/31 22:36:54 markusle Exp $
 
 inherit eutils
 
@@ -62,16 +62,16 @@ src_compile() {
 
 src_install() {
 	# these get installed, assuming that the directories exist!
-	mkdir -p ${D}/usr/share/locale/{hu,es,fr,cs,de}/LC_MESSAGES
-	mkdir -p ${D}/usr/share/{man,info}
+	mkdir -p "${D}"/usr/share/locale/{hu,es,fr,cs,de}/LC_MESSAGES
+	mkdir -p "${D}"/usr/share/{man,info}
 	make \
-		prefix=${D}/usr \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		LOCALEDIR=${D}/usr/share/locale \
+		prefix="${D}"/usr \
+		infodir="${D}"/usr/share/info \
+		mandir="${D}"/usr/share/man \
+		LOCALEDIR="${D}"/usr/share/locale \
 	install || die
 
-	use nls || rm -r ${D}/usr/share/locale
+	use nls || rm -r "${D}"/usr/share/locale
 
-	dodoc ChangeLog* COPYING INSTALL* TODO*
+	dodoc ChangeLog* INSTALL* TODO*
 }

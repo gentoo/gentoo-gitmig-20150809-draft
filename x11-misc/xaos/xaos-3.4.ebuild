@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.4.ebuild,v 1.1 2008/07/23 21:27:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.4.ebuild,v 1.2 2008/07/31 22:36:54 markusle Exp $
 
 IUSE="aalib nls png svga threads X"
 
@@ -27,7 +27,8 @@ RDEPEND="X? (
 	svga? ( >=media-libs/svgalib-1.4.3 )
 	aalib? ( media-libs/aalib )
 	png? ( media-libs/libpng )
-	sys-libs/zlib"
+	sys-libs/zlib
+	sci-libs/gsl"
 # xaos has ggi support, but it doesn't build
 #	ggi?   ( media-libs/libggi )
 
@@ -42,16 +43,22 @@ DEPEND="${RDEPEND}
 			)"
 
 src_compile() {
+	local myconf="--with-sffe=yes --with-ggi-driver=no"
+
+	# make sure we use gsl and not nasm (see bug #233318)
+	myconf="${myconf} --with-i386asm=no --with-gsl=yes"
+
 	econf \
 		$(use_with png) \
 		$(use_with aalib aa-driver) \
 		$(use_with svga svga-driver) \
 		$(use_with threads pthread) \
 		$(use_with X x11-driver) \
-		$(use_with X) \
+		$(use_with X x) \
 		$(use_enable nls) \
-		--with-sffe=yes --with-ggi-driver=no || die
-	emake || die
+		${myconf} \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {

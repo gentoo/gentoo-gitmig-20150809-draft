@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.27 2008/07/23 21:27:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.28 2008/07/31 22:36:54 markusle Exp $
+
+  31 Jul 2008; Markus Dittrich <markusle@gentoo.org> xaos-3.4.ebuild:
+  Force the use of sci-libs/gsl to avoid accidental generation of x86
+  assembly code on non x86 architectures (see bug #233318).
 
 *xaos-3.4 (23 Jul 2008)
 
