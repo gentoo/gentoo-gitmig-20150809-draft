@@ -1,36 +1,34 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.19.7.ebuild,v 1.2 2008/06/16 02:02:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.18.1.ebuild,v 1.1 2008/07/31 08:43:17 dev-zero Exp $
 
-inherit autotools versionator
+inherit eutils versionator
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://download.rsyslog.com/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="debug kerberos dbi gnutls mysql postgres relp snmp zlib"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug kerberos dbi mysql postgres relp snmp zlib"
 
 DEPEND="kerberos? ( virtual/krb5 )
 	dbi? ( dev-db/libdbi )
-	gnutls? ( net-libs/gnutls )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )
-	relp? ( >=dev-libs/librelp-0.1.1 )
+	relp? ( dev-libs/librelp )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 PROVIDE="virtual/logger"
 
-BRANCH="3-devel"
+BRANCH="3-stable"
 
 src_compile() {
 	# Maintainer notes:
 	# * rsyslog-3 doesn't support single threading anymore
-	# * rfc3195 needs a library
-	# * OpenSSL detection is present in ./configure but nothing
-	#   in the code actually needs it
+	# * rfc3195 needs a library and development of that library
+	#   is suspended
 	econf \
 		--enable-largefile \
 		--enable-regexp \
@@ -43,6 +41,7 @@ src_compile() {
 		--enable-fsstnd \
 		$(use_enable debug) \
 		$(use_enable debug rtinst) \
+		$(use_enable debug valgrind) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql) \
 		$(use_enable dbi libdbi) \
@@ -52,8 +51,7 @@ src_compile() {
 		$(use_enable relp) \
 		--disable-rfc3195 \
 		--enable-imfile \
-		--disable-imtemplate \
-		$(use_enable gnutls)
+		--disable-imtemplate
 	emake || die "emake failed"
 }
 

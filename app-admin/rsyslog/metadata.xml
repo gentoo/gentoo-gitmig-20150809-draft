@@ -8,6 +8,6 @@
 <use>
 	<flag name='dbi'>Add support for logging into various databases through
 		<pkg>dev-db/libdbi</pkg></flag>
-	<flag name='relp'>Add support for the Reliable Event Logging Protocol</flag>
+	<flag name='relp'>Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
 </use>
 </pkgmetadata>
