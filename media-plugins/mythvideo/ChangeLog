@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.70 2008/04/23 18:18:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.71 2008/08/01 16:35:22 cardoe Exp $
+
+*mythvideo-0.21_p17595 (01 Aug 2008)
+
+  01 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythvideo-0.20.2_p14684.ebuild, mythvideo-0.20.2_p15087.ebuild,
+  -mythvideo-0.21_p16468.ebuild, mythvideo-0.21_p17105.ebuild,
+  +mythvideo-0.21_p17595.ebuild:
+  fix bug #233411, which removes mplayer and xine USE flags. Remove older
+  versions. Add newer 0.21 version. Clean up DEPEND
 
 *mythvideo-0.21_p17105 (23 Apr 2008)
 
