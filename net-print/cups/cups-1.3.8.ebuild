@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.8.ebuild,v 1.1 2008/07/25 19:45:54 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.8.ebuild,v 1.2 2008/08/01 19:19:33 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -8,7 +8,7 @@ MY_P=${P/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
+SRC_URI="http://ftp.easysw.com/pub/cups/{PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
