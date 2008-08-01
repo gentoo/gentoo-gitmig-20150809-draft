@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.47 2008/07/31 10:41:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.48 2008/08/01 17:23:18 flameeyes Exp $
+
+*pambase-20080801 (01 Aug 2008)
+
+  01 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +pambase-20080801.ebuild:
+  New pambase with optional support for SHA512-hashed passwords (enabled by
+  default). This will deprecated sys-auth/pam_sha512.
 
   31 Jul 2008; Vlastimil Babka <caster@gentoo.org> ChangeLog:
   Fix distfile size and hashes in Manifest, bug #233462.

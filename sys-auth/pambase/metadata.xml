@@ -47,5 +47,19 @@
       ~/.ssh/id_dsa or ~/.ssh/identity), and will spawn an ssh-agent
       instance to cache the open key.
     </flag>
+    <flag name="sha512">
+      Switch Linux-PAM's pam_unix module to use sha512 for passwords
+      hashes rather than MD5. This option requires
+      <pkg>&gt;=sys-libs/pam-1.0.1</pkg> built against
+      <pkg>&gt;=sys-libs/glibc-2.7</pkg>, if it's built against an
+      earlier version, it will silently be ignored, and MD5 hashes
+      will be used. All the passwords changed after this USE flag is
+      enabled will be saved to the shadow file hashed using SHA512
+      function. The password previously saved will be left
+      untouched. Please note that while SHA512-hashed passwords will
+      still be recognised if the USE flag is removed, the shadow file
+      will not be compatible with systems using an earlier glibc
+      version.
+    </flag>
   </use>
 </pkgmetadata>
