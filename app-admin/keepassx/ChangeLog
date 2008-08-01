@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.26 2008/03/29 15:11:49 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.27 2008/08/01 18:33:25 tgurr Exp $
+
+*keepassx-0.3.2 (01 Aug 2008)
+
+  01 Aug 2008; Timo Gurr <tgurr@gentoo.org> -keepassx-0.3.1.ebuild,
+  -keepassx-0.3.1-r20.ebuild, +keepassx-0.3.2.ebuild:
+  Version bump fixing bug #233598. Added qt4 built with zlib check, fixing
+  bug #232714.
 
   29 Mar 2008; Timo Gurr <tgurr@gentoo.org> keepassx-0.3.1.ebuild:
   Remove the redundant qt3support check from keepassx-0.3.1.ebuild.

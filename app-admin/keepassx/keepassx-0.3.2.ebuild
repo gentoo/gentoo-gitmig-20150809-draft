@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.1.ebuild,v 1.2 2008/03/29 15:11:49 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.2.ebuild,v 1.1 2008/08/01 18:33:25 tgurr Exp $
 
 EAPI="1"
 
@@ -14,19 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
-DEPEND=">=x11-libs/qt-4.1:4"
+DEPEND="|| ( ( x11-libs/qt-core:4
+			x11-libs/qt-gui:4
+			x11-libs/qt-xmlpatterns:4 )
+		>=x11-libs/qt-4.3:4 )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/KeePassX-${PV}"
-
-pkg_setup() {
-	if ! built_with_use --missing true x11-libs/qt png ; then
-		eerror
-		eerror "You need to rebuild x11-libs/qt with USE=\"png\" enabled."
-		eerror
-		die "Please rebuild x11-libs/qt with USE=\"png\"."
-	fi
-}
+QT4_BUILT_WITH_USE_CHECK="zlib"
 
 src_compile() {
 	cd "${S}/src"
@@ -34,7 +28,7 @@ src_compile() {
 	mv "${S}"/src/translations/*.qm "${S}"/share/keepassx/i18n
 	cd "${S}"
 	use debug && myconf="DEBUG=1"
-	eqmake4 keepass.pro PREFIX="${D}/usr" ${myconf} || die "eqmake4 failed"
+	eqmake4 ${PN}.pro PREFIX="${D}/usr" ${myconf} || die "eqmake4 failed"
 	emake || die "emake failed"
 }
 
