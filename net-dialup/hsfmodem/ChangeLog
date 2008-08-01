@@ -1,13 +1,6 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.48 2008/08/01 21:26:44 mrness Exp $
-
-*hsfmodem-7.68.00.12-r1 (01 Aug 2008)
-
-  01 Aug 2008; Alin Năstac <mrness@gentoo.org>
-  files/hsfmodem-7.68.00.12-gentoo.patch, -hsfmodem-7.68.00.12.ebuild,
-  +hsfmodem-7.68.00.12-r1.ebuild:
-  Gentooize init script template (#233498).
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.49 2008/08/01 21:32:37 mrness Exp $
 
 *hsfmodem-7.68.00.12 (30 Jul 2008)
 
