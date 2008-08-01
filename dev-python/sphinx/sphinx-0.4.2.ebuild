@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.4.2.ebuild,v 1.2 2008/08/01 16:47:52 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.4.2.ebuild,v 1.3 2008/08/01 18:00:54 armin76 Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sphinx.pocoo.org/"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-python/pygments-0.8
