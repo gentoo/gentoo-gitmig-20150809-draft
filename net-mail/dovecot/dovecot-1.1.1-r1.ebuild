@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.1-r1.ebuild,v 1.5 2008/08/01 17:51:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.1-r1.ebuild,v 1.6 2008/08/01 17:57:23 armin76 Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ppc sparc x86 ~x86-fbsd"
 
 IUSE="debug doc ipv6 kerberos ldap managesieve mbox mysql pop3d pam postgres sieve sqlite3 ssl suid vpopmail"
 
