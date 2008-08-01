@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3669 2008/07/31 20:14:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3670 2008/08/01 20:07:42 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -50,6 +50,7 @@
 # games-util
 # gnome-base
 # gnome-extra
+# media-plugins
 # rox-base
 # rox-extra
 # sys-cluster
@@ -1130,8 +1131,6 @@ media-plugins/audacious-plugins:mtp - Build with Media Transfer Protocol music u
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:tta - Build with TTA (True-Audio lossless) support
-media-plugins/audacious-plugins-ugly:cube - Build with CUBE input plugin (supports formats such as ADX)
-media-plugins/audacious-plugins-ugly:iris - Build with Iris 3D visual plugin
 media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
 media-plugins/gimp-greycstoration:smp - Enable multicore/multiprocessor support
 media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library
