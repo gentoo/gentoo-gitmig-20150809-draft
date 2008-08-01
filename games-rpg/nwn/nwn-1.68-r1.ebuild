@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.9 2007/09/04 20:12:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.10 2008/08/01 18:52:28 calchan Exp $
 
 inherit eutils games
 
@@ -292,7 +292,7 @@ src_install() {
 			"${Ddir}"/fixinstall || die "sed"
 	fi
 	fperms ug+x "${dir}"/fixinstall || die "perms"
-	mv "${S}"/* ${Ddir}
+	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	games_make_wrapper nwn ./nwn "${dir}" "${dir}"
 	make_desktop_entry nwn "Neverwinter Nights"
