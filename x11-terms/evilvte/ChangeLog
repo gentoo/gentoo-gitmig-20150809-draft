@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/evilvte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.1 2008/06/01 19:10:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.2 2008/08/01 12:06:24 drac Exp $
+
+  01 Aug 2008; Samuli Suominen <drac@gentoo.org> evilvte-0.4.3.ebuild:
+  amd64 stable (tested by me) and keyword for ~x86 (tested by bheekling)
 
 *evilvte-0.4.3 (01 Jun 2008)
 
