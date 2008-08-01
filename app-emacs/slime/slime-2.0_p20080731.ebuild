@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r3.ebuild,v 1.3 2008/08/01 14:52:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.1 2008/08/01 14:52:49 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -24,8 +24,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PV}/module-load-gentoo.patch
+	epatch "${FILESDIR}"/${PV}/dont-call-init.patch
+	epatch "${FILESDIR}"/${PV}/inspect-presentations.patch
+	epatch "${FILESDIR}"/${PV}/fix-ecl.patch
+	epatch "${FILESDIR}"/${PV}/fix-swank-listener-hooks-contrib.patch
+	epatch "${FILESDIR}"/${PV}/fix-slime-indentation.patch
 	epatch "${FILESDIR}"/${PV}/changelog-date.patch
-	epatch "${FILESDIR}"/${PV}/save-restriction-if-possible.patch
 
 	# extract date of last update from ChangeLog, bug 233270
 	SLIME_CHANGELOG_DATE=$(awk '/^[-0-9]+ / { print $1; exit; }' ChangeLog)
@@ -38,8 +43,10 @@ src_unpack() {
 }
 
 src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
-	emake -j1 -C doc slime.info || die "emake slime.info failed"
+	elisp-comp *.el || die "Cannot compile core Elisp files"
+	EMACSFLAGS="${EMACSFLAGS} -L . -L contrib -l slime" \
+		elisp-compile contrib/*.el || die "Cannot compile contrib Elisp files"
+	emake -j1 -C doc slime.info || die "Cannot build info docs"
 	if use doc; then
 		VARTEXFONTS="${T}"/fonts \
 			emake -j1 -C doc slime.{ps,pdf} || die "emake doc failed"
@@ -47,19 +54,30 @@ src_compile() {
 }
 
 src_install() {
+	## install core
 	elisp-install ${PN} *.el{,c} "${FILESDIR}"/swank-loader.lisp \
 		|| die "Cannot install SLIME core"
 	elisp-site-file-install "${FILESDIR}"/${PV}/${SITEFILE} \
 		|| die "elisp-site-file-install failed"
+	cp "${FILESDIR}"/${PV}/swank.asd "${S}"
+	# remove upstream swank-loader, since it won't be used
+	rm "${S}"/swank-loader.lisp
 	insinto "${CLSOURCEROOT%/}"/swank
 	doins *.lisp "${FILESDIR}"/${PV}/swank.asd
 	dodir "${CLSYSTEMROOT}"
 	dosym "${CLSOURCEROOT%/}"/swank/swank.asd "${CLSYSTEMROOT}"
 	dosym "${SITELISP}"/${PN}/swank-version.el "${CLSOURCEROOT%/}"/swank
 
-	dodoc README* ChangeLog HACKING NEWS PROBLEMS || die "dodoc failed"
+	## install contribs
+	elisp-install ${PN}/contrib/ contrib/*.{el,elc,scm,goo} \
+		|| die "Cannot install contribs"
+	insinto "${CLSOURCEROOT%/}"/swank/contrib
+	doins contrib/*.lisp
+
+	## install docs
+	dodoc README* ChangeLog HACKING NEWS PROBLEMS
+	newdoc contrib/README README.contrib
+	newdoc contrib/ChangeLog ChangeLog.contrib
 	doinfo doc/slime.info
-	if use doc; then
-		dodoc doc/slime.{ps,pdf} || die "dodoc failed"
-	fi
+	use doc && dodoc doc/slime.{ps,pdf}
 }

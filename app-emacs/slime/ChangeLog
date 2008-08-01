@@ -1,6 +1,21 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.57 2008/08/01 14:35:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.58 2008/08/01 14:52:49 ulm Exp $
+
+*slime-2.0_p20080731 (01 Aug 2008)
+
+  01 Aug 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/2.0_p20080731/70slime-gentoo.el,
+  +files/2.0_p20080731/changelog-date.patch,
+  +files/2.0_p20080731/dont-call-init.patch,
+  +files/2.0_p20080731/fix-ecl.patch,
+  +files/2.0_p20080731/fix-slime-indentation.patch,
+  +files/2.0_p20080731/fix-swank-listener-hooks-contrib.patch,
+  +files/2.0_p20080731/inspect-presentations.patch,
+  +files/2.0_p20080731/module-load-gentoo.patch,
+  +files/2.0_p20080731/swank.asd, +slime-2.0_p20080731.ebuild:
+  Version bump: new CVS snapshot, everything contributed by Stelian Ionescu
+  <sionescu@common-lisp.net>.
 
 *slime-2.0_p20070816-r3 (01 Aug 2008)
 
