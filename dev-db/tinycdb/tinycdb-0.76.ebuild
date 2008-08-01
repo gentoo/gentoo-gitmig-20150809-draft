@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.5 2007/09/09 12:28:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.6 2008/08/01 15:03:29 hattya Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ LICENSE="public-domain"
 KEYWORDS="~amd64 ~hppa ia64 ~ppc x86"
 SLOT="0"
 
-DEPEND="!dev-db/cdb
-	!dev-db/freecdb"
+DEPEND="!dev-db/cdb"
 
 src_compile() {
 
