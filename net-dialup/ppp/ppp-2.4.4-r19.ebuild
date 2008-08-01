@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r18.ebuild,v 1.1 2008/07/30 20:37:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r19.ebuild,v 1.1 2008/08/01 20:58:23 mrness Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info pam
+inherit eutils toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20080730.tar.gz
+	mirror://gentoo/${P}-gentoo-20080801.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -120,7 +120,6 @@ src_unpack() {
 src_compile() {
 	export CC="$(tc-getCC)"
 	export AR="$(tc-getAR)"
-	append-ldflags -Wl,--allow-shlib-undefined # otherwise linking plugins might fail with undef errors (#210837)
 	econf || die "configuration failed"
 	emake COPTS="${CFLAGS} -D_GNU_SOURCE" || die "compile failed"
 
