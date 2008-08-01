@@ -6,4 +6,7 @@
 		<email>vdr@gentoo.org</email>
 		<name>Gentoo VDR Project</name>
     </maintainer>
+	<use>
+		<flag name='graphtft-fe'>Install external x11 remote frontend</flag>
+	</use>
 </pkgmetadata>

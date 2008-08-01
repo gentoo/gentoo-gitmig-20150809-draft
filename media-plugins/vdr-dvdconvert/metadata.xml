@@ -14,4 +14,8 @@
 		Mit diesem Programm koennen DVD's zu *.vdr files umgewandetl werden.
 		Ebenso koennen Kopien von DVD's erstellt werden.
 	</longdescription>
+	<use>
+		<flag name='projectx'>Enable support for
+			<pkg>media-video/projectx</pkg></flag>
+	</use>
 </pkgmetadata>

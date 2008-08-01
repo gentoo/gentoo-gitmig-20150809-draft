@@ -6,7 +6,9 @@
 <email>vdr@gentoo.org</email>
 <name>Gentoo VDR Project</name>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
+<use>
+	<flag name='yaepg'>Enables full support for the output format of
+		<pkg>media-plugins/vdr-yaepg</pkg></flag>
+</use>
 </pkgmetadata>
 

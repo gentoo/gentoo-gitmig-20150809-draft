@@ -6,7 +6,12 @@
 <email>vdr@gentoo.org</email>
 <name>Gentoo VDR Project</name>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
+<use>
+	<flag name='4mb-mod'>Enables support for modded FF-Card to 4MB ram or
+		softdecoder</flag>
+	<flag name='ff-card'>Enables scrollmode on FF-Card</flag>
+	<flag name='graphtft'>Enable support for
+		<pkg>media-plugins/vdr-graphtft</pkg></flag>
+</use>
 </pkgmetadata>
 

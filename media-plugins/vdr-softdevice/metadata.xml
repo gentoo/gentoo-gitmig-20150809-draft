@@ -6,7 +6,8 @@
 <email>vdr@gentoo.org</email>
 <name>Gentoo VDR Project</name>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
+<use>
+	<flag name='mmxext'>enables MMXExt support</flag>
+</use>
 </pkgmetadata>
 
