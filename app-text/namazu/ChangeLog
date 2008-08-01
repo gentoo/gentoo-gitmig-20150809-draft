@@ -1,6 +1,10 @@
 # ChangeLog for app-text/namazu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.26 2008/03/26 16:49:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.27 2008/08/01 15:43:29 hattya Exp $
+
+  01 Aug 2008; Akinori Hattori <hattya@gentoo.org> -namazu-2.0.16.ebuild,
+  -namazu-2.0.17.ebuild, -namazu-2.0.17-r1.ebuild:
+  cleaned out old ebuild(s).
 
   26 Mar 2008; Markus Rothe <corsair@gentoo.org> namazu-2.0.18.ebuild:
   Stable on ppc64; bug #214266
