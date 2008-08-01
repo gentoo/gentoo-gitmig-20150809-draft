@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8849 2008/07/31 20:46:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8850 2008/08/01 18:40:29 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1043,12 +1043,6 @@ dev-lang/entity
 # Marijn Schouten <hkBst@gentoo.org> (20 Dec 2007)
 # Broken, bug 202880
 >=dev-scheme/gambit-4.1.1
-
-# Christian Faulhammer <opfer@gentoo.org> (updated 04 Mar 2008)
-# Timo Gurr <tgurr@gentoo.org> (17 Mar 2008) [updated to add 0.3.1]
-# Needs masked qt-4.4
-=app-admin/keepassx-0.3.0a-r20
-=app-admin/keepassx-0.3.1-r20
 
 # Ingmar Vanhassel <ingmar@gentoo.org> (10 Mar 2008)
 # Masked for testing, various dependencies still need to be updated...
