@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.49 2008/07/06 19:21:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.50 2008/08/01 05:17:31 wrobel Exp $
+
+  01 Aug 2008; wrobel@gentoo.org -horde-kronolith-2.1.7.ebuild:
+  Removed vulnerable horde-kronolith-2.1.7 wrt sec issue #219304.
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org>
   horde-kronolith-2.1.8.ebuild:
