@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.8 2008/06/16 03:13:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.9 2008/08/01 20:31:43 armin76 Exp $
 
 inherit eutils multilib autotools
 
@@ -11,12 +11,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -hppa ~ia64 ppc ppc64 ~sparc ~x86"
-IUSE="gtk divx firefox gmedia mplayer-bin multilib nls quicktime realmedia seamonkey wmp xulrunner"
+IUSE="gtk divx firefox gmedia multilib nls quicktime realmedia seamonkey wmp xulrunner"
 
 LANGS="cs da de en_US es fr hu it ja ko nb nl pl pt_BR ru sk se tr wa zh_CN"
 for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
 
-RDEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
+RDEPEND=">=media-video/mplayer-1.0_pre5
+		xulrunner? ( =net-libs/xulrunner-1.8* )
 		!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
 		!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 		x11-libs/libXpm
@@ -26,9 +27,7 @@ RDEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
 			dev-libs/atk
 			>=dev-libs/glib-2.2.0
 			>=x11-libs/pango-1.2.1
-		)
-		mplayer-bin? ( media-video/mplayer-bin )
-		!mplayer-bin? ( >=media-video/mplayer-1.0_pre7 )"
+		)"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		multilib? (
@@ -46,10 +45,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-3.40-cflags.patch"
 	epatch "${FILESDIR}/${PN}-gcc4.patch"
-	### Adds support for 32 bit binary mplayer on amd64
-	if use mplayer-bin; then
-		epatch "${FILESDIR}/${PN}-mplayer-bin.patch"
-	fi
 	epatch "${FILESDIR}/${PN}_xulrunner-1.9.patch"
 	epatch "${FILESDIR}/${P}-seamonkey.patch"
 	eautoconf
