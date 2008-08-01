@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>python@gentoo.org</herd>
+	<herd>python</herd>
 	<maintainer>
 		<email>hawking@gentoo.org</email>
 		<name>Ali Polatel</name>
