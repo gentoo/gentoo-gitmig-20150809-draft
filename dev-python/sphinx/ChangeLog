@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.6 2008/08/01 16:47:52 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.7 2008/08/01 17:07:28 dev-zero Exp $
+
+  01 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> +sphinx-0.3.ebuild:
+  Re-added sphinx-0.3 to not drop keywords for ia64 and sparc until
+  dev-python/nose is keyworded for them.
 
   01 Aug 2008; Rob Cakebread <pythonhead@gentoo.org> -sphinx-0.4.2.ebuild:
   Dropped ia64 and ppc until dev-python/nose gets keyworded. bug #233554
