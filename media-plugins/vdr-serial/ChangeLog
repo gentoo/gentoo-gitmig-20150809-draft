@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-serial
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.3 2007/03/02 18:18:30 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.4 2008/08/01 13:18:49 zzam Exp $
+
+  01 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-serial-0.0.6a-r1.ebuild:
+  Clean up pre-existing object files, to stop executable stack warnings.
 
 *vdr-serial-0.0.6a-r1 (02 Mar 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.1 2007/03/02 18:18:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.2 2008/08/01 13:18:49 zzam Exp $
 
 inherit vdr-plugin
 
@@ -27,3 +27,10 @@ pkg_setup() {
 		gpasswd -a vdr uucp
 	fi
 }
+
+src_unpack() {
+	vdr-plugin_src_unpack
+	cd "${S}"/tools
+	emake clean
+}
+
