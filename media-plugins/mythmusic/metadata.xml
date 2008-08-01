@@ -5,4 +5,8 @@
 <maintainer>
 	<email>cardoe@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='libvisual'>Enables <pkg>media-libs/libvisual</pkg> support for
+		effects</flag>
+</use>
 </pkgmetadata>

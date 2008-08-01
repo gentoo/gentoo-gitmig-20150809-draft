@@ -5,4 +5,7 @@
 <maintainer>
 	<email>cardoe@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='transcode'>Enable DVD ripping and transcoding</flag>
+</use>
 </pkgmetadata>

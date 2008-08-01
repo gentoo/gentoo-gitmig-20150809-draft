@@ -1,10 +1,13 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.49 2008/03/03 17:25:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.50 2008/08/01 16:38:31 cardoe Exp $
+
+  01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *mythdvd-0.21 (03 Mar 2008)
 
-  03 Mar 2008; Doug Klima <cardoe@gentoo.org> +mythdvd-0.21.ebuild:
+  03 Mar 2008; Doug Goldstein <cardoe@gentoo.org> +mythdvd-0.21.ebuild:
   add stub 0.21 ebuild
 
   15 Oct 2007; Doug Goldstein <cardoe@gentoo.org> -mythdvd-0.20.1.ebuild,
