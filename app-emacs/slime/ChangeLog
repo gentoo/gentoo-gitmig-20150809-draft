@@ -1,6 +1,25 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.55 2008/07/30 09:12:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.56 2008/08/01 13:01:35 ulm Exp $
+
+*slime-2.0_p20070816-r3 (01 Aug 2008)
+
+  01 Aug 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/2.0_p20061118/70slime-gentoo.el,
+  +files/2.0_p20070816/70slime-gentoo.el,
+  +files/2.0_p20070816/changelog-date.patch,
+  +files/2.0_p20070816/save-restriction-if-possible.patch,
+  +files/2.0_p20070816/set-swank-wire-protocol-version.patch,
+  +files/2.0_p20070816/swank.asd, -files/71slime-gentoo.el,
+  -files/slime-2.0_p20070816-save-restriction-if-possible.patch,
+  -files/70slime-gentoo.el, -files/new-slime-ball,
+  -files/slime-changelog-date.patch,
+  -files/slime-set-swank-wire-protocol-version.patch, -files/swank.asd,
+  slime-2.0_p20061118.ebuild, -slime-2.0_p20070816-r2.ebuild,
+  +slime-2.0_p20070816-r3.ebuild:
+  Reorganise directory structure. Sync swank.asd from the lisp overlay.
+  Remove unused new-slime-ball script. Thanks to Stelian Ionescu
+  <sionescu@common-lisp.net>.
 
 *slime-2.0_p20070816-r2 (30 Jul 2008)
 

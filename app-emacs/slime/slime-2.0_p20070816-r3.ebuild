@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r2.ebuild,v 1.1 2008/07/30 09:12:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r3.ebuild,v 1.1 2008/08/01 13:01:35 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -19,14 +19,15 @@ DEPEND="${RDEPEND}
 
 CLPACKAGE=swank
 SWANK_VERSION="2007-08-16"
-SITEFILE=71${PN}-gentoo.el
+SITEFILE=70${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-set-swank-wire-protocol-version.patch
-	epatch "${FILESDIR}"/${PN}-changelog-date.patch
-	epatch "${FILESDIR}"/${P}-save-restriction-if-possible.patch
+
+	epatch "${FILESDIR}"/${PV}/set-swank-wire-protocol-version.patch
+	epatch "${FILESDIR}"/${PV}/changelog-date.patch
+	epatch "${FILESDIR}"/${PV}/save-restriction-if-possible.patch
 
 	# extract date of last update from ChangeLog, bug 233270
 	SLIME_CHANGELOG_DATE=$(sed -n \
@@ -51,10 +52,10 @@ src_compile() {
 src_install() {
 	elisp-install ${PN} *.el{,c} "${FILESDIR}"/swank-loader.lisp \
 		|| die "Cannot install SLIME core"
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+	elisp-site-file-install "${FILESDIR}"/${PV}/${SITEFILE} \
 		|| die "elisp-site-file-install failed"
 	insinto "${CLSOURCEROOT}"/swank
-	doins *.lisp "${FILESDIR}"/swank.asd
+	doins *.lisp "${FILESDIR}"/${PV}/swank.asd
 	dodir "${CLSYSTEMROOT}"
 	dosym "${CLSOURCEROOT}"/swank/swank.asd "${CLSYSTEMROOT}"
 	dosym "${SITELISP}"/${PN}/swank-version.el "${CLSOURCEROOT}"/swank
