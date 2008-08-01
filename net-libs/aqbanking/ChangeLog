@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.54 2008/07/31 15:58:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.55 2008/08/01 18:30:05 nixnut Exp $
+
+  01 Aug 2008; nixnut <nixnut@gentoo.org> aqbanking-2.3.3.ebuild:
+  Stable on ppc wrt bug 233536
 
 *aqbanking-3.6.2 (31 Jul 2008)
 
