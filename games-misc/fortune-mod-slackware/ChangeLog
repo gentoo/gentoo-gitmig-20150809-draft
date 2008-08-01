@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-slackware
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.7 2008/08/01 18:00:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.8 2008/08/01 18:06:08 armin76 Exp $
+
+  01 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  fortune-mod-slackware-1.15.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #233445
 
   01 Aug 2008; nixnut <nixnut@gentoo.org> fortune-mod-slackware-1.15.ebuild:
   Stable on ppc wrt bug 233445
