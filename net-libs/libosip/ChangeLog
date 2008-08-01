@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.31 2008/05/18 21:02:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.32 2008/08/01 18:51:28 nixnut Exp $
+
+  01 Aug 2008; nixnut <nixnut@gentoo.org> libosip-3.1.0.ebuild:
+  Stable on ppc wrt bug 210738
 
   18 May 2008; Tobias Klausmann <klausman@gentoo.org> libosip-3.1.0.ebuild:
   Unkeyworded on alpha for lack of dependencies. Bug 210738.
