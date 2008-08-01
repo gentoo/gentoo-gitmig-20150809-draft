@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.4 2008/06/29 09:42:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.5 2008/08/01 06:51:29 neurogeek Exp $
+
+*sphinx-0.4.2 (01 Aug 2008)
+
+  01 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> -sphinx-0.3.ebuild,
+  +sphinx-0.4.2.ebuild:
+  Version bump. Added tests and DEPEND on nose. Fixes bugs #230599 and
+  #231365. Removed older version
 
   29 Jun 2008; Raúl Porcel <armin76@gentoo.org> sphinx-0.3.ebuild:
   Add ~ia64/~sparc wrt #229393

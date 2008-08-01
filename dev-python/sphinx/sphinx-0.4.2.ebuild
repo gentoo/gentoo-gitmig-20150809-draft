@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.3.ebuild,v 1.4 2008/06/29 09:42:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.4.2.ebuild,v 1.1 2008/08/01 06:51:29 neurogeek Exp $
 
 inherit distutils
 
@@ -13,12 +13,14 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="doc"
+IUSE="doc test"
 
-DEPEND=">=dev-python/pygments-0.8
+DEPEND="!sparc? ( !ppc? ( !ia64? ( test? ( dev-python/nose ) ) ) )
+	>=dev-python/pygments-0.8
 	>=dev-python/jinja-1.1
 	>=dev-python/docutils-0.4
 	dev-python/setuptools"
+
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -38,4 +40,9 @@ src_install() {
 	if use doc ; then
 		dohtml -A txt -r doc/_build/html/*
 	fi
+}
+
+src_test() {
+	mkdir tests/root/_build
+	PYTHONPATH=. ${python} tests/run.py || die "Tests failed"
 }
