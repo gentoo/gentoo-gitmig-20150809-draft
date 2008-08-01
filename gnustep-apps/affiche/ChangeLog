@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/affiche
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/affiche/ChangeLog,v 1.14 2007/11/16 15:25:07 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/affiche/ChangeLog,v 1.15 2008/08/01 11:52:23 grobian Exp $
+
+  01 Aug 2008; Fabian Groffen <grobian@gentoo.org> affiche-0.6.0-r3.ebuild:
+  Fix HOMEPAGE
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> affiche-0.6.0-r3.ebuild:
   amd64 stable, bug 195990
