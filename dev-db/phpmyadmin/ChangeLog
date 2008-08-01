@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.316 2008/07/31 20:52:33 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.317 2008/08/01 14:33:14 jer Exp $
+
+  01 Aug 2008; Jeroen Roovers <jer@gentoo.org> phpmyadmin-2.11.8.ebuild:
+  Stable for HPPA (bug #232007).
 
 *phpmyadmin-2.11.8 (31 Jul 2008)
 
