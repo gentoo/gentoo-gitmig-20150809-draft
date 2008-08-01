@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-woody-allen-it
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-woody-allen-it/ChangeLog,v 1.1 2007/08/23 00:44:06 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-woody-allen-it/ChangeLog,v 1.2 2008/08/01 18:05:01 armin76 Exp $
+
+  01 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  fortune-mod-woody-allen-it-0.1.ebuild:
+  x86 stable wrt #233444
 
 *fortune-mod-woody-allen-it-0.1 (23 Aug 2007)
 
