@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.30 2008/07/31 03:45:27 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.31 2008/08/01 17:23:05 flameeyes Exp $
+
+  01 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> fbsd/package.use.mask:
+  Mask sha512 USE flag for pambase on FreeBSD.
 
   31 Jul 2008; Javier Villavicencio <the_paya@gentoo.org>
   fbsd/package.use.mask:

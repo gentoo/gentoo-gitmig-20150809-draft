@@ -84,7 +84,9 @@ dev-lang/swig chicken
 # Gentoo/FreeBSD.
 # Javier Villavicencio <the_paya@gentoo.org> (31 Jul 2008)
 # pam_ssh deps on Linux-PAM.
-sys-auth/pambase consolekit cracklib ssh
+# Diego Pettenò <flameeyes@gentoo.org> (1 Aug 2008)
+# sha512 is only supported by Linux-PAM's pam_unix for now
+sys-auth/pambase consolekit cracklib ssh sha512
 
 # Alexis Ballier <aballier@gentoo.org> (7 Apr 2008)
 # bug #216855
