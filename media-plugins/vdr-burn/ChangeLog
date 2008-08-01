@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.29 2008/06/15 20:04:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.30 2008/08/01 19:27:50 cardoe Exp $
+
+  01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   15 Jun 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gcc43.patch,

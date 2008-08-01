@@ -7,4 +7,8 @@
 		<name>Gentoo VDR Project</name>
     </maintainer>
     <longdescription>VDR plugin to burn DVD's and DVD file structures</longdescription>
+	<use>
+		<flag name='projectx'>Enables support for
+			<pkg>media-video/projectx</pkg></flag>
+	</use>
 </pkgmetadata>
