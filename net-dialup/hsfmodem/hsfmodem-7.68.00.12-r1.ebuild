@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.68.00.12.ebuild,v 1.1 2008/07/30 20:50:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.68.00.12-r1.ebuild,v 1.1 2008/08/01 21:26:44 mrness Exp $
 
 inherit eutils linux-info
 
