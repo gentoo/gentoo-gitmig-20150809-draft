@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.3 2008/07/31 14:15:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35417.ebuild,v 1.4 2008/08/01 04:20:17 mr_bones_ Exp $
 
 inherit autotools
 
@@ -46,7 +46,6 @@ src_unpack() {
 src_compile() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
-
 
 	local myconf
 		use pango && myconf="${myconf} --with-font-backend=pango"
