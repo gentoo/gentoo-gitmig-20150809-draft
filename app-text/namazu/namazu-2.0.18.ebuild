@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.18.ebuild,v 1.3 2008/03/26 16:49:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.18.ebuild,v 1.4 2008/08/01 15:45:33 hattya Exp $
 
 inherit elisp-common
 
@@ -24,8 +24,6 @@ DEPEND=">=dev-perl/File-MMagic-1.20
 		dev-lang/tk
 		www-client/lynx
 	)"
-
-SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 
@@ -53,8 +51,10 @@ src_compile() {
 
 	if use emacs; then
 		cd lisp
-		elisp-comp {namazu,gnus-nmz-1}.el || die "elisp-comp failed"
+		rm -f browse*
+		elisp-comp *.el || die
 	fi
+
 }
 
 src_install () {
@@ -70,20 +70,23 @@ src_install () {
 	doins etc/*.png
 
 	if use emacs; then
-		elisp-install ${PN} lisp/{namazu,gnus-nmz-1}.el{,c} \
-			|| die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-			|| die "elisp-site-file-install failed"
+		elisp-install ${PN} lisp/*.el* || die
+		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el || die
 
 		docinto lisp
 		dodoc lisp/ChangeLog*
 	fi
 
 }
+
 pkg_postinst() {
+
 	use emacs && elisp-site-regen
+
 }
 
 pkg_postrm() {
+
 	use emacs && elisp-site-regen
+
 }
