@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.56 2008/08/01 13:01:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.57 2008/08/01 14:35:58 ulm Exp $
 
 *slime-2.0_p20070816-r3 (01 Aug 2008)
 
@@ -9,7 +9,6 @@
   +files/2.0_p20070816/70slime-gentoo.el,
   +files/2.0_p20070816/changelog-date.patch,
   +files/2.0_p20070816/save-restriction-if-possible.patch,
-  +files/2.0_p20070816/set-swank-wire-protocol-version.patch,
   +files/2.0_p20070816/swank.asd, -files/71slime-gentoo.el,
   -files/slime-2.0_p20070816-save-restriction-if-possible.patch,
   -files/70slime-gentoo.el, -files/new-slime-ball,
