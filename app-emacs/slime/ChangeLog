@@ -1,10 +1,13 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.59 2008/08/01 16:07:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.60 2008/08/01 17:37:57 ulm Exp $
 
   01 Aug 2008; Ulrich Mueller <ulm@gentoo.org>
+  files/2.0_p20070816/70slime-gentoo.el,
+  files/2.0_p20080731/70slime-gentoo.el,
   slime-2.0_p20070816-r3.ebuild, slime-2.0_p20080731.ebuild:
-  Add missing dependency for ASDF.
+  Add missing dependency for ASDF. Properly autoload package for Emacs.
+  Thanks to Stelian Ionescu <sionescu@common-lisp.net>.
 
 *slime-2.0_p20080731 (01 Aug 2008)
 

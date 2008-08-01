@@ -4,7 +4,8 @@
 (add-to-list 'load-path "@SITELISP@")
 
 (require 'slime-autoloads)
-(slime-setup)
+(eval-after-load 'slime
+  (slime-setup))
 
 ;; this allows us not to require dev-lisp/hyperspec
 ;; (which is non-free) as a hard dependency
