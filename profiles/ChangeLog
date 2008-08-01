@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1735 2008/08/01 18:40:29 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1736 2008/08/01 20:18:33 armin76 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  01 Aug 2008; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Add mozilla-firefox-bin-3.1_alpha1 to p.mask
 
   01 Aug 2008; Timo Gurr <tgurr@gentoo.org> package.mask:
   Remove keepassx mask, fixed in the ebuild.
