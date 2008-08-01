@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.20 2008/07/02 01:08:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.21 2008/08/01 17:16:06 wschlich Exp $
+
+*dhcpv6-1.0.20 (01 Aug 2008)
+
+  01 Aug 2008; Wolfram Schlich <wschlich@gentoo.org> +dhcpv6-1.0.20.ebuild:
+  version bump
 
   02 Jul 2008; Jeremy Olexa <darkside@gentoo.org> dhcpv6-1.0.19.ebuild:
   Fix dep on libnl to a correct version. Thanks to Charles Stewart for
