@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.12 2008/07/30 07:16:19 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.13 2008/08/01 18:38:37 nixnut Exp $
+
+  01 Aug 2008; nixnut <nixnut@gentoo.org> libssh2-0.18.ebuild:
+  Stable on ppc wrt bug 233122
 
   30 Jul 2008; Dawid Węgliński <cla@gentoo.org> libssh2-0.18.ebuild:
   Stable on amd64 (bug #233122)
