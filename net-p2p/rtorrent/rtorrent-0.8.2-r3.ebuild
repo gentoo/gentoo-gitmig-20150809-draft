@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r3.ebuild,v 1.4 2008/08/01 18:42:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r3.ebuild,v 1.5 2008/08/01 21:16:53 loki_val Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fix_start_stop_filter.patch
 	epatch "${FILESDIR}"/${P}-fix_conn_type_seed.patch
 	epatch "${FILESDIR}"/${P}-fix_load_cache.patch
+	epatch "${FILESDIR}"/${P}-gcc34.patch
 }
 
 src_compile() {
