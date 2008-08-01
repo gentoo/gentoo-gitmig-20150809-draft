@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.39 2008/05/12 17:31:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.40 2008/08/01 20:00:39 cardoe Exp $
+
+  01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *vdr-xineliboutput-1.0.1 (12 May 2008)
 

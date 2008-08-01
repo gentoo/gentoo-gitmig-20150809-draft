@@ -10,4 +10,7 @@
 		Plugin weatherng for the Video Disk Recorder (VDR)
 		Show weahter data for your City.
 	</longdescription>
+	<use>
+		<flag name='dxr3'>enables lower osd color depth for dxr3 cards</flag>
+	</use>
 </pkgmetadata>

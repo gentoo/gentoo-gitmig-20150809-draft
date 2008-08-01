@@ -9,4 +9,8 @@
     <longdescription>
 	  Video Disk Recorder Xinelib PlugIn ( VDR )
 	</longdescription>		
+	<use>
+		<flag name='libextractor'>Use <pkg>media-libs/libextract</pkg> to gather
+			files' metadata in media-player</flag>
+	</use>
 </pkgmetadata>

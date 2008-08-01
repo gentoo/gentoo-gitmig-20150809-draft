@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.22 2008/06/15 21:32:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.23 2008/08/01 19:59:04 cardoe Exp $
+
+  01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   15 Jun 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-weatherng-0.0.8_pre3-gcc43.patch,
