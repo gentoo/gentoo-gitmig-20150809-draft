@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-firefly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/ChangeLog,v 1.6 2008/08/01 18:04:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/ChangeLog,v 1.7 2008/08/01 19:53:35 ken69267 Exp $
+
+  01 Aug 2008; Kenneth Prugh <ken69267@gentoo.org>
+  fortune-mod-firefly-2.1.1.ebuild:
+  amd64 stable, bug #233442
 
   01 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   fortune-mod-firefly-2.1.1.ebuild:
