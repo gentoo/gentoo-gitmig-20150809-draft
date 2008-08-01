@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.5.ebuild,v 1.1 2008/07/31 21:04:08 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.5.ebuild,v 1.2 2008/08/01 04:30:01 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -19,7 +19,7 @@ S="${WORKDIR}"
 
 pkg_setup () {
 	webapp_pkg_setup
-	require_php_with_use mysql zlib
+	require_php_with_use mysql zlib xml
 }
 
 src_install () {
