@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.5.ebuild,v 1.1 2008/05/14 22:02:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.8.ebuild,v 1.1 2008/08/01 22:13:41 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -23,6 +23,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pam ldap samba sasl nis radius ssl snmp selinux icap-client logrotate \
+	qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
@@ -40,9 +41,9 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
-	if hasq qos ${USE} || hasq zero-penalty-hit ${USE} ; then
-		eerror "qos and zero-penalty-hit useflags are not supported by squid-3."
-		eerror "Please remove them from your USE or use =net-proxy/squid-2.6* instead."
+	if use qos; then
+		eerror "qos patch is no longer supported by us!"
+		eerror "Please remove qos from your USE and select zero-penalty-hit flag instead."
 		die "unsupported USE flags detected"
 	fi
 	enewgroup squid 31
@@ -51,11 +52,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
+
 	cd "${S}" || die "source dir not found"
-
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-
-	sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
+	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-adapted-zph.patch
 
 	eautoreconf
 }
@@ -174,4 +174,9 @@ pkg_postinst() {
 	echo
 	ewarn "Squid can be configured to run in transparent mode like this:"
 	ewarn "   ${HILITE}http_port internal-addr:3128 transparent${NORMAL}"
+	if use zero-penalty-hit; then
+		echo
+		ewarn "In order for zph_preserve_miss_tos to work, you will have to alter your kernel"
+		ewarn "with the patch that can be found on http://zph.bratcheda.org site."
+	fi
 }

@@ -1,6 +1,16 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.192 2008/06/26 19:32:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.193 2008/08/01 22:13:41 mrness Exp $
+
+*squid-3.0.8 (01 Aug 2008)
+
+  01 Aug 2008; Alin Năstac <mrness@gentoo.org>
+  -files/squid-2.7.2-gentoo.patch, -files/squid-3.0.5-gentoo.patch,
+  -files/squid-3.0.6-adapted-zph.patch, -files/squid-3.0.6-gentoo.patch,
+  -files/squid-3.0.6-lincapver.patch, +files/squid-3.0.8-adapted-zph.patch,
+  +files/squid-3.0.8-gentoo.patch, -squid-2.7.2.ebuild, -squid-3.0.5.ebuild,
+  -squid-3.0.6-r1.ebuild, -squid-3.0.6-r2.ebuild, +squid-3.0.8.ebuild:
+  Remove obsolete test versions. Version bump (#233001).
 
 *squid-3.0.7 (26 Jun 2008)
 *squid-2.7.3 (26 Jun 2008)
