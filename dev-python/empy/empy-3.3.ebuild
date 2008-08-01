@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.10 2008/07/30 21:59:51 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.11 2008/08/01 22:27:14 pythonhead Exp $
 
 inherit distutils
 
@@ -24,8 +24,8 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 	dodir /usr/bin
-	fperms 755 "$(get_python_sitedir)/em.py"
-	dosym $(get_python_sitedir)/em.py /usr/bin/em.py || \
+	fperms 755 "$(python_get_sitedir)/em.py"
+	dosym $(python_get_sitedir)/em.py /usr/bin/em.py || \
 		die "dosym failed"
 	if use doc ; then
 		dodir /usr/share/doc/"${PF}"/examples
