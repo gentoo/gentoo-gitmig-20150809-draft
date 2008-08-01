@@ -1,3 +1,7 @@
+# Jean-Noël Rivasseau <elvanor@gentoo.org> (01 Aug 2008)
+# Disabling gcj flag, no gcc-4.3.1 yet
+dev-java/eclipse-ecj gcj
+
 # Diego Pettenò <flameeyes@gentoo.org> (10 Nov 2007)
 # Tests for Linux-PAM 0.99 require >=sys-libs/glibc-2.4
 >=sys-libs/pam-0.99.8 test
@@ -17,4 +21,3 @@ sys-auth/pambase passwdqc
 # Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
 # Mask unkeyworded webkit from liferea
 net-news/liferea webkit
-
