@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.5 2008/01/24 05:50:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.6 2008/08/01 17:58:12 armin76 Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kmuddy.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="arts sdl"
 
 DEPEND="arts? ( kde-base/arts )
