@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.536 2008/07/30 10:18:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.537 2008/08/01 11:10:25 zmedico Exp $
+
+*portage-2.2_rc6 (01 Aug 2008)
+
+  01 Aug 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc6.ebuild:
+  2.2_rc6 bump. This fixes bugs #94133 (userfetch access check), #229033
+  #233252 (repoman manifest commit optimization for svn), #233253 (unhandled
+  InvalidAtom exception), #233303 (@dowgrade package set), #233421 (make
+  DISTDIR permission adjustment less aggressive), #233458 (KeyError
+  triggered by fetch failure), and #233487 (--fetch-all-uri breakage).
+  Also, there are new @live-rebuild and @module-rebuild package sets that
+  are now included with the default set configuration. Bug #210077 tracks
+  all bugs fixed since 2.1.5.x.
 
 *portage-2.2_rc5 (30 Jul 2008)
 
