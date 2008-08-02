@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.206 2008/08/02 12:21:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.207 2008/08/02 16:45:37 jer Exp $
+
+  02 Aug 2008; Jeroen Roovers <jer@gentoo.org> bind-9.4.2_p2.ebuild:
+  Stable for HPPA (bug #233675).
 
   02 Aug 2008; <chainsaw@gentoo.org> bind-9.4.2_p2.ebuild:
   Stable AMD64 keyword for security bug #233675, tested on Opteron 2218
