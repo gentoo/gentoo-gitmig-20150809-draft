@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.6 2007/07/15 02:43:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.5.1.ebuild,v 1.7 2008/08/02 20:38:25 tove Exp $
 
 inherit perl-module eutils
 
@@ -24,11 +24,11 @@ RDEPEND="${DEPEND}
 	tesseract? 	( app-text/tesseract )
 	mysql? 		( dev-perl/DBD-mysql dev-perl/DBI )
 	logrotate?	( app-admin/logrotate )
-	dbm?		( perl-core/DB_File dev-perl/MLDBM-Sync perl-core/Storable )
+	dbm?		( virtual/perl-DB_File dev-perl/MLDBM-Sync virtual/perl-Storable )
 	media-libs/netpbm
 	media-libs/giflib
 	dev-perl/String-Approx
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	media-gfx/gifsicle"
 #	postgres?	( dev-perl/DBD-Pg )
 

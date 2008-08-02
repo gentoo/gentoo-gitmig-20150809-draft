@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.15 2007/07/03 10:34:25 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.16 2008/08/02 20:38:25 tove Exp $
+
+  02 Aug 2008; Torsten Veller <tove@gentoo.org>
+  spamassassin-fuzzyocr-3.5.1.ebuild, spamassassin-fuzzyocr-3.5.1-r1.ebuild:
+  Move perl-core/DB_File -> virtual/perl-DB_File, perl-core/Storable ->
+  virtual/perl-Storable, perl-core/Time-HiRes -> virtual/perl-Time-HiRes
+  (#211629)
 
   03 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   spamassassin-fuzzyocr-3.5.1-r1.ebuild:
