@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.6 2008/01/10 18:19:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.7 2008/08/02 21:08:11 loki_val Exp $
+
+inherit base autotools
 
 DESCRIPTION="device-specific layer for the Apple iPod"
 HOMEPAGE="http://banshee-project.org/Libipoddevice"
@@ -20,12 +22,15 @@ RDEPEND=">=dev-libs/dbus-glib-0.71
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+PATCHES=( "${FILESDIR}/${P}-libsgutils2.patch" )
+
 src_unpack() {
-	unpack ${A}
+	base_src_unpack
 	cd "${S}"
 	# use correct libdir in pkgconfig file
 	sed -i -e 's:^libdir=.*:libdir=@libdir@:' \
 		ipoddevice.pc.in || die "sed failed."
+	eautoreconf
 }
 
 src_install() {
