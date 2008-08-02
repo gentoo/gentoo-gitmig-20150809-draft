@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-hppa64
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.13 2008/07/14 17:54:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.14 2008/08/02 11:36:34 pchrist Exp $
+
+  02 Aug 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc. GLEP 56
 
   14 Jul 2008; Guy Martin <gmsoft@gentoo.org> binutils-hppa64-2.18.ebuild:
   Stable on hppa.

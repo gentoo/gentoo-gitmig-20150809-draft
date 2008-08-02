@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>toolchain</herd>
 <herd>embedded</herd>
+<use>
+<flag name='multislot'>Allow for SLOTs to include minor version (3.3.4 instead
+of just 3.3)</flag>
+</use>
 </pkgmetadata>
