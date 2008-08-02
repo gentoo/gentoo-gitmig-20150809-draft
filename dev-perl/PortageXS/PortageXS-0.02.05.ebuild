@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.05.ebuild,v 1.7 2007/04/22 01:23:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.05.ebuild,v 1.8 2008/08/02 20:17:02 tove Exp $
 
 inherit perl-module
 DESCRIPTION="Portage abstraction layer for perl"
@@ -16,7 +16,7 @@ SRC_TEST="do"
 DEPEND="dev-lang/perl
 	dev-perl/Term-ANSIColor
 	!minimal? ( dev-perl/IO-Socket-SSL
-				perl-core/Sys-Syslog )"
+				virtual/perl-Sys-Syslog )"
 
 src_unpack() {
 	unpack ${A}
