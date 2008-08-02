@@ -1,26 +1,32 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.1.ebuild,v 1.5 2008/08/02 14:00:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.2.ebuild,v 1.1 2008/08/02 14:00:15 calchan Exp $
 
 inherit eutils games
 
+UPSTREAM_VERSION="nwmovies-v4-public.20080512.v4rc1"
+
 DESCRIPTION="Play Neverwinter Nights movies inside the Linux client."
-HOMEPAGE="http://home.woh.rr.com/nwmovies/nwmovies/"
-SRC_URI="http://dev.gentoo.org/~calchan/distfiles/${P}.tar.bz2"
+HOMEPAGE="http://home.woh.rr.com/nwmovies/"
+SRC_URI="${HOMEPAGE}${UPSTREAM_VERSION}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=games-rpg/nwn-data-1.29-r3"
 RDEPEND="${DEPEND}
 	>=games-rpg/nwn-1.68-r4
-	!>=games-rpg/nwn-1.69
 	media-video/binkplayer"
 
 S="${WORKDIR}"
 DESTDIR="${GAMES_PREFIX_OPT}/nwn"
+
+QA_TEXTRELS="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies.so"
+QA_WX_LOAD="opt/nwn/nwmovies.so"
+QA_EXECSTACK="opt/nwn/nwmovies.so"
+QA_DT_HASH="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies/libdis/libdisasm.so opt/nwn/nwmovies.so"
 
 pkg_setup() {
 	games_pkg_setup
@@ -34,6 +40,8 @@ src_install() {
 	doexe nwmovies/binklib.so || die "Installation failed"
 	exeinto "${DESTDIR}/nwmovies/libdis"
 	doexe nwmovies/libdis/libdisasm.so || die "Installation failed"
+	insinto "${DESTDIR}"
+	doins nwmovies/*.txt
 	prepgamesdirs
 }
 
@@ -47,6 +55,6 @@ pkg_postinst() {
 	elog "You will have to remove this file whenever you update nwn."
 	elog
 	elog "If you have sound issues in NWN only when using nwmovies, then"
-	elog "you'll need to properly setup /etc/asound.conf or the equivalent"
+	elog "you may need to properly setup /etc/asound.conf or the equivalent"
 	elog "per-user \${HOME}/.asound.conf, see comment #31 in bug #106789."
 }
