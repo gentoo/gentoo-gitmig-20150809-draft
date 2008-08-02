@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.51 2008/08/02 21:33:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.52 2008/08/02 23:22:12 williamh Exp $
+
+  02 Aug 2008; William Hubbs <williamh@gentoo.org> -espeak-1.25.ebuild,
+  -espeak-1.36.ebuild, -espeak-1.36.02.ebuild, -espeak-1.37.ebuild:
+  Removed old versions.
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org> espeak-1.37-r1.ebuild:
   Stable on ppc64; bug #233112
