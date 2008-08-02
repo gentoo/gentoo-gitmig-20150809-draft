@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.47 2008/02/04 17:28:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.48 2008/08/02 07:10:14 ulm Exp $
+
+  02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *hyperestraier-1.4.13 (04 Feb 2008)
 

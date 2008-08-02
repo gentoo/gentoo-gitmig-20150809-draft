@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.28 2008/08/01 15:45:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.29 2008/08/02 07:16:14 ulm Exp $
+
+  02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   01 Aug 2008; Akinori Hattori <hattya@gentoo.org> namazu-2.0.18.ebuild:
   remove lisp/browse-url-for-emacs-19.28.el in src_compile.
