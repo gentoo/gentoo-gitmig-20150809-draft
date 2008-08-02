@@ -1,0 +1,112 @@
+#!/bin/bash
+#
+# icecream-create-env - helper script to create icecc environments(mostly for cross-compiling)
+#
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+#
+# Please note, this script has been designed to work with Gentoo's crossdev, it may or may
+# not work with cross-toolchains that were build differently.
+#
+#
+# Usage: "./icecream-create-env" creates a native environment(similar to icecc --build-native)
+#		 "./icecream-create-env CHOST" creates a cross-compile environment using the cross-toolchain created by crossdev
+# Example:
+#        "emerge crossdev && crossdev -t sparc-unknown-linux-gnu && icecream-create-env sparc-unknown-linux"
+
+if [ `id -u` -ne 0 ]
+then
+	echo "Only the superuser can execute this script."
+	exit 1
+fi
+
+# param 1 = CHOST
+prefix="${1}"
+
+if [ -z "${prefix}" ]
+then
+	prefix="`gcc -dumpmachine`"
+fi
+
+gccbin=`which ${prefix}-gcc 2>/dev/null`
+if [ ! -e "${gccbin}" ]
+then
+	echo "Can't find ${prefix}-gcc!"
+	exit 1
+fi
+
+version="`${prefix}-gcc -dumpversion`"
+
+tmpdir=`mktemp -d`
+tmpfile=`mktemp`
+
+echo "Creating icecc environment for ${prefix}..."
+
+mkdir -p ${tmpdir}/usr/bin
+	
+echo "Adding `which ${prefix}-as`... as /usr/bin/as"
+cp -p `which ${prefix}-as` ${tmpdir}/usr/bin/as
+
+if [ "`gcc -dumpmachine`" = "${prefix}" ]
+then
+	echo "Adding /usr/${prefix}/gcc-bin/${version}/g++ as /usr/bin/g++..."
+	cp -p /usr/${prefix}/gcc-bin/${version}/g++ ${tmpdir}/usr/bin
+	echo "Adding /usr/${prefix}/gcc-bin/${version}/gcc as /usr/bin/gcc..."
+	cp -p /usr/${prefix}/gcc-bin/${version}/gcc ${tmpdir}/usr/bin
+else
+	echo "Adding /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ as /usr/bin/g++..."
+	cp -p /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ ${tmpdir}/usr/bin/g++
+	echo "Adding /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc as /usr/bin/gcc..."
+	cp -p /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc ${tempdir}/usr/bin/gcc
+fi
+
+echo "Adding /usr/libexec/gcc/${prefix}/${version}/cc1 as /usr/bin/cc1..."
+cp -p /usr/libexec/gcc/${prefix}/${version}/cc1 ${tmpdir}/usr/bin/
+	
+echo "Adding /usr/libexec/gcc/${prefix}/${version}/cc1plus as /usr/bin/cc1plus.."
+cp -p /usr/libexec/gcc/${prefix}/${version}/cc1plus ${tmpdir}/usr/bin/
+
+# binaries are there, now copy libs
+for binary in `ls ${tmpdir}/usr/bin/`
+do
+	for library in `ldd ${tmpdir}/usr/bin/${binary} | tr '=>' ' ' | awk '{print $1" "$2}'`
+	do
+		if [ ! -e "${tmpdir}/${library}" ] && [ -e "${library}" ]
+		then
+			echo "Adding ${library}..."
+			cp --parents "${library}" ${tmpdir}/
+		fi
+	done
+done
+
+# rebuild ld.so.cache
+echo "Creating /etc/ld.so.cache..."
+cp --parents /etc/ld.so.conf ${tmpdir}/
+ldconfig -r ${tmpdir}
+rm ${tmpdir}/etc/ld.so.conf
+
+echo "Testing icecc environment..."
+touch ${tmpdir}/empty.c
+chroot ${tmpdir}/ /usr/bin/gcc -c /empty.c
+tested=${?}
+rm ${tmpdir}/empty.c
+
+if [ "${tested}" -ne 0 ]
+then
+	echo ""
+	echo  "Creating icecc environment failed. Please see error message(s) above! The temporary directory is: ${tmpdir}/"
+else
+	# pack
+	echo "Compressing files..."
+	tar -c -z -C ${tmpdir} -f ${tmpfile} `ls ${tmpdir}/`
+
+	newname="`md5sum ${tmpfile} | awk '{print $1}'`.tar.gz"
+	mv ${tmpfile} ${newname}
+
+	# cleanup
+	rm -rf ${tmpdir}
+
+	echo ""
+	echo "Icecc environment has been created. It has been saved as ${newname}!"
+fi
+

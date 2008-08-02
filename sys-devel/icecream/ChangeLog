@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.18 2008/06/29 07:51:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.19 2008/08/02 15:12:12 bluebird Exp $
+
+*icecream-0.9.1-r1 (02 Aug 2008)
+
+  02 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
+  -files/0.9.0-create-env-multilib.patch,
+  -files/0.9.0-dont-create-symlinks.patch,
+  -files/0.9.0-conf.d-verbosity.patch,
+  -files/0.9.0-run-march-native-locally.patch, +files/icecream-create-env,
+  -icecream-0.9.0-r1.ebuild, -icecream-0.9.1.ebuild,
+  +icecream-0.9.1-r1.ebuild:
+  Add helper script to make cross-compiling easier, remove old.
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> icecream-0.9.0-r1.ebuild,
   icecream-0.9.1.ebuild:

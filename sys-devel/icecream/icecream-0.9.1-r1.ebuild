@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.0-r1.ebuild,v 1.2 2008/06/29 07:51:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.1-r1.ebuild,v 1.1 2008/08/02 15:12:12 bluebird Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -27,8 +27,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}-dont-create-symlinks.patch"
 	epatch "${FILESDIR}/${PV}-conf.d-verbosity.patch"
-	epatch "${FILESDIR}/${PV}-run-march-native-locally.patch"
-	epatch "${FILESDIR}/${PV}-create-env-multilib.patch"
 
 	use amd64 && append-flags -fPIC -DPIC
 
@@ -59,6 +57,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
 	dosbin "${FILESDIR}"/icecream-config || die "install failed"
+
+	dosbin "${FILESDIR}"/icecream-create-env || die "install failed"
 
 	newconfd suse/sysconfig.icecream icecream || die "install failed"
 	doinitd "${FILESDIR}"/icecream || die "install failed"
