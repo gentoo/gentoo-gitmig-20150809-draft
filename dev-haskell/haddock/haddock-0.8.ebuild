@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.13 2008/07/08 20:57:37 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.14 2008/08/02 16:11:32 kolmodin Exp $
 
 CABAL_FEATURES="bin"
-inherit haskell-cabal eutils versionator
+inherit haskell-cabal eutils versionator autotools
 
 MY_PF=$(replace_version_separator 3 '-' ${PF})
 
