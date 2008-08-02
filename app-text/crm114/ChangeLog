@@ -1,6 +1,9 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.32 2008/01/23 03:26:03 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.33 2008/08/02 06:59:58 ulm Exp $
+
+  02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *crm114-20070810 (23 Jan 2008)
 
