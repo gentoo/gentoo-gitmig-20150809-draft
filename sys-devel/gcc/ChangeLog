@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.657 2008/07/06 03:42:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.658 2008/08/02 11:09:06 pchrist Exp $
+
+  02 Aug 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Update metadata.xml to include USE flag descriptions. Entries taken from
+  profiles/use.local.desc. GLEP 56
 
 *gcc-4.3.1-r1 (06 Jul 2008)
 
