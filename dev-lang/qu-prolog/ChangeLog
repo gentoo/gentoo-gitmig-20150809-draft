@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.46 2008/07/30 08:22:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.47 2008/08/02 19:40:18 keri Exp $
+
+  03 Aug 2008; <keri@gentoo.org> qu-prolog-8.3.ebuild, qu-prolog-8.5.ebuild,
+  qu-prolog-8.6.ebuild:
+  Add -amd64 and -ppc64 to KEYWORDS; closes bug #233454 reported by Nikolay
+  Orlyuk
 
 *qu-prolog-8.6 (30 Jul 2008)
 
