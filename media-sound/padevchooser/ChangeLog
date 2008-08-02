@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/padevchooser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.11 2008/02/11 04:02:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.12 2008/08/02 20:28:57 betelgeuse Exp $
+
+  02 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
+  padevchooser-0.9.3.ebuild:
+  Fix HOMEPAGE from padevcontrol to padevchooser.
 
   11 Feb 2008; Olivier Crête <tester@gentoo.org> padevchooser-0.9.3.ebuild:
   Stable on amd64, bug #204219
