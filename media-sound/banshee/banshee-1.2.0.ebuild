@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.0.ebuild,v 1.1 2008/08/01 20:33:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.0.ebuild,v 1.2 2008/08/02 20:52:44 loki_val Exp $
 
 EAPI=1
 
@@ -80,6 +80,7 @@ S=${WORKDIR}/${PN}-1-${PV}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable doc docs)
+		$(use_enable boo)
 		$(use_enable mtp)
 		$(use_enable daap)
 		$(use_enable ipod)
