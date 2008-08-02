@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.95 2008/06/15 08:13:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.96 2008/08/02 21:03:05 zzam Exp $
+
+*gentoo-vdr-scripts-0.4.5_rc1 (02 Aug 2008)
+
+  02 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +gentoo-vdr-scripts-0.4.5_rc1.ebuild:
+  Version bumped. This has changes to shutdown and locale handling. Ebuild
+  cleanup.
 
   15 Jun 2008; Zac Medico <zmedico@gentoo.org>
   gentoo-vdr-scripts-0.4.0.ebuild, gentoo-vdr-scripts-0.4.1.ebuild,
