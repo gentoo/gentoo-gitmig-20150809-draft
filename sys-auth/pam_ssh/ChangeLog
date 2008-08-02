@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.14 2008/08/02 21:28:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.15 2008/08/02 21:31:19 corsair Exp $
+
+  02 Aug 2008; Markus Rothe <corsair@gentoo.org> pam_ssh-1.92.ebuild:
+  It was meant to be ~ppc64...
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org> pam_ssh-1.92.ebuild:
   Stable on ppc64; bug #232691

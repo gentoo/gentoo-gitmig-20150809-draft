@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080801.ebuild,v 1.3 2008/08/02 21:30:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080801.ebuild,v 1.4 2008/08/02 21:32:04 corsair Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.flameeyes.eu/gentoo-distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp ssh +sha512"
 RESTRICT="binchecks"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.49 2008/08/02 21:30:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.50 2008/08/02 21:32:04 corsair Exp $
+
+  02 Aug 2008; Markus Rothe <corsair@gentoo.org> pambase-20080801.ebuild:
+  It was meant to be ~ppc64...
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org> pambase-20080801.ebuild:
   Stable on ppc64; bug #232691
