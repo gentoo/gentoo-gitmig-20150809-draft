@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.2-r3.ebuild,v 1.1 2008/08/01 18:06:47 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.2-r3.ebuild,v 1.2 2008/08/03 17:10:39 keytoaster Exp $
 
 inherit eutils nsplugins
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 RESTRICT="strip mirror"
 
 RDEPEND="media-libs/fontconfig
