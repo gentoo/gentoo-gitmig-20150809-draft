@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.16 2008/07/08 15:13:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.17 2008/08/03 21:48:18 mabi Exp $
+
+  03 Aug 2008; Matti Bickel <mabi@gentoo.org> gnome-build-0.3.0.ebuild:
+  ~ppc added for bug #204495
 
   08 Jul 2008; Rémi Cardona <remi@gentoo.org> gnome-build-0.3.0.ebuild:
   add missing dep on dev-perl/Locale-gettext (fixes bugs #213531 and
