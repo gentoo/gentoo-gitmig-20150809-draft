@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.2.ebuild,v 1.6 2008/07/17 18:41:51 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.2.ebuild,v 1.7 2008/08/03 16:22:03 cedk Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.wireshark.org/"
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && {
 SRC_URI="http://www.wireshark.org/download/prerelease/${PN}-${PV/_rc/pre}.tar.gz";
 S=${WORKDIR}/${PN}-${PV/_rc/pre} ; } || \
-SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
+SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2
+		mirror://gentoo/gtk-2.0-for-wireshark.m4.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -68,7 +69,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
 
 	cd "${S}"
-	eautoreconf
+	# Add gtk m4 for bug #233158
+	mv "${WORKDIR}"/gtk-2.0-for-wireshark.m4 gtk-2.0.m4
+	AT_M4DIR="." eautoreconf
 }
 
 src_compile() {
