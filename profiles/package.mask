@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8854 2008/08/03 14:05:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8855 2008/08/03 16:24:26 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -154,10 +154,6 @@ app-i18n/kon2
 # Masking as it's pretty broken for a long while now.
 # Will investigate in a few days.
 dev-db/rekall
-
-# Christian Faulhammer <opfer@gentoo.org> (30 Jun 2008)
-# Masked for removal for license issues, see bug 230157
-mail-client/claws-mail-pdf-viewer
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Masked for removal in 30 days. Only works with kernels <2.6.24. See HOMEPAGE
