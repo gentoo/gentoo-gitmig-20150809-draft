@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.108 2008/08/03 12:37:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.109 2008/08/03 18:03:45 chutzpah Exp $
+
+*pulseaudio-0.9.11-r2 (03 Aug 2008)
+
+  03 Aug 2008; Patrick McLean <chutzpah@gentoo.org>
+  +files/pulseaudio.init.d-4, +pulseaudio-0.9.11-r2.ebuild:
+  Make sure that the ebuild creates system.pa, modify the init script to use
+  system.pa rather than default.pa and add a "needs" on consolekit if
+  module-console-kit is requested in system.pa (bug #233789).
 
   03 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
   pulseaudio-0.9.11-r1.ebuild:
