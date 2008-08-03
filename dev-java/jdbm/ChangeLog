@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.9 2007/07/12 22:35:40 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.10 2008/08/03 22:12:58 betelgeuse Exp $
+
+*jdbm-0.12-r2 (03 Aug 2008)
+
+  03 Aug 2008; Petteri Räty <betelgeuse@gentoo.org> +jdbm-0.12-r2.ebuild:
+  Remove unneeded dependency on jta and xerces.
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> jdbm-0.12-r1.ebuild:
   Javadoc in sun-jdk-1.6 starting with u2 works fine so removing the work
