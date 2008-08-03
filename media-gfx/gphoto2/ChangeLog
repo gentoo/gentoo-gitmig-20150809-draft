@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.67 2008/05/28 20:24:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.68 2008/08/03 22:15:03 eva Exp $
+
+  03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> -gphoto2-2.2.0.ebuild,
+  -gphoto2-2.3.1.ebuild, -gphoto2-2.4.0.ebuild:
+  clean up old revisions.
 
   28 May 2008; Markus Meier <maekke@gentoo.org> gphoto2-2.4.1.ebuild:
   fix docdir, bug #223881
