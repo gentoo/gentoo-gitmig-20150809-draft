@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.107 2008/08/03 08:15:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.108 2008/08/03 12:37:01 betelgeuse Exp $
+
+  03 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
+  pulseaudio-0.9.11-r1.ebuild:
+  Add a message telling people to install alsa-plugins with pulseaudio
+  support if not installed already. Fixes bug #233193.
 
 *pulseaudio-0.9.11-r1 (03 Aug 2008)
 

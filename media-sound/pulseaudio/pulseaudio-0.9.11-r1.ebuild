@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.11-r1.ebuild,v 1.1 2008/08/03 08:15:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.11-r1.ebuild,v 1.2 2008/08/03 12:37:01 betelgeuse Exp $
 
 EAPI=1
 
@@ -184,6 +184,15 @@ pkg_postinst() {
 		elog "Please note that the BlueTooth proximity module seems itself"
 		elog "still experimental, so please report to upstream if you have"
 		elog "problems with it."
+	fi
+	if use alsa; then
+		local pkg="media-plugins/alsa-plugins"
+		if has_version ${pkg} && ! built_with_use --missing false ${pkg} pulseaudio; then
+			elog
+			elog "You have alsa support enabled so you probably want to install"
+			elog "${pkg} with pulseaudio support to have"
+			elog "alsa using applications route their sound through pulseaudio"
+		fi
 	fi
 
 	eselect esd update --if-unset
