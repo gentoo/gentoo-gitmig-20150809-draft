@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgtksourceviewmm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.10 2008/05/19 14:45:07 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.11 2008/08/03 12:52:04 dev-zero Exp $
+
+  03 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.3.1-missing_includes.patch, libgtksourceviewmm-0.3.1.ebuild:
+  Added patch to fix compilation issues with gcc-4.3.x
 
   19 May 2008; Rémi Cardona <remi@gentoo.org>
   -libgtksourceviewmm-1.9.4.ebuild:

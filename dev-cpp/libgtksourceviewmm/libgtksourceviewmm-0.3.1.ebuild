@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/libgtksourceviewmm-0.3.1.ebuild,v 1.3 2007/10/10 16:05:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/libgtksourceviewmm-0.3.1.ebuild,v 1.4 2008/08/03 12:52:04 dev-zero Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="C++ bindings for gtksourceview"
 HOMEPAGE="http://home.gna.org/gtksourceviewmm/"
@@ -30,6 +30,8 @@ src_unpack() {
 	# we handle it in src_install.
 	sed -i -e 's|^\(SUBDIRS =.*\)docs\(.*\)|\1\2|' Makefile.in || \
 		die "sed Makefile.in failed"
+
+	epatch "${FILESDIR}/${PV}-missing_includes.patch"
 }
 
 src_install() {
