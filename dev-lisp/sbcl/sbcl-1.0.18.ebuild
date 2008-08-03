@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.18.ebuild,v 1.1 2008/07/27 21:55:03 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.18.ebuild,v 1.2 2008/08/03 14:44:24 pchrist Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -39,6 +39,11 @@ DEPEND="doc? ( sys-apps/texinfo media-gfx/graphviz )"
 PDEPEND="dev-lisp/gentoo-init"
 
 PROVIDE="virtual/commonlisp"
+
+#Disable warnings about executable stacks, as this won't be fixed soon, by
+#upstream
+QA_EXECSTACK="usr/bin/sbcl usr/lib/sbcl/src/runtime/sbcl \
+usr/lib/sbcl/src/runtime/*.o"
 
 pkg_setup() {
 	if built_with_use sys-devel/gcc hardened && gcc-config -c | grep -qv vanilla; then
