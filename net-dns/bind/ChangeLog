@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.209 2008/08/02 20:03:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.210 2008/08/03 15:59:48 dertobi123 Exp $
+
+*bind-9.5.0_p2-r1 (03 Aug 2008)
+*bind-9.4.2_p2-r1 (03 Aug 2008)
+
+  03 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org> +files/libcap.patch,
+  +bind-9.4.2_p2-r1.ebuild, -bind-9.5.0_p2.ebuild, +bind-9.5.0_p2-r1.ebuild:
+  Fix threading, add dep on libcap (#220167)
 
   02 Aug 2008; Raúl Porcel <armin76@gentoo.org> bind-9.4.2_p2.ebuild:
   alpha/ia64/sparc/x86 stable wrt #233675

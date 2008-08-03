@@ -1,28 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p2.ebuild,v 1.1 2008/08/02 07:21:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p2-r1.ebuild,v 1.1 2008/08/03 15:59:48 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
+DLZ_VERSION="9.3.3"
 MY_PV="${PV/_p2/-P2}"
-SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
-	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom sdb-ldap"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
-	idn? ( net-dns/idnkit )"
+	idn? ( net-dns/idnkit )
+	threads? ( >=sys-libs/libcap-2.1.0 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -57,18 +57,17 @@ src_unpack() {
 			"${i}"
 	done
 
+	# bind needs a newer libcap #220167
+	use threads && epatch "${FILESDIR}"/libcap.patch
+
 	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
 	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-	use dlz && use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+	use dlz && use mysql && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
-
-	# sdb-ldap patch as per  bug #160567
-	# Upstream URL: http://bind9-ldap.bayour.com/
-	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
 
 	# bug #220361
 	rm "${S}"/aclocal.m4 "${S}"/libtool.m4
@@ -127,9 +126,6 @@ src_compile() {
 	else
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
-
-	# bug #227333
-	append-flags -D_GNU_SOURCE
 
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O
