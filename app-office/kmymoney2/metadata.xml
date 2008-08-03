@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<use>
+  <flag name='hbci'>Add HBCI online banking support</flag>
+  <flag name='qtdesigner'>Installs KMyMoney specific widget library for
+    Qt-designer</flag>
+</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/imposter
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.14 2008/05/22 18:37:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.15 2008/08/03 10:36:55 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   22 May 2008; Markus Meier <maekke@gentoo.org> imposter-0.3.ebuild:
   x86 stable, bug #222771
