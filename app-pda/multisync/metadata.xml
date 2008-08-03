@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>pda</herd>
+<use>
+  <flag name='gnokii'>Address synchronization with mobile phones via
+    <pkg>app-mobilephone/gnokii</pkg></flag>
+  <flag name='irmc'>Add support for Mobile Client synchronization via
+    IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)</flag>
+  <flag name='kdepim'>Add support for KDEPIM sync</flag>
+  <flag name='nokia6600'>Add support for Nokia 6600</flag>
+</use>
 </pkgmetadata>

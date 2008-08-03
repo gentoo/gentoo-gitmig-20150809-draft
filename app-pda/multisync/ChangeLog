@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.42 2008/07/25 19:26:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.43 2008/08/03 13:01:26 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *multisync-0.83_pre20050414-r5 (25 Jul 2008)
 
