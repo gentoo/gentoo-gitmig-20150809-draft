@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.41 2008/08/03 19:59:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.42 2008/08/03 20:02:58 jokey Exp $
+
+  03 Aug 2008; Markus Ullmann <jokey@gentoo.org> qgit-2.2.ebuild:
+  Drop src_unpack as the sed is no longer needed
 
 *qgit-2.2 (03 Aug 2008)
 

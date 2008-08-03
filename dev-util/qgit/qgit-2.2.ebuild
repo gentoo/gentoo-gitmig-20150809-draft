@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.2.ebuild,v 1.1 2008/08/03 19:59:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.2.ebuild,v 1.2 2008/08/03 20:02:58 jokey Exp $
 
 EAPI="1"
 
@@ -23,12 +23,6 @@ RDEPEND="${DEPEND}
 	>=dev-util/git-1.5.3"
 
 S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e '/^[[:space:]]*QMAKE_CXXFLAGS_RELEASE.*+=/s/-g3 -O[[:digit:]]//' src/src.pro
-}
 
 src_compile() {
 	eqmake4 || die "eqmake failed"
