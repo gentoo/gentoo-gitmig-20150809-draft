@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.3.ebuild,v 1.1 2008/08/03 15:12:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.3.ebuild,v 1.2 2008/08/03 19:59:05 mr_bones_ Exp $
 
 inherit eutils confutils depend.php
 
@@ -45,5 +45,3 @@ pkg_postinst() {
 	elog "A sample is in"
 	elog "/usr/share/nagvis/nagvis/etc/config.ini.php.dist"
 }
-
-
