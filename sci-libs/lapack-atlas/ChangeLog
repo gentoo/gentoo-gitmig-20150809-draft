@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.67 2008/07/23 14:51:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.68 2008/08/03 18:16:51 markusle Exp $
+
+  03 Aug 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/blas-atlas-3.9.1-Core2Duo-detect.patch, lapack-atlas-3.9.1.ebuild:
+  Added patch to improve Core2Duo CPU detection.
 
   23 Jul 2008; Markus Dittrich <markusle@gentoo.org> ChangeLog, Manifest:
   Fixed typo in ChangeLog.
