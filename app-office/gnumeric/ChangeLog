@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.173 2008/07/15 18:42:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.174 2008/08/03 20:01:37 eva Exp $
+
+  03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnumeric-1.8.2.ebuild, gnumeric-1.8.3.ebuild:
+  add check for svg support in cairo, bug #232765.
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.3.ebuild:
   Stable for HPPA (bug #230031).

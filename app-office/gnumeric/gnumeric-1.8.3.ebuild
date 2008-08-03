@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.3.ebuild,v 1.7 2008/07/15 18:42:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.3.ebuild,v 1.8 2008/08/03 20:01:37 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -51,6 +51,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
 pkg_setup() {
+	local will_die=false
+
 	G2CONF="${G2CONF}
 		--enable-ssindex
 		--enable-static
@@ -61,12 +63,22 @@ pkg_setup() {
 		$(use_with python)
 		$(use_with gnome)"
 
+	if ! built_with_use x11-libs/cairo svg; then
+		eerror "x11-libs/cairo needs to be built with svg support"
+		eerror "please rebuild x11-libs/cairo with svg support"
+		will_die=true
+	fi
+
 	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
-		eerror "libgsf needs to be compiled with gnome in USE"
+		eerror "gnome-extra/libgsf needs to be compiled with gnome support"
 		eerror "for this version of gnumeric to work. Rebuild"
-		eerror "libgsf first like this :"
+		eerror "gnome-extra/libgsf first like this :"
 		eerror "USE=gnome emerge libgsf -vp"
-		die "libgsf was built without gnome support..."
+		will_die=true
+	fi
+
+	if ${will_die} ; then
+		die "Please rebuild the packages with the use flags above."
 	fi
 
 	# gcc bug (http://bugs.gnome.org/show_bug.cgi?id=128834)
