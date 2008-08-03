@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libax25
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.9 2007/05/14 20:18:59 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.10 2008/08/03 16:08:22 kingtaco Exp $
+
+  03 Aug 2008; Mike Doty <kingtaco@gentoo.org> libax25-0.0.11-r1.ebuild:
+  keywording ~amd64
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
