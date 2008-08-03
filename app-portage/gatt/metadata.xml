@@ -3,7 +3,11 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-    <email>gentoofan23@gentoo.org</email>
-    <name>Thomas Anderson</name>
+  <email>gentoofan23@gentoo.org</email>
+  <name>Thomas Anderson</name>
 </maintainer>
+<use>
+  <flag name='libpaludis'>Do some dependency resolution by using a
+    <pkg>sys-apps/paludis</pkg> interface</flag>
+</use>
 </pkgmetadata>
