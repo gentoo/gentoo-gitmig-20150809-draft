@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.106 2008/08/03 02:03:17 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.107 2008/08/03 08:15:57 betelgeuse Exp $
+
+*pulseaudio-0.9.11-r1 (03 Aug 2008)
+
+  03 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +pulseaudio-0.9.11-r1.ebuild:
+  speex support is not optional so remove the speex use flag. Fixes bug
+  #233774.
 
 *pulseaudio-0.9.11 (03 Aug 2008)
 
