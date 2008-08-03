@@ -1,17 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.0_rc11.ebuild,v 1.2 2008/08/01 16:17:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.0.ebuild,v 1.1 2008/08/03 02:52:19 darkside Exp $
 
 inherit distutils
 
-MY_P="${P/_rc/rc}"
-DESCRIPTION="A lightwieght wired and wireless network manager for Linux"
+DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python
@@ -27,8 +26,6 @@ RDEPEND="dev-python/dbus-python
 		sys-apps/ethtool
 		sys-apps/net-tools
 	)"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	${python} ./setup.py configure --no-install-init --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
