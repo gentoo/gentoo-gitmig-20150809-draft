@@ -1,6 +1,9 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.4 2008/08/03 19:27:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.5 2008/08/03 19:39:47 eva Exp $
+
+  03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+  remove hal from RDEPEND since it's not used
 
 *isight-firmware-tools-1.2 (03 Aug 2008)
 
