@@ -3,9 +3,13 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
-conf-update is a ncurses-based config managment tool
+  conf-update is a ncurses-based config managment tool
 </longdescription>
+<use>
+  <flag name='colordiff'>Use colors when displaying diffs
+    (<pkg>app-misc/colordiff</pkg>)</flag>
+</use>
 </pkgmetadata>
