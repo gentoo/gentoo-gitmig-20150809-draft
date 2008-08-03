@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/scsh
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.26 2007/03/19 11:35:32 kloeri Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.27 2008/08/03 15:25:32 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove mkennedy from metadata.xml due to retirement.

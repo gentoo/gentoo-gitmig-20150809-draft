@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/shish
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.4 2008/03/14 20:45:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.5 2008/08/03 15:27:33 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   14 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   shish-0.7_pre3.ebuild:

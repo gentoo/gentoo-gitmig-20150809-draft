@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.11 2008/06/15 18:54:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.12 2008/08/03 15:20:56 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *pdsh-2.16 (15 Jun 2008)
 
