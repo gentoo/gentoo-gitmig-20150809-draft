@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.73 2008/08/03 18:02:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.74 2008/08/03 21:06:26 jokey Exp $
+
+  03 Aug 2008; Markus Ullmann <jokey@gentoo.org> trac-0.10.5.ebuild:
+  Stable on x86 wrt security bug #233175
 
   03 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org> trac-0.10.5.ebuild:
   Fix quoting
