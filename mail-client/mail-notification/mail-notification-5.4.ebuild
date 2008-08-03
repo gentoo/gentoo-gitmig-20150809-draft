@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4.ebuild,v 1.1 2008/07/22 09:50:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4.ebuild,v 1.2 2008/08/03 18:16:24 graaff Exp $
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-3"
 
-IUSE="evo gmail imap ipv6 maildir mbox mh mozilla pop sasl ssl sylpheed yahoo"
+IUSE="evo gmail imap ipv6 maildir mbox mh mozilla pop sasl ssl sylpheed"
 
 # gmime is actually optional, but it's used by so much of the package
 # it's pointless making it optional. gnome-keyring is required for
@@ -32,7 +32,6 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	pop? ( gnome-base/gnome-keyring )
 	imap? ( gnome-base/gnome-keyring )
 	gmail? ( gnome-base/gnome-keyring )
-	yahoo? ( gnome-base/gnome-keyring net-mail/fetchyahoo )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	evo? ( >=mail-client/evolution-2.12 )
@@ -77,8 +76,7 @@ src_compile() {
 		$(use_var pop pop3) \
 		$(use_var sasl) \
 		$(use_var ssl) \
-		$(use_var sylpheed) \
-		$(use_var yahoo)
+		$(use_var sylpheed)
 
 	./jb build
 }
