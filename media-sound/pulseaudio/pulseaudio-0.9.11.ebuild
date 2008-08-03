@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.10-r50.ebuild,v 1.2 2008/04/03 19:52:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.11.ebuild,v 1.1 2008/08/03 02:03:17 chutzpah Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib"
+IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns speex +glib"
 
 RDEPEND="X? ( x11-libs/libX11 )
 	caps? ( sys-libs/libcap )
@@ -21,7 +21,7 @@ RDEPEND="X? ( x11-libs/libX11 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
 	>=media-libs/libsndfile-1.0.10
 	>=dev-libs/liboil-0.3.6
-	alsa? ( >=media-libs/alsa-lib-1.0.10 )
+	alsa? ( >=media-libs/alsa-lib-1.0.17 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12 )
 	>=dev-libs/liboil-0.3.0
@@ -30,6 +30,7 @@ RDEPEND="X? ( x11-libs/libX11 )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
+	speex? ( >=media-libs/speex-1.2_rc1 )
 	hal? (
 		>=sys-apps/hal-0.5.7
 		>=sys-apps/dbus-1.0.0
@@ -41,6 +42,8 @@ RDEPEND="X? ( x11-libs/libX11 )
 	)
 	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
+	sys-libs/gdbm
+	sys-apps/openrc
 	>=sys-apps/baselayout-2.0_rc5
 	>=sys-devel/libtool-1.5.24" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
@@ -75,7 +78,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-caps.patch"
+	# Avoid building - and especially linking - test programs
+	# outside of make check
+	sed -i -e 's:noinst_PROGRAMS:check_PROGRAMS:' \
+		"${S}/src/Makefile.am"
 
 	eautoreconf
 	elibtoolize
@@ -140,6 +146,8 @@ src_install() {
 	# Create the state directory
 	diropts -o pulse -g pulse -m0755
 	keepdir /var/run/pulse
+
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_postinst() {

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.105 2008/04/18 06:01:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.106 2008/08/03 02:03:17 chutzpah Exp $
+
+*pulseaudio-0.9.11 (03 Aug 2008)
+
+  03 Aug 2008; Patrick McLean <chutzpah@gentoo.org>
+  -pulseaudio-0.9.10-r50.ebuild, +pulseaudio-0.9.11.ebuild:
+  Version bump (bug #232991), add "speex" USE flag. This versiom has
+  flameeyes' dymanic initscript dependencies, so it deps on openrc. Clean up
+  a bit.
 
 *pulseaudio-0.9.10-r51 (18 Apr 2008)
 *pulseaudio-0.9.10-r1 (18 Apr 2008)
