@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.5.ebuild,v 1.2 2008/08/03 18:00:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.5.ebuild,v 1.3 2008/08/03 18:02:55 dertobi123 Exp $
 
 inherit distutils webapp
 
@@ -111,28 +111,28 @@ src_install () {
 	distutils_src_install
 
 	dodoc AUTHORS INSTALL RELEASE THANKS UPGRADE
-	rm ${D}/usr/share/doc/${P}/MANIFEST.in*
-	rm ${D}/usr/share/doc/${P}/PKG-INFO*
+	rm "${D}"/usr/share/doc/${P}/MANIFEST.in*
+	rm "${D}"/usr/share/doc/${P}/PKG-INFO*
 
 	docinto contrib
 	dodoc contrib/*
 
 	# if needed, install cgi/fcgi scripts for webapp-config
-	local my_dir=${D}/usr/share/trac
+	local my_dir="${D}"/usr/share/trac
 	if use cgi ; then
-		mv ${my_dir}/cgi-bin/trac.cgi ${D}${MY_CGIBINDIR} || die
+		mv ${my_dir}/cgi-bin/trac.cgi "${D}"${MY_CGIBINDIR} || die
 	fi
 	if use fastcgi ; then
-		mv ${my_dir}/cgi-bin/trac.fcgi ${D}${MY_CGIBINDIR} || die
+		mv ${my_dir}/cgi-bin/trac.fcgi "${D}"${MY_CGIBINDIR} || die
 	fi
 	rm -rf ${my_dir}/cgi-bin || die
 
 	for lang in en; do
-		webapp_postinst_txt ${lang} ${FILESDIR}/postinst-${lang}.txt
+		webapp_postinst_txt ${lang} "${FILESDIR}"/postinst-${lang}.txt
 	done
 
 	# copy graphics, css & js
-	cp -r htdocs/* ${D}/${MY_HTDOCSDIR}
+	cp -r htdocs/* "${D}"/${MY_HTDOCSDIR}
 
 	webapp_src_install
 
