@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.10 2008/06/03 02:09:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.11 2008/08/03 07:54:00 dberkholz Exp $
+
+*cns-1.2.1 (03 Aug 2008)
+
+  03 Aug 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.2.1-allow-gcc-openmp.patch, +files/cns_solve_env_sh,
+  metadata.xml, +cns-1.2.1.ebuild:
+  Bump. Keyword ~amd64; add OpenMP support for parallel refinement;
+  (#209805) Fix a number of environment variables and cns_ functions to work
+  properly.
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> cns-1.1.ebuild,
   cns-1.2.ebuild, cns-1.2-r1.ebuild:
