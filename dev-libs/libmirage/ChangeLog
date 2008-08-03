@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.4 2008/06/26 12:37:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.5 2008/08/03 21:01:18 vanquirius Exp $
+
+*libmirage-1.1.0 (03 Aug 2008)
+
+  03 Aug 2008; Marcelo Goes <vanquirius@gentoo.org> +libmirage-1.1.0.ebuild:
+  1.1.0 version bump for bug 232996. Thanks to Yaroslav Isakov
+  <yaroslav.isakov at gmail dot com>.
 
   26 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   libmirage-1.0.0.ebuild:
