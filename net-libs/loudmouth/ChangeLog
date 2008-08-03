@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.69 2008/07/31 21:25:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.70 2008/08/03 00:35:57 leio Exp $
+
+  03 Aug 2008; Mart Raudsepp <leio@gentoo.org> loudmouth-1.4.1.ebuild:
+  Default enable USE=asyncns - you most likely want this feature for the UI to
+  not lock up while DNS resolving is happening
 
 *loudmouth-1.4.1 (31 Jul 2008)
 
