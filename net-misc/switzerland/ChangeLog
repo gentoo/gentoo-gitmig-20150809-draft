@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/switzerland
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/switzerland/ChangeLog,v 1.1 2008/08/03 12:45:01 cedk Exp $
+
+*switzerland-0.0.5 (03 Aug 2008)
+
+  03 Aug 2008; Cédric Krier <cedk@gentoo.org> +files/Makefile,
+  +metadata.xml, +switzerland-0.0.5.ebuild:
+  New ebuild for bug #233662 thanks to Beau Henderson
+
