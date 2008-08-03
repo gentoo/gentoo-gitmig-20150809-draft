@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync-plugin-irmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.8 2008/01/27 17:47:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.9 2008/08/03 12:52:04 ulm Exp $
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *libopensync-plugin-irmc-0.36 (27 Jan 2008)
 
