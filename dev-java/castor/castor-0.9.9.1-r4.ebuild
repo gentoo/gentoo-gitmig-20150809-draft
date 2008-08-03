@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r4.ebuild,v 1.2 2008/07/20 16:29:20 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r4.ebuild,v 1.3 2008/08/03 22:32:13 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -20,7 +20,6 @@ COMMON_DEP="
 	dev-java/jakarta-oro:2.0
 	dev-java/jakarta-regexp:1.3
 	dev-java/ldapsdk:4.1
-	java-virtuals/servlet-api:2.3
 	dev-java/xerces:1.3
 	dev-java/cglib:2"
 RDEPEND=">=virtual/jre-1.4
@@ -42,7 +41,7 @@ src_unpack() {
 	cd "${S}/lib"
 	rm -v *.jar || die
 	#FIXME: uses these bundled classes
-	#rm -v tests/*.jar || die
+	rm -v tests/*.jar || die
 	java-pkg_jar-from --build-only ant-core ant.jar
 	#Only used by examples and tests and we aren't building them
 	#java-pkg_jar-from adaptx-0.9
@@ -50,7 +49,6 @@ src_unpack() {
 	java-pkg_jar-from cglib-2
 	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar oro.jar
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar regexp.jar
-	java-pkg_jar-from --virtual servlet-api-2.3
 	java-pkg_jar-from xerces-1.3
 	java-pkg_jar-from ldapsdk-4.1 ldapjdk.jar
 }
