@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.4 2008/06/29 00:20:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.5 2008/08/03 14:32:15 markusle Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://ab-initio.mit.edu/meep/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist doc examples hdf5 guile mpi"
+IUSE="bindist examples hdf5 guile mpi"
 
 DEPEND="sci-libs/fftw
 	!bindist? ( sci-libs/gsl )
@@ -34,6 +34,7 @@ pkg_setup() {
 	fi
 }
 
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -55,9 +56,6 @@ src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS NEWS README TODO || die "dodoc failed"
 	insinto /usr/share/doc/${PF}
-	if use doc; then
-		doins doc/meep.pdf || die "install doc failed"
-	fi
 	if use examples; then
 		doins -r examples || die "install examples failed"
 	fi
@@ -71,3 +69,4 @@ pkg_postinst() {
 	elog "that you use blas-atlas instead."
 	echo
 }
+
