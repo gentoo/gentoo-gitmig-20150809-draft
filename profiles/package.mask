@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8855 2008/08/03 16:24:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8856 2008/08/03 21:11:33 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <drac@gentoo.org> (3 Aug 2008)
+# Unmaintained. Masked for removal wrt #233394.
+# Open security bugs  #208566, #215006 and #231836.
+media-video/mplayer-bin
 
 # Diego Pettenò <flameeyes@gentoo.org> (2 Aug 2008)
 # Deprecated upstream in favour of Linux-PAM's own SHA512 support.
