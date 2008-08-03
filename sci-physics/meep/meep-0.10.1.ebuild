@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.5 2008/08/03 14:32:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.10.1.ebuild,v 1.6 2008/08/03 19:59:27 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -33,7 +33,6 @@ pkg_setup() {
 		epause 5
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}
@@ -69,4 +68,3 @@ pkg_postinst() {
 	elog "that you use blas-atlas instead."
 	echo
 }
-
