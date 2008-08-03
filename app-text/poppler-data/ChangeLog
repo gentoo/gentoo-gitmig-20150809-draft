@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.10 2008/04/11 13:13:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.11 2008/08/03 16:05:02 fmccor Exp $
+
+  03 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  poppler-data-0.2.0.ebuild:
+  Sparc stable, Bug 233807.
 
 *poppler-data-0.2.0 (11 Apr 2008)
 
