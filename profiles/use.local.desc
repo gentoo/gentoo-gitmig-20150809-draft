@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3676 2008/08/03 13:05:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3677 2008/08/03 15:10:45 dertobi123 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -1505,6 +1505,7 @@ net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (sys-power/nut)
+net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz
 net-analyzer/net-snmp:diskio - Enable the use of diskio mibs
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
 net-analyzer/net-snmp:extensible - build deprecated extensible mib module (extend is successor)
