@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.22.0.ebuild,v 1.1 2008/03/22 01:08:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.22.3-r1.ebuild,v 1.1 2008/08/03 17:57:39 eva Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="The Gnome Terminal"
 HOMEPAGE="http://www.gnome.org/"
@@ -28,28 +28,30 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	>=app-text/scrollkeeper-0.3.11"
 
-DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
 
 	# Use login shell by default (#12900)
-	epatch "${FILESDIR}"/${P}-default_shell.patch
+	epatch "${FILESDIR}"/${PN}-2.22.0-default_shell.patch
 
 	# terminal enhancement, inserts a space after a DND URL
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
 	epatch "${FILESDIR}"/${PN}-2-dnd_url_add_space.patch
-
-	# Fix detach tab menu item. Upstream bug #521193, patch taken from SVN gnome-2-22 branch
-	epatch "${FILESDIR}/${P}-fix-detach-tab.patch"
 
 	# Fix deprecated API disabling in used libraries - this is not future-proof, bug 213340
 	# Upstream bug: http://bugzilla.gnome.org/show_bug.cgi?id=523737
 	sed -i -e '/DISABLE_DEPRECATED/d' \
 		"${S}/src/Makefile.am" "${S}/src/Makefile.in"
 
+	# Fix extra refs on tabs, bug #219964
+	epatch "${FILESDIR}/${P}-tab-close-fix.patch"
+
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)
 	# Leave out for now; causing too many problems
 	#epatch ${FILESDIR}/${PN}-2.13.90-TERM-gnome.patch
+
+	eautomake
 }
