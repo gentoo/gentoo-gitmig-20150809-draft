@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/metacity-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.19 2008/08/03 20:55:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.20 2008/08/03 20:57:02 eva Exp $
+
+  03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  metacity-themes-1.2.ebuild:
+  fix QA warnings in 1.2.
 
 *metacity-themes-1.2 (03 Aug 2008)
 
