@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.3.ebuild,v 1.13 2008/03/09 21:57:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.3.ebuild,v 1.14 2008/08/03 22:36:31 eva Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="arm m68k mips s390 sh"
+KEYWORDS="arm m68k ~mips s390 sh"
 IUSE="debug doc hardened"
 
 RDEPEND="virtual/libc
