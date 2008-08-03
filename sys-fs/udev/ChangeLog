@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.393 2008/07/26 08:43:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.394 2008/08/03 11:45:45 zzam Exp $
+
+*udev-125-r2 (03 Aug 2008)
+*udev-124-r1 (03 Aug 2008)
+
+  03 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-124-cdrom-autoclose-bug.diff,
+  +files/udev-125-cdrom-autoclose-bug.diff,
+  +files/udev-125-rules-update.diff, +udev-124-r1.ebuild,
+  +udev-125-r2.ebuild:
+  Backported fix for cdrom autoclosing when ejecting the media. Cleaned up
+  udev-125 rules update patch.
 
   26 Jul 2008; Matthias Schwarzott <zzam@gentoo.org> -udev-125.ebuild,
   udev-125-r1.ebuild:
