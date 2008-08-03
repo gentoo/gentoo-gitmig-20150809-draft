@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.18 2008/07/30 22:29:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.19 2008/08/03 08:33:58 dberkholz Exp $
+
+  03 Aug 2008; Donnie Berkholz <dberkholz@gentoo.org>; xcb-proto-1.2.ebuild:
+  (#233499) Depend on python >=2.5.
 
 *xcb-proto-1.2 (30 Jul 2008)
 
