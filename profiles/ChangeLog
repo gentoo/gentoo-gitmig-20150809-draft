@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1741 2008/08/03 21:12:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1742 2008/08/03 21:31:59 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Aug 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  adding xf86-video-i810-2.4.0 to p.mask
 
   03 Aug 2008; Samuli Suominen <drac@gentoo.org> package.mask:
   Mask mplayer-bin wrt #233394.
