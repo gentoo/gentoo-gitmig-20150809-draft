@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3673 2008/08/02 12:53:16 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3674 2008/08/03 12:44:09 ulm Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -342,7 +342,6 @@ app-office/lyx:rtf - Adds support for RTF import/export packages.
 app-office/mozilla-sunbird:moznopango - Disable pango during runtime
 app-office/openoffice:binfilter - Enable support for legacy StarOffice 5.x and earlier file formats
 app-office/openoffice:odk - Build the Office Development Kit
-app-office/openoffice:webdav - Enable webdav support
 app-office/rabbit:gnome-print - Gnome-Print support
 app-office/rabbit:gs - Ghostscript support
 app-office/rabbit:tgif - tgif support

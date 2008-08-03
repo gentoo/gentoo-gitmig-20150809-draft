@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1737 2008/08/02 20:43:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1738 2008/08/03 12:44:09 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Remove unused app-office/openoffice:webdav local USE flag.
 
   02 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
   desc/alsa_pcm_plugins.desc:
