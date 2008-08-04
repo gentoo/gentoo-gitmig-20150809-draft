@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.41 2008/07/21 15:54:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.42 2008/08/04 15:28:55 mr_bones_ Exp $
+
+  04 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  gcompris-8.4.5.ebuild:
+  EAPI=1 for slot deps
 
   21 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/gcompris-8.4.5-redhat.patch, gcompris-8.4.5.ebuild:

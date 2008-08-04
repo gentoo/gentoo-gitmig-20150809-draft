@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.5.ebuild,v 1.2 2008/07/21 15:54:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.5.ebuild,v 1.3 2008/08/04 15:28:55 mr_bones_ Exp $
 
+EAPI=1
 inherit autotools eutils python games
 
 DESCRIPTION="full featured educational application for children from 2 to 10"
@@ -13,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug gnet python sqlite"
 
-RDEPEND="=x11-libs/gtk+-2*
-	=media-libs/gstreamer-0.10*
+RDEPEND="x11-libs/gtk+:2
+	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-good
 	media-plugins/gst-plugins-ogg
 	media-plugins/gst-plugins-vorbis
@@ -25,14 +26,14 @@ RDEPEND="=x11-libs/gtk+-2*
 	dev-libs/popt
 	virtual/libintl
 	games-board/gnuchess
-	gnet? ( >=net-libs/gnet-2 )
+	gnet? ( net-libs/gnet:2 )
 	python? (
 		dev-python/gnome-python
 		dev-python/pygtk
 		dev-python/pyxml
-		>=dev-python/pysqlite-2
+		dev-python/pysqlite:2
 	)
-	sqlite? ( =dev-db/sqlite-3* )"
+	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	sys-apps/texinfo
