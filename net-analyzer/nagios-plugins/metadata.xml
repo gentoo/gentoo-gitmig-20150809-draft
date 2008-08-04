@@ -9,5 +9,13 @@
 	<longdescription lang="en">
 		Nagios plugins - Pack of plugins to make Nagios work properly
 	</longdescription>
+	<use>
+		<flag name='nagios-dns'>installs deps for dns monitoring</flag>
+		<flag name='nagios-game'>installs deps for monitoring <pkg>games-util/qstat</pkg></flag>
+		<flag name='nagios-ntp'>installs deps for ntp monitoring</flag>
+		<flag name='nagios-ping'>installs deps for fancy ping monitoring</flag>
+		<flag name='nagios-ssh'>installs deps for monitoring ssh</flag>
+		<flag name='ups'>installs deps for monitoring Network-UPS (<pkg>sys-power/nut</pkg>)</flag>
+	</use>
 </pkgmetadata>
 
