@@ -1,0 +1,10 @@
+# ChangeLog for games-action/wordwarvi
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.1 2008/08/04 03:28:15 mr_bones_ Exp $
+
+*wordwarvi-0.22 (04 Aug 2008)
+
+  04 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +wordwarvi-0.22.ebuild:
+  initial commit
+
