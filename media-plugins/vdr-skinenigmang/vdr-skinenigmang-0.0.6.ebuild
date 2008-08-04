@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.0.6.ebuild,v 1.1 2008/03/09 18:31:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.0.6.ebuild,v 1.2 2008/08/04 21:06:32 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -31,6 +31,8 @@ src_unpack() {
 	if has_version ">=media-video/vdr-1.5.9"; then
 		sed -i -e 's/.*$(VDRLOCALE).*/ifeq (1,1)/' Makefile
 	fi
+
+	has_version ">=media-gfx/imagemagick-6.4" && epatch "${FILESDIR}/imagemagick-6.4.x.diff"
 }
 
 src_install() {
