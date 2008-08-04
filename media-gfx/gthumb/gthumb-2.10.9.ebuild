@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.7.ebuild,v 1.7 2008/01/16 16:15:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.9.ebuild,v 1.1 2008/08/04 22:18:53 eva Exp $
 
 inherit gnome2
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://gthumb.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ppc64 x86"
-IUSE="gphoto2 iptc raw tiff"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="gphoto2 iptc raw tiff test"
 
 # Unknown item missing from deps, gtkunique.
 RDEPEND=">=dev-libs/glib-2.6
@@ -35,11 +35,15 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.29
-	app-text/gnome-doc-utils"
+	app-text/gnome-doc-utils
+	test? ( ~app-text/docbook-xml-dtd-4.1.2 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="$(use_enable gphoto2) $(use_enable raw libopenraw)
-		$(use_enable iptc iptcdata) $(use_enable tiff)"
+	G2CONF="${G2CONF}
+		$(use_enable gphoto2)
+		$(use_enable raw libopenraw)
+		$(use_enable iptc iptcdata)
+		$(use_enable tiff)"
 }
