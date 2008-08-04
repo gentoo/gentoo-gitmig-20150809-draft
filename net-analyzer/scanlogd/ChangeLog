@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanlogd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.27 2007/09/06 17:59:14 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.28 2008/08/04 20:01:28 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -scanlogd-2.2.ebuild,
   -scanlogd-2.2.6-r1.ebuild:
