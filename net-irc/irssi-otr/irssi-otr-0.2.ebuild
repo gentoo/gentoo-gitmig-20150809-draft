@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.1 2008/07/16 14:10:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.2 2008/08/04 18:59:49 swegener Exp $
 
 inherit cmake-utils eutils
 
@@ -19,7 +19,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="net-libs/libotr
-	net-irc/irssi"
+	|| (
+		net-irc/irssi
+		net-irc/irssi-svn
+	)"
 
 DEPEND="${RDEPEND}
 	dev-libs/glib
