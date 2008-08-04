@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/autoconf-mode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.12 2007/09/22 20:15:21 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.13 2008/08/04 15:24:27 ulm Exp $
+
+*autoconf-mode-2.62 (04 Aug 2008)
+
+  04 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +autoconf-mode-2.62.ebuild:
+  Version bump.
 
   22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   autoconf-mode-2.61.ebuild:
