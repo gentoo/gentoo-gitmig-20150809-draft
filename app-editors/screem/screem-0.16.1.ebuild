@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.11 2008/07/18 17:50:27 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.12 2008/08/04 21:11:36 eva Exp $
 
 inherit gnome2 autotools
 
 DESCRIPTION="SCREEM is an integrated environment for the creation and maintenance of websites and pages"
 HOMEPAGE="http://www.screem.org/"
-SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,21 +43,18 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS COPYING-DOCS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 
-pkg_setup()
-{
-	G2CONF="${G2CONF} \
-		--disable-update-mime \
-		--disable-update-desktop \
-		--disable-schemas-install \
-		$(use_with ssl) \
-		$(use_with zlib) \
-		$(use_enable dbus) \
-		$(use_enable spell enchant)
-		"
+pkg_setup() {
+	G2CONF="${G2CONF}
+		--disable-update-mime
+		--disable-update-desktop
+		--disable-schemas-install
+		$(use_with ssl)
+		$(use_with zlib)
+		$(use_enable dbus)
+		$(use_enable spell enchant)"
 }
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
 

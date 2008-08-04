@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/screem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.14 2008/07/18 17:50:27 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.15 2008/08/04 21:11:36 eva Exp $
+
+  04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> 
+  -files/screem-0.8.1-makefile-fix.patch, -screem-0.16.0.ebuild:
+  clean up old revisions.
 
   18 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> screem-0.16.1.ebuild:
   amd64 stable, bug #214898
