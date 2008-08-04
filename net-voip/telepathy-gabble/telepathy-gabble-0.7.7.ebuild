@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.7.5.ebuild,v 1.1 2008/05/05 15:06:13 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.7.7.ebuild,v 1.1 2008/08/04 10:57:31 coldwind Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug test"
 
-RDEPEND=">=dev-libs/glib-2.4
-	>=dev-libs/dbus-glib-0.72
-	>=net-libs/telepathy-glib-0.7.0
+RDEPEND=">=dev-libs/glib-2.10
+	>=dev-libs/dbus-glib-0.73
+	>=net-libs/telepathy-glib-0.7.13
 	dev-lang/python
 	>=net-libs/loudmouth-1.3.2"
 
@@ -41,9 +41,7 @@ src_compile() {
 }
 
 src_test() {
-	if ! dbus-launch emake -j1 check; then
-		die "Make check failed. See above for details."
-	fi
+	emake -j1 check || die "Make check failed. See above for details."
 }
 
 src_install() {
