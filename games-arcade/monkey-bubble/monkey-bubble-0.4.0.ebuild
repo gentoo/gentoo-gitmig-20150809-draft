@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.6 2008/03/22 18:09:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.7 2008/08/04 19:20:37 mr_bones_ Exp $
 
+EAPI=1
 inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
@@ -13,15 +14,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.10
+RDEPEND="x11-libs/gtk+:2
 	>=dev-libs/glib-2.12
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/gconf-2.0
-	=media-libs/gstreamer-0.10*
+	media-libs/gstreamer:0.10
 	>=dev-libs/libxml2-2.6.7
-	app-text/scrollkeeper"
+	media-sound/esound"
+DEPEND="${RDEPEND}
+	app-text/scrollkeeper
+	dev-util/intltool"
 
 src_unpack() {
 	unpack ${A}
