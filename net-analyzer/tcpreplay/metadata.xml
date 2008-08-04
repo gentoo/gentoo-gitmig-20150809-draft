@@ -3,4 +3,5 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <longdescription>replay saved tcpdump or snoop files at arbitrary speeds</longdescription>
+<use><flag name='pcapnav'>Enable if you want the jump to byte offset feature via <pkg>net-libs/libpcapnav</pkg></flag></use>
 </pkgmetadata>

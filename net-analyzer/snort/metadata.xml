@@ -3,4 +3,17 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <longdescription>Libpcap-based packet sniffer/logger/lightweight IDS</longdescription>
+<use>
+<flag name='dynamicplugin'>Enable ability to dynamically load preprocessors, detection engine, and rules library</flag>
+<flag name='flexresp'>Enable new connection tearing (not recommended)</flag>
+<flag name='flexresp2'>Enable new connection tearing</flag>
+<flag name='gre'>Enable GRE support</flag>
+<flag name='inline'>Enable snort-inline for accepting packets from <pkg>net-firewall/iptables</pkg>, via libipq, rather than <pkg>net-libs/libpcap</pkg>.</flag>
+<flag name='linux-smp-stats'>Enable statistics reporting through proc on smp systems</flag>
+<flag name='perfprofiling'>Enable preprocessor and rule performance profiling</flag>
+<flag name='react'>Enable interception and termination of offending HTTP accesses</flag>
+<flag name='sguil'>Enable sguil (The Analyst Console for Network Security Monitoring) support</flag>
+<flag name='snortsam'>patches <pkg>net-analyzer/snort</pkg> for use with <pkg>net-analyzer/snortsam</pkg></flag>
+<flag name='timestats'>Enable TimeStats functionality</flag>
+</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.133 2008/05/21 18:50:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.134 2008/08/04 20:12:12 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> snort-2.4.5.ebuild,
   snort-2.6.1.3-r1.ebuild, snort-2.6.1.4.ebuild, snort-2.7.0.1.ebuild:
