@@ -13,4 +13,9 @@ ZABBIX supports both polling and trapping techniques to collect data from
 monitored hosts. A flexible notification mechanism allows easy and quickly
 configure different types of notifications for pre-defined events.
 </longdescription>
+<use>
+	<flag name='agent'>Enable zabbix agent (for to-be-monitored machines)</flag>
+	<flag name='frontend'>Enable zabbix web frontend</flag>
+	<flag name='server'>Enable zabbix server</flag>
+</use>
 </pkgmetadata>

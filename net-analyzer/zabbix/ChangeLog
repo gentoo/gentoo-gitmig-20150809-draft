@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.9 2008/07/23 15:47:28 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.10 2008/08/04 20:23:44 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
 *zabbix-1.4.6 (23 Jul 2008)
 

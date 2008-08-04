@@ -28,4 +28,9 @@
 	intuitive analysis, 12) output can be exported to XML, PostScript®, CSV, or
 	plain text 
 </longdescription>
+<use>
+<flag name='gcrypt'>Use GNU crypto library (<pkg>dev-libs/libgcrypt</pkg>) to decrypt SSL traffic</flag>
+<flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for network packet capturing (build dumpcap, rawshark)</flag>
+<flag name='smi'>Use <pkg>net-libs/libsmi</pkg> to resolve numeric OIDs into human readable format</flag>
+</use>
 </pkgmetadata>
