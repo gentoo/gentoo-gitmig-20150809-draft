@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-0.4a.ebuild,v 1.1 2008/07/30 18:01:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-0.4a.ebuild,v 1.2 2008/08/04 18:36:48 swegener Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Simple, modern, alternative to programs such as GNU screen"
+DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
 SRC_URI="mirror://sourceforge/tmux/${P}.tar.gz"
 
@@ -21,13 +21,13 @@ src_compile() {
 }
 
 src_install() {
-	dobin tmux || die "dobin tmux failed"
+	dobin tmux || die "dobin failed"
 
-	dodoc NOTES TODO
+	dodoc NOTES TODO || die "dodoc failed"
 	docinto examples
-	dodoc examples/*.conf
+	dodoc examples/*.conf || die "dodoc examples failed"
 
-	doman tmux.1
+	doman tmux.1 || die "doman failed"
 }
 
 pkg_postinst() {
