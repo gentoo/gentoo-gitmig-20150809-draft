@@ -10,4 +10,7 @@
 	A daemon for allowing Nagios to connect directly to servers and 
 	execute commands defined in a centralized configuration file.
 </longdescription>
+<use>
+	<flag name='command-args'>allow clients to specify command arguments</flag>
+</use>
 </pkgmetadata>

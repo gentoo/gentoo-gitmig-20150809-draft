@@ -17,4 +17,8 @@
 		etc.). Current status information, historical logs, and reports can all
 		be accessed via a web browser.
 	</longdescription>
+	<use>
+		<flag name='lighttpd'>install <pkg>www-servers/lighttpd</pkg> config</flag>
+		<flag name='web'>enable web interface</flag>
+	</use>
 </pkgmetadata>
