@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8857 2008/08/03 21:31:59 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8858 2008/08/04 14:55:09 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -235,12 +235,6 @@ media-libs/mediastreamer
 # Masked for removal in ~30 days by the treecleaners
 # Dead project and predecessor to dev-util/bzr, use that instead. bug #219236
 dev-util/bazaar
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Jun 2008)
-# masked until bug #217901 is fixed
-# http://bugs.gentoo.org/show_bug.cgi?id=225883
-# Patches welcome.
-=games-kids/gcompris-8.4.5
 
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
