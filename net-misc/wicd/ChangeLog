@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.3 2008/08/03 02:52:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.4 2008/08/04 04:43:12 darkside Exp $
+
+  04 Aug 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.0.ebuild:
+  Add postinst instructions because this application requires a fair amount of
+  work to set up. Thanks to nightmorph for suggesting this, bug #233768
 
 *wicd-1.5.0 (03 Aug 2008)
 

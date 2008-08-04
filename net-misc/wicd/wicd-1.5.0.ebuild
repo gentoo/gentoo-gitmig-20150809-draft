@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.0.ebuild,v 1.1 2008/08/03 02:52:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.0.ebuild,v 1.2 2008/08/04 04:43:12 darkside Exp $
 
 inherit distutils
 
@@ -40,9 +40,10 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 
-	elog "Note: commands have changed since previous versions of WICD"
-	elog "Start the WICD GUI using:"
-	elog "    /usr/bin/wicd-client"
-	einfo
 	elog "You may need to restart the dbus service after upgrading wicd."
+	echo
+	elog "To start wicd at boot, add /etc/init.d/wicd to a runlevel and:"
+	elog "- Remove all net.* initscripts (except for net.lo) from all runlevels"
+	elog "- Add these scripts to the RC_PLUG_SERVICES line in /etc/conf.d/rc"
+	elog "(For example, RC_PLUG_SERVICES=\"!net.eth0 !net.wlan0\")"
 }
