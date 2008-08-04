@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-firefly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/ChangeLog,v 1.8 2008/08/02 21:39:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/ChangeLog,v 1.9 2008/08/04 15:38:33 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org>
+  fortune-mod-firefly-2.1.1.ebuild:
+  Stable for HPPA (bug #233442).
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org>
   fortune-mod-firefly-2.1.1.ebuild:
