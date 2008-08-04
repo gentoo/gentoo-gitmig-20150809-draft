@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.134 2008/08/03 22:10:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.135 2008/08/04 22:02:27 eva Exp $
+
+  04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+  bump to 2.4.2. Fixed udev rules generator.
 
   03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -libgphoto2-2.2.1-r1.ebuild, -libgphoto2-2.3.1-r5.ebuild,
