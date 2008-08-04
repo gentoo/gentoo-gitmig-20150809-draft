@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.19 2008/05/21 18:46:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.20 2008/08/04 19:11:03 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   barnyard-0.2.0-r1.ebuild, barnyard-0.2.0-r2.ebuild:
