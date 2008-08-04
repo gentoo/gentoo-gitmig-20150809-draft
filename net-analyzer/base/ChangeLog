@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.14 2008/07/06 22:09:49 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.15 2008/08/04 19:16:49 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
 *base-1.4.0 (06 Jul 2008)
 

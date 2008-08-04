@@ -6,4 +6,8 @@
   <email>hollow@gentoo.org</email>
   <name>Benedikt Boehm</name>
 </maintainer>
+<use>
+<flag name='csv'>Enable csv output</flag>
+<flag name='html'>Enable html output</flag>
+</use>
 </pkgmetadata>
