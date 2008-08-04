@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwget
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.14 2008/01/25 20:16:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.15 2008/08/04 21:11:20 eva Exp $
+
+  04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> -gwget-0.6.ebuild,
+  gwget-0.99.ebuild:
+  fix automagic dependencies, remove old revisions.
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> gwget-0.99.ebuild:
   x86 stable
