@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r101.ebuild,v 1.2 2008/05/31 08:17:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r1.ebuild,v 1.1 2008/08/04 15:55:31 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,8 +37,7 @@ src_compile() {
 
 	econf ${myconf} \
 		--host=${CHOST} \
-		--prefix=/usr \
-		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
+		--prefix=/usr/nagios \
 		--localstatedir=/var/nagios \
 		--sysconfdir=/etc/nagios \
 		--with-nrpe-user=nagios \
@@ -59,14 +58,28 @@ src_install() {
 	fperms 0640 /etc/nagios/nrpe.cfg
 
 	exeopts -m0750 -o nagios -g nagios
-	exeinto /usr/bin
+	exeinto /usr/nagios/bin
 	doexe src/nrpe
 
 	exeopts -m0750 -o nagios -g nagios
-	exeinto /usr/$(get_libdir)/nagios/plugins
+	exeinto /usr/nagios/libexec
 	doexe src/check_nrpe contrib/nrpe_check_control
 
-	newinitd "${FILESDIR}"/nrpe-nagios3 nrpe
+	newinitd "${FILESDIR}"/nrpe nrpe
+
+	cat << EOF > "${T}"/55-nagios-nrpe-revdep
+SEARCH_DIRS="/usr/nagios/bin /usr/nagios/libexec"
+EOF
+
+	insinto /etc/revdep-rebuild
+	doins "${T}"/55-nagios-nrpe-revdep
+
+	# Create pidfile in /var/run/nrpe, bug #233859
+	keepdir /var/run/nrpe
+	fowners nagios:nagios /var/run/nrpe
+	sed -i -e \
+		"s#pid_file=/var/run/nrpe.pid#pid_file=/var/run/nrpe/nrpe.pid#" \
+		"${D}"/etc/nagios/nrpe.cfg || die "sed failed"
 }
 
 pkg_postinst() {
