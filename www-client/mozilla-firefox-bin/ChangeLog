@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.154 2008/08/01 20:16:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.155 2008/08/04 15:07:51 keytoaster Exp $
+
+  04 Aug 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  mozilla-firefox-bin-2.0.0.16.ebuild:
+  amd64 stable wrt security bug #231975
 
 *mozilla-firefox-bin-3.1_alpha1 (01 Aug 2008)
 
