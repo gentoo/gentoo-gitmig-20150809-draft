@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.2.1.ebuild,v 1.2 2008/06/29 20:41:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.3.1.ebuild,v 1.1 2008/08/04 21:43:15 eva Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://raphael.slinckx.net/deskbar/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="eds spell"
+IUSE="eds spell test"
 
 # TODO: check if gnome-doc-utils doesn't imply scrollkeeper
 
@@ -30,12 +30,16 @@ DEPEND="${RDEPEND}
 		>=sys-devel/autoconf-2.60
 		  app-text/scrollkeeper
 		  app-text/gnome-doc-utils
-		  dev-util/pkgconfig"
+		  dev-util/pkgconfig
+		test? ( ~app-text/docbook-xml-dtd-4.2 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable eds evolution) --exec-prefix=/usr --disable-scrollkeeper"
+	G2CONF="${G2CONF}
+		$(use_enable eds evolution)
+		--exec-prefix=/usr
+		--disable-scrollkeeper"
 }
 
 src_unpack() {
