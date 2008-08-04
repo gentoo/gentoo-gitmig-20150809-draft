@@ -15,4 +15,7 @@
 		for LAN-sized installations up to complex networks with hundreds of
 		devices.
 	</longdescription>
+	<use>
+		<flag name='bundled-adodb'>use adodb bundled with web-application instead of system wide</flag>
+	</use>
 </pkgmetadata>

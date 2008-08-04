@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.15 2008/05/21 18:47:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.16 2008/08/04 19:25:13 jer Exp $
+
+  04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe local USE flags for GLEP 56.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Changed dependency for postgresql from dev-db/postgresql to

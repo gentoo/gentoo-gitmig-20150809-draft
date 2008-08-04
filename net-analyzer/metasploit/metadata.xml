@@ -13,5 +13,8 @@
 		need to always provide the latest exploits and an intuitive GUI, the
 		Framework was designed to facilitate research and experimentation with
 		new technologies.
-</longdescription>
+	</longdescription>
+	<use>
+		<flag name='httpd'>Enable web interface</flag>
+	</use>
 </pkgmetadata>
