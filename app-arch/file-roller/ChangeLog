@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.237 2008/07/30 21:50:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.238 2008/08/04 22:28:52 eva Exp $
+
+  04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -file-roller-2.22.0.ebuild, -file-roller-2.22.1.ebuild,
+  -file-roller-2.22.2.ebuild, -file-roller-2.22.3.ebuild:
+  clean up old revisions.
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org> file-roller-2.22.4.ebuild:
   Marking file-roller-2.22.4 ppc stable for bug 229709
