@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.4 2008/08/04 04:43:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.5 2008/08/04 16:16:37 darkside Exp $
+
+*wicd-1.5.1 (04 Aug 2008)
+
+  04 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -files/wicd-1.5.0-init.d,
+  +files/wicd-init.d, -wicd-1.5.0.ebuild, +wicd-1.5.1.ebuild:
+  Rename init file for easier package upgrades. Version bump to new version.
+  Remove old insecure version. quote from upstream: "Add checks to all methods
+  that make external program calls that take user input to prevent arbitrary
+  command execution."
 
   04 Aug 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.0.ebuild:
   Add postinst instructions because this application requires a fair amount of
