@@ -1,0 +1,33 @@
+diff -urN btanks-0.8.7479-orig/engine/src/finder.cpp btanks-0.8.7479/engine/src/finder.cpp
+--- btanks-0.8.7479-orig/engine/src/finder.cpp	2008-06-08 13:02:39.000000000 +0400
++++ btanks-0.8.7479/engine/src/finder.cpp	2008-07-30 15:57:31.000000000 +0400
+@@ -102,14 +102,14 @@
+ 					//LOG_DEBUG(("data_dir = %s", dname.c_str()));
+ 					path.push_back(dname.c_str());
+ #ifdef PLUGINS_DIR
+-					path.push_back(PLUGINS_DIR + "/" + dname); //plugins loaded from path ../bt_objects.
++					path.push_back(std::string(PLUGINS_DIR) + "/" + std::string(dname)); //plugins loaded from path ../bt_objects.
+ #endif
+ 			}
+ 		} CATCH("scan", )
+ 	}
+ #ifdef RESOURCES_DIR
+ 	std::string dname = RESOURCES_DIR "/data";
+-	std::string rname = RESOURCES_DIR + "/resources.dat";
++	std::string rname = std::string(RESOURCES_DIR) + "/resources.dat";
+ #else
+ 	std::string dname = "data";
+ 	std::string rname = "resources.dat";
+diff -urN btanks-0.8.7479-orig/mrt/fs_node.cpp btanks-0.8.7479/mrt/fs_node.cpp
+--- btanks-0.8.7479-orig/mrt/fs_node.cpp	2008-06-08 13:02:39.000000000 +0400
++++ btanks-0.8.7479/mrt/fs_node.cpp	2008-07-30 15:57:31.000000000 +0400
+@@ -129,7 +129,8 @@
+ 		}
+ 		r.push_back(p[i]);
+ 	}
+-	mrt::join(path, r, "/");
++// Commented because strip leading symbol '/'
++//	mrt::join(path, r, "/");
+ 	return path;
+ }
+ 
