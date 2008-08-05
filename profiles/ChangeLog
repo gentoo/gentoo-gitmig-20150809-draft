@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1748 2008/08/05 16:07:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1749 2008/08/05 16:14:25 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  05 Aug 2008; Ben de Groot <yngwin@gentoo.org> use.local.desc:
+  Adding firefox3 useflag for gtk-engines-qtcurve to use.local.desc
 
   05 Aug 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   removed old versions of app-pda/synce-rra from the tree, bug #224911
