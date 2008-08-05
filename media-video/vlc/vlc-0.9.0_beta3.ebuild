@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta3.ebuild,v 1.1 2008/08/05 10:04:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta3.ebuild,v 1.2 2008/08/05 19:41:05 aballier Exp $
 
 EAPI="1"
 
@@ -85,7 +85,7 @@ RDEPEND="
 		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
 		lirc? ( app-misc/lirc )
-		live? ( >=media-plugins/live-2007.02.20 )
+		live? ( >=media-plugins/live-2008.07.06 )
 		lua? ( >=dev-lang/lua-5.1 )
 		matroska? (
 			>=dev-libs/libebml-0.7.6
