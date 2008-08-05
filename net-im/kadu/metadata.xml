@@ -3,7 +3,20 @@
 <pkgmetadata>
 	<herd>net-im</herd>
 	<maintainer>
-	<email>cla@gentoo.org</email>
-	<name>Dawid Węgliński</name>
+		<email>cla@gentoo.org</email>
+		<name>Dawid WÄgliÅski</name>
 	</maintainer>
+	<use>
+		<flag name='amarok'>Enables amarok support in kadu</flag>
+		<flag name='config_wizard'>Enables configuration wizard module</flag>
+		<flag name='extraicons'>Enables extra icon set</flag>
+		<flag name='extramodules'>Enables extra module in kadu</flag>
+		<flag name='libgadu'>Build against existing libgadu rather than
+			built-in
+		</flag>
+		<flag name='mail'>Enables mail module in kadu</flag>
+		<flag name='powerkadu'>Installs extra powerkadu modules</flag>
+		<flag name='speech'>Enables speech module in kadu</flag>
+		<flag name='voice'>Enables voice chat in kadu</flag>
+	</use>
 </pkgmetadata>

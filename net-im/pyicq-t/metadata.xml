@@ -5,5 +5,10 @@
 <maintainer>
   <email>griffon26@gentoo.org</email>
 </maintainer>
-	<longdescription>Python based jabber transport for ICQ</longdescription>
+<longdescription>Python based jabber transport for ICQ</longdescription>
+<use>
+	<flag name='webinterface'>Install dependencies needed for the web
+		interface
+	</flag>
+</use>
 </pkgmetadata>

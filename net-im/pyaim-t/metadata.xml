@@ -11,5 +11,10 @@
   <email>griffon26@gentoo.org</email>
   <name>Maurice van der Pot</name>
 </maintainer>
-	<longdescription>Python based jabber transport for AIM</longdescription>
+<longdescription>Python based jabber transport for AIM</longdescription>
+<use>
+	<flag name='webinterface'>Install dependencies needed for the web
+		interface
+	</flag>
+</use>
 </pkgmetadata>

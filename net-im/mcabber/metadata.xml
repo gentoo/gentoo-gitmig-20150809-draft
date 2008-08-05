@@ -12,4 +12,9 @@
 		such as GPG encryption, SSL support, MUC (Multi-User Chat) support,
 		history logging, commands completion, and external actions triggers.
 	</longdescription>
+	<use>
+		<flag name='otr'> Enable encrypted conversations using Off-The-Records
+			messaging
+		</flag>
+	</use>
 </pkgmetadata>
