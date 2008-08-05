@@ -1,6 +1,11 @@
 # ChangeLog for www-client/arora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.4 2008/07/20 14:39:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.5 2008/08/05 05:32:04 yngwin Exp $
+
+*arora-0.3 (05 Aug 2008)
+
+  05 Aug 2008; Ben de Groot <yngwin@gentoo.org> +arora-0.3.ebuild:
+  Version bump to release 0.3
 
 *arora-0.3_pre20080720 (20 Jul 2008)
 
