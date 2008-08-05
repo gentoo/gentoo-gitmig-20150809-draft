@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8861 2008/08/05 04:26:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8862 2008/08/05 04:46:10 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -174,11 +174,6 @@ dev-db/rekall
 # for details or bug #105919. Going forward this needs to be compiled into the
 # kernel.
 sys-fs/trustees
-
-# Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
-# Removal in ~30 days. Only keep the latest version in the tree. 
-# Fixes bug #224911. Please comment on bug if you need an older version.
-<app-pda/synce-rra-0.9.1-r1
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Upstram doesn't support old version and we have the latest version in the 
