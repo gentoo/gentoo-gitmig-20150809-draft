@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-rra
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.22 2008/08/05 04:43:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.23 2008/08/05 04:49:13 darkside Exp $
+
+  05 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -files/0.9.0-gcc34.patch,
+  -synce-rra-0.9.0.ebuild:
+  Also remove the rest of the old versions, I thought only one was scheduled
+  to be removed
 
   05 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -synce-rra-0.9.1.ebuild:
   Remove, bug #224911
