@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.100 2008/07/15 16:23:42 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.101 2008/08/05 13:02:57 aballier Exp $
+
+  05 Aug 2008; Alexis Ballier <aballier@gentoo.org> audacity-1.3.5.ebuild:
+  Bump flac dep to force upgrade to a recent version, it would fail to build
+  if it is too old. Thanks to craig <oanjao@yahoo.com> for reporting in bug
+  #233010
 
   15 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> audacity-1.3.5.ebuild:
   amd64 stable, bug #231497

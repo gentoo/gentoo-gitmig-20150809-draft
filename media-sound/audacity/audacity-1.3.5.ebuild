@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5.ebuild,v 1.4 2008/07/15 16:23:42 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5.ebuild,v 1.5 2008/08/05 13:02:57 aballier Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="=x11-libs/wxGTK-2.8*
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	mp3? ( >=media-libs/libmad-0.14.2b )
 	id3tag? ( media-libs/libid3tag )
-	flac? ( media-libs/flac )
+	flac? ( >=media-libs/flac-1.2.0 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
 	vamp? ( media-libs/vamp-plugin-sdk )
 	twolame? ( media-sound/twolame )"
