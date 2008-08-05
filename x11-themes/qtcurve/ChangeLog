@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.39 2008/07/28 21:49:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.40 2008/08/05 01:52:10 yngwin Exp $
+
+*qtcurve-0.59.5 (05 Aug 2008)
+
+  05 Aug 2008; Ben de Groot <yngwin@gentoo.org> +qtcurve-0.59.5.ebuild:
+  Version bump
 
   28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtcurve-0.59.2.ebuild:
   QA: Get rid of deprecated qt_min_version().
