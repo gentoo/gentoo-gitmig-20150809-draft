@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/acovea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.13 2008/07/06 11:53:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.14 2008/08/05 02:37:36 darkside Exp $
+
+  05 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -acovea-4.0.0.ebuild:
+  remove old, broken version. bug #226517
 
   06 Jul 2008; Piotr Jaroszyński <peper@gentoo.org> acovea-5.1.1.ebuild:
   has_version needs a category too.
