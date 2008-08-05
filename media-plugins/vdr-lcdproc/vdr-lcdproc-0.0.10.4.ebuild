@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcdproc/vdr-lcdproc-0.0.10.3.ebuild,v 1.2 2008/08/05 06:57:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcdproc/vdr-lcdproc-0.0.10.4.ebuild,v 1.1 2008/08/05 06:57:39 zzam Exp $
 
 inherit vdr-plugin eutils versionator
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.4
+DEPEND=">=media-video/vdr-1.6
 		>=app-misc/lcdproc-0.4.3"
 
 S=${WORKDIR}/${MY_P#vdr-}
