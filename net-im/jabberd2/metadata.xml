@@ -13,4 +13,9 @@
 		</description>
 	</maintainer>
 	<herd>net-im</herd>
+	<use>
+		<flag name='memdebug'>Enable nad and pool debug. Requires USE="debug" to
+			be set.
+		</flag>
+	</use>
 </pkgmetadata>
