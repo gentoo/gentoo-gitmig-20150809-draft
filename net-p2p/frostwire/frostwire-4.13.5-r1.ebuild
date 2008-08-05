@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.2 2008/05/14 04:29:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.3 2008/08/05 18:11:23 wltjr Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -21,7 +21,7 @@ IUSE=""
 COMMON_DEP="
 	dev-java/commons-logging
 	dev-java/commons-net
-	dev-java/icu4j
+	dev-java/icu4j:0
 	dev-java/jgoodies-looks:1.2
 	dev-java/jmdns
 	dev-java/jython
