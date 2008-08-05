@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.5.ebuild,v 1.2 2008/07/13 11:05:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.5.ebuild,v 1.3 2008/08/05 23:25:40 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic versionator
 
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	dev-libs/boost
 	dev-util/pkgconfig
-	>=dev-util/scons-0.96.1
+	>=dev-util/scons-0.98.5
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
