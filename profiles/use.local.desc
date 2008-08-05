@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3698 2008/08/05 22:06:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3699 2008/08/05 22:52:09 ulm Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -67,6 +67,7 @@
 # net-im
 # rox-base
 # rox-extra
+# sys-boot
 # sys-cluster
 # sys-devel
 # x11-apps
