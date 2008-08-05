@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.38 2008/08/05 01:48:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.39 2008/08/05 17:30:17 yngwin Exp $
+
+*gtk-engines-qtcurve-0.59.7-r1 (05 Aug 2008)
+
+  05 Aug 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  +gtk-engines-qtcurve-0.59.7-r1.ebuild:
+  Adding firefox3 useflag and dep, updating metadata with longdescription
+  and useflags.
 
 *gtk-engines-qtcurve-0.59.7 (05 Aug 2008)
 
