@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.20.5.ebuild,v 1.2 2008/07/24 19:00:12 armin76 Exp $
-
-inherit autotools eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.20.6.ebuild,v 1.1 2008/08/05 23:05:48 aballier Exp $
 
 DESCRIPTION="Synthesizer keyboard emulation package: Moog, Hammond and others"
 HOMEPAGE="http://sourceforge.net/projects/bristol"
@@ -19,14 +17,6 @@ RDEPEND="jack? ( >=media-sound/jack-audio-connection-kit-0.99.0 )
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-cflags.patch"
-	epatch "${FILESDIR}/${P}-asneeded.patch"
-	eautoreconf
-}
 
 src_compile() {
 	econf \
