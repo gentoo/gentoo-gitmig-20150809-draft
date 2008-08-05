@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.458 2008/07/24 08:38:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.459 2008/08/05 16:30:20 ulm Exp $
+
+  05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> mysql-5.0.60-r1.ebuild:
   alpha/ia64/x86 stable wrt security #220399

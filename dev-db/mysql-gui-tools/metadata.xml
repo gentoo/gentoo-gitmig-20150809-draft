@@ -6,4 +6,9 @@
   <email>swegener@gentoo.org</email>
   <description>Primary Maintainer</description>
 </maintainer>
+<use>
+  <flag name='administrator'>Build and install MySQL Administrator</flag>
+  <flag name='query-browser'>Build and install MySQL Query Browser</flag>
+  <flag name='workbench'>Build and install MySQL Workbench</flag>
+</use>
 </pkgmetadata>
