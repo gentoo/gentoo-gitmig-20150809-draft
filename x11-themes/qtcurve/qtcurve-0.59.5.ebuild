@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.59.5.ebuild,v 1.1 2008/08/05 01:52:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.59.5.ebuild,v 1.2 2008/08/05 15:10:56 mr_bones_ Exp $
 
 EAPI=1
 
@@ -34,4 +34,3 @@ pkg_postinst() {
 pkg_postrm() {
 	buildsycoca
 }
-

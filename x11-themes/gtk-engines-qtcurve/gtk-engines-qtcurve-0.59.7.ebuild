@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.59.7.ebuild,v 1.1 2008/08/05 01:48:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.59.7.ebuild,v 1.2 2008/08/05 15:10:34 mr_bones_ Exp $
 
 inherit eutils cmake-utils
 
@@ -28,4 +28,3 @@ src_compile() {
 	use mozilla && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_MODIFY_MOZILLA_USER_JS=true"
 	cmake-utils_src_compile
 }
-
