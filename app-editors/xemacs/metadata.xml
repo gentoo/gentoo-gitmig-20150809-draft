@@ -15,11 +15,6 @@
       conventions</flag>
     <flag name='hesiod'>Support Hesiod to get the POP server host</flag>
     <flag name='pop'>Support POP for mail retrieval</flag>
-    <flag name='purify'>Support memory debugging using Purify</flag>
-    <flag name='quantify'>Support performance debugging using Quantify</flag>
-    <flag name='tooltalk'>Support the ToolTalk IPC protocol</flag>
-    <flag name='xft'>Compile with support for Xft client-side font rendering
-      and anti-aliasing</flag>
     <flag name='xim'>Enable X11 XiM input method</flag>
   </use>
 </pkgmetadata>
