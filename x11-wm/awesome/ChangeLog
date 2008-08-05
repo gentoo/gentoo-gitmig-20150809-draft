@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.26 2008/08/02 21:38:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.27 2008/08/05 12:44:24 tove Exp $
+
+  05 Aug 2008; Torsten Veller <tove@gentoo.org> awesome-2.3.2.ebuild:
+  Stable on x86 (#233293)
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org> awesome-2.3.2.ebuild:
   Stable on ppc64; bug #233293
