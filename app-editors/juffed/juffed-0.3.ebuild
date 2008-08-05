@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3_beta20080421.ebuild,v 1.3 2008/07/27 02:09:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3.ebuild,v 1.1 2008/08/05 04:53:49 yngwin Exp $
 
 EAPI=1
 inherit qt4
 
-MY_P=${PN}_${PV/_beta/-dev-}
+MY_P=${PN}_${PV}
 
 DESCRIPTION="QScintilla-based tabbed text editor with syntax highlighting"
 HOMEPAGE="http://www.qt-apps.org/content/show.php/JuffEd?content=59940"
@@ -22,10 +22,16 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# force our current cxxflags and ldflags, and turn off warnings in tests, bug 231921
+	epatch "${FILESDIR}"/${P}-configure.patch
+}
+
 src_compile() {
 	# with econf it chokes on Unrecognized option: --host=...
-	./configure --qmake=qmake \
-		--prefix=/usr --qt_lib_path=/usr/lib/qt4
+	./configure --qmake=qmake --prefix=/usr
 	emake || die "Make failed!"
 }
 
