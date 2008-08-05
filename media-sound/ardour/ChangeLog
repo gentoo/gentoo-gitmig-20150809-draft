@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.77 2008/07/13 11:05:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.78 2008/08/05 23:19:02 aballier Exp $
+
+  05 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/ardour-2.0.3-cflags.patch, -files/ardour-2.4-gcc43.patch,
+  -ardour-2.0.5.ebuild, -ardour-2.4.1.ebuild:
+  remove old versions
 
   13 Jul 2008; Alexis Ballier <aballier@gentoo.org> ardour-2.5.ebuild:
   require new enough jack, bug #231567
