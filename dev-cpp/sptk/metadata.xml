@@ -6,4 +6,8 @@
   <email>iluxa@gentoo.org</email>
 </maintainer>
 <longdescription>C++ user interface toolkit for X with ODBC, IMAP, Excel support.</longdescription> 
+<use>
+  <flag name='aspell'>Enable support for <pkg>app-text/aspell</pkg></flag>
+  <flag name='excel'>Enable Excel support</flag>
+</use>
 </pkgmetadata>
