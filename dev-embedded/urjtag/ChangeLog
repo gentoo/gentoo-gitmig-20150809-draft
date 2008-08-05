@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.5 2008/05/16 14:21:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.6 2008/08/05 19:12:15 ulm Exp $
+
+  05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   16 May 2008; Raúl Porcel <armin76@gentoo.org> urjtag-0.8.ebuild:
   sparc stable wrt #217847

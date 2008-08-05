@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.39 2008/04/20 17:58:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.40 2008/08/05 19:10:11 ulm Exp $
+
+  05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *sdcc-2.8.0 (20 Apr 2008)
 

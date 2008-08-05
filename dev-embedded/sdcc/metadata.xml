@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>dev-embedded</herd>
 <longdescription>Small device C compiler (for various microprocessors)</longdescription>
+<use>
+  <flag name='boehmgc'>Enable Hans Boehm's garbage collector
+    (<pkg>dev-libs/boehm-gc</pkg>)</flag>
+</use>
 </pkgmetadata>
