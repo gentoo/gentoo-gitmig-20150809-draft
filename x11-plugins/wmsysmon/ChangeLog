@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsysmon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.30 2007/07/22 04:26:48 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.31 2008/08/05 21:14:15 cardoe Exp $
+
+  05 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmsysmon-0.7.6-r3.ebuild, wmsysmon-0.7.7.ebuild:
