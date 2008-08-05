@@ -6,4 +6,7 @@
   <email>spock@gentoo.org</email>
   <name>Michal Januszewski</name>
 </maintainer>
+<use>
+	<flag name='tlen'>Enable Tlen.pl protocol support</flag>
+</use>
 </pkgmetadata>
