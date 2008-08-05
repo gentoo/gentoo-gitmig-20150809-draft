@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.58 2008/06/29 14:13:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.59 2008/08/05 14:26:43 aballier Exp $
+
+*gpac-0.4.4-r1 (05 Aug 2008)
+
+  05 Aug 2008; Alexis Ballier <aballier@gentoo.org> +gpac-0.4.4-r1.ebuild:
+  add a revbump to use wxgtk 2.8
 
   29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> -gpac-0.4.2.ebuild,
   gpac-0.4.2-r1.ebuild:
