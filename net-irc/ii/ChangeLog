@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ii
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ChangeLog,v 1.4 2007/07/16 17:57:42 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ChangeLog,v 1.5 2008/08/05 17:59:35 armin76 Exp $
+
+  05 Aug 2008; Raúl Porcel <armin76@gentoo.org> ii-1.3.ebuild:
+  Fix HOMEPAGE, SRC_URI
 
 *ii-1.3 (16 Jul 2007)
 
