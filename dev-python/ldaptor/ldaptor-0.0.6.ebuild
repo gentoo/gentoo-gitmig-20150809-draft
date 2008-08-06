@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.17 2006/01/31 23:57:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.18 2008/08/06 20:16:53 neurogeek Exp $
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://twistedmatrix.com/users/tv/ldaptor/"
@@ -23,9 +23,9 @@ src_compile() {
 }
 
 src_install() {
-	python setup-ldaptor-utils.py install --root=${D} || die
-	python setup-ldaptor-webui.py install --root=${D} || die
-	python setup-python-ldaptor.py install --root=${D} || die
+	python setup-ldaptor-utils.py install --root="${D}" || die
+	python setup-ldaptor-webui.py install --root="${D}" || die
+	python setup-python-ldaptor.py install --root="${D}" || die
 
 	dodoc README TODO rfc2251-status.txt
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.5 2006/02/13 23:02:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.6 2008/08/06 20:16:53 neurogeek Exp $
 
 inherit distutils eutils
 
@@ -59,8 +59,8 @@ src_install() {
 	python_version
 
 	if ! use web; then
-		rm ${D}/usr/bin/ldaptor-webui || die "couldn't rm ldaptor-webui"
-		rm -rf ${D}/usr/lib/python${PYVER}/site-packages/ldaptor/apps/webui || die "couldn't prune webui"
+		rm "${D}"/usr/bin/ldaptor-webui || die "couldn't rm ldaptor-webui"
+		rm -rf "${D}"/usr/lib/python${PYVER}/site-packages/ldaptor/apps/webui || die "couldn't prune webui"
 	fi
 
 	# install examples
