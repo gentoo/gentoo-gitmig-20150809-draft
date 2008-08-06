@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.548 2008/07/15 11:05:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.549 2008/08/06 23:38:30 yngwin Exp $
+
+*xine-lib-1.1.14-r1 (06 Aug 2008)
+
+  06 Aug 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/xine-lib-1.1.14-metadata-bugfix.patch, +xine-lib-1.1.14-r1.ebuild:
+  Adding upstream patch to fix bug 231974.
 
   15 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   -files/xine-lib-1.1.11.1-mkv.patch, -files/xine-lib-1.1.11.1-qtniso.patch,
