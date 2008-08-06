@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/caver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.10 2007/03/15 15:51:57 kugelfang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.11 2008/08/06 15:26:47 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> caver-0.99.2.ebuild,
   caver-0.99.4.ebuild:

@@ -6,5 +6,8 @@
 <email>je_fro@gentoo.org</email>
 <name>Jeff Gardner</name>
 </maintainer>
+<use>
+  <flag name='client-only'>Install the viewer only, no applet files for httpd
+    </flag>
+</use>
 </pkgmetadata>
-
