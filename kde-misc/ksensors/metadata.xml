@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<use>
+	<flag name='ibmacpi'>Enable monitoring of ACPI sensor data on IBM Thinkpad
+		notebooks</flag>
+</use>
 </pkgmetadata>
