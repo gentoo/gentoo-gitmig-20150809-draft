@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.7 2008/05/18 16:06:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.8 2008/08/06 06:41:38 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   18 May 2008; Samuli Suominen <drac@gentoo.org> cyberjack-2.0.13.ebuild,
   cyberjack-2.0.14_beta1.ebuild, cyberjack-3.0.4.ebuild:
