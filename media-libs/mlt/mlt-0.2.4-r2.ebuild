@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.6 2008/07/27 20:57:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.4-r2.ebuild,v 1.7 2008/08/06 21:09:55 aballier Exp $
 
 EAPI=1
 
@@ -59,6 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-double-fps.patch
 	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 	epatch "${FILESDIR}"/${P}-avfreestatic.patch
+	epatch "${FILESDIR}"/${P}-sox1410.patch
 }
 
 src_compile() {
