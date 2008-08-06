@@ -11,4 +11,9 @@ operation (e.g., averaging or hyperslabbing), and produce a netCDF
 output file. NCO was originally designed to manipulate and analyze
 climate data, though it works on any netCDF format datasets.
 </longdescription>
+<use>
+  <flag name='ncap2'>Build next generation netcdf arithmetic processor
+    (needs <pkg>dev-java/antlr</pkg>)</flag>
+  <flag name='udunits'>Add <pkg>sci-libs/udunits</pkg> files support</flag>
+</use>
 </pkgmetadata>
