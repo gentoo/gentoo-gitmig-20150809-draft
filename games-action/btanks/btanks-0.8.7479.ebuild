@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.8.7479.ebuild,v 1.1 2008/08/04 20:47:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.8.7479.ebuild,v 1.2 2008/08/06 16:44:38 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-lang/lua-5.1
 	media-libs/libvorbis
 	virtual/opengl
 	dev-libs/expat
+	media-libs/smpeg
 	media-libs/sdl-image"
 DEPEND="${RDEPEND}
 	dev-util/scons
