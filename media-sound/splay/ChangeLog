@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/splay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.15 2007/03/01 18:08:18 aballier Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.16 2008/08/06 22:36:00 aballier Exp $
+
+  06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/splay-0.9.5.2-gcc43.patch, splay-0.9.5.2.ebuild:
+  fix build with gcc 4.3, bug #232773
 
   01 Mar 2007; Alexis Ballier <aballier@gentoo.org> splay-0.9.5.2.ebuild:
   Reverting renaming, it breaks cplay, thanks to drac for pointing that quickly
