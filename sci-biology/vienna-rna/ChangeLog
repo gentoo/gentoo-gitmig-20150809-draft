@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.15 2008/05/01 13:13:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.16 2008/08/06 15:06:58 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *vienna-rna-1.7.0 (01 May 2008)
 
