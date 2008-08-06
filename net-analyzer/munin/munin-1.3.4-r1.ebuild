@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.4 2008/08/06 19:41:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.5 2008/08/06 19:45:00 maekke Exp $
 
 inherit eutils
 
@@ -98,13 +98,13 @@ src_install() {
 	emake DESTDIR="${D}" install-man || die "install manpages failed"
 
 	insinto /etc/munin/plugin-conf.d/
-	newins ${FILESDIR}/${PN}-1.3.2-plugins.conf munin-node
+	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
 	# make sure we've got everything in the correct directory
 	insinto /var/lib/munin
-	newins ${FILESDIR}/${PN}-1.3.3-crontab crontab
-	newinitd ${FILESDIR}/munin-node_init.d_1.3.3-r1 munin-node
-	newconfd ${FILESDIR}/munin-node_conf.d_1.3.3-r1 munin-node
+	newins "${FILESDIR}"/${PN}-1.3.3-crontab crontab
+	newinitd "${FILESDIR}"/munin-node_init.d_1.3.3-r1 munin-node
+	newconfd "${FILESDIR}"/munin-node_conf.d_1.3.3-r1 munin-node
 	dodoc README ChangeLog INSTALL logo.eps logo.svg build/resources/apache*
 }
 
