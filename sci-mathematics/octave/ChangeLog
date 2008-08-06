@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.59 2008/07/24 21:59:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.60 2008/08/06 20:42:01 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *octave-3.0.1 (23 Jul 2008)
 

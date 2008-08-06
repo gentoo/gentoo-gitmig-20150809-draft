@@ -10,4 +10,7 @@ library of mathematical functions, but its real strength is in the
 language in which you can easily write your own symbolic manipulation
 algorithms.
 </longdescription>
+<use>
+  <flag name='server'>Build the network server version</flag>
+</use>
 </pkgmetadata>

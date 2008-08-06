@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.11 2008/07/22 22:03:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.12 2008/08/06 20:35:56 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *gretl-1.7.5 (22 Jul 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.20 2008/04/19 09:49:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.21 2008/08/06 20:51:36 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   19 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/yacas-1.2.2-gcc43.patch, yacas-1.2.2.ebuild:

@@ -14,4 +14,8 @@
   data, and uses gnuplot for graphing. It can output regression results
   in LaTeX format.
 </longdescription>
+<use>
+  <flag name='sourceview'>Enable support for <pkg>x11-libs/gtksourceview</pkg>
+    </flag>
+</use>
 </pkgmetadata>
