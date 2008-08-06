@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.16.ebuild,v 1.1 2008/08/05 14:53:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.16.ebuild,v 1.2 2008/08/06 23:04:40 aballier Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug gmp pcre test xml"
 
-RDEPEND=">=media-libs/raptor-1.4.16
+RDEPEND=">=media-libs/raptor-1.4.17
 	pcre? ( dev-libs/libpcre )
 	xml? ( dev-libs/libxml2 )
 	!gmp? ( dev-libs/mpfr )

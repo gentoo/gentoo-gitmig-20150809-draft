@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.21 2008/08/05 14:53:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.22 2008/08/06 23:04:40 aballier Exp $
+
+  06 Aug 2008; Alexis Ballier <aballier@gentoo.org> rasqal-0.9.16.ebuild:
+  bump raptor version requirement, bug #234047
 
 *rasqal-0.9.16 (05 Aug 2008)
 
