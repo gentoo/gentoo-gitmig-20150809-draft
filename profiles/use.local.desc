@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3710 2008/08/06 18:31:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3711 2008/08/06 18:36:55 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -67,6 +67,7 @@
 # gnome-extra
 # gnustep-apps
 # gnustep-base
+# kde-misc
 # media-plugins
 # net-analyzer
 # net-im
