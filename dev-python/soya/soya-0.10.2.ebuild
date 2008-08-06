@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.4 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.5 2008/08/06 19:19:28 neurogeek Exp $
 
 inherit distutils
 
@@ -35,11 +35,11 @@ RDEPEND="${DEPEND}
 	>=dev-python/editobj-0.5.6
 	openal? ( >=dev-python/pyopenal-0.1.4 )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 
-	rm ${S}/pudding/test.py	# This file shouldn't be installed
+	rm "${S}"/pudding/test.py	# This file shouldn't be installed
 
 	if ! use ode; then
 		sed -i -e "s/^\(USE_ODE = \).*$/\1False/" setup.py || die "sed install.py failed"
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
 	distutils_src_install
 	if use doc; then
-		cd ${WORKDIR}/${MY_PN}Tutorial-${PV}
+		cd "${WORKDIR}/${MY_PN}Tutorial-${PV}"
 		insinto /usr/share/${PN}/doc
 		doins doc/*
 		insinto /usr/share/${PN}/doc/blendertut
@@ -59,7 +59,7 @@ src_install() {
 		doins doc/pudding/*
 	fi
 	if use examples; then
-		cd ${WORKDIR}/${MY_PN}Tutorial-${PV}
+		cd "${WORKDIR}/${MY_PN}Tutorial-${PV}"
 		insinto /usr/share/${PN}/tutorial
 		doins tutorial/*
 		insinto /usr/share/${PN}/tutorial/results
