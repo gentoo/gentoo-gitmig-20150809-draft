@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.14 2008/01/26 23:11:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.15 2008/08/06 22:43:36 aballier Exp $
 
 inherit eutils kde-functions
 
@@ -39,6 +39,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-errno.patch"
 	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 
 	rm -rf "${S}/admin"
 	ln -s "${WORKDIR}/admin" "${S}/admin"
