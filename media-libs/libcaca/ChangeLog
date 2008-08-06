@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.61 2008/08/06 00:34:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.62 2008/08/06 15:21:50 aballier Exp $
+
+  06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  libcaca-0.99_beta14.ebuild:
+  We really need freeglut, not virtual/glut here, thanks to Chad A. Simmons
+  <chad.simmons@member.fsf.org> for reporting in bug #234087
 
 *libcaca-0.99_beta14 (06 Aug 2008)
 
