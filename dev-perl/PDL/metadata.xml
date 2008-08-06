@@ -6,5 +6,7 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<use>
+		<flag name='badval'>Enable badval support</flag>
+	</use>
 </pkgmetadata>

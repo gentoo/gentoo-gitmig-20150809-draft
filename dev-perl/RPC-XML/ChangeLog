@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/RPC-XML
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.38 2007/07/29 16:48:58 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.39 2008/08/06 16:56:39 cardoe Exp $
+
+  06 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> RPC-XML-0.54.ebuild,
   RPC-XML-0.58.ebuild, RPC-XML-0.59.ebuild:

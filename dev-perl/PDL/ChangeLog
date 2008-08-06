@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.76 2007/09/11 17:11:42 jer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.77 2008/08/06 16:55:46 cardoe Exp $
+
+  06 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   11 Sep 2007; Jeroen Roovers <jer@gentoo.org> -files/gsl.patch,
   PDL-2.4.3-r1.ebuild:
