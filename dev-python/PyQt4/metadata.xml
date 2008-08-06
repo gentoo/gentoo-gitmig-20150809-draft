@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>python</herd>
 <herd>qt</herd>
+<use>
+	<flag name='qt3support'>enable the Qt3Support libraries for Qt4</flag>
+</use>
 </pkgmetadata>
