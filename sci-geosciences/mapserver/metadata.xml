@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-geosciences</herd>
+<herd>sci-geosciences</herd>
+<use>
+  <flag name='agg'>Enable <pkg>x11-libs/agg</pkg> library support</flag>
+  <flag name='flash'>Add support for creating SWF files using
+    <pkg>media-libs/ming</pkg></flag>
+  <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> library support</flag>
+  <flag name='geos'>Enable <pkg>sci-libs/geos</pkg> library support</flag>
+  <flag name='postgis'>Enable <pkg>dev-db/postgis</pkg> support</flag>
+  <flag name='proj'>Enable <pkg>sci-libs/proj</pkg> library support
+    (geographic projections)</flag>
+</use>
 </pkgmetadata>
