@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.0.ebuild,v 1.3 2008/06/21 09:28:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.0.ebuild,v 1.4 2008/08/06 22:57:52 aballier Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="A program for KDE that lets you tune musical instruments."
 HOMEPAGE="http://home.planet.nl/~lamer024/k3guitune.html"
@@ -30,6 +30,7 @@ done
 
 src_unpack() {
 	kde_src_unpack
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	for X in ${LANGS} ; do
 		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}.po"
