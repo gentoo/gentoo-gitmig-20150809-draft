@@ -1,0 +1,11 @@
+--- Rules.make
++++ Rules.make
+@@ -6,7 +6,7 @@
+ CC=gcc -m32
+ LD=ld -m elf32_sparc
+ AS=as
+-STRIP=strip
++STRIP=true
+ NM=nm
+ ELFTOAOUT=elftoaout
+ BIN2H=../common/bin2h
