@@ -8,4 +8,11 @@
 </maintainer>
 <longdescription>Unbundled GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients, such as GPSDrive, kismet, and pygps.
 </longdescription>
+<use>
+  <flag name='italk'>Enable iTalk protocol support</flag>
+  <flag name='itrax'>Enable iTrax hardware support</flag>
+  <flag name='ntp'>Enable <pkg>net-misc/ntp</pkg> shared memory interface
+    for GPS time</flag>
+  <flag name='tntc'>Enable True North Technologies support</flag>
+</use>
 </pkgmetadata>
