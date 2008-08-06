@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/dataplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.4 2008/07/01 23:17:05 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.5 2008/08/06 20:23:22 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   01 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   dataplot-20080225.ebuild:

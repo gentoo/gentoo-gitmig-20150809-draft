@@ -10,4 +10,11 @@
   parallel/distributed algorithm development (via MPI), and plotting
   and visualization capabilities.
 </longdescription>
+<use>
+  <flag name='arpack'>Add sparse eigen value support via
+    <pkg>sci-libs/arpack</pkg></flag>
+  <flag name='ffcall'>Enable use of <pkg>dev-libs/ffcall</pkg></flag>
+  <flag name='umfpack'>Add sparse solving via
+    <pkg>sci-libs/umfpack</pkg></flag>
+</use>
 </pkgmetadata>

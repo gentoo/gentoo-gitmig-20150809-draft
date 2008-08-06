@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.32 2008/04/08 21:20:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.33 2008/08/06 20:21:14 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   08 Apr 2008; Alexis Ballier <aballier@gentoo.org> -coq-8.0_p3.ebuild:
   remove old

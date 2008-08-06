@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.13 2008/07/27 02:11:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.14 2008/08/06 20:27:08 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> freemat-3.6.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
