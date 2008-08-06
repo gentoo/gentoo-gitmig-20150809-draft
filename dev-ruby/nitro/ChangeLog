@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nitro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.15 2008/02/02 15:28:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.16 2008/08/06 16:35:39 graaff Exp $
+
+  06 Aug 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> nitro-0.40.0.ebuild,
   nitro-0.41.0.ebuild:
