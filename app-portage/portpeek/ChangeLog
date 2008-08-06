@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.9 2008/08/01 21:59:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.10 2008/08/06 01:36:19 gentoofan23 Exp $
+
+  06 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  portpeek-1.5.7.ebuild:
+  stable amd64, bug 233580, remove redundant directory change to 'S'
 
   01 Aug 2008; Ferris McCormick <fmccor@gentoo.org> portpeek-1.5.7.ebuild:
   Sparc stable, Bug #233644.
