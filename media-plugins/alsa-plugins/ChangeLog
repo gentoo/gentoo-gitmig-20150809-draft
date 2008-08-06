@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.77 2008/08/03 08:02:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.78 2008/08/06 22:37:28 yngwin Exp $
+
+*alsa-plugins-1.0.17-r1 (06 Aug 2008)
+
+  06 Aug 2008; Ben de Groot <yngwin@gentoo.org> +files/ffmpeg-headers.patch,
+  +alsa-plugins-1.0.17-r1.ebuild:
+  Adding patch to detect new ffmpeg headers location. Thanks to Rafał
+  Mużyło and Martin von Gagern in bug 218088.
 
   03 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
   alsa-plugins-1.0.14.ebuild, alsa-plugins-1.0.16.ebuild:
