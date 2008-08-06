@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.50 2008/05/07 19:27:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.51 2008/08/06 16:56:18 swegener Exp $
+
+*pdns-2.9.21.1 (06 Aug 2008)
+
+  06 Aug 2008; Sven Wegener <swegener@gentoo.org> +pdns-2.9.21.1.ebuild:
+  Version bump.
 
   07 May 2008; Sven Wegener <swegener@gentoo.org> pdns-2.9.21.ebuild:
   Use . instead of -, that's what all our of init scripts use.
