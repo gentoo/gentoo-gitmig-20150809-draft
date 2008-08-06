@@ -15,4 +15,8 @@
 		Ethernet Devices (Unencrypted, WEP, WPA), Virtual Private
 		Networks (OpenVPN, VPNC, PPTP) and Dial-Up (PPP).
 	</longdescription>
+	<use>
+		<flag name='cisco'>Adds support for the Cisco VPN client
+			<pkg>net-misc/vpnc</pkg></flag>
+	</use>
 </pkgmetadata>
