@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.2 2007/07/02 15:05:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.3 2008/08/06 06:13:06 neurogeek Exp $
 
 inherit distutils
 
@@ -13,21 +13,15 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
-DEPEND="dev-lang/python"
+DEPEND="virtual/python"
 
 src_install() {
+	distutils_src_install
 
-	python_version
-	insinto /usr/lib/python${PYVER}/site-packages/
-	doins ircbot.py irclib.py
-
-	# this is installed even without doc flag, because, its small
-	dodoc README ChangeLog
-
-	if use doc ; then
+	if use doc; then
 		# Examples are treated like real documentation
-		dodir /usr/share/doc/${P}/examples
-		insinto /usr/share/doc/${P}/examples
+		insinto "/usr/share/doc/${PF}/examples"
 		doins dccreceive dccsend irccat irccat2 servermap testbot.py
 	fi
 }
+
