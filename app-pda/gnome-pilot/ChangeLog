@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.46 2008/08/01 19:16:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.47 2008/08/06 22:28:25 eva Exp $
+
+*gnome-pilot-2.0.16-r1 (06 Aug 2008)
+
+  06 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-pilot-2.0.16-hal-0.5.11.patch, +gnome-pilot-2.0.16-r1.ebuild:
+  add patch to fix detection with hal-0.5.11, bug #231678.
 
   01 Aug 2008; nixnut <nixnut@gentoo.org> gnome-pilot-2.0.16.ebuild:
   Stable on ppc wrt bug 230067
