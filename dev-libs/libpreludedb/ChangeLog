@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.38 2008/05/21 15:59:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.39 2008/08/06 09:59:25 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   libpreludedb-0.9.2.ebuild, libpreludedb-0.9.13.ebuild:

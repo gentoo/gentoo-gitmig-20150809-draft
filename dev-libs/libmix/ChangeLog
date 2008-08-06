@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmix
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.7 2007/07/06 12:33:27 uberlord Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.8 2008/08/06 09:55:05 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   06 Jul 2007; Roy Marples <uberlord@gentoo.org> libmix-2.05.ebuild:
   Keyworded ~x86-fbsd

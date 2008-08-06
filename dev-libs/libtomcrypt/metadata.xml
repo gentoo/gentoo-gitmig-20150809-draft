@@ -65,4 +65,10 @@ Sports the following algorithms
           o ECC (over Z/pZ, ElGamal Signatures, simple DH style encryption)
           o DSA (Users make their own groups) 
 </longdescription>
+<use>
+  <flag name='libtommath'>Use the portable math library
+    (<pkg>dev-libs/libtommath</pkg>)</flag>
+  <flag name='tomsfastmath'>Use the optimized math library
+    (<pkg>dev-libs/tomsfastmath</pkg>)</flag>
+</use>
 </pkgmetadata>
