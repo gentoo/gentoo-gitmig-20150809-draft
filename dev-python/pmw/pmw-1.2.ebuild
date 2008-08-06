@@ -1,20 +1,23 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.14 2006/09/27 17:23:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.15 2008/08/06 04:41:09 neurogeek Exp $
 
-inherit distutils python
+PYTHON_MODNAME='Pmw'
 
+inherit distutils
+
+MY_P="${PYTHON_MODNAME}.${PV}"
 DESCRIPTION="A toolkit for building high-level compound widgets in Python using the Tkinter module."
 HOMEPAGE="http://pmw.sourceforge.net/"
-SRC_URI="mirror://sourceforge/pmw/Pmw.${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 LICENSE="MIT"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.1"
-S="${WORKDIR}/Pmw"
+DEPEND="virtual/python"
+S="${WORKDIR}/${PYTHON_MODNAME}"
 
 pkg_setup() {
 	# check for Tkinter support in python
@@ -28,7 +31,7 @@ src_compile() {
 src_install() {
 	python_version
 
-	local pmwdir="/usr/lib/python${PYVER}/site-packages/Pmw"
+	local pmwdir="$(python_get_sitedir)/${PYTHON_MODNAME}"
 
 	local dir
 	for dir in `find . -type d` ; do
@@ -49,3 +52,4 @@ src_install() {
 	local docdir=`find . -type d -name doc`
 	dohtml -a html,gif,py "${docdir}"/*
 }
+
