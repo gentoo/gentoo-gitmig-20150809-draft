@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3711 2008/08/06 18:36:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3712 2008/08/06 18:58:51 ulm Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -80,6 +80,7 @@
 # sci-geosciences
 # sci-misc
 # sci-physics
+# sci-visualization
 # sys-boot
 # sys-cluster
 # sys-devel
