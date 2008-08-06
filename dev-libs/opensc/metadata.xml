@@ -14,4 +14,9 @@ Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any ISO 7816-
 Encryption and decryption using private keys on the SmartCard is possible with PKCS #15 compatible 
 cards, such as the FINEID (Finnish Electronic IDentity) card.
 </longdescription>
+<use>
+  <flag name='openct'>Build using <pkg>dev-libs/openct</pkg> compatibility
+    </flag>
+  <flag name='pcsc-lite'>Build with <pkg>sys-apps/pcsc-lite</pkg></flag>
+</use>
 </pkgmetadata>

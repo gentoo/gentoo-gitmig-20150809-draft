@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.51 2007/03/23 08:54:18 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.52 2008/08/06 10:57:35 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   23 Mar 2007; Alin Năstac <mrness@gentoo.org>
   -files/openobex-1.2-as-needed.patch, -openobex-1.2-r1.ebuild,

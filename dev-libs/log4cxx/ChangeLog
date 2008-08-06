@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.24 2008/05/06 08:06:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.25 2008/08/06 10:55:05 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *log4cxx-0.10.0 (06 May 2008)
 
