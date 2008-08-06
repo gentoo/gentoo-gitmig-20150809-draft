@@ -6,5 +6,8 @@
 		<email>angelos@gentoo.org</email>
 		<name>Christoph Mende</name>
 	</maintainer>
+	<use>
+		<flag name='twisted'>add support for <pkg>dev-python/twisted</pkg></flag>
+	</use>
 </pkgmetadata>
 
