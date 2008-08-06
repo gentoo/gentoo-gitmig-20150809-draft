@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.13 2008/05/26 12:51:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.14 2008/08/06 05:21:53 neurogeek Exp $
 
 inherit python
 
 DESCRIPTION="PostgreSQL database adapter for Python" # best one
-SRC_URI="http://initd.org/pub/software/psycopg/${P}.tar.gz"
+SRC_URI="http://initd.org/pub/software/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.initd.org/software/psycopg"
 
 DEPEND="virtual/python
@@ -28,7 +28,7 @@ src_unpack() {
 src_compile() {
 	python_version
 	econf \
-		--with-mxdatetime-includes=/usr/lib/python${PYVER}/site-packages/mx/DateTime/mxDateTime \
+		--with-mxdatetime-includes=$(python_get_sitedir)/mx/DateTime/mxDateTime \
 		--with-postgres-includes=/usr/include/postgresql/server \
 		|| die "./configure failed"
 	emake || die
