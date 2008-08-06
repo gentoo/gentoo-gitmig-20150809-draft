@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3712 2008/08/06 18:58:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3713 2008/08/06 19:12:17 ulm Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -499,7 +499,7 @@ dev-embedded/openocd:ftdi - Enable support for USB FTDI chips
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
 dev-embedded/openocd:presto - Enable support for AXIS PRESTO devices
 dev-embedded/ponyprog:epiphany - Enable epiphany support
-dev-embedded/sdcc:boehmgc - Enable Hans Boehm's garbage collector
+dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips
 dev-games/cegui:devil - Enable image loading via DevIL
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
