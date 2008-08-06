@@ -1,0 +1,55 @@
+Index: addressbook/e-book-backend-exchange.c
+===================================================================
+--- addressbook/e-book-backend-exchange.c
++++ addressbook/e-book-backend-exchange.c
+@@ -1766,17 +1766,21 @@ e_book_backend_exchange_build_restrictio
+ 	r = e_sexp_eval (sexp);
+ 	if (r && r->type == ESEXP_RES_UNDEFINED)
+ 		rn = (E2kRestriction *)r->value.string;
+-	else {
+-		g_warning ("conversion to exchange restriction failed");
++	else
+ 		rn = NULL;
+-	}
++
++	if (!rn)
++		g_warning ("conversion to exchange restriction failed, query: '%s'", query ? query : "[null]");
+ 
+ 	e_sexp_result_free (sexp, r);
+ 	e_sexp_unref (sexp);
+ 
+-	if (base_rn) {
++	if (base_rn && rn) {
+ 		e2k_restriction_ref (base_rn);
+ 		rn = e2k_restriction_andv (rn, base_rn, NULL);
++
++		if (!rn)
++			g_warning ("failed to concat with a base_rn, query: '%s'", query ? query : "[null]");
+ 	}
+ 
+ 	return rn;
+@@ -1890,9 +1894,14 @@ e_book_backend_exchange_get_contact_list
+ 
+ 		rn = e_book_backend_exchange_build_restriction (query,
+ 								bepriv->base_rn);
++
++		if (!rn)
++			return GNOME_Evolution_Addressbook_OtherError;
++
+ 		iter = e_folder_exchange_search_start (bepriv->folder, NULL,
+ 					       field_names, n_field_names,
+ 					       rn, NULL, TRUE);
++
+ 		e2k_restriction_unref (rn);
+ 
+ 		*contacts = NULL;
+@@ -1986,6 +1995,9 @@ e_book_backend_exchange_start_book_view 
+ 		rn = e_book_backend_exchange_build_restriction (query,
+ 							bepriv->base_rn);
+ 
++		if (!rn)
++			return;
++
+ 		iter = e_folder_exchange_search_start (bepriv->folder, NULL,
+ 					       field_names, n_field_names,
+ 					       rn, NULL, TRUE);

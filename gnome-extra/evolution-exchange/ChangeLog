@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.66 2008/07/30 21:48:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.67 2008/08/06 22:32:03 eva Exp $
+
+*evolution-exchange-2.22.3-r1 (06 Aug 2008)
+
+  06 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-exchange-2.22.3-addressbook-crash.patch,
+  +evolution-exchange-2.22.3-r1.ebuild:
+  fix crash in addressbook, bug #233263.
 
 *evolution-exchange-2.22.3 (30 Jul 2008)
 
