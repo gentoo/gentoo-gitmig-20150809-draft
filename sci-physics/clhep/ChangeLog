@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.3 2008/07/15 12:09:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.4 2008/08/06 16:14:28 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   15 Jul 2008; Ferris McCormick <fmccor@gentoo.org> clhep-2.0.3.3.ebuild:
   Add ~sparc for testing, dependency required for Bug #230716.
