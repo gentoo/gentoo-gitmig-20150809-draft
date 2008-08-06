@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta3.ebuild,v 1.2 2008/08/05 19:41:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_beta3.ebuild,v 1.3 2008/08/06 14:19:08 aballier Exp $
 
 EAPI="1"
 
@@ -253,7 +253,6 @@ src_compile () {
 		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(vlc_ffmpeg_scaling_api) $(use_enable ffmpeg postproc) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
-		--disable-galaktos \
 		$(use_enable ggi) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
@@ -280,7 +279,7 @@ src_compile () {
 		$(use_enable ncurses) \
 		$(use_enable nsplugin mozilla) XPIDL="${XPIDL}" MOZILLA_CONFIG="${MOZILLA_CONFIG}" \
 		$(use_enable ogg) \
-		$(use_enable opengl glx) $(use_enable opengl) \
+		$(use_enable opengl glx) $(use_enable opengl) $(use_enable opengl galaktos) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
 		$(use_enable png) \
