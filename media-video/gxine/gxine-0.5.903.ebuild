@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.903.ebuild,v 1.1 2008/08/03 02:29:29 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.903.ebuild,v 1.2 2008/08/06 14:33:47 chutzpah Exp $
 
-inherit eutils nsplugins fdo-mime libtool
+inherit eutils nsplugins fdo-mime libtool autotools multilib
 
 DESCRIPTION="GTK+ Front-End for libxine"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -18,7 +18,7 @@ RDEPEND="media-libs/libpng
 	>=x11-libs/gtk+-2.8
 	>=dev-libs/glib-2.10
 	>=x11-libs/pango-1.12
-	>=dev-lang/spidermonkey-1.5_rc6-r1
+	>=dev-lang/spidermonkey-1.7.0
 	lirc? ( app-misc/lirc )
 	nsplugin? ( dev-libs/nspr )
 	x11-libs/libX11
@@ -37,10 +37,16 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e '/ac_have_xinerama/ s:text:test:' \
-		"${S}/configure"{,.ac}
 
-	elibtoolize
+	sed -i -e '/ac_have_xinerama/ s:text:test:' "${S}/configure.ac"
+
+	# need to disable calling of xine-list when running without
+	# userpriv, otherwise we get sandbox violations (bug #233847)
+	if [[ ${EUID} == "0" ]]; then
+		sed -i 's:^XINE_LIST=.*$:XINE_LIST=:' "${S}/configure.ac"
+	fi
+
+	eautoreconf
 }
 
 src_compile() {
@@ -51,7 +57,8 @@ src_compile() {
 		$(use_with xcb) \
 		$(use_with hal) \
 		$(use_with xinerama) \
-		--disable-gtk-compat \
+		--enable-watchdog \
+		--with-spidermonkey=/usr/include/js \
 		--disable-dependency-tracking || die "econf failed"
 	emake || die "emake failed"
 }
@@ -60,9 +67,11 @@ src_install() {
 	emake DESTDIR="${D}" \
 		docdir=/usr/share/doc/${PF} \
 		docsdir=/usr/share/doc/${PF} \
-		install || die
+		install || die "emake install failed"
 
-	dodoc AUTHORS ChangeLog NEWS README{,.{cs,de}_l10n TODO BUGS
+	# sometimes an empty libdir gets created
+	rmdir "${D}/usr/$(get_libdir)/gxine"
+	dodoc AUTHORS ChangeLog NEWS README{,.{cs,de},_l10n} TODO BUGS
 
 	use nsplugin && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
