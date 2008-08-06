@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.21 2008/06/19 11:52:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.22 2008/08/06 18:52:27 ulm Exp $
+
+  06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   19 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/labplot-1.6.0.1-audiofile.patch,
