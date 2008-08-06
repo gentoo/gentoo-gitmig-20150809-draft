@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quark
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.13 2008/01/13 14:26:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.14 2008/08/06 22:50:26 aballier Exp $
+
+  06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  files/quark-3.21-nogtkdisabledeprecated.patch, quark-3.21.ebuild:
+  dont patch both makefile.in and .am and run full eautoreconf, bug #226777
 
   13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   +files/quark-3.21-nogtkdisabledeprecated.patch, quark-3.21.ebuild:

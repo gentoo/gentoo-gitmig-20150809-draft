@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.11 2008/01/13 14:26:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.12 2008/08/06 22:50:26 aballier Exp $
 
-IUSE=""
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Quark is the Anti-GUI Music Player with a cool Docklet!"
 SRC_URI="http://quark.nerdnest.org/${P}.tar.gz"
@@ -15,6 +14,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 
 LICENSE="GPL-2"
 
+IUSE=""
 RDEPEND=">=media-libs/xine-lib-1_beta10
 	>=x11-libs/gtk+-2.2.1
 	>=gnome-base/gconf-2.2.0
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-nogtkdisabledeprecated.patch"
+	eautoreconf
 }
 
 pkg_postinst () {
