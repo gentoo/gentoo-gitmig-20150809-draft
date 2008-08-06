@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.102 2008/08/05 19:46:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.103 2008/08/06 19:37:43 maekke Exp $
+
+  06 Aug 2008; Markus Meier <maekke@gentoo.org> hplip-2.8.6b.ebuild:
+  amd64/x86 stable, bug #233968
 
   05 Aug 2008; Markus Rothe <corsair@gentoo.org> hplip-2.8.6b.ebuild:
   Stable on ppc64; bug #233968
