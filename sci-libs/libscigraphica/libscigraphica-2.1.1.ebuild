@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.2 2006/12/18 07:35:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.3 2008/08/06 13:29:31 markusle Exp $
 
 inherit autotools eutils
 
@@ -8,15 +8,19 @@ DESCRIPTION="Libraries for data analysis and technical graphics"
 SRC_URI="mirror://sourceforge/scigraphica/${P}.tar.gz"
 HOMEPAGE="http://scigraphica.sourceforge.net/"
 
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
-DEPEND=">=x11-libs/gtk+extra-2.1.0
+RDEPEND=">=x11-libs/gtk+extra-2.1.0
 	>=dev-python/numarray-1.3.1
 	>=dev-libs/libxml2-2.4.10
-	>=media-libs/libart_lgpl-2.3
-	>=dev-util/intltool-0.27.2"
+	>=media-libs/libart_lgpl-2.3"
+
+DEPEND="${RDEPEND}
+		dev-util/intltool"
+
 
 src_unpack() {
 
@@ -28,6 +32,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libart.patch
 	# fixes intltoolization
 	epatch "${FILESDIR}"/${P}-intl.patch
+	# fixes bad AMFLAGS (see bug #234015)
+	epatch "${FILESDIR}"/${P}-aclocal.patch
 
 	cd "${S}"
 	sed -i \
@@ -40,7 +46,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog FAQ.compile \
 		INSTALL NEWS README TODO
 }
