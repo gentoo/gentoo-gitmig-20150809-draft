@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.15 2008/08/06 04:41:09 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.16 2008/08/06 15:28:53 mr_bones_ Exp $
 
 PYTHON_MODNAME='Pmw'
 
@@ -52,4 +52,3 @@ src_install() {
 	local docdir=`find . -type d -name doc`
 	dohtml -a html,gif,py "${docdir}"/*
 }
-

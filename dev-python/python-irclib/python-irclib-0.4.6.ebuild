@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.3 2008/08/06 06:13:06 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.4 2008/08/06 15:29:14 mr_bones_ Exp $
 
 inherit distutils
 
@@ -24,4 +24,3 @@ src_install() {
 		doins dccreceive dccsend irccat irccat2 servermap testbot.py
 	fi
 }
-
