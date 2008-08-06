@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.111 2008/07/04 13:33:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.112 2008/08/06 18:26:04 bluebird Exp $
+
+  06 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> mailman-2.1.11.ebuild:
+  Stable on sparc, bug #233920
 
 *mailman-2.1.11 (04 Jul 2008)
 
