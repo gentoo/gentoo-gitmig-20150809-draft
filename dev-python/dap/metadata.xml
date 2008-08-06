@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>sci-geosciences</herd>
 <herd>python</herd>
+<use>
+	<flag name='server'>Enable OpenDAP server support</flag>
+</use>
 <longdescription lang="en">
   pydap is a Python implementation of the Data Access Protocol
   a.k.a. DODS or OPeNDAP. Using pydap as a client you can access

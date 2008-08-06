@@ -2,8 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
+  <use>
+  	<flag name='3ds'>Enable support for importing 3D Studio models</flag>
+  </use>
   <longdescription>Python library for creating 3D images</longdescription>
   <longdescription lang="ja">
-  3D画像を作成するためのPython言語ライブラリです。
+  3Dç»åãä½æããããã®Pythonè¨èªã©ã¤ãã©ãªã§ãã
   </longdescription>
 </pkgmetadata>
