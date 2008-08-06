@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<use>
+	<flag name='mxdatetime'>choose MX DateTime support instead of built-in
+	datetime</flag>
+</use>
 </pkgmetadata>

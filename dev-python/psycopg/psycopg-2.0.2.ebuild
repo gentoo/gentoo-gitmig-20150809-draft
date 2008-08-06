@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.11 2008/05/19 19:47:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.12 2008/08/06 19:57:29 neurogeek Exp $
 
 inherit eutils distutils
 
@@ -23,7 +23,7 @@ DOCS="AUTHORS ChangeLog CREDITS README"
 src_unpack() {
 	unpack ${A}
 	if ! use debug; then
-		epatch ${FILESDIR}/${P}-nodebug.patch
+		epatch "${FILESDIR}/${P}"-nodebug.patch
 	fi
 }
 
