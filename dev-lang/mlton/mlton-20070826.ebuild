@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826.ebuild,v 1.1 2008/04/14 21:06:20 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826.ebuild,v 1.2 2008/08/06 14:50:56 aballier Exp $
 
 inherit eutils
 
@@ -29,7 +29,10 @@ src_compile() {
 
 		# Does not support parallel make
 		emake -j1 all-no-docs || die
-		if use doc; then emake docs || die; fi
+		if use doc; then
+			export VARTEXFONTS="${T}/fonts"
+			emake docs || die "failed to create documentation"
+		fi
 	fi
 }
 
