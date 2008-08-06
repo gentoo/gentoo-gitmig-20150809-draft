@@ -26,7 +26,6 @@ start() {
 	ebegin "Starting DBMail SIEVE daemon"
 	    start-stop-daemon --start --quiet \
 		--exec /usr/sbin/dbmail-timsieved \
-		--name dbmail-timsieved \
 		-- -p ${PIDFILE} -f /etc/dbmail/dbmail.conf 2>&1
 	eend $?
 }	

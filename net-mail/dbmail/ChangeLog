@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.28 2008/05/21 18:57:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.29 2008/08/06 20:05:32 lordvan Exp $
+
+*dbmail-2.3.3 (06 Aug 2008)
+*dbmail-2.2.11_rc1 (06 Aug 2008)
+
+  06 Aug 2008; Thomas Raschbacher <lordvan@gentoo.org>
+  files/dbmail-timsieved.initd, +dbmail-2.2.11_rc1.ebuild,
+  dbmail-2.3.2.ebuild, +dbmail-2.3.3.ebuild:
+  Added 2.2.11 rc1 (Bug #233708 thanks to svrmarty <svrmarty@gmx.net>)
+  Added 2.3.3 devel release and fixed download url in 2.3.x
+  Fixed init script (Bug #225427 thanks to Chris Mayo
+  <mayo@clara.co.uk>)
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> dbmail-2.2.7.ebuild,
   dbmail-2.2.8.ebuild, dbmail-2.2.9.ebuild, dbmail-2.2.10.ebuild,
