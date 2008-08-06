@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.40 2008/08/05 19:10:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.41 2008/08/06 18:04:19 calchan Exp $
+
+  06 Aug 2008; Denis Dupeyron <calchan@gentoo.org> metadata.xml,
+  sdcc-2.8.0.ebuild:
+  Changed the boehmgc USE flag into boehm-gc, see bug #224653.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

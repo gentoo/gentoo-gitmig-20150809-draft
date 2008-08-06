@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.1 2008/04/20 17:58:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.2 2008/08/06 18:04:19 calchan Exp $
 
 inherit eutils autotools
 
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="boehmgc doc"
+IUSE="boehm-gc doc"
 
 DEPEND=">=dev-embedded/gputils-0.13.2
-	boehmgc? ( dev-libs/boehm-gc )"
+	boehm-gc? ( dev-libs/boehm-gc )"
 RDEPEND="!dev-embedded/sdcc-svn"
 
 S=${WORKDIR}/${PN}
@@ -42,7 +42,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable boehmgc libgc) \
+		$(use_enable boehm-gc libgc) \
 		--disable-doc \
 		|| die "configure failed"
 	emake || die "emake failed"

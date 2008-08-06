@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.5 2007/02/27 23:29:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.6 2008/08/06 18:04:19 calchan Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix conflicting variable names between Gentoo and sdcc
 	find ./ -type f -exec sed -i s:PORTDIR:PORTINGDIR:g  {} \; || die "sed failed"
@@ -41,11 +41,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Install failed"
+	make DESTDIR="${D}" install || die "Install failed"
 	dodoc ChangeLog
 	if use doc ; then
-		cp -pPR ${WORKDIR}/doc/* ${D}/usr/share/doc/${PF}/
+		cp -pPR "${WORKDIR}"/doc/* "${D}"/usr/share/doc/${PF}/
 	fi
-	find ${D}/usr/share/doc/${PF}/ -name *.txt -exec gzip -f -9 {} \;
-	find ${D}/usr/share/doc/${PF}/ -name */*.txt -exec gzip -f -9 {} \;
+	find "${D}"/usr/share/doc/${PF}/ -name *.txt -exec gzip -f -9 {} \;
+	find "${D}"/usr/share/doc/${PF}/ -name */*.txt -exec gzip -f -9 {} \;
 }
