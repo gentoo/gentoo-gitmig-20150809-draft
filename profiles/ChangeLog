@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1755 2008/08/06 16:45:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1756 2008/08/06 22:40:24 markusle Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  06 Aug 2008; Markus Dittrich <markusle@gentoo.org> package.mask:
+  Removed sci-mathematics/octave-3 from package.mask after extensive
+  testing.
 
   06 Aug 2008; Hans de Graaff <graaff@gentoo.org> use.local.desc:
   Add dev-ruby to the converted categories
