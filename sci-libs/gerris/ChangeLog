@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.6 2008/05/12 13:20:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.7 2008/08/07 07:01:49 ulm Exp $
+
+  07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   12 May 2008; Markus Dittrich <markusle@gentoo.org> gerris-0.8.0.ebuild,
   gerris-0.9.2.ebuild:

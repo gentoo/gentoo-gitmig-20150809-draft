@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<use>
+  <flag name='f90'>Override Fortran for externel compilers</flag>
+  <flag name='hlapi'>Enable support for high-level library</flag>
+  <flag name='tools'>Install support and test tools</flag>
+</use>
 </pkgmetadata>
