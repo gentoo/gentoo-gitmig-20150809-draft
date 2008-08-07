@@ -1,6 +1,11 @@
 # ChangeLog for app-text/flpsed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.15 2008/08/07 16:10:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.16 2008/08/07 16:14:42 aballier Exp $
+
+*flpsed-0.5.1 (07 Aug 2008)
+
+  07 Aug 2008; Alexis Ballier <aballier@gentoo.org> +flpsed-0.5.1.ebuild:
+  version bump
 
   07 Aug 2008; Alexis Ballier <aballier@gentoo.org> -files/Makefile-0.3,
   -flpsed-0.3.ebuild, -flpsed-0.3.2.ebuild, -flpsed-0.3.4.ebuild,
