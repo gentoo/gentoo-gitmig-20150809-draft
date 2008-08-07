@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.6 2008/05/28 18:15:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.7 2008/08/07 21:54:46 maekke Exp $
+
+  07 Aug 2008; Markus Meier <maekke@gentoo.org> libx86-0.99.ebuild:
+  amd64/x86 stable, bug #231739
 
   28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Alon Bar-Lev (alonbl) from metadata.xml (as per #147110). Assigning
