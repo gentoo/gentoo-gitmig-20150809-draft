@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-jeta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-jeta/ChangeLog,v 1.2 2008/05/31 05:12:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-jeta/ChangeLog,v 1.3 2008/08/07 18:31:02 wrobel Exp $
+
+  07 Aug 2008; wrobel@gentoo.org metadata.xml:
+  Updated maintainer.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> horde-jeta-1.0.ebuild:
   Depend on either horde or horde-groupware or horde-webmail as pointed out by

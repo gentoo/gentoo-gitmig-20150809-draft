@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-chora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.17 2008/05/31 05:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.18 2008/08/07 18:26:17 wrobel Exp $
+
+  07 Aug 2008; wrobel@gentoo.org metadata.xml:
+  Updated maintainer.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> horde-chora-2.0.2.ebuild:
   Depend on either horde or horde-groupware or horde-webmail as pointed out by

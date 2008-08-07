@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
- <email>vapier@gentoo.org</email>
+ <email>wrobel@gentoo.org</email>
 </maintainer>
 <longdescription>
 Chora is our tool for viewing code repositories that are managed using 
