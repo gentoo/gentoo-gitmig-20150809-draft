@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/flobopuyo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.15 2008/06/25 18:57:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.16 2008/08/07 00:03:12 mr_bones_ Exp $
+
+  07 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  files/flobopuyo-0.20-libs.patch, flobopuyo-0.20-r1.ebuild:
+  rework Makefile patch for bug 234011
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> flobopuyo-0.20-r1.ebuild:
   Stable on ppc wrt bug 228967

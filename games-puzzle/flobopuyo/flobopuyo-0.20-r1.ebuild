@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.6 2008/06/25 18:57:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.7 2008/08/07 00:03:12 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -39,19 +39,16 @@ src_unpack() {
 
 	find . -type f -name ".*" -exec rm -f \{\} \;
 	sed -i \
-		-e "/strip/d" \
 		-e "s:^DATADIR=.*:DATADIR=\"${GAMES_DATADIR}/${PN}\":" \
 		-e "/^INSTALL_BINDIR/s:/\$(PREFIX)/games:${GAMES_BINDIR}:" \
-		-e "s:^CFLAGS=:CFLAGS+=:" \
-		-e "/^LDFLAGS=/d" \
 		Makefile \
 		|| die "sed failed"
 }
 
 src_compile() {
-	use opengl && want_opengl=true || want_opengl=false
-	emake CC="$(tc-getCXX)" CXX="$(tc-getCXX)" \
-		ENABLE_OPENGL="${want_opengl}" || die "emake failed"
+	emake CXX="$(tc-getCXX)" \
+		ENABLE_OPENGL="$(use opengl && echo true || echo false)" \
+		|| die "emake failed"
 }
 
 src_install() {
