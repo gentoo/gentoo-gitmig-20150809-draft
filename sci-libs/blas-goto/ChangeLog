@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.19 2008/04/21 14:59:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.20 2008/08/07 06:16:47 ulm Exp $
+
+  07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   blas-goto-1.22-r1.ebuild, blas-goto-1.24.ebuild:
