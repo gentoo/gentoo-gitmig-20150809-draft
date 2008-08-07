@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>commonbox</herd>
+  <herd>commonbox</herd>
+  <use>
+    <flag name="imlib2">Add support for imlib2 (pixmap themes)</flag>
+  </use>
 </pkgmetadata>
