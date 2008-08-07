@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.10 2008/05/26 12:21:45 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.11 2008/08/07 22:02:39 jer Exp $
+
+  07 Aug 2008; Jeroen Roovers <jer@gentoo.org> x11-1.4.2.ebuild:
+  Marked ~hppa too.
 
   26 May 2008; Luis F. Araujo <araujo@gentoo.org> x11-1.4.2.ebuild:
   Patch only if xinerama enabled
