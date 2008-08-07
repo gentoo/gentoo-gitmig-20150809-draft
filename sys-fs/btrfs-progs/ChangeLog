@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.10 2008/08/06 04:05:53 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.11 2008/08/07 17:29:45 lavajoe Exp $
+
+*btrfs-progs-0.16-r1 (07 Aug 2008)
+
+  07 Aug 2008; Joe Peterson <lavajoe@gentoo.org>
+  +btrfs-progs-0.16-r1.ebuild, btrfs-progs-9999.ebuild:
+  Build and install btrfs-convert as well; install other missing programs;
+  honor CFLAGS/LDFLAGS
 
 *btrfs-progs-0.16 (05 Aug 2008)
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.5 2008/08/07 17:29:45 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.16-r1.ebuild,v 1.1 2008/08/07 17:29:45 lavajoe Exp $
 
-inherit eutils mercurial
+inherit eutils
 
 DESCRIPTION="Btrfs filesystem utilities"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
-SRC_URI=""
+SRC_URI="http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,11 +16,12 @@ IUSE=""
 DEPEND="sys-fs/e2fsprogs"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/progs-unstable"
-
 src_unpack() {
-	mercurial_fetch http://www.kernel.org/hg/btrfs/progs-unstable
+	unpack ${A}
 	cd "${S}"
+
+	# Apply hot fixes
+	#epatch "${FILESDIR}/${P}-hotfix.patch"
 }
 
 src_compile() {
