@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3715 2008/08/07 00:18:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3716 2008/08/07 02:13:50 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted.
@@ -1380,8 +1380,6 @@ media-video/dv2sub:kino - install kino plugin
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/dvd-slideshow:themes - Install theme pack
-media-video/dxr3player:3dnowext - Enable 3dnowext cpu instructions
-media-video/dxr3player:mmxext - Enables mmxext instructions
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
 media-video/ffmpeg:network - Enables network streaming support
