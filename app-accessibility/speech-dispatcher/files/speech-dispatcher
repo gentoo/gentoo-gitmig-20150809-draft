@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/files/speech-dispatcher,v 1.3 2004/07/14 21:07:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/files/speech-dispatcher,v 1.4 2008/08/07 03:52:43 williamh Exp $
 
 depend() {
-	use alsasound esound festival speechd
+	use alsasound esound pulseaudio festival speechd
 }
 
 start() {
