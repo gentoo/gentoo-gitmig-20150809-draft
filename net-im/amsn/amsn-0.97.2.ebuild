@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97.2.ebuild,v 1.1 2008/08/05 14:29:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97.2.ebuild,v 1.2 2008/08/07 01:54:07 jer Exp $
 
 inherit autotools eutils fdo-mime gnome2-utils
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc -sparc ~x86"
 IUSE="debug static"
 
 DEPEND=">=dev-lang/tcl-8.4
