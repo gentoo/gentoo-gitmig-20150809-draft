@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.41 2008/07/31 18:41:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.42 2008/08/07 21:09:34 klausman Exp $
+
+  07 Aug 2008; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Stable on alpha, bug #232054
 
   31 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-ugly-0.10.8.ebuild:
