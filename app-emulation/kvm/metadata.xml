@@ -16,10 +16,16 @@
 		or AMD-V)
 	</longdescription>
 	<use>
-		<flag name='bios'>Compile BIOS from source (not necessary to run
-			<pkg>app-emulation/kvm</pkg></flag>
+		<flag name='alsa'>Enable alsa output for sound emulation</flag>
+		<flag name='esd'>Enable esound output for sound emulation</flag>
+		<flag name='gnutls'>Enable TLS support for the VNC console server</flag>
 		<flag name='havekernel'>Don't require a kernel build tree (useful if
 			using a binary distrbuted kernel aka binary packages)</flag>
+		<flag name='ncurses'>Enable the ncurses-based console</flag>
+		<flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
+		<flag name='sdl'>Enable the SDL-based console</flag>
+		<flag name='test'>Build tests</flag>
+		<flag name='vde'>Enable VDE-based networking</flag>
 	</use>
 </pkgmetadata>
 
