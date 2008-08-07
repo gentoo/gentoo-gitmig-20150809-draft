@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.33 2008/07/13 18:13:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.34 2008/08/07 08:52:52 ulm Exp $
+
+  07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *mkl-10.0.3.020-r3 (13 Jul 2008)
 *mkl-10.0.2.018-r2 (13 Jul 2008)
