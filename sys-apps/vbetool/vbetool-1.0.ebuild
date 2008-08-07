@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.2 2008/08/07 20:20:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.3 2008/08/07 21:55:48 maekke Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.srcf.ucam.org/~mjg59/vbetool/"
 SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/${PN:0:1}/${PN}/${P//-/_}-0ubuntu1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND="sys-libs/zlib
 		sys-apps/pciutils
