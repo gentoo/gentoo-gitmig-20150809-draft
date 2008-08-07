@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r3.ebuild,v 1.7 2008/08/07 22:00:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r4.ebuild,v 1.1 2008/08/07 22:00:07 loki_val Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils autotools toolchain-funcs flag-o-matic
 
 DESCRIPTION="BitTorrent Client using libtorrent"
 HOMEPAGE="http://libtorrent.rakshasa.no/"
@@ -10,7 +10,7 @@ SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug ipv6 xmlrpc"
 
 DEPEND=">=net-libs/libtorrent-0.12.${PV##*.}
@@ -26,7 +26,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fix_start_stop_filter.patch
 	epatch "${FILESDIR}"/${P}-fix_conn_type_seed.patch
 	epatch "${FILESDIR}"/${P}-fix_load_cache.patch
+	epatch "${FILESDIR}"/${P}-fix_utf8_filenames.patch
+	epatch "${FILESDIR}"/${P}-fix-configure-execinfo.patch
 	epatch "${FILESDIR}"/${P}-gcc34.patch
+	eautoreconf
 }
 
 src_compile() {
