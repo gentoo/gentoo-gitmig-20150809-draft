@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-xvideo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.106 2008/07/31 18:50:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.107 2008/08/07 22:10:43 klausman Exp $
+
+  07 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-xvideo-0.10.20.ebuild:
+  Stable on alpha, bug #232054
 
   31 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-xvideo-0.10.20.ebuild:
