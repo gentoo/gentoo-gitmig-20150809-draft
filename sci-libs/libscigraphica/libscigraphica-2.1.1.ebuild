@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.3 2008/08/06 13:29:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.4 2008/08/07 20:41:48 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -20,7 +20,6 @@ RDEPEND=">=x11-libs/gtk+extra-2.1.0
 
 DEPEND="${RDEPEND}
 		dev-util/intltool"
-
 
 src_unpack() {
 
