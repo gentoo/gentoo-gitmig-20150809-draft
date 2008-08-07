@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>video</herd>
+  <herd>video</herd>
+  <use>
+    <flag name="mp4">Enables support for encoding to mp4 container format</flag>
+  </use>
 </pkgmetadata>
