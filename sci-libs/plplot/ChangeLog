@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.14 2008/04/12 17:58:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.15 2008/08/07 08:58:08 ulm Exp $
+
+  07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   12 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.5.2.ebuild:
   Switch tetex to local jadetex, bug #196745
