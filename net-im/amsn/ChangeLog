@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.79 2008/08/07 01:54:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.80 2008/08/07 14:01:56 tester Exp $
+
+  07 Aug 2008; Olivier Crête <tester@gentoo.org> amsn-0.97.2.ebuild:
+  Stable on amd64, bug #234105
 
   07 Aug 2008; Jeroen Roovers <jer@gentoo.org> amsn-0.97.2.ebuild:
   Stable for HPPA (bug #234105).
