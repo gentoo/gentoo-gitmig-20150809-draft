@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/gst-plugins-fluendo-mpegdemux-0.10.15.ebuild,v 1.2 2008/07/26 20:32:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/gst-plugins-fluendo-mpegdemux-0.10.15.ebuild,v 1.3 2008/08/07 21:29:50 klausman Exp $
 
 MY_PN=gst-fluendo-mpegdemux
 MY_P=${MY_PN}-${PV}
 SRC_URI="http://core.fluendo.com/gstreamer/src/${MY_PN}/${MY_P}.tar.bz2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="alpha amd64 ~x86"
 IUSE=""
 
 DESCRIPTION="Fluendo's Mpeg demuxer is a GStreamer element to demux mpeg streams"
