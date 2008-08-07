@@ -9,4 +9,7 @@
  output functionality. It is primarily of interest to machine-learning
  researchers and artificial intelligence application developers.
 </longdescription>
+<use>
+  <flag name='tools'>Install support tools</flag>
+</use>
 </pkgmetadata>
