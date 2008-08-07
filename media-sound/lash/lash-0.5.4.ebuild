@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.5 2008/06/03 02:19:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.6 2008/08/07 17:07:39 aballier Exp $
 
 inherit eutils libtool
 
@@ -34,6 +34,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-glibc2.8.patch"
 	elibtoolize
 }
 

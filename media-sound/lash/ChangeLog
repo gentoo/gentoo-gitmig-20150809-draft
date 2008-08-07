@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.19 2008/06/03 02:19:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.20 2008/08/07 17:07:39 aballier Exp $
+
+  07 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/lash-0.5.4-glibc2.8.patch, lash-0.5.4.ebuild:
+  fix build with glibc 2.8, by Olivier Huber <oli.huber@gmail.com>, bug
+  #229603
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> lash-0.5.4.ebuild:
   fix libedit typo
