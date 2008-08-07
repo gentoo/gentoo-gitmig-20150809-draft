@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.103 2008/08/06 19:37:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.104 2008/08/07 08:56:13 calchan Exp $
+
+  07 Aug 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.8.6b.ebuild:
+  Fixed hp-systray not starting up automatically with hp-toolbox, thanks to
+  Gordon Malm (see bug #233968).
 
   06 Aug 2008; Markus Meier <maekke@gentoo.org> hplip-2.8.6b.ebuild:
   amd64/x86 stable, bug #233968
