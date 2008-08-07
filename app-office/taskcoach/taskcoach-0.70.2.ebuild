@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.70.0.ebuild,v 1.2 2008/06/04 08:24:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.70.2.ebuild,v 1.1 2008/08/07 08:11:45 caster Exp $
 
 inherit distutils eutils
 
@@ -21,14 +21,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES.txt"
-
-src_unpack() {
-	distutils_src_unpack
-
-	cd "${S}"
-	# bug 222391
-	epatch "${FILESDIR}/${PN}-setup.patch"
-}
 
 src_install() {
 	distutils_src_install
