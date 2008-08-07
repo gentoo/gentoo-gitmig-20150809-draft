@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.1 2007/12/05 00:05:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.2 2008/08/07 20:20:27 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -36,5 +36,4 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
-	dodoc LRMI
 }
