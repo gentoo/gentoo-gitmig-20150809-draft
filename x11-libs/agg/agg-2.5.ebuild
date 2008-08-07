@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.9 2008/06/14 16:00:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.10 2008/08/07 07:11:01 wormo Exp $
 
 inherit eutils autotools
 
@@ -17,11 +17,12 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
 	truetype? ( >=media-libs/freetype-2 )"
 	# sdl.m4 missing in the tarball
 DEPEND="media-libs/libsdl
+	dev-util/pkgconfig
 	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	eautoreconf
 }
 
