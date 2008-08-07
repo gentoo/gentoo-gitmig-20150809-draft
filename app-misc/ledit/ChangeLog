@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.25 2008/07/02 19:13:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.26 2008/08/07 22:08:36 maekke Exp $
+
+  07 Aug 2008; Markus Meier <maekke@gentoo.org> ledit-2.01.ebuild:
+  amd64/x86 stable, bug #234163
 
 *ledit-2.01 (02 Jul 2008)
 
