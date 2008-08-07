@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
-<maintainer>
-  <email>media-video@gentoo.org</email>
-</maintainer>
+  <herd>video</herd>
+  <maintainer>
+    <email>media-video@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
+    <flag name="cdda">Enables libcdda cd audio playback support.</flag>
+    <flag name="cdio">Enables CD input and control library support.</flag>
+    <flag name="corba">Enables corba interface support.</flag>
+    <flag name="daap">Enables DAAP shares services discovery support.</flag>
+    <flag name="dc1394">Enables IIDC cameras support.</flag>
+    <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
+    <flag name="httpd">Enables a web based interface for vlc.</flag>
+    <flag name="id3tag">Enables id3tag metadata reader plugin.</flag>
+    <flag name="libgcrypt">Enables cryptography support via libgcrypt.</flag>
+    <flag name="live">Enables LIVE.com support.</flag>
+    <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
+    <flag name="pvr">Enables PVR cards access module.</flag>
+    <flag name="remoteosd">Enables RemoteOSD plugin (VNC client as video filter).</flag>
+    <flag name="rtsp">Enables real audio and RTSP modules.</flag>
+    <flag name="sdl-image">Enables sdl image video decoder (depends on sdl)</flag>
+    <flag name="shout">Enables libshout output.</flag>
+    <flag name="skins">Enables support for the skins2 interface.</flag>
+    <flag name="stream">Enables vlc to stream video.</flag>
+    <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
+    <flag name="upnp">Enables support for Intel UPnP stack.</flag>
+    <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
+    <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
+  </use>
 </pkgmetadata>
