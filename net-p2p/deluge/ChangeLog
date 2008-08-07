@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.85 2008/08/04 16:09:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.86 2008/08/07 10:57:59 armin76 Exp $
+
+  07 Aug 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc5.ebuild,
+  deluge-9999.ebuild:
+  Add missing dep, bug #234026
 
 *deluge-1.0.0_rc5 (04 Aug 2008)
 
