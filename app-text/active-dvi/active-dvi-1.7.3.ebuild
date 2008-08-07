@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.2 2008/07/09 15:26:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.3 2008/08/07 21:57:14 aballier Exp $
 
 EAPI=1
 
@@ -25,7 +25,8 @@ RDEPEND=">=dev-lang/ocaml-3.10.0
 	virtual/ghostscript
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	x11-proto/xineramaproto"
+	x11-proto/xineramaproto
+	dev-tex/hevea"
 
 DOCS="README TODO"
 
