@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1757 2008/08/07 02:07:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1758 2008/08/07 02:11:19 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  07 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Reinstate net-im/psi-0.12 mask until officially released (bug #233396
+  comment #3).
 
   07 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask net-im/psi-0.12 (bug #233396).
