@@ -35,57 +35,30 @@ then
 	exit 1
 fi
 
+gxxbin=`which ${prefix}-g++ 2>/dev/null`
+if [ ! -e "${gxxbin}" ]
+then
+	echo "Can't find ${prefix}-g++!"
+	exit 2
+fi
+
 version="`${prefix}-gcc -dumpversion`"
 
 tmpdir=`mktemp -d`
 tmpfile=`mktemp`
 
-echo "Creating icecc environment for ${prefix}..."
-
-mkdir -p ${tmpdir}/usr/bin
-	
-echo "Adding `which ${prefix}-as`... as /usr/bin/as"
-cp -p `which ${prefix}-as` ${tmpdir}/usr/bin/as
-
 if [ "`gcc -dumpmachine`" = "${prefix}" ]
 then
-	echo "Adding /usr/${prefix}/gcc-bin/${version}/g++ as /usr/bin/g++..."
-	cp -p /usr/${prefix}/gcc-bin/${version}/g++ ${tmpdir}/usr/bin
-	echo "Adding /usr/${prefix}/gcc-bin/${version}/gcc as /usr/bin/gcc..."
-	cp -p /usr/${prefix}/gcc-bin/${version}/gcc ${tmpdir}/usr/bin
+	/usr/lib/icecc/icecc-create-env /usr/${prefix}/gcc-bin/${version}/gcc /usr/${prefix}/gcc-bin/${version}/g++ | tee ${tmpfile}
 else
-	echo "Adding /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ as /usr/bin/g++..."
-	cp -p /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ ${tmpdir}/usr/bin/g++
-	echo "Adding /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc as /usr/bin/gcc..."
-	cp -p /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc ${tempdir}/usr/bin/gcc
+	/usr/lib/icecc/icecc-create-env /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ | tee ${tmpfile}
 fi
 
-echo "Adding /usr/libexec/gcc/${prefix}/${version}/cc1 as /usr/bin/cc1..."
-cp -p /usr/libexec/gcc/${prefix}/${version}/cc1 ${tmpdir}/usr/bin/
-	
-echo "Adding /usr/libexec/gcc/${prefix}/${version}/cc1plus as /usr/bin/cc1plus.."
-cp -p /usr/libexec/gcc/${prefix}/${version}/cc1plus ${tmpdir}/usr/bin/
-
-# binaries are there, now copy libs
-for binary in `ls ${tmpdir}/usr/bin/`
-do
-	for library in `ldd ${tmpdir}/usr/bin/${binary} | tr '=>' ' ' | awk '{print $1" "$2}'`
-	do
-		if [ ! -e "${tmpdir}/${library}" ] && [ -e "${library}" ]
-		then
-			echo "Adding ${library}..."
-			cp --parents "${library}" ${tmpdir}/
-		fi
-	done
-done
-
-# rebuild ld.so.cache
-echo "Creating /etc/ld.so.cache..."
-cp --parents /etc/ld.so.conf ${tmpdir}/
-ldconfig -r ${tmpdir}
-rm ${tmpdir}/etc/ld.so.conf
+# figure out the name of the archive
+icecc_envname=`grep "creating" ${tmpfile} | awk '{print $2}'`
 
 echo "Testing icecc environment..."
+tar -x -z -f ${icecc_envname} -C ${tmpdir}
 touch ${tmpdir}/empty.c
 chroot ${tmpdir}/ /usr/bin/gcc -c /empty.c
 tested=${?}
@@ -96,17 +69,7 @@ then
 	echo ""
 	echo  "Creating icecc environment failed. Please see error message(s) above! The temporary directory is: ${tmpdir}/"
 else
-	# pack
-	echo "Compressing files..."
-	tar -c -z -C ${tmpdir} -f ${tmpfile} `ls ${tmpdir}/`
-
-	newname="`md5sum ${tmpfile} | awk '{print $1}'`.tar.gz"
-	mv ${tmpfile} ${newname}
-
-	# cleanup
-	rm -rf ${tmpdir}
-
 	echo ""
-	echo "Icecc environment has been created. It has been saved as ${newname}!"
+	echo "Icecc environment has been created. It has been saved as ${icecc_envname}!"
 fi
 
