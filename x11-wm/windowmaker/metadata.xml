@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>gnustep</herd>
   <use>
-    <flag>Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."</flag>
+    <flag name='modelock'>Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."</flag>
   </use>
 </pkgmetadata>
