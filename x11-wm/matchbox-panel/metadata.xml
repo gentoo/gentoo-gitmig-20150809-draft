@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gpe</herd>
-<maintainer>
-<email>yvasilev@gentoo.org</email>
-<name>Yuri Vasilevski</name>
-</maintainer>
+  <herd>gpe</herd>
+  <maintainer>
+    <email>yvasilev@gentoo.org</email>
+    <name>Yuri Vasilevski</name>
+  </maintainer>
+  <use>
+    <flag name="dnotify">Use the linux kernel directory notification feature.</flag>
+    <flag name="lowres">Optimize for low resolution screens.</flag>
+  </use>
 </pkgmetadata>

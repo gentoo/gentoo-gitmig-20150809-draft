@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
+  <herd>common-lisp</herd>
+  <longdescription>
 From the Stump Window Manager homepage:
 
 Stumpwm is a tiling, keyboard driven X11 Window Manager written
@@ -24,5 +24,8 @@ hooks to attach your personal customizations, and variables to tweak.
 While it's running.  That's right. With a 100% Common Lisp window
 manager there's no stopping the hacks.  Just re-eval and GO!
 </longdescription>
+  <use>
+    <flag name="clisp">Use CLISP for the runtime</flag>
+    <flag name="sbcl">Use SBCL for the runtime</flag>
+  </use>
 </pkgmetadata>
-
