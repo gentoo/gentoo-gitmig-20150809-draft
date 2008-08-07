@@ -1,8 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.0.6.ebuild,v 1.1 2008/06/24 11:57:46 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.0.6.ebuild,v 1.2 2008/08/07 18:44:34 wrobel Exp $
 
 HORDE_PN="${PN}"
+
+HORDE_APPLICATIONS="kronolith mnemo nag turba"
+
 inherit horde
 
 DESCRIPTION="Horde GroupWare"
