@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5.ebuild,v 1.5 2008/08/05 13:02:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5.ebuild,v 1.6 2008/08/07 17:19:02 aballier Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -64,6 +64,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.3.4-automagic.patch"
 	epatch "${FILESDIR}/${P}-cflags_with_non_standard_macros.patch"
 	epatch "${FILESDIR}/${P}-libtool22.patch"
+	epatch "${FILESDIR}/${P}-novorbis.patch"
 	eautoreconf
 }
 
