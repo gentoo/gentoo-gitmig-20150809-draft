@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/vdr-text2skin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.4 2008/08/01 20:02:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.5 2008/08/07 15:54:26 zzam Exp $
+
+*vdr-text2skin-1.0.20070906 (07 Aug 2008)
+
+  07 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/20070906/03_gentoo.diff, +files/20070906/04_no_direct_blit.diff,
+  +files/20070906/07_pkgconfig_magick.diff,
+  +files/20070906/06_vdr-1.5.7.diff, +files/20070906/08_cache.diff,
+  +vdr-text2skin-1.0.20070906.ebuild:
+  Added new version. Truetype support here is broken, so disabled for now.
+  Thanks to darav@gmx.de for the ebuild.
 
   01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
