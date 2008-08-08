@@ -1,6 +1,11 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.69 2008/08/08 17:33:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.70 2008/08/08 18:02:56 zzam Exp $
+
+  08 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  realplayer-11.0.0.4028-r1.ebuild:
+  Remove the exec-stack QA warning, as we cannot do anything for binary-only
+  files.
 
 *realplayer-11.0.0.4028-r1 (08 Aug 2008)
 
