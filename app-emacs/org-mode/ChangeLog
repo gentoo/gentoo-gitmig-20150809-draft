@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.35 2008/08/07 22:04:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.36 2008/08/08 17:31:14 nixnut Exp $
+
+  08 Aug 2008; nixnut <nixnut@gentoo.org> org-mode-6.05b.ebuild:
+  Stable on ppc wrt bug 233833
 
   07 Aug 2008; Markus Meier <maekke@gentoo.org> org-mode-6.05b.ebuild:
   amd64/x86 stable, bug #233833
