@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.93 2008/08/07 14:27:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.94 2008/08/08 14:01:51 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org> live-2008.07.25.ebuild:
+  keyword ~x86-fbsd
 
 *live-2008.07.25 (07 Aug 2008)
 
