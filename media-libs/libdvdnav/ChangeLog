@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.41 2008/06/16 11:44:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.42 2008/08/08 15:03:28 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org> libdvdnav-0.1.10.ebuild:
+  keyword ~x86-fbsd
 
   16 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/libdvdnav-0.1.10-build.patch,
