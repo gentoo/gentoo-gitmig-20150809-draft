@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/luafilesystem
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.1 2008/08/08 22:40:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.2 2008/08/08 22:50:43 matsuu Exp $
+
+  08 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> luafilesystem-1.4.1.ebuild:
+  Fixed LICENSE. Added docs.
 
 *luafilesystem-1.4.1 (08 Aug 2008)
 
