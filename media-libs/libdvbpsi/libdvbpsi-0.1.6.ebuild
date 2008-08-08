@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.6.ebuild,v 1.1 2007/10/26 19:57:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.6.ebuild,v 1.2 2008/08/08 14:40:43 aballier Exp $
+
+inherit eutils
 
 IUSE="doc"
 
@@ -37,6 +39,12 @@ pkg_setup() {
 			die "You need to recompile media-gfx/graphviz with png support."
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
 
 src_compile() {

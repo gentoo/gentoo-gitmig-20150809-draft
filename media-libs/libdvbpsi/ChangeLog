@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.32 2007/10/26 19:57:22 zzam Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.33 2008/08/08 14:40:43 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/libdvbpsi-0.1.6-fbsd.patch, libdvbpsi-0.1.6.ebuild:
+  backport a fix from upstream to fix build on fbsd
 
 *libdvbpsi-0.1.6 (26 Oct 2007)
 
