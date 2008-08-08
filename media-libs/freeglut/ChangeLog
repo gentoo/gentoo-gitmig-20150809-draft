@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.52 2008/01/31 03:39:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.53 2008/08/08 16:22:08 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/freeglut-2.4.0-bsd-usb-joystick.patch, freeglut-2.4.0-r1.ebuild:
+  Disable bsd usb joystick support because it does not link properly, run
+  elibtoolize to get a sane .so versionning on bsd and keyword it ~x86-fbsd
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -freeglut-2.2.0.ebuild, -freeglut-2.4.0.ebuild:
