@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
+  <herd>sound</herd>
+  <use>
+    <flag name="cli">Build command line interface rubyripper</flag>
+    <flag name="normalize">Add support for normalizing audio file volume levels</flag>
+    <flag name="wav">Add support for wavegain</flag>
+  </use>
 </pkgmetadata>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>pclouds@gentoo.org</email>
-		<name>Nguyễn Thái Ngọc Duy</name>
-	</maintainer>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>pclouds@gentoo.org</email>
+    <name>Nguyễn Thái Ngọc Duy</name>
+  </maintainer>
+  <use>
+    <flag name="amazon">Enable advanced tagging using amazon webservices</flag>
+    <flag name="tagwriting">Enable MP3 tagging</flag>
+  </use>
 </pkgmetadata>

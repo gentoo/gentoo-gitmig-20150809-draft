@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<herd>sound</herd>
-<herd>gstreamer</herd>
+  <herd>gnome</herd>
+  <herd>sound</herd>
+  <herd>gstreamer</herd>
+  <use>
+    <flag name="daap">Enable support for local network music sharing via daap</flag>
+    <flag name="mtp">Enable support for MTP devices</flag>
+    <flag name="tagwriting">support for tag writing in certain audio files</flag>
+  </use>
 </pkgmetadata>

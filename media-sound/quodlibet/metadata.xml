@@ -11,4 +11,8 @@
     this for all the file formats it supports -- Ogg Vorbis, FLAC, MP3, 
     Musepack, and MOD.
   </longdescription>
+  <use>
+    <flag name="mmkeys">Enable support for special keys on multimedia keyboards</flag>
+    <flag name="trayicon">Enable support for trayicon</flag>
+  </use>
 </pkgmetadata>
