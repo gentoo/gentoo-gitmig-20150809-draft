@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.15 2008/08/08 18:21:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.16 2008/08/08 19:10:46 corsair Exp $
+
+  08 Aug 2008; Markus Rothe <corsair@gentoo.org> poppler-data-0.2.0.ebuild:
+  Stable on ppc64; bug #233807
 
   08 Aug 2008; nixnut <nixnut@gentoo.org> poppler-data-0.2.0.ebuild:
   Stable on ppc wrt bug 233807
