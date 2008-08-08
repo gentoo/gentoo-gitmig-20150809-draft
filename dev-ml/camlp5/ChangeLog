@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.23 2008/07/02 21:07:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.24 2008/08/08 17:24:09 nixnut Exp $
+
+  08 Aug 2008; nixnut <nixnut@gentoo.org> camlp5-5.09.ebuild:
+  Stable on ppc wrt bug 234162
 
   02 Jul 2008; Alexis Ballier <aballier@gentoo.org> camlp5-5.08.ebuild,
   camlp5-5.09.ebuild:
