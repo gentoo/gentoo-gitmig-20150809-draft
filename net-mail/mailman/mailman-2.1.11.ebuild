@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.11.ebuild,v 1.2 2008/08/06 18:26:04 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.11.ebuild,v 1.3 2008/08/08 19:15:14 maekke Exp $
 
 inherit eutils python multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
