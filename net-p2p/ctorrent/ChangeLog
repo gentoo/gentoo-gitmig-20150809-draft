@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.42 2008/08/06 17:53:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.43 2008/08/08 17:13:34 nixnut Exp $
+
+  08 Aug 2008; nixnut <nixnut@gentoo.org> ctorrent-3.3.2.ebuild:
+  Stable on ppc wrt bug 234114
 
   06 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   -files/3.2-setvbuf-removal.patch, -ctorrent-3.2-r1.ebuild,
