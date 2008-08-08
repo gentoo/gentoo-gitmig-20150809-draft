@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9c-r2.ebuild,v 1.3 2008/08/08 19:05:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9c-r2.ebuild,v 1.4 2008/08/08 23:06:31 ulm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	tar xzf	"${DISTDIR}/ld4-631.tar.gz" disks || die "tar failed"
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PF}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-newdos-datetime.patch"
 }
 
