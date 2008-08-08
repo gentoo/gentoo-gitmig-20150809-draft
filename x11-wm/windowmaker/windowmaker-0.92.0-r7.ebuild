@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r7.ebuild,v 1.2 2008/06/18 18:01:12 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r7.ebuild,v 1.3 2008/08/08 17:47:53 nixnut Exp $
 
 inherit autotools eutils gnustep-base flag-o-matic
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 src_unpack() {
 	is-flag -fstack-protector && filter-flags -fstack-protector \
