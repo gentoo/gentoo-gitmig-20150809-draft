@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/bongo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/ChangeLog,v 1.1 2008/08/08 23:20:10 ulm Exp $
+
+*bongo-20070619 (08 Aug 2008)
+
+  08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +files/50bongo-gentoo.el,
+  +files/bongo-20070619-fix-require.patch, +metadata.xml,
+  +bongo-20070619.ebuild:
+  Initial import, bug 228723, from Emacs overlay. Ebuild contributed by me.
+
