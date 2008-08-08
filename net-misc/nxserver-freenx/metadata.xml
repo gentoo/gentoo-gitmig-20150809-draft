@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>nx</herd>
-<longdescription>
+  <herd>nx</herd>
+  <longdescription>
   NXServer is an X11/VNC/NXServer proxy server especially tuned for using remote
   desktops over low-bandwidth links such as the Internet, WANS, and wireless
 </longdescription>
+  <use>
+    <flag name="nxclient">Add support for the commercial nxclient</flag>
+  </use>
 </pkgmetadata>

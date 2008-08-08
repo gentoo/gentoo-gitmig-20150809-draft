@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>voip</herd>
-<maintainer>
-  <email>stkn@gentoo.org</email>
-  <name>Stefan Knoblich</name>
-</maintainer>
+  <herd>voip</herd>
+  <maintainer>
+    <email>stkn@gentoo.org</email>
+    <name>Stefan Knoblich</name>
+  </maintainer>
+  <use>
+    <flag name="h323">Build the chan_ooh323c H.323 channel driver</flag>
+  </use>
 </pkgmetadata>
