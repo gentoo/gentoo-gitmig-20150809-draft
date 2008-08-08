@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.25 2008/05/25 20:27:22 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.26 2008/08/08 03:09:57 jer Exp $
+
+  08 Aug 2008; Jeroen Roovers <jer@gentoo.org> twisted-names-8.1.0.ebuild:
+  Stable for HPPA (bug #231675).
 
 *twisted-names-8.1.0 (25 May 2008)
 
