@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.50 2008/07/23 21:49:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.51 2008/08/08 06:19:10 ulm Exp $
+
+  08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *gparted-0.3.8 (23 Jul 2008)
 

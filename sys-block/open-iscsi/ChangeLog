@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.16 2008/03/25 02:33:03 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.17 2008/08/08 06:22:02 ulm Exp $
+
+  08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
 *open-iscsi-2.0.868_rc1 (25 Mar 2008)
 

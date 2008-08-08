@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.44 2008/06/16 11:22:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.45 2008/08/08 06:28:16 ulm Exp $
+
+  08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
 
   16 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> unieject-5.3.2.ebuild:
   Remove bindnow-flags that is now deprecated.
