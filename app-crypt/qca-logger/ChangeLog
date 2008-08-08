@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-logger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.4 2008/03/26 18:30:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.5 2008/08/08 18:36:58 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  qca-logger-2.0.0_beta2.ebuild:
+  keyword ~x86-fbsd
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   qca-logger-2.0.0_beta2.ebuild:
