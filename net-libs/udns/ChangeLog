@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.7 2008/06/23 13:08:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.8 2008/08/08 16:46:36 armin76 Exp $
+
+  08 Aug 2008; Raúl Porcel <armin76@gentoo.org> udns-0.0.9.ebuild:
+  Add ~alpha wrt #234170
 
   23 Jun 2008; Brent Baude <ranger@gentoo.org> udns-0.0.9.ebuild:
   keyworded ~arch for ppc, bug 225801
