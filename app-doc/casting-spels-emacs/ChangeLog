@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/casting-spels-emacs
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/casting-spels-emacs/ChangeLog,v 1.1 2008/08/08 12:14:30 ulm Exp $
+
+*casting-spels-emacs-19 (08 Aug 2008)
+
+  08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +casting-spels-emacs-19.ebuild:
+  Initial import, from Emacs overlay. Ebuild contributed by me.
+
