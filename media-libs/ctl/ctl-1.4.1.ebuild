@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.9 2008/06/20 19:46:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.10 2008/08/08 22:04:04 aballier Exp $
 
 inherit base
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 
 LICENSE="AMPAS"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="media-libs/ilmbase"
