@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-bibtex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.18 2008/08/07 18:11:00 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.19 2008/08/08 18:58:13 nixnut Exp $
+
+  08 Aug 2008; nixnut <nixnut@gentoo.org> python-bibtex-1.2.4.ebuild:
+  Stable on ppc wrt bug 233593
 
   07 Aug 2008; Kenneth Prugh <ken69267@gentoo.org>
   python-bibtex-1.2.4.ebuild:
