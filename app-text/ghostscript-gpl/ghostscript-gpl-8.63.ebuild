@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61-r3.ebuild,v 1.2 2008/03/01 20:21:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.63.ebuild,v 1.1 2008/08/08 19:24:50 tgurr Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
@@ -14,12 +14,12 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )
 	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-4.tar.bz2"
+	mirror://gentoo/${P}-patchset-1.tar.bz2"
 
 LICENSE="GPL-2 CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="bindist cjk cups djvu gtk X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="bindist cairo cjk cups djvu gtk jpeg2k X"
 
 COMMON_DEPEND="media-libs/fontconfig
 	>=media-libs/jpeg-6b
@@ -27,8 +27,10 @@ COMMON_DEPEND="media-libs/fontconfig
 	>=media-libs/tiff-3.7
 	>=sys-libs/zlib-1.1.4
 	!bindist? ( djvu? ( app-text/djvu ) )
+	cairo? ( x11-libs/cairo )
 	cups? ( >=net-print/cups-1.1.20 )
 	gtk? ( >=x11-libs/gtk+-2.0 )
+	jpeg2k? ( media-libs/jasper )
 	X? ( x11-libs/libXt x11-libs/libXext )
 	!app-text/ghostscript-esp
 	!app-text/ghostscript-gnu"
@@ -57,28 +59,27 @@ src_unpack() {
 
 	cd "${S}"
 
-	# remove internal copies of jpeg and libpng
+	# remove internal copies of expat, jasper, jpeg, libpng and zlib
+	rm -rf "${S}/expat"
+	rm -rf "${S}/jasper"
 	rm -rf "${S}/jpeg"
 	rm -rf "${S}/libpng"
+	rm -rf "${S}/zlib"
+	# remove internal urw-fonts
+	rm -rf "${S}/Resource/Font"
 
 	# Fedora patches
-	# upstream bug http://bugs.ghostscript.com/show_bug.cgi?id=689393
+	# http://cvs.fedora.redhat.com/viewcvs/devel/ghostscript/
 	epatch "${WORKDIR}/patches/${PN}-8.60-fPIC.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.61-multilib.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.60-noopt.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.60-scripts.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.62-system-jasper.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.62-pksmraw.patch"
 
-	# fixed in trunk, upstream bug http://bugs.ghostscript.com/show_bug.cgi?id=689577
-	epatch "${WORKDIR}/patches/${PN}-8.61-gsbug689577.patch"
-
-	# hp ijs patch shipped with net-print/hplip
-	epatch "${WORKDIR}/patches/${PN}-8.61-gdevijs-krgb-1.5.patch"
-
-	# additional Gentoo patch, compile fix
-	epatch "${WORKDIR}/patches/${PN}-8.61-rinkj.patch"
-
-	# Security fix for bug #208999
-	epatch "${WORKDIR}"/patches/ghostscript-8.60-CVE-2008-0411.diff
+	# Gentoo patches
+	# reported upstream at bug #689999
+	epatch "${WORKDIR}/patches/${PN}-8.63-cairo-automagic.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
@@ -122,14 +123,16 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		$(use_enable cairo) \
 		$(use_enable cups) \
 		$(use_enable gtk) \
+		$(use_with jpeg2k jasper) \
 		$(use_with X x) \
+		--disable-compile-inits \
 		--enable-dynamic \
 		--enable-fontconfig \
-		--with-drivers=ALL,rinkj \
+		--with-drivers=ALL \
 		--with-ijs \
-		--with-jasper \
 		--with-jbig2dec \
 	|| die "econf failed"
 
