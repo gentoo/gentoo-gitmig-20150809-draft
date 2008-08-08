@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audiotag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.23 2008/02/15 12:47:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.24 2008/08/08 19:10:15 yngwin Exp $
+
+*audiotag-0.18 (08 Aug 2008)
+
+  08 Aug 2008; Ben de Groot <yngwin@gentoo.org> +audiotag-0.18.ebuild:
+  Version bump, fixes #234229.
 
 *audiotag-0.17 (15 Feb 2008)
 
