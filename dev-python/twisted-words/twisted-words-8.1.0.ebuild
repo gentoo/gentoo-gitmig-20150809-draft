@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-8.1.0.ebuild,v 1.2 2008/08/08 03:05:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-8.1.0.ebuild,v 1.3 2008/08/08 18:41:04 corsair Exp $
 
 MY_PACKAGE=Words
 
@@ -8,7 +8,7 @@ inherit twisted
 
 DESCRIPTION="Twisted Words contains Instant Messaging implementations."
 
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="=dev-python/twisted-$(get_version_component_range 1)*
