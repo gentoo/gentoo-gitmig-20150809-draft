@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-transaction-api
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-transaction-api/ChangeLog,v 1.1 2008/08/03 22:21:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-transaction-api/ChangeLog,v 1.2 2008/08/08 19:38:45 corsair Exp $
+
+  08 Aug 2008; Markus Rothe <corsair@gentoo.org>
+  glassfish-transaction-api-1.1.2.2.04.ebuild:
+  Added ~ppc64; bug #233817
 
 *glassfish-transaction-api-1.1.2.2.04 (03 Aug 2008)
 
