@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-fluendo-mpegdemux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/ChangeLog,v 1.6 2008/08/07 21:29:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/ChangeLog,v 1.7 2008/08/08 18:23:29 maekke Exp $
+
+  08 Aug 2008; Markus Meier <maekke@gentoo.org>
+  gst-plugins-fluendo-mpegdemux-0.10.15.ebuild:
+  x86 stable, bug #232054
 
   07 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
   gst-plugins-fluendo-mpegdemux-0.10.15.ebuild:

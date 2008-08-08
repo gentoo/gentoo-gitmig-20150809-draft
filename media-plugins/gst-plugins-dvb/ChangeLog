@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dvb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.4 2008/08/07 21:20:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.5 2008/08/08 18:11:35 maekke Exp $
+
+  08 Aug 2008; Markus Meier <maekke@gentoo.org>
+  gst-plugins-dvb-0.10.7.ebuild:
+  x86 stable, bug #232054
 
   07 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
   gst-plugins-dvb-0.10.7.ebuild:
