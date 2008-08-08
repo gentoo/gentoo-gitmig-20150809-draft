@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.22 2008/06/07 11:47:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.23 2008/08/08 23:23:54 matsuu Exp $
+
+*fcitx-3.5 (08 Aug 2008)
+
+  08 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> fcitx-3.1.1.ebuild,
+  fcitx-3.4.2.ebuild, fcitx-3.5_pre070703.ebuild, +fcitx-3.5.ebuild:
+  Version bumped. Fxied HOMEPAGE and SRC_URI, bug #196078.
 
   07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/fcitx-3.5_pre070703-asneeded.patch, fcitx-3.5_pre070703.ebuild:
