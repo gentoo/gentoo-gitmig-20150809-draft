@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3725 2008/08/08 06:39:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3726 2008/08/08 15:36:00 dev-zero Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -1668,6 +1668,7 @@ net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:ads - Enable Active Directory support
 net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
+net-fs/samba:oav - Enables support for the OpenAntiVirus plugins
 net-fs/samba:quotas - Enables support for user quotas
 net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:winbind - Enables support for the winbind auth daemon

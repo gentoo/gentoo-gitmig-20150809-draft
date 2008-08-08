@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1759 2008/08/08 12:15:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1760 2008/08/08 15:36:00 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  08 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Re-Added oav USE-flag for Samba
 
   08 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask net-im/psi-0.12 now that it is officially released.
