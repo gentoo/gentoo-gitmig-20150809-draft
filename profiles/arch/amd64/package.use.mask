@@ -128,3 +128,9 @@ app-pda/pilot-link bluetooth
 # 10 Jul 2008: Thomas Anderson <gentoofan23@gentoo.org>
 # Unmask ia32 flag for amd64 arches.
 www-client/opera -ia32
+
+# 8 Aug 2008: Alexis Ballier <aballier@gentoo.org>
+# x86 asm only, it won't be built on amd64 if mmx useflag is enabled but that
+# saves people from needlessly installing nasm
+# Refs bug #93279
+media-sound/lame mmx

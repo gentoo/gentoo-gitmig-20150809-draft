@@ -99,3 +99,9 @@ media-video/cinelerra-cvs mmx 3dnow
 # jamvm needs ffi on amd64
 # https://bugs.gentoo.org/show_bug.cgi?id=213882
 dev-java/jamvm libffi
+
+# 8 Aug 2008: Alexis Ballier <aballier@gentoo.org>
+# x86 asm only, it won't be built on amd64 if mmx useflag is enabled but that
+# saves people from needlessly installing nasm
+# Refs bug #93279
+media-sound/lame mmx
