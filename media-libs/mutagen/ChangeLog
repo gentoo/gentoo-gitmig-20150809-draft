@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.59 2008/08/08 17:41:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.60 2008/08/08 20:40:48 corsair Exp $
+
+  08 Aug 2008; Markus Rothe <corsair@gentoo.org> mutagen-1.14.ebuild:
+  Stable on ppc64; bug #234212
 
   08 Aug 2008; Raúl Porcel <armin76@gentoo.org> mutagen-1.14.ebuild:
   alpha/x86 stable wrt #234212
