@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-wmdock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.5 2008/03/20 21:25:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.6 2008/08/08 18:04:07 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  xfce4-wmdock-0.2.0.ebuild:
+  keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
+  #233720
 
   20 Mar 2008; Samuli Suominen <drac@gentoo.org> -xfce4-wmdock-0.1.8.ebuild,
   xfce4-wmdock-0.2.0.ebuild:
