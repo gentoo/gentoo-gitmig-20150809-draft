@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ChangeLog,v 1.15 2008/08/08 22:04:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ChangeLog,v 1.16 2008/08/08 22:05:35 aballier Exp $
+
+  08 Aug 2008; Alexis Ballier <aballier@gentoo.org> -ctl-1.4.0.ebuild:
+  remove old
 
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> ctl-1.4.1.ebuild:
   keyword ~x86-fbsd
