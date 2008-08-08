@@ -11,6 +11,6 @@
 		for free and they can get it fast
 	</longdescription>
   <use>
-    <flag name="launcher">Install /usr/bin/emma. Collides with sci-biology/emboss.</flag>
+    <flag name="launcher">Install /usr/bin/emma. Collides with <pkg>sci-biology/emboss</pkg>.</flag>
   </use>
 </pkgmetadata>

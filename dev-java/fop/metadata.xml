@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>java</herd>
   <use>
-    <flag name="hyphenation">Precompile hyphenation patterns from the dev-java/offo-hyphenation package and install them as fop-hyph.jar</flag>
+    <flag name="hyphenation">Precompile hyphenation patterns from the <pkg>dev-java/offo-hyphenation</pkg> package and install them as fop-hyph.jar</flag>
     <flag name="jai">Enable jai support</flag>
     <flag name="jimi">Enable jimi support</flag>
   </use>
