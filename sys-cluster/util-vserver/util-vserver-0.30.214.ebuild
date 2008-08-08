@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.5 2008/06/14 11:02:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.6 2008/08/08 08:40:14 hollow Exp $
 
-WANT_AUTOMAKE="1.9"
-
-inherit autotools eutils bash-completion
+inherit eutils bash-completion
 
 DESCRIPTION="Linux-VServer admin utilities"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
