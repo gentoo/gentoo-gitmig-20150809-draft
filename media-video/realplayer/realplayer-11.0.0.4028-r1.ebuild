@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028.ebuild,v 1.3 2008/07/29 15:04:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.1 2008/08/08 17:33:19 zzam Exp $
 
 inherit nsplugins eutils rpm
 
@@ -73,8 +73,11 @@ src_install() {
 
 		rm "${S}/share/distcode"
 
+		# Make them executable, Bug #233415
+		exeinto "/opt/${MY_PN}/"
+		doexe realplay realplay.bin
+
 		insinto "/opt/${MY_PN}/"
-		doins realplay realplay.bin
 		for x in common mozilla plugins share; do
 			doins -r "${S}/${x}"
 		done;
