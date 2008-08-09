@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.002.ebuild,v 1.7 2008/02/23 21:06:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.002.ebuild,v 1.8 2008/08/09 21:40:07 hoffie Exp $
 
 inherit eutils webapp depend.php
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 IUSE="jpgraph ldap mssql mysql postgres"
 
-RDEPEND="jpgraph? ( || ( dev-php5/jpgraph dev-php4/jpgraph ) )
+RDEPEND="jpgraph? ( dev-php5/jpgraph )
 	dev-php/PEAR-PEAR
 	virtual/cron"
 
