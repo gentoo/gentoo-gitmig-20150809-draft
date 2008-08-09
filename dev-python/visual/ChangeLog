@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.22 2008/08/06 18:29:53 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.23 2008/08/09 17:31:45 neurogeek Exp $
+
+*visual-3.2.9-r1 (09 Aug 2008)
+
+  09 Aug 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/visual-3.2.9-import_bug143237.patch, +visual-3.2.9-r1.ebuild:
+  Rev bump. Fixes bugs #176431, #143237, #222205 and #172634
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
