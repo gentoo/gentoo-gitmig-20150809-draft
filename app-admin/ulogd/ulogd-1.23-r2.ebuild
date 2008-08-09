@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r2.ebuild,v 1.1 2008/08/09 03:39:34 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r2.ebuild,v 1.2 2008/08/09 04:19:02 darkside Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -11,12 +11,14 @@ HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
-IUSE="sqlite3 mysql postgres ip-as-string"
+IUSE="sqlite3 mysql postgres ip-as-string pcap"
 
 DEPEND="net-firewall/iptables
 	sqlite3? ( =dev-db/sqlite-3* )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )"
+RDEPEND="${DEPEND}
+	pcap? ( net-libs/libpcap )"
 
 src_unpack() {
 	unpack ${A}
