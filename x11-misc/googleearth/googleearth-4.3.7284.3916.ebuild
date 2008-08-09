@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.3.7284.3916.ebuild,v 1.1 2008/08/09 07:29:41 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.3.7284.3916.ebuild,v 1.2 2008/08/09 07:45:55 wormo Exp $
 
 inherit eutils fdo-mime
 
@@ -24,6 +24,7 @@ RDEPEND="x86? (
 	x11-libs/libXcursor
 	x11-libs/libXext
 	x11-libs/libXft
+	x11-libs/libXinerama
 	x11-libs/libXrender )
 	amd64? (
 	app-emulation/emul-linux-x86-xlibs
