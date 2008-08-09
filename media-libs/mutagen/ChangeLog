@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.60 2008/08/08 20:40:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.61 2008/08/09 07:28:06 aballier Exp $
+
+  09 Aug 2008; Alexis Ballier <aballier@gentoo.org> mutagen-1.14.ebuild:
+  skip tests if flac isn't built with ogg useflag, part of bug #234212
 
   08 Aug 2008; Markus Rothe <corsair@gentoo.org> mutagen-1.14.ebuild:
   Stable on ppc64; bug #234212
