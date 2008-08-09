@@ -112,7 +112,6 @@ doHelp ()
 	echo
 	echo "and where <php-version> is one of:"
 	echo
-	echo "    php4      - php 4.x"
 	echo "    php5      - php 5.x"
 	echo
 	echo "NOTE: none of these settings affect how Portage installs PHP or PEAR"
