@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.1.0.ebuild,v 1.1 2008/08/03 21:09:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.1.0.ebuild,v 1.2 2008/08/09 17:24:10 vanquirius Exp $
 
 inherit eutils
 
@@ -20,10 +20,11 @@ DEPEND=">dev-libs/dbus-glib-0.6
 	>=dev-libs/libmirage-1.0.0
 	alsa? ( >=media-libs/alsa-lib-1.0.0
 	>=media-libs/libsndfile-1.0.0 )
-	dev-util/unifdef"
+	dev-util/unifdef
+	>=media-libs/libao-0.8.0"
 RDEPEND=">dev-libs/dbus-glib-0.6
 	>=dev-libs/libdaemon-0.10
-	>=dev-libs/libmirage-1.0.0
+	>=dev-libs/libmirage-1.1.0
 	alsa? ( >=media-libs/alsa-lib-1.0.0
 	>=media-libs/libsndfile-1.0.0 )
 	>=sys-fs/vhba-1.0.0
