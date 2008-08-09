@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/groupoffice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.22 2007/12/02 20:16:55 wrobel Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.23 2008/08/09 21:42:31 hoffie Exp $
+
+  09 Aug 2008; Christian Hoffmann <hoffie@gentoo.org>
+  groupoffice-2.15.ebuild, groupoffice-2.16.8.ebuild,
+  groupoffice-2.18.6.ebuild:
+  (cosmetic changes only) removing occurences of "php-4"
 
   02 Dec 2007; <wrobel@gentoo.org> files/postinstall2-en.txt:
   -m Add instructions for additional functionality.

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.15.ebuild,v 1.5 2007/01/02 22:32:10 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.15.ebuild,v 1.6 2008/08/09 21:42:31 hoffie Exp $
 
 inherit eutils webapp depend.php
 
@@ -18,7 +18,6 @@ need_php
 pkg_setup() {
 	webapp_pkg_setup
 	elog "PHP needs to be compiled with iconv support"
-	elog "If you are using php-4*, be sure it's compiled with USE=nls"
 	elog "If you are using php-5*, be sure it's compiled with USE=iconv"
 	require_php_with_use imap mysql
 }
