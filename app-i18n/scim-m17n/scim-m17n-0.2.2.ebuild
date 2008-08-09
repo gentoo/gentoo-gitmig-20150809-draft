@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.2.ebuild,v 1.9 2007/11/01 12:57:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.2.ebuild,v 1.10 2008/08/09 01:11:59 matsuu Exp $
+
+inherit eutils
 
 DESCRIPTION="scim-m17n is an input module for Smart Common Input Method (SCIM) which uses m17n as backend"
 HOMEPAGE="http://www.scim-im.org/projects/imengines"
@@ -13,6 +15,12 @@ IUSE=""
 
 DEPEND="|| ( >=app-i18n/scim-1.4 >=app-i18n/scim-cvs-1.4 )
 	>=dev-libs/m17n-lib-1.2.0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
