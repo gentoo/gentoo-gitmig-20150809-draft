@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.1.ebuild,v 1.4 2008/07/27 19:40:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.2-r1.ebuild,v 1.1 2008/08/09 00:12:53 matsuu Exp $
 
 EAPI=1
-inherit autotools eutils qt3 multilib elisp-common flag-o-matic
+inherit eutils qt3 multilib elisp-common flag-o-matic
 
 MY_P="${P/_/-}"
 DESCRIPTION="Simple, secure and flexible input method library"
@@ -70,12 +70,6 @@ pkg_setup() {
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	elibtoolize
-}
-
 src_compile() {
 	local myconf
 
@@ -124,7 +118,7 @@ src_compile() {
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
 		$(use_with qt3 qt-immodule) \
-		$(use_with qt4 qt-immodule) \
+		$(use_with qt4 qt4-immodule) \
 		$(use_with truetype xft) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
@@ -137,7 +131,7 @@ src_compile() {
 
 src_install() {
 	# parallel make install borks, bug #222677
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+	emake -j1 INSTALL_ROOT="${D}" DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog* NEWS README RELNOTE
 	if use emacs; then
