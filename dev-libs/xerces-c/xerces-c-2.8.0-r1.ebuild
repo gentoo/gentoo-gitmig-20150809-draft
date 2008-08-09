@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0-r1.ebuild,v 1.1 2008/07/26 19:08:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0-r1.ebuild,v 1.2 2008/08/09 08:45:43 dev-zero Exp $
 
 EAPI="1"
 
@@ -40,6 +40,7 @@ src_unpack() {
 	sed -i \
 		-e 's|-L/usr/lib64 -L/usr/lib -L/usr/local/lib -L/usr/ccs/lib|-L${XERCESCROOT}/lib|g' \
 		-e 's|-L/usr/lib -L/usr/local/lib -L/usr/ccs/lib|-L${XERCESCROOT}/lib|g' \
+		-e 's|-L/usr/lib|-L${XERCESCROOT}/lib|g' \
 		{samples,src/xercesc,tests}/Makefile.incl || die "sed for fixing library include path failed"
 
 	sed -i \
@@ -104,7 +105,7 @@ src_compile() {
 	eval $(grep export configure.vars)
 	econf || die "econf failed"
 	# Parallel building is horribly broken when not using --as-needed
-	emake -j1 || die "emake failed"
+	emake -j1 MLIBDIR=$(get_libdir) || die "emake failed"
 
 	if use doc ; then
 		cd "${S}/doc"
