@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.1.ebuild,v 1.3 2008/08/08 19:17:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.1.ebuild,v 1.4 2008/08/09 12:51:27 eva Exp $
 
-inherit gnome2 python eutils autotools
+inherit gnome2 python eutils
 
 DESCRIPTION="GNOME applet to control various music players"
 HOMEPAGE="http://www.kuliniewicz.org/music-applet"
