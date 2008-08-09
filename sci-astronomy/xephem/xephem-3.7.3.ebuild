@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.8 2008/07/05 15:57:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.3.ebuild,v 1.9 2008/08/09 02:28:40 markusle Exp $
 
 inherit eutils
 
@@ -11,8 +11,7 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-DEPEND="!media-gfx/feh
-	x11-libs/openmotif
+DEPEND="x11-libs/openmotif
 	media-libs/jpeg
 	media-libs/libpng"
 
@@ -22,8 +21,8 @@ src_unpack() {
 
 	# make sure we use system libs not the ones that
 	# ship with the xephem tarball
-	rm -fr libjpegd/ libpng/ libz/ libXm/ \
-		|| die "Failed to remove unneeded libs"
+	rm -fr libjpegd/ libpng/ libz/ libXm/ GUI/xephem/tools/indi \
+		|| die "Failed to remove unneeded libs and tools"
 	epatch "${FILESDIR}"/${P}-use-system-lib.patch
 
 	for i in libastro/Makefile libip/Makefile liblilxml/Makefile \
@@ -63,11 +62,10 @@ src_install() {
 	into /usr
 	cd "${S}"/GUI/xephem
 	dobin xephem  || die "dobin xephem failed"
-	for file in tools/indi/{evalINDI,getINDI,setINDI,tmount,ota,wx,cam,security,indiserver} \
-		tools/{lx200xed/lx200xed,xedb/xedb,xephemdbd/xephemdbd}; do
+	for file in tools/{lx200xed/lx200xed,xedb/xedb,xephemdbd/xephemdbd}; do
 		dobin ${file} || die "dobin ${file} failed"
 	done
-	doman xephem.1 tools/*/*.1
+	doman xephem.1
 	mv tools .. # do not install tool sources into share directory
 	for i in $(find . -mindepth 1 -type d); do
 		insinto /usr/share/${PN}/${i}
