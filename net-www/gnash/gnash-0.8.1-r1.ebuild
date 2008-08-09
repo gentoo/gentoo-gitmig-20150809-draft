@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.4 2008/06/14 15:49:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.5 2008/08/09 06:16:15 wormo Exp $
 
 inherit nsplugins kde-functions qt3 multilib
 set-kdedir eutils
@@ -28,15 +28,15 @@ RDEPEND="
 		dev-libs/glib
 		dev-libs/atk
 	)
-	kde? ( kde-base/kdelibs )
-	qt3? ( x11-libs/qt )
+	kde? ( =kde-base/kdelibs-3.5* )
+	qt3? ( =x11-libs/qt-3* )
 	sdl? ( media-libs/libsdl )
 	!gtk? ( !kde? ( !qt3? ( !sdl? ( ( !fbcon? (
 		>x11-libs/gtk+-2
 		x11-libs/pango
 		dev-libs/glib
 		dev-libs/atk
-		kde-base/kdelibs
+		=kde-base/kdelibs-3.5*
 	) ) ) ) ) )
 	dev-libs/libxml2
 	sys-libs/zlib
