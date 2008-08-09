@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.28.ebuild,v 1.1 2008/08/09 10:21:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.28.ebuild,v 1.2 2008/08/09 10:50:37 tove Exp $
 
 inherit perl-module
 
@@ -13,9 +13,9 @@ HOMEPAGE="http://search.cpan.org/dist/Image-Info/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="test"
+IUSE=""
 
-RDEPEND=">=dev-perl/IO-String-1.01
+DEPEND=">=dev-perl/IO-String-1.01
 	dev-perl/XML-Simple
 	dev-lang/perl"
 
