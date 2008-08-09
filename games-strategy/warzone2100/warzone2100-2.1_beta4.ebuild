@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1_beta2.ebuild,v 1.2 2008/03/26 16:36:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1_beta4.ebuild,v 1.1 2008/08/09 03:45:38 mr_bones_ Exp $
 
 inherit eutils versionator games
 
@@ -9,7 +9,7 @@ DESCRIPTION="3D real-time strategy game"
 HOMEPAGE="http://wz2100.net/"
 SRC_URI="http://download.gna.org/warzone/releases/${MY_PV}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0 public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 # upstream requested debug support
@@ -34,12 +34,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
 	media-fonts/dejavu"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-encoding.patch
-}
 
 src_compile() {
 	egamesconf \
