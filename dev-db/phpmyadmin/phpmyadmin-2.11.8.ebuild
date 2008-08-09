@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.8.ebuild,v 1.6 2008/08/03 18:24:35 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.8.ebuild,v 1.7 2008/08/09 21:30:41 hoffie Exp $
 
 inherit eutils webapp depend.php
 
@@ -34,7 +34,6 @@ pkg_setup() {
 		eerror "as well as any of the following USE flags enabled:"
 		eerror
 		eerror "mysql or mysqli if using dev-lang/php-5"
-		eerror "mysql if using dev-lang/php-4"
 		eerror
 		die "Re-install ${PHP_PKG}"
 	fi
