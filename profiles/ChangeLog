@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1762 2008/08/09 08:15:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1763 2008/08/09 21:57:52 hoffie Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  09 Aug 2008; Christian Hoffmann <hoffie@gentoo.org> package.mask,
+  use.local.desc:
+  Removing all php-4 related masks and local USE flag descriptions
 
   09 Aug 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask dev-util/elfsh for removal in 60 days by treecleaners, bug #232141
