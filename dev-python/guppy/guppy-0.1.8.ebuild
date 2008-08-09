@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.8.ebuild,v 1.1 2008/06/20 07:29:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.8.ebuild,v 1.2 2008/08/09 19:57:07 coldwind Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://pypi.python.org/packages/source/g/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DOCS="ANNOUNCE changelog"
