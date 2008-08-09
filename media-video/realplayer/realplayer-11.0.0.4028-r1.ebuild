@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.2 2008/08/08 18:02:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.3 2008/08/09 08:56:56 zzam Exp $
 
 inherit nsplugins eutils rpm
 
@@ -41,6 +41,8 @@ QA_EXECSTACK="opt/RealPlayer/plugins/swfrender.so
 	opt/RealPlayer/codecs/drv2.so
 	opt/RealPlayer/codecs/colorcvt.so
 	opt/RealPlayer/codecs/atrc.so"
+
+QA_DT_HASH="opt/.*so opt/.*/realplay.bin"
 
 S="${WORKDIR}/opt/real/${MY_PN}"
 
