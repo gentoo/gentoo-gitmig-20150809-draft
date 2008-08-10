@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.5 2008/07/24 18:36:57 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.6 2008/08/10 14:51:02 jokey Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -17,6 +17,7 @@ app-emulation/crossover-office-pro-bin
 app-emulation/point2play
 app-emulation/virtualbox
 app-emulation/virtualbox-bin
+app-emulation/virtualbox-guest-additions
 app-emulation/vmware-dsp
 app-emulation/vmware-player
 app-emulation/vmware-server
