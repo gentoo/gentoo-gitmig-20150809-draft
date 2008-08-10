@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.8 2008/06/07 08:57:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.9 2008/08/10 12:10:16 stefaan Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -43,6 +43,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/use-byacc.patch
 	# support for amd64, sparc and alpha
 	epatch "${FILESDIR}"/support-archs.patch
+	epatch "${FILESDIR}"/support-sparc.patch
 	# freetype2 wasn't enabled by default
 	epatch "${FILESDIR}"/freetype2-activate.patch
 	# extra #include statement necessary for freetype2

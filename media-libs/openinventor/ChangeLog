@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.17 2008/06/07 08:57:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.18 2008/08/10 12:10:16 stefaan Exp $
+
+  10 Aug 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/support-sparc.patch, openinventor-2.1.5.10-r2.ebuild:
+  Small patch needed to support sparc (fixes #231962)
 
   07 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/gcc4-support.patch, openinventor-2.1.5.10-r2.ebuild:
