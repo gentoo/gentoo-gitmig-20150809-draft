@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metamonitor/metamonitor-0.4.5.ebuild,v 1.2 2007/04/09 01:01:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metamonitor/metamonitor-0.4.5.ebuild,v 1.3 2008/08/10 15:12:30 jokey Exp $
 
 inherit kde
 
@@ -14,3 +14,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 need-kde 3.3
+
+src_unpack() {
+	kde_src_unpack
+
+	# We need patch to build w/ gcc 4.3.1, see bug #227253
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}

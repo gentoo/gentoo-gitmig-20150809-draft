@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/metamonitor
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metamonitor/ChangeLog,v 1.1 2007/04/07 16:17:58 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metamonitor/ChangeLog,v 1.2 2008/08/10 15:12:30 jokey Exp $
+
+  10 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/metamonitor-0.4.5-gcc43.patch, metamonitor-0.4.5.ebuild:
+  Add gcc 4.3 build patch, thanks to Marek Miller and Billy DeVincentis wrt
+  bug #227253
 
 *metamonitor-0.4.5 (07 Apr 2007)
 
