@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.9.ebuild,v 1.1 2008/01/31 08:57:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.90.ebuild,v 1.1 2008/08/10 13:48:10 dev-zero Exp $
 
-inherit elisp-common
+inherit elisp-common eutils
 
 DESCRIPTION="A simple but powerful template language for C++"
 HOMEPAGE="http://code.google.com/p/google-ctemplate/"
@@ -17,6 +17,12 @@ RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 	emacs? ( virtual/emacs )"
 
 SITEFILE="70ctemplate-gentoo.el"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-missing_includes.patch"
+}
 
 src_compile() {
 	econf || die "econf failed"
