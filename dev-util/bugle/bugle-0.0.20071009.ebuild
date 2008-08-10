@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20071009.ebuild,v 1.1 2007/10/29 14:30:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20071009.ebuild,v 1.2 2008/08/10 12:56:48 jokey Exp $
 
-inherit autotools toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="A tool for OpenGL debugging"
 HOMEPAGE="http://www.opengl.org/sdk/tools/BuGLe/"
@@ -16,6 +16,7 @@ IUSE="ffmpeg gtk readline"
 DEPEND="ffmpeg? ( media-video/ffmpeg )
 	gtk? ( >=x11-libs/gtk+-2.4.0 >=x11-libs/gtkglext-1.0.0 )
 	readline? ( sys-libs/readline )
+	virtual/opengl
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
