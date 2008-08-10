@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/files/vboxwebsrv-initd,v 1.1 2008/06/13 22:44:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/files/vboxwebsrv-initd,v 1.2 2008/08/10 14:38:45 jokey Exp $
 
 depend() {
 	need net
