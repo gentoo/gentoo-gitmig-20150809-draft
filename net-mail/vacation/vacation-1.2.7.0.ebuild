@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.7.0.ebuild,v 1.1 2008/07/31 07:32:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.7.0.ebuild,v 1.2 2008/08/10 19:50:09 phosphan Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="automatic mail answering program"
 HOMEPAGE="http://vacation.sourceforge.net/"
@@ -17,13 +17,20 @@ RDEPEND="virtual/mta
 DEPEND="${RDEPEND}
 	!mail-mta/sendmail"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e "s:install -s -m:install -m:" Makefile
+}
+
 src_compile () {
 	emake CC=$(tc-getCC) ARCH=$(tc-arch-kernel) CFLAGS="${CFLAGS} -DMAIN" || die "emake failed."
 }
 
 src_install () {
 	dodir /usr/bin
-	dodir /usr/man/man1
-	make BINDIR="${D}usr/bin" MANDIR="${D}usr/man/man" install || die
-"make install failed"
+	dodir /usr/share/man/man1
+	emake BINDIR="${D}/usr/bin" MANDIR="${D}usr/share/man/man" install || die \
+	"make install failed"
 }
