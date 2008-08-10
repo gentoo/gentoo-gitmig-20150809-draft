@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vacation
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.16 2008/08/10 19:50:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.17 2008/08/10 20:00:29 gentoofan23 Exp $
+
+  10 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  vacation-1.2.6.3.ebuild:
+  stable amd64, bug #233248
 
   10 Aug 2008; Patrick Kursawe <phosphan@gentoo.org>
   vacation-1.2.6.3.ebuild, vacation-1.2.7.0.ebuild:
