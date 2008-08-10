@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.4 2008/06/21 01:25:54 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.5 2008/08/10 18:37:01 gentoofan23 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -82,6 +82,7 @@ src_install() {
 		"${D}"/etc/jabber/jabberd.xml{,.dist} \
 		|| die "sed failed"
 
+	dodoc README* mysql.sql pgsql_createdb.sql UPGRADE || die "dodoc failed"
 }
 
 pkg_postinst() {
@@ -100,6 +101,13 @@ pkg_postinst() {
 	ewarn
 	ewarn 'The configuration filename has changed:'
 	ewarn '   Configure your server in /etc/jabber/jabberd.xml'
+	ewarn
+	ewarn 'If you are upgrading from jabberd-1.4, please read UPGRADE.'
+	ewarn 'Please note that filespool(individual xml files per account)'
+	ewarn 'is deprecated. Migrate to one of the database storage backends,'
+	ewarn 'and read UPGRADE for instructions.'
+	ewarn 'If you wish to continue to use the filespool backend, read'
+	ewarn 'README.filespool.'
 	echo
 	ebeep
 
