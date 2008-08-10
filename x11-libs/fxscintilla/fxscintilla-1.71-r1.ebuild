@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.8 2008/02/17 21:37:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.9 2008/08/10 14:14:26 mabi Exp $
 
 inherit autotools eutils multilib
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	einfo "Running autoreconf..."
 	touch NEWS AUTHORS
-	autoreconf --install --force || die "autoreconf error"
+	eautoreconf || die "autoreconf error"
 }
 
 src_compile () {
