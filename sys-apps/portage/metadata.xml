@@ -4,4 +4,7 @@
 <herd>no-herd</herd>
 <maintainer><email>dev-portage@gentoo.org</email></maintainer>
 <maintainer><email>zmedico@gentoo.org</email></maintainer>
+<use>
+<flag name="epydoc">Build html API documentation with epydoc.</flag>
+ </use>
 </pkgmetadata>

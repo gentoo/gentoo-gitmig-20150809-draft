@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.537 2008/08/01 11:10:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.538 2008/08/10 13:17:43 zmedico Exp $
+
+*portage-2.2_rc7 (10 Aug 2008)
+
+  10 Aug 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc7.ebuild:
+  2.2_rc7 bump. This fixes bugs #233735 (default phase functions),
+  #234100 (update man page headers), and #234157 (remove BUILD_PREFIX
+  from make.conf man page). This also fixes a known regression in blocker
+  file collision handling which in some cases caused colliding files to be
+  removed when they should have been kept. Bug #210077 tracks all bugs
+  fixed since 2.1.5.x.
 
 *portage-2.2_rc6 (01 Aug 2008)
 
