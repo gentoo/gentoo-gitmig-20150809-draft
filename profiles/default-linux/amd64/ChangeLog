@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.146 2008/08/08 08:27:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.147 2008/08/10 14:49:10 jokey Exp $
+
+  10 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  2006.1/no-multilib/package.mask:
+  Mask app-emulation/virtualbox-guest-additions on no-multilib profile
 
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> 2007.0/package.use.mask,
   package.use.mask:
