@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.277 2008/07/30 21:57:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.278 2008/08/10 11:01:29 maekke Exp $
+
+  10 Aug 2008; Markus Meier <maekke@gentoo.org> gdm-2.20.7.ebuild:
+  x86 stable, bug #229709
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org> gdm-2.20.7.ebuild:
   Marking gdm-2.20.7 ppc stable for bug 229709
