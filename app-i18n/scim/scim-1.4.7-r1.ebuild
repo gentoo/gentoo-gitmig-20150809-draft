@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r1.ebuild,v 1.1 2008/06/14 09:40:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r1.ebuild,v 1.2 2008/08/10 16:16:52 matsuu Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc gtk kde qt3"
+IUSE="doc gtk"
 
 RDEPEND="x11-libs/libX11
 	gtk? ( >=x11-libs/gtk+-2
@@ -27,9 +27,6 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.33"
-
-PDEPEND="kde? ( app-i18n/skim )
-	qt3? ( || ( app-i18n/scim-qtimm app-i18n/scim-bridge ) )"
 
 get_gtk_confdir() {
 	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
