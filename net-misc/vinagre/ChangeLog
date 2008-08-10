@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.11 2008/08/04 20:50:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.12 2008/08/10 11:25:03 maekke Exp $
+
+  10 Aug 2008; Markus Meier <maekke@gentoo.org> vinagre-0.5.1.ebuild:
+  x86 stable, bug #229709
 
   04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> -vinagre-0.5.0.ebuild:
   clean up old revisions.
