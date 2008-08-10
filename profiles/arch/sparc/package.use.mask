@@ -1,8 +1,5 @@
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
 
-# openinventor is not keyworded and will not build (needed for bug #230716).
-sci-physics/geant	openinventor
-
 # openct isn't keyworded anymore
 net-misc/kpvnc smartcard
 
