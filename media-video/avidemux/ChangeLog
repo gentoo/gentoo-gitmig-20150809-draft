@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.133 2008/07/26 21:34:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.134 2008/08/10 22:39:52 yngwin Exp $
+
+*avidemux-2.4.3 (10 Aug 2008)
+
+  10 Aug 2008; Ben de Groot <yngwin@gentoo.org> +avidemux-2.4.3.ebuild:
+  Version bump
 
   26 Jul 2008; Carsten Lohrke <carlo@gentoo.org> avidemux-2.4.ebuild,
   avidemux-2.4.1.ebuild, avidemux-2.4.2.ebuild:
