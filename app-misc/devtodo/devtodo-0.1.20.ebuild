@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.11 2008/04/21 19:23:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.12 2008/08/10 13:13:13 jokey Exp $
 
-inherit eutils bash-completion flag-o-matic
+inherit autotools eutils bash-completion flag-o-matic
 
 DESCRIPTION="A nice command line todo list for developers"
 HOMEPAGE="http://swapoff.org/DevTodo"
@@ -22,11 +22,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	eautoreconf
 }
 
 src_compile() {
-	einfo "Running autoreconf"
-	autoreconf -f -i || die "autoreconf failed"
 	replace-flags -O[23] -O1
 	econf --sysconfdir=/etc/devtodo || die "econf failed"
 	emake || die "emake failed"
