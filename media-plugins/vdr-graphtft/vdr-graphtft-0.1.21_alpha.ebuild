@@ -1,18 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.18_alpha.ebuild,v 1.5 2008/08/10 18:26:55 hd_brummy Exp $
-
-EAPI=1
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha.ebuild,v 1.1 2008/08/10 18:26:55 hd_brummy Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
 
-inherit vdr-plugin qt4
+inherit vdr-plugin
 
 DESCRIPTION="VDR plugin: GraphTFT"
-HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin"
+HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin (german)"
 SRC_URI="http://www.jwendel.de/vdr/${MY_P}.tar.bz2
-		http://www.jwendel.de/vdr/DeepBlue-horchi-0.0.6.tar.bz2"
+		http://www.jwendel.de/vdr/DeepBlue-horchi-0.0.8.tar.bz2"
 
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
@@ -26,10 +24,10 @@ DEPEND=">=media-video/vdr-1.4.7-r9
 		gnome-base/libgtop
 		>=media-video/ffmpeg-0.4.8
 		directfb? ( dev-libs/DirectFB )
-		graphtft-fe? ( =x11-libs/qt-4.3*:4 )"
+		graphtft-fe? ( x11-libs/qt )"
 
-PATCHES=("${FILESDIR}/${P}-gentoo.diff"
-		"${FILESDIR}/gcc-4.3-missing_includes.diff")
+PATCHES=("${FILESDIR}/${P}-gentoo.diff
+		${FILESDIR}/gcc-4.3-missing_includes.diff")
 
 S="${WORKDIR}/graphtft-${MY_PV}"
 
@@ -57,11 +55,12 @@ src_unpack() {
 		sed -i Makefile -e "s:#HAVE_SWSCALE:HAVE_SWSCALE:"
 	fi
 
-	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
-		epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326-new_header.diff"
-	fi
+	has_version ">=media-video/ffmpeg-0.4.9_p20080326" \
+	&& epatch "${FILESDIR}/${PN}-0.1.18_alpha-ffmpeg-0.4.9_p20080326-new_header.diff"
 
-	has_version ">=media-gfx/imagemagick-6.4" && epatch "${FILESDIR}/${P}-imagemagick-6.4-new_header.diff"
+
+	has_version ">=media-gfx/imagemagick-6.4" \
+	&& epatch "${FILESDIR}/${PN}-0.1.18_alpha-imagemagick-6.4-new_header.diff"
 
 	use directfb && sed -i Makefile \
 		-e "s:#HAVE_DFB = 1:HAVE_DFB = 1:"
