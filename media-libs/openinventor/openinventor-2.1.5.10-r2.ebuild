@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.9 2008/08/10 12:10:16 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.10 2008/08/10 14:19:59 fmccor Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/${MY_PN}/download/${MY_PN}-${MY_PV}.src.tar.
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 x86"
+KEYWORDS="alpha amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND="media-libs/mesa
