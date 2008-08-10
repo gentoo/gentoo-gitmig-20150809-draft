@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.10 2008/07/30 23:21:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.11 2008/08/10 19:10:23 maekke Exp $
+
+  10 Aug 2008; Markus Meier <maekke@gentoo.org> mono-addins-0.3.ebuild:
+  x86 stable, bug #229709
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org> mono-addins-0.3.1.ebuild:
   Marking mono-addins-0.3.1 ~ppc for bug 233181
