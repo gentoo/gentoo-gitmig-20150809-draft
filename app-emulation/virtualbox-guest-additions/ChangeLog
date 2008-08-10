@@ -1,0 +1,86 @@
+# ChangeLog for app-emulation/virtualbox-guest-tools
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.1 2008/08/10 14:49:33 jokey Exp $
+
+*virtualbox-guest-additions-1.6.4 (10 Aug 2008)
+
+  10 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-guest-additions-1.5.6-remove-alsa.patch,
+  +files/virtualbox-guest-additions-1.5.6.initd,
+  +files/virtualbox-guest-additions-1.6.4-fix-missing-makefiles.patch,
+  +files/virtualbox-guest-additions-1.6.4.initd, +metadata.xml,
+  +virtualbox-guest-additions-1.5.6.ebuild,
+  +virtualbox-guest-additions-1.6.4.ebuild:
+  Add version bump wrt bug #233683
+
+*virtualbox-guest-additions-1.5.6 (19 Mar 2008)
+
+  19 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-guest-additions-1.5.6-remove-alsa.patch,
+  +files/virtualbox-guest-additions-1.5.6.initd, +metadata.xml,
+  +virtualbox-guest-additions-1.5.6.ebuild:
+  Initial import for bug 204511, thanks to all involved
+
+  16 Mar 2008; Davide Cendron (scen) <scen@gentoo.org>
+  files/virtualbox-guest-additions-1.5.4.initd,
+  files/virtualbox-guest-additions-1.5.6.initd:
+  Initscript must start before xdm
+
+  07 Mar 2008; Davide Cendron (scen) <scen@gentoo.org>
+  virtualbox-guest-additions-1.5.4.ebuild,
+  virtualbox-guest-additions-1.5.6.ebuild:
+  Fixed installation of mount.vboxvfs
+
+  26 Feb 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  +files/virtualbox-guest-additions-1.5.6.initd:
+  add initd script
+
+  26 Feb 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.6.ebuild:
+  fix wrong MY_P
+
+  21 Feb 2008; Alessio Cassibba <swapon@gmail.com>
+  +virtualbox-guest-additions-1.5.6.ebuild,
+  +files/virtualbox-guest-additions-1.5.6-remove-alsa.patch:
+  version bump
+
+  21 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.4.ebuild:
+  add a warning in pkg_postinst about the X Window System input and video drivers
+
+  21 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.4.ebuild:
+  fix mount.vboxvfs installation; add xf86-{input,video}-virtualbox in RDEPEND
+
+  20 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.4.ebuild:
+  drop alsa use flag (additions don't need it at all); fix minor cosmetics
+
+  20 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.4.ebuild:
+  fix the creation of the vboxadd-xclient xinit.d script
+
+  20 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-additions-1.5.4.ebuild,
+  files/virtualbox-guest-additions-1.5.4.initd:
+  add X and alsa use flags; fix permissions; add the shared clipboard user
+  service init script; fix the initd script
+
+  19 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  files/virtualbox-guest-additions-1.5.4.initd:
+  fix modules in the initd script; minor cosmetic fixes
+
+  19 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com> ChangeLog:
+  rename virtualbox-guest-tools to virtualbox-guest-additions
+
+  18 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-tools-1.5.4.ebuild:
+  add app-emulation/emul-linux-x86-xlibs in RDEPEND, 32 bit libXt is needed
+  for amd64 in order to build additions bug #204674, in addition this ebuild
+  should be masked for amd64-no-multilib
+
+  18 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-guest-tools-1.5.4.ebuild,
+  -virtualbox-guest-tools-1.5.4-remove-alsa.patch:
+  fix src_install for amd64
+
