@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.9 2008/03/13 02:55:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.10 2008/08/10 20:48:37 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,10 +25,13 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="mbrola"
+IUSE="alsa mbrola"
 
-DEPEND=">=app-accessibility/speech-tools-1.2.96_beta"
-RDEPEND="${DEPEND}
+SP_DEPEND=">=app-accessibility/speech-tools-1.2.96_beta"
+
+DEPEND="${SP_DEPEND}
+	alsa? ( media-sound/alsa-utils )"
+RDEPEND="${SP_DEPEND}
 	mbrola? ( >=app-accessibility/mbrola-3.0.1h-r2 )"
 
 S=${WORKDIR}/festival
@@ -45,7 +48,8 @@ src_unpack() {
 	sed -i -e "s:\$(EST)/lib:/usr/$(get_libdir):" "${S}"/config/project.mak
 
 	# disable the multisyn modules
-	sed -i -e "s:\(ALSO_INCLUDE.*=.*MultiSyn\):# \1:" "${S}"/config/config.in
+	#sed -i -e "s:\(ALSO_INCLUDE.*=.*MultiSyn\):# \1:" "${S}"/config/config.in
+	sed -i -e 's/clunits hts_engine MultiSyn/clunits hts_engine/g' "${S}"/config/config.in
 
 	# fix the reference  to /usr/lib/festival
 	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1/usr/share/festival:" "${S}"/config/project.mak
@@ -58,6 +62,11 @@ src_unpack() {
 
 	# Apply a patch for gcc4.3.
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+
+	if use alsa; then
+		echo "(Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")" >> ${S}/lib/siteinit.scm
+		echo "(Parameter.set 'Audio_Method 'Audio_Command)" >> ${S}/lib/siteinit.scm
+	fi
 }
 
 src_compile() {
