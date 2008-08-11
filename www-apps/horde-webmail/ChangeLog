@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-webmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.12 2008/08/08 13:20:38 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.13 2008/08/11 16:09:40 wrobel Exp $
+
+*horde-webmail-1.1.1-r2 (11 Aug 2008)
+
+  11 Aug 2008; wrobel@gentoo.org files/horde-webmail-1.1.1_kolab.patch,
+  -horde-webmail-1.1.1-r1.ebuild, +horde-webmail-1.1.1-r2.ebuild:
+  Fixed ingo installation within horde-webmail for kolab.
 
 *horde-webmail-1.1.1-r1 (08 Aug 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.1-r1.ebuild,v 1.1 2008/08/08 13:20:38 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.1-r2.ebuild,v 1.1 2008/08/11 16:09:40 wrobel Exp $
 
 HORDE_PN=${PN}
 

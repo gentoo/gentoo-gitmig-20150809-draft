@@ -1,6 +1,6 @@
-diff -r e16c159ea616 config/conf.php
+diff -r edb3eb2593d6 config/conf.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
++++ b/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,113 @@
 +<?php
 +/* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -115,9 +115,9 @@ diff -r e16c159ea616 config/conf.php
 +if (file_exists(dirname(__FILE__) . '/kolab.php')) {
 +  require_once(dirname(__FILE__) . '/kolab.php');
 +}
-diff -r e16c159ea616 config/kolab.php
+diff -r edb3eb2593d6 config/kolab.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/config/kolab.php	Fri Aug 08 14:19:56 2008 +0200
++++ b/config/kolab.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,34 @@
 +<?php
 +/* Add additional admins here */
@@ -153,9 +153,9 @@ diff -r e16c159ea616 config/kolab.php
 +/* Primary mail domain of your Kolab server */
 +$conf['kolab']['imap']['maildomain'] = 'example.com';
 +?>
-diff -r e16c159ea616 config/prefs.php
---- a/config/prefs.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/config/prefs.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 config/prefs.php
+--- a/config/prefs.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/config/prefs.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -357,7 +357,7 @@
  
  // UI theme
@@ -165,9 +165,9 @@ diff -r e16c159ea616 config/prefs.php
      'locked' => false,
      'shared' => true,
      'type' => 'select',
-diff -r e16c159ea616 imp/config/conf.php
---- a/imp/config/conf.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/imp/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 imp/config/conf.php
+--- a/imp/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/imp/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1,7 +1,8 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -189,9 +189,9 @@ diff -r e16c159ea616 imp/config/conf.php
  $conf['hooks']['spam_bounce'] = false;
  $conf['hooks']['msglist_format'] = false;
  $conf['maillog']['use_maillog'] = true;
-diff -r e16c159ea616 imp/config/hooks.php
---- a/imp/config/hooks.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/imp/config/hooks.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 imp/config/hooks.php
+--- a/imp/config/hooks.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/imp/config/hooks.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -426,6 +426,9 @@
              case 'contact':
                  return $GLOBALS['registry']->get('webroot', 'turba');
@@ -217,9 +217,9 @@ diff -r e16c159ea616 imp/config/hooks.php
                  }
              }
  
-diff -r e16c159ea616 imp/config/servers.php
---- a/imp/config/servers.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/imp/config/servers.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 imp/config/servers.php
+--- a/imp/config/servers.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/imp/config/servers.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -215,10 +215,30 @@
  
  /* Example configurations: */
@@ -258,9 +258,30 @@ diff -r e16c159ea616 imp/config/servers.php
 +        ),
 +    );
 +}
-diff -r e16c159ea616 kronolith/config/conf.php
---- a/kronolith/config/conf.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/kronolith/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 ingo/config/backends.php
+--- a/ingo/config/backends.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/ingo/config/backends.php	Mon Aug 11 18:06:31 2008 +0200
+@@ -40,6 +40,8 @@
+  *               give them permissions to do so. If you want to enable this
+  *               feature, you need to set this parameter to true.
+  */
++
++if (!$GLOBALS['conf']['kolab']['enabled']) {
+ 
+ /* IMAP Example */
+ $backends['imap'] = array(
+@@ -297,6 +299,8 @@
+     'scriptparams' => array()
+ );
+ 
++}
++
+ /* Kolab Example (using Sieve) */
+ if ($GLOBALS['conf']['kolab']['enabled']) {
+     require_once 'Horde/Kolab.php';
+diff -r edb3eb2593d6 kronolith/config/conf.php
+--- a/kronolith/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/kronolith/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1,12 +1,11 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -286,9 +307,9 @@ diff -r e16c159ea616 kronolith/config/conf.php
 +if (file_exists(dirname(__FILE__) . '/kolab.php')) {
 +  require_once(dirname(__FILE__) . '/kolab.php');
 +}
-diff -r e16c159ea616 kronolith/config/kolab.php
+diff -r edb3eb2593d6 kronolith/config/kolab.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/kronolith/config/kolab.php	Fri Aug 08 14:19:56 2008 +0200
++++ b/kronolith/config/kolab.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,10 @@
 +<?php
 +/* Primary mail domain of your Kolab server */
@@ -300,9 +321,9 @@ diff -r e16c159ea616 kronolith/config/kolab.php
 +/* The email address of your sys admin */
 +$conf['reminder']['from_addr'] = 'hostmaster@example.com';
 +?>
-diff -r e16c159ea616 lib/Horde/Prefs/kolab.php
---- a/lib/Horde/Prefs/kolab.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/Horde/Prefs/kolab.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/Horde/Prefs/kolab.php
+--- a/lib/Horde/Prefs/kolab.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/Horde/Prefs/kolab.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1,5 +1,6 @@
  <?php
  
@@ -320,9 +341,9 @@ diff -r e16c159ea616 lib/Horde/Prefs/kolab.php
      }
  
  }
-diff -r e16c159ea616 lib/Horde/iCalendar.php
---- a/lib/Horde/iCalendar.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/Horde/iCalendar.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/Horde/iCalendar.php
+--- a/lib/Horde/iCalendar.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/Horde/iCalendar.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -152,6 +152,41 @@
                  'value'     => $value,
                  'values'    => $values
@@ -365,9 +386,9 @@ diff -r e16c159ea616 lib/Horde/iCalendar.php
          }
      }
  
-diff -r e16c159ea616 lib/SyncML/Backend.php
---- a/lib/SyncML/Backend.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/SyncML/Backend.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/SyncML/Backend.php
+--- a/lib/SyncML/Backend.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/SyncML/Backend.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -574,6 +574,24 @@
      }
  
@@ -393,9 +414,9 @@ diff -r e16c159ea616 lib/SyncML/Backend.php
       * Authenticates the user at the backend.
       *
       * For some types of authentications (notably auth:basic) the username
-diff -r e16c159ea616 lib/SyncML/Backend/Horde.php
---- a/lib/SyncML/Backend/Horde.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/SyncML/Backend/Horde.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/SyncML/Backend/Horde.php
+--- a/lib/SyncML/Backend/Horde.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/SyncML/Backend/Horde.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -202,6 +202,11 @@
                                        __FILE__, __LINE__, PEAR_LOG_DEBUG);
                      continue;
@@ -504,9 +525,9 @@ diff -r e16c159ea616 lib/SyncML/Backend/Horde.php
          return true;
      }
  
-diff -r e16c159ea616 lib/SyncML/Constants.php
---- a/lib/SyncML/Constants.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/SyncML/Constants.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/SyncML/Constants.php
+--- a/lib/SyncML/Constants.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/SyncML/Constants.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -64,7 +64,7 @@
  define('RESPONSE_PARTIAL_CONTENT', 206);
  define('RESPONSE_CONFLICT_RESOLVED_WITH_MERGE', 207);
@@ -516,9 +537,9 @@ diff -r e16c159ea616 lib/SyncML/Constants.php
  define('RESPONSE_DELETE_WITHOUT_ARCHIVE', 210);
  define('RESPONSE_ITEM_NO_DELETED', 211);
  define('RESPONSE_AUTHENTICATION_ACCEPTED', 212);
-diff -r e16c159ea616 lib/SyncML/Device.php
---- a/lib/SyncML/Device.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/SyncML/Device.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/SyncML/Device.php
+--- a/lib/SyncML/Device.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/SyncML/Device.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -161,12 +161,81 @@
              SYNCML_LOGFILE_DATA,
              "\nInput received from client ($contentType):\n$content\n");
@@ -601,9 +622,9 @@ diff -r e16c159ea616 lib/SyncML/Device.php
  
      /**
       * Converts the content from the backend to a format suitable for the
-diff -r e16c159ea616 lib/SyncML/Sync.php
---- a/lib/SyncML/Sync.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/SyncML/Sync.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/SyncML/Sync.php
+--- a/lib/SyncML/Sync.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/SyncML/Sync.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -214,7 +214,13 @@
              }
          } elseif ($item->elementType =='Delete') {
@@ -660,9 +681,9 @@ diff -r e16c159ea616 lib/SyncML/Sync.php
              } else {
                  $backend->logMessage($suid->message, __FILE__, __LINE__, PEAR_LOG_DEBUG);
  
-diff -r e16c159ea616 lib/core.php
---- a/lib/core.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/lib/core.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 lib/core.php
+--- a/lib/core.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/lib/core.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -31,6 +31,12 @@
   * include_path, you must add an ini_set() call here to add their location to
   * the include_path. */
@@ -676,15 +697,15 @@ diff -r e16c159ea616 lib/core.php
  
  /* PEAR base class. */
  include_once 'PEAR.php';
-diff -r e16c159ea616 log/.htaccess
+diff -r edb3eb2593d6 log/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/log/.htaccess	Fri Aug 08 14:19:56 2008 +0200
++++ b/log/.htaccess	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r e16c159ea616 mnemo/config/conf.php
---- a/mnemo/config/conf.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/mnemo/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 mnemo/config/conf.php
+--- a/mnemo/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/mnemo/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1,9 +1,8 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -697,9 +718,9 @@ diff -r e16c159ea616 mnemo/config/conf.php
  $conf['menu']['print'] = true;
  $conf['menu']['import_export'] = true;
  $conf['menu']['apps'] = array();
-diff -r e16c159ea616 nag/config/conf.php
---- a/nag/config/conf.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/config/conf.php
+--- a/nag/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1,9 +1,7 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -711,9 +732,9 @@ diff -r e16c159ea616 nag/config/conf.php
  $conf['menu']['print'] = true;
  $conf['menu']['import_export'] = true;
  $conf['menu']['apps'] = array();
-diff -r e16c159ea616 nag/lib/Block/tree_menu.php
---- a/nag/lib/Block/tree_menu.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/Block/tree_menu.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/Block/tree_menu.php
+--- a/nag/lib/Block/tree_menu.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/Block/tree_menu.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -39,6 +39,15 @@
                             array('icon' => 'add.png',
                                   'icondir' => $icondir,
@@ -730,9 +751,9 @@ diff -r e16c159ea616 nag/lib/Block/tree_menu.php
          }
  
          $tree->addNode($parent . '__search',
-diff -r e16c159ea616 nag/lib/Driver.php
---- a/nag/lib/Driver.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/Driver.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/Driver.php
+--- a/nag/lib/Driver.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/Driver.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -208,13 +208,14 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -896,9 +917,9 @@ diff -r e16c159ea616 nag/lib/Driver.php
 +        $this->completed = true;
 +    }
  }
-diff -r e16c159ea616 nag/lib/Driver/kolab.php
---- a/nag/lib/Driver/kolab.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/Driver/kolab.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
+--- a/nag/lib/Driver/kolab.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/Driver/kolab.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -114,17 +114,19 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -1111,9 +1132,9 @@ diff -r e16c159ea616 nag/lib/Driver/kolab.php
          $share = &$GLOBALS['nag_shares']->getShare($this->_tasklist);
          $task['owner'] = $share->get('owner');
  
-diff -r e16c159ea616 nag/lib/Driver/sql.php
---- a/nag/lib/Driver/sql.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/Driver/sql.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/Driver/sql.php
+--- a/nag/lib/Driver/sql.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/Driver/sql.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -158,13 +158,14 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -1145,9 +1166,9 @@ diff -r e16c159ea616 nag/lib/Driver/sql.php
      {
          $query = sprintf('UPDATE %s SET' .
                           ' task_creator = ?, ' .
-diff -r e16c159ea616 nag/lib/Forms/task.php
---- a/nag/lib/Forms/task.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/Forms/task.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/Forms/task.php
+--- a/nag/lib/Forms/task.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/Forms/task.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -87,6 +87,7 @@
  
          $this->addVariable(_("Private?"), 'private', 'boolean', false);
@@ -1317,9 +1338,9 @@ diff -r e16c159ea616 nag/lib/Forms/task.php
   * The Horde_Form_Type_nag_start class provides a form field for editing
   * task delayed start dates.
   *
-diff -r e16c159ea616 nag/lib/Recurrence.php
+diff -r edb3eb2593d6 nag/lib/Recurrence.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/nag/lib/Recurrence.php	Fri Aug 08 14:19:56 2008 +0200
++++ b/nag/lib/Recurrence.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,1469 @@
 +<?php
 +/**
@@ -2790,9 +2811,9 @@ diff -r e16c159ea616 nag/lib/Recurrence.php
 +    }
 +
 +}
-diff -r e16c159ea616 nag/lib/UI/VarRenderer/nag.php
---- a/nag/lib/UI/VarRenderer/nag.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/lib/UI/VarRenderer/nag.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/lib/UI/VarRenderer/nag.php
+--- a/nag/lib/UI/VarRenderer/nag.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/lib/UI/VarRenderer/nag.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -26,6 +26,147 @@
   * @package Nag
   */
@@ -2941,9 +2962,9 @@ diff -r e16c159ea616 nag/lib/UI/VarRenderer/nag.php
  
      function _renderVarInput_nag_start($form, &$var, &$vars)
      {
-diff -r e16c159ea616 nag/list.php
---- a/nag/list.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/list.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/list.php
+--- a/nag/list.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/list.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -75,10 +75,24 @@
      break;
  
@@ -2970,9 +2991,9 @@ diff -r e16c159ea616 nag/list.php
      if (is_a($tasks, 'PEAR_Error')) {
          $notification->push($tasks, 'horde.error');
          $tasks = new Nag_Task();
-diff -r e16c159ea616 nag/task.php
---- a/nag/task.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/task.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/task.php
+--- a/nag/task.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/task.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -141,6 +141,19 @@
          $cManager->add($info['category']['value']);
      }
@@ -3041,9 +3062,9 @@ diff -r e16c159ea616 nag/task.php
                  } else {
                      $notification->push(sprintf(_("%s is now incomplete."), $task->name), 'horde.success');
                  }
-diff -r e16c159ea616 nag/templates/list/task_summaries.inc
---- a/nag/templates/list/task_summaries.inc	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/templates/list/task_summaries.inc	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/templates/list/task_summaries.inc
+--- a/nag/templates/list/task_summaries.inc	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/templates/list/task_summaries.inc	Mon Aug 11 18:06:31 2008 +0200
 @@ -4,7 +4,7 @@
  if (!is_a($share, 'PEAR_Error') &&
      $share->hasPermission(Auth::getAuth(), PERMS_EDIT)) {
@@ -3053,9 +3074,9 @@ diff -r e16c159ea616 nag/templates/list/task_summaries.inc
              $label = _("Incomplete sub tasks, complete them first");
              echo Horde::img('unchecked.png', $label, array('title' => $label));
          } else {
-diff -r e16c159ea616 nag/templates/view/task.inc
---- a/nag/templates/view/task.inc	Fri Aug 08 13:11:07 2008 +0200
-+++ b/nag/templates/view/task.inc	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 nag/templates/view/task.inc
+--- a/nag/templates/view/task.inc	Mon Aug 11 14:33:35 2008 +0200
++++ b/nag/templates/view/task.inc	Mon Aug 11 18:06:31 2008 +0200
 @@ -66,6 +66,54 @@
   </tr>
  <?php endif; ?>
@@ -3111,21 +3132,21 @@ diff -r e16c159ea616 nag/templates/view/task.inc
  <?php if (strlen($task->desc)): ?>
   <tr>
    <td colspan="2" class="taskBody">
-diff -r e16c159ea616 storage/.htaccess
+diff -r edb3eb2593d6 storage/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/storage/.htaccess	Fri Aug 08 14:19:56 2008 +0200
++++ b/storage/.htaccess	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r e16c159ea616 tmp/.htaccess
+diff -r edb3eb2593d6 tmp/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/tmp/.htaccess	Fri Aug 08 14:19:56 2008 +0200
++++ b/tmp/.htaccess	Mon Aug 11 18:06:31 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r e16c159ea616 turba/config/conf.php
---- a/turba/config/conf.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/turba/config/conf.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 turba/config/conf.php
+--- a/turba/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/turba/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -3,8 +3,8 @@
  // $Horde: turba/config/conf.xml,v 1.6.2.5 2008/05/06 21:26:59 bklang Exp $
  $conf['menu']['import_export'] = true;
@@ -3138,9 +3159,9 @@ diff -r e16c159ea616 turba/config/conf.php
 -$conf['documents']['type'] = 'none';
 +$conf['documents']['type'] = 'horde';
  /* CONFIG END. DO NOT CHANGE ANYTHING IN OR BEFORE THIS LINE. */
-diff -r e16c159ea616 turba/config/sources.php
---- a/turba/config/sources.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/turba/config/sources.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 turba/config/sources.php
+--- a/turba/config/sources.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/turba/config/sources.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -149,6 +149,8 @@
   * Here are some example configurations:
   */
@@ -3384,9 +3405,9 @@ diff -r e16c159ea616 turba/config/sources.php
 +    );
 +}
 +/* End Kolab sources. */
-diff -r e16c159ea616 turba/lib/Driver.php
---- a/turba/lib/Driver.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/turba/lib/Driver.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 turba/lib/Driver.php
+--- a/turba/lib/Driver.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/turba/lib/Driver.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -1368,9 +1368,6 @@
          $hash = array();
          $attr = $vcard->getAllAttributes();
@@ -3397,9 +3418,9 @@ diff -r e16c159ea616 turba/lib/Driver.php
  
              switch ($item['name']) {
              case 'FN':
-diff -r e16c159ea616 turba/lib/Driver/share.php
---- a/turba/lib/Driver/share.php	Fri Aug 08 13:11:07 2008 +0200
-+++ b/turba/lib/Driver/share.php	Fri Aug 08 14:19:56 2008 +0200
+diff -r edb3eb2593d6 turba/lib/Driver/share.php
+--- a/turba/lib/Driver/share.php	Mon Aug 11 14:33:35 2008 +0200
++++ b/turba/lib/Driver/share.php	Mon Aug 11 18:06:31 2008 +0200
 @@ -145,7 +145,7 @@
      function _deleteAll($sourceName = null)
      {
