@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.1 2008/08/11 13:27:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.2 2008/08/11 13:42:15 dev-zero Exp $
 
 inherit autotools multilib eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 
-IUSE="alsa cups debug examples gstreamer hal old-daemons test-programs usb"
+IUSE="alsa cups debug examples gstreamer old-daemons test-programs usb"
 
 RDEPEND="
 	>=net-wireless/bluez-libs-${PV}
@@ -20,7 +20,6 @@ RDEPEND="
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
-	hal? ( sys-apps/hal )
 	usb? ( dev-libs/libusb )
 	cups? ( net-print/cups )
 	sys-fs/udev
@@ -57,7 +56,6 @@ src_compile() {
 	econf \
 		$(use_enable debug) \
 		--enable-inotify \
-		$(use_enable hal) \
 		$(use_enable usb) \
 		$(use_enable alsa) \
 		--enable-glib  \
@@ -123,7 +121,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	udevcontrol reload_rules && udevtrigger
+	udevadm control --reload_rules && udevadm trigger
 
 	elog
 	elog "To use dial up networking you must install net-dialup/ppp."
