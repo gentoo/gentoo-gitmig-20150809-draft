@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.0.ebuild,v 1.1 2007/05/29 06:42:34 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4.ebuild,v 1.1 2008/08/11 13:13:18 omp Exp $
 
 DESCRIPTION="GTK+ background browser and setter for X."
-HOMEPAGE="http://l3ib.org/nitrogen/"
-SRC_URI="http://l3ib.org/${PN}/files/${P}.tar.gz"
+HOMEPAGE="http://projects.l3ib.org/nitrogen/"
+SRC_URI="http://projects.l3ib.org/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
