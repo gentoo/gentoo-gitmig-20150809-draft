@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.22 2008/05/26 08:19:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.23 2008/08/11 18:09:03 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-runner-8.0.0.ebuild:
+  Sparc stable, part of Bug #231675.
 
   26 May 2008; Thomas Raschbacher <lordvan@gentoo.org>
   twisted-runner-8.0.0.ebuild:
