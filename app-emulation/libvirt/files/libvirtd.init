@@ -57,7 +57,7 @@ stop() {
         fi
 
     fi
-	start-stop-daemon --stop --quiet --exec /usr/sbin/libvirtd --pid-file=/var/run/libvirtd.pid
+	start-stop-daemon --stop --quiet --exec /usr/sbin/libvirtd --pidfile=/var/run/libvirtd.pid
 	eend $?
 }
 
