@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.81 2008/07/11 20:50:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.82 2008/08/11 21:13:15 gurligebis Exp $
+
+*hostapd-0.6.4 (11 Aug 2008)
+
+  11 Aug 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -files/hostapd-0.6.3-conf.d, -files/004-nl80211-rename-STAT-to-INFO.patch,
+  -files/hostapd-0.6.3-init.d, +files/hostapd-0.6.4-conf.d,
+  +files/hostapd-0.6.4-init.d, metadata.xml, -hostapd-0.6.3-r1.ebuild,
+  +hostapd-0.6.4.ebuild:
+  Bumping to version 0.6.4 and adding use flag info to metadata.xml
 
   11 Jul 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
   hostapd-0.6.3-r1.ebuild:

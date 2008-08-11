@@ -11,4 +11,8 @@
 		Extended IEEE 802.11 management, IEEE 802.1X Authenticator,
 		RADIUS Authentication client, RADIUS Accounting client
 	</longdescription>
+	<use>
+		<flag name='logwatch'>Install support files for logwatch</flag>
+		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
+	</use>
 </pkgmetadata>
