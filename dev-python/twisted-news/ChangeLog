@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.22 2008/05/25 20:28:18 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.23 2008/08/11 18:34:33 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-news-8.1.0.ebuild:
+  Sparc stable, part of Bug #231675.
 
 *twisted-news-8.1.0 (25 May 2008)
 
