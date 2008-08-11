@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.1 2008/08/11 21:25:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.2 2008/08/11 22:38:49 yngwin Exp $
 
+EAPI="1"
 inherit eutils toolchain-funcs qt4
 
 DESCRIPTION="OpenSource C++ CrossPlatform framework designed for 2d & 3d vector graphics"
@@ -18,7 +19,7 @@ DEPEND="
 	opengl? ( media-libs/glew )
 	png? ( >=media-libs/libpng-1.2.10 )
 	truetype? ( >=media-libs/freetype-2.2.1 )
-	>=x11-libs/qt-4.1.0"
+	|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )"
 
 S="${WORKDIR}/${PN}"
 

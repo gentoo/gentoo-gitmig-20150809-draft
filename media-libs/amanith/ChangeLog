@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amanith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.4 2008/08/11 21:25:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.5 2008/08/11 22:38:49 yngwin Exp $
+
+  11 Aug 2008; Ben de Groot <yngwin@gentoo.org> amanith-0.3-r2.ebuild:
+  Fix split qt4 deps wrt bug 217161.
 
 *amanith-0.3-r2 (11 Aug 2008)
 
