@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.15 2008/08/11 11:56:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.16 2008/08/11 13:52:02 dev-zero Exp $
+
+  11 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> files/libvirtd.init:
+  Removed bashism, added a progress-meter...... ;-)
 
   11 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> files/libvirtd.init:
   Corrected typo in pid-file parameter for s-s-d in init.d-file

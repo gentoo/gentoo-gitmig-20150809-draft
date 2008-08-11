@@ -48,7 +48,8 @@ stop() {
         while [ ${DOM_COUNT} -gt 0 ] && [ ${COUNTER} -gt 0 ] ; do
             DOM_COUNT="$(libvirtd_domains)"
             sleep 1
-            let COUNTER=COUNTER-1
+            COUNTER=$((${COUNTER} - 1))
+            echo -n "."
         done
 
         DOM_COUNT="$(libvirtd_domains)"
