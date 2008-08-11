@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-wifi
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.14 2007/04/07 21:35:46 genstef Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.15 2008/08/11 17:26:00 armin76 Exp $
+
+  11 Aug 2008; Raúl Porcel <armin76@gentoo.org> gkrellm-wifi-0.9.12.ebuild:
+  Add missing deps, bug #204570
 
   07 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   gkrellm-wifi-0.9.12.ebuild:
