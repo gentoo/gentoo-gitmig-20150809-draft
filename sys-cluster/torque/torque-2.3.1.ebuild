@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.1.ebuild,v 1.1 2008/07/10 03:28:56 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.1.ebuild,v 1.2 2008/08/11 17:12:05 ricmm Exp $
 
 inherit autotools flag-o-matic eutils linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.clusterresources.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="tk crypt server syslog doc cpusets kernel_linux"
 PROVIDE="virtual/pbs"
 
