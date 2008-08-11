@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>games</herd>
 <use>
-	<flag name='resid'>Enable support for ReSID
-		<pkg>media-libs/resid</pkg></flag>
+	<flag name='resid'>Enable support for ReSID <pkg>media-libs/resid</pkg></flag>
+	<flag name='xrandr'>Enable support for the X xrandr extension</flag>
 </use>
 </pkgmetadata>
