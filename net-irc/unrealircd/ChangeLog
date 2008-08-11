@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.68 2007/12/22 18:18:33 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.69 2008/08/11 21:31:36 ricmm Exp $
+
+  11 Aug 2008; Ricardo Mendoza <ricmm@gentoo.org>
+  unrealircd-3.2.7-r2.ebuild:
+  Add ~mips, bug #199362
 
   22 Dec 2007; Ulrich Mueller <ulm@gentoo.org> -unrealircd-3.2.7.ebuild:
   Remove old revision wrt bug #201682.
