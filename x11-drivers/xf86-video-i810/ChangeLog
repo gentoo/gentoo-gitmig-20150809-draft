@@ -1,6 +1,20 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.97 2008/08/03 21:50:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.98 2008/08/11 09:17:51 remi Exp $
+
+*xf86-video-i810-2.4.0-r1 (11 Aug 2008)
+
+  11 Aug 2008; Rémi Cardona <remi@gentoo.org>
+  +files/2.4.0/0007-Disable-display-clock-gating-for-4-series-chips.patch,
+  +files/2.4.0/0001-Update-DSPARB-while-planes-are-still-off.patch,
+  +files/2.4.0/0002-Reorder-visuals-reported-by-the-intel-driver.patch,
+  +files/2.4.0/0003-Don-t-program-dsparb-on-new-Intel-chip.patch,
+  +files/2.4.0/0004-Fix-SDVO-reg-definition.patch,
+  +files/2.4.0/0005-Fix-up-the-HP-Pavilion-ze4944ea-quirk.patch,
+  +files/2.4.0/0008-Fix-possible-spurious-interrupts-in-hotplug-detect-o.pat
+  ch, +files/2.4.0/0006-Fix-SDVO-HDMI-encoding-detect-16920.patch,
+  +xf86-video-i810-2.4.0-r1.ebuild:
+  add patches from the upcoming 2.4.1
 
 *xf86-video-i810-2.4.0 (03 Aug 2008)
 
