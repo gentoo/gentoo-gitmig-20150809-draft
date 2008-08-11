@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2007.01.1b.ebuild,v 1.5 2007/03/17 17:52:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2008.05.1.ebuild,v 1.1 2008/08/11 16:57:47 armin76 Exp $
 
 inherit toolchain-funcs linux-info eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ncurses"
 
 DEPEND="${RDEPEND}"
@@ -24,14 +24,16 @@ RDEPEND="net-wireless/wireless-tools
 
 src_unpack() {
 	unpack ${A}
-
-	epatch "${FILESDIR}"/${P}-Makefile.in.patch
+	cd "${S}"
 
 	sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \
-		"${S}"/conf/kismet.conf.in
+		conf/kismet.conf.in
 
-	# Remove -s from install options
-	sed -i -e 's| -s||g' "${S}"/Makefile.in
+	# Don't strip and set correct mangrp
+	sed -i -e 's| -s||g' \
+		-e 's|@mangrp@|root|g' Makefile.in
+
+	epatch "${FILESDIR}"/gcc-4.3.patch
 }
 
 src_compile() {
@@ -54,6 +56,6 @@ src_install () {
 
 	dodoc CHANGELOG README TODO docs/*
 
-	newinitd "${FILESDIR}"/${P}-init.d kismet
-	newconfd "${FILESDIR}"/${P}-conf.d kismet
+	newinitd "${FILESDIR}"/${PN}.initd kismet
+	newconfd "${FILESDIR}"/${PN}.confd kismet
 }

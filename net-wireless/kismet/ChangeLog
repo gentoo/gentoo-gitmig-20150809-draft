@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.101 2008/03/16 13:54:23 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.102 2008/08/11 16:57:47 armin76 Exp $
+
+*kismet-2008.05.1 (11 Aug 2008)
+
+  11 Aug 2008; Raúl Porcel <armin76@gentoo.org> +files/gcc-4.3.patch,
+  -files/kismet-2006.04.1-conf.d, -files/kismet-2006.04.1-init.d,
+  -files/kismet-2007.01.1b-Makefile.in.patch,
+  -files/kismet-2007.01.1b-conf.d, -files/kismet-2007.01.1b-init.d,
+  +files/kismet.confd, +files/kismet.initd, -kismet-2006.04.1.ebuild,
+  -kismet-2007.01.1b.ebuild, +kismet-2008.05.1.ebuild:
+  Version bump wrt #225487, add gcc-4.3 patch, bug #217843
 
   16 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   kismet-2007.10.1.ebuild:
