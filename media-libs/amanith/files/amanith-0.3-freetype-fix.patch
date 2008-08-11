@@ -1,9 +1,6 @@
-should be fixed upstream already
-
-http://bugs.gentoo.org/179734
-
---- amarinth/plugins/fonts/fontsimpexp.cpp
-+++ amarinth/plugins/fonts/gfontsimpexp.cpp
+diff -up amanith/plugins/fonts/gfontsimpexp.cpp.BAD amanith/plugins/fonts/gfontsimpexp.cpp
+--- amanith/plugins/fonts/gfontsimpexp.cpp.BAD	2007-11-15 10:02:49.000000000 -0500
++++ amanith/plugins/fonts/gfontsimpexp.cpp	2007-11-15 10:05:59.000000000 -0500
 @@ -34,7 +34,6 @@
  
  #include <ft2build.h>
@@ -12,17 +9,18 @@ http://bugs.gentoo.org/179734
  
  namespace Amanith {
  
-@@ -198,7 +197,8 @@
+@@ -197,8 +196,9 @@ static void LoadGlyph(GFont2D& Font, con
+ 	GFontChar2D *c;
  	GGlyphMetrics tmpMetrics;
  	FT_Error error;
- 	GInt32 i, j, k0, k1, numVert;
--	FT_SubGlyphRec subGlyph;
 +	FT_Matrix subGlyphMatrix;
 +	FT_Int subGlyphArg1, subGlyphArg2;
+ 	GInt32 i, j, k0, k1, numVert;
+-	FT_SubGlyphRec subGlyph;
  	GPoint2 p;
  	GReal x, y;
  	GVect<GReal, 2> v;
-@@ -223,19 +223,22 @@
+@@ -223,19 +223,22 @@ static void LoadGlyph(GFont2D& Font, con
  		GDynArray<GSubChar2D> subChars(Face->glyph->num_subglyphs);
  
  		for (i = 0; i < (GInt32)Face->glyph->num_subglyphs; i++) {

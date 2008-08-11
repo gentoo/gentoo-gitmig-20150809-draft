@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r1.ebuild,v 1.2 2007/06/11 04:40:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.1 2008/08/11 21:25:50 maekke Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs qt4
 
 DESCRIPTION="OpenSource C++ CrossPlatform framework designed for 2d & 3d vector graphics"
 HOMEPAGE="http://www.amanith.org/"
@@ -13,21 +13,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples jpeg opengl png truetype"
 
-DEPEND="truetype? ( >=media-libs/freetype-2.2.1 )
+DEPEND="
 	jpeg? ( >=media-libs/jpeg-6b )
-	png? ( >=media-libs/libpng-1.2.10 )
 	opengl? ( media-libs/glew )
+	png? ( >=media-libs/libpng-1.2.10 )
+	truetype? ( >=media-libs/freetype-2.2.1 )
 	>=x11-libs/qt-4.1.0"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
-	epatch "${FILESDIR}"/${P}-freetype.patch #179734
+	epatch "${FILESDIR}"/${P}-freetype-fix.patch
+	epatch "${FILESDIR}"/${P}-gcc-C++fix.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-nothirdpartystatic.patch
+	epatch "${FILESDIR}"/${P}-system-freetype.patch
+	epatch "${FILESDIR}"/${P}-system-glew.patch
+	epatch "${FILESDIR}"/${P}-system-libjpeg.patch
+	epatch "${FILESDIR}"/${P}-system-libpng.patch
 
 	rm -rf 3rdpart include/GL || die
 	sed -i -e '/SUBDIRS/s:3rdpart::' amanith.pro || die
@@ -42,17 +48,11 @@ src_unpack() {
 }
 
 src_compile() {
-	export AMANITHDIR=${S}
-	# make sure our env settings are respected
-	qmake \
-		-unix \
-		QMAKE_CC=$(tc-getCC) \
-		QMAKE_CXX=$(tc-getCXX) \
-		QMAKE_CFLAGS="${CFLAGS}" \
-		QMAKE_CXXFLAGS="${CXXFLAGS}" \
-		QMAKE_LFLAGS="${LDFLAGS}" \
-		|| die "qmake failed"
-	emake || die "emake failed"
+	export AMANITHDIR="${S}"
+	export LD_LIBRARY_PATH="${AMANITHDIR}/lib:${LD_LIBRARY_PATH}"
+
+	eqmake4 || die
+	emake || die
 }
 
 src_install() {
