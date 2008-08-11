@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.1 2008/07/04 21:16:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.2 2008/08/11 04:39:42 maekke Exp $
 
 EAPI="1"
 
@@ -14,6 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
+
+LANGS="cs de es fr it pl ru tr"
+for lang in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${lang}"
+done
 
 DEPEND="
 	media-gfx/dcraw
@@ -34,6 +39,8 @@ src_unpack() {
 	# no insane CXXFLAGS
 	sed -i -e '/QMAKE_CXXFLAGS/d' project.pro || die
 
+	# no HTML installation by qmake
+	sed -i -e '/INSTALLS/s:htmls ::' project.pro || die
 }
 
 src_compile() {
@@ -48,4 +55,8 @@ src_install() {
 	if use doc ; then
 		dohtml -r html/ || die
 	fi
+
+	for lang in ${LANGS} ; do
+		use linguas_${lang} || rm "${D}"/usr/share/${PN}/i18n/lang_${lang}.qm
+	done
 }

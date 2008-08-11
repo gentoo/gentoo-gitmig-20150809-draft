@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/qtpfsgui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.7 2008/07/04 21:16:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.8 2008/08/11 04:39:42 maekke Exp $
+
+  11 Aug 2008; Markus Meier <maekke@gentoo.org> qtpfsgui-1.9.2-r1.ebuild:
+  do not install html documentation twice and add support for LINGUAS, bug
+  #231599
 
 *qtpfsgui-1.9.2-r1 (04 Jul 2008)
 
