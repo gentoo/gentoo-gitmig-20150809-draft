@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.11.10.ebuild,v 1.1 2008/08/10 18:53:32 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.11.10.ebuild,v 1.2 2008/08/11 04:41:50 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -63,4 +63,3 @@ src_install() {
 	newinitd "${FILESDIR}"/irtrans-server.initd irtrans-server
 	newconfd "${FILESDIR}"/irtrans-server.confd irtrans-server
 }
-
