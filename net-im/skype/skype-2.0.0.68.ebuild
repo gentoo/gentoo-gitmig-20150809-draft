@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.68.ebuild,v 1.2 2008/07/28 21:28:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.68.ebuild,v 1.3 2008/08/11 18:21:17 yngwin Exp $
 
 EAPI=1
 
-inherit eutils qt4 pax-utils
+inherit eutils pax-utils qt4
 
 DESCRIPTION="A P2P-VoiceIP client."
 HOMEPAGE="http://www.skype.com/"
@@ -40,7 +40,8 @@ DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 				x11-libs/libXrandr
 				x11-libs/libXrender
 				x11-libs/libX11 )
-		!qt-static? ( =x11-libs/qt-4.3*:4
+		!qt-static? ( || ( ( x11-libs/qt-gui:4 x11-libs/qt-dbus:4 )
+					=x11-libs/qt-4.3*:4 )
 				x11-libs/libX11
 				x11-libs/libXau
 				x11-libs/libXdmcp ) )"
@@ -49,17 +50,7 @@ RDEPEND="${DEPEND}"
 QA_EXECSTACK="opt/skype/skype"
 
 use qt-static && S="${WORKDIR}/${PN}_static-${PV}"
-
-pkg_setup() {
-	if ! use qt-static && ! built_with_use ">=x11-libs/qt-4.0" accessibility dbus ; then
-		eerror "Rebuild qt-4 with USE=\"accessibility dbus\" or set USE=qt-static"
-		die "USE=\"-qt-static\" only works with qt-4 built with USE=\"accessibility dbus\"."
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-}
+use !qt-static && QT4_BUILT_WITH_USE_CHECK="guiaccessibility dbus"
 
 src_install() {
 	# remove mprotect() restrictions for PaX usage - see Bug 100507
