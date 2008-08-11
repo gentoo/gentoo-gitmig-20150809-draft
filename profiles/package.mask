@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8871 2008/08/09 21:57:52 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8872 2008/08/11 14:38:38 kingtaco Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Doty <kingtaco@gentoo.org> (11 Aug 2008)
+# Masked due to build failure, bug 234448
+=app-emulation/emul-linux-x86-gtklibs-20080810
 
 # Jeremy Olexa <darkside@gentoo.org> (9 Aug 2008)
 # Masked for removal in 60 days. No distfile on the mirrors for the latest
