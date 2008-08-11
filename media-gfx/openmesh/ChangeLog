@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openmesh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.5 2007/05/22 14:08:39 dsd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.6 2008/08/11 23:40:23 yngwin Exp $
+
+  11 Aug 2008; Ben de Groot <yngwin@gentoo.org> openmesh-1.0.0.ebuild,
+  openmesh-1.9.4-r1.ebuild, openmesh-1.9.5.ebuild:
+  Fix split qt4 deps wrt bug 217161.
 
 *openmesh-1.9.5 (22 May 2007)
 
