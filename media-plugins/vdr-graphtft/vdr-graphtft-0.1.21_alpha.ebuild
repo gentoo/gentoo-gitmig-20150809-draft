@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha.ebuild,v 1.1 2008/08/10 18:26:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha.ebuild,v 1.2 2008/08/11 04:42:12 mr_bones_ Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -57,7 +57,6 @@ src_unpack() {
 
 	has_version ">=media-video/ffmpeg-0.4.9_p20080326" \
 	&& epatch "${FILESDIR}/${PN}-0.1.18_alpha-ffmpeg-0.4.9_p20080326-new_header.diff"
-
 
 	has_version ">=media-gfx/imagemagick-6.4" \
 	&& epatch "${FILESDIR}/${PN}-0.1.18_alpha-imagemagick-6.4-new_header.diff"
