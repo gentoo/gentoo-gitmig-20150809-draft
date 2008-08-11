@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1.ebuild,v 1.12 2007/06/24 21:48:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1.ebuild,v 1.13 2008/08/11 19:08:06 yngwin Exp $
 
 inherit distutils
 
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="debug doc"
 
 DEPEND="virtual/libc
-	x11-libs/qt
+	=x11-libs/qt-3*
 	>=dev-lang/python-2.3"
 
 src_compile(){
