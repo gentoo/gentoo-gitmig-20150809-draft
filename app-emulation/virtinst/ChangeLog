@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.5 2008/05/15 10:24:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.6 2008/08/11 15:14:47 dev-zero Exp $
+
+*virtinst-0.300.3-r1 (11 Aug 2008)
+
+  11 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +virtinst-0.300.3-r1.ebuild:
+  Added a patchset (patches mostly from Ubuntu) which adds virtio_net/blk
+  support.
 
 *virtinst-0.300.3 (15 May 2008)
 
