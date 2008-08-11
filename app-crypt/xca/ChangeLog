@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.14 2008/06/19 12:04:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.15 2008/08/11 17:37:24 yngwin Exp $
+
+  11 Aug 2008; Ben de Groot <yngwin@gentoo.org> xca-0.6.4.ebuild:
+  Fix split qt4 deps wrt bug 217161.
 
   19 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> xca-0.6.4.ebuild:
   Added LDFLAGS=$(raw-ldflags) since they get passed directly to the linker
