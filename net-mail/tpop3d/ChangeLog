@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.25 2008/05/21 18:59:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.26 2008/08/11 21:26:11 griffon26 Exp $
+
+*tpop3d-1.5.4-r1 (11 Aug 2008)
+
+  11 Aug 2008; Maurice van der Pot <griffon26@gentoo.org>
+  +files/tpop3d-1.5.4.init, +tpop3d-1.5.4-r1.ebuild:
+  The --background option to start-stop-daemon is no longer needed for
+  tpop3d-1.5.4 (see bug #76027) and it was causing the init script to report an
+  error while tpop3d actually started successfully.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> tpop3d-1.5.3.ebuild,
   tpop3d-1.5.3-r1.ebuild, tpop3d-1.5.4.ebuild:
