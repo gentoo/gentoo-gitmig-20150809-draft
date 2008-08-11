@@ -1,6 +1,38 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.98 2008/08/11 09:17:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.99 2008/08/11 09:23:00 remi Exp $
+
+  11 Aug 2008; Rémi Cardona <remi@gentoo.org>
+  -files/2.3.1/0001-Skip-copying-on-FOURCC_XVMC-surfaces.patch,
+  -files/2.3.1/0002-Only-use-FOURCC_XVMC-when-INTEL_XVMC-is-defined.patch,
+  -files/2.3.1/0003-Panel-fitting-fix-letterbox-modes.patch,
+  -files/2.3.1/0004-Add-glproto-to-DRI-dependencies.patch,
+  -files/2.3.1/0005-Revert-Add-FIFO-watermark-regs-to-register-dumper.patch,
+  -files/2.3.1/0006-Fix-typo-in-xvmc-block-destroy.patch,
+  -files/2.3.1/0007-Define-DEFFILEMODE-for-OS-es-that-don-t-have-it.patch,
+  -files/2.3.1/0008-Disable-a-bunch-of-clock-gating-disables-on-IGD_GM.patch
+  , -files/2.3.1/0009-Fixup-power-saving-registers.patch,
+  -files/2.3.1/0010-xvmc-remove-unused-dri-drawable.patch,
+  -files/2.3.1/0011-xvmc-a-little-cleanup.patch,
+  -files/2.3.1/0012-Set-SDVO-sync-polarity-to-default-on-965.patch,
+  -files/2.3.1/0013-Just-remove-the-mprotect-kludge.patch,
+  -files/2.3.1/0014-Replace-a-couple-of-wait-for-ring-idles-with-a-singl.pat
+  ch,
+  -files/2.3.1/0015-Remove-duplicated-i830_stop_ring-SetHWOperatingSta.patch
+  ,
+  -files/2.3.1/0016-Remove-gratuitous-wait_ring_idle-after-I830Sync.-Sy.patc
+  h,
+  -files/2.3.1/0017-Move-BIOS-scratch-register-setup-to-EnterVT-instead.patc
+  h,
+  -files/2.3.1/0018-Initialize-clock-gating-from-EnterVT-and-save-restor.pat
+  ch, -files/2.3.1/0019-Remove-SVG_WORK_CONTROL-init.patch,
+  -files/2.3.1/0020-Move-debug-clock-printout-from-ErrorF-to-X_INFO.patch,
+  -files/2.3.1/0021-Fix-TV-out-connection-type-detection.patch,
+  -files/2.3.1/0022-Fix-TV-programming-add-vblank-wait-after-TV_CTL-wr.patch
+  , -files/2.3.1/0023-Two-more-Dell-quirks.patch,
+  -files/2.3.1/0024-Set-up-restore-PWRCTXA-from-enter-leavevt-not-server.pat
+  ch, -files/2.3.1/0025-Fix-compiler-warning-when-disable-xvmc-config.patch:
+  clean up unused patches
 
 *xf86-video-i810-2.4.0-r1 (11 Aug 2008)
 
