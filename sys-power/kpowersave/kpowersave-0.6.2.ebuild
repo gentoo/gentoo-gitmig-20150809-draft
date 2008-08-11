@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.6.2.ebuild,v 1.10 2007/05/14 21:31:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.6.2.ebuild,v 1.11 2008/08/11 17:21:11 armin76 Exp $
 
 inherit kde
 
@@ -18,7 +18,8 @@ RDEPEND=">=sys-apps/hal-0.5.4
 	x11-libs/libXScrnSaver
 	x11-libs/libXext
 	x11-libs/libXtst
-	>=sys-power/powersave-0.11.5"
+	>=sys-power/powersave-0.11.5
+	>=kde-base/kdelibs-3"
 DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto"
 
