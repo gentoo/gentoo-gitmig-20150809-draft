@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powersave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.22 2007/12/20 15:42:42 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.23 2008/08/11 17:17:25 armin76 Exp $
+
+  11 Aug 2008; Raúl Porcel <armin76@gentoo.org> powersave-0.14.0.ebuild,
+  powersave-0.15.11.ebuild:
+  Add pkgconfig dep, bug #204691
 
   20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org>
   powersave-0.14.0.ebuild, powersave-0.15.11.ebuild:
