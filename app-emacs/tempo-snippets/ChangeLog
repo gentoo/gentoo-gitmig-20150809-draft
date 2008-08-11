@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tempo-snippets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tempo-snippets/ChangeLog,v 1.1 2008/07/30 13:42:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tempo-snippets/ChangeLog,v 1.2 2008/08/11 16:04:22 ulm Exp $
+
+*tempo-snippets-0.1.5 (11 Aug 2008)
+
+  11 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +tempo-snippets-0.1.5.ebuild:
+  Version bump.
 
 *tempo-snippets-0.1.4 (30 Jul 2008)
 
