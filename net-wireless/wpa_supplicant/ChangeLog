@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.106 2008/06/03 02:26:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.107 2008/08/11 11:52:50 armin76 Exp $
+
+  11 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  wpa_supplicant-0.5.10.ebuild, wpa_supplicant-0.6.3.ebuild:
+  Add qt split deps, bug #217178, patch by Jorge Manuel B. S. Vicetto
+  <jmbsvicetto at gentoo dot org>
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   wpa_supplicant-0.5.7.ebuild, wpa_supplicant-0.5.8.ebuild,

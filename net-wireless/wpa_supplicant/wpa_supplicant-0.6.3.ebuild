@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.3.ebuild,v 1.2 2008/06/03 02:26:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.3.ebuild,v 1.3 2008/08/11 11:52:50 armin76 Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +25,12 @@ RDEPEND="dbus? ( sys-apps/dbus )
 			)
 		)
 		!kernel_linux? ( net-libs/libpcap )
-		qt4? ( =x11-libs/qt-4* )
+		qt4? (
+			|| ( ( x11-libs/qt-core:4
+					x11-libs/qt-gui:4 )
+					<x11-libs/qt-4.4:4
+			)
+		)
 		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
 		ssl? ( dev-libs/openssl )
