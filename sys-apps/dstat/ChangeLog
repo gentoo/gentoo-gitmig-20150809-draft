@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.25 2008/04/21 16:52:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.26 2008/08/11 21:39:37 ricmm Exp $
+
+  11 Aug 2008; Ricardo Mendoza <ricmm@gentoo.org> dstat-0.6.7.ebuild:
+  Add ~mips, bug #151156
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> dstat-0.6.7.ebuild:
   Add ~sparc wrt #218738
