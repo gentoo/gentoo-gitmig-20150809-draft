@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.31 2007/06/10 14:56:46 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.32 2008/08/11 05:35:30 mr_bones_ Exp $
+
+  11 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/bsd-games-2.17-gcc43.patch, bsd-games-2.17-r3.ebuild:
+  fix building with gcc43 (bug #229759 with patch submitted by Ewan Marshall)
 
   10 Jun 2007; Tristan Heaven <nyhm@gentoo.org> bsd-games-2.17-r2.ebuild,
   bsd-games-2.17-r3.ebuild:
