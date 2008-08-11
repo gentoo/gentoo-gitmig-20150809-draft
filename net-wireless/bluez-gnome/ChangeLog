@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.31 2008/05/13 13:03:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.32 2008/08/11 13:28:03 dev-zero Exp $
+
+*bluez-gnome-0.28 (11 Aug 2008)
+
+  11 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +bluez-gnome-0.28.ebuild:
+  Version bump.
 
   13 May 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove proxy maintainer as he doesn't use Gentoo any more.
