@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.26 2008/08/08 03:09:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.27 2008/08/11 18:23:58 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-names-8.1.0.ebuild:
+  Sparc stable, part of Bug #231675.
 
   08 Aug 2008; Jeroen Roovers <jer@gentoo.org> twisted-names-8.1.0.ebuild:
   Stable for HPPA (bug #231675).
