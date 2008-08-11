@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.4 2008/07/28 21:11:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.5 2008/08/11 19:39:31 yngwin Exp $
 
 EAPI=1
 
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND="=x11-libs/qt-4.3*:4
-	>=x11-libs/qscintilla-2.1-r1
+RDEPEND=">=x11-libs/qscintilla-2.1-r1
 	!kde-base/smoke" # yes, this IS required, installs a bundled QT4-compatible copy
 
 DEPEND="${RDEPEND}
