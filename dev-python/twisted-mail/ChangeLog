@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.28 2008/08/08 03:10:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.29 2008/08/11 18:32:18 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-mail-8.1.0.ebuild:
+  Sparc stable, all tests good (part of Bug #231675).
 
   08 Aug 2008; Jeroen Roovers <jer@gentoo.org> twisted-mail-8.1.0.ebuild:
   Stable for HPPA (bug #231675).

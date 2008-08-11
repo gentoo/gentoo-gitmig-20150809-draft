@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.30 2008/05/26 07:59:28 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.31 2008/08/11 18:30:44 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-conch-8.1.0.ebuild:
+  Sparc stable, all tests good (part of Bug #231675).
 
 *twisted-conch-8.1.0 (25 May 2008)
 

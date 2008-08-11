@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.23 2008/05/25 20:24:52 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.24 2008/08/11 18:36:16 fmccor Exp $
+
+  11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  twisted-lore-8.1.0.ebuild:
+  Sparc stable, all tests good (part of Bug #231675).
 
 *twisted-lore-8.1.0 (25 May 2008)
 
