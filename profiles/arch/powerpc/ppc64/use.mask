@@ -1,2 +1,7 @@
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
+# Raúl Porcel <armin76@gentoo.org> (11 Aug 2008)
+# Missing keyword on net-wireless/madwifi
+madwifi
+
+

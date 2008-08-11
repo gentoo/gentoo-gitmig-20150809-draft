@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.16 2008/07/26 07:59:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.17 2008/08/11 11:57:46 armin76 Exp $
+
+  11 Aug 2008; Raúl Porcel <armin76@gentoo.org> ppc64/use.mask:
+  Use.mask madwifi on ppc64 since it doesn't have madwifi keyworded
 
   26 Jul 2008; Markus Rothe <corsair@gentoo.org> package.use.mask,
   ppc64/package.use.mask:
