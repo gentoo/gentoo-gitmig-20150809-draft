@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.0.ebuild,v 1.2 2008/05/21 21:20:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.0.ebuild,v 1.3 2008/08/12 00:26:00 yngwin Exp $
 
+EAPI=1
 RESTRICT="mirror"
 
 inherit toolchain-funcs multilib
@@ -18,7 +19,7 @@ IUSE="python"
 DEPEND=">=dev-util/cmake-2.4.8
 	>=dev-cpp/eigen-1.0.5
 	${RDEPEND}"
-RDEPEND=">=x11-libs/qt-4.3.0
+RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3* )
 	>=sci-chemistry/openbabel-2.2.0_beta5
 	python? ( >=dev-lang/python-2.5 >=dev-libs/boost-1.34 )"
 

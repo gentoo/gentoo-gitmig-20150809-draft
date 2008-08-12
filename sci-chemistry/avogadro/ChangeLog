@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.13 2008/07/10 13:16:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.14 2008/08/12 00:26:00 yngwin Exp $
+
+  12 Aug 2008; Ben de Groot <yngwin@gentoo.org> avogadro-0.6.1.ebuild,
+  avogadro-0.8.0.ebuild, avogadro-0.8.1.ebuild:
+  Fix split qt4 deps wrt bug 217161.
 
 *avogadro-0.8.1 (10 Jul 2008)
 
