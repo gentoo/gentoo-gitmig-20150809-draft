@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.3.ebuild,v 1.4 2008/08/10 17:31:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.22.3.ebuild,v 1.5 2008/08/12 14:13:12 armin76 Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://raphael.slinckx.net/deskbar/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="eds spell"
 
 # TODO: check if gnome-doc-utils doesn't imply scrollkeeper
