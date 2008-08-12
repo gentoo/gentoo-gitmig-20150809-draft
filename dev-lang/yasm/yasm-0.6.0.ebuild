@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.0.ebuild,v 1.4 2007/07/13 00:25:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.0.ebuild,v 1.5 2008/08/12 18:13:57 beandog Exp $
 
 inherit versionator
 
@@ -18,7 +18,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Remove macho tests (gas{32,64},nasm{32,64}) until fixed upstream.
 	# Necessary to pass test phase on at least amd64 with gcc-4.1.2.
 	sed -i \
