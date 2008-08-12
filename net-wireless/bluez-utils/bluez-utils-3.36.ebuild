@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.3 2008/08/12 14:09:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.4 2008/08/12 14:19:25 dev-zero Exp $
 
 inherit autotools multilib eutils
 
@@ -29,6 +29,7 @@ RDEPEND="
 DEPEND="
 	!<dev-libs/libnl-1.1
 	sys-devel/flex
+	dev-util/pkgconfig
 	${RDEPEND}"
 
 src_unpack() {
