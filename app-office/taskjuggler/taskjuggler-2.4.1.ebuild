@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.1.ebuild,v 1.1 2008/07/27 09:32:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.1.ebuild,v 1.2 2008/08/12 04:08:36 dberkholz Exp $
 
-inherit eutils qt3
+inherit eutils qt3 flag-o-matic
 
 DESCRIPTION="project management tool for Linux and UNIX system-based operating systems"
 SRC_URI="http://www.taskjuggler.org/download/${P}.tar.bz2"
@@ -50,6 +50,9 @@ src_compile() {
 		|| myconf="${myconf}=no"
 
 	myconf="${myconf} `use_with arts`"
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=35725#c36
+	filter-flags -funsafe-math-optimizations -ffast-math
 
 	econf \
 		${myconf} \

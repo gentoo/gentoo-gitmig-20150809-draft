@@ -1,6 +1,11 @@
 # ChangeLog for app-office/taskjuggler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.10 2008/07/27 09:32:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.11 2008/08/12 04:08:36 dberkholz Exp $
+
+  12 Aug 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  taskjuggler-2.4.1.ebuild:
+  (#35725) Filter a couple of CFLAGS that slightly change results in the
+  test suite and break it.
 
 *taskjuggler-2.4.1 (27 Jul 2008)
 
