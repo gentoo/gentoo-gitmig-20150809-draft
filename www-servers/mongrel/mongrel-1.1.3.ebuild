@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.3.ebuild,v 1.6 2008/01/22 10:16:27 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.3.ebuild,v 1.7 2008/08/12 06:00:36 graaff Exp $
 
 inherit gems
 
 DESCRIPTION="A small fast HTTP library and server that runs Rails, Camping, and Nitro apps"
 HOMEPAGE="http://mongrel.rubyforge.org/"
 
-LICENSE="mongrel"
+LICENSE="|| ( mongrel GPL-2 )"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
