@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.550 2008/08/12 20:38:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.551 2008/08/12 20:42:48 aballier Exp $
+
+  12 Aug 2008; Alexis Ballier <aballier@gentoo.org> -xine-lib-1.1.14.ebuild:
+  remove unused version
 
   12 Aug 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   add missing entries for local useflags descriptions from use.local.desc
