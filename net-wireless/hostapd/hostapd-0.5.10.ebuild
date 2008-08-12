@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.5.10.ebuild,v 1.2 2008/06/03 02:01:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.5.10.ebuild,v 1.3 2008/08/12 15:29:28 ranger Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 IUSE="ipv6 logwatch madwifi ssl"
 
