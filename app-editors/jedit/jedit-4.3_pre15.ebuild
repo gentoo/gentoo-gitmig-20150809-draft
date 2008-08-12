@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre11.ebuild,v 1.1 2007/11/17 22:50:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre15.ebuild,v 1.1 2008/08/12 14:08:01 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -17,15 +17,13 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND=">=virtual/jre-1.5
-	=dev-java/gnu-regexp-1*"
+RDEPEND=">=virtual/jre-1.5"
 DEPEND=">=virtual/jdk-1.5
 	doc? (
 		=app-text/docbook-xml-dtd-4.3*
 		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
-	)
-	=dev-java/gnu-regexp-1*"
+	)"
 
 S="${WORKDIR}/jEdit"
 
@@ -50,15 +48,13 @@ src_unpack() {
 		echo "docbook.xsl=${xsl}" >> build.properties
 	fi
 
-	# remove bundled sources
-	rm -r gnu/* # gnu-regexp
 	# still need to do: bsh, com.microstar.xml.*, org.gjt.*
 	java-pkg_filter-compiler jikes
 }
 src_compile() {
 	# TODO could build more docs, ie userdocs target instead of generate-javadoc
 	eant build $(use_doc generate-javadoc) \
-		-Dgentoo.classpath=$(java-pkg_getjars gnu-regexp-1):$(java-config --tools)
+		-Dgentoo.classpath=$(java-config --tools)
 }
 
 src_install () {
@@ -68,7 +64,7 @@ src_install () {
 
 	java-pkg_regjar ${JEDIT_HOME}/${PN}.jar
 
-	java-pkg_dolauncher ${PN} --pwd ${JEDIT_HOME} --main org.gjt.sp.jedit.jEdit
+	java-pkg_dolauncher ${PN} --main org.gjt.sp.jedit.jEdit
 
 	use doc && java-pkg_dojavadoc build/classes/javadoc/api
 
@@ -85,6 +81,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog "The system directory for jEdit plugins is"
 	elog "${JEDIT_HOME}/jars"
+	elog "If you get plugin related errors on startup, first try updating them."
 }
 
 pkg_postrm() {
