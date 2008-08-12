@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.248 2008/07/27 21:44:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.249 2008/08/12 03:28:35 cardoe Exp $
+
+*mythtv-0.21_p18116 (12 Aug 2008)
+
+  12 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.21_p18116.ebuild:
+  newer 0.21.x version from upstream. fixes DVD/CD mounting issues. Fixes
+  jobsqueue error. fixes empty database creation
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
   mythtv-0.20.2_p15634.ebuild:
