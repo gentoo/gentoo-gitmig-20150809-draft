@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.14 2008/06/19 21:46:22 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.15 2008/08/12 13:00:27 fmccor Exp $
+
+  12 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
+  lksctp-tools-1.0.8.ebuild:
+  Sparc stable, needed for Bug #231553 (this package builds lots of tests but
+  doesn't do anything with them).
 
   19 Jun 2008; Friedrich Oslage <bluebird@gentoo.org>
   lksctp-tools-1.0.8.ebuild:
