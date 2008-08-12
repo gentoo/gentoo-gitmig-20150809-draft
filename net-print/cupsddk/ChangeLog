@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cupsddk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/ChangeLog,v 1.6 2008/08/12 15:33:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/ChangeLog,v 1.7 2008/08/12 15:35:59 ranger Exp $
+
+  12 Aug 2008; Brent Baude <ranger@gentoo.org> cupsddk-1.2.3.ebuild:
+  Marking cupsddk ppc stable.  Skipping normal 30 day wait due to security 
+  issue.  See bug 234069
 
   12 Aug 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking 234069 ~ppc for bug cupsddk-1.2.3.ebuild
