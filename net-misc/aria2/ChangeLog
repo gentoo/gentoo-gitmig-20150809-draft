@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.27 2008/07/31 19:25:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.28 2008/08/12 10:30:43 dev-zero Exp $
+
+*aria2-0.15.1_p2 (12 Aug 2008)
+
+  12 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/0.13.1_p2-missing_includes.patch, -files/0.13.1-broken_tests.patch,
+  -aria2-0.13.1_p2.ebuild, -aria2-0.15.1.ebuild, +aria2-0.15.1_p2.ebuild:
+  Version bump (fixes segfault with metalink), dropped old versions.
 
 *aria2-0.15.1 (31 Jul 2008)
 

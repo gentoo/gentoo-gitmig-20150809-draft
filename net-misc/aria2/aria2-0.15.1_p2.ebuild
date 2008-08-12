@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.15.1.ebuild,v 1.1 2008/07/31 19:25:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.15.1_p2.ebuild,v 1.1 2008/08/12 10:30:43 dev-zero Exp $
 
 MY_P="aria2c-${PV/_p/+}"
 
