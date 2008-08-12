@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r2.ebuild,v 1.1 2008/08/01 15:18:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r2.ebuild,v 1.2 2008/08/12 20:11:13 phosphan Exp $
 
 inherit eutils
 
@@ -100,7 +100,8 @@ src_unpack() {
 	fi
 	epatch "${FILESDIR}"/udev-rule-5.patch
 	epatch "${FILESDIR}"/fujitsu_DBG_LEVEL.patch
-	epatch "${FILESDIR}"/epson2fixes-"${PV}".patch
+	epatch "${FILESDIR}/epson2fixes-${PV}".patch
+	epatch "${FILESDIR}/parallel-install-${PV}".patch
 	cat >> backend/dll.conf.in <<-EOF
 	# Add support for the HP-specific backend.  Needs net-print/hplip installed.
 	hpaio

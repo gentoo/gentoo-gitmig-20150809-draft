@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.147 2008/08/06 19:31:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.148 2008/08/12 20:11:13 phosphan Exp $
+
+  12 Aug 2008; Patrick Kursawe <phosphan@gentoo.org>
+  +files/parallel-install-1.0.19.patch, sane-backends-1.0.19-r2.ebuild:
+  Fix for parallel install jobs, see bug #228937
 
   06 Aug 2008; Markus Meier <maekke@gentoo.org>
   sane-backends-1.0.19-r1.ebuild:
