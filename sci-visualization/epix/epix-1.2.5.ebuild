@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.2.ebuild,v 1.1 2008/01/14 11:40:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.5.ebuild,v 1.1 2008/08/12 13:02:17 markusle Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
