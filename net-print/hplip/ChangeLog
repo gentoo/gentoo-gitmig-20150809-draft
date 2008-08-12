@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.105 2008/08/07 12:57:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.106 2008/08/12 15:53:28 ranger Exp $
+
+  12 Aug 2008; Brent Baude <ranger@gentoo.org> hplip-2.8.6b.ebuild:
+  Marking hplip-2.8.6b ppc stable.  Went direct to stable per security 
+  request in bug 233968.
 
   07 Aug 2008; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Implemented GLEP 56.
