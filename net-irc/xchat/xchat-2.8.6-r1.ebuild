@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6-r1.ebuild,v 1.4 2008/08/12 10:55:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6-r1.ebuild,v 1.5 2008/08/12 13:26:06 ranger Exp $
 
 inherit eutils versionator gnome2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="perl dbus tcl python ssl mmx ipv6 libnotify nls spell xchatnogtk xchatdccserver xft"
 
 RDEPEND=">=dev-libs/glib-2.6.0
