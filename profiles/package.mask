@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8872 2008/08/11 14:38:38 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8873 2008/08/12 01:01:57 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -354,10 +354,6 @@ virtual/libffi
 # Beta versions, need testing
 >=app-office/lyx-1.6.0_beta
 
-# Ben de Groot <yngwin@gentoo.org> (04 Jun 2008)
-# depends on p.masked qt-webkit-4.4
-www-client/arora
-
 # Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
 # o Fails its own tests in horrendous ways (buuh!)
 =dev-libs/xmlrpc-c-1.15*
@@ -389,10 +385,6 @@ net-dns/resolvconf-gentoo
 # Rémi Cardona <remi@gentoo.org> (27 Mai 2008)
 # mildly broken, see bug #156583
 =app-text/gtranslator-1.1.7
-
-# Ingmar Vanhassel <ingmar@gentoo.org (25 May 2008)
-# Needs Qt-4.4.0, which is package.mask'ed.
->=dev-python/PyQt4-4.4.2
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
@@ -1068,21 +1060,23 @@ dev-lang/entity
 
 # Ingmar Vanhassel <ingmar@gentoo.org> (10 Mar 2008)
 # Masked for testing, various dependencies still need to be updated...
-=x11-libs/qt-4.4*
-=x11-libs/qt-assistant-4.4*
-=x11-libs/qt-core-4.4*
-=x11-libs/qt-demo-4.4*
-=x11-libs/qt-gui-4.4*
-=x11-libs/qt-script-4.4*
-=x11-libs/qt-test-4.4*
-=x11-libs/qt-svg-4.4*
-=x11-libs/qt-webkit-4.4*
-=x11-libs/qt-phonon-4.4*
-=x11-libs/qt-qt3support-4.4*
-=x11-libs/qt-dbus-4.4*
-=x11-libs/qt-opengl-4.4*
-=x11-libs/qt-sql-4.4*
-=x11-libs/qt-xmlpatterns-4.4*
+# yngwin 12 Aug 08: unmasking only 4.4.1, leaving 4.4.0 in place for
+# the moment, pending later removal
+~x11-libs/qt-4.4.0
+~x11-libs/qt-assistant-4.4.0
+~x11-libs/qt-core-4.4.0
+~x11-libs/qt-demo-4.4.0
+~x11-libs/qt-gui-4.4.0
+~x11-libs/qt-script-4.4.0
+~x11-libs/qt-test-4.4.0
+~x11-libs/qt-svg-4.4.0
+~x11-libs/qt-webkit-4.4.0
+~x11-libs/qt-phonon-4.4.0
+~x11-libs/qt-qt3support-4.4.0
+~x11-libs/qt-dbus-4.4.0
+~x11-libs/qt-opengl-4.4.0
+~x11-libs/qt-sql-4.4.0
+~x11-libs/qt-xmlpatterns-4.4.0
 
 # Jeroen Roovers <jer@gentoo.org> (17 Dec 2007)
 # Masked pending removal - see bug #202391
