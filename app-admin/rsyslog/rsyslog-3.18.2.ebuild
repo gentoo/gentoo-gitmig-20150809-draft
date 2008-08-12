@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.16.1.ebuild,v 1.2 2008/06/03 07:15:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.18.2.ebuild,v 1.1 2008/08/12 08:52:40 dev-zero Exp $
 
 inherit eutils versionator
 
@@ -27,7 +27,8 @@ BRANCH="3-stable"
 src_compile() {
 	# Maintainer notes:
 	# * rsyslog-3 doesn't support single threading anymore
-	# * rfc3195 needs a library
+	# * rfc3195 needs a library and development of that library
+	#   is suspended
 	econf \
 		--enable-largefile \
 		--enable-regexp \
@@ -40,11 +41,13 @@ src_compile() {
 		--enable-fsstnd \
 		$(use_enable debug) \
 		$(use_enable debug rtinst) \
+		$(use_enable debug valgrind) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql) \
 		$(use_enable dbi libdbi) \
 		$(use_enable snmp) \
 		--enable-rsyslogd \
+		--enable-mail \
 		$(use_enable relp) \
 		--disable-rfc3195 \
 		--enable-imfile \
