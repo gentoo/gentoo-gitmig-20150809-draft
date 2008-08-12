@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.23 2008/08/11 18:09:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.24 2008/08/12 18:49:01 armin76 Exp $
+
+  12 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  twisted-runner-8.0.0.ebuild:
+  alpha/ia64/x86 stable wrt #231675
 
   11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
   twisted-runner-8.0.0.ebuild:

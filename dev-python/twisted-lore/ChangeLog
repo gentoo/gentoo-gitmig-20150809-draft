@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.24 2008/08/11 18:36:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.25 2008/08/12 18:41:26 armin76 Exp $
+
+  12 Aug 2008; Raúl Porcel <armin76@gentoo.org> twisted-lore-8.1.0.ebuild:
+  alpha/ia64/x86 stable wrt #231675
 
   11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
   twisted-lore-8.1.0.ebuild:
