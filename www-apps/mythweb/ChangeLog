@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.60 2008/04/01 04:01:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.61 2008/08/12 23:59:44 cardoe Exp $
+
+*mythweb-0.21_p17573 (12 Aug 2008)
+
+  12 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythweb-0.20.2_p14282.ebuild, -mythweb-0.21_p16468.ebuild,
+  +mythweb-0.21_p17573.ebuild:
+  fix ogg/m4a music streaming
 
 *mythweb-0.21_p16809 (01 Apr 2008)
 
