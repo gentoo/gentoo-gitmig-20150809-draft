@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.128 2008/08/11 13:42:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.129 2008/08/12 14:09:37 dev-zero Exp $
+
+  12 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
+  bluez-utils-3.36.ebuild:
+  Reworked the parameter list for configure (bug #234516), 'dobin'
+  test-binaries conditionally (bug #162715).
 
   11 Aug 2008; Tiziano Müller <dev-zero@gentoo.org>
   bluez-utils-3.36.ebuild:

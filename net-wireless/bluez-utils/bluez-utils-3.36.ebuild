@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.2 2008/08/11 13:42:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.3 2008/08/12 14:09:37 dev-zero Exp $
 
 inherit autotools multilib eutils
 
@@ -47,41 +47,32 @@ src_compile() {
 
 	# we don't need the other daemons either with the new
 	# service architechture
-	# hcid has in integrated sdpd now that we use
-
-	# These are currently under work and don't work properly:
-	# --enable-sync
-	# --enable-obex
 
 	econf \
-		$(use_enable debug) \
-		--enable-inotify \
-		$(use_enable usb) \
-		$(use_enable alsa) \
-		--enable-glib  \
-		$(use_enable gstreamer) \
-		--disable-obex \
+		--enable-glib \
 		--enable-network \
 		--enable-serial \
 		--enable-input \
 		--enable-audio \
-		--disable-sync \
-		$(use_enable examples echo) \
-		--enable-hcid \
-		$(use_enable test-programs test) \
-		$(use_enable old-daemons sdpd) \
+		$(use_enable gstreamer) \
+		$(use_enable alsa) \
+		$(use_enable usb) \
+		--enable-netlink \
+		--enable-tools \
+		--enable-bccmd \
+		--enable-hid2hci \
+		--enable-dfutool \
 		$(use_enable old-daemons hidd) \
 		$(use_enable old-daemons pand) \
+		$(use_enable old-daemons dund) \
 		$(use_enable cups) \
+		$(use_enable test-programs test) \
+		--enable-manpages \
 		--enable-configfiles \
 		--disable-initscripts \
 		--disable-pcmciarules \
-		--enable-bccmd \
-		--enable-avctrl \
-		--enable-hid2hci \
-		--enable-dfutool \
-		--localstatedir=/var \
-		|| die "econf failed"
+		$(use_enable debug) \
+		--localstatedir=/var
 
 	emake || die "emake failed"
 }
@@ -91,12 +82,12 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README || die
 
-	# a very simple example daemon
-	dobin test/passkey-agent || die
-	dobin test/auth-agent || die
-
 	if use test-programs ; then
 		dobin input/test-input || die
+
+		# a very simple example daemon
+		dobin test/passkey-agent || die
+		dobin test/auth-agent || die
 	fi
 
 	newinitd "${FILESDIR}/3.11/bluetooth-init.d" bluetooth || die
