@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.1 2008/05/17 20:52:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.2 2008/08/12 11:35:49 armin76 Exp $
+
+  12 Aug 2008; Raúl Porcel <armin76@gentoo.org> parcellite-0.7.ebuild:
+  Add ~x86 wrt #223403
 
 *parcellite-0.7 (17 May 2008)
 
