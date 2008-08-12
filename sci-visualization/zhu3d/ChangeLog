@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/zhu3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.6 2008/07/27 02:14:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.7 2008/08/12 12:52:42 markusle Exp $
+
+*zhu3d-4.1.0 (12 Aug 2008)
+
+  12 Aug 2008; Markus Dittrich <markusle@gentoo.org> +zhu3d-4.1.0.ebuild:
+  Version bump (fixes #234493).
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> zhu3d-4.0.2.ebuild,
   zhu3d-4.0.4.ebuild:
