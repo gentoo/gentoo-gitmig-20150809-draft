@@ -1,8 +1,8 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.46 2008/08/12 01:23:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.47 2008/08/12 01:26:02 leio Exp $
 
-  12 Aug 2008; <leio@gentoo.org> -ghex-2.21.90.ebuild:
+  12 Aug 2008; Mart Raudsepp <leio@gentoo.org> -ghex-2.21.90.ebuild:
   Remove old
 
 *ghex-2.22.0 (10 Apr 2008)
