@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hachoir-core
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-core/ChangeLog,v 1.4 2008/04/04 20:41:56 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-core/ChangeLog,v 1.5 2008/08/12 08:07:13 cedk Exp $
+
+  12 Aug 2008; Cédric Krier <cedk@gentoo.org> hachoir-core-1.0.1.ebuild,
+  hachoir-core-1.1.ebuild:
+  Add amd64 keyword
 
   04 Apr 2008; Cédric Krier <cedk@gentoo.org> hachoir-core-1.0.1.ebuild,
   hachoir-core-1.1.ebuild:
