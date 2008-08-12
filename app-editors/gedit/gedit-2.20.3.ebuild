@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.3.ebuild,v 1.11 2007/12/11 16:47:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.3.ebuild,v 1.12 2008/08/12 22:26:45 leio Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="arm sh"
 IUSE="doc python spell xattr"
 
 RDEPEND=">=gnome-base/gconf-2
