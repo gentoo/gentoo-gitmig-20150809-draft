@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Font-TTF
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.6 2008/06/12 18:04:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.7 2008/08/12 08:53:41 pva Exp $
+
+*Font-TTF-0.45 (12 Aug 2008)
+
+  12 Aug 2008; Peter Volkov <pva@gentoo.org> +Font-TTF-0.45.ebuild:
+  Version bump.
 
   12 Jun 2008; nixnut <nixnut@gentoo.org> Font-TTF-0.43.ebuild:
   Added ~ppc wrt bug 224541
