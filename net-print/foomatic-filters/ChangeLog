@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.61 2008/08/12 15:48:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.62 2008/08/12 15:50:37 ranger Exp $
+
+  12 Aug 2008; Brent Baude <ranger@gentoo.org>
+  foomatic-filters-3.0.20080507.ebuild:
+  Marking foomatic-filters-3.0.20080507 ppc for bug 233968
 
   12 Aug 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking 233968 ppc for bug foomatic-filters-3.0.20080507.ebuild
