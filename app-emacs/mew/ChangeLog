@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.62 2008/08/13 14:31:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.63 2008/08/13 16:15:58 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org> mew-6.1.ebuild:
+  alpha/x86 stable wrt #234592
 
   13 Aug 2008; Ferris McCormick <fmccor@gentoo.org> mew-6.1.ebuild:
   Sparc stable, Bug #234592.
