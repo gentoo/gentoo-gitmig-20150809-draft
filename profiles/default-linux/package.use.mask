@@ -26,5 +26,5 @@ x11-themes/qtcurve-qt4 kde
 
 # Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
 # does not work with ffmpeg new headers yet
-net-www/gnash ffmpeg
+<net-www/gnash-0.8.3 ffmpeg
 
