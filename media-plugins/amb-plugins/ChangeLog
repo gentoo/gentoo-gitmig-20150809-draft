@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/amb-plugins
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/ChangeLog,v 1.1 2007/12/13 11:24:09 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/ChangeLog,v 1.2 2008/08/13 11:19:31 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org> amb-plugins-0.3.0.ebuild:
+  Add ~x86 wrt #234579
 
 *amb-plugins-0.3.0 (13 Dec 2007)
 
