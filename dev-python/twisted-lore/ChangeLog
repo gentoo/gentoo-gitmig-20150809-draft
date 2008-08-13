@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.25 2008/08/12 18:41:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.26 2008/08/13 08:54:08 coldwind Exp $
+
+  13 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
+  twisted-lore-8.1.0.ebuild:
+  amd64 stable wrt bug #231675
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> twisted-lore-8.1.0.ebuild:
   alpha/ia64/x86 stable wrt #231675

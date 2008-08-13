@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.23 2008/08/11 18:34:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.24 2008/08/13 08:59:06 coldwind Exp $
+
+  13 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
+  twisted-news-8.1.0.ebuild:
+  amd64 stable wrt bug #231675
 
   11 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
   twisted-news-8.1.0.ebuild:
