@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.1.ebuild,v 1.1 2008/08/11 13:03:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.1.ebuild,v 1.2 2008/08/13 22:56:49 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4-build
@@ -85,7 +85,7 @@ src_compile() {
 		$(qt_use mng libmng system)
 		$(qt_use nis)
 		$(qt_use tiff libtiff system)
-		$(qt_use qdbus)
+		$(qt_use dbus qdbus)
 		$(qt_use qt3support)
 		$(qt_use xinerama)"
 
