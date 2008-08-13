@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fapg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.23 2008/08/13 09:24:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.24 2008/08/13 18:14:38 ranger Exp $
+
+  13 Aug 2008; Brent Baude <ranger@gentoo.org> fapg-0.41.ebuild:
+  Marking fapg-0.41 ~ppc64 for bug 234600
 
 *fapg-0.41 (13 Aug 2008)
 
