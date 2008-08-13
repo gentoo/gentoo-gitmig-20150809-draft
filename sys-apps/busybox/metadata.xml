@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>embedded</herd>
+<use><flag name="make-symlinks">Create all the appropriate symlinks in /bin and /sbin.</flag></use>
 </pkgmetadata>
