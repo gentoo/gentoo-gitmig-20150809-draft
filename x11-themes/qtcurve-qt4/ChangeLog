@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.39 2008/08/05 06:57:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.40 2008/08/13 14:16:39 yngwin Exp $
+
+  13 Aug 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Add kde useflag description
 
   05 Aug 2008; Ben de Groot <yngwin@gentoo.org> qtcurve-qt4-0.59.6.ebuild:
   Adjusting kde slots for the ones that actually work with this package.
