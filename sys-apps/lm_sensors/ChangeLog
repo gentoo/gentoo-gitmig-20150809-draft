@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.86 2008/08/11 17:59:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.87 2008/08/13 16:13:57 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org> lm_sensors-2.10.4.ebuild,
+  lm_sensors-2.10.7.ebuild, lm_sensors-3.0.2.ebuild:
+  Respect LDFLAGS, bug #209722
 
 *lm_sensors-2.10.7 (11 Aug 2008)
 

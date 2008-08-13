@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.0.2.ebuild,v 1.1 2008/07/01 20:32:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.0.2.ebuild,v 1.2 2008/08/13 16:13:57 armin76 Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -52,6 +52,10 @@ src_unpack() {
 	if use sensord; then
 		sed -i -e 's:^# \(PROG_EXTRA\):\1:' "${S}"/Makefile
 	fi
+
+	# Respect LDFLAGS
+	sed -i -e 's/\$(LIBDIR)$/\$(LIBDIR) \$(LDFLAGS)/g' Makefile
+	sed -i -e 's/\$(LIBSHSONAME) -o/$(LIBSHSONAME) \$(LDFLAGS) -o/g' lib/Module.mk
 }
 
 src_compile()  {
@@ -78,10 +82,9 @@ src_install() {
 		newinitd "${FILESDIR}"/sensord-init.d sensord
 	fi
 
-	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS INSTALL QUICKSTART \
-		README* TODO
+	dodoc CHANGES CONTRIBUTORS INSTALL README*
 
-	dodoc doc/donations doc/fancontrol.txt doc/fan-divisors doc/FAQ \
+	dodoc doc/donations doc/fancontrol.txt doc/fan-divisors \
 		doc/progs doc/temperature-sensors doc/vid
 
 	dohtml doc/lm_sensors-FAQ.html doc/useful_addresses.html

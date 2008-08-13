@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.4.ebuild,v 1.9 2008/05/18 18:54:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.4.ebuild,v 1.10 2008/08/13 16:13:57 armin76 Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -73,11 +73,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.10.4-sensors-detect-gentoo.patch
+	epatch "${FILESDIR}"/${P}-sensors-detect-gentoo.patch
 
 	if use sensord; then
-		sed -i -e 's:^# \(PROG_EXTRA\):\1:' "${S}"/Makefile
+		sed -i -e 's:^# \(PROG_EXTRA\):\1:' Makefile
 	fi
+
+	# Respect LDFLAGS
+	sed -i -e 's/\$(LIBDIR)$/\$(LIBDIR) \$(LDFLAGS)/g' Makefile
+	sed -i -e 's/\$(LIBSHSONAME) -o/$(LIBSHSONAME) \$(LDFLAGS) -o/g' lib/Module.mk
 }
 
 src_compile()  {
