@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/asunder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.15 2008/06/11 22:18:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.16 2008/08/13 08:54:54 aballier Exp $
+
+*asunder-1.6 (13 Aug 2008)
+
+  13 Aug 2008; Alexis Ballier <aballier@gentoo.org> +asunder-1.6.ebuild:
+  version bump
 
   11 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/asunder-1.0-desktop-entry.patch, -asunder-1.0.ebuild:
