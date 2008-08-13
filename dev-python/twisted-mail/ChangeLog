@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.30 2008/08/13 08:54:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.31 2008/08/13 11:15:15 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org> twisted-mail-8.1.0.ebuild:
+  alpha/ia64/x86 stable wrt #231675
 
   13 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
   twisted-mail-8.1.0.ebuild:

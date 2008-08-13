@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.32 2008/08/13 08:49:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.33 2008/08/13 11:14:17 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org> twisted-conch-8.1.0.ebuild:
+  alpha/ia64/x86 stable wrt #231675
 
   13 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
   twisted-conch-8.1.0.ebuild:
