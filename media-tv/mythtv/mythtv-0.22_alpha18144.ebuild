@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha17449.ebuild,v 1.3 2008/07/07 17:31:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha18144.ebuild,v 1.1 2008/08/13 16:31:09 cardoe Exp $
 
-EAPI=1
+EAPI=2_pre2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
@@ -22,7 +22,11 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXv
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
-	>=x11-libs/qt-4.3:4
+	x11-libs/qt-core:4[qt3support]
+	x11-libs/qt-gui:4[qt3support,tiff]
+	x11-libs/qt-sql:4[qt3support,mysql]
+	x11-libs/qt-opengl:4[qt3support]
+	x11-libs/qt-webkit:4
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
@@ -58,10 +62,6 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
-
-	confutils_require_built_with_all =x11-libs/qt-4* gif jpeg mysql opengl \
-		png tiff
-
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
 
 	if use xvmc && use video_cards_nvidia; then
@@ -89,7 +89,7 @@ src_unpack() {
 		-i "${S}"/bindings/perl/perl.pro
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
@@ -164,7 +164,9 @@ src_compile() {
 	CXXFLAGS=""
 	einfo "Running ./configure ${myconf}"
 	./configure ${myconf} || die "configure died"
+}
 
+src_compile() {
 	eqmake4 mythtv.pro -o "Makefile" || die "eqmake4 failed"
 	emake || die "emake failed"
 
