@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-cep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.11 2008/07/28 17:40:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.12 2008/08/13 21:10:36 calchan Exp $
+
+*nwn-cep-1.68-r1 (13 Aug 2008)
+
+  13 Aug 2008; Denis Dupeyron <calchan@gentoo.org> +nwn-cep-1.68-r1.ebuild:
+  Rewrote ebuild for version 1.68. Tested and it works with nwn-1.69 too.
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
