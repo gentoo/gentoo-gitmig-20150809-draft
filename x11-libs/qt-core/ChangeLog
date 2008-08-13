@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.10 2008/08/11 12:59:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.11 2008/08/13 09:28:02 yngwin Exp $
+
+*qt-core-4.4.1-r1 (13 Aug 2008)
+
+  13 Aug 2008; Ben de Groot <yngwin@gentoo.org> +qt-core-4.4.1-r1.ebuild:
+  Adding PDEPEND on qt-qt3support if the corresponding useflag is enabled.
 
 *qt-core-4.4.1 (11 Aug 2008)
 
