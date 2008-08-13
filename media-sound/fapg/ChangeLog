@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fapg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.21 2007/05/19 19:29:14 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.22 2008/08/13 09:06:10 aballier Exp $
+
+  13 Aug 2008; Alexis Ballier <aballier@gentoo.org> -fapg-0.30.ebuild,
+  -fapg-0.35.ebuild:
+  remove old
 
   19 May 2007; Christian Faulhammer <opfer@gentoo.org> fapg-0.38.ebuild:
   stable x86, bug 178786
