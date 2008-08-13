@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.69 2008/08/02 13:45:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.70 2008/08/13 19:09:26 calchan Exp $
+
+  13 Aug 2008; Denis Dupeyron <calchan@gentoo.org> nwn-1.69.ebuild:
+  Fixed LINGUAS issue, thanks to Michael Sterrett. Fixed QA warnings.
 
 *nwn-1.69 (02 Aug 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69.ebuild,v 1.1 2008/08/02 13:45:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69.ebuild,v 1.2 2008/08/13 19:09:26 calchan Exp $
 
 inherit eutils games
 
@@ -20,6 +20,8 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="sou hou"
 RESTRICT="mirror strip"
+
+QA_DT_HASH="/opt/nwn/en/nwserver /opt/nwn/en/nwmain /opt/nwn/lib/libSDL-1.2.so.0.11.2 /opt/nwn/lib/libelf.so.1"
 
 RDEPEND=">=games-rpg/nwn-data-1.29-r3
 	virtual/opengl
@@ -62,7 +64,15 @@ pkg_setup() {
 	then
 		built_with_use games-rpg/nwn-data hou || die_from_busted_nwn-data hou
 	fi
-	built_with_use games-rpg/nwn-data linguas_en || die_from_busted_nwn-data linguas_en
+
+	if ! built_with_use games-rpg/nwn-data linguas_en && \
+		( built_with_use games-rpg/nwn-data linguas_fr \
+		|| built_with_use games-rpg/nwn-data linguas_de \
+		|| built_with_use games-rpg/nwn-data linguas_es \
+		|| built_with_use games-rpg/nwn-data linguas_it )
+	then
+		die "${P} requires games-rpg/nwn-data emerged with at least LINGUAS=en or none at all"
+	fi
 }
 
 src_unpack() {
