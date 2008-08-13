@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/alpha profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.1 2008/08/11 17:14:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.2 2008/08/13 09:42:35 armin76 Exp $
+
+  13 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  +2008.0/no-nptl/package.mask:
+  P.mask iproute2 on no-nptl profile
 
   11 Aug 2008; Raúl Porcel <armin76@gentoo.org> +2008.0/no-nptl/deprecated:
   Deprecate the no-nptl profile

@@ -1,0 +1,4 @@
+# Raúl Porcel <armin76@gentoo.org> (14 Jul 2008)
+# Needs glibc-2.7
+>=sys-apps/iproute2-2.6.25.20080417
+
