@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.192 2008/08/02 15:20:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.193 2008/08/13 21:59:04 robbat2 Exp $
+
+  13 Aug 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/busybox-1.11.1-ppc-ifile.patch, busybox-1.11.1.ebuild:
+  Bug #233927, compile-fix for PPC, tested on my G5.
 
 *busybox-1.11.1 (02 Aug 2008)
 

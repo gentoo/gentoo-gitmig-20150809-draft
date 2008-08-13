@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.1.ebuild,v 1.1 2008/08/02 15:20:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.1.ebuild,v 1.2 2008/08/13 21:59:04 robbat2 Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -86,6 +86,7 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.11.1-bb.patch
+	epatch "${FILESDIR}"/busybox-1.11.1-ppc-ifile.patch
 
 	# include this upstream later..
 	epatch "${FILESDIR}"/busybox-devmem.patch
