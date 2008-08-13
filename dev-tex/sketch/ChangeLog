@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/sketch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/sketch/ChangeLog,v 1.1 2008/08/12 17:30:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/sketch/ChangeLog,v 1.2 2008/08/13 12:00:42 aballier Exp $
+
+*sketch-0.2.131 (13 Aug 2008)
+
+  13 Aug 2008; Alexis Ballier <aballier@gentoo.org> -sketch-0.2.90.ebuild,
+  +sketch-0.2.131.ebuild:
+  version bump and remove unfetchable version, bug #234612
 
 *sketch-0.2.90 (12 Aug 2008)
 
