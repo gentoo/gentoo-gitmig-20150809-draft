@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.41.ebuild,v 1.8 2008/07/20 10:19:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.41.ebuild,v 1.9 2008/08/13 17:24:27 robbat2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,10 +31,10 @@ RDEPEND="sys-libs/ncurses
 		perl? ( dev-lang/perl )
 		samba? ( dev-libs/openssl )
 		kerberos? ( virtual/krb5 )
-		berkdb? ( >=sys-libs/db-4.2.52_p2-r1 !=sys-libs/db-4.6* )
+		berkdb? ( >=sys-libs/db-4.2.52_p2-r1 !>=sys-libs/db-4.6 )
 		!berkdb? (
 			gdbm? ( sys-libs/gdbm )
-			!gdbm? ( >=sys-libs/db-4.2.52_p2-r1 !=sys-libs/db-4.6* )
+			!gdbm? ( >=sys-libs/db-4.2.52_p2-r1 !>=sys-libs/db-4.6 )
 		)
 		smbkrb5passwd? (
 			dev-libs/openssl
