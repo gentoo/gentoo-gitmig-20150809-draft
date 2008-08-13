@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/gmusicbrowser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.2 2008/05/16 16:16:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.3 2008/08/13 10:18:49 aballier Exp $
+
+*gmusicbrowser-1.0 (13 Aug 2008)
+
+  13 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +gmusicbrowser-1.0.ebuild:
+  version bump
 
   16 May 2008; Raúl Porcel <armin76@gentoo.org> gmusicbrowser-0.964.ebuild:
   Add ~sparc
