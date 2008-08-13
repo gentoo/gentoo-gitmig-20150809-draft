@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.3.ebuild,v 1.5 2008/08/12 13:58:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.3.ebuild,v 1.6 2008/08/13 17:36:17 dang Exp $
 
 inherit eutils gnome2 python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="acpi apm doc gnome gstreamer hal ipv6 test"
+IUSE="acpi apm doc gnome gstreamer hal ipv6"
 
 # TODO: configure says python stuff is optional
 # my secret script says cpufrequtils might be needed in RDEPEND
@@ -61,11 +61,10 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
 		>=dev-util/intltool-0.35
 		dev-libs/libxslt
+		~app-text/docbook-xml-dtd-4.3
 		doc? (
 				app-text/docbook-sgml-utils
-				~app-text/docbook-xml-dtd-4.3
-			)
-		test? ( ~app-text/docbook-xml-dtd-4.3 )"
+			)"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
