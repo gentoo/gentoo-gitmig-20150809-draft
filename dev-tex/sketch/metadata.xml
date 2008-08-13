@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
+<maintainer>
+  <email>aballier@gentoo.org</email>
+  <name>Alexis Ballier</name>
+</maintainer>
+<maintainer>
+  <email>dima@sphinx.net.ru</email>
+  <name>Dmitry Dzhus</name>
+</maintainer>
 </pkgmetadata>
