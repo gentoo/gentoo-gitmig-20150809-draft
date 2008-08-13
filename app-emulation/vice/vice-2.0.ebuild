@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.0.ebuild,v 1.1 2008/08/11 19:30:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.0.ebuild,v 1.2 2008/08/13 16:50:46 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="Xaw3d alsa arts esd gnome nls png readline resid sdl ffmpeg ipv6 mmap oss zlib X gif jpeg xv dga xrandr"
+IUSE="Xaw3d alsa arts esd gnome nls png readline resid sdl ipv6 mmap oss zlib X gif jpeg xv dga xrandr"
 
 RDEPEND="
 	x11-libs/libX11
@@ -66,6 +66,7 @@ src_compile() {
 		--disable-dependency-tracking \
 		--enable-fullscreen \
 		--enable-parsid \
+		--disable-ffmpeg \
 		--without-midas \
 		$(use_enable gnome gnomeui) \
 		$(use_enable nls) \
@@ -77,7 +78,6 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with resid) \
 		$(use_with sdl) \
-		$(use_enable ffmpeg) \
 		$(use_enable ipv6) \
 		$(use_enable oss) \
 		$(use_enable mmap memmap) \
