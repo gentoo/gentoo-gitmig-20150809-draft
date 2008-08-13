@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kwappen/kwappen-1.1.5.ebuild,v 1.3 2008/01/28 01:55:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kwappen/kwappen-1.1.5.ebuild,v 1.4 2008/08/13 05:54:21 mr_bones_ Exp $
 
-inherit kde
+inherit eutils kde
 need-kde 3
 
 DESCRIPTION="A jigsaw puzzle game for the KDE environment"
@@ -20,9 +20,5 @@ src_unpack()
 	cd "${S}"
 	# Sorry if you speak portuguese... (bug #206370)
 	# Better patch for this welcome.
-	sed -i \
-		-e "122 s/Op../Opï¿/" \
-		doc/pt/index.docbook \
-		doc/pt_BR/index.docbook \
-		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-br.patch"
 }

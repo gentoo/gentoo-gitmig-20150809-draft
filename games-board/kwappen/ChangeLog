@@ -1,6 +1,10 @@
 # ChangeLog for games-board/kwappen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kwappen/ChangeLog,v 1.6 2008/01/28 01:55:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kwappen/ChangeLog,v 1.7 2008/08/13 05:54:21 mr_bones_ Exp $
+
+  13 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/kwappen-1.1.5-br.patch, kwappen-1.1.5.ebuild:
+  use epatch instead of sed
 
   28 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> kwappen-1.1.5.ebuild:
   work around non-utf8 file (bug #206370)
