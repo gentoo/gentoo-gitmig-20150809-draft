@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.45 2008/08/12 14:02:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.46 2008/08/13 23:47:06 leio Exp $
+
+  13 Aug 2008; Mart Raudsepp <leio@gentoo.org> -orca-2.22.1.ebuild:
+  Remove old
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> orca-2.22.2.ebuild:
   alpha/ia64/sparc stable wrt #229709
