@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.18 2008/06/26 11:29:25 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.19 2008/08/13 15:54:40 fmccor Exp $
+
+  13 Aug 2008; Ferris McCormick <fmccor@gentoo.org> puppet-0.24.4.ebuild:
+  Add ~sparc keyword at user (Juan Daza) request --- Bug #234621.
 
   26 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   puppet-0.24.4.ebuild:
