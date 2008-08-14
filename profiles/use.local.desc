@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3742 2008/08/14 04:42:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3743 2008/08/14 04:44:48 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -2195,6 +2195,7 @@ sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
 sys-auth/pambase:consolekit - Enable ConsoleKit support in local login sessions.
 sys-auth/pambase:mktemp - Enable pam_mktemp support in system authentication.
 sys-auth/pambase:passwdqc - Enable pam_passwdqc support in system authentication.
+sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords.
 sys-auth/pambase:ssh - Enable pam_ssh support in system authentication.
 sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support.
 sys-auth/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
