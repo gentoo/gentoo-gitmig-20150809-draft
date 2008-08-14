@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.6 2008/04/11 15:46:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.7 2008/08/14 16:46:55 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,12 +25,16 @@ DEPEND="${RDEPEND}
 	virtual/opengl"
 src_unpack() {
 	unpack ${A}
-	#fix placing additional patches
+	# fix placing additional patches
 	cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}"
 	cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}"
 	cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}"
 	rm -rf "${WORKDIR}"/abuse-frabs-2.11/ "${WORKDIR}"/abuse-lib-2.00.orig/ "${WORKDIR}"/abuse-sfx-2.00.orig/
-	cd ${S}
+	cd "${S}"
+	# fix bug #231822
+	sed -i \
+		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
+		src/sdlport/setup.cpp || or die "sed setup.cpp failed"
 }
 
 src_compile() {
@@ -45,13 +49,13 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	# Data install
-	insinto "${GAMES_DATADIR}"/abuse
+	insinto "${GAMES_DATADIR}"/"${PN}"
 	doins -r "${WORKDIR}"/{addon,art,levels,lisp,music,netlevel,register,sfx} \
 		"${WORKDIR}"/abuse.lsp \
 		|| die "doins failed"
 
 	# Icons/desktop entry
-	doicon abuse.png
+	doicon ${PN}.png
 	make_desktop_entry abuse "Abuse" ${PN}
 
 	prepgamesdirs
