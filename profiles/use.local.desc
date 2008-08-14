@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3740 2008/08/14 04:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3741 2008/08/14 04:40:38 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -1714,6 +1714,7 @@ net-im/gajim:trayicon - Enable support for trayicon
 net-im/gajim:xhtml - Enable XHTML support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/gossip:debug - Enable debug path in gossip. net-libs/loudmouthneeds to be compiled with USE="debug" to allow Gossip to actually build the debug code path.
+net-im/gossip:galago - Enable desktop presence with galago
 net-im/gossip:gnome-keyring - Allows Gossip to use gnome-keyring to store passwords.
 net-im/gossip:libnotify - Allows Gossip to show visual notifications concerning various activities via libnotify.
 net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be set.
