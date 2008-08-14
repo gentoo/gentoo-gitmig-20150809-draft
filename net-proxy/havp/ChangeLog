@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.27 2008/07/13 14:12:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.28 2008/08/14 14:59:16 falco Exp $
+
+*havp-0.89 (14 Aug 2008)
+
+  14 Aug 2008; Raphael Marichez <falco@gentoo.org> +havp-0.89.ebuild:
+  Version bump, security bug 234715
 
   13 Jul 2008; Alin Năstac <mrness@gentoo.org> -havp-0.86.ebuild,
   -havp-0.87.ebuild:
