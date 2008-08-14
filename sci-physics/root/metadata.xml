@@ -17,11 +17,6 @@
     on <pkg>sci-physics/cernlib</pkg>. On versions above, it only need
     a FORTRAN compiler.
   </flag>
-  <flag name="cint7">
-    Build the experimental C++ INTerpreter version 7. Use with caution to
-    test this newer interpreter. If not sure, stick with version 6
-    included by default.
-  </flag>
   <flag name="clarens">
     Buld the Clarens and PEAC plug-ins, to use in a GRID enabled
     analysis. The Clarens Grid-Enabled Web Services Framework is an
