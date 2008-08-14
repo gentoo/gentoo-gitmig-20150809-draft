@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.274 2008/08/14 21:45:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.275 2008/08/14 21:54:16 carlo Exp $
+
+*amarok-1.4.10-r1 (14 Aug 2008)
+
+  14 Aug 2008; Carsten Lohrke <carlo@gentoo.org> +amarok-1.4.10-r1.ebuild:
+  Revision with libmtp patch...
 
   14 Aug 2008; Carsten Lohrke <carlo@gentoo.org> amarok-1.4.10.ebuild:
   Adjust libmtp dependency.
