@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3743 2008/08/14 04:44:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3744 2008/08/14 04:46:12 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -1277,7 +1277,6 @@ media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:3dnowext - Enable 3dnowext cpu instructions
 media-sound/mpg123:network - Enable network support (http streams / webradio)
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
-media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/ncmpc:clock-screen - Enable clock screen
 media-sound/ncmpc:key-screen - Enable key editor screen
 media-sound/ncmpc:mouse - Enable curses getmouse support
