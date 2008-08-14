@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.250 2008/08/13 16:31:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.251 2008/08/14 17:54:26 antarus Exp $
+
+  14 Aug 2008; <antarus@gentoo.org> -mythtv-0.22_alpha18144.ebuild:
+  Remove ebuild with improper EAPI. Only ebuilds with EAPI=0 or EAPI=1 are
+  allowed in gentoo-x86.
 
 *mythtv-0.22_alpha18144 (13 Aug 2008)
 
