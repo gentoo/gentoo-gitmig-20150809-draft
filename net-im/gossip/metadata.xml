@@ -13,5 +13,6 @@ Gossip is a Gnome integrated and HIG compliant jabber messaging client.
 	<flag name='gnome-keyring'>Allows Gossip to use gnome-keyring to store passwords.</flag>
 	<flag name='libnotify'>Allows Gossip to show visual notifications concerning
 		various activities via libnotify.</flag>
+	<flag name='galago'>Enable desktop presence with galago</flag>
 </use>
 </pkgmetadata>
