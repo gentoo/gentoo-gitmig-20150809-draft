@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.294 2008/08/14 08:41:16 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.295 2008/08/14 13:28:19 fmccor Exp $
+
+  14 Aug 2008; Ferris McCormick <fmccor@gentoo.org> vim-core-7.2.ebuild:
+  Sparc stable, security Bug #232890.
 
 *vim-core-7.2 (14 Aug 2008)
 
