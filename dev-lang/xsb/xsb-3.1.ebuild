@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.2 2008/02/16 17:39:50 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.3 2008/08/14 08:13:48 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-unix"
@@ -56,11 +56,10 @@ src_compile() {
 		--disable-optimization \
 		--without-smodels \
 		--with-config-tag="" \
-		$(use_with threads mt) \
-		$(use_with perl) \
+		$(use_with java interprolog) \
 		$(use_with odbc) \
 		$(use_with iodbc) \
-		$(use_enable java interprolog) \
+		$(use_enable threads mt) \
 		$(use_enable debug) \
 		$(use_enable debug debug-verbose) \
 		$(use_enable debug profile) \
