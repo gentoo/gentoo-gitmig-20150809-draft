@@ -1,6 +1,6 @@
-diff -r edb3eb2593d6 config/conf.php
+diff -r f7b1e151bdb5 config/conf.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
++++ b/config/conf.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -0,0 +1,113 @@
 +<?php
 +/* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -115,9 +115,9 @@ diff -r edb3eb2593d6 config/conf.php
 +if (file_exists(dirname(__FILE__) . '/kolab.php')) {
 +  require_once(dirname(__FILE__) . '/kolab.php');
 +}
-diff -r edb3eb2593d6 config/kolab.php
+diff -r f7b1e151bdb5 config/kolab.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/config/kolab.php	Mon Aug 11 18:06:31 2008 +0200
++++ b/config/kolab.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -0,0 +1,34 @@
 +<?php
 +/* Add additional admins here */
@@ -153,9 +153,9 @@ diff -r edb3eb2593d6 config/kolab.php
 +/* Primary mail domain of your Kolab server */
 +$conf['kolab']['imap']['maildomain'] = 'example.com';
 +?>
-diff -r edb3eb2593d6 config/prefs.php
---- a/config/prefs.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/config/prefs.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 config/prefs.php
+--- a/config/prefs.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/config/prefs.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -357,7 +357,7 @@
  
  // UI theme
@@ -165,9 +165,9 @@ diff -r edb3eb2593d6 config/prefs.php
      'locked' => false,
      'shared' => true,
      'type' => 'select',
-diff -r edb3eb2593d6 imp/config/conf.php
---- a/imp/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/imp/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 imp/config/conf.php
+--- a/imp/config/conf.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/config/conf.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -1,7 +1,8 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -189,9 +189,9 @@ diff -r edb3eb2593d6 imp/config/conf.php
  $conf['hooks']['spam_bounce'] = false;
  $conf['hooks']['msglist_format'] = false;
  $conf['maillog']['use_maillog'] = true;
-diff -r edb3eb2593d6 imp/config/hooks.php
---- a/imp/config/hooks.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/imp/config/hooks.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 imp/config/hooks.php
+--- a/imp/config/hooks.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/config/hooks.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -426,6 +426,9 @@
              case 'contact':
                  return $GLOBALS['registry']->get('webroot', 'turba');
@@ -217,9 +217,47 @@ diff -r edb3eb2593d6 imp/config/hooks.php
                  }
              }
  
-diff -r edb3eb2593d6 imp/config/servers.php
---- a/imp/config/servers.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/imp/config/servers.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 imp/config/prefs.php
+--- a/imp/config/prefs.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/config/prefs.php	Wed Aug 13 21:37:22 2008 +0200
+@@ -24,7 +24,7 @@
+         'column' => _("General Options"),
+         'label' => _("Server and Folder Information"),
+         'desc' => _("Change mail server and folder settings."),
+-        'members' => array('use_vinbox', 'subscribe', 'folderselect',
++        'members' => array('use_vinbox', 'use_vtask', 'subscribe', 'folderselect',
+                            'trashselect', 'spamselect')
+         );
+ }
+@@ -267,6 +267,14 @@
+     'shared' => false,
+     'type' => 'checkbox',
+     'desc' => _("Display Virtual Inbox?"));
++
++// display Virtual Tasks?
++$_prefs['use_vtask'] = array(
++    'value' => 1,
++    'locked' => false,
++    'shared' => false,
++    'type' => 'checkbox',
++    'desc' => _("Display Virtual Tasks?"));
+ 
+ // use IMAP subscribe?
+ $_prefs['subscribe'] = array(
+@@ -1463,3 +1471,10 @@
+     'locked' => false,
+     'shared' => false,
+     'type' => 'implicit');
++
++// virtual task identifier
++$_prefs['vtask_id'] = array(
++    'value' => '',
++    'locked' => false,
++    'shared' => false,
++    'type' => 'implicit');
+diff -r f7b1e151bdb5 imp/config/servers.php
+--- a/imp/config/servers.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/config/servers.php	Wed Aug 13 21:37:22 2008 +0200
 @@ -215,10 +215,30 @@
  
  /* Example configurations: */
@@ -258,9 +296,177 @@ diff -r edb3eb2593d6 imp/config/servers.php
 +        ),
 +    );
 +}
-diff -r edb3eb2593d6 ingo/config/backends.php
---- a/ingo/config/backends.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/ingo/config/backends.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 imp/folders.php
+--- a/imp/folders.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/folders.php	Wed Aug 13 21:37:22 2008 +0200
+@@ -212,6 +212,7 @@
+     if (!empty($folder_list)) {
+         ($actionID == 'poll_folder') ? $imptree->addPollList($folder_list) : $imptree->removePollList($folder_list);
+         $imp_search->createVINBOXFolder();
++        $imp_search->createVTaskFolder();
+     }
+     break;
+ 
+diff -r f7b1e151bdb5 imp/lib/IMAP/Tree.php
+--- a/imp/lib/IMAP/Tree.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/lib/IMAP/Tree.php	Wed Aug 13 21:37:22 2008 +0200
+@@ -2367,6 +2367,10 @@
+                     $row['specialvfolder'] = true;
+                     $row['icon'] = 'folders/inbox.png';
+                     $row['alt'] = _("Virtual INBOX Folder");
++                } elseif ($GLOBALS['imp_search']->isVTaskFolder($mailbox['v'])) {
++                    $row['specialvfolder'] = true;
++                    $row['icon'] = 'folders/inbox.png';
++                    $row['alt'] = _("Virtual Task Folder");
+                 }
+             }
+         } else {
+diff -r f7b1e151bdb5 imp/lib/Search.php
+--- a/imp/lib/Search.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/lib/Search.php	Wed Aug 13 21:37:22 2008 +0200
+@@ -96,6 +96,7 @@
+             foreach ($this->_getVFolderList() as $key => $val) {
+                 if (!empty($val['vfolder']) &&
+                     !$this->isVTrashFolder($key) &&
++                    !$this->isVTaskFolder($key) &&
+                     !$this->isVINBOXFolder($key)) {
+                     $this->_updateIMPTree('add', $key, $val['label']);
+                     $_SESSION['imp']['search']['q'][$key] = $val;
+@@ -103,6 +104,7 @@
+             }
+         }
+         $this->createVINBOXFolder();
++        $this->createVTaskFolder();
+         $this->createVTrashFolder();
+     }
+ 
+@@ -428,6 +430,71 @@
+     }
+ 
+     /**
++     * Add a virtual task folder for the current user.
++     */
++    function createVTaskFolder()
++    {
++        /* Initialize IMP_Tree. */
++        require_once IMP_BASE . '/lib/IMAP/Tree.php';
++        $imptree = &IMP_Tree::singleton();
++
++        /* Delete the current Virtual task folder, if it exists. */
++        $vtask_id = $GLOBALS['prefs']->getValue('vtask_id');
++        if (!empty($vtask_id)) {
++            $this->deleteSearchQuery($vtask_id);
++        }
++
++        if (!$GLOBALS['prefs']->getValue('use_vtask')) {
++            return;
++        }
++
++        /* Create Virtual TASK with nav_poll list. Filter out any nav_poll
++         * entries that don't exist. Sort the list also. */
++        $flist = $imptree->getPollList(true, true);
++
++        require_once IMP_BASE . '/lib/IMAP/Search.php';
++        $query1 = new IMP_IMAP_Search_Query();
++        $query1->seen(false);
++        $query1->deleted(false);
++
++        $query2 = new IMP_IMAP_Search_Query();
++        $query2->flagged(true);
++        $query2->deleted(false);
++
++        $query = new IMP_IMAP_Search_Query();
++        $query->imapOr($query1);
++        $query->imapOr($query2);
++
++        $label = _("Virtual TASKS");
++
++        $this->_saveVFolder = false;
++        if (empty($vtask_id)) {
++            $vtask_id = $this->addVFolder($query, $flist, array(), $label);
++            $GLOBALS['prefs']->setValue('vtask_id', $vtask_id);
++        } else {
++            $this->addVFolder($query, $flist, array(), $label, $vtask_id);
++        }
++        $this->_saveVFolder = true;
++        $_SESSION['imp']['search']['vtask_id'] = $vtask_id;
++    }
++
++    /**
++     * Determines whether a virtual folder ID is the Virtual TASK Folder.
++     *
++     * @param string $id  The search query id to use (by default, will use
++     *                    the current ID set in the object).
++     *
++     * @return boolean  True if the virutal folder ID is the Virtual task
++     *                  folder.
++     */
++    function isVTaskFolder($id = null)
++    {
++        $id = $this->_strip($id);
++        $vtask_id = $GLOBALS['prefs']->getValue('vtask_id');
++        return (!empty($vtask_id) && ($id == $vtask_id));
++    }
++
++    /**
+      * Is the current active folder an editable Virtual Folder?
+      *
+      * @param string $id  The search query id to use (by default, will use
+@@ -439,7 +506,7 @@
+     function isEditableVFolder($id = null)
+     {
+         $id = $this->_strip($id);
+-        return ($this->isVFolder($id) && !$this->isVTrashFolder($id) && !$this->isVINBOXFolder($id));
++        return ($this->isVFolder($id) && !$this->isVTrashFolder($id) && !$this->isVINBOXFolder($id) && !$this->isVTaskFolder($id));
+     }
+ 
+     /**
+@@ -518,7 +585,7 @@
+         $id = $this->_strip($id);
+         if (empty($_SESSION['imp']['search']['q'][$id])) {
+             return '';
+-        } elseif ($this->isVINBOXFolder($id) || $this->isVTrashFolder($id)) {
++        } elseif ($this->isVINBOXFolder($id) || $this->isVTrashFolder($id) || $this->isVTaskFolder($id)) {
+             return $_SESSION['imp']['search']['q'][$id]['label'];
+         } elseif (empty($_SESSION['imp']['search']['q'][$id]['uiinfo'])) {
+             unset($_SESSION['imp']['search']['q'][$id]);
+diff -r f7b1e151bdb5 imp/lib/prefs.php
+--- a/imp/lib/prefs.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/lib/prefs.php	Wed Aug 13 21:37:22 2008 +0200
+@@ -165,7 +165,7 @@
+     }
+ 
+     if (($prefs->isDirty('use_vtrash') && $prefs->getValue('use_vtrash')) ||
+-        $prefs->isDirty('use_vinbox')) {
++        $prefs->isDirty('use_vinbox') || $prefs->isDirty('use_vtask')) {
+         require_once IMP_BASE . '/lib/Search.php';
+         $imp_search = new IMP_Search();
+         $imp_search->sessionSetup(true);
+diff -r f7b1e151bdb5 imp/mailbox.php
+--- a/imp/mailbox.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/imp/mailbox.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -248,7 +248,8 @@
+ /* Determine if we are going to show the Hide/Purge Deleted Message links. */
+ if (!$prefs->getValue('use_trash') &&
+     !$prefs->getValue('use_vtrash') &&
+-    !$GLOBALS['imp_search']->isVINBOXFolder()) {
++    !$GLOBALS['imp_search']->isVINBOXFolder() &&
++    !$GLOBALS['imp_search']->isVTaskFolder()) {
+     $showdelete = array('hide' => ($sortpref['by'] != SORTTHREAD), 'purge' => true);
+ } else {
+     $showdelete = array('hide' => false, 'purge' => false);
+@@ -335,7 +336,7 @@
+ $vtrash = null;
+ if ($search_mbox) {
+     $unread = 0;
+-    if ($imp_search->isVINBOXFolder()) {
++    if ($imp_search->isVINBOXFolder() || $imp_search->isVTaskFolder()) {
+         $unread = $imp_mailbox->getMessageCount();
+     } elseif ($imp_search->isVTrashFolder()) {
+         $vtrash = $imp_search->createSearchID($search_mbox);
+diff -r f7b1e151bdb5 ingo/config/backends.php
+--- a/ingo/config/backends.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/ingo/config/backends.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -40,6 +40,8 @@
   *               give them permissions to do so. If you want to enable this
   *               feature, you need to set this parameter to true.
@@ -279,9 +485,9 @@ diff -r edb3eb2593d6 ingo/config/backends.php
  /* Kolab Example (using Sieve) */
  if ($GLOBALS['conf']['kolab']['enabled']) {
      require_once 'Horde/Kolab.php';
-diff -r edb3eb2593d6 kronolith/config/conf.php
---- a/kronolith/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/kronolith/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 kronolith/config/conf.php
+--- a/kronolith/config/conf.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/kronolith/config/conf.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -1,12 +1,11 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -307,9 +513,9 @@ diff -r edb3eb2593d6 kronolith/config/conf.php
 +if (file_exists(dirname(__FILE__) . '/kolab.php')) {
 +  require_once(dirname(__FILE__) . '/kolab.php');
 +}
-diff -r edb3eb2593d6 kronolith/config/kolab.php
+diff -r f7b1e151bdb5 kronolith/config/kolab.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/kronolith/config/kolab.php	Mon Aug 11 18:06:31 2008 +0200
++++ b/kronolith/config/kolab.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -0,0 +1,10 @@
 +<?php
 +/* Primary mail domain of your Kolab server */
@@ -321,9 +527,229 @@ diff -r edb3eb2593d6 kronolith/config/kolab.php
 +/* The email address of your sys admin */
 +$conf['reminder']['from_addr'] = 'hostmaster@example.com';
 +?>
-diff -r edb3eb2593d6 lib/Horde/Prefs/kolab.php
---- a/lib/Horde/Prefs/kolab.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/Horde/Prefs/kolab.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/Horde/Kolab/IMAP.php
+--- a/lib/Horde/Kolab/IMAP.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Kolab/IMAP.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -1021,7 +1021,9 @@
+     function generateUID()
+     {
+         do {
+-            $key = md5(uniqid(mt_rand(), true));
++            $key = date('YmdHis') . '.'
++                . substr(str_pad(base_convert(microtime(), 10, 36), 16, uniqid(mt_rand()), STR_PAD_LEFT), -16)
++                . '@' . $GLOBALS['conf']['server']['name'];
+         } while($this->objectUidExists($key));
+ 
+         return $key;
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/contact.php
+--- a/lib/Horde/Kolab/XML/contact.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Kolab/XML/contact.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -294,6 +294,9 @@
+     function _load(&$children)
+     {
+         $object = $this->loadArray($children, $this->_fields_specific);
++        if (is_a($object, 'PEAR_Error')) {
++            return $object;
++        }
+ 
+         // Handle name fields
+         if (isset($object['name'])) {
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/distributionlist.php
+--- a/lib/Horde/Kolab/XML/distributionlist.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Kolab/XML/distributionlist.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -60,6 +60,9 @@
+     function _load(&$children)
+     {
+         $object = $this->loadArray($children, $this->_fields_specific);
++        if (is_a($object, 'PEAR_Error')) {
++            return $object;
++        }
+ 
+         // Map the display-name of a kolab dist list to horde's lastname attribute
+         if (isset($object['display-name'])) {
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/jobtype.php
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/lib/Horde/Kolab/XML/jobtype.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -0,0 +1,56 @@
++<?php
++/**
++ * @package Horde_Kolab
++ *
++ * $Horde: framework/Kolab/Kolab/Format/XML/hprefs.php,v 1.1 2008/06/16 11:46:09 wrobel Exp $
++ */
++
++/**
++ * Kolab XML handler for timetracking jobtypes
++ *
++ * $Horde: framework/Kolab/Kolab/Format/XML/hprefs.php,v 1.1 2008/06/16 11:46:09 wrobel Exp $
++ *
++ * Copyright 2008 The Horde Project (http://www.horde.org/)
++ *
++ * @author  Gunnar Wrobel <wrobel@pardus.de>
++ * @package Horde_Kolab
++ */
++class Kolab_Format_XML_jobtype extends Kolab_Format_XML {
++    /**
++     * Specific data fields for the jobtype object
++     *
++     * @var Kolab
++     */
++    var $_fields_specific;
++
++    /**
++     * Constructor
++     */
++    function Kolab_Format_XML_jobtype()
++    {
++        $this->_root_name = 'jobtype';
++
++        /** Specific preferences fields, in kolab format specification order
++         */
++        $this->_fields_specific = array(
++            'billable' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_INTEGER,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'enabled' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_INTEGER,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'name' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'rate' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++        );
++
++        parent::Kolab_Format_XML();
++    }
++}
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/note.php
+--- a/lib/Horde/Kolab/XML/note.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Kolab/XML/note.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -64,6 +64,9 @@
+     function _load(&$children)
+     {
+         $object = $this->loadArray($children, $this->_fields_specific);
++        if (is_a($object, 'PEAR_Error')) {
++            return $object;
++        }
+ 
+         $object['desc'] = $object['summary'];
+         unset($object['summary']);
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/task.php
+--- a/lib/Horde/Kolab/XML/task.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Kolab/XML/task.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -109,6 +109,9 @@
+     function _load(&$children)
+     {
+         $object = $this->loadArray($children, $this->_fields_specific);
++        if (is_a($object, 'PEAR_Error')) {
++            return $object;
++        }
+ 
+         $object['name'] = $object['summary'];
+         unset($object['summary']);
+diff -r f7b1e151bdb5 lib/Horde/Kolab/XML/timetrack.php
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/lib/Horde/Kolab/XML/timetrack.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -0,0 +1,90 @@
++<?php
++/**
++ * @package Horde_Kolab
++ *
++ * $Horde: framework/Kolab/Kolab/Format/XML/hprefs.php,v 1.1 2008/06/16 11:46:09 wrobel Exp $
++ */
++
++/**
++ * Kolab XML handler for time tracking entries
++ *
++ * $Horde: framework/Kolab/Kolab/Format/XML/hprefs.php,v 1.1 2008/06/16 11:46:09 wrobel Exp $
++ *
++ * Copyright 2008 The Horde Project (http://www.horde.org/)
++ *
++ * @author  Gunnar Wrobel <wrobel@pardus.de>
++ * @package Horde_Kolab
++ */
++class Kolab_Format_XML_timetrack extends Kolab_Format_XML {
++    /**
++     * Specific data fields for the jobtype object
++     *
++     * @var Kolab
++     */
++    var $_fields_specific;
++
++    /**
++     * Constructor
++     */
++    function Kolab_Format_XML_timetrack()
++    {
++        $this->_root_name = 'timetrack';
++
++        /** Specific preferences fields, in kolab format specification order
++         */
++        $this->_fields_specific = array(
++            'client' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'employee' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'type' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'hours' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'billable' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_INTEGER,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'submitted' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_INTEGER,
++                'value'   => HORDE_KOLAB_XML_VALUE_DEFAULT,
++                'default' => 0,
++            ),
++            'exported' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_INTEGER,
++                'value'   => HORDE_KOLAB_XML_VALUE_DEFAULT,
++                'default' => 0,
++            ),
++            'date' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_DATE,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'description' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'note' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++            'rate' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_NOT_EMPTY,
++            ),
++            'costobject' => array(
++                'type'    => HORDE_KOLAB_XML_TYPE_STRING,
++                'value'   => HORDE_KOLAB_XML_VALUE_MAYBE_MISSING,
++            ),
++        );
++
++        parent::Kolab_Format_XML();
++    }
++}
+diff -r f7b1e151bdb5 lib/Horde/Prefs/kolab.php
+--- a/lib/Horde/Prefs/kolab.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/Prefs/kolab.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -1,5 +1,6 @@
  <?php
  
@@ -341,9 +767,9 @@ diff -r edb3eb2593d6 lib/Horde/Prefs/kolab.php
      }
  
  }
-diff -r edb3eb2593d6 lib/Horde/iCalendar.php
---- a/lib/Horde/iCalendar.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/Horde/iCalendar.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/Horde/iCalendar.php
+--- a/lib/Horde/iCalendar.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/Horde/iCalendar.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -152,6 +152,41 @@
                  'value'     => $value,
                  'values'    => $values
@@ -386,9 +812,9 @@ diff -r edb3eb2593d6 lib/Horde/iCalendar.php
          }
      }
  
-diff -r edb3eb2593d6 lib/SyncML/Backend.php
---- a/lib/SyncML/Backend.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/SyncML/Backend.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/SyncML/Backend.php
+--- a/lib/SyncML/Backend.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/SyncML/Backend.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -574,6 +574,24 @@
      }
  
@@ -414,9 +840,9 @@ diff -r edb3eb2593d6 lib/SyncML/Backend.php
       * Authenticates the user at the backend.
       *
       * For some types of authentications (notably auth:basic) the username
-diff -r edb3eb2593d6 lib/SyncML/Backend/Horde.php
---- a/lib/SyncML/Backend/Horde.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/SyncML/Backend/Horde.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/SyncML/Backend/Horde.php
+--- a/lib/SyncML/Backend/Horde.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/SyncML/Backend/Horde.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -202,6 +202,11 @@
                                        __FILE__, __LINE__, PEAR_LOG_DEBUG);
                      continue;
@@ -525,9 +951,9 @@ diff -r edb3eb2593d6 lib/SyncML/Backend/Horde.php
          return true;
      }
  
-diff -r edb3eb2593d6 lib/SyncML/Constants.php
---- a/lib/SyncML/Constants.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/SyncML/Constants.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/SyncML/Constants.php
+--- a/lib/SyncML/Constants.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/SyncML/Constants.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -64,7 +64,7 @@
  define('RESPONSE_PARTIAL_CONTENT', 206);
  define('RESPONSE_CONFLICT_RESOLVED_WITH_MERGE', 207);
@@ -537,9 +963,9 @@ diff -r edb3eb2593d6 lib/SyncML/Constants.php
  define('RESPONSE_DELETE_WITHOUT_ARCHIVE', 210);
  define('RESPONSE_ITEM_NO_DELETED', 211);
  define('RESPONSE_AUTHENTICATION_ACCEPTED', 212);
-diff -r edb3eb2593d6 lib/SyncML/Device.php
---- a/lib/SyncML/Device.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/SyncML/Device.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/SyncML/Device.php
+--- a/lib/SyncML/Device.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/SyncML/Device.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -161,12 +161,81 @@
              SYNCML_LOGFILE_DATA,
              "\nInput received from client ($contentType):\n$content\n");
@@ -622,9 +1048,9 @@ diff -r edb3eb2593d6 lib/SyncML/Device.php
  
      /**
       * Converts the content from the backend to a format suitable for the
-diff -r edb3eb2593d6 lib/SyncML/Sync.php
---- a/lib/SyncML/Sync.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/SyncML/Sync.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/SyncML/Sync.php
+--- a/lib/SyncML/Sync.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/SyncML/Sync.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -214,7 +214,13 @@
              }
          } elseif ($item->elementType =='Delete') {
@@ -681,9 +1107,9 @@ diff -r edb3eb2593d6 lib/SyncML/Sync.php
              } else {
                  $backend->logMessage($suid->message, __FILE__, __LINE__, PEAR_LOG_DEBUG);
  
-diff -r edb3eb2593d6 lib/core.php
---- a/lib/core.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/lib/core.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 lib/core.php
+--- a/lib/core.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/lib/core.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -31,6 +31,12 @@
   * include_path, you must add an ini_set() call here to add their location to
   * the include_path. */
@@ -697,15 +1123,15 @@ diff -r edb3eb2593d6 lib/core.php
  
  /* PEAR base class. */
  include_once 'PEAR.php';
-diff -r edb3eb2593d6 log/.htaccess
+diff -r f7b1e151bdb5 log/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/log/.htaccess	Mon Aug 11 18:06:31 2008 +0200
++++ b/log/.htaccess	Wed Aug 13 21:37:23 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r edb3eb2593d6 mnemo/config/conf.php
---- a/mnemo/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/mnemo/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 mnemo/config/conf.php
+--- a/mnemo/config/conf.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/mnemo/config/conf.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -1,9 +1,8 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -718,9 +1144,9 @@ diff -r edb3eb2593d6 mnemo/config/conf.php
  $conf['menu']['print'] = true;
  $conf['menu']['import_export'] = true;
  $conf['menu']['apps'] = array();
-diff -r edb3eb2593d6 nag/config/conf.php
---- a/nag/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/config/conf.php
+--- a/nag/config/conf.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/config/conf.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -1,9 +1,7 @@
  <?php
  /* CONFIG START. DO NOT CHANGE ANYTHING IN OR AFTER THIS LINE. */
@@ -732,9 +1158,9 @@ diff -r edb3eb2593d6 nag/config/conf.php
  $conf['menu']['print'] = true;
  $conf['menu']['import_export'] = true;
  $conf['menu']['apps'] = array();
-diff -r edb3eb2593d6 nag/lib/Block/tree_menu.php
---- a/nag/lib/Block/tree_menu.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/Block/tree_menu.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/Block/tree_menu.php
+--- a/nag/lib/Block/tree_menu.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/Block/tree_menu.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -39,6 +39,15 @@
                             array('icon' => 'add.png',
                                   'icondir' => $icondir,
@@ -751,9 +1177,9 @@ diff -r edb3eb2593d6 nag/lib/Block/tree_menu.php
          }
  
          $tree->addNode($parent . '__search',
-diff -r edb3eb2593d6 nag/lib/Driver.php
---- a/nag/lib/Driver.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/Driver.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/Driver.php
+--- a/nag/lib/Driver.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/Driver.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -208,13 +208,14 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -917,9 +1343,9 @@ diff -r edb3eb2593d6 nag/lib/Driver.php
 +        $this->completed = true;
 +    }
  }
-diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
---- a/nag/lib/Driver/kolab.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/Driver/kolab.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/Driver/kolab.php
+--- a/nag/lib/Driver/kolab.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/Driver/kolab.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -114,17 +114,19 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -966,7 +1392,37 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
      }
  
      /**
-@@ -379,13 +384,15 @@
+@@ -271,6 +276,9 @@
+      */
+     function Nag_Driver_kolab_wrapper($tasklist, &$kolab)
+     {
++        global $kolab_current_tasklist;
++        $kolab_current_tasklist = null;
++
+         $this->_tasklist = $tasklist;
+         $this->_kolab = &$kolab;
+     }
+@@ -285,7 +293,9 @@
+      */
+     function connect($loader = 0)
+     {
+-        if ($this->_connected) {
++        global $kolab_current_tasklist;
++        
++        if ($kolab_current_tasklist == $this->_tasklist) {
+             return true;
+         }
+ 
+@@ -294,7 +304,7 @@
+             return $result;
+         }
+ 
+-        $this->_connected = true;
++        $kolab_current_tasklist = $this->_tasklist;
+ 
+         return true;
+     }
+@@ -379,13 +389,15 @@
       * @param string $owner            The owner of the event.
       * @param string $assignee         The assignee of the event.
       * @param integer $completed_date  The task's completion date.
@@ -983,7 +1439,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
      {
          if ($due == 0) {
              $alarm = 0;
-@@ -432,13 +439,14 @@
+@@ -432,13 +444,14 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
       * @param string $assignee    The assignee of the event.
@@ -999,7 +1455,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
      {
          // Usually provided by the generic Driver class
          if ($uid !== null) {
-@@ -453,7 +461,8 @@
+@@ -453,7 +466,8 @@
  
          return $this->_setObject($name, $desc, $start, $due, $priority,
                                   $completed, $estimate, $category, $alarm,
@@ -1009,7 +1465,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
      }
  
      /**
-@@ -474,6 +483,7 @@
+@@ -474,6 +488,7 @@
       * @param string $owner            The owner of the event.
       * @param string $assignee         The assignee of the event.
       * @param integer $completed_date  The task's completion date.
@@ -1017,7 +1473,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
       *
       * @return boolean  Indicates if the modification was successfull.
       */
-@@ -481,7 +491,7 @@
+@@ -481,7 +496,7 @@
                      $priority = 0, $estimate = 0.0, $completed = 0,
                      $category = '', $alarm = 0, $parent = null,
                      $private = false, $owner = null, $assignee = null,
@@ -1026,7 +1482,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
      {
          // Load the object into the kolab driver
          $result = $this->_kolab->loadObject($taskId);
-@@ -492,7 +502,7 @@
+@@ -492,7 +507,7 @@
          $result = $this->_setObject($name, $desc, $start, $due, $priority,
                                      $estimate, $completed, $category, $alarm,
                                      $parent, $private, $owner, $assignee,
@@ -1035,24 +1491,136 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
          if (is_a($result, 'PEAR_Error')) {
              return $result;
          }
-@@ -780,6 +790,7 @@
+@@ -672,7 +687,9 @@
+      */
+     function connect()
+     {
+-        if ($this->_connected) {
++        global $kolab_current_tasklist;
++
++        if (isset($this->_store) && $kolab_current_tasklist == $this->_tasklist) {
+             return true;
+         }
+ 
+@@ -687,43 +704,6 @@
+     }
+ 
+     /**
+-     * Split the tasklist name of the id. We use this to make ids
+-     * unique across folders.
+-     *
+-     * @param string $id The ID of the task appended with the tasklist
+-     *                   name.
+-     *
+-     * @return array  The task id and tasklist name
+-     */
+-    function _splitId($id)
+-    {
+-        $split = split('@', $id, 2);
+-        if (count($split) == 2) {
+-            list($id, $tasklist) = $split;
+-        } else if (count($split) == 1) {
+-            $tasklist = Auth::getAuth();
+-        }
+-        return array($id, $tasklist);
+-    }
+-
+-    /**
+-     * Append the tasklist name to the id. We use this to make ids
+-     * unique across folders.
+-     *
+-     * @param string $id The ID of the task
+-     *
+-     * @return string  The task id appended with the tasklist
+-     *                 name.
+-     */
+-    function _uniqueId($id)
+-    {
+-        if ($this->_tasklist == Auth::getAuth()) {
+-            return $id;
+-        }
+-        return $id . '@' . $this->_tasklist;
+-    }
+-
+-    /**
+      * Retrieves one task from the store.
+      *
+      * @param string $taskId  The id of the task to retrieve.
+@@ -732,7 +712,10 @@
+      */
+     function get($taskId)
+     {
+-        list($taskId, $tasklist) = $this->_splitId($taskId);
++        $result = $this->connect();
++        if (is_a($result, 'PEAR_Error')) {
++            return $result;
++        }
+ 
+         if ($this->_store->objectUidExists($taskId)) {
+             $task = $this->_store->getObject($taskId);
+@@ -751,15 +734,24 @@
+      */
+     function getByUID($uid)
+     {
+-        list($taskId, $tasklist) = $this->_splitId($uid);
++        $tasklists = array_keys(Nag::listTasklists(true, PERMS_READ));
+ 
+-        if ($this->_tasklist != $tasklist) {
++        foreach ($tasklists as $tasklist) {
+             $this->_tasklist = $tasklist;
+-            $this->_connected = false;
+-            $this->connect();
++            $result = $this->connect();
++            if (is_a($result, 'PEAR_Error')) {
++                return $result;
++            }
++
++            if (!$this->_store->objectUidExists($uid)) {
++                continue;
++            }
++
++            // Ok, found task
++            return $this->get($uid);
+         }
+ 
+-        return $this->get($taskId);
++        return PEAR::raiseError(sprintf(_("Task not found: %s"), $uid));
+     }
+ 
+     /**
+@@ -780,6 +772,8 @@
       * @param string $owner            The owner of the event.
       * @param string $assignee         The assignee of the event.
       * @param integer $completed_date  The task's completion date.
 +     * @param Nag_Recurrence $recurrence  Task recurrence.
++     * @param boolean $add             Are we adding a new task?
       *
       * @return mixed The id of the task if successful, a PEAR error
       * otherwise
-@@ -788,7 +799,7 @@
+@@ -788,18 +782,13 @@
                          $estimate = 0.0, $completed = 0, $category = '',
                          $alarm = 0, $uid = null, $parent = null,
                          $private = false, $owner = null, $assignee = null,
 -                        $completed_date = null)
-+                        $completed_date = null, $recurrence = null)
++                        $completed_date = null, $recurrence = null,
++                        $add = false)
      {
-         if (empty($uid)) {
-             $task_uid = $this->_store->generateUID();
-@@ -808,6 +819,10 @@
+-        if (empty($uid)) {
+-            $task_uid = $this->_store->generateUID();
++        if ($add) {
+             $old_uid = null;
+         } else {
+-            list($task_uid, $tasklist) = $this->_splitId($uid);
+-            $old_uid = $task_uid;
+-        }
+-
+-        if ($parent) {
+-            list($parent, $dummy) = $this->_splitId($parent);
++            $old_uid = $uid;
+         }
+ 
+         if ($private) {
+@@ -808,8 +797,12 @@
              $sensitivity = 'public';
          }
  
@@ -1061,9 +1629,12 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
 +        }
 +
          $result = $this->_store->save(array(
-                                           'uid' => $task_uid,
+-                                          'uid' => $task_uid,
++                                          'uid' => $uid,
                                            'name' => $name,
-@@ -817,6 +832,7 @@
+                                           'body' => $desc,
+                                           'start' => $start,
+@@ -817,6 +810,7 @@
                                            'priority' => $priority,
                                            'completed' => $completed,
                                            'categories' => $category,
@@ -1071,7 +1642,16 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
                                            'alarm' => $alarm,
                                            'parent' => $parent,
                                            'sensitivity' => $sensitivity,
-@@ -854,6 +870,7 @@
+@@ -834,7 +828,7 @@
+             return $result;
+         }
+ 
+-        return $task_uid;
++        return $uid;
+     }
+ 
+     /**
+@@ -854,6 +848,7 @@
       * @param boolean $private         Whether the task is private.
       * @param string $owner            The owner of the event.
       * @param string $assignee         The assignee of the event.
@@ -1079,7 +1659,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
       *
       * @return mixed The id of the task if successful, a PEAR error
       * otherwise
-@@ -861,11 +878,12 @@
+@@ -861,11 +856,12 @@
      function add($name, $desc, $start = 0, $due = 0, $priority = 0,
                   $estimate = 0.0, $completed = 0, $category = '', $alarm = 0,
                   $uid = null, $parent = null, $private = false, $owner = null,
@@ -1089,12 +1669,12 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
          return $this->_setObject($name, $desc, $start, $due, $priority,
                                   $estimate, $completed, $category, $alarm,
 -                                 null, $parent, $private, $owner, $assignee);
-+                                 null, $parent, $private, $owner, $assignee, 
-+                                 null, $recurrence);
++                                 $uid, $parent, $private, $owner, $assignee, 
++                                 null, $recurrence, true);
      }
  
      /**
-@@ -886,6 +904,7 @@
+@@ -886,6 +882,7 @@
       * @param string $owner            The owner of the event.
       * @param string $assignee         The assignee of the event.
       * @param integer $completed_date  The task's completion date.
@@ -1102,7 +1682,7 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
       *
       * @return mixed The id of the task if successful, a PEAR error
       * otherwise
-@@ -893,12 +912,13 @@
+@@ -893,12 +890,13 @@
      function modify($taskId, $name, $desc, $start = 0, $due = 0, $priority = 0,
                      $estimate = 0.0, $completed = 0, $category = '',
                      $alarm = 0, $parent = null, $private = false,
@@ -1118,23 +1698,115 @@ diff -r edb3eb2593d6 nag/lib/Driver/kolab.php
          if (is_a($result, 'PEAR_Error')) {
              return $result;
          }
-@@ -1033,6 +1053,13 @@
+@@ -916,8 +914,6 @@
+      */
+     function move($taskId, $newTasklist)
+     {
+-        list($taskId, $tasklist) = $this->_splitId($taskId);
+-
+         return $this->_store->move($taskId, $newTasklist);
+     }
+ 
+@@ -928,8 +924,6 @@
+      */
+     function delete($taskId)
+     {
+-        list($taskId, $tasklist) = $this->_splitId($taskId);
+-
+         return $this->_store->delete($taskId);
+     }
+ 
+@@ -953,6 +947,11 @@
+      */
+     function retrieve($completed = 1)
+     {
++        $result = $this->connect();
++        if (is_a($result, 'PEAR_Error')) {
++            return $result;
++        }
++
+         $dict = array();
+         $tasks = new Nag_Task();
+ 
+@@ -960,13 +959,14 @@
+         if (is_a($task_list, 'PEAR_Error')) {
+             return $task_list;
+         }
++            
+ 
+         if (empty($task_list)) {
+             return $tasks;
+         }
+ 
+         foreach ($task_list as $task) {
+-            $tuid = $this->_uniqueId($task['uid']);
++            $tuid = $task['uid'];
+             $t = &new Nag_Task($this->_buildTask($task));
+             $complete = $t->completed;
+             if (empty($t->start)) {
+@@ -1014,10 +1014,10 @@
+     function _buildTask($task)
+     {
+         $task['tasklist_id'] = $this->_tasklist;
+-        $task['task_id'] = $this->_uniqueId($task['uid']);
++        $task['task_id'] = $task['uid'];
+ 
+         if (!empty($task['parent'])) {
+-            $task['parent'] = $this->_uniqueId($task['parent']);
++            $task['parent'] = $task['parent'];
+         }
+ 
+         $task['category'] = $task['categories'];
+@@ -1032,6 +1032,13 @@
+             $task['private'] = true;
          }
          unset($task['sensitivity']);
- 
++
 +        if (isset($task['recurrence']) && isset($task['due'])) {
 +            require_once NAG_BASE . '/lib/Recurrence.php';
 +            $recurrence = new Nag_Recurrence($task['due']);
 +            $recurrence->fromHash($task['recurrence']);
 +            $task['recurrence'] = $recurrence;
 +        }
-+
+ 
          $share = &$GLOBALS['nag_shares']->getShare($this->_tasklist);
          $task['owner'] = $share->get('owner');
+@@ -1048,6 +1055,11 @@
+      */
+     function listAlarms($date)
+     {
++        $result = $this->connect();
++        if (is_a($result, 'PEAR_Error')) {
++            return $result;
++        }
++
+         $task_list = $this->_store->getObjects();
+         if (is_a($task_list, 'PEAR_Error')) {
+             return $task_list;
+@@ -1059,7 +1071,7 @@
  
-diff -r edb3eb2593d6 nag/lib/Driver/sql.php
---- a/nag/lib/Driver/sql.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/Driver/sql.php	Mon Aug 11 18:06:31 2008 +0200
+         $tasks = array();
+         foreach ($task_list as $task) {
+-            $tuid = $this->_uniqueId($task['uid']);
++            $tuid = $task['uid'];
+             $t = new Nag_Task($this->_buildTask($task));
+             if ($t->alarm && $t->due &&
+                 $t->due - $t->alarm * 60 < $date) {
+@@ -1079,7 +1091,10 @@
+      */
+     function getChildren($parentId)
+     {
+-        list($parentId, $tasklist) = $this->_splitId($parentId);
++        $result = $this->connect();
++        if (is_a($result, 'PEAR_Error')) {
++            return $result;
++        }
+ 
+         $task_list = $this->_store->getObjects();
+         if (is_a($task_list, 'PEAR_Error')) {
+diff -r f7b1e151bdb5 nag/lib/Driver/sql.php
+--- a/nag/lib/Driver/sql.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/Driver/sql.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -158,13 +158,14 @@
       * @param boolean $private    Whether the task is private.
       * @param string $owner       The owner of the event.
@@ -1166,9 +1838,9 @@ diff -r edb3eb2593d6 nag/lib/Driver/sql.php
      {
          $query = sprintf('UPDATE %s SET' .
                           ' task_creator = ?, ' .
-diff -r edb3eb2593d6 nag/lib/Forms/task.php
---- a/nag/lib/Forms/task.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/Forms/task.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/Forms/task.php
+--- a/nag/lib/Forms/task.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/Forms/task.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -87,6 +87,7 @@
  
          $this->addVariable(_("Private?"), 'private', 'boolean', false);
@@ -1338,9 +2010,9 @@ diff -r edb3eb2593d6 nag/lib/Forms/task.php
   * The Horde_Form_Type_nag_start class provides a form field for editing
   * task delayed start dates.
   *
-diff -r edb3eb2593d6 nag/lib/Recurrence.php
+diff -r f7b1e151bdb5 nag/lib/Recurrence.php
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/nag/lib/Recurrence.php	Mon Aug 11 18:06:31 2008 +0200
++++ b/nag/lib/Recurrence.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -0,0 +1,1469 @@
 +<?php
 +/**
@@ -2811,9 +3483,9 @@ diff -r edb3eb2593d6 nag/lib/Recurrence.php
 +    }
 +
 +}
-diff -r edb3eb2593d6 nag/lib/UI/VarRenderer/nag.php
---- a/nag/lib/UI/VarRenderer/nag.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/lib/UI/VarRenderer/nag.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/UI/VarRenderer/nag.php
+--- a/nag/lib/UI/VarRenderer/nag.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/UI/VarRenderer/nag.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -26,6 +26,147 @@
   * @package Nag
   */
@@ -2962,9 +3634,59 @@ diff -r edb3eb2593d6 nag/lib/UI/VarRenderer/nag.php
  
      function _renderVarInput_nag_start($form, &$var, &$vars)
      {
-diff -r edb3eb2593d6 nag/list.php
---- a/nag/list.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/list.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/lib/api.php
+--- a/nag/lib/api.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/lib/api.php	Wed Aug 13 21:37:23 2008 +0200
+@@ -96,6 +96,11 @@
+ 
+ $_services['replace'] = array(
+     'args' => array('uid' => 'string', 'content' => 'string', 'contentType' => 'string'),
++    'type' => 'boolean',
++);
++
++$_services['complete'] = array(
++    'args' => array('uid' => '{urn:horde}stringArray'),
+     'type' => 'boolean',
+ );
+ 
+@@ -1121,6 +1126,34 @@
+ }
+ 
+ /**
++ * Completes a task identified by UID.
++ *
++ * @param string|array $uid  Identify the task to complete, either a single UID
++ *                           or an array.
++ *
++ * @return boolean  Success or failure.
++ */
++function _nag_complete($uid)
++{
++    require_once dirname(__FILE__) . '/base.php';
++
++    $storage = &Nag_Driver::singleton();
++    $task = $storage->getByUID($uid);
++    if (is_a($task, 'PEAR_Error')) {
++        return $task;
++    }
++
++    if (!Auth::isAdmin() &&
++        !array_key_exists($task->tasklist,
++                          Nag::listTasklists(false, PERMS_EDIT))) {
++        return PEAR::raiseError(_("Permission Denied"));
++    }
++
++    $task->toggleComplete();
++    return $task->save();
++}
++
++/**
+  * Replaces the task identified by UID with the content represented in the
+  * specified content type.
+  *
+diff -r f7b1e151bdb5 nag/list.php
+--- a/nag/list.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/list.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -75,10 +75,24 @@
      break;
  
@@ -2991,9 +3713,9 @@ diff -r edb3eb2593d6 nag/list.php
      if (is_a($tasks, 'PEAR_Error')) {
          $notification->push($tasks, 'horde.error');
          $tasks = new Nag_Task();
-diff -r edb3eb2593d6 nag/task.php
---- a/nag/task.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/task.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/task.php
+--- a/nag/task.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/task.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -141,6 +141,19 @@
          $cManager->add($info['category']['value']);
      }
@@ -3062,9 +3784,9 @@ diff -r edb3eb2593d6 nag/task.php
                  } else {
                      $notification->push(sprintf(_("%s is now incomplete."), $task->name), 'horde.success');
                  }
-diff -r edb3eb2593d6 nag/templates/list/task_summaries.inc
---- a/nag/templates/list/task_summaries.inc	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/templates/list/task_summaries.inc	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/templates/list/task_summaries.inc
+--- a/nag/templates/list/task_summaries.inc	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/templates/list/task_summaries.inc	Wed Aug 13 21:37:23 2008 +0200
 @@ -4,7 +4,7 @@
  if (!is_a($share, 'PEAR_Error') &&
      $share->hasPermission(Auth::getAuth(), PERMS_EDIT)) {
@@ -3074,9 +3796,9 @@ diff -r edb3eb2593d6 nag/templates/list/task_summaries.inc
              $label = _("Incomplete sub tasks, complete them first");
              echo Horde::img('unchecked.png', $label, array('title' => $label));
          } else {
-diff -r edb3eb2593d6 nag/templates/view/task.inc
---- a/nag/templates/view/task.inc	Mon Aug 11 14:33:35 2008 +0200
-+++ b/nag/templates/view/task.inc	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 nag/templates/view/task.inc
+--- a/nag/templates/view/task.inc	Wed Aug 13 17:47:52 2008 +0200
++++ b/nag/templates/view/task.inc	Wed Aug 13 21:37:23 2008 +0200
 @@ -66,6 +66,54 @@
   </tr>
  <?php endif; ?>
@@ -3132,21 +3854,21 @@ diff -r edb3eb2593d6 nag/templates/view/task.inc
  <?php if (strlen($task->desc)): ?>
   <tr>
    <td colspan="2" class="taskBody">
-diff -r edb3eb2593d6 storage/.htaccess
+diff -r f7b1e151bdb5 storage/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/storage/.htaccess	Mon Aug 11 18:06:31 2008 +0200
++++ b/storage/.htaccess	Wed Aug 13 21:37:23 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r edb3eb2593d6 tmp/.htaccess
+diff -r f7b1e151bdb5 tmp/.htaccess
 --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
-+++ b/tmp/.htaccess	Mon Aug 11 18:06:31 2008 +0200
++++ b/tmp/.htaccess	Wed Aug 13 21:37:23 2008 +0200
 @@ -0,0 +1,1 @@
 +Deny from All
 \ No newline at end of file
-diff -r edb3eb2593d6 turba/config/conf.php
---- a/turba/config/conf.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/turba/config/conf.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 turba/config/conf.php
+--- a/turba/config/conf.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/turba/config/conf.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -3,8 +3,8 @@
  // $Horde: turba/config/conf.xml,v 1.6.2.5 2008/05/06 21:26:59 bklang Exp $
  $conf['menu']['import_export'] = true;
@@ -3159,9 +3881,9 @@ diff -r edb3eb2593d6 turba/config/conf.php
 -$conf['documents']['type'] = 'none';
 +$conf['documents']['type'] = 'horde';
  /* CONFIG END. DO NOT CHANGE ANYTHING IN OR BEFORE THIS LINE. */
-diff -r edb3eb2593d6 turba/config/sources.php
---- a/turba/config/sources.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/turba/config/sources.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 turba/config/sources.php
+--- a/turba/config/sources.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/turba/config/sources.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -149,6 +149,8 @@
   * Here are some example configurations:
   */
@@ -3405,9 +4127,9 @@ diff -r edb3eb2593d6 turba/config/sources.php
 +    );
 +}
 +/* End Kolab sources. */
-diff -r edb3eb2593d6 turba/lib/Driver.php
---- a/turba/lib/Driver.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/turba/lib/Driver.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 turba/lib/Driver.php
+--- a/turba/lib/Driver.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/turba/lib/Driver.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -1368,9 +1368,6 @@
          $hash = array();
          $attr = $vcard->getAllAttributes();
@@ -3418,9 +4140,9 @@ diff -r edb3eb2593d6 turba/lib/Driver.php
  
              switch ($item['name']) {
              case 'FN':
-diff -r edb3eb2593d6 turba/lib/Driver/share.php
---- a/turba/lib/Driver/share.php	Mon Aug 11 14:33:35 2008 +0200
-+++ b/turba/lib/Driver/share.php	Mon Aug 11 18:06:31 2008 +0200
+diff -r f7b1e151bdb5 turba/lib/Driver/share.php
+--- a/turba/lib/Driver/share.php	Wed Aug 13 17:47:52 2008 +0200
++++ b/turba/lib/Driver/share.php	Wed Aug 13 21:37:23 2008 +0200
 @@ -145,7 +145,7 @@
      function _deleteAll($sourceName = null)
      {
