@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/g15stats
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.1 2008/07/06 11:21:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.2 2008/08/14 13:59:45 pva Exp $
+
+  14 Aug 2008; Peter Volkov <pva@gentoo.org> g15stats-1.0.ebuild:
+  ~amd64 keyworded as this package was initially tested on amd64, bug
+  #210192, thank Vadim Efimov for report.
 
 *g15stats-1.0 (06 Jul 2008)
 
