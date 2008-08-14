@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10.ebuild,v 1.1 2008/08/14 21:32:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10.ebuild,v 1.2 2008/08/14 21:45:34 carlo Exp $
 
 ARTS_REQUIRED="never"
 
@@ -58,7 +58,7 @@ RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 		media-video/realplayer
 		media-libs/alsa-lib )
 	njb? ( >=media-libs/libnjb-2.2.4 )
-	mtp? ( >=media-libs/libmtp-0.3.0 )
+	mtp? ( <media-libs/libmtp-0.3.0 )
 	musicbrainz? ( media-libs/tunepimp )
 	=dev-lang/ruby-1.8*"
 
