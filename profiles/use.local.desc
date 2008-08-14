@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3733 2008/08/14 04:32:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3734 2008/08/14 04:33:21 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -256,8 +256,8 @@ app-emulation/e-uae:capslib - Add CAPS library support
 app-emulation/e-uae:sdl-sound - Use media-libs/sdl-soundfor audio output
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
 app-emulation/hercules:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default package CFLAGS (not supported)
-app-emulation/kvm:bios - Compile BIOS from source (not necessary to run app-emulation/kvm
 app-emulation/kvm:havekernel - Don't require a kernel build tree (useful if using a binary distrbuted kernel aka binary packages)
+app-emulation/kvm:vde - Enable VDE-based networking
 app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote storage
 app-emulation/libvirt:kvm - Add support for app-emulation/kvmbased virtual machines
 app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
