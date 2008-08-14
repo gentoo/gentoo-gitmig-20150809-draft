@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/luafilesystem-1.4.1.ebuild,v 1.2 2008/08/08 22:50:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/luafilesystem-1.4.1.ebuild,v 1.3 2008/08/14 07:38:51 aballier Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://luaforge.net/frs/download.php/3345/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/lua-5.1"
