@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.53 2008/05/29 15:30:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.54 2008/08/14 00:11:12 leio Exp $
+
+  14 Aug 2008; Mart Raudsepp <leio@gentoo.org> -pessulus-2.16.3.ebuild:
+  Remove old
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> pessulus-2.16.4.ebuild:
   python_mod_optimize is ROOT aware.
