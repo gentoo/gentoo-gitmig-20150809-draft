@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.13 2008/07/17 08:10:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.14 2008/08/14 07:07:57 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://grass.itc.it/"
 SRC_URI="http://grass.itc.it/grass62/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="6"
 KEYWORDS="amd64 ppc sparc x86"
 # To-do: get ppc64 gdal deps fixed up
 

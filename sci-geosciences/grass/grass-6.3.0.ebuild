@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.2 2008/06/25 04:28:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.3 2008/08/14 07:07:57 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://grass.itc.it/"
 SRC_URI="http://grass.itc.it/${MY_PM}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="ffmpeg fftw glw gmath jpeg largefile mysql nls odbc opengl png \

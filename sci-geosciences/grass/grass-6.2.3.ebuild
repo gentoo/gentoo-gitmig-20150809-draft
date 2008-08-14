@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.8 2008/06/24 07:45:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.3.ebuild,v 1.9 2008/08/14 07:07:57 nerdboy Exp $
 
 inherit eutils fdo-mime versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://grass.itc.it/"
 SRC_URI="http://grass.itc.it/${MY_PM}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="ffmpeg fftw glw gmath jpeg largefile mysql nls odbc opengl png \
@@ -154,8 +154,7 @@ src_compile() {
 	    myconf="${myconf} --with-ffmpeg \
 	        --with-ffmpeg-libs=/usr/$(get_libdir)"
 	    if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
-	        myconf="${myconf} \
-	    	    --with-ffmpeg-includes=/usr/include/libavcodec"
+	        myconf="${myconf} --with-ffmpeg-includes=/usr/include/libav*"
 	    else
 		myconf="${myconf} --with-ffmpeg-includes=/usr/include/ffmpeg"
 	    fi

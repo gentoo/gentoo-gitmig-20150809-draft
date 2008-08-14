@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.61 2008/08/06 18:02:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.62 2008/08/14 07:07:57 nerdboy Exp $
+
+  14 Aug 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.2.0-r1.ebuild,
+  grass-6.2.1.ebuild, grass-6.2.3.ebuild, grass-6.3.0.ebuild:
+  updated slotting of ver. 6 packages to address bug #234070
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
