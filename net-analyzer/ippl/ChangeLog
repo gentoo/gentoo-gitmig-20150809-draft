@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ippl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.12 2008/06/05 13:12:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.13 2008/08/14 14:56:29 armin76 Exp $
+
+  14 Aug 2008; Raúl Porcel <armin76@gentoo.org> ippl-1.4.14-r1.ebuild:
+  x86 stable
 
 *ippl-1.4.14-r1 (05 Jun 2008)
 
