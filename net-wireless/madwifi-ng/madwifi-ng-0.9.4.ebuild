@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.4 2008/07/21 19:13:53 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.5 2008/08/14 02:28:30 steev Exp $
 
 inherit linux-mod
 
@@ -86,8 +86,8 @@ pkg_postinst() {
 	einfo "no longer serve any purpose."
 
 	elog "Please note: This release is based off of 0.9.3.3 and NOT trunk."
-	elog "# No AR5007 support in this release; experimental support is available
-	for i386 (32bit) in #1679"
+	elog "# No AR5007 support in this release;"
+	elog "experimental support is available for i386 (32bit) in #1679"
 	elog "# No AR5008 support in this release; support is available in trunk "
 	elog "No, we will not apply the patch from 1679, if you must, please do so
 	in an overlay on your system. That is upstreams ticket 1679, not Gentoo's."
