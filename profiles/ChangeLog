@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1771 2008/08/14 13:57:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1772 2008/08/14 15:09:07 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  14 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Fix the www-client/opera mask to include RCs.
 
   14 Aug 2008; Raúl Porcel <armin76@gentoo.org> profiles.desc:
   no-nptl profile in x86 has been removed
