@@ -200,7 +200,6 @@ sparc		default/linux/sparc/2008.0/server		stable
 x86		default/linux/x86/2008.0			stable
 x86		default/linux/x86/2008.0/desktop		stable
 x86		default/linux/x86/2008.0/developer		stable
-x86		default/linux/x86/2008.0/no-nptl		dev
 x86		default/linux/x86/2008.0/server			stable
 
 # hardened multiarch profiles
