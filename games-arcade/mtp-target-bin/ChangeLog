@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/mtp-target-bin
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.12 2006/12/01 20:47:59 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.13 2008/08/14 16:42:43 mr_bones_ Exp $
+
+*mtp-target-bin-1.5.18 (14 Aug 2008)
+
+  14 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +mtp-target-bin-1.5.18.ebuild:
+  version bump - ebuild submitted by Tomáš Chvátal via bug #229941
+  Cleaned out old, broken version
 
   01 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   mtp-target-bin-1.2.0.ebuild:
