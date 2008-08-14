@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.107 2008/08/12 13:44:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.108 2008/08/14 00:43:46 leio Exp $
+
+  14 Aug 2008; Mart Raudsepp <leio@gentoo.org> -vino-2.22.1.ebuild:
+  Remove old
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> vino-2.22.2.ebuild:
   alpha/ia64/sparc stable wrt #229709
