@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.38 2008/08/09 22:18:48 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.39 2008/08/14 06:53:44 wormo Exp $
+
+*gtk-engines-qt-0.8-r3 (14 Aug 2008)
+
+  14 Aug 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/gtk-engines-qt-0.8-optional-bonobo.patch, metadata.xml,
+  +gtk-engines-qt-0.8-r3.ebuild:
+  Replace auto-detection of libbonobo with a gnome USE-flag that explicitly
+  enables and disables libbonoboui support (bug #206568)
 
 *gtk-engines-qt-0.8-r2 (10 Aug 2008)
 

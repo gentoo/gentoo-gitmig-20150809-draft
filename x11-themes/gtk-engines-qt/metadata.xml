@@ -5,4 +5,8 @@
 <maintainer>
   <email>genstef@gentoo.org</email>
 </maintainer>
+<use>
+  <flag name='gnome'>Enable proper theming of buttons in gnome toolbars (as
+  opposed to just plain gtk+ toolbars)</flag>
+</use>
 </pkgmetadata>
