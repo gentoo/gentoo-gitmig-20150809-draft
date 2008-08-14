@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.540 2008/07/23 18:26:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.541 2008/08/14 21:46:34 mpagano Exp $
+
+*gentoo-sources-2.6.26-r1 (14 Aug 2008)
+
+  14 Aug 2008; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.26-r1.ebuild:
+  Update to Linux 2.6.26.1 and 2.6.26.2 including a patch to the main
+  Makefile. New mount option for FAT filesystems allowing timestamps to be in
+  coordinated universal time (UTC)
 
   23 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r7.ebuild:
