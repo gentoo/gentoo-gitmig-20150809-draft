@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3732 2008/08/13 14:21:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3733 2008/08/14 04:32:11 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -103,6 +103,8 @@
 app-accessibility/festival:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
+app-accessibility/gnome-speech:espeak - Adds support for the espeak speech driver (default)
+app-accessibility/gnome-speech:festival - Adds support for the festival speech driver
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
