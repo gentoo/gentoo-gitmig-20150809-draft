@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3734 2008/08/14 04:33:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3735 2008/08/14 04:34:11 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -278,6 +278,7 @@ app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use media-sound/sdl-soundfor audio output
 app-emulation/uae:ui - Build the user interface (could be gtk or ncurses based, depending on sdl, dga, svga and aalib USE flags)
 app-emulation/vice:resid - Enable support for ReSID media-libs/resid
+app-emulation/vice:xrandr - Enable support for the X xrandr extension
 app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:headless - Build without any graphic frontend
 app-emulation/virtualbox:sdk - Enable building of SDK
