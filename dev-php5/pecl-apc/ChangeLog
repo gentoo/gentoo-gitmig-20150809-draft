@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.48 2008/05/27 18:23:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.49 2008/08/14 17:17:01 nixnut Exp $
+
+  14 Aug 2008; nixnut <nixnut@gentoo.org> pecl-apc-3.0.19.ebuild:
+  Stable on ppc wrt bug 234620
 
 *pecl-apc-3.0.19 (27 May 2008)
 
