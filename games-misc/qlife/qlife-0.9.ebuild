@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.5 2008/08/12 11:41:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.6 2008/08/14 17:18:48 nixnut Exp $
 
 EAPI=1
 inherit qt4 games
@@ -12,7 +12,7 @@ SRC_URI="http://personal.inet.fi/koti/rkauppila/projects/life/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="|| ( x11-libs/qt-gui:4 x11-libs/qt:4 )"
