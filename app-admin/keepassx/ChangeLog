@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.27 2008/08/01 18:33:25 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.28 2008/08/14 21:36:28 tgurr Exp $
+
+*keepassx-0.3.3 (14 Aug 2008)
+
+  14 Aug 2008; Timo Gurr <tgurr@gentoo.org> -keepassx-0.3.2.ebuild,
+  +keepassx-0.3.3.ebuild:
+  Version bump. Upstream bugfix release for the twofish encrypted databases
+  problem, bug #233685.
 
 *keepassx-0.3.2 (01 Aug 2008)
 
