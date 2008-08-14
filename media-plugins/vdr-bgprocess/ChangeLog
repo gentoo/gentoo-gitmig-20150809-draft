@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-bgprocess
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bgprocess/ChangeLog,v 1.1 2008/08/14 19:45:23 zzam Exp $
+
+*vdr-bgprocess-0.1.0 (14 Aug 2008)
+
+  14 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-bgprocess-0.1.0-fix-i18n.diff, +metadata.xml,
+  +vdr-bgprocess-0.1.0.ebuild:
+  Add new ebuild written by me.
+
