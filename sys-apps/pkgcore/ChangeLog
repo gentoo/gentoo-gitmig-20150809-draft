@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.64 2008/08/13 00:53:40 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.65 2008/08/14 17:03:33 zmedico Exp $
+
+  14 Aug 2008; Zac Medico <zmedico@gentoo.org> pkgcore-0.4.7.4.ebuild,
+  pkgcore-0.4.7.5.ebuild, pkgcore-0.4.7.6.ebuild, pkgcore-0.4.7.7.ebuild:
+  Remove all !>app-arch/lzma-4.50 blockers as requested by ferringb.
 
 *pkgcore-0.4.7.7 (13 Aug 2008)
 
