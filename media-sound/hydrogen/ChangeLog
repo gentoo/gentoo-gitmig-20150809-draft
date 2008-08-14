@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.64 2008/05/19 19:49:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.65 2008/08/14 20:58:14 aballier Exp $
+
+  14 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/hydrogen-0.9.3-gcc43noalsa.patch, hydrogen-0.9.3-r3.ebuild:
+  Fix build with gcc 4.3 without alsa, thanks to Michał W.
+  <michal@gen2.org> for reporting in bug #234754
 
 *hydrogen-0.9.3-r3 (19 May 2008)
 
