@@ -1,6 +1,16 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.165 2008/08/03 14:29:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.166 2008/08/14 12:33:40 falco Exp $
+
+*postfix-2.5.3-r1 (14 Aug 2008)
+*postfix-2.4.7-r1 (14 Aug 2008)
+
+  14 Aug 2008; Raphael Marichez <falco@gentoo.org>
+  +files/postfix-2.4.7-CVE-2008-2936.patch,
+  +files/postfix-2.4.7-CVE-2008-2937.patch,
+  +files/postfix-2.5.3-CVE-2008-2936.patch, +postfix-2.4.7-r1.ebuild,
+  +postfix-2.5.3-r1.ebuild:
+  Revision bump, security bug 232642
 
 *postfix-2.5.3 (03 Aug 2008)
 
