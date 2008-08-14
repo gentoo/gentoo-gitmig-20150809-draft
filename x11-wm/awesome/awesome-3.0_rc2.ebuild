@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc2.ebuild,v 1.1 2008/08/11 00:05:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc2.ebuild,v 1.2 2008/08/14 07:39:45 aballier Exp $
 
 inherit cmake-utils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="dbus doc imlib"
 
 RDEPEND=">=x11-libs/libxcb-1.1
