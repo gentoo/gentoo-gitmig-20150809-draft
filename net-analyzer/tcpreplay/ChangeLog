@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.28 2008/08/04 20:15:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.29 2008/08/14 14:42:54 armin76 Exp $
+
+  14 Aug 2008; Raúl Porcel <armin76@gentoo.org> tcpreplay-3.3.2.ebuild:
+  x86 stable wrt #234735
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
