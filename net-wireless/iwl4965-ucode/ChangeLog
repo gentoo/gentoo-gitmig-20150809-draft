@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/iwl4965-ucode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.8 2008/08/13 22:57:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.9 2008/08/15 22:07:41 chainsaw Exp $
+
+*iwl4965-ucode-228.57.2.21 (15 Aug 2008)
+
+  15 Aug 2008; <chainsaw@gentoo.org> +iwl4965-ucode-228.57.2.21.ebuild:
+  Add ABI 2 microcode image for the 4965AGN mini-PCI adapter, as requested
+  by Brian Johnson <gentoo-bugzilla@dogtoe.com> in bug #231485. Preliminary
+  herd ACK by peper on IRC.
 
 *iwl4965-ucode-228.57.1.21 (13 Aug 2008)
 
