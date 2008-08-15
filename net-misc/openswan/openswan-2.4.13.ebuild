@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.9-r1.ebuild,v 1.2 2007/09/26 09:05:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.13.ebuild,v 1.1 2008/08/15 17:10:22 mrness Exp $
 
 inherit eutils linux-info
 
@@ -10,12 +10,15 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="smartcard extra-algorithms weak-algorithms"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="curl ldap smartcard extra-algorithms weak-algorithms"
 
 COMMON_DEPEND="!net-misc/strongswan
-	>=dev-libs/gmp-4.2.1
-	smartcard? ( dev-libs/opensc )"
+	dev-libs/gmp
+	dev-lang/perl
+	smartcard? ( dev-libs/opensc )
+	curl? ( net-misc/curl )
+	ldap? ( net-nds/openldap )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources"
 RDEPEND="${COMMON_DEPEND}
@@ -51,16 +54,23 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-mkdir.patch
+	epatch "${FILESDIR}"/${P}-deprecated-ldap.patch
+
+	find . -regex '.*[.][1-8]' -exec sed -i \
+	    -e s:/usr/local:/usr:g \
+	    -e s:/etc/ipsec[.]conf:/etc/ipsec/ipsec.conf:g \
+	    -e s:/etc/ipsec[.]secrets:/etc/ipsec/ipsec.secrets:g '{}' \; ||
+	    die "failed to replace text in xml docs"
 }
 
 get_make_options() {
 	echo KERNELSRC=\"${KERNEL_DIR}\" \
 		FINALCONFDIR=/etc/ipsec \
+		FINALCONFFILE=/etc/ipsec/ipsec.conf \
+		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
 		INC_RCDEFAULT=/etc/init.d \
 		INC_USRLOCAL=/usr \
 		INC_MANDIR=share/man \
-		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
 		FINALDOCDIR=/usr/share/doc/${P} \
 		DESTDIR=\"${D}\" \
 		USERCOMPILE=\"${CFLAGS}\"
@@ -73,6 +83,18 @@ get_make_options() {
 	if use weak-algorithms ; then
 		echo USE_WEAKSTUFF=true
 	fi
+	echo USE_OE=false # by default, turn off Opportunistic Encryption
+	echo USE_LWRES=false # needs bind9 with lwres support
+	local USETHREADS=false
+	if use curl; then
+		echo USE_LIBCURL=true
+		USETHREADS=true
+	fi
+	if use ldap; then
+		echo USE_LDAP=true
+		USETHREADS=true
+	fi
+	echo HAVE_THREADS=${USETHREADS}
 }
 
 src_compile() {
@@ -91,23 +113,6 @@ src_install() {
 	doinitd "${FILESDIR}"/ipsec || die "failed to install init script"
 
 	dodir /var/run/pluto || die "failed to create /var/run/pluto"
-}
-
-pkg_preinst() {
-	# Try to fix previous openswan-2.4.9 blooper (#193824)
-	if [[ "${ROOT}" == / ]] && has_version "=net-misc/openswan-2.4.9" ; then
-		elog "Trying to remove empty {rundir,subsysdir} erroneously created by openswan-2.4.9"
-		local base dir
-		for base in / /root/ /etc/ ; do
-			for dir in rundir subsysdir ; do
-				if [[ -d "${base}${dir}" ]]; then
-					rmdir "${base}${dir}" \
-						&& elog "Empty directory ${base}${dir} has been removed" \
-						|| ewarn "Failed to remove ${base}${dir} (perhaps some other package owns it?)"
-				fi
-			done
-		done
-	fi
 }
 
 pkg_postinst() {
