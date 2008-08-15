@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.11 2008/07/31 16:58:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.12 2008/08/15 12:57:14 caleb Exp $
+
+  15 Aug 2008; Caleb Tennis <caleb@gentoo.org> -sphinx-0.9.8_rc2.ebuild,
+  -sphinx-0.9.8_rc2-r1.ebuild:
+  remove older versions
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
