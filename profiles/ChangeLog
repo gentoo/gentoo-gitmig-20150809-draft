@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1778 2008/08/15 18:57:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1779 2008/08/15 23:34:37 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  15 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Package mask =x11-wm/awesome-3_rc*.
 
   15 Aug 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Package mask ~app-editors/emacs-cvs-22.2.9999.
