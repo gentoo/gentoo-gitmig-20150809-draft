@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3746 2008/08/15 04:43:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3747 2008/08/15 08:23:27 mrness Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -1583,10 +1583,11 @@ net-dialup/misdn:ecaggressive - Make the selected echo canceller a little more a
 net-dialup/misdn:eckb1 - Use the KB1 echo canceller
 net-dialup/misdn:ecmark2 - Use the MARK2 echo canceller
 net-dialup/misdn:ecmg2 - Use the MG2 echo canceller (default)
-net-dialup/ppp:activefilter - Enables activefilter support
-net-dialup/ppp:dhcp - Enables the DHCP plugin
+net-dialup/ppp:activefilter - Enables active filter support
+net-dialup/ppp:dhcp - Installs PPP DHCP client plugin for IP address allocation by a DHCP server
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (EAP-TLS)
-net-dialup/ppp:mppe-mppc - Enables support for Microsoft Point-to-Point Encryption / Microsoft Point-to-Point Compression
+net-dialup/ppp:mppe-mppc - Enables support for MPPC (Microsoft Point-to-Point Compression) - NEEDS A PATCHED KERNEL <= 2.6.14
+net-dialup/ppp:wins-ack - Acknowledge the WINS servers provided by the peer
 net-dialup/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
 net-dns/avahi:autoipd - Build and install the IPv4LL (RFC3927) network address configuration daemon
 net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)

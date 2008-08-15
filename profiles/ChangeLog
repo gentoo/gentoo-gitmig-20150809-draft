@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1773 2008/08/14 21:31:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1774 2008/08/15 08:23:26 mrness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  15 Aug 2008; Alin Năstac <mrness@gentoo.org> use.local.desc:
+  Update net-dialup/ppp local USE flags description.
 
   14 Aug 2008; Ben de Groot <yngwin@gentoo.org>
   default-bsd/package.use.mask, default/linux/package.use.mask,
