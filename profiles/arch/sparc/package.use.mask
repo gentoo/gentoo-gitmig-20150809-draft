@@ -1,11 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.12 2008/08/15 09:41:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.13 2008/08/15 10:06:49 armin76 Exp $
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
-
-# Raúl Porcel <armin76@gentoo.org> (15 Aug 2008)
-# This only works if kernel is sparc64
-media-libs/xine-lib -vis
 
 # openct isn't keyworded anymore
 net-misc/kpvnc smartcard

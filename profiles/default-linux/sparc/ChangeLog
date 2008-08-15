@@ -1,9 +1,6 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.113 2008/08/15 09:37:53 armin76 Exp $
-
-  15 Aug 2008; Raúl Porcel <armin76@gentoo.org> +sparc64/package.use.mask:
-  Add unmask vis USE-flag on sparc64 profiles for media-libs/xine-lib
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.114 2008/08/15 10:06:21 armin76 Exp $
 
   10 Aug 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   Unmask openinventor package.use.mask on geant.  openinventor now builds on
