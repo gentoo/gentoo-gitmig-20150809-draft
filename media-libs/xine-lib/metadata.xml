@@ -63,5 +63,8 @@
   <flag name="vidix">
 	Enable support for vidix video output.
   </flag>
+  <flag name="vis">
+	Adds support for SIMD optimizations for UltraSPARC processors.
+  </flag>
 </use>
 </pkgmetadata>

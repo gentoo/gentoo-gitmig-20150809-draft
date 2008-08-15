@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.1 2008/08/15 06:52:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.2 2008/08/15 10:14:20 aballier Exp $
 
 EAPI=1
 
@@ -28,7 +28,7 @@ IUSE="-aalib -libcaca -arts esd win32codecs nls +dvd +X directfb +vorbis +alsa
 gnome sdl speex +theora ipv6 altivec opengl aac -fbcon +xv xvmc
 -samba dxr3 vidix mng -flac -oss +v4l xinerama vcd +a52 +mad -imagemagick +dts
 -debug +modplug -gtk pulseaudio -mmap -truetype wavpack +musepack +xcb -jack
--real"
+-real +vis"
 
 RDEPEND="X? ( x11-libs/libXext
 	x11-libs/libX11 )
@@ -97,12 +97,6 @@ src_compile() {
 		is-flag -O? || append-flags -O2
 	fi
 
-	local myconf
-
-	# enable/disable appropiate optimizations on sparc
-	[[ "${PROFILE_ARCH}" == "sparc64" ]] && myconf="${myconf} --enable-vis"
-	[[ "${PROFILE_ARCH}" == "sparc" ]] && myconf="${myconf} --disable-vis"
-
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	use hppa && unset CFLAGS
 
@@ -164,11 +158,11 @@ src_compile() {
 		$(use_with truetype freetype) $(use_with truetype fontconfig) \
 		\
 		$(use_enable debug) \
+		$(use_enable vis) \
 		--enable-asf \
 		--with-external-ffmpeg \
 		--disable-optimizations \
 		--disable-syncfb \
-		${myconf} \
 		--with-xv-path=/usr/$(get_libdir) \
 		--with-w32-path=/usr/$(ABI=x86 get_libdir)/win32 \
 		--with-real-codecs-path=/usr/$(get_libdir)/codecs \

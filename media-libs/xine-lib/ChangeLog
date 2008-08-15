@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.552 2008/08/15 06:52:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.553 2008/08/15 10:14:20 aballier Exp $
+
+  15 Aug 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  xine-lib-1.1.15.ebuild:
+  Make vis an useflag instead of arch specific checks; bug #234789
 
 *xine-lib-1.1.15 (15 Aug 2008)
 
