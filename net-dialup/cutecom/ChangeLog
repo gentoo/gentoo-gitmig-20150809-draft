@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/cutecom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.18 2008/08/15 19:00:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.19 2008/08/15 21:17:03 maekke Exp $
+
+  15 Aug 2008; Markus Meier <maekke@gentoo.org> cutecom-0.20.0-r1.ebuild:
+  amd64/x86 stable, bug #234308
 
 *cutecom-0.20.0-r1 (15 Aug 2008)
 
