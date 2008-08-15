@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.4.ebuild,v 1.1 2007/04/22 09:27:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.4.ebuild,v 1.2 2008/08/15 19:52:37 maekke Exp $
 
 DESCRIPTION="clamassassin is a simple script for virus scanning (through clamav) an e-mail message as a
 filter (like spamassassin)"
@@ -8,7 +8,7 @@ HOMEPAGE="http://jameslick.com/clamassassin/"
 SRC_URI="http://jameslick.com/clamassassin/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="subject-rewrite clamd"
 DEPEND=">=app-antivirus/clamav-0.90
 		sys-apps/debianutils
