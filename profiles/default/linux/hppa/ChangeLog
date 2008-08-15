@@ -1,6 +1,10 @@
 # ChangeLog for profiles/default/linux/hppa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.6 2008/07/18 07:48:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.7 2008/08/15 14:58:03 jer Exp $
+
+  15 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask custom-optimisation USE flag for net-libs/xulrunner and
+  www-client/mozilla-firefox (thanks to armin76).
 
   18 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask pch USE flag for x11-libs/qt-assistant (bug #223775).
