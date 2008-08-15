@@ -1,12 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a_p4650.ebuild,v 1.1 2008/08/14 18:25:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a_p4650.ebuild,v 1.2 2008/08/15 05:56:11 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools subversion
 
-DESCRIPTION="Spine is a fast poller for Cacti (formerly known as Cactid)"
-HOMEPAGE="http://cacti.net/spine_info.php"
 if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
 	inherit subversion
 	SRC_URI=""
@@ -16,6 +14,8 @@ else
 	MY_PV=${PV/_p/-}
 	SRC_URI="http://www.cacti.net/downloads/spine/${PN}-${MY_PV}.tar.gz"
 fi
+DESCRIPTION="Spine is a fast poller for Cacti (formerly known as Cactid)"
+HOMEPAGE="http://cacti.net/spine_info.php"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
