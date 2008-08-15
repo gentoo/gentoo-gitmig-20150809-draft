@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.4 2008/08/11 12:49:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.5 2008/08/15 18:13:47 maekke Exp $
 
 inherit nsplugins eutils rpm
 
@@ -11,7 +11,7 @@ SRC_URI="http://forms.real.com/real/player/download.html?f=unix/RealPlayer11GOLD
 RESTRICT="mirror strip test"
 LICENSE="HBRL"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="X nsplugin"
 RDEPEND="!amd64? (
 			X? ( >=dev-libs/glib-2
