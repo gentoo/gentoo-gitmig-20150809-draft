@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.12 2008/08/15 12:57:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.13 2008/08/15 13:01:20 caleb Exp $
+
+  15 Aug 2008; Caleb Tennis <caleb@gentoo.org> sphinx-0.9.8.ebuild:
+  add test use flag for php
+
+  15 Aug 2008; Caleb Tennis <caleb@gentoo.org> Manifest:
+  Fix upstream libstemmer manifest
 
   15 Aug 2008; Caleb Tennis <caleb@gentoo.org> -sphinx-0.9.8_rc2.ebuild,
   -sphinx-0.9.8_rc2-r1.ebuild:
