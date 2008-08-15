@@ -1,19 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r17.ebuild,v 1.2 2008/07/15 16:19:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r20.ebuild,v 1.1 2008/08/15 08:55:22 mrness Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info pam
+inherit eutils toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20080627.tar.gz
+	mirror://gentoo/${P}-gentoo-20080815.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
+IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius wins-ack"
 
 DEPEND="activefilter? ( >=virtual/libpcap-0.9.4 )
 	atm? ( net-dialup/linux-atm )
@@ -115,12 +115,14 @@ src_unpack() {
 			pppd/plugins/radius/{*.8,*.c,*.h} \
 			pppd/plugins/radius/etc/*
 	}
+	
+	# Acknowledge WINS servers even though pppd will ignore them (#234583)
+	use wins-ack && epatch "${WORKDIR}/patch/wins-ack.patch"
 }
 
 src_compile() {
 	export CC="$(tc-getCC)"
 	export AR="$(tc-getAR)"
-	append-ldflags -Wl,--allow-shlib-undefined # otherwise linking plugins might fail with undef errors (#210837)
 	econf || die "configuration failed"
 	emake COPTS="${CFLAGS} -D_GNU_SOURCE" || die "compile failed"
 
@@ -130,18 +132,6 @@ src_compile() {
 		emake -f Makefile.linux || die "failed to build pppgetpass"
 	else
 		emake pppgetpass.vt || die "failed to build pppgetpass"
-	fi
-}
-
-pkg_preinst() {
-	has_version "<${CATEGORY}/${PN}-2.4.3-r5"
-	previous_less_than_2_4_3_r5=$?
-
-	if use radius && [ -d "${ROOT}/etc/radiusclient" ] && \
-		[[ $previous_less_than_2_4_3_r5 = 0 ]] ; then
-		ebegin "Copy /etc/radiusclient to /etc/ppp/radius"
-		cp -pPR "${ROOT}/etc/radiusclient" "${ROOT}/etc/ppp/radius"
-		eend $?
 	fi
 }
 
@@ -300,11 +290,12 @@ pkg_postinst() {
 	elog "/usr/share/doc/${PF}/scripts directory."
 
 	# move the old user-defined files into ip-{up,down}.d directories
+	# TO BE REMOVED AFTER SEPT 2008
 	local i
 	for i in ip-up ip-down; do
 		if [ -f "${ROOT}"/etc/ppp/${i}.local ]; then
 			mv /etc/ppp/${i}.local /etc/ppp/${i}.d/90-local.sh && \
-				einfo "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local.sh"
+				ewarn "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local.sh"
 		fi
 	done
 }
