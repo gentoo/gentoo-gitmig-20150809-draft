@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.25 2008/08/15 10:06:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.26 2008/08/15 11:41:47 bluebird Exp $
+
+  15 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> package.mask:
+  Unmask GNOME 2.22
 
   11 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> package.mask:
   Unmask openoffce, 2.4.1 finally compiles and works right
