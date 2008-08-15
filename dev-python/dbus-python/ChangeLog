@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.37 2008/08/01 17:54:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.38 2008/08/15 04:10:20 cardoe Exp $
+
+*dbus-python-0.83.0 (15 Aug 2008)
+
+  15 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  -dbus-python-0.81.0.ebuild, -dbus-python-0.82.2.ebuild,
+  -dbus-python-0.82.3.ebuild, +dbus-python-0.83.0.ebuild:
+  remove old versions. add new version.
+  http://lists.freedesktop.org/archives/dbus/2008-July/010162.html
 
   01 Aug 2008; nixnut <nixnut@gentoo.org> dbus-python-0.82.4.ebuild:
   Stable on ppc wrt bug 212244
