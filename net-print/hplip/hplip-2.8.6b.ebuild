@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.5 2008/08/12 15:53:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.6 2008/08/15 11:08:00 calchan Exp $
 
 inherit eutils linux-info python
 
@@ -98,8 +98,13 @@ src_unpack() {
 	local QT_VER
 	use qt4 && QT_VER="4"
 	use qt3 && QT_VER="3"
-	sed -i -e "s/--force-startup/--force-startup', '--qt${QT_VER}/" base/device.py || die "sed failed"
-	sed -i -e "s/Exec=hp-systray/Exec=hp-systray --qt${QT_VER}/" hplip-systray.desktop.in || die "sed failed"
+	sed -i \
+		-e "s/%s --force-startup/%s --force-startup --qt${QT_VER}/" \
+		-e "s/'--force-startup'/'--force-startup', '--qt${QT_VER}'/" \
+		base/device.py || die "sed failed"
+	sed -i \
+		-e "s/Exec=hp-systray/Exec=hp-systray --qt${QT_VER}/" \
+		hplip-systray.desktop.in || die "sed failed"
 }
 
 src_compile() {
