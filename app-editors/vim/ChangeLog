@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.318 2008/08/15 10:46:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.319 2008/08/15 18:42:59 maekke Exp $
+
+  15 Aug 2008; Markus Meier <maekke@gentoo.org> vim-7.2.ebuild:
+  amd64 stable, bug #232890
 
   15 Aug 2008; Jeroen Roovers <jer@gentoo.org> vim-7.2.ebuild:
   Stable for HPPA (bug #232890).
