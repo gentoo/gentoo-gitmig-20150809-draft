@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r20.ebuild,v 1.1 2008/08/15 08:55:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r20.ebuild,v 1.2 2008/08/15 20:47:40 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs linux-info pam
 
@@ -115,7 +115,7 @@ src_unpack() {
 			pppd/plugins/radius/{*.8,*.c,*.h} \
 			pppd/plugins/radius/etc/*
 	}
-	
+
 	# Acknowledge WINS servers even though pppd will ignore them (#234583)
 	use wins-ack && epatch "${WORKDIR}/patch/wins-ack.patch"
 }
