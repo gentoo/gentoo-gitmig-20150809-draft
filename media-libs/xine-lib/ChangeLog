@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.556 2008/08/15 16:55:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.557 2008/08/15 19:04:34 maekke Exp $
+
+  15 Aug 2008; Markus Meier <maekke@gentoo.org> xine-lib-1.1.15.ebuild:
+  amd64 stable, bug #234777
 
   15 Aug 2008; Jeroen Roovers <jer@gentoo.org> xine-lib-1.1.15.ebuild:
   Remove compiler optimisation hack (bug #234790).
