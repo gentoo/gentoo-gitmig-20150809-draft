@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.557 2008/08/15 19:04:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.558 2008/08/15 20:20:25 klausman Exp $
+
+  15 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
+  xine-lib-1.1.15.ebuild:
+  Stable on alpha, bug #234777
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org> xine-lib-1.1.15.ebuild:
   amd64 stable, bug #234777
