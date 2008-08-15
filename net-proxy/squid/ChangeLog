@@ -1,6 +1,20 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.199 2008/08/14 17:12:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.200 2008/08/15 06:16:49 mrness Exp $
+
+*squid-2.7.4-r1 (15 Aug 2008)
+
+  15 Aug 2008; Alin Năstac <mrness@gentoo.org>
+  -files/squid-2.6.19-ToS_Hit_ToS_Preserve.patch,
+  -files/squid-2.6.19-gentoo.patch, -files/squid-2.6.19-qos.patch,
+  -files/squid-2.6.19-tcp_outg-x_fwd_for.patch,
+  -files/squid-2.6.20-ToS_Hit_ToS_Preserve.patch,
+  -files/squid-2.6.20-gentoo.patch, -files/squid-2.6.20-lincapver.patch,
+  -files/squid-2.6.20-qos.patch, +files/squid-2.7.4-charset.patch,
+  -squid-2.6.19-r1.ebuild, -squid-2.6.20-r1.ebuild, -squid-2.7.4.ebuild,
+  +squid-2.7.4-r1.ebuild:
+  Remove obsolete versions. Fix conf file: replace UTF-8 German minus char
+  with its ASCII corespondent (#234528).
 
   14 Aug 2008; nixnut <nixnut@gentoo.org> squid-2.7.3.ebuild:
   Stable on ppc wrt bug 233650

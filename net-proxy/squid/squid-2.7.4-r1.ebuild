@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.19-r1.ebuild,v 1.6 2008/05/25 18:27:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.4-r1.ebuild,v 1.1 2008/08/15 06:16:49 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,8 +20,9 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate qos zero-penalty-hit \
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate \
+	qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
@@ -39,20 +40,26 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
+	if use qos; then
+		eerror "qos patch is no longer supported!"
+		eerror "Please remove qos USE flag and use zph* config options instead."
+		die "unsupported USE flags detected"
+	fi
+	if use zero-penalty-hit; then
+		ewarn "This version supports natively IP TOS/Priority mangling,"
+		ewarn "but it does not support zph_preserve_miss_tos."
+		ewarn "If you need that, please use squid-3.0.6-r2 or higher."
+	fi
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
 }
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
-	cd "${S}" || die "dir ${S} not found"
 
+	cd "${S}" || die "source dir not found"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-ToS_Hit_ToS_Preserve.patch
-	use qos && epatch "${FILESDIR}"/${P}-qos.patch
-
-	sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
-
+	epatch "${FILESDIR}"/${P}-charset.patch
 	eautoreconf
 }
 
