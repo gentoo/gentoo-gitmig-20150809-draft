@@ -1,9 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.107 2008/08/15 11:08:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.108 2008/08/15 18:15:59 calchan Exp $
 
   15 Aug 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.8.6b.ebuild:
-  Fixed minor bug in debug output of device.py.
+  Fixed minor bug in debug output of device.py thanks to Gordon Malm.
 
   12 Aug 2008; Brent Baude <ranger@gentoo.org> hplip-2.8.6b.ebuild:
   Marking hplip-2.8.6b ppc stable.  Went direct to stable per security 
