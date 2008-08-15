@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.13 2008/05/01 10:15:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.14 2008/08/15 04:40:00 mr_bones_ Exp $
 
 inherit eutils autotools games
 
@@ -8,7 +8,9 @@ DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
 HOMEPAGE="http://exult.sourceforge.net/"
 SRC_URI="mirror://sourceforge/exult/${P}.tar.gz
 	mirror://sourceforge/exult/U7MusicOGG_1of2.zip
-	mirror://sourceforge/exult/U7MusicOGG_2of2.zip"
+	mirror://sourceforge/exult/U7MusicOGG_2of2.zip
+	mirror://sourceforge/exult/jmsfx.zip
+	mirror://sourceforge/exult/jmsfxsi.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,6 +36,11 @@ src_unpack() {
 	mkdir music/
 	cd music/
 	unpack U7MusicOGG_{1,2}of2.zip
+	cd "${WORKDIR}"
+	mkdir flx/
+	cd flx/
+	unpack jmsfx{,si}.zip
+	
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
@@ -76,6 +83,8 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS FAQ README README.1ST
 	insinto "${GAMES_DATADIR}/${PN}/music"
 	doins "${WORKDIR}/music/"*ogg || die "doins failed"
+	insinto "${GAMES_DATADIR}/${PN}/"
+	doins "${WORKDIR}/flx/"*.flx || die "doins failed"
 	newdoc "${WORKDIR}/music/readme.txt" music-readme.txt
 	prepgamesdirs
 }

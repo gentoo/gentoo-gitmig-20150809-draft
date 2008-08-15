@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/exult
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.20 2008/05/01 10:15:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.21 2008/08/15 04:40:00 mr_bones_ Exp $
+
+  15 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> exult-1.2.ebuild:
+  add digital sound install as well (bug #224655 with patch from Tomáš
+  Chvátal)
 
   01 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/exult-1.2-gcc43.patch, exult-1.2.ebuild:
