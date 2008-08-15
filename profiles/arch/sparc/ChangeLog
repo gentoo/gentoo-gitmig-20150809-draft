@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.23 2008/08/11 18:40:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.24 2008/08/15 09:41:22 armin76 Exp $
+
+  15 Aug 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Add unmask vis USE-flag on sparc64 profiles for media-libs/xine-lib
 
   11 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> package.mask:
   Unmask openoffce, 2.4.1 finally compiles and works right

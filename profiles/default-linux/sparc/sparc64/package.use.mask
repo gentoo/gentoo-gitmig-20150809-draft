@@ -1,0 +1,7 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.use.mask,v 1.1 2008/08/15 09:37:53 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (15 Aug 2008)
+# This only works if kernel is sparc64
+media-libs/xine-lib -vis
