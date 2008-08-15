@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.7 2008/06/04 12:28:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.8 2008/08/15 23:49:28 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -74,7 +74,7 @@ src_unpack() {
 	echo
 
 	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
-	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/${PN}-freebsd-sparc-1.patch"
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
