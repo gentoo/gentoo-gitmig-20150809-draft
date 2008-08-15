@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.4 2008/08/15 16:02:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.5 2008/08/15 16:55:57 jer Exp $
 
 EAPI=1
 
@@ -96,9 +96,6 @@ src_compile() {
 		filter-flags -fno-omit-frame-pointer #breaks per bug #149704
 		is-flag -O? || append-flags -O2
 	fi
-
-	# The default CFLAGS (-O) is the only thing working on hppa.
-	use hppa && unset CFLAGS
 
 	# Too many file names are the same (xine_decoder.c), change the builddir
 	# So that the relative path is used to identify them.
