@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.49 2008/08/12 17:16:03 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.50 2008/08/15 15:56:40 nixnut Exp $
+
+  15 Aug 2008; nixnut <nixnut@gentoo.org> ghex-2.22.0.ebuild:
+  Stable on ppc wrt bug 234517
 
   12 Aug 2008; Kenneth Prugh <ken69267@gentoo.org> ghex-2.22.0.ebuild:
   amd64 stable, bug #234517
