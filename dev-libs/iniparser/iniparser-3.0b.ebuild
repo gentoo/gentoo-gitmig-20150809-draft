@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b.ebuild,v 1.1 2008/03/08 12:17:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b.ebuild,v 1.2 2008/08/15 15:46:03 dev-zero Exp $
 
 inherit multilib toolchain-funcs
 
@@ -31,6 +31,8 @@ src_compile() {
 
 src_install() {
 	dolib libiniparser.a libiniparser.so.0
+	dosym libiniparser.so.0 /usr/$(get_libdir)/libiniparser.so
+
 	insinto /usr/include
 	doins src/*.h
 
