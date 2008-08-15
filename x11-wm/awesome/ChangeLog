@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.29 2008/08/14 07:39:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.30 2008/08/15 23:49:59 matsuu Exp $
+
+*awesome-3.0_rc3 (15 Aug 2008)
+
+  15 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> +awesome-3.0_rc3.ebuild:
+  Version bumped and package.masked.
 
   14 Aug 2008; Alexis Ballier <aballier@gentoo.org> awesome-3.0_rc2.ebuild:
   keyword ~x86-fbsd
