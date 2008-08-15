@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>nixphoeni@gentoo.org</email>
+		<name>Joe Sapp</name>
+	</maintainer>
+	<use>
+		<flag name='rtf'>Enable RTF support.</flag>
+		<flag name='print'>Enable printing support using
+			gnome-print.</flag>
+	</use>
+</pkgmetadata>

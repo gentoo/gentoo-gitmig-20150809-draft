@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/gourmet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.1 2008/08/15 03:09:28 nixphoeni Exp $
+
+*gourmet-0.13.4 (15 Aug 2008)
+
+  15 Aug 2008; Joe Sapp <nixphoeni@gentoo.org> +gourmet-0.13.4.ebuild:
+  Initial commit - thanks to all who contributed to bug #73103
+
