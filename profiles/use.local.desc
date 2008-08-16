@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3748 2008/08/15 19:14:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3749 2008/08/16 03:30:16 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -93,6 +93,7 @@
 # x11-apps
 # x11-base
 # x11-drivers
+# x11-libs
 # x11-misc
 # x11-plugins
 # x11-wm
