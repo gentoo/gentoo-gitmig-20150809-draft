@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2-r1.ebuild,v 1.1 2008/08/16 20:00:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2-r1.ebuild,v 1.2 2008/08/16 22:46:49 robbat2 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -134,6 +134,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
+		--enable-o_direct \
 		--without-uniquename \
 		--enable-rpc \
 		--host="${CHOST}" \

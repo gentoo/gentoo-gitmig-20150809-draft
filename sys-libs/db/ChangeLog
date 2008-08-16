@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.260 2008/08/16 22:33:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.261 2008/08/16 22:46:49 robbat2 Exp $
+
+  16 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> db-4.3.29_p1-r1.ebuild,
+  db-4.4.20_p4-r1.ebuild, db-4.5.20_p2-r1.ebuild, db-4.6.21_p3-r1.ebuild,
+  db-4.7.25_p1-r1.ebuild:
+  Add o_direct support per bug #208967, not used by default.
 
   16 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Bug #234081, cleanup entity in metadata.
