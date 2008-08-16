@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antixls
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.4 2007/08/27 16:53:27 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.5 2008/08/16 17:02:04 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove pclouds from metadata.xml (#49680)
 
   27 Aug 2007; Christoph Mende <angelos@gentoo.org> antixls-0.2b.ebuild:
   Added ~amd64 wrt bug #189025
