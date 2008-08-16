@@ -6,5 +6,8 @@
           <email>chainsaw@gentoo.org</email>
           <name>Tony Vroon</name>
   </maintainer>
-  <longdescription></longdescription>
+  <use>
+	  <flag name='finger'>Adds support for checking user counts via fingering
+		  the NAS</flag>
+  </use>
 </pkgmetadata>
