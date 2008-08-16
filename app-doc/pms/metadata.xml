@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>ingmar@gentoo.org</email>
-    <name>Ingmar Vanhassel</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="all-options">Include both sides of kdebuild conditionals,
