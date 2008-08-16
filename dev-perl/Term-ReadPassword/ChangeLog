@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ReadPassword
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.5 2007/09/17 07:04:21 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.6 2008/08/16 17:00:20 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove pclouds from metadata.xml (#49680)
 
   17 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   Term-ReadPassword-0.07.ebuild:
