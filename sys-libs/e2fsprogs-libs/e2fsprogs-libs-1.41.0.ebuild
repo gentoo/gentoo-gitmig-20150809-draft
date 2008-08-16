@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.0.ebuild,v 1.1 2008/08/16 04:42:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.0.ebuild,v 1.2 2008/08/16 04:59:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.41.0-makefile.patch
+	epatch "${FILESDIR}"/${P}-null-blkid.patch
 }
 
 src_compile() {
