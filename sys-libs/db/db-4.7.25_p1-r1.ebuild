@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.1 2008/08/16 19:12:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.2 2008/08/16 19:14:03 robbat2 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -48,7 +48,7 @@ src_unpack() {
 	sed -i \
 		-e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" \
 		"${S}"/../dist/configure
-	
+
 	# use the includes from the prefix
 	epatch "${FILESDIR}"/"${PN}"-4.6-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/"${PN}"-4.3-listen-to-java-options.patch
@@ -57,7 +57,7 @@ src_unpack() {
 	# This supersedes the unused jarlocation patches.
 	sed -r -i \
 		-e '/jarfile=.*\.jar$/s,(.jar$),-$(LIBVERSION)\1,g' \
-		${S}/../dist/Makefile.in
+		"${S}"/../dist/Makefile.in
 
 	# During bootstrap, libtool etc might not yet be available
 	if use !bootstrap; then
