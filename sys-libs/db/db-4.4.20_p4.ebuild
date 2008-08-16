@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p4.ebuild,v 1.4 2007/10/24 07:07:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p4.ebuild,v 1.5 2008/08/16 03:32:00 robbat2 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2
 
@@ -118,7 +118,7 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
-	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db44_svc
+	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc
 
 	if use java; then
 		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
