@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1781 2008/08/16 10:55:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1782 2008/08/16 12:25:58 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  16 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Added live ebuild for media-video/griffith to p.mask.
 
   16 Aug 2008; Markus Meier <maekke@gentoo.org> package.mask:
   mask hugin-0.7.0_rc2 and deps for testing
