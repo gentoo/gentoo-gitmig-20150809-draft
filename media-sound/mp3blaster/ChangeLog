@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.41 2008/04/22 12:09:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.42 2008/08/16 17:37:41 aballier Exp $
+
+  16 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  mp3blaster-3.2.3-r1.ebuild:
+  keyword ~x86-fbsd, bug #198464
 
   22 Apr 2008; <chainsaw@gentoo.org> +files/mp3blaster-3.2.3-gcc43.patch,
   mp3blaster-3.2.3-r1.ebuild:
