@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.559 2008/08/16 07:48:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.560 2008/08/16 11:37:45 aballier Exp $
+
+  16 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/xine-lib-1.1.15-libmpeg2-vis.patch, xine-lib-1.1.15.ebuild:
+  fix sparc build without vis, by Friedrich Oslage
 
   16 Aug 2008; Markus Rothe <corsair@gentoo.org> xine-lib-1.1.15.ebuild:
   Stable on ppc64; bug #234777
