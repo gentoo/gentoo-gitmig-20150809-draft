@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.254 2008/08/16 19:12:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.255 2008/08/16 19:41:03 robbat2 Exp $
+
+*db-4.6.21_p3-r1 (16 Aug 2008)
+
+  16 Aug 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +db-4.6.21_p3-r1.ebuild:
+  Fix 4.6 slot for SONAME bug #182972, java support bug #217661 and also
+  properly do what the jarlocation patches were supported to do.
 
 *db-4.7.25_p1-r1 (16 Aug 2008)
 
