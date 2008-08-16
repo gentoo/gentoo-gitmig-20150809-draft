@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pkpgcounter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.10 2008/03/14 10:39:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.11 2008/08/16 04:03:28 cardoe Exp $
+
+  16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Christian Andreetta (satya, #48841) from metadata.xml.
