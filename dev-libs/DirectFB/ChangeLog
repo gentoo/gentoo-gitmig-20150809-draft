@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.70 2008/08/06 07:02:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.71 2008/08/16 15:15:01 vapier Exp $
+
+*DirectFB-1.2.2 (16 Aug 2008)
+
+  16 Aug 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/DirectFB-1.2.0-headers.patch, +DirectFB-1.2.2.ebuild:
+  Version bump #233272 by Benjamin Schleinzer.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
