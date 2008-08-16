@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.108 2008/05/29 04:34:28 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.109 2008/08/16 16:13:18 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
 *zaptel-1.2.26 (29 May 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.180 2008/05/21 19:00:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.181 2008/08/16 15:58:45 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> asterisk-1.2.13.ebuild,
   asterisk-1.2.13-r1.ebuild, asterisk-1.2.14.ebuild,

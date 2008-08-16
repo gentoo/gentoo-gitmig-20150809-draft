@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-app_rtxfax
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/ChangeLog,v 1.8 2007/07/02 14:57:52 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/ChangeLog,v 1.9 2008/08/16 16:16:38 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   asterisk-app_rtxfax-0.0.2_pre25.ebuild:

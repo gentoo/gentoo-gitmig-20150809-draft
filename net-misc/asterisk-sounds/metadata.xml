@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>voip</herd>
-<maintainer>
-  <email>rajiv@gentoo.org</email>
-  <name>Rajiv Aaron Manglani</name>
-</maintainer>
-<maintainer>
-  <email>stkn@gentoo.org</email>
-  <name>Stefan Knoblich</name>
-</maintainer>
+  <herd>voip</herd>
+  <maintainer>
+    <email>rajiv@gentoo.org</email>
+    <name>Rajiv Aaron Manglani</name>
+  </maintainer>
 </pkgmetadata>

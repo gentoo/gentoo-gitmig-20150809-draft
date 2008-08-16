@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>voip</herd>
   <maintainer>
-    <email>stkn@gentoo.org</email>
-    <name>Stefan Knoblich</name>
-  </maintainer>
-  <maintainer>
     <email>rajiv@gentoo.org</email>
     <name>Rajiv Aaron Manglani</name>
   </maintainer>

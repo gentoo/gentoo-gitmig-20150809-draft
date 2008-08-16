@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-app_ldap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.16 2007/02/22 02:04:07 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.17 2008/08/16 16:07:12 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
