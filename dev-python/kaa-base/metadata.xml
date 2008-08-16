@@ -19,4 +19,7 @@
 		INotify support), inter-process communication, as well as a
 		rich, practically magical API for asynchronous programming.
 	</longdescription>
+	<use>
+		<flag name='tls'>SSL/TLS support via <pkg>dev-python/tlslite</pkg></flag>
+        </use>
 </pkgmetadata>

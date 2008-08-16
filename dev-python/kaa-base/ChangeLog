@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.13 2008/08/16 14:43:06 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.14 2008/08/16 15:36:49 rbu Exp $
+
+  16 Aug 2008; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  kaa-base-0.4.0.ebuild:
+  Add tls useflag for tlslite, also add avahi dependency, readd ~ppc
 
 *kaa-base-0.4.0 (16 Aug 2008)
 
