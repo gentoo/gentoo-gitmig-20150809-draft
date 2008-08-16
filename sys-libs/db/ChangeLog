@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.259 2008/08/16 22:22:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.260 2008/08/16 22:33:50 robbat2 Exp $
+
+  16 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Bug #234081, cleanup entity in metadata.
 
 *db-4.2.52_p5-r1 (16 Aug 2008)
 
