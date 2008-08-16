@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsidplay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.35 2007/10/15 14:34:58 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.36 2008/08/16 17:37:29 aballier Exp $
+
+  16 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  libsidplay-1.36.59.ebuild:
+  run elibtoolize and keyword x86-fbsd
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> libsidplay-1.36.57.ebuild:
   Stable on ppc64
