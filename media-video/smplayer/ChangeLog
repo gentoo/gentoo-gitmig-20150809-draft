@@ -1,6 +1,14 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.28 2008/06/16 19:24:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.29 2008/08/16 13:38:41 yngwin Exp $
+
+*smplayer-0.6.2 (16 Aug 2008)
+
+  16 Aug 2008; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.0_rc3.ebuild,
+  -smplayer-0.6.0_rc4.ebuild, +smplayer-0.6.2.ebuild:
+  Version bump. Dropping qt3support check, as this is no longer needed
+  according to upstream (hopefully it's really true this time). 
+  Dropping old RCs.
 
   16 Jun 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.0.ebuild,
   smplayer-0.6.1.ebuild:
