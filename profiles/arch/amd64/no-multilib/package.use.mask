@@ -17,3 +17,8 @@ sci-libs/acml ifc
 # Remask ia32 since parent unmasks it, and no-multilib
 # can't use this flag.
 www-client/opera ia32
+
+# Robert Buchholz <rbu@gentoo.org> (16 Aug 2008)
+# SNES applications are masked in multilib
+media-tv/freevo snes
+
