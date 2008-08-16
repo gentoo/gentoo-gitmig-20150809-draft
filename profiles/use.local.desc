@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3749 2008/08/16 03:30:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3750 2008/08/16 04:05:48 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -12,6 +12,7 @@
 # The following categories are ONLY being generated from metadata.xml:
 # app-accessibility
 # app-admin
+# app-antivirus
 # app-arch
 # app-backup
 # app-benchmarks
@@ -34,8 +35,10 @@
 # app-text
 # app-vim
 # app-xemacs
+# dev-ada
 # dev-cpp
 # dev-db
+# dev-dotnet
 # dev-embedded
 # dev-games
 # dev-haskell
@@ -43,9 +46,12 @@
 # dev-lisp
 # dev-ml
 # dev-perl
+# dev-php
 # dev-ruby
 # dev-scheme
+# dev-tcltk
 # dev-tex
+# dev-tinyos
 # games-action
 # games-arcade
 # games-board
@@ -67,17 +73,26 @@
 # gnome-extra
 # gnustep-apps
 # gnustep-base
+# gnustep-libs
 # kde-misc
 # media-plugins
+# media-radio
 # media-sound
 # media-video
 # net-analyzer
+# net-fs
 # net-im
 # net-misc
+# net-nds
+# net-news
+# net-print
+# net-zope
+# perl-core
 # rox-base
 # rox-extra
 # sci-astronomy
 # sci-biology
+# sci-calculators
 # sci-chemistry
 # sci-electronics
 # sci-geosciences
@@ -86,16 +101,22 @@
 # sci-misc
 # sci-physics
 # sci-visualization
+# sec-policy
+# sys-auth
 # sys-block
 # sys-boot
 # sys-cluster
 # sys-devel
+# sys-process
+# virtual
+# www-misc
 # x11-apps
 # x11-base
 # x11-drivers
 # x11-libs
 # x11-misc
 # x11-plugins
+# x11-proto
 # x11-wm
 # xfce-base
 # xfce-extra
