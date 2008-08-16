@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.14 2008/08/10 14:51:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.15 2008/08/16 15:34:36 rbu Exp $
+
+  16 Aug 2008; Robert Buchholz <rbu@gentoo.org> package.use.mask:
+  Unmask tls for kaa-base
 
   10 Aug 2008; Markus Ullmann <jokey@gentoo.org> no-multilib/package.mask:
   Mask app-emulation/virtualbox-guest-additions on no-multilib profile
