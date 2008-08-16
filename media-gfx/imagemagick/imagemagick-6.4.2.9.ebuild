@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.2 2008/08/16 16:50:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.3 2008/08/16 16:56:48 maekke Exp $
 
 inherit eutils multilib perl-app toolchain-funcs
 
@@ -142,7 +142,7 @@ src_compile() {
 		$(use_with openexr) \
 		|| die "econf failed"
 	# parallel-building broken in this version, bug #232638
-	emake -j1 || die "compile problem"
+	emake || die "compile problem"
 }
 
 src_install() {
