@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.0.ebuild,v 1.1 2008/08/16 04:43:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.0.ebuild,v 1.2 2008/08/16 15:22:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.41.0-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
+	rm -rf doc
 	sed -i -r \
 		-e 's:@LIBINTL@:@LTLIBINTL@:' \
 		-e '/^LIB(BLKID|COM_ERR|SS|UUID)/s:[$][(]LIB[)]/lib([^@]*)@LIB_EXT@:-l\1:' \
