@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.22 2008/05/02 11:43:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.23 2008/08/16 11:12:22 maekke Exp $
+
+*enblend-3.0_p20080807 (16 Aug 2008)
+
+  16 Aug 2008; Markus Meier <maekke@gentoo.org>
+  +enblend-3.0_p20080807.ebuild:
+  snapshot-bump, required for hugin-0.7.0_rc2
 
   02 May 2008; Markus Meier <maekke@gentoo.org>
   +files/enblend-3.0-gcc43.patch, -enblend-2.3.ebuild, -enblend-2.5.ebuild,
