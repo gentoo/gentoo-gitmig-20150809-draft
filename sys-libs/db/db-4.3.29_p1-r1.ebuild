@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29_p1-r1.ebuild,v 1.1 2008/08/16 20:20:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29_p1-r1.ebuild,v 1.2 2008/08/16 22:14:19 mr_bones_ Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -52,7 +52,7 @@ src_unpack() {
 	# use the includes from the prefix
 	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-listen-to-java-options.patch
-	
+
 	epatch "${FILESDIR}"/"${PN}"-4.3.27-fix-dep-link.patch
 
 	# Include the SLOT for Java JAR files
