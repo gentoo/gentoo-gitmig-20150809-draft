@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.295 2008/08/16 12:47:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.296 2008/08/16 16:50:48 maekke Exp $
+
+  16 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml,
+  imagemagick-6.4.2.9.ebuild:
+  reenable openmp support, but only with sys-devel/gcc-4.3
 
 *imagemagick-6.4.2.9 (16 Aug 2008)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.1 2008/08/16 12:47:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.2 2008/08/16 16:50:48 maekke Exp $
 
-inherit eutils multilib perl-app
+inherit eutils multilib perl-app toolchain-funcs
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}
@@ -16,7 +16,7 @@ LICENSE="imagemagick"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 djvu doc fontconfig fpx graphviz gs hdri jpeg jpeg2k lcms nocxx
-	openexr perl png q8 q32 svg tiff truetype X wmf xml zlib"
+	openexr openmp perl png q8 q32 svg tiff truetype X wmf xml zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	djvu? ( app-text/djvu )
@@ -63,6 +63,11 @@ pkg_setup() {
 		elog "the svg USE-flag requires the X USE-flag set."
 		elog "disabling svg support for now."
 	fi
+
+	if use openmp && ! built_with_use sys-devel/gcc openmp; then
+		eerror "sys-devel/gcc needs to be built with openmp support."
+		die "emerge sys-devel/gcc with USE=\"openmp\""
+	fi
 }
 
 src_unpack() {
@@ -91,6 +96,19 @@ src_compile() {
 		myconf="${myconf} --without-rsvg"
 	fi
 
+	#openmp support only works with >=sys-devel/gcc-4.3
+	# see bug #223825
+	if use openmp ; then
+		if [[ $(gcc-version) != "4.3" ]] ; then
+			ewarn "you need sys-devel/gcc-4.3 to be able to use openmp, disabling."
+			myconf="${myconf} --disable-openmp"
+		else
+			myconf="${myconf} --enable-openmp"
+		fi
+	else
+		myconf="${myconf} --disable-openmp"
+	fi
+
 	econf \
 		${myconf} \
 		--without-included-ltdl \
@@ -98,7 +116,6 @@ src_compile() {
 		--with-ltdl-lib=/usr/$(get_libdir) \
 		--with-threads \
 		--with-modules \
-		--disable-openmp \
 		$(use_with perl) \
 		--with-gs-font-dir=/usr/share/fonts/default/ghostscript \
 		$(use_enable hdri) \
