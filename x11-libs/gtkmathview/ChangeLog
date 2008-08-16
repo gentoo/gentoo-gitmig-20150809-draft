@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.25 2008/06/26 18:58:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.26 2008/08/16 03:22:24 cardoe Exp $
+
+  16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   26 Jun 2008; Daniel Gryniewicz <dang@gentoo.org>
   +files/gtkmathview-0.8.0-cond-t1.patch, gtkmathview-0.8.0.ebuild:
