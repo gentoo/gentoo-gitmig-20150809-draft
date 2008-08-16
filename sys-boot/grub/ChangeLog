@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.100 2008/08/05 22:50:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.101 2008/08/16 15:27:59 vapier Exp $
+
+  16 Aug 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild:
+  Require lzo-1 #234182 by Kyle Elbert.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

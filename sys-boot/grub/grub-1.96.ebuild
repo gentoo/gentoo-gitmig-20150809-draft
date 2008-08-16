@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.3 2008/05/05 03:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.4 2008/08/16 15:27:59 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS=""
 IUSE="static netboot custom-cflags"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
-	dev-libs/lzo"
+	=dev-libs/lzo-1*"
 PROVIDE="virtual/bootloader"
 
 src_compile() {
