@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <maintainer>
- <email>tantive@gentoo.org</email>
+	<email>tantive@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='lighttpd'>Enable support for
+		<pkg>www-servers/lighttpd</pkg></flag>
+</use>
 </pkgmetadata>
