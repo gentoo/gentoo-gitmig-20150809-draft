@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.129 2008/08/16 03:56:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.130 2008/08/16 05:16:16 vapier Exp $
+
+*nfs-utils-1.1.3 (16 Aug 2008)
+
+  16 Aug 2008; Mike Frysinger <vapier@gentoo.org> files/rpc.gssd.initd,
+  files/rpc.svcgssd.initd, +nfs-utils-1.1.3.ebuild:
+  Version bump. Fix arg passing for gssd binaries #232387 by Michele
+  Schiavo. Depend on e2fsprogs-libs for libblkid #221773 by Triffid Hunter.
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
