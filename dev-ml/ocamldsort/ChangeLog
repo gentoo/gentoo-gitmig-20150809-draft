@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamldsort
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.4 2008/01/03 23:32:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.5 2008/08/16 16:26:09 nixnut Exp $
+
+  16 Aug 2008; nixnut <nixnut@gentoo.org> ocamldsort-0.14.4.ebuild:
+  Stable on ppc wrt bug 234567
 
 *ocamldsort-0.14.4 (03 Jan 2008)
 

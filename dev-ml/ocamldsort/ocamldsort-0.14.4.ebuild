@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ocamldsort-0.14.4.ebuild,v 1.1 2008/01/03 23:32:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ocamldsort-0.14.4.ebuild,v 1.2 2008/08/16 16:26:09 nixnut Exp $
 
 DESCRIPTION="A dependency sorter for OCaml source files"
 HOMEPAGE="http://dimitri.mutu.net/ocaml.html"
@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 IUSE=""
 
