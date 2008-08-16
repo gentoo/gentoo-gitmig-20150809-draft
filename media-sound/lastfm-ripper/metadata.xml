@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>pclouds@gentoo.org</email>
-    <name>Nguyễn Thái Ngọc Duy</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="amazon">Enable advanced tagging using amazon webservices</flag>
