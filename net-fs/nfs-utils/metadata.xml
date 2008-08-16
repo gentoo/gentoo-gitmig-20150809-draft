@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 	<longdescription>NFS client and server daemons</longdescription>
+	<use>
+		<flag name='nonfsv4'>Disable support for NFSv4</flag>
+	</use>
 </pkgmetadata>

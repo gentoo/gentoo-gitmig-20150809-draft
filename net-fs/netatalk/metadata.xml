@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <longdescription>kernel level implementation of the AppleTalk protocol suite</longdescription>
+<use>
+	<flag name='xfs'>Enable support for XFS Quota</flag>
+</use>
 </pkgmetadata>
