@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.1.ebuild,v 1.2 2008/08/03 18:16:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.1 2008/08/16 10:52:39 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://math-atlas.sourceforge.net/"
 SRC_URI1="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
 SRC_URI2="http://www.netlib.org/${L_PN}/${L_PN}-lite-${L_PV}.tgz"
 SRC_URI="${SRC_URI1} ${SRC_URI2}
-	mirror://gentoo/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2"
+	mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2"
 
 SLOT="0"
 IUSE="doc"
@@ -43,10 +43,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2
+	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 	epatch "${FILESDIR}"/${MY_PN}-${PATCH_V}-disable-ilaenv.patch
-	epatch "${FILESDIR}"/blas-${MY_PN}-${PV}-Core2Duo-detect.patch
 
 	# make sure the compile picks up the proper includes
 	sed -i \
