@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3751 2008/08/16 04:43:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3752 2008/08/16 04:45:46 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -726,6 +726,8 @@ dev-libs/xerces-c:icu - Use ICU (dev-libs/icu) as message loader and transcoder.
 dev-libs/xerces-c:libwww - Use the net-libs/libwww library for fetching URLs, instead of the builtin method
 dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
 dev-libs/xerces-c:xqilla - Apply patches from the XQilla project and install additional header files
+dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
+dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:icu - Enable ICU (Internationalization Components for Unicode) support, using dev-libs/icu
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
 dev-lisp/abcl:clisp - Build Armed Bear Common Lisp using GNU CLISP
@@ -757,15 +759,6 @@ dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
 dev-perl/PDL:badval - Enable badval support
 dev-perl/RPC-XML:modperl - Enable www-apache/mod_perl support
 dev-php/PEAR-PHP_Shell:auto-completion - Enable tab-completion
-dev-php5/eaccelerator:contentcache - Enable content caching
-dev-php5/eaccelerator:disassembler - Enable the eA disassembler
-dev-php5/eaccelerator:inode - Use inode-based caching
-dev-php5/php-gtk:extra - Enable GtkExtra support
-dev-php5/php-gtk:glade - Enable libglade support
-dev-php5/php-gtk:html - Enable GtkHTML2 support
-dev-php5/php-gtk:libsexy - Enable libsexy support
-dev-php5/php-gtk:mozembed - Enable GtkMozembed support
-dev-php5/php-gtk:scintilla - Enable Scintilla support
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/docutils:glep - Install support for GLEPs
@@ -1910,7 +1903,14 @@ net-nds/openldap:experimental - Enable experimental backend options
 net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
-net-news/liferea:webkit - Use webkit for rendering rather than xulrunner
+net-news/liferea:dbus -  Enables the DBUS connector for liferea, so feeds can be managed from external programs 
+net-news/liferea:gnutls -  Enable https feeds using gnutls 
+net-news/liferea:gtkhtml -  Uses the gtkhtml rendering engine for item rendering. Depricated, and broken on amd64. 
+net-news/liferea:libnotify -  Enable popup notifications 
+net-news/liferea:lua -  Enable lua scripting 
+net-news/liferea:networkmanager -  Enable NetworkManager integration to automatically detect online/offline status 
+net-news/liferea:webkit -  Enable the webkit rendering engine for item rendering 
+net-news/liferea:xulrunner -  Enable the xulrunner 1.9 rendering engine for item rendering 
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
@@ -1945,9 +1945,17 @@ net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
 net-p2p/museek+:qsa - Enable QSA scripting for museeq
 net-p2p/museek+:trayicon - Enable support for trayicon
-net-print/hplip:cupsddk - Enable dynamic PPD files through cupsddk
-net-print/hplip:fax - Enable fax support
-net-print/hplip:parport - Enable parallel port support
+net-print/hplip:cupsddk - Add support for net-print/cupsddk which enables dynamic PPD files (recommended)
+net-print/hplip:dbus - Add support for sys-apps/dbus which enables better communications with your device (recommended)
+net-print/hplip:doc - Build documentation
+net-print/hplip:fax - Enable fax on multifunction devices which support it
+net-print/hplip:minimal - Only build internal hpijs driver (not recommended at all, make sure you know what you are doing)
+net-print/hplip:parport - Enable parallel port for devices which require it
+net-print/hplip:ppds - Use precompiled PPD files (obsolete, use cupsddk instead)
+net-print/hplip:qt3 - Enable graphical interface using Qt 3 (recommended); when both qt3 and qt4 USE flags are enabled then qt3 is prioritary over qt4
+net-print/hplip:qt4 - Enable graphical interface using Qt 4 (experimental); when both qt3 and qt4 USE flags are enabled then qt3 is prioritary over qt4
+net-print/hplip:scanner - Enable scanner on multifunction devices which support it 
+net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
 net-print/omni:epson - include the epson drivers
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
@@ -2175,13 +2183,16 @@ sys-apps/usbutils:network-cron - Monthly cronjob the update-usbids script
 sys-apps/util-linux:loop-aes - include support for Loop AES encryption
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
-sys-auth/pambase:consolekit - Enable ConsoleKit support in local login sessions.
-sys-auth/pambase:mktemp - Enable pam_mktemp support in system authentication.
-sys-auth/pambase:passwdqc - Enable pam_passwdqc support in system authentication.
-sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords.
-sys-auth/pambase:ssh - Enable pam_ssh support in system authentication.
-sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support.
-sys-auth/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
+sys-auth/pambase:consolekit -  Enable pam_ck_connector module on local system logins. This allows for console logins to make use of ConsoleKit authorization. 
+sys-auth/pambase:cracklib -  Enable pam_cracklib module on system authentication stack. This produces warnings when changing password to something easily crackable. It requires the same USE flag to be enabled on sys-libs/pam or system login might be impossible. 
+sys-auth/pambase:debug -  Enable debug information logging on syslog(3) for all the modules supporting this in the system authentication and system login stacks. 
+sys-auth/pambase:gnome-keyring -  Enable pam_gnome_keyring module on system login stack. This enables proper Gnome Keyring access to logins, whether they are done with the login shell, a Desktop Manager or a remote login systems such as SSH. 
+sys-auth/pambase:mktemp -  Enable pam_mktemp module on system auth stack for session handling. This module creates a private temporary directory for the user, and sets TMP and TMPDIR accordingly. 
+sys-auth/pambase:passwdqc -  Enable pam_passwdqc module on system auth stack for password quality validation. This is an alternative to pam_cracklib producing warnings, rejecting or providing example passwords when changing your system password. It is used by default by OpenWall GNU/*/Linux and by FreeBSD. 
+sys-auth/pambase:sha512 -  Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires >=sys-libs/pam-1.0.1 built against >=sys-libs/glibc-2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version. 
+sys-auth/pambase:ssh -  Enable pam_ssh module on system auth stack for authentication and session handling. This module will accept as password the passphrase of a private SSH key (one of ~/.ssh/id_rsa, ~/.ssh/id_dsa or ~/.ssh/identity), and will spawn an ssh-agent instance to cache the open key. 
+sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support
+sys-auth/pam_pkcs11:pcsc-lite - build with sys-apps/pcsc-lite instead of dev-libs/openct
 sys-block/gparted:fat - Include FAT16/FAT32 support (sys-fs/dosfstools) 
 sys-block/gparted:hfs - Include HFS support (sys-fs/hfsutils)
 sys-block/gparted:jfs - Include JFS support (sys-fs/jfsutils)
@@ -2309,14 +2320,14 @@ sys-libs/uclibc:savedconfig - Adds support for user defined configs
 sys-libs/uclibc:uclibc-compat - build uclibc with backwards compatible options
 sys-libs/uclibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/uclibc:wordexp - add support for word expansion (wordexp.h)
-sys-power/acpid:logrotate - Use logrotate for rotating logs
-sys-power/apcupsd:lighttpd - Enable support for lighttpd
-sys-power/cpufreqd:nforce2 - Enable for nforce2 voltage settings plug-in
-sys-power/cpufreqd:nvidia - Enable nvidia overclocking (nvclock) plug-in
+sys-power/acpid:logrotate - Use app-admin/logrotate for rotating logs
+sys-power/apcupsd:lighttpd - Enable support for www-servers/lighttpd
+sys-power/cpufreqd:nforce2 - Enable support for nforce2 voltage settings plug-in
+sys-power/cpufreqd:nvidia - Enable nvidia overclocking (media-video/nvclock) plug-in
 sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
-sys-power/pm-utils:ntp - install deps for NTP support
+sys-power/pm-utils:ntp - install support for net-misc/ntp
 sys-power/suspend:fbsplash - Add support for framebuffer splash
-sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
+sys-process/daemontools:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
 www-apache/anyterm:opera - Enable workaround for bug in Opera web browser
 www-apache/mod_ftpd:dbi - Enables libdbi support
@@ -2403,23 +2414,26 @@ x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED
 x11-drivers/linuxwacom:module - Build kernel module
 x11-drivers/nvidia-drivers:custom-cflags - Build with CFLAGS from /etc/make.conf (unsupported)
-x11-libs/cairo:glitz - Build with glitz support
-x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware opengl support
-x11-libs/fltk:noxft - Disables fltk; use for non-english characters
-x11-libs/gtkmathview:t1lib - Enable t1lib support
-x11-libs/libmatchbox:pango - Enable pango support
-x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management.
-x11-libs/openmotif:xft - Build OpenMotif with support for XFT font renderer
-x11-libs/qt:glib - Enable glib eventloop support
+x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
+x11-libs/cairo:openg - When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support
+x11-libs/fltk:noxft - Disables xft; use for non-english characters
+x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
+x11-libs/libmatchbox:pango - Enable x11-libs/pango support
+x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
+x11-libs/openmotif:xft - Build OpenMotif with support for XFT font renderer (x11-libs/libXft)
+x11-libs/qt:glib - Enable dev-libs/glib eventloop support
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:qt3support - Enable the Qt3Support libraries for Qt4
-x11-libs/qt-core:glib - Enable glib eventloop support
-x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4
-x11-libs/qt-gui:glib - Enable glib eventloop support
-x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4
+x11-libs/qt-core:glib - Enable dev-libs/glib eventloop support
+x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+x11-libs/qt-gui:glib -  Enable dev-libs/glib eventloop support 
+x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4. 
 x11-libs/qt-opengl:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/qt-sql:qt3support - Enable the Qt3Support libraries for Qt4
+x11-libs/wxGTK:gnome -  Use gnome-base/libgnomeprintui for printing tasks. 
+x11-libs/wxGTK:gstreamer -  Enable the wxMediaCtrl class for playing audio and video through gstreamer. 
+x11-libs/wxGTK:sdl -  Use Simple Directmedia Layer (media-libs/libsdl) for audio. 
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/fbdesk:imlib2 - Add support for imlib2 (pixmap themes)
 x11-misc/notification-daemon-xfce:xfce - Enable integration in XFCE desktop
