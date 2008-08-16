@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.6 2008/04/20 15:33:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.7 2008/08/16 11:27:43 maekke Exp $
 
 inherit mono eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-lang/mono
+RDEPEND="!media-gfx/autopano-sift-C
+	dev-lang/mono
 	dev-dotnet/glade-sharp
 	dev-dotnet/gtk-sharp
 	>=dev-dotnet/libgdiplus-1.1.11"
