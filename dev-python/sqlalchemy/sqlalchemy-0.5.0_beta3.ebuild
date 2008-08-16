@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.4.5.ebuild,v 1.1 2008/04/16 09:50:01 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.5.0_beta3.ebuild,v 1.1 2008/08/16 12:21:16 dev-zero Exp $
 
 NEED_PYTHON=2.4
 
 inherit distutils
 
-MY_P=SQLAlchemy-${PV}
+MY_P=SQLAlchemy-${PV/_}
 
 DESCRIPTION="Python SQL toolkit and Object Relational Mapper."
 HOMEPAGE="http://www.sqlalchemy.org/"
