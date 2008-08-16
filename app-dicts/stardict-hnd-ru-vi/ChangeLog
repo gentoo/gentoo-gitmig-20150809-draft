@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict-hnd-ru-vi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-hnd-ru-vi/ChangeLog,v 1.4 2007/02/01 14:45:43 blubb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-hnd-ru-vi/ChangeLog,v 1.5 2008/08/16 16:39:01 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove pclouds from metadata.xml (#49680)
 
   01 Feb 2007; Simon Stelling <blubb@gentoo.org>
   stardict-hnd-ru-vi-20050917.ebuild:
