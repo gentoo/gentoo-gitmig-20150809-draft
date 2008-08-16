@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3752 2008/08/16 04:45:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3753 2008/08/16 09:28:36 hawking Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -815,6 +815,7 @@ dev-util/anjuta:valgrind - Build valgrind plugin for anjuta
 dev-util/astyle:libs - builds and installs both shared and static library interfaces
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
+dev-util/buildbot:manhole - Add support for manhole (debug over ssh).
 dev-util/buildbot:web - Add a web interface ("waterfall" page).
 dev-util/bzr:sftp - Enable sftp support
 dev-util/catalyst:ccache - Enables ccache support
