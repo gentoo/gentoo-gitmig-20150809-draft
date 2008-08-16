@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.43 2008/05/14 15:05:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.44 2008/08/16 15:36:47 vapier Exp $
+
+*lsof-4.80 (16 Aug 2008)
+
+  16 Aug 2008; Mike Frysinger <vapier@gentoo.org> +lsof-4.80.ebuild:
+  Version bump #233673 by Lars (Polynomial-C).
 
 *lsof-4.78-r2 (14 May 2008)
 
