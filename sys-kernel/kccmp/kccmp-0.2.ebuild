@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.9 2008/07/28 21:29:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.10 2008/08/16 01:46:14 mpagano Exp $
 
 EAPI=1
 
@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 IUSE="qt4"
-DEPEND="qt4? ( =x11-libs/qt-4.3*:4 >=dev-libs/boost-1.33.1-r1 )
+DEPEND="qt4? ( >=x11-libs/qt-4.3:4 >=dev-libs/boost-1.33.1-r1 )
 	!qt4? (  x11-libs/qt:3 )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	if use qt4 ; then
