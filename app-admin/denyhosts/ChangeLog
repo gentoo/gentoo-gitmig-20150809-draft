@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.32 2007/09/29 02:19:12 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.33 2008/08/16 17:39:22 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove strerror from metadata.xml (#89719)
 
   29 Sep 2007; Steve Dibb <beandog@gentoo.org> denyhosts-2.6-r1.ebuild:
   amd64 stable, security bug 181213
