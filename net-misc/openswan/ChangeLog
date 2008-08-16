@@ -1,9 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.50 2008/08/16 10:14:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.51 2008/08/16 10:19:36 mrness Exp $
 
   16 Aug 2008; Alin Năstac <mrness@gentoo.org>
-  +files/openswan-2.4.13-gentoo.patch:
+  -files/openswan-2.4.13-gentoo.patch,
+  +files/openswan-2.4.13-gentoo-fixed.patch, openswan-2.4.13.ebuild:
   Fix patch broken by the $Id cvs replacement.
 
 *openswan-2.4.13 (15 Aug 2008)

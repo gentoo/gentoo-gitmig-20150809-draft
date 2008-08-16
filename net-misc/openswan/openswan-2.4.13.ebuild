@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.13.ebuild,v 1.1 2008/08/15 17:10:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.13.ebuild,v 1.2 2008/08/16 10:19:36 mrness Exp $
 
 inherit eutils linux-info
 
@@ -53,7 +53,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo-fixed.patch
 	epatch "${FILESDIR}"/${P}-deprecated-ldap.patch
 
 	find . -regex '.*[.][1-8]' -exec sed -i \
