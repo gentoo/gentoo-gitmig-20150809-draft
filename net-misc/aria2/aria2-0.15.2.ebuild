@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.15.1_p2.ebuild,v 1.1 2008/08/12 10:30:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.15.2.ebuild,v 1.1 2008/08/16 10:08:12 dev-zero Exp $
 
 MY_P="aria2c-${PV/_p/+}"
 
@@ -64,5 +64,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	rm -rf "${D}/usr/share/doc/aria2c"
 	dodoc ChangeLog README AUTHORS TODO NEWS
+	dohtml README.html doc/aria2c.1.html
 }
