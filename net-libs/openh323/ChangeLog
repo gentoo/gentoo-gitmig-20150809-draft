@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.83 2007/04/14 14:20:24 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.84 2008/08/16 15:55:28 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
   14 Apr 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/openh323-1.11.7-emptyMakefile, +files/openh323-1.15.2-notrace.diff,

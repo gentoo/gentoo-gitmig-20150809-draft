@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpri
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.68 2007/08/06 20:20:22 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.69 2008/08/16 15:56:55 tove Exp $
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
 
   06 Aug 2007; Christoph Mende <angelos@gentoo.org>
   +files/libpri-1.2.5-multilib.patch, libpri-1.2.5.ebuild:
