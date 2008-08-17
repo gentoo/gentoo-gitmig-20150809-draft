@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.2.ebuild,v 1.1 2008/08/17 09:01:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.2.ebuild,v 1.2 2008/08/17 09:04:25 aballier Exp $
 
 inherit eutils
 
@@ -20,7 +20,8 @@ RDEPEND=">=media-libs/xine-lib-1_rc1
 	   lirc? ( app-misc/lirc )
 	   sys-libs/ncurses"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
