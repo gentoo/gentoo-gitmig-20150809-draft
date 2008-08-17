@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.46 2008/08/12 13:53:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.47 2008/08/17 20:27:46 ford_prefect Exp $
+
+  17 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> swfdec-0.6.8.ebuild,
+  swfdec-0.7.4.ebuild:
+  Fix automagic detection of audio if no audio backend is selected in USE
+  (bug #233602).
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> swfdec-0.6.6-r1.ebuild:
   alpha/ia64/sparc stable wrt #229709

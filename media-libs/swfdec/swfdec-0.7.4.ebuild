@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.7.4.ebuild,v 1.1 2008/07/30 15:47:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.7.4.ebuild,v 1.2 2008/08/17 20:27:46 ford_prefect Exp $
 
 EAPI=1
 
-inherit eutils versionator confutils
+inherit eutils versionator
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Macromedia Flash decoding library"
@@ -51,16 +51,19 @@ pkg_setup() {
 		ewarn "as such it requires the 'gstreamer' USE flag to be enabled."
 	fi
 
-	confutils_use_conflict oss alsa pulseaudio
+	if use alsa && use pulseaudio; then
+		ewarn
+		ewarn "Pulseaudio and ALSA selected. Selecting mature ALSA backend."
+	fi
 }
 
 src_compile() {
-	local myconf=
-
-	#--with-audio=[auto/alsa/oss/none]
-	use oss && myconf="${myconf} --with-audio=oss"
-	use pulseaudio && myconf="${myconf} --with-audio=pulse"
-	use alsa && myconf="${myconf} --with-audio=alsa"
+	# Backend logic is from configure.ac:
+	# alsa > pulseaudio > oss
+	local audio="none"
+	use oss && audio="oss"
+	use pulseaudio && audio="pulse"
+	use alsa && audio="alsa"
 
 	# bug #216009
 	# avoid writing to /root/.gstreamer-0.10/registry.xml
@@ -74,7 +77,7 @@ src_compile() {
 		$(use_enable gtk) \
 		--disable-ffmpeg \
 		--disable-mad \
-		${myconf} || die "configure failed"
+		--with-audio=${audio} || die "configure failed"
 
 	# bug #216284 image tests are not ready yet
 	cat  >test/image/Makefile <<EOF
