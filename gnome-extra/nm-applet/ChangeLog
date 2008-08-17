@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.19 2008/07/28 18:47:49 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.20 2008/08/17 16:15:22 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org> nm-applet-0.6.6.ebuild:
+  x86 stable, bug #228837
 
   28 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> nm-applet-0.6.6.ebuild:
   amd64 stable, bug #228837. Removed unused autotools inherit.

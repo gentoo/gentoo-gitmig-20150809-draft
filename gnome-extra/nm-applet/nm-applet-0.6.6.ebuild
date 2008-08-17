@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.3 2008/07/28 18:47:49 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.4 2008/08/17 16:15:22 maekke Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
 SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug doc libnotify"
 
 RDEPEND=">=sys-apps/dbus-0.60
