@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.247 2008/08/12 22:26:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.248 2008/08/17 19:27:03 ford_prefect Exp $
+
+  17 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> gedit-2.22.3.ebuild:
+  Add gtk-doc dep for USE=doc
 
   12 Aug 2008; Mart Raudsepp <leio@gentoo.org> gedit-2.20.3.ebuild,
   -gedit-2.22.0.ebuild, -gedit-2.22.1.ebuild:
