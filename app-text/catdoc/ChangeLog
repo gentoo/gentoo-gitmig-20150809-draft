@@ -1,6 +1,9 @@
 # ChangeLog for app-text/catdoc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.21 2008/08/17 17:21:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.22 2008/08/17 17:25:16 aballier Exp $
+
+  17 Aug 2008; Alexis Ballier <aballier@gentoo.org> -catdoc-0.94.1.ebuild:
+  remove old
 
   17 Aug 2008; Markus Meier <maekke@gentoo.org> catdoc-0.94.2.ebuild:
   x86 stable, bug #234525
