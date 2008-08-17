@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.8 2007/12/02 18:12:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.9 2008/08/17 15:15:43 tester Exp $
 
 inherit autotools eutils
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/libxml2-2.4.0
 		>=gnome-base/libgnomeui-2.0 )"
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+	dev-util/pkgconfig"
 
 #from enlightenment eclass
 gettext_modify() {
