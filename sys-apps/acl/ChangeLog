@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.92 2008/02/23 03:05:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.93 2008/08/17 15:48:56 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml,
+  acl-2.2.47.ebuild:
+  amd64/x86 stable, bug #235016; add GLEP 56 USE flag desc from
+  use.local.desc
 
 *acl-2.2.47 (23 Feb 2008)
 
