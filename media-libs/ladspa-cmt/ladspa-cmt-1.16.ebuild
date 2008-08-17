@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16.ebuild,v 1.2 2007/11/20 19:24:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16.ebuild,v 1.3 2008/08/17 08:17:49 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,8 @@ src_unpack() {
 		 "${S}/makefile" || die "sed makefile failed (CXXFLAGS)"
 
 	cd "${S}"
-	use userland_Darwin && epatch "${FILESDIR}/${PN}-darwin.patch"
+	epatch "${FILESDIR}/${P}-mallocstdlib.patch"
+	use userland_Darwin && epatch "${FILESDIR}/${P}-darwin.patch"
 }
 
 src_compile() {
