@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.115 2008/06/18 16:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.116 2008/08/17 15:19:41 bluebird Exp $
+
+  17 Aug 2008; <bluebird@gentoo.org> unrar-3.8.2.ebuild:
+  Stable on sparc, bug #234115
 
 *unrar-3.8.2 (18 Jun 2008)
 
