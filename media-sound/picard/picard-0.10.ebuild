@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10.0_rc1.ebuild,v 1.2 2008/06/30 20:51:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10.ebuild,v 1.1 2008/08/17 12:31:53 coldwind Exp $
 
 inherit eutils distutils
 
@@ -17,9 +17,9 @@ IUSE="cdaudio ffmpeg nls"
 RDEPEND=">=dev-lang/python-2.4
 	|| ( >=dev-lang/python-2.5 >=dev-python/ctypes-0.9 )
 	>=dev-python/PyQt4-4.2
-	>=media-libs/mutagen-1.13
+	media-libs/mutagen
 	cdaudio? ( >=media-libs/libdiscid-0.1.1 )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326
+	ffmpeg? ( media-video/ffmpeg
 		>=media-libs/libofa-0.9.2 )"
 
 DEPEND="${RDEPEND}"
@@ -47,8 +47,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# This raises ffmpeg dep to >=0.4.9_p20080326
-	epatch "${FILESDIR}"/${P}-ffmpeg-headers.patch
+	if has_version '>=media-video/ffmpeg-0.4.9_p20080326' ; then
+		epatch "${FILESDIR}"/${PN}-0.10.0_rc1-ffmpeg-headers.patch
+	fi
 }
 
 src_compile() {
