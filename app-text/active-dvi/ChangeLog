@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.22 2008/08/17 20:35:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.23 2008/08/17 20:38:58 aballier Exp $
+
+  17 Aug 2008; Alexis Ballier <aballier@gentoo.org> active-dvi-1.7.3.ebuild:
+  Amend previous commit... texlive-pictures is also missing.
 
   17 Aug 2008; Alexis Ballier <aballier@gentoo.org> active-dvi-1.7.3.ebuild:
   Add missing deps on pstricks, spotted by Markus Meier.
