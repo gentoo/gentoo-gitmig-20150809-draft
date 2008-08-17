@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.14 2008/08/15 04:40:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.15 2008/08/17 01:18:10 mr_bones_ Exp $
 
 inherit eutils autotools games
 
@@ -40,7 +40,7 @@ src_unpack() {
 	mkdir flx/
 	cd flx/
 	unpack jmsfx{,si}.zip
-	
+
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
