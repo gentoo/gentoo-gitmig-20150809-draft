@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.37 2008/05/01 21:41:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.38 2008/08/17 08:42:58 aballier Exp $
+
+*vobcopy-1.1.1 (17 Aug 2008)
+
+  17 Aug 2008; Alexis Ballier <aballier@gentoo.org> +vobcopy-1.1.1.ebuild:
+  version bump
 
   01 May 2008; Alexis Ballier <aballier@gentoo.org> -vobcopy-1.0.0.ebuild,
   -vobcopy-1.0.1.ebuild:
