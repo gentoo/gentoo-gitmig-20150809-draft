@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/decibel-audio-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.3 2008/08/08 19:05:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.4 2008/08/17 17:15:39 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org>
+  decibel-audio-player-0.10.ebuild:
+  x86 stable, bug #233766
 
   08 Aug 2008; Markus Rothe <corsair@gentoo.org>
   decibel-audio-player-0.10.ebuild:
