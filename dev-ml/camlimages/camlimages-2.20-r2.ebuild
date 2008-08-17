@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r2.ebuild,v 1.2 2008/08/16 16:24:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r2.ebuild,v 1.3 2008/08/17 17:23:28 maekke Exp $
 
 inherit findlib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/${P/20/2}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND=">=dev-lang/ocaml-3.09
 	gtk? ( dev-ml/lablgtk )
