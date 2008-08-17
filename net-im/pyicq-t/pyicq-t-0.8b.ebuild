@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8b.ebuild,v 1.2 2008/05/29 17:39:42 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8b.ebuild,v 1.3 2008/08/17 15:22:50 maekke Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://pyicqt.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="webinterface"
 
 DEPEND="net-im/jabber-base"
