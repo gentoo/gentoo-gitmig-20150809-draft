@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.15.ebuild,v 1.1 2008/05/19 08:03:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.15.ebuild,v 1.2 2008/08/17 15:36:22 maekke Exp $
 
 inherit eutils versionator rpm
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://picasa.google.com"
 SRC_URI="http://dl.google.com/linux/rpm/stable/i386/${MY_P}.i386.rpm"
 LICENSE="google-picasa"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="mirror strip"
 QA_TEXTRELS_x86="opt/picasa/wine/lib/wine/set_lang.exe.so
 		opt/picasa/wine/lib/wine/browser_prompt.exe.so

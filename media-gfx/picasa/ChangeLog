@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/picasa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.12 2008/05/19 08:03:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.13 2008/08/17 15:36:22 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org> picasa-2.7.3736.15.ebuild:
+  amd64/x86 stable, bug #235001
 
 *picasa-2.7.3736.15 (19 May 2008)
 
