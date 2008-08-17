@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3765 2008/08/17 04:53:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3766 2008/08/17 06:31:42 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -74,7 +74,9 @@
 # gnustep-apps
 # gnustep-base
 # gnustep-libs
+# java-virtuals
 # kde-misc
+# media-fonts
 # media-plugins
 # media-radio
 # media-sound
