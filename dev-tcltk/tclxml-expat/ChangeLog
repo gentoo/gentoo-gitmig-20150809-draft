@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclxml-expat
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.14 2007/02/22 01:33:58 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.15 2008/08/17 03:47:16 mr_bones_ Exp $
+
+  17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -tclxml-expat-2.6.ebuild:
+  further cleanup of ebuilds which need removed versions of dev-tcltk/tclxml
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
