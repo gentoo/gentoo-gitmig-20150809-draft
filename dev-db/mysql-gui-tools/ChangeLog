@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.26 2008/08/05 16:35:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.27 2008/08/17 04:13:08 mr_bones_ Exp $
+
+  17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/mysql-gui-tools-5.0_p12-workbench-lua.patch,
+  mysql-gui-tools-5.0_p12-r2.ebuild:
+  remove workbench references since lua-5.0 is gone.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
