@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.177 2008/07/25 20:00:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.178 2008/08/17 15:59:38 cardoe Exp $
+
+  17 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   25 Jul 2008; Steve Dibb <beandog@gentoo.org> iptables-1.4.0-r1.ebuild:
   amd64 stable, bug 209222
