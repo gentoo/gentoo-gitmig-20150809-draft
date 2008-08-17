@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.0-r1.ebuild,v 1.2 2007/07/11 19:26:37 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.0-r1.ebuild,v 1.3 2008/08/17 03:06:59 je_fro Exp $
 
 inherit distutils eutils multilib subversion
 

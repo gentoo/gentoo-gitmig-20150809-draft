@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/pymol
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.36 2007/08/02 09:08:02 je_fro Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.37 2008/08/17 03:06:59 je_fro Exp $
+
+*pymol-1.1-r1 (13 Aug 2008)
+
+  13 Aug 2008; Jeff Gardner <je_fro@gentoo.org>
+  +files/1.1/pymol-1.1-r1-shaders.patch, +files/1.1/nosplash-gentoo.patch,
+  +files/1.1/pymol-1.1-r1-data-path.patch, +files/1.1/apbs-070604.patch.bz2,
+  +pymol-1.1-r1.ebuild:
+  Version bump, thanks to jschmitz and hodak for the kick in the pants :)
 
   02 Aug 2007; Jeff Gardner <je_fro@gentoo.org> pymol-0.99_rc10.ebuild:
   Fix ESVN_REPO_URI wrt bug #187462. Thanks to Michael Mysinger.

@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-chemistry</herd>
+<use>
+		<flag name="apbs">Build the apbs plugin tool.</flag>
+		<flag name="shaders">Build with Shaders support - good for high-end 3D video cards.</flag>
+</use>
 </pkgmetadata>
