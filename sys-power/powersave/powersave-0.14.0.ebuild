@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.12 2008/08/11 17:17:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.13 2008/08/17 03:26:28 mr_bones_ Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 		virtual/tetex
 		www-client/lynx
 	)
-	dev-util/pkg-config"
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
