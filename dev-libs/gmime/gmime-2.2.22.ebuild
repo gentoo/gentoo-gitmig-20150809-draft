@@ -1,28 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.3.ebuild,v 1.10 2008/08/17 21:02:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.22.ebuild,v 1.1 2008/08/17 21:02:40 eva Exp $
 
 inherit gnome2 eutils mono libtool
 
-IUSE="doc ipv6 mono"
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
-SRC_URI="http://spruce.sourceforge.net/gmime/sources/v${PV%.*}/${P}.tar.gz"
+SRC_URI="http://spruce.sourceforge.net/${PN}/sources/v${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+LICENSE="LGPL-2.1"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2
 	mono? ( dev-lang/mono
 			>=dev-dotnet/gtk-sharp-2.4.0 )
 	sys-libs/zlib"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig
+		doc? (
+			>=dev-util/gtk-doc-1.0
+			app-text/docbook-sgml-utils )"
 
-DEPEND="dev-util/pkgconfig
-	doc? (
-		>=dev-util/gtk-doc-1.0
-		app-text/docbook-sgml-utils )
-	${RDEPEND}"
+DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"
 
 src_unpack() {
 	unpack ${A}
@@ -40,19 +41,16 @@ src_unpack() {
 
 	# Use correct libdir for mono assembly
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		-e 's:^prefix=:exec_prefix=:' \
-		-e 's:prefix)/lib:libdir):' \
+		   -e 's:^prefix=:exec_prefix=:' \
+		   -e 's:prefix)/lib:libdir):' \
 		mono/gmime-sharp.pc.in mono/Makefile.{am,in} || die "sed failed (2)"
 
 	elibtoolize
 }
 
 src_compile() {
-	econf \
-		`use_enable ipv6` \
-		`use_enable mono` \
-		`use_enable doc gtk-doc` || die "configure failed"
-	MONO_PATH=${S} emake -j1 || die
+	econf $(use_enable mono) $(use_enable doc gtk-doc)
+	MONO_PATH="${S}" emake -j1 || die "make failed"
 }
 
 src_install() {
@@ -70,5 +68,3 @@ src_install() {
 	mv "${D}/usr/bin/uuencode" "${D}/usr/bin/gmime-uuencode"
 	mv "${D}/usr/bin/uudecode" "${D}/usr/bin/gmime-uudecode"
 }
-
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"
