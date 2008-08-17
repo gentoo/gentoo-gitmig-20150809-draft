@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.23 2008/08/17 20:38:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.24 2008/08/17 20:41:20 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org> active-dvi-1.7.3.ebuild:
+  x86 stable, bug #234566
 
   17 Aug 2008; Alexis Ballier <aballier@gentoo.org> active-dvi-1.7.3.ebuild:
   Amend previous commit... texlive-pictures is also missing.
