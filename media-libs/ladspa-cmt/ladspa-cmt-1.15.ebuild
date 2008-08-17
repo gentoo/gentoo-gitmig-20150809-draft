@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.26 2008/05/24 16:59:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.27 2008/08/17 08:19:51 aballier Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="media-libs/ladspa-sdk
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	sed -i \
