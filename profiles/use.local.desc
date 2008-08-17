@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3760 2008/08/17 02:12:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3761 2008/08/17 02:20:05 mr_bones_ Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -759,6 +759,9 @@ dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
 dev-perl/PDL:badval - Enable badval support
 dev-perl/RPC-XML:modperl - Enable www-apache/mod_perl support
 dev-php/PEAR-PHP_Shell:auto-completion - Enable tab-completion
+dev-php5/eaccelerator:contentcache - Enable content caching
+dev-php5/eaccelerator:disassembler - Enable the eA disassembler
+dev-php5/eaccelerator:inode - Use inode-based caching
 dev-php5/php-gtk:extra - Enable GtkExtra support
 dev-php5/php-gtk:glade - Enable libglade support
 dev-php5/php-gtk:html - Enable GtkHTML2 support
