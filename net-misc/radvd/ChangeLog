@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.42 2008/07/28 16:00:00 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.43 2008/08/17 06:58:32 tove Exp $
+
+  17 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove latexer from metadata.xml (#206688)
 
   28 Jul 2008; Wolfram Schlich <wschlich@gentoo.org>
   -files/radvd-0.9-conf.d, -files/radvd-0.9-init.d, metadata.xml,
