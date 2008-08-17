@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.45 2008/07/27 01:18:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.46 2008/08/17 00:00:30 mr_bones_ Exp $
+
+  17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.9.1-r1.ebuild:
+  update split qt dep as reported in bug #234954 by Davide Cendron
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> stellarium-0.9.1-r1.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
