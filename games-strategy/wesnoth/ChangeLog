@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.127 2008/07/23 17:35:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.128 2008/08/17 04:55:06 fmccor Exp $
+
+  17 Aug 2008; Ferris McCormick <fmccor@gentoo.org> wesnoth-1.4.4.ebuild:
+  Sparc stable --- Bug #234984 --- Delfador says we're good.
 
 *wesnoth-1.4.4 (23 Jul 2008)
 
