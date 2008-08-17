@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.61 2008/05/30 22:57:29 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.62 2008/08/17 04:26:29 mr_bones_ Exp $
+
+  17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  gtkhtml-sharp-2.8.2.ebuild, gtkhtml-sharp-2.16.0.ebuild:
+  remove reference to gnome-extra/gtkhtml versions which have gone away.
 
   30 May 2008; Jurek Bartuszek <jurek@gentoo.org>
   gtkhtml-sharp-1.0.10.ebuild, gtkhtml-sharp-2.8.2.ebuild,
