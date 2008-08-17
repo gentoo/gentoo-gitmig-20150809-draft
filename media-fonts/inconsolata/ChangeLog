@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/inconsolata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.1 2008/07/23 01:33:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.2 2008/08/17 18:45:27 yngwin Exp $
+
+*inconsolata-2 (17 Aug 2008)
+
+  17 Aug 2008; Ben de Groot <yngwin@gentoo.org> -inconsolata-1.ebuild,
+  +inconsolata-2.ebuild:
+  Version bump as upstream file changed, but isn't versioned.
 
 *inconsolata-1 (23 Jul 2008)
 
