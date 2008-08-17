@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.64 2008/08/06 01:24:58 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.65 2008/08/17 16:22:27 maekke Exp $
+
+  17 Aug 2008; Markus Meier <maekke@gentoo.org> gtkpod-0.99.12.ebuild:
+  x86 stable, bug #231573
 
   06 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
   gtkpod-0.99.12.ebuild:
