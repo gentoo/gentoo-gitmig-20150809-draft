@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.31 2008/08/17 08:19:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.32 2008/08/17 08:23:42 aballier Exp $
+
+  17 Aug 2008; Alexis Ballier <aballier@gentoo.org> ladspa-cmt-1.16.ebuild:
+  keyword ~x86-fbsd
 
   17 Aug 2008; Alexis Ballier <aballier@gentoo.org> ladspa-cmt-1.15.ebuild:
   no need to quote $A
