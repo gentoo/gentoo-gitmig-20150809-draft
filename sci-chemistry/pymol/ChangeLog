@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.37 2008/08/17 03:06:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.38 2008/08/17 17:41:27 je_fro Exp $
+
+  17 Aug 2008; Jeff Gardner <je_fro@gentoo.org>
+  files/1.1/apbs-070604.patch.bz2:
+  Fix patch
 
 *pymol-1.1-r1 (13 Aug 2008)
 
