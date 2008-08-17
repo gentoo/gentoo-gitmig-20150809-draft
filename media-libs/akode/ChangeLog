@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.42 2008/05/24 16:07:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.43 2008/08/17 04:16:02 mr_bones_ Exp $
+
+  17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -akode-2.0_rc1.ebuild:
+  clean out old ebuild now that mips is ~
 
   24 May 2008; nixnut <nixnut@gentoo.org> akode-2.0.2.ebuild:
   Stable on ppc wrt bug 2228731
