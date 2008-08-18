@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.6 2008/07/03 17:28:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.7 2008/08/18 05:47:19 mr_bones_ Exp $
 
 inherit autotools eutils games
 
 DESCRIPTION="puzzle game similar to Oxyd"
 HOMEPAGE="http://www.nongnu.org/enigma/"
-SRC_URI="mirror://berlios/enigma-game/${P}.tar.gz"
+SRC_URI="mirror://berlios/enigma-game/${P}-64bit.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
