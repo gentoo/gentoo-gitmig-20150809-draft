@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.10 2008/08/16 12:13:39 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15.ebuild,v 1.11 2008/08/18 08:56:00 aballier Exp $
 
 EAPI=1
 
-inherit eutils flag-o-matic toolchain-funcs libtool
+inherit eutils flag-o-matic toolchain-funcs libtool multilib
 
 # This should normally be empty string, unless a release has a suffix.
 if [[ "${P/_pre/}" != "${P}" ]]; then
@@ -103,6 +103,14 @@ src_compile() {
 		is-flag -O? || append-flags -O2
 	fi
 
+	# Set the correct win32 dll path, bug #197236
+	local win32dir
+	if has_multilib_profile ; then
+		win32dir=/usr/$(ABI="x86" get_libdir)/win32
+	else
+		win32dir=/usr/$(get_libdir)/win32
+	fi
+
 	# Too many file names are the same (xine_decoder.c), change the builddir
 	# So that the relative path is used to identify them.
 	mkdir "${WORKDIR}/build"
@@ -167,7 +175,7 @@ src_compile() {
 		--disable-optimizations \
 		--disable-syncfb \
 		--with-xv-path=/usr/$(get_libdir) \
-		--with-w32-path=/usr/$(ABI=x86 get_libdir)/win32 \
+		--with-w32-path=${win32dir} \
 		--with-real-codecs-path=/usr/$(get_libdir)/codecs \
 		--enable-fast-install \
 		--disable-dependency-tracking || die "econf failed."
