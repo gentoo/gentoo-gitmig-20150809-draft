@@ -1,5 +1,7 @@
---- com32/libutil/Makefile.orig	2008-01-02 14:33:58 +0000
-+++ com32/libutil/Makefile	2008-01-02 14:35:38 +0000
+add no PIE flags if the toolchain supports it
+
+--- com32/libutil/Makefile
++++ com32/libutil/Makefile
 @@ -34,7 +34,8 @@
  gcc_ok   = $(shell tmpf=$(TMPFILE); if gcc $(1) -c -x c /dev/null -o $$tmpf 2>/dev/null; \
  	           then echo $(1); else echo $(2); fi; rm -f $$tmpf)
@@ -10,8 +12,8 @@
  
  CC         = gcc
  LD         = ld -m elf_i386
---- com32/modules/Makefile.orig	2008-01-02 14:42:12 +0000
-+++ com32/modules/Makefile	2008-01-02 14:42:50 +0000
+--- com32/modules/Makefile
++++ com32/modules/Makefile
 @@ -19,7 +19,8 @@
  gcc_ok   = $(shell tmpf=$(TMPFILE); if gcc $(1) -c -x c /dev/null -o $$tmpf 2>/dev/null; \
  	           then echo $(1); else echo $(2); fi; rm -f $$tmpf)
