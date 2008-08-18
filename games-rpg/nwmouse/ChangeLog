@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwmouse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.8 2008/07/28 17:39:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.9 2008/08/18 17:55:37 calchan Exp $
+
+  18 Aug 2008; Denis Dupeyron <calchan@gentoo.org> nwmouse-0.1.ebuild,
+  nwmouse-0.1-r1.ebuild:
+  Mirrored tarball and fixed SRC_URI, bug #235063.
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.

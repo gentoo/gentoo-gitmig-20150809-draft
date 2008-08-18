@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.6 2007/08/27 20:24:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.7 2008/08/18 17:55:37 calchan Exp $
 
 inherit games
 
 DESCRIPTION="hardware mouse cursors for Neverwinter Nights"
 HOMEPAGE="http://home.woh.rr.com/nwmovies/nwmouse/"
 SRC_URI="http://home.woh.rr.com/nwmovies/cursors.tar.gz
-	http://dev.gentoo.org/~wolf31o2/sources/dump/${P}.tar.bz2"
+	http://dev.gentoo.org/~calchan/distfiles/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -42,8 +42,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.bz2 || die
-	mkdir ${S}/cursors || die
-	cd ${S}/cursors || die
+	mkdir "${S}"/cursors || die
+	cd "${S}"/cursors || die
 	unpack cursors.tar.gz || die
 }
 
