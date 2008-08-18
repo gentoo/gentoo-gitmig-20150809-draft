@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/guile-cairo-1.3.90.ebuild,v 1.1 2007/06/06 23:13:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/guile-cairo-1.3.90.ebuild,v 1.2 2008/08/18 04:19:53 pchrist Exp $
 
 inherit eutils
 
 DESCRIPTION="Wraps the Cairo graphics library for Guile Scheme"
-HOMEPAGE="home.gna.org/guile-cairo/"
+HOMEPAGE="http://home.gna.org/guile-cairo/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
