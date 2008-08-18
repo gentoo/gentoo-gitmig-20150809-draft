@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0_rc2.ebuild,v 1.1 2008/08/16 11:22:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0_rc2.ebuild,v 1.2 2008/08/18 16:38:02 maekke Exp $
 
 EAPI="1"
 WX_GTK_VER="2.8"
@@ -37,4 +37,10 @@ pkg_setup() {
 		eerror "$msg"
 		die "$msg"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
