@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.232 2008/08/16 17:47:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.233 2008/08/18 01:39:02 solar Exp $
+
+*hardened-sources-2.6.26 (18 Aug 2008)
+*hardened-sources-2.6.25-r4 (18 Aug 2008)
+
+  18 Aug 2008; <solar@gentoo.org> -hardened-sources-2.6.25-r2.ebuild,
+  +hardened-sources-2.6.25-r4.ebuild, +hardened-sources-2.6.26.ebuild:
+  - proxy commit for gengor 2.6.26: Initial 2.6.26 release. 2.6.25-r4: Update
+  to Linux 2.6.25.15. Fixes security bugs #234799, #234803 and #234812.
+  2.6.25-r2: Removed.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove phreak from metadata.xml (#96398)
