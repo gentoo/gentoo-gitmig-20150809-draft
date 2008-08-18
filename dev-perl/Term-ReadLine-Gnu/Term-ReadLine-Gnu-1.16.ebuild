@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/Term-ReadLine-Gnu-1.16.ebuild,v 1.6 2008/06/17 06:51:07 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/Term-ReadLine-Gnu-1.16.ebuild,v 1.7 2008/08/18 04:43:33 mr_bones_ Exp $
 
 inherit versionator perl-module
 
 DESCRIPTION="GNU Readline XS library wrapper"
-HOMEPAGE="http:/search.cpan.org/~hayashi/"
+HOMEPAGE="http://search.cpan.org/~hayashi/"
 SRC_URI="mirror://cpan/authors/id/H/HA/HAYASHI/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"

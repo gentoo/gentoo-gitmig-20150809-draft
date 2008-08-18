@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadLine-Gnu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.6 2008/06/17 06:51:07 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.7 2008/08/18 04:43:33 mr_bones_ Exp $
+
+  18 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  Term-ReadLine-Gnu-1.16.ebuild:
+  fix typo in HOMEPAGE reported by Craig in bug #235047
 
   17 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   Term-ReadLine-Gnu-1.16.ebuild:
