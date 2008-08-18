@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/pidgin-msn-pecan
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.1 2008/08/18 21:03:45 voyageur Exp $
+
+*pidgin-msn-pecan-0.0.14 (18 Aug 2008)
+
+  18 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +pidgin-msn-pecan-0.0.14.ebuild:
+  Initial import. Thanks everyone in bug #230033
+
