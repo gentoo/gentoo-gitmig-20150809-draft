@@ -16,6 +16,8 @@
     better communications with your device (recommended)</flag>
     <flag name='doc'>Build documentation</flag>
     <flag name='fax'>Enable fax on multifunction devices which support it</flag>
+    <flag name='gtk'>Enable GTK+ dependencies, currently only the scanner GUI 
+    with USE=scanner.</flag>
     <flag name='minimal'>Only build internal hpijs driver (not recommended at 
     all, make sure you know what you are doing)</flag>
     <flag name='parport'>Enable parallel port for devices which require 
