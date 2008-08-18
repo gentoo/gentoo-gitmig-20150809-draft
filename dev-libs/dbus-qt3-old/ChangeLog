@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-qt3-old
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.13 2008/03/07 00:27:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.14 2008/08/18 18:50:28 rbu Exp $
+
+  18 Aug 2008; Robert Buchholz <rbu@gentoo.org> dbus-qt3-old-0.70.ebuild:
+  Fix HOMEPAGE
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> dbus-qt3-old-0.70.ebuild:
   Keyword ~mips.

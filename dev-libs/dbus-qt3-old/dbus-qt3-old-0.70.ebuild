@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.14 2008/03/07 00:27:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.15 2008/08/18 18:50:28 rbu Exp $
 
 inherit qt3
 
 DESCRIPTION="D-BUS Qt3 bindings compatible with old application API and new dbus"
-HOMEPAGE="http://freedesktop.org/wiki/Software_2fdbus"
+HOMEPAGE="http://freedesktop.org/wiki/Software/dbus"
 SRC_URI="http://www.kolumbus.fi/juuso.alasuutari/${P/-old}.tar.bz2"
 
 LICENSE="GPL-2"
