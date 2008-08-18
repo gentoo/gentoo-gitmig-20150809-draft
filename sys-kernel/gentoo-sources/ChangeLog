@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.541 2008/08/14 21:46:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.542 2008/08/18 00:50:46 mpagano Exp $
+
+*gentoo-sources-2.6.25-r8 (18 Aug 2008)
+
+  18 Aug 2008; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.25-r8.ebuild:
+  Adding linux-2.6.25.12, linux-2.6.25.13, linux-2.6.25.14, linux-2.6.25.15,
+  a Makefile patch and a patch to fix missing inlines in a header file
 
 *gentoo-sources-2.6.26-r1 (14 Aug 2008)
 
