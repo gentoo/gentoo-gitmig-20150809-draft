@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.11.ebuild,v 1.1 2008/08/17 17:26:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.11.ebuild,v 1.2 2008/08/18 03:37:19 vapier Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-flags.patch #232766
+	sed -i 's:/usr/local/etc:/etc:g' mtools.5 mtools.texi
 }
 
 src_compile() {
@@ -37,8 +38,9 @@ src_compile() {
 }
 
 src_install() {
-	einstall sysconfdir="${D}"/etc/mtools || die
+	emake -j1 DESTDIR="${D}" install || die
 	insinto /etc/mtools
 	doins mtools.conf || die
+	dosed '/^SAMPLE FILE$/s:^:#:' /etc/mtools/mtools.conf # default is fine
 	dodoc Changelog README* Release.notes
 }
