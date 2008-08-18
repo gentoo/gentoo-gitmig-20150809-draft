@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.44 2008/06/27 14:46:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.45 2008/08/18 04:24:17 vapier Exp $
+
+*sg3_utils-1.27 (18 Aug 2008)
+
+  18 Aug 2008; Mike Frysinger <vapier@gentoo.org> +sg3_utils-1.27.ebuild:
+  Version bump and rename libsgutils2 back to libsgutils #231089.
 
   27 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
   -files/sg3_utils-llseek.patch, -sg3_utils-1.11.ebuild,
