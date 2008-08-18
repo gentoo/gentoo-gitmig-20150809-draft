@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r2.ebuild,v 1.2 2008/02/15 15:03:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r2.ebuild,v 1.3 2008/08/18 16:07:39 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,8 +21,8 @@ SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* x86 amd64"
 
-DEPEND=">=sys-devel/bin86-0.15.5
-	device-mapper? ( >=sys-fs/device-mapper-1.02.12 )"
+DEPEND=">=sys-devel/bin86-0.15.5"
+RDEPEND="device-mapper? ( >=sys-fs/device-mapper-1.02.12 )"
 
 PROVIDE="virtual/bootloader"
 
@@ -48,7 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# lilo needs this. bug 140209
+	# lilo needs this. bug #140209
 	export LC_ALL=C
 
 	# hardened automatic PIC plus PIE building should be suppressed

@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.53 2008/08/05 22:48:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.54 2008/08/18 16:07:39 chainsaw Exp $
+
+  18 Aug 2008; <chainsaw@gentoo.org>
+  -files/lilo-22.7.3-correct-usage-info.patch,
+  -files/lilo-22.7.3-lvm2-not-partionable.patch,
+  -files/lilo-22.7.3-makefile.patch,
+  -files/lilo-22.7.3-makefile-nodiags.patch, -files/lilo-22.7.3-novga.patch,
+  -lilo-22.7.3-r1.ebuild, -lilo-22.8.ebuild, -lilo-22.8-r1.ebuild,
+  lilo-22.8-r2.ebuild:
+  bin86 is a build-time dependency, not a run-time dependency. Closes bug
+  #221541 by Diego Pettenò <flameeyes@gentoo.org>. Clean up old ebuilds.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
