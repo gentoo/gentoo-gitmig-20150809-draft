@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.1-r3.ebuild,v 1.1 2008/08/14 07:33:33 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.2.ebuild,v 1.1 2008/08/19 12:50:25 wrobel Exp $
 
 HORDE_PN=${PN}
 
@@ -9,6 +9,11 @@ HORDE_APPLICATIONS="dimp imp ingo kronolith mimp mnemo nag turba"
 inherit horde
 
 DESCRIPTION="browser based communication suite"
+
+HORDE_PATCHSET_REV=1
+
+SRC_URI="${SRC_URI}
+	http://files.pardus.de/horde-webmail-patches-${PV}-r${HORDE_PATCHSET_REV}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="crypt mysql postgres ldap oracle kolab"
@@ -22,7 +27,7 @@ RDEPEND="!www-apps/horde
 	dev-php/PEAR-Mail_Mime
 	dev-php/PEAR-DB"
 
-EHORDE_PATCHES="$(use kolab && echo ${FILESDIR}/${P}_kolab.patch)"
+EHORDE_PATCHES="$(use kolab && echo ${WORKDIR}/horde-webmail-kolab.patch)"
 HORDE_RECONFIG="$(use kolab && echo ${FILESDIR}/reconfig.kolab)"
 HORDE_POSTINST="$(use kolab && echo ${FILESDIR}/postinstall-en.txt.kolab)"
 
