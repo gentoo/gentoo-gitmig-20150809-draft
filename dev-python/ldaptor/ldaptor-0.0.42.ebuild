@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.6 2008/08/06 20:16:53 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.7 2008/08/19 13:05:41 hawking Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="web doc samba"
 
 DEPEND=">=dev-python/twisted-2
@@ -34,8 +34,10 @@ DOCS="README TODO ldaptor.schema"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-trial-2.1-compat.patch"
-	cp "${WORKDIR}/ldaptor-pictures/"*.dia.png doc/
+	epatch "${FILESDIR}"/${P}-trial-2.1-compat.patch
+	if use doc; then
+		cp "${WORKDIR}"/ldaptor-pictures/*.dia.png doc/
+	fi
 }
 
 src_compile() {
@@ -56,11 +58,9 @@ src_compile() {
 src_install() {
 	distutils_src_install
 
-	python_version
-
 	if ! use web; then
 		rm "${D}"/usr/bin/ldaptor-webui || die "couldn't rm ldaptor-webui"
-		rm -rf "${D}"/usr/lib/python${PYVER}/site-packages/ldaptor/apps/webui || die "couldn't prune webui"
+		rm -rf "${D}"/$(python_get_sitedir)/ldaptor/apps/webui || die "couldn't prune webui"
 	fi
 
 	# install examples
@@ -78,5 +78,5 @@ src_test() {
 	if ! has_version ">=dev-python/twisted-2.1"; then
 		trialopts=-R
 	fi
-	trial ${trialopts} ldaptor || die "test failed"
+	PYTHONPATH=. trial ${trialopts} ldaptor || die "test failed"
 }

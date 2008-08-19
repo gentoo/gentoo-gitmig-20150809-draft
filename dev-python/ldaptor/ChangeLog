@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.20 2008/08/06 20:16:53 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.21 2008/08/19 13:05:41 hawking Exp $
+
+  19 Aug 2008; Ali Polatel <hawking@gentoo.org> ldaptor-0.0.42.ebuild:
+  Use python_get_sitedir, quoting, keyword ~amd64, set PYTHONPATH=. for
+  src_test.
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml,
   ldaptor-0.0.6.ebuild, ldaptor-0.0.42.ebuild:
