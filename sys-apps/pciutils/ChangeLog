@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.141 2008/08/18 18:53:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.142 2008/08/19 17:41:37 bluebird Exp $
+
+  19 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> pciutils-3.0.0.ebuild:
+  Stable on sparc, bug #235028
 
   18 Aug 2008; Brent Baude <ranger@gentoo.org> pciutils-3.0.0.ebuild:
   stable ppc64, bug 235028
