@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.52.ebuild,v 1.2 2008/08/19 11:56:24 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.52.ebuild,v 1.3 2008/08/19 12:13:05 cla Exp $
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -12,7 +12,8 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="sys-fs/mtools
-	dev-perl/Crypt-PasswdMD5"
+	dev-perl/Crypt-PasswdMD5
+	dev-perl/Digest-SHA1"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
