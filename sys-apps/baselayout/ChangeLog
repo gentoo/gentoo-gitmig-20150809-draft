@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.468 2008/05/10 10:03:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.469 2008/08/19 06:12:52 zmedico Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  19 Aug 2008; Zac Medico <zmedico@gentoo.org> baselayout-2.0.0.ebuild:
+  Make the SYMLINK_LIB code in pkg_preinst merge files from lib directories
+  to lib64 directories when necessary, instead of blindly wiping out the
+  content of the lib dir. Thanks to Daniel Robbins for finding the cause of
+  this issue, which he discovered when building stage1 with catalyst.
 
   10 May 2008; Mike Frysinger <vapier@gentoo.org> baselayout-2.0.0.ebuild:
   Install the Makefile into $D so that we can use it in pkg_preinst steps (for

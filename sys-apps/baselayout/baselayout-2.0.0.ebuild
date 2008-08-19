@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.5 2008/05/10 10:03:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.6 2008/08/19 06:12:52 zmedico Exp $
 
 inherit multilib
 
@@ -40,13 +40,81 @@ pkg_preinst() {
 			touch "${ROOT}usr/local/${dir}"/.keep
 		done
 
-		# Ugly compatibility with stupid ebuilds and old profiles symlinks
-		if [ "${SYMLINK_LIB}" = "yes" ] ; then
-			rm -r "${ROOT}"/{lib,usr/lib,usr/local/lib} 2>/dev/null
-			local lib=$(get_abi_LIBDIR ${DEFAULT_ABI})
-			ln -s "${lib}" "${ROOT}lib"
-			ln -s "${lib}" "${ROOT}usr/lib"
-			ln -s "${lib}" "${ROOT}usr/local/lib"
+		# Create symlinks for /lib, /usr/lib, and /usr/local/lib and
+		# merge contents of duplicate directories if necessary.
+		# Only do this when $ROOT != / since it should only be necessary
+		# when merging to an empty $ROOT, and it's not very safe to perform
+		# this operation when $ROOT = /.
+		if [ "${SYMLINK_LIB}" = yes ] && [ "$ROOT" != / ] ; then
+			local prefix libabi=$(get_abi_LIBDIR $DEFAULT_ABI)
+			for prefix in "$ROOT"{,usr/,usr/local/} ; do
+
+				[ ! -d "${prefix}lib" ] && rm -f "${prefix}lib" && \
+					mkdir -p "${prefix}lib"
+
+				[ ! -d "$prefix$libabi" ] && ln -sf "${prefix}lib"
+
+				[ -h "$prefix$libabi" ] && [ -d "${prefix}lib" ] && \
+					[ "$prefix$libabi" -ef "${prefix}lib" ] && continue
+
+				local destdir=$prefix$libabi/ srcdir=${prefix}lib/
+
+				[ -d "$destdir" ] || die "unable to create '$destdir'"
+				[ -d "$srcdir" ] || die "unable to create $srcdir"
+
+				mv -f "$srcdir".keep "$destdir".keep 2>/dev/null
+				if ! rmdir "$srcdir" 2>/dev/null ; then
+					ewarn "merging contents of '$srcdir' into '$destdir':"
+
+					# Move directories if the dest doesn't exist.
+					find "$srcdir" -type d -print0 | \
+					while read -d $'\0' src ; do
+						dest=$destdir${src#${srcdir}}
+						if [ ! -d "$dest" ] ; then
+							if [ -e "$dest" ] ; then
+								ewarn "  not overwriting file '$dest'" \
+									"with directory '$src'"
+								continue
+							fi
+							mv -f "$src" "$dest" && \
+								ewarn "  /${src#${ROOT}} merged" || \
+								ewarn "  /${src#${ROOT}} not merged"
+						fi
+					done
+
+					# Move non-directories.
+					find "$srcdir" ! -type d -print0 | \
+					while read -d $'\0' src ; do
+						dest=$destdir${src#${srcdir}}
+						if [ -e "$dest" ] ; then
+							if [ -d "$dest" ] ; then
+								ewarn "  not overwriting directory '$dest'" \
+									"with file '$src'"
+							else
+								if [ -f "$src" -a ! -s "$src" ] && \
+									[ -f "$dest" -a ! -s "$dest" ] ; then
+									# Ignore empty files such as '.keep'.
+									true
+								else
+									ewarn "  not overwriting file '$dest'" \
+										"with file '$src'"
+								fi
+							fi
+							continue
+						fi
+
+						mv -f "$src" "$dest" && \
+							ewarn "  /${src#${ROOT}} merged" || \
+							ewarn "  /${src#${ROOT}} not merged"
+					done
+				fi
+
+				rm -rf "${prefix}lib" || \
+					die "unable to remove '${prefix}lib'"
+
+				ln -s "$libabi" "${prefix}lib" || \
+					die "unable to create '${prefix}lib' symlink"
+			done
 		fi
 
 		emake -C "${D}/usr/share/${PN}" DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
