@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>netmon</herd>
+	<maintainer>
+		<email>me@tiagocunha.org</email>
+		<description>Tiago Cunha</description>
+	</maintainer>
+	<use>
+		<flag name='perl'>Enables a generic perl symux client</flag>
+		<flag name='symux'>Enables the multiplexer which stores incoming symon
+		streams on disk in RRD files</flag>
+	</use>
+</pkgmetadata>
