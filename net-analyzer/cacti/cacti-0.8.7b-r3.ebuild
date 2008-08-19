@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b.ebuild,v 1.6 2008/02/26 14:40:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b-r3.ebuild,v 1.1 2008/08/19 07:23:10 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
 # Support for _p* in version.
 MY_P=${P/_p*/}
-HAS_PATCHES=0
+HAS_PATCHES=1
 
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
@@ -14,15 +14,17 @@ SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
 if [ "${HAS_PATCHES}" == "1" ] ; then
-	UPSTREAM_PATCHES=""
+	UPSTREAM_PATCHES="upgrade_from_086k_fix
+					snmp_auth_none_notice
+					reset_each_patch"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
-IUSE="snmp bundled-adodb"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="snmp"
 
 DEPEND=""
 
@@ -33,7 +35,7 @@ need_php_httpd
 RDEPEND="!apache2? ( www-servers/lighttpd )
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
-	!bundled-adodb? ( dev-php/adodb )
+	dev-php/adodb
 	virtual/mysql
 	virtual/cron"
 
@@ -49,21 +51,15 @@ src_unpack() {
 		unpack ${MY_P}.tar.gz
 	fi
 
-	use bundled-adodb || sed -i -e \
-	's:$config\["library_path"\] . "/adodb/adodb.inc.php":"adodb/adodb.inc.php":' \
-	"${S}"/include/global.php
+	sed -i -e \
+		's:$config\["library_path"\] . "/adodb/adodb.inc.php":"adodb/adodb.inc.php":' \
+		"${S}"/include/global.php
 }
 
 pkg_setup() {
 	webapp_pkg_setup
 	has_php
-	if [ $PHP_VERSION = 5 ] ; then
-		phpUseFlags="cli mysql xml session pcre"
-	elif [ $PHP_VERSION = 4 ] ; then
-		phpUseFlags="cli mysql xml session pcre expat"
-	fi
-	use bundled-adodb || phpUseFlags="${phpUseFlags} sockets"
-	require_php_with_use ${phpUseFlags}
+	require_php_with_use cli mysql xml session pcre sockets
 }
 
 src_compile() {
@@ -76,7 +72,7 @@ src_install() {
 	rm LICENSE README
 	dodoc docs/{CHANGELOG,CONTRIB,INSTALL,README,REQUIREMENTS,UPGRADE}
 	rm -rf docs
-	use bundled-adodb || rm -rf lib/adodb
+	rm -rf lib/adodb
 
 	edos2unix `find -type f -name '*.php'`
 

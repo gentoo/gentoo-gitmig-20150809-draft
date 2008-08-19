@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.141 2008/08/04 19:25:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.142 2008/08/19 07:23:10 pva Exp $
+
+*cacti-0.8.7b-r3 (19 Aug 2008)
+
+  19 Aug 2008; Peter Volkov <pva@gentoo.org> -cacti-0.8.7b.ebuild,
+  -cacti-0.8.7b-r1.ebuild, +cacti-0.8.7b-r3.ebuild:
+  Added reset_each_patch upstream patch. Removed unused.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
