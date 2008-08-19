@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.15.0.ebuild,v 1.1 2008/04/29 08:54:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.16.2.ebuild,v 1.1 2008/08/19 05:19:19 grozin Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 # Supported lisps with readline
 SUPP_RL="gcl clisp"
@@ -27,15 +27,19 @@ for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-# tetex>=3, so no use of virtual/latex-base (bug #203558)
-RDEPEND="X? ( x11-misc/xdg-utils
-			  sci-visualization/gnuplot
-			  tk? ( dev-lang/tk ) )
+# >=maxima-5.15.0 includes imaxima; it depends on dev-tex/mh
+RDEPEND="!app-emacs/imaxima
+	X? ( x11-misc/xdg-utils
+		 sci-visualization/gnuplot
+		 tk? ( dev-lang/tk ) )
 	latex? ( || ( dev-texlive/texlive-latexrecommended
 				  >=app-text/tetex-3
 				  app-text/ptex ) )
-	emacs? ( virtual/emacs latex? ( app-emacs/auctex ) )
-	xemacs? ( virtual/xemacs latex? ( app-xemacs/auctex ) )"
+	emacs? ( virtual/emacs
+		latex? ( app-emacs/auctex dev-tex/mh ) )
+	xemacs? ( virtual/xemacs
+		latex? ( app-emacs/auctex
+				|| ( dev-tex/mh dev-texlive/texlive-mathextra ) ) )"
 
 # create lisp dependencies
 for LISP in ${SUPP_LISPS}; do
@@ -81,6 +85,8 @@ pkg_setup() {
 			eerror "gcl must be emerged with the USE flag ansi"
 			die "This package needs gcl with USE=ansi"
 		fi
+		# gcl in the main tree is broken (bug #205803)
+		ewarn "Please use gcl from http://repo.or.cz/w/gentoo-lisp-overlay.git"
 	fi
 
 	# Calculating MAXIMA_TEXMFDIR
@@ -120,10 +126,11 @@ pkg_setup() {
 		fi
 	fi
 
-	if use X && ! built_with_use sci-visualization/gnuplot gd; then
+	if use X && ! built_with_use sci-visualization/gnuplot gd wxwindows; then
 		elog "To benefit full plotting capability of maxima,"
 		elog "enable the gd USE flag for sci-visualization/gnuplot"
-		elog "Then re-emerge maxima"
+		elog "And if you are planning to use wxmaxima, you want to"
+		elog "also add the wxwindows flag to gnuplot."
 		epause 5
 	fi
 }
@@ -136,9 +143,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-no-init-files.patch
 	# remove rmaxima if neither cmucl nor sbcl
 	if [ -z "${RL}" ]; then
-		sed -i \
-			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
-			"${S}"/src/Makefile.in \
+		sed -e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
+			-i "${S}"/src/Makefile.in \
 			|| die "sed for rmaxima failed"
 	fi
 }
@@ -180,20 +186,27 @@ src_install() {
 		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png \
 		"Science;Math;Education"
 
-	use emacs && \
-		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
-
 	if use latex; then
 		insinto "${MAXIMA_TEXMFDIR}"/tex/latex/emaxima
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
 
 	# do not use dodoc because interfaces can't read compressed files
-	# read COPYING before attempt to remove it
+	# read COPYING before attempt to remove it from dodoc
 	insinto /usr/share/${PN}/${PV}/doc
 	doins AUTHORS COPYING README README.lisps || die
 	dodir /usr/share/doc
-	dosym /usr/share/${PN}/${PV}/doc /usr/share/doc/${PF}
+	dosym ../${PN}/${PV}/doc /usr/share/doc/${PF} || die
+
+	if use emacs; then
+		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
+		# imaxima docs
+		cd interfaces/emacs/imaxima
+		insinto /usr/share/${PN}/${PV}/doc/imaxima
+		doins ChangeLog NEWS README || die "installing imaxima docs failed"
+		insinto /usr/share/${PN}/${PV}/doc/imaxima/imath-example
+		doins imath-example/*.txt || die "installing imaxima docs failed"
+	fi
 }
 
 pkg_preinst() {
