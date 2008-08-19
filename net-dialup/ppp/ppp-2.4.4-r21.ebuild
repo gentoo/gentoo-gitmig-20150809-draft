@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r19.ebuild,v 1.1 2008/08/01 20:58:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r21.ebuild,v 1.1 2008/08/19 18:20:11 mrness Exp $
 
 inherit eutils toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20080801.tar.gz
+	mirror://gentoo/${P}-gentoo-20080819.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -55,6 +55,7 @@ src_unpack() {
 	epatch "${WORKDIR}/patch/gtk2.patch"
 	epatch "${WORKDIR}/patch/pppoe-lcp-timeout.patch"
 	epatch "${WORKDIR}/patch/passwordfd-read-early.patch"
+	epatch "${WORKDIR}/patch/pppd-usepeerwins.patch"
 
 	use eap-tls && {
 		# see http://eaptls.spe.net/index.html for more info
@@ -129,18 +130,6 @@ src_compile() {
 		emake -f Makefile.linux || die "failed to build pppgetpass"
 	else
 		emake pppgetpass.vt || die "failed to build pppgetpass"
-	fi
-}
-
-pkg_preinst() {
-	has_version "<${CATEGORY}/${PN}-2.4.3-r5"
-	previous_less_than_2_4_3_r5=$?
-
-	if use radius && [ -d "${ROOT}/etc/radiusclient" ] && \
-		[[ $previous_less_than_2_4_3_r5 = 0 ]] ; then
-		ebegin "Copy /etc/radiusclient to /etc/ppp/radius"
-		cp -pPR "${ROOT}/etc/radiusclient" "${ROOT}/etc/ppp/radius"
-		eend $?
 	fi
 }
 
@@ -299,11 +288,12 @@ pkg_postinst() {
 	elog "/usr/share/doc/${PF}/scripts directory."
 
 	# move the old user-defined files into ip-{up,down}.d directories
+	# TO BE REMOVED AFTER SEPT 2008
 	local i
 	for i in ip-up ip-down; do
 		if [ -f "${ROOT}"/etc/ppp/${i}.local ]; then
 			mv /etc/ppp/${i}.local /etc/ppp/${i}.d/90-local.sh && \
-				einfo "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local.sh"
+				ewarn "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local.sh"
 		fi
 	done
 }

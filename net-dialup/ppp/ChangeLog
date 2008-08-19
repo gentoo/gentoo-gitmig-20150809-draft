@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.225 2008/08/15 08:55:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.226 2008/08/19 18:20:11 mrness Exp $
+
+*ppp-2.4.4-r21 (19 Aug 2008)
+
+  19 Aug 2008; Alin Năstac <mrness@gentoo.org> metadata.xml,
+  -ppp-2.4.4-r19.ebuild, -ppp-2.4.4-r20.ebuild, +ppp-2.4.4-r21.ebuild:
+  Export LDFLAGS from plugins/Makefile (#234915). Add usepeerwins option,
+  thanks to Jaco Kroon <jaco at uls dot co dot za>; remove wins-ack USE
+  flag (#234583).
 
 *ppp-2.4.4-r20 (15 Aug 2008)
 

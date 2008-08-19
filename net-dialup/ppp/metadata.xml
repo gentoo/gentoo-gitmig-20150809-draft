@@ -27,7 +27,5 @@
     <flag name="pam">Enables PAM (Pluggable Authentication Modules)
     support</flag>
     <flag name="radius">Enables RADIUS support</flag>
-    <flag name="wins-ack">Acknowledge the WINS servers provided by the peer
-    although it will not use them in any way</flag>
   </use>
 </pkgmetadata>
