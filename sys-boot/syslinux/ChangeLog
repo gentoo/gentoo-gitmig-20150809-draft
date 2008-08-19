@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.34 2008/07/21 23:21:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.35 2008/08/19 11:56:24 cla Exp $
+
+  19 Aug 2008; Dawid Węgliński <cla@gentoo.org> syslinux-3.52.ebuild:
+  Stable on amd64/x86 per bug #232197; add dev-perl/Crypt-PasswdMD5 to RDEPEND
+  for missing perl module (thanks to mklimek@mklimek.org on IRC).
 
 *syslinux-3.70 (21 Jul 2008)
 

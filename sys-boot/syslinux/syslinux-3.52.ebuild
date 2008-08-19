@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.52.ebuild,v 1.1 2007/10/24 18:12:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.52.ebuild,v 1.2 2008/08/19 11:56:24 cla Exp $
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -8,10 +8,11 @@ SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
-RDEPEND="sys-fs/mtools"
+RDEPEND="sys-fs/mtools
+	dev-perl/Crypt-PasswdMD5"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
