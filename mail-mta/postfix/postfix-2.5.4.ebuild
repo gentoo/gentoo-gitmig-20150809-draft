@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.3.ebuild,v 1.1 2008/08/03 14:29:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.4.ebuild,v 1.1 2008/08/19 12:00:04 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
