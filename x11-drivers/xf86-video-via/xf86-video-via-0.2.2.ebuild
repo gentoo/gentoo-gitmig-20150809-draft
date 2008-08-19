@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.2.ebuild,v 1.5 2007/05/05 18:33:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.2.ebuild,v 1.6 2008/08/19 19:32:04 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ XDPVER=4
 inherit x-modular
 
 DESCRIPTION="VIA unichrome graphics driver"
-KEYWORDS="amd64 ia64 ~sh x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 sh x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.0.99
 		x11-libs/libXvMC"
