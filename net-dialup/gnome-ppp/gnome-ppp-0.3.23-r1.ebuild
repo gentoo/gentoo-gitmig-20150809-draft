@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23-r1.ebuild,v 1.2 2007/09/10 19:35:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23-r1.ebuild,v 1.3 2008/08/19 18:31:12 mrness Exp $
 
 inherit gnome2 eutils
 
 MAJOR_V=${PV%.[0-9]*}
 
 DESCRIPTION="A GNOME 2 WvDial frontend"
-HOMEPAGE="None available"
+HOMEPAGE="http://www.gnomefiles.org/app.php?soft_id=41"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
