@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.7 2007/06/12 13:01:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.8 2008/08/19 12:22:52 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND=""
+DEPEND=""
+RDEPEND="!app-text/multitail"
 
 src_unpack() {
 	unpack ${A}
