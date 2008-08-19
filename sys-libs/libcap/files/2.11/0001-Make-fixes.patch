@@ -2,7 +2,7 @@ diff --git a/Make.Rules b/Make.Rules
 index d597fde..26335e7 100644
 --- a/Make.Rules
 +++ b/Make.Rules
-@@ -42,26 +42,28 @@ MINOR=11
+@@ -42,26 +42,27 @@
  
  # Compilation specifics
  
@@ -30,10 +30,10 @@ index d597fde..26335e7 100644
  
  KERNEL_HEADERS := $(topdir)/libcap/include
 -SYSTEM_HEADERS = /usr/include
- IPATH += -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
+-IPATH += -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
 +LIBCAP_CPPFLAGS = -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
 +CPPFLAGS += $(LIBCAP_CPPFLAGS)
-+BUILD_CLAGS += $(LIBCAP_CPPFLAGS)
++BUILD_CFLAGS += $(LIBCAP_CPPFLAGS)
  INCS=$(topdir)/libcap/include/sys/capability.h
  LDFLAGS += -L$(topdir)/libcap
 -CFLAGS += -Dlinux $(WARNINGS) $(DEBUG) $(IPATH)

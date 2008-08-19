@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.66 2008/08/18 04:10:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.67 2008/08/19 22:13:36 vapier Exp $
+
+  19 Aug 2008; Mike Frysinger <vapier@gentoo.org>
+  files/2.11/0001-Make-fixes.patch:
+  Fix typo in BUILD_CFLAGS #235209 by zimous.
 
 *libcap-2.11 (18 Aug 2008)
 
