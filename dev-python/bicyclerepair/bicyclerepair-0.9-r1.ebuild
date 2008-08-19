@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r1.ebuild,v 1.2 2008/03/21 09:16:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r1.ebuild,v 1.3 2008/08/19 13:13:36 hawking Exp $
 
 inherit distutils elisp-common
 
@@ -18,6 +18,7 @@ DEPEND="virtual/python
 		app-emacs/python-mode )"
 
 SITEFILE=50${PN}-gentoo.el
+PYTHON_MODNAME="bike"
 
 src_unpack() {
 	unpack ${A}
@@ -34,9 +35,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	python_version
 	# Enable IDLE integration if Python was compiled with tcltk.
-	PYTHON_VER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
-	config_txt=/usr/lib/python${PYTHON_VER}/tools/idle/config.txt
+	config_txt="${ROOT}"/usr/lib/python${PYVER}/tools/idle/config.txt
 	if [ -f "${config_txt}" ];
 	then
 		if [ -z "`grep BicycleRepairMan_Idle ${config_txt}`" ]; then
@@ -44,11 +45,16 @@ pkg_postinst() {
 			echo "[BicycleRepairMan_Idle]" >> ${config_txt}
 		fi
 	else
-		elog "BicycleRepairMan won't integrate with IDLE included in Python 2.3*"
+		elog "BicycleRepairMan won't integrate with IDLE"
 	fi
 	use emacs && elisp-site-regen
+
+	distutils_pkg_postinst
+	python_mod_optimize $(python_get_sitedir)/bikeemacs.py
+	python_mod_optimize $(python_get_sitedir)/BicycleRepairMan_Idle.py
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	python_mod_cleanup
 }
