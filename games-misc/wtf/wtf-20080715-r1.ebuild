@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20080715.ebuild,v 1.1 2008/07/15 03:27:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20080715-r1.ebuild,v 1.1 2008/08/19 16:47:23 darkside Exp $
+
+inherit eutils
 
 DESCRIPTION="translates acronyms for you"
 HOMEPAGE="http://netbsd.org/"
@@ -13,6 +15,12 @@ IUSE=""
 
 DEPEND="!games-misc/bsd-games"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-additions.patch"
+}
 
 src_install() {
 	dobin wtf || die "dogamesbin failed"
