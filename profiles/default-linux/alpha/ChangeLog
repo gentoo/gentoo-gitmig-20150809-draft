@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.107 2008/08/15 11:07:10 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.108 2008/08/19 18:18:16 yoswink Exp $
+
+  19 Aug 2008; Jose Luis Rivero <yoswink@gentoo.org> 2006.1/package.mask:
+  package mask gcc-4.3 in 2006.1 profile since it needs >=glibc-2.6
 
   15 Aug 2008; Jose Luis Rivero <yoswink@gentoo.org> -no-nptl/deprecated,
   -no-nptl/make.defaults, -no-nptl/package.mask, -no-nptl/package.use.mask,
