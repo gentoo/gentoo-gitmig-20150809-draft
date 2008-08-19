@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.2 2008/08/19 13:16:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.3 2008/08/19 16:21:23 yngwin Exp $
+
+  19 Aug 2008; Ben de Groot <yngwin@gentoo.org> -droid-2.ebuild:
+  Nuking bogus version bump. The Sans Mono was already included in version
+  1.
 
 *droid-2 (19 Aug 2008)
 
