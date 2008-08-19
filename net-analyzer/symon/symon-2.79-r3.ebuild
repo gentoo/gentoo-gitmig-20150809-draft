@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.79-r2.ebuild,v 1.1 2008/08/19 06:59:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.79-r3.ebuild,v 1.1 2008/08/19 10:28:52 pva Exp $
 
 inherit eutils perl-module toolchain-funcs
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-symon.conf.patch
 	use symux && epatch "${FILESDIR}"/${PN}-symux.conf.patch
-	sed -i -e 's:/${CC}.*${LIBS}/s/${CC}/& ${LDFLAGS}/' \
+	sed -i '/${CC}.*${LIBS}/s/${CC}/& ${LDFLAGS}/' \
 			"${S}"/sy{mon,mux}/Makefile || die "seding for LDFLAGS failed"
 
 	if ! use perl ; then
