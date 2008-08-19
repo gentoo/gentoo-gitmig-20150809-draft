@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3.ebuild,v 1.1 2007/05/02 18:00:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3.ebuild,v 1.2 2008/08/19 14:56:15 dberkholz Exp $
 
 WANT_AUTOCONF="2.5"
 
@@ -22,7 +22,8 @@ IUSE=""
 DEPEND="sys-libs/ncurses
 	app-arch/sharutils
 	net-mail/mailbase"
-RDEPEND="app-misc/mime-types"
+RDEPEND="app-misc/mime-types
+	sys-apps/debianutils"
 
 S="${WORKDIR}"/mm${MY_PV}/src
 
