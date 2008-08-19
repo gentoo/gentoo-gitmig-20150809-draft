@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.31 2008/06/07 12:54:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.32 2008/08/19 19:24:47 mrness Exp $
+
+*wammu-0.28 (19 Aug 2008)
+
+  19 Aug 2008; Alin Năstac <mrness@gentoo.org> +wammu-0.28.ebuild:
+  Version bump. Change wxpython dependency atom (#225593).
 
 *wammu-0.27 (07 Jun 2008)
 
