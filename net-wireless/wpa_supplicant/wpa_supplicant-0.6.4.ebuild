@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.1.ebuild,v 1.2 2008/06/03 02:26:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.1 2008/08/19 13:03:50 rbu Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +13,8 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus gnutls gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls gsm madwifi qt3 qt4 readline ssl kernel_linux
+	kernel_FreeBSD ps3"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 		kernel_linux? (
@@ -22,7 +25,12 @@ RDEPEND="dbus? ( sys-apps/dbus )
 			)
 		)
 		!kernel_linux? ( net-libs/libpcap )
-		qt4? ( =x11-libs/qt-4* )
+		qt4? (
+			|| ( ( x11-libs/qt-core:4
+					x11-libs/qt-gui:4 )
+					<x11-libs/qt-4.4:4
+			)
+		)
 		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
 		ssl? ( dev-libs/openssl )
@@ -46,6 +54,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
 
 	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
@@ -80,6 +89,10 @@ src_unpack() {
 
 	if use dbus ; then
 		echo "CONFIG_CTRL_IFACE_DBUS=y" >> .config
+	fi
+
+	if use debug ; then
+		echo "CONFIG_DEBUG_FILE=y" >> .config
 	fi
 
 	if use gsm ; then
@@ -121,6 +134,9 @@ src_unpack() {
 			# Add include path for madwifi-driver headers
 			echo "CFLAGS += -I/usr/include/madwifi" >> .config
 			echo "CONFIG_DRIVER_MADWIFI=y"                 >> .config
+		fi
+		if use ps3 ; then
+			echo "CONFIG_DRIVER_PS3=y" >> .config
 		fi
 	elif use kernel_FreeBSD ; then
 		# FreeBSD specific driver
@@ -170,7 +186,7 @@ src_install() {
 	insinto /etc/wpa_supplicant/
 	newins "${FILESDIR}"/wpa_supplicant.conf wpa_supplicant.conf
 
-	dodoc ChangeLog ../COPYING eap_testing.txt README todo.txt
+	dodoc ChangeLog eap_testing.txt README todo.txt
 	newdoc wpa_supplicant.conf wpa_supplicant.conf
 
 	doman doc/docbook/*.8
@@ -191,6 +207,9 @@ src_install() {
 	if use dbus ; then
 		insinto /etc/dbus-1/system.d
 		newins dbus-wpa_supplicant.conf wpa_supplicant.conf
+		insinto /usr/share/dbus-1/system-services
+		newins dbus-wpa_supplicant.service 'fi.epitest.hostap.WPASupplicant.service'
+		keepdir /var/run/wpa_supplicant
 	fi
 }
 

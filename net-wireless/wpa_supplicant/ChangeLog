@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.107 2008/08/11 11:52:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.108 2008/08/19 13:03:50 rbu Exp $
+
+*wpa_supplicant-0.6.4 (19 Aug 2008)
+
+  19 Aug 2008; Robert Buchholz <rbu@gentoo.org>
+  -wpa_supplicant-0.6.1.ebuild, +wpa_supplicant-0.6.4.ebuild:
+  Version bump (bug #235102 by Vladimir), PS3 drivers have been merged
+  upstream. Also install DBUS service files as 0.5.10 does (bug #212724 by
+  Robert Piasek), and enable file debugging via USE=debug (bug #213023 by
+  Adrian Bassett)
 
   11 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   wpa_supplicant-0.5.10.ebuild, wpa_supplicant-0.6.3.ebuild:
