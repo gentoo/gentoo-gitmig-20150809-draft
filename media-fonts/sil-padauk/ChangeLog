@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/sil-padauk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.1 2008/05/19 20:05:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.2 2008/08/19 09:57:32 pva Exp $
+
+*sil-padauk-2.4 (19 Aug 2008)
+
+  19 Aug 2008; Peter Volkov <pva@gentoo.org> +sil-padauk-2.4.ebuild:
+  Version bump, bug #233239, thank Niklas Laxström for report.
 
 *sil-padauk-2.1 (19 May 2008)
 
