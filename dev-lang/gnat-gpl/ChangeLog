@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.23 2008/07/06 13:14:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.24 2008/08/19 11:53:09 george Exp $
+
+*gnat-gpl-4.1.3.2008-r1 (19 Aug 2008)
+
+  19 Aug 2008; George Shapovalov <george@gentoo.org>
+  +gnat-gpl-4.1.3.2008-r1.ebuild:
+  made -2008 go into a different SLOT from -2007, as they have incompatible
+  bugs. Revbumping to force this
 
 *gnat-gpl-4.1.3.2008 (06 Jul 2008)
 
