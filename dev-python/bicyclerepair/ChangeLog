@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/bicyclerepair
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.19 2008/08/19 13:13:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.20 2008/08/19 13:18:55 hawking Exp $
+
+*bicyclerepair-0.9-r2 (19 Aug 2008)
+
+  19 Aug 2008; Ali Polatel <hawking@gentoo.org>
+  +files/bicyclerepair-0.9-idle.patch,
+  +files/bicyclerepair-0.9-invalid-syntax.patch,
+  +bicyclerepair-0.9-r2.ebuild:
+  Revbump. Added two patches to fix idle and syntax errors, thanks to René
+  'Necoro' Neumann, #232594.
 
   19 Aug 2008; Ali Polatel <hawking@gentoo.org> bicyclerepair-0.9-r1.ebuild:
   Set PYTHON_MODNAME, compile python files properly.
