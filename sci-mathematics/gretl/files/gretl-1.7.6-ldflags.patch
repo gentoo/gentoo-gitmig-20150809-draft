@@ -14,7 +14,7 @@ diff -Naur gretl-1.7.6/cli/Makefile.in gretl-1.7.6.new/cli/Makefile.in
  
  $(CLI): .deps $(OBJS)
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(GRETLLIB) $(READLINE_LIBS) 
-+	$(LDFLAGS) $(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(GRETLLIB) $(READLINE_LIBS) 
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(GRETLLIB) $(READLINE_LIBS) 
  
  .deps:
  	mkdir $@
@@ -25,7 +25,7 @@ diff -Naur gretl-1.7.6/gui2/Makefile.in gretl-1.7.6.new/gui2/Makefile.in
  libdir = @libdir@
  CC = @CC@
  CFLAGS = @CFLAGS@
-+LDFLAGS = @CFLAGS@
++LDFLAGS = @LDFLAGS@
  MAKE = @MAKE@
  INSTALL = @INSTALL@
  LN = @LN_S@
@@ -34,7 +34,7 @@ diff -Naur gretl-1.7.6/gui2/Makefile.in gretl-1.7.6.new/gui2/Makefile.in
  
  $(PROG): .deps $(OBJS) $(HACK_OBJ) $(GTKEXTRA_LITE) $(GTKSOURCEVIEW_LITE) 
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(HACK_OBJ) $(LIBS) $(INETLIB) $(CARBONLIB)
-+	$(LDFLAGS) $(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(HACK_OBJ) $(LIBS) $(INETLIB) $(CARBONLIB)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(HACK_OBJ) $(LIBS) $(INETLIB) $(CARBONLIB)
  
  $(HACK_OBJ): $(HACK_SRC) $(HACK_HDR)
  	$(CC) $(CFLAGS) $(GTK_CFLAGS) -c $<
@@ -54,7 +54,7 @@ diff -Naur gretl-1.7.6/lib/Makefile.in gretl-1.7.6.new/lib/Makefile.in
  
  $(LIBGRETL): .deps $(LOBJS) $(AUX_LOBJ)
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) $(AUX_LOBJ) \
-+	$(LDFLAGS) $(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) $(AUX_LOBJ) \
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(LOBJS) $(AUX_LOBJ) \
  	-rpath $(prefix)/lib $(LIBS) \
  	-version-info $(CURRENT):$(REVISION):$(AGE)
  
@@ -74,7 +74,7 @@ diff -Naur gretl-1.7.6/plugin/Makefile.in gretl-1.7.6.new/plugin/Makefile.in
  LIBTOOL = ../libtool
  COMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) 
 -LINK = $(LIBTOOL) --mode=link $(CC) -module -avoid-version -rpath $(plugindir)
-+LINK = $(LDFLAGS) $(LIBTOOL) --mode=link $(CC) -module -avoid-version -rpath $(plugindir)
++LINK = $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -module -avoid-version -rpath $(plugindir)
  
  GRETLINC = -I$(topsrc)/lib/src
  GRETLLIB = ../lib/libgretl-1.0.la
