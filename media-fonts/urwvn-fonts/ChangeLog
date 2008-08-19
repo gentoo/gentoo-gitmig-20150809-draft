@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urwvn-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.20 2008/08/16 16:54:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.21 2008/08/19 10:42:46 pva Exp $
+
+  19 Aug 2008; Peter Volkov <pva@gentoo.org> urwvn-fonts-3.04.ebuild:
+  amd64 stable, bug #234972.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove pclouds from metadata.xml (#49680)
