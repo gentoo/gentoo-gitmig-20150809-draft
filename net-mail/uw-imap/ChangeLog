@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.99 2008/07/24 20:37:00 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.100 2008/08/19 14:44:15 hoffie Exp $
+
+  19 Aug 2008; Christian Hoffmann <hoffie@gentoo.org> metadata.xml,
+  uw-imap-2007b.ebuild:
+  moving uw-mailutils dependency to RDEPEND as it is really only a runtime
+  dependency (hopefully fixing bug 231258 #c17), adding USE flag description
+  to metadata (GLEP 56)
 
 *uw-imap-2007b (24 Jul 2008)
 
