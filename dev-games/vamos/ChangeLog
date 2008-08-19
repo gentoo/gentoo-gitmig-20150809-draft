@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/vamos
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.7 2008/02/24 07:08:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.8 2008/08/19 01:44:56 mr_bones_ Exp $
+
+  19 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/vamos-0.6.0-gcc43.patch, vamos-0.6.0.ebuild:
+  add gcc43 patch submitted by Dannee McGuire (bug #227511)
 
 *vamos-0.6.0 (24 Feb 2008)
 

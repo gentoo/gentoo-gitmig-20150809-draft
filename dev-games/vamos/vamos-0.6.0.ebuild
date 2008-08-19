@@ -1,6 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.0.ebuild,v 1.1 2008/02/24 07:08:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.0.ebuild,v 1.2 2008/08/19 01:44:56 mr_bones_ Exp $
+
+EAPI=1
+inherit eutils
 
 DESCRIPTION="an automotive simulation framework"
 HOMEPAGE="http://vamos.sourceforge.net/"
@@ -19,7 +22,13 @@ DEPEND="virtual/opengl
 	media-libs/sdl-ttf
 	media-libs/openal
 	media-libs/freealut
-	=dev-libs/libsigc++-1.2*"
+	dev-libs/libsigc++:1.2"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	econf \
