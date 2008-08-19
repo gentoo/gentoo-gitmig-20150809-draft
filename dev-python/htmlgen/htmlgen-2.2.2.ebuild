@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.12 2006/07/12 15:39:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.13 2008/08/19 01:11:58 neurogeek Exp $
 
-IUSE=""
+inherit python
+
 MY_P="HTMLgen"
 DESCRIPTION="HTMLgen - Python modules for the generation of HTML documents"
 HOMEPAGE="http://starship.python.net/crew/friedrich/HTMLgen/html/main.html"
@@ -11,28 +12,41 @@ SRC_URI="http://starship.python.net/crew/friedrich/${MY_P}.tgz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="ia64 ppc x86"
+IUSE="doc"
 
 DEPEND="virtual/python
 		dev-python/imaging"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	make compileall || die "make failed"
+src_install() {
+	# doing this manually because their build scripts suck
+	local files="HTMLgen.py HTMLcolors.py HTMLutil.py HTMLcalendar.py \
+	barchart.py colorcube.py imgsize.py NavLinks.py Formtools.py \
+	ImageH.py ImageFileH.py ImagePaletteH.py GifImagePluginH.py \
+	JpegImagePluginH.py PngImagePluginH.py"
+
+	touch __init__.py
+
+	insinto $(python_get_sitedir)/htmlgen
+	doins $files __init__.py || die "doins failed"
+
+	if use doc; then
+		# fix the image locations in the docs
+		sed -i -e "s;../image/;image/;g" html/* || die "sed failed"
+		dohtml html/*
+		dohtml -r image
+	fi
+	dodoc README
 }
 
-src_install() {
-	PYTHON_VER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
-	# doing this manually because their build scripts suck
-	dodir /usr/lib/python${PYTHON_VER}/site-packages
-	insinto /usr/lib/python${PYTHON_VER}/site-packages
-	doins HTMLgen.py HTMLcolors.py HTMLutil.py HTMLcalendar.py
-	doins barchart.py colorcube.py imgsize.py NavLinks.py
-	doins Formtools.py HTMLgen.pyc HTMLcolors.pyc HTMLutil.pyc
-	doins HTMLcalendar.pyc barchart.pyc colorcube.pyc imgsize.pyc
-	doins NavLinks.pyc Formtools.pyc ImageH.py ImageFileH.py
-	doins ImagePaletteH.py GifImagePluginH.py JpegImagePluginH.py
-	doins PngImagePluginH.py ImageH.pyc ImageFileH.pyc
-	doins ImagePaletteH.pyc GifImagePluginH.pyc JpegImagePluginH.pyc
-	doins PngImagePluginH.pyc
+pkg_postinst() {
+	python_mod_optimize $(python_get_sitedir)/htmlgen
+
+	ewarn "htmlgen now resides in its own subdirectory"
+	ewarn "so you need to do \"from htmlgen import HTMLgen\" instead of \"import HTMLgen\""
+}
+
+pkg_postrm () {
+	python_mod_cleanup $(python_get_sitedir)/htmlgen
 }
