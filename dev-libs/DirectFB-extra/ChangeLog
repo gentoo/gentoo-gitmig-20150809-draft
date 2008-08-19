@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.22 2008/08/06 07:05:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.23 2008/08/19 13:58:05 mr_bones_ Exp $
+
+  19 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -DirectFB-extra-1.0.0.ebuild, -DirectFB-extra-1.0.0-r1.ebuild:
+  clean out old, dep-broken versions
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
