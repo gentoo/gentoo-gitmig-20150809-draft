@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.8 2008/02/03 17:48:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.9 2008/08/19 21:19:26 dertobi123 Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
@@ -12,7 +12,7 @@ DESCRIPTION="Metadot is a CMS with file, page and link management, and collabora
 HOMEPAGE="http://www.metadot.com"
 SRC_URI="http://download.metadot.com/${MY_P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="ppc ~x86"
 
 DEPEND=""
 RDEPEND="
