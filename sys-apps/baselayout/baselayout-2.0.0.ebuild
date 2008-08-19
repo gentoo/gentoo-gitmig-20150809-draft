@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.6 2008/08/19 06:12:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.7 2008/08/19 17:51:19 zmedico Exp $
 
 inherit multilib
 
@@ -69,6 +69,11 @@ pkg_preinst() {
 					# Move directories if the dest doesn't exist.
 					find "$srcdir" -type d -print0 | \
 					while read -d $'\0' src ; do
+
+						# If a parent directory of $src has already
+						# been merged then it will no longer exist.
+						[ -d "$src" ] || continue
+
 						dest=$destdir${src#${srcdir}}
 						if [ ! -d "$dest" ] ; then
 							if [ -e "$dest" ] ; then

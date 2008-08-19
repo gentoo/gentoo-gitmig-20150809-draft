@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.469 2008/08/19 06:12:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.470 2008/08/19 17:51:19 zmedico Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  19 Aug 2008; Zac Medico <zmedico@gentoo.org> baselayout-2.0.0.ebuild:
+  Avoid potential warning messages in the SYMLINK_LIB code which may be
+  triggered when find traverses a directory whose parent has already been
+  merged from lib to lib64.
 
   19 Aug 2008; Zac Medico <zmedico@gentoo.org> baselayout-2.0.0.ebuild:
   Make the SYMLINK_LIB code in pkg_preinst merge files from lib directories
