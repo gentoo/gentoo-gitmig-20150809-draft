@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/DFB++
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.8 2007/11/10 02:04:34 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.9 2008/08/19 17:07:05 vapier Exp $
+
+*DFB++-1.2.0 (19 Aug 2008)
+
+  19 Aug 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/DFB++-1.2.0-directfb-api.patch, +DFB++-1.2.0.ebuild:
+  Version bump #235041.
 
 *DFB++-1.0.0 (10 Nov 2007)
 
