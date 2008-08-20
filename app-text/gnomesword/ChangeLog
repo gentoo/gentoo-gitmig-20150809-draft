@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.29 2008/06/26 01:47:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.30 2008/08/20 01:49:38 beandog Exp $
+
+*gnomesword-2.3.6 (20 Aug 2008)
+*gnomesword-2.3.5 (20 Aug 2008)
+
+  20 Aug 2008; Steve Dibb <beandog@gentoo.org> +gnomesword-2.3.5.ebuild,
+  +gnomesword-2.3.6.ebuild:
+  Version bump, bug 232376
 
 *gnomesword-2.3.1-r2 (26 Jun 2008)
 
