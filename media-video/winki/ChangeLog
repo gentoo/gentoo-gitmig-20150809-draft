@@ -1,6 +1,9 @@
 # ChangeLog for media-video/winki
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.19 2007/12/18 12:38:12 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.20 2008/08/20 19:39:45 maekke Exp $
+
+  20 Aug 2008; Markus Meier <maekke@gentoo.org> winki-0.4.5.ebuild:
+  amd64/x86 stable, bug #235277
 
   18 Dec 2007; Alexis Ballier <aballier@gentoo.org> -winki-0.4.3.ebuild,
   -winki-0.4.4.ebuild:
