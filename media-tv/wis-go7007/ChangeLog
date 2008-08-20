@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/wis-go7007
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.5 2007/07/17 01:11:12 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.6 2008/08/20 04:57:01 beandog Exp $
+
+*wis-go7007-0.9.8-r3 (20 Aug 2008)
+
+  20 Aug 2008; Steve Dibb <beandog@gentoo.org>
+  +files/wis-go7007-updates.diff, +files/wis-go7007-2.6.21-typdefs.diff,
+  +files/wis-go7007-2.6.24-no_algo_control.diff,
+  +files/wis-go7007-2.6.26-nopage.diff, +wis-go7007-0.9.8-r3.ebuild:
+  Revision bump with new patches from bender647 to work with 2.6.26
 
 *wis-go7007-0.9.8-r2 (17 Jul 2007)
 
