@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.109 2008/08/18 15:52:49 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.110 2008/08/20 20:48:21 ricmm Exp $
+
+*nvidia-drivers-177.67 (20 Aug 2008)
+
+  20 Aug 2008; Ricardo Mendoza <ricmm@gentoo.org>
+  +nvidia-drivers-177.67.ebuild:
+  Version bump for masked beta per bug #235231. Release highlights at
+  http://www.nvnews.net/vbulletin/showthread.php?t=118085
 
   18 Aug 2008; Ricardo Mendoza <ricmm@gentoo.org> metadata.xml:
   Change maintainer
