@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.1 2008/08/03 07:54:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.2 2008/08/20 19:13:48 dberkholz Exp $
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -48,7 +48,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	use openmp && append-flags -fopenmp
+	use openmp && append-fflags -fopenmp
 	use openmp && append-ldflags -lgomp
 
 	# Someone already did the same in the openmp version, apparently
