@@ -2,5 +2,5 @@
 	weekly
 	compress
 	missingok
-	create 0644 dspam dspam
+	copytruncate
 }
