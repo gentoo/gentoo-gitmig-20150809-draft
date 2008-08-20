@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.51 2008/07/27 21:40:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.52 2008/08/20 19:08:28 spock Exp $
+
+  20 Aug 2008; Michał Januszewski <spock@gentoo.org> oprofile-0.9.4.ebuild:
+  Add a check for CONFIG_OPROFILE in the kernel's .config (bug #235285).
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> oprofile-0.9.3.ebuild,
   oprofile-0.9.4.ebuild:
