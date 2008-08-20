@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.4 2008/08/19 22:30:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.5 2008/08/20 21:57:08 maekke Exp $
 
-inherit eutils multilib perl-app toolchain-funcs
+inherit eutils multilib perl-app toolchain-funcs autotools
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.imagemagick.org/pub/${MY_PN}/${MY_P2}.tar.bz2"
 LICENSE="imagemagick"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 djvu doc fontconfig fpx graphviz gs hdri jpeg jpeg2k lcms nocxx
+IUSE="bzip2 djvu doc fontconfig fpx graphviz gs hdri jbig jpeg jpeg2k lcms nocxx
 	openexr openmp perl png q8 q32 svg tiff truetype X wmf xml zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
@@ -24,6 +24,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	fpx? ( media-libs/libfpx )
 	graphviz? ( >=media-gfx/graphviz-2.6 )
 	gs? ( virtual/ghostscript )
+	jbig? ( media-libs/jbigkit )
 	jpeg? ( >=media-libs/jpeg-6b )
 	jpeg2k? ( media-libs/jasper )
 	lcms? ( >=media-libs/lcms-1.06 )
@@ -73,6 +74,9 @@ src_unpack() {
 		's:DOCUMENTATION_PATH="${DATA_DIR}/doc/${DOCUMENTATION_RELATIVE_PATH}":DOCUMENTATION_PATH="/usr/share/doc/${PF}":g' \
 		"${S}"/configure || die
 
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-jbig.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -124,6 +128,7 @@ src_compile() {
 		$(use_with gs dps) \
 		$(use_with gs gslib) \
 		$(use_with graphviz gvc) \
+		$(use_with jbig) \
 		$(use_with jpeg jpeg) \
 		$(use_with jpeg2k jp2) \
 		$(use_with lcms) \
