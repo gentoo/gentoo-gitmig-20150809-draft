@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-scw
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-scw/ChangeLog,v 1.1 2008/08/20 05:26:31 neurogeek Exp $
+
+*python-scw-0.4.7 (20 Aug 2008)
+
+  20 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> +python-scw-0.4.7.ebuild:
+  Initial Commit. Bug #136102. Thanks to Ali Sabil and Georg Bluhm
+
