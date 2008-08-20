@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8897 2008/08/19 09:16:56 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8898 2008/08/20 15:04:08 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -289,10 +289,6 @@ games-simulation/cultivation
 # Michael Sterrett <mr_bones_@gentoo.org> (23 Jun 2008)
 # Now a part of gnome-games
 games-board/glchess
-
-# Jeroen Roovers <jer@gentoo.org> (23 Jun 2008)
-# Please read http://my.opera.com/desktopteam/blog before using these snapshots
-=www-client/opera-9.52*
 
 # Alin Năstac <mrness@gentoo.org> (20 Jun 2008)
 # Non-working version (#211327)
