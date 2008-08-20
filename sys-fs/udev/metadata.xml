@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>base-system</herd>
+<herd>no-herd</herd>
 <maintainer>
-  <email>gregkh@gentoo.org</email>
-  <name>Greg Kroah-Hartman</name>
-</maintainer>
-<maintainer>
-  <email>cardoe@gentoo.org</email>
-  <name>Doug Goldstein</name>
-</maintainer>
-<maintainer>
-  <email>zzam@gentoo.org</email>
-  <name>Matthias Schwarzott</name>
+  <email>udev-bugs@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
