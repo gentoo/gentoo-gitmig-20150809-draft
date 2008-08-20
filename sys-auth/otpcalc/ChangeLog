@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.1 2008/05/11 12:37:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.2 2008/08/20 22:50:59 ulm Exp $
+
+*otpcalc-0.97-r3 (20 Aug 2008)
+
+  20 Aug 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/otpcalc-0.97-skey-md5.patch, +otpcalc-0.97-r3.ebuild:
+  Change default S/Key hash to MD5 in order to agree with sys-auth/skey.
 
   11 May 2008; Ulrich Mueller <ulm@gentoo.org>
   +files/otpcalc-0.97-badindex.diff, +files/otpcalc-0.97-gtk2-gentoo.patch,
