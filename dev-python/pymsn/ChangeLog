@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pymsn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.6 2008/06/13 16:19:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.7 2008/08/20 20:33:43 tester Exp $
+
+*pymsn-0.3.3 (20 Aug 2008)
+
+  20 Aug 2008; Olivier Crête <tester@gentoo.org> -pymsn-0.3.1.ebuild,
+  +pymsn-0.3.3.ebuild:
+  Version bump
 
   13 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> -pymsn-0.3.0.ebuild:
   Remove old.
