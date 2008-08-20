@@ -7,4 +7,18 @@
   <name>Alin Nastac</name>
 </maintainer>
 <longdescription>A statistical-algorithmic hybrid anti-spam filter</longdescription>
+<use>
+	<flag name='daemon'>
+		Enable support for DSPAM to run in --daemon mode
+	</flag>
+	<flag name='large-domain'>
+		Builds for large domain rather than for domain scale
+	</flag>
+	<flag name='user-homedirs'>
+		uild with user homedir support
+	</flag>
+	<flag name='virtual-users'>
+		Build with virtual-users support
+	</flag>
+</use>
 </pkgmetadata>

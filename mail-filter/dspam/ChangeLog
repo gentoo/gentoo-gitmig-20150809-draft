@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.119 2008/08/20 06:05:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.120 2008/08/20 19:26:50 maekke Exp $
+
+  20 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml,
+  dspam-3.8.0-r13.ebuild:
+  amd64/x86 stable, bug #235261; add GLEP 56 USE flag desc from
+  use.local.desc
 
 *dspam-3.8.0-r13 (20 Aug 2008)
 
