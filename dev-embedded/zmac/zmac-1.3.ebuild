@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/zmac/zmac-1.3.ebuild,v 1.3 2008/01/11 21:20:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/zmac/zmac-1.3.ebuild,v 1.4 2008/08/20 19:02:22 maekke Exp $
 
 inherit toolchain-funcs versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tim-mann.org/trs80/${PN}${MY_PV}.zip"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
