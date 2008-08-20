@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.2412.ebuild,v 1.1 2008/04/16 02:33:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.2812.ebuild,v 1.1 2008/08/20 19:17:01 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -12,10 +12,10 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug suid"
+IUSE="debug hal suid"
 
-RDEPEND=""
-DEPEND=""
+RDEPEND="hal? ( sys-apps/hal )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -30,10 +30,16 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
+
 	prepalldocs
-	dodoc AUTHORS ChangeLog CREDITS NEWS
+	dodoc AUTHORS ChangeLog CREDITS
 
 	use suid && fperms u+s "/bin/${MY_PN}"
+
+	if use hal; then
+		insinto /etc/hal/fdi/policy/
+		doins "${FILESDIR}/10-ntfs3g.fdi"
+	fi
 }
 
 pkg_postinst() {
