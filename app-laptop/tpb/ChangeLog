@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tpb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.18 2007/07/22 09:43:31 omp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.19 2008/08/20 04:01:20 darkside Exp $
+
+  20 Aug 2008; Jeremy Olexa <darkside@gentoo.org> tpb-0.6.4.ebuild:
+  stable amd64, bug #233855
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> tpb-0.6.4.ebuild:
   Remove virtual/x11 from dependencies.
