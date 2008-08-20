@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.98.4.ebuild,v 1.2 2008/06/14 11:45:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.0.0.ebuild,v 1.1 2008/08/20 04:26:40 neurogeek Exp $
 
 NEED_PYTHON="1.5.2"
 
-inherit python distutils multilib
+inherit distutils
 
 DESCRIPTION="Extensible Python-based build utility"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.scons.org/"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="MIT"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
@@ -25,20 +25,17 @@ src_install () {
 }
 
 pkg_preinst() {
-	has_version "<${CATEGORY}/${PN}-0.96.92-r1"
-	clean_stale_junk=$?
+	# clean up stale junk left there by old faulty ebuilds
+	# see Bug 118022 and Bug 132448 and Bug 107013
+	einfo "Cleaning up stale orphaned py[co] files..."
+	einfo "Checking for /usr/lib/${P}/SCons"
+	[[ -d "${ROOT}/usr/$(get_libdir)/${P}/SCons" ]] \
+		    && rm -rf "${ROOT}/usr/$(get_libdir)/${P}/SCons"
+	einfo "Done."
 }
 
 pkg_postinst() {
 	python_mod_optimize /usr/$(get_libdir)/${P}
-	# clean up stale junk left there by old faulty ebuilds
-	# see Bug 118022 and Bug 132448
-	if [[ $clean_stale_junk = 0 ]] ; then
-		einfo "Cleaning up stale orphaned py[co] files..."
-		[[ -d "${ROOT}/usr/$(get_libdir)/scons/SCons" ]] \
-		    && rm -rf "${ROOT}/usr/$(get_libdir)/scons/SCons"
-		einfo "Done."
-	fi
 }
 
 pkg_postrm() {
