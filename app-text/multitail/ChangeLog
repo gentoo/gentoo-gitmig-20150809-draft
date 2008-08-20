@@ -1,11 +1,11 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.59 2008/08/19 17:06:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.60 2008/08/20 05:57:17 jer Exp $
 
-  19 Aug 2008; <jeroen@gentoo.org> multitail-5.2.1.ebuild:
+  19 Aug 2008; Jeroen Roovers <jer@gentoo.org> multitail-5.2.1.ebuild:
   Stable for SPARC (bug #235192).
 
-  19 Aug 2008; <jeroen@gentoo.org> multitail-5.2.1.ebuild:
+  19 Aug 2008; Jeroen Roovers <jer@gentoo.org> multitail-5.2.1.ebuild:
   Stable for HPPA (bug #235192).
 
 *multitail-5.2.2 (19 Aug 2008)
@@ -21,7 +21,7 @@
   04 May 2008; Peter Volkov <pva@gentoo.org> +multitail-5.2.1.ebuild:
   Version bump, bug #217614 thank justin for report.
 
-  03 Nov 2007; Raúl Porcel <armin76@gentoo.org> multitail-5.2.0.ebuild:
+  03 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> multitail-5.2.0.ebuild:
   ia64 stable wrt #197742
 
   02 Nov 2007; Lars Weiler <pylon@gentoo.org> multitail-5.2.0.ebuild:
@@ -33,7 +33,7 @@
   01 Nov 2007; Ferris McCormick <fmccor@gentoo.org> multitail-5.2.0.ebuild:
   Sparc stable --- Bug #197742 --- seems to work as it should.
 
-  01 Nov 2007; Dawid Węgliński <cla@gentoo.org> multitail-5.2.0.ebuild:
+  01 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> multitail-5.2.0.ebuild:
   Stable on x86 (bug #197742)
 
 *multitail-5.2.0 (12 Aug 2007)
@@ -43,7 +43,7 @@
   +multitail-5.2.0.ebuild:
   Version bump. Thank jakub and Tim Harder for report in bug #183092.
 
-  21 Apr 2007; Raúl Porcel <armin76@gentoo.org> multitail-4.2.0.ebuild:
+  21 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> multitail-4.2.0.ebuild:
   ia64 stable
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> multitail-4.2.0.ebuild:
@@ -55,10 +55,10 @@
   01 Mar 2007; Jason Wever <weeve@gentoo.org> multitail-4.2.0.ebuild:
   Stable on SPARC wrt bug #168280.
 
-  25 Feb 2007; Raúl Porcel <armin76@gentoo.org> multitail-4.2.0.ebuild:
+  25 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> multitail-4.2.0.ebuild:
   x86 stable wrt bug 168280
 
-  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  21 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   31 Oct 2006; Wolfram Schlich <wschlich@gentoo.org>
