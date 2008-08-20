@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.0.ebuild,v 1.1 2008/08/20 10:29:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.0.ebuild,v 1.2 2008/08/20 15:56:18 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
+DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -27,7 +28,7 @@ RDEPEND="
 		eds? ( gnome-extra/evolution-data-server ) 	)
 	>=dev-libs/glib-2.0
 	gstreamer? ( =media-libs/gstreamer-0.10*
-			 =media-libs/gst-plugins-good-0.10* )
+		=media-libs/gst-plugins-good-0.10* )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu )
 	gnutls? ( net-libs/gnutls )
