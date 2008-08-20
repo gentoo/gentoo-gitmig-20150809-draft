@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.22 2008/07/16 20:23:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.23 2008/08/20 19:17:57 spock Exp $
+
+  20 Aug 2008; Michał Januszewski <spock@gentoo.org> gimps-25.6.ebuild:
+  Make it possible for sys-libs/e2fsprogs-libs to satisfy the
+  sys-libs/com_err dependency.
 
 *gimps-25.6 (16 Jul 2008)
 
