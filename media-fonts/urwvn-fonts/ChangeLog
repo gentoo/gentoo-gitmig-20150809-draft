@@ -1,6 +1,6 @@
 # ChangeLog for media-fonts/urwvn-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.23 2008/08/20 05:55:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.24 2008/08/20 07:07:08 tove Exp $
 
   20 Aug 2008; Jeroen Roovers <jer@gentoo.org> urwvn-fonts-3.04.ebuild:
   Stable for HPPA (bug #234972).
@@ -15,25 +15,25 @@
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove pclouds from metadata.xml (#49680)
 
-  24 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
+  24 Feb 2008; Raúl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
   alpha stable
 
-  23 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
   Add ~alpha
 
-  12 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> urwvn-fonts-3.04.ebuild:
   x86 stable
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *urwvn-fonts-3.04 (04 Dec 2006)
 
-  04 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
+  04 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +urwvn-fonts-3.04.ebuild:
   Added 3.04
 
-  26 Nov 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   urwvn-fonts-3.02.ebuild:
   Add ~x86-fbsd keyword.
 
@@ -81,7 +81,7 @@
   19 Aug 2005; <pclouds@gentoo.org> urwvn-fonts-2.0.ebuild:
   Stable on x86
 
-  24 Apr 2005; Diego PettenÃ² <flameeyes@gentoo.org> urwvn-fonts-2.0.ebuild:
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> urwvn-fonts-2.0.ebuild:
   Marked ~amd64.
 
 *urwvn-fonts-2.0 (20 Nov 2004)
