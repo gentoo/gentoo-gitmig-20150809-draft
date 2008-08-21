@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.45 2008/07/24 21:41:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.46 2008/08/21 20:11:25 ford_prefect Exp $
+
+*brasero-0.8.1 (21 Aug 2008)
+
+  21 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml,
+  +brasero-0.8.1.ebuild:
+  Bump to 0.8.1. Brings in a whole bunch of bug fixes, some feature
+  updates, updated translations, and makes dependency on libgnome/libgnomeui
+  optional. Dropped the unused gdl USE flag.
 
   23 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

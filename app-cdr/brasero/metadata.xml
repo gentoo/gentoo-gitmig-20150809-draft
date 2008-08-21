@@ -6,6 +6,8 @@
 	<flag name='beagle'>Enable <pkg>app-misc/beagle</pkg> support for
 		searches</flag>
 	<flag name='gdl'>Enable gdl support for customisable GUI</flag>
+	<flag name='gnome'>Enable integration with the <pkg>gnome-base/gnome</pkg>
+		desktop (help, session management, etc.)</flag>
 	<flag name='libburn'>Enable <pkg>dev-libs/libburn</pkg> backend</flag>
 	<flag name='totem'>Enable support for <pkg>media-video/totem</pkg>
 		playlists</flag>
