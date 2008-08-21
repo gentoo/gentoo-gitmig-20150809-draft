@@ -1,12 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.3.ebuild,v 1.1 2008/06/23 15:16:00 bicatali Exp $
-
-NEED_PYTHON=2.3
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.98.3.ebuild,v 1.1 2008/08/21 16:34:58 bicatali Exp $
 
 inherit eutils distutils
 
-DOC_PV=0.91.2svn
+DOC_PV=${PV}
 
 DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.sourceforge.net/"
@@ -18,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON BSD stix bakoma"
 
-DEPEND="dev-python/numpy
+DEPEND=">=dev-python/numpy-1.1
 	>=media-libs/freetype-2
 	media-libs/libpng
 	dev-python/pytz
