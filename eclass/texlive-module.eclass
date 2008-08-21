@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.13 2008/07/15 10:33:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.14 2008/08/21 13:04:21 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -140,9 +140,9 @@ texlive-module_src_compile() {
 			AddHyphen)
 				ewarn "Sorry, $command not implemented yet.";;
 			BuildFormat)
-				elog "Format $parameter already built.";;
+				einfo "Format $parameter already built.";;
 			BuildLanguageDat)
-				elog "Language file $parameter already generated.";;
+				einfo "Language file $parameter already generated.";;
 			*)
 				die "No rule to proccess ${command}. Please file a bug."
 		esac
