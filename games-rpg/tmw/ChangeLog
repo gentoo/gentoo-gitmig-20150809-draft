@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.27 2008/04/27 04:47:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.28 2008/08/21 20:53:02 mr_bones_ Exp $
+
+*tmw-0.0.25 (21 Aug 2008)
+
+  21 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/tmw-0.0.24.1-desktop.patch, +files/tmw-0.0.25-desktop.patch,
+  -tmw-0.0.24.1.ebuild, +tmw-0.0.25.ebuild:
+  version bump
 
 *tmw-0.0.24.1 (27 Apr 2008)
 
