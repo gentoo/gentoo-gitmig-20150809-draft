@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.34 2008/08/07 08:52:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.35 2008/08/21 16:20:31 bicatali Exp $
+
+*mkl-10.0.4.023 (21 Aug 2008)
+
+  21 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -mkl-10.0.2.018-r1.ebuild, -mkl-10.0.3.020-r2.ebuild,
+  +mkl-10.0.4.023.ebuild:
+  Version bump. Removed mpi tests, buggy with GNU compilers.
 
   07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
