@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.12 2008/08/07 17:37:51 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.13 2008/08/21 19:03:37 lavajoe Exp $
+
+  21 Aug 2008; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-0.16-r1.ebuild,
+  btrfs-progs-9999.ebuild:
+  Only build/install btrfs-convert program if acl USE flag is set (bug
+  #235328)
 
 *btrfs-progs-0.16-r1 (07 Aug 2008)
 
