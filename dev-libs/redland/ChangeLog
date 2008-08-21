@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.31 2008/08/05 14:56:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.32 2008/08/21 19:36:04 bluebird Exp $
+
+  21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> redland-1.0.8.ebuild:
+  Add ~sparc keyword at user request, bug #234872
 
 *redland-1.0.8 (05 Aug 2008)
 
