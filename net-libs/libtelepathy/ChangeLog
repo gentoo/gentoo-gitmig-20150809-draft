@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.19 2008/03/08 15:20:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.20 2008/08/21 10:41:15 coldwind Exp $
+
+  21 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -libtelepathy-0.0.42.ebuild, -libtelepathy-0.0.53.ebuild,
+  -libtelepathy-0.0.54.ebuild, -libtelepathy-0.0.55.ebuild,
+  -libtelepathy-0.0.57.ebuild, -libtelepathy-0.0.58.ebuild,
+  -libtelepathy-0.2.0.ebuild, -libtelepathy-0.3.0.ebuild,
+  -libtelepathy-0.3.1.ebuild:
+  Remove old versions.
 
 *libtelepathy-0.3.3 (08 Mar 2008)
 
