@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.118 2008/08/20 19:14:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.119 2008/08/21 18:04:09 bluebird Exp $
+
+  21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> man-pages-3.05.ebuild:
+  Stable on sparc, bug #235246
 
   20 Aug 2008; Markus Meier <maekke@gentoo.org> man-pages-3.05.ebuild:
   amd64/x86 stable, bug #235246
