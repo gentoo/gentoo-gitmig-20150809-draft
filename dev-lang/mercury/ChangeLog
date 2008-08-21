@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.83 2008/05/09 07:28:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.84 2008/08/21 07:01:55 keri Exp $
+
+*mercury-0.13.1-r2 (21 Aug 2008)
+
+  21 Aug 2008; <keri@gentoo.org> +files/mercury-0.13.1-mmake-params.patch,
+  +files/mercury-0.13.1-no-reconf.patch,
+  files/mercury-0.13.1-tests-workspace.patch, +mercury-0.13.1-r2.ebuild:
+  Simplify bootstrap; mmc re-conf update; MCFLAGS fixups. Closes #201828 and
+  #206144.
 
   09 May 2008; keri <keri@gentoo.org> mercury-0.12.2-r3.ebuild,
   mercury-0.12.2-r4.ebuild, mercury-0.13.1.ebuild, mercury-0.13.1-r1.ebuild:
