@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.1.ebuild,v 1.1 2008/08/18 19:33:27 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.1.ebuild,v 1.2 2008/08/21 11:05:43 hkbst Exp $
 
 inherit eutils latex-package
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="backtrace cairo llvm opengl profile X"
+IUSE="backtrace cairo cgc llvm opengl profile X"
 
 RDEPEND="X? ( x11-libs/libICE
 			  x11-libs/libSM
@@ -66,7 +66,11 @@ src_compile() {
 		--enable-xft \
 		--enable-xrender
 
-	emake || die "emake failed"
+	if use cgc; then
+		emake both || die "emake both failed"
+	else
+		emake || die "emake failed"
+	fi
 }
 
 src_install() {
@@ -75,7 +79,7 @@ src_install() {
 	doins collects/slatex/slatex.sty
 
 	cd src
-	export MZSCHEME_DYNEXT_LINKER_FLAGS=$(raw-ldflags)
+#	export MZSCHEME_DYNEXT_LINKER_FLAGS=$(raw-ldflags)
 
 	if use cgc; then
 		emake DESTDIR="${D}" install-both || die "emake install-both failed"
