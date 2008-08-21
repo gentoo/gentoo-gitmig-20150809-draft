@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<use>
+	<flag name='scim'>Enable scim support</flag>
+	<flag name='uim'>Enable uim support</flag>
+</use>
 </pkgmetadata>

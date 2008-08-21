@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.64 2008/05/05 13:49:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.65 2008/08/21 22:30:50 cardoe Exp $
+
+  21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   05 May 2008; Brent Baude <ranger@gentoo.org> rxvt-2.7.10-r4.ebuild:
   Marking rxvt-2.7.10-r4 ppc for bug 217819

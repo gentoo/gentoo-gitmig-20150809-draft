@@ -11,4 +11,9 @@
 		4014 emulation and toolkit-style configurability. As a result, rxvt
 		uses much less swap space.
 	</longdescription>
+	<use>
+		<flag name='linuxkeys'>Define LINUX_KEYS (changes Home/End key)</flag>
+		<flag name='xgetdefault'>Enable resources via X instead of rxvt small
+			version</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.23 2008/02/06 21:56:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.24 2008/08/21 22:25:59 cardoe Exp $
+
+  21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   06 Feb 2008; Fabian Groffen <grobian@gentoo.org> hanterm-3.1.6-r2.ebuild:
   Dropped ppc-macos keyword, see you in prefix
