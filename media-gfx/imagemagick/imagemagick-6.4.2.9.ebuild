@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.5 2008/08/20 21:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.4.2.9.ebuild,v 1.6 2008/08/21 15:23:20 grobian Exp $
 
-inherit eutils multilib perl-app toolchain-funcs autotools
+inherit eutils multilib perl-app toolchain-funcs
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}
@@ -76,7 +76,6 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-jbig.patch
-	eautoreconf
 }
 
 src_compile() {
