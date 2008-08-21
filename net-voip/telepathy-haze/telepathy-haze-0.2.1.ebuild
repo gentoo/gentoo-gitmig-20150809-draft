@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.2.0.ebuild,v 1.2 2008/04/10 16:01:58 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.2.1.ebuild,v 1.1 2008/08/21 10:41:37 coldwind Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-im/pidgin
-	net-libs/telepathy-glib
+	>=net-libs/telepathy-glib-0.7.0
 	>=dev-libs/glib-2
 	dev-libs/dbus-glib"
 DEPEND="${RDEPEND}
