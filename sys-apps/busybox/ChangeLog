@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.194 2008/08/13 22:01:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.195 2008/08/21 16:29:46 solar Exp $
+
+*busybox-1.12.0 (21 Aug 2008)
+
+  21 Aug 2008; <solar@gentoo.org> +files/busybox-1.12.0-mdev-exec.patch,
+  +busybox-1.12.0.ebuild:
+  - version bump. Thanks Christoph Gysin bug #235363
 
   13 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Make repoman happy for metadata use conversion.
