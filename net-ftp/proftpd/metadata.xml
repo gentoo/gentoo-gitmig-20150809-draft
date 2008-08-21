@@ -9,4 +9,18 @@
 <longdescription>ProFTPD grew out of the desire to have a secure and 
 configurable FTP server, and out of a significant admiration of the Apache web 
 server.</longdescription>
+<use>
+	<flag name='authfile'>Enable support for the auth-file module</flag>
+	<flag name='ban'>Enable support for the mod_ban module</flag>
+	<flag name='case'>Enable support for the mod_case module</flag>
+	<flag name='deflate'>Enable support for the mod_deflate module</flag>
+	<flag name='ifsession'>Enable support for the ifsession module</flag>
+	<flag name='noauthunix'>Disable support for the auth-unix module</flag>
+	<flag name='opensslcrypt'>Enable support for OpenSSL crypto</flag>
+	<flag name='rewrite'>Enable support for the rewrite module</flag>
+	<flag name='shaper'>Enable support for the mod_shaper module</flag>
+	<flag name='sitemisc'>Enable support for the sitemisc module</flag>
+	<flag name='softquota'>Enable support for the quotatab module</flag>
+	<flag name='vroot'>Enable support for the virtual root module</flag>
+</use>
 </pkgmetadata>
