@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x11-ssh-askpass
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.26 2007/07/22 08:05:17 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.27 2008/08/21 13:34:22 cardoe Exp $
+
+  21 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  x11-ssh-askpass-1.2.4.1-r1.ebuild:
+  fix depends as per bug #221429
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   x11-ssh-askpass-1.2.4.1-r1.ebuild:
