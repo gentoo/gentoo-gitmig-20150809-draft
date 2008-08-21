@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/opcion
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.13 2008/01/15 03:19:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.14 2008/08/21 10:18:47 pva Exp $
+
+*opcion-1.1.1-r2 (21 Aug 2008)
+
+  21 Aug 2008; Peter Volkov <pva@gentoo.org> +opcion-1.1.1-r2.ebuild:
+  Added desktop menu entry.
 
   15 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> opcion-1.1.1-r1.ebuild:
   Add missing app-arch/unzip DEPEND for bug #205836.
