@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.323 2008/08/09 21:30:41 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.324 2008/08/21 14:07:39 cardoe Exp $
+
+*phpmyadmin-2.11.8.1 (21 Aug 2008)
+
+  21 Aug 2008; Doug Goldstein <cardoe@gentoo.org>
+  +phpmyadmin-2.11.8.1.ebuild:
+  new version. fixes issue with PHP warnings enabled. fixes bug #234767.
+  discussed commit with robbat2 and trapni
 
   09 Aug 2008; Christian Hoffmann <hoffie@gentoo.org>
   phpmyadmin-2.11.8.ebuild:
