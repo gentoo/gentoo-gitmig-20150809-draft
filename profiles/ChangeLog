@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1788 2008/08/20 19:01:47 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1789 2008/08/21 12:06:24 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  21 Aug 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Remove mask on libpng-1.2.39 as bug #234916 was fixed.
 
   20 Aug 2008; Dawid Węgliński <cla@gentoo.org> package.mask:
   Masking <app-text/wklej-0.1.1 because of API changes on www.wklej.org
