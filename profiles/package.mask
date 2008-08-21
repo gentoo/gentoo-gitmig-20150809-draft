@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8901 2008/08/21 12:06:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8902 2008/08/21 20:52:21 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (21 Aug 2008)
+# doesn't work with guichan-0.8
+games-arcade/diameter
 
 # Ricardo Mendoza <ricmm@gentoo.org> (20 Aug 2008)
 # Beta driver, unsupported by nVidia
@@ -526,10 +530,6 @@ dev-lisp/stumpwm-cvs
 # Ulrich Mueller <ulm@gentoo.org> (27 Apr 2008)
 # CVS snapshot, bug 219449.
 ~app-emacs/navi2ch-1.7.5_p20080325
-
-# Michael Sterrett <mr_bones_@gentoo.org> (27 Apr 2008)
-# masked until tmw works with the newer version.
->=dev-games/guichan-0.8
 
 # Mike Auty <ikelos@gentoo.org> (26 Apr 2008)
 # Masking all app-emulation/vmware-workstation-tools packages
