@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/matchbox-keyboard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/ChangeLog,v 1.6 2008/07/17 17:15:11 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/ChangeLog,v 1.7 2008/08/21 22:38:37 yvasilev Exp $
+
+  21 Aug 2008; Yuri Vasilevski <yvasilev@gentoo.org>
+  matchbox-keyboard-0.1.ebuild:
+  If build with USE=cairo, check that x11-libs/cairo is built with USE=X.
+  Bug #225149
 
   17 Jul 2008; Yuri Vasilevski <yvasilev@gentoo.org>
   matchbox-keyboard-0.1.ebuild:

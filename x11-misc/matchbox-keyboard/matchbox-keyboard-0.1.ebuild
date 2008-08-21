@@ -1,8 +1,8 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/matchbox-keyboard-0.1.ebuild,v 1.6 2008/07/17 17:15:11 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/matchbox-keyboard-0.1.ebuild,v 1.7 2008/08/21 22:38:37 yvasilev Exp $
 
-inherit versionator
+inherit versionator eutils
 
 DESCRIPTION="Matchbox-keyboard is an on screen 'virtual' or 'software' keyboard."
 HOMEPAGE="http://matchbox-project.org/"
@@ -16,6 +16,14 @@ IUSE="debug cairo"
 DEPEND="x11-libs/libfakekey
 	cairo? ( x11-libs/cairo )
 	!cairo? ( x11-libs/libXft )"
+
+pkg_setup() {
+	if use cairo && ! built_with_use x11-libs/cairo X ; then
+		eerror "In order to install ${PN} with cairo support you"
+		eerror "need to reinstall x11-libs/cairo with USE='X'."
+		die "x11-libs/cairo built without USE='X'"
+	fi
+}
 
 src_compile() {
 	econf	$(use_enable debug) \
