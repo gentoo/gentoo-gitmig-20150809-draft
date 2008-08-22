@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.56 2008/08/05 13:29:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.57 2008/08/22 19:47:42 bluebird Exp $
+
+  22 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
+  aqbanking-2.3.3.ebuild:
+  Stable on sparc, bug #233536
 
   05 Aug 2008; Torsten Veller <tove@gentoo.org> aqbanking-2.3.3.ebuild:
   Stable on x86 (#233536)
