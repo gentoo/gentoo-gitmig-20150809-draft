@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-clipman
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.38 2008/05/12 18:40:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.39 2008/08/22 17:54:21 nixnut Exp $
+
+  22 Aug 2008; nixnut <nixnut@gentoo.org> xfce4-clipman-0.8.1.ebuild:
+  Stable on ppc wrt bug 235407
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> xfce4-clipman-0.8.1.ebuild:
   Stable on ppc64
