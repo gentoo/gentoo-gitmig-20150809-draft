@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.67 2008/07/07 18:02:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.68 2008/08/22 17:13:42 yvasilev Exp $
+
+*dpkg-1.14.19-r1 (22 Aug 2008)
+*dpkg-1.14.16.6-r1 (22 Aug 2008)
+
+  22 Aug 2008; Yuri Vasilevski <yvasilev@gentoo.org> -dpkg-1.14.16.6.ebuild,
+  +dpkg-1.14.16.6-r1.ebuild, -dpkg-1.14.17.ebuild, -dpkg-1.14.19.ebuild,
+  +dpkg-1.14.19-r1.ebuild:
+  Moved dev-perl/TimeDate to RDEPEND as dpkg-gencontrol needs it, bug
+  #235423.
 
   07 Jul 2008; Raúl Porcel <armin76@gentoo.org> dpkg-1.14.19.ebuild:
   alpha/ia64/sparc/x86 stable
