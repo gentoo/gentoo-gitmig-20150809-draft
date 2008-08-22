@@ -3,4 +3,10 @@
 <pkgmetadata>
 	<herd>kernel-misc</herd>
 	<herd>crypto</herd>
+	<use>
+		<flag name='gpg'>Enable <pkg>app-crypt/gnupg</pkg> key module</flag>
+		<flag name='openssl'>Enable <pkg>dev-libs/openssl</pkg> key
+			module</flag>
+		<flag name='pkcs11'>Enable PKCS#11 (Smartcards) key module</flag>
+	</use>
 </pkgmetadata>
