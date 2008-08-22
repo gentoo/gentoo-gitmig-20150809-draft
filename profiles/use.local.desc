@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3777 2008/08/22 22:34:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3778 2008/08/22 23:21:59 cardoe Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "sort -t: -k1,1 -k2 | sort -s -t/ -k1,1")
@@ -93,6 +93,7 @@
 # net-news
 # net-nntp
 # net-print
+# net-voip
 # net-zope
 # perl-core
 # rox-base
@@ -121,6 +122,7 @@
 # sys-process
 # virtual
 # www-misc
+# www-servers
 # x11-apps
 # x11-base
 # x11-drivers
