@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.26 2008/08/21 10:46:43 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.27 2008/08/22 07:11:49 leio Exp $
+
+  22 Aug 2008; Mart Raudsepp <leio@gentoo.org> empathy-2.23.90.ebuild:
+  Ebuild cleanups - let gnome2.eclass take care of SRC_URI
 
 *empathy-2.23.90 (21 Aug 2008)
 
