@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.39 2008/08/21 16:24:22 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.40 2008/08/22 17:27:05 nixnut Exp $
+
+  22 Aug 2008; nixnut <nixnut@gentoo.org> gwhois-20080716.ebuild:
+  Stable on ppc wrt bug 235279
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   gwhois-20080716.ebuild:
