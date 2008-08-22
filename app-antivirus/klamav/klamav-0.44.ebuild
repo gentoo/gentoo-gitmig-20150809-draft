@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.43.ebuild,v 1.1 2008/05/17 19:57:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.44.ebuild,v 1.1 2008/08/22 18:40:00 tgurr Exp $
 
 ARTS_REQUIRED="never"
 
@@ -23,10 +23,11 @@ RDEPEND="${DEPEND}"
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/klamav-0.43-desktop-entry.diff"
-
 src_unpack(){
 	kde_src_unpack
+
+	# Fix .desktop entry.
+	epatch "${FILESDIR}/klamav-0.43-desktop-entry.diff"
 
 	# Assure a future version won't try to build this.
 	rm -rf "${WORKDIR}/${MY_P}/dazuko"* || die "We missed to eradicate some files"
