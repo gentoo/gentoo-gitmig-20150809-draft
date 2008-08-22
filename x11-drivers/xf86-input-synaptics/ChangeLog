@@ -1,0 +1,13 @@
+# ChangeLog for x11-drivers/xf86-input-synaptics
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.1 2008/08/22 17:09:35 chainsaw Exp $
+
+*xf86-input-synaptics-0.15.0 (22 Aug 2008)
+
+  22 Aug 2008; <chainsaw@gentoo.org> +files/11-x11-synaptics.fdi,
+  +files/rc.conf, +files/rc.init, +files/synaptics-fix-xinerama.patch,
+  +metadata.xml, +xf86-input-synaptics-0.15.0.ebuild:
+  Initial commit, ebuild patching and suggestions by Nirbheek Chauhan
+  <nirbheek.chauhan@gmail.com>, closes bug #234794 by Christian Loosli
+  <fuchs@fuchsnet.ch>.
+
