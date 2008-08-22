@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/libertine-ttf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.11 2008/08/21 17:13:52 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.12 2008/08/22 18:43:02 nixnut Exp $
+
+  22 Aug 2008; nixnut <nixnut@gentoo.org> libertine-ttf-2.8.14.ebuild:
+  Stable on ppc wrt bug 234979
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   libertine-ttf-2.8.14.ebuild:
