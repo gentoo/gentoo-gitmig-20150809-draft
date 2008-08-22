@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.53 2008/08/10 22:49:56 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.54 2008/08/22 20:53:25 aballier Exp $
+
+  22 Aug 2008; Alexis Ballier <aballier@gentoo.org> pambase-20080801.ebuild:
+  keyword ~sparc-fbsd
 
   10 Aug 2008; Ricardo Mendoza <ricmm@gentoo.org> pambase-20080801.ebuild:
   Add ~mips, bug #232691
