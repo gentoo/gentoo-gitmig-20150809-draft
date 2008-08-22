@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.30 2008/08/15 23:49:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.31 2008/08/22 15:49:24 matsuu Exp $
+
+*awesome-3.0_rc4 (22 Aug 2008)
+
+  22 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> +awesome-3.0_rc4.ebuild:
+  Version bumped. Removed xsession. Set imlib USE flag by default.
 
 *awesome-3.0_rc3 (15 Aug 2008)
 
