@@ -1,10 +1,10 @@
 # Copyright 2008-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.0.9.ebuild,v 1.1 2008/05/29 15:35:09 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.0.16.ebuild,v 1.1 2008/08/22 17:41:33 yvasilev Exp $
 
 inherit eutils
 
-DESCRIPTION="A collection of programs that can be used in a debian/rules file to automate common tasks related to building debian packages."
+DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
 HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://kitenet.net/~joey/code/debhelper.html"
 SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
@@ -22,11 +22,13 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${PN}
 
+PATCH_VER=7.0.9
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-conditional-nls.patch
+	epatch "${FILESDIR}"/${PN}-${PATCH_VER}-conditional-nls.patch
 }
 
 src_compile() {
