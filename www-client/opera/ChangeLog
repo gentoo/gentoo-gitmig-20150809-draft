@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.274 2008/08/20 15:01:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.275 2008/08/22 00:24:10 cla Exp $
+
+  22 Aug 2008; Dawid Węgliński <cla@gentoo.org> opera-9.52.ebuild:
+  Stable on amd64 - security bug #235298
 
   20 Aug 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.52_pre2065.ebuild,
   -opera-9.52_pre2068.ebuild, -opera-9.52_pre2069.ebuild,
