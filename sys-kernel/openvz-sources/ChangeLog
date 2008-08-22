@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.92 2008/07/24 07:56:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.93 2008/08/22 19:39:27 pva Exp $
+
+*openvz-sources-2.6.18.028.057.2 (22 Aug 2008)
+
+  22 Aug 2008; Peter Volkov <pva@gentoo.org>
+  +files/openvz-sources-2.6.18.028.057.2-another-fix-build-xfrm.h.patch,
+  +files/openvz-sources-2.6.18.028.057.2-fix-CIFS-build.patch,
+  +files/openvz-sources-2.6.18.028.057.2-fix-build-xfrm.h.patch,
+  +files/openvz-sources-2.6.18.028.057.2-missed-PATH_MAX-sumversion.c.patch,
+  +files/openvz-sources-2.6.18.028.057.2-prevent-gcc-smartness.patch,
+  +files/openvz-sources-2.6.18.028.057.2-qouta-compat-build.patch,
+  +files/openvz-sources-2.6.18.028.057.2-utimenstat.patch,
+  +openvz-sources-2.6.18.028.057.2.ebuild:
+  Version bump. Should fix bug #233280, thank Christopher Covington for
+  report, and Peter Alfredsen for reopening and Daniel Robbins for comments.
 
   23 Jul 2008; Peter Volkov <pva@gentoo.org>
   +files/openvz-sources-2.6.24.005.1-CONFIG_SYSVIPC-build-fix.patch,
