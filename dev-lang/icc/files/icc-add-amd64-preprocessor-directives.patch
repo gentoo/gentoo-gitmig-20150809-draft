@@ -1,0 +1,16 @@
+--- opt/intel/cce/10.1.017/include/stddef.h	2008-08-02 15:06:51.000000000 -0400
++++ opt/intel/cce/10.1.017/include/stddef.h	2008-08-02 15:07:06.000000000 -0400
+@@ -5,6 +5,13 @@
+ #define _STDDEF
+ */
+ 
++#ifndef __amd64
++#define __amd64 __x86_64
++#endif
++#ifndef __amd64__
++#define __amd64__ __x86_64__
++#endif
++
+ #ifdef __QNX__ /* Just take QNX one */
+ #include_next <stddef.h>
+ #else /* __QNX__ */

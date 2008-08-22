@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.013.ebuild,v 1.1 2008/03/13 21:25:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.017-r1.ebuild,v 1.1 2008/08/22 17:16:46 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
-PID=964
+PID=1136
 PB=cc
 PEXEC="icc icpc"
 DESCRIPTION="Intel C/C++ optimized compiler for Linux"
@@ -56,6 +56,7 @@ src_unpack() {
 		einfo "Extracting $(basename ${x})..."
 		rpm_unpack "${S}/${x}" || die "rpm_unpack ${x} failed"
 	done
+	epatch "${FILESDIR}/icc-add-amd64-preprocessor-directives.patch"
 
 	einfo "Fixing paths and tagging"
 	cd "${S}"/${INSTALL_DIR}/bin
@@ -101,6 +102,6 @@ pkg_postinst () {
 	elog "Read the website for more information on this license:"
 	elog "${HOMEPAGE}"
 	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
-	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
+	elog "\nTo use ${PN} issue first \n\tsource ${ROOT}/etc/profile"
 	elog "Debugger is installed with dev-lang/idb"
 }

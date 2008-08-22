@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.12 2007/12/24 19:35:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.13 2008/08/22 17:16:46 bicatali Exp $
 
 inherit rpm eutils
 
