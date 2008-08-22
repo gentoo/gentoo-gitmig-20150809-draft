@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.15 2008/08/22 11:31:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.16 2008/08/22 11:32:30 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -91,7 +91,7 @@ S="${WORKDIR}"
 # @FUNCTION: texlive-module_make_language_def_lines
 # @DESCRIPTION:
 # Only valid for TeXLive 2008.
-# Creates a language.${PN}.def entry to put in /etc/texmf/langauge.def.d
+# Creates a language.${PN}.def entry to put in /etc/texmf/language.def.d
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_def_lines() {
@@ -112,7 +112,7 @@ texlive-module_make_language_def_lines() {
 # @FUNCTION: texlive-module_make_language_dat_lines
 # @DESCRIPTION:
 # Only valid for TeXLive 2008.
-# Creates a language.${PN}.dat entry to put in /etc/texmf/langauge.dat.d
+# Creates a language.${PN}.dat entry to put in /etc/texmf/language.dat.d
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_dat_lines() {
