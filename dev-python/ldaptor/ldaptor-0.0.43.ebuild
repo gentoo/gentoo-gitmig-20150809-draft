@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.1 2008/08/22 00:01:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.2 2008/08/22 16:10:02 mr_bones_ Exp $
 
 inherit distutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://www.inoi.fi/open/trac/ldaptor"
 SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.orig.tar.gz
 	doc? ( mirror://gentoo/${PN}-0.0.42-dia-pictures.tar.gz )"
-
 
 LICENSE="LGPL-2.1"
 SLOT="0"
