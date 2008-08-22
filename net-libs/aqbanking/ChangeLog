@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.58 2008/08/22 22:55:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.59 2008/08/22 22:56:54 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> aqbanking-2.3.3.ebuild:
+  amd64 stable, bug #233536
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
