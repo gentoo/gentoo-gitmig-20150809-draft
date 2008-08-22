@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.369 2008/08/06 14:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.370 2008/08/22 09:06:12 aballier Exp $
+
+*vlc-0.8.6i-r1 (22 Aug 2008)
+
+  22 Aug 2008; Alexis Ballier <aballier@gentoo.org> +vlc-0.8.6i-r1.ebuild:
+  Import fixes from upstream for tta fixes, bug #235238
 
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.9.0_beta3.ebuild:
   enable galaktos visualisation plugin with opengl
