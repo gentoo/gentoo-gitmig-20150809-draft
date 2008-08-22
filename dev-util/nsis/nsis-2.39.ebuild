@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.39.ebuild,v 1.1 2008/08/22 00:38:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.39.ebuild,v 1.2 2008/08/22 03:33:53 vapier Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="bzip2 config-log prebuilt-system zlib"
+IUSE="bzip2 config-log doc prebuilt-system zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
 #	wxwindows? ( x11-libs/wxGTK )
@@ -42,6 +42,13 @@ pkg_setup() {
 		eerror "  crossdev ${i}"
 	done
 	die "mingw32 is needed"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# a dirty but effective way of killing generated docs
+	use doc || echo > Docs/src/SConscript
 }
 
 get_additional_options() {
@@ -78,6 +85,7 @@ src_install() {
 		insinto /usr/share/nsis/Plugins
 		doins "${WORKDIR}"/${P}/Plugins/System.dll || die
 	fi
+	use doc || rm -rf "${D}"/usr/share/doc/${PF}/{Docs,Examples}
 
 	fperms -R go-w,a-x,a+X /usr/share/${PN}/ /usr/share/doc/${PF}/ /etc/nsisconf.nsh
 
