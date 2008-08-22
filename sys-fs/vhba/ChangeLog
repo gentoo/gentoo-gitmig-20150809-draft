@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.6 2008/08/03 20:45:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.7 2008/08/22 22:07:29 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> vhba-1.0.0.ebuild:
+  amd64 stable, bug #232566
 
   03 Aug 2008; Marcelo Goes <vanquirius@gentoo.org> vhba-1.0.0.ebuild:
   Scatterlist patch should be for kernels >= 2.6.25, not just 2.6.25. Thanks
