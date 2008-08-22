@@ -1,17 +1,26 @@
 --- mercury-extras-0.13.1.orig/odbc/Mmakefile	2006-04-04 13:49:14.000000000 +1200
-+++ mercury-extras-0.13.1/odbc/Mmakefile	2008-08-22 19:27:49.000000000 +1200
++++ mercury-extras-0.13.1/odbc/Mmakefile	2008-08-22 19:26:52.000000000 +1200
+@@ -12,7 +12,7 @@
+ # The driver manager.
+ # Legal values for MODBC_DRIVER are MODBC_IODBC, MODBC_UNIX, and MODBC_MS.
+ # Feel free to add more (and handle them in odbc.m).
+-MODBC_DRIVER=MODBC_UNIX
++MODBC_DRIVER=MODBC_IODBC
+ 
+ # The database.
+ # Legal values for MODBC_DB are MODBC_MYSQL and MODBC_SQL_SERVER.
 @@ -36,22 +36,25 @@
  	MLLIBS=-lodbc32
  else 
  	#ODBC_LIB_DIR=$(IODBC_DIR)/lib
 -	#ODBC_INCL_DIR=$(IODBC_DIR)/include
-+	ODBC_CFLAGS=`odbc_config --cflags`
++	ODBC_CFLAGS=`iodbc-config --cflags`
  
  	# The following are for Debian.
  
  	# for unixODBC
 -	MLLIBS=-lodbc -lpthread -lltdl -ldl
-+	MLLIBS=`odbc_config --libs`
++	MLLIBS=`iodbc-config --libs`
  
  	# for iODBC
  	# MLLIBS=-liodbc l-pthread -ldl
