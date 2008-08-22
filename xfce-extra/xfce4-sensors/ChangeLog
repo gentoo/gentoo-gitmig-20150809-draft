@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.34 2008/08/22 18:09:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.35 2008/08/22 21:20:34 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org>
+  xfce4-sensors-0.10.99.3-r2.ebuild:
+  x86 stable, bug #235407
 
   22 Aug 2008; nixnut <nixnut@gentoo.org> xfce4-sensors-0.10.99.3-r2.ebuild:
   Stable on ppc wrt bug 235407
