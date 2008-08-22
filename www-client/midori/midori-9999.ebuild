@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.5 2008/08/10 15:00:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.6 2008/08/22 14:17:53 jokey Exp $
 
 inherit git eutils
 
 DESCRIPTION="A lightweight web browser"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-EGIT_REPO_URI="http://software.twotoasts.de/media/midori.git"
+EGIT_REPO_URI="git://git.xfce.org/kalikiana/midori"
 EGIT_PROJECT="midori"
 EGIT_BOOTSTRAP="NOCONFIGURE=1 ./autogen.sh"
 
