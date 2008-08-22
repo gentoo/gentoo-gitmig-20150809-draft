@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-digest-base
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.14 2007/05/11 05:32:20 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.15 2008/08/22 10:26:01 aballier Exp $
+
+  22 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  perl-digest-base-1.15.ebuild:
+  keyword ~x86-fbsd
 
   11 May 2007; Joshua Kinard <kumba@gentoo.org>
   perl-digest-base-1.15.ebuild:
