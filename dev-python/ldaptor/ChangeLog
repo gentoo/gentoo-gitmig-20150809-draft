@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.21 2008/08/19 13:05:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.22 2008/08/22 00:01:12 neurogeek Exp $
+
+*ldaptor-0.0.43 (21 Aug 2008)
+
+  21 Aug 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/ldaptor-0.0.43-usage-exception.patch,
+  +files/ldaptor-0.0.43-zope_interface.patch, +ldaptor-0.0.43.ebuild:
+  Version bump. Bug #167164
 
   19 Aug 2008; Ali Polatel <hawking@gentoo.org> ldaptor-0.0.42.ebuild:
   Use python_get_sitedir, quoting, keyword ~amd64, set PYTHONPATH=. for
