@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.38 2008/07/09 06:19:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.39 2008/08/22 21:38:44 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> linux-atm-2.5.0.ebuild:
+  amd64 stable, bug #225777
 
   09 Jul 2008; Alin Năstac <mrness@gentoo.org> linux-atm-2.5.0.ebuild:
   Set compiler using tc-getCC (#231050).
