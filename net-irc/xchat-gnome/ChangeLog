@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.34 2008/08/17 21:13:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.35 2008/08/22 18:12:05 ranger Exp $
+
+  22 Aug 2008; Brent Baude <ranger@gentoo.org> xchat-gnome-0.18.ebuild:
+  Marking xchat-gnome-0.18 ppc for bug 234615
 
   17 Aug 2008; Olivier Crête <tester@gentoo.org> xchat-gnome-0.18.ebuild:
   amd64 stable, bug #234615
