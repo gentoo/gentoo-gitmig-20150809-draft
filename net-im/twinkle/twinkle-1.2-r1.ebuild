@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.2-r1.ebuild,v 1.2 2008/07/27 22:07:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.2-r1.ebuild,v 1.3 2008/08/22 23:41:37 dragonheart Exp $
 
 EAPI=1
 ARTS_REQUIRED="never"
@@ -23,7 +23,7 @@ RDEPEND=">=net-libs/ccrtp-1.5.0
 	dev-libs/boost
 	speex? ( media-libs/speex )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	zrtp? ( net-libs/libzrtpcpp )
+	zrtp? ( >=net-libs/libzrtpcpp-1.3.0 )
 	media-libs/alsa-lib"
 
 DEPEND="${RDEPEND}
