@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-HMAC
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.25 2008/08/22 10:28:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.26 2008/08/22 21:28:24 aballier Exp $
+
+  22 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  Digest-HMAC-1.01-r1.ebuild:
+  keyword ~sparc-fbsd
 
   22 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   Digest-HMAC-1.01-r1.ebuild:
