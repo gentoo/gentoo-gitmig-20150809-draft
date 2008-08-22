@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.62 2008/08/20 19:00:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.63 2008/08/22 18:26:21 nixnut Exp $
+
+  22 Aug 2008; nixnut <nixnut@gentoo.org> multitail-5.2.1.ebuild:
+  Stable on ppc wrt bug 235192
 
   20 Aug 2008; Markus Meier <maekke@gentoo.org> multitail-5.2.1.ebuild:
   amd64/x86 stable, bug #235192
