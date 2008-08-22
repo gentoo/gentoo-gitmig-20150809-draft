@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iwl5000-ucode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.1 2008/08/21 12:41:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.2 2008/08/22 16:45:13 chainsaw Exp $
+
+  22 Aug 2008; <chainsaw@gentoo.org> iwl5000-ucode-5.4.0.11.ebuild:
+  As pointed out by cla, the description was not correct.
 
 *iwl5000-ucode-5.4.0.11 (21 Aug 2008)
 

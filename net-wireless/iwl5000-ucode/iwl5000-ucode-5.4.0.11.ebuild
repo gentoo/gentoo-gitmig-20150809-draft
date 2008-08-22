@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/iwl5000-ucode-5.4.0.11.ebuild,v 1.1 2008/08/21 12:41:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/iwl5000-ucode-5.4.0.11.ebuild,v 1.2 2008/08/22 16:45:13 chainsaw Exp $
 
 MY_PN="iwlwifi-5000-ucode"
 MY_PV="${PV/0/A}"
 
-DESCRIPTION="Intel (R) Wireless WiFi Link 4965AGN ucode"
+DESCRIPTION="Intel (R) Wireless WiFi Link 5100/5300 ucode"
 HOMEPAGE="http://intellinuxwireless.org/?p=iwlwifi"
 SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_PN}-${MY_PV}.tar.gz"
 
