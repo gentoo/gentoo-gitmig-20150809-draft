@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.145 2008/08/17 20:12:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.146 2008/08/22 21:24:13 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   17 Aug 2008; Luca Barbato <lu_zero@gentoo.org>
   +files/blender-2.46-select_charmap.patch, blender-2.46.ebuild,
