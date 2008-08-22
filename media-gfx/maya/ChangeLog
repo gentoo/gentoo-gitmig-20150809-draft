@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.27 2008/06/03 02:13:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.28 2008/08/22 22:20:15 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> maya-6.5.ebuild:
   remove reference to app-shells/csh which has been removed

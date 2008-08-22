@@ -6,4 +6,12 @@
   <email>eradicator@gentoo.org</email>
   <name>Jeremy Huddleston</name>
 </maintainer>
+<use>
+	<flag name='bundled-libs'>
+		Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
+	</flag>
+	<flag name='maya-shaderlibrary'>
+		Install the maya shader library
+	</flag>
+</use>
 </pkgmetadata>

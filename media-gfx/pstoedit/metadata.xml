@@ -3,4 +3,9 @@
 <pkgmetadata>
 <herd>tex</herd>
 <herd>printing</herd>
+<use>
+	<flag name='emf'>
+		enables <pkg>media-libs/libemf</pkg> support
+	</flag>
+</use>
 </pkgmetadata>

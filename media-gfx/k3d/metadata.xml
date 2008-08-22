@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
+<use>
+	<flag name='plib'>
+		build plib-based import/export library
+	</flag>
+</use>
 </pkgmetadata>

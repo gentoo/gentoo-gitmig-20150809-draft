@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.60 2008/05/17 16:00:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.61 2008/08/22 22:10:21 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   17 May 2008; Carsten Lohrke <carlo@gentoo.org> -gwenview-1.4.1.ebuild,
   gwenview-1.4.2.ebuild:

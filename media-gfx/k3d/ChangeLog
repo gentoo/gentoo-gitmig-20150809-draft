@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.36 2008/05/13 07:24:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.37 2008/08/22 22:17:33 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *k3d-0.6.7.0-r1 (13 May 2008)
 
