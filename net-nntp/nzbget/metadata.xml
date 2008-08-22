@@ -7,4 +7,7 @@
 		 <name>Sven Wegener</name>
 	</maintainer>
 	<longdescription>A command-line based binary newsgrabber supporting .nzb files.</longdescription>
+	<use>
+		<flag name='parcheck'>Enable support for checking PAR archives</flag>
+	</use>
 </pkgmetadata>
