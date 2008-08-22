@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.317 2008/08/01 19:19:33 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.318 2008/08/22 19:10:46 tgurr Exp $
+
+*cups-1.3.8-r1 (22 Aug 2008)
+
+  22 Aug 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/cups-1.3.8-str2892-1.3.patch, +cups-1.3.8-r1.ebuild:
+  Revbump adding upstream fix for using the webinterface via SSL with FF3,
+  upstream bug STR #2892, Gentoo bug #231430.
 
   01 Aug 2008; Timo Gurr <tgurr@gentoo.org> cups-1.3.8.ebuild:
   Update SRC_URI, fixing bug #232978.
