@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.15 2008/08/03 21:12:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.16 2008/08/22 22:11:22 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> cdemu-1.0.0.ebuild:
+  amd64 stable, bug #232566
 
 *cdemu-1.1.0 (03 Aug 2008)
 
