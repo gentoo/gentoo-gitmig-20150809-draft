@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.52 2008/08/22 10:10:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.53 2008/08/22 10:33:12 tove Exp $
+
+  22 Aug 2008; Torsten Veller <tove@gentoo.org> Authen-SASL-2.12.ebuild:
+  Drop ~sparc-fbsd because of missing dependency dev-perl/Digest-HMAC
 
   22 Aug 2008; Torsten Veller <tove@gentoo.org> Authen-SASL-2.12.ebuild:
   Add dev-perl/Digest-HMAC to DEPEND (#234195)
