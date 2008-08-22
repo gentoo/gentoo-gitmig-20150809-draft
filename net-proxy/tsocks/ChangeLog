@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.26 2008/07/21 17:31:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.27 2008/08/22 21:58:52 maekke Exp $
+
+  22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml,
+  tsocks-1.8_beta5-r3.ebuild:
+  amd64 stable, bug #231690; add GLEP 56 USE flag desc from use.local.desc
 
   21 Jul 2008; nixnut <nixnut@gentoo.org> tsocks-1.8_beta5-r3.ebuild:
   Stable on ppc wrt bug 231690
