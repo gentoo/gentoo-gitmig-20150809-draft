@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.6.ebuild,v 1.2 2008/07/13 17:39:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.6.ebuild,v 1.3 2008/08/22 18:06:19 bicatali Exp $
 
 EAPI="1"
 WX_GTK_VER="2.8"
 
-inherit wxwidgets flag-o-matic
+inherit eutils autotools wxwidgets flag-o-matic
 
 DESCRIPTION="General-purpose nonlinear curve fitting and data analysis"
 HOMEPAGE="http://www.unipress.waw.pl/fityk/"
@@ -27,6 +27,14 @@ DEPEND="${CDEPEND}"
 
 RDEPEND="${CDEPEND}
 	gnuplot? ( sci-visualization/gnuplot )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# avoid building xylib when 3rdparty is disabled
+	epatch "${FILESDIR}"/${P}-3rdparty.patch
+	eautoreconf
+}
 
 src_compile() {
 	# temporary, see above
