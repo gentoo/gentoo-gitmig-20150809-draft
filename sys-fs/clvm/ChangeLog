@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.23 2008/03/29 15:42:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.24 2008/08/22 20:16:42 cardoe Exp $
+
+  22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   29 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
   +files/cluster-locking-built-in.patch, files/clvmd.rc,
