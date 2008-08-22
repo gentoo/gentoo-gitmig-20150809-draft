@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/dvi2tty
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.8 2007/03/13 00:15:26 nattfodd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.9 2008/08/22 14:11:01 aballier Exp $
+
+  22 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/dvi2tty-cflags.patch, dvi2tty-5.3.1.ebuild:
+  respect cflags and ldflags, fix quoting, tc-export CC, install the README
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
