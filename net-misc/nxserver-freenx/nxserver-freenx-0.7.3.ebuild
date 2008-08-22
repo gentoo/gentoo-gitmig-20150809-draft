@@ -1,16 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.0-r1.ebuild,v 1.5 2008/05/02 16:54:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3.ebuild,v 1.1 2008/08/22 13:04:53 voyageur Exp $
 
 inherit multilib eutils
 
-MY_PN="freenx"
+MY_PN="freenx-server"
 DESCRIPTION="Free Software Implementation of the NX Server"
 HOMEPAGE="http://freenx.berlios.de/"
-SRC_URI="mirror://berlios/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="mirror://berlios/freenx/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 IUSE="arts cups esd nxclient"
 DEPEND="virtual/ssh
@@ -32,7 +32,8 @@ RDEPEND="${DEPEND}
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
 	x11-apps/xauth
-	x11-apps/xrdb"
+	x11-apps/xrdb
+	x11-apps/sessreg"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
@@ -46,15 +47,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	mv node.conf.sample node.conf || die
-
-	epatch "${FILESDIR}"/${PN}-0.6.0-nxloadconfig.patch
-	epatch "${FILESDIR}"/${P}-kdecups.patch
-	epatch "${FILESDIR}"/${P}-xfsfonts.patch
-	epatch "${FILESDIR}"/${P}-nx3support.patch
-
-	# Fix DISPLAY for XCB-enabled systems
-	sed -i "s/unix:/:/g" nxnode || die
+	epatch "${FILESDIR}"/${P}-nxloadconfig.patch
+	epatch "${FILESDIR}"/${PN}-0.7.2-cups.patch
 
 	sed -i "/PATH_LIB=/s/lib/$(get_libdir)/g" nxloadconfig || die
 	sed -i "/REAL_PATH_BIN=/s/lib/$(get_libdir)/g" nxloadconfig || die
@@ -63,37 +57,31 @@ src_unpack() {
 	if use arts ; then
 		einfo "Enabling arts support."
 		sed -i '/ENABLE_ARTSD_PRELOAD=/s/"0"/"1"/' nxloadconfig || die
-		sed -i '/ENABLE_ARTSD_PRELOAD=/s/"0"/"1"/' node.conf || die
+		sed -i '/ENABLE_ARTSD_PRELOAD=/s/"0"/"1"/' node.conf.sample || die
 	fi
 	if use esd ; then
 		einfo "Enabling esd support."
 		sed -i '/ENABLE_ESD_PRELOAD=/s/"0"/"1"/' nxloadconfig || die
-		sed -i '/ENABLE_ESD_PRELOAD=/s/"0"/"1"/' node.conf || die
+		sed -i '/ENABLE_ESD_PRELOAD=/s/"0"/"1"/' node.conf.sample || die
 	fi
 	if use cups ; then
 		einfo "Enabling cups support."
 		sed -i '/ENABLE_KDE_CUPS=/s/"0"/"1"/' nxloadconfig || die
-		sed -i '/ENABLE_KDE_CUPS=/s/"0"/"1"/' node.conf || die
+		sed -i '/ENABLE_KDE_CUPS=/s/"0"/"1"/' node.conf.sample || die
 	fi
 }
 
-src_compile() {
-	einfo "Nothing to compile"
-}
-
 src_install() {
-	NX_ETC_DIR=/etc/nxserver
-	NX_SESS_DIR=/var/lib/nxserver/db
+	export NX_ETC_DIR=/etc/nxserver
+	export NX_SESS_DIR=/var/lib/nxserver/db
 
-	dobin nxserver
-	dobin nxnode
-	dobin nxnode-login
-	dobin nxkeygen
-	dobin nxloadconfig
-	dobin nxsetup
-	dobin nxcups-gethost
-	use nxclient || dobin nxprint
-	use nxclient || dobin nxclient
+	emake DESTDIR="${D}" install || die "install failed"
+
+	# This should be renamed to remove the blocker on net-misc/nxclient
+	use nxclient && rm "${D}"/usr/bin/nxprint
+
+	mv "${D}"/etc/nxserver/node.conf.sample "${D}"/etc/nxserver/node.conf ||
+		die "cannot find default configuration file"
 
 	dodir ${NX_ETC_DIR}
 	for x in passwords passwords.orig ; do
@@ -101,20 +89,30 @@ src_install() {
 		chmod 600 "${D}"${NX_ETC_DIR}/$x
 	done
 
-	insinto ${NX_ETC_DIR}
-	doins node.conf
-
 	dodir ${NX_HOME_DIR}
 
 	for x in closed running failed ; do
 		keepdir ${NX_SESS_DIR}/$x
 		fperms 0700 ${NX_SESS_DIR}/$x
 	done
+
+	newinitd "${FILESDIR}"/nxserver.init nxserver
 }
 
 pkg_postinst () {
-	usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
-	usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
+	# Other NX servers ebuilds may have already created the nx account
+	# However they use different login shell/home directory paths
+	if [[ ${ROOT} == "/" ]]; then
+		usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
+		usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
+		usermod -G utmp nx || die "Unable to add nx user to utmp group!!"
+	else
+		elog "If you had another NX server installed before, please make sure"
+		elog "the nx user account is correctly set to:"
+		elog " * login shell: /usr/bin/nxserver"
+		elog " * home directory: ${NX_HOME_DIR}"
+		elog " * supplementary groups: utmp"
+	fi
 
 	elog "To complete the installation, run:"
 	elog " nxsetup --install --setup-nomachine-key --clean --purge"

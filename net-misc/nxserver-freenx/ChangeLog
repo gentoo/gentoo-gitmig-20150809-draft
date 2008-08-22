@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.51 2008/06/05 15:26:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.52 2008/08/22 13:04:53 voyageur Exp $
+
+*nxserver-freenx-0.7.3 (22 Aug 2008)
+
+  22 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxserver-freenx-0.6.0-nxloadconfig.patch,
+  -files/nxserver-freenx-0.7.0-kdecups.patch,
+  -files/nxserver-freenx-0.7.0-nx3support.patch,
+  -files/nxserver-freenx-0.7.0-xfsfonts.patch,
+  +files/nxserver-freenx-0.7.3-nxloadconfig.patch,
+  -nxserver-freenx-0.7.0-r1.ebuild, +nxserver-freenx-0.7.3.ebuild:
+  Version bump, remove old 0.7.0
 
   05 Jun 2008; Peter Volkov <pva@gentoo.org>
   nxserver-freenx-0.7.2-r2.ebuild:
