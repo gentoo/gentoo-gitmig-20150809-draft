@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1790 2008/08/22 08:13:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1791 2008/08/22 13:13:26 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  22 Aug 2008; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  Mask beta ebuild for OpenOffice.org 3.0
 
   22 Aug 2008; Mart Raudsepp <leio@gentoo.org> +arch/sh/package.mask,
   +default-linux/sh/package.mask:
