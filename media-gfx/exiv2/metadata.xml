@@ -10,4 +10,9 @@
 		Exiv2 is a C++ library and a command line utility to read and
 		write EXIF and IPTC image metadata.
 	</longdescription>
+	<use>
+		<flag name='xmp'>
+			Adds support for Adobe XMP
+		</flag>
+	</use>
 </pkgmetadata>
