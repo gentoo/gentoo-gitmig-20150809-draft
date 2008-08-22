@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>bsd</herd>
+<use>
+	<flag name='ipfilter'>Enable ipfilter firewall support</flag>
+	<flag name='vinum'>Enable vinum support (TODO improve description)</flag>
+</use>
 </pkgmetadata>
