@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/echinus
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.1 2008/08/22 23:20:32 yngwin Exp $
+
+*echinus-0.3.1 (22 Aug 2008)
+
+  22 Aug 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/echinus-0.3.1-modkey.patch, +files/echinus.desktop, +metadata.xml,
+  +echinus-0.3.1.ebuild:
+  Initial commit. Ebuild by Nico Wohlgemuth.
+
