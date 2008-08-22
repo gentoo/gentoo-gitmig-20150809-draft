@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.186 2008/08/05 16:08:42 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.187 2008/08/22 22:27:37 cardoe Exp $
+
+  22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *nginx-0.7.8 (05 Aug 2008)
 

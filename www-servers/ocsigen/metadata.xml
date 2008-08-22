@@ -18,4 +18,8 @@
 		strong type system which helps you to produce valid xhtml. The server handles
 		sessions, URLs, and page parameters automatically.
 		</longdescription>
+		<use>
+			<flag name='ocamlduce'>Enables ocamlduce XML typechecking for
+				generated web pages</flag>
+		</use>
 </pkgmetadata>
