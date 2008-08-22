@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.6 2008/04/11 15:05:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.7 2008/08/22 07:44:26 leio Exp $
+
+  22 Aug 2008; Mart Raudsepp <leio@gentoo.org> +package.mask:
+  Mask GNOME-2.22 here in preparation of removing the global one
 
   11 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> use.mask:
   Sync use.mask with default-linux.
