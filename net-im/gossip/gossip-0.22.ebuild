@@ -1,19 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.10 2008/01/12 17:50:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.11 2008/08/23 09:43:48 eva Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Lightweight Jabber client for GNOME"
-HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
+HOMEPAGE="http://developer.imendio.com/projects/gossip"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="spell dbus libnotify"
 
-#make check breaks in help
-RESTRICT=test
+# make check breaks in help
+RESTRICT="test"
 
 RDEPEND="x11-libs/libXScrnSaver
 	>=dev-libs/glib-2.12.1
@@ -36,9 +36,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
-G2CONF="${G2CONF} \
-	$(use_enable dbus) \
-	$(use_enable libnotify) \
-	$(use_enable spell aspell)"
-
 DOCS="AUTHORS README COPYING ChangeLog INSTALL NEWS README CONTRIBUTORS TODO"
+
+pkg_config() {
+	G2CONF="${G2CONF}
+		$(use_enable dbus)
+		$(use_enable libnotify)
+		$(use_enable spell aspell)"
+}
