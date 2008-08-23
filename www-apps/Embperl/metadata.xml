@@ -6,5 +6,9 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<use>
+		<flag name='modperl'>Enable <pkg>www-apache/mod_perl</pkg>
+			support</flag>
+		<flag name='xalan'>Enable <pkg>dev-java/xalan</pkg> support</flag>
+	</use>
 </pkgmetadata>

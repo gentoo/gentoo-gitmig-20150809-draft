@@ -5,4 +5,7 @@
 	<maintainer>
 		<email>rl03@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name='lighttpd'>Add <pkg>www-servers/lighttpd</pkg> support</flag>
+	</use>
 </pkgmetadata>

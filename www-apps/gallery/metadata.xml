@@ -2,4 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>web-apps</herd>
+	<use>
+		<flag name='netpbm'>Add <pkg>media-libs/netpbm</pkg> support</flag>
+		<flag name='unzip'>Add <pkg>app-arch/unzip</pkg> support for the archive
+			upload module</flag>
+		<flag name='zip'>Add <pkg>app-arch/zip</pkg> for the zip download
+			module</flag>
+	</use>
 </pkgmetadata>

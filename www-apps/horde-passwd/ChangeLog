@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.16 2008/08/07 18:36:58 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.17 2008/08/23 04:50:06 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   07 Aug 2008; wrobel@gentoo.org metadata.xml:
   Updated maintainer.

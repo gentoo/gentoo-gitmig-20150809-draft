@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-  <email>web-apps@gentoo.org</email>
+	<email>web-apps@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='freetext'>Adds support for freetext search using swish-e</flag>
+</use>
 </pkgmetadata>
