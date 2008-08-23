@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-mail</herd>
+  <herd>net-mail</herd>
+  <use>
+    <flag name="abook">Enables app-misc/abook support</flag>
+    <flag name="finger">Enables finger support</flag>
+  </use>
 </pkgmetadata>
