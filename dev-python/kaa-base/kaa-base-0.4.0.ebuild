@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.4.0.ebuild,v 1.4 2008/08/16 15:38:17 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.4.0.ebuild,v 1.5 2008/08/23 11:49:55 rbu Exp $
 
 inherit python eutils distutils
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="avahi ssl sqlite tls lirc"
 
-RDEPEND="dev-libs/libxml2
+DEPEND="dev-libs/libxml2
+	sqlite? ( dev-python/dbus-python >=dev-python/pysqlite-2.2 )
+	avahi? ( net-dns/avahi )"
+RDEPEND="${DEPEND}
 	dev-python/pynotifier
-	avahi? ( net-dns/avahi )
 	lirc? ( dev-python/pylirc )
-	sqlite? ( >=dev-libs/glib-2.4.0 >=dev-python/pysqlite-2.2 )
 	tls? ( dev-python/tlslite )"
 
 PYTHON_MODNAME="kaa"
@@ -34,7 +35,7 @@ pkg_setup() {
 		eerror "dev-libs/libxml2 must be built with the 'python' USE flag"
 		die "Recompile dev-libs/libxml2 with the 'python' USE flag enabled"
 	fi
-	if ! built_with_use net-dns/avahi python; then
+	if use avahi && ! built_with_use net-dns/avahi python; then
 		eerror "net-dns/avahi must be built with the 'python' USE flag"
 		die "Recompile net-dns/avahi with the 'python' USE flag enabled"
 	fi
