@@ -13,4 +13,8 @@
 		Zentraler Dienst um ueber einen Browser den VDR zu programmiern
 		und zu steuern.
 	</longdescription>
+	<use>
+		<flag name='themes'>Enable more themes via
+			<pkg>x11-themes/xxv-skins</pkg></flag>
+	</use>
 </pkgmetadata>
