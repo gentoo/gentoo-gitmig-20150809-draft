@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.55 2008/08/23 07:06:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.56 2008/08/23 17:13:05 maekke Exp $
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org> bzr-1.5.ebuild:
+  amd64/x86 stable, bug #235504
 
 *bzr-1.6_rc5 (23 Aug 2008)
 
