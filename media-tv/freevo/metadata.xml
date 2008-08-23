@@ -21,7 +21,7 @@
 	</longdescription>
   <use>
     <flag name="ivtv">Enables ivtv support</flag>
-    <flag name="mixer">Enable support for adjusting volume via media-sound/aumix</flag>
+    <flag name="mixer">Enable support for adjusting volume via <pkg>media-sound/aumix</pkg></flag>
     <flag name="tv">Enable support for the tv guide plugin</flag>
   </use>
 </pkgmetadata>
