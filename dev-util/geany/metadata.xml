@@ -36,6 +36,6 @@
 		symboles.
 	</longdescription>
   <use>
-    <flag name="vte">Enable Terminal support (x11-libs/vte)</flag>
+    <flag name="vte">Enable Terminal support (<pkg>x11-libs/vte</pkg>)</flag>
   </use>
 </pkgmetadata>
