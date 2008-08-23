@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.4 2007/08/06 11:10:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.5 2008/08/23 13:11:04 spock Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
-HOMEPAGE="http://www.bootsplash.de/"
-THEME_URI="http://www.bootsplash.de/files/themes/"
+HOMEPAGE="http://dev.gentoo.org/~spock/repos/bootsplash/"
+THEME_URI="mirror://gentoo"
 
 SRC_URI="${THEME_URI}/Theme-73labAllstar.tar.bz2
 	${THEME_URI}/Theme-acKme.tar.bz2
@@ -193,7 +193,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# clean it up a little, it's supposed to be config files, not scripts
 	elog "Cleaning up the themes"
@@ -234,7 +234,7 @@ src_install() {
 		mypath="/etc/bootsplash"
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	if has_version "media-gfx/splashutils" ; then
 		for i in * ; do
@@ -242,18 +242,18 @@ src_install() {
 			[ -z "$(cd ${i} ; find -regex '.*config/bootsplash-[0-9]+x[0-9]+.cfg')" ] && continue
 			sed -i "s#/etc/bootsplash#${S}#g" ${i}/config/*.cfg
 			bootsplash2fbsplash --bootsplash-path "${S}" --fbsplash-path "${D}/etc/splash" "${i}"
-			sed -i "s#${D}#/#g" ${D}/etc/splash/${i}/*.cfg
+			sed -i "s#${D}#/#g" "${D}"/etc/splash/${i}/*.cfg
 		done
 
 		# Add images that might not have been copied by the conversion script
-		cp Cybercity/images/bootsplash-1024x768.jpg ${D}/etc/splash/Cybercity/images/verbose-1024x768.jpg
-		cp OpenSchool/images/bootsplash-800x600.jpg ${D}/etc/splash/OpenSchool/images/verbose-800x600.jpg
-		cp OpenSchool/images/bootsplash-1024x768.jpg ${D}/etc/splash/OpenSchool/images/verbose-1024x768.jpg
-		cp OpenSchool/images/bootsplash-1280x1024.jpg ${D}/etc/splash/OpenSchool/images/verbose-1280x1024.jpg
-		cp OpenSchool/images/bootsplash-1600x1200.jpg ${D}/etc/splash/OpenSchool/images/verbose-1600x1200.jpg
+		cp Cybercity/images/bootsplash-1024x768.jpg "${D}"/etc/splash/Cybercity/images/verbose-1024x768.jpg
+		cp OpenSchool/images/bootsplash-800x600.jpg "${D}"/etc/splash/OpenSchool/images/verbose-800x600.jpg
+		cp OpenSchool/images/bootsplash-1024x768.jpg "${D}"/etc/splash/OpenSchool/images/verbose-1024x768.jpg
+		cp OpenSchool/images/bootsplash-1280x1024.jpg "${D}"/etc/splash/OpenSchool/images/verbose-1280x1024.jpg
+		cp OpenSchool/images/bootsplash-1600x1200.jpg "${D}"/etc/splash/OpenSchool/images/verbose-1600x1200.jpg
 
 		# Fix symlinks
-		for i in ${D}/etc/splash/*/images/*.{png,jpg} ; do
+		for i in "${D}"/etc/splash/*/images/*.{png,jpg} ; do
 			if [ -L ${i} ]; then
 				tg=`readlink ${i} | sed -e "s#/${D}/etc/splash[^/]*/images/##"`
 				rm -f ${i}
