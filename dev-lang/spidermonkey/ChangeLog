@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.43 2008/04/10 20:51:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.44 2008/08/23 05:45:06 jer Exp $
+
+  23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add GLEP 56 USE flag descriptions.
 
   10 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   -files/spidermonkey-1.5-header.diff,
