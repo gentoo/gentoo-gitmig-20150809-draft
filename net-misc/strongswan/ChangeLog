@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.64 2008/08/06 22:59:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.65 2008/08/23 17:59:58 maekke Exp $
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org> strongswan-4.1.11.ebuild:
+  add ~amd64, bug #215669
 
   06 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Bugfix as I broke the manifest the other day, per bug #234046.

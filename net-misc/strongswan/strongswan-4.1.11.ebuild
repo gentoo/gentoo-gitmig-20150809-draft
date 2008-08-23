@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.11.ebuild,v 1.3 2008/04/29 14:26:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.11.ebuild,v 1.4 2008/08/23 17:59:58 maekke Exp $
 
 inherit eutils linux-info
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="cisco curl debug ldap nat smartcard static xml"
 
 COMMON_DEPEND="!net-misc/openswan
