@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-73.ebuild,v 1.1 2008/08/23 00:24:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-73.ebuild,v 1.2 2008/08/23 00:26:31 dang Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-mod 
+inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
 PATCHSET="kvm-patches-20080822"
@@ -151,7 +151,7 @@ src_compile() {
 #    fi
 
 	emake qemu || die "emake qemu failed"
-	
+
 	if use modules && ! use havekernel ; then
 		linux-mod_src_compile
 	fi
@@ -181,7 +181,7 @@ src_install() {
 	dodoc qemu/pc-bios/README
 	newdoc qemu/qemu-doc.html kvm-doc.html
 	newdoc qemu/qemu-tech.html kvm-tech.html
-	
+
 	if use modules && ! use havekernel ; then
 		linux-mod_src_install
 	fi
