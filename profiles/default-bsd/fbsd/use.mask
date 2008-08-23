@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.40 2008/03/03 20:22:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.41 2008/08/23 13:20:38 aballier Exp $
 
 # Beagle needs these patches #176668, 176670.
 beagle
@@ -25,9 +25,6 @@ nopie
 # Unmask freebsd-specific variables
 -elibc_FreeBSD
 -kernel_FreeBSD
-
-# LUA requires a complete cleanup before being usable
-lua
 
 # This does not build on FreeBSD, unless anybody wants to fix it, use opie
 skey

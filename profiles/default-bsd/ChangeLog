@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.33 2008/08/08 20:01:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.34 2008/08/23 13:20:37 aballier Exp $
+
+  23 Aug 2008; Alexis Ballier <aballier@gentoo.org> fbsd/use.mask:
+  unmask lua useflag on fbsd, it should be fine now
 
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask pbs for openmpi, linux only
