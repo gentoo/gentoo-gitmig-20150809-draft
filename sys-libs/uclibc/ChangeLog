@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.35 2008/06/08 05:42:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.36 2008/08/23 03:32:16 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *uclibc-0.9.28.3-r7 (08 Jun 2008)
 

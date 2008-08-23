@@ -6,4 +6,7 @@
 <email>dberkholz@gentoo.org</email>
 <name>Donnie Berkholz</name>
 </maintainer>
+<use>
+	<flag name='quotas'>Enables support for user quotas</flag>
+</use>
 </pkgmetadata>
