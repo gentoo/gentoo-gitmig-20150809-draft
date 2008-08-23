@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-SAX-Expat
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.1 2008/08/23 12:16:56 tove Exp $
+
+*XML-SAX-Expat-0.40 (23 Aug 2008)
+
+  23 Aug 2008; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +XML-SAX-Expat-0.40.ebuild:
+  Initial commit for (#168994,#230710). Thanks to Martin von Gagern
+
