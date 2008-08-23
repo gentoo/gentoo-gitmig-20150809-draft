@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.9.ebuild,v 1.7 2008/05/18 22:27:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.9.ebuild,v 1.8 2008/08/23 12:05:31 carlo Exp $
 
 KMNAME=kdepim
 KMNOMODULE=true
@@ -17,7 +17,7 @@ DEPEND=">=kde-base/libkdepim-${PV}:${SLOT}
 	>=kde-base/korganizer-${PV}:${SLOT}
 	>=kde-base/libkholidays-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
-	>=kde-base/libkdepim-3.5.6-r1" # Force this version temporarily, #136810.
+	>=kde-base/libkdepim-3.5.6-r1:${SLOT}" # Force this version temporarily, #136810.
 
 KMCOPYLIB="libkdepim libkdepim/
 	libkpinterfaces kontact/interfaces
