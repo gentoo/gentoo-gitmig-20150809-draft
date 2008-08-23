@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.15 2008/07/21 20:09:18 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.16 2008/08/23 12:14:12 carlo Exp $
+
+  23 Aug 2008; Carsten Lohrke <carlo@gentoo.org> kgtk-0.10.0.ebuild:
+  Adjust CMake dependency, bug #233300.
 
 *kgtk-0.10.0 (21 Jul 2008)
 

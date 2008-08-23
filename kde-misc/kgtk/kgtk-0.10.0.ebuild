@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.0.ebuild,v 1.1 2008/07/21 20:09:18 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.0.ebuild,v 1.2 2008/08/23 12:14:12 carlo Exp $
 
 ARTS_REQUIRED="never"
 EAPI="1"
@@ -20,8 +20,8 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	qt4? ( || ( x11-libs/qt-gui:4 x11-libs/qt:4 ) )"
 
 DEPEND="${RDEPEND}
-	dev-util/cmake"
-need-kde 3.4
+	>=dev-util/cmake-2.4.8"
+need-kde 3.5
 
 src_compile() {
 	mkdir -p "${S}/build" && cd "${S}/build"
