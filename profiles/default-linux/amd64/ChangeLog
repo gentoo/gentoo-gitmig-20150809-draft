@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.150 2008/08/16 16:49:52 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.151 2008/08/23 18:07:47 maekke Exp $
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org>
+  2006.1/no-multilib/package.mask, 2007.0/no-multilib/package.mask:
+  mask app-emulation/ies4linux for bug #218667
 
   16 Aug 2008; Robert Buchholz <rbu@gentoo.org>
   2006.1/no-multilib/package.use.mask, 2007.0/no-multilib/package.use.mask:
