@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libmcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.1 2008/04/23 14:01:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.2 2008/08/23 18:26:45 maekke Exp $
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org> libmcpp-2.6.4.ebuild:
+  add ~amd64, bug #235184
 
 *libmcpp-2.6.4 (23 Apr 2008)
 
