@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.82 2008/08/15 19:57:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.83 2008/08/23 03:03:20 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org> freeradius-2.0.5.ebuild:
   amd64/x86 stable, bug #234303

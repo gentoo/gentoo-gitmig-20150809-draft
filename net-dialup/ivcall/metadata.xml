@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>net-dialup</herd>
 <longdescription>Utility for making automated telephone calls via ISDN</longdescription>
+<use>
+	<flag name='softfax'>Enables fax support</flag>
+</use>
 </pkgmetadata>

@@ -13,4 +13,8 @@
 		messages. CAPI 2.0 drivers for Linux are available for a growing
 		number of ISDN devices.
 	</longdescription>
+	<use>
+		<flag name='fax'>Install capi-fax demo programs</flag>
+		<flag name='pppd'>Installs pppdcapiplugin modules</flag>
+	</use>
 </pkgmetadata>

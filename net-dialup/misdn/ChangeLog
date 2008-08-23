@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.28 2008/03/27 17:36:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.29 2008/08/23 03:09:44 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   27 Mar 2008; Stefan Schweizer <genstef@gentoo.org> misdn-1.1.7.ebuild,
   misdn-1.1.7.2.ebuild:

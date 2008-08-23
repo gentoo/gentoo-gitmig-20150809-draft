@@ -7,4 +7,11 @@
   <name>Alin Nastac</name>
 </maintainer>
 <longdescription>Highly configurable free RADIUS server.</longdescription>
+<use>
+	<flag name='edirectory'>Enables Novell eDirectory integration</flag>
+	<flag name='frascend'>Enables Ascend binary mode</flag>
+	<flag name='frnothreads'>Disables thread support</flag>
+	<flag name='frxp'>Enables experimental modules</flag>
+	<flag name='udpfromto'>Compile in UDPFROMTPO support</flag>
+</use>
 </pkgmetadata>

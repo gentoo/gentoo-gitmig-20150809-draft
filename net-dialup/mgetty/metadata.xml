@@ -4,4 +4,8 @@
 <herd>net-dialup</herd>
 <longdescription>Suite of programs that allows you to take full advantage of your voice/fax modem.
 mgetty is capable of handling data, fax and voice calls without interfering with outgoing calls.</longdescription>
+<use>
+	<flag name='fax'>Enables fax support</flag>
+	<flag name='fidonet'>Enables FidoNet support</flag>
+</use>
 </pkgmetadata>

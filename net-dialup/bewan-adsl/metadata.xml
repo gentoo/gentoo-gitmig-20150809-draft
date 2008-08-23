@@ -3,4 +3,10 @@
 <pkgmetadata>
   <herd>net-dialup</herd>
   <longdescription>Driver for BeWAN ADSL PCI&amp;USB st.</longdescription>
+  <use>
+	  <flag name='kt400'>Enable workaround for KT400 motherboards</flag>
+	  <flag name='pcitimer'>Use 2ms PCI hardware timer</flag>
+	  <flag name='slowpcibridge'>Enable workaround for low performance PCI
+		  bridges</flag>
+  </use>
 </pkgmetadata>
