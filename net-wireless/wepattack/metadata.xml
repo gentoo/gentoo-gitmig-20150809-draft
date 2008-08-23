@@ -8,4 +8,8 @@
 		words to find the right key. Only one packet is required to start an
 		attack.
 	</longdescription>
+	<use>
+		<flag name='john'>Build with <pkg>app-crypt/johntheripper</pkg>
+			support</flag>
+	</use>
 </pkgmetadata>
