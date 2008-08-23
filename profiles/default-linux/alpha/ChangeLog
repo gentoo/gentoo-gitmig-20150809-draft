@@ -1,6 +1,15 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.108 2008/08/19 18:18:16 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.109 2008/08/23 00:34:06 yoswink Exp $
+
+  23 Aug 2008; Jose Luis Rivero <yoswink@gentoo.org> -2006.1/deprecated,
+  -2006.1/desktop/make.defaults, -2006.1/desktop/parent,
+  -2006.1/desktop/virtuals, -2006.1/make.defaults, -2006.1/package.mask,
+  -2006.1/package.use.mask, -2006.1/packages, -2006.1/parent,
+  -2006.1/server/make.defaults, -2006.1/server/parent, -2006.1/use.mask:
+  Remove the deprecated 2006.1 profile. It started to be a very hard to
+  maintain and very soon would be useless due to the restrictions in glibc
+  version
 
   19 Aug 2008; Jose Luis Rivero <yoswink@gentoo.org> 2006.1/package.mask:
   package mask gcc-4.3 in 2006.1 profile since it needs >=glibc-2.6
