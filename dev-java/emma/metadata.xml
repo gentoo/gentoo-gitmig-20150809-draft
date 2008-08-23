@@ -12,5 +12,6 @@
 	</longdescription>
   <use>
     <flag name="launcher">Install /usr/bin/emma. Collides with <pkg>sci-biology/emboss</pkg>.</flag>
+    <flag name="launcher">Install /usr/bin/emma. Collides with sci-biology/emboss.</flag>
   </use>
 </pkgmetadata>
