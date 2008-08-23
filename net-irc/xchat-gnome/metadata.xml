@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>net-irc</herd>
 <herd>gnome</herd>
+<use>
+	<flag name='libsexy'>Enable <pkg>x11-libs/libsexy</pkg> support</flag>
+</use>
 </pkgmetadata>

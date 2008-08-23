@@ -3,7 +3,11 @@
 <pkgmetadata>
 <herd>net-irc</herd>
 <maintainer>
-  <email>chainsaw@gentoo.org</email>
-  <name>Tony Vroon</name>
+	<email>chainsaw@gentoo.org</email>
+	<name>Tony Vroon</name>
 </maintainer>
+<use>
+	<flag name='audacious'>Enables <pkg>media-sound/audacious</pkg>
+		integration</flag>
+</use>
 </pkgmetadata>

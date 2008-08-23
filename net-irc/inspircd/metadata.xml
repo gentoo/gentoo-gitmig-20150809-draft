@@ -11,4 +11,7 @@
 		<description>Formerly indirectly maintaining through hansmi@gentoo.org -
 looking for a new proxy maintainer</description>
     </maintainer>
+	<use>
+		<flag name='openssl'>Build <pkg>dev-libs/openssl</pkg> module</flag>
+	</use>
 </pkgmetadata>
