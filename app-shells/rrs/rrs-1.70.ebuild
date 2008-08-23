@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.70.ebuild,v 1.7 2007/02/17 23:14:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.70.ebuild,v 1.8 2008/08/23 18:30:46 maekke Exp $
 
 DESCRIPTION="Reverse Remote Shell"
 HOMEPAGE="http://www.cycom.se/dl/rrs"
@@ -8,7 +8,7 @@ SRC_URI="http://www.cycom.se/uploads/36/19/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
