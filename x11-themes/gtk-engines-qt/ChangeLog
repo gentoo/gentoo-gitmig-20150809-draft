@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.39 2008/08/14 06:53:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.40 2008/08/23 19:41:56 wormo Exp $
+
+  23 Aug 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  gtk-engines-qt-0.8-r3.ebuild:
+  Address compile problems introduced by cmake reconfiguration (which was
+  added for gnome USE-flag implementation): out-of-tree cmake build seems 
+  to be broken, so force in-tree cmake build (bug #234725).
 
 *gtk-engines-qt-0.8-r3 (14 Aug 2008)
 

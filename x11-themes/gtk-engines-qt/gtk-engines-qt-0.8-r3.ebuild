@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8-r3.ebuild,v 1.1 2008/08/14 06:53:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8-r3.ebuild,v 1.2 2008/08/23 19:41:56 wormo Exp $
 
 ARTS_REQUIRED="never"
 
@@ -41,18 +41,18 @@ src_compile() {
 	# enable or disable bonobo support based on gnome useflag (bug #206568)
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_enable gnome BONOBO)"
+	CMAKE_IN_SOURCE_BUILD=1
 	cmake-utils_src_compile
 }
 
 src_install() {
 	kde_src_install
-	mv "${D}"/usr/local/share/applications "${D}"/usr/share/ || die
 
 	# only install requested translations (bug #205940)
 	strip-linguas ${LANGS}
+	mv "${D}"/usr/share/locale "${T}"/all-locales || die
 	dodir /usr/share/locale
 	for lang in ${LINGUAS}; do
-		mv "${D}"/usr/local/share/locale/$lang "${D}"/usr/share/locale || die
+		mv "${T}"/all-locales/$lang "${D}"/usr/share/locale || die
 	done
-	rm -rf "${D}"/usr/local/share
 }
