@@ -16,4 +16,7 @@ You want to allow some people to connect through your firewall to a range of ser
 open one port for each server. What you can do is open the sshproxy port and setup the password database to proxy each
 external user to it's own desktop, or create groups of users allowed to connect to your DMZ servers.
 </longdescription>
+<use>
+	<flag name='client-only'>Install only the client wrappers</flag>
+</use>
 </pkgmetadata>
