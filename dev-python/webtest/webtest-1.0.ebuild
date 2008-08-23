@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.0.ebuild,v 1.2 2008/07/02 13:19:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.0.ebuild,v 1.3 2008/08/23 15:58:32 pythonhead Exp $
 
 inherit distutils
 
@@ -13,8 +13,18 @@ SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="MIT"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE=""
+IUSE="doc examples"
 S="${WORKDIR}/${MY_P}"
 DEPEND="dev-python/setuptools"
 RDEPEND="|| ( >=dev-python/wsgiref-0.1.2 >=dev-lang/python-2.5.2-r4 )
 	>=dev-python/webob-0.9.2"
+
+src_install() {
+	distutils_src_install
+
+	use doc && dodoc docs/index.txt
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r docs/chipy-presentation
+	fi
+}
