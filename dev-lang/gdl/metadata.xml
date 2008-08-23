@@ -11,4 +11,8 @@ A free IDL (Interactive Data Language) compatible incremental compiler
 (ie. runs IDL programs). IDL is a registered trademark of ITT Visual 
 Information Solutions.
 </longdescription>
+<use>
+	<flag name='hdf'>Adds support for the Hierarchical Data Format</flag>
+	<flag name='proj'>Adds proj library support (geographic projections)</flag>
+</use>
 </pkgmetadata>

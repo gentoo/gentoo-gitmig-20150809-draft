@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.9 2008/06/06 14:31:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.10 2008/08/23 05:18:43 jer Exp $
+
+  23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add GLEP 56 USE flag descriptions.
 
   06 Jun 2008; Markus Dittrich <markusle@gentoo.org> gdl-0.9_rc1.ebuild:
   Make gdl backward compatible to <plplot-5.9 (fixes bug #225027).

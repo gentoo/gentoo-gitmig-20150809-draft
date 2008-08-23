@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ml</herd>
+<use><flag name='binary'>install a binary version (need to do this once to bootstrap, until smlnj is supported)</flag></use>
 </pkgmetadata>

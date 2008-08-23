@@ -9,4 +9,7 @@
 			Bug-wranglers: please be sure to cc him on every bug report about it.
 		</description>
 	</maintainer>
+	<use>
+		<flag name='vim'>install a syntax file for vim</flag>
+	</use>
 </pkgmetadata>

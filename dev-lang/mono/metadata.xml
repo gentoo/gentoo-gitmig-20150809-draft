@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dotnet</herd>
+<use><flag name='moonlight'>add moonlight support</flag></use>
 </pkgmetadata>
