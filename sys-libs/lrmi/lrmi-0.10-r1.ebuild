@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/lrmi-0.10-r1.ebuild,v 1.1 2006/02/14 00:25:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/lrmi-0.10-r1.ebuild,v 1.2 2008/08/23 12:44:25 spock Exp $
+
+inherit eutils
 
 DESCRIPTION="library for calling real mode BIOS routines under Linux"
 HOMEPAGE="http://www.sourceforge.net/projects/lrmi/"
@@ -13,6 +15,12 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/lrmi-0.10-kernel-2.6.26.patch
+}
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
