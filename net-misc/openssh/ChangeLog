@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.313 2008/08/23 21:33:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.314 2008/08/23 22:14:16 robbat2 Exp $
+
+*openssh-5.1_p1-r1 (23 Aug 2008)
+
+  23 Aug 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openssh-5.1_p1-ldap-hpn-glue.patch, metadata.xml,
+  +openssh-5.1_p1-r1.ebuild:
+  Update the LDAP patches, also mailed to upstream.
 
   23 Aug 2008; Robin H. Johnson <robbat2@gentoo.org>
   +files/openssh-5.1_p1-x509-hpn-glue.patch, openssh-5.1_p1.ebuild:
