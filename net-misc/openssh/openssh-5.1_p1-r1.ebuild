@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.1_p1-r1.ebuild,v 1.1 2008/08/23 22:14:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.1_p1-r1.ebuild,v 1.2 2008/08/23 22:17:09 robbat2 Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -79,7 +79,7 @@ src_unpack() {
 	if ! use X509 ; then
 		if [[ -n ${LDAP_PATCH} ]] && use ldap ; then
 			# The patch for bug 210110 64-bit stuff is now included.
-			epatch "${DISTDIR}"/${LDAP_PATCH} 
+			epatch "${DISTDIR}"/${LDAP_PATCH}
 			epatch "${FILESDIR}"/${PN}-5.1_p1-ldap-hpn-glue.patch
 		fi
 		#epatch "${DISTDIR}"/openssh-5.0p1-gsskex-20080404.patch #115553 #216932
