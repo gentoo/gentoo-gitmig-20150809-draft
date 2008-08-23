@@ -6,5 +6,8 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<use>
+		<flag name='ithreads'>Enable Perl threads, has some compatibility problems</flag>
+		<flag name='perlsuid'>Enable Perl SUID install. Has some risks associated.</flag>
+	</use>
 </pkgmetadata>
