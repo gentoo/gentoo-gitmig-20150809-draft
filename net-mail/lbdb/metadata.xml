@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>net-mail</herd>
   <use>
-    <flag name="abook">Enables app-misc/abook support</flag>
+    <flag name="abook">Enables <pkg>app-misc/abook</pkg> support</flag>
     <flag name="finger">Enables finger support</flag>
   </use>
 </pkgmetadata>
