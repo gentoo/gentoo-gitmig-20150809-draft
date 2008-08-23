@@ -7,9 +7,6 @@
 #arch		profile_directory				status
 
 # Alpha Profiles
-alpha		default-linux/alpha/2006.1			stable
-alpha		default-linux/alpha/2006.1/desktop		stable
-#alpha		default-linux/alpha/2006.1/server		stable
 alpha		default-linux/alpha/2007.0			stable
 alpha		default-linux/alpha/2007.0/desktop		stable
 alpha		default-linux/alpha/2007.0/server		stable
