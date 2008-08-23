@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.3 2008/06/01 00:57:28 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.4 2008/08/23 18:11:20 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tatanka.com.br/${PN}/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=app-arch/cabextract-1.0 \
