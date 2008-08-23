@@ -5,4 +5,10 @@
 		<email>hollow@gentoo.org</email>
 		<name>Benedikt Böhm</name>
 	</maintainer>
+	<use>
+		<flag name='crm114'>Build CRM114 backend</flag>
+		<flag name='dspam'>Build <pkg>mail-filter/dspam</pkg> backend</flag>
+		<flag name='mailtrain'>Build mailtrain backend</flag>
+		<flag name='signature-log'>Build signature-log backend</flag>
+	</use>
 </pkgmetadata>

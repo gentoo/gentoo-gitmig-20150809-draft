@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.27 2008/08/15 19:52:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.28 2008/08/23 05:44:55 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org> clamassassin-1.2.4.ebuild:
   amd64/x86 stable, bug #185498

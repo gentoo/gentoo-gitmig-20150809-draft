@@ -6,4 +6,7 @@
 		<email>ferdy@gentoo.org</email>
 		<name>Fernando J. Pereda</name>
 	</maintainer>
+	<use>
+		<flag name='authlib'>Add courier-authlib support</flag>
+	</use>
 </pkgmetadata>
