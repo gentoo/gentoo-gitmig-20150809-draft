@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.100 2008/07/06 02:00:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.101 2008/08/23 01:57:23 battousai Exp $
+
+  23 Aug 2008; Bryan D. Stine <battousai@gentoo.org>
+  gradm-2.1.12.200805181037.ebuild:
+  Marked 2.1.12.200805181037 stable (with hardened-sources 2.6.25) on amd64
+  and x86 by proxy for Gordon Malm (gengor).
 
   06 Jul 2008; <solar@gentoo.org> gradm-2.1.11.200804142058.ebuild:
   - stable on amd64/x86
