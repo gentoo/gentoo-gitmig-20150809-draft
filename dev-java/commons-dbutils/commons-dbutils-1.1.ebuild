@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/commons-dbutils-1.1.ebuild,v 1.2 2008/02/20 20:17:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/commons-dbutils-1.1.ebuild,v 1.3 2008/08/23 18:25:04 maekke Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://commons.apache.org/dbutils/"
 SRC_URI="mirror://apache/commons/dbutils/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
