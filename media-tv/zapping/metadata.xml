@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>media-tv</herd>
-<maintainer>
+  <herd>media-tv</herd>
+  <maintainer>
     <email>maintainer-needed@gentoo.org</email>
-</maintainer>
+  </maintainer>
+  <use>
+    <flag name="vdr">Enable Real Time Encoding support (librte)</flag>
+    <flag name="zvbi">Enable VBI Decoding Library</flag>
+  </use>
 </pkgmetadata>

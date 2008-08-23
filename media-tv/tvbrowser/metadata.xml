@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>java</herd>
-<maintainer>
-  <email>renegart@gmx.de</email>
-  <name>Mirko Günther</name>
-  <description>Proxied maintainer</description>
-</maintainer>
-<maintainer>
-  <email>vdr@gentoo.org</email>
-  <name>Gentoo VDR Project</name>
-  <description>Proxy maintainer</description>
-</maintainer>
+  <herd>java</herd>
+  <maintainer>
+    <email>renegart@gmx.de</email>
+    <name>Mirko Günther</name>
+    <description>Proxied maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>vdr@gentoo.org</email>
+    <name>Gentoo VDR Project</name>
+    <description>Proxy maintainer</description>
+  </maintainer>
+  <use>
+    <flag name="themes">Install extra theme packs</flag>
+  </use>
 </pkgmetadata>
-
