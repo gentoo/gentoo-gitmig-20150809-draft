@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.6.7.ebuild,v 1.1 2008/07/30 20:07:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.6.7.ebuild,v 1.2 2008/08/23 13:26:16 gentoofan23 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/libpng-1.2.26-r1"
