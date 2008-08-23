@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.20.1.ebuild,v 1.9 2008/04/20 02:10:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.20.1.ebuild,v 1.10 2008/08/23 10:11:05 eva Exp $
 
-inherit gnome2 eutils autotools
+inherit gnome2 eutils
 
 DESCRIPTION="Multimedia related programs for the GNOME desktop"
 HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
@@ -35,7 +35,8 @@ RDEPEND=">=dev-libs/glib-1.3.7
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
-	>=dev-util/intltool-0.35.0"
+	>=dev-util/intltool-0.35.0
+	>=app-text/gnome-doc-utils-0.12.0"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
