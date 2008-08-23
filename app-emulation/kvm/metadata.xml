@@ -21,6 +21,7 @@
 		<flag name='gnutls'>Enable TLS support for the VNC console server</flag>
 		<flag name='havekernel'>Don't require a kernel build tree (useful if
 			using a binary distrbuted kernel aka binary packages)</flag>
+		<flag name='modules'>Build the kernel modules from the kvm package</flag>
 		<flag name='ncurses'>Enable the ncurses-based console</flag>
 		<flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
 		<flag name='sdl'>Enable the SDL-based console</flag>
