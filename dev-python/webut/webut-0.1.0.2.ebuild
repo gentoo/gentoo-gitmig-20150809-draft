@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.1 2008/08/21 23:47:35 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.2 2008/08/23 08:19:41 dev-zero Exp $
 
 inherit distutils versionator
 
 MY_P=${PN}_$(replace_version_separator 2 '-')
+
 DESCRIPTION="Miscellaneous utilities for nevow and twisted.web programming"
 HOMEPAGE="http://www.inoi.fi/open/trac/webut"
-SRC_URI="http://debian.cn99.com/debian/pool/main/w/${PN}/${MY_P}.tar.gz"
-
-LICENSE="X11"
+SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${MY_P}.tar.gz"
+LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 DEPEND=""
@@ -19,14 +19,15 @@ RDEPEND=">=dev-python/twisted-2
 		>=net-zope/zopeinterface-3.0.1
 		>=dev-python/nevow-0.9.18"
 
-S="${WORKDIR}/${PN}-${PV:0:3}"
+S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
 
-src_install(){
+src_install() {
 	distutils_src_install
 
-	use examples && \
-		insinto "/usr/share/${PF}"
+	if use examples; then
+		insinto /usr/share/doc/${PF}
 		doins -r examples
+	fi
 
-	rm -rf "${D}"/examples
+	rm -rf "${D}/examples"
 }
