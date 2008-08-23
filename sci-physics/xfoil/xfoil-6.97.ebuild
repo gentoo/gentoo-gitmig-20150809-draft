@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.1 2008/08/22 15:55:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.2 2008/08/23 11:43:27 bicatali Exp $
 
 inherit eutils fortran
 
@@ -22,22 +22,13 @@ FORTRAN="gfortran ifc g77"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	sed -i \
-		-e 's/-O3//g' \
-		plotlib/config.make || die "sed plotlib/config.make failed"
-	cat >> plotlib/config.make <<-EOF
-		FC = ${FORTRANC}
-		CFLAGS += ${CFLAGS}
-		FFLAGS += ${FFLAGS:--O2}
-	EOF
-
 	sed -i \
 		-e '/^FC/d' \
-		-e '/^FFLAGS/d' \
 		-e '/^CC/d' \
+		-e '/^FFLAGS/d' \
+		-e '/^CFLAGS/d' \
 		-e 's/^\(FFLOPT .*\)/FFLOPT = $(FFLAGS)/g' \
-		bin/Makefile orrs/bin/Makefile \
+		bin/Makefile plotlib/Makefile plotlib/config.make orrs/bin/Makefile \
 		|| die "sed for flags and compilers failed"
 
 	# fix bug #147033
@@ -50,12 +41,13 @@ src_unpack() {
 }
 
 src_compile() {
+	export FC="${FORTRANC}" F77="${FORTRANC}"
 	cd "${S}"/orrs/bin
 	emake FLG="${FFLAGS}" FTNLIB="" OS || die "failed to build orrs"
 	cd "${S}"/orrs
 	bin/osgen osmaps_ns.lst
 	cd "${S}"/plotlib
-	emake || die "failed to build plotlib"
+	emake CFLAGS="${CFLAGS} -DUNDERSCORE" || die "failed to build plotlib"
 	cd "${S}"/bin
 	for i in xfoil pplot pxplot; do
 		emake \
