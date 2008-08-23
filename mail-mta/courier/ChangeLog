@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.112 2008/07/21 00:39:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.113 2008/08/23 01:50:34 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *courier-0.60.0 (21 Jul 2008)
 

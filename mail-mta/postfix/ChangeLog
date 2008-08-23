@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.168 2008/08/19 12:00:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.169 2008/08/23 01:57:57 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  new version. fixes issue with PHP warnings enabled. fixes bug #234767.
+  discussed commit with robbat2 and trapni
 
 *postfix-2.5.4 (19 Aug 2008)
 *postfix-2.4.8 (19 Aug 2008)

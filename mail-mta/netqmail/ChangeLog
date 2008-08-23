@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.45 2008/04/06 17:16:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.46 2008/08/23 01:58:02 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
 *netqmail-1.06 (06 Apr 2008)
 

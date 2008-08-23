@@ -16,4 +16,18 @@ way mail can be routed, and there are extensive facilities for checking incoming
 mail. Exim can be installed in place of sendmail, although the configuration of
 exim is quite different to that of sendmail.
 </longdescription>
+<use>
+	<flag name='dnsdb'>Adds support for a DNS search for a record whose domain
+		name is the supplied query</flag>
+	<flag name='domainkeys'>Adds support for Yahoo!'s DomainKey sender
+		verification system</flag>
+	<flag name='dovecot-sasl'>Adds support for Dovecot's authentication</flag>
+	<flag name='exiscan-acl'>Patch providing support for content scanning</flag>
+	<flag name='exiscan'>Patch providing support for content scanning
+		backward-compatibility</flag>
+	<flag name='lmtp'>Adds support for lmtp</flag>
+	<flag name='mbx'>Adds support for UW's mbx format</flag>
+	<flag name='spf'>Adds support for Sender Policy Framework</flag>
+	<flag name='srs'>Adds support for Sender Rewriting Scheme</flag>
+</use>
 </pkgmetadata>
