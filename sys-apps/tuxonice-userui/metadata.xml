@@ -6,4 +6,7 @@
 		<email>nelchael@gentoo.org</email>
 		<name>krzysiek pawlik</name>
 	</maintainer>
+	<use>
+		<flag name='fbsplash'>Add support for framebuffer splash</flag>
+	</use>
 </pkgmetadata>

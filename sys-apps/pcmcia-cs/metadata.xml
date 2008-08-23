@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile</herd>
+<use>
+	<flag name='trusted'>Assume all users are trusted (Build unsafe user-space
+		tools)</flag>
+	<flag name='xforms'>Enable building the xforms based cardinfo binary</flag>
+</use>
 </pkgmetadata>

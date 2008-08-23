@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/einit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.15 2008/06/11 16:36:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.16 2008/08/23 06:06:44 cardoe Exp $
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
 
   11 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org> einit-0.40.0.ebuild:
   Added ~ppc, bug #213008

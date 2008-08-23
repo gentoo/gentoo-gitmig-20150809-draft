@@ -12,4 +12,7 @@
     <email>dma05@web.de</email>
   </maintainer>
   <herd>no-herd</herd>
+  <use>
+	  <flag name='relaxng'>Make validator for Relax NG available</flag>
+  </use>
 </pkgmetadata>
