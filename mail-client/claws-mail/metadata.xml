@@ -10,4 +10,13 @@
 	  <email>ken69267</email>
 	  <name>Kenneth Prugh</name>
 	</maintainer>
+	<use>
+		<flag name='bogofilter'>Build <pkg>mail-filter/bogofilter</pkg>
+			plugin</flag>
+		<flag name='dillo'>Enables support for inline HTTP email viewing with a
+			plugin (which depends on the <pkg>www-client/dillo</pkg> 
+			browser)</flag>
+		<flag name='spamassassin'>Build <pkg>mail-filter/spamassassin</pkg>
+			plugin</flag>
+	</use>
 </pkgmetadata>
