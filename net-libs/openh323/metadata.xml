@@ -3,4 +3,8 @@
 <pkgmetadata>
   <herd>voip</herd>
   <herd>gnome</herd>
+  <use>
+    <flag name="noaudio">Disable audio codecs</flag>
+    <flag name="novideo">Disable video codecs</flag>
+  </use>
 </pkgmetadata>
