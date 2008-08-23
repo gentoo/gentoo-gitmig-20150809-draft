@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.017-r1.ebuild,v 1.1 2008/08/22 17:16:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.017-r1.ebuild,v 1.2 2008/08/23 11:00:33 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
@@ -56,7 +56,6 @@ src_unpack() {
 		einfo "Extracting $(basename ${x})..."
 		rpm_unpack "${S}/${x}" || die "rpm_unpack ${x} failed"
 	done
-	epatch "${FILESDIR}/icc-add-amd64-preprocessor-directives.patch"
 
 	einfo "Fixing paths and tagging"
 	cd "${S}"/${INSTALL_DIR}/bin
@@ -71,6 +70,17 @@ src_unpack() {
 		-i *support \
 		|| die "sed support file failed"
 	chmod 644 *support
+
+	if use amd64; then
+		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icc.cfg
+		-D__amd64=__x86_64
+		-D__amd64__=__x86_64__
+		EOF
+		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icpc.cfg
+		-D__amd64=__x86_64
+		-D__amd64__=__x86_64__
+		EOF
+	fi
 }
 
 src_install() {
