@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 Allegro is a game programming library for C/C++ developers distributed
 freely, supporting the following platforms: DOS, Unix (Linux, FreeBSD,
 Irix, Solaris, Darwin), Windows, QNX, BeOS and MacOS X. It provides many
@@ -11,4 +11,7 @@ and timers. It also provides fixed and floating point mathematical
 functions, 3d functions, file management functions, compressed datafile
 and a GUI.
 </longdescription>
+  <use>
+    <flag name="vga">Enables the VGA graphics driver</flag>
+  </use>
 </pkgmetadata>
