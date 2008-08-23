@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.3 2008/01/28 00:12:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.4 2008/08/23 17:52:48 maekke Exp $
 
 inherit versionator toolchain-funcs eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://dereference.de/nstx/"
 RDEPEND="virtual/libc"
 DEPEND="virtual/os-headers
 		${RDEPEND}"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"

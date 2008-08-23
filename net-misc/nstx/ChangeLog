@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nstx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.6 2008/01/28 00:12:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.7 2008/08/23 17:52:48 maekke Exp $
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org> nstx-1.1_beta6-r2.ebuild:
+  add ~amd64, bug #209476
 
   28 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> -nstx-1.1_beta6.ebuild,
   -nstx-1.1_beta6-r1.ebuild, nstx-1.1_beta6-r2.ebuild:
