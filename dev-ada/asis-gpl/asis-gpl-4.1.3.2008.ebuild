@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2008.ebuild,v 1.1 2008/07/07 13:23:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2008.ebuild,v 1.2 2008/08/23 20:15:54 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -8,7 +8,7 @@ ACT_Ver=$(get_version_component_range 4)
 Gnat_Name="gnat-gpl"
 
 DESCRIPTION="The Ada Semantic Interface Specification (semantic analysis and tools tied to compiler)"
-SRC_URI="http://dev.gentoo.org/~george/src/${PN}-${ACT_Ver}-src.tgz"
+SRC_URI="mirror://gentoo/${PN}-${ACT_Ver}-src.tgz"
 HOMEPAGE="https://libre.adacore.com/"
 LICENSE="GPL-2"
 
