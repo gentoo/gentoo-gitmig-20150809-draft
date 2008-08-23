@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>drac@gentoo.org</email>
-		<name>Samuli Suominen</name>
-	</maintainer>
-	<longdescription lang="en">
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>drac@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer>
+  <longdescription lang="en">
 		Geany is a small and lightweight integrated development environment.
 		It was developed to provide a small and fast IDE, which has only a
 		few dependencies from other packages. Another goal was to be as
@@ -19,7 +19,7 @@
 		auto completion of XML and HTML tags; call tips; many supported
 		filetypes like C, Java, PHP, HTML, Python, Perl, Pascal; symbol lists.
 	</longdescription>
-	<longdescription lang="fr">
+  <longdescription lang="fr">
 		Geany est un environnement de développement integré (EDI) petit et
 		léger. Il a été développé pour fournir un EDI petit et rapide, qui ne
 		possède que peu de dépendences avec d'autres paquets. Un autre but
@@ -35,4 +35,7 @@
 		supportés, comme C, Java, PHP, HTML, Python, Perl, Pascal; liste des
 		symboles.
 	</longdescription>
+  <use>
+    <flag name="vte">Enable Terminal support (x11-libs/vte)</flag>
+  </use>
 </pkgmetadata>

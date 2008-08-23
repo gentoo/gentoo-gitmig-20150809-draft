@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
-</maintainer>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-  <name>Cédric Krier</name>
-</maintainer>
-<longdescription>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>mrness@gentoo.org</email>
+    <name>Alin Nastac</name>
+  </maintainer>
+  <maintainer>
+    <email>cedk@gentoo.org</email>
+    <name>Cédric Krier</name>
+  </maintainer>
+  <longdescription>
 NSIS (Nullsoft Scriptable Install System) is a professional open source
 system to create Windows installers. It is designed to be as small and
 flexible as possible and is therefore very suitable for Internet distribution.
@@ -20,4 +20,8 @@ most complex installation tasks. Many plug-ins and scripts are already
 available: you can create web installers, communicate with Windows and other
 software components, install or update shared components and more.
 </longdescription>
+  <use>
+    <flag name="config-log">Enable the logging facility (useful in debugging installers)</flag>
+    <flag name="prebuilt-system">Use the pre-compiled System.dll from the release to workaround the System::Call issue under GCC</flag>
+  </use>
 </pkgmetadata>
