@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.3 2008/08/22 17:50:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.4 2008/08/23 21:28:55 chainsaw Exp $
+
+*xf86-input-synaptics-0.15.0-r1 (23 Aug 2008)
+
+  23 Aug 2008; <chainsaw@gentoo.org> +files/synaptics-xorg-version.patch,
+  -xf86-input-synaptics-0.15.0.ebuild,
+  +xf86-input-synaptics-0.15.0-r1.ebuild:
+  Patch out a reference to XF86_CURRENT_VERSION which recently disappeared
+  in upstream X.Org git and block against the older synaptics ebuild. Both
+  thanks to papillon81 on IRC.
 
   22 Aug 2008; <chainsaw@gentoo.org> files/11-x11-synaptics.fdi:
   Have FDI file also trigger for appletouch devices, from upstream commit

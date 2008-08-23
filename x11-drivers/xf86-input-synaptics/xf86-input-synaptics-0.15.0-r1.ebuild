@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.15.0.ebuild,v 1.2 2008/08/22 17:17:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.15.0-r1.ebuild,v 1.1 2008/08/23 21:28:55 chainsaw Exp $
 
 inherit toolchain-funcs eutils linux-info x-modular
 
@@ -12,6 +12,7 @@ IUSE="hal"
 RDEPEND="x11-libs/libXext
 	 hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
+	!x11-drivers/synaptics
 	x11-base/xorg-server
 	x11-proto/inputproto
 	>=sys-apps/sed-4"
@@ -48,6 +49,9 @@ src_unpack() {
 	x-modular_unpack_source
 	# Fix to handle multiple screens through Xinerama properly. Bug #206614.
 	epatch "${FILESDIR}"/synaptics-fix-xinerama.patch
+
+	# Recent X.Org git versions stopped defining XF86-style version.
+	epatch "${FILESDIR}"/synaptics-xorg-version.patch
 }
 
 src_install() {
