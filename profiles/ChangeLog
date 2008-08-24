@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1796 2008/08/24 09:56:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1797 2008/08/24 17:30:20 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  24 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Changed =x11-wm/awesome-3_rc* to >=x11-wm/awesome-3.
 
   24 Aug 2008; Torsten Veller <tove@gentoo.org> package.mask:
   mail-mta/xmail removed
