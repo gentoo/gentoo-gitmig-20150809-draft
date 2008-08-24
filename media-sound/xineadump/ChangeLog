@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xineadump
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xineadump/ChangeLog,v 1.1 2008/06/14 02:35:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xineadump/ChangeLog,v 1.2 2008/08/24 17:57:50 mabi Exp $
+
+  24 Aug 2008; Matti Bickel <mabi@gentoo.org> xineadump-0.1.ebuild:
+  added ~ppc (bug #207355)
 
 *xineadump-0.1 (14 Jun 2008)
 
