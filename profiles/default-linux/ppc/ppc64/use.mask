@@ -11,3 +11,7 @@ pbbuttonsd
 # mask dxr* use flags on ppc64 for mplayer - bug #234629
 dxr2
 dxr3
+
+# mask custom-cpuopts and cpudetection on ppc64 for mplayer - bug #234629
+custom-cpuopts
+cpudetection
