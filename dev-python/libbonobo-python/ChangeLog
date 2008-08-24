@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/libbonobo-python
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libbonobo-python/ChangeLog,v 1.1 2008/08/24 07:32:05 ford_prefect Exp $
+
+*libbonobo-python-2.22.1 (24 Aug 2008)
+
+  24 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> +metadata.xml,
+  +libbonobo-python-2.22.1.ebuild:
+  Initial import of gnome-python split ebuilds. This package installs
+  bindings for the Bonobo framework.
+
