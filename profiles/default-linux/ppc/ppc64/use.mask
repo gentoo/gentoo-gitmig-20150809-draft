@@ -8,3 +8,6 @@ ppcsha1
 # pbbuttonsd deos not work on ppc64 - bug #183035
 pbbuttonsd
 
+# mask dxr* use flags on ppc64 for mplayer - bug #234629
+dxr2
+dxr3

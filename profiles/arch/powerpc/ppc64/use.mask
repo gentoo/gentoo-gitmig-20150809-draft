@@ -4,4 +4,6 @@
 # Missing keyword on net-wireless/madwifi
 madwifi
 
-
+# mask dxr* use flags on ppc64 for mplayer - bug #234629
+dxr2
+dxr3

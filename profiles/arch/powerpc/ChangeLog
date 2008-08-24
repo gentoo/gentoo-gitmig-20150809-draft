@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.17 2008/08/11 11:57:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.18 2008/08/24 14:47:20 corsair Exp $
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org> ppc64/use.mask:
+  mask dxr* use flags on ppc64 for mplayer - bug #234629
 
   11 Aug 2008; Raúl Porcel <armin76@gentoo.org> ppc64/use.mask:
   Use.mask madwifi on ppc64 since it doesn't have madwifi keyworded
