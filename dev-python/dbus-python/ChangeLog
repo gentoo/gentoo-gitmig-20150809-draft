@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.38 2008/08/15 04:10:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.39 2008/08/24 11:03:59 corsair Exp $
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org> dbus-python-0.82.4.ebuild:
+  Stable on ppc64; bug #212244
 
 *dbus-python-0.83.0 (15 Aug 2008)
 
