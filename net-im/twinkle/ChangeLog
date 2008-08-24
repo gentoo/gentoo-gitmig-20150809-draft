@@ -1,6 +1,13 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.42 2008/08/22 23:41:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.43 2008/08/24 03:57:46 dragonheart Exp $
+
+*twinkle-1.3.1 (24 Aug 2008)
+
+  24 Aug 2008; Daniel Black <dragonheart@gentoo.org>
+  -files/twinkle-1.3-gcc4.3.patch, +files/twinkle-1.3.1-withoutkde.patch,
+  -twinkle-1.3.ebuild, +twinkle-1.3.1.ebuild:
+  version bump. attempting to support --without-kde. Any probs let me know
 
 *twinkle-1.3 (22 Aug 2008)
 
