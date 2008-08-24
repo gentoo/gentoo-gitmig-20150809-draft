@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.375 2008/08/24 19:33:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.376 2008/08/24 22:31:31 aballier Exp $
+
+*vlc-0.9.0 (24 Aug 2008)
+
+  24 Aug 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  +vlc-0.9.0.ebuild:
+  Bump to final 0.9.0, adding dirac support (via dirac and/or schroedinger)
+  and libass support for subtitles.
 
   24 Aug 2008; Tobias Klausmann <klausman@gentoo.org> vlc-0.8.6i-r2.ebuild:
   Stable on alpha, bug #235589
