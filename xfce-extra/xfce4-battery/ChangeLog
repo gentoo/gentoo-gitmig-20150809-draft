@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-battery
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.64 2008/08/22 21:01:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.65 2008/08/24 13:40:39 corsair Exp $
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org>
+  xfce4-battery-0.5.0-r2.ebuild, xfce4-battery-0.5.0-r3.ebuild:
+  Remove ppc64 keywords. There are no ppc64 machines with batteries...
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org>
   xfce4-battery-0.5.0-r3.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0-r3.ebuild,v 1.4 2008/08/22 21:01:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0-r3.ebuild,v 1.5 2008/08/24 13:40:39 corsair Exp $
 
 inherit autotools eutils xfce44
 
 xfce44
 
 DESCRIPTION="Battery status panel plugin"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="dev-util/pkgconfig
