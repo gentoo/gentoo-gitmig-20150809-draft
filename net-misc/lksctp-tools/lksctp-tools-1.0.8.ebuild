@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.8.ebuild,v 1.7 2008/08/19 09:29:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.8.ebuild,v 1.8 2008/08/24 11:21:54 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lksctp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 # I don't known if *BSD has the support needed at all
