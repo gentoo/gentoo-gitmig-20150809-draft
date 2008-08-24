@@ -1,0 +1,12 @@
+--- src/game/g_local.h.old	2008-08-24 16:23:45.000000000 +0200
++++ src/game/g_local.h	2008-08-24 16:26:05.000000000 +0200
+@@ -41,6 +41,9 @@
+ /* short, server-visible player_t and edict_t structures, */
+ /* because we define the full size ones in this file */
+ #define	GAME_INCLUDE
++#ifdef dprintf
++#undef dprintf
++#endif
+ #include "game.h"
+ 
+ /* the "gameversion" client command will print this plus compile date */

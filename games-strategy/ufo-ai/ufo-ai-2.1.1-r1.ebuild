@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.3 2008/02/29 19:49:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.4 2008/08/24 14:56:35 tupone Exp $
 
 inherit eutils autotools games
 
@@ -72,6 +72,8 @@ src_unpack() {
 	sed -i \
 		-e "s:FS_GetCwd():\"${dir}\":" \
 		src/qcommon/common.c || die "sed common.c failed"
+
+	epatch "${FILESDIR}"/${P}-dprintf.patch
 
 	eautoreconf
 }

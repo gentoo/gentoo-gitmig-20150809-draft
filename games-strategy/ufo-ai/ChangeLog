@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.18 2008/02/29 19:49:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.19 2008/08/24 14:56:35 tupone Exp $
+
+  24 Aug 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/ufo-ai-2.1.1-dprintf.patch, ufo-ai-2.1.1-r1.ebuild:
+  Fix for dprintf redefined. Bug #232694 by Konstantin Sobolev
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ufo-ai-2.1.1-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
