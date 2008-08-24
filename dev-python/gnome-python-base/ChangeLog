@@ -1,10 +1,10 @@
 # ChangeLog for dev-python/gnome-python-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.1 2008/08/24 07:15:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.2 2008/08/24 07:22:45 ford_prefect Exp $
 
-*gnome-python-base-2.22.1 (20 Aug 2008)
+*gnome-python-base-2.22.1 (24 Aug 2008)
 
-  20 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> +metadata.xml,
+  24 Aug 2008; Arun Raghavan <ford_prefect@gentoo.org> +metadata.xml,
   +gnome-python-base-2.22.1.ebuild:
   Initial import of gnome-python split ebuilds. This package installs a
   common pkgconfig file.
