@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.106 2008/08/24 15:27:55 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.107 2008/08/24 15:51:42 nixnut Exp $
+
+  24 Aug 2008; nixnut <nixnut@gentoo.org> glade-3.4.5.ebuild:
+  Stable on ppc wrt bug 235522
 
   24 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> glade-3.4.5.ebuild:
   Stable on sparc, bug #235522
