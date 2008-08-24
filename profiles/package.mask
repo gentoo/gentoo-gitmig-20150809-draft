@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8908 2008/08/23 15:02:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8909 2008/08/24 09:56:59 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -381,11 +381,6 @@ dev-cpp/libwefts
 =dev-java/mx4j-core-3.0.2
 =dev-java/mx4j-tools-3.0.2
 =dev-java/mx4j-3.0.2
-
-# Torsten Veller <tove@gentoo.org> (11 Jun 2008)
-# Masked for removal in 30 days
-# Bugs: 99776 128014 131249 197816
-mail-mta/xmail
 
 # Hanno Böck <hanno@gentoo.org> (11 Jun 2008)
 # Masking till gnucash and other apps are ported

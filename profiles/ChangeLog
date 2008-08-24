@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1795 2008/08/23 15:02:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1796 2008/08/24 09:56:59 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  24 Aug 2008; Torsten Veller <tove@gentoo.org> package.mask:
+  mail-mta/xmail removed
 
   23 Aug 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
   Mask libxml2-2.6.32-r1, breaks graphical gdm login, bug 235529
