@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2008-08-24 18:59:47.000000000 +0200
++++ Makefile.in	2008-08-24 19:01:45.000000000 +0200
+@@ -44,7 +44,7 @@
+ 	@( cd ./sh_util ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS)" )
+ 	@( cd ./vis ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS)" )
+ 	-@test -z "$(DESTDIR)" || mkdir -p "$DESTDIR" 2>/dev/null
+-	-mkdir "$(DESTDIR)$(prefix)" "$(DESTDIR)$(BINDIR)" "$(DESTDIR)$(SYSCONFDIR)" "$(DESTDIR)$(mandir)" "$(DESTDIR)$(mandir)/man1" 2>/dev/null
++	-mkdir -p "$(DESTDIR)$(prefix)" "$(DESTDIR)$(BINDIR)" "$(DESTDIR)$(SYSCONFDIR)" "$(DESTDIR)$(mandir)" "$(DESTDIR)$(mandir)/man1" 2>/dev/null
+ 	-@echo '..... Installing the programs .....'
+ 	$(INSTALL_PROGRAM) bin/ncftp@EXEEXT@ "$(DESTDIR)$(BINDIR)/ncftp@EXEEXT@"
+ 	$(INSTALL_PROGRAM) bin/ncftpget@EXEEXT@ "$(DESTDIR)$(BINDIR)/ncftpget@EXEEXT@"
