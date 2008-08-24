@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.48.ebuild,v 1.2 2008/08/17 15:46:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.48.ebuild,v 1.3 2008/08/24 13:17:34 corsair Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 -sparc x86"
 IUSE=""
 
 RDEPEND="sys-fs/e2fsprogs

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.63 2008/08/17 15:46:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.64 2008/08/24 13:17:34 corsair Exp $
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org> xfsdump-2.2.48.ebuild:
+  Stable on ppc64; bug #235017
 
   17 Aug 2008; Markus Meier <maekke@gentoo.org> xfsdump-2.2.48.ebuild:
   amd64/x86 stable, bug #235017
