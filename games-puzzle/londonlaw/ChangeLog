@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/londonlaw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.13 2008/06/25 19:42:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.14 2008/08/24 06:36:05 mr_bones_ Exp $
+
+*londonlaw-0.2.1-r2 (24 Aug 2008)
+
+  24 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/londonlaw.confd, +files/londonlaw.rc, +londonlaw-0.2.1-r2.ebuild:
+  dedicated support and sed patch from mattenklicker@gmx.net via bug #235326
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> londonlaw-0.2.1-r1.ebuild:
   Stable on ppc wrt bug 229307
