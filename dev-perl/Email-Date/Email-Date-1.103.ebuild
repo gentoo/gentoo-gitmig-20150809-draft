@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.103.ebuild,v 1.1 2008/08/23 18:54:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.103.ebuild,v 1.2 2008/08/24 13:01:21 bluebird Exp $
 
 MODULE_AUTHOR=RJBS
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Find and Format Date Headers"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
