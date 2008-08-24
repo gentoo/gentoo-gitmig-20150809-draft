@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.4 2008/06/09 10:46:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.5 2008/08/24 17:29:46 ulm Exp $
 
 inherit eutils elisp-common
 
@@ -26,8 +26,7 @@ src_compile() {
 	econf || die "econf failed."
 	emake || die "emake failed."
 	if use emacs; then
-		cd src
-		elisp-comp *.el || die "elisp-comp failed"
+		elisp-compile src/*.el || die "elisp-compile failed"
 	fi
 }
 
@@ -40,8 +39,9 @@ src_install() {
 	# license text not necessary
 	rm "${D}"/usr/share/gri/doc/license.txt
 
-	# install target installs it always
-	use emacs || rm -rf "${D}"/usr/share/emacs
+	# install target installs it always and in the wrong location
+	# remove it here and call elisp-install in case of USE=emacs below
+	rm -rf "${D}"/usr/share/emacs
 
 	if ! use doc; then
 		sed -e "s/Manual at.*//" -i "${D}"/usr/share/gri/startup.msg
@@ -62,8 +62,9 @@ src_install() {
 
 	if use emacs; then
 		cd src
-		elisp-install gri *.{el,elc} || die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+		elisp-install ${PN} *.{el,elc} || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+			|| die "elisp-site-file-install failed"
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gri
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.21 2008/06/09 10:46:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.22 2008/08/24 17:29:46 ulm Exp $
+
+  24 Aug 2008; Ulrich Mueller <ulm@gentoo.org> -gri-2.12.14.ebuild,
+  gri-2.12.16-r1.ebuild, gri-2.12.17.ebuild:
+  Fix Emacs support, bug 235602. Remove old.
 
 *gri-2.12.17 (09 Jun 2008)
 
