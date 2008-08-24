@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.18 2008/08/21 14:46:04 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.19 2008/08/24 19:26:43 armin76 Exp $
+
+*openresolv-1.7 (24 Aug 2008)
+
+  24 Aug 2008; Raúl Porcel <armin76@gentoo.org> +openresolv-1.7.ebuild:
+  Version bump
 
 *openresolv-1.6 (21 Aug 2008)
 
