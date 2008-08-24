@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0_rc4.ebuild,v 1.1 2008/07/28 14:45:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.0.ebuild,v 1.1 2008/08/24 20:57:10 armin76 Exp $
 
 EAPI=1
 
