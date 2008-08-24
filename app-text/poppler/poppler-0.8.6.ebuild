@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.6.3.ebuild,v 1.7 2008/04/17 11:25:20 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.8.6.ebuild,v 1.1 2008/08/24 13:59:22 loki_val Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="cjk jpeg zlib"
 
 RDEPEND=">=media-libs/freetype-2.1.8
