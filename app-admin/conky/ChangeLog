@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.88 2008/08/16 16:22:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.89 2008/08/24 11:46:24 corsair Exp $
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org> conky-1.5.1.ebuild:
+  Stable on ppc64; bug #234757
 
   16 Aug 2008; nixnut <nixnut@gentoo.org> conky-1.5.1.ebuild:
   Stable on ppc wrt bug 234757
