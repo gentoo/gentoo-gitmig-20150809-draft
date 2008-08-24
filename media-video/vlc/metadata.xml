@@ -16,7 +16,7 @@
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
     <flag name="httpd">Enables a web based interface for vlc.</flag>
     <flag name="id3tag">Enables id3tag metadata reader plugin.</flag>
-	<flag name="libass">Enables subtitles support using libass.</flag>
+    <flag name="libass">Enables subtitles support using libass.</flag>
     <flag name="libgcrypt">Enables cryptography support via libgcrypt.</flag>
     <flag name="live">Enables LIVE.com support.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
