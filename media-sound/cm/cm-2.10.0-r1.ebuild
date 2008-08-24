@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0-r1.ebuild,v 1.2 2008/08/24 12:47:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0-r1.ebuild,v 1.3 2008/08/24 13:53:48 bluebird Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/commonmusic/${P}.tar.gz"
 
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 COMPILERS="dev-lisp/openmcl
 	>=dev-lisp/sbcl-1.0.1
