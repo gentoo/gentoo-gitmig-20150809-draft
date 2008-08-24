@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/waveselect
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/ChangeLog,v 1.4 2007/02/09 08:17:21 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/ChangeLog,v 1.5 2008/08/24 03:33:17 mr_bones_ Exp $
+
+  24 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  waveselect-0.1.2.ebuild:
+  use eapi=1 (fixes bug #233200)
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
