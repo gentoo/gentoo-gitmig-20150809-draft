@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.206 2008/07/31 01:06:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.207 2008/08/24 20:50:40 robbat2 Exp $
+
+  24 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  Development has moved to an external Git repo.
 
   31 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -genkernel-3.4.9.ebuild:

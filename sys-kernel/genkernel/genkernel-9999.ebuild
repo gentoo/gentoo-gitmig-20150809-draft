@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.9 2008/06/06 16:12:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.10 2008/08/24 20:50:40 robbat2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -29,9 +29,9 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 if [[ ${PV} == 9999* ]]
 then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	ESVN_REPO_URI="svn://anonsvn.gentoo.org/genkernel/trunk"
-	inherit subversion bash-completion eutils
-	S=${WORKDIR}/trunk
+	EGIT_REPO_URI="git://git.wolf31o2.org/projs/genkernel.git"
+	inherit git bash-completion eutils
+	S="${WORKDIR}"
 	SRC_URI="${COMMON_URI}"
 else
 	inherit bash-completion eutils
@@ -59,7 +59,7 @@ RDEPEND="${DEPEND} app-arch/cpio"
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
-		subversion_src_unpack
+		git_src_unpack
 	else
 		unpack ${P}.tar.bz2
 	fi
