@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0_pre20060501.ebuild,v 1.2 2008/07/30 17:07:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0_pre20060501.ebuild,v 1.3 2008/08/24 12:51:33 maekke Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gwenole.beauchesne.info/projects/basilisk2/"
 SRC_URI="http://gwenole.beauchesne.info/projects/basilisk2/files/BasiliskII_src_01052006.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="~amd64 -ppc ~x86"
 SLOT="0"
 
 IUSE="dga esd fbdev gtk jit nls sdl xv"
