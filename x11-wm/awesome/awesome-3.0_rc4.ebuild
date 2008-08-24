@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc4.ebuild,v 1.1 2008/08/22 15:49:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc4.ebuild,v 1.2 2008/08/24 11:33:12 corsair Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus doc +imlib"
 
 RDEPEND=">=x11-libs/libxcb-1.1
