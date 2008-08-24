@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.5.ebuild,v 1.2 2008/08/17 16:59:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.5.ebuild,v 1.3 2008/08/24 15:21:12 corsair Exp $
 
 DESCRIPTION="C-based libraries and GStreamer plugins for the Dirac video codec"
 HOMEPAGE="http://www.diracvideo.org"
@@ -8,7 +8,7 @@ SRC_URI="http://www.diracvideo.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 GPL-2 MIT )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="gstreamer"
 
 RDEPEND=">=dev-libs/liboil-0.3.15
