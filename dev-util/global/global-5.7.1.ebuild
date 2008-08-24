@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.1.ebuild,v 1.1 2008/06/29 17:59:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.1.ebuild,v 1.2 2008/08/24 01:38:53 ulm Exp $
 
 inherit elisp-common
 
@@ -29,7 +29,7 @@ src_compile() {
 	fi
 
 	if use emacs; then
-		elisp-comp *.el || die
+		elisp-compile *.el || die "elisp-compile failed"
 	fi
 
 	emake || die "emake failed"
