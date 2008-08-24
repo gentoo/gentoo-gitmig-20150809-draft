@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.70 2008/08/24 17:17:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.71 2008/08/24 17:33:03 jer Exp $
+
+  24 Aug 2008; Jeroen Roovers <jer@gentoo.org>
+  files/ncftp-3.2.2-build.patch:
+  Slight improvement on build patch. Add explanation.
 
 *ncftp-3.2.2 (24 Aug 2008)
 
