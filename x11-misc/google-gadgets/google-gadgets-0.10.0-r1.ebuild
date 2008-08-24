@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r1.ebuild,v 1.2 2008/07/20 09:44:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r1.ebuild,v 1.3 2008/08/24 16:22:19 loki_val Exp $
 
 EAPI=1
 
@@ -52,14 +52,6 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="test"
 
 pkg_setup() {
-	if ! use qt4
-	then
-		ewarn "Since >=x11-libs/qt-core-4.4.0 and related packages are package.masked"
-		ewarn "pending updates to the tree, the qt4 backend for ${PN} will not be built"
-		ewarn "unless you unmask the qt dependencies of this package and add"
-		ewarn "${CATEGORY}/${PN} -qt4"
-		ewarn "to /etc/portage/profile/package.use.mask"
-	fi
 
 	# If a non-google, non-qt4 and non-gtk host system for google-gadgets is ever developed,
 	# I'll consider changing the error below.
