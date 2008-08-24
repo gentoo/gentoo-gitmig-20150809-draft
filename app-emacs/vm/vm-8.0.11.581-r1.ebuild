@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.11.581.ebuild,v 1.1 2008/08/11 21:30:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.11.581-r1.ebuild,v 1.1 2008/08/24 10:15:54 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -32,8 +32,9 @@ src_unpack() {
 		epatch "${FILESDIR}/vm-8.0-no-pcrisis.patch"
 	fi
 
-	# disable vm-revno braindamage
-	sed -i -e '/^vm-revno.el:/{:x;s/^/#/;n;/^\t/bx;}' lisp/Makefile.in
+	# fix vm-version, bug 235563
+	sed -i -e "/^(defvar vm-version /s/nil/\"${VM_PV}\"/" lisp/vm-version.el \
+		|| die "sed failed"
 }
 
 src_compile() {
