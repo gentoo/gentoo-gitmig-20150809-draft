@@ -6,4 +6,8 @@
   <email>jokey@gentoo.org</email>
   <name>Markus Ullmann</name>
 </maintainer>
+<use>
+	<flag name="sourceview">Allow page source viewing</flag>
+	<flag name="gvfs">Use GNOME VFS for communication</flag>
+</use>
 </pkgmetadata>

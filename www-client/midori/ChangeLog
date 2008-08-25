@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.4 2008/08/22 14:17:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.5 2008/08/25 20:44:06 jokey Exp $
+
+  25 Aug 2008; Markus Ullmann <jokey@gentoo.org> midori-9999.ebuild:
+  Take care of new upstream buildsystem wrt bug #235544 thanks to Dale
+  Whittaker
 
   22 Aug 2008; Markus Ullmann <jokey@gentoo.org> midori-9999.ebuild:
   New upstream repo id, thanks to David Voge in bug #234797
