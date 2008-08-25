@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r2.ebuild,v 1.1 2008/08/24 06:36:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r2.ebuild,v 1.2 2008/08/25 17:53:42 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils python games
@@ -45,9 +45,15 @@ src_unpack() {
 			sed \
 				-e "s/GAMES_USER_DED/${GAMES_USER_DED}/" \
 				-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
+				-e "s:GAMES_LOGDIR:${GAMES_LOGDIR}:" \
+				-e "s:PN:${PN}:" \
 				"${FILESDIR}/${f}" > "${T}/${f}" \
 				|| die "sed failed"
 		done
+		sed -i \
+			-e "/serverdata/ s:\"$:\"\n      dbDir = \"${GAMES_STATEDIR}/${PN}\":" \
+			londonlaw/server/GameRegistry.py \
+			|| die "sed failed"
 	fi
 }
 
@@ -59,14 +65,16 @@ src_install() {
 		--install-lib=/usr/lib/python${PYVER}/site-packages \
 		--install-data="${GAMES_DATADIR}" \
 		|| die "install failed"
-	dodoc ChangeLog README
+	dodoc ChangeLog README doc/TODO doc/manual.tex doc/readme.protocol
 
 	if use dedicated ; then
 		newinitd "${T}/londonlaw.rc" londonlaw
 		newconfd "${T}/londonlaw.confd" londonlaw
-		insinto /var/log
-		newins /dev/null londonlaw.log
-		fowners ${GAMES_USER_DED}:${GAMES_GROUP} /var/log/londonlaw.log
+		keepdir "${GAMES_STATEDIR}/${PN}"
+		dodir "${GAMES_LOGDIR}"
+		touch "${D}/${GAMES_LOGDIR}"/${PN}.log
+		fowners ${GAMES_USER_DED}:${GAMES_GROUP} \
+			"${GAMES_STATEDIR}/${PN}" "${GAMES_LOGDIR}"/${PN}.log
 	fi
 
 	prepgamesdirs

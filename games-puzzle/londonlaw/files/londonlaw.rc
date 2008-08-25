@@ -7,8 +7,8 @@ depend() {
 start() {
 	ebegin "Starting londonlaw server"
 	start-stop-daemon --start --pidfile /var/run/london-server.pid \
-		--user GAMES_USER_DED --background --stdout /var/log/londonlaw.log \
-		--stderr /var/log/londonlaw.log --make-pidfile \
+		--user GAMES_USER_DED --background --stdout GAMES_LOGDIR/PN.log \
+		--stderr GAMES_LOGDIR/PN.log --make-pidfile \
 		--exec GAMES_BINDIR/london-server -- -p $LONDONLAW_PORT
 	eend $?
 }
