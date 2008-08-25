@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.5 2008/05/05 21:30:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.6 2008/08/25 23:13:30 angelos Exp $
 
 inherit eutils toolchain-funcs pam
 
@@ -36,6 +36,7 @@ src_unpack() {
 		-e "s:^MANDIR=.*:MANDIR=/usr/share/man:" \
 		-e "s:/usr/X11R6:/usr:" \
 		-e "s:^\t\(.*\)\ \$(LDFLAGS)\ \(.*\):\t\1\ \2\ \$(LDFLAGS):g" \
+		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die 'sed failed in Makefile'
 
 	# Remove all X11R6 references from slim.conf
