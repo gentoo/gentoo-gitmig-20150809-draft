@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.67 2008/08/21 11:05:43 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.68 2008/08/25 16:53:24 maekke Exp $
+
+  25 Aug 2008; Markus Meier <maekke@gentoo.org> drscheme-4.1.ebuild:
+  amd64/x86 stable, bug #229915
 
   21 Aug 2008; Marijn Schouten <hkBst@gentoo.org> drscheme-4.1.ebuild:
   fix cgc use flag, disable raw-ldflags
