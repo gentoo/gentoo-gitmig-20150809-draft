@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.24 2007/01/15 01:55:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.25 2008/08/25 22:11:09 eva Exp $
 
 inherit eutils multilib autotools
 
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} libdir=/usr/$(get_libdir) install || die
+	make DESTDIR="${D}" libdir=/usr/$(get_libdir) install || die
 	dodoc AUTHORS ChangeLog NEWS README
 	docinto txt
 	dodoc docs/*.txt
