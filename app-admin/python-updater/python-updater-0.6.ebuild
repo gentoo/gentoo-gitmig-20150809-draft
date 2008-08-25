@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.3.ebuild,v 1.1 2007/10/29 17:48:32 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.6.ebuild,v 1.1 2008/08/25 09:56:28 hawking Exp $
 
 DESCRIPTION="Script used to remerge python packages when changing Python version."
 HOMEPAGE="http://www.gentoo.org/proj/en/Python"
-SRC_URI="mirror://gentoo/${P}.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,6 +17,7 @@ RDEPEND="!<dev-lang/python-2.3.6-r2
 
 src_install()
 {
-	cd "${WORKDIR}"
-	newsbin ${P} ${PN}
+	dosbin ${PN} || die "dosbin failed"
+	doman ${PN}.1 || die "doman failed"
+	dodoc AUTHORS ChangeLog || die "dodoc failed"
 }
