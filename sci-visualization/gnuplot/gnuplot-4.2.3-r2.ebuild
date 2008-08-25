@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.3-r2.ebuild,v 1.7 2008/06/04 20:30:15 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.3-r2.ebuild,v 1.8 2008/08/25 08:28:32 ulm Exp $
 
 inherit autotools elisp-common eutils multilib wxwidgets
 
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-E_SITEFILE="50gnuplot-gentoo.el"
+E_SITEFILE=50${PN}-gentoo.el
+TEXMF=/usr/share/texmf-site
 
 latex_rehash() {
 	if has_version '>=app-text/tetex-3' || has_version '>=app-text/ptex-3.1.8' || has_version 'app-text/texlive'; then
@@ -76,8 +77,8 @@ src_compile() {
 
 	# See bug #156427.
 	if use latex ; then
-		sed -i \
-			-e 's/TEXMFLOCAL/TEXMFSITE/g' share/LaTeX/Makefile.in || die
+		sed -i -e "s:\`kpsexpand.*\`:${TEXMF}/tex/latex/${PN}:" \
+			share/LaTeX/Makefile.in || die
 	else
 		sed -i \
 			-e '/^SUBDIRS/ s/LaTeX//' share/LaTeX/Makefile.in || die
