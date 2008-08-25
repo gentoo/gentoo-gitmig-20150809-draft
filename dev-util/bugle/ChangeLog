@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/bugle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.7 2008/08/10 13:08:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.8 2008/08/25 21:19:23 jokey Exp $
+
+*bugle-0.0.20080803 (25 Aug 2008)
+
+  25 Aug 2008; Markus Ullmann <jokey@gentoo.org> +bugle-0.0.20080803.ebuild:
+  Version bump wrt bug #235492 thanks to Dennis Schridde for the
+  notification
 
 *bugle-0.0.20080303 (10 Aug 2008)
 
