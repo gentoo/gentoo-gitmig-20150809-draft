@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.291 2008/08/24 02:19:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.292 2008/08/25 08:00:03 ulm Exp $
+
+  25 Aug 2008; Ulrich Mueller <ulm@gentoo.org> -files/71git-gentoo.el,
+  files/72git-gentoo.el:
+  Add comment in Emacs site-init file wrt bug 235393. Remove unused file.
 
 *git-1.6.0 (24 Aug 2008)
 
