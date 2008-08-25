@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.57 2008/08/23 05:24:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.58 2008/08/25 17:20:02 nixnut Exp $
+
+  25 Aug 2008; nixnut <nixnut@gentoo.org> madwifi-ng-0.9.4.ebuild:
+  Stable on ppc wrt bug 225099
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
