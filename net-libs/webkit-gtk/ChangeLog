@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.9 2008/07/31 14:15:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.10 2008/08/25 15:46:02 jokey Exp $
+
+*webkit-gtk-0_p35913 (25 Aug 2008)
+
+  25 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  -webkit-gtk-0_p34753.ebuild, +webkit-gtk-0_p35913.ebuild:
+  Version bump and fix dependency for bug #235560 thanks to Jan Kuemmel for
+  testing and reporting
 
   31 Jul 2008; Raúl Porcel <armin76@gentoo.org> webkit-gtk-0_p35417.ebuild:
   Add ~alpha/~ia64/-sparc

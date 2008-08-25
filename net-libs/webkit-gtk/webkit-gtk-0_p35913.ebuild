@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p34753.ebuild,v 1.1 2008/06/25 06:59:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p35913.ebuild,v 1.1 2008/08/25 15:46:02 jokey Exp $
 
 inherit autotools
 
@@ -11,11 +11,11 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="coverage debug gstreamer hildon pango soup sqlite svg xslt"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc -sparc ~x86"
+IUSE="coverage debug gstreamer pango soup sqlite svg xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
-	dev-libs/icu
+	>=dev-libs/icu-3.8.1-r1
 	>=net-misc/curl-7.15
 	media-libs/jpeg
 	media-libs/libpng
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 		>=media-libs/gst-plugins-base-0.10
 		>=gnome-base/gnome-vfs-2.0
 		)
-	soup? ( >=net-libs/libsoup-2.4 )
+	soup? ( >=net-libs/libsoup-2.23.1 )
 	xslt? ( dev-libs/libxslt )
 	pango? ( x11-libs/pango )"
 
@@ -44,6 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# It doesn't compile on alpha without this LDFLAGS
+	use alpha && append-ldflags "-Wl,--no-relax"
+
 	local myconf
 		use pango && myconf="${myconf} --with-font-backend=pango"
 		use soup && myconf="${myconf} --with-http-backend=soup"
@@ -56,7 +59,6 @@ src_compile() {
 		$(use_enable gstreamer video) \
 		$(use_enable svg) \
 		$(use_enable debug) \
-		$(use_with hildon) \
 		$(use_enable xslt) \
 		$(use_enable coverage) \
 		${myconf} \
