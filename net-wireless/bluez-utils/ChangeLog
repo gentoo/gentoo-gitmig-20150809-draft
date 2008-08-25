@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.131 2008/08/23 05:20:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.132 2008/08/25 17:34:52 nixnut Exp $
+
+  25 Aug 2008; nixnut <nixnut@gentoo.org> bluez-utils-3.30.ebuild:
+  Stable on ppc wrt bug 224409
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

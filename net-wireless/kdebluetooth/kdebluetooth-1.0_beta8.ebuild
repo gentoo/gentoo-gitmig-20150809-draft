@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.4 2008/06/02 05:59:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.5 2008/08/25 17:36:32 nixnut Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ SRC_URI="http://tomstar.ath.cx/load/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 hppa ppc ~sparc ~x86"
 IUSE=""
 
 # Localisation will be added once we have a release.
