@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.13 2008/05/29 18:12:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.14 2008/08/25 01:42:55 neurogeek Exp $
+
+*mod_python-3.3.1-r1 (24 Aug 2008)
+
+  24 Aug 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/mod_python-apr_brigade_sentinel.patch, +mod_python-3.3.1-r1.ebuild:
+  Revision bump. Closes bug #230211. Thanks Cilly <cilly@cilly.mine.nu> for
+  the patch
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> mod_python-3.3.1.ebuild:
   python_mod_{cleanup,optimize} are ROOT aware.
