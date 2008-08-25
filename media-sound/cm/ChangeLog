@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.26 2008/08/24 13:53:48 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.27 2008/08/25 16:51:02 nixnut Exp $
+
+  25 Aug 2008; nixnut <nixnut@gentoo.org> cm-2.10.0-r1.ebuild:
+  Stable on ppc wrt bug 235601
 
   24 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> cm-2.10.0-r1.ebuild:
   Stable on sparc, bug #235601
