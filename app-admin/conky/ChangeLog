@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.89 2008/08/24 11:46:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.90 2008/08/25 07:31:07 omp Exp $
+
+  25 Aug 2008; David Shakaryan <omp@gentoo.org> -conky-1.4.9-r1.ebuild:
+  Remove older version.
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> conky-1.5.1.ebuild:
   Stable on ppc64; bug #234757
