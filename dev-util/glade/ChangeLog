@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.107 2008/08/24 15:51:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.108 2008/08/25 13:27:45 armin76 Exp $
+
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org> glade-3.4.5.ebuild:
+  alpha/ia64 stable wrt #235522
 
   24 Aug 2008; nixnut <nixnut@gentoo.org> glade-3.4.5.ebuild:
   Stable on ppc wrt bug 235522
