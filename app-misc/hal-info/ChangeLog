@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.40 2008/08/05 20:10:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.41 2008/08/25 00:06:19 jer Exp $
+
+  25 Aug 2008; Jeroen Roovers <jer@gentoo.org> hal-info-20080508.ebuild:
+  Stable for HPPA (bug #222219).
 
   05 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
   hal-info-20080508.ebuild:
