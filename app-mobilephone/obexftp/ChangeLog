@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.38 2008/08/21 17:45:05 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.39 2008/08/25 17:25:51 nixnut Exp $
+
+  25 Aug 2008; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 224409
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> obexftp-0.21.ebuild:
   Stable on sparc
