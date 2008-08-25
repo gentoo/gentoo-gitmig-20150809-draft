@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.2 2008/05/29 16:54:46 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.3 2008/08/25 23:32:12 mr_bones_ Exp $
 
 inherit eutils python games
 
 MUS_P=${PN}-musicpack-1.0
 DESCRIPTION="clone of Bejeweled, a popular pattern-matching game"
-HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/jools/"
-SRC_URI="http://www.eecs.umich.edu/~pelzlpj/jools/${P}.tar.gz
-	 http://www.eecs.umich.edu/~pelzlpj/jools/${MUS_P}.tar.gz"
+HOMEPAGE="http://pessimization.com/software/jools/"
+SRC_URI="http://pessimization.com/software/jools/${P}.tar.gz
+	 http://pessimization.com/software/jools/${MUS_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
