@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.18 2008/06/09 20:22:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.19 2008/08/25 13:08:29 gentoofan23 Exp $
 
 inherit eutils
 
@@ -100,7 +100,6 @@ pkg_postinst() {
 	echo
 	elog 'The various IM transports for jabber are now separate packages,'
 	elog 'which you will need to install separately if you want them:'
-	elog '   net-im/jit - ICQ transport'
 	elog '   net-im/pymsn-t - MSN transport'
 	elog '   net-im/jud - Jabber User Directory'
 	elog '   net-im/yahoo-transport - Yahoo IM system'
