@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.121 2008/08/02 21:35:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.122 2008/08/25 20:19:48 jer Exp $
+
+  25 Aug 2008; Jeroen Roovers <jer@gentoo.org> libtorrent-0.12.2-r3.ebuild:
+  Stable for HPPA (bug #233122).
 
   02 Aug 2008; Markus Rothe <corsair@gentoo.org>
   libtorrent-0.12.2-r3.ebuild:
