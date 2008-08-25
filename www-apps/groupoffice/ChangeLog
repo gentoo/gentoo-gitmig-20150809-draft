@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/groupoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.24 2008/08/20 18:49:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.25 2008/08/25 15:31:05 armin76 Exp $
+
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org> groupoffice-2.18.6.ebuild:
+  alpha stable wrt #235058
 
   20 Aug 2008; Markus Meier <maekke@gentoo.org> groupoffice-2.18.6.ebuild:
   amd64 stable, bug #235058
