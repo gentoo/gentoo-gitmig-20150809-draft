@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.51 2008/07/18 13:28:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.52 2008/08/25 08:46:32 hawking Exp $
+
+  25 Aug 2008; Ali Polatel <hawking@gentoo.org> -ipython-0.8.1-r1.ebuild,
+  ipython-0.8.2.ebuild, -ipython-0.8.4.ebuild, ipython-0.8.4-r1.ebuild:
+  Use elisp-compile instead of elisp-comp, #235579. Drop old.
 
   18 Jul 2008; Olivier Crête <tester@gentoo.org> ipython-0.8.2.ebuild:
   Stable on amd64, bug #212241

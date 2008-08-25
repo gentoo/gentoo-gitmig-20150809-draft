@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.2.ebuild,v 1.6 2008/07/18 13:28:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.2.ebuild,v 1.7 2008/08/25 08:46:32 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -38,8 +38,7 @@ src_unpack() {
 src_compile() {
 	distutils_src_compile
 	if use emacs ; then
-		cd doc
-		elisp-comp ipython.el || die "elisp-comp failed"
+		elisp-compile doc/ipython.el || die "elisp-compile failed"
 	fi
 }
 
