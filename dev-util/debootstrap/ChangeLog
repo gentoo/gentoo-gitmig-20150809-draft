@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.68 2008/08/25 17:07:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.69 2008/08/25 23:43:21 jer Exp $
+
+  25 Aug 2008; Jeroen Roovers <jer@gentoo.org> +debootstrap-1.0.9.ebuild,
+  debootstrap-1.0.10.ebuild:
+  Readd old stable version. Drop 1.0.10 back to ~arch. Add dep on
+  app-arch/dpkg-1.14.20.
 
   25 Aug 2008; Jeroen Roovers <jer@gentoo.org> -debootstrap-1.0.9.ebuild:
   Remove old.
