@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.27 2008/08/25 16:51:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.28 2008/08/25 20:22:16 ulm Exp $
+
+  25 Aug 2008; Ulrich Mueller <ulm@gentoo.org> -files/cm-2.4.0-exec,
+  -files/71cm-gentoo.el, -cm-2.10.0.ebuild:
+  Remove old.
 
   25 Aug 2008; nixnut <nixnut@gentoo.org> cm-2.10.0-r1.ebuild:
   Stable on ppc wrt bug 235601
@@ -11,8 +15,7 @@
   24 Aug 2008; Markus Meier <maekke@gentoo.org> cm-2.10.0-r1.ebuild:
   amd64/x86 stable, bug #235601
 
-  07 Oct 2007; Marijn Schouten <hkBst@gentoo.org> +files/50cm-gentoo.el,
-  -cm-2.4.2.ebuild, +cm-2.10.0-r1.ebuild:
+  07 Oct 2007; Marijn Schouten <hkBst@gentoo.org> -cm-2.4.2.ebuild:
   remove old 2.4.2 stuff
 
 *cm-2.10.0-r1 (07 Oct 2007)
