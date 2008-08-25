@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.104 2008/08/24 11:09:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.105 2008/08/25 19:22:22 armin76 Exp $
+
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org> uw-imap-2007b.ebuild:
+  alpha/ia64 stable wrt #231258
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> uw-imap-2007b.ebuild:
   Stable on ppc64; bug #231258
