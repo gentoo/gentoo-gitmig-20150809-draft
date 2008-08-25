@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Date-Format
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.4 2008/08/24 14:23:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.5 2008/08/25 14:53:18 armin76 Exp $
+
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  Email-Date-Format-1.002.ebuild:
+  Add ~alpha/~ia64 wrt #235557
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org>
   Email-Date-Format-1.002.ebuild:
