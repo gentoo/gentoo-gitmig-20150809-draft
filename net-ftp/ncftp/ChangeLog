@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.71 2008/08/24 17:33:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.72 2008/08/25 02:17:12 jer Exp $
+
+  25 Aug 2008; Jeroen Roovers <jer@gentoo.org>
+  files/ncftp-3.2.2-build.patch:
+  Do not install $D/ESTDIR.
 
   24 Aug 2008; Jeroen Roovers <jer@gentoo.org>
   files/ncftp-3.2.2-build.patch:
