@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-LibIDN
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LibIDN/ChangeLog,v 1.6 2008/08/25 10:32:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LibIDN/ChangeLog,v 1.7 2008/08/25 14:29:27 armin76 Exp $
+
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org> Net-LibIDN-0.10.ebuild:
+  Add ~alpha/~ia64 wrt #235533
 
   25 Aug 2008; Alexis Ballier <aballier@gentoo.org> Net-LibIDN-0.10.ebuild:
   keyword ~sparc-fbsd
