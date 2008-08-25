@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.30 2008/08/11 13:12:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.31 2008/08/25 22:43:50 markusle Exp $
+
+  25 Aug 2008; Markus Dittrich <markusle@gentoo.org> qtiplot-0.9.6.2.ebuild:
+  Added missing dependency on x11-libs/qt-assistant:4 (fixes bug #235618).
 
   11 Aug 2008; Markus Dittrich <markusle@gentoo.org> qtiplot-0.9.6.2.ebuild:
   Added dependencies/check for qt3support (fixes bug #234316).
