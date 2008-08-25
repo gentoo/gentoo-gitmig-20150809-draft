@@ -1,3 +1,7 @@
+Fix bug #235632: Apparently this code is still triggered on 64-bit systems
+through configure, when configure is dealing with the proper LFS64 stuff
+already (or should allow the glibc wrapper to do so). -JeR
+
 --- libncftp/ncftp.h.orig	2008-08-25 18:55:38.000000000 +0200
 +++ libncftp/ncftp.h	2008-08-25 19:09:02.000000000 +0200
 @@ -165,17 +165,6 @@
