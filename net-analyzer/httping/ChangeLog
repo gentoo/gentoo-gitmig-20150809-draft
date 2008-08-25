@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.44 2008/08/14 14:55:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.45 2008/08/25 20:51:39 dertobi123 Exp $
+
+*httping-1.2.9 (25 Aug 2008)
+
+  25 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -httping-1.2.5.ebuild, +httping-1.2.9.ebuild:
+  Version bump, #234741
 
   14 Aug 2008; Raúl Porcel <armin76@gentoo.org> httping-1.2.6.ebuild:
   x86 stable, add ~sparc
