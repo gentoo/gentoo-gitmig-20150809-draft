@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.6 2008/07/28 21:30:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.7 2008/08/25 08:15:33 jokey Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 
 IUSE="X v4l crypt xinerama threads fbcon"
 
-DEPEND="dev-libs/lzo
+RDEPEND="dev-libs/lzo
 	sys-apps/tcp-wrappers
 	media-libs/jpeg
 	sys-libs/zlib
@@ -32,7 +32,8 @@ DEPEND="dev-libs/lzo
 		x11-libs/libXrandr
 		x11-libs/libXtst
 		x11-misc/xinput )"
-RDEPEND=${DEPEND}
+DEPEND="${RDEPEND}
+	X? ( x11-proto/inputproto )"
 
 pkg_setup() {
 	enewgroup italc

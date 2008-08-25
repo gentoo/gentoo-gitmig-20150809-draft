@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.10 2008/07/28 21:30:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.11 2008/08/25 08:15:33 jokey Exp $
+
+  25 Aug 2008; Markus Ullmann <jokey@gentoo.org> italc-1.0.3.ebuild:
+  Add missing inputproto dependency
 
   28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> italc-1.0.2.ebuild,
   italc-1.0.3.ebuild:
