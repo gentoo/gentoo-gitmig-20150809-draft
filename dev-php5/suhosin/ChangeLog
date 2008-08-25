@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.38 2008/08/25 17:25:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.39 2008/08/25 17:35:46 jer Exp $
+
+  25 Aug 2008; Jeroen Roovers <jer@gentoo.org> suhosin-0.9.27.ebuild:
+  Stable for HPPA (bug #235676).
 
   25 Aug 2008; Markus Meier <maekke@gentoo.org> suhosin-0.9.27.ebuild:
   x86 stable, bug #235676
