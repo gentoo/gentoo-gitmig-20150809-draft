@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.40.11.ebuild,v 1.1 2008/06/18 09:00:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.40.11.ebuild,v 1.2 2008/08/26 18:44:03 gentoofan23 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=""
+RDEPEND="!sys-libs/e2fsprogs-libs"
 DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/bc"
 
