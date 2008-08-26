@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore.init,v 1.1 2008/08/26 12:01:44 jokey Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Quassel Core"
+	start-stop-daemon --start --user $QUASSEL_USER --background --make-pidfile \
+	--pidfile /var/run/quassel.pid --exec /usr/bin/quasselcore -- ${QUASSEL_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Quassel Core"
+	start-stop-daemon --stop --user $QUASSEL_USER --pidfile /var/run/quassel.pid \
+	--exec /usr/bin/quasselcore
+	eend $?
+}

@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>net-irc</herd>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
+    <email>jokey@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="X">
