@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.1 2008/07/08 04:10:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.2 2008/08/26 09:09:53 grozin Exp $
+
+*mpmath-0.9 (26 Aug 2008)
+
+  26 Aug 2008; Andrey Grozin <grozin@gentoo.org> +mpmath-0.9.ebuild:
+  Version bump, new USE flag gmp
 
 *mpmath-0.8 (08 Jul 2008)
 
