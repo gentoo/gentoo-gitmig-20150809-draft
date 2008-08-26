@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.2 2008/08/23 21:28:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.3 2008/08/26 07:33:11 keri Exp $
 
 inherit elisp-common eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-contrib.patch
 	epatch "${FILESDIR}"/${P}-dss-prefix.patch
 	epatch "${FILESDIR}"/${P}-dss-pic.patch
+	epatch "${FILESDIR}"/${P}-dss-libpath.patch
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
