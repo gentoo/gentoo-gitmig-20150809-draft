@@ -1,9 +1,3 @@
-# Copyright 1999-2008 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.mask,v 1.3 2008/08/26 21:53:03 leio Exp $
-
-### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
-
 # Mart Raudsepp <leio@gentoo.org> (27 Aug 2008)
 # The Great GNOME 2.22 Mask (tm)
 # Masked for consistent GNOME experience, as full
