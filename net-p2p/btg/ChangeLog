@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.8 2008/06/20 17:28:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.9 2008/08/26 15:52:41 gentoofan23 Exp $
+
+  26 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> btg-0.9.7.ebuild:
+  stable amd64
 
 *btg-0.9.7 (20 Jun 2008)
 
