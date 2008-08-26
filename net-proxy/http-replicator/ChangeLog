@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/http-replicator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.21 2007/12/30 11:45:38 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.22 2008/08/26 18:33:44 griffon26 Exp $
+
+  26 Aug 2008; Maurice van der Pot <griffon26@gentoo.org>
+  -files/http-replicator-3.0-repcacheman-0.21,
+  +files/http-replicator-3.0-repcacheman-0.44-r1,
+  http-replicator-3.0-r1.ebuild:
+  Removed repcacheman version for old portage and added a new one for portage
+  2.2_rc6 and up (to prevent deprecation warnings).
 
   30 Dec 2007; Alin Năstac <mrness@gentoo.org>
   -files/http-replicator-3.0-repcacheman-0.33, -http-replicator-3.0.ebuild:

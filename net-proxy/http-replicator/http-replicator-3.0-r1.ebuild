@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.5 2007/12/05 16:57:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.6 2008/08/26 18:33:44 griffon26 Exp $
 
 inherit eutils
 
@@ -25,10 +25,10 @@ src_install(){
 	exeinto /usr/bin
 	doexe http-replicator
 	newexe "${FILESDIR}/http-replicator-3.0-callrepcacheman-0.1" repcacheman
-	if has_version '>=sys-apps/portage-2.0.51'; then
-		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44" repcacheman.py
+	if has_version '>=sys-apps/portage-2.2_rc6'; then
+		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44-r1" repcacheman.py
 	else
-		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.21" repcacheman.py
+		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44" repcacheman.py
 	fi
 
 	# init.d scripts
