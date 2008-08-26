@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-3.09.ebuild,v 1.1 2008/08/23 20:11:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-3.10.ebuild,v 1.1 2008/08/26 08:18:46 tove Exp $
 
 MODULE_AUTHOR=MARKOV
 inherit perl-module eutils
