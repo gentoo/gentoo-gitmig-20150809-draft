@@ -1,6 +1,18 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.31 2008/08/25 22:43:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.32 2008/08/26 03:07:35 markusle Exp $
+
+*qtiplot-0.9.7 (26 Aug 2008)
+
+  26 Aug 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/qtiplot-0.9.2-systemlibs.patch,
+  -files/qtiplot-0.9.4-systemlibs.patch,
+  -files/qtiplot-0.9.5-fitplugins.patch, -files/qtiplot-0.9.5-profile.patch,
+  -files/qtiplot-0.9.6-fitplugins.patch, -files/qtiplot-0.9.6-profile.patch,
+  +files/qtiplot-0.9.7-gcc4.3.patch, -qtiplot-0.9.4.ebuild,
+  -qtiplot-0.9.5-r1.ebuild, -qtiplot-0.9.6.ebuild, +qtiplot-0.9.7.ebuild:
+  Version bump (fixes #233610) and removed old ebuilds. Thanks much to
+  Alexey Shvetsov <alexxyum@gmail.com> for his patches.
 
   25 Aug 2008; Markus Dittrich <markusle@gentoo.org> qtiplot-0.9.6.2.ebuild:
   Added missing dependency on x11-libs/qt-assistant:4 (fixes bug #235618).

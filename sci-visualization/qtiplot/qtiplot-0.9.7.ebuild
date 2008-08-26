@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.5-r1.ebuild,v 1.1 2008/04/30 15:37:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.ebuild,v 1.1 2008/08/26 03:07:35 markusle Exp $
 
 EAPI="1"
-inherit eutils multilib qt4
+inherit eutils multilib qt4 fdo-mime python
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
-SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
+SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 	doc? ( mirror://gentoo/${P}-manual-en.tar.bz2 )"
 
 LICENSE="GPL-2"
@@ -20,8 +20,11 @@ for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
 
-CDEPEND=">=x11-libs/qwt-5.0.2
+CDEPEND=">=x11-libs/qwt-5.1
 	>=x11-libs/qwtplot3d-0.2.7
+	x11-libs/qt-gui:4
+	x11-libs/qt-qt3support:4
+	x11-libs/qt-assistant:4
 	>=dev-cpp/muParser-1.28
 	>=sci-libs/liborigin-20080225
 	!bindist? ( sci-libs/gsl )
@@ -37,19 +40,26 @@ RDEPEND="${CDEPEND}
 		dev-python/pygsl
 		sci-libs/scipy )"
 
+QT4_BUILT_WITH_USE_CHECK="qt3support"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-profile.patch
-	epatch "${FILESDIR}"/${P}-fitplugins.patch
+	epatch "${FILESDIR}"/${PN}-0.9.6.2-pro.patch
+	epatch "${FILESDIR}"/${PN}-0.9.6.2-fitplugins.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 
 	sed -i \
 		-e '/manual/d'\
 		-e '/3rd/d' \
 		qtiplot.pro || die "sed qtiplot.pro failed"
+
+	python_version
+
 	sed -i \
 		-e '/manual/d' \
 		-e "s:doc/${PN}:doc/${PF}:" \
+		-e "s:local/${PN}:$(get_libdir)/python${PYVER}/site-packages:" \
 		qtiplot/qtiplot.pro || die " sed for qtiplot/qtiplot.pro failed"
 
 	if ! use python; then
@@ -69,6 +79,7 @@ src_unpack() {
 		if ! use linguas_${l}; then
 			sed -i \
 				-e "s:translations/qtiplot_${l}.ts::" \
+				-e "s:translations/qtiplot_${l}.qm::" \
 				qtiplot/qtiplot.pro || die
 		fi
 	done
@@ -81,19 +92,40 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die 'emake install failed'
+	rm -f "${D}"/usr/share/${PN}/translations/*.ts
+	use python && chmod -x "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/qti_wordlist.txt
 
 	newicon qtiplot_logo.png qtiplot.png
 	make_desktop_entry qtiplot QtiPlot qtiplot
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}/html
-		doins -r "${WORKDIR}"/qtiplot-manual-en/* \
+		doins -r "${WORKDIR}"/qtiplot-manual/* \
 			|| die "install manual failed"
+		rm -rf "${D}"/usr/share/doc/${PF}/html/*/.svn
 	fi
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
 
 	if use python; then
-		insinto /etc
-		doins qtiplot/{qtiplotrc,qtiUtil}.py \
-			|| die "install python config failed"
+		python_version
+		python_mod_compile \
+			/usr/$(get_libdir)/python${PYVER}/site-packages/qti{plotrc,Util}.py
+	fi
+
+	if use doc; then
+		elog "On the first start, do Help -> Choose Help Folder"
+		elog "and select /usr/share/doc/${PF}/html"
+	fi
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+
+	if use python; then
+		python_version
+		python_mod_cleanup
 	fi
 }
