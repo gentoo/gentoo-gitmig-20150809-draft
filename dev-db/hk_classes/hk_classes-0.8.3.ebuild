@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3.ebuild,v 1.4 2008/05/21 15:54:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3.ebuild,v 1.5 2008/08/26 22:52:57 tgurr Exp $
 
-inherit eutils python
+inherit autotools eutils python
 
 # The tests themselves are broken.
 RESTRICT="strip test"
@@ -10,7 +10,7 @@ RESTRICT="strip test"
 P_DOCS="hk_classes-htmldocumentation-0.8"
 
 MY_P=${P/_alpha/-test}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -31,9 +31,12 @@ DEPEND=">=media-libs/fontconfig-2.5.0-r1
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	# gcc-4.3 compatibility. Fixes bug 218913.
+	# gcc-4.3 compatibility. Fixes bug 218913 and 230251.
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+
+	eautoreconf
 }
 
 src_compile() {

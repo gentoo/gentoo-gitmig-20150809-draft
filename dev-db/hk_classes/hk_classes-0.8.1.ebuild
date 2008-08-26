@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.11 2008/05/21 15:54:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.12 2008/08/26 22:52:57 tgurr Exp $
 
 inherit eutils python
 
@@ -10,7 +10,7 @@ RESTRICT="strip test"
 P_DOCS="hk_classes-htmldocumentation-0.8"
 
 MY_P=${P/_alpha/-test}a
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -45,12 +45,12 @@ src_compile() {
 }
 
 src_install() {
-	use doc && dohtml -r ${WORKDIR}/${MY_P}/documentation/api
-	use doc && dohtml -r ${WORKDIR}/hk_classestutorial
-	use doc && dohtml -r ${WORKDIR}/hk_kdeclssestutorial
-	use doc && dohtml -r ${WORKDIR}/knodascriptingtutorial
-	use doc && dohtml -r ${WORKDIR}/knodatutorial
-	use doc && dohtml -r ${WORKDIR}/pythonreference
+	use doc && dohtml -r "${WORKDIR}"/${MY_P}/documentation/api
+	use doc && dohtml -r "${WORKDIR}"/hk_classestutorial
+	use doc && dohtml -r "${WORKDIR}"/hk_kdeclssestutorial
+	use doc && dohtml -r "${WORKDIR}"/knodascriptingtutorial
+	use doc && dohtml -r "${WORKDIR}"/knodatutorial
+	use doc && dohtml -r "${WORKDIR}"/pythonreference
 
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 }

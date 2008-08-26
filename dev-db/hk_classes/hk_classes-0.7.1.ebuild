@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.9 2008/05/21 15:54:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.10 2008/08/26 22:52:57 tgurr Exp $
 
 inherit eutils
 
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-amd64.patch
+	epatch "${FILESDIR}"/${PN}-amd64.patch
 }
 
 src_compile() {
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	use doc && dohtml -r ${WORKDIR}/${P_DOCS}/*
-	use doc && dohtml -r ${WORKDIR}/knodapythondoc
-	make DESTDIR=${D} install || die
+	use doc && dohtml -r "${WORKDIR}"/${P_DOCS}/*
+	use doc && dohtml -r "${WORKDIR}"/knodapythondoc
+	make DESTDIR="${D}" install || die
 }
