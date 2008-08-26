@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xbae
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.6 2008/06/27 10:16:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.7 2008/08/26 18:57:42 jer Exp $
+
+  26 Aug 2008; Jeroen Roovers <jer@gentoo.org> xbae-4.60.4.ebuild:
+  Stable for HPPA (bug #235754).
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> xbae-4.60.4.ebuild:
   Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
