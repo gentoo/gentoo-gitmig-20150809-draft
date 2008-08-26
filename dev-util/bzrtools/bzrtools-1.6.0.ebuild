@@ -1,14 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.1.0.ebuild,v 1.1 2008/01/15 09:29:36 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.6.0.ebuild,v 1.1 2008/08/26 17:55:23 pva Exp $
 
 NEED_PYTHON=2.4
-
 inherit distutils versionator
 
 DESCRIPTION="bzrtools is a useful collection of utilities for bzr."
 HOMEPAGE="http://bazaar.canonical.com/BzrTools"
-SRC_URI="http://panoramicfeedback.com/opensource/${P}.tar.gz"
+SRC_URI="http://launchpad.net/bzrtools/stable/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,8 +16,13 @@ IUSE=""
 
 DEPEND="=dev-util/bzr-$(get_version_component_range 1-2)*"
 
-DOCS="CREDITS NEWS.Shelf TODO.Shelf"
+DOCS="AUTHORS CREDITS NEWS NEWS.Shelf README README.Shelf TODO TODO.heads TODO.Shelf"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 PYTHON_MODNAME=bzrlib
+
+src_test() {
+	einfo "Running testsuite..."
+	"${S}"/test.py || die "Testsuite failed."
+}
