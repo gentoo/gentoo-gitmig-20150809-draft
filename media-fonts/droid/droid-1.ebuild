@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-1.ebuild,v 1.2 2008/07/25 06:23:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-1.ebuild,v 1.3 2008/08/26 21:05:42 pva Exp $
 
 inherit font
 
@@ -14,4 +14,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}"
+FONT_S=${WORKDIR}
 FONT_SUFFIX="ttf"
