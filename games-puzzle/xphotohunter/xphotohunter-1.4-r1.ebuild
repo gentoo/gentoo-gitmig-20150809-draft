@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4-r1.ebuild,v 1.3 2008/08/25 23:00:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4-r1.ebuild,v 1.4 2008/08/26 01:07:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -17,6 +17,8 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/imlib"
+RDEPEND="${DEPEND}
+	media-sound/esound"
 
 src_unpack() {
 	unpack ${A}
