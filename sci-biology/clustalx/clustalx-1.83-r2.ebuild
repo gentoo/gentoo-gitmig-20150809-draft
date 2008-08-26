@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.6 2008/06/27 10:19:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.7 2008/08/26 15:05:46 ribosome Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="sci-biology/clustalw
 	sci-biology/ncbi-tools
-	x11-libs/openmotif"
+	x11-libs/openmotif
+	x11-libs/libXpm"
 
 S="${WORKDIR}/${PN}${PV}.sun"
 
@@ -33,7 +34,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	cp makefile.linux makefile
 	sed -e "s/CC	= cc/CC	= $(tc-getCC)/" \
 		-e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" \
