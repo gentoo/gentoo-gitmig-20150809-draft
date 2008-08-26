@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r7.ebuild,v 1.7 2008/08/26 06:43:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r7.ebuild,v 1.8 2008/08/26 06:56:22 grobian Exp $
+
+EAPI=1
 
 inherit autotools eutils gnustep-base flag-o-matic
 
@@ -13,7 +15,7 @@ SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.
 	http://www.gentoo.org/~grobian/distfiles/${P}-patchset-${PATCHVER}.tar.bz2"
 HOMEPAGE="http://www.windowmaker.info/"
 
-IUSE="gif gnustep jpeg nls png tiff modelock xinerama"
+IUSE="gif gnustep jpeg nls png tiff modelock +vdesktop xinerama"
 DEPEND="x11-libs/libXv
 	x11-libs/libXft
 	x11-libs/libXt
@@ -127,7 +129,8 @@ src_compile() {
 	fi
 
 	# enable new features, need to be done via defines
-	append-flags -DBOUNCE_APP -DNEWAPPICON -DVIRTUAL_DESKTOP
+	append-flags -DBOUNCE_APP -DNEWAPPICON
+	use vdesktop && append-flags -DVIRTUAL_DESKTOP
 
 	# default settings with $myconf appended
 	econf \
