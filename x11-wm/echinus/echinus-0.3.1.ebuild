@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/echinus-0.3.1.ebuild,v 1.1 2008/08/22 23:20:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/echinus-0.3.1.ebuild,v 1.2 2008/08/26 11:43:57 yngwin Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,8 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXft"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
