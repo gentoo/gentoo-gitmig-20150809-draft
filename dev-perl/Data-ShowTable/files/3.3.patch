@@ -1,13 +1,13 @@
---- libdata-showtable-perl-3.3.orig/showtable
-+++ libdata-showtable-perl-3.3/showtable
+--- showtable
++++ showtable
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl5
 +#!/usr/bin/perl
  # showtable - read data and show it
  #
  #    Copyright (C) 1996,1997  Alan K. Stebbens <aks@sgi.com>
---- libdata-showtable-perl-3.3.orig/ShowTable.pm
-+++ libdata-showtable-perl-3.3/ShowTable.pm
+--- ShowTable.pm
++++ ShowTable.pm
 @@ -721,7 +721,7 @@
  
  S<  >B<ShowHTMLTable> I<\@titles>, I<\@types>, I<\@widths>, I<\&row_sub>
@@ -17,3 +17,23 @@
  
  The B<ShowHTMLTable> displays one or more rows of columns of data using
  the HTML C<\<TABLE\>> feature.  In addition to the usual parameter arguments
+--- t/Test-Setup.pl
++++ t/Test-Setup.pl
+@@ -19,7 +19,7 @@
+ 
+ sub talk { print STDERR @_; }
+ 
+-sub start_tests {
++sub start_tests($) {
+     my $count = shift;		# how many tests?
+     mkdir("$testdir/out",0755)  unless -d "$testdir/out";
+     print "1..$count\n";	# tell harness how many tests
+@@ -50,7 +50,7 @@
+ 
+ # run_test $num, \&sub;
+ 
+-sub run_test {
++sub run_test($&) {
+     my $num = shift;
+     my $sub = shift;
+ 
