@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1802 2008/08/26 00:31:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1803 2008/08/26 09:35:26 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  26 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Process last rites on gnustep-apps/mylibrary and gnustep-apps/helpviewer
 
   26 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Process last rite of sys-auth/pam_ssh_agent for Flameeyes.
