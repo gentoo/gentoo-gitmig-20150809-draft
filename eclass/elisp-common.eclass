@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.43 2008/08/27 06:53:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.44 2008/08/27 11:21:32 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -175,9 +175,9 @@ elisp-compile() {
 	eend $? "batch-byte-compile failed"
 }
 
-# @FUNCTION: elisp-comp
-# @USAGE: <list of elisp files>
-# @DESCRIPTION:
+# #FUNCTION: elisp-comp
+# #USAGE: <list of elisp files>
+# #DESCRIPTION:
 # Byte-compile interdependent Emacs Lisp files.
 #
 # This function byte-compiles all ".el" files which are part of its
