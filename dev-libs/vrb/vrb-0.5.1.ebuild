@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.5.1.ebuild,v 1.2 2007/07/02 15:02:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.5.1.ebuild,v 1.3 2008/08/27 19:05:54 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://vrb.slashusr.org/download/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="static"
 RESTRICT="strip"
 
