@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/volume
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.5 2008/06/27 16:02:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.6 2008/08/27 22:11:39 ulm Exp $
+
+*volume-1.0 (27 Aug 2008)
+
+  27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +volume-1.0.ebuild,
+  -volume-20070510.ebuild:
+  Version bump, new numbered upstream release 1.0. Remove the 20070510
+  snapshot which is identical with 1.0.
 
 *volume-20070510 (27 Jun 2008)
 
