@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1806 2008/08/27 13:07:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1807 2008/08/27 18:33:58 jokey Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  arch/amd64/no-multilib/package.mask,
+  default-linux/amd64/2006.0/no-multilib/package.mask,
+  default-linux/amd64/2006.1/no-multilib/package.mask,
+  default-linux/amd64/2007.0/no-multilib/package.mask,
+  features/64bit-native/package.mask, hardened/linux/x86/package.mask,
+  hardened/x86/package.mask:
+  Rename virtualbox maskings according to package move
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org> updates/3Q-2008:
   Move virtualbox to -ose
