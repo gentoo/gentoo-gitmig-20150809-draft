@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/emacs-wget-0.5.0.ebuild,v 1.10 2007/12/02 14:41:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/emacs-wget-0.5.0.ebuild,v 1.11 2008/08/27 13:22:34 ulm Exp $
 
 inherit elisp
 
@@ -17,7 +17,3 @@ RDEPEND=">=net-misc/wget-1.8.2"
 
 SITEFILE=65${PN}-gentoo.el
 DOCS="ChangeLog README* USAGE*"
-
-src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
-}

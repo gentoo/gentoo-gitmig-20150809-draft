@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.10.2.ebuild,v 1.6 2008/07/04 02:42:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.10.2.ebuild,v 1.7 2008/08/27 13:30:13 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,3 @@ IUSE=""
 S="${WORKDIR}/${MY_P}/emacs"
 SITEFILE=50${PN}-gentoo.el
 DOCS="README README.itz"
-
-src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
-}

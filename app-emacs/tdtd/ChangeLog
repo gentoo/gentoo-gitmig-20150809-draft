@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tdtd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.13 2007/10/16 06:57:14 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.14 2008/08/27 13:37:39 ulm Exp $
+
+  27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> tdtd-0.7.1-r1.ebuild:
+  Use eclass default instead of elisp-comp, bug 235442.
 
   16 Oct 2007; Ulrich Mueller <ulm@gentoo.org> tdtd-0.7.1-r1.ebuild:
   amd64 stable, bug #195512.
