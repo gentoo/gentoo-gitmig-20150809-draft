@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-emnu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.24 2008/08/27 20:46:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.25 2008/08/27 21:40:11 ribosome Exp $
+
+  27 Aug 2008; Olivier Fisette <ribosome@gentoo.org>
+  -embassy-emnu-1.05-r4.ebuild:
+  Pruning version that will never be stabilised.
 
 *embassy-emnu-1.05-r5 (27 Aug 2008)
 
