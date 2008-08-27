@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.25 2008/08/27 18:03:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.26 2008/08/27 18:09:10 jokey Exp $
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org> quassel-0.3.0.ebuild:
+  Add some testing keywords
 
   27 Aug 2008; Raúl Porcel <armin76@gentoo.org> quassel-0.3.0.ebuild:
   Add ~sparc
