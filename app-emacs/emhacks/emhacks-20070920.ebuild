@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emhacks/emhacks-20070920.ebuild,v 1.1 2008/03/23 02:21:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emhacks/emhacks-20070920.ebuild,v 1.2 2008/08/27 07:32:44 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,6 @@ DEPEND="jde? ( app-emacs/jde )"
 RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
-EMACSFLAGS="${EMACSFLAGS} -L ."
 
 src_unpack() {
 	unpack ${A}
