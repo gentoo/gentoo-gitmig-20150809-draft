@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.145 2008/08/27 16:57:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.146 2008/08/27 16:58:47 ranger Exp $
+
+  27 Aug 2008; Brent Baude <ranger@gentoo.org> hdparm-8.9.ebuild:
+  stable ppc64, bug 235926
 
   27 Aug 2008; Brent Baude <ranger@gentoo.org> hdparm-8.9.ebuild:
   stable ppc, bug 235926
