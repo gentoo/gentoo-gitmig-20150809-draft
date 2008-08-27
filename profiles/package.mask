@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8921 2008/08/27 20:48:34 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8922 2008/08/27 20:56:40 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -687,11 +687,6 @@ dev-cpp/libwefts
 # (#224637) No longer supported upstream and
 # subject to multiple GLSAs.  Masked for removal in 30 days.
 =app-emulation/vmware-workstation-4.5.3.19414-r7
-
-# Jeremy Olexa <darkside@gentoo.org> (14 Jun 2008)
-# Doesn't compile. Removed by treecleaners in ~30 days. bug #199168
-# Later version in tree works.
-=net-analyzer/nepenthes-0.2.0
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (12 Jun 2008)
 # Testing new version.
