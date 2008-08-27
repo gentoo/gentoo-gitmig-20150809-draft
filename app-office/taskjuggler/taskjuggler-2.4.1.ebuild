@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.1.ebuild,v 1.2 2008/08/12 04:08:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.1.ebuild,v 1.3 2008/08/27 16:20:57 carlo Exp $
+
+EAPI=1
 
 inherit eutils qt3 flag-o-matic
 
@@ -15,10 +17,10 @@ IUSE="arts kde"
 SLOT="0"
 
 # Otherwise compilation will break for amd64 or when using -Os
-DEPEND="=x11-libs/qt-3*
-	kde? ( >=kde-base/kdelibs-3
-		|| ( kde-base/libkdepim kde-base/kdepim  )
-		|| ( kde-base/libkcal kde-base/kdepim ) )
+DEPEND="x11-libs/qt:3
+	kde? ( kde-base/kdelibs:3.5
+		|| ( kde-base/libkdepim:3.5 kde-base/kdepim:3.5  )
+		|| ( kde-base/libkcal:3.5 kde-base/kdepim:3.5 ) )
 	app-text/openjade
 	dev-libs/libxslt
 	>=dev-perl/Class-MethodMaker-2.02
