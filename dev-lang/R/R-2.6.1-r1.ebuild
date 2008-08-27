@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.12 2008/04/15 15:27:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.13 2008/08/27 23:01:40 markusle Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -56,6 +56,13 @@ pkg_setup() {
 	# this is needed for linking on ppc64 (see bug #210229)
 	use ppc64 && append-flags -mminimal-toc
 }
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-javareconf.patch
+}
+
 
 src_compile() {
 	# fix packages.html for doc (bug #205103)

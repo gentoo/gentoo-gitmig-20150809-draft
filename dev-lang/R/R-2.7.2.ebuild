@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.2.ebuild,v 1.2 2008/02/26 17:32:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.1 2008/08/27 23:01:40 markusle Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="doc java jpeg lapack minimal nls png readline tk X"
+IUSE="doc java jpeg lapack minimal nls png readline tk X cairo"
 
 # common depends
 CDEPEND="dev-lang/perl
@@ -21,6 +21,7 @@ CDEPEND="dev-lang/perl
 	app-arch/bzip2
 	virtual/blas
 	virtual/ghostscript
+	cairo? ( x11-libs/cairo x11-libs/pango )
 	readline? ( sys-libs/readline )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
@@ -38,7 +39,7 @@ RDEPEND="${CDEPEND}
 	app-arch/zip
 	java? ( >=virtual/jre-1.5 )"
 
-R_HOME=/usr/$(get_libdir)/R
+R_HOME=/usr/$(get_libdir)/${PN}
 
 pkg_setup() {
 	FORTRAN="gfortran ifc g77"
@@ -47,11 +48,34 @@ pkg_setup() {
 	[[ ${FORTRANC} = gfortran || ${FORTRANC} = if* ]] && \
 		export FCFLAGS="${FCFLAGS:-${FFLAGS}}"
 
-	filter-ldflags -Wl,-Bdirect -Bdirect
+	# make sure cairo and pango are both compiled with "X"
+	# use flag (see bug #231970)
+	if use cairo; then
+		if ( ! built_with_use x11-libs/cairo X ); then
+			eerror "x11-libs/cairo needs to be built with USE=\"X\""
+			die "Please rebuild x11-libs/cairo with USE=\"X\""
+		fi
 
-	# this is needed to properly compile additional R packages
-	# (see bug #152379)
-	append-flags -std=gnu99
+		if ( ! built_with_use x11-libs/pango X ); then
+			eerror "x11-libs/pango needs to be built with USE=\"X\""
+			die "Please rebuild x11-libs/pango with USE=\"X\""
+		fi
+	fi
+
+	filter-ldflags -Wl,-Bdirect -Bdirect
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-javareconf.patch
+	epatch "${FILESDIR}"/${PN}-2.7.1-test-fix.patch
+}
+
+src_test() {
+	# we need to unset R_HOME otherwise some of the diff based
+	# tests fail due to warnings in the output
+	R_HOME="" make check || die "Some of the tests failed"
 }
 
 src_compile() {
@@ -61,6 +85,11 @@ src_compile() {
 		-e "s:../../library:../../../../$(get_libdir)/R/library:g" \
 		src/library/tools/R/packageshtml.R \
 		|| die "sed failed"
+
+	# fix Rscript
+	sed -i \
+		-e "s:-DR_HOME='\"\$(rhome)\"':-DR_HOME='\"${R_HOME}\"':" \
+		src/unix/Makefile.in || die "sed unix Makefile failed"
 
 	use lapack && \
 		export LAPACK_LIBS="$(pkg-config --libs lapack)"
@@ -88,6 +117,7 @@ src_compile() {
 		$(use_with !minimal recommended-packages) \
 		$(use_with png libpng) \
 		$(use_with readline) \
+		$(use_with cairo) \
 		$(use_with X x) \
 		|| die "econf failed"
 	emake || die "emake failed"
