@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.5 2008/04/21 01:51:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.6 2008/08/27 05:51:18 je_fro Exp $
+
+  27 Aug 2008; Jeff Gardner <je_fro@gentoo.org> gchemutils-0.8.7.ebuild:
+  goffice and libgsf need to be built with USE=gnome. check in pkg_setup and
+  die if this isn't the case Thanks to Robert Bridge in bug #224261.
 
   21 Apr 2008; Jeff Gardner <je_fro@gentoo.org> -gchemutils-0.8.4.ebuild,
   gchemutils-0.8.7.ebuild:
