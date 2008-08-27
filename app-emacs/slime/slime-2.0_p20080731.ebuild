@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.2 2008/08/01 16:07:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.3 2008/08/27 08:41:25 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -43,8 +43,8 @@ src_unpack() {
 }
 
 src_compile() {
-	elisp-comp *.el || die "Cannot compile core Elisp files"
-	EMACSFLAGS="${EMACSFLAGS} -L . -L contrib -l slime" \
+	elisp-compile *.el || die "Cannot compile core Elisp files"
+	BYTECOMPFLAGS="${BYTECOMPFLAGS} -L contrib -l slime" \
 		elisp-compile contrib/*.el || die "Cannot compile contrib Elisp files"
 	emake -j1 -C doc slime.info || die "Cannot build info docs"
 	if use doc; then

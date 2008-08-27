@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20061118.ebuild,v 1.5 2008/08/01 13:01:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20061118.ebuild,v 1.6 2008/08/27 08:41:25 ulm Exp $
 
 inherit elisp eutils
 
@@ -21,7 +21,7 @@ CLPACKAGE=swank
 SITEFILE=70${PN}-gentoo.el
 
 src_compile() {
-	elisp-comp *.el || die
+	elisp-compile *.el || die
 	use doc && make -C doc slime.info
 }
 
