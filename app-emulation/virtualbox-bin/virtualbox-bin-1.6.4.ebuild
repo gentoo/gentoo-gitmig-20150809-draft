@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.4.ebuild,v 1.2 2008/08/27 12:25:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.4.ebuild,v 1.3 2008/08/27 13:40:48 jokey Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( ${MY_P}_amd64.run )
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="additions headless sdk vboxwebsrv"
 
 RDEPEND="!app-emulation/virtualbox-ose

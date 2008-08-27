@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.21 2008/08/27 12:32:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.22 2008/08/27 13:40:18 jokey Exp $
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  virtualbox-modules-1.6.4.ebuild:
+  Stable on x86 and amd64
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
   -files/virtualbox-modules_2.6.24.patch,

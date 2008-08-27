@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.4.ebuild,v 1.1 2008/08/27 12:39:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.4.ebuild,v 1.2 2008/08/27 13:43:38 jokey Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="additions alsa headless pulseaudio sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin

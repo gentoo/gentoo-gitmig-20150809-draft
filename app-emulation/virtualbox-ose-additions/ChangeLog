@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.1 2008/08/27 12:36:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.2 2008/08/27 13:42:57 jokey Exp $
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  virtualbox-ose-additions-1.6.4.ebuild:
+  Stable on x86 and amd64
 
 *virtualbox-ose-additions-1.6.4 (27 Aug 2008)
 *virtualbox-ose-additions-1.6.2 (27 Aug 2008)
