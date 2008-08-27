@@ -4,4 +4,4 @@ if [ ! -e ~/.vendetta ] ; then
 	cp -vR "DATADIR"/install ~/.vendetta
 fi
 
-exec "DATADIR"/vendetta
+exec "DATADIR"/vendetta "$@"
