@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.3 2008/03/18 19:58:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.4 2008/08/27 21:44:28 tgurr Exp $
 
 inherit eutils
 
@@ -113,8 +113,4 @@ src_install() {
 
 	emake DESTDIR="${D}" install install-udev \
 		|| die "emake install failed"
-}
-
-pkg_postinst() {
-	udevcontrol reload_rules
 }
