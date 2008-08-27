@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.16 2008/05/14 02:41:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.17 2008/08/27 20:54:36 darkside Exp $
+
+  27 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -nepenthes-0.2.0.ebuild:
+  remove old, bug #199168
 
 *nepenthes-0.2.2 (13 May 2008)
 
