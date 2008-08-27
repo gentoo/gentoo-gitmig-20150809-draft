@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.6.4.ebuild,v 1.1 2008/08/10 14:49:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.6.4-r1.ebuild,v 1.1 2008/08/27 12:30:59 jokey Exp $
 
 inherit eutils linux-mod
 
@@ -17,7 +17,9 @@ IUSE="X"
 RDEPEND="x11-libs/libXt
 		amd64? ( app-emulation/emul-linux-x86-xlibs )
 		X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
-			 ~x11-drivers/xf86-input-virtualbox-${PV} )"
+			 ~x11-drivers/xf86-input-virtualbox-${PV}
+			 x11-apps/xrandr
+			 x11-apps/xrefresh )"
 DEPEND="${RDEPEND}
 		sys-devel/bin86
 		sys-devel/dev86
@@ -62,7 +64,7 @@ src_compile() {
 		source ./env.sh
 
 		for each in	src/VBox/{Runtime,Additions/common} \
-		src/VBox/Additions/linux{sharefolders,daemon,xclient} ; do
+		src/VBox/Additions/linux{sharefolders,daemon} ; do
 				MAKE="kmk" emake || die "kmk failed"
 		done
 }
@@ -84,16 +86,20 @@ src_install() {
 
 		newinitd "${FILESDIR}"/${P}.initd ${PN}
 
-		# shared clipboard user service and xinit script
+		# VBoxClient user service and xrandr wrapper
 		if use X; then
 			insinto /usr/bin
-			doins vboxadd-xclient
-			fperms 4755 /usr/bin/vboxadd-xclient
+			doins VBoxClient
+			fperms 4755 /usr/bin/VBoxClient
 
 			dodir /etc/X11/xinit/xinitrc.d/
-			echo -e "#/bin/sh\n/usr/bin/vboxadd-xclient" \
-			>> "${D}/etc/X11/xinit/xinitrc.d/98vboxadd-xclient"
-			fperms 0755 /etc/X11/xinit/xinitrc.d/98vboxadd-xclient
+			echo -e "#/bin/sh\n/usr/bin/VBoxClient" \
+			>> "${D}/etc/X11/xinit/xinitrc.d/98VBoxClient"
+			fperms 0755 /etc/X11/xinit/xinitrc.d/98VBoxClient
+
+			cd "${S}"/src/VBox/Additions/x11/installer
+			newins VBoxRandR.sh VBoxRandR
+			fperms 0755 /usr/bin/VBoxRandR
 		fi
 
 		# udev rule for vboxdrv

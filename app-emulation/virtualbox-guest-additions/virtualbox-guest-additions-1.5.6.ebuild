@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.5.6.ebuild,v 1.1 2008/08/10 14:49:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.5.6.ebuild,v 1.2 2008/08/27 12:30:59 jokey Exp $
 
 inherit eutils linux-mod
 
