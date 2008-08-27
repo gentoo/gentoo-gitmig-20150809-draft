@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.402 2008/08/20 13:19:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.403 2008/08/27 20:57:32 zzam Exp $
+
+*udev-126 (27 Aug 2008)
+
+  27 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-stop-126.sh, +udev-126.ebuild:
+  Version bumped. Thanks to Polynomial-C for the ebuild. Build system
+  changed to autotools. This leads to no longer building a static library
+  for libvolume_id. Patched makefile to get correct libvolume_id.so version.
 
   20 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   update metadata maintainers
