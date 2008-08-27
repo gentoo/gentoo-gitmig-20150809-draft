@@ -1,10 +1,16 @@
 # ChangeLog for games-rpg/vendetta-online-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.2 2007/08/01 01:31:18 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.3 2008/08/27 00:19:28 nyhm Exp $
+
+*vendetta-online-bin-1.8.21 (27 Aug 2008)
+
+  27 Aug 2008; Tristan Heaven <nyhm@gentoo.org> +files/vendetta,
+  -vendetta-online-bin-1-r2.ebuild, +vendetta-online-bin-1.8.21.ebuild:
+  Version bump, bug #235418
 
   28 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +vendetta-online-bin-1-r2.ebuild:
-  Moved to games-fps for bug #184918.
+  Moved from games-fps for bug #184918.
 
 *vendetta-online-bin-1-r2 (15 Jan 2007)
 
