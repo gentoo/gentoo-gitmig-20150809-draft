@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.4.ebuild,v 1.1 2008/08/10 14:38:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.4.ebuild,v 1.2 2008/08/27 12:25:33 jokey Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit eutils fdo-mime qt3 pax-utils
 
 MY_P=VirtualBox-${PV}-Linux
 
-DESCRIPTION="family of powerful x86 virtualization products for enterprise as well as home use"
+DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( ${MY_P}_amd64.run )
 	x86? ( ${MY_P}_x86.run )"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="additions headless sdk vboxwebsrv"
 
-RDEPEND="!app-emulation/virtualbox
-	!app-emulation/virtualbox-additions
-	>=app-emulation/virtualbox-modules-${PV}
+RDEPEND="!app-emulation/virtualbox-ose
+	!app-emulation/virtualbox-ose-additions
+	~app-emulation/virtualbox-modules-${PV}
 	!headless? (
 		x11-libs/qt:3
 		x11-libs/libXcursor
@@ -167,7 +167,7 @@ pkg_postinst() {
 		elog "ln -s /usr/bin/kchmviewer /opt/VirtualBox/kchmviewer"
 		elog ""
 	fi
-	elog "You must be in the vboxusers group to use VirtualBox"
+	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""
 	elog "Warning:"
 	elog "Due to a bug which can cause a large amount of logging"

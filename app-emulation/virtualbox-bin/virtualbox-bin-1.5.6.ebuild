@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.4 2008/07/27 19:38:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.6.ebuild,v 1.5 2008/08/27 12:25:33 jokey Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit eutils fdo-mime qt3 pax-utils
 
 MY_P=VirtualBox_${PV}-1_Linux_${ARCH}.run
 
-DESCRIPTION="Softwarefamily of powerful x86 virtualization"
+DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}-1_Linux_amd64.run )
 	x86? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}-1_Linux_x86.run )"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="additions chm sdk"
 
-RDEPEND="!app-emulation/virtualbox
-	!app-emulation/virtualbox-additions
-	>=app-emulation/virtualbox-modules-${PV}
+RDEPEND="!app-emulation/virtualbox-ose
+	!app-emulation/virtualbox-ose-additions
+	=app-emulation/virtualbox-modules-1.5.7
 	virtual/xft
 	x11-libs/libXi
 	x11-libs/libX11
@@ -131,7 +131,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog ""
 	elog "To launch VirtualBox just type: \"VirtualBox\""
-	elog "You must be in the vboxusers group to use VirtualBox"
+	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""
 }
 
