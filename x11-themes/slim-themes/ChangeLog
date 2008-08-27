@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/slim-themes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.6 2007/09/08 12:10:29 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.7 2008/08/27 17:00:52 ranger Exp $
+
+  27 Aug 2008; Brent Baude <ranger@gentoo.org> slim-themes-1.2.3a.ebuild:
+  stable ppc, bug 209540
 
   08 Sep 2007; nixnut <nixnut@gentoo.org> slim-themes-1.2.3a.ebuild:
   Added ~ppc wrt bug 188305
