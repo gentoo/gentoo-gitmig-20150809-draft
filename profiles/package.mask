@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8919 2008/08/27 15:34:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8920 2008/08/27 19:37:14 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Schwarzott <zzam@gentoo.org> (27 Aug 2008)
+# Mask newest udev with changed build system
+# to make it correct before unmask (multilib and other stuff)
+=sys-fs/udev-126
 
 # Carsten Lohrje <carlo@gentoo.org> (27 Aug 2008)
 # Mask KDE 3.5.10 for day or two as minor issues will show up unevitably
