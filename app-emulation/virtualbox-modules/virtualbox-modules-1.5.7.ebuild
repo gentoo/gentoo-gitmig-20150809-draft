@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.7.ebuild,v 1.1 2008/04/21 20:26:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.7.ebuild,v 1.2 2008/08/27 12:32:54 jokey Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="!=app-emulation/virtualbox-9999"
+RDEPEND="!=app-emulation/virtualbox-ose-9999"
 
 S=${WORKDIR}/vboxdrv
 

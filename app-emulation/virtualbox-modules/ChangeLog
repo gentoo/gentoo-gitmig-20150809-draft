@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.20 2008/08/10 14:31:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.21 2008/08/27 12:32:54 jokey Exp $
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-modules_2.6.24.patch,
+  -virtualbox-modules-1.5.2-r1.ebuild, -virtualbox-modules-1.5.4.ebuild,
+  -virtualbox-modules-1.5.6.ebuild, virtualbox-modules-1.5.7.ebuild,
+  virtualbox-modules-1.6.2.ebuild, virtualbox-modules-1.6.4.ebuild:
+  Adjust blockers for renaming
 
 *virtualbox-modules-1.6.4 (10 Aug 2008)
 
