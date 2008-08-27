@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.43 2008/07/04 18:25:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.44 2008/08/27 16:04:41 armin76 Exp $
+
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> sdparm-1.03.ebuild:
+  alpha/ia64/sparc stable
 
 *sdparm-1.03 (04 Jul 2008)
 
