@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xbae
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.7 2008/08/26 18:57:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.8 2008/08/27 13:06:42 gentoofan23 Exp $
+
+  27 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> xbae-4.60.4.ebuild:
+  stable amd64, bug 235755
 
   26 Aug 2008; Jeroen Roovers <jer@gentoo.org> xbae-4.60.4.ebuild:
   Stable for HPPA (bug #235754).
