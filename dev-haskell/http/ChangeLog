@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/http
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.7 2007/12/20 13:28:19 dcoutts Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.8 2008/08/27 19:12:55 armin76 Exp $
+
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> http-3001.0.0.ebuild:
+  Re-add ~sparc
 
 *http-3001.0.0 (20 Dec 2007)
 
