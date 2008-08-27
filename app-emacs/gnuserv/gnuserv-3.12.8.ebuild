@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.2 2007/12/01 11:23:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.3 2008/08/27 07:24:51 ulm Exp $
 
 inherit elisp eutils
 
@@ -22,8 +22,4 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/gnuserv-3.12.7-path-xemacs.patch"
-}
-
-src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
 }
