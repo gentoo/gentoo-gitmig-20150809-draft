@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.1.ebuild,v 1.1 2008/08/11 13:13:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.1.ebuild,v 1.2 2008/08/27 14:43:46 armin76 Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.trolltech.com/"
 
 LICENSE="|| ( GPL-3 GPL-2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 DEPEND="~x11-libs/qt-gui-${PV}

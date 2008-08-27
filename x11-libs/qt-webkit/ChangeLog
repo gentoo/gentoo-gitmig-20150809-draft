@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.10 2008/08/11 13:13:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.11 2008/08/27 14:43:46 armin76 Exp $
+
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.4.1.ebuild:
+  Mark -sparc since it sigbuses like webkit-gtk
 
 *qt-webkit-4.4.1 (11 Aug 2008)
 
