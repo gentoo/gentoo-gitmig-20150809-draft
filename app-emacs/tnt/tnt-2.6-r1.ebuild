@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.6-r1.ebuild,v 1.4 2008/02/06 00:06:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.6-r1.ebuild,v 1.5 2008/08/27 13:50:31 ulm Exp $
 
 inherit elisp
 
@@ -14,10 +14,6 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
-
-src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
-}
 
 src_install() {
 	elisp-install ${PN} *.{el,elc}
