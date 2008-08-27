@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.1 2008/08/27 20:57:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.2 2008/08/27 21:10:10 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator autotools
 
@@ -148,7 +148,7 @@ src_install() {
 
 	# our udev hooks into the rc system
 	insinto /$(get_libdir)/rcscripts/addons
-	newins "${FILESDIR}"/udev-start-122-r1.sh udev-start.sh
+	newins "${FILESDIR}"/udev-start-126.sh udev-start.sh
 	newins "${FILESDIR}"/udev-stop-126.sh udev-stop.sh
 
 	# The udev-post init-script
