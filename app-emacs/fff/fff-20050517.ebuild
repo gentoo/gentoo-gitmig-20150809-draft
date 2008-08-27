@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/fff-20050517.ebuild,v 1.3 2007/11/22 07:33:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/fff-20050517.ebuild,v 1.4 2008/08/27 07:14:56 ulm Exp $
 
 inherit elisp
 
@@ -20,7 +20,3 @@ RDEPEND="|| (
 	)"
 
 SITEFILE=50${PN}-gentoo.el
-
-src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
-}
