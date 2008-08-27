@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.131 2008/07/10 16:45:23 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.132 2008/08/27 15:57:41 fuzzyray Exp $
+
+*gentoolkit-0.2.4_rc6 (27 Aug 2008)
+
+  27 Aug 2008; Paul Varner <fuzzyray@gentoo.org>
+  +gentoolkit-0.2.4_rc6.ebuild:
+  gentoolkit-0.2.4_rc6 version bump. This fixes bugs #203414, #232019,
+  #232270, #232599, #232797, #232803, #232938, #234358, and #234584. Bug
+  #170220 tracks all fixes made for the gentoolkit-0.2.4 release.
 
 *gentoolkit-0.2.4_rc5 (10 Jul 2008)
 
