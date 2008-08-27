@@ -1,6 +1,9 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.23 2008/08/27 12:06:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.24 2008/08/27 12:17:45 jokey Exp $
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Update metadata
 
 *openfire-3.6.0 (27 Aug 2008)
 
