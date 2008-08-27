@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>jokey@gentoo.org</email>
+  <name>Markus Ullmann</name>
+</maintainer>
+<maintainer>
+  <email>swapon@gmail.com</email>
+  <name>Alessio Cassibba</name>
+</maintainer>
+<use>
+	<flag name='additions'>Install Guest System Tools ISO</flag>
+	<flag name='headless'>Build without any graphic frontend</flag>
+	<flag name='sdk'>Enable building of SDK</flag>
+</use>
+</pkgmetadata>

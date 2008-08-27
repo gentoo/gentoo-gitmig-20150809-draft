@@ -1,0 +1,66 @@
+--- src/apps/Makefile.kmk	1970-01-01 01:00:00.000000000 +0100
++++ src/apps/Makefile.kmk	2008-08-02 16:06:11.358197514 +0200
+@@ -0,0 +1,28 @@
++# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.1 2008/08/27 12:39:00 jokey Exp $
++## @file
++# Sub-Makefile for the external apps.
++#
++
++#
++# Copyright (C) 2006-2007 Sun Microsystems, Inc.
++#
++# Sun Microsystems, Inc. confidential
++# All rights reserved
++#
++
++DEPTH = ../..
++include $(KBUILD_PATH)/subheader.kmk
++
++ifdef VBOX_WITH_KCHMVIEWER
++ ifneq ($(wildcard $(PATH_SUB_CURRENT)/kchmviewer-2.6),)
++  include $(PATH_SUB_CURRENT)/kchmviewer-2.6/Makefile.kmk
++ endif
++endif
++ifneq ($(wildcard $(PATH_SUB_CURRENT)/tunctl),)
++ ifeq ($(KBUILD_TARGET),linux)
++  include $(PATH_SUB_CURRENT)/tunctl/Makefile.kmk
++ endif
++endif
++
++include $(KBUILD_PATH)/subfooter.kmk
++
+--- src/apps/tunctl/Makefile.kmk	1970-01-01 01:00:00.000000000 +0100
++++ src/apps/tunctl/Makefile.kmk	2008-08-02 16:06:37.447936207 +0200
+@@ -0,0 +1,32 @@
++# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.1 2008/08/27 12:39:00 jokey Exp $
++## @file
++# Sub-Makefile for VBoxTunctl
++#
++# VBoxTunctl is identical to tunctl from Usermode Linux	except for the name.
++#
++
++#
++# Copyright (C) 2006-2007 Sun Microsystems, Inc.
++#
++# This file is part of VirtualBox Open Source Edition (OSE), as
++# available from http://www.virtualbox.org. This file is free software;
++# you can redistribute it and/or modify it under the terms of the GNU
++# General Public License (GPL) as published by the Free Software
++# Foundation, in version 2 as it comes in the "COPYING" file of the
++# VirtualBox OSE distribution. VirtualBox OSE is distributed in the
++# hope that it will be useful, but WITHOUT ANY WARRANTY of any kind.
++#
++# Please contact Sun Microsystems, Inc., 4150 Network Circle, Santa
++# Clara, CA 95054 USA or visit http://www.sun.com if you need
++# additional information or have any questions.
++#
++
++DEPTH = ../../..
++include $(KBUILD_PATH)/subheader.kmk
++
++PROGRAMS.linux += VBoxTunctl
++VBoxTunctl_TEMPLATE = VBOXR3EXE
++VBoxTunctl_SOURCES  = tunctl.c
++
++include $(KBUILD_PATH)/subfooter.kmk
++

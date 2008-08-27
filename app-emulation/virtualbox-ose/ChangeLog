@@ -1,0 +1,256 @@
+# ChangeLog for app-emulation/virtualbox
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.1 2008/08/27 12:39:00 jokey Exp $
+
+*virtualbox-ose-9999 (27 Aug 2008)
+*virtualbox-ose-1.6.4 (27 Aug 2008)
+*virtualbox-ose-1.6.2 (27 Aug 2008)
+*virtualbox-ose-1.5.6 (27 Aug 2008)
+
+  27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-ose-1.5.6-remove-alsa.patch,
+  +files/virtualbox-ose-1.5.6-remove-unused.patch,
+  +files/virtualbox-ose-1.6.2-remove-unused.patch,
+  +files/virtualbox-ose-1.6.4-fix-missing-makefiles.patch,
+  +files/virtualbox-ose-1.6.4-remove-unused.patch,
+  +files/virtualbox-ose.desktop, +files/virtualbox-ose-config,
+  +files/virtualbox-ose-interfaces, +files/virtualbox-ose-wrapper,
+  +metadata.xml, +virtualbox-ose-1.5.6.ebuild, +virtualbox-ose-1.6.2.ebuild,
+  +virtualbox-ose-1.6.4.ebuild, +virtualbox-ose-9999.ebuild:
+  Rename from virtualbox to virtualbox-ose
+
+*virtualbox-1.6.4 (10 Aug 2008)
+
+  10 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.6.4-fix-missing-makefiles.patch,
+  +files/virtualbox-1.6.4-remove-unused.patch, files/virtualbox-wrapper,
+  +virtualbox-1.6.4.ebuild:
+  Add version bump from my overlay wrt bug #233683
+
+  28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+  27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> virtualbox-1.5.2-r1.ebuild,
+  virtualbox-1.5.4.ebuild, virtualbox-1.5.4-r1.ebuild,
+  virtualbox-1.5.6.ebuild, virtualbox-1.6.2.ebuild, virtualbox-9999.ebuild:
+  QA: Get rid of deprecated qt_min_version().
+
+*virtualbox-1.6.2 (13 Jun 2008)
+
+  13 Jun 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/virtualbox-1.6.2-remove-unused.patch, files/virtualbox.desktop,
+  files/virtualbox-wrapper, +virtualbox-1.6.2.ebuild:
+  copy changes from jokey's overlay to the tree as jokey requested
+
+  02 May 2008; Tristan Heaven <nyhm@gentoo.org> virtualbox-1.5.6.ebuild:
+  Fix virtualbox-modules dependency so 1.5.7 can be installed, bug #218198
+
+  06 Mar 2008; Christoph Mende <angelos@gentoo.org>
+  virtualbox-1.5.4-r1.ebuild:
+  Stable on amd64, bug #208905
+
+  04 Mar 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-1.5.4-r1.ebuild:
+  Stable on x86 wrt bug #208905
+
+  26 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  virtualbox-1.5.6.ebuild:
+  Fix patch naming.
+
+*virtualbox-1.5.6 (25 Feb 2008)
+
+  25 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +virtualbox-1.5.6.ebuild:
+  Version bump, as requested by the proxy-maintainer Alessio Cassibba.
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  Drop keywords in live ebuild
+
+*virtualbox-1.5.4-r1 (13 Jan 2008)
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.5.4-remove-unused.patch, +virtualbox-1.5.4-r1.ebuild:
+  Version bump to prevent building of guest additions, thanks to x-drum for
+  providing the patch
+
+  06 Jan 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-1.5.4.ebuild,
+  virtualbox-9999.ebuild:
+  Add libXt dependency wrt bug #204674
+
+*virtualbox-1.5.4 (05 Jan 2008)
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.5.4-remove-alsa.patch, +virtualbox-1.5.4.ebuild,
+  virtualbox-9999.ebuild:
+  Version bump wrt bug #203893 thanks to x-drum
+
+  03 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-1.5.4.ebuild, virtualbox-9999.ebuild:
+  remove redundant cd statements
+
+  02 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-1.5.2.ebuild, -files/virtualbox-1.5.2-remove-alsa.patch,
+  -files/virtualbox-1.5.2-remove-splitted-stuff.patch,
+  +virtualbox-1.5.4.ebuild, +files/virtualbox-1.5.4-remove-alsa.patch,
+  virtualbox-9999.ebuild, files/virtualbox.desktop:
+  version bump; add pulseaudio use flag; fix remove alsa patch; drop unneeded
+  files; disable vboxdrv kernel module compilation
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org> files/virtualbox.desktop,
+  virtualbox-1.5.2-r1.ebuild:
+  Some cosmetics to desktop file, thanks to betelgeuse in bug #196832
+
+*virtualbox-1.5.2-r1 (03 Nov 2007)
+
+  03 Nov 2007; Markus Ullmann <jokey@gentoo.org> files/virtualbox-wrapper,
+  -virtualbox-1.4.0.ebuild, -virtualbox-1.5.2.ebuild,
+  +virtualbox-1.5.2-r1.ebuild:
+  Fix desktop entry for bug #196832, typo in wrapper and HAL warning. Thanks
+  to Alessio for providing needed modifications
+
+  29 Oct 2007; Dawid Węgliński <cla@gentoo.org> virtualbox-1.5.2.ebuild:
+  Stable on x86
+
+*virtualbox-1.5.2 (22 Oct 2007)
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-1.5.0-remove-alsa.patch,
+  -files/virtualbox-1.5.0-remove-splitted-stuff.patch,
+  +files/virtualbox-1.5.2-remove-alsa.patch,
+  +files/virtualbox-1.5.2-remove-splitted-stuff.patch,
+  +files/virtualbox-config, +files/virtualbox-interfaces,
+  files/virtualbox-wrapper, -virtualbox-1.5.0-r1.ebuild,
+  +virtualbox-1.5.2.ebuild, virtualbox-9999.ebuild:
+  Version bump wrt bug #196424 thanks to Alessio for the ebuilds
+
+  07 Oct 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  add blockers for virtualbox-additions bug #194183, thanks to Alessio
+
+*virtualbox-1.5.0-r1 (17 Sep 2007)
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  files/virtualbox-1.5.0-remove-alsa.patch,
+  files/virtualbox-1.5.0-remove-splitted-stuff.patch,
+  -virtualbox-1.5.0.ebuild, +virtualbox-1.5.0-r1.ebuild,
+  virtualbox-9999.ebuild:
+  Revbump to fix HAL mess and fix permissions for VBoxTunctl, bug #191473
+
+  04 Sep 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  fix group creation, bug #184504
+
+*virtualbox-1.5.0 (04 Sep 2007)
+
+  04 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-1.3.8-remove-alsa.patch,
+  -files/virtualbox-1.3.8-remove-splitted-stuff.patch,
+  +files/virtualbox-1.5.0-remove-alsa.patch,
+  +files/virtualbox-1.5.0-remove-splitted-stuff.patch,
+  -virtualbox-1.3.8.ebuild, +virtualbox-1.5.0.ebuild:
+  Version bump wrt bug #191142
+
+  23 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  virtualbox-1.3.8.ebuild, virtualbox-1.4.0.ebuild, virtualbox-9999.ebuild:
+  Port fixes from jokey's overay; thanks to x-drum: remove USE flag additions,
+  there are no matching additions available for the live ebuild, remove
+  vditool, fix headers
+
+  22 Jun 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/virtualbox.desktop, virtualbox-1.3.8.ebuild,
+  virtualbox-1.4.0.ebuild:
+  Port changes from jokey's overlay; thanks to x-drum: minor changes to
+  desktop entry; fix missing fperms; adjust perms for VirtualBox's
+  executables; remove virtual/libstdc++ from DEPEND, no longer required by
+  kBuild; fix USE flag hal in src_compile
+
+  06 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.4.0-remove-alsa.patch,
+  +files/virtualbox-1.4.0-remove-splitted-stuff.patch:
+  Required patches not added
+
+*virtualbox-1.4.0 (06 Jun 2007)
+
+  06 Jun 2007; Markus Ullmann <jokey@gentoo.org> +virtualbox-1.4.0.ebuild:
+  Version bump, thanks to Alessio
+
+  03 Jun 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  Fix hal use dep bug #180565
+
+  31 May 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-1.3.8.ebuild,
+  virtualbox-9999.ebuild:
+  Apply build fix from dev overlay, thanks to x-drum :)
+
+  13 May 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-1.3.6-remove-alsa.patch,
+  -files/virtualbox-1.3.6-wrapper, -virtualbox-1.3.6-r1.ebuild,
+  virtualbox-1.3.8.ebuild, virtualbox-9999.ebuild:
+  Fix for sdl useflag bug #177335
+
+  21 Apr 2007; Raúl Porcel <armin76@gentoo.org> virtualbox-1.3.8.ebuild:
+  x86 stable
+
+*virtualbox-1.3.8 (16 Mar 2007)
+*virtualbox-1.3.6-r1 (16 Mar 2007)
+
+  16 Mar 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.3.8-remove-alsa.patch,
+  +files/virtualbox-1.3.8-remove-splitted-stuff.patch,
+  +files/virtualbox-wrapper, -virtualbox-1.3.4-r1.ebuild,
+  -virtualbox-1.3.4-r2.ebuild, -virtualbox-1.3.6.ebuild,
+  +virtualbox-1.3.6-r1.ebuild, +virtualbox-1.3.8.ebuild:
+  Version bump and minor bugfixes
+
+  11 Mar 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  Missing IUSE, thanks jakub
+
+*virtualbox-1.3.6 (28 Feb 2007)
+*virtualbox-1.3.4-r2 (28 Feb 2007)
+
+  28 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.3.6-remove-alsa.patch,
+  +files/virtualbox-1.3.6-wrapper, +virtualbox-1.3.4-r2.ebuild,
+  +virtualbox-1.3.6.ebuild, virtualbox-9999.ebuild:
+  Version bump, thanks to x-drum for the hard work
+
+  25 Feb 2007; <genstef@gentoo.org> virtualbox-1.3.4-r1.ebuild,
+  virtualbox-9999.ebuild:
+  use KV_DIR only after linux-mod_pkg_setup, bug 168051
+
+  21 Feb 2007; Simon Stelling <blubb@gentoo.org> virtualbox-9999.ebuild:
+  re-keyword ~amd64 per bug 167001 comment #6
+
+  16 Feb 2007; Markus Ullmann <jokey@gentoo.org> -virtualbox-1.3.4.ebuild,
+  virtualbox-1.3.4-r1.ebuild, virtualbox-9999.ebuild:
+  Fix ROOT
+
+  16 Feb 2007; Simon Stelling <blubb@gentoo.org> virtualbox-1.3.4.ebuild,
+  virtualbox-1.3.4-r1.ebuild, virtualbox-9999.ebuild:
+  mark -amd64; bug 167001
+
+  16 Feb 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-1.3.4.ebuild,
+  virtualbox-1.3.4-r1.ebuild, virtualbox-9999.ebuild:
+  Fix typo bug #167134
+
+*virtualbox-1.3.4-r1 (15 Feb 2007)
+
+  15 Feb 2007; Markus Ullmann <jokey@gentoo.org> +files/virtualbox.desktop,
+  metadata.xml, +virtualbox-1.3.4-r1.ebuild, virtualbox-9999.ebuild:
+  Lots of improvements such as creating groups, adding vbox iso and more. Thanks
+  To Alessio Cassibba for the good work
+
+  12 Feb 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-1.3.4.ebuild,
+  virtualbox-9999.ebuild:
+  Incorportage amd64 fixes from bug #163930 thanks to raphael@neo-tix.com
+
+*virtualbox-1.3.4 (12 Feb 2007)
+
+  12 Feb 2007; Markus Ullmann <jokey@gentoo.org> +virtualbox-1.3.4.ebuild:
+  Add released version
+
+  16 Jan 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  latest libxslt is needed, fixing dep
+
+*virtualbox-9999 (15 Jan 2007)
+
+  15 Jan 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +virtualbox-9999.ebuild:
+  Inital ebuild for virtual box, live one as there is no snapshot file currently
+
