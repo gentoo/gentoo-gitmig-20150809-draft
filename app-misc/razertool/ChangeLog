@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/razertool
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.1 2008/08/27 08:44:28 voyageur Exp $
+
+*razertool-0.0.7 (27 Aug 2008)
+
+  27 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +razertool-0.0.7.ebuild:
+  Initial commit, thanks Paul Bredbury <brebs@sent.com> for the ebuild.
+  Closes bug #144982
+
