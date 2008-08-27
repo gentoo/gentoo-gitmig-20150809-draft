@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.7 2008/08/26 15:05:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.8 2008/08/27 23:15:53 ribosome Exp $
+
+EAPI=1
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~sparc"
 IUSE=""
 
-DEPEND="sci-biology/clustalw
+DEPEND="sci-biology/clustalw:1
 	sci-biology/ncbi-tools
 	x11-libs/openmotif
 	x11-libs/libXpm"

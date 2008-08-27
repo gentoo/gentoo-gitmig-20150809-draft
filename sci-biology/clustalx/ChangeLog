@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/clustalx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.14 2008/08/26 15:05:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.15 2008/08/27 23:15:53 ribosome Exp $
+
+  27 Aug 2008; Olivier Fisette <ribosome@gentoo.org>
+  clustalx-1.83-r2.ebuild:
+  Depend on ClustalW 1.x as ClustalX 2.x will soon enter Portage.
 
   26 Aug 2008; Olivier Fisette <ribosome@gentoo.org>
   clustalx-1.83-r2.ebuild:
