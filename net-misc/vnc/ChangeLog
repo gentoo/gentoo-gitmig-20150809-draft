@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.107 2008/07/14 17:39:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.108 2008/08/27 20:36:37 armin76 Exp $
+
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r4.ebuild:
+  Mark -arm
 
   14 Jul 2008; Raúl Porcel <armin76@gentoo.org> files/vnc.initd:
   Fix init script, bug #231492
