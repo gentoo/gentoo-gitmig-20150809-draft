@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.36 2008/08/26 18:58:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.37 2008/08/27 13:08:57 gentoofan23 Exp $
+
+  27 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  grace-5.1.22-r1.ebuild:
+  stable amd64, bug 235754
 
   26 Aug 2008; Jeroen Roovers <jer@gentoo.org> grace-5.1.22-r1.ebuild:
   Stable for HPPA (bug #235754).
