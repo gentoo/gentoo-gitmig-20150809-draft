@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1.ebuild,v 1.10 2007/10/08 14:34:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1.ebuild,v 1.11 2008/08/28 06:43:44 ulm Exp $
 
 inherit elisp
 
@@ -17,5 +17,5 @@ DOCS="CONTRIBUTORS"
 SITEFILE=50http-emacs-gentoo.el
 
 src_compile() {
-	elisp-comp http-*.el || die "elisp-comp failed"
+	elisp-compile http-*.el || die "elisp-compile failed"
 }

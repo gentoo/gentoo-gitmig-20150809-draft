@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/http-emacs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.10 2007/10/16 21:25:14 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.11 2008/08/28 06:43:44 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> files/51http-emacs-gentoo.el,
+  http-emacs-1.1.ebuild, http-emacs-1.1-r1.ebuild:
+  Use elisp-compile instead of elisp-comp, bug 235442.
 
 *http-emacs-1.1-r1 (16 Oct 2007)
 
