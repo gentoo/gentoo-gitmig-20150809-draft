@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.2 2008/07/28 21:43:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.3 2008/08/28 19:19:26 bicatali Exp $
+
+  28 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org> gle-4.1.2b.ebuild:
+  Added qt-4.4 deps, make -j1 install to catch some data files, and tested
+  on amd64.
 
   28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> gle-4.1.2b.ebuild:
   QA: Get rid of deprecated qt4_min_version(). Please fix your ebuilds to

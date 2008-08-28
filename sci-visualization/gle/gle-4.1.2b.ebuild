@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.2 2008/07/28 21:43:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.3 2008/08/28 19:19:26 bicatali Exp $
 
 EAPI=1
 
@@ -19,28 +19,24 @@ SRC_URI="mirror://sourceforge/glx/${MY_P}-src.zip
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="X qt4 jpeg png tiff doc emacs vim-syntax"
 
-DEPEND="sys-libs/ncurses
+CDEPEND="sys-libs/ncurses
 	X? ( x11-libs/libX11 )
-	qt4? ( =x11-libs/qt-4.3*:4 )
+	qt4? ( || ( x11-libs/qt-gui:4 =x11-libs/qt-4.3*:4 ) )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	emacs? ( virtual/emacs )
+	emacs? ( virtual/emacs )"
+
+DEPEND="${CDEPEND}
 	app-arch/unzip"
 
-RDEPEND="virtual/ghostscript
+RDEPEND="${CDEPEND}
+	virtual/ghostscript
 	virtual/latex-base
-	sys-libs/ncurses
-	X? ( x11-libs/libX11 )
-	qt4? ( =x11-libs/qt-4.3*:4 )
-	jpeg? ( media-libs/jpeg )
-	png? ( media-libs/libpng )
-	tiff? ( media-libs/tiff )
-	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 S="${WORKDIR}"/gle4
@@ -60,12 +56,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	# -jN failed to install some data files
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	dodoc README.txt
 
 	if use qt4; then
 		newicon src/gui/images/gle_icon.png gle.png
-		make_desktop_entry qgle GLE gle
+q		make_desktop_entry qgle GLE gle
 		newdoc src/gui/readme.txt gui_readme.txt
 	fi
 
