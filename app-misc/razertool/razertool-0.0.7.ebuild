@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7.ebuild,v 1.1 2008/08/27 08:44:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7.ebuild,v 1.2 2008/08/28 19:12:17 voyageur Exp $
 
 inherit eutils
 
@@ -49,9 +49,16 @@ src_install() {
 		|| die "newins failed"
 
 	dodoc AUTHORS ChangeLog NEWS README
+
+	# Icon and desktop entry
+	dosym /usr/share/${PN}/pixmaps/${PN}-icon.png /usr/share/pixmaps/${PN}-icon.png
+	make_desktop_entry "razertool-gtk" "RazerTool" ${PN}-icon "GTK;Settings;HardwareSettings"
 }
 
 pkg_postinst() {
+	elog "Razer Copperhead mice need firmware version 6.20 or higher"
+	elog "to work properly. Running ${PN} on mice with older firmwares"
+	elog "might lead to random USB-disconnects."
 	if use hal ; then
 		elog "To run as non-root, add yourself to the plugdev group:"
 		elog "   gpasswd -a <user> plugdev"
