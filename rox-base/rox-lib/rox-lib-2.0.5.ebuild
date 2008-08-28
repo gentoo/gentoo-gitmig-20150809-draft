@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5.ebuild,v 1.4 2008/06/04 13:15:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5.ebuild,v 1.5 2008/08/28 17:47:19 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rox/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=rox-base/rox-2.2.0
