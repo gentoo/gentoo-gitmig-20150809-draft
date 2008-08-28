@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1810 2008/08/27 20:56:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1811 2008/08/28 18:25:27 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  28 Aug 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Masking app-arch/rpm2targz-9.0.0.1g as it breaks too many packages, bug
+  #235290
 
   27 Aug 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   nepenthes-0.2.0 was removed from the tree, bug #199168
