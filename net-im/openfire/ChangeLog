@@ -1,6 +1,9 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.24 2008/08/27 12:17:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.25 2008/08/28 15:10:07 jokey Exp $
+
+  28 Aug 2008; Markus Ullmann <jokey@gentoo.org> openfire-3.6.0.ebuild:
+  Stable on x86 wrt security bug #229515
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Update metadata
