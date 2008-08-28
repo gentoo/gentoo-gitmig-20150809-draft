@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wiki
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.19 2007/11/16 15:26:43 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.20 2008/08/28 08:12:34 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> emacs-wiki-2.72-r1.ebuild:
+  Use elisp-compile instead of elisp-comp, bug 235442.
 
   16 Nov 2007; Ulrich Mueller <ulm@gentoo.org> emacs-wiki-2.72-r1.ebuild:
   Byte compilation fails with Emacs 21, add NEED_EMACS=22. Emacs 22 includes

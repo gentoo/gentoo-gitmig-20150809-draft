@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/mldonkey-0.0.4b-r1.ebuild,v 1.5 2008/03/22 15:09:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/mldonkey-0.0.4b-r1.ebuild,v 1.6 2008/08/28 08:15:37 ulm Exp $
 
 inherit elisp eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	elisp-comp ml*.el || die "elisp-comp failed"
+	elisp-compile ml*.el || die "elisp-compile failed"
 }
 
 pkg_postinst() {

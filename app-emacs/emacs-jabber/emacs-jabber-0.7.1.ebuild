@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7.1.ebuild,v 1.8 2007/10/15 22:04:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7.1.ebuild,v 1.9 2008/08/28 08:07:58 ulm Exp $
 
 inherit elisp
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	elisp-comp *.el || die "elisp-comp failed"
+	elisp-compile *.el || die "elisp-compile failed"
 	makeinfo jabber.texi || die "makeinfo failed"
 }
 

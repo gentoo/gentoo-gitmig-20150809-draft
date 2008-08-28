@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.16 2008/01/23 10:58:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.17 2008/08/28 08:07:58 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.7.1.ebuild:
+  Use elisp-compile instead of elisp-comp, bug 235442.
 
   23 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
   files/70emacs-jabber-gentoo.el, -emacs-jabber-0.7-r1.ebuild:
