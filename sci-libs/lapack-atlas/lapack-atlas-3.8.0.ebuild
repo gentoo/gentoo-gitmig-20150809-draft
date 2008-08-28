@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.13 2008/04/23 08:37:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.14 2008/08/28 09:51:15 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -20,7 +20,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 CDEPEND="virtual/blas
 	virtual/cblas
@@ -66,6 +66,9 @@ src_unpack() {
 	else
 		archselect="-b 32"
 	fi
+
+	# Remove -m64 on alpha, since the compiler doesn't support it
+	use alpha && sed -i -e 's/-m64//g' "${S}"/CONFIG/src/probe_comp.c
 
 	../configure \
 		--cc="$(tc-getCC)" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.1 2008/08/16 10:52:39 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.2 2008/08/28 09:51:15 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -67,6 +67,9 @@ src_unpack() {
 	else
 		archselect="-b 32"
 	fi
+
+	# Remove -m64 on alpha, since the compiler doesn't support it
+	use alpha && sed -i -e 's/-m64//g' "${S}"/CONFIG/src/probe_comp.c
 
 	# unfortunately, atlas-3.9.0 chokes when passed
 	# x86_64-pc-linux-gnu-gcc and friends instead of
