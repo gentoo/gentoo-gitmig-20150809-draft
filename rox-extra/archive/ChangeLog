@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.17 2008/07/29 15:07:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.18 2008/08/28 19:18:53 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> archive-2.2.ebuild:
+  Marked stable on amd64
 
   29 Jul 2008; Jim Ramsay <lack@gentoo.org> metadata.xml,
   -archive-2.1-r3.ebuild, archive-2.2.ebuild:
