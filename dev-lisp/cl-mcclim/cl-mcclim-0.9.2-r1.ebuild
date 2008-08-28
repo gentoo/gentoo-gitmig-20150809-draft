@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.5 2007/10/27 10:18:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.6 2008/08/28 17:25:30 ulm Exp $
 
 inherit common-lisp elisp-common eutils
 
@@ -36,7 +36,9 @@ src_unpack() {
 src_compile() {
 	addwrite /var/cache/fonts/
 	use doc && make -C Doc manual.ps
-	use emacs && cp ${ELISP_SOURCES} . && elisp-comp *.el
+	if use emacs; then
+		elisp-compile ${ELISP_SOURCES} || die "elisp-compile failed"
+	fi
 }
 
 src_install() {
@@ -55,9 +57,10 @@ src_install() {
 	dodoc INSTALL* README TODO Copyright ReleaseNotes/* Webpage/clim-paper.pdf
 	use doc && dodoc Doc/manual.ps
 	if use emacs; then
-		insinto /usr/share/emacs/site-lisp/${PN}
-		elisp-install ${PN} *.el *.elc || die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+		elisp-install ${PN} ${ELISP_SOURCES} ${ELISP_SOURCES//.el/.elc} \
+			|| die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+			|| die "elisp-site-file-install failed"
 	fi
 }
 
