@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.380 2008/08/28 15:44:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.381 2008/08/28 15:52:55 aballier Exp $
+
+  28 Aug 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6i-r2.ebuild:
+  Fix automagic on some X libs, by Natanael Copa <natanael.copa@gmail.com>,
+  bug #235903.
 
   28 Aug 2008; Alexis Ballier <aballier@gentoo.org> -vlc-0.8.6i.ebuild,
   -vlc-0.8.6i-r1.ebuild, -vlc-0.9.0.ebuild:

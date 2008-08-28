@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6i-r2.ebuild,v 1.5 2008/08/25 18:24:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6i-r2.ebuild,v 1.6 2008/08/28 15:52:55 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -208,7 +208,7 @@ src_compile () {
 		$(use_enable flac) \
 		$(use_enable vorbis) \
 		$(use_enable theora) \
-		$(use_enable X x11) \
+		$(use_enable X x11) $(use_enable X screen) \
 		$(use_enable xv xvideo) \
 		$(use_enable xinerama) \
 		$(use_enable opengl glx) $(use_enable opengl) \
