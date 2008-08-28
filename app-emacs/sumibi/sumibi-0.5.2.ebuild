@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sumibi/sumibi-0.5.2.ebuild,v 1.2 2007/07/03 09:19:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sumibi/sumibi-0.5.2.ebuild,v 1.3 2008/08/28 08:34:45 ulm Exp $
 
 inherit elisp
 
@@ -9,15 +9,23 @@ HOMEPAGE="http://www.sumibi.org/"
 SRC_URI="mirror://sourceforge.jp/sumibi/17176/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
 SLOT="0"
-DEPEND=""
+KEYWORDS="~x86"
 IUSE=""
+
 SITEFILE=50${PN}-gentoo.el
-DOCS="README CREDITS CHANGELOG"
 
 src_compile() {
 	cd client/elisp
-	elisp-comp *.el || die "elisp-comp failed"
-	mv *.el* ..
+	elisp-compile *.el || die "elisp-compile failed"
+}
+
+src_install() {
+	cd client/elisp
+	elisp-install ${PN} *.{el,elc} || die "elisp-install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		|| die "elisp-site-file-install failed"
+
+	cd "${S}"
+	dodoc README CREDITS CHANGELOG
 }
