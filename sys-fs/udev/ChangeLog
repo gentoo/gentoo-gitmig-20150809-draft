@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.405 2008/08/28 09:19:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.406 2008/08/28 16:18:59 zzam Exp $
+
+  28 Aug 2008; Matthias Schwarzott <zzam@gentoo.org> udev-126.ebuild:
+  Change user-message about udevadm and initramfs, as there are no longer
+  any symlinks but only udevadm executable, thanks to polynomial-c for
+  noticing.
 
   28 Aug 2008; Matthias Schwarzott <zzam@gentoo.org> udev-126.ebuild:
   Use configure parameters as designed. (--prefix vs. --exec-prefix). No

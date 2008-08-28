@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.3 2008/08/28 09:19:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.4 2008/08/28 16:18:59 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator autotools
 
@@ -319,8 +319,8 @@ pkg_postinst() {
 
 	ewarn "If you build an initramfs including udev, then please"
 	ewarn "make sure that the /sbin/udevadm binary gets included,"
-	ewarn "as the helper apps udevinfo, udevtrigger, ... are now"
-	ewarn "only symlinks to udevadm."
+	ewarn "and your scripts changed to use it,as it replaces the"
+	ewarn "old helper apps udevinfo, udevtrigger, ..."
 
 	ewarn
 	ewarn "mount options for directory /dev are no longer"
