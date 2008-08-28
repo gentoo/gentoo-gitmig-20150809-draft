@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/distel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.2 2008/06/15 15:11:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.3 2008/08/28 07:33:30 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> distel-3.2_p20071103.ebuild:
+  Use elisp-compile instead of elisp-comp, bug 235442.
 
   15 Jun 2008; Ulrich Mueller <ulm@gentoo.org> distel-3.2_p20071103.ebuild:
   Require dev-lang/erlang built with USE=emacs, bug 227097.

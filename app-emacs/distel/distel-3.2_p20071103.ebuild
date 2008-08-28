@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-3.2_p20071103.ebuild,v 1.2 2008/06/15 15:11:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-3.2_p20071103.ebuild,v 1.3 2008/08/28 07:33:30 ulm Exp $
 
 inherit elisp eutils
 
@@ -28,7 +28,7 @@ pkg_setup() {
 src_compile() {
 	emake base info || die "emake failed"
 	cd elisp
-	elisp-comp *.el || die "elisp-comp failed"
+	elisp-compile *.el || die "elisp-compile failed"
 }
 
 src_install() {
