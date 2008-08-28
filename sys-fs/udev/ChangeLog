@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.404 2008/08/27 21:10:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.405 2008/08/28 09:19:09 zzam Exp $
+
+  28 Aug 2008; Matthias Schwarzott <zzam@gentoo.org> udev-126.ebuild:
+  Use configure parameters as designed. (--prefix vs. --exec-prefix). No
+  longer need to patch pkgconfig path.
 
   27 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/udev-start-126.sh, udev-126.ebuild:

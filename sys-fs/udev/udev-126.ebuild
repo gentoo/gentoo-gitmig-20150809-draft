@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.2 2008/08/27 21:10:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-126.ebuild,v 1.3 2008/08/28 09:19:09 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator autotools
 
@@ -80,9 +80,6 @@ src_unpack() {
 		udev/udev_rules.c \
 		$(find -name "Makefile.*")
 
-	# fix pkgconfig-file install path
-	sed -e '/^pkgconfigdir/s#$(prefix)#/usr#' -i extras/volume_id/lib/Makefile.am
-
 	# fix version of volume_id lib
 	sed -e 's/-version-info/-version-number/' -i extras/volume_id/lib/Makefile.am
 
@@ -93,8 +90,7 @@ src_compile() {
 	filter-flags -fprefetch-loop-arrays
 
 	econf \
-		--prefix=/ \
-		--includedir=/usr/include \
+		--exec-prefix=/ \
 		--with-libdir-name=$(get_libdir) \
 		--disable-debug \
 		--disable-logging \
