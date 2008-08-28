@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.2 2008/07/10 14:36:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.3 2008/08/28 13:49:20 bicatali Exp $
 
 inherit eutils flag-o-matic multilib autotools fortran toolchain-funcs
 
@@ -28,8 +28,8 @@ pkg_setup() {
 	fi
 	if use openmp &&
 		[[ $(tc-getCC)$ == *gcc* ]] &&
-		[[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-		! built_with_use sys-devel/gcc openmp
+		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+		! built_with_use sys-devel/gcc openmp )
 then
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
 		ewarn "If you want to build fftw with OpenMP, abort now,"
