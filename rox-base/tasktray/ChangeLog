@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/tasktray
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.26 2008/05/11 16:00:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.27 2008/08/28 16:30:25 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> tasktray-0.7.ebuild:
+  Marking stable on amd64
 
 *tasktray-0.7 (11 May 2008)
 
