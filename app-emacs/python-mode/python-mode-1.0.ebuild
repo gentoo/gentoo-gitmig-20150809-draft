@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.11 2007/10/06 20:31:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.12 2008/08/28 06:08:11 ulm Exp $
 
 inherit elisp distutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 src_compile() {
 	distutils_src_compile
-	elisp-comp *.el || die
+	elisp_src_compile
 }
 
 src_install() {
