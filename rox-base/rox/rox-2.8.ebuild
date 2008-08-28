@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.8.ebuild,v 1.1 2008/05/20 02:58:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.8.ebuild,v 1.2 2008/08/28 17:55:16 lack Exp $
 
 EAPI=1
 inherit eutils multilib
@@ -14,21 +14,22 @@ SRC_URI="mirror://sourceforge/rox/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE="svg +video"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.2
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.14
-	svg? ( gnome-base/librsvg )"
+	svg? ( gnome-base/librsvg )
+	>=rox-base/zeroinstall-injector-0.31-r1
+	"
 
 PDEPEND="rox-base/mime-editor
 		rox-base/thumbs
 		video? ( rox-extra/videothumbnail )"
 
 DEPEND="${RDEPEND}
-	>=rox-base/zeroinstall-injector-0.31-r1
 	>=dev-util/pkgconfig-0.20"
 
 APPNAME="ROX-Filer"
