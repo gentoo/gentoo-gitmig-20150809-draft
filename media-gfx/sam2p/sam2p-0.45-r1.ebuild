@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.6 2008/08/23 17:29:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.7 2008/08/28 17:29:28 aballier Exp $
 
 inherit toolchain-funcs eutils autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fbsd.patch"
 	epatch "${FILESDIR}/${P}-nostrip.patch"
 	epatch "${FILESDIR}/${P}-cflags.patch"
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
 	eautoreconf
 }
 
@@ -33,7 +34,7 @@ src_compile() {
 		die "disable FEATURES=distcc"
 	fi
 	econf --enable-lzw $(use_enable gif) || die "econf failed"
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
