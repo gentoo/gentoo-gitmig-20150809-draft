@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.73.ebuild,v 1.1 2008/07/30 14:58:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.73.ebuild,v 1.2 2008/08/28 06:23:51 ulm Exp $
 
 inherit elisp eutils
 
@@ -24,7 +24,6 @@ src_unpack() {
 
 src_compile() {
 	# compilation b0rks
-	#elisp-comp *.el || die "elisp-comp failed"
 
 	cd docs
 	mv yatexe yatex.info
