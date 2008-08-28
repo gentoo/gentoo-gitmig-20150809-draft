@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.2 2008/06/24 06:24:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.3 2008/08/28 06:35:40 ulm Exp $
 
 inherit elisp versionator
 
@@ -37,8 +37,7 @@ src_compile() {
 
 	if use gnus && version_is_at_least 22 "$(elisp-emacs-version)"; then
 		# pgg-epg requires pgg, it will not compile with Emacs 21
-		# it also requires epa, so we must use elisp-comp here
-		elisp-comp pgg-epg.el || die "elisp-comp failed"
+		elisp-compile pgg-epg.el || die "elisp-compile failed"
 	fi
 }
 
