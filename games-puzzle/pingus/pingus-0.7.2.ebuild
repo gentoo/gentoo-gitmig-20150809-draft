@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.6 2008/06/26 17:34:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.7 2008/08/28 14:10:33 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -35,12 +35,15 @@ src_unpack() {
 }
 
 src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+	[[ ${MAKEOPTS/-s/} != ${MAKEOPTS} ]] && sconsopts="${sconsopts} -s"
+
 	scons configure \
 		CXX="$(tc-getCXX)" \
 		CCFLAGS="${CXXFLAGS}" \
 		LINKFLAGS="${LDFLAGS}" \
 		|| die "scons configure failed"
-	scons || die "scons failed"
+	scons ${sconsopts} || die "scons failed"
 }
 
 src_install() {
