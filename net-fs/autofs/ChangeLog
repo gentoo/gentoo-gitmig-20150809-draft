@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.74 2008/05/12 21:45:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.75 2008/08/28 00:00:26 robbat2 Exp $
+
+*autofs-5.0.3-r6 (27 Aug 2008)
+
+  27 Aug 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +autofs-5.0.3-r6.ebuild:
+  Bump to include more patches from upstream, fixes LDAP functionality in
+  large deployments.
 
   12 May 2008; <solar@gentoo.org> autofs-5.0.3-r5.ebuild:
   - Keyworded ~arm per request. Builds native but fails at cross-compiles.
