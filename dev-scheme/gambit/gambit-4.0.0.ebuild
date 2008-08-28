@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0.0.ebuild,v 1.3 2007/09/02 11:52:29 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0.0.ebuild,v 1.4 2008/08/28 17:41:15 ulm Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -63,7 +63,7 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use emacs; then
-		( cd misc; elisp-comp *.el )
+		elisp-compile misc/*.el || die "elisp-compile failed"
 	fi
 
 	# compile syntax-case
