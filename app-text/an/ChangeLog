@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.23 2007/02/09 00:58:40 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.24 2008/08/28 10:58:54 jer Exp $
+
+  28 Aug 2008; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild:
+  Improved HOMEPAGE.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

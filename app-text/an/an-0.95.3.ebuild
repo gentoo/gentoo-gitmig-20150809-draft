@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.15 2006/03/09 11:27:40 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.16 2008/08/28 10:58:54 jer Exp $
 
 inherit eutils toolchain-funcs versionator
 
 DESCRIPTION="Very fast anagram generator with dictionary lookup"
-HOMEPAGE="http://packages.debian.org/stable/games/an"
+HOMEPAGE="http://packages.debian.org/unstable/games/an"
 
 MY_PV="$(get_version_component_range 1-2)"
 SRC_URI="mirror://debian/pool/main/a/an/${PN}_${MY_PV}.orig.tar.gz"
