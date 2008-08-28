@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.5 2008/07/04 15:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.6 2008/08/28 11:28:27 flameeyes Exp $
+
+  28 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -libxdg-basedir-0.1.3.ebuild, libxdg-basedir-0.1.4.ebuild:
+  Remove old version, remove forced -j1 on doc rebuild, it works fine on
+  parallel-make.
 
 *libxdg-basedir-0.1.4 (04 Jul 2008)
 
