@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.26 2008/06/03 10:12:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.27 2008/08/28 17:49:25 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> bigloo-2.7a_p2.ebuild,
+  bigloo-2.9a.ebuild, bigloo-3.0a_p2.ebuild, bigloo-3.0b.ebuild,
+  bigloo-3.0b_p2.ebuild, bigloo-3.0c.ebuild, bigloo-3.0c_p4.ebuild,
+  bigloo-3.1a.ebuild:
+  Use elisp-compile instead of elisp-comp. Install Emacs byte-code files.
+  Fixes bug 235881.
 
 *bigloo-3.1a (03 Jun 2008)
 

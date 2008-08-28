@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0a_p2.ebuild,v 1.2 2007/06/20 15:03:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0a_p2.ebuild,v 1.3 2008/08/28 17:49:25 ulm Exp $
 
 inherit elisp-common multilib
 
@@ -24,7 +24,9 @@ IUSE="emacs"
 # fullbee"
 
 src_compile() {
-	use emacs && elisp-comp etc/*.el
+	if use emacs; then
+		elisp-compile etc/*.el || die "elisp-compile failed"
+	fi
 
 	# Bigloo doesn't use autoconf and consequently a lot of options used by econf give errors
 	# Manuel Serrano says: "Please, dont talk to me about autoconf. I simply dont want to hear about it..."
@@ -62,7 +64,7 @@ src_install () {
 	emake DESTDIR=${D} install || die "install failed"
 
 	if use emacs; then
-		elisp-install ${PN} etc/*.el
+		elisp-install ${PN} etc/*.{el,elc} || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
