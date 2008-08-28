@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/systemtrayn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.9 2008/01/22 16:02:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.10 2008/08/28 18:05:02 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> systemtrayn-0.3.2.ebuild:
+  Marked stable on amd64
 
 *systemtrayn-0.3.2 (22 Jan 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/tasklist
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.1 2007/12/31 15:51:20 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.2 2008/08/28 18:06:19 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> tasklist-0.5.ebuild:
+  Marked stable on amd64
 
 *tasklist-0.5 (31 Dec 2007)
 

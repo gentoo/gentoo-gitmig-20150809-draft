@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-launch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.1 2008/04/08 16:07:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.2 2008/08/28 18:01:30 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> rox-launch-0.3.2.ebuild:
+  Marked stable on amd64
 
 *rox-launch-0.3.2 (08 Apr 2008)
 
