@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.27 2008/04/28 17:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.28 2008/08/28 06:16:08 ulm Exp $
+
+  28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> -tuareg-mode-1.44.3.ebuild,
+  tuareg-mode-1.45.5.ebuild, tuareg-mode-1.45.6.ebuild:
+  Use eclass default instead of elisp-comp, bug 235442.
 
   28 Apr 2008; Raúl Porcel <armin76@gentoo.org> tuareg-mode-1.45.5.ebuild:
   sparc stable wrt #213952
