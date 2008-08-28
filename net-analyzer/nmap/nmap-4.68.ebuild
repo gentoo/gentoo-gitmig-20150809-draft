@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.68.ebuild,v 1.5 2008/08/04 19:48:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.68.ebuild,v 1.6 2008/08/28 21:38:01 spock Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -58,7 +58,7 @@ src_compile() {
 		"${myconf}" \
 		$(use_with gtk zenmap) \
 		$(use_with ssl openssl) || die
-	emake -j1 || die
+	emake || die
 }
 
 src_install() {
