@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-msn-pecan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.1 2008/08/18 21:03:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.2 2008/08/28 12:37:18 flameeyes Exp $
+
+  28 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pidgin-msn-pecan-0.0.14.ebuild:
+  Fix multilib installation directory for amd64.
 
 *pidgin-msn-pecan-0.0.14 (18 Aug 2008)
 
