@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.14 2008/07/18 16:03:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.15 2008/08/28 08:36:54 flameeyes Exp $
+
+  28 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
+  iscsitarget-0.4.16_p162.ebuild:
+  Install the iscsi_trgt module in misc rather than kernel directory, see
+  bug #235917.
 
 *iscsitarget-0.4.16_p162 (18 Jul 2008)
 

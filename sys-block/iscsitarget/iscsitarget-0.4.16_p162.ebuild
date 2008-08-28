@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.16_p162.ebuild,v 1.1 2008/07/18 16:03:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.16_p162.ebuild,v 1.2 2008/08/28 08:36:54 flameeyes Exp $
 
 inherit linux-mod eutils flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl"
 
-MODULE_NAMES="iscsi_trgt(kernel/iscsi:${S}/kernel)"
+MODULE_NAMES="iscsi_trgt(misc:${S}/kernel)"
 CONFIG_CHECK="CRYPTO_CRC32C"
 ERROR_CFG="iscsitarget needs support for CRC32C in your kernel."
 
