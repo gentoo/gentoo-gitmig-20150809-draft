@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/downloadmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.15 2008/05/11 15:30:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.16 2008/08/28 19:27:22 lack Exp $
+
+  28 Aug 2008; Jim Ramsay <lack@gentoo.org> downloadmanager-0.1.4.ebuild:
+  Marked stable on amd64
 
 *downloadmanager-0.1.4 (11 May 2008)
 
