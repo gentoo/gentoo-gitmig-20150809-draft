@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.2 2008/08/23 08:19:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.3 2008/08/29 12:10:15 fmccor Exp $
 
 inherit distutils versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.inoi.fi/open/trac/webut"
 SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="examples"
 
 DEPEND=""

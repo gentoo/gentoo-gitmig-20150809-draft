@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.2 2008/08/23 08:19:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.3 2008/08/29 12:10:15 fmccor Exp $
+
+  29 Aug 2008; Ferris McCormick <fmccor@gentoo.org> webut-0.1.0.2.ebuild:
+  Added ~sparc for testing; part of Bug #235969 --- installs fine.
 
   23 Aug 2008; Tiziano Müller <dev-zero@gentoo.org> webut-0.1.0.2.ebuild:
   Fixed examples installation, corrected license, using mirror, using
