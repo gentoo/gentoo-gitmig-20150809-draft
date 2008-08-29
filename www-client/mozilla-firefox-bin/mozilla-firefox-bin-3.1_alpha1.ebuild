@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_alpha1.ebuild,v 1.1 2008/08/01 20:16:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_alpha1.ebuild,v 1.2 2008/08/29 11:16:43 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -149,7 +149,28 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use amd64 && einfo "NB: You just installed a 32-bit firefox"
+	if use x86; then
+		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
+			|| ! has_version 'net-misc/curl'; then
+			einfo
+			einfo "For using the crashreporter, you need gnome-base/gconf,"
+			einfo "gnome-base/orbit and net-misc/curl emerged."
+			einfo
+		fi
+		if has_version 'net-misc/curl' && built_with_use --missing \
+			true 'net-misc/curl' nss; then
+			einfo
+			einfo "Crashreporter won't be able to send reports"
+			einfo "if you have curl emerged with the nss USE-flag"
+			einfo
+		fi
+	else
+		einfo
+		einfo "NB: You just installed a 32-bit firefox"
+		einfo
+		einfo "Crashreporter won't work on amd64"
+		einfo
+	fi
 	update_mozilla_launcher_symlinks
 }
 

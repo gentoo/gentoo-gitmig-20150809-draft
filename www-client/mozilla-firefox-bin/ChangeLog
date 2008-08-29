@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.156 2008/08/23 05:11:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.157 2008/08/29 11:16:43 armin76 Exp $
+
+  29 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-firefox-bin-3.0.ebuild, mozilla-firefox-bin-3.0.1-r1.ebuild,
+  mozilla-firefox-bin-3.1_alpha1.ebuild:
+  Add postinst message wrt crashreporter, bug #233728 and bug #229867
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
