@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.16 2008/08/06 15:06:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.17 2008/08/29 01:21:38 markusle Exp $
+
+*vienna-rna-1.7.2 (28 Aug 2008)
+
+  28 Aug 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/vienna-rna-1.7.2-gcc4.3.patch, -vienna-rna-1.6.1.ebuild,
+  -vienna-rna-1.6.5.ebuild, +vienna-rna-1.7.2.ebuild:
+  Version bump and removed old ebuilds (fixes bug #235943). Thanks much to
+  Chad A. Simmons <chad.simmons@member.fsf.org> for his ebuild and patches.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
