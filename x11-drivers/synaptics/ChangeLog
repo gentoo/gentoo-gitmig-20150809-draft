@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.37 2008/07/30 13:13:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.38 2008/08/29 20:01:49 calchan Exp $
+
+*synaptics-0.14.6_p20070706 (29 Aug 2008)
+
+  29 Aug 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/synaptics-0.14.6_p20070706-fixeventgrab.patch,
+  +files/synaptics-0.14.6_p20070706-input_api.patch,
+  +synaptics-0.14.6_p20070706.ebuild:
+  Last snapshot before switching to the new driver
+  (x11-drivers/xf86-input-synaptics) with the new xorg.
 
 *synaptics-0.14.6-r3 (30 Jul 2008)
 

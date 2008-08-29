@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r1.ebuild,v 1.3 2008/04/07 15:17:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r1.ebuild,v 1.4 2008/08/29 20:01:49 calchan Exp $
 
 inherit toolchain-funcs eutils
 
@@ -48,7 +48,7 @@ src_install() {
 		install || die
 
 	dodoc script/usbmouse script/usbhid alps.patch trouble-shooting.txt
-	dodoc COMPATIBILITY FILES INSTALL* LICENSE NEWS TODO README*
+	dodoc COMPATIBILITY FILES INSTALL* NEWS TODO README*
 
 	# Stupid new daemon, didn't work for me because of shm issues
 	newinitd "${FILESDIR}"/rc.init syndaemon

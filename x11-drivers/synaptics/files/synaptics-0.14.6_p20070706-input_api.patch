@@ -1,0 +1,15 @@
+diff -urN synaptics-0.14.6_p20070706.orig/Makefile synaptics-0.14.6_p20070706/Makefile
+--- synaptics-0.14.6_p20070706.orig/Makefile	2008-08-29 09:34:11.000000000 +0200
++++ synaptics-0.14.6_p20070706/Makefile	2008-08-29 10:40:29.000000000 +0200
+@@ -34,10 +34,9 @@
+   LDCOMBINEFLAGS = -shared -lc
+   PICFLAG = $(call check_gcc,-fPIC,)
+   X_INCLUDES_ROOT = $(INSTALLED_X)
+-  SDKDIR = $(shell pkg-config xorg-server --variable=sdkdir)
+   ALLINCLUDES = -I. -I$(INSTALLED_X)/include/X11 \
+ 		-I$(INSTALLED_X)/include/X11/extensions \
+-		-I$(SDKDIR)
++		`pkg-config xorg-server --cflags`
+ else
+   INSTALLED_X = /usr/X11R6
+   INPUT_MODULE_DIR = $(DESTDIR)/$(INSTALLED_X)/$(LIBDIR)/modules/input
