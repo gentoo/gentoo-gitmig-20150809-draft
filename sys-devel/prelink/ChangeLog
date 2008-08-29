@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.55 2007/11/02 01:16:08 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.56 2008/08/29 13:07:43 mpagano Exp $
+
+  29 Aug 2008; Mike Pagano <mpagano@gentoo.org>
+  files/prelink-20061201-prelink-conf.patch:
+  Added /usr/bin to prelink blacklist for bug #235971
 
 *prelink-20071009 (02 Nov 2007)
 
