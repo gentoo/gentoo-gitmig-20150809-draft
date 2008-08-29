@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.3.ebuild,v 1.2 2008/08/28 09:48:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.3.ebuild,v 1.3 2008/08/29 00:35:11 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -77,7 +77,6 @@ src_unpack() {
 
 	# Remove -m64 on alpha, since the compiler doesn't support it
 	use alpha && sed -i -e 's/-m64//g' "${S}"/CONFIG/src/probe_comp.c
-
 
 	# unfortunately, atlas-3.9.0 chokes when passed
 	# x86_64-pc-linux-gnu-gcc and friends instead of
