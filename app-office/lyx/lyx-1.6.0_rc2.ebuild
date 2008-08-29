@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc2.ebuild,v 1.1 2008/08/29 17:01:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc2.ebuild,v 1.2 2008/08/29 19:55:14 aballier Exp $
 
 EAPI=1
 
@@ -49,7 +49,8 @@ COMMONDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
 	virtual/aspell-dict
 	>=dev-lang/python-2.3.4
 	media-libs/fontconfig
-	media-libs/freetype"
+	media-libs/freetype
+	>=dev-libs/boost-1.34"
 
 RDEPEND="${COMMONDEPEND}
 	media-gfx/imagemagick
@@ -79,8 +80,7 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	x11-proto/xproto
-	nls? ( sys-devel/gettext )
-	>=dev-libs/boost-1.34"
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	tc-export CXX
