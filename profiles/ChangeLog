@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1811 2008/08/28 18:25:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1812 2008/08/29 11:04:19 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  29 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked scigraphica and libscigraphica for removal in 30 days
 
   28 Aug 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Masking app-arch/rpm2targz-9.0.0.1g as it breaks too many packages, bug
