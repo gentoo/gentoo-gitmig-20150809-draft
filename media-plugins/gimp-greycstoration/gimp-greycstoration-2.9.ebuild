@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/gimp-greycstoration-2.9.ebuild,v 1.1 2008/06/18 09:11:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/gimp-greycstoration-2.9.ebuild,v 1.2 2008/08/29 18:32:34 calchan Exp $
 
 inherit toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
 	$(tc-getCXX) -o greycstoration greycstoration4gimp.cpp \
 		$(gimptool-2.0 --cflags) $(gimptool-2.0 --libs) \
-		-lpthread ${CXXFLAGS} ${LDFLAGS} \
+		-lpthread ${CXXFLAGS} ${LDFLAGS} -fno-tree-pre \
 		|| die "Compilation failed"
 }
 
