@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-0.9a.ebuild,v 1.3 2008/03/23 00:02:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-0.9a.ebuild,v 1.4 2008/08/29 13:05:30 hollow Exp $
 
 inherit eutils apache-module
 
@@ -18,8 +18,9 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/-/_}"
 
-APXS2_ARGS="-I/usr/include/mysql -lmysqlclient -lz -c ${PN}.c"
-
+APXS2_ARGS="-I/usr/include/mysql -lmysqlclient -lz -c mod_auth_cookie_sql2.c
+	mod_auth_cookie_sql2_mysql.c"
+APACHE2_MOD_FILE="${S}/.libs/mod_auth_cookie_sql2.so"
 APACHE2_MOD_CONF="55_${PN}"
 APACHE2_MOD_DEFINE="AUTH_COOKIE_MYSQL2"
 
