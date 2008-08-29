@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/quickplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.6 2008/05/06 14:17:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.7 2008/08/29 10:54:56 bicatali Exp $
+
+  29 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/quickplot-0.8.13-linking.patch, -quickplot-0.8.5.ebuild,
+  quickplot-0.8.13-r1.ebuild:
+  Fixed linking, some cosmetics.
 
 *quickplot-0.8.13-r1 (06 May 2008)
 
