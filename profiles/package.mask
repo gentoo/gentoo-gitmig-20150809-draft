@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8924 2008/08/29 00:03:51 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8925 2008/08/29 11:15:31 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Séastien Fabbro <bicatali@gentoo.org> (28 AUg 2008)
+# Masked for removal in 30 days.  Doesn't compile,
+# upstream dead, gtk-1, numarray and bugs (bug #987654).
+>sci-libs/libscigraphica-2.1
+>sci-visualization/scigraphica-2.1
 
 # Ricardo Mendoza <ricmm@gentoo.org> (28 Aug 2008)
 # Beta driver, masking corresponding packages
