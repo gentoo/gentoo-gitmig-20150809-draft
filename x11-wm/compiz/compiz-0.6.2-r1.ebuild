@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.5 2008/07/25 14:03:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.6 2008/08/29 02:06:46 flameeyes Exp $
 
 EAPI=1
 
@@ -39,6 +39,11 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 RDEPEND="${DEPEND}
 	x11-apps/mesa-progs"
 
+DEPEND="${DEPEND}
+	dev-util/pkgconfig
+	x11-proto/xineramaproto
+	x11-proto/damageproto"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -49,6 +54,7 @@ src_compile() {
 	econf --with-default-plugins \
 		--enable-gtk \
 		--enable-gconf \
+		--disable-fuse \
 		`use_enable gnome` \
 		`use_enable gnome metacity` \
 		`use_enable kde` \

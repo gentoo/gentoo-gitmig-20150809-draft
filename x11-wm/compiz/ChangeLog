@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.26 2008/07/25 14:03:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.27 2008/08/29 02:06:46 flameeyes Exp $
+
+  29 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> compiz-0.6.2-r1.ebuild:
+  Add some missing build-time dependencies (closes bug #204863), disable
+  fuse plugin, until a new version with an USE flag is provided, avoid
+  automagic dep (closes bug #212120).
 
   25 Jul 2008; Carsten Lohrke <carlo@gentoo.org> compiz-0.6.2-r1.ebuild:
   Wrong split/monolithic dependency order, missing slot dependency.
