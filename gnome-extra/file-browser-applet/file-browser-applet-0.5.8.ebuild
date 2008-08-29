@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.5.6.ebuild,v 1.1 2008/06/08 17:31:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.5.8.ebuild,v 1.1 2008/08/29 17:59:02 serkan Exp $
 
 inherit gnome2 cmake-utils
 
@@ -14,13 +14,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.12
-	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/gnome-panel-2.0
 	>=gnome-base/libglade-2.0
-	>=gnome-base/gnome-desktop-2.0"
+	>=dev-libs/glib-2.16"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=dev-util/cmake-2.4.8"
 
 src_compile() {
 	mycmakeargs="${mycmakeargs} -DCMAKE_INSTALL_GCONF_SCHEMA_DIR=/etc/gconf/schemas"
