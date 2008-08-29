@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.22 2008/08/22 00:01:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.23 2008/08/29 12:14:06 fmccor Exp $
+
+  29 Aug 2008; Ferris McCormick <fmccor@gentoo.org> ldaptor-0.0.43.ebuild:
+  Add ~sparc keyword --- Bug #235969 --- Everything fine with USE='web doc
+  samba'.
 
 *ldaptor-0.0.43 (21 Aug 2008)
 
