@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.102 2008/08/19 11:49:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.103 2008/08/29 15:38:17 remi Exp $
+
+  29 Aug 2008; Rémi Cardona <remi@gentoo.org> metadata.xml:
+  reassigning to x11 as I'm on the team now
 
 *xf86-video-i810-2.4.1-r1 (19 Aug 2008)
 
