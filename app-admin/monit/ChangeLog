@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.36 2008/05/21 19:50:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.37 2008/08/29 20:13:36 caleb Exp $
+
+*monit-5.0_beta3 (29 Aug 2008)
+
+  29 Aug 2008; Caleb Tennis <caleb@gentoo.org> +files/monit.initd-5.0,
+  +monit-5.0_beta3.ebuild:
+  Bump monit
+
+*monit-5.0_beta2 (18 Aug 2008)
+
+  18 Aug 2008; Caleb Tennis <caleb@gentoo.org> +files/monit.initd-5.0,
+  +monit-5.0_beta2.ebuild:
+  version bump
 
   21 May 2008; nixnut <nixnut@gentoo.org> monit-4.10.1.ebuild:
   ppc stable wrt bug 222401
