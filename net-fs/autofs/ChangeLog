@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.75 2008/08/28 00:00:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.76 2008/08/29 13:51:00 robbat2 Exp $
+
+  29 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug #236051, I had a download failure during digesting, with a zero-byte
+  file ending up in the Manifest wrongly.
 
 *autofs-5.0.3-r6 (27 Aug 2008)
 
