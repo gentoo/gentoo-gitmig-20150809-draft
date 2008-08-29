@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.7 2008/08/28 17:29:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.8 2008/08/29 21:52:14 aballier Exp $
 
 inherit toolchain-funcs eutils autotools
 
@@ -30,9 +30,7 @@ src_unpack() {
 src_compile() {
 	tc-export CXX
 	# Makedep fails with distcc
-	if has distcc ${FEATURES}; then
-		die "disable FEATURES=distcc"
-	fi
+	PATH=${PATH#/usr/lib/distcc/bin:}
 	econf --enable-lzw $(use_enable gif) || die "econf failed"
 	emake || die "make failed"
 }
