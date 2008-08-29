@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.120 2008/08/16 01:58:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.121 2008/08/29 01:14:56 vapier Exp $
+
+*strace-4.5.18 (29 Aug 2008)
+
+  29 Aug 2008; Mike Frysinger <vapier@gentoo.org> +strace-4.5.18.ebuild:
+  Version bump.
 
 *strace-4.5.17 (16 Aug 2008)
 
