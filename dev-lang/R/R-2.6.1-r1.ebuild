@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.13 2008/08/27 23:01:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.14 2008/08/29 00:34:48 mr_bones_ Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -62,7 +62,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-javareconf.patch
 }
-
 
 src_compile() {
 	# fix packages.html for doc (bug #205103)
