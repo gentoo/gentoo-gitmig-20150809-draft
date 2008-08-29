@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.3.ebuild,v 1.1 2008/08/14 21:36:28 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.3.ebuild,v 1.2 2008/08/29 20:38:40 zmedico Exp $
 
 EAPI="1"
 
@@ -29,6 +29,7 @@ src_compile() {
 	cd "${S}"
 	use debug && myconf="DEBUG=1"
 	eqmake4 ${PN}.pro PREFIX="${D}/usr" ${myconf} || die "eqmake4 failed"
+	PATH=${PATH#/usr/lib/distcc/bin:} # workaround for bug #214327
 	emake || die "emake failed"
 }
 

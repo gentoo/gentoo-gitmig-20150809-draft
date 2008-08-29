@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.28 2008/08/14 21:36:28 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.29 2008/08/29 20:38:40 zmedico Exp $
+
+  29 Aug 2008; Zac Medico <zmedico@gentoo.org> keepassx-0.3.3.ebuild:
+  Disable distcc as a workaround for bug #214327.
 
 *keepassx-0.3.3 (14 Aug 2008)
 
