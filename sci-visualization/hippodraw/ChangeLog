@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.8 2008/07/27 22:25:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.9 2008/08/29 09:44:30 bicatali Exp $
+
+  29 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -hippodraw-1.19.1.ebuild, -hippodraw-1.21.3.ebuild:
+  Removed old versions
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> hippodraw-1.19.1.ebuild,
   hippodraw-1.21.3.ebuild, hippodraw-1.21.3-r1.ebuild:
