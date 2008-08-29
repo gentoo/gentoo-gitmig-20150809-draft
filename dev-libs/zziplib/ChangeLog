@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/zziplib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.46 2007/07/07 15:23:09 pythonhead Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.47 2008/08/29 18:24:43 vapier Exp $
+
+*zziplib-0.13.49-r1 (29 Aug 2008)
+
+  29 Aug 2008; Mike Frysinger <vapier@gentoo.org>
+  files/zziplib-0.13.49-python.patch, +zziplib-0.13.49-r1.ebuild:
+  Fix LDFLAG bleeding into pkg config files #235511 by Alexis Ballier. Fix
+  python patch to apply to configure. Do install bogus dead lib symlinks.
 
   07 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
   +files/zziplib-0.13.49-python.patch, zziplib-0.13.49.ebuild:
