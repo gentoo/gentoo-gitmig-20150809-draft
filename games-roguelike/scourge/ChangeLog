@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/scourge
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.29 2007/10/07 21:27:26 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.30 2008/08/29 06:25:33 tupone Exp $
+
+*scourge-0.20 (29 Aug 2008)
+
+  29 Aug 2008; <tupone@gentoo.org> +files/scourge-0.20-gcc43.patch,
+  +scourge-0.20.ebuild:
+  Version bump to 0.20. Bug #222667 by Rob Hillis
+  Editor removed as not working
 
   07 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org> scourge-0.19.ebuild:
   add sdl-ttf to the deps for bug #195011
