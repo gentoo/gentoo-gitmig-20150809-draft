@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.6 2008/01/31 17:00:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.7 2008/08/29 12:27:53 hollow Exp $
+
+  29 Aug 2008; Benedikt Böhm <hollow@gentoo.org> mod_auth_kerb-5.3.ebuild:
+  add ~amd64 wrt #231474
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
   files/11_mod_auth_kerb.conf, mod_auth_kerb-5.3.ebuild:

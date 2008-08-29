@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.3 2008/01/31 17:00:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.4 2008/08/29 12:27:53 hollow Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/modauthkerb/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="virtual/krb5"
