@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.1 2008/08/30 12:34:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.2 2008/08/30 13:51:06 aballier Exp $
 
 inherit latex-package eutils
 
@@ -19,6 +19,7 @@ IUSE=""
 TEXMF="/usr/share/texmf-site"
 
 DEPEND="app-arch/unzip"
+RDEPEND=""
 DOCS="README"
 
 src_unpack() {
