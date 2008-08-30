@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/g-brief
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.13 2008/05/29 06:16:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.14 2008/08/30 14:07:47 aballier Exp $
+
+*g-brief-4.0.2 (30 Aug 2008)
+
+  30 Aug 2008; Alexis Ballier <aballier@gentoo.org> +g-brief-4.0.2.ebuild:
+  bump to latest ctan version, install to texmf-site
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
