@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/clock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.11 2007/11/16 15:04:25 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.12 2008/08/30 15:35:44 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> clock-2.1.7.ebuild:
+  Marking clock-2.1.7 ~ppc for bug 236057
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> clock-2.1.7.ebuild:
   amd64 stable wrt #197514
