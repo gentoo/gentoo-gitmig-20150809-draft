@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.18 2008/08/28 19:18:53 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.19 2008/08/30 15:24:51 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> archive-2.2.ebuild:
+  Marking archive-2.2 ppc stable for bug 236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> archive-2.2.ebuild:
   Marked stable on amd64

@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/videothumbnail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.17 2008/08/28 18:31:44 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.18 2008/08/30 15:24:52 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org>
+  videothumbnail-0.1.13-r1.ebuild:
+  Marking videothumbnail-0.1.13-r1 ppc stable for bug 236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> videothumbnail-0.1.13-r1.ebuild:
   Marked stable on amd64
