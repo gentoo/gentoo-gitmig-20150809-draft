@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1812 2008/08/29 11:04:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1813 2008/08/30 11:40:07 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  30 Aug 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  add gst-plugins-good to p.mask, see bug #236124
 
   29 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Masked scigraphica and libscigraphica for removal in 30 days
