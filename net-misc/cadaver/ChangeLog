@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.27 2008/07/28 05:31:38 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.28 2008/08/30 07:02:32 graaff Exp $
+
+  30 Aug 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml,
+  Drop maintainership: I no longer use this, and the neon dependency is a pain
+  to deal with.
 
   28 Jul 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   cadaver-0.23.2.ebuild:
