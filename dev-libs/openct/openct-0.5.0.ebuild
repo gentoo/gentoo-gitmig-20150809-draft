@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.15 2007/04/28 15:47:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.16 2008/08/30 04:47:45 dragonheart Exp $
 
 inherit eutils
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="usb"
 
-RDEPEND="virtual/libc
+RDEPEND="
 	usb? (	>=dev-libs/libusb-0.1.7
 		>=sys-apps/hotplug-20030805-r1 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4.0.7
-	sys-apps/shadow"
+	>=sys-apps/sed-4.0.7"
 
 pkg_setup() {
 	enewgroup openct

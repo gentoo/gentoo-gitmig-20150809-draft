@@ -1,28 +1,41 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14-r1.ebuild,v 1.4 2008/08/30 04:47:45 dragonheart Exp $
-
-inherit eutils flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.1 2008/08/30 04:47:45 dragonheart Exp $
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
-SRC_URI="http://www.opensc-project.org/files/openct/${P}.tar.gz"
+
+SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="usb"
+IUSE="usb doc"
 
-RDEPEND=">=sys-fs/udev-096
-	usb? ( >=dev-libs/libusb-0.1.7 )"
+RDEPEND="usb? ( >=dev-libs/libusb-0.1.7 )
+		>=sys-fs/udev-096"
+
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
 	enewgroup openct
+	enewuser openctd
 }
 
 src_compile() {
-	append-flags -D_GNU_SOURCE #225435
-	econf --localstatedir=/var || die
+	econf \
+		--docdir="/usr/share/doc/${PF}" \
+		--htmldir="/usr/share/doc/${PF}/html" \
+		--localstatedir=/var \
+		--with-udev="/$(get_libdir)/udev" \
+		--enable-non-privileged \
+		--with-daemon-user=openctd \
+		--with-daemon-groups=usb \
+		$(use_enable usb) \
+		$(use_enable doc) \
+		$(use_enable doc api-doc) \
+		|| die
 	emake || die
 }
 
@@ -31,20 +44,11 @@ src_install() {
 
 	insinto /etc/udev/rules.d/
 	newins etc/openct.udev 70-openct.rules || die
-	exeinto /lib/udev
-	doexe etc/openct_pcmcia || die
-	doexe etc/openct_serial || die
-	doexe etc/openct_usb || die
 
-	insinto /etc
-	doins etc/openct.conf || die
-
-	newinitd "${FILESDIR}"/openct.rc openct
-
-	diropts -m0750 -gopenct
+	diropts -m0750 -gopenct -oopenctd
 	keepdir /var/run/openct
 
-	dodoc NEWS TODO doc/README
+	newinitd "${FILESDIR}"/openct.rc openct
 }
 
 pkg_postinst() {
