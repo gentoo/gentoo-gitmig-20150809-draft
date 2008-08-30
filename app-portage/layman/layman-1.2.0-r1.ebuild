@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.0-r1.ebuild,v 1.1 2008/06/03 04:00:48 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.0-r1.ebuild,v 1.2 2008/08/30 18:42:43 jokey Exp $
+
+NEED_PYTHON=2.5
 
 inherit eutils distutils
 
@@ -58,6 +60,10 @@ src_test() {
 }
 
 pkg_postinst() {
+
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+
 	einfo "You are now ready to add overlays into your system."
 	einfo
 	einfo "layman -L"
@@ -82,4 +88,9 @@ pkg_postinst() {
 	ewarn "Please add the 'source' statement to make.conf only AFTER "
 	ewarn "you added your first overlay. Otherwise portage will fail."
 	epause 5
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 }
