@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.1 2008/08/30 04:59:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.2 2008/08/30 05:52:50 mr_bones_ Exp $
 
 DESCRIPTION="a lib implementing a small layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
 HOMEPAGE="http://www.opensc-project.org/libp11/"
-
 
 if [[ "${PV}" = "9999" ]]; then
 	inherit subversion autotools
