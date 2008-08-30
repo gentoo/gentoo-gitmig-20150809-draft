@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.21 2008/07/15 02:39:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.22 2008/08/30 13:17:33 markusle Exp $
+
+  30 Aug 2008; Markus Dittrich <markusle@gentoo.org> axiom-200803.ebuild,
+  axiom-200805.ebuild:
+  Added missing dependency on sys-apps/debianutils (fixes bug #236080).
 
   15 Jul 2008; Markus Dittrich <markusle@gentoo.org> axiom-200805.ebuild:
   Ebuild cleanup. Thanks much to <dberkholz@gentoo.org> for pointing 

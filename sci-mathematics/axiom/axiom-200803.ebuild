@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200803.ebuild,v 1.1 2008/03/31 12:58:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200803.ebuild,v 1.2 2008/08/30 13:17:33 markusle Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -18,6 +18,7 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="virtual/latex-base
+	sys-apps/debianutils
 	x11-libs/libXaw"
 
 S="${WORKDIR}"/${PN}
