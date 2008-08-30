@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.169 2008/08/23 01:57:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.170 2008/08/30 11:52:42 dertobi123 Exp $
+
+  30 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  postfix-2.5.4.ebuild:
+  Install the qshape manpage, #235779 reported by Roland Hopferwieser
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
