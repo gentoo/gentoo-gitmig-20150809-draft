@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.21 2008/04/27 03:45:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.22 2008/08/30 04:59:53 dragonheart Exp $
+
+*libp11-0.2.4 (30 Aug 2008)
+
+  30 Aug 2008; Daniel Black <dragonheart@gentoo.org> +libp11-0.2.4.ebuild:
+  version bump thanks to Alon - bug #233519
 
   27 Apr 2008; Samuli Suominen <drac@gentoo.org> libp11-0.2.2.ebuild,
   libp11-0.2.3.ebuild:
