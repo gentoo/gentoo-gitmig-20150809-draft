@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.35 2008/08/30 12:49:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.36 2008/08/30 13:13:45 aballier Exp $
 
 # @ECLASS: latex-package.eclass
 # @MAINTAINER:
@@ -115,6 +115,7 @@ latex-package_src_doinstall() {
 				do
 					insinto /usr/share/doc/${PF}
 					doins $i || die "doins $i failed"
+					dosym /usr/share/doc/${PF}/$(basename ${i}) ${TEXMF}/doc/latex/${PN}/${i}
 					#dodoc -u $i
 				done
 				;;
