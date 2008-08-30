@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.13 2008/07/07 05:36:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.14 2008/08/30 11:27:28 markusle Exp $
+
+*platon-20080725 (30 Aug 2008)
+
+  30 Aug 2008; Markus Dittrich <markusle@gentoo.org>
+  -platon-20060717.ebuild, -platon-20070425.ebuild, +platon-20080725.ebuild:
+  Version bump and removed old ebuilds (see bug #183828). Also added 
+  amd64 keyword.
 
   07 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   platon-20080702.ebuild:

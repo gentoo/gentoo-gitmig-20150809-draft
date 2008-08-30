@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20070425.ebuild,v 1.2 2007/07/22 07:21:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080725.ebuild,v 1.1 2008/08/30 11:27:28 markusle Exp $
 
-inherit fortran toolchain-funcs
+inherit fortran toolchain-funcs flag-o-matic
 
 FORTRAN="g77 gfortran"
 DESCRIPTION="Versatile, SHELX-97 compatible, multipurpose crystallographic tool"
@@ -11,7 +11,7 @@ SRC_URI="${P}.tar.gz"
 RESTRICT="fetch"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 # Can't do libf2c dependent on whether <gcc-4 is selected for the build,
 # so we must always require it
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 
 pkg_nofetch() {
-	einfo "Download ${A/-${PV}} from ${HOMEPAGE},"
+	einfo "Download ${A/-${PV}} from ftp://xraysoft.chem.uu.nl/pub/unix/,"
 	einfo "rename it to ${A} and place it"
 	einfo "in ${DISTDIR}."
 	einfo "If there is a digest mismatch, please file a bug"
@@ -31,7 +31,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	gunzip platon.f.Z xdrvr.c.gz
 }
 
@@ -42,6 +42,9 @@ src_compile() {
 	if [[ ${FORTRANC} != g77 ]]; then
 		F2C="-lf2c"
 	fi
+
+	# easy to ICE, at least on gcc 4.3
+	strip-flags
 
 	COMMAND="$(tc-getCC) -c ${CFLAGS} xdrvr.c"
 	echo ${COMMAND}
@@ -66,8 +69,8 @@ src_install() {
 	insinto /usr/lib/platon
 	doins check.def
 
-	echo "CHECKDEF=\"/usr/lib/platon/check.def\"" > ${T}/env.d
-	newenvd ${T}/env.d 50platon
+	echo "CHECKDEF=\"/usr/lib/platon/check.def\"" > "${T}"/env.d
+	newenvd "${T}"/env.d 50platon
 
 	dodoc README.* VALIDATION.DOC
 }
