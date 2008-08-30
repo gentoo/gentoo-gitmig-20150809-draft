@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.57 2008/08/30 14:37:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.58 2008/08/30 15:14:02 armin76 Exp $
+
+  30 Aug 2008; Raúl Porcel <armin76@gentoo.org> openct-0.6.14.ebuild:
+  ia64 stable
 
   30 Aug 2008; Daniel Black <dragonheart@gentoo.org> -openct-0.5.0.ebuild:
   punting version 0.5.0 as it does work
