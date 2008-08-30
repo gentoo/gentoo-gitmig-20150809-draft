@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/panda3d
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.7 2007/10/17 18:21:00 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.8 2008/08/30 15:52:28 maekke Exp $
+
+*panda3d-1.5.2 (30 Aug 2008)
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org>
+  +files/panda3d-1.5.2-gcc43.patch, -panda3d-1.0.4.ebuild,
+  +panda3d-1.5.2.ebuild:
+  version bump, bug #144259; old
 
   17 Oct 2007; Samuli Suominen <drac@gentoo.org> panda3d-1.0.5.ebuild:
   Change media-libs/fmod dep to work with slots.
