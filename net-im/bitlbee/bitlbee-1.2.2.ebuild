@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.2.ebuild,v 1.1 2008/08/30 09:05:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.2.ebuild,v 1.2 2008/08/30 16:00:52 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -78,6 +78,8 @@ src_unpack() {
 	sed -i \
 		-e "s@mozilla-nss@nss@g" \
 		configure || die "sed failed in configure"
+
+	epatch "${FILESDIR}/${P}-fix_tests_check_set.patch"
 }
 
 src_compile() {
