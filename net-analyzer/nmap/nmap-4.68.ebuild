@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.68.ebuild,v 1.6 2008/08/28 21:38:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.68.ebuild,v 1.7 2008/08/30 21:23:40 spock Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-nolua.patch"
+	epatch "${FILESDIR}/${P}-concurrent-make-fix.patch"
 	AT_NO_RECURSIVE=1 eautoreconf
 }
 

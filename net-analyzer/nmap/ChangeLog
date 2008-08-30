@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.181 2008/08/28 21:38:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.182 2008/08/30 21:23:40 spock Exp $
+
+  30 Aug 2008; Michał Januszewski <spock@gentoo.org>
+  +files/nmap-4.68-concurrent-make-fix.patch, nmap-4.68.ebuild:
+  Fix a race condition in the make file (bug #235995).
 
   28 Aug 2008; Michał Januszewski <spock@gentoo.org> nmap-4.68.ebuild:
   Remove forced -j1 as it doesn't seem to be necessary anymore (bug
