@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/varconf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.22 2008/07/07 06:01:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.23 2008/08/30 13:37:38 tupone Exp $
+
+  30 Aug 2008; <tupone@gentoo.org> -varconf-0.6.2.ebuild:
+  0.6.2 version removed as not used
 
   07 Jul 2008; Tupone Alfredo <tupone@gentoo.org> varconf-0.6.4.ebuild:
   Make 0.6.4 depends only on slot 1.2 of dev-libs/libsigc++.
