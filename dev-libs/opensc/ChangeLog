@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.50 2008/08/30 05:19:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.51 2008/08/30 15:17:38 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> ChangeLog:
+  amd64/x86 stable, bug #233543
 
 *opensc-0.11.6 (30 Aug 2008)
 
