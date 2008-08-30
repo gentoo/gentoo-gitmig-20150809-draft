@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.6 2008/03/12 18:08:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.7 2008/08/30 15:32:18 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> pyalsaaudio-0.2.ebuild:
+  Marking pyalsaaudio-0.2 ~ppc for bug 236057
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
