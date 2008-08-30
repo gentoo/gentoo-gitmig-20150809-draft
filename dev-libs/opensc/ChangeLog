@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.49 2008/08/06 11:00:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.50 2008/08/30 05:19:14 dragonheart Exp $
+
+*opensc-0.11.6 (30 Aug 2008)
+
+  30 Aug 2008; Daniel Black <dragonheart@gentoo.org> +opensc-0.11.6.ebuild:
+  version bump thanks to Alon - bug #233519
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
