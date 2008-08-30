@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.102.ebuild,v 1.1 2008/08/30 06:54:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.102.ebuild,v 1.2 2008/08/30 22:11:13 dragonheart Exp $
 
 inherit multilib
 
@@ -28,6 +28,14 @@ RDEPEND="usb? ( dev-libs/libusb )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+
+pkg_setup() {
+	if use hal && use usb; then
+		ewarn "The usb and hal useflag can not be enabled at the same time"
+		ewarn "Disabling the effect of USE=usb"
+	fi
+}
+
 src_unpack() {
 	if [ "${PV}" != "9999" ]; then
 		unpack ${A}
@@ -41,13 +49,19 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	if use hal; then
+		myconf="--enable-libhal --disable-usb"
+	else
+		myconf="--disable-libhal $(use_enable usb libusb)"
+	fi
+
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-usbdropdir="/usr/$(get_libdir)/readers/usb" \
 		--enable-muscledropdir="/usr/share/pcsc/services" \
 		--enable-runpid="/var/run/pcscd.pid" \
-		$(use_enable hal libhal) \
-		$(use_enable usb libusb) \
+		${myconf} \
 		$(use_enable debug) \
 		$(use_enable static) \
 		|| die "configure failed"
