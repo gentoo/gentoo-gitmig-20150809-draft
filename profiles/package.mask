@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8926 2008/08/30 11:39:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8927 2008/08/30 12:52:46 dertobi123 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -31,7 +31,7 @@
 
 # Rémi Cardona <remi@gentoo.org> (30 Aug 2008)
 # major file collisions, see bug #236124
-media-libs/gst-plugins-good-0.10.9
+=media-libs/gst-plugins-good-0.10.9
 
 # Séastien Fabbro <bicatali@gentoo.org> (28 AUg 2008)
 # Masked for removal in 30 days.  Doesn't compile,
