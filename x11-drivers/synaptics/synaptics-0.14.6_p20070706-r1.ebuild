@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6_p20070706.ebuild,v 1.1 2008/08/29 20:01:49 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6_p20070706-r1.ebuild,v 1.1 2008/08/30 22:33:17 calchan Exp $
 
 inherit toolchain-funcs eutils linux-info
 
@@ -52,10 +52,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} ; cd "${S}"
 
-	# Switch up the CC and CFLAGS stuff.
+	# Switch up the CC, CFLAGS and LDFLAGS stuff.
 	sed -i \
-		-e "s:CC = gcc:CC = $(tc-getCC):g" \
-		-e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" \
+		-e "s:CC = gcc:CC = $(tc-getCC) ${CFLAGS} ${LDFLAGS}:g" \
+		-e "/CC = / a\
+LD = \$(CC)" \
+		-e "s:\$(CDEBUGFLAGS)::g" \
 		"${S}"/Makefile
 
 	# Fix grabbing of event devices so it will not stop working together with
