@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.18 2008/08/04 20:02:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.19 2008/08/30 19:34:07 ikelos Exp $
+
+*scapy-2.0.0.6 (30 Aug 2008)
+
+  30 Aug 2008; Mike Auty <ikelos@gentoo.org> +scapy-2.0.0.6.ebuild:
+  Version bump to scapy 2.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
