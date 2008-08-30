@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.55 2008/08/30 01:18:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.56 2008/08/30 01:23:30 dragonheart Exp $
+
+  30 Aug 2008; Daniel Black <dragonheart@gentoo.org>
+  files/monotone-0.36.initd:
+  added default values to init script. patch thanks to Dennis Schridde - bug
+  #235037
 
   30 Aug 2008; Daniel Black <dragonheart@gentoo.org> monotone-0.39.ebuild,
   monotone-0.40.ebuild:
