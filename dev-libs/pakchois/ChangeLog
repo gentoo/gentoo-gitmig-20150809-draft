@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pakchois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.6 2008/08/29 22:25:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.7 2008/08/30 14:31:00 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> pakchois-0.4.ebuild:
+  stable ppc, bug 236127
 
   29 Aug 2008; Markus Meier <maekke@gentoo.org> pakchois-0.4.ebuild:
   amd64/x86 stable, bug #236127
