@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/panda3d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.8 2008/08/30 15:52:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.9 2008/08/30 16:34:39 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  add to graphics herd
 
 *panda3d-1.5.2 (30 Aug 2008)
 
