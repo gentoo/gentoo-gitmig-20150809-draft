@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.86 2008/08/30 15:25:29 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.87 2008/08/30 16:52:06 armin76 Exp $
+
+  30 Aug 2008; Raúl Porcel <armin76@gentoo.org> apache-2.2.9-r1.ebuild:
+  alpha/ia64 stable wrt #234088
 
   30 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   apache-2.2.9-r1.ebuild:
