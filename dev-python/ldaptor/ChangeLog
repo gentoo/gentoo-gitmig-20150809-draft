@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.24 2008/08/29 14:20:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.25 2008/08/30 20:31:21 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> ldaptor-0.0.43.ebuild:
+  readd dropped ~amd64 keyword, bug #235969
 
   29 Aug 2008; Raúl Porcel <armin76@gentoo.org> ldaptor-0.0.43.ebuild:
   Add ~alpha/~ia64 wrt #235969
