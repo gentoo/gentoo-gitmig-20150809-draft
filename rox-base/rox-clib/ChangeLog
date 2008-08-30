@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.30 2008/08/30 15:27:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.31 2008/08/30 19:52:00 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> rox-clib-2.1.10.ebuild:
+  x86 stable, bug #236057
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> rox-clib-2.1.10.ebuild:
   Marking rox-clib-2.1.10 ppc for bug 236057

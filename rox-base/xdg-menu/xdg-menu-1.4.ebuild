@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.4.ebuild,v 1.3 2008/08/30 15:23:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.4.ebuild,v 1.4 2008/08/30 19:49:10 maekke Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 DEPEND=""
 RDEPEND=">=dev-python/pyxdg-0.14
 	>=dev-python/dbus-python-0.80.2

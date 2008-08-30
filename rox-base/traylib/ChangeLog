@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/traylib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.7 2008/08/28 16:28:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.8 2008/08/30 19:55:28 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> traylib-0.3.2.1.ebuild:
+  x86 stable, bug #236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> traylib-0.3.2.1.ebuild:
   Marking stable on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/pager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.19 2008/08/28 18:00:06 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.20 2008/08/30 19:53:11 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> pager-1.1-r2.ebuild:
+  x86 stable, bug #236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> pager-1.1-r2.ebuild:
   Marking stable on amd64
