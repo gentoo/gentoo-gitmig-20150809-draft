@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.5 2008/07/26 00:04:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.6 2008/08/30 14:40:27 ranger Exp $
 
 GCONF_DEBUG=no
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE="dvdr flac libnotify mp3 vorbis"
 
 RDEPEND=">=x11-libs/gtk+-2.8

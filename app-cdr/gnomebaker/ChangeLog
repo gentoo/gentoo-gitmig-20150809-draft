@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.54 2008/07/26 00:04:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.55 2008/08/30 14:40:27 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> gnomebaker-0.6.4.ebuild:
+  Marking gnomebaker-0.6.4 ppc for bug 209877
 
   26 Jul 2008; Samuli Suominen <drac@gentoo.org>
   -files/gnomebaker-0.6.2-fix_fstab_parsing.patch,
