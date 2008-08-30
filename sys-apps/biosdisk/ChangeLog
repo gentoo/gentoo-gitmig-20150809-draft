@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/biosdisk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.5 2007/02/22 01:03:12 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.6 2008/08/30 16:33:25 flameeyes Exp $
+
+  30 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> biosdisk-0.65.ebuild:
+  Add ~amd64 keyword.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
