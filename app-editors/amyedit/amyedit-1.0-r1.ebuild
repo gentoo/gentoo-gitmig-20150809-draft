@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.2 2008/01/09 12:33:59 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.3 2008/08/30 17:07:54 aballier Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION=" AmyEdit is a LaTeX editor"
 HOMEPAGE="http://amyedit.sf.net"
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND=">=dev-cpp/gtkmm-2.6
 	>=dev-cpp/glibmm-2.14
+	>=dev-libs/libsigc++-2.2
 	=x11-libs/gtksourceview-1*
 	app-text/aspell"
 DEPEND="${RDEPEND}
@@ -20,7 +21,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-keyfile.patch"
+	epatch "${FILESDIR}/${P}-signal.patch"
+	eautoreconf
 }
 
 src_install() {

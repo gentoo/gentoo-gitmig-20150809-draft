@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/amyedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.17 2008/08/16 16:52:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.18 2008/08/30 17:07:54 aballier Exp $
+
+  30 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/amyedit-1.0-signal.patch, amyedit-1.0-r1.ebuild:
+  Run eautoreconf after patching makefile.am instead of letting
+  maintainer-mode do it, should fix bug #205984. Fix build with recent
+  libsigc++ by Sven E. dark@verfeiert.org, bug #229801.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove pclouds from metadata.xml (#49680)
