@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.4.3.ebuild,v 1.4 2008/03/12 21:46:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.0a.ebuild,v 1.1 2008/08/30 18:57:31 jokey Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
+MY_P=${PN}_src_${PV//./_}
 DESCRIPTION="Openfire (formerly wildfire) real time collaboration (RTC) server"
 HOMEPAGE="http://www.igniterealtime.org/projects/openfire/"
-SRC_URI="http://www.igniterealtime.org/builds/openfire/${PN//-/_}_src_${PV//./_}.tar.gz"
+SRC_URI="http://www.igniterealtime.org/builds/openfire/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,10 +16,10 @@ IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.5"
 DEPEND="net-im/jabber-base
-		dev-java/ant-contrib
+		~dev-java/ant-contrib-1.0_beta2
 		>=virtual/jdk-1.5"
 
-S=${WORKDIR}/${PN//-/_}_src
+S=${WORKDIR}/${PN}_src
 
 RESTRICT=""
 
@@ -28,6 +29,10 @@ PROVIDE="virtual/jabber-server"
 pkg_setup() {
 	if [ -f /etc/env.d/98openfire ]; then
 		einfo "This is an upgrade"
+		ewarn "As the plugin API changed, at least these plugins need to be updated also:"
+		ewarn "User Search, IM Gateway, Fastpath, Monitoring"
+		ewarn "hey can be downloaded via Admin Console or at"
+		ewarn "${HOMEPAGE}"
 	else
 		ewarn "If this is an upgrade stop right ( CONTROL-C ) and run the command:"
 		ewarn "echo 'CONFIG_PROTECT=\"/opt/openfire/resources/security/\"' > /etc/env.d/98openfire "
@@ -38,7 +43,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${PN//-/_}_src_${PV//./_}.tar.gz
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/buildxml.patch
 
