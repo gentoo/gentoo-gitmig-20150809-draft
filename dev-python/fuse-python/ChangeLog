@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fuse-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.8 2008/06/08 18:06:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.9 2008/08/30 20:26:27 jokey Exp $
+
+  30 Aug 2008; Markus Ullmann <jokey@gentoo.org> fuse-python-0.2.ebuild:
+  Stable on x86
 
   08 Jun 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Update metadata

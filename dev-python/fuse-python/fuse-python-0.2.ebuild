@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/fuse-python-0.2.ebuild,v 1.6 2008/05/29 16:10:34 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/fuse-python-0.2.ebuild,v 1.7 2008/08/30 20:26:27 jokey Exp $
 
 inherit eutils distutils multilib python
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 DESCRIPTION="Python FUSE bindings"
 HOMEPAGE="http://fuse.sourceforge.net/wiki/index.php/FusePython"
 
