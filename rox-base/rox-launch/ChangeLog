@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-launch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.2 2008/08/28 18:01:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.3 2008/08/30 20:02:46 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> rox-launch-0.3.2.ebuild:
+  x86 stable, bug #236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> rox-launch-0.3.2.ebuild:
   Marked stable on amd64
