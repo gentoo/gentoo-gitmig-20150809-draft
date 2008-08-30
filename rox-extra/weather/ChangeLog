@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/weather
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.13 2008/08/30 15:39:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.14 2008/08/30 20:06:34 maekke Exp $
+
+  30 Aug 2008; Markus Meier <maekke@gentoo.org> weather-0.3.1.ebuild:
+  x86 stable, bug #236057
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> weather-0.3.1.ebuild:
   Marking weather-0.3.1 ~ppc for bug 236057
