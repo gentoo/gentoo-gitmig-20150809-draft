@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.39.ebuild,v 1.2 2008/04/03 13:36:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.39.ebuild,v 1.3 2008/08/30 01:18:26 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 
 	if use emacs; then
 		cd contrib
-		elisp-comp *.el || die "elisp-comp failed"
+		elisp-compile *.el || die "elisp-compile failed"
 	fi
 }
 

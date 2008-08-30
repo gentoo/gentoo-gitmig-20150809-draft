@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.54 2008/05/03 01:01:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.55 2008/08/30 01:18:26 dragonheart Exp $
+
+  30 Aug 2008; Daniel Black <dragonheart@gentoo.org> monotone-0.39.ebuild,
+  monotone-0.40.ebuild:
+  depricating elist-comp as per bug #235879. thanks Ulrich for the patch
 
   03 May 2008; Daniel Black <dragonheart@gentoo.org> monotone-0.35.ebuild,
   -monotone-0.36-r1.ebuild:
