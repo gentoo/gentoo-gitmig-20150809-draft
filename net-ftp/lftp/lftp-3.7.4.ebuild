@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.7.1.ebuild,v 1.2 2008/06/17 11:58:10 armin76 Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.7.4.ebuild,v 1.1 2008/08/30 12:27:39 dragonheart Exp $
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
@@ -10,7 +8,7 @@ SRC_URI="http://ftp.yars.free.net/pub/source/lftp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND=">=sys-libs/ncurses-5.1
@@ -27,14 +25,6 @@ RDEPEND=">=sys-libs/ncurses-5.1
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-lang/perl"
-
-#src_unpack() {
-#	unpack ${A}
-#	cd "${S}"
-#
-#	epatch "${FILESDIR}"/${PV}-segfault.patch
-#	epatch "${FILESDIR}"/${PV}-specialchars.patch
-#}
 
 src_compile() {
 	local myconf="$(use_enable nls) --enable-packager-mode"
