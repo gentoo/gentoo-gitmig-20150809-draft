@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.316 2008/08/30 02:48:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.317 2008/08/30 15:23:45 jmbsvicetto Exp $
+
+  30 Aug 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  subversion-1.5.1.ebuild:
+  Improved sed used on previous commit.
 
   30 Aug 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   subversion-1.5.1.ebuild:
