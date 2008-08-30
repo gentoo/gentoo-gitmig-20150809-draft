@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.8.ebuild,v 1.2 2008/08/28 17:55:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.8.ebuild,v 1.3 2008/08/30 15:23:26 ranger Exp $
 
 EAPI=1
 inherit eutils multilib
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/rox/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~sparc ~x86"
 IUSE="svg +video"
 
 RDEPEND=">=x11-libs/gtk+-2.4

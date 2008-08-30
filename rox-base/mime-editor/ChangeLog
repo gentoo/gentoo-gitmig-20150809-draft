@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/mime-editor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.16 2008/08/28 17:48:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.17 2008/08/30 15:23:24 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> mime-editor-0.5-r2.ebuild:
+  Marking mime-editor-0.5-r2 ppc stable for bug 236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org> mime-editor-0.5-r2.ebuild:
   Marking stable on amd64

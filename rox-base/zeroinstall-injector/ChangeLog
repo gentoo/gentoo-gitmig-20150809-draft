@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.7 2008/08/28 17:42:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.8 2008/08/30 15:23:28 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org>
+  zeroinstall-injector-0.33.ebuild:
+  Marking zeroinstall-injector-0.33 ppc stable for bug 236057
 
   28 Aug 2008; Jim Ramsay <lack@gentoo.org>
   -zeroinstall-injector-0.31-r2.ebuild, zeroinstall-injector-0.33.ebuild:
