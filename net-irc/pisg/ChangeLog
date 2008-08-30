@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.56 2008/07/07 18:24:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.57 2008/08/30 14:23:43 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> pisg-0.72.ebuild:
+  stable ppc, bug 236122
 
 *pisg-0.72 (07 Jul 2008)
 
