@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/leaflet
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.10 2007/03/13 00:29:27 nattfodd Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.11 2008/08/30 12:34:10 aballier Exp $
+
+*leaflet-20041222 (30 Aug 2008)
+
+  30 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/leaflet-20041222-logging.patch, +leaflet-20041222.ebuild:
+  bump to latest ctan version and install to texmf-site
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
