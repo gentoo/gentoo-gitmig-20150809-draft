@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.38 2008/08/27 14:16:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.39 2008/08/30 14:18:20 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> grace-5.1.22-r1.ebuild:
+  stable ppc, bug 235754
 
   27 Aug 2008; Raúl Porcel <armin76@gentoo.org> grace-5.1.22-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #235754
