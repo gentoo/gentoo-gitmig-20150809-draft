@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.26 2008/08/27 18:09:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.27 2008/08/30 19:02:53 jokey Exp $
+
+*quassel-0.3.0-r1 (30 Aug 2008)
+*quassel-0.2.0_rc1-r1 (30 Aug 2008)
+
+  30 Aug 2008; Markus Ullmann <jokey@gentoo.org> files/quasselcore.init,
+  -quassel-0.2.0_beta1.ebuild, -quassel-0.2.0_rc1.ebuild,
+  +quassel-0.2.0_rc1-r1.ebuild, -quassel-0.2.9999.ebuild,
+  -quassel-0.3.0.ebuild, +quassel-0.3.0-r1.ebuild, +quassel-9999.ebuild,
+  -quassel-9999-r1.ebuild:
+  Make init script baselayout-1 compatible wrt bug #235953 thanks to Daniel
+  Pielmeier, revbump released versions and fix naming for the live ebuild
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org> quassel-0.3.0.ebuild:
   Add some testing keywords

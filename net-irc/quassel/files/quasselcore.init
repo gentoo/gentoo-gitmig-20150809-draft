@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore.init,v 1.1 2008/08/26 12:01:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore.init,v 1.2 2008/08/30 19:02:54 jokey Exp $
 
 depend() {
 	need net
@@ -9,14 +9,21 @@ depend() {
 
 start() {
 	ebegin "Starting Quassel Core"
-	start-stop-daemon --start --user $QUASSEL_USER --background --make-pidfile \
-	--pidfile /var/run/quassel.pid --exec /usr/bin/quasselcore -- ${QUASSEL_OPTS}
+	if [ -x /etc/init.d/root ]; then
+		# running on baselayout-2/openrc
+		start-stop-daemon --start --user ${QUASSEL_USER} --background --make-pidfile \
+		--pidfile /var/run/quassel.pid --exec /usr/bin/quasselcore -- ${QUASSEL_OPTS}
+	else
+		# running on baselayout-1
+		start-stop-daemon --start --chuid ${QUASSEL_USER} --background --make-pidfile \
+		--pidfile /var/run/quassel.pid --env HOME="/home/${QUASSEL_USER}" \
+		--exec /usr/bin/quasselcore -- ${QUASSEL_OPTS}
+	fi
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Quassel Core"
-	start-stop-daemon --stop --user $QUASSEL_USER --pidfile /var/run/quassel.pid \
-	--exec /usr/bin/quasselcore
+	start-stop-daemon --stop --pidfile /var/run/quassel.pid --exec /usr/bin/quasselcore
 	eend $?
 }

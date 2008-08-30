@@ -1,14 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_beta1.ebuild,v 1.3 2008/06/29 10:01:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_rc1-r1.ebuild,v 1.1 2008/08/30 19:02:53 jokey Exp $
 
 EAPI=1
 
-inherit qt4
+inherit cmake-utils eutils
 
-if [[ ${PV} == 9999 ]]; then
-	inherit subversion
-	ESVN_REPO_URI="http://svn.quassel-irc.org/trunk"
+if [[ ${PV} == *9999 ]]; then
+	EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
+
+	case ${PV} in
+		0.2.9999) EGIT_BRANCH="0.2" ;;
+		*) EGIT_BRANCH="master"
+	esac
+	inherit git
 else
 	MY_P="${P/_/-}"
 	SRC_URI="http://quassel-irc.org/system/files/${MY_P}.tar.bz2"
@@ -37,7 +42,10 @@ RDEPEND="|| (
 		)
 		=x11-libs/qt-4.3*:4
 	)"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.4.7"
+
+DOCS="ChangeLog README README.Qtopia"
 
 pkg_setup() {
 	if ! use server && ! use X; then
@@ -59,26 +67,36 @@ pkg_setup() {
 }
 
 src_compile() {
-	local BUILD=""
-	use server && BUILD="${BUILD} core"
-	use X && BUILD="${BUILD} qtclient"
+	local mycmakeargs="
+		$(cmake-utils_use_want server CORE)
+		$(cmake-utils_use_want X QTCLIENT)
+		-DWANT_MONO=OFF
+		"
 
-	eqmake4 ${PN}.pro BUILD="${BUILD}" || die "eqmake4 failed"
-	emake || die "emake failed"
+	cmake-utils_src_compile
 }
 
 src_install() {
-	local targets=""
-	use server && targets="${targets} build/targets/quasselcore"
-	use X && targets="${targets} build/targets/quasselclient"
-	dobin $targets  || die "quasselcore install failed"
+	cmake-utils_src_install
 
-	# Only install the desktop file if the X client was installed
+	# Only install the icons if the X client was installed
 	if use X; then
-		sed -i -e 's:Exec=quassel:Exec=quasselclient:' ${PN}.desktop \
-			|| die "failed to fix desktop file"
-		domenu ${PN}.desktop || die "desktop file install failed"
+		local size
+		for size in 16 24 32 48 64 96 128 256 512; do
+			insinto /usr/share/icons/hicolor/${size}x${size}
+			newins "${S}"/src/icons/quassel/connected/${size}.png quassel.png
+		done
 	fi
 
-	dodoc ChangeLog README README.Qtopia || die "dodoc failed"
+	if use server; then
+		newinitd "${FILESDIR}"/quasselcore.init quasselcore
+		newconfd "${FILESDIR}"/quasselcore.conf quasselcore
+	fi
+}
+
+pkg_postinst() {
+	if use server; then
+		ewarn "In order to use the quassel init script you must set the"
+		ewarn "QUASSEL_USER variable in /etc/conf.d/quasselcore to your username."
+	fi
 }

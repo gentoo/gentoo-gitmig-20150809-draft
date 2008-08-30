@@ -1,51 +1,33 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_rc1.ebuild,v 1.3 2008/08/26 12:01:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.0-r1.ebuild,v 1.1 2008/08/30 19:02:53 jokey Exp $
 
 EAPI=1
 
 inherit cmake-utils eutils
 
-if [[ ${PV} == *9999 ]]; then
-	EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
-
-	case ${PV} in
-		0.2.9999) EGIT_BRANCH="0.2" ;;
-		*) EGIT_BRANCH="master"
-	esac
-	inherit git
-else
-	MY_P="${P/_/-}"
-	SRC_URI="http://quassel-irc.org/system/files/${MY_P}.tar.bz2"
-	S=${WORKDIR}/${MY_P}
-fi
-
+MY_P="${P/_/-}"
 DESCRIPTION="Core/client IRC client."
 HOMEPAGE="http://quassel-irc.org/"
+SRC_URI="http://quassel-irc.org/pub/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
-
-KEYWORDS="~amd64 ~x86"
-
+KEYWORDS="~amd64 ~sparc ~x86"
 SLOT="0"
-
 IUSE="+X +server debug"
 
-RDEPEND="|| (
-		(
-			x11-libs/qt-core:4
-			server? (
-				x11-libs/qt-sql:4
-				x11-libs/qt-script:4
-			)
-			X? ( x11-libs/qt-gui:4 )
+RDEPEND="x11-libs/qt-core:4
+		server? (
+			x11-libs/qt-sql:4
+			x11-libs/qt-script:4
 		)
-		=x11-libs/qt-4.3*:4
-	)"
+		X? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.7"
 
 DOCS="ChangeLog README README.Qtopia"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if ! use server && ! use X; then
@@ -81,11 +63,9 @@ src_install() {
 
 	# Only install the icons if the X client was installed
 	if use X; then
-		local size
-		for size in 16 24 32 48 64 96 128 256 512; do
-			insinto /usr/share/icons/hicolor/${size}x${size}
-			newins "${S}"/src/icons/quassel/connected/${size}.png quassel.png
-		done
+		insinto /usr/share/icons/hicolor
+		# avoid the connected/ directory, get only the ${size}x${size}
+		doins -r "${S}"/src/icons/quassel/*x*
 	fi
 
 	if use server; then
