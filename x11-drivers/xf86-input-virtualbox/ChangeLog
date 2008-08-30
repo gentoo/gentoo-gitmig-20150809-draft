@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.2 2008/08/10 14:44:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.3 2008/08/30 19:16:37 jokey Exp $
+
+*xf86-input-virtualbox-1.6.4-r1 (30 Aug 2008)
+
+  30 Aug 2008; Markus Ullmann <jokey@gentoo.org>
+  files/xf86-input-virtualbox-1.6.4-fix-missing-makefiles.patch,
+  -xf86-input-virtualbox-1.6.4.ebuild,
+  +xf86-input-virtualbox-1.6.4-r1.ebuild:
+  Add fixed depcheck for bug #235792
 
 *xf86-input-virtualbox-1.6.4 (10 Aug 2008)
 

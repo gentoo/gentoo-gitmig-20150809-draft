@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-1.6.4.ebuild,v 1.1 2008/08/10 14:44:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-1.6.4-r1.ebuild,v 1.1 2008/08/30 19:16:37 jokey Exp $
 
 inherit x-modular eutils
 
@@ -16,6 +16,8 @@ IUSE=""
 
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
+		sys-devel/dev86
+		sys-power/iasl
 		x11-proto/inputproto
 		x11-proto/randrproto
 		x11-proto/xproto"
@@ -40,8 +42,10 @@ src_compile() {
 		--build-headless || die "configure failed"
 		source ./env.sh
 
-		cd "${S}/src/VBox/Additions/linux/xmouse"
-		MAKE="kmk" emake || die "kmk failed"
+		for each in src/VBox/{Runtime,Additions/common/VBoxGuestLib} \
+		src/VBox/Additions/x11/xmouse ; do
+			MAKE="kmk" emake || die "kmk failed"
+		done
 }
 
 src_install() {
