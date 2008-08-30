@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.47 2008/08/13 17:52:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.48 2008/08/30 02:33:58 dragonheart Exp $
+
+  30 Aug 2008; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  crypto++-5.5.2-r1.ebuild:
+  change sse2 use flag to sse3 as thats what it really is - bug #235665 thanks
+  to Radek
 
 *crypto++-5.5.2-r1 (13 Aug 2008)
 
