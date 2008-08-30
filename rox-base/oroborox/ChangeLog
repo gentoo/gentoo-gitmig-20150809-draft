@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/oroborox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.14 2008/01/22 15:13:00 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.15 2008/08/30 15:27:36 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> oroborox-0.9.8-r1.ebuild:
+  Marking oroborox-0.9.8-r1 ~ppc for bug 236057
 
 *oroborox-0.9.8-r1 (22 Jan 2008)
 

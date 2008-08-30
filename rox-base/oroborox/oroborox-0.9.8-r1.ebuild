@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8-r1.ebuild,v 1.1 2008/01/22 15:13:00 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8-r1.ebuild,v 1.2 2008/08/30 15:27:36 ranger Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox eutils toolchain-funcs autotools
@@ -13,7 +13,7 @@ SRC_URI="http://roxos.sunsite.dk/dev-contrib/guido/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 # startup-notification support is disabled by default, probably because it
 # doesn't work.
 # Also, there is no way to explicitly disable xinerama - It is always detected
