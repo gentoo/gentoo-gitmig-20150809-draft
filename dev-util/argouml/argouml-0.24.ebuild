@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.24.ebuild,v 1.2 2008/08/22 21:26:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.24.ebuild,v 1.3 2008/08/30 14:33:07 ranger Exp $
 
 inherit java-pkg-2
 
@@ -17,7 +17,7 @@ SRC_URI="${BASE_URI}/ArgoUML-${PV}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
