@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.36 2008/08/30 13:13:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.37 2008/08/30 13:49:28 aballier Exp $
 
 # @ECLASS: latex-package.eclass
 # @MAINTAINER:
@@ -55,7 +55,8 @@
 
 inherit base
 
-DEPEND="virtual/latex-base
+RDEPEND="virtual/latex-base"
+DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r5"
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/latex/"
