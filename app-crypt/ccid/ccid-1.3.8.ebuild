@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.5.ebuild,v 1.3 2008/08/30 06:33:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.8.ebuild,v 1.1 2008/08/30 06:33:24 dragonheart Exp $
 
-STUPID_NUM="2330"
+STUPID_NUM="2482"
 DESCRIPTION="CCID free software driver"
 HOMEPAGE="http://pcsclite.alioth.debian.org/ccid.html"
-SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.gz"
+SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
