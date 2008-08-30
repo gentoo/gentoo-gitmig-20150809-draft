@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.19 2008/05/15 15:25:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.20 2008/08/30 14:43:10 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> pam_krb5-3.10.ebuild:
+  Marking pam_krb5-3.10 ~ppc for bug 213854
 
   15 May 2008; Doug Goldstein <cardoe@gentoo.org>
   -files/pam_krb5-1.0-errno_h.patch, -files/pam_krb5-1.0-gentoo.diff,
