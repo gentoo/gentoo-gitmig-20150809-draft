@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.85 2008/08/30 15:20:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.86 2008/08/30 15:25:29 bluebird Exp $
+
+  30 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
+  apache-2.2.9-r1.ebuild:
+  Stable on sparc, security bug #234088
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> apache-2.2.9-r1.ebuild:
   amd64/x86 stable, bug #234088
