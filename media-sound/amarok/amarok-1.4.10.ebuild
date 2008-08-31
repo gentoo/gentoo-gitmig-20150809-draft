@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10.ebuild,v 1.7 2008/08/19 21:43:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10.ebuild,v 1.8 2008/08/31 20:07:46 loki_val Exp $
 
 ARTS_REQUIRED="never"
 
@@ -68,6 +68,8 @@ RDEPEND="${RDEPEND}
 	app-arch/unzip
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.3.patch" )
 
 need-kde 3.5
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.280 2008/08/19 21:43:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.281 2008/08/31 20:07:45 loki_val Exp $
+
+  31 Aug 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/amarok-1.4.10-gcc-4.3.patch, amarok-1.4.10.ebuild,
+  amarok-1.4.10-r1.ebuild:
+  Fix for gcc-4.3. Bug 234784. Thanks to Martin Väth
+  <vaeth@mathematik.uni-wuerzburg.de>.
 
   19 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   amarok-1.4.10.ebuild:

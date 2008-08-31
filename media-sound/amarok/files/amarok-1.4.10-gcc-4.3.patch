@@ -1,0 +1,10 @@
+--- amarok-1.4.10/amarok/src/engine/helix/hxplayercontrol.cpp
++++ amarok-1.4.10/amarok/src/engine/helix/hxplayercontrol.cpp
+@@ -21,6 +21,7 @@
+ #include <unistd.h>
+ #include <iostream>
+ #include <cstring>
++#include <cstdlib>
+ #include <sys/mman.h>
+ 
+ using namespace std;

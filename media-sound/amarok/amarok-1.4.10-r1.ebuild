@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10-r1.ebuild,v 1.1 2008/08/14 21:54:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10-r1.ebuild,v 1.2 2008/08/31 20:07:45 loki_val Exp $
 
 ARTS_REQUIRED="never"
 
@@ -69,7 +69,8 @@ RDEPEND="${RDEPEND}
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
 
-PATCHES=( "${FILESDIR}/amarok-1.4.9.1-libmtp-0.3.0-API.patch" )
+PATCHES=( "${FILESDIR}/amarok-1.4.9.1-libmtp-0.3.0-API.patch"
+	"${FILESDIR}/${P}-gcc-4.3.patch" )
 
 need-kde 3.5
 
