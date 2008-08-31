@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.109 2008/08/23 00:34:06 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.110 2008/08/31 15:15:24 armin76 Exp $
+
+  31 Aug 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask openct, no hardware to test
 
   23 Aug 2008; Jose Luis Rivero <yoswink@gentoo.org> -2006.1/deprecated,
   -2006.1/desktop/make.defaults, -2006.1/desktop/parent,
