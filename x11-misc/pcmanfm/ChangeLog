@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/pcmanfm
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.1 2008/08/31 18:05:08 yngwin Exp $
+
+*pcmanfm-0.5 (31 Aug 2008)
+
+  31 Aug 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +pcmanfm-0.5.ebuild:
+  Initial commit. Ebuild based on the work done in Sunrise and freshgen
+  overlays.
+
