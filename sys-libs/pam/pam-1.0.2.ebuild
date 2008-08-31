@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.2.ebuild,v 1.1 2008/08/30 00:52:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.2.ebuild,v 1.2 2008/08/31 11:44:37 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -106,6 +106,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
 	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
+
+	# Remove NIS dependencies, see bug #235431
+	epatch "${FILESDIR}/${MY_P}-noyp.patch"
 
 	AT_M4DIR="m4" eautoreconf
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.224 2008/08/30 00:52:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.225 2008/08/31 11:44:37 flameeyes Exp $
+
+  31 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-1.0.2-noyp.patch, pam-1.0.2.ebuild:
+  Add a patch that checks if the system includes support for NIS. This way
+  Linux-PAM 1.0.x can build on uClibc systems. Closes bug #235431.
 
 *pam-1.0.2 (30 Aug 2008)
 
