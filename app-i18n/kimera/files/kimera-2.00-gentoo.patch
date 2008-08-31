@@ -1,0 +1,22 @@
+diff -Naur kimera-2.00.orig/kimera.pro kimera-2.00/kimera.pro
+--- kimera-2.00.orig/kimera.pro	2008-08-30 22:05:31.000000000 +0900
++++ kimera-2.00/kimera.pro	2008-08-31 11:52:37.000000000 +0900
+@@ -1,5 +1,5 @@
+ TEMPLATE        = app
+-CONFIG         += qt x11 warn_on release
++CONFIG         += qt x11 warn_on release nostrip
+ QT             += network
+ TARGET          = kimera-bin
+ VERSION         = 2.00
+diff -Naur kimera-2.00.orig/src/inputmethod.cpp kimera-2.00/src/inputmethod.cpp
+--- kimera-2.00.orig/src/inputmethod.cpp	2008-08-30 22:05:31.000000000 +0900
++++ kimera-2.00/src/inputmethod.cpp	2008-08-31 11:43:44.000000000 +0900
+@@ -165,7 +165,7 @@
+ 	   im, ic, flag, errcode, errtype, __FILE__, __LINE__);
+   if (errlen > 0) {
+     char errdetail[256] = { 0 };
+-    dsbuf.readRawData((char*)errdetail, qMin((quint32)errlen, sizeof(errdetail) - 1));   // header
++    dsbuf.readRawData((char*)errdetail, qMin((quint32)errlen, (quint32)sizeof(errdetail) - 1));   // header
+     qDebug("Error detail: %s", errdetail);
+   }
+ }
