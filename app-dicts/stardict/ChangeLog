@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.48 2008/08/31 12:39:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.49 2008/08/31 12:58:10 ranger Exp $
+
+  31 Aug 2008; Brent Baude <ranger@gentoo.org> stardict-3.0.1-r1.ebuild:
+  stable ppc, bug 236096
 
   31 Aug 2008; Markus Meier <maekke@gentoo.org> stardict-3.0.1-r1.ebuild:
   amd64/x86 stable, bug #236096
