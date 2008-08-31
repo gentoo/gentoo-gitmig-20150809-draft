@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.9 2008/02/13 12:19:49 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.10 2008/08/31 01:08:50 dragonheart Exp $
 
 #
 # NOTE: This revision is used by direct dependency. DO NOT REMOVE!
@@ -28,6 +28,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/gpgme3.m4.patch
 	find . -name Makefile -o -name Makefile.in -exec rm {} \;
 	rm doc/gpgme.info-?
+	# bug #226461
+	rm m4/libtool.m4
 
 	sed -i -e 's:libgpgme:libgpgme3:g' \
 		`find . -name Makefile.am` doc/gpgme.info
