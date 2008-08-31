@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.2.ebuild,v 1.2 2008/08/29 15:54:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.2.ebuild,v 1.3 2008/08/31 13:44:43 maekke Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="X editor nls" #sdl"
 
 RDEPEND="media-libs/jpeg
