@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/bip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.1 2007/11/20 09:15:58 hawking Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.2 2008/08/31 10:05:17 hawking Exp $
+
+*bip-0.7.4 (31 Aug 2008)
+
+  31 Aug 2008; Ali Polatel <hawking@gentoo.org> -bip-0.6.1.ebuild,
+  +bip-0.7.4.ebuild:
+  Version bump. Keyword ~amd64. Drop old.
 
 *bip-0.6.1 (20 Nov 2007)
 
