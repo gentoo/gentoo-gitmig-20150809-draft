@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.102.ebuild,v 1.2 2008/08/30 22:11:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.102.ebuild,v 1.3 2008/08/31 05:55:47 mr_bones_ Exp $
 
 inherit multilib
 
@@ -27,7 +27,6 @@ RDEPEND="usb? ( dev-libs/libusb )
 	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
 
 pkg_setup() {
 	if use hal && use usb; then
