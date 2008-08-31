@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/xdg-menu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.19 2008/08/30 19:49:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.20 2008/08/31 21:20:17 armin76 Exp $
+
+  31 Aug 2008; Raúl Porcel <armin76@gentoo.org> xdg-menu-1.4.ebuild:
+  sparc stable wrt #236057
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> xdg-menu-1.4.ebuild:
   x86 stable, bug #236057

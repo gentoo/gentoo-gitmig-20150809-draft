@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30-r4.ebuild,v 1.4 2008/08/30 19:50:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30-r4.ebuild,v 1.5 2008/08/31 21:16:22 armin76 Exp $
 
 ROX_LIB_VER="2.0.4-r1"
 ROX_VER="2.7-r1"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-python/dbus-python-0.71
