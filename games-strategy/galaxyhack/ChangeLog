@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/galaxyhack
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.5 2007/11/10 00:47:17 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.6 2008/08/31 05:18:06 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/galaxyhack-1.74-gcc43.patch, galaxyhack-1.74.ebuild:
+  patch to build with gcc4.3 submitted by Bert Karwatzki via bug #232069
 
 *galaxyhack-1.74 (10 Nov 2007)
 

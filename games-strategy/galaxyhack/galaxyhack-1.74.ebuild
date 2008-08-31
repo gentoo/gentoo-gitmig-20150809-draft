@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.1 2007/11/10 00:47:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.2 2008/08/31 05:18:06 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -27,7 +27,8 @@ src_unpack() {
 	edos2unix Makefile
 	epatch \
 		"${FILESDIR}"/${P}-destdirs.patch \
-		"${FILESDIR}"/${P}-boost.patch
+		"${FILESDIR}"/${P}-boost.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	sed -i "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
 		Main.cpp \
 		|| die "sed Main.cpp failed"
