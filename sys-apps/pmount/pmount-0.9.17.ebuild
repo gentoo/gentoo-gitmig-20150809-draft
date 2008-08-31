@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.17.ebuild,v 1.3 2008/04/14 18:38:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.17.ebuild,v 1.4 2008/08/31 16:03:19 klausman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2247/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="crypt hal"
 
 RDEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
