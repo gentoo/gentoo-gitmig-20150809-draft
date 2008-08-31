@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.8 2008/08/30 20:04:43 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.9 2008/08/31 09:40:04 ikelos Exp $
+
+  31 Aug 2008; Mike Auty <ikelos@gentoo.org> +files/10-vmware-tools:
+  Add missing file 10-vmware-tools
 
 *open-vm-tools-0.0.20080808.109361 (30 Aug 2008)
 
