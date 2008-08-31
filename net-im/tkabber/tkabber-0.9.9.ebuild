@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.6 2007/05/18 22:10:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.7 2008/08/31 02:19:45 tester Exp $
 
 inherit eutils
 
@@ -8,17 +8,18 @@ DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant mes
 HOMEPAGE="http://tkabber.jabber.ru/"
 SRC_URI="http://files.jabberstudio.org/tkabber/${P}.tar.gz
 	plugins? ( http://files.jabberstudio.org/tkabber/tkabber-plugins-${PV}.tar.gz )"
-IUSE="crypt plugins ssl extras"
+IUSE="plugins ssl extras"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	|| ( >=dev-tcltk/tclxml-3.0 dev-tcltk/tclxml-expat )
-	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 	>=dev-tcltk/tcllib-1.3
 	>=dev-tcltk/bwidget-1.3
 	ssl? ( >=dev-tcltk/tls-1.4.1 )
 	>=dev-tcltk/tkXwin-1.0
 	>=dev-tcltk/tkTheme-1.0"
+# Disabled because it depends on gpgme 0.3.x
+#	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 sparc x86"
