@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.0.ebuild,v 1.2 2008/08/02 20:52:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.1.ebuild,v 1.1 2008/08/31 20:39:24 loki_val Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+aac +boo daap doc +encode +flac ipod +mad mtp +podcast test +vorbis"
 
-RDEPEND=">=dev-lang/mono-1.2.4
+RDEPEND=">=dev-lang/mono-1.2.6
 	>=dev-dotnet/gtk-sharp-2.10
 	>=dev-dotnet/gconf-sharp-2.8
 	>=dev-dotnet/gnome-sharp-2.8
