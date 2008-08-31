@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.21 2008/08/31 05:01:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.22 2008/08/31 05:02:51 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> pearpc-0.4.ebuild:
+  remove deprecated bindnow-flags function (bug #226949)
 
   31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> -pearpc-0.3.1.ebuild,
   pearpc-0.4.ebuild:
