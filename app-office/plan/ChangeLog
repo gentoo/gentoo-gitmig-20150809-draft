@@ -1,6 +1,9 @@
 # ChangeLog for app-office/plan
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.16 2008/05/28 20:45:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.17 2008/08/31 13:14:29 maekke Exp $
+
+  31 Aug 2008; Markus Meier <maekke@gentoo.org> plan-1.9.ebuild:
+  add ~amd64, bug #222213
 
   28 May 2008; Markus Meier <maekke@gentoo.org> +files/makefile.patch,
   plan-1.9.ebuild:
