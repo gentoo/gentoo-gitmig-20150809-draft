@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.14 2008/08/06 10:02:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.15 2008/08/31 12:42:40 gentoofan23 Exp $
+
+  31 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  libproccpuinfo-0.0.7.ebuild:
+  stable amd64, bug 236132
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
