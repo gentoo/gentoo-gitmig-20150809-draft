@@ -1,6 +1,10 @@
 # ChangeLog for media-video/effectv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.5 2007/11/27 12:00:34 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.6 2008/08/31 04:49:27 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  effectv-0.3.11.ebuild:
+  fix bug #221447 and the executable stacks QA; tidy ebuild
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> effectv-0.3.10.ebuild,
   effectv-0.3.11.ebuild:

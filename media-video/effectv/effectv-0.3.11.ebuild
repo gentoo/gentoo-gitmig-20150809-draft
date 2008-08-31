@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.11.ebuild,v 1.3 2007/11/27 12:00:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.11.ebuild,v 1.4 2008/08/31 04:49:27 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,15 +11,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="mmx"
-DEPEND="x86? ( dev-lang/nasm )
-		media-libs/libsdl"
+
+RDEPEND="media-libs/libsdl"
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.3.10-makefile.patch"
-	epatch "${FILESDIR}/${PN}-0.3.10-trunc-name-collision.patch"
-	epatch "${FILESDIR}/${P}-timedist.patch"
+	epatch \
+		"${FILESDIR}/${PN}-0.3.10-makefile.patch" \
+		"${FILESDIR}/${PN}-0.3.10-trunc-name-collision.patch" \
+		"${FILESDIR}/${P}-timedist.patch"
+	echo "
+%ifidn __OUTPUT_FORMAT__,elf
+section .note.GNU-stack noalloc noexec nowrite progbits
+%endif" >> effects/blurzoomcore.nas
 }
 
 src_compile() {
@@ -34,8 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe ${PN}
+	dobin ${PN} || die "dobin failed"
 	doman *.1
 	dodoc CREWS ChangeLog FAQ NEWS README TODO
 }
