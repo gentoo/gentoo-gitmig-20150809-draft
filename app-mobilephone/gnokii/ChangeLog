@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.81 2008/08/24 11:51:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.82 2008/08/31 07:13:53 mrness Exp $
+
+  31 Aug 2008; Alin Năstac <mrness@gentoo.org> gnokii-0.6.22-r2.ebuild,
+  gnokii-0.6.26-r2.ebuild:
+  Don't force -j1 on make (#235999).
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> gnokii-0.6.26-r2.ebuild:
   Stable on ppc64; bug #234787

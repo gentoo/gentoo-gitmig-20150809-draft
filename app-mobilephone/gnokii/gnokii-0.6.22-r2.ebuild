@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.7 2008/06/04 18:34:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.8 2008/08/31 07:13:53 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -99,7 +99,7 @@ src_compile() {
 		--disable-unix98test \
 		|| die "configure failed"
 
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 
 	if use sms;	then
 		pushd "${S}/smsd"
