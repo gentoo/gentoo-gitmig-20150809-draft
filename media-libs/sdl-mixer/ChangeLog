@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.59 2008/02/08 20:15:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.60 2008/08/31 02:51:56 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/sdl-mixer-1.2.7-build.patch,
+  -files/sdl-mixer-1.2.7-libmikmod.patch, -sdl-mixer-1.2.7.ebuild:
+  clean out old ebuilds
 
   08 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
   sdl-mixer-1.2.8.ebuild:
