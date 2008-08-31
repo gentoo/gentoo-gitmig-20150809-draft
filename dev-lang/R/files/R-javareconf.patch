@@ -1,3 +1,6 @@
+# this patch fixes the insecure tempfile usage reported in bug #235822
+# it was adapted from the fix in Debian's r-base_2.7.2-1.diff patch
+
 diff -Naur R-2.7.2/src/scripts/javareconf R-2.7.2.new/src/scripts/javareconf
 --- R-2.7.2/src/scripts/javareconf	2008-03-25 08:26:44.000000000 -0400
 +++ R-2.7.2.new/src/scripts/javareconf	2008-08-31 10:28:48.000000000 -0400
