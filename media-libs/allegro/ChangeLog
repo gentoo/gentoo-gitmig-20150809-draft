@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.78 2008/06/01 15:55:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.79 2008/08/31 12:46:40 maekke Exp $
+
+  31 Aug 2008; Markus Meier <maekke@gentoo.org> allegro-4.2.2-r1.ebuild:
+  amd64/x86 stable, bug #236241
 
 *allegro-4.2.2-r1 (01 Jun 2008)
 
