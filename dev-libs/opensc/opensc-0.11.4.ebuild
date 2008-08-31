@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.4.ebuild,v 1.1 2007/09/12 21:29:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.4.ebuild,v 1.2 2008/08/31 00:31:25 dragonheart Exp $
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
@@ -15,7 +15,7 @@ RDEPEND="dev-libs/openssl
 	sys-libs/zlib
 	openct? ( >=dev-libs/openct-0.5.0 )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
-	nsplugin? ( app-crypt/pinentry )"
+	nsplugin? ( app-crypt/pinentry x11-libs/libXt )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nsplugin? ( dev-libs/libassuan )"
