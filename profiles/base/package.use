@@ -47,3 +47,9 @@ app-emulation/emul-linux-x86-soundlibs arts
 # Since we have unicode on by default pretty much everywhere, add slang so we
 # can get a unicode-aware Midnight Commander.
 app-misc/mc slang
+
+# 2008/08/31 - Alin Năstac <mrness@gentoo.org>
+# This option is needed on multi-homed boxes, otherwise the server could
+# answer with the wrong source IP address (#235688).
+net-dialup/freeradius udpfromto
+
