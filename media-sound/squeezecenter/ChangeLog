@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.20 2008/08/03 04:35:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.21 2008/08/31 19:56:39 lavajoe Exp $
+
+*squeezecenter-7.2.0 (31 Aug 2008)
+
+  31 Aug 2008; Joe Peterson <lavajoe@gentoo.org>
+  -files/Gentoo-plugins-7.0.2-README.txt,
+  -files/filepaths-7.0.2-gentoo.patch, -files/squeezecenter-7.0.2.init.d,
+  -files/mDNSResponder-7.0-gentoo.patch, -files/dbcreate-7.0-gentoo.sql,
+  -files/dbdrop-7.0-gentoo.sql, -files/avahi-7.0-squeezecenter.service,
+  -files/squeezecenter-7.0.conf.d, -files/squeezecenter-7.0.init.d,
+  -files/squeezecenter-7.0.logrotate.d, -files/squeezecenter-7.0.prefs,
+  +files/filepaths-gentoo.patch, +files/mDNSResponder-gentoo.patch,
+  -squeezecenter-7.0.1.ebuild, +squeezecenter-7.2.0.ebuild:
+  Add new version 7.2.0; remove old ebuilds and files
 
 *squeezecenter-7.1.0 (03 Aug 2008)
 

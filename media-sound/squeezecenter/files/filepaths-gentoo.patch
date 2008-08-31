@@ -1,6 +1,6 @@
---- Slim/Utils/OSDetect.pm.old	2008-05-23 18:55:39.000000000 +0100
-+++ Slim/Utils/OSDetect.pm	2008-05-26 15:56:10.000000000 +0100
-@@ -248,6 +248,58 @@
+--- Slim/Utils/OSDetect.pm.old	2008-07-22 12:25:34.000000000 +0100
++++ Slim/Utils/OSDetect.pm	2008-07-22 12:27:06.000000000 +0100
+@@ -253,6 +253,58 @@
  			warn "dirsFor: Didn't find a match request: [$dir]\n";
  		}
  
@@ -59,7 +59,7 @@
  	# Red Hat/Fedora/SUSE RPM specific paths.
  	} elsif (isRHorSUSE()) {
  
-@@ -432,6 +484,19 @@
+@@ -465,6 +517,19 @@
  	return isReadyNAS();
  }
  
@@ -79,7 +79,7 @@
  sub isRHorSUSE {
  
  	# Initialize
-@@ -553,6 +618,10 @@
+@@ -586,6 +651,10 @@
  
  		$osDetails{'osName'} = 'Debian';
  
@@ -90,7 +90,7 @@
  	} elsif (-f '/etc/redhat_release' || -f '/etc/redhat-release') {
  
  		$osDetails{'osName'} = 'Red Hat';
-@@ -570,7 +639,7 @@
+@@ -603,7 +672,7 @@
  	$osDetails{'osArch'} = $Config{'myarchname'};
  
  	# package specific addition to @INC to cater for plugin locations
@@ -99,21 +99,19 @@
  
  		unshift @INC, '/usr/share/squeezecenter';
  		unshift @INC, '/usr/share/squeezecenter/CPAN';
---- Slim/Music/Import.pm.old	2008-05-23 21:57:18.000000000 +0100
-+++ Slim/Music/Import.pm	2008-05-30 12:29:57.000000000 +0100
-@@ -143,6 +143,10 @@
+--- Slim/Music/Import.pm.old	2008-07-22 12:24:32.000000000 +0100
++++ Slim/Music/Import.pm	2008-07-22 12:27:06.000000000 +0100
+@@ -128,7 +128,7 @@
+ 
+ 		$command  = '/usr/libexec/squeezecenter-scanner';
+ 
+-	} elsif (Slim::Utils::OSDetect::isDebian()) {
++	} elsif (Slim::Utils::OSDetect::isDebian() || Slim::Utils::OSDetect::isGentoo()) {
  
  		$command  = '/usr/sbin/squeezecenter-scanner';
  
-+	} elsif (Slim::Utils::OSDetect::isGentoo()) {
-+
-+		$command  = '/usr/sbin/squeezecenter-scanner';
-+
- 	}
- 
- 	# Bug: 3530 - use the same version of perl we were started with.
---- Slim/bootstrap.pm.old	2008-05-23 21:23:18.000000000 +0100
-+++ Slim/bootstrap.pm	2008-05-26 15:54:12.000000000 +0100
+--- Slim/bootstrap.pm.old	2008-07-22 12:24:09.000000000 +0100
++++ Slim/bootstrap.pm	2008-07-22 12:27:06.000000000 +0100
 @@ -97,8 +97,9 @@
  
  	my @SlimINC = ();
@@ -141,8 +139,8 @@
  	$d_startup && printf("Got \@INC containing:\n%s\n\n", join("\n", @INC));
  
  	# This works like 'use lib'
---- Slim/Utils/MySQLHelper.pm.old	2008-05-24 13:21:24.000000000 +0100
-+++ Slim/Utils/MySQLHelper.pm	2008-05-26 15:55:55.000000000 +0100
+--- Slim/Utils/MySQLHelper.pm.old	2008-07-22 12:25:31.000000000 +0100
++++ Slim/Utils/MySQLHelper.pm	2008-07-22 12:27:06.000000000 +0100
 @@ -152,7 +152,7 @@
  
  	# Because we use the system MySQL, we need to point to the right
