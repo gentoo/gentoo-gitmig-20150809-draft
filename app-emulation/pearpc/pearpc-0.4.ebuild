@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.8 2008/06/12 22:57:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.9 2008/08/31 05:01:16 mr_bones_ Exp $
 
 inherit eutils flag-o-matic linux-info linux-mod
 
@@ -14,17 +14,16 @@ SLOT="0"
 KEYWORDS="-amd64 ~x86"
 IUSE="debug jit X sdl"
 
-DEPEND="virtual/libc
+RDEPEND="sys-apps/net-tools
+	sdl? ( >=media-libs/libsdl-1.2.0 )
+	X? ( x11-libs/libX11 )
+	net-firewall/iptables
+	net-misc/bridge-utils"
+DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison
 	x86? ( dev-lang/nasm )
-	jit? ( dev-lang/nasm )
-	X? ( x11-libs/libX11 )
-	sdl? ( >=media-libs/libsdl-1.2.0 )"
-RDEPEND="${DEPEND}
-	sys-apps/net-tools
-	net-firewall/iptables
-	net-misc/bridge-utils"
+	jit? ( dev-lang/nasm )"
 
 src_unpack() {
 	unpack ${A}
