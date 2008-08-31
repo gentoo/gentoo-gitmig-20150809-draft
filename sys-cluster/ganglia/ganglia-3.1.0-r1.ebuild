@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.0-r1.ebuild,v 1.1 2008/08/11 18:37:04 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.0-r1.ebuild,v 1.2 2008/08/31 17:38:52 jsbronder Exp $
 
 WEBAPP_OPTIONAL="yes"
 inherit multilib webapp depend.php python
@@ -124,5 +124,6 @@ pkg_prerm() {
 pkg_postrm() {
 	use python && \
 		python_mod_cleanup /usr/$(get_libdir)/ganglia/python_modules/
-	[ -d /usr/$(get_libdir)/ganglia ] && rmdir /usr/$(get_libdir)/ganglia
+	[ -d /usr/$(get_libdir)/ganglia ] && \
+		rmdir /usr/$(get_libdir)/ganglia 2>/dev/null
 }
