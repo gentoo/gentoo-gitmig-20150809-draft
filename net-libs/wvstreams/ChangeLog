@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.122 2008/07/27 22:08:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.123 2008/08/31 11:05:09 hanno Exp $
+
+  31 Aug 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/wvstreams-4.4-gcc-4.3.patch, wvstreams-4.4.ebuild:
+  gcc 4.3 fixes for 4.4 version (as 4.4.1 is masked).
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> wvstreams-4.4.ebuild,
   wvstreams-4.4.1.ebuild:

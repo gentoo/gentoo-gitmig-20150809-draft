@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.11 2008/07/27 22:08:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.12 2008/08/31 11:05:09 hanno Exp $
 
 EAPI=1
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-sigaction.patch"
 	epatch "${FILESDIR}/${P}-wvconfemu.patch"
 	epatch "${FILESDIR}/${P}-valgrind.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 
 	epatch "${FILESDIR}/${P}-external-xplc.patch"
 	local XPLC_VER=`best_version dev-libs/xplc`
