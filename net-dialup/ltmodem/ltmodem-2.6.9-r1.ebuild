@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.1 2008/06/25 20:59:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.2 2008/08/31 16:59:16 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
 HOMEPAGE="http://linmodems.technion.ac.il/"
 SRC_URI="http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/ltmodem-${MY_ALK_VER}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 AgereSystems-WinModem"
 KEYWORDS="-* x86"
 IUSE=""
 

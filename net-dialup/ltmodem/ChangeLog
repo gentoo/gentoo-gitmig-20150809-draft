@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.42 2008/06/25 20:59:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.43 2008/08/31 16:59:16 mrness Exp $
+
+  31 Aug 2008; Alin Năstac <mrness@gentoo.org> ltmodem-2.6.9-r1.ebuild:
+  Add AgereSystems-WinModem license (#235484).
 
 *ltmodem-2.6.9-r1 (25 Jun 2008)
 
