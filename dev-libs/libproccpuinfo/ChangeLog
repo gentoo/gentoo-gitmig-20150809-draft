@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.16 2008/08/31 12:49:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.17 2008/08/31 15:26:09 armin76 Exp $
+
+  31 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  libproccpuinfo-0.0.7.ebuild:
+  alpha stable wrt #236132
 
   31 Aug 2008; Markus Meier <maekke@gentoo.org> libproccpuinfo-0.0.7.ebuild:
   x86 stable, bug #236132
