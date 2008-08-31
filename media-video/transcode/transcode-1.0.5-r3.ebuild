@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.5-r3.ebuild,v 1.5 2008/08/22 19:27:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.5-r3.ebuild,v 1.6 2008/08/31 16:10:33 ranger Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
 SRC_URI="http://fromani.exit1.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype iconv
 imagemagick jpeg lzo mjpeg mpeg mmx network nuv ogg oss vorbis quicktime sdl sse sse2 theora v4l2 xvid xml"
 

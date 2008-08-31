@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.228 2008/08/22 19:27:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.229 2008/08/31 16:10:33 ranger Exp $
+
+  31 Aug 2008; Brent Baude <ranger@gentoo.org> transcode-1.0.5-r3.ebuild:
+  Marking transcode-1.0.5-r3 ppc64 per bug 207548
 
   22 Aug 2008; nixnut <nixnut@gentoo.org> transcode-1.0.5-r3.ebuild:
   Stable on ppc wrt bug 207548
