@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.60 2008/06/19 23:02:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.61 2008/08/31 17:44:43 rbu Exp $
+
+*xen-sources-2.6.18-r12 (31 Aug 2008)
+
+  31 Aug 2008; Robert Buchholz <rbu@gentoo.org>
+  -xen-sources-2.6.18-r10.ebuild, xen-sources-2.6.18-r11.ebuild,
+  +xen-sources-2.6.18-r12.ebuild, xen-sources-2.6.20-r7.ebuild,
+  xen-sources-2.6.21.ebuild:
+  Version bump to Xen 3.3 (bug #201792), and security updates.
+  Add empty IUSE.
 
 *xen-sources-2.6.18-r11 (19 Jun 2008)
 

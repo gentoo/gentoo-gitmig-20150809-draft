@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.18-r11.ebuild,v 1.1 2008/06/19 23:02:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.18-r11.ebuild,v 1.2 2008/08/31 17:44:43 rbu Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="1"
@@ -11,6 +11,7 @@ detect_version
 
 DESCRIPTION="Full sources for a dom0/domU Linux kernel to run under Xen"
 HOMEPAGE="http://xen.org/"
+IUSE=""
 
 KEYWORDS="~x86 ~amd64"
 
