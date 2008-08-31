@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.13.ebuild,v 1.1 2006/07/11 12:19:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.16.ebuild,v 1.1 2008/08/31 21:50:08 dragonheart Exp $
 
 DESCRIPTION="Provides cross platform access to statistics about the system on which it's run."
 HOMEPAGE="http://www.i-scream.org/libstatgrab/"
@@ -10,13 +10,9 @@ LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT=0
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
-RDEPEND=">=sys-libs/ncurses-5.4-r1
-	virtual/libc"
+RDEPEND=">=sys-libs/ncurses-5.4-r1"
 
 DEPEND="${RDEPEND}
-	sys-apps/gawk
-	sys-apps/grep
-	sys-devel/gcc
 	dev-util/pkgconfig"
 
 src_compile() {
@@ -26,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "einstall failed"
+	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc ChangeLog PLATFORMS NEWS AUTHORS README
 }

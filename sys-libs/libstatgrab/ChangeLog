@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libstatgrab
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.16 2007/07/16 09:35:24 dragonheart Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.17 2008/08/31 21:50:08 dragonheart Exp $
+
+*libstatgrab-0.16 (31 Aug 2008)
+
+  31 Aug 2008; Daniel Black <dragonheart@gentoo.org>
+  libstatgrab-0.10.3.ebuild, -libstatgrab-0.13.ebuild,
+  +libstatgrab-0.16.ebuild:
+  version bump. purge old version. qa fix on 0.10.3
 
 *libstatgrab-0.15 (16 Jul 2007)
 
