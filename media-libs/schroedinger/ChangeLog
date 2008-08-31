@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.13 2008/08/28 19:23:57 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.14 2008/08/31 18:27:07 klausman Exp $
+
+  31 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
+  schroedinger-1.0.5.ebuild:
+  Keyworded on alpha, bug #235636
 
   28 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   schroedinger-1.0.5.ebuild:
