@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/thumbs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.16 2008/08/30 19:44:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.17 2008/08/31 21:13:07 armin76 Exp $
+
+  31 Aug 2008; Raúl Porcel <armin76@gentoo.org> thumbs-0.1.4.ebuild:
+  alpha/sparc stable wrt #236057
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> thumbs-0.1.4.ebuild:
   x86 stable, bug #236057
