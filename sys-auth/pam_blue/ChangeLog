@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_blue
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/ChangeLog,v 1.2 2008/03/06 17:37:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/ChangeLog,v 1.3 2008/08/31 13:35:21 gentoofan23 Exp $
+
+  31 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  pam_blue-0.9.0.ebuild:
+  keyworded ~arch for amd64, bug 222411
 
   06 Mar 2008; Ferris McCormick <fmccor@gentoo.org> pam_blue-0.9.0.ebuild:
   Add ~sparc for testing, anticipating Bug #212437 requirements, qv.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/pam_blue-0.9.0.ebuild,v 1.2 2008/03/06 17:37:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/pam_blue-0.9.0.ebuild,v 1.3 2008/08/31 13:35:21 gentoofan23 Exp $
 
 inherit pam autotools multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://pam.0xdef.net/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/pam
