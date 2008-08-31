@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.6 2007/07/02 15:02:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.7 2008/08/31 04:36:02 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,31 +14,41 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-lang/perl-5.6.1
-	dev-lang/nasm
+RDEPEND=">=dev-lang/perl-5.6.1
 	!sys-boot/netboot"
+DEPEND="${RDEPEND}
+	dev-lang/nasm"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/mknbi-1.4.3-nossp.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch \
+		"${FILESDIR}"/mknbi-1.4.3-nossp.patch \
+		"${FILESDIR}"/${P}-gcc4.patch
 
-	sed -i -e "s:\/usr\/local:\/usr:"  Makefile
-	sed -i -e "s:\-mcpu:\-march:" Makefile
+	sed -i \
+		-e "s:\/usr\/local:\/usr:" \
+		-e "s:COPYING::" \
+		-e "s:\-mcpu:\-march:" Makefile \
+		|| die "sed failed"
 
 	#apply modifications to CFLAGS to fix for gcc 3.4: bug #64049
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-		sed -i -e 's:\-mcpu:\-mtune:' Makefile
-		sed -i -e 's:CFLAGS=:CFLAGS= -minline-all-stringops:' Makefile
+		sed -i \
+			-e 's:\-mcpu:\-mtune:' \
+			-e 's:CFLAGS=:CFLAGS= -minline-all-stringops:' Makefile \
+			|| die "sed failed"
 	fi
 	if [ "`gcc-major-version`" = "4" ]; then
-		sed -i -e 's:\-fno-stack-protector-all::' Makefile
+		sed -i \
+			-e 's:\-fno-stack-protector-all::' Makefile \
+			|| die "sed failed"
 	fi
 }
 
 src_install() {
 	export BUILD_ROOT="${D}"
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "emake failed"
+	prepalldocs
 }

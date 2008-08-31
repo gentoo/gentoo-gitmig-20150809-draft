@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mknbi
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.20 2007/07/31 02:18:58 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.21 2008/08/31 04:36:02 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> mknbi-1.4.4.ebuild:
+  fix bug #221449 and tidy ebuild
 
   31 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> -mknbi-1.4.3.ebuild:
   clean older ebuild
