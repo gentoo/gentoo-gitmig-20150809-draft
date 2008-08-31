@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.126 2008/08/27 23:01:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.127 2008/08/31 14:44:23 markusle Exp $
+
+  31 Aug 2008; Markus Dittrich <markusle@gentoo.org>
+  files/R-javareconf.patch:
+  Added further enhancements to R-javareconf.patch (see bug #235822).
 
 *R-2.7.2 (27 Aug 2008)
 
