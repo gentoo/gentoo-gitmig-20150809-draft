@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.3 2008/08/01 18:55:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.4 2008/08/31 04:56:45 mr_bones_ Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -28,7 +28,6 @@ RDEPEND="dev-libs/glib
 	>=net-libs/libeXosip-3.0.3
 	>=media-libs/speex-1.1.12
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
-	x86? ( xv? ( dev-lang/nasm ) )
 	gtk? (
 		>=x11-libs/gtk+-2
 		gnome-base/libglade
@@ -42,6 +41,7 @@ RDEPEND="dev-libs/glib
 		>=media-libs/libtheora-1.0_alpha7
 	)"
 DEPEND="${RDEPEND}
+	x86? ( xv? ( dev-lang/nasm ) )
 	dev-util/pkgconfig"
 # use the bundled ortp until newer versions leave package.mask
 #	>=net-libs/ortp-0.9.0

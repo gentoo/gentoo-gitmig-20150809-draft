@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.16 2008/08/22 23:18:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.17 2008/08/31 04:56:45 mr_bones_ Exp $
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  linphone-2.1.1.ebuild:
+  nasm moved to DEPEND for bug #221451
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
