@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.4.5.ebuild,v 1.2 2008/08/20 19:39:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.4.5.ebuild,v 1.3 2008/08/31 16:04:51 ranger Exp $
 
 inherit distutils eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.winki-the-ripper.de/"
 SRC_URI="http://www.winki-the-ripper.de/share/dist/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="css dvd matroska mjpeg mp3 ogg vcd"
 DEPEND=">=dev-lang/python-2.3
 		>=dev-python/gnome-python-2
