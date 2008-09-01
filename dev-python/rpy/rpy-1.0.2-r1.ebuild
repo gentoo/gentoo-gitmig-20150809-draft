@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.3 2008/07/08 08:58:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.4 2008/09/01 12:10:12 gentoofan23 Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 ~x86"
 IUSE="doc examples"
 
 RDEPEND=">=dev-lang/R-2.6.1

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.24 2008/07/08 08:58:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.25 2008/09/01 12:10:12 gentoofan23 Exp $
+
+  01 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> rpy-1.0.2-r1.ebuild:
+  stable amd64, bug 236208
 
   08 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> rpy-1.0.2-r1.ebuild:
   Changed to virtual/texi2dvi
