@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14.ebuild,v 1.10 2008/09/01 18:18:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14.ebuild,v 1.11 2008/09/01 18:20:51 betelgeuse Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -15,7 +15,7 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~sh"
+KEYWORDS="arm sh"
 IUSE="nls midi"
 
 DEPEND=">=sys-libs/ncurses-5.1

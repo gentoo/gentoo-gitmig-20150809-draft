@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.244 2008/09/01 18:18:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.245 2008/09/01 18:20:51 betelgeuse Exp $
+
+  01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-utils-1.0.14.ebuild:
+  Stable commit so repoman is happy.
 
   01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   +alsa-utils-1.0.14.ebuild:
