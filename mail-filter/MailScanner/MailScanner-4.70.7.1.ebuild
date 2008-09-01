@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.1 2008/08/30 20:32:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.2 2008/09/01 20:52:54 jokey Exp $
 
 inherit eutils versionator
 
@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}
 	dev-perl/Convert-TNEF
 	dev-perl/DBD-SQLite
 	dev-perl/DBI
+	dev-perl/Filesys-Df
 	>=dev-perl/HTML-Parser-3.45
 	dev-perl/HTML-Tagset
 	dev-perl/IO-stringy
@@ -31,9 +32,9 @@ RDEPEND="${DEPEND}
 	dev-perl/MailTools
 	dev-perl/Net-CIDR
 	dev-perl/Net-DNS
-	dev-perl/TimeDate
+	dev-perl/OLE-StorageLite
 	dev-perl/Sys-Hostname-Long
-	dev-perl/Filesys-Df
+	dev-perl/TimeDate
 	>=net-mail/tnef-1.4.3
 	virtual/perl-File-Spec
 	virtual/perl-File-Temp
