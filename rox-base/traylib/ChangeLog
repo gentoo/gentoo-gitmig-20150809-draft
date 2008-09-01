@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/traylib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.8 2008/08/30 19:55:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.9 2008/09/01 09:37:54 armin76 Exp $
+
+  01 Sep 2008; Raúl Porcel <armin76@gentoo.org> traylib-0.3.2.1.ebuild:
+  sparc stable wrt #236057
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> traylib-0.3.2.1.ebuild:
   x86 stable, bug #236057
