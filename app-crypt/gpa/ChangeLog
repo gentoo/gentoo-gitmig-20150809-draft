@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.53 2008/04/27 03:43:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.54 2008/09/01 14:13:30 dragonheart Exp $
+
+  01 Sep 2008; Daniel Black <dragonheart@gentoo.org> gpa-0.7.6.ebuild:
+  correct path to gnupg helper programs. thanks to Mario/Kristoffer in bug
+  #212405
 
   27 Apr 2008; Samuli Suominen <drac@gentoo.org> gpa-0.7.6.ebuild:
   Split pkgconfig and gettext into DEPEND.

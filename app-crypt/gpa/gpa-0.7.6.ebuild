@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.6 2008/04/27 03:43:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.7 2008/09/01 14:13:30 dragonheart Exp $
 
 inherit eutils multilib
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-qa.patch"
+	sed -i -e 's|gnupg/:|:|g' configure*
 }
 
 src_compile() {
@@ -41,6 +42,7 @@ src_compile() {
 		$(use_enable nls) \
 		${myconf} \
 		|| die "econf failed"
+	sed -i -e 's|gnupg||g' gpadefs.h
 	emake || die "emake failed"
 }
 
