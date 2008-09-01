@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylibacl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.12 2006/09/14 00:12:07 kugelfang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.13 2008/09/01 21:50:02 hawking Exp $
+
+*pylibacl-0.4.0 (01 Sep 2008)
+
+  01 Sep 2008; Ali Polatel <hawking@gentoo.org> +pylibacl-0.4.0.ebuild:
+  Version bump. Change LICENSE to LGPL-2.1. Add src_test.
 
   14 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> pylibacl-0.2.1.ebuild:
   Marked stable on amd64.
