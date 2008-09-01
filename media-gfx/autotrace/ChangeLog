@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.24 2008/08/22 21:18:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.25 2008/09/01 19:28:25 armin76 Exp $
+
+  01 Sep 2008; Raúl Porcel <armin76@gentoo.org> autotrace-0.31.1-r3.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #236287
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
