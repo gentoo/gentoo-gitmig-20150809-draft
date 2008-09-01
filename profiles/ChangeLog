@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1819 2008/09/01 21:07:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1820 2008/09/01 22:25:30 cryos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  01 Sep 2008; Marcus D. Hanwell <cryos@gentoo.org> package.mask:
+  Removed dev-util/cmake-2.6 from package.mask.
 
   01 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   Mask latest tex4ht for bug #236369
