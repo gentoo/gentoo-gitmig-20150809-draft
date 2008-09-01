@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.12.ebuild,v 1.2 2008/04/13 10:18:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.12.ebuild,v 1.3 2008/09/01 20:19:27 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator games
 
@@ -33,7 +33,7 @@ src_unpack() {
 	cd "${S}"
 	rm -f $(find . -name SConscript)
 
-	epatch "${FILESDIR}"/widelands-0.0.11-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 
 	sed -i 's:__ppc__:__PPC__:' src/s2map.cc \
 		|| die "sed s2map.cc failed"
