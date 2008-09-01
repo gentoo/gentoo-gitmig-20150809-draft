@@ -10,10 +10,10 @@ diff -u -r1.74 boost.m4
        fi
        for j in ${boost_libs}; do
 -        dirs="`ls -dr $i/libboost_${j}*.${shlibext} $i/libboost_${j}*.a 2>/dev/null`"
-+        dirs="`ls -dr $i/libboost_${j}*.${shlibext} 2>/dev/null`"
++        dirs="`ls -dr $i/libboost_${j}*.so 2>/dev/null`"
          if test -n "${dirs}"; then
 -          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.${shlibext}::" -e "s:\.a::"`"
-+          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.${shlibext}::"`"
++          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.so::"`"
            if test x$dirname = x; then
              dirname="`echo ${dirs} | sed -e 's:/libboost.*$::'`"
             if test x"${dirname}" != "x/usr/lib"; then
@@ -22,10 +22,10 @@ diff -u -r1.74 boost.m4
      done
      for j in ${extra_boost_libs}; do
 -      dirs="`ls -dr ${dirname}/libboost_${j}*.${shlibext} ${dirname}/libboost_${j}*.a 2>/dev/null`"
-+      dirs="`ls -dr ${dirname}/libboost_${j}*.${shlibext} 2>/dev/null`"
++      dirs="`ls -dr ${dirname}/libboost_${j}*.so 2>/dev/null`"
        if test -n "${dirs}"; then
 -          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.${shlibext}::" -e "s:\.a::"`"
-+          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.${shlibext}::"`"
++          libname="`echo ${dirs} | sed -e 's:^.*/lib::' -e "s:\.so::"`"
          ac_cv_path_boost_extra_lib="${ac_cv_path_boost_extra_lib} -l${libname}"
        else
          extra_missing_libs="${extra_missing_libs} $j"
