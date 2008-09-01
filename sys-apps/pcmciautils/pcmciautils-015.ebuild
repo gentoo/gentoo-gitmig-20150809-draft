@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-015.ebuild,v 1.1 2008/09/01 05:12:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-015.ebuild,v 1.2 2008/09/01 05:15:01 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -32,8 +32,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e '/DEBUG\>/s:=.*:= false:' \
-		-e '/UDEV\>/s:=.*:= true:' \
+		-e '/^DEBUG\>/s:=.*:= false:' \
+		-e '/^UDEV\>/s:=.*:= true:' \
 		-e '/CFLAGS/s:-fomit-frame-pointer::' \
 		-e '/^STATIC\>/s:=.*:= '$(use_tf static)':' \
 		-e '/^STARTUP\>/s:=.*:= '$(use_tf staticsocket)':' \
