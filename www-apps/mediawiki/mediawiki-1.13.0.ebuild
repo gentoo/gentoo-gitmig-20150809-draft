@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.2.ebuild,v 1.7 2008/09/01 07:47:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.13.0.ebuild,v 1.1 2008/09/01 07:47:36 hollow Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="imagemagick math mysql postgres restrict +ocamlopt"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
@@ -57,7 +57,7 @@ src_unpack() {
 #	epatch ${FILESDIR}/jobindexlength-mysql.patch
 
 	if use restrict ; then
-		epatch "${FILESDIR}/access_restrict.patch"
+		epatch "${FILESDIR}/access_restrict_${PV}.patch"
 	fi
 }
 

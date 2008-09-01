@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.7 2008/04/03 10:06:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.8 2008/09/01 07:47:36 hollow Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -19,7 +19,7 @@ DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 RDEPEND="${DEPEND}
 	math? (
 		app-text/dvipng
-		virtual/tetex
+		virtual/tex-base
 		virtual/ghostscript
 		media-gfx/imagemagick
 	)
