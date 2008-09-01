@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1817 2008/08/31 11:26:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1818 2008/09/01 20:33:33 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  01 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  remove libgda/libgnomedb 3.0 mask, deps have been corrected and it still
+  compiles with recent glibc/gcc.
 
   31 Aug 2008; Alin Năstac <mrness@gentoo.org> use.local.desc:
   Update net-dialup/freeradius:udpfromto description (#235688).
