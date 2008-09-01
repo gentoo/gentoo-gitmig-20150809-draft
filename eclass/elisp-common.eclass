@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.44 2008/08/27 11:21:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.45 2008/09/01 10:45:26 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -198,7 +198,7 @@ elisp-comp() {
 
 	ebegin "Compiling GNU Emacs Elisp files"
 
-	tempdir=elc.$$
+	local tempdir=elc.$$
 	mkdir ${tempdir}
 	cp "$@" ${tempdir}
 	pushd ${tempdir}
@@ -438,4 +438,6 @@ elisp-site-regen() {
 
 	# cleanup
 	rm -f "${tmpdir}"/site-{gentoo,start}.el
+
+	return 0
 }
