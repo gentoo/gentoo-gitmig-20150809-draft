@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.121 2008/08/12 13:47:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.122 2008/09/01 18:22:42 ford_prefect Exp $
+
+*gnome-python-2.22.1 (01 Sep 2008)
+
+  01 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +gnome-python-2.22.1.ebuild:
+  Initial import of gnome-python split ebuilds. This package is a meta
+  package that is functionally equivalent to the old monolithic packages,
+  and pulls in the component bindings.
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> gnome-python-2.22.0.ebuild:
   alpha/ia64/sparc stable wrt #229709
