@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.7 2008/08/30 19:02:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.8 2008/09/01 18:51:57 jokey Exp $
 
 EAPI=1
 
@@ -24,20 +24,18 @@ DESCRIPTION="Core/client IRC client."
 HOMEPAGE="http://quassel-irc.org/"
 
 LICENSE="GPL-3"
-
 KEYWORDS=""
-
 SLOT="0"
-
-IUSE="+X +server debug"
+IUSE="+dbus debug +server +ssl +X"
 
 RDEPEND="x11-libs/qt-core:4
 		server? (
 			x11-libs/qt-sql:4
 			x11-libs/qt-script:4
 		)
-		X? ( x11-libs/qt-gui:4 )"
-
+		X? ( x11-libs/qt-gui:4 )
+		dbus? ( x11-libs/qt-dbus )
+		ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.7"
 
@@ -49,16 +47,14 @@ pkg_setup() {
 		die "Both server and X USE flags unset."
 	fi
 
-	qt44=$(has_version x11-libs/qt-sql && echo yes || echo no)
-	if use server && ! built_with_use $([[ ${qt44} == "yes" ]] && echo "x11-libs/qt-sql sqlite" || echo "x11-libs/qt:4 sqlite3"); then
-		eerror "Quassel require Qt 4 built with SQLite support"
-		if [[ ${qt44} == "yes" ]]; then
-			eerror "Please rebuild x11-libs/qt-sql:4 with sqlite USE flag enabled."
-			die "Missing sqlite support in x11-libs/qt-sql:4"
-		else
-			eerror "Please rebuild x11-libs/qt:4 with sqlite3 USE flag enabled."
-			die "Missing sqlite3 support in x11-libs/qt:4"
-		fi
+	if use server && ! built_with_use x11-libs/qt-sql sqlite ; then
+		eerror "Please rebuild x11-libs/qt-sql:4 with sqlite USE flag enabled."
+		die "Missing sqlite support in x11-libs/qt-sql:4"
+	fi
+
+	if use ssl && ! built_with_use x11-libs/qt-core ssl ; then
+		eerror "Please rebuild x11-libs/qt-core:4 with ssl USE flag enabled."
+		die "Missing ssl support in x11-libs/qt-core:4"
 	fi
 }
 
@@ -66,8 +62,9 @@ src_compile() {
 	local mycmakeargs="
 		$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want X QTCLIENT)
-		-DWANT_MONO=OFF
-		"
+		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use_with ssl OPENSSL)
+		-DWANT_MONO=OFF"
 
 	cmake-utils_src_compile
 }
@@ -79,12 +76,12 @@ src_install() {
 	if use X; then
 		insinto /usr/share/icons/hicolor
 		# avoid the connected/ directory, get only the ${size}x${size}
-		doins -r "${S}"/src/icons/quassel/*x*
+		doins -r "${S}"/src/icons/quassel/*x* || die "installing icons failed"
 	fi
 
 	if use server; then
-		newinitd "${FILESDIR}"/quasselcore.init quasselcore
-		newconfd "${FILESDIR}"/quasselcore.conf quasselcore
+		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
+		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
 	fi
 }
 
