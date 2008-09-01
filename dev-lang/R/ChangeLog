@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.129 2008/08/31 18:48:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.130 2008/09/01 07:03:47 corsair Exp $
+
+  01 Sep 2008; Markus Rothe <corsair@gentoo.org> R-2.7.1.ebuild:
+  Stable on ppc64; bug #235822
 
   31 Aug 2008; Ferris McCormick <fmccor@gentoo.org> R-2.7.1.ebuild:
   Sparc stable, security Bug #235822.
