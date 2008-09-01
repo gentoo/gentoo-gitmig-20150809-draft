@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.39 2008/07/30 01:03:09 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.40 2008/09/01 00:41:07 rbu Exp $
+
+*xen-tools-3.3.0 (01 Sep 2008)
+
+  01 Sep 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/xen-tools-3.3.0--as-needed.patch,
+  +files/xen-tools-3.3.0-nostrip.patch,
+  +files/xen-tools-3.3.0-xen-detect-nopie-fix.patch, files/xendomains.confd,
+  files/xendomains.initd, metadata.xml, -xen-tools-3.2.0.ebuild,
+  +xen-tools-3.3.0.ebuild:
+  Version bump to Xen 3.3 (bug #201792). Fixes bugs:
+   * Add USE flags for ACM and FLASK Xen Security Modules
+   * Properly compile and uninstall python bytecode
+   * RDEPEND on pyxml (bug #201255)
+   * Remove libvncserver dependency
+   * Shutdown xendomains in reverse start order (bug #210445)
+   * Allow for parallel shutdown of xendomains (bug #162833)
+   * Check that python is built with threading (bug #236092)
 
   30 Jul 2008; Robert Buchholz <rbu@gentoo.org> xen-tools-3.2.1.ebuild:
   Set VARTEXFONTS so LaTeX does not try to write out of the sandbox (bug #233120)
