@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.110 2008/08/02 21:00:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.111 2008/09/01 18:01:27 betelgeuse Exp $
+
+  01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -alsa-oss-1.0.12.ebuild, -alsa-oss-1.0.14.ebuild:
+  Remove old versions.
 
 *alsa-oss-1.0.17 (02 Aug 2008)
 
