@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.0.ebuild,v 1.1 2008/02/08 22:19:23 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.3.0.ebuild,v 1.1 2008/09/01 00:30:53 rbu Exp $
 
-inherit mount-boot flag-o-matic
+inherit mount-boot flag-o-matic toolchain-funcs
 
 DESCRIPTION="The Xen virtual machine monitor"
-HOMEPAGE="http://www.xensource.com/xen/xen/"
-SRC_URI="mirror://gentoo/xen-${PV}.tar.bz2"
+HOMEPAGE="http://xen.org/"
+SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug custom-cflags pae"
+IUSE="debug custom-cflags pae acm flask xsm"
 
 RDEPEND="|| ( sys-boot/grub
 		sys-boot/grub-static )
@@ -35,10 +35,25 @@ pkg_setup() {
 			die "Unsupported architecture!"
 		fi
 	fi
+
+	if use xsm ; then
+		export "XSM_ENABLE=y"
+		use acm && export "ACM_SECURITY=y"
+		if use flask ; then
+			! use acm  && export "FLASK_ENABLE=y"
+			  use acm  && ewarn "Both acm and flask XSM specified, defaulting to acm."
+		fi
+	elif use acm || use flask ; then
+		ewarn "acm and flask require USE=xsm to be set, dropping use flags"
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-sed-gcc.patch
+
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -66,7 +81,7 @@ src_compile() {
 	fi
 
 	# Send raw LDFLAGS so that --as-needed works
-	emake LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
+	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
 }
 
 src_install() {

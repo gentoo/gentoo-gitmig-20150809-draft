@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.55 2008/07/28 20:50:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.56 2008/09/01 00:30:53 rbu Exp $
+
+*xen-3.3.0 (01 Sep 2008)
+
+  01 Sep 2008; Robert Buchholz <rbu@gentoo.org> +files/xen-sed-gcc.patch,
+  metadata.xml, -xen-3.2.0.ebuild, xen-3.2.1.ebuild, +xen-3.3.0.ebuild:
+  Version bump to Xen 3.3 (bug #201792).
+  Bugs fixed:
+   * Fix invalid sed that broke gcc-4.3 (bug #217151)
 
   28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

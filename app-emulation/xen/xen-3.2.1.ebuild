@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.1.ebuild,v 1.1 2008/05/04 18:59:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.1.ebuild,v 1.2 2008/09/01 00:30:53 rbu Exp $
 
-inherit mount-boot flag-o-matic
+inherit mount-boot flag-o-matic toolchain-funcs
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
@@ -39,6 +39,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-sed-gcc.patch
+
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -66,7 +70,7 @@ src_compile() {
 	fi
 
 	# Send raw LDFLAGS so that --as-needed works
-	emake LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
+	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
 }
 
 src_install() {
