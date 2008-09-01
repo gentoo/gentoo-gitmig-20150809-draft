@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/simscan-1.4.0-r2.ebuild,v 1.1 2008/03/14 23:52:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/simscan-1.4.0-r2.ebuild,v 1.2 2008/09/01 06:34:17 hollow Exp $
 
-inherit autotools toolchain-funcs eutils fixheadtails flag-o-matic
+inherit autotools toolchain-funcs eutils fixheadtails flag-o-matic qmail
 
 DESCRIPTION="Simscan, a qmail scanner"
 HOMEPAGE="http://inter7.com/?page=simscan"
@@ -51,8 +51,8 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--enable-qmaildir=/var/qmail \
-		--enable-qmail-queue=/var/qmail/bin/qmail-queue \
+		--enable-qmaildir=${QMAIL_HOME} \
+		--enable-qmail-queue=${QMAIL_HOME}/bin/qmail-queue \
 		$(use_enable attachment attach) \
 		$(use_enable clamav) \
 		$(use_enable clamav clamdscan /usr/bin/clamdscan) \
@@ -64,7 +64,7 @@ src_compile() {
 		$(use_enable spamc-user) \
 		$(use_enable spam-auth-user) \
 		$(use_enable passthru spam-passthru) \
-		$(use_enable quarantine quarantinedir /var/qmail/quarantine) \
+		$(use_enable quarantine quarantinedir ${QMAIL_HOME}/quarantine) \
 		$(use_enable regex) \
 		$(use_enable custom-smtp-reject) \
 		$(use_enable received) \
@@ -77,30 +77,30 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 
-	keepdir /var/qmail/control
-	keepdir /var/qmail/simscan
+	keepdir ${QMAIL_HOME}/control
+	keepdir ${QMAIL_HOME}/simscan
 
 	# Set directory permission for clamav to do its work
-	fowners simscan:simscan /var/qmail/simscan
-	fperms 2750 /var/qmail/simscan
+	fowners simscan:simscan ${QMAIL_HOME}/simscan
+	fperms 2750 ${QMAIL_HOME}/simscan
 
 	if use clamav; then
-		echo -n ":clam=yes," > "${D}"/var/qmail/control/simcontrol
+		echo -n ":clam=yes," > "${D}${QMAIL_HOME}"/control/simcontrol
 	else
-		echo -n ":clam=no," > "${D}"/var/qmail/control/simcontrol
+		echo -n ":clam=no," > "${D}${QMAIL_HOME}"/control/simcontrol
 	fi
 
 	if use spamassassin; then
-		echo "spam=yes,spam_hits=${SIMSCAN_HITS}" >> "${D}"/var/qmail/control/simcontrol
+		echo "spam=yes,spam_hits=${SIMSCAN_HITS}" >> "${D}${QMAIL_HOME}"/control/simcontrol
 	else
-		echo "spam=no" >> "${D}"/var/qmail/control/simcontrol
+		echo "spam=no" >> "${D}${QMAIL_HOME}"/control/simcontrol
 	fi
 }
 
 pkg_postinst() {
 	ewarn "Updating simscan configuration files ..."
-	/var/qmail/bin/simscanmk
-	use received && /var/qmail/bin/simscanmk -g
+	${QMAIL_HOME}/bin/simscanmk
+	use received && ${QMAIL_HOME}/bin/simscanmk -g
 
 	ewarn
 	ewarn "You have to do that every time you update clamav or spamassassin"
@@ -108,8 +108,8 @@ pkg_postinst() {
 
 	einfo
 	einfo "In order use simscan update the QMAILQUEUE environment variable"
-	einfo "and point it to /var/qmail/bin/simscan"
+	einfo "and point it to ${QMAIL_HOME}/bin/simscan"
 	einfo
-	einfo "Read the documentation and customize /var/qmail/control/simcontrol"
+	einfo "Read the documentation and customize ${QMAIL_HOME}/control/simcontrol"
 	einfo
 }

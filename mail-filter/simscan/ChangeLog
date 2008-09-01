@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/simscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.9 2008/08/23 06:00:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.10 2008/09/01 06:34:17 hollow Exp $
+
+  01 Sep 2008; Benedikt Böhm <hollow@gentoo.org> simscan-1.4.0-r2.ebuild:
+  use QMAIL_HOME from qmail.eclass
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
