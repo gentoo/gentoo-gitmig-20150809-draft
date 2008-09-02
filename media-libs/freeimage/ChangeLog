@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeimage
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.4 2007/05/04 16:41:55 mabi Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.5 2008/09/02 00:12:06 nyhm Exp $
+
+*freeimage-3.11.0 (02 Sep 2008)
+
+  02 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +freeimage-3.11.0.ebuild:
+  Version bump, bug #213969
 
   04 May 2007; Matti Bickel <mabi@gentoo.org> freeimage-3.9.3-r1.ebuild:
   keyworded ~ppc (bug #174055)
