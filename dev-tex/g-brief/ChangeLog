@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/g-brief
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.14 2008/08/30 14:07:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.15 2008/09/02 12:48:42 aballier Exp $
+
+  02 Sep 2008; Alexis Ballier <aballier@gentoo.org> g-brief-4.0.2.ebuild:
+  keyword ~x86-fbsd
 
 *g-brief-4.0.2 (30 Aug 2008)
 
