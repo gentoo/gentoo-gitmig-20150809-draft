@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/ropeide
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ropeide/ChangeLog,v 1.1 2008/09/02 22:17:37 pythonhead Exp $
+
+*ropeide-1.5.1 (02 Sep 2008)
+
+  02 Sep 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +ropeide-1.5.1.ebuild:
+  Initial commit. Bug #202700. Thanks Matsui Tetsushi <VED03370@nifty.ne.jp>
+  for the ebuild.
+
