@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gqview
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.84 2007/10/14 15:49:10 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.85 2008/09/02 04:22:03 mr_bones_ Exp $
+
+  02 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gqview-2.1.5-windows.patch, gqview-2.1.5.ebuild:
+  add patch from geckosenator on upstream forums for saving window information,
+  even when maximized. (bug #228821)
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> gqview-2.0.4.ebuild:
   Stable on ppc64; bug #194935

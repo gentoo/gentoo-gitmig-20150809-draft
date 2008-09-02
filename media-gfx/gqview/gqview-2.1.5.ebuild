@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.1 2006/12/10 09:02:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.2 2008/09/02 04:22:03 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -18,6 +20,12 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-windows.patch"
+}
 
 src_compile() {
 	econf \
