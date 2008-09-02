@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.1 2007/09/29 07:46:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.2 2008/09/02 22:48:29 opfer Exp $
 
 inherit eutils sgml-catalog
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="tetex"
 
 DEPEND="app-text/openjade
+	app-text/opensp
 	app-text/sgml-common
 	>=dev-lang/perl-5.004
 	sys-apps/gawk
