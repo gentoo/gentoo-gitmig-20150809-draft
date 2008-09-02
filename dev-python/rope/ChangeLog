@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rope
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.1 2008/09/02 21:16:31 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.2 2008/09/02 22:16:38 pythonhead Exp $
+
+  02 Sep 2008; Rob Cakebread <pythonhead@gentoo.org> ChangeLog:
+  Add doc USE flag.
 
 *rope-0.8.4 (02 Sep 2008)
 
