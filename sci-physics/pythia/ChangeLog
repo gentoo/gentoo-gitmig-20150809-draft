@@ -1,0 +1,11 @@
+# ChangeLog for sci-physics/pythia
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.1 2008/09/02 08:41:08 bicatali Exp $
+
+*pythia-8.1.08 (02 Sep 2008)
+*pythia-6.4.18 (02 Sep 2008)
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pythia-6.4.18.ebuild, +pythia-8.1.08.ebuild:
+  Initial import. Thanks Benjamin Bannier for his good work on bug #231484
+
