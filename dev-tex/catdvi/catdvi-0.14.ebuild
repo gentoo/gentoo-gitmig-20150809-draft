@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/catdvi-0.14.ebuild,v 1.2 2007/11/19 20:43:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/catdvi-0.14.ebuild,v 1.3 2008/09/02 22:48:04 ulm Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/tetex"
+DEPEND="virtual/tex-base"
 RDEPEND="${DEPEND}"
 
 src_compile() {
