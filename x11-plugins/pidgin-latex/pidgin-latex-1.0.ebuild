@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.7 2008/01/07 23:11:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.8 2008/09/02 22:26:40 opfer Exp $
 
 inherit flag-o-matic multilib eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="net-im/pidgin
 	>=x11-libs/gtk+-2"
 RDEPEND="${DEPEND}
-	virtual/tetex
+	virtual/latex-base
 	media-gfx/imagemagick"
 
 S=${WORKDIR}/${PN}

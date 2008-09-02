@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/pidgin-latex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.7 2008/03/05 15:43:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.8 2008/09/02 22:26:40 opfer Exp $
+
+  02 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  pidgin-latex-1.0.ebuild, pidgin-latex-1.2.1.ebuild:
+  replace virtual/tetex with virtual/latex-base for bug 231093 by Torsten Krah
+  <tkrah AT fachschaft DOT imn DOT htwk-leipzig DOT de>
 
 *pidgin-latex-1.2.1 (05 Mar 2008)
 
