@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.55 2008/06/29 12:49:08 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.56 2008/09/02 15:08:51 hkbst Exp $
+
+*libffi-3.0.6 (02 Sep 2008)
+
+  02 Sep 2008; Marijn Schouten <hkBst@gentoo.org> +libffi-3.0.6.ebuild:
+  bump
 
   29 Jun 2008; Marijn Schouten <hkBst@gentoo.org> libffi-3.0.5.ebuild:
   don't patch anymore, move warning to pkg_setup
