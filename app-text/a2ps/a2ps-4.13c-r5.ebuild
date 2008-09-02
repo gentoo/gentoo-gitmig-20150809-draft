@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.21 2008/09/02 23:39:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.22 2008/09/02 23:44:22 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="nls tetex cjk vanilla userland_BSD userland_GNU"
+IUSE="nls latex cjk vanilla userland_BSD userland_GNU"
 
 DEPEND=">=dev-util/gperf-2.7.2
 	|| ( >=dev-util/yacc-1.9.1 sys-devel/bison )
@@ -28,7 +28,7 @@ RDEPEND="virtual/ghostscript
 	userland_GNU? ( || ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp ) )
 	userland_BSD? ( sys-freebsd/freebsd-ubin )
 	>=app-text/psutils-1.17
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	nls? ( virtual/libintl )"
 
 src_unpack() {

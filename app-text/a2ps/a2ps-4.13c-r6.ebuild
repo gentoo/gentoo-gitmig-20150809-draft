@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.11 2008/09/02 23:39:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.12 2008/09/02 23:44:22 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,7 @@ RDEPEND="virtual/ghostscript
 	userland_BSD? ( sys-freebsd/freebsd-ubin )
 	>=app-text/psutils-1.17
 	emacs? ( virtual/emacs )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	nls? ( virtual/libintl )"
 
 SITEFILE=50${PN}-gentoo.el
