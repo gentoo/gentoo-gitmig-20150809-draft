@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1821 2008/09/02 00:15:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1822 2008/09/02 00:21:52 nyhm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  02 Sep 2008; Tristan Heaven <nyhm@gentoo.org> package.mask:
+  Unmask media-libs/freeimage
 
   02 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Removed x11-wm/awesome-3 from package.mask.
