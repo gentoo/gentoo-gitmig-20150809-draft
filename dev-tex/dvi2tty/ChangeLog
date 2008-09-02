@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.9 2008/08/22 14:11:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.10 2008/09/02 12:09:43 aballier Exp $
+
+  02 Sep 2008; Alexis Ballier <aballier@gentoo.org> dvi2tty-5.3.1.ebuild:
+  keyword ~x86-fbsd
 
   22 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/dvi2tty-cflags.patch, dvi2tty-5.3.1.ebuild:
