@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.2 2008/09/02 22:48:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.3 2008/09/02 22:54:09 opfer Exp $
 
 inherit eutils sgml-catalog
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${MY_PV}.tar.gz"
 LICENSE="KenMacLeod SGMLUG"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="tetex"
+IUSE="latex"
 
 DEPEND="app-text/openjade
 	app-text/opensp
@@ -26,7 +26,7 @@ DEPEND="app-text/openjade
 	!<app-text/tetex-3"
 
 RDEPEND="${DEPEND}
-	tetex? ( >=app-text/tetex-3 )"
+	latex? ( virtual/latex-base )"
 
 sgml-catalog_cat_include "/etc/sgml/linuxdoc.cat" \
 	"/usr/share/linuxdoc-tools/linuxdoc-tools.catalog"
@@ -65,7 +65,7 @@ src_install() {
 		's,/iso-entities-8879.1986/iso-entities.cat,/sgml-iso-entities-8879.1986/catalog,' \
 		/usr/share/linuxdoc-tools/LinuxDocTools.pm
 
-	if use tetex ; then
+	if use latex ; then
 		insinto /usr/share/texmf/tex/latex/misc
 		doins "${S}"/lib/*.sty
 	fi
