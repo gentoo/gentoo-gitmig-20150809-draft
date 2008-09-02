@@ -1,0 +1,41 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/files/ser2net.initd,v 1.1 2008/09/02 18:02:28 sbriesen Exp $
+
+depend() {
+	need net
+	after bootmisc
+}
+
+config_check() {
+	SER2NET_OPTS=""
+	CONFIG_FILE_DEFAULT="/etc/ser2net.conf"
+
+	yesno "${CISCO_IOS:-no}" && SER2NET_OPTS="${SER2NET_OPTS} -b"
+	yesno "${UUCP_LOCKS:-yes}" || SER2NET_OPTS="${SER2NET_OPTS} -u"
+	[ -z "${CONFIG_FILE}" ] && CONFIG_FILE="${CONFIG_FILE_DEFAULT}"
+	[ -n "${CONTROL_PORT}" ] && SER2NET_OPTS="${SER2NET_OPTS} -p ${CONTROL_PORT}"
+	[ "${CONFIG_FILE}" != "${CONFIG_FILE_DEFAULT}" ] && SER2NET_OPTS="${SER2NET_OPTS} -c ${CONFIG_FILE}"
+
+        if [ ! -f "${CONFIG_FILE}" ]; then
+                eerror "Please create ${CONFIG_FILE}"
+                eerror "Sample conf: ${CONFIG_FILE_DEFAULT}.dist"
+                return 1
+        fi
+        return 0
+}
+
+start() {
+	config_check || return ${?}
+	ebegin "Starting Serial to network proxy (${SVCNAME})"
+	start-stop-daemon --start --quiet --pidfile /var/run/${SVCNAME}.pid \
+		--exec /usr/sbin/ser2net -- ${SER2NET_OPTS} -P /var/run/${SVCNAME}.pid
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping Serial to network proxy (${SVCNAME})"
+	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid
+	eend ${?}
+}
