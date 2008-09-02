@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.2 2008/08/30 13:51:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.3 2008/09/02 12:45:27 aballier Exp $
 
 inherit latex-package eutils
 
@@ -11,15 +11,15 @@ SRC_URI="mirror://gentoo/${P}.zip"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/leaflet/"
 LICENSE="LPPL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 # checksum from official ftp site changes frequently so we mirror it
 
 TEXMF="/usr/share/texmf-site"
 
-DEPEND="app-arch/unzip"
-RDEPEND=""
+RDEPEND="|| ( dev-texlive/texlive-fontsrecommended app-text/tetex app-text/ptex )"
+DEPEND="${RDEPEND} app-arch/unzip"
 DOCS="README"
 
 src_unpack() {
