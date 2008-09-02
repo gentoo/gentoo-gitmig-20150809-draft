@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.262 2008/09/02 22:05:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.263 2008/09/02 23:22:51 ulm Exp $
+
+*emacs-22.2.92 (02 Sep 2008)
+
+  02 Sep 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/emacs-22.3-freebsd-sparc.patch, +emacs-22.2.92.ebuild:
+  Presumably final pretest version for Emacs 22.3. Committing it in
+  app-editors/emacs (instead of emacs-cvs), in order to give it as much
+  final testing as possible.
 
 *emacs-22.2-r3 (02 Sep 2008)
 
