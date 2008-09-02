@@ -1,0 +1,24 @@
+#!/sbin/runscript
+
+depend() {
+	after modules
+	use alsasound pulseaudio
+}
+
+start() {
+	ebegin "Starting espeakup"
+	start-stop-daemon --start --exec /usr/bin/espeakup
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping espeakup"
+	start-stop-daemon --stop --pidfile /var/run/espeakup.pid
+	eend $?
+}
+
+restart() {
+	svc_stop || exit 1
+	sleep 2
+	svc_start || exit 1
+}
