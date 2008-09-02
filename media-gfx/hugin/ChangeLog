@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.42 2008/08/28 20:28:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.43 2008/09/02 22:15:41 maekke Exp $
+
+*hugin-0.7.0_rc4 (02 Sep 2008)
+
+  02 Sep 2008; Markus Meier <maekke@gentoo.org> +hugin-0.7.0_rc4.ebuild:
+  bump to 0.7.0_rc4
 
 *hugin-0.7.0_rc3 (28 Aug 2008)
 
