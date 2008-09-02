@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.7 2005/09/03 16:04:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.8 2008/09/02 18:22:42 aballier Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND="=x11-libs/qt-3*
 	app-arch/unzip
-	virtual/tetex"
+	|| ( ( dev-texlive/texlive-games dev-texlive/texlive-pstricks ) app-text/tetex app-text/ptex )"
 
 src_compile() {
 	sed -i -e "/ENGLISH/s/^#//" ChessTask.pro || die

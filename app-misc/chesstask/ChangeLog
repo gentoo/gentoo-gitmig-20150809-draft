@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/chesstask
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.13 2007/02/21 22:24:36 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.14 2008/09/02 18:22:42 aballier Exp $
+
+  02 Sep 2008; Alexis Ballier <aballier@gentoo.org> chesstask-2.0.ebuild:
+  adjust deps for texlive, dont depend on virtual/tetex
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
