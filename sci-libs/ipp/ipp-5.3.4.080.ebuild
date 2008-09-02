@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-5.3.2.068.ebuild,v 1.1 2008/03/13 21:20:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-5.3.4.080.ebuild,v 1.1 2008/09/02 10:51:36 bicatali Exp $
 
-inherit versionator multilib check-reqs
+inherit check-reqs
 
-PID=980
+PID=1096
 PB=${PN}
 DESCRIPTION="Intel(R) Integrated Performance Primitive library for multimedia and data processing"
 HOMEPAGE="http://developer.intel.com/software/products/ipp/"
@@ -21,21 +21,20 @@ LICENSE="Intel-SDP"
 IUSE=""
 RESTRICT="strip mirror"
 
-pkg_setup() {
-	# setting up license
-	[[ -z ${IPP_LICENSE} ]] && [[ -d ${ROOT}/opt/intel/licenses ]] && \
-		IPP_LICENSE="$(find ${ROOT}/opt/intel/licenses -name *IPP*.lic)"
-	# Alternative license file, the file might be included in a `package deal`
-	[[ -z ${IPP_LICENSE} ]] && \
-		IPP_LICENSE="$(grep 'COMPONENTS="PerfPrimL PerfPrim"' ${ROOT}/opt/intel/licenses/*|cut -d: -f1)"
+INTEL_LIC_DIR=/opt/intel/licenses
 
+pkg_setup() {
+	# Check the license
+	if [[ -z ${IPP_LICENSE} ]]; then
+		IPP_LICENSE="$(grep -ls PerfPrim ${ROOT}${INTEL_LIC_DIR}/* | tail -n 1)"
+		IPP_LICENSE=${IPP_LICENSE/${ROOT}/}
+	fi
 	if  [[ -z ${IPP_LICENSE} ]]; then
 		eerror "Did not find any valid ipp license."
-		eerror "Please locate your license file and run:"
-		eerror "\t IPP_LICENSE=/my/license/dir emerge ${PN}"
-		eerror "or place your license in /opt/intel/licenses"
-		eerror "Hint: the license file is in the email Intel sent you"
-		die "setup ipp license failed"
+		eerror "Register at ${HOMEPAGE} to receive a license"
+		eerror "and place it in ${INTEL_LIC_DIR} or run:"
+		eerror "export IPP_LICENSE=/my/license/file emerge ipp"
+		die "license setup failed"
 	fi
 
 	local disq_req
@@ -111,8 +110,8 @@ src_install() {
 	dodir ${instdir}
 
 	# install license file
-	if  [[ ! -f /opt/intel/licenses/${IPP_TMP_LICENSE} ]]; then
-		insinto /opt/intel/licenses
+	if  [[ ! -f ${INTEL_LIC_DIR}/${IPP_TMP_LICENSE} ]]; then
+		insinto ${INTEL_LIC_DIR}
 		doins "${WORKDIR}"/${IPP_TMP_LICENSE}
 	fi
 
