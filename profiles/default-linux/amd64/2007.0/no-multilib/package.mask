@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.38 2008/08/27 18:34:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.39 2008/09/02 00:50:24 nyhm Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -112,7 +112,6 @@ games-fps/glxquake-bin
 games-fps/legends
 games-fps/postal2
 games-fps/postal2mp-demo
-games-fps/postal2
 games-fps/quake3-alliance
 games-fps/quake3-alternatefire
 games-fps/quake3-bfp
@@ -155,6 +154,7 @@ games-rpg/nwn
 games-rpg/nwn-cep
 games-rpg/nwn-data
 games-rpg/rain-slick
+games-server/etqw-ded
 games-server/nwn-ded
 games-server/ut2003-ded
 games-simulation/bcs-demo
