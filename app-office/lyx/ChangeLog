@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.145 2008/08/29 19:55:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.146 2008/09/02 18:26:56 aballier Exp $
+
+  02 Sep 2008; Alexis Ballier <aballier@gentoo.org> lyx-1.4.4.ebuild:
+  depend on latex-base instead of virtual/tetex
 
   29 Aug 2008; Alexis Ballier <aballier@gentoo.org> lyx-1.6.0_rc2.ebuild:
   boost has to be in rdepend too
