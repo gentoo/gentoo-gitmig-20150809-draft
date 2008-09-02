@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.5 2007/11/04 10:19:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.6 2008/09/02 23:45:55 aballier Exp $
 
 inherit libtool eutils
 
@@ -20,10 +20,10 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	=media-libs/freetype-1*
+	virtual/tex-base
 	media-libs/t1lib"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	virtual/tetex
 	x11-misc/imake"
 
 S="${WORKDIR}"/${MY_P}
