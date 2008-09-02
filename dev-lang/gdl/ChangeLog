@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.10 2008/08/23 05:18:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.11 2008/09/02 09:32:03 bicatali Exp $
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/gdl-0.8.11-gcc4-gentoo.patch, -files/gdl-0.9_pre5-proj4.patch,
+  -files/gdl-0.9_pre6-magick.patch, -files/gdl-0.9_pre6-plplot-5.9.patch,
+  -files/gdl-0.9_pre6-proj4.patch, -gdl-0.8.11.ebuild, -gdl-0.9_pre6.ebuild:
+  Cleaning from old versions
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.
