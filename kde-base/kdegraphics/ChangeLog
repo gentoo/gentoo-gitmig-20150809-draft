@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.344 2008/06/07 14:47:36 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.345 2008/09/02 23:16:14 opfer Exp $
+
+  02 Sep 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  kdegraphics-3.5.9.ebuild:
+  rename USE=tetex to USE=kpathsea for bug 196745
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kdegraphics-3.5.8-r2.ebuild:
