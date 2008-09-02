@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3826 2008/09/02 23:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3827 2008/09/02 23:27:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -906,6 +906,7 @@ kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot 
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig
 kde-base/kdeedu:solver - Enable Kalzium ocaml equation solver
+kde-base/kdegraphics:kpathsea - Enable integration with kpathsea search library (TeX related)
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it
@@ -915,6 +916,7 @@ kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work
 kde-base/kdenetwork:sametime - Support for the Sametime protocol for instant messaging
 kde-base/kdepim:gnokii - Address synchronization with mobile phones via Gnokii
 kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
+kde-base/kdvi:kpathsea - Enable integration with kpathsea search library (TeX related)
 kde-base/kget:plasma - Build optional plasma widgets
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
