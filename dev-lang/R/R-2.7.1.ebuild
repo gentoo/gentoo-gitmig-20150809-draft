@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.1.ebuild,v 1.8 2008/09/02 04:50:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.1.ebuild,v 1.9 2008/09/02 16:57:57 keytoaster Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="doc java jpeg lapack minimal nls png readline tk X cairo"
 

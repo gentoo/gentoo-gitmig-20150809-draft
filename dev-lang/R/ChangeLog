@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.132 2008/09/02 04:50:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.133 2008/09/02 16:57:57 keytoaster Exp $
+
+  02 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org> R-2.7.1.ebuild:
+  amd64 stable wrt security bug #235822
 
   02 Sep 2008; Jeroen Roovers <jer@gentoo.org> R-2.7.1.ebuild:
   Stable for HPPA (bug #235822).
