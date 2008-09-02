@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.171 2008/09/02 14:02:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.172 2008/09/02 15:51:46 ranger Exp $
+
+  02 Sep 2008; Brent Baude <ranger@gentoo.org> postfix-2.4.9.ebuild:
+  Marking postfix-2.4.9 ppc64 and ppc for bug 236453
 
 *postfix-2.5.5 (02 Sep 2008)
 *postfix-2.4.9 (02 Sep 2008)
