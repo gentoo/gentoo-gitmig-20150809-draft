@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/sympy
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.1 2008/09/02 09:13:33 grozin Exp $
+
+*sympy-0.6.2 (02 Sep 2008)
+
+  02 Sep 2008; Andrey Grozin <grozin@gentoo.org>
+  +files/sympy-0.6.2-sphinx.patch, +metadata.xml, +sympy-0.6.2.ebuild:
+  Initial import. Based on the ebuild in sunrise, bug #192785. Thanks to
+  Thomas Pani, Thomas Sachau.
+
