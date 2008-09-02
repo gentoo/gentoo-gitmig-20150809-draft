@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-flexi-streams
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-flexi-streams/ChangeLog,v 1.14 2006/11/15 02:30:51 mkennedy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-flexi-streams/ChangeLog,v 1.15 2008/09/02 13:42:51 darkside Exp $
+
+  02 Sep 2008; Jeremy Olexa <darkside@gentoo.org>
+  -cl-flexi-streams-0.6.3.ebuild:
+  remove cl-flexi-streams-0.6.3, bug #193625
 
 *cl-flexi-streams-0.8.0 (15 Nov 2006)
 
