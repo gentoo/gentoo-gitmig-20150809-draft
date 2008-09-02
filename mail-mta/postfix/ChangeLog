@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.173 2008/09/02 15:55:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.174 2008/09/02 16:30:12 keytoaster Exp $
+
+  02 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org> postfix-2.4.9.ebuild,
+  postfix-2.5.5.ebuild:
+  amd64 stable wrt security bug #236453
 
   02 Sep 2008; Brent Baude <ranger@gentoo.org> postfix-2.5.5.ebuild:
   Marking postfix-2.5.5 ppc64 and ppc for bug 236453
