@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.9.ebuild,v 1.7 2008/05/18 21:36:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.9.ebuild,v 1.8 2008/09/02 23:10:02 opfer Exp $
 
 KMNAME=kdegraphics
 EAPI="1"
@@ -8,13 +8,13 @@ inherit kde-meta eutils elisp-common
 
 DESCRIPTION="KDE DVI viewer"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="emacs tetex"
+IUSE="emacs kpathsea"
 
 DEPEND=">=kde-base/kviewshell-${PV}:${SLOT}
 	>=media-libs/freetype-2.3
 	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
-	tetex? ( virtual/tetex )"
+	kpathsea? ( virtual/tex-base )"
 
 KMCOMPILEONLY="kviewshell/"
 SITEFILE=50${PN}-gentoo.el
