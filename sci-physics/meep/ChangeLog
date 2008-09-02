@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.4 2008/08/03 14:32:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.5 2008/09/02 22:49:08 bicatali Exp $
+
+*meep-0.20.3 (02 Sep 2008)
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> +meep-0.20.3.ebuild:
+  Version bump
 
   03 Aug 2008; Markus Dittrich <markusle@gentoo.org> meep-0.10.1.ebuild:
   Removed doc USE flag since generation of meep.pdf requires hdf5 and
