@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.24 2008/07/29 08:43:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.25 2008/09/02 23:32:35 opfer Exp $
 
 EAPI=1
 
@@ -14,11 +14,11 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="doc qt3 tetex unicode"
+IUSE="doc qt3 latex unicode"
 
 RDEPEND=">=media-gfx/graphviz-2.6
 	qt3? ( x11-libs/qt:3 )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	virtual/ghostscript"
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
@@ -31,7 +31,7 @@ src_unpack() {
 
 	# still needs patch for Russian text in source files (see bug #112076)
 	if use unicode; then
-	    epatch "${WORKDIR}/${P}-utf8-ru.patch" || die "utf8-ru patch failed"
+		epatch "${WORKDIR}/${P}-utf8-ru.patch" || die "utf8-ru patch failed"
 	fi
 
 	# use CFLAGS, CXXFLAGS, LDFLAGS
@@ -45,14 +45,14 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}"
 
 	if is-flagq "-O3" ; then
-	    echo
-	    ewarn "Compiling with -O3 is known to produce incorrectly"
-	    ewarn "optimized code which breaks doxygen."
-	    echo
-	    epause 6
-	    elog "Continuing with -O2 instead ..."
-	    echo
-	    replace-flags "-O3" "-O2"
+		echo
+		ewarn "Compiling with -O3 is known to produce incorrectly"
+		ewarn "optimized code which breaks doxygen."
+		echo
+		epause 6
+		elog "Continuing with -O2 instead ..."
+		echo
+		replace-flags "-O3" "-O2"
 	fi
 }
 
@@ -61,19 +61,19 @@ src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
 	if use qt3; then
-	    einfo "using QTDIR: '$QTDIR'."
-	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
-	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
-	    einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
-	    einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-	    ./configure ${my_conf} $(use_with qt3 doxywizard) || die 'configure failed'
+		einfo "using QTDIR: '$QTDIR'."
+		export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
+		export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
+		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
+		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
+		./configure ${my_conf} $(use_with qt3 doxywizard) || die 'configure failed'
 	else
-	    ./configure ${my_conf} || die 'configure failed'
+		./configure ${my_conf} || die 'configure failed'
 	fi
 
 	# and compile
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" \
-	    LINK_SHLIB="$(tc-getCXX)" all || die 'emake failed'
+		LINK_SHLIB="$(tc-getCXX)" all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
