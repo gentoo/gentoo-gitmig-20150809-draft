@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8937 2008/09/02 09:06:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8938 2008/09/02 13:46:41 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -622,21 +622,10 @@ app-admin/systemconfigurator
 dev-util/tla
 app-emacs/xtla
 
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2008)
-# Masked for removal in ~30 days by treecleaners. bug #124383
-# Doesn't compile, dead upstream, no maintainer.
-app-i18n/kon2
-
 # Carsten Lohrke <carlo@gentoo.org> (30 Jun 2008)
 # Masking as it's pretty broken for a long while now.
 # Will investigate in a few days.
 dev-db/rekall
-
-# Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
-# Masked for removal in 30 days. Only works with kernels <2.6.24. See HOMEPAGE
-# for details or bug #105919. Going forward this needs to be compiled into the
-# kernel.
-sys-fs/trustees
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jun 2008)
 # Upstram doesn't support old version and we have the latest version in the 
@@ -681,11 +670,6 @@ media-libs/mediastreamer
 =media-video/mpeg4ip-1.5.0.1-r3
 =media-video/mpeg4ip-1.5.0.1-r4
 
-# Jeremy Olexa <darkside@gentoo.org> (20 Jun 2008)
-# Masked for removal in ~30 days by the treecleaners
-# Dead project and predecessor to dev-util/bzr, use that instead. bug #219236
-dev-util/bazaar
-
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
 ~x11-drivers/nvidia-drivers-177.13
@@ -706,11 +690,6 @@ app-doc/linuxfromscratch-text
 # Jeroen Roovers <jer@gentoo.org> (17 Jun 2008)
 # Masked for security bug #226079.
 <=www-client/opera-9.27
-
-# Jeremy Olexa <darkside@gentoo.org> (17 Jun 2008)
-# Masked for removal in ~30 days by treecleaners at maintainer's request.
-# Dead upstream, doesn't compile. bug #227481
-dev-cpp/libwefts
 
 # Mike Auty <ikelos@gentoo.org> (15 Jun 2008)
 # (#224637) No longer supported upstream and
@@ -770,16 +749,6 @@ x11-libs/gtk-server
 virtual/libffi
 >=dev-libs/g-wrap-1.9.11
 >=dev-scheme/guile-gnome-platform-2.16.0
-
-# Jeremy Olexa <darkside@gentoo.org> (04 Jun 2008)
-# Can't download distfile. Newer versions in tree. bug #193625
-# Removed in 60 days by treecleaners
-=dev-lisp/cl-flexi-streams-0.6.3
-
-# Jeremy Olexa <darkside@gentoo.org> (04 Jun 2008)
-# Can't download distfile. Newer versions in tree. bug #193624
-# Removed in 60 days by treecleaners
-=dev-lisp/cl-drakma-0.4.0
 
 # Alexis Ballier <aballier@gentoo.org> (04 Jun 2008)
 # Beta versions, need testing
