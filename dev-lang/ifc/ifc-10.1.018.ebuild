@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.013.ebuild,v 1.1 2008/03/13 21:27:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.018.ebuild,v 1.1 2008/09/02 09:47:16 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
-PID=965
+PID=1208
 PB=fc
 PEXEC="ifort"
 DESCRIPTION="Intel FORTRAN 77/95 optimized compiler for Linux"
@@ -101,6 +101,6 @@ pkg_postinst () {
 	elog "Read the website for more information on this license:"
 	elog "${HOMEPAGE}"
 	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
-	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
+	elog "\nTo use ${PN} issue first \n\tsource ${ROOT}/etc/profile"
 	elog "Debugger is installed with dev-lang/idb"
 }

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.64 2008/08/23 11:00:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.65 2008/09/02 09:43:20 bicatali Exp $
+
+*icc-10.1.018 (02 Sep 2008)
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> -icc-10.1.017.ebuild,
+  +icc-10.1.018.ebuild:
+  Version bump
 
   23 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/icc-add-amd64-preprocessor-directives.patch,

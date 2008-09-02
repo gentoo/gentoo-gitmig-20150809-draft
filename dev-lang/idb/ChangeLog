@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/idb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.11 2008/08/23 05:26:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.12 2008/09/02 09:45:52 bicatali Exp $
+
+*idb-10.1.018 (02 Sep 2008)
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> -idb-10.1.013.ebuild,
+  +idb-10.1.018.ebuild:
+  Version bump
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.

@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.017.ebuild,v 1.2 2008/07/10 16:47:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.018.ebuild,v 1.1 2008/09/02 09:43:20 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
-PID=1136
+PID=1205
 PB=cc
 PEXEC="icc icpc"
 DESCRIPTION="Intel C/C++ optimized compiler for Linux"
@@ -70,6 +70,17 @@ src_unpack() {
 		-i *support \
 		|| die "sed support file failed"
 	chmod 644 *support
+
+	if use amd64; then
+		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icc.cfg
+		-D__amd64=__x86_64
+		-D__amd64__=__x86_64__
+		EOF
+		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icpc.cfg
+		-D__amd64=__x86_64
+		-D__amd64__=__x86_64__
+		EOF
+	fi
 }
 
 src_install() {

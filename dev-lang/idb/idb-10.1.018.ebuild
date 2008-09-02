@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.013.ebuild,v 1.2 2008/07/10 15:02:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.018.ebuild,v 1.1 2008/09/02 09:45:52 bicatali Exp $
 
 inherit rpm elisp-common
 
-ICC_PID=964
-IFC_PID=965
+ICC_PID=1205
+IFC_PID=1208
 xPV=p_${PV}
 
 DESCRIPTION="Intel C/C++/FORTRAN debugger for Linux"
@@ -80,7 +80,7 @@ pkg_postinst () {
 	elog "Read the website for more information on this license:"
 	elog "${HOMEPAGE}"
 	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
-	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
+	elog "\nTo use ${PN} issue first \n\tsource ${ROOT}/etc/profile"
 	use emacs && elisp-site-regen
 }
 
