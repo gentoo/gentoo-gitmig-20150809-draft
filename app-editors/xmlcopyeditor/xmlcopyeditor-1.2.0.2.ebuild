@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.1.0.7.ebuild,v 1.2 2008/07/04 19:43:04 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.2.ebuild,v 1.1 2008/09/02 11:26:24 yoswink Exp $
 
 WX_GTK_VER="2.8"
 
@@ -22,11 +22,8 @@ DEPEND="dev-libs/xerces-c \
 		app-text/aspell   \
 		=x11-libs/wxGTK-2.8*"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/gcc-4.3-header-dependency.patch"
+pkg_setup() {
+	check_wxuse X
 }
 
 src_install() {
