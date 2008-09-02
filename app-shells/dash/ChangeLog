@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
   02 Sep 2008; Brent Baude <ranger@gentoo.org> dash-0.5.4.11.ebuild:
+  stable ppc64, bug 236390
+
+  02 Sep 2008; Brent Baude <ranger@gentoo.org> dash-0.5.4.11.ebuild:
   stable ppc, bug 236390
 
 *dash-0.5.4.11 (27 Jul 2008)
