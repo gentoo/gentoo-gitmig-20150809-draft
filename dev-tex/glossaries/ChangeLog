@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.6 2008/07/18 18:12:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.7 2008/09/02 12:35:20 aballier Exp $
+
+  02 Sep 2008; Alexis Ballier <aballier@gentoo.org> glossaries-1.14.ebuild:
+  keyword ~x86-fbsd and add missing texlive deps
 
   18 Jul 2008; Alexis Ballier <aballier@gentoo.org> -glossaries-1.13.ebuild:
   remove old
