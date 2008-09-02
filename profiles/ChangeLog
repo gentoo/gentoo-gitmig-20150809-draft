@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1825 2008/09/02 13:46:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1826 2008/09/02 13:57:38 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  02 Sep 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask app-cdr/mp3burn for removal in 30 days, bug #227143
 
   02 Sep 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   remove app-i18n/kon2, sys-fs/trustees, dev-util/bazaar, dev-cpp/libwefts,
