@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1823 2008/09/02 00:50:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1824 2008/09/02 09:06:57 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  02 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Fixed bug number for scigraphica removals
 
   02 Sep 2008; Tristan Heaven <nyhm@gentoo.org>
   arch/amd64/no-multilib/package.mask,

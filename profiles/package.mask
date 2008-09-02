@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8936 2008/09/02 00:21:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8937 2008/09/02 09:06:57 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -52,9 +52,9 @@ media-sound/gogo
 # major file collisions, see bug #236124
 =media-libs/gst-plugins-good-0.10.9
 
-# Séastien Fabbro <bicatali@gentoo.org> (28 AUg 2008)
+# Séastien Fabbro <bicatali@gentoo.org> (28 Aug 2008)
 # Masked for removal in 30 days.  Doesn't compile,
-# upstream dead, gtk-1, numarray and bugs (bug #987654).
+# upstream dead, gtk-1, numarray and bugs (bug #236100).
 >sci-libs/libscigraphica-2.1
 >sci-visualization/scigraphica-2.1
 
