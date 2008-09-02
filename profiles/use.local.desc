@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3822 2008/09/01 00:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3823 2008/09/02 09:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -685,6 +685,10 @@ dev-python/pyzor:pyzord - enable support for pyzord
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/rdflib:zodb - enable support for Zope Object Database triplestore
 dev-python/soya:ode - include support for Open Dynamics Engine
+dev-python/sympy:imaging - Add support for dev-python/imaging
+dev-python/sympy:ipython - Add support for dev-python/ipython
+dev-python/sympy:mathml - Add support for mathml
+dev-python/sympy:texmacs - Add support for app-office/texmacs
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
 dev-python/visual:numeric - enable support for numeric
