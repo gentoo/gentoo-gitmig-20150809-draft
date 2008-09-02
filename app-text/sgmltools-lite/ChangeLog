@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.50 2008/05/29 15:56:34 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.51 2008/09/02 22:42:56 opfer Exp $
+
+  02 Sep 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  sgmltools-lite-3.0.3-r10.ebuild:
+  rename USE=tetex to USE=jadetex for bug 196745
 
   29 May 2008; Ali Polatel <hawking@gentoo.org>
   sgmltools-lite-3.0.3-r10.ebuild:
