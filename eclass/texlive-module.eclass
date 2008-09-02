@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.16 2008/08/22 11:32:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.17 2008/09/02 09:56:31 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -232,6 +232,7 @@ texlive-module_src_install() {
 		insinto /etc/texmf/language.dat.d
 		doins "${S}/language.${PN}.dat"
 	fi
+	[ -n "${TEXLIVE_MODULE_BINSCRIPTS}" ] && dobin_texmf_scripts ${TEXLIVE_MODULE_BINSCRIPTS}
 
 	texlive-common_handle_config_files
 }
