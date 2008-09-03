@@ -1,62 +1,72 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.10 2008/01/19 13:59:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.11 2008/09/03 20:31:57 jokey Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-inherit autotools eutils kde-functions subversion
+EAPI="1"
 
-DESCRIPTION="An advanced IRC Client"
+inherit cmake-utils multilib subversion
+
+DESCRIPTION="Advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
 
 LICENSE="kvirc"
-SLOT="3"
+SLOT="4"
 KEYWORDS=""
-IUSE="debug esd ipv6 kde oss ssl"
+IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde nls profile +qt-dbus qt-phonon ssl +transparency"
+# IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde nls profile +qt-dbus qt-phonon qt-webkit ssl +transparency"
+# Support for Qt-WebKit not implemented yet
 
-RDEPEND="esd? ( media-sound/esound )
-	ssl? ( dev-libs/openssl )
-	oss? ( media-libs/audiofile )
-	kde? ( =kde-base/kdelibs-3.5* )
-	=x11-libs/qt-3*"
+RDEPEND="
+	sys-libs/zlib
+	x11-libs/qt-core
+	x11-libs/qt-gui
+	x11-libs/qt-qt3support
+	audiofile? ( media-libs/audiofile )
+	kde? ( kde-base/kdelibs:kde-4 )
+	qt-dbus? ( x11-libs/qt-dbus )
+	qt-phonon? ( x11-libs/qt-phonon )
+	ssl? ( dev-libs/openssl )"
+	# qt-webkit? ( x11-libs/qt-webkit )
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+	doc? ( app-doc/doxygen )"
+
+DOCS="ChangeLog TODO"
 
 ESVN_REPO_URI="https://svn.kvirc.de/svn/trunk/kvirc"
 ESVN_PROJECT="kvirc"
-ESVN_BOOTSTRAP="./autogen.sh"
 
 src_unpack() {
 	subversion_src_unpack
-	epatch "${FILESDIR}"/${PN}-svn-kdedir-fix.patch
+	subversion_wc_info
+	VERSIO_PRAESENS="${ESVN_WC_REVISION}"
+	elog "Setting revision number to ${VERSIO_PRAESENS}"
+	sed -i -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
 }
 
 src_compile() {
-	set-qtdir 3
-	set-kdedir 3
+	local mycmakeargs="
+		-DCMAKE_INSTALL_PREFIX=/usr
+		-DCOEXISTENCE=1
+		-DLIB_INSTALL_PREFIX="/usr/$(get_libdir)"
+		-DVERBOSE=1
+		$(cmake-utils_use_want audiofile AUDIOFILE)
+		$(cmake-utils_use_want crypt CRYPT)
+		$(cmake-utils_use_want dcc_voice DCC_VOICE)
+		$(cmake-utils_use_want debug DEBUG)
+		$(cmake-utils_use_want doc DOXYGEN)
+		$(cmake-utils_use_want gsm GSM)
+		$(cmake-utils_use_want ipc IPC)
+		$(cmake-utils_use_want ipv6 IPV6)
+		$(cmake-utils_use_want kde KDE4)
+		$(cmake-utils_use_want nls GETTEXT)
+		$(cmake-utils_use_want profile MEMORY_PROFILE)
+		$(cmake-utils_use_want qt-dbus QTDBUS)
+		$(cmake-utils_use_want qt-phonon PHONON)
+		$(cmake-utils_use_want ssl OPENSSL)
+		$(cmake-utils_use_want transparency TRANSPARENCY)"
+		# $(cmake-utils_use_want qt-webkit QTWEBKIT)
 
-	# use aa even when kde support is disabled; remove the splash screen
-	# to speed up the startup.
-	local myconf="--with-aa-fonts --without-splash-screen
-		--with-big-channels --with-pizza"
-
-	# For myconf, we can't do it the easy way (use_with) because the configure
-	# script will assume we're telling it not to include support.
-	myconf="${myconf} `use_with debug debug-symbols`"
-	use kde || myconf="${myconf} --without-kde-support --without-arts-support"
-	use ipv6 || myconf="${myconf} --without-ipv6-support"
-	use esd || myconf="${myconf} --without-esd-support"
-	use ssl || myconf="${myconf} --without-ssl-support"
-
-	[[ "${ARCH}" == "x86" ]] && myconf="${myconf} --with-ix86-asm"
-
-	econf ${myconf} || die "econf failed"
-	emake -j1 || die "emake failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	emake DESTDIR="${D}" docs || die "emake docs failed"
-	dodoc ChangeLog README TODO
+	cmake-utils_src_compile
 }

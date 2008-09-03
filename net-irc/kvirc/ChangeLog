@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.64 2008/03/23 10:49:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.65 2008/09/03 20:31:57 jokey Exp $
+
+  03 Sep 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml,
+  kvirc-9999.ebuild:
+  Heavily modified live ebuild, thanks to Arfrever Frehtes Taifersar
+  Arahesis in bug #224919
 
   22 Mar 2008; Markus Ullmann <jokey@gentoo.org> kvirc-3.4.0.ebuild:
   Remove a debug stopper, thanks to Arfrever.FTA@GMail.Com in bug #214191
