@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/extsizes
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.11 2007/12/11 10:36:23 aballier Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.12 2008/09/03 05:07:49 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> extsizes-1.0.ebuild:
+  no need to depend on virtual/tetex, texlive-latexrecommended also provides
+  extsizes
 
   11 Dec 2007; Alexis Ballier <aballier@gentoo.org> extsizes-1.0.ebuild:
   remove cstetex references, its being removed, part of bug #196673
