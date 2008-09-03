@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.32_pre20080829.ebuild,v 1.1 2008/08/29 17:08:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.32_pre20080829.ebuild,v 1.2 2008/09/03 10:11:40 hollow Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,11 +34,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake prefix=${DIETHOME} CFLAGS="${CFLAGS}" || die "make failed"
+	emake prefix=${DIETHOME} CFLAGS="${CFLAGS}" -j1 || die "make failed"
 }
 
 src_install() {
-	emake prefix=${DIETHOME} DESTDIR="${D}" install || die "make install failed"
+	emake prefix=${DIETHOME} DESTDIR="${D}" -j1 install || die "make install failed"
 	dobin "${D}"${DIETHOME}/bin/* || die "dobin failed"
 	doman "${D}"${DIETHOME}/man/*/* || die "doman failed"
 	rm -r "${D}"${DIETHOME}/{man,bin}

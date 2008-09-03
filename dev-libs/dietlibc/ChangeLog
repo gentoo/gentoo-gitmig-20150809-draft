@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.75 2008/08/29 17:08:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.76 2008/09/03 10:11:40 hollow Exp $
+
+  03 Sep 2008; Benedikt Böhm <hollow@gentoo.org>
+  dietlibc-0.32_pre20080829.ebuild:
+  fix #236417
 
 *dietlibc-0.32_pre20080829 (29 Aug 2008)
 
