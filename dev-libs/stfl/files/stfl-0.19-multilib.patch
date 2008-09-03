@@ -1,0 +1,46 @@
+diff -aur stfl-0.19-orig/Makefile stfl-0.19/Makefile
+--- stfl-0.19-orig/Makefile	2007-09-19 19:24:14.000000000 -0400
++++ stfl-0.19/Makefile	2008-09-02 20:05:10.000000000 -0400
+@@ -50,9 +50,9 @@
+ 	mv -f Makefile.deps_new Makefile.deps
+ 
+ install: all
+-	mkdir -p $(DESTDIR)$(prefix)/lib
++	mkdir -p $(DESTDIR)$(prefix)/$(LIBDIR)
+ 	mkdir -p $(DESTDIR)$(prefix)/include
+-	install -m 644 libstfl.a $(DESTDIR)$(prefix)/lib/
++	install -m 644 libstfl.a $(DESTDIR)$(prefix)/$(LIBDIR)/
+ 	install -m 644 stfl.h $(DESTDIR)$(prefix)/include/
+ 
+ ifeq ($(FOUND_SPL),1)
+diff -aur stfl-0.19-orig/python/Makefile.snippet stfl-0.19/python/Makefile.snippet
+--- stfl-0.19-orig/python/Makefile.snippet	2007-09-03 12:13:04.000000000 -0400
++++ stfl-0.19/python/Makefile.snippet	2008-09-02 20:00:40.000000000 -0400
+@@ -32,8 +32,8 @@
+ 	cd python && python -c 'import stfl'
+ 
+ install_python: python/_stfl.so python/stfl.py python/stfl.pyc
+-	mkdir -p $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/lib-dynload/
+-	cp python/_stfl.so $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/lib-dynload/
+-	cp python/stfl.pyc $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/
+-	cp python/stfl.py $(DESTDIR)$(prefix)/lib/python$(PYTHON_VERSION)/
++	mkdir -p $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/
++	cp python/_stfl.so $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/lib-dynload/
++	cp python/stfl.pyc $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/
++	cp python/stfl.py $(DESTDIR)$(prefix)/$(LIBDIR)/python$(PYTHON_VERSION)/
+ 
+diff -aur stfl-0.19-orig/ruby/Makefile.snippet stfl-0.19/ruby/Makefile.snippet
+--- stfl-0.19-orig/ruby/Makefile.snippet	2007-09-03 12:13:04.000000000 -0400
++++ stfl-0.19/ruby/Makefile.snippet	2008-09-02 20:02:40.000000000 -0400
+@@ -25,9 +25,9 @@
+ 
+ ruby/build_ok: libstfl.a stfl.h ruby/stfl.i swig/*.i
+ 	cd ruby && swig -ruby stfl.i && ruby extconf.rb
+-	$(MAKE) -C ruby clean && $(MAKE) -C ruby LIBS+="../libstfl.a -lncursesw" CFLAGS+="-pthread -I.." DLDFLAGS+="-pthread" DESTDIR=$(DESTDIR) prefix=$(prefix) sitedir=$(prefix)/lib/ruby
++	$(MAKE) -C ruby clean && $(MAKE) -C ruby LIBS+="../libstfl.a -lncursesw" CFLAGS+="-pthread -I.." DLDFLAGS+="-pthread" DESTDIR=$(DESTDIR) prefix=$(prefix) sitedir=$(prefix)/$(LIBDIR)/ruby
+ 	touch ruby/build_ok
+ 
+ install_ruby: ruby/build_ok
+-	$(MAKE) -C ruby DESTDIR=$(DESTDIR) prefix=$(prefix) sitedir='$(DESTDIR)$(prefix)/lib/ruby' install
++	$(MAKE) -C ruby DESTDIR=$(DESTDIR) prefix=$(prefix) sitedir='$(DESTDIR)$(prefix)/$(LIBDIR)/ruby' install
+ 
