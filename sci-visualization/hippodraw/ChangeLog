@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.9 2008/08/29 09:44:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.10 2008/09/03 15:57:08 bicatali Exp $
+
+  03 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/hippodraw-1.21.3-qt4.patch, hippodraw-1.21.3-r1.ebuild:
+  Added a patch for qt4, hopefully fixing bug #236435
 
   29 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -hippodraw-1.19.1.ebuild, -hippodraw-1.21.3.ebuild:
