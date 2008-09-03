@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.36 2008/08/19 12:13:05 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.37 2008/09/03 18:10:49 robbat2 Exp $
+
+*syslinux-3.71 (03 Sep 2008)
+
+  03 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +syslinux-3.71.ebuild:
+  Version bump per bug #236554, also fix perl deps per bug 236597.
 
   19 Aug 2008; Dawid Węgliński <cla@gentoo.org> syslinux-3.52.ebuild:
   Add missing dev-perl/Digest-SHA1 to RDEPEND
