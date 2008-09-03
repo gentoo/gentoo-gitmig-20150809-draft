@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.28 2008/09/01 18:51:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.29 2008/09/03 20:43:21 jokey Exp $
+
+*quassel-0.3.0.1 (03 Sep 2008)
+
+  03 Sep 2008; Markus Ullmann <jokey@gentoo.org> +quassel-0.3.0.1.ebuild:
+  Version bump, thanks for notification on IRC and billie for providing the
+  ebuild
 
   01 Sep 2008; Markus Ullmann <jokey@gentoo.org> quassel-9999.ebuild:
   Add new useflags and some style improvements to live ebuild, thanks to
