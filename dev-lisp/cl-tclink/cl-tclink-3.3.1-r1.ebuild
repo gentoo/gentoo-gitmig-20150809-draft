@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.8 2005/05/24 18:48:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.9 2008/09/03 20:58:09 opfer Exp $
 
 inherit common-lisp eutils
 
@@ -19,14 +19,14 @@ IUSE="doc"
 DEPEND="dev-libs/openssl
 	dev-lisp/cl-split-sequence
 	dev-lisp/cl-uffi
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 CLPACKAGE=tclink
 
 src_unpack() {
 	unpack ${A}
-	epatch ${PN}_${PV}-${DEB_PV}.diff || die
-	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+	epatch ${PN}_${PV}-${DEB_PV}.diff
+	epatch "${FILESDIR}/${PV}-gentoo.patch"
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	common-lisp-install *.asd *.lisp
 	common-lisp-system-symlink
-	dodoc ChangeLog LLGPL LICENSE
+	dodoc ChangeLog
 	dodoc doc/cl-tclink.txt
 	exeinto /usr/lib/cl-tclink
 	doexe libtclink/libtclink.so
