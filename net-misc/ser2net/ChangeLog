@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.18 2008/09/02 18:02:27 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.19 2008/09/03 19:21:59 sbriesen Exp $
+
+  03 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org> files/ser2net.confd,
+  files/ser2net.initd:
+  reworked init-script.
 
 *ser2net-2.5 (02 Sep 2008)
 

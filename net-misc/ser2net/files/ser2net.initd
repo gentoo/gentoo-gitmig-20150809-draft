@@ -1,41 +1,53 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/files/ser2net.initd,v 1.1 2008/09/02 18:02:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/files/ser2net.initd,v 1.2 2008/09/03 19:22:00 sbriesen Exp $
+
+description="Serial to network proxy (${RC_SVCNAME})"
+description_reload="Reread configuration file and make the appropriate changes"
+extra_started_commands="reload"
+command="/usr/sbin/ser2net"
+pidfile="/var/run/${RC_SVCNAME}.pid"
 
 depend() {
+	use logger
 	need net
-	after bootmisc
 }
 
 config_check() {
-	SER2NET_OPTS=""
+	command_args="${EXTRA_OPTS}"
 	CONFIG_FILE_DEFAULT="/etc/ser2net.conf"
 
-	yesno "${CISCO_IOS:-no}" && SER2NET_OPTS="${SER2NET_OPTS} -b"
-	yesno "${UUCP_LOCKS:-yes}" || SER2NET_OPTS="${SER2NET_OPTS} -u"
+	yesno "${CISCO_IOS:-no}" && command_args="${SER2NET_OPTS} -b"
+	yesno "${UUCP_LOCKS:-yes}" || command_args="${command_args} -u"
 	[ -z "${CONFIG_FILE}" ] && CONFIG_FILE="${CONFIG_FILE_DEFAULT}"
-	[ -n "${CONTROL_PORT}" ] && SER2NET_OPTS="${SER2NET_OPTS} -p ${CONTROL_PORT}"
-	[ "${CONFIG_FILE}" != "${CONFIG_FILE_DEFAULT}" ] && SER2NET_OPTS="${SER2NET_OPTS} -c ${CONFIG_FILE}"
+	[ -n "${CONTROL_PORT}" ] && command_args="${command_args} -p ${CONTROL_PORT}"
+	[ "${CONFIG_FILE}" != "${CONFIG_FILE_DEFAULT}" ] && command_args="${command_args} -c ${CONFIG_FILE}"
 
-        if [ ! -f "${CONFIG_FILE}" ]; then
-                eerror "Please create ${CONFIG_FILE}"
-                eerror "Sample conf: ${CONFIG_FILE_DEFAULT}.dist"
-                return 1
-        fi
-        return 0
+	if [ ! -f "${CONFIG_FILE}" ]; then
+		eerror "Please create ${CONFIG_FILE}"
+		eerror "Sample conf: ${CONFIG_FILE_DEFAULT}.dist"
+		return 1
+	fi
+	return 0
 }
 
 start() {
 	config_check || return ${?}
-	ebegin "Starting Serial to network proxy (${SVCNAME})"
-	start-stop-daemon --start --quiet --pidfile /var/run/${SVCNAME}.pid \
-		--exec /usr/sbin/ser2net -- ${SER2NET_OPTS} -P /var/run/${SVCNAME}.pid
+	ebegin "Starting ${description}"
+	start-stop-daemon --start --quiet --pidfile "${pidfile}" \
+		--exec "${command}" -- ${command_args} -P "${pidfile}"
 	eend ${?}
 }
 
 stop() {
-	ebegin "Stopping Serial to network proxy (${SVCNAME})"
-	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid
+	ebegin "Stopping ${description}"
+	start-stop-daemon --stop --quiet --pidfile "${pidfile}"
+	eend ${?}
+}
+
+reload() {
+	ebegin "Reloading ${description}"
+	start-stop-daemon --stop --signal HUP --oknodo --pidfile "${pidfile}"
 	eend ${?}
 }

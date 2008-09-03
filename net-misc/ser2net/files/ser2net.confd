@@ -21,3 +21,7 @@
 #
 #UUCP_LOCKS="no"
 
+# see the ser2net(8) manual page for additional options you can configure here
+#
+#EXTRA_OPTS=""
+
