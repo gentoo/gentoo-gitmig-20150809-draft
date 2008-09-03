@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1828 2008/09/03 05:11:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1829 2008/09/03 06:12:41 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove tex4ht mask now that the bogous version is gone
 
   03 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask dev-tex/{eurosym,extsizes} for removal
