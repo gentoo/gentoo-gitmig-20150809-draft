@@ -1,6 +1,10 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.5 2008/07/10 13:56:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.6 2008/09/03 08:57:42 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  freedoko-0.7.3.ebuild:
+  replace virtual/tetex with virtual/latex-base
 
   10 Jul 2008; Rémi Cardona <remi@gentoo.org> freedoko-0.7.3.ebuild:
   use only one gtkmm slot (see bug #228459)
