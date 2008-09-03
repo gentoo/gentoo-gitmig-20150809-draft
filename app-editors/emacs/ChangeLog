@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.264 2008/09/03 03:09:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.265 2008/09/03 06:08:24 corsair Exp $
+
+  03 Sep 2008; Markus Rothe <corsair@gentoo.org> emacs-22.2-r3.ebuild:
+  Stable on ppc64
 
   03 Sep 2008; Olivier Crête <tester@gentoo.org> emacs-22.2-r3.ebuild:
   Stable on amd64 for bug #236498
