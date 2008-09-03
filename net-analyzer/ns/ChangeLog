@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ns
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.27 2007/10/01 10:59:40 anant Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.28 2008/09/03 07:33:13 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> ns-2.29.ebuild,
+  ns-2.31.ebuild:
+  replace virtual/tetex with virtual/latex-base
 
   01 Oct 2007; Anant Narayanan <anant@gentoo.org> ns-2.31.ebuild:
   Fix QA quoting issues.

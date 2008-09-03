@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.29.ebuild,v 1.2 2006/06/19 15:12:54 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.29.ebuild,v 1.3 2008/09/03 07:33:13 opfer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/tcl-8.4.5
 					>=dev-libs/dmalloc-4.8.2
 					>=dev-tcltk/tcl-debug-2.0 )"
 DEPEND="${RDEPEND}
-		doc? ( 	virtual/tetex
+		doc? ( 	virtual/latex-base
 				virtual/ghostscript
 				dev-tex/latex2html )"
 
