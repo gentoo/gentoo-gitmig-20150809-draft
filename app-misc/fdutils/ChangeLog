@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/fdutils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.21 2007/05/12 02:00:52 dsd Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.22 2008/09/03 08:50:52 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  fdutils-5.4.20020222-r1.ebuild, fdutils-5.5.ebuild:
+  replace virtual/tetex with virtual/texi2dvi, clean up a bit and fix bug 226955
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
