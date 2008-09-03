@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mmix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.15 2008/09/03 09:30:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.16 2008/09/03 09:41:10 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> mmix-20060324.ebuild:
+  fix dependency to virtual/tex-base, this fixes bug 185637 and bug 222501
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   -mmix-20020216.ebuild:
