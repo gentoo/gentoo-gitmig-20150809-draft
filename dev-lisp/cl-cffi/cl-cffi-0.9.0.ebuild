@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/cl-cffi-0.9.0.ebuild,v 1.1 2006/03/14 07:34:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/cl-cffi-0.9.0.ebuild,v 1.2 2008/09/03 20:48:27 opfer Exp $
 
 inherit common-lisp
 
@@ -14,7 +14,7 @@ IUSE="doc"
 
 S=${WORKDIR}/cffi-${PV}
 
-DEPEND="doc? ( dev-lisp/sbcl virtual/tetex sys-apps/texinfo )"
+DEPEND="doc? ( dev-lisp/sbcl virtual/texi2dvi )"
 
 CLPACKAGE=cffi
 
@@ -30,7 +30,7 @@ src_install() {
 			$CLSYSTEMROOT/
 	done
 	doins -r tests src uffi-compat examples *.asd
-	dodoc README COPYRIGHT HEADER TODO
+	dodoc README HEADER TODO
 	dodoc doc/*.txt
 	if use doc; then
 		doinfo doc/*.info

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-cffi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.6 2007/02/22 01:20:41 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.7 2008/09/03 20:48:27 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> cl-cffi-0.9.0.ebuild,
+  cl-cffi-0.9.1.ebuild:
+  change dependency from virtual/tetex to virtual/texi2dvi and prevent
+  installation of COPYRIGHT file
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
