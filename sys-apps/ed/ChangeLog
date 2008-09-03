@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.65 2008/06/16 03:52:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.66 2008/09/03 13:31:24 cardoe Exp $
+
+*ed-1.0 (03 Sep 2008)
+
+  03 Sep 2008; Doug Goldstein <cardoe@gentoo.org> +ed-1.0.ebuild:
+  version bump. fixes buffer overflow in strip_escapes(). bug #236521
 
   16 Jun 2008; Joseph Jezak <josejx@gentoo.org> ed-0.9.ebuild:
   Marked ppc/ppc64 stable.
