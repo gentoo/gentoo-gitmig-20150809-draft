@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.0.ebuild,v 1.1 2008/09/03 13:31:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.0.ebuild,v 1.2 2008/09/03 14:42:06 cardoe Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.5-build.patch
+	epatch "${FILESDIR}"/${PN}-1.0-build.patch
 }
 
 src_compile() {
@@ -35,7 +35,5 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	doman doc/ed.1
-	dosym ed.1 /usr/share/man/man1/red.1
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
