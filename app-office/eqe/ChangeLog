@@ -1,6 +1,9 @@
 # ChangeLog for app-office/eqe
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/eqe/ChangeLog,v 1.7 2008/09/02 18:32:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/eqe/ChangeLog,v 1.8 2008/09/03 06:41:49 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> eqe-1.3.0.ebuild:
+  depend only on latex-base, not virtual/tetex
 
   02 Sep 2008; Alexis Ballier <aballier@gentoo.org> -eqe-1.0.4.ebuild,
   -eqe-1.2.0.ebuild:
