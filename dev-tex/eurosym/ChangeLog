@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.21 2008/09/03 05:02:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.22 2008/09/03 05:04:56 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> eurosym-1.4.ebuild:
+  texlive-fontsrecommended contains eurosym too, and make blockers rdepends
 
   03 Sep 2008; Alexis Ballier <aballier@gentoo.org> eurosym-1.4.ebuild:
   no need to depend on virtual/tetex, latex-package.eclass depends on
