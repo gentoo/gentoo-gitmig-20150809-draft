@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20041017.ebuild,v 1.8 2007/01/28 06:43:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20041017.ebuild,v 1.9 2008/09/03 11:40:31 opfer Exp $
 
 inherit latex-package
 
@@ -17,14 +17,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="cjk"
 
-DEPEND="virtual/tetex
+DEPEND="!dev-texlive/texlive-latexrecommended
 	cjk? ( dev-tex/cjk-latex )"
 
 S=${WORKDIR}/ucs
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cp ${DISTDIR}/UnicodeData.txt ${S}
+	cp "${DISTDIR}"/UnicodeData.txt "${S}"
 }
 
 src_compile() {

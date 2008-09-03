@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20030605.ebuild,v 1.6 2007/01/28 06:43:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20030605.ebuild,v 1.7 2008/09/03 11:40:31 opfer Exp $
 
 inherit latex-package
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 amd64"
 IUSE="cjk"
 
-DEPEND="virtual/tetex
+DEPEND="!dev-texlive/texlive-latexrecommended
 	cjk? ( dev-tex/cjk-latex )"
 
 S=${WORKDIR}/ucs
