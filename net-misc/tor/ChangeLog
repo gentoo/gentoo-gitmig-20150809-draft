@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.123 2008/08/03 16:28:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.124 2008/09/03 06:57:13 opfer Exp $
+
+*tor-0.2.0.30-r1 (03 Sep 2008)
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> +files/tor.initd-r4,
+  +tor-0.2.0.30-r1.ebuild:
+  update init script to prevent runtime failures as reported in bug 235208
 
 *tor-0.2.0.30 (03 Aug 2008)
 
