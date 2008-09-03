@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.15 2006/11/12 20:50:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.16 2008/09/03 08:35:19 opfer Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND=">=sys-libs/readline-4.3
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-apps/sed-4
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 src_compile() {
 	local myconf="--prefix=/usr"
@@ -26,12 +26,12 @@ src_compile() {
 	if ! use readline; then
 		myconf="${myconf} --without-readline"
 
-		sed -i 's#\($(LIB_READLINE)\)#\1 -lncurses##g' ${S}/Makefile.in
+		sed -i 's#\($(LIB_READLINE)\)#\1 -lncurses##g' "${S}"/Makefile.in
 	fi
-	sed -i 's#-ltermcap#-lncurses#g' ${S}/configure
+	sed -i 's#-ltermcap#-lncurses#g' "${S}"/configure
 
 	# XXX: do not replace with econf.
-	${S}/configure ${myconf} || die "configure failed, sorry!"
+	"${S}"/configure ${myconf} || die "configure failed, sorry!"
 	emake all tdl.info tdl.html tdl.txt || die
 	use doc && emake tdl.dvi tdl.ps tdl.pdf
 }
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	local i
 
-	dodoc README NEWS tdl.txt ${FILESDIR}/screenshot.png
+	dodoc README NEWS tdl.txt "${FILESDIR}/screenshot.png"
 	doinfo tdl.info
 	dohtml tdl.html
 
