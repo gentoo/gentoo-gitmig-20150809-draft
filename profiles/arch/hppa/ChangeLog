@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.5 2008/04/10 19:53:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.6 2008/09/03 01:21:21 leio Exp $
+
+  03 Sep 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Copy the global GNOME-2.22 mask here, in preparation of removal of the
+  global one. Unmasking for HPPA waiting on keyword bug 218794
 
   10 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Make VIDEO_CARDS defaults a reasonable set instead of every imaginable

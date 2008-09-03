@@ -1,6 +1,10 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.45 2008/07/18 07:54:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.46 2008/09/03 01:21:22 leio Exp $
+
+  03 Sep 2008; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Copy the global GNOME-2.22 mask here, in preparation of removal of the
+  global one. Unmasking for HPPA waiting on keyword bug 218794
 
   18 Jul 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask pch USE flag for x11-libs/qt-* (bug #223775).
