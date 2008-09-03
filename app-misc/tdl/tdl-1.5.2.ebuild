@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.16 2008/09/03 08:35:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.17 2008/09/03 08:51:22 opfer Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND=">=sys-libs/readline-4.3
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-apps/sed-4
-	doc? ( virtual/latex-base )"
+	doc? ( virtual/texi2dvi )"
 
 src_compile() {
 	local myconf="--prefix=/usr"
