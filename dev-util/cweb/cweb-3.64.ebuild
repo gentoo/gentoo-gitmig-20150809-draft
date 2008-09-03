@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.13 2008/09/03 09:47:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.14 2008/09/03 12:19:08 opfer Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Knuth's and Levy's C/C++ documenting system"
@@ -15,8 +15,7 @@ IUSE=""
 DEPEND="virtual/libc
 	!app-text/tetex
 	!app-text/texlive-core
-	!app-text/ptex
-	!app-text/cstex"
+	!app-text/ptex"
 
 src_compile() {
 	#emake won't work, because cweave needs ctangle to compile
