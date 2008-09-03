@@ -1,13 +1,23 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.29 2008/08/16 13:38:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.30 2008/09/03 20:42:34 yngwin Exp $
+
+*smplayer-0.6.2-r1 (03 Sep 2008)
+*smplayer-0.6.1-r1 (03 Sep 2008)
+*smplayer-0.6.0-r1 (03 Sep 2008)
+
+  03 Sep 2008; Ben de Groot <yngwin@gentoo.org> +smplayer-0.6.0-r1.ebuild,
+  -smplayer-0.6.1.ebuild, +smplayer-0.6.1-r1.ebuild, -smplayer-0.6.2.ebuild,
+  +smplayer-0.6.2-r1.ebuild:
+  Bringing mplayer png usecheck up to pkg_setup, adding mplayer srt usecheck
+  to fix bug 235183. Adjusting description. Dropping old ~arch revisions.
 
 *smplayer-0.6.2 (16 Aug 2008)
 
   16 Aug 2008; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.0_rc3.ebuild,
   -smplayer-0.6.0_rc4.ebuild, +smplayer-0.6.2.ebuild:
   Version bump. Dropping qt3support check, as this is no longer needed
-  according to upstream (hopefully it's really true this time). 
+  according to upstream (hopefully it's really true this time).
   Dropping old RCs.
 
   16 Jun 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.0.ebuild,
@@ -100,7 +110,7 @@
   19 Feb 2008; Ben de Groot <yngwin@gentoo.org>
   -smplayer-0.5.62.ebuild, -smplayer-0.6.0_rc1.ebuild,
   smplayer-0.6.0_rc2.ebuild:
-  Removing old versions. Updating current ebuild with warning about 
+  Removing old versions. Updating current ebuild with warning about
   mplayer png support, fixes #209521.
 
 *smplayer-0.6.0_rc2 (17 Feb 2008)

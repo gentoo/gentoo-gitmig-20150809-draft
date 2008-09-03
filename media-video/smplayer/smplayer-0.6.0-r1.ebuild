@@ -1,23 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.1.ebuild,v 1.2 2008/06/16 19:24:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0-r1.ebuild,v 1.1 2008/09/03 20:42:34 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
 
-DESCRIPTION="Great front-end for mplayer written in Qt4"
+MY_P="${P}final"
+DESCRIPTION="Great Qt4 GUI front-end for mplayer"
 HOMEPAGE="http://smplayer.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND="|| ( x11-libs/qt-gui:4
 			>=x11-libs/qt-4.3:4 )"
 RDEPEND="${DEPEND}
 	>media-video/mplayer-1.0_rc1"
 
-LANGS="bg ca cs de en_US es eu fi fr hu it ja ka ko mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
+LANGS="bg cs de en_US es eu fi fr hu it ja ka ko mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
 NOLONGLANGS="el_GR ro_RO ru_RU uk_UA"
 for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
@@ -25,6 +26,8 @@ done
 for X in ${NOLONGLANGS}; do
 	IUSE="${IUSE} linguas_${X%_*}"
 done
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if has_version ">=x11-libs/qt-4.3:4"; then
@@ -36,10 +39,27 @@ pkg_setup() {
 		fi
 	fi
 	qt4_pkg_setup
+
+	if ! built_with_use media-video/mplayer srt ; then
+		echo
+		ewarn "SMPlayer needs MPlayer to be built with USE=srt for subtitle"
+		ewarn "support. Please enable the srt USE flag for mplayer and"
+		ewarn "re-emerge media-video/mplayer before emerging smplayer."
+		echo
+		die "media-video/mplayer needs USE=srt enabled"
+	fi
+	if ! built_with_use media-video/mplayer png; then
+		echo
+		ewarn "SMPlayer needs MPlayer built with USE=png for screenshot support."
+		ewarn "Please enable the png USE flag for mplayer and re-emerge"
+		ewarn "media-video/mplayer before emergeing smplayer."
+		echo
+		die "media-video/mplayer needs USE=png enabled"
+	fi
 }
 
 src_compile() {
-	local MY_SVNREV="1304"
+	local MY_SVNREV="1247"
 	echo "SVN-r${MY_SVNREV}" > svn_revision.txt
 	echo "#define SVN_REVISION \"SVN-r${MY_SVNREV}\"" > src/svn_revision.h
 
@@ -85,15 +105,4 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 	prepalldocs
-}
-
-pkg_postinst() {
-	if ! built_with_use media-video/mplayer png; then
-		echo
-		ewarn "SMPlayer needs the media-video/mplayer package built with USE=png."
-		ewarn "To prevent crashes, please rebuild mplayer with png support, or"
-		ewarn "alternatively, clear the Folder for storing screenshots field in"
-		ewarn "the Preferences dialog."
-		echo
-	fi
 }
