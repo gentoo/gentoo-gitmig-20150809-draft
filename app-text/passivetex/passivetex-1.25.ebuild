@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.5 2005/11/25 18:39:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.6 2008/09/03 03:59:38 aballier Exp $
 
 inherit latex-package
 
@@ -15,15 +15,17 @@ KEYWORDS="~amd64 ~sparc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/tetex
+RDEPEND="virtual/latex-base
 	>=dev-tex/xmltex-1.9"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+TEXMF=/usr/share/texmf-site
+
 src_install() {
 
-	insinto ${TEXMF}/tex/passivetex
+	insinto ${TEXMF}/tex/xmltex/passivetex
 	doins *.sty *.xmt
 
 	dodoc README.passivetex LICENSE index.xml
