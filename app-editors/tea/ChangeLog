@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.38 2008/07/28 19:52:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.39 2008/09/03 13:49:45 armin76 Exp $
+
+  03 Sep 2008; Raúl Porcel <armin76@gentoo.org> tea-17.6.3.ebuild:
+  x86 stable, fix bug #219907
 
   28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

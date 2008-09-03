@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.6.3.ebuild,v 1.1 2008/07/03 21:35:11 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.6.3.ebuild,v 1.2 2008/09/03 13:49:45 armin76 Exp $
 
 EAPI="1"
 inherit autotools eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tea-editor/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 x86 ~x86-fbsd"
 IUSE="enchant gnome hacking ipv6 spell"
 
 RDEPEND="x11-libs/gtk+:2
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-17.5.4-forced-cflags-and-compiler-warnings.patch
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {
