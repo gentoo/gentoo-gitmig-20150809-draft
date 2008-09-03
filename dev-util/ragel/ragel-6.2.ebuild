@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.2.ebuild,v 1.4 2008/08/11 21:47:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.2.ebuild,v 1.5 2008/09/03 10:07:42 opfer Exp $
 
 inherit eutils
 
@@ -13,15 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc vim-syntax"
 
-DEPEND="doc? ( virtual/tetex
+DEPEND="doc? ( virtual/latex-base
 		media-gfx/transfig )"
 RDEPEND=""
 
 src_compile() {
 	find "${S}" -iname "Makefile*" -exec sed -i \
-	     -e "s:install -s:install:" \
-	     -e '/\$(CXX)/s:CFLAGS:CXXFLAGS:' \
-	     {} \;
+		 -e "s:install -s:install:" \
+		 -e '/\$(CXX)/s:CFLAGS:CXXFLAGS:' \
+		 {} \;
 
 	econf || die
 	make || die

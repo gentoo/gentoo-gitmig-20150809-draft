@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.13 2008/09/03 10:05:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.14 2008/09/03 10:07:42 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> ragel-6.2.ebuild:
+  replace virtual/tetex with virtual/latex-base
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> -ragel-5.19.ebuild,
   -ragel-5.20.ebuild, -ragel-5.25.ebuild:
