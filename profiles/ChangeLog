@@ -1,10 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1834 2008/09/03 21:54:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1835 2008/09/03 22:28:09 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
-# here. If doubt put a record here!
+# here. If in doubt put a record here!
 
   03 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Atoms must not have a "." before a trailing "*".
