@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.48 2008/09/03 16:56:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.49 2008/09/03 18:57:17 nyhm Exp $
+
+  03 Sep 2008; Tristan Heaven <nyhm@gentoo.org> ode-0.10.1.ebuild:
+  Add doc and examples USE flags
 
 *ode-0.10.1 (03 Sep 2008)
 
