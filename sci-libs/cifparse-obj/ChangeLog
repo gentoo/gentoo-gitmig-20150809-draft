@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cifparse-obj
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.7 2008/04/08 08:01:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.8 2008/09/03 14:23:06 markusle Exp $
+
+*cifparse-obj-7.025 (03 Sep 2008)
+
+  03 Sep 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/cifparse-obj-7.025-gcc4.3.patch,
+  +files/cifparse-obj-7.025-makefile.patch, +cifparse-obj-7.025.ebuild:
+  Version bump which also fixes the gcc4.3 issues reported in #236410.
 
   08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   cifparse-obj-6.302.ebuild:
