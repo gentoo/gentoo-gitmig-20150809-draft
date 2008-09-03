@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.8 2008/05/19 20:45:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.9 2008/09/03 04:04:01 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> latexmk-307a.ebuild:
+  depend on latex-base instead of virtual/tetex
 
   19 May 2008; Markus Meier <maekke@gentoo.org> latexmk-307a.ebuild:
   amd64/x86 stable, bug #222471
