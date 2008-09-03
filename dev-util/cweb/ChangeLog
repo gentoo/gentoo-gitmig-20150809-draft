@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cweb
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.14 2007/06/19 22:42:42 opfer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.15 2008/09/03 05:16:23 jer Exp $
+
+  03 Sep 2008; Jeroen Roovers <jer@gentoo.org> cweb-3.64.ebuild:
+  Do not prestrip, but do adhere to LDFLAGS.
 
   19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> cweb-3.64.ebuild:
   adding block against virtual/tetex, see bug 111506
