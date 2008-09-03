@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.13 2008/09/03 02:10:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.14 2008/09/03 15:52:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -20,6 +20,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	find data/ -type d -name .xvpics -exec rm -rf \{\} +
 	sed -i \
 		-e "s:-g -Wall -O2:${CFLAGS}:" \
 		src/{client,common,server}/Makefile \
