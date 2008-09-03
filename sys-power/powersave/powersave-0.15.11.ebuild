@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.15.11.ebuild,v 1.7 2008/08/11 17:17:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.15.11.ebuild,v 1.8 2008/09/03 07:17:06 opfer Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -19,17 +19,17 @@ RDEPEND="dev-libs/dbus-glib
 DEPEND="${RDEPEND}
 	doc? (
 		app-doc/doxygen
-		virtual/tetex
+		virtual/latex-base
 		www-client/lynx
 	)
 	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/powersave-as-needed.patch
+	cd "${S}"
+	epatch "${FILESDIR}/powersave-as-needed.patch"
 	# Use group plugdev to control access to powersave
-	epatch ${FILESDIR}/plugdev_access.patch
+	epatch "${FILESDIR}/plugdev_access.patch"
 }
 
 src_compile() {
@@ -44,12 +44,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm ${D}/usr/sbin/rcpowersaved
-	rm -rf ${D}/usr/share/doc/packages
+	rm "${D}"/usr/sbin/rcpowersaved
+	rm -rf "${D}"/usr/share/doc/packages
 
 	dodoc docs/powersave.html docs/powersave_manual.txt
 
-	newinitd ${FILESDIR}/powersaved.rc powersaved
+	newinitd "${FILESDIR}"/powersaved.rc powersaved
 }
