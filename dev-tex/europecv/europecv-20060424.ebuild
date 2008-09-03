@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424.ebuild,v 1.1 2006/11/29 15:13:45 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424.ebuild,v 1.2 2008/09/03 04:20:27 aballier Exp $
 
 inherit latex-package
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE=""
 
-RDEPEND="virtual/tetex"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 S="${WORKDIR}/${PN}"

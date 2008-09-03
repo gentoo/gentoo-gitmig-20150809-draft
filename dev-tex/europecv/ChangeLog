@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.15 2008/09/03 04:18:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.16 2008/09/03 04:20:27 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  europecv-20040603.ebuild, europecv-20060424.ebuild:
+  no need to depend on virtual/tetex, latex-package eclass depends on
+  latex-base already
 
   03 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   -europecv-20060123-r1.ebuild:
