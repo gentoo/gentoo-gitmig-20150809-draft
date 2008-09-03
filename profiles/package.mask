@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8947 2008/09/03 21:54:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8948 2008/09/03 22:54:17 cla Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -264,10 +264,10 @@
 # Bo Ørsted Andresen <zlin@gentoo.org> (11 Feb 2008)
 # Mask KDE 4.0.x extragear apps for testing.
 # KDE 4 guide: http://www.gentoo.org/proj/en/desktop/kde/kde4.xml
-=kde-base/kcoloredit-4.0.*
-=kde-base/kfax-4.0.*
-=kde-base/kiconedit-4.0.*
-=kde-base/kpovmodeler-4.0.*
+=kde-base/kcoloredit-4.0*
+=kde-base/kfax-4.0*
+=kde-base/kiconedit-4.0*
+=kde-base/kpovmodeler-4.0*
 =kde-misc/extragear-plasma-4*
 =kde-misc/kgrab-0.1*
 =kde-misc/kgraphviewer-2*
@@ -283,7 +283,7 @@ kde-misc/kio_perldoc
 # the tree p. masked.
 # Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
 # Mask KDE4 versions of ktorrent as long as KDE4 is masked.
-=net-p2p/ktorrent-3.0.*
+=net-p2p/ktorrent-3.0*
 
 # Ulrich Mueller <ulm@gentoo.org> (03 Sep 2008)
 # Mask live CVS for Emacs 22 base branch, so that users will get
