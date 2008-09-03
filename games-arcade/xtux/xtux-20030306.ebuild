@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.12 2006/12/01 20:38:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.13 2008/09/03 02:10:03 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Multiplayer Gauntlet-style arcade game"
 HOMEPAGE="http://xtux.sourceforge.net/"
@@ -28,6 +28,7 @@ src_unpack() {
 		-e "s:./tux_serv:tux_serv:" \
 		src/client/menu.c \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-particles.patch"
 }
 
 src_compile() {
@@ -36,8 +37,10 @@ src_compile() {
 
 src_install () {
 	dogamesbin xtux tux_serv || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/xtux"
-	cp -r data "${D}/${GAMES_DATADIR}/xtux/" || die "cp failed"
+	insinto "${GAMES_DATADIR}/xtux"
+	doins -r data/ || die "doins failed"
 	dodoc AUTHORS CHANGELOG README README.GGZ doc/*
+	newicon data/images/icon.xpm ${PN}.xpm
+	make_desktop_entry xtux "Xtux" /usr/share/icons/${PN}.xpm
 	prepgamesdirs
 }
