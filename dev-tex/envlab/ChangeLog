@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.11 2007/11/18 23:14:55 aballier Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.12 2008/09/03 04:10:03 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> envlab-1.2.ebuild:
+  no need to depend on virtual/tetex, latex-package eclass does it for us
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org> envlab-1.2.ebuild:
   run pdflatex twice to get cross references right, bug #199045; export
