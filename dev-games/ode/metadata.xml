@@ -3,13 +3,14 @@
 <pkgmetadata>
   <herd>games</herd>
   <longdescription>
-ODE is a free, industrial quality library for simulating articulated rigid body 
+ODE is a free, industrial quality library for simulating articulated rigid body
 dynamics - for example ground vehicles, legged creatures, and moving objects in
 VR environments. It is fast, flexible, robust and platform independent, with
 advanced joints, contact with friction, and built-in collision detection.
 </longdescription>
   <use>
     <flag name="double-precision">more precise calculations at the expense of speed</flag>
+    <flag name="gyroscopic">enable gyroscopic term (may cause instability)</flag>
     <flag name="nogyroscopic">disable gyroscopic term maybe improving stability</flag>
     <flag name="noopcode">disable OPCODE (trimesh support)</flag>
   </use>
