@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.11 2008/05/29 18:07:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.12 2008/09/03 07:33:41 opfer Exp $
 
 WANT_AUTOCONF="2.5"
 inherit fortran distutils eutils autotools toolchain-funcs
@@ -37,18 +37,18 @@ pkg_setup() {
 		einfo "Custom configure options are ${MPICH_CONFIGURE_OPTS}."
 	fi
 	if use fortran ; then
-	    if [ $(gcc-major-version) -ge 4 ] \
+		if [ $(gcc-major-version) -ge 4 ] \
 		&& built_with_use sys-devel/gcc fortran ; then
-		    FORTRAN="gfortran"
-		    fortran_pkg_setup
-	    else
+			FORTRAN="gfortran"
+			fortran_pkg_setup
+		else
 		ewarn "You need gcc-4 built with fortran support in order to"
 		ewarn "build the f90 mpi interface, which is required for f90"
 		ewarn "and mpi support in hdf5 (for example)."
-	    fi
+		fi
 	else
-	    einfo "Unless you have another f90 compiler installed, we can only"
-	    einfo "build the f77 and C++ interfaces with gcc-3.x"
+		einfo "Unless you have another f90 compiler installed, we can only"
+		einfo "build the f77 and C++ interfaces with gcc-3.x"
 	fi
 }
 
@@ -56,9 +56,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	ebegin "Reconfiguring"
-	    find . -name configure -print | xargs rm
-	    ./maint/updatefiles
-	    use mpe-sdk && ./src/mpe2/maint/updatefiles
+		find . -name configure -print | xargs rm
+		./maint/updatefiles
+		use mpe-sdk && ./src/mpe2/maint/updatefiles
 	eend
 	epatch "${FILESDIR}"/${P}-make.patch || die "make patch failed"
 	# damn, have to patch the createshlib script here...
@@ -81,23 +81,23 @@ src_compile() {
 	local myconf="${MPICH_CONFIGURE_OPTS}"
 
 	if ! use debug ; then
-	    myconf="${myconf} --enable-fast --enable-g=none"
+		myconf="${myconf} --enable-fast --enable-g=none"
 	else
-	    myconf="${myconf} --enable-g=dbg --enable-debuginfo \
+		myconf="${myconf} --enable-g=dbg --enable-debuginfo \
 		--enable-error-messages=all"
 	fi
 
 	if ! use mpe-sdk ; then
-	    myconf="${myconf} --enable-graphics=no --enable-rlog=no \
+		myconf="${myconf} --enable-graphics=no --enable-rlog=no \
 		--enable-clog=no --enable-slog2=no"
 	fi
 
 	use mpe && MPE_SRC_DIR="${S}"/src/mpe2
 
 	if use threads ; then
-	    myconf="${myconf} --with-thread-package=pthreads"
+		myconf="${myconf} --with-thread-package=pthreads"
 	else
-	    myconf="${myconf} --with-thread-package=none"
+		myconf="${myconf} --with-thread-package=none"
 	fi
 
 		./configure \
@@ -121,13 +121,13 @@ src_compile() {
 		--datadir=/usr/share/${PN} || die "configure failed"
 
 	if use mpe-sdk ; then
-	    "${MPE_SRC_DIR}"/configure --prefix=/usr --enable-mpich \
+		"${MPE_SRC_DIR}"/configure --prefix=/usr --enable-mpich \
 		--with-mpicc=mpicc --with-mpif77=mpif77 --enable-wrappers \
 		--enable-collchk --with-flib_path_leader="-Wl,-L"
 	fi
 
 	if use mpe ; then
-	     epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
+		 epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
 	fi
 
 	# parallel makes are currently broken, so no emake...
@@ -135,29 +135,29 @@ src_compile() {
 	make || die "make failed"
 
 	if has test "${FEATURES}" ; then
-	    # get setup for src_test
-	    #export LDFLAGS='-L../../lib'
-	    export LD_LIBRARY_PATH="${S}"/lib:$LD_LIBRARY_PATH
-	    cd "${S}"/test/mpi
-	    #make clean || die "make clean failed"
-	    echo
-	    einfo "Using ./configure --prefix="${S}" --with-mpi="${S}" --disable-f90"
-	    echo
-	    ./configure --prefix="${S}" --with-mpi="${S}" $(use_enable threads) \
-	        --exec-prefix="${S}" --includedir="${S}"/src/include --disable-f90 \
+		# get setup for src_test
+		#export LDFLAGS='-L../../lib'
+		export LD_LIBRARY_PATH="${S}"/lib:$LD_LIBRARY_PATH
+		cd "${S}"/test/mpi
+		#make clean || die "make clean failed"
+		echo
+		einfo "Using ./configure --prefix="${S}" --with-mpi="${S}" --disable-f90"
+		echo
+		./configure --prefix="${S}" --with-mpi="${S}" $(use_enable threads) \
+			--exec-prefix="${S}" --includedir="${S}"/src/include --disable-f90 \
 		|| die "configure test failed"
-	    make dependencies
-	    # make doesn't work here for some reason, although it works fine
-	    # when run manually.  Go figure...
-	    #cd ${S}/test/mpi/util
-	    #make all || die "make util failed"
-	    cd "${S}"/test
-	    install -g portage -o portage -m 0600 "${FILESDIR}"/mpd.conf "${HOME}"/.mpd.conf
-	    #${S}/bin/mpd --daemon
-	    make all || die "make pre-test failed"
-	    #cd ${S}/test/mpi
-	    #make || die "make test failed"
-	    #${S}/bin/mpdallexit
+		make dependencies
+		# make doesn't work here for some reason, although it works fine
+		# when run manually.  Go figure...
+		#cd ${S}/test/mpi/util
+		#make all || die "make util failed"
+		cd "${S}"/test
+		install -g portage -o portage -m 0600 "${FILESDIR}"/mpd.conf "${HOME}"/.mpd.conf
+		#${S}/bin/mpd --daemon
+		make all || die "make pre-test failed"
+		#cd ${S}/test/mpi
+		#make || die "make test failed"
+		#${S}/bin/mpdallexit
 	fi
 }
 
@@ -179,7 +179,7 @@ src_install() {
 	dodir /etc/${PN}
 	rm -rf src/mpe2/etc/*.in
 	make install DESTDIR="${D}" \
-	    LIBDIR="${D}"usr/$(get_libdir) || die "make install failed"
+		LIBDIR="${D}"usr/$(get_libdir) || die "make install failed"
 
 	dodir /usr/share/${PN}
 	mv "${D}"usr/examples/cpi" ${D}"usr/share/${PN}/cpi
@@ -188,13 +188,13 @@ src_install() {
 
 	dodir /usr/share/doc/${PF}
 	if use doc; then
-		dodoc COPYRIGHT README README.romio README.testing CHANGES
+		dodoc README README.romio README.testing CHANGES
 		dodoc README.developer RELEASE_NOTES
 		newdoc src/pm/mpd/README README.mpd
 	else
 		rm -rf "${D}"usr/share/doc/
 		rm -rf "${D}"usr/share/man/
-		dodoc README CHANGES COPYRIGHT RELEASE_NOTES
+		dodoc README CHANGES RELEASE_NOTES
 	fi
 }
 

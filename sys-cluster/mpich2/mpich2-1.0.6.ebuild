@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.6 2008/05/29 18:07:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.7 2008/09/03 07:33:41 opfer Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
@@ -28,7 +28,7 @@ DEPEND="virtual/libc
 	pvfs2? ( >=sys-cluster/pvfs2-2.7.0 )
 	mpe-sdk? ( >=virtual/jdk-1.5
 		x11-proto/xproto )
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 RDEPEND="${DEPEND}
 	mpe-sdk? ( x11-libs/libX11 )
@@ -48,37 +48,37 @@ RESTRICT="test"
 
 pkg_setup() {
 	if [ -n "${MPICH_CONFIGURE_OPTS}" ]; then
-	    elog "User-specified configure options are ${MPICH_CONFIGURE_OPTS}."
+		elog "User-specified configure options are ${MPICH_CONFIGURE_OPTS}."
 	else
-	    elog "User-specified configure options are not set."
-	    elog "If needed, see the docs and set MPICH_CONFIGURE_OPTS."
+		elog "User-specified configure options are not set."
+		elog "If needed, see the docs and set MPICH_CONFIGURE_OPTS."
 	fi
 
 	if use fortran ; then
-	    if [ $(gcc-major-version) -ge 4 ] \
+		if [ $(gcc-major-version) -ge 4 ] \
 		&& built_with_use sys-devel/gcc fortran ; then
-		    FORTRAN="gfortran"
-		    MPI_FFLAGS="-ff2c"
-		    fortran_pkg_setup
-	    else
+			FORTRAN="gfortran"
+			MPI_FFLAGS="-ff2c"
+			fortran_pkg_setup
+		else
 		ewarn "You need gcc-4 built with fortran support in order to"
 		ewarn "build the f90 mpi interface, which is required for f90"
 		ewarn "and mpi support in hdf5 (for example)."
 		FORTRAN="g77 f2c"
 		fortran_pkg_setup
-	    fi
+		fi
 	else
-	    ewarn "Unless you have another f90 compiler installed, we can only"
-	    ewarn "build the C and C++ interfaces with gcc-3.x"
+		ewarn "Unless you have another f90 compiler installed, we can only"
+		ewarn "build the C and C++ interfaces with gcc-3.x"
 	fi
 
 	if use mpe-sdk; then
-	    java-pkg-2_pkg_setup
-	    if use x86; then
+		java-pkg-2_pkg_setup
+		if use x86; then
 		jvmarch=i386
-	    else
+		else
 		jvmarch="${ARCH}"
-	    fi
+		fi
 	fi
 }
 
@@ -87,9 +87,9 @@ src_unpack() {
 	cd "${S}"
 
 	ebegin "Reconfiguring"
-	    find . -name configure -print | xargs rm
-	    ./maint/updatefiles
-	    use mpe-sdk && ./src/mpe2/maint/updatefiles
+		find . -name configure -print | xargs rm
+		./maint/updatefiles
+		use mpe-sdk && ./src/mpe2/maint/updatefiles
 	eend
 
 	# a few fixes for building the shared libs, PIC, etc
@@ -99,17 +99,17 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile.patch" || die "make patch failed"
 
 	if use pvfs2; then
-	    sed -i -e "s:-laio:-laio -lpvfs2:g" Makefile.in \
+		sed -i -e "s:-laio:-laio -lpvfs2:g" Makefile.in \
 		|| die "sed pvfs2 failed"
 	else
-	    epatch "${FILESDIR}/${P}-no-pvfs2.patch" || die "no pvfs patch failed"
-	    elog ""
-	    ewarn "If you wish to build without pvfs2 support, then you will"
-	    ewarn "need to remove the pvfs2 package if already installed."
-	    ewarn "Please remove pvfs2 and then rebuild mpich2.  If pvfs2"
-	    ewarn "is not installed, then you can safely ignore this warning."
-	    elog ""
-	    epause 5
+		epatch "${FILESDIR}/${P}-no-pvfs2.patch" || die "no pvfs patch failed"
+		elog ""
+		ewarn "If you wish to build without pvfs2 support, then you will"
+		ewarn "need to remove the pvfs2 package if already installed."
+		ewarn "Please remove pvfs2 and then rebuild mpich2.  If pvfs2"
+		ewarn "is not installed, then you can safely ignore this warning."
+		elog ""
+		epause 5
 	fi
 
 	use mpe-sdk && setup-jvm-opts
@@ -117,9 +117,9 @@ src_unpack() {
 
 src_compile() {
 	if use crypt ; then
-	    RSHCOMMAND="ssh -x"
+		RSHCOMMAND="ssh -x"
 	else
-	    RSHCOMMAND="rsh"
+		RSHCOMMAND="rsh"
 	fi
 	export RSHCOMMAND
 
@@ -133,27 +133,27 @@ src_compile() {
 	filter-flags -fomit-frame-pointer
 
 	if ! use debug ; then
-	    myconf="${myconf} --enable-g=none"
+		myconf="${myconf} --enable-g=none"
 	else
-	    myconf="${myconf} --enable-g=dbg,mem,log --enable-debuginfo"
+		myconf="${myconf} --enable-g=dbg,mem,log --enable-debuginfo"
 	fi
 
 	if ! use mpe-sdk ; then
-	    myconf="${myconf} --enable-rlog=no --enable-slog2=no"
+		myconf="${myconf} --enable-rlog=no --enable-slog2=no"
 	fi
 
 	if use threads ; then
-	    myconf="${myconf} --with-thread-package=pthreads"
+		myconf="${myconf} --with-thread-package=pthreads"
 	else
-	    myconf="${myconf} --with-thread-package=none"
+		myconf="${myconf} --with-thread-package=none"
 	fi
 
 	# enable f90 support for appropriate compilers
 	case "${FORTRANC}" in
-	    gfortran|ifc|ifort|f95)
+		gfortran|ifc|ifort|f95)
 		myconf="${myconf} --enable-f77 --enable-f90"
 		;;
-	    g77|f77|f2c)
+		g77|f77|f2c)
 		myconf="${myconf} --enable-f77 --disable-f90"
 		;;
 	esac
@@ -164,11 +164,11 @@ src_compile() {
 	# several of these are romio-specific configure options
 	myconf="${myconf} --enable-aio --with-mpi=mpich2_mpi"
 	if use pvfs2; then
-	    myconf="${myconf} --with-file-system=pvfs2+nfs+ufs \
+		myconf="${myconf} --with-file-system=pvfs2+nfs+ufs \
 		--with-pvfs2=/usr"
 	else
-	    # support for nfs and unix-like filesystems is the minimum
-	    myconf="${myconf} --with-file-system=nfs+ufs --with-pvfs2=no"
+		# support for nfs and unix-like filesystems is the minimum
+		myconf="${myconf} --with-file-system=nfs+ufs --with-pvfs2=no"
 	fi
 	# enable debug for romio
 	use debug && myconf="${myconf} --enable-debug"
@@ -177,25 +177,25 @@ src_compile() {
 
 	# I'm sure there's a better way to do this...
 	if use cxx; then
-	    tc-export CPP CC CXX LD
-	    CXXLIBPATH="/usr/$(get_libdir)/gcc/${CHOST}/$(gcc-fullversion)"
-	    sed -i -e "s:nerdboy:${CXXLIBPATH}:g" Makefile.in \
+		tc-export CPP CC CXX LD
+		CXXLIBPATH="/usr/$(get_libdir)/gcc/${CHOST}/$(gcc-fullversion)"
+		sed -i -e "s:nerdboy:${CXXLIBPATH}:g" Makefile.in \
 		|| die "sed 3 failed"
 	fi
 
 	if use doc; then
-	    doc_conf="--docdir=/usr/share/doc/${PF} \
+		doc_conf="--docdir=/usr/share/doc/${PF} \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-htmldir=/usr/share/doc/${PF}/html \
 		--with-pdfdir=/usr/share/doc/${PF} \
 		--with-psdir=/usr/share/doc/${PF}"
 	else
-	    doc_conf="--with-docdir=/usr/share/doc/${PF} \
+		doc_conf="--with-docdir=/usr/share/doc/${PF} \
 		--with-htmldir=/usr/share/doc/${PF}/html"
 	fi
 
 	if use mpe-sdk; then
-	    mpe_conf="--with-java=${JDK_TOPDIR} --with-java2=${JDK_TOPDIR} \
+		mpe_conf="--with-java=${JDK_TOPDIR} --with-java2=${JDK_TOPDIR} \
 		--enable-slog2=build \
 		--with-mpicc=\"${WORKDIR}\"/build/bin/mpicc \
 		--with-mpif77=\"${WORKDIR}\"/build/bin/mpif77 \
@@ -204,12 +204,12 @@ src_compile() {
 		--with-flib_path_leader=-Wl,-L --enable-mpich \
 		--enable-misc --enable-callstack --enable-logging"
 
-	    use debug && mpe_conf="${mpe_conf} --enable-g"
+		use debug && mpe_conf="${mpe_conf} --enable-g"
 
-	    sed -i -e "s:fpic:fPIC:g" \
+		sed -i -e "s:fpic:fPIC:g" \
 		src/mpe2/src/slog2sdk/trace_sample/configure \
 		|| die "sed 1 failed"
-	    sed -i -e "s:fpic:fPIC:g" \
+		sed -i -e "s:fpic:fPIC:g" \
 		src/mpe2/src/slog2sdk/trace_rlog/configure \
 		|| die "sed 2 failed"
 	fi
@@ -259,9 +259,9 @@ src_test() {
 	export MPIO_USER_PATH="${TEST}"/t1
 
 	sed -i -e "s:/usr/bin/mpiexec:${TEST}/bin/mpiexec:g" test/mpi/Makefile \
-	    || die "sed 4 failed"
+		|| die "sed 4 failed"
 	sed -i -e "s:/usr:${TEST}:g" test/commands/cmdtests \
-	    || die "sed 5 failed"
+		|| die "sed 5 failed"
 
 	cd test
 	make clean || die "make clean in test failed"
@@ -273,9 +273,9 @@ src_test() {
 	export LD_LIBRARY_PATH="${TEST}/lib:$LD_LIBRARY_PATH"
 
 	"${S}"/configure \
-	    --exec-prefix="${TEST}" --with-mpi="${TEST}" \
-	    --disable-f90 --with-mpich2="${TEST}" $(use_enable threads) \
-	    || die "configure test failed"
+		--exec-prefix="${TEST}" --with-mpi="${TEST}" \
+		--disable-f90 --with-mpich2="${TEST}" $(use_enable threads) \
+		|| die "configure test failed"
 
 	nice --adjustment=3 make testing || die "make testing failed"
 
@@ -289,7 +289,7 @@ src_install() {
 
 	cd ../build
 	make DESTDIR="${D}" LIBDIR="${D}"usr/$(get_libdir) install \
-	    || die "make install failed"
+		|| die "make install failed"
 
 	cd "${S}"
 
@@ -298,18 +298,18 @@ src_install() {
 
 	dodir /usr/share/doc/"${PF}"
 	if use doc; then
-	    dodoc COPYRIGHT README README.romio README.testing CHANGES
-	    dodoc README.developer RELEASE_NOTES
-	    newdoc src/pm/mpd/README README.mpd
+		dodoc README README.romio README.testing CHANGES
+		dodoc README.developer RELEASE_NOTES
+		newdoc src/pm/mpd/README README.mpd
 
-	    if use mpe-sdk; then
+		if use mpe-sdk; then
 		dodoc src/mpe2/src/slog2sdk/README.sdk \
-		    src/mpe2/src/slog2sdk/README.rte
+			src/mpe2/src/slog2sdk/README.rte
 		newdoc src/mpe2/src/slog2sdk/FAQ FAQ.sdk
-	    fi
+		fi
 	else
-	    rm -rf "${D}"usr/share/doc/"${PF}"/{html,*.pdf}
-	    dodoc README CHANGES COPYRIGHT RELEASE_NOTES
+		rm -rf "${D}"usr/share/doc/"${PF}"/{html,*.pdf}
+		dodoc README CHANGES RELEASE_NOTES
 	fi
 
 	# Tidy up a bit

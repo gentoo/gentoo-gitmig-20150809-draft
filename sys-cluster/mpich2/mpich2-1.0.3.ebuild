@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.13 2008/03/22 00:56:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.14 2008/09/03 07:33:41 opfer Exp $
 
 inherit eutils autotools
 
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	ebegin "Reconfiguring"
-	    ./maint/updatefiles
+		./maint/updatefiles
 	eend ${ret} "Reconfigure failed"
 	epatch "${FILESDIR}"/${P}-make.patch || die "make patch failed"
 	# damn, have to patch the createshlib script here...
@@ -55,15 +55,15 @@ src_compile() {
 	local myconf="${MPICH_CONFIGURE_OPTS}"
 
 	if ! use debug ; then
-	    myconf="${myconf} --enable-fast --enable-g=none"
+		myconf="${myconf} --enable-fast --enable-g=none"
 	else
-	    myconf="${myconf} --enable-g=dbg --enable-debuginfo"
+		myconf="${myconf} --enable-g=dbg --enable-debuginfo"
 	fi
 
 	if use threads ; then
-	    myconf="${myconf} --with-thread-package=pthreads"
+		myconf="${myconf} --with-thread-package=pthreads"
 	else
-	    myconf="${myconf} --with-thread-package=none"
+		myconf="${myconf} --with-thread-package=none"
 	fi
 
 	WANT_AUTOCONF="2.5" \
@@ -85,7 +85,7 @@ src_compile() {
 		--datadir=/usr/share/mpich2 || die "configure failed"
 
 	if use mpe ; then
-	     epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
+		 epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
 	fi
 
 	make || die "make failed"
@@ -95,7 +95,7 @@ src_install() {
 	dodir /etc/${PN}
 	rm -rf src/mpe2/etc/*.in
 	make install DESTDIR="${D}" LIBDIR="${D}"usr/$(get_libdir) \
-	    || die "make install failed"
+		|| die "make install failed"
 
 	dodir /usr/share/${PN}
 	mv "${D}"usr/examples/cpi "${D}"usr/share/${PN}/cpi
@@ -104,12 +104,12 @@ src_install() {
 
 	dodir /usr/share/doc/${PF}
 	if use doc; then
-		dodoc COPYRIGHT README README.romio README.testing CHANGES
+		dodoc README README.romio README.testing CHANGES
 		dodoc README.developer RELEASE_NOTES
 		newdoc src/pm/mpd/README README.mpd
 	else
 		rm -rf "${D}"usr/share/doc/
 		rm -rf "${D}"usr/share/man/
-		dodoc README CHANGES COPYRIGHT RELEASE_NOTES
+		dodoc README CHANGES RELEASE_NOTES
 	fi
 }
