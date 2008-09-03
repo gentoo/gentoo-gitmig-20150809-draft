@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.43 2008/08/31 00:56:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.44 2008/09/03 11:37:21 dragonheart Exp $
+
+  03 Sep 2008; Daniel Black <dragonheart@gentoo.org>
+  +files/qca-2.0.1-pcfilespath.patch, qca-2.0.1.ebuild:
+  fix for pkgconfig file
 
 *qca-2.0.1 (31 Aug 2008)
 

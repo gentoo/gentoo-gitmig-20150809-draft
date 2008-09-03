@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.1.ebuild,v 1.1 2008/08/31 00:56:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.1.ebuild,v 1.2 2008/09/03 11:37:21 dragonheart Exp $
 
 EAPI="1"
 
@@ -35,10 +35,16 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-pcfilespath.patch
+}
+
 src_compile() {
 	_libdir=$(get_libdir)
 	local myconf
 	use debug && myconf="--debug" || myconf="--release"
+	eqmake4 || die "eqmake failed"
 
 	./configure \
 		--prefix=/usr \
