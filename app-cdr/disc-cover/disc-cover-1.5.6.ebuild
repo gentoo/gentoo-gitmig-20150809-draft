@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.6.ebuild,v 1.5 2007/04/28 16:16:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.6.ebuild,v 1.6 2008/09/03 21:23:32 opfer Exp $
 
-DESCRIPTION="Creates CD-Covers via Latex by fetching cd-info from freedb.org or local file."
+DESCRIPTION="Creates CD-Covers via LaTeX by fetching cd-info from freedb.org or local file."
 HOMEPAGE="http://www.vanhemert.co.uk/disc-cover.html"
 SRC_URI="http://www.vanhemert.co.uk/files/${P}.tar.gz"
 
@@ -14,7 +14,7 @@ SLOT="0"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
-	virtual/tetex
+	virtual/latex-base
 	cdrom? ( dev-perl/Audio-CD-disc-cover )"
 
 src_compile() {
