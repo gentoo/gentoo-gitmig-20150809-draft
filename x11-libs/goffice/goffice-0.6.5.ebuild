@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.3.ebuild,v 1.1 2008/05/07 22:35:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.5.ebuild,v 1.1 2008/09/03 21:56:12 eva Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gnome"
 
 # Raising glib dep to 2.14 to drop pcre dependency
-#cairo support broken and -gtk broken
+# cairo support broken and -gtk broken
 
 RDEPEND=">=dev-libs/glib-2.14
 	>=gnome-extra/libgsf-1.13.3
@@ -26,7 +26,6 @@ RDEPEND=">=dev-libs/glib-2.14
 	gnome? (
 		>=gnome-base/gconf-2
 		>=gnome-base/libgnomeui-2 )"
-# libpcre raised to unicode USE flag
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
@@ -55,20 +54,6 @@ pkg_setup() {
 	fi
 
 	[ -n "${diemessage}" ] && die ${diemessage}
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix doc slotting
-	epatch "${FILESDIR}/${PN}-0.6-doc-slot.patch"
-
-	mv "${S}"/docs/reference/html/goffice{,-0.6}.devhelp
-	mv "${S}"/docs/reference/html/goffice{,-0.6}.devhelp2
-	mv "${S}"/docs/reference/goffice{,-0.6}-docs.sgml
-	mv "${S}"/docs/reference/goffice{,-0.6}-overrides.txt
-	mv "${S}"/docs/reference/goffice{,-0.6}-sections.txt
-	mv "${S}"/docs/reference/goffice{,-0.6}.types
 }
 
 src_compile() {
