@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1832 2008/09/03 14:33:25 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1833 2008/09/03 18:37:16 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Sep 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask app-editors/emacs-cvs-22.2.92.
 
   03 Sep 2008; Michael Marineau <marineam@gentoo.org> package.mask:
   Mask xen-sources 2.6.20/21 to nudge people towards 2.6.18 which is the only

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8943 2008/09/03 14:33:25 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8944 2008/09/03 18:37:15 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (03 Sep 2008)
+# Mask live CVS for Emacs 22 base branch, so that users will get
+# the official pretest snapshot in app-editors/emacs instead.
+~app-editors/emacs-cvs-22.2.92
+~app-editors/emacs-cvs-22.2.9999
 
 # Michael Marineau <marineam@gentoo.org> (03 Sep 2008)
 # Unmaintained and out of date security wise,
@@ -463,11 +469,6 @@ media-gfx/autopano-sift-C
 # Tiziano Müller <dev-zero@gentoo.org> (16 Aug 2008)
 # Masked for testing
 >=dev-python/sqlalchemy-0.5.0_beta3
-
-# Ulrich Mueller <ulm@gentoo.org> (15 Aug 2008)
-# Mask live CVS for Emacs 22 base branch, so that users will get
-# the official pretest snapshot instead.
-~app-editors/emacs-cvs-22.2.9999
 
 # Alin Năstac <mrness@gentoo.org> (15 Aug 2008)
 # Upstream has stopped working on this project in favor of built in
