@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.2 2008/01/19 00:32:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.3 2008/09/03 11:44:20 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="threads doc"
 DEPEND=">=dev-lang/tk-8.4
 	virtual/opengl
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 S="${WORKDIR}/Tkzinc"
 
