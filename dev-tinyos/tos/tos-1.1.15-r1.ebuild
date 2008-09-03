@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos/tos-1.1.15-r1.ebuild,v 1.4 2007/07/15 02:46:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos/tos-1.1.15-r1.ebuild,v 1.5 2008/09/03 12:04:48 opfer Exp $
 inherit eutils
 
 CVS_MONTH="Dec"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 DEPEND="doc? ( sys-devel/m4
-	>=virtual/tetex-3.0_p1-r2
+	virtual/latex-base
 	dev-tex/latex2html )"
 RDEPEND=""
 
@@ -26,9 +26,9 @@ PDEPEND="dev-tinyos/nesc"
 S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/tos-1.1.15-system-AMStandard-Control.patch
-	sed -i -e "s:psfig:epsfig:" ${S}/doc/schemadocsrc/tinyschema.tex \
+	cd "${S}"
+	epatch "${FILESDIR}/tos-1.1.15-system-AMStandard-Control.patch"
+	sed -i -e "s:psfig:epsfig:" "${S}/doc/schemadocsrc/tinyschema.tex" \
 		|| die "Error while updating tex sources."
 	einfo "removing CVS dirs"
 	for i in `find . -name CVS`; do
@@ -58,7 +58,7 @@ src_install() {
 		dohtml -A pdf,gif,html -r doc/*
 		dodoc doc/*.txt
 	fi
-	doenvd ${FILESDIR}/99tinyos
+	doenvd "${FILESDIR}"/99tinyos
 }
 
 pkg_postinst() {
