@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8942 2008/09/03 06:12:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8943 2008/09/03 14:33:25 marineam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Marineau <marineam@gentoo.org> (03 Sep 2008)
+# Unmaintained and out of date security wise,
+# Please use 2.6.18 instead if it supports your hardware.
+=sys-kernel/xen-sources-2.6.20*
+=sys-kernel/xen-sources-2.6.21*
 
 # Alexis Ballier <aballier@gentoo.org> (03 Sep 2008)
 # Masked for removal on 04 Oct 2008
