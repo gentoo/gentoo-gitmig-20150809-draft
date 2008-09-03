@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10.ebuild,v 1.5 2008/09/03 10:58:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10-r1.ebuild,v 1.1 2008/09/03 10:58:40 bicatali Exp $
 
 inherit distutils eutils
 
@@ -11,12 +11,14 @@ SRC_URI="mirror://sourceforge/pyx/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND="virtual/python
-	virtual/latex-base"
-RDEPEND="${DEPEND}"
+	virtual/tex-base
+	doc? ( virtual/latex-base )"
+RDEPEND="virtual/python
+	virtual/tex-base"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,6 +28,12 @@ src_unpack() {
 	distutils_src_unpack
 
 	epatch "${FILESDIR}"/${P}.patch
+	sed -i \
+		-e 's/^build_t1code=.*/build_t1code=1/' \
+		-e 's/^build_pykpathsea=.*/build_pykpathsea=1/' \
+		setup.cfg || die "setup.cfg fix failed"
+
+	sed -i -e 's/^texipc =.*/texipc = 1/' pyxrc || die
 }
 
 src_compile() {
