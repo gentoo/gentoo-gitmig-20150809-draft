@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/Template-Latex-2.17.ebuild,v 1.13 2007/04/23 12:36:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/Template-Latex-2.17.ebuild,v 1.14 2008/09/03 07:06:45 opfer Exp $
 
 inherit perl-module eutils
 
@@ -15,11 +15,11 @@ SRC_TEST="do"
 
 DEPEND=">=dev-perl/Template-Toolkit-2.15
 	virtual/perl-File-Spec
-	virtual/tetex
+	virtual/latex-base
 	test? ( virtual/perl-Test-Harness )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/Makefile.patch
+	cd "${S}"
+	epatch "${FILESDIR}/Makefile.patch"
 }
