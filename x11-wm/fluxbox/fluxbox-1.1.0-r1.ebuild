@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0-r1.ebuild,v 1.1 2008/09/03 13:18:28 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0-r1.ebuild,v 1.2 2008/09/03 13:34:51 lack Exp $
 
 EAPI=1
 inherit eutils
@@ -115,4 +115,11 @@ src_install() {
 	doins "${FILESDIR}/styles-menu-fluxbox" || die
 	doins "${FILESDIR}/styles-menu-commonbox" || die
 	doins "${FILESDIR}/styles-menu-user" || die
+}
+
+pkg_postinst() {
+	ewarn "If you are upgrading from x11-wm/fluxbox-1.1.0 to"
+	ewarn "x11-wm/fluxbox-1.1.0-r1, please manually copy the file"
+	ewarn "/usr/share/fluxbox/windowmenu in to your home directory,"
+	ewarn "replacing any existing file there."
 }
