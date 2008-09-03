@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.3.ebuild,v 1.3 2007/07/18 02:02:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.3.ebuild,v 1.4 2008/09/03 10:25:52 bicatali Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/expat
 	usb? ( dev-libs/libusb )
 	debug? ( dev-util/efence )"
 
-DEPEND="doc? ( virtual/tetex dev-libs/libxslt dev-libs/libxml2 dev-lang/perl )
+DEPEND="doc? ( virtual/latex-base dev-libs/libxslt dev-libs/libxml2 dev-lang/perl )
 	${RDEPEND}"
 
 src_unpack(){
