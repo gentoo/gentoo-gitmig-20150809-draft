@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72a.ebuild,v 1.7 2005/01/01 15:16:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72a.ebuild,v 1.8 2008/09/03 21:09:48 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 alpha amd64 ia64 ppc ppc64"
 IUSE=""
 
-RDEPEND="virtual/tetex
+RDEPEND="virtual/latex-base
 	dev-lang/perl
 	dev-perl/TimeDate
 	dev-perl/Text-Iconv
@@ -21,11 +21,12 @@ RDEPEND="virtual/tetex
 	app-text/psutils"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
-	epatch ${FILESDIR}/${PN}-0.72a-platex.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.72a-platex.patch"
 	make clean	# ia32 binaries included in distribution
 }
 
 src_install() {
-	make prefix=${D}/usr docdir=${D}/usr/share/doc docdirname=${P} install
+	make prefix="${D}"/usr docdir="${D}"/usr/share/doc docdirname=${P} install
 }

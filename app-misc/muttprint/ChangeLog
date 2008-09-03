@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/muttprint
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.31 2007/02/21 22:37:29 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.32 2008/09/03 21:09:48 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  muttprint-0.72a.ebuild, muttprint-0.72b.ebuild, muttprint-0.72d.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base and quote some
+  variables
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
