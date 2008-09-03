@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1833 2008/09/03 18:37:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1834 2008/09/03 21:54:19 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Atoms must not have a "." before a trailing "*".
 
   03 Sep 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask app-editors/emacs-cvs-22.2.92.
