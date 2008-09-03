@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.6 2008/04/20 22:00:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.7 2008/09/03 21:42:59 opfer Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -20,18 +20,18 @@ RDEPEND="emacs? ( virtual/emacs )
 	X? ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw )"
 
 DEPEND="$RDEPEND
-	doc? ( virtual/tetex )
+	doc? ( virtual/texi2dvi )
 	>=app-text/texi2html-1.64
 	>=sys-devel/autoconf-2.52"
 
 src_unpack() {
 	unpack ${A}
-	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
-	mv ${T}/makefile ${S}/info/makefile
-	epatch ${FILESDIR}/${PV}-fix-configure.in-gentoo.patch || die
+	sed -e "s/gcl-doc/${PF}/g" "${S}"/info/makefile > "${T}"/makefile
+	mv "${T}"/makefile "${S}"/info/makefile
+	epatch "${FILESDIR}"/${PV}-fix-configure.in-gentoo.patch
 
 	eautoconf || die
-	epatch ${FILESDIR}/flex-configure-LANG.patch # see Bug #122583
+	epatch "${FILESDIR}"/flex-configure-LANG.patch # see Bug #122583
 }
 
 src_compile() {
@@ -130,18 +130,18 @@ ${myconfig}"
 
 src_install() {
 	export SANDBOX_ON=0
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	rm -rf ${D}/usr/lib/${P}/info
-	mv ${D}/default.el elisp/
+	rm -rf "${D}"/usr/lib/${P}/info
+	mv "${D}"/default.el elisp/
 
 	if use emacs; then
-		mv elisp/add-default.el ${T}/50gcl-gentoo.el
-		elisp-site-file-install ${T}/50gcl-gentoo.el
+		mv elisp/add-default.el "${T}"/50gcl-gentoo.el
+		elisp-site-file-install "${T}"/50gcl-gentoo.el
 		elisp-install ${PN} elisp/*
 		fperms 0644 /usr/share/emacs/site-lisp/gcl/*
 	else
-		rm -rf ${D}/usr/share/emacs
+		rm -rf "${D}"/usr/share/emacs
 	fi
 
 	dosed /usr/bin/gcl
@@ -157,13 +157,13 @@ src_install() {
 
 	dodoc readme* RELEASE* ChangeLog* doc/*
 
-	for i in ${D}/usr/share/doc/gcl-{tk,si}; do
-		mv $i ${D}/usr/share/doc/${PF}
+	for i in "${D}"/usr/share/doc/gcl-{tk,si}; do
+		mv $i "${D}"/usr/share/doc/${PF}
 	done
 
 	doman gcl.1
 
-	find ${D}/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
+	find "${D}"/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
 }
 
 pkg_postinst() {

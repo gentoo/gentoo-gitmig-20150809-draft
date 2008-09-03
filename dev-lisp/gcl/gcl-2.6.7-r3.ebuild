@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.3 2007/12/22 13:12:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.4 2008/09/03 21:42:59 opfer Exp $
 
 #removing flag-o-matic results in make install failing due to a segfault
 inherit elisp-common flag-o-matic
@@ -23,9 +23,9 @@ RDEPEND="emacs? ( virtual/emacs )
 	>=dev-libs/gmp-4.1
 	tk? ( dev-lang/tk )
 	X? ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw )
-	virtual/tetex"				# pdflatex (see Bug # 157903)
+	virtual/latex-base"				# pdflatex (see Bug # 157903)
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex )
+	doc? ( virtual/texi2dvi )
 	>=app-text/texi2html-1.64
 	>=sys-devel/autoconf-2.52"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	cd "${S}"
 	epatch ../gcl_${PV}-${DEB_PV}.diff
 	epatch "${FILESDIR}"/flex-configure-LANG.patch
-	sed -ie "s/gcl-doc/${PF}/g" ${S}/info/makefile
+	sed -ie "s/gcl-doc/${PF}/g" "${S}"/info/makefile
 }
 
 src_compile() {
@@ -70,16 +70,16 @@ src_install() {
 	export SANDBOX_ON=0
 	make DESTDIR="${D}" install || die "make install failed"
 
-	rm -rf ${D}/usr/lib/${P}/info
-	mv ${D}/default.el elisp/
+	rm -rf "${D}"/usr/lib/${P}/info
+	mv "${D}"/default.el elisp/
 
 	if use emacs; then
-		mv elisp/add-default.el ${T}/50gcl-gentoo.el
-		elisp-site-file-install ${T}/50gcl-gentoo.el
+		mv elisp/add-default.el "${T}"/50gcl-gentoo.el
+		elisp-site-file-install "${T}"/50gcl-gentoo.el
 		elisp-install ${PN} elisp/*
 		fperms 0644 /usr/share/emacs/site-lisp/gcl/*
 	else
-		rm -rf ${D}/usr/share/emacs
+		rm -rf "${D}"/usr/share/emacs
 	fi
 
 	dosed /usr/bin/gcl
@@ -95,14 +95,14 @@ src_install() {
 
 	dodoc readme* RELEASE* ChangeLog* doc/*
 
-	for i in ${D}/usr/share/doc/gcl-{tk,si}; do
-		mv $i ${D}/usr/share/doc/${PF}
+	for i in "${D}"/usr/share/doc/gcl-{tk,si}; do
+		mv $i "${D}"/usr/share/doc/${PF}
 	done
 
 	doman gcl.1
 	doinfo info/*.info*
 
-	find ${D}/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
+	find "${D}"/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
 }
 
 pkg_postinst() {

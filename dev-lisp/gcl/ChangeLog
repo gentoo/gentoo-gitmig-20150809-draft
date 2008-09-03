@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.52 2008/07/28 19:08:07 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.53 2008/09/03 21:42:59 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> gcl-2.6.7.ebuild,
+  gcl-2.6.7-r1.ebuild, gcl-2.6.7-r2.ebuild, gcl-2.6.7-r3.ebuild:
+  replace virtual/tetex with virtual/latex-base and virtual/texi2dvi; quote a
+  lot of variables
 
   28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Update metadata.xml to include USE flag descriptions. Entries taken from
