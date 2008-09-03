@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0.ebuild,v 1.2 2008/09/03 09:51:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0-r1.ebuild,v 1.1 2008/09/03 13:18:28 lack Exp $
 
 EAPI=1
 inherit eutils
@@ -56,6 +56,9 @@ src_unpack() {
 	# things with style ebuilds.
 	epatch "${FILESDIR}/${PV}/gentoo_style_location.patch"
 
+	# Bug 236523: This file is missing from the upstream tarball:
+	cp "${FILESDIR}/${PV}/windowmenu" "${S}/data/windowmenu"
+
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
 		suffix="gentoo"
@@ -85,7 +88,7 @@ src_compile() {
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
-	MENUFILENAME="${S}/data/windowmenu" MENUTITLE="Fluxbox ${PV}" \
+	MENUFILENAME="${S}/data/menu" MENUTITLE="Fluxbox ${PV}" \
 		CHECKINIT="no. go away." HOME="${T}/home" \
 		"${S}/util/fluxbox-generate_menu" -is -ds \
 		|| die "menu generation failed"
