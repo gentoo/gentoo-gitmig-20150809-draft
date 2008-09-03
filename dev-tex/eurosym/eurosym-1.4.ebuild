@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.4.ebuild,v 1.6 2007/12/11 10:37:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.4.ebuild,v 1.7 2008/09/03 05:02:45 aballier Exp $
 
 inherit latex-package
 
@@ -18,8 +18,7 @@ KEYWORDS="alpha ppc sparc x86"
 
 # >=tetex-2 contains eurosym package
 DEPEND="!>=app-text/tetex-2
-	!app-text/ptex
-	virtual/tetex"
+	!app-text/ptex"
 
 SUPPLIER="public"
 
