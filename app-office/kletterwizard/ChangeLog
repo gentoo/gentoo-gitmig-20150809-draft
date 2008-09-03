@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.26 2008/02/19 02:29:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.27 2008/09/03 11:34:07 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  kletterwizard-0.9.7.ebuild, kletterwizard-0.9.8.ebuild:
+  replace virtual/tetex with virtual/latex-base and adjust some more
+  dependencies; remove addwrite statements in pkg_postinst
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   kletterwizard-0.9.7.ebuild, kletterwizard-0.9.8.ebuild:

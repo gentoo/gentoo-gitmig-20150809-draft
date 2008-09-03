@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.8.ebuild,v 1.7 2008/02/19 02:29:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.8.ebuild,v 1.8 2008/09/03 11:34:07 opfer Exp $
 
 inherit kde
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="kdeenablefinal"
 
-DEPEND="virtual/tetex
+DEPEND="virtual/latex-base
 	|| ( =kde-base/kghostview-3.5* =kde-base/kdegraphics-3.5* )"
 RDEPEND="${DEPEND}
-	dev-tex/latex-unicode"
+	|| ( dev-texlive/texlive-latexrecommended dev-tex/latex-unicode )"
 
 need-kde 3.4
 
@@ -34,8 +34,5 @@ src_compile() {
 
 pkg_postinst() {
 	einfo "Running texhash to complete install..."
-	addwrite "/var/lib/texmf"
-	addwrite "/usr/share/texmf"
-	addwrite "/var/cache/fonts"
 	texhash
 }
