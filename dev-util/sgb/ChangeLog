@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sgb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.6 2007/06/19 23:25:54 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.7 2008/09/03 09:53:30 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> sgb-20030623.ebuild:
+  extend dependency to allow virtual/tex-base and quote variables
 
   19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> sgb-20030623.ebuild:
   stable x86, bug 181580
