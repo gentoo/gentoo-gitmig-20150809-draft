@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.12 2007/10/31 13:08:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.13 2008/09/03 21:03:25 opfer Exp $
 
 DESCRIPTION="Preprocessor for typesetting Haskell sources with LaTeX"
 HOMEPAGE="http://www.iai.uni-bonn.de/~loeh/lhs2tex"
@@ -17,7 +17,7 @@ DEPEND=">=dev-tex/polytable-0.7.2
 	>=dev-lang/ghc-5.04
 	!>=dev-lang/ghc-6.6
 	doc? ( dev-lang/hugs98 )
-	virtual/tetex"
+	virtual/latex-base"
 
 src_compile() {
 	# polytable is installed separately
