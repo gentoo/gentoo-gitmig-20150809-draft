@@ -1,18 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/juel/juel-2.1.0.ebuild,v 1.1 2008/09/03 10:21:44 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/juel/juel-2.1.0.ebuild,v 1.2 2008/09/03 10:50:52 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="JUEL is an implementation of the Unified Expression Language (EL), specified as part of the JSP 2.1 standard (JSR-245)."
+DESCRIPTION="JUEL is an implementation of the Unified Expression Language (EL), a part of JSP 2.1 (JSR-245)."
 HOMEPAGE="http://juel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
