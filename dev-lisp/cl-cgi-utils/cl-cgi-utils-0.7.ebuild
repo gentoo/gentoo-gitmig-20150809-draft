@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cgi-utils/cl-cgi-utils-0.7.ebuild,v 1.1 2005/08/05 16:29:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cgi-utils/cl-cgi-utils-0.7.ebuild,v 1.2 2008/09/03 20:54:16 opfer Exp $
 
 inherit common-lisp eutils
 
@@ -14,14 +14,14 @@ IUSE="doc"
 
 CLPACKAGE=lisp-cgi-utils
 
-DEPEND="doc? ( virtual/tetex dev-tex/hevea )"
+DEPEND="doc? ( virtual/latex-base dev-tex/hevea )"
 
 S=${WORKDIR}/lisp-cgi-utils-${PV}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-dont-print-during-make-gentoo.patch || die
-	epatch ${FILESDIR}/${PV}-defconstant-gentoo.patch || die
+	epatch "${FILESDIR}/${PV}-dont-print-during-make-gentoo.patch"
+	epatch "${FILESDIR}/${PV}-defconstant-gentoo.patch"
 }
 
 src_compile() {
