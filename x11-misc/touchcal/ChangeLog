@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/touchcal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.3 2007/05/15 14:25:15 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.4 2008/09/03 15:21:22 rbu Exp $
+
+  03 Sep 2008; Robert Buchholz <rbu@gentoo.org> touchcal-0.31.ebuild:
+  Keyword ~x86, set empty IUSE (bug #224351)
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
