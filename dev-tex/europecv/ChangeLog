@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.14 2007/03/13 00:16:57 nattfodd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.15 2008/09/03 04:18:13 aballier Exp $
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  -europecv-20060123-r1.ebuild:
+  remove unused version
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
