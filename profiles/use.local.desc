@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3827 2008/09/02 23:27:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3828 2008/09/03 03:33:02 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -859,6 +859,8 @@ games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/wesnoth:editor - Enable compilation of map editor
 games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
+games-strategy/wesnoth:smallgui - enable GUI reductions for resolutions down to 800x480 (eeePC, Nokia 8x0)
+games-strategy/wesnoth:tinygui - enable GUI reductions for resolutions down to 320x240 (PDAs)
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-strategy/x2:bonusscripts - Add bonus scripts
 games-strategy/x2:dynamic - Use dynamic binaries instead of static
