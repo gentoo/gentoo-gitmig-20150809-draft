@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.12 2008/06/10 18:59:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.13 2008/09/03 07:43:37 ulm Exp $
 
 acpi
 
@@ -21,9 +21,3 @@ qt4
 tk
 xpm
 X
-
-
-# Alexis Ballier <aballier@gentoo.org>
-# We don't have tetex keyworded, if we want TeX support for sparc fbsd, we
-# should go for texlive, so no need to have "tetex" support
-tetex

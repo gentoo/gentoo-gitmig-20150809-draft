@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1830 2008/09/03 07:24:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1831 2008/09/03 07:43:35 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If doubt put a record here!
+
+  03 Sep 2008; Ulrich Mueller <ulm@gentoo.org> base/use.defaults,
+  default-bsd/fbsd/6.2/sparc/use.mask:
+  Remove tetex USE flag also from use.defaults and use.mask in profiles.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> use.desc:
   remove tetex USE flag
