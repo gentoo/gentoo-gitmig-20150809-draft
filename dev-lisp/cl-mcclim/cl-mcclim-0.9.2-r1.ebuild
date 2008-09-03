@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.6 2008/08/28 17:25:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.7 2008/09/03 20:54:41 opfer Exp $
 
 inherit common-lisp elisp-common eutils
 
@@ -17,7 +17,7 @@ DEPEND="dev-lisp/cl-spatial-trees
 	dev-lisp/cl-clx
 	doc? ( media-gfx/transfig
 		media-libs/netpbm
-		virtual/tetex )
+		virtual/latex-base )
 	emacs? ( virtual/emacs )"
 
 CLPACKAGE="mcclim"
@@ -28,13 +28,14 @@ S=${WORKDIR}/${P#cl-}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${PV}-mcclim.asd-cmucl.patch" || die
+	epatch "${FILESDIR}/${PV}-mcclim.asd-cmucl.patch"
 	find "${S}" -type f -name \*.cvsignore -exec rm -f '{}' \;
 	find "${S}" -type d -name CVS -exec rm -rf '{}' \;
 }
 
 src_compile() {
-	addwrite /var/cache/fonts/
+	# Prevents access violations
+	VARTEXFONTS="${T}/fonts"
 	use doc && make -C Doc manual.ps
 	if use emacs; then
 		elisp-compile ${ELISP_SOURCES} || die "elisp-compile failed"
@@ -54,7 +55,7 @@ src_install() {
 	done
 	dosym ${CLSOURCEROOT}/mcclim/Experimental/freetype/mcclim-freetype.asd \
 		${CLSYSTEMROOT}/mcclim-freetype.asd
-	dodoc INSTALL* README TODO Copyright ReleaseNotes/* Webpage/clim-paper.pdf
+	dodoc INSTALL* README TODO ReleaseNotes/* Webpage/clim-paper.pdf
 	use doc && dodoc Doc/manual.ps
 	if use emacs; then
 		elisp-install ${PN} ${ELISP_SOURCES} ${ELISP_SOURCES//.el/.elc} \
