@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/btrace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.14 2008/05/28 18:17:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.15 2008/09/03 21:01:12 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  btrace-0.0.20060428050322.ebuild, btrace-0.0.20060614042007.ebuild,
+  btrace-0.0.20070730162628.ebuild, btrace-0.0.20071210202527.ebuild,
+  btrace-0.99.3.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base
 
 *btrace-0.99.3 (28 May 2008)
 
