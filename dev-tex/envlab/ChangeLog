@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/envlab
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.12 2008/09/03 04:10:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.13 2008/09/03 04:15:18 aballier Exp $
+
+*envlab-1.2-r1 (03 Sep 2008)
+
+  03 Sep 2008; Alexis Ballier <aballier@gentoo.org> +envlab-1.2-r1.ebuild:
+  rev bump to install into texmf-site
 
   03 Sep 2008; Alexis Ballier <aballier@gentoo.org> envlab-1.2.ebuild:
   no need to depend on virtual/tetex, latex-package eclass does it for us
