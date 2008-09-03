@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.64 2008/08/31 18:57:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.65 2008/09/03 23:32:03 pythonhead Exp $
+
+  03 Sep 2008; Rob Cakebread <pythonhead@gentoo.org> eric-4.2.0.ebuild:
+  Fix qscintilla-python RDEPEND. Bug #236552
 
 *eric-4.2.0 (31 Aug 2008)
 

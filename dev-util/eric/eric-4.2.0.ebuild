@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.2.0.ebuild,v 1.1 2008/08/31 18:57:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.2.0.ebuild,v 1.2 2008/09/03 23:32:03 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="linguas_cs linguas_de linguas_fr linguas_ru"
 
 DEPEND="dev-python/PyQt4
-	>=dev-python/qscintilla-python-2.1"
+	>=dev-python/qscintilla-python-2.2"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
