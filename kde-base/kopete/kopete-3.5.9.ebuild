@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.9.ebuild,v 1.8 2008/07/04 16:15:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.9.ebuild,v 1.9 2008/09/03 11:58:02 opfer Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -42,7 +42,7 @@ BOTH_DEPEND="dev-libs/libxslt
 
 RDEPEND="${BOTH_DEPEND}
 	ssl? ( =app-crypt/qca-tls-1.0* )
-	latex? ( virtual/tetex
+	latex? ( virtual/latex-base
 		media-gfx/imagemagick )
 	crypt? ( app-crypt/gnupg )"
 

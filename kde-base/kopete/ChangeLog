@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.153 2008/07/04 16:15:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.154 2008/09/03 11:58:02 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> kopete-3.5.9.ebuild:
+  fix dependency on virtual/tetex
 
   04 Jul 2008; Tobias Heinlein <keytoaster@gentoo.org>
   +files/kopete-3.5.9-icq-protocol-change.patch, kopete-3.5.9.ebuild:
