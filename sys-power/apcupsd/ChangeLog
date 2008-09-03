@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.36 2008/08/16 04:09:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.37 2008/09/03 07:25:44 opfer Exp $
+
+  03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  apcupsd-3.12.3.ebuild, apcupsd-3.12.4.ebuild, apcupsd-3.14.0.ebuild,
+  apcupsd-3.14.1.ebuild, apcupsd-3.14.2.ebuild, apcupsd-3.14.3.ebuild:
+  replace virtual/tetex with virtual/latex-base
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

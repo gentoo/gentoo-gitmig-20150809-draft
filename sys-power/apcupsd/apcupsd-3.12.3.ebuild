@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.3.ebuild,v 1.2 2006/10/22 19:49:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.3.ebuild,v 1.3 2008/09/03 07:25:44 opfer Exp $
 
 inherit eutils webapp
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc snmp usb cgi threads ncurses nls"
 
-DEPEND="doc? ( virtual/tetex
+DEPEND="doc? ( virtual/latex-base
 		dev-tex/latex2html )
 	cgi? ( >=media-libs/gd-1.8.4 )
 	ncurses? ( sys-libs/ncurses )
