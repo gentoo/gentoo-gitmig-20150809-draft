@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1838 2008/09/04 11:37:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1839 2008/09/04 12:32:57 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Sep 2008; <chainsaw@gentoo.org> package.mask:
+  Mask net-misc/dhcp-4.0.0 for required DHCP server testing.
 
   04 Sep 2008; Mart Raudsepp <leio@gentoo.org>
   +default-linux/ppc/dev/ppc64/package.mask, hardened/ppc64/package.mask:
