@@ -1,23 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.9.1.ebuild,v 1.1 2008/06/22 18:08:25 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-1.2.ebuild,v 1.1 2008/09/04 15:48:41 gentoofan23 Exp $
 
+EAPI="1"
 inherit toolchain-funcs eutils
 
 DESCRIPTION="A RSS/Atom feed reader for the text console."
-HOMEPAGE="http://synflood.at/newsbeuter.html"
-SRC_URI="http://synflood.at/${PN}/${P}.tar.gz"
+HOMEPAGE="http://www.newsbeuter.org/index.html"
+SRC_URI="http://www.${PN}.org/downloads/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=net-libs/libnxml-0.18
-		>=net-libs/libmrss-0.18
-		=dev-db/sqlite-3*
-		>=dev-libs/stfl-0.14
+RDEPEND=">=dev-db/sqlite-3.5:3
+		>=dev-libs/stfl-0.19
 		net-misc/curl"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix="${D}/usr" install || die
+	emake prefix="${D}/usr" install || die
 	dodoc AUTHORS README
 	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF}/
 	rm -rf "${D}"/usr/share/doc/${PN}

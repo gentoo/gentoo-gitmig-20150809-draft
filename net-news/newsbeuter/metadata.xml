@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>gentoofan23@gentoo.org</email>
+		<name>Thomas Anderson</name>
 	</maintainer>
 	<longdescription lang="en">
 		newsbeuter is an RSS feed reader for the text console. It is designed
