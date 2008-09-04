@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.3 2008/07/31 01:11:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.4 2008/09/04 12:53:08 yngwin Exp $
 
 inherit eutils
 
@@ -14,6 +14,12 @@ KEYWORDS="alpha amd64 ia64 ~mips ppc x86"
 IUSE=""
 
 RDEPEND="!mips? ( sys-apps/hwsetup )"
+
+pkg_setup() {
+	ewarn "This package is designed for use on the LiveCD only and will do "
+	ewarn "unspeakably horrible and unexpected things on a normal system."
+	ewarn "YOU HAVE BEEN WARNED!!!"
+}
 
 src_install() {
 	insinto /etc/X11

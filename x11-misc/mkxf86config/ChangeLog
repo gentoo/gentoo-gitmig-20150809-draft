@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.40 2008/07/31 01:11:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.41 2008/09/04 12:53:08 yngwin Exp $
+
+  04 Sep 2008; Ben de Groot <yngwin@gentoo.org> mkxf86config-0.9.10.ebuild:
+  Unmasking and adding warning, on behalf of agaffney
 
   31 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   mkxf86config-0.9.10.ebuild:
