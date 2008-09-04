@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.148 2008/08/12 20:11:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.149 2008/09/04 07:33:00 aballier Exp $
+
+  04 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  sane-backends-1.0.18-r6.ebuild, sane-backends-1.0.19-r1.ebuild,
+  sane-backends-1.0.19-r2.ebuild:
+  Fix TeX dependencies, bug #216820.
 
   12 Aug 2008; Patrick Kursawe <phosphan@gentoo.org>
   +files/parallel-install-1.0.19.patch, sane-backends-1.0.19-r2.ebuild:

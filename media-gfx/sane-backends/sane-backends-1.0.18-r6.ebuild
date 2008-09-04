@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r6.ebuild,v 1.9 2008/06/11 10:30:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r6.ebuild,v 1.10 2008/09/04 07:33:00 aballier Exp $
 
 inherit eutils
 
@@ -18,12 +18,8 @@ RDEPEND=">=media-libs/jpeg-6b
 
 DEPEND="${RDEPEND}
 	doc? (
-		|| ( app-text/tetex
-				(
-					app-text/texlive
-					dev-texlive/texlive-latexextra
-				)
-			)
+		virtual/latex-base
+		|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
 	)
 	>=sys-apps/sed-4"
 
