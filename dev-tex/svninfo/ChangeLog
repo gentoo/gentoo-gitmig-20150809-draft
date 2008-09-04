@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 2005-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.17 2008/09/03 04:58:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.18 2008/09/04 20:37:29 aballier Exp $
+
+  04 Sep 2008; Alexis Ballier <aballier@gentoo.org> svninfo-0.7.3-r1.ebuild:
+  keyword ~x86-fbsd
 
 *svninfo-0.7.3-r1 (03 Sep 2008)
 
