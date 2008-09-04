@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.4 2008/05/29 00:24:45 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1.ebuild,v 1.5 2008/09/04 02:22:12 nerdboy Exp $
 
-inherit linux-mod autotools toolchain-funcs
+inherit linux-mod toolchain-funcs
 
 MY_PN="${PN%[0-9]*}"
 MY_P="${MY_PN}-${PV}"
@@ -11,7 +11,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Parallel Virtual File System version 2"
 HOMEPAGE="http://www.pvfs.org/"
 SRC_URI="ftp://ftp.parl.clemson.edu/pub/pvfs2/${MY_P}.tar.gz"
-IUSE="gtk server static doc ssl examples apidocs threads"
+IUSE="apidocs doc examples gtk server ssl static"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 		ssl? ( dev-libs/openssl )
 		sys-libs/db"
@@ -44,7 +44,6 @@ pkg_setup() {
 		$(use_enable static static-server)
 		$(use_enable gtk karma)
 		$(use_enable server)
-		$(use_enable threads threaded-kmod-helper)
 		$(use_with ssl openssl /usr/$(get_libdir))"
 }
 
@@ -60,6 +59,8 @@ src_unpack() {
 
 	# Support for >=linux-2.6.25, should be unnecessary next release.
 	sed -i 's/  Q=@echo >.*/  Q=@/' src/kernel/linux-2.6/Makefile.in
+	# upstream patch for 2.6.26 kernels
+	epatch "${FILESDIR}"/${PN}-super.c.patch
 }
 
 src_compile() {
