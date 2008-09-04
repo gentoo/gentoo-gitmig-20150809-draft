@@ -1,21 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0-r1.ebuild,v 1.2 2008/09/03 13:34:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.0.1.ebuild,v 1.1 2008/09/04 18:06:14 lack Exp $
 
 EAPI=1
 inherit eutils
 
-IUSE="nls xinerama truetype kde gnome +imlib +slit +toolbar vim-syntax"
+IUSE="nls xinerama truetype gnome +imlib +slit +toolbar vim-syntax"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 
 SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.bz2"
 HOMEPAGE="http://www.fluxbox.org"
 
-# Please note that USE="kde gnome" simply adds support for the respective
-# protocols, and does not depend on external libraries. They do, however,
-# make the binary a fair bit bigger, so we don't want to turn them on unless
-# the user actually wants them.
+# Please note that USE="gnome" simply adds support for some gnome protocols, and
+# does not depend on external libraries.  However, it does make the binary a
+# fair bit bigger, so we don't want to turn it on unless the user actually wants
+# it.
 
 RDEPEND="x11-libs/libXpm
 	x11-libs/libXrandr
@@ -56,9 +56,6 @@ src_unpack() {
 	# things with style ebuilds.
 	epatch "${FILESDIR}/${PV}/gentoo_style_location.patch"
 
-	# Bug 236523: This file is missing from the upstream tarball:
-	cp "${FILESDIR}/${PV}/windowmenu" "${S}/data/windowmenu"
-
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
 		suffix="gentoo"
@@ -75,7 +72,6 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable xinerama) \
 		$(use_enable truetype xft) \
-		$(use_enable kde) \
 		$(use_enable gnome) \
 		$(use_enable imlib imlib2) \
 		$(use_enable slit ) \
@@ -97,7 +93,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/fluxbox
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" STRIP="" install || die "install failed"
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
 	dodir /usr/share/xsessions
@@ -115,11 +111,4 @@ src_install() {
 	doins "${FILESDIR}/styles-menu-fluxbox" || die
 	doins "${FILESDIR}/styles-menu-commonbox" || die
 	doins "${FILESDIR}/styles-menu-user" || die
-}
-
-pkg_postinst() {
-	ewarn "If you are upgrading from x11-wm/fluxbox-1.1.0 to"
-	ewarn "x11-wm/fluxbox-1.1.0-r1, please manually copy the file"
-	ewarn "/usr/share/fluxbox/windowmenu in to your home directory,"
-	ewarn "replacing any existing file there."
 }
