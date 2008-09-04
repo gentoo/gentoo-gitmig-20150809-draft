@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-troopers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-troopers/ChangeLog,v 1.3 2008/07/28 17:09:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-troopers/ChangeLog,v 1.4 2008/09/04 00:58:25 nyhm Exp $
+
+*ut2004-troopers-6.0 (04 Sep 2008)
+
+  04 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +ut2004-troopers-6.0.ebuild:
+  Version bump, bug #201384
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
