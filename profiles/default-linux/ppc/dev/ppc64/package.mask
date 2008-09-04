@@ -1,6 +1,6 @@
-# Copyright 2007 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/package.mask,v 1.4 2008/09/04 11:37:45 leio Exp $
+# Copyright 1999-2008 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/package.mask,v 1.1 2008/09/04 11:37:44 leio Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (04 Sep 2008)
 # The Great GNOME 2.22 Mask (tm)
@@ -88,8 +88,3 @@ gnome-base/gvfs
 >=gnome-base/gnome-2.22
 >=net-im/telepathy-mission-control-4.65
 # End of GNOME 2.22 mask
-
-# needs newer masked gcc
-=sys-libs/glibc-2.5*
-=sys-libs/glibc-2.6*
-=sys-libs/glibc-2.7*
