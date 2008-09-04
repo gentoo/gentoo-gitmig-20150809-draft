@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.67 2008/09/04 15:13:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.68 2008/09/04 21:15:04 ranger Exp $
+
+  04 Sep 2008; Brent Baude <ranger@gentoo.org> kvirc-3.4.0.ebuild:
+  stable ppc, bug 236612
 
   04 Sep 2008; Raúl Porcel <armin76@gentoo.org> kvirc-3.4.0.ebuild:
   sparc stable wrt #236612
