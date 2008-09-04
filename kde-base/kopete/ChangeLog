@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.154 2008/09/03 11:58:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.155 2008/09/04 07:48:42 opfer Exp $
+
+  04 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  kopete-3.5.6-r2.ebuild, kopete-3.5.8.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> kopete-3.5.9.ebuild:
   fix dependency on virtual/tetex
