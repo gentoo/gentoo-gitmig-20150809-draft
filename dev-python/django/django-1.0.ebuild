@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.ebuild,v 1.1 2008/09/04 06:21:44 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.ebuild,v 1.2 2008/09/04 14:52:23 mr_bones_ Exp $
 
 inherit bash-completion distutils eutils versionator
 
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${P/#d/D}"
 
 DOCS="docs/* AUTHORS"
-
 
 src_test() {
 	#Test fails, reported upstream http://code.djangoproject.com/ticket/8865
