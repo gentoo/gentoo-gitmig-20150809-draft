@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.4.ebuild,v 1.1 2008/09/04 05:12:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.4-r1.ebuild,v 1.1 2008/09/04 19:27:45 nyhm Exp $
 
 inherit autotools eutils toolchain-funcs
 
