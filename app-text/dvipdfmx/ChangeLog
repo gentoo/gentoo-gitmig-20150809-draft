@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.38 2008/03/03 23:13:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.39 2008/09/04 05:54:52 opfer Exp $
+
+  04 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  dvipdfmx-20050831.ebuild:
+  change dependency from virtual/tetex to virtual/tex-base
 
   03 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   -files/dvipdfmx-config-gentoo.diff, -dvipdfmx-20040411.ebuild,
