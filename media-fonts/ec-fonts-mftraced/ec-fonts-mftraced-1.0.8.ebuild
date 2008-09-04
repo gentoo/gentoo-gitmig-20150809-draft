@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ec-fonts-mftraced-1.0.8.ebuild,v 1.9 2007/01/10 19:45:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ec-fonts-mftraced-1.0.8.ebuild,v 1.10 2008/09/04 07:57:51 opfer Exp $
 
 DESCRIPTION="EC Fonts for Lilypond"
 SRC_URI="http://lilypond.org/download/fonts/${P}.tar.gz"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=dev-scheme/guile-1.6.4
 	virtual/ghostscript
-	virtual/tetex
+	virtual/tex-base
 	>=dev-lang/python-2.2.3-r1"
 
 DEPEND="${RDEPEND}
@@ -33,7 +33,7 @@ src_compile() {
 
 	# no need for econf.. this isn't an autoconf-generated configure
 	./configure
-	make all builddir=${S} prefix=${D}/usr/
+	make all builddir="${S}" prefix="${D}"/usr/
 }
 
 src_install () {
@@ -42,8 +42,8 @@ src_install () {
 	addwrite /usr/share/texmf
 	addwrite /root/.PfaEdit
 
-	make install builddir=${S} prefix=${D}/usr/
-	mv ${D}/usr/share/doc/{${PN},${P}}
+	make install builddir="${S}" prefix="${D}"/usr/
+	mv "${D}"/usr/share/doc/{${PN},${P}}
 }
 
 pkg_postinst() {
