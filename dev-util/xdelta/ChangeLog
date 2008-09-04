@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.37 2008/04/20 15:18:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.38 2008/09/04 05:12:12 jer Exp $
+
+*xdelta-1.1.4 (04 Sep 2008)
+
+  04 Sep 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/xdelta-1.1.4-glib2.patch, +files/xdelta-1.1.4-m4.patch,
+  +files/xdelta-1.1.4-pkgconfig.patch, xdelta-1.1.3-r3.ebuild,
+  +xdelta-1.1.4.ebuild:
+  Version bump thanks to Zeev Tarantov (bug #236639). Marked ~hppa too.
 
   20 Apr 2008; Samuli Suominen <drac@gentoo.org> xdelta-1.1.3-r3.ebuild:
   Move pkgconfig to DEPEND from RDEPEND.
