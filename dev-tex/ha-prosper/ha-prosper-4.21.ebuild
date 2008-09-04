@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.4 2005/04/06 04:04:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.5 2008/09/04 06:45:20 opfer Exp $
 
 inherit latex-package
 
@@ -11,24 +11,23 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="LPPL-1.2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ppc"
-DEPEND="virtual/tetex
-	>=dev-tex/prosper-1.5
+DEPEND=">=dev-tex/prosper-1.5
 	|| ( dev-tex/xkeyval >=app-text/tetex-3 >=app-text/ptex-3.1.8 )"
 S=${WORKDIR}/${PN}
 IUSE=""
 
 src_install(){
-	cd ${S}/Run
-	insinto ${TEXMF}/tex/latex/${PN}/
+	cd "${S}"/Run
+	insinto "${TEXMF}"/tex/latex/${PN}/
 	doins *.sty *.cfg
-	dodir ${TEXMF}/tex/latex/${PN}/Styles
+	dodir "${TEXMF}"/tex/latex/${PN}/Styles
 	for i in `find ./Styles/* -maxdepth 1 -type d`
 	do
-		dodir ${TEXMF}/tex/latex/${PN}/$i
-		insinto ${TEXMF}/tex/latex/${PN}/$i/
+		dodir "${TEXMF}"/tex/latex/${PN}/$i
+		insinto "${TEXMF}"/tex/latex/${PN}/$i/
 		doins $i/*
 	done
-	cd ${S}
+	cd "${S}"
 	dodoc README
 	dodoc Doc/*.tex Doc/*.tex
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/ha-prosper
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.6 2007/03/13 00:21:41 nattfodd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.7 2008/09/04 06:45:20 opfer Exp $
+
+  04 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  ha-prosper-4.21.ebuild:
+  remove dependency on virtual/tetex and quote some variables
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
