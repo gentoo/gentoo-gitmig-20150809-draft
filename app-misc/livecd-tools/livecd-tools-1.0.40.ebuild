@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40.ebuild,v 1.8 2008/06/12 23:04:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.40.ebuild,v 1.9 2008/09/04 12:42:59 yngwin Exp $
 
 inherit eutils
 
@@ -31,6 +31,12 @@ RDEPEND="dev-util/dialog
 		X? ( x11-misc/mkxf86config ) )
 	ppc? ( opengl? ( ${OPENGL_DEPEND} )
 		X? ( >=x11-misc/mkxf86config-0.9.7 ) )"
+
+pkg_setup() {
+		ewarn "This package is designed for use on the LiveCD only and will do"
+		ewarn "unspeakably horrible and unexpected things on a normal system."
+		ewarn "YOU HAVE BEEN WARNED!!!"
+}
 
 src_install() {
 	doinitd autoconfig
