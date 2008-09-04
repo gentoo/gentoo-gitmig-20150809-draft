@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.7 2008/08/28 14:10:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.8 2008/09/04 16:31:25 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -48,7 +48,7 @@ src_compile() {
 
 src_install() {
 	./install.sh "${D}" || die "install.sh failed"
-	newicon data/images/pingus/player0/boarder.png ${PN}.png
+	newicon data/images/core/worldmap/pingus_standing.png ${PN}.png
 	make_desktop_entry ${PN} Pingus
 	dodoc AUTHORS NEWS README TODO
 	prepgamesdirs
