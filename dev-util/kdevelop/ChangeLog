@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.168 2008/09/02 10:49:34 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.169 2008/09/04 05:00:11 jer Exp $
+
+  04 Sep 2008; Jeroen Roovers <jer@gentoo.org> kdevelop-3.5.2-r1.ebuild:
+  Stable for HPPA too.
 
 *kdevelop-3.5.3 (02 Sep 2008)
 
