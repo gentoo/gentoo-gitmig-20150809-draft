@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.168 2008/08/12 14:14:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.169 2008/09/04 11:25:09 leio Exp $
+
+  04 Sep 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.3-r10.ebuild:
+  Remove x86-fbsd keyword from xulrunner-1.9 using revision, bug 236678
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3.ebuild:
   alpha/ia64/sparc stable wrt #229709
