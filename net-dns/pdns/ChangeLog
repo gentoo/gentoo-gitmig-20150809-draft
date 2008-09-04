@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.53 2008/08/17 15:46:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.54 2008/09/04 10:28:11 swegener Exp $
+
+  04 Sep 2008; Sven Wegener <swegener@gentoo.org> Manifest:
+  Redigest 2.9.21.1, upstream updated the tarball, bug #236604.
 
   17 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
