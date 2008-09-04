@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.248 2008/09/04 06:07:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.249 2008/09/04 22:29:09 compnerd Exp $
+
+  04 Sep 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  hal-0.5.11-r2.ebuild:
+  Fix deps for udev (thanks to zzam for pointing out that it had been left
+  unchanged accidentally). sonypic support requires linux, move it inside
+  the kernel_linux check.
 
 *hal-0.5.11-r2 (04 Sep 2008)
 

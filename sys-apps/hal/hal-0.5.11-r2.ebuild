@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r2.ebuild,v 1.1 2008/09/04 06:07:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r2.ebuild,v 1.2 2008/09/04 22:29:09 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 		 disk-partition? ( >=sys-apps/parted-1.8.0 )
 		 ia64? ( >=sys-apps/dmidecode-2.7 )
 		 kernel_linux?	(
-							>=sys-fs/udev-111
+							>=sys-fs/udev-117
 							>=sys-apps/util-linux-2.13
 							>=sys-kernel/linux-headers-2.6.19
 							crypt?	( >=sys-fs/cryptsetup-1.0.5 )
@@ -171,11 +171,14 @@ src_compile() {
 		else
 			hardware="$hardware --without-dell-backlight"
 		fi
+
+		hardware="$hardware --enable-sonypic"
 	else
 		hardware="--without-cpufreq --without-usb-csr --without-keymaps"
 		hardware="$hardware --without-omap"
 		hardware="$hardware --without-dell-backlight"
 		hardware="$hardware --enable-acpi-ibm --enable-acpi-toshiba"
+		hardware="$hardware --disable-sonypic"
 	fi
 
 	econf --with-backend=${backend} \
@@ -189,7 +192,6 @@ src_compile() {
 		  --disable-console-kit \
 		  --disable-acl-management \
 		  --enable-pci \
-		  --enable-sonypic \
 		  $(use_enable apm) \
 		  $(use_enable arm pmu) \
 		  $(use_enable debug verbose-mode) \
@@ -231,7 +233,8 @@ src_install() {
 
 		# Automagic conversion!
 		elog "Migrating xorg.conf Core Keyboard configuration to HAL FDI file..."
-		"${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null > "${D}/etc/hal/fdi/policy/10-x11-input.fdi" || die
+		"${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null > "${D}/etc/hal/fdi/policy/10-x11-input.fdi" || \
+			ewarn "Failed to migrate your keyboard configuration."
 	fi
 
 	# We now create and keep /media here as both gnome-mount and pmount
