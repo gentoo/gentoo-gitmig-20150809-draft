@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/cl-iterate-1.4.ebuild,v 1.2 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/cl-iterate-1.4.ebuild,v 1.3 2008/09/04 06:17:02 opfer Exp $
 
 inherit common-lisp eutils
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 DEPEND="virtual/commonlisp
 	dev-lisp/common-lisp-controller
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 S=${WORKDIR}/iterate_${PV}
 

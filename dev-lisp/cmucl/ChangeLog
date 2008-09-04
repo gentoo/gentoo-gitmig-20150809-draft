@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.30 2008/07/28 18:50:04 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.31 2008/09/04 06:21:19 opfer Exp $
+
+  04 Sep 2008; Christian Faulhammer <opfer@gentoo.org> cmucl-19c.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base
 
   28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Update metadata.xml to include USE flag descriptions. Entries taken from
