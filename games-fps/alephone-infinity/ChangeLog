@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/alephone-infinity
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.4 2008/03/18 02:10:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.5 2008/09/04 22:29:47 nyhm Exp $
+
+*alephone-infinity-20080622 (04 Sep 2008)
+
+  04 Sep 2008; Tristan Heaven <nyhm@gentoo.org> -alephone-infinity-1.ebuild,
+  +alephone-infinity-20080622.ebuild:
+  Version bump
 
   18 Mar 2008; Tristan Heaven <nyhm@gentoo.org> alephone-infinity-1.ebuild:
   Add ~amd64 keyword, bug #206647

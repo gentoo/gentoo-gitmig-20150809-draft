@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-1.ebuild,v 1.5 2008/03/18 02:10:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-20080622.ebuild,v 1.1 2008/09/04 22:29:47 nyhm Exp $
 
 inherit eutils games
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=games-fps/alephone-20060506-r1"
+RDEPEND="games-fps/alephone"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/Marathon\ Infinity
