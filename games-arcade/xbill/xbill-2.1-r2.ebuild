@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.6 2008/04/09 17:20:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.7 2008/09/04 21:22:44 mr_bones_ Exp $
 
 inherit eutils autotools games
 
@@ -21,7 +21,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gtk2.patch
+	epatch \
+		"${FILESDIR}"/${P}-gtk2.patch \
+		"${FILESDIR}"/${P}-gentoo.patch
 	eautoreconf
 }
 
