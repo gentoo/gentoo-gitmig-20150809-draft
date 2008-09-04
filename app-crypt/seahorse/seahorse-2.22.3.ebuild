@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.3.ebuild,v 1.7 2008/08/12 13:56:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.22.3.ebuild,v 1.8 2008/09/04 19:59:24 ford_prefect Exp $
 
 EAPI="1"
 
@@ -72,16 +72,18 @@ pkg_setup() {
 			elog
 			elog "The epiphany plugin requires that you build seahorse with DBUS support."
 			elog
-
-			if use xulrunner; then
-				G2CONF="${G2CONF} --with-gecko=xulrunner"
-			else
-				G2CONF="${G2CONF} --with-gecko=firefox"
-			fi
 		fi
 
 		eerror "Please add dbus to your USE flags and re-emerge seahorse"
 		eerror "plugins require dbus support"
+	fi
+
+	if use epiphany ; then
+		if use xulrunner ; then
+			G2CONF="${G2CONF} --with-gecko=xulrunner"
+		else
+			G2CONF="${G2CONF} --with-gecko=firefox"
+		fi
 	fi
 
 	G2CONF="${G2CONF}

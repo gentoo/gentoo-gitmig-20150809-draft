@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.109 2008/08/12 13:56:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.110 2008/09/04 19:59:24 ford_prefect Exp $
+
+  04 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  seahorse-2.22.3.ebuild:
+  Set --with-gecko independent of USE=-dbus (fixes bug #223497). Thanks to
+  Pacho Ramos for pointing this out.
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> seahorse-2.22.3.ebuild:
   alpha/ia64/sparc stable wrt #229709
