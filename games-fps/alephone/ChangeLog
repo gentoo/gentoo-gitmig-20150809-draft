@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.22 2008/06/24 21:11:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.23 2008/09/04 23:03:21 nyhm Exp $
+
+*alephone-20080721 (04 Sep 2008)
+
+  04 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +alephone-20080721.ebuild:
+  Version bump, bug #229667
 
   24 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/alephone-20071103-speex.patch, alephone-20071103.ebuild:
