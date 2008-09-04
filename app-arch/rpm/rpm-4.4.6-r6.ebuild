@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r6.ebuild,v 1.1 2008/05/31 16:18:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r6.ebuild,v 1.2 2008/09/04 20:36:02 ranger Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls python perl doc sqlite"
 
 RDEPEND=">=sys-libs/db-4
