@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080407.ebuild,v 1.3 2008/05/23 13:55:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080407.ebuild,v 1.4 2008/09/04 07:47:53 aballier Exp $
 
 inherit latex-package
 
@@ -12,8 +12,9 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-RDEPEND=""
-DEPEND="app-arch/unzip"
+RDEPEND="!dev-tex/breqn"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/${PN}
 TEXMF=/usr/share/texmf-site
