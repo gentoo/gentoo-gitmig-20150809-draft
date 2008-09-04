@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.1 2008/04/09 00:44:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.2 2008/09/04 12:39:37 yngwin Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://debian-knoppix.alioth.debian.org/sources/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
 IUSE="zlib"
 
 COMMON_DEPEND="zlib? ( sys-libs/zlib )
@@ -21,6 +21,12 @@ DEPEND="${COMMON_DEPEND}
 	sys-libs/libkudzu"
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/hwdata-gentoo"
+
+pkg_setup() {
+	ewarn "This package is designed for use on the LiveCD only and will do "
+	ewarn "unspeakably horrible and unexpected things on a normal system."
+	ewarn "YOU HAVE BEEN WARNED!!!"
+}
 
 src_unpack() {
 	unpack ${A}
