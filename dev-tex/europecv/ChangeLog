@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.18 2008/09/04 06:16:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.19 2008/09/04 20:49:14 aballier Exp $
+
+  04 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  keyword ~x86-fbsd
 
   04 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   europecv-20060424-r1.ebuild:
