@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.17 2008/09/03 03:59:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.18 2008/09/04 20:34:59 aballier Exp $
+
+  04 Sep 2008; Alexis Ballier <aballier@gentoo.org> passivetex-1.25.ebuild:
+  keyword ~x86-fbsd
 
   03 Sep 2008; Alexis Ballier <aballier@gentoo.org> passivetex-1.25.ebuild:
   Install in texmf-site under xmltex directory, and depend on latex-base
