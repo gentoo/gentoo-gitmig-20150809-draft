@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ppower4-0.9.6.ebuild,v 1.10 2007/06/26 02:03:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ppower4-0.9.6.ebuild,v 1.11 2008/09/05 07:06:56 opfer Exp $
 
 inherit latex-package eutils
 
@@ -20,18 +20,17 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~alpha ~amd64"
 
 IUSE=""
-DEPEND="virtual/tetex
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 RDEPEND="${DEPEND}
 	virtual/jre"
 
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	unzip pp4sty.zip
 
-	epatch ${FILESDIR}/${PN}-gentoo.patch
+	epatch "${FILESDIR}/${PN}-gentoo.patch"
 }
 
 src_install() {

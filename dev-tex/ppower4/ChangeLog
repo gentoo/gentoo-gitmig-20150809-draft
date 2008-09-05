@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ppower4
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.11 2007/03/13 00:33:34 nattfodd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.12 2008/09/05 07:06:56 opfer Exp $
+
+  05 Sep 2008; Christian Faulhammer <opfer@gentoo.org> ppower4-0.9.6.ebuild:
+  remove dependency on virtual/tetex and quote some variables
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
