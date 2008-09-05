@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006.ebuild,v 1.3 2008/06/29 07:59:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006.ebuild,v 1.4 2008/09/05 07:46:26 opfer Exp $
 
 inherit eutils multilib fortran
 
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/openmotif
 	sci-physics/cernlib"
 
 DEPEND="${RDEPEND}
-	virtual/tetex
+	virtual/latex-base
 	x11-misc/imake
 	x11-misc/makedepend"
 

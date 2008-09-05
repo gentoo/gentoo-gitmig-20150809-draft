@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.10 2008/06/27 10:39:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.11 2008/09/05 07:44:26 opfer Exp $
+
+  05 Sep 2008; Christian Faulhammer <opfer@gentoo.org> cernlib-2006.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base for all ebuilds
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> cernlib-2006.ebuild,
   cernlib-2006-r1.ebuild:
