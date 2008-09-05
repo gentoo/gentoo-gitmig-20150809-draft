@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/amazonmp3-1.0.3.ebuild,v 1.2 2008/09/05 14:35:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/amazonmp3-1.0.3.ebuild,v 1.3 2008/09/05 15:03:33 lack Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ inherit rpm fdo-mime multilib
 DESCRIPTION="AmazonMp3 is a download manager which interfaces with the http://mp3.amazon.com music store"
 HOMEPAGE="http://www.amazon.com/gp/dmusic/help/amd.html/"
 SRC_URI="amazonmp3.rpm"
-RESTRICT="fetch"
+RESTRICT="fetch strip"
 
 LICENSE="amazonmp3"
 SLOT="0"
@@ -38,10 +38,6 @@ pkg_nofetch() {
 	einfo "be sure to include the output of 'file amazonmp3.rpm'"
 }
 
-src_compile() {
-	return
-}
-
 src_install() {
 	# Their binary, compiled for Fedora 8, needs some odd library names, so we
 	# symlink them:
@@ -52,12 +48,10 @@ src_install() {
 	dosym libcrypto.so /usr/$(get_libdir)/libcrypto.so.6
 	dosym libssl.so /usr/$(get_libdir)/libssl.so.6
 
-	dobin bin/amazonmp3
+	dobin bin/amazonmp3 || die "dobin failed"
 
-	for dir in applications pixmaps mime/packages mime-info mimelnk/audio; do
-		insinto "/usr/share/${dir}"
-		doins "share/${dir}/"*
-	done
+	insinto "/usr/share"
+	doins -r share/{applications,pixmaps,mime,mime-info,mimelnk} || die "doins failed"
 
 	dodoc share/doc/amazonmp3/releasenotes
 	dohtml share/doc/amazonmp3/*.html
