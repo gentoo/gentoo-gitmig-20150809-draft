@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.41 2008/08/01 10:57:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.42 2008/09/05 17:23:14 armin76 Exp $
+
+  05 Sep 2008; Raúl Porcel <armin76@gentoo.org> Cgi-Simple-1.1.05.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *Cgi-Simple-1.1.05 (01 Aug 2008)
 

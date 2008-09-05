@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/class-returnvalue
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/ChangeLog,v 1.21 2008/08/01 10:30:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/ChangeLog,v 1.22 2008/09/05 17:32:39 armin76 Exp $
+
+  05 Sep 2008; Raúl Porcel <armin76@gentoo.org>
+  class-returnvalue-0.55.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *class-returnvalue-0.55 (01 Aug 2008)
 
