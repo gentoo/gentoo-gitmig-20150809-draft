@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/amazonmp3-1.0.3.ebuild,v 1.1 2008/09/05 13:35:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/amazonmp3-1.0.3.ebuild,v 1.2 2008/09/05 14:35:38 lack Exp $
 
 EAPI="1"
 
@@ -31,13 +31,11 @@ pkg_nofetch() {
 	einfo " - Agree to the Terms of Service, click the agreement box, and"
 	einfo "   download the version for 'Fedora 8'.  It will be called"
 	einfo "   'amazonmp3.rpm'"
-	einfo " - Optionally, check that the version is correct.  Run:"
-	einfo "     file amazonmp3.rpm"
-	einfo "   and ensure that it lists 'RPM v3 bin i386 amazonmp3-1.0.3-1'"
 	einfo " - Copy 'amazonmp3.rpm' into ${DISTDIR}"
 	einfo " - Run 'ebuild amazonmp3' again."
 	einfo "If the version does not match or if you get any errors about the"
-	einfo "rpm you just downloaded, file a bug at http://bugs.gentoo.org"
+	einfo "rpm you just downloaded, file a bug at http://bugs.gentoo.org, and"
+	einfo "be sure to include the output of 'file amazonmp3.rpm'"
 }
 
 src_compile() {
