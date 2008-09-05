@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/bmake
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.3 2006/10/23 13:33:40 exg Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.4 2008/09/05 10:26:54 aballier Exp $
+
+*bmake-20080515 (05 Sep 2008)
+
+  05 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/bmake-20080515-makefile.patch, +files/bmake-tests.patch,
+  +bmake-20080515.ebuild:
+  version bump, dont run tests by default, add a src_test, install mk files
+  in /usr/share/mk/P to avoid collisions.
 
   23 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> bmake-20060728.ebuild:
   Add to ~ppc.
