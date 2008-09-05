@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/vntex-20030303.ebuild,v 1.6 2005/08/19 09:14:09 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/vntex-20030303.ebuild,v 1.7 2008/09/05 06:23:38 aballier Exp $
 
 DESCRIPTION="Vietnamese support for TeX"
 HOMEPAGE="http://www.vntex.org/"
@@ -11,7 +11,7 @@ KEYWORDS="x86 ~sparc ~amd64"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/tetex"
+DEPEND="virtual/latex-base"
 S=${WORKDIR}
 
 src_install () {
