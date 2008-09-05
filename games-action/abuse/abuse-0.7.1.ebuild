@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.7 2008/08/14 16:46:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.8 2008/09/05 15:50:07 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -26,11 +26,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	# fix placing additional patches
-	cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}"
-	cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}"
-	cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}"
-	rm -rf "${WORKDIR}"/abuse-frabs-2.11/ "${WORKDIR}"/abuse-lib-2.00.orig/ "${WORKDIR}"/abuse-sfx-2.00.orig/
-	cd "${S}"
+	use levels && cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-frabs-2.11/
+	use demo && cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-lib-2.00.orig/
+	use sounds && cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-sfx-2.00.orig/
+	cd ${S}
 	# fix bug #231822
 	sed -i \
 		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
