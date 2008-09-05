@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8955 2008/09/05 19:29:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8956 2008/09/05 20:53:29 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sébastien Fabbro <bicatali@gentoo.org> (05 Sep 2008)
+# Masked for removal in 30 days. Now obsoleted and replaced
+# with eselect and pkg-config in all blas/lapack implementations
+sci-libs/blas-config
+sci-libs/lapack-config
 
 # Carsten Lohrke <carloqgentoo.org> (05 Sep 2008)
 # Masked for removal. It's broken and abamdoned.
