@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/asis-gcc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.12 2008/04/16 15:06:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.13 2008/09/05 06:31:20 opfer Exp $
+
+  05 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  asis-gcc-3.4.6.ebuild, asis-gcc-4.1.1.ebuild, asis-gcc-4.1.2.ebuild,
+  asis-gcc-4.1.2-r1.ebuild, asis-gcc-4.2.2.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base for all ebuilds
 
   16 Apr 2008; <portage-cvs@gentoo.org> asis-gcc-4.3.0_pre132166.ebuild:
   added DEPEND on ghostscript to make sure ps2pdf is provided. Changed

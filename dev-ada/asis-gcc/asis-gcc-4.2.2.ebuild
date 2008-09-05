@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.2.2.ebuild,v 1.3 2008/04/16 15:06:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.2.2.ebuild,v 1.4 2008/09/05 06:31:20 opfer Exp $
 
 inherit eutils flag-o-matic gnatbuild multilib
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${SLOT}*"
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex
+	doc? ( virtual/latex-base
 	app-text/ghostscript-gpl
 	app-text/texi2html )"
 
