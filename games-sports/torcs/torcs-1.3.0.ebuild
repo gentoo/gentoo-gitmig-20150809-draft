@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.6 2008/04/08 04:10:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.7 2008/09/05 23:13:30 mr_bones_ Exp $
 
-inherit eutils multilib games
+inherit autotools eutils multilib games
 
 DESCRIPTION="The Open Racing Car Simulator"
 HOMEPAGE="http://torcs.sourceforge.net/"
@@ -28,7 +28,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
+	ecvs_clean
 }
 
 src_compile() {
@@ -48,6 +52,5 @@ src_install() {
 	dodoc README.linux doc/history/history.txt
 	doman doc/man/*.6
 	dohtml -r doc/faq/faq.html doc/tutorials doc/userman
-	rm -rf $(find "${D}/usr/share/doc" -type d -name CVS)
 	prepgamesdirs
 }
