@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.1 2008/08/04 20:01:07 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.2 2008/09/05 21:18:11 coldwind Exp $
+
+  05 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> ack-1.86.ebuild:
+  amd64 stable wrt bug #236796
 
 *ack-1.86 (01 Aug 2008)
 
