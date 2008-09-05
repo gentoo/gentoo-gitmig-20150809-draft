@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/savage-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.6 2008/08/01 08:49:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.7 2008/09/05 15:43:44 mr_bones_ Exp $
+
+  05 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org> +files/savage,
+  savage-bin-2.00e.ebuild:
+  reworked ebuild and wrapper script from Scarabeus
 
   01 Aug 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself as maintainer since I'm retiring.
