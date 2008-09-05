@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.22 2008/03/27 18:42:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.23 2008/09/05 06:55:40 opfer Exp $
+
+  05 Sep 2008; Christian Faulhammer <opfer@gentoo.org> ivritex-1.1.2.ebuild:
+  remove dependency on virtual/tetex
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> ivritex-1.1.2.ebuild:
   Stable on ppc wrt bug 214456
