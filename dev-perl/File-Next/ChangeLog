@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Next
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.1 2008/05/15 23:29:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.2 2008/09/05 21:06:56 coldwind Exp $
+
+  05 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> File-Next-1.02.ebuild:
+  amd64 stable
 
 *File-Next-1.02 (15 May 2008)
 
