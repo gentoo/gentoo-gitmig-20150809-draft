@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.2.92.ebuild,v 1.2 2008/09/03 18:31:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3.ebuild,v 1.1 2008/09/05 17:08:52 opfer Exp $
 
 inherit autotools elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
+SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2 BSD"
 SLOT="22"
