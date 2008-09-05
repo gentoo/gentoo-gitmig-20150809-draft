@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/casting-spels-emacs/casting-spels-emacs-19.ebuild,v 1.2 2008/08/11 11:15:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/casting-spels-emacs/casting-spels-emacs-19-r1.ebuild,v 1.1 2008/09/05 18:09:53 ulm Exp $
 
 inherit elisp-common eutils
 
@@ -22,6 +22,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	edos2unix *.txt html/*.html {lisp,test}/*.el || die "edos2unix failed"
+
+	# needs cl extensions
+	epatch "${FILESDIR}/${P}-require-cl.patch"
 }
 
 src_install() {
