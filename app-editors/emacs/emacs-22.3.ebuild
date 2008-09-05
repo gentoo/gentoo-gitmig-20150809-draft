@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3.ebuild,v 1.1 2008/09/05 17:08:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3.ebuild,v 1.2 2008/09/05 18:59:59 ulm Exp $
 
 inherit autotools elisp-common eutils flag-o-matic
 
@@ -15,7 +15,6 @@ IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tif
 RESTRICT="strip"
 
 RDEPEND="!<app-editors/emacs-cvs-22.1
-	!~app-editors/emacs-cvs-${PV}
 	sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
 	net-libs/liblockfile
