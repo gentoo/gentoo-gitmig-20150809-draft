@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc4.ebuild,v 1.3 2008/08/25 16:48:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.0_rc6.ebuild,v 1.1 2008/09/05 16:42:18 matsuu Exp $
 
 EAPI=1
 
@@ -14,6 +14,7 @@ SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+#IUSE="dbus doc +imlib bash-completion"
 IUSE="dbus doc +imlib"
 
 RDEPEND=">=dev-lang/lua-5.1
@@ -43,8 +44,8 @@ DEPEND="${RDEPEND}
 	)"
 
 RDEPEND="${RDEPEND}
-	app-shells/bash
-	dev-libs/luafilesystem"
+	app-shells/bash"
+#	bash-completion? ( app-shells/bash-completion )
 
 S="${WORKDIR}/${MY_P}"
 
