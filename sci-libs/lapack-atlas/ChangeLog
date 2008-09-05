@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.71 2008/08/28 09:51:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.72 2008/09/05 20:50:10 bicatali Exp $
+
+  05 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/lapack-reference-3.0-autotool.patch,
+  -files/lapack-reference-3.1.0-autotool.patch,
+  -files/lapack-reference-3.1.1-autotool.patch,
+  -files/3.7.11-allow-any-gcc-version.patch,
+  -files/blas-atlas-3.9.1-Core2Duo-detect.patch, -files/eselect.lapack,
+  -files/f77-ATLAS, -files/unbuffered.patch, -lapack-atlas-3.6.0.ebuild,
+  -lapack-atlas-3.7.11.ebuild, -lapack-atlas-3.7.11-r1.ebuild,
+  -lapack-atlas-3.9.2.ebuild:
+  Removed old versions
 
   28 Aug 2008; Raúl Porcel <armin76@gentoo.org> lapack-atlas-3.8.0.ebuild,
   lapack-atlas-3.9.3.ebuild:
