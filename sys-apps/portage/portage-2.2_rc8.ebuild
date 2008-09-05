@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc8.ebuild,v 1.1 2008/08/12 20:20:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc8.ebuild,v 1.2 2008/09/05 23:43:13 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -17,7 +17,7 @@ python_dep=">=dev-lang/python-2.4"
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
-	epydoc? ( =dev-python/epydoc-2* )"
+	epydoc? ( >=dev-python/epydoc-2.0 )"
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
@@ -93,12 +93,17 @@ src_compile() {
 	if use epydoc; then
 		einfo "Generating api docs"
 		mkdir "${WORKDIR}"/api
-		local my_modules
+		local my_modules epydoc_opts=""
+		# A name collision between the portage.dbapi class and the
+		# module with the same name triggers an epydoc crash unless
+		# portage.dbapi is excluded from introspection.
+		has_version '>=dev-python/epydoc-3_pre0' && \
+			epydoc_opts='--exclude-introspect portage\.dbapi'
 		my_modules="$(find "${S}/pym" -name "*.py" \
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g' | sort)" || die "error listing modules"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
-			-qqqqq --no-frames --show-imports \
+			-qqqqq --no-frames --show-imports $epydoc_opts \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
 	fi

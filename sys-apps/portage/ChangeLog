@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.540 2008/08/19 20:27:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.541 2008/09/05 23:43:13 zmedico Exp $
+
+  05 Sep 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_rc8.ebuild:
+  Add workaround for compatibility with epydoc-3.
 
   19 Aug 2008; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc6.ebuild,
   -portage-2.2_rc7.ebuild:
