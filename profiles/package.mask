@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8953 2008/09/05 06:01:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8954 2008/09/05 13:06:47 carlo Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Carsten Lohrke <carloqgentoo.org> (05 Sep 2008)
+# Masked for removal. It's broken and abamdoned.
+app-portage/kuroo
 
 # Alexis Ballier <aballier@gentoo.org> (05 Sep 2008)
 # Masked for removal in 30 days.
