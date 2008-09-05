@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.29 2008/08/06 10:07:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.30 2008/09/05 07:38:45 opfer Exp $
+
+  05 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  libtomcrypt-1.06.ebuild:
+  change dependency from virtual/tetex to virtual/latex-base for all ebuilds
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
