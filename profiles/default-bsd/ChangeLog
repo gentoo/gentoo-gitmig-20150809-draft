@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.35 2008/09/04 11:45:25 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.36 2008/09/05 06:46:54 aballier Exp $
+
+  05 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  laptop support in hal is linux-specific unfortunately
 
   04 Sep 2008; Mart Raudsepp <leio@gentoo.org> fbsd/package.mask:
   Mask GNOME-2.22 on fbsd in preparation of removing the global one
