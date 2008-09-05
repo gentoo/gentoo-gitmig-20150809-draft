@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.55 2008/08/23 02:02:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.56 2008/09/05 20:29:40 dertobi123 Exp $
+
+*ssmtp-2.62-r2 (05 Sep 2008)
+
+  05 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/ssmtp-2.62-maxsysuid.patch, +files/ssmtp-2.62-maxsysuid-conf.patch,
+  metadata.xml, +ssmtp-2.62-r2.ebuild:
+  Allow to specify the last used system user id via +maxsysuid, #231866, patch
+  by Trevor Bowen
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
