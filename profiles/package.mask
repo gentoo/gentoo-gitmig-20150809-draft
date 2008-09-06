@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8956 2008/09/05 20:53:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8957 2008/09/06 00:16:39 nyhm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -720,10 +720,6 @@ www-apps/xrms
 # Ricardo Mendoza <ricmm@gentoo.org> (21 Aug 2008)
 # Beta driver, masking corresponding nvidia-settings
 ~media-video/nvidia-settings-177.67
-
-# Michael Sterrett <mr_bones_@gentoo.org> (21 Aug 2008)
-# doesn't work with guichan-0.8
-games-arcade/diameter
 
 # Ricardo Mendoza <ricmm@gentoo.org> (20 Aug 2008)
 # Beta driver, unsupported by nVidia
