@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/quantlib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.31 2007/07/15 16:48:44 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.32 2008/09/06 21:16:33 halcy0n Exp $
+
+  06 Sep 2008; Mark Loeser <halcy0n@gentoo.org> quantlib-0.3.10.ebuild,
+  quantlib-0.3.12.ebuild:
+  Remove sys-devel/libtool from RDEPEND; bug #221613
 
   15 Jul 2007; Raúl Porcel <armin76@gentoo.org> quantlib-0.3.12.ebuild:
   alpha stable

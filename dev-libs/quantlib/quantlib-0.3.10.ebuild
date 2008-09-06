@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/quantlib-0.3.10.ebuild,v 1.6 2006/08/22 11:58:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/quantlib-0.3.10.ebuild,v 1.7 2008/09/06 21:16:33 halcy0n Exp $
 
 IUSE=""
 
@@ -11,8 +11,9 @@ DESCRIPTION="A comprehensive software framework for quantitative finance"
 HOMEPAGE="http://www.quantlib.org"
 SRC_URI="mirror://sourceforge/quantlib/${MY_P}.tar.gz"
 
+RDEPEND="dev-libs/boost"
 DEPEND="sys-devel/libtool
-	dev-libs/boost"
+	${RDEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
