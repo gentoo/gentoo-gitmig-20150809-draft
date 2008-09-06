@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.42 2008/09/03 15:09:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.43 2008/09/06 13:40:18 nixnut Exp $
+
+  06 Sep 2008; nixnut <nixnut@gentoo.org> mbrola-3.0.1h-r5.ebuild:
+  Stable on ppc wrt bug 236403
 
   03 Sep 2008; Raúl Porcel <armin76@gentoo.org> mbrola-3.0.1h-r5.ebuild:
   ia64/x86 stable wrt #236403
