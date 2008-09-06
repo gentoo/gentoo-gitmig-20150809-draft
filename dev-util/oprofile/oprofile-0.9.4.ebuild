@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.3 2008/08/20 19:08:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.4 2008/09/06 17:32:32 spock Exp $
 
 EAPI=1
 
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-# IUSE: it also needs kernel sources but all gentoo users have them
 IUSE="qt3"
 DEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
@@ -26,6 +25,12 @@ pkg_setup() {
 		elog "In order for oprofile to work, you need to configure your kernel"
 		elog "with CONFIG_OPROFILE set to 'm' or 'y'."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
