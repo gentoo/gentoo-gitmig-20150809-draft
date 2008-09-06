@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.42.ebuild,v 1.8 2008/04/25 22:48:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.42.ebuild,v 1.9 2008/09/06 15:19:41 keytoaster Exp $
 
 inherit kde
 
@@ -29,6 +29,11 @@ src_unpack(){
 	# Make things work with clamav versions >= 0.93. Fixes bug 219021.
 	if has_version '>=app-antivirus/clamav-0.93' ; then
 		epatch "${FILESDIR}/${P}-clamav093.patch"
+	fi
+
+	# Fix compiliaton error with >=clamav-0.94, bug #236838
+	if has_version '>=app-antivirus/clamav-0.94' ; then
+		epatch "${FILESDIR}/klamav-clamav094.patch"
 	fi
 
 	# Assure a future version won't try to build this.

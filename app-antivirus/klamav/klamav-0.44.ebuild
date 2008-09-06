@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.44.ebuild,v 1.1 2008/08/22 18:40:00 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.44.ebuild,v 1.2 2008/09/06 15:19:41 keytoaster Exp $
 
 ARTS_REQUIRED="never"
 
@@ -28,6 +28,11 @@ src_unpack(){
 
 	# Fix .desktop entry.
 	epatch "${FILESDIR}/klamav-0.43-desktop-entry.diff"
+
+	# Fix compiliaton error with >=clamav-0.94, bug #236838
+	if has_version '>=app-antivirus/clamav-0.94' ; then
+		epatch "${FILESDIR}/klamav-clamav094.patch"
+	fi
 
 	# Assure a future version won't try to build this.
 	rm -rf "${WORKDIR}/${MY_P}/dazuko"* || die "We missed to eradicate some files"
