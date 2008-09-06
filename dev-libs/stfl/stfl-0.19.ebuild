@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.19.ebuild,v 1.1 2008/09/03 22:58:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.19.ebuild,v 1.2 2008/09/06 12:41:22 maekke Exp $
 
 inherit perl-module toolchain-funcs eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clifford.at/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="examples perl python ruby"
 
