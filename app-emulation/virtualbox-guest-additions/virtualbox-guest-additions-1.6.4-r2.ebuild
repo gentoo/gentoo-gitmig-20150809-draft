@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.6.4-r1.ebuild,v 1.1 2008/08/27 12:30:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.6.4-r2.ebuild,v 1.1 2008/09/06 19:30:00 jokey Exp $
 
 inherit eutils linux-mod
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox kernel modules and user-space tools for Linux guests"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -76,15 +76,15 @@ src_install() {
 
 		# shared folders
 		insinto /sbin
-		newins mountvboxsf mount.vboxvfs
-		fperms 4755 /sbin/mount.vboxvfs
+		newins mountvboxsf mount.vboxsf
+		fperms 4755 /sbin/mount.vboxsf
 
 		# time synchronisation system service
 		insinto /usr/sbin
 		doins vboxadd-timesync
 		fperms 0755 /usr/sbin/vboxadd-timesync
 
-		newinitd "${FILESDIR}"/${P}.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
 		# VBoxClient user service and xrandr wrapper
 		if use X; then
@@ -114,10 +114,14 @@ pkg_postinst() {
 			elog "use flag X is off, enable it to install the"
 			elog "X Window System input and video drivers"
 		fi
+		elog "Please add:"
+		elog "/etc/init.d/${PN}"
+		elog "to the default runlevel in order to load all"
+		elog "needed modules and services."
 		elog ""
 		elog "Warning:"
 		elog "this ebuild is only needed if you are running gentoo"
 		elog "inside a VirtualBox Virtual Machine, you don't need"
-		elog "it to run VirtualBox itself"
+		elog "it to run VirtualBox itself."
 		elog ""
 }

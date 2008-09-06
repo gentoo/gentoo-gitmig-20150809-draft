@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.5.6.ebuild,v 1.2 2008/08/27 12:30:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-1.6.6.ebuild,v 1.1 2008/09/06 19:30:00 jokey Exp $
 
 inherit eutils linux-mod
 
-MY_P=VirtualBox-${PV}-1_OSE
+MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox kernel modules and user-space tools for Linux guests"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,8 +17,12 @@ IUSE="X"
 RDEPEND="x11-libs/libXt
 		amd64? ( app-emulation/emul-linux-x86-xlibs )
 		X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
-			 ~x11-drivers/xf86-input-virtualbox-${PV} )"
+			 ~x11-drivers/xf86-input-virtualbox-${PV}
+			 x11-apps/xrandr
+			 x11-apps/xrefresh )"
 DEPEND="${RDEPEND}
+		dev-util/kbuild
+		>=dev-lang/yasm-0.6.2
 		sys-devel/bin86
 		sys-devel/dev86
 		sys-power/iasl
@@ -29,7 +33,7 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxadd(misc:${WORKDIR}/vboxadd:${WORKDIR}/vboxadd)
 			vboxvfs(misc:${WORKDIR}/vboxvfs:${WORKDIR}/vboxvfs)"
 
-S=${WORKDIR}/${MY_P/-1_/_}
+S=${WORKDIR}/${MY_P/-OSE/}
 
 pkg_setup() {
 		linux-mod_pkg_setup
@@ -41,11 +45,12 @@ src_unpack() {
 
 		# Create and unpack a tarball with the sources of the Linux guest
 		# kernel modules, to include all the needed files
-		"${MY_P/-1_/_}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
+		"${MY_P/-OSE/}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
 		unpack ./vbox-kmod.tar.gz
 
-		# Disable (unused) alsa checks in {configure, Comfig.kmk}
-		epatch "${FILESDIR}/${P}-remove-alsa.patch"
+		# Remove shipped binaries (kBuild,yasm), see bug #232775
+		cd "${S}"
+		rm -rf kBuild/bin tools
 }
 
 src_compile() {
@@ -56,12 +61,14 @@ src_compile() {
 		--disable-xpcom \
 		--disable-sdl-ttf \
 		--disable-pulse \
+		--disable-alsa \
 		--build-headless || die "configure failed"
 		source ./env.sh
 
 		for each in	src/VBox/{Runtime,Additions/common} \
-		src/VBox/Additions/linux{sharefolders,daemon,xclient} ; do
-				MAKE="kmk" emake || die "kmk failed"
+		src/VBox/Additions/linux{sharefolders,daemon} ; do
+				MAKE="kmk" emake TOOL_YASM_AS=yasm \
+				|| die "kmk failed"
 		done
 }
 
@@ -72,27 +79,30 @@ src_install() {
 
 		# shared folders
 		insinto /sbin
-		newins mountvboxsf mount.vboxvfs
-		fperms 4755 /sbin/mount.vboxvfs
+		newins mountvboxsf mount.vboxsf
+		fperms 4755 /sbin/mount.vboxsf
 
 		# time synchronisation system service
 		insinto /usr/sbin
 		doins vboxadd-timesync
 		fperms 0755 /usr/sbin/vboxadd-timesync
 
-		# shared clipboard user service
-		insinto /usr/bin
-		doins vboxadd-xclient
-		fperms 4755 /usr/bin/vboxadd-xclient
+		newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
-		newinitd "${FILESDIR}"/${P}.initd ${PN}
-
-		# shared clipboard user service xinit script
+		# VBoxClient user service and xrandr wrapper
 		if use X; then
+			insinto /usr/bin
+			doins VBoxClient
+			fperms 4755 /usr/bin/VBoxClient
+
 			dodir /etc/X11/xinit/xinitrc.d/
-			echo -e "#/bin/sh\n/usr/bin/vboxadd-xclient" \
-			>> "${D}/etc/X11/xinit/xinitrc.d/98vboxadd-xclient"
-			fperms 0755 /etc/X11/xinit/xinitrc.d/98vboxadd-xclient
+			echo -e "#/bin/sh\n/usr/bin/VBoxClient" \
+			>> "${D}/etc/X11/xinit/xinitrc.d/98VBoxClient"
+			fperms 0755 /etc/X11/xinit/xinitrc.d/98VBoxClient
+
+			cd "${S}"/src/VBox/Additions/x11/installer
+			newins VBoxRandR.sh VBoxRandR
+			fperms 0755 /usr/bin/VBoxRandR
 		fi
 
 		# udev rule for vboxdrv
@@ -107,10 +117,14 @@ pkg_postinst() {
 			elog "use flag X is off, enable it to install the"
 			elog "X Window System input and video drivers"
 		fi
+		elog "Please add:"
+		elog "/etc/init.d/${PN}"
+		elog "to the default runlevel in order to load all"
+		elog "needed modules and services."
 		elog ""
 		elog "Warning:"
 		elog "this ebuild is only needed if you are running gentoo"
 		elog "inside a VirtualBox Virtual Machine, you don't need"
-		elog "it to run VirtualBox itself"
+		elog "it to run VirtualBox itself."
 		elog ""
 }

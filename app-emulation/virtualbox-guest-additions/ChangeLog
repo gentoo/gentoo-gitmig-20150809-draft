@@ -1,6 +1,33 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.3 2008/08/27 12:30:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.4 2008/09/06 19:30:00 jokey Exp $
+
+*virtualbox-guest-additions-1.6.6 (06 Sep 2008)
+*virtualbox-guest-additions-1.6.4-r2 (06 Sep 2008)
+
+  06 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-guest-additions-1.5.6-remove-alsa.patch,
+  -files/virtualbox-guest-additions-1.5.6.initd,
+  files/virtualbox-guest-additions-1.6.4-fix-missing-makefiles.patch,
+  -files/virtualbox-guest-additions-1.6.4.initd,
+  +files/virtualbox-guest-additions.initd,
+  -virtualbox-guest-additions-1.5.6.ebuild,
+  -virtualbox-guest-additions-1.6.4-r1.ebuild,
+  +virtualbox-guest-additions-1.6.4-r2.ebuild,
+  +virtualbox-guest-additions-1.6.6.ebuild:
+  Port from dev overlay
+
+  03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-guest-additions-1.5.6.ebuild,
+  -files/virtualbox-guest-additions-1.5.6-remove-alsa.patch,
+  -files/virtualbox-guest-additions-1.5.6.initd,
+  virtualbox-guest-additions-1.6.4-r2.ebuild,
+  -files/virtualbox-guest-additions-1.6.4.initd,
+  +virtualbox-guest-additions-1.6.6.ebuild,
+  +files/virtualbox-guest-additions.initd:
+  Version bump; drop old 1.5.x version; fix SRC_URI; add dev-util/kbuild and
+  dev-lang/yasm to DEPEND and force to build without shipped binaries (kBuild,
+  yasm), wrt bug #232775;
 
 *virtualbox-guest-additions-1.6.4-r1 (27 Aug 2008)
 
