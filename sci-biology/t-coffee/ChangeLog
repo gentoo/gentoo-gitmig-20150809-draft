@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.33 2008/07/14 17:01:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.34 2008/09/06 11:29:59 markusle Exp $
+
+*t-coffee-6.82 (06 Sep 2008)
+
+  06 Sep 2008; Markus Dittrich <markusle@gentoo.org> -t-coffee-4.96.ebuild,
+  -t-coffee-5.05.ebuild, +t-coffee-6.82.ebuild:
+  Version bump and removed old ebuilds (fixes bug #232323). According 
+  to the website and docs, t-coffee is now released under the GPL-2,
+  hence changed the license info and uploaded the tarball to our
+  mirrors.
 
   14 Jul 2008; nixnut <nixnut@gentoo.org> t-coffee-5.65.ebuild:
   Stable on ppc wrt bug 221165
