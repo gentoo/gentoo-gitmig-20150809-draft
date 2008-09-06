@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.7 2008/08/07 21:54:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.8 2008/09/06 13:03:19 gentoofan23 Exp $
+
+*libx86-1.1 (06 Sep 2008)
+
+  06 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> +libx86-1.1.ebuild:
+  Version bump. This new version is vaccinated of the bug from bug #235599
 
   07 Aug 2008; Markus Meier <maekke@gentoo.org> libx86-0.99.ebuild:
   amd64/x86 stable, bug #231739
