@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.94.ebuild,v 1.1 2008/09/05 19:44:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.94.ebuild,v 1.2 2008/09/06 10:16:42 armin76 Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails multilib
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 crypt iconv mailwrapper milter nls selinux"
+IUSE="bzip2 crypt iconv mailwrapper milter nls selinux test"
 
-DEPEND="virtual/libc
-	bzip2? ( app-arch/bzip2 )
+DEPEND="bzip2? ( app-arch/bzip2 )
 	crypt? ( >=dev-libs/gmp-4.1.2 )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
 	iconv? ( virtual/libiconv )
 	nls? ( sys-devel/gettext )
+	test? ( dev-libs/check )
 	dev-libs/gmp
 	>=sys-libs/zlib-1.2.1-r3
 	>=sys-apps/sed-4"
