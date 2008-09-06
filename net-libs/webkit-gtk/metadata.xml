@@ -8,7 +8,6 @@
   </maintainer>
   <use>
     <flag name="coverage">enable code coverage support</flag>
-    <flag name="hildon">Use Hildon UI extensions</flag>
     <flag name="pango">Use pango as fontbackend instead of freetype</flag>
     <flag name="soup">Use SOUP as backend instead of curl</flag>
     <flag name="xslt">enable support for XSLT</flag>
