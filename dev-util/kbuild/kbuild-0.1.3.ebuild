@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.3.ebuild,v 1.1 2008/09/06 19:18:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.3.ebuild,v 1.2 2008/09/06 20:18:51 mr_bones_ Exp $
 
 EAPI=1
 
@@ -41,4 +41,3 @@ src_install() {
 		PATH_INS="${D}" \
 		install || die "install failed"
 }
-
