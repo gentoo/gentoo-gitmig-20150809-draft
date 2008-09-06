@@ -10,5 +10,8 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 <use>
 	<flag name='gecko'>Add support for the Gecko engine when using
 		iexplore</flag>
+	<flag name='samba'>Add support for NTLM auth. see
+		http://wiki.winehq.org/NtlmAuthSetupGuide and
+		http://wiki.winehq.org/NtlmSigningAndSealing</flag>
 </use>
 </pkgmetadata>
