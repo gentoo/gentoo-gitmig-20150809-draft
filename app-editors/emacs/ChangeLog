@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.269 2008/09/05 20:47:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.270 2008/09/06 05:08:09 ulm Exp $
+
+  06 Sep 2008; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r5.ebuild:
+  Fix licence info, unexelf.c in patch is GPL-2.
 
 *emacs-22.3 (05 Sep 2008)
 
