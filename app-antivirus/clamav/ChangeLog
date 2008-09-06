@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.300 2008/09/06 10:16:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.301 2008/09/06 11:55:14 rich0 Exp $
+
+  06 Sep 2008; Richard Freeman <rich0@gentoo.org> clamav-0.94.ebuild:
+  amd64 stable - 236665
 
   06 Sep 2008; Raúl Porcel <armin76@gentoo.org> clamav-0.94.ebuild:
   Add missing dep on dev-libs/check when running the tests
