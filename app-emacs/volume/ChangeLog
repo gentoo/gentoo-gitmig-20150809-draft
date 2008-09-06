@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/volume
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.8 2008/09/06 11:06:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.9 2008/09/06 11:41:10 opfer Exp $
+
+  06 Sep 2008; Christian Faulhammer <opfer@gentoo.org> -volume-0.5.ebuild:
+  clean up
 
   06 Sep 2008; nixnut <nixnut@gentoo.org> volume-1.0.ebuild:
   Stable on ppc wrt bug 236020
