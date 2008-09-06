@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jdbc-oracle-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.4 2008/07/08 06:00:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.5 2008/09/06 13:07:29 caster Exp $
+
+*jdbc-oracle-bin-10.2.0.4 (06 Sep 2008)
+
+  06 Sep 2008; Vlastimil Babka <caster@gentoo.org>
+  jdbc-oracle-bin-10.2.0.3.ebuild, +jdbc-oracle-bin-10.2.0.4.ebuild:
+  Version bump, bug #236727. Rename the javadoc distfile to 10.2.0.1 which
+  is correct and allows sharing with other versions using it, bug #236725.
+  Both thanks to Chris Gianelloni <wolf31o2@wolf31o2.org>.
 
   08 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
   jdbc-oracle-bin-10.2.0.3.ebuild:
