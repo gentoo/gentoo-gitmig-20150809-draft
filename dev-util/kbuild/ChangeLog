@@ -1,0 +1,14 @@
+# ChangeLog for dev-util/kbuild
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.1 2008/09/06 19:18:40 jokey Exp $
+
+*kbuild-0.1.3 (06 Sep 2008)
+
+  06 Sep 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +kbuild-0.1.3.ebuild:
+  Import for virtualbox-ose
+
+  03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  +kbuild-0.1.3.ebuild, +metadata.xml:
+  Initial ebuild for kBuild
+
