@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.5 2008/07/23 16:00:35 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.6 2008/09/06 14:01:32 loki_val Exp $
+
+*libisoburn-0.2.4_p0 (06 Sep 2008)
+
+  06 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/libisoburn-0.2.2_p0-destdir.patch, -libisoburn-0.2.2_p0.ebuild,
+  +libisoburn-0.2.4_p0.ebuild:
+  Bump
 
 *libisoburn-0.2.2_p0 (23 Jul 2008)
 
