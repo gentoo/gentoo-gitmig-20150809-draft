@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.29 2008/08/02 07:16:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.30 2008/09/06 05:01:08 matsuu Exp $
+
+  06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> namazu-2.0.18.ebuild:
+  Use elisp-complie instead of elisp-comp, bug #235919.
 
   02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

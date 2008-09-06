@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.18.ebuild,v 1.4 2008/08/01 15:45:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.18.ebuild,v 1.5 2008/09/06 05:01:08 matsuu Exp $
 
 inherit elisp-common
 
@@ -52,7 +52,7 @@ src_compile() {
 	if use emacs; then
 		cd lisp
 		rm -f browse*
-		elisp-comp *.el || die
+		elisp-compile *.el || die
 	fi
 
 }
