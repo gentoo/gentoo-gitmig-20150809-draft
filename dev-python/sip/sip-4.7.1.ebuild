@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.1.ebuild,v 1.9 2008/05/29 16:37:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.1.ebuild,v 1.10 2008/09/06 23:43:35 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -50,7 +50,7 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_compile /usr/$(get_libdir)/python${PYVER}/sip*.py
+	python_mod_compile "$(python_get_sitedir)"/sip*.py
 }
 
 pkg_postrm() {
