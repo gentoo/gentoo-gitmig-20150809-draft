@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.15 2008/07/26 13:18:57 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.16 2008/09/06 11:44:49 loki_val Exp $
+
+  06 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  files/libthrowable-1.1.0-gcc43.diff:
+  Update gcc-4.3 patch per bug 236362. Thanks to Michael Gisbers
+  <michael@gisbers.de>.
 
   26 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Change Maintainer.
