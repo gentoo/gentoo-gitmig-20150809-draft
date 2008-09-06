@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/volume-1.0.ebuild,v 1.2 2008/08/29 22:08:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/volume-1.0.ebuild,v 1.3 2008/09/06 11:06:13 nixnut Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.el.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 # NOTE we might define the following which volume.el can work with by

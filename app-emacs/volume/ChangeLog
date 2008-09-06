@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/volume
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.7 2008/08/29 22:08:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.8 2008/09/06 11:06:13 nixnut Exp $
+
+  06 Sep 2008; nixnut <nixnut@gentoo.org> volume-1.0.ebuild:
+  Stable on ppc wrt bug 236020
 
   29 Aug 2008; Markus Meier <maekke@gentoo.org> volume-1.0.ebuild:
   amd64/x86 stable, bug #236020
