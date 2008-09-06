@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/atool
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.27 2008/09/06 14:05:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.28 2008/09/06 15:26:29 armin76 Exp $
+
+  06 Sep 2008; Raúl Porcel <armin76@gentoo.org> atool-0.35.0.ebuild:
+  x86 stable wrt #236630
 
   06 Sep 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 236630
