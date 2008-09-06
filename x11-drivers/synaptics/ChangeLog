@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.39 2008/08/30 22:33:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.40 2008/09/06 21:40:57 chainsaw Exp $
+
+  06 Sep 2008; <chainsaw@gentoo.org> synaptics-0.14.5-r1.ebuild,
+  synaptics-0.14.6.ebuild, synaptics-0.14.6-r1.ebuild,
+  synaptics-0.14.6-r2.ebuild, synaptics-0.14.6-r3.ebuild,
+  synaptics-0.14.6_p20070706-r1.ebuild:
+  Block x11-drivers/xf86-input-synaptics, making the two ebuilds mutually
+  exclusive and fixing the X.Org 1.5 upgrade path. Herd approval from
+  Battousai on IRC.
 
 *synaptics-0.14.6_p20070706-r1 (30 Aug 2008)
 
