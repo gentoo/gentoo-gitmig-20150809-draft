@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.34 2008/08/06 19:28:24 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.35 2008/09/06 14:20:56 yngwin Exp $
+
+*PyQt4-4.4.3 (06 Sep 2008)
+
+  06 Sep 2008; Ben de Groot <yngwin@gentoo.org> +PyQt4-4.4.3.ebuild:
+  Version bump. Fixes bug 234559.
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
