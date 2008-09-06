@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.22.ebuild,v 1.2 2008/09/05 00:13:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.22.ebuild,v 1.3 2008/09/06 13:57:21 nixnut Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.transmissionbt.com/transmission/files/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
 IUSE="gtk libnotify"
 
 RDEPEND=">=dev-libs/glib-2.16
