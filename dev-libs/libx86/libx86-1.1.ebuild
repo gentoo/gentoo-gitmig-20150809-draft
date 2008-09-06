@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1.ebuild,v 1.1 2008/09/06 13:03:19 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1.ebuild,v 1.2 2008/09/06 20:44:56 ulm Exp $
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="A hardware-independent library for executing real-mode x86 code"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/libx86"
@@ -12,6 +12,13 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# fix compile failure with linux-headers-2.6.26, bug 235599
+	epatch "${FILESDIR}"/${PN}-0.99-ifmask.patch
+}
 
 src_compile() {
 	local ARGS
