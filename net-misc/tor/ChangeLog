@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.128 2008/09/06 12:59:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.129 2008/09/06 15:16:31 armin76 Exp $
+
+  06 Sep 2008; Raúl Porcel <armin76@gentoo.org> tor-0.2.0.30-r1.ebuild:
+  x86 stable wrt #236536
 
   06 Sep 2008; Brent Baude <ranger@gentoo.org> tor-0.2.0.30-r1.ebuild:
   stable ppc64, bug 236536
