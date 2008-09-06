@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/lbreakout-010315.ebuild,v 1.7 2007/08/08 22:04:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/lbreakout-010315.ebuild,v 1.8 2008/09/06 18:26:02 mr_bones_ Exp $
 
 inherit games
 
@@ -15,14 +15,18 @@ IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5"
 
-src_compile() {
-	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
-	emake || die "emake failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/^sdir=/s:$datadir/games:$datadir:' \
+		-e '/^hdir=/s:/var/lib/games:$localstatedir:' \
+		configure \
+		|| die "sed failed"
 }
 
 src_install() {
-	# makefile fails to create this directory
-	dodir /var/lib/games
+	dodir "${GAMES_STATEDIR}"
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README ChangeLog
 	dohtml lbreakout/manual/*

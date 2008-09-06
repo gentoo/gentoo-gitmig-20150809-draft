@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/lbreakout
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/ChangeLog,v 1.7 2007/02/08 20:52:11 wolf31o2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/ChangeLog,v 1.8 2008/09/06 18:26:02 mr_bones_ Exp $
+
+  06 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  lbreakout-010315.ebuild:
+  fix high score location. patch from Dannee McGuire via bug #236878
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
