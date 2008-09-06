@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.22 2008/09/05 18:39:08 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.23 2008/09/06 15:19:23 armin76 Exp $
+
+  06 Sep 2008; Raúl Porcel <armin76@gentoo.org> qstat-2.11.ebuild:
+  x86 stable wrt #236389
 
   05 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> qstat-2.11.ebuild:
   stable amd64, bug 236389
