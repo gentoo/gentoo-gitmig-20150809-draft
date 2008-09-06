@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.7 2008/08/07 22:03:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.8 2008/09/06 19:04:11 kolmodin Exp $
+
+*xmonad-0.8 (06 Sep 2008)
+
+  06 Sep 2008; Lennart Kolmodin <kolmodin@gentoo.org> +xmonad-0.8.ebuild:
+  Bump to newest version
 
   07 Aug 2008; Jeroen Roovers <jer@gentoo.org> xmonad-0.7.ebuild:
   Marked ~hppa too.
