@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.10 2008/06/22 00:04:06 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.11 2008/09/06 00:23:53 matsuu Exp $
+
+*libhangul-0.0.8 (06 Sep 2008)
+
+  06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> +libhangul-0.0.8.ebuild:
+  Version bumped.
 
   21 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   libhangul-0.0.6.ebuild:
