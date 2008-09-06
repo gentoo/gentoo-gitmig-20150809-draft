@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.4.ebuild,v 1.1 2008/03/11 03:15:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.4.2.ebuild,v 1.1 2008/09/06 23:15:14 leio Exp $
 
 EAPI=1
 WX_GTK_VER=2.8
