@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1842 2008/09/05 20:56:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1843 2008/09/06 07:01:18 dberkholz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  base/package.use.mask:
+  Mask USE=nptl only on mesa 7.0* and xorg-server 1.4* -- exclude newer
+  versions.
 
   05 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> ChangeLog:
   Masked sci-libs/{blas,lapack}-config, now obsoleted
