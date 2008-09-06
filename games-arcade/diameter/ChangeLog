@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/diameter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/ChangeLog,v 1.2 2007/05/23 02:24:35 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/ChangeLog,v 1.3 2008/09/06 00:11:47 nyhm Exp $
+
+*diameter-0.4.0.3 (06 Sep 2008)
+
+  06 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +diameter-0.4.0.3.ebuild:
+  Version bump, bug #236507
 
   23 May 2007; Tristan Heaven <nyhm@gentoo.org> diameter-0.4.0.1.ebuild:
   Add ~x86 keyword
