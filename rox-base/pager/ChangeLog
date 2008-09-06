@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/pager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.21 2008/09/01 09:37:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.22 2008/09/06 03:01:52 lack Exp $
+
+  06 Sep 2008; Jim Ramsay <lack@gentoo.org> -pager-1.1-r1.ebuild:
+  Version cleanup
 
   01 Sep 2008; Raúl Porcel <armin76@gentoo.org> pager-1.1-r2.ebuild:
   sparc stable wrt #236057
