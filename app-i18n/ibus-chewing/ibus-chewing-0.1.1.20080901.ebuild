@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-0.1.1.20080901.ebuild,v 1.1 2008/09/06 03:55:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-0.1.1.20080901.ebuild,v 1.2 2008/09/06 04:06:09 matsuu Exp $
 
-DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
+DESCRIPTION="The Chewing IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
