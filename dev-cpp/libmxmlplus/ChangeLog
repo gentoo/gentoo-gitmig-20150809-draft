@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libmxmlplus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.5 2008/03/24 20:50:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.6 2008/09/06 21:28:24 halcy0n Exp $
+
+  06 Sep 2008; Mark Loeser <halcy0n@gentoo.org>
+  libmxmlplus-0.9.2_p20080323.ebuild:
+  Unable to build due to symlinks to non-existant libtool files, thanks to
+  Evil Compile Person <bugs AT dev DOT gentooexperimental DOT org>; bug
+  #227477
 
 *libmxmlplus-0.9.2_p20080323 (24 Mar 2008)
 
