@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.4.ebuild,v 1.5 2008/09/06 07:16:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.1 2008/09/06 07:16:40 jokey Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+additions headless sdk vboxwebsrv"
 
 RDEPEND="!app-emulation/virtualbox-ose
@@ -136,12 +136,6 @@ src_install() {
 	newexe "${FILESDIR}/${PN}-wrapper" "VBox.sh" || die
 	fowners root:vboxusers /opt/VirtualBox/VBox.sh
 	fperms 0750 /opt/VirtualBox/VBox.sh
-
-	# Disable logging by default, broken in this release (bug #233683)
-	sed -i \
-			-e "/vbox.cfg\"$/a export VBOX_LOG_DEST=\"nofile\"" \
-			"${D}"/opt/VirtualBox/VBox.sh || die "VBox.sh sed failed"
-
 	fowners root:vboxusers /opt/VirtualBox/VBoxAddIF.sh
 	fperms 0750 /opt/VirtualBox/VBoxAddIF.sh
 
@@ -165,11 +159,6 @@ pkg_postinst() {
 		elog ""
 	fi
 	elog "You must be in the vboxusers group to use VirtualBox."
-	elog ""
-	elog "Warning:"
-	elog "Due to a bug which can cause a large amount of logging"
-	elog "data to be written to your home directory, logging is"
-	elog "disabled by default in this release, see bug #233683"
 	elog ""
 }
 

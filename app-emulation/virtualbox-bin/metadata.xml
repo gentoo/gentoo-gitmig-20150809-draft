@@ -12,7 +12,6 @@
 </maintainer>
 <use>
 	<flag name='additions'>Install Guest System Tools ISO</flag>
-	<flag name='chm'>Install help files and add chm reader dependency</flag>
 	<flag name='headless'>Install without any graphic frontend</flag>
 	<flag name='sdk'>Enable building of SDK</flag>
 	<flag name='vboxwebsrv'>Install the VirtualBox webservice</flag>

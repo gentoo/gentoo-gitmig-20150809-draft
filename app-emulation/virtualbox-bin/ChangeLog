@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.33 2008/08/27 18:27:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.34 2008/09/06 07:16:40 jokey Exp $
+
+*virtualbox-bin-1.6.6 (06 Sep 2008)
+
+  06 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  files/virtualbox-bin-wrapper, metadata.xml, -virtualbox-bin-1.5.6.ebuild,
+  virtualbox-bin-1.6.4.ebuild, +virtualbox-bin-1.6.6.ebuild:
+  Port from dev overlay
+
+  03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-bin-1.5.6.ebuild, virtualbox-bin-1.6.4.ebuild,
+  +virtualbox-bin-1.6.6.ebuild, files/virtualbox-bin-wrapper,
+  metadata.xml:
+  Version bump; remove USE flag chm in metadata.xml; disable logging via
+  wrapper in 1.6.4 only; fix SRC_URI and set RESTRICT to primaryuri (PUEL
+  downloads available again on virtualbox.org); readd check_license for PUEL;
+  drop old 1.5.x version
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
   virtualbox-bin-1.6.4.ebuild:
