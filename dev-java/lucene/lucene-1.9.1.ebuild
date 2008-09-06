@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.9.1.ebuild,v 1.1 2008/01/16 12:50:53 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.9.1.ebuild,v 1.2 2008/09/06 13:54:12 nixnut Exp $
 
 # This ebuild only builds the core of Lucene
 # It does not build any optional component (contributions)
@@ -14,7 +14,7 @@ HOMEPAGE="http://jakarta.apache.org/lucene"
 SRC_URI="mirror://apache/lucene/java/archive/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1.9"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
