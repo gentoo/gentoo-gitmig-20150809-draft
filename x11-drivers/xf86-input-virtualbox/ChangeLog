@@ -1,6 +1,22 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.3 2008/08/30 19:16:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.4 2008/09/06 19:27:14 jokey Exp $
+
+*xf86-input-virtualbox-1.6.6 (06 Sep 2008)
+
+  06 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/xf86-input-virtualbox-1.5.6-remove-alsa.patch,
+  files/xf86-input-virtualbox-1.6.4-fix-missing-makefiles.patch,
+  -xf86-input-virtualbox-1.5.6.ebuild,
+  xf86-input-virtualbox-1.6.4-r1.ebuild,
+  +xf86-input-virtualbox-1.6.6.ebuild:
+  Port from dev overlay
+
+  03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  xf86-input-virtualbox-1.6.4-r1.ebuild,
+  +xf86-input-virtualbox-1.6.6.ebuild:
+  Version bump; fix SRC_URI; add dev-util/kbuild and dev-lang/yasm to DEPEND
+  and force to build without shipped binaries (kBuild, yasm), wrt bug #232775;
 
 *xf86-input-virtualbox-1.6.4-r1 (30 Aug 2008)
 

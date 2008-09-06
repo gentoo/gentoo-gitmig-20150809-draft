@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-1.5.6.ebuild,v 1.1 2008/03/18 22:06:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-1.6.4-r1.ebuild,v 1.1 2008/09/06 19:29:03 jokey Exp $
 
 inherit x-modular eutils
 
-MY_P=VirtualBox-${PV}-1_OSE
+MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,6 +16,8 @@ IUSE=""
 
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
+		sys-devel/dev86
+		sys-power/iasl
 		x11-proto/fontsproto
 		x11-proto/randrproto
 		x11-proto/renderproto
@@ -23,13 +25,14 @@ DEPEND="${RDEPEND}
 		x11-proto/xineramaproto
 		x11-proto/xproto"
 
-S=${WORKDIR}/${MY_P/-1_/_}
+S=${WORKDIR}/${MY_P/-OSE/}
 
 src_unpack() {
 		unpack ${A}
+		cd "${S}"
 
-		# Disable (unused) alsa checks in {configure, Comfig.kmk}
-		epatch "${FILESDIR}/${P}-remove-alsa.patch"
+		# Fix missing makefiles
+		epatch "${FILESDIR}/${P}-fix-missing-makefiles.patch"
 }
 
 src_compile() {
@@ -38,12 +41,14 @@ src_compile() {
 		--disable-xpcom \
 		--disable-sdl-ttf \
 		--disable-pulse \
+		--disable-alsa \
 		--build-headless || die "configure failed"
 		source ./env.sh
 
-		cd "${S}/src/VBox/Additions/linux/xgraphics"
-
-		MAKE="kmk" emake || die "kmk failed"
+		for each in src/VBox/{Runtime,Additions/common/VBoxGuestLib} \
+		src/VBox/Additions/x11/xgraphics ; do
+			MAKE="kmk" emake || die "kmk failed"
+		done
 }
 
 src_install() {

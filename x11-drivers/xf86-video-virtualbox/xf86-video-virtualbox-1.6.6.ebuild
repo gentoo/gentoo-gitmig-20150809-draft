@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-1.6.4.ebuild,v 1.1 2008/08/10 14:45:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-1.6.6.ebuild,v 1.1 2008/09/06 19:29:03 jokey Exp $
 
 inherit x-modular eutils
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,6 +16,10 @@ IUSE=""
 
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
+		dev-util/kbuild
+		>=dev-lang/yasm-0.6.2
+		sys-devel/dev86
+		sys-power/iasl
 		x11-proto/fontsproto
 		x11-proto/randrproto
 		x11-proto/renderproto
@@ -29,8 +33,8 @@ src_unpack() {
 		unpack ${A}
 		cd "${S}"
 
-		# Fix missing makefiles
-		epatch "${FILESDIR}/${P}-fix-missing-makefiles.patch"
+		# Remove shipped binaries (kBuild,yasm), see bug #232775
+		rm -rf kBuild/bin tools
 }
 
 src_compile() {
@@ -43,9 +47,11 @@ src_compile() {
 		--build-headless || die "configure failed"
 		source ./env.sh
 
-		cd "${S}/src/VBox/Additions/linux/xgraphics"
-
-		MAKE="kmk" emake || die "kmk failed"
+		for each in src/VBox/{Runtime,Additions/common/VBoxGuestLib} \
+		src/VBox/Additions/x11/xgraphics ; do
+			MAKE="kmk" emake TOOL_YASM_AS=yasm \
+			|| die "kmk failed"
+		done
 }
 
 src_install() {
