@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-1.6.4.ebuild,v 1.2 2008/08/27 13:42:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-1.6.4.ebuild,v 1.3 2008/09/06 19:20:28 jokey Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}_${PV}
 
 DESCRIPTION="Guest additions for VirtualBox"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.iso"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"

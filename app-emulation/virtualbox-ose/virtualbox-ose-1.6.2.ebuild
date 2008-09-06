@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.2.ebuild,v 1.1 2008/08/27 12:39:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.2.ebuild,v 1.2 2008/09/06 19:21:39 jokey Exp $
 
 EAPI=1
 
@@ -9,12 +9,12 @@ inherit eutils fdo-mime flag-o-matic qt3 toolchain-funcs
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions alsa headless pulseaudio sdk"
+IUSE="+additions alsa headless pulseaudio sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}

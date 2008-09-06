@@ -94,7 +94,6 @@ EOF
 fi
 
 export LD_LIBRARY_PATH="$INSTALL_DIR${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-export VBOX_LOG_DEST="nofile"
 
 SERVER_PID=`ps -U \`whoami\` | grep VBoxSVC | awk '{ print $1 }'`
 if [ -z "$SERVER_PID" ]; then

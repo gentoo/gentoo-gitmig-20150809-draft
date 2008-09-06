@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.1 2008/08/27 12:39:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.2 2008/09/06 19:21:39 jokey Exp $
 
 EAPI=1
 

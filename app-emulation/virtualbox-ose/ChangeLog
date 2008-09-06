@@ -1,6 +1,31 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.3 2008/08/31 11:22:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.4 2008/09/06 19:21:39 jokey Exp $
+
+*virtualbox-ose-1.6.6 (06 Sep 2008)
+
+  06 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-ose-1.5.6-remove-alsa.patch,
+  -files/virtualbox-ose-1.5.6-remove-unused.patch,
+  files/virtualbox-ose-1.6.4-fix-missing-makefiles.patch,
+  +files/virtualbox-ose-1.6.6-remove-unused.patch,
+  files/virtualbox-ose-wrapper, -virtualbox-ose-1.5.6.ebuild,
+  virtualbox-ose-1.6.2.ebuild, virtualbox-ose-1.6.4.ebuild,
+  +virtualbox-ose-1.6.6.ebuild, virtualbox-ose-9999.ebuild:
+  Port from dev overlay
+
+  03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-ose-1.5.6.ebuild,
+  -files/virtualbox-ose-1.5.6-remove-alsa.patch,
+  -files/virtualbox-ose-1.5.6-remove-unused.patch,
+  virtualbox-ose-1.6.2.ebuild, virtualbox-ose-1.6.4.ebuild,
+  +virtualbox-ose-1.6.6.ebuild,
+  +files/virtualbox-ose-1.6.6-remove-unused.patch,
+  files/virtualbox-ose-wrapper:
+  Version bump; fix SRC_URI; enable additions by default wrt bug #235889; add
+  dev-util/kbuild and dev-lang/yasm to DEPEND and force to build without
+  shipped binaries (kBuild, yasm), thanks to Alon Bar-Lev for pointing out
+  this, wrt bug #232775; add qt3 USE flag;
 
   27 Aug 2008; Markus Ullmann <jokey@gentoo.org>
   virtualbox-ose-1.6.4.ebuild:
@@ -56,13 +81,13 @@
   04 Mar 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-1.5.4-r1.ebuild:
   Stable on x86 wrt bug #208905
 
-  26 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  26 Feb 2008; Diego PettenÃ² <flameeyes@gentoo.org>
   virtualbox-1.5.6.ebuild:
   Fix patch naming.
 
 *virtualbox-1.5.6 (25 Feb 2008)
 
-  25 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  25 Feb 2008; Diego PettenÃ² <flameeyes@gentoo.org>
   +virtualbox-1.5.6.ebuild:
   Version bump, as requested by the proxy-maintainer Alessio Cassibba.
 
@@ -111,7 +136,7 @@
   Fix desktop entry for bug #196832, typo in wrapper and HAL warning. Thanks
   to Alessio for providing needed modifications
 
-  29 Oct 2007; Dawid Węgliński <cla@gentoo.org> virtualbox-1.5.2.ebuild:
+  29 Oct 2007; Dawid WÄgliÅski <cla@gentoo.org> virtualbox-1.5.2.ebuild:
   Stable on x86
 
 *virtualbox-1.5.2 (22 Oct 2007)
@@ -188,7 +213,7 @@
   virtualbox-1.3.8.ebuild, virtualbox-9999.ebuild:
   Fix for sdl useflag bug #177335
 
-  21 Apr 2007; Raúl Porcel <armin76@gentoo.org> virtualbox-1.3.8.ebuild:
+  21 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> virtualbox-1.3.8.ebuild:
   x86 stable
 
 *virtualbox-1.3.8 (16 Mar 2007)
