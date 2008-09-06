@@ -1,9 +1,21 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.292 2008/08/23 05:40:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.293 2008/09/06 20:48:36 hoffie Exp $
+
+*php-5.2.6-r7 (06 Sep 2008)
+
+  06 Sep 2008; Christian Hoffmann <hoffie@gentoo.org> -php-5.2.6.ebuild,
+  -php-5.2.6-r2.ebuild, +php-5.2.6-r7.ebuild:
+  importing -r7 (patchset: r8) from php-testing overlay, including the snmp
+  memory leak fix from bug 231528; no need to upgrade for users with
+  USE=-snmp
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.
+
+  15 Aug 2008; Christian Hoffmann <hoffie@gentoo.org> -php-5.2.6.ebuild,
+  -php-5.2.6-r2.ebuild:
+  removing old and vulnerable
 
   09 Aug 2008; Christian Hoffmann <hoffie@gentoo.org> -php-4.4.8.ebuild:
   Removing php-4 (bug 189172); use the php-4 (layman) overlay instead, if

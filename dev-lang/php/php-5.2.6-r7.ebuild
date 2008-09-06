@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6.ebuild,v 1.2 2008/05/01 16:19:40 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6-r7.ebuild,v 1.1 2008/09/06 20:48:36 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -20,8 +20,8 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="0"
-SUHOSIN_PATCH="suhosin-patch-5.2.5_p20080206-0.9.6.2-gentoo.patch.gz"
+PHP_PATCHSET_REV="8"
+SUHOSIN_PATCH="suhosin-patch-5.2.6-0.9.6.2-r1.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/multilib-search-path.patch"
 # php patch settings, ebuild specific
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/fastbuild.patch"
@@ -32,12 +32,16 @@ KOLAB_PATCH="${MY_PHP_PV}/opt/kolab-imap-annotations.patch"
 
 inherit versionator php5_2-sapi apache-module
 
+SRC_URI="http://home.hoffie.info/php-patchset-${PV}-r${PHP_PATCHSET_REV}.tar.bz2
+	${SRC_URI}"
+
 # Suhosin patch support
 [[ -n "${SUHOSIN_PATCH}" ]] && SRC_URI="${SRC_URI} suhosin? ( http://gentoo.longitekk.com/${SUHOSIN_PATCH} )"
 
 DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
-DEPEND="app-admin/php-toolkit"
+DEPEND="app-admin/php-toolkit
+	imap? ( >=virtual/imap-c-client-2006k )"
 RDEPEND="${DEPEND}"
 if [[ -n "${KOLAB_PATCH}" ]] ; then
 	IUSE="${IUSE} kolab"
@@ -148,6 +152,9 @@ src_unpack() {
 		use kolab && epatch "${WORKDIR}/${KOLAB_PATCH}"
 	fi
 
+	# pretend to not have flex, bug 221357
+	sed -re 's:( +)PHP_SUBST\(LEX\):\1LEX="exit 0;"\n\0:' -i acinclude.m4
+
 	# Now let the eclass do the rest and regenerate the configure
 	php5_2-sapi_src_unpack
 
@@ -161,9 +168,6 @@ src_unpack() {
 	sed -e 's:/no/such/:.\0:' -i ext/standard/tests/file/005_error.phpt \
 		ext/standard/tests/file/006_error.phpt \
 		ext/standard/tests/file/touch.phpt
-
-	# Workaround for autoconf-2.62 behaviour change, bug 217392
-	sed -re 's:(#ifdef HAVE_CONFIG_H.*):#define _GNU_SOURCE\n\1:' -i ext/posix/posix.c
 
 	# REMOVING BROKEN TESTS:
 	# removing this test as it has been broken for ages and is not easily
@@ -187,6 +191,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug 217392 (autconf-2.62 behavior changes)
+	export CFLAGS="${CFLAGS} -D_GNU_SOURCE"
+	export CXXFLAGS="${CXXFLAGS} -D_GNU_SOURCE"
 	if use fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
 		src_compile_fastbuild
 	else
