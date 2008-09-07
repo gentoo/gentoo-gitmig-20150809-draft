@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.0.0.ebuild,v 1.1 2007/12/19 23:48:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.0.0.ebuild,v 1.2 2008/09/07 13:20:00 maekke Exp $
 
 MY_P="SimGear-${PV/_/-}"
 DESCRIPTION="Development library for simulation games"
@@ -9,7 +9,7 @@ SRC_URI="mirror://simgear/Source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/plib-1.8.4
