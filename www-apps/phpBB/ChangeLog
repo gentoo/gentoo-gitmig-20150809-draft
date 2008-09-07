@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.30 2008/07/31 20:23:52 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.31 2008/09/07 17:40:47 wrobel Exp $
+
+  07 Sep 2008; wrobel@gentoo.org -phpBB-2.0.23.ebuild:
+  Removed phpBB-2.0.23 for security reasons (#207353).
 
 *phpBB-3.0.2 (31 Jul 2008)
 
