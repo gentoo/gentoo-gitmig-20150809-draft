@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3check
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.10 2007/02/03 19:47:34 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.11 2008/09/07 19:47:11 loki_val Exp $
+
+*mp3check-0.8.3 (07 Sep 2008)
+
+  07 Sep 2008; Peter Alfredsen <loki_val@gentoo.org> +mp3check-0.8.3.ebuild:
+  Bump wrt. bug #236811.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
