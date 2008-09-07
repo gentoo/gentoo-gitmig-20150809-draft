@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.148 2008/09/07 17:36:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.149 2008/09/07 18:47:39 maekke Exp $
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  update openmp use-flag description
 
   07 Sep 2008; Markus Meier <maekke@gentoo.org> blender-2.47.ebuild,
   blender-2.47-r1.ebuild:
