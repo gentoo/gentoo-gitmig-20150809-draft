@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.146 2008/08/22 21:24:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.147 2008/09/07 13:34:32 maekke Exp $
+
+*blender-2.47-r1 (07 Sep 2008)
+*blender-2.47 (07 Sep 2008)
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> +blender-2.47.ebuild,
+  +blender-2.47-r1.ebuild:
+  bump to 2.47, bug #235776
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

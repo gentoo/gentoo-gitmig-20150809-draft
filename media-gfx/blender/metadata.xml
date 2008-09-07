@@ -16,6 +16,15 @@
 		<flag name='blender-game'>
 			Adds game engine support to blender
 		</flag>
+		<flag name='bullet'>
+			Enable Bullet (Physics Engine)
+		</flag>
+		<flag name='openmp'>
+			build support for the OpenMP (support parallel computing), requires sys-devel/gcc-4.3 built with USE="openmp"
+		</flag>
+		<flag name='player'>
+			Enable blender player
+		</flag>
 		<flag name='verse'>
 			Adds verse clustering features to blender
 		</flag>
