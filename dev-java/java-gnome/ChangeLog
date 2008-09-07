@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.64 2008/09/01 15:23:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.65 2008/09/07 13:50:47 maekke Exp $
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> java-gnome-4.0.7.ebuild:
+  amd64/x86 stable, bug #236275
 
   01 Sep 2008; Brent Baude <ranger@gentoo.org> java-gnome-4.0.7.ebuild:
   stable ppc, bug 236275
