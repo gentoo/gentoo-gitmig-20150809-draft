@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.47 2008/08/12 14:10:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.48 2008/09/07 18:49:02 ranger Exp $
+
+  07 Sep 2008; Brent Baude <ranger@gentoo.org> tracker-0.6.6-r1.ebuild:
+  Marking tracker-0.6.6-r1 ppc stable for gnome dependancies
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> tracker-0.6.6-r1.ebuild:
   alpha/ia64/sparc stable wrt #229709
