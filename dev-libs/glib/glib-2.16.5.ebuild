@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.16.5.ebuild,v 1.1 2008/07/20 06:54:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.16.5.ebuild,v 1.2 2008/09/07 17:03:39 eva Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="debug doc fam hardened selinux xattr"
+IUSE="debug fam hardened selinux xattr"
 
 RDEPEND="virtual/libc
 		 virtual/libiconv
@@ -18,12 +18,7 @@ RDEPEND="virtual/libc
 		 fam? ( virtual/fam )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.16
-		>=sys-devel/gettext-0.11
-		doc?	(
-					>=dev-libs/libxslt-1.0
-					>=dev-util/gtk-doc-1.8
-					~app-text/docbook-xml-dtd-4.1.2
-				)"
+		>=sys-devel/gettext-0.11"
 
 src_unpack() {
 	unpack ${A}
@@ -67,8 +62,6 @@ src_compile() {
 	# always build static libs, see #153807
 	econf ${myconf}                 \
 		  $(use_enable xattr)       \
-		  $(use_enable doc man)     \
-		  $(use_enable doc gtk-doc) \
 		  $(use_enable fam)         \
 		  $(use_enable selinux)     \
 		  --enable-static           \
