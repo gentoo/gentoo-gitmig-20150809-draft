@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.69 2008/05/30 07:13:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.70 2008/09/07 16:50:35 dertobi123 Exp $
+
+*libetpan-0.56 (07 Sep 2008)
+
+  07 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +libetpan-0.56.ebuild:
+  Version bump, #236178
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
