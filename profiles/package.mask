@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8960 2008/09/07 04:00:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8961 2008/09/07 17:41:46 wrobel Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1328,7 +1328,6 @@ www-apps/joomla
 www-apps/mambo
 www-apps/moregroupware
 www-apps/net2ftp
-=www-apps/phpBB-2*
 www-apps/wordpress
 www-apps/xoops
 
