@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.49 2008/06/27 10:07:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.50 2008/09/07 10:37:38 spock Exp $
+
+  07 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  +files/ida-desktop.patch, fbida-2.06.ebuild:
+  Make the .desktop file compliant with the freedesktop spec. Thanks for the
+  patch to Pacho Ramos (bug #236680).
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> fbida-2.03-r4.ebuild,
   fbida-2.05.ebuild, fbida-2.06.ebuild:

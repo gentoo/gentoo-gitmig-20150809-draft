@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.06.ebuild,v 1.12 2008/06/27 10:07:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.06.ebuild,v 1.13 2008/09/07 10:37:38 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,8 +48,7 @@ src_unpack() {
 	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' "${S}/mk/Variables.mk"
 
 	epatch "${FILESDIR}/fbida-2.05-asmpage-fix.patch"
-
-	echo "Icon=ida.png" >> desktop/ida.desktop
+	epatch "${FILESDIR}/ida-desktop.patch"
 }
 
 src_compile() {
