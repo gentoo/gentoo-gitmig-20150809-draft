@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.7.ebuild,v 1.4 2008/02/22 15:50:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.8.ebuild,v 1.1 2008/09/07 20:43:13 wrobel Exp $
 
 inherit webapp depend.php confutils
 

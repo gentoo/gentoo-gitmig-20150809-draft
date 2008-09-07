@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.146 2008/08/23 04:49:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.147 2008/09/07 20:43:13 wrobel Exp $
+
+*gallery-1.5.8 (07 Sep 2008)
+
+  07 Sep 2008; wrobel@gentoo.org -gallery-1.5.3.ebuild,
+  -gallery-1.5.7.ebuild, +gallery-1.5.8.ebuild:
+  Removed gallery-1.5.3, 1.5.7, added 1.5.8 in response to sec issue #234137.
+
+  07 Sep 2008; wrobel@gentoo.org ChangeLog:
+  Removed gallery-1.5.3, 1.5.7, added 1.5.8 in response to sec issue #234137.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
