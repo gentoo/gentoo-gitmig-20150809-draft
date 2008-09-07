@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.243 2008/08/12 14:15:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.244 2008/09/07 18:59:42 tester Exp $
+
+  07 Sep 2008; Olivier Crête <tester@gentoo.org> evolution-2.22.3.1.ebuild:
+  amd64 stable, bug #236971
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> evolution-2.22.2-r2.ebuild:
   alpha/ia64/sparc stable wrt #229709
