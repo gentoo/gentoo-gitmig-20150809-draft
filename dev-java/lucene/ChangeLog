@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.48 2008/09/06 13:54:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.49 2008/09/07 15:08:39 maekke Exp $
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> lucene-1.9.1.ebuild:
+  unquote A; amd64/x86 stable, bug #236343
 
   06 Sep 2008; nixnut <nixnut@gentoo.org> lucene-1.9.1.ebuild:
   Stable on ppc wrt bug 236343
