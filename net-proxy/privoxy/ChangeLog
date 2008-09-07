@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.38 2008/07/30 19:55:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.39 2008/09/07 10:33:40 mrness Exp $
+
+*privoxy-3.0.10 (07 Sep 2008)
+
+  07 Sep 2008; Alin Năstac <mrness@gentoo.org> +privoxy-3.0.10.ebuild:
+  Version bump (#236875).
 
 *privoxy-3.0.9_beta-r1 (30 Jul 2008)
 
