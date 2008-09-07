@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/qrna
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.18 2008/06/22 21:36:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.19 2008/09/07 11:23:57 markusle Exp $
+
+  07 Sep 2008; Markus Dittrich <markusle@gentoo.org> qrna-2.0.3c.ebuild:
+  Fixed bad HOMEPAGE and formatting in ebuild.
 
   22 Jun 2008; Jeff Gardner <je_fro@gentoo.org> qrna-2.0.3c.ebuild:
   Do not install shuffle, it comes from hmmer.
