@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.350 2008/09/06 21:03:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.351 2008/09/07 12:39:57 carlo Exp $
+
+  07 Sep 2008; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
+  Fix a typo.
 
   06 Sep 2008; <chainsaw@gentoo.org> xorg-server-1.5.0.ebuild:
   Only depend on x11-drivers/xf86-input-synaptics as the older package does

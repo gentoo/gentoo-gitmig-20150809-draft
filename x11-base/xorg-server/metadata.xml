@@ -5,6 +5,6 @@
 <use>
 	<flag name='dmx'>Build the Distributed Multiheaded X server</flag>
 	<flag name='kdrive'>Build the kdrive X servers</flag>
-	<flag name='xorg'>Build the Xorg X server (HIGHLY RECOMMENDED</flag>
+	<flag name='xorg'>Build the Xorg X server (HIGHLY RECOMMENDED)</flag>
 </use>
 </pkgmetadata>
