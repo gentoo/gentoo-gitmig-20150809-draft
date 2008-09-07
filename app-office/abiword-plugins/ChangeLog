@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.51 2008/08/03 10:25:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.52 2008/09/07 17:20:00 fmccor Exp $
+
+  07 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
+  abiword-plugins-2.6.4.ebuild:
+  Sparc stable, Bug #236985.
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
