@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.47.ebuild,v 1.1 2008/09/07 13:34:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.47.ebuild,v 1.2 2008/09/07 17:36:30 maekke Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -78,6 +78,13 @@ src_unpack() {
 		BF_PYTHON_LIB="python${PYVER}"
 	EOF
 
+	if use openmp && built_with_use --missing false sys-devel/gcc openmp ; then
+		echo "WITH_BF_OPENMP=1" >> "${S}"/user-config.py
+		elog "enabling openmp"
+	else
+		echo "WITH_BF_OPENMP=0" >> "${S}"/user-config.py
+		elog "disabling openmp"
+	fi
 }
 
 src_compile() {
@@ -87,7 +94,6 @@ src_compile() {
 			'nls international' \
 			'openal' \
 			'openexr' \
-			'openmp' \
 			'player' \
 			'verse' ; do
 		blend_with ${arg}
