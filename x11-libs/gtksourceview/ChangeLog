@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.139 2008/08/12 13:41:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.140 2008/09/07 18:56:42 tester Exp $
+
+  07 Sep 2008; Olivier Crête <tester@gentoo.org>
+  gtksourceview-2.2.2.ebuild:
+  amd64 stable, bug #236971
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> gtksourceview-2.2.1.ebuild:
   alpha/ia64/sparc stable wrt #229709
