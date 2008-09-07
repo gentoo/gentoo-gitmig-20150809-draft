@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.8 2008/09/07 02:25:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5-r1.ebuild,v 1.1 2008/09/07 02:25:27 opfer Exp $
 
 EAPI=1
 
@@ -13,12 +13,11 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="doc nls sqlite"
 
-# Raise dependency to gnome-extra/libgda-3* once it is stable
-RDEPEND="gnome-extra/libgda:1
+RDEPEND="gnome-extra/libgda:3
 	dev-libs/libxml2
 	sqlite? ( =dev-db/sqlite-2* )"
 DEPEND="${DEPEND}
