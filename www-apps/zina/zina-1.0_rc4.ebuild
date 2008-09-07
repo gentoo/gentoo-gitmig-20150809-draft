@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc3.ebuild,v 1.5 2008/02/22 15:57:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc4.ebuild,v 1.1 2008/09/07 17:35:16 wrobel Exp $
 
 inherit webapp depend.php
 
