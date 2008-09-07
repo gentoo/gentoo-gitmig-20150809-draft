@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.9.ebuild,v 1.5 2008/07/27 01:45:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.9.ebuild,v 1.6 2008/09/07 19:45:20 cryos Exp $
 
 EAPI="1"
 inherit eutils cmake-utils
@@ -48,8 +48,8 @@ pkg_setup() {
 	fi
 
 	if use dbus && use qt4; then
-		if ( has version "<x11-libs/qt-4.4.0_alpha:4" && ! built_with_use x11-libs/qt:4 dbus ) || \
-			( has version "x11-libs/qt-gui:4" && ! built_with_use x11-libs/qt-gui:4 dbus); then
+		if ( has_version "<x11-libs/qt-4.4.0_alpha:4" && ! built_with_use x11-libs/qt:4 dbus ) || \
+			( has_version "x11-libs/qt-gui:4" && ! built_with_use x11-libs/qt-gui:4 dbus); then
 			eerror "You are building Strigi with qt4 and dbus, but qt4 wasn't built with dbus support."
 			eerror "Please re-emerge qt4 with dbus, or disable dbus in Strigi."
 			die
