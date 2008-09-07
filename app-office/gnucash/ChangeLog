@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.169 2008/07/31 08:48:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.170 2008/09/07 17:48:22 maekke Exp $
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> gnucash-2.2.6.ebuild:
+  amd64/x86 stable, bug #236968
 
   31 Jul 2008; Torsten Veller <tove@gentoo.org> -files/SplitP.h.patch:
   Remove old file
