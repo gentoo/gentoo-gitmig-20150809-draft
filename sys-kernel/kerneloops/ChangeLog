@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kerneloops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.10 2008/04/28 16:00:04 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.11 2008/09/07 17:51:46 maekke Exp $
+
+  07 Sep 2008; Markus Meier <maekke@gentoo.org> kerneloops-0.11.ebuild:
+  add ~amd64, bug #236956
 
   28 Apr 2008; Greg Kroah-Hartman <gregkh@gentoo.org>
   -kerneloops-0.8.ebuild, -kerneloops-0.8-r1.ebuild:
