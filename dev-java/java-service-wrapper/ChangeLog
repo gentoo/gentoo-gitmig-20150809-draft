@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-service-wrapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.4 2008/09/06 21:49:43 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.5 2008/09/07 07:35:33 ali_bush Exp $
+
+  07 Sep 2008; Alistair Bush <ali_bush@gentoo.org>
+  +java-service-wrapper-3.3.1.ebuild:
+  Bump to 3.3.1. See #236856. Thanks a lot to tommy@gentoo.org
 
   06 Sep 2008; Alistair Bush <ali_bush@gentoo.org>
   -java-service-wrapper-3.3.1.ebuild:
