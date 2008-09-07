@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.26.ebuild,v 1.1 2008/05/29 04:34:28 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27.ebuild,v 1.1 2008/09/07 19:29:29 rajiv Exp $
 
-inherit toolchain-funcs eutils linux-mod flag-o-matic
+inherit toolchain-funcs eutils linux-mod flag-o-matic multilib
 
 BRI_VERSION="0.3.0-PRE-1y-l"
 FLORZ_VERSION="0.3.0-PRE-1y-l_florz-12.1"
@@ -170,7 +170,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.2.23-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-1.2.26-gentoo.diff
 	epatch "${FILESDIR}"/zaptel-1.2.9.1-ar.patch
 	epatch "${FILESDIR}"/zaptel-1.2.25-xpputils.diff
 
@@ -245,6 +245,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export MYLIBDIR="$(get_libdir)"
+
 	# build
 	make KVERS=${KV_FULL} \
 	     KSRC=${KV_DIR} ARCH=$(tc-arch-kernel) || die
