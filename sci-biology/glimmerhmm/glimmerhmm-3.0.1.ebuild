@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.1 2008/09/07 13:11:13 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.2 2008/09/07 14:37:31 weaver Exp $
 
 MY_P=GlimmerHMM
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	sed -i -e 's|\(my $scriptdir=\)$FindBin::Bin|\1"/usr/share/'${PN}'/training_utils"|' \
