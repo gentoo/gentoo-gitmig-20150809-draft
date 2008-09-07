@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.58 2008/04/18 06:45:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.59 2008/09/07 17:30:37 wrobel Exp $
+
+*tikiwiki-2.0 (07 Sep 2008)
+
+  07 Sep 2008; wrobel@gentoo.org -tikiwiki-1.9.11.ebuild,
+  +tikiwiki-2.0.ebuild:
+  Added tikiwiki-2.0, removed tikiwiki-1.9.11 (sec issue #213320).
 
 *tikiwiki-1.9.11 (18 Apr 2008)
 

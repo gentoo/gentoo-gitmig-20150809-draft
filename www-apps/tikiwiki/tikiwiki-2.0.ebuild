@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.11.ebuild,v 1.1 2008/04/18 06:45:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-2.0.ebuild,v 1.1 2008/09/07 17:30:37 wrobel Exp $
 
 inherit webapp depend.php
 
