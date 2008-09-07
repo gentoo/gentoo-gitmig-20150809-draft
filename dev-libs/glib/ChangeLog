@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.329 2008/09/07 17:03:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.330 2008/09/07 18:55:03 tester Exp $
+
+  07 Sep 2008; Olivier Crête <tester@gentoo.org> glib-2.16.5.ebuild:
+  amd64 stable, bug #236971
 
   07 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org> glib-2.16.5.ebuild:
   drop USE="doc" for 2.16.5 only, bug #232417.
