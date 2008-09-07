@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/glimmer
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.1 2008/09/07 13:06:53 weaver Exp $
+
+*glimmer-3.02 (07 Sep 2008)
+
+  07 Sep 2008; weaver <weaver@gentoo.org> +metadata.xml,
+  +glimmer-3.02.ebuild:
+  Import from science overlay
+
