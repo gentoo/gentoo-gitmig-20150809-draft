@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>forensics</herd>
+<maintainer>
+  <email>bluebird@gentoo.org</email>
+  <description>Proxy Maintainer</description>
+</maintainer>
+<maintainer>
+	<email>spooky85@gmail.com</email>
+	<name>Christian Ruppert</name>
+</maintainer>
+</pkgmetadata>

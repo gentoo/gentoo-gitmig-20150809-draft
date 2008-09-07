@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/lynis -c --auditor "automated" --cronjob
