@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02.ebuild,v 1.1 2008/09/07 13:06:53 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02.ebuild,v 1.2 2008/09/07 14:36:17 weaver Exp $
 
 inherit versionator
 
@@ -18,11 +18,12 @@ KEYWORDS="~x86"
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${PN}${PV}"
 
 src_compile() {
 	sed -i -e 's|\(set awkpath =\).*|\1 /usr/share/'${PN}'/scripts|' \
 		-e 's|\(set glimmerpath =\).*|\1 /usr/bin|' scripts/* || die "failed to rewrite paths"
+	sed -i 's/include  <string>/include  <string.h>/' src/Common/delcher.hh
 	cd src
 	emake || die "emake failed"
 }
