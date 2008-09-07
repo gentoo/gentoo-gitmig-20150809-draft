@@ -2,14 +2,22 @@
 ############# Misc drives, added by Gentoo
 #############################################
 
-"ST9160821AS"								194 C "Seagate ST9160821AS"
-"ST3400620A"								194 C "Seagate Barracuda 7200.10 ST3400620A"
+"ST9160821AS"							194 C "Seagate ST9160821AS"
+"ST3400620A"							194 C "Seagate Barracuda 7200.10 ST3400620A"
 "MAXTOR STM3160212A"						194 C "Maxtor STM3160212A"
 "WDC WD2500JS-23MHB0"						194 C "Western Digital 250GB, 8MB cache"
 "WDC WD740ADFD-00NLR1"						194 C "Western Digital SATA Raptor 74GB 16MB"
-"ST3320620AS"								194 C "Seagate ST3320620AS"
+"ST3320620AS"							194 C "Seagate ST3320620AS"
 "WDC WD3200AAKS-00SBA0"						194 C "Western Digital WD3200AAKS-00SBA0"
-"ST3120813AS"								194 C "Seagate ST3120813AS"
-"ST3250620AS"								194 C "Seagate ST3250620AS"
-"ST3250310AS"								194 C "Seagate Barracuda 720.10 SATA 250GB 8MB"
+"ST3120813AS"							194 C "Seagate ST3120813AS"
+"ST3250620AS"							194 C "Seagate ST3250620AS"
+"ST3250310AS"							194 C "Seagate Barracuda 7200.10 SATA 250GB 8MB"
+"ST3500320AS"							194 C "Seagate Barracuda 7200.11 SATA 500GB 32MB"
+"ST3320613AS"							194 C "Seagate Barracuda 7200.11 SATA 320GB 16MB"
+"ST3500320AS"							194 C "Seagate Barracuda 7200.11 SATA 500GB 32MB"
+"ST3500620AS"							194 C "Seagate Barracuda 7200.11 SATA 500GB 16MB"
+"ST3640323AS"							194 C "Seagate Barracuda 7200.11 SATA 64GB 32MB"
+"ST3750330AS"							194 C "Seagate Barracuda 7200.11 SATA 750GB 32MB"
+"ST3750630AS"							194 C "Seagate Barracuda 7200.11 SATA 750GB 16MB"
+"ST31000340AS"							194 C "Seagate Barracuda 7200.11 SATA 1000GB 32MB"
 
