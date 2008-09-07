@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1845 2008/09/07 02:20:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1846 2008/09/07 04:00:47 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Removed kde-base/qimageblitz-0.0.4 from the kde-4 mask as it's required
+  for kde-4.1.
 
   07 Sep 2008; Mart Raudsepp <leio@gentoo.org>
   +arch/powerpc/ppc32/package.mask, +default-linux/ppc/ppc32/package.mask,
