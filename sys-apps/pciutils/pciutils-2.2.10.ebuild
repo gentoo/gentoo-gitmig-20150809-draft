@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.10.ebuild,v 1.7 2008/04/12 07:45:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.10.ebuild,v 1.8 2008/09/07 15:16:08 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -42,7 +42,7 @@ src_install() {
 	# Install both forms until HAL has migrated
 	if use zlib ; then
 		local sharedir="${D}/usr/share/misc"
-		elog "Providing a backwards compatability non-compressed pci.ids"
+		elog "Providing a backwards compatibility non-compressed pci.ids"
 		gzip -d <"${sharedir}"/pci.ids.gz >"${sharedir}"/pci.ids
 	fi
 }
