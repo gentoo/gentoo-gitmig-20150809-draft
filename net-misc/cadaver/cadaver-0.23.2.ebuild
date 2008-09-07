@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.5 2008/09/04 20:43:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.6 2008/09/07 13:46:15 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.webdav.org/cadaver/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="gnutls nls ssl"
 
 DEPEND=">=net-misc/neon-0.27.0"
