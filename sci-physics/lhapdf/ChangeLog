@@ -1,0 +1,10 @@
+# ChangeLog for sci-physics/lhapdf
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.1 2008/09/07 22:10:27 bicatali Exp $
+
+*lhapdf-5.5.0 (07 Sep 2008)
+
+  07 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +lhapdf-5.5.0.ebuild:
+  Initial import, inspired from Benjamin Bannier's work (bug #236719)
+
