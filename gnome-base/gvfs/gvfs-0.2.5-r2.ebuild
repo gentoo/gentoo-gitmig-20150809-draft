@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.5-r2.ebuild,v 1.2 2008/09/01 12:22:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.5-r2.ebuild,v 1.3 2008/09/07 22:46:33 eva Exp $
 
 inherit bash-completion gnome2 eutils autotools
 
@@ -44,6 +44,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 			--enable-http
 			--disable-bash-completion
+			--disable-archive
 			$(use_enable avahi)
 			$(use_enable bluetooth obexftp)
 			$(use_enable cdda)
