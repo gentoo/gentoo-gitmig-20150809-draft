@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.141 2008/08/22 22:30:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.142 2008/09/08 20:34:00 maekke Exp $
+
+  08 Sep 2008; Markus Meier <maekke@gentoo.org> splashutils-1.5.4.2.ebuild:
+  amd64/x86 stable, bug #237000
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
