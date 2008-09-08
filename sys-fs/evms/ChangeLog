@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.88 2008/08/22 21:38:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.89 2008/09/08 08:57:08 dev-zero Exp $
+
+  08 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> files/evms2-start.sh:
+  Removed bashism from start script
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
