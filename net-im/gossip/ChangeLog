@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.81 2008/09/07 15:38:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.82 2008/09/08 04:08:32 jer Exp $
+
+  08 Sep 2008; Jeroen Roovers <jer@gentoo.org> gossip-0.31.ebuild:
+  Stable for HPPA (bug #236959).
 
   07 Sep 2008; Markus Meier <maekke@gentoo.org> gossip-0.31.ebuild:
   amd64/x86 stable, bug #236959
