@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.383 2008/08/31 18:29:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.384 2008/09/08 05:52:52 aballier Exp $
+
+  08 Sep 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.9.1.ebuild:
+  support also older revisions of ffmpeg
 
   31 Aug 2008; Tobias Klausmann <klausman@gentoo.org> vlc-0.9.1.ebuild:
   Keyworded on alpha, bug #235636

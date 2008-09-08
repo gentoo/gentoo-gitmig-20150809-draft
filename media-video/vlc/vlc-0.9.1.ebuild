@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.1.ebuild,v 1.3 2008/08/31 18:29:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.1.ebuild,v 1.4 2008/09/08 05:52:52 aballier Exp $
 
 EAPI="1"
 
@@ -71,7 +71,7 @@ RDEPEND="
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
-		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r3 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616 )
 		flac? ( media-libs/libogg
 			>=media-libs/flac-1.1.2 )
 		fluidsynth? ( media-sound/fluidsynth )
@@ -177,7 +177,7 @@ vlc_use_enable_force() {
 # Prints the configure argument for the ffmpeg scaling api to use
 vlc_ffmpeg_scaling_api() {
 	if use ffmpeg ; then
-		if has_version ">=media-video/ffmpeg-0.4.9_p20070616-r20" ; then
+		if has_version ">=media-video/ffmpeg-0.4.9_p20070616-r20" || has_version "=media-video/ffmpeg-0.4.9_p20070616-r2" || has_version "=media-video/ffmpeg-0.4.9_p20070616-r1"; then
 			echo "--enable-swscale --disable-imgresample"
 		else
 			echo "--disable-swscale --enable-imgresample"
