@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.3 2008/06/29 08:59:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.4 2008/09/08 20:36:20 maekke Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xmds/${P}.tar.gz
 	 doc? ( mirror://sourceforge/xmds/xmds_doc_${doc_ver}.pdf )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples mpi threads"
 
 DEPEND="sci-libs/fftw
