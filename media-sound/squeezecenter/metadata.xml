@@ -5,6 +5,10 @@
   <maintainer>
     <email>lavajoe@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>stuart@hickinbottom.com</email>
+    <name>Stuart Hickinbottom</name>
+  </maintainer>
   <longdescription lang="en">
     This package provides the Logitech SqueezeCenter audio server.
     SqueezeCenter will allow access to your audio collection over local

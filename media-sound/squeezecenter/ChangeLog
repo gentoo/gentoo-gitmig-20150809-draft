@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.21 2008/08/31 19:56:39 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.22 2008/09/08 22:07:02 lavajoe Exp $
+
+  08 Sep 2008; Joe Peterson <lavajoe@gentoo.org> metadata.xml:
+  Add Stuart Hickinbottom as a proxy maintainer to metadata.xml
 
 *squeezecenter-7.2.0 (31 Aug 2008)
 
