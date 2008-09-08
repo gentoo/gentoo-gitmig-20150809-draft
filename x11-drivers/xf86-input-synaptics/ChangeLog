@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.7 2008/09/08 10:17:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.8 2008/09/08 11:47:07 josejx Exp $
+
+  08 Sep 2008; Joseph Jezak <josejx@gentoo.org>
+  xf86-input-synaptics-0.15.1.ebuild:
+  Marked ~ppc for bug #235464.
 
 *xf86-input-synaptics-0.15.1 (08 Sep 2008)
 
