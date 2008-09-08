@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.2 2008/06/27 10:31:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.3 2008/09/08 03:46:33 nerdboy Exp $
 
 inherit eutils distutils
 
@@ -86,7 +86,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR="${D}" install
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use usb ; then
 		insinto /etc/hotplug/usb
@@ -131,25 +131,31 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "This version of gpsd has broken the support for the TNT compass"
-	einfo "and Garmin so they are disabled.  If you need it, stay with the"
-	einfo "previous version for now.  The minimal flag now removes X and"
-	einfo "enables the embedded device (ie, small footprint) support, but"
-	einfo "you'll need to modify the ebuild if you need to change either"
-	einfo "the number of clients or the number of devices.  Although pps"
-	einfo "is enabled, it still needs the correct kernel patches.  All"
-	einfo "recent versions of udev (>=udev-115 or so) should have correct"
-	einfo "usb device detection and startup of gpsd (ie, without hotplug)."
-	einfo ""
-	einfo "Different GPS devices require the corresponding kernel options"
-	einfo "to be enabled, such as USB_SERIAL_GARMIN, or a USB serial driver"
-	einfo "for an adapter such as those that come with Deluo GPS units (eg,"
-	einfo "USB_SERIAL_PL2303). Straight serial devices should always work,"
-	einfo "even without udev/hotplug support."
-	einfo ""
-	einfo "Read the INSTALL doc for more information on supported hardware,"
-	einfo "and make sure udev has the right group permissions set on the tty"
-	einfo "devices if using USB (it should Do The Right Thing (TM))..."
-	einfo ""
+	elog ""
+	elog "This version of gpsd has broken the support for the TNT compass"
+	elog "and Garmin so they are disabled.  If you need it, stay with the"
+	elog "previous version for now.  The minimal flag now removes X and"
+	elog "enables the embedded device (ie, small footprint) support, but"
+	elog "you'll need to modify the ebuild if you need to change either"
+	elog "the number of clients or the number of devices.  Although pps"
+	elog "is enabled, it still needs the correct kernel patches.  All"
+	elog "recent versions of udev (>=udev-115 or so) should have correct"
+	elog "usb device detection and startup of gpsd (ie, without hotplug)."
+	elog ""
+	elog "Different GPS devices require the corresponding kernel options"
+	elog "to be enabled, such as USB_SERIAL_GARMIN, or a USB serial driver"
+	elog "for an adapter such as those that come with Deluo GPS units (eg,"
+	elog "USB_SERIAL_PL2303). Straight serial devices should always work,"
+	elog "even without udev/hotplug support."
+	elog ""
+	elog "Note: the supplied gpsd udev rules are now device-specific, so"
+	elog "if your device isn't detected correctly, please use lsusb or"
+	elog "another suitable tool to determine the proper device IDs and"
+	elog "use the commented rules to fill in the blanks for your device."
+	elog "Please file a bug to get your device added to the list."
+	elog ""
+	elog "Read the INSTALL doc for more information on supported hardware,"
+	elog "and make sure udev has the right group permissions set on the tty"
+	elog "devices if using USB (it should Do The Right Thing (TM))..."
+	elog ""
 }
