@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.25-r5.ebuild,v 1.1 2008/08/23 02:12:48 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.25-r5.ebuild,v 1.2 2008/09/08 01:15:27 gengor Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 IUSE=""
 
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
