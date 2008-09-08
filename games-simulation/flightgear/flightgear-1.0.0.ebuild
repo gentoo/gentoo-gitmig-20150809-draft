@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-1.0.0.ebuild,v 1.2 2008/09/07 13:24:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-1.0.0.ebuild,v 1.3 2008/09/08 17:18:14 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
@@ -23,6 +23,13 @@ DEPEND="virtual/glut
 	sdl? ( media-libs/libsdl )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-sdl.patch"
+	eautoreconf
+}
 
 src_compile() {
 	egamesconf \
