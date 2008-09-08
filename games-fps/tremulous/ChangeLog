@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tremulous
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.8 2008/09/07 14:35:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.9 2008/09/08 20:27:44 keytoaster Exp $
+
+  08 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  tremulous-1.1.0-r2.ebuild:
+  amd64 stable wrt security bug #222119
 
 *tremulous-1.1.0-r2 (07 Sep 2008)
 
