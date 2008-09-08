@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1.ebuild,v 1.1 2008/09/06 07:03:40 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1.ebuild,v 1.2 2008/09/08 23:36:09 dberkholz Exp $
 
 GIT=
 if [[ ${PV} = 9999* ]]; then
@@ -50,30 +50,30 @@ IUSE="${IUSE_VIDEO_CARDS}
 	xcb
 	kernel_FreeBSD"
 
-RDEPEND="app-admin/eselect-opengl
+RDEPEND=">=app-admin/eselect-opengl-1.0.6-r1
 	dev-libs/expat
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXxf86vm
-	x11-libs/libXi
-	x11-libs/libXmu
-	x11-libs/libXdamage
+	>=x11-libs/libX11-1.1.5
+	>=x11-libs/libXext-1.0.4
+	>=x11-libs/libXxf86vm-1.0.2
+	>=x11-libs/libXi-1.1.3
+	>=x11-libs/libXmu-1.0.3
+	>=x11-libs/libXdamage-1.1.1
 	>=x11-libs/libdrm-2.3.1
-	x11-libs/libICE
-	motif? ( x11-libs/openmotif )
-	doc? ( app-doc/opengl-manpages )
+	>=x11-libs/libICE-1.0.4
+	motif? ( >=x11-libs/openmotif-2.3.1-r1 )
+	doc? ( >=app-doc/opengl-manpages-20001215 )
 	!<=x11-base/xorg-x11-6.9"
 DEPEND="${RDEPEND}
 	!<=x11-proto/xf86driproto-2.0.3
 	dev-util/pkgconfig
-	x11-misc/makedepend
-	x11-proto/inputproto
-	x11-proto/xextproto
-	!hppa? ( x11-proto/xf86driproto )
-	x11-proto/dri2proto
-	x11-proto/xf86vidmodeproto
-	>=x11-proto/glproto-1.4.8
-	motif? ( x11-proto/printproto )"
+	>=x11-misc/makedepend-1.0.1
+	>=x11-proto/inputproto-1.4.4
+	>=x11-proto/xextproto-7.0.3
+	!hppa? ( >=x11-proto/xf86driproto-2.0.4 )
+	>=x11-proto/dri2proto-1.1
+	>=x11-proto/xf86vidmodeproto-2.2.2
+	>=x11-proto/glproto-1.4.9
+	motif? ( >=x11-proto/printproto-1.0.4 )"
 
 S="${WORKDIR}/${MY_P}"
 
