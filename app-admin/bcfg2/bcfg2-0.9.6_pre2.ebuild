@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6_pre1.ebuild,v 1.2 2008/09/08 18:20:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6_pre2.ebuild,v 1.1 2008/09/08 18:33:02 darkside Exp $
 
 inherit distutils
 
@@ -18,10 +18,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="server"
 
 DEPEND="|| ( >=dev-lang/python-2.5
-		( >=dev-lang/python-2.4
-		|| ( app-admin/gamin app-admin/fam ) ) )"
+		(
+		>=dev-lang/python-2.4
+			|| ( app-admin/gamin app-admin/fam )
+		)
+	)"
 
 RDEPEND="app-portage/gentoolkit
+	dev-python/lxml
 	server? (
 		dev-python/pyopenssl
 		|| ( app-admin/gamin app-admin/fam ) )"
@@ -52,8 +56,8 @@ src_install() {
 
 pkg_postinst () {
 	depscan.sh
-	einfo "If this is a new installation, you probably need to run "
-	einfo "\"bcfg2-admin init\""
+	use server && einfo "If this is a new installation, you probably need to run: "
+	use server && einfo "    bcfg2-admin init"
 }
 
 pkg_postrm () {
