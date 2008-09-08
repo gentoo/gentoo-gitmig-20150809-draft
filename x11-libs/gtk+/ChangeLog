@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.393 2008/09/07 19:03:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.394 2008/09/08 19:41:46 maekke Exp $
+
+  08 Sep 2008; Markus Meier <maekke@gentoo.org> gtk+-2.12.11.ebuild:
+  x86 stable, bug #236971
 
   07 Sep 2008; Olivier Crête <tester@gentoo.org> gtk+-2.12.11.ebuild:
   amd64 stable, bug #236971
