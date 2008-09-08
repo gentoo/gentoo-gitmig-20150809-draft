@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6_pre1.ebuild,v 1.1 2008/07/03 03:12:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6_pre1.ebuild,v 1.2 2008/09/08 18:20:59 darkside Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="server"
 
 DEPEND="|| ( >=dev-lang/python-2.5
@@ -52,6 +52,8 @@ src_install() {
 
 pkg_postinst () {
 	depscan.sh
+	einfo "If this is a new installation, you probably need to run "
+	einfo "\"bcfg2-admin init\""
 }
 
 pkg_postrm () {
