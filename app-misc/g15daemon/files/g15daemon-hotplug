@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$ACTION" in
+    "add")
+        /etc/init.d/g15daemon restart
+        ;;
+    "remove")
+        /etc/init.d/g15daemon stop
+        ;;
+    *)
+        exit 0
+        ;;
+esac
