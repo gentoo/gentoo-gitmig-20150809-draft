@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_alpha2.ebuild,v 1.3 2008/09/07 17:03:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_alpha2.ebuild,v 1.4 2008/09/08 16:09:32 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -100,6 +100,10 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/firefox
 
+	# Install icon and .desktop for menu entry
+	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
+
 	# Install firefox in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
 	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
@@ -126,10 +130,6 @@ unset LD_PRELOAD
 exec /opt/firefox/firefox "\$@"
 EOF
 		fperms 0755 /usr/bin/firefox-bin
-
-	# Install icon and .desktop for menu entry
-	doicon "${FILESDIR}"/icon/${PN}-icon.png
-	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
