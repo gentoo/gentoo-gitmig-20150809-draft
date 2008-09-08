@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/Data-ICal-0.13.ebuild,v 1.1 2008/09/08 11:00:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/Data-ICal-0.13.ebuild,v 1.2 2008/09/08 11:01:59 tove Exp $
 
 MODULE_AUTHOR="JESSE"
 inherit perl-module
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="test"
 
 RDEPEND="dev-lang/perl
-	dev-perl/Class-Accessor 
+	dev-perl/Class-Accessor
 	dev-perl/class-returnvalue
 	dev-perl/Text-vFile-asData"
 DEPEND="${RDEPEND}
