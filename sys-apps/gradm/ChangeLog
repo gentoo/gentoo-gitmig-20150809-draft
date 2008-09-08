@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.103 2008/09/08 01:23:27 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.104 2008/09/08 03:39:28 gengor Exp $
+
+  08 Sep 2008; Gordon Malm <gengor@gentoo.org>
+  gradm-2.1.10.200702231759.ebuild:
+  Make repoman happy.
 
   08 Sep 2008; Gordon Malm <gengor@gentoo.org> metadata.xml:
   Update my email address, remove solar per request.
