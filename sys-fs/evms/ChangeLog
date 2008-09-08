@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.89 2008/09/08 08:57:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.90 2008/09/08 08:59:49 dev-zero Exp $
+
+  08 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> -evms-2.5.5-r6.ebuild,
+  -evms-2.5.5-r7.ebuild, -evms-2.5.5-r9.ebuild:
+  Dropped old revisions.
 
   08 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> files/evms2-start.sh:
   Removed bashism from start script
