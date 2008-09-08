@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.20 2008/08/23 06:29:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.21 2008/09/08 22:46:21 spock Exp $
+
+  09 Sep 2008; Michał Januszewski <spock@gentoo.org> -v86d-0.1.5.ebuild,
+  -v86d-0.1.5.1.ebuild:
+  Remove old ebuilds.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
