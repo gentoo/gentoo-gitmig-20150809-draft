@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.7.ebuild,v 1.4 2008/04/07 20:54:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.8a.ebuild,v 1.1 2008/09/08 20:34:12 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
 JDK_RELEASE=$(get_version_component_range 2-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
-SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
-TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
+SERVICE_RELEASE_LINK="${SERVICE_RELEASE}a"
+TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}a.0"
 
 JRE_DIST_PREFIX="ibm-java2-jre-${TGZ_PV}-linux"
 
@@ -48,7 +48,7 @@ SRC_URI="x86? ( ${X86_JRE_DIST} )
 	ppc? ( ${PPC_JRE_DIST} )
 	ppc64? ( ${PPC64_JRE_DIST} )"
 LICENSE="IBM-J1.5"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa nsplugin odbc"
 
