@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.2_beta1.ebuild,v 1.1 2008/08/03 16:19:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.2.ebuild,v 1.1 2008/09/09 23:36:50 caleb Exp $
 
 inherit eutils multilib
 
@@ -9,12 +9,12 @@ JABBER_RUN="/var/run/jabber"
 JABBER_SPOOL="/var/spool/jabber"
 JABBER_LOG="/var/log/jabber"
 
-MY_PV=${PV/_beta1/}
+MY_PV=${PV}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
-SRC_URI="http://download.process-one.net/ejabberd/${MY_P}-beta1.tar.gz"
+SRC_URI="http://www.process-one.net/downloads/ejabberd/${PV}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -29,7 +29,9 @@ DEPEND=">=net-im/jabber-base-0.01
 	zlib? ( sys-libs/zlib )"
 
 PROVIDE="virtual/jabber-server"
-S=${WORKDIR}/${MY_P}-beta1/src
+
+S=${WORKDIR}/${MY_P}/src
+
 
 src_unpack() {
 	unpack ${A}
