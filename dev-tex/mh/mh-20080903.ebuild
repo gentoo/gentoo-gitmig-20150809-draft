@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080903.ebuild,v 1.2 2008/09/04 07:47:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080903.ebuild,v 1.3 2008/09/09 16:55:17 aballier Exp $
 
 inherit latex-package
 
@@ -10,9 +10,11 @@ SRC_URI="mirror://gentoo/${P}.zip"
 LICENSE="LPPL-1.3"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 
-RDEPEND="!dev-tex/breqn"
+RDEPEND="!dev-tex/breqn
+	dev-tex/xcolor
+	>=dev-texlive/texlive-latex3-2008"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
