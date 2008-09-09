@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2008.ebuild,v 1.2 2008/09/09 18:23:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2008.ebuild,v 1.3 2008/09/09 18:31:52 aballier Exp $
 
 DESCRIPTION="A complete TeX distribution"
 HOMEPAGE="http://tug.org/texlive/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="cjk context cyrillic detex doc dvi2tty extra games graphics humanities jadetex music omega
-	png pstricks publishers science tex4ht xetex xindy xml X"
+	png pstricks publishers science tex4ht truetype xetex xindy xml X"
 
 LANGS="af ar bg bn bo cs cy da de el en en_GB eo es et fi fr ga he hi hr hsb hu hy id
 	is it ja ko la ml mn nl no pl pt ro ru sk sl sr sv ta th tr uk vi zh"
@@ -33,7 +33,7 @@ RDEPEND="${DEPEND}
 	app-text/t1utils
 	dev-util/dialog
 	>=app-text/lcdf-typetools-2.69
-	=media-libs/freetype-1*
+	truetype? ( =media-libs/freetype-1* )
 	detex? ( dev-tex/detex )
 	app-text/ps2eps
 	>=app-text/dvipdfm-0.13.2d
