@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1848 2008/09/08 06:26:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1849 2008/09/09 14:51:39 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Add the big TeX Live 2008 mask
 
   08 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove caml-light mask, its gone
