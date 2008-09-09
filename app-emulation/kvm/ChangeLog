@@ -1,6 +1,35 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.14 2008/09/09 14:11:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.15 2008/09/09 14:36:49 dang Exp $
+
+*kvm-74 (09 Sep 2008)
+
+  09 Sep 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-73.ebuild,
+  +kvm-74.ebuild:
+  Bump to kvm-74
+  Changes from kvm-73:
+  - make real-mode startup state conform to spec
+  - fix scheduling error in experimental big real mode support
+  - fix reboot fault handler exception table entry (Eduardo Habkost)
+  - x86 emulator code cleanup (Roel Kluin)
+  - fix 'neg r/m' instruction emulation forced to byte size
+  - fix shadow ptes corruption on i386 hosts running smp guests
+  - fix kvmtrace ABI breakage (Adrian Bunk)
+  - enable virtio for ia64
+  - add generic shadow page table walker
+  - allocate internal guest memory as MAP_PRIVATE
+  - don't call get_user_pages(.force=1)
+  - paves the way for get_user_pages_fast()
+  - add mov r, imm instructions to the emulator (Mohammed Gamal)
+  - realmode emulator testsuite
+  - ia64 external module support (Xiantao Zhang)
+  - support tap IFF_VNET_HDR (Mark McLoughlin)
+  - merge qemu-svn
+  - improved usb support
+  - usb auto connect/disconnect
+  - protect against possible corruption during qemu fork() on older hosts
+
+  (Marcelo Tosatti)
 
   09 Sep 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-70.ebuild,
   -kvm-70-r1.ebuild:
