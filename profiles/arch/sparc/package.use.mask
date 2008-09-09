@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.13 2008/08/15 10:06:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.14 2008/09/09 18:43:31 fmccor Exp $
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
 
 # openct isn't keyworded anymore
@@ -23,3 +23,6 @@ dev-lang/swig	pike
 
 # Needs libmodplug
 media-libs/sdl-sound mikmod
+
+# Needs clisp which won't build
+app-text/texlive	xindy

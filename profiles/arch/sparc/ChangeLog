@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.26 2008/08/15 11:41:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.27 2008/09/09 18:43:31 fmccor Exp $
+
+  09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
+  package.use.mask xindy for texlive because it requires clisp which does not
+  build.
 
   15 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> package.mask:
   Unmask GNOME 2.22
