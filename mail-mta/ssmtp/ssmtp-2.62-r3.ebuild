@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r1.ebuild,v 1.4 2008/09/09 12:22:55 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r3.ebuild,v 1.1 2008/09/09 19:30:25 dertobi123 Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="ssl ipv6 md5sum"
+IUSE="ssl ipv6 md5sum maxsysuid"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
@@ -28,6 +28,15 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Allow to specify the last used system user id, bug #231866
+	if use maxsysuid; then
+		epatch "${FILESDIR}"/${P}-maxsysuid.patch
+		epatch "${FILESDIR}"/${P}-maxsysuid-conf.patch
+	fi
+
+	# CVE-2008-3962
+	epatch "${FILESDIR}/CVE-2008-3962.patch"
 
 	epatch "${FILESDIR}/${P}-strndup.patch"
 	eautoreconf
