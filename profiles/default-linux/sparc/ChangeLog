@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.114 2008/08/15 10:06:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.115 2008/09/09 18:40:20 fmccor Exp $
+
+  09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
+  package.use.mask xindy for texlive because it requires clisp which does not
+  build.
 
   10 Aug 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   Unmask openinventor package.use.mask on geant.  openinventor now builds on
