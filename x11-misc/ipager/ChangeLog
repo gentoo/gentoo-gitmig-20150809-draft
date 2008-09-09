@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/ipager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ChangeLog,v 1.1 2008/09/09 02:26:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ChangeLog,v 1.2 2008/09/09 03:48:26 robbat2 Exp $
+
+  09 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ipager-1.1.0-gcc43.patch, +files/ipager-1.1.0-scons_flags.patch,
+  ipager-1.1.0.ebuild:
+  Fix ipager to actually build.
 
 *ipager-1.1.0 (09 Sep 2008)
 
