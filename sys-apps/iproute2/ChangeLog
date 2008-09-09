@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.111 2008/08/20 06:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.112 2008/09/09 14:35:09 cardoe Exp $
+
+*iproute2-2.6.26-r2 (09 Sep 2008)
+
+  09 Sep 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/iproute2-2.6.26-ldflags.patch, +iproute2-2.6.26-r2.ebuild:
+  multilib and ldflags respecting changes from Olivier Huber
+  <oli.huber@gmail.com> bug #236861
 
 *iproute2-2.6.26-r1 (20 Aug 2008)
 

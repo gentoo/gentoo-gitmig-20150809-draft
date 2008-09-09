@@ -1,0 +1,11 @@
+--- tc/Makefile.old	2008-09-06 15:28:35.862794338 +0200
++++ tc/Makefile	2008-09-06 16:02:11.043794213 +0200
+@@ -83,7 +83,7 @@
+ 	rm -f emp_ematch.yacc.output
+ 
+ q_atm.so: q_atm.c
+-	$(CC) $(CFLAGS) -shared -fpic -o q_atm.so q_atm.c -latm
++	$(CC) $(CFLAGS) $(LDFLAGS) -shared -fpic -o q_atm.so q_atm.c -latm
+ 
+ %.yacc.c: %.y
+ 	$(YACC) $(YACCFLAGS) -o $@ $<
