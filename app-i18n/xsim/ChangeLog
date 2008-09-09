@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.16 2008/05/04 15:06:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.17 2008/09/09 15:03:44 matsuu Exp $
+
+*xsim-0.3.9.4-r5 (09 Sep 2008)
+
+  09 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/xsim-0.3.9.4-gcc-4.3.patch, xsim-0.3.9.4-r2.ebuild,
+  +xsim-0.3.9.4-r5.ebuild:
+  Fixed compile problem on gcc-4.3, bug #227117. Fixed kdelibs dependency,
+  bug #213425.
 
   04 May 2008; MATSUU Takuto <matsuu@gentoo.org> xsim-0.3.9.4-r2.ebuild,
   -xsim-0.3.9.4-r3.ebuild, xsim-0.3.9.4-r4.ebuild:

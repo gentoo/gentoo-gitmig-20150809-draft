@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.11 2008/05/04 15:06:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.12 2008/09/09 15:03:44 matsuu Exp $
 
+EAPI="1"
 inherit kde-functions eutils
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server"
@@ -16,7 +17,7 @@ IUSE="kde"
 DEPEND="virtual/libc
 	>=sys-libs/db-3
 	>=sys-apps/sed-4
-	kde? ( >=kde-base/kdelibs-3 )"
+	kde? ( kde-base/kdelibs:3.5 )"
 
 src_unpack() {
 	unpack ${A}
