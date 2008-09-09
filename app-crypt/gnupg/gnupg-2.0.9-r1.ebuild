@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.9-r1.ebuild,v 1.1 2008/09/09 09:52:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.9-r1.ebuild,v 1.2 2008/09/09 19:12:23 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -34,7 +34,7 @@ DEPEND="${COMMON_DEPEND_LIBS}
 	doc? ( sys-apps/texinfo )"
 
 RDEPEND="!static? ( ${COMMON_DEPEND_LIBS} )
-	${COMMON_DEPEND_BINS}	
+	${COMMON_DEPEND_BINS}
 	virtual/mta
 	!app-crypt/gpg-agent
 	!<=app-crypt/gnupg-2.0.1
@@ -48,7 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# 'USE=static' support was requested: 
+	# 'USE=static' support was requested:
 	# gnupg1: bug #29299
 	# gnupg2: bug #159623
 	use static && append-ldflags -static
