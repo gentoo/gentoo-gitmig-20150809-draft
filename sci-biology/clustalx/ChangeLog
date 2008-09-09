@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/clustalx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.16 2008/08/28 21:18:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.17 2008/09/09 13:31:31 markusle Exp $
+
+  09 Sep 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/clustalx-2.0.9-gcc4.3.patch, clustalx-2.0.9.ebuild:
+  Added patch to fix gcc-4.3 header issue (bug #237077). Relaxed
+  dependency on full qt:4 to qt-gui:4 only which should be
+  sufficient. Finally, keyworded the 2.0.9 ebuild amd64 since it 
+  works fine.
 
 *clustalx-2.0.9 (28 Aug 2008)
 

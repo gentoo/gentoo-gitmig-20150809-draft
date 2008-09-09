@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-2.0.9.ebuild,v 1.1 2008/08/28 21:18:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-2.0.9.ebuild,v 1.2 2008/09/09 13:31:31 markusle Exp $
 
 EAPI=1
 
@@ -12,16 +12,17 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/clustalw2/${PV}/${P}-src.tar.gz"
 
 LICENSE="clustalw"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="x11-libs/qt:4"
+DEPEND="x11-libs/qt-gui:4"
 
 RDEPEND="sci-biology/clustalw:2"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	sed -e "s|colprot.xml|/usr/share/${PN}/colprot.xml|" \
 			-e "s|coldna.xml|/usr/share/${PN}/coldna.xml|" \
 			-e "s|colprint.xml|/usr/share/${PN}/colprint.xml|" \
