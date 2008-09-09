@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-pdftex
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.1 2008/09/09 16:51:57 aballier Exp $
+
+*eselect-pdftex-0.1 (09 Sep 2008)
+
+  09 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/pdftex.eselect-0.1, +metadata.xml, +eselect-pdftex-0.1.ebuild:
+  Initial import: manages /usr/bin/pdftex symlinks to allow easy usage of
+  standalone pdftex ebuild.
+
