@@ -30,5 +30,7 @@
     (for converting (La)TeX to (X)HTML, XML and OO.org)</flag>
   <flag name='xetex'>Add support for XeTeX macros
     (<pkg>dev-texlive/texlive-xetex</pkg>)</flag>
+  <flag name='xindy'>Add support for <pkg>dev-tex/xindy</pkg>, a flexible
+	  indexing system</flag>
 </use>
 </pkgmetadata>
