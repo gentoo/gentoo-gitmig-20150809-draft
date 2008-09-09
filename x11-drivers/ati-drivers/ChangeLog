@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.124 2008/08/22 20:01:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.125 2008/09/09 10:14:45 b33fc0d3 Exp $
+
+  09 Sep 2008; <b33fc0d3@gentoo.org> ati-drivers-8.493.ebuild,
+  ati-drivers-8.501.ebuild, ati-drivers-8.512.ebuild,
+  ati-drivers-8.522.ebuild:
+  Made PREEMPT_RCU error message slightly more verbose
 
 *ati-drivers-8.522 (22 Aug 2008)
 *ati-drivers-8.512 (22 Aug 2008)

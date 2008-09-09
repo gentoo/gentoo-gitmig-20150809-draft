@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.512.ebuild,v 1.1 2008/08/22 20:01:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.512.ebuild,v 1.2 2008/09/09 10:14:45 b33fc0d3 Exp $
 
 IUSE="acpi debug"
 
@@ -75,7 +75,7 @@ pkg_setup() {
 	fi
 
 	if kernel_is ge 2 6 25 && linux_chkconfig_present PREEMPT_RCU; then
-		die "${P} is not compatible RCU Preemption, please disable it"
+		die "${P} is not compatible with RCU Preemption (bug #223281), please disable it"
 	fi
 
 	if kernel_is ge 2 6 24 && ! linux_chkconfig_present PCI_LEGACY; then
