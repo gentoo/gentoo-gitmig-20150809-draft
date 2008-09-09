@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Fonts and support for typesetting Tibetan
+</longdescription>
 </pkgmetadata>
-

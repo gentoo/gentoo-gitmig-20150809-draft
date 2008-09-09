@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Hans Hagen's powerful ConTeXt system, http://pragma-ade.com.
+</longdescription>
 </pkgmetadata>
-

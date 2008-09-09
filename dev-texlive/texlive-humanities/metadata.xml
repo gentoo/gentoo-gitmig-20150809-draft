@@ -6,5 +6,8 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Packages for law, linguistics, the social sciences, the
+humanities, etc.
+</longdescription>
 </pkgmetadata>
-

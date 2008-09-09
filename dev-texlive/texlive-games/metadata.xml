@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Setups for typesetting various board games, including chess
+</longdescription>
 </pkgmetadata>
-

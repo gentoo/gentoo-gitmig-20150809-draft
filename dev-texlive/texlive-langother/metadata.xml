@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Hyphenation patterns for languages with no other support.
+</longdescription>
 </pkgmetadata>
-

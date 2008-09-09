@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langfrench
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.15 2008/05/12 20:00:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.16 2008/09/09 16:36:11 aballier Exp $
+
+*texlive-langfrench-2008 (09 Sep 2008)
+
+  09 Sep 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  +texlive-langfrench-2008.ebuild:
+  Bump to 2008
 
   12 May 2008; nixnut <nixnut@gentoo.org> texlive-langfrench-2007.ebuild:
   Stable on ppc wrt bug 220651

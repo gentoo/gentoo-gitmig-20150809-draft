@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+CJK (Chinese, Japanese, Korean) macros, fonts, documentation.
+</longdescription>
 </pkgmetadata>
-

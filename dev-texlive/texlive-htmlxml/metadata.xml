@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Packages to convert LaTeX to XML/HTML, and typset XML/SGML
+</longdescription>
 </pkgmetadata>
-

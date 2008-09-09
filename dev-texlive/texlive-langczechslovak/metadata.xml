@@ -6,5 +6,7 @@
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
+<longdescription lang="en">
+Czech/Slovak packages and hyphenation support.
+</longdescription>
 </pkgmetadata>
-
