@@ -17,3 +17,8 @@ app-editors/jove X
 # jamvm needs ffi on amd64
 # https://bugs.gentoo.org/show_bug.cgi?id=213882
 dev-java/jamvm libffi
+
+# Doug Goldstein <cardoe@gentoo.org> (9 Sep 2008)
+# mask vdr USE flag for media-tv/zapping since it depends on media-libs/rte
+# which is only available on x86
+media-tv/zapping vdr

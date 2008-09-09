@@ -137,3 +137,7 @@ media-sound/lame mmx
 # masked in base, unmask for x86/amd64
 dev-python/kaa-base -tls
 
+# Doug Goldstein <cardoe@gentoo.org> (9 Sep 2008)
+# mask vdr USE flag for media-tv/zapping since it depends on media-libs/rte
+# which is only available on x86
+media-tv/zapping vdr
