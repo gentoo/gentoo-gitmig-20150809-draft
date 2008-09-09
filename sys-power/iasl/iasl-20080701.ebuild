@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080701.ebuild,v 1.1 2008/07/13 19:09:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20080701.ebuild,v 1.2 2008/09/09 06:01:36 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -35,6 +35,12 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/iasl-20080701-parallelmake.patch
+}
+
 src_compile() {
 	local target bin
 	append-flags -fno-strict-aliasing
@@ -48,7 +54,7 @@ src_compile() {
 			*) bin=${target#*/};;
 		esac
 
-		emake -j1 CC="$(tc-getCC)" || die "emake in ${target} failed"
+		emake CC="$(tc-getCC)" || die "emake in ${target} failed"
 		einfo "Finished compiling ${target}"
 
 		mv ${bin} "${T}" || die "mv ${bin} failed"
