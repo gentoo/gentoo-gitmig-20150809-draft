@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/notify-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.10 2008/08/08 19:04:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.11 2008/09/09 22:44:44 hawking Exp $
+
+*notify-python-0.1.1-r1 (09 Sep 2008)
+
+  09 Sep 2008; Ali Polatel <hawking@gentoo.org>
+  +notify-python-0.1.1-r1.ebuild:
+  Remove src/pynotify.c so it's regenerated, #212128. Fix
+  python_mod_cleanup.
 
   08 Aug 2008; Markus Rothe <corsair@gentoo.org> notify-python-0.1.1.ebuild:
   Stable on ppc64; bug #233766
