@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mplib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.1 2008/08/29 22:58:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.2 2008/09/09 17:36:36 fmccor Exp $
+
+  09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> mplib-1.091.ebuild:
+  Add ~sparc keyword in preparation for Bug #237202.
 
 *mplib-1.091 (29 Aug 2008)
 
