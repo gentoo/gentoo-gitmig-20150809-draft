@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.26 2008/09/01 13:01:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.27 2008/09/09 00:00:32 bicatali Exp $
+
+  08 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> -rpy-0.4.6.ebuild:
+  Removed older version
 
   01 Sep 2008; Raúl Porcel <armin76@gentoo.org> rpy-1.0.2-r1.ebuild:
   ia64/x86 stable wrt #236208
