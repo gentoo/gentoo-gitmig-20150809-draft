@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.13 2008/08/23 00:26:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.14 2008/09/09 14:11:05 dang Exp $
+
+  09 Sep 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-70.ebuild,
+  -kvm-70-r1.ebuild:
+  Remove old versions referencing removed patches; bug #236890
 
   23 Aug 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-73.ebuild:
   Fix some whitespace
