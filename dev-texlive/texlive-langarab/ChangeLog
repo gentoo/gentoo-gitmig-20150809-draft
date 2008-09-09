@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/ChangeLog,v 1.16 2008/09/09 16:31:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/ChangeLog,v 1.17 2008/09/09 18:17:18 aballier Exp $
+
+  09 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  texlive-langarab-2007.ebuild:
+  Add empty IUSE to please repoman
 
 *texlive-langarab-2008 (09 Sep 2008)
 
