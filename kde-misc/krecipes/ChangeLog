@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.30 2008/05/21 16:02:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.31 2008/09/09 17:39:27 keytoaster Exp $
+
+  09 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/krecipes-0.9.1-gcc431.patch,
+  +files/krecipes-1.0_beta1-gcc431.patch, krecipes-0.9.1.ebuild,
+  krecipes-1.0_beta1.ebuild:
+  Added patches to fix compilation errors with GCC 4.3.1.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> krecipes-0.9.1.ebuild,
   krecipes-1.0_beta1.ebuild:

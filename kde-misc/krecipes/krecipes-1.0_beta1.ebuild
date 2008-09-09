@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-1.0_beta1.ebuild,v 1.5 2008/05/21 16:02:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-1.0_beta1.ebuild,v 1.6 2008/09/09 17:39:27 keytoaster Exp $
 
 inherit kde
 
@@ -24,6 +24,8 @@ RDEPEND="${DEPEND}
 RESTRICT="test"
 
 need-kde 3
+
+PATCHES=( "${FILESDIR}/${P}-gcc431.patch" )
 
 src_compile() {
 	if ! use sqlite && ! use mysql && ! use postgres; then
