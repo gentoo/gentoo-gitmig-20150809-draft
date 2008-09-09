@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.2 2007/11/27 11:06:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.3 2008/09/09 13:47:08 cardoe Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://zapping.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="arts esd lirc nls pam vdr zvbi X"
 
 DEPEND=">=gnome-base/libgnomeui-2.0
