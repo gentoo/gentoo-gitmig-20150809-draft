@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1850 2008/09/09 16:37:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1851 2008/09/09 16:58:03 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove standalone mh mask, it's included in the big texlive 2008 mask.
 
   09 Sep 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   add eselect-mpost and eselect-pdftex to tl2008 mask
