@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.15 2008/09/09 19:28:46 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.16 2008/09/10 23:45:53 gentoofan23 Exp $
+
+  10 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  kstreamripper-0.3.4.ebuild:
+  stable amd64, bug 237157
 
   09 Sep 2008; Friedrich Oslage <bluebird@gentoo.org>
   kstreamripper-0.3.4.ebuild:
