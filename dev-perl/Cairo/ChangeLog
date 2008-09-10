@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.48 2008/06/13 09:32:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.49 2008/09/10 14:11:10 tove Exp $
+
+  10 Sep 2008; Torsten Veller <tove@gentoo.org> -Cairo-1.02.2.ebuild,
+  -Cairo-1.04.0.ebuild, -Cairo-1.04.1.ebuild, -Cairo-1.04.5.ebuild:
+  Cleanup
 
   13 Jun 2008; Jeroen Roovers <jer@gentoo.org> Cairo-1.06.0.ebuild:
   Stable for HPPA (bug #225185).
