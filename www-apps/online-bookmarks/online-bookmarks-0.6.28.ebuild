@@ -1,17 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.9.ebuild,v 1.3 2007/01/02 22:42:45 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.28.ebuild,v 1.1 2008/09/10 07:05:25 wrobel Exp $
 
 inherit webapp depend.php
 
 S=${WORKDIR}/${PN}
 
-DESCRIPTION="A Bookmark management system to store your Bookmarks, Favorites and Links right in the WWW where they actually belong"
+DESCRIPTION="A Bookmark management system to store your Bookmarks, Favorites and Links."
 HOMEPAGE="http://www.frech.ch/online-bookmarks/index.php"
-SRC_URI="http://www.frech.ch/online-bookmarks/download/${P}.tar.gz"
+SRC_URI="http://www.frech.ch/online-bookmarks/download/old_versions/0.6.x/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
@@ -38,6 +38,8 @@ src_install() {
 
 	webapp_configfile "${MY_HTDOCSDIR}/login.php"
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_serverowned "${MY_HTDOCSDIR}/favicons"
+
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 	webapp_src_install
 }
