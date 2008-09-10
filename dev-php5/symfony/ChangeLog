@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.7 2008/07/31 20:16:05 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.8 2008/09/10 07:37:01 wrobel Exp $
+
+*symfony-1.1.1 (10 Sep 2008)
+*symfony-1.0.17 (10 Sep 2008)
+
+  10 Sep 2008; wrobel@gentoo.org +symfony-1.0.17.ebuild,
+  +symfony-1.1.1.ebuild:
+  Added symfony-1.0.17 and symfony-1.1.1.
 
 *symfony-1.0.16 (31 Jul 2008)
 
