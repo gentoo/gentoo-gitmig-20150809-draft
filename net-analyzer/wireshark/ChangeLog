@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.116 2008/09/10 06:04:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.117 2008/09/10 08:03:23 jer Exp $
+
+  10 Sep 2008; Jeroen Roovers <jer@gentoo.org> wireshark-1.0.3.ebuild:
+  Stable for HPPA (bug #236515).
 
 *wireshark-1.0.3 (10 Sep 2008)
 
