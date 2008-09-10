@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ChangeLog,v 1.1 2008/09/10 00:18:25 matsuu Exp $
+
+*ibus-table-0.1.1.20080901 (10 Sep 2008)
+
+  10 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +ibus-table-0.1.1.20080901.ebuild:
+  Initial import, bug #236483.
+
