@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.0.1.ebuild,v 1.1 2008/06/22 20:03:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.0.1.ebuild,v 1.2 2008/09/10 15:45:08 darkside Exp $
 
 DESCRIPTION="Anti-spam bayesian filter"
 HOMEPAGE="http://getpopfile.org"
@@ -36,6 +36,6 @@ src_install() {
 	rm -rf manual *.change license
 	insinto /usr/share/${PN}
 	doins -r *
-	fperms 755 /usr/share/${PN}/*.pl
+	fperms 755 /usr/share/${PN}/{popfile,insert,pipe,bayes}.pl
 	dosbin "${FILESDIR}"/${PN}
 }
