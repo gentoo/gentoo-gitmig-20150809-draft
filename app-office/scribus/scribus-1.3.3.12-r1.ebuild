@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.3 2008/07/27 19:54:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.4 2008/09/10 22:46:14 hanno Exp $
 
 EAPI=1
 
@@ -12,20 +12,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cairo"
+IUSE="cairo cups"
 
 DEPEND="x11-libs/qt:3
 	>=media-libs/freetype-2.3
 	>=media-libs/lcms-1.17
 	>=media-libs/tiff-3.6
 	>=media-libs/libart_lgpl-2.3.17
-	>=sys-devel/gcc-3.0.0
 	>=dev-libs/libxml2-2.6.0
 	media-libs/jpeg
 	media-libs/libpng
-	net-print/cups
 	dev-python/imaging
 	media-libs/fontconfig
+	cups? ( net-print/cups )
 	cairo? ( >=x11-libs/cairo-1.4.10 )"
 
 RDEPEND="${DEPEND}
@@ -39,7 +38,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	local mycmakeargs="$(cmake-utils_use_want cairo CAIRO)"
+	local mycmakeargs="$(cmake-utils_use_want cairo CAIRO) \
+		$(cmake-utils_use_enable cups)"
 	cmake-utils_src_compile || die "compile failed"
 }
 
