@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.43 2008/02/24 00:00:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.44 2008/09/10 08:15:49 wrobel Exp $
+
+*twiki-4.2.2 (10 Sep 2008)
+
+  10 Sep 2008; wrobel@gentoo.org +twiki-4.2.2.ebuild:
+  Added twiki-4.2.2 (#234602).
 
 *twiki-4.2.0 (24 Feb 2008)
 
