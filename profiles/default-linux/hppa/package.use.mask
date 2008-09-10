@@ -1,6 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/package.use.mask,v 1.26 2008/07/18 07:54:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/package.use.mask,v 1.27 2008/09/10 19:25:02 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (10 Sep 2008)
+# app-misc/tracker isn't keyworded and doesn't work:
+gnome-base/nautilus tracker
 
 # Jeroen Roovers <jer@gentoo.org> (18 Jul 2008)
 # Mask precompiled headers (pch) USE flag for x11-libs/qt-* (bug #223775).

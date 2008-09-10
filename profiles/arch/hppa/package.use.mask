@@ -1,6 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.5 2008/05/31 08:20:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.6 2008/09/10 19:26:44 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (10 Sep 2008)
+# app-misc/tracker isn't keyworded and doesn't work:
+gnome-base/nautilus tracker
 
 # Tobias Scherbaum <dertobi123@gentoo.org> (31 May 2008)
 # Mask ups for nagios-plugins which would pull in sys-power/nut
