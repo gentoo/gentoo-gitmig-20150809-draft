@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.25-r6.ebuild,v 1.1 2008/09/09 05:30:04 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.25-r6.ebuild,v 1.2 2008/09/10 21:25:24 gengor Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -14,7 +14,7 @@ HGPV_URI="http://dev.gentoo.org/~gengor/distfiles/${CATEGORY}/${PN}/hardened-pat
 	mirror://gentoo/hardened-patches-${HGPV}.extras.tar.bz2"
 UNIPATCH_LIST="${DISTDIR}/hardened-patches-${HGPV}.extras.tar.bz2"
 UNIPATCH_EXCLUDE="4200_fbcondecor-0.9.4.patch"
-DESCRIPTION="Hardened kernel sources ${OKV}"
+DESCRIPTION="Hardened kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 IUSE=""
 
