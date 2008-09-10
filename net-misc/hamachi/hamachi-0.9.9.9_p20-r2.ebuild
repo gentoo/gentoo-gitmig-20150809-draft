@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.7 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.8 2008/09/10 15:58:53 darkside Exp $
 
 inherit eutils linux-info
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_compile() {
 	# Compile Tuncfg
-	make -sC ${S}/tuncfg || die "Compiling of tunecfg failed"
+	make -sC "${S}"/tuncfg || die "Compiling of tunecfg failed"
 }
 
 src_install() {
@@ -71,9 +71,9 @@ src_install() {
 
 	# Config files
 	einfo "Installing config files"
-	newinitd ${FILESDIR}/tuncfg.initd tuncfg
-	newconfd ${FILESDIR}/hamachi.confd hamachi
-	newinitd ${FILESDIR}/hamachi.initd hamachi
+	newinitd "${FILESDIR}"/tuncfg.initd tuncfg
+	newconfd "${FILESDIR}"/hamachi.confd hamachi
+	newinitd "${FILESDIR}"/hamachi.initd hamachi
 
 	# Docs
 	dodoc CHANGES README LICENSE LICENSE.openssh LICENSE.openssl LICENSE.tuncfg
@@ -98,4 +98,10 @@ pkg_postinst() {
 
 	einfo "To start Hamachi just type:"
 	einfo "/etc/init.d/hamachi start"
+
+	# added for bug #218481
+	einfo "If the 'hamachi' command shows no output, use the following command"
+	einfo "to extract the hamachi executable either with app-arch/upx or"
+	einfo "app-arch/upx-ucl:"
+	einfo "/opt/bin/upx -d /usr/bin/hamachi"
 }

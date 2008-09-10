@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hamachi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.8 2008/07/19 12:27:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.9 2008/09/10 15:58:53 darkside Exp $
+
+  10 Sep 2008; Jeremy Olexa <darkside@gentoo.org>
+  hamachi-0.9.9.9_p20-r2.ebuild:
+  Added postinst instructions for bug #218481, thanks to Franz Metz for the
+  suggestion
 
   19 Jul 2008; Caleb Tennis <caleb@gentoo.org> metadata.xml:
   change to maintainer-needed
