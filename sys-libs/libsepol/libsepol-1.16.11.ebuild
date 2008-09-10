@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.16.11.ebuild,v 1.2 2008/05/13 02:43:39 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.16.11.ebuild,v 1.3 2008/09/10 17:34:19 pebenito Exp $
 
 IUSE=""
 
@@ -16,6 +16,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 
 DEPEND="virtual/libc"
+
+# tests are not meant to be run outside of the
+# full SELinux userland repo
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
