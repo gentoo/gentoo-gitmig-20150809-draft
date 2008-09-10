@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.5 2008/06/29 09:55:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.6 2008/09/10 13:51:01 armin76 Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ DEPEND="dev-python/twisted
 RDEPEND=""
 
 pkg_postinst() {
-	enewgroup phxd || die "Failed to create phxd group"
-	enewuser phxd -1 /bin/bash /var/phxd phxd || die "Failed to create phxd user"
+	enewgroup phxd
+	enewuser phxd -1 /bin/bash /var/phxd phxd
 	chown phxd:phxd /var/phxd/files
 	chown phxd:phxd /var/phxd/chatlogs
 }
