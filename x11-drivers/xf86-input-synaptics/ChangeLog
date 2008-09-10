@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.8 2008/09/08 11:47:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.9 2008/09/10 13:08:46 chainsaw Exp $
+
+*xf86-input-synaptics-0.15.1-r1 (10 Sep 2008)
+
+  10 Sep 2008; <chainsaw@gentoo.org> +files/synaptics-fix-explosion.patch,
+  +xf86-input-synaptics-0.15.1-r1.ebuild:
+  Add explosion avoidance to the driver, upstream patch found by Kamil
+  Kamiński <kamil@mrblur.net>. Closes bug #237074.
 
   08 Sep 2008; Joseph Jezak <josejx@gentoo.org>
   xf86-input-synaptics-0.15.1.ebuild:
