@@ -1,6 +1,6 @@
 diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Album.cs banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Album.cs
 --- banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Album.cs	2008-05-21 09:17:47.000000000 -0500
-+++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Album.cs	2008-09-03 00:57:00.000000000 -0500
++++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Album.cs	2008-09-09 22:30:48.000000000 -0500
 @@ -131,7 +131,7 @@
              if (saved) {
                  saved = LIBMTP_Update_Album (device.Handle, ref album) == 0;
@@ -10,21 +10,8 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Album.cs banshee-1-1.2.1/sr
              }
  
              if (album.tracks != IntPtr.Zero) {
-@@ -190,7 +190,7 @@
- 
-         public static Album GetById (MtpDevice device, uint id)
-         {
--            IntPtr ptr = Album.LIBMTP_Get_Album (device.Handle, id);
-+            IntPtr ptr = Album.LIBMTP_Get_Album (device.Handle);
-             if (ptr == IntPtr.Zero) {
-                 return null;
-             } else {
-@@ -208,10 +208,10 @@
- 		internal static extern IntPtr LIBMTP_Get_Album_List (MtpDeviceHandle handle); // LIBMTP_album_t*
- 
- 		[DllImport("libmtp.dll")]
--		internal static extern IntPtr LIBMTP_Get_Album (MtpDeviceHandle handle, uint albumId); // LIBMTP_album_t*
-+		internal static extern IntPtr LIBMTP_Get_Album (MtpDeviceHandle handle); // LIBMTP_album_t*
+@@ -211,7 +211,7 @@
+ 		internal static extern IntPtr LIBMTP_Get_Album (MtpDeviceHandle handle, uint albumId); // LIBMTP_album_t*
  
  		[DllImport("libmtp.dll")]
 -		internal static extern int LIBMTP_Create_New_Album (MtpDeviceHandle handle, ref AlbumStruct album, uint parentId);
@@ -43,7 +30,7 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Album.cs banshee-1-1.2.1/sr
          public string name;
 diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Folder.cs banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Folder.cs
 --- banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Folder.cs	2008-04-07 22:59:11.000000000 -0500
-+++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Folder.cs	2008-09-03 00:11:53.000000000 -0500
++++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Folder.cs	2008-09-09 22:30:48.000000000 -0500
 @@ -210,6 +210,7 @@
  	{
  		public uint folder_id;
@@ -54,8 +41,20 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Folder.cs banshee-1-1.2.1/s
  		public IntPtr child;   // LIBMTP_folder_t*
 diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Track.cs banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Track.cs
 --- banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Track.cs	2008-04-23 14:20:58.000000000 -0500
-+++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Track.cs	2008-09-03 00:14:10.000000000 -0500
-@@ -195,7 +195,7 @@
++++ banshee-1-1.2.1/src/Libraries/Mtp/Mtp/Track.cs	2008-09-09 22:44:13.000000000 -0500
+@@ -129,6 +129,11 @@
+ 			set { trackStruct.usecount = value; }
+ 		}
+ 
++		public string Composer {
++			get { return trackStruct.composer; }
++			set { trackStruct.composer = value; }
++		}
++
+ 		public Track (string filename, ulong filesize) : this (new TrackStruct (), null)
+ 		{
+ 			this.trackStruct.filename = filename;
+@@ -195,7 +200,7 @@
  
  		internal static void SendTrack (MtpDeviceHandle handle, string path, ref TrackStruct metadata, ProgressFunction callback, IntPtr data, uint parent)
  		{
@@ -64,7 +63,7 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Track.cs banshee-1-1.2.1/sr
  			{
  				LibMtpException.CheckErrorStack (handle);
  				throw new LibMtpException (ErrorCode.General, "Could not upload the track");
-@@ -227,7 +227,7 @@
+@@ -227,7 +232,7 @@
  		private static extern int LIBMTP_Get_Track_To_File (MtpDeviceHandle handle, uint trackId, string path, ProgressFunction callback, IntPtr data);
  
  		[DllImport("libmtp.dll")]
@@ -73,7 +72,7 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Track.cs banshee-1-1.2.1/sr
  
  		[DllImport("libmtp.dll")]
  	    private static extern int LIBMTP_Update_Track_Metadata (MtpDeviceHandle handle, ref TrackStruct metadata);
-@@ -244,7 +244,8 @@
+@@ -244,9 +249,11 @@
  	{
  		public uint item_id;
  		public uint parent_id;
@@ -82,4 +81,7 @@ diff -u -r banshee-1-1.2.1.old/src/Libraries/Mtp/Mtp/Track.cs banshee-1-1.2.1/sr
 +
  		[MarshalAs(UnmanagedType.LPStr)] public string title;
  		[MarshalAs(UnmanagedType.LPStr)] public string artist;
++		[MarshalAs(UnmanagedType.LPStr)] public string composer;
  		[MarshalAs(UnmanagedType.LPStr)] public string genre;
+ 		[MarshalAs(UnmanagedType.LPStr)] public string album;
+ 		[MarshalAs(UnmanagedType.LPStr)] public string date;

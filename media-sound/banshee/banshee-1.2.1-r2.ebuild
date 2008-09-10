@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.1-r1.ebuild,v 1.1 2008/09/03 10:13:52 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.2.1-r2.ebuild,v 1.1 2008/09/10 13:51:47 loki_val Exp $
 
 EAPI=1
 
-inherit base gnome2 mono
+inherit base gnome2 mono autotools
 
 GVER=0.10.3
 
@@ -77,7 +77,8 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 S=${WORKDIR}/${PN}-1-${PV}
 
-PATCHES=( "${FILESDIR}/${P}-libmtp-0.3.0-API.patch" )
+PATCHES=( "${FILESDIR}/${P}-libmtp-0.3.0-API.patch"
+	"${FILESDIR}/${P}-notification-crash.patch" )
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -94,6 +95,7 @@ pkg_setup() {
 
 src_unpack() {
 	base_src_unpack
+	cd "${S}"
 	gnome2_omf_fix
 	elibtoolize
 }
