@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.7 2008/02/06 20:36:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.8 2008/09/10 10:41:52 pva Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	enewuser darkstat || die "Failed to add user darkstat"
+	enewuser darkstat
 }
 
 pkg_postinst() {

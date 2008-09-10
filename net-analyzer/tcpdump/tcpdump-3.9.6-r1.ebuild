@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.6-r1.ebuild,v 1.6 2007/08/25 14:30:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.6-r1.ebuild,v 1.7 2008/09/10 10:47:13 pva Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl ipv6 samba"
 
 DEPEND="net-libs/libpcap
@@ -74,8 +74,8 @@ src_compile() {
 }
 
 pkg_preinst() {
-	enewgroup tcpdump || die "Failed to add group tcpdump"
-	enewuser tcpdump -1 -1 -1 tcpdump || die "Failed to add user tcpdump"
+	enewgroup tcpdump
+	enewuser tcpdump -1 -1 -1 tcpdump
 }
 
 src_install() {

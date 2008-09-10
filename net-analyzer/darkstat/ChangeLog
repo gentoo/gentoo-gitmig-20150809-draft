@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.33 2008/06/27 21:13:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.34 2008/09/10 10:41:52 pva Exp $
+
+  10 Sep 2008; Peter Volkov <pva@gentoo.org> darkstat-3.0.707-r1.ebuild:
+  enewuser/enewgroup die on their own, no need to || die
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> -files/darkstat-confd,
   -files/darkstat-confd2, -files/darkstat-init, -files/darkstat-init2,

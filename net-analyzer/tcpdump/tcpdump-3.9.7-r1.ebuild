@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.7-r1.ebuild,v 1.7 2008/01/10 09:09:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.7-r1.ebuild,v 1.8 2008/09/10 10:47:13 pva Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -64,8 +64,8 @@ src_compile() {
 }
 
 pkg_preinst() {
-	enewgroup tcpdump || die "Failed to add group tcpdump"
-	enewuser tcpdump -1 -1 -1 tcpdump || die "Failed to add user tcpdump"
+	enewgroup tcpdump
+	enewuser tcpdump -1 -1 -1 tcpdump
 }
 
 src_install() {
