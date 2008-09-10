@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.48 2008/05/26 15:02:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.49 2008/09/10 18:06:49 pebenito Exp $
+
+  10 Sep 2008; Chris PeBenito <pebenito@gentoo.org>
+  checkpolicy-1.34.4.ebuild:
+  Remove rdep on flex and bison as they are build tools.
 
   26 May 2008; Chris PeBenito <pebenito@gentoo.org>
   checkpolicy-1.34.4.ebuild:
