@@ -1,12 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.18 2005/07/11 15:08:06 swegener Exp $
-#
-# Authors:	Tavis Ormandy <taviso@gentoo.org>
-#			Aron Griffis <agriffis@gentoo.org>
-#
-# functions to make ebuilds more ccc friendly.
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.19 2008/09/10 08:20:05 pva Exp $
+
+# @ECLASS: ccc.eclass
+# @MAINTAINER: 
+# ???
+# 
+# Authors:
+# Tavis Ormandy <taviso@gentoo.org>
+# Aron Griffis <agriffis@gentoo.org>
+# @BLURB: functions to make ebuilds more ccc friendly.
+
 # 16/6/2003 - Added otsify()
 # 18/6/2003 - regex tweaks.
 # 22/7/2003 - newdepend
@@ -17,84 +21,6 @@ inherit flag-o-matic
 # define this to make this eclass noisy.
 #DEBUG_CCC_ECLASS=1
 
-#
-#### hide-restrict-arr ####
-# Scan for and replace __restrict_arr with a ccc
-# supported equivalent.
-#
-# you might see an error like this if you need this:
-#
-# 	cc: Error: regexec.c, line 209: In the definition of the function "regexec",
-# 	the promoted type of pmatch is incompatible with the type of the corresponding
-# 	parameter in a prior declaration. (promotmatch)
-# 	    regmatch_t pmatch[];
-# 	    ---------------^
-#
-#### replace-cc-hardcode ####
-# Look for common cc hardcodes in Makefiles.
-#
-#### replace-cxx-hardcode ####
-# Look for common cxx hardcodes in Makefiles.
-#
-#### is-ccc ####
-# Returns success if dec compiler is being used.
-#
-# example:
-#
-# 	is-ccc && hide-restrict-arr
-#
-#### is-cxx ####
-# Returns success if dec c++ compiler is being used.
-#
-#### replace-ccc-g ####
-# Try to replace -g with -g3
-#
-#### ccc-elf-check </path/to/binary> ####
-# Return success if binary was compiled with ccc
-#
-# example:
-# 	if ! is-ccc; then
-# 		ccc-elf-check /usr/lib/libglib.a && \
-# 			append-ldflags -lots
-# 	fi
-#
-# NOTE: i think the binary and shared library detection
-# 		is pretty safe, but the archive detection may not
-# 		be as reliable.
-#### create-so </usr/lib/library.a> <library.so> ####
-# Make the shared library (.so) specified from the archive (.a)
-# specified. LDFLAGS will be honoured. if you need a different
-# `soname` (DT_SONAME) from the shared lib filename, you will have
-# to do it manually ;)
-#
-# example:
-# 	is-ccc && \
-# 		create-so /usr/lib/libcoolstuff.a libcoolstuff.so.${PV}
-# 	dosym /usr/lib/libcoolstuff.so.${PV} /usr/lib/libcoolstuff.so
-#
-# NOTE: -lots will be used by default, this is ccc.eclass after all :)
-# NOTE: .${PV} is optional, of course.
-# NOTE: dolib.so will manage installation
-#### append-ldflags <flag> ####
-#### is-ldflag <flag> ####
-#### filter-ldflags <flag> ####
-# flag-o-matic doesnt provide LDFLAGS utilities.
-# Some replacements for ccc porting. These functions
-# mimic the flag-o-matic equivalents, look in there for
-# documentation.
-#
-#### otsify <archive> ####
-# Add the functions from libots to <archive>, this means
-# that if you use gcc to build an application that links with
-# <archive>, you wont need -lots.
-# Use this on libraries that you want maximum performance from,
-# but might not be using ccc when linking against it (eg zlib, openssl, etc)
-#
-# example:
-# 	is-ccc && otsify ${S}/libz.a
-#
-####
-#
 
 ccc-fixup()
 {
@@ -122,6 +48,19 @@ ccc-fixup()
 	done
 }
 
+# @FUNCTION: hide-restrict-arr
+# @DESCRIPTION:
+# Scan for and replace __restrict_arr with a ccc
+# supported equivalent.
+#
+# You might see an error like this if you need this:
+# @CODE
+# 	cc: Error: regexec.c, line 209: In the definition of the function "regexec",
+# 	the promoted type of pmatch is incompatible with the type of the corresponding
+# 	parameter in a prior declaration. (promotmatch)
+# 	    regmatch_t pmatch[];
+# 	    ---------------^
+# @CODE
 hide-restrict-arr()
 {
 	# __restrict_arr causes trouble with ccc, __restrict
@@ -135,6 +74,9 @@ hide-restrict-arr()
 		xargs | ccc-fixup 's#\(\[__restrict\)_arr\]#\1\]#g'
 }
 
+# @FUNCTION: replace-cc-hardcode
+# @DESCRIPTION:
+# Look for common cc hardcodes in Makefiles.
 replace-cc-hardcode()
 {
 	# lots of developers hardcode gcc into their
@@ -144,6 +86,9 @@ replace-cc-hardcode()
 		xargs | ccc-fixup "s#^\(CC.*=\).*g\?cc#\1${CC:-gcc}#g"
 }
 
+# @FUNCTION: replace-cxx-hardcode
+# @DESCRIPTION:
+# Look for common cxx hardcodes in Makefiles.
 replace-cxx-hardcode()
 {
 	# lots of developers hardcode g++ into thier
@@ -152,18 +97,29 @@ replace-cxx-hardcode()
 		xargs | ccc-fixup "s#^\(CXX.*=\).*[gc]\{1\}++#\1${CXX:-g++}#g"
 }
 
+# @FUNCTION: is-ccc
+# @RETURN: Returns success if dec compiler is being used.
+# @DESCRIPTION:
+# example:
+#
+# 	is-ccc && hide-restrict-arr
 is-ccc()
 {
 	# return true if ccc is being used.
 	[ "${ARCH}:`basename ${CC:-gcc}`" == "alpha:ccc" ]
 }
 
+# @FUNCTION: is-cxx
+# @RETURN: Returns success if dec c++ compiler is being used.
 is-cxx()
 {
 	# return true if cxx is being used
 	[ "${ARCH}:`basename ${CXX:-g++}`" == "alpha:cxx" ]
 }
 
+# @FUNCTION: replace-ccc-g
+# @DESCRIPTION:
+# Try to replace -g with -g3
 replace-ccc-g()
 {
 	# -g will stop ccc/cxx performing optimisation
@@ -174,6 +130,20 @@ replace-ccc-g()
 	# FIXME: my eyes! it burns!
 }
 
+# @FUNCTION: ccc-elf-check
+# @RETURN: Return success if binary was compiled with ccc
+# @DESCRIPTION:
+# example:
+# @CODE
+# 	if ! is-ccc; then
+# 		ccc-elf-check /usr/lib/libglib.a && \
+# 			append-ldflags -lots
+# 	fi
+# @CODE
+#
+# NOTE: i think the binary and shared library detection
+# is pretty safe, but the archive detection may not
+# be as reliable.
 ccc-elf-check()
 {
 	# check if argument is a ccc created executable.
@@ -203,6 +173,24 @@ ccc-elf-check()
 	return 1
 }
 
+# @FUNCTION: create-so
+# @USAGE: < /usr/lib/library.a > < library.so >
+# @DESCRIPTION:
+# Make the shared library (.so) specified from the archive (.a)
+# specified. LDFLAGS will be honoured. if you need a different
+# `soname` (DT_SONAME) from the shared lib filename, you will have
+# to do it manually ;)
+#
+# example:
+# @CODE
+# 	is-ccc && \
+# 		create-so /usr/lib/libcoolstuff.a libcoolstuff.so.${PV}
+# 	dosym /usr/lib/libcoolstuff.so.${PV} /usr/lib/libcoolstuff.so
+# @CODE
+#
+# NOTE: -lots will be used by default, this is ccc.eclass after all :)
+# NOTE: .${PV} is optional, of course.
+# NOTE: dolib.so will manage installation
 create-so()
 {
 	# some applications check for .so, but ccc wont
@@ -221,6 +209,10 @@ create-so()
 	dolib.so ${T}/${2##*/}
 }
 
+# @FUNCTION: append-ldflags
+# @USAGE: < flag >
+# @DESCRIPTION:
+# Append <flag> to the current LDFLAGS
 append-ldflags()
 {
 	LDFLAGS="${LDFLAGS} ${1}"
@@ -239,6 +231,9 @@ append-ldflags()
 #	done
 #}
 
+# @FUNCTION: is-ldflags
+# @USAGE: < flag >
+# @RETURN: Return code 0 if <flag> is in LDFLAGS, else return code 1
 is-ldflags() {
 	local x
 	for x in ${LDFLAGS}
@@ -251,6 +246,13 @@ is-ldflags() {
 	return 1
 }
 
+# @FUNCTION: filter-ldflags
+# @USAGE: < flag >
+# @DESCRIPTION:
+# flag-o-matic doesnt provide LDFLAGS utilities.
+# Some replacements for ccc porting. These functions
+# mimic the flag-o-matic equivalents, look in there for
+# documentation.
 filter-ldflags()
 {
 	for x in ${1}
@@ -259,6 +261,18 @@ filter-ldflags()
 	done
 }
 
+# @FUNCTION: otsify
+# @USAGE: < archive >
+# @DESCRIPTION:
+# Add the functions from libots to <archive>, this means
+# that if you use gcc to build an application that links with
+# <archive>, you wont need -lots.
+# Use this on libraries that you want maximum performance from,
+# but might not be using ccc when linking against it (eg zlib, openssl, etc)
+#
+# example:
+# 
+# 	is-ccc && otsify ${S}/libz.a
 otsify()
 {
 	[ "$DEBUG_CCC_ECLASS" ] && local ar_args="v"
