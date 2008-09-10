@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.1 2008/09/10 19:12:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.2 2008/09/10 19:14:06 maekke Exp $
 
 inherit eutils autotools
 
@@ -36,12 +36,6 @@ pkg_setup() {
 	ewarn "The compilation of enblend needs a lot of RAM. If you have less"
 	ewarn "than 1GB RAM (and swap) you probably won't be able to compile it."
 	ewarn
-}
-
-_src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_install() {
