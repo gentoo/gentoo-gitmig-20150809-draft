@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.149 2008/09/09 13:39:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.150 2008/09/10 00:35:23 jer Exp $
+
+  10 Sep 2008; Jeroen Roovers <jer@gentoo.org> gallery-1.5.8.ebuild:
+  Stable for HPPA (bug #234137).
 
   09 Sep 2008; Raúl Porcel <armin76@gentoo.org> gallery-1.5.8.ebuild:
   alpha/x86 stable wrt #234137
