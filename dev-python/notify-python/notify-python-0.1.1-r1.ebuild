@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r1.ebuild,v 1.1 2008/09/09 22:44:44 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r1.ebuild,v 1.2 2008/09/10 14:05:08 mr_bones_ Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -45,4 +45,3 @@ pkg_postinst() {
 pkg_postrm() {
 	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/gtk-2.0/pynotify
 }
-
