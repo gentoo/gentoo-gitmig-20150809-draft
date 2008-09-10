@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.48 2008/09/10 20:48:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.49 2008/09/10 21:07:46 george Exp $
+
+  10 Sep 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.4.ebuild:
+  fixed #224235 and #219503
 
   10 Sep 2008; George Shapovalov <george@gentoo.org> kdesvn-0.14.4.ebuild:
   fix for a build issue that came up while preparing for update to 1.0.1

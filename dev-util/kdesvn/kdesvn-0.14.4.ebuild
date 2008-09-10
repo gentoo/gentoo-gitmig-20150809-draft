@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.3 2008/09/10 20:48:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.4 2008/09/10 21:07:46 george Exp $
 
 inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-RDEPEND=">=dev-util/subversion-1.4
-	net-misc/neon"
+RDEPEND=">=dev-util/subversion-1.4"
 
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4"
@@ -44,7 +43,7 @@ src_compile() {
 		-DCMAKE_BUILD_TYPE=Release					\
 		-DCMAKE_C_COMPILER=$(type -P $(tc-getCC))		\
 		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX))	\
-		-DCMAKE_CXX_FLAGS="-DQT_THREAD_SUPPORT"		\
+		-DCMAKE_CXX_FLAGS="${CXXFLAGS} -DQT_THREAD_SUPPORT"		\
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir) 		\
 		${myconf} || die
 
