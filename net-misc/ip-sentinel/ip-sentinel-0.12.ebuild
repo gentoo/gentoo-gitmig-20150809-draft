@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.4 2007/04/22 06:33:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.5 2008/09/10 10:46:31 pva Exp $
 
 inherit eutils
 
@@ -27,9 +27,9 @@ src_install() {
 	newins "${FILESDIR}"/ip-sentinel.cfg ip-sentinel.cfg
 }
 
-pkg_preinst() {
-	enewgroup ipsentinel || die "Failed to add group ipsentinel"
-	enewuser ipsentinel -1 -1 -1 ipsentinel || die "Failed to add user ipsentinel"
+pkg_setup() {
+	enewgroup ipsentinel
+	enewuser ipsentinel -1 -1 -1 ipsentinel
 }
 
 pkg_postinst() {
