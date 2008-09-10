@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.56 2008/04/13 22:02:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.57 2008/09/10 18:17:13 ranger Exp $
+
+  10 Sep 2008; Brent Baude <ranger@gentoo.org> asm-2.0-r1.ebuild:
+  marking asm-2.0-r1.ebuild ppc64 stable for bug 235747
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> -asm-1.5.2-r2.ebuild:
   Remove old version.
