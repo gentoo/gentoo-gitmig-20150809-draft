@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.4 2008/06/30 16:09:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.5 2008/09/10 13:52:58 armin76 Exp $
 
 inherit eutils autotools
 
@@ -41,8 +41,8 @@ pkg_setup() {
 }
 
 pkg_preinst() {
-	enewgroup gnunetd || die "Problem adding gnunetd group"
-	enewuser gnunetd -1 -1 /dev/null gnunetd || die "Problem adding gnunetd user"
+	enewgroup gnunetd
+	enewuser gnunetd -1 -1 /dev/null gnunetd
 }
 
 src_unpack() {

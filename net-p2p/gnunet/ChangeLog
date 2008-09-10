@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.65 2008/07/11 10:18:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.66 2008/09/10 13:52:58 armin76 Exp $
+
+  10 Sep 2008; Raúl Porcel <armin76@gentoo.org> gnunet-0.7.3-r1.ebuild,
+  gnunet-0.8.0.ebuild:
+  Remove useless die, bug #237285
 
 *gnunet-0.8.0 (11 Jul 2008)
 
