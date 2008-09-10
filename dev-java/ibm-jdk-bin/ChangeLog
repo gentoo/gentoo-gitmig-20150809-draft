@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.172 2008/09/08 20:17:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.173 2008/09/10 13:37:34 ranger Exp $
+
+  10 Sep 2008; Brent Baude <ranger@gentoo.org> ibm-jdk-bin-1.5.0.8a.ebuild:
+  Marking ibm-jdk-bin-1.5.0.8a ppc64 and ppc for bug 233652
 
 *ibm-jdk-bin-1.5.0.8a (08 Sep 2008)
 
