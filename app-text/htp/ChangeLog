@@ -1,6 +1,11 @@
 # ChangeLog for app-text/htp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.7 2007/02/09 01:04:38 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.8 2008/09/10 08:33:39 wrobel Exp $
+
+*htp-1.16 (10 Sep 2008)
+
+  10 Sep 2008; wrobel@gentoo.org +files/easteregg.patch, +htp-1.16.ebuild:
+  Added htp-1.16 (#233678).
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
