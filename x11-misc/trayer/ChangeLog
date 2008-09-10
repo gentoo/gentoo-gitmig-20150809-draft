@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/trayer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.14 2007/07/15 16:52:44 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.15 2008/09/10 11:13:55 coldwind Exp $
+
+  10 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
+  trayer-1.0.ebuild:
+  desktop-dock takes this as per lucass retirement, quoting fixes.
 
   15 Jul 2007; Samuli Suominen <drac@gentoo.org> trayer-1.0.ebuild:
   Update HOMEPAGE, stop installing redudant INSTALL and COPYING files.
