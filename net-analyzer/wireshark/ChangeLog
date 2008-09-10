@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.115 2008/08/04 20:20:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.116 2008/09/10 06:04:09 pva Exp $
+
+*wireshark-1.0.3 (10 Sep 2008)
+
+  10 Sep 2008; Peter Volkov <pva@gentoo.org> +wireshark-1.0.3.ebuild:
+  Version bump, fixes security issues #236515, thank Robert Buchholz for
+  report.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
