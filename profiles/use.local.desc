@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3845 2008/09/10 00:17:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3846 2008/09/10 17:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1095,7 +1095,6 @@ media-fonts/terminus-font:width - Wider versions of some font elements
 media-gfx/asymptote:boehm-gc -  Enables using the Boehm-Demers-Weiser conservative garbage collector 
 media-gfx/autotrace:flash -  Adds support for creating SWF files using Ming 
 media-gfx/blender:blender-game -  Adds game engine support to blender 
-media-gfx/blender:bullet -  Enable Bullet (Physics Engine) 
 media-gfx/blender:openmp -  build support for the OpenMP (support parallel computing), requires >=sys-devel/gcc-4.2 built with USE="openmp" 
 media-gfx/blender:player -  Enable blender player 
 media-gfx/blender:verse -  Adds verse clustering features to blender 
