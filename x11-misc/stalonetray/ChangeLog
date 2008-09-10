@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/stalonetray
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.6 2008/03/25 20:05:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.7 2008/09/10 11:15:56 coldwind Exp $
+
+  10 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  desktop-dock takes this as per lucass retirement.
 
   25 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   stalonetray-0.7.3.ebuild:
