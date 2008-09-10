@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.23 2008/08/16 11:12:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.24 2008/09/10 19:12:32 maekke Exp $
+
+*enblend-3.2 (10 Sep 2008)
+
+  10 Sep 2008; Markus Meier <maekke@gentoo.org> +enblend-3.2.ebuild:
+  bump to version 3.2, reported in bug #237261
 
 *enblend-3.0_p20080807 (16 Aug 2008)
 
