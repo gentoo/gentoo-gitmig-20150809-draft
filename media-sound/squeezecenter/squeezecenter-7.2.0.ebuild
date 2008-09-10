@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.2.0.ebuild,v 1.1 2008/08/31 19:56:39 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.2.0.ebuild,v 1.2 2008/09/10 19:55:53 lavajoe Exp $
 
 inherit eutils
 
@@ -62,8 +62,8 @@ pkg_setup() {
 	fi
 
 	# Create the user and group if not already present
-	enewgroup squeezecenter || die
-	enewuser squeezecenter -1 -1 "/dev/null" squeezecenter || die
+	enewgroup squeezecenter
+	enewuser squeezecenter -1 -1 "/dev/null" squeezecenter
 }
 
 src_unpack() {

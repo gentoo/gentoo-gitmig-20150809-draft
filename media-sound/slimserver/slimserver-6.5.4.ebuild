@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.4.ebuild,v 1.1 2007/08/21 20:48:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.4.ebuild,v 1.2 2008/09/10 19:54:24 lavajoe Exp $
 
 inherit eutils
 
@@ -45,8 +45,8 @@ pkg_setup() {
 			die "media-sound/sox not built with USE=ogg"
 		fi
 	fi
-	enewgroup slimserver || die
-	enewuser slimserver -1 -1 /opt/slimserver slimserver || die
+	enewgroup slimserver
+	enewuser slimserver -1 -1 /opt/slimserver slimserver
 }
 
 src_unpack() {
