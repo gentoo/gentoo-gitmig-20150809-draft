@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.2 2008/09/07 13:40:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.3 2008/09/10 20:48:26 george Exp $
 
 inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
@@ -28,6 +28,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-linkage.patch
+
+	# this seems to be again necessary
+	sed -i -e "s:\${APR_CPP_FLAGS}:\${APR_CPP_FLAGS} \"-DQT_THREAD_SUPPORT\":" CMakeLists.txt
 }
 
 src_compile() {
