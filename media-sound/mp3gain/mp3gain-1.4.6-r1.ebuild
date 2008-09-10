@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r1.ebuild,v 1.7 2007/05/16 16:58:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r1.ebuild,v 1.8 2008/09/10 14:48:42 loki_val Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,11 +23,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	filter-flags -O*
-	sed -i -e "s:-Wall -O3 -DHAVE_MEMCPY:-Wall ${CFLAGS} -DHAVE_MEMCPY:" ${S}/Makefile
-	epatch ${FILESDIR}/${PV}-option-parser.patch
+	sed -i -e "s:-Wall -O3 -DHAVE_MEMCPY:-Wall ${CFLAGS} -DHAVE_MEMCPY:" "${S}"/Makefile
+	epatch "${FILESDIR}"/${PV}-option-parser.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.25 2008/09/10 14:46:32 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.26 2008/09/10 14:48:42 loki_val Exp $
+
+  10 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  mp3gain-1.4.6-r1.ebuild:
+  Make repoman a happy camper.
 
   10 Sep 2008; Peter Alfredsen <loki_val@gentoo.org> -mp3gain-1.4.3.ebuild,
   -mp3gain-1.4.5.ebuild, -mp3gain-1.4.6.ebuild:
