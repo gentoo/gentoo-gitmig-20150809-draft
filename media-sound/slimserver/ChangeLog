@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/slimserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/ChangeLog,v 1.13 2008/09/10 19:54:24 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/ChangeLog,v 1.14 2008/09/10 20:05:00 lavajoe Exp $
+
+  10 Sep 2008; Joe Peterson <lavajoe@gentoo.org> -slimserver-6.5.3.ebuild:
+  Remove old version
 
   10 Sep 2008; Joe Peterson <lavajoe@gentoo.org> slimserver-6.5.4.ebuild:
   Remove || die on enewuser and enewgroup. No version bump.
