@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.2.ebuild,v 1.1 2008/09/09 23:36:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.2.ebuild,v 1.2 2008/09/10 14:05:35 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -31,7 +31,6 @@ DEPEND=">=net-im/jabber-base-0.01
 PROVIDE="virtual/jabber-server"
 
 S=${WORKDIR}/${MY_P}/src
-
 
 src_unpack() {
 	unpack ${A}
