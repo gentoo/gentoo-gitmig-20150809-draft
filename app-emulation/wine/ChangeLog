@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.226 2008/09/06 01:40:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.227 2008/09/10 05:19:40 pva Exp $
+
+  10 Sep 2008; Peter Volkov <pva@gentoo.org>
+  +files/wine-1.1.4-install-fix.patch, wine-1.1.4.ebuild:
+  Patch from upstream to fix build issue, bug #237011, thank Martin von
+  Gagern for work.
 
   06 Sep 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add some info about the samba USE flag
