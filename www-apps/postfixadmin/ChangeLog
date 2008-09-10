@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.12 2008/06/01 15:08:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.13 2008/09/10 08:31:03 wrobel Exp $
+
+*postfixadmin-2.2.1.1 (10 Sep 2008)
+
+  10 Sep 2008; wrobel@gentoo.org +postfixadmin-2.2.1.1.ebuild:
+  Added postfixadmin-2.2.1.1 (#233388).
 
 *postfixadmin-2.2.0 (01 Jun 2008)
 
