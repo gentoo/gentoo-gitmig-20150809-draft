@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/libvolume_id-0.81.0.ebuild,v 1.1 2008/06/01 16:46:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/libvolume_id-0.81.0.ebuild,v 1.2 2008/09/10 18:16:18 cardoe Exp $
 
 DESCRIPTION="Library to provide file system information"
 HOMEPAGE="http://www.marcuscom.com"
 SRC_URI="http://www.marcuscom.com/downloads/${PF}.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
 IUSE="static"
