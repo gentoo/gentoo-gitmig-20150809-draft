@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.3.3.ebuild,v 1.6 2008/08/22 22:56:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.3.3.ebuild,v 1.7 2008/09/10 22:51:34 hanno Exp $
 
 inherit kde-functions
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="chipcard debug dtaus geldkarte hbci kde ofx python qt3 yellownet"
 DEPEND=">=sys-libs/gwenhywfar-2.6.1
 	>=app-misc/ktoblzcheck-1.14
-	ofx? ( >=dev-libs/libofx-0.8.3 )
+	ofx? ( =dev-libs/libofx-0.8* )
 	geldkarte? ( >=sys-libs/libchipcard-3.0.3 )
 	chipcard? ( >=sys-libs/libchipcard-3.0.3 )
 	qt3? ( =x11-libs/qt-3* )
