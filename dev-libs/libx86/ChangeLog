@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.9 2008/09/06 20:44:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.10 2008/09/10 05:00:49 pva Exp $
+
+*libx86-1.1-r1 (10 Sep 2008)
+
+  10 Sep 2008; Peter Volkov <pva@gentoo.org> +libx86-1.1-r1.ebuild:
+  Respect LDFLAGS, bug #236888, thank Olivier Huber for report and fix.
 
   06 Sep 2008; Ulrich Mueller <ulm@gentoo.org>
   +files/libx86-0.99-ifmask.patch, libx86-0.99.ebuild, libx86-1.1.ebuild:
