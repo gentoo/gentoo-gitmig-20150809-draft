@@ -1,9 +1,10 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.23 2008/09/10 19:55:53 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.24 2008/09/10 20:02:16 lavajoe Exp $
 
-  10 Sep 2008; Joe Peterson <lavajoe@gentoo.org> squeezecenter-7.2.0.ebuild:
-  Remove || die on enewuser and enewgroup. No version bump.
+  10 Sep 2008; Joe Peterson <lavajoe@gentoo.org> squeezecenter-7.1.0.ebuild,
+  squeezecenter-7.2.0.ebuild:
+  Remove || die on enewuser and enewgroup.  No version bump.
 
   08 Sep 2008; Joe Peterson <lavajoe@gentoo.org> metadata.xml:
   Add Stuart Hickinbottom as a proxy maintainer to metadata.xml
