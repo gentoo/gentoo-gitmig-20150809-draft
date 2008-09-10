@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-CUPS
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.23 2007/12/17 19:19:46 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.24 2008/09/10 09:12:41 tove Exp $
+
+*Net-CUPS-0.59 (10 Sep 2008)
+
+  10 Sep 2008; Torsten Veller <tove@gentoo.org> +Net-CUPS-0.59.ebuild:
+  Version bump. Fixes also bug #216766
 
   17 Dec 2007; Samuli Suominen <drac@gentoo.org> Net-CUPS-0.55.ebuild:
   amd64 stable
