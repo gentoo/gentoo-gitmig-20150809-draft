@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.4 2008/05/29 18:09:54 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.10.9.ebuild,v 1.5 2008/09/10 17:37:06 pebenito Exp $
 
 IUSE=""
 
@@ -19,6 +19,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
 	=sys-libs/libselinux-${SELNX_VER}*"
+
+# tests are not meant to be run outside of the
+# full SELinux userland repo
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
