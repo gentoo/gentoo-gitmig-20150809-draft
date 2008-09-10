@@ -72,6 +72,15 @@ diff -Nru rp-pppoe-3.10.orig/src/configure.in rp-pppoe-3.10/src/configure.in
  AC_TRY_RUN([#include <sys/socket.h>
  #include <net/ethernet.h>
  #include <linux/if.h>
+@@ -204,7 +204,7 @@
+ dnl Figure out pppd version.  2.3.7 to 2.3.9 -- issue warning.  Less than
+ dnl 2.3.7 -- stop
+ 
+-PPPD_VERSION=`$PPPD --version 2>&1 | awk ' /version/ {print $NF}'`
++PPPD_VERSION=2.4.4
+ 
+ case "$PPPD_VERSION" in
+ 1.*|2.0.*|2.1.*|2.2.*|2.3.0|2.3.1|2.3.2|2.3.3|2.3.4|2.3.5|2.3.6)
 @@ -258,7 +258,7 @@
  
  if test "$rpppoe_cv_pack_bitfields" = "rev" ; then
@@ -86,7 +95,7 @@ diff -Nru rp-pppoe-3.10.orig/src/plugin.c rp-pppoe-3.10/src/plugin.c
 +++ rp-pppoe-3.10/src/plugin.c	2008-06-30 22:27:18.000000000 +0200
 @@ -27,7 +27,6 @@
  static char const RCSID[] =
- "$Id: rp-pppoe-3.10-autotools.patch,v 1.1 2008/06/30 21:40:26 mrness Exp $";
+ "$Id: rp-pppoe-3.10-autotools.patch,v 1.2 2008/09/10 20:56:43 mrness Exp $";
  
 -#define _GNU_SOURCE 1
  #include "pppoe.h"
@@ -97,7 +106,7 @@ diff -Nru rp-pppoe-3.10.orig/src/relay.c rp-pppoe-3.10/src/relay.c
 +++ rp-pppoe-3.10/src/relay.c	2008-06-30 22:27:18.000000000 +0200
 @@ -17,8 +17,6 @@
  static char const RCSID[] =
- "$Id: rp-pppoe-3.10-autotools.patch,v 1.1 2008/06/30 21:40:26 mrness Exp $";
+ "$Id: rp-pppoe-3.10-autotools.patch,v 1.2 2008/09/10 20:56:43 mrness Exp $";
  
 -#define _GNU_SOURCE 1 /* For SA_RESTART */
 -
