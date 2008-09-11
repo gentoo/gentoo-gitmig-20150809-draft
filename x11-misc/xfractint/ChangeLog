@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfractint
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.48 2007/12/28 12:46:11 spock Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.49 2008/09/11 20:07:28 maekke Exp $
+
+  11 Sep 2008; Markus Meier <maekke@gentoo.org> xfractint-20.04_p07.ebuild:
+  x86 stable, bug #237004
 
   28 Dec 2007; Michał Januszewski <spock@gentoo.org>
   +files/xfractint-20.04p07-xioerror.patch, xfractint-20.04_p07.ebuild:
