@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.73 2008/06/25 07:39:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.74 2008/09/11 22:39:19 opfer Exp $
+
+  11 Sep 2008; Christian Faulhammer <opfer@gentoo.org> files/vpnc-2.init:
+  source /etc/conf.d/vpnc always as people likely rename their init scripts;
+  reported by Eckard Brauer <ecki AT intershop DOT de> in bug 237078
 
 *vpnc-0.5.1_p332 (25 Jun 2008)
 
