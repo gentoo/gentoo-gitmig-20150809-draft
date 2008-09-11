@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene-analyzers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.2 2008/09/03 04:23:07 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.3 2008/09/11 13:38:30 ranger Exp $
+
+  11 Sep 2008; Brent Baude <ranger@gentoo.org>
+  lucene-analyzers-1.9.1-r1.ebuild:
+  Marking lucene-analyzers-1.9.1-r1 ppc for bug 237143
 
   03 Sep 2008; Alistair Bush <ali_bush@gentoo.org>
   lucene-analyzers-1.9.1-r1.ebuild:
