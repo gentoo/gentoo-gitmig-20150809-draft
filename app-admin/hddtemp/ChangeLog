@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.72 2008/09/07 10:28:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.73 2008/09/11 10:06:32 armin76 Exp $
+
+  11 Sep 2008; Raúl Porcel <armin76@gentoo.org>
+  hddtemp-0.3_beta15-r3.ebuild:
+  Add ~arm wrt #212072
 
   07 Sep 2008; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
   HDD DB update (bug #236842).
