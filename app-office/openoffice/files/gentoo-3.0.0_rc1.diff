@@ -12,8 +12,8 @@
 +++ patches/dev300/apply 
 @@ -1375,12 +1375,8 @@
  system-db-check.diff, i#65979, hmth
- # User ~/.ooo-2.0 as user dir
- scp2-user-config-ooo-2.0.diff, pmladek
+ # User ~/.ooo3 as user dir
+ scp2-user-config-ooo3.diff, pmladek
 -# unused java code
 -disable-parser-jaxp.diff
  # default inc/lib
