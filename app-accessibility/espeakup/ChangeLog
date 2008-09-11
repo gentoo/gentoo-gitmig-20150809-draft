@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeakup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.1 2008/09/02 04:16:43 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.2 2008/09/11 18:08:35 dmwaters Exp $
+
+  11 Sep 2008; Deedra Waters <dmwaters@gentoo.org> metadata.xml,
+  espeakup-0.2.ebuild:
+  Added ~amd64 keyword, and took over maintainer at williamh's request.
 
 *espeakup-0.2 (02 Sep 2008)
 
