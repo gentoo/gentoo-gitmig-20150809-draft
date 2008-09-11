@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.7 2008/09/10 23:45:53 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.8 2008/09/11 09:38:37 armin76 Exp $
 
 inherit eutils kde
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-sound/streamripper-1.32-r2"
