@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp32ogg
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.12 2008/02/28 19:52:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.13 2008/09/11 19:13:32 maekke Exp $
+
+  11 Sep 2008; Markus Meier <maekke@gentoo.org> mp32ogg-0.11-r5.ebuild:
+  amd64/x86 stable, bug #237332
 
 *mp32ogg-0.11-r5 (28 Feb 2008)
 
