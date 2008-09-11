@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.77 2008/08/21 22:49:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.78 2008/09/11 10:07:29 armin76 Exp $
+
+  11 Sep 2008; Raúl Porcel <armin76@gentoo.org> pure-ftpd-1.0.21-r1.ebuild:
+  Add ~arm wrt #235873
 
   21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
