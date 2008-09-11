@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.4.9.ebuild,v 1.7 2006/11/27 00:14:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.4.9.ebuild,v 1.8 2008/09/11 02:26:15 djay Exp $
 
 inherit eutils
 N=${S}/nad
@@ -19,8 +19,8 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/proj-4.4.7-gentoo.patch || die
+	cd "${S}"
+	epatch "${FILESDIR}"/proj-4.4.7-gentoo.patch || die
 	cd ${N}
 	mv README README.NAD
 	unpack proj-nad27-1.2.tar.gz || die
