@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.348 2008/09/11 10:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.349 2008/09/11 11:25:23 corsair Exp $
+
+  11 Sep 2008; Markus Rothe <corsair@gentoo.org> ruby-1.8.6_p287-r1.ebuild:
+  Stable on ppc64; bug #225465
 
   11 Sep 2008; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6_p287-r1.ebuild:
   Stable for HPPA (bug #225465).
