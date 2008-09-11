@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.51 2008/09/11 19:51:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.52 2008/09/11 19:54:31 george Exp $
+
+  11 Sep 2008; George Shapovalov <george@gentoo.org>
+  -files/kdesvn-0.14.1-as-needed.patch,
+  -files/kdesvn-0.14.1-subversion-1.5.patch, -kdesvn-0.11.2.ebuild,
+  -kdesvn-0.14.1.ebuild:
+  removed stale versions
 
 *kdesvn-1.0.1 (11 Sep 2008)
 
