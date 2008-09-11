@@ -1,0 +1,13 @@
+diff -Naurp protobuf-2.0.1-orig/python/setup.py protobuf-2.0.1/python/setup.py
+--- protobuf-2.0.1-orig/python/setup.py	2008-09-11 21:52:47.000000000 +0200
++++ protobuf-2.0.1/python/setup.py	2008-09-11 21:53:58.000000000 +0200
+@@ -47,6 +47,9 @@ def generate_proto(source):
+       sys.exit(-1)
+ 
+ def MakeTestSuite():
++  if 'google' in sys.modules:
++    del sys.modules['google']
++
+   generate_proto("../src/google/protobuf/unittest.proto")
+   generate_proto("../src/google/protobuf/unittest_import.proto")
+   generate_proto("../src/google/protobuf/unittest_mset.proto")
