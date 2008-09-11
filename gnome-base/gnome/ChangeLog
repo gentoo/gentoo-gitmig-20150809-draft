@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.345 2008/09/09 11:45:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.346 2008/09/11 16:36:09 jer Exp $
+
+  11 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-2.22.3.ebuild:
+  Dropping ~hppa keyword for now (bug #237026).
 
   09 Sep 2008; Raúl Porcel <armin76@gentoo.org> gnome-2.22.3.ebuild:
   alpha/ia64/sparc stable wrt #236971
