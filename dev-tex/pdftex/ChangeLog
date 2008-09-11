@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.1 2008/09/03 18:48:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.2 2008/09/11 20:57:16 maekke Exp $
+
+  11 Sep 2008; Markus Meier <maekke@gentoo.org> pdftex-1.40.9.ebuild:
+  add ~x86, bug #237202
 
 *pdftex-1.40.9 (03 Sep 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.1 2008/09/03 18:53:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.2 2008/09/11 20:56:14 maekke Exp $
+
+  11 Sep 2008; Markus Meier <maekke@gentoo.org> luatex-0.29.0.ebuild:
+  add ~x86, bug #237202
 
 *luatex-0.29.0 (03 Sep 2008)
 

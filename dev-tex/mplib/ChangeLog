@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mplib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.2 2008/09/09 17:36:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.3 2008/09/11 20:55:05 maekke Exp $
+
+  11 Sep 2008; Markus Meier <maekke@gentoo.org> mplib-1.091.ebuild:
+  add ~x86, bug #237202
 
   09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> mplib-1.091.ebuild:
   Add ~sparc keyword in preparation for Bug #237202.
