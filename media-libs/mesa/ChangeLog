@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.182 2008/09/08 23:36:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.183 2008/09/11 17:19:47 dberkholz Exp $
+
+  11 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.1.ebuild:
+  Pull in mesa-progs so people don't get really confused by the lack of
+  glxinfo/glxgears.
 
   08 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.1.ebuild:
   (#237091) Pull in the latest versions of X libraries and protocol headers

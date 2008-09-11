@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1.ebuild,v 1.2 2008/09/08 23:36:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.1.ebuild,v 1.3 2008/09/11 17:19:47 dberkholz Exp $
 
 GIT=
 if [[ ${PV} = 9999* ]]; then
@@ -62,6 +62,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.6-r1
 	>=x11-libs/libICE-1.0.4
 	motif? ( >=x11-libs/openmotif-2.3.1-r1 )
 	doc? ( >=app-doc/opengl-manpages-20001215 )
+	>=x11-apps/mesa-progs-7.1
 	!<=x11-base/xorg-x11-6.9"
 DEPEND="${RDEPEND}
 	!<=x11-proto/xf86driproto-2.0.3
