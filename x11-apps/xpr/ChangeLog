@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xpr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.14 2007/12/20 00:20:54 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.15 2008/09/11 17:45:48 dberkholz Exp $
+
+  11 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; xpr-1.0.2.ebuild:
+  Keyword ~amd64.
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xpr-1.0.2.ebuild:
   Stable on x86 (bug #202087)
