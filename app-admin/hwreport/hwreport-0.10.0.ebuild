@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.10.0.ebuild,v 1.1 2008/07/24 23:14:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.10.0.ebuild,v 1.2 2008/09/11 22:21:40 opfer Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND=""
 RDEPEND=">=sys-apps/dmidecode-2.8 >=sys-apps/pciutils-2.2.0"
 
 src_compile() {
-	$(tc-getCC) -o scan-printers scan-printers.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o scan-printers scan-printers.c
 }
 
 src_install() {

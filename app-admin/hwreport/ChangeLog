@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hwreport
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.7 2008/07/24 23:14:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.8 2008/09/11 22:21:40 opfer Exp $
+
+  11 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  hwreport-0.10.0.ebuild:
+  respect CFLAGS and LDFLAGS as reported on bug 236583
 
 *hwreport-0.10.0 (24 Jul 2008)
 
