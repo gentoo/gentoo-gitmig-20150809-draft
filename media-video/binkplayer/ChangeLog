@@ -1,6 +1,9 @@
 # ChangeLog for media-video/binkplayer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.16 2008/09/10 15:03:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.17 2008/09/11 01:42:09 nyhm Exp $
+
+  11 Sep 2008; Tristan Heaven <nyhm@gentoo.org> binkplayer-1.9g.ebuild:
+  Add missing dependencies
 
 *binkplayer-1.9g (10 Sep 2008)
 
