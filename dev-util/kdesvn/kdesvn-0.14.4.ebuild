@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.4 2008/09/10 21:07:46 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.4.ebuild,v 1.5 2008/09/11 18:41:22 george Exp $
 
 inherit qt3 base eutils versionator toolchain-funcs kde-functions
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-RDEPEND=">=dev-util/subversion-1.4"
+RDEPEND=">=dev-util/subversion-1.4
+	dev-db/sqlite"
 
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4"
