@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xindice
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.15 2007/04/09 11:36:15 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.16 2008/09/11 06:56:03 pva Exp $
+
+  11 Sep 2008; Peter Volkov <pva@gentoo.org> xindice-1.0-r4.ebuild:
+  enewuser/enewgroup die on their own, no need to || die. Fixed quotation.
 
   09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -xindice-1.0-r3.ebuild:
   Remove old version.
