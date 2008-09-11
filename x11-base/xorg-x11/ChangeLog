@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.595 2008/09/11 17:48:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.596 2008/09/11 18:06:08 dberkholz Exp $
+
+  11 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.4.ebuild:
+  Drop keywords for architectures where some dependencies aren't keyworded
+  yet. I opened bug #237411 for rekeywording.
 
 *xorg-x11-7.4 (11 Sep 2008)
 
