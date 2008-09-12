@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/horgand
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.19 2008/05/02 15:59:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.20 2008/09/12 21:48:01 maekke Exp $
+
+  12 Sep 2008; Markus Meier <maekke@gentoo.org> horgand-1.14.ebuild:
+  amd64/x86 stable, bug #237335
 
   02 May 2008; Samuli Suominen <drac@gentoo.org> horgand-1.07.ebuild,
   -horgand-1.11.ebuild:
