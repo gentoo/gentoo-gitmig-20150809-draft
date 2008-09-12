@@ -1,6 +1,13 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.3 2008/05/30 17:23:26 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.4 2008/09/12 17:01:06 fordfrog Exp $
+
+*jdk-with-com-sun-20080505-r1 (12 Sep 2008)
+
+  12 Sep 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +jdk-with-com-sun-20080505-r1.ebuild:
+  Added blackdown-jdk-1.4.2 so we have a usable 1.4 JDK even on amd64
+  systems
 
   30 May 2008; Kenneth Prugh <ken69267@gentoo.org>
   jdk-with-com-sun-20080505.ebuild:
