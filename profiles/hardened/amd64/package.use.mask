@@ -22,3 +22,7 @@ dev-java/jamvm libffi
 # mask vdr USE flag for media-tv/zapping since it depends on media-libs/rte
 # which is only available on x86
 media-tv/zapping vdr
+
+# 12 Sep 2008; Gordon Malm <gengor@gentoo.org>
+# x86-specific SIMD/asm, bugs #193022 and #207685
+media-sound/mpg123 mmx 3dnow 3dnowext sse
