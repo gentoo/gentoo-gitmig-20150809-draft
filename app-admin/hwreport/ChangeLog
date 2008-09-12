@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hwreport
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.10 2008/09/12 21:53:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.11 2008/09/12 22:34:59 opfer Exp $
+
+  12 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  -hwreport-0.9.4.ebuild:
+  clean up
 
   12 Sep 2008; Markus Meier <maekke@gentoo.org> hwreport-0.10.0.ebuild:
   x86 stable, bug #236583
