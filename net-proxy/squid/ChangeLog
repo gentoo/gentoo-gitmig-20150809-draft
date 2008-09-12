@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.201 2008/08/23 02:55:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.202 2008/09/12 16:38:43 armin76 Exp $
+
+  12 Sep 2008; Raúl Porcel <armin76@gentoo.org> squid-2.7.4-r1.ebuild,
+  squid-3.0.8.ebuild:
+  Add ~arm wrt #193597
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
