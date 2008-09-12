@@ -12,5 +12,6 @@
 		<flag name='romio'>Build the ROMIO MPI-IO component</flag>
 		<flag name='smp'>Enable smp locks in atomic ops.  Recommended for
 		SMP/multi-threaded environments.</flag>
+		<flag name='mpi-threads'>Enable MPI_THREAD_MULTIPLE</flag>
 	</use>
 </pkgmetadata>
