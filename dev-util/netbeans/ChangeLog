@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.84 2008/05/30 17:28:04 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.85 2008/09/12 21:37:48 betelgeuse Exp $
+
+  12 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  netbeans-5.5.1-r1.ebuild:
+  Add slot dep for jdk-with-com-sun.
 
   30 May 2008; Kenneth Prugh <ken69267@gentoo.org> netbeans-5.5.1-r1.ebuild:
   amd64 stable, bug #220223

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.6 2008/05/30 17:28:04 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.7 2008/09/12 21:37:48 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
@@ -73,7 +73,7 @@ RDEPEND=">=virtual/jre-1.5
 # Uses internal xerces in Sun JDK
 # https://bugs.gentoo.org/show_bug.cgi?id=220197
 DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
-	java-virtuals/jdk-with-com-sun
+	java-virtuals/jdk-with-com-sun:0
 	dev-java/commons-el
 	>=dev-java/commons-jxpath-1.1
 	dev-java/glassfish-persistence
