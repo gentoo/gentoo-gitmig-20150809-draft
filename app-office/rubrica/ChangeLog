@@ -1,6 +1,16 @@
 # ChangeLog for app-office/rubrica
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.4 2008/09/12 08:10:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.5 2008/09/12 21:13:56 opfer Exp $
+
+*rubrica-2.1.6 (12 Sep 2008)
+
+  12 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/rubrica2.desktop, +files/rubrica-2.1.6_fix-menu-language.patch,
+  +files/rubrica-2.1.6_missing-icons.patch, +files/hu.po,
+  +rubrica-2.1.6.ebuild:
+  version bump to experimental version; added Hungarian translation and fix
+  some issues with menu localisation: Thanks to Peter GAAL <pgaal AT gmx DOT
+  net> in bug 236937 for all the initial work
 
   12 Sep 2008; Christian Faulhammer <opfer@gentoo.org> rubrica-2.0.2.ebuild:
   add x11-libs/libnotify to dependencies as reported on bug 226119 by Marek
