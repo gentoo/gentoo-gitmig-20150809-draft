@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/64bit-userland/package.mask,v 1.7 2008/04/29 19:17:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/64bit-userland/package.mask,v 1.8 2008/09/12 15:50:38 betelgeuse Exp $
 
 # Mask multilib ppc64 things
 # Maintained by Yuta Satoh <nigoro@gentoo.org>
@@ -10,4 +10,5 @@
 sys-apps/openrc
 sys-apps/makedev
 >=sys-apps/baselayout-2.0.0
-
+# needs openrc
+>=media-sound/pulseaudio-0.9.11
