@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.10 2008/09/11 14:14:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.11 2008/09/12 09:58:06 chainsaw Exp $
+
+*xf86-input-synaptics-0.15.2-r1 (12 Sep 2008)
+
+  12 Sep 2008; <chainsaw@gentoo.org> -files/synaptics-fix-explosion.patch,
+  -files/synaptics-xorg-version.patch,
+  -xf86-input-synaptics-0.15.1-r1.ebuild,
+  -xf86-input-synaptics-0.15.2.ebuild,
+  +xf86-input-synaptics-0.15.2-r1.ebuild:
+  Install upstream FDI file instead of trying to overwrite it with our own.
+  Upstream has added more data to the file then our copy ever had. Delete
+  older ebuilds.
 
 *xf86-input-synaptics-0.15.2 (11 Sep 2008)
 
