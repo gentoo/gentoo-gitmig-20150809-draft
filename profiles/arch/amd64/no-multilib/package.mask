@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.9 2008/09/02 00:50:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.10 2008/09/12 23:56:16 darkside Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -167,6 +167,7 @@ games-strategy/dominions2
 games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/majesty-demo
+games-strategy/smac
 games-strategy/x2
 games-strategy/x2-demo
 mail-client/mozilla-thunderbird-bin

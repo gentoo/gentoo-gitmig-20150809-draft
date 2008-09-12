@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.18 2008/08/24 11:28:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.19 2008/09/12 23:49:07 darkside Exp $
+
+  12 Sep 2008; Jeremy Olexa <darkside@gentoo.org> no-multilib/package.mask:
+  add games-strategy/smac to no-multilib mask
 
   24 Aug 2008; Marijn Schouten <hkBst@gentoo.org> use.mask:
   don't use mask mzscheme anymore, dev-libs/mzscheme has been integrated
