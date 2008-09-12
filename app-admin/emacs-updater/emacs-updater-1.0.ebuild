@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.0.ebuild,v 1.1 2008/09/04 10:30:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.0.ebuild,v 1.2 2008/09/12 14:39:26 ulm Exp $
 
 DESCRIPTION="Rebuild Emacs packages"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="!<=app-admin/eselect-emacs-1.5
-	app-portage/portage-utils
+	>=app-portage/portage-utils-0.1.28
 	virtual/emacs"
 
 src_install() {
