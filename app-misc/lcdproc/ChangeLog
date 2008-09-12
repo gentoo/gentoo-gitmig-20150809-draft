@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.63 2008/07/31 16:31:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.64 2008/09/12 23:58:55 rbu Exp $
+
+*lcdproc-0.5.2-r2 (12 Sep 2008)
+
+  12 Sep 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/0.5.2-r2-lcdproc.initd, lcdproc-0.5.1-r4.ebuild,
+  lcdproc-0.5.2-r1.ebuild, +lcdproc-0.5.2-r2.ebuild:
+  Add imonlcd to support Antec iMON LCD modules (bug #232328), lcdproc init
+  script should start after ntp-client (bug #234084), fix quoting.
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

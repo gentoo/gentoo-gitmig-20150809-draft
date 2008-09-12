@@ -1,31 +1,30 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.7 2008/09/12 23:58:55 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r2.ebuild,v 1.1 2008/09/12 23:58:55 rbu Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.9"
 inherit eutils autotools multilib
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
 HOMEPAGE="http://lcdproc.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-patches.tar.gz"
+	mirror://gentoo/${PF}-patches.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc debug ldap nfs samba seamless-hbars usb lirc irman joystick"
+IUSE="doc debug nfs samba seamless-hbars usb lirc irman joystick"
 
 # The following array holds the USE_EXPANDed keywords
 IUSE_LCD_DEVICES=(ncurses bayrad cfontz cfontz633 cfontzpacket
 	cwlinux eyeboxone g15 graphlcd glk
-	hd44780 icpa106 imon iowarrior
+	hd44780 icpa106 imon imonlcd iowarrior
 	lb216 lcdm001 lcterm
 	md8800 ms6931 mtcs16209x mtxorb noritakevfd
 	pyramid sed1330 sed1520 serialvfd sli
 	stv5730 svga t6963 text tyan
-	ula200 xosd)
+	ula200 xosd ea65 picolcd serialpos )
 
 # Iterate through the array and add the lcd_devices_* that we support
 NUM_DEVICES=${#IUSE_LCD_DEVICES[@]}
@@ -36,7 +35,6 @@ while [ "${index}" -lt "${NUM_DEVICES}" ] ; do
 done
 
 RDEPEND="
-	ldap?     ( net-nds/openldap )
 	usb?      ( dev-libs/libusb )
 	lirc?     ( app-misc/lirc )
 	irman?    ( media-libs/libirman )
@@ -45,11 +43,12 @@ RDEPEND="
 	lcd_devices_g15?      ( dev-libs/libg15  >=dev-libs/libg15render-1.1.1 )
 	lcd_devices_ncurses?   ( sys-libs/ncurses )
 	lcd_devices_svga?     ( media-libs/svgalib )
-	lcd_devices_ula200?   ( dev-embedded/libftdi  dev-libs/libusb )
+	lcd_devices_ula200?   ( >=dev-embedded/libftdi-0.7  dev-libs/libusb )
 	lcd_devices_xosd?     ( x11-libs/xosd  x11-libs/libX11  x11-libs/libXext )
 	lcd_devices_cfontzpacket? ( dev-libs/libusb )
 	lcd_devices_cwlinux?    ( dev-libs/libusb )
-	lcd_devices_pyramid?  ( dev-libs/libusb )"
+	lcd_devices_pyramid?  ( dev-libs/libusb )
+	lcd_devices_picolcd?  ( dev-libs/libusb )"
 DEPEND="${RDEPEND}
 	doc?      ( app-text/xmlto )"
 RDEPEND="${RDEPEND}
@@ -66,13 +65,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${WORKDIR}"/${PF}-patches/${PV}-imonlcd-0.3.patch
+
+	epatch "${WORKDIR}"/${PF}-patches/${PV}-picolcd.patch
+
 	sed -i "79s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
 	einfo "Patching LCDd.conf to use DriverPath=/usr/$(get_libdir)/lcdproc/"
 
-	epatch "${WORKDIR}/${P}-patches/${PV}-as-needed.patch"
-	epatch "${WORKDIR}/${P}-patches/${PV}-serialvfd-parallel.patch"
-	epatch "${WORKDIR}/${P}-patches/${PV}-nested-functions.patch"
-	epatch "${WORKDIR}/${P}-patches/${PV}-g15daemon-1.9.patch"
 	eautoreconf
 }
 
@@ -81,12 +80,12 @@ src_compile() {
 	# The positions must be the same as the corresponding use_expand flags
 	local DEVICE_DRIVERS=(curses bayrad CFontz CFontz633 CFontzPacket
 		CwLnx EyeboxOne g15 glcdlib glk
-		hd44780 icp_a106 imon IOWarrior
+		hd44780 icp_a106 imon imonlcd IOWarrior
 		lb216 lcdm001 lcterm
 		MD8800 ms6931 mtc_s16209x MtxOrb NoritakeVFD
 		pyramid sed1330 sed1520 serialVFD sli
 		stv5730 svga t6963 text tyan
-		ula200 xosd)
+		ula200 xosd ea65 picolcd serialPOS)
 
 	# Generate comma separated list of drivers
 	COMMA_DRIVERS=""
@@ -123,7 +122,6 @@ src_compile() {
 
 	econf \
 		$(use_enable debug) \
-		$(use_enable ldap) \
 		$(use_enable nfs stat-nfs) \
 		$(use_enable samba stat-smbfs ) \
 		$(use_enable seamless-hbars) \
@@ -168,8 +166,8 @@ src_install() {
 	doins clients/examples/*.pl
 	doins clients/metar/
 
-	newinitd "${FILESDIR}/${PV}-LCDd.initd" LCDd
-	newinitd "${FILESDIR}/${PV}-lcdproc.initd" lcdproc
+	newinitd "${FILESDIR}/0.5.1-LCDd.initd" LCDd
+	newinitd "${FILESDIR}/0.5.2-r2-lcdproc.initd" lcdproc
 
 	dodoc README CREDITS ChangeLog INSTALL TODO
 	dodoc docs/README.* docs/*.txt
