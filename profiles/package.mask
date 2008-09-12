@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8968 2008/09/11 12:25:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8969 2008/09/12 04:09:02 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -967,25 +967,6 @@ net-irc/bitchx
 # Raúl Porcel <armin76@gentoo.org> (6 Jul 2008)
 # 0.13.1 is not supported by anything in the tree, yet
 =net-libs/rb_libtorrent-0.13.1
-
-# Jeremy Olexa <darkside@gentoo.org> (6 Jul 2008)
-# Upstream has stopped working on this project in favor of built in
-# functionality in gimp. Not needed anymore. Masked for removal in ~60 days by
-# treecleaners. bug #211320
-media-gfx/gimp-freetype
-
-# Jeremy Olexa <darkside@gentoo.org> (6 Jul 2008)
-# Masked for removal in ~60 days by treecleaners. bug #202300. This package has
-# a file collision with dev-perl/TimeDate and no one steps up to maintain it.
-app-admin/systemconfigurator
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2008)
-# Masked for removal in ~60 days by treecleaners. bug #59548
-# dev-util/tla leaks file descriptors. app-emacs/xtla is not usable and depends
-# on tla. Use >=app-editors/emacs-cvs-23 or app-emacs/dvc (from the Emacs
-# overlay) as a replacement.
-dev-util/tla
-app-emacs/xtla
 
 # Carsten Lohrke <carlo@gentoo.org> (30 Jun 2008)
 # Masking as it's pretty broken for a long while now.
