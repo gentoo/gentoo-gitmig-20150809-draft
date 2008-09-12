@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.107 2008/09/10 15:49:26 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.108 2008/09/12 22:16:18 maekke Exp $
+
+  12 Sep 2008; Markus Meier <maekke@gentoo.org> ibm-jre-bin-1.5.0.8a.ebuild:
+  x86 stable, bug #233652
 
   10 Sep 2008; Kenneth Prugh <ken69267@gentoo.org>
   ibm-jre-bin-1.5.0.8a.ebuild:
