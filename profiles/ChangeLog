@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1857 2008/09/12 16:59:49 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1858 2008/09/12 22:55:58 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask x11-terms/root-tail for removal in 60 days, bug #127193
 
   12 Sep 2008; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc:
   Add imonlcd expanded useflag for lcdproc
