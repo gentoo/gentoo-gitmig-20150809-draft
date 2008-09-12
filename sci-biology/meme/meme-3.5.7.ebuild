@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-3.5.7.ebuild,v 1.1 2008/09/12 14:06:53 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-3.5.7.ebuild,v 1.2 2008/09/12 18:24:11 mr_bones_ Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/perl-5.6.1
 S="${WORKDIR}/${PN}_${PV}"
 
 pkg_setup() {
-	# generate meme group to restrict logging to 
+	# generate meme group to restrict logging to
 	# /var/log/meme
 	enewgroup meme
 }
