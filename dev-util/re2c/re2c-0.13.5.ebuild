@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.13.5.ebuild,v 1.4 2008/09/06 13:34:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.13.5.ebuild,v 1.5 2008/09/12 22:21:34 maekke Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/libc"
