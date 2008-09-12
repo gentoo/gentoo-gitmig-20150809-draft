@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.0.2.ebuild,v 1.2 2007/12/18 10:16:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.0.2.ebuild,v 1.3 2008/09/12 08:10:19 opfer Exp $
 
 inherit gnome2
 
@@ -18,7 +18,8 @@ S=${WORKDIR}/${MY_PN}-${PV}/
 
 RDEPEND="dev-libs/libxml2
 	gnome-base/libglade
-	>=gnome-base/gconf-2"
+	>=gnome-base/gconf-2
+	x11-libs/libnotify"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

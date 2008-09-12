@@ -1,6 +1,10 @@
 # ChangeLog for app-office/rubrica
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.3 2007/12/18 10:16:16 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.4 2008/09/12 08:10:19 opfer Exp $
+
+  12 Sep 2008; Christian Faulhammer <opfer@gentoo.org> rubrica-2.0.2.ebuild:
+  add x11-libs/libnotify to dependencies as reported on bug 226119 by Marek
+  Miller <mlm AT ngc17 DOT pl>
 
   18 Dec 2007; Christian Faulhammer <opfer@gentoo.org> rubrica-2.0.2.ebuild:
   stable x86, correct copyright header
