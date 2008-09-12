@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/HTTP-DAV-0.33.ebuild,v 1.1 2008/09/10 16:55:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/HTTP-DAV-0.34.ebuild,v 1.1 2008/09/12 05:28:40 tove Exp $
 
 MODULE_AUTHOR=OPERA
 inherit perl-module
