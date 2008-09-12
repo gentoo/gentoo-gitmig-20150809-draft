@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8971 2008/09/12 23:04:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8972 2008/09/12 23:16:13 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
+# Masked for removal in 60 days. Broken in Gentoo for 1.5 years, no maintainer,
+# automagic deps, non trivial to version bump due to now bundled packages.
+# dev-lang/stratego comes for the ride becuase it depends on these two packages.
+# See bug #159048
+dev-libs/aterm
+dev-libs/sdf2-bundle
+dev-lang/stratego
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
 # Masked for removal in 60 days. dead upstream, broken on current systems. No
