@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.10-r51.ebuild,v 1.1 2008/04/18 06:01:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.12.ebuild,v 1.1 2008/09/12 15:53:45 betelgeuse Exp $
 
 EAPI=1
 
@@ -15,13 +15,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib"
 
-RDEPEND="X? ( x11-libs/libX11 )
+RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libXau x11-libs/libXdmcp )
 	caps? ( sys-libs/libcap )
-	>=media-libs/audiofile-0.2.6-r1
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
-	>=media-libs/libsndfile-1.0.10
-	>=dev-libs/liboil-0.3.6
-	alsa? ( >=media-libs/alsa-lib-1.0.10 )
+	alsa? ( >=media-libs/alsa-lib-1.0.17-r1 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12 )
 	>=dev-libs/liboil-0.3.0
@@ -41,9 +38,15 @@ RDEPEND="X? ( x11-libs/libX11 )
 	)
 	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
-	>=sys-apps/baselayout-2.0_rc5
+	>=media-libs/audiofile-0.2.6-r1
+	>=media-libs/speex-1.2_beta
+	>=media-libs/libsndfile-1.0.10
+	>=dev-libs/liboil-0.3.6
+	sys-libs/gdbm
+	|| ( sys-apps/openrc >=sys-apps/baselayout-2.0_rc5 )
 	>=sys-devel/libtool-1.5.24" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
+	X? ( x11-proto/xproto )
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
 	dev-util/unifdef"
@@ -74,8 +77,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-caps.patch"
 
 	# Avoid building - and especially linking - test programs
 	# outside of make check
@@ -129,7 +130,7 @@ src_install() {
 		use "$1" && echo "-D$define" || echo "-U$define"
 	}
 
-	unifdef "${FILESDIR}/pulseaudio.init.d-3" \
+	unifdef "${FILESDIR}/pulseaudio.init.d-4" \
 		$(use_define hal) \
 		$(use_define avahi) \
 		$(use_define alsa) \
@@ -141,6 +142,9 @@ src_install() {
 
 	dohtml -r doc
 	dodoc README
+
+	# this should fix system daemon startup #233789
+	cp "${D}/etc/pulse/default.pa" "${D}/etc/pulse/system.pa"
 
 	# Create the state directory
 	diropts -o pulse -g pulse -m0755
@@ -182,6 +186,15 @@ pkg_postinst() {
 		elog "Please note that the BlueTooth proximity module seems itself"
 		elog "still experimental, so please report to upstream if you have"
 		elog "problems with it."
+	fi
+	if use alsa; then
+		local pkg="media-plugins/alsa-plugins"
+		if has_version ${pkg} && ! built_with_use --missing false ${pkg} pulseaudio; then
+			elog
+			elog "You have alsa support enabled so you probably want to install"
+			elog "${pkg} with pulseaudio support to have"
+			elog "alsa using applications route their sound through pulseaudio"
+		fi
 	fi
 
 	eselect esd update --if-unset
