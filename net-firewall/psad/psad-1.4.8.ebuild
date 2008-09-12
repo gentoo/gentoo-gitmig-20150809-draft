@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.11 2007/07/13 07:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.12 2008/09/12 05:03:41 battousai Exp $
 
 inherit eutils perl-app
 
@@ -25,23 +25,23 @@ RDEPEND="virtual/logger
 	net-misc/whois"
 
 src_compile() {
-	cd ${S}/Psad
+	cd "${S}"/Psad
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}/Net-IPv4Addr
+	cd "${S}"/Net-IPv4Addr
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}/IPTables-Parse
+	cd "${S}"/IPTables-Parse
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}/IPTables-ChainMgr
+	cd "${S}"/IPTables-ChainMgr
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd ${S}
+	cd "${S}"
 	# We'll use the C binaries
 	emake || die "Make failed: daemons"
 }
@@ -54,25 +54,25 @@ src_install() {
 
 	keepdir /var/lib/psad /var/log/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/psad
-	cd ${S}/Psad
+	cd "${S}"/Psad
 	perl-module_src_install
 
-	cd ${S}/Net-IPv4Addr
+	cd "${S}"/Net-IPv4Addr
 	perl-module_src_install
 
-	cd ${S}/IPTables-ChainMgr
+	cd "${S}"/IPTables-ChainMgr
 	perl-module_src_install
 
-	cd ${S}/IPTables-Parse
+	cd "${S}"/IPTables-Parse
 	perl-module_src_install
 
-	cd ${S}
+	cd "${S}"
 	insinto /usr
 	dosbin kmsgsd psad psadwatchd
 	newsbin fwcheck_psad.pl fwcheck_psad
 	dobin pscan
 
-	cd ${S}
+	cd "${S}"
 
 	fix_psad_conf
 
@@ -81,23 +81,23 @@ src_install() {
 	doins psad_*
 	doins auto_dl icmp_types posf signatures pf.os
 
-	cd ${S}/init-scripts
+	cd "${S}"/init-scripts
 	newinitd psad-init.gentoo psad
 
-	cd ${S}/snort_rules
+	cd "${S}"/snort_rules
 	dodir /etc/psad/snort_rules
 	insinto /etc/psad/snort_rules
 	doins *.rules
 
-	cd ${S}
-	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README LICENSE SCAN_LOG
+	cd "${S}"
+	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README SCAN_LOG
 }
 
 pkg_postinst() {
-	if [ ! -p ${ROOT}/var/lib/psad/psadfifo ]
+	if [ ! -p "${ROOT}"/var/lib/psad/psadfifo ]
 	then
 		ebegin "Creating syslog FIFO for PSAD"
-		mknod -m 600 ${ROOT}/var/lib/psad/psadfifo p
+		mknod -m 600 "${ROOT}"/var/lib/psad/psadfifo p
 		eend $?
 	fi
 

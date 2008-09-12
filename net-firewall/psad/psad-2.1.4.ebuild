@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.0.6.ebuild,v 1.6 2008/09/12 05:03:41 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.1.4.ebuild,v 1.1 2008/09/12 05:03:41 battousai Exp $
 
 inherit eutils perl-app
 
@@ -25,15 +25,15 @@ RDEPEND="virtual/logger
 	net-misc/whois"
 
 src_compile() {
-	cd "${S}"/Net-IPv4Addr
+	cd "${S}"/deps/Net-IPv4Addr
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd "${S}"/IPTables-Parse
+	cd "${S}"/deps/IPTables-Parse
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
-	cd "${S}"/IPTables-ChainMgr
+	cd "${S}"/deps/IPTables-ChainMgr
 	SRC_PREP="no" perl-module_src_compile
 	emake test
 
@@ -51,13 +51,13 @@ src_install() {
 	keepdir /var/lib/psad /var/log/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/psad
 
-	cd "${S}"/Net-IPv4Addr
+	cd "${S}"/deps/Net-IPv4Addr
 	perl-module_src_install
 
-	cd "${S}"/IPTables-ChainMgr
+	cd "${S}"/deps/IPTables-ChainMgr
 	perl-module_src_install
 
-	cd "${S}"/IPTables-Parse
+	cd "${S}"/deps/IPTables-Parse
 	perl-module_src_install
 
 	cd "${S}"
@@ -78,7 +78,7 @@ src_install() {
 	cd "${S}"/init-scripts
 	newinitd psad-init.gentoo psad
 
-	cd "${S}"/snort_rules
+	cd "${S}"/deps/snort_rules
 	dodir /etc/psad/snort_rules
 	insinto /etc/psad/snort_rules
 	doins *.rules

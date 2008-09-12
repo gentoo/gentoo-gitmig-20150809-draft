@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/psad
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.43 2007/05/06 10:00:48 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.44 2008/09/12 05:03:41 battousai Exp $
+
+*psad-2.1.4 (12 Sep 2008)
+
+  12 Sep 2008; Bryan D. Stine <battousai@gentoo.org> psad-1.4.8.ebuild,
+  psad-2.0.6.ebuild, +psad-2.1.4.ebuild:
+  Version bump to 2.1.4. Dependencies, such as the bundled perl modules,
+  have been moved into the deps/ folder in the srcdir, so adjusted the
+  ebuild for that. Fixes bug #236434, thanks to Gustaf Ankarloo for the
+  report. Also, fixed minor syntax errors in all versions.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> psad-1.4.8.ebuild,
   psad-2.0.6.ebuild:
