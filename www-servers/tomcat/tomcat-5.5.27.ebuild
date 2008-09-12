@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27.ebuild,v 1.2 2008/09/12 17:10:55 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27.ebuild,v 1.3 2008/09/12 21:41:10 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -41,15 +41,18 @@ RDEPEND="dev-java/eclipse-ecj:3.3
 	dev-java/ant-core
 	admin? ( dev-java/struts:1.2 )
 	dev-java/sun-javamail
-	java5? ( >=virtual/jre-1.5 )
+	java5? (
+		>=virtual/jre-1.5
+		>=java-virtuals/jdk-with-com-sun-20080505-r1:0
+	)
 	!java5? (
 		=virtual/jre-1.4*
+		java-virtuals/jdk-with-com-sun:1.4
 		dev-java/sun-jaf
 		dev-java/mx4j-core:3.0
 		dev-java/xerces:2
 	   	dev-java/xml-commons-external:1.3
-	   )
-	>=java-virtuals/jdk-with-com-sun-20080505-r1"
+	   )"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}"
