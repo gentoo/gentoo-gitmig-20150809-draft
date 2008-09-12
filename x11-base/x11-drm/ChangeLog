@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.59 2008/09/12 05:15:22 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.60 2008/09/12 21:30:21 battousai Exp $
+
+  12 Sep 2008; Bryan D. Stine <battousai@gentoo.org>
+  x11-drm-20070314.ebuild, x11-drm-20080710.ebuild:
+  Bumped 20070314 to patchball 0.5, 20080710 to patchball 0.3. Both add the
+  __ucmpdi2 fix for PPC. Added information to 20080710 ebuild regarding the
+  issues that can be caused by having old in-kernel DRM modules installed.
+  The new patchballs fix bug #204985.
 
   12 Sep 2008; Bryan D. Stine <battousai@gentoo.org>
   x11-drm-20070314.ebuild, x11-drm-20080710.ebuild:

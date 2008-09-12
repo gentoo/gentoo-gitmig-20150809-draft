@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.2 2008/09/12 05:15:22 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.3 2008/09/12 21:30:21 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -27,7 +27,7 @@ IUSE="${IUSE_VIDEO_CARDS} kernel_FreeBSD kernel_linux"
 RESTRICT="strip"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.2"
+PATCHVER="0.3"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
@@ -324,5 +324,14 @@ pkg_postinst_os() {
 	if use kernel_linux
 	then
 		linux-mod_pkg_postinst
+
+		elog "Having in-kernel DRM modules installed can prevent x11-drm modules from being"
+		elog "loaded. It can also lead to unknown symbols in x11-drm modules, which would"
+		elog "be seen during the installation. If you experience any of those problems,"
+		elog "please ensure that the in-kernel DRM modules are not installed."
+		elog "This can be done with the following:"
+		elog "    cd ${KERNEL_DIR}"
+		elog "    make modules modules_install"
+		elog "This should allow the x11-drm modules to load and function normally."
 	fi
 }
