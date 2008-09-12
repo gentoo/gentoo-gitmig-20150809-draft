@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.15 2007/08/25 16:52:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.16 2008/09/12 19:20:55 pva Exp $
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -25,7 +25,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 
 	# Install docs
-	dodoc README TODO COPYING ChangeLog ANNOUNCE
+	dodoc README TODO ChangeLog ANNOUNCE
 	dodoc doc/dicf.ms doc/rfc.ms doc/rfc.sh doc/rfc2229.txt
 	dodoc doc/security.doc doc/toc.ms
 
@@ -41,6 +41,6 @@ src_install() {
 	newconfd "${FILESDIR}"/1.9.11-r1/dictd.confd dictd
 
 	# Remove useless cruft, fixes bug 107376
-	rm -f ${D}/usr/bin/colorit
-	rm -f ${D}/usr/share/man/man1/colorit.1
+	rm -f "${D}"/usr/bin/colorit
+	rm -f "${D}"/usr/share/man/man1/colorit.1
 }
