@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/gpicview-0.1.9.ebuild,v 1.1 2008/05/17 14:50:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/gpicview-0.1.10.ebuild,v 1.1 2008/09/12 20:59:31 maekke Exp $
 
 DESCRIPTION="A Simple and Fast Image Viewer for X"
 HOMEPAGE="http://lxde.sourceforge.net/gpicview"
