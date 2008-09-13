@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-1.1.0.ebuild,v 1.4 2008/09/10 10:14:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-1.1.0.ebuild,v 1.5 2008/09/13 07:41:06 nixnut Exp $
 
 DESCRIPTION="XSel is a command-line program for getting and setting the contents of the X selection."
 HOMEPAGE="http://www.vergenet.net/~conrad/software/xsel"
@@ -8,7 +8,7 @@ SRC_URI="http://www.vergenet.net/~conrad/software/${PN}/download/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
