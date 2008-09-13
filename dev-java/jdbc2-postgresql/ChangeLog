@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc2-postgresql
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.20 2008/05/17 10:41:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.21 2008/09/13 22:28:47 caster Exp $
+
+  13 Sep 2008; Vlastimil Babka <caster@gentoo.org>
+  -jdbc2-postgresql-7.3.ebuild, -jdbc2-postgresql-7.4.ebuild:
+  Remove obsolete gen-1 ebuilds.
 
   17 May 2008; nixnut <nixnut@gentoo.org> jdbc2-postgresql-7.3-r1.ebuild,
   jdbc2-postgresql-7.4-r1.ebuild:
