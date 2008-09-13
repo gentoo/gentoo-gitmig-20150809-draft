@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.45 2008/09/06 00:16:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.46 2008/09/13 09:27:18 nixnut Exp $
+
+  13 Sep 2008; nixnut <nixnut@gentoo.org> qca-2.0.0-r2.ebuild:
+  Stable on ppc wrt bug 236497
 
 *qca-2.0.1-r1 (06 Sep 2008)
 
