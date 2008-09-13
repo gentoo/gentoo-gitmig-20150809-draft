@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.13 2007/10/09 07:36:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.14 2008/09/13 01:12:14 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -26,7 +26,7 @@ IUSE="${IUSE_VIDEO_CARDS}"
 RESTRICT="strip"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.3"
+PATCHVER="0.4"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
@@ -43,18 +43,20 @@ DEPEND="virtual/linux-sources"
 RDEPEND=""
 
 pkg_setup() {
-	linux-mod_pkg_setup
-
 	if kernel_is 2 6 ; then
-		linux_chkconfig_builtin "DRM" && \
-			die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
-		CONFIG_CHECK="AGP"
+		CONFIG_CHECK="!DRM AGP"
+		ERROR_DRM="Please disable the Direct Rendering Manager in the kernel config. (CONFIG_DRM)"
 		ERROR_AGP="AGP support is not enabled in your kernel config (CONFIG_AGP)"
 
+		kernel_is ge 2 6 25 && \
+			CONFIG_CHECK="${CONFIG_CHECK} ~UNUSED_SYMBOLS" \
+			ERROR_UNUSED_SYMBOLS="Please enable unused/obsolete exported symbols in your kernel config (CONFIG_UNUSED_SYMBOLS). These modules will not load otherwise."
 	elif kernel_is 2 4 ; then
 		CONFIG_CHECK="DRM"
 		ERROR_DRM="Please enable DRM support in your kernel configuration. (CONFIG_DRM = y or m)."
 	fi
+
+	linux-mod_pkg_setup
 
 	# Set video cards to build for.
 	set_vidcards
@@ -137,11 +139,6 @@ src_install() {
 
 	# Strip binaries, leaving /lib/modules untouched (bug #24415)
 	strip_bins \/lib\/modules
-
-	# Yoinked from the sys-apps/touchpad ebuild. Thanks to whoever made this.
-	keepdir /etc/modules.d
-	sed 's:%PN%:'${PN}':g' "${FILESDIR}"/modules.d-${PN} > "${D}"/etc/modules.d/${PN}
-	sed -i 's:%KV%:'${KV_FULL}':g' "${D}"/etc/modules.d/${PN}
 }
 
 pkg_postinst() {
@@ -160,6 +157,15 @@ pkg_postinst() {
 	fi
 
 	linux-mod_pkg_postinst
+
+	elog "Having in-kernel DRM modules installed can prevent x11-drm modules from being"
+	elog "loaded. It can also lead to unknown symbols in x11-drm modules, which would"
+	elog "be seen during the installation. If you experience any of those problems,"
+	elog "please ensure that the in-kernel DRM modules are not installed."
+	elog "This can be done with the following:"
+	elog "    cd ${KERNEL_DIR}"
+	elog "    make modules modules_install"
+	elog "This should allow the x11-drm modules to load and function normally."
 }
 
 # Functions used above are defined below:

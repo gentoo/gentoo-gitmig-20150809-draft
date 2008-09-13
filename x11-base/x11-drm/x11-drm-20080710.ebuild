@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.3 2008/09/12 21:30:21 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.4 2008/09/13 01:12:14 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -136,10 +136,9 @@ kernel_setup() {
 			die "Please use in-kernel DRM or switch to a 2.6 kernel."
 		fi
 
-		CONFIG_CHECK="!DRM ~AGP"
+		CONFIG_CHECK="!DRM AGP"
 		ERROR_DRM="Please disable DRM in the kernel config. (CONFIG_DRM = n)"
-		ERROR_AGP="AGPGART support is not enabled in your kernel config (CONFIG_AGP).
-			This will probably be essential for direct rendering."
+		ERROR_AGP="AGPGART support is not enabled in your kernel config (CONFIG_AGP)."
 
 		linux-mod_pkg_setup
 	fi

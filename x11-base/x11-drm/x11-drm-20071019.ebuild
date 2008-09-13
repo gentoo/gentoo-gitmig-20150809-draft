@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20071019.ebuild,v 1.2 2008/07/11 02:51:08 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20071019.ebuild,v 1.3 2008/09/13 01:12:14 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -128,8 +128,6 @@ kernel_setup() {
 		K_RV=${CHOST/*-freebsd/}
 	elif use kernel_linux
 	then
-		linux-mod_pkg_setup
-
 		if kernel_is 2 4
 		then
 			eerror "Upstream support for 2.4 kernels has been removed, so this package will no"
@@ -137,11 +135,11 @@ kernel_setup() {
 			die "Please use in-kernel DRM or switch to a 2.6 kernel."
 		fi
 
-		linux_chkconfig_builtin "DRM" && \
-			die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
-
-		CONFIG_CHECK="AGP"
+		CONFIG_CHECK="!DRM AGP"
+		ERROR_DRM="Please disable the Direct Rendering Manager in the kernel config. (CONFIG_DRM)"
 		ERROR_AGP="AGP support is not enabled in your kernel config (CONFIG_AGP)"
+
+		linux-mod_pkg_setup
 	fi
 }
 
@@ -309,11 +307,6 @@ src_install_linux() {
 
 	# Strip binaries, leaving /lib/modules untouched (bug #24415)
 	strip_bins \/lib\/modules
-
-	# Yoinked from the sys-apps/touchpad ebuild. Thanks to whoever made this.
-	keepdir /etc/modules.d
-	sed 's:%PN%:'${PN}':g' "${FILESDIR}"/modules.d-${PN} > "${D}"/etc/modules.d/${PN}
-	sed -i 's:%KV%:'${KV_FULL}':g' "${D}"/etc/modules.d/${PN}
 }
 
 src_install_freebsd() {
@@ -332,5 +325,14 @@ pkg_postinst_os() {
 	if use kernel_linux
 	then
 		linux-mod_pkg_postinst
+
+		elog "Having in-kernel DRM modules installed can prevent x11-drm modules from being"
+		elog "loaded. It can also lead to unknown symbols in x11-drm modules, which would"
+		elog "be seen during the installation. If you experience any of those problems,"
+		elog "please ensure that the in-kernel DRM modules are not installed."
+		elog "This can be done with the following:"
+		elog "    cd ${KERNEL_DIR}"
+		elog "    make modules modules_install"
+		elog "This should allow the x11-drm modules to load and function normally."
 	fi
 }
