@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.121 2008/08/21 17:54:05 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.122 2008/09/13 18:48:15 mrness Exp $
+
+*dspam-3.8.0-r14 (13 Sep 2008)
+
+  13 Sep 2008; Alin Năstac <mrness@gentoo.org> -dspam-3.8.0-r11.ebuild,
+  +dspam-3.8.0-r14.ebuild:
+  Add the complete email address to recipient list when StripRcptDomain option
+  is activated (#231175).
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   dspam-3.8.0-r13.ebuild:
