@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.60 2008/09/13 03:09:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.61 2008/09/13 07:09:57 fmccor Exp $
+
+  13 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
+  rapidsvn-0.9.6-r1.ebuild:
+  Sparc stable --- Bug #237095 --- needed for subversion-1.5.1.
 
   13 Sep 2008; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.6-r1.ebuild:
   Removed harmless configure option (closes bug 230757) in preparation for
