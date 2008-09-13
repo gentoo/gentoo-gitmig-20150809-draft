@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8974 2008/09/13 01:32:15 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8975 2008/09/13 02:49:11 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (13 Sep 2008)
+# Masked for removal is 60 days. Broke, old, unmaintained. bug # 210689
+x11-base/xdirectfb
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
 # Masked for removal in 60 days. Broken package, needs love due to automagic

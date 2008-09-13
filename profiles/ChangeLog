@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1862 2008/09/13 01:32:15 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1863 2008/09/13 02:49:11 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask x11-base/xdirectfb for removal in 60 days. bug #210689
 
   13 Sep 2008; Bryan D. Stine <battousai@gentoo.org> package.mask:
   Unmask x11-drm 20080710, since a modules.d solution has been committed.
