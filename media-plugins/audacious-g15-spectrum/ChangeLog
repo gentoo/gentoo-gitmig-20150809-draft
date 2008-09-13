@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-g15-spectrum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.7 2008/01/18 11:56:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.8 2008/09/13 23:07:11 robbat2 Exp $
+
+*audacious-g15-spectrum-2.5.5 (13 Sep 2008)
+
+  13 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/audacious-g15-spectrum-2.5.5-audacious-1.5.patch,
+  +audacious-g15-spectrum-2.5.5.ebuild:
+  Version bump and include patch to support Audacious 1.5.
 
   31 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   +files/audacious-g15-spectrum-2.5.2-audacious-1.4.patch,
