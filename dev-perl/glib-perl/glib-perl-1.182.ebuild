@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.182.ebuild,v 1.6 2008/05/25 12:49:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.182.ebuild,v 1.7 2008/09/13 14:45:04 jer Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 # 080408 - can't find where the xml stuff is used -- tove
 #IUSE="xml"
