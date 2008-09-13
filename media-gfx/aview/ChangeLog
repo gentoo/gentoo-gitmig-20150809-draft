@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/aview
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.10 2007/05/15 09:55:15 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.11 2008/09/13 19:08:38 rbu Exp $
+
+*aview-1.3.0_rc1-r1 (13 Sep 2008)
+
+  13 Sep 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/aview-1.3.0_rc1-includes.patch,
+  +files/aview-1.3.0_rc1-tmp_creation.patch, +aview-1.3.0_rc1-r1.ebuild:
+  Non-maintainer bump:
+  Fix insecure temporary file creation in asciiview (bug #235808)
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
