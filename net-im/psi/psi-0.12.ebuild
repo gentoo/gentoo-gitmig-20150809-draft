@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.ebuild,v 1.2 2008/09/13 09:35:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.ebuild,v 1.3 2008/09/13 17:13:28 jer Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 IUSE="crypt dbus debug doc kernel_linux spell ssl xscreensaver"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 RESTRICT="test"
 
 COMMON_DEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )
