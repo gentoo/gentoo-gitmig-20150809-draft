@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.85 2008/09/12 21:37:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.86 2008/09/13 18:33:02 betelgeuse Exp $
+
+  13 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  netbeans-5.5.1-r1.ebuild:
+  Use JAVA_PKG_NV_DEPEND to work around bug #237580 (java-config not
+  supporting slotted virtuals).
 
   12 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   netbeans-5.5.1-r1.ebuild:

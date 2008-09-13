@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.7 2008/09/12 21:37:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.8 2008/09/13 18:33:02 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
@@ -72,8 +72,12 @@ RDEPEND=">=virtual/jre-1.5
 # NOTE: netbeans cannot compile with latest JDK 1.7
 # Uses internal xerces in Sun JDK
 # https://bugs.gentoo.org/show_bug.cgi?id=220197
-DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
-	java-virtuals/jdk-with-com-sun:0
+JDK_ATOMS="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )"
+# Needed to work around https://bugs.gentoo.org/show_bug.cgi?id=237580
+JAVA_PKG_NV_DEPEND="${JDK_ATOMS}
+	java-virtuals/jdk-with-com-sun"
+DEPEND="${JDK_ATOMS}
+	>=java-virtuals/jdk-with-com-sun-20080505-r1:0
 	dev-java/commons-el
 	>=dev-java/commons-jxpath-1.1
 	dev-java/glassfish-persistence
