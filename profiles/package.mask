@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8978 2008/09/13 10:37:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8979 2008/09/13 13:09:14 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,11 +28,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Rémi Cardona <remi@gentoo.org> (13 Sep 2008)
-# Masked until approved by udev maintainers
-# see bug #236635
-=sys-fs/udev-127-r1
 
 # Jeremy Olexa <darkside@gentoo.org> (13 Sep 2008)
 # Masked for removal in 60 days. Multiple issues, broke for some people. Needs

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1866 2008/09/13 10:37:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1867 2008/09/13 13:09:13 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Unmasked udev-127-r1.
 
   13 Sep 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   mask a new udev revision until approved by its maintainers
