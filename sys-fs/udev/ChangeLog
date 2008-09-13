@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.407 2008/09/02 15:21:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.408 2008/09/13 10:41:14 remi Exp $
+
+*udev-127-r1 (13 Sep 2008)
+
+  13 Sep 2008; Rémi Cardona <remi@gentoo.org> +udev-127-r1.ebuild:
+  add --with-udev-prefix to econf, fixes hal mounting, see bug #236635
 
 *udev-127 (02 Sep 2008)
 
