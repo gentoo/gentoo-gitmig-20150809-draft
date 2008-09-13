@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.56 2008/09/13 08:23:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.57 2008/09/13 09:44:30 nixnut Exp $
+
+  13 Sep 2008; nixnut <nixnut@gentoo.org> mysql-ruby-2.7.5.ebuild:
+  Stable on ppc wrt bug 237545
 
   13 Sep 2008; Hans de Graaff <graaff@gentoo.org> mysql-ruby-2.7.4.ebuild,
   mysql-ruby-2.7.5.ebuild:
