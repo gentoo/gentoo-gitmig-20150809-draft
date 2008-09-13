@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.100 2008/02/19 01:21:17 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.101 2008/09/13 14:44:34 jmbsvicetto Exp $
+
+  13 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  koffice-i18n-1.6.1.ebuild, koffice-i18n-1.6.3.ebuild:
+  Update koffice dependencies so that the new KDE 4 koffice doesn't satisfy
+  it. Thanks to zlin for reporting the issue.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   koffice-i18n-1.6.1.ebuild, koffice-i18n-1.6.3.ebuild:
