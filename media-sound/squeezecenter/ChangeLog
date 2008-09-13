@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.24 2008/09/10 20:02:16 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.25 2008/09/13 22:47:01 lavajoe Exp $
+
+*squeezecenter-7.2.0-r1 (13 Sep 2008)
+*squeezecenter-7.1.0-r1 (13 Sep 2008)
+
+  13 Sep 2008; Joe Peterson <lavajoe@gentoo.org>
+  +squeezecenter-7.1.0-r1.ebuild, +squeezecenter-7.2.0-r1.ebuild:
+  Do not install perl GD files so as not to conflict with installed
+  dev-perl/GD package (bug #237548)
 
   10 Sep 2008; Joe Peterson <lavajoe@gentoo.org> squeezecenter-7.1.0.ebuild,
   squeezecenter-7.2.0.ebuild:
