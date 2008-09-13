@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.1 2008/06/20 22:51:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.2 2008/09/13 10:59:33 fordfrog Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source"
@@ -22,7 +22,8 @@ COMMON_DEP="dev-java/javacc
 	java-virtuals/servlet-api:2.3
 	java-virtuals/servlet-api:2.4
 	java-virtuals/servlet-api:2.5
-	dev-java/jaxen:1.1"
+	dev-java/jaxen:1.1
+	dev-java/juel:0"
 
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
@@ -60,6 +61,7 @@ src_compile() {
 	java-pkg_jar-from jaxen-1.1
 	java-pkg_jar-from jython
 	java-pkg_jar-from javacc
+	java-pkg_jar-from juel
 
 	cd "${S}"
 	eant jar $(use_doc) -Djavacc.home=/usr/share/javacc/lib
