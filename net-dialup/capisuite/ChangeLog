@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.32 2008/05/29 14:29:53 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.33 2008/09/13 22:39:00 sbriesen Exp $
+
+*capisuite-0.4.5-r5 (13 Sep 2008)
+
+  13 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capisuite-0.4.5-gcc43.patch, +files/capisuite-0.4.5-python25.patch,
+  -files/capisuite, +capisuite-0.4.5-r5.ebuild:
+  added gcc 4.3 + python 2.5 patches, minor ebuild cleanup. Solving bugs
+  #221557, #226589, #232734 and #236777.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> capisuite-0.4.5-r4.ebuild:
   python_mod_compile is ROOT aware. Fixed python_mod_cleanup.
