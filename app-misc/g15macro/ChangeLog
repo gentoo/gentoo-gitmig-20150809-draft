@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15macro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.4 2008/02/21 23:53:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.5 2008/09/13 22:35:35 robbat2 Exp $
+
+*g15macro-1.0.3 (13 Sep 2008)
+
+  13 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +g15macro-1.0.3.ebuild:
+  Version bump, fixes dropped keypresses during replay.
 
   21 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> g15macro-1.0.0.ebuild,
   g15macro-1.0.1.ebuild:
