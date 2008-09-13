@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Encoding/XML-Encoding-2.04.ebuild,v 1.1 2008/09/09 08:58:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Encoding/XML-Encoding-2.05.ebuild,v 1.1 2008/09/13 07:54:55 tove Exp $
 
 MODULE_AUTHOR=SHAY
 inherit perl-module
