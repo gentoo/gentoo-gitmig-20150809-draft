@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.1 2008/05/17 06:41:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.2 2008/09/13 03:09:41 nerdboy Exp $
 
 WANT_AUTOCONF="2.5"
 inherit versionator eutils libtool autotools wxwidgets flag-o-matic fdo-mime
@@ -67,8 +67,7 @@ src_compile() {
 		xslss_dir=$(ls -1d /usr/share/sgml/docbook/xsl-stylesheets*|head -n1)
 		myconf="--with-docbook-xsl=$xslss_dir"
 	else
-		myconf="--without-xsltproc --without-docbook-xsl \
-			--without-doxygen --without-dot"
+		myconf="--without-xsltproc --without-doxygen --without-dot"
 	fi
 
 	if use static; then

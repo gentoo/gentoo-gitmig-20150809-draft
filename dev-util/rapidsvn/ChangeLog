@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.59 2008/06/15 23:13:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.60 2008/09/13 03:09:41 nerdboy Exp $
+
+  13 Sep 2008; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.6-r1.ebuild:
+  Removed harmless configure option (closes bug 230757) in preparation for
+  stable request (see bug 237095).
 
   15 Jun 2008; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
   rapidsvn-0.9.4.ebuild:
