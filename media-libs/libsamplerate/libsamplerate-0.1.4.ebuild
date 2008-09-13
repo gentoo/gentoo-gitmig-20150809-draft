@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.4.ebuild,v 1.2 2008/09/11 19:01:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.4.ebuild,v 1.3 2008/09/13 11:08:15 nixnut Exp $
 
 WANT_AUTOMAKE=1.7
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mega-nerd.com/SRC/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="sndfile"
 
 RDEPEND="sndfile? ( >=media-libs/libsndfile-1.0.2 )"
