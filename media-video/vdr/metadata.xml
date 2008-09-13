@@ -13,6 +13,7 @@
 		<flag name="bigpatch">Enables almost all additional features flying around on the net (including aio)</flag>
 		<flag name="child-protection">Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)</flag>
 		<flag name="cmdctrl">allows switching remote control on/off</flag>
+		<flag name="cmdreccmdi18n">loads translated commands and reccommands files if existing</flag>
 		<flag name="cmdsubmenu">Allows the creation of submenus in the commands menu</flag>
 		<flag name="cutterlimit">Limit IO bandwith used for cutting</flag>
 		<flag name="cutterqueue">Adds a queue of recordings to be cutted</flag>

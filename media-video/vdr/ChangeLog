@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.118 2008/06/29 13:32:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.119 2008/09/13 14:36:07 zzam Exp $
+
+*vdr-1.6.0_p2 (13 Sep 2008)
+
+  13 Sep 2008; Matthias Schwarzott <zzam@gentoo.org> metadata.xml,
+  +vdr-1.6.0_p2.ebuild:
+  Version bumped. vdr now is at maintainance patch 1.6.0-2, extensions-patch
+  at v63. Fixed a typo in name of new extension cmdreccmdi18n.
 
 *vdr-1.4.7-r12 (29 Jun 2008)
 
