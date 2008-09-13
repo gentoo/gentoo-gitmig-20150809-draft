@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.6 2007/10/11 20:03:42 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.7 2008/09/13 12:56:12 remi Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 flag-o-matic
 
 DESCRIPTION="XML editor for the GNOME environment"
 HOMEPAGE="http://www.freespiders.org/projects/gmlview/"
@@ -28,10 +28,14 @@ DEPEND="${RDEPEND}
 
 DOCS="ABOUT-NLS AUTHORS BRANCHES ChangeLog COPYRIGHT NEWS README"
 
+pkg_setup() {
+	# see bug #179819
+	append-ldflags -Wl,--no-as-needed
+}
+
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+	gnome2_src_unpack
 
 	# Small corrections for mlview.desktop
-	epatch ${FILESDIR}/${P}-dot_desktop.patch
+	epatch "${FILESDIR}/${P}-dot_desktop.patch"
 }
