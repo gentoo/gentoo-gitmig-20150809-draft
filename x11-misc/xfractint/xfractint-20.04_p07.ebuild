@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p07.ebuild,v 1.5 2008/09/11 20:07:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p07.ebuild,v 1.6 2008/09/13 09:22:17 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fractint.org/ftp/current/linux/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
