@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/juel/juel-2.1.0.ebuild,v 1.3 2008/09/03 14:06:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/juel/juel-2.1.0.ebuild,v 1.4 2008/09/13 10:54:31 dertobi123 Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
