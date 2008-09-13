@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.6 2008/08/25 17:20:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.7 2008/09/13 18:57:04 pva Exp $
 
 inherit linux-mod
 
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="injection"
 
-DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-old
 		net-wireless/wireless-tools
 		~net-wireless/madwifi-ng-tools-${PV}"
