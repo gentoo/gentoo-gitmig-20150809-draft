@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.184 2008/09/14 18:38:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.185 2008/09/14 19:21:27 dberkholz Exp $
+
+  14 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.1.ebuild,
+  mesa-7.2_rc1.ebuild:
+  mesa-progs has to be in PDEPEND to avoid a circular dependency through
+  freeglut (reported by Javier Villavicencio).
 
 *mesa-7.2_rc1 (14 Sep 2008)
 
