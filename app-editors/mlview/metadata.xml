@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>gnome</herd>
+  <herd>none</herd>
   <maintainer>
-    <email>leonardop@gentoo.org</email>
-    <name>Leonardo Boshell</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>
     The MlView project is an on going effort to develop an xml editor
