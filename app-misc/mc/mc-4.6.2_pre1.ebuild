@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.2_pre1.ebuild,v 1.4 2008/05/05 17:12:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.2_pre1.ebuild,v 1.5 2008/09/14 02:04:27 solar Exp $
 
 EAPI=1
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=${P/_/-}
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.gnu.org/gnu/mc/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gpm nls samba +unicode X"
 
 RDEPEND=">=dev-libs/glib-2
@@ -49,6 +49,12 @@ src_unpack() {
 	# Prevent lazy bindings in cons.saver binary for bug #135009
 	sed -i -e "s:^\(cons_saver_LDADD = .*\):\1 -Wl,-z,now:" \
 		src/Makefile.in || die "sed failed."
+
+	# docs try to run the files it just built while trying convert .1 to .hlp files.
+	# this will never work for cross compiles, so we simply don't make docs.
+	if tc-is-cross-compiler; then
+		sed -i -e s/'lib doc syntax'/'lib syntax'/ Makefile.in
+	fi
 }
 
 src_compile() {
@@ -86,3 +92,4 @@ src_install() {
 	insinto /usr/share/mc/syntax
 	doins "${FILESDIR}"/ebuild.syntax
 }
+
