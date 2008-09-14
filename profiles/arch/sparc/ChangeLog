@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.27 2008/09/09 18:43:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.28 2008/09/14 01:17:41 bluebird Exp $
+
+  14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> use.mask:
+  Mask video_cards_radeonhd, no hardware to test
 
   09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   package.use.mask xindy for texlive because it requires clisp which does not
