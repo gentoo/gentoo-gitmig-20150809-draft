@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.0.ebuild,v 1.2 2008/09/06 21:03:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.0.ebuild,v 1.3 2008/09/14 01:44:31 bluebird Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -12,7 +12,7 @@ OPENGL_DIR="xorg-x11"
 SRC_URI="${SRC_URI}
 	http://xorg.freedesktop.org/releases/individual/xserver/${P}.tar.bz2"
 DESCRIPTION="X.Org X servers"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek

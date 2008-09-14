@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.351 2008/09/07 12:39:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.352 2008/09/14 01:44:31 bluebird Exp $
+
+  14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org>
+  xorg-server-1.5.0.ebuild:
+  Add ~sparc keyword, bug #237411
 
   07 Sep 2008; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
   Fix a typo.
