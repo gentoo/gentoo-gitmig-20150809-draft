@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-3.7.2.ebuild,v 1.1 2008/09/01 17:38:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-3.7.2.ebuild,v 1.2 2008/09/14 15:56:30 hanno Exp $
 
 inherit kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.hboeck.de/aq//${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="chipcard debug dtaus geldkarte hbci kde ofx python qt3 yellownet"
+IUSE="chipcard debug geldkarte hbci kde ofx python qt3 yellownet"
 DEPEND=">=sys-libs/gwenhywfar-3.4.1
 	>=app-misc/ktoblzcheck-1.14
 	ofx? ( >=dev-libs/libofx-0.8.3 )
@@ -33,7 +33,6 @@ src_compile() {
 	use hbci && BACKENDS="aqhbci"
 	use geldkarte && BACKENDS="${BACKENDS} aqgeldkarte"
 	use ofx && BACKENDS="${BACKENDS} aqofxconnect"
-	use dtaus && BACKENDS="${BACKENDS} aqdtaus"
 	use yellownet && BACKENDS="${BACKENDS} aqyellownet"
 
 	econf PATH="/usr/qt/3/bin:${PATH}" \
