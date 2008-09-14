@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.0-r1.ebuild,v 1.3 2008/08/24 16:22:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.2.ebuild,v 1.1 2008/09/14 15:41:29 loki_val Exp $
 
 EAPI=1
 
@@ -10,19 +10,28 @@ MY_PN=${PN}-for-linux
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="Cool gadgets from Google for your Desktop"
 HOMEPAGE="http://code.google.com/p/google-gadgets-for-linux/"
-SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+dbus debug +gtk +qt4 +gstreamer"
 
 # Weird things happen when we start mix-n-matching, so for the time being
-# I've just locked the deps to the versions I have.
+# I've just locked the deps to the versions I had as of Summer 2008. With any
+# luck, they'll be stable when we get to stabling this package.
+
+# FIXME: ggl doesn't work with xulrunner:1.9. The other options are
+# firefox-3 xulrunner and firefox-2. I was bitten by the fact that the configure
+# scripts indicate that xulrunner-1.9 is supported and so couldn't get this
+# POS software to run. It took me a couple of compiles to figure out what was
+# broken. For now, I've just locked the dep to xulrunner:1.8, since I'm a lazy
+# bastard.
+
 RDEPEND=">=dev-lang/spidermonkey-1.7.0
 	x11-libs/libX11
 	x11-libs/libXext
 	>=dev-libs/libxml2-2.6.32
-	>=sys-libs/zlib-1.2.3-r1
+	sys-libs/zlib
 
 	dbus? ( sys-apps/dbus )
 
@@ -34,8 +43,8 @@ RDEPEND=">=dev-lang/spidermonkey-1.7.0
 		>=x11-libs/gtk+-2.12.10
 		>=x11-libs/pango-1.20.3
 		gnome-base/librsvg
-		>=net-libs/xulrunner-1.8.1.14:1.8
-		>=net-misc/curl-7.18.1
+		net-libs/xulrunner:1.8
+		>=net-misc/curl-7.18.2
 		>=dev-libs/atk-1.22.0 )
 
 	qt4? (	dbus? ( >=x11-libs/qt-dbus-4.4.0 )
@@ -58,7 +67,7 @@ pkg_setup() {
 	if ! use gtk && ! use qt4
 	then
 		eerror "You must choose which toolkit to build for. Either qt4 or gtk can be"
-		eerror "chosen. For qt4, see also above. To enable $toolkit, do:"
+		eerror "chosen. For qt4, see also above. To enable \$toolkit, do:"
 		eerror "echo \"${CATEGORY}/${PN} \$toolkit\" >> /etc/portage/package.use"
 		die "You need to choose a toolkit"
 	fi
@@ -90,12 +99,14 @@ pkg_setup() {
 src_compile() {
 	#For the time being, the smjs-script runtime is required for both gtk and qt
 	#versions, but the goal is to make the qt4 version depend only on qt-script.
+
 	econf	--disable-dependency-tracking \
 		--disable-update-desktop-database \
 		--disable-update-mime-database \
 		--disable-werror \
 		--enable-libxml2-xml-parser \
 		--enable-smjs-script-runtime \
+		--with-gtkmozembed=xulrunner \
 		$(use_enable debug) \
 		$(use_enable dbus libggadget-dbus) \
 		$(use_enable gstreamer gst-audio-framework) \
