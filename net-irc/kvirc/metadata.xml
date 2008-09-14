@@ -12,6 +12,7 @@
     <flag name="ipc">add support for IPC between kvirc processes</flag>
     <flag name="qt-dbus">enable use of Qt's DBUS interface for IPC</flag>
     <flag name="qt-phonon">use phonon instead of command-based sound</flag>
+    <flag name="qt-webkit">enable use of Qt's WebKit</flag>
     <flag name="transparency">compile in fake-transparency</flag>
   </use>
 </pkgmetadata>

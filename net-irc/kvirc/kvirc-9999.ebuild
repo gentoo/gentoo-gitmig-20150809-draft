@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.11 2008/09/03 20:31:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.12 2008/09/14 19:48:27 jokey Exp $
 
 EAPI="1"
 
@@ -12,9 +12,7 @@ HOMEPAGE="http://www.kvirc.net/"
 LICENSE="kvirc"
 SLOT="4"
 KEYWORDS=""
-IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde nls profile +qt-dbus qt-phonon ssl +transparency"
-# IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde nls profile +qt-dbus qt-phonon qt-webkit ssl +transparency"
-# Support for Qt-WebKit not implemented yet
+IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde nls profile +qt-dbus qt-phonon qt-webkit ssl +transparency"
 
 RDEPEND="
 	sys-libs/zlib
@@ -25,8 +23,8 @@ RDEPEND="
 	kde? ( kde-base/kdelibs:kde-4 )
 	qt-dbus? ( x11-libs/qt-dbus )
 	qt-phonon? ( x11-libs/qt-phonon )
+	qt-webkit? ( x11-libs/qt-webkit )
 	ssl? ( dev-libs/openssl )"
-	# qt-webkit? ( x11-libs/qt-webkit )
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -64,9 +62,9 @@ src_compile() {
 		$(cmake-utils_use_want profile MEMORY_PROFILE)
 		$(cmake-utils_use_want qt-dbus QTDBUS)
 		$(cmake-utils_use_want qt-phonon PHONON)
+		$(cmake-utils_use_want qt-webkit QTWEBKIT)
 		$(cmake-utils_use_want ssl OPENSSL)
 		$(cmake-utils_use_want transparency TRANSPARENCY)"
-		# $(cmake-utils_use_want qt-webkit QTWEBKIT)
 
 	cmake-utils_src_compile
 }
