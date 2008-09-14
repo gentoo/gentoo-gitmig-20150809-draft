@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.61 2008/08/12 14:12:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.62 2008/09/14 18:10:33 ford_prefect Exp $
+
+*gnome-python-desktop-2.22.0-r10 (14 Sep 2008)
+
+  14 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml,
+  +gnome-python-desktop-2.22.0-r10.ebuild:
+  Initial import of split gnome-python-desktop. This is a meta ebuild that
+  is functionally identical to the original, monolithic ebuild.
+  Dropping arm/ppc*/sh keywords - will add them back once the monolithic ebuild
+  is done.
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   gnome-python-desktop-2.22.0.ebuild:
