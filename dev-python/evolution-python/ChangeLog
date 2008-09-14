@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/evolution-python
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.1 2008/09/14 16:32:09 ford_prefect Exp $
+
+*evolution-python-2.22.0 (14 Sep 2008)
+
+  14 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org> +metadata.xml,
+  +evolution-python-2.22.0.ebuild:
+  Initial import of split gnome-python-desktop. This package installs the
+  Evolution and EDS bindings.
+  Dropping sh keyword because e-d-s is not available
