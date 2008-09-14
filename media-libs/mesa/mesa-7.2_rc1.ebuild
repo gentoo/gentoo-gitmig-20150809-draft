@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.2_rc1.ebuild,v 1.2 2008/09/14 19:21:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.2_rc1.ebuild,v 1.3 2008/09/14 19:53:37 dberkholz Exp $
 
 GIT=
 if [[ ${PV} = 9999* ]]; then
@@ -148,9 +148,6 @@ src_compile() {
 
 	# Deactivate assembly code for pic build
 	myconf="${myconf} $(use_enable !pic asm)"
-
-	# Sparc assembly code is not working
-	myconf="${myconf} $(use_enable !sparc asm)"
 
 	myconf="${myconf} --disable-glut"
 

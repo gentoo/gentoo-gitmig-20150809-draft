@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.186 2008/09/14 19:38:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.187 2008/09/14 19:53:37 dberkholz Exp $
+
+  14 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.2_rc1.ebuild:
+  (#237648) Logic for asm was still wrong on sparc hardened (Does that even
+  exist?). Remove sparc-handling code altogether because the default does
+  the right thing.
 
   14 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.1.ebuild,
   mesa-7.2_rc1.ebuild:
