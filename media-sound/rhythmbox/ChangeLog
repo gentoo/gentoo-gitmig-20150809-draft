@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.132 2008/07/23 22:48:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.133 2008/09/14 18:52:27 ford_prefect Exp $
+
+*rhythmbox-0.11.6-r1 (14 Sep 2008)
+
+  14 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +rhythmbox-0.11.6-r1.ebuild:
+  Depend on gnome-python components (gconf, gnome-vfs, libgnome), rather
+  than all of gnome-python. Thanks to Nirbheek Chauhan (bheekling) for the
+  work on this.
 
   23 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
   rhythmbox-0.11.6.ebuild:
