@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.92 2008/06/30 00:37:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.93 2008/09/13 23:58:34 carlo Exp $
+
+*kgamma-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kgamma-3.5.10.ebuild:
+  Version bump.
 
   30 Jun 2008; Carsten Lohrke <carlo@gentoo.org> kgamma-4.0.5.ebuild:
   Remove invalid dependency xgamma.

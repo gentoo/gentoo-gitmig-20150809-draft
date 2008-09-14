@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.92 2008/06/10 22:54:14 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.93 2008/09/13 23:58:21 carlo Exp $
+
+*kdesu-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kdesu-3.5.10.ebuild:
+  Version bump.
 
   10 Jun 2008; Timo Gurr <tgurr@gentoo.org> kdesu-3.5.9.ebuild:
   Fix kdesu-3.5.9.ebuild, glibc-2.8 compatibility bug #225727.

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.85 2008/06/07 10:49:14 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.86 2008/09/13 23:59:09 carlo Exp $
+
+*knewsticker-scripts-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org>
+  +knewsticker-scripts-3.5.10.ebuild:
+  Version bump.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -knewsticker-scripts-3.5.8.ebuild:

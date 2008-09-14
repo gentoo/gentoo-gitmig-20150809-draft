@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.39 2008/07/25 19:28:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.40 2008/09/14 00:00:35 carlo Exp $
+
+*pykde-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +pykde-3.5.10.ebuild:
+  Version bump.
 
   25 Jul 2008; Carsten Lohrke <carlo@gentoo.org> pykde-3.5.9.ebuild:
   Wrong split/monolithic dependency order.

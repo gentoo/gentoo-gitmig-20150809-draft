@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.76 2008/06/08 15:21:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.77 2008/09/14 00:00:37 carlo Exp $
+
+*qtruby-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +qtruby-3.5.10.ebuild:
+  Version bump.
 
   08 Jun 2008; Raúl Porcel <armin76@gentoo.org> qtruby-3.5.9.ebuild:
   sparc stable wrt #221063

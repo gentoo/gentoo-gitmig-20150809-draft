@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.538 2008/07/27 20:49:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.539 2008/09/13 23:58:06 carlo Exp $
+
+*kdelibs-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kdelibs-3.5.10.ebuild:
+  Version bump.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.8-r4.ebuild:
   QA: Get rid of deprecated qt_min_version().

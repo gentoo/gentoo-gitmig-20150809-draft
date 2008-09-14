@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.92 2008/06/07 16:07:16 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.93 2008/09/13 23:59:57 carlo Exp $
+
+*kteatime-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kteatime-3.5.10.ebuild:
+  Version bump.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kteatime-3.5.8.ebuild, -kteatime-4.0.2.ebuild, -kteatime-4.0.3.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.96 2008/06/07 14:13:24 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.97 2008/09/14 00:00:17 carlo Exp $
+
+*kxsldbg-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kxsldbg-3.5.10.ebuild:
+  Version bump.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kxsldbg-3.5.8.ebuild:

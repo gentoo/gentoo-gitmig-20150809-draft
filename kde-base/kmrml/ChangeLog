@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmrml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/ChangeLog,v 1.78 2008/06/08 15:16:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/ChangeLog,v 1.79 2008/09/13 23:59:04 carlo Exp $
+
+*kmrml-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kmrml-3.5.10.ebuild:
+  Version bump.
 
   08 Jun 2008; Raúl Porcel <armin76@gentoo.org> kmrml-3.5.9.ebuild:
   alpha/sparc stable wrt #221063

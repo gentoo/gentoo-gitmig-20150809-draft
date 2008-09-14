@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.124 2008/06/07 15:10:38 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.125 2008/09/13 23:57:59 carlo Exp $
+
+*kdebase-startkde-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org>
+  +kdebase-startkde-3.5.10.ebuild:
+  Version bump.
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kdebase-startkde-3.5.8-r1.ebuild, -kdebase-startkde-4.0.2.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.89 2008/06/14 17:37:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.90 2008/09/13 23:58:48 carlo Exp $
+
+*kjsembed-3.5.10 (13 Sep 2008)
+
+  13 Sep 2008; Carsten Lohrke <carlo@gentoo.org> +kjsembed-3.5.10.ebuild:
+  Version bump.
 
   14 Jun 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 221063
