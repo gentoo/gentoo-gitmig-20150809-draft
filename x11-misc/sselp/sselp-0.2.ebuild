@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-0.2.ebuild,v 1.1 2008/09/14 20:35:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-0.2.ebuild,v 1.2 2008/09/14 23:26:29 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -31,4 +31,3 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
 	dodoc README
 }
-
