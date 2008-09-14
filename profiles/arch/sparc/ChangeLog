@@ -1,8 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.28 2008/09/14 01:17:41 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.29 2008/09/14 01:33:59 bluebird Exp $
 
   14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> use.mask:
+  Mask video_cards_ast, no hardware to test
   Mask video_cards_radeonhd, no hardware to test
 
   09 Sep 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
