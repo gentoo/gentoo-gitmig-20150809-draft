@@ -1,30 +1,29 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/stat-3.3.ebuild,v 1.7 2007/03/13 14:10:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/stat-3.3.ebuild,v 1.8 2008/09/14 09:05:33 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A command-line stat() wrapper"
 SRC_URI="ftp://metalab.unc.edu/pub/linux/utils/file/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/directory/stat.html"
 
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="~arm amd64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -g:${CFLAGS}:" Makefile.orig > Makefile
 }
 
 src_compile() {
-	emake || die
+	tc-export CC
+	emake CC="${CC}" || die
 }
 
 src_install() {
