@@ -1,0 +1,35 @@
+2008-09-13  Doug Goldstein  <cardoe@gentoo.org>
+	* switch to udevadm settle since udevsettle has been deprecated
+	  and finally removed with udev 126.
+	* add message if udevadm settle fails to execute properly what the
+	  consequence is
+
+diff -Nur cryptsetup-1.0.6/lib/libdevmapper.c cryptsetup-1.0.6-udevsettle/lib/libdevmapper.c
+--- cryptsetup-1.0.6/lib/libdevmapper.c	2007-10-25 03:11:19.000000000 -0400
++++ cryptsetup-1.0.6-udevsettle/lib/libdevmapper.c	2008-09-13 21:22:56.000000000 -0400
+@@ -18,11 +18,11 @@
+ 
+ #define	CRYPT_TARGET	"crypt"
+ 
+-#define UDEVSETTLE	"/sbin/udevsettle"
++#define UDEVSETTLE	"/sbin/udevadm settle"
+ 
+-static void run_udevsettle(void)
++static int run_udevsettle(void)
+ {
+-	system(UDEVSETTLE);
++	return system(UDEVSETTLE);
+ }
+ 
+ static void set_dm_error(int level, const char *file, int line,
+@@ -192,7 +192,9 @@
+ 		options->flags |= CRYPT_FLAG_READONLY;
+ 
+ 	/* run udevsettle to avoid a race in libdevmapper causing busy dm devices */
+-	run_udevsettle();
++	if (run_udevsettle() != 0)
++		fprintf(stderr, "%s unable to avoid potential race with busy "
++				"device-mapper devices", UDEVSETTLE);
+ 
+ 	r = 0;
+ 	
