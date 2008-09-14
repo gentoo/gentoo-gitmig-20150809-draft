@@ -1,0 +1,11 @@
+--- setup.py.old	2008-09-14 11:07:08.000000000 -0500
++++ setup.py	2008-09-14 11:10:34.000000000 -0500
+@@ -301,7 +301,7 @@
+     (wpath.share, ['data/wicd.glade', ]),
+     (wpath.lib, ['wicd/wicd-client.py', 'wicd/monitor.py', 'wicd/wicd-daemon.py', 'wicd/configscript.py', 'wicd/suspend.py', 'wicd/autoconnect.py']), #'wicd/wicd-gui.py', 
+     (wpath.autostart, ['other/wicd-tray.desktop', ]),
+-    ( wpath.docdir, [ 'AUTHORS', 'README' ]),
++    #( wpath.docdir, [ 'AUTHORS', 'README' ]),
+     ]
+     piddir = os.path.dirname(wpath.pidfile)
+     if not piddir.endswith('/'):
