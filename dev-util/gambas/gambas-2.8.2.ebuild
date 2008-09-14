@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.1 2008/09/14 18:21:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.2 2008/09/14 18:21:57 darkside Exp $
 
 EAPI="1"
 
@@ -294,7 +294,7 @@ src_install() {
 		my_dekstop_and_icon \
 		"${MY_PN}-database-manager" "Gambas Database Manager" "Development" \
 		"app/src/${MY_PN}-database-manager/img/logo/logo-128.png" \
-		"/usr/share/icons/hicolor/128x128/apps" 
+		"/usr/share/icons/hicolor/128x128/apps"
 
 		insinto /usr/share/icons/hicolor/64x64/mimetypes
 		doins app/mime/application-x-gambasscript.png main/mime/application-x-gambas.png \
