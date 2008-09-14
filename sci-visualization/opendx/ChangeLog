@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.14 2008/08/06 18:55:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.15 2008/09/14 11:25:38 spock Exp $
+
+  14 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  +files/opendx-4.4.4-concurrent-make-fix.patch, opendx-4.4.4.ebuild:
+  Fix concurrent make (bug #230535).
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
