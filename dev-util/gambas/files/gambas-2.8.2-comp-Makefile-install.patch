@@ -1,0 +1,27 @@
+--- comp/Makefile.am.orig	2008-08-31
++++ comp/Makefile.am	2008-08-31
+@@ -22,17 +22,17 @@
+ 	@(cd $(srcdir)/src; d=`pwd`; for p in `cat order`; do \
+ 	  echo "Compiling $$p..."; \
+ 	  cd $$d/$$p; \
+-	  $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); \
++	  { \
++	  $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix) && \
+ 	  $(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
++	  } && { \
+ 	  rm -rf .gambas; \
+ 	  echo "Installing $$p..."; \
+ 	  $(INSTALL) $$p.gambas $(DESTDIR)$(gblibdir); \
+-	  $(INSTALL) .component $(DESTDIR)$(gblibdir)/$$p.component; \
+-	  chmod a-x $(DESTDIR)$(gblibdir)/$$p.component; \
+-	  $(INSTALL) .info $(DESTDIR)$(gbdatadir)/info/$$p.info; \
+-	  chmod a-x $(DESTDIR)$(gbdatadir)/info/$$p.info; \
+-	  $(INSTALL) .list $(DESTDIR)$(gbdatadir)/info/$$p.list; \
+-	  chmod a-x $(DESTDIR)$(gbdatadir)/info/$$p.list; \
++	  $(INSTALL) -m 644 .component $(DESTDIR)$(gblibdir)/$$p.component; \
++	  $(INSTALL) -m 644 .info $(DESTDIR)$(gbdatadir)/info/$$p.info; \
++	  $(INSTALL) -m 644 .list $(DESTDIR)$(gbdatadir)/info/$$p.list; \
++	  } || echo "Failed"; \
+ 	  done)
+ 
+ uninstall-local:

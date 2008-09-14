@@ -1,0 +1,17 @@
+--- help/Makefile.am.orig	2008-08-19
++++ help/Makefile.am	2008-08-19
+@@ -4,10 +4,11 @@
+ install-exec-local:
+ 	@echo
+ 	@echo "Installing the gambas help files..."
+-	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/help
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/help
+-	@cp -R $(srcdir)/help $(DESTDIR)$(gbdatadir)
+-	@(cd $(DESTDIR)$(gbdatadir)/help; tar xfz $(DESTDIR)$(gbdatadir)/help/help.tar.gz; $(LN_S) help/img img; $(LN_S) help/image image; rm -f Makefile*)
++	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/help
++	@cp -R $(srcdir)/help/{tree,*.css,*.png} $(DESTDIR)$(gbdatadir)/help
++	@tar xfz $(srcdir)/help/help.tar.gz -C $(DESTDIR)$(gbdatadir)/help
++	@(cd $(DESTDIR)$(gbdatadir)/help; ln -s help/img img; ln -s help/image image; rm -f Makefile*)
+ 
+ uninstall-local:
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/help

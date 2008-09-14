@@ -1,0 +1,33 @@
+--- gb.qt/src/Makefile.am.orig	2008-07-22
++++ gb.qt/src/Makefile.am	2008-07-22
+@@ -10,7 +10,7 @@
+ gblib_LTLIBRARIES = gb.qt.la
+ 
+ gb_qt_la_LIBADD = @QT_LIB@
+-gb_qt_la_LDFLAGS = -module @LD_FLAGS@ @QT_LDFLAGS@
++gb_qt_la_LDFLAGS = -module @LD_FLAGS@
+ gb_qt_la_CXXFLAGS = -DGB_QT_COMPONENT $(AM_CFLAGS)
+ 
+ gb_qt_la_SOURCES = \
+--- gb.qt/src/ext/Makefile.am.orig	2008-07-22
++++ gb.qt/src/ext/Makefile.am	2008-07-22
+@@ -7,7 +7,7 @@
+ gblib_LTLIBRARIES = gb.qt.ext.la
+ 
+ gb_qt_ext_la_LIBADD = @QT_LIB@
+-gb_qt_ext_la_LDFLAGS = -module @LD_FLAGS@ @QT_LDFLAGS@
++gb_qt_ext_la_LDFLAGS = -module @LD_FLAGS@
+ 
+ gb_qt_ext_la_SOURCES = \
+  main.h main.cpp \
+--- gb.qt/src/opengl/Makefile.am.orig	2008-07-22
++++ gb.qt/src/opengl/Makefile.am	2008-07-22
+@@ -7,7 +7,7 @@
+ gblib_LTLIBRARIES = gb.qt.opengl.la
+ 
+ gb_qt_opengl_la_LIBADD = @QT_LIB@ @QTOPENGL_LIB@
+-gb_qt_opengl_la_LDFLAGS = -module @LD_FLAGS@ @QT_LDFLAGS@ @QTOPENGL_LDFLAGS@
++gb_qt_opengl_la_LDFLAGS = -module @LD_FLAGS@
+ 
+ gb_qt_opengl_la_SOURCES = \
+  main.h main.cpp \

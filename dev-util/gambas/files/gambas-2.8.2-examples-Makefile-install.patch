@@ -1,0 +1,28 @@
+--- examples/Makefile.am.orig	2008-09-01
++++ examples/Makefile.am	2008-09-01
+@@ -19,11 +19,20 @@
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/examples
+ 	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/examples
+ 	@cp -R $(srcdir)/examples $(DESTDIR)$(gbdatadir)
+-	@(cd $(DESTDIR)$(gbdatadir)/examples; d=`pwd`; for p in */ */*/; do cd $$d/$$p; \
+-	  if test -e .project; then \
+-	    echo "Compiling $$p..."; cd $$d/$$p; $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); $(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
+-	  fi \
+-	done)
++	@(cd $(DESTDIR)$(gbdatadir)/examples; d=`pwd`; \
++	  for p in */ */*/; do \
++	    cd $$d/$$p; \
++	    if test -e .project; then \
++	      echo "Compiling $$p..."; \
++	      cd $$d/$$p; \
++	      { \
++	      $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix) && \
++	      $(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
++	      } \
++	      && rm -rf .gambas \
++	      || { echo "Failed"; rm -rf .gambas *.gambas; } \
++	    fi \
++	  done)
+ 
+ uninstall-local:
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/examples

@@ -1,0 +1,19 @@
+--- configure.ac.orig	2008-08-19
++++ configure.ac	2008-08-19
+@@ -28,7 +28,7 @@
+ GB_CONFIG_SUBDIRS(qte, gb.qte)
+ GB_CONFIG_SUBDIRS(kde, gb.qt.kde)
+ GB_CONFIG_SUBDIRS(sdl, gb.sdl)
+-GB_CONFIG_SUBDIRS(sdlsound, gb.sdl.sound)
++GB_CONFIG_SUBDIRS(sdl_sound, gb.sdl.sound)
+ GB_CONFIG_SUBDIRS(xml, gb.xml)
+ GB_CONFIG_SUBDIRS(v4l, gb.v4l)
+ GB_CONFIG_SUBDIRS(crypt, gb.crypt)
+--- Makefile.am.orig	2008-08-19
++++ Makefile.am	2008-08-19
+@@ -1,4 +1,4 @@
+-SUBDIRS = main @bzlib2_dir@ @zlib_dir@ @mysql_dir@ @odbc_dir@ @postgresql_dir@ @sqlite3_dir@ @sqlite2_dir@ @firebird_dir@ @gtk_dir@ @net_dir@ @curl_dir@ @smtp_dir@ @pcre_dir@ @qt_dir@ @qte_dir@ @kde_dir@ @sdl_dir@ @sdlsound_dir@ @xml_dir@ @v4l_dir@ @crypt_dir@ @opengl_dir@ @corba_dir@ @pdf_dir@ @gtksvg_dir@ @image_dir@ @desktop_dir@ comp app help examples
++SUBDIRS = main @bzlib2_dir@ @zlib_dir@ @mysql_dir@ @odbc_dir@ @postgresql_dir@ @sqlite3_dir@ @sqlite2_dir@ @firebird_dir@ @gtk_dir@ @net_dir@ @curl_dir@ @smtp_dir@ @pcre_dir@ @qt_dir@ @qte_dir@ @kde_dir@ @sdl_dir@ @sdl_sound_dir@ @xml_dir@ @v4l_dir@ @crypt_dir@ @opengl_dir@ @corba_dir@ @pdf_dir@ @gtksvg_dir@ @image_dir@ @desktop_dir@ comp app help examples
+ 
+ EXTRA_DIST = component.am README README.*[^~] TEMPLATE reconf reconf-all
+ 
