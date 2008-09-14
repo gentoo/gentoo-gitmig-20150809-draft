@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.21 2008/09/09 00:07:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.22 2008/09/14 10:54:25 hanno Exp $
+
+*pam_mount-0.48 (14 Sep 2008)
+
+  14 Sep 2008; Hanno Boeck <hanno@gentoo.org> +pam_mount-0.48.ebuild:
+  Version bump.
 
 *pam_mount-0.47 (09 Sep 2008)
 
