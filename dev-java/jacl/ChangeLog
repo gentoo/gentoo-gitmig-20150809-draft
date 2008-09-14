@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jacl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.21 2007/06/12 09:03:55 caster Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.22 2008/09/14 06:16:18 ali_bush Exp $
+
+*jacl-1.4.1 (14 Sep 2008)
+
+  14 Sep 2008; Alistair Bush <ali_bush@gentoo.org>
+  +files/jacl-1.4.1-build.patch, +jacl-1.4.1.ebuild:
+  Bump to latest version.
 
   12 Jun 2007; Vlastimil Babka <caster@gentoo.org> -jacl-1.3.1.ebuild:
   Remove old gen-1 version.
