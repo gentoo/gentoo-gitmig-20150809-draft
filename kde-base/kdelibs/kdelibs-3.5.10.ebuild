@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10.ebuild,v 1.1 2008/09/13 23:58:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10.ebuild,v 1.2 2008/09/14 02:27:06 mr_bones_ Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -217,7 +217,6 @@ XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
 COLON_SEPARATED="XDG_DATA_DIRS"
 EOF
 
-
 	# Install shell script to run KDE 3 applications from outside of the KDE 3 desktop
 	# See http://lists.kde.org/?t=120569055200005&r=1&w=2 for reference
 
@@ -233,7 +232,6 @@ EOF
 		-e  "s#@REPLACE_LIBS@#${_libdirs}#" \
 		-i "${WORKDIR}/patches/kde3" || die "sed failed"
 	dobin "${WORKDIR}/patches/kde3"
-
 
 	# Make sure the target for the revdep-rebuild stuff exists. Fixes bug 184441.
 	dodir /etc/revdep-rebuild
