@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17-r1.ebuild,v 1.1 2008/01/18 03:26:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17-r1.ebuild,v 1.2 2008/09/14 16:41:30 truedfx Exp $
+
+inherit autotools
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -20,7 +22,15 @@ S="${WORKDIR}/Ted-${PV}"
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-motif.patch
+
+	cd "${S}"/appFrame
+	eautoreconf
+
 	cd "${S}"/Ted
+	eautoreconf
 	sed -i \
 		-e 's@^CFLAGS=@CFLAGS= -DDOCUMENT_DIR=\\"/usr/share/doc/${PF}/\\"@' \
 		makefile.in
