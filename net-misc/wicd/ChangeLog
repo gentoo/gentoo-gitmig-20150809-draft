@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.5 2008/08/04 16:16:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.6 2008/09/14 14:56:15 darkside Exp $
+
+*wicd-1.5.2 (14 Sep 2008)
+
+  14 Sep 2008; Jeremy Olexa <darkside@gentoo.org> +wicd-1.5.2.ebuild:
+  Version bump, should fix bug #234514
 
 *wicd-1.5.1 (04 Aug 2008)
 
