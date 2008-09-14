@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.6 2007/02/17 11:39:43 spock Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.7 2008/09/14 11:56:03 spock Exp $
+
+*splash-themes-gentoo-20080914 (14 Sep 2008)
+
+  14 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  +splash-themes-gentoo-20080914.ebuild:
+  Add the 'Natural Gentoo' theme (bug #233198).
 
   17 Feb 2007; Michał Januszewski <spock@gentoo.org>
   splash-themes-gentoo-20050429.ebuild:
