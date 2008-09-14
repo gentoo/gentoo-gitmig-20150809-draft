@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splash-themes-livecd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.18 2008/09/14 11:38:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.19 2008/09/14 11:44:30 spock Exp $
+
+  14 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  splash-themes-livecd-2004.3.ebuild, splash-themes-livecd-2005.0.ebuild,
+  splash-themes-livecd-2005.1.ebuild, splash-themes-livecd-2006.0.ebuild,
+  splash-themes-livecd-2006.1.ebuild, splash-themes-livecd-2007.0.ebuild,
+  splash-themes-livecd-2007.0-r1.ebuild:
+  Fix quoting in all ebuilds.
 
 *splash-themes-livecd-2007.0-r2 (14 Sep 2008)
 
