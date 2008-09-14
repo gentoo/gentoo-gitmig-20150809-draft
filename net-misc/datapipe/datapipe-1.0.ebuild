@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/datapipe/datapipe-1.0.ebuild,v 1.6 2006/12/11 07:59:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/datapipe/datapipe-1.0.ebuild,v 1.7 2008/09/14 08:03:15 solar Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.distributed.net/pub/dcti/unsupported/${P}.tar.gz http://http.
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~arm ~amd64"
 
 src_compile() {
 	$(tc-getCC) ${CFLAGS} -o datapipe datapipe.c
