@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/files/1.10.11/dictd.initd,v 1.1 2008/09/12 19:20:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/files/1.10.11/dictd.initd,v 1.2 2008/09/14 08:59:45 pva Exp $
 
 prepconfig() {
 	local TMPCONF INDEXFILES CNT DNAME DICT
@@ -30,7 +30,7 @@ prepconfig() {
 	echo "#LASTLINE" >> ${TMPCONF}
 
 	CNT=0
-	for i in "${INDEXFILES}"; do
+	for i in ${INDEXFILES}; do
 		DNAME=$(echo $i | sed -e 's/[.]index$//')
 		#two possible names for a matching dictionary, check which is there.
 		if [ -f ${DNAME}.dict.dz ]; then
