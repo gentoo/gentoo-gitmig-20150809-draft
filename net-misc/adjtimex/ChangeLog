@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/adjtimex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.20 2007/04/28 16:48:58 swegener Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.21 2008/09/14 05:03:58 robbat2 Exp $
+
+  14 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> files/adjtimex.init:
+  adjtimex init should run before ntp starts up, so that the tick/freq is
+  set.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> adjtimex-1.16.ebuild,
   adjtimex-1.16-r1.ebuild, adjtimex-1.20.ebuild, adjtimex-1.20-r1.ebuild,
