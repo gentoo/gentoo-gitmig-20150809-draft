@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.9999.ebuild,v 1.8 2008/08/20 15:34:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.9999.ebuild,v 1.9 2008/09/14 15:48:54 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -198,13 +198,11 @@ src_install () {
 		|| die "moving Emacs executable failed"
 
 	# move info documentation to the correct place
-	einfo "Fixing info documentation ..."
 	for i in "${D}"/usr/share/info/${EMACS_SUFFIX}/*; do
 		mv "${i}" "${i}.info" || die "mv info failed"
 	done
 
 	# move man pages to the correct place
-	einfo "Fixing manpages ..."
 	for m in "${D}"/usr/share/man/man1/* ; do
 		mv "${m}" "${m%.1}-${EMACS_SUFFIX}.1" || die "mv man failed"
 	done
