@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20080914.ebuild,v 1.1 2008/09/14 11:56:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20080914.ebuild,v 1.2 2008/09/14 12:48:28 spock Exp $
 
 DESCRIPTION="A collection of Gentoo themes for splashutils."
 HOMEPAGE="http://dev.gentoo.org/~spock/"
@@ -17,4 +17,11 @@ RESTRICT="binchecks strip"
 src_install() {
 	dodir /etc/splash/{emergence,gentoo,natural_gentoo}
 	cp -pR "${WORKDIR}"/{emergence,gentoo,natural_gentoo} "${D}/etc/splash"
+}
+
+pkg_postinst() {
+	elog "The upstream tarball for the 'Natural Gentoo' theme also contains a GRUB"
+	elog "splash image which is not installed by this ebuild.  See:"
+	elog "  http://www.kde-look.org/content/show.php?content=49074"
+	elog "if you are interested in this."
 }

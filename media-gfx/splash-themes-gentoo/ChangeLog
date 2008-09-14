@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.7 2008/09/14 11:56:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.8 2008/09/14 12:48:28 spock Exp $
+
+  14 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  splash-themes-gentoo-20080914.ebuild:
+  Add a note about the GRUB splash image for Natural Gentoo.
 
 *splash-themes-gentoo-20080914 (14 Sep 2008)
 
