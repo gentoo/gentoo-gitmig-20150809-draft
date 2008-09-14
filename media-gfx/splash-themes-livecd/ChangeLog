@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splash-themes-livecd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.17 2007/11/07 00:13:10 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.18 2008/09/14 11:38:47 spock Exp $
+
+*splash-themes-livecd-2007.0-r2 (14 Sep 2008)
+
+  14 Sep 2008; Michał Januszewski <spock@gentoo.org> metadata.xml,
+  +splash-themes-livecd-2007.0-r2.ebuild:
+  Compatibility fixes for recent versions of splashutils and baselayout-2
+  (bug #218724). Add myself as the maintainer of the package.
 
   07 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   splash-themes-livecd-2006.0.ebuild, splash-themes-livecd-2006.1.ebuild,
