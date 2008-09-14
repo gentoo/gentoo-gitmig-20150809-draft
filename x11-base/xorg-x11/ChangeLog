@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.596 2008/09/11 18:06:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.597 2008/09/14 01:55:13 bluebird Exp $
+
+  14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> xorg-x11-7.4.ebuild:
+  Add ~sparc keyword, bug #237411
 
   11 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.4.ebuild:
   Drop keywords for architectures where some dependencies aren't keyworded
