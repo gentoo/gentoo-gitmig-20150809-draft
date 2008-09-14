@@ -1,6 +1,13 @@
 # ChangeLog for rox-base/devtray
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.7 2008/08/30 20:01:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.8 2008/09/14 20:13:51 lack Exp $
+
+*devtray-0.4.1-r1 (14 Sep 2008)
+
+  14 Sep 2008; Jim Ramsay <lack@gentoo.org> +devtray-0.4.1-r1.ebuild:
+  With the advent of split gnome-python-desktop, we only need the libwnck
+  portion, not the whole ugly mess of gnome apps. So remove the gnome USE
+  flag and always use libwnck.
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> devtray-0.4.1.ebuild:
   x86 stable, bug #236057
