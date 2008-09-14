@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.7 2008/09/14 16:15:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.8 2008/09/14 19:39:14 darkside Exp $
+
+  14 Sep 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/wicd-1.5.2-docs.patch, -files/wicd-1.5.2-remove-docs.patch,
+  wicd-1.5.2.ebuild:
+  change patch to include my patch submitted (and included) in upstream's
+  trunk. better solution. no rev bump needed, nothing is really changed for
+  people that already have 1.5.2 installed.
 
   14 Sep 2008; Jeremy Olexa <darkside@gentoo.org>
   +files/wicd-1.5.2-remove-docs.patch, wicd-1.5.2.ebuild:

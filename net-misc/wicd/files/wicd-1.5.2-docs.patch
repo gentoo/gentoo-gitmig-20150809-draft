@@ -1,0 +1,57 @@
+Index: setup.py
+===================================================================
+--- setup.py	(revision 457)
++++ setup.py	(working copy)
+@@ -78,8 +78,7 @@
+         ('no-install-man', None, 'do not install the man file'),
+         ('no-install-kde', None, 'do not install the kde autostart file'),
+         ('no-install-acpi', None, 'do not install the suspend.d and resume.d acpi scripts'),
+-        ('no-install-install', None, 'do not install the INSTALL file'),
+-        ('no-install-license', None, 'do not install the LICENSE file')
++        ('no-install-docs', None, 'do not install the auxiliary documentation')
+         ]
+         
+ 
+@@ -108,8 +107,7 @@
+         self.no_install_man = False
+         self.no_install_kde = False
+         self.no_install_acpi = False
+-        self.no_install_install = False
+-        self.no_install_license = False
++        self.no_install_docs = False
+ 
+         # figure out what the default init file
+         # location should be on several different distros
+@@ -301,16 +299,13 @@
+     (wpath.share, ['data/wicd.glade', ]),
+     (wpath.lib, ['wicd/wicd-client.py', 'wicd/monitor.py', 'wicd/wicd-daemon.py', 'wicd/configscript.py', 'wicd/suspend.py', 'wicd/autoconnect.py']), #'wicd/wicd-gui.py', 
+     (wpath.autostart, ['other/wicd-tray.desktop', ]),
+-    ( wpath.docdir, [ 'AUTHORS', 'README' ]),
+     ]
+     piddir = os.path.dirname(wpath.pidfile)
+     if not piddir.endswith('/'):
+         piddir += '/'
+     data.append (( piddir, [] ))
+-    if not wpath.no_install_install:
+-        data.append(( wpath.docdir, [ 'INSTALL' ] ))
+-    if not wpath.no_install_license:
+-        data.append(( wpath.docdir, [ 'LICENSE' ] ))
++    if not wpath.no_install_docs:
++        data.append(( wpath.docdir, [ 'INSTALL', 'LICENSE', 'AUTHORS', 'README' ]))
+     if not wpath.no_install_kde:
+         data.append(( wpath.kdedir, [ 'other/wicd-tray.desktop' ]))
+     if not wpath.no_install_init:
+Index: in/wicd=wpath.py.in
+===================================================================
+--- in/wicd=wpath.py.in	(revision 457)
++++ in/wicd=wpath.py.in	(working copy)
+@@ -52,8 +52,7 @@
+ no_install_man = %NO_INSTALL_MAN%
+ no_install_kde = %NO_INSTALL_KDE%
+ no_install_acpi = %NO_INSTALL_ACPI%
+-no_install_install = %NO_INSTALL_INSTALL%
+-no_install_license = %NO_INSTALL_LICENSE%
++no_install_docs = %NO_INSTALL_DOCS%
+ 
+ def chdir(file):
+     """Change directory to the location of the specified file.

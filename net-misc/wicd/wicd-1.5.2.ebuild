@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.2.ebuild,v 1.2 2008/09/14 16:15:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.2.ebuild,v 1.3 2008/09/14 19:39:14 darkside Exp $
 
 inherit distutils eutils
 
@@ -29,13 +29,14 @@ RDEPEND="dev-python/dbus-python
 
 src_unpack() {
 	distutils_src_unpack
-	# I would be insterested in some sed magic to acomplish this patch. 
-	epatch "${FILESDIR}/${PN}-1.5.2-remove-docs.patch"
+	# Patch to add the no-install-docs switch, included in next upstream
+	# release =) (already in upstream's svn)
+	epatch "${FILESDIR}/${PN}-1.5.2-docs.patch"
 
 }
 
 src_compile() {
-	${python} ./setup.py configure --no-install-init --no-install-install --no-install-license --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
+	${python} ./setup.py configure --no-install-init --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
 	distutils_src_compile
 }
 
