@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xbacklight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.5 2008/03/24 13:59:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.6 2008/09/14 00:43:57 bluebird Exp $
+
+  14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> xbacklight-1.1.ebuild:
+  Add ~sparc keyword, bug #237411
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org> xbacklight-1.1.ebuild:
   amd64 stable, bug #202087
