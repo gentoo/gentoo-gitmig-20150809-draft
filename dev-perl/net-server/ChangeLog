@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.63 2008/03/28 09:20:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.64 2008/09/15 11:55:33 tove Exp $
+
+  15 Sep 2008; Torsten Veller <tove@gentoo.org> -net-server-0.88.ebuild,
+  -net-server-0.94.ebuild, -net-server-0.95.ebuild, -net-server-0.96.ebuild:
+  Cleanup
 
   28 Mar 2008; Jeroen Roovers <jer@gentoo.org> net-server-0.97.ebuild:
   Stable for HPPA too.
