@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.61 2008/09/13 01:12:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.62 2008/09/15 21:22:27 battousai Exp $
+
+  15 Sep 2008; Bryan D. Stine <battousai@gentoo.org>
+  x11-drm-20080710.ebuild:
+  Push 20080710 patchball 0.4, fixing a function argument mismatch on older
+  kernels. Reported by a forums user. Fixes bug #237780.
 
   13 Sep 2008; Bryan D. Stine <battousai@gentoo.org>
   -files/modules.d-x11-drm, x11-drm-20060608.ebuild,
