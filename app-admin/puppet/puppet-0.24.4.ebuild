@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.8 2008/08/13 15:54:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.4.ebuild,v 1.9 2008/09/15 00:35:23 matsuu Exp $
 
 inherit elisp-common eutils ruby
 
@@ -26,8 +26,8 @@ pkg_setup() {
 	built_with_use virtual/ruby ipv6 || \
 		die "Ruby must be built with ipv6 support, otherwise puppet will not be able to run"
 
-	enewgroup puppet || die "Problem creating group puppet"
-	enewuser puppet -1 -1 /var/lib/puppet puppet || die "Problem creating user puppet"
+	enewgroup puppet
+	enewuser puppet -1 -1 /var/lib/puppet puppet
 }
 
 src_unpack() {
