@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-no
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ChangeLog,v 1.3 2007/02/21 20:40:12 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ChangeLog,v 1.4 2008/09/15 16:35:02 pva Exp $
+
+  15 Sep 2008; Peter Volkov <pva@gentoo.org> ispell-no-2.0.ebuild:
+  Fix build in non C locales, possibly fixes bug #227055, thank Evil Compile
+  Person for report.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
