@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.60 2008/09/14 01:49:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.61 2008/09/15 19:34:07 robbat2 Exp $
+
+  15 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  cryptsetup-1.0.6-r1.ebuild:
+  Bug #237714, make the udev dep for udevadm slightly wider.
 
   14 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   cryptsetup-1.0.6-r1.ebuild:
