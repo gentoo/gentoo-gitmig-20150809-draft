@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.53 2008/08/24 10:15:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.54 2008/09/15 15:31:23 fmccor Exp $
+
+  15 Sep 2008; Ferris McCormick <fmccor@gentoo.org> vm-8.0.9.544.ebuild:
+  Sparc stable --- Bug #237738 --- works fine.
 
 *vm-8.0.11.581-r1 (24 Aug 2008)
 
