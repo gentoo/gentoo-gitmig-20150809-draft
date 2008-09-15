@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/ispell-cs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.12 2007/02/21 20:34:55 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.13 2008/09/15 13:30:33 pva Exp $
+
+  15 Sep 2008; Peter Volkov <pva@gentoo.org> -ispell-cs-20020628.ebuild,
+  ispell-cs-20040229.ebuild:
+  Fixed HOMEPAGE/SRC_URI, bug #237710, thenk Filip Jirsák for report.
+  Removed old.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
