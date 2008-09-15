@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.42 2008/09/15 18:35:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.43 2008/09/15 18:43:56 fmccor Exp $
+
+  15 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gettext-1.92.0.ebuild:
+  Sparc stable --- Bug #237770 --- been around for over 6 weeks now.
 
 *ruby-gettext-1.93.0 (15 Sep 2008)
 
