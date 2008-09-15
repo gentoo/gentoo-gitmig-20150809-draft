@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-2.0.2.ebuild,v 1.1 2008/09/15 19:50:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-2.0.2.ebuild,v 1.2 2008/09/15 22:13:48 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -52,7 +52,7 @@ src_unpack() {
 		cd "${S}"
 		rm -rf kBuild/bin tools
 
-		# Disable things unused or splitted into separate ebuilds 
+		# Disable things unused or splitted into separate ebuilds
 		cp "${FILESDIR}/${P}-localconfig" LocalConfig.kmk
 }
 
