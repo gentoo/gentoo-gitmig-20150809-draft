@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.2.ebuild,v 1.1 2008/08/19 12:50:25 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/horde-webmail-1.1.3.ebuild,v 1.1 2008/09/15 14:03:41 wrobel Exp $
 
 HORDE_PN=${PN}
 
@@ -10,7 +10,7 @@ inherit horde
 
 DESCRIPTION="browser based communication suite"
 
-HORDE_PATCHSET_REV=1
+HORDE_PATCHSET_REV=2
 
 SRC_URI="${SRC_URI}
 	http://files.pardus.de/horde-webmail-patches-${PV}-r${HORDE_PATCHSET_REV}.tar.bz2"
