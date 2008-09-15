@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.324 2008/08/21 14:07:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.325 2008/09/15 21:48:55 cardoe Exp $
+
+  15 Sep 2008; Doug Goldstein <cardoe@gentoo.org>
+  phpmyadmin-2.11.8.1.ebuild:
+  mark amd64 to fix error with 2.11.8
 
 *phpmyadmin-2.11.8.1 (21 Aug 2008)
 
