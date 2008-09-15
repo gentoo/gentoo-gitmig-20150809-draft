@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-1.2.ebuild,v 1.7 2008/05/12 15:50:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-1.2.ebuild,v 1.8 2008/09/15 19:50:01 ranger Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openjpeg.org/openjpeg_v${PV//./_}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/trunk"
