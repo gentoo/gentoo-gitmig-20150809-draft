@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.22 2008/08/05 17:11:24 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.23 2008/09/15 01:33:54 gentoofan23 Exp $
+
+*jabberd2-2.2.4 (14 Sep 2008)
+
+  14 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/jabberd2-2.2.4.init, +files/jabberd2-2.2.4.pamd,
+  +jabberd2-2.2.4.ebuild:
+  Version bump, bug #236710
 
   05 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Add USE flag description to metadata as per GLEP 56.
