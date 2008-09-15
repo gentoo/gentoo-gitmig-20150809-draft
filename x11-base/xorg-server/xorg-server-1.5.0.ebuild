@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.0.ebuild,v 1.3 2008/09/14 01:44:31 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.0.ebuild,v 1.4 2008/09/15 00:39:42 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -47,6 +47,7 @@ IUSE_INPUT_DEVICES="
 IUSE_VIDEO_CARDS="
 	video_cards_apm
 	video_cards_ark
+	video_cards_ast
 	video_cards_chips
 	video_cards_cirrus
 	video_cards_cyrix
