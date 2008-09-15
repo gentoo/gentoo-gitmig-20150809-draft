@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.1 2008/09/13 02:30:23 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.2 2008/09/15 17:32:52 pvdabeel Exp $
+
+  15 Sep 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> xwax-0.4.ebuild:
+  Keyworded ~ppc. Closes #237590
 
 *xwax-0.4 (13 Sep 2008)
 
