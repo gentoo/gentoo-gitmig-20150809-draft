@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.4.ebuild,v 1.1 2008/05/20 23:20:02 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.4.3.ebuild,v 1.1 2008/09/15 11:49:43 wrobel Exp $
 
 inherit webapp depend.php
 
