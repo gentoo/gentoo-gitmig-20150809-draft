@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.7.4.ebuild,v 1.1 2008/08/03 14:08:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.8.0.ebuild,v 1.1 2008/09/15 19:22:08 dang Exp $
 
 inherit multilib versionator eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
-	>=media-libs/swfdec-0.6"
+	>=media-libs/swfdec-0.8"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35
 		>=dev-util/pkgconfig-0.20"
