@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.6.0.ebuild,v 1.1 2008/09/15 22:21:33 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.6.0.ebuild,v 1.2 2008/09/15 23:43:23 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,7 +42,6 @@ DEPEND="sys-apps/coreutils
 	)"
 RDEPEND="${DEPEND}"
 
-
 pkg_setup() {
 	einfo "Checking mplayer for USE flags we need..."
 	mplayer_flags="encode dvd x264 mp3"
@@ -58,7 +57,6 @@ pkg_setup() {
 		eerror "Please re-emerge media-video/mplayer with USE=\"$mplayer_flags\""
 		die "mplayer missing necessary USE flags"
 	fi
-
 
 	if use aac; then
 		if ! built_with_use media-video/mplayer aac; then
