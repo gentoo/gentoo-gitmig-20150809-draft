@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.1 2008/09/06 19:18:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.2 2008/09/15 19:45:13 jokey Exp $
+
+*kbuild-0.1.4 (15 Sep 2008)
+
+  15 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/kbuild-fix-acl-include.patch, kbuild-0.1.3.ebuild,
+  +kbuild-0.1.4.ebuild:
+  (Proxy-Commit) Port from dev overlay
+
+  13 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  kbuild-0.1.3.ebuild, -files/kbuild-0.1.3-fix-acl-include.patch,
+  +kbuild-0.1.4.ebuild, +files/kbuild-fix-acl-include.patch:
+  Version bump: remove dev-util/yacc from DEPEND, see bug #236948; fix unused
+  sys/acl.h include, thanks to all people involved, see bug #236949
 
 *kbuild-0.1.3 (06 Sep 2008)
 

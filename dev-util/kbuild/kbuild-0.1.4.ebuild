@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.3.ebuild,v 1.3 2008/09/15 19:45:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.4.ebuild,v 1.1 2008/09/15 19:45:13 jokey Exp $
 
 EAPI=1
 
@@ -11,7 +11,7 @@ inherit eutils autotools
 MY_P=kBuild-${PV}-src
 DESCRIPTION="A makefile framework for writing simple makefiles for complex tasks"
 HOMEPAGE="http://svn.netlabs.org/kbuild/wiki"
-SRC_URI="ftp://ftp.netlabs.org/pub/kbuild/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.netlabs.org/incoming/kBuild-${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
