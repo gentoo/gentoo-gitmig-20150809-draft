@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.61 2008/09/13 07:09:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.62 2008/09/15 19:31:52 ranger Exp $
+
+  15 Sep 2008; Brent Baude <ranger@gentoo.org> rapidsvn-0.9.6-r1.ebuild:
+  stable ppc, bug 237095
 
   13 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
   rapidsvn-0.9.6-r1.ebuild:
