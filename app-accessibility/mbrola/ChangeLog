@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.44 2008/09/11 18:12:27 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.45 2008/09/15 19:18:33 klausman Exp $
+
+  15 Sep 2008; Tobias Klausmann <klausman@gentoo.org>
+  mbrola-3.0.1h-r5.ebuild:
+  Stable on alpha, bug #236403
 
   11 Sep 2008; Deedra Waters <dmwaters@gentoo.org> mbrola-3.0.1h-r5.ebuild:
   Stable on amd64.
