@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.85 2008/09/15 11:39:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.86 2008/09/15 13:26:22 gentoofan23 Exp $
+
+  15 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  XML-LibXML-1.66-r1.ebuild:
+  stable amd64, bug 237696
 
   15 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
   XML-LibXML-1.66-r1.ebuild:
