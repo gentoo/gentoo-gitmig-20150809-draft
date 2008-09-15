@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.15 2008/09/09 14:36:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.16 2008/09/15 14:12:11 dang Exp $
+
+*kvm-75 (15 Sep 2008)
+
+  15 Sep 2008; Daniel Gryniewicz <dang@gentoo.org> +kvm-75.ebuild:
+  Bump to kvm-75
+
+  Ballooning is finally enabled in kvm-75. You will need a 2.6.27+ host for
+  ballooning to work properly.
 
 *kvm-74 (09 Sep 2008)
 
