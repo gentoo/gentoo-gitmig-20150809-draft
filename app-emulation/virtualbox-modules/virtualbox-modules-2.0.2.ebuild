@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.6.2.ebuild,v 1.3 2008/09/06 07:16:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-2.0.2.ebuild,v 1.1 2008/09/15 19:52:13 jokey Exp $
 
 inherit eutils linux-mod
 
 MY_P=vbox-kernel-module-src-${PV}
-DESCRIPTION="Modules for Virtualbox OSE"
+DESCRIPTION="Kernel Modules for Virtualbox"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://gentoo.zerodev.it/files/${MY_P}.tar.gz"
+SRC_URI="http://gentoo.zerodev.it/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

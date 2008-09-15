@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.34 2008/09/06 07:16:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.35 2008/09/15 19:52:56 jokey Exp $
+
+*virtualbox-bin-2.0.2 (15 Sep 2008)
+
+  15 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-bin-2.0.2-wrapper, virtualbox-bin-1.6.4.ebuild,
+  virtualbox-bin-1.6.6.ebuild, +virtualbox-bin-2.0.2.ebuild:
+  (Proxy-Commit) Port from dev overlay
+
+  13 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-bin-1.6.4.ebuild, virtualbox-bin-1.6.6.ebuild,
+  +virtualbox-bin-2.0.2.ebuild, +virtualbox-bin-2.0.2-wrapper:
+  Version bump: add support for the new sdk, add new wrapper for 2.x release,
+  add dev-libs/glib to RDEPEND, drop qt3 from USE and RDEPEND, set starters
+  suid (VirtualBox,VBoxSDL,VBoxHeadless) due new hardening system, restrict
+  old versions downloads due: http://www.virtualbox.org/ticket/2148
 
 *virtualbox-bin-1.6.6 (06 Sep 2008)
 

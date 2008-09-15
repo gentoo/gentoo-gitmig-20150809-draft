@@ -1,7 +1,7 @@
 --- src/apps/Makefile.kmk	1970-01-01 01:00:00.000000000 +0100
 +++ src/apps/Makefile.kmk	2008-08-02 16:06:11.358197514 +0200
 @@ -0,0 +1,28 @@
-+# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.2 2008/09/06 19:21:40 jokey Exp $
++# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.3 2008/09/15 19:54:49 jokey Exp $
 +## @file
 +# Sub-Makefile for the external apps.
 +#
@@ -32,7 +32,7 @@
 --- src/apps/tunctl/Makefile.kmk	1970-01-01 01:00:00.000000000 +0100
 +++ src/apps/tunctl/Makefile.kmk	2008-08-02 16:06:37.447936207 +0200
 @@ -0,0 +1,32 @@
-+# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.2 2008/09/06 19:21:40 jokey Exp $
++# $Id: virtualbox-ose-1.6.4-fix-missing-makefiles.patch,v 1.3 2008/09/15 19:54:49 jokey Exp $
 +## @file
 +# Sub-Makefile for VBoxTunctl
 +#

@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.5 2008/09/08 05:13:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.6 2008/09/15 19:53:46 jokey Exp $
+
+*virtualbox-ose-additions-2.0.2 (15 Sep 2008)
+
+  15 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  -virtualbox-ose-additions-1.6.2.ebuild,
+  virtualbox-ose-additions-1.6.4.ebuild,
+  virtualbox-ose-additions-1.6.6.ebuild,
+  +virtualbox-ose-additions-2.0.2.ebuild:
+  (Proxy-Commit) Port from dev overlay
+
+  13 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-ose-additions-1.6.2.ebuild,
+  +virtualbox-ose-additions-2.0.2.ebuild:
+  Version bump; install files in /usr/share/virtualbox-ose rather than in
+  /opt/VirtualBox
 
 *virtualbox-ose-additions-1.6.6 (06 Sep 2008)
 

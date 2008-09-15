@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.4 2008/09/06 19:30:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.5 2008/09/15 19:50:08 jokey Exp $
+
+*virtualbox-guest-additions-2.0.2 (15 Sep 2008)
+
+  15 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  files/virtualbox-guest-additions-1.6.4-fix-missing-makefiles.patch,
+  +files/virtualbox-guest-additions-2.0.2-localconfig,
+  virtualbox-guest-additions-1.6.4-r2.ebuild,
+  virtualbox-guest-additions-1.6.6.ebuild,
+  +virtualbox-guest-additions-2.0.2.ebuild:
+  (Proxy-Commit) Port from dev overlay
+
+  13 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  +virtualbox-guest-additions-2.0.2.ebuild,
+  +files/virtualbox-guest-additions-2.0.2-localconfig:
+  Version bump, add VBoxControl command line utility, force 2.0.2 to build
+  with dev-util/kbuild-0.1.4
 
 *virtualbox-guest-additions-1.6.6 (06 Sep 2008)
 *virtualbox-guest-additions-1.6.4-r2 (06 Sep 2008)

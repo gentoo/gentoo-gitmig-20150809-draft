@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.6.ebuild,v 1.1 2008/09/06 19:21:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.6.ebuild,v 1.2 2008/09/15 19:54:48 jokey Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa headless pulseaudio +qt3 sdk"
+IUSE="additions alsa headless pulseaudio +qt3 sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -61,6 +61,12 @@ pkg_setup() {
 				eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
 				eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
 				die "media-libs/libsdl should be compiled with the \"X\" USE flag."
+			fi
+			if ! use qt3; then
+					einfo ""
+					einfo "No USE=\"qt3\" selected, this build will not include"
+					einfo "any Qt frontend."
+					einfo ""
 			fi
 	else
 			if use qt3; then

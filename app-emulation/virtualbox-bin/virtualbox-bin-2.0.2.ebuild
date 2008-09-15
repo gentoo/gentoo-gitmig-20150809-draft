@@ -1,17 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.2 2008/09/15 19:52:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.0.2.ebuild,v 1.1 2008/09/15 19:52:56 jokey Exp $
 
 EAPI=1
 
-inherit eutils fdo-mime qt3 pax-utils
+inherit eutils fdo-mime pax-utils
 
-MY_P=VirtualBox-${PV}-Linux
+MY_PV=${PV}-36488
+MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( ${MY_P}_amd64.run )
-	x86? ( ${MY_P}_x86.run )"
+	x86? ( ${MY_P}_x86.run )
+	sdk? ( VirtualBoxSDK-${MY_PV}.zip )"
 
 LICENSE="PUEL"
 SLOT="0"
@@ -22,7 +24,6 @@ RDEPEND="!app-emulation/virtualbox-ose
 	!app-emulation/virtualbox-ose-additions
 	~app-emulation/virtualbox-modules-${PV}
 	!headless? (
-		x11-libs/qt:3
 		x11-libs/libXcursor
 		media-libs/libsdl
 		x11-libs/libXrender
@@ -37,7 +38,8 @@ RDEPEND="!app-emulation/virtualbox-ose
 		x11-libs/libXft
 		media-libs/freetype
 		media-libs/fontconfig
-		x11-libs/libXext )
+		x11-libs/libXext
+		dev-libs/glib )
 	x11-libs/libXt
 	dev-libs/libxml2
 	x11-libs/libXau
@@ -47,8 +49,7 @@ RDEPEND="!app-emulation/virtualbox-ose
 	x11-libs/libXdmcp
 	sys-apps/usermode-utilities
 	net-misc/bridge-utils
-	x86? ( =virtual/libstdc++-3.3 )
-	sdk? ( dev-libs/libIDL )"
+	x86? ( =virtual/libstdc++-3.3 )"
 
 S=${WORKDIR}
 
@@ -57,15 +58,18 @@ RESTRICT="fetch"
 pkg_nofetch() {
 	# Fetch restriction added due licensing and problems downloading with
 	# wget, see http://www.virtualbox.org/ticket/2148
-	elog "Please download the package from:"
+	elog "Please download:"
 	elog ""
 	if use amd64 ; then
 		elog "http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run"
 	else
 		elog "http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run"
 	fi
+	if use sdk; then
+		elog "http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${MY_PV}.zip"
+	fi
 	elog ""
-	elog "and then put it in ${DISTDIR}"
+	elog "and then put file(s) in ${DISTDIR}"
 }
 
 pkg_setup() {
@@ -81,33 +85,37 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself
+	unpack_makeself ${MY_P}_${ARCH}.run
 	unpack ./VirtualBox.tar.bz2
+
+	if use sdk; then
+		unpack VirtualBoxSDK-${MY_PV}.zip
+	fi
 }
 
 src_install() {
-	if ! use headless ; then
-		newicon VBox.png virtualbox.png
-		newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
-	fi
-
 	# create virtualbox configurations files
 	insinto /etc/vbox
 	newins "${FILESDIR}/${PN}-config" vbox.cfg
 	newins "${FILESDIR}/${PN}-interfaces" interfaces
 
+	if ! use headless ; then
+		newicon VBox.png virtualbox.png
+		newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
+	fi
+
 	insinto /opt/VirtualBox
+
 	doins UserManual.pdf
+
+	if use sdk ; then
+		doins -r sdk
+	fi
 
 	if use additions; then
 		doins -r additions
 	fi
-	if use sdk; then
-		doins -r sdk
-		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
-		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
-		pax-mark -m "${D}"/opt/VirtualBox/sdk/bin/xpidl
-	fi
+
 	if use vboxwebsrv; then
 		doins vboxwebsrv
 		fowners root:vboxusers /opt/VirtualBox/vboxwebsrv
@@ -117,9 +125,9 @@ src_install() {
 		newconfd "${FILESDIR}"/vboxwebsrv-confd vboxwebsrv
 	fi
 
-	rm -rf src sdk tst* rdesktop-vrdp.tar.gz deffiles install* routines.sh \
-		runlevel.sh vboxdrv.sh VBox.sh VBox.png kchmviewer additions VirtualBox.desktop \
-		VirtualBox.tar.bz2 vboxnet.sh LICENSE VBoxSysInfo.sh rdesktop* vboxwebsrv webtest
+	rm -rf src rdesktop* deffiles install* routines.sh runlevel.sh \
+		vboxdrv.sh VBox.sh VBox.png vboxnet.sh kchmviewer additions VirtualBox.desktop \
+		VirtualBox.tar.bz2 LICENSE VBoxSysInfo.sh rdesktop* vboxwebsrv webtest
 
 	if use headless ; then
 		rm -rf VBoxSDL VirtualBox VBoxKeyboard.so VirtualBoxAPI.chm \
@@ -128,25 +136,38 @@ src_install() {
 
 	doins -r * || die
 
+	# create symlinks for working around unsupported $ORIGIN/.. in VBoxC.so (setuid)
+	dosym /opt/VirtualBox/VBoxVMM.so /opt/VirtualBox/components/VBoxVMM.so
+	dosym /opt/VirtualBox/VBoxREM.so /opt/VirtualBox/components/VBoxREM.so
+	dosym /opt/VirtualBox/VBoxRT.so /opt/VirtualBox/components/VBoxRT.so
+	dosym /opt/VirtualBox/VBoxDDU.so /opt/VirtualBox/components/VBoxDDU.so
+	dosym /opt/VirtualBox/VBoxXPCOM.so /opt/VirtualBox/components/VBoxXPCOM.so
+
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl}; do
+		fowners root:vboxusers /opt/VirtualBox/${each}
+		fperms 0750 /opt/VirtualBox/${each}
+		pax-mark -m "${D}"/opt/VirtualBox/${each}
+	done
+
 	if ! use headless ; then
-		for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl,Headless} VirtualBox; do
+		# Hardened build: Mark selected binaries set-user-ID-on-execution
+		for each in VBox{SDL,Headless} VirtualBox; do
 			fowners root:vboxusers /opt/VirtualBox/${each}
-			fperms 0750 /opt/VirtualBox/${each}
+			fperms 4511 /opt/VirtualBox/${each}
 			pax-mark -m "${D}"/opt/VirtualBox/${each}
 		done
 
 		dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
 		dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
 	else
-		for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,Headless} ; do
-			fowners root:vboxusers /opt/VirtualBox/${each}
-			fperms 0750 /opt/VirtualBox/${each}
-			pax-mark -m "${D}"/opt/VirtualBox/${each}
-		done
+		# Hardened build: Mark selected binaries set-user-ID-on-execution
+		fowners root:vboxusers /opt/VirtualBox/VBoxHeadless
+		fperms 4511 /opt/VirtualBox/VBoxHeadless
+		pax-mark -m "${D}"/opt/VirtualBox/VBoxHeadless
 	fi
 
 	exeinto /opt/VirtualBox
-	newexe "${FILESDIR}/${PN}-wrapper" "VBox.sh" || die
+	newexe "${FILESDIR}/${P}-wrapper" "VBox.sh" || die
 	fowners root:vboxusers /opt/VirtualBox/VBox.sh
 	fperms 0750 /opt/VirtualBox/VBox.sh
 	fowners root:vboxusers /opt/VirtualBox/VBoxAddIF.sh
