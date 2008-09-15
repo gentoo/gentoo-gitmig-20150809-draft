@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.8.ebuild,v 1.5 2008/09/11 20:12:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.8.ebuild,v 1.6 2008/09/15 12:12:55 wrobel Exp $
 
 inherit webapp depend.php confutils
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/jpeg
 need_httpd_cgi
 need_php_httpd
 
-S="${WORKDIR}"/${PN}
+S="${WORKDIR}"/${P}
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -40,10 +40,9 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog ChangeLog.archive README
 	dohtml docs/*
-	rm -rf AUTHORS ChangeLog ChangeLog.archive README LICENSE.txt docs/
 
-	insinto "${MY_HTDOCSDIR}"
-	doins -r .
+	cp -r . "${D}/${MY_HTDOCSDIR}"
+	rm -rf "${D}/${MY_HTDOCSDIR}"/{AUTHORS,ChangeLog,ChangeLog.archive,README,LICENSE.txt,docs/}
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
