@@ -1,6 +1,9 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.36 2008/08/31 02:19:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.37 2008/09/15 20:26:42 klausman Exp $
+
+  15 Sep 2008; Tobias Klausmann <klausman@gentoo.org> tkabber-0.11.0.ebuild:
+  Keyworded on alpha, bug #236244
 
 *tkabber-0.11.0 (31 Aug 2008)
 
