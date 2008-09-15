@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rovclock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.4 2007/05/15 13:56:23 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.5 2008/09/15 09:26:48 swegener Exp $
+
+  15 Sep 2008; Sven Wegener <swegener@gentoo.org> rovclock-0.6e.ebuild:
+  Respect CFLAGS, make cross-compile aware.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
