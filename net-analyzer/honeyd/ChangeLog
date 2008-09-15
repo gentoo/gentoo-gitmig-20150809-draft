@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/honeyd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.34 2007/12/13 11:00:46 pva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.35 2008/09/15 17:28:01 pva Exp $
+
+*honeyd-1.5c-r1 (15 Sep 2008)
+
+  15 Sep 2008; Peter Volkov <pva@gentoo.org>
+  +files/honeyd-1.5c-CVE-2008-3928.patch, +honeyd-1.5c-r1.ebuild:
+  Fix insecure temporary file creation: CVE-2008-3928, bug #237481, thank
+  Robert Buchholz for report.
 
   13 Dec 2007; <pva@gentoo.org> -honeyd-1.5b.ebuild, honeyd-1.5c.ebuild:
   Updated dependency: >=libevent-1.2, bug #199905, reported by Luc Stepniewski
