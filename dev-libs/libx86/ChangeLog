@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.10 2008/09/10 05:00:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.11 2008/09/15 12:55:28 pva Exp $
+
+  15 Sep 2008; Peter Volkov <pva@gentoo.org> libx86-1.1-r1.ebuild:
+  Use correct compiler, bug #237383, thank Jeroen Roovers for notice.
 
 *libx86-1.1-r1 (10 Sep 2008)
 

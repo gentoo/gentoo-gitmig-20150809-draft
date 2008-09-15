@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1-r1.ebuild,v 1.1 2008/09/10 05:00:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1-r1.ebuild,v 1.2 2008/09/15 12:55:28 pva Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A hardware-independent library for executing real-mode x86 code"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/libx86"
@@ -22,6 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	local ARGS
 	if use amd64; then
 		ARGS="BACKEND=x86emu"
