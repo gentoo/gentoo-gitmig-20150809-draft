@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.7.4.ebuild,v 1.2 2008/08/17 20:27:46 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.0.ebuild,v 1.1 2008/09/15 19:05:35 dang Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="alsa doc ffmpeg gstreamer gtk oss pulseaudio"
 
-RDEPEND=">=dev-libs/glib-2.12
+RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/liboil-0.3.1
 	>=x11-libs/pango-1.16.4
 	gtk? (
@@ -36,6 +36,8 @@ RDEPEND=">=dev-libs/glib-2.12
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.6 )"
+
+RESTRICT="test"
 
 pkg_setup() {
 	if use !gtk ; then
