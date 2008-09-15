@@ -1,6 +1,21 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.3 2008/09/06 19:29:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.4 2008/09/15 19:47:16 jokey Exp $
+
+*xf86-video-virtualbox-2.0.2 (15 Sep 2008)
+
+  15 Sep 2008; Markus Ullmann <jokey@gentoo.org>
+  files/xf86-video-virtualbox-1.6.4-fix-missing-makefiles.patch,
+  +files/xf86-video-virtualbox-2.0.2-localconfig,
+  xf86-video-virtualbox-1.6.4-r1.ebuild, xf86-video-virtualbox-1.6.6.ebuild,
+  +xf86-video-virtualbox-2.0.2.ebuild:
+  (Proxy-Commit) Port from dev overlay
+
+  13 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  +xf86-video-virtualbox-2.0.2.ebuild,
+  +files/xf86-video-virtualbox-2.0.2-localconfig:
+  Version bump: add support for x11-base/xorg-server-1.5.0, force 2.0.2 to
+  build with dev-util/kbuild-0.1.4
 
 *xf86-video-virtualbox-1.6.6 (06 Sep 2008)
 *xf86-video-virtualbox-1.6.4-r1 (06 Sep 2008)
