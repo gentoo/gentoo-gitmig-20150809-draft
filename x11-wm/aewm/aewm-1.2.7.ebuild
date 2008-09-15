@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.7 2008/01/06 08:35:53 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.8 2008/09/15 09:04:50 coldwind Exp $
 
 DESCRIPTION="A minimalistic X11 window manager."
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
@@ -11,7 +11,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="x11-libs/libX11
+RDEPEND="
+	>=x11-libs/gtk+-2
+	x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXaw
 	x11-libs/libXft
