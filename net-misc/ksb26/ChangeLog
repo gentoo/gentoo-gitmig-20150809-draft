@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ksb26
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.7 2007/02/22 02:29:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.8 2008/09/15 07:30:28 s4t4n Exp $
+
+  15 Sep 2008; Michele Noberasco <s4t4n@gentoo.org> ksb26-0.0.4.ebuild:
+  Added patch to fix compilation with recent kernels. Closes bug #237251.
+  ksb26-0.0.4.ebuild, ksb26-0.0.3.ebuild:
+  Fixed minor QA issues.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

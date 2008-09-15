@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ksb26-0.0.3.ebuild,v 1.2 2005/12/20 10:56:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ksb26-0.0.3.ebuild,v 1.3 2008/09/15 07:30:28 s4t4n Exp $
 
 inherit linux-mod
 
@@ -31,8 +31,8 @@ src_unpack()
 {
 	unpack ${A}
 
-	cd ${S}
-	cp ${FILESDIR}/${PN}-kernel-Makefile kernel/Makefile
+	cd "${S}"
+	cp "${FILESDIR}/${PN}-kernel-Makefile" kernel/Makefile
 	sed -i -e "s:@gcc:\${CC} \${CFLAGS}:" user/Makefile
 }
 
@@ -41,7 +41,7 @@ src_compile()
 	linux-mod_src_compile || die "Kernel module compilation failed!"
 
 	einfo "Preparing userspace tools"
-	cd ${S}/user
+	cd "${S}/user"
 	emake || die "Userspace tools compilation failed!"
 }
 
@@ -49,7 +49,7 @@ src_install()
 {
 	linux-mod_src_install
 
-	cd ${S}
+	cd "${S}"
 	dobin user/ksb26manager
 
 	dodir /etc/ksb26
@@ -64,8 +64,8 @@ pkg_postinst()
 {
 	linux-mod_pkg_postinst
 
-	if [ ! -e ${ROOT}/dev/ksb26 ]; then
-		mknod ${ROOT}/dev/ksb26 c 254 0
+	if [ ! -e "${ROOT}/dev/ksb26" ]; then
+		mknod "${ROOT}/dev/ksb26" c 254 0
 	fi
 
 	einfo "Read man page (man ksb26) for informations about the use of ksb26"
@@ -74,7 +74,7 @@ pkg_postinst()
 
 pkg_postrm()
 {
-	if [ -e ${ROOT}/dev/ksb26 ]; then
-		rm ${ROOT}/dev/ksb26
+	if [ -e "${ROOT}/dev/ksb26" ]; then
+		rm "${ROOT}/dev/ksb26"
 	fi
 }
