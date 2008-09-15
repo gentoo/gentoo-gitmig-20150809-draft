@@ -6,4 +6,8 @@
   <email>gregkh@gentoo.org</email>
   <name>Greg Kroah-Hartman</name>
 </maintainer>
+<use>
+  <flag name="mp4">Support for MP4 container format</flag>
+  <flag name="ogm">Support for OGM container format</flag>
+</use>
 </pkgmetadata>
