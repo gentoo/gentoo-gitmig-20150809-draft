@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/swfdec-gnome-2.23.2.ebuild,v 1.1 2008/08/04 19:52:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/swfdec-gnome-2.23.4.ebuild,v 1.1 2008/09/15 19:16:56 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.12.0
 		gnome-base/gconf
-		>=media-libs/swfdec-0.7.4"
+		>=media-libs/swfdec-0.8"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext"
