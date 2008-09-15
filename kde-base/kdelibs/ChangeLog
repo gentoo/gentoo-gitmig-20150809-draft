@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.539 2008/09/13 23:58:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.540 2008/09/15 14:42:21 carlo Exp $
+
+  15 Sep 2008; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.10.ebuild:
+  Remove the kdebindings-meta blocker, which went more or less accidentally in
+  there.
 
 *kdelibs-3.5.10 (13 Sep 2008)
 

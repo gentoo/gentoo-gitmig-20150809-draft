@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10.ebuild,v 1.2 2008/09/14 02:27:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10.ebuild,v 1.3 2008/09/15 14:42:22 carlo Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -48,7 +48,6 @@ RDEPEND="x11-libs/libXext
 	spell? ( >=app-text/aspell-0.60.5 >=app-dicts/aspell-en-6.0.0 )
 	>=sys-apps/portage-2.1.2.11
 	!kde-base/ksync
-	!kde-base/kdebindings-meta
 	!=kde-base/artsplugin-mpeglib-3.5*
 	!=kde-base/artsplugin-mpg123-3.5*
 	!=kde-base/mpeglib-3.5*
