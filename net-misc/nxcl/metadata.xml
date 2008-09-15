@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>nx</herd>
 	<longdescription>A library for building NX clients</longdescription>
+	<use>
+		<flag name="nxclient">Use nxssh from <pkg>net-misc/nxclient</pkg> instead of standard ssh</flag>
+	</use>
 </pkgmetadata>

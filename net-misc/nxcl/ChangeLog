@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.6 2008/09/10 09:12:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.7 2008/09/15 15:06:20 voyageur Exp $
+
+*nxcl-0.9-r1 (15 Sep 2008)
+
+  15 Sep 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxcl-0.9-no_nxssh.patch, metadata.xml, +nxcl-0.9-r1.ebuild:
+  Upstream patch to allow nxcl to work without net-misc/nxclient, bug
+  #235023
 
   10 Sep 2008; Bernard Cafarelli <voyageur@gentoo.org>
   +files/nxcl-0.9-gcc43.patch, nxcl-0.9.ebuild:
