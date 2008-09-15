@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.33.ebuild,v 1.1 2008/07/18 11:39:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.35.ebuild,v 1.1 2008/09/15 07:29:07 tove Exp $
 
 MODULE_AUTHOR=SHLOMIF
 inherit perl-module
@@ -20,4 +20,8 @@ RDEPEND="dev-perl/HTML-Parser
 	>=dev-perl/XML-Parser-2.30
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	test? ( >=dev-perl/Test-Manifest-0.9 )"
+	dev-perl/module-build
+	test? ( dev-perl/Test-Pod
+		dev-perl/Test-Pod-Coverage
+		>=dev-perl/Test-Manifest-0.9 )"
+		#dev-perl/Test-Differences
