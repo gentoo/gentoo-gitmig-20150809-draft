@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.3.ebuild,v 1.7 2008/09/15 03:52:40 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.3-r1.ebuild,v 1.1 2008/09/15 03:52:40 ford_prefect Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc python spell xattr"
 
 RDEPEND=">=gnome-base/gconf-2
@@ -28,7 +28,8 @@ RDEPEND=">=gnome-base/gconf-2
 		>=dev-python/pygobject-2.12
 		>=dev-python/pygtk-2.12
 		>=dev-python/pygtksourceview-2.2
-		>=dev-python/gnome-python-2.22.0
+		>=dev-python/gnome-vfs-python-2.22.1
+		>=dev-python/libgnome-python-2.22.1
 	)"
 
 DEPEND="${RDEPEND}
