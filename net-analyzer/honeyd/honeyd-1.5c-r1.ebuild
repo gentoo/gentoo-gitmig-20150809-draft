@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.1 2008/09/15 17:28:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.2 2008/09/15 22:14:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -65,6 +65,6 @@ src_install() {
 	cp -R scripts "${D}"/usr/share/honeyd/
 	find "${D}"/usr/share/honeyd/scripts \
 		-type f -name '*.sh' -o -name '*.pl' -exec chmod +x {} \;
-	
+
 	keepdir /var/log/honeypot/ # if removed security #237481 comes back
 }
