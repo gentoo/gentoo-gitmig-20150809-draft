@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.3 2008/09/15 12:14:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.4 2008/09/15 18:49:18 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -132,7 +132,9 @@ src_install () {
 		sed -i -e s/openofficeorg3-${desk}/ooo-${desk}/g openoffice.org-${desk}.desktop || die
 		domenu openoffice.org-${desk}.desktop
 		insinto /usr/share/pixmaps
-		newins "${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg3-${desk}.png" ooo-${desk}.png
+		if [ "${desk}" != "qstart" ] ; then
+			newins "${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg3-${desk}.png" ooo-${desk}.png
+		fi
 	done
 
 	insinto /usr/share/mime/packages
