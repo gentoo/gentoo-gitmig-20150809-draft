@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/recorder
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/ChangeLog,v 1.1 2008/09/15 20:04:03 yngwin Exp $
+
+*recorder-1.4.1 (15 Sep 2008)
+
+  15 Sep 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +recorder-1.4.1.ebuild:
+  Initial commit. Ebuild by me.
+
