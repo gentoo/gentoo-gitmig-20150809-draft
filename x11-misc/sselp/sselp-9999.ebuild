@@ -1,23 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-0.2.ebuild,v 1.3 2008/09/15 20:11:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-9999.ebuild,v 1.1 2008/09/15 20:11:32 jer Exp $
 
-inherit toolchain-funcs
+inherit mercurial toolchain-funcs
 
 DESCRIPTION="Simple X selection printer"
 HOMEPAGE="http://www.suckless.org/programs/sselp.html"
-SRC_URI="http://code.suckless.org/dl/tools/${P}.tar.gz"
+SRC_URI=""
+EHG_REPO_URI=http://code.suckless.org/hg/${PN}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~hppa ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${PN}"
+
 src_unpack() {
-	unpack ${A}
+	mercurial_src_unpack
 	cd "${S}"
 
 	sed -i \

@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/sselp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/ChangeLog,v 1.1 2008/09/14 20:35:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/ChangeLog,v 1.2 2008/09/15 20:11:32 jer Exp $
+
+*sselp-9999 (15 Sep 2008)
+
+  15 Sep 2008; Jeroen Roovers <jer@gentoo.org> sselp-0.2.ebuild,
+  +sselp-9999.ebuild:
+  Add live ebuild. Improve sed substitions for the static ebuild.
 
 *sselp-0.2 (14 Sep 2008)
 
