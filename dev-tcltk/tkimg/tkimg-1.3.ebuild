@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.ebuild,v 1.1 2008/04/11 11:26:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.ebuild,v 1.2 2008/09/15 20:14:36 klausman Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 
 DEPEND="dev-lang/tk
 	media-libs/libpng
