@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snortsam
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.29 2007/11/06 17:21:23 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.30 2008/09/16 10:42:34 pva Exp $
+
+  16 Sep 2008; Peter Volkov <pva@gentoo.org> -snortsam-2.30.ebuild,
+  -snortsam-2.44.ebuild, snortsam-2.50-r1.ebuild:
+  Fixed position of functions.sh, bug 234521, thank Olivier Huber for
+  report. Respect LDFLAGS. Clean old.
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> snortsam-2.50-r1.ebuild:
   sparc stable
