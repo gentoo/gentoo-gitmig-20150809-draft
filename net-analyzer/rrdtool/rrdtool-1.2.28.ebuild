@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.26.ebuild,v 1.1 2008/01/27 19:58:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.28.ebuild,v 1.1 2008/09/16 18:02:48 pva Exp $
 
-inherit autotools eutils flag-o-matic multilib perl-module
+inherit eutils flag-o-matic multilib perl-module
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://oss.oetiker.ch/rrdtool/"
@@ -35,9 +35,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2.15-newstyle-resize.patch
-	epatch "${FILESDIR}"/${PN}-1.2.23-tclbindings.patch
-	use ruby && epatch "${FILESDIR}"/${PN}-1.2.23-ruby-binding-configure.patch
-	eautoreconf
 }
 
 pkg_setup() {
@@ -52,8 +49,9 @@ src_compile() {
 
 	econf $(use_enable rrdcgi) \
 		$(use_enable ruby) \
+		$(use_enable ruby ruby-site-install) \
 		$(use_enable perl) \
-		--with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' \
+		$(use_enable perl perl-site-install) \
 		$(use_enable tcl) \
 		$(use_with tcl tcllib /usr/$(get_libdir)) \
 		$(use_enable python) || die "econf failed."
@@ -68,11 +66,7 @@ src_install() {
 		rm -rf "${D}"/usr/share/doc/${PF}/{html,txt}
 	fi
 
-	if use perl ; then
-		perlinfo
-		mytargets="site-perl-install"
-		perl-module_src_install || die
-	fi
+	use perl && fixlocalpod
 
 	dodoc CHANGES CONTRIBUTORS NEWS README THREADS TODO
 }
