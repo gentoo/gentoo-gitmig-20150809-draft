@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/ies4linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.6 2008/08/23 18:11:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.7 2008/09/16 22:21:35 hanno Exp $
+
+*ies4linux-2.99.0.1 (16 Sep 2008)
+
+  16 Sep 2008; Hanno Boeck <hanno@gentoo.org> +ies4linux-2.99.0.1.ebuild:
+  Version bump, thanks to Oldrich Jedlicka in #204889.
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> ies4linux-2.0.5.ebuild:
   add ~amd64, bug #218667

@@ -1,15 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.5_beta6.ebuild,v 1.4 2008/09/16 22:21:35 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.99.0.1.ebuild,v 1.1 2008/09/16 22:21:35 hanno Exp $
 
 inherit eutils versionator
 
-MY_PV="$(replace_version_separator 2 '')"
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="Installer for Microsoft Internet Explorer"
 HOMEPAGE="http://www.ies4linux.org/"
-SRC_URI="http://www.ies4linux.org/downloads/${MY_P}.tar.gz"
+SRC_URI="http://www.ies4linux.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -17,21 +14,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk kde"
 
 DEPEND=">=app-arch/cabextract-1.0
-		>=app-emulation/wine-0.9.0"
+	>=app-emulation/wine-0.9.0"
 
 RDEPEND="${DEPEND}
 		gtk? ( dev-python/pygtk
 		>=dev-lang/python-2.4 )
 		kde? ( || ( kde-base/kommander kde-base/kdewebdev ) )"
 
-S="${WORKDIR}/${MY_P}"
-
 src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-Installation_directory_discovery.patch" || die "epatch failed"
+	epatch "${FILESDIR}/ies4linux-2.5_beta6-Installation_directory_discovery.patch" || die
 }
 
 src_install() {
@@ -54,6 +49,7 @@ src_install() {
 	insopts -m0644
 	( doins "lib/files"     &&
 	  doins "lib/${PN}.svg" &&
+	  doins "lib/${PN}.png" &&
 	  doins "lib/messages.txt"
 	) || die "doins failed"
 
