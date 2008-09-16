@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/drascula
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.1 2008/09/16 00:17:42 mr_bones_ Exp $
+
+*drascula-1.0 (16 Sep 2008)
+
+  16 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +drascula-1.0.ebuild:
+  initial commit - modified ebuild submitted by Anton Romanov via bug #237276
+
