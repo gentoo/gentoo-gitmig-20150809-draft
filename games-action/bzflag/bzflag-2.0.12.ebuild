@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.1 2008/06/25 19:44:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.2 2008/09/16 01:00:44 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -38,7 +38,7 @@ pkg_setup() {
 	# Only do the libsdl checks for !dedicated - bug #107792
 	use dedicated || GAMES_USE_SDL="nojoystick"
 	if ! built_with_use net-misc/curl ares; then
-		ewarn "net-misc/curl is not buily with c-ares support"
+		ewarn "net-misc/curl is not built with c-ares support"
 		ewarn "To avoid undesired glitch during play consider"
 		ewarn "emerging net-misc/curl with USE=\"ares\"."
 	fi
