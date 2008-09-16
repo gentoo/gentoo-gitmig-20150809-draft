@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.7 2007/07/10 23:33:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.8 2008/09/16 22:03:17 hanno Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${PN}"
 
 DESCRIPTION="Perl extension for writing Gimp Extensions/Plug-ins/Load & Save-Handlers"
 HOMEPAGE="http://search.cpan.org/~sjburges/Gimp/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.2/perl/${MY_P}.tar.gz
+SRC_URI="mirror://gimp/plug-ins/v2.2/perl/${MY_P}.tar.gz
 		mirror://cpan/authors/id/S/SJ/SJBURGES/${MY_P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
@@ -29,7 +29,12 @@ myinst="DESTDIR=${D} INSTALLDIRS=vendor"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# workaround for writability check of install dirs
 	sed -i -e 's:$$dir:$(DESTDIR)$$dir:g' Makefile.PL
+}
+
+src_install() {
+	perl-module_src_install
+	rm "${D}/usr/lib/gimp/2.0/plug-ins/redeye"
 }
