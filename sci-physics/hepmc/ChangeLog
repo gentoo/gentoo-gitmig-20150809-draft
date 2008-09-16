@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.2 2008/09/08 11:52:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.3 2008/09/16 12:44:24 jer Exp $
+
+  16 Sep 2008; Jeroen Roovers <jer@gentoo.org> hepmc-2.04.00.ebuild:
+  Marked ~hppa (bug #236718).
 
   08 Sep 2008; Ferris McCormick <fmccor@gentoo.org> hepmc-2.04.00.ebuild:
   Add ~sparc for testing --- Bug #236718 --- all tests pass.
