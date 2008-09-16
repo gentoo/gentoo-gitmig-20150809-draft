@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.119 2008/09/13 14:36:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.120 2008/09/16 18:10:04 hd_brummy Exp $
+
+  16 Sep 2008; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2.ebuild:
+  added new ExtPatch-64 version; fix for bug 237583
 
 *vdr-1.6.0_p2 (13 Sep 2008)
 

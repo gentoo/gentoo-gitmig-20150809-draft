@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2.ebuild,v 1.1 2008/09/13 14:36:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2.ebuild,v 1.2 2008/09/16 18:10:04 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -20,7 +20,7 @@ MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
-EXT_V="63"
+EXT_V="64"
 EXT_P=VDR-Extensions-Patch-${EXT_V}
 EXT_DIR=${WORKDIR}/${EXT_P}/
 EXT_VDR_PV="${PV/_p/-}"
