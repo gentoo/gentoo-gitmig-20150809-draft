@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3859 2008/09/16 00:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3860 2008/09/16 07:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1562,6 +1562,7 @@ media-video/vlc:twolame - Enables twolame support (MPEG Audio Layer 2 encoder).
 media-video/vlc:upnp - Enables support for Intel UPnP stack.
 media-video/vlc:vcdx - Enables VCD with navigation via libvcdinfo (depends on cdio)
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
+media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
 media-video/winki:mjpeg - Enables mjpegtools support
 media-video/x264-encoder:mp4 - Enables support for encoding to mp4 container format
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
