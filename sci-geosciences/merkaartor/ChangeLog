@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.6 2008/08/07 00:21:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.7 2008/09/16 20:59:45 hanno Exp $
+
+  16 Sep 2008; Hanno Boeck <hanno@gentoo.org> merkaartor-0.11.ebuild:
+  Change dependency to qt 4.4.
 
 *merkaartor-0.11 (07 Aug 2008)
 
