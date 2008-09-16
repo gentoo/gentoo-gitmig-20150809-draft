@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.3 2008/09/16 14:03:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.4 2008/09/16 21:43:43 jer Exp $
+
+  16 Sep 2008; Jeroen Roovers <jer@gentoo.org> pythia-6.4.18.ebuild:
+  Marked ~hppa (bug #231484).
 
   16 Sep 2008; Jeroen Roovers <jer@gentoo.org> pythia-8.1.08-r1.ebuild:
   Marked ~hppa (bug #231484).
