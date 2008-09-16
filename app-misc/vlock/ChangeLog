@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/vlock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.27 2008/05/19 12:59:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.28 2008/09/16 11:23:12 pva Exp $
+
+*vlock-2.2.2-r1 (16 Sep 2008)
+
+  16 Sep 2008; Peter Volkov <pva@gentoo.org> +vlock-2.2.2-r1.ebuild:
+  Fix multilib issue, bug #237463, thank Pacho Ramos for report.
 
 *vlock-2.2.2 (19 May 2008)
 
