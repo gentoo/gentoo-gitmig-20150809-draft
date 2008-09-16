@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/linux-igd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.28 2007/06/21 15:03:19 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.29 2008/09/16 06:53:22 vapier Exp $
+
+  16 Sep 2008; Mike Frysinger <vapier@gentoo.org> files/upnpd.initd-1.0-r2,
+  +files/linux-igd-1.0-build.patch, -files/makefile-fix-1.0-r2.diff,
+  linux-igd-1.0-r2.ebuild:
+  Clean up ebuild and install and respect build env settings.
 
   21 Jun 2007; Christoph Mende <angelos@gentoo.org> linux-igd-1.0-r2.ebuild:
   Stable on amd64 wrt bug 168279

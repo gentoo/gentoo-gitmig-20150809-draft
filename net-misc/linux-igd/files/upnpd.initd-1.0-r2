@@ -1,4 +1,7 @@
 #!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/files/upnpd.initd-1.0-r2,v 1.2 2008/09/16 06:53:23 vapier Exp $
 
 depend() {
 	need net
@@ -16,17 +19,17 @@ start() {
 	checkconfig || return 1
 	ebegin "Starting upnpd"
 	if [ "$ALLOW_MULTICAST" = "yes" ] ; then
-		/sbin/route add -net 239.0.0.0 netmask 255.0.0.0 $INTERNAL_INTERFACE
+		route add -net 239.0.0.0 netmask 255.0.0.0 $INTERNAL_INTERFACE
 	fi
-	start-stop-daemon --start --exec /usr/bin/upnpd -- $EXTERNAL_INTERFACE $INTERNAL_INTERFACE
+	start-stop-daemon --start --exec /usr/sbin/upnpd -- $EXTERNAL_INTERFACE $INTERNAL_INTERFACE
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping upnpd"
 	if [ "$ALLOW_MULTICAST" = "yes" ] ; then
-		/sbin/route del -net 239.0.0.0 netmask 255.0.0.0 $INTERNAL_INTERFACE
+		route del -net 239.0.0.0 netmask 255.0.0.0 $INTERNAL_INTERFACE
 	fi
-	start-stop-daemon --stop --exec /usr/bin/upnpd
+	start-stop-daemon --stop --exec /usr/sbin/upnpd
 	eend $?
 }
