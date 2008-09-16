@@ -1,9 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.6 2007/04/22 06:27:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.7 2008/09/16 07:57:28 pva Exp $
 
-WANT_AUTOCONF=2.5
-WANT_AUTOMAKE=1.9
 inherit autotools
 
 DESCRIPTION="Cisco netflow probe from libpcap, ULOG, tee/divert sources."
@@ -32,26 +30,24 @@ src_unpack() {
 	sed -i "s:log /tmp/ndsad.log:log /var/log/ndsad.log:" ndsad.conf || \
 	die "Can not fix logging path in ndsad.conf... sed failed"
 
-	aclocal
-	eautomake
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {
-	econf --with-ulog=yes || die "configure failed"
+	econf --with-ulog=yes
 	emake || die "compilation failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 
-	doman ndsad.conf.5
+	doman ndsad.conf.5 || die
 
 	insinto /etc
-	newins ndsad.conf ndsad.conf
+	newins ndsad.conf ndsad.conf || die
 
-	newinitd "${FILESDIR}"/ndsad.init ndsad
-	newconfd "${FILESDIR}"/ndsad.conf.d ndsad
+	newinitd "${FILESDIR}"/ndsad.init ndsad || die
+	newconfd "${FILESDIR}"/ndsad.conf.d ndsad || die
 
 	dodoc ChangeLog AUTHORS README
 }
