@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.15.2-r1.ebuild,v 1.1 2008/09/12 09:58:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.15.2-r2.ebuild,v 1.1 2008/09/16 10:45:02 chainsaw Exp $
 
 inherit toolchain-funcs eutils linux-info x-modular
 
@@ -8,8 +8,9 @@ DESCRIPTION="Driver for Synaptics touchpads"
 HOMEPAGE="http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="MIT"
-IUSE=""
-RDEPEND="x11-libs/libXext"
+IUSE="hal"
+RDEPEND="x11-libs/libXext
+	 hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	!x11-drivers/synaptics
 	x11-base/xorg-server
@@ -57,4 +58,10 @@ src_install() {
 	# Stupid new daemon, didn't work for me because of shm issues
 	newinitd "${FILESDIR}"/rc.init syndaemon
 	newconfd "${FILESDIR}"/rc.conf syndaemon
+
+	if use hal ; then
+		# Have HAL assign this driver to supported touchpads.
+		insinto /usr/share/hal/fdi/policy/10osvendor
+		doins "${S}"/fdi/11-x11-synaptics.fdi
+	fi
 }
