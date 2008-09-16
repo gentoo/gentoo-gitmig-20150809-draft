@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.265 2008/09/16 20:02:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.266 2008/09/16 20:22:50 klausman Exp $
+
+  16 Sep 2008; Tobias Klausmann <klausman@gentoo.org>
+  db-4.2.52_p5-r1.ebuild:
+  Stable on alpha, bug #237127
 
   16 Sep 2008; Tobias Klausmann <klausman@gentoo.org> db-3.2.9_p2.ebuild:
   Stable on alpha, bug #237127
