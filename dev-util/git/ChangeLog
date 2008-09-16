@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.294 2008/08/30 03:32:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.295 2008/09/16 17:52:15 robbat2 Exp $
+
+  16 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> files/git-daemon.initd,
+  files/git-daemon.xinetd:
+  Git 1.6 requires that daemon been an argument not part of the name.
 
 *git-1.6.0.1 (30 Aug 2008)
 

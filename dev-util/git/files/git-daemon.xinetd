@@ -8,6 +8,6 @@ service git-daemon
 	protocol	= tcp
 	log_on_failure	+= USERID
 	port		= 9418
-	server		= /usr/bin/git-daemon
-	server_args	= --inetd --syslog --export-all --base-path=/var/git
+	server		= /usr/bin/git
+	server_args	= daemon --inetd --syslog --export-all --base-path=/var/git
 }
