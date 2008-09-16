@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.8 2008/09/13 01:12:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.9 2008/09/16 20:38:12 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -26,7 +26,7 @@ IUSE="${IUSE_VIDEO_CARDS} kernel_FreeBSD kernel_linux"
 RESTRICT="strip"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.5"
+PATCHVER="0.6"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
