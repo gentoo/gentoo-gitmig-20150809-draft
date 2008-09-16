@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.5.ebuild,v 1.1 2008/07/30 00:45:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.5.ebuild,v 1.2 2008/09/16 22:07:08 hanno Exp $
 
 inherit eutils
 
@@ -14,9 +14,11 @@ KEYWORDS="~amd64 ~x86"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND=">=x11-libs/gtk+-2.2.0
+	gps? ( sci-geosciences/gpsd )
 	net-misc/curl
-	gps? ( sci-geosciences/gpsd )"
-DEPEND="${RDEPEND}
+	sci-geosciences/gpsbabel"
+DEPEND=">=x11-libs/gtk+-2.2.0
+	gps? ( sci-geosciences/gpsd )
 	dev-util/intltool
 	dev-util/pkgconfig"
 
