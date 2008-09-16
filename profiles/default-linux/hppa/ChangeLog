@@ -1,6 +1,10 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.48 2008/09/10 19:25:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.49 2008/09/16 09:16:30 jer Exp $
+
+  16 Sep 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Masking app-text/texlive:xindy because app-text/xindy needs dev-lisp/clisp
+  and clisp does not build (bug #229217).
 
   10 Sep 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   app-misc/tracker isn't keyworded and doesn't work.
