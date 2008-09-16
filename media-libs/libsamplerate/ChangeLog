@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.56 2008/09/15 09:48:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.57 2008/09/16 09:20:44 jer Exp $
+
+  16 Sep 2008; Jeroen Roovers <jer@gentoo.org> libsamplerate-0.1.4.ebuild:
+  Stable for HPPA (bug #237037).
 
   15 Sep 2008; Raúl Porcel <armin76@gentoo.org> libsamplerate-0.1.4.ebuild:
   alpha/ia64/sparc stable wrt #237037
