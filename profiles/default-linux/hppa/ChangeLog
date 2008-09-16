@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.50 2008/09/16 13:57:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.51 2008/09/16 14:01:44 jer Exp $
+
+  16 Sep 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask media-video/mplayer:cpudetection as well.
 
   16 Sep 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   dxr2/3 cards have not been tested on HPPA hardware and custom-cpuopts does
