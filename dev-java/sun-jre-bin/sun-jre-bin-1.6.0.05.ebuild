@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.05.ebuild,v 1.3 2008/03/27 19:22:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.05.ebuild,v 1.4 2008/09/16 19:59:18 serkan Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -12,7 +12,7 @@ SUFFIX=".bin"
 X86_AT="jdk-${MY_PV}-dlj-linux-i586${SUFFIX}"
 AMD64_AT="jdk-${MY_PV}-dlj-linux-amd64${SUFFIX}"
 
-DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
+DESCRIPTION="Sun's J2SE Runtime Environment, version ${PV}"
 HOMEPAGE="http://java.sun.com/javase/6/"
 URL_BASE="http://download.java.net/dlj/binaries"
 SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
