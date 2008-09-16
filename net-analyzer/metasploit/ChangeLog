@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.37 2008/08/04 19:27:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.38 2008/09/16 11:55:14 pva Exp $
+
+*metasploit-3.1_p5662 (16 Sep 2008)
+
+  16 Sep 2008; Peter Volkov <pva@gentoo.org> -metasploit-3.1_p5507.ebuild,
+  +metasploit-3.1_p5662.ebuild:
+  Bump to be in line with upstream
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
