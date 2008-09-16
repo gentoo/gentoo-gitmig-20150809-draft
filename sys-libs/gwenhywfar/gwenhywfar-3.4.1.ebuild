@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.4.1.ebuild,v 1.1 2008/09/01 17:29:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.4.1.ebuild,v 1.2 2008/09/16 20:54:37 hanno Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="debug ssl doc ncurses"
 
-RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
+RDEPEND="ssl? ( net-libs/gnutls )
 	sys-libs/ncurses
 	ncurses? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
