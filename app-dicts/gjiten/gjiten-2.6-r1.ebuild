@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r1.ebuild,v 1.1 2008/05/14 16:37:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r1.ebuild,v 1.2 2008/09/16 17:42:21 leio Exp $
 
 inherit autotools eutils gnome2
 
@@ -29,6 +29,7 @@ src_unpack() {
 	gnome2_src_unpack
 	cd "${S}"
 	# bug #124631
+	intltoolize --copy --automake --force || die "intltoolize failed"
 	AM_OPTS="--foreign" eautoreconf
 }
 
