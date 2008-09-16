@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.3.2_p20070621.ebuild,v 1.2 2007/12/31 22:09:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.3.2_p20070621.ebuild,v 1.3 2008/09/16 17:23:17 leio Exp $
 
 inherit gnome2 eutils autotools
 
@@ -57,5 +57,6 @@ src_unpack () {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-service-name.patch"
+	intltoolize --copy --automake --force || die "intltoolize failed"
 	eautoreconf
 }
