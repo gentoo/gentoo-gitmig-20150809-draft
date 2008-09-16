@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.2.ebuild,v 1.1 2008/09/16 07:07:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.2.ebuild,v 1.2 2008/09/16 07:20:53 aballier Exp $
 
 EAPI="1"
 
@@ -44,7 +44,7 @@ IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio dbus dc1394
 	musepack ncurses nsplugin ogg opengl optimisememory oss png	pulseaudio pvr +qt4
 	remoteosd rtsp samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs
-	X x264 xinerama xml xosd xv"
+	X x264 xinerama xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -134,13 +134,12 @@ RDEPEND="
 		x264? ( media-libs/x264 )
 		xml? ( dev-libs/libxml2 )
 		xosd? ( x11-libs/xosd )
+		zvbi? ( >=media-libs/zvbi-0.2.25 )
 		"
 
 # Disabled features and reasons:
 # xvmc? ( x11-libs/libXvMC )
 #	Will probably compile only on x86
-# zvbi? ( >=media-libs/zvbi-0.2.25 )
-#	Dep not up to date enough
 # kate? ( >=media-libs/libkate-0.1.1 )
 #   No package yet
 
@@ -317,7 +316,7 @@ src_compile () {
 		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
 		--disable-xvmc \
-		--disable-zvbi \
+		$(use_enable zvbi) \
 		--disable-snapshot \
 		--disable-growl \
 		--disable-optimizations \
