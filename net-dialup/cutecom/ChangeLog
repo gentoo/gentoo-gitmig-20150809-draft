@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/cutecom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.20 2008/08/16 16:32:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.21 2008/09/16 16:16:24 pva Exp $
+
+  16 Sep 2008; Peter Volkov <pva@gentoo.org> cutecom-0.20.0-r1.ebuild:
+  Split qt dependency, bug 237670, thank .:deadhead:. for report.
 
   16 Aug 2008; nixnut <nixnut@gentoo.org> cutecom-0.20.0-r1.ebuild:
   Stable on ppc wrt bug 234308
