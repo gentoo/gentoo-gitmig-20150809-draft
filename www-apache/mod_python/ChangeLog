@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.15 2008/09/15 21:31:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.16 2008/09/17 09:13:08 armin76 Exp $
+
+  17 Sep 2008; Raúl Porcel <armin76@gentoo.org> mod_python-3.3.1-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #237784
 
   15 Sep 2008; Doug Goldstein <cardoe@gentoo.org>
   mod_python-3.3.1-r1.ebuild:
