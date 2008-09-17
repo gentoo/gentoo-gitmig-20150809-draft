@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/simpleagenda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.7 2008/03/08 13:44:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.8 2008/09/17 21:09:16 maekke Exp $
+
+  17 Sep 2008; Markus Meier <maekke@gentoo.org> simpleagenda-0.36.ebuild:
+  amd64/x86 stable, bug #235922
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   simpleagenda-0.27.ebuild:
