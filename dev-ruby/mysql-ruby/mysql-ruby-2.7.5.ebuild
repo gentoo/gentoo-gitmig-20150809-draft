@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.5 2008/09/13 11:58:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.6 2008/09/17 09:30:45 armin76 Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tmtm.org/downloads/mysql/ruby/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 USE_RUBY="ruby18"
