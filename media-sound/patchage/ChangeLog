@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.4 2008/09/17 06:40:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.5 2008/09/17 06:43:20 aballier Exp $
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/patchage-0.4.1-gcc43.patch, -patchage-0.4.1.ebuild:
+  remove old
 
 *patchage-0.4.2 (17 Sep 2008)
 
