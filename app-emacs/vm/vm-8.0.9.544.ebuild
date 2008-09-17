@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.9.544.ebuild,v 1.3 2008/09/15 15:31:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.9.544.ebuild,v 1.4 2008/09/17 08:44:05 armin76 Exp $
 
 inherit elisp eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/viewmail/${VM_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc sparc x86"
 IUSE="bbdb ssl"
 
 DEPEND="bbdb? ( app-emacs/bbdb )"
