@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.115 2008/07/22 08:26:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.116 2008/09/17 05:50:19 graaff Exp $
+
+*rmagick-1.15.15 (17 Sep 2008)
+
+  17 Sep 2008; Hans de Graaff <graaff@gentoo.org> +rmagick-1.15.15.ebuild:
+  Version bump with bug fix for handling corrupt JPEG images.
 
 *rmagick-2.5.2 (22 Jul 2008)
 
