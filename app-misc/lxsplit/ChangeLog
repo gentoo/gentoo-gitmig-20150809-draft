@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lxsplit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.11 2007/06/01 06:51:23 opfer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.12 2008/09/17 11:04:46 pva Exp $
+
+*lxsplit-0.2.3 (17 Sep 2008)
+
+  17 Sep 2008; Peter Volkov <pva@gentoo.org> lxsplit-0.1.1.ebuild,
+  +lxsplit-0.2.3.ebuild:
+  Version bump, bug #236026, thank Martin Krohn for report. Should fix
+  inability to handle >4Gb files, bug #222117, thank J.Taimr for report.
 
   01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   modified ChangeLog to meet common format
