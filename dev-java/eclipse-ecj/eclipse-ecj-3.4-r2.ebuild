@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r2.ebuild,v 1.1 2008/08/01 09:49:11 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r2.ebuild,v 1.2 2008/09/17 21:53:57 caster Exp $
 
 inherit java-pkg-2
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="3.4"
 
 CDEPEND=">=app-admin/eselect-ecj-0.3
-	gcj? ( >=sys-devel/gcc-4.3.1 )"
+	gcj? ( sys-devel/gcc )"
 DEPEND="${CDEPEND}
 	!gcj? ( !java6? ( >=virtual/jdk-1.4 )
 		java6? ( >=virtual/jdk-1.6 ) )"
