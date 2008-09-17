@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.7 2008/08/22 13:46:46 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.8 2008/09/17 01:42:57 cla Exp $
+
+  17 Sep 2008; Dawid Węgliński <cla@gentoo.org> -wklej-0.0.5.ebuild,
+  -wklej-0.0.9.ebuild:
+  Remove p.masked versions
 
 *wklej-0.1.2 (22 Aug 2008)
 
