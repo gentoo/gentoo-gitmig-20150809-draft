@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.3 2008/08/20 23:09:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.4 2008/09/17 19:51:31 ulm Exp $
+
+*otpcalc-0.97-r4 (17 Sep 2008)
+
+  17 Sep 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/otpcalc-0.97-sha1-byteorder.patch, -otpcalc-0.97-r3.ebuild,
+  +otpcalc-0.97-r4.ebuild:
+  Fix SHA1 byte-order issue for conformance with RFC 2289.
 
 *otpcalc-0.97-r3 (20 Aug 2008)
 

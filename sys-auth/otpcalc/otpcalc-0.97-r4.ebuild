@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r3.ebuild,v 1.1 2008/08/20 22:51:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r4.ebuild,v 1.1 2008/09/17 19:51:31 ulm Exp $
 
 inherit eutils
 
@@ -27,10 +27,15 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-man-table-format.diff"
 	epatch "${FILESDIR}/${P}-badindex.diff"
 	epatch "${FILESDIR}/${PN}-crypto-proto.diff"
+
+	# make it work with GTK+ 2
 	epatch "${FILESDIR}/${P}-gtk2-gentoo.patch"
 
 	# change default s/key hash to MD5 (same as sys-auth/skey)
 	epatch "${FILESDIR}/${P}-skey-md5.patch"
+
+	# fix SHA1 byte-order issue for conformance with RFC 2289
+	epatch "${FILESDIR}/${P}-sha1-byteorder.patch"
 
 	# print correct version in manpage
 	sed -i -e "s/VERSION/${PV}/g" otpCalc.man

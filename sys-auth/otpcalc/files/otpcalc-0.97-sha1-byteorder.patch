@@ -1,0 +1,22 @@
+--- otpCalc-0.97-orig/crypto.c	2001-06-26 10:22:52.000000000 +0200
++++ otpCalc-0.97/crypto.c	2008-09-17 20:55:10.000000000 +0200
+@@ -199,6 +199,8 @@
+ 	for (i = 0; i < 4; i++)
+ 		digest[i] ^= digest[i+16];
+ 
+-	memcpy(message, digest, 8);
++	/* Fix byte order */
++	for (i = 0; i < 8; i++)
++		 message[i] = digest[(i&4)+3-(i&3)];
+ 
+ }
+--- otpCalc-0.97-orig/BUGS	2001-05-07 08:23:38.000000000 +0200
++++ otpCalc-0.97/BUGS	2008-09-17 21:02:36.000000000 +0200
+@@ -16,3 +16,7 @@
+ 
+ Thanks,
+ Anthony
++
++Note: Above-mentioned SHA1 issue is fixed in the Gentoo version.
++The output now agrees with RFC 2289 and with S/Key.
++ - Ulrich Mueller <ulm@gentoo.org>
