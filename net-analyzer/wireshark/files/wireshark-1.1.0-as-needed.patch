@@ -1,0 +1,23 @@
+--- wiretap/Makefile.am	2008-09-16 15:03:24 +0000
++++ wiretap/Makefile.am	2008-09-16 15:12:01 +0000
+@@ -68,7 +68,7 @@
+ 	$(GENERATOR_FILES) 	\
+ 	$(GENERATED_FILES)
+ 
+-libwiretap_la_LIBADD = libwiretap_generated.la $(GLIB_LIBS)
++libwiretap_la_LIBADD = libwiretap_generated.la $(GLIB_LIBS) ${top_builddir}/wsutil/libwsutil.la
+ libwiretap_la_DEPENDENCIES = libwiretap_generated.la
+ 
+ RUNLEX = $(top_srcdir)/tools/runlex.sh
+
+--- epan/dissectors/Makefile.am	2008-09-16 16:16:16 +0000
++++ epan/dissectors/Makefile.am	2008-09-16 16:27:30 +0000
+@@ -42,6 +42,7 @@
+ 	$(PIDL_DISSECTOR_SRC) \
+ 	$(DISSECTOR_SUPPORT_SRC)
+ libdissectors_la_CFLAGS = $(AM_CLEAN_CFLAGS)
++libdissectors_la_LIBADD = $(top_builddir)/wiretap/libwiretap.la
+ 
+ 
+ EXTRA_DIST = \
+

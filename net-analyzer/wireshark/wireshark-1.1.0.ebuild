@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.2.ebuild,v 1.7 2008/08/03 16:22:03 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.0.ebuild,v 1.1 2008/09/17 14:27:39 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -13,13 +13,12 @@ HOMEPAGE="http://www.wireshark.org/"
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && {
 SRC_URI="http://www.wireshark.org/download/prerelease/${PN}-${PV/_rc/pre}.tar.gz";
 S=${WORKDIR}/${PN}-${PV/_rc/pre} ; } || \
-SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2
-		mirror://gentoo/gtk-2.0-for-wireshark.m4.bz2"
+SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="adns gtk ipv6 lua portaudio gnutls gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="adns gtk ipv6 lua portaudio gnutls c-ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	smi? ( net-libs/libsmi )
@@ -33,7 +32,8 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	pcap? ( net-libs/libpcap )
 	pcre? ( dev-libs/libpcre )
 	caps? ( sys-libs/libcap )
-	adns? ( net-libs/adns )
+	c-ares? ( net-dns/c-ares )
+	!c-ares? ( adns? ( net-libs/adns ) )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	lua? ( >=dev-lang/lua-5.1 )
@@ -52,8 +52,17 @@ pkg_setup() {
 		ewarn "only command line utils are available"
 	fi
 
+	if use c-ares && use adns; then
+		einfo "c-ares supersedes adns resolver. Using c-ares."
+		myconf="$(use_with c-ares) --without-adns"
+	elif use adns; then
+		myconf="$(use_with adns) --without-c-ares"
+	else
+		myconf="--without-adns --without-c-ares" # disable automatic detection
+	fi
+
 	# Add group for users allowed to sniff.
-	enewgroup wireshark || die "Failed to create wireshark group"
+	enewgroup wireshark
 }
 
 src_unpack() {
@@ -62,16 +71,15 @@ src_unpack() {
 	# Try to drop --as-needed patches for 1.0.1. All problems are supposed to be
 	# fixed there...
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
-	epatch "${FILESDIR}"/${PN}-0.99.8-as-needed.patch
+	#epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
+	# again our hardened toolchain bug...
 	cd "${S}"/epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
 
 	cd "${S}"
-	# Add gtk m4 for bug #233158
-	mv "${WORKDIR}"/gtk-2.0-for-wireshark.m4 gtk-2.0.m4
-	AT_M4DIR="." eautoreconf
+	eautoreconf
 }
 
 src_compile() {
@@ -91,7 +99,6 @@ src_compile() {
 	# profile and -fomit-frame-pointer are incompatible, bug #215806
 	use profile && filter-flags -fomit-frame-pointer
 
-	local myconf
 	if use gtk; then
 		einfo "Building with gtk support"
 	else
@@ -116,7 +123,6 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable threads) \
 		$(use_with lua) \
-		$(use_with adns) \
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
 		$(use_with pcap) \
@@ -126,7 +132,7 @@ src_compile() {
 		$(use_with caps libcap) \
 		$(use_enable pcap setuid-install) \
 		--sysconfdir=/etc/wireshark \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	emake || die "emake failed"
 }
