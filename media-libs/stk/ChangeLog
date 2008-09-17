@@ -1,0 +1,13 @@
+# ChangeLog for media-libs/stk
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.1 2008/09/17 07:28:34 aballier Exp $
+
+*stk-4.3.1 (17 Sep 2008)
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/stk-4.3.1-cflags-lib.patch, +files/stk-4.3.1-fpic.patch,
+  +files/stk-4.3.1-gcc43.patch, +files/stk-4.3.1-ldflags.patch,
+  +files/stk-4.3.1-missing.patch, +metadata.xml, +stk-4.3.1.ebuild:
+  Initial import; ebuild mainly by Thomas Kuther who I'm proxy maintaining
+  the package for.
+
