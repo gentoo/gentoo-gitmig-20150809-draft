@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.90.ebuild,v 1.1 2008/08/10 13:48:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.90.ebuild,v 1.2 2008/09/17 11:59:42 ulm Exp $
 
 inherit elisp-common eutils
 
@@ -29,13 +29,12 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use emacs ; then
-		cd contrib
-		elisp-comp tpl-mode.el || die "elisp-comp failed"
+		elisp-compile contrib/tpl-mode.el || die "elisp-compile failed"
 	fi
 }
 
 src_install() {
-    emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Installs just every piece
 	rm -rf "${D}/usr/share/doc"
