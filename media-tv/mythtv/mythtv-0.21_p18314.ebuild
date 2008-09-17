@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314.ebuild,v 1.1 2008/09/17 21:14:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314.ebuild,v 1.2 2008/09/17 21:43:57 mr_bones_ Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -122,7 +122,7 @@ src_compile() {
 		--enable-xv
 		--enable-x11"
 # per discussions with j-rod and janng in #mythtv, these are disabled
-#		--enable-libmp3lame 
+#		--enable-libmp3lame
 #	use x264 && myconf="${myconf} --enable-libx264"
 #	use xvid && myconf="${myconf} --enable-libxvid"
 #	use aac && myconf="${myconf} --enable-libfaac"
