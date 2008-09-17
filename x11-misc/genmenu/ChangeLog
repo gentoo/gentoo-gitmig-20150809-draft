@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/genmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.25 2008/04/21 18:31:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.26 2008/09/17 21:20:58 coldwind Exp $
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> -genmenu-1.0.6.ebuild,
+  -genmenu-1.0.7.ebuild:
+  Remove old versions.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
