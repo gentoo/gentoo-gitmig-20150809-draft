@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.6 2008/07/17 19:06:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.7 2008/09/17 08:57:41 jer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
 HOMEPAGE="http://docbook2x.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="test"
 LICENSE="MIT"
 
