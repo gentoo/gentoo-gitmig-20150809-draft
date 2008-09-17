@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/aview
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.11 2008/09/13 19:08:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.12 2008/09/17 11:13:49 coldwind Exp $
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  aview-1.3.0_rc1-r1.ebuild:
+  amd64 stable wrt security bug #235808
 
 *aview-1.3.0_rc1-r1 (13 Sep 2008)
 
