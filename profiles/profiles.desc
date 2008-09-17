@@ -140,7 +140,6 @@ x86		selinux/2007.0/x86/hardened			dev
 alpha		default/linux/alpha/2008.0			stable
 alpha		default/linux/alpha/2008.0/desktop		stable
 alpha		default/linux/alpha/2008.0/developer		stable
-alpha		default/linux/alpha/2008.0/no-nptl		dev
 alpha		default/linux/alpha/2008.0/server		stable
 amd64		default/linux/amd64/2008.0			stable
 amd64		default/linux/amd64/2008.0/desktop		stable
