@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.37 2008/09/15 15:09:14 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.38 2008/09/17 21:20:38 maekke Exp $
+
+  17 Sep 2008; Markus Meier <maekke@gentoo.org> sptk-3.5.7.13.ebuild:
+  x86 stable, bug #237728
 
 *sptk-3.5.8 (15 Sep 2008)
 
