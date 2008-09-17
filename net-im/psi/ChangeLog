@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.144 2008/09/13 17:13:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.145 2008/09/17 16:13:26 ranger Exp $
+
+  17 Sep 2008; Brent Baude <ranger@gentoo.org> psi-0.12.ebuild:
+  stable ppc64, bug 236497
 
   13 Sep 2008; Jeroen Roovers <jer@gentoo.org> psi-0.12.ebuild:
   Stable for HPPA (bug #236497).
