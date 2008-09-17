@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.344 2008/09/14 14:01:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.345 2008/09/17 14:26:34 ranger Exp $
+
+  17 Sep 2008; Brent Baude <ranger@gentoo.org> python-2.5.2-r7.ebuild:
+  stable ppc64, bug 236723
 
   14 Sep 2008; Sven Wegener <swegener@gentoo.org> python-2.5.2-r6.ebuild,
   python-2.5.2-r7.ebuild:
