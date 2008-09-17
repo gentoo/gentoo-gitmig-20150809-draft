@@ -14,5 +14,6 @@
   <use>
     <flag name="mmkeys">Enable support for special keys on multimedia keyboards</flag>
     <flag name="trayicon">Enable support for trayicon</flag>
+    <flag name="tta">Enable TTA (True-Audio Loseless) support</flag>
   </use>
 </pkgmetadata>
