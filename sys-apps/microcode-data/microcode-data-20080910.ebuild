@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20080910.ebuild,v 1.1 2008/09/17 09:55:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20080910.ebuild,v 1.2 2008/09/17 09:58:26 vapier Exp $
 
 DESCRIPTION="Intel IA32 microcode update data"
 HOMEPAGE="http://urbanmyth.org/microcode/"
@@ -11,9 +11,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+S=${WORKDIR}
+
 src_install() {
 	insinto /etc
-	newins "${WORKDIR}"/microcode-${PV}.dat microcode.dat || die
+	newins microcode-${PV}.dat microcode.dat || die
 }
 
 pkg_postinst() {
