@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r1.ebuild,v 1.2 2008/09/17 20:32:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r1.ebuild,v 1.3 2008/09/17 21:05:25 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -19,6 +19,7 @@ LICENSE="Apache-2.0"
 
 IUSE="admin java5 examples test"
 
+SERVLET_API="~dev-java/tomcat-servlet-api-${PV}"
 RDEPEND="dev-java/eclipse-ecj:3.3
 	dev-java/ant-eclipse-ecj:3.3
 	dev-java/commons-beanutils:1.7
@@ -37,7 +38,7 @@ RDEPEND="dev-java/eclipse-ecj:3.3
 	=dev-java/junit-3*
 	>=dev-java/log4j-1.2.9
 	>=dev-java/saxpath-1.0
-	~dev-java/tomcat-servlet-api-${PV}
+	${SERVLET_API}
 	dev-java/ant-core
 	admin? ( dev-java/struts:1.2 )
 	dev-java/sun-javamail
@@ -67,6 +68,12 @@ pkg_setup() {
 	enewuser tomcat -1 -1 /dev/null tomcat
 
 	java-pkg_filter-compiler ecj-3.1  ecj-3.2
+	if use !java5 && built_with_use ${SERVLET_API} java5;
+	then
+		eerror "With USE=\"-java5\" ${SERVLET_API} must also"
+		eerror "be built without java5 support"
+		die "Rebuild ${SERVLET_API} without java5 support"
+	fi
 }
 
 src_unpack() {
