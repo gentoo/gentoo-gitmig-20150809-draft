@@ -1,20 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/bbdate-0.2.4.ebuild,v 1.10 2008/09/17 19:18:01 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/bbdate-0.2.4-r1.ebuild,v 1.1 2008/09/17 19:18:01 coldwind Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="blackbox date display"
-HOMEPAGE="http://bbtools.windsofstorm.net/available.phtml"
-SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/bbtools"
+SRC_URI="mirror://sourceforge/bbtools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/blackbox"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
+}
+
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README AUTHORS BUGS INSTALL ChangeLog TODO
 
 	# since multiple bbtools packages provide this file, install
