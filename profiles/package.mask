@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8988 2008/09/17 14:19:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8989 2008/09/17 22:01:46 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (17 Sep 2008)
+# under development
+gnome-extra/gnome-lirc-properties
 
 # Peter Volkov <pva@gentoo.org> (17 Sep 2008)
 # Development version, but yet nice :)
