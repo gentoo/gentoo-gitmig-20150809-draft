@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3860 2008/09/16 07:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3861 2008/09/17 07:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1262,6 +1262,9 @@ media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED*
 media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservices
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/listen:libsexy - Enable libsexy support
+media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
+media-sound/lmms:stk - Enables STK Mallet plugin.
+media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
 media-sound/mixxx:djconsole - Enable djconsole support
 media-sound/mixxx:hifieq - Enable hifi equalizer support
 media-sound/mixxx:recording - Enable experimental recording support
