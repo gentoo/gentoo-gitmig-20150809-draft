@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-LockedFile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-LockedFile/ChangeLog,v 1.1 2008/09/07 13:16:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-LockedFile/ChangeLog,v 1.2 2008/09/17 11:23:10 coldwind Exp $
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  IO-LockedFile-0.23.ebuild:
+  Add ~amd64 keyword, requested in bug #237751.
 
 *IO-LockedFile-0.23 (07 Sep 2008)
 
