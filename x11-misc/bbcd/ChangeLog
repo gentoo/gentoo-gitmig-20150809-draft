@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbcd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/ChangeLog,v 1.12 2007/02/21 23:30:10 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/ChangeLog,v 1.13 2008/09/17 16:26:16 coldwind Exp $
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/bbcd-0.3.1-gcc4.3.patch, -bbcd-0.3.1.ebuild, bbcd-0.3.1-r1.ebuild:
+  Add patch for gcc 4.3. Remove old version. Add ~amd64 keyword.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
