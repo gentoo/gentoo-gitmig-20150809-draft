@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/catdvi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.4 2008/09/11 19:11:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.5 2008/09/17 07:29:18 ulm Exp $
+
+  17 Sep 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add package to tex herd.
 
   11 Sep 2008; Markus Meier <maekke@gentoo.org> catdvi-0.14.ebuild:
   amd64/x86 stable, bug #237266
