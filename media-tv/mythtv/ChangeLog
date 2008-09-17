@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.251 2008/08/14 17:54:26 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.252 2008/09/17 21:14:01 cardoe Exp $
+
+*mythtv-0.21_p18314 (17 Sep 2008)
+
+  17 Sep 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.21_p18314.ebuild:
+  LCD fixes. German translation updates. Fix DVB EIT overriding. Store xmltv
+  bits in DB so mythfilldatabase works as another user with xmltv. Remove
+  some USE flags after discussions with MythTV devs and distro maintainers
 
   14 Aug 2008; <antarus@gentoo.org> -mythtv-0.22_alpha18144.ebuild:
   Remove ebuild with improper EAPI. Only ebuilds with EAPI=0 or EAPI=1 are
