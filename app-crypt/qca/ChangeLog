@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.49 2008/09/17 16:19:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.50 2008/09/17 16:44:45 fmccor Exp $
+
+  17 Sep 2008; Ferris McCormick <fmccor@gentoo.org> qca-2.0.0-r2.ebuild:
+  Sparc stable, needed for Bug #236497.
 
   17 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> qca-2.0.0-r2.ebuild:
   stable amd64, bug 236497

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.15 2008/09/17 16:19:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.16 2008/09/17 16:44:45 fmccor Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="http://delta.affinix.com/download/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples"
 RESTRICT="test"
 
