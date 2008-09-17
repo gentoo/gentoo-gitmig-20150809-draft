@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xbae
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.11 2008/08/30 14:27:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.12 2008/09/17 14:49:19 ranger Exp $
+
+  17 Sep 2008; Brent Baude <ranger@gentoo.org> xbae-4.60.4.ebuild:
+  stable ppc64, bug 235755
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   stable ppc, bug 235755
