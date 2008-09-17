@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8987 2008/09/17 14:15:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8988 2008/09/17 14:19:43 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (17 Sep 2008)
+# Development version, but yet nice :)
+=net-analyzer/wireshark-1.1*
 
 # Ulrich Mueller <ulm@gentoo.org> (15 Sep 2008)
 # Broken MIME (RFC 1522) encoding of headers, bug 237730.
