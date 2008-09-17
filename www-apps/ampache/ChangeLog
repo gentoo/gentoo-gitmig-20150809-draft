@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.38 2008/09/15 11:49:43 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.39 2008/09/17 20:09:23 gentoofan23 Exp $
+
+  17 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  ampache-3.4.3.ebuild:
+  stable amd64, security bug 237483
 
 *ampache-3.4.3 (15 Sep 2008)
 
