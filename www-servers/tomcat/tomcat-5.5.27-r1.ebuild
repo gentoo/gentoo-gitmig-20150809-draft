@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r1.ebuild,v 1.1 2008/09/17 20:19:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r1.ebuild,v 1.2 2008/09/17 20:32:34 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -74,6 +74,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${SLOT}/26-main_tomcat_catalina_jasper_build_xml.patch"
+	# https://issues.apache.org/bugzilla/show_bug.cgi?id=45827
 	epatch "${FILESDIR}/${SLOT}/5.5.27-dynamic-JSSE13Factory.patch"
 
 	use examples && epatch "${FILESDIR}/${SLOT}/jsr152_jsr154_examples_build_xml.patch"

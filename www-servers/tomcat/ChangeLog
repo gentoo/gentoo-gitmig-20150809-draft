@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.193 2008/09/17 20:19:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.194 2008/09/17 20:32:34 betelgeuse Exp $
+
+  17 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  tomcat-5.5.27-r1.ebuild:
+  Add reference to upstream bug for JSSE13Factory.
 
 *tomcat-5.5.27-r1 (17 Sep 2008)
 
