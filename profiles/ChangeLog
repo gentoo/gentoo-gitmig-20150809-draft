@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1873 2008/09/15 22:18:56 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1874 2008/09/17 14:15:54 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Sep 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  removed mask from rpm2targz-9.0.0.1g as it's not in the tree anymore.
+
+  16 Sep 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Removed mask for rrdtool-1.3.0 as this branch should go in ~arch now.
 
   15 Sep 2008; Greg Kroah-Hartman <gregkh@gentoo.org> use.local.desc:
   remove media-video/undvd: entry, oops...
