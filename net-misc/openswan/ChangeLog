@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.51 2008/08/16 10:19:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.52 2008/09/17 20:57:16 maekke Exp $
+
+  17 Sep 2008; Markus Meier <maekke@gentoo.org> openswan-2.4.13.ebuild:
+  amd64/x86 stable, bug #237603
 
   16 Aug 2008; Alin Năstac <mrness@gentoo.org>
   -files/openswan-2.4.13-gentoo.patch,
