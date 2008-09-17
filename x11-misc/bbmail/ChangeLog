@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbmail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.14 2007/02/21 23:32:03 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.15 2008/09/17 21:16:31 coldwind Exp $
+
+*bbmail-0.9.3 (17 Sep 2008)
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/bbmail-0.9.3-gcc4.3.patch, -bbmail-0.8.2.ebuild,
+  +bbmail-0.9.3.ebuild:
+  Version bump, and remove old version.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
