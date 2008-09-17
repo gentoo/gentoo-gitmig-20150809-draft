@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.91 2008/09/11 19:14:07 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.92 2008/09/17 00:37:31 beandog Exp $
+
+  17 Sep 2008; Steve Dibb <beandog@gentoo.org> conky-1.6.1.ebuild:
+  amd64 stable, bug 237868
 
 *conky-1.6.2_pre01247 (11 Sep 2008)
 
