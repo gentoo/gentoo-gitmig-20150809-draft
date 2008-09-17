@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.153 2008/09/13 06:19:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.154 2008/09/17 10:03:59 coldwind Exp $
+
+  17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> package.use.force:
+  x86emu is the only backend available for amd64 (bug #224987)
 
   13 Sep 2008; Markus Meier <maekke@gentoo.org>
   2006.1/no-multilib/package.mask:
