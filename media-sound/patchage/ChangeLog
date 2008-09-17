@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.3 2008/07/24 18:58:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.4 2008/09/17 06:40:35 aballier Exp $
+
+*patchage-0.4.2 (17 Sep 2008)
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org> +patchage-0.4.2.ebuild:
+  version bump
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> patchage-0.4.1.ebuild:
   Add ~x86 wrt #232865
