@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.1 2008/09/17 08:48:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.2 2008/09/17 14:07:25 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-memcpy.patch
-	epatch "${FILESDIR}"/${P}-external-md5sum-qoutation.patch
+	epatch "${FILESDIR}"/${P}-external-md5sum-quotation.patch
 	if use md5sum-external; then
 		sed -i -e 's/^#EXTERNAL_MD5[[:blank:]]*= /EXTERNAL_MD5 = /g' \
 					Makefile || die "sed failed"
