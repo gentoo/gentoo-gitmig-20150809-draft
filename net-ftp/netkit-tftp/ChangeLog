@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.17 2008/09/17 11:16:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.18 2008/09/17 16:16:18 ranger Exp $
+
+  17 Sep 2008; Brent Baude <ranger@gentoo.org> netkit-tftp-0.17-r7.ebuild:
+  stable ppc64, bug 237821
 
   17 Sep 2008; Raúl Porcel <armin76@gentoo.org> netkit-tftp-0.17-r7.ebuild:
   sparc/x86 stable wrt #237821
