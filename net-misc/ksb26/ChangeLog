@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ksb26
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.8 2008/09/15 07:30:28 s4t4n Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.9 2008/09/18 20:34:46 armin76 Exp $
+
+  18 Sep 2008; Raúl Porcel <armin76@gentoo.org> ksb26-0.0.4.ebuild:
+  x86 stable wrt #237251
 
   15 Sep 2008; Michele Noberasco <s4t4n@gentoo.org> ksb26-0.0.4.ebuild:
   Added patch to fix compilation with recent kernels. Closes bug #237251.

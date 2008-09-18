@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ksb26-0.0.4.ebuild,v 1.2 2008/09/15 07:30:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ksb26-0.0.4.ebuild,v 1.3 2008/09/18 20:34:46 armin76 Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ksb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ksb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 S=${WORKDIR}/${PN}
 
