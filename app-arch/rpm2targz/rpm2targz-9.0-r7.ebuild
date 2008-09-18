@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r6.ebuild,v 1.8 2007/12/09 04:19:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r7.ebuild,v 1.11 2008/09/18 01:23:32 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="userland_GNU"
 
 # NOTE: rpm2targz autodetects rpm2cpio at runtime, and uses it if available,
@@ -43,10 +43,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sh.patch
 	# remove warnings from the compiler (and QA warnings too)
 	epatch "${FILESDIR}"/${P}-warnings.patch
+	epatch "${FILESDIR}"/${P}-increase-RPMBUFSIZ.patch #187219
 }
 
 src_compile() {
-	emake rpmoffset CC=$(tc-getCC) || die
+	emake rpmoffset CC="$(tc-getCC)" || die
 }
 
 src_install() {
