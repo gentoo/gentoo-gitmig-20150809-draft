@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1879 2008/09/18 04:19:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1880 2008/09/18 09:26:46 tupone Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2008; Tupone Alfredo <tupone@gentoo.org> updates/3Q-2008:
+  package move games-arcade/sdljump -> games-arcade/gnujump
 
   18 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Unmask amanda 2.6.0.
