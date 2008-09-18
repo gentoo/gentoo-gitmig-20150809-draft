@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.93 2008/09/17 11:42:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.94 2008/09/18 08:40:25 armin76 Exp $
+
+  18 Sep 2008; Raúl Porcel <armin76@gentoo.org> conky-1.6.1.ebuild:
+  alpha/x86 stable wrt #237868
 
   17 Sep 2008; Ferris McCormick <fmccor@gentoo.org> conky-1.6.1.ebuild:
   Sparc stable --- Bug #237868 --- works fine.
