@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.4 2008/05/21 18:56:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.5 2008/09/18 20:05:44 maekke Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
@@ -11,7 +11,7 @@ mirror://sourceforge/${PN}/InspIRCd-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="openssl gnutls ipv6 kernel_linux mysql postgres sqlite zlib ldap"
 
 RDEPEND="
