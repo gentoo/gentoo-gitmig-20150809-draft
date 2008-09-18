@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cgdb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.33 2008/09/18 07:32:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.34 2008/09/18 10:42:35 pva Exp $
+
+  18 Sep 2008; Peter Volkov <pva@gentoo.org> cgdb-0.6.3.ebuild:
+  amd64 stable, bug #237985.
 
 *cgdb-0.6.4 (18 Sep 2008)
 
