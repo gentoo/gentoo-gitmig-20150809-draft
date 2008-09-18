@@ -1,6 +1,13 @@
 # ChangeLog for rox-base/tasktray
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.29 2008/09/01 09:38:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.30 2008/09/18 20:34:11 lack Exp $
+
+*tasktray-0.7-r1 (14 Sep 2008)
+
+  14 Sep 2008; Jim Ramsay <lack@gentoo.org> -tasktray-0.6.4.ebuild,
+  +tasktray-0.7-r1.ebuild:
+  We don't need all of gnome-python-desktop - Now that the split packages
+  are available, we just need libwnck-python
 
   01 Sep 2008; Raúl Porcel <armin76@gentoo.org> tasktray-0.7.ebuild:
   sparc stable wrt #236057
