@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.16.ebuild,v 1.1 2008/05/12 22:23:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.16.ebuild,v 1.2 2008/09/18 20:14:56 maekke Exp $
 
 DESCRIPTION="File history and comparison tools"
 HOMEPAGE="http://fhist.sourceforge.net/fhist.html"
@@ -8,7 +8,7 @@ SRC_URI="http://fhist.sourceforge.net/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips ~ppc"
+KEYWORDS="~mips ~ppc ~sparc x86"
 IUSE="test"
 
 RDEPEND="sys-devel/gettext
