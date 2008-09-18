@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.85 2008/09/15 09:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.86 2008/09/18 00:30:18 ranger Exp $
+
+  18 Sep 2008; Brent Baude <ranger@gentoo.org> musicbrainz-2.1.5.ebuild:
+  stable ppc64, bug 237048
 
   15 Sep 2008; Raúl Porcel <armin76@gentoo.org> musicbrainz-2.1.5.ebuild:
   alpha/ia64 stable wrt #237048
