@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.1.ebuild,v 1.3 2008/08/25 16:53:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-4.1.ebuild,v 1.4 2008/09/18 01:47:16 ranger Exp $
 
 inherit eutils latex-package
 
@@ -12,7 +12,7 @@ DESCRIPTION="DrScheme programming environment. Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="backtrace cairo cgc llvm opengl profile X"
 
 RDEPEND="X? ( x11-libs/libICE
