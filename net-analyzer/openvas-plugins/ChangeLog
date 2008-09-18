@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/openvas-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-plugins/ChangeLog,v 1.5 2008/08/18 11:56:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-plugins/ChangeLog,v 1.6 2008/09/18 07:34:11 hanno Exp $
+
+*openvas-plugins-1.0.3 (18 Sep 2008)
+
+  18 Sep 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/openvas-plugins-respect-ldflags.diff,
+  +openvas-plugins-1.0.3.ebuild:
+  Version bump and respect LDFLAGS.
 
   18 Aug 2008; Peter Volkov <pva@gentoo.org> openvas-plugins-1.0.2.ebuild:
   Added ~amd64 keyword, thank alexxy for report.
