@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1881 2008/09/18 15:06:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1882 2008/09/18 15:36:15 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  unmask =x11-libs/xcb-util-0.3*
 
   18 Sep 2008; Jeremy Olexa <darkside@gentoo.org> profiles.desc:
   Comment out the 2006* amd64 profiles, they are deprecated and we don't need
