@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.2.7.ebuild,v 1.1 2008/09/17 22:01:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.2.7.ebuild,v 1.2 2008/09/18 00:00:26 mr_bones_ Exp $
 
 DESCRIPTION="GTK+ based utilty to configure LIRC remotes"
 HOMEPAGE="https://code.fluendo.com/remotecontrol/trac/
@@ -26,6 +26,6 @@ RESTRICT="userpriv"
 src_compile() {
 	econf --with-lirc-confdir=/etc $(use_enable policykit policy-kit) || \
 		die "econf failed"
-	
+
 	emake || die "emake failed"
 }
