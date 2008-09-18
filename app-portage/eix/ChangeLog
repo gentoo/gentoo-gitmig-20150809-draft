@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.231 2008/09/18 10:24:19 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.232 2008/09/18 11:31:55 fmccor Exp $
+
+  18 Sep 2008; Ferris McCormick <fmccor@gentoo.org> eix-0.13.3.ebuild:
+  Sparc stable --- Bug #236281 --- I've been using it all the time for 6 weeks
+  now.
 
 *eix-0.13.4 (18 Sep 2008)
 
