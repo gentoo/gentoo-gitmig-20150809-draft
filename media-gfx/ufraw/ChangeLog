@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.19 2008/01/17 19:37:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.20 2008/09/18 19:17:46 maekke Exp $
+
+*ufraw-0.13-r1 (18 Sep 2008)
+
+  18 Sep 2008; Markus Meier <maekke@gentoo.org>
+  +files/ufraw-0.13-Canon450D.patch, +ufraw-0.13-r1.ebuild:
+  add support for canon EOS450D, by SchAmane <schamane@myeburg.net> in bug
+  #237637
 
   17 Jan 2008; Markus Meier <maekke@gentoo.org> ufraw-0.13.ebuild:
   add pkgconfig dep (bug #205834) and do some dep-ordering
