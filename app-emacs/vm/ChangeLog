@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.55 2008/09/17 08:44:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.56 2008/09/18 20:13:10 maekke Exp $
+
+  18 Sep 2008; Markus Meier <maekke@gentoo.org> vm-8.0.9.544.ebuild:
+  amd64 stable, bug #237738
 
   17 Sep 2008; Raúl Porcel <armin76@gentoo.org> vm-8.0.9.544.ebuild:
   alpha/x86 stable wrt #237738
