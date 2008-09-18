@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.13 2008/08/08 18:21:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.14 2008/09/18 14:14:58 jer Exp $
+
+  18 Sep 2008; Jeroen Roovers <jer@gentoo.org> screenie-1.30.0.ebuild:
+  Fix HOMEPAGE and SRC_URI (bug #211377).
 
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> screenie-1.30.0.ebuild:
   keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
