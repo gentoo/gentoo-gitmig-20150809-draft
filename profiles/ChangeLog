@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1880 2008/09/18 09:26:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1881 2008/09/18 15:06:37 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2008; Jeremy Olexa <darkside@gentoo.org> profiles.desc:
+  Comment out the 2006* amd64 profiles, they are deprecated and we don't need
+  to QA check them
 
   18 Sep 2008; Tupone Alfredo <tupone@gentoo.org> updates/3Q-2008:
   package move games-arcade/sdljump -> games-arcade/gnujump
