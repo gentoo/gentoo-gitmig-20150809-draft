@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.3.ebuild,v 1.2 2007/03/21 03:00:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.3.ebuild,v 1.3 2008/09/18 07:30:16 vapier Exp $
 
 inherit eutils autotools
 
@@ -18,9 +18,6 @@ DEPEND=">=sys-libs/ncurses-5.3-r1
 
 RDEPEND="${DEPEND}
 	>=sys-devel/gdb-5.3"
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 src_unpack() {
 	unpack ${A}
