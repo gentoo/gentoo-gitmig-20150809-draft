@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8989 2008/09/17 22:01:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8990 2008/09/18 00:14:26 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# MATSUU Takuto <matsuu@gentoo.org> (18 Sep 2008)
+# Masked for removal in 60 days.
+app-i18n/uim-svn
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Sep 2008)
 # under development
