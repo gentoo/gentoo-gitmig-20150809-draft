@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Brent Baude <ranger@gentoo.org> (September 17 2008)
+# Masking clisp use from swig
+dev-lang/swig clisp 
+
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (01 Aug 2008)
 # Disabling gcj flag, no gcc-4.3.1 yet
 dev-java/eclipse-ecj gcj
@@ -16,3 +20,5 @@ app-emulation/mol
 # Brent Baude <ranger@gentoo.org> (11 June 2008)
 # Masking out passwdqc from pambase since passwdqc 
 sys-auth/pambase passwdqc
+
+
