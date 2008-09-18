@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cgdb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.32 2008/09/18 07:30:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.33 2008/09/18 07:32:21 vapier Exp $
+
+*cgdb-0.6.4 (18 Sep 2008)
+
+  18 Sep 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/cgdb-0.6.4-64bit.patch, +files/cgdb-0.6.4-headers.patch,
+  +cgdb-0.6.4.ebuild:
+  Version bump #180438.
 
   18 Sep 2008; Mike Frysinger <vapier@gentoo.org> cgdb-0.6.3.ebuild:
   Fix autotools error #206230.
