@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.7 2007/05/27 18:33:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.8 2008/09/19 04:51:22 tupone Exp $
 
 inherit eutils games
 
@@ -23,6 +23,12 @@ DEPEND="virtual/glut
 	sdl? ( media-libs/libsdl )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	egamesconf \

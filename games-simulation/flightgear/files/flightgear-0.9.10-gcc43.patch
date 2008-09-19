@@ -1,0 +1,51 @@
+--- src/Airports/runways.cxx.old	2008-09-19 06:00:35.000000000 +0200
++++ src/Airports/runways.cxx	2008-09-19 06:01:16.000000000 +0200
+@@ -27,6 +27,7 @@
+ 
+ #include <math.h>               // fabs()
+ #include <stdio.h>              // sprintf()
++#include <stdlib.h>
+ 
+ #include <simgear/compiler.h>
+ 
+--- src/Airports/runwayprefs.cxx.old	2008-09-19 06:02:50.000000000 +0200
++++ src/Airports/runwayprefs.cxx	2008-09-19 06:04:05.000000000 +0200
+@@ -27,6 +27,8 @@
+ 
+ #include <math.h>
+ //#include <algorithm>
++#include <string.h>
++#include <stdlib.h>
+ 
+ #include <simgear/compiler.h>
+ 
+--- src/Airports/parking.cxx.old	2008-09-19 06:05:09.000000000 +0200
++++ src/Airports/parking.cxx	2008-09-19 06:05:32.000000000 +0200
+@@ -27,6 +27,7 @@
+ #endif
+ 
+ //#include <algorithm>
++#include <stdlib.h>
+ 
+ #include <simgear/compiler.h>
+ 
+--- src/FDM/JSBSim/input_output/FGfdmSocket.cpp.old	2008-09-19 06:13:29.000000000 +0200
++++ src/FDM/JSBSim/input_output/FGfdmSocket.cpp	2008-09-19 06:14:08.000000000 +0200
+@@ -37,6 +37,7 @@
+ INCLUDES
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+ 
++#include <string.h>
+ #include "FGfdmSocket.h"
+ 
+ namespace JSBSim {
+--- src/Main/util.cxx.old	2008-09-19 06:24:04.000000000 +0200
++++ src/Main/util.cxx	2008-09-19 06:24:38.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <simgear/compiler.h>
+ 
+ #include <math.h>
++#include <stdlib.h>
+ 
+ #include <vector>
+ SG_USING_STD(vector);
