@@ -1,6 +1,11 @@
 # ChangeLog for app-office/orage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.2 2008/06/24 14:15:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.3 2008/09/19 16:07:18 angelos Exp $
+
+*orage-4.5.14.0 (19 Sep 2008)
+
+  19 Sep 2008; Christoph Mende <angelos@gentoo.org> +orage-4.5.14.0.ebuild:
+  Version bump
 
 *orage-4.5.12.2 (22 Jun 2008)
 
