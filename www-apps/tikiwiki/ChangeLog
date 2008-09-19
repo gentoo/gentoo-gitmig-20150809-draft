@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.59 2008/09/07 17:30:37 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.60 2008/09/19 18:46:02 dertobi123 Exp $
+
+  19 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org> tikiwiki-2.0.ebuild:
+  ppc stable, bug #213320
 
 *tikiwiki-2.0 (07 Sep 2008)
 
