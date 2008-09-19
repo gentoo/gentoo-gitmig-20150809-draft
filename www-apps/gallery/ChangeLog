@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.152 2008/09/15 12:12:55 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.153 2008/09/19 18:50:35 dertobi123 Exp $
+
+  19 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  gallery-1.5.8.ebuild:
+  ppc stable, bug #234137
 
   15 Sep 2008; wrobel@gentoo.org gallery-1.5.8.ebuild:
   Fixed errors during install process (#234137).
