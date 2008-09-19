@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.0.0.ebuild,v 1.1 2008/01/01 18:58:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.0.0.ebuild,v 1.2 2008/09/19 10:14:47 tupone Exp $
 
 inherit autotools eutils multilib games
 
@@ -22,7 +22,7 @@ DEPEND="dev-games/simgear
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-fltk.patch
+	epatch "${FILESDIR}/${P}"-{fltk,gcc43}.patch
 	AT_M4DIR=. eautoreconf
 }
 
