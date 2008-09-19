@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.3 2008/05/13 15:59:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.4 2008/09/19 07:06:07 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/python
-		>=dev-python/twisted-2.0.0"
+	>=dev-python/twisted-2.0.0"
 RDEPEND="sys-apps/pciutils"
 
 S=${WORKDIR}/${PN}
@@ -25,7 +25,7 @@ pkg_setup() {
 
 src_install() {
 	insinto /usr/share/${PN}
-	doins client/klive.tac
+	doins client/klive.tac || die
 	newinitd "${FILESDIR}"/klive.init.d klive || die "init.d failed"
 	dodoc README
 }
