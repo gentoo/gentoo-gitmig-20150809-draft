@@ -1,6 +1,20 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.111 2008/08/23 03:16:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.112 2008/09/19 06:09:01 josejx Exp $
+
+*mplayerplug-in-3.55 (19 Sep 2008)
+
+  19 Sep 2008; Joseph Jezak <josejx@gentoo.org>
+  -files/mplayerplug-in-3.35-X.patch,
+  -files/mplayerplug-in-3.35-firefox.patch,
+  -files/mplayerplug-in-3.35-seamonkey.patch,
+  +files/mplayerplug-in-3.55-gcc4.patch, -files/3.30-fix-cflags.patch,
+  +files/mplayerplug-in-min-cache-size.patch,
+  +files/mplayerplug-in-xulrunner-config-in.patch,
+  -mplayerplug-in-3.35.ebuild, -mplayerplug-in-3.45.ebuild,
+  +mplayerplug-in-3.55.ebuild:
+  Updated to latest version (bug #229831). Removed old versions. Added patch
+  for bug #233865.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
