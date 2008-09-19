@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.12 2008/09/19 00:13:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.13 2008/09/19 16:47:45 yngwin Exp $
+
+  19 Sep 2008; Ben de Groot <yngwin@gentoo.org> qt-phonon-4.4.1.ebuild,
+  qt-phonon-4.4.1-r1.ebuild, qt-phonon-4.4.2.ebuild:
+  Add block of media-sound/phonon
 
 *qt-phonon-4.4.2 (19 Sep 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.2.ebuild,v 1.1 2008/09/19 00:13:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.2.ebuild,v 1.2 2008/09/19 16:47:45 yngwin Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -15,6 +15,7 @@ IUSE="dbus"
 
 DEPEND="~x11-libs/qt-gui-${PV}
 	!<=x11-libs/qt-4.4.0_alpha:${SLOT}
+	!media-sound/phonon
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
 	dbus? ( =x11-libs/qt-dbus-${PV} )"
