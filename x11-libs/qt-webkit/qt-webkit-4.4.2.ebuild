@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.2.ebuild,v 1.1 2008/09/19 00:18:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.2.ebuild,v 1.2 2008/09/19 17:58:23 yngwin Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -22,6 +22,10 @@ QT4_EXTRACT_DIRECTORIES="src/3rdparty/webkit src/3rdparty/sqlite
 tools/designer/src/plugins/qwebview"
 QCONFIG_ADD="webkit"
 QCONFIG_DEFINE="QT_WEBKIT"
+
+# see bug 236781
+QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
+	~x11-libs/qt-core-${PV} ssl"
 
 src_compile() {
 	local myconf
