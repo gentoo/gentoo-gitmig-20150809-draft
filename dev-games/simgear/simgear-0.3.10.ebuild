@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.10.ebuild,v 1.7 2007/05/27 18:31:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.10.ebuild,v 1.8 2008/09/19 03:45:21 tupone Exp $
+
+inherit eutils
 
 MY_P="SimGear-${PV/_/-}"
 DESCRIPTION="Development library for simulation games"
@@ -17,6 +19,12 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/freealut"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	econf || die

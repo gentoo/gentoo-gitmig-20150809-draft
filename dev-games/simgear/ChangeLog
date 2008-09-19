@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.32 2008/09/07 13:20:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.33 2008/09/19 03:45:21 tupone Exp $
+
+  19 Sep 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/simgear-0.3.10-gcc43.patch, simgear-0.3.10.ebuild:
+  Fix compilation with gcc-4.3
 
   07 Sep 2008; Markus Meier <maekke@gentoo.org> simgear-1.0.0.ebuild:
   x86 stable, bug #217505
