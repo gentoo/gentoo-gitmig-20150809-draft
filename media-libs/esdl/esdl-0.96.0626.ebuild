@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.5 2007/04/12 13:02:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.6 2008/09/19 21:36:48 maekke Exp $
 
-inherit fixheadtails multilib
+inherit fixheadtails multilib eutils
 
 DESCRIPTION="Erlang bindings for the SDL library"
 HOMEPAGE="http://esdl.sourceforge.net/"
@@ -15,6 +15,13 @@ IUSE=""
 
 DEPEND=">=dev-lang/erlang-9b
 	>=media-libs/libsdl-1.2.5"
+
+pkg_setup() {
+	if ! built_with_use media-libs/libsdl opengl ; then
+		eerror "media-libs/libsdl needs to be built with USE=\"opengl\""
+		die "emerge media-libs/libsdl with USE=\"opengl\""
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
