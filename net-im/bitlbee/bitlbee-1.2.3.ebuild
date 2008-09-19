@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.3.ebuild,v 1.4 2008/09/11 17:25:17 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.3.ebuild,v 1.5 2008/09/19 19:05:57 dertobi123 Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -11,7 +11,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="debug gnutls ipv6 +jabber msn nss +oscar ssl test +yahoo xinetd" # ldap - Bug 195758
 
 COMMON_DEPEND=">=dev-libs/glib-2.4
