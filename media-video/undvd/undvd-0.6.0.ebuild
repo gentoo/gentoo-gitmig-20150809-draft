@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.6.0.ebuild,v 1.2 2008/09/15 23:43:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.6.0.ebuild,v 1.3 2008/09/19 23:02:20 coldwind Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.sourceforge.net/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="aac css ffmpeg matroska mp4 ogm xvid"
 
 DEPEND="sys-apps/coreutils
