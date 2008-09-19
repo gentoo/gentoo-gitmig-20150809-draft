@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hyphen_show
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.7 2008/09/12 21:50:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.8 2008/09/19 01:12:16 ranger Exp $
+
+  19 Sep 2008; Brent Baude <ranger@gentoo.org> hyphen_show-20000425.ebuild:
+  Marking hyphen_show-20000425 ~ppc64 for bug 237447
 
   12 Sep 2008; Markus Meier <maekke@gentoo.org> hyphen_show-20000425.ebuild:
   amd64/x86 stable, bug #237447
