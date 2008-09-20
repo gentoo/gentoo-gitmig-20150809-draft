@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.5.3-r1.ebuild,v 1.2 2008/09/17 18:41:07 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.5.3-r1.ebuild,v 1.3 2008/09/20 08:19:37 nixnut Exp $
 
 ARTS_REQUIRED="never"
 
@@ -12,7 +12,7 @@ SRC_URI="http://kdirstat.sourceforge.net/download/${P}.tar.bz2"
 #SRC_URI="mirror://sourceforge/kdirstat/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 
 IUSE=""
 SLOT="0"
