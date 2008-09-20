@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.3 2008/09/20 13:01:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.4 2008/09/20 13:45:09 armin76 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="doc"
 
 DEPEND="net-libs/libpcap
