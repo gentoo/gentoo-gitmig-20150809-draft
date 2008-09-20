@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/alternate-2.12-r1.ebuild,v 1.7 2008/09/20 08:05:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/alternate-2.18.ebuild,v 1.1 2008/09/20 08:05:29 hawking Exp $
 
 inherit vim-plugin eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: quickly switch between .c and .h files"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=31"
 
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ia64 mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
@@ -20,5 +20,5 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# fix switching between .cc and .hh files, thanks ciaranm
-	epatch "${FILESDIR}"/${P}-hh-cc-alternation.patch
+	epatch "${FILESDIR}"/${PN}-2.12-hh-cc-alternation.patch
 }
