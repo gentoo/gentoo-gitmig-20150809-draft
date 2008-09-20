@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-27.ebuild,v 1.1 2008/08/03 13:22:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-27.ebuild,v 1.2 2008/09/20 16:37:54 caleb Exp $
 
 DESCRIPTION="aoetools are programs for users of the ATA over Ethernet (AoE) network storage protocol"
 HOMEPAGE="http://sf.net/projects/aoetools/"
 SRC_URI="mirror://sourceforge/aoetools/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
