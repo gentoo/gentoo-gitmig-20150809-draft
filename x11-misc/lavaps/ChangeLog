@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lavaps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.21 2008/06/29 13:19:23 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.22 2008/09/20 09:41:49 dertobi123 Exp $
+
+  20 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  lavaps-2.7-r2.ebuild:
+  ppc stable, bug #227743
 
   29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   files/lavaps-2.7-build-fixes.patch,
