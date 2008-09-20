@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.147 2008/09/17 16:54:55 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.148 2008/09/20 10:05:57 armin76 Exp $
+
+  20 Sep 2008; Raúl Porcel <armin76@gentoo.org> psi-0.12.ebuild:
+  x86 stable wrt #236497
 
   17 Sep 2008; Ferris McCormick <fmccor@gentoo.org> psi-0.12.ebuild:
   Sparc stable --- Bug #236497 --- Been around about 6 weeks now.
