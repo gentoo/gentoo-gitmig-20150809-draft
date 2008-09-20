@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.7 2007/07/22 09:28:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.8 2008/09/20 21:50:59 keri Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,8 @@ DEPEND="media-libs/libpng
 	gd? ( >=media-libs/gd-1.84 media-libs/jpeg )
 	flash? ( =media-libs/ming-0.2a )
 	truetype? ( =media-libs/freetype-2* )
-	X? ( x11-libs/libX11 )"
+	X? ( x11-libs/libX11 )
+	!dev-lang/swi-prolog"
 
 pkg_setup() {
 	if use gd;
