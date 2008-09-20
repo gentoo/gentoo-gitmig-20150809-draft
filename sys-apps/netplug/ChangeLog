@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/netplug
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.14 2007/12/25 16:34:41 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.15 2008/09/20 14:52:44 solar Exp $
+
+*netplug-1.2.9-r4 (20 Sep 2008)
+
+  20 Sep 2008; <solar@gentoo.org> +netplug-1.2.9-r4.ebuild:
+  - keyword ~arm. fix cflags settings and make cross compile aware.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318. Assigning to
