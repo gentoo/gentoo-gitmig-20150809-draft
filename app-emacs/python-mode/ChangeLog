@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.35 2008/08/28 06:08:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.36 2008/09/20 21:09:47 ulm Exp $
+
+  20 Sep 2008; Ulrich Mueller <ulm@gentoo.org> -python-mode-1.0.ebuild:
+  Remove old.
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> python-mode-1.0.ebuild,
   python-mode-1.0-r1.ebuild:
