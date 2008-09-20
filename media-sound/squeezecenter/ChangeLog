@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.25 2008/09/13 22:47:01 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.26 2008/09/20 13:06:46 maekke Exp $
+
+  20 Sep 2008; Markus Meier <maekke@gentoo.org>
+  squeezecenter-7.1.0-r1.ebuild:
+  amd64/x86 stable, bug #237373
 
 *squeezecenter-7.2.0-r1 (13 Sep 2008)
 *squeezecenter-7.1.0-r1 (13 Sep 2008)

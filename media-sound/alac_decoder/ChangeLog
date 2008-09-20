@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alac_decoder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/ChangeLog,v 1.3 2008/03/18 21:02:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/ChangeLog,v 1.4 2008/09/20 13:04:19 maekke Exp $
+
+  20 Sep 2008; Markus Meier <maekke@gentoo.org> alac_decoder-0.1.3.ebuild:
+  amd64/x86 stable, bug #237373
 
   18 Mar 2008; nixnut <nixnut@gentoo.org> alac_decoder-0.1.3.ebuild:
   Added ~ppc wrt bug 204813

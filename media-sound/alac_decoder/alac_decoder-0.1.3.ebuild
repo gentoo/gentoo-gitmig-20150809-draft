@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/alac_decoder-0.1.3.ebuild,v 1.2 2008/03/18 21:02:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/alac_decoder-0.1.3.ebuild,v 1.3 2008/09/20 13:04:19 maekke Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://craz.net/programs/itunes/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 DEPEND=""
 
