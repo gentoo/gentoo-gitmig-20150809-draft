@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1882 2008/09/18 15:36:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1883 2008/09/20 16:51:15 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2008; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  mask app-office/ooqstart-gnome and app-office/oooqs for upcoming removal
 
   18 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   unmask =x11-libs/xcb-util-0.3*

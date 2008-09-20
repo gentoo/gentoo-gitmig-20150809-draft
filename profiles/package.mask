@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8993 2008/09/18 15:36:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8994 2008/09/20 16:51:15 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas Proschofsky <suka@gentoo.org> (20 Sep 2008)
+# Masked for removal in 30 days. Both packages are broken
+# and are unmaintained for ages. If you want a proper
+# quickstarter for OpenOffice.org use the one which is 
+# provided with the source-based build of OOo.
+app-office/ooqstart-gnome
+app-office/oooqs
 
 # MATSUU Takuto <matsuu@gentoo.org> (18 Sep 2008)
 # Masked for removal in 60 days.
