@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.302 2008/08/17 22:21:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.303 2008/09/20 18:32:35 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -185,6 +185,10 @@ epatch() {
 	fi
 
 	case ${EPATCH_SUFFIX##*\.} in
+		lzma)
+			PIPE_CMD="lzma -dc"
+			PATCH_SUFFIX="lzma"
+			;;
 		bz2)
 			PIPE_CMD="bzip2 -dc"
 			PATCH_SUFFIX="bz2"
