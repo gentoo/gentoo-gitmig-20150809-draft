@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.4 2007/07/26 04:55:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.5 2008/09/20 16:14:43 maekke Exp $
 
 inherit multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wings/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/erlang-10.2.7
