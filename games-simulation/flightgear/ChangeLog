@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.34 2008/09/19 04:51:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.35 2008/09/20 12:44:47 gentoofan23 Exp $
+
+  20 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  flightgear-1.0.0.ebuild:
+  stable amd64, bug 217505
 
   19 Sep 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/flightgear-0.9.10-gcc43.patch, flightgear-0.9.10.ebuild:
