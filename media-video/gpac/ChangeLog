@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.60 2008/09/15 19:49:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.61 2008/09/20 22:00:40 beandog Exp $
+
+  20 Sep 2008; Steve Dibb <beandog@gentoo.org> gpac-0.4.4-r1.ebuild:
+  amd64 stable, bug 237032
 
   15 Sep 2008; Brent Baude <ranger@gentoo.org> gpac-0.4.4-r1.ebuild:
   stable ppc, bug 237032
