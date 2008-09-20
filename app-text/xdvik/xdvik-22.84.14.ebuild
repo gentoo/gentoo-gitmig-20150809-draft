@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.14.ebuild,v 1.1 2008/07/20 13:25:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.14.ebuild,v 1.2 2008/09/20 13:10:57 maekke Exp $
 
 inherit eutils flag-o-matic elisp-common toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/xdvi/ http://xdvi.sourceforge.jp/"
 SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz
 	cjk? ( mirror://sourceforge.jp/xdvi/31972/${XDVIK_JP} )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="cjk motif neXt Xaw3d emacs"
