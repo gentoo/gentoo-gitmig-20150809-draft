@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/colorsel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/ChangeLog,v 1.13 2008/04/26 21:18:00 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/ChangeLog,v 1.14 2008/09/20 13:59:45 hawking Exp $
+
+*colorsel-20051121 (20 Sep 2008)
+
+  20 Sep 2008; Ali Polatel <hawking@gentoo.org> colorsel-20040416.ebuild,
+  +colorsel-20051121.ebuild:
+  Version bump. Quoting.
 
   26 Apr 2008; <ricmm@gentoo.org> colorsel-20040416.ebuild:
   Drop to ~mips due to unstable deps
