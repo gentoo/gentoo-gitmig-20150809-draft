@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.55 2008/09/20 19:19:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.56 2008/09/20 22:06:38 beandog Exp $
+
+  20 Sep 2008; Steve Dibb <beandog@gentoo.org> autoconf-wrapper-5.ebuild:
+  amd64 stable, bug 238206
 
   20 Sep 2008; Raúl Porcel <armin76@gentoo.org> autoconf-wrapper-5.ebuild:
   alpha/ia64/sparc/x86 stable wrt #238206
