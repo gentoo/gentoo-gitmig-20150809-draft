@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-gnupg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.13 2008/09/17 16:47:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.14 2008/09/20 10:04:21 armin76 Exp $
+
+  20 Sep 2008; Raúl Porcel <armin76@gentoo.org>
+  qca-gnupg-2.0.0_beta2.ebuild:
+  x86 stable wrt #236497
 
   17 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
   qca-gnupg-2.0.0_beta2.ebuild:
