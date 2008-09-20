@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/foldutil
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.17 2007/02/22 00:01:07 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.18 2008/09/20 14:27:43 hawking Exp $
+
+*foldutil-3.0 (20 Sep 2008)
+
+  20 Sep 2008; Ali Polatel <hawking@gentoo.org> -foldutil-1.6.ebuild,
+  -foldutil-1.7.ebuild, +foldutil-3.0.ebuild:
+  Version bump. Drop old.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
