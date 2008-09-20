@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.76 2008/09/18 12:46:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.77 2008/09/20 20:14:53 eva Exp $
+
+  20 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -loudmouth-1.3.4.ebuild, -loudmouth-1.4.0.ebuild, -loudmouth-1.4.1.ebuild:
+  removing old revisions.
 
   18 Sep 2008; Brent Baude <ranger@gentoo.org> loudmouth-1.4.2.ebuild:
   Marking loudmouth-1.4.2 ppc64 for bug 236959
