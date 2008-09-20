@@ -1,6 +1,19 @@
 # ChangeLog for www-client/jd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.2 2008/06/07 09:03:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.3 2008/09/20 02:37:04 matsuu Exp $
+
+*jd-2.0.2_p080919 (20 Sep 2008)
+
+  20 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  -jd-2.0.0_beta080418.ebuild, -jd-2.0.0_beta080601.ebuild,
+  +jd-2.0.2_p080919.ebuild:
+  Version bumped, bug #238122. Removed old versions.
+
+*jd-2.0.0_beta080722 (02 Aug 2008)
+
+  02 Aug 2008; MATSUU Takuto <matsuu@gentoo.org>
+  -jd-2.0.0_beta080418.ebuild, +jd-2.0.0_beta080722.ebuild:
+  Version bumped.
 
 *jd-2.0.0_beta080601 (02 Jun 2008)
 

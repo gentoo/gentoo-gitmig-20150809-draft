@@ -1,24 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.0.0_beta080601.ebuild,v 1.1 2008/06/07 09:03:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.0.2_p080919.ebuild,v 1.1 2008/09/20 02:37:04 matsuu Exp $
 
 inherit eutils autotools
 
 MY_P="${P/_p/-}"
-MY_P="${MY_P/_/-}"
+MY_P="${MY_P/_beta/-}"
 
 DESCRIPTION="gtk2 based 2ch browser written in C++"
 HOMEPAGE="http://jd4linux.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/jd4linux/31373/${MY_P}.tgz"
+SRC_URI="mirror://sourceforge.jp/jd4linux/32951/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome gnutls"
-#IUSE="gnome gnutls migemo"
+IUSE="alsa gnome gnutls"
+#IUSE="alsa gnome gnutls migemo"
 
 RDEPEND=">=dev-cpp/gtkmm-2.8
 	>=dev-libs/glib-2
+	x11-misc/xdg-utils
+	alsa? ( >=media-libs/alsa-lib-1 )
 	gnome? ( >=gnome-base/libgnomeui-2 )
 	!gnome? (
 		x11-libs/libSM
@@ -40,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf="--with-xdgopen"
 
 	# use gnomeui sm instead of Xorg SM/ICE
 	if use gnome ; then
@@ -61,7 +63,9 @@ src_compile() {
 	#	myconf="${myconf} --without-migemo"
 	#fi
 
-	econf ${myconf} || die "econf failed"
+	econf \
+		$(use_with alsa) \
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
