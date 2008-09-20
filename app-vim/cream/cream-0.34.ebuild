@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.10 2007/05/16 10:58:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.11 2008/09/20 14:12:28 hawking Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -62,22 +62,22 @@ prefix_help_file() {
 }
 
 src_unpack() {
-	mkdir -p ${S}/spelldicts
+	mkdir -p "${S}"/spelldicts
 
 	# install spell dictionaries into ${S}/spelldicts
 	local my_a
 	for my_a in ${A} ; do
 		if [ -z ${my_a/*spell-dict*/} ] ; then
-			cd ${S}/spelldicts
+			cd "${S}"/spelldicts
 			unpack ${my_a}
 		else
-			cd ${WORKDIR}
+			cd "${WORKDIR}"
 			unpack ${my_a}
 		fi
 	done
 
 	# change installation path + fix the wrapper command (disable plugins)
-	cd ${S}
+	cd "${S}"
 	cat >cream <<EOF
 #!/bin/sh
 gvim --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
@@ -85,11 +85,11 @@ EOF
 	sed -i "/let \$CREAM/s:VIMRUNTIME:VIM:" creamrc || die "sed #1 broke"
 
 	# make taglist ebuild aware, bug #66052
-	epatch ${FILESDIR}/${PN}-0.30-ebuilds.patch
+	epatch "${FILESDIR}"/${PN}-0.30-ebuilds.patch
 
 	# more filetypes for EnhancedCommentify, including the Gentoo ones
-	epatch ${FILESDIR}/enhancedcommentify-2.1-gentooisms.patch
-	epatch ${FILESDIR}/enhancedcommentify-2.1-extra-ft-support.patch
+	epatch "${FILESDIR}"/enhancedcommentify-2.1-gentooisms.patch
+	epatch "${FILESDIR}"/enhancedcommentify-2.1-extra-ft-support.patch
 
 	# rename vim help files to avoid conflicts with other vim packages
 	prefix_help_file cream help/EnhancedCommentify.txt \

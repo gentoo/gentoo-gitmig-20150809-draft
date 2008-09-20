@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.12 2007/07/11 05:14:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.13 2008/09/20 14:12:28 hawking Exp $
 
 inherit vim-plugin eutils
 
@@ -45,22 +45,22 @@ file://${ROOT}usr/share/doc/${PF}/html/keyboardshortcuts.html
 file://${ROOT}usr/share/doc/${PF}/html/faq.html"
 
 src_unpack() {
-	mkdir -p ${S}/spelldicts
+	mkdir -p "${S}"/spelldicts
 
 	# install spell dictionaries into ${S}/spelldicts
 	local my_a
 	for my_a in ${A} ; do
 		if [ -z ${my_a/*spell-dict*/} ] ; then
-			cd ${S}/spelldicts
+			cd "${S}"/spelldicts
 			unpack ${my_a}
 		else
-			cd ${WORKDIR}
+			cd "${WORKDIR}"
 			unpack ${my_a}
 		fi
 	done
 
 	# change installation path + fix the wrapper command (disable plugins)
-	cd ${S}
+	cd "${S}"
 	cat >cream <<EOF
 #!/bin/sh
 gvim --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
@@ -68,7 +68,7 @@ EOF
 	sed -i "/let \$CREAM/s:VIMRUNTIME:VIM:" creamrc || die "sed #1 broke"
 
 	# make taglist ebuild aware, bug #66052
-	epatch ${FILESDIR}/${PN}-0.30-ebuilds.patch
+	epatch "${FILESDIR}"/${PN}-0.30-ebuilds.patch
 }
 
 src_install() {
@@ -84,10 +84,10 @@ src_install() {
 	doins *.vim creamrc
 	local dir
 	for dir in addons bitmaps spelldicts filetypes ; do
-		cp -R ${dir} ${D}/usr/share/vim/cream
+		cp -R ${dir} "${D}"/usr/share/vim/cream
 	done
 	dodir /usr/share/vim/vimfiles
-	cp -R help ${D}/usr/share/vim/vimfiles/doc
+	cp -R help "${D}"/usr/share/vim/vimfiles/doc
 
 	# install docs
 	dodoc docs/*
