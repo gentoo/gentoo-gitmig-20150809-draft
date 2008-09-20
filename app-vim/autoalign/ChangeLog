@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/autoalign
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.27 2007/05/24 09:50:55 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.28 2008/09/20 12:14:51 hawking Exp $
+
+*autoalign-13 (20 Sep 2008)
+
+  20 Sep 2008; Ali Polatel <hawking@gentoo.org> -autoalign-4.ebuild,
+  autoalign-5.ebuild, -autoalign-6.ebuild, -autoalign-8.ebuild,
+  autoalign-11.ebuild, +autoalign-13.ebuild:
+  Version bump. Quoting. Drop old.
 
   24 May 2007; Lars Weiler <pylon@gentoo.org> autoalign-11.ebuild:
   Stable on ppc; bug #170899.
