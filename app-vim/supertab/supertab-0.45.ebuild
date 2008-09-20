@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.41.ebuild,v 1.3 2007/05/09 15:44:26 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.45.ebuild,v 1.1 2008/09/20 15:38:06 hawking Exp $
 
 inherit vim-plugin
 
