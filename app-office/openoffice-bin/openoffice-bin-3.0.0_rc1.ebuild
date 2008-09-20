@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.4 2008/09/15 18:49:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.5 2008/09/20 17:37:18 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -50,7 +50,6 @@ RDEPEND="!app-office/openoffice
 	app-arch/zip
 	app-arch/unzip
 	>=media-libs/freetype-2.1.10-r2
-	>=app-admin/eselect-oodict-20060706
 	java? ( >=virtual/jre-1.5 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
@@ -114,8 +113,6 @@ src_unpack() {
 
 src_install () {
 
-	#Multilib install dir magic for AMD64
-	has_multilib_profile && ABI=${ARCH}
 	INSTDIR="/usr/$(get_libdir)/openoffice"
 
 	einfo "Installing OpenOffice.org into build root..."
@@ -136,9 +133,6 @@ src_install () {
 			newins "${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg3-${desk}.png" ooo-${desk}.png
 		fi
 	done
-
-	insinto /usr/share/mime/packages
-	doins "${WORKDIR}/usr/share/mime/packages/openoffice.org.xml"
 
 	# Install wrapper script
 	newbin "${FILESDIR}/wrapper.in" ooffice
@@ -171,20 +165,20 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 
-	eselect oodict update --libdir $(get_libdir)
-
 	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
-	elog " To start OpenOffice.org, run:"
-	elog
-	elog " $ ooffice"
-	elog
-	elog " Also, for individual components, you can use any of:"
-	elog
-	elog " oobase, oocalc, oodraw, ooimpress, oomath, or oowriter"
-	elog
-	elog " Spell checking is now provided through our own myspell-ebuilds, "
-	elog " if you want to use it, please install the correct myspell package "
-	elog " according to your language needs. "
+	elog " openoffice-bin does not provide integration with system spell "
+	elog " dictionaries. Please install them manually through the Extensions "
+	elog " Manager (Tools > Extensions Manager) or use the source based "
+	elog " package instead. "
+	elog 
+
+	ewarn " Please note that this release of OpenOffice.org uses a "
+	ewarn " new user install dir. As a result you will have to redo "
+	ewarn " your settings. Alternatively you might copy the old one "
+	ewarn " over from ~/.ooo-2.0 to ~/.ooo3, but be warned that this "
+	ewarn " might break stuff. "
+	ewarn
+
 
 }
