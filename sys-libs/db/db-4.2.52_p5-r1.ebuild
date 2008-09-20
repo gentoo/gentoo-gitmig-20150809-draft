@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p5-r1.ebuild,v 1.6 2008/09/17 13:06:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p5-r1.ebuild,v 1.7 2008/09/20 14:52:39 ranger Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -26,7 +26,7 @@ done
 
 LICENSE="DB"
 SLOT="4.2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="tcl java doc nocxx bootstrap"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
