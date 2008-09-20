@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.93 2008/09/20 09:19:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.94 2008/09/20 09:47:43 armin76 Exp $
 
-  20 Sep 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc9.ebuild:
+*deluge-1.0.0_rc9-r1 (20 Sep 2008)
+
+  20 Sep 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc9.ebuild,
+  +deluge-1.0.0_rc9-r1.ebuild:
   Fix SRC_URI, bug #238070
 
 *deluge-1.0.0_rc9 (15 Sep 2008)
