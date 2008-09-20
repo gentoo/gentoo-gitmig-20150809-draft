@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.57.ebuild,v 1.2 2008/08/09 06:44:19 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.57.ebuild,v 1.3 2008/09/20 21:45:41 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="berkdb debug doc gmp hardened java minimal odbc readline ssl static latex threads zlib X"
 
-DEPEND="!dev-lang/swi-prolog-lite
+DEPEND="!media-libs/ploticus
 	sys-libs/ncurses
 	zlib? ( sys-libs/zlib )
 	odbc? ( dev-db/unixODBC )
