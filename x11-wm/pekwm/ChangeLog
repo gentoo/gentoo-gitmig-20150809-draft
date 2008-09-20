@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.39 2008/04/24 07:29:44 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.40 2008/09/20 21:27:16 yngwin Exp $
+
+*pekwm-0.1.7 (20 Sep 2008)
+
+  20 Sep 2008; Ben de Groot <yngwin@gentoo.org> +pekwm-0.1.7.ebuild:
+  Version bump. Drop no longer needed gcc-4.3 patch. Update SRC_URI.
 
   24 Apr 2008; David Shakaryan <omp@gentoo.org>
   +files/pekwm-0.1.6-gcc-4.3.patch, pekwm-0.1.6.ebuild:
