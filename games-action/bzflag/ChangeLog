@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.37 2008/09/20 00:29:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.38 2008/09/20 17:06:17 maekke Exp $
+
+  20 Sep 2008; Markus Meier <maekke@gentoo.org> bzflag-2.0.12.ebuild:
+  x86 stable, bug #238056
 
   20 Sep 2008; Jeremy Olexa <darkside@gentoo.org> bzflag-2.0.12.ebuild:
   amd64 stable, thanks to Chad A. Simmons (amd64 AT) for testing, bug #238056
