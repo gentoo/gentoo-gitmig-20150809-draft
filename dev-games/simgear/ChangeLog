@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.34 2008/09/19 13:15:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.35 2008/09/20 12:43:49 gentoofan23 Exp $
+
+  20 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  simgear-1.0.0.ebuild:
+  stable amd64, bug 217505
 
   19 Sep 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/simgear-1.0.0-test.patch, simgear-1.0.0.ebuild:
