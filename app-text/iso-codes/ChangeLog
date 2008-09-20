@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.44 2008/09/20 15:35:56 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.45 2008/09/20 16:23:56 maekke Exp $
+
+  20 Sep 2008; Markus Meier <maekke@gentoo.org> iso-codes-3.2.ebuild:
+  x86 stable, bug #238185
 
   20 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
   iso-codes-3.2.ebuild:
