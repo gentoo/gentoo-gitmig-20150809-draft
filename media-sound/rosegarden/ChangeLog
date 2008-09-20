@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.57 2008/08/07 20:45:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.58 2008/09/20 11:16:45 aballier Exp $
+
+*rosegarden-1.7.2 (20 Sep 2008)
+
+  20 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +rosegarden-1.7.2.ebuild:
+  Version bump, by Auke Booij <auke.booij@gmail.com>, bug #238135
 
   07 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   -files/rosegarden-1.6.1+gcc-4.3.patch,
