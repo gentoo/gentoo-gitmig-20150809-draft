@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.15 2008/04/07 08:41:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.16 2008/09/20 14:21:41 hawking Exp $
+
+*dbext-6.20 (20 Sep 2008)
+
+  20 Sep 2008; Ali Polatel <hawking@gentoo.org> -dbext-2.10.ebuild,
+  -dbext-2.11.ebuild, -dbext-3.50.ebuild, -dbext-5.20.ebuild,
+  +dbext-6.20.ebuild:
+  Version bump. Keyword ~amd64. Drop old.
 
 *dbext-5.20 (07 Apr 2008)
 

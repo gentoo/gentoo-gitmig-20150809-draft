@@ -1,22 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-2.10.ebuild,v 1.6 2008/04/07 08:41:13 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-6.20.ebuild,v 1.1 2008/09/20 14:21:41 hawking Exp $
 
+VIM_PLUGIN_VERSION=7.0
 inherit vim-plugin eutils
 
 DESCRIPTION="vim plugin: easy access to databases"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=356"
-LICENSE="as-is"
-KEYWORDS="x86 sparc mips ~ppc"
+LICENSE="GPL-2"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=app-vim/multvals-3.6.1
-	>=app-vim/genutils-1.13"
-
 VIM_PLUGIN_HELPFILES="dbext"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	edos2unix {plugin,doc}/*
-}
