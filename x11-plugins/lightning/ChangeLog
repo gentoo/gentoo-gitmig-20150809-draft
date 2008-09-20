@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/lightning
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.7 2008/08/26 15:36:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.8 2008/09/20 14:54:10 armin76 Exp $
+
+*lightning-0.9_rc2 (20 Sep 2008)
+
+  20 Sep 2008; Raúl Porcel <armin76@gentoo.org> +lightning-0.9_rc2.ebuild:
+  Version bump
 
   26 Aug 2008; Raúl Porcel <armin76@gentoo.org> lightning-0.8.ebuild:
   Restrict tests, bug #235739
