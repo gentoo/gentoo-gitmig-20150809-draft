@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.305 2008/09/20 18:55:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.306 2008/09/20 18:58:57 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -267,8 +267,10 @@ epatch() {
 			# Check for absolute paths in patches.  If sandbox is disabled,
 			# people could (accidently) patch files in the root filesystem.
 			# Or trigger other unpleasantries #237667.
-			if egrep -q '^[-+]{3} /' "${PATCH_TARGET}" ; then
+			local abs_paths=$(egrep -n '^[-+]{3} /' "${PATCH_TARGET}" | awk '$2 != "/dev/null" { print }')
+			if [[ -n ${abs_paths} ]] ; then
 				ewarn "Absolute paths found in ${patchname}!  Please remove them!"
+				ewarn "${abs_paths}"
 			fi
 
 			# Allow for prefix to differ ... im lazy, so shoot me :/
