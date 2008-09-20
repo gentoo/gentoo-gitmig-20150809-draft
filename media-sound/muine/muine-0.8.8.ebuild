@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.8.ebuild,v 1.2 2008/06/05 08:35:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.8.ebuild,v 1.3 2008/09/20 09:54:16 dertobi123 Exp $
 
 inherit gnome2 mono eutils multilib autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://muine-player.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="aac flac mad vorbis xine"
 
 RDEPEND=">=dev-lang/mono-1.1
