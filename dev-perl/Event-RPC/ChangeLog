@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Event-RPC
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.24 2006/10/09 14:27:03 mcummings Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.25 2008/09/20 11:10:08 tove Exp $
+
+*Event-RPC-1.00 (20 Sep 2008)
+
+  20 Sep 2008; Torsten Veller <tove@gentoo.org> +Event-RPC-1.00.ebuild:
+  Version bump.
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -Event-RPC-0.84.ebuild, -Event-RPC-0.85.ebuild, -Event-RPC-0.88.ebuild,
