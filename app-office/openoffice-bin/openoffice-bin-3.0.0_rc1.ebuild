@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.5 2008/09/20 17:37:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0_rc1.ebuild,v 1.6 2008/09/20 19:59:40 mr_bones_ Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -171,7 +171,7 @@ pkg_postinst() {
 	elog " dictionaries. Please install them manually through the Extensions "
 	elog " Manager (Tools > Extensions Manager) or use the source based "
 	elog " package instead. "
-	elog 
+	elog
 
 	ewarn " Please note that this release of OpenOffice.org uses a "
 	ewarn " new user install dir. As a result you will have to redo "
@@ -179,6 +179,5 @@ pkg_postinst() {
 	ewarn " over from ~/.ooo-2.0 to ~/.ooo3, but be warned that this "
 	ewarn " might break stuff. "
 	ewarn
-
 
 }
