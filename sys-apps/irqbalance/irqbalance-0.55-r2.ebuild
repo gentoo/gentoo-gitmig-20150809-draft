@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.55-r2.ebuild,v 1.2 2008/04/19 23:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.55-r2.ebuild,v 1.3 2008/09/20 13:08:38 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.irqbalance.org/releases/${P}.tar.gz"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="=dev-libs/glib-2*"
