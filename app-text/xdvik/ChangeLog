@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.55 2008/09/20 13:31:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.56 2008/09/20 15:30:53 ranger Exp $
+
+  20 Sep 2008; Brent Baude <ranger@gentoo.org> xdvik-22.84.14.ebuild:
+  stable ppc, bug 238111
 
   20 Sep 2008; Ferris McCormick <fmccor@gentoo.org> xdvik-22.84.14.ebuild:
   Sparc stable --- Bug #238111 --- around two months now.
