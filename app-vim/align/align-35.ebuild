@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-35.ebuild,v 1.1 2007/05/09 19:25:05 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-35.ebuild,v 1.2 2008/09/20 07:57:43 hawking Exp $
 
 VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin
@@ -18,7 +18,7 @@ VIM_PLUGIN_HELPFILES="align align-maps"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# nuke cecutil, we use the common shared version
 	rm -f plugin/cecutil.vim
 }

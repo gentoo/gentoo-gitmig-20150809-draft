@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-32.ebuild,v 1.7 2007/07/11 05:14:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-32.ebuild,v 1.8 2008/09/20 07:57:43 hawking Exp $
 
 inherit vim-plugin
 
@@ -17,7 +17,7 @@ VIM_PLUGIN_HELPFILES="align align-maps"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# this makes vim7 throw a hissy fit
 	sed -i -e 's/ version </ v:version </g' plugin/Align*.vim || die "bad sed"
 
