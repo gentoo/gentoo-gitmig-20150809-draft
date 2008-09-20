@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/calendar-1.5.ebuild,v 1.1 2007/05/09 17:08:31 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/calendar-1.7.ebuild,v 1.1 2008/09/20 12:25:46 hawking Exp $
 
 inherit vim-plugin
 
