@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.3.2.ebuild,v 1.1 2008/07/23 15:25:02 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.3.2.ebuild,v 1.2 2008/09/21 21:43:08 angelos Exp $
 
 EAPI=1
 
-inherit gnome2-utils
+inherit eutils gnome2-utils
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
 HOMEPAGE="http://www.xfce.org/projects/xfburn"
@@ -12,7 +12,7 @@ SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+dbus debug hal +xfce"
 
 RDEPEND=">=dev-libs/libburn-0.3
@@ -27,6 +27,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-disable-hal.patch
+}
 
 src_compile() {
 	econf --disable-dependency-tracking \
