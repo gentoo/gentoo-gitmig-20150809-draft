@@ -1,0 +1,36 @@
+diff -ru rawstudio-1.1.orig/pixmaps/Makefile.in rawstudio-1.1/pixmaps/Makefile.in
+--- rawstudio-1.1.orig/pixmaps/Makefile.in	2008-09-21 13:53:24.000000000 +0200
++++ rawstudio-1.1/pixmaps/Makefile.in	2008-09-21 13:53:46.000000000 +0200
+@@ -162,7 +162,7 @@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-icondir = $(datadir)/icons
++icondir = $(datadir)/pixmaps
+ icon_DATA = rawstudio.png
+ rawstudiodir = $(datadir)/pixmaps/rawstudio
+ rawstudio_DATA = overlay_deleted.png \
+diff -ru rawstudio-1.1.orig/src/gtk-interface.c rawstudio-1.1/src/gtk-interface.c
+--- rawstudio-1.1.orig/src/gtk-interface.c	2008-09-21 13:53:24.000000000 +0200
++++ rawstudio-1.1/src/gtk-interface.c	2008-09-21 13:55:05.000000000 +0200
+@@ -904,7 +904,7 @@
+ 	GdkColor bgcolor = {0, 0, 0, 0 };
+ 	GString *window_title = g_string_new(_("Rawstudio"));
+ 	
+-	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/icons/" PACKAGE ".png", NULL);
++	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE ".png", NULL);
+ 	rs->window = gui_window_make(rs);
+ 	gtk_widget_show(rs->window);
+ 
+diff -ru rawstudio-1.1.orig/src/rawstudio.c rawstudio-1.1/src/rawstudio.c
+--- rawstudio-1.1.orig/src/rawstudio.c	2008-09-21 13:53:24.000000000 +0200
++++ rawstudio-1.1/src/rawstudio.c	2008-09-21 13:56:07.000000000 +0200
+@@ -1005,7 +1005,7 @@
+ check_install()
+ {
+ #define TEST_FILE_ACCESS(path) do { if (g_access(path, R_OK)!=0) g_debug("Cannot access %s\n", path);} while (0)
+-	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/icons/" PACKAGE ".png");
++	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE ".png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority1.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority2.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR "/pixmaps/" PACKAGE "/overlay_priority3.png");
