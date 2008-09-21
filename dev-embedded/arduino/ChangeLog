@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/arduino
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.1 2008/09/21 05:03:06 solar Exp $
+
+*arduino-0011 (21 Sep 2008)
+
+  21 Sep 2008; <solar@gentoo.org> +files/Makefile-0011.patch,
+  +files/arduino, +metadata.xml, +arduino-0011.ebuild:
+  - Initial Commit
+
