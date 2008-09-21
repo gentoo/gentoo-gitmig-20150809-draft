@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/ppl
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.1 2008/09/21 09:26:44 vapier Exp $
+
+*ppl-0.10_pre27 (21 Sep 2008)
+
+  21 Sep 2008; Mike Frysinger <vapier@gentoo.org> +ppl-0.10_pre27.ebuild:
+  Initial ebuild based on work from Zhang Le for gcc-4.4+.
+
