@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.4 2007/01/05 20:46:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.5 2008/09/21 13:04:29 jmbsvicetto Exp $
 
 inherit eutils multilib base
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug java"
 
-PATCHES="${FILESDIR}/${P}-Makefiles.patch"
+PATCHES=( "${FILESDIR}/${P}-Makefiles.patch" )
 
 pkg_setup() {
 	if use elibc_FreeBSD; then
@@ -29,19 +29,19 @@ src_compile() {
 		debug="DEBUG=1"
 	fi
 
-	cd ${S}/mDNSPosix
+	cd "${S}"/mDNSPosix
 	emake os=${os} ${debug} || die "make mDNSPosix failed"
 
 	if use java; then
 		emake os=${os} ${debug} Java || die "make mDNSPosix java failed"
 	fi
 
-	cd ${S}/Clients
+	cd "${S}"/Clients
 	emake os=${os} ${debug} || die "make Clients failed"
 }
 
 src_install() {
-	cd "${S}/mDNSPosix"
+	cd "${S}"/mDNSPosix
 
 	dodir /usr/sbin
 	dodir /usr/lib
@@ -60,32 +60,32 @@ src_install() {
 
 	make DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
 
-	dosbin ${S}/mDNSPosix/build/${objdir}/dnsextd
-	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSResponderPosix
-	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSNetMonitor
+	dosbin "${S}"/mDNSPosix/build/${objdir}/dnsextd
+	dosbin "${S}"/mDNSPosix/build/${objdir}/mDNSResponderPosix
+	dosbin "${S}"/mDNSPosix/build/${objdir}/mDNSNetMonitor
 
-	dobin ${S}/Clients/build/dns-sd
-	dobin ${S}/mDNSPosix/build/${objdir}/mDNSProxyResponderPosix
-	dobin ${S}/mDNSPosix/build/${objdir}/mDNSIdentify
+	dobin "${S}"/Clients/build/dns-sd
+	dobin "${S}"/mDNSPosix/build/${objdir}/mDNSProxyResponderPosix
+	dobin "${S}"/mDNSPosix/build/${objdir}/mDNSIdentify
 
-	newinitd ${FILESDIR}/mdnsd.init.d mdnsd
-	newinitd ${FILESDIR}/mDNSResponderPosix.init.d mDNSResponderPosix
-	newconfd ${FILESDIR}/mDNSResponderPosix.conf.d mDNSResponderPosix
-	newinitd ${FILESDIR}/dnsextd.init.d dnsextd
-	newconfd ${FILESDIR}/dnsextd.conf.d dnsextd
+	newinitd "${FILESDIR}"/mdnsd.init.d mdnsd
+	newinitd "${FILESDIR}"/mDNSResponderPosix.init.d mDNSResponderPosix
+	newconfd "${FILESDIR}"/mDNSResponderPosix.conf.d mDNSResponderPosix
+	newinitd "${FILESDIR}/"dnsextd.init.d dnsextd
+	newconfd "${FILESDIR}/"dnsextd.conf.d dnsextd
 
 	insinto /etc
-	doins ${FILESDIR}/mDNSResponderPosix.conf
+	doins "${FILESDIR}"/mDNSResponderPosix.conf
 
-	dodoc ${S}/README.txt
+	dodoc "${S}"/README.txt
 
 	# Fix multilib-strictness
-	mv ${D}/lib ${D}/$(get_libdir)
-	mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+	mv "${D}"/lib "${D}"/$(get_libdir)
+	mv "${D}"/usr/lib "${D}"/usr/$(get_libdir)
 
 	if use java; then
-		java-pkg_dojar ${S}/mDNSPosix/build/prod/dns_sd.jar
-		java-pkg_doso ${S}/mDNSPosix/build/prod/libjdns_sd.so
+		java-pkg_dojar "${S}"/mDNSPosix/build/prod/dns_sd.jar
+		java-pkg_doso "${S}"/mDNSPosix/build/prod/libjdns_sd.so
 	fi
 
 }

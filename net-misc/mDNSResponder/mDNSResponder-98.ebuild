@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.18 2006/07/17 02:02:59 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.19 2008/09/21 13:04:29 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -15,16 +15,16 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-Makefiles.patch
+	epatch "${FILESDIR}"/${P}-Makefiles.patch
 }
 
 src_compile() {
-	cd ${S}/mDNSPosix
+	cd "${S}"/mDNSPosix
 	make os=linux
 }
 
 src_install() {
-	cd ${S}/mDNSPosix
+	cd "${S}"/mDNSPosix
 	dodir /usr/sbin
 	dodir /usr/bin
 	dodir /usr/lib
@@ -34,8 +34,8 @@ src_install() {
 	dodir /usr/share/man/man5/
 	dodir /usr/share/man/man8/
 
-	make DESTDIR=${D} os=linux install
+	make DESTDIR="${D}" os=linux install
 
 	# Install init scripts
-	newinitd ${FILESDIR}/mdnsd.init.d mdnsd
+	newinitd "${FILESDIR}"/mdnsd.init.d mdnsd
 }
