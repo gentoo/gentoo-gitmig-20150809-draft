@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.3 2008/08/14 07:07:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.4 2008/09/21 21:23:39 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -77,8 +77,8 @@ pkg_setup() {
 	local myblas
 	elog ""
 	elog "This version enables the experimental wxpython interface, which"
-	elog "you may want to try, since the legacy GUI seems a little wonky"
-	elog "in this version; just enable the wxwindows USE flag and rebuild"
+	elog "you may want to try.  If the legacy GUI seems a little wonky in"
+	elog "this version, just enable the wxwindows USE flag and rebuild"
 	elog "grass to use it."
 	elog ""
 	if use gmath; then
@@ -133,7 +133,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use python || use wxindows && distutils_python_version
+	# wxwindows needs python (see bug #237495)
+	use wxwindows && distutils_python_version
 
 	myconf="--prefix=/usr --with-cxx --enable-shared \
 		--with-gdal=$(type -P gdal-config) --with-curses --with-proj \
@@ -159,6 +160,9 @@ src_compile() {
 		# query for the location...
 		LIBGDI="/usr/$(get_libdir)/python${PYVER}/site-packages/wx-${WX_GTK_VER}-gtk2-unicode/wx/_gdi_.so"
 		myconf="${myconf} --with-python --with-wxwidgets=${WX_CONFIG}"
+	    else
+		# USE=python must be enabled above if wxwindows is enabled
+		myconf="${myconf} $(use_with python) --without-wxwidgets"
 	    fi
 	else
 		myconf="${myconf} --without-tcltk --without-x"
@@ -220,7 +224,6 @@ src_compile() {
 		$(use_with odbc) \
 		$(use_with png) \
 		$(use_with postgres) \
-		$(use_with python) \
 		$(use_with readline) \
 		$(use_with tiff) || die "configure failed!"
 
