@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/dvi2tty-5.3.1.ebuild,v 1.7 2008/09/02 12:09:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/dvi2tty-5.3.1.ebuild,v 1.8 2008/09/21 13:07:52 ranger Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ctan.org/tex-archive/dviware/"
 SRC_URI="ftp://ftp.mesa.nl/pub/dvi2tty/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 
