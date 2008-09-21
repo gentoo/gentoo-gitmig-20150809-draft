@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.0.ebuild,v 1.1 2008/09/20 09:06:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.0.ebuild,v 1.2 2008/09/21 13:51:09 ranger Exp $
 
 inherit gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://capify.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2
