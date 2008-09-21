@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.541 2008/09/05 23:43:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.542 2008/09/21 23:29:32 zmedico Exp $
+
+*portage-2.2_rc9 (21 Sep 2008)
+
+  21 Sep 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc9.ebuild:
+  2.2_rc9 bump. This includes support for EAPI 2_pre3 which implements the
+  current EAPI 2 draft. If the draft is approved then EAPI 2_pre3 can simply
+  be renamed to EAPI 2 in a future release. This fixes bugs #172496 (exclude
+  file compression), #177863 (SRC_URI arrows), #222091 ("Argument list too
+  long" errors), and #238251 (einfo shows args on separate lines). Bug #210077
+  tracks all bugs fixed since 2.1.5.x.
 
   05 Sep 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_rc8.ebuild:
   Add workaround for compatibility with epydoc-3.
