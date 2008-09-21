@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh-gateway
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.2 2008/09/21 13:49:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.3 2008/09/21 15:56:41 ranger Exp $
+
+  21 Sep 2008; Brent Baude <ranger@gentoo.org> net-ssh-gateway-1.0.0.ebuild:
+  keyworded ~arch for ppc, bug 238171
 
   21 Sep 2008; Brent Baude <ranger@gentoo.org> net-ssh-gateway-1.0.0.ebuild:
   keyworded ~arch for ppc64, bug 238171
