@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.26 2008/08/06 21:09:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.27 2008/09/21 11:43:21 aballier Exp $
+
+*mlt-0.3.0 (21 Sep 2008)
+
+  21 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/mlt-0.3.0-avcodec.patch, +files/mlt-0.3.0-sox1410.patch,
+  +mlt-0.3.0.ebuild:
+  New release, sync patches with upstream for latest libavcodec api changes
+  and sox 14.1.0
 
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/mlt-0.2.4-sox1410.patch, mlt-0.2.4-r2.ebuild:
