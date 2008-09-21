@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.80 2008/07/25 16:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.81 2008/09/21 21:38:38 eva Exp $
+
+  21 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org> meld-1.2.ebuild:
+  respect LINGUAS, bug #183086.
 
   25 Jul 2008; Raúl Porcel <armin76@gentoo.org> meld-1.1.5.1-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #232337

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.2.ebuild,v 1.1 2008/07/19 17:43:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.2.ebuild,v 1.2 2008/09/21 21:38:38 eva Exp $
 
 inherit python gnome2 eutils multilib
 
@@ -44,6 +44,14 @@ src_unpack() {
 
 	# don't run scrollkeeper (with the wrong path), leave that to gnome2.eclass #145833
 	sed -i -e '/scrollkeeper-update/s/\t/&#/' help/*/GNUmakefile
+
+	strip-linguas -i "${S}/po"
+	local mylinguas=""
+	for x in ${LINGUAS}; do
+		mylinguas="${mylinguas} ${x}.po"
+	done
+
+	sed -i -e "s/PO:=.*/PO:=${mylinguas}/" po/GNUmakefile
 }
 
 src_compile() {
