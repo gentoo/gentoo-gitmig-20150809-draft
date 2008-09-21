@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.95 2008/09/19 01:17:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.96 2008/09/21 06:17:35 omp Exp $
+
+  21 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml,
+  conky-1.6.1.ebuild, conky-1.6.2_pre01247.ebuild:
+  Add nvidia flag for temperatures; thanks to Greg Fitzgerald. (bug #234882)
 
   19 Sep 2008; Brent Baude <ranger@gentoo.org> conky-1.6.1.ebuild:
   stable ppc, bug 237868

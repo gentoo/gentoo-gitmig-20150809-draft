@@ -24,6 +24,7 @@ It is a fork of Torsmo that is actually maintained.
 	<flag name='bmpx'>enable monitoring of audio tracks that are playing <pkg>media-sound/bmpx</pkg></flag>
 	<flag name='mpd'>enable monitoring mpd controlled music <pkg>media-sound/mpd</pkg></flag>
 	<flag name='nano-syntax'>enable syntax highlighting for <pkg>app-editors/nano</pkg></flag>
+	<flag name='nvidia'>enable reading of nvidia card temperature sensors via <pkg>media-video/nvidia-settings</pkg></flag>
 	<flag name='smapi'>enable support for smapi</flag>
 </use>
 </pkgmetadata>

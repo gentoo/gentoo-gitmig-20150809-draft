@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.7 2008/09/19 01:17:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.8 2008/09/21 06:17:35 omp Exp $
 
 inherit eutils
 # used for epause
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
-IUSE="audacious bmpx debug hddtemp ipv6 mpd nano-syntax rss truetype vim-syntax smapi wifi X"
+IUSE="audacious bmpx debug hddtemp ipv6 mpd nano-syntax nvidia rss truetype vim-syntax smapi wifi X"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -34,6 +34,7 @@ DEPEND_COMMON="
 			net-misc/curl
 			)
 	wifi? ( net-wireless/wireless-tools )
+	nvidia? ( media-video/nvidia-settings )
 	!ipv6? ( >=dev-libs/glib-2.0 )"
 RDEPEND="${DEPEND_COMMON}
 	hddtemp? ( app-admin/hddtemp )
@@ -51,7 +52,7 @@ DEPEND="
 
 pkg_setup() {
 	if use audacious; then
-		if has_version <media-sound/audacious-1.5.0 && ! built_with_use media-sound/audacious dbus; then
+		if has_version '<media-sound/audacious-1.5.0' && ! built_with_use media-sound/audacious dbus; then
 			eerror "media-sound/audacious is not built with dbus USE flag."
 			eerror "Please add 'dbus' to your USE flags, and re-emerge media-sound/audacious."
 			die "media-sound/audacious needs USE=dbus"
@@ -84,6 +85,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable hddtemp ) \
 		$(use_enable mpd) \
+		$(use_enable nvidia) \
 		$(use_enable rss) \
 		$(use_enable smapi) \
 		$(use_enable wifi wlan) \
