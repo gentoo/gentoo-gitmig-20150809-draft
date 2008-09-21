@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8994 2008/09/20 16:51:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8995 2008/09/21 02:59:48 keri Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Keri Harris <keri@gentoo.org> (21 Sep 2008)
+# Development version
+=dev-lang/swi-prolog-5.7*
 
 # Andreas Proschofsky <suka@gentoo.org> (20 Sep 2008)
 # Masked for removal in 30 days. Both packages are broken
