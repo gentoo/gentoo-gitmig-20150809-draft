@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.57 2008/09/21 12:38:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.58 2008/09/21 13:25:45 ranger Exp $
+
+  21 Sep 2008; Brent Baude <ranger@gentoo.org> autoconf-wrapper-5.ebuild:
+  stable ppc64, bug 238206
 
   21 Sep 2008; nixnut <nixnut@gentoo.org> autoconf-wrapper-5.ebuild:
   Stable on ppc wrt bug 238206
