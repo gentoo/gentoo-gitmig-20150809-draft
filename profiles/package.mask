@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8996 2008/09/21 11:40:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8997 2008/09/21 12:26:53 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alin Năstac <mrness@gentoo.org> (21 Sep 2008)
+# Breaks L2TP connections (see bug 237132)
+=net-misc/openswan-2.6*
 
 # Alexis Ballier <aballier@gentoo.org> (21 Sep 2008)
 # New release, breaks api and kdenlive fails to build against them.
