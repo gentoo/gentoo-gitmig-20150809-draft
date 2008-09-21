@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.86 2008/06/29 11:08:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.87 2008/09/21 21:42:42 aballier Exp $
+
+*cdparanoia-3.10.2 (21 Sep 2008)
+
+  21 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/cdparanoia-3.10.2-Makefile.in.patch,
+  +files/cdparanoia-3.10.2-use-destdir.patch, +cdparanoia-3.10.2.ebuild:
+  Version bump, thanks to Bjoern Ottervik <bjorn.ottervik@gmail.com> for
+  reporting in bug #237673
 
 *cdparanoia-3.10.0 (29 Jun 2008)
 
