@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.125 2008/05/10 16:04:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.126 2008/09/21 05:19:23 vapier Exp $
+
+  21 Sep 2008; Mike Frysinger <vapier@gentoo.org> files/ntp.conf,
+  files/ntp-client.confd:
+  Use a Gentoo ntp pool #181190 by Rune Magnussen.
 
   23 Jan 2008; Brent Baude <ranger@gentoo.org> ntp-4.2.4_p4.ebuild:
   Marking ntp-4.2.4_p4 ppc for bug 207036
