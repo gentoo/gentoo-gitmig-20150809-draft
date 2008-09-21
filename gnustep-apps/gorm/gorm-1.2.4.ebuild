@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.4.ebuild,v 1.2 2008/09/17 21:01:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.4.ebuild,v 1.3 2008/09/21 15:42:22 nixnut Exp $
 
 inherit gnustep-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A clone of the NeXTstep Interface Builder application for GNUstep"
 HOMEPAGE="http://www.gnustep.org/experience/Gorm.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dev-apps/${P}.tar.gz"
 
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 

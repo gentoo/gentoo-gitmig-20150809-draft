@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.15 2008/09/17 21:04:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.16 2008/09/21 15:44:01 nixnut Exp $
+
+  21 Sep 2008; nixnut <nixnut@gentoo.org> price-0.8.2.ebuild:
+  Stable on ppc wrt bug 235922
 
   17 Sep 2008; Markus Meier <maekke@gentoo.org> price-0.8.2.ebuild:
   amd64/x86 stable, bug #235922
