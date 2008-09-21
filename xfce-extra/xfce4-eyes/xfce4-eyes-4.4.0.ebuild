@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/xfce4-eyes-4.4.0.ebuild,v 1.22 2008/08/08 17:44:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes/xfce4-eyes-4.4.0.ebuild,v 1.23 2008/09/21 19:04:04 angelos Exp $
 
-inherit autotools xfce44
+inherit autotools eutils xfce44
 
 xfce44
 
@@ -18,6 +18,8 @@ DEPEND="dev-util/pkgconfig
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-libtool.patch
 	sed -i -e "/^AC_INIT/s/eyes_version()/eyes_version/" configure.in
 	intltoolize --force --copy --automake || die "intltoolize failed."
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
