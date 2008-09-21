@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.12 2008/06/14 12:12:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.13 2008/09/21 06:29:32 vapier Exp $
 
 inherit cron toolchain-funcs pam
 
@@ -47,12 +47,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# we need to tinker with ldflags since we're installing as setuid. see
-	# "[gentoo-core] Heads up changes in suid handing with portage >=51_pre21"
-	# for details. Note that we do the sed fixes here rather than in unpack so
-	# that our changes to LDFLAGS are picked up.
-
-	append-ldflags $(bindnow-flags)
 	use debug && append-flags -DDEBUGGING
 
 	sed -i -e "s:gcc \(-Wall.*\):$(tc-getCC) \1 ${CFLAGS}:" \

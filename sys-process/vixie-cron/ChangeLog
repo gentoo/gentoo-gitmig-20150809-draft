@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/vixie-cron
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.54 2008/06/14 12:12:06 zmedico Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.55 2008/09/21 06:29:32 vapier Exp $
+
+  21 Sep 2008; Mike Frysinger <vapier@gentoo.org> vixie-cron-4.1-r10.ebuild:
+  Drop bindnow-flags usage #212004 by Paweł Hajdan jr (ph).
 
   14 Jun 2008; Zac Medico <zmedico@gentoo.org> vixie-cron-4.1-r10.ebuild:
   Bug #226505 - For compatibility with phase execution order in
