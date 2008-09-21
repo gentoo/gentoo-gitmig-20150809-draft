@@ -1,3 +1,6 @@
+# Unmask the flag which corresponds to ARCH.
+-sh
+
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
 networkmanager

@@ -2,6 +2,9 @@
 # net-misc/networkmanager not keyworded
 networkmanager
 
+# Unmask the flag which corresponds to ARCH.
+-arm
+
 # Samuli Suominen <drac@gentoo.org>
 # media-libs/amrnb and media-libs/amrwb not tested.
 amr

@@ -1,6 +1,9 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.5 2008/05/10 19:41:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.6 2008/09/21 00:12:01 zmedico Exp $
+
+# Unmask the flag which corresponds to ARCH.
+-x86
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's

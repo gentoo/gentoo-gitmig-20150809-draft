@@ -1,3 +1,6 @@
+# Unmask the flag which corresponds to ARCH.
+-m68k
+
 hardened
 
 # Paul de Vrieze <pauldv@gentoo.org>

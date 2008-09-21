@@ -1,10 +1,30 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1883 2008/09/20 16:51:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1884 2008/09/21 00:11:51 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2008; Zac Medico <zmedico@gentoo.org> +arch/alpha/parent,
+  +arch/alpha/use.force, arch/alpha/use.mask, arch/amd64/parent,
+  +arch/amd64/use.force, arch/amd64/use.mask, +arch/arm/parent,
+  +arch/arm/use.force, arch/arm/use.mask, +arch/base/use.mask,
+  +arch/hppa/parent, +arch/hppa/use.force, arch/hppa/use.mask,
+  +arch/ia64/parent, +arch/ia64/use.force, arch/ia64/use.mask,
+  +arch/m68k/parent, +arch/m68k/use.force, arch/m68k/use.mask,
+  +arch/mips/parent, +arch/mips/use.force, arch/mips/use.mask,
+  +arch/powerpc/parent, +arch/powerpc/ppc32/use.force,
+  +arch/powerpc/ppc32/use.mask, +arch/powerpc/ppc64/32ul/use.force,
+  arch/powerpc/ppc64/32ul/use.mask, +arch/powerpc/ppc64/use.force,
+  arch/powerpc/ppc64/use.mask, +arch/s390/parent, +arch/s390/use.force,
+  arch/s390/use.mask, +arch/sh/parent, +arch/sh/use.force, arch/sh/use.mask,
+  arch/sparc/parent, +arch/sparc/use.force, arch/sparc/use.mask,
+  +arch/x86/parent, +arch/x86/use.force, arch/x86/use.mask:
+  Mask and force USE flags that correspond to ARCH values. All arch profiles
+  now inherit from arch/base, which masks the USE flags that correspond to
+  all possible ARCH values. Each of the individual arch profiles unmasks and
+  forces the USE flag which corresponds to its ARCH value.
 
   20 Sep 2008; Andreas Proschofsky <suka@gentoo.org> package.mask:
   mask app-office/ooqstart-gnome and app-office/oooqs for upcoming removal
