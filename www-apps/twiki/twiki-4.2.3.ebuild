@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.2.2.ebuild,v 1.1 2008/09/10 08:15:49 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.2.3.ebuild,v 1.1 2008/09/21 14:31:39 wrobel Exp $
 
 WEBAPP_NO_AUTO_INSTALL="yes"
 
@@ -10,10 +10,11 @@ MY_PN="TWiki"
 
 DESCRIPTION="A Web Based Collaboration Platform"
 HOMEPAGE="http://twiki.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tgz"
+SRC_URI="http://twiki.org/p/pub/Codev/Release/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+RESTRICT="fetch"
 IUSE=""
 
 S="${WORKDIR}"
@@ -36,6 +37,12 @@ RDEPEND=">=app-text/rcs-5.7
 	virtual/perl-Time-Local"
 
 need_httpd_cgi
+
+pkg_nofetch() {
+	einfo "Please download ${MY_PN}_${PV}.tgz from:"
+	einfo "http://twiki.org/cgi-bin/view/Codev/DownloadTWiki"
+	einfo "and move it to ${DISTDIR}"
+}
 
 src_install() {
 	webapp_src_preinst
