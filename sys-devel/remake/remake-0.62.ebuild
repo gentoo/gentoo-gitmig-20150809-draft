@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/remake-0.62.ebuild,v 1.2 2007/04/06 01:14:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/remake-0.62.ebuild,v 1.3 2008/09/21 13:31:36 ranger Exp $
 
 MAKE_V="3.80"
 MY_PV=${MAKE_V}+dbg-${PV}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bashdb/${MY_P}.tar.bz2"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

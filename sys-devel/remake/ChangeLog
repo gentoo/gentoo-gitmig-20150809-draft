@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/remake
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.1 2007/03/24 08:08:29 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.2 2008/09/21 13:31:36 ranger Exp $
+
+  21 Sep 2008; Brent Baude <ranger@gentoo.org> remake-0.62.ebuild:
+  stable ppc, bug 238270
 
 *remake-0.62 (24 Mar 2006)
 
