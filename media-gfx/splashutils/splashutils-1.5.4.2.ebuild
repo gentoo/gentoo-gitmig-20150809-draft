@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.3 2008/09/13 10:23:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.4 2008/09/21 07:16:19 solar Exp $
 
 EAPI="1"
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://berlios/fbsplash/${PN}-lite-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~arm"
 RDEPEND="gpm? ( sys-libs/gpm )
 	truetype? ( >=media-libs/freetype-2 )
 	png? ( >=media-libs/libpng-1.2.7 )
@@ -71,7 +71,7 @@ src_unpack() {
 	cd "${S}"
 	ln -sf "${S}/src" "${WORKDIR}/core"
 
-	if built_with_use sys-devel/gcc vanilla ; then
+	if ! tc-is-cross-compiler && built_with_use sys-devel/gcc vanilla; then
 		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
 		ewarn "splashutils, you're on your own, as this configuration is not supported."
 	else
@@ -85,8 +85,9 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	cd "${SM}"
-	emake LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
+	emake CC="${CC}" LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
 
 	cd "${S}"
 	econf \
@@ -101,7 +102,7 @@ src_compile() {
 		--with-lpng-src=${LPNGSRC} \
 		--with-zlib-src=${ZLIBSRC} || die "failed to configure splashutils"
 
-	emake -j1 || die "failed to build splashutils"
+	emake -j1 KLCC="${CC}" CC="${CC}" || die "failed to build splashutils"
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd "${SG}"
