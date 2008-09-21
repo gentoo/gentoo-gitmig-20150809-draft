@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xfc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/ChangeLog,v 1.7 2008/05/11 16:09:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/ChangeLog,v 1.8 2008/09/21 22:40:01 angelos Exp $
+
+  21 Sep 2008; Christoph Mende <angelos@gentoo.org>
+  +files/xfc-4.3.2-64bit-examples.patch, xfc-4.3.2.ebuild:
+  Made examples 64bit clean and limited to -j1, bugs 235737 and 235967 by
+  Marcin Olender
 
   11 May 2008; Samuli Suominen <drac@gentoo.org> xfc-4.3.2.ebuild:
   Move doxygen to DEPEND wrt #221699, thanks to Diego Pettenò.
