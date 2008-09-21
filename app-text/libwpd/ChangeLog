@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.61 2008/09/20 22:28:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.62 2008/09/21 12:29:57 nixnut Exp $
+
+  21 Sep 2008; nixnut <nixnut@gentoo.org> libwpd-0.8.14.ebuild:
+  Stable on ppc wrt bug 238221
 
   20 Sep 2008; Ferris McCormick <fmccor@gentoo.org> libwpd-0.8.14.ebuild:
   Sparc stable --- Bug #238221 --- in use about 5 months now.
