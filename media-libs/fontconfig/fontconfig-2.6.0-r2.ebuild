@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.1 2008/06/26 21:38:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.2 2008/09/21 02:45:31 solar Exp $
 
 WANT_AUTOMAKE=1.9
 
-inherit eutils autotools libtool
+inherit eutils autotools libtool toolchain-funcs flag-o-matic
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
@@ -43,12 +43,17 @@ src_unpack() {
 }
 
 src_compile() {
+	if tc-is-cross-compiler; then
+		myconf="--with-arch=${ARCH}"
+		replace-flags -mtune=* -DMTUNE_CENSORED
+		replace-flags -march=* -DMARCH_CENSORED
+	fi
 	econf $(use_enable doc docs) \
 		--localstatedir=/var \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-default-fonts=/usr/share/fonts \
 		--with-add-fonts=/usr/local/share/fonts \
-		|| die
+		${myconf} || die
 
 	emake || die
 }
