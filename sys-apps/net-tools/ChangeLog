@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.79 2008/09/20 22:13:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.80 2008/09/21 12:35:55 nixnut Exp $
+
+  21 Sep 2008; nixnut <nixnut@gentoo.org>
+  net-tools-1.60_p20071202044231-r1.ebuild:
+  Stable on ppc wrt bug 238207
 
   20 Sep 2008; Steve Dibb <beandog@gentoo.org>
   net-tools-1.60_p20071202044231-r1.ebuild:
