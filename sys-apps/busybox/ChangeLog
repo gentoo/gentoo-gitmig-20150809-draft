@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.195 2008/08/21 16:29:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.196 2008/09/21 07:05:45 vapier Exp $
+
+  21 Sep 2008; Mike Frysinger <vapier@gentoo.org> busybox-1.11.1.ebuild,
+  busybox-1.12.0.ebuild:
+  Avoid running dodoc on dirs #234096 by Doug Goldstein.
 
 *busybox-1.12.0 (21 Aug 2008)
 

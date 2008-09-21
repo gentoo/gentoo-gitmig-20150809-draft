@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.12.0.ebuild,v 1.1 2008/08/21 16:29:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.12.0.ebuild,v 1.2 2008/09/21 07:05:45 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -208,7 +208,7 @@ src_install() {
 
 	cd bootfloppy || die
 	docinto bootfloppy
-	dodoc * etc/* etc/init.d/* 2>/dev/null
+	dodoc $(find . -type f)
 }
 
 pkg_preinst() {
