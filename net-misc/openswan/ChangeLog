@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.52 2008/09/17 20:57:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.53 2008/09/21 12:42:31 mrness Exp $
+
+*openswan-2.6.16 (21 Sep 2008)
+
+  21 Sep 2008; Alin Năstac <mrness@gentoo.org>
+  +files/openswan-2.6.16-gentoo.patch,
+  +files/openswan-2.6.16-qa-fixes.patch,
+  +files/openswan-2.6.16-refine-connection.patch, +files/ipsec-initd,
+  metadata.xml, +openswan-2.6.16.ebuild:
+  Version bump to latest 2.6 version (#237132).
 
   17 Sep 2008; Markus Meier <maekke@gentoo.org> openswan-2.4.13.ebuild:
   amd64/x86 stable, bug #237603

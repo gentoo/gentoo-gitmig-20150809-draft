@@ -12,7 +12,12 @@ implementation of IPsec for the Linux operating system. Is it a code fork
 of the FreeS/WAN project, started by a few of the developers who were 
 growing frustrated with the politics surrounding the FreeS/WAN project.</longdescription>
   <use>
-    <flag name="extra-algorithms">Include additional algorithms such as Blowfish, Twofish and Serpent</flag>
-    <flag name="weak-algorithms">Include weak algorithms such as DH1 and 1DES</flag>
+    <flag name="curl">Include curl support (used for fetching CRLs)</flag>
+    <flag name="ldap">Include LDAP support (used for fetching CRLs)</flag>
+    <flag name="extra-algorithms">Include additional strong algorithms
+    (Blowfish, Twofish, Serpent and SHA2)</flag>
+    <flag name="weak-algorithms">Include weak algorithms (DH1)</flag>
+    <flag name="nocrypto-algorithms">Include algorithms that don't even encrypt
+    (1DES)</flag>
   </use>
 </pkgmetadata>
