@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.55 2008/05/29 18:25:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.56 2008/09/21 17:05:14 angelos Exp $
+
+  21 Sep 2008; Christoph Mende <angelos@gentoo.org> -exo-0.3.2.ebuild:
+  Removed old
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> exo-0.3.2.ebuild,
   exo-0.3.4.ebuild:

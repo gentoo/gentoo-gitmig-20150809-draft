@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.9 2008/08/22 21:11:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.10 2008/09/21 17:00:22 angelos Exp $
+
+  21 Sep 2008; Christoph Mende <angelos@gentoo.org> -xfce4-mpc-0.3.2.ebuild:
+  Removed old
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> xfce4-mpc-0.3.3.ebuild:
   x86 stable, bug #235407
