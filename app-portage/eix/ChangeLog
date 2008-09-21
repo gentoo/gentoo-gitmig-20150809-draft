@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.237 2008/09/21 13:36:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.238 2008/09/21 14:08:38 loki_val Exp $
+
+*eix-0.13.3-r1 (21 Sep 2008)
+
+  21 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/eix-0.13.3-numeric-compare.patch, +eix-0.13.3-r1.ebuild:
+  Add 0.13.3-r1 for fast-track stabilization
 
 *eix-0.13.5 (21 Sep 2008)
 
