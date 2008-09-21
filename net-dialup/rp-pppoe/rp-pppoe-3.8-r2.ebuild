@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8-r2.ebuild,v 1.11 2008/08/22 21:45:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8-r2.ebuild,v 1.12 2008/09/21 06:32:33 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ SRC_URI="http://www.roaringpenguin.com/penguin/pppoe/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 sh sparc x86"
 IUSE="X"
 
 RDEPEND="net-dialup/ppp
