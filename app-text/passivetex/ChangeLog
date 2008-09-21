@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.18 2008/09/04 20:34:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.19 2008/09/21 13:09:58 ranger Exp $
+
+  21 Sep 2008; Brent Baude <ranger@gentoo.org> passivetex-1.25.ebuild:
+  Marking passivetex-1.25 ~ppc64 for bug 237202
 
   04 Sep 2008; Alexis Ballier <aballier@gentoo.org> passivetex-1.25.ebuild:
   keyword ~x86-fbsd
