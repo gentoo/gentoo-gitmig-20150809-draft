@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.9 2008/09/16 20:38:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.10 2008/09/21 15:50:16 nixnut Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -37,7 +37,7 @@ SRC_URI="mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~x86 ~x86-fbsd"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )
 	kernel_FreeBSD? ( sys-freebsd/freebsd-sources

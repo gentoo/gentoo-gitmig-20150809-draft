@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.63 2008/09/16 20:38:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.64 2008/09/21 15:50:16 nixnut Exp $
+
+  21 Sep 2008; nixnut <nixnut@gentoo.org> x11-drm-20070314.ebuild:
+  Stable on ppc wrt bug 237876
 
   16 Sep 2008; Bryan D. Stine <battousai@gentoo.org>
   x11-drm-20070314.ebuild, x11-drm-20071019.ebuild:
