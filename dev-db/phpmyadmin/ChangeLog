@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.326 2008/09/21 13:42:35 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.327 2008/09/21 15:58:44 ranger Exp $
+
+  21 Sep 2008; Brent Baude <ranger@gentoo.org> phpmyadmin-2.11.9.1.ebuild:
+  Marking phpmyadmin-2.11.9.1 ppc for bug 237781
 
 *phpmyadmin-2.11.9.1 (21 Sep 2008)
 
