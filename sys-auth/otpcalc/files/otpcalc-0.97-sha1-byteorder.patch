@@ -7,7 +7,7 @@
 -	memcpy(message, digest, 8);
 +	/* Fix byte order, as required by RFC 2289 Appendix A */
 +	for (i = 0; i < 8; i++)
-+		 message[i] = digest[(i&4)+3-(i&3)];
++		 message[i] = digest[i^3];
  
  }
 --- otpCalc-0.97-orig/sha1.h	2001-06-11 10:13:15.000000000 +0200
