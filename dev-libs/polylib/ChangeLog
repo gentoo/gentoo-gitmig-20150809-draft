@@ -1,0 +1,10 @@
+# ChangeLog for 
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/polylib/ChangeLog,v 1.1 2008/09/21 08:46:58 vapier Exp $
+
+*polylib-9999 (21 Sep 2008)
+
+  21 Sep 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/polylib-9999-headers.patch, +polylib-9999.ebuild:
+  Initial ebuild based on work from Zhang Le for gcc-4.4+.
+
