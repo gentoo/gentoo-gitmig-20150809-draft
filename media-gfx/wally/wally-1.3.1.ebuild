@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-1.3.1.ebuild,v 1.1 2008/09/21 02:31:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-1.3.1.ebuild,v 1.2 2008/09/21 02:53:02 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -27,7 +27,6 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	insinto /usr/share/pixmaps
-	newins res/images/idle.png wally.png
-	make_desktop_entry wally Wally wally.png "Graphics;Qt;"
+	newicon res/images/idle.png wally.png
+	make_desktop_entry wally Wally wally "Graphics;Qt"
 }
