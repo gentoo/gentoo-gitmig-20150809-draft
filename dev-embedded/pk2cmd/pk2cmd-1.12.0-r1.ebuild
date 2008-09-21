@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/pk2cmd-1.12.0.ebuild,v 1.1 2008/09/19 06:58:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/pk2cmd-1.12.0-r1.ebuild,v 1.1 2008/09/21 03:30:10 josejx Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An application for working with the Microchip PicKit2 PIC programmer"
 HOMEPAGE="http://www.microchip.com/pickit2"
@@ -21,6 +21,9 @@ S="${WORKDIR}/${PN}v${PV}LinuxMacSource"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Patch adds /usr/share/pk2 to the default search for the device file
+	epatch "${FILESDIR}/${PN}-add-share-dir-for-dev-file.patch"
 
 	# Fix up the Makefile
 	sed -i 's:#TARGET=linux:TARGET=linux:' Makefile

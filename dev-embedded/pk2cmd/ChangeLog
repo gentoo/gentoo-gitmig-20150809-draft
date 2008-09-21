@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/pk2cmd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.1 2008/09/19 06:58:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.2 2008/09/21 03:30:10 josejx Exp $
+
+*pk2cmd-1.12.0-r1 (21 Sep 2008)
+
+  21 Sep 2008; Joseph Jezak <josejx@gentoo.org>
+  +files/pk2cmd-add-share-dir-for-dev-file.patch, -pk2cmd-1.12.0.ebuild,
+  +pk2cmd-1.12.0-r1.ebuild:
+  Added patch to allow pk2cmd to find the device file without changing the path.
 
 *pk2cmd-1.12.0 (19 Sep 2008)
 
