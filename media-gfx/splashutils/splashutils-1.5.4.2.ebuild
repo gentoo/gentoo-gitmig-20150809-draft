@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.4 2008/09/21 07:16:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.5 2008/09/21 16:32:34 spock Exp $
 
 EAPI="1"
 
@@ -182,7 +182,7 @@ pkg_postinst() {
 	fi
 
 	if ! test -f /proc/cmdline ||
-		! egrep -q '(console|CONSOLE)=(tty1|/dev/tty1)' /proc/cmdline ; then
+		! egrep -q '(console=tty1|CONSOLE=/dev/tty1)' /proc/cmdline ; then
 		elog "It is required that you add 'console=tty1' to your kernel"
 		elog "command line parameters."
 		elog ""

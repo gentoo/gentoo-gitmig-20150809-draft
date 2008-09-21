@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.145 2008/09/21 07:16:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.146 2008/09/21 16:32:34 spock Exp $
+
+  21 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.2.ebuild:
+  Fix console=tty1 check to not allow invalid kernel command line options.
 
   21 Sep 2008; <solar@gentoo.org> splashutils-1.5.4.2.ebuild:
   - Make cross compile aware. Avoid calls to built_with_use when doing x-compiles
