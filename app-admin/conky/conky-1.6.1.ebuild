@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.8 2008/09/21 06:17:35 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.9 2008/09/21 06:25:55 omp Exp $
 
 inherit eutils
 # used for epause
@@ -58,6 +58,13 @@ pkg_setup() {
 			die "media-sound/audacious needs USE=dbus"
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-stdio.patch"
 }
 
 src_compile() {
