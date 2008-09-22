@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.6 2008/04/01 21:06:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.7 2008/09/22 20:05:51 aballier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs autotools
 
@@ -104,6 +104,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-ffmpeg.patch"
 	epatch "${FILESDIR}/${P}-ffmpegheaders.patch"
+	epatch "${FILESDIR}/${P}-lavc.patch"
 
 	eautoreconf
 }
