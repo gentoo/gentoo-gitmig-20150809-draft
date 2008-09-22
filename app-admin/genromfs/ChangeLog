@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/genromfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.12 2008/09/22 19:10:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.13 2008/09/22 19:14:37 vapier Exp $
+
+  22 Sep 2008; Mike Frysinger <vapier@gentoo.org> genromfs-0.5.2.ebuild:
+  Add ppc64 love.
 
 *genromfs-0.5.2 (22 Sep 2008)
 
