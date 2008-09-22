@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.13 2008/08/06 23:27:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.14 2008/09/22 20:32:41 aballier Exp $
+
+  22 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/dvbcut-0.5.4-lavc.patch, dvbcut-0.5.4-r1.ebuild:
+  Fix build with latest ffmpeg
 
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/dvbcut-0.5.4-gcc43.patch, dvbcut-0.5.4-r1.ebuild:

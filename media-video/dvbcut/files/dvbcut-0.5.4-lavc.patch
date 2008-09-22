@@ -1,0 +1,42 @@
+Index: dvbcut-0.5.4/src/avframe.cpp
+===================================================================
+--- dvbcut-0.5.4.orig/src/avframe.cpp
++++ dvbcut-0.5.4/src/avframe.cpp
+@@ -39,7 +39,7 @@ avframe::avframe(AVFrame *src, AVCodecCo
+                  (u_int8_t*)tobefreed,
+                  ctx->pix_fmt,ctx->width,ctx->height);
+ 
+-  img_copy((AVPicture *)f, (const AVPicture *) src,
++  av_picture_copy((AVPicture *)f, (const AVPicture *) src,
+            ctx->pix_fmt, ctx->width, ctx->height);
+ 
+   f->pict_type              = src->pict_type;
+Index: dvbcut-0.5.4/src/mpgfile.cpp
+===================================================================
+--- dvbcut-0.5.4.orig/src/mpgfile.cpp
++++ dvbcut-0.5.4/src/mpgfile.cpp
+@@ -250,7 +250,7 @@ void mpgfile::initaudiocodeccontext(int 
+ 
+   int16_t samples[6*1536];	// must be enough for 6 AC-3 channels --mr
+   int frame_size=sizeof(samples);
+-  avcodec_decode_audio(S->avcc,samples,&frame_size,(uint8_t*) sd->getdata(),sd->inbytes());
++  avcodec_decode_audio2(S->avcc,samples,&frame_size,(uint8_t*) sd->getdata(),sd->inbytes());
+   avcodec_close(S->avcc);
+   }
+ 
+Index: dvbcut-0.5.4/src/playaudio.cpp
+===================================================================
+--- dvbcut-0.5.4.orig/src/playaudio.cpp
++++ dvbcut-0.5.4/src/playaudio.cpp
+@@ -42,9 +42,9 @@ void playaudio(const void *data, uint32_
+ 
+   while (len>0) {
+     int16_t samples[MIN_BUFFER_SAMPLES > avcc->frame_size ? MIN_BUFFER_SAMPLES : avcc->frame_size ];
+-    int frame_size;
++    int frame_size = AVCODEC_MAX_AUDIO_FRAME_SIZE;;
+ 
+-    int bytesDecoded=avcodec_decode_audio(avcc,samples,&frame_size,(uint8_t*)d,len);
++    int bytesDecoded=avcodec_decode_audio2(avcc,samples,&frame_size,(uint8_t*)d,len);
+ 
+     if (bytesDecoded<0) {
+       fprintf(stderr,"avcodec_decode_audio returned %d\n",bytesDecoded);
