@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.103 2008/09/21 16:05:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.104 2008/09/22 04:25:48 jer Exp $
+
+  22 Sep 2008; Jeroen Roovers <jer@gentoo.org>
+  enlightenment-0.16.8.14.ebuild:
+  Stable for HPPA (bug #238213).
 
   21 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   enlightenment-0.16.8.14.ebuild:
