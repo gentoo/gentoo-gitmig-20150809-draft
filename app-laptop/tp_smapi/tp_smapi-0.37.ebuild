@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.37.ebuild,v 1.2 2008/03/31 08:34:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.37.ebuild,v 1.3 2008/09/22 20:20:25 hanno Exp $
 
 inherit linux-mod linux-info
 
@@ -47,6 +47,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/thinkpad_ec_semaphore.patch"
 
 	# Remove usage of `sudo` in Makefile.
 	sed -i 's,sudo ,,' Makefile
