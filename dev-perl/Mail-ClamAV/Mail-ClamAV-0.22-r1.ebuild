@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.22-r1.ebuild,v 1.3 2008/09/21 12:49:27 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.22-r1.ebuild,v 1.4 2008/09/22 09:03:55 armin76 Exp $
 
 MODULE_AUTHOR=SABECK
 inherit perl-module eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Perl extension for the clamav virus scanner."
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 sparc x86"
+KEYWORDS="amd64 ia64 sparc x86"
 IUSE=""
 
 DEPEND=">=app-antivirus/clamav-0.94
