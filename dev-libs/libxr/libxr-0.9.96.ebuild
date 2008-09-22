@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/libxr-0.9.96.ebuild,v 1.3 2008/09/22 10:04:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/libxr-0.9.96.ebuild,v 1.4 2008/09/22 10:31:12 flameeyes Exp $
 
 DESCRIPTION="Cross-platform XML-RPC client/server library written in C"
 HOMEPAGE="http://oss.zonio.net/libxr.htm"
@@ -8,7 +8,7 @@ SRC_URI="http://oss.zonio.net/releases/libxr/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 # IUSE="json"
 
