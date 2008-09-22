@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.34 2008/09/18 08:28:35 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.35 2008/09/22 07:17:11 calchan Exp $
+
+  22 Sep 2008; Denis Dupeyron <calchan@gentoo.org>
+  kicad-20080914.1262.ebuild:
+  Fixed cmake dependency, thanks to Paul de Vries (bug #238175).
 
 *kicad-20080914.1262 (18 Sep 2008)
 

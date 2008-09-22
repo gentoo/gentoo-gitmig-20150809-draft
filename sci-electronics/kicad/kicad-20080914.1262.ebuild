@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20080914.1262.ebuild,v 1.1 2008/09/18 08:28:35 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20080914.1262.ebuild,v 1.2 2008/09/22 07:17:11 calchan Exp $
 
 inherit versionator wxwidgets cmake-utils
 
@@ -18,11 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc debug examples minimal python"
 
-DEPEND="=x11-libs/wxGTK-2.8*
-	dev-libs/boost
+RDEPEND="sys-libs/zlib
+	=x11-libs/wxGTK-2.8*
 	python? ( dev-lang/python )"
-RDEPEND="${DEPEND}
-	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	dev-libs/boost
+	>=dev-util/cmake-2.6.0"
 
 S="${WORKDIR}/${PN}"
 
