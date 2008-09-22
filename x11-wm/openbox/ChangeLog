@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.167 2008/07/17 12:03:29 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.168 2008/09/22 13:13:18 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Change herd from commonbox to desktop-wm.
 
   17 Jul 2008; David Shakaryan <omp@gentoo.org> openbox-3.4.7.2.ebuild:
   Better built_with_use expression; thanks to Mart Raudsepp. (bug #221819)
