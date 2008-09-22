@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc1.ebuild,v 1.4 2008/09/20 17:49:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc1.ebuild,v 1.5 2008/09/22 07:02:00 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
+EAPI="1"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
 
@@ -139,7 +140,7 @@ DEPEND="${COMMON_DEPEND}
 	pam? ( sys-libs/pam )
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
-	nsplugin? ( || ( =net-libs/xulrunner-1.8 =net-libs/xulrunner-1.9 =www-client/seamonkey-1* )
+	nsplugin? ( || ( net-libs/xulrunner:1.8 net-libs/xulrunner:1.9 =www-client/seamonkey-1* )
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
