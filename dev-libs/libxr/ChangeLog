@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.2 2008/09/22 09:16:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.3 2008/09/22 10:04:29 flameeyes Exp $
+
+  22 Sep 2008; Diego Pettenò <flameeyes@gentoo.org> libxr-0.9.96.ebuild:
+  Add missing OpenSSL runtime dependency.
 
   22 Sep 2008; Diego Pettenò <flameeyes@gentoo.org> libxr-0.9.96.ebuild:
   Add missing pkgconfig dependency.
