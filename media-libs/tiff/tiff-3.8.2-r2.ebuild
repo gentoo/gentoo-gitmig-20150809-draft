@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r2.ebuild,v 1.10 2008/09/19 22:46:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r2.ebuild,v 1.11 2008/09/22 16:47:45 maekke Exp $
 
 inherit eutils libtool
 
@@ -21,6 +21,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i -e 's:/home/sarnold::' "${WORKDIR}"/${P}-tiff2pdf.patch #238248
 	epatch "${WORKDIR}"/${P}-tiff2pdf.patch || die "epatch tiff2pdf failed"
 	epatch "${FILESDIR}"/${P}-tiffsplit.patch || die "epatch tiffsplit failed"
 	if use jbig; then
