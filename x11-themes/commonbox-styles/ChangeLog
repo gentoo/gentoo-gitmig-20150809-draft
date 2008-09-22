@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/commonbox-styles
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.29 2008/02/03 15:35:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.30 2008/09/22 13:09:57 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Change herd from commonbox to desktop-wm.
 
   03 Feb 2008; Fabian Groffen <grobian@gentoo.org>
   commonbox-styles-0.6.ebuild:
