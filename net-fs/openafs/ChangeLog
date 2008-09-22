@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.148 2008/05/04 13:41:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.149 2008/09/22 11:37:08 stefaan Exp $
+
+  22 Sep 2008; Stefaan De Roeck <stefaan@gentoo.org> openafs-1.4.7.ebuild:
+  Keyworded alpha
 
   04 May 2008; Markus Meier <maekke@gentoo.org>
   openafs-1.4.6_p20080222.ebuild:
