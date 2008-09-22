@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.7 2008/09/22 20:05:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.8 2008/09/22 20:08:31 aballier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs autotools
 
@@ -151,7 +151,7 @@ src_compile() {
 		--with-appdefaultsdir=${appdefaultsdir} \
 		|| die "Configuration failed."
 
-	emake BINDNOW_FLAGS="$(bindnow-flags)" || die "Compilation failed."
+	emake || die "Compilation failed."
 
 	# Build the extensions (i18n and theme libraries)
 	extension_iter extension_compile
