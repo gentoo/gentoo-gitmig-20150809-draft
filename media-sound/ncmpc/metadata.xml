@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sound</herd>
-  <use>
-    <flag name="clock-screen">Enable clock screen</flag>
-    <flag name="key-screen">Enable key editor screen</flag>
-    <flag name="mouse">Enable curses getmouse support</flag>
-    <flag name="raw-mode">raw terminal mode</flag>
-    <flag name="search-screen">Enable search screen (EXPERIMENTAL)</flag>
-  </use>
+	<herd>sound</herd>
+	<maintainer>
+		<email>omp@gentoo.org</email>
+		<name>David Shakaryan</name>
+	</maintainer>
+	<use>
+		<flag name="clock-screen">Enable clock screen</flag>
+		<flag name="key-screen">Enable key editor screen</flag>
+		<flag name="mouse">Enable curses getmouse support</flag>
+		<flag name="raw-mode">raw terminal mode</flag>
+		<flag name="search-screen">Enable search screen (EXPERIMENTAL)</flag>
+	</use>
 </pkgmetadata>

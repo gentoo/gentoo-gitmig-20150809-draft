@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.31 2008/05/30 07:06:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.32 2008/09/22 13:57:13 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Add myself as the maintainer of media-sound/ncmpc.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
