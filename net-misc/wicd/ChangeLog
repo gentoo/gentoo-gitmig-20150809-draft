@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.8 2008/09/14 19:39:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.9 2008/09/22 15:50:10 darkside Exp $
+
+  22 Sep 2008; Jeremy Olexa <darkside@gentoo.org> files/wicd-init.d:
+  Fix bashism in init file, bug #238278. Thanks Davide Pesavento for fix.
 
   14 Sep 2008; Jeremy Olexa <darkside@gentoo.org>
   +files/wicd-1.5.2-docs.patch, -files/wicd-1.5.2-remove-docs.patch,
