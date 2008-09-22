@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.7 2008/08/27 17:00:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.8 2008/09/22 15:45:49 darkside Exp $
 
 inherit eutils toolchain-funcs pam
 
@@ -78,8 +78,14 @@ pkg_postinst() {
 	elog "in /etc/conf.d/xdm and run \"rc-update add xdm default\"."
 	elog "By default, ${PN} will use default XSESSION value set in /etc/rc.conf."
 	elog
-	elog "If you want to use .xinitrc in the user's home directory for session management"
-	elog "instead, see README and xinitrc.sample in /usr/share/doc/${PF}."
-	elog "and change your login_cmd in /etc/slim.conf accordingly."
+	elog "If you want to use .xinitrc in the user's home directory for session"
+	elog "management instead, see README and xinitrc.sample in"
+	elog "/usr/share/doc/${PF} and change your login_cmd in /etc/slim.conf"
+	elog "accordingly."
 	elog
+	if ! use pam; then
+		elog "You have merged ${PN} without USE=pam, this will cause ${PN} to fall back to"
+		elog "the console when restarting your window manager. If this is not"
+		elog "desired, then please remerge ${PN} with USE=pam"
+	fi
 }
