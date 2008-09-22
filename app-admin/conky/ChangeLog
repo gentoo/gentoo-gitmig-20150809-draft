@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.98 2008/09/21 16:03:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.99 2008/09/22 00:38:10 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> Manifest:
+  Remove older version; 1.6.1 fixes compile error. (bug #237868)
 
   21 Sep 2008; Brent Baude <ranger@gentoo.org> conky-1.6.1.ebuild:
   Marking conky-1.6.1 ppc64 for bug 237868
