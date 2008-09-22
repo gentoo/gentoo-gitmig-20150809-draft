@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.14 2008/08/12 00:26:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.15 2008/09/22 13:28:43 markusle Exp $
+
+  22 Sep 2008; Markus Dittrich <markusle@gentoo.org> avogadro-0.8.1.ebuild:
+  Changed Qt dependency to version 4.3.4 or newer (fixes bug #237543).
 
   12 Aug 2008; Ben de Groot <yngwin@gentoo.org> avogadro-0.6.1.ebuild,
   avogadro-0.8.0.ebuild, avogadro-0.8.1.ebuild:

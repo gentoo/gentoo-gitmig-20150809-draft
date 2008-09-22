@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.1.ebuild,v 1.2 2008/08/12 00:26:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.8.1.ebuild,v 1.3 2008/09/22 13:28:43 markusle Exp $
 
 EAPI=1
 RESTRICT="mirror"
@@ -19,7 +19,8 @@ IUSE="python"
 DEPEND=">=dev-util/cmake-2.4.8
 	>=dev-cpp/eigen-1.0.5
 	${RDEPEND}"
-RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3* )
+RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
+				>=x11-libs/qt-4.3.4 )
 	>=sci-chemistry/openbabel-2.2.0
 	python? ( >=dev-lang/python-2.5 >=dev-libs/boost-1.34 )"
 
