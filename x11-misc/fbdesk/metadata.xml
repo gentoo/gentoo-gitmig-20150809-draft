@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-wm</herd>
-  <use>
-    <flag name="imlib2">Add support for imlib2 (pixmap themes)</flag>
-  </use>
 </pkgmetadata>
