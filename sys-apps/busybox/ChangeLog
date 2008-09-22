@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.200 2008/09/21 16:09:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.201 2008/09/22 03:39:13 jer Exp $
+
+  22 Sep 2008; Jeroen Roovers <jer@gentoo.org> busybox-1.11.1.ebuild:
+  Stable for HPPA (bug #238249).
 
   21 Sep 2008; Raúl Porcel <armin76@gentoo.org> busybox-1.11.1.ebuild:
   alpha/ia64/sparc stable wrt #238249
