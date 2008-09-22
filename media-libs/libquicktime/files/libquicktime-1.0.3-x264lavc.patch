@@ -182,7 +182,7 @@ diff -u -B -r1.23 -r1.24
    INTPARAM("x264_i_bframe", codec->params.i_bframe);
 -  INTPARAM("x264_b_bframe_adaptive", codec->params.b_bframe_adaptive);
 +#if X264_BUILD < 63
-+  INTPARAM("x264_b_bframe_adaptive", codec->params.b_bframe_adaptives);
++  INTPARAM("x264_b_bframe_adaptive", codec->params.b_bframe_adaptive);
 +#else
 +  ENUMPARAM("x264_i_bframe_adaptive", codec->params.i_bframe_adaptive, bframe_adaptives);
 +#endif
