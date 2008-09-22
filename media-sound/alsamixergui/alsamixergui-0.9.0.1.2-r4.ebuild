@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.12 2008/02/29 19:57:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.13 2008/09/22 18:51:08 aballier Exp $
 
-IUSE=""
 
-inherit eutils
+inherit eutils autotools
 
 NATIVE_VER=0.9.0rc1-2
 S=${WORKDIR}/${PN}-${NATIVE_VER}
@@ -16,6 +15,7 @@ SRC_URI="ftp://www.iua.upf.es/pub/mdeboer/projects/alsamixergui/${PN}-${NATIVE_V
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1
@@ -23,10 +23,11 @@ DEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gentoo.diff
-	epatch ${FILESDIR}/${P}-gcc34.patch
-	epatch ${FILESDIR}/segfault-on-exit.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
+	epatch "${FILESDIR}/segfault-on-exit.patch"
+	epatch "${FILESDIR}/${P}-fltk-1.1.patch"
+	eautoreconf
 }
 
 src_compile() {

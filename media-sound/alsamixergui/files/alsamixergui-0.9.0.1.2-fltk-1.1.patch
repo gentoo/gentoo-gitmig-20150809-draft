@@ -1,0 +1,13 @@
+Index: alsamixergui-0.9.0rc1-2/configure.in
+===================================================================
+--- alsamixergui-0.9.0rc1-2.orig/configure.in
++++ alsamixergui-0.9.0rc1-2/configure.in
+@@ -11,7 +11,7 @@ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ 
+ dnl Checks for libraries.
+-AC_CHECK_LIB(fltk,numericsort,,AC_MSG_ERROR("missing fltk"))
++AC_CHECK_LIB(fltk,fl_numericsort,,AC_MSG_ERROR("missing fltk"))
+ AM_PATH_ALSA(0.9.0)
+ 
+ dnl Checks for header files.

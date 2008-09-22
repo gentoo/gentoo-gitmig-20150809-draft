@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsamixergui
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.27 2008/02/29 19:57:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.28 2008/09/22 18:51:08 aballier Exp $
+
+  22 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/alsamixergui-0.9.0.1.2-fltk-1.1.patch, -files/fltk-1.1+gcc3.diff,
+  -files/gentoo.diff, files/segfault-on-exit.patch,
+  alsamixergui-0.9.0.1.2-r4.ebuild:
+  Variable quoting, fix broken patch for bug #238397, remove no longer used
+  patch (bug #226759), properly eautoreconf instead of patching configure
+  directly.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:
