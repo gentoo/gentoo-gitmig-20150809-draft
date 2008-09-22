@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080318.ebuild,v 1.16 2008/07/04 19:43:58 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080318.ebuild,v 1.17 2008/09/22 15:44:32 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.flameeyes.eu/gentoo-distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp"
 RESTRICT="binchecks"
 
