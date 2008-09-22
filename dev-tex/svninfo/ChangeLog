@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 2005-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.19 2008/09/21 13:06:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.20 2008/09/22 16:09:04 fmccor Exp $
+
+  22 Sep 2008; Ferris McCormick <fmccor@gentoo.org> svninfo-0.7.3-r1.ebuild:
+  Add ~sparc keyword, part of Bug #237202.
 
   21 Sep 2008; Brent Baude <ranger@gentoo.org> svninfo-0.7.3-r1.ebuild:
   Marking svninfo-0.7.3-r1 ~ppc64 for bug 237202
