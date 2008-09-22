@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/ChangeLog,v 1.13 2008/09/17 16:26:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/ChangeLog,v 1.14 2008/09/22 12:36:25 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Change herd from commonbox to desktop-wm.
 
   17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
   +files/bbcd-0.3.1-gcc4.3.patch, -bbcd-0.3.1.ebuild, bbcd-0.3.1-r1.ebuild:
