@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obmenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu/ChangeLog,v 1.6 2008/03/27 16:49:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu/ChangeLog,v 1.7 2008/09/22 13:07:05 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Change herd from commonbox to desktop-wm.
 
   27 Mar 2008; Markus Rothe <corsair@gentoo.org> obmenu-1.0.ebuild:
   Stable on ppc/ppc64

@@ -5,5 +5,5 @@
 		<email>lack@gentoo.org</email>
 		<name>Jim Ramsay</name>
 	</maintainer>
-	<herd>commonbox</herd>
+	<herd>desktop-wm</herd>
 </pkgmetadata>
