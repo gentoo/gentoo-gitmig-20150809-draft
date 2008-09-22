@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbconf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.19 2007/09/30 15:15:28 ticho Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.20 2008/09/22 12:37:08 omp Exp $
+
+  22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Change herd from commonbox to desktop-wm.
 
   30 Sep 2007; Andrej Kacian <ticho@gentoo.org> bbconf-1.10.ebuild:
   Use econf to make sure all the right options are passed. Among other things,
