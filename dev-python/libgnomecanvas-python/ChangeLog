@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/libgnomecanvas-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.1 2008/08/24 07:30:52 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.2 2008/09/22 08:05:55 leio Exp $
+
+*libgnomecanvas-python-2.22.2 (22 Sep 2008)
+
+  22 Sep 2008; Mart Raudsepp <leio@gentoo.org>
+  +libgnomecanvas-python-2.22.2.ebuild:
+  Version bump for forwards compatibility with upcoming major
+  pygobject/pygtk versions (pygtk-codegen-2.0 move to pygobject-codegen-2.0)
 
 *libgnomecanvas-python-2.22.1 (24 Aug 2008)
 
