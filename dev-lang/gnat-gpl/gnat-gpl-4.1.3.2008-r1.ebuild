@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r1.ebuild,v 1.1 2008/08/19 11:53:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r1.ebuild,v 1.2 2008/09/23 14:25:16 george Exp $
 
 # NOTE: gnat-gpl-2007 and 2008 have "incompatible bugs"
 # so, we separate them in different slots
@@ -41,6 +41,10 @@ src_unpack() {
 	sed -i -e 's:(Last3 = "gnatgcc"):(Last3 = "gcc"):' "${S}"/gcc/ada/makegpr.adb
 	# reverting similar conversion in comment - line too long
 	sed -i -e 's:"gnatgcc":"gcc":' "${S}"/gcc/ada/osint.ads
+
+	# fixing some stupid misspelling issue
+	sed -i -e "s:the get some usefull:to get some useful:" \
+		"${GNATSOURCE}"/examples/options/README.testing
 }
 
 src_install() {
