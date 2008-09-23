@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1891 2008/09/23 15:28:06 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1892 2008/09/23 17:41:37 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Sep 2008; Ben de Groot <yngwin@gentoo.org> thirdpartymirrors:
+  Adding mplayer mirrors
 
   23 Sep 2008; Joe Peterson <lavajoe@gentoo.org> package.mask:
   Mask media-plugins/slimserver-alienbbc and media-sound/softsqueeze (depend
