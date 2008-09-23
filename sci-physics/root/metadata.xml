@@ -43,6 +43,17 @@
     distribution modeling, and the Universal Non-Uniform RANdom number
     generators (UNURAN) library.
   </flag>
+  <flag name="pythia6">
+    Builds the interface to Pythia-6 (<pkg>sci-physics/pythia</pkg>)
+    high energy physics generation events library.
+  </flag>
+  <flag name="pythia8">
+    Builds the interface to Pythia-8 (<pkg>sci-physics/pythia</pkg>)
+    high energy physics generation events library.
+  </flag>
+  <flag name="reflex">
+    Builds the reflection database for the C++ interpretor.
+  </flag>
   <flag name="xrootd">
     Build the xrootd low latency file server. For more on the eXtended Request
     Daemon (xrd) and associated software, please see
