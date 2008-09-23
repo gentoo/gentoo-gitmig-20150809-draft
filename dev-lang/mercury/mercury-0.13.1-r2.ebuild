@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r2.ebuild,v 1.1 2008/08/21 07:01:55 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r2.ebuild,v 1.2 2008/09/23 06:17:35 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libgrades.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
 	epatch "${FILESDIR}"/${P}-no-reconf.patch
+	epatch "${FILESDIR}"/${P}-rebuild-mslice.patch
 
 	if use test; then
 		epatch "${FILESDIR}"/${P}-tests-dir_test.patch
