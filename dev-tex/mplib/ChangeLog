@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mplib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.4 2008/09/21 13:10:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.5 2008/09/23 20:45:32 armin76 Exp $
+
+  23 Sep 2008; Raúl Porcel <armin76@gentoo.org> mplib-1.091.ebuild:
+  Add ~alpha/~ia64 wrt #237202
 
   21 Sep 2008; Brent Baude <ranger@gentoo.org> mplib-1.091.ebuild:
   Marking mplib-1.091 ~ppc64 for bug 237202
