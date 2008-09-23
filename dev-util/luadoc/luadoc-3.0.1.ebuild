@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/luadoc/luadoc-3.0.1.ebuild,v 1.3 2008/08/24 11:32:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/luadoc/luadoc-3.0.1.ebuild,v 1.4 2008/09/23 07:15:12 corsair Exp $
 
 inherit multilib
 DESCRIPTION="LuaDoc is a documentation tool for Lua source code"
@@ -9,7 +9,7 @@ SRC_URI="http://luaforge.net/frs/download.php/3185/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
