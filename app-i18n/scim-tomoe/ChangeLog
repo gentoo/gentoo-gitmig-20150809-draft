@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-tomoe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.9 2007/10/14 01:42:53 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.10 2008/09/23 16:08:11 matsuu Exp $
+
+*scim-tomoe-0.6.0-r1 (23 Sep 2008)
+
+  23 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/scim-tomoe-0.6.0-gcc43.patch, +scim-tomoe-0.6.0-r1.ebuild:
+  Fixed gcc-4.3 issue, bug #238381.
 
   14 Oct 2007; <matsuu@gentoo.org> -files/scim-tomoe-0.5.0-gentoo.patch,
   -scim-tomoe-0.4.0.ebuild, -scim-tomoe-0.5.0-r1.ebuild,
