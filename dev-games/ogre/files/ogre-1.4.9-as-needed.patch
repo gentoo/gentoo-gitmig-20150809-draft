@@ -5,7 +5,7 @@
  	* discouraged as this breaks many of the examples.             *
  	****************************************************************])
 -	)
-+	,-Xlinker --no-as-needed)
++	,-Xlinker --no-as-needed -lstdc++)
  fi
  
  AM_CONDITIONAL(BUILD_CGPLUGIN, test x$build_cg = xyes)

@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.3 2008/06/26 00:44:37 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.4 2008/09/23 18:30:00 mr_bones_ Exp $
 
-inherit eutils autotools flag-o-matic
+inherit multilib eutils autotools flag-o-matic
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
@@ -48,9 +48,13 @@ src_unpack() {
 	if use examples ; then
 		cp -r Samples install-examples || die
 		find install-examples \
-			'(' -name 'Makefile*' -o -name obj -o \
-			    -name bin -o -name '*.cbp' -o -name '*.vcproj*' ')' \
+			'(' -name .keepme -o -name '*.cbp' -o -name '*.vcproj*' ')' \
 			-print0 | xargs -0 rm -rf
+		find install-examples -type d -print0 | xargs -0 rmdir 2> /dev/null
+		sed -i \
+			-e "s:/usr/local/lib/OGRE:/usr/$(get_libdir)/OGRE:" \
+			$(grep -rl /usr/local/lib/OGRE install-examples) \
+			|| die "sed failed"
 	fi
 	sed -i -e '/CPPUNIT/d' configure.in || die "sed failed"
 	epatch "${FILESDIR}"/${P}-*.patch
@@ -59,7 +63,7 @@ src_unpack() {
 
 src_compile() {
 	strip-flags
-	econf \
+		econf \
 		--disable-dependency-tracking \
 		--disable-freeimage \
 		--disable-ogre-demos \
