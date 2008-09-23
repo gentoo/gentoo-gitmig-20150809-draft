@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.15 2008/09/06 12:43:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.16 2008/09/23 07:42:29 corsair Exp $
+
+  23 Sep 2008; Markus Rothe <corsair@gentoo.org> newsbeuter-1.2.ebuild:
+  Added ~ppc
 
   06 Sep 2008; Markus Meier <maekke@gentoo.org> newsbeuter-1.2.ebuild:
   x86 stable, bug #236506
