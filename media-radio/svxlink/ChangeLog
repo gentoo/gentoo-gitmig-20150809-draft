@@ -1,6 +1,15 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.4 2008/06/11 22:02:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.5 2008/09/23 03:48:53 darkside Exp $
+
+*svxlink-080730 (23 Sep 2008)
+*svxlink-080102-r1 (23 Sep 2008)
+
+  23 Sep 2008; Jeremy Olexa <darkside@gentoo.org> -files/kde.patch,
+  +files/svxlink-fix-Makefile.diff, -svxlink-070415.ebuild,
+  -svxlink-080102.ebuild, +svxlink-080102-r1.ebuild, +svxlink-080730.ebuild:
+  (non-maintainer commit) Fix compilation issues, version bump, and remove
+  old. Thanks to Thomas Beierlein for fixing in bug #234090
 
   11 Jun 2008; Jeremy Olexa <darkside@gentoo.org> svxlink-080102.ebuild:
   Fix SRC_URI, thanks to Tobias Blomberg for reporting, bug #216451

@@ -1,0 +1,18 @@
+# fixes the problem with not building '.config' fiel if you have an '.config'
+# in the filesystem root '/' (see bug 234090)
+
+--- Makefile.orig	2007-08-23 23:43:28.000000000 +0200
++++ Makefile	2008-08-12 21:53:59.000000000 +0200
+@@ -255,6 +255,12 @@
+ 	fi
+ endif
+ 
++#
++# Create the .config file if it does not exist
++#
++$(ROOT)/.config:	$(ROOT)/create_config.sh
++	echo -e --- Creating $(BOLD)$@$(NBOLD)...
++	$(ROOT)/create_config.sh $@
+ 
+ #
+ # Create a cache file containing the relative path to the project root
