@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.6.ebuild,v 1.1 2008/04/21 16:38:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.6.ebuild,v 1.2 2008/09/23 17:07:26 matsuu Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="gtk kde nls"
 
-DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
+DEPEND=">=app-i18n/scim-1.2
 	|| ( >=app-i18n/anthy-5900 >=app-i18n/anthy-ss-5911 )
 	nls? ( virtual/libintl )
 	gtk? ( >=x11-libs/gtk+-2.4 )"
