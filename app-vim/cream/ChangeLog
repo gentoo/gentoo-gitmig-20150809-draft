@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.40 2008/09/20 14:12:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.41 2008/09/23 17:12:31 hawking Exp $
+
+*cream-0.41-r1 (23 Sep 2008)
+
+  23 Sep 2008; Ali Polatel <hawking@gentoo.org> -cream-0.41.ebuild,
+  +cream-0.41-r1.ebuild:
+  Revbump. Pass --servername CREAM to gvim, bug 238267.
 
 *cream-0.41 (20 Sep 2008)
 

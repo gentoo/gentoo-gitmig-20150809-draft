@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41.ebuild,v 1.1 2008/09/20 14:12:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41-r1.ebuild,v 1.1 2008/09/23 17:12:31 hawking Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -80,7 +80,7 @@ src_unpack() {
 	cd "${S}"
 	cat >cream <<EOF
 #!/bin/sh
-gvim --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
+gvim --servername CREAM --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
 EOF
 	sed -i "/let \$CREAM/s:VIMRUNTIME:VIM:" creamrc || die "sed #1 broke"
 
