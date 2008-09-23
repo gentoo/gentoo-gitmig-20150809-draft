@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.40 2008/09/18 01:03:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.41 2008/09/23 13:23:33 bicatali Exp $
+
+  23 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/grace-5.1.21-stdc99.patch, -files/grace.desktop,
+  -files/grace-helpviewer-gentoo.diff, -files/xmgrace.sh,
+  -grace-5.1.20.ebuild, -grace-5.1.21-r1.ebuild, -grace-5.1.22.ebuild:
+  Removed older versions
 
   18 Sep 2008; Brent Baude <ranger@gentoo.org> grace-5.1.22-r1.ebuild:
   stable ppc64, bug 235754
