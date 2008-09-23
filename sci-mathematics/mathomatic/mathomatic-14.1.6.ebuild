@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.0.5.ebuild,v 1.1 2008/06/19 12:04:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.1.6.ebuild,v 1.1 2008/09/23 13:21:13 bicatali Exp $
 
 inherit eutils
 
