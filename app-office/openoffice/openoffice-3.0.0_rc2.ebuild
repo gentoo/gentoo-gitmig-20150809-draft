@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc1.ebuild,v 1.5 2008/09/22 07:02:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc2.ebuild,v 1.1 2008/09/23 12:58:35 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -10,10 +10,10 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam"
 
-MY_PV="3.0.0.3.1"
+MY_PV="3.0.0.3.2"
 PATCHLEVEL="OOO300"
 SRC="OOo_${PV}_src"
-MST="ooo300-m5"
+MST="ooo300-m7"
 DEVPATH="http://download.go-oo.org/${PATCHLEVEL}/${MST}"
 S="${WORKDIR}/ooo"
 S_OLD="${WORKDIR}/ooo-build-${MY_PV}"
@@ -25,6 +25,7 @@ SRC_URI="${DEVPATH}-artwork.tar.bz2
 	${DEVPATH}-bootstrap.tar.bz2
 	${DEVPATH}-calc.tar.bz2
 	${DEVPATH}-components.tar.bz2
+	${DEVPATH}-extensions.tar.bz2
 	${DEVPATH}-filters.tar.bz2
 	${DEVPATH}-impress.tar.bz2
 	${DEVPATH}-l10n.tar.bz2
@@ -34,13 +35,12 @@ SRC_URI="${DEVPATH}-artwork.tar.bz2
 	${DEVPATH}-libs_gui.tar.bz2
 	${DEVPATH}-postprocess.tar.bz2
 	${DEVPATH}-sdk.tar.bz2
-	${DEVPATH}-swext.tar.bz2
 	${DEVPATH}-testing.tar.bz2
 	${DEVPATH}-ure.tar.bz2
 	${DEVPATH}-writer.tar.bz2
 	http://download.go-oo.org/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
 	odk? ( java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
-	http://download.go-oo.org/SRC680/extras-2.tar.bz2
+	http://download.go-oo.org/SRC680/extras-3.tar.bz2
 	http://download.go-oo.org/SRC680/biblio.tar.bz2
 	http://download.go-oo.org/SRC680/lp_solve_5.5.0.12_source.tar.gz
 	http://download.go-oo.org/DEV300/scsolver.2008-09-08.tar.bz2
@@ -244,7 +244,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/gentoo-${PV}.diff"
 	epatch "${FILESDIR}/ooo-env_log.diff"
-	cp -f "${FILESDIR}/lucene-no-java.diff" "${S}/patches/dev300/"
 
 	#Use flag checks
 	if use java ; then
@@ -252,18 +251,18 @@ src_unpack() {
 		echo "--with-jdk-home=$(java-config --jdk-home 2>/dev/null)" >> ${CONFFILE}
 		echo "--with-java-target-version=$(java-pkg_get-target)" >> ${CONFFILE}
 		echo "--with-system-beanshell" >> ${CONFFILE}
+		echo "--with-system-hsqldb" >> ${CONFFILE}
+		echo "--with-system-rhino" >> ${CONFFILE}
 		echo "--with-system-xalan" >> ${CONFFILE}
 		echo "--with-system-xerces" >> ${CONFFILE}
 		echo "--with-system-xml-apis" >> ${CONFFILE}
-		echo "--with-system-hsqldb" >> ${CONFFILE}
-		echo "--with-system-rhino" >> ${CONFFILE}
 		echo "--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)" >> ${CONFFILE}
+		echo "--with-hsqldb-jar=$(java-pkg_getjar hsqldb hsqldb.jar)" >> ${CONFFILE}
+		echo "--with-rhino-jar=$(java-pkg_getjar rhino-1.5 js.jar)" >> ${CONFFILE}
 		echo "--with-serializer-jar=$(java-pkg_getjar xalan-serializer serializer.jar)" >> ${CONFFILE}
 		echo "--with-xalan-jar=$(java-pkg_getjar xalan xalan.jar)" >> ${CONFFILE}
 		echo "--with-xerces-jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)" >> ${CONFFILE}
 		echo "--with-xml-apis-jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)" >> ${CONFFILE}
-		echo "--with-hsqldb-jar=$(java-pkg_getjar hsqldb hsqldb.jar)" >> ${CONFFILE}
-		echo "--with-rhino-jar=$(java-pkg_getjar rhino-1.5 js.jar)" >> ${CONFFILE}
 	fi
 
 	if use nsplugin ; then
