@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.3 2008/05/25 06:29:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.4 2008/09/23 07:19:03 corsair Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Xorgautoconfig (xac) generates configuration files for X.org"
 HOMEPAGE="http://dev.gentoo.org/~josejx/xac.html"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 SLOT="0"
 IUSE="livecd"
 DEPEND=">=dev-lang/python-2.3
