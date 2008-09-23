@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/termpkg
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/ChangeLog,v 1.1 2008/09/23 19:34:00 sbriesen Exp $
+
+*termpkg-3.3.9.1 (23 Sep 2008)
+
+  23 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/termpkg-3.3.9.1-gcc43.diff, +files/termpkg-3.3-ttydforfax.diff,
+  +files/termnetd.confd, +files/termnetd.initd, +files/ttyd.confd,
+  +files/ttyd.initd, +metadata.xml, +termpkg-3.3.9.1.ebuild:
+  initial commit.
+
