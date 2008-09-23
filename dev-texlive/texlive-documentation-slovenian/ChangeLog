@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-slovenian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.4 2008/09/22 16:34:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.5 2008/09/23 20:49:03 armin76 Exp $
+
+  23 Sep 2008; Raúl Porcel <armin76@gentoo.org>
+  texlive-documentation-slovenian-2008.ebuild:
+  Add ~alpha/~ia64 wrt #237202
 
   22 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
   texlive-documentation-slovenian-2008.ebuild:
