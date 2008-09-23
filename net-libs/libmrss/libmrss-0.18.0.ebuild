@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/libmrss-0.18.0.ebuild,v 1.2 2007/12/27 12:55:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/libmrss-0.18.0.ebuild,v 1.3 2008/09/23 07:26:44 corsair Exp $
 
 DESCRIPTION="A C-library for parsing and writing RSS 0.91/0.92/1.0/2.0 files or streams"
 HOMEPAGE="http://www2.autistici.org/bakunin/codes.php"
@@ -8,7 +8,7 @@ SRC_URI="http://www2.autistici.org/bakunin/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc examples"
 
 RDEPEND=">=net-libs/libnxml-0.18.0
