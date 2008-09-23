@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc2.ebuild,v 1.1 2008/09/23 12:58:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0_rc2.ebuild,v 1.2 2008/09/23 21:41:07 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -288,6 +288,9 @@ src_unpack() {
 	echo "`use_with ldap openldap`" >> ${CONFFILE}
 
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
+
+	# Use splash screen without Sun logo
+	echo "--with-intro-bitmaps=\\\"${S}/build/${MST}/ooo_custom_images/nologo/introabout/intro.bmp\\\"" >> ${CONFFILE}
 
 	eautoreconf
 

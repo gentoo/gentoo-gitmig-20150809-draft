@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.417 2008/09/23 12:58:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.418 2008/09/23 21:41:07 suka Exp $
+
+  23 Sep 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.0.0_rc2.ebuild:
+  Use splash screen without Sun logo
 
 *openoffice-3.0.0_rc2 (23 Sep 2008)
 
