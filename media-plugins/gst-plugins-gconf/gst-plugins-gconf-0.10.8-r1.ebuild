@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.8-r1.ebuild,v 1.5 2008/07/31 18:45:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.8-r1.ebuild,v 1.6 2008/09/23 21:47:44 jer Exp $
 
 GCONF_DEBUG=no
 
 inherit gnome2 gst-plugins-good gst-plugins10
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=gnome-base/gconf-2
