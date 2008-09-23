@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-6.240-r1.ebuild,v 1.1 2008/09/23 01:32:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-6.240-r1.ebuild,v 1.2 2008/09/23 15:27:54 mr_bones_ Exp $
 
 inherit toolchain-funcs multilib eutils
 
@@ -13,7 +13,6 @@ KEYWORDS="~x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
-
 
 src_unpack() {
 	unpack ${A}
