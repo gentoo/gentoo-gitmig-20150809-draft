@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.38 2008/09/12 15:50:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.39 2008/09/23 07:56:07 corsair Exp $
+
+  23 Sep 2008; Markus Rothe <corsair@gentoo.org> ppc32/use.mask,
+  ppc64/2006.0/multilib/use.mask, ppc64/2006.1/32bit-userland/use.mask,
+  ppc64/2006.1/64bit-userland-gcc4/use.mask,
+  ppc64/2006.1/64bit-userland/use.mask, ppc64/2006.1/multilib/use.mask,
+  ppc64/2007.0/32bit-userland/use.mask,
+  ppc64/2007.0/64bit-userland/use.mask:
+  Add video_cards_ast to use.mask
 
   12 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   ppc64/2006.1/64bit-userland/package.mask:
