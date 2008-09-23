@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/emirror
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.9 2007/07/15 08:46:40 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.10 2008/09/23 02:08:18 cla Exp $
+
+  23 Sep 2008; Dawid Węgliński <cla@gentoo.org> emirror-2.1.21.ebuild:
+  Keyword ~amd64, fix HOMEPAGE url; use econf and emake instead of ./configure
+  and make
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
