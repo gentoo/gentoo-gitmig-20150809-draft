@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9000 2008/09/23 04:42:20 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9001 2008/09/23 10:32:33 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -196,12 +196,6 @@ www-apps/bugport
 >=dev-tex/mh-20080903
 app-admin/eselect-pdftex
 app-admin/eselect-mpost
-
-# Sébastien Fabbro <bicatali@gentoo.org> (05 Sep 2008)
-# Masked for removal in 30 days. Now obsoleted and replaced
-# with eselect and pkg-config in all blas/lapack implementations
-sci-libs/blas-config
-sci-libs/lapack-config
 
 # Carsten Lohrke <carlo@gentoo.org> (05 Sep 2008)
 # Masked for removal. It's broken and abandoned.
@@ -513,12 +507,6 @@ media-sound/gogo
 # Rémi Cardona <remi@gentoo.org> (30 Aug 2008)
 # major file collisions, see bug #236124
 =media-libs/gst-plugins-good-0.10.9
-
-# Séastien Fabbro <bicatali@gentoo.org> (28 Aug 2008)
-# Masked for removal in 30 days.  Doesn't compile,
-# upstream dead, gtk-1, numarray and bugs (bug #236100).
->sci-libs/libscigraphica-2.1
->sci-visualization/scigraphica-2.1
 
 # Ricardo Mendoza <ricmm@gentoo.org> (28 Aug 2008)
 # Beta driver, masking corresponding packages
