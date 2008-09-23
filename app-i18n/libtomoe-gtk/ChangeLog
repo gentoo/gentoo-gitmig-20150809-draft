@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libtomoe-gtk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.9 2007/10/14 07:20:09 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.10 2008/09/23 16:35:42 matsuu Exp $
+
+  23 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> libtomoe-gtk-0.6.0.ebuild:
+  Fixed dependency on dev-util/gtk-doc, bug #221709.
 
   14 Oct 2007; <matsuu@gentoo.org> libtomoe-gtk-0.6.0.ebuild:
   Fixed dependency again, bug #194481.
