@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.2-r1.ebuild,v 1.7 2007/12/17 18:36:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.2-r1.ebuild,v 1.8 2008/09/24 15:43:07 angelos Exp $
+
+EAPI=1
 
 inherit eutils xfce44
 
@@ -10,7 +12,7 @@ xfce44
 DESCRIPTION="Collection of utils"
 HOMEPAGE="http://www.xfce.org/projects/xfce-utils"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="dbus debug"
+IUSE="dbus debug +lock"
 
 RDEPEND="x11-apps/xrdb
 	x11-libs/libX11
@@ -19,7 +21,10 @@ RDEPEND="x11-apps/xrdb
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	>=xfce-base/libxfce4mcs-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
-	dbus? ( dev-libs/dbus-glib )"
+	dbus? ( dev-libs/dbus-glib )
+	lock? ( || ( x11-misc/xscreensaver
+		gnome-extra/gnome-screensaver
+		x11-misc/xlockmore ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
