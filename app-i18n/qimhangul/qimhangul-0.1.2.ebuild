@@ -1,43 +1,42 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.2.ebuild,v 1.4 2008/07/27 19:48:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.1.2.ebuild,v 1.1 2008/09/24 15:31:20 matsuu Exp $
 
 EAPI=1
 
-inherit qt3 eutils
+inherit eutils qt3
 
 DESCRIPTION="Korean input method plugin for Qt immodules"
 HOMEPAGE="http://kldp.net/projects/qimhangul/"
-SRC_URI="http://kldp.net/frs/download.php/1800/${P}.tar.gz"
+SRC_URI="http://kldp.net/frs/download.php/4620/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt:3"
+RDEPEND="x11-libs/qt:3
+	app-i18n/libhangul"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
-	if [ ! -e "${QTDIR}"/plugins/inputmethods/libqimsw-none.so ] ; then
+	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
+		eerror "To support qt3 in this package is required to have"
+		eerror "=x11-libs/qt-3* compiled with immqt-bc(recommended) or immqt USE flag."
 		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc or immqt USE flag enabled."
 	fi
 }
 
 src_compile() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-}
-
-src_compile() {
 	"${QTDIR}"/bin/qmake -makefile || die "qmake failed"
-	emake -j1 || die "make failed."
+	emake || die "make failed."
 }
 
 src_install() {
-	make INSTALL_ROOT="${D}" install || die
+	emake INSTALL_ROOT="${D}" install || die
 
-	dodoc ChangeLog
+	dodoc AUTHORS ChangeLog* README
 }
 
 pkg_postinst() {
