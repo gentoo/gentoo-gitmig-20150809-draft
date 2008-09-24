@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1893 2008/09/23 21:27:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1894 2008/09/24 15:42:46 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Sep 2008; Christoph Mende <angelos@gentoo.org> use.local.desc:
+  Added xfce-base/xfce-utils:lock
 
   23 Sep 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking libdvd{read,nav} for testing wrt possible ABI breakage (bug
