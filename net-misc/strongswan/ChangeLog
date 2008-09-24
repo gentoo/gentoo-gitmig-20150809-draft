@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.65 2008/08/23 17:59:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.66 2008/09/24 02:48:51 robbat2 Exp $
+
+*strongswan-4.2.7 (24 Sep 2008)
+
+  24 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/strongswan-4.2.7-install.patch, +strongswan-4.2.7.ebuild:
+  Version bump per security bug #238534.
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> strongswan-4.1.11.ebuild:
   add ~amd64, bug #215669
