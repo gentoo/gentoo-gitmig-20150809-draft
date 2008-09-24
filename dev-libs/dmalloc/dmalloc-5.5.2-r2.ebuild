@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r2.ebuild,v 1.2 2008/09/24 12:49:31 b33fc0d3 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r2.ebuild,v 1.3 2008/09/24 14:44:15 mr_bones_ Exp $
 
 inherit autotools eutils multilib
 
@@ -24,7 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-Makefile.in.patch
 	# - Broken test, always returns false.
 	epatch "${FILESDIR}"/${P}-cxx.patch
-	# - Add threads support. 
+	# - Add threads support.
 	use threads && epatch "${FILESDIR}"/${P}-threads.patch
 	# - Run autoconf for -cxx.patch.
 	eautoconf
