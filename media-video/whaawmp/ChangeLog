@@ -1,0 +1,11 @@
+# ChangeLog for media-video/whaawmp
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/ChangeLog,v 1.1 2008/09/24 10:44:20 yngwin Exp $
+
+*whaawmp-0.2.10 (24 Sep 2008)
+
+  24 Sep 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +whaawmp-0.2.10.ebuild:
+  Initial import. Ebuild by Josh Saddler in bug 238551. He's maintaining
+  this by proxy until he gets portage commit access.
+
