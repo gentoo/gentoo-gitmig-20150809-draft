@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.16 2008/08/23 01:23:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.17 2008/09/24 18:01:50 armin76 Exp $
+
+*znc-0.060 (24 Sep 2008)
+
+  24 Sep 2008; Raúl Porcel <armin76@gentoo.org> +znc-0.060.ebuild:
+  Version bump
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
