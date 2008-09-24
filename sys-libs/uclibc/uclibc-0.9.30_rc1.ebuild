@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc1.ebuild,v 1.1 2008/09/23 21:30:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc1.ebuild,v 1.2 2008/09/24 14:44:37 mr_bones_ Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -199,7 +199,7 @@ src_unpack() {
 			epatch "${FILESDIR}"/patches-${PV}/math
 		fi
 	fi
-	
+
 	########## CPU SELECTION ##########
 
 	local target config_target
