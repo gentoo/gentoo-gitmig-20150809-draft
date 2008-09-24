@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.55 2008/08/22 19:10:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.56 2008/09/24 19:01:23 robbat2 Exp $
+
+*nss_ldap-262 (24 Sep 2008)
+
+  24 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +nss_ldap-262.ebuild:
+  Version bump.
 
 *nss_ldap-261 (22 Aug 2008)
 
