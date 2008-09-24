@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.1 2008/09/11 11:14:57 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.2 2008/09/24 18:31:28 armin76 Exp $
 
 inherit eutils toolchain-funcs java-pkg-opt-2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2
 		java? ( mirror://sourceforge/vnc-tight/${P}_javasrc.tar.gz )"
 HOMEPAGE="http://www.tightvnc.com/"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -58,14 +58,17 @@ src_unpack() {
 		epause 5
 	fi
 
-	unpack ${A} && cd "${S}"
+	unpack ${A} 
+	cd "${S}"
+
 	epatch "${FILESDIR}/${PN}-1.3.8-pathfixes.patch" # fixes bug 78385 and 146099
 	epatch "${FILESDIR}/${PN}-1.3.8-imake-tmpdir.patch" # fixes bug 23483
 	epatch "${FILESDIR}/${PN}-1.3.8-darwin.patch" # fixes bug 89908
-	use mips && epatch "${FILESDIR}/${PN}-1.3.8-mips.patch"
+	epatch "${FILESDIR}/${PN}-1.3.8-mips.patch"
 	epatch "${FILESDIR}"/server-CVE-2007-1003.patch
 	epatch "${FILESDIR}"/server-CVE-2007-1351-1352.patch
 	epatch "${FILESDIR}"/${PV}-fbsd.patch
+	epatch "${FILESDIR}"/${PV}-arm.patch
 
 	if use java; then
 		cd "${WORKDIR}"

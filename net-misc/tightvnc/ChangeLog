@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.123 2008/09/11 11:14:57 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.124 2008/09/24 18:31:28 armin76 Exp $
+
+  24 Sep 2008; Raúl Porcel <armin76@gentoo.org> +files/1.3.9-arm.patch,
+  tightvnc-1.3.9-r2.ebuild:
+  Add a patch from Debian to make it work on arm, keyword ~arm
 
 *tightvnc-1.3.9-r2 (11 Sep 2008)
 
