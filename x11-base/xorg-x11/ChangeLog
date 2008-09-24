@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.597 2008/09/14 01:55:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.598 2008/09/24 13:40:22 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xorg-x11-7.4.ebuild:
+  keyword ~x86-fbsd
 
   14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> xorg-x11-7.4.ebuild:
   Add ~sparc keyword, bug #237411
