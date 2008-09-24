@@ -29,5 +29,6 @@ exim is quite different to that of sendmail.
 	<flag name='mbx'>Adds support for UW's mbx format</flag>
 	<flag name='spf'>Adds support for Sender Policy Framework</flag>
 	<flag name='srs'>Adds support for Sender Rewriting Scheme</flag>
+	<flag name='logrotate'>Adds support for the 'logrotate' log rotation program</flag>
 </use>
 </pkgmetadata>
