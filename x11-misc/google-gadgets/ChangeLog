@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.9 2008/09/14 15:41:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.10 2008/09/24 15:13:30 loki_val Exp $
+
+*google-gadgets-0.10.2-r1 (24 Sep 2008)
+
+  24 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +google-gadgets-0.10.2-r1.ebuild:
+  Fix ggl crashing on startup.
+  http://code.google.com/p/google-gadgets-for-linux/issues/detail?id=220
 
 *google-gadgets-0.10.2 (14 Sep 2008)
 
