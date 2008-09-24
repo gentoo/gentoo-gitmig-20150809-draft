@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.15 2008/03/24 14:10:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.16 2008/09/24 08:41:15 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xkbutils-1.0.1.ebuild:
+  keyword ~x86-fbsd
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org> xkbutils-1.0.1.ebuild:
   amd64 stable, bug #202087
