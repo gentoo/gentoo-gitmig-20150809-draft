@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xf86dga
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.19 2008/01/31 03:44:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.20 2008/09/24 10:31:48 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xf86dga-1.0.2.ebuild:
+  keyword ~x86-fbsd
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/xf86dga-1.0.1-setuid.diff, -xf86dga-1.0.1-r1.ebuild:
