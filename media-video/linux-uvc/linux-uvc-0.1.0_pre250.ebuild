@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre246.ebuild,v 1.1 2008/09/24 07:03:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre250.ebuild,v 1.1 2008/09/24 17:13:30 genstef Exp $
 
 inherit linux-mod
 
