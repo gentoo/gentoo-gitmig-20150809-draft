@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.40 2008/03/17 14:24:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.41 2008/09/24 18:30:47 angelos Exp $
+
+*gmpc-0.16.0 (24 Sep 2008)
+
+  24 Sep 2008; Christoph Mende <angelos@gentoo.org> +gmpc-0.16.0.ebuild:
+  Version bump
 
   17 Mar 2008; Ferris McCormick <fmccor@gentoo.org> gmpc-0.15.5.0.ebuild:
   Sparc stable, part of Bug #212077.
