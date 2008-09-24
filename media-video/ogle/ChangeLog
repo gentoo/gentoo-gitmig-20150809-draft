@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.48 2008/03/13 13:56:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.49 2008/09/24 08:29:53 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> ogle-0.9.2-r1.ebuild:
+  keyword ~x86-fbsd thanks to Matt "gfunkmonk" Rinsch <gfunkmonk@gmail.com>,
+  bug #236821
 
   13 Mar 2008; Steve Dibb <beandog@gentoo.org> ogle-0.9.2-r1.ebuild:
   Fix DEPEND/RDEPEND
