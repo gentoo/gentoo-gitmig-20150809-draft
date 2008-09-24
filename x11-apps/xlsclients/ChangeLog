@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsclients
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.17 2007/05/12 19:44:40 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.18 2008/09/24 10:15:41 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xlsclients-1.0.1.ebuild:
+  keyword ~x86-fbsd
 
   12 May 2007; nixnut <nixnut@gentoo.org> xlsclients-1.0.1.ebuild:
   Stable on ppc wrt bug 169222
