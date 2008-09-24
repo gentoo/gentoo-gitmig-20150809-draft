@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.15 2008/09/21 07:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.16 2008/09/24 02:11:18 robbat2 Exp $
+
+  24 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mtd-utils-fixup.patch, mtd-utils-20080907.ebuild:
+  Fix inverted xattr logic per bug #238435 and also parallel build.
 
 *mtd-utils-20080907 (21 Sep 2008)
 

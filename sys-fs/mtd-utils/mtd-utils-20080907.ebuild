@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.1 2008/09/21 07:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.2 2008/09/24 02:11:18 robbat2 Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 # Git ID for the snapshot
 MY_PV="${PV}-41c53b6f2d756ae995c3ffa4455576515427c5e0"
@@ -29,13 +29,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i 's:-Werror::' $(find . -name Makefile)
+	epatch "${FILESDIR}"/mtd-utils-fixup.patch
 }
 
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		OPTFLAGS="${CFLAGS}" \
-		$(use xattr && echo WITHOUT_XATTR=1) \
+		$(use xattr || echo WITHOUT_XATTR=1) \
 		|| die
 }
 
