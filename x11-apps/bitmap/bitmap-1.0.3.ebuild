@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/bitmap-1.0.3.ebuild,v 1.4 2008/03/24 13:54:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/bitmap-1.0.3.ebuild,v 1.5 2008/09/24 09:55:41 aballier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org bitmap application"
-KEYWORDS="amd64 arm ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="amd64 arm ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="xprint"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXmu
