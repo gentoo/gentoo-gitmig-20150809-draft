@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vncsnapshot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.12 2008/04/21 18:06:38 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.13 2008/09/24 21:10:48 gentoofan23 Exp $
+
+  24 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/vncsnapshot-1.2a-amd64grey.patch, vncsnapshot-1.2a.ebuild:
+  Fix grey image problems on amd64; Fixes bug #210036
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
