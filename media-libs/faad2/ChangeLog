@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.107 2008/09/24 00:21:38 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.108 2008/09/24 06:12:06 jer Exp $
+
+  24 Sep 2008; Jeroen Roovers <jer@gentoo.org> faad2-2.6.1-r2.ebuild:
+  Stable for HPPA (bug #238445).
 
   24 Sep 2008; Richard Freeman <rich0@gentoo.org> faad2-2.6.1-r2.ebuild:
   amd64 stable - 238445
