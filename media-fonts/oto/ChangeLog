@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/oto
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.9 2008/02/24 12:20:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.10 2008/09/24 20:48:44 loki_val Exp $
+
+*oto-0.5 (24 Sep 2008)
+
+  24 Sep 2008; Peter Alfredsen <loki_val@gentoo.org> +oto-0.5.ebuild:
+  Bump
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> oto-0.4.ebuild:
   alpha stable
