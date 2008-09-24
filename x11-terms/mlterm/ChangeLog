@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.62 2008/08/21 22:27:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.63 2008/09/24 13:03:22 matsuu Exp $
+
+*mlterm-2.9.4-r2 (24 Sep 2008)
+
+  24 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> mlterm-2.9.3-r1.ebuild,
+  -mlterm-2.9.4.ebuild, mlterm-2.9.4-r1.ebuild, +mlterm-2.9.4-r2.ebuild:
+  Removed "append-ldflags $(bindnow-flags)", bug #223781. Added m17n-lib USE
+  flag. Removed old versions.
 
   21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
