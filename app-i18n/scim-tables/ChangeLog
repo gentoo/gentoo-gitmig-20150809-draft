@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.54 2008/06/09 12:39:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.55 2008/09/24 12:47:57 matsuu Exp $
+
+*scim-tables-0.5.8-r1 (24 Sep 2008)
+
+  24 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +scim-tables-0.5.8-r1.ebuild:
+  Revert --without-arts, bug #235872.
 
   09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/scim-tables-0.5.8+gcc-4.3.patch, scim-tables-0.5.8.ebuild:
