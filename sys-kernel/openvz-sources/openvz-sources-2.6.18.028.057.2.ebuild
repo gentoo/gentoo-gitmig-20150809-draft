@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.057.2.ebuild,v 1.1 2008/08/22 19:39:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.057.2.ebuild,v 1.2 2008/09/24 09:32:55 pva Exp $
 
 inherit versionator
 
@@ -39,9 +39,9 @@ ${FILESDIR}/${P}-prevent-gcc-smartness.patch
 ${FILESDIR}/${P}-fix-CIFS-build.patch
 ${FILESDIR}/${P}-another-fix-build-xfrm.h.patch"
 
-K_EXTRAEINFO="Starting with openvz-sources-2.6.18.028.053.14 we use RHEL5 patchset
-instead of previously used 2.6.18 one. This patchset considered to be more stable
-and security supported by upstream, that why they suggested us to use it.
-But note: RHEL5 patchset is very fragile and fails to build in many
-configurations so if you have problems use config files from openvz team
+K_EXTRAEINFO="This openvz kernel uses RHEL5 patchset instead of vanilla kernel.
+This patchset considered to be more stable and security supported by upstream,
+that why they suggested us to use it. But note: RHEL5 patchset is very fragile
+and fails to build in many configurations so if you have problems use config
+files from openvz team
 http://wiki.openvz.org/Download/kernel/rhel5/028stab057.2"

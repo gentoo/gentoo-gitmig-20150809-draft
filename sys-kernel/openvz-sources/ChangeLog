@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.93 2008/08/22 19:39:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.94 2008/09/24 09:32:55 pva Exp $
+
+*openvz-sources-2.6.18.028.056.1 (24 Sep 2008)
+
+  24 Sep 2008; Peter Volkov <pva@gentoo.org>
+  +files/openvz-sources-2.6.18.028.056.1-3ware.patch,
+  +files/openvz-sources-2.6.18.028.056.1-utimensat.patch,
+  -openvz-sources-2.6.18.028.053.14.ebuild,
+  +openvz-sources-2.6.18.028.056.1.ebuild,
+  openvz-sources-2.6.18.028.057.2.ebuild:
+  RHEL5 based kernels are too fragile to make them stable... Adding another
+  kernel based on vanilla, added fix for 3ware-9xxx controller, bug #238496,
+  thank Christian Schmitt for report.
 
 *openvz-sources-2.6.18.028.057.2 (22 Aug 2008)
 
