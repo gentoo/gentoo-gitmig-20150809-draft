@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xinput
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.13 2008/09/14 00:40:42 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.14 2008/09/24 09:51:02 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xinput-1.3.0.ebuild:
+  keyword ~x86-fbsd
 
   14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> xinput-1.3.0.ebuild:
   Add ~sparc keyword, bug #237411
