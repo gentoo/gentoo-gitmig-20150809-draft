@@ -20,7 +20,7 @@
 		to <pkg>sys-fs/cryptsetup</pkg> allows you to create such encrypted
 		volumes. HAL will be able to handle volumes that are removable or
 		fixed.</flag>
-	<flag name='dell'>Builds an installs the Dell addon, which reads data from
+	<flag name='dell'>Builds and installs the Dell addon, which reads data from
 		the Dell SM BIOS via <pkg>sys-libs/libsmbios</pkg>. It will read your
 		service tag information and your hardware backlight data as well as
 		allow you to modify the backlight settings on a Dell laptop.</flag>
