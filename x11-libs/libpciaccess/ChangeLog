@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.5 2008/09/23 07:28:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.6 2008/09/24 08:18:43 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  libpciaccess-0.10.3.ebuild:
+  keyword ~x86-fbsd
 
   23 Sep 2008; Markus Rothe <corsair@gentoo.org> libpciaccess-0.10.3.ebuild:
   Added ~ppc
