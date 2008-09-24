@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9004 2008/09/23 21:27:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9005 2008/09/24 00:40:06 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -38,7 +38,7 @@
 # The e1000e driver in the  2.6.27 release
 # candidate kernel could break network cards
 # Unmask when it is fixed. (see bug #238489)
->=sys-kernel/git-sources-2.6.27
+>=sys-kernel/git-sources-2.6.27_rc
 
 # Joe Peterson <lavajoe@gentoo.org> (23 Sep 2008)
 # Masked for removal in 30 days (see bug #238442)
