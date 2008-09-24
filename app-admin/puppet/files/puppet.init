@@ -1,38 +1,40 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/files/puppet.init,v 1.1 2008/09/09 09:20:05 matsuu Exp $
 
 depend() {
-        need net
-        use dns logger
+	need net
+	use dns logger
 }
 
 checkconfig() {
-        if [[ ! -d "${PUPPET_PID_DIR}" ]] ; then
-               eerror "Please make sure PUPPET_PID_DIR is defined and points to a existing directory"
-               return 1
-        fi
+	if [[ ! -d "${PUPPET_PID_DIR}" ]] ; then
+		eerror "Please make sure PUPPET_PID_DIR is defined and points to a existing directory"
+		return 1
+	fi
 
-        return 0
+	return 0
 }
 
 start() {
-        checkconfig || return $?
+	checkconfig || return $?
 
-        local options=""
-        [[ -n "${PUPPET_EXTRA_OPTS}" ]] && options="${options} ${PUPPET_EXTRA_OPTS}"
+	local options=""
+	[[ -n "${PUPPET_EXTRA_OPTS}" ]] && options="${options} ${PUPPET_EXTRA_OPTS}"
 
-        ebegin "Starting puppet"
-        start-stop-daemon --start --quiet --exec /usr/bin/puppetd -- ${options}
-        eend $? "Failed to start puppet"
+	ebegin "Starting puppet"
+	start-stop-daemon --start --quiet \
+		--pidfile "${PUPPET_PID_DIR}/puppetd.pid" \
+		--exec /usr/bin/puppetd -- ${options}
+	eend $? "Failed to start puppet"
 }
 
 stop() {
-        ebegin "Stopping puppet"
-        start-stop-daemon --stop --quiet --pidfile ${PUPPET_PID_DIR}/puppetd.pid
-        local ret=$?
-        eend ${ret} "Failed to stop puppet"
-        rm -f ${PUPPET_PID_DIR}/puppetd.pid
-        return ${ret}
+	ebegin "Stopping puppet"
+	start-stop-daemon --stop --quiet \
+		--pidfile "${PUPPET_PID_DIR}/puppetd.pid"
+	local ret=$?
+	eend ${ret} "Failed to stop puppet"
+	rm -f "${PUPPET_PID_DIR}/puppetd.pid"
+	return ${ret}
 }

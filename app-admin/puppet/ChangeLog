@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.22 2008/09/15 00:35:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.23 2008/09/24 14:49:03 matsuu Exp $
+
+*puppet-0.24.5-r2 (24 Sep 2008)
+
+  24 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> files/puppet.init,
+  files/puppetmaster.init, metadata.xml, +puppet-0.24.5-r2.ebuild:
+  Fixed init.d issue again, bug #237712. Added ldap and rrdtool USE flags,
+  bug #237717.
 
   15 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> puppet-0.24.4.ebuild,
   -puppet-0.24.5.ebuild, puppet-0.24.5-r1.ebuild:
