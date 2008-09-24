@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.135 2008/09/17 22:04:34 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.136 2008/09/24 22:22:47 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  gentoolkit-0.2.4.2.ebuild:
+  keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
+  #236214
 
 *gentoolkit-0.2.4.2 (17 Sep 2008)
 
