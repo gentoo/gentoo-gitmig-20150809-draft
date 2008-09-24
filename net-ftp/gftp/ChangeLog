@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.67 2008/07/27 21:02:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.68 2008/09/24 08:42:48 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> gftp-2.0.18-r6.ebuild:
+  keyword ~x86-fbsd thanks to Matt "gfunkmonk" Rinsch <gfunkmonk@gmail.com>,
+  bug #237025
 
   27 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -gftp-2.0.18-r4.ebuild, -gftp-2.0.18-r5.ebuild,
