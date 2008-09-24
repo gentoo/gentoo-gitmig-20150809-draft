@@ -10,7 +10,5 @@
       <pkg>media-libs/libafterimage</pkg>
     </flag>
     <flag name='iso14755'>Enable ISO-14755 support</flag>
-    <flag name='256color'>Enable 256 color display, instead of just 88</flag>
-    <flag name='widechar'>Enable the wide character width patch from upstream</flag>
   </use>
 </pkgmetadata>
