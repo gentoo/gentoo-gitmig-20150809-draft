@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3887 2008/09/23 23:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3888 2008/09/24 01:08:22 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2555,10 +2555,8 @@ x11-terms/mrxvt:menubar - Enable mrxvt menubar
 x11-terms/mrxvt:utempter - REcords user logins. Useful on multi-user systems
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
-x11-terms/rxvt-unicode:256color - Enable 256 color display, instead of just 88
 x11-terms/rxvt-unicode:afterimage - Enable support for media-libs/libafterimage 
 x11-terms/rxvt-unicode:iso14755 - Enable ISO-14755 support
-x11-terms/rxvt-unicode:widechar - Enable the wide character width patch from upstream
 x11-terms/xterm:paste64 - Enable support for bracketed paste mode
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built
 x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
