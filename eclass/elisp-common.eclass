@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.46 2008/09/19 08:12:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.47 2008/09/24 09:47:04 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -312,7 +312,7 @@ elisp-site-file-install() {
 # when generating the start-up file.
 
 elisp-site-regen() {
-	local i sf line obsolete
+	local i sf line firstrun obsolete
 	local -a sflist
 	# Work around Paludis borkage: variable T is empty in pkg_postrm
 	local tmpdir=${T:-$(mktemp -d)}
@@ -322,8 +322,9 @@ elisp-site-regen() {
 		return 1
 	fi
 
-	if [ ! -e "${ROOT}${SITELISP}"/site-gentoo.el ] \
-		&& [ ! -e "${ROOT}${SITELISP}"/site-start.el ]; then
+	[ -e "${ROOT}${SITELISP}"/site-gentoo.el ] || firstrun=t
+
+	if [ "${firstrun}" ] && [ ! -e "${ROOT}${SITELISP}"/site-start.el ]; then
 		einfo "Creating default ${SITELISP}/site-start.el ..."
 		cat <<-EOF >"${tmpdir}"/site-start.el
 		;;; site-start.el
@@ -398,11 +399,10 @@ elisp-site-regen() {
 			&& [ ! -e "${ROOT}${SITELISP}"/site-start.el ] \
 			&& mv "${tmpdir}"/site-start.el "${ROOT}${SITELISP}"/site-start.el
 		echo
-		for sf in "${sflist[@]##*/}"; do
-			einfo "  Adding ${sf} ..."
-		done
-		einfo "Regenerated ${SITELISP}/site-gentoo.el."
+		einfo "... ${#sflist[@]} site initialisation file(s) included."
+	fi
 
+	if [ "${firstrun}" ]; then
 		echo
 		while read line; do einfo "${line:- }"; done <<-EOF
 		All site initialisation for Gentoo-installed packages is added to
