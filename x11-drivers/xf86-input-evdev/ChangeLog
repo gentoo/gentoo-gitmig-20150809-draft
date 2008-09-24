@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.84 2008/09/23 07:31:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.85 2008/09/24 00:01:11 dberkholz Exp $
+
+*xf86-input-evdev-2.0.5 (24 Sep 2008)
+
+  24 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-evdev-2.0.5.ebuild:
+  Bump. Should fix dead mice after resume from suspend.
 
   23 Sep 2008; Markus Rothe <corsair@gentoo.org>
   xf86-input-evdev-2.0.4.ebuild:
