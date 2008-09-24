@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-1.8.ebuild,v 1.7 2007/10/15 14:59:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.1.ebuild,v 1.1 2008/09/24 07:06:06 genstef Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DEPEND=">=sys-fs/fuse-2.6.0_pre3
 	>=dev-libs/glib-2.4.2"
 RDEPEND="${DEPEND}
 	>=net-misc/openssh-4.3"
-KEYWORDS="amd64 ~hppa ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README NEWS ChangeLog AUTHORS
 }

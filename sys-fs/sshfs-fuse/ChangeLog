@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.42 2008/03/16 14:28:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.43 2008/09/24 07:06:06 genstef Exp $
+
+  20 Sep 2008; Stefan Schweizer <genstef@gentoo.org>
+  -files/sshfs-fuse-2.6.0_pre3.patch, -sshfs-fuse-1.6.ebuild,
+  -sshfs-fuse-1.7.ebuild, -sshfs-fuse-1.8.ebuild, +sshfs-fuse-2.1.ebuild:
+  remove old
+
+*sshfs-fuse-2.1 (20 Sep 2008)
+
+  20 Sep 2008; Stefan Schweizer <genstef@gentoo.org> +sshfs-fuse-2.1.ebuild:
+  version bump
 
   16 Mar 2008; Ferris McCormick <fmccor@gentoo.org> sshfs-fuse-1.9.ebuild:
   Sparc stable --- Bug #211018 --- thanks to Friedrich Oslage for testing.
