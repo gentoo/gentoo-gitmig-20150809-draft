@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/imhangul-status-applet
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/ChangeLog,v 1.4 2007/02/21 22:04:42 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/ChangeLog,v 1.5 2008/09/24 15:15:16 matsuu Exp $
+
+*imhangul-status-applet-0.3-r1 (24 Sep 2008)
+
+  24 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  imhangul-status-applet-0.2-r1.ebuild,
+  +imhangul-status-applet-0.3-r1.ebuild:
+  Fixed dependency, bug #227615. Fixed SRC_URI. Clean up ebuild.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
