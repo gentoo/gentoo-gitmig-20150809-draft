@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.6 2008/09/23 05:27:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.7 2008/09/24 08:30:10 aballier Exp $
+
+  24 Sep 2008; Alexis Ballier <aballier@gentoo.org> libkate-0.2.0.ebuild:
+  keyword ~x86-fbsd
 
 *libkate-0.2.0 (23 Sep 2008)
 
