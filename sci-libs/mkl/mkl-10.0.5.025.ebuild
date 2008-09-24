@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.3.020-r3.ebuild,v 1.1 2008/07/13 18:13:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.1 2008/09/24 16:32:33 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
-PID=1088
+PID=1232
 PB=${PN}
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
@@ -122,7 +122,7 @@ src_unpack() {
 	# allow openmpi to work
 	epatch "${FILESDIR}"/${PN}-10.0.2.018-openmpi.patch
 	# make scalapack tests work for gfortran
-	epatch "${FILESDIR}"/${PN}-10.0.2.018-tests.patch
+	#epatch "${FILESDIR}"/${PN}-10.0.2.018-tests.patch
 	case ${ARCH} in
 		x86)	MKL_ARCH=32
 				MKL_KERN=ia32
@@ -182,10 +182,11 @@ src_test() {
 	local myconf
 	local testdirs="blas cblas"
 	use int64 && myconf="${myconf} interface=ilp64"
-	if use mpi; then
-		testdirs="${testdirs} scalapack"
-		myconf="${myconf} mpi=${MKL_MPI}"
-	fi
+	# buggy with g77 and gfortran
+	#if use mpi; then
+	#	testdirs="${testdirs} scalapack"
+	#	myconf="${myconf} mpi=${MKL_MPI}"
+	#fi
 	for x in ${testdirs}; do
 		pushd ${x}
 		einfo "Testing ${x}"
@@ -282,8 +283,6 @@ mkl_make_profiles() {
 
 src_install() {
 	dodir ${MKL_DIR}
-	# upstream installs a link, no idea why
-	dosym ${MKL_DIR} ${MKL_DIR/mkl/cmkl}
 
 	# install license
 	if  [[ ! -f ${INTEL_LIC_DIR}/${MKL_LIC} ]]; then
