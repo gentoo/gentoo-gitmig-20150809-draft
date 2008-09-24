@@ -1,18 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.9_rc1.ebuild,v 1.1 2008/09/16 09:13:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.9.ebuild,v 1.1 2008/09/24 17:00:40 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="ca cs da de en-US es-AR es-ES eu fr ga-IE hu is it ja ka ko lt nb-NO nl nn-NO pl pt-BR pt-PT ro ru sk sl sv-SE uk zh-CN zh-TW"
+LANGS="ca cs da de en-US es-AR es-ES eu fr ga-IE hu is ja ka ko lt nb-NO nl nn-NO pl pt-BR pt-PT ro ru sk sl sv-SE uk zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
 MY_PN="${PN/mozilla-}"
-MY_P="${MY_PN/-bin}-${PV/_rc/rc}"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Mozilla Sunbird Calendar"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV/_rc/rc}/linux-i686/en-US/${MY_P}.en-US.linux-i686.tar.gz"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/linux-i686/en-US/sunbird-${PV}.en-US.linux-i686.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 RESTRICT="strip"
+QA_EXECSTACK="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
+QA_TEXTRELS="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
@@ -82,18 +84,18 @@ linguas() {
 				fi
 			done
 		fi
-		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
 }
 
 src_unpack() {
-	unpack ${MY_P}.en-US.linux-i686.tar.gz
+	unpack ${MY_PN/-bin}-${PV}.en-US.linux-i686.tar.gz
 
 	linguas
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" ]]; then
+	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
 	fi
 }
