@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.90 2008/03/15 12:11:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.91 2008/09/24 12:34:40 pva Exp $
+
+*geoip-1.4.5 (24 Sep 2008)
+
+  24 Sep 2008; Peter Volkov <pva@gentoo.org>
+  +files/geoip-1.4.4-no-noinst_PROGRAMS.patch,
+  +files/geoip-1.4.4-parallel-build.patch, -geoip-1.4.2.ebuild,
+  -geoip-1.4.3.ebuild, +geoip-1.4.5.ebuild:
+  Version bump. Fixed parallel make failure #180988, thank Mike Doty for
+  report. Do not build test programs, bug #226207, thank Diego Pettenò for
+  report. Remove old.
 
   15 Mar 2008; Markus Rothe <corsair@gentoo.org> geoip-1.4.4.ebuild:
   Stable on ppc64; bug #212359
