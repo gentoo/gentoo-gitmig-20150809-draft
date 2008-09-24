@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.11 2008/07/27 14:22:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.12 2008/09/24 19:54:04 yngwin Exp $
 
 EAPI="1"
 
@@ -96,7 +96,8 @@ src_compile() {
 	use jack || mycmakeargs="${mycmakeargs} -DNO_Jack=1"
 	use aften || mycmakeargs="${mycmakeargs} -DNO_Aften=1"
 	use libsamplerate || mycmakeargs="${mycmakeargs} -DNO_libsamplerate=1"
-	use encode || mycmakeargs="${mycmakeargs} -DNO_Lame=1 -DNO_FAAC=1"
+	use encode && use aac || mycmakeargs="${mycmakeargs} -DNO_FAAC=1"
+	use encode && use lame || mycmakeargs="${mycmakeargs} -DNO_Lame=1"
 	use xvid || mycmakeargs="${mycmakeargs} -DNO_Xvid=1"
 	use amrnb || mycmakeargs="${mycmakeargs} -DNO_AMRNB=1"
 	use dts || mycmakeargs="${mycmakeargs} -DNO_libdca=1"

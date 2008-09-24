@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.134 2008/08/10 22:39:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.135 2008/09/24 19:54:04 yngwin Exp $
+
+  24 Sep 2008; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.ebuild,
+  avidemux-2.4.1.ebuild, -avidemux-2.4.2.ebuild, avidemux-2.4.3.ebuild:
+  Split out aac and lame configure flags, to fix bug 236229. Remove old
+  ~arch versions.
 
 *avidemux-2.4.3 (10 Aug 2008)
 
@@ -367,7 +372,7 @@
 
   29 Okt 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.32.ebuild:
   Version bump.
-  
+
   19 Okt 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.30.ebuild:
   Added amd64-patch, closes bug #68052.
 
@@ -375,7 +380,7 @@
 
   17 Okt 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.30.ebuild:
   Version bump.
-  
+
   23 Sep 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.26.ebuild,
   avidemux-2.0.28.ebuild:
   Added faad2 dependency, closes bug #59556
@@ -393,7 +398,7 @@
   24 Aug 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.28.ebuild:
   Version bump, closes bug #60254.Introducing xvid-1.0 as a dependency.
   Thanks to Ken Garland for his submission.
-  
+
   23 Jul 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.26.ebuild:
   Cleaned up filter-flags, closes bug #58112.
 
@@ -417,10 +422,10 @@
 
   26 Jun 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
   Marked stable for ppc and testing for ~amd64.
-  
+
   23 Jun 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
   Marked stable for x86.
-  
+
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> avidemux-0.9-r1.ebuild,
   avidemux-2.0.18.ebuild, avidemux-2.0.20.ebuild, avidemux-2.0.22.ebuild,
   avidemux-2.0.24.ebuild:
@@ -430,7 +435,7 @@
 
   08 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
   Version bump.
-  
+
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   avidemux-0.9-r1.ebuild, avidemux-2.0.18.ebuild, avidemux-2.0.20.ebuild,
   avidemux-2.0.22.ebuild:
@@ -440,7 +445,7 @@
   bumped to stable
 
 *avidemux-2.0.22 (28 Feb 2004)
-  
+
   28 Feb 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.22.ebuild:
   Version bumped.
 
@@ -456,7 +461,7 @@
 
   01 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.20.ebuild:
   Removed divx4linux dep as it's not used anyway. Closes bug #45176
-  
+
   21 Dec 2003; Martin Holzer <mholzer@gentoo.org> avidemux-2.0.20.ebuild:
   Version bumped. Closes 36224.
 
@@ -472,7 +477,7 @@
 
   01 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.18.ebuild:
   Removed divx4linux dep as it's not used anyway. Closes bug #45176
-  
+
   01 Nov 2003; Markus Nigbur <pyrania@gentoo.org> avidemux-2.0.18.ebuild:
   Version bump.
 
@@ -506,9 +511,9 @@
   <marc.hildebrand@t-online.de> in #24545.
 
   19 Jul 2003; Nick Hadaway <raker@gentoo.org> avidemux-2.0.10-r1.ebuild:
-  Readjusted for a mad metapackage Changed to econf.  Added debug and 
-  nls USE variables.  Author suggests marking 2.0.10 as stable.  Also 
-  added alsa, arts, oggvorbis, and truetype USE variables albeit with no 
+  Readjusted for a mad metapackage Changed to econf.  Added debug and
+  nls USE variables.  Author suggests marking 2.0.10 as stable.  Also
+  added alsa, arts, oggvorbis, and truetype USE variables albeit with no
   configure opts.
 
 *avidemux-2.0.10-r1 (17 Jul 2003)
@@ -587,9 +592,9 @@
 *avidemux-0.9-pre30 (20 Jan 2003)
 
   20 Jan 2003; Martin Holzer <mholzer@gentoo.org> avidemux-0.9_pre30.ebuild
-  files/digest-avidemux-0.9_pre30 files/ASM_vidDeintAsm.cpp.diff.gz 
-  files/gui_filter.diff.gz ChangeLog : 
-  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted in 
+  files/digest-avidemux-0.9_pre30 files/ASM_vidDeintAsm.cpp.diff.gz
+  files/gui_filter.diff.gz ChangeLog :
+  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted in
   #14174.
 
 *avidemux-0.9-pre28 (09 Jan 2003)
@@ -638,9 +643,9 @@
   This version won't compile without ffmpeg installed:
   Grab ffmpeg from cvs (or /usr/portage/distfiles) and install it this way:
   ./configure --prefix=/usr --enable-shared && make && make install
-  
+
   Then try to emerge avidemux again.
-  
+
   New features/bugfixes:
   see http://fixounet.free.fr/avidemux/ for details
 
