@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.346 2008/09/11 16:36:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.347 2008/09/25 17:27:24 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-2.22.0.ebuild,
+  gnome-2.22.1.ebuild, gnome-2.22.2.ebuild:
+  Drop further hppa keywords (bug #218794 comment #26).
 
   11 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-2.22.3.ebuild:
   Dropping ~hppa keyword for now (bug #237026).
