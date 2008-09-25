@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.28 2008/08/08 21:10:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.29 2008/09/25 12:10:30 aballier Exp $
+
+  25 Sep 2008; Alexis Ballier <aballier@gentoo.org> ledit-2.01.ebuild:
+  keyword ~x86-fbsd
 
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> -ledit-2.00.ebuild:
   remove old
