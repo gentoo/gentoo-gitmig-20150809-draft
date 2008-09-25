@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.130 2008/08/13 23:52:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.131 2008/09/25 16:03:47 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> dasher-4.7.3.ebuild:
+  Stable for HPPA (bug #236971).
 
   13 Aug 2008; Mart Raudsepp <leio@gentoo.org> -dasher-4.7.0.ebuild:
   Remove old
