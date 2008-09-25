@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.205 2008/08/25 10:21:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.206 2008/09/25 08:21:13 robbat2 Exp $
+
+*dhcpcd-4.0.1-r1 (25 Sep 2008)
+
+  25 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/dhcpcd-4.0.1-no-empty-clientid.patch, +dhcpcd-4.0.1-r1.ebuild:
+  Minor bugfix to 4.0.1, restoring the old -I behavior better. Stable
+  candidate now.
 
   25 Aug 2008; Rémi Cardona <remi@gentoo.org> Manifest:
   wrong tarball...

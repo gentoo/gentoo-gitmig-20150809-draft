@@ -1,0 +1,18 @@
+Restore the 3.x behavior of an empty -I '' argument.
+
+Bug: http://bugs.marples.name/show_bug.cgi?id=116
+Patch: http://bugs.marples.name/attachment.cgi?id=56
+
+diff --git a/dhcpcd.c b/dhcpcd.c
+index 0219b02..d492a2d 100644
+--- a/dhcpcd.c
++++ b/dhcpcd.c
+@@ -511,7 +511,7 @@ parse_option(int opt, char *oarg, struct options *options)
+ 	case 'I':
+ 		/* Strings have a type of 0 */;
+ 		options->clientid[1] = 0;
+-		if (oarg)
++		if (oarg && *oarg)
+ 			s = parse_string_hwaddr((char *)options->clientid + 1,
+ 						CLIENTID_MAX_LEN, oarg, 1);
+ 		else
