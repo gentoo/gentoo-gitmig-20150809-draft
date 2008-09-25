@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.14 2008/08/12 13:47:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.15 2008/09/25 15:01:06 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> pygtksourceview-2.2.0.ebuild:
+  Stable for HPPA (bug #236971).
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   pygtksourceview-2.2.0.ebuild:
