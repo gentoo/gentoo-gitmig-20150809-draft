@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5662.ebuild,v 1.1 2008/09/16 11:55:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5662.ebuild,v 1.2 2008/09/25 12:52:11 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -12,7 +12,7 @@ if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
 	inherit subversion
 	SRC_URI=""
 	MTSLPT_REV=${BASH_REMATCH[2]}
-	ESVN_REPO_URI="https://metasploit.com/svn/framework3/branches/framework-${PV%_p*}/@${MTSLPT_REV}"
+	ESVN_REPO_URI="http://metasploit.com/svn/framework3/branches/framework-${PV%_p*}/@${MTSLPT_REV}"
 else
 	SRC_URI="http://sugar.metasploit.com/releases/${MY_P}.tar.gz"
 fi
