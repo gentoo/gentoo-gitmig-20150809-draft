@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sablecc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.17 2007/10/24 06:02:23 wltjr Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.18 2008/09/25 08:45:15 ali_bush Exp $
+
+*sablecc-3.2 (25 Sep 2008)
+
+  25 Sep 2008; Alistair Bush <ali_bush@gentoo.org> +sablecc-3.2.ebuild:
+  Version Bump.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -sablecc-2.18.2.ebuild, sablecc-3.1-r1.ebuild:
