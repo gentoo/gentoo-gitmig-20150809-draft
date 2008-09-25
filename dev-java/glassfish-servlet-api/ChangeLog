@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glassfish-servlet-api
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.1 2007/04/27 20:37:12 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.2 2008/09/25 20:55:33 serkan Exp $
+
+  25 Sep 2008; Serkan Kaba <serkan@gentoo.org> files/build_xml.patch:
+  Update patch to make it work for new epatch behavior.
 
 *glassfish-servlet-api-2_beta44 (27 Apr 2007)
 
