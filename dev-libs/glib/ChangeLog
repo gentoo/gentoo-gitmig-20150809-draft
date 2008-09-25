@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.334 2008/09/25 09:40:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.335 2008/09/25 13:28:27 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> glib-2.16.5.ebuild:
+  Stable for HPPA (bug #236971).
 
 *glib-2.18.1 (25 Sep 2008)
 
