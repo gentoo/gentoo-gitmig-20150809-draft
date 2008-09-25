@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sci-geosciences</herd>
+<maintainer>
+  <email>nerdboy@gentoo.org</email>
+  <name>Steve Arnold</name>
+</maintainer>
+<longdescription>Mapnik is a toolkit for developing both web and desktop
+    mapping applications.  The core libraries are written in C++, with
+    optional Python bindings.
+</longdescription>
+<use>
+  <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> geoformat conversion
+    support</flag>
+  <flag name='proj'> Enable <pkg>sci-libs/proj</pkg> library support for
+    specific map projections</flag>
+</use>
+</pkgmetadata>

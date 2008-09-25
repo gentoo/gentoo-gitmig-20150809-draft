@@ -1,0 +1,12 @@
+# ChangeLog for sci-geosciences/mapnik
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.1 2008/09/25 05:42:05 nerdboy Exp $
+
+*mapnik-0.5.1 (25 Sep 2008)
+
+  25 Sep 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/mapnik-0.5.1-include-fix.patch, +metadata.xml,
+  +mapnik-0.5.1.ebuild:
+  New mapping toolkit supporting gpsdrive, as well as general mapping.
+  Closes bug #140599.
+
