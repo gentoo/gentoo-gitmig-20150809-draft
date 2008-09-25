@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.12.0.ebuild,v 1.1 2008/09/01 19:01:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.12.0.ebuild,v 1.2 2008/09/25 19:07:11 nyhm Exp $
 
-inherit toolchain-funcs games
+WX_GTK_VER=2.8
+inherit wxwidgets games
 
 DESCRIPTION="utilities for the SCUMM game engine"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -14,7 +15,9 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libpng
-	x11-libs/wxGTK"
+	media-libs/flac
+	media-libs/libvorbis
+	=x11-libs/wxGTK-2.8*"
 
 src_unpack() {
 	unpack ${A}
@@ -24,10 +27,11 @@ src_unpack() {
 
 src_compile() {
 	emake \
-	CC=$(tc-getCC) \
-	CXX=$(tc-getCXX) \
-	CFLAGS="${CFLAGS} -DUNIX" \
-	|| die "emake failed"
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
+		CFLAGS="${CFLAGS} -DUNIX" \
+		LDFLAGS="${LDFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
