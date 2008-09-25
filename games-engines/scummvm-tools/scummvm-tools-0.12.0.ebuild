@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.12.0.ebuild,v 1.2 2008/09/25 19:07:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.12.0.ebuild,v 1.3 2008/09/25 19:17:03 nyhm Exp $
 
 WX_GTK_VER=2.8
-inherit wxwidgets games
+inherit toolchain-funcs wxwidgets games
 
 DESCRIPTION="utilities for the SCUMM game engine"
 HOMEPAGE="http://scummvm.sourceforge.net/"
