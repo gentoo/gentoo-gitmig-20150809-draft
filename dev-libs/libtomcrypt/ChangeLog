@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.31 2008/09/25 14:42:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.32 2008/09/25 16:09:39 hawking Exp $
+
+*libtomcrypt-1.17-r1 (25 Sep 2008)
+
+  25 Sep 2008; Ali Polatel <hawking@gentoo.org> -libtomcrypt-1.17.ebuild,
+  +libtomcrypt-1.17-r1.ebuild:
+  Revbump. Build shared libraries instead of static.
 
   25 Sep 2008; Ali Polatel <hawking@gentoo.org> metadata.xml:
   Add myself to metadata.xml.
