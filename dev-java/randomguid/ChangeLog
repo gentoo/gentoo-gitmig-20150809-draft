@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/randomguid
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.18 2007/08/27 15:55:33 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.19 2008/09/25 21:12:02 serkan Exp $
+
+  25 Sep 2008; Serkan Kaba <serkan@gentoo.org>
+  files/1.2.1-examples-package.patch, randomguid-1.2.1-r1.ebuild:
+  Update patch to make it work for new epatch behavior. Fixed quoting. Added
+  necessary calls to die.
 
   27 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -randomguid-1.2.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.5 2007/08/27 15:52:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.6 2008/09/25 21:12:02 serkan Exp $
 
 inherit java-pkg-2
 
@@ -17,8 +17,8 @@ DEPEND=">=virtual/jdk-1.4"
 S=${WORKDIR}
 
 src_compile() {
-	mkdir -p com/javaexchange
-	mv RandomGUID.java com/javaexchange/RandomGUID.java~
+	mkdir -p com/javaexchange || die "mkdir failed"
+	mv RandomGUID.java com/javaexchange/RandomGUID.java~ || die "mv failed"
 
 	# We need to move RandomGUID.class into the
 	# com.javaexchange package. This is necessary to prevent
@@ -26,16 +26,16 @@ src_compile() {
 	# (which has a different <default> package for JSP files).
 
 	epatch "${FILESDIR}/1.2.1-examples-package.patch"
-	cd com/javaexchange
+	cd com/javaexchange || die "cd failed"
 	echo >RandomGUID.java "package com.javaexchange;"
 	cat RandomGUID.java~ >>RandomGUID.java
 
 	ejavac RandomGUID.java || die "compile problem"
 
 	# don't want .java files in jar
-	rm RandomGUID.java*
+	rm RandomGUID.java* || die "rm failed"
 
-	cd ${S}
+	cd "${S}" || die "cd failed"
 	jar cf RandomGUID.jar com || die "jar problem"
 }
 
