@@ -1,6 +1,18 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.32 2008/08/26 03:07:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.33 2008/09/25 14:29:36 markusle Exp $
+
+*qtiplot-0.9.7.2 (25 Sep 2008)
+
+  25 Sep 2008; Markus Dittrich <markusle@gentoo.org>
+  -qtiplot-0.9.6.2.ebuild,
+  +files/qtiplot-0.9.7.2-liborigin-gcc4.3.patch,
+  +files/qtiplot-0.9.7.2-pro.patch, +qtiplot-0.9.7.2.ebuild:
+  Version bump. Fixes bug #238632.
+  NOTE: This version uses an improved liborigin file parser 
+  and is not compatible any more with sci-libs/liborigin. Hence,
+  we use the included liborigin sources for now until upstream
+  hopefully updates liborigin as well.
 
 *qtiplot-0.9.7 (26 Aug 2008)
 

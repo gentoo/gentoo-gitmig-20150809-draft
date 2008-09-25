@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.6.2.ebuild,v 1.7 2008/08/25 22:43:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.2.ebuild,v 1.1 2008/09/25 14:29:36 markusle Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime python
@@ -8,7 +8,7 @@ inherit eutils multilib qt4 fdo-mime python
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
 SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
-	doc? ( mirror://gentoo/${P}-manual-en.tar.bz2 )"
+	doc? ( mirror://gentoo/${PN}-0.9.7-manual-en.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,11 +22,11 @@ done
 
 CDEPEND=">=x11-libs/qwt-5.1
 	>=x11-libs/qwtplot3d-0.2.7
-	|| ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4
-			x11-libs/qt-assistant:4 )
-		<x11-libs/qt-4.4:4 )
+	x11-libs/qt-gui:4
+	x11-libs/qt-qt3support:4
+	x11-libs/qt-assistant:4
 	>=dev-cpp/muParser-1.28
-	>=sci-libs/liborigin-20080225
+	dev-libs/boost
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
@@ -46,7 +46,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-pro.patch
-	epatch "${FILESDIR}"/${P}-fitplugins.patch
+	epatch "${FILESDIR}"/${PN}-0.9.6.2-fitplugins.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-gcc4.3.patch
+	epatch "${FILESDIR}"/${P}-liborigin-gcc4.3.patch
 
 	sed -i \
 		-e '/manual/d'\
@@ -99,7 +101,7 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}/html
-		doins -r "${WORKDIR}"/qtiplot-manual-en/* \
+		doins -r "${WORKDIR}"/qtiplot-manual/* \
 			|| die "install manual failed"
 		rm -rf "${D}"/usr/share/doc/${PF}/html/*/.svn
 	fi
