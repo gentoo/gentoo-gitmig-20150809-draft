@@ -57,3 +57,9 @@ media-video/vlc dc1394
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Depends on torque which is a linux only thing
 sys-cluster/openmpi pbs
+
+
+# Alexis Ballier <aballier@gentoo.org> (25 Sep 2008)
+# elf -> dev-libs/elfutils is too tight to the gnu libc
+# rpm could be masked but we have rpm 5 keyworded even if it's still masked.
+net-analyzer/net-snmp elf
