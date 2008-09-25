@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.49 2008/08/21 11:53:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.50 2008/09/25 16:10:56 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> sabayon-2.22.0.ebuild:
+  Stable for HPPA (bug #236971).
 
   21 Aug 2008; Rémi Cardona <remi@gentoo.org> sabayon-2.22.0.ebuild:
   remove stale check on gamin's python bindings (which are not even used
