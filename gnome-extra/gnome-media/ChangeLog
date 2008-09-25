@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.178 2008/08/23 10:11:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.179 2008/09/25 15:31:24 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-media-2.22.0.ebuild:
+  Stable for HPPA (bug #236971).
 
   23 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-media-2.20.1.ebuild, gnome-media-2.22.0.ebuild:
