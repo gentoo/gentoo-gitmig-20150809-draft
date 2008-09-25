@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-fuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.6 2008/09/25 16:29:02 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.7 2008/09/25 17:03:20 trapni Exp $
+
+*zfs-fuse-0.5.0 (25 Sep 2008)
+
+  25 Sep 2008; Christian Parpart <trapni@gentoo.org>
+  +files/0.5.0/fix_zdb_path.patch, +files/0.5.0/fix_zfs-fuse_path.patch,
+  +files/0.5.0/fix_ztest_path.patch, +files/0.5.0/zfs-fuse.rc,
+  +zfs-fuse-0.5.0.ebuild:
+  added 0.5.0 release
 
   25 Sep 2008; Christian Parpart <trapni@gentoo.org> files/9999/zfs-fuse.rc,
   zfs-fuse-9999.ebuild:
