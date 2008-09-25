@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/ocsigen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.23 2008/09/25 12:42:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.24 2008/09/25 13:24:50 aballier Exp $
+
+  25 Sep 2008; Alexis Ballier <aballier@gentoo.org> ocsigen-1.1.0.ebuild:
+  keyword ~x86-fbsd
 
   25 Sep 2008; Alexis Ballier <aballier@gentoo.org> files/ocsigen.initd:
   remove bashisms from init script
