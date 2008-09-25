@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.0.3.ebuild,v 1.1 2008/03/30 03:49:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.0.3.ebuild,v 1.2 2008/09/25 09:54:44 aballier Exp $
 
 inherit multilib distutils python
 
@@ -13,7 +13,7 @@ SRC_URI="http://rpm5.org/files/rpm/rpm-5.0/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb bzip2 doc file lua neon nls pcre perl python selinux sqlite"
 
 #	dmalloc? ( dev-libs/dmalloc )
