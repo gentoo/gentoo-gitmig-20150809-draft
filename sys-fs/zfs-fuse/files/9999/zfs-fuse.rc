@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/files/9999/zfs-fuse.rc,v 1.1 2008/09/25 14:32:17 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/files/9999/zfs-fuse.rc,v 1.2 2008/09/25 16:29:02 trapni Exp $
 
 depend() {
 	need localmount
 	before net
 }
 
-PIDFILE="/var/run/zfs-fuse.pid"
+PIDFILE="/var/run/zfs/zfs-fuse.pid"
 EXEFILE="/usr/sbin/zfs-fuse"
 
 checksystem() {
@@ -19,7 +19,7 @@ start() {
 	ebegin "Starting ZFS-FUSE"
 	checksystem || return 1
 	start-stop-daemon --start --exec ${EXEFILE} \
-        	--pidfile ${PIDFILE} --user daemon --group disk
+        	--user daemon --group disk -- --pidfile ${PIDFILE}
 	rv=$?
 	eend $rv
 
