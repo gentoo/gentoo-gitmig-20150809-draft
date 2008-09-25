@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.7 2008/07/02 17:00:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.8 2008/09/25 11:06:09 bicatali Exp $
+
+*basemap-0.99.1 (25 Sep 2008)
+
+  25 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -basemap-0.9.6.ebuild, +basemap-0.99.1.ebuild:
+  Version bump
 
 *basemap-0.99 (02 Jul 2008)
 
