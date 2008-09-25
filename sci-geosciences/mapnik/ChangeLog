@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.2 2008/09/25 05:56:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.3 2008/09/25 06:01:47 nerdboy Exp $
+
+  25 Sep 2008; Steve Arnold <nerdboy@gentoo.org> mapnik-0.5.1.ebuild:
+  just forestalling Mr_Bones with a QA fix...
 
   25 Sep 2008; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
   mapnik-0.5.1.ebuild:

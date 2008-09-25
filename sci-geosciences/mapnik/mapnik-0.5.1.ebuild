@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.2 2008/09/25 05:56:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.3 2008/09/25 06:01:47 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-include-fix.patch
-	sed -i -e "s:/usr/local:/usr:g" SConstruct
+	sed -i -e "s:/usr/local:/usr:g" SConstruct || die "sed failed"
 	eautoreconf
 }
 
@@ -56,7 +56,7 @@ src_compile() {
 		MAKEOPTS="${MAKEOPTS} PGSQL_INCLUDES=/usr/include/postgresql"
 	fi
 
-	scons ${MAKEOPTS} || die
+	scons ${MAKEOPTS} || die "scons make failed"
 }
 
 src_install() {
