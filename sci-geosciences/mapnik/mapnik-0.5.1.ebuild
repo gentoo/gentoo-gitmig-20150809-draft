@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.1 2008/09/25 05:42:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.2 2008/09/25 05:56:22 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/mapnik/mapnik_src-${PV}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="postgres proj debug doc gdal python bidi"
+IUSE="debug doc postgres python bidi"
 
 RDEPEND=">=dev-libs/boost-1.33.0
 	>=media-libs/libpng-1.2.12
@@ -18,9 +18,10 @@ RDEPEND=">=dev-libs/boost-1.33.0
 	>=media-libs/tiff-3.8.2
 	>=sys-libs/zlib-1.2.3
 	>=media-libs/freetype-2.1.10
+	>=sci-libs/proj-4.4.9
+	dev-libs/libxml2
+	sci-libs/gdal
 	postgres? ( >=dev-db/postgis-1.1.2 )
-	proj? ( >=sci-libs/proj-4.4.9 )
-	gdal? ( sci-libs/gdal )
 	python? ( >=dev-lang/python-2.4 )
 	bidi? ( dev-libs/fribidi )"
 
@@ -37,10 +38,14 @@ src_unpack() {
 }
 
 src_compile() {
+	MAKEOPTS="${MAKEOPTS} INPUT_PLUGINS=shape,raster,postgis"
+	MAKEOPTS="${MAKEOPTS} PROJ_INCLUDES=/usr/include"
+	MAKEOPTS="${MAKEOPTS} PROJ_LIBS=/usr/$(get_libdir)"
+	MAKEOPTS="${MAKEOPTS} XMLPARSER=libxml2"
+
 	if ! use python ; then
 		MAKEOPTS="${MAKEOPTS} BINDINGS=none"
 	fi
-	MAKEOPTS="${MAKEOPTS} INPUT_PLUGINS=shape,raster,postgis"
 	if use debug ; then
 		MAKEOPTS="${MAKEOPTS} DEBUG=1"
 	fi
@@ -50,11 +55,7 @@ src_compile() {
 	if use postgres ; then
 		MAKEOPTS="${MAKEOPTS} PGSQL_INCLUDES=/usr/include/postgresql"
 	fi
-	if use proj ; then
-		MAKEOPTS="${MAKEOPTS} PROJ_INCLUDES=/usr/include"
-		MAKEOPTS="${MAKEOPTS} PROJ_LIBS=/usr/$(get_libdir)"
-	fi
-	MAKEOPTS="${MAKEOPTS} XMLPARSER=libxml2"
+
 	scons ${MAKEOPTS} || die
 }
 

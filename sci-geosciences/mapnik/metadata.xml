@@ -10,10 +10,4 @@
     mapping applications.  The core libraries are written in C++, with
     optional Python bindings.
 </longdescription>
-<use>
-  <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> geoformat conversion
-    support</flag>
-  <flag name='proj'> Enable <pkg>sci-libs/proj</pkg> library support for
-    specific map projections</flag>
-</use>
 </pkgmetadata>

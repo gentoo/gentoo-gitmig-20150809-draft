@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.1 2008/09/25 05:42:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.2 2008/09/25 05:56:22 nerdboy Exp $
+
+  25 Sep 2008; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
+  mapnik-0.5.1.ebuild:
+  Removed proj and gdal use flags in favor of hard depends (mostly to
+  make it cleaner for people using gpsdrive).
 
 *mapnik-0.5.1 (25 Sep 2008)
 
