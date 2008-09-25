@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.2.ebuild,v 1.5 2007/12/19 13:15:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.2.ebuild,v 1.6 2008/09/25 12:11:58 aballier Exp $
 
 inherit findlib eutils
 
@@ -16,7 +16,7 @@ RDEPEND="$DEPEND"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 src_compile() {
 	econf || die "configure failed"

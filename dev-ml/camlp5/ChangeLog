@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.27 2008/08/12 17:45:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.28 2008/09/25 12:09:13 aballier Exp $
+
+  25 Sep 2008; Alexis Ballier <aballier@gentoo.org> camlp5-5.09.ebuild:
+  keyword ~x86-fbsd
 
   12 Aug 2008; Alexis Ballier <aballier@gentoo.org> -camlp5-5.08.ebuild:
   remove old
