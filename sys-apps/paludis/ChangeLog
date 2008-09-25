@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.105 2008/09/03 20:46:30 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.106 2008/09/25 22:13:59 betelgeuse Exp $
+
+*paludis-0.30.1 (25 Sep 2008)
+
+  25 Sep 2008; Petteri Räty <betelgeuse@gentoo.org> +paludis-0.30.1.ebuild:
+  Version bump. Adds EAPI 2 support.
 
 *paludis-0.30.0 (03 Sep 2008)
 
@@ -355,6 +360,8 @@
   14 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   +files/paludis-0.14.3-ruby-so.patch, paludis-0.14.3.ebuild:
   Fix test failure with ruby enabled.
+
+*paludis-0.14.3 (14 Jan 2007)
 
   14 Jan 2007; David Shakaryan <omp@gentoo.org> +paludis-0.14.3.ebuild:
   Version bump.
