@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.03-r1.ebuild,v 1.4 2008/04/06 19:30:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.03-r1.ebuild,v 1.5 2008/09/25 12:36:29 aballier Exp $
 
 inherit findlib eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://caml.inria.fr/distrib/bazar-ocaml/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
 
 DEPEND=">=dev-lang/ocaml-3.04 \
 		>=sys-libs/zlib-1.1.3"
