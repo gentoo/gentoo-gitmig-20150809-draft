@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.99 2008/09/22 00:38:10 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.100 2008/09/25 09:53:46 omp Exp $
+
+*conky-1.6.2_pre01258 (25 Sep 2008)
+
+  25 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml,
+  +conky-1.6.2_pre01258.ebuild:
+  Version bump; new release introduces moc USE flag.
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> Manifest:
   Remove older version; 1.6.1 fixes compile error. (bug #237868)
