@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-1.2.0.ebuild,v 1.2 2008/07/13 06:55:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-1.2.0.ebuild,v 1.3 2008/09/25 12:35:43 aballier Exp $
 
 inherit findlib eutils
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 pkg_setup() {
 	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.22.0-destdir.patch"
 	epatch "${FILESDIR}/${PN}-0.23.0-noocamlopt.patch"
+	epatch "${FILESDIR}/${PN}-1.2.0-werror.patch"
 }
 
 src_compile() {

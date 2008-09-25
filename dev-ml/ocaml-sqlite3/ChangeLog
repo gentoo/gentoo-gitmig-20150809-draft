@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.9 2008/07/13 06:55:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.10 2008/09/25 12:35:43 aballier Exp $
+
+  25 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  files/ocaml-sqlite3-0.22.0-destdir.patch,
+  +files/ocaml-sqlite3-1.2.0-werror.patch, ocaml-sqlite3-1.2.0.ebuild:
+  Dont use -Werror -pedantic when building, dont use install -D, keyword
+  ~x86-fbsd
 
   13 Jul 2008; Joseph Jezak <josejx@gentoo.org> ocaml-sqlite3-1.2.0.ebuild:
   Marked ~ppc for bug #197363.
