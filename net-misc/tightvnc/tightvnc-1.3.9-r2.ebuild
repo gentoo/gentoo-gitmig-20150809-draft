@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.2 2008/09/24 18:31:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.3 2008/09/25 14:41:57 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs java-pkg-opt-2
 
@@ -58,7 +58,7 @@ src_unpack() {
 		epause 5
 	fi
 
-	unpack ${A} 
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.3.8-pathfixes.patch" # fixes bug 78385 and 146099
