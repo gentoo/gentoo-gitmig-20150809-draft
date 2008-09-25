@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-fuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.4 2008/02/13 07:51:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.5 2008/09/25 14:32:16 trapni Exp $
+
+*zfs-fuse-9999 (25 Sep 2008)
+
+  25 Sep 2008; Christian Parpart <trapni@gentoo.org>
+  +files/9999/fix_zdb_path.patch, +files/9999/fix_zfs-fuse_path.patch,
+  +files/9999/fix_ztest_path.patch, +files/9999/zfs-fuse.rc,
+  +zfs-fuse-9999.ebuild:
+  added live ebuild to zfs-fuse
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   add no-herd
