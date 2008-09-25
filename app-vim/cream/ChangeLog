@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.41 2008/09/23 17:12:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.42 2008/09/25 13:46:29 hawking Exp $
+
+*cream-0.41-r2 (25 Sep 2008)
+
+  25 Sep 2008; Ali Polatel <hawking@gentoo.org>
+  +files/cream-0.41-ctrl-o.patch, -cream-0.41-r1.ebuild,
+  +cream-0.41-r2.ebuild:
+  Revbump. Add patch to fix Ctrl-O, bug 238544.
 
 *cream-0.41-r1 (23 Sep 2008)
 

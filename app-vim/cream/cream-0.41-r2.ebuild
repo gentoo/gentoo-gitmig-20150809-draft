@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41-r1.ebuild,v 1.1 2008/09/23 17:12:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41-r2.ebuild,v 1.1 2008/09/25 13:46:29 hawking Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -91,9 +91,13 @@ EOF
 	epatch "${FILESDIR}"/enhancedcommentify-2.1-gentooisms.patch
 	epatch "${FILESDIR}"/enhancedcommentify-2.1-extra-ft-support.patch
 
+	# fix Ctrl+O, bug #238544
+	epatch "${FILESDIR}/${P}-ctrl-o.patch"
+
 	# rename vim help files to avoid conflicts with other vim packages
 	prefix_help_file cream help/EnhancedCommentify.txt \
 		'EnhancedCommentify' 'EnhComm-[a-zA-Z]\+'
+
 }
 
 src_install() {
