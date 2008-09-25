@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.206 2008/09/25 08:21:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.207 2008/09/25 08:34:17 robbat2 Exp $
+
+*dhcpcd-4.99.2 (25 Sep 2008)
+
+  25 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/dhcpcd-4.99.2-no-empty-clientid.patch, +dhcpcd-4.99.2.ebuild:
+  Include the alpha 4.99.2 for 5.x fun testing. Please note the 3.x
+  compatibility is no longer supported by the codebase as it was during 4.0
+  versions.
 
 *dhcpcd-4.0.1-r1 (25 Sep 2008)
 
