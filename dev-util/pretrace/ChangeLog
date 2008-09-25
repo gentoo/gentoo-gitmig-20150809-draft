@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pretrace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.12 2007/12/25 15:58:23 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.13 2008/09/25 14:32:29 hawking Exp $
+
+  25 Sep 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  -pretrace-0.3.ebuild, -pretrace-0.3-r1.ebuild, pretrace-0.4.ebuild:
+  Drop old. Add myself to metadata.xml.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.4.ebuild,v 1.4 2007/03/05 04:09:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.4.ebuild,v 1.5 2008/09/25 14:32:29 hawking Exp $
 
 inherit toolchain-funcs flag-o-matic multilib
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/lib${P}"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}--as-needed.diff
+	epatch "${FILESDIR}"/${P}--as-needed.diff
 }
 
 src_compile() {
