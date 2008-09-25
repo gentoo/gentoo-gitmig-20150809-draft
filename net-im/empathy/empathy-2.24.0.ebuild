@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.23.92.ebuild,v 1.1 2008/09/20 17:49:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.24.0.ebuild,v 1.1 2008/09/25 13:45:34 coldwind Exp $
 
 inherit gnome2
 
