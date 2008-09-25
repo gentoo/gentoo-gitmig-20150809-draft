@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.13 2008/09/05 13:15:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.14 2008/09/25 08:55:17 aballier Exp $
+
+  25 Sep 2008; Alexis Ballier <aballier@gentoo.org> portpeek-1.6.7.ebuild:
+  keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
+  #236213
 
 *portpeek-1.5.7.1 (05 Sep 2008)
 
