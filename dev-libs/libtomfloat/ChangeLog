@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtomfloat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.6 2008/06/10 13:14:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.7 2008/09/25 14:45:55 hawking Exp $
+
+  25 Sep 2008; Ali Polatel <hawking@gentoo.org> metadata.xml:
+  Add myself to metadata.xml.
 
   10 Jun 2008; Jeremy Olexa <darkside@gentoo.org> libtomfloat-0.02.ebuild:
   Punt DEPEND on app-arch/unzip as SRC_URI has changed
