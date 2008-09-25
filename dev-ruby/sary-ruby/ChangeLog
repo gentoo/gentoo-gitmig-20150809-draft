@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.32 2008/06/14 21:07:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.33 2008/09/25 13:30:04 matsuu Exp $
+
+*sary-ruby-1.2.0-r1 (25 Sep 2008)
+
+  25 Sep 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/sary-ruby-1.2.0-gentoo.patch, metadata.xml,
+  +sary-ruby-1.2.0-r1.ebuild:
+  Fixed LDFLAGS issue, bug #237987. Added cjk to maintainer.
 
   14 Jun 2008; Hans de Graaff <graaff@gentoo.org> sary-ruby-1.2.0.ebuild:
   Remove unneeded cflags and ldflags setting #226891; fix quoting.
