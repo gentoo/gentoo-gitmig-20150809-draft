@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.110 2008/09/04 19:59:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.111 2008/09/25 15:25:20 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> seahorse-2.22.3.ebuild:
+  Stable for HPPA (bug #236971).
 
   04 Sep 2008; Arun Raghavan <ford_prefect@gentoo.org>
   seahorse-2.22.3.ebuild:
