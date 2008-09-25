@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.124 2008/08/14 20:32:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.125 2008/09/25 17:19:40 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-speech-0.4.20.ebuild:
+  Stable for HPPA (bug #236971).
 
 *gnome-speech-0.4.21 (14 Aug 2008)
 
