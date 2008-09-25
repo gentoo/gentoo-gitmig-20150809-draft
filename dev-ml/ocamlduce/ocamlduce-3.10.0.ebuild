@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.10.0.ebuild,v 1.2 2008/01/03 23:43:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.10.0.ebuild,v 1.3 2008/09/25 12:25:35 aballier Exp $
 
 inherit eutils findlib
 
@@ -13,7 +13,7 @@ SRC_URI="http://gallium.inria.fr/~frisch/ocamlcduce/download/${MY_P}.tar.gz"
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="+ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.10.0
