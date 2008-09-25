@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.6.ebuild,v 1.8 2008/08/12 13:49:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.6.ebuild,v 1.9 2008/09/25 15:05:57 jer Exp $
 
 GCONF_DEBUG=no
 inherit gnome2
@@ -10,7 +10,7 @@ HOMEPAGE="http://gtk-vnc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples python opengl"
 
 # what shall we do about libview
