@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.19 2008/09/09 11:32:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.20 2008/09/25 16:28:03 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gdl-0.7.11.ebuild:
+  Stable for HPPA (bug #236971).
 
   09 Sep 2008; Raúl Porcel <armin76@gentoo.org> gdl-0.7.11.ebuild:
   alpha/ia64/sparc stable wrt #236971
