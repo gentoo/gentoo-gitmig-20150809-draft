@@ -11,11 +11,11 @@ depend() {
 
 
 checkconfig() {
-	if [[ ! -f $DAEMON ]] ; then
+	if [ ! -f "$DAEMON" ] ; then
 		ewarn "Unable to find $DAEMON"
 		return 1
 	fi
-	if [[ ! -f $CONF ]] ; then
+	if [ ! -f "$CONF" ] ; then
 		ewarn $CONF " does not exist."
 		return 1
 	fi
@@ -39,7 +39,7 @@ stop() {
 }
 
 reload() {
-	if [[ ! -f $PIDFILE ]] ; then
+	if [ ! -f "$PIDFILE" ] ; then
 		ewarn "$PIDFILE not found!!"
 		ewarn "Ocsigen is not running. Not reloading."
 		return 1
