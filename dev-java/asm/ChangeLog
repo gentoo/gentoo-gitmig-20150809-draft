@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.57 2008/09/10 18:17:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.58 2008/09/25 20:20:13 serkan Exp $
+
+  25 Sep 2008; Serkan Kaba <serkan@gentoo.org>
+  files/asm-2.2.3-build.xml.patch, asm-2.2.3-r1.ebuild:
+  Updated patch to fix bug #238648 reported by Christof Schulze
+  <christof.schulze@gmx.net>. Added necessary call to die.
 
   10 Sep 2008; Brent Baude <ranger@gentoo.org> asm-2.0-r1.ebuild:
   marking asm-2.0-r1.ebuild ppc64 stable for bug 235747
