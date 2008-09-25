@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.51 2008/09/15 19:05:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.52 2008/09/25 15:20:30 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> swfdec-0.6.8.ebuild:
+  Stable for HPPA (bug #236971).
 
 *swfdec-0.8.0 (15 Sep 2008)
 
