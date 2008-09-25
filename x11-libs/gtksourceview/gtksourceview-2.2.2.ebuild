@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.2.2.ebuild,v 1.5 2008/09/09 11:22:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.2.2.ebuild,v 1.6 2008/09/25 14:36:44 jer Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 # glib-2.14 dep is to be sure GRegex exists, so that gtksourceview does not
