@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.4 2008/08/26 21:05:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.5 2008/09/25 12:32:24 pva Exp $
+
+  25 Sep 2008; Peter Volkov <pva@gentoo.org> droid-107.ebuild:
+  amd64 stable, bug #234980.
 
 *droid-107 (26 Aug 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-107.ebuild,v 1.1 2008/08/26 21:05:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-107.ebuild,v 1.2 2008/09/25 12:32:24 pva Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="http://omploader.org/vcGMx/DroidFamily-${PV}.zip"
 LICENSE="Apache-2.0"
 RESTRICT="mirror" # redistributed without license
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 S=${WORKDIR}
