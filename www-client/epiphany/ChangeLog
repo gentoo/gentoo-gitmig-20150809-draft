@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.169 2008/09/04 11:25:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.170 2008/09/25 15:55:56 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> epiphany-2.22.3.ebuild:
+  Stable for HPPA (bug #236971).
 
   04 Sep 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.3-r10.ebuild:
   Remove x86-fbsd keyword from xulrunner-1.9 using revision, bug 236678

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.91 2008/08/12 14:15:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.92 2008/09/25 15:57:11 jer Exp $
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org>
+  epiphany-extensions-2.22.2.ebuild:
+  Stable for HPPA (bug #236971).
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   epiphany-extensions-2.22.2.ebuild:
