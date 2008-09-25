@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.10.ebuild,v 1.1 2008/09/06 19:52:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.10.ebuild,v 1.2 2008/09/25 01:50:19 dirtyepic Exp $
 
 FINDLIB_USE="ocaml"
 
-inherit findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic
+inherit autotools findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Daemon that provides access to the Linux/Unix console for a blind person"
 HOMEPAGE="http://mielke.cc/brltty/"
@@ -29,14 +29,32 @@ DEPEND="java? ( >=virtual/jdk-1.4 )
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	${COMMON_DEP}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-3.9-gnusource.patch
+	epatch "${FILESDIR}"/${PN}-3.9-parallel.patch
+	epatch "${FILESDIR}"/${PN}-3.9-autoconf.patch
+	epatch "${FILESDIR}"/${PN}-3.10-api-socket-dir.patch
+
+	eautoconf
+}
+
 src_compile() {
 	local JAVAC_CONF=""
 	if use java; then
 		append-flags "$(java-pkg_get-jni-cflags)"
 		JAVAC_CONF="${JAVAC} -encoding UTF-8 $(java-pkg_javac-args)"
 	fi
-	econf --prefix=/ \
-		$(use_enable bluetooth) \
+
+	# override prefix in order to install into /
+	# braille terminal needs to be available as soon in the boot process as
+	# possible
+	econf \
+		--prefix=/ \
+		--includedir=/usr/include \
+		$(use_enable bluetooth bluetooth-support) \
 		$(use_enable gpm) \
 		$(use_enable iconv) \
 		$(use_enable icu) \
@@ -46,8 +64,8 @@ src_compile() {
 		$(use_enable python python-bindings) \
 		$(use_enable usb usb-support) \
 		$(use_enable tcl tcl-bindings) \
-		$(use_with X x) \
-		--includedir=/usr/include || die
+		$(use_enable X x) \
+		|| die
 	emake JAVAC="${JAVAC_CONF}" || die
 }
 
@@ -55,7 +73,7 @@ src_install() {
 	if use ocaml; then
 		findlib_src_preinst
 	fi
-	make INSTALL_PROGRAM="\${INSTALL_SCRIPT}" INSTALL_ROOT="${D}" install || die
+	emake INSTALL_PROGRAM="\${INSTALL_SCRIPT}" INSTALL_ROOT="${D}" install || die
 
 	if use java; then
 		# make install puts the _java.so there, and no it's not $(get_libdir)

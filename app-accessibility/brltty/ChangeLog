@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.77 2008/09/06 19:52:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.78 2008/09/25 01:50:19 dirtyepic Exp $
+
+  25 Sep 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/brltty-3.9-autoconf.patch, +files/brltty-3.9-gnusource.patch,
+  +files/brltty-3.9-parallel.patch, +files/brltty-3.10-api-socket-dir.patch,
+  brltty-3.10.ebuild:
+  Various build fixes - gcc 4.3, autoconf-2.62, parallel build. Patches from
+  Fedora. Fix X and bluetooth USE flags.
 
 *brltty-3.10 (06 Sep 2008)
 
