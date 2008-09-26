@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.131 2008/09/06 19:34:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.132 2008/09/26 17:56:38 opfer Exp $
+
+*tor-0.2.0.31 (26 Sep 2008)
+
+  26 Sep 2008; Christian Faulhammer <opfer@gentoo.org> +tor-0.2.0.31.ebuild:
+  version bump for bug 238787
 
   06 Sep 2008; Christian Faulhammer <opfer@gentoo.org> files/tor.initd-r4:
   remove bashisms from init file, as reported in bug 236857 by Martin Väth
