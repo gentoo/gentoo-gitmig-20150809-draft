@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.99.3-r1.ebuild,v 1.1 2008/05/31 11:48:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.99.3-r3.ebuild,v 1.1 2008/09/26 14:18:47 angelos Exp $
 
 inherit eutils xfce44
 
@@ -23,15 +23,15 @@ pkg_setup() {
 		XFCE_CONFIG+=" --enable-procacpi"
 		ewarn "Because you disabled all USE flags, selecting acpi for you."
 	fi
-
-	DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-hddtemp.patch \
-		"${FILESDIR}"/${P}-acpi.patch
+
+	epatch "${FILESDIR}"/${P}-hddtemp2.patch
 }
+
+DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 
 xfce44_goodies_panel_plugin
