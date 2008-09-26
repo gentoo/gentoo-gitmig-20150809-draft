@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.123 2008/09/22 21:55:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.124 2008/09/26 13:20:00 aballier Exp $
+
+  26 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  files/libquicktime-1.0.3-x264lavc.patch:
+  Fix the lavc patch again for bug #237234... why did I trust upstream in
+  merging the correct patch?
 
   22 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   files/libquicktime-1.0.3-x264lavc.patch:
