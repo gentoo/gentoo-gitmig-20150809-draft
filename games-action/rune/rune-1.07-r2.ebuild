@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.8 2008/03/06 03:39:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.9 2008/09/26 18:24:57 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://gentoo/rune-all-0.2.tar.bz2
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
+PROPERTIES="interactive"
 RESTRICT="strip"
 IUSE=""
 
