@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.9 2008/08/20 22:34:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.10 2008/09/26 12:26:29 coldwind Exp $
+
+  26 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  telepathy-butterfly-0.3.2.ebuild:
+  Fix build when MAKEOPTS contains options different than -j, fixes #233943.
 
 *telepathy-butterfly-0.3.2 (20 Aug 2008)
 

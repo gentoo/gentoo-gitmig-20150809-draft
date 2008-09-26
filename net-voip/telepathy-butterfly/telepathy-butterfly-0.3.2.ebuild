@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.3.2.ebuild,v 1.1 2008/08/20 22:34:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.3.2.ebuild,v 1.2 2008/09/26 12:26:29 coldwind Exp $
 
 NEED_PYTHON="2.4"
 
@@ -21,9 +21,10 @@ RDEPEND="dev-python/telepathy-python
 DOCS="AUTHORS NEWS"
 
 src_compile() {
+	local myjobs=$(echo "$MAKEOPTS" | sed -n -e 's,.*\(-j[[:digit:]]\+\).*,\1,p')
 	./waf --prefix=/usr \
 		configure || die "./waf configure failed"
-	./waf ${MAKEOPTS} build || die "./waf configure failed"
+	./waf ${myjobs} build || die "./waf configure failed"
 }
 
 src_install() {
