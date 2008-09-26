@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.7 2008/07/31 10:06:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.8 2008/09/26 17:47:59 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> atokx2-17.0.ebuild,
+  atokx2-17.0-r1.ebuild, atokx2-17.0-r2.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
