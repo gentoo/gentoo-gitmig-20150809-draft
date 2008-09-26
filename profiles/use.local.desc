@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3896 2008/09/25 10:07:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3897 2008/09/26 20:27:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2172,8 +2172,8 @@ sci-libs/mkl:serial - Installs the serial (as non-threaded) libraries
 sci-libs/plplot:itcl - Support for dev-tcltk/itcl bindings
 sci-libs/plplot:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 sci-libs/plplot:octave - Support for sci-mathematics/octave bindings 
-sci-libs/scipy:sandbox - Installs experimental scipy sandbox modules (pull some dependencies)
-sci-libs/scipy:umfpack - Add support for sparse solving via UMFPACK
+sci-libs/scipy:sandbox - Adds experimental scipy sandbox modules
+sci-libs/scipy:umfpack - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/vtk:patented - Build patented classes
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using dev-ml/lablgtk
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation)
