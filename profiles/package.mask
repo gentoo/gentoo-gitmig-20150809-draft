@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9009 2008/09/25 14:27:35 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9010 2008/09/26 16:31:28 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -55,6 +55,7 @@
 # candidate kernel could break network cards
 # Unmask when it is fixed. (see bug #238489)
 >=sys-kernel/git-sources-2.6.27_rc
+>=sys-kernel/vanilla-sources-2.6.27_rc
 
 # Joe Peterson <lavajoe@gentoo.org> (23 Sep 2008)
 # Masked for removal in 30 days (see bug #238442)
