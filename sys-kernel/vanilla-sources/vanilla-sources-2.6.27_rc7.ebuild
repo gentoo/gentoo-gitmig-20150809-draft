@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.27_rc7.ebuild,v 1.1 2008/09/22 08:40:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.27_rc7.ebuild,v 1.2 2008/09/26 00:37:12 mpagano Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -15,3 +15,6 @@ SRC_URI="${KERNEL_URI}"
 
 KEYWORDS="~alpha ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
+
+K_EXTRAEWARN="If your system utilizes the e1000e driver DO NOT install and run
+any 2.6.27 kernel.  See bug #238489 for more information"
