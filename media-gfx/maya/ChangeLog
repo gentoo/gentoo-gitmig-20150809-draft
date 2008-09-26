@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.28 2008/08/22 22:20:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.29 2008/09/26 17:36:14 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> maya-6.5.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

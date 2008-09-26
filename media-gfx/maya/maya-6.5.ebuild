@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.9 2008/06/03 02:13:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.10 2008/09/26 17:36:14 zmedico Exp $
 
 inherit rpm eutils versionator
 
@@ -19,6 +19,7 @@ MAYA_DOCS_RPM="Maya6_5-docs-6.5-253.i686.rpm"
 
 # Patches to download go into SRC_URI
 SRC_URI=""
+PROPERTIES="interactive"
 RESTRICT="fetch userpriv"
 
 SLOT="$(get_version_component_range 1-2)"
