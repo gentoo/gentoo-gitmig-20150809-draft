@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.51 2008/09/16 14:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.52 2008/09/26 13:16:43 jer Exp $
+
+  26 Sep 2008; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask unsupported video cards.
 
   16 Sep 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask media-video/mplayer:cpudetection as well.

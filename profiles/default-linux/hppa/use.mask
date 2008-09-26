@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/use.mask,v 1.79 2008/06/16 19:28:47 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/use.mask,v 1.80 2008/09/26 13:16:43 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (16 Jun 2008)
@@ -95,6 +95,7 @@ dri
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
 video_cards_ark
+video_cards_ast
 video_cards_chips
 video_cards_cirrus
 video_cards_cyrix
@@ -111,6 +112,7 @@ video_cards_nsc
 video_cards_nv
 video_cards_r128
 video_cards_radeon
+video_cards_radeonhd
 video_cards_rendition
 video_cards_s3
 video_cards_s3virge
