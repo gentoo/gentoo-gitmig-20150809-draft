@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.7 2007/07/31 14:37:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.8 2008/09/26 18:54:33 zmedico Exp $
 
 inherit eutils versionator games
 
@@ -14,6 +14,7 @@ LICENSE="QUAKE4"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="alsa cdinstall dedicated opengl"
+PROPERTIES="interactive"
 RESTRICT="strip"
 
 UIDEPEND="virtual/opengl

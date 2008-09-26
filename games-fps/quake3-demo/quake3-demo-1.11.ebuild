@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.25 2008/03/04 01:18:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.26 2008/09/26 18:48:56 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3ademo-${PV}-6.x86.gz.sh
 LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
+PROPERTIES="interactive"
 RESTRICT="strip"
 IUSE="opengl dedicated 3dfx"
 

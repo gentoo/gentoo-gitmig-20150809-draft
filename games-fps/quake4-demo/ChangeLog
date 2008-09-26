@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake4-demo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.13 2007/07/31 14:38:45 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.14 2008/09/26 18:59:22 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake4-demo-1.0.ebuild:
+  Set PROPERTIES=interactive since GAMES_CHECK_LICENSE=yes is set.
 
   31 Jul 2007; Doug Goldstein <cardoe@gentoo.org> quake4-demo-1.0.ebuild:
   nvidia-legacy-drivers has merged with nvidia-drivers
