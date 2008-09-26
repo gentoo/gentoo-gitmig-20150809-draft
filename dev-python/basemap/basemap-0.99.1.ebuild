@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.1.ebuild,v 1.1 2008/09/25 11:06:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.1.ebuild,v 1.2 2008/09/26 14:47:01 bicatali Exp $
 
 inherit eutils distutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="matplotlib toolkit to plot map projections"
 HOMEPAGE="http://matplotlib.sourceforge.net/matplotlib.toolkits.basemap.basemap.html"
 SRC_URI="mirror://sourceforge/matplotlib/${P}.tar.gz"
 
-IUSE="doc examples"
+IUSE="examples"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="MIT GPL-2"
@@ -38,9 +38,5 @@ src_install() {
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples || die
-	fi
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins *.pdf || die
 	fi
 }
