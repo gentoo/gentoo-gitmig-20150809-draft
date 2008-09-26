@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.37 2008/09/18 01:20:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.38 2008/09/26 16:42:03 yngwin Exp $
+
+*smplayer-0.6.3 (26 Sep 2008)
+
+  26 Sep 2008; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.0.ebuild,
+  -smplayer-0.6.0-r1.ebuild, +smplayer-0.6.3.ebuild:
+  Version bump. Drop some old versions. New ebuild uses EAPI-2 use-deps for
+  mplayer.
 
   18 Sep 2008; Brent Baude <ranger@gentoo.org> smplayer-0.6.1-r1.ebuild:
   stable ppc64, bug 236618
