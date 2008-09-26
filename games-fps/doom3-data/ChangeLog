@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.9 2007/03/12 14:32:34 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.10 2008/09/26 17:57:58 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org>
+  doom3-data-1.1.1282-r1.ebuild:
+  Set PROPERTIES=interactive since src_install() calls cdrom_get_cds() and
+  also GAMES_CHECK_LICENSE=yes is set.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   doom3-data-1.1.1282-r1.ebuild:
