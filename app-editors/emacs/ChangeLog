@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.275 2008/09/23 20:21:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.276 2008/09/26 05:35:09 ulm Exp $
+
+  26 Sep 2008; Ulrich Mueller <ulm@gentoo.org> +files/emacs-22.2-sh.patch,
+  emacs-22.2-r3.ebuild, emacs-22.3.ebuild:
+  SuperH support, bug 238210.
 
   23 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   emacs-21.4-r15.ebuild, emacs-21.4-r17.ebuild, emacs-22.2-r3.ebuild,
