@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-roe
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.9 2008/02/29 19:26:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.10 2008/09/26 18:07:42 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> doom3-roe-1.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds() and
+  also GAMES_CHECK_LICENSE=yes is set.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> doom3-roe-1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

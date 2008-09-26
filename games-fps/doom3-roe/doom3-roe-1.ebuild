@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.9 2008/02/29 19:26:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.10 2008/09/26 18:07:42 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
+PROPERTIES="interactive"
 RESTRICT="strip"
 
 RDEPEND=">=games-fps/doom3-1.3.1302-r2"
